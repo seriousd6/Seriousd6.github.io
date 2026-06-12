@@ -1,49 +1,33 @@
 """
-Lamentations + all 12 Minor Prophets — all four layers.
-These complete the OT portion of the Z Commentary Suite.
-Key NT: Hosea (son called out of Egypt; Lo-ammi/Ammi), Joel 2 (Pentecost),
-        Amos (Day of the LORD, Amos 9:11 Davidic restoration),
-        Jonah (sign of Jonah), Micah 5:2 (Bethlehem), Zech 9:9 (triumphal entry),
-        Zech 12:10 (pierced one), Mal 3:1 (messenger), Mal 4:5 (Elijah).
+mkt-christ: Lamentations ch3-4 — comprehensive Christological commentary.
+Run: python3 scripts/zc-christ-lamentations-3-4.py
+
+Christological approach:
+  - Ch3 centers on the gever (H1397, man of affliction) — a figure who suffers
+    under divine wrath as a type of Christ; the triple acrostic structure (66 vv)
+    gives ch3 pride of place as the book's theological heart.
+  - The gever's suffering maps onto Christ's passion at multiple points:
+    rod of wrath (v1), darkness (v6), mockery (v14), gall (v15), pit/rescue (v52-58).
+  - Ch4 climaxes at v20: meshiach YHWH (the anointed of the LORD) caught in their pits —
+    the most explicit messianic title in the book, pointing directly to the cross.
+  - Ch4:22 punishment accomplished for Zion — echoes Christ's tetelestai (John 19:30).
+
+Directness levels used: direct, type, shadow, theme, revelation of God.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     return json.loads(p.read_text()) if p.exists() else {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -53,494 +37,107 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# LAMENTATIONS
-# ============================
-
-LAM_ECHO = {
+DATA = {
   "3": {
-    "22": [
-      {"type": "allusion", "target": "Heb 13:8", "note": "The steadfast love of the LORD never ceases; his mercies never come to an end — the great confession of YHWH's faithfulness in the midst of Jerusalem's total destruction; Jesus Christ is the same yesterday and today and forever (Heb 13:8) is the new covenant form of the same confession: divine steadfast love, permanent and unending"},
-      {"type": "allusion", "target": "Lam 3:26", "note": "It is good that one should wait quietly for the salvation of the LORD — the sufferer's renewed hope after total collapse; the salvation (yeshuah) that Lamentations awaits is the name of Jesus"}
-    ]
-  }
-}
-
-LAM_ORIGINAL = {
-  "3": {
-    "22": "<p><strong>chasde YHWH ki lo tamnu ki lo chalu rachamav</strong>: 'The steadfast love [<em>chesed</em>] of the LORD never ceases; his mercies [<em>rachamim</em>] never come to an end.' This confession (Lam 3:22-24) is the theological center of Lamentations — placed at the exact midpoint of the book (the acrostic structure of ch. 3 is 22×3 = 66 verses, and v. 22 is the centerpiece). Its context makes it remarkable: Lamentations is the most sustained expression of grief and lamentation in Scripture, written in the immediate aftermath of Jerusalem's destruction, yet its center is a confession of divine steadfast love. The structure embodies the theology: suffering and praise, grief and faith, can coexist — and at the center of the darkest book is the brightest confession.</p>"
-  }
-}
-
-LAM_CONTEXT = {
-  "1": {
-    "1": "<p>Lamentations is a collection of five poems mourning the destruction of Jerusalem in 586 BCE. Four are acrostics (following the Hebrew alphabet), reflecting the artistic discipline of theological grief: the structure provides form for what might otherwise be formless pain. Traditionally attributed to Jeremiah (who is associated with Lamentations in 2 Chr 35:25 and the LXX introduction), the poems articulate Israel's grief, confession, and ongoing hope in YHWH's steadfast love. The book is read in Jewish tradition on Tisha B'Av, the fast commemorating the temple's destruction. Its influence on the NT's passion narrative is significant: the description of Jerusalem's suffering (1:12: 'Is it nothing to you, all you who pass by?') is echoed in the passion accounts; Christ's passion is interpreted through the Lamentations framework of righteous suffering.</p>"
-  }
-}
-
-LAM_CHRIST = {
-  "1": {
-    "12": "<p>A type: 'Is it nothing to you, all you who pass by? Look and see if there is any sorrow like my sorrow, which was brought upon me, which the LORD inflicted on the day of his fierce anger.' The suffering of Jerusalem — the Daughter of Zion who has suffered at YHWH's hand for her sins — is one of the OT's primary types of Christ's passion. The NT passion accounts use the Lamentations framework: the mockers who wag their heads at the crucified Jesus echo Lamentations (Lam 2:15: 'all who pass by clap their hands at you; they hiss and wag their heads at the daughter of Jerusalem'; Matt 27:39). But the typological inversion is crucial: Jerusalem suffers for her own sins; Christ suffers for ours. The language of innocent suffering that Lamentations applies to the city becomes, in the NT, applicable to the one who is truly innocent.</p>"
-  },
-  "3": {
-    "22": "<p>A direct revelation: 'The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness.' This confession — the OT's most concentrated statement of divine covenantal faithfulness — is the foundation of NT assurance. Paul says 'neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord' (Rom 8:38-39): the love the Preacher of Lamentations confessed in the ruins of Jerusalem is the love that cannot be severed by anything. Christ's resurrection is the supreme demonstration of the <em>chesed</em> that Lamentations confesses: even through the cross — the ultimate expression of divine wrath — the steadfast love did not fail.</p>"
-  }
-}
-
-# ============================
-# HOSEA
-# ============================
-
-HOSEA_ECHO = {
-  "1": {
-    "10": [
-      {"type": "fulfillment", "target": "Rom 9:25-26", "note": "And in the place where it was said to them You are not my people it shall be said to them Children of the living God — Paul cites Hos 1:10 and 2:23 as OT support for Gentile inclusion: what YHWH said about restoring estranged Israel is applied to the calling of the Gentiles into the people of God; the not-my-people becoming my-people is the inclusive dynamic of the new covenant"}
-    ]
-  },
-  "2": {
-    "23": [
-      {"type": "fulfillment", "target": "1 Pet 2:10", "note": "I will say to Lo-ammi You are my people; and he shall say You are my God — Peter applies Hosea's restoration promise to the church: once you were not a people, but now you are God's people; the covenant formula's restoration (you are my people/I am your God) is fulfilled in Christ's reconciling work"}
-    ]
-  },
-  "6": {
-    "6": [
-      {"type": "fulfillment", "target": "Matt 9:13", "note": "For I desire steadfast love and not sacrifice, the knowledge of God rather than burnt offerings — Jesus quotes Hos 6:6 twice (Matt 9:13; 12:7) in defense of his association with sinners and his disciples' plucking grain on the Sabbath; the priority of covenant love over ritual is Jesus's critique of Pharisaic misapplication of the law"}
-    ]
-  },
-  "11": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 2:15", "note": "Out of Egypt I called my son — Matthew cites Hos 11:1 as fulfilled in the flight to Egypt and the return: as YHWH called Israel (his son) out of Egypt in the Exodus, so Jesus (the true Son) recapitulates Israel's history; Jesus is the new Israel who succeeds where Israel failed"}
-    ]
-  }
-}
-
-HOSEA_ORIGINAL = {
-  "11": {
-    "1": "<p><strong>ki naar Yisrael vaehavuhu umimitzraim qarati livni</strong>: 'When Israel was a child, I loved him, and out of Egypt I called my son.' Matthew's citation of Hos 11:1 in Matt 2:15 is one of the NT's most discussed typological uses of the OT — because Hosea 11:1 in its original context is clearly not a predictive prophecy but a historical statement about the Exodus. Matthew's method is typological recapitulation: Jesus is the new Israel, the true Son of God who goes down to Egypt and is called out again; what happened to the nation in type is fulfilled in the person of the Messiah in antitype. This reading was not arbitrary: it was grounded in the OT's identification of Israel as YHWH's 'son' (Exod 4:22-23) and the expectation that the Messiah would recapitulate and fulfill Israel's story.</p>"
-  }
-}
-
-HOSEA_CONTEXT = {
-  "1": {
-    "1": "<p>Hosea prophesied in the northern kingdom of Israel ca. 755-725 BCE, the final decades before Assyria destroyed Samaria (722 BCE). His marriage to Gomer — a woman who proved unfaithful — is the enacted metaphor of YHWH's relationship with Israel: YHWH's faithful covenant love (hesed) in the face of Israel's persistent idolatry (harlotry). The marriage metaphor for the YHWH-Israel covenant (developed also in Jeremiah 2-3, Ezekiel 16, and Isaiah 54) is Hosea's central theological contribution: covenant violation is not merely law-breaking but adultery, a betrayal of the intimate covenant-love relationship. The NT develops the bridegroom-bride metaphor for Christ-church (Eph 5:25-32; Rev 19:7-9) directly in line with Hosea's framework.</p>"
-  }
-}
-
-HOSEA_CHRIST = {
-  "11": {
-    "1": "<p>A type: 'Out of Egypt I called my son.' The Hosea 11:1 citation in Matthew 2:15 reveals the NT's typological method: the Exodus — YHWH calling Israel his son out of Egypt — is recapitulated in miniature by the holy family's flight to Egypt and return. Jesus is the true Son of God where Israel was the representative son; Jesus is the true Israel who succeeds where Israel repeatedly failed. The NT development of this recapitulation: Israel spent 40 years in the wilderness and failed (Num 14); Jesus spent 40 days in the wilderness and prevailed (Matt 4). Israel crossed the Jordan under Joshua and conquered imperfectly; Jesus was baptized in the Jordan and accomplished the complete conquest of sin and death. The Exodus story is not just a historical event that Jesus parallels — it is the template YHWH designed to interpret what his Son would do.</p>"
-  }
-}
-
-# ============================
-# JOEL
-# ============================
-
-JOEL_ECHO = {
-  "2": {
-    "28": [
-      {"type": "fulfillment", "target": "Acts 2:16-21", "note": "I will pour out my Spirit on all flesh — Peter on the Day of Pentecost cites Joel 2:28-32 as fulfilled in the Spirit's outpouring: this is what was uttered through the prophet Joel; the universal Spirit-gift (all flesh, sons and daughters, young and old, male and female, servant and free) is the new covenant's democratization of prophetic access to God"},
-      {"type": "fulfillment", "target": "Acts 2:21", "note": "And it shall come to pass that everyone who calls on the name of the LORD shall be saved — Joel's salvation promise is cited by Peter (Acts 2:21) and Paul (Rom 10:13) as the OT basis for universal gospel accessibility: the LORD whose name saves is identified with Jesus, Lord and Christ (Acts 2:36)"}
-    ]
-  }
-}
-
-JOEL_ORIGINAL = {
-  "2": {
-    "28": "<p><strong>vehaya acharei chen eshpoch et ruchi al kol basar venivve'u bneichem uvnotechem ziknechem chalomot yachalomun bachureichem cheziyonot yiru</strong>: 'And it shall come to pass afterward, that I will pour out my Spirit on all flesh; your sons and your daughters shall prophesy, your old men shall dream dreams, and your young men shall see visions.' The universal Spirit-outpouring prophesied in Joel 2:28-32 is the most significant single prophecy cited in the NT's account of Pentecost. The key phrase is <em>kol basar</em> (all flesh): unlike the selective, temporary Spirit-anointing of specific judges, prophets, and kings in the OT, the new covenant Spirit will be given to all — removing the mediatorial hierarchy that required prophets and priests to relay YHWH's word to the people. This is Jeremiah 31:34 ('no longer will each person teach his neighbor, for they will all know me') from the pneumatological angle.</p>"
-  }
-}
-
-JOEL_CONTEXT = {
-  "1": {
-    "1": "<p>Joel is undated — no contemporary king is mentioned — but it is typically placed in the post-exilic period (late 5th-early 4th century BCE) based on its references to the temple cult and its post-exilic vocabulary. The book's structure: a devastating locust plague (chs. 1-2:11) serves as the occasion for a call to repentance (2:12-17), followed by YHWH's promise of restoration (2:18-3:21). The locust plague is both a literal agricultural disaster and the harbinger of the Day of the LORD — the pattern of divine judgment working through historical events that will culminate in the final eschatological judgment. Joel is the OT prophet most cited in the NT on the Day of Pentecost, making his prophecy of the Spirit's universal outpouring the bridge between the Old and New covenant eras.</p>"
-  }
-}
-
-JOEL_CHRIST = {
-  "2": {
-    "32": "<p>A fulfillment: 'And it shall come to pass that everyone who calls on the name of the LORD shall be saved.' Peter (Acts 2:21) and Paul (Rom 10:13) both cite Joel 2:32 as fulfilled in the gospel proclamation: the 'name of the LORD' whose invocation brings salvation is now identified as Jesus, whom God has made both Lord and Christ (Acts 2:36). The typological identification is clear: YHWH's name in the OT = Jesus's name in the NT. This is not a revision of the OT but the NT's claim that YHWH's name and Jesus's name are the same divine identity now disclosed fully in the incarnation. The universal accessibility of salvation ('everyone who calls') removes the national and ethnic boundaries that had characterized the OT covenant community.</p>"
-  }
-}
-
-# ============================
-# AMOS
-# ============================
-
-AMOS_ECHO = {
-  "5": {
-    "18": [
-      {"type": "allusion", "target": "1 Thess 5:2", "note": "Woe to you who desire the day of the LORD — Amos warns that the Day of the LORD will be darkness not light for the presumptuous; Paul says the day of the Lord comes like a thief in the night; both challenge the assumption that the Day of the LORD is automatically good news for those who consider themselves God's people"}
-    ]
-  },
-  "9": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 15:16-17", "note": "I will raise up the booth of David that is fallen — James cites Amos 9:11-12 at the Jerusalem Council as the OT justification for Gentile inclusion without circumcision; the restoration of the Davidic dynasty (the fallen booth) is being fulfilled in the Messiah Jesus, and the nations seeking the LORD follows from this restoration"}
-    ]
-  }
-}
-
-AMOS_ORIGINAL = {
-  "9": {
-    "11": "<p><strong>bayom hahu aqim et sukat David hanofelet vegadarta et pirzeihen vaharisotyav aqim uvenituha keyeme olam</strong>: 'In that day I will raise up the booth of David that is fallen and repair its breaches, and raise up its ruins and rebuild it as in the days of old.' The 'fallen booth of David' is an image of the Davidic dynasty in ruins — either the northern kingdom's secession (931 BCE) or the Babylonian destruction of the Davidic throne (586 BCE). James's citation at the Jerusalem Council (Acts 15:16-17) reads the restoration as the messianic reign of Jesus: the booth is raised; now the Gentiles ('all the nations who are called by my name', v. 12 in the LXX, which differs from the MT) stream in. The LXX variant makes the Gentile-inclusion application cleaner; James uses the LXX version. This is not a mistaken quotation but a deliberate use of the LXX rendering that the Spirit has superintended to carry the intended typological meaning.</p>"
-  }
-}
-
-AMOS_CONTEXT = {
-  "1": {
-    "1": "<p>Amos prophesied ca. 760-750 BCE in the northern kingdom under Jeroboam II, a period of remarkable prosperity and military success — and of corresponding social injustice and covenant neglect. Amos is the first of the classical writing prophets and the OT's most sustained advocate for social justice: the Day of the LORD will expose the oppression of the poor (5:11-12), the corruption of the courts (5:12), the religious hypocrisy of the sanctuaries (5:21-24: I hate, I despise your feasts ... let justice roll down like waters). His social critique is grounded in covenant theology: YHWH's covenant with Israel demands covenant justice in the community; religious observance without ethical faithfulness is an abomination.</p>"
-  }
-}
-
-AMOS_CHRIST = {
-  "9": {
-    "11": "<p>A fulfillment: 'In that day I will raise up the booth of David that is fallen.' James's application of Amos 9:11-12 at the Jerusalem Council (Acts 15:16-17) identifies the fulfillment: the resurrection of Christ is the raising of the fallen Davidic dynasty in its ultimate form. The 'booth of David' — the Davidic covenant and its dynastic promise — lay in ruins from 586 BCE onward; no Davidic king sat on an independent throne. The risen Jesus, enthroned at the Father's right hand (Acts 2:34-36), is the restored Davidic ruler whose reign brings in the nations. The Gentile mission is therefore not a deviation from the OT prophetic program but its very fulfillment: 'the remnant of mankind and all the nations who are called by my name' (Acts 15:17, citing Amos 9:12 LXX) stream into the reestablished Davidic kingdom.</p>"
-  }
-}
-
-# ============================
-# OBADIAH
-# ============================
-
-OBAD_ECHO = {
-  "1": {
-    "4": [
-      {"type": "allusion", "target": "Luke 1:52", "note": "Though you soar aloft like the eagle, though your nest is set among the stars, from there I will bring you down — YHWH's judgment of Edom's pride; Mary's Magnificat: he has brought down the mighty from their thrones; the pride-and-fall pattern of Obadiah is the structure of divine reversal that the Magnificat celebrates"}
-    ],
-    "15": [
-      {"type": "allusion", "target": "Rev 16:19", "note": "The day of the LORD is near upon all the nations. As you have done it shall be done to you — the lex talionis principle applied to the Day of the LORD; the great city was split and the nations drank from the cup of YHWH's wrath; Obadiah's principle of nations receiving what they did to Israel reaches its ultimate form in Revelation's final judgment"}
-    ]
-  }
-}
-
-OBAD_ORIGINAL = {
-  "1": {
-    "21": "<p><strong>vealu moshim behar tziyon lishpot et har Esav vehaitah lADONAI hamelukah</strong>: 'Saviors shall go up to Mount Zion to rule Mount Esau, and the kingdom shall be the LORD's.' Obadiah's final verse is the OT's shortest prophetic book's most expansive declaration: the kingdom belongs to YHWH. Edom (the persistent enemy of Israel, descended from Esau) will be judged; the deliverers (<em>moshim</em>, saviors/deliverers) will ascend Zion; the kingdom is YHWH's alone. The NT takes the <em>moshim</em> (saviors/deliverers) as the saints who reign with Christ (Rev 20:4-6) and the kingdom as Christ's eternal reign (Rev 11:15).</p>"
-  }
-}
-
-OBAD_CONTEXT = {
-  "1": {
-    "1": "<p>Obadiah is the shortest book in the OT (21 verses) and is addressed entirely to Edom — the nation descended from Esau, the brother of Jacob/Israel. The oracle condemns Edom for standing aloof (v. 11) or actively participating in Jerusalem's destruction (the context is almost certainly the Babylonian destruction of 586 BCE, when Edomites reportedly aided the attackers and blocked Jewish refugees, Obad 12-14). The Edom-Israel enmity runs throughout the OT from Genesis (Esau-Jacob) through Numbers (Edom refuses passage to Moses), 1 Samuel (David's wars), and the post-exilic period. Edom becomes in the Prophets a symbol for the hostile nations in general (Isa 34; Ezek 35; Mal 1:2-5), and its final judgment is the type of all anti-God hostility that will be judged on the eschatological Day of the LORD.</p>"
-  }
-}
-
-OBAD_CHRIST = {
-  "1": {
-    "21": "<p>A shadow: 'Saviors shall go up to Mount Zion to rule Mount Esau, and the kingdom shall be the LORD's.' Obadiah's closing declaration — the kingdom belongs to YHWH — is the OT's most compact eschatological statement. The NT's fulfillment: 'The kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever' (Rev 11:15). The deliverers who ascend Zion are the saints who reign with Christ in the new creation (Rev 20:6: they will be priests of God and of Christ and will reign with him). Edom — the hostile brother, the nation of Esau who despised his birthright — represents all who reject the covenant birthright; their ultimate defeat is not a tribal victory for Israel but the vindication of YHWH's justice over all who oppose his reign.</p>"
-  }
-}
-
-# ============================
-# JONAH
-# ============================
-
-JONAH_ECHO = {
-  "1": {
-    "17": [
-      {"type": "fulfillment", "target": "Matt 12:40", "note": "And Jonah was in the belly of the fish three days and three nights — Jesus cites this as the sign of Jonah: the Son of Man will be three days and three nights in the heart of the earth; Jonah's entombment in the fish and his emergence is the type of Jesus's death and resurrection"}
-    ]
-  },
-  "3": {
-    "5": [
-      {"type": "fulfillment", "target": "Matt 12:41", "note": "The men of Nineveh repented at the preaching of Jonah, and behold something greater than Jonah is here — Jesus contrasts Nineveh's repentance at Jonah's preaching with the Jewish generation's refusal to repent at Jesus's preaching; Nineveh is a Gentile city that responded; this generation has responded to a greater preacher with less"}
-    ]
-  }
-}
-
-JONAH_ORIGINAL = {
-  "1": {
-    "17": "<p><strong>vayeman YHWH dag gadol livlo et Yonah vayehi Yonah bime'ei haddag shlosha yamim ushlosha leilot</strong>: 'And the LORD appointed a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.' The historicity of Jonah has been debated throughout church history — a man surviving inside a large sea creature is extraordinary. Jesus's citation of Jonah in Matt 12:40 takes the narrative as historical: 'just as Jonah was three days and three nights in the belly of the great fish, so will the Son of Man be three days and three nights in the heart of the earth.' If Jonah is a parable, Jesus is drawing a parable-to-reality comparison, which is unusual. The orthodox reading: both Jonah's experience and Jesus's resurrection are historical events in which the later was the greater antitype of the earlier.</p>"
-  }
-}
-
-JONAH_CONTEXT = {
-  "1": {
-    "1": "<p>Jonah is unique among the writing prophets: instead of a prophetic oracle, it is a narrative about a prophet. Jonah ben Amittai is mentioned in 2 Kings 14:25 as a historical figure who prophesied during the reign of Jeroboam II (ca. 793-753 BCE). The book narrates his mission to Nineveh, the capital of the Assyrian Empire — Israel's most formidable enemy. His initial flight from the mission (not from fear but, the book reveals in ch. 4, from a reluctance to see Gentile enemies repent and be spared) is the book's theological problem: the prophet opposes the very grace that characterizes YHWH. The book's final question (4:11: should I not be concerned about Nineveh?) is deliberately unanswered — forcing the reader to answer it. Jesus's use of the 'sign of Jonah' (Matt 12:39-41) makes Jonah's historical experience the type of his own death and resurrection.</p>"
-  }
-}
-
-JONAH_CHRIST = {
-  "1": {
-    "17": "<p>A type: 'Jonah was in the belly of the fish three days and three nights.' Jesus himself identifies this as the OT's appointed sign for his resurrection: 'For just as Jonah was three days and three nights in the belly of the great fish, so will the Son of Man be three days and three nights in the heart of the earth' (Matt 12:40). The typological elements: Jonah goes into the deep as a substitute (the sailors are saved from the storm by throwing Jonah overboard; 1:12-15) → Jonah is entombed in the fish → Jonah emerges to complete his mission to the Gentiles. The antitype: Christ goes to the cross as the world's substitute → Christ is entombed → Christ rises and commissions the mission to all Gentiles (Matt 28:19). Jonah's Gentile mission to Nineveh is the shadow; the apostolic mission to all nations is the substance.</p>"
-  }
-}
-
-# ============================
-# MICAH
-# ============================
-
-MICAH_ECHO = {
-  "5": {
-    "2": [
-      {"type": "fulfillment", "target": "Matt 2:6", "note": "But you O Bethlehem Ephrathah who are too little to be among the clans of Judah from you shall come forth for me one who is to be ruler in Israel — the Magi and Herod's scribes cite Micah 5:2 as the birthplace of the Messiah; Matthew cites it as fulfilled in Jesus's birth at Bethlehem; the ruler whose origin is from of old, from ancient days, is the pre-existent Christ born in the city of David"}
-    ]
-  },
-  "6": {
-    "8": [
-      {"type": "allusion", "target": "Matt 23:23", "note": "He has told you, O man, what is good; and what does the LORD require of you but to do justice and to love kindness and to walk humbly with your God — the ethical summary of Micah; Jesus's woe against the Pharisees who tithe mint but neglect the weightier matters of the law: justice and mercy and faithfulness (Matt 23:23); Micah 6:8 is Jesus's standard for what constitutes the law's weightier matters"}
-    ]
-  }
-}
-
-MICAH_ORIGINAL = {
-  "5": {
-    "2": "<p><strong>veatta Beit-Lechem Efrata tzair lihyot be'alfei Yehudah mimcha li yetze lihyot moshel beYisrael umotza'otav mikedem miyemei olam</strong>: 'But you, O Bethlehem Ephrathah, who are too little to be among the clans of Judah, from you shall come forth for me one who is to be ruler in Israel, whose coming forth is from of old, from ancient days.' <em>Motza'otav mikedem miyemei olam</em> (whose coming forth is from of old, from ancient days/from ancient times/from everlasting): the preposition and nouns can point to either the antiquity of the Davidic dynasty (David's line goes back to ancient Bethlehem) or to the eternal pre-existence of the coming ruler. The NT reading (John 8:58; John 1:1) takes it in the latter, stronger sense: the one born in Bethlehem has his 'goings forth' from eternity.</p>"
-  }
-}
-
-MICAH_CONTEXT = {
-  "1": {
-    "1": "<p>Micah prophesied ca. 735-700 BCE, contemporary with Isaiah in the southern kingdom, during the Assyrian crisis that destroyed Samaria (722 BCE) and threatened Jerusalem (701 BCE). He was a rural prophet from Moresheth-Gath (a village in the Judean foothills), which gives his oracles a social-justice perspective: he speaks for the peasant farmers whose land is being seized by the powerful (2:1-2; 3:1-3). His prophecy of Jerusalem's destruction (3:12: Zion shall be plowed as a field; Jerusalem shall become a heap of ruins) was so striking that it was cited a century later as a precedent for not killing Jeremiah when he prophesied similarly (Jer 26:18-19). Micah 6:8 is the OT's most compact ethical summary and one of the most frequently cited prophetic verses.</p>"
-  }
-}
-
-MICAH_CHRIST = {
-  "5": {
-    "2": "<p>A direct revelation: 'But you, O Bethlehem Ephrathah, who are too little to be among the clans of Judah, from you shall come forth for me one who is to be ruler in Israel, whose coming forth is from of old, from ancient days.' The theological precision of this prophecy is remarkable: (1) the specific town — Bethlehem, not Jerusalem; (2) the paradox — too small to be a clan-city, yet the birthplace of the supreme ruler; (3) the pre-existence — his 'coming forth' predates his birth in Bethlehem, reaching back to 'ancient days' (or in the stronger reading, eternity). Matthew 2:6 cites it as fulfilled with a slight adaptation that applies Micah's 'ruler' language to the one who will 'shepherd my people Israel' — combining Micah's political and pastoral imagery into the Christ who is both king and shepherd (John 10:11; Rev 7:17).</p>"
-  }
-}
-
-# ============================
-# NAHUM
-# ============================
-
-NAHUM_ECHO = {
-  "1": {
-    "15": [
-      {"type": "allusion", "target": "Rom 10:15", "note": "Behold upon the mountains the feet of him who brings good news, who publishes peace — Nahum announces the fall of Nineveh as good news (the oppressor is destroyed); Isaiah 52:7 uses the same image (how beautiful upon the mountains are the feet of him who brings good news); Paul cites Isaiah in Romans 10:15 for the gospel proclamation: the good news of peace is the gospel of Christ, and the messenger's feet are the apostles'"}
-    ]
-  }
-}
-
-NAHUM_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>YHWH erech apayim ugedol koach venakeh lo yenakeh YHWH besufa uvishara darko veanan afar raglav</strong>: 'The LORD is slow to anger and great in power, and the LORD will by no means clear the guilty. His way is in whirlwind and storm, and the clouds are the dust of his feet.' Nahum opens with an acrostic poem (1:2-8, partial alphabet) on the character of YHWH — combining the divine attributes of mercy and judgment that Exod 34:6-7 announced: merciful and slow to anger (Exod 34:6; Nahum 1:3a) but will not leave the guilty unpunished (Exod 34:7b; Nahum 1:3a). Jonah announced repentance and YHWH relented; Nahum announces the final judgment because Nineveh did not permanently repent. The same divine character — patient mercy but ultimate justice — is the framework for the NT: God overlooked past sins (Acts 17:30; Rom 3:25) but now commands repentance in light of the coming judgment.</p>"
-  }
-}
-
-NAHUM_CONTEXT = {
-  "1": {
-    "1": "<p>Nahum prophesied ca. 663-612 BCE — after the fall of Thebes (663 BCE, mentioned in 3:8) and before the fall of Nineveh (612 BCE, which Nahum predicts). He is the companion prophecy to Jonah: Jonah brought Nineveh to repentance (ca. 760 BCE) and YHWH relented; Nahum announces that Nineveh's subsequent return to violence and oppression means its final destruction is now inevitable. The contrast is instructive: divine patience has a limit; the same attributes of mercy and justice that led YHWH to spare Nineveh in Jonah's day lead him to destroy it in Nahum's day. Nineveh was destroyed in 612 BCE by a coalition of Babylonians and Medes, exactly as Nahum predicted.</p>"
-  }
-}
-
-NAHUM_CHRIST = {
-  "1": {
-    "7": "<p>A revelation of God: 'The LORD is good, a stronghold in the day of trouble; he knows those who take refuge in him.' Set in the context of Nineveh's coming destruction, this verse identifies the flip-side of divine wrath: the same YHWH who destroys his enemies is the stronghold for those who trust him. The NT's form of this double-truth: 'It is a fearful thing to fall into the hands of the living God' (Heb 10:31) for those who reject Christ; but 'There is therefore now no condemnation for those who are in Christ Jesus' (Rom 8:1) for those who are in him. The refuge (<em>maoz</em>, stronghold/fortress) that Nahum declares is the God who is also Christ: 'the name of the LORD is a strong tower; the righteous man runs into it and is safe' (Prov 18:10).</p>"
-  }
-}
-
-# ============================
-# HABAKKUK
-# ============================
-
-HAB_ECHO = {
-  "2": {
-    "4": [
-      {"type": "fulfillment", "target": "Rom 1:17", "note": "The righteous shall live by his faith — Paul quotes Hab 2:4 in Romans 1:17, Galatians 3:11, and Hebrews 10:38 as the OT summary of justification by faith: the just/righteous person lives by faithfulness/faith; Paul applies it to the righteousness of God revealed in the gospel"},
-      {"type": "fulfillment", "target": "Gal 3:11", "note": "It is evident that no one is justified before God by the law, for the righteous shall live by faith — Paul cites Hab 2:4 as proof that the OT already knew that justification was by faith, not law-keeping; the law (Lev 18:5: he who does them shall live by them) and the prophet (Hab 2:4: the righteous shall live by faith) are placed in contrast"}
-    ]
-  }
-}
-
-HAB_ORIGINAL = {
-  "2": {
-    "4": "<p><strong>hineh afela lo yoshra nafsho bo vetzaddik beemunato yichyeh</strong>: 'Behold, his soul is puffed up; it is not upright within him, but the righteous shall live by his faith [or faithfulness, <em>emunah</em>].' This verse is the most quoted OT text in the NT letters. The Hebrew <em>emunah</em> covers a semantic range from 'faithfulness' (reliability, steadfastness) to 'faith' (trust, belief). Paul's use in Romans and Galatians emphasizes the trust/belief aspect; the Habakkuk context emphasizes endurance and faithfulness during the Babylonian crisis. Both senses are present: the righteous person is characterized by trust in YHWH's promise that sustains them through the crisis (both the original Babylonian threat and the ongoing existential challenge of life under divine wrath deferred). The Reformers' rediscovery of this verse (Luther: the just shall live by faith, not by works of the law) was the theological engine of the Protestant Reformation.</p>"
-  }
-}
-
-HAB_CONTEXT = {
-  "1": {
-    "1": "<p>Habakkuk's dialogue with YHWH (ca. 605-598 BCE) is the OT's most direct expression of prophetic complaint about divine justice: Why do you tolerate wrong? (1:3); Why are you silent while the wicked swallow up the more righteous? (1:13). YHWH's answer — he is raising up the Babylonians as the instrument of judgment — only deepens the question: how can a holy God use a more wicked nation to judge a less wicked one? The book's resolution is the three-chapter arc of complaint → divine response → prophetic praise (ch. 3): the righteous will live by faith in YHWH's promises even when the present situation appears to contradict those promises. The book models the theodicy of faith: not a logical resolution of the problem of evil, but a trust in the character of YHWH that sustains through crisis.</p>"
-  }
-}
-
-HAB_CHRIST = {
-  "2": {
-    "4": "<p>A direct revelation: 'The righteous shall live by his faithfulness/faith.' This verse, quoted three times in the NT, is the OT's most concentrated statement of the principle of justification by faith. Paul reads it as the OT's own principle against works-righteousness: 'it is evident that no one is justified before God by the law, for the righteous shall live by faith' (Gal 3:11). The christological dimension: the 'righteous one' who lives by faith in its ultimate form is Jesus himself, who trusted the Father through the cross and was vindicated in the resurrection (Heb 10:38-39 applies the verse to perseverance under persecution, contextualizing it with the author's own reflection on Christ's faithfulness). The Reformation's recovery of this verse as the summary of the gospel ('the just shall live by faith') was the recovery of the Christological center of the OT's own prophetic witness.</p>"
-  }
-}
-
-# ============================
-# ZEPHANIAH
-# ============================
-
-ZEPH_ECHO = {
-  "3": {
-    "14": [
-      {"type": "allusion", "target": "Luke 1:28", "note": "Sing aloud O daughter of Zion; shout O Israel! Rejoice and exult with all your heart O daughter of Jerusalem — the call to rejoice because YHWH is among you (3:17); the angel's greeting to Mary (Rejoice, highly favored one, the Lord is with you) echoes the Zephaniah joy-announcement: the presence of YHWH is the reason for rejoicing, and in the incarnation, YHWH is present in the most intimate way imaginable"},
-      {"type": "allusion", "target": "John 1:14", "note": "The LORD your God is in your midst — Zeph 3:17 (the LORD is in your midst) is the OT's joyful proclamation of divine presence; John 1:14 (the Word became flesh and dwelt in our midst) is the ultimate fulfillment: YHWH's presence in the tabernacle-tent and in the midst of his people now means the incarnate Son tabernacling among humanity"}
-    ]
-  }
-}
-
-ZEPH_ORIGINAL = {
-  "3": {
-    "17": "<p><strong>YHWH eloheicha bekirbecha gibbor yoshi'a yasis alayich besimcha yacharish be'ahavato yagel alayich berinah</strong>: 'The LORD your God is in your midst, a mighty one who will save; he will rejoice over you with gladness; he will quiet you by his love; he will exult over you with loud singing.' This verse is the OT's most intimate statement of divine delight in his people: YHWH not merely tolerating but actively rejoicing over Israel, singing over her. The father-over-child image (quieting, singing) is the most tender description of YHWH's covenant love. The NT fulfillment: 'The Father himself loves you' (John 16:27); 'God is love' (1 John 4:8); 'rejoice in the Lord always' (Phil 4:4) — the joy is mutual, as Zephaniah's vision shows: YHWH singing over his people is the grounding for the people's own joy.</p>"
-  }
-}
-
-ZEPH_CONTEXT = {
-  "1": {
-    "1": "<p>Zephaniah prophesied ca. 640-609 BCE during the reign of Josiah (640-609 BCE), before or during Josiah's reform (621 BCE). He was a member of the royal family (his genealogy goes back four generations to Hezekiah, 1:1) — one of the few prophets with clear royal connections. His primary theme is the Day of the LORD (using the phrase more than any other prophet): a comprehensive divine judgment on Judah (ch. 1), the nations (2), and Jerusalem (3:1-8), followed by the promise of a purified remnant and YHWH's presence among them (3:9-20). Zephaniah 3:14-20's closing vision of joy and restoration is one of the OT's most beautiful eschatological passages and the probable background for the angel's greeting to Mary at the Annunciation.</p>"
-  }
-}
-
-ZEPH_CHRIST = {
-  "3": {
-    "14": "<p>A fulfillment: 'Sing aloud, O daughter of Zion; shout, O Israel! Rejoice and exult with all your heart, O daughter of Jerusalem! The LORD has taken away the judgments against you ... The King of Israel, the LORD, is in your midst; you shall never again fear evil.' This call to rejoice because YHWH is in the midst of his people reaches its fulfillment in the incarnation. Luke's Annunciation (1:28-33) and the angels' song at the Nativity (2:10-14: I bring you good news of great joy) are the NT's recasting of Zephaniah's joy-cry: rejoice, for the Lord is with you. The movement from Zephaniah to Luke is the movement from prophetic announcement to historical fulfillment: the divine King who was to come 'in your midst' comes as the infant in Bethlehem, and then the risen Lord who sends the Spirit so that YHWH is 'in the midst' of the church (Matt 18:20; John 14:23).</p>"
-  }
-}
-
-# ============================
-# HAGGAI
-# ============================
-
-HAG_ECHO = {
-  "2": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 12:26-27", "note": "Yet once more, in a little while, I will shake the heavens and the earth and the sea and the dry land — Hebrews cites Haggai 2:6 as pointing to the definitive eschatological shaking: the removal of created things that are shakeable, so that only the unshakeable kingdom remains; the new creation will be established through a shaking that removes the old"}
-    ],
-    "9": [
-      {"type": "allusion", "target": "John 2:21", "note": "The latter glory of this house shall be greater than the former — Haggai promises that the second temple will surpass Solomon's in glory; this is fulfilled not in the physical Herodian temple but in Jesus entering the temple (John 2:19-21: destroy this temple, and in three days I will raise it up; the temple was his body); the presence of Christ in the second temple makes its latter glory exceed its former"}
-    ]
-  }
-}
-
-HAG_ORIGINAL = {
-  "2": {
-    "9": "<p><strong>gadol yihyeh kevod habayit haze ha-acharon min harishon amar YHWH tzvaot uvamaqom haze etten shalom neum YHWH tzvaot</strong>: 'The latter glory of this house shall be greater than the former, says the LORD of hosts. And in this place I will give peace, declares the LORD of hosts.' Haggai's promise was puzzling to the post-exilic community: the second temple was visibly inferior to Solomon's (Ezra 3:12: the elders who had seen the first temple wept when the second was founded). The fulfillment required an unexpected reading: the greater glory came not through architectural improvement (Herod's renovation made it physically grander) but through the presence of the messianic King who entered it (Matt 21:12-17; John 2:13-22). Jesus is the glory that made the second temple greater — the Shekinah presence in person, which the first temple never contained.</p>"
-  }
-}
-
-HAG_CONTEXT = {
-  "1": {
-    "1": "<p>Haggai prophesied in 520 BCE, the second year of Darius I of Persia — 16 years after the first returnees arrived in Jerusalem. The temple reconstruction had stalled: the returning exiles had built their own houses while the temple remained unfinished (1:4). Haggai's four oracles (1:1-11; 2:1-9; 2:10-19; 2:20-23) call the community to prioritize the temple and promise divine blessing as a result. His contemporary was Zechariah, whose visions (chs. 1-8) addressed the same restoration community. Together they provide the theological framework for the post-exilic community's task: rebuilding the worship center through which YHWH's presence among his people would be maintained until the coming of the one greater than the temple.</p>"
-  }
-}
-
-HAG_CHRIST = {
-  "2": {
-    "7": "<p>A type: 'And I will shake all nations, so that the treasures of all nations shall come in, and I will fill this house with glory, says the LORD of hosts.' The 'treasures/desired things of all nations' (<em>chemdah</em>) coming to the temple has been read messianically (the Vulgate translates it 'veniet Desideratus cunctis gentibus', 'the one desired by all nations will come'). Whether or not this is the primary meaning, the pattern is clear: the nations streaming to the temple with their wealth is the OT vision of the eschatological gathering of all peoples to YHWH's dwelling. In the NT: the Magi (Gentile wise men) coming to the Christ-child with their treasures (Matt 2:11) is one fulfillment; the nations bringing their glory into the new Jerusalem (Rev 21:24-26) is the final fulfillment. The temple's latter glory exceeds the former because it is the glory of the incarnate Son and ultimately the new creation temple where God dwells with his people forever.</p>"
-  }
-}
-
-# ============================
-# ZECHARIAH
-# ============================
-
-ZECH_ECHO = {
-  "9": {
-    "9": [
-      {"type": "fulfillment", "target": "Matt 21:5", "note": "Rejoice greatly O daughter of Zion! Shout O daughter of Jerusalem! Behold your king is coming to you; righteous and having salvation is he, humble and mounted on a donkey on a colt the foal of a donkey — Matthew and John both cite Zechariah 9:9 as fulfilled in the triumphal entry; the King of peace entering on a donkey (not a war horse) is the messianic sign"}
-    ]
-  },
-  "11": {
-    "12": [
-      {"type": "fulfillment", "target": "Matt 26:15", "note": "And they weighed out as my wages thirty pieces of silver — the shepherd's wages in Zechariah 11:12 are applied to Judas's price for betraying Jesus; Matthew explicitly cites this as fulfillment (using Jeremiah's name by prophetic attribution of the scripture) in Matt 27:9-10"}
-    ]
-  },
-  "12": {
-    "10": [
-      {"type": "fulfillment", "target": "John 19:37", "note": "They shall look on me whom they have pierced — Zechariah's oracle about the pierced one whom Jerusalem will mourn; John cites it at the crucifixion (they will look on the one they have pierced, John 19:37); Revelation applies it to the parousia (Rev 1:7: every eye will see him, even those who pierced him)"}
-    ]
-  },
-  "13": {
-    "7": [
-      {"type": "fulfillment", "target": "Matt 26:31", "note": "Strike the shepherd, and the sheep will be scattered — Jesus quotes Zechariah 13:7 in Gethsemane as what will be fulfilled when he is arrested: strike the shepherd and the sheep of the flock will be scattered; the disciples' abandonment is the fulfillment of the Zechariah oracle about the smitten shepherd"}
-    ]
-  }
-}
-
-ZECH_ORIGINAL = {
-  "12": {
-    "10": "<p><strong>veshafachti al beit David veal yoshev Yerushalayim ruach chen vetachanunin vehibitu elai et asher daqaru vesafdu alav kemisped al hayachid vehamer alav kemispod al habechor</strong>: 'And I will pour out on the house of David and the inhabitants of Jerusalem a spirit of grace and pleas for mercy, so that, when they look on me, on him whom they have pierced, they shall mourn for him, as one mourns for an only child, and weep bitterly over him, as one weeps over a firstborn.' The grammatical anomaly is striking: 'they shall look on me [YHWH speaking] whom they have pierced' — the divine speaker identifies himself as the one pierced. The transition from 'me' to 'him' within the verse is unexplained in the OT but is resolved in the NT: YHWH and the one who was pierced are identified — the one pierced at the crucifixion is YHWH in the person of the Son.</p>"
-  }
-}
-
-ZECH_CONTEXT = {
-  "1": {
-    "1": "<p>Zechariah prophesied ca. 520-518 BCE (chs. 1-8, with the dated oracles) and possibly into the 5th or 4th century BCE (chs. 9-14, the 'Second Zechariah', are undated and stylistically different — many scholars treat them as later additions). His eight night visions (chs. 1-6) address the post-exilic restoration community with complex symbolic imagery; his oracle-collections (chs. 7-8, 9-11, 12-14) look further into the eschatological future. Zechariah is the most extensively quoted OT book in the Gospel passion narratives — his oracles about the triumphal entry (9:9), the thirty pieces of silver (11:12-13), the smitten shepherd (13:7), the pierced one (12:10), and the cosmic mourning (12:10-14) all find explicit NT citations in the passion story. The passion narrative is Zechariah 9-14 in fulfillment.</p>"
-  }
-}
-
-ZECH_CHRIST = {
-  "9": {
-    "9": "<p>A direct revelation: 'Rejoice greatly, O daughter of Zion! Shout aloud, O daughter of Jerusalem! Behold, your king is coming to you; righteous and having salvation is he, humble and mounted on a donkey, on a colt, the foal of a donkey.' The triumphal entry is one of the most deliberately staged Christological events in the Gospels: Jesus specifically arranges for the donkey (Luke 19:30-34), enters Jerusalem in a way that fulfills Zechariah's vision exactly, and Matthew and John both cite the fulfillment (Matt 21:5; John 12:15). The theological content of the sign: a king on a war horse signals military conquest; a king on a donkey signals peace and humility. The Messiah comes not to destroy enemies with military power but to bring salvation through the humble, peaceable means of his own sacrifice. The crowds' hosannas (Ps 118:26, 'Blessed is he who comes in the name of the LORD') are their recognition of the sign, even if they misread its implications.</p>"
-  },
-  "12": {
-    "10": "<p>A direct revelation: 'They shall look on me, on him whom they have pierced, and they shall mourn for him, as one mourns for an only child, and weep bitterly over him, as one weeps over a firstborn.' The shift from 'me' (YHWH speaking) to 'him' (the one pierced) within the verse is the OT's most striking grammatical prolepsis of the incarnation: the one pierced is YHWH, yet YHWH speaks of him in the third person. John cites it at the crucifixion (19:37: these things took place that the Scripture might be fulfilled: they will look on him whom they have pierced), and Revelation applies it to the parousia (1:7: every eye will see him, even those who pierced him, and all tribes of the earth will wail on account of him). The mourning is both repentance (Acts 2:37: they were cut to the heart and said, Brothers, what shall we do?) and eschatological recognition (Rev 1:7: all tribes will wail).</p>"
-  }
-}
-
-# ============================
-# MALACHI
-# ============================
-
-MAL_ECHO = {
-  "3": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 11:10", "note": "Behold I send my messenger and he will prepare the way before me — the messenger of the covenant is announced; Jesus quotes Malachi 3:1 (in combination with Exod 23:20) as fulfilled in John the Baptist: this is the one about whom it is written, Behold I send my messenger before your face who will prepare your way before you"},
-      {"type": "fulfillment", "target": "Mark 1:2", "note": "Behold I send my messenger before your face — Mark opens his Gospel by combining Malachi 3:1 and Isaiah 40:3 as fulfilled in John the Baptist's ministry in the wilderness"}
-    ]
+    "1": "<p>A type: <em>Ani hagever ra'ah oni beshevet 'evrato</em> — 'I am the man [<em>gever</em>] who has seen affliction under the rod of his wrath.' The <em>gever</em> of Lamentations 3 is among the OT's most developed suffering-figure types pointing toward Christ. He suffers specifically under the rod of divine wrath — not merely human persecution. The NT makes this precise claim about the cross: 'It was the LORD's will to crush him and cause him to suffer' (Isa 53:10); at Gethsemane, Jesus prays that 'this cup' — the cup of divine wrath — might pass, but accepts it (Matt 26:39). The gever's opening confession becomes Christ's: I have been placed under the rod of God's own anger, bearing what my people deserved.</p>",
+    "2": "<p>A shadow: <em>Oti nahag vayolek choshek velo or</em> — 'He has driven me and brought me into darkness, and not into light.' The darkness the gever inhabits foreshadows Christ's darkness at the cross: at the crucifixion, darkness covered the land from noon to three (Matt 27:45), the hours of Christ's God-abandonment. As the gever was led <em>into</em> darkness by God's own hand, so the Father 'did not spare his own Son but gave him up for us all' (Rom 8:32) — an active, purposeful handing-over into the darkness of judgment.</p>",
+    "3": "<p>A shadow: 'Surely against me he turns his hand again and again the whole day' — the unrelenting nature of the divine opposition. At Calvary, the full weight of covenant judgment came without relief: Psalm 22:1-2 (quoted by Christ, Matt 27:46) describes the same unrelenting cry — 'day and night I cry out to you but find no rest.' The gever's experience of sustained divine pressure prefigures Christ's sustained bearing of the full weight of human sin through the six hours on the cross.</p>",
+    "4": "<p>A shadow: 'He has made my flesh and my skin waste away; he has broken my bones.' The physical decimation of the gever foreshadows Christ's bodily suffering. Isaiah 52:14 prophesies that the Servant's appearance would be 'disfigured beyond human likeness'; Psalm 22:14-17 (a passion psalm) describes bones out of joint, strength dried up, tongue clinging to jaws. The gever's bodily destruction is a type of the incarnate Son's body broken for our sin (1 Cor 11:24).</p>",
+    "5": "<p>A shadow: 'He has besieged and enveloped me with bitterness and tribulation.' The imagery of divine encirclement — hemmed in by God from all sides — prefigures Gethsemane, where Christ is 'deeply grieved, even to the point of death' (Matt 26:38), surrounded not merely by enemies but by the approaching darkness of the cup of wrath. Hebrews 5:7 says that 'in the days of his flesh, Jesus offered up prayers and supplications, with loud cries and tears, to him who was able to save him from death' — the gever's bitterness made flesh.</p>",
+    "6": "<p>A shadow: 'He has made me dwell in darkness like the dead of long ago.' Darkness and death — the place of the <em>meitei 'olam</em> (the permanently dead). This foreshadows Christ's three days in the tomb: the one who is 'the resurrection and the life' (John 11:25) descended into death's domain. The Apostles' Creed's 'he descended to the dead' reflects this; Acts 2:27 (quoting Ps 16:10) says the Father did not abandon Christ's soul to Sheol or let his Holy One see corruption. The gever's darkness is entered; Christ's darkness is conquered from within.</p>",
+    "7": "<p>A shadow: 'He has walled me about so that I cannot escape; he has made my chains heavy.' Constraint without escape — the condition of the prisoner. Christ entered the ultimate constraint: death itself. The tomb sealed with a stone and guarded by soldiers (Matt 27:62-66) was designed to ensure that the one inside could not escape. But the Father raised him, breaking the chains (Acts 2:24: 'God raised him up, loosing the pangs of death, because it was not possible for him to be held by it').</p>",
+    "8": "<p>A shadow: 'Though I call and cry for help, he shuts out my prayer.' The sense of divine silence under prayer is the gever's deepest crisis — and Christ's cry of dereliction: 'My God, my God, why have you forsaken me?' (Matt 27:46, quoting Ps 22:1). The Father did not intervene to stop the crucifixion even though Christ prayed in Gethsemane; the prayer was not answered in the way requested. This is the theology of the cross: divine silence in the moment of judgment — because the judgment was the point.</p>",
+    "9": "<p>A shadow: 'He has blocked my ways with blocks of stones; he has made my paths crooked.' The gever's path is closed; the way forward is obstructed. This contrasts sharply with Christ who declared 'I am the way' (John 14:6) — the one whose own path was blocked by death opened the way for all through his resurrection. The blocked path of Lamentations 3 finds its answer in the empty tomb: the stone was rolled away (Matt 28:2) not so Christ could escape but so his followers could enter and see that the way through death is open.</p>",
+    "10": "<p>A shadow: 'He is a bear lying in wait for me, a lion in hiding.' The gever's God has become like a predatory animal — terrifying imagery for divine judgment. For Christ, the 'lion' was not merely metaphorical: 1 Peter 5:8 uses the same lion image for the devil at Gethsemane and the cross; but the Lion of Judah (Rev 5:5) absorbed the predatory judgment and defeated it. The gever's fear of being hunted down is fulfilled in Christ, who was tracked, arrested, and killed — and who is also the one described as overcoming (Rev 5:5).</p>",
+    "11": "<p>A shadow: 'He turned aside my steps and tore me to pieces; he has made me desolate.' The language of being ambushed and torn (<em>sh'sasani</em>, torn apart) foreshadows the violence of the passion. Christ was handed over by Judas, ambushed in Gethsemane, torn by the Roman scourge, and nailed to the cross — each element a fulfillment of the pattern of the innocent sufferer set aside, turned out of his path, and violently destroyed.</p>",
+    "12": "<p>A shadow: 'He bent his bow and set me as a target for his arrow.' The image of being made a divine target appears elsewhere in the passion background: Zechariah 12:10 prophesies 'they will look on me, the one they have pierced'; John 19:34 records a Roman soldier piercing Christ's side with a spear after death. The gever who is made the target of God's arrows is a type of the Son who became the target of divine judgment so that those who hid behind him might go free (2 Cor 5:21).</p>",
+    "13": "<p>A shadow: 'He drove into my kidneys the arrows of his quiver.' In Hebrew physiology, the kidneys (<em>kilayot</em>) are the seat of the deepest self — the innermost parts. Divine judgment penetrating to the kidneys means judgment that reaches the core. At the cross, the judgment of God reached the deepest reality of Christ's person: Paul writes 'God made him who had no sin to be sin for us' (2 Cor 5:21) — not superficial contact with sin but being made the very thing that stands under judgment.</p>",
+    "14": "<p>A shadow: 'I have become the laughingstock of all peoples, the object of their taunts all day long.' The gever's mockery prefigures Christ's mockery with precision. At the cross, soldiers mocked him with a crown of thorns and a purple robe (John 19:2-3); passersby wagged their heads (Matt 27:39, echoing Lam 2:15); religious leaders taunted him: 'He saved others; let him save himself' (Luke 23:35). The gever's experience of being the object of public derision is the lived experience of Calvary.</p>",
+    "15": "<p>A shadow: 'He has filled me with bitterness; he has made me drunk with wormwood.' The specific elements — bitterness and wormwood — appear in Christ's passion. Matthew 27:34 records that when Jesus was offered wine mixed with gall (a bitter substance), he refused it. Mark 15:23 records myrrh-wine. The deliberate offering of bitter drink to the crucified Christ echoes the gever's saturation with bitterness — divine judgment expressed in taste, in the bodily experience of the one who bore the cup of wrath.</p>",
+    "16": "<p>A shadow: 'He has made my teeth grind on gravel, and made me cower in ashes.' Extreme humiliation — the reversal of honor, the descent into dust. Christ's humiliation is the great christological descent: 'Though he was in the form of God, he did not count equality with God a thing to be grasped, but emptied himself, taking the form of a servant, being born in the likeness of men. And being found in human form, he humbled himself by becoming obedient to the point of death, even death on a cross' (Phil 2:6-8). The gever's covering in ashes is the incarnation and cross of the Son of God.</p>",
+    "17": "<p>A theme: 'My soul is bereft of peace; I have forgotten what happiness is.' Peace — <em>shalom</em> — has fled completely. This void of peace is precisely what Christ came to restore. He is the <em>sar shalom</em>, Prince of Peace (Isa 9:6); 'he himself is our peace' (Eph 2:14); at the last supper, 'Peace I leave with you; my peace I give to you. Not as the world gives do I give to you' (John 14:27). The gever's peace-bereft condition is the human condition that Christ entered to heal — not avoiding it from a distance but inhabiting it fully.</p>",
+    "18": "<p>A shadow: 'I say, my endurance has perished; so has my hope from the LORD.' The total collapse of hope — the nadir of the gever's experience. This collapse mirrors Gethsemane, where Christ prays 'let this cup pass from me' (Matt 26:39), and the cry of dereliction, 'my God, my God, why have you forsaken me?' (Matt 27:46). The disciples on the Emmaus road after the crucifixion said 'we had hoped that he was the one to redeem Israel' (Luke 24:21) — past tense: hope had died with him. The gever's hopelessness is historically enacted at Calvary, historically reversed at the resurrection.</p>",
+    "19": "<p>A shadow: 'Remember my affliction and my wandering, the wormwood and the gall!' The double plea — 'remember me' — is the language of those who cry out from extremity. On the cross, the dying thief says 'Jesus, remember me when you come into your kingdom' (Luke 23:42) — the cry of Lamentations answered in the person of the crucified Christ who is himself both the one crying 'remember' and the one who answers. The wormwood and gall of the gever's memory became the literal gall offered at the cross (Matt 27:34).</p>",
+    "20": "<p>A shadow: 'My soul continually remembers it and is bowed down within me.' The soul bent under the weight of memory and grief — the posture of one crushed. Christ's soul was 'sorrowful, even to death' (Matt 26:38) in Gethsemane; Hebrews 5:7 records that 'in the days of his flesh, Jesus offered up prayers and supplications, with loud cries and tears.' The gever's bowed soul is the human experience that Christ took on fully in the garden, where he fell on his face (Matt 26:39) — the posture of utter prostration before the weight of what was coming.</p>",
+    "21": "<p>A shadow and pivot: 'But this I call to mind, and therefore I have hope.' The critical turning point of the entire book — the pivot from despair to hope, from v21 forward. This pivot is a type of the resurrection pivot in human history: the disciples moved from the cross (despair, 'we had hoped,' Luke 24:21) to the empty tomb (renewed hope, 1 Pet 1:3: 'a living hope through the resurrection of Jesus Christ from the dead'). The gever's recall-act — choosing to remember what is true about God — is the faith that the resurrection makes possible for all who come after.</p>",
+    "22": "<p>A direct revelation: 'The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness.' This confession — the OT's most concentrated statement of divine covenantal faithfulness — is the foundation of NT assurance. Paul says 'neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord' (Rom 8:38-39): the love the Preacher of Lamentations confessed in the ruins of Jerusalem is the love that cannot be severed by anything. Christ's resurrection is the supreme demonstration of the <em>chesed</em> that Lamentations confesses: even through the cross — the ultimate expression of divine wrath — the steadfast love did not fail.</p>",
+    "23": "<p>A revelation of God: 'They are new every morning; great is your faithfulness.' The morning renewal of divine mercies points to the ultimate morning renewal: the resurrection morning, when the disciples found the tomb empty as the day began (John 20:1: 'on the first day of the week, while it was still dark, Mary went to the tomb'). The resurrection is the supreme act of divine <em>faithfulness</em> — not just to Christ (who was raised) but to the promise embedded in every morning that death does not have the final word.</p>",
+    "24": "<p>A theme: 'The LORD is my portion, says my soul; therefore I will hope in him.' <em>Chelqi YHWH</em> — my portion is YHWH. The inheritance language of Lamentations is fulfilled in Christ: Ephesians 1:11 says believers have obtained an inheritance in Christ; Christ himself is the inheritance ('Christ in you, the hope of glory,' Col 1:27). The gever's finding of hope in YHWH as his portion anticipates the NT's grounding of all hope in the person of Christ who is both the inheritance and the inheritor (Heb 1:2).</p>",
+    "25": "<p>A theme: 'The LORD is good to those who wait for him, to the soul who seeks him.' The goodness of YHWH to the seeking soul is concentrated in Christ: 'No one is good except God alone' (Mark 10:18), yet Christ is the full embodiment of that divine goodness toward those who seek — 'seek and you will find' (Matt 7:7); 'I am the good shepherd' (John 10:11, 14). The gever's confession that YHWH is good to seekers finds its fulfillment in the One who actively seeks what was lost (Luke 15).</p>",
+    "26": "<p>A theme: 'It is good that one should wait quietly for the salvation [<em>yeshuah</em>] of the LORD.' The word <em>yeshuah</em> (salvation, H3444) is the name of Jesus in Hebrew form: Yeshua. The gever waits for <em>yeshuah</em> from YHWH; the NT announces that <em>Yeshua</em> has come — the salvation is not merely an event but a Person. The waiting of Lamentations 3 is the waiting of all Israel in the OT, and its fulfillment is the Incarnation.</p>",
+    "27": "<p>A shadow: 'It is good for a man that he bear the yoke in his youth.' The voluntary bearing of a yoke — accepting constraint, submission, burden. Christ's saying 'Take my yoke upon you ... for my yoke is easy and my burden is light' (Matt 11:29-30) directly invokes this yoke language. But before offering his yoke to others, Christ bore the ultimate yoke: the cross itself (John 19:17) and the full weight of the law's demands (Gal 4:4-5: 'born under the law, to redeem those under the law'). The gever's wisdom about yoke-bearing is embodied by the one who became a servant (Phil 2:7).</p>",
+    "28": "<p>A shadow: 'Let him sit alone in silence when it is laid on him.' Solitary silence under burden — the deepest form of bearing. In Gethsemane, Christ withdrew 'about a stone's throw' from his disciples to pray alone (Luke 22:41); even Peter, James, and John fell asleep while he watched alone. On the cross, he was abandoned: 'Then all the disciples left him and fled' (Matt 26:56). The gever's alone-and-silent posture is the posture of Christ in his passion: he bore it in ultimate solitude so that we would never be alone in ours (Heb 13:5).</p>",
+    "29": "<p>A shadow: 'Let him put his mouth in the dust — there may yet be hope.' Prostration — face in the dust — is the ultimate posture of submission and prayer. In Gethsemane: 'And going a little farther he fell on his face and prayed' (Matt 26:39). The gever's putting his mouth in the dust is the prayer posture of absolute surrender; Christ's Gethsemane posture enacts it literally — the Son of God face down in the garden, surrendering to the Father's will. The 'there may yet be hope' that follows the dust is the resurrection hope born from that surrender.</p>",
+    "30": "<p>A shadow and fulfillment: 'Let him give his cheek to the one who strikes, and let him be filled with insults.' This verse is enacted literally in Christ's passion: at the Jewish trial, 'one of the officers standing there struck Jesus with his hand' (John 18:22); at the Roman trial, soldiers struck him repeatedly (Matt 27:30). Christ's teaching 'if anyone slaps you on the right cheek, turn to him the other also' (Matt 5:39) is first lived by Christ himself — he who taught the other cheek offered both cheeks before he ever taught the principle.</p>",
+    "31": "<p>A revelation of God: 'For the Lord will not cast off forever.' The assurance that divine rejection is not final is the theological hinge on which the resurrection turns. Acts 2:27 (quoting Ps 16:10) establishes that 'you will not abandon my soul to Hades, or let your Holy One see corruption' — God did not cast off his Son forever. The 'not forever' of Lamentations 3:31 becomes the three-days-and-then of Easter: the abandonment was real and temporary; the reunion permanent and final.</p>",
+    "32": "<p>A revelation of God: 'But though he cause grief, he will have compassion according to the abundance of his steadfast love.' Both grief and compassion come from the same God — a theological claim that the cross embodies perfectly. The Father caused the grief of the passion (Isa 53:10: 'it was the LORD's will to crush him'); the Father expressed his compassion in the resurrection. 'God so loved the world that he gave his only Son' (John 3:16) — the giving is both the grief (cross) and the compassion (salvation) in a single act.</p>",
+    "33": "<p>A revelation of God: 'For he does not willingly afflict or grieve the children of men.' God does not afflict from delight in suffering but for redemptive purpose. This is the theology of the cross: the Father sent the Son into suffering not from divine cruelty but from divine love (John 3:16); the Son was 'obedient to the point of death' (Phil 2:8) willingly, not because God delights in pain. The unwillingness of God to afflict is expressed in Christ's prayer 'let this cup pass' and the Father's silence — not from indifference but from the necessity of redemption.</p>",
+    "34": "<p>A theme: 'To crush underfoot all the prisoners of the earth.' The crushing of prisoners — those bound by powers that have illegitimate authority over them. Christ's mission includes this liberation: 'to proclaim liberty to the captives, and the opening of the prison to those who are bound' (Isa 61:1, quoted by Jesus in Luke 4:18). The gever laments that the prisoners are being crushed; Christ comes to reverse this through his own crushing (bruised for our iniquities, Isa 53:5) and subsequent victory (Col 2:15: having disarmed the rulers and authorities).</p>",
+    "35": "<p>A type: 'To deny a man justice in the presence of the Most High.' The perversion of justice — one of the deepest offenses of Lamentations. Christ stood trial before the Most High's chosen representatives (the Sanhedrin, Pilate) and justice was denied: Pilate declared him innocent three times and still had him crucified (John 19:4, 6, 12-16). The gever's complaint about justice denied is the complaint that the cross addresses: Christ was denied justice so that we — who had forfeited justice — might receive mercy.</p>",
+    "36": "<p>A shadow: 'To subvert a man in his lawsuit, the Lord does not approve.' The subverting of righteous legal process — God does not approve of it even when he sovereignly permits it (as at the cross). Acts 2:23 holds the paradox: 'this Jesus, delivered up according to the definite plan and foreknowledge of God, you crucified and killed by the hands of lawless men.' The lawless subversion of justice at the cross was simultaneously the sovereign plan of redemption — approved in its redemptive purpose, condemned in its human injustice.</p>",
+    "37": "<p>A revelation of God: 'Who has spoken and it came to pass, unless the Lord has commanded it?' Divine sovereignty over all that happens — every word spoken, every event realized, is under the LORD's command. The cross stands as the supreme example: prophesied from Isaiah 53 to Psalm 22 to Zechariah 12, every detail came to pass according to what was written (John 19:28: 'to fulfill the Scripture, Jesus said, 'I thirst''). The cross is the most thoroughly predicted event in human history — commanded before the foundation of the world (1 Pet 1:20).</p>",
+    "38": "<p>A revelation of God: 'Is it not from the mouth of the Most High that good and bad come?' Divine sovereignty over both good and adversity — a hard theological claim. The cross stands as its ultimate expression: the worst event in human history (the crucifixion of the Son of God by human sin) is simultaneously the best event in human history (the redemption of the world). From the mouth of the Most High came both the cross (the bad, from humanity's perspective) and the resurrection (the good) — out of the same act of divine providence.</p>",
+    "39": "<p>A theme: 'Why should a living man complain, a man, about the punishment of his sins?' The rhetorical call to accept divine discipline in the light of human sin. The NT sharpens this: 'there is none righteous, not even one' (Rom 3:10); all have sinned (Rom 3:23). But Christ bore the punishment that human sinfulness deserved (Isa 53:5: 'the punishment that brought us peace was on him'). The gever's question — why complain when punishment is merited? — is answered by the gospel: Christ bore the merited punishment so that the complaint might finally cease.</p>",
+    "40": "<p>A theme: 'Let us test and examine our ways, and return to the LORD.' The call to repentance and return — <em>teshuvah</em>. This is the NT's opening message: 'Repent, for the kingdom of heaven is at hand' (Matt 3:2, 4:17). The gever calls his people to self-examination and return; Christ calls all people to repentance through him — 'I am the way' (John 14:6). Repentance <em>to the LORD</em> is now repentance <em>through Christ</em>, the one mediator (1 Tim 2:5).</p>",
+    "41": "<p>A theme: 'Let us lift up our hearts and hands to God in heaven.' Prayer with raised heart and hands — the gesture of approach to God. Christ is the ground of that approach: 'Through him we ... have access in one Spirit to the Father' (Eph 2:18); 'We have confidence to enter the holy places by the blood of Jesus' (Heb 10:19). The gever's call to lift hands toward God is fully enabled only through the Christ who has opened access to the Father by tearing the temple curtain (Matt 27:51).</p>",
+    "42": "<p>A theme: 'We have transgressed and rebelled, and you have not forgiven.' The raw confession of sin and the experience of unforgiveness — the gap between confession and absolution that Lamentations lives in. The cross closes this gap: 'In him we have redemption through his blood, the forgiveness of our trespasses, according to the riches of his grace' (Eph 1:7). The gever speaks from before the cross; the believer speaks from after it — the same sin, but now met with the blood that speaks a better word than Abel's blood (Heb 12:24).</p>",
+    "43": "<p>A shadow: 'You have wrapped yourself with anger and pursued us, killing without pity.' The divine pursuit in wrath — relentless, without mercy, leading to death. At the cross, Christ absorbs this pursuit: 'God presented Christ as a propitiation [<em>hilasterion</em>] through the shedding of his blood' (Rom 3:25). The wrath that pursued Israel without pity fell upon the Son who stood in their place — 'He who did not spare his own Son but gave him up for us all' (Rom 8:32). Christ was 'killed without pity' so that the Father's pity might be poured out on those Christ represented.</p>",
+    "44": "<p>A shadow: 'You have wrapped yourself with a cloud so that no prayer can pass through.' The divine hiddenness — a cloud between prayer and God. This is the theology of the cry of dereliction: on the cross, Christ experienced the ultimate cloud-barrier between himself and the Father — 'My God, my God, why have you forsaken me?' (Matt 27:46). Paul interprets this: 'God made him who had no sin to be sin for us' (2 Cor 5:21) — at the cross, Christ occupied the place of those whose prayers cannot reach through because of sin, so that our prayers might now reach through in him (Heb 4:16).</p>",
+    "45": "<p>A shadow: 'You have made us scum and garbage among the peoples.' The language of <em>se'i</em> (refuse, offscouring) — the lowest social position, worthy of disposal. Paul applies this exact social location to the apostles and to Christ: 'We have become, and are still, like the scum of the world, the refuse of all things' (1 Cor 4:13); Christ 'bore our reproach' (Heb 13:13). Jesus was executed outside the city gate (Heb 13:12) — the place where garbage was disposed. The gever's being made garbage is the social location Christ chose to occupy.</p>",
+    "46": "<p>A shadow: 'All our enemies open their mouths against us.' The image of opened mouths — the posture of mockery and accusation — appears in the passion Psalms: 'All who see me mock me; they open wide their lips, they shake their heads' (Ps 22:7). At the cross, every group opened their mouths: the soldiers (Matt 27:27-31), the passersby (Matt 27:39), the chief priests (Matt 27:41), the criminals (Matt 27:44). The gever's enemies with open mouths is the visual image of Calvary.</p>",
+    "47": "<p>A shadow: 'Panic and pitfall have come upon us, devastation and destruction.' The four-word Hebrew sequence captures total catastrophe — every exit blocked, every ground unsafe. The disciples experienced this at the cross: scattered in panic (Matt 26:56), hiding in locked rooms (John 20:19), overwhelmed by catastrophic loss. The destruction that came upon Israel at the fall of Jerusalem anticipates the destruction that fell on Christ — but with the crucial difference that his destruction is the last destruction, the one that undoes all others (1 Cor 15:26: 'The last enemy to be destroyed is death').</p>",
+    "48": "<p>A shadow: 'My eyes flow with rivers of tears because of the destruction of the daughter of my people.' The weeping of the gever over Jerusalem's destruction anticipates Christ's weeping over the same city: 'When he drew near and saw the city, he wept over it' (Luke 19:41). The identical object of mourning — Jerusalem — and the identical posture — tears — link the gever directly to Jesus. John 11:35 ('Jesus wept') and Hebrews 5:7 (Christ's 'loud cries and tears') establish Christ as a man acquainted with weeping, the fulfillment of this tearful suffering figure.</p>",
+    "49": "<p>A shadow: 'My eyes will flow without ceasing, without respite.' The unceasing quality of the grief — no pause, no end. Hebrews 7:25 says Christ 'always lives to make intercession' for his people — an unceasing priestly activity. The gever who weeps without ceasing becomes, in Christ, the intercessor who prays without ceasing on behalf of those for whom he wept. The tears of Lamentations are taken up into the intercession of the risen Christ who knows from personal experience what it is to weep without relief.</p>",
+    "50": "<p>A shadow: 'Until the LORD from heaven looks down and sees.' The upward gaze — waiting for divine attention from above. This mirrors the cry of all sufferers waiting for God to intervene. At the ascension, Christ returned to heaven (Acts 1:9-11); from there, as the interceding high priest, he 'looks down and sees' (Heb 4:15: 'we do not have a high priest who is unable to sympathize with our weaknesses'). The gever waits for the LORD to look down; Christ both was the one who looked down (the Incarnation) and the one who looks down now from above in intercession.</p>",
+    "51": "<p>A shadow: 'My eyes cause me grief because of all the daughters of my city.' The grief sourced in seeing — the visual suffering of a witness to destruction. Christ was the ultimate witness to the destruction sin causes: seeing Lazarus's tomb (John 11:33-35), seeing the crowds 'harassed and helpless' (Matt 9:36), seeing Jerusalem from the Mount of Olives (Luke 19:41-44). The gever's eyes that cause grief by what they see are Christ's eyes that wept over what they beheld — a compassion that moved him to act.</p>",
+    "52": "<p>A type: 'I have been hunted like a bird by those who were my enemies without cause.' Hunted without cause — the innocent prey of unjust enemies. Jesus says to his accusers at arrest: 'Have you come out as against a robber, with swords and clubs to capture me?' (Matt 26:55). John 15:25 quotes Psalm 35:19 and 69:4: 'They hated me without a cause' — a verse Christ applies to himself. The gever hunted without cause is the type fulfilled in Christ, who was arrested, tried, and executed on the basis of false testimony (Matt 26:60).</p>",
+    "53": "<p>A type: 'They flung me alive into the pit and cast stones on me.' The pit (<em>bor</em>) with stones cast down — the imagery of entombment. The direct type is Joseph thrown into a pit (Gen 37:24) and Jeremiah cast into a cistern (Jer 38:6), both OT types of Christ. Christ's tomb: 'And he rolled a great stone to the entrance of the tomb and went away' (Matt 27:60). Cast alive into the pit with a stone above — this is the burial of Christ, from which the Father raised him to demonstrate that no pit can hold the Lord of life.</p>",
+    "54": "<p>A shadow: 'Water closed over my head; I said, I am lost.' The waters of overwhelm — a drowning imagery for being submerged under judgment. Psalm 69:1-2 uses the same imagery and is a passion psalm ('for my thirst they gave me sour wine,' v21, quoted in John 19:29). Christ experienced the subjective dimension of this overwhelm — the cry of dereliction is the cry of one submerged under the weight of the world's sin. But as Jonah came up from the great fish (a type Christ applies to himself, Matt 12:40), so Christ emerged from the depths on the third day.</p>",
+    "55": "<p>A type: 'I called on your name, O LORD, from the depths of the pit.' Crying to YHWH from the pit — this is the central prayer of Psalm 22, the passion psalm quoted by Christ from the cross (Matt 27:46). The gever in the pit calling out is the figure that Christ fulfills: Psalm 22:24 says 'he did not despise or scorn the suffering of the afflicted one; he did not hide his face from him but listened to his cry for help.' The prayer from the pit was answered — not by immediate rescue but by resurrection from the depth of death itself.</p>",
+    "56": "<p>A shadow: 'You heard my plea, 'Do not close your ear to my cry for relief.'' The cry heard — divine response to prayer from the pit. Hebrews 5:7 says that Christ 'was heard because of his reverent submission' — his prayer was answered, though not in the way of immediate deliverance from death but in the way of resurrection. The Father heard the Son's cry from the cross; the answer came on the third day. The gever's assurance that his cry was heard anticipates the assurance that Christ's cry was heard and answered definitively.</p>",
+    "57": "<p>A shadow: 'You came near when I called on you; you said, 'Do not fear.'' Divine nearness in response to prayer — the answer to the cry from the pit. At the resurrection, the angel says 'Do not be afraid' (Matt 28:5, 10); in each resurrection appearance, Christ appears to fearful disciples and speaks peace (John 20:19-21). The gever's 'Do not fear' spoken by YHWH in the pit is the Easter announcement spoken by the risen Christ to those whose fear had been total. The divine nearness that comes after the pit is the risen Christ who comes near on the Emmaus road (Luke 24:15).</p>",
+    "58": "<p>A type: 'You have taken up my cause, O Lord; you have redeemed my life.' The language of redemption — <em>ga'alta nafshi</em>, you have redeemed my life. The <em>go'el</em> (kinsman-redeemer) is the legal figure who ransoms a relative from bondage. Christ is the ultimate <em>go'el</em>: 'the Son of Man came not to be served but to serve, and to give his life as a ransom [<em>lutron</em>] for many' (Matt 20:28); 'Christ redeemed us from the curse of the law by becoming a curse for us' (Gal 3:13). The gever whose life is redeemed by YHWH is the type of every believer whose life is redeemed by Christ.</p>",
+    "59": "<p>A shadow: 'You have seen the wrong done to me, O LORD; judge my cause.' The appeal to divine justice — YHWH as judge who sees the injustice. Christ's resurrection is the divine verdict on the injustice of the cross: by raising him from the dead, the Father declared the verdict ('This is my Son, whom I love') against the human verdict ('He deserves death'). Acts 17:31 says God has 'fixed a day on which he will judge the world in righteousness by a man whom he has appointed; and of this he has given assurance to all by raising him from the dead.'</p>",
+    "60": "<p>A shadow: 'You have seen all their vengeance, all their plots against me.' YHWH's comprehensive sight of the enemies' designs. Acts 2:23 records that the cross was both a human plot ('lawless men') and divine foreknowledge ('the definite plan and foreknowledge of God'). God saw the vengeance of those who crucified his Son; their acts were not outside his sight or control. Christ's promise that he will return to judge (Rev 19:11-16) is the final answer to the gever's appeal — the one who was hunted will judge those who hunted him.</p>",
+    "61": "<p>A shadow: 'You have heard their taunts, O LORD, all their plots against me.' The heard taunts — divine awareness of every insult hurled at the suffering one. The taunts of the cross are among the most documented elements of the passion: 'Aha! You who would destroy the temple and rebuild it in three days, save yourself!' (Mark 15:29-30). The Father heard every taunt; Christ endured every one in silence (Isa 53:7: 'he was oppressed and afflicted, yet he did not open his mouth'). The gever's trust that God hears the taunts is fulfilled in Christ's silent endurance before his judges.</p>",
+    "62": "<p>A shadow: 'The lips and thoughts of my assailants are against me all the day long.' Constant verbal assault — the unceasing attack of speech and thought. The passion narratives record this relentlessness: from Gethsemane through the trial before Annas, the Sanhedrin, Pilate, and Herod, through the cross, the verbal assault never stopped. 'Those who passed by derided him, wagging their heads' (Matt 27:39) until the end. The gever's continuous assault is the continuous assault of the passion day.</p>",
+    "63": "<p>A shadow: 'Behold their sitting down and their rising up; I am the object of their taunts.' The mocking watchers — those who sit and rise in attention to the suffering figure. At the cross, 'sitting down, they kept watch over him there' (Matt 27:36). The Roman soldiers watched; the religious leaders 'stood there and scoffed at him' (Luke 23:35); the people 'stood watching' (Luke 23:35). The gever who is watched and mocked in every posture is Christ on the cross, watched from the foot by enemies and by his mother (John 19:25-26).</p>",
+    "64": "<p>A theme: 'You will repay them, O LORD, according to the work of their hands.' The appeal to divine retributive justice — the certainty that divine judgment will come on those who perpetrate injustice. Christ's second coming is the answer: 'When the Son of Man comes in his glory ... he will sit on his glorious throne' (Matt 25:31). The retribution the gever calls for will come through the risen and exalted Christ who is appointed judge of the living and the dead (Acts 10:42).</p>",
+    "65": "<p>A theme: 'You will give them dullness of heart; your curse will be on them.' The hardening of hearts under divine judgment — an OT pattern that carries into the NT (Rom 11:7-8: 'the rest were hardened'). The very hardness of heart that led to Christ's crucifixion is itself part of the divine plan: 'God gave them a spirit of stupor' (Rom 11:8). The curse-language of Lamentations 3:65 connects to Galatians 3:10-13: Christ becomes the curse (Deut 21:23) to absorb the curse on those who would otherwise fall under it permanently.</p>",
+    "66": "<p>A theme: 'You will pursue them in anger and destroy them from under your heavens, O LORD.' The closing verse returns to the language of divine pursuit and destruction — now directed at the enemies rather than at the gever. This is the eschatological reversal: the one who was hunted will hunt; the one who was destroyed will destroy the power of destruction itself. Revelation 19:11-21 describes this reversal: the Word of God comes on a white horse, 'judging in righteousness and making war.' The gever's closing prayer is answered in the return of the crucified-and-risen Christ as judge.</p>"
   },
   "4": {
-    "5": [
-      {"type": "fulfillment", "target": "Matt 11:14", "note": "Behold I will send you Elijah the prophet before the great and awesome day of the LORD comes — Jesus identifies John the Baptist as the Elijah who was to come (Matt 11:14; 17:12): if you are willing to accept it, he is Elijah who is to come; the angel's announcement (Luke 1:17: he will go before him in the spirit and power of Elijah) grounds John's identity in Malachi's prophecy"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Luke 1:17", "note": "He will turn the hearts of fathers to their children and the hearts of children to their fathers — the Elijah-prophecy of Malachi 4:6 is applied to John the Baptist's ministry; Luke 1:17 applies it directly: he will turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just"}
-    ]
-  }
-}
-
-MAL_ORIGINAL = {
-  "3": {
-    "1": "<p><strong>hineni sholech malachi ufinah derekh lefanai ufitom yavo el heikhalov haAdon asher atem mevaksim umalach haberit asher atem chafetzim hineh ba amar YHWH tzvaot</strong>: 'Behold, I send my messenger [<em>malachi</em>], and he will prepare the way before me. And the Lord whom you seek will suddenly come to his temple; and the messenger of the covenant in whom you delight, behold, he is coming, says the LORD of hosts.' The word <em>malachi</em> means 'my messenger' — the book's title is this very word. YHWH promises two figures: the forerunner messenger (= John the Baptist) and the Lord who suddenly comes to his temple (= Jesus). The Lord's coming to his temple is the incarnation and the temple-cleansings (John 2:13-22; Mark 11:15-17). The 'messenger of the covenant' combines the forerunner and the Lord in a way that the NT separates: John is the messenger of Mal 3:1a; Jesus is the Lord of Mal 3:1b.</p>"
-  },
-  "4": {
-    "5": "<p>The closing oracle of Malachi (4:5-6) is also the closing oracle of the OT: 'Behold, I will send you Elijah the prophet before the great and awesome day of the LORD comes. And he will turn the hearts of fathers to their children and hearts of children to their fathers, lest I come and strike the land with a decree of utter destruction.' The Hebrew canon ends here — with a promise of Elijah's return and a warning of cursing if he is rejected. The NT opens with John the Baptist filling this role (Luke 1:17; Matt 11:14; 17:10-13). The OT ends in expectation; the NT opens in fulfillment. The 400-year inter-testamental silence is the space between Malachi's promise and Matthew's fulfillment — the waiting for the forerunner who will announce the Lord's coming.</p>"
-  }
-}
-
-MAL_CONTEXT = {
-  "1": {
-    "1": "<p>Malachi is the last book of the OT in both the Hebrew canon's traditional order and the Christian canon. It was written ca. 450-430 BCE, after the return from exile, during a period of post-exilic religious laxness. The prophet addresses: priests who offer defiled offerings (1:6-2:9), men who divorce their wives (2:14-16), the community's failure to tithe (3:10), and the skepticism of those who question YHWH's justice (3:13-15). Its six disputation speeches (each opening with a divine claim, then an objection, then YHWH's response) address the demoralization of the restored community. Malachi is the bridge between the OT and the NT: its final oracles (3:1; 4:5-6) are the OT's last prophetic words, pointing directly to John the Baptist and Jesus, so that the NT's opening (Matt 1-3; Mark 1; Luke 1-3) is the direct fulfillment of Malachi's closing.</p>"
-  }
-}
-
-MAL_CHRIST = {
-  "3": {
-    "1": "<p>A direct revelation: 'Behold, I send my messenger, and he will prepare the way before me. And the Lord whom you seek will suddenly come to his temple.' This oracle ends the OT's prophetic program: the next thing to happen is the forerunner's preparation and the Lord's arrival. Four hundred years of prophetic silence follow — and then John the Baptist appears in the wilderness (Matt 3:1-3; Mark 1:2-4), fulfilling Malachi 3:1 (combined with Isaiah 40:3). Jesus's entry into the temple (John 2:13-22; Mark 11:15-17) is the Lord's sudden coming to his temple. The NT's opening chapters are Malachi's oracle in motion. The closing words of the OT (Mal 4:5-6) and the opening words of the NT (Matt 1:1) are not separated by 400 years of divine absence but by the divine patience that was preparing the fullness of time (Gal 4:4: when the fullness of time had come, God sent forth his Son).</p>"
-  },
-  "4": {
-    "5": "<p>A fulfillment: 'Behold, I will send you Elijah the prophet before the great and awesome day of the LORD comes.' The OT ends with a promise; the NT opens with its fulfillment. John the Baptist comes 'in the spirit and power of Elijah' (Luke 1:17) — not literally Elijah reincarnated (John explicitly denies being Elijah, John 1:21) but fulfilling Elijah's eschatological role as the forerunner who prepares the way. Jesus confirms: 'if you are willing to accept it, he is Elijah who is to come' (Matt 11:14). The Transfiguration scene (Matt 17:3) brings the literal Elijah alongside the literal Moses alongside the literal Christ — the forerunner and the law flanking the fulfillment. Malachi's final word (the turning of fathers' and children's hearts, lest the land be struck with a curse) is the new covenant's mission: the gospel brings family reconciliation within the covenant community and protects from the ultimate curse, which Christ has absorbed (Gal 3:13).</p>"
+    "1": "<p>A shadow: 'How the gold has grown dim, how the pure gold has changed! The holy stones lie scattered at the head of every street.' The devaluation of the precious — gold that has lost its luster, sacred stones cast into the streets. The NT uses the language of rejected precious stones for Christ: 'The stone the builders rejected has become the cornerstone' (Ps 118:22, quoted in Matt 21:42, Acts 4:11, 1 Pet 2:7). The gold of Lamentations that has grown dim is the type of the Son of God who 'had no beauty or majesty to attract us' in his suffering (Isa 53:2) — the precious one treated as refuse.</p>",
+    "2": "<p>A shadow: 'The precious sons of Zion, worth their weight in fine gold, how they are regarded as earthen pots, the work of a potter's hands!' The sons of Zion — precious as gold — reduced to the status of clay pots. Christ, though equal with God, 'emptied himself, taking the form of a servant, being born in the likeness of men' (Phil 2:6-7). The precious made common — divinity taking on clay — is the christological pattern of the Incarnation. But the clay-pot imagery also carries the Resurrection hope: 'we have this treasure in jars of clay, to show that the surpassing power belongs to God' (2 Cor 4:7).</p>",
+    "3": "<p>A theme: 'Even jackals offer the breast; they nurse their young; but the daughter of my people has become cruel, like the ostriches in the wilderness.' The hardness that abandons the young — parental cruelty worse than wild animals. The hardness of Israel's heart toward its own that led to this cruelty is the hardness that also rejected the prophets and ultimately rejected Christ: 'Jerusalem, Jerusalem, you who kill the prophets and stone those sent to you, how often I have longed to gather your children together, as a hen gathers her chicks under her wings, and you were not willing' (Matt 23:37). The cruelty Lamentations laments is the same hardness that crucified the one who came to gather them.</p>",
+    "4": "<p>A shadow: 'The tongue of the nursing infant sticks to the roof of its mouth for thirst; the children beg for food, but no one gives to them.' Thirst so severe it silences the infant — the mouth sealed shut by need. This anticipates Christ's cry from the cross: 'After this, Jesus, knowing that all was now finished, said (to fulfill the Scripture), 'I thirst'' (John 19:28). The thirst of Lamentations 4:4 is the thirst of Jerusalem's children without bread; the thirst of John 19:28 is the thirst of the one who bore their punishment. He who is 'the bread of life' (John 6:35) and 'living water' (John 7:38) died in thirst.</p>",
+    "5": "<p>A theme: 'Those who once feasted on delicacies perish in the streets; those who were brought up in purple embrace ash heaps.' Reversal of status — the pampered reduced to the gutter. The NT's central christological reversal moves in the opposite direction: from poverty to riches through Christ. 'For you know the grace of our Lord Jesus Christ, that though he was rich, yet for your sake he became poor, so that you by his poverty might become rich' (2 Cor 8:9). Christ voluntarily made the downward journey so that his people might make the upward one; Lamentations records the forced downward journey of the unrepentant.</p>",
+    "6": "<p>A theme: 'For the punishment of the daughter of my people is greater than the penalty of Sodom, which was overthrown in a moment, and no hands were wrung for her.' The severity exceeding Sodom's — a stunning comparison. Christ uses Sodom as the baseline of judgment against those who reject him: 'It will be more bearable on the day of judgment for Sodom and Gomorrah than for that town' (Matt 10:15). The worst judgment is reserved for those who reject greater light — Jerusalem's judgment exceeded Sodom's because she had the temple, the law, the prophets, and finally the Son (Matt 23:37-38).</p>",
+    "7": "<p>A shadow: 'Her princes were purer than snow, whiter than milk; their bodies were more rudiant than coral, their appearance like lapis lazuli.' The pristine Nazirites — consecrated, radiant. At the Transfiguration, Christ's appearance became 'like the sun, and his clothes became white as light' (Matt 17:2). The radiance that the Nazirites once bore and then lost in judgment is a pale foreshadowing of the divine glory that the incarnate Son temporarily veiled and then revealed — and which believers will share in resurrection glory (Phil 3:21).</p>",
+    "8": "<p>A shadow: 'Now their visage is blacker than soot; they are not recognized in the streets. Their skin has shriveled on their bones; it has become as dry as wood.' The unrecognizable face — disfigurement beyond recognition. Isaiah 52:14 prophesies of the Servant: 'his appearance was so disfigured beyond that of any human being and his form marred beyond human likeness.' The passion and crucifixion brought Christ to the point where he could not be recognized as the glorified teacher of the mount — the divine beauty veiled in suffering. But Mary recognized him by his voice (John 20:16); Thomas by his wounds (John 20:27).</p>",
+    "9": "<p>A shadow: 'Happier were the victims of the sword than the victims of hunger, who wasted away, pierced by lack of the fruit of the field.' The bitter comparison of quick death against slow death by famine. Both modes of death are enfolded in Christ's atoning work: 'he himself bore our sins in his body on the tree' (1 Pet 2:24). The cross was both violent (sword-like piercing, John 19:34) and slow (hours of exposure and asphyxiation). Christ's death was comprehensive — encompassing the full range of human dying — so that his resurrection might be comprehensive in its coverage.</p>",
+    "10": "<p>A theme: 'The hands of compassionate women have boiled their own children; they became their food during the destruction of the daughter of my people.' The ultimate covenant curse enacted (Deut 28:57: 'she will eat them secretly during the siege') — the most extreme imaginable perversion of maternal love. Galatians 3:10 and 13 connect covenant curse and Christ: 'all who rely on works of the law are under a curse ... Christ redeemed us from the curse of the law by becoming a curse for us.' The curse of Deuteronomy 28 that Lamentations describes was the curse Christ absorbed at the cross — becoming cursed so that the curse's power over his people might be broken.</p>",
+    "11": "<p>A direct revelation: 'The LORD has given full vent to his wrath; he has poured out his fierce anger, and he kindled a fire in Zion that consumed its foundations.' The divine wrath poured out — <em>kilyah</em> completion, full vent. This is the language of propitiation: God's wrath exhausted. The NT uses this same language of wrath fully expended for the cross: 'God presented Christ as a propitiation [<em>hilasterion</em>, the mercy seat on which blood was poured] through the shedding of his blood' (Rom 3:25); 'he is the propitiation for our sins' (1 John 2:2, 4:10). At the cross, divine wrath was given full vent — poured out on the Son so that it need not pour out on those he represented.</p>",
+    "12": "<p>A shadow: 'The kings of the earth did not believe, nor any of the inhabitants of the world, that foe or enemy could enter the gates of Jerusalem.' The unbelievable breach — what seemed impossible to the world became reality. The NT uses similar stumbling-block language for the cross: 'the message of the cross is foolishness to those who are perishing' (1 Cor 1:18); 'we preach Christ crucified: a stumbling block to Jews and foolishness to Gentiles' (1 Cor 1:23). The fall of what seemed unassailable — Jerusalem's walls, or the life of the Son of God — is the form divine redemption takes.</p>",
+    "13": "<p>A type: 'It was because of the sins of her prophets and the iniquities of her priests, who shed the blood of the righteous in the midst of her.' False prophets and corrupt priests who shed righteous blood — this is the pattern that culminates in the crucifixion. Acts 3:17 says the Jewish leaders 'acted in ignorance'; Acts 7:52: 'Which of the prophets did your ancestors not persecute? They even killed those who predicted the coming of the Righteous One. And now you have betrayed and murdered him.' The blood of righteous prophets shed by false religious leaders reaches its definitive instance at Calvary.</p>",
+    "14": "<p>A shadow: 'They wandered, blind, through the streets; they were so defiled with blood that no one was able to touch their garments.' Those who shed righteous blood become blind and defiled — their very garments untouchable. This is enacted at the cross: the soldiers who divided Christ's garments (John 19:23-24, fulfilling Ps 22:18) and those who crucified him are, in Luke 23:34, prayed over by Christ: 'Father, forgive them, for they do not know what they do.' The blindness of those who shed his blood is precisely what Christ intercedes for — they are the blind guides (Matt 23:16) who stumbled into the act of crucifying the Son of God.</p>",
+    "15": "<p>A shadow: 'Away! Unclean! people shouted at them. Away! Away! Do not touch! So they became fugitives and wanderers; people said among the nations, They shall stay with us no longer.' The cry 'unclean! unclean!' — the leper's cry, the outcry at those defiled by blood. Christ bore this outcry literally: 'So Jesus also suffered outside the gate in order to sanctify the people through his own blood. Therefore let us go to him outside the camp and bear the reproach he endured' (Heb 13:12-13). The one who healed lepers without becoming unclean (Matt 8:3) was himself driven outside the gate as unclean — bearing the reproach of those he came to cleanse.</p>",
+    "16": "<p>A shadow: 'The LORD himself has scattered them; he will regard them no more; no honor was shown to the priests, no favor to the elders.' The scattering by YHWH — rejection of the unfaithful religious establishment. Christ pronounces this same judgment on Jerusalem's religious leadership: 'your house is left to you desolate' (Matt 23:38); 'There will not be left here one stone upon another that will not be thrown down' (Matt 24:2). The divine rejection of the priesthood that Lamentations mourns is the divine rejection Christ announces — both fulfilled in 70 AD.</p>",
+    "17": "<p>A theme: 'Our eyes failed, ever watching vainly for help; in our watching we watched for a nation that could not save.' Watching for human salvation that never comes — the vain hope placed in political alliance (Egypt, Assyria). This is the OT failure that Christ addresses: 'Salvation is from the Jews' (John 4:22) — and specifically from the Jewish Messiah, not from human political powers. The watching for a nation that could not save is the foil for the arrival of the one who can: 'I am the way, the truth, and the life' (John 14:6), not Rome or Egypt.</p>",
+    "18": "<p>A shadow: 'They dogged our steps so that we could not walk in our streets; our end drew near; our days were numbered, for our end had come.' The end drawing near — days numbered, time running out. For Christ, the passion narrative is shaped by this urgency: 'His time was drawing near' (Matt 26:18); 'Jesus knew that his hour had come to depart out of this world' (John 13:1). The sense of numbered days that terrifies Jerusalem is the sense of hours counted that Christ embraces — moving deliberately toward his appointed death with full awareness.</p>",
+    "19": "<p>A shadow: 'Our pursuers were swifter than the eagles in the heavens; they chased us on the mountains; they lay in wait for us in the wilderness.' Swifter-than-eagle pursuit — no escape possible. For Christ, the arrest was the moment of surrender, not the moment of being caught: 'Do you think that I cannot appeal to my Father, and he will at once send me more than twelve legions of angels?' (Matt 26:53). Christ was not caught like a fugitive — he laid down his life of his own accord (John 10:18). The inescapable pursuit that terrified Jerusalem was faced by Christ who could have escaped but chose not to.</p>",
+    "20": "<p>A direct type: 'The breath of our nostrils, the LORD's anointed [<em>meshiach YHWH</em>], was caught in their pits, of whom we said, Under his shadow we shall live among the nations.' The most explicit messianic designation in Lamentations: <em>meshiach YHWH</em>, the Anointed of the LORD — a royal title (cf. 1 Sam 24:6, 26:9, Ps 2:2). The specific elements: the Anointed is the 'breath of our nostrils' (indispensable for life); he was 'caught in their pits' (a violent capture leading to death); the people had said 'under his shadow we shall live.' This is the exact pattern of Christ: the indispensable one, the Anointed of YHWH, captured, tried, and executed — and under whose shadow his people do indeed live (Ps 91:1; John 15:5).</p>",
+    "21": "<p>A type: 'Rejoice and be glad, O daughter of Edom, you who dwell in the land of Uz; but to you also the cup shall pass; you shall become drunk and strip yourself bare.' Edom — descended from Esau, perpetual enemy of Jacob/Israel — rejoices at Zion's fall. The cup that will come to Edom is the cup of divine wrath. Revelation 14:10 uses this cup imagery for all who bear the mark of the beast: 'They also will drink the wine of God's fury, which has been poured full strength into the cup of his wrath.' Christ took this cup himself at the cross (Matt 26:39: 'let this cup pass') so that those who trust him might not drink it; those who reject him will yet drink it in the final judgment.</p>",
+    "22": "<p>A direct type: 'The punishment of your iniquity, O daughter of Zion, is complete; he will keep you in exile no longer; but your iniquity, O daughter of Edom, he will punish, visiting your sins.' The punishment of Zion is complete — <em>tamm avonech</em>, your iniquity has been completed, used up, finished. This is the OT's most direct anticipation of Christ's cry <em>tetelestai</em>: 'It is finished' (John 19:30). At the cross, the iniquity of his people was made complete in him — borne, exhausted, paid in full. Isaiah 40:2 uses the same language: 'her iniquity is pardoned, she has received from the LORD's hand double for all her sins.' The completion of Zion's punishment foreshadows the completion of atonement at Calvary.</p>"
   }
 }
 
 def main():
-    books_data = [
-        ('lamentations', LAM_ECHO, LAM_ORIGINAL, LAM_CONTEXT, LAM_CHRIST),
-        ('hosea', HOSEA_ECHO, HOSEA_ORIGINAL, HOSEA_CONTEXT, HOSEA_CHRIST),
-        ('joel', JOEL_ECHO, JOEL_ORIGINAL, JOEL_CONTEXT, JOEL_CHRIST),
-        ('amos', AMOS_ECHO, AMOS_ORIGINAL, AMOS_CONTEXT, AMOS_CHRIST),
-        ('obadiah', OBAD_ECHO, OBAD_ORIGINAL, OBAD_CONTEXT, OBAD_CHRIST),
-        ('jonah', JONAH_ECHO, JONAH_ORIGINAL, JONAH_CONTEXT, JONAH_CHRIST),
-        ('micah', MICAH_ECHO, MICAH_ORIGINAL, MICAH_CONTEXT, MICAH_CHRIST),
-        ('nahum', NAHUM_ECHO, NAHUM_ORIGINAL, NAHUM_CONTEXT, NAHUM_CHRIST),
-        ('habakkuk', HAB_ECHO, HAB_ORIGINAL, HAB_CONTEXT, HAB_CHRIST),
-        ('zephaniah', ZEPH_ECHO, ZEPH_ORIGINAL, ZEPH_CONTEXT, ZEPH_CHRIST),
-        ('haggai', HAG_ECHO, HAG_ORIGINAL, HAG_CONTEXT, HAG_CHRIST),
-        ('zechariah', ZECH_ECHO, ZECH_ORIGINAL, ZECH_CONTEXT, ZECH_CHRIST),
-        ('malachi', MAL_ECHO, MAL_ORIGINAL, MAL_CONTEXT, MAL_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', 'lamentations')
+    merge_comm(c, DATA)
+    save_comm('mkt-christ', 'lamentations', c)
+    total = sum(len(v) for v in DATA.values())
+    print(f'lamentations mkt-christ: added up to {total} verses across ch3-4')
 
 if __name__ == '__main__':
     main()

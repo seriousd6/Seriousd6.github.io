@@ -1,23 +1,31 @@
 """
-1-2 Kings — all four layers.
-Key NT: Elijah/Elisha (type of John the Baptist/Jesus), temple dedication (1 Kgs 8),
-        Naaman's healing (Luke 4 context), widow of Zarephath (Luke 4),
-        Josiah's reform, exile and its theological meaning.
+MKT Christ Commentary — 2 Kings chapters 24–25
+Run: python3 scripts/zc-christ-2kings-24-25.py
+
+Ch24: YHWH's judgment "by the hand of his servants the prophets" fulfilled → Heb 1:1-2;
+     innocent blood of Manasseh's era unforgiven → Matt 27:4 (Judas / innocent blood);
+     temple treasures taken → John 2:19-21 / Matt 24:1-2;
+     Zedekiah's name (YHWH is my righteousness) → Jer 23:5-6 messianic promise
+Ch25: Fall of Jerusalem — Davidic covenant's nadir; Zedekiah blinded and bound → Ps 89:38-45;
+     temple burned → John 2:19-21 (Christ as true temple);
+     pillars Jachin/Boaz destroyed → Rev 3:12 (overcomers as pillars);
+     "Judah exiled out of its land" → Gal 3:13 (Christ redeems from the law's curse);
+     Jehoiachin elevated to eat at king's table → Luke 22:30 / Matt 1:11-12 (exile as genealogical pivot)
+
+Key typological connections:
+- 24:2-4: prophetic word fulfilled in judgment → Heb 1:1-2 (God spoke by prophets; in last days by Son)
+- 24:4: innocent blood not pardoned → Matt 27:4 (Judas: "betrayed innocent blood")
+- 24:13-16: skilled workers / craftsmen taken → Isa 11:1 (shoot from the stump of what is left)
+- 24:17: Zedekiah = YHWH is my righteousness → Jer 23:5-6 (YHWH tsidqenu, messianic title)
+- 25:7: Zedekiah blinded → Ps 89:38-45 (YHWH cast off his anointed)
+- 25:9: temple burned → John 2:19-21 (temple rebuilt in three days = Christ's body)
+- 25:21: exile formula → Gal 3:13 (Christ redeems from the Deuteronomic curse)
+- 25:27-30: Jehoiachin at the king's table → Luke 22:30 (table in the kingdom)
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +37,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,96 +45,69 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-KINGS1_ECHO = {
-  "8": {
-    "27": [
-      {"type": "allusion", "target": "Acts 7:48-50", "note": "But will God indeed dwell on the earth? Behold, heaven and the highest heaven cannot contain you, how much less this house that I have built — Solomon's prayer at the temple dedication acknowledges divine transcendence; Stephen quotes Isa 66:1-2 to make the same point: the Most High does not dwell in temples made by human hands; both point toward the incarnation as the true dwelling of God among his people (John 1:14)"}
-    ]
+CHRIST = {
+  "24": {
+    "1": "<p>Nebuchadnezzar king of Babylon comes against Jehoiakim; Jehoiakim serves him three years, then rebels. The arrival of Nebuchadnezzar on the stage of Judah&rsquo;s history is not a political accident &mdash; the narrator will make clear in vv2-4 that YHWH sent him. The Babylonian king is the instrument of the divine judgment that the prophets (Isaiah, Jeremiah, Micah) had announced for generations. Heb 1:1-2: &lsquo;Long ago, at many times and in many ways, God spoke to our fathers by the prophets; but in these last days he has spoken to us by his Son&rsquo; &mdash; the fulfillment of prophetic speech through historical events is the mode of divine action that culminates in the incarnation.</p>",
+    "2": "<p>YHWH sends against Jehoiakim &lsquo;bands of Chaldeans, Arameans, Moabites, and Ammonites&rsquo; (<em>g&#x115;d&ucirc;d&ecirc; kašd&icirc;m &ucirc;g&#x115;d&ucirc;d&ecirc; &#x2019;&breve;r&#x101;m</em>) &mdash; &lsquo;according to the word of YHWH that he spoke by his servants the prophets&rsquo; (<em>k&#x12B;diḇar YHWH &#x2019;&breve;šer dibber b&#x115;yad &#x2019;&breve;&#x1E07;&#x101;d&#x101;yw hann&#x115;&#x1E07;&icirc;&rsquo;&icirc;m</em>). The formula is the theological anchor of the entire destruction narrative: the fall of Jerusalem is not military accident but prophetic fulfillment. The word of YHWH spoken through the prophets stands and executes itself in history. Luke 21:22: &lsquo;these are days of vengeance, to fulfill all that is written.&rsquo; The OT prophets are cited as still speaking at the fall of Jerusalem in 70 CE &mdash; the same logic of prophetic fulfillment governs both the Babylonian and the Roman destructions.</p>",
+    "3": "<p>The destruction comes &lsquo;because of the sins of Manasseh, according to all that he had done&rsquo; (<em>&#x2019;al-&#x1E25;aṭṭ&#x14D;&rsquo;t m&#x115;naššeh k&#x115;&#x1E35;&ocirc;l &#x2019;&breve;šer &#x2019;&breve;&#x15B;&#x101;h</em>). The accumulated weight of Manasseh&rsquo;s apostasy is the specific cause. This is the theology of corporate identity and intergenerational consequence that Josiah&rsquo;s reform could not reverse (23:26): the repentance of one generation does not automatically cancel the accrued debt of another. The NT answers this with substitutionary atonement: the one who is himself innocent bears the accumulated guilt of many generations &mdash; 1 Pet 3:18 &lsquo;Christ suffered once for sins, the righteous for the unrighteous, to bring you to God.&rsquo;</p>",
+    "4": "<p>&lsquo;And also for the innocent blood that he had shed; for he had filled Jerusalem with innocent blood (<em>d&#x101;m-n&#x101;q&#icirc;</em>), and YHWH was not willing to forgive (<em>l&#x14D;&rsquo;-&#x2019;&breve;&#x1E07;&#x101;h YHWH s&#x115;l&#x14D;aḥ</em>).&rsquo; The phrase <em>d&#x101;m n&#x101;q&#icirc;</em> (innocent blood) is the precise term that appears in Judas&rsquo;s confession in Matt 27:4: &lsquo;I have sinned by betraying innocent blood (<em>haima ath&#x14D;on</em>).&rsquo; The blood of Jerusalem&rsquo;s righteous killed by Manasseh is the backdrop against which Jesus&rsquo; trial and death occur. Matt 23:35-37: &lsquo;on you may come all the righteous blood shed on earth, from the blood of righteous Abel to the blood of Zechariah... all this will come upon this generation.&rsquo; The judgment for innocent blood not forgiven under the old covenant finds its resolution only in the blood of the new covenant (Matt 26:28 &lsquo;my blood... poured out for many for the forgiveness of sins&rsquo;).</p>",
+    "5": "<p>The rest of Jehoiakim&rsquo;s acts are recorded in the chronicles. Jehoiakim&rsquo;s reign of eleven years is summarized under the verdict of evil (v9) &mdash; he did what was evil in the sight of YHWH. Jeremiah&rsquo;s prophecy about Jehoiakim (Jer 22:18-19) says he will have &lsquo;the burial of a donkey, dragged and dumped beyond the gates of Jerusalem&rsquo; &mdash; the standard regnal formula is subverted by the prophet&rsquo;s specific oracle about his ignominious end.</p>",
+    "6": "<p>Jehoiakim &lsquo;slept with his fathers&rsquo; (<em>wayyiškaḇ y&#x115;h&ocirc;y&#x101;q&#icirc;m &#x2019;im-&#x2019;&breve;&#x1E07;&ocirc;t&#x101;yw</em>) &mdash; the standard royal death formula. But Jeremiah 36:30 and 22:18-19 indicate he died in disgrace; the formula is a courtesy that conceals a shameful end. The contrast with David, who truly &lsquo;slept with his fathers&rsquo; after serving God&rsquo;s purposes (Acts 13:36), could not be sharper. Jehoiakim burned Jeremiah&rsquo;s scroll (Jer 36:23) &mdash; the king who destroys the word of God dies unremarkably; the word he tried to destroy outlasts his dynasty.</p>",
+    "7": "<p>The king of Egypt does not come out of his land again &mdash; Nebuchadnezzar has taken everything from the Brook of Egypt to the Euphrates. The geopolitical summary closes the Egyptian chapter of Judah&rsquo;s international entanglements. The shift from Egyptian to Babylonian dominance is the transition from one phase of judgment to another &mdash; Judah played Egypt against Babylon and lost. Ezek 17:15-21 condemns Zedekiah&rsquo;s trust in Egypt as covenant violation; the prophets consistently warn against human alliances as substitutes for YHWH&rsquo;s protection (Isa 30:1-5; 31:1-3).</p>",
+    "8": "<p>Jehoiachin is eighteen years old when he begins to reign; he reigns three months. He is the son of Jehoiakim, the grandson of Josiah &mdash; one generation removed from the greatest reformer, now facing the loss of the kingdom. Matt 1:11-12 explicitly names Jehoiachin (<em>Iechonias</em>) in the genealogy of Jesus as the pivot of the Babylonian deportation: &lsquo;Josiah the father of Jechoniah and his brothers at the time of the deportation to Babylon, and after the deportation to Babylon: Jechoniah was the father of Shealtiel.&rsquo; The exile is the genealogical watershed through which the Davidic line passes on its way to the Messiah.</p>",
+    "9": "<p>Jehoiachin &lsquo;did what was evil in the sight of YHWH, according to all that his father had done&rsquo; &mdash; the faithlessness is hereditary in the dynasty at its worst. The pattern of dynasties that perpetuate sin rather than reform it is the structural argument for why the messianic hope must rest on one who is not merely a product of the dynasty but its founder and perfecter: Heb 12:2 &lsquo;the founder and perfecter of our faith&rsquo; (<em>ton t&#x113;s piste&#x14D;s arch&#x113;gon kai telei&#x14D;t&#x113;n I&#x113;soun</em>).</p>",
+    "10": "<p>At that time Nebuchadnezzar&rsquo;s servants come up against Jerusalem and besiege it. The siege of Jerusalem in 597 BCE is confirmed by the Babylonian Chronicles (ABC 5), which records: &lsquo;In the seventh year... the king of Akkad besieged the city of Judah and the king took the city on the second day of Adar.&rsquo; The historicity of the Kings narrative is attested by the conqueror&rsquo;s own records. The external confirmation grounds the theological reading in historical reality.</p>",
+    "11": "<p>Nebuchadnezzar himself comes to the city while his servants besiege it. The personal appearance of the great king at the siege of Jerusalem signals the scope of the confrontation &mdash; this is not a punitive raid but a regime change. The great king of the earth&rsquo;s leading empire stands before the city of the great King of Israel. Ps 48:2: &lsquo;the city of the great King.&rsquo; The earthly king takes the city; the heavenly King will restore it &mdash; Zech 14:16-17; Rev 21:10-27.</p>",
+    "12": "<p>Jehoiachin surrenders to Nebuchadnezzar &mdash; he, his mother, his servants, his officials, and his palace officials. The surrender of the Davidic king to the Babylonian king is the low point of the dynastic line. The humiliation of the anointed king before a pagan conqueror reverses the pattern of Ps 2 (the kings rage against YHWH&rsquo;s anointed and are warned to submit) and anticipates its eschatological resolution: the day when the nations will bow to the Son of David (Rev 19:16; Phil 2:9-11).</p>",
+    "13": "<p>Nebuchadnezzar takes out all the treasures of the house of YHWH and the treasures of the king&rsquo;s house; he cuts in pieces all the vessels of gold in the temple &lsquo;which Solomon king of Israel had made, as YHWH had said&rsquo; (<em>ka&rsquo;&breve;šer dibber YHWH</em>). The prophecy of Isaiah to Hezekiah (2 Kgs 20:17) is fulfilled. The destruction of the temple&rsquo;s material glory is the setting for Jesus&rsquo; declaration in John 2:19-21: the true temple is not made of gold but is his body, raised in three days.</p>",
+    "14": "<p>Nebuchadnezzar carries away all Jerusalem &mdash; the officials, the mighty men of valor, ten thousand captives, and all the craftsmen and smiths. Only the poorest people of the land are left. Isa 11:1: &lsquo;there shall come forth a shoot from the stump of Jesse, and a branch from his roots shall bear fruit&rsquo; &mdash; from what is left behind after the exile (the remnant, the poor of the land, the stump), the messianic Branch emerges. The apparent defeat is the precondition for the messianic reversal.</p>",
+    "15": "<p>Jehoiachin is carried to Babylon &mdash; and his mother, his wives, his officials, the chief men of the land. The deportation of the king with his entire court is the structural dismantling of the Davidic monarchy. Jer 22:30 pronounces judgment on Jehoiachin (Coniah): &lsquo;none of his offspring shall succeed in sitting on the throne of David.&rsquo; Yet Shealtiel is his son (1 Chr 3:17; Matt 1:12) &mdash; the line continues despite the curse, pointing to the one who is heir of David through legal adoption rather than biological succession alone.</p>",
+    "16": "<p>Seven thousand men of valor, a thousand craftsmen and smiths, are taken to Babylon. The deportation of craftsmen strips Jerusalem of its capacity to rebuild &mdash; so that what is rebuilt afterward (Ezra-Nehemiah) is demonstrably divine provision through an impoverished remnant. The same dynamic governs the church&rsquo;s power: &lsquo;not many wise, not many powerful, not many of noble birth&rsquo; (1 Cor 1:26-27), so that the excellence of power belongs to God and not to human capacity.</p>",
+    "17": "<p>The king of Babylon makes Mattaniah king, changing his name to Zedekiah (<em>&#x1E63;iḏqiyy&#x101;h&ucirc;</em>). The name Zedekiah means &lsquo;YHWH is my righteousness&rsquo; (<em>YHWH &#x1E63;iḏq&#icirc;</em>) &mdash; precisely the title that Jeremiah applies as a messianic name: Jer 23:5-6 &lsquo;I will raise up for David a righteous Branch... and this is the name by which he will be called: &ldquo;YHWH is our righteousness&rdquo; (<em>YHWH &#x1E63;iḏq&#x113;n&ucirc;</em>).&rsquo; The last king of Judah carries a name that is a messianic prophecy; he will demonstrate by his failure that the one who truly embodies &lsquo;YHWH is our righteousness&rsquo; is not yet come. Rom 3:21-22: &lsquo;the righteousness of God has been manifested... through faith in Jesus Christ for all who believe.&rsquo;</p>",
+    "18": "<p>Zedekiah is twenty-one years old when he begins to reign; he reigns eleven years. He does evil in the sight of YHWH, according to all that Jehoiakim had done. Zedekiah begins his reign as Nebuchadnezzar&rsquo;s vassal &mdash; the king whose name means &lsquo;YHWH is my righteousness&rsquo; is a puppet of the Babylonian conqueror. The gap between the messianic name and the failed reality is the precise gap that Jeremiah&rsquo;s new covenant oracle (Jer 31:31-34) addresses: the law written on the heart, not merely borne in the name.</p>",
+    "19": "<p>Zedekiah repeats the pattern of Jehoiakim rather than Josiah. The structural tragedy is that Josiah&rsquo;s reform (the greatest reformer, 23:25) produced no lasting change in the dynasty; his sons return to the evil of Jehoiakim. Reform that does not go deep enough &mdash; changing external practices without transforming the heart &mdash; cannot sustain itself across generations. Jer 31:33: the new covenant will write the law on the heart, not on stone tablets or in scrolls.</p>",
+    "20": "<p>&lsquo;For because of the anger of YHWH it came to the point in Jerusalem and Judah that he cast them out from his presence&rsquo; (<em>wayyašl&#x115;&#x1E35;&#x113;m m&#x113;&rsquo;al p&#x101;n&#x101;yw</em>) &mdash; the phrase &lsquo;cast them out from his presence&rsquo; is the exact language of the original expulsion from Eden (Gen 3:23-24). Exile from the land is the new expulsion from the garden; the presence of YHWH withdraws as it did from Eden. The Shekinah&rsquo;s departure in Ezekiel 10-11 is the visible manifestation of this verse. The restoration promised &mdash; return from exile, the presence of YHWH returning (Ezek 43:1-5) &mdash; points forward to the one who is himself the presence of God with his people (Matt 1:23 &lsquo;Immanuel, which means God with us&rsquo;).</p>"
   },
-  "17": {
-    "1": [
-      {"type": "allusion", "target": "Jas 5:17", "note": "Elijah was a man with a nature like ours, and he prayed fervently that it might not rain, and for three years and six months it did not rain on the earth — James cites Elijah's prayer as an example of effective righteous prayer; the three-and-a-half-year drought is applied typologically in Revelation (11:6) to the witnesses' power"}
-    ],
-    "8": [
-      {"type": "fulfillment", "target": "Luke 4:25-26", "note": "In truth I tell you, there were many widows in Israel in the days of Elijah ... and Elijah was sent to none of them but only to Zarephath, a city of Sidon, to a woman who was a widow — Jesus cites the widow of Zarephath (1 Kgs 17:8-16) as an OT precedent for divine grace going to a Gentile; the Nazareth congregation's rejection of Jesus follows their rejection of this theological point"}
-    ]
-  },
-  "19": {
-    "10": [
-      {"type": "allusion", "target": "Rom 11:2-4", "note": "I have been very jealous for YHWH the God of hosts. For the people of Israel have forsaken your covenant, thrown down your altars, and killed your prophets with the sword, and I, even I only, am left — Paul cites Elijah's complaint and YHWH's response (seven thousand who have not bowed to Baal) as proof that God has not rejected Israel; the remnant principle is the OT basis for Israel's partial hardening and the elect remnant within"}
-    ]
-  }
-}
-
-KINGS1_ORIGINAL = {
-  "8": {
-    "46": "<p><strong>ki yechetau lecha ki ein adam asher lo yecheta</strong>: 'For there is no one who does not sin' — Solomon's prayer at the temple dedication contains the OT's clearest statement of universal sinfulness (v. 46), which shapes the entire temple theology: the temple is not a reward for Israel's righteousness but YHWH's provision for the people's ongoing need of forgiveness. The request for forgiveness when Israel sins (8:46-53) anticipates the entire sacrificial system's purpose. Paul quotes a similar principle in Rom 3:23 ('all have sinned and fall short of the glory of God') as the universal diagnosis that makes the gospel necessary.</p>"
-  },
-  "19": {
-    "12": "<p><strong>ve-achar haesh qol demamah daqah</strong>: 'And after the fire the sound of a low whisper' (or 'a still small voice,' KJV). The theophany at Horeb (Elijah's experience in 1 Kgs 19) deliberately echoes Sinai: Elijah is at Horeb (another name for Sinai), the mountain of God; YHWH passes by with wind, earthquake, and fire (the Sinai theophanic elements, Exod 19:16-19). But the climax is not in the dramatic elements but in the <em>qol demamah daqah</em> — the sound of sheer silence, the gentle whisper, the still small voice. YHWH is not absent from the dramatic; but he speaks in the gentle. The NT's Spirit comes both in wind and fire (Acts 2:2-3) and in the interior witness of the heart (Rom 8:16).</p>"
-  }
-}
-
-KINGS1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Kings (originally one book, divided in the LXX) narrates the history of the united monarchy (Solomon) and the divided kingdom (Israel/Judah) from ca. 971-561 BCE, ending with the release of Jehoiachin from Babylonian prison. Its authors (the 'Deuteronomistic historian') evaluate each king against the standard of Deuteronomy: fidelity to YHWH alone, worship only at the Jerusalem temple, and covenant obedience. The theological verdict is relentlessly critical: of the 20 kings of Judah, only Hezekiah and Josiah receive full approval. The narrative explains why the exile happened: Israel and Judah were destroyed because they refused to keep YHWH's covenant. This theological history is the background for understanding the exile as a covenant curse (Deut 28:36-37, 64-68) rather than YHWH's defeat.</p>"
-  }
-}
-
-KINGS1_CHRIST = {
-  "19": {
-    "18": "<p>A direct revelation: 'Yet I will leave seven thousand in Israel, all the knees that have not bowed to Baal, and every mouth that has not kissed him.' The remnant principle — YHWH preserves a faithful minority even when the majority apostasizes — is one of the OT's most important theological contributions. Paul applies it directly to his own time (Rom 11:4-5): 'So too at the present time there is a remnant, chosen by grace.' The Elijah crisis reveals the structure of all subsequent covenant history: visible apostasy of the majority, invisible remnant of the elect, YHWH's sovereign preservation of his people through what appears to be total defeat. The cross looks like the end of Jesus's movement; Pentecost reveals it was the beginning of the new covenant remnant.</p>"
-  }
-}
-
-KINGS2_ECHO = {
-  "2": {
-    "11": [
-      {"type": "allusion", "target": "Luke 9:51", "note": "Elijah went up by a whirlwind into heaven — the ascension of Elijah (taken up without dying) is the OT's second ascension-figure (with Enoch, Gen 5:24); Jesus's ascension (Acts 1:9) fulfills the pattern; Luke explicitly notes Jesus 'set his face to go to Jerusalem' in the context of his upcoming departure (exodou, Luke 9:31) echoing Elijah's departure"},
-      {"type": "fulfillment", "target": "Matt 17:3", "note": "Elijah and Moses appear with Jesus at the Transfiguration — the two figures who had unique mountaintop theophanies (Moses at Sinai, Elijah at Horeb/Sinai) flank the transfigured Jesus; the Transfiguration is the convergence of the Law (Moses) and the Prophets (Elijah) in the one of whom they spoke"}
-    ]
-  },
-  "4": {
-    "35": [
-      {"type": "allusion", "target": "Acts 20:9-12", "note": "The child sneezed seven times and opened his eyes — Elisha raises the Shunammite's son (2 Kgs 4:32-37); Paul raises Eutychus in a similar pattern (fell from a third floor, Paul lay on him, he came to life); both instances frame the apostle as an Elisha-figure extending Jesus's resurrection ministry"}
-    ]
-  },
-  "5": {
-    "14": [
-      {"type": "fulfillment", "target": "Luke 4:27", "note": "There were many lepers in Israel in the time of the prophet Elisha, and none of them was cleansed but only Naaman the Syrian — Jesus cites Naaman's healing as the OT precedent for grace going to a Gentile outsider; Naaman's healing is a type of Gentile inclusion, accomplished through the humbling medium of simple obedience (washing in the Jordan)"}
-    ]
-  }
-}
-
-KINGS2_ORIGINAL = {
-  "2": {
-    "9": "<p><strong>vehi peh shnayim beruchecha elai</strong>: 'Please let there be a double portion of your spirit on me.' Elisha's request for a 'double portion' (<em>pi shnayim</em>) is technically a request for the eldest son's inheritance share (Deut 21:17) — he is asking to be Elijah's primary heir and successor. Elijah responds that this is a 'hard thing' (<em>kasha</em>) but it will be granted if Elisha sees him taken. Elisha does see it, receives the spirit, and performs miracles that echo and exceed Elijah's. The Elijah-Elisha succession pattern shapes the NT's understanding of John the Baptist-Jesus relationship: John comes in the spirit and power of Elijah (Luke 1:17), and Jesus works in a pattern that exceeds John's, as Elisha's miracles exceeded Elijah's in number (Elijah performs 8 miracles in Kings; Elisha performs 16).</p>"
-  }
-}
-
-KINGS2_CONTEXT = {
-  "17": {
-    "6": "<p>The fall of Samaria (722 BCE) to the Assyrian Empire (under Sargon II, 2 Kgs 17:6) ended the northern kingdom of Israel after 210 years and 19 kings (every one of whom 'did evil in the sight of YHWH'). The author of Kings provides the theological explanation in 17:7-23: because Israel sinned against YHWH, walked in the customs of the nations, built high places, served Baal — YHWH removed them out of his sight. The Assyrian exile of the northern tribes ('the ten lost tribes') was permanent: they were never restored as a distinct entity. The northern exile is the first fulfillment of the Deuteronomic covenant curses (Deut 28:36, 64); the Babylonian exile of Judah (586 BCE) is the second. Both are explained as covenant consequences, not historical accidents.</p>"
-  }
-}
-
-KINGS2_CHRIST = {
-  "5": {
-    "14": "<p>A type: 'So he went down and dipped himself seven times in the Jordan, according to the word of the man of God, and his flesh was restored like the flesh of a little child, and he was clean.' Naaman's healing is one of the OT's most theologically rich type-narratives: (1) the outsider (a Gentile military commander) receives healing denied to insiders (Israelite lepers, Luke 4:27); (2) the healing comes through water — specifically the Jordan, the covenant-crossing water; (3) the means is foolishly simple (wash seven times) — Naaman expects a dramatic prophetic ritual; (4) the result is total cleansing. Jesus's citation of Naaman in Luke 4:27 to explain his own ministry to Nazareth (grace going to unexpected outsiders) and the Baptist's baptism in the Jordan both stand in the Naaman-and-the-Jordan typological stream: the Jordan is the water of covenant-entry and cleansing, fulfilled in baptism into Christ.</p>"
+  "25": {
+    "1": "<p>In the ninth year of Zedekiah&rsquo;s reign, on the tenth day of the tenth month, Nebuchadnezzar comes with his whole army against Jerusalem and lays siege to it. The precision of the date marks it as a day to be permanently mourned. Zech 8:19 lists it as one of the fasts of the exile: &lsquo;the fast of the tenth month&rsquo; (beginning of the siege). The sustained siege is the most visible judgment enacted on the city of the Davidic promise; it is the darkness before which Isa 9:2 (&lsquo;the people walking in darkness have seen a great light&rsquo;) blazes the more brightly.</p>",
+    "2": "<p>The siege continues until the eleventh year of Zedekiah &mdash; roughly two years (589-587 BCE). The city holds for nearly two years, testimony to desperate resistance. The sustained waiting within a besieged city is a physical form of the spiritual condition of exile: enclosed, cut off, depleted, waiting for deliverance that does not come from within. Lam 3:25-26: &lsquo;it is good that one should wait quietly for the salvation of YHWH.&rsquo;</p>",
+    "3": "<p>On the ninth day of the fourth month, famine is severe in the city; there is no food for the people of the land. The starvation of Jerusalem is the Deuteronomic covenant curse made visible: Deut 28:52-57 describes exactly this &mdash; the siege so severe that the most gentle father will eat the flesh of his children (cf. Lam 4:10). The curses for covenant violation are now running to their conclusion.</p>",
+    "4": "<p>A breach is made in the city; the king and all the soldiers flee by night. The king&rsquo;s flight confirms the fall &mdash; the shepherd has fled, and the sheep are scattered (Zech 13:7 &lsquo;strike the shepherd, and the sheep will be scattered&rsquo;; quoted by Jesus in Matt 26:31 at Gethsemane). The great city of David falls to its conquerors as its king flees in the dark.</p>",
+    "5": "<p>The Chaldean army pursues and overtakes Zedekiah in the plains of Jericho. Jericho &mdash; the first city of conquest under Joshua, the place of Israel&rsquo;s entry into the land &mdash; is now the place of the last king&rsquo;s capture. The land was received at Jericho; the Davidic dynasty ends at Jericho. Zedekiah is caught at the threshold of the land, in flight toward the wilderness.</p>",
+    "6": "<p>Zedekiah is brought to Nebuchadnezzar at Riblah, where they pass judgment on him. The last Davidic king stands before the judgment of a foreign court. The reversal of Ps 2 &mdash; where the nations rage against YHWH&rsquo;s anointed and are warned to submit &mdash; is now enacted in reverse: the anointed stands before the nations and receives their judgment. The reversal points toward the one who stands before Pilate (John 18:28-19:16) and in that very appearance transforms judgment into salvation.</p>",
+    "7": "<p>Nebuchadnezzar kills Zedekiah&rsquo;s sons before his eyes; then puts out Zedekiah&rsquo;s eyes, binds him in chains, and brings him to Babylon. The last sight Zedekiah sees is his sons killed. Lam 4:20: &lsquo;The breath of our nostrils, YHWH&rsquo;s anointed (<em>m&#x115;š&#icirc;aḥ YHWH</em>) was caught in their pits.&rsquo; Ps 89:38-45: &lsquo;But now you have cast off and rejected; you are full of wrath against your anointed (<em>m&#x115;š&#icirc;aḥ</em>)... you have put an end to his splendor and cast his throne to the ground.&rsquo; The blinded, bound, captive anointed king is the nadir of the Davidic covenant &mdash; the image from which the hope of a triumphant Messiah cries out the more urgently. The Son of David who stands before Pilate is similarly bound (John 18:12), but his blindness is the blindness of his tormentors (John 9:39), not his own.</p>",
+    "8": "<p>In the fifth month, on the seventh day, Nebuzaradan captain of the guard comes to Jerusalem. The date is permanently mourned in Jewish tradition as Tisha B&rsquo;Av &mdash; the ninth of Av in the parallel Jer 52:12 account. Remarkably, Jewish tradition identifies the Roman destruction of the Second Temple (70 CE) as also occurring on Tisha B&rsquo;Av, a convergence preserved in memory as theological rather than coincidental: the same prophetic logic of covenant judgment governs both destructions.</p>",
+    "9": "<p>Nebuzaradan burns the house of YHWH, the king&rsquo;s house, and all the houses of Jerusalem. Ezekiel 10-11 had already described the departure of YHWH&rsquo;s glory from the temple before its physical destruction &mdash; the presence withdrew before the building burned. The physical burning is the outward sign of a departure already occurred. Jesus in John 2:19-21 declares: &lsquo;Destroy this temple, and in three days I will raise it up&rsquo; &mdash; his body is the true temple whose destruction and resurrection accomplish what the Solomonic temple prefigured. Matt 27:51: at Jesus&rsquo; death the temple veil is torn in two from top to bottom &mdash; the temple as the locus of divine-human encounter is superseded at the very moment of its replacement.</p>",
+    "10": "<p>The Chaldean army breaks down the walls of Jerusalem all around. The walls of Jerusalem &mdash; symbol of YHWH&rsquo;s protection (Ps 48:12-14) &mdash; are destroyed. The broken walls of Nehemiah&rsquo;s grief (Neh 1:3) become the starting point of the post-exilic restoration. The ultimate city that needs no wall is the New Jerusalem (Rev 21:25) where the gates are never shut because the enemy is finally defeated.</p>",
+    "11": "<p>Nebuzaradan carries into exile the rest of the people left in the city &mdash; those who had deserted to Babylon and the remaining artisans. The second major deportation (the first was 597 BCE in ch 24) strips Jerusalem of its remaining population. Even those who heeded Jeremiah&rsquo;s advice to surrender early are carried to Babylon; the exile is total.</p>",
+    "12": "<p>The poor of the land (<em>middallt&#x14D;t h&#x101;&rsquo;&breve;r&#x115;&#x1E63;</em>) are left to be vinedressers and farmers. Zeph 3:12: &lsquo;I will leave in your midst a people humble and lowly&rsquo; (<em>&#x2019;am &#x2019;&breve;n&#icirc; w&#x101;ḏ&#x101;l</em>). The Messiah comes not from the powerful elite but from the despised poor left behind when everyone of account was carried away &mdash; Isa 11:1 (the shoot from the stump); Luke 1:48 (Mary: &lsquo;he has looked on the humble estate of his servant&rsquo;).</p>",
+    "13": "<p>The Chaldeans break in pieces the bronze pillars of the house of YHWH and carry the bronze to Babylon. The bronze pillars Jachin (&lsquo;he will establish&rsquo;) and Boaz (&lsquo;in him is strength&rsquo;) &mdash; permanent architectural witnesses to the Davidic covenant established by YHWH&rsquo;s strength &mdash; are broken and carried away as scrap metal. Rev 3:12: &lsquo;the one who conquers, I will make him a pillar in the temple of my God.&rsquo; What was made of bronze and destroyed is now made of persons in whom the Spirit dwells &mdash; the overcomer is the new Jachin, standing permanently in the temple of the living God that has no need to fear conquest.</p>",
+    "14": "<p>The pots, shovels, snuffers, dishes, and all the bronze vessels used in the temple service are taken. The complete removal of temple equipment ends the Mosaic-Solomonic sacrificial system for the duration of the exile &mdash; no altar, no vessels, no priests with access. Heb 9:8-9: &lsquo;the way into the holy places is not yet opened as long as the first section is still standing&rsquo; &mdash; the Levitical system was always provisional. The way into the true holy place has been opened by Jesus&rsquo; own blood (Heb 10:19-22).</p>",
+    "15": "<p>The firepans and basins of gold and silver are taken by the captain of the guard. The stripping of the temple&rsquo;s gold and silver equipment is complete &mdash; nothing of the material expression of the covenant cultus remains. The temple of gold and cedar that Solomon built &lsquo;for the name of YHWH&rsquo; exists now only in memory and the grief of Lamentations.</p>",
+    "16": "<p>The two pillars, the sea, and the stands &mdash; the bronze of all these vessels was beyond weight. The narrator pauses to note the immeasurable quantity of bronze, recalling the original statement in 1 Kgs 7:47. What Solomon built with beyond-measurable wealth and labor, Nebuchadnezzar destroys in days. The glory of the second temple is promised to exceed the first (Hag 2:9) &mdash; a promise never fulfilled in stone and gold, but that Christ fulfills by dwelling in his people (Col 1:27 &lsquo;Christ in you, the hope of glory&rsquo;).</p>",
+    "17": "<p>Each pillar was eighteen cubits high, with a capital of bronze. The narrator records the dimensions of the destroyed pillars as an act of memory: even in ruin, the scale and artistry of Solomon&rsquo;s work is preserved in text. Scripture becomes the archive of what empire destroys; the word that Jehoiakim burned (Jer 36) outlasts everything built in bronze and gold.</p>",
+    "18": "<p>The captain of the guard takes Seraiah the chief priest (<em>k&#x14D;h&#x113;n h&#x101;r&#x14D;&rsquo;š</em>), Zephaniah the second priest, and three keepers of the threshold. The capture of the priestly leadership alongside the temple&rsquo;s destruction marks the end of the Aaronic priesthood&rsquo;s operational continuity. Heb 7:23-25: &lsquo;the former priests were many in number because they were prevented by death from continuing in office; but he holds his priesthood permanently because he continues forever. Consequently, he is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them.&rsquo; The death of the high priest and the cessation of the Levitical order points toward the priest who cannot die &mdash; whose priesthood is by divine oath and unending.</p>",
+    "19": "<p>From the city he takes one official who commanded the soldiers, five men of the king&rsquo;s council, the secretary of the commander, and sixty men of the people found in the city. The dismantling of the state apparatus &mdash; military, administrative, civic &mdash; is systematic. The city is not merely taken; it is structurally dissolved, its institutions stripped away. Luke 21:22 cites this pattern as still operative at the Roman destruction: &lsquo;these are days of vengeance, to fulfill all that is written.&rsquo;</p>",
+    "20": "<p>Nebuzaradan takes them and brings them to the king of Babylon at Riblah. The leaders of Jerusalem face judgment at the same place Zedekiah faced it (v6). Riblah is the place of imperial justice; the Davidic covenant officials receive Babylonian imperial judgment. The place-name &lsquo;Riblah&rsquo; marks the chapter&rsquo;s second execution scene &mdash; first the king is judged (v6-7), then the officials (v18-21).</p>",
+    "21": "<p>The king of Babylon strikes them and puts them to death at Riblah. &lsquo;So Judah was exiled out of its land&rsquo; (<em>wayyiggel y&#x115;h&ucirc;ḏ&#x101;h m&#x113;&rsquo;al &#x2019;&breve;ḏm&#x101;t&#x14D;</em>). The exile formula is the theological summary of the entire fall narrative: the covenant curse of Deut 28:63-68 fully executed. Gal 3:13: &lsquo;Christ redeemed us from the curse of the law by becoming a curse for us &mdash; for it is written, &ldquo;Cursed is everyone who is hanged on a tree.&rdquo;&rsquo; The Deuteronomic curse that executed itself in the exile finds its redemption in the one who bore the curse in his own body, hanging on a tree, so that the blessing of Abraham might come to the Gentiles (Gal 3:14).</p>",
+    "22": "<p>Nebuchadnezzar appoints Gedaliah son of Ahikam son of Shaphan governor over the people who remain in Judah. Gedaliah is from the family of Shaphan &mdash; the scribe who read the book of the law to Josiah (22:10) and whose son Ahikam protected Jeremiah (Jer 26:24). The appointment of Gedaliah is a small grace: YHWH preserves a line of covenant loyalty even in the administration of the conquered land. The remnant in the land has a governor who descends from those who reverenced the word of God.</p>",
+    "23": "<p>The commanders of the remaining forces come to Gedaliah at Mizpah. Gedaliah urges them: &lsquo;do not be afraid because of the Chaldean servants... dwell in the land and serve the king of Babylon, and it shall be well with you.&rsquo; Gedaliah extends the same message that Jeremiah preached throughout the siege: submission to Babylon is the path of survival; fighting the conquerors is futile. The prophetic counsel for exile &mdash; seek the welfare of the city where I have sent you into exile (Jer 29:7) &mdash; is the post-exilic posture that will eventually produce Cyrus&rsquo;s edict.</p>",
+    "24": "<p>Gedaliah swears to the commanders: &lsquo;do not be afraid of the servants of the Chaldeans.&rsquo; His reassurance rests on covenant loyalty &mdash; he is the son of those who protected Jeremiah and trusted YHWH&rsquo;s word about the future. The small administration of the remnant in the land is the seedbed from which restoration will grow; the seventy years of exile (Jer 25:11; 29:10) are the appointed time of pruning before the Branch of Jesse springs up.</p>",
+    "25": "<p>In the seventh month, Ishmael son of Nethaniah &mdash; of royal seed &mdash; comes with ten men and strikes down Gedaliah, the Jews, and the Chaldeans. The assassination of Gedaliah destroys the remnant government. Jer 41 preserves a fuller account. Even the small remaining grace &mdash; a faithful governor in the devastated land &mdash; is destroyed by those who cannot accept the judgment. The feast of Gedaliah is still observed in Jewish tradition as a day of mourning, a testament that the murder of the righteous is not forgotten before God.</p>",
+    "26": "<p>All the people &mdash; both small and great &mdash; and the commanders of the forces arise and go to Egypt out of fear of the Chaldeans. The flight to Egypt is the final tragic irony: Israel fled Egypt at the Exodus to come to the promised land; now they flee back to Egypt from the promised land. The return to Egypt is the reversal of the Exodus, the undoing of the Mosaic deliverance. Deut 28:68: &lsquo;YHWH will bring you back in ships to Egypt... and there you will offer yourselves for sale... but there will be no buyer.&rsquo; The Exodus-reversal is the most profound expression of the covenant curse.</p>",
+    "27": "<p>In the thirty-seventh year of the exile of Jehoiachin king of Judah, Evil-merodach king of Babylon, in the year he began to reign, lifts up the head of Jehoiachin king of Judah and brings him out of prison. After thirty-seven years of imprisonment, the Davidic king is released. The phrase &lsquo;lifts up his head&rsquo; (<em>n&#x101;&#x15B;&#x101;&rsquo; &#x2019;et-r&#x14D;&rsquo;š</em>) is the language of restoration &mdash; a prisoner&rsquo;s head lifted is the ancient mark of pardon and elevation. The book of Kings ends not with the destruction of Jerusalem but with this reversal: a Davidic king whose head is lifted.</p>",
+    "28": "<p>Evil-merodach speaks kindly to Jehoiachin and gives him a seat above those of the other kings in Babylon. The Davidic king is elevated above all other captive kings. The Davidic covenant promise (2 Sam 7:13; Ps 89:29) has not died with the fall of Jerusalem; it persists in this small sign: a Davidic king, alive, elevated, honored at the Babylonian court. The covenant promise is not destroyed by history; it waits.</p>",
+    "29": "<p>Jehoiachin changes his prison garments and eats bread before the king continually all the days of his life. The exchange of prison clothes for royal garments is a deliberate grace note. The image of the Davidic king at a foreign king&rsquo;s table every day of his life is the seed of a larger promise: Luke 22:30 &lsquo;you will eat and drink at my table in my kingdom, and you will sit on thrones judging the twelve tribes of Israel.&rsquo; Matt 1:11-12 names Jehoiachin in the genealogy as the hinge of the exile; the one who came from that line will seat his disciples at a table that will not end.</p>",
+    "30": "<p>&lsquo;A regular allowance was given him by the king, a portion every day, all the days of his life.&rsquo; The book of Kings ends here &mdash; not with the fall of Jerusalem, not with the burning of the temple, not with Judah exiled from the land, but with this: a daily portion, every day, all his life, for the Davidic heir. The <em>&#x2019;&breve;r&ucirc;&#x1E25;&#x101;h y&ocirc;m b&#x115;y&ocirc;m</em> (daily ration, day by day) is the permanent provision for the living representative of the covenant promise. Matt 6:11 &lsquo;give us this day our daily bread&rsquo; &mdash; the prayer of the people of God for daily provision from the King&rsquo;s table. The ending of Kings is deliberately unresolved: the Davidic dynasty is not extinct; its heir eats daily at the table of the most powerful king in the world; the covenant promise awaits its Fulfiller who will seat all his people at his own table in an unending kingdom.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1kings', KINGS1_ECHO, KINGS1_ORIGINAL, KINGS1_CONTEXT, KINGS1_CHRIST),
-        ('2kings', KINGS2_ECHO, KINGS2_ORIGINAL, KINGS2_CONTEXT, KINGS2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', '2kings')
+    merge_comm(c, CHRIST)
+    save_comm('mkt-christ', '2kings', c)
+    count = sum(len(v) for v in CHRIST.values())
+    print(f'2kings mkt-christ ch 24-25: wrote {count} verses')
 
 if __name__ == '__main__':
     main()

@@ -1,46 +1,32 @@
 """
-Job + Proverbs + Ecclesiastes + Song of Solomon — all four layers.
-Wisdom books: suffering and theodicy (Job), practical wisdom as Christ (Prov 8),
-vanity and meaning (Eccl), the love of Christ and the church (Song).
+MKT Christ Commentary — Job chapters 5–7
+Run: python3 scripts/zc-christ-job-5-7.py
+Key connections:
+- Job 5:13 -> 1 Cor 3:19 (direct NT quotation: God catches the wise in their craftiness)
+- Job 5:17 -> Heb 12:5-6 / Prov 3:11-12 (blessed whom God reproves; fatherly discipline)
+- Job 5:18 -> Hos 6:1-2 / 1 Pet 2:24 (wound/bind -- resurrection pattern, cross healing)
+- Job 6:4  -> Ps 22; arrow imagery of divine wrath borne by the Suffering Servant
+- Job 6:14 -> John 15:13 (hesed withheld; Christ the friend who never withholds it)
+- Job 7:1  -> Mark 10:45 (tsava hard service; Christ came not to be served but to serve)
+- Job 7:9  -> Acts 2:24 / Heb 13:20 (Sheol no return; Christ the exception)
+- Job 7:17 -> Ps 8:4 / Heb 2:6-9 (what is man; Christ as true Man, crowned with glory)
+- Job 7:21 -> Rom 8:3-4 (pardon transgression; cross as God's answer to Job's plea)
 """
 
 import json, pathlib
-
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -50,187 +36,98 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# JOB
-# ============================
-
-JOB_ECHO = {
-  "1": {
-    "21": [
-      {"type": "allusion", "target": "Phil 4:11-12", "note": "The LORD gave, and the LORD has taken away; blessed be the name of the LORD — Job's response to total loss; Paul's 'I have learned, in whatever state I am, to be content' echoes the Job pattern of accepting both abundance and loss from the hand of God"}
-    ]
-  },
-  "9": {
-    "33": [
-      {"type": "allusion", "target": "1 Tim 2:5", "note": "There is no arbiter between us who might lay his hand on both of us — Job's longing for a mediator who can bridge the gap between the holy God and the accused human; Paul's 'there is one mediator between God and men, the man Christ Jesus' is the direct answer to Job's longing: the mediator Job needed exists"}
-    ]
-  },
-  "19": {
-    "25": [
-      {"type": "allusion", "target": "1 Cor 15:20", "note": "I know that my Redeemer lives, and at the last he will stand upon the earth — Job's confession of faith in a living Redeemer who will vindicate him after death; the resurrection of Christ is the answer to Job's hope: the Redeemer who lives has stood upon the earth, and because he lives Job will live also"}
-    ]
-  },
-  "38": {
-    "4": [
-      {"type": "allusion", "target": "John 1:1", "note": "Where were you when I laid the foundation of the earth? — the divine speech from the whirlwind (chs. 38-41) confronts Job with the Creator's incomprehensible majesty; John 1:1 grounds Christ as the one who was present at that foundation: in the beginning was the Word, and the Word was with God — the one speaking from the whirlwind and the one who became flesh are the same person"}
-    ]
-  }
+new_data = {
+    "5": {
+        "1": "<p>Eliphaz challenges Job to call out to any of the holy ones. No mediator is available to him &#8212; a lack the book will resolve only in ch.&#160;19 where Job cries for his <i>g&#333;&#702;&#275;l</i> and ch.&#160;33 where Elihu names the heavenly <i>meli&#7779;</i>. Christ is the one Mediator who answers every cry (1&#160;Tim&#160;2:5).</p>",
+        "2": "<p>Vexation kills the fool and jealousy slays the simple. Eliphaz&#8217;s wisdom tradition locates the source of suffering in the sufferer. Christ absorbs vexation from without, bearing the contradiction of sinners (Heb&#160;12:3), demonstrating that affliction is not always self-generated.</p>",
+        "3": "<p>Eliphaz&#8217;s cursed-root image anticipates the fig-tree judgment (Matt&#160;21:19) and John&#160;15:6 (branches that do not abide are thrown away). The righteous flourishing instead of the wicked finds its ground only in union with Christ the true Vine.</p>",
+        "4": "<p>The sons of the fool are crushed in court with no defender. Christ&#8217;s redemptive work is precisely that of the advocate in the gate (1&#160;John&#160;2:1; Ps&#160;82:3&#8211;4), lifting up the defenseless who have no human rescuer.</p>",
+        "5": "<p>The harvest devoured by the hungry, wealth taken by thorns. The imagery of cursed ground and lost harvest traces to Gen&#160;3:17&#8211;18. Christ redeems the curse (Gal&#160;3:13), restoring the creation&#8217;s fruitfulness in the kingdom he inaugurates.</p>",
+        "6": "<p>Affliction does not spring from the dust nor does trouble sprout from the ground. Eliphaz&#8217;s point cuts both ways: suffering has a cause, but in Christ&#8217;s case that cause is entirely outside himself &#8212; he bears what he did not sow (Ps&#160;69:4).</p>",
+        "7": "<p>&#8220;Man is born to trouble as the sparks fly upward.&#8221; The Incarnation is God entering the trajectory of human suffering. Isaiah&#160;53:3 calls the Servant &#8220;a man of sorrows and acquainted with grief&#8221; &#8212; Christ fulfills the destiny of mortal humanity by taking its trouble onto himself completely.</p>",
+        "8": "<p>Eliphaz counsels seeking God and committing one&#8217;s cause to him. This is precisely what Jesus does in Gethsemane and on the cross (Luke&#160;23:46; Ps&#160;22:1) &#8212; the perfect Son who always commits his cause to the Father, even in extremis.</p>",
+        "9": "<p>God does great and unsearchable things, marvelous without number. Paul cites this doxological register in Rom&#160;11:33 after explaining the mystery of redemption. The unsearchable things find their apex in the cross: &#8220;depth of riches both of the wisdom and knowledge of God&#8221; (Rom&#160;11:33).</p>",
+        "10": "<p>God sends rain on the earth and water on the fields. Jesus cites this same universal providence in Matt&#160;5:45: the Father causes rain to fall on the just and unjust alike. Common grace points toward the greater grace of the gospel offered to all people.</p>",
+        "11": "<p>He sets on high those who are lowly, and mourners are lifted to safety. Mary&#8217;s Magnificat echoes this text (Luke&#160;1:52). Christ&#8217;s entire ministry enacts this reversal: the Beatitudes, the raising of the lowly, the healing of mourners.</p>",
+        "12": "<p>God frustrates the devices of the crafty so their hands achieve no success. This divine reversal of human cunning runs through the passion narrative: the schemes of priests and Pharisees to destroy Jesus become the very means God uses to accomplish redemption (Acts&#160;2:23).</p>",
+        "13": "<p>&#8220;He catches the wise in their own craftiness&#8221; &#8212; directly quoted in 1&#160;Cor&#160;3:19. Paul applies this to those who boast in human wisdom against the &#8220;foolishness&#8221; of the cross. The crucified Christ is God&#8217;s trap for every wisdom that exalts itself above the knowledge of God (2&#160;Cor&#160;10:5).</p>",
+        "14": "<p>The crafty meet darkness at noon. The crucifixion darkness (Matt&#160;27:45; Amos&#160;8:9) is the cosmic sign that the world&#8217;s wisdom has met its noon-darkness &#8212; unable to see the light of the resurrection that follows.</p>",
+        "15": "<p>God saves the needy from the sword of their mouth and from the hand of the mighty. Christ&#8217;s trial before Pilate is the paradigm case: the sword of accusation was at its sharpest, yet God vindicates through resurrection the one who had no earthly defender.</p>",
+        "16": "<p>The poor have hope, and injustice shuts its mouth. The hope of the poor reaches its foundation in the resurrection of Christ (1&#160;Pet&#160;1:3), who is raised as the firstfruits of a new order in which injustice is finally silenced at the judgment.</p>",
+        "17": "<p>&#8220;Blessed is the one whom God reproves; do not despise the Almighty&#8217;s discipline.&#8221; Cited verbatim in Heb&#160;12:5&#8211;6 (also Prov&#160;3:11&#8211;12), applied to Christian suffering as fatherly correction. The logic is Christological: Christ himself &#8220;learned obedience through what he suffered&#8221; (Heb&#160;5:8), modeling the way sonship and suffering coinhere.</p>",
+        "18": "<p>&#8220;He wounds, but he binds up; he shatters, but his hands heal.&#8221; Hos&#160;6:1&#8211;2 draws on this pattern and culminates in &#8220;after two days he will revive us; on the third day he will raise us up&#8221; &#8212; language Paul reads as a resurrection template (1&#160;Cor&#160;15:4). Peter quotes the same wound-and-heal dynamic and applies it to Christ&#8217;s cross: &#8220;by his wounds you have been healed&#8221; (1&#160;Pet&#160;2:24).</p>",
+        "19": "<p>Deliverance from six troubles, even seven. The fullness of deliverance Eliphaz sketches (six-then-seven = completeness) is what Christ actually accomplishes: he delivers from every trouble enumerated &#8212; death, famine, war, slander, destruction &#8212; through his redemptive work.</p>",
+        "20": "<p>In famine he redeems from death; in war from the power of the sword. The <i>g&#333;&#702;&#275;l</i>-redemption language used here previews Job&#8217;s own cry in 19:25 and finds its referent in Christ who &#8220;redeems us from the curse of the law&#8221; (Gal&#160;3:13) and from the power of death (Heb&#160;2:14&#8211;15).</p>",
+        "21": "<p>Hidden from the scourge of the tongue, not afraid of destruction when it comes. The hiddenness of God&#8217;s people under trial &#8212; Col&#160;3:3 (&#8220;your life is hidden with Christ in God&#8221;) &#8212; is grounded in Christ&#8217;s own hiddenness in the tomb before the resurrection.</p>",
+        "22": "<p>Laugh at destruction and famine; not afraid of wild animals. This fearlessness before death finds its warrant only in the resurrection. Paul&#8217;s &#8220;death is swallowed up in victory &#8212; where, O death, is your sting?&#8221; (1&#160;Cor&#160;15:54&#8211;55) is the christological fulfillment of what Eliphaz can only idealize.</p>",
+        "23": "<p>A covenant with the stones of the field; the wild animals at peace. The Edenic peace Eliphaz promises is the new-creation peace inaugurated by Christ, the second Adam, who restores the harmonious dominion lost in the fall (Isa&#160;11:6&#8211;9; Rom&#160;8:21).</p>",
+        "24": "<p>Know that your tent is at peace. Christ promises a place prepared (John&#160;14:2&#8211;3) &#8212; the dwelling-place security that Eliphaz dangles conditionally is given as gift to those united to Christ.</p>",
+        "25": "<p>Offspring will be many; descendants as the grass of the earth. The Abrahamic promise of seed (Gen&#160;17:6) is fulfilled in Christ who becomes the ancestor of &#8220;many children&#8221; (Heb&#160;2:10) through his redemptive work: &#8220;he shall see his offspring&#8221; (Isa&#160;53:10).</p>",
+        "26": "<p>Come to the grave in ripe old age, like a shock of grain. The resurrection of the body grants what Eliphaz could only imagine &#8212; not escape from death but its transformation into harvest (1&#160;Cor&#160;15:37&#8211;38, 42&#8211;44, the grain metaphor).</p>",
+        "27": "<p>&#8220;This we have searched out; it is true.&#8221; Eliphaz&#8217;s confidence in inherited tradition is real but incomplete: it takes the revelation of the cross to make full sense of the wound-that-heals pattern he has rightly observed. The gospel is the deeper logic beneath the wisdom tradition.</p>"
+    },
+    "6": {
+        "1": "<p>Job speaks &#8212; he does not stay silent. The cry of the suffering one that opens this speech finds its archetype in the Psalms of lament (Ps&#160;22:1; 55:2) and its ultimate voice in Christ&#8217;s cry from the cross: the eternal Son enters the full register of human anguish.</p>",
+        "2": "<p>Job&#8217;s vexation and calamity are beyond weighing. The weight of suffering here anticipates Paul&#8217;s &#8220;momentary light affliction&#8221; language (2&#160;Cor&#160;4:17) &#8212; paradoxical because Christ&#8217;s cross was the heaviest weight ever borne, yet its eternal purchase infinitely outweighs it.</p>",
+        "3": "<p>Heavier than the sand of the seas &#8212; therefore his words are rash. Christ bore inexpressible weight without rash words (1&#160;Pet&#160;2:23: &#8220;he did not revile in return&#8221;), fulfilling what Job could not: perfect speech under maximal suffering.</p>",
+        "4": "<p>&#8220;The arrows of the Almighty are in me; my spirit drinks their poison; the terrors of God are arrayed against me.&#8221; This arrow-of-divine-wrath language echoes Ps&#160;38:2 and Ps&#160;22:15. At the cross Christ bears the full quiver of divine judgment: &#8220;It was the will of the LORD to crush him&#8221; (Isa&#160;53:10). The terrors arrayed against Job are a shadow of what Christ absorbed completely.</p>",
+        "5": "<p>The donkey does not bray when it has grass. Job&#8217;s lament is proportional to his lack &#8212; he is not complaining from surplus. Christ&#8217;s cry from the cross (&#8220;My God, my God, why have you forsaken me?&#8221;) is likewise no performative complaint but the exact expression of genuine desolation.</p>",
+        "6": "<p>Can tasteless food be eaten without salt? Job refuses to pretend false words are nourishment. Christ offers himself as the true bread that satisfies (John&#160;6:35), in contrast to the tasteless offering of inadequate comfort.</p>",
+        "7": "<p>The soul refuses to touch loathsome food. Christ took on what was loathsome to God &#8212; sin itself &#8212; so that his people might receive what is truly nourishing: his righteousness (2&#160;Cor&#160;5:21).</p>",
+        "8": "<p>Oh that my request would come and God would grant what I hope for. The prayer of desperate longing is perfected in Gethsemane: &#8220;Not my will but yours be done&#8221; (Luke&#160;22:42). Christ models the transformation of desperate request into submission.</p>",
+        "9": "<p>That it would please God to crush me, to let loose his hand and cut me off. The desire for the end of suffering finds its answer not in annihilation but in the cross: God did crush the Servant (Isa&#160;53:10) so that death for his people would mean passage through into resurrection.</p>",
+        "10": "<p>Consolation: I have not denied the words of the Holy One. Job&#8217;s integrity under pressure &#8212; not denying the Holy One &#8212; is the posture Christ maintains throughout his trial and crucifixion: he does not recant or curse, vindicating the Father&#8217;s trust (John&#160;17:4).</p>",
+        "11": "<p>What is my strength that I should wait? The exhausted servant who can no longer hope from personal reserves finds his resources replaced: &#8220;They who wait for the LORD shall renew their strength&#8221; (Isa&#160;40:31). Christ, raised by the Spirit (Rom&#160;8:11), is the source of that renewed strength.</p>",
+        "12": "<p>Is my strength the strength of stones? Is my flesh bronze? Job names the human limits that make endurance impossible by natural resources. Christ assumes full human fragility (John&#160;11:35; Heb&#160;5:7&#8211;8) and transforms it by resurrection &#8212; the weakness of the cross becomes the power of God (1&#160;Cor&#160;1:25).</p>",
+        "13": "<p>Is not my help absent from me? All resources driven away. This absolute dereliction is the condition Christ enters on the cross: &#8220;My God, my God, why have you forsaken me?&#8221; (Matt&#160;27:46). The absence of creaturely help is the condition that necessitates redemption from God alone.</p>",
+        "14": "<p>&#8220;He who withholds kindness from a friend forsakes the fear of the Almighty.&#8221; The <i>&#7717;ese&#7693;</i> &#8212; steadfast covenant love &#8212; that the friends fail to show points to the one who showed it perfectly: &#8220;Greater love has no one than this, that someone lay down his life for his friends&#8221; (John&#160;15:13). Christ is the friend who never withholds <i>&#7717;ese&#7693;</i>.</p>",
+        "15": "<p>Brothers treacherous as wadis that overflow. Betrayal by close companions characterizes both Job&#8217;s situation and Christ&#8217;s: Judas, Peter&#8217;s denial, the disciples&#8217; flight (Mark&#160;14:50). The treachery of intimate friends is part of the Suffering Servant&#8217;s lot (Ps&#160;41:9, cited in John&#160;13:18).</p>",
+        "16": "<p>The dark streams from ice, snow&#8217;s melt vanishing. What seemed like reliable water is gone. The fickle support mirrors the crowds of Palm Sunday who became the crowds crying &#8220;Crucify him&#8221; &#8212; apparent backing that dissolves at the moment of need.</p>",
+        "17": "<p>When it is warm they vanish; when hot, they disappear from their place. The unreliability of human support under pressure makes the faithful God all the more necessary. Jesus &#8220;knew what was in man&#8221; (John&#160;2:25) and did not entrust himself to human loyalty &#8212; a realism confirmed at every point in the passion.</p>",
+        "18": "<p>Caravans turn aside; they go up into the waste and perish. Those who count on empty promises find only desert. Christ offers living water (John&#160;4:14) in place of the cisterns that fail (Jer&#160;2:13) &#8212; the only reliable source when all earthly streams dry up.</p>",
+        "19": "<p>The caravans of Tema look; travelers of Sheba hope. The nations seeking water represent the universal human longing &#8212; a longing Christ satisfies: &#8220;Let anyone who is thirsty come to me and drink&#8221; (John&#160;7:37), the fulfillment of what every searching caravan ultimately sought.</p>",
+        "20": "<p>They are ashamed because they trusted; they come and are disappointed. False hope leads to shame &#8212; which is why Paul writes &#8220;hope does not put us to shame&#8221; (Rom&#160;5:5) &#8212; because the love of God has been poured into our hearts through Christ, whose resurrection proves this hope is not empty.</p>",
+        "21": "<p>&#8220;You have become nothing; you see my calamity and are afraid.&#8221; The disciples before the cross shrank back (Mark&#160;14:50); the crowds turned; the friends became nothing. Christ&#8217;s isolation at the cross is total &#8212; bearing the abandonment Job experienced so that his people would never face it ultimately (Heb&#160;13:5).</p>",
+        "22": "<p>Have I said, give me a gift from your wealth? Job asks nothing of them. Nor does Christ demand that his disciples produce what they cannot give &#8212; his redemptive work is entirely his own act, not a collective achievement (Isa&#160;63:3: &#8220;I trod the winepress alone&#8221;).</p>",
+        "23": "<p>Deliver me from the enemy&#8217;s hand; ransom me from the hand of the ruthless? Job asks only for presence and truth, not resources. Christ is himself the ransom (Mark&#160;10:45, <i>lytron</i>) &#8212; the one who delivers from the hand of the truly ruthless enemy, death and the devil.</p>",
+        "24": "<p>Teach me and I will be silent; make me understand how I have gone astray. The posture of teachability even in suffering &#8212; Christ models this in full submission to the Father&#8217;s word, not silencing his cry but ultimately yielding: &#8220;Not my will but yours&#8221; (Luke&#160;22:42).</p>",
+        "25": "<p>How painful are upright words. Christ receives the full weight of human accusation &#8212; false and malicious &#8212; without being broken by it (1&#160;Pet&#160;2:23). His silence before accusers (Mark&#160;15:5) fulfills Isa&#160;53:7.</p>",
+        "26": "<p>Do you think to reprove words when the speech of a despairing man is wind? The friends judge Job&#8217;s cries by their worst possible interpretation. Christ does not despise the cry of the afflicted (Ps&#160;22:24) &#8212; the incarnate God who himself cried out never dismisses human anguish as mere noise.</p>",
+        "27": "<p>You would even cast lots over the orphan. The imagery of casting lots over a defenseless one anticipates the soldiers casting lots over Christ&#8217;s garments at the crucifixion (John&#160;19:24, fulfilling Ps&#160;22:18) &#8212; the ultimate moment of treating the innocent one as abandoned property.</p>",
+        "28": "<p>Look at me and see. The demand to be truly seen &#8212; not reduced to a category &#8212; is the cry Christ answers: he sees Zacchaeus in the tree, the woman in the crowd, the thief on the cross. The incarnate Lord is the God who truly looks at people (John&#160;1:42, 48).</p>",
+        "29": "<p>&#8220;Please turn; my vindication (<i>&#7779;idq&#238;</i>) is at stake.&#8221; Job&#8217;s righteousness is on the line in the friends&#8217; accusation. Christ&#8217;s resurrection is his vindication &#8212; &#8220;vindicated by the Spirit&#8221; (1&#160;Tim&#160;3:16). The resurrection is God&#8217;s &#8220;turn&#8221; that declares the righteous one innocent.</p>",
+        "30": "<p>Is there any injustice on my tongue? The claim of innocence that Job cannot fully sustain (9:2) Christ can sustain absolutely: he is the one in whose mouth no deceit was found (1&#160;Pet&#160;2:22, citing Isa&#160;53:9). His vindication is the basis on which the guilty receive righteousness.</p>"
+    },
+    "7": {
+        "1": "<p>&#8220;Has not man hard service (<i>&#7779;&#257;b&#257;&#702;</i>) on earth?&#8221; The term <i>&#7779;&#257;b&#257;&#702;</i> denotes military conscription, forced labor, a compulsory term of hard service. Christ came not to be served but to serve (Mark&#160;10:45, using the same service-language), entering human <i>&#7779;&#257;b&#257;&#702;</i> to redeem those under it. He bore the full weight of mortal toil in order to transform it.</p>",
+        "2": "<p>Like a slave longing for shadow, a hired worker for his wages. The longing for rest from labor finds its answer in Christ: &#8220;Come to me, all who labor and are heavy laden, and I will give you rest&#8221; (Matt&#160;11:28). Christ is the Sabbath-rest that the slave in v.&#160;2 can never reach by toil alone.</p>",
+        "3": "<p>So I am allotted months of emptiness, nights of misery. Christ descended into the full emptiness of human experience &#8212; the <i>ken&#333;sis</i> of Phil&#160;2:7. He did not hover above human misery but was allotted its months as truly as any sufferer.</p>",
+        "4": "<p>When I lie down: when shall I arise? The long night of suffering that makes morning seem impossible &#8212; the two days of the disciples&#8217; grief before the resurrection &#8212; is the dark night Job articulates. Easter morning is God&#8217;s answer to every sufferer&#8217;s &#8220;when shall I arise?&#8221;</p>",
+        "5": "<p>Flesh clothed with worms and clods of dirt; skin hardened and breaks out afresh. The bodily degradation Job describes is the condition of mortality that Christ assumes &#8212; including the crucified body laid in a tomb. The resurrection transforms this exact flesh (1&#160;Cor&#160;15:42&#8211;44: sown in corruption, raised in glory).</p>",
+        "6": "<p>Days swifter than a weaver&#8217;s shuttle, consumed without hope. The brevity and hopelessness of mortal life is precisely what Christ enters by the Incarnation &#8212; taking up finite, fleeting human days &#8212; and redeems by resurrection: his risen life is eternal, lifting human days into something beyond the shuttle&#8217;s vanishing.</p>",
+        "7": "<p>&#8220;Remember that my life is a breath; my eye will not again see good.&#8221; Job&#8217;s prayer for divine remembrance is answered in Christ: God does not forget the dying one (Luke&#160;23:42&#8211;43, the thief on the cross: &#8220;remember me&#8221; &#8212; &#8220;today you will be with me&#8221;). The breath of human life is not forgotten by the Creator.</p>",
+        "8": "<p>The eye of him who sees me will behold me no more; your eyes will be on me but I will be gone. The fear of disappearing from God&#8217;s sight is inverted by the resurrection: Christ, raised and ascended, is permanently in the Father&#8217;s sight as glorified humanity. Those in Christ share that permanent vision (John&#160;17:24).</p>",
+        "9": "<p>&#8220;As the cloud fades and vanishes, so he who goes down to Sheol does not come up.&#8221; This is Job&#8217;s bleak anthropology of one-way descent. Peter&#8217;s Pentecost sermon cites Ps&#160;16:10 precisely to say that Christ was not abandoned to Hades (Acts&#160;2:24, 27, 31) &#8212; he is the exception to the rule Job articulates. The God of Job&#8217;s desperate hope raised Christ, breaking the irreversibility Job feared.</p>",
+        "10": "<p>He returns no more to his house; his place knows him no more. The finality of death as Job sees it is what the resurrection overturns. Christ returns to his disciples after three days (John&#160;20:19) &#8212; his place does know him again &#8212; inaugurating the pattern for the resurrection of the dead.</p>",
+        "11": "<p>Therefore I will not restrain my mouth; I will speak in the anguish of my spirit. The full articulation of anguish &#8212; not suppressed, not performative &#8212; is what Heb&#160;5:7 says Jesus offered: &#8220;In the days of his flesh, Jesus offered up prayers and supplications, with loud cries and tears.&#8221; Christ is the one who speaks in the anguish of his spirit before the Father.</p>",
+        "12": "<p>Am I the sea or a sea monster that you set a guard over me? The chaotic sea requiring divine restraint (Ps&#160;89:9; Job&#160;38:8&#8211;11) is subdued by Christ who walks on water (Matt&#160;14:25) and rebukes the storm (Mark&#160;4:39) &#8212; the Creator who guards the sea himself enters its chaos.</p>",
+        "13": "<p>When I say my bed will comfort me, my couch will ease my complaint &#8212; then God terrifies me with dreams. The inability to find rest &#8212; even sleep violated &#8212; is the condition Christ transforms: &#8220;he grants sleep to his beloved&#8221; (Ps&#160;127:2). In Gethsemane, while disciples sleep (Mark&#160;14:40&#8211;41), Christ watches &#8212; reversing the pattern.</p>",
+        "14": "<p>You scare me with dreams and terrify me with visions. The nocturnal terror Job experiences echoes the anguish of Gethsemane (Luke&#160;22:44: &#8220;his sweat became like great drops of blood&#8221;) &#8212; Christ endures the fullest concentration of the weight of sin and judgment in the garden before the cross.</p>",
+        "15": "<p>My soul chooses strangling and death rather than my bones. The wish for death over endless suffering &#8212; a despair Elijah (1&#160;Kgs&#160;19:4) and Jonah also voice &#8212; is not condemned by Christ but transformed: he himself entered death so that the one who passes through it emerges into life rather than being swallowed by it (John&#160;11:25&#8211;26).</p>",
+        "16": "<p>I loathe my life; I would not live forever. Job refuses the pretense that merely continuing to exist is inherently good. Christ does not offer mere life extension &#8212; he offers life of a different quality entirely: &#8220;I came that they may have life and have it abundantly&#8221; (John&#160;10:10). The resurrection is not resuscitation but transformation.</p>",
+        "17": "<p>&#8220;What is man, that you make so much of him, and that you set your heart on him?&#8221; Job inverts Ps&#160;8:4&#8217;s wonder into a protest &#8212; why does God pay such attention to frail humans? Heb&#160;2:6&#8211;9 answers by applying the psalm to Jesus: the &#8220;man&#8221; to whom all things are subjected is Christ, who &#8220;for a little while was made lower than the angels&#8221; (the Incarnation) and is now &#8220;crowned with glory and honor&#8221; (the resurrection-ascension). Christ is the true human whom the Father &#8220;makes so much of&#8221; &#8212; and in him, all humanity is elevated.</p>",
+        "18": "<p>Visit him every morning; test him every moment. The relentless divine attention Job experiences as affliction is transformed in Christ. The Father&#8217;s constant attention to the Son is love (John&#160;5:20); his raising Jesus every morning (Isa&#160;50:4: &#8220;morning by morning he wakens my ear&#8221;) is the pattern of sustained fellowship that Christ opens to his people.</p>",
+        "19": "<p>How long will you not look away from me, nor leave me alone until I swallow my saliva? The prayer for God to withdraw his scrutiny echoes the Gethsemane cry: &#8220;Remove this cup from me&#8221; (Luke&#160;22:42). Christ asks for the same relief but ultimately accepts the full weight of divine scrutiny on sin &#8212; bearing what crushes so that his people receive the gaze of divine delight.</p>",
+        "20": "<p>If I sin, what do I do to you, you watcher of mankind? Job&#8217;s question presses the theodicy: human sin as burden to God. The Incarnation is God&#8217;s answer: he becomes the Watcher who enters the watched world, bearing in himself the consequence of sin (2&#160;Cor&#160;5:21) &#8212; the Watcher becomes the watched, the Judge becomes the judged.</p>",
+        "21": "<p>&#8220;Why do you not pardon my transgression and take away my iniquity? For now I shall lie in the earth; you will seek me, but I shall not be.&#8221; Job&#8217;s urgent plea for pardon before death is the central question the cross answers. God does not pardon by overlooking iniquity but by laying it on his Son (Isa&#160;53:6; Rom&#160;8:3&#8211;4). The &#8220;taking away&#8221; of sin that Job begs for is accomplished at Calvary: &#8220;he takes away the sin of the world&#8221; (John&#160;1:29). Job&#8217;s fear of dying unforgiven is the exact anguish Christ&#8217;s atoning death addresses.</p>"
+    }
 }
 
-JOB_ORIGINAL = {
-  "19": {
-    "25": "<p><strong>vaani yadati goa'li chai ve'acharon al afar yaqum</strong>: 'For I know that my Redeemer [<em>go'el</em>] lives, and at the last he will stand upon the earth' (or 'upon the dust'). This is one of the OT's most disputed verses — the text is difficult (the next verse, 19:26, is even more so: 'after my skin has thus been destroyed, yet in my flesh I shall see God'). The term <em>go'el</em> (kinsman-redeemer) in the context of Job's suffering suggests: the one who will vindicate Job after death, who will see to it that justice is done. Whether Job envisions a bodily resurrection (as 19:26 suggests in the MT) or a post-mortem vindication, the theological content is the same: a personal Redeemer who is alive, who will act at the last, who will secure Job's vindication. The NT identifies this Redeemer as Christ (1 Cor 15:20: Christ has been raised from the dead, the firstfruits of those who have fallen asleep).</p>"
-  },
-  "38": {
-    "4": "<p>The divine speech from the whirlwind (Job 38-41) is the OT's most extended meditation on the incomprehensibility and majesty of God. YHWH's questions ('Where were you when I laid the foundation of the earth? Tell me, if you have understanding') do not answer Job's question about suffering — they reframe it by confronting Job with the Creator's perspective. The response to theodicy is not a logical explanation but a theophanic encounter: when Job sees YHWH, his questions are transformed, not answered (42:5: 'my eye sees you'; he is satisfied). This pattern — suffering resolved not by explanation but by encounter with God — points to the incarnation: the answer to the problem of suffering is not a theodicy argument but the Son of God entering the suffering and going through it.</p>"
-  }
-}
+existing = load_comm('mkt-christ', 'job')
+merge_comm(existing, new_data)
+save_comm('mkt-christ', 'job', existing)
 
-JOB_CONTEXT = {
-  "1": {
-    "1": "<p>Job is the OT's most direct engagement with the problem of innocent suffering. Its genre combines a prose frame (the prologue and epilogue) with a poetic center (the dialogues, Job 3-41). The prologue reveals what Job does not know: that his suffering is the result of a cosmic test. The dialogues work out the human perspective on suffering without that hidden knowledge. The friends defend the retributive justice principle (you suffer, therefore you sinned); Job insists on his innocence. Both are partially right: the friends are correct that suffering is related to sin in general (the cosmic fall), but wrong that Job's specific suffering is punishment for specific sin. YHWH's verdict (42:7-8: Job's friends 'have not spoken of me what is right, as my servant Job has') vindicates Job's complaint against easy theodicy.</p>"
-  }
-}
-
-JOB_CHRIST = {
-  "9": {
-    "33": "<p>A type: 'There is no arbiter between us who might lay his hand on us both, who would remove his rod from me, and let not dread of him terrify me.' Job's longing for a mediator is one of the Bible's most poignant anticipations of Christ. What Job needs is someone who can stand between the holy God and the accused human — with one hand on God and one hand on the human — securing Job's access to God without the terror. The incarnation is the answer: Jesus Christ 'laid his hand' on both realities, being fully God and fully human, so that 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). The mediator Job could only wish for, the NT declares has come.</p>"
-  },
-  "19": {
-    "25": "<p>A direct revelation: 'I know that my Redeemer lives, and at the last he will stand upon the earth.' Job's confession cuts through the fog of his suffering to affirm what cannot be seen or felt: a living Redeemer who will vindicate. The confession has multiple levels of fulfillment in Christ: (1) the Redeemer lives — Christ's resurrection is the demonstration; (2) he will stand upon the earth at the last — the parousia; (3) 'in my flesh I shall see God' (v. 26) — the bodily resurrection of the righteous. Job, in the depths of suffering and loss, speaks one of Scripture's clearest affirmations of resurrection-hope and the personal Redeemer who makes it possible.</p>"
-  }
-}
-
-# ============================
-# PROVERBS
-# ============================
-
-PROV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "Col 2:3", "note": "The fear of the LORD is the beginning of wisdom — Proverbs' foundational maxim; Paul says in Christ are hidden all the treasures of wisdom and knowledge (Col 2:3): Christ is where the 'fear of the LORD leads, the source from whom all wisdom flows"}
-    ]
-  },
-  "8": {
-    "22": [
-      {"type": "allusion", "target": "John 1:1", "note": "The LORD possessed me at the beginning of his work, the first of his acts of old — Wisdom speaking in Proverbs 8:22-31; personified Wisdom present at creation, delighting in the inhabited world; the Logos-Wisdom identification (John 1:1-3; Col 1:15-16; Heb 1:2-3) applies the Prov 8 Wisdom-portrait to the pre-incarnate Christ"},
-      {"type": "allusion", "target": "Col 1:15", "note": "I was beside him like a master workman, rejoicing before him always — Wisdom as God's artisan in creation (Prov 8:30); Paul describes Christ as the one in whom all things were created (Col 1:16) and through whom all things were made (John 1:3); the Wisdom-Creator becomes the Christ-Creator"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Heb 12:5-6", "note": "My son, do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves — Hebrews quotes Prov 3:11-12 to explain suffering as divine discipline: God treats believers as sons (Heb 12:7); the wisdom perspective on suffering as fatherly training is the theological framework for the Christian endurance of hardship"}
-    ]
-  }
-}
-
-PROV_ORIGINAL = {
-  "8": {
-    "22": "<p><strong>YHWH qanani reshit darko qedem mifalav meaz</strong>: 'The LORD possessed/created me at the beginning of his work, the first of his acts of old.' The verb <em>qanah</em> is disputed: it can mean 'to acquire/possess' (so most LXX manuscripts, Aquila, Theodotion) or 'to create' (so the Arian controversy reading, applied to prove the Son was a created being). The Nicene theology responded: even if <em>qanah</em> means 'created', Proverbs 8 is personified Wisdom literature — a poetic device, not a literal description of a divine person's ontology. The NT applies Prov 8's Wisdom-portrait to the eternal Son (Col 1:15-17; Heb 1:2-3; John 1:1-3) not to prove the Son is created, but to show that the pre-existent Son is the referent of the Wisdom-personification: the figure the wisdom tradition was groping toward in poetic imagery became flesh in Christ.</p>"
-  }
-}
-
-PROV_CONTEXT = {
-  "1": {
-    "1": "<p>Proverbs is the OT's primary wisdom text — a collection of moral instruction, practical guidance, and theological reflection on the nature of a well-ordered life in YHWH's world. It is attributed to Solomon (1:1; 10:1; 25:1) with additions from other wise men (Agur, 30:1; Lemuel's mother, 31:1). Its theological foundation is the fear of YHWH (1:7; 9:10; 15:33): wisdom is not abstract intellectual skill but a disposition toward God and the moral order of creation. The longest section (chs. 1-9) frames the rest with the personification of Wisdom as a woman calling in the streets, building her house, offering her feast — while her counterpart, Folly, seduces the simple to death. The NT's identification of Christ as divine Wisdom (1 Cor 1:24, 30; Col 2:3) is the claim that the personification in Proverbs 8 was, in the fullness of time, made literal and personal.</p>"
-  }
-}
-
-PROV_CHRIST = {
-  "8": {
-    "30": "<p>A revelation of God: 'Then I was beside him, like a master workman, and I was daily his delight, rejoicing before him always, rejoicing in his inhabited world and delighting in the children of man.' Wisdom's delight in creation and in humanity (Prov 8:30-31) is the OT's most personal statement of the divine affection for the created order. The NT applies this portrait to the eternal Son: 'by him all things were created' (Col 1:16); 'all things were made through him' (John 1:3); 'through whom also he created the world' (Heb 1:2). The Wisdom who rejoiced at creation is the Word who entered creation (John 1:14), and the delight Wisdom expressed for the children of man is the love that sent the Son into the world (John 3:16). Proverbs 8's Wisdom-portrait is the poetic anticipation of the incarnate Logos who is himself divine wisdom in person (1 Cor 1:24: Christ the wisdom of God).</p>"
-  }
-}
-
-# ============================
-# ECCLESIASTES
-# ============================
-
-ECCL_ECHO = {
-  "1": {
-    "2": [
-      {"type": "allusion", "target": "Rom 8:20", "note": "Vanity of vanities, all is vanity — the Preacher's diagnosis of the futility of all earthly striving; Paul's 'the creation was subjected to futility [mataiotes = the LXX word for hevel/vanity]' applies Ecclesiastes' diagnosis to the whole created order: the vanity is not merely human experience but creation-wide, awaiting the liberation of the resurrection"}
-    ]
-  },
-  "12": {
-    "13": [
-      {"type": "allusion", "target": "Matt 22:37-40", "note": "Fear God and keep his commandments, for this is the whole duty of man — the Preacher's final summary of the human vocation: the fear of YHWH and covenant obedience are the answer to the vanity of all other human projects; Jesus's summary (love God and love neighbor) is the new covenant distillation of the same conclusion"}
-    ]
-  }
-}
-
-ECCL_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>havel havalim amar qohelet havel havalim hakol havel</strong>: 'Vanity of vanities, says the Preacher, vanity of vanities! All is vanity.' The Hebrew <em>hevel</em> (vapor, breath, vanity) is used 38 times in Ecclesiastes — more than in any other biblical book. It literally means a breath of air that passes immediately: something that exists momentarily and then is gone. The LXX translates <em>hevel</em> as <em>mataiotes</em> (futility, vanity), and Paul uses this word in Romans 8:20: 'the creation was subjected to futility [<em>mataiotes</em>].' The Ecclesiastes diagnosis is therefore not pessimism but realism about the post-fall condition of creation: all earthly striving that does not account for God and eternity is, sub specie aeternitatis, vapor. The NT's response is the resurrection, which gives permanence to what was formerly vapor: 'your labor in the Lord is not in vain' (1 Cor 15:58).</p>"
-  }
-}
-
-ECCL_CONTEXT = {
-  "1": {
-    "1": "<p>Ecclesiastes (Hebrew <em>Qohelet</em>, 'the Preacher/Assembler') is the most theologically challenging book of the wisdom literature — it appears to endorse cynicism (2:24: 'there is nothing better for a person than to eat and drink'), relativism (3:1-8: a time for everything), and even doubt (9:5: the dead know nothing). Its canonical function is the 'foil' in the wisdom dialogue: if Proverbs gives the optimistic wisdom perspective, Ecclesiastes gives the honest reckoning with what happens when wisdom is pursued 'under the sun' — that is, within the frame of mortal, fallen human existence. The recurring phrase 'under the sun' (29 occurrences) marks the book's self-conscious limitation: it is wisdom from the earthly perspective, without the resurrection. The NT provides what Ecclesiastes lacks: the 'not in vain' of labor done in the Lord (1 Cor 15:58) and the hope that breaks the <em>hevel</em>-cycle.</p>"
-  }
-}
-
-ECCL_CHRIST = {
-  "12": {
-    "13": "<p>A shadow: 'Fear God and keep his commandments, for this is the whole duty of man.' Ecclesiastes' closing verdict after surveying all human wisdom is the simplest possible statement of the human vocation: the fear of God and covenant obedience. This is the wisdom tradition's answer to vanity — not a philosophical system but a personal relationship with the Creator. Jesus's summary of the law (love God, love neighbor) is the new covenant's positive restatement of what Ecclesiastes reaches as its final conclusion. But Christ does more than restate: he embodies the fear of God and covenant obedience perfectly (Heb 5:7-8: in the days of his flesh, Jesus offered up prayers and supplications with loud cries and tears ... and was heard because of his reverence; although he was a son, he learned obedience through what he suffered), and in his resurrection he breaks the <em>hevel</em>-cycle, proving that labor in the Lord — unlike all labor 'under the sun' — is not in vain (1 Cor 15:58).</p>"
-  }
-}
-
-# ============================
-# SONG OF SOLOMON
-# ============================
-
-SONG_ECHO = {
-  "2": {
-    "16": [
-      {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
-    ]
-  },
-  "8": {
-    "6": [
-      {"type": "allusion", "target": "Rom 8:35-39", "note": "Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD — the Song's declaration of love's unconquerable strength; Paul's conviction that nothing can separate us from the love of God in Christ Jesus is the new covenant answer to the Song's vision of love stronger than death: Christ's love has defeated death itself and remains unbreakable"}
-    ]
-  }
-}
-
-SONG_ORIGINAL = {
-  "1": {
-    "1": "<p>The Song of Songs (<em>shir hashirim</em>) is the OT's wisdom-meditation on human love and sexuality. Its literal level — a celebration of erotic love between a man and a woman — is taken seriously by responsible interpreters as a canonical affirmation of marriage and the goodness of sexual love within covenant. The allegorical level — YHWH's love for Israel (the Jewish interpretation) or Christ's love for the church (the dominant Christian interpretation) — has been the dominant hermeneutical approach through most of church history (Origen's commentary and Bernard of Clairvaux's 86 sermons on Song 1-2 are the most extensive examples). The allegorical reading is supported by the OT's consistent use of the husband-wife metaphor for YHWH-Israel (Isa 54:5; Jer 2:2; Ezek 16; Hos 1-3) and the NT's application of the bride-bridegroom image to Christ-church (Eph 5:25-32; Rev 19:7-9; 21:2). The two readings are not mutually exclusive: the literal is the foundation that gives the allegorical its force.</p>"
-  },
-  "8": {
-    "6": "<p><strong>simeini kachotam al libecha kachotam al zeroa'echa ki azza kamavet ahavah qasha kishol qina'ah reshefeyha reshefei esh shalhevetyah</strong>: 'Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the LORD.' The climax of the Song's celebration of love: it is as strong as death and as fierce as <em>sheol</em> — the two most powerful forces in human experience. <em>Shalhevetyah</em> (the very flame of the LORD) — uniquely, this is one of the few places in the Song where the divine name appears, even embedded in a word. The NT's fulfillment: the love of Christ has defeated death (1 Cor 15:54-57) and nothing can separate us from that love (Rom 8:38-39); what the Song claimed about love's unconquerability is literally true in Christ's resurrection.</p>"
-  }
-}
-
-SONG_CONTEXT = {
-  "1": {
-    "1": "<p>The Song of Solomon's place in the canon was debated in rabbinic Judaism (Rabbi Akiva defended it: 'all the ages are not worth the day on which the Song of Songs was given to Israel; for all the writings are holy, but the Song of Songs is the Holy of Holies'); it was included in the Hebrew canon and subsequently in the Christian canon. The bride-bridegroom image is the OT's primary metaphor for the YHWH-Israel covenant relationship: Hosea (chs. 1-3) uses the marriage metaphor for covenant and its violation; Isaiah 54:5 calls YHWH Israel's husband; Jeremiah 2:2 recalls the honeymoon period of the wilderness. The NT develops the bridegroom imagery specifically for Jesus (Mark 2:20: the bridegroom is taken away; John 3:29: the friend of the bridegroom rejoices; Eph 5:25-32: husbands love your wives as Christ loved the church; Rev 19:7: the marriage of the Lamb has come).</p>"
-  }
-}
-
-SONG_CHRIST = {
-  "2": {
-    "16": "<p>A revelation of God: 'My beloved is mine, and I am his.' The Song's vision of mutual possession between lover and beloved is the OT's most intimate description of the covenant relationship. In the NT, this mutual possession is fulfilled in the Christ-church relationship: 'You are not your own, for you were bought with a price' (1 Cor 6:19-20); 'I am my beloved's and my beloved is mine' becomes 'I live, and yet not I, but Christ lives in me' (Gal 2:20). The mutual knowing of bride and groom (I know my sheep and my sheep know me, John 10:14) is the new covenant's personal form of the Song's mutual possession. The eschatological fulfillment is the marriage of the Lamb (Rev 19:7-9; 21:2): the Song's vision of complete love is consummated in the new creation when the Bride has made herself ready.</p>"
-  },
-  "8": {
-    "6": "<p>A direct revelation: 'Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD.' The Song declares love's unconquerable strength in the face of the two most formidable opponents — death and sheol. The NT's claim is that this declaration is literally, not merely poetically, true in Christ: his love has conquered death (1 Cor 15:54-57: Death is swallowed up in victory; thanks be to God who gives us the victory through our Lord Jesus Christ) and the love of God in Christ is literally unconquerable (Rom 8:38-39: neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord). What the Song celebrates as love's aspiration, the resurrection announces as love's accomplished fact.</p>"
-  }
-}
-
-def main():
-    books = [
-        ('job', JOB_ECHO, JOB_ORIGINAL, JOB_CONTEXT, JOB_CHRIST),
-        ('proverbs', PROV_ECHO, PROV_ORIGINAL, PROV_CONTEXT, PROV_CHRIST),
-        ('ecclesiastes', ECCL_ECHO, ECCL_ORIGINAL, ECCL_CONTEXT, ECCL_CHRIST),
-        ('songofsolomon', SONG_ECHO, SONG_ORIGINAL, SONG_CONTEXT, SONG_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
-
-if __name__ == '__main__':
-    main()
+for ch in sorted(new_data.keys(), key=int):
+    vv = new_data[ch]
+    have = sum(1 for v in vv if v in existing.get(ch, {}))
+    print(f'  ch{ch}: {have}/{len(vv)} verses present')

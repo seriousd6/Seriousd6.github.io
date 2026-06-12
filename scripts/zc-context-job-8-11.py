@@ -1,46 +1,35 @@
 """
-Job + Proverbs + Ecclesiastes + Song of Solomon — all four layers.
-Wisdom books: suffering and theodicy (Job), practical wisdom as Christ (Prov 8),
-vanity and meaning (Eccl), the love of Christ and the church (Song).
+MKT Context Commentary — Job chapters 8–11
+Run: python3 scripts/zc-context-job-8-11.py
+
+Source data used:
+- data/interlinear/job.json
+- data/translation/draft/mediating/job.json
+- ANE background: papyrus imagery (8:11), chaos-myth (9:8,9:13), Sheol cosmology (10:21-22)
+- Bildad = Shuhite (Gen 25:2), Zophar = Naamathite (unknown; possibly Edomite region)
+
+Key decisions in this range:
+- Ch9 is structurally a legal fantasy (rib) — every verse is shaped by forensic assumptions
+- 9:33 umpire/arbiter (mokiah) is the key term anticipating the need for a mediator
+- 10:8-11 creation-by-craftsman language deliberately echoes Ps 139 and ANE creation texts
+- 11:7-9 four-direction cosmic merism is a standard ANE rhetorical totality device
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -50,187 +39,122 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# JOB
-# ============================
-
-JOB_ECHO = {
-  "1": {
-    "21": [
-      {"type": "allusion", "target": "Phil 4:11-12", "note": "The LORD gave, and the LORD has taken away; blessed be the name of the LORD — Job's response to total loss; Paul's 'I have learned, in whatever state I am, to be content' echoes the Job pattern of accepting both abundance and loss from the hand of God"}
-    ]
+JOB = {
+  "8": {
+    "1": "<p>Bildad the Shuhite is identified by his clan name rather than a personal genealogy. Shuah was a son of Abraham by Keturah (Gen 25:2), placing Bildad in the Transjordanian region east of Israel — likely near the Hauran plateau or Edomite borderlands. The friends represent wisdom traditions from the fringes of the Israelite world, not its center.</p>",
+    "2": "<p>Bildad opens with a rhetorical challenge: how long will Job speak? The word translated 'mighty blast of wind' (<em>ruach kabbir</em>) — literally 'great wind' — deploys the same root <em>ruach</em> used for the divine breath and spirit. The rhetorical force is dismissal: Job's words are noise, not the ordered speech of wisdom.</p>",
+    "3": "<p>The paired rhetorical questions — 'does God distort justice? corrupt what is right?' — assume the negative answer. The terms <em>mishpat</em> (justice) and <em>tsedeq</em> (right, righteous order) are the pillars of Bildad's theology. In ANE royal ideology, the king's primary duty was to maintain <em>mishpat</em> and <em>tsedeq</em>; Bildad projects this onto God.</p>",
+    "4": "<p>Bildad invokes the fate of Job's children as evidence of their guilt — they sinned, therefore they died. This is the retribution principle applied in its harshest form: God 'gave them over to the consequences of their own sin' (<em>beyad-pisham</em>). The audience knows from the prologue (1:5) that Job regularly offered sacrifices on his children's behalf — Bildad's logic is therefore both cruel and factually wrong within the story's own frame.</p>",
+    "5": "<p>Bildad shifts from accusation to conditional promise: <em>if</em> you seek God (<em>shachar</em> — diligently seek, the root suggests predawn searching), and <em>if</em> you plead for grace (<em>chanan</em>). The conditional structure is a standard wisdom move: the one who repents and seeks properly will be restored. The theology is clean; the application to Job is catastrophically misread.</p>",
+    "6": "<p>The promise of restoration — 'restore your righteous home' — assumes that Job's present state is the result of moral failure and that God's favor is contingent on moral purity. This is standard Deuteronomic theology applied mechanically: blessing follows obedience, cursing follows sin. Bildad is not wrong about the theology in the abstract; he is wrong about the diagnosis.</p>",
+    "7": "<p>'Your beginnings were humble' — a calculated implication that Job's former prosperity was not even his peak. The promise that 'latter years will be far greater' (<em>acharitekha yisgeh meod</em>) is designed to motivate repentance but implicitly disparages Job's present suffering as correctional rather than unjust. The epilogue (42:12) ironically fulfills this very promise — but not through Bildad's mechanism.</p>",
+    "8": "<p>Bildad's appeal to 'former generations' (<em>dor rishon</em>) is a classic ANE authority appeal. In Mesopotamian wisdom literature (especially the Babylonian Wisdom of Amenemope and Sumerian proverb collections), ancestral tradition is invoked as the repository of accumulated observation about how the world works. The claim is empirical: the ancestors saw enough of life to identify the moral patterns governing prosperity and ruin.</p>",
+    "9": "<p>'We are but of yesterday and know nothing' — the brevity-of-human-life topos is ubiquitous in ANE literature. The Babylonian Epic of Gilgamesh repeatedly contrasts human brevity with divine permanence; Egyptian wisdom literature similarly counsels humility before the patterns the gods have established. 'Our days on earth are but a shadow' (<em>tsel</em>) — the shadow image for transience appears also in Ps 102:11 and 144:4.</p>",
+    "10": "<p>The rhetorical invitation — 'will they not teach you?' — assumes the ancestral tradition is accessible and dispositive. ANE wisdom was transmitted primarily through oral chains of masters and pupils; the elders are not just older but custodians of the observation-tradition. Bildad assumes this tradition has already answered Job's questions.</p>",
+    "11": "<p>The papyrus and reed illustration draws on distinctly Egyptian imagery. <em>Gomeh</em> (papyrus) is an Egyptian loanword; papyrus grows exclusively in marshy, well-watered ground — the Nile delta being the paradigmatic example. The point: a plant that appears to flourish without visible roots in a marsh will wither the moment its water source fails. The image carries more force to an audience familiar with Egypt's agricultural regime than to one in the highlands of Canaan.</p>",
+    "12": "<p>'Still green and not yet cut, it withers before any other herb' — the suddenness of the withering is the point. The papyrus is not cut by a harvester but dries spontaneously when the marsh recedes. Bildad is describing the self-destructive nature of a prosperity built on the wrong foundation — not cut down by explicit divine punishment but collapsing from within when the hidden condition (moral purity) is absent.</p>",
+    "13": "<p>'All who forget God' (<em>kol-shokche el</em>) — the summary verdict. 'Forgetting God' is the language of covenant infidelity in Deuteronomy (Deut 8:11-14, 32:18); it describes not intellectual atheism but practical abandonment of covenant loyalty. The hope (<em>tiqvah</em>) of the godless perishes — a term that recurs in Job 14:7 and 17:15 as Job wrestles with whether he himself has any hope.</p>",
+    "14": "<p>'What he trusts in will be cut off' — <em>qoto</em>, his confidence, is hapax; possibly related to the word for thread or filament. The spider's web (<em>beit akkavish</em>) image — literally 'spider's house' — is brilliant: the web is architecturally intricate, the spider's greatest achievement, yet functionally useless as a shelter against real weight or weather. False security looks elaborate but offers no protection.</p>",
+    "15": "<p>The image of leaning on a house that falls is a wisdom commonplace. ANE house-building was a major investment and the primary symbol of established prosperity (compare the 'builder of a good name' in Egyptian wisdom). The point is not that the wicked are destroyed externally but that their apparent security is structurally unsound — it cannot bear the weight placed on it.</p>",
+    "16": "<p>The transition to the flourishing green plant (8:16-19) is a second illustration, now of the wicked who appear prosperous. 'Well watered in the sunshine' — the combination of water and sun suggests peak growing conditions. In Palestinian agriculture, the spring rains and the summer sun together produce maximum growth; the plant in this image has both.</p>",
+    "17": "<p>'His roots twine around the pile of stones' — vigorous root growth through rocky soil was a sign of aggressive vitality in ANE plant observation. The image anticipates the reversal: a plant whose roots are entangled in stones cannot be easily uprooted, but when destruction comes (<em>bela</em>), it is displaced completely.</p>",
+    "18": "<p>'It says to him: I have never seen you' (<em>lo reitikha</em>) — the place itself forgets the wicked. This is a striking personification of land; the idea that the land 'knows' its rightful inhabitants and rejects the wicked appears also in Lev 18:25 (the land vomiting out sinners). The wicked disappear without a trace — their prosperity leaves no lasting mark.</p>",
+    "19": "<p>'From the earth others will spring up in his place' — not consolation but erasure. The world continues without the wicked; the slot is immediately filled. This is ANE ecological observation pressed into moral service: nature is indifferent to any particular individual; the pattern of succession continues unchanged.</p>",
+    "20": "<p>Bildad's summary principle: God does not reject (<em>meen</em>) the blameless, nor take hold of the hand of the wicked to help them. The double assurance was designed to reassure Job: if he repents, he will be in the first category. The theological claim is defensible in the abstract — the problem is that Job is already in the first category, which Bildad cannot see.</p>",
+    "21": "<p>'He will yet fill your mouth with laughter' — the restoration promise echoes the language of Ps 126:2 ('our mouths were filled with laughter'). The contrast with Job's present lament is stark; Bildad is confident that repentance will produce exactly this reversal.</p>",
+    "22": "<p>The speech closes with a confidence about enemies — they will be clothed with shame, the wicked's tent will vanish. The clothing-with-shame image is a standard honor-shame reversal in biblical and ANE rhetoric; shame is not merely an internal feeling but a public status (compare Ps 109:29). The tent (<em>ohel</em>) is the household unit — the wicked's family line and home will be obliterated.</p>"
   },
   "9": {
-    "33": [
-      {"type": "allusion", "target": "1 Tim 2:5", "note": "There is no arbiter between us who might lay his hand on both of us — Job's longing for a mediator who can bridge the gap between the holy God and the accused human; Paul's 'there is one mediator between God and men, the man Christ Jesus' is the direct answer to Job's longing: the mediator Job needed exists"}
-    ]
+    "1": "<p>Job's response begins without a formal introduction — he simply 'answered.' The abruptness signals that Job is not following the normal wisdom speech convention of naming the speaker; he is responding urgently to a burning question.</p>",
+    "2": "<p>'How can a man be justified before God?' (<em>mah-yitsdak enosh im-el</em>) — this is the structural question of the entire chapter and one of the book's most important legal formulations. <em>Tsadaq</em> is the forensic root: to be declared righteous, to win one's case. Job accepts Bildad's framework — God is the just judge — but probes its practical implication: given the power disparity, no human could ever win a legal dispute with God. The question echoes in Paul's parallel forensic question in Rom 3:20.</p>",
+    "3": "<p>'Once in a thousand attempts' — the hyperbole signals not intellectual failure but overwhelming disproportion. ANE legal procedure required the ability to answer charges verbally; to fail to answer (<em>lo-yaaneh</em>) one in a thousand times is to be functionally silenced. Job is not doubting God's justice but questioning whether justice can operate fairly when one party is omnipotent.</p>",
+    "4": "<p>'Who has defied him and survived intact?' — the rhetorical question invites the answer: no one. In ANE royal ideology, the king's power was demonstrated precisely by his ability to destroy any challenger. God's wisdom (<em>chakham levav</em>) and might (<em>ammits koach</em>) together make him the ideal king — but also an impossible opponent in any legal contest.</p>",
+    "5": "<p>The mountain-moving power (9:5-10) is a divine hymn embedded in a legal lament. God's raw power over creation is displayed through geological and astronomical facts. Mountain-moving in ANE literature is the act of a god asserting sovereignty — compare the Ugaritic Baal texts where Baal's storm power is demonstrated through similar earth-shaking.</p>",
+    "6": "<p>'The earth from its place... its pillars quake' — ANE cosmology pictured the earth as a flat disk resting on pillars (<em>ammudim</em>) that supported it over the cosmic waters. Earthquake was the trembling of these pillars. The image appears also in 1 Sam 2:8 and Ps 75:3; it is the standard cosmological framework the biblical authors share with their neighbors.</p>",
+    "7": "<p>'Commands the sun not to rise, seals up the stars' — the sun's daily rising was in many ANE traditions the result of the sun-god's journey across the sky; for God to command the sun not to rise is to assert sovereignty over the cosmic order itself. The sealing of stars (<em>yochatem bead kokhavim</em>) may allude to the notion that stars were 'opened' at dusk and 'sealed' at dawn — God controls the celestial calendar.</p>",
+    "8": "<p>'Who alone stretched out the heavens' — <em>natah</em> is the word used in creation texts (Isa 40:22, 42:5, 44:24) for God spreading the sky like a tent or canopy. 'Walks on the crests of the sea' (<em>bamote yam</em>) — 'heights of the sea' is an image of treading on the defeated chaos deity. In Canaanite mythology, Yam (Sea) was the cosmic adversary defeated by Baal; Job's hymn places God unambiguously above Yam's domain.</p>",
+    "9": "<p>The constellation names — Bear (<em>Ayish</em>), Orion (<em>Kesil</em>), Pleiades (<em>Kimah</em>) — appear again in Job 38:31-32 and in Amos 5:8. In ANE astrology, these major constellations marked seasonal and agricultural calendars; to 'make' them is to control time itself. <em>Kesil</em> (Orion) is literally 'the fool' in Hebrew — an ironic name for the hunter-warrior constellation, possibly polemicizing against ANE star-worship.</p>",
+    "10": "<p>'Great things beyond comprehension' — the language of divine incomprehensibility echoes Eliphaz's speech (5:9) almost verbatim. Job is not disputing this; he is using the friends' own hymn material to make the opposite point: if God is this incomprehensible, then the friends' confident moral calculus about who he rewards and punishes is equally incomprehensible.</p>",
+    "11": "<p>'When he passes by me, I cannot see him' — the invisibility of divine movement. The divine 'passing by' (<em>avar</em>) is the technical term for the theophany in Exod 33:22 and 1 Kgs 19:11; God passes by Moses and Elijah in moments of revelation. Job inverts this: God passes but does not show himself. The theophany the narrator knows is coming (chs. 38-41) is entirely absent from Job's present experience.</p>",
+    "12": "<p>'If he snatches something away, who can stop him?' (<em>mi yeshivenu</em>) — the rhetorical question anticipates 41:10-11's divine answer about Leviathan. No one can restrain God or call him to account. In ANE legal procedure, the question 'who can summon him?' (<em>mi yomar</em>) is the question about legal jurisdiction — no court exists that can compel the appearance of the more powerful party.</p>",
+    "13": "<p>'Allies of Rahab crouched beneath him' — Rahab is the chaos sea-dragon (parallel to Leviathan, Tiamat, and Yam in various ANE systems). Its 'helpers' or 'allies' (<em>ozere Rahav</em>) are the lesser chaos monsters of the mythological sea. The claim: even the combined force of primordial chaos submitted to God. The irony for Job is that this overwhelming power is now seemingly directed against him personally.</p>",
+    "14": "<p>'How then can I answer him?' — Job returns from cosmic hymn to personal dilemma. Having catalogued God's power over creation and chaos, the question of how a single human could 'select words' (<em>evcharah devaray</em>) to argue a legal case becomes almost absurd. ANE legal procedure depended on the ability to articulate one's case; Job's eloquence (which the book itself demonstrates) would be useless before such a judge.</p>",
+    "15": "<p>'Even if I were righteous, I could not answer him' — the key admission. Job is not conceding guilt; he is acknowledging that righteousness alone is insufficient if the other party is God. 'Plead for mercy to my own judge' (<em>lemeshofeti etchanen</em>) — the judge and the adversary are the same person. In ANE legal procedure, this complete absence of judicial impartiality would void any proceeding; yet this is Job's situation.</p>",
+    "16": "<p>'Even if I summoned him and he responded, I still could not believe he was truly listening' — the problem is not just legal but existential. Even if God answered (as he ultimately does in ch. 38-41), Job doubts whether the response would address his actual case. This anticipates the structure of the divine speeches: God answers, but does not directly address the question of Job's guilt or innocence.</p>",
+    "17": "<p>'For he would crush me with a storm' (<em>yeshufeni vise'arah</em>) — the storm is the vehicle of theophany when God finally appears (38:1). Job anticipates the very form of the divine answer here, but interprets it as assault rather than revelation. The Babylonian wisdom text <em>Ludlul bel nemeqi</em> similarly depicts divine assault through storm imagery.</p>",
+    "18": "<p>'Fills me with bitter suffering' (<em>yarweni mamerorim</em>) — the language of <em>merorim</em> (bitter things) is the standard Hebrew idiom for suffering that is sharp and unrelenting; the same root describes the bitter herbs of Passover (Exod 12:8).</p>",
+    "19": "<p>'If it is a matter of justice, who can summon him to court?' (<em>mi yoidiني</em>) — literally 'who will set a time for me?' — the idiom for summoning to a legal appointment. The ancient Near Eastern legal system required that both parties appear; if the more powerful party refused to be summoned, justice was blocked. Job's complaint is about judicial inaccessibility, not divine injustice per se.</p>",
+    "20": "<p>'If I justified myself, my own mouth would condemn me' — the paradox of self-testimony before an omniscient judge. ANE legal procedure relied on the testimony of witnesses and the defendant's own words. Before God, self-justification becomes self-incrimination because God's knowledge exceeds any claim the defendant can make. The situation is inherently asymmetrical.</p>",
+    "21": "<p>'Though I am blameless, I do not trust my own self-knowledge' — <em>tam ani lo-eda nafshi</em>, 'I am complete/blameless, I do not know my soul.' The paradox: Job is certain of his integrity (<em>tom</em>) but uncertain of his self-knowledge. The insight that self-knowledge is limited is here pushed into a forensic context: Job cannot fully know his own case.</p>",
+    "22": "<p>'He destroys the blameless and the wicked alike' — this is the most theologically daring claim in the chapter. Job is not denying divine power but divine discrimination: the empirical evidence of his own experience suggests that the retribution principle is not operating. Theodicy literature across the ANE — especially the Babylonian Theodicy (a dialogue between a sufferer and his friend) — wrestles with exactly this problem.</p>",
+    "23": "<p>'He mocks at the calamity of the innocent' — a shocking claim about divine character. Job is speaking from experience, not theological doctrine. The Babylonian <em>Ludlul</em> text similarly depicts the sufferer's god as absent and apparently hostile; the restoration at the end reveals that the suffering was purposeful rather than sadistic, but the sufferer cannot see that from within it.</p>",
+    "24": "<p>'The earth is given into the power of the wicked; he blindfolds its judges' — <em>yekasse</em> means to cover the face, used for blindfolding. ANE justice depended on the judge seeing clearly — covering the judge's face is corruption of the entire system. If not God, then who has done this? The question 'if not he, then who?' (<em>im-lo hu mi epo</em>) is a direct challenge to Bildad's confident theology of divine justice.</p>",
+    "25": "<p>'My days are swifter than a runner' — the life-as-brief-journey imagery. The runner (<em>rats</em>) is a royal messenger covering ground quickly; days that move with that speed leave no time to build a case, seek justice, or find relief. ANE wisdom texts routinely invoke the brevity of life to motivate proper action; Job inverts the topos by noting that brevity itself prevents remedy.</p>",
+    "26": "<p>'Skiffs of reed' (<em>oniyot eveh</em>) — papyrus boats from Egypt, the fastest watercraft in the ancient world. Egyptian papyrus boats were proverbially swift in the ANE world; the Nile current added to their speed. The eagle diving (<em>nesher yatus</em>) on prey — the classic ANE image of swift, inevitable destruction — combines with the boat image to create a double simile of terrifying speed.</p>",
+    "27": "<p>'If I say, I will forget my complaint' — Job entertains the possibility of positive self-presentation as a strategy before his divine judge. In ANE legal procedure, adopting a cheerful posture before a powerful patron was a recognized social strategy; to appear already condemned was to make the judge's job easier.</p>",
+    "28": "<p>'I dread all my suffering, for I know you will not acquit me' — the strategy fails before it begins. Job's knowledge is not just pessimism; it is accurate perception of his situation: the divine judge has already rendered a verdict through the suffering itself (so it appears to Job), and cheerfulness cannot undo that sentence.</p>",
+    "29": "<p>'If I am condemned already, why do I exhaust myself for nothing?' — the logic of futility. If the outcome is fixed regardless of effort, effort is absurd. The ANE wisdom tradition generally assumed effort was meaningful; Job's question is whether that assumption holds when the judge's verdict seems predetermined.</p>",
+    "30": "<p>'Washed myself with snow water' — snow water was considered particularly pure, being distilled water from high altitude. Ritual washing for purity is attested across ANE cultures; the Mesopotamian <em>mis pi</em> (mouth-washing) ritual and various Levitical purity procedures all assume that ritual cleansing could achieve acceptable status before the deity.</p>",
+    "31": "<p>'You would plunge me into a slime pit so that my own clothes would recoil from me' — ritual impurity transferred to clothing is a Levitical concept (Lev 13:47-59); clothes that contract impurity must be destroyed. The image is of maximum impurity — even Job's own garments would be repelled by him. The slime pit (<em>shachat</em>) is also an image of the underworld.</p>",
+    "32": "<p>'He is not a man as I am, that I could answer him' — the impossibility of equal legal standing. ANE legal procedure assumed the parties were of comparable social status; a peasant could not sue a king in the same court on equal terms. God's ontological difference from Job means that no legal procedure designed for human parties can work.</p>",
+    "33": "<p>'No umpire between us who could place his hand upon us both' — the <em>mokhiach</em> (arbiter, umpire) who physically places a hand on both disputing parties to enforce settlement is a specific legal role. The gesture of physical restraint — hands on both parties — presupposes the arbiter's authority over both. No such figure exists who can restrain both Job and God; this is the book's most concentrated articulation of the mediator-problem that the NT claims Christ solves.</p>",
+    "34": "<p>'Let him remove his rod from me' — the rod (<em>shevet</em>) is both the shepherd's staff (used for discipline) and the king's scepter (symbol of authority and judgment). Job is asking for the rod of divine discipline to be withdrawn so that the terror (<em>emah</em>) which currently overwhelms him might lift.</p>",
+    "35": "<p>'Then I would speak without fear' — the conditional resolution: if the overwhelming power differential were neutralized, Job could present his case honestly. The admission 'I am not so in myself' (<em>ki lo-khen anokhi immadi</em>) is either a confession of fear (which prevents free speech) or an admission of inadequacy — probably both. The chapter ends without resolution; Job has identified the problem precisely but has no solution.</p>"
   },
-  "19": {
-    "25": [
-      {"type": "allusion", "target": "1 Cor 15:20", "note": "I know that my Redeemer lives, and at the last he will stand upon the earth — Job's confession of faith in a living Redeemer who will vindicate him after death; the resurrection of Christ is the answer to Job's hope: the Redeemer who lives has stood upon the earth, and because he lives Job will live also"}
-    ]
+  "10": {
+    "1": "<p>'My soul is sick of my life' (<em>naqetah nafshi bechayyay</em>) — <em>qut</em> means to feel loathing or revulsion; Job is not merely sad but disgusted with existence itself. In ANE lament literature, this extreme disaffection with life appears in the Babylonian Dialogue of Pessimism and the Egyptian Dialogue of a Man with His Soul — wisdom literature that explores the limits of the value of life.</p>",
+    "2": "<p>'Do not condemn me; let me know why you bring charges against me' — Job addresses God directly, shifting from third-person complaint to second-person petition. The legal vocabulary continues: <em>resha</em> (condemn, declare guilty) and the request to know the charges (<em>mah-teriveni</em>). In ANE legal procedure, the accused had the right to know the charges — Hammurabi's Code and various Mesopotamian legal documents assume this. Job is asserting a basic procedural right.</p>",
+    "3": "<p>'Does it please you to oppress... while you smile on the plans of the wicked?' — the question directly challenges divine consistency. 'The work of your own hands' (<em>beyagiyah kappekha</em>) invokes the creator's investment in the creature: a craftsman who rejects his own work is self-contradicting. ANE creation texts depict the gods as taking pride in their human creations; to reject them is inconsistent with the creator role.</p>",
+    "4": "<p>'Do you have eyes of flesh?' — the question probes divine epistemology. In ANE theology, the gods were generally thought to have superior perception — able to see what humans cannot. Job is asking whether God's investigation of him is limited by fleshly (i.e., human) perception — whether God is actually seeing his full situation or only surface appearances.</p>",
+    "5": "<p>'Are your days like those of a human being?' — the temporal challenge. ANE theological reflection routinely contrasted divine immortality with human mortality (Gilgamesh, Adapa). Job uses this contrast against his accusers: if God's days are not brief, why is he pursuing Job with such urgency — as if there is a limited window in which to catch and punish him?</p>",
+    "6": "<p>'Search out my wrongdoing... inquire into my sin' — the language of judicial investigation. God's inquiry is described with the same verbs used for court examination; the picture is of a prosecutor building a case against an already-accused defendant. The divine investigation that should be protective has become adversarial.</p>",
+    "7": "<p>'Though you know I am not guilty' — Job's boldest claim: that God's knowledge of his innocence (<em>ki lo ersha</em>) coexists with God's present treatment of him as guilty. This is not ignorant protest; it is a claim about divine awareness combined with divine action that the theology of the friends cannot accommodate. The epilogue (42:7) will confirm that Job has spoken rightly about God.</p>",
+    "8": "<p>'Your hands shaped and formed me — the whole of me — and now you turn and destroy me' — the contrast between creation and destruction by the same hands. Hebrew <em>asah</em> (shaped) and <em>kun</em> (established/formed); the combination is used of divine creation in Gen 1 and Ps 139. The creator who destroys his own creation is acting self-contradictorily. Mesopotamian creation texts also depict the gods as responsible for their human creations' fates.</p>",
+    "9": "<p>'Remember that you formed me like clay; will you now bring me back to dust?' (<em>bechazir leafar</em>) — the clay-and-dust imagery of creation. In Genesis 2:7, God forms Adam from <em>afar</em> (dust/earth); in Mesopotamian creation accounts (Atrahasis Epic, Enuma Elish), humans are formed from clay (<em>titu</em>), sometimes mixed with divine blood. Job is appealing to God's original creative investment: to return him to dust is to undo the creation.</p>",
+    "10": "<p>'Pour me out like milk and curdle me like cheese' — the embryological imagery of gestation through dairy analogy. Ancient embryology understood conception and fetal development partly through observation of dairy fermentation: the male contribution (semen, compared to milk) is 'curdled' by the female contribution into solid form (cheese representing the developed fetus). This analogy appears in no other biblical text but has parallels in Greek medical writers (Hippocratic corpus); it reflects the observational biology of the ancient world.</p>",
+    "11": "<p>'Clothed me with skin and flesh, and knit me together with bones and sinews' — the anatomical progression of fetal development. The verb <em>sakakh</em> (knit, weave) applied to bones and sinews is the same verb used in Ps 139:13 for God knitting the psalmist in the womb. The weaving metaphor for skeletal-muscular formation is both beautiful and anatomically observant. God is depicted as a skilled craftsman assembling the human body layer by layer.</p>",
+    "12": "<p>'You gave me life and steadfast love, and your watchful care preserved my spirit' — the verse stands in sharp contrast to the surrounding complaint. <em>Chesed</em> (steadfast love, covenant loyalty) is the great covenant term of the Hebrew Bible; its presence here acknowledges that God's past faithfulness was real. 'Watchful care' (<em>pequddah</em>) is the word for divine visitation — normally a positive term (God visiting his people in blessing). The past tense makes the contrast with the present all the more painful.</p>",
+    "13": "<p>'Yet these things you hid in your heart; I know that this was your purpose all along' — the shift to accusation: God's apparent kindness in creation was concealing a destructive purpose. The reader knows from the prologue that this is exactly wrong — the suffering is not a hidden divine agenda against Job. But from within Job's experience, without access to the heavenly council, the interpretation is understandable. This verse encapsulates the epistemological problem at the book's center.</p>",
+    "14": "<p>'If I sin, you take note of it' (<em>shamar</em>) — the divine bookkeeping image. In ANE theology, sins were often recorded in divine tablets; the Mesopotamian concept of <em>tuppu</em> (tablet) on which divine decrees and human deeds were written appears in various Babylonian texts. God's careful attention to every sin means no infraction escapes the ledger.</p>",
+    "15": "<p>'If I am wicked, woe to me! And if I am righteous, I still cannot hold my head up' — the double trap. In honor-shame culture, holding one's head up (<em>rosh nasa</em>) is the posture of dignity and vindication. The guilty cannot hold their head up; but Job, though righteous, also cannot because of his shame (<em>qalon</em>). Shame in ANE cultures was not primarily a private feeling but a public status — Job is publicly disgraced regardless of his actual moral standing.</p>",
+    "16": "<p>'You hunt me like a fierce lion' — the lion (<em>shachal</em>) is the apex predator in ANE symbolism of overwhelming power. Royal hunting scenes in Assyrian palace reliefs depicted the king hunting lions as proof of warrior excellence; here God takes the lion role and Job is the quarry. The image reverses expected divine-human relations: God as protector becomes God as predator.</p>",
+    "17": "<p>'Fresh witnesses against me' (<em>techaddesh edekha negdi</em>) — divine witnesses testifying against Job. In ANE legal procedure, witnesses were required; the ability to produce new witnesses (rather than just reasserting the original charge) indicated prosecutorial strength. Each new affliction becomes a fresh witness; the waves of hardship accumulate into a mounting prosecution.</p>",
+    "18": "<p>'Why then did you bring me out of the womb?' — the curse of birth, parallel to Jeremiah's own birth-curse (Jer 20:14-18). In ANE culture, the birth-day was a significant celebration; to curse one's birth day is to invert the entire positive valuation of existence. The womb was seen as a place of divine formation (as Job himself just described); to be brought out of that place into suffering seems to negate the purpose of the formation.</p>",
+    "19": "<p>'I should have been carried straight from the womb to the grave' (<em>mibbeten laqever uval</em>) — to move directly from womb to burial without intervening life. In some ANE cultures, stillborn infants were buried at thresholds or under floors — their short existence leaving no mark. Job's wish to have been a stillbirth is the wish to have been spared the experience of existence itself.</p>",
+    "20": "<p>'Are my days not few? Cease — leave me alone' — the appeal to divine restraint. 'Leave me alone' (<em>shit mimmenni</em>) appears in the same form as Moses' request in Exod 32:10 where God says 'leave me alone' before potentially destroying Israel. The reversal is significant: Job petitions God with the language God uses to announce impending action.</p>",
+    "21": "<p>'Land of darkness and the shadow of death, from which there is no return' — the Sheol description. Hebrew cosmology located the underworld beneath the earth; 'shadow of death' (<em>tsalmaveth</em>) is a compound noun (or an intensive form: 'deep darkness'). In Mesopotamian cosmology, the Land of No Return (<em>ertsetu la tari</em>) — the underworld — is characterized by its irreversibility. Once there, the dead are trapped; this is the standard ANE underworld tradition.</p>",
+    "22": "<p>'A land of utter gloom like thick darkness... where even the light is as darkness' — the triple description of the underworld builds to an oxymoron: light itself is darkness there. The Mesopotamian underworld was portrayed as a realm of dust and darkness where the dead wore feathered garments and sat in perpetual gloom. The 'disorder' (<em>lo sedarim</em>) — literally 'no order' — is the absence of the cosmic structure that characterizes the living world. Job's description of Sheol as unordered matches the primordial chaos of Gen 1:2 before divine ordering.</p>"
   },
-  "38": {
-    "4": [
-      {"type": "allusion", "target": "John 1:1", "note": "Where were you when I laid the foundation of the earth? — the divine speech from the whirlwind (chs. 38-41) confronts Job with the Creator's incomprehensible majesty; John 1:1 grounds Christ as the one who was present at that foundation: in the beginning was the Word, and the Word was with God — the one speaking from the whirlwind and the one who became flesh are the same person"}
-    ]
-  }
-}
-
-JOB_ORIGINAL = {
-  "19": {
-    "25": "<p><strong>vaani yadati goa'li chai ve'acharon al afar yaqum</strong>: 'For I know that my Redeemer [<em>go'el</em>] lives, and at the last he will stand upon the earth' (or 'upon the dust'). This is one of the OT's most disputed verses — the text is difficult (the next verse, 19:26, is even more so: 'after my skin has thus been destroyed, yet in my flesh I shall see God'). The term <em>go'el</em> (kinsman-redeemer) in the context of Job's suffering suggests: the one who will vindicate Job after death, who will see to it that justice is done. Whether Job envisions a bodily resurrection (as 19:26 suggests in the MT) or a post-mortem vindication, the theological content is the same: a personal Redeemer who is alive, who will act at the last, who will secure Job's vindication. The NT identifies this Redeemer as Christ (1 Cor 15:20: Christ has been raised from the dead, the firstfruits of those who have fallen asleep).</p>"
-  },
-  "38": {
-    "4": "<p>The divine speech from the whirlwind (Job 38-41) is the OT's most extended meditation on the incomprehensibility and majesty of God. YHWH's questions ('Where were you when I laid the foundation of the earth? Tell me, if you have understanding') do not answer Job's question about suffering — they reframe it by confronting Job with the Creator's perspective. The response to theodicy is not a logical explanation but a theophanic encounter: when Job sees YHWH, his questions are transformed, not answered (42:5: 'my eye sees you'; he is satisfied). This pattern — suffering resolved not by explanation but by encounter with God — points to the incarnation: the answer to the problem of suffering is not a theodicy argument but the Son of God entering the suffering and going through it.</p>"
-  }
-}
-
-JOB_CONTEXT = {
-  "1": {
-    "1": "<p>Job is the OT's most direct engagement with the problem of innocent suffering. Its genre combines a prose frame (the prologue and epilogue) with a poetic center (the dialogues, Job 3-41). The prologue reveals what Job does not know: that his suffering is the result of a cosmic test. The dialogues work out the human perspective on suffering without that hidden knowledge. The friends defend the retributive justice principle (you suffer, therefore you sinned); Job insists on his innocence. Both are partially right: the friends are correct that suffering is related to sin in general (the cosmic fall), but wrong that Job's specific suffering is punishment for specific sin. YHWH's verdict (42:7-8: Job's friends 'have not spoken of me what is right, as my servant Job has') vindicates Job's complaint against easy theodicy.</p>"
-  }
-}
-
-JOB_CHRIST = {
-  "9": {
-    "33": "<p>A type: 'There is no arbiter between us who might lay his hand on us both, who would remove his rod from me, and let not dread of him terrify me.' Job's longing for a mediator is one of the Bible's most poignant anticipations of Christ. What Job needs is someone who can stand between the holy God and the accused human — with one hand on God and one hand on the human — securing Job's access to God without the terror. The incarnation is the answer: Jesus Christ 'laid his hand' on both realities, being fully God and fully human, so that 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). The mediator Job could only wish for, the NT declares has come.</p>"
-  },
-  "19": {
-    "25": "<p>A direct revelation: 'I know that my Redeemer lives, and at the last he will stand upon the earth.' Job's confession cuts through the fog of his suffering to affirm what cannot be seen or felt: a living Redeemer who will vindicate. The confession has multiple levels of fulfillment in Christ: (1) the Redeemer lives — Christ's resurrection is the demonstration; (2) he will stand upon the earth at the last — the parousia; (3) 'in my flesh I shall see God' (v. 26) — the bodily resurrection of the righteous. Job, in the depths of suffering and loss, speaks one of Scripture's clearest affirmations of resurrection-hope and the personal Redeemer who makes it possible.</p>"
-  }
-}
-
-# ============================
-# PROVERBS
-# ============================
-
-PROV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "Col 2:3", "note": "The fear of the LORD is the beginning of wisdom — Proverbs' foundational maxim; Paul says in Christ are hidden all the treasures of wisdom and knowledge (Col 2:3): Christ is where the 'fear of the LORD leads, the source from whom all wisdom flows"}
-    ]
-  },
-  "8": {
-    "22": [
-      {"type": "allusion", "target": "John 1:1", "note": "The LORD possessed me at the beginning of his work, the first of his acts of old — Wisdom speaking in Proverbs 8:22-31; personified Wisdom present at creation, delighting in the inhabited world; the Logos-Wisdom identification (John 1:1-3; Col 1:15-16; Heb 1:2-3) applies the Prov 8 Wisdom-portrait to the pre-incarnate Christ"},
-      {"type": "allusion", "target": "Col 1:15", "note": "I was beside him like a master workman, rejoicing before him always — Wisdom as God's artisan in creation (Prov 8:30); Paul describes Christ as the one in whom all things were created (Col 1:16) and through whom all things were made (John 1:3); the Wisdom-Creator becomes the Christ-Creator"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Heb 12:5-6", "note": "My son, do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves — Hebrews quotes Prov 3:11-12 to explain suffering as divine discipline: God treats believers as sons (Heb 12:7); the wisdom perspective on suffering as fatherly training is the theological framework for the Christian endurance of hardship"}
-    ]
-  }
-}
-
-PROV_ORIGINAL = {
-  "8": {
-    "22": "<p><strong>YHWH qanani reshit darko qedem mifalav meaz</strong>: 'The LORD possessed/created me at the beginning of his work, the first of his acts of old.' The verb <em>qanah</em> is disputed: it can mean 'to acquire/possess' (so most LXX manuscripts, Aquila, Theodotion) or 'to create' (so the Arian controversy reading, applied to prove the Son was a created being). The Nicene theology responded: even if <em>qanah</em> means 'created', Proverbs 8 is personified Wisdom literature — a poetic device, not a literal description of a divine person's ontology. The NT applies Prov 8's Wisdom-portrait to the eternal Son (Col 1:15-17; Heb 1:2-3; John 1:1-3) not to prove the Son is created, but to show that the pre-existent Son is the referent of the Wisdom-personification: the figure the wisdom tradition was groping toward in poetic imagery became flesh in Christ.</p>"
-  }
-}
-
-PROV_CONTEXT = {
-  "1": {
-    "1": "<p>Proverbs is the OT's primary wisdom text — a collection of moral instruction, practical guidance, and theological reflection on the nature of a well-ordered life in YHWH's world. It is attributed to Solomon (1:1; 10:1; 25:1) with additions from other wise men (Agur, 30:1; Lemuel's mother, 31:1). Its theological foundation is the fear of YHWH (1:7; 9:10; 15:33): wisdom is not abstract intellectual skill but a disposition toward God and the moral order of creation. The longest section (chs. 1-9) frames the rest with the personification of Wisdom as a woman calling in the streets, building her house, offering her feast — while her counterpart, Folly, seduces the simple to death. The NT's identification of Christ as divine Wisdom (1 Cor 1:24, 30; Col 2:3) is the claim that the personification in Proverbs 8 was, in the fullness of time, made literal and personal.</p>"
-  }
-}
-
-PROV_CHRIST = {
-  "8": {
-    "30": "<p>A revelation of God: 'Then I was beside him, like a master workman, and I was daily his delight, rejoicing before him always, rejoicing in his inhabited world and delighting in the children of man.' Wisdom's delight in creation and in humanity (Prov 8:30-31) is the OT's most personal statement of the divine affection for the created order. The NT applies this portrait to the eternal Son: 'by him all things were created' (Col 1:16); 'all things were made through him' (John 1:3); 'through whom also he created the world' (Heb 1:2). The Wisdom who rejoiced at creation is the Word who entered creation (John 1:14), and the delight Wisdom expressed for the children of man is the love that sent the Son into the world (John 3:16). Proverbs 8's Wisdom-portrait is the poetic anticipation of the incarnate Logos who is himself divine wisdom in person (1 Cor 1:24: Christ the wisdom of God).</p>"
-  }
-}
-
-# ============================
-# ECCLESIASTES
-# ============================
-
-ECCL_ECHO = {
-  "1": {
-    "2": [
-      {"type": "allusion", "target": "Rom 8:20", "note": "Vanity of vanities, all is vanity — the Preacher's diagnosis of the futility of all earthly striving; Paul's 'the creation was subjected to futility [mataiotes = the LXX word for hevel/vanity]' applies Ecclesiastes' diagnosis to the whole created order: the vanity is not merely human experience but creation-wide, awaiting the liberation of the resurrection"}
-    ]
-  },
-  "12": {
-    "13": [
-      {"type": "allusion", "target": "Matt 22:37-40", "note": "Fear God and keep his commandments, for this is the whole duty of man — the Preacher's final summary of the human vocation: the fear of YHWH and covenant obedience are the answer to the vanity of all other human projects; Jesus's summary (love God and love neighbor) is the new covenant distillation of the same conclusion"}
-    ]
-  }
-}
-
-ECCL_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>havel havalim amar qohelet havel havalim hakol havel</strong>: 'Vanity of vanities, says the Preacher, vanity of vanities! All is vanity.' The Hebrew <em>hevel</em> (vapor, breath, vanity) is used 38 times in Ecclesiastes — more than in any other biblical book. It literally means a breath of air that passes immediately: something that exists momentarily and then is gone. The LXX translates <em>hevel</em> as <em>mataiotes</em> (futility, vanity), and Paul uses this word in Romans 8:20: 'the creation was subjected to futility [<em>mataiotes</em>].' The Ecclesiastes diagnosis is therefore not pessimism but realism about the post-fall condition of creation: all earthly striving that does not account for God and eternity is, sub specie aeternitatis, vapor. The NT's response is the resurrection, which gives permanence to what was formerly vapor: 'your labor in the Lord is not in vain' (1 Cor 15:58).</p>"
-  }
-}
-
-ECCL_CONTEXT = {
-  "1": {
-    "1": "<p>Ecclesiastes (Hebrew <em>Qohelet</em>, 'the Preacher/Assembler') is the most theologically challenging book of the wisdom literature — it appears to endorse cynicism (2:24: 'there is nothing better for a person than to eat and drink'), relativism (3:1-8: a time for everything), and even doubt (9:5: the dead know nothing). Its canonical function is the 'foil' in the wisdom dialogue: if Proverbs gives the optimistic wisdom perspective, Ecclesiastes gives the honest reckoning with what happens when wisdom is pursued 'under the sun' — that is, within the frame of mortal, fallen human existence. The recurring phrase 'under the sun' (29 occurrences) marks the book's self-conscious limitation: it is wisdom from the earthly perspective, without the resurrection. The NT provides what Ecclesiastes lacks: the 'not in vain' of labor done in the Lord (1 Cor 15:58) and the hope that breaks the <em>hevel</em>-cycle.</p>"
-  }
-}
-
-ECCL_CHRIST = {
-  "12": {
-    "13": "<p>A shadow: 'Fear God and keep his commandments, for this is the whole duty of man.' Ecclesiastes' closing verdict after surveying all human wisdom is the simplest possible statement of the human vocation: the fear of God and covenant obedience. This is the wisdom tradition's answer to vanity — not a philosophical system but a personal relationship with the Creator. Jesus's summary of the law (love God, love neighbor) is the new covenant's positive restatement of what Ecclesiastes reaches as its final conclusion. But Christ does more than restate: he embodies the fear of God and covenant obedience perfectly (Heb 5:7-8: in the days of his flesh, Jesus offered up prayers and supplications with loud cries and tears ... and was heard because of his reverence; although he was a son, he learned obedience through what he suffered), and in his resurrection he breaks the <em>hevel</em>-cycle, proving that labor in the Lord — unlike all labor 'under the sun' — is not in vain (1 Cor 15:58).</p>"
-  }
-}
-
-# ============================
-# SONG OF SOLOMON
-# ============================
-
-SONG_ECHO = {
-  "2": {
-    "16": [
-      {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
-    ]
-  },
-  "8": {
-    "6": [
-      {"type": "allusion", "target": "Rom 8:35-39", "note": "Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD — the Song's declaration of love's unconquerable strength; Paul's conviction that nothing can separate us from the love of God in Christ Jesus is the new covenant answer to the Song's vision of love stronger than death: Christ's love has defeated death itself and remains unbreakable"}
-    ]
-  }
-}
-
-SONG_ORIGINAL = {
-  "1": {
-    "1": "<p>The Song of Songs (<em>shir hashirim</em>) is the OT's wisdom-meditation on human love and sexuality. Its literal level — a celebration of erotic love between a man and a woman — is taken seriously by responsible interpreters as a canonical affirmation of marriage and the goodness of sexual love within covenant. The allegorical level — YHWH's love for Israel (the Jewish interpretation) or Christ's love for the church (the dominant Christian interpretation) — has been the dominant hermeneutical approach through most of church history (Origen's commentary and Bernard of Clairvaux's 86 sermons on Song 1-2 are the most extensive examples). The allegorical reading is supported by the OT's consistent use of the husband-wife metaphor for YHWH-Israel (Isa 54:5; Jer 2:2; Ezek 16; Hos 1-3) and the NT's application of the bride-bridegroom image to Christ-church (Eph 5:25-32; Rev 19:7-9; 21:2). The two readings are not mutually exclusive: the literal is the foundation that gives the allegorical its force.</p>"
-  },
-  "8": {
-    "6": "<p><strong>simeini kachotam al libecha kachotam al zeroa'echa ki azza kamavet ahavah qasha kishol qina'ah reshefeyha reshefei esh shalhevetyah</strong>: 'Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the LORD.' The climax of the Song's celebration of love: it is as strong as death and as fierce as <em>sheol</em> — the two most powerful forces in human experience. <em>Shalhevetyah</em> (the very flame of the LORD) — uniquely, this is one of the few places in the Song where the divine name appears, even embedded in a word. The NT's fulfillment: the love of Christ has defeated death (1 Cor 15:54-57) and nothing can separate us from that love (Rom 8:38-39); what the Song claimed about love's unconquerability is literally true in Christ's resurrection.</p>"
-  }
-}
-
-SONG_CONTEXT = {
-  "1": {
-    "1": "<p>The Song of Solomon's place in the canon was debated in rabbinic Judaism (Rabbi Akiva defended it: 'all the ages are not worth the day on which the Song of Songs was given to Israel; for all the writings are holy, but the Song of Songs is the Holy of Holies'); it was included in the Hebrew canon and subsequently in the Christian canon. The bride-bridegroom image is the OT's primary metaphor for the YHWH-Israel covenant relationship: Hosea (chs. 1-3) uses the marriage metaphor for covenant and its violation; Isaiah 54:5 calls YHWH Israel's husband; Jeremiah 2:2 recalls the honeymoon period of the wilderness. The NT develops the bridegroom imagery specifically for Jesus (Mark 2:20: the bridegroom is taken away; John 3:29: the friend of the bridegroom rejoices; Eph 5:25-32: husbands love your wives as Christ loved the church; Rev 19:7: the marriage of the Lamb has come).</p>"
-  }
-}
-
-SONG_CHRIST = {
-  "2": {
-    "16": "<p>A revelation of God: 'My beloved is mine, and I am his.' The Song's vision of mutual possession between lover and beloved is the OT's most intimate description of the covenant relationship. In the NT, this mutual possession is fulfilled in the Christ-church relationship: 'You are not your own, for you were bought with a price' (1 Cor 6:19-20); 'I am my beloved's and my beloved is mine' becomes 'I live, and yet not I, but Christ lives in me' (Gal 2:20). The mutual knowing of bride and groom (I know my sheep and my sheep know me, John 10:14) is the new covenant's personal form of the Song's mutual possession. The eschatological fulfillment is the marriage of the Lamb (Rev 19:7-9; 21:2): the Song's vision of complete love is consummated in the new creation when the Bride has made herself ready.</p>"
-  },
-  "8": {
-    "6": "<p>A direct revelation: 'Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD.' The Song declares love's unconquerable strength in the face of the two most formidable opponents — death and sheol. The NT's claim is that this declaration is literally, not merely poetically, true in Christ: his love has conquered death (1 Cor 15:54-57: Death is swallowed up in victory; thanks be to God who gives us the victory through our Lord Jesus Christ) and the love of God in Christ is literally unconquerable (Rom 8:38-39: neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord). What the Song celebrates as love's aspiration, the resurrection announces as love's accomplished fact.</p>"
+  "11": {
+    "1": "<p>Zophar the Naamathite: his clan name is uncertain. Naamah was a region possibly in Edom or southern Canaan; more likely he is from the Transjordanian region. Of the three friends, Zophar is the most aggressive and least theologically nuanced — he attacks Job's claims most directly without the measured appeals to tradition that characterize Eliphaz and Bildad.</p>",
+    "2": "<p>'Should a man of endless talk be counted righteous?' (<em>ish sefatayim yitsdak</em>) — the 'man of lips' (eloquent speaker) being declared righteous is, for Zophar, an absurdity. In wisdom tradition, the connection between speech and moral character was assumed: true wisdom produced measured, trustworthy words; excessive talk signaled spiritual emptiness. The proverb 'in the multitude of words there lacks not sin' (Prov 10:19) expresses the same principle.</p>",
+    "3": "<p>'Shall your boasting silence everyone?' (<em>baddekha metim yacharishu</em>) — Zophar accuses Job of using verbal pyrotechnics to silence legitimate critique. In ANE legal and wisdom contests, the ability to silence one's opponent through superior rhetoric was admired; but Zophar claims Job is exploiting this skill to escape accountability rather than to establish truth.</p>",
+    "4": "<p>'My doctrine is right and I am clean in God's sight' — Zophar summarizes Job's self-defense in two claims: his teaching (<em>leqach</em>, what he has received and passes on) is pure, and his moral status (<em>bar</em>) before God is clean. Both claims are actually accurate (the prologue confirms Job is blameless), but Zophar reads them as arrogance — asserting a status only God can confer.</p>",
+    "5": "<p>'If only God would speak and open his lips to answer you' — the irony of this wish is that God does eventually speak (chs. 38-41), but the speech vindicates Job rather than silencing him as Zophar intends. Zophar assumes God's speech would expose Job's hidden sin; the actual divine speech exposes the friends' theological overreach.</p>",
+    "6": "<p>'Wisdom has more facets than you know' (<em>tushiyyah lenagdekha kiflayim</em>) — literally 'sound wisdom is double-sided toward you.' The concept of hidden divine wisdom with dimensions humans cannot access is a standard ANE wisdom topos. Zophar's conclusion — 'God has required of you less than your guilt deserves' — is delivered as comfort but is actually an assertion of unknown hidden guilt. The Babylonian Theodicy includes a similar claim: the sufferer must have secret sins the gods are punishing.</p>",
+    "7": "<p>'Can you search out the deep things of God?' (<em>cheqer eloah timtsa</em>) — the rhetorical question expects 'no.' The term <em>cheqer</em> (searching out, investigation) is the same legal term used in 9:2-3 for Job's attempt to investigate his case before God. Zophar is saying: the investigation you want to conduct is inherently impossible. The divine depths are beyond human legal inquiry.</p>",
+    "8": "<p>'Higher than the heavens... deeper than Sheol' — the vertical axis of the cosmos: from the highest heaven to the lowest underworld. In ANE three-story cosmology (heaven / earth / underworld), heaven is the divine realm and Sheol is the realm of the dead; the measurement of God's wisdom from one extreme to the other means it encompasses everything and is bounded by nothing.</p>",
+    "9": "<p>'Longer than the earth and broader than the sea' — the horizontal axis: the full expanse of the known world and its surrounding waters. The four-direction merism (heaven/Sheol/earth/sea) is a complete cosmic totality — there is no region within the created order that falls outside divine wisdom's reach. ANE royal inscriptions used similar four-direction formulas to assert universal dominion; Zophar applies this to divine wisdom.</p>",
+    "10": "<p>'If he sweeps through, imprisons, and convenes a court — who can stop him?' — the divine courtroom scene where God is simultaneously the sweeping judge, the imprisoning officer, and the court itself. In ANE judicial systems, the king served all three functions in capital cases. The question 'who can stop him?' is rhetorical; Zophar is urging submission rather than resistance.</p>",
+    "11": "<p>'He knows worthless people' (<em>yeda mete-shav</em>) — the divine omniscience applied to detecting the morally empty. In ANE theology, the gods were believed to see into human hearts; the Babylonian god Shamash (sun-god) was specifically associated with justice and the ability to penetrate deception. Zophar's point is that Job's elaborate self-defense is transparent to God.</p>",
+    "12": "<p>'A hollow-headed man will become wise when a wild donkey gives birth to a human being' — the proverb of biological impossibility. The <em>pere</em> (wild ass) was the symbol of untamable wilderness ferocity in ANE literature; Gen 16:12 uses it of Ishmael; Job 39:5 places it in God's animal gallery. The proverb implies that Job's self-reform is as impossible as zoological miracle. Zophar's condescension reaches its peak here.</p>",
+    "13": "<p>'If you would prepare your heart and stretch out your hands toward him' — the posture of prayer and submission. Stretching out the hands (<em>paras yadayim</em>) toward God is the standard gesture of prayer in the biblical world and throughout the ANE; Egyptian, Mesopotamian, and Canaanite iconography all depict worshippers with raised, outstretched hands before the deity. 'Prepare your heart' (<em>hakhin levav</em>) means to establish the inner orientation — not just external gesture but internal alignment.</p>",
+    "14": "<p>'If there is sin in your hand, remove it far away, and let wickedness have no place in your home' — the hand is both the instrument of sin and the symbol of possession. 'Remove wickedness from your home' (<em>ohel</em>, tent — the household as a unit) reflects the corporate dimension of sin in ANE thought: the household's purity affects the standing of all its members before the deity.</p>",
+    "15": "<p>'You will lift up your face without shame' — the restoration of honor. Face-lifting (<em>tissa fanekha</em>) is the honor-shame idiom for vindication; a face cast down in shame cannot be lifted until the cause of shame is removed. The sequence Zophar promises — repentance, purity, shame-removal, confidence — is the standard wisdom restoration pattern and is not false in principle, only inapplicable to Job's actual situation.</p>",
+    "16": "<p>'You will forget your suffering; you will remember it only as water that has long since flowed on' — the water-memory simile for past suffering. Water that has flowed on (<em>mayim averu</em>) is permanently gone; no amount of looking downstream retrieves it. The promise is that restored prosperity will relativize past suffering into a distant memory, as time relativizes most pain. The psychology is accurate; the premise (that Job needs to repent to trigger this) is wrong.</p>",
+    "17": "<p>'Your life will shine brighter than noon; even your darkest time will be like dawn' — the light imagery of restoration. Noon (<em>tsohorayim</em>) is the brightest point of the Palestinian day; to exceed it in brightness is a superlative. The conversion of dark to dawn continues the light idiom. ANE restoration texts routinely use light imagery for return from suffering; compare the Babylonian <em>Ludlul</em> text where the sufferer's restoration is described as the return of light.</p>",
+    "18": "<p>'You will have confidence, because there is hope; you will look around you and rest in security' — the psychological restoration package: confidence (<em>vetach</em>, trust), hope (<em>tiqvah</em>), security (<em>vetach lashevet</em>). All three are covenant-blessing terms in Deuteronomy; Zophar is offering Job the standard Deuteronomic restoration formula. The formula is not wrong; it applies to the genuine penitent. Its application to Job is the error.</p>",
+    "19": "<p>'Many will come seeking your goodwill' (<em>vechillu fanekha rabbim</em>) — the social dimension of restoration. To 'seek the face' of a patron is to seek his goodwill and intercession. In ANE patronage systems, a powerful and prosperous man was surrounded by those seeking his favor; loss of prosperity meant loss of social network (as Job laments in ch. 19). Restoration of prosperity would restore the patronage relationships.</p>",
+    "20": "<p>'The eyes of the wicked will fail' — the antithetic conclusion: what Zophar promises Job in repentance, the wicked receive in judgment. 'All means of escape will be closed' (<em>manos avad</em>), literally 'escape will perish.' 'Their only hope is to breathe their last' (<em>mappiyach nafesh</em>) — the only 'hope' the wicked have left is death, the final expiration. Zophar closes with the standard threat that underscores the invitation: the alternative to repentance is the wicked's fate.</p>"
   }
 }
 
 def main():
-    books = [
-        ('job', JOB_ECHO, JOB_ORIGINAL, JOB_CONTEXT, JOB_CHRIST),
-        ('proverbs', PROV_ECHO, PROV_ORIGINAL, PROV_CONTEXT, PROV_CHRIST),
-        ('ecclesiastes', ECCL_ECHO, ECCL_ORIGINAL, ECCL_CONTEXT, ECCL_CHRIST),
-        ('songofsolomon', SONG_ECHO, SONG_ORIGINAL, SONG_CONTEXT, SONG_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-context', 'job')
+    merge_comm(existing, JOB)
+    save_comm('mkt-context', 'job', existing)
+    total = sum(len(v) for v in JOB.values())
+    print(f'job mkt-context: wrote {total} verses across ch 8-11')
 
 if __name__ == '__main__':
     main()

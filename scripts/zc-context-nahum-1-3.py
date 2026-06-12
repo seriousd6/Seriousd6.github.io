@@ -1,25 +1,18 @@
 """
-Lamentations + all 12 Minor Prophets — all four layers.
-These complete the OT portion of the Z Commentary Suite.
-Key NT: Hosea (son called out of Egypt; Lo-ammi/Ammi), Joel 2 (Pentecost),
-        Amos (Day of the LORD, Amos 9:11 Davidic restoration),
-        Jonah (sign of Jonah), Micah 5:2 (Bethlehem), Zech 9:9 (triumphal entry),
-        Zech 12:10 (pierced one), Mal 3:1 (messenger), Mal 4:5 (Elijah).
+MKT Context Commentary — Nahum chapters 1–3 (all 47 verses)
+Run: python3 scripts/zc-context-nahum-1-3.py
+
+Nahum prophesied against Nineveh between 663 BCE (fall of Thebes/No-Amon,
+3:8) and 612 BCE (Nineveh's actual fall to Babylon and Media). The book is
+the OT's most sustained celebration of an enemy's fall — Assyria, which had
+brutalized the ancient Near East for over a century. Theologically it answers
+the question: does YHWH forget his people's suffering at Assyrian hands?
+The answer: no. Nahum's name (nechama = comfort) to Judah is Nineveh's doom.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -31,20 +24,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -53,494 +32,67 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# LAMENTATIONS
-# ============================
-
-LAM_ECHO = {
-  "3": {
-    "22": [
-      {"type": "allusion", "target": "Heb 13:8", "note": "The steadfast love of the LORD never ceases; his mercies never come to an end — the great confession of YHWH's faithfulness in the midst of Jerusalem's total destruction; Jesus Christ is the same yesterday and today and forever (Heb 13:8) is the new covenant form of the same confession: divine steadfast love, permanent and unending"},
-      {"type": "allusion", "target": "Lam 3:26", "note": "It is good that one should wait quietly for the salvation of the LORD — the sufferer's renewed hope after total collapse; the salvation (yeshuah) that Lamentations awaits is the name of Jesus"}
-    ]
-  }
-}
-
-LAM_ORIGINAL = {
-  "3": {
-    "22": "<p><strong>chasde YHWH ki lo tamnu ki lo chalu rachamav</strong>: 'The steadfast love [<em>chesed</em>] of the LORD never ceases; his mercies [<em>rachamim</em>] never come to an end.' This confession (Lam 3:22-24) is the theological center of Lamentations — placed at the exact midpoint of the book (the acrostic structure of ch. 3 is 22×3 = 66 verses, and v. 22 is the centerpiece). Its context makes it remarkable: Lamentations is the most sustained expression of grief and lamentation in Scripture, written in the immediate aftermath of Jerusalem's destruction, yet its center is a confession of divine steadfast love. The structure embodies the theology: suffering and praise, grief and faith, can coexist — and at the center of the darkest book is the brightest confession.</p>"
-  }
-}
-
-LAM_CONTEXT = {
+NAHUM = {
   "1": {
-    "1": "<p>Lamentations is a collection of five poems mourning the destruction of Jerusalem in 586 BCE. Four are acrostics (following the Hebrew alphabet), reflecting the artistic discipline of theological grief: the structure provides form for what might otherwise be formless pain. Traditionally attributed to Jeremiah (who is associated with Lamentations in 2 Chr 35:25 and the LXX introduction), the poems articulate Israel's grief, confession, and ongoing hope in YHWH's steadfast love. The book is read in Jewish tradition on Tisha B'Av, the fast commemorating the temple's destruction. Its influence on the NT's passion narrative is significant: the description of Jerusalem's suffering (1:12: 'Is it nothing to you, all you who pass by?') is echoed in the passion accounts; Christ's passion is interpreted through the Lamentations framework of righteous suffering.</p>"
-  }
-}
-
-LAM_CHRIST = {
-  "1": {
-    "12": "<p>A type: 'Is it nothing to you, all you who pass by? Look and see if there is any sorrow like my sorrow, which was brought upon me, which the LORD inflicted on the day of his fierce anger.' The suffering of Jerusalem — the Daughter of Zion who has suffered at YHWH's hand for her sins — is one of the OT's primary types of Christ's passion. The NT passion accounts use the Lamentations framework: the mockers who wag their heads at the crucified Jesus echo Lamentations (Lam 2:15: 'all who pass by clap their hands at you; they hiss and wag their heads at the daughter of Jerusalem'; Matt 27:39). But the typological inversion is crucial: Jerusalem suffers for her own sins; Christ suffers for ours. The language of innocent suffering that Lamentations applies to the city becomes, in the NT, applicable to the one who is truly innocent.</p>"
-  },
-  "3": {
-    "22": "<p>A direct revelation: 'The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness.' This confession — the OT's most concentrated statement of divine covenantal faithfulness — is the foundation of NT assurance. Paul says 'neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord' (Rom 8:38-39): the love the Preacher of Lamentations confessed in the ruins of Jerusalem is the love that cannot be severed by anything. Christ's resurrection is the supreme demonstration of the <em>chesed</em> that Lamentations confesses: even through the cross — the ultimate expression of divine wrath — the steadfast love did not fail.</p>"
-  }
-}
-
-# ============================
-# HOSEA
-# ============================
-
-HOSEA_ECHO = {
-  "1": {
-    "10": [
-      {"type": "fulfillment", "target": "Rom 9:25-26", "note": "And in the place where it was said to them You are not my people it shall be said to them Children of the living God — Paul cites Hos 1:10 and 2:23 as OT support for Gentile inclusion: what YHWH said about restoring estranged Israel is applied to the calling of the Gentiles into the people of God; the not-my-people becoming my-people is the inclusive dynamic of the new covenant"}
-    ]
+    "1": "<p>The superscription identifies the book as both a <em>massa</em> (burden/oracle) against Nineveh and a <em>sefer chazon</em> (book of the vision) of Nahum the Elkoshite. <em>Massa</em> is the standard term for a weighty prophetic pronouncement aimed at a foreign nation (cf. Isa 13:1; 15:1; Hab 1:1). The location of Elkosh is disputed — candidates include a village in Galilee, a site in Judah, and even a tradition placing it near Nineveh itself. Nahum's name means comfort or consolation (<em>nechamah</em>) — the comfort he brings is not therapeutic but violent: Nineveh's fall. The book's purpose from the first word is the announcement of the great empire's end.</p>",
+    "2": "<p>'A jealous and avenging God is YHWH; YHWH is avenging and wrathful; YHWH takes vengeance on his adversaries and keeps wrath for his enemies.' The opening characterization of YHWH is triple-emphatic: <em>El qanna</em> (jealous God — Exod 20:5; 34:14), <em>YHWH naqom</em> (YHWH avenging — three times in this verse and the next), <em>ba'al chemah</em> (master of wrath). The repetition is not redundancy but liturgical intensity. Exodus 34:6-7, the great YHWH self-disclosure, lists both his mercy and his wrath; Nahum's opening foregrounds the wrath side — the side that Jonah feared would not be applied to Nineveh, but now, a generation later, will be.</p>",
+    "3": "<p>'YHWH is slow to anger and great in power, and YHWH will by no means clear the guilty.' The phrase <em>erech apayim</em> (slow to anger) appears in Exod 34:6 — the same formula Jonah cited in frustration (Jon 4:2). But here Nahum pairs it with <em>lo yenaqqeh yenaqqeh</em> (will by no means acquit/clear). The patience of YHWH does not cancel his justice; it amplifies it: 'His way is in whirlwind and storm, and the clouds are the dust of his feet.' The divine warrior imagery (storm-god theophany) establishes YHWH as a cosmic military power before the specific oracle against Nineveh begins.</p>",
+    "4": "<p>'He rebukes the sea and makes it dry; he dries up all the rivers; Bashan and Carmel wither; the bloom of Lebanon withers.' The drying of sea and rivers echoes the Exodus (Red Sea) and Jordan-crossing — YHWH's power over water as the signature of his saving and judging acts. Bashan (lush plateau east of Galilee), Carmel (the Galilean promontory famous for fertility), and Lebanon (famous for its cedars) are the bywords of the ancient Near East's most abundant landscapes. If YHWH's approach withers even these, Nineveh — built on a dry steppe — has no natural advantage.</p>",
+    "5": "<p>'The mountains quake before him; the hills melt; the earth heaves before him, the world and all who dwell in it.' Theophanic earthquake imagery (cf. Ps 18:7; 97:5; Judg 5:5; Amos 4:13) — YHWH's approach causes seismic response. The universalizing scope ('the world and all who dwell in it') ensures that the oracle against Nineveh is not merely geopolitical but cosmic in its theological frame: YHWH, not Ashur, is the sovereign of the whole earth.</p>",
+    "6": "<p>'Who can stand before his indignation? Who can endure the heat of his anger? His wrath is poured out like fire, and the rocks are broken into pieces by him.' The rhetorical questions — who can stand? who can endure? — anticipate the answer: no one. The language of fire and rock-shattering appears in Jer 23:29 (YHWH's word as fire that shatters rock) and Ps 46 (earth gives way, mountains fall into the sea). Assyria's famous engineering feats — its walls, gates, and bastions — are implicitly measured against the God who shatters rock, and found inadequate.</p>",
+    "7": "<p>'YHWH is good, a stronghold in the day of trouble; he knows those who take refuge in him.' The pivot verse of ch. 1 — from wrath (vv. 2-6) to goodness. YHWH's character is both the terror of his enemies and the safety of his people. The <em>ma'oz</em> (stronghold/refuge) is YHWH himself, not a city wall or military alliance. 'He knows (<em>yodea</em>) those who take refuge in him' — the divine knowledge is personal and protective, contrasting with the anonymity of mass destruction in vv. 5-6.</p>",
+    "8": "<p>'But with an overflowing flood he will make a complete end of the adversaries, and will pursue his enemies into darkness.' The flood (<em>shtetef</em>) imagery is almost certainly playing on Nineveh's actual geography: Nineveh sat between the Tigris and Khoser rivers, and ancient accounts of the city's fall (Diodorus Siculus) mention that flooding breached its walls. Whether Nahum knew this specifically or whether the flood metaphor was later confirmed by history, the image is apt. 'Into darkness' — Sheol, annihilation, the absence of life and light.</p>",
+    "9": "<p>'What do you plot against YHWH? He will make a complete end; trouble will not rise up a second time.' The direct address to Nineveh's plotting minds. The divine counter-plot is total: <em>kalah</em> (complete end) — the same word used of Nineveh's total destruction in 1:8. The assurance that trouble will not rise up a second time is the promise of finality — Assyria will not recover from this blow to threaten again. This is eschatological: the specific historical judgment participates in the logic of YHWH's ultimate and irreversible victory.</p>",
+    "10": "<p>'For they are like entangled thorns, like drunkards as they drink; they are consumed like stubble fully dried.' Three similes of the enemy's vulnerability: entangled thornbushes (quick and complete burning), drunkards (incapacitated, unable to fight), and dry stubble (instant combustion). The thorns-and-stubble metaphor is common in biblical judgment poetry (Isa 5:24; 10:17; 33:11-12; Ps 83:13). The Assyrian military machine, which had devastated the ancient world for over a century, is reduced to brushwood before YHWH's fire.</p>",
+    "11": "<p>'From you came one who plotted evil against YHWH, who counseled wickedness.' The one who plotted evil against YHWH (<em>yoshev ra'ah al-YHWH yoetz beliya'al</em>) from Nineveh likely refers to Sennacherib (705-681 BCE), who invaded Judah and demanded Jerusalem's surrender (2 Kgs 18-19). His field commander Rabshakeh's speech mocked YHWH explicitly: 'Do not let your God in whom you trust deceive you' (2 Kgs 18:29-30; 19:10-13). The counselor of worthlessness (<em>beliya'al</em>) set himself against YHWH and will now bear the consequences.</p>",
+    "12": "<p>'Thus says YHWH, though they are at full strength and many, they will be cut down and pass away. Though I have afflicted you, I will afflict you no more.' The oracle now pivots to direct address to Judah: YHWH's affliction of his people (through Assyrian oppression) was purposeful and temporary. The empire at its full strength and many (<em>shelimim vechen rabbim</em>) is cut down — the harvest metaphor. The promise 'I will afflict you no more' is the comfort that Nahum's name announces.</p>",
+    "13": "<p>'And now I will break his yoke from off you and will burst your bonds apart.' The yoke and bonds of Assyrian tributary domination — literal and political — will be snapped. The yoke metaphor is specific: vassal states paid tribute and were bound by Assyrian hegemony; Judah under Ahaz and Manasseh paid heavy tribute to Assyria. The coming freedom is described in terms of physical release from these political-economic shackles.</p>",
+    "14": "<p>'And YHWH has given commandment about you: no more shall your name be perpetuated; from the house of your gods I will cut off the carved image and the metal image. I will make your grave, for you are vile.' The annihilation of Nineveh extends to its divine cult: the carved and metal images of Ashur, Ishtar, and the Assyrian pantheon will be destroyed. The name will not be perpetuated — name perpetuation was the ancient goal of monumentalism and empire-building. YHWH's decree ends both the dynasty and the cult.</p>",
+    "15": "<p>'Behold, upon the mountains, the feet of him who brings good news, who publishes peace! Keep your feasts, O Judah; fulfill your vows, for never again shall the worthless pass through you; he is utterly cut off.' The herald of good news running over the mountains to announce the enemy's defeat recalls Isa 52:7 (quoted in Rom 10:15) — the same image of the messenger's feet as the vehicle of salvation news. Judah can celebrate its festivals in peace; the tribute caravans of Assyria will no longer pass through. This verse serves as the hinge between the theological introduction (vv. 1-14) and the specific battle-poem (ch. 2).</p>"
   },
   "2": {
-    "23": [
-      {"type": "fulfillment", "target": "1 Pet 2:10", "note": "I will say to Lo-ammi You are my people; and he shall say You are my God — Peter applies Hosea's restoration promise to the church: once you were not a people, but now you are God's people; the covenant formula's restoration (you are my people/I am your God) is fulfilled in Christ's reconciling work"}
-    ]
-  },
-  "6": {
-    "6": [
-      {"type": "fulfillment", "target": "Matt 9:13", "note": "For I desire steadfast love and not sacrifice, the knowledge of God rather than burnt offerings — Jesus quotes Hos 6:6 twice (Matt 9:13; 12:7) in defense of his association with sinners and his disciples' plucking grain on the Sabbath; the priority of covenant love over ritual is Jesus's critique of Pharisaic misapplication of the law"}
-    ]
-  },
-  "11": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 2:15", "note": "Out of Egypt I called my son — Matthew cites Hos 11:1 as fulfilled in the flight to Egypt and the return: as YHWH called Israel (his son) out of Egypt in the Exodus, so Jesus (the true Son) recapitulates Israel's history; Jesus is the new Israel who succeeds where Israel failed"}
-    ]
-  }
-}
-
-HOSEA_ORIGINAL = {
-  "11": {
-    "1": "<p><strong>ki naar Yisrael vaehavuhu umimitzraim qarati livni</strong>: 'When Israel was a child, I loved him, and out of Egypt I called my son.' Matthew's citation of Hos 11:1 in Matt 2:15 is one of the NT's most discussed typological uses of the OT — because Hosea 11:1 in its original context is clearly not a predictive prophecy but a historical statement about the Exodus. Matthew's method is typological recapitulation: Jesus is the new Israel, the true Son of God who goes down to Egypt and is called out again; what happened to the nation in type is fulfilled in the person of the Messiah in antitype. This reading was not arbitrary: it was grounded in the OT's identification of Israel as YHWH's 'son' (Exod 4:22-23) and the expectation that the Messiah would recapitulate and fulfill Israel's story.</p>"
-  }
-}
-
-HOSEA_CONTEXT = {
-  "1": {
-    "1": "<p>Hosea prophesied in the northern kingdom of Israel ca. 755-725 BCE, the final decades before Assyria destroyed Samaria (722 BCE). His marriage to Gomer — a woman who proved unfaithful — is the enacted metaphor of YHWH's relationship with Israel: YHWH's faithful covenant love (hesed) in the face of Israel's persistent idolatry (harlotry). The marriage metaphor for the YHWH-Israel covenant (developed also in Jeremiah 2-3, Ezekiel 16, and Isaiah 54) is Hosea's central theological contribution: covenant violation is not merely law-breaking but adultery, a betrayal of the intimate covenant-love relationship. The NT develops the bridegroom-bride metaphor for Christ-church (Eph 5:25-32; Rev 19:7-9) directly in line with Hosea's framework.</p>"
-  }
-}
-
-HOSEA_CHRIST = {
-  "11": {
-    "1": "<p>A type: 'Out of Egypt I called my son.' The Hosea 11:1 citation in Matthew 2:15 reveals the NT's typological method: the Exodus — YHWH calling Israel his son out of Egypt — is recapitulated in miniature by the holy family's flight to Egypt and return. Jesus is the true Son of God where Israel was the representative son; Jesus is the true Israel who succeeds where Israel repeatedly failed. The NT development of this recapitulation: Israel spent 40 years in the wilderness and failed (Num 14); Jesus spent 40 days in the wilderness and prevailed (Matt 4). Israel crossed the Jordan under Joshua and conquered imperfectly; Jesus was baptized in the Jordan and accomplished the complete conquest of sin and death. The Exodus story is not just a historical event that Jesus parallels — it is the template YHWH designed to interpret what his Son would do.</p>"
-  }
-}
-
-# ============================
-# JOEL
-# ============================
-
-JOEL_ECHO = {
-  "2": {
-    "28": [
-      {"type": "fulfillment", "target": "Acts 2:16-21", "note": "I will pour out my Spirit on all flesh — Peter on the Day of Pentecost cites Joel 2:28-32 as fulfilled in the Spirit's outpouring: this is what was uttered through the prophet Joel; the universal Spirit-gift (all flesh, sons and daughters, young and old, male and female, servant and free) is the new covenant's democratization of prophetic access to God"},
-      {"type": "fulfillment", "target": "Acts 2:21", "note": "And it shall come to pass that everyone who calls on the name of the LORD shall be saved — Joel's salvation promise is cited by Peter (Acts 2:21) and Paul (Rom 10:13) as the OT basis for universal gospel accessibility: the LORD whose name saves is identified with Jesus, Lord and Christ (Acts 2:36)"}
-    ]
-  }
-}
-
-JOEL_ORIGINAL = {
-  "2": {
-    "28": "<p><strong>vehaya acharei chen eshpoch et ruchi al kol basar venivve'u bneichem uvnotechem ziknechem chalomot yachalomun bachureichem cheziyonot yiru</strong>: 'And it shall come to pass afterward, that I will pour out my Spirit on all flesh; your sons and your daughters shall prophesy, your old men shall dream dreams, and your young men shall see visions.' The universal Spirit-outpouring prophesied in Joel 2:28-32 is the most significant single prophecy cited in the NT's account of Pentecost. The key phrase is <em>kol basar</em> (all flesh): unlike the selective, temporary Spirit-anointing of specific judges, prophets, and kings in the OT, the new covenant Spirit will be given to all — removing the mediatorial hierarchy that required prophets and priests to relay YHWH's word to the people. This is Jeremiah 31:34 ('no longer will each person teach his neighbor, for they will all know me') from the pneumatological angle.</p>"
-  }
-}
-
-JOEL_CONTEXT = {
-  "1": {
-    "1": "<p>Joel is undated — no contemporary king is mentioned — but it is typically placed in the post-exilic period (late 5th-early 4th century BCE) based on its references to the temple cult and its post-exilic vocabulary. The book's structure: a devastating locust plague (chs. 1-2:11) serves as the occasion for a call to repentance (2:12-17), followed by YHWH's promise of restoration (2:18-3:21). The locust plague is both a literal agricultural disaster and the harbinger of the Day of the LORD — the pattern of divine judgment working through historical events that will culminate in the final eschatological judgment. Joel is the OT prophet most cited in the NT on the Day of Pentecost, making his prophecy of the Spirit's universal outpouring the bridge between the Old and New covenant eras.</p>"
-  }
-}
-
-JOEL_CHRIST = {
-  "2": {
-    "32": "<p>A fulfillment: 'And it shall come to pass that everyone who calls on the name of the LORD shall be saved.' Peter (Acts 2:21) and Paul (Rom 10:13) both cite Joel 2:32 as fulfilled in the gospel proclamation: the 'name of the LORD' whose invocation brings salvation is now identified as Jesus, whom God has made both Lord and Christ (Acts 2:36). The typological identification is clear: YHWH's name in the OT = Jesus's name in the NT. This is not a revision of the OT but the NT's claim that YHWH's name and Jesus's name are the same divine identity now disclosed fully in the incarnation. The universal accessibility of salvation ('everyone who calls') removes the national and ethnic boundaries that had characterized the OT covenant community.</p>"
-  }
-}
-
-# ============================
-# AMOS
-# ============================
-
-AMOS_ECHO = {
-  "5": {
-    "18": [
-      {"type": "allusion", "target": "1 Thess 5:2", "note": "Woe to you who desire the day of the LORD — Amos warns that the Day of the LORD will be darkness not light for the presumptuous; Paul says the day of the Lord comes like a thief in the night; both challenge the assumption that the Day of the LORD is automatically good news for those who consider themselves God's people"}
-    ]
-  },
-  "9": {
-    "11": [
-      {"type": "fulfillment", "target": "Acts 15:16-17", "note": "I will raise up the booth of David that is fallen — James cites Amos 9:11-12 at the Jerusalem Council as the OT justification for Gentile inclusion without circumcision; the restoration of the Davidic dynasty (the fallen booth) is being fulfilled in the Messiah Jesus, and the nations seeking the LORD follows from this restoration"}
-    ]
-  }
-}
-
-AMOS_ORIGINAL = {
-  "9": {
-    "11": "<p><strong>bayom hahu aqim et sukat David hanofelet vegadarta et pirzeihen vaharisotyav aqim uvenituha keyeme olam</strong>: 'In that day I will raise up the booth of David that is fallen and repair its breaches, and raise up its ruins and rebuild it as in the days of old.' The 'fallen booth of David' is an image of the Davidic dynasty in ruins — either the northern kingdom's secession (931 BCE) or the Babylonian destruction of the Davidic throne (586 BCE). James's citation at the Jerusalem Council (Acts 15:16-17) reads the restoration as the messianic reign of Jesus: the booth is raised; now the Gentiles ('all the nations who are called by my name', v. 12 in the LXX, which differs from the MT) stream in. The LXX variant makes the Gentile-inclusion application cleaner; James uses the LXX version. This is not a mistaken quotation but a deliberate use of the LXX rendering that the Spirit has superintended to carry the intended typological meaning.</p>"
-  }
-}
-
-AMOS_CONTEXT = {
-  "1": {
-    "1": "<p>Amos prophesied ca. 760-750 BCE in the northern kingdom under Jeroboam II, a period of remarkable prosperity and military success — and of corresponding social injustice and covenant neglect. Amos is the first of the classical writing prophets and the OT's most sustained advocate for social justice: the Day of the LORD will expose the oppression of the poor (5:11-12), the corruption of the courts (5:12), the religious hypocrisy of the sanctuaries (5:21-24: I hate, I despise your feasts ... let justice roll down like waters). His social critique is grounded in covenant theology: YHWH's covenant with Israel demands covenant justice in the community; religious observance without ethical faithfulness is an abomination.</p>"
-  }
-}
-
-AMOS_CHRIST = {
-  "9": {
-    "11": "<p>A fulfillment: 'In that day I will raise up the booth of David that is fallen.' James's application of Amos 9:11-12 at the Jerusalem Council (Acts 15:16-17) identifies the fulfillment: the resurrection of Christ is the raising of the fallen Davidic dynasty in its ultimate form. The 'booth of David' — the Davidic covenant and its dynastic promise — lay in ruins from 586 BCE onward; no Davidic king sat on an independent throne. The risen Jesus, enthroned at the Father's right hand (Acts 2:34-36), is the restored Davidic ruler whose reign brings in the nations. The Gentile mission is therefore not a deviation from the OT prophetic program but its very fulfillment: 'the remnant of mankind and all the nations who are called by my name' (Acts 15:17, citing Amos 9:12 LXX) stream into the reestablished Davidic kingdom.</p>"
-  }
-}
-
-# ============================
-# OBADIAH
-# ============================
-
-OBAD_ECHO = {
-  "1": {
-    "4": [
-      {"type": "allusion", "target": "Luke 1:52", "note": "Though you soar aloft like the eagle, though your nest is set among the stars, from there I will bring you down — YHWH's judgment of Edom's pride; Mary's Magnificat: he has brought down the mighty from their thrones; the pride-and-fall pattern of Obadiah is the structure of divine reversal that the Magnificat celebrates"}
-    ],
-    "15": [
-      {"type": "allusion", "target": "Rev 16:19", "note": "The day of the LORD is near upon all the nations. As you have done it shall be done to you — the lex talionis principle applied to the Day of the LORD; the great city was split and the nations drank from the cup of YHWH's wrath; Obadiah's principle of nations receiving what they did to Israel reaches its ultimate form in Revelation's final judgment"}
-    ]
-  }
-}
-
-OBAD_ORIGINAL = {
-  "1": {
-    "21": "<p><strong>vealu moshim behar tziyon lishpot et har Esav vehaitah lADONAI hamelukah</strong>: 'Saviors shall go up to Mount Zion to rule Mount Esau, and the kingdom shall be the LORD's.' Obadiah's final verse is the OT's shortest prophetic book's most expansive declaration: the kingdom belongs to YHWH. Edom (the persistent enemy of Israel, descended from Esau) will be judged; the deliverers (<em>moshim</em>, saviors/deliverers) will ascend Zion; the kingdom is YHWH's alone. The NT takes the <em>moshim</em> (saviors/deliverers) as the saints who reign with Christ (Rev 20:4-6) and the kingdom as Christ's eternal reign (Rev 11:15).</p>"
-  }
-}
-
-OBAD_CONTEXT = {
-  "1": {
-    "1": "<p>Obadiah is the shortest book in the OT (21 verses) and is addressed entirely to Edom — the nation descended from Esau, the brother of Jacob/Israel. The oracle condemns Edom for standing aloof (v. 11) or actively participating in Jerusalem's destruction (the context is almost certainly the Babylonian destruction of 586 BCE, when Edomites reportedly aided the attackers and blocked Jewish refugees, Obad 12-14). The Edom-Israel enmity runs throughout the OT from Genesis (Esau-Jacob) through Numbers (Edom refuses passage to Moses), 1 Samuel (David's wars), and the post-exilic period. Edom becomes in the Prophets a symbol for the hostile nations in general (Isa 34; Ezek 35; Mal 1:2-5), and its final judgment is the type of all anti-God hostility that will be judged on the eschatological Day of the LORD.</p>"
-  }
-}
-
-OBAD_CHRIST = {
-  "1": {
-    "21": "<p>A shadow: 'Saviors shall go up to Mount Zion to rule Mount Esau, and the kingdom shall be the LORD's.' Obadiah's closing declaration — the kingdom belongs to YHWH — is the OT's most compact eschatological statement. The NT's fulfillment: 'The kingdom of the world has become the kingdom of our Lord and of his Christ, and he shall reign forever and ever' (Rev 11:15). The deliverers who ascend Zion are the saints who reign with Christ in the new creation (Rev 20:6: they will be priests of God and of Christ and will reign with him). Edom — the hostile brother, the nation of Esau who despised his birthright — represents all who reject the covenant birthright; their ultimate defeat is not a tribal victory for Israel but the vindication of YHWH's justice over all who oppose his reign.</p>"
-  }
-}
-
-# ============================
-# JONAH
-# ============================
-
-JONAH_ECHO = {
-  "1": {
-    "17": [
-      {"type": "fulfillment", "target": "Matt 12:40", "note": "And Jonah was in the belly of the fish three days and three nights — Jesus cites this as the sign of Jonah: the Son of Man will be three days and three nights in the heart of the earth; Jonah's entombment in the fish and his emergence is the type of Jesus's death and resurrection"}
-    ]
+    "1": "<p>'The scatterer has come up against you. Man the ramparts; watch the road; dress for battle; collect all your strength.' The opening of ch. 2 is a mock military instruction to Nineveh — ironically directing the city to prepare its defenses against the coming assault. The scatterer (<em>mepit</em>, one who scatters/disperses) is the Babylonian-Median coalition that would besiege and destroy Nineveh in 612 BCE. The rapid-fire military imperatives (man, watch, dress, collect) create a breathless urgency that highlights the futility of Nineveh's preparation.</p>",
+    "2": "<p>'For YHWH is restoring the majesty of Jacob as the majesty of Israel, for plunderers have plundered them and ruined their vines.' The theological grounding of the military narrative: YHWH restores the <em>ge'on</em> (pride/majesty) of Jacob, which Assyrian plundering had stripped away. The vine imagery (ruined vines) connects to the agricultural devastation of Assyrian campaigns through Israel and Judah. The restoration of Jacob's dignity is the reason Nineveh falls — not Babylonian imperial ambition but divine justice.</p>",
+    "3": "<p>'The shield of his mighty men is red; his soldiers are clothed in scarlet. The chariots come with flashing metal on the day he musters them; the cypress spears are brandished.' The battlefield scene shifts to the attacking army's appearance. Red shields (perhaps leather dyed red or blood-soaked) and scarlet uniforms — possibly referring to Median warriors who wore distinctive garments. The flashing metal of the chariots catches the light. The cypress spears (<em>beroshim</em>) are the long-shafted weapons made from fir/cypress wood. The battle description is visual and kinetic.</p>",
+    "4": "<p>'The chariots race madly through the streets; they rush to and fro through the squares; their appearance is like torches; they dart like lightning.' The chaotic chariot charge through Nineveh's streets during the assault. Like torches (<em>kelappidim</em>) and like lightning (<em>kaberaqim</em>) — the light imagery intensifies the visual chaos. Ancient Nineveh had wide processional streets; the image of enemy chariots racing through what had been royal parade routes is deliberately humiliating.</p>",
+    "5": "<p>'He remembers his officers; they stumble as they go; they hurry to the wall; the siege tower is set up.' Nineveh's defenders scramble — the officers trip over themselves in haste. The siege tower (<em>sukkat</em>) erected against the wall indicates the attackers are pressing the siege. This verse is ambiguous about whose side is described (defenders or attackers); the stumbling and scrambling suggest the panic of Nineveh's defenders trying to mount a counter-response.</p>",
+    "6": "<p>'The river gates are opened; the palace melts away.' This verse is remarkable for its potential historical specificity. Ancient accounts (Diodorus Siculus, drawing on earlier sources) report that during Nineveh's siege, the Khoser River flooded and breached part of the city's defenses, allowing the attackers entry. Whether or not Nahum had specific foreknowledge, the image of river gates opening connects the fall to YHWH's flood judgment announced in 1:8. The palace melting (<em>vomuag</em>) suggests either literal destruction or royal dissolution/collapse.</p>",
+    "7": "<p>'It is decreed that the city be exiled, carried away; its slave women lead her like the sound of doves, beating their breasts.' The exile of Nineveh's population — the mirror of the exile Assyria had imposed on Israel (2 Kgs 17:6; 18:11). The feminine personification of the city (common in prophetic literature) with her slave women mourning is the exact reversal of Assyrian deportation reliefs: the women who had watched foreign captives march past now march themselves. The sound of doves — the cooing mourning cry of doves was a standard comparison for lamentation (Isa 38:14; 59:11; Ezek 7:16).</p>",
+    "8": "<p>'Nineveh is like a pool whose waters run away. Halt! Halt! they cry, but no one turns back.' The pool of water draining is an image of the city's population fleeing — unstoppable, like water pouring out. The guards' cry to halt the fleeing citizens is futile. This image may also carry ironic force: Nineveh, which had received Jonah's preaching and repented, now faces the judgment that the earlier repentance had only delayed. The water imagery connects to the river gates of v. 6 and the flood of 1:8.</p>",
+    "9": "<p>'Plunder the silver, plunder the gold! There is no end of the treasure or of the wealth of all precious things.' The battle cry of the victorious attackers plundering Nineveh's legendary treasury. Nineveh was one of the ancient world's wealthiest cities — capital of an empire that had looted the ancient Near East for over a century. The accumulated tribute from Israel, Judah, Egypt, Babylon, and dozens of other kingdoms filled its storehouses. The rhetorical no end of treasure acknowledges Nineveh's wealth while announcing its transfer to the conquerors.</p>",
+    "10": "<p>'Desolation and ruin! Hearts melt and knees tremble; anguish is in all loins; all faces grow pale.' The aftermath of the assault: four terms of devastation — <em>buqah umebuqah umevullaqah</em> (a play on similar-sounding destruction roots) — emptied, plundered, desolated. The physical symptoms of total panic (melting hearts, trembling knees, anguish in loins, pale faces) are the reverse of the battle-ready posture commanded in v. 1. These same symptoms appear in the description of Babylon's fall in Isa 13:7-8.</p>",
+    "11": "<p>'Where is the lions' den, the feeding place of the young lions, where the lion and lioness went, where his cubs were, with none to disturb them?' The lion was Assyria's royal symbol — Assyrian palace art depicted the king as hunter and lion-companion; lion hunts were royal prerogatives. The multiple lion terms (<em>aryeh, labi, kefir, gur</em>) catalog the whole pride — king, queen, cubs — asking where this supposedly invincible family now is. The rhetorical 'where?' (<em>ayeh</em>) is the question of mourning and aftermath.</p>",
+    "12": "<p>'The lion tore enough for his cubs and strangled prey for his lionesses; he filled his caves with prey and his dens with torn flesh.' The recent past of Assyrian predatory empire: the lion (Assyria/the king) hunted for his whole family, filling the den with plunder. The den filled with prey is an image of Nineveh stocked with the plunder of nations. The past tense describes what was; the contrast with the empty-den question of v. 11 makes the point: the den is now empty, the pride gone.</p>",
+    "13": "<p>'Behold, I am against you, declares YHWH of hosts, and I will burn your chariots in smoke, and the sword shall devour your young lions. I will cut off your prey from the earth, and the voice of your messengers shall no longer be heard.' YHWH speaks directly: <em>hinni elayich</em> (I am against you) — the divine declaration of war against a city, appearing also in Ezek 26:3 (against Tyre) and Jer 50:31 (against Babylon). The military assets are burned; the next generation of warriors cut off; the empire's ambassadors silenced. The cessation of Nineveh's diplomatic voice — its tribute demands, its threatening messages — is the specific relief for Judah that 1:15 announced.</p>"
   },
   "3": {
-    "5": [
-      {"type": "fulfillment", "target": "Matt 12:41", "note": "The men of Nineveh repented at the preaching of Jonah, and behold something greater than Jonah is here — Jesus contrasts Nineveh's repentance at Jonah's preaching with the Jewish generation's refusal to repent at Jesus's preaching; Nineveh is a Gentile city that responded; this generation has responded to a greater preacher with less"}
-    ]
-  }
-}
-
-JONAH_ORIGINAL = {
-  "1": {
-    "17": "<p><strong>vayeman YHWH dag gadol livlo et Yonah vayehi Yonah bime'ei haddag shlosha yamim ushlosha leilot</strong>: 'And the LORD appointed a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.' The historicity of Jonah has been debated throughout church history — a man surviving inside a large sea creature is extraordinary. Jesus's citation of Jonah in Matt 12:40 takes the narrative as historical: 'just as Jonah was three days and three nights in the belly of the great fish, so will the Son of Man be three days and three nights in the heart of the earth.' If Jonah is a parable, Jesus is drawing a parable-to-reality comparison, which is unusual. The orthodox reading: both Jonah's experience and Jesus's resurrection are historical events in which the later was the greater antitype of the earlier.</p>"
-  }
-}
-
-JONAH_CONTEXT = {
-  "1": {
-    "1": "<p>Jonah is unique among the writing prophets: instead of a prophetic oracle, it is a narrative about a prophet. Jonah ben Amittai is mentioned in 2 Kings 14:25 as a historical figure who prophesied during the reign of Jeroboam II (ca. 793-753 BCE). The book narrates his mission to Nineveh, the capital of the Assyrian Empire — Israel's most formidable enemy. His initial flight from the mission (not from fear but, the book reveals in ch. 4, from a reluctance to see Gentile enemies repent and be spared) is the book's theological problem: the prophet opposes the very grace that characterizes YHWH. The book's final question (4:11: should I not be concerned about Nineveh?) is deliberately unanswered — forcing the reader to answer it. Jesus's use of the 'sign of Jonah' (Matt 12:39-41) makes Jonah's historical experience the type of his own death and resurrection.</p>"
-  }
-}
-
-JONAH_CHRIST = {
-  "1": {
-    "17": "<p>A type: 'Jonah was in the belly of the fish three days and three nights.' Jesus himself identifies this as the OT's appointed sign for his resurrection: 'For just as Jonah was three days and three nights in the belly of the great fish, so will the Son of Man be three days and three nights in the heart of the earth' (Matt 12:40). The typological elements: Jonah goes into the deep as a substitute (the sailors are saved from the storm by throwing Jonah overboard; 1:12-15) → Jonah is entombed in the fish → Jonah emerges to complete his mission to the Gentiles. The antitype: Christ goes to the cross as the world's substitute → Christ is entombed → Christ rises and commissions the mission to all Gentiles (Matt 28:19). Jonah's Gentile mission to Nineveh is the shadow; the apostolic mission to all nations is the substance.</p>"
-  }
-}
-
-# ============================
-# MICAH
-# ============================
-
-MICAH_ECHO = {
-  "5": {
-    "2": [
-      {"type": "fulfillment", "target": "Matt 2:6", "note": "But you O Bethlehem Ephrathah who are too little to be among the clans of Judah from you shall come forth for me one who is to be ruler in Israel — the Magi and Herod's scribes cite Micah 5:2 as the birthplace of the Messiah; Matthew cites it as fulfilled in Jesus's birth at Bethlehem; the ruler whose origin is from of old, from ancient days, is the pre-existent Christ born in the city of David"}
-    ]
-  },
-  "6": {
-    "8": [
-      {"type": "allusion", "target": "Matt 23:23", "note": "He has told you, O man, what is good; and what does the LORD require of you but to do justice and to love kindness and to walk humbly with your God — the ethical summary of Micah; Jesus's woe against the Pharisees who tithe mint but neglect the weightier matters of the law: justice and mercy and faithfulness (Matt 23:23); Micah 6:8 is Jesus's standard for what constitutes the law's weightier matters"}
-    ]
-  }
-}
-
-MICAH_ORIGINAL = {
-  "5": {
-    "2": "<p><strong>veatta Beit-Lechem Efrata tzair lihyot be'alfei Yehudah mimcha li yetze lihyot moshel beYisrael umotza'otav mikedem miyemei olam</strong>: 'But you, O Bethlehem Ephrathah, who are too little to be among the clans of Judah, from you shall come forth for me one who is to be ruler in Israel, whose coming forth is from of old, from ancient days.' <em>Motza'otav mikedem miyemei olam</em> (whose coming forth is from of old, from ancient days/from ancient times/from everlasting): the preposition and nouns can point to either the antiquity of the Davidic dynasty (David's line goes back to ancient Bethlehem) or to the eternal pre-existence of the coming ruler. The NT reading (John 8:58; John 1:1) takes it in the latter, stronger sense: the one born in Bethlehem has his 'goings forth' from eternity.</p>"
-  }
-}
-
-MICAH_CONTEXT = {
-  "1": {
-    "1": "<p>Micah prophesied ca. 735-700 BCE, contemporary with Isaiah in the southern kingdom, during the Assyrian crisis that destroyed Samaria (722 BCE) and threatened Jerusalem (701 BCE). He was a rural prophet from Moresheth-Gath (a village in the Judean foothills), which gives his oracles a social-justice perspective: he speaks for the peasant farmers whose land is being seized by the powerful (2:1-2; 3:1-3). His prophecy of Jerusalem's destruction (3:12: Zion shall be plowed as a field; Jerusalem shall become a heap of ruins) was so striking that it was cited a century later as a precedent for not killing Jeremiah when he prophesied similarly (Jer 26:18-19). Micah 6:8 is the OT's most compact ethical summary and one of the most frequently cited prophetic verses.</p>"
-  }
-}
-
-MICAH_CHRIST = {
-  "5": {
-    "2": "<p>A direct revelation: 'But you, O Bethlehem Ephrathah, who are too little to be among the clans of Judah, from you shall come forth for me one who is to be ruler in Israel, whose coming forth is from of old, from ancient days.' The theological precision of this prophecy is remarkable: (1) the specific town — Bethlehem, not Jerusalem; (2) the paradox — too small to be a clan-city, yet the birthplace of the supreme ruler; (3) the pre-existence — his 'coming forth' predates his birth in Bethlehem, reaching back to 'ancient days' (or in the stronger reading, eternity). Matthew 2:6 cites it as fulfilled with a slight adaptation that applies Micah's 'ruler' language to the one who will 'shepherd my people Israel' — combining Micah's political and pastoral imagery into the Christ who is both king and shepherd (John 10:11; Rev 7:17).</p>"
-  }
-}
-
-# ============================
-# NAHUM
-# ============================
-
-NAHUM_ECHO = {
-  "1": {
-    "15": [
-      {"type": "allusion", "target": "Rom 10:15", "note": "Behold upon the mountains the feet of him who brings good news, who publishes peace — Nahum announces the fall of Nineveh as good news (the oppressor is destroyed); Isaiah 52:7 uses the same image (how beautiful upon the mountains are the feet of him who brings good news); Paul cites Isaiah in Romans 10:15 for the gospel proclamation: the good news of peace is the gospel of Christ, and the messenger's feet are the apostles'"}
-    ]
-  }
-}
-
-NAHUM_ORIGINAL = {
-  "1": {
-    "3": "<p><strong>YHWH erech apayim ugedol koach venakeh lo yenakeh YHWH besufa uvishara darko veanan afar raglav</strong>: 'The LORD is slow to anger and great in power, and the LORD will by no means clear the guilty. His way is in whirlwind and storm, and the clouds are the dust of his feet.' Nahum opens with an acrostic poem (1:2-8, partial alphabet) on the character of YHWH — combining the divine attributes of mercy and judgment that Exod 34:6-7 announced: merciful and slow to anger (Exod 34:6; Nahum 1:3a) but will not leave the guilty unpunished (Exod 34:7b; Nahum 1:3a). Jonah announced repentance and YHWH relented; Nahum announces the final judgment because Nineveh did not permanently repent. The same divine character — patient mercy but ultimate justice — is the framework for the NT: God overlooked past sins (Acts 17:30; Rom 3:25) but now commands repentance in light of the coming judgment.</p>"
-  }
-}
-
-NAHUM_CONTEXT = {
-  "1": {
-    "1": "<p>Nahum prophesied ca. 663-612 BCE — after the fall of Thebes (663 BCE, mentioned in 3:8) and before the fall of Nineveh (612 BCE, which Nahum predicts). He is the companion prophecy to Jonah: Jonah brought Nineveh to repentance (ca. 760 BCE) and YHWH relented; Nahum announces that Nineveh's subsequent return to violence and oppression means its final destruction is now inevitable. The contrast is instructive: divine patience has a limit; the same attributes of mercy and justice that led YHWH to spare Nineveh in Jonah's day lead him to destroy it in Nahum's day. Nineveh was destroyed in 612 BCE by a coalition of Babylonians and Medes, exactly as Nahum predicted.</p>"
-  }
-}
-
-NAHUM_CHRIST = {
-  "1": {
-    "7": "<p>A revelation of God: 'The LORD is good, a stronghold in the day of trouble; he knows those who take refuge in him.' Set in the context of Nineveh's coming destruction, this verse identifies the flip-side of divine wrath: the same YHWH who destroys his enemies is the stronghold for those who trust him. The NT's form of this double-truth: 'It is a fearful thing to fall into the hands of the living God' (Heb 10:31) for those who reject Christ; but 'There is therefore now no condemnation for those who are in Christ Jesus' (Rom 8:1) for those who are in him. The refuge (<em>maoz</em>, stronghold/fortress) that Nahum declares is the God who is also Christ: 'the name of the LORD is a strong tower; the righteous man runs into it and is safe' (Prov 18:10).</p>"
-  }
-}
-
-# ============================
-# HABAKKUK
-# ============================
-
-HAB_ECHO = {
-  "2": {
-    "4": [
-      {"type": "fulfillment", "target": "Rom 1:17", "note": "The righteous shall live by his faith — Paul quotes Hab 2:4 in Romans 1:17, Galatians 3:11, and Hebrews 10:38 as the OT summary of justification by faith: the just/righteous person lives by faithfulness/faith; Paul applies it to the righteousness of God revealed in the gospel"},
-      {"type": "fulfillment", "target": "Gal 3:11", "note": "It is evident that no one is justified before God by the law, for the righteous shall live by faith — Paul cites Hab 2:4 as proof that the OT already knew that justification was by faith, not law-keeping; the law (Lev 18:5: he who does them shall live by them) and the prophet (Hab 2:4: the righteous shall live by faith) are placed in contrast"}
-    ]
-  }
-}
-
-HAB_ORIGINAL = {
-  "2": {
-    "4": "<p><strong>hineh afela lo yoshra nafsho bo vetzaddik beemunato yichyeh</strong>: 'Behold, his soul is puffed up; it is not upright within him, but the righteous shall live by his faith [or faithfulness, <em>emunah</em>].' This verse is the most quoted OT text in the NT letters. The Hebrew <em>emunah</em> covers a semantic range from 'faithfulness' (reliability, steadfastness) to 'faith' (trust, belief). Paul's use in Romans and Galatians emphasizes the trust/belief aspect; the Habakkuk context emphasizes endurance and faithfulness during the Babylonian crisis. Both senses are present: the righteous person is characterized by trust in YHWH's promise that sustains them through the crisis (both the original Babylonian threat and the ongoing existential challenge of life under divine wrath deferred). The Reformers' rediscovery of this verse (Luther: the just shall live by faith, not by works of the law) was the theological engine of the Protestant Reformation.</p>"
-  }
-}
-
-HAB_CONTEXT = {
-  "1": {
-    "1": "<p>Habakkuk's dialogue with YHWH (ca. 605-598 BCE) is the OT's most direct expression of prophetic complaint about divine justice: Why do you tolerate wrong? (1:3); Why are you silent while the wicked swallow up the more righteous? (1:13). YHWH's answer — he is raising up the Babylonians as the instrument of judgment — only deepens the question: how can a holy God use a more wicked nation to judge a less wicked one? The book's resolution is the three-chapter arc of complaint → divine response → prophetic praise (ch. 3): the righteous will live by faith in YHWH's promises even when the present situation appears to contradict those promises. The book models the theodicy of faith: not a logical resolution of the problem of evil, but a trust in the character of YHWH that sustains through crisis.</p>"
-  }
-}
-
-HAB_CHRIST = {
-  "2": {
-    "4": "<p>A direct revelation: 'The righteous shall live by his faithfulness/faith.' This verse, quoted three times in the NT, is the OT's most concentrated statement of the principle of justification by faith. Paul reads it as the OT's own principle against works-righteousness: 'it is evident that no one is justified before God by the law, for the righteous shall live by faith' (Gal 3:11). The christological dimension: the 'righteous one' who lives by faith in its ultimate form is Jesus himself, who trusted the Father through the cross and was vindicated in the resurrection (Heb 10:38-39 applies the verse to perseverance under persecution, contextualizing it with the author's own reflection on Christ's faithfulness). The Reformation's recovery of this verse as the summary of the gospel ('the just shall live by faith') was the recovery of the Christological center of the OT's own prophetic witness.</p>"
-  }
-}
-
-# ============================
-# ZEPHANIAH
-# ============================
-
-ZEPH_ECHO = {
-  "3": {
-    "14": [
-      {"type": "allusion", "target": "Luke 1:28", "note": "Sing aloud O daughter of Zion; shout O Israel! Rejoice and exult with all your heart O daughter of Jerusalem — the call to rejoice because YHWH is among you (3:17); the angel's greeting to Mary (Rejoice, highly favored one, the Lord is with you) echoes the Zephaniah joy-announcement: the presence of YHWH is the reason for rejoicing, and in the incarnation, YHWH is present in the most intimate way imaginable"},
-      {"type": "allusion", "target": "John 1:14", "note": "The LORD your God is in your midst — Zeph 3:17 (the LORD is in your midst) is the OT's joyful proclamation of divine presence; John 1:14 (the Word became flesh and dwelt in our midst) is the ultimate fulfillment: YHWH's presence in the tabernacle-tent and in the midst of his people now means the incarnate Son tabernacling among humanity"}
-    ]
-  }
-}
-
-ZEPH_ORIGINAL = {
-  "3": {
-    "17": "<p><strong>YHWH eloheicha bekirbecha gibbor yoshi'a yasis alayich besimcha yacharish be'ahavato yagel alayich berinah</strong>: 'The LORD your God is in your midst, a mighty one who will save; he will rejoice over you with gladness; he will quiet you by his love; he will exult over you with loud singing.' This verse is the OT's most intimate statement of divine delight in his people: YHWH not merely tolerating but actively rejoicing over Israel, singing over her. The father-over-child image (quieting, singing) is the most tender description of YHWH's covenant love. The NT fulfillment: 'The Father himself loves you' (John 16:27); 'God is love' (1 John 4:8); 'rejoice in the Lord always' (Phil 4:4) — the joy is mutual, as Zephaniah's vision shows: YHWH singing over his people is the grounding for the people's own joy.</p>"
-  }
-}
-
-ZEPH_CONTEXT = {
-  "1": {
-    "1": "<p>Zephaniah prophesied ca. 640-609 BCE during the reign of Josiah (640-609 BCE), before or during Josiah's reform (621 BCE). He was a member of the royal family (his genealogy goes back four generations to Hezekiah, 1:1) — one of the few prophets with clear royal connections. His primary theme is the Day of the LORD (using the phrase more than any other prophet): a comprehensive divine judgment on Judah (ch. 1), the nations (2), and Jerusalem (3:1-8), followed by the promise of a purified remnant and YHWH's presence among them (3:9-20). Zephaniah 3:14-20's closing vision of joy and restoration is one of the OT's most beautiful eschatological passages and the probable background for the angel's greeting to Mary at the Annunciation.</p>"
-  }
-}
-
-ZEPH_CHRIST = {
-  "3": {
-    "14": "<p>A fulfillment: 'Sing aloud, O daughter of Zion; shout, O Israel! Rejoice and exult with all your heart, O daughter of Jerusalem! The LORD has taken away the judgments against you ... The King of Israel, the LORD, is in your midst; you shall never again fear evil.' This call to rejoice because YHWH is in the midst of his people reaches its fulfillment in the incarnation. Luke's Annunciation (1:28-33) and the angels' song at the Nativity (2:10-14: I bring you good news of great joy) are the NT's recasting of Zephaniah's joy-cry: rejoice, for the Lord is with you. The movement from Zephaniah to Luke is the movement from prophetic announcement to historical fulfillment: the divine King who was to come 'in your midst' comes as the infant in Bethlehem, and then the risen Lord who sends the Spirit so that YHWH is 'in the midst' of the church (Matt 18:20; John 14:23).</p>"
-  }
-}
-
-# ============================
-# HAGGAI
-# ============================
-
-HAG_ECHO = {
-  "2": {
-    "6": [
-      {"type": "fulfillment", "target": "Heb 12:26-27", "note": "Yet once more, in a little while, I will shake the heavens and the earth and the sea and the dry land — Hebrews cites Haggai 2:6 as pointing to the definitive eschatological shaking: the removal of created things that are shakeable, so that only the unshakeable kingdom remains; the new creation will be established through a shaking that removes the old"}
-    ],
-    "9": [
-      {"type": "allusion", "target": "John 2:21", "note": "The latter glory of this house shall be greater than the former — Haggai promises that the second temple will surpass Solomon's in glory; this is fulfilled not in the physical Herodian temple but in Jesus entering the temple (John 2:19-21: destroy this temple, and in three days I will raise it up; the temple was his body); the presence of Christ in the second temple makes its latter glory exceed its former"}
-    ]
-  }
-}
-
-HAG_ORIGINAL = {
-  "2": {
-    "9": "<p><strong>gadol yihyeh kevod habayit haze ha-acharon min harishon amar YHWH tzvaot uvamaqom haze etten shalom neum YHWH tzvaot</strong>: 'The latter glory of this house shall be greater than the former, says the LORD of hosts. And in this place I will give peace, declares the LORD of hosts.' Haggai's promise was puzzling to the post-exilic community: the second temple was visibly inferior to Solomon's (Ezra 3:12: the elders who had seen the first temple wept when the second was founded). The fulfillment required an unexpected reading: the greater glory came not through architectural improvement (Herod's renovation made it physically grander) but through the presence of the messianic King who entered it (Matt 21:12-17; John 2:13-22). Jesus is the glory that made the second temple greater — the Shekinah presence in person, which the first temple never contained.</p>"
-  }
-}
-
-HAG_CONTEXT = {
-  "1": {
-    "1": "<p>Haggai prophesied in 520 BCE, the second year of Darius I of Persia — 16 years after the first returnees arrived in Jerusalem. The temple reconstruction had stalled: the returning exiles had built their own houses while the temple remained unfinished (1:4). Haggai's four oracles (1:1-11; 2:1-9; 2:10-19; 2:20-23) call the community to prioritize the temple and promise divine blessing as a result. His contemporary was Zechariah, whose visions (chs. 1-8) addressed the same restoration community. Together they provide the theological framework for the post-exilic community's task: rebuilding the worship center through which YHWH's presence among his people would be maintained until the coming of the one greater than the temple.</p>"
-  }
-}
-
-HAG_CHRIST = {
-  "2": {
-    "7": "<p>A type: 'And I will shake all nations, so that the treasures of all nations shall come in, and I will fill this house with glory, says the LORD of hosts.' The 'treasures/desired things of all nations' (<em>chemdah</em>) coming to the temple has been read messianically (the Vulgate translates it 'veniet Desideratus cunctis gentibus', 'the one desired by all nations will come'). Whether or not this is the primary meaning, the pattern is clear: the nations streaming to the temple with their wealth is the OT vision of the eschatological gathering of all peoples to YHWH's dwelling. In the NT: the Magi (Gentile wise men) coming to the Christ-child with their treasures (Matt 2:11) is one fulfillment; the nations bringing their glory into the new Jerusalem (Rev 21:24-26) is the final fulfillment. The temple's latter glory exceeds the former because it is the glory of the incarnate Son and ultimately the new creation temple where God dwells with his people forever.</p>"
-  }
-}
-
-# ============================
-# ZECHARIAH
-# ============================
-
-ZECH_ECHO = {
-  "9": {
-    "9": [
-      {"type": "fulfillment", "target": "Matt 21:5", "note": "Rejoice greatly O daughter of Zion! Shout O daughter of Jerusalem! Behold your king is coming to you; righteous and having salvation is he, humble and mounted on a donkey on a colt the foal of a donkey — Matthew and John both cite Zechariah 9:9 as fulfilled in the triumphal entry; the King of peace entering on a donkey (not a war horse) is the messianic sign"}
-    ]
-  },
-  "11": {
-    "12": [
-      {"type": "fulfillment", "target": "Matt 26:15", "note": "And they weighed out as my wages thirty pieces of silver — the shepherd's wages in Zechariah 11:12 are applied to Judas's price for betraying Jesus; Matthew explicitly cites this as fulfillment (using Jeremiah's name by prophetic attribution of the scripture) in Matt 27:9-10"}
-    ]
-  },
-  "12": {
-    "10": [
-      {"type": "fulfillment", "target": "John 19:37", "note": "They shall look on me whom they have pierced — Zechariah's oracle about the pierced one whom Jerusalem will mourn; John cites it at the crucifixion (they will look on the one they have pierced, John 19:37); Revelation applies it to the parousia (Rev 1:7: every eye will see him, even those who pierced him)"}
-    ]
-  },
-  "13": {
-    "7": [
-      {"type": "fulfillment", "target": "Matt 26:31", "note": "Strike the shepherd, and the sheep will be scattered — Jesus quotes Zechariah 13:7 in Gethsemane as what will be fulfilled when he is arrested: strike the shepherd and the sheep of the flock will be scattered; the disciples' abandonment is the fulfillment of the Zechariah oracle about the smitten shepherd"}
-    ]
-  }
-}
-
-ZECH_ORIGINAL = {
-  "12": {
-    "10": "<p><strong>veshafachti al beit David veal yoshev Yerushalayim ruach chen vetachanunin vehibitu elai et asher daqaru vesafdu alav kemisped al hayachid vehamer alav kemispod al habechor</strong>: 'And I will pour out on the house of David and the inhabitants of Jerusalem a spirit of grace and pleas for mercy, so that, when they look on me, on him whom they have pierced, they shall mourn for him, as one mourns for an only child, and weep bitterly over him, as one weeps over a firstborn.' The grammatical anomaly is striking: 'they shall look on me [YHWH speaking] whom they have pierced' — the divine speaker identifies himself as the one pierced. The transition from 'me' to 'him' within the verse is unexplained in the OT but is resolved in the NT: YHWH and the one who was pierced are identified — the one pierced at the crucifixion is YHWH in the person of the Son.</p>"
-  }
-}
-
-ZECH_CONTEXT = {
-  "1": {
-    "1": "<p>Zechariah prophesied ca. 520-518 BCE (chs. 1-8, with the dated oracles) and possibly into the 5th or 4th century BCE (chs. 9-14, the 'Second Zechariah', are undated and stylistically different — many scholars treat them as later additions). His eight night visions (chs. 1-6) address the post-exilic restoration community with complex symbolic imagery; his oracle-collections (chs. 7-8, 9-11, 12-14) look further into the eschatological future. Zechariah is the most extensively quoted OT book in the Gospel passion narratives — his oracles about the triumphal entry (9:9), the thirty pieces of silver (11:12-13), the smitten shepherd (13:7), the pierced one (12:10), and the cosmic mourning (12:10-14) all find explicit NT citations in the passion story. The passion narrative is Zechariah 9-14 in fulfillment.</p>"
-  }
-}
-
-ZECH_CHRIST = {
-  "9": {
-    "9": "<p>A direct revelation: 'Rejoice greatly, O daughter of Zion! Shout aloud, O daughter of Jerusalem! Behold, your king is coming to you; righteous and having salvation is he, humble and mounted on a donkey, on a colt, the foal of a donkey.' The triumphal entry is one of the most deliberately staged Christological events in the Gospels: Jesus specifically arranges for the donkey (Luke 19:30-34), enters Jerusalem in a way that fulfills Zechariah's vision exactly, and Matthew and John both cite the fulfillment (Matt 21:5; John 12:15). The theological content of the sign: a king on a war horse signals military conquest; a king on a donkey signals peace and humility. The Messiah comes not to destroy enemies with military power but to bring salvation through the humble, peaceable means of his own sacrifice. The crowds' hosannas (Ps 118:26, 'Blessed is he who comes in the name of the LORD') are their recognition of the sign, even if they misread its implications.</p>"
-  },
-  "12": {
-    "10": "<p>A direct revelation: 'They shall look on me, on him whom they have pierced, and they shall mourn for him, as one mourns for an only child, and weep bitterly over him, as one weeps over a firstborn.' The shift from 'me' (YHWH speaking) to 'him' (the one pierced) within the verse is the OT's most striking grammatical prolepsis of the incarnation: the one pierced is YHWH, yet YHWH speaks of him in the third person. John cites it at the crucifixion (19:37: these things took place that the Scripture might be fulfilled: they will look on him whom they have pierced), and Revelation applies it to the parousia (1:7: every eye will see him, even those who pierced him, and all tribes of the earth will wail on account of him). The mourning is both repentance (Acts 2:37: they were cut to the heart and said, Brothers, what shall we do?) and eschatological recognition (Rev 1:7: all tribes will wail).</p>"
-  }
-}
-
-# ============================
-# MALACHI
-# ============================
-
-MAL_ECHO = {
-  "3": {
-    "1": [
-      {"type": "fulfillment", "target": "Matt 11:10", "note": "Behold I send my messenger and he will prepare the way before me — the messenger of the covenant is announced; Jesus quotes Malachi 3:1 (in combination with Exod 23:20) as fulfilled in John the Baptist: this is the one about whom it is written, Behold I send my messenger before your face who will prepare your way before you"},
-      {"type": "fulfillment", "target": "Mark 1:2", "note": "Behold I send my messenger before your face — Mark opens his Gospel by combining Malachi 3:1 and Isaiah 40:3 as fulfilled in John the Baptist's ministry in the wilderness"}
-    ]
-  },
-  "4": {
-    "5": [
-      {"type": "fulfillment", "target": "Matt 11:14", "note": "Behold I will send you Elijah the prophet before the great and awesome day of the LORD comes — Jesus identifies John the Baptist as the Elijah who was to come (Matt 11:14; 17:12): if you are willing to accept it, he is Elijah who is to come; the angel's announcement (Luke 1:17: he will go before him in the spirit and power of Elijah) grounds John's identity in Malachi's prophecy"}
-    ],
-    "6": [
-      {"type": "allusion", "target": "Luke 1:17", "note": "He will turn the hearts of fathers to their children and the hearts of children to their fathers — the Elijah-prophecy of Malachi 4:6 is applied to John the Baptist's ministry; Luke 1:17 applies it directly: he will turn the hearts of the fathers to the children, and the disobedient to the wisdom of the just"}
-    ]
-  }
-}
-
-MAL_ORIGINAL = {
-  "3": {
-    "1": "<p><strong>hineni sholech malachi ufinah derekh lefanai ufitom yavo el heikhalov haAdon asher atem mevaksim umalach haberit asher atem chafetzim hineh ba amar YHWH tzvaot</strong>: 'Behold, I send my messenger [<em>malachi</em>], and he will prepare the way before me. And the Lord whom you seek will suddenly come to his temple; and the messenger of the covenant in whom you delight, behold, he is coming, says the LORD of hosts.' The word <em>malachi</em> means 'my messenger' — the book's title is this very word. YHWH promises two figures: the forerunner messenger (= John the Baptist) and the Lord who suddenly comes to his temple (= Jesus). The Lord's coming to his temple is the incarnation and the temple-cleansings (John 2:13-22; Mark 11:15-17). The 'messenger of the covenant' combines the forerunner and the Lord in a way that the NT separates: John is the messenger of Mal 3:1a; Jesus is the Lord of Mal 3:1b.</p>"
-  },
-  "4": {
-    "5": "<p>The closing oracle of Malachi (4:5-6) is also the closing oracle of the OT: 'Behold, I will send you Elijah the prophet before the great and awesome day of the LORD comes. And he will turn the hearts of fathers to their children and hearts of children to their fathers, lest I come and strike the land with a decree of utter destruction.' The Hebrew canon ends here — with a promise of Elijah's return and a warning of cursing if he is rejected. The NT opens with John the Baptist filling this role (Luke 1:17; Matt 11:14; 17:10-13). The OT ends in expectation; the NT opens in fulfillment. The 400-year inter-testamental silence is the space between Malachi's promise and Matthew's fulfillment — the waiting for the forerunner who will announce the Lord's coming.</p>"
-  }
-}
-
-MAL_CONTEXT = {
-  "1": {
-    "1": "<p>Malachi is the last book of the OT in both the Hebrew canon's traditional order and the Christian canon. It was written ca. 450-430 BCE, after the return from exile, during a period of post-exilic religious laxness. The prophet addresses: priests who offer defiled offerings (1:6-2:9), men who divorce their wives (2:14-16), the community's failure to tithe (3:10), and the skepticism of those who question YHWH's justice (3:13-15). Its six disputation speeches (each opening with a divine claim, then an objection, then YHWH's response) address the demoralization of the restored community. Malachi is the bridge between the OT and the NT: its final oracles (3:1; 4:5-6) are the OT's last prophetic words, pointing directly to John the Baptist and Jesus, so that the NT's opening (Matt 1-3; Mark 1; Luke 1-3) is the direct fulfillment of Malachi's closing.</p>"
-  }
-}
-
-MAL_CHRIST = {
-  "3": {
-    "1": "<p>A direct revelation: 'Behold, I send my messenger, and he will prepare the way before me. And the Lord whom you seek will suddenly come to his temple.' This oracle ends the OT's prophetic program: the next thing to happen is the forerunner's preparation and the Lord's arrival. Four hundred years of prophetic silence follow — and then John the Baptist appears in the wilderness (Matt 3:1-3; Mark 1:2-4), fulfilling Malachi 3:1 (combined with Isaiah 40:3). Jesus's entry into the temple (John 2:13-22; Mark 11:15-17) is the Lord's sudden coming to his temple. The NT's opening chapters are Malachi's oracle in motion. The closing words of the OT (Mal 4:5-6) and the opening words of the NT (Matt 1:1) are not separated by 400 years of divine absence but by the divine patience that was preparing the fullness of time (Gal 4:4: when the fullness of time had come, God sent forth his Son).</p>"
-  },
-  "4": {
-    "5": "<p>A fulfillment: 'Behold, I will send you Elijah the prophet before the great and awesome day of the LORD comes.' The OT ends with a promise; the NT opens with its fulfillment. John the Baptist comes 'in the spirit and power of Elijah' (Luke 1:17) — not literally Elijah reincarnated (John explicitly denies being Elijah, John 1:21) but fulfilling Elijah's eschatological role as the forerunner who prepares the way. Jesus confirms: 'if you are willing to accept it, he is Elijah who is to come' (Matt 11:14). The Transfiguration scene (Matt 17:3) brings the literal Elijah alongside the literal Moses alongside the literal Christ — the forerunner and the law flanking the fulfillment. Malachi's final word (the turning of fathers' and children's hearts, lest the land be struck with a curse) is the new covenant's mission: the gospel brings family reconciliation within the covenant community and protects from the ultimate curse, which Christ has absorbed (Gal 3:13).</p>"
+    "1": "<p>'Woe to the bloody city, all full of lies and plunder — no end to the prey!' The final chapter opens with the classic prophetic <em>hoi</em> (woe) oracle. Bloody city (<em>ir damim</em>) — Nineveh is condemned primarily for its violence, not merely its idolatry. The characterization of Nineveh as full of lies (<em>kazav</em>) and plunder (<em>perekh</em>) with no end to the prey identifies the structural character of Assyrian imperial rule: systematic extraction through violence and deception. Assyrian military annals boasted explicitly of the terror-campaigns that secured submission — Nahum takes these boasts as indictments.</p>",
+    "2": "<p>'The crack of the whip, and rumble of the wheel, galloping horse and bounding chariot!' The most vivid battle description in the Hebrew Bible opens here: onomatopoeic language evoking the crack of whips (<em>qol shout</em>), rumble of wheels, galloping (<em>daq parash</em>), bounding chariot (<em>merkavah menarqedah</em>). The scene is deliberately indeterminate — it could describe Nineveh's armies in their campaigns or the army coming against Nineveh. The heaped corpses stumbled over mirror what Assyrian reliefs show of their own campaigns.</p>",
+    "3": "<p>'Horsemen charging, flashing sword and glittering spear, hosts of slain, heaps of corpses, dead bodies without end — they stumble over the bodies!' The continuation of the battle scene. Archaeological confirmation: Assyrian palace reliefs from Nineveh (now in the British Museum) depict exactly these scenes — heaps of slain, prisoners impaled, cities burned. Nahum's description may be deliberately evoking the content of those very reliefs, turning Assyria's proud self-documentation into a prophecy of its own destruction.</p>",
+    "4": "<p>'And all for the countless whorings of the prostitute, graceful and of deadly charms, who betrays nations with her whorings, and peoples with her charms.' The personification of Nineveh as harlot is the second major charge (after bloodshed). The harlot metaphor in prophetic literature designates false religious and political alliance rather than sexual immorality per se — nations seduced into vassalage and syncretism through Nineveh's cultural-religious power. Graceful and of deadly charms (<em>tovath chen ba'alat kashim</em>) — beautiful and enchanting, but the enchantment is sorcery (<em>kashim</em>), suggesting Assyrian religious and magical practices that lured client nations.</p>",
+    "5": "<p>'Behold, I am against you, declares YHWH of hosts, and will lift up your skirts over your face; and I will make nations look at your nakedness and kingdoms at your shame.' The second <em>hinni elayich</em> (I am against you) of the book (cf. 2:13). The punishment mirrors the crime: the harlot city who seduced nations will be publicly exposed and shamed. The lifting of skirts to expose nakedness is the standard ancient Near Eastern shaming penalty for a faithless wife (Ezek 16:37-38; Hos 2:3; Jer 13:26). Nations that had been seduced by Nineveh will now witness her humiliation.</p>",
+    "6": "<p>'I will throw filth at you and treat you with contempt and make you a spectacle.' The divine public shaming continues — filth (<em>shiqqutzim</em>, detestable things) cast at the city; contempt (<em>nevalah</em>); public spectacle (<em>ro'i</em>). The reversal of Nineveh's imperial dignity — she who had made spectacles of conquered peoples — into a spectacle herself. The verb forms are first person divine, maintaining the direct divine address that began in 2:13.</p>",
+    "7": "<p>'And all who look at you will shrink from you and say, Wasted is Nineveh; who will grieve for her? Where shall I seek comforters for you?' The mourning question that has no answer: who will comfort Nineveh? The irony is maximal — Nahum's own name means comfort, and his book begins with the announcement that YHWH will comfort Judah (1:7; 1:12-13). No such comfort exists for Nineveh. The <em>menachim</em> (comforters) absent for Nineveh are the same word that Lamentations 1:2 uses of Jerusalem's absence of comfort in exile — but Jerusalem found YHWH as comforter; Nineveh has no such relationship.</p>",
+    "8": "<p>'Are you better than Thebes that sat by the Nile, with water around her, her rampart a sea, and water her wall?' The comparison to Thebes (No-Amon) is the key dating reference: Assyria itself sacked Thebes in 663 BCE under Ashurbanipal (the last great Assyrian king). If Nineveh could destroy mighty Thebes — the greatest city of ancient Egypt, surrounded by the Nile's waters, the capital of Pharaonic power — then no city is impregnable. The comparison functions as conceding Nineveh's military greatness while undermining its presumption of invincibility.</p>",
+    "9": "<p>'Cush was her strength; Egypt too, and that without limit; Put and the Libyans were her helpers.' Thebes' allies: Cush (Nubia, south of Egypt), Egypt itself, Put (Libya, northwest Africa), and the Libyans — the entire African-Nile alliance that made Thebes the center of a vast military coalition. The enumeration of Thebes' power-base serves the argument: all these combined could not save Thebes from Assyria. Nineveh's own power-base cannot save Nineveh from YHWH.</p>",
+    "10": "<p>'Yet she became an exile; she went into captivity; her infants were dashed in pieces at the head of every street; for her honored men lots were cast, and all her great men were bound in chains.' The specific fate of Thebes — infant massacre, lots cast for prisoners, nobility chained — mirrors what Assyrian annals record of their own campaigns. These were Assyrian tactics turned back on Assyria's own capital: the punishment fits the crime with historical specificity. The lots cast for honored men recalls the lot-casting at Jonah 1:7 — divine sovereignty determines even the disposition of prisoners.</p>",
+    "11": "<p>'You also will be drunk; you will go into hiding; you will seek a refuge from the enemy.' Nineveh will share Thebes' fate. The drunkenness metaphor for military defeat (cf. Jer 25:15-17; Isa 51:17-23; Obad 16) — the cup of divine wrath that makes nations reel and fall. Hiding and seeking refuge is the antithesis of Nineveh's military aggression: the aggressor becomes the fugitive.</p>",
+    "12": "<p>'All your fortresses are like fig trees with first-ripe figs — if shaken they fall into the mouth of the eater.' The fig-tree metaphor: first-ripe summer figs fall at the slightest shake. Nineveh's famously formidable fortifications — its double walls, its moat, its towers — are compared to overripe fruit that falls at a touch. The ease of the coming fall contrasts with Nineveh's proud military engineering. The image participates in the widespread use of fig and vine imagery for the fragility of earthly security (cf. Isa 34:4; Rev 6:13).</p>",
+    "13": "<p>'Behold, your troops are women in your midst. The gates of your land are wide open to your enemies; fire has devoured your bars.' The accusation that Nineveh's soldiers are women (<em>nashim</em>) is a standard ancient military insult (not a comment on female courage but on the psychological collapse of the defenders). The open gates echo the river gates of 2:6 — the military infrastructure designed to keep enemies out has been breached. Bars devoured by fire: the wooden gate-bars are burned, leaving the city open.</p>",
+    "14": "<p>'Draw water for the siege; strengthen your fortresses; go into the clay; tread the mortar; take hold of the brick mold!' Mock instructions for Nineveh's preparation — as futile as the imperatives of 2:1. The specific mention of clay, mortar, and brick mold references the mudbrick construction of Nineveh's walls (unlike Jerusalem's stone walls). Mudbrick, even when baked, dissolves when flooded — a pointed detail given the flood imagery throughout. The more Nineveh repairs its walls, the more YHWH will destroy them.</p>",
+    "15": "<p>'There fire will devour you; the sword will cut you off. It will devour you like the locust. Multiply yourselves like the locust; multiply like the grasshopper!' The double fate: fire and sword. The locust irony: Nineveh is told to multiply like a locust — the very insect that symbolized Assyrian military invasions in the ancient Near East (swarming, devouring armies). Assyria applied the locust simile to their own armies; now YHWH uses it to describe the futility of Nineveh's multiplication — they will be devoured like their own emblem.</p>",
+    "16": "<p>'You increased your merchants more than the stars of the heavens. The locust spreads its wings and flies away.' The merchants of Nineveh — the commercial network of the Assyrian empire that connected the ancient Near East. More than the stars is a deliberate inversion of the Abrahamic promise (Gen 15:5 — Abraham's descendants like the stars). The locust metaphor continues: the commercial empire that has stripped the land, like locusts finishing their feeding, simply flies away. Economic empire is transient.</p>",
+    "17": "<p>'Your princes are like grasshoppers, your scribes like clouds of locusts settling on the fences in a day of cold — when the sun rises, they fly away; no one knows where they are.' The royal court and bureaucracy of Nineveh — the princes (<em>minzarayich</em>) and officials (<em>tifserayich</em>) — are grasshoppers warming themselves on a fence in the cold, and when the sun rises (the day of judgment comes), they scatter and are gone. The administrative apparatus of empire — which seemed permanent and omnipotent — has no more substance than an insect colony.</p>",
+    "18": "<p>'Your shepherds are asleep, O king of Assyria; your nobles slumber. Your people are scattered on the mountains with none to gather them.' The lament over the sleeping shepherds — the king's commanders and advisors who failed to protect the flock. The pastoral imagery is bitterly ironic: the king who had styled himself the great shepherd of peoples cannot shepherd his own city. The scattered people on the mountains is the image of exile and defeat — sheep without a shepherd (Num 27:17; 1 Kgs 22:17; Ezek 34).</p>",
+    "19": "<p>'There is no easing your hurt; your wound is grievous. All who hear the news about you clap their hands over you. For upon whom has not come your unceasing evil?' The book's final verse withholds all possibility of comfort for Nineveh — the exact reversal of YHWH's comfort for Judah (1:7, 1:12-13). The grievous wound (<em>makkah chalalah</em>) echoes the incurable wound language of Mic 1:9 and Jer 15:18, but here there is no hope of healing. The clapping of hands by all who hear — universal human relief at Nineveh's fall, a measure of how much suffering Assyria inflicted upon the ancient world. The final rhetorical question is a comprehensive indictment: who has not suffered under Assyrian aggression? The answer: no one. All nations rejoice at Nineveh's fall, and all nations' grief validates the justice of its end.</p>"
   }
 }
 
 def main():
-    books_data = [
-        ('lamentations', LAM_ECHO, LAM_ORIGINAL, LAM_CONTEXT, LAM_CHRIST),
-        ('hosea', HOSEA_ECHO, HOSEA_ORIGINAL, HOSEA_CONTEXT, HOSEA_CHRIST),
-        ('joel', JOEL_ECHO, JOEL_ORIGINAL, JOEL_CONTEXT, JOEL_CHRIST),
-        ('amos', AMOS_ECHO, AMOS_ORIGINAL, AMOS_CONTEXT, AMOS_CHRIST),
-        ('obadiah', OBAD_ECHO, OBAD_ORIGINAL, OBAD_CONTEXT, OBAD_CHRIST),
-        ('jonah', JONAH_ECHO, JONAH_ORIGINAL, JONAH_CONTEXT, JONAH_CHRIST),
-        ('micah', MICAH_ECHO, MICAH_ORIGINAL, MICAH_CONTEXT, MICAH_CHRIST),
-        ('nahum', NAHUM_ECHO, NAHUM_ORIGINAL, NAHUM_CONTEXT, NAHUM_CHRIST),
-        ('habakkuk', HAB_ECHO, HAB_ORIGINAL, HAB_CONTEXT, HAB_CHRIST),
-        ('zephaniah', ZEPH_ECHO, ZEPH_ORIGINAL, ZEPH_CONTEXT, ZEPH_CHRIST),
-        ('haggai', HAG_ECHO, HAG_ORIGINAL, HAG_CONTEXT, HAG_CHRIST),
-        ('zechariah', ZECH_ECHO, ZECH_ORIGINAL, ZECH_CONTEXT, ZECH_CHRIST),
-        ('malachi', MAL_ECHO, MAL_ORIGINAL, MAL_CONTEXT, MAL_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books_data:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-context', 'nahum')
+    merge_comm(c, NAHUM)
+    save_comm('mkt-context', 'nahum', c)
+    print('nahum mkt-context: merged chapters 1-3')
 
 if __name__ == '__main__':
     main()

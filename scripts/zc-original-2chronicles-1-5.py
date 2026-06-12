@@ -1,22 +1,18 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Original Commentary — 2 Chronicles chapters 1–5
+Run: python3 scripts/zc-original-2chronicles-1-5.py
+
+Ch1: wayyitkazzēq (Solomon strengthened himself) — Hithpael reflexive of ḥāzaq (1:1)
+     šᵉʾal (Ask!) — divine invitation; irony of Saul's name meaning what Solomon receives (1:7)
+Ch2: šēm YHWH name-theology — who can contain the One heavens cannot contain? (2:5-6)
+     ḥākam craftsman vocabulary — wisdom as technical skill (2:14)
+Ch3: Mount Moriah — temple on Abraham's mountain (3:1)
+Ch5: kāḇôḏ / ʾānān — the glory-cloud that halts priestly ministry (5:13-14)
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -28,20 +24,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -50,160 +32,37 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
+ORIGINAL = {
+  "1": {
+    "1": "<p><strong>wayyitkazzēq šᵉlōmōh</strong> — &lsquo;and Solomon strengthened himself&rsquo; or &lsquo;established himself firmly&rsquo;; Hithpael of <em>ḥāzaq</em> (to be strong, to hold fast), the reflexive of the standard strength-verb. The Hithpael form makes Solomon the agent of his own strengthening — not merely passive recipient of stability but active self-consolidation. The Chronicler uses this Hithpael form at key transition moments: 1 Chr 11:10 (David&rsquo;s mighty men who &lsquo;held strongly with him&rsquo;); 2 Chr 12:13 (Rehoboam &lsquo;strengthened himself&rsquo; in Jerusalem); 2 Chr 32:5 (Hezekiah &lsquo;took courage&rsquo; and rebuilt the wall). Each instance marks a king&rsquo;s intentional consolidation of covenant rule. The MKT renders &lsquo;established himself firmly,&rsquo; capturing the reflexive will-to-stability implied by the Hithpael. The clause immediately qualifies: &lsquo;<em>waYHWH ʾelōhāyw ʿimmô</em>&rsquo; — &lsquo;and YHWH his God was with him.&rsquo; The divine-presence clause follows and grounds the human self-consolidation: Solomon strengthens himself because YHWH is with him, not apart from that presence.</p>",
+    "7": "<p><strong>šᵉʾal lāk</strong> — &lsquo;Ask for yourself&rsquo;; the divine invitation to make a request. The verb <em>šāʾal</em> (to ask, request, inquire) is the lexical root of the name <em>šāʾûl</em> (Saul), meaning &lsquo;asked/requested [of God].&rsquo; The irony is structurally embedded: the king named &lsquo;Asked-of-God&rsquo; failed to maintain the covenant; now God invites the new king with the same verb — &lsquo;Ask [<em>šᵉʾal</em>] for yourself, what I shall give you.&rsquo; Solomon asks for <em>ḥokmāh</em> (wisdom) and <em>maddāʿ</em> (knowledge/discernment) — the same pairing appears in Dan 1:17 for Daniel and his companions (&lsquo;God gave them knowledge and skill in all literature and wisdom,&rsquo; <em>yādaʿ</em> and <em>ḥokmāh</em>). The MKT renders &lsquo;wisdom and knowledge,&rsquo; maintaining the two-term structure. The Chronicler adds <em>maddāʿ</em> to the 1 Kgs 3:9 account (&lsquo;hearing heart&rsquo;), shifting from the relational-wisdom (&lsquo;heart&rsquo;) emphasis to the cognitive-practical (&lsquo;knowledge&rsquo;) emphasis suitable for the administrative-organizational king the Chronicler portrays Solomon to be.</p>",
+    "12": "<p><strong>wᵉhahôn wᵉhāʿōšer wᵉhakkāḇôḏ</strong> — &lsquo;and wealth and riches and honor&rsquo;; three nouns added by the Chronicler beyond the parallel in 1 Kgs 3:13 (&lsquo;riches and honor&rsquo;). The Chronicler&rsquo;s expansion makes explicit that secondary blessings are the consequence of wisdom-first priority — a pedagogical addition consistent with the Chronicler&rsquo;s consistent prosperity-through-covenant-faithfulness theology. <em>hôn</em> (wealth, substance) appears frequently in Proverbs (1:13; 3:9; 10:15) as the wealth that comes through wise living. <em>ʿōšer</em> (riches, accumulated wealth) is the broader material term. <em>kāḇôḏ</em> (honor, glory, weightiness) is the social-standing dimension. The three together constitute the comprehensive Solomonic blessing: material, financial, and social.</p>"
   },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
+  "2": {
+    "5": "<p><strong>kî gāḏôl ʾelōhênû mikkol hāʾelōhîm</strong> — &lsquo;for our God is great above all gods.&rsquo; Solomon&rsquo;s letter to Huram of Tyre contains an embedded incomparability-claim: YHWH surpasses all other deities. The comparative <em>mikkol hāʾelōhîm</em> (above all gods) does not deny the existence of other deities but asserts YHWH&rsquo;s incomparable superiority — an OT pattern found in Exod 18:11 (Jethro), Ps 77:13, Ps 95:3. The Chronicler&rsquo;s version of Solomon&rsquo;s letter to Huram is significantly different from 1 Kgs 5:2-6 — the Chronicler inserts this theological declaration about YHWH&rsquo;s greatness, absent in Kings. The insertion reflects the Chronicler&rsquo;s concern to present the temple-building as theologically grounded in YHWH&rsquo;s incomparability, not merely as a political-architectural project.</p>",
+    "6": "<p><strong>ûmî ʾănî ʾăšer ʾebneh lô bayit</strong> — &lsquo;And who am I that I should build him a house?&rsquo; The humility-question embedded in Solomon&rsquo;s embassy to Huram. The verse continues: &lsquo;since heaven and the highest heaven (<em>wᵉhāšāmayim šᵉmê haššāmayim</em>) cannot contain him.&rsquo; The term <em>šᵉmê haššāmayim</em> (heaven of heavens, the highest heaven) is the superlative of transcendence: not even the infinite expanse of the heavens contains YHWH. The parallel passage is 1 Kgs 8:27 (Solomon&rsquo;s prayer at the temple dedication); the Chronicler moves the theological observation from the dedication-prayer to the preliminary embassy, making the architectural humility the premise of the project rather than its conclusion. Stephen cites this theological tradition in Acts 7:48-49 (quoting Isa 66:1-2): &lsquo;the Most High does not dwell in houses made by hands.&rsquo; The temple&rsquo;s paradox — a house for the One no house can contain — is embedded in the founding documents of the project.</p>",
+    "14": "<p><strong>yōdēaʿ laʿăśôt</strong> — &lsquo;skilled to work / knowing how to make.&rsquo; Huram&rsquo;s description of his master craftsman uses the participial form of <em>yāḏaʿ</em> (to know) + infinitive of <em>ʿāśāh</em> (to do, make) — &lsquo;knowing-to-make,&rsquo; i.e., skilled in making. This technical-skill usage of <em>yāḏaʿ</em> (know) is the same as Exod 31:3-5, where Bezalel is filled with the Spirit of God &lsquo;in <em>ḥokmāh</em> and <em>tᵉḇûnāh</em> and <em>daʿat</em> and in all craftsmanship.&rsquo; The wisdom/knowledge vocabulary spans intellectual discernment and technical craft — Hebrew does not divide the epistemological from the artisanal. The MKT translates &lsquo;skilled to work,&rsquo; preferring the craft-competency sense over a purely cognitive rendering of <em>yāḏaʿ</em>. The craftsman&rsquo;s materials span gold, silver, bronze, iron, stone, wood, purple, blue, fine linen, crimson — the full range that Bezalel&rsquo;s tabernacle-craftsmanship also covered (Exod 35:35).</p>"
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
+    "1": "<p><strong>har hammôrîyāh</strong> — &lsquo;Mount Moriah.&rsquo; This is the only place in the Bible where the temple mount is explicitly called Mount Moriah; the identification connects the temple site to Gen 22:2, where God commanded Abraham to offer Isaac &lsquo;on one of the mountains of which I shall tell you,&rsquo; and Gen 22:14 where Abraham named the place &lsquo;The LORD Will Provide (<em>YHWH yirʾeh</em>), so it is said to this day, &ldquo;On the mount of the LORD it shall be provided (<em>yērāʾeh</em>).&rdquo;&rsquo; The Chronicler&rsquo;s identification of the temple site as Moriah is his contribution to the theological geography: the altar of burnt offering stands where the proto-sacrifice of the covenant son occurred. The ram that substituted for Isaac foreshadowed the temple&rsquo;s constant burnt-offering ministry; the Son-offering on the mountain becomes the interpretive backdrop for all Solomonic sacrifice. The verse also specifies: &lsquo;where YHWH had appeared to David his father, at the place that David had designated, on the threshing floor of Ornan the Jebusite.&rsquo; Three layers of sacred history converge: Abrahamic proto-sacrifice (Moriah), Davidic theophany (plague-stopping angel), and Jebusite-turned-Israelite purchase (Ornan). The MKT translates &lsquo;Mount Moriah&rsquo; without explanation, letting the Genesis echo carry its own weight for the reader.</p>",
+    "8": "<p><strong>qōḏeš haqqŏḏāšîm</strong> — &lsquo;the Most Holy Place&rsquo;; literally &lsquo;holy of holies&rsquo; — the Hebrew superlative by reduplication. The sanctuary&rsquo;s inner chamber (Hebrew <em>dᵉḇîr</em>, also translated &lsquo;inner sanctuary&rsquo; or &lsquo;oracle room&rsquo;) is given both its architectural name and its holiness-superlative. <em>dᵉḇîr</em> is etymologically uncertain: possibly from <em>dāḇar</em> (word/speak, = the place of the divine word) or from an Aramaic/Ugaritic root meaning &lsquo;back, rear chamber.&rsquo; The HALOT prefers the latter: it is simply the rearmost room. The MKT uses &lsquo;most holy place,&rsquo; the standard English rendering. The dimensions (20 x 20 cubits square) and the 600 talents of gold overlay (3:8) mark the superlative holiness with architectural scale and material extravagance. The gold of the Most Holy Place (600 talents) exceeds the gold of the rest of the temple (400 talents, 3:4) by 50% — proportional investment calibrated to the holiness gradient.</p>"
+  },
   "4": {
-    "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
-    ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+    "2": "<p><strong>hayyām mûṣāq</strong> — &lsquo;the cast sea&rsquo;; the large bronze basin. <em>mûṣāq</em> is a participle of <em>yāṣaq</em> (to pour, cast metal), describing the manufacturing method: poured/cast bronze rather than hammered. The <em>yām</em> (sea) is the common word for the Mediterranean Sea — the choice of &lsquo;sea&rsquo; for the basin reflects either its immense size (nearly 5 meters in diameter) or a cosmological symbolism (the primordial waters controlled). The dimensions given in 2 Chr 4:2 (10 cubits in diameter, 5 cubits in height, 30 cubits in circumference) produce a mathematical discrepancy with π: a 10-cubit diameter circle has a circumference of 31.4 cubits, not 30. Ancient mathematical approximations (using π ≈ 3) account for the difference; ancient near Eastern architectural descriptions used round numbers for circumference. The MKT renders &lsquo;the cast bronze sea,&rsquo; including both the material and the manufacturing note to help the reader understand the scale and weight of the object.</p>",
+    "6": "<p><strong>lᵉrāḥṣāh</strong> / <strong>lᵉrāḥṣāh ʾotām</strong> — &lsquo;for washing&rsquo; / &lsquo;for washing them [the sacrifices].&rsquo; The distinction between the lavers (for washing the parts of the burnt offering) and the sea (for the priests&rsquo; own washing) marks a functional differentiation within the water-purification system. The lavers (<em>kiyyōrôt</em>) are for the offerings; the sea (<em>yām</em>) is for the priests. The differentiation reflects the graded-holiness structure of the sanctuary: sacrificial materials require one form of purification; the priests require another. The Levitical purity regulations (Num 19; Lev 11-15) govern both categories. The MKT renders &lsquo;for rinsing what is used in the burnt offering&rsquo; and &lsquo;for the priests to wash in,&rsquo; making the distinction functionally explicit.</p>"
+  },
+  "5": {
+    "13": "<p><strong>ûḇᵉhaʿălôt hakkōhănîm min haqqōḏeš... wayyāšeb hāʿānān ʾet bêt YHWH</strong> — &lsquo;when the priests came out of the holy place... then the house of YHWH was filled with a cloud (<em>ʿānān</em>).&rsquo; The trigger for the glory-cloud&rsquo;s arrival is the Levitical singing of the <em>ḥesed</em>-formula: &lsquo;For he is good, for his steadfast love endures forever (<em>kî lᵉʿôlām ḥasdô</em>).&rsquo; The cloud comes in response to worship, not merely to the completion of the building. The <em>ʿānān</em> (cloud) is the standard term for the divine presence-cloud from Exod 13:21 (wilderness pillar of cloud) through the tabernacle&rsquo;s filling (Exod 40:34-35) to this temple-filling. The parallel is deliberate: &lsquo;so that the priests could not stand to minister because of the cloud, for the glory (<em>kāḇôḏ</em>) of YHWH filled the house of God&rsquo; (5:14) echoes Exod 40:35: &lsquo;Moses was not able to enter the tent of meeting because the cloud settled on it, and the glory of YHWH filled the tabernacle.&rsquo; The Chronicler&rsquo;s temple-filling deliberately echoes the tabernacle-filling to establish the temple as the tabernacle&rsquo;s legitimate successor. The MKT renders <em>ʿānān</em> as &lsquo;cloud&rsquo; and <em>kāḇôḏ</em> as &lsquo;glory,&rsquo; maintaining the standard OT pairing that the NT picks up in the Transfiguration (Matt 17:5: a bright cloud and a voice) and in Rev 15:8 (the temple filled with smoke from the divine glory).</p>",
+    "14": "<p><strong>lōʾ yāḵᵉlû hakkōhănîm laʿămōḏ lᵉšārēt</strong> — &lsquo;the priests could not stand to minister.&rsquo; The divine glory&rsquo;s overpowering of the priestly ministry is a recurring OT motif: at Sinai (Exod 19:21-24: the people could not approach the mountain), at the tabernacle (Exod 40:35: Moses could not enter), and now at the temple. The inability to stand (<em>laʿămōḏ</em>) contrasts with the Levites&rsquo; normal standing-ministry position: 1 Chr 23:30 describes the Levites as standing &lsquo;every morning to thank and praise YHWH.&rsquo; The glory overcomes the posture of service: normal ministry is impossible in the presence of unmediated divine glory. The NT&rsquo;s equivalent: at the Transfiguration, the disciples &lsquo;fell on their faces and were terrified&rsquo; (Matt 17:6) — the glory of Christ overwhelms the human capacity to stand. The priestly inability-to-stand is resolved in the NT by the high priest who has entered the Most Holy Place &lsquo;once for all&rsquo; (Heb 9:12), opening access for those who follow through him.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-original', '2chronicles')
+    merge_comm(c, ORIGINAL)
+    save_comm('mkt-original', '2chronicles', c)
+    count = sum(len(v) for v in ORIGINAL.values())
+    print(f'2chronicles mkt-original: wrote {count} verses across ch 1-5')
 
 if __name__ == '__main__':
     main()

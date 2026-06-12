@@ -121,6 +121,7 @@ export function initParallelToggle() {
     btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     if (on) {
       if (window._readerDeactivateComm) window._readerDeactivateComm();
+      if (window._readerDeactivateXref) window._readerDeactivateXref();
       _activateEchoesLayout();
       refreshEchoesPanel();
     } else {
@@ -622,8 +623,9 @@ function _buildEchoesPanel(panel, results, bookChMap, groups) {
 
       var card = document.createElement('div');
       card.className = 'reader-echo-card';
-      card.setAttribute('data-echo-v',  String(item.v));
-      card.setAttribute('data-echo-ch', String(item.ch));
+      card.setAttribute('data-echo-v',    String(item.v));
+      card.setAttribute('data-echo-ch',   String(item.ch));
+      card.setAttribute('data-echo-type', bClass);
 
       var toggle = document.createElement('button');
       toggle.className = 'reader-echo-card__toggle';
@@ -657,7 +659,9 @@ function _buildEchoesPanel(panel, results, bookChMap, groups) {
       readLink.textContent = 'Read ' + target + ' →';
       body.appendChild(readLink);
 
-      // Expand/collapse; load verse text once on first expansion
+      // Expand/collapse; load verse text once on first expansion.
+      // Also scrolls the source verse in the main reader to the top of the
+      // viewport so the user can see which verse this echo belongs to.
       var textLoaded = false;
       toggle.addEventListener('click', function () {
         var expanded = toggle.getAttribute('aria-expanded') === 'true';
@@ -667,6 +671,88 @@ function _buildEchoesPanel(panel, results, bookChMap, groups) {
         if (!expanded && !textLoaded) {
           textLoaded = true;
           loadParallelText(target, getVersion(), verseBlock);
+        }
+        // Scroll source verse to top of reader (below sticky browse bar).
+        // Three cases: (a) verse visible → scroll directly; (b) verse exists
+        // but hidden by parallel pagination → change to its page then scroll;
+        // (c) verse not in DOM at all (e.g. viewing v1-18, echo is v21+) →
+        // navigate the reader to that verse via the lookup input.
+        var resultsEl = document.getElementById('reader-results');
+        if (resultsEl) {
+          var verseEl = resultsEl.querySelector(
+            '.reader-verse[data-v="' + item.v + '"][data-ch="' + item.ch + '"]'
+          );
+          if (!verseEl) {
+            // (c) Verse not in DOM — navigate reader to the whole chapter so
+            // context is preserved, then scroll to the verse once it renders.
+            var bk = metaBooks && metaBooks.find(function (b) { return b.id === item.bookId; });
+            var bkName = bk ? bk.name : item.bookId;
+            var inputEl = document.getElementById('reader-lookup-input');
+            if (inputEl && window._readerLookupFn) {
+              inputEl.value = bkName + ' ' + item.ch;
+              var _tv = item.v, _tc = item.ch;
+              var _re = document.getElementById('reader-results');
+              if (_re) {
+                var _obs = new MutationObserver(function (_, observer) {
+                  var _ve = _re.querySelector(
+                    '.reader-verse[data-v="' + _tv + '"][data-ch="' + _tc + '"]'
+                  );
+                  if (!_ve) return;
+                  observer.disconnect();
+                  // Small delay lets applyParallelPagination run after DOM insertion
+                  setTimeout(function () {
+                    if (_ve.style.display === 'none') {
+                      var _ge = _ve.closest('.reader-result-group');
+                      if (_ge) {
+                        var _avs = Array.from(_ge.querySelectorAll(
+                          '.reader-result-group__text > .reader-verse'
+                        ));
+                        var _vi = _avs.indexOf(_ve);
+                        if (_vi >= 0) _paginateGroup(_ge, _avs, Math.floor(_vi / READER_PAGE_SIZE));
+                      }
+                      setTimeout(function () {
+                        var _bar = document.querySelector('.reader-browse-bar');
+                        var _off = _bar ? _bar.offsetHeight + 8 : 60;
+                        window.scrollTo({ top: _ve.getBoundingClientRect().top + window.scrollY - _off, behavior: 'smooth' });
+                      }, 50);
+                    } else {
+                      var _bar = document.querySelector('.reader-browse-bar');
+                      var _off = _bar ? _bar.offsetHeight + 8 : 60;
+                      window.scrollTo({ top: _ve.getBoundingClientRect().top + window.scrollY - _off, behavior: 'smooth' });
+                    }
+                  }, 200);
+                });
+                _obs.observe(_re, { childList: true, subtree: true });
+              }
+              window._readerLookupFn();
+            }
+          } else if (verseEl.style.display === 'none') {
+            // (b) Hidden by parallel pagination — switch to correct page then scroll
+            var groupEl = verseEl.closest('.reader-result-group');
+            if (groupEl) {
+              var allVs = Array.from(
+                groupEl.querySelectorAll('.reader-result-group__text > .reader-verse')
+              );
+              var vIdx = allVs.indexOf(verseEl);
+              if (vIdx >= 0) {
+                _paginateGroup(groupEl, allVs, Math.floor(vIdx / READER_PAGE_SIZE));
+                setTimeout(function () {
+                  var barEl2 = document.querySelector('.reader-browse-bar');
+                  var off2   = barEl2 ? barEl2.offsetHeight + 8 : 60;
+                  window.scrollTo({
+                    top:      verseEl.getBoundingClientRect().top + window.scrollY - off2,
+                    behavior: 'smooth'
+                  });
+                }, 50);
+              }
+            }
+          } else {
+            // (a) Verse visible — scroll directly
+            var barEl  = document.querySelector('.reader-browse-bar');
+            var offset = barEl ? barEl.offsetHeight + 8 : 60;
+            var top    = verseEl.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
         }
       });
 
@@ -699,17 +785,27 @@ function _wireEchoHovers(panel, allEntries) {
   var resultsEl = document.getElementById('reader-results');
   if (!resultsEl) return;
 
-  // Card → verse
+  // Card → verse (adds type class so hover uses the badge's colour family)
   panel.querySelectorAll('.reader-echo-card').forEach(function (card) {
-    var v  = card.getAttribute('data-echo-v');
-    var ch = card.getAttribute('data-echo-ch');
+    var v    = card.getAttribute('data-echo-v');
+    var ch   = card.getAttribute('data-echo-ch');
+    var type = card.getAttribute('data-echo-type') || 'allusion';
     card.addEventListener('mouseenter', function () {
       resultsEl.querySelectorAll('.reader-verse[data-v="' + v + '"][data-ch="' + ch + '"]')
-        .forEach(function (verse) { verse.classList.add('reader-verse--echo-hover'); });
+        .forEach(function (verse) {
+          verse.classList.add('reader-verse--echo-hover', 'reader-verse--echo-type-' + type);
+        });
     });
     card.addEventListener('mouseleave', function () {
-      resultsEl.querySelectorAll('.reader-verse--echo-hover')
-        .forEach(function (v) { v.classList.remove('reader-verse--echo-hover'); });
+      resultsEl.querySelectorAll('.reader-verse--echo-hover').forEach(function (verse) {
+        verse.classList.remove(
+          'reader-verse--echo-hover',
+          'reader-verse--echo-type-quotation', 'reader-verse--echo-type-allusion',
+          'reader-verse--echo-type-fulfillment', 'reader-verse--echo-type-type',
+          'reader-verse--echo-type-shadow', 'reader-verse--echo-type-theme',
+          'reader-verse--echo-type-parallel'
+        );
+      });
     });
   });
 

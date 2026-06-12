@@ -12,7 +12,7 @@
   padding: 25px 0 2rem;
 }
 
-/* ── Page layout: reading text + side panel ──────────────── */
+/* ── Page layout: reading text + optional notes panel ────── */
 .reader-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -20,36 +20,17 @@
   align-items: start;
 }
 
-/* 700px+: text + side panel (Notes / Cross-refs / Commentary) */
 @media (min-width: 700px) {
-  .reader-layout {
+  .reader-layout { gap: 1.25rem; }
+  .reader-main { grid-column: 1; grid-row: 1; }
+  /* Notes panel open: add panel column */
+  .reader-layout--notes-open {
     grid-template-columns: 1fr 290px;
-    gap: 1.25rem;
   }
-  .reader-main      { grid-column: 1; grid-row: 1; }
-  .reader-xref-panel { grid-column: 2; grid-row: 1; }
+  .reader-layout--notes-open .reader-xref-panel { grid-column: 2; grid-row: 1; }
 }
-
-/* 1300px+: wider panel so commentary is comfortably readable */
 @media (min-width: 1300px) {
-  .reader-layout {
-    grid-template-columns: 1fr 400px;
-  }
-}
-
-/* Split toggle: 50/50 text + panel */
-@media (min-width: 700px) {
-  .reader-layout--split {
-    grid-template-columns: 1fr 1fr !important;
-  }
-}
-
-/* Wide toggle: full-width reader, panel hidden */
-.reader-layout--wide .reader-xref-panel { display: none !important; }
-@media (min-width: 700px) {
-  .reader-layout--wide {
-    grid-template-columns: 1fr !important;
-  }
+  .reader-layout--notes-open { grid-template-columns: 1fr 400px; }
 }
 
 /* Chapter sidebar: hidden by default; shown when .reader-layout--with-sidebar is set */
@@ -57,13 +38,10 @@
 
 @media (min-width: 700px) {
   .reader-layout--with-sidebar {
-    grid-template-columns: 160px 1fr 290px !important;
-  }
-  .reader-layout--with-sidebar.reader-layout--split {
-    grid-template-columns: 160px 1fr 1fr !important;
-  }
-  .reader-layout--with-sidebar.reader-layout--wide {
     grid-template-columns: 160px 1fr !important;
+  }
+  .reader-layout--with-sidebar.reader-layout--notes-open {
+    grid-template-columns: 160px 1fr 290px !important;
   }
   .reader-layout--with-sidebar .reader-sidebar {
     display: block;
@@ -78,18 +56,15 @@
     border-radius: 6px;
     background: var(--color-surface);
   }
-  .reader-layout--with-sidebar .reader-main      { grid-column: 2; }
+  .reader-layout--with-sidebar .reader-main       { grid-column: 2; }
   .reader-layout--with-sidebar .reader-xref-panel { grid-column: 3; }
-  .reader-layout--with-sidebar.reader-layout--wide .reader-xref-panel { display: none !important; }
 }
 
-/* ── Side panel (Notes / Cross-refs / Commentary) ─────────── */
-.reader-xref-panel {
-  display: none;
-}
+/* ── Side panel (Notes only) ──────────────────────────────── */
+.reader-xref-panel { display: none; }
 
 @media (min-width: 700px) {
-  .reader-xref-panel {
+  .reader-layout--notes-open .reader-xref-panel {
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -99,8 +74,6 @@
     scrollbar-width: thin;
   }
 }
-
-/* panel is now always shown at ≥700px — `:empty` hide removed */
 
 .reader-xref-panel__heading {
   font-family: var(--font-ui);
@@ -2830,6 +2803,51 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
 [data-theme="dark"] .reader-comm-src-sel { background: var(--color-surface); }
 :root:not([data-theme="light"]) .reader-comm-src-sel { background: var(--color-surface); }
 
+/* ── Cross-ref inline grid (60 % Bible / 40 % xrefs) ─────────────────────── */
+.reader-xref-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  border-top: 1px solid var(--color-border);
+  width: 100%;
+}
+/* Header row spans both columns */
+.reader-xref-grid__hdr {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  padding: 0.45rem 0;
+  border-bottom: 2px solid var(--color-border);
+}
+/* Xref cells: column 2, one per verse row */
+.reader-comm-cell--xref {
+  font-size: 0.82rem;
+  line-height: 1.75;
+  padding: 0.45rem 0 0.45rem 0.85rem;
+  border-bottom: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  align-self: stretch;
+  color: var(--color-muted);
+}
+.reader-comm-cell--xref .reader-xref-group__link {
+  color: var(--color-accent);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.reader-comm-cell--xref .reader-xref-group__link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+@media (max-width: 699px) {
+  .reader-xref-grid { display: block; }
+  .reader-xref-grid__hdr { display: block; }
+  .reader-comm-cell--xref { display: block; border-left: none; }
+}
+
 /* ── CSS-33: xref-chip active + quick-search chip hover dark mode ─────────── */
 /* INTENT: .reader-xref-chip--active and .reader-qs-chip:hover both use
    background:var(--color-primary) with color:#fff. In dark mode primary = golden
@@ -3121,13 +3139,21 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   opacity: 0.55;
 }
 
-/* Hover highlight: coloured left border + light tint when hovering a card */
+/* Hover highlight: coloured left border + tint matching the echo badge type */
 .reader-verse--echo-hover {
   border-left: 3px solid var(--color-primary) !important;
   padding-left: 0.3rem;
-  background: rgba(var(--color-primary-rgb, 90, 110, 200), 0.06) !important;
+  background: rgba(90, 110, 200, 0.12) !important;
   border-radius: 2px;
 }
+/* Type overrides — background and border colour match the badge family */
+.reader-verse--echo-hover.reader-verse--echo-type-quotation   { background: rgba(220,120, 40,0.22) !important; border-left-color: #b35a00 !important; }
+.reader-verse--echo-hover.reader-verse--echo-type-allusion    { background: rgba( 80,120,220,0.20) !important; border-left-color: #2955b5 !important; }
+.reader-verse--echo-hover.reader-verse--echo-type-fulfillment { background: rgba( 40,160, 80,0.22) !important; border-left-color: #1a7a3a !important; }
+.reader-verse--echo-hover.reader-verse--echo-type-type        { background: rgba(140, 50,200,0.20) !important; border-left-color: #7a1abf !important; }
+.reader-verse--echo-hover.reader-verse--echo-type-shadow      { background: rgba(140, 50,200,0.20) !important; border-left-color: #7a1abf !important; }
+.reader-verse--echo-hover.reader-verse--echo-type-theme       { background: rgba( 20,150,180,0.20) !important; border-left-color: #0e7a9a !important; }
+.reader-verse--echo-hover.reader-verse--echo-type-parallel    { background: rgba(100,100,100,0.18) !important; border-left-color: #555    !important; }
 
 /* ── Dark mode adjustments ────────────────────────────────────────────────── */
 
@@ -3143,9 +3169,14 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
 [data-theme="dark"] .reader-echo-card__badge--theme      { background: rgba(40,190,220,0.17);  color: #60d0e8; }
 [data-theme="dark"] .reader-echo-card__badge--parallel   { background: rgba(160,160,160,0.15); color: #aaa; }
 
-[data-theme="dark"] .reader-verse--echo-hover {
-  background: rgba(120, 150, 255, 0.09) !important;
-}
+[data-theme="dark"] .reader-verse--echo-hover { background: rgba(120,150,255,0.14) !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-quotation   { background: rgba(220,140, 60,0.28) !important; border-left-color: #f0a060 !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-allusion    { background: rgba(100,140,255,0.25) !important; border-left-color: #8aadff !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-fulfillment { background: rgba( 60,200,100,0.25) !important; border-left-color: #5dca80 !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-type        { background: rgba(180, 80,255,0.25) !important; border-left-color: #c97aff !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-shadow      { background: rgba(180, 80,255,0.25) !important; border-left-color: #c97aff !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-theme       { background: rgba( 40,190,220,0.25) !important; border-left-color: #60d0e8 !important; }
+[data-theme="dark"] .reader-verse--echo-hover.reader-verse--echo-type-parallel    { background: rgba(160,160,160,0.20) !important; border-left-color: #aaa    !important; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .reader-echo-card--highlight {
@@ -3158,7 +3189,12 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   :root:not([data-theme="light"]) .reader-echo-card__badge--shadow     { background: rgba(180,80,255,0.17);  color: #c97aff; }
   :root:not([data-theme="light"]) .reader-echo-card__badge--theme      { background: rgba(40,190,220,0.17);  color: #60d0e8; }
   :root:not([data-theme="light"]) .reader-echo-card__badge--parallel   { background: rgba(160,160,160,0.15); color: #aaa; }
-  :root:not([data-theme="light"]) .reader-verse--echo-hover {
-    background: rgba(120, 150, 255, 0.09) !important;
-  }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover { background: rgba(120,150,255,0.14) !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-quotation   { background: rgba(220,140, 60,0.28) !important; border-left-color: #f0a060 !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-allusion    { background: rgba(100,140,255,0.25) !important; border-left-color: #8aadff !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-fulfillment { background: rgba( 60,200,100,0.25) !important; border-left-color: #5dca80 !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-type        { background: rgba(180, 80,255,0.25) !important; border-left-color: #c97aff !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-shadow      { background: rgba(180, 80,255,0.25) !important; border-left-color: #c97aff !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-theme       { background: rgba( 40,190,220,0.25) !important; border-left-color: #60d0e8 !important; }
+  :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-parallel    { background: rgba(160,160,160,0.20) !important; border-left-color: #aaa    !important; }
 }

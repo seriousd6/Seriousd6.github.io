@@ -26,8 +26,8 @@ Scan the **NT Work Queue** table first, then the **OT Work Queue** if NT is exha
 | Status value | Action |
 |---|---|
 | `not started` or `partial` | Candidate — proceed to 1b |
-| `in-progress @ <timestamp>` where timestamp is **< 40 minutes** old | **Skip** — another agent is actively working this unit; move to the next row |
-| `in-progress @ <timestamp>` where timestamp is **≥ 40 minutes** old | Candidate — treat as abandoned; claim it as your own in Step 1c |
+| `in-progress @ <timestamp>` where timestamp is **< 20 minutes** old | **Skip** — another agent is actively working this unit; move to the next row |
+| `in-progress @ <timestamp>` where timestamp is **≥ 20 minutes** old | Candidate — treat as abandoned; claim it as your own in Step 1c |
 | `in-progress` (no timestamp) | Candidate — legacy format; treat as abandoned and claim it |
 | `complete` | Skip |
 
@@ -40,7 +40,7 @@ raw = 'in-progress @ 2026-06-05T14:30:00Z'   # ← paste the cell value
 ts_str = raw.split('@ ')[1].strip()
 ts = datetime.fromisoformat(ts_str.replace('Z', '+00:00'))
 age = datetime.now(timezone.utc) - ts
-print('age:', age, '— stale' if age > timedelta(minutes=40) else '— active, SKIP')
+print('age:', age, '— stale' if age > timedelta(minutes=20) else '— active, SKIP')
 ```
 
 ### 1b. Verify actual completeness with Python

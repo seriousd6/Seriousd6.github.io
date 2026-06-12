@@ -1,23 +1,16 @@
 """
-1-2 Kings — all four layers.
-Key NT: Elijah/Elisha (type of John the Baptist/Jesus), temple dedication (1 Kgs 8),
-        Naaman's healing (Luke 4 context), widow of Zarephath (Luke 4),
-        Josiah's reform, exile and its theological meaning.
+mkt-original — 1 Kings 10–11
+run: python3 scripts/zc-original-1kings-10-11.py
+
+Ch10: Queen of Sheba; Solomon's peak wealth — Deut 17 violations accumulate
+Ch11: Solomon's downfall — foreign wives, idolatry, adversaries, Jeroboam's prophecy
+Key terms: šēm (name/reputation), ḥîḏôt (riddles), ʾāhab (love — ironic reuse),
+           šālēm (complete/whole heart), qāraʿ (tear — word + sign-act), nēr (lamp)
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +22,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,96 +30,90 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-KINGS1_ECHO = {
-  "8": {
-    "27": [
-      {"type": "allusion", "target": "Acts 7:48-50", "note": "But will God indeed dwell on the earth? Behold, heaven and the highest heaven cannot contain you, how much less this house that I have built — Solomon's prayer at the temple dedication acknowledges divine transcendence; Stephen quotes Isa 66:1-2 to make the same point: the Most High does not dwell in temples made by human hands; both point toward the incarnation as the true dwelling of God among his people (John 1:14)"}
-    ]
+KINGS1 = {
+  "10": {
+    "1": "<p>The queen of Sheba heard of Solomon's <em>šēm</em> (name/fame) connected with the name of YHWH and came to test him with <em>ḥîḏôt</em> (riddles, enigmatic questions — Judg 14:12-13; Prov 1:6 lists the ḥîḏāh alongside the māšāl as forms of wisdom discourse). The verb for 'test' (<em>nāsāh</em>) is the same used for Abraham's testing in Gen 22:1 and Israel's testing in the wilderness (Exod 17:2); here it is applied to Solomon's wisdom. The Queen of Sheba (ancient Sabaean kingdom, modern Yemen/southern Arabia) represents the farthest reaches of the known world coming to verify whether YHWH's wisdom is what is reported.</p>",
+    "2": "<p>Her retinue is described as <em>ḥayil</em> (force/strength — used for an army), underscoring the scale. Her gifts — spices, gold, precious stones — mirror the tribute language of ancient Near Eastern diplomatic exchanges. Spices (<em>bəśāmîm</em>) from Arabia were one of the most valuable commodities of the ancient world; the phrase 'never again came such an abundance of spices' (v10) confirms the extraordinary nature of this gift.</p>",
+    "3": "<p>Solomon answered all her <em>dəḇārîm</em> (words/questions) — the verse emphasizes comprehensiveness: 'there was nothing hidden from the king that he did not explain to her.' The rhetorical structure (she asked, he answered everything) frames Solomon's wisdom as having no limits or gaps — the apex of the gift given in ch3.</p>",
+    "4": "<p>She 'saw' (<em>wattarʾ</em>) all his wisdom and the house he built — the verb of witness is repeated emphatically in v5. The queen's encounter with Solomon's wisdom is an encounter with the visible embodiment of YHWH's gift; the architecture and administration are expressions of the wisdom, not merely its backdrop.</p>",
+    "5": "<p>The list of what overwhelmed her — the food, the seating of his officials (<em>mōšaḇ ʿăḇāḏāyw</em>), the service of his attendants, their clothing (<em>malbûšêhem</em>), his cupbearers (<em>mašqāyw</em>), and the ascent by which he went up to YHWH's house — is a royal court portrait of astonishing order. The phrase 'there was no more spirit in her' (<em>wəlōʾ-hāyāh bāh ʿôd rûaḥ</em>) uses the same term <em>rûaḥ</em> for spirit/breath; she was literally breathless.</p>",
+    "6": "<p>She begins her speech: 'The word (<em>dāḇār</em>) I heard in my own country about your deeds and your wisdom was true (<em>ʾĕmet</em>).' The word <em>ʾĕmet</em> (truth, faithfulness, reliability) is the same root as the covenant faithfulness word; she is acknowledging that the report was genuinely reliable.</p>",
+    "7": "<p>'The half was not told me' (<em>lōʾ hûggad lî haḥăṣî</em>) — a proverbial expression of how reality exceeds reputation. Her wisdom and prosperity (she brackets both) exceed their fame. The report structure (heard → came → saw) parallels the evangelistic pattern in Ruth 2:11 and will recur in NT missionary reports.</p>",
+    "8": "<p>'How fortunate (<em>ʾašrê</em>) are your men!' The Beatitude formula <em>ʾašrê</em> (blessed, happy, congratulated — the root of the Psalms' ʾašrê-sayings and Matt 5:3-12) is applied to those who 'stand before you and hear your wisdom.' Proximity to wisdom produces well-being. The same logic appears in Prov 3:13 ('blessed is the man who finds wisdom') and Matt 13:16-17.</p>",
+    "9": "<p>The Queen of Sheba's doxology uses YHWH's covenant name: 'Praise YHWH your God (<em>yəhî YHWH ʾĕlōhêḵā bārûḵ</em>).' A foreign queen pronounces a blessing on YHWH by name, acknowledging that Solomon's installation on the throne is an act of divine love: 'because YHWH has loved Israel forever' (<em>bəʾahaḇat YHWH ʾet-yiśrāʾēl ləʿôlām</em>). This anticipates the eschatological vision of the nations recognizing YHWH (Isa 2:2-4; Ps 72:10-11).</p>",
+    "10": "<p>She gave 120 talents of gold — an enormous amount. The 'abundance of spices' (<em>bəśāmîm harbēh məʾōd</em>) is emphasized as unprecedented: 'never again came such an abundance of spices as the Queen of Sheba gave to Solomon.' Archaeological records of the Sabaean kingdom confirm their role as major spice and incense traders along the Arabian trade routes.</p>",
+    "11": "<p>Hiram's fleet returning from Ophir (an unidentified gold source, possibly in Arabia, East Africa, or India) brought <em>ʿăṣê ʾalmûggîm</em> (almugwood, possibly sandalwood or red sandalwood) — a rare exotic wood used for the temple and for musical instruments. The conjunction of temple construction materials with trade goods from multiple distant lands marks Solomon's project as an international undertaking.</p>",
+    "12": "<p>The almugwood was used for <em>misgərôt</em> (supports, banisters) for the temple and palace, and for <em>kinnōrôt wənəḇālîm</em> (lyres and harps) for the musicians. These instruments become central to temple worship; the Levitical musical tradition established here (1 Chr 25) continues through the Psalms.</p>",
+    "13": "<p>Solomon gave the queen 'all she desired and asked for, in addition to what he gave her from his royal bounty' (<em>miyyaḏ hammelek</em>, from the king's hand). The phrase 'all she desired' (<em>kol-ḥepṣāh</em>, all her desire/delight) is the same vocabulary used for the delight in wisdom (Prov 3:15, 8:11). The queen departs satisfied — carrying the gift of wisdom back to the ends of the earth.</p>",
+    "14": "<p>The annual gold tribute: 666 talents. The specific number <em>šēš mēʾôt šiššîm wāšēš kikkār</em> (666 talents) invites comparison with Rev 13:18; the more direct significance is that this verse begins the Deuteronomy 17:17 violation sequence. Deut 17:17 explicitly prohibits the king from accumulating silver and gold excessively; the narrative is documenting Solomon's systematic transgression of the Mosaic royal law.</p>",
+    "15": "<p>The tribute calculation is explicit: in addition to regular merchants and trade revenue, revenues came from 'all the kings of Arabia' (<em>malkê hāʿăraḇ</em>) and from regional governors. The administrative apparatus for collecting this revenue mirrors the 12-district system of ch4.</p>",
+    "16": "<p>Two hundred large shields (<em>ṣinnāh</em>) of beaten gold — 600 shekels each — stored in the House of the Forest of Lebanon. The shields were display items demonstrating power; in 1 Kgs 14:26 Shishak of Egypt will take them, and Rehoboam will replace them with bronze (14:27) — the progressive devaluation of Solomon's legacy is tracked through the fate of these shields.</p>",
+    "17": "<p>Three hundred smaller shields (<em>māgēn</em>, a different shape from the ṣinnāh) at 3 minas each were stored in the same treasury. The transparency of this wealth accumulation is deliberate: the narrator documents the violation of Deut 17:17 in plain sight while the wealth is at its most impressive.</p>",
+    "18": "<p>The great ivory throne overlaid with finest gold — the largest throne described in any ancient Near Eastern text. Ivory (<em>šēn</em>, tooth/tusk) from elephants was among the most precious materials in the ancient world; the throne's visual scale and material extravagance embody the Solomonic kingdom at its peak.</p>",
+    "19": "<p>The throne's architectural details — six steps, rounded top, armrests, two lions flanking the seat — convey royal authority through symbolic form. Lions (<em>ʾăryāyôt</em>) symbolize royal power throughout the ancient Near East; twelve lions on the steps (v20) echo the twelve tribes over whom Solomon reigns.</p>",
+    "20": "<p>'Nothing like it had been made in any kingdom' (<em>lōʾ-naʿăśāh kēn ləḵol-mamlāḵôt</em>) — a superlative that marks the throne as unique among all human governments. The Solomonic narrative reaches its visual apex here; what follows in ch11 is the moral unraveling of everything this throne represents.</p>",
+    "21": "<p>All Solomon's drinking vessels were gold; silver was not considered valuable enough to use (<em>ʾên kesep lōʾ ḥāšaḇ</em>, silver was not counted). Silver as common as stones (v27) signals that extreme abundance has inverted normal economic hierarchies — a literary signal of approaching instability.</p>",
+    "22": "<p>Tarshish ships (<em>ʾŏnî tarshish</em> — a fleet designed for long-distance ocean trade, named for Tarshish at the far western Mediterranean) returned every three years bringing 'gold, silver, ivory, apes, and peacocks' (<em>zāhāḇ wāḵesef šenhabbîm wəqôpîm wətukkiyyîm</em>). The exotic cargo marks Solomon's commercial reach to the ends of the earth.</p>",
+    "23": "<p>'Solomon surpassed all the kings of the earth in riches and wisdom' — a summary statement marking the absolute peak; after this, the downfall begins (ch11). The pairing of <em>ʿōšer</em> (riches) and <em>ḥoḵmāh</em> (wisdom) mirrors what YHWH gave in ch3. The narrative has inverted the order: the riches now dominate the account.</p>",
+    "24": "<p>'All the earth sought the face of Solomon' (<em>kol-hāʾāreṣ məḇaqqəšîm ʾet-pənê šəlōmōh</em>) — the phrase 'seeking the face' (<em>bāqaš pānîm</em>) is normally used for seeking YHWH's presence (Ps 27:8); here it is applied to Solomon. The nations are seeking Solomon's wisdom as if seeking the divine. The trajectory toward the Messianic vision (nations seeking YHWH) is present but distorted.</p>",
+    "25": "<p>Annual gifts from all visitors included 'horses and mules' — central to the Deut 17:16 violation: 'He must not acquire many horses for himself, nor return the people to Egypt to acquire more horses.' Horses in vv26-29 are the next documented violation of the Mosaic royal law.</p>",
+    "26": "<p>Solomon accumulated 1,400 chariots (<em>reḵeḇ</em>) and 12,000 horsemen (<em>pārāšîm</em>). Deut 17:16 prohibited the king from multiplying horses (<em>lōʾ yarbeh-lô sûs</em>); Solomon has done exactly this, creating the largest chariot force in Israel's history. The horse corps was stationed in chariot cities (<em>ʿārê hāreḵeḇ</em>) — a permanent military apparatus requiring ongoing taxation and labor to maintain.</p>",
+    "27": "<p>'The king made silver as common in Jerusalem as stones' — the devaluation of precious metal marks the literary climax of Solomonic wealth, immediately before ch11's moral reversal. This is the Deuteronomic wealth-prohibition fulfilled to its extreme opposite; the excess is documented as the setup for the fall.</p>",
+    "28": "<p>Horses imported from Egypt (<em>mimmitsrayim</em>) and Kue (Cilicia, in southern Turkey) — the traders received them from Kue at a fixed price. This verse directly violates Deut 17:16's prohibition: 'nor shall he cause the people to return to Egypt in order to multiply horses.' The Mosaic law was designed to prevent Israel from reconstituting the Egyptian imperial military model; Solomon systematically recreates it.</p>",
+    "29": "<p>A chariot from Egypt cost 600 shekels of silver; a horse 150. The royal traders exported them to 'all the kings of the Hittites and of the Arameans' — Solomon functions as an arms dealer in the ancient Near East's chariot trade. The same economic logic that concentrates wealth also concentrates the instruments of war, in direct contradiction to the king's covenant role as shepherd of a people who should trust YHWH rather than horses (Ps 20:7; Isa 31:1).</p>"
   },
-  "17": {
-    "1": [
-      {"type": "allusion", "target": "Jas 5:17", "note": "Elijah was a man with a nature like ours, and he prayed fervently that it might not rain, and for three years and six months it did not rain on the earth — James cites Elijah's prayer as an example of effective righteous prayer; the three-and-a-half-year drought is applied typologically in Revelation (11:6) to the witnesses' power"}
-    ],
-    "8": [
-      {"type": "fulfillment", "target": "Luke 4:25-26", "note": "In truth I tell you, there were many widows in Israel in the days of Elijah ... and Elijah was sent to none of them but only to Zarephath, a city of Sidon, to a woman who was a widow — Jesus cites the widow of Zarephath (1 Kgs 17:8-16) as an OT precedent for divine grace going to a Gentile; the Nazareth congregation's rejection of Jesus follows their rejection of this theological point"}
-    ]
-  },
-  "19": {
-    "10": [
-      {"type": "allusion", "target": "Rom 11:2-4", "note": "I have been very jealous for YHWH the God of hosts. For the people of Israel have forsaken your covenant, thrown down your altars, and killed your prophets with the sword, and I, even I only, am left — Paul cites Elijah's complaint and YHWH's response (seven thousand who have not bowed to Baal) as proof that God has not rejected Israel; the remnant principle is the OT basis for Israel's partial hardening and the elect remnant within"}
-    ]
-  }
-}
-
-KINGS1_ORIGINAL = {
-  "8": {
-    "46": "<p><strong>ki yechetau lecha ki ein adam asher lo yecheta</strong>: 'For there is no one who does not sin' — Solomon's prayer at the temple dedication contains the OT's clearest statement of universal sinfulness (v. 46), which shapes the entire temple theology: the temple is not a reward for Israel's righteousness but YHWH's provision for the people's ongoing need of forgiveness. The request for forgiveness when Israel sins (8:46-53) anticipates the entire sacrificial system's purpose. Paul quotes a similar principle in Rom 3:23 ('all have sinned and fall short of the glory of God') as the universal diagnosis that makes the gospel necessary.</p>"
-  },
-  "19": {
-    "12": "<p><strong>ve-achar haesh qol demamah daqah</strong>: 'And after the fire the sound of a low whisper' (or 'a still small voice,' KJV). The theophany at Horeb (Elijah's experience in 1 Kgs 19) deliberately echoes Sinai: Elijah is at Horeb (another name for Sinai), the mountain of God; YHWH passes by with wind, earthquake, and fire (the Sinai theophanic elements, Exod 19:16-19). But the climax is not in the dramatic elements but in the <em>qol demamah daqah</em> — the sound of sheer silence, the gentle whisper, the still small voice. YHWH is not absent from the dramatic; but he speaks in the gentle. The NT's Spirit comes both in wind and fire (Acts 2:2-3) and in the interior witness of the heart (Rom 8:16).</p>"
-  }
-}
-
-KINGS1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Kings (originally one book, divided in the LXX) narrates the history of the united monarchy (Solomon) and the divided kingdom (Israel/Judah) from ca. 971-561 BCE, ending with the release of Jehoiachin from Babylonian prison. Its authors (the 'Deuteronomistic historian') evaluate each king against the standard of Deuteronomy: fidelity to YHWH alone, worship only at the Jerusalem temple, and covenant obedience. The theological verdict is relentlessly critical: of the 20 kings of Judah, only Hezekiah and Josiah receive full approval. The narrative explains why the exile happened: Israel and Judah were destroyed because they refused to keep YHWH's covenant. This theological history is the background for understanding the exile as a covenant curse (Deut 28:36-37, 64-68) rather than YHWH's defeat.</p>"
-  }
-}
-
-KINGS1_CHRIST = {
-  "19": {
-    "18": "<p>A direct revelation: 'Yet I will leave seven thousand in Israel, all the knees that have not bowed to Baal, and every mouth that has not kissed him.' The remnant principle — YHWH preserves a faithful minority even when the majority apostasizes — is one of the OT's most important theological contributions. Paul applies it directly to his own time (Rom 11:4-5): 'So too at the present time there is a remnant, chosen by grace.' The Elijah crisis reveals the structure of all subsequent covenant history: visible apostasy of the majority, invisible remnant of the elect, YHWH's sovereign preservation of his people through what appears to be total defeat. The cross looks like the end of Jesus's movement; Pentecost reveals it was the beginning of the new covenant remnant.</p>"
-  }
-}
-
-KINGS2_ECHO = {
-  "2": {
-    "11": [
-      {"type": "allusion", "target": "Luke 9:51", "note": "Elijah went up by a whirlwind into heaven — the ascension of Elijah (taken up without dying) is the OT's second ascension-figure (with Enoch, Gen 5:24); Jesus's ascension (Acts 1:9) fulfills the pattern; Luke explicitly notes Jesus 'set his face to go to Jerusalem' in the context of his upcoming departure (exodou, Luke 9:31) echoing Elijah's departure"},
-      {"type": "fulfillment", "target": "Matt 17:3", "note": "Elijah and Moses appear with Jesus at the Transfiguration — the two figures who had unique mountaintop theophanies (Moses at Sinai, Elijah at Horeb/Sinai) flank the transfigured Jesus; the Transfiguration is the convergence of the Law (Moses) and the Prophets (Elijah) in the one of whom they spoke"}
-    ]
-  },
-  "4": {
-    "35": [
-      {"type": "allusion", "target": "Acts 20:9-12", "note": "The child sneezed seven times and opened his eyes — Elisha raises the Shunammite's son (2 Kgs 4:32-37); Paul raises Eutychus in a similar pattern (fell from a third floor, Paul lay on him, he came to life); both instances frame the apostle as an Elisha-figure extending Jesus's resurrection ministry"}
-    ]
-  },
-  "5": {
-    "14": [
-      {"type": "fulfillment", "target": "Luke 4:27", "note": "There were many lepers in Israel in the time of the prophet Elisha, and none of them was cleansed but only Naaman the Syrian — Jesus cites Naaman's healing as the OT precedent for grace going to a Gentile outsider; Naaman's healing is a type of Gentile inclusion, accomplished through the humbling medium of simple obedience (washing in the Jordan)"}
-    ]
-  }
-}
-
-KINGS2_ORIGINAL = {
-  "2": {
-    "9": "<p><strong>vehi peh shnayim beruchecha elai</strong>: 'Please let there be a double portion of your spirit on me.' Elisha's request for a 'double portion' (<em>pi shnayim</em>) is technically a request for the eldest son's inheritance share (Deut 21:17) — he is asking to be Elijah's primary heir and successor. Elijah responds that this is a 'hard thing' (<em>kasha</em>) but it will be granted if Elisha sees him taken. Elisha does see it, receives the spirit, and performs miracles that echo and exceed Elijah's. The Elijah-Elisha succession pattern shapes the NT's understanding of John the Baptist-Jesus relationship: John comes in the spirit and power of Elijah (Luke 1:17), and Jesus works in a pattern that exceeds John's, as Elisha's miracles exceeded Elijah's in number (Elijah performs 8 miracles in Kings; Elisha performs 16).</p>"
-  }
-}
-
-KINGS2_CONTEXT = {
-  "17": {
-    "6": "<p>The fall of Samaria (722 BCE) to the Assyrian Empire (under Sargon II, 2 Kgs 17:6) ended the northern kingdom of Israel after 210 years and 19 kings (every one of whom 'did evil in the sight of YHWH'). The author of Kings provides the theological explanation in 17:7-23: because Israel sinned against YHWH, walked in the customs of the nations, built high places, served Baal — YHWH removed them out of his sight. The Assyrian exile of the northern tribes ('the ten lost tribes') was permanent: they were never restored as a distinct entity. The northern exile is the first fulfillment of the Deuteronomic covenant curses (Deut 28:36, 64); the Babylonian exile of Judah (586 BCE) is the second. Both are explained as covenant consequences, not historical accidents.</p>"
-  }
-}
-
-KINGS2_CHRIST = {
-  "5": {
-    "14": "<p>A type: 'So he went down and dipped himself seven times in the Jordan, according to the word of the man of God, and his flesh was restored like the flesh of a little child, and he was clean.' Naaman's healing is one of the OT's most theologically rich type-narratives: (1) the outsider (a Gentile military commander) receives healing denied to insiders (Israelite lepers, Luke 4:27); (2) the healing comes through water — specifically the Jordan, the covenant-crossing water; (3) the means is foolishly simple (wash seven times) — Naaman expects a dramatic prophetic ritual; (4) the result is total cleansing. Jesus's citation of Naaman in Luke 4:27 to explain his own ministry to Nazareth (grace going to unexpected outsiders) and the Baptist's baptism in the Jordan both stand in the Naaman-and-the-Jordan typological stream: the Jordan is the water of covenant-entry and cleansing, fulfilled in baptism into Christ.</p>"
+  "11": {
+    "1": "<p>King Solomon <em>ʾāhab</em> (loved) many foreign women — the narrator's biting irony: the same verb used in 3:3 ('Solomon <em>loved</em> YHWH') and 5:1 (Hiram <em>loved</em> David) now describes Solomon's attachment to foreign women. The love that should be concentrated on YHWH (Deut 6:5) is dispersed among a catalog of nations: Moab, Ammon, Edom, Sidon, the Hittites — nations whose women Deut 7:3-4 and Exod 34:16 specifically prohibit as marriage partners because 'they will turn your heart after their gods.'</p>",
+    "2": "<p>The prohibition on intermarriage is repeated verbatim: 'You shall not intermarry with them, nor they with you, for they will surely turn your heart after their gods.' The verb <em>nāṭāh</em> (turn/incline) is the key diagnostic: the heart can be turned by sustained relational pressure. The law's specificity about these nations is not ethnic but religious — the danger is the gods they bring with them.</p>",
+    "3": "<p>Seven hundred wives of royal standing (<em>śārôt</em>, noble/princess) and three hundred concubines — 1,000 total. Deut 17:17 explicitly prohibits the king from <em>harbeh lô nāšîm</em> (multiplying wives for himself) 'lest his heart turn away.' Solomon has multiplied to the extreme. The causal chain is stated immediately: 'his wives turned his heart away' (<em>wayyaṭṭû nāšāyw ʾet-libbô</em>) — exactly the consequence the law warned against.</p>",
+    "4": "<p>'As Solomon grew old (<em>ziqnāh</em>)' — the temporal marker is significant; this is not youthful folly but aged apostasy. His heart was not <em>šālēm</em> (complete, whole, undivided) with YHWH his God. The irony is sharp: <em>šəlōmōh</em> (Solomon) and <em>šālēm</em> share the same root (šlm, completeness/peace); the man whose name means completion/peace lacked a complete heart. David's heart is the standard: the Davidic measure is wholeness of devotion, not perfection of behavior.</p>",
+    "5": "<p>Solomon followed <em>ʿAštōreṯ</em> (Astarte/Ashtoreth — the Canaanite and Phoenician goddess of love, fertility, and war; her worship involved sexual ritual and sacred prostitution) and <em>milkôm</em> (Milcom/Molech — the national god of the Ammonites; Lev 18:21 and 20:2-5 prohibit giving children to Molech, associated with child sacrifice). The specific gods are named, not generic 'idolatry' — the text tracks which covenant violations are occurring.</p>",
+    "6": "<p>'Solomon did what was evil (<em>rāʿ</em>) in YHWH's eyes' — the standard Deuteronomistic verdict formula used for every subsequent apostate king; Solomon is its first subject. 'He did not fully follow YHWH' uses the adverb <em>mālēʾ</em> (fully/completely) — the same completeness vocabulary as v4. The contrast with David is structural: David's failures were sins of commission; Solomon's failure is incomplete devotion, a divided heart.</p>",
+    "7": "<p>Solomon built a high place (<em>bāmāh</em>) for <em>kəmôš</em> (Chemosh — the national god of Moab; Num 21:29 calls Moab 'the people of Chemosh') on the 'mountain east of Jerusalem' — the Mount of Olives, directly across the Kidron Valley from the temple. And for <em>mōleḵ</em> (Molech), the <em>šiqqûṣ</em> (detestable thing/abomination — from a root meaning to be filthy) of the Ammonites. 2 Kings 23:13 derisively names this 'the mount of corruption.'</p>",
+    "8": "<p>'He did the same for all his foreign wives who burned incense and offered sacrifices to their gods' — the high places built for Chemosh and Molech were replicated for each of Solomon's foreign wives. The Mount of Olives became a cult hill; Josiah defiles them centuries later (2 Kgs 23:13) but does not destroy them.</p>",
+    "9": "<p>'YHWH was angry (<em>wayyitʾanap</em>) with Solomon' — the verb uses the idiom of burning nostrils (<em>ʾanap</em>, angry), the standard Hebrew metaphor for divine wrath (cf. Exod 4:14). The anger is grounded in accountability: Solomon had received two direct theophanies (Gibeon, ch3; 9:2-9) and had been explicitly warned about this failure at the second appearance (9:6-7). Greater revelation means greater accountability (Luke 12:48).</p>",
+    "10": "<p>'He had warned him expressly about this thing' (<em>wəṣiwwāh ʾēlāyw ʿal-haddāḇār hazzeh</em>) — the verb <em>ṣiwwāh</em> (commanded, ordered, decreed) is the language of formal divine instruction; YHWH commanded Solomon not to follow other gods, and Solomon's apostasy is therefore willful disobedience of explicit divine command, not ignorance.</p>",
+    "11": "<p>YHWH's judgment oracle: 'Since this is from you (<em>yaʿan ʾăšer hāyətāh-zōʾt ʾimmāḵ</em>)' — the phrasing puts the causation directly on Solomon's personal choice. 'I will surely tear the kingdom from you' uses <em>qārôaʿ ʾeqraʿ</em> (an infinitive absolute for intensified certainty). The verb <em>qāraʿ</em> (tear) is the same word used for Ahijah's symbolic tearing of the garment in v30 — the judgment oracle and the sign-act use the same vocabulary, binding them as word and enacted word.</p>",
+    "12": "<p>For the sake of David: 'I will not do this in your lifetime.' The Davidic covenant functions as a restraining mercy — David's faithfulness provides a buffer against Solomon's full judgment falling immediately. This is not merit-transfer but relational loyalty: YHWH keeps his promises to David even when the son forfeits his own. The same principle appears in 2 Kgs 19:34 and 20:6.</p>",
+    "13": "<p>'I will not tear away the entire kingdom' — one tribe will remain 'for the sake of my servant David' and 'for the sake of Jerusalem, the city I have chosen.' The double <em>lemaʿan</em> (for the sake of) identifies the two bases of partial mercy: the Davidic covenant and the Zion theology. Both foundations carry the covenant forward despite the fracture.</p>",
+    "14": "<p>YHWH 'raised up (<em>wayyāqem</em>) an adversary (<em>śāṭān</em>) against Solomon: Hadad the Edomite.' The word <em>śāṭān</em> here is a common noun (adversary, not the proper name 'Satan'); YHWH appoints adversaries as instruments of covenantal discipline. Hadad the Edomite descends from the royal line of Edom — the nation that was Israel's perennial enemy, tracing back to the Esau-Jacob conflict.</p>",
+    "15": "<p>The backstory: when David was in Edom, Joab the army commander killed every male in Edom. This is the Joab of 2 Sam 8:13-14 who 'struck down 18,000 Edomites in the Valley of Salt.' The connection between David's war policy and Solomon's adversary is explicit: Solomon's sins are being addressed by YHWH raising up those whom David's military campaigns had harmed.</p>",
+    "16": "<p>Six months of campaign — Joab and all Israel stayed in Edom until every male was killed. This is why Hadad carries deep personal grievance: his father and countrymen were slaughtered and he escaped as a child refugee. The adversary raised against Solomon is not an arbitrary enemy but a victim of David's imperial expansion.</p>",
+    "17": "<p>Hadad escaped with his father's servants to Egypt when he was still a <em>naʿar qāṭōn</em> (small boy) — the same phrase Solomon used of himself in 3:7 ('I am only a small boy'). The parallel inverts: Solomon the small boy who received divine wisdom became the king who violated the covenant; Hadad the small boy who survived by fleeing to Egypt returns as YHWH's appointed adversary.</p>",
+    "18": "<p>From Midian to Paran to Egypt — the exodus route in reverse. Hadad follows the trajectory opposite to Israel's foundational journey. Pharaoh's reception of Hadad (house, provisions, land) mirrors Pharaoh's reception of Israel in Gen 47 — the irony is that Egypt, the house of bondage, becomes the refuge of YHWH's appointed adversary against Israel's king.</p>",
+    "19": "<p>Hadad found great favor (<em>ḥēn māṣāʾ</em>) with Pharaoh — the same idiom used for Joseph (Gen 39:4; 41:37-38) and Moses (Exod 11:3). YHWH's hand in Hadad's elevation to royal status through marriage to the queen's sister is visible, even without explicit narration: the adversary is being formed.</p>",
+    "20": "<p>Tahpenes's sister weaned Genubath (Hadad's son) in Pharaoh's house — Hadad's child is raised in the Egyptian royal household, paralleling Moses raised in Pharaoh's house (Exod 2:10). The pattern suggests that YHWH uses Egyptian royal patronage as the formation environment for his instruments of historical change.</p>",
+    "21": "<p>When Hadad heard that David and Joab were dead, he asked Pharaoh to let him go home. The motivation is implied: the military commanders who conquered Edom are gone; the time to return and reclaim what was lost has come. Pharaoh's question — 'What have you lacked here?' — implies the comfortable life Hadad is leaving behind.</p>",
+    "22": "<p>Hadad's response — 'Nothing, but please let me go' — acknowledges Pharaoh's provision while insisting on return: comfort is not his goal, justice is. The <em>raq</em> (only/nevertheless) that introduces his answer marks the tension between gratitude and divine compulsion; he is driven back by a purpose larger than his personal comfort.</p>",
+    "23": "<p>YHWH raised up another adversary (<em>wayyāqem</em> again — the verb is repeated from v14 to mark the parallel): Rezon son of Eliada, who had fled from Hadadezer king of Zobah. The backstory takes us to 2 Sam 8:3-8 where David destroyed Hadadezer. Rezon is another product of David's military victories creating future adversaries — imperial conquest produces lasting enmity.</p>",
+    "24": "<p>After David destroyed the forces of Zobah, Rezon gathered men and went to Damascus where 'he became king' — establishing the Aramean kingdom of Damascus. This kingdom will be a persistent adversary of Israel through the 9th-8th centuries (1 Kgs 20; 2 Kgs 5-8; Amos 1:3-5) — all traceable to this moment when Solomon's sins activated the adversaries David's wars had created.</p>",
+    "25": "<p>'He was an adversary of Israel all the days of Solomon' — together with Hadad (v14) these two adversaries bracket Solomon's reign under external pressure. The word <em>śāṭān</em> (adversary, v23) frames the opposition as divinely appointed instruments of discipline, not merely political challenges.</p>",
+    "26": "<p>Jeroboam son of Nebat, an Ephraimite from Zeredah, 'lifted up his hand against the king' (<em>wayyārem yāḏ bammelek</em> — raised his hand in rebellion). His mother was a widow (<em>ʾalmānāh</em>) named Zeruah — the widow's son who will fracture the Davidic kingdom. He was one of Solomon's officials (<em>ʿeḇed</em>, servant/officer) — his rebellion comes from within the royal administration.</p>",
+    "27": "<p>The reason given: Solomon was building the Millo (<em>hammillôʾ</em> — the terrace/fill structure of the city wall, likely the Stepped Stone Structure on the southeastern ridge of Jerusalem visible in archaeology) and was repairing the breach in the city of his father David. The forced labor required for these construction projects is the social context of Jeroboam's rise.</p>",
+    "28": "<p>Jeroboam was a <em>gibbôr ḥayil</em> (mighty man of valor/force — the same description for Boaz in Ruth 2:1 and for David's warriors in 2 Sam 23) — highly capable. Solomon put him over all the forced labor (<em>mas</em>) of the house of Joseph (Ephraim and Manasseh). This appointment gives Jeroboam both the exposure to Ephraim's grievances and the organizational position to act on them.</p>",
+    "29": "<p>The prophet Ahijah the Shilonite met Jeroboam as he was leaving Jerusalem. Ahijah is from Shiloh — where the Tabernacle resided before it was abandoned (Jer 7:12-14); a prophet from the ancient sanctuary site encounters the future king who will make Bethel and Dan his rival sanctuary sites (ch12). He was wearing a new garment (<em>śalmāh ḥăḏāšāh</em>) — the instrument of the sign-act about to follow.</p>",
+    "30": "<p>Ahijah took the new garment and tore it (<em>wayyiqrāʿēhū</em>) into twelve pieces. The verb <em>qāraʿ</em> (tear) is the same used in YHWH's oracle against Solomon in v11: 'I will <em>qāraʿ</em> the kingdom from you.' The sign-act enacts the divine word — the tearing of the garment is the tearing of the kingdom made visible. New garment = the new king's kingdom; tearing = the kingdom's division.</p>",
+    "31": "<p>'Take ten pieces for yourself' — Jeroboam will receive ten tribes. The oracle formula is full and formal: 'Thus says YHWH the God of Israel: I am about to tear the kingdom from the hand of Solomon and will give you ten tribes.' The divine first-person announcement establishes that Jeroboam's rise is YHWH-initiated, not merely human rebellion.</p>",
+    "32": "<p>One tribe remains for Solomon's son: 'for the sake of my servant David' (<em>lemaʿan ʿaḇdî dāwid</em>) and 'for the sake of Jerusalem, the city I have chosen from all the tribes of Israel.' The double ground for partial mercy recurs from v13. The city carries covenantal weight equal to the dynastic promise: YHWH's dwelling place is the second anchor of Davidic continuity.</p>",
+    "33": "<p>The specific indictment: 'they have forsaken me (<em>ʿāzəḇûnî</em>) and worshipped Ashtoreth, Chemosh, and Milcom.' The three gods named here match vv5 and 7 — the idols Solomon built high places for. The subject shifts between Solomon and 'they' — the narrator encompasses both the king and the people in the apostasy.</p>",
+    "34": "<p>'I will not take the whole kingdom from him' — for David's sake, Solomon will be kept as ruler for the rest of his life. The <em>lemaʿan dāwid ʿaḇdî</em> formula appears for the third time in three verses — the weight of the Davidic covenant is being measured out explicitly. YHWH is honoring a commitment made to David even as Solomon forfeits his own inheritance.</p>",
+    "35": "<p>'I will take the kingdom from his son's hand and give it to you — ten tribes.' The transfer is precise: ten tribes to Jeroboam, one tribe to Rehoboam. The 'son' is unnamed here but identified as Rehoboam in ch12:1. The narrative has built toward this fracture from ch11:1 — the moral cause (Solomon's idolatry) and the administrative cause (forced labor) converge in the kingdom's split.</p>",
+    "36": "<p>'I will give his son one tribe, so that my servant David may always have a <em>nēr</em> (lamp) before me in Jerusalem.' The lamp (<em>nēr</em>) is the dynastic symbol — the same word used in 2 Sam 21:17 ('you shall no longer go out with us to battle, lest you quench the <em>nēr</em> of Israel'). The Davidic dynasty is a lamp YHWH will not allow to be permanently extinguished; its continuity guarantees the lamplight burns until Messianic fulfillment (Ps 132:17; Luke 1:69).</p>",
+    "37": "<p>'I will take you, and you will reign over all that your heart desires (<em>kol ʾăšer tʾawweh napšəḵā</em>) and you will be king over Israel.' Jeroboam is offered both the kingdom and divine backing — conditional on the terms of v38. The phrase 'all that your soul desires' (<em>tʾawweh napšəḵā</em>) is generous; the offer anticipates that Jeroboam's ambition will be fulfilled, provided he follows the condition.</p>",
+    "38": "<p>The conditional offer to Jeroboam exactly mirrors the Davidic covenant terms: 'If you obey all I command you, walk in my ways, do what is right in my sight by keeping my statutes and commandments as my servant David did, I will be with you and build you a sure house (<em>bayit neʾĕmān</em>) as I built for David, and I will give you Israel.' The <em>bayit neʾĕmān</em> (enduring/faithful house) is the same phrase used in the Davidic covenant (1 Sam 25:28; 2 Sam 7:11-16). Jeroboam is offered the same dynasty-forming covenant. His failure to keep it (ch12:28ff) is the tragedy of 1 Kings.</p>",
+    "39": "<p>'I will humble the descendants of David because of this (<em>wəʿinnêṯî ʾet-zeraʿ dāwid</em>)' — but not forever: <em>raq lōʾ kol-hayyāmîm</em> (not all the days). The judgment is real but not permanent; the Davidic dynasty will be humiliated but not extinguished. This 'not forever' creates the eschatological opening for the Messianic restoration promised by the prophets (Isa 9:7; Jer 23:5-6; Ezek 37:24-25; Amos 9:11-12).</p>",
+    "40": "<p>Solomon tried to kill Jeroboam (<em>wayyəḇaqqēš šəlōmōh lahamît ʾet-yārābəʿām</em>) — the same pattern as Saul seeking to kill David, Herod seeking to kill the infant Jesus (Matt 2:13). The anointed-but-not-yet-king fleeing to Egypt is a recurring type: like David in the wilderness, like the divine Son, the legitimate claimant to the kingdom is protected by exile until the time of his installation arrives.</p>",
+    "41": "<p>The reference to the 'Book of the Acts of Solomon' (<em>sefer diḇrê šəlōmōh</em>) is a citation of an official court record now lost. Kings regularly cites such archival sources (e.g., 'the Book of the Annals of the Kings of Israel/Judah') — the author is acknowledging the selectivity of the narrative: what was theologically determinative has been preserved; much else has not.</p>",
+    "42": "<p>Solomon reigned forty years in Jerusalem — a complete generation (the same round number as David's reign, 2 Sam 5:4; and each forty-year wilderness period). The completeness of the number marks the era as finished; what follows is a new and lesser age.</p>",
+    "43": "<p>'Solomon rested with his ancestors' (<em>wayyiškab šəlōmōh ʿim-ʾăḇōṯāyw</em>) — the standard death formula for kings, using the sleep metaphor (<em>šāḵab</em>, to lie down). He was buried in the city of his father David, and his son Rehoboam succeeded him. The transition is immediate: the most magnificent king in Israel's history is dispatched in a single sentence. What matters now is what happens to the kingdom — ch12 answers that within verses.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1kings', KINGS1_ECHO, KINGS1_ORIGINAL, KINGS1_CONTEXT, KINGS1_CHRIST),
-        ('2kings', KINGS2_ECHO, KINGS2_ORIGINAL, KINGS2_CONTEXT, KINGS2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-original', '1kings')
+    merge_comm(c, KINGS1)
+    save_comm('mkt-original', '1kings', c)
+    print('1kings ch10-11 original: done')
 
 if __name__ == '__main__':
     main()

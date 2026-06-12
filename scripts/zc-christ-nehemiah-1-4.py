@@ -1,22 +1,23 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Christ Layer — Nehemiah chapters 1–4
+Run: python3 scripts/zc-christ-nehemiah-1-4.py
+
+Every verse — comprehensive Christological coverage required.
+
+Ch1: Nehemiah's intercessory prayer for the broken city → Christ's high-priestly intercession (Heb 7:25)
+     Confessing the sins of the people as his own → Christ bearing sin he did not commit (2 Cor 5:21)
+Ch2: The king's gracious response to Nehemiah's request → the Father granting the Son's request (John 11:42)
+     Going out to rebuild what was broken → Christ restoring what sin destroyed (Luke 19:10)
+     Inspecting the ruined walls by night → Christ knowing the true state of the church (Rev 2-3)
+Ch3: The entire city repaired section by section → the body of Christ built by many members (Eph 4:15-16)
+     Builders repairing opposite their own house → 1 Cor 3:10 — each building with care
+Ch4: Opposition to the building project → persecution of the church (Acts 5:38-39)
+     Armed while building → Eph 6:10-17 — the full armor of God for spiritual warfare
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -28,20 +29,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -50,160 +37,109 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
+DATA = {
+  "1": {
+    "1": "<p>Nehemiah's opening — son of Hacaliah, in the month of Chislev, in the citadel of Susa — situates the narrative in the diaspora, far from the ruined city. Christ also came from far off (Eph 2:13) to address human ruin: the incarnation is the divine movement from the heavenly throne toward the broken city of humanity. Nehemiah in the Persian citadel corresponds to Christ in the Father's presence, interceding for those whose walls have fallen.</p>",
+    "2": "<p>Hanani's report reaches Nehemiah at a distance — the condition of those far away, communicated to the one who has the power to act. Christ receives the report of human ruin not from a courier but through his own omniscience — and like Nehemiah, this knowledge is not merely information but the trigger of compassionate action. The arrival of bad news as the first movement of a restoration narrative is the structural pattern of the gospel: hearing the depth of human need precedes the going-out to address it.</p>",
+    "3": "<p>The walls broken down and gates burned with fire — Jerusalem's condition reported to Nehemiah — is the physical image of human spiritual ruin. The broken wall meant exposure, vulnerability, and dishonor. Christ saw the human condition with the same comprehensive vision: the total exposure of humanity to spiritual enemies, the absence of the protective covenant structure that sin had demolished. The Nehemiah narrative enacts in stone and fire what the gospel addresses in the soul.</p>",
+    "4": "<p>Nehemiah wept, mourned, fasted, and prayed — the fourfold response to news of the broken city. This is the posture of Christ in the Gospels: weeping over Jerusalem (Luke 19:41), mourning over hard hearts (Mark 3:5), fasting in the wilderness (Matt 4:2), and constant prayer (Luke 6:12; Heb 5:7). Nehemiah's grief over the broken city is a type of the divine grief over human ruin — the tears of the builder who has seen what his city has become.</p>",
+    "5": "<p>Nehemiah opens with the great-and-awesome God formula and covenant faithfulness: YHWH keeps covenant and steadfast love with those who love him (Deut 7:9). This is the basis on which he intercedes — not Israel's merit but YHWH's covenant commitment. Christ's intercession (Heb 7:25; Rom 8:34) rests on the same ground: not our merit but the covenant sealed in his blood (Heb 13:20). He intercedes as the one who has already fulfilled the covenant's obligations on our behalf.</p>",
+    "6": "<p>Nehemiah identifies himself with the people's sin: we have acted corruptly — I and my father's house have sinned. He was not personally guilty of the rebellions he confesses, yet he includes himself in the communal guilt. This representative-confession structure is fulfilled in Christ, who became sin for us though he knew no sin (2 Cor 5:21) — not merely identifying with guilt but bearing it as the covenant's representative.</p>",
+    "7": "<p>The specific covenant violation cited — we have not kept the commandments, the statutes, and the rules commanded through Moses — grounds the prayer in the Mosaic covenant's specific obligations. Christ as the new Moses (Heb 3:3-6) fulfills every commandment, statute, and rule that Israel failed to keep — not merely identifying the failure but providing the obedience that the covenant required and the people could not render.</p>",
+    "8": "<p>Nehemiah quotes the Mosaic warning: if you are unfaithful, I will scatter you among the peoples (Deut 28:64; Lev 26:33). The prayer appeals to YHWH's own covenantal logic by citing the curse that explains the current condition. Christ entered the full weight of the Mosaic covenant's curse — becoming a curse for us (Gal 3:13; Deut 21:23) — to absorb what Israel's unfaithfulness had earned and convert the curse into blessing through his substitutionary bearing of it.</p>",
+    "9": "<p>The corresponding promise: if you return to me and keep my commandments, I will gather them to the place I have chosen (Deut 30:4). Nehemiah appeals to the restoration-promise as the ground of his petition. Christ's gathering of the scattered people of God (John 11:52: to gather into one the children of God who are scattered abroad) is the ultimate fulfillment of this promise — the great return of YHWH's people to his presence.</p>",
+    "10": "<p>The redemption formula: your servants and your people whom you have redeemed by your great power and by your strong hand (Exod 6:6; 13:3). Nehemiah invokes the Exodus redemption as the basis for current action. Christ's redemption — who gave himself for us to redeem us from all lawlessness (Tit 2:14) — is the definitive act that fulfills and supersedes the Exodus redemption. The Exodus was a type; the cross is the substance.</p>",
+    "11": "<p>Nehemiah's prayer culminates in a specific petition: grant success to your servant today, and give him mercy in the sight of this man. The prayer-and-go structure — extended intercession followed by willing approach to the seat of earthly power — anticipates Gethsemane: prolonged prayer (Matt 26:36-44), then the willing step toward the one who would act against him. Nehemiah asked for mercy before the king; Christ asked that the cup pass, then yielded to the Father's will.</p>"
   },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
+  "2": {
+    "1": "<p>The narrative opens on the first of Nisan — the month of Passover — with Nehemiah serving wine before the Persian king. The cup-bearer stands between the king and potential poison — positioned between authority and danger. Christ as Mediator stands between humanity and the divine throne, bearing in his own body the risks of that mediation (Heb 2:14-15: sharing flesh and blood to destroy the one who has power over death).</p>",
+    "2": "<p>The king notices Nehemiah's sadness: why is your face sad, seeing you are not sick? The vulnerability of Nehemiah's sorrow before the king — the risk of appearing disloyal — required courage. Christ's entire earthly ministry was a public display of grief over human ruin (John 11:35; Luke 19:41) — not hidden sorrow but the visible manifestation of divine compassion before a watching world. The man of sorrows acquainted with grief (Isa 53:3) embodies what Nehemiah's face displayed.</p>",
+    "3": "<p>Nehemiah's answer: the city, the place of my fathers' graves, lies in ruins. The appeal to ancestral heritage grounds the request in identity and inheritance. Christ came to rebuild what the fathers' unfaithfulness had ruined — I came to seek and to save the lost (Luke 19:10) — and the lost he sought were the covenant people, those whose spiritual heritage lay in ruins through sin and exile.</p>",
+    "4": "<p>Before answering the king, Nehemiah prays to the God of heaven — a brief, silent prayer in the middle of a royal audience. This flash-prayer models the unceasing-prayer posture of Christ's ministry: he prays before every significant act, maintaining constant communion with the Father (John 11:41-42). The prayer-before-speaking pattern — Nehemiah prays, then speaks; Christ lifts his eyes to heaven, then acts — is the same structural habit.</p>",
+    "5": "<p>Nehemiah's request: send me to Judah, to the city of my fathers' graves, that I may rebuild it. The voluntary request to go — not commanded but commissioned through willingness — mirrors Christ's voluntary sending: as the Father has sent me, I am sending you (John 20:21) and his own willing self-sending — I have come down from heaven, not to do my own will but the will of him who sent me (John 6:38). Nehemiah asks to be sent; Christ volunteers to go.</p>",
+    "6": "<p>The king grants the request and sets a time. The Father's timing of the Son's mission — when the fullness of time had come, God sent forth his Son (Gal 4:4) — is the cosmic parallel to the Persian king's scheduling of Nehemiah's mission. Both missions operate within a defined time frame given by the authority who commissions: Nehemiah within the king's set period; Christ within the Father's appointed hour (John 12:23; 17:1).</p>",
+    "7": "<p>Nehemiah requests letters to the governors for passage and timber — the practical resources for the mission. The Father similarly provides Christ with everything needed for the work of redemption: the Spirit (John 3:34: he gives the Spirit without measure), the words (John 17:8: I have given them the words that you gave me), and the authority (Matt 28:18). Nehemiah's request for provision mirrors the Son's reception of everything needed for his mission.</p>",
+    "8": "<p>The provision of timber from the king's forest — and the note that the good hand of my God was upon me — establishes divine provision through earthly means. Christ's resources for his mission came through ordinary channels — a Jewish mother, a carpenter's household, ordinary disciples — yet the Father's hand governed all: the Father who dwells in me does his works (John 14:10).</p>",
+    "9": "<p>Nehemiah arrives with the king's letters and a military escort. Christ's arrival in his mission was stripped of worldly authority and protection: no letters, no escort, born in poverty, rejected by the establishment. The contrast illuminates the typology: Nehemiah's mission required earthly backing precisely because it was an earthly building project; Christ's mission required the emptying of earthly power (Phil 2:7) because the kingdom he built is not of this world (John 18:36).</p>",
+    "10": "<p>The opposition of Sanballat and Tobiah — it displeased them greatly that someone had come to seek the welfare of the people of Israel — establishes the adversarial structure of the Nehemiah narrative. The opposition to restoration is the narrative constant. Christ's mission equally generated immediate opposition from those with invested interests in the broken status quo: the world hated me before it hated you (John 15:18). The one who comes to build what the enemy has broken will face the enemy's resistance.</p>",
+    "11": "<p>Nehemiah arrives in Jerusalem and remains for three days before acting. The three-day period before the active mission begins echoes the three days of Christ in the tomb before the resurrection — the silence before the building project resumes. The pattern of arrival, waiting, and then purposeful action follows the structure of the incarnation: thirty years of hiddenness (Luke 3:23) before the public mission begins.</p>",
+    "12": "<p>The night inspection — Nehemiah goes out alone by night, not yet having told anyone his plan — mirrors the hidden dimension of Christ's work. Much of what Christ was doing was unseen: the night of prayer (Luke 6:12), the private conversations (John 3:2; 4:7), the healings in private homes (Mark 5:40). The nighttime inspection is the compassionate assessment of the damage before the plan is announced — knowing the full extent of what must be rebuilt.</p>",
+    "13": "<p>The inspection of the broken walls and gates — the Valley Gate, the Dung Gate, the ruined sections — is the comprehensive survey of Jerusalem's devastation. Christ surveyed the full extent of human spiritual ruin: he knew what was in a person (John 2:25), he saw the depth of the crowd's lostness (Matt 9:36), he wept over Jerusalem knowing the complete picture of its condition (Luke 19:41-44). The builder must first see the ruin before he can plan the restoration.</p>",
+    "14": "<p>The Fountain Gate and the King's Pool — Nehemiah examines the water-access points. Water sources represent life-supply; their inspection is the assessment of what sustains the community. Christ, the Living Water (John 4:10-14; 7:37-38), surveys the city's thirst — its broken cisterns (Jer 2:13) — and comes to be the inexhaustible source that the broken city could not access.</p>",
+    "15": "<p>Nehemiah goes up the valley by night inspecting the wall, then turns back — a circuit of the city's perimeter. Christ encompasses the whole human condition: he surveys every aspect of our ruin, from the religious to the social to the personal, before beginning the specific work of redemption. The circuit of the broken city is a figure of divine omniscience comprehending the totality of what must be restored.</p>",
+    "16": "<p>The officials do not know where Nehemiah went or what he was doing — the night inspection is secret. Much of what Christ accomplishes is hidden from human observation: the intercession in the Father's presence (Heb 7:25), the work of the Spirit (John 3:8), the preparation of the place (John 14:2). The hidden work precedes the public announcement — the foundation is laid before the builder reveals what he is building.</p>",
+    "17": "<p>Nehemiah's public disclosure: you see the trouble we are in, how Jerusalem lies in ruins. The declaration of the current condition before announcing the plan — the diagnosis before the prescription — is the apostolic pattern. The gospel similarly begins with the declaration of the human condition: all have sinned (Rom 3:23) before announcing the remedy. The builder who does not name the ruin cannot mobilize the community to rebuild.</p>",
+    "18": "<p>The decisive statement: I told them of the hand of my God that had been upon me. And they said, Let us rise up and build. The combination of divine commission and royal authorization motivates the community to respond. Christ's commission from the Father (John 17:18) and his resurrection-authority (Matt 28:18) together call the disciples to rise up and build — to participate in the kingdom-building project. The community's willing response is the paradigm of discipleship.</p>",
+    "19": "<p>The mocking of Sanballat, Tobiah, and Geshem: What is this thing that you are doing? Are you rebelling against the king? Opposition takes the form of mockery and political accusation. Christ faced identical opposition: the mockery at the cross (Matt 27:42) and the political accusation before Pilate (John 19:12). The builder who announces the restoration project will face the charge of political subversion and ridicule of his claim to rebuild.</p>",
+    "20": "<p>Nehemiah's reply to the opposition: The God of heaven will make us prosper, and we his servants will arise and build, but you have no portion or right or claim in Jerusalem. The exclusion of the opponents from any share in the rebuilt city corresponds to Christ's exclusion of the unrepentant from the kingdom: not everyone who says to me Lord, Lord will enter (Matt 7:21). The rebuilt Jerusalem belongs to those who labor in the building, not to those who mock the builder.</p>"
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
+    "1": "<p>Eliashib the high priest and his fellow priests repair the Sheep Gate and consecrate it. The building narrative begins with the high priest personally doing construction work. Christ, the great High Priest (Heb 4:14), is not exempt from the labor of restoration: he became flesh (John 1:14) and worked with human hands. The high priest who personally builds the gate is a figure of the incarnate Son who personally achieves the redemption.</p>",
+    "2": "<p>The men of Jericho build a section; next to them Zaccur son of Imri. The building of the wall by many different individuals, each responsible for their section, anticipates Paul's body-of-Christ metaphor: from him the whole body, joined and held together by every joint, when each part is working properly, makes the body grow (Eph 4:16). Every believer has a section of the wall — a specific role in the building project of the kingdom.</p>",
+    "3": "<p>The Fish Gate is built by the sons of Hassenaah. The Fish Gate was a commercial access point to Jerusalem — where fish from the Jordan arrived. Christ's call of fishermen as his first disciples (Matt 4:18-22) and his designation of them as fishers of men connects the Fish Gate's function to the mission of gathering people into the kingdom. The gate through which fish came into the city becomes the figure of the gate through which the missional church brings the catch of the gospel.</p>",
+    "4": "<p>Meremoth son of Uriah repairs a section — the same Meremoth who weighed temple vessels (Ezra 8:33), now also a builder. The priest-administrator-builder represents the multiplicity of roles that one person can fill in the restoration community. Christ himself combines every role: prophet, priest, and king; teacher and builder; the one who both speaks the word and does the work it requires.</p>",
+    "5": "<p>The Tekoites repair their section, but their nobles did not stoop to serve their Lord. The failure of some leaders to participate — the nobility who refuse the building labor — stands as a warning within the restoration narrative. Christ rebuked the Pharisees for not entering the kingdom themselves and hindering others (Matt 23:13). The one who refuses to stoop to the necessary work of restoration forfeits the dignity that genuine service carries.</p>",
+    "6": "<p>The Jeshanah (old/ancient) Gate repaired by Joiada and Meshullam. Christ as the fulfillment of the ancient covenant — do not think that I have come to abolish the Law or the Prophets (Matt 5:17) — repairs the old way rather than replacing it. The ancient gate repaired is the ancient covenant renewed and fulfilled.</p>",
+    "7": "<p>Melatiah the Gibeonite and Jadon the Meronothite — non-Israelite or peripheral communities — repair a section. The inclusion of Gibeonites and others in the building project anticipates the inclusion of Gentiles in the new covenant community. The wall built by people from different origins — priests, merchants, Gibeonites, Tekoites — is a figure of the church built from every tribe and nation (Rev 5:9).</p>",
+    "8": "<p>Uzziel the goldsmith and Hananiah the perfumer — craftsmen from the commercial guilds — participate in the wall-repair. The diversity of occupations among the builders mirrors the spiritual gifting diversity of the church: there are varieties of gifts, but the same Spirit (1 Cor 12:4). The goldsmith and the perfumer bring their specific skills to the common project — just as every spiritual gift serves the same purpose of building the body.</p>",
+    "9": "<p>Rephaiah son of Hur, ruler of half the district of Jerusalem, repairs a section. The civil ruler personally participating in the repair — not merely authorizing it but doing it — models servant leadership. Christ as the King of kings came not to be served but to serve (Mark 10:45). The ruler who repairs a section of wall with his own hands is a figure of the sovereign who takes on the construction work himself.</p>",
+    "10": "<p>Jedaiah repairs the section opposite his own house. The principle of building what is in front of you — repairing what is nearest your own dwelling — is the principle of responsible stewardship in your own domain. Paul's principle in 1 Corinthians 3:10 — let each one take care how he builds — applies this spatial accountability. Christ himself built from the inside out — beginning with Israel, then the nations (Matt 15:24; Acts 1:8).</p>",
+    "11": "<p>Malkijah and Hasshub repair another section and the Tower of the Ovens — a defensive structure near the bread-making facilities. Christ is both defender (Eph 6:11-17: the full armor of God) and bread-provider (John 6:35: I am the bread of life). The building of a tower that guards the ovens figures the protection of the life-sustaining gifts of the community.</p>",
+    "12": "<p>Shallum, ruler of half the district of Jerusalem, repairs with his daughters. The explicit mention of his daughters as co-builders is remarkable in the ancient context. In Christ's new-covenant community, women were among the primary witnesses and participants: Mary Magdalene at the tomb (John 20:1), Lydia as the first European convert (Acts 16:14-15), and the women who labored in the gospel (Phil 4:3). The daughters who build anticipate the daughters who prophesy (Acts 2:17).</p>",
+    "13": "<p>The Valley Gate repaired by Hanun and the inhabitants of Zanoah — 500 cubits of wall, the longest single section. The Valley Gate opened toward the Hinnom Valley — the valley associated with judgment (Gehenna). The repair of this gate is the sealing of the place of judgment from being an open breach. Christ seals the judgment that was an open breach in humanity's security — not by eliminating judgment but by bearing it.</p>",
+    "14": "<p>The Dung Gate repaired by Malkijah son of Rechab — the gate through which the city's waste was removed. Christ, who cleanses us from all unrighteousness (1 John 1:9), performs the spiritual equivalent: removing the waste of sin from the community. The repair of the Dung Gate — not glamorous but essential — is the figure of the gospel's work in dealing with what no human system can remove.</p>",
+    "15": "<p>The Fountain Gate repaired — roofed, set with doors, bolts, bars — and the wall of the Pool of Shelah by the King's Garden. The Fountain Gate regulated access to the water supply. Christ as the Living Water (John 4:10-14) is the one who opens and no one shuts (Rev 3:7-8): the repaired fountain gate is the figure of restored access to the source of life. The King's Garden nearby suggests Eden — the place of original life-supply that sin closed off and Christ restores.</p>",
+    "16": "<p>Nehemiah son of Azbuk repairs opposite the tombs of David — the resting place of the covenant king. Christ's resurrection from the tomb in the city of David (Luke 2:11) restores what David's line had forfeited through sin. The repair near the king's graves is the figure of the work that precedes the king's resurrection-return.</p>",
+    "17": "<p>The Levites: Rehum son of Bani and Hashabiah — repairs for his district. The Levites' participation in physical construction work alongside their cultic duties shows the integration of sacred service and practical labor in the restoration project. Christ's own labor combined the sacred (teaching, healing) with the practical (carpentry background, feeding crowds) — the unity of spiritual and physical restoration in a single mission.</p>",
+    "18": "<p>Their brothers — Bavvai son of Henadad, ruler of half the district of Keilah. The phrase their brothers signals communal solidarity in the building project. Paul's body metaphor captures this: there may be no division in the body, but that the members may have the same care for one another (1 Cor 12:25). The wall repaired section-by-section in solidarity is the image of the body functioning in each-part-for-the-whole unity.</p>",
+    "19": "<p>Ezer son of Jeshua repairs opposite the ascent to the armory at the Buttress. Ephesians 6:10-17 describes the spiritual armory the believer carries. Christ is himself the source of every piece of armor: the belt of truth (John 14:6), the breastplate of righteousness (2 Cor 5:21), the shoes of peace (John 14:27), the shield of faith (Heb 12:2), the helmet of salvation (Eph 5:23), and the sword of the Spirit which is his word (John 1:1).</p>",
+    "20": "<p>Baruch son of Zabbai repairs zealously — the adverb singles him out from the long list. Christ's consuming zeal for the Father's house (John 2:17, citing Ps 69:9) is the archetypal example of building with passion. The zealous builder who gives more than required mirrors the Son who poured out more than required.</p>",
+    "21": "<p>Meremoth son of Uriah repairs a second section — appearing twice in the building list (vv. 4 and 21). The one who builds more than his share, who returns to build again, is a figure of the faithful servant who brings 100, 60, 30-fold return (Matt 13:23). Christ himself gave everything — not just a section but the whole project, who for the joy set before him endured the cross (Heb 12:2).</p>",
+    "22": "<p>The priests of the valley repair adjacent to the priestly quarter. The priests building their own neighborhood into the wall shows the integration of cultic and civic identity. Christ unites the roles of priest and builder in a single person — the one who offers the sacrifice (Heb 9:26) also constructs the new temple (John 2:19-21; 1 Pet 2:4-5).</p>",
+    "23": "<p>Benjamin and Hasshub repair opposite their own house; Azariah beside his own house. The neighbor-first building principle reflects the incarnation's own logic: God became near before he addressed the far. Christ's witness command begins in Jerusalem (Acts 1:8) — the place where you are before the places you are sent.</p>",
+    "24": "<p>Binnui repairs from the house of Azariah to the Buttress and the Corner — each section abutting the previous. The church's mission continues the mission of Christ (John 20:21: as the Father has sent me, I am sending you) — each generation's section of wall abutting the previous generation's work without gap.</p>",
+    "25": "<p>Palal repairs opposite the Buttress and the upper tower — the highest point of the defensive structure. Christ is described as having ascended far above all the heavens, that he might fill all things (Eph 4:10): the builder who not only repairs the walls but establishes the highest tower from which the whole building is governed and defended.</p>",
+    "26": "<p>The temple servants living on Ophel repair as far as the Water Gate. The Nethinim — the lowest social class of temple workers, originally foreigners — participate alongside priests and rulers. In Christ's new-covenant community, social hierarchies are overturned: there is neither Jew nor Greek, slave nor free (Gal 3:28). The temple servants who build the wall enact what the gospel declares.</p>",
+    "27": "<p>The Tekoites repair a second section — though their nobles refused (v. 5), the people build double. The excess of the community compensates for the deficiency of its leaders. Christ's perfect obedience compensates for the entire deficit of human disobedience — his surplus righteousness covers the shortfall of every failed builder.</p>",
+    "28": "<p>The priests repair above the Horse Gate, each opposite his own house. The Horse Gate was one of the eastern gates used for royal access (2 Chr 23:15). Christ's entry into Jerusalem on a donkey (John 12:15) deliberately inverted the king's cavalry entrance: the King comes not mounted on war-horses but in humble procession, righteous and having salvation, gentle and riding on a donkey (Zech 9:9).</p>",
+    "29": "<p>Zadok repairs opposite his own house; Shemaiah, keeper of the East Gate, repairs. The East Gate carries eschatological significance in Ezekiel (Ezek 43:1-4: YHWH's glory enters from the east). Christ's second coming is associated with the east (Matt 24:27). The repairer of the East Gate maintains the threshold through which the divine glory will return.</p>",
+    "30": "<p>Hananiah and Hanun repair another section; Meshullam repairs opposite his chamber. Hebrews 3:6 applies this personal investment to the new covenant community: we are his house if indeed we hold fast our confidence. Each member of the household is responsible for their section.</p>",
+    "31": "<p>Malkijah the goldsmith repairs to the house of the temple servants and the merchants, opposite the Muster Gate — the gate where troops assembled. The unlikely combination of a craftsman repairing a military installation reflects the surprising assignments of the kingdom: God uses the unexpected person for the strategic task. Christ chose fishermen, tax collectors, and political rebels as his strategic inner circle.</p>",
+    "32": "<p>Between the upper chamber of the corner and the Sheep Gate, the goldsmiths and the merchants repair. The building narrative ends where it began (v. 1): the Sheep Gate, repaired first by the high priest and last by goldsmiths and merchants. The Sheep Gate was the entrance for sacrificial animals into Jerusalem. Christ as the Lamb of God (John 1:29) entered through the human equivalent of the Sheep Gate — born into the world as the one who would be sacrificed for its sins. The gate repaired first and last is the gate through which the ultimate sacrifice came.</p>"
+  },
   "4": {
-    "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
-    ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+    "1": "<p>Sanballat's anger and mockery when he hears the wall is being built: What are these feeble Jews doing? The word feeble (<em>ămelālîm</em> — weak, withered) is the enemy's assessment of the restoration project. The opponents of the gospel use the same language: the weakness of its messengers, the insignificance of its means. Paul embraces this assessment — we have this treasure in jars of clay (2 Cor 4:7) — while insisting that the surpassing power belongs to God, not the builders.</p>",
+    "2": "<p>The mockery: Will they restore it for themselves? Will they finish up in a day? Will they revive the stones out of the heaps of rubbish? The ridicule focuses on the materials and the method. The opponents of Christ similarly mocked the apparent inadequacy of his means: Is not this the carpenter's son? (Matt 13:55), Can anything good come out of Nazareth? (John 1:46). The restoration project appears absurd to those who assess it by ordinary standards.</p>",
+    "3": "<p>Tobiah adds: if a fox goes up on it, he will break down their stone wall. The ultimate dismissal: even if they succeed, the result will be too fragile to bear a fox's weight. Christ's church appeared similarly fragile to Roman observers. Yet his promise — the gates of hell shall not prevail against it (Matt 16:18) — inverts the fox-mockery: it is not the wall but the attacking powers that will fail.</p>",
+    "4": "<p>Nehemiah's prayer in response to mockery: Hear, O our God, for we are despised. Turn back their taunt on their own heads. The prayer-response to opposition — appealing to God rather than arguing with the mockers — is the pattern Christ followed: he did not revile in return; when he suffered, he did not threaten, but continued entrusting himself to him who judges justly (1 Pet 2:23). The builder who is mocked appeals to the authority above both parties.</p>",
+    "5": "<p>The prayer intensifies: Do not cover their guilt. The imprecatory element — asking YHWH not to forgive — is the OT form of the prayer for divine justice. Christ's intercessory prayer is its opposite: Father, forgive them, for they know not what they do (Luke 23:34). The cross transforms the imprecatory prayer: instead of the enemy's sin not being covered, the enemy's sin is covered by the Mediator himself.</p>",
+    "6": "<p>The people build the wall — for the people had a mind to work. The willing labor of the community despite mockery and opposition is the image of faithful discipleship. For I am not ashamed of the gospel, for it is the power of God for salvation (Rom 1:16). The willingness to build despite derision is the posture the gospel requires of those who build under opposition.</p>",
+    "7": "<p>When Sanballat, Tobiah, the Arabs, the Ammonites, and the Ashdodites hear the wall is being repaired, their anger grows and they conspire together. The widening opposition — from two mocking individuals to a coalition — mirrors the escalating opposition to Christ's ministry: Pharisees and Herodians conspire (Mark 3:6), then Sanhedrin and Roman authorities, ultimately the spiritual powers behind them (1 Cor 2:8). The gospel project always faces expanding opposition.</p>",
+    "8": "<p>The plan: to come and fight against Jerusalem and to cause confusion in it. The two-pronged attack — direct force and internal confusion — is the enemy's standard strategy. Paul describes the same strategy: false apostles disguising themselves as apostles of Christ (2 Cor 11:13). Christ warned of both: persecution from outside (John 15:20) and false teachers from inside (Matt 7:15).</p>",
+    "9": "<p>The response: we prayed to our God and set a guard as a protection day and night. The combination of prayer and vigilance — spiritual and practical response to threat — is the full gospel pattern. Be sober-minded; be watchful. Your adversary the devil prowls around like a roaring lion (1 Pet 5:8). Christ modeled this in Gethsemane: Watch and pray that you may not enter into temptation (Matt 26:41).</p>",
+    "10": "<p>The builders' discouragement: The strength of those who bear burdens is failing. There is too much rubble. The demoralization from prolonged effort under opposition — seeing only the rubble, feeling only the exhaustion — is the experience of every builder in Christ's kingdom. Let us not grow weary of doing good, for in due season we will reap, if we do not give up (Gal 6:9). The encouragement comes from outside the builder's own assessment of the rubble.</p>",
+    "11": "<p>The enemies' threat: They will not know or see till we come among them and kill them and stop the work. The strategy of surprise attack to halt the building mirrors the spiritual enemy's strategy. The thief comes only to steal and kill and destroy (John 10:10). Christ came to guarantee the opposite: that death itself cannot halt the work of the one whose resurrection proved him stronger than every thief.</p>",
+    "12": "<p>The Jews from surrounding villages warn the builders ten times: From every place you turn, they will attack us. The sustained pressure of anxiety on the building community has its NT parallel in the afflicted in every way, perplexed, persecuted, struck down (2 Cor 4:8-9). The builder is not promised freedom from threat but the resources to continue building despite it.</p>",
+    "13": "<p>Nehemiah positions armed guards behind the wall by family units with swords, spears, and bows. The family unit as the unit of defense reflects the relational structure of the covenant community. Christ's establishment of the household church as the basic unit of kingdom-building mirrors this: the family is the smallest building block of both the defensive and the constructive project.</p>",
+    "14": "<p>Nehemiah's speech: Do not be afraid of them. Remember the Lord, who is great and awesome, and fight for your brothers, your sons, your daughters, your wives, and your homes. The call to courageous building — grounded in YHWH's greatness and motivated by love for community — is Christ's own pattern: Do not fear, little flock, for it is your Father's good pleasure to give you the kingdom (Luke 12:32). The builders are encouraged not by optimistic assessment of the situation but by the character of the one who commissioned the project.</p>",
+    "15": "<p>When the enemies hear that their plot is known, God frustrates it — we all returned to the wall, each to his work. The frustration of the enemy's conspiracy by divine knowledge models Christ's comprehensive awareness of every threat against his people. Nothing is hidden that will not be made manifest (Luke 8:17). The enemy's plans fail not because the builders are strong but because the Builder above is omniscient.</p>",
+    "16": "<p>From that day half of the servants work in construction and half hold weapons. The divided attention — building with one hand and defending with the other — is the post-Pentecost church's permanent posture. Take the whole armor of God (Eph 6:13) while continuing the building project: evangelism and spiritual warfare are not alternatives but simultaneous activities.</p>",
+    "17": "<p>The builders carry loads with one hand and hold a weapon in the other. The physical impossibility of full attention to both tasks simultaneously is resolved by the spiritual reality that Christ carries both: he is both Savior and defender. The Lord will fight for you (Exod 14:14) — but Nehemiah's workers are also building. The combination of divine fighting and human building is the partnership the gospel creates.</p>",
+    "18": "<p>Each builder has his sword girded at his side while he builds; the trumpeter remains at Nehemiah's side. The ever-present defensive readiness models the spiritual alertness required of every believer. Be strong in the Lord and in the strength of his might. Put on the whole armor of God (Eph 6:10-11): not an occasional preparation but a permanent posture. The sword at the side while building is the image of the believer armed with the word while doing the work.</p>",
+    "19": "<p>Nehemiah notes: The work is great and widely spread, and we are separated on the wall, far from one another. The coordination challenge of a distributed building project mirrors the church's coordination challenge across geography and culture. Christ's answer to this coordination problem is the Holy Spirit — given to unify the body despite geographic separation (1 Cor 12:13; Eph 4:4). The distributed builders on the wall find their unity in the one who calls them together.</p>",
+    "20": "<p>The rally signal: In the place where you hear the sound of the trumpet, rally to us there. Our God will fight for us. The trumpet as the signal for gathering has deep covenant resonance: the trumpets of Jericho (Josh 6), and the final trumpet that will gather Christ's elect (Matt 24:31; 1 Cor 15:52). Nehemiah's trumpet that rallies the scattered builders is the figure of the last trumpet that gathers all of Christ's builders to his final victory.</p>",
+    "21": "<p>The builders work from dawn until stars appear, half holding spears. The dawn-to-stars workday expresses total investment in the building project. We must work the works of him who sent me while it is day; night is coming, when no one can work (John 9:4). The urgency of the daylight hours, the coming of the night when work stops, is Christ's own framing of the mission's temporal limitation.</p>",
+    "22": "<p>Nehemiah's instruction: Let every man and his servant pass the night within Jerusalem so that they may be a guard by night and work by day. The people sleep inside the walls they are building — they inhabit the project they are constructing. The church similarly inhabits its own building project: you are God's building (1 Cor 3:9) — the builders and the building are the same community. Those who build the church are the church.</p>",
+    "23": "<p>Neither Nehemiah, his brothers, his servants, nor the guards take off their clothes — even to wash. The total dedication, the inability to relax the readiness posture, is the image of missional urgency. I have learned, in whatever situation I am, to be content (Phil 4:11) — but also I am under obligation to preach the gospel (Rom 1:14-15). The builder who sleeps in his working clothes is the figure of total devotion to the work that Christ modeled throughout his earthly mission.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', 'nehemiah')
+    merge_comm(c, DATA)
+    save_comm('mkt-christ', 'nehemiah', c)
+    count = sum(len(v) for v in DATA.values())
+    print(f'nehemiah mkt-christ: wrote {count} verses across ch 1-4')
 
 if __name__ == '__main__':
     main()

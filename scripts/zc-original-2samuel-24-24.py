@@ -1,23 +1,22 @@
 """
-Ruth + 1-2 Samuel — all four layers.
-Ruth: kinsman-redeemer Boaz (type of Christ), Gentile inclusion in covenant community, genealogy to David/Christ.
-1 Samuel: Samuel (prophet-judge-priest), Saul's failure, David's anointing, Spirit-empowered leadership.
-2 Samuel: Davidic covenant (7:12-16), David's sin and restoration, Psalm 51 background.
+MKT Original Commentary — 2 Samuel chapter 24
+Run: python3 scripts/zc-original-2samuel-24-24.py
+
+Ch24: The census and its aftermath — the two-level causality problem (YHWH/Satan);
+      David's choice of punishment: 'let me fall into the hand of YHWH';
+      the threshing floor of Araunah as the Moriah convergence point;
+      David's refusal of the free gift: 'I will not offer what costs me nothing'
+
+Key Hebrew terms:
+- wayyasep ʾap YHWH (24:1): YHWH's anger as the hidden cause — cf. 1 Chr 21:1 (Satan)
+- wayyinnāḥem YHWH (24:16): YHWH relents — same nāḥam as Gen 6:6, 1 Sam 15:11
+- lōʾ ʾaʿăleh ḥinnām (24:24): 'I will not offer for nothing' — the costly-sacrifice principle
+- har hammôriyyāh (2 Chr 3:1): Araunah's threshing floor = Moriah = temple mount
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +28,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,138 +36,21 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# RUTH
-# ============================
-
-RUTH_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "John 10:16", "note": "Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God — Ruth's covenant loyalty (hesed) to Naomi is the supreme expression of voluntary covenant commitment; her Gentile adoption into Israel's covenant community is a type of the Gentile church being grafted in"}
-    ]
-  },
-  "2": {
-    "20": [
-      {"type": "allusion", "target": "Gal 3:13", "note": "The man is a close relative of ours, one of our guardian-redeemers — Boaz as kinsman-redeemer (go'el) is one of the OT's clearest types of Christ's redemptive work: a near kinsman who has the right and takes on the obligation to redeem the distressed family member; Christ redeems as the one who became our kinsman (incarnation) and paid our ransom (cross)"}
-    ]
-  },
-  "4": {
-    "17": [
-      {"type": "allusion", "target": "Matt 1:5", "note": "They named him Obed. He was the father of Jesse, the father of David — Ruth the Moabite is in the genealogical line of David and therefore of the Messiah (Matt 1:5); a Gentile woman's covenant loyalty becomes the vehicle for the Davidic line through which the Messiah comes; the Gentile inclusion in the covenant community is literal and genealogical"}
-    ]
-  }
-}
-
-RUTH_ORIGINAL = {
-  "2": {
-    "20": "<p><strong>qorov lanu ha-ish, mige-aleinu hu</strong>: 'The man is a close relative of ours, one of our redeemers.' The <em>go'el</em> (kinsman-redeemer) is a legal institution in Israelite law: a near male relative who has the right and duty to redeem a family member's sold land (Lev 25:25), to marry a brother's childless widow (Deut 25:5-10, levirate marriage), to redeem a relative sold into slavery (Lev 25:47-55), and to avenge the blood of a murdered kinsman (the <em>go'el hadam</em>). Boaz fulfills the first two functions. Paul in Galatians uses the redemption/buying-back vocabulary (<em>exagorazo</em>, 'redeemed from the curse of the law', Gal 3:13; 4:5) to describe Christ's work — the kinsman-redeemer framework is the legal-theological background for NT redemption language.</p>"
-  }
-}
-
-RUTH_CONTEXT = {
-  "1": {
-    "1": "<p>Ruth is set in the period of the judges ('in the days when the judges ruled', Ruth 1:1) and is a counter-narrative to the chaos of that era: while Judges ends with 'everyone did what was right in his own eyes,' Ruth depicts a community where covenant loyalty (<em>hesed</em>) is practiced across ethnic lines and social classes. The book's theological center is the keyword <em>hesed</em> (steadfast love, covenant loyalty) — used three times (1:8; 2:20; 3:10). It serves as an introduction to the Davidic narrative: its genealogy (4:17-22) links it directly to 1 Samuel and the rise of David, making Ruth the backstory of the royal family. Matthew's genealogy (Matt 1:5) includes Ruth alongside Tamar, Rahab, and Bathsheba — four women with irregular stories through whom the messianic line runs.</p>"
-  }
-}
-
-RUTH_CHRIST = {
-  "2": {
-    "20": "<p>A type: 'The man is a close relative of ours, one of our guardian-redeemers.' Boaz is the OT's most fully developed type of Christ as redeemer: (1) he is near of kin — Christ became our kinsman through the incarnation (Heb 2:14-15: he shared in flesh and blood that through death he might destroy him who has the power of death); (2) he has the right to redeem — as the sinless son of God, Christ alone qualifies; (3) he is willing to redeem — another go'el existed but declined (Ruth 4:6); Christ took on the obligation no one else could fulfill; (4) he pays the redemption price — Boaz redeems the land and takes Ruth; Christ redeems his people by his blood and takes them as his bride (Eph 5:25-27; Rev 19:7-9). The kinsman-redeemer motif is the book of Ruth's entire Christological contribution.</p>"
-  }
-}
-
-# ============================
-# 1 SAMUEL
-# ============================
-
-SAMUEL1_ECHO = {
-  "2": {
-    "1": [
-      {"type": "allusion", "target": "Luke 1:46-55", "note": "Hannah's prayer: My heart exults in YHWH; my horn is exalted in YHWH — Mary's Magnificat (Luke 1:46-55) is a conscious echo and expansion of Hannah's prayer; both are songs of the lowly being lifted up, the proud being brought down, and the faithful YHWH-servant being vindicated through an unexpected birth"}
-    ]
-  },
-  "3": {
-    "1": [
-      {"type": "allusion", "target": "Amos 8:11-12", "note": "The word of YHWH was rare in those days; there was no frequent vision — the period of prophetic silence before Samuel's emergence; Amos prophesies a future famine of hearing YHWH's word; both point to the darkness before divine speech resumes"}
-    ]
-  },
-  "13": {
-    "14": [
-      {"type": "allusion", "target": "Acts 13:22", "note": "YHWH has sought out a man after his own heart — Paul in the Pisidian Antioch synagogue quotes this divine verdict on David to introduce the gospel: God raised up David as a witness, and from his offspring God has brought to Israel a Savior, Jesus, as he promised"}
-    ]
-  },
-  "16": {
-    "13": [
-      {"type": "allusion", "target": "Matt 3:16", "note": "The Spirit of YHWH rushed upon David from that day forward — David's anointing by Samuel and the Spirit's coming upon him is the OT pattern for the messianic anointing; at Jesus's baptism the Spirit descends and remains (John 1:32), the permanent and ungrieved anointing that Saul's experience foreshadowed and forfeited"}
-    ]
-  }
-}
-
-SAMUEL1_ORIGINAL = {
-  "2": {
-    "2": "<p><strong>ein qadosh kaYHWH ki ein biltecha vein tzur kebogheinu</strong>: 'There is none holy like YHWH: for there is none besides you; there is no rock like our God.' Hannah's prayer is the OT's most concentrated statement of YHWH's incomparable holiness and sovereignty — expressed through the reversal-of-fortunes theme (vv. 4-8: the bows of the mighty are broken, but the feeble bind on strength). The pattern is: YHWH exalts the lowly and humbles the proud, not based on human merit but on divine grace and election. Paul's 'God chose what is weak in the world to shame the strong' (1 Cor 1:27) is the Christological application of Hannah's insight: the cross itself is YHWH's ultimate reversal, where the weak and crucified Son defeats the strong.</p>"
-  }
-}
-
-SAMUEL1_CONTEXT = {
-  "1": {
-    "1": "<p>1 Samuel narrates the transition from the period of the judges to the monarchy (ca. 1100-1011 BCE). Its theological structure revolves around three figures: Samuel (the last and greatest judge, the transitional prophet-priest-judge), Saul (the failed king, rejected because of disobedience), and David (the man after God's own heart, the model for the Davidic covenant). The contrast between Saul and David is theologically instructive: Saul has the outward appearance (tall, handsome, from the right tribe) but lacks the inner heart-alignment; David lacks the outward qualifications (youngest, overlooked, a shepherd) but has the heart that YHWH seeks (1 Sam 16:7: YHWH looks on the heart). This contrast between external appearance and internal reality runs from 1 Samuel through Paul's theology of the Spirit vs. the flesh.</p>"
-  }
-}
-
-SAMUEL1_CHRIST = {
-  "16": {
-    "13": "<p>A type: 'And the Spirit of the LORD rushed upon David from that day forward.' David's anointing by Samuel is the OT's paradigmatic messianic event — the word <em>mashiach</em> (anointed one) derives its ultimate meaning from this moment. David is anointed as YHWH's chosen king; the Spirit comes upon him as the empowering for his royal vocation. Jesus's baptism is the typological fulfillment: he is anointed (the meaning of <em>christos</em>, the Greek equivalent of <em>mashiach</em>) by the Spirit who descends and remains (John 1:32-33). The crucial difference: the Spirit rushed upon David from that day forward, but left Saul (1 Sam 16:14); on Jesus the Spirit descends and remains — the permanent anointing that makes him the Messiah whose Spirit-empowered rule will never end.</p>"
-  }
-}
-
-# ============================
-# 2 SAMUEL
-# ============================
-
-SAMUEL2_ECHO = {
-  "7": {
-    "12": [
-      {"type": "fulfillment", "target": "Luke 1:32-33", "note": "I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom — the Davidic covenant promise (Nathan's oracle) is directly cited in the annunciation: the Lord God will give him the throne of his father David, and he will reign over the house of Jacob forever, and of his kingdom there will be no end"},
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "God had sworn with an oath to him that he would set one of his descendants on his throne — Peter's Pentecost sermon cites the Davidic covenant (2 Sam 7 + Ps 16 + Ps 110) as the OT basis for Jesus's resurrection and exaltation; the resurrection is the fulfillment of the promise to raise up David's offspring"},
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "I am the root and the descendant of David — Revelation's final identification of Jesus as the Davidic heir fulfills the 2 Sam 7 promise in its full scope: not merely a political successor but the eternal Son who receives an eternal kingdom"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — the father-son language of the Davidic covenant (2 Sam 7:14) is applied to Christ in Heb 1:5 as proof of his superiority to angels; no angel was ever called God's Son in this royal, covenantal sense"}
-    ]
-  }
-}
-
-SAMUEL2_ORIGINAL = {
-  "7": {
-    "12": "<p><strong>vakimoti et zarecha achareicha asher yetze mimeecha vehakhinoti et mamlaChto</strong>: 'I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.' The Davidic covenant (2 Sam 7:12-16) is the OT's central messianic text — the foundational oracle to which all subsequent messianic prophecy refers. Its key elements: (1) a son who builds a house (temple/dynasty); (2) a father-son relationship (<em>ani ehyeh lo le-av vehu yihyeh li le-ben</em>); (3) discipline for sin but not abandonment; (4) an eternal throne (<em>venekkon kisso ad olam</em>, I will establish his throne forever). The covenant applies both to the immediate heir Solomon and, in an escalating way, to the ultimate heir — which Psalms 2, 89, 110 and the prophets develop into the eschatological Messiah.</p>"
-  }
-}
-
-SAMUEL2_CONTEXT = {
-  "7": {
-    "1": "<p>The Davidic covenant (2 Sam 7) is spoken through the prophet Nathan when David, having consolidated his kingdom in Jerusalem, desires to build a temple for YHWH. YHWH's reversal — 'you will not build me a house; I will build you a house (dynasty)' — is the pivot of the OT's messianic program. The word <em>bayit</em> (house) operates on three levels simultaneously: the physical temple David wants to build, the dynastic household YHWH promises, and the future son who will build both. The oracle has a near fulfillment (Solomon builds the temple, 1 Kings 6-8) and a far fulfillment (the eternal son whose kingdom has no end). The 'already and not yet' hermeneutic of NT fulfillment readings is modeled on 2 Samuel 7 itself, which already operates on two temporal levels.</p>"
-  }
-}
-
-SAMUEL2_CHRIST = {
-  "7": {
-    "12": "<p>A direct revelation: 'When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom ... and I will establish the throne of his kingdom forever.' The Davidic covenant is the OT's formal contract establishing the messianic expectation. Jesus of Nazareth's Davidic lineage is asserted by both Matthew (1:1-17) and Luke (3:23-38), confirmed by Paul (Rom 1:3: descended from David according to the flesh), and by Jesus himself (Mark 12:35-37). The eternal throne (v. 13, 16) is fulfilled in the resurrection: unlike David's physical descendants who all died, Christ rose and will reign forever. Peter's Pentecost sermon (Acts 2:29-36) explicitly applies 2 Sam 7 + Ps 16 + Ps 110 to the risen Christ: the Davidic covenant's promise of an unending throne is fulfilled not in an earthly dynasty but in the resurrection-life of the Son.</p>"
+ORIGINAL = {
+  "24": {
+    "1": "<p>The census narrative opens with the most theologically contested verse in 2 Samuel: <em>wayyōsep ʾap YHWH laḥărōt bᵉyiśrāʾēl wayyāset ʾet dāwiḏ bāhem lēmōr lēḵ mᵉneh ʾet yiśrāʾēl wᵉʾet yᵉhûḏāh</em> — &lsquo;the anger of YHWH was kindled again against Israel, and he incited David against them, saying, &ldquo;Go, number Israel and Judah.&rdquo;&rsquo; The parallel account in 1 Chr 21:1 substitutes &lsquo;Satan&rsquo; for YHWH as the inciting agent: <em>wayyāqom śāṭān ʿal yiśrāʾēl wayyāset ʾet dāwiḏ</em> — &lsquo;Satan stood against Israel and incited David.&rsquo; The two accounts describe the same event from the two levels of OT causality that Job 1-2 makes structurally explicit: YHWH is the primary agent whose sovereign purpose operates through secondary agents including the adversary. The census narrative thus has the same double-agency structure as the Joseph story (Gen 50:20), the hardening of Pharaoh (Exod 4:21 + 7:13), and ultimately the crucifixion (Acts 2:23: &lsquo;this Jesus, delivered up according to the definite plan and foreknowledge of God... you crucified and killed by the hands of lawless men&rsquo;). The two-level causality is not a theological confusion but the OT&rsquo;s most honest account of how divine sovereignty and creaturely agency operate simultaneously without collapsing into each other.</p>",
+    "14": "<p>David&rsquo;s choice between the three punishments: <em>ṣar lî māʾōḏ nipolāh nāʾ bᵉyaḏ YHWH kî rabbîm raḥămāyw ûḇᵉyaḏ ʾāḏām ʾal ʾeppōlāh</em> — &lsquo;I am in great distress. Let me fall into the hand of YHWH, for his mercy (<em>raḥămîm</em>) is great; but let me not fall into the hand of man.&rsquo; David&rsquo;s theological preference for divine discipline over human punishment is grounded in the comparative mercy argument: YHWH&rsquo;s <em>raḥămîm</em> (mercies, from <em>reḥem</em>, womb — the Hebrew term for the most intimate form of compassionate attachment) is greater than any human alternative. The word <em>raḥămîm</em> is the plural of intensity — mercies upon mercies. This appeal to YHWH&rsquo;s <em>raḥămîm</em> is the same ground on which Lam 3:22 rests (&lsquo;it is of YHWH&rsquo;s ḥasādîm that we are not consumed; his raḥămîm never come to an end&rsquo;) and on which Paul declares &lsquo;God of all comfort&rsquo; (2 Cor 1:3 — the Greek <em>oiktirmōn</em> translating <em>raḥămîm</em>). David&rsquo;s prayer-logic — preferring the punishment of the merciful God over the punishment of merciless men — is the theological ground of the NT&rsquo;s call to fear God rather than man (Matt 10:28).</p>",
+    "18": "<p>The site of David&rsquo;s altar-purchase converges three great redemptive-historical moments on a single geographic point. Araunah&rsquo;s threshing floor (<em>gōren ʾărawnāh</em>) on the ridge above Jerusalem is identified in 2 Chr 3:1 as <em>har hammôriyyāh</em> — the Mount Moriah where Solomon builds the temple. This is the same Moriah where Abraham bound Isaac for sacrifice (Gen 22:2: &lsquo;go to the land of Moriah and offer him there as a burnt offering&rsquo;). The triple convergence — (1) Abraham&rsquo;s near-sacrifice on Moriah where YHWH provides a substitute; (2) David&rsquo;s altar-building where the plague is arrested; (3) Solomon&rsquo;s temple where YHWH&rsquo;s presence dwells — makes this the most theologically dense sacred site in the OT, and its anti-type is Golgotha, the hill just outside Jerusalem where the ultimate substitute is offered. The trajectory: Moriah (substitutionary provision), Moriah-as-temple (ongoing atonement), Golgotha (final atonement) — three moments on a single theological line, geographically proximate.</p>",
+    "24": "<p>David&rsquo;s refusal of Araunah&rsquo;s free gift: <em>lōʾ wᵉlōʾ ʾeqnaʾ mēʿimmᵉḵā bᵉmāḥîr wᵉlōʾ ʾaʿăleh laYHWH ʾelōhay ʿōlôt ḥinnām</em> — &lsquo;No, I insist on buying it from you for a price; I will not offer burnt offerings to YHWH my God that cost me nothing (<em>ḥinnām</em>).&rsquo; The word <em>ḥinnām</em> (free, for nothing, without cost) is used in Job 1:9 (&lsquo;does Job fear God for nothing?&rsquo;) and in Mal 1:10 (YHWH&rsquo;s rebuke of those who perform the motions of worship without genuine commitment). David&rsquo;s statement defines authentic worship: the sacrifice that costs nothing is not sacrifice. The NT amplifies this: Paul&rsquo;s living sacrifice (Rom 12:1: &lsquo;present your bodies as a living sacrifice, holy and acceptable to God, which is your spiritual worship&rsquo;) and Jesus&rsquo;s parables of the treasure and the pearl (Matt 13:44-46: &lsquo;in his joy he goes and sells all that he has and buys that field&rsquo;) — authentic worship and authentic discipleship both cost everything. The free gift refused models the opposite of cheap grace: the worshipper who will not bring to God what costs him nothing has understood something that many who perform free worship have not.</p>"
   }
 }
 
 def main():
-    books = [
-        ('ruth', RUTH_ECHO, RUTH_ORIGINAL, RUTH_CONTEXT, RUTH_CHRIST),
-        ('1samuel', SAMUEL1_ECHO, SAMUEL1_ORIGINAL, SAMUEL1_CONTEXT, SAMUEL1_CHRIST),
-        ('2samuel', SAMUEL2_ECHO, SAMUEL2_ORIGINAL, SAMUEL2_CONTEXT, SAMUEL2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-original', '2samuel')
+    merge_comm(c, ORIGINAL)
+    save_comm('mkt-original', '2samuel', c)
+    count = sum(len(v) for v in ORIGINAL.values())
+    print(f'2samuel mkt-original: wrote {count} verses across ch 24')
 
 if __name__ == '__main__':
     main()

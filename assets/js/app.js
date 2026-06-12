@@ -41,9 +41,9 @@ import { initSearchPage, buildSearchDOM } from './search.js';
 import {
   initReaderPage, initCompareToggle, injectComparePanel,
   isCompareEnabled, getCompareVersion, setCompareVersion,
-  initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle,
+  initViewToggle, initFontSizeControls,
   initSidebarToggle, initXrefNotesToggle, initCommModeToggle,
-  initColumnsToggle, initReaderModeToggle
+  initColumnsToggle, initReaderModeToggle, initNotesPanelToggle
 } from './reader.js';
 import {
   initParallelToggle, getParallelsEnabled, setParallelsEnabled
@@ -174,10 +174,9 @@ function init() {
       initInterlinearToggle();
       initBookInfoToggle();
       initCommModeToggle();
+      initNotesPanelToggle();
       initViewToggle();
       initSidebarToggle();
-      initWideToggle();
-      initSplitToggle();
       initFontSizeControls();
       initXrefNotesToggle();
       initColumnsToggle();

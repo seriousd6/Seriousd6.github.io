@@ -1,6 +1,6 @@
-# Z Commentary Progress
+Last updated: 2026-06-12T03:25:00Z
 
-**Last updated:** 2026-06-11
+**Last updated: 2026-06-12 (Proverbs all 4 layers complete — 915/915 verses)**
 **Source of truth:** `data/echoes/`, `data/commentary/mkt-original/`, `data/commentary/mkt-context/`, `data/commentary/mkt-christ/`
 
 ---
@@ -10,7 +10,7 @@
 | | Echo | Original | Context | Christ |
 |-|------|----------|---------|--------|
 | NT complete (books) | 27 / 27 | 27 / 27 | 27 / 27 | 27 / 27 |
-| OT complete (books) | 4 / 39 | 4 / 39 | 3 / 39 | 3 / 39 |
+| OT complete (books) | 35 / 39 | 31 / 39 | 30 / 39 | 28 / 39 |
 | NT in-progress | 0 | 0 | 0 | 0 |
 | OT in-progress | 0 | 0 | 0 | 0 |
 
@@ -59,40 +59,40 @@
 | Leviticus | 27 | complete | partial 25/27 | complete | partial 25/27 |
 | Numbers | 36 | complete | complete | complete | complete |
 | Deuteronomy | 34 | partial 32/34 | complete | partial 31/34 | complete |
-| Joshua | 24 | complete | complete | complete | partial 12/24 |
-| Judges | 21 | partial 10/21 | partial 0/21 | partial 0/21 | partial 0/21 |
-| Ruth | 4 | partial 3/4 | partial 0/4 | partial 0/4 | partial 0/4 |
-| 1 Samuel | 31 | partial 4/31 | partial 0/31 | partial 0/31 | partial 0/31 |
-| 2 Samuel | 24 | partial 1/24 | partial 0/24 | partial 0/24 | partial 0/24 |
-| 1 Kings | 22 | partial 13/22 | partial 0/22 | partial 0/22 | partial 0/22 |
-| 2 Kings | 25 | partial 3/25 | partial 0/25 | partial 0/25 | partial 0/25 |
-| 1 Chronicles | 29 | partial 7/29 | partial 0/29 | partial 0/29 | partial 0/29 |
-| 2 Chronicles | 36 | partial 1/36 | partial 0/36 | partial 0/36 | partial 0/36 |
-| Ezra | 10 | partial 2/10 | partial 0/10 | partial 0/10 | partial 0/10 |
-| Nehemiah | 13 | partial 1/13 | partial 0/13 | partial 0/13 | partial 0/13 |
-| Esther | 10 | partial 1/10 | partial 0/10 | partial 0/10 | partial 0/10 |
-| Job | 42 | partial 7/42 | partial 0/42 | partial 0/42 | partial 0/42 |
+| Joshua | 24 | complete | complete | complete | partial 22/24 |
+| Judges | 21 | complete | complete | complete | partial 17/21 |
+| Ruth | 4 | complete | complete | complete | complete |
+| 1 Samuel | 31 | complete | partial 19/31 | partial 23/31 | partial 24/31 |
+| 2 Samuel | 24 | complete | partial 13/24 | partial 17/24 | partial 17/24 |
+| 1 Kings | 22 | partial 21/22 | partial 18/22 | partial 20/22 | partial 10/22 |
+| 2 Kings | 25 | partial 11/25 | partial 21/25 | partial 14/25 | partial 13/25 |
+| 1 Chronicles | 29 | complete 29/29 | complete 29/29 | partial 25/29 | complete 29/29 |
+| 2 Chronicles | 36 | partial 33/36 | complete 36/36 | complete 36/36 | partial 35/36 |
+| Ezra | 10 | complete 10/10 | partial 7/10 | partial 3/10 | complete 10/10 |
+| Nehemiah | 13 | complete | complete | complete | partial 11/13 |
+| Esther | 10 | complete | complete | complete | complete |
+| Job | 42 | complete | complete | complete | complete |
 | Psalms | 150 | complete | complete | complete | complete |
-| Proverbs | 31 | partial 3/31 | partial 0/31 | partial 0/31 | partial 0/31 |
-| Ecclesiastes | 12 | partial 2/12 | partial 0/12 | partial 0/12 | partial 0/12 |
-| Song of Solomon | 8 | partial 2/8 | partial 0/8 | partial 0/8 | partial 0/8 |
+| Proverbs | 31 | complete | complete | complete | complete |
+| Ecclesiastes | 12 | complete | complete | complete | complete |
+| Song of Solomon | 8 | complete | complete | complete | complete |
 | Isaiah | 66 | complete 66/66 | complete 66/66 | complete | complete |
 | Jeremiah | 52 | complete | complete | complete | complete |
-| Lamentations | 5 | complete | partial 0/5 | partial 0/5 | partial 0/5 |
+| Lamentations | 5 | complete | complete | complete | complete |
 | Ezekiel | 48 | complete | complete | complete | complete |
 | Daniel | 12 | complete | complete | complete | complete |
-| Hosea | 14 | partial 4/14 | partial 0/14 | partial 0/14 | partial 0/14 |
-| Joel | 3 | partial 1/3 | partial 0/3 | partial 0/3 | partial 0/3 |
-| Amos | 9 | partial 2/9 | partial 0/9 | partial 0/9 | partial 0/9 |
-| Obadiah | 1 | complete | partial 0/1 | partial 0/1 | partial 0/1 |
-| Jonah | 4 | partial 2/4 | partial 0/4 | partial 0/4 | partial 0/4 |
-| Micah | 7 | partial 2/7 | partial 0/7 | partial 0/7 | partial 0/7 |
-| Nahum | 3 | partial 1/3 | partial 0/3 | partial 0/3 | partial 0/3 |
-| Habakkuk | 3 | partial 1/3 | partial 0/3 | partial 0/3 | partial 0/3 |
-| Zephaniah | 3 | partial 1/3 | partial 0/3 | partial 0/3 | partial 0/3 |
-| Haggai | 2 | partial 1/2 | partial 0/2 | partial 0/2 | partial 0/2 |
-| Zechariah | 14 | partial 4/14 | partial 0/14 | partial 0/14 | partial 0/14 |
-| Malachi | 4 | partial 2/4 | partial 0/4 | partial 0/4 | partial 0/4 |
+| Hosea | 14 | complete | complete | complete | complete |
+| Joel | 3 | complete | complete | complete | complete |
+| Amos | 9 | complete | complete | complete | complete |
+| Obadiah | 1 | complete | complete | complete | complete |
+| Jonah | 4 | complete | complete | complete | complete |
+| Micah | 7 | complete | complete | complete | complete |
+| Nahum | 3 | complete | complete | complete | complete |
+| Habakkuk | 3 | complete | complete | complete | complete |
+| Zephaniah | 3 | complete | complete | complete | complete |
+| Haggai | 2 | complete | complete | complete | complete |
+| Zechariah | 14 | complete | partial 9/14 | partial 8/14 | partial 0/14 |
+| Malachi | 4 | complete | complete | partial 0/4 | partial 0/4 |
 
 ---
 
@@ -1252,531 +1252,531 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | christ | zc-christ-joshua-6-8.py | Joshua | 6–8 | complete |
 | christ | zc-christ-joshua-9-11.py | Joshua | 9–11 | complete |
 | christ | zc-christ-joshua-12-14.py | Joshua | 12–14 | complete |
-| christ | zc-christ-joshua-15-17.py | Joshua | 15–17 | in-progress @ 2026-06-11T12:40:40Z |
-| christ | zc-christ-joshua-18-20.py | Joshua | 18–20 | in-progress @ 2026-06-11T12:42:27Z |
-| christ | zc-christ-joshua-21-23.py | Joshua | 21–23 | partial |
-| christ | zc-christ-joshua-24-24.py | Joshua | 24 | not started |
+| christ | zc-christ-joshua-15-17.py | Joshua | 15–17 | complete |
+| christ | zc-christ-joshua-18-20.py | Joshua | 18–20 | complete |
+| christ | zc-christ-joshua-21-23.py | Joshua | 21–23 | complete |
+| christ | zc-christ-joshua-24-24.py | Joshua | 24 | complete |
 | echo | zc-echo-judges-1-3.py | Judges | 1–3 | complete |
 | echo | zc-echo-judges-4-6.py | Judges | 4–6 | complete |
 | echo | zc-echo-judges-7-8.py | Judges | 7–8 | complete |
-| echo | zc-echo-judges-9-10.py | Judges | 9–10 | not started |
-| echo | zc-echo-judges-11-13.py | Judges | 11–13 | partial |
-| echo | zc-echo-judges-14-17.py | Judges | 14–17 | not started |
-| echo | zc-echo-judges-18-19.py | Judges | 18–19 | not started |
-| echo | zc-echo-judges-20-21.py | Judges | 20–21 | partial |
-| original | zc-original-judges-1-3.py | Judges | 1–3 | partial |
-| original | zc-original-judges-4-6.py | Judges | 4–6 | not started |
-| original | zc-original-judges-7-8.py | Judges | 7–8 | not started |
-| original | zc-original-judges-9-10.py | Judges | 9–10 | not started |
-| original | zc-original-judges-11-13.py | Judges | 11–13 | not started |
-| original | zc-original-judges-14-17.py | Judges | 14–17 | not started |
-| original | zc-original-judges-18-19.py | Judges | 18–19 | not started |
-| original | zc-original-judges-20-21.py | Judges | 20–21 | not started |
-| context | zc-context-judges-1-3.py | Judges | 1–3 | partial |
-| context | zc-context-judges-4-6.py | Judges | 4–6 | not started |
-| context | zc-context-judges-7-8.py | Judges | 7–8 | not started |
-| context | zc-context-judges-9-10.py | Judges | 9–10 | not started |
-| context | zc-context-judges-11-13.py | Judges | 11–13 | not started |
-| context | zc-context-judges-14-17.py | Judges | 14–17 | not started |
-| context | zc-context-judges-18-19.py | Judges | 18–19 | not started |
-| context | zc-context-judges-20-21.py | Judges | 20–21 | not started |
-| christ | zc-christ-judges-1-3.py | Judges | 1–3 | partial |
-| christ | zc-christ-judges-4-6.py | Judges | 4–6 | not started |
-| christ | zc-christ-judges-7-8.py | Judges | 7–8 | not started |
-| christ | zc-christ-judges-9-10.py | Judges | 9–10 | not started |
-| christ | zc-christ-judges-11-13.py | Judges | 11–13 | not started |
-| christ | zc-christ-judges-14-17.py | Judges | 14–17 | not started |
-| christ | zc-christ-judges-18-19.py | Judges | 18–19 | not started |
-| christ | zc-christ-judges-20-21.py | Judges | 20–21 | not started |
-| echo | zc-echo-ruth-1-4.py | Ruth | 1–4 | partial |
-| original | zc-original-ruth-1-4.py | Ruth | 1–4 | partial |
-| context | zc-context-ruth-1-4.py | Ruth | 1–4 | partial |
-| christ | zc-christ-ruth-1-4.py | Ruth | 1–4 | partial |
-| echo | zc-echo-1samuel-1-3.py | 1 Samuel | 1–3 | partial |
-| echo | zc-echo-1samuel-4-8.py | 1 Samuel | 4–8 | not started |
-| echo | zc-echo-1samuel-9-12.py | 1 Samuel | 9–12 | not started |
-| echo | zc-echo-1samuel-13-14.py | 1 Samuel | 13–14 | partial |
-| echo | zc-echo-1samuel-15-16.py | 1 Samuel | 15–16 | partial |
-| echo | zc-echo-1samuel-17-18.py | 1 Samuel | 17–18 | not started |
-| echo | zc-echo-1samuel-19-21.py | 1 Samuel | 19–21 | not started |
-| echo | zc-echo-1samuel-22-24.py | 1 Samuel | 22–24 | not started |
-| echo | zc-echo-1samuel-25-27.py | 1 Samuel | 25–27 | not started |
-| echo | zc-echo-1samuel-28-31.py | 1 Samuel | 28–31 | not started |
-| original | zc-original-1samuel-1-3.py | 1 Samuel | 1–3 | partial |
-| original | zc-original-1samuel-4-8.py | 1 Samuel | 4–8 | not started |
-| original | zc-original-1samuel-9-12.py | 1 Samuel | 9–12 | not started |
-| original | zc-original-1samuel-13-14.py | 1 Samuel | 13–14 | not started |
-| original | zc-original-1samuel-15-16.py | 1 Samuel | 15–16 | not started |
-| original | zc-original-1samuel-17-18.py | 1 Samuel | 17–18 | not started |
-| original | zc-original-1samuel-19-21.py | 1 Samuel | 19–21 | not started |
-| original | zc-original-1samuel-22-24.py | 1 Samuel | 22–24 | not started |
-| original | zc-original-1samuel-25-27.py | 1 Samuel | 25–27 | not started |
-| original | zc-original-1samuel-28-31.py | 1 Samuel | 28–31 | not started |
-| context | zc-context-1samuel-1-3.py | 1 Samuel | 1–3 | partial |
-| context | zc-context-1samuel-4-8.py | 1 Samuel | 4–8 | not started |
-| context | zc-context-1samuel-9-12.py | 1 Samuel | 9–12 | not started |
-| context | zc-context-1samuel-13-14.py | 1 Samuel | 13–14 | not started |
-| context | zc-context-1samuel-15-16.py | 1 Samuel | 15–16 | not started |
-| context | zc-context-1samuel-17-18.py | 1 Samuel | 17–18 | not started |
-| context | zc-context-1samuel-19-21.py | 1 Samuel | 19–21 | not started |
-| context | zc-context-1samuel-22-24.py | 1 Samuel | 22–24 | not started |
-| context | zc-context-1samuel-25-27.py | 1 Samuel | 25–27 | not started |
-| context | zc-context-1samuel-28-31.py | 1 Samuel | 28–31 | not started |
-| christ | zc-christ-1samuel-1-3.py | 1 Samuel | 1–3 | not started |
-| christ | zc-christ-1samuel-4-8.py | 1 Samuel | 4–8 | not started |
-| christ | zc-christ-1samuel-9-12.py | 1 Samuel | 9–12 | not started |
-| christ | zc-christ-1samuel-13-14.py | 1 Samuel | 13–14 | not started |
-| christ | zc-christ-1samuel-15-16.py | 1 Samuel | 15–16 | partial |
-| christ | zc-christ-1samuel-17-18.py | 1 Samuel | 17–18 | not started |
-| christ | zc-christ-1samuel-19-21.py | 1 Samuel | 19–21 | not started |
-| christ | zc-christ-1samuel-22-24.py | 1 Samuel | 22–24 | not started |
-| christ | zc-christ-1samuel-25-27.py | 1 Samuel | 25–27 | not started |
-| christ | zc-christ-1samuel-28-31.py | 1 Samuel | 28–31 | not started |
-| echo | zc-echo-2samuel-1-3.py | 2 Samuel | 1–3 | not started |
-| echo | zc-echo-2samuel-4-7.py | 2 Samuel | 4–7 | partial |
-| echo | zc-echo-2samuel-8-11.py | 2 Samuel | 8–11 | not started |
-| echo | zc-echo-2samuel-12-13.py | 2 Samuel | 12–13 | not started |
-| echo | zc-echo-2samuel-14-16.py | 2 Samuel | 14–16 | not started |
-| echo | zc-echo-2samuel-17-18.py | 2 Samuel | 17–18 | not started |
-| echo | zc-echo-2samuel-19-21.py | 2 Samuel | 19–21 | not started |
-| echo | zc-echo-2samuel-22-23.py | 2 Samuel | 22–23 | not started |
-| echo | zc-echo-2samuel-24-24.py | 2 Samuel | 24 | not started |
-| original | zc-original-2samuel-1-3.py | 2 Samuel | 1–3 | not started |
-| original | zc-original-2samuel-4-7.py | 2 Samuel | 4–7 | partial |
-| original | zc-original-2samuel-8-11.py | 2 Samuel | 8–11 | not started |
-| original | zc-original-2samuel-12-13.py | 2 Samuel | 12–13 | not started |
-| original | zc-original-2samuel-14-16.py | 2 Samuel | 14–16 | not started |
-| original | zc-original-2samuel-17-18.py | 2 Samuel | 17–18 | not started |
-| original | zc-original-2samuel-19-21.py | 2 Samuel | 19–21 | not started |
-| original | zc-original-2samuel-22-23.py | 2 Samuel | 22–23 | not started |
-| original | zc-original-2samuel-24-24.py | 2 Samuel | 24 | not started |
-| context | zc-context-2samuel-1-3.py | 2 Samuel | 1–3 | not started |
-| context | zc-context-2samuel-4-7.py | 2 Samuel | 4–7 | partial |
-| context | zc-context-2samuel-8-11.py | 2 Samuel | 8–11 | not started |
-| context | zc-context-2samuel-12-13.py | 2 Samuel | 12–13 | not started |
-| context | zc-context-2samuel-14-16.py | 2 Samuel | 14–16 | not started |
-| context | zc-context-2samuel-17-18.py | 2 Samuel | 17–18 | not started |
-| context | zc-context-2samuel-19-21.py | 2 Samuel | 19–21 | not started |
-| context | zc-context-2samuel-22-23.py | 2 Samuel | 22–23 | not started |
-| context | zc-context-2samuel-24-24.py | 2 Samuel | 24 | not started |
-| christ | zc-christ-2samuel-1-3.py | 2 Samuel | 1–3 | not started |
-| christ | zc-christ-2samuel-4-7.py | 2 Samuel | 4–7 | partial |
-| christ | zc-christ-2samuel-8-11.py | 2 Samuel | 8–11 | not started |
-| christ | zc-christ-2samuel-12-13.py | 2 Samuel | 12–13 | not started |
-| christ | zc-christ-2samuel-14-16.py | 2 Samuel | 14–16 | not started |
-| christ | zc-christ-2samuel-17-18.py | 2 Samuel | 17–18 | not started |
-| christ | zc-christ-2samuel-19-21.py | 2 Samuel | 19–21 | not started |
-| christ | zc-christ-2samuel-22-23.py | 2 Samuel | 22–23 | not started |
-| christ | zc-christ-2samuel-24-24.py | 2 Samuel | 24 | not started |
+| echo | zc-echo-judges-9-10.py | Judges | 9–10 | complete |
+| echo | zc-echo-judges-11-13.py | Judges | 11–13 | complete |
+| echo | zc-echo-judges-14-17.py | Judges | 14–17 | complete |
+| echo | zc-echo-judges-18-19.py | Judges | 18–19 | complete |
+| echo | zc-echo-judges-20-21.py | Judges | 20–21 | complete |
+| original | zc-original-judges-1-3.py | Judges | 1–3 | complete |
+| original | zc-original-judges-4-6.py | Judges | 4–6 | complete |
+| original | zc-original-judges-7-8.py | Judges | 7–8 | complete |
+| original | zc-original-judges-9-10.py | Judges | 9–10 | complete |
+| original | zc-original-judges-11-13.py | Judges | 11–13 | complete |
+| original | zc-original-judges-14-17.py | Judges | 14–17 | complete |
+| original | zc-original-judges-18-19.py | Judges | 18–19 | complete |
+| original | zc-original-judges-20-21.py | Judges | 20–21 | complete |
+| context | zc-context-judges-1-3.py | Judges | 1–3 | complete |
+| context | zc-context-judges-4-6.py | Judges | 4–6 | complete |
+| context | zc-context-judges-7-8.py | Judges | 7–8 | complete |
+| context | zc-context-judges-9-10.py | Judges | 9–10 | complete |
+| context | zc-context-judges-11-13.py | Judges | 11–13 | complete |
+| context | zc-context-judges-14-17.py | Judges | 14–17 | complete |
+| context | zc-context-judges-18-19.py | Judges | 18–19 | complete |
+| context | zc-context-judges-20-21.py | Judges | 20–21 | complete |
+| christ | zc-christ-judges-1-3.py | Judges | 1–3 | complete |
+| christ | zc-christ-judges-4-6.py | Judges | 4–6 | complete |
+| christ | zc-christ-judges-7-8.py | Judges | 7–8 | complete |
+| christ | zc-christ-judges-9-10.py | Judges | 9–10 | complete |
+| christ | zc-christ-judges-11-13.py | Judges | 11–13 | complete |
+| christ | zc-christ-judges-14-17.py | Judges | 14–17 | complete |
+| christ | zc-christ-judges-18-19.py | Judges | 18–19 | complete |
+| christ | zc-christ-judges-20-21.py | Judges | 20–21 | complete |
+| echo | zc-echo-ruth-1-4.py | Ruth | 1–4 | complete |
+| original | zc-original-ruth-1-4.py | Ruth | 1–4 | complete |
+| context | zc-context-ruth-1-4.py | Ruth | 1–4 | complete |
+| christ | zc-christ-ruth-1-4.py | Ruth | 1–4 | complete |
+| echo | zc-echo-1samuel-1-3.py | 1 Samuel | 1–3 | complete |
+| echo | zc-echo-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
+| echo | zc-echo-1samuel-9-12.py | 1 Samuel | 9–12 | complete |
+| echo | zc-echo-1samuel-13-14.py | 1 Samuel | 13–14 | complete |
+| echo | zc-echo-1samuel-15-16.py | 1 Samuel | 15–16 | complete |
+| echo | zc-echo-1samuel-17-18.py | 1 Samuel | 17–18 | complete |
+| echo | zc-echo-1samuel-19-21.py | 1 Samuel | 19–21 | complete |
+| echo | zc-echo-1samuel-22-24.py | 1 Samuel | 22–24 | complete |
+| echo | zc-echo-1samuel-25-27.py | 1 Samuel | 25–27 | complete |
+| echo | zc-echo-1samuel-28-31.py | 1 Samuel | 28–31 | complete |
+| original | zc-original-1samuel-1-3.py | 1 Samuel | 1–3 | complete |
+| original | zc-original-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
+| original | zc-original-1samuel-9-12.py | 1 Samuel | 9–12 | complete |
+| original | zc-original-1samuel-13-14.py | 1 Samuel | 13–14 | complete |
+| original | zc-original-1samuel-15-16.py | 1 Samuel | 15–16 | complete |
+| original | zc-original-1samuel-17-18.py | 1 Samuel | 17–18 | complete |
+| original | zc-original-1samuel-19-21.py | 1 Samuel | 19–21 | complete |
+| original | zc-original-1samuel-22-24.py | 1 Samuel | 22–24 | complete |
+| original | zc-original-1samuel-25-27.py | 1 Samuel | 25–27 | complete |
+| original | zc-original-1samuel-28-31.py | 1 Samuel | 28–31 | complete |
+| context | zc-context-1samuel-1-3.py | 1 Samuel | 1–3 | complete |
+| context | zc-context-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
+| context | zc-context-1samuel-9-12.py | 1 Samuel | 9–12 | complete |
+| context | zc-context-1samuel-13-14.py | 1 Samuel | 13–14 | complete |
+| context | zc-context-1samuel-15-16.py | 1 Samuel | 15–16 | complete |
+| context | zc-context-1samuel-17-18.py | 1 Samuel | 17–18 | complete |
+| context | zc-context-1samuel-19-21.py | 1 Samuel | 19–21 | complete |
+| context | zc-context-1samuel-22-24.py | 1 Samuel | 22–24 | complete |
+| context | zc-context-1samuel-25-27.py | 1 Samuel | 25–27 | complete |
+| context | zc-context-1samuel-28-31.py | 1 Samuel | 28–31 | complete |
+| christ | zc-christ-1samuel-1-3.py | 1 Samuel | 1–3 | complete |
+| christ | zc-christ-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
+| christ | zc-christ-1samuel-9-12.py | 1 Samuel | 9–12 | complete |
+| christ | zc-christ-1samuel-13-14.py | 1 Samuel | 13–14 | complete |
+| christ | zc-christ-1samuel-15-16.py | 1 Samuel | 15–16 | complete |
+| christ | zc-christ-1samuel-17-18.py | 1 Samuel | 17–18 | complete |
+| christ | zc-christ-1samuel-19-21.py | 1 Samuel | 19–21 | complete |
+| christ | zc-christ-1samuel-22-24.py | 1 Samuel | 22–24 | complete |
+| christ | zc-christ-1samuel-25-27.py | 1 Samuel | 25–27 | complete |
+| christ | zc-christ-1samuel-28-31.py | 1 Samuel | 28–31 | complete |
+| echo | zc-echo-2samuel-1-3.py | 2 Samuel | 1–3 | complete |
+| echo | zc-echo-2samuel-4-7.py | 2 Samuel | 4–7 | complete |
+| echo | zc-echo-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
+| echo | zc-echo-2samuel-12-13.py | 2 Samuel | 12–13 | complete |
+| echo | zc-echo-2samuel-14-16.py | 2 Samuel | 14–16 | complete |
+| echo | zc-echo-2samuel-17-18.py | 2 Samuel | 17–18 | complete |
+| echo | zc-echo-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
+| echo | zc-echo-2samuel-22-23.py | 2 Samuel | 22–23 | complete |
+| echo | zc-echo-2samuel-24-24.py | 2 Samuel | 24 | complete |
+| original | zc-original-2samuel-1-3.py | 2 Samuel | 1–3 | complete |
+| original | zc-original-2samuel-4-7.py | 2 Samuel | 4–7 | complete |
+| original | zc-original-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
+| original | zc-original-2samuel-12-13.py | 2 Samuel | 12–13 | complete |
+| original | zc-original-2samuel-14-16.py | 2 Samuel | 14–16 | complete |
+| original | zc-original-2samuel-17-18.py | 2 Samuel | 17–18 | complete |
+| original | zc-original-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
+| original | zc-original-2samuel-22-23.py | 2 Samuel | 22–23 | complete |
+| original | zc-original-2samuel-24-24.py | 2 Samuel | 24 | complete |
+| context | zc-context-2samuel-1-3.py | 2 Samuel | 1–3 | complete |
+| context | zc-context-2samuel-4-7.py | 2 Samuel | 4–7 | complete |
+| context | zc-context-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
+| context | zc-context-2samuel-12-13.py | 2 Samuel | 12–13 | complete |
+| context | zc-context-2samuel-14-16.py | 2 Samuel | 14–16 | complete |
+| context | zc-context-2samuel-17-18.py | 2 Samuel | 17–18 | complete |
+| context | zc-context-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
+| context | zc-context-2samuel-22-23.py | 2 Samuel | 22–23 | complete |
+| context | zc-context-2samuel-24-24.py | 2 Samuel | 24 | complete |
+| christ | zc-christ-2samuel-1-3.py | 2 Samuel | 1–3 | complete |
+| christ | zc-christ-2samuel-4-7.py | 2 Samuel | 4–7 | complete |
+| christ | zc-christ-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
+| christ | zc-christ-2samuel-12-13.py | 2 Samuel | 12–13 | complete |
+| christ | zc-christ-2samuel-14-16.py | 2 Samuel | 14–16 | complete |
+| christ | zc-christ-2samuel-17-18.py | 2 Samuel | 17–18 | complete |
+| christ | zc-christ-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
+| christ | zc-christ-2samuel-22-23.py | 2 Samuel | 22–23 | complete |
+| christ | zc-christ-2samuel-24-24.py | 2 Samuel | 24 | complete |
 | echo | zc-echo-1kings-1-2.py | 1 Kings | 1–2 | complete |
 | echo | zc-echo-1kings-3-5.py | 1 Kings | 3–5 | complete |
 | echo | zc-echo-1kings-6-7.py | 1 Kings | 6–7 | complete |
 | echo | zc-echo-1kings-8-9.py | 1 Kings | 8–9 | complete |
 | echo | zc-echo-1kings-10-11.py | 1 Kings | 10–11 | complete |
-| echo | zc-echo-1kings-12-14.py | 1 Kings | 12–14 | not started |
-| echo | zc-echo-1kings-15-17.py | 1 Kings | 15–17 | partial |
-| echo | zc-echo-1kings-18-19.py | 1 Kings | 18–19 | partial |
-| echo | zc-echo-1kings-20-21.py | 1 Kings | 20–21 | not started |
-| echo | zc-echo-1kings-22-22.py | 1 Kings | 22 | not started |
-| original | zc-original-1kings-1-2.py | 1 Kings | 1–2 | not started |
-| original | zc-original-1kings-3-5.py | 1 Kings | 3–5 | not started |
-| original | zc-original-1kings-6-7.py | 1 Kings | 6–7 | not started |
-| original | zc-original-1kings-8-9.py | 1 Kings | 8–9 | partial |
-| original | zc-original-1kings-10-11.py | 1 Kings | 10–11 | not started |
-| original | zc-original-1kings-12-14.py | 1 Kings | 12–14 | not started |
-| original | zc-original-1kings-15-17.py | 1 Kings | 15–17 | not started |
-| original | zc-original-1kings-18-19.py | 1 Kings | 18–19 | partial |
-| original | zc-original-1kings-20-21.py | 1 Kings | 20–21 | not started |
-| original | zc-original-1kings-22-22.py | 1 Kings | 22 | not started |
-| context | zc-context-1kings-1-2.py | 1 Kings | 1–2 | partial |
-| context | zc-context-1kings-3-5.py | 1 Kings | 3–5 | not started |
-| context | zc-context-1kings-6-7.py | 1 Kings | 6–7 | not started |
-| context | zc-context-1kings-8-9.py | 1 Kings | 8–9 | not started |
-| context | zc-context-1kings-10-11.py | 1 Kings | 10–11 | not started |
-| context | zc-context-1kings-12-14.py | 1 Kings | 12–14 | not started |
-| context | zc-context-1kings-15-17.py | 1 Kings | 15–17 | not started |
-| context | zc-context-1kings-18-19.py | 1 Kings | 18–19 | not started |
-| context | zc-context-1kings-20-21.py | 1 Kings | 20–21 | not started |
-| context | zc-context-1kings-22-22.py | 1 Kings | 22 | not started |
-| christ | zc-christ-1kings-1-2.py | 1 Kings | 1–2 | not started |
-| christ | zc-christ-1kings-3-5.py | 1 Kings | 3–5 | not started |
-| christ | zc-christ-1kings-6-7.py | 1 Kings | 6–7 | not started |
-| christ | zc-christ-1kings-8-9.py | 1 Kings | 8–9 | not started |
-| christ | zc-christ-1kings-10-11.py | 1 Kings | 10–11 | not started |
-| christ | zc-christ-1kings-12-14.py | 1 Kings | 12–14 | not started |
-| christ | zc-christ-1kings-15-17.py | 1 Kings | 15–17 | not started |
-| christ | zc-christ-1kings-18-19.py | 1 Kings | 18–19 | partial |
-| christ | zc-christ-1kings-20-21.py | 1 Kings | 20–21 | not started |
-| christ | zc-christ-1kings-22-22.py | 1 Kings | 22 | not started |
-| echo | zc-echo-2kings-1-3.py | 2 Kings | 1–3 | partial |
+| echo | zc-echo-1kings-12-14.py | 1 Kings | 12–14 | complete |
+| echo | zc-echo-1kings-15-17.py | 1 Kings | 15–17 | complete |
+| echo | zc-echo-1kings-18-19.py | 1 Kings | 18–19 | complete |
+| echo | zc-echo-1kings-20-21.py | 1 Kings | 20–21 | complete |
+| echo | zc-echo-1kings-22-22.py | 1 Kings | 22 | complete |
+| original | zc-original-1kings-1-2.py | 1 Kings | 1–2 | complete |
+| original | zc-original-1kings-3-5.py | 1 Kings | 3–5 | complete |
+| original | zc-original-1kings-6-7.py | 1 Kings | 6–7 | complete |
+| original | zc-original-1kings-8-9.py | 1 Kings | 8–9 | complete |
+| original | zc-original-1kings-10-11.py | 1 Kings | 10–11 | complete |
+| original | zc-original-1kings-12-14.py | 1 Kings | 12–14 | complete |
+| original | zc-original-1kings-15-17.py | 1 Kings | 15–17 | complete |
+| original | zc-original-1kings-18-19.py | 1 Kings | 18–19 | complete |
+| original | zc-original-1kings-20-21.py | 1 Kings | 20–21 | complete |
+| original | zc-original-1kings-22-22.py | 1 Kings | 22 | complete |
+| context | zc-context-1kings-1-2.py | 1 Kings | 1–2 | complete |
+| context | zc-context-1kings-3-5.py | 1 Kings | 3–5 | complete |
+| context | zc-context-1kings-6-7.py | 1 Kings | 6–7 | complete |
+| context | zc-context-1kings-8-9.py | 1 Kings | 8–9 | complete |
+| context | zc-context-1kings-10-11.py | 1 Kings | 10–11 | complete |
+| context | zc-context-1kings-12-14.py | 1 Kings | 12–14 | complete |
+| context | zc-context-1kings-15-17.py | 1 Kings | 15–17 | complete |
+| context | zc-context-1kings-18-19.py | 1 Kings | 18–19 | complete |
+| context | zc-context-1kings-20-21.py | 1 Kings | 20–21 | complete |
+| context | zc-context-1kings-22-22.py | 1 Kings | 22 | complete |
+| christ | zc-christ-1kings-1-2.py | 1 Kings | 1–2 | complete |
+| christ | zc-christ-1kings-3-5.py | 1 Kings | 3–5 | complete |
+| christ | zc-christ-1kings-6-7.py | 1 Kings | 6–7 | complete |
+| christ | zc-christ-1kings-8-9.py | 1 Kings | 8–9 | complete |
+| christ | zc-christ-1kings-10-11.py | 1 Kings | 10–11 | complete |
+| christ | zc-christ-1kings-12-14.py | 1 Kings | 12–14 | complete |
+| christ | zc-christ-1kings-15-17.py | 1 Kings | 15–17 | complete |
+| christ | zc-christ-1kings-18-19.py | 1 Kings | 18–19 | complete |
+| christ | zc-christ-1kings-20-21.py | 1 Kings | 20–21 | complete |
+| christ | zc-christ-1kings-22-22.py | 1 Kings | 22 | complete |
+| echo | zc-echo-2kings-1-3.py | 2 Kings | 1–3 | complete |
 | echo | zc-echo-2kings-4-5.py | 2 Kings | 4–5 | complete |
-| echo | zc-echo-2kings-6-8.py | 2 Kings | 6–8 | not started |
-| echo | zc-echo-2kings-9-11.py | 2 Kings | 9–11 | not started |
-| echo | zc-echo-2kings-12-14.py | 2 Kings | 12–14 | not started |
-| echo | zc-echo-2kings-15-17.py | 2 Kings | 15–17 | not started |
-| echo | zc-echo-2kings-18-20.py | 2 Kings | 18–20 | not started |
-| echo | zc-echo-2kings-21-23.py | 2 Kings | 21–23 | not started |
-| echo | zc-echo-2kings-24-25.py | 2 Kings | 24–25 | not started |
-| original | zc-original-2kings-1-3.py | 2 Kings | 1–3 | partial |
-| original | zc-original-2kings-4-5.py | 2 Kings | 4–5 | not started |
-| original | zc-original-2kings-6-8.py | 2 Kings | 6–8 | not started |
-| original | zc-original-2kings-9-11.py | 2 Kings | 9–11 | not started |
-| original | zc-original-2kings-12-14.py | 2 Kings | 12–14 | not started |
-| original | zc-original-2kings-15-17.py | 2 Kings | 15–17 | not started |
-| original | zc-original-2kings-18-20.py | 2 Kings | 18–20 | not started |
-| original | zc-original-2kings-21-23.py | 2 Kings | 21–23 | not started |
-| original | zc-original-2kings-24-25.py | 2 Kings | 24–25 | not started |
-| context | zc-context-2kings-1-3.py | 2 Kings | 1–3 | not started |
-| context | zc-context-2kings-4-5.py | 2 Kings | 4–5 | not started |
-| context | zc-context-2kings-6-8.py | 2 Kings | 6–8 | not started |
-| context | zc-context-2kings-9-11.py | 2 Kings | 9–11 | not started |
-| context | zc-context-2kings-12-14.py | 2 Kings | 12–14 | not started |
-| context | zc-context-2kings-15-17.py | 2 Kings | 15–17 | partial |
-| context | zc-context-2kings-18-20.py | 2 Kings | 18–20 | not started |
-| context | zc-context-2kings-21-23.py | 2 Kings | 21–23 | not started |
-| context | zc-context-2kings-24-25.py | 2 Kings | 24–25 | not started |
-| christ | zc-christ-2kings-1-3.py | 2 Kings | 1–3 | not started |
-| christ | zc-christ-2kings-4-5.py | 2 Kings | 4–5 | partial |
-| christ | zc-christ-2kings-6-8.py | 2 Kings | 6–8 | not started |
-| christ | zc-christ-2kings-9-11.py | 2 Kings | 9–11 | not started |
-| christ | zc-christ-2kings-12-14.py | 2 Kings | 12–14 | not started |
-| christ | zc-christ-2kings-15-17.py | 2 Kings | 15–17 | not started |
-| christ | zc-christ-2kings-18-20.py | 2 Kings | 18–20 | not started |
-| christ | zc-christ-2kings-21-23.py | 2 Kings | 21–23 | not started |
-| christ | zc-christ-2kings-24-25.py | 2 Kings | 24–25 | not started |
+| echo | zc-echo-2kings-6-8.py | 2 Kings | 6–8 | complete |
+| echo | zc-echo-2kings-9-11.py | 2 Kings | 9–11 | complete |
+| echo | zc-echo-2kings-12-14.py | 2 Kings | 12–14 | complete |
+| echo | zc-echo-2kings-15-17.py | 2 Kings | 15–17 | complete |
+| echo | zc-echo-2kings-18-20.py | 2 Kings | 18–20 | complete |
+| echo | zc-echo-2kings-21-23.py | 2 Kings | 21–23 | complete |
+| echo | zc-echo-2kings-24-25.py | 2 Kings | 24–25 | complete |
+| original | zc-original-2kings-1-3.py | 2 Kings | 1–3 | complete |
+| original | zc-original-2kings-4-5.py | 2 Kings | 4–5 | complete |
+| original | zc-original-2kings-6-8.py | 2 Kings | 6–8 | complete |
+| original | zc-original-2kings-9-11.py | 2 Kings | 9–11 | complete |
+| original | zc-original-2kings-12-14.py | 2 Kings | 12–14 | complete |
+| original | zc-original-2kings-15-17.py | 2 Kings | 15–17 | complete |
+| original | zc-original-2kings-18-20.py | 2 Kings | 18–20 | complete |
+| original | zc-original-2kings-21-23.py | 2 Kings | 21–23 | complete |
+| original | zc-original-2kings-24-25.py | 2 Kings | 24–25 | complete |
+| context | zc-context-2kings-1-3.py | 2 Kings | 1–3 | complete |
+| context | zc-context-2kings-4-5.py | 2 Kings | 4–5 | complete |
+| context | zc-context-2kings-6-8.py | 2 Kings | 6–8 | complete |
+| context | zc-context-2kings-9-11.py | 2 Kings | 9–11 | complete |
+| context | zc-context-2kings-12-14.py | 2 Kings | 12–14 | complete |
+| context | zc-context-2kings-15-17.py | 2 Kings | 15–17 | complete |
+| context | zc-context-2kings-18-20.py | 2 Kings | 18–20 | complete |
+| context | zc-context-2kings-21-23.py | 2 Kings | 21–23 | complete |
+| context | zc-context-2kings-24-25.py | 2 Kings | 24–25 | complete |
+| christ | zc-christ-2kings-1-3.py | 2 Kings | 1–3 | complete |
+| christ | zc-christ-2kings-4-5.py | 2 Kings | 4–5 | complete |
+| christ | zc-christ-2kings-6-8.py | 2 Kings | 6–8 | complete |
+| christ | zc-christ-2kings-9-11.py | 2 Kings | 9–11 | complete |
+| christ | zc-christ-2kings-12-14.py | 2 Kings | 12–14 | complete |
+| christ | zc-christ-2kings-15-17.py | 2 Kings | 15–17 | complete |
+| christ | zc-christ-2kings-18-20.py | 2 Kings | 18–20 | complete |
+| christ | zc-christ-2kings-21-23.py | 2 Kings | 21–23 | complete |
+| christ | zc-christ-2kings-24-25.py | 2 Kings | 24–25 | complete |
 | echo | zc-echo-1chronicles-1-1.py | 1 Chronicles | 1 | complete |
 | echo | zc-echo-1chronicles-2-3.py | 1 Chronicles | 2–3 | complete |
 | echo | zc-echo-1chronicles-4-5.py | 1 Chronicles | 4–5 | complete |
-| echo | zc-echo-1chronicles-6-6.py | 1 Chronicles | 6 | not started |
-| echo | zc-echo-1chronicles-7-8.py | 1 Chronicles | 7–8 | not started |
-| echo | zc-echo-1chronicles-9-10.py | 1 Chronicles | 9–10 | not started |
-| echo | zc-echo-1chronicles-11-12.py | 1 Chronicles | 11–12 | not started |
-| echo | zc-echo-1chronicles-13-15.py | 1 Chronicles | 13–15 | not started |
-| echo | zc-echo-1chronicles-16-18.py | 1 Chronicles | 16–18 | partial |
-| echo | zc-echo-1chronicles-19-22.py | 1 Chronicles | 19–22 | not started |
-| echo | zc-echo-1chronicles-23-25.py | 1 Chronicles | 23–25 | not started |
-| echo | zc-echo-1chronicles-26-28.py | 1 Chronicles | 26–28 | not started |
+| echo | zc-echo-1chronicles-6-6.py | 1 Chronicles | 6 | complete |
+| echo | zc-echo-1chronicles-7-8.py | 1 Chronicles | 7–8 | complete |
+| echo | zc-echo-1chronicles-9-10.py | 1 Chronicles | 9–10 | complete |
+| echo | zc-echo-1chronicles-11-12.py | 1 Chronicles | 11–12 | complete |
+| echo | zc-echo-1chronicles-13-15.py | 1 Chronicles | 13–15 | complete |
+| echo | zc-echo-1chronicles-16-18.py | 1 Chronicles | 16–18 | complete |
+| echo | zc-echo-1chronicles-19-22.py | 1 Chronicles | 19–22 | complete |
+| echo | zc-echo-1chronicles-23-25.py | 1 Chronicles | 23–25 | complete |
+| echo | zc-echo-1chronicles-26-28.py | 1 Chronicles | 26–28 | complete |
 | echo | zc-echo-1chronicles-29-29.py | 1 Chronicles | 29 | complete |
-| original | zc-original-1chronicles-1-1.py | 1 Chronicles | 1 | partial |
-| original | zc-original-1chronicles-2-3.py | 1 Chronicles | 2–3 | not started |
-| original | zc-original-1chronicles-4-5.py | 1 Chronicles | 4–5 | not started |
-| original | zc-original-1chronicles-6-6.py | 1 Chronicles | 6 | not started |
-| original | zc-original-1chronicles-7-8.py | 1 Chronicles | 7–8 | not started |
-| original | zc-original-1chronicles-9-10.py | 1 Chronicles | 9–10 | not started |
-| original | zc-original-1chronicles-11-12.py | 1 Chronicles | 11–12 | not started |
-| original | zc-original-1chronicles-13-15.py | 1 Chronicles | 13–15 | not started |
-| original | zc-original-1chronicles-16-18.py | 1 Chronicles | 16–18 | not started |
-| original | zc-original-1chronicles-19-22.py | 1 Chronicles | 19–22 | not started |
-| original | zc-original-1chronicles-23-25.py | 1 Chronicles | 23–25 | not started |
-| original | zc-original-1chronicles-26-28.py | 1 Chronicles | 26–28 | not started |
-| original | zc-original-1chronicles-29-29.py | 1 Chronicles | 29 | not started |
-| context | zc-context-1chronicles-1-1.py | 1 Chronicles | 1 | partial |
-| context | zc-context-1chronicles-2-3.py | 1 Chronicles | 2–3 | not started |
-| context | zc-context-1chronicles-4-5.py | 1 Chronicles | 4–5 | not started |
-| context | zc-context-1chronicles-6-6.py | 1 Chronicles | 6 | not started |
-| context | zc-context-1chronicles-7-8.py | 1 Chronicles | 7–8 | not started |
-| context | zc-context-1chronicles-9-10.py | 1 Chronicles | 9–10 | not started |
-| context | zc-context-1chronicles-11-12.py | 1 Chronicles | 11–12 | not started |
-| context | zc-context-1chronicles-13-15.py | 1 Chronicles | 13–15 | not started |
-| context | zc-context-1chronicles-16-18.py | 1 Chronicles | 16–18 | not started |
-| context | zc-context-1chronicles-19-22.py | 1 Chronicles | 19–22 | not started |
-| context | zc-context-1chronicles-23-25.py | 1 Chronicles | 23–25 | not started |
-| context | zc-context-1chronicles-26-28.py | 1 Chronicles | 26–28 | not started |
-| context | zc-context-1chronicles-29-29.py | 1 Chronicles | 29 | not started |
-| christ | zc-christ-1chronicles-1-1.py | 1 Chronicles | 1 | not started |
-| christ | zc-christ-1chronicles-2-3.py | 1 Chronicles | 2–3 | not started |
-| christ | zc-christ-1chronicles-4-5.py | 1 Chronicles | 4–5 | not started |
-| christ | zc-christ-1chronicles-6-6.py | 1 Chronicles | 6 | not started |
-| christ | zc-christ-1chronicles-7-8.py | 1 Chronicles | 7–8 | not started |
-| christ | zc-christ-1chronicles-9-10.py | 1 Chronicles | 9–10 | not started |
-| christ | zc-christ-1chronicles-11-12.py | 1 Chronicles | 11–12 | not started |
-| christ | zc-christ-1chronicles-13-15.py | 1 Chronicles | 13–15 | not started |
-| christ | zc-christ-1chronicles-16-18.py | 1 Chronicles | 16–18 | partial |
-| christ | zc-christ-1chronicles-19-22.py | 1 Chronicles | 19–22 | not started |
-| christ | zc-christ-1chronicles-23-25.py | 1 Chronicles | 23–25 | not started |
-| christ | zc-christ-1chronicles-26-28.py | 1 Chronicles | 26–28 | not started |
-| christ | zc-christ-1chronicles-29-29.py | 1 Chronicles | 29 | not started |
-| echo | zc-echo-2chronicles-1-5.py | 2 Chronicles | 1–5 | not started |
-| echo | zc-echo-2chronicles-6-8.py | 2 Chronicles | 6–8 | partial |
-| echo | zc-echo-2chronicles-9-12.py | 2 Chronicles | 9–12 | not started |
-| echo | zc-echo-2chronicles-13-17.py | 2 Chronicles | 13–17 | not started |
-| echo | zc-echo-2chronicles-18-20.py | 2 Chronicles | 18–20 | not started |
-| echo | zc-echo-2chronicles-21-24.py | 2 Chronicles | 21–24 | not started |
-| echo | zc-echo-2chronicles-25-28.py | 2 Chronicles | 25–28 | not started |
-| echo | zc-echo-2chronicles-29-31.py | 2 Chronicles | 29–31 | not started |
-| echo | zc-echo-2chronicles-32-34.py | 2 Chronicles | 32–34 | not started |
-| echo | zc-echo-2chronicles-35-36.py | 2 Chronicles | 35–36 | not started |
-| original | zc-original-2chronicles-1-5.py | 2 Chronicles | 1–5 | not started |
-| original | zc-original-2chronicles-6-8.py | 2 Chronicles | 6–8 | partial |
-| original | zc-original-2chronicles-9-12.py | 2 Chronicles | 9–12 | not started |
-| original | zc-original-2chronicles-13-17.py | 2 Chronicles | 13–17 | not started |
-| original | zc-original-2chronicles-18-20.py | 2 Chronicles | 18–20 | not started |
-| original | zc-original-2chronicles-21-24.py | 2 Chronicles | 21–24 | not started |
-| original | zc-original-2chronicles-25-28.py | 2 Chronicles | 25–28 | not started |
-| original | zc-original-2chronicles-29-31.py | 2 Chronicles | 29–31 | not started |
-| original | zc-original-2chronicles-32-34.py | 2 Chronicles | 32–34 | not started |
-| original | zc-original-2chronicles-35-36.py | 2 Chronicles | 35–36 | not started |
-| context | zc-context-2chronicles-1-5.py | 2 Chronicles | 1–5 | not started |
-| context | zc-context-2chronicles-6-8.py | 2 Chronicles | 6–8 | not started |
-| context | zc-context-2chronicles-9-12.py | 2 Chronicles | 9–12 | not started |
-| context | zc-context-2chronicles-13-17.py | 2 Chronicles | 13–17 | not started |
-| context | zc-context-2chronicles-18-20.py | 2 Chronicles | 18–20 | not started |
-| context | zc-context-2chronicles-21-24.py | 2 Chronicles | 21–24 | not started |
-| context | zc-context-2chronicles-25-28.py | 2 Chronicles | 25–28 | not started |
-| context | zc-context-2chronicles-29-31.py | 2 Chronicles | 29–31 | not started |
-| context | zc-context-2chronicles-32-34.py | 2 Chronicles | 32–34 | not started |
-| context | zc-context-2chronicles-35-36.py | 2 Chronicles | 35–36 | partial |
-| christ | zc-christ-2chronicles-1-5.py | 2 Chronicles | 1–5 | not started |
-| christ | zc-christ-2chronicles-6-8.py | 2 Chronicles | 6–8 | not started |
-| christ | zc-christ-2chronicles-9-12.py | 2 Chronicles | 9–12 | not started |
-| christ | zc-christ-2chronicles-13-17.py | 2 Chronicles | 13–17 | not started |
-| christ | zc-christ-2chronicles-18-20.py | 2 Chronicles | 18–20 | not started |
-| christ | zc-christ-2chronicles-21-24.py | 2 Chronicles | 21–24 | not started |
-| christ | zc-christ-2chronicles-25-28.py | 2 Chronicles | 25–28 | not started |
-| christ | zc-christ-2chronicles-29-31.py | 2 Chronicles | 29–31 | not started |
-| christ | zc-christ-2chronicles-32-34.py | 2 Chronicles | 32–34 | not started |
-| christ | zc-christ-2chronicles-35-36.py | 2 Chronicles | 35–36 | partial |
-| echo | zc-echo-ezra-1-3.py | Ezra | 1–3 | partial |
-| echo | zc-echo-ezra-4-7.py | Ezra | 4–7 | not started |
-| echo | zc-echo-ezra-8-10.py | Ezra | 8–10 | not started |
-| original | zc-original-ezra-1-3.py | Ezra | 1–3 | partial |
-| original | zc-original-ezra-4-7.py | Ezra | 4–7 | not started |
-| original | zc-original-ezra-8-10.py | Ezra | 8–10 | not started |
-| context | zc-context-ezra-1-3.py | Ezra | 1–3 | partial |
-| context | zc-context-ezra-4-7.py | Ezra | 4–7 | not started |
-| context | zc-context-ezra-8-10.py | Ezra | 8–10 | not started |
-| christ | zc-christ-ezra-1-3.py | Ezra | 1–3 | not started |
-| christ | zc-christ-ezra-4-7.py | Ezra | 4–7 | not started |
-| christ | zc-christ-ezra-8-10.py | Ezra | 8–10 | partial |
-| echo | zc-echo-nehemiah-1-4.py | Nehemiah | 1–4 | not started |
-| echo | zc-echo-nehemiah-5-6.py | Nehemiah | 5–6 | not started |
-| echo | zc-echo-nehemiah-7-8.py | Nehemiah | 7–8 | partial |
-| echo | zc-echo-nehemiah-9-10.py | Nehemiah | 9–10 | not started |
-| echo | zc-echo-nehemiah-11-12.py | Nehemiah | 11–12 | not started |
-| echo | zc-echo-nehemiah-13-13.py | Nehemiah | 13 | not started |
-| original | zc-original-nehemiah-1-4.py | Nehemiah | 1–4 | not started |
-| original | zc-original-nehemiah-5-6.py | Nehemiah | 5–6 | not started |
-| original | zc-original-nehemiah-7-8.py | Nehemiah | 7–8 | not started |
-| original | zc-original-nehemiah-9-10.py | Nehemiah | 9–10 | partial |
-| original | zc-original-nehemiah-11-12.py | Nehemiah | 11–12 | not started |
-| original | zc-original-nehemiah-13-13.py | Nehemiah | 13 | not started |
-| context | zc-context-nehemiah-1-4.py | Nehemiah | 1–4 | partial |
-| context | zc-context-nehemiah-5-6.py | Nehemiah | 5–6 | not started |
-| context | zc-context-nehemiah-7-8.py | Nehemiah | 7–8 | not started |
-| context | zc-context-nehemiah-9-10.py | Nehemiah | 9–10 | not started |
-| context | zc-context-nehemiah-11-12.py | Nehemiah | 11–12 | not started |
-| context | zc-context-nehemiah-13-13.py | Nehemiah | 13 | not started |
-| christ | zc-christ-nehemiah-1-4.py | Nehemiah | 1–4 | not started |
-| christ | zc-christ-nehemiah-5-6.py | Nehemiah | 5–6 | not started |
-| christ | zc-christ-nehemiah-7-8.py | Nehemiah | 7–8 | not started |
-| christ | zc-christ-nehemiah-9-10.py | Nehemiah | 9–10 | partial |
-| christ | zc-christ-nehemiah-11-12.py | Nehemiah | 11–12 | not started |
-| christ | zc-christ-nehemiah-13-13.py | Nehemiah | 13 | not started |
-| echo | zc-echo-esther-1-5.py | Esther | 1–5 | partial |
-| echo | zc-echo-esther-6-10.py | Esther | 6–10 | not started |
-| original | zc-original-esther-1-5.py | Esther | 1–5 | partial |
-| original | zc-original-esther-6-10.py | Esther | 6–10 | not started |
-| context | zc-context-esther-1-5.py | Esther | 1–5 | partial |
-| context | zc-context-esther-6-10.py | Esther | 6–10 | not started |
-| christ | zc-christ-esther-1-5.py | Esther | 1–5 | partial |
-| christ | zc-christ-esther-6-10.py | Esther | 6–10 | not started |
+| original | zc-original-1chronicles-1-1.py | 1 Chronicles | 1 | complete |
+| original | zc-original-1chronicles-2-3.py | 1 Chronicles | 2–3 | complete |
+| original | zc-original-1chronicles-4-5.py | 1 Chronicles | 4–5 | complete |
+| original | zc-original-1chronicles-6-6.py | 1 Chronicles | 6 | complete |
+| original | zc-original-1chronicles-7-8.py | 1 Chronicles | 7–8 | complete |
+| original | zc-original-1chronicles-9-10.py | 1 Chronicles | 9–10 | complete |
+| original | zc-original-1chronicles-11-12.py | 1 Chronicles | 11–12 | complete |
+| original | zc-original-1chronicles-13-15.py | 1 Chronicles | 13–15 | complete |
+| original | zc-original-1chronicles-16-18.py | 1 Chronicles | 16–18 | complete |
+| original | zc-original-1chronicles-19-22.py | 1 Chronicles | 19–22 | complete |
+| original | zc-original-1chronicles-23-25.py | 1 Chronicles | 23–25 | complete |
+| original | zc-original-1chronicles-26-28.py | 1 Chronicles | 26–28 | complete |
+| original | zc-original-1chronicles-29-29.py | 1 Chronicles | 29 | complete |
+| context | zc-context-1chronicles-1-1.py | 1 Chronicles | 1 | complete |
+| context | zc-context-1chronicles-2-3.py | 1 Chronicles | 2–3 | complete |
+| context | zc-context-1chronicles-4-5.py | 1 Chronicles | 4–5 | complete |
+| context | zc-context-1chronicles-6-6.py | 1 Chronicles | 6 | complete |
+| context | zc-context-1chronicles-7-8.py | 1 Chronicles | 7–8 | complete |
+| context | zc-context-1chronicles-9-10.py | 1 Chronicles | 9–10 | complete |
+| context | zc-context-1chronicles-11-12.py | 1 Chronicles | 11–12 | complete |
+| context | zc-context-1chronicles-13-15.py | 1 Chronicles | 13–15 | complete |
+| context | zc-context-1chronicles-16-18.py | 1 Chronicles | 16–18 | complete |
+| context | zc-context-1chronicles-19-22.py | 1 Chronicles | 19–22 | complete |
+| context | zc-context-1chronicles-23-25.py | 1 Chronicles | 23–25 | complete |
+| context | zc-context-1chronicles-26-28.py | 1 Chronicles | 26–28 | complete |
+| context | zc-context-1chronicles-29-29.py | 1 Chronicles | 29 | complete |
+| christ | zc-christ-1chronicles-1-1.py | 1 Chronicles | 1 | complete |
+| christ | zc-christ-1chronicles-2-3.py | 1 Chronicles | 2–3 | complete |
+| christ | zc-christ-1chronicles-4-5.py | 1 Chronicles | 4–5 | complete |
+| christ | zc-christ-1chronicles-6-6.py | 1 Chronicles | 6 | complete |
+| christ | zc-christ-1chronicles-7-8.py | 1 Chronicles | 7–8 | complete |
+| christ | zc-christ-1chronicles-9-10.py | 1 Chronicles | 9–10 | complete |
+| christ | zc-christ-1chronicles-11-12.py | 1 Chronicles | 11–12 | complete |
+| christ | zc-christ-1chronicles-13-15.py | 1 Chronicles | 13–15 | complete |
+| christ | zc-christ-1chronicles-16-18.py | 1 Chronicles | 16–18 | complete |
+| christ | zc-christ-1chronicles-19-22.py | 1 Chronicles | 19–22 | complete |
+| christ | zc-christ-1chronicles-23-25.py | 1 Chronicles | 23–25 | complete |
+| christ | zc-christ-1chronicles-26-28.py | 1 Chronicles | 26–28 | complete |
+| christ | zc-christ-1chronicles-29-29.py | 1 Chronicles | 29 | complete |
+| echo | zc-echo-2chronicles-1-5.py | 2 Chronicles | 1–5 | complete |
+| echo | zc-echo-2chronicles-6-8.py | 2 Chronicles | 6–8 | complete |
+| echo | zc-echo-2chronicles-9-12.py | 2 Chronicles | 9–12 | complete |
+| echo | zc-echo-2chronicles-13-17.py | 2 Chronicles | 13–17 | complete |
+| echo | zc-echo-2chronicles-18-20.py | 2 Chronicles | 18–20 | complete |
+| echo | zc-echo-2chronicles-21-24.py | 2 Chronicles | 21–24 | complete |
+| echo | zc-echo-2chronicles-25-28.py | 2 Chronicles | 25–28 | complete |
+| echo | zc-echo-2chronicles-29-31.py | 2 Chronicles | 29–31 | complete |
+| echo | zc-echo-2chronicles-32-34.py | 2 Chronicles | 32–34 | complete |
+| echo | zc-echo-2chronicles-35-36.py | 2 Chronicles | 35–36 | complete |
+| original | zc-original-2chronicles-1-5.py | 2 Chronicles | 1–5 | complete |
+| original | zc-original-2chronicles-6-8.py | 2 Chronicles | 6–8 | complete |
+| original | zc-original-2chronicles-9-12.py | 2 Chronicles | 9–12 | complete |
+| original | zc-original-2chronicles-13-17.py | 2 Chronicles | 13–17 | complete |
+| original | zc-original-2chronicles-18-20.py | 2 Chronicles | 18–20 | complete |
+| original | zc-original-2chronicles-21-24.py | 2 Chronicles | 21–24 | complete |
+| original | zc-original-2chronicles-25-28.py | 2 Chronicles | 25–28 | complete |
+| original | zc-original-2chronicles-29-31.py | 2 Chronicles | 29–31 | complete |
+| original | zc-original-2chronicles-32-34.py | 2 Chronicles | 32–34 | complete |
+| original | zc-original-2chronicles-35-36.py | 2 Chronicles | 35–36 | complete |
+| context | zc-context-2chronicles-1-5.py | 2 Chronicles | 1–5 | complete |
+| context | zc-context-2chronicles-6-8.py | 2 Chronicles | 6–8 | complete |
+| context | zc-context-2chronicles-9-12.py | 2 Chronicles | 9–12 | complete |
+| context | zc-context-2chronicles-13-17.py | 2 Chronicles | 13–17 | complete |
+| context | zc-context-2chronicles-18-20.py | 2 Chronicles | 18–20 | complete |
+| context | zc-context-2chronicles-21-24.py | 2 Chronicles | 21–24 | complete |
+| context | zc-context-2chronicles-25-28.py | 2 Chronicles | 25–28 | complete |
+| context | zc-context-2chronicles-29-31.py | 2 Chronicles | 29–31 | complete |
+| context | zc-context-2chronicles-32-34.py | 2 Chronicles | 32–34 | complete |
+| context | zc-context-2chronicles-35-36.py | 2 Chronicles | 35–36 | complete |
+| christ | zc-christ-2chronicles-1-5.py | 2 Chronicles | 1–5 | complete |
+| christ | zc-christ-2chronicles-6-8.py | 2 Chronicles | 6–8 | complete |
+| christ | zc-christ-2chronicles-9-12.py | 2 Chronicles | 9–12 | complete |
+| christ | zc-christ-2chronicles-13-17.py | 2 Chronicles | 13–17 | complete |
+| christ | zc-christ-2chronicles-18-20.py | 2 Chronicles | 18–20 | complete |
+| christ | zc-christ-2chronicles-21-24.py | 2 Chronicles | 21–24 | complete |
+| christ | zc-christ-2chronicles-25-28.py | 2 Chronicles | 25–28 | complete |
+| christ | zc-christ-2chronicles-29-31.py | 2 Chronicles | 29–31 | complete |
+| christ | zc-christ-2chronicles-32-34.py | 2 Chronicles | 32–34 | complete |
+| christ | zc-christ-2chronicles-35-36.py | 2 Chronicles | 35–36 | complete |
+| echo | zc-echo-ezra-1-3.py | Ezra | 1–3 | complete |
+| echo | zc-echo-ezra-4-7.py | Ezra | 4–7 | complete |
+| echo | zc-echo-ezra-8-10.py | Ezra | 8–10 | complete |
+| original | zc-original-ezra-1-3.py | Ezra | 1–3 | complete |
+| original | zc-original-ezra-4-7.py | Ezra | 4–7 | complete |
+| original | zc-original-ezra-8-10.py | Ezra | 8–10 | complete |
+| context | zc-context-ezra-1-3.py | Ezra | 1–3 | complete |
+| context | zc-context-ezra-4-7.py | Ezra | 4–7 | complete |
+| context | zc-context-ezra-8-10.py | Ezra | 8–10 | complete |
+| christ | zc-christ-ezra-1-3.py | Ezra | 1–3 | complete |
+| christ | zc-christ-ezra-4-7.py | Ezra | 4–7 | complete |
+| christ | zc-christ-ezra-8-10.py | Ezra | 8–10 | complete |
+| echo | zc-echo-nehemiah-1-4.py | Nehemiah | 1–4 | complete |
+| echo | zc-echo-nehemiah-5-6.py | Nehemiah | 5–6 | complete |
+| echo | zc-echo-nehemiah-7-8.py | Nehemiah | 7–8 | complete |
+| echo | zc-echo-nehemiah-9-10.py | Nehemiah | 9–10 | complete |
+| echo | zc-echo-nehemiah-11-12.py | Nehemiah | 11–12 | complete |
+| echo | zc-echo-nehemiah-13-13.py | Nehemiah | 13 | complete |
+| original | zc-original-nehemiah-1-4.py | Nehemiah | 1–4 | complete |
+| original | zc-original-nehemiah-5-6.py | Nehemiah | 5–6 | complete |
+| original | zc-original-nehemiah-7-8.py | Nehemiah | 7–8 | complete |
+| original | zc-original-nehemiah-9-10.py | Nehemiah | 9–10 | complete |
+| original | zc-original-nehemiah-11-12.py | Nehemiah | 11–12 | complete |
+| original | zc-original-nehemiah-13-13.py | Nehemiah | 13 | complete |
+| context | zc-context-nehemiah-1-4.py | Nehemiah | 1–4 | complete |
+| context | zc-context-nehemiah-5-6.py | Nehemiah | 5–6 | complete |
+| context | zc-context-nehemiah-7-8.py | Nehemiah | 7–8 | complete |
+| context | zc-context-nehemiah-9-10.py | Nehemiah | 9–10 | complete |
+| context | zc-context-nehemiah-11-12.py | Nehemiah | 11–12 | complete |
+| context | zc-context-nehemiah-13-13.py | Nehemiah | 13 | complete |
+| christ | zc-christ-nehemiah-1-4.py | Nehemiah | 1–4 | complete |
+| christ | zc-christ-nehemiah-5-6.py | Nehemiah | 5–6 | complete |
+| christ | zc-christ-nehemiah-7-8.py | Nehemiah | 7–8 | complete |
+| christ | zc-christ-nehemiah-9-10.py | Nehemiah | 9–10 | complete |
+| christ | zc-christ-nehemiah-11-12.py | Nehemiah | 11–12 | complete |
+| christ | zc-christ-nehemiah-13-13.py | Nehemiah | 13 | complete |
+| echo | zc-echo-esther-1-5.py | Esther | 1–5 | complete |
+| echo | zc-echo-esther-6-10.py | Esther | 6–10 | complete |
+| original | zc-original-esther-1-5.py | Esther | 1–5 | complete |
+| original | zc-original-esther-6-10.py | Esther | 6–10 | complete |
+| context | zc-context-esther-1-5.py | Esther | 1–5 | complete |
+| context | zc-context-esther-6-10.py | Esther | 6–10 | complete |
+| christ | zc-christ-esther-1-5.py | Esther | 1–5 | complete |
+| christ | zc-christ-esther-6-10.py | Esther | 6–10 | complete |
 | echo | zc-echo-job-1-4.py | Job | 1–4 | complete |
-| echo | zc-echo-job-5-7.py | Job | 5–7 | not started |
-| echo | zc-echo-job-8-11.py | Job | 8–11 | partial |
-| echo | zc-echo-job-12-14.py | Job | 12–14 | not started |
-| echo | zc-echo-job-15-18.py | Job | 15–18 | not started |
-| echo | zc-echo-job-19-21.py | Job | 19–21 | partial |
-| echo | zc-echo-job-22-26.py | Job | 22–26 | not started |
-| echo | zc-echo-job-27-29.py | Job | 27–29 | not started |
-| echo | zc-echo-job-30-32.py | Job | 30–32 | not started |
-| echo | zc-echo-job-33-35.py | Job | 33–35 | not started |
-| echo | zc-echo-job-36-38.py | Job | 36–38 | partial |
-| echo | zc-echo-job-39-41.py | Job | 39–41 | not started |
-| echo | zc-echo-job-42-42.py | Job | 42 | not started |
-| original | zc-original-job-1-4.py | Job | 1–4 | not started |
-| original | zc-original-job-5-7.py | Job | 5–7 | not started |
-| original | zc-original-job-8-11.py | Job | 8–11 | not started |
-| original | zc-original-job-12-14.py | Job | 12–14 | not started |
-| original | zc-original-job-15-18.py | Job | 15–18 | not started |
-| original | zc-original-job-19-21.py | Job | 19–21 | partial |
-| original | zc-original-job-22-26.py | Job | 22–26 | not started |
-| original | zc-original-job-27-29.py | Job | 27–29 | not started |
-| original | zc-original-job-30-32.py | Job | 30–32 | not started |
-| original | zc-original-job-33-35.py | Job | 33–35 | not started |
-| original | zc-original-job-36-38.py | Job | 36–38 | partial |
-| original | zc-original-job-39-41.py | Job | 39–41 | not started |
-| original | zc-original-job-42-42.py | Job | 42 | not started |
-| context | zc-context-job-1-4.py | Job | 1–4 | partial |
-| context | zc-context-job-5-7.py | Job | 5–7 | not started |
-| context | zc-context-job-8-11.py | Job | 8–11 | not started |
-| context | zc-context-job-12-14.py | Job | 12–14 | not started |
-| context | zc-context-job-15-18.py | Job | 15–18 | not started |
-| context | zc-context-job-19-21.py | Job | 19–21 | not started |
-| context | zc-context-job-22-26.py | Job | 22–26 | not started |
-| context | zc-context-job-27-29.py | Job | 27–29 | not started |
-| context | zc-context-job-30-32.py | Job | 30–32 | not started |
-| context | zc-context-job-33-35.py | Job | 33–35 | not started |
-| context | zc-context-job-36-38.py | Job | 36–38 | not started |
-| context | zc-context-job-39-41.py | Job | 39–41 | not started |
-| context | zc-context-job-42-42.py | Job | 42 | not started |
-| christ | zc-christ-job-1-4.py | Job | 1–4 | not started |
-| christ | zc-christ-job-5-7.py | Job | 5–7 | not started |
-| christ | zc-christ-job-8-11.py | Job | 8–11 | partial |
-| christ | zc-christ-job-12-14.py | Job | 12–14 | not started |
-| christ | zc-christ-job-15-18.py | Job | 15–18 | not started |
-| christ | zc-christ-job-19-21.py | Job | 19–21 | partial |
-| christ | zc-christ-job-22-26.py | Job | 22–26 | not started |
-| christ | zc-christ-job-27-29.py | Job | 27–29 | not started |
-| christ | zc-christ-job-30-32.py | Job | 30–32 | not started |
-| christ | zc-christ-job-33-35.py | Job | 33–35 | not started |
-| christ | zc-christ-job-36-38.py | Job | 36–38 | not started |
-| christ | zc-christ-job-39-41.py | Job | 39–41 | not started |
-| christ | zc-christ-job-42-42.py | Job | 42 | not started |
-| echo | zc-echo-proverbs-1-3.py | Proverbs | 1–3 | partial |
-| echo | zc-echo-proverbs-4-6.py | Proverbs | 4–6 | not started |
-| echo | zc-echo-proverbs-7-9.py | Proverbs | 7–9 | partial |
-| echo | zc-echo-proverbs-10-12.py | Proverbs | 10–12 | not started |
-| echo | zc-echo-proverbs-13-15.py | Proverbs | 13–15 | not started |
-| echo | zc-echo-proverbs-16-18.py | Proverbs | 16–18 | not started |
-| echo | zc-echo-proverbs-19-21.py | Proverbs | 19–21 | not started |
-| echo | zc-echo-proverbs-22-24.py | Proverbs | 22–24 | not started |
-| echo | zc-echo-proverbs-25-27.py | Proverbs | 25–27 | not started |
-| echo | zc-echo-proverbs-28-30.py | Proverbs | 28–30 | not started |
-| echo | zc-echo-proverbs-31-31.py | Proverbs | 31 | not started |
-| original | zc-original-proverbs-1-3.py | Proverbs | 1–3 | not started |
-| original | zc-original-proverbs-4-6.py | Proverbs | 4–6 | not started |
-| original | zc-original-proverbs-7-9.py | Proverbs | 7–9 | partial |
-| original | zc-original-proverbs-10-12.py | Proverbs | 10–12 | not started |
-| original | zc-original-proverbs-13-15.py | Proverbs | 13–15 | not started |
-| original | zc-original-proverbs-16-18.py | Proverbs | 16–18 | not started |
-| original | zc-original-proverbs-19-21.py | Proverbs | 19–21 | not started |
-| original | zc-original-proverbs-22-24.py | Proverbs | 22–24 | not started |
-| original | zc-original-proverbs-25-27.py | Proverbs | 25–27 | not started |
-| original | zc-original-proverbs-28-30.py | Proverbs | 28–30 | not started |
-| original | zc-original-proverbs-31-31.py | Proverbs | 31 | not started |
-| context | zc-context-proverbs-1-3.py | Proverbs | 1–3 | partial |
-| context | zc-context-proverbs-4-6.py | Proverbs | 4–6 | not started |
-| context | zc-context-proverbs-7-9.py | Proverbs | 7–9 | not started |
-| context | zc-context-proverbs-10-12.py | Proverbs | 10–12 | not started |
-| context | zc-context-proverbs-13-15.py | Proverbs | 13–15 | not started |
-| context | zc-context-proverbs-16-18.py | Proverbs | 16–18 | not started |
-| context | zc-context-proverbs-19-21.py | Proverbs | 19–21 | not started |
-| context | zc-context-proverbs-22-24.py | Proverbs | 22–24 | not started |
-| context | zc-context-proverbs-25-27.py | Proverbs | 25–27 | not started |
-| context | zc-context-proverbs-28-30.py | Proverbs | 28–30 | not started |
-| context | zc-context-proverbs-31-31.py | Proverbs | 31 | not started |
-| christ | zc-christ-proverbs-1-3.py | Proverbs | 1–3 | not started |
-| christ | zc-christ-proverbs-4-6.py | Proverbs | 4–6 | not started |
-| christ | zc-christ-proverbs-7-9.py | Proverbs | 7–9 | partial |
-| christ | zc-christ-proverbs-10-12.py | Proverbs | 10–12 | not started |
-| christ | zc-christ-proverbs-13-15.py | Proverbs | 13–15 | not started |
-| christ | zc-christ-proverbs-16-18.py | Proverbs | 16–18 | not started |
-| christ | zc-christ-proverbs-19-21.py | Proverbs | 19–21 | not started |
-| christ | zc-christ-proverbs-22-24.py | Proverbs | 22–24 | not started |
-| christ | zc-christ-proverbs-25-27.py | Proverbs | 25–27 | not started |
-| christ | zc-christ-proverbs-28-30.py | Proverbs | 28–30 | not started |
-| christ | zc-christ-proverbs-31-31.py | Proverbs | 31 | not started |
-| echo | zc-echo-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | partial |
-| echo | zc-echo-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | not started |
-| echo | zc-echo-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | partial |
-| original | zc-original-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | partial |
-| original | zc-original-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | not started |
-| original | zc-original-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | not started |
-| context | zc-context-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | partial |
-| context | zc-context-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | not started |
-| context | zc-context-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | not started |
-| christ | zc-christ-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | not started |
-| christ | zc-christ-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | not started |
-| christ | zc-christ-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | partial |
-| echo | zc-echo-songofsolomon-1-6.py | Song of Solomon | 1–6 | partial |
-| echo | zc-echo-songofsolomon-7-8.py | Song of Solomon | 7–8 | partial |
-| original | zc-original-songofsolomon-1-6.py | Song of Solomon | 1–6 | partial |
-| original | zc-original-songofsolomon-7-8.py | Song of Solomon | 7–8 | partial |
-| context | zc-context-songofsolomon-1-6.py | Song of Solomon | 1–6 | partial |
-| context | zc-context-songofsolomon-7-8.py | Song of Solomon | 7–8 | not started |
-| christ | zc-christ-songofsolomon-1-6.py | Song of Solomon | 1–6 | partial |
-| christ | zc-christ-songofsolomon-7-8.py | Song of Solomon | 7–8 | partial |
+| echo | zc-echo-job-5-7.py | Job | 5–7 | complete |
+| echo | zc-echo-job-8-11.py | Job | 8–11 | complete |
+| echo | zc-echo-job-12-14.py | Job | 12–14 | complete |
+| echo | zc-echo-job-15-18.py | Job | 15–18 | complete |
+| echo | zc-echo-job-19-21.py | Job | 19–21 | complete |
+| echo | zc-echo-job-22-26.py | Job | 22–26 | complete |
+| echo | zc-echo-job-27-29.py | Job | 27–29 | complete |
+| echo | zc-echo-job-30-32.py | Job | 30–32 | complete |
+| echo | zc-echo-job-33-35.py | Job | 33–35 | complete |
+| echo | zc-echo-job-36-38.py | Job | 36–38 | complete |
+| echo | zc-echo-job-39-41.py | Job | 39–41 | complete |
+| echo | zc-echo-job-42-42.py | Job | 42 | complete |
+| original | zc-original-job-1-4.py | Job | 1–4 | complete |
+| original | zc-original-job-5-7.py | Job | 5–7 | complete |
+| original | zc-original-job-8-11.py | Job | 8–11 | complete |
+| original | zc-original-job-12-14.py | Job | 12–14 | complete |
+| original | zc-original-job-15-18.py | Job | 15–18 | complete |
+| original | zc-original-job-19-21.py | Job | 19–21 | complete |
+| original | zc-original-job-22-26.py | Job | 22–26 | complete |
+| original | zc-original-job-27-29.py | Job | 27–29 | complete |
+| original | zc-original-job-30-32.py | Job | 30–32 | complete |
+| original | zc-original-job-33-35.py | Job | 33–35 | complete |
+| original | zc-original-job-36-38.py | Job | 36–38 | complete |
+| original | zc-original-job-39-41.py | Job | 39–41 | complete |
+| original | zc-original-job-42-42.py | Job | 42 | complete |
+| context | zc-context-job-1-4.py | Job | 1–4 | complete |
+| context | zc-context-job-5-7.py | Job | 5–7 | complete |
+| context | zc-context-job-8-11.py | Job | 8–11 | complete |
+| context | zc-context-job-12-14.py | Job | 12–14 | complete |
+| context | zc-context-job-15-18.py | Job | 15–18 | complete |
+| context | zc-context-job-19-21.py | Job | 19–21 | complete |
+| context | zc-context-job-22-26.py | Job | 22–26 | complete |
+| context | zc-context-job-27-29.py | Job | 27–29 | complete |
+| context | zc-context-job-30-32.py | Job | 30–32 | complete |
+| context | zc-context-job-33-35.py | Job | 33–35 | complete |
+| context | zc-context-job-36-38.py | Job | 36–38 | complete |
+| context | zc-context-job-39-41.py | Job | 39–41 | complete |
+| context | zc-context-job-42-42.py | Job | 42 | complete |
+| christ | zc-christ-job-1-4.py | Job | 1–4 | complete |
+| christ | zc-christ-job-5-7.py | Job | 5–7 | complete |
+| christ | zc-christ-job-8-11.py | Job | 8–11 | complete |
+| christ | zc-christ-job-12-14.py | Job | 12–14 | complete |
+| christ | zc-christ-job-15-18.py | Job | 15–18 | complete |
+| christ | zc-christ-job-19-21.py | Job | 19–21 | complete |
+| christ | zc-christ-job-22-26.py | Job | 22–26 | complete |
+| christ | zc-christ-job-27-29.py | Job | 27–29 | complete |
+| christ | zc-christ-job-30-32.py | Job | 30–32 | complete |
+| christ | zc-christ-job-33-35.py | Job | 33–35 | complete |
+| christ | zc-christ-job-36-38.py | Job | 36–38 | complete |
+| christ | zc-christ-job-39-41.py | Job | 39–41 | complete |
+| christ | zc-christ-job-42-42.py | Job | 42 | complete |
+| echo | zc-echo-proverbs-1-3.py | Proverbs | 1–3 | complete |
+| echo | zc-echo-proverbs-4-6.py | Proverbs | 4–6 | complete |
+| echo | zc-echo-proverbs-7-9.py | Proverbs | 7–9 | complete |
+| echo | zc-echo-proverbs-10-12.py | Proverbs | 10–12 | complete |
+| echo | zc-echo-proverbs-13-15.py | Proverbs | 13–15 | complete |
+| echo | zc-echo-proverbs-16-18.py | Proverbs | 16–18 | complete |
+| echo | zc-echo-proverbs-19-21.py | Proverbs | 19–21 | complete |
+| echo | zc-echo-proverbs-22-24.py | Proverbs | 22–24 | complete |
+| echo | zc-echo-proverbs-25-27.py | Proverbs | 25–27 | complete |
+| echo | zc-echo-proverbs-28-30.py | Proverbs | 28–30 | complete |
+| echo | zc-echo-proverbs-31-31.py | Proverbs | 31 | complete |
+| original | zc-original-proverbs-1-3.py | Proverbs | 1–3 | complete |
+| original | zc-original-proverbs-4-6.py | Proverbs | 4–6 | complete |
+| original | zc-original-proverbs-7-9.py | Proverbs | 7–9 | complete |
+| original | zc-original-proverbs-10-12.py | Proverbs | 10–12 | complete |
+| original | zc-original-proverbs-13-15.py | Proverbs | 13–15 | complete |
+| original | zc-original-proverbs-16-18.py | Proverbs | 16–18 | complete |
+| original | zc-original-proverbs-19-21.py | Proverbs | 19–21 | complete |
+| original | zc-original-proverbs-22-24.py | Proverbs | 22–24 | complete |
+| original | zc-original-proverbs-25-27.py | Proverbs | 25–27 | complete |
+| original | zc-original-proverbs-28-30.py | Proverbs | 28–30 | complete |
+| original | zc-original-proverbs-31-31.py | Proverbs | 31 | complete |
+| context | zc-context-proverbs-1-3.py | Proverbs | 1–3 | complete |
+| context | zc-context-proverbs-4-6.py | Proverbs | 4–6 | complete |
+| context | zc-context-proverbs-7-9.py | Proverbs | 7–9 | complete |
+| context | zc-context-proverbs-10-12.py | Proverbs | 10–12 | complete |
+| context | zc-context-proverbs-13-15.py | Proverbs | 13–15 | complete |
+| context | zc-context-proverbs-16-18.py | Proverbs | 16–18 | complete |
+| context | zc-context-proverbs-19-21.py | Proverbs | 19–21 | complete |
+| context | zc-context-proverbs-22-24.py | Proverbs | 22–24 | complete |
+| context | zc-context-proverbs-25-27.py | Proverbs | 25–27 | complete |
+| context | zc-context-proverbs-28-30.py | Proverbs | 28–30 | complete |
+| context | zc-context-proverbs-31-31.py | Proverbs | 31 | complete |
+| christ | zc-christ-proverbs-1-3.py | Proverbs | 1–3 | complete |
+| christ | zc-christ-proverbs-4-6.py | Proverbs | 4–6 | complete |
+| christ | zc-christ-proverbs-7-9.py | Proverbs | 7–9 | complete |
+| christ | zc-christ-proverbs-10-12.py | Proverbs | 10–12 | complete |
+| christ | zc-christ-proverbs-13-15.py | Proverbs | 13–15 | complete |
+| christ | zc-christ-proverbs-16-18.py | Proverbs | 16–18 | complete |
+| christ | zc-christ-proverbs-19-21.py | Proverbs | 19–21 | complete |
+| christ | zc-christ-proverbs-22-24.py | Proverbs | 22–24 | complete |
+| christ | zc-christ-proverbs-25-27.py | Proverbs | 25–27 | complete |
+| christ | zc-christ-proverbs-28-30.py | Proverbs | 28–30 | complete |
+| christ | zc-christ-proverbs-31-31.py | Proverbs | 31 | complete |
+| echo | zc-echo-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | complete |
+| echo | zc-echo-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | complete |
+| echo | zc-echo-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | complete |
+| original | zc-original-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | complete |
+| original | zc-original-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | complete |
+| original | zc-original-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | complete |
+| context | zc-context-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | complete |
+| context | zc-context-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | complete |
+| context | zc-context-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | complete |
+| christ | zc-christ-ecclesiastes-1-4.py | Ecclesiastes | 1–4 | complete |
+| christ | zc-christ-ecclesiastes-5-9.py | Ecclesiastes | 5–9 | complete |
+| christ | zc-christ-ecclesiastes-10-12.py | Ecclesiastes | 10–12 | complete |
+| echo | zc-echo-songofsolomon-1-6.py | Song of Solomon | 1–6 | complete |
+| echo | zc-echo-songofsolomon-7-8.py | Song of Solomon | 7–8 | complete |
+| original | zc-original-songofsolomon-1-6.py | Song of Solomon | 1–6 | complete |
+| original | zc-original-songofsolomon-7-8.py | Song of Solomon | 7–8 | complete |
+| context | zc-context-songofsolomon-1-6.py | Song of Solomon | 1–6 | complete |
+| context | zc-context-songofsolomon-7-8.py | Song of Solomon | 7–8 | complete |
+| christ | zc-christ-songofsolomon-1-6.py | Song of Solomon | 1–6 | complete |
+| christ | zc-christ-songofsolomon-7-8.py | Song of Solomon | 7–8 | complete |
 | echo | zc-echo-lamentations-1-2.py | Lamentations | 1–2 | complete |
 | echo | zc-echo-lamentations-3-4.py | Lamentations | 3–4 | complete |
 | echo | zc-echo-lamentations-5-5.py | Lamentations | 5 | complete |
-| original | zc-original-lamentations-1-2.py | Lamentations | 1–2 | not started |
-| original | zc-original-lamentations-3-4.py | Lamentations | 3–4 | partial |
-| original | zc-original-lamentations-5-5.py | Lamentations | 5 | not started |
-| context | zc-context-lamentations-1-2.py | Lamentations | 1–2 | partial |
-| context | zc-context-lamentations-3-4.py | Lamentations | 3–4 | not started |
-| context | zc-context-lamentations-5-5.py | Lamentations | 5 | not started |
-| christ | zc-christ-lamentations-1-2.py | Lamentations | 1–2 | partial |
-| christ | zc-christ-lamentations-3-4.py | Lamentations | 3–4 | partial |
-| christ | zc-christ-lamentations-5-5.py | Lamentations | 5 | not started |
-| echo | zc-echo-hosea-1-6.py | Hosea | 1–6 | partial |
-| echo | zc-echo-hosea-7-12.py | Hosea | 7–12 | partial |
-| echo | zc-echo-hosea-13-14.py | Hosea | 13–14 | not started |
-| original | zc-original-hosea-1-6.py | Hosea | 1–6 | not started |
-| original | zc-original-hosea-7-12.py | Hosea | 7–12 | partial |
-| original | zc-original-hosea-13-14.py | Hosea | 13–14 | not started |
-| context | zc-context-hosea-1-6.py | Hosea | 1–6 | partial |
-| context | zc-context-hosea-7-12.py | Hosea | 7–12 | not started |
-| context | zc-context-hosea-13-14.py | Hosea | 13–14 | not started |
-| christ | zc-christ-hosea-1-6.py | Hosea | 1–6 | not started |
-| christ | zc-christ-hosea-7-12.py | Hosea | 7–12 | partial |
-| christ | zc-christ-hosea-13-14.py | Hosea | 13–14 | not started |
-| echo | zc-echo-joel-1-3.py | Joel | 1–3 | partial |
-| original | zc-original-joel-1-3.py | Joel | 1–3 | partial |
-| context | zc-context-joel-1-3.py | Joel | 1–3 | partial |
-| christ | zc-christ-joel-1-3.py | Joel | 1–3 | partial |
-| echo | zc-echo-amos-1-5.py | Amos | 1–5 | partial |
-| echo | zc-echo-amos-6-9.py | Amos | 6–9 | partial |
-| original | zc-original-amos-1-5.py | Amos | 1–5 | not started |
-| original | zc-original-amos-6-9.py | Amos | 6–9 | partial |
-| context | zc-context-amos-1-5.py | Amos | 1–5 | partial |
-| context | zc-context-amos-6-9.py | Amos | 6–9 | not started |
-| christ | zc-christ-amos-1-5.py | Amos | 1–5 | not started |
-| christ | zc-christ-amos-6-9.py | Amos | 6–9 | partial |
+| original | zc-original-lamentations-1-2.py | Lamentations | 1–2 | complete |
+| original | zc-original-lamentations-3-4.py | Lamentations | 3–4 | complete |
+| original | zc-original-lamentations-5-5.py | Lamentations | 5 | complete |
+| context | zc-context-lamentations-1-2.py | Lamentations | 1–2 | complete |
+| context | zc-context-lamentations-3-4.py | Lamentations | 3–4 | complete |
+| context | zc-context-lamentations-5-5.py | Lamentations | 5 | complete |
+| christ | zc-christ-lamentations-1-2.py | Lamentations | 1–2 | complete |
+| christ | zc-christ-lamentations-3-4.py | Lamentations | 3–4 | complete |
+| christ | zc-christ-lamentations-5-5.py | Lamentations | 5 | complete |
+| echo | zc-echo-hosea-1-6.py | Hosea | 1–6 | complete |
+| echo | zc-echo-hosea-7-12.py | Hosea | 7–12 | complete |
+| echo | zc-echo-hosea-13-14.py | Hosea | 13–14 | complete |
+| original | zc-original-hosea-1-6.py | Hosea | 1–6 | complete |
+| original | zc-original-hosea-7-12.py | Hosea | 7–12 | complete |
+| original | zc-original-hosea-13-14.py | Hosea | 13–14 | complete |
+| context | zc-context-hosea-1-6.py | Hosea | 1–6 | complete |
+| context | zc-context-hosea-7-12.py | Hosea | 7–12 | complete |
+| context | zc-context-hosea-13-14.py | Hosea | 13–14 | complete |
+| christ | zc-christ-hosea-1-6.py | Hosea | 1–6 | complete |
+| christ | zc-christ-hosea-7-12.py | Hosea | 7–12 | complete |
+| christ | zc-christ-hosea-13-14.py | Hosea | 13–14 | complete |
+| echo | zc-echo-joel-1-3.py | Joel | 1–3 | complete |
+| original | zc-original-joel-1-3.py | Joel | 1–3 | complete |
+| context | zc-context-joel-1-3.py | Joel | 1–3 | complete |
+| christ | zc-christ-joel-1-3.py | Joel | 1–3 | complete |
+| echo | zc-echo-amos-1-5.py | Amos | 1–5 | complete |
+| echo | zc-echo-amos-6-9.py | Amos | 6–9 | complete |
+| original | zc-original-amos-1-5.py | Amos | 1–5 | complete |
+| original | zc-original-amos-6-9.py | Amos | 6–9 | complete |
+| context | zc-context-amos-1-5.py | Amos | 1–5 | complete |
+| context | zc-context-amos-6-9.py | Amos | 6–9 | complete |
+| christ | zc-christ-amos-1-5.py | Amos | 1–5 | complete |
+| christ | zc-christ-amos-6-9.py | Amos | 6–9 | complete |
 | echo | zc-echo-obadiah-1-1.py | Obadiah | 1 | complete |
-| original | zc-original-obadiah-1-1.py | Obadiah | 1 | partial |
-| context | zc-context-obadiah-1-1.py | Obadiah | 1 | partial |
-| christ | zc-christ-obadiah-1-1.py | Obadiah | 1 | partial |
-| echo | zc-echo-jonah-1-4.py | Jonah | 1–4 | partial |
-| original | zc-original-jonah-1-4.py | Jonah | 1–4 | partial |
-| context | zc-context-jonah-1-4.py | Jonah | 1–4 | partial |
-| christ | zc-christ-jonah-1-4.py | Jonah | 1–4 | partial |
-| echo | zc-echo-micah-1-6.py | Micah | 1–6 | partial |
-| echo | zc-echo-micah-7-7.py | Micah | 7 | not started |
-| original | zc-original-micah-1-6.py | Micah | 1–6 | partial |
-| original | zc-original-micah-7-7.py | Micah | 7 | not started |
-| context | zc-context-micah-1-6.py | Micah | 1–6 | partial |
-| context | zc-context-micah-7-7.py | Micah | 7 | not started |
-| christ | zc-christ-micah-1-6.py | Micah | 1–6 | partial |
-| christ | zc-christ-micah-7-7.py | Micah | 7 | not started |
-| echo | zc-echo-nahum-1-3.py | Nahum | 1–3 | partial |
-| original | zc-original-nahum-1-3.py | Nahum | 1–3 | partial |
-| context | zc-context-nahum-1-3.py | Nahum | 1–3 | partial |
-| christ | zc-christ-nahum-1-3.py | Nahum | 1–3 | partial |
-| echo | zc-echo-habakkuk-1-3.py | Habakkuk | 1–3 | partial |
-| original | zc-original-habakkuk-1-3.py | Habakkuk | 1–3 | partial |
-| context | zc-context-habakkuk-1-3.py | Habakkuk | 1–3 | partial |
-| christ | zc-christ-habakkuk-1-3.py | Habakkuk | 1–3 | partial |
-| echo | zc-echo-zephaniah-1-3.py | Zephaniah | 1–3 | partial |
-| original | zc-original-zephaniah-1-3.py | Zephaniah | 1–3 | partial |
-| context | zc-context-zephaniah-1-3.py | Zephaniah | 1–3 | partial |
-| christ | zc-christ-zephaniah-1-3.py | Zephaniah | 1–3 | partial |
-| echo | zc-echo-haggai-1-2.py | Haggai | 1–2 | partial |
-| original | zc-original-haggai-1-2.py | Haggai | 1–2 | partial |
-| context | zc-context-haggai-1-2.py | Haggai | 1–2 | partial |
-| christ | zc-christ-haggai-1-2.py | Haggai | 1–2 | partial |
-| echo | zc-echo-zechariah-1-7.py | Zechariah | 1–7 | not started |
-| echo | zc-echo-zechariah-8-13.py | Zechariah | 8–13 | partial |
-| echo | zc-echo-zechariah-14-14.py | Zechariah | 14 | not started |
-| original | zc-original-zechariah-1-7.py | Zechariah | 1–7 | not started |
-| original | zc-original-zechariah-8-13.py | Zechariah | 8–13 | partial |
-| original | zc-original-zechariah-14-14.py | Zechariah | 14 | not started |
-| context | zc-context-zechariah-1-7.py | Zechariah | 1–7 | partial |
-| context | zc-context-zechariah-8-13.py | Zechariah | 8–13 | not started |
-| context | zc-context-zechariah-14-14.py | Zechariah | 14 | not started |
+| original | zc-original-obadiah-1-1.py | Obadiah | 1 | complete |
+| context | zc-context-obadiah-1-1.py | Obadiah | 1 | complete |
+| christ | zc-christ-obadiah-1-1.py | Obadiah | 1 | complete |
+| echo | zc-echo-jonah-1-4.py | Jonah | 1–4 | complete |
+| original | zc-original-jonah-1-4.py | Jonah | 1–4 | complete |
+| context | zc-context-jonah-1-4.py | Jonah | 1–4 | complete |
+| christ | zc-christ-jonah-1-4.py | Jonah | 1–4 | complete |
+| echo | zc-echo-micah-1-6.py | Micah | 1–6 | complete |
+| echo | zc-echo-micah-7-7.py | Micah | 7 | complete |
+| original | zc-original-micah-1-6.py | Micah | 1–6 | complete |
+| original | zc-original-micah-7-7.py | Micah | 7 | complete |
+| context | zc-context-micah-1-6.py | Micah | 1–6 | complete |
+| context | zc-context-micah-7-7.py | Micah | 7 | complete |
+| christ | zc-christ-micah-1-6.py | Micah | 1–6 | complete |
+| christ | zc-christ-micah-7-7.py | Micah | 7 | complete |
+| echo | zc-echo-nahum-1-3.py | Nahum | 1–3 | complete |
+| original | zc-original-nahum-1-3.py | Nahum | 1–3 | complete |
+| context | zc-context-nahum-1-3.py | Nahum | 1–3 | complete |
+| christ | zc-christ-nahum-fill.py | Nahum | 1–3 | complete |
+| echo | zc-echo-habakkuk-1-3.py | Habakkuk | 1–3 | complete |
+| original | zc-original-habakkuk-1-3.py | Habakkuk | 1–3 | complete |
+| context | zc-context-habakkuk-1-3.py | Habakkuk | 1–3 | complete |
+| christ | zc-christ-habakkuk-1-3.py | Habakkuk | 1–3 | complete |
+| echo | zc-echo-zephaniah-1-3.py | Zephaniah | 1–3 | complete |
+| original | zc-original-zephaniah-1-3.py | Zephaniah | 1–3 | complete |
+| context | zc-context-zephaniah-1-3.py | Zephaniah | 1–3 | complete |
+| christ | zc-christ-zephaniah-fill.py | Zephaniah | 1–3 | complete |
+| echo | zc-echo-haggai-1-2.py | Haggai | 1–2 | complete |
+| original | zc-original-haggai-1-2.py | Haggai | 1–2 | complete |
+| context | zc-context-haggai-1-2.py | Haggai | 1–2 | complete |
+| christ | zc-christ-haggai-1-2.py | Haggai | 1–2 | complete |
+| echo | zc-echo-zechariah-1-7.py | Zechariah | 1–7 | complete |
+| echo | zc-echo-zechariah-8-13.py | Zechariah | 8–13 | complete |
+| echo | zc-echo-zechariah-14-14.py | Zechariah | 14 | complete |
+| original | zc-original-zechariah-1-7.py | Zechariah | 1–7 | complete |
+| original | zc-original-zechariah-8-13.py | Zechariah | 8–13 | in-progress @ 2026-06-11T12:00:00Z |
+| original | zc-original-zechariah-14-14.py | Zechariah | 14 | complete |
+| context | zc-context-zechariah-1-7.py | Zechariah | 1–7 | complete |
+| context | zc-context-zechariah-8-13.py | Zechariah | 8–13 | in-progress @ 2026-06-12T03:29:00Z |
+| context | zc-context-zechariah-14-14.py | Zechariah | 14 | complete |
 | christ | zc-christ-zechariah-1-7.py | Zechariah | 1–7 | not started |
 | christ | zc-christ-zechariah-8-13.py | Zechariah | 8–13 | partial |
 | christ | zc-christ-zechariah-14-14.py | Zechariah | 14 | not started |
-| echo | zc-echo-malachi-1-4.py | Malachi | 1–4 | partial |
-| original | zc-original-malachi-1-4.py | Malachi | 1–4 | partial |
-| context | zc-context-malachi-1-4.py | Malachi | 1–4 | partial |
+| echo | zc-echo-malachi-1-4.py | Malachi | 1–4 | complete |
+| original | zc-original-malachi-1-4.py | Malachi | 1–4 | complete |
+| context | zc-context-malachi-1-4.py | Malachi | 1–4 | complete |
 | christ | zc-christ-malachi-1-4.py | Malachi | 1–4 | partial |

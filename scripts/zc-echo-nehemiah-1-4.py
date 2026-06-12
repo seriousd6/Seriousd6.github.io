@@ -1,7 +1,16 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Echo Layer — Nehemiah chapters 1–4
+Run: python3 scripts/zc-echo-nehemiah-1-4.py
+
+Key decisions:
+- Ch1: Nehemiah's prayer as covenant-confession and intercession model; scatter/gather
+  Deuteronomic pattern (v8-9) → Matt 24:31; "great and awesome God" formula → Dan 9:4
+- Ch2: Nehemiah's commissioning as type of Christ's sending from the Father; arrow
+  prayer (v4) → 1 Thess 5:17; "no share in Jerusalem" exclusion → Rev 21:27
+- Ch3: Wall-builder register is selective; Tekoite nobles refusing → Luke 14:18;
+  Shallum's daughters → Gal 3:28; priestly first-work → Heb 13:20-21
+- Ch4: Praying and posting guards → Eph 6:18; "Our God will fight for us" → Rom 8:31;
+  imprecatory prayer → Rev 6:10; workers armed while building → 2 Cor 10:3-5
 """
 
 import json, pathlib
@@ -14,16 +23,6 @@ def load_echo(book):
 
 def save_echo(book, data):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
@@ -42,168 +41,155 @@ def merge_echo(existing, new_data):
                         existing[ch][v].append(e)
                         seen.add((e['type'], e['target']))
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
-  },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
+NEH_ECHOES = {
   "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
+    "5": [
+      {
+        "type": "allusion",
+        "target": "Dan 9:4",
+        "note": "Nehemiah's prayer opens with the same liturgical address as Daniel's great confession: 'O LORD, God of heaven, the great and awesome God, keeping covenant and steadfast love with those who love him and keep his commandments' (cf. Dan 9:4: 'O Lord, the great and awesome God, who keeps covenant and steadfast love with those who love him and keep his commandments'). The near-verbal identity indicates both prayers draw on a common liturgical formula of covenant address — the post-exilic community's standard petition grammar for approaching YHWH in situations of community need and covenant guilt. The formula structures the prayer as a covenant appeal: the one praying invokes YHWH's covenant attributes (greatness, awesomeness, covenant-keeping, steadfast-love-keeping) as the basis for the petition that follows. Both Daniel and Nehemiah confess communal sin before making a personal petition — the pattern Christ teaches in Matt 6:9-13."
+      }
+    ],
     "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
+      {
+        "type": "allusion",
+        "target": "Deut 30:1-5",
+        "note": "Nehemiah appeals to the Mosaic scatter-gather pattern: 'Remember the word you commanded your servant Moses: If you act unfaithfully, I will scatter you among the nations, but if you return to me and obey my commandments and keep them, then even if your exiles are at the far ends of the heavens, I will gather them from there and bring them to the place I have chosen as a dwelling for my Name.' This is a deliberate citation of Deut 30:1-5, the covenant's bilateral promise. Nehemiah's prayer is a deliberate activation of this Mosaic promise — he 'reminds' YHWH of the covenant terms as the basis for the restoration request. The same scatter-gather eschatology is taken up by Jesus in Matt 24:31 ('He will send out his angels... and they will gather his elect from the four winds, from one end of heaven to the other') and by Paul in Rom 11:25-26 — the Mosaic promise of regathering finding its eschatological fulfillment in Christ's final gathering."
+      }
+    ],
+    "10": [
+      {
+        "type": "allusion",
+        "target": "Rev 5:9",
+        "note": "Nehemiah's appeal: 'They are your servants and your people, whom you redeemed by your great power and your mighty hand' uses the Exodus redemption vocabulary — <em>pādîtā</em> (you redeemed) + 'great power and mighty hand' (Deut 9:26, 29). The people's identity as YHWH's redeemed possessions is the basis of the intercession: what God has purchased, he must protect and restore. Rev 5:9 takes this redemption language into the new covenant register: 'you were slain, and by your blood you ransomed people for God from every tribe and language and people and nation.' The Mosaic redemption by power and mighty hand is the OT type; Christ's redemption by blood is the NT fulfillment — both establish God's ownership of the redeemed as the guarantee of his ongoing care."
+      }
     ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
+  },
+  "2": {
+    "4": [
+      {
+        "type": "theme",
+        "target": "1 Thess 5:17",
+        "note": "The 'arrow prayer' — Nehemiah prays to the God of heaven in the interval between the king's question ('What is it you want?') and his own answer — is the OT's most vivid illustration of instantaneous prayer within a pressing worldly context. There is no withdrawal, no extended ceremony — a single unspoken prayer to God while the king waits for an answer. Paul's injunction in 1 Thess 5:17 to 'pray without ceasing' (<em>ἀδιαλείπτως</em>) envisions exactly this kind of integrated prayer: not scheduled devotions that punctuate the day, but a continuous orientation of dependence on God that can be exercised in any moment, including before speaking to a king."
+      }
+    ],
+    "5": [
+      {
+        "type": "type",
+        "target": "John 17:18",
+        "note": "Nehemiah says 'send me to Judah, to the city of my ancestors' — a petition to be sent on a mission of restoration. The pattern of the servant who volunteers to go, receives royal authorization (Artaxerxes' letters and escort), and departs on a mission of rebuilding the ruined covenant city is the OT narrative grammar that the Incarnation fulfills definitively. Jesus says in his high-priestly prayer, 'As you sent me into the world, so I have sent them into the world' (John 17:18). Nehemiah's royal commissioning for the Jerusalem mission types the Father's commissioning of the Son for the definitive restoration of God's dwelling — a mission that succeeds not because the walls are high but because the Sender has all authority."
+      }
+    ],
+    "8": [
+      {
+        "type": "theme",
+        "target": "Acts 11:21",
+        "note": "The phrase 'the good hand of my God was upon me' (<em>yad ʾĕlōhay haṭṭôḇāh ʿālay</em>) is Nehemiah's signature formula for divine providence (appears in 2:8, 18; Ezra 7:6, 9, 28; 8:18, 22, 31). The 'hand of God' as metaphor for providential guidance and empowerment recurs throughout the restoration narratives. Acts 11:21 uses the same idiom for the Spirit's work in the early church: 'the hand of the Lord was with them, and a great number who believed turned to the Lord.' The language of the divine hand as the agent of blessing and direction bridges the OT restoration under Nehemiah and the NT expansion under the apostles — both are works of the same hand, operating in different covenant moments."
+      }
+    ],
+    "12": [
+      {
+        "type": "allusion",
+        "target": "2 Cor 8:16",
+        "note": "Nehemiah rises by night having told no one 'what my God had put in my heart (<em>nātan ʾĕlōhay ʾel-libbî</em>) to do for Jerusalem.' The phrase 'God put it in my heart' is the OT formula for divine inner prompting — God working through the human will without external compulsion. Paul uses the same logic in 2 Cor 8:16 when thanking God who 'put into the heart of Titus the same earnestness I have for you.' Nehemiah's night survey of Jerusalem is driven by what God placed inwardly — the same sovereign inner-prompting that Paul identifies as God's ordinary mode of motivating his servants for kingdom work, anticipating the new covenant's law written on the heart (Jer 31:33)."
+      }
+    ],
+    "17": [
+      {
+        "type": "theme",
+        "target": "Rev 21:2",
+        "note": "Nehemiah's call — 'You see the distress we are in — how Jerusalem lies in ruins with its gates burned. Come, let us rebuild the wall of Jerusalem, that we may no longer be a reproach' — is the OT's most direct expression of the impulse to restore the holy city from its ruin and disgrace. Rev 21:2 sets the eschatological fulfillment against this pattern of ruin: 'I saw the holy city, new Jerusalem, coming down out of heaven from God, prepared as a bride adorned for her husband.' Nehemiah's partial, earthly restoration — walls repaired, gates rehung, reproach removed — is the type of the complete, permanent restoration of the city that no enemy can breach, whose gates are never shut (Rev 21:25), and whose builder and maker is God himself (Heb 11:10)."
+      }
+    ],
+    "19": [
+      {
+        "type": "allusion",
+        "target": "Ps 22:6-7",
+        "note": "Sanballat, Tobiah, and Geshem mock and despise Nehemiah's project: 'they mocked and ridiculed us' (<em>wayyiḇzû ʿālênû</em>). The pattern of covenant workers mocked and despised by enemies follows the Psalmic contour of the righteous sufferer: Ps 22:6-7 ('I am a worm, scorned by mankind and despised by the people; all who see me mock me'). The builders of the covenant community always face contempt from those outside — a pattern reaching its intensification in the passion, where Jesus is mocked, despised, and derided (Matt 27:39-44; Ps 22:7). Nehemiah's wall-building under mockery is one instance of the enduring pattern: covenant work done in the face of the world's contempt."
+      }
+    ],
+    "20": [
+      {
+        "type": "allusion",
+        "target": "Rev 21:27",
+        "note": "Nehemiah declares to his opponents: 'You have no share or right or claim (<em>ḥēleq ûṣᵉḏāqāh ûzikkārôn</em>) in Jerusalem.' The triple exclusion — no portion, no righteous claim, no memorial — bars the mockers from any stake in the covenant city being rebuilt. Rev 21:27 applies the same exclusion principle to the new Jerusalem: 'nothing unclean will ever enter it, nor anyone who does what is detestable or false, but only those who are written in the Lamb's book of life.' Nehemiah's earthly exclusion of Sanballat, Tobiah, and Geshem from the restored Jerusalem is the type of the eschatological exclusion: those who oppose the building of God's city have no claim in the city that is finally and permanently established."
+      }
+    ]
+  },
+  "3": {
+    "1": [
+      {
+        "type": "type",
+        "target": "Heb 13:20",
+        "note": "Eliashib the high priest and his fellow priests begin the wall-repair by rebuilding the Sheep Gate and dedicating it — the high priest initiates the communal restoration work. The Sheep Gate is where sacrificial animals entered Jerusalem (cf. John 5:2, the pool near the Sheep Gate). The high priest's first act restores access for the sacrificial system. Heb 13:20 addresses the fulfillment: 'the God of peace who brought again from the dead our Lord Jesus, the great shepherd of the sheep, by the blood of the eternal covenant.' The high priest rebuilding the Sheep Gate — the entryway for the lambs of sacrifice — types Christ the great Shepherd-Priest who, through his own blood as the sacrificial lamb, opens the way for those who are his sheep."
+      }
+    ],
+    "5": [
+      {
+        "type": "theme",
+        "target": "Luke 14:18",
+        "note": "The Tekoite nobles 'would not put their shoulders to the work of their supervisors' (<em>wᵉʾaddîrêhem lōʾ-hēḇîʾû ṣawwᵉʾārām bᵉʿăḇōḏat ʾăḏōnêhem</em>) — an elite refusal to engage in common labor for the community's restoration. The text notes the Tekoite commoners built diligently while their nobles refused. This tension between willing common workers and unwilling elites appears in Christ's parable of the great banquet (Luke 14:18): 'they all alike began to make excuses' — it is precisely those with status and property who find reasons not to participate in the work of the kingdom. The Tekoite nobles who refused to put their shoulder to the wall are the narrative embodiment of the parable's invited-but-absent elite."
+      }
+    ],
+    "12": [
+      {
+        "type": "theme",
+        "target": "Gal 3:28",
+        "note": "Shallum son of Hallohesh, ruler of a half-district of Jerusalem, repaired his section — 'he and his daughters' (<em>hûʾ ûḇᵉnōtāyw</em>). Women building the city wall is an exceptional detail in the ancient Near Eastern context, where wall-construction and military defense were exclusively male domains. The inclusion of daughters in the physical labor of covenant restoration anticipates the breaking-down of gender barriers in the people of God that Paul declares in Gal 3:28: 'there is neither male nor female, for you are all one in Christ Jesus.' The participation of women in the foundational work of rebuilding the covenant community is an early instance of the principle the new covenant fully establishes."
+      }
+    ],
+    "20": [
+      {
+        "type": "theme",
+        "target": "Titus 2:14",
+        "note": "Baruch son of Zabbai 'zealously repaired another section' (<em>heḥĕrāh ḥāzaq</em> — literally 'made repairs with burning zeal'). The verb <em>ḥārar</em> (to burn/glow) applied to building work signals exceptional personal investment beyond assigned responsibility. Titus 2:14 describes the new covenant community Christ created as 'a people for his own possession who are zealous for good works' (<em>ζηλωτὴν καλῶν ἔργων</em>). Baruch's burning zeal for the wall-section he did not need to repair exemplifies the excess of covenant motivation that the new covenant's indwelling Spirit produces — building beyond obligation out of love for the community."
+      }
+    ]
+  },
   "4": {
+    "4": [
+      {
+        "type": "type",
+        "target": "Rev 6:10",
+        "note": "Nehemiah's imprecatory prayer — 'Hear us, O our God, for we are held in contempt. Turn their reproach back on their own heads... for they have provoked you to anger in the presence of the builders' — is a covenant-curse prayer calling for YHWH to adjudicate the injustice done to his workers. Nehemiah does not retaliate personally but appeals to divine justice against those who mock the covenant work. This prayer structure — appealing to God for vindication against persecutors — is the OT basis for the martyrs' cry in Rev 6:10: 'O Sovereign Lord, holy and true, how long before you will judge and avenge our blood on those who dwell on the earth?' Both Nehemiah and the martyred souls appeal to God's justice rather than taking matters into their own hands, trusting that the covenant Lord is the ultimate judge."
+      }
+    ],
+    "6": [
+      {
+        "type": "allusion",
+        "target": "Phil 2:13",
+        "note": "'The people had the will/heart to work' (<em>lēḇ lāʿām laʿăśôt</em> — literally 'the people had a heart to do the work'). Despite mockery from enemies and physical exhaustion, the community completes the wall to half its height because of inner motivation. The locus of motivation is the <em>lēḇ</em> (heart/will) — the covenantal center of the person. Phil 2:13 articulates the NT parallel: 'it is God who works in you, both to will (<em>θέλειν</em>) and to work (<em>ἐνεργεῖν</em>) for his good pleasure.' The workers who have a 'heart to work' in Nehemiah's community are the OT instance of the Spirit-energized willing and working that Paul describes as God's ordinary operation within the covenant community."
+      }
+    ],
+    "9": [
+      {
+        "type": "allusion",
+        "target": "Eph 6:18",
+        "note": "'We prayed to our God and posted a guard against them day and night' — the combination of prayer and practical preparation. Nehemiah does not choose between spiritual and practical response to the threat; he does both simultaneously. This both/and of prayer + action is the structure Paul articulates in Eph 6:18: after calling the community to 'put on the whole armor of God' (practical-metaphorical preparation), he calls them to 'pray in the Spirit on all occasions with all kinds of prayers and requests.' The Nehemiah community's guard-and-pray response to Sanballat's coalition is the OT narrative enactment of the spiritual-warfare logic Paul systematizes in Ephesians 6."
+      }
+    ],
     "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
+      {
+        "type": "allusion",
+        "target": "Rom 8:31",
+        "note": "Nehemiah tells the community: 'Do not be afraid of them. Remember the Lord, who is great and awesome, and fight for your brothers, your sons, your daughters, your wives, and your homes.' The basis for courage in the face of overwhelming opposition is the character of YHWH — 'great and awesome' — not the community's own resources. The same logic governs Paul's climactic declaration in Rom 8:31: 'If God is for us, who can be against us?' The theological grammar is identical: the community facing hostile forces is called to confidence not in its own strength but in the nature of the God who fights for it. Nehemiah's 'the great and awesome God' fighting for his people is the OT narrative instance of Paul's certainty about the God who justifies."
+      }
+    ],
+    "20": [
+      {
+        "type": "allusion",
+        "target": "Deut 20:4",
+        "note": "'Our God will fight for us' (<em>ʾĕlōhênû yillāḥem lānû</em>) is the holy-war assurance formula — the promise that YHWH is the primary combatant in the covenant community's battles. Deut 20:4 is the Mosaic foundation: 'for YHWH your God is he who goes with you to fight for you against your enemies, to give you the victory.' Nehemiah's application of the holy-war promise to the wall-building project — labor with trowel and spear — shows the post-exilic community's understanding that the restoration of Jerusalem is a holy-war campaign: YHWH fighting not against nations with armies but against the opposition to his covenant purposes. The same logic governs the NT community's spiritual warfare (2 Cor 10:3-5): the weapons are not worldly, but the divine fighter is the same covenant God."
+      }
     ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_echo('nehemiah')
+    merge_echo(existing, NEH_ECHOES)
+    save_echo('nehemiah', existing)
+    print('Nehemiah 1–4 echoes written.')
 
 if __name__ == '__main__':
     main()

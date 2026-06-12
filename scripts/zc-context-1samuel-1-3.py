@@ -1,23 +1,20 @@
 """
-Ruth + 1-2 Samuel — all four layers.
-Ruth: kinsman-redeemer Boaz (type of Christ), Gentile inclusion in covenant community, genealogy to David/Christ.
-1 Samuel: Samuel (prophet-judge-priest), Saul's failure, David's anointing, Spirit-empowered leadership.
-2 Samuel: Davidic covenant (7:12-16), David's sin and restoration, Psalm 51 background.
+MKT Context Commentary — 1 Samuel chapters 1–3
+Run: python3 scripts/zc-context-1samuel-1-3.py
+
+Historical/ANE context, canonical function, Second Temple reception:
+
+Ch1: Hannah and Elkanah at Shiloh — barren-woman motif in covenant history;
+     Shiloh as central sanctuary; Samuel's vow and birth
+Ch2: Hannah's prayer — the reversal-of-fortunes theology; Eli's sons and
+     institutional corruption of the priesthood; the oracle against the house of Eli
+Ch3: YHWH's call to Samuel — the new prophetic mediation; the transition from
+     the priestly-tabernacle era to the prophetic era
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +26,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,138 +34,31 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# RUTH
-# ============================
-
-RUTH_ECHO = {
+CONTEXT = {
   "1": {
-    "16": [
-      {"type": "allusion", "target": "John 10:16", "note": "Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God — Ruth's covenant loyalty (hesed) to Naomi is the supreme expression of voluntary covenant commitment; her Gentile adoption into Israel's covenant community is a type of the Gentile church being grafted in"}
-    ]
+    "3": "<p>Elkanah's annual pilgrimage to Shiloh situates the narrative in the final phase of the tabernacle period. Shiloh (<em>šîlōh</em>, modern Khirbet Seilun, in the hill country of Ephraim) was the central sanctuary from after the conquest (Josh 18:1, when the tabernacle was erected there) through the end of the judges period, a span of roughly 300 years (ca. 1400-1050 BCE). Archaeological excavations at Khirbet Seilun by Israel Finkelstein (1981-84) revealed substantial Iron Age I occupation consistent with a cultic center, including large quantities of imported pottery and faunal remains suggesting sacrificial feasting. The annual pilgrimage pattern (Elkanah going 'year by year') reflects the Pentateuchal requirements of Exod 23:14-17 and Deut 16:16 — the three annual pilgrim festivals (Passover, Weeks, Booths). The mention of YHWH of armies (<em>YHWH ṣᵉḇāʾôt</em>) in v3 and v11 is significant: this is the first occurrence of this specific divine title in the narrative books, and it becomes the dominant epithet in the Ark Narrative that follows in chs 4-6.</p>",
+    "9": "<p>The Shiloh sanctuary has a 'doorpost of the temple of YHWH' (<em>mᵉzûzōt hêḵal YHWH</em>) — the Hebrew <em>hêḵal</em> here refers to the tabernacle's tent structure rather than a permanent building (which is not yet built). The term <em>hêḵal</em> (palace/temple) applied to the tabernacle is unusual; it anticipates the transition that will occur in 2 Sam 7 when David proposes to build a permanent <em>bêt</em> (house/temple) for YHWH. That the Shiloh tabernacle is called a <em>hêḵal</em> suggests either that the original tent had been supplemented with more permanent structures by this period, or that the narrator is using the term proleptically. The Priestly legislation of Num 3-4 describes the Levites dismantling and transporting the tabernacle; the use of <em>hêḵal</em> here suggests a period of relative stability at Shiloh where the tabernacle had taken on more permanent character.</p>",
+    "20": "<p>Hannah names her son <em>šᵉmûʾēl</em> (Samuel) with the explanation: <em>kî mēYHWH šᵉʾiltîw</em> — 'for from YHWH I asked him.' The etymology offered is from the root <em>šāʾal</em> (to ask/request), making the name mean 'name of God' or 'heard of God' — though the Semitic derivation of <em>šᵉmûʾēl</em> more naturally yields 'his name is El' or 'heard of God' (combining <em>šēm</em> + <em>ʾēl</em> or <em>šāmaʿ</em> + <em>ʾēl</em>). The narrative etymology — connecting the name to Saul's being asked/lent — actually fits Saul's name (<em>šāʾûl</em>, asked for) better than Samuel's. Scholars have noted this as a possible narrative telescoping or theologically motivated name-giving. Whatever the historical-linguistic analysis, the narrative point is clear: Samuel is the answered prayer, the gift-child, the one whose life belongs to YHWH because he was received from YHWH's hand.</p>"
   },
   "2": {
-    "20": [
-      {"type": "allusion", "target": "Gal 3:13", "note": "The man is a close relative of ours, one of our guardian-redeemers — Boaz as kinsman-redeemer (go'el) is one of the OT's clearest types of Christ's redemptive work: a near kinsman who has the right and takes on the obligation to redeem the distressed family member; Christ redeems as the one who became our kinsman (incarnation) and paid our ransom (cross)"}
-    ]
-  },
-  "4": {
-    "17": [
-      {"type": "allusion", "target": "Matt 1:5", "note": "They named him Obed. He was the father of Jesse, the father of David — Ruth the Moabite is in the genealogical line of David and therefore of the Messiah (Matt 1:5); a Gentile woman's covenant loyalty becomes the vehicle for the Davidic line through which the Messiah comes; the Gentile inclusion in the covenant community is literal and genealogical"}
-    ]
-  }
-}
-
-RUTH_ORIGINAL = {
-  "2": {
-    "20": "<p><strong>qorov lanu ha-ish, mige-aleinu hu</strong>: 'The man is a close relative of ours, one of our redeemers.' The <em>go'el</em> (kinsman-redeemer) is a legal institution in Israelite law: a near male relative who has the right and duty to redeem a family member's sold land (Lev 25:25), to marry a brother's childless widow (Deut 25:5-10, levirate marriage), to redeem a relative sold into slavery (Lev 25:47-55), and to avenge the blood of a murdered kinsman (the <em>go'el hadam</em>). Boaz fulfills the first two functions. Paul in Galatians uses the redemption/buying-back vocabulary (<em>exagorazo</em>, 'redeemed from the curse of the law', Gal 3:13; 4:5) to describe Christ's work — the kinsman-redeemer framework is the legal-theological background for NT redemption language.</p>"
-  }
-}
-
-RUTH_CONTEXT = {
-  "1": {
-    "1": "<p>Ruth is set in the period of the judges ('in the days when the judges ruled', Ruth 1:1) and is a counter-narrative to the chaos of that era: while Judges ends with 'everyone did what was right in his own eyes,' Ruth depicts a community where covenant loyalty (<em>hesed</em>) is practiced across ethnic lines and social classes. The book's theological center is the keyword <em>hesed</em> (steadfast love, covenant loyalty) — used three times (1:8; 2:20; 3:10). It serves as an introduction to the Davidic narrative: its genealogy (4:17-22) links it directly to 1 Samuel and the rise of David, making Ruth the backstory of the royal family. Matthew's genealogy (Matt 1:5) includes Ruth alongside Tamar, Rahab, and Bathsheba — four women with irregular stories through whom the messianic line runs.</p>"
-  }
-}
-
-RUTH_CHRIST = {
-  "2": {
-    "20": "<p>A type: 'The man is a close relative of ours, one of our guardian-redeemers.' Boaz is the OT's most fully developed type of Christ as redeemer: (1) he is near of kin — Christ became our kinsman through the incarnation (Heb 2:14-15: he shared in flesh and blood that through death he might destroy him who has the power of death); (2) he has the right to redeem — as the sinless son of God, Christ alone qualifies; (3) he is willing to redeem — another go'el existed but declined (Ruth 4:6); Christ took on the obligation no one else could fulfill; (4) he pays the redemption price — Boaz redeems the land and takes Ruth; Christ redeems his people by his blood and takes them as his bride (Eph 5:25-27; Rev 19:7-9). The kinsman-redeemer motif is the book of Ruth's entire Christological contribution.</p>"
-  }
-}
-
-# ============================
-# 1 SAMUEL
-# ============================
-
-SAMUEL1_ECHO = {
-  "2": {
-    "1": [
-      {"type": "allusion", "target": "Luke 1:46-55", "note": "Hannah's prayer: My heart exults in YHWH; my horn is exalted in YHWH — Mary's Magnificat (Luke 1:46-55) is a conscious echo and expansion of Hannah's prayer; both are songs of the lowly being lifted up, the proud being brought down, and the faithful YHWH-servant being vindicated through an unexpected birth"}
-    ]
+    "1": "<p>Hannah's prayer (the Magnificat of the OT) is dated to ca. 1100 BCE in the narrative framework and represents one of the oldest poetic compositions preserved in Samuel. Its closest structural parallel is Psalm 113 (the praise of YHWH who raises the poor from the dust). The prayer's theological structure — YHWH reverses human fortunes by humbling the proud and exalting the lowly — is the dominant theological pattern of the Samuel books: Saul is humbled, David is exalted; the priest Eli's house falls, Samuel rises. Mary's Magnificat (Luke 1:46-55) is a conscious typological expansion of Hannah's prayer: the same reversal theology, the same vocabulary of the hungry being filled and the rich sent empty away, the same divine agent (YHWH/the Lord) as the initiator of the reversal. Placing Hannah's prayer in its canonical context shows it as the theological overture to both the Samuel books and the NT Advent narratives.</p>",
+    "12": "<p>Eli's sons Hophni and Phinehas are described as <em>bənê bəliyyaʿal</em> — 'sons of worthlessness/Belial' — the same phrase used for the men of Gibeah (Judg 19:22) and for Nabal (1 Sam 25:17, 25). The compound <em>bəliyyaʿal</em> (<em>bəlî</em> = without + <em>yōʿal</em> = profit/worth) designates persons who operate entirely outside covenant norms — those from whom no positive covenant contribution can be expected. The specific sins enumerated: taking the meat by force before the fat has been offered to YHWH (vv13-16), and lying with the women who served at the entrance of the tent of meeting (v22). Both sins are direct inversions of priestly vocation: the priest is to burn the fat first (Lev 3:16-17), and the sanctuary is to be protected from sexual defilement (cf. the Zimri-Cozbi incident, Num 25). The Shiloh priesthood's corruption is the institutional background that makes Samuel's emergence and eventually the royal institution both necessary and theologically justified.</p>",
+    "27": "<p>The oracle of the 'man of God' (ʾîš hāʾelōhîm) against Eli's house introduces a motif that will recur throughout the DH: the prophetic word that announces the end of a dynasty or institution, followed by the fulfillment in the narrative. The formula <em>hinnēh yāmîm bāʾîm</em> ('behold, days are coming') is the standard prophetic announcement formula for future judgment (it appears 16 times in Jeremiah alone). The judgment oracle against the house of Eli (vv31-36) announces: (1) cutting off (<em>kārat</em>) the strength of Eli's father's house; (2) no old man in his house forever; (3) a faithful priest (<em>kōhēn neʾĕmān</em>) to replace him, 'who will do according to what is in my heart and in my soul.' The 'faithful priest' of v35 is variously identified as Samuel, Zadok (who replaces Abiathar/Eli's line, 1 Kgs 2:27,35), or eschatologically as Christ. The oracle's immediate fulfillment in the deaths of Hophni and Phinehas (ch4) and its long fulfillment in Zadok's appointment makes this a paradigmatic example of prophetic word-and-fulfillment theology.</p>",
+    "35": "<p>The 'faithful priest' (<em>kōhēn neʾĕmān</em>) oracle is the pivot of the Shiloh narrative. The terms <em>neʾĕmān</em> (faithful, reliable, established — from the <em>ʾāmēn</em> root) echo the Davidic covenant vocabulary of 2 Sam 7:16 (<em>wᵉneʾĕman bêtəḵā</em>, 'your house shall be established/faithful forever'). The phrase 'a sure (<em>neʾĕmān</em>) house' appears in both the Eli oracle (v35) and the Nathan oracle (2 Sam 7:16), creating a structural parallel: what is denied to Eli's house (a sure/faithful house) is granted to David's house. The theological logic: the priestly failure at Shiloh clears the ground for the Davidic institution — Eli's corruption is not merely personal but institutional, requiring not just a better priest but a new covenantal arrangement whose embodiment will eventually be the priestly-royal Messiah.</p>"
   },
   "3": {
-    "1": [
-      {"type": "allusion", "target": "Amos 8:11-12", "note": "The word of YHWH was rare in those days; there was no frequent vision — the period of prophetic silence before Samuel's emergence; Amos prophesies a future famine of hearing YHWH's word; both point to the darkness before divine speech resumes"}
-    ]
-  },
-  "13": {
-    "14": [
-      {"type": "allusion", "target": "Acts 13:22", "note": "YHWH has sought out a man after his own heart — Paul in the Pisidian Antioch synagogue quotes this divine verdict on David to introduce the gospel: God raised up David as a witness, and from his offspring God has brought to Israel a Savior, Jesus, as he promised"}
-    ]
-  },
-  "16": {
-    "13": [
-      {"type": "allusion", "target": "Matt 3:16", "note": "The Spirit of YHWH rushed upon David from that day forward — David's anointing by Samuel and the Spirit's coming upon him is the OT pattern for the messianic anointing; at Jesus's baptism the Spirit descends and remains (John 1:32), the permanent and ungrieved anointing that Saul's experience foreshadowed and forfeited"}
-    ]
-  }
-}
-
-SAMUEL1_ORIGINAL = {
-  "2": {
-    "2": "<p><strong>ein qadosh kaYHWH ki ein biltecha vein tzur kebogheinu</strong>: 'There is none holy like YHWH: for there is none besides you; there is no rock like our God.' Hannah's prayer is the OT's most concentrated statement of YHWH's incomparable holiness and sovereignty — expressed through the reversal-of-fortunes theme (vv. 4-8: the bows of the mighty are broken, but the feeble bind on strength). The pattern is: YHWH exalts the lowly and humbles the proud, not based on human merit but on divine grace and election. Paul's 'God chose what is weak in the world to shame the strong' (1 Cor 1:27) is the Christological application of Hannah's insight: the cross itself is YHWH's ultimate reversal, where the weak and crucified Son defeats the strong.</p>"
-  }
-}
-
-SAMUEL1_CONTEXT = {
-  "1": {
-    "1": "<p>1 Samuel narrates the transition from the period of the judges to the monarchy (ca. 1100-1011 BCE). Its theological structure revolves around three figures: Samuel (the last and greatest judge, the transitional prophet-priest-judge), Saul (the failed king, rejected because of disobedience), and David (the man after God's own heart, the model for the Davidic covenant). The contrast between Saul and David is theologically instructive: Saul has the outward appearance (tall, handsome, from the right tribe) but lacks the inner heart-alignment; David lacks the outward qualifications (youngest, overlooked, a shepherd) but has the heart that YHWH seeks (1 Sam 16:7: YHWH looks on the heart). This contrast between external appearance and internal reality runs from 1 Samuel through Paul's theology of the Spirit vs. the flesh.</p>"
-  }
-}
-
-SAMUEL1_CHRIST = {
-  "16": {
-    "13": "<p>A type: 'And the Spirit of the LORD rushed upon David from that day forward.' David's anointing by Samuel is the OT's paradigmatic messianic event — the word <em>mashiach</em> (anointed one) derives its ultimate meaning from this moment. David is anointed as YHWH's chosen king; the Spirit comes upon him as the empowering for his royal vocation. Jesus's baptism is the typological fulfillment: he is anointed (the meaning of <em>christos</em>, the Greek equivalent of <em>mashiach</em>) by the Spirit who descends and remains (John 1:32-33). The crucial difference: the Spirit rushed upon David from that day forward, but left Saul (1 Sam 16:14); on Jesus the Spirit descends and remains — the permanent anointing that makes him the Messiah whose Spirit-empowered rule will never end.</p>"
-  }
-}
-
-# ============================
-# 2 SAMUEL
-# ============================
-
-SAMUEL2_ECHO = {
-  "7": {
-    "12": [
-      {"type": "fulfillment", "target": "Luke 1:32-33", "note": "I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom — the Davidic covenant promise (Nathan's oracle) is directly cited in the annunciation: the Lord God will give him the throne of his father David, and he will reign over the house of Jacob forever, and of his kingdom there will be no end"},
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "God had sworn with an oath to him that he would set one of his descendants on his throne — Peter's Pentecost sermon cites the Davidic covenant (2 Sam 7 + Ps 16 + Ps 110) as the OT basis for Jesus's resurrection and exaltation; the resurrection is the fulfillment of the promise to raise up David's offspring"},
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "I am the root and the descendant of David — Revelation's final identification of Jesus as the Davidic heir fulfills the 2 Sam 7 promise in its full scope: not merely a political successor but the eternal Son who receives an eternal kingdom"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — the father-son language of the Davidic covenant (2 Sam 7:14) is applied to Christ in Heb 1:5 as proof of his superiority to angels; no angel was ever called God's Son in this royal, covenantal sense"}
-    ]
-  }
-}
-
-SAMUEL2_ORIGINAL = {
-  "7": {
-    "12": "<p><strong>vakimoti et zarecha achareicha asher yetze mimeecha vehakhinoti et mamlaChto</strong>: 'I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.' The Davidic covenant (2 Sam 7:12-16) is the OT's central messianic text — the foundational oracle to which all subsequent messianic prophecy refers. Its key elements: (1) a son who builds a house (temple/dynasty); (2) a father-son relationship (<em>ani ehyeh lo le-av vehu yihyeh li le-ben</em>); (3) discipline for sin but not abandonment; (4) an eternal throne (<em>venekkon kisso ad olam</em>, I will establish his throne forever). The covenant applies both to the immediate heir Solomon and, in an escalating way, to the ultimate heir — which Psalms 2, 89, 110 and the prophets develop into the eschatological Messiah.</p>"
-  }
-}
-
-SAMUEL2_CONTEXT = {
-  "7": {
-    "1": "<p>The Davidic covenant (2 Sam 7) is spoken through the prophet Nathan when David, having consolidated his kingdom in Jerusalem, desires to build a temple for YHWH. YHWH's reversal — 'you will not build me a house; I will build you a house (dynasty)' — is the pivot of the OT's messianic program. The word <em>bayit</em> (house) operates on three levels simultaneously: the physical temple David wants to build, the dynastic household YHWH promises, and the future son who will build both. The oracle has a near fulfillment (Solomon builds the temple, 1 Kings 6-8) and a far fulfillment (the eternal son whose kingdom has no end). The 'already and not yet' hermeneutic of NT fulfillment readings is modeled on 2 Samuel 7 itself, which already operates on two temporal levels.</p>"
-  }
-}
-
-SAMUEL2_CHRIST = {
-  "7": {
-    "12": "<p>A direct revelation: 'When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom ... and I will establish the throne of his kingdom forever.' The Davidic covenant is the OT's formal contract establishing the messianic expectation. Jesus of Nazareth's Davidic lineage is asserted by both Matthew (1:1-17) and Luke (3:23-38), confirmed by Paul (Rom 1:3: descended from David according to the flesh), and by Jesus himself (Mark 12:35-37). The eternal throne (v. 13, 16) is fulfilled in the resurrection: unlike David's physical descendants who all died, Christ rose and will reign forever. Peter's Pentecost sermon (Acts 2:29-36) explicitly applies 2 Sam 7 + Ps 16 + Ps 110 to the risen Christ: the Davidic covenant's promise of an unending throne is fulfilled not in an earthly dynasty but in the resurrection-life of the Son.</p>"
+    "1": "<p>The narrative's temporal marker: <em>ûdəḇar YHWH hāyāh yāqār bayyāmîm hahēm ʾên ḥāzôn niphrāṣ</em> — 'the word of YHWH was rare in those days; there was no frequent vision.' The rarity of prophetic vision at the end of the Eli period marks a nadir of covenant communication — YHWH had gone silent. This silence is the negative background against which Samuel's emergence as prophet is the more dramatic. The pattern of divine silence followed by renewed prophetic word is a recurrent OT structure: the centuries between Malachi and John the Baptist, the silence between Elijah and Elisha's ministry. Amos 8:11-12 describes a coming 'famine of hearing the words of YHWH' — the absence of prophetic word as divine judgment. The silence at Shiloh is not YHWH's absence but his withholding of the word that Eli's priesthood has made itself unworthy to receive.</p>",
+    "3": "<p>Samuel sleeps 'in the temple of YHWH where the ark of God was.' The physical arrangement of the Shiloh sanctuary described here — the Ark, the lamp of God, the sleeping quarters for the priestly attendant — places Samuel in the position of the ideal sanctuary-keeper: present, attentive, in the posture of availability. The lamp of God (<em>nēr ʾelōhîm</em>) burning through the night is the <em>mənōrāh</em>'s lamp (Exod 27:20-21 — the priests are to keep the lamp burning from evening to morning). Samuel's nighttime vigil at the Ark, hearing the divine voice while Eli's sight is failing (v2 — 'his eyes had begun to grow dim'), is a visual narrative of the transition: the old, dimming priestly order yields to the attentive young servant who hears what Eli can no longer see or receive.</p>",
+    "19": "<p>Samuel's prophetic authentication: <em>wayyiḡdal šᵉmûʾēl wᵉYHWH hāyāh ʿimmô wəlōʾ hippîl mikkol dᵉḇārāyw ʾārṣāh</em> — 'Samuel grew and YHWH was with him and did not let any of his words fall to the ground.' The phrase 'words falling to the ground' (<em>hippîl dāḇār ʾārṣāh</em>) is the idiom for prophetic failure — a word that does not come to pass. The canonical criterion for true prophecy in Deut 18:22 is precisely this: if the word does not come to pass, the prophet has spoken presumptuously. Samuel's authentication is the inverse: all his words come true. This is the foundational credential that makes Samuel the paradigmatic OT prophet and the institutional anchor for what will be called the 'school of the prophets' (<em>bᵉnê hannəḇîʾîm</em>) in the Elijah-Elisha narratives (2 Kgs 2-4). Second Temple Judaism's high regard for Samuel is reflected in Sir 46:13-20 and 1 Macc 2:57 — his intercession at Mizpah was remembered as paradigmatic covenant prayer.</p>"
   }
 }
 
 def main():
-    books = [
-        ('ruth', RUTH_ECHO, RUTH_ORIGINAL, RUTH_CONTEXT, RUTH_CHRIST),
-        ('1samuel', SAMUEL1_ECHO, SAMUEL1_ORIGINAL, SAMUEL1_CONTEXT, SAMUEL1_CHRIST),
-        ('2samuel', SAMUEL2_ECHO, SAMUEL2_ORIGINAL, SAMUEL2_CONTEXT, SAMUEL2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-context', '1samuel')
+    merge_comm(c, CONTEXT)
+    save_comm('mkt-context', '1samuel', c)
+    count = sum(len(v) for v in CONTEXT.values())
+    print(f'1samuel mkt-context: wrote {count} verses across ch 1-3')
 
 if __name__ == '__main__':
     main()

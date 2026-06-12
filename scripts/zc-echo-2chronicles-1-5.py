@@ -1,7 +1,22 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Echo Layer — 2 Chronicles chapters 1–5
+Run: python3 scripts/zc-echo-2chronicles-1-5.py
+
+Source data used:
+- data/interlinear/2chronicles.json
+- data/parallels/2chronicles.json (absorbed: ch1 v1 → 1 Kgs 3; ch3 v1 → 1 Kgs 6; ch5 v2 → 1 Kgs 8)
+- data/translation/draft/mediating/2chronicles.json
+
+Key decisions:
+- Ch1 parallels 1 Kgs 3 (Solomon's dream at Gibeon): absorbed as allusion; also echoes
+  Matt 12:42 (greater than Solomon) and Jas 1:5 (ask wisdom generously)
+- Ch2: Huram's collaboration and temple planning; 2:4 incense/feasts → Col 2:16-17 (shadows);
+  2:6 heaven-cannot-contain → Acts 7:48 / John 1:14
+- Ch3 parallels 1 Kgs 6: Mount Moriah at v1 is the Aqedah site (Gen 22:2) — temple built
+  where Abraham's sacrifice was; v14 curtain → Matt 27:51
+- Ch4: molten sea → Rev 4:6 (glassy sea); bronze altar → Heb 13:10; lampstands → Rev 1:12
+- Ch5: glory-cloud theophany at v13-14 is primary echo focus; ark's placement → Heb 9:4-5;
+  the refrain 'his steadfast love endures forever' → Rev 15:3-4
 """
 
 import json, pathlib
@@ -10,7 +25,9 @@ ROOT = pathlib.Path(__file__).parent.parent
 
 def load_echo(book):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_echo(book, data):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
@@ -18,17 +35,8 @@ def save_echo(book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def merge_echo(existing, new_data):
+    """Merge echo entries; deduplicate by (type, target) within each verse."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -42,168 +50,174 @@ def merge_echo(existing, new_data):
                         existing[ch][v].append(e)
                         seen.add((e['type'], e['target']))
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
-  },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
+CHRON2_ECHOES = {
   "1": {
     "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
+      {
+        "type": "allusion",
+        "target": "1 Kgs 3:4-15",
+        "note": "The Chronicler parallels the Gibeon theophany of 1 Kings 3, omitting the dream-frame but preserving Solomon's request for wisdom and YHWH's grant. The Chronicler's account substitutes 'knowledge and wisdom' for 1 Kings' 'discerning heart' — the two accounts are complementary rather than contradictory."
+      }
+    ],
+    "7": [
+      {
+        "type": "allusion",
+        "target": "John 16:24",
+        "note": "God's night-time offer to Solomon — 'Ask what you want me to give you' — is the OT prototype of the prayer-promise Jesus extends in John 16:24: 'Ask, and you will receive, that your joy may be full.' The unconditional divine offer to provide what is asked establishes a pattern that the new covenant makes universally available in Christ's name."
+      }
+    ],
+    "10": [
+      {
+        "type": "allusion",
+        "target": "Jas 1:5",
+        "note": "Solomon's request for 'wisdom and knowledge' to govern God's people is the OT's paradigmatic prayer for wisdom. James 1:5 — 'If any of you lacks wisdom, let him ask God, who gives generously to all without reproach, and it will be given him' — is the NT universalization of Solomon's prayer: what was uniquely granted to Israel's king is made available to every believer through the God who gives generously."
+      }
+    ],
+    "12": [
+      {
+        "type": "theme",
+        "target": "Eph 3:20",
+        "note": "Because Solomon asked for wisdom rather than wealth, YHWH grants both wisdom and riches beyond anything asked or imagined: 'riches, wealth, and honor such as no king has had before you.' The pattern of God giving beyond what is requested finds its NT expression in Eph 3:20: 'him who is able to do far more abundantly than all that we ask or think.' Solomon's unexpected surplus is a temporal sign of the divine abundance fully revealed in Christ."
+      }
+    ]
+  },
+  "2": {
+    "1": [
+      {
+        "type": "allusion",
+        "target": "John 14:2",
+        "note": "Solomon builds both a house for YHWH's name and a palace for himself. In John 14:2 Jesus announces: 'In my Father's house are many rooms; I go to prepare a place for you.' The Solomonic building project anticipates Christ's work of preparing a dwelling in the Father's house — though what Solomon built was stone and cedar, Christ prepares a permanent spiritual dwelling in the Father's presence itself."
+      }
+    ],
+    "4": [
+      {
+        "type": "shadow",
+        "target": "Col 2:16-17",
+        "note": "Solomon's enumeration of the temple's purposes — burnt offerings, incense, Sabbaths, new moons, appointed feasts — is the calendar of the Mosaic worship system. Paul's declaration in Col 2:16-17 that 'these are a shadow of the things to come, but the substance belongs to Christ' applies precisely to this list: the temple's entire ritual schedule of offerings and festivals is a shadow-complex pointing to the one who is its substance."
+      }
+    ],
+    "6": [
+      {
+        "type": "allusion",
+        "target": "Acts 7:48",
+        "note": "Solomon's own rhetorical question — 'Who is able to build him a house, since heaven and the highest heaven cannot contain him? Who am I to build him a house, except to offer sacrifice before him?' — anticipates Stephen's argument in Acts 7:48-49 that the Most High does not dwell in houses made by hands. Solomon himself acknowledged the temple's inadequacy as a divine dwelling even as he built it."
+      },
+      {
+        "type": "allusion",
+        "target": "John 1:14",
+        "note": "The theological problem Solomon identifies — heaven cannot contain God, yet he is building a house for him — is resolved not by a better building but by the incarnation. John 1:14 ('the Word became flesh and tabernacled among us') announces that God has made himself containable in a human body. What the Jerusalem temple could only inadequately approximate, the body of Christ perfectly achieves."
+      }
     ]
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
-  "4": {
+    "1": [
+      {
+        "type": "allusion",
+        "target": "Gen 22:2",
+        "note": "The temple is built on Mount Moriah — the same mountain where God commanded Abraham to offer Isaac (Gen 22:2). The Chronicler explicitly identifies this connection, making the temple's site the place where YHWH's provision was first declared ('the LORD will provide,' Gen 22:14). The temple built where the ram was substituted for Isaac anticipates the greater sacrifice where no substitute was provided but God himself gave his Son (Rom 8:32)."
+      }
+    ],
     "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
+      {
+        "type": "shadow",
+        "target": "Matt 27:51",
+        "note": "The curtain separating the Holy Place from the Most Holy Place, made of blue, purple, and crimson yarn and fine linen, is the veil torn in two from top to bottom at Christ's death (Matt 27:51). The tearing of the veil is the Solomonic sanctuary's most dramatic eschatological moment: the barrier to the divine presence is abolished when the one who is himself the divine presence dies outside the city gates. Access to the Most Holy Place is permanently opened through Christ's body (Heb 10:19-20)."
+      }
+    ],
+    "15": [
+      {
+        "type": "theme",
+        "target": "Rev 3:12",
+        "note": "The two bronze pillars Jachin ('He will establish') and Boaz ('In him is strength') standing before the temple entrance carry names that read as covenant promises. In Rev 3:12 the risen Christ promises the faithful: 'The one who conquers, I will make him a pillar in the temple of my God.' The Solomonic pillars of establishment and strength become in Revelation the image of those who participate permanently in the eschatological temple through their union with Christ."
+      }
     ]
-  }
-}
-
-ESTHER_ORIGINAL = {
+  },
   "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+    "1": [
+      {
+        "type": "type",
+        "target": "Heb 13:10",
+        "note": "The great bronze altar for burnt offerings — the place where sacrifices were consumed — is the type behind Heb 13:10: 'We have an altar from which those who serve the tent have no right to eat.' The new-covenant altar is not a bronze structure but Christ himself, whose sacrifice is the source of spiritual sustenance. The Solomonic altar type gives Hebrews its sacrificial imagery for Christ's atoning work."
+      }
+    ],
+    "2": [
+      {
+        "type": "allusion",
+        "target": "Rev 4:6",
+        "note": "The molten sea — a massive bronze basin resting on twelve oxen — prefigures the glassy sea before the heavenly throne in Rev 4:6. The temple's sea represented the cosmic waters ordered under divine sovereignty (cf. Gen 1:2, 6-8); the heavenly sea of glass in Revelation represents the same divine mastery over chaos in the eschatological throne room. The Solomonic sea is the earthly sanctuary's version of what John sees in the heavenly vision."
+      }
+    ],
+    "6": [
+      {
+        "type": "allusion",
+        "target": "Heb 9:10",
+        "note": "The ten basins for washing — used by the priests for purification of the burnt offerings — belong to the category of 'regulations for the body' and 'various washings' that Heb 9:10 describes as 'imposed until the time of reformation.' These ablution rituals were not arbitrary but pointed to the purification that Christ accomplishes: 'he entered once for all into the holy places... by means of his own blood' (Heb 9:12), providing the cleansing the temple washings could only symbolize."
+      }
+    ],
+    "19": [
+      {
+        "type": "allusion",
+        "target": "Rev 1:12-13",
+        "note": "The golden lampstands placed in front of the inner sanctuary — five on the south and five on the north — connect to the vision of Revelation 1:12-13, where the risen Christ stands 'in the midst of seven golden lampstands.' The Solomonic lampstands illuminate the earthly sanctuary; the seven lampstands in Revelation represent the churches in which Christ is present and from which his light shines. The continuity of lampstand imagery from Solomon's temple to John's vision is deliberate."
+      }
+    ]
+  },
+  "5": {
+    "2": [
+      {
+        "type": "allusion",
+        "target": "1 Kgs 8:1-21",
+        "note": "The Chronicler's account of the ark's transfer to the completed temple parallels 1 Kings 8:1-21 closely. Solomon's assembling of all Israel's leaders — the whole congregation — at the transfer of the ark echoes the covenantal assembly language of Sinai and anticipates the eschatological gathering. Paul applies this gathering-language to the new covenant: God's purpose is 'to unite all things in him' (Eph 1:10), the gathering that the Solomonic assembly imperfectly prefigures."
+      }
+    ],
+    "7": [
+      {
+        "type": "allusion",
+        "target": "Heb 9:7",
+        "note": "The priests bringing the ark of the covenant into the inner sanctuary — the Most Holy Place — enacts the principle Hebrews describes for the high priest: 'into the second section only the high priest goes, and he but once a year, not without taking blood' (Heb 9:7). The ark's permanent installation in the Most Holy Place corresponds to Christ's single entry 'by means of his own blood' into the heavenly holy place (Heb 9:12) — both are once-for-all entries that establish permanent access rather than repeated ritual."
+      }
+    ],
+    "9": [
+      {
+        "type": "allusion",
+        "target": "Heb 9:4",
+        "note": "The carrying poles of the ark were so long that their tips were visible from the Holy Place but not from outside — they could be seen 'to this day.' Hebrews 9:4-5 describes the same sanctuary furniture in its theological significance: the ark, the mercy seat, the cherubim. The Chronicler's precise detail about the visible poles confirms the historical reality of the sanctuary whose theological significance Hebrews develops in full."
+      }
+    ],
+    "10": [
+      {
+        "type": "allusion",
+        "target": "Heb 9:4",
+        "note": "The ark contained only the two stone tablets of the Ten Commandments — 'nothing in the ark except the two tablets of stone.' Hebrews 9:4 mentions 'the tablets of the covenant' as contents of the ark alongside the golden urn of manna and Aaron's staff. The Chronicler's note that the jar of manna and Aaron's rod were no longer present (cf. Exod 16:33-34; Num 17:10) may reflect their loss before the temple period; the tablets alone endured as the covenant foundation."
+      }
+    ],
+    "13": [
+      {
+        "type": "allusion",
+        "target": "Ps 118:1",
+        "note": "The Levitical choir's refrain — 'For he is good; his steadfast love endures forever' — is the foundational doxology of Israel's liturgy (Ps 106:1; 107:1; 118:1; 136). The glory cloud descends precisely as this declaration of covenant faithfulness is sung. In Rev 15:3-4 the redeemed sing 'the song of Moses and the Lamb,' celebrating the same divine goodness and faithfulness in the new exodus. The refrain sung at the temple's dedication is still the substance of heavenly worship."
+      },
+      {
+        "type": "fulfillment",
+        "target": "Rev 15:3",
+        "note": "The musicians and singers joining as 'one voice' to praise and give thanks as the glory filled the temple is the high point of the entire temple-building narrative. Revelation 15:3 shows the eschatological fulfillment: the redeemed standing on the glassy sea singing the song of God's greatness and holiness. The unity of voice at Solomon's dedication anticipates the unity of the redeemed multitude before the heavenly sanctuary — worship that the earthly temple could only temporarily and partially achieve."
+      }
+    ],
+    "14": [
+      {
+        "type": "shadow",
+        "target": "John 1:14",
+        "note": "The divine glory filling the temple so completely that the priests could not stand to serve — the <em>shekinah</em> overwhelming the entire structure — is the OT's most intense theophany of divine presence in the sanctuary. John 1:14 declares that this glory found personal, incarnate expression in Jesus: 'we have seen his glory, glory as of the only Son from the Father, full of grace and truth.' The glory that filled Solomon's temple tabernacled in human flesh; the temporary, localized shekinah became permanent, personal divine presence in Christ."
+      }
+    ]
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_echo('2chronicles')
+    merge_echo(existing, CHRON2_ECHOES)
+    save_echo('2chronicles', existing)
+    print('2 Chronicles 1–5 echoes written.')
 
 if __name__ == '__main__':
     main()

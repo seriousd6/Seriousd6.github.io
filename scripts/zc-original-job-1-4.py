@@ -1,48 +1,37 @@
 """
-Job + Proverbs + Ecclesiastes + Song of Solomon — all four layers.
-Wisdom books: suffering and theodicy (Job), practical wisdom as Christ (Prov 8),
-vanity and meaning (Eccl), the love of Christ and the church (Song).
+MKT Original Language Commentary — Job chapters 1–4
+Run: python3 scripts/zc-original-job-1-4.py
+
+Ch 1: The prologue. Hebrew: tam/yashar/yare'/sar vocabulary; ha-Satan as title with article;
+      barakh used euphemistically for curse (vv5,11,21 — the irony is intentional);
+      hinam (for nothing/freely) as the book's thesis word; Job's five-verb ritual response.
+Ch 2: Second test. tumma (integrity, noun of tam); 'or be'ad 'or as commercial formula;
+      wife's barakh = curse again; chinnam reappears; shiv'a yamim mourning.
+Ch 3: Job's lament / birthday curse. Echoes Jer 20:14-18. Jussive verb forms throughout;
+      Leviathan mythological allusion; repeated lama (why); amel for suffering one.
+Ch 4: Eliphaz's first speech. yir'atekha appeals to Job's own vocabulary (1:1);
+      the friends' retributive-justice axiom; the nocturnal vision; 'enosh for mortal
+      human frailty; houses of clay / tent-stake metaphors.
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -50,187 +39,106 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# JOB
-# ============================
-
-JOB_ECHO = {
+ORIGINAL = {
   "1": {
-    "21": [
-      {"type": "allusion", "target": "Phil 4:11-12", "note": "The LORD gave, and the LORD has taken away; blessed be the name of the LORD — Job's response to total loss; Paul's 'I have learned, in whatever state I am, to be content' echoes the Job pattern of accepting both abundance and loss from the hand of God"}
-    ]
+    "1": "<p>The four-descriptor portrait of Job — <strong><em>tam</em></strong> (blameless/complete), <strong><em>yashar</em></strong> (upright/straight), <strong><em>yare&rsquo; &rsquo;elohim</em></strong> (fearing God), and <strong><em>sar mera&rsquo;</em></strong> (turning from evil) — forms a merism of moral completeness. <em>Tam</em> is the same root used for the unblemished sacrificial animal (Lev 1:3, <em>tamim</em>); it means without spot or defect, complete. <em>Yashar</em> = morally straight, aligned with the right. The four terms together are the OT&rsquo;s most comprehensive moral character description applied to a human, echoed only in YHWH&rsquo;s own repeated endorsement of Job (v8; 2:3).</p>",
+    "2": "<p>The seven sons and three daughters, seven thousand sheep, three thousand camels, five hundred yoke of oxen, and five hundred donkeys — the numbers are schematic for totality (seven = complete, the totals doubly round). The three-seven structure of Job&rsquo;s possessions and children appears at the book&rsquo;s end (42:12&ndash;13) but doubled, marking the restoration as exceeding the original in every category except the children, who are replaced in equal number (not doubled) — a structural detail the narrator maintains precisely.</p>",
+    "3": "<p>Job is described as the greatest (<em>gadol</em>) among all <em>bene qedem</em> (sons/people of the East). The &lsquo;East&rsquo; (<em>qedem</em>) is the region associated with wisdom traditions in the OT (1 Kgs 4:30; Isa 2:6). Job&rsquo;s identification as an easterner places him in the wisdom tradition, consistent with his dialogues&rsquo; high poetic and philosophical register. His non-Israelite identity (Uz is likely in Edom or trans-Jordan) is significant: the book makes its most acute theological argument through a figure outside the covenant community.</p>",
+    "4": "<p>The sons&rsquo; feasts (<em>mishteh</em>, drinking-feast) each on his <em>yom</em> (appointed day) — the seven sons in rotation create a cycle of seven feasts. The phrase <em>yom hullado</em> (day of his birth) in 3:1 and 3 uses the same <em>yom</em> vocabulary. The cyclical festivity of the sons will be shattered by the wind that strikes on one of these feast days (v18&ndash;19).</p>",
+    "5": "<p><em>Viqaddishem</em> (he consecrated/sanctified them) — Job&rsquo;s regular priestly intercession for his children before dawn. The verb <em>qadash</em> in the pi&rsquo;el = cause to be holy, purify. Job functions as a priestly intercessor: he offers burnt offerings (<em>&lsquo;olot</em>) for each child. The concern: perhaps they <em>ber&rsquo;u &rsquo;elohim</em> (cursed/blessed God) <em>bilbavam</em> (in their hearts). Note: <em>berakh</em> here is the first use of the curse-euphemism in the book (cf. v11, 2:5, 2:9) — the same word as &ldquo;bless,&rdquo; used to avoid writing the actual curse.</p>",
+    "6": "<p><strong><em>Ha-Satan</em></strong> — with the definite article <em>ha</em>, making it a title or role rather than a personal name: <em>the adversary/accuser</em>. <em>Satan</em> is from the root <em>satan</em> = to accuse, be hostile to, obstruct. In the legal context of the heavenly court (<em>bene ha-&rsquo;elohim</em> presenting before YHWH), the adversary functions as a prosecuting attorney who challenges YHWH&rsquo;s assessment of Job. The <em>bene ha-&rsquo;elohim</em> (sons of God) is the divine council, not a reference to angelic beings in the later Christian sense but to the heavenly court of YHWH&rsquo;s royal household (cf. Ps 82; 1 Kgs 22:19-22).</p>",
+    "7": "<p><em>Missut ba-&rsquo;arets umitthallek bah</em> (from roaming through the earth and walking back and forth on it) — the adversary&rsquo;s self-description. The <em>sut</em> (roam, wander) and <em>halak</em> (walk) describe ceaseless investigative movement. The same vocabulary appears in Zech 1:10&ndash;11 and 6:7 for the angelic patrol of the earth — the divine intelligence network. The adversary has been on patrol and has evidently been observing Job.</p>",
+    "8": "<p>YHWH initiates: <em>hasamta libbeka &rsquo;al &rsquo;abdi &rsquo;iyyov</em> (have you set your heart on/taken notice of my servant Job?) &mdash; the verb <em>sam leb</em> = to fix attention on, observe carefully. YHWH initiates the Job discussion, not the adversary. This is a detail of the Hebrew structure that the prose preserves: the test originates in YHWH&rsquo;s own move to draw the adversary&rsquo;s attention to Job. The fourfold moral description of v1 is repeated verbatim, framing YHWH&rsquo;s own endorsement as narrative proof of Job&rsquo;s character.</p>",
+    "9": "<p><em>Hinam</em> — <strong>&lsquo;for nothing,&rsquo; &lsquo;freely,&rsquo; &lsquo;without cause&rsquo;</strong> — is the adversary&rsquo;s thesis word. The one Hebrew word sets the book&rsquo;s central question: Does Job fear God for nothing (<em>hinam</em>)? The same word appears in 2:3 (to ruin him <em>hinam</em>) and Ps 35:19 / 69:4 (<em>hinam</em> enemies). The adversary&rsquo;s claim is that piety is always instrumental: no one loves God for God&rsquo;s own sake; everyone has a price.</p>",
+    "10": "<p><em>Vayyasek ba&rsquo;adhu</em> (you have put a protective fence around him) — <em>suk</em> = to hedge in, protect. The adversary sarcastically identifies YHWH&rsquo;s protection as the reason for Job&rsquo;s piety. Ironically, in 3:23 Job will use the same concept of being &lsquo;fenced in&rsquo; (<em>yasek be&rsquo;ado</em>) as a complaint against God — the same enclosure becomes oppression when viewed from within suffering.</p>",
+    "11": "<p><em>Velukh</em> — stretch out. The imperative-like <em>ulam shelah-na</em> (but reach out now) followed by the oath <em>&rsquo;im-lo&rsquo; &rsquo;al-panekha yevarekheka</em> (he will surely curse you to your face) — the <em>&rsquo;im-lo&rsquo;</em> oath formula = &ldquo;truly / if not.&rdquo; The <em>yevarakhekha</em> = will bless/curse you. The Hebrew euphemism: the scribe (or narrator) writes &ldquo;bless&rdquo; (<em>barakh</em>) where the adversary means &ldquo;curse.&rdquo; The phrase <em>&rsquo;al-panekha</em> (to your face) heightens the audacity: Job will deny God to his face, not privately.</p>",
+    "12": "<p>YHWH&rsquo;s limit: <em>hinno veyadelkha raq &rsquo;elaw &rsquo;al-tishlah yadekha</em> (all he has is in your power; only do not lay a hand on the man himself). The divine limit (<em>raq</em> = only/but) is the theological boundary that makes the test meaningful: suffering is permitted up to a defined boundary. The adversary has power only within YHWH&rsquo;s granted permission &mdash; a structural feature of Job&rsquo;s suffering that Job himself never learns within the book&rsquo;s narrative.</p>",
+    "13": "<p>The four messenger scenes (vv14&ndash;19) overlap in rapid sequence — each begins &ldquo;while he was still speaking&rdquo; (<em>&rsquo;od zu medabber zeh</em>). The four catastrophes bracket the full range of loss: livestock (Sabeans), livestock and servants (fire from heaven), livestock and servants (Chaldeans), and finally children. The overlapping messengers create the Hebrew narrative&rsquo;s most concentrated portrait of simultaneous catastrophe.</p>",
+    "14": "<p>The messenger (<em>mal&rsquo;ak</em>) arrives at a run (<em>vayarots</em>). The oxen (<em>baqqar</em>, cattle for plowing) and donkeys grazing beside them &mdash; the work-animals at their tasks. The placement of the animals in normal agricultural activity highlights the ordinariness of the moment of catastrophe.</p>",
+    "15": "<p><em>Vatipol Sheba</em> (the Sabeans fell upon them) &mdash; the verb <em>naphal</em> = fell/attacked. The Sabeans (<em>Sheva</em>) are associated with South Arabia or Ethiopia in OT geography. <em>Anokhi levaddi niltatiy</em> (I alone escaped to tell you) &mdash; the messenger formula. The phrase will be repeated by all four messengers, creating a liturgical refrain of total destruction.</p>",
+    "16": "<p><em>&rsquo;Esh &rsquo;elohim</em> (fire of God/divine fire) fell from the heavens &mdash; lightning or what later readers might call divine fire. The destruction of the sheep and their servants by divine fire from heaven is particularly ironic: Job has been offering burnt offerings (<em>&rsquo;olot</em>, literally &ldquo;things that go up in smoke&rdquo;) to God on behalf of his children (v5); now YHWH&rsquo;s own fire descends and burns the sheep and servants. The sacrificial vocabulary and the destructive fire occupy the same semantic space.</p>",
+    "17": "<p>Three Chaldean (<em>kasdim</em>) raiding parties (<em>reshim shalosha</em> = three heads/divisions) take the camels and kill the servants. The Chaldeans appear in the OT as the Babylonian empire&rsquo;s ethnic core (Dan 1:4; Jer 5:15). Their appearance alongside the Sabeans (v15) places the story in a world of both south Arabian and Mesopotamian raiders &mdash; geographically broad, spanning the known world.</p>",
+    "18": "<p>The fourth and final messenger: Job&rsquo;s sons and daughters were eating and drinking wine at the oldest brother&rsquo;s house &mdash; the feasting scene from v4 now given as the setting for the final catastrophe. The detail that they were at the <em>bekhor</em>&rsquo;s (firstborn&rsquo;s) house may be deliberate: the day of the firstborn, the eldest sibling&rsquo;s feast, is the day of the wind.</p>",
+    "19": "<p><em>Ruah gedola</em> (a great wind) from across the desert (<em>midbar</em>) strikes the four corners of the house (<em>&rsquo;arba&rsquo; pinnot habayit</em>). The &ldquo;four corners&rdquo; detail implies the wind surrounds and collapses the house entirely, not just strikes one side. <em>Vayyamotu</em> (and they died) — all the young people. The catastrophe is total: all ten children in a single event.</p>",
+    "20": "<p>Job&rsquo;s five-verb response: <em>wayyaqom</em> (he arose), <em>wayyiqra&rsquo; et-me&rsquo;ilo</em> (he tore his outer garment), <em>wayyigallach et-rosho</em> (he shaved his head), <em>wayyippol &rsquo;artsah</em> (he fell to the ground), <em>wayyishtahu</em> (he bowed/worshipped). The first three are acts of mourning (tearing garments and shaving the head are standard mourning rituals, Isa 15:2; Ezra 9:3); the last two are acts of worship. The sequence is crucial: Job moves from mourning to worship in a single continuous gesture &mdash; without any reported pause or struggle.</p>",
+    "21": "<p>The vocabulary of Job&rsquo;s declaration: <em>&rsquo;erom</em> (naked) twice; <em>mibeten &rsquo;immi</em> (from my mother&rsquo;s womb) / <em>shamah &rsquo;ashub</em> (there I shall return) — the earth as mother womb imagery. Most significantly: <em>YHWH natan v-YHWH laqah</em> (YHWH gave and YHWH has taken) &mdash; both the giving and the taking attributed to YHWH directly, not to the adversary. Job never learns about the heavenly court scene; his attribution of both blessings and disasters to YHWH is theologically correct but based on no inside information. The verse ends: <em>yehi shem YHWH mevorakh</em> (blessed/praised be the name of YHWH) &mdash; using <em>barakh</em> in its positive sense, the exact opposite of what the adversary predicted he would do with the same root.</p>",
+    "22": "<p><em>Lo-hata&rsquo;</em> (did not sin) and <em>lo natan tifla le-&rsquo;elohim</em> (did not give/assign unsavoriness/blame to God). <em>Tifla</em> is a rare word (only Job 1:22; 24:12; Jer 23:13) meaning something improper, unsavory, without taste — a word of moral and aesthetic disgust. Job did not charge God with <em>tifla</em> = did not find God&rsquo;s action shameful or improper. This is the narrator&rsquo;s own verdict: the first round of the test is complete; the adversary&rsquo;s thesis is falsified.</p>"
   },
-  "9": {
-    "33": [
-      {"type": "allusion", "target": "1 Tim 2:5", "note": "There is no arbiter between us who might lay his hand on both of us — Job's longing for a mediator who can bridge the gap between the holy God and the accused human; Paul's 'there is one mediator between God and men, the man Christ Jesus' is the direct answer to Job's longing: the mediator Job needed exists"}
-    ]
-  },
-  "19": {
-    "25": [
-      {"type": "allusion", "target": "1 Cor 15:20", "note": "I know that my Redeemer lives, and at the last he will stand upon the earth — Job's confession of faith in a living Redeemer who will vindicate him after death; the resurrection of Christ is the answer to Job's hope: the Redeemer who lives has stood upon the earth, and because he lives Job will live also"}
-    ]
-  },
-  "38": {
-    "4": [
-      {"type": "allusion", "target": "John 1:1", "note": "Where were you when I laid the foundation of the earth? — the divine speech from the whirlwind (chs. 38-41) confronts Job with the Creator's incomprehensible majesty; John 1:1 grounds Christ as the one who was present at that foundation: in the beginning was the Word, and the Word was with God — the one speaking from the whirlwind and the one who became flesh are the same person"}
-    ]
-  }
-}
-
-JOB_ORIGINAL = {
-  "19": {
-    "25": "<p><strong>vaani yadati goa'li chai ve'acharon al afar yaqum</strong>: 'For I know that my Redeemer [<em>go'el</em>] lives, and at the last he will stand upon the earth' (or 'upon the dust'). This is one of the OT's most disputed verses — the text is difficult (the next verse, 19:26, is even more so: 'after my skin has thus been destroyed, yet in my flesh I shall see God'). The term <em>go'el</em> (kinsman-redeemer) in the context of Job's suffering suggests: the one who will vindicate Job after death, who will see to it that justice is done. Whether Job envisions a bodily resurrection (as 19:26 suggests in the MT) or a post-mortem vindication, the theological content is the same: a personal Redeemer who is alive, who will act at the last, who will secure Job's vindication. The NT identifies this Redeemer as Christ (1 Cor 15:20: Christ has been raised from the dead, the firstfruits of those who have fallen asleep).</p>"
-  },
-  "38": {
-    "4": "<p>The divine speech from the whirlwind (Job 38-41) is the OT's most extended meditation on the incomprehensibility and majesty of God. YHWH's questions ('Where were you when I laid the foundation of the earth? Tell me, if you have understanding') do not answer Job's question about suffering — they reframe it by confronting Job with the Creator's perspective. The response to theodicy is not a logical explanation but a theophanic encounter: when Job sees YHWH, his questions are transformed, not answered (42:5: 'my eye sees you'; he is satisfied). This pattern — suffering resolved not by explanation but by encounter with God — points to the incarnation: the answer to the problem of suffering is not a theodicy argument but the Son of God entering the suffering and going through it.</p>"
-  }
-}
-
-JOB_CONTEXT = {
-  "1": {
-    "1": "<p>Job is the OT's most direct engagement with the problem of innocent suffering. Its genre combines a prose frame (the prologue and epilogue) with a poetic center (the dialogues, Job 3-41). The prologue reveals what Job does not know: that his suffering is the result of a cosmic test. The dialogues work out the human perspective on suffering without that hidden knowledge. The friends defend the retributive justice principle (you suffer, therefore you sinned); Job insists on his innocence. Both are partially right: the friends are correct that suffering is related to sin in general (the cosmic fall), but wrong that Job's specific suffering is punishment for specific sin. YHWH's verdict (42:7-8: Job's friends 'have not spoken of me what is right, as my servant Job has') vindicates Job's complaint against easy theodicy.</p>"
-  }
-}
-
-JOB_CHRIST = {
-  "9": {
-    "33": "<p>A type: 'There is no arbiter between us who might lay his hand on us both, who would remove his rod from me, and let not dread of him terrify me.' Job's longing for a mediator is one of the Bible's most poignant anticipations of Christ. What Job needs is someone who can stand between the holy God and the accused human — with one hand on God and one hand on the human — securing Job's access to God without the terror. The incarnation is the answer: Jesus Christ 'laid his hand' on both realities, being fully God and fully human, so that 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). The mediator Job could only wish for, the NT declares has come.</p>"
-  },
-  "19": {
-    "25": "<p>A direct revelation: 'I know that my Redeemer lives, and at the last he will stand upon the earth.' Job's confession cuts through the fog of his suffering to affirm what cannot be seen or felt: a living Redeemer who will vindicate. The confession has multiple levels of fulfillment in Christ: (1) the Redeemer lives — Christ's resurrection is the demonstration; (2) he will stand upon the earth at the last — the parousia; (3) 'in my flesh I shall see God' (v. 26) — the bodily resurrection of the righteous. Job, in the depths of suffering and loss, speaks one of Scripture's clearest affirmations of resurrection-hope and the personal Redeemer who makes it possible.</p>"
-  }
-}
-
-# ============================
-# PROVERBS
-# ============================
-
-PROV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "Col 2:3", "note": "The fear of the LORD is the beginning of wisdom — Proverbs' foundational maxim; Paul says in Christ are hidden all the treasures of wisdom and knowledge (Col 2:3): Christ is where the 'fear of the LORD leads, the source from whom all wisdom flows"}
-    ]
-  },
-  "8": {
-    "22": [
-      {"type": "allusion", "target": "John 1:1", "note": "The LORD possessed me at the beginning of his work, the first of his acts of old — Wisdom speaking in Proverbs 8:22-31; personified Wisdom present at creation, delighting in the inhabited world; the Logos-Wisdom identification (John 1:1-3; Col 1:15-16; Heb 1:2-3) applies the Prov 8 Wisdom-portrait to the pre-incarnate Christ"},
-      {"type": "allusion", "target": "Col 1:15", "note": "I was beside him like a master workman, rejoicing before him always — Wisdom as God's artisan in creation (Prov 8:30); Paul describes Christ as the one in whom all things were created (Col 1:16) and through whom all things were made (John 1:3); the Wisdom-Creator becomes the Christ-Creator"}
-    ]
+  "2": {
+    "1": "<p>The scene resets: the heavenly council (<em>bene ha-&rsquo;elohim</em>) presents before YHWH again, and the adversary comes among them to present himself (<em>lehityatsev &rsquo;al-YHWH</em>). The verb <em>yatsav</em> in the hithpael = to take one&rsquo;s stance, present oneself, stand (used of soldiers in formation and of judicial standing). The adversary is again in his position as the accusing officer of the divine court.</p>",
+    "2": "<p>The adversary&rsquo;s answer is verbatim from 1:7: <em>missut ba-&rsquo;arets umitthallek bah</em>. The repetition is not careless; the prose prologue uses deliberate word-for-word repetition to highlight the structural parallelism of the two tests. The second scene is a controlled variation of the first: same setting, same question, different stakes.</p>",
+    "3": "<p>YHWH&rsquo;s response includes a significant new element: <em>od hevel bemummatoh</em> (he still maintains his integrity/wholeness). <em>Tummah</em> is the noun of the <em>tam</em> family, meaning completeness, moral wholeness, integrity. YHWH then acknowledges: <em>watsetitehu bi</em> (you incited/moved me against him) and <em>lehabbel&rsquo;o hinam</em> (to ruin/swallow him for nothing). <em>Balla&rsquo;</em> = to swallow/destroy; <em>hinam</em> = for nothing (reprising 1:9 &mdash; the book&rsquo;s thesis word). YHWH describes the adversary&rsquo;s incitement and the destruction of Job as genuinely causeless (<em>hinam</em>), yet the test proceeded under YHWH&rsquo;s permission.</p>",
+    "4": "<p><em>&rsquo;Or be&rsquo;ad &rsquo;or</em> (skin in exchange for skin) &mdash; the adversary&rsquo;s counter-claim is a commercial or proverbial formula whose exact meaning is debated. The most natural reading: one skin (one&rsquo;s own life) will be given to protect another skin (possessions, children). The formula asserts that human self-interest is bottomless: when the real stakes (one&rsquo;s own body) are raised, Job will crack. <em>Kol &rsquo;asher le-&rsquo;ish yitten be&rsquo;ad nafsho</em> (everything a man has he will give for his life) &mdash; the adversary&rsquo;s anthropology: pure self-preservation at the core of every human.</p>",
+    "5": "<p><em>&rsquo;ets &rsquo;atsamaw</em> (his flesh and his bones) &mdash; the adversary adds the second condition: if YHWH strikes Job&rsquo;s own body, he will curse God. The progression from 1:11 (strike what he has) to 2:5 (strike his body) tracks the escalation. <em>&rsquo;Im-lo&rsquo; &rsquo;al-panekha yevarekheka</em> &mdash; the same oath formula and curse-euphemism from 1:11, verbatim.</p>",
+    "6": "<p>YHWH&rsquo;s second permission: <em>hinno veyadekha raq &rsquo;et-nafsho shomor</em> (he is in your hands; only preserve his life). The limit is more specific now: the adversary may attack Job&rsquo;s body but not take his life (<em>nefesh</em>). <em>Nefesh</em> = life-breath, person, the animating principle. The adversary has full access to Job&rsquo;s physical existence but is bounded at the line of death.</p>",
+    "7": "<p><em>Shehin ra&rsquo;</em> (painful/festering sores) &mdash; <em>shehin</em> = an inflammatory skin disease; <em>ra&rsquo;</em> = severe/evil. The same word (<em>shehin</em>) is used for the Egyptian plague of boils (Exod 9:9&ndash;10) and the skin disease in Leviticus 13. Job is afflicted <em>mikapo regel &rsquo;ad qoqodoh</em> (from the sole of his foot to the top of his head) &mdash; the merism of totality: every point of his body. The comprehensiveness echoes the totality of the first round of disasters.</p>",
+    "8": "<p>Job scrapes himself with a potsherd (<em>heres</em>) while sitting <em>betok ha-&rsquo;efer</em> (in the midst of the ashes). The ashes are the standard location of mourning and lament (Ezek 27:30; Jer 6:26; Isa 58:5). The broken pottery as a scraper for diseased skin is a detail of physical degradation; Job moves from the position of greatest man of the east (1:3) to sitting among ashes scraping sores.</p>",
+    "9": "<p>Job&rsquo;s wife: <em>ha-&rsquo;odhekha mahaziq betummatekha</em> (are you still holding fast in your integrity?) &mdash; <em>hazaq</em> = hold fast/be strong; <em>tummah</em> = the wholeness-integrity from vv3 and 1:1. Her advice: <em>barekh &rsquo;elohim ve-mut</em> (curse God and die). The same curse-euphemism (<em>barakh</em>) for third time in the prologue. The irony: Job&rsquo;s wife uses the same euphemistic blessing-word that the adversary used. Whether the wife is acting as an agent of the adversary or as a broken woman in genuine despair is left ambiguous by the narrator.</p>",
+    "10": "<p>Job&rsquo;s rebuke: <em>kedabber &rsquo;ahat hanevelot tedabberi</em> (you are speaking as one of the foolish women speaks). <em>Naval</em> = senseless/foolish in a moral-practical sense &mdash; the person who acts as though there is no God, the same root as Nabal (1 Sam 25:25: &ldquo;his name is Nabal and folly is with him&rdquo;). Job&rsquo;s response: <em>ha-tov neqabbel me-&rsquo;et ha-&rsquo;elohim ve-&rsquo;et hara&rsquo; lo neqabbel</em> (shall we accept the good from God and not accept the adversity?). The verb <em>qibbel</em> = receive/accept; both good and adversity are received from the same source. The narrative verdict (v10b): <em>lo-hata&rsquo; &rsquo;iyyov bifsatav</em> &mdash; Job did not sin with his lips. Note the precision: not &ldquo;in his heart&rdquo; (as in 1:5&rsquo;s concern about the children) but with his lips.</p>",
+    "11": "<p>The three friends: <em>&rsquo;Eliphaz ha-Temani</em> (from Tema/Teman, in Edom, associated with wisdom, Jer 49:7), <em>Bildad ha-Shuhi</em> (from Shuah, possibly near the Euphrates), <em>Tsofar ha-Naamati</em> (from Naamah, uncertain location). All three are outsiders like Job; the wisdom dialogue takes place in a non-Israelite setting. Their purpose: <em>lenud-lo</em> (to express grief/sympathy to him) and <em>lenakhamo</em> (to comfort him) &mdash; two verbs of pastoral presence. <em>Nud</em> = to nod/wag the head in sympathy; <em>naham</em> = to comfort/console.</p>",
+    "12": "<p>From a distance they could not recognize him (<em>lo hikkiruhu</em>) &mdash; Job&rsquo;s transformation from the greatest man of the east is so complete that his own friends cannot identify him at a distance. The three gestures: <em>wayyis&rsquo;u qolam wayyivku</em> (they lifted their voices and wept), <em>wayyiqre&rsquo;u &rsquo;ish me&rsquo;ilo</em> (each tore his outer garment), and <em>wayyizrequ afar &rsquo;al-rosheihem hashamaymah</em> (threw dust toward the sky over their heads). The dust thrown skyward is a grief gesture directed toward heaven &mdash; an appeal or expression of communal mourning before God.</p>",
+    "13": "<p>Seven days and seven nights (<em>shiv&rsquo;at yamim veshiv&rsquo;at leilot</em>) of silent presence. <em>Shiv&rsquo;a</em> (seven) is the number of the mourning week; cf. the seven-day mourning for Jacob (Gen 50:10). <em>Velo-dibber &rsquo;elav dabar</em> (and no one spoke a single word to him) &mdash; the friends&rsquo; silence before Job&rsquo;s suffering is, paradoxically, the most theologically sound thing they do in the entire book. YHWH will later criticize their words (42:7) but the silence is not criticized. The narrator&rsquo;s reason: <em>ki ra&rsquo;u ki gadal hake&rsquo;ev me&rsquo;od</em> (they saw that the pain was very great). <em>Ke&rsquo;ev</em> = anguish/pain.</p>"
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Heb 12:5-6", "note": "My son, do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves — Hebrews quotes Prov 3:11-12 to explain suffering as divine discipline: God treats believers as sons (Heb 12:7); the wisdom perspective on suffering as fatherly training is the theological framework for the Christian endurance of hardship"}
-    ]
-  }
-}
-
-PROV_ORIGINAL = {
-  "8": {
-    "22": "<p><strong>YHWH qanani reshit darko qedem mifalav meaz</strong>: 'The LORD possessed/created me at the beginning of his work, the first of his acts of old.' The verb <em>qanah</em> is disputed: it can mean 'to acquire/possess' (so most LXX manuscripts, Aquila, Theodotion) or 'to create' (so the Arian controversy reading, applied to prove the Son was a created being). The Nicene theology responded: even if <em>qanah</em> means 'created', Proverbs 8 is personified Wisdom literature — a poetic device, not a literal description of a divine person's ontology. The NT applies Prov 8's Wisdom-portrait to the eternal Son (Col 1:15-17; Heb 1:2-3; John 1:1-3) not to prove the Son is created, but to show that the pre-existent Son is the referent of the Wisdom-personification: the figure the wisdom tradition was groping toward in poetic imagery became flesh in Christ.</p>"
-  }
-}
-
-PROV_CONTEXT = {
-  "1": {
-    "1": "<p>Proverbs is the OT's primary wisdom text — a collection of moral instruction, practical guidance, and theological reflection on the nature of a well-ordered life in YHWH's world. It is attributed to Solomon (1:1; 10:1; 25:1) with additions from other wise men (Agur, 30:1; Lemuel's mother, 31:1). Its theological foundation is the fear of YHWH (1:7; 9:10; 15:33): wisdom is not abstract intellectual skill but a disposition toward God and the moral order of creation. The longest section (chs. 1-9) frames the rest with the personification of Wisdom as a woman calling in the streets, building her house, offering her feast — while her counterpart, Folly, seduces the simple to death. The NT's identification of Christ as divine Wisdom (1 Cor 1:24, 30; Col 2:3) is the claim that the personification in Proverbs 8 was, in the fullness of time, made literal and personal.</p>"
-  }
-}
-
-PROV_CHRIST = {
-  "8": {
-    "30": "<p>A revelation of God: 'Then I was beside him, like a master workman, and I was daily his delight, rejoicing before him always, rejoicing in his inhabited world and delighting in the children of man.' Wisdom's delight in creation and in humanity (Prov 8:30-31) is the OT's most personal statement of the divine affection for the created order. The NT applies this portrait to the eternal Son: 'by him all things were created' (Col 1:16); 'all things were made through him' (John 1:3); 'through whom also he created the world' (Heb 1:2). The Wisdom who rejoiced at creation is the Word who entered creation (John 1:14), and the delight Wisdom expressed for the children of man is the love that sent the Son into the world (John 3:16). Proverbs 8's Wisdom-portrait is the poetic anticipation of the incarnate Logos who is himself divine wisdom in person (1 Cor 1:24: Christ the wisdom of God).</p>"
-  }
-}
-
-# ============================
-# ECCLESIASTES
-# ============================
-
-ECCL_ECHO = {
-  "1": {
-    "2": [
-      {"type": "allusion", "target": "Rom 8:20", "note": "Vanity of vanities, all is vanity — the Preacher's diagnosis of the futility of all earthly striving; Paul's 'the creation was subjected to futility [mataiotes = the LXX word for hevel/vanity]' applies Ecclesiastes' diagnosis to the whole created order: the vanity is not merely human experience but creation-wide, awaiting the liberation of the resurrection"}
-    ]
+    "1": "<p><em>&rsquo;Ahar ken</em> (after this) marks the pivot from prose prologue to poetic dialogue. <em>Patah &rsquo;iyyov &rsquo;et-pihu</em> (Job opened his mouth) &mdash; the formal introduction of direct speech, used for significant utterances (cf. Balaam&rsquo;s oracles, Num 22:28; 23:5). <em>Vayeqallel &rsquo;et-yomo</em> (he cursed his day) &mdash; the verb <em>qalal</em> in the pi&rsquo;el (intensive stem) = curse thoroughly, call down misfortune. This is not <em>barakh</em> (the adversary&rsquo;s predicted curse-word) but <em>qalal</em> &mdash; Job curses the day, not God. The distinction is precise and legally significant within the book&rsquo;s framing.</p>",
+    "2": "<p>The transition formula <em>vaya&rsquo;an &rsquo;iyyov vayyomar</em> (Job responded/spoke and said) introduces the poetic speech. <em>&rsquo;Anah</em> in the qal = to respond/answer, even when addressing no prior speaker. Here Job responds to his own silence, opening what will become the book&rsquo;s central 35-chapter dialogue. The formal speech introduction distinguishes the poetic speeches from the prose narrative, marking the generic shift.</p>",
+    "3": "<p><em>Yo&rsquo;vad yom</em> (let the day perish) &mdash; the jussive (<em>yo&rsquo;vad</em>) marks the curse: let it perish. The jussive forms (<em>yo&rsquo;vad</em>, v3; <em>yehi hoshekh</em>, v4; <em>yig&rsquo;alehu</em>, v5; <em>yiqahenu</em>, v6) carry the chapter&rsquo;s curse-prayer syntax throughout. <em>Gavar zakhar</em> (a male was conceived/was strong) &mdash; the root <em>gavar</em> = to be strong, prevail; its nominal form <em>gever</em> = a strong man (as opposed to <em>&rsquo;ish</em> = man of standing, <em>&rsquo;adam</em> = humanity, <em>&rsquo;enosh</em> = mortal). The announcement &ldquo;a <em>gaver</em> (strong male) has been conceived&rdquo; celebrates the birth of one expected to have strength; Job curses that announcement.</p>",
+    "4": "<p><em>Haya hahu hoshekh</em> (let that day be darkness) &mdash; Job reverses the creation-light of Gen 1:3-4 (<em>yehi &rsquo;or</em>, let there be light; <em>vayar &rsquo;elohim ki-tov</em>, God saw it was good). Job&rsquo;s curse inverts the creation sequence: he is uncreating the day of his birth. The phrase <em>&rsquo;al-yidrsheihu &rsquo;eloah mima&rsquo;al</em> (may God above not seek/care for it) &mdash; God&rsquo;s providential attention (<em>darash</em> = to inquire/seek) is the source of light; Job prays God would not seek this particular day.</p>",
+    "5": "<p><em>Yig&rsquo;alehu hoshekh vetsalmavet</em> (let darkness and deep shadow reclaim/redeem it) &mdash; the verb <em>ga&rsquo;al</em> = to redeem, to function as next-of-kin redeemer. The bitter irony: <em>ga&rsquo;al</em> is used throughout the OT for YHWH&rsquo;s redemptive action (Exod 6:6; Isa 43:1); here Job prays that darkness, not YHWH, would be the <em>go&rsquo;el</em> (redeemer) of his birthday. <em>Tsalmavet</em> = deep shadow / shadow of death, a compound: <em>tsel</em> (shadow) + <em>mavet</em> (death).</p>",
+    "6": "<p><em>Hallaylah hahu yiqqahehu &rsquo;ofel</em> (let deep darkness seize that night) &mdash; <em>&rsquo;ofel</em> = gloom, thick darkness. The night of his conception is to be excluded from the annual count (<em>bal-yihad bimei-shanah</em> = let it not be counted among the days of the year). The complete erasure from the calendar: the day/night of Job&rsquo;s conception and birth is to be excised from time.</p>",
+    "7": "<p><em>Galmud</em> (barren, sterile) &mdash; used for the infertile woman in Isa 49:21 and Job 15:34. The night is to be barren: <em>lo tavo renana vo</em> (let no shout of joy enter it). <em>Renana</em> = a shout of joy, ringing cry. Job wishes the night of his conception had been infertile and joyless.</p>",
+    "8": "<p><em>&rsquo;orere yom</em> (those who curse days) &mdash; a reference to professional cursers, specialists in cursing or incantation, associated with astrological practices. <em>Ha-&rsquo;atidim &rsquo;orer livyatan</em> (those who are skilled at rousing Leviathan) &mdash; Leviathan is the chaos monster of ancient Near Eastern cosmology (appearing in Job 3:8; 40:25[41:1]; Ps 74:14; 104:26; Isa 27:1). Job calls on the professional cursers to activate the chaos monster against his birthday, placing his lament in a mythological register that goes beyond conventional Hebrew prayer.</p>",
+    "9": "<p>The wish that the stars of the predawn twilight (<em>kokevei nishpoh</em>) would go dark &mdash; <em>nishpoh</em> probably = its twilight/its eyelashes (the stars as the flickering lashes of the dawn). <em>Yequwweh la-&rsquo;or ve-&rsquo;ayin</em> (let it wait for light but there be none) &mdash; the night of his birth should experience what Job is currently experiencing: waiting for relief that does not come. <em>Ve-&rsquo;al-yir&rsquo;eh be&rsquo;afappei-shahar</em> (and let it not see the dawning of the morning) &mdash; <em>&rsquo;afappei shahar</em> = the eyelids of the dawn (a striking poetic phrase for the dawn&rsquo;s first light).</p>",
+    "10": "<p>The reason for the curse: <em>ki lo sakar dalte bitni</em> (because it did not close the doors of my mother&rsquo;s womb). The womb-door image: if only the womb-doors had remained closed, the birth prevented. <em>Vataster &rsquo;amal me&rsquo;einai</em> (and did not hide trouble from my eyes) &mdash; <em>&rsquo;amal</em> = toil, trouble, mischief (the same word used in 4:8). If birth had been prevented, Job would not have seen the trouble (<em>&rsquo;amal</em>) he now experiences.</p>",
+    "11": "<p><em>Lamma&rsquo;</em> (why) introduces the first of Job&rsquo;s three <em>lamma&rsquo;</em> questions in this chapter (vv11, 20, 23). <em>Lamma&rsquo;</em> in lament poetry is the interrogative of protest rather than inquiry &mdash; not seeking information but expressing the unbearability of the situation. <em>Lo &rsquo;emut meraham</em> (why did I not die from the womb) &mdash; Job regrets surviving birth.</p>",
+    "12": "<p><em>Madu&rsquo;a qiddemonti berakhayim</em> (why were there knees to receive me?) &mdash; the knees of the midwife or father receiving the newborn, a gesture of acceptance into the family (cf. Gen 50:23, Jacob&rsquo;s grandsons placed on Joseph&rsquo;s knees). The alternative is direct death without acceptance. <em>Shaddayim ki yana&rsquo;qti</em> (breasts that I nursed) &mdash; the second element: why was there milk to sustain the life that Job now wishes had ended at birth?</p>",
+    "13": "<p>The description of Sheol as a place of rest: <em>az ashkav vashaqot</em> (then I would have lain down and been at rest) &mdash; the verbs <em>shakav</em> (lie down) and <em>shaqat</em> (be still/quiet). <em>Yashanti az yanuah li</em> (I would have slept and then rested to myself). The fourfold vocabulary of rest in Sheol (lie down, be still, sleep, rest) forms a picture of peaceful death that Job contrasts with his present suffering.</p>",
+    "14": "<p>Job imagines being at rest with <em>melakhim ve-yo&rsquo;atse &rsquo;arets</em> (kings and counselors of the earth) who <em>habaneh horavot lamoh</em> (built ruins for themselves) &mdash; a puzzling phrase that likely means &ldquo;who built tombs/monuments for themselves&rdquo; or &ldquo;whose great works are now ruins.&rdquo; The point is egalitarian: in death, Job would rest alongside those who had power and built monuments, all now reduced to silence.</p>",
+    "15": "<p><em>&rsquo;Osarot levamo millu</em> (who filled their mansions with silver) &mdash; the kings and princes who hoarded wealth in life are reduced to the same silence as the poorest. Wealth and power are no armor against Sheol. The <em>kasar</em> (princes/officials) of v15 are rulers; their treasuries are irrelevant in death.</p>",
+    "16": "<p><em>Ke-nefel tamun</em> (like a hidden stillborn) &mdash; <em>nefel</em> = that which falls out, a stillbirth (Ps 58:8; Eccl 6:3). Job imagines a preferable alternative existence as a stillborn child: never having emerged, never having seen the light. The stillborn is &ldquo;hidden&rdquo; (<em>tamun</em>) &mdash; buried without ceremony, its brief existence concealed from the world.</p>",
+    "17": "<p><em>Sham rasha&rsquo;im hadlu rogez</em> (there the wicked cease from <em>rogez</em>) &mdash; <em>rogez</em> = turmoil, agitation, disturbance. In Sheol, the wicked no longer trouble their victims; the <em>yegi&rsquo;e koah</em> (those exhausted in strength) find rest. Job&rsquo;s picture of Sheol in ch3 is notably positive &mdash; a place of rest, equality, and peace &mdash; contrasting with later passages where Sheol is a place of forgetfulness and darkness.</p>",
+    "18": "<p><em>Yishhadu la-&rsquo;otsar</em> (the prisoners rest together) &mdash; all prisoners (<em>&rsquo;asir</em>) find rest there, no longer hearing the overseer&rsquo;s voice (<em>qol nogesh</em>). <em>Nogesh</em> = taskmaster, driver (same word as the Egyptian taskmasters of Exod 5:6). The oppressive social structures of the living world cannot reach into Sheol.</p>",
+    "19": "<p><em>Qaton vegadol sham hu</em> (the lowly and the great are alike there) &mdash; Sheol levels all social distinctions. <em>Ve-&rsquo;eved hofshi me-&rsquo;adonav</em> (and the slave is free from his master) &mdash; the ultimate social leveling: the slave, who in life is owned and directed, is freed (<em>hofshi</em> = free, freed slave) from the master&rsquo;s authority by death. This is one of the OT&rsquo;s most radical statements about death as the equalizer of social hierarchy.</p>",
+    "20": "<p><em>Lamah yitten la-&rsquo;amel &rsquo;or</em> (why does he give light to the suffering one?) &mdash; the second <em>lamah</em> (why). <em>&rsquo;Amel</em> = the one who labors under burden/toils/suffers. The gift of life (light) to those in bitter anguish (<em>mare nefesh</em> = bitter of soul) seems cruel: existence itself is the torture when the sufferer longs for Sheol&rsquo;s peace.</p>",
+    "21": "<p><em>Hameyahhalim lemmavet ve-&rsquo;einenu</em> (those who long for death that does not come) &mdash; <em>yahhal</em> in the pi&rsquo;el = to wait/long intensely. Death refuses to come to those who seek it most desperately. <em>Vayhapseruhu mimmattamonot</em> (they dig for it more eagerly than for buried treasure) &mdash; the metaphor of mining/digging for treasure from 28:1&ndash;11 is anticipated here: death is searched for with the intensity that treasure hunters search for gold.</p>",
+    "22": "<p><em>Ha-semehim &rsquo;ale-gil yasisu ki yimshe&rsquo;u qaver</em> (those who are overjoyed and exult when they finally reach the grave) &mdash; the grave is the longed-for destination; finding it produces joy. This is grief pressed to its extremity: the only good news Job can imagine is death. <em>Qaver</em> = the grave/tomb (as distinct from <em>she&rsquo;ol</em>, the realm of the dead).</p>",
+    "23": "<p>The third <em>lamah</em>: <em>le-gever asher darko nistarah</em> (to a man whose way is hidden) &mdash; <em>gever</em> = a strong man; his way (<em>derek</em>) is hidden (<em>nistar</em>, from <em>sathar</em> = hide). <em>Vayasek &rsquo;eloah ba&rsquo;ado</em> (and whom God has fenced in on every side) &mdash; the verb <em>sakak</em> = to hedge/fence, the same root the adversary used in 1:10 (<em>vayyasek</em>) to describe YHWH&rsquo;s protective hedge around Job. The adversary saw the hedge as protection; Job now experiences the same enclosure as entrapment. Same word, opposite evaluation.</p>",
+    "24": "<p><em>Ki lifnei lhmi &rsquo;anhati tavo</em> (for my sighing comes before my food) &mdash; <em>&rsquo;anhah</em> = sighing/groaning (the involuntary sound of grief, Ps 31:10; 102:5). Job&rsquo;s grief is prior to and greater than his hunger; the body&rsquo;s need is subordinated to the soul&rsquo;s anguish. <em>Vayyittpeku kamayim she&rsquo;agotai</em> (and my cries pour out like rushing water) &mdash; <em>she&rsquo;agah</em> = a roar/cry of pain; <em>nathakh</em> = to pour out, flow freely.</p>",
+    "25": "<p><em>Ki pahad pahad wayyi&rsquo;teni</em> (what I dreaded most has come upon me) &mdash; <em>pahad</em> twice: the noun and the verb from the same root, an emphatic figura etymologica. Job&rsquo;s fear (<em>pahad</em>) anticipated the catastrophe; the catastrophe arrived. The iterative: the fear itself, not merely the event, is named twice. This verse is sometimes read as a theological problem: Job feared disaster, suggesting his fear was a failure of faith. But the context is lamentation, not confession.</p>",
+    "26": "<p><em>Lo shalavti ve-lo shaqatti ve-lo-nahatti vayavo rogez</em> (I had no ease, no rest, no peace, yet trouble came) &mdash; three negated nouns of rest: <em>shalav</em> (ease), <em>shaqat</em> (quiet), <em>nuah</em> (rest) &mdash; all denied. Then: <em>vayavo rogez</em> (yet <em>rogez</em> came) &mdash; <em>rogez</em> is the same word used in v17 for what ceases in Sheol. Job has the opposite of Sheol&rsquo;s peace: constant agitation (<em>rogez</em>) where peace should be. The chiasm closes ch3: the <em>rogez</em> that will cease in Sheol (v17) is the same <em>rogez</em> that has overtaken Job&rsquo;s waking life (v26).</p>"
   },
-  "12": {
-    "13": [
-      {"type": "allusion", "target": "Matt 22:37-40", "note": "Fear God and keep his commandments, for this is the whole duty of man — the Preacher's final summary of the human vocation: the fear of YHWH and covenant obedience are the answer to the vanity of all other human projects; Jesus's summary (love God and love neighbor) is the new covenant distillation of the same conclusion"}
-    ]
-  }
-}
-
-ECCL_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>havel havalim amar qohelet havel havalim hakol havel</strong>: 'Vanity of vanities, says the Preacher, vanity of vanities! All is vanity.' The Hebrew <em>hevel</em> (vapor, breath, vanity) is used 38 times in Ecclesiastes — more than in any other biblical book. It literally means a breath of air that passes immediately: something that exists momentarily and then is gone. The LXX translates <em>hevel</em> as <em>mataiotes</em> (futility, vanity), and Paul uses this word in Romans 8:20: 'the creation was subjected to futility [<em>mataiotes</em>].' The Ecclesiastes diagnosis is therefore not pessimism but realism about the post-fall condition of creation: all earthly striving that does not account for God and eternity is, sub specie aeternitatis, vapor. The NT's response is the resurrection, which gives permanence to what was formerly vapor: 'your labor in the Lord is not in vain' (1 Cor 15:58).</p>"
-  }
-}
-
-ECCL_CONTEXT = {
-  "1": {
-    "1": "<p>Ecclesiastes (Hebrew <em>Qohelet</em>, 'the Preacher/Assembler') is the most theologically challenging book of the wisdom literature — it appears to endorse cynicism (2:24: 'there is nothing better for a person than to eat and drink'), relativism (3:1-8: a time for everything), and even doubt (9:5: the dead know nothing). Its canonical function is the 'foil' in the wisdom dialogue: if Proverbs gives the optimistic wisdom perspective, Ecclesiastes gives the honest reckoning with what happens when wisdom is pursued 'under the sun' — that is, within the frame of mortal, fallen human existence. The recurring phrase 'under the sun' (29 occurrences) marks the book's self-conscious limitation: it is wisdom from the earthly perspective, without the resurrection. The NT provides what Ecclesiastes lacks: the 'not in vain' of labor done in the Lord (1 Cor 15:58) and the hope that breaks the <em>hevel</em>-cycle.</p>"
-  }
-}
-
-ECCL_CHRIST = {
-  "12": {
-    "13": "<p>A shadow: 'Fear God and keep his commandments, for this is the whole duty of man.' Ecclesiastes' closing verdict after surveying all human wisdom is the simplest possible statement of the human vocation: the fear of God and covenant obedience. This is the wisdom tradition's answer to vanity — not a philosophical system but a personal relationship with the Creator. Jesus's summary of the law (love God, love neighbor) is the new covenant's positive restatement of what Ecclesiastes reaches as its final conclusion. But Christ does more than restate: he embodies the fear of God and covenant obedience perfectly (Heb 5:7-8: in the days of his flesh, Jesus offered up prayers and supplications with loud cries and tears ... and was heard because of his reverence; although he was a son, he learned obedience through what he suffered), and in his resurrection he breaks the <em>hevel</em>-cycle, proving that labor in the Lord — unlike all labor 'under the sun' — is not in vain (1 Cor 15:58).</p>"
-  }
-}
-
-# ============================
-# SONG OF SOLOMON
-# ============================
-
-SONG_ECHO = {
-  "2": {
-    "16": [
-      {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
-    ]
-  },
-  "8": {
-    "6": [
-      {"type": "allusion", "target": "Rom 8:35-39", "note": "Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD — the Song's declaration of love's unconquerable strength; Paul's conviction that nothing can separate us from the love of God in Christ Jesus is the new covenant answer to the Song's vision of love stronger than death: Christ's love has defeated death itself and remains unbreakable"}
-    ]
-  }
-}
-
-SONG_ORIGINAL = {
-  "1": {
-    "1": "<p>The Song of Songs (<em>shir hashirim</em>) is the OT's wisdom-meditation on human love and sexuality. Its literal level — a celebration of erotic love between a man and a woman — is taken seriously by responsible interpreters as a canonical affirmation of marriage and the goodness of sexual love within covenant. The allegorical level — YHWH's love for Israel (the Jewish interpretation) or Christ's love for the church (the dominant Christian interpretation) — has been the dominant hermeneutical approach through most of church history (Origen's commentary and Bernard of Clairvaux's 86 sermons on Song 1-2 are the most extensive examples). The allegorical reading is supported by the OT's consistent use of the husband-wife metaphor for YHWH-Israel (Isa 54:5; Jer 2:2; Ezek 16; Hos 1-3) and the NT's application of the bride-bridegroom image to Christ-church (Eph 5:25-32; Rev 19:7-9; 21:2). The two readings are not mutually exclusive: the literal is the foundation that gives the allegorical its force.</p>"
-  },
-  "8": {
-    "6": "<p><strong>simeini kachotam al libecha kachotam al zeroa'echa ki azza kamavet ahavah qasha kishol qina'ah reshefeyha reshefei esh shalhevetyah</strong>: 'Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the LORD.' The climax of the Song's celebration of love: it is as strong as death and as fierce as <em>sheol</em> — the two most powerful forces in human experience. <em>Shalhevetyah</em> (the very flame of the LORD) — uniquely, this is one of the few places in the Song where the divine name appears, even embedded in a word. The NT's fulfillment: the love of Christ has defeated death (1 Cor 15:54-57) and nothing can separate us from that love (Rom 8:38-39); what the Song claimed about love's unconquerability is literally true in Christ's resurrection.</p>"
-  }
-}
-
-SONG_CONTEXT = {
-  "1": {
-    "1": "<p>The Song of Solomon's place in the canon was debated in rabbinic Judaism (Rabbi Akiva defended it: 'all the ages are not worth the day on which the Song of Songs was given to Israel; for all the writings are holy, but the Song of Songs is the Holy of Holies'); it was included in the Hebrew canon and subsequently in the Christian canon. The bride-bridegroom image is the OT's primary metaphor for the YHWH-Israel covenant relationship: Hosea (chs. 1-3) uses the marriage metaphor for covenant and its violation; Isaiah 54:5 calls YHWH Israel's husband; Jeremiah 2:2 recalls the honeymoon period of the wilderness. The NT develops the bridegroom imagery specifically for Jesus (Mark 2:20: the bridegroom is taken away; John 3:29: the friend of the bridegroom rejoices; Eph 5:25-32: husbands love your wives as Christ loved the church; Rev 19:7: the marriage of the Lamb has come).</p>"
-  }
-}
-
-SONG_CHRIST = {
-  "2": {
-    "16": "<p>A revelation of God: 'My beloved is mine, and I am his.' The Song's vision of mutual possession between lover and beloved is the OT's most intimate description of the covenant relationship. In the NT, this mutual possession is fulfilled in the Christ-church relationship: 'You are not your own, for you were bought with a price' (1 Cor 6:19-20); 'I am my beloved's and my beloved is mine' becomes 'I live, and yet not I, but Christ lives in me' (Gal 2:20). The mutual knowing of bride and groom (I know my sheep and my sheep know me, John 10:14) is the new covenant's personal form of the Song's mutual possession. The eschatological fulfillment is the marriage of the Lamb (Rev 19:7-9; 21:2): the Song's vision of complete love is consummated in the new creation when the Bride has made herself ready.</p>"
-  },
-  "8": {
-    "6": "<p>A direct revelation: 'Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD.' The Song declares love's unconquerable strength in the face of the two most formidable opponents — death and sheol. The NT's claim is that this declaration is literally, not merely poetically, true in Christ: his love has conquered death (1 Cor 15:54-57: Death is swallowed up in victory; thanks be to God who gives us the victory through our Lord Jesus Christ) and the love of God in Christ is literally unconquerable (Rom 8:38-39: neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord). What the Song celebrates as love's aspiration, the resurrection announces as love's accomplished fact.</p>"
+  "4": {
+    "1": "<p><em>Vaya&rsquo;an &rsquo;Eliphaz ha-Temani</em> (then Eliphaz the Temanite replied) &mdash; the standard dialogue introduction. Eliphaz is the first and most theologically sophisticated of the three friends. His speeches (chs 4&ndash;5, 15, 22) represent the most developed defense of the retributive justice principle. Teman is associated with wisdom in Jer 49:7 (&ldquo;Is wisdom no more in Teman?&rdquo;), making Eliphaz a representative of the best available wisdom tradition outside Israel.</p>",
+    "2": "<p><em>Hannissa davar &rsquo;elekha tila&rsquo;eh</em> (if one ventures a word with you, will it trouble you?) &mdash; <em>nasa&rsquo;</em> = to lift up/carry/attempt; <em>tila&rsquo;eh</em> = to be weary/troubled. Eliphaz begins with a rhetorical apology for speaking, acknowledging the sensitivity of the moment. <em>Va&rsquo;atsor be-millim mi yukal</em> (who can hold back from speaking?) &mdash; implying the inner compulsion to offer wisdom overrides the caution to remain silent.</p>",
+    "3": "<p><em>Hinneh yissarta rabbim</em> (look, you have instructed many people) &mdash; <em>yasar</em> in the pi&rsquo;el = to discipline, instruct, train. Eliphaz acknowledges Job&rsquo;s prior role as a teacher and strengthener of others. <em>Veyadayim rafot tezaqzeq</em> (and you have strengthened weak hands) &mdash; <em>rafot</em> = drooping/hanging loose; <em>hazaq</em> = to strengthen/make firm. Eliphaz is not contemptuous: he concedes Job&rsquo;s past ministry.</p>",
+    "4": "<p><em>Mikhshol yakim millatekha</em> (your words have upheld the one who was stumbling) &mdash; <em>mikhshol</em> = the one who stumbles, literally &ldquo;a stumbling one.&rdquo; <em>Birkhayim kor&rsquo;ot te&rsquo;ammets</em> (you have steadied feeble knees) &mdash; <em>kor&rsquo;ot</em> = bending/buckling knees. The very knees that Job&rsquo;s wisdom steadied in others are the knees that buckle in his own crisis (v4 and v5 form the before-and-after contrast).</p>",
+    "5": "<p><em>Ki &rsquo;atah tavo &rsquo;elekha vatilla&rsquo;</em> (but now it has come upon you, and you are exhausted) &mdash; the pivot: <em>&rsquo;atah</em> (now). <em>Vatilla&rsquo;</em> = you are weary/impatient. <em>Tigga&rsquo; &rsquo;adekha vattibbahel</em> (it has touched you, and you are terrified) &mdash; <em>tibbahel</em> = to be dismayed/panicked (pi&rsquo;el passive). Eliphaz&rsquo;s implicit accusation: Job counseled others admirably but cannot take his own medicine.</p>",
+    "6": "<p><em>Halo yir&rsquo;atekha kislat&rsquo;kha</em> (is not your fear of God your confidence?) &mdash; <em>yir&rsquo;atekha</em> = your fear (of God) &mdash; the same root as Job&rsquo;s description in 1:1 (<em>yere&rsquo; &rsquo;elohim</em>). Eliphaz directly invokes Job&rsquo;s own acknowledged piety: if Job truly fears God, that should be his source of confidence (<em>kislah</em> = confidence/trust). <em>Tiqvatekha ve-tom derakhekha</em> (your hope and the integrity of your ways) &mdash; <em>tom</em> is the same root as <em>tam</em> (1:1, blameless) and <em>tummah</em> (2:3, 9, integrity). Eliphaz is using Job&rsquo;s own moral vocabulary against him.</p>",
+    "7": "<p><em>Zekhor-na mi hu naqqi &rsquo;abad</em> (think: who, being innocent, has perished?) &mdash; the rhetorical question is the friends&rsquo; foundational axiom, stated most starkly here. <em>Naqqi</em> = innocent, clean, without guilt. Eliphaz&rsquo;s implied answer: no innocent person has ever perished. This is the retributive justice principle (<em>lex talionis</em> applied to providence): suffering = guilt; innocence = protection. The book&rsquo;s entire argument is designed to refute this principle, since Job is innocent and suffering.</p>",
+    "8": "<p><em>Ka&rsquo;asher ra&rsquo;iti horesh &rsquo;aven</em> (as I have observed, those who plow trouble/iniquity) &mdash; <em>harash &rsquo;aven</em> (to plow iniquity) and <em>zore&rsquo;e &rsquo;amal</em> (to sow trouble/mischief). The agricultural metaphor: those who plant wickedness harvest wickedness. <em>&rsquo;Amal</em> = trouble/mischief (the same root as the &ldquo;trouble&rdquo; Job&rsquo;s mother&rsquo;s womb failed to hide, 3:10).</p>",
+    "9": "<p><em>Minishmat &rsquo;eloah yo&rsquo;vedu</em> (by the breath of God they perish) &mdash; <em>nishmah</em> = breath/spirit, the animating breath (Gen 2:7). <em>Umeruah &rsquo;appo yikhlah</em> (and by the blast of his nostrils they are consumed) &mdash; <em>&rsquo;ap</em> = nose/nostril/anger. The dual meaning of <em>&rsquo;ap</em> (nose and anger) allows: both the literal blast of YHWH&rsquo;s nose/breath and his wrath destroy the wicked.</p>",
+    "10": "<p><em>She&rsquo;agat &rsquo;aryeh ve-qol shahats</em> (the roar of the lion, the voice of the fierce lion) &mdash; the lion imagery of vv10&ndash;11 is a traditional wisdom metaphor for the powerful/arrogant who are eventually brought low. <em>Shinnei keppirim nittu&rsquo;u</em> (the teeth of the young lions are broken/shattered) &mdash; the powerful who rule by force will have their instruments of power destroyed.</p>",
+    "11": "<p><em>Layish &rsquo;oved me-bli-teref</em> (the mature lion perishes for lack of prey) &mdash; <em>layish</em> = a mature/aged lion (only four occurrences in OT; the rare word for the most experienced, dangerous lion). Even the most powerful predator perishes when cut off from its food supply. <em>Ugnei leviyah yitparedu</em> (the cubs of the lioness scatter) &mdash; without the dominant lion, the family structure dissolves. The point: the wicked will fall, however strong.</p>",
+    "12": "<p><em>Ve-&rsquo;elay davar yegunnav</em> (a word was stolen/came stealthily to me) &mdash; <em>gannav</em> from <em>ganav</em> = to steal. The revelation arrived by stealth, like a thief. <em>Vattiqqah &rsquo;ozni shemets mimmennu</em> (and my ear received a whisper of it) &mdash; <em>shemets</em> = a whisper, a faint rustling sound (only here in the OT). The divine communication arrived as the faintest possible sound, barely a whisper.</p>",
+    "13": "<p><em>Bise&rsquo;ipim meh ezyonot laylah</em> (in disturbing thoughts from visions of the night) &mdash; <em>se&rsquo;ipim</em> = disturbing/troubling thoughts, branching thoughts (from <em>sa&rsquo;ap</em> = to divide, branch). The <em>hefal tardema</em> (when deep sleep falls on people) &mdash; <em>tardemah</em> = deep sleep, the same word used for Adam&rsquo;s sleep in Gen 2:21 and Abraham&rsquo;s in Gen 15:12, both precursors of divine revelation.</p>",
+    "14": "<p><em>Pahad qera&rsquo;ani vare&rsquo;adah</em> (fear came upon me and trembling) &mdash; <em>pahad</em> = terror/fear (the same word Job used for his own terror in 3:25). <em>Vere&rsquo;adah</em> = trembling. <em>Ve-rov &rsquo;atsmotay hiyhid</em> (making all my bones shake) &mdash; <em>hiyhid</em> = to make tremble (hiphil). The theophanic experience is described through its physical effects on the recipient.</p>",
+    "15": "<p><em>Veruah &rsquo;al-panay yahhalof</em> (a spirit passed before my face) &mdash; <em>ruah</em> = breath/spirit/wind; the theophanic presence passing before the recipient (cf. Elijah&rsquo;s cave experience, 1 Kgs 19:11&ndash;13, where &lsquo;passing before&rsquo; is the theophanic pattern). <em>Yisammer se&rsquo;ar besari</em> (the hair of my flesh bristled) &mdash; a precise physical description of the goosebump response to numinous terror.</p>",
+    "16": "<p><em>Ya&rsquo;amod ve-lo &rsquo;akir mareihu</em> (it stood still, but I could not discern its form) &mdash; the spirit is present but invisible; it stops, but without form (<em>temunah</em>). <em>Temunah</em> = shape/form/likeness (same word as Num 12:8: Moses saw the <em>temunah</em> of YHWH; Deut 4:12: no form seen at Sinai; Ps 17:15: seeing God&rsquo;s <em>temunah</em> in the afterlife). The revelation to Eliphaz withholds what Moses received: no form, only a voice.</p>",
+    "17": "<p><em>Ha-ye&rsquo;enosh me-&rsquo;eloah yitsdak</em> (can a mortal be more righteous than God?) &mdash; <em>&rsquo;enosh</em> = the frail human, the mortal (as opposed to <em>&rsquo;ish</em>, <em>gever</em>, or <em>&rsquo;adam</em>). The choice of <em>&rsquo;enosh</em> emphasizes human fragility and mortality. <em>Yitsdak</em> = be righteous, be vindicated (in the forensic sense). The rhetorical question expects a negative answer: of course not. But the book&rsquo;s subsequent argument will complicate this: YHWH himself says Job &lsquo;spoke what is right&rsquo; (42:7).</p>",
+    "18": "<p><em>Hen ba&rsquo;avadav lo ya&rsquo;amin</em> (God places no trust even in his servants) &mdash; <em>&rsquo;eved</em> = servant; the divine servants (angels) are not trusted by God without question. <em>Uvemal&rsquo;akhav yasim teholah</em> (he charges his angels with error) &mdash; <em>toholah</em> = folly, error (only here and Jer 23:13, where it is used for the prophets&rsquo; error). Eliphaz&rsquo;s argument: if God finds error even in his angelic servants, how much more in mortals made of clay?</p>",
+    "19": "<p><em>Af shokhnei batei-homer</em> (how much more those who dwell in houses of clay) &mdash; <em>batei-homer</em> = houses of clay. <em>Homer</em> = clay, the stuff from which humans are made (Gen 2:7, <em>afar min-ha&rsquo;adamah</em> = dust from the ground; but <em>homer</em> also = clay, used in pottery). <em>&rsquo;Asher-be&rsquo;afar yesadam</em> (whose foundation is in the dust) &mdash; the foundation of the clay house is the very dust it&rsquo;s made of. <em>Yedakke&rsquo;um lifnei-&rsquo;ash</em> (who are crushed more easily than a moth) &mdash; the comparison: humans are more fragile than a moth (which dies at a touch).</p>",
+    "20": "<p><em>Miboqer la&rsquo;erev yikkattu</em> (between morning and evening they are destroyed) &mdash; the full length of a day is more than enough time for human life to end. <em>Mibbeli measim ye&rsquo;avdu lanetsah</em> (without anyone noticing, they vanish forever) &mdash; <em>netsah</em> = forever/permanently. Human death goes largely unnoticed in the cosmic scheme: the world continues without marking individual human exits.</p>",
+    "21": "<p><em>Halo nissa&rsquo; yiteram bam</em> (is not their tent-peg pulled up from within them?) &mdash; a difficult phrase. <em>Yeter</em> = cord/tent-peg/stake. The tent-peg (<em>yeter</em>) that holds the structure upright, removed from within &mdash; the human body as a tent whose internal structure collapses at death (2 Cor 5:1 uses the same metaphor: &ldquo;if the earthly tent [house] we live in is destroyed&rdquo;). <em>Yamuthu velo behokhma</em> (they die, and that without gaining wisdom) &mdash; <em>behokhma</em> = in/with wisdom. The final word: human life ends before wisdom is acquired. This is the final argument of Eliphaz&rsquo;s first stanza, and it sets up what ch28&rsquo;s great wisdom hymn will address: wisdom is inaccessible to mortal searching.</p>"
   }
 }
 
 def main():
-    books = [
-        ('job', JOB_ECHO, JOB_ORIGINAL, JOB_CONTEXT, JOB_CHRIST),
-        ('proverbs', PROV_ECHO, PROV_ORIGINAL, PROV_CONTEXT, PROV_CHRIST),
-        ('ecclesiastes', ECCL_ECHO, ECCL_ORIGINAL, ECCL_CONTEXT, ECCL_CHRIST),
-        ('songofsolomon', SONG_ECHO, SONG_ORIGINAL, SONG_CONTEXT, SONG_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-original', 'job')
+    merge_comm(existing, ORIGINAL)
+    save_comm('mkt-original', 'job', existing)
+    total = sum(len(vv) for vv in ORIGINAL.values())
+    print(f'Job 1-4 mkt-original: {total} verses written '
+          '(' + ', '.join(f'ch{ch}={len(ORIGINAL[ch])}' for ch in sorted(ORIGINAL)) + ').')
 
 if __name__ == '__main__':
     main()

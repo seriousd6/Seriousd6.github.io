@@ -1,22 +1,20 @@
 """
-Job + Proverbs + Ecclesiastes + Song of Solomon — all four layers.
-Wisdom books: suffering and theodicy (Job), practical wisdom as Christ (Prov 8),
-vanity and meaning (Eccl), the love of Christ and the church (Song).
+MKT Original — Job chapters 15–18
+Run: python3 scripts/zc-original-job-15-18.py
+
+Ch15: Eliphaz's second speech. Key terms: sôḏ (divine council, v8), rûaḥ qāḏîm (east wind, v2),
+      tāhēr/ṣaddîq (clean/righteous, v14), ʾĕnôš (mortal man, v14), šōkēn (dwelling, v28).
+Ch16: Job's response. Key terms: ʿēḏ (witness, v19), śāhēḏ (advocate/mediator, v19),
+      dam (blood, v18), kāḥaš (emaciation, v8), paḥad (terror, v22).
+Ch17: Job's lament. Key terms: ʿēreḇ (pledge/surety, v3), šeʾôl (Sheol, v13),
+      tiqwāh (hope, v15), šaḥat (pit/corruption, v14).
+Ch18: Bildad's second speech. Key terms: bĕkôr māwet (firstborn of death, v13),
+      melek ballāhôt (king of terrors, v14), nēr (lamp, v6), šēm (name/memory, v17).
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -28,20 +26,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -50,187 +34,117 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# JOB
-# ============================
-
-JOB_ECHO = {
-  "1": {
-    "21": [
-      {"type": "allusion", "target": "Phil 4:11-12", "note": "The LORD gave, and the LORD has taken away; blessed be the name of the LORD — Job's response to total loss; Paul's 'I have learned, in whatever state I am, to be content' echoes the Job pattern of accepting both abundance and loss from the hand of God"}
-    ]
+JOB = {
+  "15": {
+    "1": "<p>The speech-introduction formula <span class='term'>wayyaʿan</span> + name + speech-type marker is the standard poetic frame for all dialogue rounds (cf. 4:1; 8:1). <em>Temanite</em> (<span class='term'>tēmānî</span>) marks Eliphaz as a sage of the south Arabian wisdom tradition.</p>",
+    "2": "<p><span class='term'>Rûaḥ qāḏîm</span> (east wind, lit. 'wind of the east') denotes the sirocco, the hot dry desert wind that scorches crops. Eliphaz accuses Job of filling himself with <span class='term'>dāʿat rûaḥ</span> — 'empty wind-knowledge': fine-sounding but hot and destructive. <span class='term'>Ḥākām</span> (wise man) sets up the irony: is this how a sage speaks?</p>",
+    "3": "<p><span class='term'>Millîm lōʾ yôʿîl</span>: 'words that accomplish nothing' — the term <span class='term'>yôʿîl</span> (Hiphil of yāʿal) means 'to profit/benefit'; wisdom speech must produce tangible good. The wisdom tradition prizes utility: speech that edifies vs. speech that merely fills time.</p>",
+    "4": "<p><span class='term'>Yirʾat ʾēl</span> (fear of God): the foundational wisdom category (cf. 1:1, 8; Prov 1:7). Eliphaz charges Job with undermining this fear — <span class='term'>tāpar</span> (to loosen, weaken) — and with impeding <span class='term'>śîḥāh</span> (meditation/prayer/reflection) before God. The accusation is serious: Job's speech is not merely imprudent but anti-pious.</p>",
+    "5": "<p><span class='term'>ʿĂwōnĕkā</span> (your iniquity/guilt) from <span class='term'>ʿāwōn</span>, the standard OT word for moral deviation and its consequences. <span class='term'>Lĕšôn ʿărûmîm</span> (tongue of the cunning/crafty): Eliphaz links Job's speech to the serpent's wisdom (<span class='term'>ʿārûm</span>, Gen 3:1), a damning insinuation.</p>",
+    "6": "<p><span class='term'>Pîkā</span> (your mouth) and <span class='term'>śĕpātêkā</span> (your lips) are the instruments of self-incrimination. The legal language — mouth/lips as witnesses (<span class='term'>ʿānāh bĕkā</span>, 'testify against you') — frames Job's speech as courtroom evidence. Eliphaz claims not to be the accuser; Job's own words are.</p>",
+    "7": "<p><span class='term'>Hārîšôn āḏām tiwwālēḏ</span>: 'Were you the first man born?' <span class='term'>Rîšôn</span> (first) may allude to a primal wisdom figure — the primordial man of Ezek 28:12-14 or the figure behind Prov 8:22-31 — someone present at creation. Eliphaz mocks Job's implicit claim to unique insight.</p>",
+    "8": "<p><span class='term'>Sôḏ ʾĕlôah</span>: the 'council/secret of God' — the heavenly assembly where divine deliberations occur (cf. 1:6; Amos 3:7; Jer 23:18). <span class='term'>Tišmaʿ</span> (did you hear/listen?) implies participation: Eliphaz denies that Job has been admitted to the divine council that might explain his suffering.</p>",
+    "9": "<p>The rhetorical questions <span class='term'>mah yādaʿtā</span> (what do you know?) / <span class='term'>mah tābîn</span> (what do you understand?) challenge Job's epistemic standing. <span class='term'>Bîn</span> (discern/understand) is the deep wisdom term alongside <span class='term'>ḥāḵam</span>; Eliphaz claims parity or superiority in both.</p>",
+    "10": "<p><span class='term'>Śêbāh</span> (gray-haired) and <span class='term'>yāšîš</span> (very aged): the elders who anchor wisdom in generational tradition. Both terms emphasize extreme age. <span class='term'>Kabbîr</span> from <span class='term'>kbr</span> (great in years) intensifies: these men make even Job's father seem young. Tradition as epistemology.</p>",
+    "11": "<p><span class='term'>Tanḥûmôt ʾēl</span>: 'consolations of God' — the term <span class='term'>tanḥûmāh</span> (comfort, consolation) from <span class='term'>nḥm</span> (comfort, console). Eliphaz claims Job has refused divine comfort. <span class='term'>Dābār laʾaṭ</span> (gentle/soft word) emphasizes that God has spoken mildly to Job; Job should have received it gratefully.</p>",
+    "12": "<p><span class='term'>Mah-yiqqāḥăkā libbĕkā</span>: 'What carries your heart away?' — <span class='term'>lēb</span> (heart) as the seat of will and judgment. <span class='term'>Mah-yirzmûn ʿênêkā</span>: 'Why do your eyes flash/glare?' — <span class='term'>rāzam</span> (to wink, flash provocatively, HALOT) appears only here; the gesture implies arrogance or aggressive dismissal.</p>",
+    "13": "<p><span class='term'>Rûḥăkā ʾel-ʾēl</span>: 'you turn your spirit against God' — the charge of hostility toward God (cf. 7:11). <span class='term'>Hôṣēʾtā</span> (you bring out) — Job's words are portrayed as weapons brought out of the mouth rather than wisdom offered from the heart.</p>",
+    "14": "<p><span class='term'>Mah-ʾĕnôš kî-yizkeh</span>: 'What is a mortal that he could be pure?' — <span class='term'>ʾĕnôš</span> (mortal, frail humanity) and <span class='term'>zāḵāh</span> (to be clean, morally pure). <span class='term'>Yĕlûd ʾiššāh</span> (born of woman) is a creaturely limitation phrase (cf. 25:4; Sir 10:18; Matt 11:11) — birth from a woman signals creaturely constitution. Eliphaz uses this anthropological premise to ground universal moral limitation.</p>",
+    "15": "<p><span class='term'>Qĕdōšāyw</span> (his holy ones): the heavenly beings/angels (cf. 4:18; 5:1). The claim that God trusts neither angels nor the heavens themselves extends moral impurity to the entire created order. <span class='term'>Yēʾāmēn</span> (put trust/confidence in): Niphal of <span class='term'>ʾāman</span> — even the celestial realm is not sufficiently reliable in God's sight.</p>",
+    "16": "<p><span class='term'>Nĕtʿāb</span> (abominable) and <span class='term'>neʾĕlāḥ</span> (corrupt, vile — hapax): the escalating scale of human depravity from creaturely limitation (v14) to active wickedness. <span class='term'>Šōteh kĕmayim ʿawlāh</span>: 'drinks wickedness like water' — the image of wicked behavior as an involuntary drink, absorbed naturally and constantly.</p>",
+    "17": "<p><span class='term'>Ḥăwîtĕkā</span> (I will show you) from <span class='term'>ḥwh</span>: the wisdom declaration-formula introducing Eliphaz's extended portrait of the wicked man's fate. <span class='term'>Ḥāzîtî</span> (I have seen): appeals to personal experience as well as tradition (v18-19).</p>",
+    "18": "<p><span class='term'>Lōʾ kāḥādû</span>: 'without concealment' — the ancestral wisdom was openly transmitted, not hidden. The wisdom tradition claims public, verifiable transmission in contrast to esoteric knowledge. <span class='term'>Mēʾăbôtāyw</span> (from their fathers): multigenerational authority.</p>",
+    "19": "<p><span class='term'>Lāhem lĕḇaddām</span>: 'to them alone' — the tradition belonging to those whose land was exclusively theirs before foreign contamination. The phrase implies ethnic-intellectual purity: the wisdom Eliphaz recites is pre-syncretistic, untouched by foreign influence. A claim to authentic transmission.</p>",
+    "20": "<p><span class='term'>Mityaqqēl</span> (twists in anguish): Hithpoel of <span class='term'>ḥwl</span> (to writhe in pain — used for labor pain and anguish). <span class='term'>Rāšāʿ</span> (wicked man): the standard OT legal-moral term for the guilty/condemned. <span class='term'>Mispār šānîm</span> (number of years): an appointed span, fixed for the tyrant (<span class='term'>ʿārîṣ</span>, lit. 'violent/ruthless one').</p>",
+    "21": "<p><span class='term'>Qôl pĕḥādîm bĕʾoznāyw</span>: 'a sound of terrors in his ears' — <span class='term'>paḥad</span> (terror, dread, sometimes of theophany) is what the wicked man carries. <span class='term'>Šôḏēḏ</span> (destroyer): the divine agent or personified disaster that strikes even in <span class='term'>šālôm</span> (peace/prosperity).</p>",
+    "22": "<p><span class='term'>Lōʾ yāʾmîn</span>: 'he has no hope' — from <span class='term'>ʾāman</span> (to trust/believe): the wicked man cannot trust that he will escape darkness. <span class='term'>Ṣāpûn</span> (reserved/marked) for the sword: the certainty of destruction already appointed against him.</p>",
+    "23": "<p><span class='term'>Nōdēḏ</span> (wanders): from <span class='term'>nwḏ</span> (to wander aimlessly, flee) — the exile-motif. The wicked man wanders like a fugitive. <span class='term'>Yôm-ḥōšeḵ</span> (day of darkness): the day of judgment/death already <span class='term'>nākôn</span> (established, ready) at his hand.</p>",
+    "24": "<p><span class='term'>Ṣar ûmĕṣûqāh</span>: 'distress and anguish' — the paired terms for extreme pressure. <span class='term'>Tikpĕhû</span> (overpower him): from <span class='term'>kph</span> (to subdue, overwhelm) — like a king advancing to war. The wicked man's anticipated judgment already assails him psychologically.</p>",
+    "25": "<p><span class='term'>Nāṭāh yāḏô ʾel-ʾēl</span>: 'he stretched out his hand against God' — the gesture of aggressive defiance. <span class='term'>Yitgabbār</span> (he defies/acts powerfully against): Hithpael of <span class='term'>gbr</span>, reflexive intensification — he makes himself strong against the Almighty.</p>",
+    "26": "<p><span class='term'>Yārûṣ ʾēlāyw bĕṣawwāʾr</span>: 'charging neck-forward' — a warrior's attack posture. <span class='term'>Gabbê māginnîm</span> (thick boss of shields): the convex central boss, the strongest defensive point. The wicked man attacks God's strongest point — an image of suicidal futility.</p>",
+    "27": "<p><span class='term'>Kissāh pānāyw bĕḥelĕḇô</span>: 'his face covered with fat' — wealth-fattened, obese prosperity. <span class='term'>Pimaḥ-ʿal-kāsel</span> (padding on his loins): the physical description of the prosperous wicked man. Eliphaz identifies his portrait with the very condition Job once had.</p>",
+    "28": "<p><span class='term'>Yiškôn ʿārîm nĕḥārābôt</span>: 'he inhabits ruined cities' — an ironic reversal. The man who built settlements will himself end up in desolate ruins. <span class='term'>Bāttîm lōʾ-yēšĕḇû</span> (houses no one inhabits): the ḥērem-formula of total desolation applied to his dwelling.</p>",
+    "29": "<p><span class='term'>Lōʾ-yeʿĕšar</span> (not remain wealthy): the wealth is temporary. <span class='term'>Miqlāh</span> (holdings/property): hapax; the sense of productive land. The three negatives in rapid succession (<span class='term'>lōʾ</span> × 3) drive home the total reversal.</p>",
+    "30": "<p><span class='term'>Lōʾ-yāsûr miḥōšeḵ</span>: inescapable darkness. <span class='term'>Rûaḥ pîw</span> (breath of his [God's] mouth): divine speech as destructive wind — the same instrument that creates (Gen 2:7) also destroys the wicked man's flourishing.</p>",
+    "31": "<p><span class='term'>ʾal-yaʾmēn baššāw</span>: 'Let him not trust in emptiness' — <span class='term'>šāwʾ</span> (vanity, emptiness, falsehood) is the term Ecclesiastes uses for the futility of earthly gain. The warning is that the wicked man's self-trust is misplaced in something that will prove worthless.</p>",
+    "32": "<p><span class='term'>Lōʾ bĕyômô</span>: 'before its time' — premature completion/fulfillment of doom. <span class='term'>Kappātô lōʾ-tarʿănennāh</span>: 'his branch will not stay green' — the <span class='term'>kappāh</span> (frond/branch) as the symbol of flourishing life cut off before maturity.</p>",
+    "33": "<p><span class='term'>Yĕḥabbēl kaggefen</span>: 'he sheds like the vine' — <span class='term'>ḥbl</span> (Piel: to act corruptly, or here: to shake off) — the vine drops its unripe grapes. <span class='term'>Kazzayit</span> (like the olive) drops its blossoms prematurely — the destruction of potential, not just actuality.</p>",
+    "34": "<p><span class='term'>ʿĂḏat ḥānēp</span>: 'assembly of the godless' — <span class='term'>ḥānēp</span> (godless, profane, polluted) is a strong term for religious apostasy. <span class='term'>ʾēš</span> (fire) as divine judgment on <span class='term'>ʾohŏlê šōḥaḏ</span> (tents of bribery/corruption): the institutional wickedness brought to ruin.</p>",
+    "35": "<p><span class='term'>Hārāh ʿāmāl</span>: 'they conceive trouble' — the pregnancy-metaphor for wickedness: <span class='term'>ʿāmāl</span> (toil, trouble, oppression) conceived and birthed as <span class='term'>ʾāwen</span> (iniquity, wickedness). <span class='term'>Biṭnām tākîn mirmāh</span>: 'their inmost being produces deceit' — the inner life as the womb of evil.</p>"
   },
-  "9": {
-    "33": [
-      {"type": "allusion", "target": "1 Tim 2:5", "note": "There is no arbiter between us who might lay his hand on both of us — Job's longing for a mediator who can bridge the gap between the holy God and the accused human; Paul's 'there is one mediator between God and men, the man Christ Jesus' is the direct answer to Job's longing: the mediator Job needed exists"}
-    ]
+  "16": {
+    "1": "<p>Job's counter-speech opens without the conventional wisdom-claims Eliphaz deployed. The stark speech-introduction marks the tonal shift: Job does not argue epistemically but existentially.</p>",
+    "2": "<p><span class='term'>Mĕnaḥămê ʿāmāl</span>: 'miserable comforters' — <span class='term'>ʿāmāl</span> (trouble/toil) qualifies the noun: the comforters produce the very trouble they claim to address. A devastating reversal of the comforter role. <span class='term'>Kullĕkem</span> (all of you): Job indicts the entire group.</p>",
+    "3": "<p><span class='term'>Dibrê rûaḥ</span>: 'words of wind/spirit' — empty talk (cf. 15:2). <span class='term'>Mah-yammîṣĕkā</span>: 'what emboldens you?' — from <span class='term'>ʾmṣ</span> (to be strong, courageous): what gives you the courage to keep answering? Job questions the source of their confidence.</p>",
+    "4": "<p><span class='term'>Gam-ʾānōkî kĕṣbkem ʾădabbērāh</span>: 'I too could speak as you do' — Job's hypothetical: if the roles were reversed, he could pile up <span class='term'>millîm</span> (words) against them. <span class='term'>ʾānîʿāh ʿălêkem bĕrōʾšî</span>: 'shake my head at you' — the gesture of contempt (cf. Ps 22:8; Lam 2:15).</p>",
+    "5": "<p><span class='term'>ʾĂḥazbēq bĕpî</span>: 'I would strengthen you with my mouth' — the conditional opposite of what the friends have done. Job claims he would have offered genuine <span class='term'>nîḥûm</span> (comfort) rather than accusation, had the situation been reversed. The contrast exposes the friends' failure of pastoral care.</p>",
+    "6": "<p><span class='term'>ʾim-ʾădabbĕrāh lōʾ-yēḥāśēk kĕʾēbî</span>: 'if I speak, the pain is not held back' — <span class='term'>kĕʾēb</span> (pain, anguish) persists regardless of whether Job speaks or stays silent. The dilemma of the sufferer: neither speech nor silence provides relief. <span class='term'>ʾeḥĕšāh</span> (I am silent) — used of God's silence in Ps 50:3, here of the sufferer's exhaustion.</p>",
+    "7": "<p><span class='term'>ʿAttāh hĕlaʾānî</span>: 'But now he has utterly exhausted me' — the shift to second person addressing God directly. <span class='term'>Lʾh</span> (to be weary, exhausted) in Hiphil: God has worn Job out. <span class='term'>Hăšimmôtāh</span> (made desolate): the congregation/circle of Job's community is now made empty.</p>",
+    "8": "<p><span class='term'>Wattiqmĕṭēnî</span>: 'you have wasted/shriveled me' — from <span class='term'>qmṭ</span> (to wrinkle, shrivel — hapax in this sense). <span class='term'>Kāḥaš</span> (emaciation, failure) is the unusual term for what Job's physical condition has become: his shrunken flesh is itself a witness (<span class='term'>ʿēḏ</span>) against him in the court of public perception.</p>",
+    "9": "<p><span class='term'>ʾappô ṭārap</span>: 'his wrath has torn me' — the verb <span class='term'>ṭārap</span> (to tear prey) is the predator's act. <span class='term'>Yiḥărōq-ʿālay bĕšinnāyw</span>: 'gnashes his teeth at me' — divine hostility figured as predatory animal. <span class='term'>Ṣārî</span> (my enemy/adversary): Job attributes the attacks to God-as-enemy.</p>",
+    "10": "<p><span class='term'>Pāṣû ʿālay bĕpêhem</span>: 'they open wide their mouths at me' — the communal mockery gesture (cf. Ps 22:14; Lam 2:16). <span class='term'>Yakkûnî bĕleḥî</span>: 'they strike my cheek' — judicial humiliation, a physical act of contempt. <span class='term'>Yitḥabbrû ʿālay</span>: they gather as a band against me.</p>",
+    "11": "<p><span class='term'>Yasgîrēnî ʾēl</span>: 'God has surrendered me' — the term <span class='term'>sāgar</span> (to shut up, deliver over) is the treaty/covenant term for handing someone over to an enemy (cf. Obad 14; Ps 31:9). Job charges God with delivering him over to <span class='term'>ʾăwîl</span> (the evildoer) and <span class='term'>rĕšāʿîm</span> (the wicked).</p>",
+    "12": "<p><span class='term'>Šālēw hāyîtî</span>: 'I was living in ease' — from <span class='term'>šlw</span> (to be at ease, prosperous) — the condition before the disruption. <span class='term'>Yĕparpĕrēnî</span> (shattered me): intensive Pilpel form for repeated shattering. The sequence of violent verbs (grabbed, broke, set up as target) creates a courtroom of divine violence.</p>",
+    "13": "<p><span class='term'>Rabbāyw</span> (his archers): God's multiple marksmen. <span class='term'>Yipĕlaḥ kilĕyôtāy</span>: 'he slashes into my kidneys' — <span class='term'>kilāyāh</span> (kidneys) as the seat of emotional life, the innermost self. <span class='term'>Yišpôk lāʾārṣ mĕrērātî</span>: 'spills my gall on the ground' — <span class='term'>mĕrērāh</span> (gall/bile) = bitterness, the substance of suffering poured out.</p>",
+    "14": "<p><span class='term'>Yipĕrĕṣēnî pereṣ ʿal-pĕnê-pāreṣ</span>: 'breach after breach' — the cognate construction <span class='term'>pereṣ/pāraṣ</span> (breach/to breach) intensifies the destruction. <span class='term'>Gibbôr</span> (mighty warrior): God depicted as a great warrior charging the breach he himself opened. The warrior-God motif is used here paradoxically against the covenant people's representative.</p>",
+    "15": "<p><span class='term'>Śaq tāpartî ʿălê giltî</span>: 'I have sewn sackcloth over my skin' — sackcloth as mourning garment, here literally sewn onto the body. <span class='term'>ʿôlaltî lĕʿāpār qarnî</span>: 'I have pressed my dignity down into the dust' — <span class='term'>qeren</span> (horn) = dignity, honor, power; pressed into the dust = total humiliation.</p>",
+    "16": "<p><span class='term'>Pānay ḥāmarmĕrāh mibbekî</span>: 'my face is flushed from weeping' — <span class='term'>ḥāmar</span> (to boil, foam red) describes the inflamed skin. <span class='term'>ʿal-ʿapʿappay ṣalmāwet</span>: 'on my eyelids is the shadow of death' — <span class='term'>ṣalmāwet</span> (deep shadow/shadow of death): either a compound of <span class='term'>ṣēl</span> + <span class='term'>māwet</span> or an intensive form for 'deep darkness'; the death-shadow rests on his very eyelids.</p>",
+    "17": "<p><span class='term'>ʿal lōʾ-ḥāmās bĕkappāyw</span>: 'though no violence has been done by his hands' — <span class='term'>ḥāmās</span> (violence, injustice) is the comprehensive term for covenant-breaking violence (Gen 6:11; Hab 1:2). Job asserts his innocence using the highest-stakes vocabulary. <span class='term'>Tĕhillātî</span> (my prayer) is pure — liturgical and moral integrity maintained.</p>",
+    "18": "<p><span class='term'>ʾErṣ ʾal-tĕkassî dāmî</span>: 'O earth, do not cover my blood' — the appeal to the earth to preserve the blood-witness, drawing on the Abel-precedent (Gen 4:10: <span class='term'>qôl dĕmê ʾāḥîkā ṣōʿăqîm</span>). <span class='term'>Zĕʿāqātî</span> (my cry) is the ṣĕʿāqāh — the oppressed person's cry that reaches God. Job demands his cry remain audible, refusing burial.</p>",
+    "19": "<p><span class='term'>ʿĒḏî baššāmayim</span>: 'my witness is in heaven' — the <span class='term'>ʿēḏ</span> (witness/testifier) is a heavenly figure parallel to <span class='term'>śāhĕḏî</span> (my advocate). The latter term <span class='term'>śāhēḏ</span> is an Aramaic loanword (cf. Aram. <span class='term'>sāheḏ</span>) appearing only here; it means 'one who testifies in defense.' These two parallel terms (witness + advocate) describe a heavenly being who holds Job's case. This is the same figure anticipated in 9:33 (mediator) and named in 19:25 (Redeemer).</p>",
+    "20": "<p><span class='term'>Mĕlîṣay rēʿāy</span>: 'my friends are my scorners' — <span class='term'>lîṣ</span> (to mock, scorn) — the friends who should comfort now mock. <span class='term'>ʾEl-ʾĕlôah</span>: yet Job's eye (<span class='term'>ʿênî</span>) pours out tears to God. The contrast between human rejection and divine address is the structural center of Job's faith.</p>",
+    "21": "<p><span class='term'>Wĕyôkaḥ lĕgeber ʿim-ʾĕlôah</span>: 'if only a mortal man could argue/plead with God' — <span class='term'>yākaḥ</span> (to reason together, argue, adjudicate): the legal-wisdom term for formal disputation. <span class='term'>Geber</span> (mortal man) vs. <span class='term'>ʾĕlôah</span> (God): the ontological gap that makes the lawsuit impossible without a mediator. <span class='term'>Bēn ʾîš lĕrēʿēhû</span>: 'as between a man and his neighbor' — Job longs for human-level accessibility to divine adjudication.</p>",
+    "22": "<p><span class='term'>Šĕnôt mispar</span>: 'the few numbered years' — the appointed span, small. <span class='term'>ʾOrāḥ lōʾ-ʾāšûb</span>: 'a road from which there is no return' — the irreversibility of death that makes Job's urgency understandable. The lawsuit must be settled before the one-way road is taken.</p>"
   },
-  "19": {
-    "25": [
-      {"type": "allusion", "target": "1 Cor 15:20", "note": "I know that my Redeemer lives, and at the last he will stand upon the earth — Job's confession of faith in a living Redeemer who will vindicate him after death; the resurrection of Christ is the answer to Job's hope: the Redeemer who lives has stood upon the earth, and because he lives Job will live also"}
-    ]
+  "17": {
+    "1": "<p><span class='term'>Rûḥî ḥubbĕlāh</span>: 'my spirit is ruined/spent' — <span class='term'>ḥābal</span> (to bind, destroy, corrupt) in Pual: the spirit passively destroyed by forces beyond Job's control. <span class='term'>Yāmay niʿăkû</span>: 'my days are put out' — <span class='term'>kāḥāh</span> (to be extinguished, dimmed — of a lamp): life as a lamp going dark. <span class='term'>Qĕbārôt lî</span>: 'the grave is ready for me' — the plural of <span class='term'>qeḇer</span> as an intensive or honorific plural for the burial place.</p>",
+    "2": "<p><span class='term'>ʾim-lōʾ hătûlîm ʿimmādî</span>: 'surely there are mockers all around me' — <span class='term'>hātûl</span> (mocker, scoffer) from <span class='term'>htl</span> (to mock, deride) — a rare form. <span class='term'>Bĕtamdĕrôtām</span> (their provocation/their contentions): another rare term; the continuous hostile pressure of opponents.</p>",
+    "3": "<p><span class='term'>Śîmāh-nāʾ ʿorbēnî ʿimmāk</span>: 'Give me a pledge yourself' — the legal term <span class='term'>ʿēreḇ</span> (surety, guarantor): someone who stands in as financial or legal guarantee for another. Job asks God himself to be the <span class='term'>ʿārēḇ</span> (guarantor) for him — to post the bond that would allow Job's case to proceed. <span class='term'>Mî hûʾ lĕyāḏî yitqāʿ</span>: 'who else will strike hands with me?' — the handshake-pledge gesture of legal guarantee. No human will take the risk; only God can stand surety for Job before God.</p>",
+    "4": "<p><span class='term'>Libbām ṣāpartā mibbiynāh</span>: 'you have closed off their hearts from understanding' — the irony: God has prevented the very friends who claim wisdom from understanding Job's situation. <span class='term'>Lōʾ tĕrōmmēm</span>: 'you will not exalt them' — they have presumed to speak for God but God will not honor their presumption.</p>",
+    "5": "<p><span class='term'>Lĕḥēleq yaggîḏ rēʿîm</span>: 'he who informs against friends for personal gain' — <span class='term'>ḥēleq</span> (portion/share): the one who betrays associates for material advantage. <span class='term'>ʿênê bānāyw tikhlenāh</span>: 'his children's eyes will fail' — the punishment falls on the next generation; the betrayer's progeny will experience the blindness of deprivation.</p>",
+    "6": "<p><span class='term'>Hissîgānî lĕmāšāl ʿammîm</span>: 'he has turned me into a proverb among the nations' — <span class='term'>māšāl</span> (proverb, byword, taunt-saying): Job has become a negative example, a warning story. <span class='term'>Topet-pānîm ʾehyeh</span>: 'I am one before whose face men spit' — the extreme contempt gesture, used in laws of public shaming (Deut 25:9; Num 12:14).</p>",
+    "7": "<p><span class='term'>Wattikhah mikkāʿas ʿênî</span>: 'my eye has grown dim from sorrow' — <span class='term'>kāʿas</span> (vexation, grief) has physiologically dimmed his sight. <span class='term'>ʿĂṣûmay kĕṣēl kullām</span>: 'all my limbs are like shadows' — the wasting-away of the body; <span class='term'>ṣēl</span> (shadow) suggests insubstantiality, almost translucence.</p>",
+    "8": "<p><span class='term'>Yāšōmmû yĕšārîm ʿal-zōʾt</span>: 'upright men are appalled at this' — <span class='term'>šmm</span> (to be appalled, desolate) — the same root used for the desolation of Jerusalem. The <span class='term'>yāšār</span> (upright, straight) person is horrified not by Job's sin but by the sight of righteous suffering. <span class='term'>Nāqî ʿal-ḥānēp yitʿōrār</span>: 'the innocent rises up against the godless' — the moral reflex of the innocent community.</p>",
+    "9": "<p><span class='term'>Wayyōʾḥez ṣaddîq darkô</span>: 'the righteous holds to his way' — <span class='term'>ṣaddîq</span> (righteous/just) persisting in his path. <span class='term'>Ûṭĕhar-yādayim</span>: 'the one with clean hands' — the purity-term from Ps 24:4: clean-handed integrity as the qualification for the divine presence. <span class='term'>Yaʾăṣōr kōaḥ</span>: 'grows stronger' — the paradox of suffering that increases rather than depletes moral strength.</p>",
+    "10": "<p><span class='term'>Wĕʾûlām kullām tāšubû ûbōʾû</span>: 'but come, all of you, return and come' — Job's challenge to debate again. <span class='term'>Lōʾ-ʾemṣāʾ bākem ḥākām</span>: 'I cannot find a wise man among you' — the devastating reversal: the friends who came to impart wisdom are themselves found lacking it.</p>",
+    "11": "<p><span class='term'>Yāmay ʿābārû</span>: 'my days are over' — the perfect of completion: they are already done. <span class='term'>Zimmōtay nittĕqû</span>: 'my plans are torn apart' — <span class='term'>zimmāh</span> (plan, purpose, purpose) ripped away. <span class='term'>Môrāšê lĕḇābî</span>: 'the longings of my heart' — the deep possessions of the inner life, now lost.</p>",
+    "12": "<p><span class='term'>Laylāh lĕyôm yāśîmû</span>: 'they make night into day' — the perverse wisdom of those who reverse categories. <span class='term'>Qārôb ʾôr mippĕnê-ḥōšeḵ</span>: 'light is near, even in the darkness' — the friends' false optimism: offering easy resolution while darkness surrounds. A critique of cheap comfort.</p>",
+    "13": "<p><span class='term'>ʾIm-ʾăqawweh šeʾôl bêtî</span>: 'if I hope, Sheol is my home' — <span class='term'>Sheol</span> as the only dwelling Job can look forward to. <span class='term'>Baḥōšeḵ rāpaʿdtî yĕṣûʿî</span>: 'in the darkness I have spread my bed' — the language of habitation: Job is already at home in the realm of death. The <span class='term'>qawwāh</span> (hoping/waiting) that normally implies divine expectation is here redirected toward Sheol.</p>",
+    "14": "<p><span class='term'>Laššaḥat qārāʾtî ʾābî ʾāttāh</span>: 'I call corruption my father' — <span class='term'>šaḥat</span> (pit, grave, corruption) — the normal object of divine rescue (cf. Ps 16:10; Jon 2:7) is here addressed as family. <span class='term'>Rimmāh ʾimmî waʾăḥōtî</span>: 'the worm is my mother and my sister' — the darkest inversion of family language, establishing the intimacy of death.</p>",
+    "15": "<p><span class='term'>ʾAyyēh ʾēpôh tiqwātî</span>: 'Where then is my hope?' — <span class='term'>tiqwāh</span> (hope, cord — from <span class='term'>qwh</span> to wait/hope) is the key anthropological term for orientation toward the future. The double interrogative (where + where) drives home Job's complete loss of future-orientation. <span class='term'>Wĕtiqwātî mî yĕšûrennāh</span>: 'who can see my hope?' — no one can perceive it because it no longer exists visibly.</p>",
+    "16": "<p><span class='term'>Baḏdê šeʾôl tērednāh</span>: 'they will descend to the bars of Sheol' — <span class='term'>baḏ</span> (bar, plank — the structural bars of Sheol as a locked underworld). Hope and the one who held it descend together. <span class='term'>Yaḥad ʿal-ʿāpār nāḥat</span>: 'together we go down into the dust' — hope dies with the person. Or perhaps: hope is what will die first, and Job will follow. The ambiguity intensifies the desolation.</p>"
   },
-  "38": {
-    "4": [
-      {"type": "allusion", "target": "John 1:1", "note": "Where were you when I laid the foundation of the earth? — the divine speech from the whirlwind (chs. 38-41) confronts Job with the Creator's incomprehensible majesty; John 1:1 grounds Christ as the one who was present at that foundation: in the beginning was the Word, and the Word was with God — the one speaking from the whirlwind and the one who became flesh are the same person"}
-    ]
-  }
-}
-
-JOB_ORIGINAL = {
-  "19": {
-    "25": "<p><strong>vaani yadati goa'li chai ve'acharon al afar yaqum</strong>: 'For I know that my Redeemer [<em>go'el</em>] lives, and at the last he will stand upon the earth' (or 'upon the dust'). This is one of the OT's most disputed verses — the text is difficult (the next verse, 19:26, is even more so: 'after my skin has thus been destroyed, yet in my flesh I shall see God'). The term <em>go'el</em> (kinsman-redeemer) in the context of Job's suffering suggests: the one who will vindicate Job after death, who will see to it that justice is done. Whether Job envisions a bodily resurrection (as 19:26 suggests in the MT) or a post-mortem vindication, the theological content is the same: a personal Redeemer who is alive, who will act at the last, who will secure Job's vindication. The NT identifies this Redeemer as Christ (1 Cor 15:20: Christ has been raised from the dead, the firstfruits of those who have fallen asleep).</p>"
-  },
-  "38": {
-    "4": "<p>The divine speech from the whirlwind (Job 38-41) is the OT's most extended meditation on the incomprehensibility and majesty of God. YHWH's questions ('Where were you when I laid the foundation of the earth? Tell me, if you have understanding') do not answer Job's question about suffering — they reframe it by confronting Job with the Creator's perspective. The response to theodicy is not a logical explanation but a theophanic encounter: when Job sees YHWH, his questions are transformed, not answered (42:5: 'my eye sees you'; he is satisfied). This pattern — suffering resolved not by explanation but by encounter with God — points to the incarnation: the answer to the problem of suffering is not a theodicy argument but the Son of God entering the suffering and going through it.</p>"
-  }
-}
-
-JOB_CONTEXT = {
-  "1": {
-    "1": "<p>Job is the OT's most direct engagement with the problem of innocent suffering. Its genre combines a prose frame (the prologue and epilogue) with a poetic center (the dialogues, Job 3-41). The prologue reveals what Job does not know: that his suffering is the result of a cosmic test. The dialogues work out the human perspective on suffering without that hidden knowledge. The friends defend the retributive justice principle (you suffer, therefore you sinned); Job insists on his innocence. Both are partially right: the friends are correct that suffering is related to sin in general (the cosmic fall), but wrong that Job's specific suffering is punishment for specific sin. YHWH's verdict (42:7-8: Job's friends 'have not spoken of me what is right, as my servant Job has') vindicates Job's complaint against easy theodicy.</p>"
-  }
-}
-
-JOB_CHRIST = {
-  "9": {
-    "33": "<p>A type: 'There is no arbiter between us who might lay his hand on us both, who would remove his rod from me, and let not dread of him terrify me.' Job's longing for a mediator is one of the Bible's most poignant anticipations of Christ. What Job needs is someone who can stand between the holy God and the accused human — with one hand on God and one hand on the human — securing Job's access to God without the terror. The incarnation is the answer: Jesus Christ 'laid his hand' on both realities, being fully God and fully human, so that 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). The mediator Job could only wish for, the NT declares has come.</p>"
-  },
-  "19": {
-    "25": "<p>A direct revelation: 'I know that my Redeemer lives, and at the last he will stand upon the earth.' Job's confession cuts through the fog of his suffering to affirm what cannot be seen or felt: a living Redeemer who will vindicate. The confession has multiple levels of fulfillment in Christ: (1) the Redeemer lives — Christ's resurrection is the demonstration; (2) he will stand upon the earth at the last — the parousia; (3) 'in my flesh I shall see God' (v. 26) — the bodily resurrection of the righteous. Job, in the depths of suffering and loss, speaks one of Scripture's clearest affirmations of resurrection-hope and the personal Redeemer who makes it possible.</p>"
-  }
-}
-
-# ============================
-# PROVERBS
-# ============================
-
-PROV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "Col 2:3", "note": "The fear of the LORD is the beginning of wisdom — Proverbs' foundational maxim; Paul says in Christ are hidden all the treasures of wisdom and knowledge (Col 2:3): Christ is where the 'fear of the LORD leads, the source from whom all wisdom flows"}
-    ]
-  },
-  "8": {
-    "22": [
-      {"type": "allusion", "target": "John 1:1", "note": "The LORD possessed me at the beginning of his work, the first of his acts of old — Wisdom speaking in Proverbs 8:22-31; personified Wisdom present at creation, delighting in the inhabited world; the Logos-Wisdom identification (John 1:1-3; Col 1:15-16; Heb 1:2-3) applies the Prov 8 Wisdom-portrait to the pre-incarnate Christ"},
-      {"type": "allusion", "target": "Col 1:15", "note": "I was beside him like a master workman, rejoicing before him always — Wisdom as God's artisan in creation (Prov 8:30); Paul describes Christ as the one in whom all things were created (Col 1:16) and through whom all things were made (John 1:3); the Wisdom-Creator becomes the Christ-Creator"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Heb 12:5-6", "note": "My son, do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves — Hebrews quotes Prov 3:11-12 to explain suffering as divine discipline: God treats believers as sons (Heb 12:7); the wisdom perspective on suffering as fatherly training is the theological framework for the Christian endurance of hardship"}
-    ]
-  }
-}
-
-PROV_ORIGINAL = {
-  "8": {
-    "22": "<p><strong>YHWH qanani reshit darko qedem mifalav meaz</strong>: 'The LORD possessed/created me at the beginning of his work, the first of his acts of old.' The verb <em>qanah</em> is disputed: it can mean 'to acquire/possess' (so most LXX manuscripts, Aquila, Theodotion) or 'to create' (so the Arian controversy reading, applied to prove the Son was a created being). The Nicene theology responded: even if <em>qanah</em> means 'created', Proverbs 8 is personified Wisdom literature — a poetic device, not a literal description of a divine person's ontology. The NT applies Prov 8's Wisdom-portrait to the eternal Son (Col 1:15-17; Heb 1:2-3; John 1:1-3) not to prove the Son is created, but to show that the pre-existent Son is the referent of the Wisdom-personification: the figure the wisdom tradition was groping toward in poetic imagery became flesh in Christ.</p>"
-  }
-}
-
-PROV_CONTEXT = {
-  "1": {
-    "1": "<p>Proverbs is the OT's primary wisdom text — a collection of moral instruction, practical guidance, and theological reflection on the nature of a well-ordered life in YHWH's world. It is attributed to Solomon (1:1; 10:1; 25:1) with additions from other wise men (Agur, 30:1; Lemuel's mother, 31:1). Its theological foundation is the fear of YHWH (1:7; 9:10; 15:33): wisdom is not abstract intellectual skill but a disposition toward God and the moral order of creation. The longest section (chs. 1-9) frames the rest with the personification of Wisdom as a woman calling in the streets, building her house, offering her feast — while her counterpart, Folly, seduces the simple to death. The NT's identification of Christ as divine Wisdom (1 Cor 1:24, 30; Col 2:3) is the claim that the personification in Proverbs 8 was, in the fullness of time, made literal and personal.</p>"
-  }
-}
-
-PROV_CHRIST = {
-  "8": {
-    "30": "<p>A revelation of God: 'Then I was beside him, like a master workman, and I was daily his delight, rejoicing before him always, rejoicing in his inhabited world and delighting in the children of man.' Wisdom's delight in creation and in humanity (Prov 8:30-31) is the OT's most personal statement of the divine affection for the created order. The NT applies this portrait to the eternal Son: 'by him all things were created' (Col 1:16); 'all things were made through him' (John 1:3); 'through whom also he created the world' (Heb 1:2). The Wisdom who rejoiced at creation is the Word who entered creation (John 1:14), and the delight Wisdom expressed for the children of man is the love that sent the Son into the world (John 3:16). Proverbs 8's Wisdom-portrait is the poetic anticipation of the incarnate Logos who is himself divine wisdom in person (1 Cor 1:24: Christ the wisdom of God).</p>"
-  }
-}
-
-# ============================
-# ECCLESIASTES
-# ============================
-
-ECCL_ECHO = {
-  "1": {
-    "2": [
-      {"type": "allusion", "target": "Rom 8:20", "note": "Vanity of vanities, all is vanity — the Preacher's diagnosis of the futility of all earthly striving; Paul's 'the creation was subjected to futility [mataiotes = the LXX word for hevel/vanity]' applies Ecclesiastes' diagnosis to the whole created order: the vanity is not merely human experience but creation-wide, awaiting the liberation of the resurrection"}
-    ]
-  },
-  "12": {
-    "13": [
-      {"type": "allusion", "target": "Matt 22:37-40", "note": "Fear God and keep his commandments, for this is the whole duty of man — the Preacher's final summary of the human vocation: the fear of YHWH and covenant obedience are the answer to the vanity of all other human projects; Jesus's summary (love God and love neighbor) is the new covenant distillation of the same conclusion"}
-    ]
-  }
-}
-
-ECCL_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>havel havalim amar qohelet havel havalim hakol havel</strong>: 'Vanity of vanities, says the Preacher, vanity of vanities! All is vanity.' The Hebrew <em>hevel</em> (vapor, breath, vanity) is used 38 times in Ecclesiastes — more than in any other biblical book. It literally means a breath of air that passes immediately: something that exists momentarily and then is gone. The LXX translates <em>hevel</em> as <em>mataiotes</em> (futility, vanity), and Paul uses this word in Romans 8:20: 'the creation was subjected to futility [<em>mataiotes</em>].' The Ecclesiastes diagnosis is therefore not pessimism but realism about the post-fall condition of creation: all earthly striving that does not account for God and eternity is, sub specie aeternitatis, vapor. The NT's response is the resurrection, which gives permanence to what was formerly vapor: 'your labor in the Lord is not in vain' (1 Cor 15:58).</p>"
-  }
-}
-
-ECCL_CONTEXT = {
-  "1": {
-    "1": "<p>Ecclesiastes (Hebrew <em>Qohelet</em>, 'the Preacher/Assembler') is the most theologically challenging book of the wisdom literature — it appears to endorse cynicism (2:24: 'there is nothing better for a person than to eat and drink'), relativism (3:1-8: a time for everything), and even doubt (9:5: the dead know nothing). Its canonical function is the 'foil' in the wisdom dialogue: if Proverbs gives the optimistic wisdom perspective, Ecclesiastes gives the honest reckoning with what happens when wisdom is pursued 'under the sun' — that is, within the frame of mortal, fallen human existence. The recurring phrase 'under the sun' (29 occurrences) marks the book's self-conscious limitation: it is wisdom from the earthly perspective, without the resurrection. The NT provides what Ecclesiastes lacks: the 'not in vain' of labor done in the Lord (1 Cor 15:58) and the hope that breaks the <em>hevel</em>-cycle.</p>"
-  }
-}
-
-ECCL_CHRIST = {
-  "12": {
-    "13": "<p>A shadow: 'Fear God and keep his commandments, for this is the whole duty of man.' Ecclesiastes' closing verdict after surveying all human wisdom is the simplest possible statement of the human vocation: the fear of God and covenant obedience. This is the wisdom tradition's answer to vanity — not a philosophical system but a personal relationship with the Creator. Jesus's summary of the law (love God, love neighbor) is the new covenant's positive restatement of what Ecclesiastes reaches as its final conclusion. But Christ does more than restate: he embodies the fear of God and covenant obedience perfectly (Heb 5:7-8: in the days of his flesh, Jesus offered up prayers and supplications with loud cries and tears ... and was heard because of his reverence; although he was a son, he learned obedience through what he suffered), and in his resurrection he breaks the <em>hevel</em>-cycle, proving that labor in the Lord — unlike all labor 'under the sun' — is not in vain (1 Cor 15:58).</p>"
-  }
-}
-
-# ============================
-# SONG OF SOLOMON
-# ============================
-
-SONG_ECHO = {
-  "2": {
-    "16": [
-      {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
-    ]
-  },
-  "8": {
-    "6": [
-      {"type": "allusion", "target": "Rom 8:35-39", "note": "Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD — the Song's declaration of love's unconquerable strength; Paul's conviction that nothing can separate us from the love of God in Christ Jesus is the new covenant answer to the Song's vision of love stronger than death: Christ's love has defeated death itself and remains unbreakable"}
-    ]
-  }
-}
-
-SONG_ORIGINAL = {
-  "1": {
-    "1": "<p>The Song of Songs (<em>shir hashirim</em>) is the OT's wisdom-meditation on human love and sexuality. Its literal level — a celebration of erotic love between a man and a woman — is taken seriously by responsible interpreters as a canonical affirmation of marriage and the goodness of sexual love within covenant. The allegorical level — YHWH's love for Israel (the Jewish interpretation) or Christ's love for the church (the dominant Christian interpretation) — has been the dominant hermeneutical approach through most of church history (Origen's commentary and Bernard of Clairvaux's 86 sermons on Song 1-2 are the most extensive examples). The allegorical reading is supported by the OT's consistent use of the husband-wife metaphor for YHWH-Israel (Isa 54:5; Jer 2:2; Ezek 16; Hos 1-3) and the NT's application of the bride-bridegroom image to Christ-church (Eph 5:25-32; Rev 19:7-9; 21:2). The two readings are not mutually exclusive: the literal is the foundation that gives the allegorical its force.</p>"
-  },
-  "8": {
-    "6": "<p><strong>simeini kachotam al libecha kachotam al zeroa'echa ki azza kamavet ahavah qasha kishol qina'ah reshefeyha reshefei esh shalhevetyah</strong>: 'Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the LORD.' The climax of the Song's celebration of love: it is as strong as death and as fierce as <em>sheol</em> — the two most powerful forces in human experience. <em>Shalhevetyah</em> (the very flame of the LORD) — uniquely, this is one of the few places in the Song where the divine name appears, even embedded in a word. The NT's fulfillment: the love of Christ has defeated death (1 Cor 15:54-57) and nothing can separate us from that love (Rom 8:38-39); what the Song claimed about love's unconquerability is literally true in Christ's resurrection.</p>"
-  }
-}
-
-SONG_CONTEXT = {
-  "1": {
-    "1": "<p>The Song of Solomon's place in the canon was debated in rabbinic Judaism (Rabbi Akiva defended it: 'all the ages are not worth the day on which the Song of Songs was given to Israel; for all the writings are holy, but the Song of Songs is the Holy of Holies'); it was included in the Hebrew canon and subsequently in the Christian canon. The bride-bridegroom image is the OT's primary metaphor for the YHWH-Israel covenant relationship: Hosea (chs. 1-3) uses the marriage metaphor for covenant and its violation; Isaiah 54:5 calls YHWH Israel's husband; Jeremiah 2:2 recalls the honeymoon period of the wilderness. The NT develops the bridegroom imagery specifically for Jesus (Mark 2:20: the bridegroom is taken away; John 3:29: the friend of the bridegroom rejoices; Eph 5:25-32: husbands love your wives as Christ loved the church; Rev 19:7: the marriage of the Lamb has come).</p>"
-  }
-}
-
-SONG_CHRIST = {
-  "2": {
-    "16": "<p>A revelation of God: 'My beloved is mine, and I am his.' The Song's vision of mutual possession between lover and beloved is the OT's most intimate description of the covenant relationship. In the NT, this mutual possession is fulfilled in the Christ-church relationship: 'You are not your own, for you were bought with a price' (1 Cor 6:19-20); 'I am my beloved's and my beloved is mine' becomes 'I live, and yet not I, but Christ lives in me' (Gal 2:20). The mutual knowing of bride and groom (I know my sheep and my sheep know me, John 10:14) is the new covenant's personal form of the Song's mutual possession. The eschatological fulfillment is the marriage of the Lamb (Rev 19:7-9; 21:2): the Song's vision of complete love is consummated in the new creation when the Bride has made herself ready.</p>"
-  },
-  "8": {
-    "6": "<p>A direct revelation: 'Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD.' The Song declares love's unconquerable strength in the face of the two most formidable opponents — death and sheol. The NT's claim is that this declaration is literally, not merely poetically, true in Christ: his love has conquered death (1 Cor 15:54-57: Death is swallowed up in victory; thanks be to God who gives us the victory through our Lord Jesus Christ) and the love of God in Christ is literally unconquerable (Rom 8:38-39: neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord). What the Song celebrates as love's aspiration, the resurrection announces as love's accomplished fact.</p>"
+  "18": {
+    "1": "<p>Bildad's second speech opens with the standard formula. His speech is more compact than his first (ch8) and focuses entirely on the fate of the wicked, implicitly applying the portrait to Job.</p>",
+    "2": "<p><span class='term'>ʿad-ʾānāh tāśîmûn qinṣê lĕmillîn</span>: 'How long will you set snares/ends to words?' — <span class='term'>qēṣ</span> (end, snare) of words: either 'put an end to words' or 'set traps with words.' <span class='term'>Tābîn wĕʾaḥar nĕdabbēr</span>: 'get insight, and then we will speak' — Bildad demands that Job achieve understanding before speaking further.</p>",
+    "3": "<p><span class='term'>Maddûaʿ neḥšabnû kabbĕhēmāh</span>: 'Why do you count us as animals?' — <span class='term'>bĕhēmāh</span> (beast, animal) — the friends feel demoted by Job's critique of their wisdom. <span class='term'>Niṭmînu bĕʿênêkem</span>: 'we are stupid in your eyes' — <span class='term'>ṭāmāʾ</span> in Niphal (to be made unclean, or here, worthless) — an unusual use suggesting their perceived contemptible status.</p>",
+    "4": "<p><span class='term'>Ṭōrēp napšô bĕʾappô</span>: 'you who tear yourself apart in your anger' — the self-destructive character of Job's rage in Bildad's view. <span class='term'>Hătaʿăzab-lĕmaʿankā ʾāreṣ</span>: 'will the earth be forsaken for your sake?' — a cosmological challenge: does Job think his individual case will cause the moral order to collapse?</p>",
+    "5": "<p><span class='term'>Gam-ʾôr rĕšāʿîm yiḏʿāk</span>: 'the light of the wicked is extinguished' — the lamp-metaphor for life. <span class='term'>Rĕšāʿîm</span> (wicked ones): Bildad's term for the condemned; he is building a portrait that fits Job's situation. <span class='term'>Šabebet ʾiššô</span>: 'the flame of his fire' — the doubled light-image emphasizes the totality of extinction.</p>",
+    "6": "<p><span class='term'>Nēr ʿālāyw yiḏʿāk</span>: 'the lamp over him is extinguished' — <span class='term'>nēr</span> (lamp) as the symbol of life and divine blessing (cf. Prov 20:27: nēr YHWH nišmat ʾāḏām). When the lamp goes dark, the divine connection is severed. <span class='term'>Dāk</span> (extinguished) completes the double extinction begun in v5.</p>",
+    "7": "<p><span class='term'>Yēṣrû ṣaʿădê ʾônô</span>: 'his powerful strides are shortened' — <span class='term'>ʾôn</span> (strength, vigor) — the once-powerful man is diminished. <span class='term'>Taššīlĕḵēhû ʿăṣātô</span>: 'his own schemes throw him down' — self-brought ruin: the wicked man is not merely punished externally but destroyed by the internal logic of his own plans.</p>",
+    "8": "<p><span class='term'>Bĕšālah bĕreget ʾĕlāyw</span>: 'he is thrown into a net by his own feet' — <span class='term'>rešet</span> (net), <span class='term'>śĕbākāh</span> (lattice/mesh): the hunting-trap imagery. The wicked man walks into his own trap. The passive (<span class='term'>yušlaḵ</span>) suggests the inevitability of the outcome.</p>",
+    "9": "<p><span class='term'>Yōʾḥez bĕʿāqēb pāḥ</span>: 'a trap catches him by the heel' — <span class='term'>pāḥ</span> (bird-snare, trap) and <span class='term'>ṣammîm</span> (snare, noose) continue the hunting imagery. The heel-trap recalls Jacob/Esau's heel-motif (<span class='term'>ʿāqab</span>), but here there is no escape from the snare.</p>",
+    "10": "<p><span class='term'>Ṭāmûn bāʾāreṣ ḥeblô</span>: 'a rope is buried in the ground for him' — the hidden snare, pre-placed. <span class='term'>Mallĕkōdtô ʿălê nātîb</span>: 'his trap waits on his path' — the path the wicked man takes is itself the trap. The series of trap-images (vv8-10) accumulates to produce inevitability of capture.</p>",
+    "11": "<p><span class='term'>Ballāhôt yĕbaʿătuhû sābîb</span>: 'terrors frighten him on every side' — <span class='term'>ballāhāh</span> (sudden terror, dismay): the psychological dimension of the wicked man's fate. Fear surrounds completely. <span class='term'>Hēpîṣuhû lĕraglāyw</span>: 'they push him forward at every step' — terror drives him as a herd animal is driven.</p>",
+    "12": "<p><span class='term'>Yĕhî rāʿēb ʾônô</span>: 'his strength is starved' — an unusual idiom: <span class='term'>rāʿēb</span> (hungry, famished) modifying <span class='term'>ʾôn</span> (strength) — the vigor itself is starving, depleted. <span class='term'>ʾĔd nākôn lĕṣalʿô</span>: 'disaster stands ready at his side' — <span class='term'>ʾēd</span> (calamity, disaster) as a waiting companion.</p>",
+    "13": "<p><span class='term'>Yōʾkal baḏdê ʿôrô</span>: 'it devours the limbs of his skin' — <span class='term'>baḏ</span> (parts, limbs): eaten piece by piece. <span class='term'>Bĕkôr māwet</span>: 'firstborn of death' — a unique personification: death has a firstborn, a powerful first agent. The <span class='term'>bĕkôr</span> (firstborn) holds the place of greatest power and authority. Death's most powerful instrument is the disease that consumes the wicked man from within.</p>",
+    "14": "<p><span class='term'>Yinnātaq mibĕṭaḥô</span>: 'his confidence is ripped away from his home' — <span class='term'>bāṭāḥ</span> (confidence, security) torn loose. <span class='term'>Melek ballāhôt</span>: 'king of terrors' — <span class='term'>ballāhāh</span> (terror, horror) personified as royalty. Death enthroned as king, to whom the wicked man is brought as a prisoner. The title <span class='term'>melek</span> (king) applied to death anticipates NT language about the last enemy's kingship (1 Cor 15:26; Rev 20:14).</p>",
+    "15": "<p><span class='term'>Tiškôn bĕʾohŏlô mibbelî lô</span>: 'something alien inhabits his tent' — <span class='term'>mibbelî lô</span> (not his own): a stranger or alien force takes over the home. <span class='term'>Gāprît tizzāreh ʿal-nāwēhû</span>: 'brimstone is scattered over his home' — the Sodom-judgment vocabulary (Gen 19:24), the smell of divine wrath.</p>",
+    "16": "<p><span class='term'>Miṭṭāḥat šārāšāyw yiḇāšû</span>: 'his roots dry up below' — the tree metaphor for the righteous/wicked person (cf. Ps 1:3; Jer 17:8) inverted: here the wicked man's roots and branches both die. <span class='term'>Ûmimmaʿal yimmāl qĕṣîrô</span>: 'his branches wither above' — total death from roots to crown.</p>",
+    "17": "<p><span class='term'>Ziḵrô ʾāḇad min-ʾāreṣ</span>: 'his memory perishes from the land' — <span class='term'>zēḵer</span> (memory, name) as the posthumous existence: to be remembered is to continue existing in the community. The wicked man loses both. <span class='term'>Wĕlōʾ-šēm lô ʿal-pĕnê-ḥûṣ</span>: 'no name in the open places' — public space, where names are proclaimed (gates, marketplaces), holds no record of him.</p>",
+    "18": "<p><span class='term'>Yihdĕpūhû mēʾôr el-ḥōšeḵ</span>: 'he is driven from light into darkness' — the active expulsion: no passive fading but violent thrust from the realm of the living into the realm of the dead. <span class='term'>Ûmitēbēl yĕniddĕhû</span>: 'he is banished from the world' — <span class='term'>tēbēl</span> (the inhabited world, the civilized order) expels him. Social death precedes physical death.</p>",
+    "19": "<p><span class='term'>Lōʾ nîn lô wĕlōʾ-neḵed</span>: 'no offspring and no descendant' — <span class='term'>nîn</span> (offspring, son) and <span class='term'>neḵeḏ</span> (posterity): the total extinction of the family line. The double negative drives home the complete annihilation of legacy. No survivor (<span class='term'>śārîd</span>) anywhere.</p>",
+    "20": "<p><span class='term'>ʿal-yômô nāšammû ʾaḥărōnîm</span>: 'those who come after are horrified' — the wicked man becomes a horror for all future generations. <span class='term'>Qadmōnîm ʾāḥăzû śāʿar</span>: 'those who went before are seized with dread' — the temporal frame extends in both directions: both predecessors and successors are appalled. The portrait is universally witnessed.</p>",
+    "21": "<p><span class='term'>ʾAk-ʾēlleh miškĕnôt ʿawwāl</span>: 'surely these are the dwellings of the wicked' — the summary application. <span class='term'>Wĕzeh mĕqôm lōʾ-yādaʿ ʾēl</span>: 'and this is the place of the one who does not know God' — the definitional formula: the wicked man is <span class='term'>lōʾ-yādaʿ ʾēl</span>, one who does not know God. <span class='term'>Yāḏaʿ</span> (to know) in the covenantal sense: not mere intellectual awareness but covenantal relationship. The speech ends by locating the problem not in behavior but in relational status before God.</p>"
   }
 }
 
 def main():
-    books = [
-        ('job', JOB_ECHO, JOB_ORIGINAL, JOB_CONTEXT, JOB_CHRIST),
-        ('proverbs', PROV_ECHO, PROV_ORIGINAL, PROV_CONTEXT, PROV_CHRIST),
-        ('ecclesiastes', ECCL_ECHO, ECCL_ORIGINAL, ECCL_CONTEXT, ECCL_CHRIST),
-        ('songofsolomon', SONG_ECHO, SONG_ORIGINAL, SONG_CONTEXT, SONG_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-original', 'job')
+    merge_comm(c, JOB)
+    save_comm('mkt-original', 'job', c)
+    total = sum(len(v) for v in JOB.values())
+    print(f'job mkt-original: wrote {total} verses across ch 15-18')
 
 if __name__ == '__main__':
     main()

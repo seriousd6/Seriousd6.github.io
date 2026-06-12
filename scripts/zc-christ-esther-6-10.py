@@ -1,22 +1,23 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Christ Layer — Esther chapters 6–10
+Run: python3 scripts/zc-christ-esther-6-10.py
+
+Every verse — comprehensive Christological coverage required.
+
+Ch6:  Providential insomnia reverses Haman's plot — hidden divine sovereignty; Rom 8:28
+      Haman forced to honor Mordecai — the reversal of shame to glory; Phil 2:9-11
+Ch7:  Esther's intercession for her people — Christ's high-priestly mediation; Heb 7:25
+      Haman hanged on his own gallows — the cross turns the enemy's weapon against him; Col 2:15
+Ch8:  The irrevocable first decree countered by a second decree — law and gospel; Rom 8:1-2
+      Light and joy for the covenant people — 1 Pet 2:9
+Ch9:  The reversal on the appointed day — the cross as the day of reversal; 1 Cor 1:25-27
+      Purim established — the Lord's Supper as permanent covenant commemoration; Luke 22:19
+Ch10: Mordecai's greatness in service to his people — Christ the firstborn among many brothers
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -28,20 +29,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -50,160 +37,101 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
+DATA = {
+  "6": {
+    "1": "<p>On that night the king could not sleep — the providential insomnia that pivots the entire Esther narrative. No human agent arranges the king's wakefulness; no visible cause is given. This is the book of Esther's theology in miniature: God is everywhere active and nowhere named. Romans 8:28 articulates the principle: in all things God works for the good of those who love him. The one who neither slumbers nor sleeps (Ps 121:4) uses a Persian king's sleeplessness as the mechanism of covenant deliverance. Christ is the fullness of this hidden sovereignty: he is the one in whom all things hold together (Col 1:17), the Lord who governs every apparently random event toward redemption.</p>",
+    "2": "<p>The royal records are read — specifically the record of Mordecai's unrewarded service. The chronicles chosen, the passage reached, the unrewarded act of loyalty that surfaces at exactly the right moment: the narrative demonstrates that nothing good done in faith is ultimately lost or forgotten. Christ promises the same: whoever gives even a cup of cold water in his name will not lose his reward (Matt 10:42). The royal annals that preserved Mordecai's act are a figure of the divine memory in which every act of covenant faithfulness is permanently recorded.</p>",
+    "3": "<p>The king asks: what honor or distinction has been bestowed on Mordecai for this? — and finds that nothing has been done. The deferred reward, the service rendered without immediate recognition, surfaces at the providential moment. The disciples' question — Lord, what then will there be for us? (Matt 19:27) — receives the same answer: rewards deferred are not rewards denied. Christ himself was the supremely unrewarded servant during his earthly ministry — rejected, mocked, crucified — and his exaltation (Phil 2:9-11) is the guarantee that every deferred honor will be given.</p>",
+    "4": "<p>At that moment Haman enters the outer court to ask the king about hanging Mordecai. The timing of Haman's arrival — while the king is already thinking about Mordecai — is the narrative's most compressed coincidence. Divine sovereignty does not eliminate human agency; it coordinates it. Haman comes with murderous intent at the exact moment his enemy is being considered for honor. This is the pattern of the cross: those who came to destroy Christ (Judas arriving in the garden, John 18:2-3) were the instruments of the very event that accomplished salvation.</p>",
+    "5": "<p>The king asks: who is in the court? — and Haman is told the king wishes to speak with him. Haman's eagerness to enter — believing he will gain permission to hang Mordecai — is the type of the adversary's eager overconfidence. The enemy rushes toward what he believes is his victory, not knowing he is being led toward his own defeat. The powers that rushed to crucify Christ (1 Cor 2:8: if they had understood, they would not have crucified the Lord of glory) were rushing toward their own undoing.</p>",
+    "6": "<p>Haman thinks: whom would the king delight to honor more than me? His misreading of the situation — assuming the honor intended for Mordecai is intended for himself — is the pride that destroys. Proverbs 16:18: pride goes before destruction, and a haughty spirit before a fall. The adversary's self-exaltation (Isa 14:13-14: I will ascend to heaven) is always grounded in a fundamental misreading of who stands at the center of the divine purpose. Christ came precisely to overturn this misreading: in my Father's kingdom, the greatest is the servant of all (Matt 23:11).</p>",
+    "7": "<p>Haman proposes: let royal robes be brought that the king has worn, and a horse that the king has ridden, with a royal crown on its head. The honor Haman imagines for himself — royal robes, the king's own horse, a crown — is the honor that belongs to the one he despises. Christ received the mock form of this honor (the purple robe, Matt 27:28; the crown of thorns, v. 29) before receiving the genuine form at his exaltation. The honors Haman designed for himself became the figure of the honors stripped from Christ before being returned in fullness.</p>",
+    "8": "<p>Let the robe and horse be handed over to one of the king's most noble officials, and let them array the man whom the king delights to honor. The king's noblest servant becomes the instrument of the honored one's public recognition. Christ's exaltation is proclaimed through the apostolic witness — those commissioned to go and announce his lordship (Acts 2:36: God has made him both Lord and Christ). The herald's role, which Haman anticipated for himself, went to those who had suffered alongside the one being honored.</p>",
+    "9": "<p>Let them lead him on horseback through the city square and proclaim before him: thus shall it be done to the man whom the king delights to honor. The public declaration of honor through the city — the entire community as witness to the reversal — is the form of Christ's triumphant entry (John 12:13: Hosanna! Blessed is he who comes in the name of the Lord!) and his ultimate public vindication. Every eye will see him (Rev 1:7): the final proclamation will be universal, not limited to one city square.</p>",
+    "10": "<p>The king commands: hurry, take the robe and the horse, as you have said, and do so to Mordecai the Jew. The king names the specific person — Mordecai the Jew — and Haman has no escape. The one designated for destruction is publicly declared the one designated for honor. Christ, crucified as King of the Jews (John 19:19) in mockery, is proclaimed King of kings in reality (Rev 19:16). The title attached in shame becomes the title of ultimate honor.</p>",
+    "11": "<p>Haman leads Mordecai on horseback through the city square proclaiming: thus shall it be done to the man whom the king delights to honor. The enemy forced to publicly honor the one he planned to execute — his own voice becoming the instrument of his enemy's glorification — is the figure of the ultimate universal confession. Philippians 2:10-11: at the name of Jesus every knee shall bow, and every tongue confess that Jesus Christ is Lord. Every power that opposed Christ will be compelled to proclaim his honor with the same mouths that condemned him.</p>",
+    "12": "<p>Mordecai returned to the king's gate, but Haman hurried to his house, mourning and with his head covered. The contrast is sharp: Mordecai returns to his post while Haman retreats in shame. Christ's resurrection places him at the Father's right hand (Acts 2:33) while the powers are shamed and disarmed (Col 2:15). The one who was threatened with disgrace continues his service at the throne; the one who threatened him retreats in defeat.</p>",
+    "13": "<p>Haman's wife Zeresh and his advisors interpret the events as certain portents of his fall: if Mordecai is of Jewish descent, you will not prevail against him but will surely fall before him. Even Haman's own household recognizes the pattern — the adversary's counselors declare his defeat before it comes. The powers at the cross did not foresee their own defeat (1 Cor 2:8), but the pattern was visible in the Scriptures for those with eyes to see: Christ would not remain in death (Ps 16:10).</p>",
+    "14": "<p>While they were still talking, the king's eunuchs arrived and hurried to bring Haman to the banquet that Esther had prepared. The urgency of the summons interrupts the family's dire prophecy — Haman is rushed toward the judgment seat he cannot escape. The judicial momentum that overtakes the guilty before they can prepare their defense is the image of the final judgment: the wicked will find that their reckoning arrives at the moment when they are still planning their escape.</p>"
   },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
   "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
+    "1": "<p>The king and Haman came to feast with Queen Esther. The second banquet — the climactic occasion Esther has prepared — brings all three principals together in a single space. The moment of disclosure is prepared by the one who has been mediating: Esther's role as the one who brings the king and the enemy into the same room where the truth will be spoken is the figure of Christ's mediatorial role in the final judgment — the one through whom both grace and justice are administered.</p>",
+    "2": "<p>On the second day the king asks Esther: What is your petition? It shall be granted you. Even to the half of my kingdom, it shall be fulfilled. The king's second invitation to speak — the repetition of unlimited generosity before the petition — establishes the ground of Esther's appeal. Christ's intercessory work rests on the same unlimited divine generosity: Ask, and it will be given to you (Matt 7:7); whatever you ask in my name (John 14:13). The mediator presents the petition knowing that the one addressed has already promised to give.</p>",
+    "3": "<p>Esther's petition: let my life be given me at my petition, and my people at my request. The intercessor who stakes her own life on the fate of those she represents is the figure of Christ's mediatorial identification. Romans 8:34: who is to condemn? Christ Jesus is the one who intercedes for us. Hebrews 7:25: he always lives to make intercession. Esther could not separate her life from the life of her people; Christ has bound himself permanently to those who are his, interceding for them always.</p>",
+    "4": "<p>For we have been sold, I and my people, to be destroyed, to be killed, and to be annihilated. Had we been sold merely as slaves, I would have remained silent. The careful legal argument — distinguishing between different kinds of sale, identifying the specific threat — models the precision of Christ's advocacy before the Father. Romans 8:33: who shall bring any charge against God's elect? It is God who justifies. The advocate speaks with precision about the legal situation of those he represents.</p>",
+    "5": "<p>The king asks: who is he and where is he who has dared to do this? The king demands to identify the enemy — the precise question that the gospel answers. The enemy of God's people is named in the NT: your adversary the devil (1 Pet 5:8); the accuser of our brothers (Rev 12:10). The moment of naming is the moment of unmasking — the spiritual warfare principle that what is named can be resisted.</p>",
+    "6": "<p>Esther says: a foe and enemy — this wicked Haman! The direct confrontation of the enemy before the highest authority is the spiritual warfare pattern. Christ's wilderness temptation (Matt 4:1-11) is its fullest expression: the direct confrontation of the adversary with the word of God that exposes and defeats his strategies. Esther's courageous naming of Haman before the king is the type of the gospel's courageous identification of sin and its author before the divine throne.</p>",
+    "7": "<p>The king rose in his wrath and went into the palace garden, but Haman stayed to beg his life from Queen Esther. The reversal of roles — Haman the persecutor now begging for mercy from the one he planned to destroy — is the ultimate irony of the Esther narrative. The judge who needs no advocacy (Christ at the final judgment) is also the one who has provided advocacy for others. Those who stand condemned are directed not to the human mediators they despised but to the divine mercy they rejected.</p>",
+    "8": "<p>The king returns to find Haman fallen on the couch where Esther reclined, and the king condemns him. The condemned man's proximity to the queen — misread as assault — seals his fate. The irony of Haman's final posture (prostrated before the one he sought to destroy) is the posture that every opponent of Christ will finally take: at the name of Jesus every knee shall bow (Phil 2:10). The prostration that comes from desperation at judgment is the perverted form of the worship that should have been freely given.</p>",
+    "9": "<p>Harbona, one of the eunuchs attending the king, mentions the gallows Haman prepared for Mordecai: behold, the gallows that Haman has prepared for Mordecai stands at Haman's house, fifty cubits high. The testimony of a witness against the condemned — volunteered at the decisive moment — accelerates the judgment. In the court of divine justice, every concealed act will be exposed (Luke 12:2-3). Haman's gallows, designed to be conspicuous (50 cubits), became conspicuous testimony against its builder.</p>",
+    "10": "<p>Haman was hanged on the gallows he had prepared for Mordecai. The instrument of intended destruction becomes the instrument of the destroyer's destruction. This is the pattern of the cross: the powers used the cross to destroy Christ and the cross destroyed them (Col 2:14-15: disarming the rulers and authorities and putting them to open shame). Galatians 6:7: a man reaps what he sows. The gallows built for another is the OT's most vivid narrative of the sowing-and-reaping principle at work in history.</p>"
   },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
   "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
+    "1": "<p>On that day King Ahasuerus gave to Queen Esther the house of Haman, the enemy of the Jews. The transfer of the enemy's assets to the covenant people is the reversal pattern's economic expression. Colossians 2:15: having disarmed the rulers and authorities, Christ put them to open shame, triumphing over them. The spoils of the defeated enemy belong to the victor and are distributed to those he has redeemed. Christ's victory over sin and death transfers their assets — life, righteousness, access to God — to those who were formerly their captives.</p>",
+    "2": "<p>The king's signet ring, which he had taken from Haman, is given to Mordecai. Esther set Mordecai over the house of Haman. The ring that seals royal decrees — the instrument of authority — passes from the defeated enemy to the one who was his intended victim. Christ's exaltation is the ultimate transfer of authority: all authority in heaven and on earth has been given to me (Matt 28:18). The one who was condemned receives the authority that his condemners wielded.</p>",
+    "3": "<p>Esther again speaks before the king, falling at his feet and weeping, to avert the evil plan of Haman against the Jews. The first deliverance (Haman's death) does not cancel the first decree — a second intervention is still needed. The gospel's own structure follows this pattern: Christ's death secures forgiveness, but the ongoing intercession (Heb 7:25) continues to apply that victory to each new situation. The mediator does not rest after the first victory but continues to intercede until the complete deliverance is secured.</p>",
+    "4": "<p>The king held out the golden scepter to Esther, and she rose and stood before the king. The repeated scepter-extension — the third time access has been granted — establishes the principle of continued access: the one who has been granted admission once is admitted again. Hebrews 4:16: let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need. Each new need becomes the occasion for a new approach to the throne, and the scepter of grace is extended again.</p>",
+    "5": "<p>Esther's petition: if it pleases the king, let an order be written to revoke the letters devised by Haman. The second petition addresses the structural problem that the first petition (Haman's death) could not solve: the irrevocable decree still stands against the Jews. Christ's work similarly addresses the structural problem that no individual act of mercy could solve: the decree of death against sinners was written in the moral law, and a counter-decree had to be issued through the cross (Rom 8:3-4: what the law could not do, God did).</p>",
+    "6": "<p>For how can I endure to see the evil that is coming to my people? How can I endure to see the destruction of my kindred? The intercessor's anguish — the inability to bear separation from those she represents — is the emotional core of all biblical intercession. Romans 9:3: I could wish that I myself were accursed and cut off from Christ for the sake of my brothers. Christ's anguish in Gethsemane (Luke 22:44: his sweat became like great drops of blood) is the ultimate embodiment of the intercessor's anguish — the Mediator who cannot bear the destruction of those for whom he pleads.</p>",
+    "7": "<p>King Ahasuerus says to Queen Esther and Mordecai: behold, I have given Esther the house of Haman, and they have hanged him on the gallows. The king summarizes what has been accomplished — Haman's death and the transfer of his estate — before addressing what remains. Christ's resurrection-declaration reviews what has been accomplished (it is finished, John 19:30) before commissioning the ongoing work. The completed first act creates the foundation for the continuing second act.</p>",
+    "8": "<p>Write as you please with regard to the Jews, in the name of the king, and seal it with the king's ring. For an edict written in the name of the king and sealed with the king's ring cannot be revoked. The second decree authorized by the king cannot override the first, but it can give the Jews the means to defend themselves against those who would execute the first. This is the structure of 2 Corinthians 1:20: all the promises of God find their Yes in Christ. The new covenant does not cancel the law but fulfills it in Christ — the second word given in the king's name enables life to operate within the framework that the first word established.</p>",
+    "9": "<p>The royal scribes are summoned and a new decree is written — to the Jews in their own script and language. The communication of the life-giving decree in the recipients' own language is the figure of Pentecost: each one heard them speaking in his own language (Acts 2:6). The life-saving message is not delivered in a foreign tongue but in the language of those whose lives depend on receiving it. The gospel is always translated — the decree of life speaks in every language.</p>",
+    "10": "<p>The decree is written in the name of King Ahasuerus and sealed with the king's ring, and letters are sent by mounted couriers riding swift horses. The urgent dispatch of the life-giving decree mirrors the urgency of the apostolic mission: go into all the world and proclaim the gospel to the whole creation (Mark 16:15). The message that brings life must travel as fast as possible to those who are still under the death-sentence they have not yet heard has been countered.</p>",
+    "11": "<p>The king allows the Jews in every city to gather and defend their lives, to destroy, kill, and annihilate any armed force that might attack them. The authorization to resist — the right of self-defense granted by royal decree — is the figure of Ephesians 6:10-13: be strong in the Lord and in the strength of his might; put on the whole armor of God, that you may be able to stand against the schemes of the devil. The decree of life comes with the authorization to stand against those who execute the decree of death.</p>",
+    "12": "<p>This decree was to be carried out on the same day throughout all the provinces — on the thirteenth day of the twelfth month, the month of Adar. The single appointed day when both decrees would be operative — the day of conflict and reversal — corresponds to the single decisive moment of the cross and resurrection. The battle of salvation was fought and won on specific historical days; the cosmic conflict between life and death was resolved on the day when both decrees came to their implementation.</p>",
+    "13": "<p>A copy of the edict was to be issued as law in every province and published to all peoples, so that the Jews should be ready to avenge themselves on their enemies. The proclamation to all peoples — every province, every city — anticipates the gospel's universal reach: this gospel of the kingdom will be proclaimed throughout the whole world as a testimony to all nations (Matt 24:14). The life-giving decree must reach every person under the death-sentence before the appointed day arrives.</p>",
+    "14": "<p>The couriers went out hurriedly, pressed by the king's command. The urgent haste with which the life-saving decree is dispatched mirrors Paul's sense of apostolic urgency: woe to me if I do not preach the gospel (1 Cor 9:16). The couriers on swift horses are the preachers whose feet are beautiful because they bring good news (Rom 10:15, citing Isa 52:7). The gospel is always urgent because the appointed day is coming and the message of life must arrive before it.</p>",
+    "15": "<p>Mordecai went out from the presence of the king in royal robes of blue and white with a golden crown and a robe of fine linen and purple. The covenant people's representative emerges from the throne room clothed in royal garments — the honor of the king's court conferred on the one who was threatened with execution. Christ's exaltation is the ultimate royal robing: the one stripped of his garments (John 19:23-24) is clothed in glory at the resurrection and invested with all authority (Matt 28:18). Mordecai's royal garments are the figure of Christ's resurrection-glory.</p>",
+    "16": "<p>For the Jews there was light and gladness and joy and honor. The fourfold description of the reversal experienced by the covenant people — light, gladness, joy, honor — is the inventory of what the gospel restores. 1 Peter 2:9: you are a chosen race, a royal priesthood, a holy nation, a people for his own possession, that you may proclaim the excellencies of him who called you out of darkness into his marvelous light. The movement from darkness to light, from shame to honor, from mourning to gladness is the gospel's structural pattern.</p>",
+    "17": "<p>In every province and in every city, wherever the king's command and his edict reached, there was gladness and joy among the Jews. And many from the peoples of the country declared themselves Jews, because fear of the Jews had fallen on them. The voluntary joining of Gentiles to the covenant people when they see the reversal of fortune — the nations coming in when they observe what God has done for his people — is the figure of Gentile inclusion in the new covenant. Zechariah 8:23: in those days ten men from every language of the nations shall take hold of the robe of a Jew, saying, let us go with you, for we have heard that God is with you.</p>"
+  },
   "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
-  "4": {
-    "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
-    ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+    "1": "<p>On the day when the enemies of the Jews hoped to gain power over them, the opposite occurred: the Jews themselves gained mastery over those who hated them. The great reversal on the appointed day of destruction is the Esther narrative's Christological core. 1 Corinthians 1:25: the foolishness of God is wiser than men, and the weakness of God is stronger than men. The cross appeared to be the day the powers gained mastery over Christ; it was the day Christ gained mastery over them (Col 2:15). The day of expected defeat was the day of decisive victory.</p>",
+    "2": "<p>The Jews gathered in their cities to lay hands on those who sought to harm them. No one could stand against them because the fear of them had fallen on all peoples. The reversal of fear — what the Jews experienced from their enemies became what their enemies experienced from them — mirrors the cross's reversal of power. The one the powers feared was the one they crucified; through his resurrection, the one they crucified became the one the powers fear. Christ disarmed the rulers (Col 2:15), and what was under the power of death now rules over it.</p>",
+    "3": "<p>All the officials of the provinces, the satraps and the governors and the royal agents assisted the Jews because the fear of Mordecai had fallen on them. The officials who had previously enforced the death decree now assist those it targeted — the reversal extends to the civil apparatus. The conversion of Paul, the chief persecutor of the church, is the NT's most striking parallel: the one whose zeal for persecution drove the church's scattering became the one whose zeal for the gospel drove its growth (Acts 8:1-3; 9:1-22).</p>",
+    "4": "<p>Mordecai was great in the king's palace, and his fame spread throughout all the provinces as the man Mordecai grew more and more powerful. The post-reversal growth of the formerly threatened one is the pattern of the church's expansion after Pentecost: the word of God continued to increase and spread (Acts 12:24). The more the powers resist, the more the covenant community grows — Mordecai's increasing power under Persian rule mirrors the church's increasing scope under Roman opposition.</p>",
+    "5": "<p>The Jews struck down all their enemies with the sword, killing and destroying them, doing as they pleased to those who hated them. The defensive military action permitted by the second decree results in decisive victory against those who sought annihilation. The spiritual warfare language of the NT positions the church's mission in similar terms: we destroy arguments and every lofty opinion raised against the knowledge of God (2 Cor 10:5). The weapons are different but the authorization comes from the same source: the king's decree that permits the covenant people to stand and fight.</p>",
+    "6": "<p>In Susa the capital itself, the Jews killed and destroyed 500 men. The victory beginning in the capital city mirrors the Acts pattern: the gospel starting in Jerusalem, the religious and political center, before spreading outward (Acts 1:8). The decisive battles of the covenant are often fought at the center before expanding to the periphery.</p>",
+    "7": "<p>The deaths of Haman's ten sons are recorded by name. The specific enumeration — all ten — signals the completeness of the judgment on the household of the one who sought the Jews' destruction. Christ's victory is similarly comprehensive: he came to destroy the works of the devil (1 John 3:8) — not partially but completely. The entire household of the enemy is addressed in the final victory.</p>",
+    "8": "<p>The ten sons of Haman are listed by name. The naming of those who fell in the reversal — the precise accounting of the enemy's defeat — mirrors the comprehensive disclosure of the final judgment, where every work is revealed (1 Cor 3:13; Rev 20:12). Nothing is anonymous; every act and every actor is known to the one who keeps the records.</p>",
+    "9": "<p>A fifth son of Haman is listed among the slain. The continued accounting of Haman's household's defeat is the narrative's insistence on completeness: the reversal is not partial but total. Christ's victory over sin and death is not partial: he has destroyed death and brought life and immortality to light through the gospel (2 Tim 1:10). The victory on the appointed day is complete.</p>",
+    "10": "<p>The ten sons of Haman the Agagite, the foe of the Jews, they killed, but they did not lay their hands on the plunder. The notable restraint — the Jews refrain from the plunder they were authorized to take — distinguishes their victory from ordinary conquest. The gospel's victory over sin is not exploitative: Christ does not use his victory for personal gain but for the life of those he redeemed (Mark 10:45: the Son of Man came not to be served but to serve). The restrained victor whose power is exercised for others, not for himself, is the gospel pattern.</p>",
+    "11": "<p>The number of those killed in Susa the citadel is reported to the king. The accountability of the victory — reporting to the one who authorized it — models the stewardship principle. Every exercise of delegated authority is reported back to the one who granted it. Christ himself maintains this accountability: the Son does nothing of his own accord but only what he sees the Father doing (John 5:19), and I always do the things that are pleasing to him (John 8:29).</p>",
+    "12": "<p>The king says to Esther: the Jews have killed and destroyed 500 men and the ten sons of Haman; what then have they done in the rest of the king's provinces? Now what is your further request? The king's generosity continues — he invites another petition even after the major victory. Grace upon grace (John 1:16): the gospel's generosity does not conclude with the initial gift of salvation but continues to invite further petition, further fellowship, further access.</p>",
+    "13": "<p>Esther requests a second day for the Jews in Susa to carry out the edict, and that the sons of Haman be hanged on the gallows. The mediation continues even after the initial victory — Esther's ongoing intercession secures the complete deliverance. Christ's intercession at the Father's right hand is not a single completed event but a continuing ministry (Heb 7:25: he always lives to make intercession). The victory is won; the application of that victory to specific situations continues.</p>",
+    "14": "<p>The second decree is issued; the sons of Haman are hanged. The completion of the judgment that the initial decree authorized — carried to its full extent — mirrors the eschatological completion of what the cross accomplished. The cross secured the decisive victory; the final judgment will complete the implementation of that victory. Revelation 20:14: then Death and Hades were thrown into the lake of fire. The gallows built by the enemy become the final resting place of all who aligned with the enemy.</p>",
+    "15": "<p>On the fourteenth day of Adar the Jews in Susa gathered to kill 300 more men, but they laid no hand on the plunder. The repeated restraint from plunder marks the nature of this victory: it is not about enrichment but about preservation. Christ's redemptive work similarly refuses the spoils of power: though he was in the form of God, he did not count equality with God a thing to be grasped (Phil 2:6). The victory that refuses to exploit its own position is the pattern of kenotic love.</p>",
+    "16": "<p>The rest of the Jews in the king's provinces killed 75,000 of their foes but laid no hand on the plunder. The scope of the reversal is comprehensive — throughout all the provinces — but the restraint from plunder is equally comprehensive. The gospel's victory is universal in scope but not exploitative in nature. The cross accomplished a universal redemption (1 John 2:2: he is the propitiation for the whole world) but takes nothing for its own benefit.</p>",
+    "17": "<p>On the thirteenth day of Adar the Jews rested on the fourteenth day, making it a day of feasting and gladness. The pattern of combat followed by rest followed by celebration follows the creation pattern: work, then Sabbath rest (Gen 2:2-3). Christ's completed work — it is finished (John 19:30) — leads to the Sabbath rest in the tomb, then the resurrection-celebration. The feast of gladness that follows the combat is the image of the eschatological feast of the Lamb (Rev 19:9).</p>",
+    "18": "<p>The Jews who were in Susa gathered and rested on the fifteenth day and made that a day of feasting and gladness. The day of rest and celebration differs by one day from the provinces — both are valid, both are celebrated. The diversity of timing in the Purim observance models the church's flexibility in celebrating the gospel's victory: the substance is the same, the occasion may vary. Christ gave no exact calendar for the Lord's Supper — as often as you eat this bread (1 Cor 11:26) — while insisting on the permanent commemoration.</p>",
+    "19": "<p>The Jews of the villages, who live in the rural towns, make the fourteenth day of Adar a day for gladness and feasting and celebration. The celebration of the reversal is not limited to the capital or to the prominent communities — the rural towns observe it as fully as the citadel. The gospel's celebration belongs equally to the margins and the center. Christ came to seek the lost sheep, the lost coin, the prodigal son — the celebration of found things is as joyful in the village as in the palace (Luke 15:6-7).</p>",
+    "20": "<p>Mordecai recorded these events and sent letters to all the Jews in all the provinces, both near and far. The official recording and authoritative distribution of the Purim narrative mirrors the apostolic commissioning to go and tell what has been accomplished. Go and make disciples of all nations (Matt 28:19): the record of the redemptive event is to be distributed to those near and far. Mordecai as the author of the Purim record is the figure of the apostles as witnesses and recorders of the gospel events.</p>",
+    "21": "<p>Mordecai obligates all Jews to keep the fourteenth and fifteenth days of Adar every year as the days when the Jews got relief from their enemies. The establishment of an annual commemoration — the institutionalization of memorial practice — mirrors the Lord's Supper institution: do this in remembrance of me (Luke 22:19). Both institutions create communities whose identity is constituted by their annual/regular return to the founding act of deliverance.</p>",
+    "22": "<p>The days when the Jews got relief from their enemies, and the month that had been turned for them from sorrow into gladness and from mourning into a holiday — to make them days of feasting and gladness, of sending food portions to one another and gifts to the poor. The community's communal celebration — feasting, sharing, giving to the poor — is the social embodiment of the gospel. The Lord's Supper embodies the same triple structure: communal meal (1 Cor 11:20-22), sharing with one another, and care for those without (the problem Paul addresses in 1 Cor 11:17-22 is precisely the failure to share).</p>",
+    "23": "<p>The Jews confirmed what Mordecai had written — voluntarily taking on the commemoration as their own obligation. The community's ratification of the memorial practice is the figure of baptism as the community's voluntary adoption of covenant identity. Baptism is not imposed but requested — the baptized is the one who has heard the gospel and desires to identify with the community that lives by the redemption it commemorates.</p>",
+    "24": "<p>Haman the Agagite had plotted against the Jews to destroy them and had cast the pur — that is, the lot — to crush and to destroy them. The summary of Haman's scheme — and the naming of the lot (pur) that gave the festival its name — establishes the memorial's theological ground: what was intended for destruction became the occasion of celebration. The very name of the festival encodes the reversal: the lot (pur) that Haman cast to determine the date of genocide became the name of the annual celebration of survival. Christ's cross similarly encodes the reversal: the instrument of execution became the symbol of salvation.</p>",
+    "25": "<p>But when Esther came before the king, he gave orders in writing that his evil plan that he had devised against the Jews should return on his own head. The king's written order returning Haman's evil plan on his own head is the formal legal statement of the sowing-and-reaping principle. Romans 2:6: God will repay each person according to what they have done. The divine economy records every act and returns it; what is done against God's people is done against God and will be repaid.</p>",
+    "26": "<p>Therefore these days are called Purim, after the word pur. And because of all that was written in this letter, and of what they had faced in this matter, and of what had happened to them, the Jews established and accepted as a custom for themselves. The three-fold ground of the Purim observance — the official letter, the direct experience, and what happened to them — models the three grounds of the Christian's assurance: the word of Scripture, the testimony of the community, and personal experience of the gospel. Assurance rests on multiple reinforcing sources.</p>",
+    "27": "<p>The Jews firmly obligated themselves and their offspring and all who joined them that without fail they would keep these two days every year. The covenant obligation extending to offspring and to those who joined — the next generation and the proselytes — establishes the memorial's transgenerational reach. The gospel likewise is for you and for your children and for all who are far off (Acts 2:39). The covenant community's identity-forming practices are transmitted to the next generation and opened to those who join from outside.</p>",
+    "28": "<p>These days should be remembered and kept throughout every generation, in every clan, province, and city. And these days of Purim should never fall into disuse among the Jews, nor should the commemoration of these days cease among their descendants. The permanence of the Purim commemoration — never to cease — is the OT counterpart of Christ's institution: do this until I come (1 Cor 11:26). Both commemorations are permanent: Purim until the final redemption; the Lord's Supper until Christ's return. Neither will cease until the reality they commemorate arrives in its fullness.</p>",
+    "29": "<p>Queen Esther, the daughter of Abihail, and Mordecai the Jew wrote with full authority to confirm this second letter about Purim. The queen and the courier writing together — the intercessor and the advocate jointly confirming the memorial — mirrors the dual witness of Spirit and word in the church. The Spirit and the bride say, come (Rev 22:17). The memorial of the great reversal is confirmed by the one who made it happen (Mordecai/Christ) and the one who interceded for it (Esther/the Spirit-empowered church).</p>",
+    "30": "<p>Letters were sent to all the Jews, to the 127 provinces of the kingdom of Ahasuerus, in words of peace and truth. The comprehensive distribution of the Purim letters — words of peace and truth to every province — is the gospel's own commissioning: all authority has been given to me; go therefore and make disciples of all nations (Matt 28:18-19). Words of peace and truth: Ephesians 2:14 (he himself is our peace) and John 14:6 (I am the way, the truth, and the life). The one who sends the letters of peace is also the content of those letters.</p>",
+    "31": "<p>The days of Purim are to be kept at their appointed times, just as Mordecai the Jew and Queen Esther obligated them. The appointed times (moʿadîm) of the covenant calendar are the rhythm of the covenant community's life — the recurring markers of identity. Christ is himself the fulfillment of every appointed time (Col 2:16-17: these are a shadow of the things to come, but the substance belongs to Christ). The Purim moʿed points to the final redemption that Christ's resurrection has inaugurated.</p>",
+    "32": "<p>The command of Esther confirmed these practices of Purim, and it was recorded in writing. The written record of the Purim institution — confirmed by the highest authority and preserved in writing — mirrors the written preservation of the gospel: these things are written so that you may believe that Jesus is the Christ (John 20:31). The written record is not accidental but essential: the community's faith rests on the documented testimony to the acts of deliverance.</p>"
+  },
+  "10": {
+    "1": "<p>King Ahasuerus imposed tax on the land and on the coastlands of the sea. The brief mention of imperial taxation frames the conclusion: the Persian Empire with its power and reach is the backdrop against which Mordecai's greatness is set. Christ's greatness also stands against the backdrop of the world's empires: the kingdoms of the world will become the kingdom of our Lord and of his Christ (Rev 11:15). The tax-imposing empires of the world will eventually render their tribute to the one King whose kingdom will not be shaken (Heb 12:28).</p>",
+    "2": "<p>All the acts of his power and might, and the full account of the honor of Mordecai to which the king advanced him, are they not written in the Book of the Chronicles of the kings of Media and Persia? The official royal record of Mordecai's honor — preserved in the royal chronicles — mirrors the gospel's claim that Christ's acts are recorded for permanent testimony. John 21:25: were every one of them to be written, I suppose that the world itself could not contain the books that would be written. The book of Mordecai's honor is a small, provincial record; the book of Christ's acts exceeds every library.</p>",
+    "3": "<p>Mordecai the Jew was second in rank to King Ahasuerus, and he was great among the Jews and popular with the multitude of his brothers, for he sought the welfare of his people and spoke peace to all his offspring. The great man who seeks the welfare and speaks peace is the royal-servant figure fulfilled in Christ. Romans 8:29: he is the firstborn among many brothers. Ephesians 2:14: he himself is our peace. The man elevated to second-in-command over the empire who uses that position for the welfare and peace of the covenant community is the figure of Christ exalted to the Father's right hand (Acts 2:33), from which position he makes intercession for those who are his brothers (Heb 7:25; Rom 8:29).</p>"
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', 'esther')
+    merge_comm(c, DATA)
+    save_comm('mkt-christ', 'esther', c)
+    count = sum(len(v) for v in DATA.values())
+    print(f'esther mkt-christ: wrote {count} verses across ch 6-10')
 
 if __name__ == '__main__':
     main()

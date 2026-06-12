@@ -1,46 +1,40 @@
 """
-Job + Proverbs + Ecclesiastes + Song of Solomon — all four layers.
-Wisdom books: suffering and theodicy (Job), practical wisdom as Christ (Prov 8),
-vanity and meaning (Eccl), the love of Christ and the church (Song).
+MKT Christ Commentary — Job chapters 8–11
+Run: python3 scripts/zc-christ-job-8-11.py
+
+Source data used:
+- data/interlinear/job.json
+- data/translation/draft/mediating/job.json
+- data/commentary/mkt-christ/job.json (ch9:33 already present — skip)
+
+Key decisions in this range:
+- Ch8: Bildad's retribution theology is not simply false — it fails at the cross, where the
+  blameless one suffers and the guilty are restored. Each verse traces that inversion.
+- Ch9: The legal-fantasy structure makes it the book's richest Christological chapter —
+  the mediator longing (9:33), justification question (9:2), and defeat of chaos (9:13).
+- Ch10: Creator/creation relationship — Job's complaint about God as craftsman who destroys
+  his own work is the dark side of incarnation: God enters that very fragility.
+- Ch11: Zophar's theological claims about divine unsearchability and the call to repentance
+  are NT themes, though Zophar misapplies them to Job.
+- Directness levels used: type (structural anticipation), shadow (broad pattern),
+  theme (shared theological vocabulary), revelation of God (divine character disclosed)
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -50,187 +44,121 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# JOB
-# ============================
-
-JOB_ECHO = {
-  "1": {
-    "21": [
-      {"type": "allusion", "target": "Phil 4:11-12", "note": "The LORD gave, and the LORD has taken away; blessed be the name of the LORD — Job's response to total loss; Paul's 'I have learned, in whatever state I am, to be content' echoes the Job pattern of accepting both abundance and loss from the hand of God"}
-    ]
+JOB = {
+  "8": {
+    "1": "<p>A revelation of God: Bildad functions here as a theological adversary — confident, articulate, and wrong about the meaning of Job's suffering. The NT names the adversarial accuser of the righteous as Satan (Rev 12:10; cf. Job 1:9-11). Bildad's role as the voice of conventional condemnation anticipates the prosecutorial pattern that the gospel overturns: Christ stands as advocate, not accuser (1 John 2:1), silencing the voice that says suffering proves guilt.</p>",
+    "2": "<p>A theme: Bildad dismisses Job's speech as wind. The divine vindication at the close — 'you have not spoken of me what is right, as my servant Job has' (42:7) — is the pattern NT vindication follows: those condemned by human tribunal are vindicated by God. Christ's own words were dismissed as blasphemy (John 10:33); the resurrection is the divine 'what he said was right.'</p>",
+    "3": "<p>A revelation of God: the divine justice Bildad asserts is real and the NT confirms it — 'God is not mocked' (Gal 6:7) and he does not pervert justice. But the cross is where this principle reaches its greatest crisis and its deepest fulfillment: God is both just and the justifier of the one who has faith in Jesus (Rom 3:26). Bildad's principle stands; the mechanism is entirely different from what Bildad imagines.</p>",
+    "4": "<p>A shadow: Bildad applies the 'die for your own sins' principle mechanically to Job's children. Christ inverts this entirely — 'Christ died for sins once for all, the righteous for the unrighteous' (1 Pet 3:18). The one who had no sin of his own bears the sin of others; the Bildad principle fails not because it is false but because the gospel introduces a substitutionary logic that Bildad's mechanical retribution cannot contain.</p>",
+    "5": "<p>A theme: the call to seek God earnestly (<em>shachar</em>) is taken up in the NT as the pattern of seeking that finds (Matt 7:7-8). But where Bildad makes the seeking conditional and the outcome dependent on Job's prior purity, Christ removes the conditional: 'the Son of Man came to seek and save the lost' (Luke 19:10). The initiative is reversed — the seeking comes from God's side first.</p>",
+    "6": "<p>A theme: restoration to a 'righteous home' as the fruit of moral purity. The NT transforms this: the household of God is entered not by achieved purity but by imputed righteousness (2 Cor 5:21). The restoration Bildad offers conditionally, Christ secures by taking the condition upon himself.</p>",
+    "7": "<p>A shadow: 'your latter years will be far greater' — the pattern of end surpassing beginning recurs in Job 42:12 and finds its eschatological form in the NT: 'the sufferings of this present time are not worth comparing with the glory that is to be revealed' (Rom 8:18). Christ's resurrection is the first instance of latter-exceeding-former; the new creation will be greater than the first.</p>",
+    "8": "<p>A theme: the appeal to ancestral wisdom points toward the wisdom tradition's climax in Christ, 'in whom are hidden all the treasures of wisdom and knowledge' (Col 2:3). The 'former generations' Bildad cites are real — the tradition carries truth. But 1 Corinthians 1:24 names Christ as the wisdom of God in person: the tradition points toward him as its fulfillment.</p>",
+    "9": "<p>A theme: human brevity contrasted with divine permanence. The NT embraces this contrast: 'the world is passing away along with its desires, but whoever does the will of God abides forever' (1 John 2:17). The brevity of human life, which for Bildad is grounds for deference to ancestral tradition, for the NT is grounds for looking to the one who is 'the same yesterday and today and forever' (Heb 13:8).</p>",
+    "10": "<p>A theme: the elders who 'speak from the depths of their understanding' — wisdom transmitted through generations. The NT identifies Christ as the final and definitive teacher: 'but I say to you' (Matt 5:22, 28 etc.) is the formula by which Jesus surpasses and fulfills the accumulated wisdom of the tradition. The tradition is not wrong; it is incomplete without him.</p>",
+    "11": "<p>A shadow: the papyrus that withers without water is an image of dependent life — vitality that cannot sustain itself apart from its source. Christ applies this logic to himself as source: 'I am the vine; you are the branches. Whoever abides in me and I in him, he it is that bears much fruit, for apart from me you can do nothing' (John 15:5). The dependent-vitality pattern is the same; the source is identified.</p>",
+    "12": "<p>A theme: the apparent flourishing that conceals imminent withering — the green plant that dies suddenly. Christ warns of exactly this: the house built on sand looks fine until the storm comes (Matt 7:26-27). The distinction between genuine and counterfeit flourishing is the theme of the Sermon on the Mount, which addresses the same retribution-theology assumption Bildad holds.</p>",
+    "13": "<p>A theme: 'the hope of the godless will come to nothing' — the perishing of false hope. The NT contrasts this with the living hope grounded in the resurrection: 'we have been born again to a living hope through the resurrection of Jesus Christ from the dead' (1 Pet 1:3). Hope that is not grounded in Christ has exactly the character Bildad describes: it does not survive the test.</p>",
+    "14": "<p>A shadow: the spider's web as false security — elaborate but incapable of bearing weight. Christ's parable of the treasure hidden in a field (Matt 13:44) and the pearl of great price make the same point from the positive direction: the life that looks like abundance but lacks the one thing necessary is the life built on the web. The gospel is the one foundation that does not give way.</p>",
+    "15": "<p>A theme: the house that does not stand when leaned upon. Christ's parable of the two builders (Matt 7:24-27) is the direct NT parallel: the house built on sand collapses; the house built on the rock (the word of Christ) stands. Bildad is right that some foundations are illusory; he is wrong about which foundation Job is standing on.</p>",
+    "16": "<p>A theme: apparent flourishing in sunlight and water — the outward signs of divine favor that may conceal an unstable root. The NT's 'rocky ground' hearer (Mark 4:16-17) springs up joyfully but has no root and withers in persecution. The surface indicators of blessing (sun, water) do not guarantee the rootedness that endures.</p>",
+    "17": "<p>A theme: roots entangled in stones — the plant that forces its way into difficult terrain as a sign of aggressive vitality. The NT uses similar imagery for faith that finds a way despite obstacles; but here the image is used by Bildad to describe the wicked's overreach — a prosperity that has thrust itself into territory it cannot truly hold.</p>",
+    "18": "<p>A revelation of God: 'I have never seen you' — the place that forgets the wicked. The NT's reverse of this is the Father who 'runs' to meet the returning prodigal (Luke 15:20) — the opposite of erasure is recognition and welcome. The gospel promises that the penitent will not be told 'I never knew you'; that phrase is reserved for those who performed religious duty without knowing Christ (Matt 7:23).</p>",
+    "19": "<p>A theme: the earth that moves on without the wicked, filling the slot with new occupants. Ecclesiastes elaborates this as 'vanity'; the NT transforms it: 'the meek will inherit the earth' (Matt 5:5; Ps 37:11). The earth's indifference to the wicked is a form of judgment; its inheritance by the meek is a form of grace.</p>",
+    "20": "<p>A revelation of God: 'God does not reject the blameless.' This principle reaches its most extreme test at the cross, where the cry 'My God, my God, why have you forsaken me?' (Ps 22:1; Matt 27:46) seems to contradict it. But the resurrection is the definitive confirmation: God did not ultimately abandon the blameless one. The cross is the apparent exception that proves the rule; the empty tomb is the rule's vindication.</p>",
+    "21": "<p>A shadow: 'he will yet fill your mouth with laughter' — the restoration of joy promised to the penitent. The NT places the fullness of this joy in Christ: 'these things I have spoken to you, that my joy may be in you, and that your joy may be full' (John 15:11). The eschatological laughter Bildad promises is real; it comes through Christ, not through the repentance-mechanism Bildad prescribes.</p>",
+    "22": "<p>A theme: 'enemies will be clothed with shame, and the tent of the wicked will vanish' — the reversal of fortune for enemies of the righteous. The NT's eschatological expectation is the same: 'for he must reign until he has put all his enemies under his feet' (1 Cor 15:25). The defeat of enemies and the vindication of the righteous are the pattern of Christ's reign, which began at the resurrection and will be completed at his return.</p>"
   },
   "9": {
-    "33": [
-      {"type": "allusion", "target": "1 Tim 2:5", "note": "There is no arbiter between us who might lay his hand on both of us — Job's longing for a mediator who can bridge the gap between the holy God and the accused human; Paul's 'there is one mediator between God and men, the man Christ Jesus' is the direct answer to Job's longing: the mediator Job needed exists"}
-    ]
+    "1": "<p>A theme: Job responds to Bildad's confident theology not with counter-accusation but with a question. The posture of honest questioning before God — not performing, not defending — is the posture the NT associates with genuine prayer. 'He answered and said' without preamble or formula; the directness anticipates Christ's own blunt engagement with theological opponents.</p>",
+    "2": "<p>A direct anticipation: 'How can a man be justified before God?' is the central question of Paul's letter to the Romans. Job asks it from within suffering; Paul answers it from the cross: 'a person is not justified by works of the law but through faith in Jesus Christ' (Gal 2:16). Job does not know the answer, but his question is exactly right. The gospel is the answer to the question Job could only ask.</p>",
+    "3": "<p>A shadow: 'one could not answer him once in a thousand attempts' — the impossibility of prevailing against God in legal disputation. Christ is the one who speaks for us when we cannot answer: 'the Spirit himself intercedes for us with groanings too deep for words' (Rom 8:26), and Christ 'always lives to make intercession' for those who draw near (Heb 7:25). The human inability to answer God is met by a divine advocate who answers on humanity's behalf.</p>",
+    "4": "<p>A revelation of God: the wisdom and might of God that make him an impossible adversary in a legal contest are the same attributes that, in the NT, work for the redeemed rather than against them. 'If God is for us, who can be against us?' (Rom 8:31) — the God before whom no one could stand now stands on our side. The power Job fears has been redirected.</p>",
+    "5": "<p>A revelation of God: God who moves mountains without warning — the overwhelming power of divine initiative in creation. The NT applies this to faith: 'if you have faith like a grain of mustard seed, you will say to this mountain, Move from here to there, and it will move' (Matt 17:20). The mountain-moving power of God is accessible through Christ to those who trust him.</p>",
+    "6": "<p>A revelation of God: the God who shakes the earth from its place. The NT apocalyptic literature uses the same imagery for the final judgment (Heb 12:26-27, citing Hag 2:6): 'yet once more I will shake not only the earth but also the heavens.' This shaking is not destruction but the removal of what cannot last, so that 'what cannot be shaken may remain.'</p>",
+    "7": "<p>A revelation of God: God who commands the sun not to rise — sovereign over the natural order. The NT presents Christ as the one through whom all things were made (John 1:3) and in whom all things hold together (Col 1:17); his sovereignty over the natural order is demonstrated in stilling the storm (Mark 4:39) and in the darkening of the sun at his crucifixion (Luke 23:44-45).</p>",
+    "8": "<p>A type: 'who alone stretched out the heavens and walks on the crests of the sea' — the creator who treads the waters. The NT fulfillment is direct: Jesus walks on the water (Matt 14:25; John 6:19), exercising the prerogative of the creator who originally walked on the sea's heights. John 6 places this scene in close proximity to the feeding of the five thousand, linking it to God's provision in the wilderness.</p>",
+    "9": "<p>A revelation of God: God who made the constellations and orders the heavens. The NT identifies Christ as the agent of creation: 'all things were created through him and for him' (Col 1:16). The cosmos Job surveys — bear, Orion, Pleiades — exists through the one who will become the 'bright morning star' (Rev 22:16), taking his place among the astronomical imagery of Scripture.</p>",
+    "10": "<p>A revelation of God: 'great things beyond comprehension, marvels without number' — the doxological acknowledgment of divine incomprehensibility. The NT confirms this: 'Oh, the depth of the riches and wisdom and knowledge of God! How unsearchable are his judgments and how inscrutable his ways!' (Rom 11:33). The incomprehensibility is not an obstacle to relationship but the ground of awe.</p>",
+    "11": "<p>A theme: God who passes by invisibly — the hiddenness of divine presence. The NT addresses this through the incarnation: the Word became flesh and 'we have seen his glory' (John 1:14). The invisible God becomes visible in Christ: 'whoever has seen me has seen the Father' (John 14:9). The hiddenness Job experiences is the condition the incarnation is designed to address.</p>",
+    "12": "<p>A revelation of God: 'who will dare say to him, What are you doing?' — the inscrutable divine sovereignty. The NT does not eliminate this but contextualizes it: the one who acts without being questioned is the one who 'did not spare his own Son but gave him up for us all' (Rom 8:32). The sovereign who cannot be questioned chose to act in the most unexpected of ways — through the cross.</p>",
+    "13": "<p>A shadow: 'even the allies of Rahab crouched beneath him' — the defeat of the chaos monster and its allies. The NT's equivalent is the disarming of principalities and powers at the cross: Christ 'disarmed the rulers and authorities and put them to open shame, by triumphing over them in him' (Col 2:15). The cosmic defeat of chaos that Job's hymn attributes to God is fulfilled in the cross's defeat of death, sin, and the powers.</p>",
+    "14": "<p>A theme: 'how then can I answer him, or select my words to argue before him?' — the human inability to make a case before God. The NT's response is Christ as advocate: 'we have an advocate with the Father, Jesus Christ the righteous' (1 John 2:1). The argument is made not by the accused but by the one who is himself righteous, on behalf of those who cannot argue their own case.</p>",
+    "15": "<p>A type: 'even if I were righteous, I could not answer him; I would have to plead for mercy to my own judge' — the righteous one who must plead for mercy rather than justice. Christ, who was righteous, did not demand justice from the Father; he emptied himself and became obedient to death (Phil 2:8). His willingness to plead rather than demand is the pattern of redemption.</p>",
+    "16": "<p>A theme: 'I still could not believe he was truly listening to me' — the experience of prayer into apparent silence. The NT's response is the assurance of Christ's perpetual intercession: he 'always lives to make intercession for them' (Heb 7:25), so that the prayer offered in his name is never addressed to an inattentive judge.</p>",
+    "17": "<p>A shadow: 'he would crush me with a storm' — the storm as the vehicle of divine encounter. When God does appear to Job, it is indeed in the whirlwind (38:1). But in the NT, Christ sleeps in the storm (Mark 4:38) and then stills it — the one who was feared to be absent in the storm is present and exercises authority over it.</p>",
+    "18": "<p>A revelation of God: God who 'does not let me catch my breath' — the relentlessness of divine engagement, even in its most oppressive form. The NT transforms this: 'come to me, all who labor and are heavy laden, and I will give you rest' (Matt 11:28). The breath that Job cannot catch is given back in the rest Christ offers; the same divine intensity that overwhelms Job is, in Christ, redirected to relief.</p>",
+    "19": "<p>A theme: 'who can summon him to court?' — the inaccessibility of God to human legal process. The NT declares that on the cross, God himself submitted to human legal process: Jesus was tried, condemned, and executed under Roman law. The one who could not be summoned entered the human court willingly; the verdict of that court is overturned by resurrection.</p>",
+    "20": "<p>A theme: 'if I justified myself, my own mouth would condemn me' — the impossibility of self-justification before God. Paul's argument is identical: 'by works of the law no human being will be justified in his sight, since through the law comes knowledge of sin' (Rom 3:20). The only justification available is from outside the self — the righteousness of God through faith in Christ.</p>",
+    "21": "<p>A theme: 'I do not trust my own self-knowledge' — the limits of introspective certainty. Paul echoes this: 'I am not aware of anything against myself, but I am not thereby acquitted. It is the Lord who judges me' (1 Cor 4:4). The ground of confidence is not self-knowledge but the one who knows us fully and yet justifies us (1 Cor 13:12).</p>",
+    "22": "<p>A revelation of God: Job's darkest claim — that God destroys both blameless and wicked alike. The cross seems to confirm this: the blameless one dies. But the resurrection reveals the difference: the blameless one is raised, and his death is the very mechanism of the wicked's redemption. The apparent indiscriminacy at Golgotha resolves into the most precise act of divine discrimination ever performed.</p>",
+    "23": "<p>A shadow: 'he mocks at the calamity of the innocent' — the most extreme form of Job's protest against divine governance. From within the crucifixion, this appears true of Christ too: the bystanders mock (Matt 27:41-43), and heaven is silent. The resurrection answer is not that the mockery did not happen, but that God's silence was purposeful and temporary; the vindication is coming and is decisive.</p>",
+    "24": "<p>A revelation of God: 'the earth is given into the power of the wicked; he blindfolds its judges' — Job's reading of current world conditions. The NT agrees that the world currently lies under the power of the evil one (1 John 5:19); Satan is 'the ruler of this world' (John 12:31) for now. But the cross is the judgment of the ruler of this world: 'now will the ruler of this world be cast out' (John 12:31).</p>",
+    "25": "<p>A theme: 'my days are swifter than a runner' — the acceleration of time in suffering. The NT's response to the brevity of life is not stoic acceptance but eschatological hope: 'for the sufferings of this present time are not worth comparing with the glory that is to be revealed to us' (Rom 8:18). The swiftness of the days is reframed: they are brief precisely because the end is approaching.</p>",
+    "26": "<p>A theme: the swift papyrus boats, the diving eagle — images of irreversible speed. The NT uses similar imagery for the coming of the Son of Man: 'as lightning comes from the east and shines as far as the west, so will be the coming of the Son of Man' (Matt 24:27). The velocity that Job uses to describe the passing of his life is applied to the return of Christ.</p>",
+    "27": "<p>A theme: attempting to adopt a cheerful face as a strategy before God. The NT does not prescribe managed emotion before God but rather authenticity: 'pour out your heart before him; God is a refuge for us' (Ps 62:8). The pretense Job considers and rejects is the false piety Christ condemns in the Sermon on the Mount — performing righteousness to be seen (Matt 6:1).</p>",
+    "28": "<p>A theme: 'I dread all my suffering, for I know you will not acquit me' — the dread that the verdict is already against him. The NT reverses this for those in Christ: 'there is therefore now no condemnation for those who are in Christ Jesus' (Rom 8:1). The pre-emptive verdict of condemnation that Job fears has been pre-emptively overturned for those who are united to the one who bore condemnation in their place.</p>",
+    "29": "<p>A theme: 'if I am condemned already, why do I exhaust myself?' — the question of whether effort is meaningful in a rigged system. The NT's answer is that the system is not rigged against the believer but for them: 'we know that for those who love God all things work together for good' (Rom 8:28). The exhaustion of effort without hope is transformed into the labor of hope (1 Thess 1:3).</p>",
+    "30": "<p>A shadow: washing with snow water to achieve purity before God — the purification ritual that still leaves one defiled. The NT's parallel is Pilate washing his hands to declare innocence (Matt 27:24) — a gesture that does not achieve what it symbolizes. The Hebrews argument is that the law's purifications 'cannot perfect the conscience of the worshiper' (Heb 9:9); only the blood of Christ cleanses the conscience.</p>",
+    "31": "<p>A shadow: 'you would plunge me into a slime pit' — the impossibility of achieving the required purity by human effort. The NT's response is imputed righteousness: 'God made him who had no sin to be sin for us, so that in him we might become the righteousness of God' (2 Cor 5:21). The one who never needed to be cleansed takes the defilement so that the defiled might be clean.</p>",
+    "32": "<p>A revelation of God: 'he is not a man as I am, that I could answer him' — the ontological gap between human and divine. The incarnation is the decisive response to this gap: the Word became flesh (John 1:14). God became 'a man as I am' precisely so that the conversation Job could not have is now possible. The 'not a man' condition is addressed by the one who was both fully God and fully human.</p>",
+    "34": "<p>A type: 'let him remove his rod from me, let his terror not overwhelm me' — the petition that the instrument of divine discipline be withdrawn. The NT's response is that Christ absorbed the rod of divine wrath on behalf of those who trust him: 'he was pierced for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace' (Isa 53:5). The terror that overwhelms Job fell on Christ; those sheltered in him are no longer overwhelmed by it.</p>",
+    "35": "<p>A shadow: 'then I would speak without fear, for I am not so in myself' — the conditional freedom that Job cannot access. The NT's assurance is that this condition has been met: 'in him and through faith in him we may approach God with freedom and confidence' (Eph 3:12). The 'in myself' condition Job could never meet is replaced by the 'in him' condition — the righteousness that is not one's own but is received.</p>"
   },
-  "19": {
-    "25": [
-      {"type": "allusion", "target": "1 Cor 15:20", "note": "I know that my Redeemer lives, and at the last he will stand upon the earth — Job's confession of faith in a living Redeemer who will vindicate him after death; the resurrection of Christ is the answer to Job's hope: the Redeemer who lives has stood upon the earth, and because he lives Job will live also"}
-    ]
+  "10": {
+    "1": "<p>A theme: 'I will speak in the bitterness of my soul' — the honest lament that does not perform contentment before God. The NT's 'psalms, hymns, and spiritual songs' (Col 3:16) include the full range of human emotion; Christ himself was 'a man of sorrows, acquainted with grief' (Isa 53:3) and cried out from the cross (Matt 27:46). The bitterness of soul that Job expresses is taken up into the incarnation.</p>",
+    "2": "<p>A revelation of God: 'let me know why you bring charges against me' — the request for the legal basis of suffering. The NT's answer is that no charges remain against those in Christ: 'he has canceled the record of debt that stood against us with its legal demands. This he set aside, nailing it to the cross' (Col 2:14). The charges Job wants explained have been nailed to the cross for those who are found in the one who bore them.</p>",
+    "3": "<p>A revelation of God: 'does it please you to oppress... while you smile on the plans of the wicked?' — the apparent divine inconsistency. The NT's answer is that God's apparent inaction toward the wicked is patience, not indifference: 'the Lord is not slow to fulfill his promise as some count slowness, but is patient toward you, not wishing that any should perish' (2 Pet 3:9). The smile is not approval but forbearance.</p>",
+    "4": "<p>A revelation of God: 'do you have eyes of flesh?' — the question about the nature of divine perception. The NT reveals that God's perception exceeds fleshly limitation: 'no creature is hidden from his sight, but all are naked and exposed to the eyes of him to whom we must give account' (Heb 4:13). Yet the same text assures us we have a high priest 'who in every respect has been tempted as we are' (Heb 4:15) — one who sees from both sides.</p>",
+    "5": "<p>A revelation of God: 'are your days like those of a human being?' — the divine eternity contrasted with human brevity. The NT names Christ as the one who is 'the same yesterday and today and forever' (Heb 13:8) and yet entered human temporality in the incarnation. The eternal took on numbered days so that human days might not simply end in dust.</p>",
+    "6": "<p>A theme: the divine investigation of human sin — 'you search out my wrongdoing.' The NT transforms the divine investigator: Christ has taken the full investigation upon himself as our representative, knowing the answer and bearing its consequences. 'He himself bore our sins in his body on the tree' (1 Pet 2:24) — the inquiry concluded, the sentence borne.</p>",
+    "7": "<p>A revelation of God: 'though you know I am not guilty, and no one can rescue me from your power' — the divine omniscience that coexists with apparent divine inaction. The NT resolves this: God's knowledge of our innocence (or in the reverse case, our guilt) is not inert — it is the basis of Christ's substitutionary action. 'God made him who had no sin to be sin for us' (2 Cor 5:21) — the divine knowledge of sinlessness is made the very basis of the exchange.</p>",
+    "8": "<p>A revelation of God: 'your hands shaped and formed me... and now you turn and destroy me' — the creator who appears to unmake what he made. The NT answers with resurrection: the God who makes does not ultimately unmake. Christ's body — formed, crucified, and buried — is raised imperishable (1 Cor 15:42). The hands that made are the hands that raise.</p>",
+    "9": "<p>A shadow: 'you formed me like clay; will you now bring me back to dust?' — the question of whether the formative act will be undone by death. The NT's answer is the resurrection of the body: the dust that God formed will be raised — 'it is sown in dishonor; it is raised in glory. It is sown in weakness; it is raised in power' (1 Cor 15:43). The clay becomes something that surpasses what it was before.</p>",
+    "10": "<p>A shadow: 'poured out like milk, curdled like cheese' — the fragile process of human formation. The incarnation is the Word taking on exactly this fragility: 'the Word became flesh' (John 1:14) — flesh formed in the same process Job describes. Christ took on the contingent, vulnerable formation of human life so that human formation might be secured by the resurrection.</p>",
+    "11": "<p>A shadow: 'you clothed me with skin and flesh, and knit me together with bones and sinews' — God as the craftsman of human physical form. The NT applies this to the incarnation: the same God who knit human bodies together knit himself into a human body in the womb of Mary. 'The body you prepared for me' (Heb 10:5, citing Ps 40:6) — the divine craftsman entered his own craft.</p>",
+    "12": "<p>A revelation of God: 'you gave me life and steadfast love, and your watchful care preserved my spirit' — the positive foundation under the lament. This is the covenant character of God (<em>chesed</em>) that the NT declares is secured permanently in Christ: 'who shall separate us from the love of Christ?' (Rom 8:35). The steadfast love that Job acknowledges as past reality is, in the NT, declared indestructible.</p>",
+    "13": "<p>A theme: 'these things you hid in your heart; I know that this was your purpose all along' — Job's suspicion that God had a concealed agenda. The NT reveals that God did have a hidden purpose in suffering — but it is grace, not destruction: 'this was according to the eternal purpose that he has realized in Christ Jesus our Lord' (Eph 3:11). The hidden purpose behind suffering is redemption.</p>",
+    "14": "<p>A theme: 'if I sin, you take note of it and will not let my guilt go' — the divine record-keeping of sin. The NT's transformation is the forgiveness that removes the record: 'I will remember their sins and their lawless deeds no more' (Heb 10:17, citing Jer 31:34). The same God who takes note of sin, in the new covenant, commits to no longer remembering it.</p>",
+    "15": "<p>A theme: 'if I am righteous, I still cannot hold my head up' — the honor that cannot be claimed even in innocence. Christ is the one who, though righteous, was 'despised and rejected by men' (Isa 53:3), and whose vindication came not through self-assertion but through divine declaration at the resurrection (Acts 2:36). The lifted head comes from God, not from self.</p>",
+    "16": "<p>A revelation of God: 'you hunt me like a fierce lion' — God as the relentless pursuer. The NT's reversal is the Hound of Heaven image: the divine pursuit is redemptive, not predatory. The shepherd who leaves the ninety-nine to seek the lost one (Luke 15:4-7) transforms the fearful lion-hunt into a loving search.</p>",
+    "17": "<p>A theme: 'fresh witnesses against me, wave after wave of trouble' — the accumulating case against Job. The NT's response is that Christ took the full accumulation: 'surely he has borne our griefs and carried our sorrows' (Isa 53:4). The witnesses that arraigned Job were borne by the one on whom every grief was laid.</p>",
+    "18": "<p>A shadow: 'why then did you bring me out of the womb?' — the birth-curse in its most extreme form. The NT answers the question of why God brings creatures into a world of suffering: 'God so loved the world' (John 3:16) — existence in this broken world is the precondition for the love that redeems it. Christ himself was 'brought out of the womb' into poverty and danger (Matt 2:13-15) so that human existence might be met from the inside.</p>",
+    "19": "<p>A theme: 'I should have been carried from the womb to the grave' — the wish to have escaped existence. The incarnation is the definitive statement that human existence is worth entering: the eternal Son of God chose the womb, chose the numbered days, chose the tomb. The existence Job wishes he had been spared is the existence the Son of God declared worth taking on.</p>",
+    "20": "<p>A shadow: 'are my days not few? leave me alone that I may have a little relief before I go' — the plea for a brief respite before death. Christ offers not a brief respite but permanent rest: 'come to me, all who labor and are heavy laden, and I will give you rest' (Matt 11:28). The rest before death that Job requests is transformed into the rest that conquers death.</p>",
+    "21": "<p>A shadow: 'before I go to the land of darkness and the shadow of death, from which there is no return' — the finality of Sheol. The NT reverses the 'no return': Christ 'was declared to be the Son of God in power according to the Spirit of holiness by his resurrection from the dead' (Rom 1:4). He returned from the land of no return; his resurrection is the first breach in Sheol's wall.</p>",
+    "22": "<p>A shadow: the underworld as 'utter gloom... where even the light is as darkness' — the place of formless disorder that recalls Gen 1:2. The NT places Christ's descent into this very realm: 'he descended to the dead' (Apostles' Creed; 1 Pet 3:19). The light that is as darkness in Sheol is met by the one who is 'the light of the world' (John 8:12), who entered the deepest darkness and was not extinguished by it.</p>"
   },
-  "38": {
-    "4": [
-      {"type": "allusion", "target": "John 1:1", "note": "Where were you when I laid the foundation of the earth? — the divine speech from the whirlwind (chs. 38-41) confronts Job with the Creator's incomprehensible majesty; John 1:1 grounds Christ as the one who was present at that foundation: in the beginning was the Word, and the Word was with God — the one speaking from the whirlwind and the one who became flesh are the same person"}
-    ]
-  }
-}
-
-JOB_ORIGINAL = {
-  "19": {
-    "25": "<p><strong>vaani yadati goa'li chai ve'acharon al afar yaqum</strong>: 'For I know that my Redeemer [<em>go'el</em>] lives, and at the last he will stand upon the earth' (or 'upon the dust'). This is one of the OT's most disputed verses — the text is difficult (the next verse, 19:26, is even more so: 'after my skin has thus been destroyed, yet in my flesh I shall see God'). The term <em>go'el</em> (kinsman-redeemer) in the context of Job's suffering suggests: the one who will vindicate Job after death, who will see to it that justice is done. Whether Job envisions a bodily resurrection (as 19:26 suggests in the MT) or a post-mortem vindication, the theological content is the same: a personal Redeemer who is alive, who will act at the last, who will secure Job's vindication. The NT identifies this Redeemer as Christ (1 Cor 15:20: Christ has been raised from the dead, the firstfruits of those who have fallen asleep).</p>"
-  },
-  "38": {
-    "4": "<p>The divine speech from the whirlwind (Job 38-41) is the OT's most extended meditation on the incomprehensibility and majesty of God. YHWH's questions ('Where were you when I laid the foundation of the earth? Tell me, if you have understanding') do not answer Job's question about suffering — they reframe it by confronting Job with the Creator's perspective. The response to theodicy is not a logical explanation but a theophanic encounter: when Job sees YHWH, his questions are transformed, not answered (42:5: 'my eye sees you'; he is satisfied). This pattern — suffering resolved not by explanation but by encounter with God — points to the incarnation: the answer to the problem of suffering is not a theodicy argument but the Son of God entering the suffering and going through it.</p>"
-  }
-}
-
-JOB_CONTEXT = {
-  "1": {
-    "1": "<p>Job is the OT's most direct engagement with the problem of innocent suffering. Its genre combines a prose frame (the prologue and epilogue) with a poetic center (the dialogues, Job 3-41). The prologue reveals what Job does not know: that his suffering is the result of a cosmic test. The dialogues work out the human perspective on suffering without that hidden knowledge. The friends defend the retributive justice principle (you suffer, therefore you sinned); Job insists on his innocence. Both are partially right: the friends are correct that suffering is related to sin in general (the cosmic fall), but wrong that Job's specific suffering is punishment for specific sin. YHWH's verdict (42:7-8: Job's friends 'have not spoken of me what is right, as my servant Job has') vindicates Job's complaint against easy theodicy.</p>"
-  }
-}
-
-JOB_CHRIST = {
-  "9": {
-    "33": "<p>A type: 'There is no arbiter between us who might lay his hand on us both, who would remove his rod from me, and let not dread of him terrify me.' Job's longing for a mediator is one of the Bible's most poignant anticipations of Christ. What Job needs is someone who can stand between the holy God and the accused human — with one hand on God and one hand on the human — securing Job's access to God without the terror. The incarnation is the answer: Jesus Christ 'laid his hand' on both realities, being fully God and fully human, so that 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). The mediator Job could only wish for, the NT declares has come.</p>"
-  },
-  "19": {
-    "25": "<p>A direct revelation: 'I know that my Redeemer lives, and at the last he will stand upon the earth.' Job's confession cuts through the fog of his suffering to affirm what cannot be seen or felt: a living Redeemer who will vindicate. The confession has multiple levels of fulfillment in Christ: (1) the Redeemer lives — Christ's resurrection is the demonstration; (2) he will stand upon the earth at the last — the parousia; (3) 'in my flesh I shall see God' (v. 26) — the bodily resurrection of the righteous. Job, in the depths of suffering and loss, speaks one of Scripture's clearest affirmations of resurrection-hope and the personal Redeemer who makes it possible.</p>"
-  }
-}
-
-# ============================
-# PROVERBS
-# ============================
-
-PROV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "Col 2:3", "note": "The fear of the LORD is the beginning of wisdom — Proverbs' foundational maxim; Paul says in Christ are hidden all the treasures of wisdom and knowledge (Col 2:3): Christ is where the 'fear of the LORD leads, the source from whom all wisdom flows"}
-    ]
-  },
-  "8": {
-    "22": [
-      {"type": "allusion", "target": "John 1:1", "note": "The LORD possessed me at the beginning of his work, the first of his acts of old — Wisdom speaking in Proverbs 8:22-31; personified Wisdom present at creation, delighting in the inhabited world; the Logos-Wisdom identification (John 1:1-3; Col 1:15-16; Heb 1:2-3) applies the Prov 8 Wisdom-portrait to the pre-incarnate Christ"},
-      {"type": "allusion", "target": "Col 1:15", "note": "I was beside him like a master workman, rejoicing before him always — Wisdom as God's artisan in creation (Prov 8:30); Paul describes Christ as the one in whom all things were created (Col 1:16) and through whom all things were made (John 1:3); the Wisdom-Creator becomes the Christ-Creator"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Heb 12:5-6", "note": "My son, do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves — Hebrews quotes Prov 3:11-12 to explain suffering as divine discipline: God treats believers as sons (Heb 12:7); the wisdom perspective on suffering as fatherly training is the theological framework for the Christian endurance of hardship"}
-    ]
-  }
-}
-
-PROV_ORIGINAL = {
-  "8": {
-    "22": "<p><strong>YHWH qanani reshit darko qedem mifalav meaz</strong>: 'The LORD possessed/created me at the beginning of his work, the first of his acts of old.' The verb <em>qanah</em> is disputed: it can mean 'to acquire/possess' (so most LXX manuscripts, Aquila, Theodotion) or 'to create' (so the Arian controversy reading, applied to prove the Son was a created being). The Nicene theology responded: even if <em>qanah</em> means 'created', Proverbs 8 is personified Wisdom literature — a poetic device, not a literal description of a divine person's ontology. The NT applies Prov 8's Wisdom-portrait to the eternal Son (Col 1:15-17; Heb 1:2-3; John 1:1-3) not to prove the Son is created, but to show that the pre-existent Son is the referent of the Wisdom-personification: the figure the wisdom tradition was groping toward in poetic imagery became flesh in Christ.</p>"
-  }
-}
-
-PROV_CONTEXT = {
-  "1": {
-    "1": "<p>Proverbs is the OT's primary wisdom text — a collection of moral instruction, practical guidance, and theological reflection on the nature of a well-ordered life in YHWH's world. It is attributed to Solomon (1:1; 10:1; 25:1) with additions from other wise men (Agur, 30:1; Lemuel's mother, 31:1). Its theological foundation is the fear of YHWH (1:7; 9:10; 15:33): wisdom is not abstract intellectual skill but a disposition toward God and the moral order of creation. The longest section (chs. 1-9) frames the rest with the personification of Wisdom as a woman calling in the streets, building her house, offering her feast — while her counterpart, Folly, seduces the simple to death. The NT's identification of Christ as divine Wisdom (1 Cor 1:24, 30; Col 2:3) is the claim that the personification in Proverbs 8 was, in the fullness of time, made literal and personal.</p>"
-  }
-}
-
-PROV_CHRIST = {
-  "8": {
-    "30": "<p>A revelation of God: 'Then I was beside him, like a master workman, and I was daily his delight, rejoicing before him always, rejoicing in his inhabited world and delighting in the children of man.' Wisdom's delight in creation and in humanity (Prov 8:30-31) is the OT's most personal statement of the divine affection for the created order. The NT applies this portrait to the eternal Son: 'by him all things were created' (Col 1:16); 'all things were made through him' (John 1:3); 'through whom also he created the world' (Heb 1:2). The Wisdom who rejoiced at creation is the Word who entered creation (John 1:14), and the delight Wisdom expressed for the children of man is the love that sent the Son into the world (John 3:16). Proverbs 8's Wisdom-portrait is the poetic anticipation of the incarnate Logos who is himself divine wisdom in person (1 Cor 1:24: Christ the wisdom of God).</p>"
-  }
-}
-
-# ============================
-# ECCLESIASTES
-# ============================
-
-ECCL_ECHO = {
-  "1": {
-    "2": [
-      {"type": "allusion", "target": "Rom 8:20", "note": "Vanity of vanities, all is vanity — the Preacher's diagnosis of the futility of all earthly striving; Paul's 'the creation was subjected to futility [mataiotes = the LXX word for hevel/vanity]' applies Ecclesiastes' diagnosis to the whole created order: the vanity is not merely human experience but creation-wide, awaiting the liberation of the resurrection"}
-    ]
-  },
-  "12": {
-    "13": [
-      {"type": "allusion", "target": "Matt 22:37-40", "note": "Fear God and keep his commandments, for this is the whole duty of man — the Preacher's final summary of the human vocation: the fear of YHWH and covenant obedience are the answer to the vanity of all other human projects; Jesus's summary (love God and love neighbor) is the new covenant distillation of the same conclusion"}
-    ]
-  }
-}
-
-ECCL_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>havel havalim amar qohelet havel havalim hakol havel</strong>: 'Vanity of vanities, says the Preacher, vanity of vanities! All is vanity.' The Hebrew <em>hevel</em> (vapor, breath, vanity) is used 38 times in Ecclesiastes — more than in any other biblical book. It literally means a breath of air that passes immediately: something that exists momentarily and then is gone. The LXX translates <em>hevel</em> as <em>mataiotes</em> (futility, vanity), and Paul uses this word in Romans 8:20: 'the creation was subjected to futility [<em>mataiotes</em>].' The Ecclesiastes diagnosis is therefore not pessimism but realism about the post-fall condition of creation: all earthly striving that does not account for God and eternity is, sub specie aeternitatis, vapor. The NT's response is the resurrection, which gives permanence to what was formerly vapor: 'your labor in the Lord is not in vain' (1 Cor 15:58).</p>"
-  }
-}
-
-ECCL_CONTEXT = {
-  "1": {
-    "1": "<p>Ecclesiastes (Hebrew <em>Qohelet</em>, 'the Preacher/Assembler') is the most theologically challenging book of the wisdom literature — it appears to endorse cynicism (2:24: 'there is nothing better for a person than to eat and drink'), relativism (3:1-8: a time for everything), and even doubt (9:5: the dead know nothing). Its canonical function is the 'foil' in the wisdom dialogue: if Proverbs gives the optimistic wisdom perspective, Ecclesiastes gives the honest reckoning with what happens when wisdom is pursued 'under the sun' — that is, within the frame of mortal, fallen human existence. The recurring phrase 'under the sun' (29 occurrences) marks the book's self-conscious limitation: it is wisdom from the earthly perspective, without the resurrection. The NT provides what Ecclesiastes lacks: the 'not in vain' of labor done in the Lord (1 Cor 15:58) and the hope that breaks the <em>hevel</em>-cycle.</p>"
-  }
-}
-
-ECCL_CHRIST = {
-  "12": {
-    "13": "<p>A shadow: 'Fear God and keep his commandments, for this is the whole duty of man.' Ecclesiastes' closing verdict after surveying all human wisdom is the simplest possible statement of the human vocation: the fear of God and covenant obedience. This is the wisdom tradition's answer to vanity — not a philosophical system but a personal relationship with the Creator. Jesus's summary of the law (love God, love neighbor) is the new covenant's positive restatement of what Ecclesiastes reaches as its final conclusion. But Christ does more than restate: he embodies the fear of God and covenant obedience perfectly (Heb 5:7-8: in the days of his flesh, Jesus offered up prayers and supplications with loud cries and tears ... and was heard because of his reverence; although he was a son, he learned obedience through what he suffered), and in his resurrection he breaks the <em>hevel</em>-cycle, proving that labor in the Lord — unlike all labor 'under the sun' — is not in vain (1 Cor 15:58).</p>"
-  }
-}
-
-# ============================
-# SONG OF SOLOMON
-# ============================
-
-SONG_ECHO = {
-  "2": {
-    "16": [
-      {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
-    ]
-  },
-  "8": {
-    "6": [
-      {"type": "allusion", "target": "Rom 8:35-39", "note": "Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD — the Song's declaration of love's unconquerable strength; Paul's conviction that nothing can separate us from the love of God in Christ Jesus is the new covenant answer to the Song's vision of love stronger than death: Christ's love has defeated death itself and remains unbreakable"}
-    ]
-  }
-}
-
-SONG_ORIGINAL = {
-  "1": {
-    "1": "<p>The Song of Songs (<em>shir hashirim</em>) is the OT's wisdom-meditation on human love and sexuality. Its literal level — a celebration of erotic love between a man and a woman — is taken seriously by responsible interpreters as a canonical affirmation of marriage and the goodness of sexual love within covenant. The allegorical level — YHWH's love for Israel (the Jewish interpretation) or Christ's love for the church (the dominant Christian interpretation) — has been the dominant hermeneutical approach through most of church history (Origen's commentary and Bernard of Clairvaux's 86 sermons on Song 1-2 are the most extensive examples). The allegorical reading is supported by the OT's consistent use of the husband-wife metaphor for YHWH-Israel (Isa 54:5; Jer 2:2; Ezek 16; Hos 1-3) and the NT's application of the bride-bridegroom image to Christ-church (Eph 5:25-32; Rev 19:7-9; 21:2). The two readings are not mutually exclusive: the literal is the foundation that gives the allegorical its force.</p>"
-  },
-  "8": {
-    "6": "<p><strong>simeini kachotam al libecha kachotam al zeroa'echa ki azza kamavet ahavah qasha kishol qina'ah reshefeyha reshefei esh shalhevetyah</strong>: 'Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the LORD.' The climax of the Song's celebration of love: it is as strong as death and as fierce as <em>sheol</em> — the two most powerful forces in human experience. <em>Shalhevetyah</em> (the very flame of the LORD) — uniquely, this is one of the few places in the Song where the divine name appears, even embedded in a word. The NT's fulfillment: the love of Christ has defeated death (1 Cor 15:54-57) and nothing can separate us from that love (Rom 8:38-39); what the Song claimed about love's unconquerability is literally true in Christ's resurrection.</p>"
-  }
-}
-
-SONG_CONTEXT = {
-  "1": {
-    "1": "<p>The Song of Solomon's place in the canon was debated in rabbinic Judaism (Rabbi Akiva defended it: 'all the ages are not worth the day on which the Song of Songs was given to Israel; for all the writings are holy, but the Song of Songs is the Holy of Holies'); it was included in the Hebrew canon and subsequently in the Christian canon. The bride-bridegroom image is the OT's primary metaphor for the YHWH-Israel covenant relationship: Hosea (chs. 1-3) uses the marriage metaphor for covenant and its violation; Isaiah 54:5 calls YHWH Israel's husband; Jeremiah 2:2 recalls the honeymoon period of the wilderness. The NT develops the bridegroom imagery specifically for Jesus (Mark 2:20: the bridegroom is taken away; John 3:29: the friend of the bridegroom rejoices; Eph 5:25-32: husbands love your wives as Christ loved the church; Rev 19:7: the marriage of the Lamb has come).</p>"
-  }
-}
-
-SONG_CHRIST = {
-  "2": {
-    "16": "<p>A revelation of God: 'My beloved is mine, and I am his.' The Song's vision of mutual possession between lover and beloved is the OT's most intimate description of the covenant relationship. In the NT, this mutual possession is fulfilled in the Christ-church relationship: 'You are not your own, for you were bought with a price' (1 Cor 6:19-20); 'I am my beloved's and my beloved is mine' becomes 'I live, and yet not I, but Christ lives in me' (Gal 2:20). The mutual knowing of bride and groom (I know my sheep and my sheep know me, John 10:14) is the new covenant's personal form of the Song's mutual possession. The eschatological fulfillment is the marriage of the Lamb (Rev 19:7-9; 21:2): the Song's vision of complete love is consummated in the new creation when the Bride has made herself ready.</p>"
-  },
-  "8": {
-    "6": "<p>A direct revelation: 'Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD.' The Song declares love's unconquerable strength in the face of the two most formidable opponents — death and sheol. The NT's claim is that this declaration is literally, not merely poetically, true in Christ: his love has conquered death (1 Cor 15:54-57: Death is swallowed up in victory; thanks be to God who gives us the victory through our Lord Jesus Christ) and the love of God in Christ is literally unconquerable (Rom 8:38-39: neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord). What the Song celebrates as love's aspiration, the resurrection announces as love's accomplished fact.</p>"
+  "11": {
+    "1": "<p>A theme: Zophar the Naamathite enters the debate with the most aggressive confidence of the three friends. His speech illustrates the danger of theological certainty misapplied — knowing the right doctrine but misreading the situation. The NT's warning is parallel: 'not everyone who says to me, Lord, Lord, will enter the kingdom of heaven' (Matt 7:21) — right terminology without right relationship or right perception fails.</p>",
+    "2": "<p>A theme: 'should a man of endless talk be counted righteous?' — the accusation that eloquence substitutes for righteousness. The NT does not equate verbal performance with righteousness; James 2:26 insists 'faith apart from works is dead.' But the NT equally resists the opposite: Job's words are vindicated in 42:7. Words that come from genuine encounter with God — even agonized, questioning words — are not empty.</p>",
+    "3": "<p>A theme: 'when you scoff, will no one rebuke you?' — the call for someone to hold Job accountable. The NT's pattern of correction is 'speaking the truth in love' (Eph 4:15), not the thundering condemnation Zophar models. The purpose of rebuke in the NT community is restoration, not prosecution (Gal 6:1).</p>",
+    "4": "<p>A revelation of God: 'you have said, my doctrine is right and I am clean in God's sight' — Zophar summarizes Job's position as arrogant self-justification. Ironically, Job's position is closer to correct than Zophar's. The NT's criterion for who is justified is precisely this: not the one who performs, but the one who honestly presents himself to God (Luke 18:13-14). Job's claim to cleanness before God is vindicated; Zophar's confident prosecution is rebuked.</p>",
+    "5": "<p>A shadow: 'if only God would speak and open his lips to answer you' — Zophar's wish for divine speech that would silence Job. God does speak — in the whirlwind (chs. 38-41) and supremely in the incarnation: 'Long ago, at many times and in many ways, God spoke to our fathers by the prophets, but in these last days he has spoken to us by his Son' (Heb 1:1-2). The divine speech Zophar hopes will condemn Job in fact vindicates him.</p>",
+    "6": "<p>A revelation of God: 'wisdom has more facets than you know' — the incomprehensibility of divine wisdom. The NT agrees, and identifies the fullness of that wisdom as the cross: 'the foolishness of God is wiser than men' (1 Cor 1:25). Zophar is right that God's wisdom exceeds human comprehension; he is wrong that this wisdom supports his condemnation of Job. The deepest expression of divine wisdom was the cross, which looks like foolishness and weakness to conventional eyes.</p>",
+    "7": "<p>A revelation of God: 'can you search out the deep things of God?' — the limit of human investigation. The NT confirms the limit and then announces a revelation beyond it: 'these things God has revealed to us through the Spirit. For the Spirit searches everything, even the depths of God' (1 Cor 2:10). The unsearchable God has made himself known; the depths Zophar says cannot be sounded have been disclosed in Christ.</p>",
+    "8": "<p>A revelation of God: 'higher than the heavens — what can you do? deeper than Sheol — what can you know?' — the vertical incomprehensibility of God. The NT identifies Christ as the one who traverses this entire vertical axis: 'he who descended is the one who also ascended far above all the heavens, that he might fill all things' (Eph 4:10). The height and depth that define God's immeasurability are the exact coordinates of Christ's humiliation and exaltation.</p>",
+    "9": "<p>A revelation of God: 'longer than the earth and broader than the sea' — the horizontal totality of divine wisdom. Paul prays that believers 'may have strength to comprehend with all the saints what is the breadth and length and height and depth, and to know the love of Christ that surpasses knowledge' (Eph 3:18-19). Zophar's four-direction immensity is taken up in Paul's prayer, where the immeasurable thing is not divine judgment but divine love.</p>",
+    "10": "<p>A revelation of God: 'if he sweeps through, imprisons, and convenes a court — who can stop him?' — the unstoppable divine initiative in judgment. The NT's framing: this same unstoppable sovereignty is operative in redemption. 'He who did not spare his own Son but gave him up for us all — how will he not also with him graciously give us all things?' (Rom 8:32). The sweep of divine action that Zophar invokes for judgment is equally powerful in grace.</p>",
+    "11": "<p>A revelation of God: 'he knows worthless people; when he sees iniquity, does he not take note?' — the divine omniscience applied to moral detection. The NT's eschatological confirmation: 'he will bring to light the things now hidden in darkness and will disclose the purposes of the heart' (1 Cor 4:5). But the same text notes that this judgment belongs to Christ; the purpose is not condemnation but proper recognition.</p>",
+    "12": "<p>A theme: 'a hollow-headed man will become wise when a wild donkey gives birth to a human being' — Zophar's proverb of impossibility. The NT announces that what is humanly impossible has happened: the Spirit gives wisdom to those who ask (Jas 1:5); the foolish things of the world are chosen to shame the wise (1 Cor 1:27). The transformation Zophar declares impossible is the daily business of grace.</p>",
+    "13": "<p>A theme: 'if you would prepare your heart and stretch out your hands toward him' — the call to prayer as the path to restoration. The NT transforms the conditionality: the prayer of approach is possible not because of a prepared heart but because of Christ's prepared access: 'let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need' (Heb 4:16). The posture is the same; the basis is entirely different.</p>",
+    "14": "<p>A theme: 'if there is sin in your hand, remove it' — the call to remove sin as the precondition of restored relationship with God. The NT's direction of movement is reversed: 'if we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness' (1 John 1:9). The removal of sin is the result of coming to God, not the precondition for it.</p>",
+    "15": "<p>A shadow: 'you will lift up your face without shame; you will stand firm and have no fear' — the promise of restored dignity before God. The NT's permanent version: 'there is therefore now no condemnation for those who are in Christ Jesus' (Rom 8:1). The lifted face, the standing firm, the absence of fear — these characterize not those who have achieved moral purity but those who are covered by Christ's righteousness.</p>",
+    "16": "<p>A theme: 'you will forget your suffering; you will remember it only as water that has long since flowed on' — the relativizing of past pain by present restoration. The NT's eschatological version: 'he will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning nor crying nor pain anymore, for the former things have passed away' (Rev 21:4). The forgetting Zophar describes conditionally is promised unconditionally in the new creation.</p>",
+    "17": "<p>A theme: 'your life will shine brighter than noon' — the light imagery of restored prosperity. The NT's eschatological city 'has no need of sun or moon to shine on it, for the glory of God gives it light, and its lamp is the Lamb' (Rev 21:23). The noon-brightness Zophar promises as the fruit of repentance is the permanent condition of the new creation, lit not by natural light but by the glory of Christ.</p>",
+    "18": "<p>A theme: 'you will have confidence, because there is hope' — confidence grounded in hope. The NT's version: 'we rejoice in hope of the glory of God... because God's love has been poured into our hearts through the Holy Spirit' (Rom 5:2,5). The hope Zophar makes conditional on Job's repentance, the NT grounds in the love of God confirmed by the Spirit.</p>",
+    "19": "<p>A theme: 'you will lie down, and no one will make you afraid; many will come seeking your goodwill' — the restoration of security and social honor. The NT's eschatological peace: 'the God of peace will soon crush Satan under your feet' (Rom 16:20); 'the nations will walk by its light' (Rev 21:24) — the restored world attracts the nations not to a recovered patron but to the Lamb.</p>",
+    "20": "<p>A shadow: 'the eyes of the wicked will fail; their only hope is to breathe their last' — the wicked's last hope is death. The NT's most radical transformation: even for those whose only hope was once death, the resurrection means that death itself is no longer a final option but the threshold to judgment and, for those in Christ, to life. 'It is appointed for man to die once, and after that comes judgment' (Heb 9:27) — death is not the end but the transition.</p>"
   }
 }
 
 def main():
-    books = [
-        ('job', JOB_ECHO, JOB_ORIGINAL, JOB_CONTEXT, JOB_CHRIST),
-        ('proverbs', PROV_ECHO, PROV_ORIGINAL, PROV_CONTEXT, PROV_CHRIST),
-        ('ecclesiastes', ECCL_ECHO, ECCL_ORIGINAL, ECCL_CONTEXT, ECCL_CHRIST),
-        ('songofsolomon', SONG_ECHO, SONG_ORIGINAL, SONG_CONTEXT, SONG_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-christ', 'job')
+    merge_comm(existing, JOB)
+    save_comm('mkt-christ', 'job', existing)
+    total = sum(len(v) for v in JOB.values())
+    print(f'job mkt-christ: wrote {total} verse entries across ch 8-11')
 
 if __name__ == '__main__':
     main()

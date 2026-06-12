@@ -1,48 +1,39 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Context Commentary — Nehemiah chapters 1–4
+Run: python3 scripts/zc-context-nehemiah-1-4.py
+
+Source data used:
+- data/interlinear/nehemiah.json
+- data/translation/draft/mediating/nehemiah.json
+
+Key decisions in this range:
+- Ch1: Persian court setting; Artaxerxes I reign; "God of heaven" as diplomatic term; cupbearer role
+- Ch2: Night survey secrecy explained by Artaxerxes' prior halt order (Ezra 4:21);
+  Sanballat identified from Elephantine papyri; 'paradise' (pārdes) = royal forest
+- Ch3: Builder list covers 32 sections; cross-social participation noted; Tekoite nobles'
+  refusal is unusual negative notation in an official builder record
+- Ch4: Tobiah's fox taunt echoes Lamentations 5:18; Nehemiah's work-and-weapon strategy
+  activates Deuteronomic Holy War tradition; ch1:1 already exists, skip it
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -50,160 +41,107 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
+NEHEMIAH = {
+  "1": {
+    "2": '<p>Hanani brings news from Judah — one of Nehemiah&#8217;s brothers (cf. 7:2 where Nehemiah appoints Hanani over Jerusalem). The &#8220;Jewish remnant&#8217;s&#8221; condition (<em>hašše&#8217;ērîṯ</em>) matters because the fate of the land community was Nehemiah&#8217;s specific concern; he was in the Persian capital while they endured the hardship of a ruined city.</p>',
+    "3": '<p>A city without walls in the ancient Near East was not merely undefended — it was dishonored. Walls signified political standing, divine favor, and civic order; a wall-less city was a client territory, a subject population. Jerusalem&#8217;s ruined walls (destroyed by Nebuchadnezzar in 586 BCE) had remained broken for 140 years; a rebuilding attempt under Artaxerxes&#8217; early reign was halted by royal decree (Ezra 4:12-23), making the ruins a legal as well as a political problem.</p>',
+    "4": '<p>Nehemiah&#8217;s response — weeping, mourning, fasting, and prayer — is the standard Second Temple crisis response pattern (Dan 9:3; Ezra 9:3-5). The multi-day duration (&#8220;for some days&#8221;) reflects the seriousness of the occasion: a formal period of mourning and penitential prayer before petitioning for action. Fasting combined with prayer was understood to intensify the petition and demonstrate the sincerity of the appeal.</p>',
+    "5": '<p>&#8220;God of heaven&#8221; (<em>ʾĕlōhê haššāmāyim</em>) — this title for YHWH, rare in pre-exilic literature, becomes the standard in Ezra-Nehemiah and Daniel. It served as the official Persian-era diplomatic designation for the Jewish God, intelligible to Persian administrators who recognized &#8220;God of heaven&#8221; as a title for the supreme deity within the imperial multi-religious framework. The phrase &#8220;great and awesome God who keeps his covenant and steadfast love&#8221; (<em>berît weḥesed</em>) is the opening of the Deuteronomic covenant vocabulary.</p>',
+    "6": '<p>Nehemiah&#8217;s prayer identifies himself with the community&#8217;s sin: &#8220;I and my father&#8217;s house&#8221; included. This collective confession pattern — the righteous person including himself in the community&#8217;s guilt — appears in Daniel 9:4-10 and Ezra 9:5-15. The personal inclusion is theologically significant: Nehemiah is not confessing on behalf of sinners as a righteous intercessor but as a full member of the guilty community.</p>',
+    "7": '<p>&#8220;The commandments, statutes, and ordinances (<em>mišpāṭîm</em>) you gave your servant Moses&#8221; — the three-term series (commandments/statutes/ordinances) is the standard Deuteronomic legal taxonomy (Deut 6:1; 7:11; 26:16-17). Nehemiah&#8217;s prayer is calibrated to the Deuteronomic covenant framework: Israel&#8217;s exile is the consequence of violating exactly these three categories of covenant obligation.</p>',
+    "8": '<p>Nehemiah quotes the Deuteronomic scatter-clause (Deut 28:64; Lev 26:33) directly: &#8220;If you act unfaithfully, I will scatter you among the nations.&#8221; The citation is from memory rather than verbatim quotation; the precise phrasing echoes both Leviticus 26 and Deuteronomy 28-30. This positions Nehemiah&#8217;s prayer as legally grounded: he is not asking YHWH to act beyond the covenant but to activate its promise-clause after the judgment-clause has run its course.</p>',
+    "9": '<p>The gather-clause of the Deuteronomic covenant (Deut 30:4; Lev 26:45): &#8220;Even if your exiles are at the far ends of the heavens, I will gather them from there.&#8221; &#8220;The place where I have chosen to make my name dwell&#8221; (<em>šakkantî šᵉmî šām</em>) is the Deuteronomic formula for Jerusalem (Deut 12:5, 11; 1 Kgs 8:29). Nehemiah&#8217;s petition is theologically tight: the divine name-dwelling requires Jerusalem&#8217;s walls; the broken wall is an insult to the name.</p>',
+    "10": '<p>Exodus language: &#8220;whom you redeemed by your great power and your mighty hand&#8221; — the Exodus formula (Deut 9:26, 29) applied to the current community. By using Exodus language, Nehemiah frames the present exile-and-return as a continuation of the same redemption that defined Israel&#8217;s identity; the God who redeemed at the Exodus is the same God being petitioned to redeem from the Babylonian scatter.</p>',
+    "11": '<p>Nehemiah&#8217;s cupbearer role (<em>mašqeh</em>) is introduced at the end of the prayer as its context. The royal cupbearer was one of the most trusted positions in the ancient Near Eastern court: responsible for tasting all food and drink to protect the king from poisoning, the cupbearer had constant personal access to the monarch that was denied to military commanders and governors. This made Nehemiah uniquely positioned to raise a personal request — but also uniquely vulnerable if the request was poorly received.</p>',
   },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
+  "2": {
+    "1": '<p>Month of Nisan (March-April) = 4 months after the Chislev report (ch1:1). Both months fall in the &#8220;twentieth year&#8221; of Artaxerxes I, confirming this is 445 BCE. The banquet setting — &#8220;when wine was set before him, I took the wine and presented it&#8221; — is the cupbearer&#8217;s formal professional moment; the intimacy of wine service before a king created the personal space in which a request could be made.</p>',
+    "2": '<p>Persian court protocol required that officials maintain a positive demeanor in the royal presence; displaying grief was associated with plotting, mourning for a ruler&#8217;s death, or bad omens. The king&#8217;s question — &#8220;why does your face look sad when you are not ill?&#8221; — acknowledges that illness would be an acceptable excuse, but unexplained sadness in a royal servant was potentially dangerous. Nehemiah&#8217;s &#8220;I became very frightened&#8221; reflects accurate understanding of the risk.</p>',
+    "3": '<p>Nehemiah frames his appeal in personal and ancestral terms rather than theological ones: &#8220;the city where my ancestors are buried.&#8221; Ancestral tombs had profound significance in ANE culture — the obligation to maintain family burial sites created an unimpeachable personal motive even a Persian king could respect. The theological dimensions of Jerusalem&#8217;s significance are implicit, not stated; Nehemiah appeals to a category of motivation the Persian court would recognize as legitimate.</p>',
+    "4": '<p>&#8220;So I prayed to the God of heaven&#8221; — a flash prayer between the king&#8217;s question and Nehemiah&#8217;s answer; the Persian court was not a place for extended prayer, but the parenthetical note reveals Nehemiah&#8217;s practice of continuous divine consultation. This split-second prayer is the behavioral expression of the theology stated in ch1: all human authority flows through divine permission, and the king&#8217;s favorable response is YHWH&#8217;s to grant.</p>',
+    "5": '<p>The request — &#8220;send me to Judah, to the city of my ancestors&#8217; tombs&#8221; — is deliberately modest: Nehemiah does not say &#8220;let me rebuild Jerusalem&#8217;s walls&#8221; (which would echo the rebellion charge Artaxerxes had earlier credited, Ezra 4:12-16) but appeals to the personal obligation of ancestral burial-site maintenance. The legal category of &#8220;the king&#8217;s servant whose ancestors lie in Jerusalem&#8221; was not a political threat; it was a manageable personal request.</p>',
+    "6": '<p>The queen&#8217;s presence — the only mention of a royal consort in the Nehemiah memoir — is noted as a detail of the favorable setting. Josephus (<em>Antiquities</em> XI.5.6) identifies her as Damaspia; her presence may have softened the atmosphere. The king&#8217;s question about the journey&#8217;s duration and Nehemiah&#8217;s specific answer suggest a formal negotiation rather than a casual permission: Nehemiah had clearly thought through the timeline of the project.</p>',
+    "7": '<p>Royal letters (<em>ʾiggarôṯ</em>) to the governors of Trans-Euphrates — the Persian administrative system of the satrapy of &#8220;Across the River&#8221; (Trans-Euphrates/Eber-nāri) covered the territory from the Euphrates to Egypt, subdivided into smaller units governed by Persian-appointed officials. Nehemiah&#8217;s letters give him official passage authority through each subdivision&#8217;s territory — a standard Persian bureaucratic tool for authorizing travel through multiple administrative zones.</p>',
+    "8": '<p>The &#8220;king&#8217;s forest&#8221; (<em>pārdes</em>) — a royal game park or timber reserve; the word is the origin of the English &#8220;paradise&#8221; (via Greek <em>paradeisos</em>), derived from the Old Persian term for a walled garden/park. The timber was needed for three structures: the temple fortress&#8217;s gate beams, the city wall, and Nehemiah&#8217;s residence. &#8220;The good hand of my God was upon me&#8221; — the phrase (<em>yaḏ-ʾĕlōhay haṭṭôḇāh</em>) recurs in Ezra (7:9; 8:18) as the standard acknowledgment that favorable imperial decisions are divine gifts.</p>',
+    "9": '<p>Army officers (<em>śārê ḥayil</em>) and cavalry — Nehemiah accepted a military escort, unlike Ezra who refused one (Ezra 8:22) as a demonstration of faith. The practical difference: Ezra was transporting temple treasure and wanted to demonstrate that YHWH, not Persian arms, was his protection; Nehemiah&#8217;s mission was inherently political-military (rebuilding walls), so an official armed escort was appropriate rather than incongruous.</p>',
+    "10": '<p>Sanballat the Horonite — &#8220;Horonite&#8221; indicates origin from Beth-horon, a town between Judah and Samaria. Elephantine papyri (407 BCE) address letters to &#8220;Delaiah and Shelemiah, sons of Sanballat the governor of Samaria&#8221; — Sanballat&#8217;s sons were still governing Samaria decades later, confirming that Sanballat here was the Samaritan governor in 445 BCE. His Babylonian name (<em>Sîn-uballit</em>, &#8220;Sin the moon god has given life&#8221;) reveals that he was Yahwistic in family (his sons bore YHWH names) but syncretistic in identity. Tobiah the &#8220;Ammonite official&#8221; (<em>ʿeḇeḏ</em>) — the term <em>ʿeḇeḏ</em> in Persian administrative usage is a title for a royal official; Tobiah was likely the Persian-appointed governor of Ammon with Judahite family connections (Neh 6:18).</p>',
+    "11": '<p>Three days of rest in Jerusalem before beginning work — the same three-day rest pattern appears in Ezra 8:32 (on Ezra&#8217;s arrival). The period allowed Nehemiah to recover from the journey, assess the situation privately, and avoid premature disclosure of his plans to a community that might react prematurely or whose reactions might be reported to the opposition.</p>',
+    "12": '<p>The night survey is necessitated by political sensitivity: Artaxerxes had previously issued a royal halt order for Jerusalem&#8217;s reconstruction (Ezra 4:21-23). While Nehemiah now has royal letters reversing that order, the local community did not yet know this; revealing the wall project before building consensus risked panic, opposition leaks to Sanballat, or a premature mobilization that the community was not yet prepared for.</p>',
+    "13": '<p>The survey route — Valley Gate (southwest), Dragon Spring, Dung Gate (south) — traces the southern and eastern wall sections. The Valley Gate and Dung Gate are also named in ch3 as rebuilt sections; the survey provides Nehemiah&#8217;s firsthand assessment of the actual damage before formulating the project scope. The night setting and small party are standard ancient reconnaissance procedure.</p>',
+    "14": '<p>The Fountain Gate and the King&#8217;s Pool — the King&#8217;s Pool (<em>bᵉrêḵaṯ hammelek</em>) is likely the pool fed by the Gihon spring or Hezekiah&#8217;s tunnel, near the king&#8217;s garden on the south slope of the City of David. &#8220;No room for the animal under me to get through&#8221; — the rubble was so dense that even a loaded animal could not navigate it; this detail establishes the physical severity of the destruction.</p>',
+    "15": '<p>The valley route — going up through the valley (<em>naḥal</em>, possibly the Kidron) by night to inspect the eastern wall before returning through the Valley Gate. The eastern wall of Jerusalem ran along the steep slope above the Kidron Valley; the narrative detail of returning by the same gate suggests the inspection was targeted rather than comprehensive — Nehemiah covered enough to form a realistic assessment.</p>',
+    "16": '<p>The officials (<em>seḡānîm</em>, a Persian loanword for local administrators), priests, nobles, officials — the complete leadership structure of the community is named as still uninformed. Nehemiah&#8217;s secrecy is deliberately maintained across all social categories; this prevents leaks to the opposition (who had networks within the community, as ch6 shows) and maintains Nehemiah&#8217;s ability to control the announcement&#8217;s timing and framing.</p>',
+    "17": '<p>The public announcement reframes the crisis as shared shame: &#8220;so that we will no longer be a disgrace (<em>ḥerpāh</em>)&#8221; — <em>ḥerpāh</em> is the shame-word for Israel under judgment (Ps 44:13; Jer 24:9; Ezek 5:14). The rhetorical move connects the wall&#8217;s absence to the community&#8217;s honor-status before the surrounding nations; Nehemiah transforms an infrastructure problem into an identity problem whose resolution is a community obligation.</p>',
+    "18": '<p>&#8220;The good hand of my God was upon me and what the king had said to me&#8221; — Nehemiah&#8217;s persuasion strategy is a dual appeal: divine providence (the hand of God) and imperial authorization (the king&#8217;s letters). In the post-exilic community, Persian imperial authorization was the functional equivalent of political legitimacy; Nehemiah&#8217;s ability to invoke both divine and imperial backing simultaneously made the project both spiritually compelling and practically safe.</p>',
+    "19": '<p>Geshem the Arab — Arabian inscriptions from Dedan (modern Saudi Arabia) and Elephantine confirm an Arabian king named &#8220;Gusham&#8221; or &#8220;Geshem&#8221; who controlled Qedarite trade routes between Arabia, Egypt, and Judah in the mid-fifth century BCE. His hostility reflects economic interests: a rebuilt Jerusalem could challenge Qedarite control of the southern trade routes. The accusation of &#8220;rebelling against the king&#8221; was the standard legal charge for any perceived threat to Persian order, and it had recently succeeded (Ezra 4).</p>',
+    "20": '<p>&#8220;You have no share (<em>ḥēleq</em>), no right (<em>ṣᵉḏāqāh</em>), and no stake (<em>zikkārôn</em>) in Jerusalem&#8221; — the triple exclusion formula echoes Ezra 4:3. <em>ṣᵉḏāqāh</em> here means &#8220;legal standing&#8221; or &#8220;rightful claim&#8221;; <em>zikkārôn</em> (memorial/stake) suggests a formal recorded claim. The three terms together constitute the comprehensive denial of any basis for involvement in Jerusalem&#8217;s future, matching and countering the three types of charges the opponents leveled (v.19).</p>',
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
+    "1": '<p>The high priest Eliashib begins with the Sheep Gate at the temple&#8217;s northeast corner — the priestly section of the wall starts at the sacred center and works outward. The Sheep Gate (<em>šaʿar haṣṣōʾn</em>) was the entry through which animals were brought for sacrifice; its position at the head of the list signals that the restoration of the temple&#8217;s functional perimeter is the project&#8217;s primary purpose. The Tower of Hananel and the Tower of the Hundred flank the northern wall section adjacent to the temple compound.</p>',
+    "2": '<p>Men of Jericho working on Jerusalem&#8217;s wall — Jericho is 15 miles northeast of Jerusalem. Their participation demonstrates that the wall project mobilized communities from across the region, not just Jerusalem&#8217;s residents. The builder list preserves names of ordinary community members who would have left no other historical trace.</p>',
+    "3": '<p>The Fish Gate (<em>šaʿar haddāḡîm</em>) on the north wall was where fish from the Mediterranean and the Jordan were sold (Zeph 1:10); Tyrian merchants traded fish there (Neh 13:16). The technical details — beams, doors, bolts, bars — reflect full gate reconstruction rather than mere patching; the gate&#8217;s strategic position as a primary commercial entry made it a priority.</p>',
+    "4": '<p>Meremoth son of Uriah appears in Ezra 8:33 as the priest who received and weighed Ezra&#8217;s silver and gold — a position of significant trust. Meshullam son of Berechiah&#8217;s daughter was married to Tobiah the enemy (Neh 6:18), creating a family connection between a wall-builder and the primary opponent — the community was not divided into neat categories of loyalists and enemies.</p>',
+    "5": '<p>The Tekoite nobles who &#8220;would not put their shoulders to the work of their supervisors&#8221; — this is the only negative notation in the entire builder list. Tekoa was approximately 10 miles south of Jerusalem; its town workers participate (and double-section in v.27) while the noble class refuses. This social stratification — artisans and tradespeople rebuilding while the landed gentry exempt themselves — is precisely the class tension Nehemiah confronts in ch5&#8217;s debt-crisis. The honest recording of elite refusal in an official document is unusual.</p>',
+    "6": '<p>The Jeshanah Gate (&#8220;old gate,&#8221; <em>šaʿar hayyᵉšānāh</em>) on the northwest wall — the reconstruction of the oldest gate is entrusted to two men, Joiada and Meshullam. Full gate reconstruction required laying foundation beams, hanging doors, installing bolts and bars; the paired builders suggest a team effort.</p>',
+    "7": '<p>Gibeon and Mizpah are towns technically under the governor of Trans-Euphrates rather than the governor of Judah; their participation signals that the wall project extended mobilization beyond Judah&#8217;s formal administrative boundaries. The phrase &#8220;up to the official residence of the governor of Trans-Euphrates&#8221; suggests this wall section abutted the Persian administrative compound — a politically sensitive location.</p>',
+    "8": '<p>A goldsmith (<em>ṣôrēp̄</em>) and a perfumer (<em>raqqāḥ</em>) building walls — craft-guild workers participating in military infrastructure is a social cross-over. The Broad Wall (<em>haḥômāh hārᵉḥāḇāh</em>) was a substantial older fortification; archaeological excavations in the Jewish Quarter of modern Jerusalem have uncovered a wall section 23 feet wide that may be this structure, built by Hezekiah (Isa 22:10).</p>',
+    "9": '<p>Rephaiah son of Hur, &#8220;ruler of a half-district of Jerusalem&#8221; (<em>śar ḥᵃṣî pelek Yᵉrûšālayim</em>) — the <em>pelek</em> system organized Judah into administrative districts (also in vv.12, 14-18); each pelek had a <em>śar</em> (ruler/official). The district administrators are prominently represented in the builder list, suggesting the project was organized partly through the existing administrative structure.</p>',
+    "10": '<p>Jedaiah repairs the section &#8220;opposite his own house&#8221; — this residential assignment pattern appears frequently in ch3 (vv.10, 23, 28-30). Assigning builders to the section facing their own home was both practical (they were already there) and motivational (they were defending their own property). The assignment strategy combined communal obligation with personal interest.</p>',
+    "11": '<p>The Tower of the Ovens (<em>migdal hattannûrîm</em>) — likely near the bakers&#8217; quarter of the city (cf. Jer 37:21, the &#8220;court of the guard&#8221; near &#8220;the bakers&#8217; street&#8221;). The tower provides a navigational anchor for the wall&#8217;s western section; its name suggests the area where bread was commercially produced for Jerusalem&#8217;s population.</p>',
+    "12": '<p>Shallum and his daughters (<em>bᵉnôṯāyw</em>) — women participating in wall construction. This is the only explicit mention of women working on the wall; the daughters&#8217; inclusion signals either that the labor shortage was severe enough to require all available workers, or that Shallum&#8217;s household participated collectively.</p>',
+    "13": '<p>The Valley Gate (<em>šaʿar haggayʾ</em>) and a thousand cubits of wall (approximately 500 meters) to the Dung Gate — this is the section Nehemiah surveyed at night (2:13-15). Hanun and the residents of Zanoah take responsibility for the longest single section in the list; Zanoah was a town in the Shephelah whose community collectively relocates to work on the distant gate section.</p>',
+    "14": '<p>The Dung Gate (<em>šaʿar hāʾašpôṯ</em>) — the waste gate on the south side, used to remove refuse, ash, and dead animals from Jerusalem. That a district ruler takes personal responsibility for the least glamorous gate in the city reflects the comprehensive social participation the project required.</p>',
+    "15": '<p>The Fountain Gate (<em>šaʿar hāʿayin</em>) and the Pool of Siloam — Shallun repairs and roofs (<em>yiqqāhēhû</em>) this gate, the only gate described as being roofed, suggesting it was a significant commercial entry point. The Pool of Siloam was the terminus of Hezekiah&#8217;s tunnel (2 Chr 32:30; Isa 22:11), the primary water supply for Jerusalem in siege conditions.</p>',
+    "16": '<p>&#8220;The tombs of David&#8221; (<em>qiḇrê ḏāwîḏ</em>) — the Davidic royal tombs on the southeastern slope. Their presence in the repair zone confirms that this wall section skirted the oldest royal burial ground. The &#8220;house of the warriors&#8221; (<em>bêṯ haggibbōrîm</em>) may refer to a barracks or armory associated with the royal guard.</p>',
+    "17": '<p>Levites in the builder list — Rehum son of Bani leads the Levites&#8217; section. The Levitical participation in wall-building is noteworthy: the Levites&#8217; primary role was cultic (temple service), not civic construction; their inclusion reflects the community&#8217;s pragmatic mobilization of all institutional resources for the task.</p>',
+    "18": '<p>Bavvai son of Henadad — the Henadad family is a Levitical clan that recurs in the return records (Ezra 2:40; Neh 7:43) and the covenant-sealing list (Neh 10:9). That a single Levitical clan contributes two separate builders for consecutive sections suggests the Henadad clan took coordinated responsibility for a long wall stretch.</p>',
+    "19": '<p>The armory at the corner (<em>neśeq hammiqṣôaʿ</em>) — a weapons storage facility at one of the wall&#8217;s angular projections. The builder list records the proximity of this section to the armory as a navigational reference; the armory&#8217;s presence within the rebuilt walls meant that the community had also prepared for ongoing defense.</p>',
+    "20": '<p>Baruch son of Zabbai &#8220;zealously&#8221; (<em>beḥārāh</em>, lit. &#8220;with heat/ardor&#8221;) repaired his section — the only motivational qualifier in the entire builder list. The Hebrew word <em>ḥārāh</em> (to be hot, to burn) describes the intensity of emotional investment that distinguishes his work; this detail would have honored Baruch and his descendants in the community&#8217;s memory.</p>',
+    "21": '<p>Meremoth son of Uriah makes repairs on a second section (he also worked in v.4) — one of two builders in the list who take double sections (the Tekoites also work twice, v.5 and v.27, which may partially redeem the nobles&#8217; refusal). The double contribution is implicitly noteworthy alongside the Tekoite nobles&#8217; failure.</p>',
+    "22": '<p>Priests from the surrounding region — these priests repair the section near the high priest&#8217;s house (v.20-21), continuing the pattern of the priestly class taking responsibility for sections adjacent to sacred and residential areas near the temple. The &#8220;surrounding region&#8221; (<em>kîḵār</em>) may refer to the central highlands around Jerusalem.</p>',
+    "23": '<p>Benjamin and Hasshub repair &#8220;opposite their house&#8221; — the residential assignment continues. Azariah similarly repairs &#8220;beside his own house&#8221; — the overlap of civic obligation and personal property protection is a consistent organizational principle in the builder list.</p>',
+    "24": '<p>&#8220;From the house of Azariah to the angle and the corner&#8221; — precise geographic description using the wall&#8217;s physical features (the angle = an interior corner; the corner = an exterior projection) as reference points. The technical precision of the builder list&#8217;s geographic references suggests it was compiled from actual surveying records, giving it the character of an official building report.</p>',
+    "25": '<p>The upper house of the king — a royal residence or administrative building associated with the Persian-era governor. The court of the guard (<em>ḥᵃṣar hammaṭṭārāh</em>) was the prison yard where Jeremiah had been confined during the siege (Jer 37:21); its presence in the builder list confirms the continuity of Jerusalem&#8217;s administrative geography from the pre-exilic to the restoration period.</p>',
+    "26": '<p>The temple servants (<em>nᵉṯînîm</em>) on the Ophel repair up to the Water Gate — the southeastern section of the wall adjacent to the temple mount. The Ophel (&#8220;the mound&#8221;) was a ridge south of the temple; the nᵉṯînîm&#8217;s residential proximity to the section they repair follows the same organizational logic as the priests&#8217; residential assignments.</p>',
+    "27": '<p>The Tekoites&#8217; second section — the same community whose nobles refused (v.5) contributes its workers a second time for an additional section opposite the great projecting tower. The double contribution by Tekoah&#8217;s workers partly redeems the collective honor of their town, despite the nobles&#8217; exemption; the community&#8217;s ordinary members compensate for their leaders&#8217; failure.</p>',
+    "28": '<p>Priests above the Horse Gate (<em>šaʿar hassûsîm</em>) each repair the section &#8220;opposite his own house&#8221; — the horse gate was the entry to the king&#8217;s stables area on the eastern slope (2 Kgs 11:16; Jer 31:40). The residential assignment for priests in this section confirms that priestly housing was distributed across the city, not concentrated only near the temple.</p>',
+    "29": '<p>Shemaiah son of Shecaniah is &#8220;keeper of the East Gate&#8221; (<em>šōmēr šaʿar hamizrāḥ</em>) — a hereditary or appointed gatekeeper position; his responsibility for the gate he also rebuilds represents the longest institutional connection in the builder list: a gatekeeper rebuilds the gate he guards.</p>',
+    "30": '<p>Hananiah son of Shelemiah and Hanun (the sixth son) — the specific ordinal (sixth son) distinguishes this Hanun from the first one (v.13). Meshullam son of Berechiah repairs &#8220;opposite his room&#8221; (<em>niškaṯô</em>, a chamber or storeroom) — a smaller dwelling unit than a full house, suggesting modest social standing.</p>',
+    "31": '<p>Malchijah the goldsmith continues the craft-guild worker presence in the builder list (cf. Uzziel the goldsmith in v.8). The Inspection Gate (<em>šaʿar hammiṣpāḏ</em>) may refer to a review gate or a gate where goods were inspected; its proximity to the house of the temple servants and merchants marks the commercial-administrative zone of this section.</p>',
+    "32": '<p>Between the corner room and the Sheep Gate — the circuit completes at the same gate where it began (v.1). The goldsmiths and merchants close the circle: the same craft guild workers who began the Broad Wall section (v.8) complete the final section, while the priests consecrated the Sheep Gate at the start. The builder list&#8217;s narrative frame — priests beginning, merchants ending, with all social categories in between — represents the entire Jerusalem community united in the task.</p>',
+  },
   "4": {
-    "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
-    ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+    "1": '<p>Sanballat&#8217;s fury (<em>ḥārāh lô</em>) — the same root word used of Baruch&#8217;s zealous building in 3:20 (<em>beḥārāh</em>). The narrative uses the same vocabulary for the builder&#8217;s passion and the opponent&#8217;s rage; the &#8220;heat&#8221; of devoted work contrasts with the &#8220;heat&#8221; of destructive anger. His mockery of &#8220;the Jews&#8221; by name signals the ethnic dimension of the opposition: this is not merely political rivalry but active contempt for the community&#8217;s identity and capacity.</p>',
+    "2": '<p>Sanballat&#8217;s mockery addresses three specific vulnerabilities: (1) &#8220;Will they make a sacrifice?&#8221; — implying that the wall project is a cultic pretension that YHWH will not honor; (2) &#8220;Can they finish it up in a single day?&#8221; — ridiculing the ambition as impossible; (3) &#8220;Can they bring life back to burned stones from rubble heaps?&#8221; — the technical observation that burned limestone (<em>ʾaḇnê hāśerep̄</em>) becomes structurally compromised and cannot be reused. The third taunt reflects genuine engineering knowledge; it is not merely contempt but technical skepticism about the project&#8217;s feasibility.</p>',
+    "3": '<p>Tobiah&#8217;s fox taunt — &#8220;if a fox trots across it, it will collapse their stone wall&#8221; — deliberately echoes Lamentations 5:18: &#8220;because of Mount Zion which lies desolate; foxes prowl over it.&#8221; Lamentations&#8217; foxes prowling on Zion are the image of utter desolation; Tobiah weaponizes this text against the rebuilders, claiming that the wall will be as insubstantial as a ruin that a fox&#8217;s weight would destroy. The taunt is not just mockery but a theological argument: Zion remains in Lamentations&#8217; condition of abandonment, and no human effort can change that.</p>',
+    "4": '<p>Nehemiah&#8217;s imprecatory prayer — &#8220;Turn their reproach back on their own heads&#8221; — follows the pattern of Psalms 79:12 and Jeremiah 18:23; it is a prayer for covenant justice rather than personal revenge. The phrase &#8220;hand them over as plunder in a land of exile&#8221; applies to the opponents the same judgment that fell on Israel; Nehemiah is asking that the adversaries&#8217; own contempt become their sentence. Imprecatory prayer is the covenant community&#8217;s formal mechanism for handing enemy opposition to divine justice.</p>',
+    "5": '<p>&#8220;Do not cover their guilt or let their sin be wiped from your sight&#8221; — Nehemiah asks YHWH to maintain the record of the adversaries&#8217; opposition &#8220;in the presence of the builders.&#8221; The language echoes Exodus 32:32-33 (where Moses asks to be blotted out of YHWH&#8217;s book) but in reverse: Nehemiah asks that the opposition&#8217;s sin remain unblotted. This is the covenant community&#8217;s counter-request against those who have &#8220;provoked you to anger&#8221; — the same phrase used for Israel&#8217;s own idolatrous provocations (Deut 31:29).</p>',
+    "6": '<p>&#8220;The people had the will (<em>lēḇ</em>) to work&#8221; — literally &#8220;the heart of the people was to work.&#8221; The <em>lēḇ</em> (heart, the center of will and commitment in Hebrew anthropology) is Nehemiah&#8217;s evaluative category throughout the memoir; the people&#8217;s wholehearted engagement (<em>lēḇāḇ šālēm</em>) is the Chronicler&#8217;s key virtue. The half-height completion against active mockery is attributed to this unified will rather than to technical skill or resources.</p>',
+    "7": '<p>The opposition expands to a regional coalition: Sanballat (Samaria, north), Tobiah (Ammon, east), Arabs (Geshem&#8217;s Qedarites, south), and Ashdodites (Philistine coastal region, west) — a multi-directional encirclement. The geographic distribution creates coordinated surrounding pressure. The specific trigger for escalation is &#8220;the gaps were being closed&#8221;; the opposition understood that a continuous wall was far more significant than patched sections.</p>',
+    "8": '<p>They plot to &#8220;march on Jerusalem and create confusion there&#8221; (<em>lāʿăśôṯ lô tôʿāh</em>) — <em>tôʿāh</em> means confusion, disorder, or disturbance; the military tactic is not direct assault but the inducement of panic and chaos within the community. This is the psychological warfare dimension of the opposition: if the builders lose confidence and scatter, the wall project collapses without a single battle.</p>',
+    "9": '<p>&#8220;We prayed to our God and posted a guard against them day and night&#8221; — the combination of spiritual and practical response is Nehemiah&#8217;s signature pattern throughout the memoir (2:4; 4:4; 6:9). The dual response refuses both pure mysticism (prayer without action) and pure pragmatism (action without prayer). The day-and-night guard is a military deployment against a specific threat; prayer is the theological confidence that makes that deployment effective rather than merely desperate.</p>',
+    "10": '<p>The internal crisis — &#8220;the strength of the laborers is giving out&#8221; — surfaces as a separate threat from the external opposition. The Hebrew idiom &#8220;the strength of the burden-carrier is failing&#8221; (<em>kāšal kōaḥ hassabbāl</em>) describes physical exhaustion from sustained heavy labor. The complaint about &#8220;so much rubble&#8221; that prevents rebuilding is the same technical problem Sanballat had mocked (v.2) — burned stone debris that couldn&#8217;t be reused and had to be cleared before new building could proceed.</p>',
+    "11": '<p>The enemies&#8217; stated strategy: &#8220;we will come into their midst&#8221; — an infiltration tactic rather than a frontal assault; the threat exploits the distributed nature of the building operation. Workers spread along a mile-long perimeter could not see or coordinate against a sudden incursion through an unfinished section; the surprise attack was designed to cause casualties before any organized defense could form.</p>',
+    "12": '<p>Jews living near the enemy — the Jewish population of surrounding towns served as an intelligence network, with ten-times repeated warnings. Their geographic position between Jerusalem and the opposition made them both potential informants and vulnerable targets; Nehemiah responds to their warnings by taking the threat seriously whether the intelligence was precise or community anxiety amplified by proximity to threatening neighbors.</p>',
+    "13": '<p>The defense organization &#8220;grouped by families&#8221; (<em>lemišpᵉḥōṯêhem</em>) — the kinship-based militia is a pre-monarchic Israelite military tradition (Num 1:2; Judg 20:8-10); organizing fighters by family meant each unit contained brothers, fathers, and sons protecting each other. This kinship solidarity was understood to produce higher motivation and reliability than a professional force; the same principle was used by Judas Maccabaeus (1 Macc 5:7).</p>',
+    "14": '<p>Nehemiah&#8217;s motivational speech operates on two registers: &#8220;Remember the Lord, who is great and awe-inspiring&#8221; (theological ground) and &#8220;fight for your brothers, sons, daughters, wives, and homes&#8221; (personal stake). The two-register combination — divine promise and personal interest — is the structure of Deuteronomy&#8217;s warfare theology (Deut 20:1-4): YHWH fights, but his people&#8217;s families and land are what is at stake. Nehemiah does not separate the two motivations; they reinforce each other.</p>',
+    "15": '<p>&#8220;God had brought their scheme to nothing&#8221; (<em>hēpēr ʾĕlōhîm ʾet-ʿᵃṣāṯām</em>) — the frustration of the enemy&#8217;s counsel is divine action; the same theological pattern as Ahithophel&#8217;s &#8220;good counsel&#8221; being turned to foolishness by YHWH in 2 Sam 17:14. When the conspiracy became known, the element of surprise was lost and the threat diminished; Nehemiah interprets this outcome as direct divine intervention rather than as the natural result of the intelligence operation.</p>',
+    "16": '<p>The work-and-guard reorganization divides the labor force: half build, half stand in full military equipment (spears, shields, bows, armor). The Persian-era equipment — &#8220;body armor&#8221; (<em>širyōnôṯ</em>) — reflects the military technology available in the fifth century BCE; this is not ceremonial readiness but a genuine military deployment alongside active construction. The &#8220;officers behind the entire force of Judah&#8221; suggests a command structure modeled on military organization.</p>',
+    "17": '<p>The one-handed builder — &#8220;each man to work with one hand while keeping his weapon ready in the other&#8221; — is one of the most cited images of the restoration period. The awkward productivity of single-handed building was a real constraint; the image became an emblem of the community&#8217;s determined resistance and has resonated across communities under threat. The Maccabees recalled it; Puritan colonists cited it.</p>',
+    "18": '<p>The sword belted while building — each builder carries his weapon as a permanent accessory, not as a separate battle preparation. The trumpeter stationed beside Nehemiah is the command-and-control mechanism for the dispersed building force; in the event of attack, the trumpet would signal all builders to converge on the breach rather than fight in isolated sections.</p>',
+    "19": '<p>The logistical problem of the dispersed wall-building force: &#8220;we are spread far apart from each other.&#8221; A city wall of Jerusalem&#8217;s circumference (approximately 4 kilometers in this period) meant that each building team might be 50-100 meters from its nearest neighbor, too far to see or hear without a signal system. The practical management problem — maintaining security for a linear construction project — required exactly the trumpet-based alert system Nehemiah describes.</p>',
+    "20": '<p>&#8220;Our God will fight for us&#8221; — the Holy War formula of Deuteronomy (Deut 1:30; 3:22; 20:4; Josh 10:14, 42). Nehemiah invokes the Deuteronomic warfare theology explicitly: YHWH fights on Israel&#8217;s behalf when Israel stands firm and trusts in divine action rather than numbers. The trumpet as the rallying signal and the declaration that God fights both draw on the Deuteronomic warfare tradition; Nehemiah is framing the wall-building as a covenant military campaign.</p>',
+    "21": '<p>Work from dawn to dusk under arms — &#8220;with half the men holding spears from the break of dawn until the stars came out.&#8221; The extended working day exploits the maximum available daylight and signals the urgency of completing the wall before the anticipated attack; the builders sacrificed rest hours to maximize construction pace.</p>',
+    "22": '<p>&#8220;Each man with his household workers should stay the night inside Jerusalem&#8221; — Nehemiah converts the building project into a garrison deployment. Workers who would normally return to their home towns after each day&#8217;s work now billet inside the city, eliminating the commute that left both the city underguarded and the workers vulnerable on the roads. The inside-Jerusalem billets also maintain the overnight watch that v.9 required.</p>',
+    "23": '<p>&#8220;Each man kept his weapon within reach&#8221; — the final image of ch4: the community sleeping in their clothes with weapons at hand is the ultimate expression of the defended-yet-working state. The Hebrew of this verse is notoriously difficult and disputed; the precise meaning may be &#8220;each man had his weapon at his right hand even to wash.&#8221; Whatever the precise reading, the image closes the chapter with the builders&#8217; complete vigilance — not resting but merely pausing, ready to resume both work and defense.</p>',
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-context', 'nehemiah')
+    merge_comm(existing, NEHEMIAH)
+    save_comm('mkt-context', 'nehemiah', existing)
+    print('Nehemiah 1-4 mkt-context written.')
 
 if __name__ == '__main__':
     main()

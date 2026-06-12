@@ -1,46 +1,34 @@
 """
-Job + Proverbs + Ecclesiastes + Song of Solomon — all four layers.
-Wisdom books: suffering and theodicy (Job), practical wisdom as Christ (Prov 8),
-vanity and meaning (Eccl), the love of Christ and the church (Song).
+MKT Christ Commentary — Job chapters 1–4
+Run: python3 scripts/zc-christ-job-1-4.py
+Verses: ch1×22 + ch2×13 + ch3×26 + ch4×21 = 82
+
+Key Christological notes:
+- ch1: Job as type of Christ — the blameless man whose suffering is permitted by God
+  not for his sin but for cosmic purposes. v5 priestly intercession (Heb 7:25); v8 the
+  divine commendation echoes Matt 3:17; v21 the kenosis-acceptance of loss (Phil 2:7).
+- ch2: v3 'without cause' (ḥinnām) echoes John 15:25; v6 CRITICAL contrast — God says
+  'spare his life' to the Adversary re. Job; for the Son, God does NOT spare (Rom 8:32).
+  v9 wife's 'curse God and die' parallels the cross-temptation ('save yourself').
+- ch3: Job's cursing of the day of his birth — the depth of despair Christ enters.
+  v17-19 Sheol as rest; v23 the divine fence as encirclement (enters human limits).
+- ch4: Eliphaz's speech. v3-4 Messianic strengthening (Isa 35:3-4); v7 the rhetorical
+  'has any innocent person ever perished?' — answered at Calvary; v17 Incarnation
+  irony (mortal vs. Maker); v19 the clay-house body (2 Cor 5:1).
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     return json.loads(p.read_text()) if p.exists() else {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
@@ -50,187 +38,105 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# JOB
-# ============================
-
-JOB_ECHO = {
+JOB14 = {
   "1": {
-    "21": [
-      {"type": "allusion", "target": "Phil 4:11-12", "note": "The LORD gave, and the LORD has taken away; blessed be the name of the LORD — Job's response to total loss; Paul's 'I have learned, in whatever state I am, to be content' echoes the Job pattern of accepting both abundance and loss from the hand of God"}
-    ]
+    "1": "<p>A type: Job is introduced as 'blameless (tām) and upright (yāšār), one who feared God and turned away from evil' — the fourfold moral description establishing his character before all that follows. This description is the ground of the book's theodicy: Job suffers not because of sin but because of who he is. Christ is the ultimate blameless and upright one (Heb 7:26 'holy, blameless, undefiled, separated from sinners'), whose suffering is the definitive demonstration that righteousness does not guarantee exemption from pain.</p>",
+    "2": "<p>The theme: Job's seven sons and three daughters represent the fullness of covenant blessing (the number seven as completeness). The covenant family that Job enjoys images the Father's relationship with the Son in glory — Christ possessed the full riches of divine fellowship before the Incarnation (John 17:5 'restore to me the glory I had with you before the world was created').</p>",
+    "3": "<p>The theme: Job's vast possessions establish him as the greatest man of the East. The prologue is careful to note his greatness before the stripping begins, so the magnitude of the loss is legible. Christ's kenosis similarly presupposes pre-existent glory: 'though he was rich, yet for your sake he became poor' (2 Cor 8:9) — the poverty is only meaningful against the backdrop of the wealth.</p>",
+    "4": "<p>The theme: the sons' feasting together with their sisters images covenantal fellowship and familial joy. The heavenly feast that Christ promises — 'I tell you, many will come from the east and the west, and will take their places at the feast with Abraham, Isaac, and Jacob in the kingdom of heaven' (Matt 8:11) — is the eschatological fulfillment of this pattern of gathered family at table.</p>",
+    "5": "<p>A type: Job's intercessory offering for each of his children — rising early, offering burnt offerings, saying 'perhaps my sons have sinned' — is the priestly intercession that the NT applies to Christ. Heb 7:25 'he always lives to intercede for them'; 1 John 2:1 'we have an advocate with the Father — Jesus Christ, the Righteous One.' Job intercedes as patriarch-priest; Christ intercedes as eternal high priest. The regular (kol hayyāmîm) pattern of Job's intercession prefigures the perpetual intercession of Christ.</p>",
+    "6": "<p>A revelation of God: the heavenly council where the divine beings (bĕnê ʾĔlōhîm) present themselves before YHWH establishes the cosmic-legal setting for the entire book. This is the same council before which Christ ascends (Heb 9:24 'he entered heaven itself, now to appear for us in God's presence'). The drama of Job's suffering has its origin in the heavenly court; so does the drama of Christ's passion and vindication.</p>",
+    "7": "<p>A revelation of God: 'the Adversary came among them... from roaming through the earth.' 1 Pet 5:8 applies this directly: 'your adversary the devil prowls around like a roaring lion seeking someone to devour.' The Adversary's roaming establishes his domain (the earth) and his method (surveillance for opportunity). Christ enters this same domain ('the Word became flesh and made his dwelling among us,' John 1:14) — the Son invades the Adversary's territory.</p>",
+    "8": "<p>A type: YHWH's commendation — 'Have you taken notice of my servant Job? There is no one like him on earth' — echoes the divine commendation of the Son: 'This is my Son, whom I love; with him I am well pleased' (Matt 3:17; 17:5). Job is YHWH's servant (ʿeḇeḏ) whose unique righteousness is publicly testified by God himself. Isaiah's Servant Songs use the same ʿeḇeḏ vocabulary for the figure who will bear the sins of many (Isa 42:1; 52:13).</p>",
+    "9": "<p>A revelation of God: 'Does Job fear God for no reason?' — the Adversary's challenge cuts to the heart of all human piety: is it possible to worship God disinterestedly, without expectation of reward? This is also the question about Christ's disciples: will they remain faithful without earthly benefit? The book's resolution (Job maintaining integrity after losing everything) is the OT answer; the NT answer is the cross — Christ maintains faithfulness unto death, the ultimate disinterested love.</p>",
+    "10": "<p>The theme: 'Have you not put a protective fence (śĕyāg) around him?' — the divine hedge as protection. The same concept appears in Christ's prayer: John 17:11-12 'Holy Father, protect them by the power of your name... I protected them and kept them safe.' For Job, this hedge is temporarily removed for testing; for Christ's people, the hedge of intercession is permanent.</p>",
+    "11": "<p>A revelation of God: 'stretch out your hand and strike everything he has — he will surely curse you to your face.' The Adversary wagers that suffering will destroy Job's faithfulness. The same wager was made about Christ at Calvary: that the extremity of suffering and abandonment would produce curse rather than trust. The cross answers both wagers: Job does not curse; Christ speaks forgiveness (Luke 23:34).</p>",
+    "12": "<p>A type: 'Very well, everything he has is in your power. Only do not lay a hand on the man himself.' YHWH limits the Adversary's access to Job, permitting loss but not his person. This is the precise inverse of what happens with Christ: the Father gives the Son entirely over — Rom 8:32 'he who did not spare his own Son, but gave him up for us all.' Job's person is protected; Christ's person is surrendered. The comparison illuminates the greater depth of Christ's sacrifice.</p>",
+    "13": "<p>The theme: the day of feasting when disaster strikes — the enjoyment of covenant blessing at the moment of its catastrophic removal. The Last Supper has this quality: the night of fellowship and covenant when the betrayal, arrest, and passion begin (Matt 26:20-30). The feast before the stripping.</p>",
+    "14": "<p>The theme: the first messenger's report — the oxen and donkeys seized. The sequential stripping of Job's possessions by successive reports is the prologue's technique of narrating total loss. The progressive denudation mirrors the Passion sequence, where Jesus is stripped of clothing (John 19:23-24), dignity (the mocking, Matt 27:28-31), and life.</p>",
+    "15": "<p>The theme: 'I alone escaped to tell you' — the sole survivor formula repeated four times. The solitary witness who escapes to report bears the weight of the news alone. Christ's disciples fled (Mark 14:50 'everyone deserted him and fled'); the women at the tomb became solitary witnesses to the resurrection (Mark 16:1-8; Luke 24:1-10).</p>",
+    "16": "<p>The theme: 'fire from God (ʾĕš ʾĔlōhîm) fell from heaven' — the second disaster invokes divine agency explicitly: not merely human enemies but apparently divine fire. Job experiences divine action as catastrophic. The NT reframes divine fire: Heb 12:29 'our God is a consuming fire' — but for those in Christ, this same fire is purifying rather than destroying (1 Pet 1:7).</p>",
+    "17": "<p>The theme: the Chaldeans take the camels in the third disaster. The pattern of multi-front assault — enemies from multiple directions — prefigures the Passion's multi-front attack on Christ: Judas betraying, priests accusing, Roman soldiers executing, crowds mocking. Every human agent participates in the stripping.</p>",
+    "18": "<p>The theme: the fourth and final disaster strikes the children themselves — the dearest possessions last. The pattern of progressive loss until the most precious is taken is also the Passion's movement: health taken, reputation taken, disciples taken, life taken. 'He who did not spare his own Son' (Rom 8:32) — the ultimate non-sparing.</p>",
+    "19": "<p>The theme: 'a great wind (rûaḥ gĕḏôlāh) came out of the wilderness and struck the four corners of the house.' The wind that destroys Job's household uses the same vocabulary (rûaḥ = wind/spirit; gāḏôl = great) as the divine power. The wilderness origin of the destroying wind connects to the wilderness where Jesus was tempted (Matt 4:1-11) and where the Adversary operates.</p>",
+    "20": "<p>A type: Job's threefold mourning response — tearing his garment, shaving his head, falling to the ground in worship — is the ancient mourning liturgy (Gen 37:34 Jacob; 2 Sam 1:11 David). The fall to the ground in worship distinguishes Job's response from mere lamentation: grief and trust together. Christ's Gethsemane parallels this — 'he fell with his face to the ground and prayed' (Matt 26:39), the physical prostration of utter surrender.</p>",
+    "21": "<p>A type: 'Naked I came from my mother's womb, and naked I will return. The LORD gave, and the LORD has taken away; may the name of the LORD be praised.' This is the theological high point of the prologue — the archetypal response to total loss. Paul develops the same logic: Phil 4:11-12 'I have learned to be content whatever the circumstances'; 1 Tim 6:7 'we brought nothing into the world, and we can take nothing out of it.' Christ's kenosis is the ultimate expression of this naked coming and returning: he empties himself (Phil 2:7) to become poor (2 Cor 8:9) so that we might be clothed (Rev 3:18).</p>",
+    "22": "<p>A type: 'Job did not sin or accuse God of wrongdoing (tiplāh = what is unseemly/wrong)' — the blameless response to catastrophe. 1 Pet 2:22-23 applies exactly this standard to Christ: 'he committed no sin, and no deceit was found in his mouth. When they hurled their insults at him, he did not retaliate; when he suffered, he made no threats. Instead, he entrusted himself to him who judges justly.' Job anticipates the pattern; Christ perfects it.</p>"
   },
-  "9": {
-    "33": [
-      {"type": "allusion", "target": "1 Tim 2:5", "note": "There is no arbiter between us who might lay his hand on both of us — Job's longing for a mediator who can bridge the gap between the holy God and the accused human; Paul's 'there is one mediator between God and men, the man Christ Jesus' is the direct answer to Job's longing: the mediator Job needed exists"}
-    ]
-  },
-  "19": {
-    "25": [
-      {"type": "allusion", "target": "1 Cor 15:20", "note": "I know that my Redeemer lives, and at the last he will stand upon the earth — Job's confession of faith in a living Redeemer who will vindicate him after death; the resurrection of Christ is the answer to Job's hope: the Redeemer who lives has stood upon the earth, and because he lives Job will live also"}
-    ]
-  },
-  "38": {
-    "4": [
-      {"type": "allusion", "target": "John 1:1", "note": "Where were you when I laid the foundation of the earth? — the divine speech from the whirlwind (chs. 38-41) confronts Job with the Creator's incomprehensible majesty; John 1:1 grounds Christ as the one who was present at that foundation: in the beginning was the Word, and the Word was with God — the one speaking from the whirlwind and the one who became flesh are the same person"}
-    ]
-  }
-}
-
-JOB_ORIGINAL = {
-  "19": {
-    "25": "<p><strong>vaani yadati goa'li chai ve'acharon al afar yaqum</strong>: 'For I know that my Redeemer [<em>go'el</em>] lives, and at the last he will stand upon the earth' (or 'upon the dust'). This is one of the OT's most disputed verses — the text is difficult (the next verse, 19:26, is even more so: 'after my skin has thus been destroyed, yet in my flesh I shall see God'). The term <em>go'el</em> (kinsman-redeemer) in the context of Job's suffering suggests: the one who will vindicate Job after death, who will see to it that justice is done. Whether Job envisions a bodily resurrection (as 19:26 suggests in the MT) or a post-mortem vindication, the theological content is the same: a personal Redeemer who is alive, who will act at the last, who will secure Job's vindication. The NT identifies this Redeemer as Christ (1 Cor 15:20: Christ has been raised from the dead, the firstfruits of those who have fallen asleep).</p>"
-  },
-  "38": {
-    "4": "<p>The divine speech from the whirlwind (Job 38-41) is the OT's most extended meditation on the incomprehensibility and majesty of God. YHWH's questions ('Where were you when I laid the foundation of the earth? Tell me, if you have understanding') do not answer Job's question about suffering — they reframe it by confronting Job with the Creator's perspective. The response to theodicy is not a logical explanation but a theophanic encounter: when Job sees YHWH, his questions are transformed, not answered (42:5: 'my eye sees you'; he is satisfied). This pattern — suffering resolved not by explanation but by encounter with God — points to the incarnation: the answer to the problem of suffering is not a theodicy argument but the Son of God entering the suffering and going through it.</p>"
-  }
-}
-
-JOB_CONTEXT = {
-  "1": {
-    "1": "<p>Job is the OT's most direct engagement with the problem of innocent suffering. Its genre combines a prose frame (the prologue and epilogue) with a poetic center (the dialogues, Job 3-41). The prologue reveals what Job does not know: that his suffering is the result of a cosmic test. The dialogues work out the human perspective on suffering without that hidden knowledge. The friends defend the retributive justice principle (you suffer, therefore you sinned); Job insists on his innocence. Both are partially right: the friends are correct that suffering is related to sin in general (the cosmic fall), but wrong that Job's specific suffering is punishment for specific sin. YHWH's verdict (42:7-8: Job's friends 'have not spoken of me what is right, as my servant Job has') vindicates Job's complaint against easy theodicy.</p>"
-  }
-}
-
-JOB_CHRIST = {
-  "9": {
-    "33": "<p>A type: 'There is no arbiter between us who might lay his hand on us both, who would remove his rod from me, and let not dread of him terrify me.' Job's longing for a mediator is one of the Bible's most poignant anticipations of Christ. What Job needs is someone who can stand between the holy God and the accused human — with one hand on God and one hand on the human — securing Job's access to God without the terror. The incarnation is the answer: Jesus Christ 'laid his hand' on both realities, being fully God and fully human, so that 'there is one mediator between God and men, the man Christ Jesus' (1 Tim 2:5). The mediator Job could only wish for, the NT declares has come.</p>"
-  },
-  "19": {
-    "25": "<p>A direct revelation: 'I know that my Redeemer lives, and at the last he will stand upon the earth.' Job's confession cuts through the fog of his suffering to affirm what cannot be seen or felt: a living Redeemer who will vindicate. The confession has multiple levels of fulfillment in Christ: (1) the Redeemer lives — Christ's resurrection is the demonstration; (2) he will stand upon the earth at the last — the parousia; (3) 'in my flesh I shall see God' (v. 26) — the bodily resurrection of the righteous. Job, in the depths of suffering and loss, speaks one of Scripture's clearest affirmations of resurrection-hope and the personal Redeemer who makes it possible.</p>"
-  }
-}
-
-# ============================
-# PROVERBS
-# ============================
-
-PROV_ECHO = {
-  "1": {
-    "7": [
-      {"type": "allusion", "target": "Col 2:3", "note": "The fear of the LORD is the beginning of wisdom — Proverbs' foundational maxim; Paul says in Christ are hidden all the treasures of wisdom and knowledge (Col 2:3): Christ is where the 'fear of the LORD leads, the source from whom all wisdom flows"}
-    ]
-  },
-  "8": {
-    "22": [
-      {"type": "allusion", "target": "John 1:1", "note": "The LORD possessed me at the beginning of his work, the first of his acts of old — Wisdom speaking in Proverbs 8:22-31; personified Wisdom present at creation, delighting in the inhabited world; the Logos-Wisdom identification (John 1:1-3; Col 1:15-16; Heb 1:2-3) applies the Prov 8 Wisdom-portrait to the pre-incarnate Christ"},
-      {"type": "allusion", "target": "Col 1:15", "note": "I was beside him like a master workman, rejoicing before him always — Wisdom as God's artisan in creation (Prov 8:30); Paul describes Christ as the one in whom all things were created (Col 1:16) and through whom all things were made (John 1:3); the Wisdom-Creator becomes the Christ-Creator"}
-    ]
+  "2": {
+    "1": "<p>A revelation of God: the second assembly of the heavenly council with the Adversary echoes the first (1:6) but with an intensified charge. The repetition of the cosmic-legal setting establishes that Job's suffering is not random or impersonal but part of an ongoing forensic process in the divine court. Christ's trial before Pilate has this same character: a human court reflecting a cosmic legal reality.</p>",
+    "2": "<p>The theme: 'from roaming through the earth and walking back and forth on it' — repeated from 1:7. The Adversary's continued surveillance of the earth is the ongoing backdrop of human suffering. 1 Pet 5:8 'be sober-minded; be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour' — the danger is real and continuous; the defense is Christ's intercession (Heb 7:25).</p>",
+    "3": "<p>A type: 'He still maintains his integrity, even though you incited me against him to ruin him without cause (ḥinnām).' The phrase 'without cause' is the Septuagint's ἐμάτην — and Ps 35:19 / 69:4 use the same word for the enemies who hate the psalmist 'without cause.' John 15:25 applies Ps 35:19 to Christ explicitly: 'they hated me without reason/without cause.' Job is ruined without cause; Christ is hated without cause — both the unjust sufferer whose suffering has redemptive power.</p>",
+    "4": "<p>A revelation of God: 'Skin for skin! A man will give everything he has to save his own life.' The Adversary's cynical anthropology — that human piety is purely self-interested — is the doctrine of human selfishness the Incarnation and the cross directly refute. John 15:13 'greater love has no one than this: to lay down one's life for one's friends.' Mark 10:45 'the Son of Man did not come to be served, but to serve, and to give his life as a ransom for many.' Christ gives his life rather than preserving it — the complete inversion of the Adversary's claim.</p>",
+    "5": "<p>A type: 'reach out now and strike his flesh and his bones' — the Adversary's request to strike the body of the innocent man is granted. This is Passion language: John 19:1 (the flogging); 19:17-18 (the crucifixion); 19:31-34 (the breaking of legs and the piercing). Christ's flesh and bones are struck so that his body becomes the site of redemption — the struck body of the scapegoat that carries away sin (Heb 13:12).</p>",
+    "6": "<p>A direct contrast: 'Very well, he is in your hands. Only spare his life.' YHWH permits total bodily suffering but withholds Job's life. This is the inverse of the cross: for the Son, God does NOT spare — Rom 8:32 'he who did not spare (οὐκ ἐφείσατο) his own Son but gave him up for us all.' The contrast is deliberate: Job's life is spared so that the theological question can continue; Christ's life is not spared so that the redemptive answer can be given.</p>",
+    "7": "<p>A type: 'The Adversary afflicted Job with painful, festering sores from the soles of his feet to the top of his head.' The top-to-bottom totality of the suffering echoes Isa 1:6 ('from the sole of the foot to the crown of the head there is no soundness, only wounds and welts and open sores'). Isaiah uses this as a description of Israel's covenant devastation; the same totality applies to the Passion's physical suffering (crown of thorns to nailed feet). Total suffering for the innocent one.</p>",
+    "8": "<p>The theme: Job taking a piece of pottery to scrape his sores while sitting among the ashes — the image of the greatest man of the East reduced to ash-heap and broken pottery. Lam 3:16 'he has broken my teeth with gravel; he has trampled me in the dust.' Christ takes on this ultimate lowliness — Phil 2:8 'he humbled himself by becoming obedient to death — even death on a cross'; the ash-heap as the furthest descent before the exaltation (Phil 2:9).</p>",
+    "9": "<p>A type: Job's wife says 'Are you still holding on to your integrity? Curse God and be done with it' — a temptation to abandon covenant faithfulness through death. The temptations of the cross mock Christ in the same way: Matt 27:40 'come down from the cross, if you are the Son of God!'; Luke 23:37 'save yourself if you are the King of the Jews!' Both Job and Christ are urged to escape suffering by abandoning their covenant relationship with God; both refuse.</p>",
+    "10": "<p>A type: 'Shall we accept good from God and refuse to accept adversity?' — the theological question that distills the book's challenge. Christ's Gethsemane prayer is the perfect expression of this acceptance: 'My Father, if it is possible, may this cup be taken from me. Yet not as I will, but as you will' (Matt 26:39). The cup of adversity accepted rather than refused is the mechanism of redemption. 'Job did not sin with his lips' — the parallel with 1 Pet 2:22 ('no deceit was found in his mouth') is exact.</p>",
+    "11": "<p>The theme: the three friends Eliphaz, Bildad, and Zophar come from distant regions to 'express their sympathy and comfort him' (lĕnûḏ lô wĕlĕnaḥămô). The Hebrew nāḥam (comfort) is the root of both the Comfort/consolation of Israel that Simeon waited for (Luke 2:25) and the Paraclete (ΠαράκλητοϚ = the one called alongside to help/comfort, John 14:16). The friends fail as comforters; Christ and his Spirit succeed.</p>",
+    "12": "<p>A type: 'When they looked up from a distance, they could not even recognize him.' The radical disfigurement that makes Job unrecognizable is the same vocabulary as Isa 52:14: 'his appearance was so disfigured beyond that of any human being, and his form marred beyond human likeness.' The unrecognizable sufferer is the Servant whose disfigurement is simultaneous with his atoning work.</p>",
+    "13": "<p>A revelation of God: 'They sat on the ground beside him for seven days and seven nights. No one spoke a single word to him, for they could see how overwhelming his suffering was.' The seven-day silent presence is the appropriate response to acute grief (the friends' later failure is speaking, not silence). Christ's presence with the grieving is similarly one of incarnate solidarity — John 11:35 'Jesus wept'; he sits with the grieving rather than immediately resolving the grief.</p>"
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Heb 12:5-6", "note": "My son, do not despise the LORD's discipline or be weary of his reproof, for the LORD reproves him whom he loves — Hebrews quotes Prov 3:11-12 to explain suffering as divine discipline: God treats believers as sons (Heb 12:7); the wisdom perspective on suffering as fatherly training is the theological framework for the Christian endurance of hardship"}
-    ]
-  }
-}
-
-PROV_ORIGINAL = {
-  "8": {
-    "22": "<p><strong>YHWH qanani reshit darko qedem mifalav meaz</strong>: 'The LORD possessed/created me at the beginning of his work, the first of his acts of old.' The verb <em>qanah</em> is disputed: it can mean 'to acquire/possess' (so most LXX manuscripts, Aquila, Theodotion) or 'to create' (so the Arian controversy reading, applied to prove the Son was a created being). The Nicene theology responded: even if <em>qanah</em> means 'created', Proverbs 8 is personified Wisdom literature — a poetic device, not a literal description of a divine person's ontology. The NT applies Prov 8's Wisdom-portrait to the eternal Son (Col 1:15-17; Heb 1:2-3; John 1:1-3) not to prove the Son is created, but to show that the pre-existent Son is the referent of the Wisdom-personification: the figure the wisdom tradition was groping toward in poetic imagery became flesh in Christ.</p>"
-  }
-}
-
-PROV_CONTEXT = {
-  "1": {
-    "1": "<p>Proverbs is the OT's primary wisdom text — a collection of moral instruction, practical guidance, and theological reflection on the nature of a well-ordered life in YHWH's world. It is attributed to Solomon (1:1; 10:1; 25:1) with additions from other wise men (Agur, 30:1; Lemuel's mother, 31:1). Its theological foundation is the fear of YHWH (1:7; 9:10; 15:33): wisdom is not abstract intellectual skill but a disposition toward God and the moral order of creation. The longest section (chs. 1-9) frames the rest with the personification of Wisdom as a woman calling in the streets, building her house, offering her feast — while her counterpart, Folly, seduces the simple to death. The NT's identification of Christ as divine Wisdom (1 Cor 1:24, 30; Col 2:3) is the claim that the personification in Proverbs 8 was, in the fullness of time, made literal and personal.</p>"
-  }
-}
-
-PROV_CHRIST = {
-  "8": {
-    "30": "<p>A revelation of God: 'Then I was beside him, like a master workman, and I was daily his delight, rejoicing before him always, rejoicing in his inhabited world and delighting in the children of man.' Wisdom's delight in creation and in humanity (Prov 8:30-31) is the OT's most personal statement of the divine affection for the created order. The NT applies this portrait to the eternal Son: 'by him all things were created' (Col 1:16); 'all things were made through him' (John 1:3); 'through whom also he created the world' (Heb 1:2). The Wisdom who rejoiced at creation is the Word who entered creation (John 1:14), and the delight Wisdom expressed for the children of man is the love that sent the Son into the world (John 3:16). Proverbs 8's Wisdom-portrait is the poetic anticipation of the incarnate Logos who is himself divine wisdom in person (1 Cor 1:24: Christ the wisdom of God).</p>"
-  }
-}
-
-# ============================
-# ECCLESIASTES
-# ============================
-
-ECCL_ECHO = {
-  "1": {
-    "2": [
-      {"type": "allusion", "target": "Rom 8:20", "note": "Vanity of vanities, all is vanity — the Preacher's diagnosis of the futility of all earthly striving; Paul's 'the creation was subjected to futility [mataiotes = the LXX word for hevel/vanity]' applies Ecclesiastes' diagnosis to the whole created order: the vanity is not merely human experience but creation-wide, awaiting the liberation of the resurrection"}
-    ]
+    "1": "<p>A revelation of God: 'After this, Job opened his mouth and cursed the day he was born.' The move from silent suffering to voiced despair marks the beginning of the poetic dialogue. Job's curse of his own birth represents the maximum darkness of fallen human experience — the wish for non-existence. Christ does not curse the day of his birth (John 18:37 'for this reason I was born'), but he enters into the reality of those who do (Heb 4:15 'tempted in every way, just as we are').</p>",
+    "2": "<p>The theme: 'Job spoke and said' — the opening of his first lamentation speech. The literary device of the wisdom dialogue begins here; Job's speeches will become progressively more theologically daring until the divine answer. Christ's own cry from the cross (Matt 27:46 'my God, my God, why have you forsaken me?') is the apex of innocent lament taken up by God himself.</p>",
+    "3": "<p>The theme: 'Let the day on which I was born perish, and the night that announced, a boy has been conceived.' The opposite of the Annunciation — where Gabriel announces a birth with 'you will conceive and give birth to a son' (Luke 1:31), and heaven celebrates (Luke 2:10-14). Job wishes away the announcement of his birth; the angelic announcement of Christ's birth is the proclamation of humanity's rescue.</p>",
+    "4": "<p>The theme: 'Let that day be turned to darkness. May God above not care for it, nor light shine upon it.' The theological inverse of Gen 1:3 ('God said, let there be light'). Job wishes the re-primordial darkness of uncreation upon the day of his birth. The NT's eschatological promise is the final reversal of this darkness: Rev 21:23 'the city does not need the sun or the moon... for the glory of God gives it light, and the Lamb is its lamp.'</p>",
+    "5": "<p>The theme: 'May darkness and deep shadow (ṣalmāwet) reclaim it.' ṣalmāwet (shadow of death/deep darkness) is Job's signature darkness-term (3:5; 10:21-22; 12:22; 16:16; 24:17; 28:3; 34:22; 38:17). The NT applies this darkness to the condition before Christ: Luke 1:79 'to shine on those living in darkness and in the shadow of death (σκιᾷ θανάτου)' — quoting Isa 9:2, the Messianic promise. Christ is the light that pierces ṣalmāwet.</p>",
+    "6": "<p>The theme: 'Let pitch darkness take it; let it not be counted among the days of the year.' The wish for erasure from the calendar of time. The NT vision of time's redemption goes in the opposite direction: every day is redeemed by Christ's presence (Eph 5:16 'making the most of every opportunity, because the days are evil'). Time itself is reclaimed rather than cursed.</p>",
+    "7": "<p>The theme: 'Let that night be barren; let no sound of joy enter it.' The barren night without joy is the antithesis of the song of the angels at Christ's birth (Luke 2:14 'glory to God in the highest heaven, and on earth peace to those on whom his favor rests'). Job's darkness-wish is inverted by the Incarnation's light-proclamation.</p>",
+    "8": "<p>A shadow: 'Let those who are skilled at cursing days put a curse on it — those who know how to rouse Leviathan.' Leviathan (lĕwiyāṯān) appears throughout Job (3:8; 41:1) as the chaos monster. Rev 12:9 and 20:2 identify the great dragon/serpent (ὁ δράκων ὁ μέγας) as the ancient serpent, the devil. Christ's conquest of the dragon/Leviathan is the eschatological answer to Job's invocation of the chaos-cursers.</p>",
+    "9": "<p>The theme: 'May it wait for light that never comes; may it never see the breaking of morning.' The desperate non-dawn anticipates John 1:5 ('the light shines in the darkness') and 8:12 ('I am the light of the world; whoever follows me will never walk in darkness but will have the light of life'). The morning that never comes for Job's cursed day does come in Christ — the resurrection morning that breaks the permanent darkness.</p>",
+    "10": "<p>The theme: 'Because it did not close the doors of my mother's womb to me, nor hide trouble from my eyes.' Job wishes he had never seen — the ultimate recoil from experience. The NT does not promise the avoidance of trouble but transformation through it: John 16:33 'in this world you will have trouble. But take heart! I have overcome the world.' Christ has seen the trouble and overcome it.</p>",
+    "11": "<p>The theme: 'Why did I not die at birth?' — Job's first death-wish, the wish for non-existence over existence-with-suffering. Heb 2:9 'he tasted death for everyone' — Christ takes on what Job wishes had happened to him, turning death from a wish for escape into an accomplished redemption.</p>",
+    "12": "<p>The theme: 'Why were there knees to receive me, and breasts for me to nurse?' — the received-and-nurtured infant as an image of unwanted gift. Luke 2:22-24 presents the infant Christ at the Temple, received with Simeon's arms (v28) — the welcoming reception of the child who comes as God's gift to the world, the anti-type of Job's unwanted birth.</p>",
+    "13": "<p>The theme: 'For then I would have lain down and been at rest' — the rest of non-existence that Job desires. The NT redirects this longing: Heb 4:9-10 'there remains a Sabbath-rest for the people of God; for anyone who enters God's rest also rests from their works, just as God did from his.' The true rest is not in non-existence but in the completed work of Christ.</p>",
+    "14": "<p>The theme: 'with kings and counselors of the earth who built themselves ruins' — the shared rest of the great with the forgotten. The leveling of status in death is the OT's recognition of human equality before mortality. James 2:1-4 applies the same leveling to Christ's assembly; Rev 7:9-10 shows the great multitude of every nation, tribe, and tongue equally before the throne.</p>",
+    "15": "<p>The theme: 'or with princes who hoarded gold and filled their mansions with silver.' The futility of accumulated wealth when death is the leveler. Matt 6:19-21 ('do not store up for yourselves treasures on earth') and Luke 12:16-21 (the rich fool) apply this OT wisdom. Christ alone offers treasure that death cannot level (Matt 6:20 'store up for yourselves treasures in heaven').</p>",
+    "16": "<p>The shadow: 'Or why was I not like a stillborn hidden away, like infants who never saw the light of day?' The stillborn hidden away — the untimely death that never saw light — anticipates the NT's use of premature death as a metaphor for being dead in sin before Christ: Eph 2:1-5 'as for you, you were dead in your transgressions and sins... God... made us alive with Christ.' The spiritual stillborn who sees no light is given life through Christ.</p>",
+    "17": "<p>A revelation of God: 'There the wicked cease from their turmoil, and there the exhausted find rest.' The vision of Sheol as rest from labor. Rev 14:13 appropriates exactly this: 'blessed are the dead who die in the Lord from now on... they will rest from their labor, for their deeds will follow them.' The rest that Job imagines in death is redeemed in Christ into resurrection rest.</p>",
+    "18": "<p>The theme: 'There the prisoners rest together; they no longer hear the taskmaster's shout.' The end of oppression in death. Christ proclaims release to prisoners (Luke 4:18, quoting Isa 61:1) and breaks the power of the last taskmaster — death — through his resurrection. The rest that Job imagines is real in Christ, but it comes through resurrection, not dissolution.</p>",
+    "19": "<p>The theme: 'The lowly and the great are alike there, and the slave is free from his master.' Death's leveling is the OT observation; the NT reframes it through resurrection: Gal 3:28 'there is neither Jew nor Gentile, neither slave nor free, nor is there male and female, for you are all one in Christ Jesus.' The equality that death produces by ending everything is surpassed by the equality Christ creates by elevating everything.</p>",
+    "20": "<p>A revelation of God: 'Why is light given to the one who suffers, and life to those whose souls are bitter?' The theodicy question in its starkest form — why does God sustain life when life means suffering? John 1:4 'in him was life, and that life was the light of all mankind' — the NT answer is that God gives light through the person of Christ, not as an abstract gift but as an incarnate presence who shares the suffering light is given into.</p>",
+    "21": "<p>The theme: 'those who long for death that does not come, who search for it more eagerly than for buried treasure.' The desperate longing for death that remains unfulfilled is the condition of deep spiritual desolation. The NT response is 1 Cor 15:55 'where, O death, is your victory? Where, O death, is your sting?' — the sting of death (the fear that makes it desirable as escape) is removed by Christ's resurrection, transforming death from the desired exit into the defeated enemy.</p>",
+    "22": "<p>The theme: 'who would be overjoyed and exult when they finally reach the grave.' The perverse joy at finding death is the maximum inversion of the gospel's invitation. Phil 4:4 'rejoice in the Lord always; I will say it again: rejoice!' — the NT places joy not in reaching the grave but in belonging to the risen Christ who has conquered the grave.</p>",
+    "23": "<p>A type: 'Why is life given to a man whose way is hidden, whom God has fenced in (sāḵaḵ) on every side?' Job uses the Adversary's own vocabulary (the śĕyāg/hedge of 1:10) now as complaint: the divine encirclement experienced as imprisonment rather than protection. Christ is 'fenced in' to human limitation by the Incarnation (Gal 4:4 'born of woman, born under the law') — the omnipotent Son enclosed in the restrictions of mortality for redemptive purpose.</p>",
+    "24": "<p>The theme: 'my groaning comes even before my food' — grief displacing appetite. The Psalms of lament use the same image: Ps 102:4-5 'I forget to eat my food... I am reduced to skin and bones.' Christ identifies with those who grieve and fast: Matt 6:16-18 affirms fasting as a genuine spiritual discipline; the Gethsemane night is itself an extended experience of grief overwhelming the body.</p>",
+    "25": "<p>A revelation of God: 'What I dreaded most has befallen me; what I feared has come upon me.' The realization of the worst fear is the human experience that Christ enters fully. Heb 5:7 'during the days of Jesus's life on earth, he offered up prayers and petitions with fervent cries and tears to the one who could save him from death, and he was heard because of his reverent submission.' The worst fear — abandonment in death — is precisely what Christ faces at Calvary (Matt 27:46).</p>",
+    "26": "<p>The theme: 'I had no ease, no rest, no peace — yet trouble still came.' The cumulative deprivation — no ease (šalwāh), no rest (šāqaṭ), no peace (šāqaṭ) — describes the pre-gospel human condition without divine peace. The NT reverses this threefold absence: John 14:27 'Peace I leave with you; my peace I give you'; Phil 4:7 'the peace of God, which transcends all understanding, will guard your hearts and minds in Christ Jesus.'</p>"
   },
-  "12": {
-    "13": [
-      {"type": "allusion", "target": "Matt 22:37-40", "note": "Fear God and keep his commandments, for this is the whole duty of man — the Preacher's final summary of the human vocation: the fear of YHWH and covenant obedience are the answer to the vanity of all other human projects; Jesus's summary (love God and love neighbor) is the new covenant distillation of the same conclusion"}
-    ]
-  }
-}
-
-ECCL_ORIGINAL = {
-  "1": {
-    "2": "<p><strong>havel havalim amar qohelet havel havalim hakol havel</strong>: 'Vanity of vanities, says the Preacher, vanity of vanities! All is vanity.' The Hebrew <em>hevel</em> (vapor, breath, vanity) is used 38 times in Ecclesiastes — more than in any other biblical book. It literally means a breath of air that passes immediately: something that exists momentarily and then is gone. The LXX translates <em>hevel</em> as <em>mataiotes</em> (futility, vanity), and Paul uses this word in Romans 8:20: 'the creation was subjected to futility [<em>mataiotes</em>].' The Ecclesiastes diagnosis is therefore not pessimism but realism about the post-fall condition of creation: all earthly striving that does not account for God and eternity is, sub specie aeternitatis, vapor. The NT's response is the resurrection, which gives permanence to what was formerly vapor: 'your labor in the Lord is not in vain' (1 Cor 15:58).</p>"
-  }
-}
-
-ECCL_CONTEXT = {
-  "1": {
-    "1": "<p>Ecclesiastes (Hebrew <em>Qohelet</em>, 'the Preacher/Assembler') is the most theologically challenging book of the wisdom literature — it appears to endorse cynicism (2:24: 'there is nothing better for a person than to eat and drink'), relativism (3:1-8: a time for everything), and even doubt (9:5: the dead know nothing). Its canonical function is the 'foil' in the wisdom dialogue: if Proverbs gives the optimistic wisdom perspective, Ecclesiastes gives the honest reckoning with what happens when wisdom is pursued 'under the sun' — that is, within the frame of mortal, fallen human existence. The recurring phrase 'under the sun' (29 occurrences) marks the book's self-conscious limitation: it is wisdom from the earthly perspective, without the resurrection. The NT provides what Ecclesiastes lacks: the 'not in vain' of labor done in the Lord (1 Cor 15:58) and the hope that breaks the <em>hevel</em>-cycle.</p>"
-  }
-}
-
-ECCL_CHRIST = {
-  "12": {
-    "13": "<p>A shadow: 'Fear God and keep his commandments, for this is the whole duty of man.' Ecclesiastes' closing verdict after surveying all human wisdom is the simplest possible statement of the human vocation: the fear of God and covenant obedience. This is the wisdom tradition's answer to vanity — not a philosophical system but a personal relationship with the Creator. Jesus's summary of the law (love God, love neighbor) is the new covenant's positive restatement of what Ecclesiastes reaches as its final conclusion. But Christ does more than restate: he embodies the fear of God and covenant obedience perfectly (Heb 5:7-8: in the days of his flesh, Jesus offered up prayers and supplications with loud cries and tears ... and was heard because of his reverence; although he was a son, he learned obedience through what he suffered), and in his resurrection he breaks the <em>hevel</em>-cycle, proving that labor in the Lord — unlike all labor 'under the sun' — is not in vain (1 Cor 15:58).</p>"
-  }
-}
-
-# ============================
-# SONG OF SOLOMON
-# ============================
-
-SONG_ECHO = {
-  "2": {
-    "16": [
-      {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
-    ]
-  },
-  "8": {
-    "6": [
-      {"type": "allusion", "target": "Rom 8:35-39", "note": "Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD — the Song's declaration of love's unconquerable strength; Paul's conviction that nothing can separate us from the love of God in Christ Jesus is the new covenant answer to the Song's vision of love stronger than death: Christ's love has defeated death itself and remains unbreakable"}
-    ]
-  }
-}
-
-SONG_ORIGINAL = {
-  "1": {
-    "1": "<p>The Song of Songs (<em>shir hashirim</em>) is the OT's wisdom-meditation on human love and sexuality. Its literal level — a celebration of erotic love between a man and a woman — is taken seriously by responsible interpreters as a canonical affirmation of marriage and the goodness of sexual love within covenant. The allegorical level — YHWH's love for Israel (the Jewish interpretation) or Christ's love for the church (the dominant Christian interpretation) — has been the dominant hermeneutical approach through most of church history (Origen's commentary and Bernard of Clairvaux's 86 sermons on Song 1-2 are the most extensive examples). The allegorical reading is supported by the OT's consistent use of the husband-wife metaphor for YHWH-Israel (Isa 54:5; Jer 2:2; Ezek 16; Hos 1-3) and the NT's application of the bride-bridegroom image to Christ-church (Eph 5:25-32; Rev 19:7-9; 21:2). The two readings are not mutually exclusive: the literal is the foundation that gives the allegorical its force.</p>"
-  },
-  "8": {
-    "6": "<p><strong>simeini kachotam al libecha kachotam al zeroa'echa ki azza kamavet ahavah qasha kishol qina'ah reshefeyha reshefei esh shalhevetyah</strong>: 'Set me as a seal upon your heart, as a seal upon your arm, for love is strong as death, jealousy is fierce as the grave. Its flashes are flashes of fire, the very flame of the LORD.' The climax of the Song's celebration of love: it is as strong as death and as fierce as <em>sheol</em> — the two most powerful forces in human experience. <em>Shalhevetyah</em> (the very flame of the LORD) — uniquely, this is one of the few places in the Song where the divine name appears, even embedded in a word. The NT's fulfillment: the love of Christ has defeated death (1 Cor 15:54-57) and nothing can separate us from that love (Rom 8:38-39); what the Song claimed about love's unconquerability is literally true in Christ's resurrection.</p>"
-  }
-}
-
-SONG_CONTEXT = {
-  "1": {
-    "1": "<p>The Song of Solomon's place in the canon was debated in rabbinic Judaism (Rabbi Akiva defended it: 'all the ages are not worth the day on which the Song of Songs was given to Israel; for all the writings are holy, but the Song of Songs is the Holy of Holies'); it was included in the Hebrew canon and subsequently in the Christian canon. The bride-bridegroom image is the OT's primary metaphor for the YHWH-Israel covenant relationship: Hosea (chs. 1-3) uses the marriage metaphor for covenant and its violation; Isaiah 54:5 calls YHWH Israel's husband; Jeremiah 2:2 recalls the honeymoon period of the wilderness. The NT develops the bridegroom imagery specifically for Jesus (Mark 2:20: the bridegroom is taken away; John 3:29: the friend of the bridegroom rejoices; Eph 5:25-32: husbands love your wives as Christ loved the church; Rev 19:7: the marriage of the Lamb has come).</p>"
-  }
-}
-
-SONG_CHRIST = {
-  "2": {
-    "16": "<p>A revelation of God: 'My beloved is mine, and I am his.' The Song's vision of mutual possession between lover and beloved is the OT's most intimate description of the covenant relationship. In the NT, this mutual possession is fulfilled in the Christ-church relationship: 'You are not your own, for you were bought with a price' (1 Cor 6:19-20); 'I am my beloved's and my beloved is mine' becomes 'I live, and yet not I, but Christ lives in me' (Gal 2:20). The mutual knowing of bride and groom (I know my sheep and my sheep know me, John 10:14) is the new covenant's personal form of the Song's mutual possession. The eschatological fulfillment is the marriage of the Lamb (Rev 19:7-9; 21:2): the Song's vision of complete love is consummated in the new creation when the Bride has made herself ready.</p>"
-  },
-  "8": {
-    "6": "<p>A direct revelation: 'Love is strong as death, jealousy is fierce as the grave; its flashes are flashes of fire, the very flame of the LORD.' The Song declares love's unconquerable strength in the face of the two most formidable opponents — death and sheol. The NT's claim is that this declaration is literally, not merely poetically, true in Christ: his love has conquered death (1 Cor 15:54-57: Death is swallowed up in victory; thanks be to God who gives us the victory through our Lord Jesus Christ) and the love of God in Christ is literally unconquerable (Rom 8:38-39: neither death nor life ... shall be able to separate us from the love of God in Christ Jesus our Lord). What the Song celebrates as love's aspiration, the resurrection announces as love's accomplished fact.</p>"
+  "4": {
+    "1": "<p>The theme: Eliphaz the Temanite's first speech begins the friends' failed pastoral engagement. Eliphaz represents wise human theology in its most confident form — and his failure to help Job (condemned by God in ch42:7) demonstrates that even excellent human wisdom is insufficient for the theodicy Job faces. The knowledge of God in Christ (Col 2:3) is what surpasses Eliphaz's wisdom.</p>",
+    "2": "<p>The theme: 'If someone ventures a word with you, will it trouble you?' Eliphaz asks permission before speaking — a pastoral sensitivity his later speeches lose. The NT wisdom: Jas 1:19 'everyone should be quick to listen, slow to speak and slow to become angry.' The ministry of presence before the ministry of words is what the friends provide briefly (2:13) and then abandon.</p>",
+    "3": "<p>A type: 'Look — you have instructed many people, and you have strengthened (ḥāzaq) weak hands.' The strengthening of weak hands is the language of Isa 35:3-4: 'Strengthen (ḥazzĕqû) the feeble hands, steady the knees that give way; say to those with fearful hearts: Be strong, do not fear; your God will come.' Isaiah applies this to the Messianic age of restoration. Eliphaz sees Job as having performed this Messianic ministry; now the question is whether Job can receive what he has given.</p>",
+    "4": "<p>A type: 'Your words have upheld the one who was stumbling, and you have steadied feeble knees.' The pastoral ministry described here is precisely the Messianic ministry of Christ: Matt 12:20 'a bruised reed he will not break, and a smoldering wick he will not snuff out' (quoting Isa 42:3); Heb 12:12 'strengthen your feeble arms and weak knees' (quoting Isa 35:3). Eliphaz inadvertently describes what Christ will permanently accomplish — the steadying of those who stumble.</p>",
+    "5": "<p>The theme: 'But now that it has come upon you, you are impatient; it has touched you, and you are terrified.' Eliphaz diagnoses the gap between Job's pastoral wisdom-for-others and his failure to apply it to himself. The NT addresses this same gap: the servant who forgives others but demands repayment from his fellow servant (Matt 18:28-30); and Christ himself who models what he teaches — bearing suffering without impatience (1 Pet 2:23).</p>",
+    "6": "<p>A revelation of God: 'Is not your reverence for God your confidence, and the integrity of your ways your hope?' Eliphaz identifies two foundations — fear of God and integrity. The NT grounds both in Christ: Eph 3:12 'in him and through faith in him we may approach God with freedom and confidence'; Heb 10:22 'let us draw near to God with a sincere heart and with the full assurance that faith brings.' Confidence before God is not earned by integrity but given through Christ.</p>",
+    "7": "<p>A direct challenge: 'Think: has any innocent person ever perished? Have the upright ever been destroyed?' Eliphaz assumes the answer is no. The answer given at Calvary is: one innocent person did perish — the only truly upright person was destroyed. And precisely because of his innocence, his destruction saves. 1 Pet 3:18 'Christ also suffered once for sins, the righteous for the unrighteous, to bring you to God.'</p>",
+    "8": "<p>The theme: 'those who plow trouble and sow wickedness reap the same' — the retributive principle that is generally true. Gal 6:7-8 'a man reaps what he sows: the one who sows to please his sinful nature, from that nature will reap destruction.' But Christ reaps what others sow: 2 Cor 5:21 'God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.' The retributive principle is absorbed and reversed at the cross.</p>",
+    "9": "<p>A shadow: 'By the breath of God (nišmaṯ-ʾēl) they perish, and by the blast of his nostrils they are consumed.' The divine breath as instrument of judgment. Isa 11:4 'he will strike the earth with the rod of his mouth; with the breath of his lips he will slay the wicked' — applied to the Messiah. 2 Thess 2:8 'the Lord Jesus will overthrow [the lawless one] with the breath of his mouth and destroy him by the splendor of his coming.' The divine breath of judgment becomes the Messianic breath.</p>",
+    "10": "<p>The shadow: 'The roar of the lion, the voice of the fierce lion — the teeth of the young lions are shattered.' The silenced lions image divine judgment on the proud and strong. Christ is the 'Lion of the tribe of Judah' (Rev 5:5) who conquers not through roaring but through being slain — 'a Lamb, looking as if it had been slain.' The true Lion wins by being the sacrificial Lamb; the false lions' teeth are shattered.</p>",
+    "11": "<p>The theme: 'The mature lion perishes for lack of prey, and the cubs of the lioness scatter.' The futility of predatory power — the apex predator ultimately starving. The Adversary who roams the earth seeking to devour (1 Pet 5:8) will ultimately be cast into the lake of fire (Rev 20:10) — the predator's final perishing. Christ's resurrection is the beginning of the Adversary's starvation.</p>",
+    "12": "<p>A revelation of God: 'A word came to me in secret (gānaḇ = stolen secretly), and my ear caught a faint whisper of it.' The revelation that comes as a whisper in the night is the mode of divine communication before the prophetic word. The NT culmination: Heb 1:1-2 'in the past God spoke to our ancestors through the prophets at many times and in various ways, but in these last days he has spoken to us by his Son.' The whispered word gives way to the incarnate Word.</p>",
+    "13": "<p>A revelation of God: 'In disturbing thoughts from visions of the night, when deep sleep descends on people' — the night vision as the vehicle of divine revelation. This is the form of divine communication in the Genesis patriarchal narratives (Gen 15:12-17 Abram's deep sleep/covenant; 28:10-17 Jacob's ladder). Joseph receives dreams (Gen 37:5-11); Pharaoh too (Gen 41). In the NT, Joseph (Jesus's father) receives guidance through night visions (Matt 1:20; 2:13), keeping the pattern while fulfilling it.</p>",
+    "14": "<p>A revelation of God: 'Fear came over me and trembling, making all my bones shake.' The physical response to divine approach — trembling and shaking — is the standard theophany response: Dan 10:7-9 (Daniel falls facedown); Rev 1:17 (John falls at Jesus's feet 'as if dead') when the glorified Christ appears. The body's response to divine presence is universal: awe that is also terror until the divine word assures.</p>",
+    "15": "<p>A revelation of God: 'A spirit passed before my face; the hair on my body bristled.' The passing spirit echoes Exod 33:22-23 (Moses hidden in the cleft of the rock while YHWH's glory passes) and 1 Kings 19:11-13 (Elijah experiencing the passing of YHWH in the still small voice). The NT equivalent is the post-resurrection appearances where Christ passes through walls (John 20:19) and is suddenly present — the recognizable-yet-different quality of the glorified Christ.</p>",
+    "16": "<p>A revelation of God: 'It stopped still, but I could not make out its form. A shape was before my eyes; silence — and then a voice.' The unrecognizable form that speaks is the primary mode of theophany: Exod 24:17 (divine appearance as consuming fire); Isa 6:1-5 (the LORD on his throne — the form not fully visible); Ezek 1:26-28 (the figure on the throne, described by analogy, never directly). John 1:18 'no one has ever seen God, but the one and only Son, who is himself God and is in closest relationship with the Father, has made him known.'</p>",
+    "17": "<p>A direct question: 'Can a mortal be more righteous than God? Can a person be purer than their Maker?' Eliphaz poses this as a rhetorical negative. The Incarnation complicates the answer: in Christ, God takes on mortal form — the Maker enters the clay house of creation (John 1:14). The question is not about comparing creature to Creator but about whether the Creator can become creature — which he does. 2 Cor 5:21 'God made him who had no sin to be sin for us, so that in him we might become the righteousness of God.'</p>",
+    "18": "<p>A revelation of God: 'God places no trust even in his servants; he charges his very angels with error.' The angelic imperfection before God establishes that the mediator cannot be an angel. Heb 1:5-14 explicitly argues Christ's superiority to the angels — he is not a servant (v14, angels are 'ministering spirits') but a Son (v5, 'to which of the angels did God ever say, you are my Son'?). The Mediator needed cannot come from the angelic order.</p>",
+    "19": "<p>A shadow: 'How much more those who live in houses of clay (bāttê-ḥōmer), whose foundation is the dust, who are crushed more easily than a moth!' The clay house (ḥōmer = clay, the material of Gen 2:7's creation) is the human body as mortal dwelling. 2 Cor 5:1 uses this exact imagery: 'if the earthly tent we live in is destroyed, we have a building from God, an eternal house in heaven, not built by human hands.' Paul's 'tent' and Eliphaz's 'clay house' are the same image; the NT adds the promise of the resurrection body.</p>",
+    "20": "<p>A revelation of God: 'Between morning and evening they are destroyed; without anyone noticing, they vanish forever.' The brevity and unnoticed disappearance of human life. Christ enters this brevity (Gal 4:4 'born of woman, born under the law') and transforms it: John 11:25-26 'I am the resurrection and the life. The one who believes in me will live, even though they die; and whoever lives by believing in me will never die.' The vanishing is answered by the resurrection.</p>",
+    "21": "<p>A shadow: 'Is not their tent stake pulled up from within them? They die, and that without gaining wisdom.' The tent whose stake is pulled up — the body at death — is 2 Cor 5:1-4's imagery: 'we know that if the earthly tent we live in is destroyed, we have a building from God... Meanwhile we groan, longing to be clothed instead with our heavenly dwelling.' Paul develops the tent-death-building-resurrection movement that Eliphaz's metaphor anticipates. The dying-without-wisdom is exactly what Christ reverses: those in him die having gained the Wisdom of God (1 Cor 1:30).</p>"
   }
 }
 
 def main():
-    books = [
-        ('job', JOB_ECHO, JOB_ORIGINAL, JOB_CONTEXT, JOB_CHRIST),
-        ('proverbs', PROV_ECHO, PROV_ORIGINAL, PROV_CONTEXT, PROV_CHRIST),
-        ('ecclesiastes', ECCL_ECHO, ECCL_ORIGINAL, ECCL_CONTEXT, ECCL_CHRIST),
-        ('songofsolomon', SONG_ECHO, SONG_ORIGINAL, SONG_CONTEXT, SONG_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', 'job')
+    merge_comm(c, JOB14)
+    save_comm('mkt-christ', 'job', c)
+    count = sum(len(v) for v in JOB14.values())
+    print(f'job mkt-christ: wrote {count} verses for ch 1–4')
 
 if __name__ == '__main__':
     main()

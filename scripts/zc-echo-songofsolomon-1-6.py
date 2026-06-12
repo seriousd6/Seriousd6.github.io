@@ -182,9 +182,67 @@ ECCL_CHRIST = {
 # ============================
 
 SONG_ECHO = {
+  "1": {
+    "3": [
+      {"type": "allusion", "target": "Phil 2:9",
+       "note": "The beloved's name declared to be like fragrant oil poured out (<em>shemen turaq shemekha</em>) — oil that spreads by being poured, drawing all who encounter it. Phil 2:9: 'God has highly exalted him and bestowed on him the name that is above every name.' The Song's image of the name as a perfume that draws the virgins after him anticipates the drawing power of the exalted Christ's name — poured out in death and resurrection, filling the world with its fragrance."},
+      {"type": "allusion", "target": "John 6:44",
+       "note": "'Draw me after you, let us run' — the beloved's petition naming divine initiative as the basis of her approach. Jesus: 'No one can come to me unless the Father who sent me draws him' (John 6:44). The Song's 'draw me' is the prayer that the Gospel answers: the running toward the King's chambers is the response to being drawn, not an independent arrival. Loving the bridegroom is itself a gift of the bridegroom."}
+    ],
+    "12": [
+      {"type": "allusion", "target": "Mark 14:3",
+       "note": "The king at his table and the beloved's nard giving its fragrance (<em>nardi natan reicho</em>, my nard gave its fragrance). Nard appears only here and Song 4:13-14 in the Hebrew OT, and as <em>nardos pistike</em> in Mark 14:3 / John 12:3, where a woman pours pure nard on Jesus at table. The Gospel's anointing enacts the Song's image literally: the one whom the Song describes as the beloved at whose table the beloved pours out her love is anointed in fact with the Song's own perfume."}
+    ]
+  },
   "2": {
     "16": [
       {"type": "allusion", "target": "John 10:14", "note": "My beloved is mine and I am his — the mutual possession of the beloved and the lover; I know my sheep and my sheep know me (John 10:14) is the new covenant expression of the same mutual-knowing/belonging that the Song celebrates; Christ's love for the church is the fulfillment of the Song's bridegroom love"}
+    ]
+  },
+  "3": {
+    "1": [
+      {"type": "type", "target": "Luke 15:4",
+       "note": "The nighttime search — 'I sought him whom my soul loves; I sought him but found him not' — followed by rising, going out, and seeking through the streets until she finds and holds fast (v4). This is the seeking/finding pattern that Christ takes up in the parables of the lost (Luke 15:4-7: 'what man of you, having a hundred sheep&hellip; goes after the one that is lost, until he finds it?'). The Song's seeker who goes out into the night and then finds and clings anticipates the divine seeker in the parables — except the roles reverse: the one who was the sought-for beloved becomes the one who seeks."}
+    ],
+    "4": [
+      {"type": "allusion", "target": "John 20:16",
+       "note": "'I found him whom my soul loves. I held him and would not let him go.' The moment of reunion after seeking resonates with Mary Magdalene at the empty tomb (John 20:16-17): she recognizes the risen Jesus and he says 'Do not cling to me' (<em>mè mou haptou</em>). The Song's 'would not let him go' is the template the Gospel uses for Mary's encounter — the woman who went seeking in the dark, found the one she loves, and held on. But the post-resurrection union exceeds the Song's embrace: 'go to my brothers and say to them&hellip;' The clinging gives way to sending."}
+    ],
+    "11": [
+      {"type": "type", "target": "Rev 19:7",
+       "note": "Solomon on his wedding day, crowned by his mother on 'the day of his gladness of heart' — the king's wedding procession is a type of the marriage of the Lamb: 'Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready' (Rev 19:7). The wedding-day joy of the earthly king, the crown, and the procession of the wedding party anticipate the eschatological wedding feast that Revelation describes as the consummation of all history."}
+    ]
+  },
+  "4": {
+    "7": [
+      {"type": "allusion", "target": "Eph 5:27",
+       "note": "'You are altogether beautiful, my love; there is no flaw in you' (<em>kullak yafah ra'yati umum ein bakh</em>, you are wholly beautiful, my friend, and blemish there is none in you). Paul applies this to Christ's purpose for the church: 'that he might present the church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish' (Eph 5:27). The Song's present declaration of the beloved's perfection is Paul's eschatological goal: the Bridegroom works through his sacrificial love to make the church into what the Song already declares."}
+    ],
+    "15": [
+      {"type": "allusion", "target": "John 4:14",
+       "note": "The description of the beloved as 'a garden fountain, a well of living water, and flowing streams from Lebanon' (<em>ma'yan gannim be'er mayim chayyim</em>). Jesus appropriates <em>mayim chayyim</em> (living water) as self-description in John 4:14: 'whoever drinks of the water that I will give him will never be thirsty again — it will become in him a spring of water welling up to eternal life.' The Song uses the phrase as a term of highest praise for the beloved; Jesus uses it as the gift that only he can give. John 7:38 extends it: the living water flows from within the believer — the garden of the Song becomes the indwelling Spirit."}
+    ]
+  },
+  "5": {
+    "2": [
+      {"type": "allusion", "target": "Rev 3:20",
+       "note": "The beloved asleep with heart awake, the beloved knocking: 'Open to me, my sister, my love, my dove, my perfect one.' This is the template for Rev 3:20: 'Behold, I stand at the door and knock. If anyone hears my voice and opens the door, I will come in to him and eat with him, and he with me.' The bridegroom at the door calling the beloved by tender names is the Song's image that Revelation addresses to the lukewarm church. In the Song the beloved delays and misses him (v6); in Revelation the invitation is still open — the door can still be opened."},
+      {"type": "theme", "target": "Matt 25:6",
+       "note": "The beloved asleep when the bridegroom knocks at midnight mirrors the parable of the ten virgins: 'at midnight there was a cry, Here is the bridegroom! Come out to meet him' (Matt 25:6). Both texts place the bridegroom's arrival at night with the beloved/virgins sleeping, and both hinge on readiness. The Song's beloved who opens too late (v6, she sought him and found him not) is structurally the five foolish virgins who arrive after the door is shut (Matt 25:10-12) — the Song provides the experiential template for the eschatological warning."}
+    ],
+    "16": [
+      {"type": "type", "target": "Col 2:9",
+       "note": "'He is altogether desirable; this is my beloved and this is my friend' (<em>kullō machammadim</em>, wholly/altogether desirable). This is the church's confession — the totality of all that is worth loving gathered in one person. Col 2:9: 'in him the whole fullness of deity dwells bodily.' The Song's <em>kullō machammadim</em> (everything desirable) is the love-language form of the theological claim that all divine completeness is personally present in Christ. The beloved's declaration of the bridegroom's total desirability is the heart's response to the reality that Colossians states doctrinally."}
+    ]
+  },
+  "6": {
+    "3": [
+      {"type": "allusion", "target": "John 10:14",
+       "note": "The mutual-possession formula 'I am my beloved's and my beloved is mine' (<em>ani ledodi vedodi li</em>) is the Song's most concise covenant statement. Jesus applies the same reciprocal relationship to his relation with the sheep and the Father: 'I know my own and my own know me, just as the Father knows me and I know the Father' (John 10:14-15). The Song's formula of mutual possession becomes the formula of mutual knowing — grounded not in sentiment but in the same relation between Father and Son. 'I am his and he is mine' is the experiential register of 'I know them and they know me.'"}
+    ],
+    "10": [
+      {"type": "type", "target": "Rev 12:1",
+       "note": "'Who is this that appears like the dawn, fair as the moon, bright as the sun, awesome as an army with banners?' The glorified beloved in solar/lunar imagery anticipates the great sign of Rev 12:1: 'A great sign appeared in heaven: a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.' Both texts describe the glorified people of God in cosmic imagery combined with military awe. The Song's question about the dawn-like beloved is answered by Revelation: this is the woman who represents the redeemed community in their final eschatological glory."}
     ]
   },
   "8": {

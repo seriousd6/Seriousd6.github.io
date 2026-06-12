@@ -1,7 +1,19 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+Echo Layer — Esther chapters 1–5
+Run: python3 scripts/zc-echo-esther-1-5.py
+
+Key echo connections in this range:
+- 1:11-19: Vashti deposed for refusal — honour/replacement theme → Prov 31:10-12; Matt 5:5
+- 2:7: Mordecai raises orphaned Esther → James 1:27 (pure religion = orphan care)
+- 2:17: King chooses Esther above all → Deut 7:6 (YHWH choosing beloved people)
+- 3:1: Haman the Agagite → 1 Sam 15:8 (Saul's failure to destroy Agag = root of this crisis)
+- 3:2: Mordecai refuses to bow → Dan 3:12 (Shadrach/Meshach/Abednego refuse to bow)
+- 3:6: Genocidal decree against all Jews → Ps 83:4; Rev 12:17 (dragon attacks seed of woman)
+- 4:14: "for such a time as this" → Acts 17:26-27 (already present); Gal 4:4 (fullness of time)
+- 4:16: "If I perish, I perish" + three-day fast → John 12:24; Luke 24:46 (resurrection pattern)
+- 5:1: Esther approaches on the third day → 1 Cor 15:4; Matt 20:19 (third-day typology)
+- 5:2: Esther finds hen (favour/grace) before the king → Gen 6:8; Heb 4:16 (throne of grace)
+- 5:14: Haman builds gallows for Mordecai → Gal 6:7 (reap what you sow); Prov 26:27
 """
 
 import json, pathlib
@@ -10,7 +22,9 @@ ROOT = pathlib.Path(__file__).parent.parent
 
 def load_echo(book):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
 def save_echo(book, data):
     p = ROOT / 'data' / 'echoes' / f'{book}.json'
@@ -18,17 +32,8 @@ def save_echo(book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
 def merge_echo(existing, new_data):
+    """Merge echo entries; deduplicate by (type, target) within each verse."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -42,168 +47,92 @@ def merge_echo(existing, new_data):
                         existing[ch][v].append(e)
                         seen.add((e['type'], e['target']))
 
-def merge_comm(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
-
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
-  },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
+ESTHER_ECHO_1_5 = {
   "1": {
     "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
+      {"type": "allusion", "target": "Dan 4:1", "note": "&#8220;In the days of Ahasuerus, who reigned from India to Ethiopia over one hundred and twenty-seven provinces&#8221; — the universal scope of Persian dominion echoes Daniel&#8217;s world-empire theology; in both Daniel and Esther the fate of the covenant people is decided within pagan court politics, and in both the story insists that YHWH&#8217;s hidden sovereignty operates precisely within the machinery of empire that appears to control the world"}
+    ],
+    "2": [
+      {"type": "allusion", "target": "Neh 1:1", "note": "&#8220;King Ahasuerus sat on his royal throne at the citadel of Susa&#8221; — Susa is the same setting as Nehemiah 1:1; together they form the two faces of Persian-period Jewish experience: the court insider (Esther/Mordecai) and the court servant who returns to rebuild (Nehemiah); both stories begin at Susa and move through the logic of Persian royal favour toward the preservation and restoration of Israel"}
+    ],
+    "11": [
+      {"type": "allusion", "target": "Prov 31:10", "note": "Vashti is summoned to display her beauty before the king and his officials — the demand treats a wife as a possession rather than a person of worth; Proverbs 31:10-12 presents the alternative: a woman whose husband trusts her and whose worth is recognized intrinsically; Vashti&#8217;s refusal, whatever the narrator&#8217;s ambiguity about it, exposes the difference between honour bestowed for display and honour rooted in character"}
+    ],
+    "19": [
+      {"type": "allusion", "target": "Matt 5:5", "note": "&#8220;Her royal position will be given to one who is better than she&#8221; — Ahasuerus&#8217;s advisors recommend replacement; providentially, the &#8220;better&#8221; replacement will be Esther, through whom Israel is saved; the displacement of Vashti sets in motion the story in which the meek inherit — not by assertion but by endurance and strategic courage; the pattern of the humble displacing the exalted runs from here to the Beatitudes"}
+    ]
+  },
+  "2": {
+    "7": [
+      {"type": "allusion", "target": "Jas 1:27", "note": "Mordecai had raised Hadassah (Esther), for she had no father or mother — his guardianship of an orphaned cousin is the lived form of what James declares to be pure religion: &#8220;to visit orphans and widows in their affliction&#8221; (Jas 1:27); Mordecai&#8217;s daily care for Esther, continued even into her time in the harem (2:11), models the covenant loyalty that constitutes authentic devotion within a world where the temple is absent and explicit piety is suppressed"}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Gen 45:1", "note": "&#8220;Esther had not made known her people or her kindred, for Mordecai had instructed her not to make it known&#8221; — the concealment of identity in a foreign court is the pattern established by Joseph in Egypt (Gen 37-45); both Joseph and Esther operate under hiddenness until the moment of crisis when their identity must be revealed for the people to be saved; the revelation of identity (Esther 7:3; Gen 45:1) becomes the turning point of both stories"}
+    ],
+    "17": [
+      {"type": "allusion", "target": "Deut 7:6", "note": "&#8220;The king loved Esther more than all the women, and she found grace and favour (<em>&#7717;&#275;n w&#257;&#7717;eseḏ</em>) in his sight more than all the virgins&#8221; — the pairing of <em>&#7717;&#275;n</em> (grace/favour) and <em>&#7717;eseḏ</em> (steadfast love) is the covenant vocabulary that Deuteronomy 7:6 uses for YHWH&#8217;s election of Israel: &#8220;you are a people holy to the LORD your God... a treasured possession&#8221;; the king&#8217;s inexplicable preference for Esther is the human image of divine election — favour given, not earned, to a hidden and unlikely recipient"}
+    ],
+    "21": [
+      {"type": "allusion", "target": "Rom 13:4", "note": "Mordecai uncovers the assassination plot against Ahasuerus and reports it through Esther — his protection of the pagan king who holds power over his people is the OT form of Paul&#8217;s teaching that the governing authorities are God&#8217;s servants (Rom 13:4); Mordecai acts loyally within the imperial system even while maintaining a loyalty to his people that the system cannot command; his deed is recorded in the royal chronicles (2:23), the human register that God will use at the pivotal moment of chapter 6"}
     ]
   },
   "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
+    "1": [
+      {"type": "allusion", "target": "1 Sam 15:8", "note": "&#8220;Haman the son of Hammedatha the Agagite&#8221; — the Agagite designation is a direct pointer to 1 Samuel 15: Saul was commanded to destroy Agag and the Amalekites completely but spared Agag (1 Sam 15:8-9); Samuel killed Agag (15:33) but the failure to complete the <em>&#7717;&#275;rem</em> is retrospectively blamed for this crisis; in Esther, the descendant of Benjamin (Mordecai, 2:5 — same tribe as Saul) will face the descendant of Agag, and what Saul failed to finish, the story of Esther will complete"}
+    ],
+    "2": [
+      {"type": "allusion", "target": "Dan 3:12", "note": "&#8220;Mordecai would not bow down or pay homage&#8221; — the refusal to bow to a human official as an act of religious loyalty is the same stance taken by Shadrach, Meshach, and Abednego when ordered to worship Nebuchadnezzar&#8217;s statue (Dan 3:12); both stories embed the same question: what is the one act of symbolic obeisance that a faithful Jew cannot perform without denying YHWH&#8217;s exclusive claim? Both refusals trigger a genocidal response that YHWH overturns; the pattern is the pattern of Daniel-Esther exile piety"},
+      {"type": "allusion", "target": "Acts 5:29", "note": "Mordecai&#8217;s refusal to obey the king&#8217;s command regarding Haman is the OT form of the apostolic principle: &#8220;we must obey God rather than men&#8221; (Acts 5:29); both texts locate the moment of civil disobedience precisely at the point where human command contradicts the fundamental theological claim — YHWH&#8217;s sole lordship cannot coexist with ritual deference to a rival authority"}
+    ],
+    "6": [
+      {"type": "allusion", "target": "Rev 12:17", "note": "&#8220;Haman sought to destroy all the Jews, the people of Mordecai, throughout the whole kingdom of Ahasuerus&#8221; — the genocidal intent against the entire covenant people is the OT type of the dragon&#8217;s campaign against &#8220;the rest of her offspring, those who keep the commandments of God&#8221; (Rev 12:17); in both texts, the annihilation of the seed of the woman is the goal; in both, the attempt fails through providential reversal; Haman is the <em>&#7717;ar-m&#283;ggid&#244;</em> of the Persian period"},
+      {"type": "allusion", "target": "Ps 83:4", "note": "&#8220;[Haman sought] to destroy all the Jews&#8221; — Psalm 83:4 voices the same genocidal goal: &#8220;Come, let us wipe them out as a nation; let the name of Israel be remembered no more!&#8221;; the psalmist&#8217;s prayer against the coalition that seeks Israel&#8217;s annihilation is answered in the Esther narrative — the decree is reversed, the enemy is destroyed, and the name of Israel is preserved"}
+    ],
+    "10": [
+      {"type": "allusion", "target": "Gen 41:42", "note": "&#8220;The king took his signet ring from his hand and gave it to Haman&#8221; — the signet ring delegating royal authority is the same gesture Pharaoh uses when giving Joseph authority over Egypt (Gen 41:42); the irony is structural: the ring that saves in Genesis becomes the ring that condemns in Esther; but the deeper irony is that both stories end with the ring&#8217;s authority redirected toward Israel&#8217;s salvation — Esther 8:2 shows Mordecai receiving the same ring after Haman&#8217;s downfall"}
+    ],
+    "13": [
+      {"type": "allusion", "target": "John 10:10", "note": "The decree goes out to destroy, kill, and annihilate (<em>l&#277;hašm&#238;&#7693; lah&#7611;r&#333;&#7853; ûl&#277;ʾabb&#275;&#7693;</em>) all Jews — the triple verb cluster of destruction echoes the character of the enemy in John 10:10: &#8220;the thief comes only to steal and kill and destroy&#8221; (<em>kleptein kai thyein kai apollyein</em>); the concentrated language of annihilation marks both Haman and the thief of John 10 as embodiments of the same anti-life power that Christ came to overthrow: &#8220;I came that they may have life and have it abundantly&#8221;"}
     ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
+  },
   "4": {
+    "1": [
+      {"type": "allusion", "target": "Joel 2:12", "note": "Mordecai tears his clothes, puts on sackcloth and ashes, and cries with a loud and bitter cry — the mourning practices in Esther 4:1-3 are the same emergency repentance gestures that Joel 2:12-13 calls for: &#8220;return to me with all your heart, with fasting, with weeping, and with mourning; and rend your hearts&#8221;; the paradox of Esther is that nowhere is YHWH named, yet the fast of 4:16, the sackcloth of 4:1-3, and the prayer implied throughout are the enacted form of exactly the covenant return Joel envisions"}
+    ],
     "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
+      {"type": "allusion", "target": "Gal 4:4", "note": "&#8220;Who knows whether you have not come to the kingdom for such a time as this?&#8221; — Mordecai&#8217;s rhetorical question frames Esther&#8217;s placement in the harem as providentially purposed for this crisis moment; Paul&#8217;s &#8220;fullness of time&#8221; (Gal 4:4) is the NT articulation of the same theological claim: that God&#8217;s agents are placed at specific historical junctures for specific redemptive purposes; both texts resist fatalism (&#8220;if you keep silent...&#8221;) while affirming that providence has already positioned its instrument"}
+    ],
+    "16": [
+      {"type": "allusion", "target": "John 12:24", "note": "&#8220;If I perish, I perish&#8221; — Esther&#8217;s willingness to die for her people, preceded by the three-day fast that is the only explicit &#8220;religious&#8221; act in the book, is the OT form of the grain-of-wheat saying: &#8220;unless a grain of wheat falls into the earth and dies, it remains alone; but if it dies, it bears much fruit&#8221; (John 12:24); Esther&#8217;s self-offering — going unsummoned to the king, risking death — becomes the instrument of Israel&#8217;s salvation"},
+      {"type": "allusion", "target": "Luke 24:46", "note": "&#8220;Fast for me... for three days, night or day... then I will go to the king, though it is against the law, and if I perish, I perish&#8221; — the three-day fast preceding the approach to the king creates the structural pattern of death-and-life that Luke 24:46 identifies as the scriptural necessity: &#8220;that the Christ should suffer and on the third day rise from the dead&#8221;; Esther&#8217;s three days end not in death but in favour and rescue — an anticipatory pattern of the resurrection on the third day"}
     ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+  },
+  "5": {
+    "1": [
+      {"type": "allusion", "target": "1 Cor 15:4", "note": "&#8220;On the third day Esther put on her royal robes and stood in the inner court of the palace&#8221; — the temporal marker &#8220;on the third day&#8221; following the three-day fast (4:16) creates one of the OT&#8217;s most explicit third-day patterns; 1 Corinthians 15:4 identifies the resurrection &#8220;on the third day in accordance with the Scriptures&#8221; — this is one of the scriptural patterns Paul has in mind; the one who had as it were died (&#8220;if I perish, I perish&#8221;) now stands clothed in royal garments before the throne, alive and vindicated"}
+    ],
+    "2": [
+      {"type": "allusion", "target": "Heb 4:16", "note": "&#8220;When the king saw Queen Esther standing in the court, she found favour in his eyes. He held out the golden sceptre... and Esther approached and touched the tip of the sceptre&#8221; — this is the OT image behind Hebrews 4:16: &#8220;let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need&#8221;; Esther approaching the king unsummoned, risking death, and receiving the extended sceptre of welcome is the exact typological scene that &#8220;throne of grace&#8221; evokes; in Christ, the sceptre is always extended"},
+      {"type": "allusion", "target": "Gen 6:8", "note": "&#8220;She found favour (<em>&#7717;&#275;n</em>) in his eyes&#8221; — Esther&#8217;s finding of favour before the king uses the same formula as Noah finding favour with YHWH (Gen 6:8: &#8220;Noah found favour in the eyes of the LORD&#8221;); in both cases, the favour is undeserved, its recipient is surrounded by hostility or judgment, and it results in the preservation of a remnant; <em>&#7717;&#275;n</em> — grace/favour — is the unilateral gift that reverses the sentence of death"}
+    ],
+    "3": [
+      {"type": "allusion", "target": "Mark 6:23", "note": "&#8220;What is your request? It shall be granted to you, even up to half the kingdom&#8221; — the extravagant royal offer echoes Herod&#8217;s promise to Herodias&#8217;s daughter (Mark 6:23); both scenes show a king making an open-ended pledge; but the contrast is the point: Herod&#8217;s promise leads to the death of the prophet, Ahasuerus&#8217;s leads to the salvation of a people; the same rhetorical form serves opposite ends, and the difference is the character of the intercessor who brings the request"}
+    ],
+    "13": [
+      {"type": "allusion", "target": "Isa 14:12", "note": "&#8220;Yet all this is worth nothing to me, as long as I see Mordecai the Jew sitting at the king&#8217;s gate&#8221; — Haman&#8217;s inability to enjoy his position, power, wealth, and royal favour because one man refuses to honour him is the portrait of pride that cannot bear to share space with a rival; Isaiah 14:12-15 traces the same psychology of <em>g&#275;ʾ&#257;h</em> (arrogance) that drives the king of Babylon to his ruin: &#8220;I will make myself like the Most High&#8221; — and falls; Haman&#8217;s obsession with Mordecai&#8217;s refusal is the pride that precedes the fall of chapters 6-7"}
+    ],
+    "14": [
+      {"type": "allusion", "target": "Gal 6:7", "note": "Zeresh and Haman&#8217;s friends advise him to build a gallows fifty cubits high and hang Mordecai on it — the counsel that sounds like a solution is the preparation of his own destruction; Galatians 6:7: &#8220;whatever one sows, that will he also reap&#8221;; the gallows Haman builds for Mordecai becomes the gallows on which Haman himself is hanged (7:9-10); the sowing/reaping principle here is compressed into a single narrative act — the instrument of intended murder becomes the instrument of the murderer&#8217;s execution"},
+      {"type": "allusion", "target": "Prov 26:27", "note": "&#8220;He had a gallows made, fifty cubits high&#8221; — Proverbs 26:27: &#8220;Whoever digs a pit will fall into it, and a stone will come back on him who starts it rolling&#8221;; the proverb that expresses the retributive logic of the world is enacted literally in Esther: the pit (gallows) prepared for the righteous is the pit into which the wicked fall; the fifty-cubit height, intended to ensure maximum visibility and shame for Mordecai, ensures maximum visibility and shame for Haman when the reversal comes"}
+    ]
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_echo('esther')
+    merge_echo(existing, ESTHER_ECHO_1_5)
+    save_echo('esther', existing)
+    print('Esther 1-5 echo layer written.')
 
 if __name__ == '__main__':
     main()

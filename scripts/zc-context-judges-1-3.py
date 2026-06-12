@@ -1,22 +1,31 @@
 """
-Judges — all four layers.
-Key NT: Gideon/300 (Heb 11:32), Samson (Heb 11:32), Deborah (prophet-judge),
-        Barak (Heb 11:32), Jephthah (Heb 11:32), the cycle of apostasy/deliverance.
+MKT Context Commentary — Judges chapters 1–3
+Run: python3 scripts/zc-context-judges-1-3.py
+
+Chapters covered:
+- Ch1: Post-Joshua incomplete conquest — Judah's early success, tribal failures,
+  Canaanite persistence, iron chariot problem
+- Ch2: Covenant theology of the book — the Angel at Bokim, Joshua's death,
+  the Deuteronomic cycle introduced, the pedagogical purpose of remaining nations
+- Ch3: First judges — Othniel (paradigmatic), Ehud (assassination of Eglon),
+  Shamgar (oxgoad vs Philistines)
+
+Historical/ANE context:
+- Date: ca. 1380–1050 BCE; Iron Age I transition
+- Merneptah Stele (1208 BCE) — earliest extrabiblical mention of Israel as a people
+- Amarna Letters (1350–1330 BCE): pre-conquest Canaan as Egyptian vassal city-states
+- Late Bronze Age collapse (ca. 1200 BCE): collapse of major palace economies
+- Iron chariotry: iron-smelting technology gave Canaanite plains-dwellers decisive
+  military advantage that Israel's highland infantry could not neutralize
+- Cushan-rishathaim: possibly Hittite or Mitanni connection (name means
+  "Cushan of Double Wickedness" — possibly a pejorative substitution)
+- Eglon of Moab: Moabite kingdom east of Jordan; "fat" = prosperous/powerful king;
+  the assassination at the latrine is deliberately humiliating political satire
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -28,20 +37,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -50,65 +45,38 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-ECHO = {
-  "4": {
-    "4": [
-      {"type": "allusion", "target": "Luke 2:36", "note": "Deborah a prophetess was judging Israel — Deborah is one of the Bible's few female prophets and judges; Anna the prophetess (Luke 2:36) and Philip's four prophesying daughters (Acts 21:9) stand in the same tradition of women through whom YHWH speaks; the Spirit's gifts are not restricted by gender"}
-    ]
-  },
-  "6": {
-    "14": [
-      {"type": "allusion", "target": "Heb 11:32", "note": "The LORD turned to Gideon and said: Go in this might of yours and save Israel — Gideon is named in the Hall of Faith; his victory over Midian with 300 men demonstrates that divine deliverance is not by human strength or numbers but by YHWH's power, a principle Paul applies (1 Cor 1:27-29: God chose the weak things of the world to shame the strong)"}
-    ]
-  },
-  "13": {
-    "5": [
-      {"type": "allusion", "target": "Heb 11:32", "note": "The boy shall be a Nazirite to God from the womb, and he shall begin to save Israel from the hand of the Philistines — Samson is named in the Hall of Faith; his life as a Nazirite deliverer who defeats enemies through weakness (captured, blind) parallels aspects of Christ's humiliated victory; his death bringing down more enemies than his life (16:30) has been read as a type of the cross"}
-    ]
-  },
-  "21": {
-    "25": [
-      {"type": "allusion", "target": "John 1:11", "note": "In those days there was no king in Israel. Everyone did what was right in his own eyes — Judges' refrain of moral anarchy without a king is the context for understanding the messianic hope: Israel needed a king after God's own heart; he came to his own and his own people did not receive him"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "2": {
-    "16": "<p><strong>vayyaqem YHWH shoftim vayoshium miyad shoseihem</strong>: 'Then YHWH raised up judges, who saved them out of the hand of those who plundered them.' The <em>shofet</em> (judge) in Judges is not primarily a legal arbiter but a military deliverer who rescues Israel in crisis — the role combines elements of prophet (receives the divine call), priest (mediates between YHWH and Israel), and king (leads the people militarily). The Spirit of YHWH coming upon the judges (Othniel, Gideon, Jephthah, Samson) is the OT's primary example of Spirit-empowered charismatic leadership, pointing forward to the permanent anointing of the Spirit on the Davidic king (1 Sam 16:13) and ultimately on Christ at his baptism (Matt 3:16).</p>"
-  }
-}
-
 CONTEXT = {
   "1": {
-    "1": "<p>Judges narrates the period between Joshua's death (ca. 1380 BCE) and the monarchy (ca. 1050 BCE) — about three centuries of cyclical apostasy, judgment, repentance, and deliverance. The theological pattern ('the Deuteronomic cycle') repeats throughout: Israel abandons YHWH → YHWH sends a foreign oppressor → Israel cries out → YHWH raises a judge-deliverer → the land rests during the judge's lifetime → the cycle repeats after his death. The cycle gets progressively worse: Gideon's story (chs. 6-8) ends with his son Abimelech setting himself up as a king through fratricide; the book ends with two terrible episodes (Micah's idolatry, the Levite's concubine) that illustrate the full collapse of the covenant order. The refrain 'In those days there was no king in Israel; everyone did what was right in his own eyes' (17:6; 18:1; 19:1; 21:25) is the book's theological verdict and its forward-pointing arrow toward the monarchy.</p>"
-  }
-}
-
-CHRIST = {
+    "1": "<p>Judges narrates the period between Joshua's death (ca. 1380 BCE on a long chronology, or ca. 1220 BCE on a short one) and the beginning of the monarchy (ca. 1050 BCE). The book opens immediately after Joshua's death with the question 'Who shall go up first?' — the same question asked after Moses died (Judg 20:18 = Judg 1:1, same formula), connecting the judges' failures to the wilderness generation's failures. The archaeological period is Iron Age I (ca. 1200–1000 BCE), marked by the collapse of Late Bronze Age city-states and the appearance of new highland settlements consistent with Israelite occupation in the Cisjordan hill country. The Merneptah Stele (1208 BCE) is the earliest extrabiblical reference to Israel as a people (<em>yisrʾr</em>), confirming Israel's presence in Canaan by the late 13th century BCE regardless of the exact Exodus date debate.</p>",
+    "2": "<p>YHWH's answer — 'Judah shall go up' — establishes Judah's leading role in the tribal coalition, a theological anticipation of the Davidic monarchy. The pre-monarchy leadership of Judah was embedded in Jacob's blessing (Gen 49:8-12: 'the scepter shall not depart from Judah') and in the Deuteronomic law of the king (Deut 17:15) which required the king to be 'from among your brothers.' The Amarna Letters (1350–1330 BCE), a royal correspondence archive found at Akhetaten in Egypt, document Canaan as a network of Egyptian vassal city-states — the political landscape that Israel's tribal confederation was displacing. Each city-state was ruled by a <em>ḥāzānu</em> (mayor/governor) who paid tribute to Pharaoh; Israel's conquest replaced this hierarchical system with a covenant confederation.</p>",
+    "4": "<p>Bezek is the first battle — 10,000 Canaanites and Perizzites defeated. The Perizzites (<em>pərizzî</em>) are mentioned alongside Canaanites throughout the conquest narratives (Gen 15:20; Exod 3:8; Josh 3:10) as one of the peoples of the land; their exact ethnic identity remains debated but they appear to be a distinct group from the Canaanites, possibly hill-country village dwellers (the name may derive from <em>pərāzî</em>, open-country/rural dweller). The cutting off of Adoni-bezek's thumbs and big toes renders him incapable of holding a weapon or fighting effectively — a standard ANE practice for permanently disabling captured enemy commanders without killing them (cf. the Assyrian practice of blinding and mutilating captives depicted in palace reliefs).</p>",
+    "7": "<p>'As I have done, so God has repaid me' — Adoni-bezek's confession is one of the most remarkable statements in Judges: a Canaanite king acknowledges the justice of lex talionis administered by the God of Israel. He had done the same mutilation to 70 kings whom he kept under his table. The 'under the table' detail — defeated kings humiliated as sub-table scavengers — is consistent with ANE iconography of royal victory: the Megiddo Ivory panel (12th c. BCE) shows a Canaanite king on his throne receiving tribute with defeated enemies at his feet. Adoni-bezek simply practiced the universal ANE convention; his confession shows he understood his defeat as divine judgment, not mere military reversal.</p>",
+    "19": "<p>'YHWH was with Judah, and he took possession of the hill country, but he could not drive out the inhabitants of the plain because they had iron chariots.' Iron chariotry represents the single greatest military-technological challenge for Iron Age I infantry. The key issue is not the number of chariots but the terrain: Canaanite chariotry was effective on flat plains and coastal valleys (Jezreel, Sorek, Aijalon), precisely the fertile territories most valuable economically. Israelite highland warfare — fighting from ridges, using ambush, exploiting rocky terrain — was effective in the hill country but offered no counter to massed chariot formations in open valleys. The 'iron chariot' problem is thus a geographic-technological constraint that shaped the entire pattern of incomplete conquest: Israel could hold the hills but not the plains.</p>",
+    "27": "<p>The tribal failures section (vv27-36) is the theological pivot of ch1: Manasseh, Ephraim, Zebulun, Asher, Naphtali, and Dan all 'did not drive out' the Canaanites but either tolerated them or reduced them to forced labor (<em>mas</em>). The institution of <em>mas</em> (corvée labor — the same word used for Israel's bondage in Egypt, Exod 1:11) turns a theological failure (incomplete <em>ḥērem</em>) into an economic asset. The archaeological survey of the Cisjordan highlands for the Iron Age I period shows a massive expansion of new village sites (the 'Israelite village explosion'), many with distinctive collar-rim store jars and four-room house plans, consistent with a population that settled the highlands while the lowland cities remained predominantly Canaanite.</p>",
+    "34": "<p>'The Amorites pressed the sons of Dan back into the hill country, for they did not allow them to come down to the plain.' Dan's predicament — pushed entirely out of their allotted coastal territory — explains why the tribe will eventually migrate north (ch18). The phrase 'did not allow them to come down' reverses the conquest language: Israel was supposed to descend upon Canaan; now the Amorites prevent the descent. This Amorite pressure on Dan is corroborated by the tribe's coastal allotment (Josh 19:40-48) in the Sorek Valley region — precisely the zone of intense Philistine and Amorite control documented in 12th-century BCE texts.</p>"
+  },
   "2": {
-    "16": "<p>A type: 'Then the LORD raised up judges, who saved them out of the hand of those who plundered them.' Each judge is a partial, flawed type of the divine deliverer: they are raised up by YHWH, empowered by his Spirit, deliver Israel from oppression, provide rest during their tenure, and then die — leaving Israel without a permanent deliverer. The entire judge-cycle is the OT's lived demonstration that the people need a permanent deliverer, a judge who will not die, a king who will reign forever. Christ fulfills all three mediatorial roles of the judges (prophet, priest, king) permanently and perfectly: he is raised up by the Father, anointed without measure by the Spirit, delivers his people from the oppressor (sin and death), and reigns forever — so that the Deuteronomic cycle is permanently broken in him.</p>"
+    "1": "<p>The Angel of YHWH's appearance at Bokim ('weeping ones') is a covenant lawsuit (<em>rîḇ</em>) scene — the standard ANE and biblical form for a superior party confronting a covenant vassal with breach. The lawsuit form includes: divine self-identification ('I brought you up from Egypt'), recital of covenant benefits ('I brought you into the land I swore to your fathers'), statement of covenant demand ('you shall make no covenant with the inhabitants'), statement of covenant violation ('but you have not obeyed my voice'), and announcement of consequence ('I will not drive them out before you'). This is the same literary form as Exod 20:2 (preamble + historical prologue), Deut 31:15-22, and the classical prophets' lawsuits (Mic 6:1-8; Jer 2:1-13). The bokim (weeping) response is the covenant people's corporate lament at hearing the verdict.</p>",
+    "8": "<p>Joshua's death and burial at Timnath-serah mark the transition from the Conquest era to the Judges era. The Deuteronomistic History (Deuteronomy through Kings) is structured around the deaths of its great leaders: Moses (Deut 34), Joshua (Josh 24:29-30; Judg 2:8-9), Samuel (1 Sam 25:1), and the death of the monarchy (2 Kgs 25). Joshua dies at 110 — the same age as Joseph (Gen 50:26), a literary parallelism that brackets the patriarchal-conquest era. The generation that knew the works of YHWH dying off is the theological explanation for the apostasy cycle: each new generation must encounter YHWH freshly, but the covenant transmission fails.</p>",
+    "10": "<p>'There arose another generation after them who did not know YHWH or the works that he had done for Israel.' The verb <em>yāḏaʿ</em> (to know) in covenant theology means more than intellectual knowledge; it means covenant intimacy and acknowledgment (cf. Amos 3:2 — 'Only you have I known among all the families of the earth'; Jer 22:16 — 'to know me is to do justice'). A generation that 'does not know YHWH' has broken the covenant relationship, not merely lost information. This failure of inter-generational covenant transmission — what Deut 6:4-9 and 11:18-21 were designed to prevent — is the proximate cause of the entire Judges cycle. The Passover meal (Exod 13:8-10), covenant renewal ceremonies (Josh 24), and the annual feast calendar all existed specifically to ensure each generation experienced and transmitted the foundational saving acts.</p>",
+    "16": "<p>The Deuteronomic cycle is introduced in its full systematic form: Israel apostasizes → YHWH's anger → foreign oppressor → Israel cries out → YHWH raises a judge → deliverance → rest → judge dies → apostasy again. This framework was likely compiled in the 7th century BCE during Josiah's reform, using older source materials. The judge (<em>šōpēṭ</em>) is a charismatic military deliverer empowered by YHWH's Spirit — not a permanent magistrate but a crisis-response leader. The cycle's intensification across the book (each judge worse or the situation more complex than the last) serves the book's argument that Israel needs not just a better judge but a different kind of ruler: a king after YHWH's own heart.</p>",
+    "23": "<p>'YHWH left those nations, not driving them out quickly, and he did not give them into the hand of Joshua.' The theological explanation for why YHWH allowed the Canaanites to remain takes two forms in ch2-3: (1) to test Israel's covenant loyalty (2:22; 3:1,4) and (2) to teach warfare to those who had not known war (3:2). The 'testing' motif (<em>nāsāh</em>) appears throughout Deuteronomy (Deut 8:2 — YHWH tested Israel in the wilderness 'to know what was in your heart'); it frames covenant history as a proving ground. The Second Temple tradition (Josephus, Ant. V.2.3) saw the remaining Canaanites as part of a providential arrangement that preserved Israel's military readiness and dependence on YHWH.</p>"
+  },
+  "3": {
+    "1": "<p>The list of remaining nations serves the dual purpose stated in vv2-4: teaching war to the new generation and testing Israel's covenant loyalty. The five Philistine lords (<em>sərānê pəlištîm</em> — the word may be related to Greek <em>tyrannos</em>, tyrant) correspond to the five city-states of the Philistine Pentapolis: Gaza, Ashdod, Ashkelon, Gath, Ekron. The Philistines were Sea Peoples who arrived on the Levantine coast around 1200 BCE as part of the broader Late Bronze Age collapse — the same population movement that destroyed Ugarit, ended Hittite power, and attempted to invade Egypt (documented on the reliefs of Ramesses III at Medinet Habu). Their appearance in Judges thus coincides historically with their settlement of the coastal plain, making the Judges narratives a window into the first centuries of Philistine-Israelite interaction.</p>",
+    "7": "<p>Othniel son of Kenaz is presented as the paradigmatic judge: called, empowered by the Spirit, victorious, the land rests forty years. The structure of his story (vv7-11) is the Deuteronomic cycle in its purest, most compact form — eight verses containing all the elements. Cushan-rishathaim king of Aram-naharaim ('Cushan of Double Wickedness from the Two Rivers') — the name is almost certainly a scribal pejorative, substituting <em>rishʿatayim</em> (double wickedness) for his actual name. Aram-naharaim (Mesopotamia between the Tigris and Euphrates) fits the Hittite/Mitanni vacuum of the early 12th century BCE. Othniel's connection to the Caleb clan (Judg 1:13) establishes his Judahite credentials, making him the southern exemplar of the judge tradition.</p>",
+    "12": "<p>Eglon king of Moab forms an unlikely coalition with Ammon and Amalek to strike Israel. Moab occupies the Transjordan plateau east of the Dead Sea; the Moabite Stone (Mesha Stele, 9th century BCE) documents Moabite-Israelite conflict from the Moabite perspective, providing background for understanding the Moabite relationship to Israel across this period. Eglon means 'calf/bull' — the fat-bull imagery of v17 ('now Eglon was a very fat man') may be deliberate satire on a bovine king. His 18-year oppression is the longest named oppression in the pre-Gideon narratives. The coalition taking the 'City of Palms' (Jericho region) extends Moabite control west of the Jordan into Benjamin's territory — a reversal of the Transjordan conquests under Moses.</p>",
+    "15": "<p>Ehud son of Gera, a Benjaminite, is described as left-handed ('restricted in his right hand'). The connection between Benjaminite warriors and left-handedness appears again in Judg 20:16 (700 left-handed slingers). Being left-handed was advantageous for concealing weapons on the right hip (where a left-handed sword draw from the left hip would not be checked in the standard body search). The assassination scene is constructed with narrative relish: the private summer room, the guards who assume Eglon is 'covering his feet' (a euphemism for defecating), the delay giving Ehud time to escape — the narrator crafts a political satire celebrating Ehud's cunning against the fat foreign oppressor.</p>",
+    "20": "<p>'I have a message from God for you' — Ehud's declaration to Eglon inverts the scene: the 'tribute bearer' becomes the divine messenger; the royal throne room becomes the site of execution. Eglon 'rose from his seat' in response to the divine-message formula — an act of reverence toward YHWH's word that was also the act that exposed him to the blade. The detail that 'the fat closed over the blade' (v22) and that he 'died in the latrine' (v22-23) is deliberately undignified — ANE royal ideology presented kings as semi-divine, larger-than-life; the Ehud narrative systematically mocks Eglon, presenting him as fat, credulous, and dying in his own excrement. This is resistance literature: Israel's humor about their oppressor.</p>",
+    "31": "<p>Shamgar son of Anath kills 600 Philistines with an oxgoad. He is mentioned again in the Song of Deborah (5:6) as a parallel to Jael. His non-Israelite name (Shamgar is a Hurrian name; Anath is a Canaanite goddess) has led some scholars to identify him as a Canaanite or mercenary rather than an Israelite — if so, he is a non-covenant figure whose actions YHWH uses for Israel's deliverance, a pattern that foreshadows Rahab (Josh 2), Jael (Judg 4-5), and Ruth. The oxgoad — a long wooden pole with a metal point used to drive oxen — is the agricultural implement of a farmer pressed into impromptu service. The 600 Philistines killed anticipates the scale of Samson's era conflicts. Shamgar is presented without the Spirit-empowerment formula or the full Deuteronomic cycle, suggesting historical memory preserved in the tradition rather than a theologized judge narrative.</p>"
   }
 }
 
 def main():
-    e = load_echo('judges')
-    merge_echo(e, ECHO)
-    save_echo('judges', e)
-
-    c = load_comm('mkt-original', 'judges')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'judges', c)
-
     c = load_comm('mkt-context', 'judges')
     merge_comm(c, CONTEXT)
     save_comm('mkt-context', 'judges', c)
-
-    c = load_comm('mkt-christ', 'judges')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'judges', c)
-
-    print('judges: all 4 layers written')
+    print(f'judges mkt-context: wrote {sum(len(v) for v in CONTEXT.values())} verses across ch 1-3')
 
 if __name__ == '__main__':
     main()

@@ -581,7 +581,7 @@ function _navigateChapter(parsedRef, delta) {
   if (nextCh === 0) {
     var introInput = document.getElementById('reader-lookup-input');
     if (introInput) introInput.value = parsedRef.bookName + ' 0';
-    if (window._readerLookupFn) { window._readerLookupFn(); return; }
+    if (window._readerLookupFn) { window.scrollTo(0, 0); window._readerLookupFn(); return; }
   }
 
   loadBook(getVersion(), parsedRef.bookId).then(function (chapters) {
@@ -599,6 +599,7 @@ function _navigateChapter(parsedRef, delta) {
     }
     if (newRef && inp) {
       inp.value = newRef;
+      window.scrollTo(0, 0);
       if (window._readerLookupFn) window._readerLookupFn();
     }
   }).catch(function () {});
@@ -984,92 +985,58 @@ export function wireVerseTextHighlight(resultsEl) {
   });
 }
 
-// ── Reader side panel ─────────────────────────────────────────────────────
-var _readerPanelActiveTab = 'notes';
-var _readerPanelParsed    = null;
+// ── Reader side panel (Notes only) ────────────────────────────────────────
+var _readerPanelParsed = null;
 
 export function _ensureReaderPanelStructure() {
-  // The xref panel is the right-hand aside — it holds Notes/Commentary/Cross Refs tabs.
   var panel = document.getElementById('reader-xref-panel');
   if (!panel) return null;
-  if (panel.querySelector('.reader-panel-tabs')) return panel;
-
-  panel.innerHTML =
-    '<div class="reader-panel-tabs">' +
-      '<button class="reader-panel-tab reader-panel-tab--active" data-panel-tab="notes">Notes</button>' +
-      '<button class="reader-panel-tab" data-panel-tab="commentary">Commentary</button>' +
-      '<button class="reader-panel-tab" data-panel-tab="xrefs">Cross Refs</button>' +
-      '<button class="reader-panel-tab" data-panel-tab="bookmarks">Bookmarks</button>' +
-    '</div>' +
-    '<div class="reader-panel-body" id="reader-panel-notes"></div>' +
-    '<div class="reader-panel-body" id="reader-panel-commentary" hidden></div>' +
-    '<div class="reader-panel-body" id="reader-panel-xrefs" hidden></div>' +
-    '<div class="reader-panel-body" id="reader-panel-bookmarks" hidden></div>';
-
-  panel.querySelectorAll('.reader-panel-tab').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var tab = btn.getAttribute('data-panel-tab');
-      _activateReaderPanelTab(tab);
-    });
-  });
-
+  if (panel.querySelector('#reader-panel-notes')) return panel;
+  panel.innerHTML = '<div class="reader-panel-body" id="reader-panel-notes"></div>';
   return panel;
-}
-
-export function _activateReaderPanelTab(tab) {
-  _readerPanelActiveTab = tab;
-  var panel = document.getElementById('reader-xref-panel');
-  if (!panel) return;
-  panel.querySelectorAll('.reader-panel-tab').forEach(function (btn) {
-    btn.classList.toggle('reader-panel-tab--active', btn.getAttribute('data-panel-tab') === tab);
-  });
-  panel.querySelectorAll('.reader-panel-body').forEach(function (body) {
-    body.hidden = (body.id !== 'reader-panel-' + tab);
-  });
-  // Lazy-load content when a tab is first opened for the current passage.
-  if (_readerPanelParsed) _loadPanelTab(tab, _readerPanelParsed);
 }
 
 // ── Panel content loading ─────────────────────────────────────────────────
 
 export function loadReaderPanelContent(parsed) {
   _readerPanelParsed = parsed;
-  // Re-activate comm mode for the new passage if it was on before chapter navigation.
-  var commBtn = document.getElementById('reader-comm-toggle');
-  if (commBtn && commBtn.getAttribute('aria-pressed') === 'true') {
-    _activateCommMode();
-  }
-  var commEl = document.getElementById('reader-panel-commentary');
-  var xrefEl = document.getElementById('reader-panel-xrefs');
-  // Clear lazy-load flags so the new passage is fetched when each tab is opened.
-  if (commEl)  { commEl._commLoaded  = false; commEl.innerHTML  = ''; }
-  if (xrefEl)  { xrefEl._xrefsLoaded = false; xrefEl.innerHTML = ''; }
-  // Notes are always reloaded immediately (user may have added/deleted notes).
+  // Re-activate inline grid modes after chapter navigation.
+  var commBtn     = document.getElementById('reader-comm-toggle');
+  var xrefModeBtn = document.getElementById('reader-xref-mode-toggle');
+  if (commBtn     && commBtn.getAttribute('aria-pressed')     === 'true') { _activateCommMode(); }
+  if (xrefModeBtn && xrefModeBtn.getAttribute('aria-pressed') === 'true') { _activateXrefMode(); }
+  // Notes always reload immediately.
   var notesEl = document.getElementById('reader-panel-notes');
   if (notesEl) _loadReaderNotes(parsed, notesEl);
-  // Pre-load whichever tab is already active.
-  if (_readerPanelActiveTab === 'commentary' && commEl) _loadReaderCommentary(parsed, commEl);
-  if (_readerPanelActiveTab === 'xrefs'      && xrefEl) _loadReaderXrefs(parsed, xrefEl);
-  if (_readerPanelActiveTab === 'bookmarks') {
-    var bmEl = document.getElementById('reader-panel-bookmarks');
-    if (bmEl) _loadReaderBookmarks(bmEl);
-  }
 }
 
-function _loadPanelTab(tab, parsed) {
-  if (tab === 'notes') {
-    var notesEl = document.getElementById('reader-panel-notes');
-    if (notesEl) _loadReaderNotes(parsed, notesEl);
-  } else if (tab === 'commentary') {
-    var commEl = document.getElementById('reader-panel-commentary');
-    if (commEl && !commEl._commLoaded) _loadReaderCommentary(parsed, commEl);
-  } else if (tab === 'xrefs') {
-    var xrefEl = document.getElementById('reader-panel-xrefs');
-    if (xrefEl && !xrefEl._xrefsLoaded) _loadReaderXrefs(parsed, xrefEl);
-  } else if (tab === 'bookmarks') {
-    var bmEl = document.getElementById('reader-panel-bookmarks');
-    if (bmEl) _loadReaderBookmarks(bmEl);
-  }
+// ── Notes panel visibility toggle ─────────────────────────────────────────
+var _NOTES_PANEL_KEY = 'bsw_reader_notes_panel';
+
+export function initNotesPanelToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-notes-panel-btn')) return;
+
+  var on = localStorage.getItem(_NOTES_PANEL_KEY) !== '0'; // default open
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.toggle('reader-layout--notes-open', on);
+
+  var btn = document.createElement('button');
+  btn.id        = 'reader-notes-panel-btn';
+  btn.className = 'reader-comm-toggle';
+  btn.type      = 'button';
+  btn.textContent = 'Notes';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(btn, hint || null);
+
+  btn.addEventListener('click', function () {
+    on = !on;
+    try { localStorage.setItem(_NOTES_PANEL_KEY, on ? '1' : '0'); } catch (e) {}
+    if (layout) layout.classList.toggle('reader-layout--notes-open', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
 }
 
 function _loadReaderBookmarks(container) {
@@ -1238,6 +1205,52 @@ function _loadReaderCommentary(parsed, container) {
   loadSrc(src);
 }
 
+var _BOOK_ABBR = {
+  'Song of Solomon':'Song','Song of Songs':'Song',
+  '1 Thessalonians':'1 Thess','2 Thessalonians':'2 Thess',
+  '1 Corinthians':'1 Cor','2 Corinthians':'2 Cor',
+  '1 Chronicles':'1 Chr','2 Chronicles':'2 Chr',
+  '1 Samuel':'1 Sam','2 Samuel':'2 Sam',
+  '1 Timothy':'1 Tim','2 Timothy':'2 Tim',
+  '1 Kings':'1 Kgs','2 Kings':'2 Kgs',
+  'Deuteronomy':'Deut','Ecclesiastes':'Eccl',
+  'Lamentations':'Lam','Habakkuk':'Hab',
+  'Zechariah':'Zech','Zephaniah':'Zeph',
+  'Revelation':'Rev','Philippians':'Phil',
+  'Colossians':'Col','Galatians':'Gal',
+  'Ephesians':'Eph','Proverbs':'Prov',
+  'Nehemiah':'Neh','Jeremiah':'Jer',
+  'Obadiah':'Obad','Philemon':'Phlm',
+  'Matthew':'Matt','Ezekiel':'Ezek',
+  'Genesis':'Gen','Exodus':'Exod',
+  'Leviticus':'Lev','Numbers':'Num',
+  'Psalms':'Ps','Psalm':'Ps',
+  'Isaiah':'Isa','Hebrews':'Heb',
+  'Romans':'Rom','Daniel':'Dan',
+  'Joshua':'Josh','Judges':'Judg',
+  'Esther':'Esth','Haggai':'Hag',
+  'Micah':'Mic','Nahum':'Nah',
+  '1 Peter':'1 Pet','2 Peter':'2 Pet',
+  '1 John':'1 Jn','2 John':'2 Jn','3 John':'3 Jn',
+  'Hosea':'Hos','Jonah':'Jon','Malachi':'Mal',
+  'Ezra':'Ezra','Titus':'Tit','James':'Jas',
+  'Jude':'Jude','Acts':'Acts','Mark':'Mark',
+  'Luke':'Luke','John':'John','Joel':'Joel',
+  'Amos':'Amos','Ruth':'Ruth','Job':'Job'
+};
+// Keys sorted longest-first so partial matches (e.g. "John" vs "1 John") don't fire early.
+var _BOOK_ABBR_KEYS = Object.keys(_BOOK_ABBR).sort(function (a, b) { return b.length - a.length; });
+
+function _abbrevRef(ref) {
+  for (var i = 0; i < _BOOK_ABBR_KEYS.length; i++) {
+    var k = _BOOK_ABBR_KEYS[i];
+    if (ref === k || ref.slice(0, k.length + 1) === k + ' ') {
+      return _BOOK_ABBR[k] + ref.slice(k.length);
+    }
+  }
+  return ref;
+}
+
 function _buildXrefHtml(xdata, parsed) {
   var html = '';
   // Cap to one chapter for whole-chapter views; allow up to 2 for verse ranges
@@ -1261,15 +1274,14 @@ function _buildXrefHtml(xdata, parsed) {
           .sort(function (a, b) { return b.votes - a.votes; })
           .slice(0, 8)
           .sort(_compareCanonical);
-        html += '<div class="reader-xref-group">' +
-          '<div class="reader-xref-group__title">v.' + vNum + '</div>' +
-          '<ul class="reader-xref-group__list">';
-        entries.forEach(function (e) {
-          html += '<li class="reader-xref-group__item">' +
-            '<span class="reader-xref-group__link" data-ref="' + escHtml(e.ref) + '" role="button" tabindex="0">' + escHtml(e.ref) + '</span>' +
-          '</li>';
-        });
-        html += '</ul></div>';
+        var refsHtml = entries.map(function (e) {
+          return '<span class="reader-xref-group__link" data-ref="' + escHtml(e.ref) +
+            '" role="button" tabindex="0">' + escHtml(_abbrevRef(e.ref)) + '</span>';
+        }).join('<span class="reader-xref-sep">, </span>');
+        html += '<div class="reader-xref-row">' +
+          '<span class="reader-xref-row__label">v.' + vNum + '</span>' +
+          '<span class="reader-xref-row__refs">' + refsHtml + '</span>' +
+          '</div>';
       });
   }
   return html;
@@ -1701,10 +1713,9 @@ export function initCommModeToggle() {
   btn.type      = 'button';
   btn.textContent = 'Commentary';
 
-  // Restore visual state from localStorage (activation happens on next passage load)
-  var saved = false;
-  try { saved = localStorage.getItem('bsw_reader_comm_mode') === '1'; } catch (e) {}
-  btn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+  var savedComm = false;
+  try { savedComm = localStorage.getItem('bsw_reader_comm_mode') === '1'; } catch (e) {}
+  btn.setAttribute('aria-pressed', savedComm ? 'true' : 'false');
 
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(btn, hint || null);
@@ -1717,12 +1728,34 @@ export function initCommModeToggle() {
     }
   });
 
+  // Cross-ref inline mode toggle — same visual style, mutually exclusive with Commentary
+  var xrefBtn = document.createElement('button');
+  xrefBtn.id        = 'reader-xref-mode-toggle';
+  xrefBtn.className = 'reader-comm-toggle';
+  xrefBtn.type      = 'button';
+  xrefBtn.textContent = 'Cross Refs';
+
+  var savedXref = false;
+  try { savedXref = localStorage.getItem('bsw_reader_xref_mode') === '1'; } catch (e) {}
+  xrefBtn.setAttribute('aria-pressed', savedXref ? 'true' : 'false');
+
+  browseBar.insertBefore(xrefBtn, hint || null);
+
+  xrefBtn.addEventListener('click', function () {
+    if (xrefBtn.getAttribute('aria-pressed') === 'true') {
+      _deactivateXrefMode();
+    } else {
+      _activateXrefMode();
+    }
+  });
+
   // INTENT: Expose _deactivateCommMode so parallels.js can enforce mutual exclusion
   //   without a circular import — parallels calls this when turning parallels ON.
   // CHANGE? If _deactivateCommMode is renamed, update this assignment and the
   //   window._readerDeactivateComm call in parallels.js initParallelToggle.
   // VERIFY: Enable Commentary, then click Parallels — Commentary should deactivate.
   window._readerDeactivateComm = _deactivateCommMode;
+  window._readerDeactivateXref = _deactivateXrefMode;
 }
 
 function _syncCommGridPage(groupEl) {
@@ -1742,8 +1775,17 @@ function _activateCommMode() {
   var parsed = _readerPanelParsed;
   if (!parsed || !parsed.bookId) return;
 
-  // Mutual exclusion: turn parallels (echoes panel) off before activating commentary.
+  // Mutual exclusion: turn parallels and xref-mode off; if xref grid is in the DOM
+  // deactivate it first (re-renders clean text) then let loadReaderPanelContent re-enter.
   if (window._readerTurnOffParallels) window._readerTurnOffParallels();
+  var xrefModeBtn = document.getElementById('reader-xref-mode-toggle');
+  if (xrefModeBtn && xrefModeBtn.getAttribute('aria-pressed') === 'true') {
+    var commBtn2 = document.getElementById('reader-comm-toggle');
+    if (commBtn2) commBtn2.setAttribute('aria-pressed', 'true');
+    try { localStorage.setItem('bsw_reader_comm_mode', '1'); } catch (e) {}
+    _deactivateXrefMode(); // triggers re-render; loadReaderPanelContent will re-enter
+    return;
+  }
 
   var btn = document.getElementById('reader-comm-toggle');
   if (btn) btn.setAttribute('aria-pressed', 'true');
@@ -1784,6 +1826,135 @@ function _deactivateCommMode() {
 
   // Re-render from scratch to restore the original inline verse flow
   if (window._readerLookupFn) window._readerLookupFn();
+}
+
+// ── Cross-ref inline grid mode ────────────────────────────────────────────
+var _xrefModeData = null;
+
+function _activateXrefMode() {
+  var parsed = _readerPanelParsed;
+  if (!parsed || !parsed.bookId) return;
+
+  if (window._readerTurnOffParallels) window._readerTurnOffParallels();
+  // If commentary grid is in the DOM, deactivate it first (re-renders clean text)
+  // then loadReaderPanelContent will re-enter _activateXrefMode.
+  var commBtn = document.getElementById('reader-comm-toggle');
+  if (commBtn && commBtn.getAttribute('aria-pressed') === 'true') {
+    var xrefBtn2 = document.getElementById('reader-xref-mode-toggle');
+    if (xrefBtn2) xrefBtn2.setAttribute('aria-pressed', 'true');
+    try { localStorage.setItem('bsw_reader_xref_mode', '1'); } catch (e) {}
+    _deactivateCommMode();
+    return;
+  }
+
+  var btn = document.getElementById('reader-xref-mode-toggle');
+  if (btn) btn.setAttribute('aria-pressed', 'true');
+  try { localStorage.setItem('bsw_reader_xref_mode', '1'); } catch (e) {}
+
+  window._readerOnPageChange = _syncXrefGridPage;
+
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.add('reader-layout--comm-mode');
+
+  loadCrossRefs(parsed.bookId).then(function (xdata) {
+    _xrefModeData = xdata || {};
+    _buildXrefGrid();
+  }).catch(function () { _xrefModeData = {}; _buildXrefGrid(); });
+}
+
+function _deactivateXrefMode() {
+  var btn = document.getElementById('reader-xref-mode-toggle');
+  if (btn) btn.setAttribute('aria-pressed', 'false');
+  try { localStorage.setItem('bsw_reader_xref_mode', '0'); } catch (e) {}
+
+  window._readerOnPageChange = null;
+
+  var layout = document.querySelector('.reader-layout');
+  if (layout) layout.classList.remove('reader-layout--comm-mode');
+
+  _xrefModeData = null;
+
+  if (window._readerLookupFn) window._readerLookupFn();
+}
+
+function _buildXrefGrid() {
+  var xdata   = _xrefModeData;
+  var parsed  = _readerPanelParsed;
+  if (!xdata || !parsed) return;
+
+  var resultsEl = document.getElementById('reader-results');
+  if (!resultsEl) return;
+
+  resultsEl.querySelectorAll('.reader-result-group').forEach(function (groupEl) {
+    var textEl = groupEl.querySelector('.reader-result-group__text');
+    if (!textEl) return;
+    var verseSpans = Array.prototype.slice.call(textEl.querySelectorAll('.reader-verse'));
+    if (!verseSpans.length) return;
+
+    var verseData = verseSpans.map(function (span) {
+      return {
+        span: span,
+        ch:   parseInt(span.getAttribute('data-ch'), 10),
+        v:    parseInt(span.getAttribute('data-v'),  10)
+      };
+    });
+
+    var grid = document.createElement('div');
+    grid.className  = 'reader-xref-grid';
+    grid._verseData = verseData;
+
+    var hdr = document.createElement('div');
+    hdr.className   = 'reader-xref-grid__hdr';
+    hdr.textContent = 'Cross References';
+    grid.appendChild(hdr);
+
+    verseData.forEach(function (vd, idx) {
+      var verseCell = document.createElement('div');
+      verseCell.className        = 'reader-comm-cell reader-comm-cell--verse';
+      verseCell.style.gridRow    = String(idx + 2);
+      verseCell.style.gridColumn = '1';
+      verseCell.dataset.commIdx  = String(idx);
+      if (vd.span.style.display === 'none') verseCell.style.display = 'none';
+      verseCell.appendChild(vd.span);
+      grid.appendChild(verseCell);
+
+      var xrefCell = document.createElement('div');
+      xrefCell.className        = 'reader-comm-cell reader-comm-cell--xref';
+      xrefCell.style.gridRow    = String(idx + 2);
+      xrefCell.style.gridColumn = '2';
+      xrefCell.dataset.commIdx  = String(idx);
+      if (vd.span.style.display === 'none') xrefCell.style.display = 'none';
+
+      var chData  = xdata[String(vd.ch)];
+      var rawRefs = chData && chData[String(vd.v)];
+      if (rawRefs && rawRefs.length) {
+        var entries = rawRefs.map(parseCrossRefEntry)
+          .sort(function (a, b) { return b.votes - a.votes; })
+          .slice(0, 8)
+          .sort(_compareCanonical);
+        var refsHtml = entries.map(function (e) {
+          return '<span class="reader-xref-group__link" data-ref="' + escHtml(e.ref) +
+            '" role="button" tabindex="0">' + escHtml(_abbrevRef(e.ref)) + '</span>';
+        }).join('<span class="reader-xref-sep">, </span>');
+        xrefCell.innerHTML = refsHtml;
+        wireRefLinks(xrefCell);
+      }
+      grid.appendChild(xrefCell);
+    });
+
+    textEl.parentNode.replaceChild(grid, textEl);
+  });
+}
+
+function _syncXrefGridPage(groupEl) {
+  var grid = groupEl.querySelector('.reader-xref-grid');
+  if (!grid || !grid._verseData) return;
+  grid.querySelectorAll('.reader-comm-cell').forEach(function (cell) {
+    var idx = parseInt(cell.dataset.commIdx, 10);
+    if (!isNaN(idx) && grid._verseData[idx]) {
+      cell.style.display = grid._verseData[idx].span.style.display;
+    }
+  });
 }
 
 // Return largest key ≤ v in chd, or null if none exists.

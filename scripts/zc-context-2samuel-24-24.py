@@ -1,23 +1,16 @@
 """
-Ruth + 1-2 Samuel — all four layers.
-Ruth: kinsman-redeemer Boaz (type of Christ), Gentile inclusion in covenant community, genealogy to David/Christ.
-1 Samuel: Samuel (prophet-judge-priest), Saul's failure, David's anointing, Spirit-empowered leadership.
-2 Samuel: Davidic covenant (7:12-16), David's sin and restoration, Psalm 51 background.
+mkt-context — 2 Samuel 24 (ch24 only)
+run: python3 scripts/zc-context-2samuel-24-24.py
+
+Ch24: David's census and its aftermath — the threshing floor of Araunah and future temple site
+Key context: census theology (Exod 30:12-13 ransom), Gad the seer, the three options,
+the plague stayed at the threshing floor, Araunah the Jebusite, 1 Chr 21-22 parallel,
+the Moriah connection (Gen 22; 2 Chr 3:1), Temple Mount archaeology
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +22,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,138 +30,41 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# RUTH
-# ============================
-
-RUTH_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "John 10:16", "note": "Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God — Ruth's covenant loyalty (hesed) to Naomi is the supreme expression of voluntary covenant commitment; her Gentile adoption into Israel's covenant community is a type of the Gentile church being grafted in"}
-    ]
-  },
-  "2": {
-    "20": [
-      {"type": "allusion", "target": "Gal 3:13", "note": "The man is a close relative of ours, one of our guardian-redeemers — Boaz as kinsman-redeemer (go'el) is one of the OT's clearest types of Christ's redemptive work: a near kinsman who has the right and takes on the obligation to redeem the distressed family member; Christ redeems as the one who became our kinsman (incarnation) and paid our ransom (cross)"}
-    ]
-  },
-  "4": {
-    "17": [
-      {"type": "allusion", "target": "Matt 1:5", "note": "They named him Obed. He was the father of Jesse, the father of David — Ruth the Moabite is in the genealogical line of David and therefore of the Messiah (Matt 1:5); a Gentile woman's covenant loyalty becomes the vehicle for the Davidic line through which the Messiah comes; the Gentile inclusion in the covenant community is literal and genealogical"}
-    ]
-  }
-}
-
-RUTH_ORIGINAL = {
-  "2": {
-    "20": "<p><strong>qorov lanu ha-ish, mige-aleinu hu</strong>: 'The man is a close relative of ours, one of our redeemers.' The <em>go'el</em> (kinsman-redeemer) is a legal institution in Israelite law: a near male relative who has the right and duty to redeem a family member's sold land (Lev 25:25), to marry a brother's childless widow (Deut 25:5-10, levirate marriage), to redeem a relative sold into slavery (Lev 25:47-55), and to avenge the blood of a murdered kinsman (the <em>go'el hadam</em>). Boaz fulfills the first two functions. Paul in Galatians uses the redemption/buying-back vocabulary (<em>exagorazo</em>, 'redeemed from the curse of the law', Gal 3:13; 4:5) to describe Christ's work — the kinsman-redeemer framework is the legal-theological background for NT redemption language.</p>"
-  }
-}
-
-RUTH_CONTEXT = {
-  "1": {
-    "1": "<p>Ruth is set in the period of the judges ('in the days when the judges ruled', Ruth 1:1) and is a counter-narrative to the chaos of that era: while Judges ends with 'everyone did what was right in his own eyes,' Ruth depicts a community where covenant loyalty (<em>hesed</em>) is practiced across ethnic lines and social classes. The book's theological center is the keyword <em>hesed</em> (steadfast love, covenant loyalty) — used three times (1:8; 2:20; 3:10). It serves as an introduction to the Davidic narrative: its genealogy (4:17-22) links it directly to 1 Samuel and the rise of David, making Ruth the backstory of the royal family. Matthew's genealogy (Matt 1:5) includes Ruth alongside Tamar, Rahab, and Bathsheba — four women with irregular stories through whom the messianic line runs.</p>"
-  }
-}
-
-RUTH_CHRIST = {
-  "2": {
-    "20": "<p>A type: 'The man is a close relative of ours, one of our guardian-redeemers.' Boaz is the OT's most fully developed type of Christ as redeemer: (1) he is near of kin — Christ became our kinsman through the incarnation (Heb 2:14-15: he shared in flesh and blood that through death he might destroy him who has the power of death); (2) he has the right to redeem — as the sinless son of God, Christ alone qualifies; (3) he is willing to redeem — another go'el existed but declined (Ruth 4:6); Christ took on the obligation no one else could fulfill; (4) he pays the redemption price — Boaz redeems the land and takes Ruth; Christ redeems his people by his blood and takes them as his bride (Eph 5:25-27; Rev 19:7-9). The kinsman-redeemer motif is the book of Ruth's entire Christological contribution.</p>"
-  }
-}
-
-# ============================
-# 1 SAMUEL
-# ============================
-
-SAMUEL1_ECHO = {
-  "2": {
-    "1": [
-      {"type": "allusion", "target": "Luke 1:46-55", "note": "Hannah's prayer: My heart exults in YHWH; my horn is exalted in YHWH — Mary's Magnificat (Luke 1:46-55) is a conscious echo and expansion of Hannah's prayer; both are songs of the lowly being lifted up, the proud being brought down, and the faithful YHWH-servant being vindicated through an unexpected birth"}
-    ]
-  },
-  "3": {
-    "1": [
-      {"type": "allusion", "target": "Amos 8:11-12", "note": "The word of YHWH was rare in those days; there was no frequent vision — the period of prophetic silence before Samuel's emergence; Amos prophesies a future famine of hearing YHWH's word; both point to the darkness before divine speech resumes"}
-    ]
-  },
-  "13": {
-    "14": [
-      {"type": "allusion", "target": "Acts 13:22", "note": "YHWH has sought out a man after his own heart — Paul in the Pisidian Antioch synagogue quotes this divine verdict on David to introduce the gospel: God raised up David as a witness, and from his offspring God has brought to Israel a Savior, Jesus, as he promised"}
-    ]
-  },
-  "16": {
-    "13": [
-      {"type": "allusion", "target": "Matt 3:16", "note": "The Spirit of YHWH rushed upon David from that day forward — David's anointing by Samuel and the Spirit's coming upon him is the OT pattern for the messianic anointing; at Jesus's baptism the Spirit descends and remains (John 1:32), the permanent and ungrieved anointing that Saul's experience foreshadowed and forfeited"}
-    ]
-  }
-}
-
-SAMUEL1_ORIGINAL = {
-  "2": {
-    "2": "<p><strong>ein qadosh kaYHWH ki ein biltecha vein tzur kebogheinu</strong>: 'There is none holy like YHWH: for there is none besides you; there is no rock like our God.' Hannah's prayer is the OT's most concentrated statement of YHWH's incomparable holiness and sovereignty — expressed through the reversal-of-fortunes theme (vv. 4-8: the bows of the mighty are broken, but the feeble bind on strength). The pattern is: YHWH exalts the lowly and humbles the proud, not based on human merit but on divine grace and election. Paul's 'God chose what is weak in the world to shame the strong' (1 Cor 1:27) is the Christological application of Hannah's insight: the cross itself is YHWH's ultimate reversal, where the weak and crucified Son defeats the strong.</p>"
-  }
-}
-
-SAMUEL1_CONTEXT = {
-  "1": {
-    "1": "<p>1 Samuel narrates the transition from the period of the judges to the monarchy (ca. 1100-1011 BCE). Its theological structure revolves around three figures: Samuel (the last and greatest judge, the transitional prophet-priest-judge), Saul (the failed king, rejected because of disobedience), and David (the man after God's own heart, the model for the Davidic covenant). The contrast between Saul and David is theologically instructive: Saul has the outward appearance (tall, handsome, from the right tribe) but lacks the inner heart-alignment; David lacks the outward qualifications (youngest, overlooked, a shepherd) but has the heart that YHWH seeks (1 Sam 16:7: YHWH looks on the heart). This contrast between external appearance and internal reality runs from 1 Samuel through Paul's theology of the Spirit vs. the flesh.</p>"
-  }
-}
-
-SAMUEL1_CHRIST = {
-  "16": {
-    "13": "<p>A type: 'And the Spirit of the LORD rushed upon David from that day forward.' David's anointing by Samuel is the OT's paradigmatic messianic event — the word <em>mashiach</em> (anointed one) derives its ultimate meaning from this moment. David is anointed as YHWH's chosen king; the Spirit comes upon him as the empowering for his royal vocation. Jesus's baptism is the typological fulfillment: he is anointed (the meaning of <em>christos</em>, the Greek equivalent of <em>mashiach</em>) by the Spirit who descends and remains (John 1:32-33). The crucial difference: the Spirit rushed upon David from that day forward, but left Saul (1 Sam 16:14); on Jesus the Spirit descends and remains — the permanent anointing that makes him the Messiah whose Spirit-empowered rule will never end.</p>"
-  }
-}
-
-# ============================
-# 2 SAMUEL
-# ============================
-
-SAMUEL2_ECHO = {
-  "7": {
-    "12": [
-      {"type": "fulfillment", "target": "Luke 1:32-33", "note": "I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom — the Davidic covenant promise (Nathan's oracle) is directly cited in the annunciation: the Lord God will give him the throne of his father David, and he will reign over the house of Jacob forever, and of his kingdom there will be no end"},
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "God had sworn with an oath to him that he would set one of his descendants on his throne — Peter's Pentecost sermon cites the Davidic covenant (2 Sam 7 + Ps 16 + Ps 110) as the OT basis for Jesus's resurrection and exaltation; the resurrection is the fulfillment of the promise to raise up David's offspring"},
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "I am the root and the descendant of David — Revelation's final identification of Jesus as the Davidic heir fulfills the 2 Sam 7 promise in its full scope: not merely a political successor but the eternal Son who receives an eternal kingdom"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — the father-son language of the Davidic covenant (2 Sam 7:14) is applied to Christ in Heb 1:5 as proof of his superiority to angels; no angel was ever called God's Son in this royal, covenantal sense"}
-    ]
-  }
-}
-
-SAMUEL2_ORIGINAL = {
-  "7": {
-    "12": "<p><strong>vakimoti et zarecha achareicha asher yetze mimeecha vehakhinoti et mamlaChto</strong>: 'I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.' The Davidic covenant (2 Sam 7:12-16) is the OT's central messianic text — the foundational oracle to which all subsequent messianic prophecy refers. Its key elements: (1) a son who builds a house (temple/dynasty); (2) a father-son relationship (<em>ani ehyeh lo le-av vehu yihyeh li le-ben</em>); (3) discipline for sin but not abandonment; (4) an eternal throne (<em>venekkon kisso ad olam</em>, I will establish his throne forever). The covenant applies both to the immediate heir Solomon and, in an escalating way, to the ultimate heir — which Psalms 2, 89, 110 and the prophets develop into the eschatological Messiah.</p>"
-  }
-}
-
-SAMUEL2_CONTEXT = {
-  "7": {
-    "1": "<p>The Davidic covenant (2 Sam 7) is spoken through the prophet Nathan when David, having consolidated his kingdom in Jerusalem, desires to build a temple for YHWH. YHWH's reversal — 'you will not build me a house; I will build you a house (dynasty)' — is the pivot of the OT's messianic program. The word <em>bayit</em> (house) operates on three levels simultaneously: the physical temple David wants to build, the dynastic household YHWH promises, and the future son who will build both. The oracle has a near fulfillment (Solomon builds the temple, 1 Kings 6-8) and a far fulfillment (the eternal son whose kingdom has no end). The 'already and not yet' hermeneutic of NT fulfillment readings is modeled on 2 Samuel 7 itself, which already operates on two temporal levels.</p>"
-  }
-}
-
-SAMUEL2_CHRIST = {
-  "7": {
-    "12": "<p>A direct revelation: 'When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom ... and I will establish the throne of his kingdom forever.' The Davidic covenant is the OT's formal contract establishing the messianic expectation. Jesus of Nazareth's Davidic lineage is asserted by both Matthew (1:1-17) and Luke (3:23-38), confirmed by Paul (Rom 1:3: descended from David according to the flesh), and by Jesus himself (Mark 12:35-37). The eternal throne (v. 13, 16) is fulfilled in the resurrection: unlike David's physical descendants who all died, Christ rose and will reign forever. Peter's Pentecost sermon (Acts 2:29-36) explicitly applies 2 Sam 7 + Ps 16 + Ps 110 to the risen Christ: the Davidic covenant's promise of an unending throne is fulfilled not in an earthly dynasty but in the resurrection-life of the Son.</p>"
+SAMUEL2 = {
+  "24": {
+    "1": "<p>Again the anger of YHWH was kindled against Israel, and he incited David against them, saying, Go, take a census of Israel and Judah. The theological difficulty here — YHWH inciting David to the very act for which David is then judged — is addressed by the parallel in 1 Chr 21:1, which substitutes 'Satan' (<em>haśśāṭān</em>) as the inciting agent. The two accounts reflect different levels of causation: YHWH's sovereign permission and purpose is the ultimate frame (2 Sam 24:1); the adversary is the proximate agent (1 Chr 21:1). The theology of divine permission with secondary agency is present throughout the OT (cf. 1 Kgs 22:19-23: a lying spirit permitted by YHWH to deceive Ahab).</p>",
+    "2": "<p>The king said to Joab the commander of the army: Go through all the tribes of Israel, from Dan to Beersheba, and number the people, that I may know the number of the people. The census (<em>pāqad</em>, to muster/count) in the ancient Near East had primarily military significance — counting men eligible for military service. The standard geographic formula 'Dan to Beersheba' defined the full extent of the land from north (Dan, at the foot of Mount Hermon) to south (Beersheba, the traditional southern limit). The census represents David quantifying his military resources — an act that implicitly shifts trust from YHWH's provision to military numbers.</p>",
+    "3": "<p>But Joab said to the king: May YHWH your God add to the people a hundred times as many as they are, while the eyes of my lord the king still see it. But why does my lord the king delight in this thing? Joab's objection is remarkable — the general otherwise portrayed as ruthless (killing Abner, 3:27; killing Absalom, 18:14) recognizes the theological problem David does not. Exod 30:12-13 required a half-shekel ransom payment per person when a census was taken 'so that there will be no plague among them when you number them' — the ransom provision existed precisely because a census without it created a breach that could bring divine judgment. Joab may have understood this provision even if he did not articulate it.</p>",
+    "4": "<p>But the king's word prevailed against Joab and the commanders of the army. So Joab and the commanders of the army went out from the presence of the king to number the people of Israel. David's insistence overrides Joab's objection. The narrative does not specify which aspect of the census was sinful — whether the omission of the ransom payment (Exod 30:12-13), the pride of military self-assessment, or failure to inquire of YHWH. The result (vv10-15) establishes the act was wrong without specifying the precise violation; the weight falls on David's motivation rather than a technical infraction.</p>",
+    "5": "<p>They crossed the Jordan and camped at Aroer, to the south of the city that is in the middle of the valley, toward Gad and on to Jazer. The census route moves counterclockwise around the territory: beginning in Transjordan (Aroer on the Arnon, the southern Transjordanian boundary), through Gad and Gilead, then north through the northern tribes' territory, and eventually back to Jerusalem (v8). The geographic specificity reflects a systematic census of the full extent of David's kingdom — the same territory just enumerated by the census is the same territory struck by the plague (v15: 'from Dan to Beersheba').</p>",
+    "6": "<p>Then they came to Gilead, and to Kadesh in the land of the Hittites; and they came to Dan, and from Dan they went around to Sidon. The census moves into the northern reaches: Gilead (central Transjordan), Dan (northernmost city at the foot of Mount Hermon), and Sidon (Phoenician coastal city north of Tyre). The inclusion of Sidon likely reflects David's sphere of influence at the height of his kingdom rather than direct political control — the census documents the extent of the tributary relationships established during his military campaigns (ch8).</p>",
+    "7": "<p>Then they came to the fortress of Tyre and to all the cities of the Hivites and Canaanites; and they went out to the Negeb of Judah at Beersheba. The route continues south through the Phoenician coastal cities (Tyre), through remaining Hivite and Canaanite enclaves within the land (cities not fully absorbed into Israelite tribal territory), finally reaching Beersheba — completing the circuit. The continuing presence of Hivite and Canaanite enclaves within David's kingdom reflects the incomplete conquest that Joshua had acknowledged (Judg 1-3).</p>",
+    "8": "<p>So when they had gone through all the land, they came to Jerusalem at the end of nine months and twenty days. The nine-month census is a substantial administrative operation requiring a coordinated team to traverse the full kingdom. The return to Jerusalem after the circuit sets up David's immediate crisis of conscience in v10. The duration itself — nine months and twenty days — is recorded with the precision of official record, suggesting this derived from administrative archives.</p>",
+    "9": "<p>And Joab gave the sum of the numbering of the people to the king: in Israel there were 800,000 valiant men who drew the sword, and the men of Judah were 500,000. The 1.3 million total for Israel and Judah is large; 1 Chr 21:5 gives 1,100,000 for Israel and 470,000 for Judah, with a note that Joab did not complete the census because the king's command was abhorrent to him (1 Chr 21:6: Levi and Benjamin were not counted). The discrepancies may reflect partial vs. complete counts, different categories being tallied, or different textual traditions. In any case, the numbers document the scale of the military assessment David was making.</p>",
+    "10": "<p>But David's heart struck him after he had numbered the people. And David said to YHWH, I have sinned greatly in what I have done. But now, O YHWH, please take away the iniquity of your servant, for I have done very foolishly. The idiom 'his heart struck him' (<em>wayyak lēb-dāwid ʾōṯô</em>) is the language of conscience — the same expression used when Saul's heart 'struck him' at the cave of En-gedi (1 Sam 24:5). David's conscience activates immediately after the count is complete, not before. The confession pairs the theological category (<em>ḥāṭāʾtî məʾōd</em>, I have sinned greatly) with the wisdom category (<em>nisakaltî məʾōd</em>, I have acted very foolishly).</p>",
+    "11": "<p>And when David arose in the morning, the word of YHWH came to the prophet Gad, David's seer. Gad the seer (<em>ḥōzeh</em>, one who sees) is David's personal prophet, first appearing in 1 Sam 22:5 when he directed David to leave the stronghold and enter Judah. The term <em>ḥōzeh</em> is the older vocabulary for a prophet; 1 Sam 9:9 notes that what was formerly called a seer (<em>rōʾeh</em>) came to be called a prophet (<em>nāḇîʾ</em>). Gad functions alongside Nathan as YHWH's authorized spokesman to David; here he delivers the three-option judgment oracle.</p>",
+    "12": "<p>Go and say to David: Thus says YHWH, Three things I offer you. Choose one of them, that I may do it to you. The three-option judgment oracle is structurally unique in the OT — YHWH presenting the guilty party with a menu of punishments. The three options map onto three categories of judgment: famine (land-level), enemy pursuit (king-level), plague (divine-direct). The choice structure is itself a form of grace — David is given agency in the chastisement. The parallel in 1 Chr 21:12 gives three years of famine; 2 Sam 24:13 gives seven years, likely reflecting different textual traditions or different methods of counting (three years from the current year, or seven years including previous hardships).</p>",
+    "13": "<p>So Gad came to David and told him, and said to him, Shall three years of famine come to you in your land? Or will you flee three months before your foes while they pursue you? Or shall there be three days' pestilence in your land? Now consider and decide what answer I shall return to him who sent me. The three options present a choice between duration (7 years famine, long), escape-failure (3 months enemy pursuit), and intensity (3 days plague). David's response reveals his theological orientation: which agent does he trust most with his suffering — the land, human enemies, or YHWH directly?</p>",
+    "14": "<p>Then David said to Gad, I am in great distress. Let us fall into the hand of YHWH, for his mercy is great, but let me not fall into the hand of man. David's response is the chapter's theological core: <em>nippəlāh-nnāʾ bəyaḏ-YHWH kî rabbîm raḥămāyw</em> (let us fall into the hand of YHWH, for his mercies are great). The word <em>raḥamîm</em> (mercies, from the root <em>reḥem</em>, womb — suggesting intimate, motherly compassion) is the deepest vocabulary for divine tenderness in the OT. David's choice of plague — the most intense but most directly YHWH-administered option — reflects his knowledge that YHWH's character includes <em>raḥamîm</em> that human enemies do not possess.</p>",
+    "15": "<p>So YHWH sent a pestilence on Israel from the morning until the appointed time. And there died of the people from Dan to Beersheba 70,000 men. The <em>deber</em> (plague/pestilence) moves along the same geographic axis as the census — Dan to Beersheba — the full extent of the territory just counted. The symmetry is deliberate: the act of counting the people is answered by the removal of people from the same territory. The 70,000 deaths in three days (the <em>mōʿēd</em>, appointed time) is catastrophic by any measure.</p>",
+    "16": "<p>And when the angel stretched out his hand toward Jerusalem to destroy it, YHWH relented from the calamity and said to the angel who was working destruction among the people, It is enough; now stay your hand. And the angel of YHWH was by the threshing floor of Araunah the Jebusite. The staying of the angel at Araunah's threshing floor is the geographical pivot of the entire chapter — and the conclusion of the book of 2 Samuel. The threshing floor (<em>gōren</em>) was a flat, elevated, exposed site for winnowing grain; Araunah's was on the northern hill above the City of David, the area that will become the Temple Mount (Haram al-Sharif). The moment YHWH relents and judgment stops identifies the sacrificial site: the place where divine wrath is stayed becomes the place of sacrifice, the altar of atonement, and eventually the house of YHWH.</p>",
+    "17": "<p>Then David spoke to YHWH when he saw the angel who was striking the people, and said, Behold, I have sinned, and I have done wickedly. But these sheep, what have they done? Please let your hand be against me and against my father's house. David's intercession follows the Mosaic pattern: the leader substitutes himself for the people (Exod 32:32: 'blot me out of your book'). The description of Israel as 'these sheep' (<em>haṣṣōʾn hāʾēleh</em>) invokes the shepherd-king vocabulary — the king is responsible for the flock's suffering caused by his sin. The substitutionary request ('your hand against me') is not granted literally but shapes the subsequent oracle (v18: build an altar).</p>",
+    "18": "<p>And Gad came that day to David and said to him, Go up, build an altar to YHWH on the threshing floor of Araunah the Jebusite. The divine command to build an altar precisely at the location where the angel stayed its hand is the identification of the sacred site. The OT's consistent pattern for establishing worship locations is crisis-resolution at a specific place: Jacob at Bethel (Gen 28:18-19), Gideon at Ophrah (Judg 6:24), Abraham at Moriah (Gen 22:9). The altar is both the crisis response and the foundation designation. 1 Chr 22:1 makes the identification explicit: 'Then David said, Here shall be the house of YHWH God and here the altar of burnt offering for Israel.'</p>",
+    "19": "<p>So David went up at Gad's word, as YHWH had commanded. David's immediate obedience to the prophetic word — going up to the threshing floor without delay or negotiation — contrasts with his override of Joab's prophetic-instinct objection in v4. The chapter's narrative arc moves from David ignoring wise counsel to David obeying the prophet completely. The two responses bracket the judgment: sin → crisis → repentance → obedience.</p>",
+    "20": "<p>And when Araunah looked down, he saw the king and his servants coming on toward him. And Araunah went out and paid homage to the king with his face to the ground. Araunah (Hebrew; Ornan in Chronicles) was a Jebusite — one of the pre-Israelite inhabitants of Jerusalem. After David's conquest of Jebus (5:6-9), some Jebusites remained as resident aliens or royal functionaries. Araunah's possession of a threshing floor on the northern hill of the city suggests he was a man of some property and standing. His prostration before David is the posture of a subject acknowledging royal authority.</p>",
+    "21": "<p>And Araunah said, Why has my lord the king come to his servant? David said, To buy the threshing floor from you, in order to build an altar to YHWH, that the plague may be averted from the people. David's stated purpose — purchase, altar, aversion of plague — is the economy of atonement compressed into one sentence: a specific place, a specific sacrifice, a specific divine response. The legal purchase ensures the site belongs to David/Israel rather than being merely borrowed or occupied; the ownership matters for the permanent temple that will be built on it.</p>",
+    "22": "<p>Then Araunah said to David, Let my lord the king take and offer up what seems good to him. Here are the oxen for the burnt offering and the threshing sledges and the yokes of the oxen for the wood. Araunah's offer of the complete sacrificial package — the oxen (for the offering itself), the threshing sledges (fuel), and the yoke-wood (additional fuel) — makes possible an immediate, complete sacrifice from equipment already present at the threshing floor. The agricultural tools of the threshing floor become the instruments of extraordinary worship: the daily equipment of grain production repurposed for the crisis sacrifice.</p>",
+    "23": "<p>All this, O king, Araunah gives to the king. And Araunah said to the king, May YHWH your God accept you. The Jebusite's blessing — using the covenant name YHWH — parallels the Jebusite priest-king Melchizedek's blessing of Abram (Gen 14:18-20). Jerusalem's pre-Israelite religious tradition is here represented by a Jebusite who knows YHWH's name and invokes YHWH's acceptance of the Israelite king. The city that became YHWH's dwelling place had a prior inhabitant who acknowledged YHWH even before the temple was built.</p>",
+    "24": "<p>But the king said to Araunah, No, but I will buy it from you for a price. I will not offer burnt offerings to YHWH my God that cost me nothing. So David bought the threshing floor and the oxen for fifty shekels of silver. David's refusal is one of the chapter's most memorable statements: <em>lōʾ ʾaʿăleh laYHWH ʾelōhay ʿōlôṯ ḥinnām</em> (I will not offer burnt offerings to YHWH my God for free). Genuine sacrifice requires real cost — the theological principle that worship divorced from personal sacrifice is hollow. The price in 2 Sam 24 (50 shekels of silver for the floor and oxen) differs from 1 Chr 21:25 (600 shekels of gold for the whole site); the discrepancy is explained by 2 Samuel recording the immediate transaction for the floor alone and Chronicles recording the total acquisition of the surrounding site for the temple complex.</p>",
+    "25": "<p>And David built there an altar to YHWH and offered burnt offerings and peace offerings. So YHWH responded to the plea for the land, and the plague was averted from Israel. The altar building, sacrifice, and plague-aversion complete the narrative arc. The threshing floor of Araunah/Ornan is identified by 2 Chr 3:1 as the future Temple Mount: 'Then Solomon began to build the house of YHWH in Jerusalem on Mount Moriah, where YHWH had appeared to David his father, at the place David had prepared, on the threshing floor of Ornan the Jebusite.' The Moriah connection reaches back to Gen 22:2 (Abraham's sacrifice of Isaac on Mount Moriah) — the same geographic area where judgment was stayed becomes the place of sacrifice, the place of divine presence, and the site of the permanent temple. The book of 2 Samuel closes with this founding identification: the book that began with the death of Saul ends with the designation of the place where YHWH will dwell among his people.</p>"
   }
 }
 
 def main():
-    books = [
-        ('ruth', RUTH_ECHO, RUTH_ORIGINAL, RUTH_CONTEXT, RUTH_CHRIST),
-        ('1samuel', SAMUEL1_ECHO, SAMUEL1_ORIGINAL, SAMUEL1_CONTEXT, SAMUEL1_CHRIST),
-        ('2samuel', SAMUEL2_ECHO, SAMUEL2_ORIGINAL, SAMUEL2_CONTEXT, SAMUEL2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-context', '2samuel')
+    merge_comm(c, SAMUEL2)
+    save_comm('mkt-context', '2samuel', c)
+    print('2samuel ch24 context: done')
 
 if __name__ == '__main__':
     main()

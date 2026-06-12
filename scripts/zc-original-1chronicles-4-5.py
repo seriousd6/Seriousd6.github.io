@@ -1,48 +1,43 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
-"""
+MKT Original Language Commentary — 1 Chronicles chapters 4–5
+Run: python3 scripts/zc-original-1chronicles-4-5.py
 
+Source data used:
+- data/interlinear/1chronicles.json
+- data/translation/glossary-hebrew.json
+- data/translation/draft/mediating/1chronicles.json
+
+Key decisions in this range:
+- Ch4: Genealogical formulas use both יָלַד (yalad, fathered) and the nominal
+  אֲבִי X (avi X, "father of"), the latter typically rendered "founder of" when
+  X is a place name — a translation decision that carries settlement/founding connotations
+- Jabez (4:9-10): Name wordplay (יַעְבֵּץ / עֹצֶב) must be noted; the prayer's
+  infinitive absolute emphasis and return to the name-root in v10 final clause
+- Ch5: בְּכֹרָה (birthright) vs נָגִיד (ruler/prince) distinction — key to the
+  Chronicler's theology of how Davidic and Josephite roles relate
+- v22: כִּי מֵאֱלֹהִים הַמִּלְחָמָה — theological attribution formula, a distinctive
+  Chronicler's idiom for divine causality in warfare
+- v25-26: זָנָה (zanah) for apostasy; עוּר (ur) for divine stirring — two key terms
+  in the Chronicler's theological vocabulary
+"""
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -50,160 +45,87 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
+CHRON1 = {
+  "4": {
+    "1": "<p>The genealogy resumes the sons of Judah from a different entry point than ch2 — Perez, Hezron, Carmi, Hur, and Shobal. The formula here is <em>bᵉnê Yᵉhûdāh</em> (sons of Judah), the standard opening for a new genealogical unit. The five names bridge the main Judahite lines descended from ch2, grouping together diverse sub-clans under the Judahite heading.</p>",
+    "2": "<p>The genealogical verb <em>hôlîd</em> (hiphil of <em>yālad</em>) means &ldquo;caused to beget&rdquo; or &ldquo;fathered&rdquo; — the standard causative form for genealogical chains. The MKT renders it &ldquo;fathered&rdquo; throughout, preserving the Hebrew's emphasis on the active role of the father in the chain rather than the more neutral English &ldquo;was the father of.&rdquo;</p>",
+    "3": "<p>The formula <em>ʾăbî</em> (father of) appears before place names throughout this chapter — <em>ʾăbî Ētām</em>, &ldquo;father of Etam.&rdquo; In genealogical contexts, <em>ʾāḇ</em> before a place name connotes &ldquo;founder&rdquo; or &ldquo;settler&rdquo; of that location. The MKT renders this &ldquo;founder of&rdquo; to capture the sense that these individuals established settlements, not merely that they had children named after towns.</p>",
+    "4": "<p><em>Pᵉnûʾēl ʾăbî Gᵉdōr wᵉʿEzer ʾăbî Ḥûšāh</em> — two founder-formulas in parallel. <em>Pᵉnûʾēl</em> may carry the resonance of the Jabbok crossing (Gen 32:30, &ldquo;face of God&rdquo;), though here it is a personal name. <em>Ḥûšāh</em> likely corresponds to the town from which Hushai the Archite came (2 Sam 15:32). The closing attribution &ldquo;sons of Hur, firstborn of Ephrathah, father of Bethlehem&rdquo; identifies this line's connection to Bethlehem through Hur.</p>",
+    "5": "<p><em>Ašḥûr ʾăbî Tᵉqôaʿ</em> — founder of Tekoa. Tekoa was the home of Amos the prophet (Amos 1:1) and the wise woman summoned by Joab (2 Sam 14:2). The two wives, <em>Ḥelāh</em> and <em>Naʿărāh</em>, introduce a brief chiastic genealogy: Naarah's sons in v6, Helah's in v7.</p>",
+    "6": "<p>The sons of Naarah are listed first, then Helah's (v7) — the order reverses normal birth-order priority, perhaps reflecting a significance judgment by the Chronicler. The names are otherwise unattested and carry no clear etymology relevant to the commentary; the list preserves clan identity records that the post-exilic community needed for land and inheritance disputes.</p>",
+    "7": "<p>The sons of Helah close the Ashhur sub-unit. <em>Yiṣhar</em> (from <em>yāṣhar</em>, &ldquo;to shine/be bright&rdquo;) appears also as a Levitical name in Exod 6:18. The Chronicler includes both branches of Ashhur's family, giving equal genealogical standing to both wives' descendants.</p>",
+    "8": "<p><em>Qôṣ hôlîd ʾet-ʿAnûb</em> — Koz fathered Anub. <em>Qôṣ</em> (thorn) is a name that may reflect the topography of the clan's territory. <em>Zobebah</em> (שֹׁובֵבָה, from <em>šûḇ</em>, &ldquo;to return&rdquo;) appears to be a personal or clan name unique to this verse. The formula <em>mišpᵉḥôt ʾAḥarḥēl</em> (clans of Aharhel) indicates the Chronicler is working from clan-registry sources in addition to personal genealogies.</p>",
+    "9": "<p><em>Yaʿbēṣ</em> (Jabez) is explicitly glossed by the narrator: <em>ʾāmᵉrāh ʾimmô qārāʾtî šᵉmô yaʿbēṣ lēʾmōr kî yāladtî bᵉʿōṣeḇ</em> — &ldquo;his mother named him Jabez, saying, 'I bore him in pain/sorrow.'&rdquo; The name <em>yaʿbēṣ</em> inverts the letters of <em>ʿōṣeḇ</em> (sorrow/pain) in a folk etymology. The Chronicler introduces Jabez mid-genealogy as &ldquo;more honoured than his brothers&rdquo; (<em>niḵbad miʾaḥāyw</em>) — a signal to the reader that an exceptional figure follows.</p>",
+    "10": "<p>The prayer of Jabez is dense with literary technique. <em>ʾim-bārēḵ tᵉḇārᵉḵēnî</em> — the infinitive absolute (<em>bārēḵ</em>) before the finite verb (<em>tᵉḇārᵉḵēnî</em>) intensifies the plea: &ldquo;if you would indeed bless me.&rdquo; <em>wᵉhirbîtā ʾet-gᵉḇûlî</em> — &ldquo;enlarge my territory,&rdquo; using the hiphil of <em>rāḇāh</em> (to be many/great). The prayer closes with <em>lᵉḇiltî ʿoṣbî</em> — &ldquo;that I might not have pain,&rdquo; returning to the <em>ʿōṣeḇ</em> root of his name. The prayer is thus a lifelong response to the sorrow of his birth: he asks God to write a different story than his name predicted.</p>",
+    "11": "<p><em>Kᵉlûḇ ʾăḥî Šûḥāh hôlîd ʾet-Mᵉḥîr</em> — the formula is straightforward. <em>Kᵉlûḇ</em> is a variant spelling of <em>Kālēḇ</em> (Caleb), which may or may not be the same figure as the spy of Numbers 13. The genealogical chain here uses the standard <em>hôlîd</em> causative, tracking through Mechir to Eshton in v12.</p>",
+    "12": "<p><em>Ešṭōn hôlîd ʾet-Bêt-rāpāʾ</em> — Eshton fathered Beth-rapha (&ldquo;house of healing/giant&rdquo;). <em>Ir-Naḥāš</em> (city of serpent/bronze) is otherwise unknown geographically but likely a Judahite settlement. <em>ʾanšê Rēkāh</em> (men of Recah) indicates the Chronicler is again working from guild or clan-settlement records whose names have not survived elsewhere.</p>",
+    "13": "<p><em>bᵉnê Qᵉnaz</em> — Kenaz was an Edomite clan chief (Gen 36:11) who became assimilated into Judah, so Othniel the Kenizzite (Judg 1:13; 3:9-11), Israel's first judge, descended from a non-Israelite ancestor. The name <em>Othniel</em> is possibly from <em>ʿōz</em> (strength) + <em>ʾēl</em> (God). The reference here is brief; the fuller picture comes from Judges.</p>",
+    "14": "<p><em>Gêʾ-Ḥărāšîm</em> — &ldquo;Valley of Craftsmen,&rdquo; from <em>ḥārāš</em> (craftsman, artisan, metalworker). The phrase <em>kî ḥărāšîm hāyû</em> (&ldquo;for they were craftsmen&rdquo;) explains the place name — a settlement of artisans in the service of the Judahite kingdom, perhaps supplying military equipment. This is one of the Chronicler's incidental socioeconomic footnotes preserved nowhere else.</p>",
+    "15": "<p><em>bᵉnê Kālēḇ ben-Yᵉphunneh</em> — Caleb son of Jephunneh, the spy who gave a positive report (Num 13:30; 14:6-9). This Caleb is distinct from the Calebites of v11-12 who may or may not be the same genealogical line. The name <em>Elah</em> (אֵלָה, terebinth tree) is a common theophoric/nature name in the HB.</p>",
+    "16": "<p>The sons of Jehallelel: four names, none of whom appear elsewhere. The genealogical function is territorial — recording which sub-clans held Judahite land in the Chronicler's administrative framework. The formula <em>bᵉnê X</em> without the <em>hôlîd</em> chain indicates a horizontal listing of clan members rather than a vertical father-son chain.</p>",
+    "17": "<p>The genealogy of Ezrah introduces Miriam — a female name notable in this context. The Chronicler occasionally inserts women's names into otherwise male genealogies when they were clan founders or significant mothers (cf. Shelomith in 2 Chr 11:20). <em>Mered</em> (rebellion) appears to have taken two wives: an Egyptian wife (v18) and a Jewish wife (v18b), giving him two distinct lines of descendants.</p>",
+    "18": "<p><em>ʾiššātô hayᵉhûdîyyāh</em> — &ldquo;his Jewish wife&rdquo; — the explicit ethnic marker &ldquo;Judahite/Jewish&rdquo; (<em>yᵉhûdîyyāh</em>) is needed because Mered had an Egyptian wife (named Bithiah/Bityah in v18, &ldquo;daughter of Yah&rdquo;). The name <em>Bithiah</em> is possibly a Hebraized form honoring a pious Egyptian woman, or it may reflect an Israelite name given at conversion — the daughter of Pharaoh identified in Exod 2:5-10 is sometimes connected with this Bithiah in rabbinic tradition.</p>",
+    "19": "<p>The sons of Hodiah's wife, &ldquo;sister of Naham&rdquo; — Hodiah married a woman whose clan identity comes through her brother, not her father. <em>Kᵉîlāh haGarmî</em> (Keilah the Garmite settlement) — <em>Garmî</em> is of uncertain origin; possibly connected to <em>gerem</em> (bone/substance) as a place name. <em>Eštemoa hamaʿăḵātî</em> — Eshtemoa the Maachathite — the Maachathites were a people east of the Jordan (Deut 3:14), so this entry records mixed-ancestry clans within Judah.</p>",
+    "20": "<p>Sons of Shimon and Ishi: a brief four-name and two-name list. <em>Ben-Ḥānān</em> (son of gracious one) and <em>Ben-Zōḥēt</em> (son of Zoheth) use <em>ben</em> (son of) as part of the actual name — these are not genealogical formulas but hypocoristic names that incorporate <em>ben</em> as a prefix, similar to Benjamin.</p>",
+    "21": "<p><em>bᵉnê Šēlāh ben-Yᵉhûdāh</em> — Shelah was Judah's third son (Gen 38:5), whose line was passed over at Tamar's double deception to allow Perez and Zerah to take precedence. The inclusion here rehabilitates Shelah's descendants as legitimate Judahites. <em>Bêt-ʿăḇodāt-bûṣ</em> — &ldquo;house of linen workers&rdquo; or &ldquo;house of the guild of linen workers.&rdquo; The <em>ʿăḇôdāh</em> (service/work) term applied to a textile guild suggests organized craft production, perhaps in royal service.</p>",
+    "22": "<p>This verse contains a textual difficulty: <em>wᵉyāšuḇî Lehem</em> — the MT reads &ldquo;and they returned to Lehem (Bethlehem).&rdquo; The LXX reads differently; some scholars emend to a place name, others retain a verb meaning &ldquo;returned.&rdquo; The note &ldquo;the records are ancient&rdquo; (<em>wᵉhaddᵉḇārîm ʿattîqîm</em>) is the Chronicler's own acknowledgment that his sources for this material are antiquarian — he is working from old clan registers, not living memory.</p>",
+    "23": "<p><em>hāyôṣᵉrîm</em> — &ldquo;the potters&rdquo; (from <em>yāṣar</em>, to form/shape, the same root used for YHWH forming man in Gen 2:7). The phrase <em>yōšᵉḇê-šām ʿim-hammelek bimlāʾktô</em> — &ldquo;they dwelt there in the king's service&rdquo; — indicates royal workshops. The Chronicler preserves evidence of royal craft guilds operating under patronage from a Judahite king, a practice well-attested in ANE administrative texts.</p>",
+    "24": "<p><em>bᵉnê Šimʿôn</em> — the shift to Simeon's genealogy is significant. Simeon received no separate tribal territory in Canaan but was absorbed within Judah's allotment (Josh 19:1-9). The Chronicler's inclusion of Simeon validates their continued existence as a tribe even within Judah's geographic territory. The five names here differ slightly from Gen 46:10 and Num 26:12-14 — normal variation in genealogical transmission.</p>",
+    "25": "<p>The <em>tôlᵉdôt</em> chain for Simeon (Shallum, Mibsam, Mishma) uses the standard linear formula: <em>bᵉnô X bᵉnô Y</em> — &ldquo;his son X, his son Y&rdquo; — indicating a direct father-to-son chain rather than the sibling-list of v24. <em>Mibsam</em> also appears as an Ishmaelite name (Gen 25:13), suggesting a possible tribal overlap or shared naming tradition.</p>",
+    "26": "<p>The chain continues through Mishma's descendants. <em>bᵉnê Mišmāʿ</em> — sons of Mishma — then lists three consecutive <em>bᵉnô</em> links: Hamuel, Zaccur, Shimei. This is the deepest Simeonite genealogy preserved in the HB and likely drawn from clan records maintained through the Assyrian and Babylonian periods.</p>",
+    "27": "<p><em>Šimʿî šiššāh-ʿāśār bānîm wᵉšēš bānôt</em> — Shimei had sixteen sons and six daughters. The unusual female count (<em>bānôt</em> = daughters) is recorded here and again stands out in the genealogical framework. The theological note follows: &ldquo;his brothers did not multiply greatly, and their whole clan did not equal the sons of Judah.&rdquo; The comparison to Judah frames the Simeonite genealogy as an explanation for Simeon's absorption into Judah — smaller population means less territorial claim.</p>",
+    "28": "<p>The settlement list for Simeon: Beer-sheba, Moladah, Hazar-shual — cities at the southern edge of Judah's territory, in the Negev. Beer-sheba was the southernmost city of the traditional settlement (&ldquo;from Dan to Beer-sheba&rdquo;). The phrase establishes the Simeonites as desert-edge settlers rather than highland farmers like Judah.</p>",
+    "29": "<p>Bilhah, Ezem, Tolad — southern Negev settlements listed in Josh 15:29-30 and 19:3-4 as Judahite and Simeonite towns respectively. The Chronicler's list slightly diverges from Joshua in names and spelling, reflecting either textual transmission variation or different administrative periods of settlement.</p>",
+    "30": "<p>Bethuel, Hormah, Ziklag — Hormah (<em>ḥormāh</em>, &ldquo;devoted to destruction&rdquo;) was where Israel was routed after the failed Kadesh incursion (Num 14:45; 21:3). Ziklag became David's base during his time with the Philistines (1 Sam 27:6; 30:1). The Chronicler's inclusion of Ziklag in the Simeonite list establishes the tribal claim that David later inherited by grant.</p>",
+    "31": "<p><em>ʿad-mᵉlōk Dāwîd</em> — &ldquo;until the time of David&rdquo; — a chronological marker establishing the antiquity of these settlement records. The Chronicler is saying that these were the Simeonite cities prior to the Davidic reorganization of tribal territories. The formula &ldquo;these were their cities&rdquo; closes the settlement list formally.</p>",
+    "32": "<p>Five <em>ḥăṣērôt</em> (villages/enclosures) are listed. The Hebrew <em>ḥāṣēr</em> (pl. <em>ḥăṣērôt</em>) typically denotes unwalled settlements — hamlets or encampments — in contrast to fortified <em>ʿārîm</em> (cities). The Simeonite settlements were thus smaller, unwalled communities in the semi-arid southern zone.</p>",
+    "33": "<p><em>ûmišpaḥōtām</em> (and their genealogical records) — the formal close of the Simeonite list with the phrase &ldquo;they maintained their genealogical records&rdquo; (<em>yiḥaśśᵉmû lāhem</em>). This is the Chronicler's notation that these clan lists come from official genealogical registers (<em>yaḥas</em>, genealogy/registration), not oral tradition.</p>",
+    "34": "<p>A new list begins with Meshobab and eleven additional Simeonite leaders. The transition from settlement list to leader list reflects different source materials: vv28-33 came from a geographic-administrative record; vv34-43 come from a clan-leadership register. The leaders' names are given with patronymics to several generations depth, indicating their importance.</p>",
+    "35": "<p><em>wᵉYôʾēl wᵉYēhûʾ ben-Yôšiḇyāh ben-Śᵉrāyāh ben-ʿĂśîʾēl</em> — a four-generation patronymic for Jehu, establishing his distinguished ancestry within the Simeonite leadership. The depth of genealogy (four generations) signals significant status; ordinary clan members warranted only one or two generations of identification.</p>",
+    "36": "<p>Seven more names in the Simeonite leadership roster. <em>ʾĔlyôʿênay</em> (my eyes are toward YHWH) is a theophoric name reflecting post-exilic piety; its presence in this list suggests the register was updated or supplemented during the restoration period when such names became common.</p>",
+    "37": "<p><em>Zîzāʾ ben-Šipî ben-ʾAllôn ben-Yᵉdāyāh ben-Šimrî ben-Šᵉmaʿyāh</em> — six-generation patronymic for Ziza, the deepest in this section. Six generations of tracing suggests either an exceptionally prominent ancestor or a clan that took great pride in establishing its genealogical credentials in the post-exilic period.</p>",
+    "38": "<p><em>habbāʾîm bᵉšēmôt</em> — &ldquo;those listed by name&rdquo; — a formal designation for officially registered clan heads. The phrase <em>wᵉnāśîʾîm bᵉmišpᵉḥōtām</em> (leaders in their clans) establishes their administrative role. <em>wᵉḇêt ʾăḇōtêhem pāraṣ lārōḇ</em> — their families multiplied greatly — the expansion of Simeon in the following verses is presented as blessing (the verb <em>pāraṣ</em>, &ldquo;to burst forth/spread,&rdquo; is used of rapid growth, as in Gen 28:14 for Jacob's descendants).</p>",
+    "39": "<p><em>wayyēlᵉkû lᵉmôḇôʾ Gᵉdōr</em> — &ldquo;they journeyed to the entrance of Gedor.&rdquo; The location is uncertain — possibly Gerar (reading with LXX) in Philistine territory. <em>lirʿôt migrᵉhem</em> — &ldquo;to find pasture for their flocks&rdquo; — the motive is pastoral expansion, not military aggression. The Simeonite movement is framed as a search for grazing land, not conquest.</p>",
+    "40": "<p><em>wayyimṣᵉʾû mirʿeh šāmēn wāṭôḇ</em> — &ldquo;they found rich, good pasture&rdquo; — the language echoes the description of the Promised Land (Deut 8:7-9). <em>šeqeṭet wĕšalᵉwāh</em> — &ldquo;peaceful and quiet&rdquo; — the two adjectives together describe ideal pastoral conditions. <em>miḥām</em> (Ham) as the former inhabitants signals Canaanite origin; the displacement of Ham's descendants for Israel's tribes echoes the original conquest narrative.</p>",
+    "41": "<p><em>hakkᵉtûḇîm bᵉšēmôt</em> — &ldquo;listed by name&rdquo; (same formula as v38) — specifying these are the officially registered Simeonite leaders. The campaign is dated to Hezekiah king of Judah, providing a synchronization point with the Judean royal chronology. <em>wayyakkûm</em> (they struck them down) and <em>wayyaḥᵉrîmûm</em> (they devoted them to destruction) — the <em>ḥērem</em> verb (<em>ḥāram</em> in hiphil) applies the holy-war ban to the surviving Canaanite enclaves in the Negev.</p>",
+    "42": "<p><em>ḥămiššāh meʾôt ʾîš</em> — five hundred men, a smaller raiding party for the Mount Seir campaign. The four leaders (Pelatiah, Neariah, Rephaiah, Uzziel) are named; they are sons of Ishi (cf. v20). Mount Seir was Edomite territory (Gen 32:3; 36:8), suggesting Simeonite expansion eastward as well as southward, filling the vacuum left by Assyrian disruption of established populations.</p>",
+    "43": "<p><em>wayyakkû ʾet-šᵉʾērît happālēṭāh laʿămālēq</em> — &ldquo;they struck down the remaining Amalekites who had escaped.&rdquo; Saul had failed to complete the destruction of Amalek (1 Sam 15); David had driven them back (1 Sam 27:8; 30); now Simeonite clan warriors complete what royal campaigns had not. <em>wayyēšᵉḇû šām ʿad hayyôm hazzeh</em> — &ldquo;they have lived there to this day&rdquo; — the narrator's present-time anchor for the Simeonite settlement in Edomite territory.</p>"
   },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
-  "4": {
-    "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
-    ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+  "5": {
+    "1": "<p><em>hûʾ habᵉḵôr</em> — Reuben was the firstborn (<em>bᵉḵôr</em>), yet the birthright (<em>bᵉḵōrāh</em>) was not his to keep. The indictment is precise: <em>bᵉḥalᵉlô yᵉṣûʿê ʾāḇîw</em> — &ldquo;when he defiled his father's couch/bed.&rdquo; <em>ḥillēl</em> (piel of <em>ḥālal</em>) means to profane, desecrate, or defile — the same root as <em>ḥōl</em> (common/profane) as opposed to <em>qādôš</em> (holy). The act (Gen 35:22, sleeping with Bilhah) is not described but its legal consequence is: the <em>bᵉḵōrāh</em> was transferred to Joseph's sons.</p>",
+    "2": "<p>The Chronicler articulates a distinction between two aspects of the firstborn's inheritance: <em>haśśᵉrārāh</em> — the ruler/prince role — went to Judah (<em>nagîd</em> in some translations; here the term <em>śar</em> = prince/chief), while the <em>bᵉḵōrāh</em> (birthright = double inheritance share) went to Joseph. This two-track resolution explains the parallel importance of Judah (the royal tribe) and Joseph (the most numerous tribe) in the later history: neither invalidates the other because they received different dimensions of the firstborn's rights.</p>",
+    "3": "<p>The standard list of Reuben's four sons matches Gen 46:9 and Exod 6:14 closely. <em>Ḥanôḵ, Pallûʾ, Ḥeṣrôn, wᵉKarmî</em> — the genealogical formula resumes after the theological aside of vv1-2. The <em>bᵉnê Rᵉʾûḇên bᵉḵōr Yiśrāʾēl</em> opening restates Reuben's formal position even as the narrative has explained why that position carries no privilege here.</p>",
+    "4": "<p>The chain from Joel continues through eight generations (<em>bᵉnô X</em> — his son X, seven times). The chain uses the possessive suffix construction (<em>bᵉnô</em> = his son) to mark direct father-son descent, distinguishing it from the lateral <em>bᵉnê</em> (sons of) lists. Joel's line is the one that reaches Beerah who went into exile (v6), suggesting Joel's family was the most prominent Reubenite clan in the Assyrian period.</p>",
+    "5": "<p>The chain continues: <em>bᵉnô Mîḵāh bᵉnô Rᵉʾāyāh bᵉnô Baʿal</em>. The name <em>Baʿal</em> in an Israelite genealogy is not unusual in the pre-monarchic and early monarchic period (cf. Eshbaal/Ishbosheth; Merib-baal/Mephibosheth) — <em>baʿal</em> simply meant &ldquo;lord/master&rdquo; and was applied to YHWH before the prophets specifically condemned its identification with the Canaanite deity.</p>",
+    "6": "<p><em>ûḇᵉʾērāh bᵉnô ʾăšer hᵉglāh Tilgat-pilneser melek ʾAššûr</em> — Beerah son of Baal, whom Tiglath-pileser king of Assyria deported. The name <em>Tilgat-pilneser</em> (<em>Tiglatpileser</em>) is a Hebraized form of the Akkadian <em>Tukulti-apil-Ešarra</em> (my trust is in the son of Esharra), reflecting the Assyrian throne name. The Chronicler specifies he was <em>nāśîʾ laRᵉʾûḇēnî</em> — a leader/prince of the Reubenites — explaining why his deportation is historically significant; removing the chief destabilized the whole tribe.</p>",
+    "7": "<p><em>wᵉʾeḥāyw lᵉmišpᵉḥōtāyw</em> — his kinsmen/relatives, listed by clan. The phrase <em>bᵉhityaḥaśśām lᵉtôlᵉdôtām</em> — &ldquo;enrolled by genealogy in their generations&rdquo; — specifies the administrative process: official genealogical registration (<em>hitpael of yāḥas</em>, to enroll by genealogy). <em>Yᵉʾîʾēl hārōʾš wᵉZᵉḵaryāhû</em> — Jeiel the chief (head) and Zechariah, the two senior Reubenite leaders.</p>",
+    "8": "<p><em>wûḇelaʿ ben-ʿAzaz ben-Šema ben-Yôʾēl</em> — Bela with a three-generation patronymic, connecting him to the same Joel line as Beerah (v6). He &ldquo;settled in Aroer as far as Nebo and Baal-meon&rdquo; — Aroer was on the Arnon river (Deut 2:36), Nebo was the mountain from which Moses viewed Canaan (Deut 34:1), and Baal-meon was a Moabite town (Num 32:38). Bela's clan held the core Reubenite territory east of the Jordan.</p>",
+    "9": "<p><em>wĕlimdᵉmāʿ nāšāʾ midbārāh</em> — &ldquo;he settled eastward to the edge of the desert&rdquo;, reaching as far as the Euphrates (<em>hanNāhār</em> = the River, a Hebrew idiom for the Euphrates). <em>kî miknᵉhem rāḇû bᵉʾereṣ Gilʿād</em> — the reason given is the growth of their livestock requiring expanded territory. The Chronicler frames territorial expansion as a natural consequence of blessing (population/livestock growth), not as military aggression.</p>",
+    "10": "<p><em>ûḇimê Šāʾûl</em> — in the days of Saul: a chronological anchor for the first Reubenite military engagement, the war against the Hagrites (<em>Hagrîʾîm</em>). The Hagrites were a pastoral people of the Syro-Arabian steppe, possibly connected to Hagar/Hagarites (Ps 83:6). <em>wayyipᵉlû bᵉyāḏām</em> — &ldquo;were defeated&rdquo; (lit. fell by their hands) — using the standard military defeat idiom. <em>wayyēšᵉḇû bᵉʾohalêhem</em> — they settled in their tents/encampments, occupying the Hagrite territory.</p>",
+    "11": "<p><em>ûḇᵉnê Gāḏ lᵉnegeḏ šāḵᵉnû</em> — the sons of Gad lived &ldquo;opposite them&rdquo; (lit. &ldquo;facing them&rdquo;), in Bashan. <em>Bāšān</em> was the fertile northern plateau east of the Sea of Galilee, famous for its cattle (Deut 32:14; Ps 22:12). The Gadites held the southern portion of Transjordan while the Reubenites held the central and northern zones. <em>ʿad Śalkāh</em> — to Salecah, the easternmost limit of Bashan (Deut 3:10), marking the extent of Gadite settlement.</p>",
+    "12": "<p>The Gadite leadership roster: <em>Yôʾēl hārōʾš wĕŠāpām hamišneh</em> — Joel the chief and Shapham the second-in-command. The term <em>hamišneh</em> (the second, the deputy) is an administrative title used throughout Chronicles for the second-ranking officer in a hierarchy (cf. 2 Chr 28:7 for the deputy king). This shows the Chronicler working from administrative rosters, not just genealogical records.</p>",
+    "13": "<p>Seven Gadite clan members listed — &ldquo;their relatives by family&rdquo; (<em>ûʾăḥêhem lᵉḇêt ʾăḇōtêhem</em>). The number seven is complete and is perhaps intentional as a formulaic grouping. <em>Miḵāʾēl, Mᵉšullām, Šeḇaʿ, Yôray, Yāḵān, Zîʿāʾ, wᵉʿEḇer šiḇʿāh</em> — seven in all, as the text confirms.</p>",
+    "14": "<p><em>ʾēlleh bᵉnê ʾĂḇîḥayil ben-Ḥûrî</em> — these are sons of Abihail son of Huri, then traced through six generations: Huri, Jaroah, Gilead, Michael, Jeshishai, Jahdo, and Buz. The depth of genealogy (six ancestral links) establishes the family's antiquity and prominence in the Gadite tribal structure, comparable to the deep Simeonite pedigrees in ch4.</p>",
+    "15": "<p><em>Aḥî ben-ʿAḇdîʾēl ben-Gûnî rōʾš lᵉḇêt ʾăḇōtām</em> — Ahi son of Abdiel son of Guni, head of their father's house. The three-generation patronymic for Ahi establishes him as the senior Gadite clan head. <em>rōʾš lᵉḇêt ʾăḇōtām</em> (head of the father's house) is the standard administrative term for the leading patriarch of an extended family unit (<em>bêt ʾāḇ</em>).</p>",
+    "16": "<p><em>wayyēšᵉḇû bᵉGilʿād bᵉḇāšān ûḇibnōtêhā</em> — they lived in Gilead, in Bashan and its towns (<em>bᵉnôt</em> = daughter-towns, i.e., dependent villages). <em>ûḇᵉkol-migrᵉšê Šārôn ʿal-tôṣᵉʾōtām</em> — and throughout the pasturelands of Sharon to their borders. The Sharon mentioned here is likely not the coastal Sharon plain but a Transjordanian region of the same name (cf. the plural mentions in 2 Chr 4:16 of LXX; Isa 33:9).</p>",
+    "17": "<p><em>kullām hitya_ḥasᵉsû bîmê Yôtām melek-Yᵉhûdāh ûḇîmê Yārāḇᵉʿām melek-Yiśrāʾēl</em> — all were enrolled by genealogy during the reigns of Jotham king of Judah and Jeroboam king of Israel. This provides a double synchronization: Jotham (southern) and Jeroboam II (northern), both reigning approximately 782–740 BCE. The Chronicler dates his genealogical source to this period — a time of relative prosperity when administrative census-taking was feasible.</p>",
+    "18": "<p><em>bᵉnê-Rᵉʾûḇên wᵉGāḏ waḥăṣî šēḇeṭ Mᵉnašše</em> — the three Transjordanian tribes act as a military coalition. <em>ʾanšê ḥayil</em> (men of valor/strength) — the standard Chronicler term for capable warriors. The description of military capability is detailed: they carry shield and sword, draw the bow, and are trained in war (<em>lāmᵉdê milḥāmāh</em>). The census-like enumeration (&ldquo;forty-four thousand seven hundred and sixty, ready for service&rdquo;) reflects the administrative precision of a military muster roll.</p>",
+    "19": "<p><em>wayyilaḥămû ʿim-haHagrîʾîm wᵉYᵉṭûr wᵉNāpîš wᵉNôḏāḇ</em> — the coalition fought against the Hagrites, Jetur, Naphish, and Nodab. Jetur and Naphish are sons of Ishmael (Gen 25:15; 1 Chr 1:31), identifying the enemies as Ishmaelite desert tribes. Nodab is otherwise unknown. The alliance of Ishmaelite and Hagrite (possibly descendants of Hagar) groups represents the primary pastoral-nomadic competition for the Transjordanian steppe.</p>",
+    "20": "<p><em>wayyēʿāzᵉrû ʿălêhem</em> — &ldquo;they were helped against them&rdquo; — the niphal of <em>ʿāzar</em> (to help), implying divine assistance. The reason is explicit: <em>kî ḥāʿăqû ʾel-hāʾĕlōhîm bammilḥāmāh</em> — &ldquo;for they cried out to God in the battle.&rdquo; <em>wayyēʿāter lāhem</em> — &ldquo;and he granted their plea&rdquo; — the niphal of <em>ʿātar</em> (to pray/entreat), meaning to be entreated, to respond to prayer. The causal chain is theological: prayer → divine response → victory.</p>",
+    "21": "<p>The spoil is enumerated in detail: 50,000 camels, 250,000 sheep, 2,000 donkeys, 100,000 persons. The numbers follow the convention of large-scale military victory accounts in Chronicles, where enumeration signals completeness of triumph. The comparison with similar totals in tribal conquest narratives (Num 31:32-35) shows the Chronicler drawing on a consistent literary pattern for describing total victory.</p>",
+    "22": "<p><em>kî mēʾĕlōhîm hammilḥāmāh</em> — &ldquo;for the war was from God&rdquo; — a theological attribution formula distinctive to the Chronicler. In parallel passages in Samuel-Kings, divine causality is present but often less explicit; Chronicles surfaces it as the primary explanation. <em>wayyēšᵉḇû taḥtêhem</em> — &ldquo;they settled in their territory&rdquo; — occupying the Hagrite steppe lands until the exile (<em>haggôlāh</em>), which ended the Transjordanian settlements.</p>",
+    "23": "<p><em>ûḇᵉnê ḥăṣî šēḇeṭ Mᵉnaššeh</em> — the half-tribe of Manasseh, the third Transjordanian tribe. <em>mippārān ʿad Baʿal-ḥermôn wĕŠᵉnîr wĕhar Ḥermôn</em> — from Bashan northward to Baal-hermon, Senir, and Mount Hermon. Hermon (also called Senir by the Amorites, Deut 3:9) was the northern limit of territory taken from Og of Bashan, establishing the extent of Manassite control.</p>",
+    "24": "<p>Seven Manassite clan heads listed as <em>ʾanšê ḥayil ʾanšê šēmōt</em> — &ldquo;men of valor, men of renown&rdquo; — a double honor title that echoes the description of David's mighty men (ch11). The use of the same heroic vocabulary links the Transjordanian chiefs to the idealized warrior tradition of the Davidic era.</p>",
+    "25": "<p><em>wayyimʿᵃlû ʾĕlōhê ʾăḇōtêhem</em> — &ldquo;they were unfaithful to the God of their fathers&rdquo; — the verb <em>māʿal</em> (to act unfaithfully/treacherously) is the Chronicler's key term for covenant violation that brings divine judgment (used extensively throughout Chronicles; cf. 2 Chr 26:16; 28:19, 22; 29:6; 36:14). <em>wayyiznû</em> — &ldquo;and prostituted themselves&rdquo; — <em>zānāh</em> (to commit sexual immorality) in the metaphorical sense of covenant apostasy, following Hosea's influential use of the marriage metaphor for YHWH-Israel relations (Hos 1:2; 4:12).</p>",
+    "26": "<p><em>wayyāʿer ʾĕlōhê Yiśrāʾēl ʾet-rûaḥ Pûl melek-ʾAššûr</em> — &ldquo;the God of Israel stirred up (<em>ʿûr</em> hiphil) the spirit (<em>rûaḥ</em>) of Pul king of Assyria.&rdquo; The verb <em>ʿûr</em> (to rouse, stir, incite) is used throughout Chronicles for divine initiative — YHWH rouses kings and peoples to accomplish his purposes (2 Chr 21:16; 36:22-23). Pul is Tiglath-pileser III's throne name used in Babylonian records (2 Kgs 15:19). The identification <em>hûʾ Tilgat-pilneser</em> (that is, Tiglath-pileser) is the Chronicler's own gloss explaining the two names for the same king. <em>wayyiglēm</em> — &ldquo;he exiled them&rdquo; — the Reubenites, Gadites, and the half-tribe of Manasseh were deported to Halah, Habor, Hara, and the river Gozan, the standard Assyrian exile destinations (also named in 2 Kgs 17:6 for the northern exile).</p>"
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    existing = load_comm('mkt-original', '1chronicles')
+    merge_comm(existing, CHRON1)
+    save_comm('mkt-original', '1chronicles', existing)
+    print('1 Chronicles 4–5 mkt-original written.')
 
 if __name__ == '__main__':
     main()

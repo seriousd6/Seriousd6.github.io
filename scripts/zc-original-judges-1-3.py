@@ -1,114 +1,151 @@
+#!/usr/bin/env python3
+"""mkt-original commentary — Judges 1–3 (lexical/syntactic analysis)
+Run: python3 scripts/zc-original-judges-1-3.py
+Key terms: šāʾal (oracular inquiry, 1:1); lex talionis / šillem (1:7); lōʾ-hôrîš failure refrain
+(1:19-35); malʾak YHWH theophany (2:1); šākaḥ covenant-forgetting (3:7); môšîaʿ savior
+(2:16/3:9); rûaḥ YHWH on Othniel (3:10); Ehud left-handed / paršedōn hapax (3:22).
 """
-Judges — all four layers.
-Key NT: Gideon/300 (Heb 11:32), Samson (Heb 11:32), Deborah (prophet-judge),
-        Barak (Heb 11:32), Jephthah (Heb 11:32), the cycle of apostasy/deliverance.
-"""
+import json
+from pathlib import Path
 
-import json, pathlib
+ROOT = Path(__file__).parent.parent
 
-ROOT = pathlib.Path(__file__).parent.parent
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists(): return json.loads(p.read_text())
+    return {}
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
+        if ch not in existing: existing[ch] = {}
         for v, html in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = html
+            if v not in existing[ch]: existing[ch][v] = html
 
-ECHO = {
-  "4": {
-    "4": [
-      {"type": "allusion", "target": "Luke 2:36", "note": "Deborah a prophetess was judging Israel — Deborah is one of the Bible's few female prophets and judges; Anna the prophetess (Luke 2:36) and Philip's four prophesying daughters (Acts 21:9) stand in the same tradition of women through whom YHWH speaks; the Spirit's gifts are not restricted by gender"}
-    ]
-  },
-  "6": {
-    "14": [
-      {"type": "allusion", "target": "Heb 11:32", "note": "The LORD turned to Gideon and said: Go in this might of yours and save Israel — Gideon is named in the Hall of Faith; his victory over Midian with 300 men demonstrates that divine deliverance is not by human strength or numbers but by YHWH's power, a principle Paul applies (1 Cor 1:27-29: God chose the weak things of the world to shame the strong)"}
-    ]
-  },
-  "13": {
-    "5": [
-      {"type": "allusion", "target": "Heb 11:32", "note": "The boy shall be a Nazirite to God from the womb, and he shall begin to save Israel from the hand of the Philistines — Samson is named in the Hall of Faith; his life as a Nazirite deliverer who defeats enemies through weakness (captured, blind) parallels aspects of Christ's humiliated victory; his death bringing down more enemies than his life (16:30) has been read as a type of the cross"}
-    ]
-  },
-  "21": {
-    "25": [
-      {"type": "allusion", "target": "John 1:11", "note": "In those days there was no king in Israel. Everyone did what was right in his own eyes — Judges' refrain of moral anarchy without a king is the context for understanding the messianic hope: Israel needed a king after God's own heart; he came to his own and his own people did not receive him"}
-    ]
-  }
-}
-
-ORIGINAL = {
-  "2": {
-    "16": "<p><strong>vayyaqem YHWH shoftim vayoshium miyad shoseihem</strong>: 'Then YHWH raised up judges, who saved them out of the hand of those who plundered them.' The <em>shofet</em> (judge) in Judges is not primarily a legal arbiter but a military deliverer who rescues Israel in crisis — the role combines elements of prophet (receives the divine call), priest (mediates between YHWH and Israel), and king (leads the people militarily). The Spirit of YHWH coming upon the judges (Othniel, Gideon, Jephthah, Samson) is the OT's primary example of Spirit-empowered charismatic leadership, pointing forward to the permanent anointing of the Spirit on the Davidic king (1 Sam 16:13) and ultimately on Christ at his baptism (Matt 3:16).</p>"
-  }
-}
-
-CONTEXT = {
+DATA = {
   "1": {
-    "1": "<p>Judges narrates the period between Joshua's death (ca. 1380 BCE) and the monarchy (ca. 1050 BCE) — about three centuries of cyclical apostasy, judgment, repentance, and deliverance. The theological pattern ('the Deuteronomic cycle') repeats throughout: Israel abandons YHWH → YHWH sends a foreign oppressor → Israel cries out → YHWH raises a judge-deliverer → the land rests during the judge's lifetime → the cycle repeats after his death. The cycle gets progressively worse: Gideon's story (chs. 6-8) ends with his son Abimelech setting himself up as a king through fratricide; the book ends with two terrible episodes (Micah's idolatry, the Levite's concubine) that illustrate the full collapse of the covenant order. The refrain 'In those days there was no king in Israel; everyone did what was right in his own eyes' (17:6; 18:1; 19:1; 21:25) is the book's theological verdict and its forward-pointing arrow toward the monarchy.</p>"
-  }
-}
-
-CHRIST = {
+    "1": "<p><em>wayyišʾălû bĕnê-yiśrāʾēl bĕYHWH</em> — 'the sons of Israel inquired of YHWH.' The verb <em>šāʾal</em> (ask, inquire) denotes oracular consultation — seeking YHWH's directive before military action. It is the same root as the name <em>Šāʾûl</em> (Saul). The failure to inquire at Gibeon (Josh 9:14) brought disaster; here its presence opens the book rightly. The question 'Who shall go up first?' reflects the need to know the vanguard role in a post-Joshua transition.</p>",
+    "2": "<p><em>YHWH ʾāmar yĕhûdāh yaʿăleh hinnēh nātattî ʾet-hāʾāreṣ bĕyādô</em> — 'YHWH said: Judah shall go up; behold, I have given the land into his hand.' The <em>nātattî</em> is the divine proleptic perfect — a qatal form expressing certainty of future fulfillment as though already accomplished. The verb precedes any human action; YHWH's giving renders the outcome certain before the first battle.</p>",
+    "3": "<p>Judah invites Simeon: <em>ûbāʾtā ʾittî bĕgôrālî</em> — 'come up with me into my allotted portion.' The <em>gôrāl</em> (lot, allotted territory) is the distributive term from the Joshua allotments. Simeon's territory was embedded within Judah's (Josh 19:1), making the partnership geographic as well as covenantal; their cooperation reflects mutual obligation within the distribution Joshua authorized.</p>",
+    "4": "<p><em>wayyittēn YHWH ʾet-hakkĕnaʿănî wĕʾet-happĕrizzî bĕyādām</em> — 'YHWH gave the Canaanites and the Perizzites into their hand.' The wayyiqtol narrative places YHWH as subject of the decisive giving (<em>nātan bĕyād</em> = give into the hand), the standard conquest-gift formula. Israel strikes, but YHWH gives — the syntactic subjects carry the theological weight.</p>",
+    "5": "<p><em>ʾĂdōnî-bezeq</em> — 'lord of Bezek.' The title <em>ʾădōnî</em> (my lord) is a throne-title rather than a personal name, marking the political claim being contested. The Canaanite/Perizzite leadership at Bezek is signaled by its lordship-title format, common in ANE city-state governance.</p>",
+    "6": "<p>Adoni-bezek fled (<em>wayyānos</em>) but was caught and had thumbs and big toes cut off (<em>bĕhōnôt yādāyw wĕraglāyw</em>). The verb <em>qissēṣ</em> (pi'el of <em>qāṣaṣ</em>, cut off, sever) describes a standard ANE humiliation of captured enemy commanders: removing thumbs prevented sword-grip; removing big toes prevented stable combat stance. The procedure was degradation rather than execution.</p>",
+    "7": "<p><em>šibʿîm mĕlākîm bĕhōnôt yĕdêhem wĕraglêhem mĕqussāṣîm</em> — 'seventy kings with their thumbs and big toes cut off.' Adoni-bezek's self-condemnation applies the lex talionis principle: <em>kăʾašer ʿāśîtî kēn šillem lî ʾĕlōhîm</em> — 'as I have done, so God has repaid me.' The verb <em>šillem</em> (pi'el of <em>šālam</em>, make complete, pay in full, requite) is the same root as <em>šālôm</em>; justice restores the wholeness violated by the original act. Seventy is formulaic for completeness rather than a precise count.</p>",
+    "8": "<p><em>wayyillaḥămû bĕnê yĕhûdāh bîrûšālaim wayyilkĕdû ʾōtāh</em> — 'the men of Judah fought against Jerusalem and captured it.' The verb <em>lākad</em> (capture, seize) is the standard conquest term. The apparent contradiction with v.21 (Benjamin did not expel the Jebusites) likely reflects temporary capture and burning followed by Jebusite reoccupation — a pattern persisting until David (2 Sam 5:6-9).</p>",
+    "9": "<p>After Jerusalem, Judah campaigns across three geographic zones: <em>hāhār wĕhannegeb wĕhašĕpēlāh</em> — the hill country, the Negeb, and the Shephelah. These three terms cover the full vertical and horizontal range of Judah's allotment, signaling systematic territorial consolidation organized by terrain type rather than political boundaries.</p>",
+    "10": "<p><em>wĕšēm-ḥebrôn lĕpānîm qiryat-ʾarbāʿ</em> — the former name of Hebron was Kiriath-arba. <em>Qiryat-ʾarbāʿ</em> means either 'city of Arba' (the great Anakim ancestor, Josh 14:15) or 'city of four.' The use of former names is a recurring narrative device in the conquest accounts, marking the historical transformation of cities and territories by their renaming.</p>",
+    "11": "<p>From Hebron, Judah attacks Debir (<em>dĕbîr</em>), formerly <em>qiryat-sēper</em> — 'city of the scroll/book.' The name <em>sēper</em> (scroll, document) suggests a Bronze Age scribal or administrative center, consistent with ANE evidence for scribal cities. The transition from book-city to judge's conquest marks the reorientation of literacy and administration under the covenant people.</p>",
+    "12": "<p>Caleb's offer: <em>ʾašer-yakkeh ʾet-qiryat-sēper ûlĕkādāh wĕnātattî lô ʾet-ʿaksāh bittî lĕʾiššāh</em> — 'whoever strikes and captures Kiriath-sepher, I will give him Achsah my daughter as wife.' The marriage-prize formula for military valor recurs in 1 Sam 18:17 (Saul's offer to David). The narrative's interest is not Caleb's cultural convention but Achsah's subsequent agency in v.15.</p>",
+    "13": "<p>Othniel son of Kenaz, Caleb's younger brother (<em>ʾăḥî kālēb haqqāṭōn</em>), captures the city. <em>Qāṭōn</em> (younger/smaller) echoes the pattern of the younger brother succeeding over older expectations (Jacob, Joseph, David). Othniel's Kenizzite descent makes him a non-Israelite ethnic incorporated into the covenant community — the same outsider-integration as Caleb himself (Josh 14:6).</p>",
+    "14": "<p><em>wattĕsîtēhû liš'ôl mēʾēt-ʾābîhā śādeh</em> — 'she urged him to ask her father for a field.' The verb <em>sûṯ</em> (hiph, urge, incite) is used elsewhere for inciting to idolatry (Deut 13:7), but here positively for Achsah's initiative. <em>wattispōaḥ mēʿal haḥămôr</em> — 'she dismounted from her donkey' — the dismounting gesture formally signals a petition is coming, setting up the verbal request.</p>",
+    "15": "<p>Achsah's request: <em>hābāh-lî bĕrākāh kî ʾereṣ hannegeb nĕtattnî wĕnātattāh lî gullōt mayim</em> — 'give me a blessing; since you have put me in the dry land, give me springs of water.' The word <em>bĕrākāh</em> means both blessing and gift/present — her request is itself a blessing-claim. The <em>gullōt mayim</em> (springs, literally bowls/basins of water) she requests are the <em>ʿelyônôt</em> and <em>taḥtiyyônôt</em> (upper and lower springs). Caleb gives both; the narrative rewards precise and bold petitioning.</p>",
+    "16": "<p>The Kenites, descendants of Moses's father-in-law (<em>ḥōtēn mōšeh</em>), settle with Judah in the Negev of Arad. The <em>ʾîr hattĕmārîm</em> (city of palms) is the Jericho area. <em>Ḥōtēn</em> (father-in-law) marks the Mosaic family connection; the Kenite alliance (cf. Num 10:29-32) represents the ongoing incorporation of non-Israelite groups into the covenant community through loyalty relationships.</p>",
+    "17": "<p><em>wayyaḥărîmû ʾōtāh</em> — they devoted Zephath to <em>ḥērem</em> (destruction). The hiph'il of <em>ḥāram</em> marks sacred exclusion — the devoted city becomes YHWH's exclusively. <em>wayyiqrāʾ ʾet-šēm-hāʿîr ḥormāh</em> — it was renamed Hormah from the same root (<em>ḥerem</em>), making the name a permanent lexical memorial of the devotion to destruction: the city's identity becomes its fate.</p>",
+    "18": "<p>Judah captures Gaza, Ashkelon, and Ekron — three of the five Philistine city-states. The LXX reads 'did not capture' rather than 'captured,' and the conflict with Josh 13:3 and Judg 3:3 (Philistine lords still active) supports the LXX reading. The coastal plain remained effectively Philistine territory throughout the judges period despite momentary successes.</p>",
+    "19": "<p><em>wayhî YHWH ʾet-yĕhûdāh wayyōreš ʾet-hāhār kî lōʾ lĕhôrîš ʾet-yōšĕbê hāʿēmeq kî-rekeb barzel lāhem</em> — 'YHWH was with Judah; he took the hill country, but could not drive out the valley inhabitants for they had iron chariots.' The <em>lōʾ lĕhôrîš</em> failure formula appears here first; it will recur through v.35. The <em>rekeb barzel</em> (iron chariots) represent Late Bronze/Iron I military technology giving tactical superiority in open terrain — the theological tension (YHWH with them, yet failure) is the honest reckoning of incomplete obedience meeting incomplete faith.</p>",
+    "20": "<p>Caleb drives out the three sons of Anak from Hebron (<em>wayyōreš miššām ʾet-šĕlōšâ bĕnê hāʿănāq</em>). The Anakim had terrorized the wilderness spies (Num 13:33); Caleb's victory completes what Moses had specifically promised him (Josh 14:12). The phrase <em>kăʾašer dibber mōšeh</em> (as Moses had said) marks this as a fulfilled-promise event, contrasting with the partial failures surrounding it.</p>",
+    "21": "<p><em>wĕʾet-hayyĕbûsî yôšēb yĕrûšālaim lōʾ hôrîšû bĕnê binyāmîn</em> — 'Benjamin did not drive out the Jebusites from Jerusalem.' This is the first tribal failure report. The Jebusite persistence explains why Jerusalem remained a neutral city between north and south until David's capture (2 Sam 5:6-9). The <em>lōʾ hôrîš</em> (did not drive out) formula frames the failure as disobedience rather than military incapacity.</p>",
+    "22": "<p><em>wayyaʿălû bêt-yôsēp gam-hēm bêt-ʾēl waYHWH ʿimmām</em> — 'the house of Joseph went up, and YHWH was with them.' The divine-presence formula <em>YHWH ʿimmām</em> is the decisive variable: its presence here signals success before any battle description. Its implicit absence from the tribal failure reports explains those failures. Throughout the DtrH, <em>YHWH ʿimmô/ʿimmām</em> is the single most important predictor of outcome.</p>",
+    "23": "<p>The house of Joseph sends scouts to Bethel, formerly called <em>Lûz</em>. The name change from Luz to Bethel (house of God) was made by Jacob after his vision there (Gen 28:19). The narrative's use of both names (former and current) preserves the theological memory — the place of divine encounter is now a military objective.</p>",
+    "24": "<p>The scouts offer the man <em>ḥesed</em> in exchange for information: <em>wĕʿāśînû ʿimmĕkā ḥāsed</em> — 'we will deal with you in covenant loyalty.' The word <em>ḥesed</em> (covenant fidelity, loyal love) here functions as a pledge of protection — the same covenant-loyalty exchange as with Rahab and the Jericho spies (Josh 2:12-14). The Rahab parallel is deliberate: another city's opening provided by an insider who receives <em>ḥesed</em>.</p>",
+    "25": "<p>The man showed them the entrance; they struck the city (<em>wayyakkû ʾet-hāʿîr lĕpî-ḥāreb</em>) but released (<em>šillaḥ</em>) the man and his family. The verb <em>šillaḥ</em> (send away, release, set free) — used for freeing prisoners and slaves — fulfills the <em>ḥesed</em> pledge completely. The man is not merely spared but released with freedom, exactly as promised.</p>",
+    "26": "<p>The man went to the land of the Hittites and built a city he named <em>Lûz</em> — preserving the old name in new territory. The founding of a city in Hittite territory named Luz marks the geographic exile of Canaanite culture: driven from Canaan but persistent in the north. The verse records cultural survival-in-exile as historical observation, not condemnation.</p>",
+    "27": "<p>The Manasseh failure list: <em>wĕlōʾ-hôrîš mĕnaššeh ʾet-bêt-šĕʾān</em> — 'Manasseh did not drive out Beth-shean.' The formula <em>lōʾ hôrîš</em> + city list structures the remainder of ch.1. Beth-shean controlled the Jordan Valley pass; Taanach and Megiddo controlled the Jezreel Valley. These strategic chokepoints remaining in Canaanite hands fragmented Israel's territory into disconnected highlands.</p>",
+    "28": "<p><em>wayhî kî-ḥāzaq yiśrāʾēl wayyāśem ʾet-hakkĕnaʿănî lāmas wĕhôrêš lōʾ hôrîšô</em> — 'when Israel grew strong, they put the Canaanites to forced labor, but did not drive them out.' The verb <em>māras</em> (forced labor, corvée) reflects economic exploitation of those not expelled. Strength was used for commercial benefit rather than covenant obedience — tolerating the prohibited because it was profitable.</p>",
+    "29": "<p><em>wĕʾeprayim lōʾ hôrîš ʾet-hakkĕnaʿănî hayyôšēb bĕgāzer</em> — Ephraim did not drive out the Canaanites at Gezer. Gezer remained a contested city until the Solomonic period, when Pharaoh took it and gave it as dowry (1 Kgs 9:16). The city's position at the coastal plain's edge meant Ephraim's territory had a permanent enclave it could not control.</p>",
+    "30": "<p>Zebulun did not drive out the inhabitants of Kitron or Nahalol — <em>wayyēšeb hakkĕnaʿănî bĕqirbô wayhî lāmas</em> — 'the Canaanites lived in his midst and became forced laborers.' The shift from expulsion-language to coexistence-language marks the accommodation: pragmatic exploitation instead of covenant obedience. The repeated formula documents systematic tribal compromise at the policy level.</p>",
+    "31": "<p>Asher's failure list is the longest — six cities including Acco (Mediterranean port), Sidon (major Phoenician city-state), and four others. The coastal territory of Asher was economically rich but militarily dominated by Phoenician cities. The length of the list signals Asher's deepest accommodation with coastal Canaanite culture of any tribe.</p>",
+    "32": "<p><em>wayyēšeb hāʾašērî bĕqereb hakkĕnaʿănî</em> — 'the Asherites lived <em>among</em> the Canaanites.' The preposition shifts from earlier: other tribes had Canaanites living <em>in their midst</em>; for Asher, Israel lives <em>among</em> the Canaanites. The balance of cultural power has inverted — Asher is the minority living within the Canaanite world, not the majority tolerating pockets of non-expulsion.</p>",
+    "33": "<p>Naphtali lived among the Canaanites at Beth-shemesh (<em>bêt-šemeš</em> = house of the sun, a solar cult site) and Beth-anath (<em>bêt-ʿănāt</em> = house of Anat, the Canaanite war goddess). The names of the cities Naphtali failed to expel expose the religious stakes: coexistence with solar and war-goddess cult centers is the seedbed of the syncretism Judges will diagnose throughout the period.</p>",
+    "34": "<p><em>wayyilḥăṣû hāʾĕmōrî ʾet-bĕnê dān hāhārāh</em> — 'the Amorites pressed the people of Dan back into the hill country.' Dan is unique: the only tribe actively driven back rather than merely failing to drive out. The Amorites' offensive confinement of Dan to the hills explains the Danite migration to the far north in ch.18 — their original allotment became militarily untenable.</p>",
+    "35": "<p>The Amorites persisted in Mount Heres and nearby cities until <em>wattikbad yad bêt-yôsēp</em> — 'the hand of the house of Joseph prevailed.' The idiom <em>kābad yād</em> (heavy/strong hand) signals dominant power — the same root as <em>kābōd</em> (glory/weight). Even Joseph's success produces subjugation (<em>lāmas</em>) rather than expulsion — the strongest tribe still settles for economic exploitation instead of the covenant command.</p>",
+    "36": "<p><em>ûgĕbûl hāʾĕmōrî mimmāʿăleh ʿaqrabbîm minhassela wāmāʿlāh</em> — 'the border of the Amorites ran from the ascent of Akrabbim.' The Scorpion Pass (<em>maʿăleh ʿaqrabbîm</em>) marks the southern boundary of persistent Amorite territory (cf. Num 34:4; Josh 15:3). The closing geographic note confirms that the conquest ended with defined Amorite enclaves intact — the map was not fully redrawn.</p>"
+  },
   "2": {
-    "16": "<p>A type: 'Then the LORD raised up judges, who saved them out of the hand of those who plundered them.' Each judge is a partial, flawed type of the divine deliverer: they are raised up by YHWH, empowered by his Spirit, deliver Israel from oppression, provide rest during their tenure, and then die — leaving Israel without a permanent deliverer. The entire judge-cycle is the OT's lived demonstration that the people need a permanent deliverer, a judge who will not die, a king who will reign forever. Christ fulfills all three mediatorial roles of the judges (prophet, priest, king) permanently and perfectly: he is raised up by the Father, anointed without measure by the Spirit, delivers his people from the oppressor (sin and death), and reigns forever — so that the Deuteronomic cycle is permanently broken in him.</p>"
+    "1": "<p><em>wayyaʿal malʾak YHWH mĕhaggīlgāl ʾel-habbōkîm</em> — 'the angel of YHWH went up from Gilgal to Bochim.' The <em>malʾak YHWH</em> speaks in YHWH's first person in the following verses ('I brought you up,' v.1; 'I will not drive them out,' v.3) — the same identification pattern seen in Gen 16:7-13; Exod 3:2-6; Josh 5:13-15. Gilgal was the conquest's covenant-renewal site; the move to Bochim (weepers) signals a new covenantal moment of rebuke.</p>",
+    "2": "<p><em>wĕlōʾ tikreṯû bĕrît lĕyôšĕbê hāʾāreṣ... wĕlōʾ šĕmaʿtem bĕqôlî</em> — 'you shall not make covenant... but you have not obeyed my voice.' The covenant-making prohibition (<em>lōʾ tikreṯû bĕrît</em>) was central Sinai instruction (Exod 34:12-16; Deut 7:2). The failure formula <em>lōʾ šĕmaʿtem bĕqôlî</em> (you have not obeyed/heard my voice) is Deuteronomy's covenant-obedience formula (Deut 13:4; 28:1-2). The diagnosis: total covenantal failure in its most critical requirement.</p>",
+    "3": "<p><em>ʾāmartî lōʾ-ʾăgārēš ʾōtām mippĕnêkem wĕhāyû lākem lĕṣiddîm</em> — 'I will not drive them out... they shall be thorns in your sides.' <em>Ṣiddîm</em> means literally 'sides, flanks' — persistent lateral pressure rather than frontal assault. The divine reversal is stark: YHWH who promised to <em>gāraš</em> (expel) the nations now withdraws that commitment. Covenant disobedience inverts covenant promises; the expulsion-mandate becomes the abandonment-mandate.</p>",
+    "4": "<p><em>wayyiśśĕʾû hāʿām ʾet-qôlām wayyibkû</em> — 'the people lifted up their voices and wept.' The verb <em>bākāh</em> (weep, mourn) signals genuine grief at the covenant indictment. The place-name <em>Bochim</em> (<em>bōkîm</em>) = 'weepers' — named for the response, not the geography. Weeping without structural repentance is the Judges pattern; the tears are real but insufficient to break the cycle.</p>",
+    "5": "<p><em>wayyizbaḥû šām laYHWH</em> — 'they sacrificed there to YHWH.' Sacrifice at Bochim marks a covenant-response gesture after the angelic rebuke. The act is genuine but the narrative notes no reform, no removal of foreign gods, no covenant renewal structure — anticipating that the cycle will resume immediately.</p>",
+    "6": "<p>The narrative flashes back to Joshua's dismissal (repeating Josh 24:28 verbatim: <em>wayyĕšallaḥ yĕhôšûaʿ ʾet-hāʿām</em>). The flashback brackets the Joshua transition: the generation that saw the great works (<em>kol-hammaʿăśeh haggādôl</em>) is about to pass from the scene. The DtrH inserts the flashback here to calibrate the reader's orientation before the cycle's structural description begins.</p>",
+    "7": "<p><em>wayyaʿăbdû hāʿām ʾet-YHWH kol yĕmê yĕhôšûaʿ</em> — 'the people served YHWH all the days of Joshua.' The verb <em>ʿābaḏ</em> (serve, worship) carries both religious and vassal-service connotations. Faithfulness is anchored to living witnesses who saw YHWH's great works (<em>hammāʿăśeh haggādôl</em>). The structural weakness is exposed: covenant loyalty is person-dependent, not character-deep.</p>",
+    "8": "<p><em>wayyāmot yĕhôšûaʿ bin-nûn ʿebed YHWH</em> — Joshua died as <em>ʿebed YHWH</em> (servant of the LORD), the title formally conferred in his death notice (Josh 24:29). The <em>ʿebed YHWH</em> title marks the completion of a servant's mission; Joshua departs as Moses departed — having delivered what he was commissioned to deliver. What follows is explicitly post-servant Israel.</p>",
+    "9": "<p>Joshua buried at <em>timnāt-ḥeres</em> — a slight variant from Josh 24:30's <em>timnāt-seraḥ</em> (the consonants <em>ḥ-r-s</em> / <em>s-r-ḥ</em> reversed). <em>Ḥeres</em> can mean 'sun' — Timnath-heres as 'portion of the sun' may be a polemical scribal substitution, as the book is darkly ironic about solar imagery throughout.</p>",
+    "10": "<p><em>wĕgam kol-haddôr hahûʾ neʾĕspû ʾel-ʾăbôtāyw wayyāqom dôr ʾaḥēr ʾašer lōʾ-yādĕʿû ʾet-YHWH</em> — 'there arose another generation who did not <em>know</em> the LORD.' The verb <em>yādaʿ</em> in covenant context means relational experiential knowledge (the same <em>yādaʿ</em> as in marital intimacy and prophetic commissioning), not mere intellectual familiarity. Not-knowing YHWH is the theological formulation of covenant abandonment (Hos 4:1,6; Jer 9:3).</p>",
+    "11": "<p><em>wayyaʿăśû bĕnê-yiśrāʾēl ʾet-hāraʿ bĕʿênê YHWH wayyaʿabdû ʾet-habĕʿālîm</em> — 'the evil in YHWH's eyes.' The phrase <em>hāraʿ bĕʿênê YHWH</em> establishes divine perspective as the evaluative norm — all moral assessment in the DtrH is measured against this standard. <em>Habĕʿālîm</em> (the Baals, plural of <em>baʿal</em>, lord/master) are the Canaanite storm-fertility deities whose agricultural domain competed with YHWH's claim over rain and crops (cf. 1 Kgs 18).</p>",
+    "12": "<p><em>wayyaʿazĕbû ʾet-YHWH ʾĕlōhê ʾăbôtām</em> — 'they abandoned the LORD, the God of their fathers.' The verb <em>ʿāzab</em> (forsake, abandon) is the covenant-rupture term — the same word for leaving father and mother (Gen 2:24), applied to the ultimate relational breach. <em>wayyišḥăwû lāhem</em> (bowed down to them) — <em>šāḥāh</em> is the covenant-worship word; prostration that belongs to YHWH alone (Exod 20:5) is directed to the Baals.</p>",
+    "13": "<p><em>wayyaʿazĕbû ʾet-YHWH wayyaʿabdû labbāʿal wĕlāʿaštārôt</em> — Baal and the Ashtoreths. <em>Baʿal</em> (storm/rain deity) and <em>ʿĂštārôt</em> (plural of Astarte/Ishtar, fertility and war goddess) are the paired male-female divine couple of the Canaanite pantheon. Their coupling here establishes the syncretic alternative that will recur as the book's recurring temptation.</p>",
+    "14": "<p><em>wayyiḥar-ʾap YHWH bĕyiśrāʾēl wayyittĕnēm bĕyad-šōsîm</em> — 'the anger of YHWH burned and he gave them into the hand of plunderers.' <em>Ḥārāh ʾap</em> (the nostrils burned) is the idiom for intense anger. <em>Nātan bĕyad</em> (gave into the hand) is the conquest-gift formula reversed: what YHWH granted to Israel now goes to its enemies. The covenant curses of Deut 28:25 are being activated by the operative mechanism of covenant violation.</p>",
+    "15": "<p><em>kaʾašer dibber YHWH wĕkaʾašer nišbaʿ YHWH lāhem</em> — 'as YHWH had warned and as YHWH had sworn to them.' The reversal is explicitly grounded in prior divine speech. The sequence — YHWH speaks warning → Israel disobeys → warning comes to pass — confirms that covenant curses have the same word-event reliability as covenant blessings. Nothing falls outside the announced structure of the covenant.</p>",
+    "16": "<p><em>wayyāqem YHWH šōpĕṭîm wayyôšîʿûm miyyad šōsêhem</em> — 'YHWH raised up judges, who saved them.' The verb <em>qûm</em> (hiph, raise up, appoint) marks divine initiative. The <em>šōpĕṭîm</em> (judges) are also called <em>môšîʿîm</em> (deliverers/saviors) — from <em>yāšaʿ</em>, the root of <em>yĕhôšûaʿ</em> (Joshua) and <em>Yēšûaʿ</em> (Jesus). The judges function as YHWH-appointed <em>môšîʿîm</em>, prefiguring the ultimate deliverer whose name shares this etymology.</p>",
+    "17": "<p><em>wĕgam ʾel-šōpĕṭêhem lōʾ šāmāʿû kî zānû ʾaḥărê ʾĕlōhîm ʾăḥērîm</em> — 'they did not listen... for they committed spiritual adultery (<em>zānāh</em>) after other gods.' The verb <em>zānāh</em> (prostitute oneself, commit harlotry) is the covenant-infidelity metaphor: Israel's relationship with YHWH is a marriage covenant (Hos 2:2-13; Jer 3:1-5; Ezek 16), and Baal-worship is adultery against the divine husband. The metaphor is not incidental but structurally embedded in covenant theology.</p>",
+    "18": "<p><em>ûkî-hēqîm YHWH lāhem šōpĕṭîm wĕhāyāh YHWH ʿim-haššōpēṭ</em> — 'YHWH was with the judge.' The divine-presence formula <em>YHWH ʿimmô</em> is the decisive qualifier in every judge narrative. <em>wĕniḥam YHWH minnāqāt hōšĕqêhem</em> — YHWH relented (<em>nāḥam</em>) because of their groaning. <em>Nāḥam</em> when used of YHWH describes his covenantal responsiveness — not arbitrary changeableness but the covenant structure of cry → compassion → delivery.</p>",
+    "19": "<p><em>wĕhāyāh bĕmôt haššōpēṭ yāšûbû wĕhišḥîtû mēʾăbôtām</em> — 'when the judge died, they turned back and were more corrupt than their fathers.' <em>Hišḥîtû</em> (hiph of <em>šāḥat</em>, act corruptly) is the verb used of the Flood generation (Gen 6:12). The comparative <em>mēʾăbôtām</em> (more than their fathers) marks progressive deterioration across generations — the Judges spiral descends toward the same level of pre-Flood wickedness.</p>",
+    "20": "<p><em>yaʿan ʾašer ʿābĕrû hāggôy hazzeh ʾet-bĕrîtî</em> — 'because this nation has transgressed my covenant.' The idiom <em>ʿābar bĕrît</em> (cross/transgress the covenant) uses the spatial verb <em>ʿābar</em> (cross over, pass through) for covenant violation — the covenant is a boundary not to be crossed. <em>ʾašer ṣiwwîtî ʾet-ʾăbôtām</em> establishes the multigenerational binding nature of the Sinai covenant: it obligates every subsequent generation.</p>",
+    "21": "<p><em>lōʾ ʾôsîp lĕhôrîš ʾîš mippĕnêhem</em> — 'I will no longer drive out anyone before them.' The withdrawal of the expulsion mandate (<em>hôrîš</em>) is the covenantal consequence of failure to fulfill that mandate. The nations' continued presence, originally a grace-period for gradual conquest, becomes the permanent instrument of ongoing discipline and testing.</p>",
+    "22": "<p><em>lĕmaʿan nassôt bām ʾet-yiśrāʾēl hăyišmĕrû ʾet-derek YHWH</em> — 'to test Israel by them, whether they would keep the way of YHWH.' The verb <em>nāsāh</em> (test, prove) is the same as at Moriah (Gen 22:1) and at the wilderness waters (Exod 20:20). Testing is pedagogical rather than punitive: it reveals what is already true about the heart. The remaining nations function as an ongoing examination of covenant loyalty under pressure.</p>",
+    "23": "<p><em>lōʾ mĕhēr lĕhôrîšām</em> — 'not driving them out quickly.' The adverb <em>mĕhēr</em> (quickly, hastily) is significant: the delay was intentional. YHWH could have expelled them immediately but chose graduated testing. The providential persistence of the nations is the framework for all of Judges' military situations — none fall outside YHWH's intentional governance of the period.</p>"
+  },
+  "3": {
+    "1": "<p><em>wĕʾēlleh haggôyim ʾašer hinnîaḥ YHWH lĕnassôt bām ʾet-yiśrāʾēl</em> — 'these are the nations YHWH left to test Israel.' The verb <em>hinnîaḥ</em> (hiph of <em>nûaḥ</em>, to leave, allow to remain) signals intentional preservation — these nations are not accidental leftovers but deliberately maintained instruments of divine testing and discipline.</p>",
+    "2": "<p><em>raq lĕmaʿan daʿat dōrôt bĕnê-yiśrāʾēl lĕlammĕdām milḥāmāh</em> — 'only so that generations of Israel might know war and be taught it.' Two purposes: covenant testing (v.4) and military education for generations with no Exodus memory. The pedagogical framing acknowledges divine sovereignty over historical hardship — no Israelite suffering is unintentional in this period.</p>",
+    "3": "<p>The enemy roster: the five Philistine lords (<em>sĕrānê pĕlištîm</em>), Canaanites, Sidonians, and Hivites. <em>Sārēn</em> is the specific title of the Philistine pentapolis rulers — likely an Indo-European loanword reflecting the Philistines' Aegean origins. The geographic range from the Philistine coast to the Lebanon mountains maps the entire unconquered perimeter surrounding Israel's highland core.</p>",
+    "4": "<p><em>wayhî lĕnassôt bām ʾet-yiśrāʾēl lādaʿat hăyišmĕʿû ʾet-miṣwôt YHWH</em> — 'to test Israel, to find out whether they would obey the commandments.' The infinitive <em>lādaʿat</em> (to know, to find out) marks experiential verification — the test produces knowledge that theory cannot. The object of the test: whether <em>šāmaʿ</em> (obey, hear-and-heed) would operate under the specific pressure of living among unconquered peoples.</p>",
+    "5": "<p><em>ûbĕnê yiśrāʾēl yāšĕbû bĕqereb hakkĕnaʿănî</em> — 'the people of Israel lived <em>in the midst of</em> the Canaanites.' The preposition <em>bĕqereb</em> (in the midst, within) signals the conquest's reversal: instead of Canaanites being expelled from Israel's midst, Israel inhabits the Canaanite world. The seven-nation list catalogs the full breadth of the cultural-religious environment Israel chose to inhabit.</p>",
+    "6": "<p><em>wayyiqqĕḥû ʾet-bĕnôtêhem lāhem lĕnāšîm... wayyaʿabdû ʾet-ʾĕlōhêhem</em> — 'they took their daughters... gave their daughters... and served their gods.' The intermarriage-idolatry chain is the exact sequence Deuteronomy 7:3-4 warned against: 'do not intermarry... for they will turn your sons away to serve other gods.' The verb chain (took, gave, served) follows Deuteronomy's predicted causality exactly.</p>",
+    "7": "<p><em>wayyiškĕḥû ʾet-YHWH ʾĕlōhêhem</em> — 'they forgot the LORD their God.' The verb <em>šākaḥ</em> (forget) in Deuteronomy describes active neglect, not innocent forgetting: Deut 8:11-19 identifies forgetting YHWH as the covenant danger of prosperity; Deut 8:19 makes it the condition for perishing. <em>Hāʾăšērôt</em> are the sacred wooden poles associated with Asherah, Canaanite consort of El — the female divine pillar planted in the ground as a worship object.</p>",
+    "8": "<p><em>wayyiḥar-ʾap YHWH bĕyiśrāʾēl wayyimkĕrēm bĕyad kûšan-rišʿātayim</em> — 'YHWH sold them into the hand of Cushan-rishathaim.' The verb <em>mākar</em> (sell) is stark: Israel becomes chattel, transferred in a transaction. The king's name <em>kûšan rišʿātayim</em> ('Cushan of double wickedness') is almost certainly a Hebrew satirical gloss on his actual name — OT authors regularly distort enemies' names. <em>Rišʿātayim</em> (dual of <em>rišʿāh</em>) = doubly wicked, making the title a theological verdict on the oppressor.</p>",
+    "9": "<p><em>wayyizʿăqû bĕnê-yiśrāʾēl ʾel-YHWH wayyāqem YHWH môšîaʿ lĕbĕnê-yiśrāʾēl</em> — 'the Israelites cried out to YHWH, and YHWH raised up a deliverer.' The verb <em>zāʿaq</em> (cry out, cry for help) is the vocabulary of oppressed people in extremity (Exod 3:7; Ps 34:17). The covenantal hinge: cry → raised deliverer. <em>Môšîaʿ</em> (participle of <em>yāšaʿ</em>, one who saves) is the Othniel narrative's central term and the paradigm that every subsequent judge repeats with variations.</p>",
+    "10": "<p><em>wattĕhî ʿālāyw rûaḥ YHWH wayyišpōṭ ʾet-yiśrāʾēl wayyēṣēʾ lammilḥāmāh</em> — 'the Spirit of YHWH came upon him, he judged Israel, and he went out to war.' The <em>rûaḥ YHWH</em> (Spirit/wind of YHWH) is the empowering presence that equips the judge. The Spirit precedes and motivates the action; the sequence — Spirit comes → judgment → warfare — establishes the theological pattern for all subsequent judge narratives. The judges' effectiveness is divine endowment, not personal charisma.</p>",
+    "11": "<p><em>wayyišqōṭ hāʾāreṣ ʾarbaʿîm šānāh wayyāmot ʿotnîʾēl ben-qĕnaz</em> — 'the land had rest forty years; then Othniel died.' <em>Šāqaṭ</em> (have rest, be quiet) is the Judges peace-formula after each deliverer's work. The forty-year period is the formulaic generation. Othniel's narrative is the most schematic — no personal flaws, no complications — establishing the ideal-type against which all subsequent judges are implicitly measured.</p>",
+    "12": "<p><em>wayyōsipû bĕnê yiśrāʾēl laʿăśôt hāraʿ bĕʿênê YHWH</em> — 'they again did evil.' <em>Yāsap</em> (again, additionally) signals iteration: the cycle restarts. <em>wayyĕḥazzēq YHWH ʾet-ʿeglôn... ʿal-yiśrāʾēl</em> — 'YHWH strengthened Eglon against Israel.' The verb <em>ḥizzēq</em> (strengthen) — YHWH actively empowers the oppressor as instrument of discipline. The enemy's strength is not Israel's military failure but YHWH's sovereign appointment.</p>",
+    "13": "<p>Eglon gathered Ammonites and Amalekites, defeating Israel and taking <em>ʾîr hattĕmārîm</em> (city of palms = Jericho). The symbolic weight: the first city of the conquest — taken by miracle — recaptured by Moabite coalition. The Jericho reversal measures the depth of Israel's regression from the Joshua ideal.</p>",
+    "14": "<p><em>wayyaʿabdû bĕnê-yiśrāʾēl ʾet-ʿeglôn melek-môʾāb šĕmōneh ʿeśrēh šānāh</em> — eighteen years of <em>ʿābad</em> (serve/worship) directed to the Moabite king. The covenant-service word that should go only to YHWH is directed to the enemy; Israel's refusal to serve YHWH produces servitude to the oppressor. The choice of whom to serve is never neutral.</p>",
+    "15": "<p><em>wayyāqem YHWH lāhem môšîaʿ ʾet-ʾēhûd ben-gērāʾ ben-hayĕmînî ʾîš ʾiṭṭēr yad-yĕmînô</em> — Ehud described as 'bound/restricted in his right hand' (<em>ʾiṭṭēr yad-yĕmînô</em>) = left-handed. The irony: a Benjaminite (<em>ben-yāmîn</em> = son of the right hand) who uses his left hand. His 'disability' — overlooked by the guards checking the standard sword-side — is the key to the assassination. YHWH consistently works through the unexpected and overlooked.</p>",
+    "16": "<p><em>wayyaʿaś lô ʾēhûd ḥereb ûlāh šĕnê pîyôt gōmed ʾārkāh</em> — a double-edged sword a <em>gōmed</em> (hapax legomenon, estimated 30-40 cm) in length. <em>Šĕnê pîyôt</em> (two edges, literally two mouths) — <em>peh</em> (mouth) used for a blade's edge is a common Semitic metaphor (cf. Heb 4:12 for a sword with two edges). The weapon's design — short, double-edged, concealable on the unexpected thigh — reflects deliberate planning.</p>",
+    "17": "<p><em>wayyaqdēb ʾet-hamminḥāh lĕʿeglôn melek-môʾāb wĕʿeglôn ʾîš bārîʾ mĕʾōd</em> — 'he presented the tribute to Eglon... Eglon was a very fat man.' The name <em>ʿeglôn</em> (round one, calf) from <em>ʿēgel</em> (calf) — a narrator's irony planted in the first description. <em>Bārîʾ</em> (fat, stout) is clinically observed; the same word for Pharaoh's fat cows (Gen 41:2). The detail functions as a plot mechanism: Eglon's obesity allows the blade to disappear into the wound (v.22).</p>",
+    "18": "<p>After presenting the tribute Ehud sent away the bearers (<em>wayyĕšallaḥ ʾet-hāʿām nōśĕʾê hamminḥāh</em>). The deliberate pacing creates narrative suspense: preparation (sword made, v.16) → presentation (tribute offered, v.17) → entourage dismissed (v.18) → return alone (v.19). The narrator releases information at exactly the rate of the protagonist's plan.</p>",
+    "19": "<p><em>wĕhûʾ šāb min-happĕsilîm ʾašer ʾet-haggilgāl</em> — Ehud turned back from the <em>pĕsilîm</em> (carved idols/standing stones) at Gilgal. The idolatrous standing stones at the conquest's covenant-renewal site miniaturize the book's syncretism theme. <em>dĕbar-sēter lî ʾēlêkā</em> — 'I have a secret word for you' — <em>sēter</em> (hidden, secret) echoes prophetic reception language; Ehud uses <em>dĕbar ʾĕlōhîm</em> (word of God) in v.20 to gain private audience.</p>",
+    "20": "<p><em>wĕhûʾ yôšēb bǎʿăliyyat hammĕqērāh ʾašer lô lĕbaddô</em> — Eglon alone in his cool roof chamber. The privative <em>lĕbaddô</em> (alone, by himself) is the assassin's gift. <em>dĕbar ʾĕlōhîm lî ʾēlêkā</em> — 'I have a word of God for you.' Ehud appropriates the prophetic speech-formula (<em>dĕbar ʾĕlōhîm</em>) for lethal purpose; Eglon's respectful rising to receive the divine word places him in the posture the sword requires.</p>",
+    "21": "<p><em>wayyišlaḥ ʾēhûd ʾet-yad haśśĕmōʾl wayyiqqaḥ ʾet-haḥereb mēʿal yĕrek yĕmînô wayyitqāʿehā bĕbiṭnô</em> — 'Ehud reached with his left hand, took the sword from his right thigh, and thrust it into his belly.' The left hand is highlighted throughout as the operative agent. Guards searched the left thigh (normal sword-side); the right thigh carried no weapon expectation. The verb <em>tāqaʿ</em> (thrust, drive sharply) is onomatopoeic — a decisive, single motion.</p>",
+    "22": "<p><em>wayyāṣēʾ happaršedōnāh</em> — Ehud went out via <em>happaršedōn</em>. The word <em>paršedōn</em> is a hapax legomenon of contested meaning: 'the anteroom/vestibule,' or (following some interpreters) a term for the excretion caused by the wound. The double-hapax sequence (v.22-23) in a high-action scene may preserve archaic architectural vocabulary or reflect deliberate narrative distancing from the deed's gruesomeness through rare/opaque language.</p>",
+    "23": "<p><em>wayyisgor daltôt hāʿăliyyāh baʿădô ûnāʿal</em> — Ehud shut the roof-chamber doors behind him and locked them. The locked door is the mechanism that creates the servants' confusion and delay (v.24-25), enabling Ehud's escape. The narrative's precise attention to the door-locking detail anticipates its payoff in v.24.</p>",
+    "24": "<p><em>ʾak mēsîk hûʾ ʾet-raglāyw baḥădar hammĕqērāh</em> — 'surely he is relieving himself' (lit. 'covering his feet,' a euphemism for defecation). The servants' misreading of a locked door as their king on the toilet creates the time-delay that saves Ehud. The comic irony — Moabite servants imagining their king on the toilet while he lies dead — de-glamorizes royal pretension through scatalogical humor.</p>",
+    "25": "<p><em>wayyāḥîlû ʿad-bôš</em> — 'they waited until they were embarrassed' (<em>bôš</em> = shame, to be put to shame). The same verb describes the people's shame while Moses delayed on Sinai (Exod 32:1). The servants' shame-driven delay is Ehud's escape window. When propriety finally broke, they unlocked the doors with a key and found Eglon fallen dead on the floor.</p>",
+    "26": "<p><em>wĕʾēhûd nimlāṭ bĕhitmāhĕmāham</em> — 'Ehud escaped during their delay/hesitation.' The verb <em>māhah</em> (delay, tarry, hesitate) is the servants' fatal failure of initiative. He passes back through the <em>pĕsilîm</em> (idolatrous standing stones) on his escape route — the same contested spiritual geography he navigated on the way in.</p>",
+    "27": "<p><em>wayyitqaʿ baššôpār bĕhar ʾeprayim wayyērĕdû ʾimmô bĕnê-yiśrāʾēl</em> — 'he sounded the shofar in the hill country of Ephraim and the Israelites went down with him.' The <em>šôpār</em> (ram's horn trumpet) is the assembly signal (Judg 6:34; 1 Sam 13:3; Num 10:9) — here simultaneously announcing the oppressor's death and calling Israel's warriors. <em>wĕhûʾ lipnêhem</em> (with him at their head) — Ehud leads from the front.</p>",
+    "28": "<p><em>kî nātan YHWH ʾet-ʾōyĕbêkem ʾet-môʾāb bĕyedkem</em> — 'YHWH has given your enemies into your hand.' The proleptic perfect again: the victory declared complete before the decisive engagement. Ehud commands seizure of the Jordan fords (<em>maʿabĕrôt hayyardēn lĕmôʾāb</em>) to cut off Moabite retreat — tactical precision ensuring no escape. <em>lōʾ nātĕnû ʾîš laʿăbōr</em> — 'they let no man cross.'</p>",
+    "29": "<p><em>wayyakkû ʾet-môʾāb baʿēt hahîʾ kaʿăśeret ʾălāpîm ʾîš kol-šāmēn wĕkol-ʾîš ḥāyil wĕlōʾ nimlāṭ ʾîš</em> — 'they killed about ten thousand Moabites, all strong, all able-bodied men; not a man escaped.' <em>Šāmēn</em> (fat, well-fed) echoes <em>bārîʾ</em> for Eglon — the elite, prosperous Moabite military destroyed completely. Total victory (<em>wĕlōʾ nimlāṭ ʾîš</em>) signals full covenant restoration after oppression.</p>",
+    "30": "<p><em>wayyikānaʿ môʾāb bayyôm hahûʾ taḥat yad yiśrāʾēl waytišqōṭ hāʾāreṣ šĕmōnîm šānāh</em> — 'Moab was subdued; the land had rest eighty years.' <em>Kānaʿ</em> (be subdued, humbled) shares a root with <em>Kĕnaʿan</em> (Canaan) — the Canaanite subjugation vocabulary is applied to Moab. The eighty-year rest — double Othniel's period — perhaps reflects the completeness of this particular victory, or the proportionally longer recovery from the longer combined oppression (eight + eighteen = twenty-six years).</p>",
+    "31": "<p><em>wayyak ʾet-pĕlištîm šēš-mēʾôt ʾîš bĕmalmad habbāqār</em> — Shamgar killed six hundred Philistines with an oxgoad (<em>malmad habbāqār</em>). The <em>malmad</em> (pointed cattle-driving stick) is a farm implement, not a weapon — the Judges pattern of YHWH working through the unexpected means. <em>gam-hûʾ hôšîaʿ ʾet-yiśrāʾēl</em> — 'he also delivered Israel.' The brief formula confers full deliverer status on Shamgar despite a single verse. The name <em>ben-ʿănāt</em> (son of Anat) suggests non-Israelite background — another outsider incorporated into Israel's salvation history.</p>"
   }
 }
-
-def main():
-    e = load_echo('judges')
-    merge_echo(e, ECHO)
-    save_echo('judges', e)
-
-    c = load_comm('mkt-original', 'judges')
-    merge_comm(c, ORIGINAL)
-    save_comm('mkt-original', 'judges', c)
-
-    c = load_comm('mkt-context', 'judges')
-    merge_comm(c, CONTEXT)
-    save_comm('mkt-context', 'judges', c)
-
-    c = load_comm('mkt-christ', 'judges')
-    merge_comm(c, CHRIST)
-    save_comm('mkt-christ', 'judges', c)
-
-    print('judges: all 4 layers written')
 
 if __name__ == '__main__':
-    main()
+    il = json.loads((ROOT / 'data' / 'interlinear' / 'judges.json').read_text())
+    existing = load_comm('mkt-original', 'judges')
+    merge_comm(existing, DATA)
+    save_comm('mkt-original', 'judges', existing)
+
+    all_ok = True
+    for ch in ['1', '2', '3']:
+        expected = set(il[ch].keys())
+        got = set(existing.get(ch, {}).keys())
+        missing = expected - got
+        if missing:
+            print(f'  ch {ch}: MISSING {sorted(missing, key=int)}')
+            all_ok = False
+        else:
+            print(f'ch {ch}: complete ({len(got)} verses)')
+
+    if all_ok:
+        chs_done = sorted(existing.keys(), key=int)
+        print('All verses present ✓')
+        print(f'Judges mkt-original chapters now: {chs_done} ({len(chs_done)}/21)')
+    else:
+        print('INCOMPLETE — fix missing verses above')

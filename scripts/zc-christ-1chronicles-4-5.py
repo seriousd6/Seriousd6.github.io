@@ -1,48 +1,44 @@
 """
-1-2 Chronicles + Ezra + Nehemiah + Esther — all four layers.
-These books cover: return from exile, temple rebuilding, Davidic genealogy recapitulation,
-Esther's providential rescue of the Jewish people (implicit theology).
+MKT Christ Commentary — 1 Chronicles chapters 4–5
+Run: python3 scripts/zc-christ-1chronicles-4-5.py
+
+Ch 4: Judah extended genealogy + Simeon — Judah as the messianic tribe whose full
+       lineage is traced; the Jabez prayer (vv9-10) as the type of grace breaking
+       through a curse-implied name; Gentile inclusion via Bithiah (v17-18);
+       Simeon absorbed into Judah as the covenant community incorporated into
+       the messianic tribe; Amalekite defeat (vv42-43) as type of Christ's
+       final defeat of all enemies.
+Ch 5: Reuben, Gad, half-Manasseh — Reuben's birthright loss and Judah's ruler-
+       status (vv1-2) as the OT's clearest pre-David statement of Judah's
+       messianic primacy; exile as judgment requiring the new covenant;
+       Transjordanian victory through trust in God (v20) as type of faith
+       securing inheritance (Heb 11); "the war was God's doing" (v22) as
+       the divine warrior motif anticipating Rev 19.
+
+Key decisions:
+- Genealogical and list verses receive brief entries using theme/revelation of God
+- v1-2 of ch5 receive fuller treatment as they contain explicit messianic trajectory
+- Jabez prayer (4:9-10) treated as the theological centrepiece of its chapter
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
 
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
+def load_comm(source, book):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
+    if p.exists():
+        return json.loads(p.read_text())
+    return {}
 
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
+def save_comm(source, book, data):
+    p = ROOT / 'data' / 'commentary' / source / f'{book}.json'
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
-
-def load_comm(layer, book):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_comm(layer, book, data):
-    p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
-
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
 
 def merge_comm(existing, new_data):
+    """Merge new_data into existing without overwriting present entries."""
     for ch, verses in new_data.items():
         if ch not in existing:
             existing[ch] = {}
@@ -50,160 +46,88 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-CHRON1_ECHO = {
-  "17": {
-    "13": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
-    ]
+CHRON1 = {
+  "4": {
+    "1": "<p>The sons of Judah open the extended tribal genealogy — Perez and Hezron appear in the Matthean genealogy of Christ (Matt 1:3). As the tribe from which the Messiah descends (Gen 49:10; Mic 5:2; Rev 5:5), every name in this Judahite genealogy is a strand in the line that leads to Jesus. The Chronicler&rsquo;s careful preservation of these names represents the covenant community&rsquo;s guardianship of the messianic lineage across generations of exile.</p>",
+    "2": "<p>Clans of the Zorathites — Zorah was the city of Samson (Judg 13:2), another judge-deliverer whose life prefigures Christ: set apart from birth, empowered by the Spirit, engaged in single-handed combat against the enemies of God&rsquo;s people. The continuation of this tribal memory in the genealogy keeps the deliverer-lineage visible even in a list of names.</p>",
+    "3": "<p>Founders of settlements named within Judah&rsquo;s territory — the theme of founding families establishing places in the promised land runs throughout this genealogy. As a theme: the covenant community&rsquo;s rootedness in the land prefigures the eschatological inheritance secured by Christ (Heb 11:16; Rev 21:2), a city with foundations whose architect and builder is God.</p>",
+    "4": "<p>Penuel and Ezer, founders of Gedor and Hushah — sons of Hur, the firstborn of Ephrathah, and father of Bethlehem. The mention of Bethlehem&rsquo;s founding lineage carries particular Christological weight: Bethlehem is not only David&rsquo;s city but the birthplace prophesied for the Messiah (Mic 5:2; Matt 2:6). The city&rsquo;s founding ancestors are traceable in this genealogical record.</p>",
+    "5": "<p>Ashhur the founder of Tekoa — Tekoa was the home of the wise woman who advised David (2 Sam 14:2) and of the prophet Amos (Amos 1:1). This genealogy preserves the civic founders of the Judahite towns that were part of the covenant community&rsquo;s ongoing life. As a revelation of God: YHWH works through specific families in specific places, the antithesis of an abstract deity unconnected to particular human histories.</p>",
+    "6": "<p>Naarah&rsquo;s sons — the listing of children from both wives of Ashhur shows the Chronicler tracking the full scope of Judah&rsquo;s multiplication in the land. As a theme: the fruitfulness of the covenant community (fulfillment of the Abrahamic promise in Gen 12:2) runs through these genealogical records, each name evidence of YHWH keeping his promise of blessing.</p>",
+    "7": "<p>Sons of Helah — more Judahite descendants. The sheer density of names witnesses to the covenant community&rsquo;s survival through bondage, wilderness, conquest, and the divided monarchy. Each name represents a life in which YHWH&rsquo;s covenant faithfulness was operative, even unrecorded. As a theme: the preservation of the covenant people across generations is YHWH&rsquo;s sustained fulfillment of the promise to Abraham (Gen 15:5).</p>",
+    "8": "<p>Koz&rsquo;s line — clans of the Judahite territory. As a revelation of God: the Chronicler&rsquo;s meticulous genealogical record-keeping reflects YHWH&rsquo;s own knowing of each member of the covenant community by name (Isa 43:1; John 10:3: the Good Shepherd &ldquo;calls his own sheep by name&rdquo;). The genealogy is a covenant register, not merely a tribal inventory.</p>",
+    "9": "<p>Jabez — embedded in the genealogy as a singular figure: &ldquo;more honoured than his brothers.&rdquo; His name means pain (<em>ʿōṣeḇ</em>) — he was born under a shadow. The grace theme of this verse is striking: a name implying curse becomes the occasion for conspicuous divine blessing. The pattern anticipates Christ, who was &ldquo;despised and rejected&rdquo; (Isa 53:3) yet is now the most honored of all (Phil 2:9-11).</p>",
+    "10": "<p>Jabez&rsquo;s prayer is the theological centrepiece of the chapter. &ldquo;Oh, that you would bless me and enlarge my territory!&rdquo; — the prayer breaks the curse implied in his name through simple direct address to &ldquo;the God of Israel.&rdquo; God grants the request. The movement from name-of-pain to blessing-through-prayer types the gospel movement: from curse (Gal 3:10) to blessing through the one who became a curse for us (Gal 3:13). The enlargement of territory anticipates the nations as Christ&rsquo;s inheritance (Ps 2:8).</p>",
+    "11": "<p>Chelub, Shuah&rsquo;s brother — more Judahite clan founders. The genealogical chain continues. As a theme: every generation of the covenant community existed within the unbroken chain of promise that would ultimately produce the Messiah, even when the individuals had no awareness of their place in that lineage. The genealogy makes visible the hidden scaffolding of redemptive history.</p>",
+    "12": "<p>Tehinnah the founder of Ir-nahash — &ldquo;men of Recah.&rdquo; The founding of cities and settlement of the land are covenant acts: YHWH gave the land to Abraham&rsquo;s descendants (Gen 15:18-21), and each new settlement is a concrete fulfillment of that promise. As a theme: the incarnation of Christ in a specific place (Bethlehem of Judah) is the ultimate fulfillment of this land-promise trajectory.</p>",
+    "13": "<p>Sons of Kenaz: Othniel and Seraiah. Othniel was the first judge of Israel (Judg 3:9-11) — the Spirit-empowered deliverer who rescued Israel. As a type: Othniel&rsquo;s rescue through the Spirit&rsquo;s empowerment prefigures the pattern of Spirit-anointed deliverance reaching its fulfillment in Christ (Luke 4:18; Acts 10:38).</p>",
+    "14": "<p>Joab the founder of Ge-harashim (valley of craftsmen) — &ldquo;for they were craftsmen.&rdquo; The Spirit-filled artisans of the tabernacle (Bezalel, Exod 31:1-11) and Jesus the carpenter (<em>tekton</em>, Mark 6:3) are both evoked by this lineage. God&rsquo;s Son entered human life as a craftsman before his public ministry — the covenant God is not disengaged from manual labor.</p>",
+    "15": "<p>Sons of Caleb son of Jephunneh — Caleb, the faithful spy who followed YHWH wholeheartedly (Num 14:24; Josh 14:8-9), is a significant type of faith securing inheritance. The promise to Caleb — &ldquo;the land on which your feet have walked will be your inheritance forever, because you wholly followed the LORD&rdquo; (Josh 14:9) — anticipates the inheritance promised to all who follow Christ (Col 3:24).</p>",
+    "16": "<p>Sons of Jehallelel — names in Judah&rsquo;s southern territory clans. As a revelation of God: YHWH does not merely make a general promise to a tribe but sustains specific families through specific generations, the personal and particular nature of covenant faithfulness that the NT presents as the ground of individual assurance (Rom 8:38-39).</p>",
+    "17": "<p>Sons of Ezrah including Mered — and Mered married Bithiah, daughter of Pharaoh (v18). A Gentile woman of Egyptian royal lineage is incorporated into the Judahite tribe. As a type: the inclusion of Pharaoh&rsquo;s daughter in Judah&rsquo;s covenant genealogy anticipates the eschatological gathering of nations, fulfilled in Christ who breaks down the dividing wall (Eph 2:14-16).</p>",
+    "18": "<p>Bithiah daughter of Pharaoh — a Gentile woman in Judah&rsquo;s messianic genealogical record. The Chronicler&rsquo;s inclusion parallels the Matthean genealogy&rsquo;s inclusion of Tamar, Rahab, Ruth, and Bathsheba: Gentile women and women of unusual status are present in the line that leads to Christ, signaling that the Messiah would be &ldquo;a light for revelation to the Gentiles&rdquo; (Luke 2:32).</p>",
+    "19": "<p>Sons of Hodiah&rsquo;s wife — blended family lines included in the covenant record. The comprehensive inclusion of diverse family lines reveals YHWH as the God of every family and clan, anticipating Paul&rsquo;s declaration that in Christ &ldquo;there is neither Jew nor Greek, slave nor free, male nor female&rdquo; (Gal 3:28) — the messianic community transcends the social divisions that genealogies typically reinforce.</p>",
+    "20": "<p>Sons of Shimon and Ishi — more Judahite clans. The name Ishi means &ldquo;my husband&rdquo; (<em>ʾîšî</em>), the same word used in Hos 2:16 for the eschatological covenant marriage: YHWH declares &ldquo;You will call me &lsquo;my husband.&rsquo;&rdquo; The coincidence of name carries a thematic echo: the covenant community is always, in OT prophetic vision, the bride of YHWH — fulfilled in the church as the bride of Christ (Rev 21:2, 9).</p>",
+    "21": "<p>Sons of Shelah son of Judah — linen-workers at Beth-ashbea. Fine linen clothed the priests and the tabernacle; in Rev 19:8, fine linen represents &ldquo;the righteous acts of the saints&rdquo; worn by the bride of Christ. The covenant community&rsquo;s weavers literally clothed the sanctuary — a shadow of the eschatological community clothed in righteousness.</p>",
+    "22": "<p>&ldquo;These are ancient records.&rdquo; The Chronicler acknowledges the antiquity of his source material. As a revelation of God: the care with which the covenant community preserved genealogical records across centuries testifies to YHWH&rsquo;s interest in historical specificity. The NT similarly grounds the gospel in historical genealogy (Matt 1:1-17; Luke 3:23-38) against any mythologizing tendency.</p>",
+    "23": "<p>Potters in the king&rsquo;s service. Paul uses the potter imagery specifically in the context of YHWH&rsquo;s sovereign purposes in redemptive history (Rom 9:20-21; Jer 18:6) — and the NT image of believers as clay in the Potter&rsquo;s hands finds its literal OT grounding in exactly the kind of covenant-community craft work this verse describes.</p>",
+    "24": "<p>Sons of Simeon — the Simeonite genealogy begins. Simeon&rsquo;s territory lay within Judah&rsquo;s allotment (Josh 19:1-9). As a shadow: the gradual absorption of Simeon into Judah mirrors the way the covenant community is drawn into the messianic tribe — not by Simeon ceasing to exist but by the messianic tribe expanding to encompass it. The church similarly gathers all peoples into the one covenant community.</p>",
+    "25": "<p>Simeonite genealogical line from Shaul to Shallum to Mibsam to Mishma. The preservation of the Simeonite clan record in the post-exilic period, when Simeon had long since been absorbed into Judah, reflects YHWH&rsquo;s faithfulness to each covenant identity. As a revelation of God: no part of the covenant community is forgotten — each has a preserved record in YHWH&rsquo;s book (Mal 3:16; Rev 21:12).</p>",
+    "26": "<p>Sons of Mishma continuing the Simeonite line. The persistence of this genealogical record across exile reflects the post-exilic community&rsquo;s determination to maintain covenant identity despite the Babylonian disruption — the same persistence that characterizes the NT church under persecution (Rev 2-3 letters).</p>",
+    "27": "<p>&ldquo;Their whole clan did not increase as much as the sons of Judah.&rdquo; Judah&rsquo;s greater multiplication corresponds to the Davidic-messianic promise that concentrated covenant blessing in Judah&rsquo;s line. Jacob&rsquo;s blessing (Gen 49:8-12) set this trajectory; the demographic reality of the tribal period confirms it.</p>",
+    "28": "<p>Simeonite settlements at Beer-sheba, Moladah, Hazar-shual — the southernmost fringe of the promised land. Beer-sheba was the site of Abraham&rsquo;s covenant with Abimelech (Gen 21:31) and the symbolic southern boundary of Israel. The Simeonites settling at this covenant-saturated site connects their habitation to the Abrahamic promise that finds its ultimate fulfillment in the new creation (Rev 21:1-3).</p>",
+    "29": "<p>Additional Simeonite settlements — Bilhah, Ezem, Tolad. The granular specificity of settlement records reflects YHWH&rsquo;s superintendence of real geography: the covenant people occupy actual, named places. The same particularity characterizes the NT: Jesus was crucified outside Jerusalem (John 19:20), rose in a specific garden tomb (John 20:11), ascended from the Mount of Olives (Acts 1:12).</p>",
+    "30": "<p>Bethuel, Hormah, Ziklag — Simeonite cities. Ziklag was David&rsquo;s base during his time with the Philistines (1 Sam 27:6) and the site of the Amalekite raid and rescue (1 Sam 30). The Chronicler&rsquo;s note that these were &ldquo;their cities until the time of David&rdquo; (v31) connects Simeonite geography to the Davidic-messianic framing of the entire genealogical project.</p>",
+    "31": "<p>&ldquo;These were their cities until the time of David.&rdquo; The Davidic reign is the theological orienting reference point. Throughout Chronicles, David is the centre toward whom the genealogies point and from whom the covenant trajectory proceeds. The &ldquo;time of David&rdquo; is the OT pivot — the establishment of the Davidic covenant that carries the messianic promise forward to Christ.</p>",
+    "32": "<p>Five Simeonite villages including Etam and Rimmon. The careful enumeration of even small villages reflects YHWH&rsquo;s concern with the particular: no settlement of his people is beneath divine attention. Jesus makes the same point with sparrows and numbered hairs (Matt 10:29-30).</p>",
+    "33": "<p>&ldquo;They maintained their genealogical records.&rdquo; The reflexive preservation of covenant lineage was itself a spiritual act — an assertion that YHWH&rsquo;s promises were real and the covenant community was not dissolved by history. The NT image of names written in the Lamb&rsquo;s book of life (Rev 3:5; 21:27) is the eschatological counterpart of this earthly genealogical register.</p>",
+    "34": "<p>Named leaders of Simeonite clans — Meshobab, Jamlech, Joshah. Each named leader represents a person responsible for a covenant community of families. As a revelation of God: YHWH works through named, particular human leaders to shepherd his people — the same pattern that runs through judges, kings, and apostles to its completion in Christ as the one named Leader who holds all authority (Matt 28:18).</p>",
+    "35": "<p>Joel and Jehu — Simeonite clan leaders. The name Joel (<em>yôʾēl</em> = YHWH is God) persistently embedded in Israelite naming practices signals the theological convictions carried in names. The cumulative effect of theophoric names throughout the genealogies is a sustained implicit confession of covenant identity across generations.</p>",
+    "36": "<p>Elioenai and other Simeonite leaders. The name Elioenai (<em>ʾelîʿênay</em> = toward YHWH are my eyes) is a prayer embedded in a name: perpetual orientation toward YHWH. This posture of the whole covenant community — sustained orientation toward YHWH — is what Heb 12:2 describes as &ldquo;fixing our eyes on Jesus, the pioneer and perfecter of faith.&rdquo;</p>",
+    "37": "<p>Ziza son of Shiphi — the genealogical chain reaching back through multiple generations. As a theme: Christ&rsquo;s own genealogy is traced with precision (Matt 1:1-17) precisely to establish his specific covenantal location within the line of Abraham and David. The deep genealogical memory of the covenant community is what makes such precise tracing possible.</p>",
+    "38": "<p>&ldquo;Their families grew greatly in number.&rdquo; The multiplication of the covenant community fulfills the Abrahamic blessing of fruitfulness. The NT counterpart: the rapid growth of the early church (Acts 2:41; 4:4; 6:7) is interpreted as divine multiplication — the same covenant-blessing pattern operating in the new covenant community gathered around Christ.</p>",
+    "39": "<p>Simeonites journeying to find pasture for their flocks — a pastoral migration. The shepherd-flock imagery underlying this narrative evokes the theological metaphor of YHWH as shepherd leading his people to good pasture (Ps 23:2; John 10:9: &ldquo;he will come in and go out and find pasture&rdquo;).</p>",
+    "40": "<p>Finding good pasture — &ldquo;rich, good pasture in a broad, peaceful, undisturbed land.&rdquo; The description echoes the covenant promise of the land (Deut 8:7-10). As a shadow: the physical finding of good pasture types the eschatological rest of Heb 4:9 — &ldquo;there remains a Sabbath rest for the people of God&rdquo; — the ultimate &ldquo;broad, peaceful land&rdquo; that the Simeonite migration faintly foreshadows.</p>",
+    "41": "<p>The Simeonites destroy Hamite settlements in the days of Hezekiah. The Chronicler&rsquo;s pattern: covenant faithfulness and territorial blessing are connected. Hezekiah&rsquo;s reign is presented as a messianic anticipation in 2 Chr 29-32 — the most Davidic king since David himself, whose reforming work shadows the ultimate reform Christ brings.</p>",
+    "42": "<p>Five hundred Simeonites to Mount Seir against the surviving Amalekites. The Amalekites represented persistent, multi-generational opposition to God&rsquo;s people (Exod 17:8-16; 1 Sam 15). Their gradual elimination is part of the covenant warfare motif — YHWH&rsquo;s judgment on those who opposed his people from the beginning, typing Christ&rsquo;s final defeat of all enemies.</p>",
+    "43": "<p>&ldquo;They struck down the remaining Amalekites who had escaped.&rdquo; The complete elimination of the persistent ancient enemy types Christ&rsquo;s final defeat of all opponents (1 Cor 15:25: &ldquo;he must reign until he has put all enemies under his feet&rdquo;; Rev 19:11-21). The Amalekites who previously &ldquo;escaped&rdquo; judgment are finally eliminated — no enemy of God&rsquo;s people ultimately survives the full sweep of covenant justice.</p>"
   },
-  "29": {
-    "11": [
-      {"type": "allusion", "target": "Matt 6:13", "note": "Yours O LORD is the greatness and the power and the glory and the victory and the majesty — David's prayer at the temple offering is the OT source behind the doxology appended to the Lord's Prayer in Matthew 6:13: For yours is the kingdom and the power and the glory forever"}
-    ]
-  }
-}
-
-CHRON1_ORIGINAL = {
-  "1": {
-    "1": "<p>1 Chronicles begins with nine chapters of genealogies (chs. 1-9) — from Adam to the post-exilic community. The genealogical prologue serves a theological purpose: to demonstrate the continuity of YHWH's covenant people through the Babylonian exile. The lists trace: Adam to Israel (ch. 1), the twelve tribes (chs. 2-9), with special focus on the line of David (ch. 3, which includes the post-exilic Davidic line down to the 6th generation after Zerubbabel — into the 5th century BCE). Matthew's genealogy (Matt 1:1-17) is a direct descendant of the Chronicler's method: beginning with Abraham, structured in three sets of fourteen, it traces the covenant line to the Messiah through the same Davidic focus that Chronicles establishes.</p>"
-  }
-}
-
-CHRON1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Chronicles was written to the post-exilic community (ca. 400-350 BCE) as a theological retelling of the monarchy. The Chronicler's perspective differs from Samuel-Kings: (1) he focuses almost exclusively on Judah and the Davidic line (the northern kingdom barely appears); (2) he omits many of David's failures (Bathsheba, Absalom) while including his worship and temple preparations; (3) he emphasizes the Levitical worship structure, the temple, and its proper celebration; (4) he ends on an upbeat note (Cyrus's decree, 2 Chr 36:22-23) rather than Kings' ambiguous ending (Jehoiachin's release). The Chronicler is writing a theology of hope for the restored community: YHWH's covenant with David is still in force; the temple worship is the proper center of life; the exile was judgment but not the end.</p>"
-  }
-}
-
-CHRON1_CHRIST = {
-  "17": {
-    "14": "<p>A fulfillment: 'I will confirm him in my house and in my kingdom forever, and his throne shall be established forever.' Chronicles' retelling of the Davidic covenant (2 Sam 7) emphasizes its eternal dimension even more than the original: 'forever' appears three times in 17:12-14. The post-exilic community lived under Persian rule with no Davidic king on the throne — the eternal throne promise seemed broken. The NT's answer: the Davidic king now reigns from heaven (Acts 2:34-36: God has made him both Lord and Christ, this Jesus whom you crucified); the eternal throne is not a political throne in Jerusalem but the heavenly throne from which the risen Christ exercises his universal lordship. Chronicles' eschatological emphasis is fulfilled in Christ's resurrection-enthronement.</p>"
-  }
-}
-
-CHRON2_ECHO = {
-  "7": {
-    "14": [
-      {"type": "allusion", "target": "Jas 4:10", "note": "If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin — the covenant principle at the temple dedication (2 Chr 7:14) is the OT's definitive statement of the prayer-of-repentance promise; James applies the same principle (Humble yourselves before the Lord and he will exalt you) in the new covenant context"}
-    ]
-  }
-}
-
-CHRON2_ORIGINAL = {
-  "7": {
-    "14": "<p><strong>veyikane'u ami asher nikra shemi aleihem veyitpallelu viyivakshu fanai viyashuvu midarkeihem hara'im vaani eshma min hashamayim veaeslach lechata'tam vearpeh et artzam</strong>: 'If my people who are called by my name humble themselves, and pray and seek my face and turn from their wicked ways, then I will hear from heaven and will forgive their sin and heal their land.' This verse contains the fourfold condition for covenant restoration: humble, pray, seek face, turn from evil. The promise has three parts: hear, forgive, heal. The verse became the central prayer-promise of post-exilic Israel and has been applied by successive generations as the conditions for revival. Its structure is Deuteronomic repentance theology at its most concentrated: the exile is reversible; covenant restoration is possible; the initiative is human repentance, the result is divine forgiveness.</p>"
-  }
-}
-
-CHRON2_CONTEXT = {
-  "36": {
-    "22": "<p>2 Chronicles ends with Cyrus's decree (536 BCE) permitting the Jewish exiles to return and rebuild the temple — the same decree that opens Ezra. This ending was the Chronicler's editorial choice: rather than ending with Jerusalem's destruction (as Kings does), Chronicles ends with the first words of restoration. The last word of the Hebrew canon (as traditionally ordered) is this: 'Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' The Chronicler makes the exile the penultimate chapter, not the final one; the return from exile is YHWH's faithfulness to his covenant promise. The NT reads the exile-and-return pattern as a type of death-and-resurrection: the people 'died' in Babylon and were 'raised' in the return; Christ dies and rises as the ultimate exile-and-return.</p>"
-  }
-}
-
-CHRON2_CHRIST = {
-  "36": {
-    "23": "<p>A type: 'Thus says Cyrus king of Persia, The LORD, the God of heaven, has given me all the kingdoms of the earth, and he has charged me to build him a house at Jerusalem, which is in Judah. Whoever is among you of all his people, may the LORD his God be with him. Let him go up.' Cyrus's decree is Isaiah's prediction (Isa 44:28; 45:1-4 — naming Cyrus over a century before his birth) and Chronicles' fulfillment. Cyrus is called YHWH's 'anointed' (<em>meshicho</em>, Isa 45:1) — a Gentile king given the title used of the Davidic Messiah, showing that YHWH's sovereign purposes can work through unexpected agents. The pattern (a king's decree liberates an enslaved people to rebuild the temple) is the type for the NT's proclamation: the King of Kings' word liberates humanity from sin's exile to become the living temple of the Spirit (1 Cor 3:16-17).</p>"
-  }
-}
-
-EZRA_ECHO = {
-  "1": {
-    "1": [
-      {"type": "allusion", "target": "Luke 4:18", "note": "The LORD stirred up the spirit of Cyrus king of Persia — the fulfillment of Jeremiah's seventy-year prophecy through Cyrus's decree; Jesus's proclamation of liberty to captives (Isa 61:1, quoted in Luke 4:18) is the greater fulfillment: Christ proclaims the ultimate release from the ultimate exile (sin and death)"}
-    ]
-  },
-  "3": {
-    "11": [
-      {"type": "allusion", "target": "Rev 4:8", "note": "They sang to YHWH: for he is good, for his steadfast love endures forever — the refrain sung at the temple foundation-laying; the same acclamation of YHWH's eternal goodness and love appears in Revelation's heavenly worship; the worship that began at the temple foundation continues eternally in the new creation temple"}
-    ]
-  }
-}
-
-EZRA_ORIGINAL = {
-  "3": {
-    "12": "<p>The elders who had seen the first temple wept when the second temple's foundation was laid — while the younger generation shouted for joy (Ezra 3:12). The mixture of weeping and rejoicing at the restoration point to the ambiguity of the return from exile: it was genuinely wonderful (YHWH's covenant faithfulness demonstrated) but genuinely less than the prophets had promised (the new temple was smaller and less glorious; the Davidic king was absent; the full restoration had not arrived). The prophets Haggai and Zechariah address this exact ambiguity: 'Who has despised the day of small things?' (Zech 4:10). The NT's answer is that the greater glory came not through a rebuilt temple but through the incarnation: the Word dwelling among us, the Shekinah glory in human form (John 1:14).</p>"
-  }
-}
-
-EZRA_CONTEXT = {
-  "1": {
-    "1": "<p>Ezra narrates the return from Babylonian exile in two waves: the first under Zerubbabel (chs. 1-6, ca. 536-516 BCE, culminating in the temple's completion), and the second under Ezra the scribe (chs. 7-10, ca. 458 BCE). Ezra is a priestly figure who prioritizes the Torah — his mission is the reform of the community according to the law of Moses. His concern with mixed marriages (chs. 9-10) reflects the Deuteronomic prohibition of intermarriage with Canaanites (Deut 7:1-4) and the covenant community's identity boundaries. The return from exile should have been the full realization of the prophetic promises (Isa 40-66, Jer 31, Ezek 36-37), but the post-exilic community experienced only a partial restoration — which generated the eschatological hope for a greater future restoration that the NT identifies with the Messiah.</p>"
-  }
-}
-
-EZRA_CHRIST = {
-  "9": {
-    "6": "<p>A shadow: 'O my God, I am ashamed and blush to lift my face to you, my God, for our iniquities have risen higher than our heads, and our guilt has mounted up to the heavens.' Ezra's prayer of corporate confession (Ezra 9:6-15) models the penitential posture of identifying with the community's sin even when personally innocent — the same posture that Daniel assumes in Dan 9 and Nehemiah in Neh 1. This is the OT's most developed example of representative intercession: a righteous individual taking on the burden of corporate guilt. Christ fulfills this to its ultimate degree: he who knew no sin was made sin for us (2 Cor 5:21); he prayed for his persecutors and bore the corporate sin-debt to the cross. Ezra's corporate repentance is the shadow; Christ's corporate sin-bearing is the substance.</p>"
-  }
-}
-
-NEH_ECHO = {
-  "8": {
-    "8": [
-      {"type": "allusion", "target": "Luke 24:45", "note": "They read from the book, from the Law of God, clearly, and they gave the sense, so that the people understood the reading — Ezra's public reading and explanation of the Torah is the OT model for the expository sermon; Jesus opened the disciples' minds to understand the Scriptures (Luke 24:45) in the same pattern: the text is read, its meaning explained, the people understand"}
-    ]
-  }
-}
-
-NEH_ORIGINAL = {
-  "9": {
-    "17": "<p>Nehemiah 9 is one of the OT's longest prayers — a historical survey from creation through the exodus, wilderness, conquest, judges, and exile, culminating in confession and petition. The prayer distills the Deuteronomic theology of the OT: YHWH is faithful and merciful; Israel repeatedly rebels; YHWH judges and then restores in mercy. The recurring phrase 'but you did not forsake them' (<em>ve-atah lo-azavtam</em>, v. 17, 19, 31) is the prayer's theological spine: YHWH's faithfulness to his covenant people despite their faithlessness is the basis for the current petition. Paul's statement 'but God demonstrates his own love for us in this: while we were still sinners, Christ died for us' (Rom 5:8) is the Nehemiah-9 theological pattern at its ultimate expression.</p>"
-  }
-}
-
-NEH_CONTEXT = {
-  "1": {
-    "1": "<p>Nehemiah was the Jewish cupbearer to the Persian king Artaxerxes I (465-424 BCE) who received permission to return to Jerusalem and rebuild its walls (ca. 445 BCE). His memoirs (Neh 1-7 and parts of 11-13) are some of the most personal first-person narrative in the OT. The wall-building project (completed in 52 days, Neh 6:15) faced external opposition (Sanballat, Tobiah, Geshem) and internal socioeconomic problems (the poor were being exploited by the rich, ch. 5). Nehemiah's prayer-while-working pattern ('They who built the wall and those who carried burdens loaded themselves so that each labored on the work with one hand and held his weapon with the other', 4:17) became a model for Christian ministry combining spiritual and practical dimensions.</p>"
-  }
-}
-
-NEH_CHRIST = {
-  "9": {
-    "38": "<p>A shadow: 'Because of all this we make a firm covenant in writing.' The community's covenant renewal at the end of Nehemiah 9 (written, sealed by the leaders, affirmed by the whole community) is the post-exilic attempt to re-enter the covenant relationship on the basis of the Mosaic law. Its failure is built in: the same generation that renewed the covenant (Neh 10) broke it within a generation (Neh 13: Sabbath violations, mixed marriages, Levites abandoned). Jeremiah's new covenant promise (Jer 31:31-34) is the response to this pattern: the problem with the Mosaic covenant is not the words but the hearts; no written covenant renewal can produce the internal transformation that is needed. Christ is the covenant-keeper in whom the law is fulfilled, and his Spirit is the power for covenant-faithfulness that Nehemiah's community lacked.</p>"
-  }
-}
-
-ESTHER_ECHO = {
-  "4": {
-    "14": [
-      {"type": "allusion", "target": "Acts 17:26-27", "note": "Who knows whether you have not come to the kingdom for such a time as this — Mordecai's appeal to Esther's providential position; God's sovereign ordering of human affairs and timing (though never named in the book) is the same providence Paul describes in Acts 17: God determined the times and boundaries of nations so that people might seek him and find him"}
-    ]
-  }
-}
-
-ESTHER_ORIGINAL = {
-  "4": {
-    "16": "<p><strong>kach kenos et kol hayehudim hanmitsa'im beShushan vetzumu alai ve'al tochlu ve'al tishtu shloses yamim layla vayhom</strong>: 'Go, gather all the Jews to be found in Susa, and hold a fast on my behalf, and do not eat or drink for three days, night or day.' Esther's three-day fast before entering the king's presence uninvited has been read as the book's implicit theological center: prayer (fasting was always associated with prayer) precedes the moment of potential death and the unexpected reversal. The three-day pattern (three days, then appearance before the king/enemy) resonates with the NT's three-day resurrection pattern — though this is a literary and structural echo rather than a direct typological prediction.</p>"
-  }
-}
-
-ESTHER_CONTEXT = {
-  "1": {
-    "1": "<p>Esther is unique among OT books in never mentioning God — a deliberate literary choice that highlights the hiddenness of divine providence. The book is set in the Persian court of Ahasuerus (Xerxes I, ca. 483-473 BCE) and narrates the deliverance of the Jewish people from Haman's genocide. The Feast of Purim (chs. 9-10) celebrates this deliverance annually. The 'coincidences' of the narrative (the king cannot sleep and has the chronicles read to him just when Mordecai's unrewarded act is reached; Haman enters the court just as the king wants to honor Mordecai; Haman falls on Esther's couch at the exact moment the king returns) are the book's theological method: divine providence operates through the appearance of coincidence. Luther and others questioned its canonical status; Calvin rarely cited it; its canonical place has always been accepted in the Jewish tradition as the Purim festival's theological warrant.</p>"
-  }
-}
-
-ESTHER_CHRIST = {
-  "4": {
-    "14": "<p>A type: 'Who knows whether you have not come to the kingdom for such a time as this?' Esther's providential placement as queen — a Jew in the Persian court at the moment her people face extermination — is one of the OT's clearest examples of divine providence operating through human circumstance. Her willingness to risk death to save her people ('if I perish, I perish', 4:16) is the type of Christ's redemptive mission: he came in the fullness of time (Gal 4:4) — the divine timing that Mordecai glimpses in Esther's story — and willingly went to death to save his people. The structural parallel: an intercessor enters the presence of the supreme authority uninvited, risking death, to plead for the life of the condemned people. Esther's mediation is temporal and partial; Christ's is eternal and complete.</p>"
+  "5": {
+    "1": "<p>The most explicit statement of Judah&rsquo;s messianic pre-eminence in the genealogical section: Reuben&rsquo;s birthright was forfeit through his sin (Gen 35:22) and given to the sons of Joseph. The loss of the birthright by sin and its redistribution reflects the OT&rsquo;s foundational theological pattern: the expected heir is disqualified, YHWH re-routes the covenant promise. The NT pattern is the same: Israel after the flesh loses the inheritance; the new covenant community receives it through faith (Rom 9:6-8).</p>",
+    "2": "<p>&ldquo;Though Judah prevailed among his brothers, and the ruler (<em>nāgîd</em>) came from him...&rdquo; This is the Chronicler&rsquo;s compressed citation of Gen 49:10: &ldquo;the scepter will not depart from Judah.&rdquo; The explicit statement that the ruler comes from Judah while the birthright belongs to Joseph sets up the NT resolution: Christ is the son of David (Judah&rsquo;s line) who receives the full inheritance — both the ruler&rsquo;s staff and the double-portion — the one in whom all covenant promises converge (2 Cor 1:20).</p>",
+    "3": "<p>The sons of Reuben listed — Hanoch, Pallu, Hezron, Carmi. Though Reuben was disqualified from the birthright, his sons are still recorded: YHWH does not erase the covenant community&rsquo;s record even when disciplining its leaders. As a revelation of God: covenant discipline does not mean covenant abandonment. God disciplines those he loves (Heb 12:6), but discipline is evidence of sonship, not its negation.</p>",
+    "4": "<p>The sons of Joel — a Reubenite lineage tracing the tribe&rsquo;s descent. The name Joel (<em>yôʾēl</em> = YHWH is God) at the head of this sub-genealogy suggests that despite the tribal loss of primacy, the covenant identity of YHWH-as-God remained embedded in their naming practices — covenant memory preserved in names even when covenant privileges are redistributed.</p>",
+    "5": "<p>Micah and Reaiah in the Reubenite line descending through Baal — the name Baal appearing in an Israelite genealogy is a reminder of the religious syncretism that characterized much of the tribal period. As a revelation of God: YHWH&rsquo;s covenant faithfulness toward his people does not depend on their consistent faithfulness to him — the covenant line persists through generations of compromise. This is the grace Paul elaborates in Rom 11:28-29: &ldquo;the gifts and calling of God are irrevocable.&rdquo;</p>",
+    "6": "<p>Beerah taken into exile by Tilgath-pileser king of Assyria. The exile of a Reubenite leader marks the beginning of the northern deportations (733-722 BCE). As a type of judgment: the exile is the covenant curse for unfaithfulness (Deut 28:36, 64) — Israel carried into the land of the enemy mirrors a return to the pre-exodus condition. The greater exile from which Christ delivers is spiritual exile from God (Eph 2:12).</p>",
+    "7": "<p>Jeiel the chief of the Reubenite clan records. The title &ldquo;chief&rdquo; (<em>rōʾš</em>) embedded in clan genealogies reflects the ongoing governance structure of tribal Israel. As a theme: legitimate human leadership structures are part of YHWH&rsquo;s ordering of the covenant community, anticipating the NT pattern of elders and overseers appointed to lead the church (Acts 14:23; Tit 1:5).</p>",
+    "8": "<p>Bela son of Azaz — living in Aroer as far as Nebo and Baal-meon. These Transjordanian cities were granted to Reuben (Num 32:37-38). The Reubenite settlement here fulfills YHWH&rsquo;s grant even though Reuben lost the birthright. As a revelation of God: covenant discipline does not nullify covenant promise — the tribal allotment continues even when covenant privileges are redistributed.</p>",
+    "9": "<p>Reubenite settlement extending to the Euphrates &ldquo;because their livestock had multiplied.&rdquo; Population and livestock increase as evidence of divine blessing — the fulfillment of YHWH&rsquo;s promise to multiply the patriarchs&rsquo; descendants (Gen 17:2; 26:4). The horizontal expansion into unsettled territory anticipates the NT&rsquo;s pattern of the gospel moving from Jerusalem to the ends of the earth (Acts 1:8).</p>",
+    "10": "<p>Reubenites defeat the Hagrites in Saul&rsquo;s time — settling in their tents throughout eastern Gilead. YHWH&rsquo;s giving the Hagrites&rsquo; territory to the Reubenites reflects Ps 2:8: &ldquo;Ask of me and I will give the nations as your inheritance.&rdquo; The tribal warfare here is a local instance of YHWH&rsquo;s larger pattern of giving the nations to his covenant people — fully claimed by Christ in the great commission (Matt 28:19).</p>",
+    "11": "<p>Sons of Gad in Bashan — the Gadite territory east of the Jordan. Bashan was known for its large cattle (Ps 22:12) and its pre-Israelite giant king Og (Deut 3:1-7). The Israelite settlement of Bashan represented YHWH&rsquo;s provision despite formidable obstacles, a pattern that runs through the OT deliverances and reaches its climax in Christ&rsquo;s conquest of the strongman (Matt 12:29).</p>",
+    "12": "<p>Gadite clan leaders — Joel, Shapham, Janai, Shaphat in Bashan. The multi-layered leadership structure reflects the ordered society YHWH intended his covenant community to maintain. As a theme: the ordering of human community under delegated authority structures mirrors the divine order in which everything under Christ is ordered under the Father (1 Cor 15:27-28).</p>",
+    "13": "<p>Seven relatives by family — the number of completeness embedded in the clan structure. Whether intentional or coincidental in the counting, the pattern of seven in genealogical lists resonates with the creation-week structure of completeness that runs through OT sacred numerology and into the NT&rsquo;s seven churches, seven seals, seven trumpets of Revelation.</p>",
+    "14": "<p>Sons of Abihail — a multi-generational Gadite clan chain. The name Abihail (<em>ʾăḇîḥayil</em> = my father is strength) is another theologically loaded name: YHWH as the father whose strength is claimed in the naming of a child. As a theme: the covenant community&rsquo;s names rehearse YHWH&rsquo;s character, forming a continuous confession of the attributes that the NT declares are expressed perfectly in Christ (Heb 1:3).</p>",
+    "15": "<p>Ahi son of Abdiel — head of the family. Abdiel (<em>ʿaḇdîʾēl</em> = servant of God) presents service to YHWH as the defining family identity. As a theme: the NT picks up this servant-of-God identity and reconfigures it around Christ, the supreme Servant (Isa 52:13; Matt 12:18) whom believers follow in servant identity (Rom 1:1; Phil 2:7).</p>",
+    "16": "<p>Gadite settlements in Gilead, Bashan, and the pasturelands of Sharon to their borders. As a revelation of God: YHWH is not a deity of the sky only but of the land — specific geography is covenantally significant. The NT universalizes this: Christ inherits &ldquo;all things&rdquo; (Heb 1:2), but the specificity of the incarnation retains the covenantal particularity of a God who works in named places.</p>",
+    "17": "<p>Enrolled in genealogy during Jotham and Jeroboam II — anchored in both Judahite and Israelite regnal chronology. As a revelation of God: YHWH&rsquo;s covenant works in parallel with both kingdoms even after the division — his purposes are not confined to one political structure. The NT counterpart: God&rsquo;s covenant purposes operate through all human governments without being identified with any (Rev 11:15).</p>",
+    "18": "<p>Forty-four thousand skilled warriors among the Transjordanian tribes — capable soldiers equipped with shield, sword, and bow. As a theme: physical warriors in the OT type the spiritual warfare that characterizes the NT church (Eph 6:10-17). The &ldquo;skilled warrior&rdquo; equipped with specific weapons types the believer equipped with the full armor of God.</p>",
+    "19": "<p>War against the Hagrites, Jetur, Naphish, and Nodab — Ishmaelite and Hagarite groups in the Transjordan. As a theme: the conflict between the child of promise and those outside the covenant line runs through OT history and into the NT&rsquo;s distinction between those born &ldquo;according to the flesh&rdquo; and those born &ldquo;according to the Spirit&rdquo; (Gal 4:29).</p>",
+    "20": "<p>&ldquo;They were helped against these enemies; the Hagrites... were handed over to them, because they cried to God in the battle, and he responded because they trusted in him.&rdquo; This is the theological centrepiece of ch5: military victory explicitly attributed to prayer and trust (<em>bāṭaḥ</em>, H982). The chain — cry to God, trust in him, divine response, victory — is the pattern of salvation. Heb 11:33 cites OT warriors who &ldquo;through faith conquered kingdoms.&rdquo; The NT fulfillment is the victorious trust of Christ himself in the Father (Heb 5:7; John 17:1).</p>",
+    "21": "<p>The plunder: fifty thousand camels, two hundred fifty thousand sheep, two thousand donkeys, one hundred thousand people. The hyperbolic abundance signals the totality of YHWH&rsquo;s gift — comprehensive, not partial. As a theme: YHWH&rsquo;s blessings given to those who trust him are described in similarly abundant terms (Ps 23:5: &ldquo;my cup overflows&rdquo;; John 10:10: &ldquo;life to the full&rdquo;).</p>",
+    "22": "<p>&ldquo;For the war was God&rsquo;s doing (<em>kî mēʾĕlōhîm hammilḥāmâ</em>).&rdquo; The war belongs to God — this declaration is the theological summary of the entire campaign. It echoes &ldquo;the battle is not yours but God&rsquo;s&rdquo; (2 Chr 20:15) and anticipates the divine warrior motif of Rev 19:11-16 where Christ judges and makes war as the one called &ldquo;Faithful and True.&rdquo; Every military result is grounded in YHWH&rsquo;s sovereign purpose rather than human performance.</p>",
+    "23": "<p>Half-tribe of Manasseh extending from Bashan to Baal-hermon, Senir, and Mount Hermon. The Manassite territory reached to Mount Hermon, the likely setting of the Transfiguration (Matt 17:1-8; Caesarea Philippi is at Hermon&rsquo;s base), where Jesus was revealed in glory between Moses and Elijah. The geographical legacy of the Transjordanian tribes touches the very landscape of pivotal NT revelation.</p>",
+    "24": "<p>Mighty men of valour (<em>gibbôrê ḥayil</em>) — the same phrase used of David&rsquo;s elite warriors (1 Chr 11:10-47). As a theme: valour in YHWH&rsquo;s service is honoured and remembered — a principle that runs through Heb 11&rsquo;s &ldquo;hall of faith&rdquo; where OT faithful are commended by name for their trust in YHWH&rsquo;s promises.</p>",
+    "25": "<p>&ldquo;But they were unfaithful (<em>māʿal</em>) to the God of their fathers and prostituted themselves to the gods of the peoples.&rdquo; The pivot from blessing to judgment comes through covenant infidelity. The verb <em>māʿal</em> (to act treacherously, commit covenant trespass) carries the weight of marital betrayal — hence &ldquo;prostituted themselves&rdquo; (<em>wayyiznû</em>). The prophets diagnose Israel&rsquo;s sin as spiritual adultery requiring a new covenant (Jer 31:32; Ezek 16) written on the heart — fulfilled in Christ.</p>",
+    "26": "<p>YHWH stirs up the spirit of Tilgath-pileser to carry the tribes into exile. The phrase &ldquo;YHWH stirred up&rdquo; attributes the exile directly to divine initiative — the Assyrian king is YHWH&rsquo;s instrument (cf. Isa 10:5: &ldquo;Assyria, the rod of my anger&rdquo;). The exile into Halah, Habor, Hara, and the river of Gozan enacts the covenant curse of Deut 28:36, 64. The greater exile from which Christ delivers — separation from God (Eph 2:12-13) — is the ultimate referent these historical deportations anticipate.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1chronicles', CHRON1_ECHO, CHRON1_ORIGINAL, CHRON1_CONTEXT, CHRON1_CHRIST),
-        ('2chronicles', CHRON2_ECHO, CHRON2_ORIGINAL, CHRON2_CONTEXT, CHRON2_CHRIST),
-        ('ezra', EZRA_ECHO, EZRA_ORIGINAL, EZRA_CONTEXT, EZRA_CHRIST),
-        ('nehemiah', NEH_ECHO, NEH_ORIGINAL, NEH_CONTEXT, NEH_CHRIST),
-        ('esther', ESTHER_ECHO, ESTHER_ORIGINAL, ESTHER_CONTEXT, ESTHER_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', '1chronicles')
+    merge_comm(c, CHRON1)
+    save_comm('mkt-christ', '1chronicles', c)
+    count = sum(len(v) for v in CHRON1.values())
+    print(f'1chronicles mkt-christ: wrote {count} verses for ch 4-5')
 
 if __name__ == '__main__':
     main()

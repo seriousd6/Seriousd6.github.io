@@ -1,23 +1,25 @@
 """
-Ruth + 1-2 Samuel — all four layers.
-Ruth: kinsman-redeemer Boaz (type of Christ), Gentile inclusion in covenant community, genealogy to David/Christ.
-1 Samuel: Samuel (prophet-judge-priest), Saul's failure, David's anointing, Spirit-empowered leadership.
-2 Samuel: Davidic covenant (7:12-16), David's sin and restoration, Psalm 51 background.
+MKT Original Commentary — Ruth chapters 1–4
+Run: python3 scripts/zc-original-ruth-1-4.py
+
+Philological commentary: Hebrew vocabulary, grammar, ANE legal background,
+semantic range of key terms, wordplay, and literary artistry.
+
+Book-level keys:
+- hesed (חֶסֶד) — the book's thematic keyword (1:8; 2:20; 3:10): covenant loyalty
+  that exceeds strict obligation; the moral center of the narrative
+- go'el (גֹּאֵל) — kinsman-redeemer: the legal institution at the heart of chs 3–4
+- kanap (כָּנָף) — wing/skirt: 2:12 (YHWH's wings) deliberately echoed in 3:9
+  (Ruth asks Boaz to be what Boaz prayed YHWH would be)
+- shem (שֵׁם) — name: the perpetuation of the dead man's name through levirate-adjacent
+  redemption (4:5, 10) — echoing the Deuteronomy 25 institution
+- The book's artistry: the narrator's vocabulary is unusually elegant; wordplay and
+  irony pervade the plot (wayiqreh miqrehah, 2:3 — "her chance chanced upon her")
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +31,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,138 +39,43 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# RUTH
-# ============================
-
-RUTH_ECHO = {
+ORIGINAL = {
   "1": {
-    "16": [
-      {"type": "allusion", "target": "John 10:16", "note": "Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God — Ruth's covenant loyalty (hesed) to Naomi is the supreme expression of voluntary covenant commitment; her Gentile adoption into Israel's covenant community is a type of the Gentile church being grafted in"}
-    ]
+    "1": "<p>The book opens with its temporal anchor: <em>bîmê šəpōṭ haššōpəṭîm</em> — 'in the days when the judges judged.' The cognate accusative construction ('judges judged') is emphatic, marking a specific era of instability. The famine (<em>rāʿāb</em>) that drives Elimelech to Moab is the first in a chain of depletion: famine → death of husband → death of sons → Naomi's emptiness (v21: <em>ʾănî məlēʾāh hālaḵtî wərêqām hĕšîḇanî YHWH</em>, 'full I went away and empty YHWH has returned me'). The town is Bethlehem — <em>bêt lāḥem</em>, 'house of bread' — with bitter irony: the house of bread has no bread. Elimelech (<em>ʾĕlîmeleḵ</em>, 'my God is king') leaves with his family for Moab, the nation descended from Lot's incest (Gen 19:37), traditional enemy and the people Ruth will leave to join Israel.</p>",
+    "2": "<p>The name <em>ʾĕlîmeleḵ</em> ('my God is king') carries the book's central theological theme in miniature: YHWH's sovereignty over famine, death, and restoration. His wife Naomi (<em>noʿomî</em>) derives from <em>nāʿēm</em> (to be pleasant/lovely/sweet), the root that becomes bitter irony when she renames herself <em>māraʾ</em> (bitter) in 1:20. Their sons Mahlon and Chilion are names that scholars have read as 'sickness' (<em>māḥălāh</em>) and 'failing/annihilation' (<em>kālāh</em>) — possibly ominous names given retrospectively by the narrator, or genuinely the family's names that resonate tragically with the deaths that follow. The family is identified as Ephrathites from Bethlehem of Judah — the same geographical identity given to Jesse (1 Sam 17:12) and later to the birthplace of the Messiah (Mic 5:2).</p>",
+    "8": "<p>Naomi's parting blessing uses the book's theological keyword for the first time: <em>yaʿaś YHWH ʿimmāḵem ḥeseḏ</em> — 'may YHWH deal with you in <em>hesed</em>.' The term <em>ḥeseḏ</em> (חֶסֶד) is the most theologically rich word in the Hebrew Bible's vocabulary of relationship: it combines love, loyalty, obligation, and initiative beyond obligation. It is the covenant word — YHWH's fundamental disposition toward his covenant partners (Exod 34:6: <em>rab-ḥeseḏ</em>, 'abounding in steadfast love'). Naomi invokes it three times in Ruth (1:8; 2:20; 3:10), each time marking a moment where human covenant loyalty either fails or surpasses expectations. <em>Hesed</em> is both descriptive (what Boaz does) and normative (what YHWH requires and models).</p>",
+    "14": "<p>The two daughters-in-law respond differently: Orpah 'kissed her mother-in-law' (<em>wattišaq lǎḥǎmôtāh</em>), a farewell act, while Ruth 'clung to her' (<em>dāḇəqāh bāh</em>). The verb <em>dāḇaq</em> (to cling, cleave) is the covenant-commitment verb of Gen 2:24 — a man 'cleaves' to his wife in marriage covenant. Its use here signals that Ruth's attachment to Naomi is covenantal in character, not merely emotional. The same verb is used for Israel's covenant faithfulness to YHWH (Deut 10:20; 11:22; 13:4 — 'you shall cleave to him'). Ruth's clinging is the book's first enactment of the <em>hesed</em> that will characterize her throughout.</p>",
+    "16": "<p>Ruth's declaration is one of the most celebrated speeches in the Hebrew Bible for its rhythm, compression, and theological density. Its six clauses form a crescendo: (a) where you go I will go, (b) where you lodge I will lodge, (c) your people will be my people, (d) your God my God, (e) where you die I will die, (f) there I will be buried. The theological center — 'your God my God' — is the formal language of covenant adoption. Ruth is making a legal-religious declaration of affiliation: she is leaving the gods of Moab (cf. Chemosh, Num 21:29) and joining the covenant community of YHWH. The Hebrew lacks explicit covenant vocabulary (<em>berît</em> is absent) but the action is covenantal — a Gentile's voluntary inclusion that will define her entire story.</p>",
+    "20": "<p>Naomi's self-renaming is a rare act of self-denomination in the OT. She exchanges <em>noʿomî</em> (from <em>nāʿēm</em>, pleasant) for <em>māraʾ</em> (bitter), citing <em>šaddai</em> as the agent of her affliction three times in vv20-21: <em>al tiqreʾnâ lî noʿomî qreʾn lî māraʾ kî hēmar lî šaddai</em> — 'Do not call me Naomi; call me Mara, for Almighty has dealt bitterly with me.' <em>El Šaddai</em> is the patriarchal name of God (Gen 17:1; 28:3; 35:11) associated with the Abrahamic covenant promises of descendants and land — the very promises Naomi sees as reversed by her experience. Her lament is formally comparable to the psalms of lament (cf. Ps 88) and to Job, who also names <em>šaddai</em> as his adversary. The bitter irony is that the name she rejects — 'pleasant' — will be exactly what her story becomes by the end.</p>"
   },
   "2": {
-    "20": [
-      {"type": "allusion", "target": "Gal 3:13", "note": "The man is a close relative of ours, one of our guardian-redeemers — Boaz as kinsman-redeemer (go'el) is one of the OT's clearest types of Christ's redemptive work: a near kinsman who has the right and takes on the obligation to redeem the distressed family member; Christ redeems as the one who became our kinsman (incarnation) and paid our ransom (cross)"}
-    ]
-  },
-  "4": {
-    "17": [
-      {"type": "allusion", "target": "Matt 1:5", "note": "They named him Obed. He was the father of Jesse, the father of David — Ruth the Moabite is in the genealogical line of David and therefore of the Messiah (Matt 1:5); a Gentile woman's covenant loyalty becomes the vehicle for the Davidic line through which the Messiah comes; the Gentile inclusion in the covenant community is literal and genealogical"}
-    ]
-  }
-}
-
-RUTH_ORIGINAL = {
-  "2": {
-    "20": "<p><strong>qorov lanu ha-ish, mige-aleinu hu</strong>: 'The man is a close relative of ours, one of our redeemers.' The <em>go'el</em> (kinsman-redeemer) is a legal institution in Israelite law: a near male relative who has the right and duty to redeem a family member's sold land (Lev 25:25), to marry a brother's childless widow (Deut 25:5-10, levirate marriage), to redeem a relative sold into slavery (Lev 25:47-55), and to avenge the blood of a murdered kinsman (the <em>go'el hadam</em>). Boaz fulfills the first two functions. Paul in Galatians uses the redemption/buying-back vocabulary (<em>exagorazo</em>, 'redeemed from the curse of the law', Gal 3:13; 4:5) to describe Christ's work — the kinsman-redeemer framework is the legal-theological background for NT redemption language.</p>"
-  }
-}
-
-RUTH_CONTEXT = {
-  "1": {
-    "1": "<p>Ruth is set in the period of the judges ('in the days when the judges ruled', Ruth 1:1) and is a counter-narrative to the chaos of that era: while Judges ends with 'everyone did what was right in his own eyes,' Ruth depicts a community where covenant loyalty (<em>hesed</em>) is practiced across ethnic lines and social classes. The book's theological center is the keyword <em>hesed</em> (steadfast love, covenant loyalty) — used three times (1:8; 2:20; 3:10). It serves as an introduction to the Davidic narrative: its genealogy (4:17-22) links it directly to 1 Samuel and the rise of David, making Ruth the backstory of the royal family. Matthew's genealogy (Matt 1:5) includes Ruth alongside Tamar, Rahab, and Bathsheba — four women with irregular stories through whom the messianic line runs.</p>"
-  }
-}
-
-RUTH_CHRIST = {
-  "2": {
-    "20": "<p>A type: 'The man is a close relative of ours, one of our guardian-redeemers.' Boaz is the OT's most fully developed type of Christ as redeemer: (1) he is near of kin — Christ became our kinsman through the incarnation (Heb 2:14-15: he shared in flesh and blood that through death he might destroy him who has the power of death); (2) he has the right to redeem — as the sinless son of God, Christ alone qualifies; (3) he is willing to redeem — another go'el existed but declined (Ruth 4:6); Christ took on the obligation no one else could fulfill; (4) he pays the redemption price — Boaz redeems the land and takes Ruth; Christ redeems his people by his blood and takes them as his bride (Eph 5:25-27; Rev 19:7-9). The kinsman-redeemer motif is the book of Ruth's entire Christological contribution.</p>"
-  }
-}
-
-# ============================
-# 1 SAMUEL
-# ============================
-
-SAMUEL1_ECHO = {
-  "2": {
-    "1": [
-      {"type": "allusion", "target": "Luke 1:46-55", "note": "Hannah's prayer: My heart exults in YHWH; my horn is exalted in YHWH — Mary's Magnificat (Luke 1:46-55) is a conscious echo and expansion of Hannah's prayer; both are songs of the lowly being lifted up, the proud being brought down, and the faithful YHWH-servant being vindicated through an unexpected birth"}
-    ]
+    "2": "<p>Ruth proposes to <em>ʾălaqqəṭāh</em> — to glean (<em>lāqaṭ</em>) in the fields. Gleaning is a formal legal institution in the Pentateuch: Lev 19:9-10 and 23:22 mandate that harvesters must not reap the corners of the field or go back over fallen grain, leaving it for the poor and the sojourner (<em>gēr</em>). Ruth is both poor and a foreign sojourner — she qualifies in both categories. Her phrase 'after one in whose eyes I may find favor' (<em>ʾāḥar ʾăšer emṣāʾ ḥēn bəʿênāyw</em>) uses <em>ḥēn</em> (grace/favor), the companion term to <em>ḥeseḏ</em>: <em>ḥēn</em> is the favor shown by a superior to an inferior; <em>ḥeseḏ</em> is the loyalty shown between covenant parties. Ruth will receive both from Boaz.</p>",
+    "3": "<p>'And her chance chanced upon' — <em>wayyiqer miqrehāh</em> — is the narrator's deliberate irony: the same root (<em>qārāh</em>, to happen/chance) doubled to signal that what appears accidental is providential. The identical construction appears in Gen 24:12 where Abraham's servant prays to 'meet' (<em>haqreh nāʾ lᵉpānay</em>) the right woman for Isaac — that too is a divinely orchestrated 'chance' meeting. The narrator refuses to say 'YHWH sent her to Boaz's field'; instead the reader is invited to see the divine hand behind human coincidences too apt to be coincidental. This is the book of Ruth's theological method: YHWH is never directly said to act in chapters 2-3, yet the entire plot moves through human contingencies that YHWH is clearly directing.</p>",
+    "12": "<p>Boaz's blessing over Ruth is a theological hinge: <em>yiššalem YHWH pāʿolāṯēḵ... ʾăšer bāʾt laḥǎsôt taḥat kənāpāyw</em> — 'May YHWH repay your work... under whose wings you have come to take refuge.' The keyword <em>kānāp</em> (כָּנָף) — wing, but also skirt/garment corner — appears here for the first time. YHWH's protective <em>kānāp</em> is the image of divine shelter (Ps 91:4: 'he will cover you with his pinions, under his wings you will find refuge'). This same word reappears in 3:9 when Ruth asks Boaz to 'spread your <em>kānāp</em> over your servant' — making explicit that she is asking Boaz to be what he prayed YHWH would be. The <em>kānāp</em> connection is the book's central typological hinge.</p>",
+    "20": "<p>Naomi's identification of Boaz as <em>mīggōʾălênû hûʾ</em> — 'he is one of our redeemers' — introduces the book's central legal term. <em>Gōʾēl</em> is a participial form of the verb <em>gāʾal</em> (to redeem, buy back). In Israelite law the <em>gōʾēl</em> had three primary obligations: (1) to buy back a relative's land sold under economic duress (Lev 25:25); (2) to marry the widow of a dead relative to perpetuate his name (the levirate-adjacent obligation at work in Ruth 4); (3) to buy back a relative sold into slavery (Lev 25:47-55). Boaz is being identified as one with both the legal standing and the potential willingness to fulfill this role. The <em>hesed</em> Naomi attributes to YHWH ('who has not abandoned his <em>hesed</em>') is precisely the <em>hesed</em> she will see enacted through Boaz — the human redeemer as the instrument of divine <em>hesed</em>.</p>"
   },
   "3": {
-    "1": [
-      {"type": "allusion", "target": "Amos 8:11-12", "note": "The word of YHWH was rare in those days; there was no frequent vision — the period of prophetic silence before Samuel's emergence; Amos prophesies a future famine of hearing YHWH's word; both point to the darkness before divine speech resumes"}
-    ]
+    "9": "<p>Ruth's request — <em>ûpāraśtā kənāpəḵā ʿal ʾāmāṯəḵā kî gōʾēl ʾāttāh</em> — 'spread your wing/skirt over your servant, for you are a redeemer' — is the book's most theologically charged sentence. The word <em>kānāp</em> deliberately echoes Boaz's prayer in 2:12: 'under whose wings you have come to take refuge.' Ruth is asking Boaz to fulfill what he prayed YHWH would be for her. The spreading of the garment corner over a woman is a formal gesture of betrothal (cf. Ezek 16:8: 'I spread my garment over you and covered your nakedness... you became mine') — both a legal act (signaling intention to redeem/marry) and a symbolic enactment of YHWH's sheltering care. Ruth simultaneously proposes marriage, invokes the <em>gōʾēl</em> obligation, and identifies Boaz as the human embodiment of YHWH's protective wing.</p>",
+    "10": "<p>Boaz names Ruth's action as <em>ḥeseḏ</em> for the third and climactic time: <em>heṭabt ḥasdēḵ hāʾaḥărôn min hāriʾšôn</em> — 'you have made your last <em>hesed</em> better than the first.' The 'first' <em>hesed</em> is presumably Ruth's commitment to Naomi in ch1; the 'last' (better) <em>hesed</em> is her seeking Boaz rather than younger men. The comparative <em>heṭabt... min</em> (made better than) is remarkable: Boaz rates Ruth's covenant loyalty as exceeding expectation — she chose the older, qualified redeemer rather than romance with someone younger. <em>Hesed</em> at its fullest is this: acting on covenant obligation even when another option would be personally easier. Boaz recognizes in Ruth the same quality that defines YHWH's own character (Exod 34:6: <em>rab ḥeseḏ</em>).</p>",
+    "12": "<p>Boaz's disclosure — <em>wəgam yēš gōʾēl qārôḇ mimmennî</em> — 'there is also a redeemer closer than I' — introduces the nearer kinsman who must first be given the option to redeem (4:1-6). The legal process requires the nearest <em>gōʾēl</em> to have first refusal; Boaz cannot bypass him without violating the very law that legitimizes the redemption. This creates the narrative tension of ch4: will the nearer <em>gōʾēl</em> redeem? The answer is no — he 'cannot redeem for himself, lest he ruin his own inheritance' (<em>pᵉn-ʾašḥît ʾet naḥǎlātî</em>, 4:6). The legal obstacle that nearly prevents the redemption is the narrative's way of making Boaz's willingness to bear the cost the central point of the book.</p>"
   },
-  "13": {
-    "14": [
-      {"type": "allusion", "target": "Acts 13:22", "note": "YHWH has sought out a man after his own heart — Paul in the Pisidian Antioch synagogue quotes this divine verdict on David to introduce the gospel: God raised up David as a witness, and from his offspring God has brought to Israel a Savior, Jesus, as he promised"}
-    ]
-  },
-  "16": {
-    "13": [
-      {"type": "allusion", "target": "Matt 3:16", "note": "The Spirit of YHWH rushed upon David from that day forward — David's anointing by Samuel and the Spirit's coming upon him is the OT pattern for the messianic anointing; at Jesus's baptism the Spirit descends and remains (John 1:32), the permanent and ungrieved anointing that Saul's experience foreshadowed and forfeited"}
-    ]
-  }
-}
-
-SAMUEL1_ORIGINAL = {
-  "2": {
-    "2": "<p><strong>ein qadosh kaYHWH ki ein biltecha vein tzur kebogheinu</strong>: 'There is none holy like YHWH: for there is none besides you; there is no rock like our God.' Hannah's prayer is the OT's most concentrated statement of YHWH's incomparable holiness and sovereignty — expressed through the reversal-of-fortunes theme (vv. 4-8: the bows of the mighty are broken, but the feeble bind on strength). The pattern is: YHWH exalts the lowly and humbles the proud, not based on human merit but on divine grace and election. Paul's 'God chose what is weak in the world to shame the strong' (1 Cor 1:27) is the Christological application of Hannah's insight: the cross itself is YHWH's ultimate reversal, where the weak and crucified Son defeats the strong.</p>"
-  }
-}
-
-SAMUEL1_CONTEXT = {
-  "1": {
-    "1": "<p>1 Samuel narrates the transition from the period of the judges to the monarchy (ca. 1100-1011 BCE). Its theological structure revolves around three figures: Samuel (the last and greatest judge, the transitional prophet-priest-judge), Saul (the failed king, rejected because of disobedience), and David (the man after God's own heart, the model for the Davidic covenant). The contrast between Saul and David is theologically instructive: Saul has the outward appearance (tall, handsome, from the right tribe) but lacks the inner heart-alignment; David lacks the outward qualifications (youngest, overlooked, a shepherd) but has the heart that YHWH seeks (1 Sam 16:7: YHWH looks on the heart). This contrast between external appearance and internal reality runs from 1 Samuel through Paul's theology of the Spirit vs. the flesh.</p>"
-  }
-}
-
-SAMUEL1_CHRIST = {
-  "16": {
-    "13": "<p>A type: 'And the Spirit of the LORD rushed upon David from that day forward.' David's anointing by Samuel is the OT's paradigmatic messianic event — the word <em>mashiach</em> (anointed one) derives its ultimate meaning from this moment. David is anointed as YHWH's chosen king; the Spirit comes upon him as the empowering for his royal vocation. Jesus's baptism is the typological fulfillment: he is anointed (the meaning of <em>christos</em>, the Greek equivalent of <em>mashiach</em>) by the Spirit who descends and remains (John 1:32-33). The crucial difference: the Spirit rushed upon David from that day forward, but left Saul (1 Sam 16:14); on Jesus the Spirit descends and remains — the permanent anointing that makes him the Messiah whose Spirit-empowered rule will never end.</p>"
-  }
-}
-
-# ============================
-# 2 SAMUEL
-# ============================
-
-SAMUEL2_ECHO = {
-  "7": {
-    "12": [
-      {"type": "fulfillment", "target": "Luke 1:32-33", "note": "I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom — the Davidic covenant promise (Nathan's oracle) is directly cited in the annunciation: the Lord God will give him the throne of his father David, and he will reign over the house of Jacob forever, and of his kingdom there will be no end"},
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "God had sworn with an oath to him that he would set one of his descendants on his throne — Peter's Pentecost sermon cites the Davidic covenant (2 Sam 7 + Ps 16 + Ps 110) as the OT basis for Jesus's resurrection and exaltation; the resurrection is the fulfillment of the promise to raise up David's offspring"},
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "I am the root and the descendant of David — Revelation's final identification of Jesus as the Davidic heir fulfills the 2 Sam 7 promise in its full scope: not merely a political successor but the eternal Son who receives an eternal kingdom"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — the father-son language of the Davidic covenant (2 Sam 7:14) is applied to Christ in Heb 1:5 as proof of his superiority to angels; no angel was ever called God's Son in this royal, covenantal sense"}
-    ]
-  }
-}
-
-SAMUEL2_ORIGINAL = {
-  "7": {
-    "12": "<p><strong>vakimoti et zarecha achareicha asher yetze mimeecha vehakhinoti et mamlaChto</strong>: 'I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.' The Davidic covenant (2 Sam 7:12-16) is the OT's central messianic text — the foundational oracle to which all subsequent messianic prophecy refers. Its key elements: (1) a son who builds a house (temple/dynasty); (2) a father-son relationship (<em>ani ehyeh lo le-av vehu yihyeh li le-ben</em>); (3) discipline for sin but not abandonment; (4) an eternal throne (<em>venekkon kisso ad olam</em>, I will establish his throne forever). The covenant applies both to the immediate heir Solomon and, in an escalating way, to the ultimate heir — which Psalms 2, 89, 110 and the prophets develop into the eschatological Messiah.</p>"
-  }
-}
-
-SAMUEL2_CONTEXT = {
-  "7": {
-    "1": "<p>The Davidic covenant (2 Sam 7) is spoken through the prophet Nathan when David, having consolidated his kingdom in Jerusalem, desires to build a temple for YHWH. YHWH's reversal — 'you will not build me a house; I will build you a house (dynasty)' — is the pivot of the OT's messianic program. The word <em>bayit</em> (house) operates on three levels simultaneously: the physical temple David wants to build, the dynastic household YHWH promises, and the future son who will build both. The oracle has a near fulfillment (Solomon builds the temple, 1 Kings 6-8) and a far fulfillment (the eternal son whose kingdom has no end). The 'already and not yet' hermeneutic of NT fulfillment readings is modeled on 2 Samuel 7 itself, which already operates on two temporal levels.</p>"
-  }
-}
-
-SAMUEL2_CHRIST = {
-  "7": {
-    "12": "<p>A direct revelation: 'When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom ... and I will establish the throne of his kingdom forever.' The Davidic covenant is the OT's formal contract establishing the messianic expectation. Jesus of Nazareth's Davidic lineage is asserted by both Matthew (1:1-17) and Luke (3:23-38), confirmed by Paul (Rom 1:3: descended from David according to the flesh), and by Jesus himself (Mark 12:35-37). The eternal throne (v. 13, 16) is fulfilled in the resurrection: unlike David's physical descendants who all died, Christ rose and will reign forever. Peter's Pentecost sermon (Acts 2:29-36) explicitly applies 2 Sam 7 + Ps 16 + Ps 110 to the risen Christ: the Davidic covenant's promise of an unending throne is fulfilled not in an earthly dynasty but in the resurrection-life of the Son.</p>"
+  "4": {
+    "1": "<p>Boaz goes to 'the gate' (<em>haššaʿar</em>) — the city gate was the formal legal venue in ancient Israel, equivalent to a courthouse: 'he sat down there' (<em>wayyēšeḇ šām</em>) in the position of a presiding authority. The nearer redeemer is summoned with the circumlocution <em>pəlōnî ʾalmōnî</em> — literally 'so-and-so' (no name given) — a deliberate anonymizing by the narrator: the man who refuses to perpetuate the dead man's name has his own name suppressed in the record. The scene has all the formal features of Israelite covenant-making at the gate: ten elders as witnesses, a formal recitation of terms, public declaration of acceptance or refusal, and the symbolic gesture ratifying the transaction.</p>",
+    "5": "<p>Boaz's escalation of the terms is the legal pivot: 'On the day you buy the field from the hand of Naomi, you also acquire Ruth the Moabite, the widow of the dead, in order to restore the name of the dead to his inheritance' (<em>lᵉhāqîm šēm hammēt ʿal naḥǎlātô</em>). The phrase <em>lᵉhāqîm šēm</em> — to raise up a name — is the levirate obligation of Deut 25:5-10: when a man dies without sons, his brother is to marry the widow 'to perpetuate his name in Israel' (<em>wəqāmāh šəm ʾāḥîw bəyiśrāʾēl</em>). The name (<em>šēm</em>) in Hebrew thought is the continuation of personhood and family identity — 'cutting off the name' (<em>kārat šēm</em>) is equivalent to annihilating the person from Israel's memory and inheritance. What Boaz undertakes is therefore not merely a legal transaction but a raising of the dead from oblivion.</p>",
+    "6": "<p>The nearer redeemer's refusal — <em>lōʾ ʾûḵal liḡʾol lî pᵉn-ʾašḥît ʾet naḥǎlātî</em> — 'I cannot redeem for myself, lest I ruin my own inheritance' — is legal rather than moral: taking Ruth and producing children in Mahlon's name would divide his estate between his own heirs and the adopted line. The verb <em>šāḥat</em> (ruin/destroy) is strong. He is calculating that the cost of redemption exceeds what he is willing to pay. This is precisely what makes Boaz's willingness significant: Boaz accepts the cost that the nearer redeemer refuses. The typological weight of the scene is carried by this contrast: there was one who had the right but would not pay; there was one who both had the right and willingly bore the cost.</p>",
+    "7": "<p>The sandal ceremony (<em>šālaph naʿălô</em>, drawing off the sandal) ratifies the legal transfer by symbolic gesture: 'and this was the custom formerly in Israel concerning redeeming and exchanging: to confirm a transaction, the one drew off his sandal and gave it to the other.' The Deut 25:9-10 levirate ceremony involves the spurned widow pulling off the refusing brother's sandal in disgrace; here the nearer redeemer draws off his own sandal to cede the right voluntarily — a related but distinct gesture. The sandal (<em>naʿal</em>) represents the right of walking on the land: transferring it transfers the right to the property and all its obligations. The narrator's parenthetical explanation suggests this custom had become archaic by the time of writing — the book is recording not just a story but a legal-cultural world.</p>",
+    "10": "<p>Boaz's formal declaration before the witnesses climaxes in the <em>šēm</em> clause: <em>ûšəm hammēt lōʾ yikkārēt mēʿim ʾeḥāyw ûmišʿar məqômô</em> — 'so that the name of the dead may not be cut off from among his brothers and from the gate of his place.' The phrase <em>yikkārēt šēm</em> (the name being cut off) is the OT's starkest formulation of personal extinction — to have one's name cut off is to cease to exist in communal memory, to have no inheritance, no descendants, no ongoing participation in Israel's story. Boaz's legal act is a rescue from annihilation: he raises up a name that was about to be cut off. The verb <em>kārat</em> (cut off) is the same used for the death penalty and for covenant-making (covenant = <em>kārat berît</em>, cutting a covenant); to prevent the name from being cut off is to preserve covenant continuity.</p>",
+    "17": "<p>'The women of the neighborhood gave him a name, saying, &ldquo;A son has been born to Naomi&rdquo;' — <em>yullad bēn lᵉnoʿomî</em>. The child Obed is formally born to Naomi by adoption-language, completing the <em>lᵉhāqîm šēm</em> purpose of the redemption: Elimelech's family line is not cut off but continues through Obed. The name <em>ʿôḇēḏ</em> means 'servant/worshipper' (<em>ʿāḇaḏ</em>, to serve/worship). The genealogy that follows (vv18-22) — from Perez (the son of Judah by Tamar, another story of unexpected covenant inclusion) through to David — is the book's final statement: the story of a Moabite woman's <em>hesed</em> and a kinsman-redeemer's willing sacrifice is the genealogical foundation of the Davidic line.</p>",
+    "18": "<p>The closing genealogy (vv18-22) connects the Ruth narrative to the Davidic covenant: Perez → Hezron → Ram → Amminadab → Nahshon → Salmon → Boaz → Obed → Jesse → David. This is the Judahite line that Matt 1:3-6 reproduces verbatim in the genealogy of Jesus. The book of Ruth is not merely a story of covenant loyalty but the genealogical foundation document of the Davidic monarchy — and through it, the messianic line. The Gentile woman (Ruth the Moabite, Matt 1:5) who chose YHWH and enacted <em>hesed</em> is in the direct biological line of the Son of God. The book answers the question: where does David come from? The answer is: from a Moabite woman's covenant loyalty and a kinsman-redeemer's willing sacrifice — both of which are types of what the final Son of David will himself be and do.</p>"
   }
 }
 
 def main():
-    books = [
-        ('ruth', RUTH_ECHO, RUTH_ORIGINAL, RUTH_CONTEXT, RUTH_CHRIST),
-        ('1samuel', SAMUEL1_ECHO, SAMUEL1_ORIGINAL, SAMUEL1_CONTEXT, SAMUEL1_CHRIST),
-        ('2samuel', SAMUEL2_ECHO, SAMUEL2_ORIGINAL, SAMUEL2_CONTEXT, SAMUEL2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-original', 'ruth')
+    merge_comm(c, ORIGINAL)
+    save_comm('mkt-original', 'ruth', c)
+    count = sum(len(v) for v in ORIGINAL.values())
+    print(f'ruth mkt-original: wrote {count} verses across ch 1-4')
 
 if __name__ == '__main__':
     main()

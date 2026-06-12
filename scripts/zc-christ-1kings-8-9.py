@@ -1,23 +1,22 @@
 """
-1-2 Kings — all four layers.
-Key NT: Elijah/Elisha (type of John the Baptist/Jesus), temple dedication (1 Kgs 8),
-        Naaman's healing (Luke 4 context), widow of Zarephath (Luke 4),
-        Josiah's reform, exile and its theological meaning.
+MKT Christ Commentary — 1 Kings chapters 8–9
+Run: python3 scripts/zc-christ-1kings-8-9.py
+
+Ch8: kᵉḇôḏ filling the temple → John 1:14 (true tabernacle); Heb 9:24 (heavenly sanctuary);
+     šēm theology vs. incarnation — YHWH's name/presence distinction resolved in Christ;
+     forgiveness-toward-this-house → Heb 7:25 / Rom 8:34 (Christ's intercession)
+Ch9: Conditional covenant curse → Gal 3:13 / Matt 27:51 (Christ takes the curse)
+
+Key typological connections:
+- 8:11: kᵉḇôḏ filling temple → John 1:14; Rev 21:3 (true dwelling of God with man)
+- 8:27: heaven cannot contain YHWH → John 2:19-21 (Jesus = true temple); Acts 7:48
+- 8:30: hear and forgive (intercession toward the house) → Heb 7:25 / Rom 8:34
+- 9:7: temple becomes a heap of ruins (conditional curse) → Gal 3:13; Matt 27:51
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +28,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,96 +36,23 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-KINGS1_ECHO = {
+CHRIST = {
   "8": {
-    "27": [
-      {"type": "allusion", "target": "Acts 7:48-50", "note": "But will God indeed dwell on the earth? Behold, heaven and the highest heaven cannot contain you, how much less this house that I have built — Solomon's prayer at the temple dedication acknowledges divine transcendence; Stephen quotes Isa 66:1-2 to make the same point: the Most High does not dwell in temples made by human hands; both point toward the incarnation as the true dwelling of God among his people (John 1:14)"}
-    ]
+    "11": "<p>The <em>kᵉḇôḏ YHWH</em> filling the temple at its dedication — <em>wᵉkāḇôḏ YHWH mālaʾ ʾet bêt YHWH</em> — is the OT&rsquo;s type of the divine presence fully inhabiting a human-constructed dwelling. John 1:14 is the NT&rsquo;s answer to what this presence ultimately was: <em>kai ho logos sarx egeneto kai eskēnōsen en hēmin, kai etheasametha tēn doxan autou</em> — &lsquo;the Word became flesh and tabernacled (<em>eskēnōsen</em>) among us, and we beheld his glory.&rsquo; The verb <em>skēnoō</em> (to pitch a tent, to tabernacle) directly evokes the Tent of Meeting and the temple tradition: the divine glory that filled Solomon&rsquo;s temple at dedication now inhabits human flesh at the incarnation. The Johannine word &lsquo;glory&rsquo; (<em>doxa</em>) translates the Hebrew <em>kāḇôḏ</em> — John is saying that what Israel saw in the cloud-filled temple, the disciples saw in the person of Jesus. Rev 21:3 (&lsquo;the dwelling of God is with man, and he will dwell with them&rsquo;) is the eschatological consummation: the presence that filled the Solomonic temple, that tabernacled in Christ, will fill the new creation without mediation. The typological sequence — tabernacle (Exod 40) → temple (1 Kgs 8) → incarnation (John 1) → new creation (Rev 21) — traces the single trajectory of divine inresidence seeking its final home.</p>",
+    "27": "<p>Solomon&rsquo;s prayer — <em>hinnēh haššāmayim ûšᵉmê haššāmayim lōʾ yᵉḵalᵉlûḵāh ʾap kî habbayit hazzeh</em>, &lsquo;heaven and the highest heaven cannot contain you, how much less this house&rsquo; — poses the exact problem that the incarnation resolves. The Deuteronomic <em>šēm</em>-theology was a partial solution: YHWH&rsquo;s name dwells there, not YHWH&rsquo;s person — divine accessibility without divine containment. Stephen applies this in Acts 7:48-49 (&lsquo;the Most High does not dwell in houses made by hands&rsquo;) to argue the temple&rsquo;s obsolescence. But the NT&rsquo;s resolution is not the temple&rsquo;s abolition — it is the incarnation as the one place where the divine name and the divine person truly coincide. Jesus in John 2:19-21 responds to the demand for a temple-sign: &lsquo;destroy this temple, and in three days I will raise it up&rsquo; — and the narrator explains: <em>ekeinos de elegen peri tou naou tou sōmatos autou</em>, &lsquo;he was speaking about the temple of his body.&rsquo; The house Solomon said could not contain YHWH has its answer in the body of the Son: the one in whom &lsquo;all the fullness of the Godhead dwells bodily&rsquo; (Col 2:9) — who does not merely bear the divine name but is the Word who was with God and was God (John 1:1), now in flesh.</p>",
+    "30": "<p>The dedicatory prayer&rsquo;s repeated refrain — <em>wᵉʾattāh tišmaʿ ʾel mᵉqôm šiḇtᵉḵā ʾel haššāmayim wᵉšāmaʿtā wᵉsālaḥtā</em>, &lsquo;and you will hear in your dwelling place in heaven, and when you hear you will forgive&rsquo; — establishes the temple as the mediation-point for divine forgiveness: prayer directed toward the house ascends to YHWH enthroned in heaven, who hears and forgives. Heb 7:25 names the fulfillment: <em>hothen kai sōzein eis to panteles dynatai tous proserchomenous di&rsquo; autou tō theō, pantote zōn eis to entygchanein hyper autōn</em> — &lsquo;therefore he is able to save to the uttermost those who draw near to God through him, since he always lives to make intercession for them.&rsquo; The temple&rsquo;s directional prayer-structure (&lsquo;toward this house... YHWH will hear in heaven&rsquo;) becomes in Heb 7 a person-structure: Jesus himself is the mediating point through whom prayer ascends and forgiveness descends, and he lives permanently to make that intercession. Rom 8:34 makes the same point: <em>hos kai entygchanei hyper hēmōn</em>, &lsquo;he who also intercedes for us.&rsquo; The temple&rsquo;s mediation was architectural and ritual; Christ&rsquo;s mediation is personal and unending — the fulfillment and replacement of everything the temple&rsquo;s architecture was designed to express.</p>"
   },
-  "17": {
-    "1": [
-      {"type": "allusion", "target": "Jas 5:17", "note": "Elijah was a man with a nature like ours, and he prayed fervently that it might not rain, and for three years and six months it did not rain on the earth — James cites Elijah's prayer as an example of effective righteous prayer; the three-and-a-half-year drought is applied typologically in Revelation (11:6) to the witnesses' power"}
-    ],
-    "8": [
-      {"type": "fulfillment", "target": "Luke 4:25-26", "note": "In truth I tell you, there were many widows in Israel in the days of Elijah ... and Elijah was sent to none of them but only to Zarephath, a city of Sidon, to a woman who was a widow — Jesus cites the widow of Zarephath (1 Kgs 17:8-16) as an OT precedent for divine grace going to a Gentile; the Nazareth congregation's rejection of Jesus follows their rejection of this theological point"}
-    ]
-  },
-  "19": {
-    "10": [
-      {"type": "allusion", "target": "Rom 11:2-4", "note": "I have been very jealous for YHWH the God of hosts. For the people of Israel have forsaken your covenant, thrown down your altars, and killed your prophets with the sword, and I, even I only, am left — Paul cites Elijah's complaint and YHWH's response (seven thousand who have not bowed to Baal) as proof that God has not rejected Israel; the remnant principle is the OT basis for Israel's partial hardening and the elect remnant within"}
-    ]
-  }
-}
-
-KINGS1_ORIGINAL = {
-  "8": {
-    "46": "<p><strong>ki yechetau lecha ki ein adam asher lo yecheta</strong>: 'For there is no one who does not sin' — Solomon's prayer at the temple dedication contains the OT's clearest statement of universal sinfulness (v. 46), which shapes the entire temple theology: the temple is not a reward for Israel's righteousness but YHWH's provision for the people's ongoing need of forgiveness. The request for forgiveness when Israel sins (8:46-53) anticipates the entire sacrificial system's purpose. Paul quotes a similar principle in Rom 3:23 ('all have sinned and fall short of the glory of God') as the universal diagnosis that makes the gospel necessary.</p>"
-  },
-  "19": {
-    "12": "<p><strong>ve-achar haesh qol demamah daqah</strong>: 'And after the fire the sound of a low whisper' (or 'a still small voice,' KJV). The theophany at Horeb (Elijah's experience in 1 Kgs 19) deliberately echoes Sinai: Elijah is at Horeb (another name for Sinai), the mountain of God; YHWH passes by with wind, earthquake, and fire (the Sinai theophanic elements, Exod 19:16-19). But the climax is not in the dramatic elements but in the <em>qol demamah daqah</em> — the sound of sheer silence, the gentle whisper, the still small voice. YHWH is not absent from the dramatic; but he speaks in the gentle. The NT's Spirit comes both in wind and fire (Acts 2:2-3) and in the interior witness of the heart (Rom 8:16).</p>"
-  }
-}
-
-KINGS1_CONTEXT = {
-  "1": {
-    "1": "<p>1-2 Kings (originally one book, divided in the LXX) narrates the history of the united monarchy (Solomon) and the divided kingdom (Israel/Judah) from ca. 971-561 BCE, ending with the release of Jehoiachin from Babylonian prison. Its authors (the 'Deuteronomistic historian') evaluate each king against the standard of Deuteronomy: fidelity to YHWH alone, worship only at the Jerusalem temple, and covenant obedience. The theological verdict is relentlessly critical: of the 20 kings of Judah, only Hezekiah and Josiah receive full approval. The narrative explains why the exile happened: Israel and Judah were destroyed because they refused to keep YHWH's covenant. This theological history is the background for understanding the exile as a covenant curse (Deut 28:36-37, 64-68) rather than YHWH's defeat.</p>"
-  }
-}
-
-KINGS1_CHRIST = {
-  "19": {
-    "18": "<p>A direct revelation: 'Yet I will leave seven thousand in Israel, all the knees that have not bowed to Baal, and every mouth that has not kissed him.' The remnant principle — YHWH preserves a faithful minority even when the majority apostasizes — is one of the OT's most important theological contributions. Paul applies it directly to his own time (Rom 11:4-5): 'So too at the present time there is a remnant, chosen by grace.' The Elijah crisis reveals the structure of all subsequent covenant history: visible apostasy of the majority, invisible remnant of the elect, YHWH's sovereign preservation of his people through what appears to be total defeat. The cross looks like the end of Jesus's movement; Pentecost reveals it was the beginning of the new covenant remnant.</p>"
-  }
-}
-
-KINGS2_ECHO = {
-  "2": {
-    "11": [
-      {"type": "allusion", "target": "Luke 9:51", "note": "Elijah went up by a whirlwind into heaven — the ascension of Elijah (taken up without dying) is the OT's second ascension-figure (with Enoch, Gen 5:24); Jesus's ascension (Acts 1:9) fulfills the pattern; Luke explicitly notes Jesus 'set his face to go to Jerusalem' in the context of his upcoming departure (exodou, Luke 9:31) echoing Elijah's departure"},
-      {"type": "fulfillment", "target": "Matt 17:3", "note": "Elijah and Moses appear with Jesus at the Transfiguration — the two figures who had unique mountaintop theophanies (Moses at Sinai, Elijah at Horeb/Sinai) flank the transfigured Jesus; the Transfiguration is the convergence of the Law (Moses) and the Prophets (Elijah) in the one of whom they spoke"}
-    ]
-  },
-  "4": {
-    "35": [
-      {"type": "allusion", "target": "Acts 20:9-12", "note": "The child sneezed seven times and opened his eyes — Elisha raises the Shunammite's son (2 Kgs 4:32-37); Paul raises Eutychus in a similar pattern (fell from a third floor, Paul lay on him, he came to life); both instances frame the apostle as an Elisha-figure extending Jesus's resurrection ministry"}
-    ]
-  },
-  "5": {
-    "14": [
-      {"type": "fulfillment", "target": "Luke 4:27", "note": "There were many lepers in Israel in the time of the prophet Elisha, and none of them was cleansed but only Naaman the Syrian — Jesus cites Naaman's healing as the OT precedent for grace going to a Gentile outsider; Naaman's healing is a type of Gentile inclusion, accomplished through the humbling medium of simple obedience (washing in the Jordan)"}
-    ]
-  }
-}
-
-KINGS2_ORIGINAL = {
-  "2": {
-    "9": "<p><strong>vehi peh shnayim beruchecha elai</strong>: 'Please let there be a double portion of your spirit on me.' Elisha's request for a 'double portion' (<em>pi shnayim</em>) is technically a request for the eldest son's inheritance share (Deut 21:17) — he is asking to be Elijah's primary heir and successor. Elijah responds that this is a 'hard thing' (<em>kasha</em>) but it will be granted if Elisha sees him taken. Elisha does see it, receives the spirit, and performs miracles that echo and exceed Elijah's. The Elijah-Elisha succession pattern shapes the NT's understanding of John the Baptist-Jesus relationship: John comes in the spirit and power of Elijah (Luke 1:17), and Jesus works in a pattern that exceeds John's, as Elisha's miracles exceeded Elijah's in number (Elijah performs 8 miracles in Kings; Elisha performs 16).</p>"
-  }
-}
-
-KINGS2_CONTEXT = {
-  "17": {
-    "6": "<p>The fall of Samaria (722 BCE) to the Assyrian Empire (under Sargon II, 2 Kgs 17:6) ended the northern kingdom of Israel after 210 years and 19 kings (every one of whom 'did evil in the sight of YHWH'). The author of Kings provides the theological explanation in 17:7-23: because Israel sinned against YHWH, walked in the customs of the nations, built high places, served Baal — YHWH removed them out of his sight. The Assyrian exile of the northern tribes ('the ten lost tribes') was permanent: they were never restored as a distinct entity. The northern exile is the first fulfillment of the Deuteronomic covenant curses (Deut 28:36, 64); the Babylonian exile of Judah (586 BCE) is the second. Both are explained as covenant consequences, not historical accidents.</p>"
-  }
-}
-
-KINGS2_CHRIST = {
-  "5": {
-    "14": "<p>A type: 'So he went down and dipped himself seven times in the Jordan, according to the word of the man of God, and his flesh was restored like the flesh of a little child, and he was clean.' Naaman's healing is one of the OT's most theologically rich type-narratives: (1) the outsider (a Gentile military commander) receives healing denied to insiders (Israelite lepers, Luke 4:27); (2) the healing comes through water — specifically the Jordan, the covenant-crossing water; (3) the means is foolishly simple (wash seven times) — Naaman expects a dramatic prophetic ritual; (4) the result is total cleansing. Jesus's citation of Naaman in Luke 4:27 to explain his own ministry to Nazareth (grace going to unexpected outsiders) and the Baptist's baptism in the Jordan both stand in the Naaman-and-the-Jordan typological stream: the Jordan is the water of covenant-entry and cleansing, fulfilled in baptism into Christ.</p>"
+  "9": {
+    "7": "<p>YHWH&rsquo;s conditional warning — <em>wᵉhikkrattî ʾet yiśrāʾēl mēʿal pᵉnê hāʾădāmāh... wᵉhabbayit hazzeh yihyeh ʿelyôn</em>, &lsquo;I will cut off Israel from the land... and this house will become a heap of ruins&rsquo; — is the curse-side of the Deuteronomic covenant (Deut 28:15-68). The temple&rsquo;s destruction is the enacted covenant curse: YHWH himself destroys his own house when Israel violates the covenant. Paul in Gal 3:13 names how the curse is absorbed: <em>Christos hēmas exēgorasen ek tēs kataras tou nomou genomenos hyper hēmōn katara</em> — &lsquo;Christ redeemed us from the curse of the law by becoming a curse for us.&rsquo; The conditional curse of 1 Kgs 9:7 — exile, temple-destruction, becoming &lsquo;a proverb and a byword among all peoples&rsquo; (v7) — fell in 586 BCE exactly as YHWH warned. The NT argument is that Christ entered that curse-structure and exhausted it: the temple veil torn at his death (Matt 27:51) signals the old temple&rsquo;s end and the new-temple inauguration in Christ&rsquo;s body (John 2:21). The conditional covenant&rsquo;s worst clause — the heap of ruins — was fulfilled; but it was fulfilled in the one who bore the curse so that no further fulfillment is required. Eph 2:14 (&lsquo;he himself is our peace, who has made us both one and has broken down in his flesh the dividing wall of hostility&rsquo;) describes the temple&rsquo;s replacement: not stone but flesh, not conditional covenant but grace.</p>"
   }
 }
 
 def main():
-    books = [
-        ('1kings', KINGS1_ECHO, KINGS1_ORIGINAL, KINGS1_CONTEXT, KINGS1_CHRIST),
-        ('2kings', KINGS2_ECHO, KINGS2_ORIGINAL, KINGS2_CONTEXT, KINGS2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', '1kings')
+    merge_comm(c, CHRIST)
+    save_comm('mkt-christ', '1kings', c)
+    count = sum(len(v) for v in CHRIST.values())
+    print(f'1kings mkt-christ: wrote {count} verses across ch 8-9')
 
 if __name__ == '__main__':
     main()

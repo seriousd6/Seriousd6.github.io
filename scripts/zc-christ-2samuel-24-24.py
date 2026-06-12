@@ -1,23 +1,22 @@
 """
-Ruth + 1-2 Samuel — all four layers.
-Ruth: kinsman-redeemer Boaz (type of Christ), Gentile inclusion in covenant community, genealogy to David/Christ.
-1 Samuel: Samuel (prophet-judge-priest), Saul's failure, David's anointing, Spirit-empowered leadership.
-2 Samuel: Davidic covenant (7:12-16), David's sin and restoration, Psalm 51 background.
+MKT Christ Commentary — 2 Samuel chapter 24
+Run: python3 scripts/zc-christ-2samuel-24-24.py
+
+Ch24: Struck conscience and godly grief — John 16:8 / 2 Cor 7:10;
+      Angel's sword stayed at threshing floor — Rom 3:25 / Heb 7:25 propitiation type;
+      Threshing floor as judgment site — Matt 3:12 / John 2:13-17;
+      Sacrifice that stops the plague — Heb 9:14 / Num 16:48 atonement type
+
+Typological links:
+- 24:10 → 2 Cor 7:10; John 16:8; Matt 5:3 — struck conscience / godly grief
+- 24:16 → Rom 3:25; Heb 7:25; Heb 13:12 — angel of wrath stayed = propitiation type
+- 24:18 → Matt 3:12; John 2:13-17 — threshing floor as judgment/separation site
+- 24:25 → Heb 9:14; Num 16:48; Rom 5:9 — sacrifice arrests plague / blood averts wrath
 """
 
 import json, pathlib
 
 ROOT = pathlib.Path(__file__).parent.parent
-
-def load_echo(book):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    return json.loads(p.read_text()) if p.exists() else {}
-
-def save_echo(book, data):
-    p = ROOT / 'data' / 'echoes' / f'{book}.json'
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
-    print(f'  wrote {p.relative_to(ROOT)}')
 
 def load_comm(layer, book):
     p = ROOT / 'data' / 'commentary' / layer / f'{book}.json'
@@ -29,20 +28,6 @@ def save_comm(layer, book, data):
     p.write_text(json.dumps(data, ensure_ascii=False, indent=None))
     print(f'  wrote {p.relative_to(ROOT)}')
 
-def merge_echo(existing, new_data):
-    for ch, verses in new_data.items():
-        if ch not in existing:
-            existing[ch] = {}
-        for v, entries in verses.items():
-            if v not in existing[ch]:
-                existing[ch][v] = entries
-            else:
-                seen = {(e['type'], e['target']) for e in existing[ch][v]}
-                for e in entries:
-                    if (e['type'], e['target']) not in seen:
-                        existing[ch][v].append(e)
-                        seen.add((e['type'], e['target']))
-
 def merge_comm(existing, new_data):
     for ch, verses in new_data.items():
         if ch not in existing:
@@ -51,138 +36,21 @@ def merge_comm(existing, new_data):
             if v not in existing[ch]:
                 existing[ch][v] = html
 
-# ============================
-# RUTH
-# ============================
-
-RUTH_ECHO = {
-  "1": {
-    "16": [
-      {"type": "allusion", "target": "John 10:16", "note": "Where you go I will go, and where you stay I will stay. Your people will be my people and your God my God — Ruth's covenant loyalty (hesed) to Naomi is the supreme expression of voluntary covenant commitment; her Gentile adoption into Israel's covenant community is a type of the Gentile church being grafted in"}
-    ]
-  },
-  "2": {
-    "20": [
-      {"type": "allusion", "target": "Gal 3:13", "note": "The man is a close relative of ours, one of our guardian-redeemers — Boaz as kinsman-redeemer (go'el) is one of the OT's clearest types of Christ's redemptive work: a near kinsman who has the right and takes on the obligation to redeem the distressed family member; Christ redeems as the one who became our kinsman (incarnation) and paid our ransom (cross)"}
-    ]
-  },
-  "4": {
-    "17": [
-      {"type": "allusion", "target": "Matt 1:5", "note": "They named him Obed. He was the father of Jesse, the father of David — Ruth the Moabite is in the genealogical line of David and therefore of the Messiah (Matt 1:5); a Gentile woman's covenant loyalty becomes the vehicle for the Davidic line through which the Messiah comes; the Gentile inclusion in the covenant community is literal and genealogical"}
-    ]
-  }
-}
-
-RUTH_ORIGINAL = {
-  "2": {
-    "20": "<p><strong>qorov lanu ha-ish, mige-aleinu hu</strong>: 'The man is a close relative of ours, one of our redeemers.' The <em>go'el</em> (kinsman-redeemer) is a legal institution in Israelite law: a near male relative who has the right and duty to redeem a family member's sold land (Lev 25:25), to marry a brother's childless widow (Deut 25:5-10, levirate marriage), to redeem a relative sold into slavery (Lev 25:47-55), and to avenge the blood of a murdered kinsman (the <em>go'el hadam</em>). Boaz fulfills the first two functions. Paul in Galatians uses the redemption/buying-back vocabulary (<em>exagorazo</em>, 'redeemed from the curse of the law', Gal 3:13; 4:5) to describe Christ's work — the kinsman-redeemer framework is the legal-theological background for NT redemption language.</p>"
-  }
-}
-
-RUTH_CONTEXT = {
-  "1": {
-    "1": "<p>Ruth is set in the period of the judges ('in the days when the judges ruled', Ruth 1:1) and is a counter-narrative to the chaos of that era: while Judges ends with 'everyone did what was right in his own eyes,' Ruth depicts a community where covenant loyalty (<em>hesed</em>) is practiced across ethnic lines and social classes. The book's theological center is the keyword <em>hesed</em> (steadfast love, covenant loyalty) — used three times (1:8; 2:20; 3:10). It serves as an introduction to the Davidic narrative: its genealogy (4:17-22) links it directly to 1 Samuel and the rise of David, making Ruth the backstory of the royal family. Matthew's genealogy (Matt 1:5) includes Ruth alongside Tamar, Rahab, and Bathsheba — four women with irregular stories through whom the messianic line runs.</p>"
-  }
-}
-
-RUTH_CHRIST = {
-  "2": {
-    "20": "<p>A type: 'The man is a close relative of ours, one of our guardian-redeemers.' Boaz is the OT's most fully developed type of Christ as redeemer: (1) he is near of kin — Christ became our kinsman through the incarnation (Heb 2:14-15: he shared in flesh and blood that through death he might destroy him who has the power of death); (2) he has the right to redeem — as the sinless son of God, Christ alone qualifies; (3) he is willing to redeem — another go'el existed but declined (Ruth 4:6); Christ took on the obligation no one else could fulfill; (4) he pays the redemption price — Boaz redeems the land and takes Ruth; Christ redeems his people by his blood and takes them as his bride (Eph 5:25-27; Rev 19:7-9). The kinsman-redeemer motif is the book of Ruth's entire Christological contribution.</p>"
-  }
-}
-
-# ============================
-# 1 SAMUEL
-# ============================
-
-SAMUEL1_ECHO = {
-  "2": {
-    "1": [
-      {"type": "allusion", "target": "Luke 1:46-55", "note": "Hannah's prayer: My heart exults in YHWH; my horn is exalted in YHWH — Mary's Magnificat (Luke 1:46-55) is a conscious echo and expansion of Hannah's prayer; both are songs of the lowly being lifted up, the proud being brought down, and the faithful YHWH-servant being vindicated through an unexpected birth"}
-    ]
-  },
-  "3": {
-    "1": [
-      {"type": "allusion", "target": "Amos 8:11-12", "note": "The word of YHWH was rare in those days; there was no frequent vision — the period of prophetic silence before Samuel's emergence; Amos prophesies a future famine of hearing YHWH's word; both point to the darkness before divine speech resumes"}
-    ]
-  },
-  "13": {
-    "14": [
-      {"type": "allusion", "target": "Acts 13:22", "note": "YHWH has sought out a man after his own heart — Paul in the Pisidian Antioch synagogue quotes this divine verdict on David to introduce the gospel: God raised up David as a witness, and from his offspring God has brought to Israel a Savior, Jesus, as he promised"}
-    ]
-  },
-  "16": {
-    "13": [
-      {"type": "allusion", "target": "Matt 3:16", "note": "The Spirit of YHWH rushed upon David from that day forward — David's anointing by Samuel and the Spirit's coming upon him is the OT pattern for the messianic anointing; at Jesus's baptism the Spirit descends and remains (John 1:32), the permanent and ungrieved anointing that Saul's experience foreshadowed and forfeited"}
-    ]
-  }
-}
-
-SAMUEL1_ORIGINAL = {
-  "2": {
-    "2": "<p><strong>ein qadosh kaYHWH ki ein biltecha vein tzur kebogheinu</strong>: 'There is none holy like YHWH: for there is none besides you; there is no rock like our God.' Hannah's prayer is the OT's most concentrated statement of YHWH's incomparable holiness and sovereignty — expressed through the reversal-of-fortunes theme (vv. 4-8: the bows of the mighty are broken, but the feeble bind on strength). The pattern is: YHWH exalts the lowly and humbles the proud, not based on human merit but on divine grace and election. Paul's 'God chose what is weak in the world to shame the strong' (1 Cor 1:27) is the Christological application of Hannah's insight: the cross itself is YHWH's ultimate reversal, where the weak and crucified Son defeats the strong.</p>"
-  }
-}
-
-SAMUEL1_CONTEXT = {
-  "1": {
-    "1": "<p>1 Samuel narrates the transition from the period of the judges to the monarchy (ca. 1100-1011 BCE). Its theological structure revolves around three figures: Samuel (the last and greatest judge, the transitional prophet-priest-judge), Saul (the failed king, rejected because of disobedience), and David (the man after God's own heart, the model for the Davidic covenant). The contrast between Saul and David is theologically instructive: Saul has the outward appearance (tall, handsome, from the right tribe) but lacks the inner heart-alignment; David lacks the outward qualifications (youngest, overlooked, a shepherd) but has the heart that YHWH seeks (1 Sam 16:7: YHWH looks on the heart). This contrast between external appearance and internal reality runs from 1 Samuel through Paul's theology of the Spirit vs. the flesh.</p>"
-  }
-}
-
-SAMUEL1_CHRIST = {
-  "16": {
-    "13": "<p>A type: 'And the Spirit of the LORD rushed upon David from that day forward.' David's anointing by Samuel is the OT's paradigmatic messianic event — the word <em>mashiach</em> (anointed one) derives its ultimate meaning from this moment. David is anointed as YHWH's chosen king; the Spirit comes upon him as the empowering for his royal vocation. Jesus's baptism is the typological fulfillment: he is anointed (the meaning of <em>christos</em>, the Greek equivalent of <em>mashiach</em>) by the Spirit who descends and remains (John 1:32-33). The crucial difference: the Spirit rushed upon David from that day forward, but left Saul (1 Sam 16:14); on Jesus the Spirit descends and remains — the permanent anointing that makes him the Messiah whose Spirit-empowered rule will never end.</p>"
-  }
-}
-
-# ============================
-# 2 SAMUEL
-# ============================
-
-SAMUEL2_ECHO = {
-  "7": {
-    "12": [
-      {"type": "fulfillment", "target": "Luke 1:32-33", "note": "I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom — the Davidic covenant promise (Nathan's oracle) is directly cited in the annunciation: the Lord God will give him the throne of his father David, and he will reign over the house of Jacob forever, and of his kingdom there will be no end"},
-      {"type": "fulfillment", "target": "Acts 2:30", "note": "God had sworn with an oath to him that he would set one of his descendants on his throne — Peter's Pentecost sermon cites the Davidic covenant (2 Sam 7 + Ps 16 + Ps 110) as the OT basis for Jesus's resurrection and exaltation; the resurrection is the fulfillment of the promise to raise up David's offspring"},
-      {"type": "fulfillment", "target": "Rev 22:16", "note": "I am the root and the descendant of David — Revelation's final identification of Jesus as the Davidic heir fulfills the 2 Sam 7 promise in its full scope: not merely a political successor but the eternal Son who receives an eternal kingdom"}
-    ],
-    "14": [
-      {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — the father-son language of the Davidic covenant (2 Sam 7:14) is applied to Christ in Heb 1:5 as proof of his superiority to angels; no angel was ever called God's Son in this royal, covenantal sense"}
-    ]
-  }
-}
-
-SAMUEL2_ORIGINAL = {
-  "7": {
-    "12": "<p><strong>vakimoti et zarecha achareicha asher yetze mimeecha vehakhinoti et mamlaChto</strong>: 'I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom.' The Davidic covenant (2 Sam 7:12-16) is the OT's central messianic text — the foundational oracle to which all subsequent messianic prophecy refers. Its key elements: (1) a son who builds a house (temple/dynasty); (2) a father-son relationship (<em>ani ehyeh lo le-av vehu yihyeh li le-ben</em>); (3) discipline for sin but not abandonment; (4) an eternal throne (<em>venekkon kisso ad olam</em>, I will establish his throne forever). The covenant applies both to the immediate heir Solomon and, in an escalating way, to the ultimate heir — which Psalms 2, 89, 110 and the prophets develop into the eschatological Messiah.</p>"
-  }
-}
-
-SAMUEL2_CONTEXT = {
-  "7": {
-    "1": "<p>The Davidic covenant (2 Sam 7) is spoken through the prophet Nathan when David, having consolidated his kingdom in Jerusalem, desires to build a temple for YHWH. YHWH's reversal — 'you will not build me a house; I will build you a house (dynasty)' — is the pivot of the OT's messianic program. The word <em>bayit</em> (house) operates on three levels simultaneously: the physical temple David wants to build, the dynastic household YHWH promises, and the future son who will build both. The oracle has a near fulfillment (Solomon builds the temple, 1 Kings 6-8) and a far fulfillment (the eternal son whose kingdom has no end). The 'already and not yet' hermeneutic of NT fulfillment readings is modeled on 2 Samuel 7 itself, which already operates on two temporal levels.</p>"
-  }
-}
-
-SAMUEL2_CHRIST = {
-  "7": {
-    "12": "<p>A direct revelation: 'When your days are fulfilled and you lie down with your fathers, I will raise up your offspring after you, who shall come from your body, and I will establish his kingdom ... and I will establish the throne of his kingdom forever.' The Davidic covenant is the OT's formal contract establishing the messianic expectation. Jesus of Nazareth's Davidic lineage is asserted by both Matthew (1:1-17) and Luke (3:23-38), confirmed by Paul (Rom 1:3: descended from David according to the flesh), and by Jesus himself (Mark 12:35-37). The eternal throne (v. 13, 16) is fulfilled in the resurrection: unlike David's physical descendants who all died, Christ rose and will reign forever. Peter's Pentecost sermon (Acts 2:29-36) explicitly applies 2 Sam 7 + Ps 16 + Ps 110 to the risen Christ: the Davidic covenant's promise of an unending throne is fulfilled not in an earthly dynasty but in the resurrection-life of the Son.</p>"
+CHRIST = {
+  "24": {
+    "10": "<p>The immediate conviction that follows David&rsquo;s census — <em>wayyak lēḇ dāwiḏ ʾōtô ʾaḥărê ḵēn sāpar ʾet hāʿām</em>, &lsquo;David&rsquo;s heart struck him after he had numbered the people&rsquo; — is the OT narrative form of what 2 Cor 7:10 identifies as &lsquo;godly grief&rsquo; (<em>hē kata theon lypē</em>): the inner conviction that produces repentance rather than mere regret. The striking of the heart is not psychological remorse alone but the work of the divine witness on the conscience — what Heb 4:12 describes as the word of God &lsquo;discerning the thoughts and intentions of the heart.&rsquo; John 16:8 names this as the Spirit&rsquo;s specific office: &lsquo;when he comes, he will convict the world concerning sin and righteousness and judgment.&rsquo; David&rsquo;s struck heart is the pre-Pentecost form of the same operation: the inner disclosure of divine displeasure that the NT identifies as the Holy Spirit&rsquo;s convicting work. The pattern — sin, heart-struck conviction, confession (<em>ḥāṭāʾtî</em>, &lsquo;I have sinned greatly&rsquo;), and the seeking of mercy — is the structural template of Ps 51 (whose postscript connects it to Nathan&rsquo;s confrontation, 12:13), and of Matt 5:3: &lsquo;blessed are the poor in spirit, for theirs is the kingdom of heaven.&rsquo; The Christological significance is that Christ&rsquo;s atoning work presupposes this convicting work: the sacrifice for sin accomplishes nothing for those whose heart has not been struck. The struck heart is the NT&rsquo;s &lsquo;poor in spirit&rsquo; — the prerequisite of the kingdom and the precondition of mercy received.</p>",
+    "16": "<p>The scene at Araunah&rsquo;s threshing floor — the angel of destruction with drawn sword (<em>wᵉḥarḇô šᵉlûpāh bᵉyāḏô nᵉṭûyāh ʿal yᵉrûšālaim</em>), stayed by YHWH&rsquo;s command at the precise site where David will erect the altar — is the typological anticipation of the propitiatory function of the site itself. The threshing floor that becomes the temple mount is first the site where YHWH&rsquo;s angel of wrath is arrested by divine mercy. Rom 3:25 names the anti-type: God &lsquo;put [Christ] forward as a propitiation (<em>hilastērion</em>) by his blood&rsquo; — the mercy seat where divine wrath is satisfied and arrested. Heb 7:25 identifies the ongoing intercessory form of this arrest: Christ &lsquo;always lives to make intercession&rsquo; for those who draw near to God through him. The angel&rsquo;s sword stayed at Araunah&rsquo;s threshing floor maps the spatial theology of atonement: this is the location where judgment is halted and where sacrifice is offered. 2 Chr 3:1 will identify it as the site of the temple — the permanent institutional locus of the sacrificial system whose final form is the cross. Heb 13:12: &lsquo;Jesus also suffered outside the gate in order to sanctify the people through his own blood&rsquo; — the wrath arrested at the threshing floor in 2 Samuel is exhausted at Golgotha, just outside the city that the temple on that threshing floor had dominated for a thousand years.</p>",
+    "18": "<p>The divine command to David — <em>ʿălēh hāqēm laYHWH mizḇēaḥ bᵉgōren ʾărawnāh hayᵉḇûsî</em>, &lsquo;go up, erect an altar to YHWH on the threshing floor of Araunah the Jebusite&rsquo; — designates as the sacred site a <em>gōren</em> (threshing floor), the locus of grain-from-chaff separation and judgment. The threshing floor as a type of eschatological judgment governs Matt 3:12: &lsquo;his winnowing fork is in his hand, and he will clear his threshing floor and gather his wheat into the barn, but the chaff he will burn with unquenchable fire.&rsquo; The temple, built on this threshing floor (2 Chr 3:1), inherits the judgment function of the site: it is the place where YHWH meets Israel in both mercy (the sacrificial system) and judgment (Jer 7:14: &lsquo;I will do to this house what I did to Shiloh&rsquo;; Ezek 9–11: the divine glory departing before destruction). Jesus&rsquo;s temple-cleansing (John 2:13-17; Matt 21:12-13) is the messianic threshing-floor action — the Son arriving at the site founded by his ancestor to execute the judgment of separation that the site has always anticipated. The trajectory from 2 Samuel to the NT: plague arrested at threshing floor → altar established → temple built on threshing floor → Messiah cleanses the temple in threshing-floor judgment → temple destroyed and superseded by the Messiah&rsquo;s own body (John 2:19-21).</p>",
+    "25": "<p>David&rsquo;s burnt offerings and peace offerings on Araunah&rsquo;s threshing floor arrest the plague: <em>wayyeʿātar YHWH lāʾāreṣ wattēʿāṣar hammaggēpāh mēʿal yiśrāʾēl</em> — &lsquo;YHWH responded to the plea for the land, and the plague was averted from Israel.&rsquo; The blood of the offering turns away the wrath that was destroying the people. This is the sacrificial template that the entire tabernacle/temple system will institutionalize, and whose anti-type Heb 9:14 names: &lsquo;how much more will the blood of Christ, who through the eternal Spirit offered himself without blemish to God, purify our conscience from dead works to serve the living God.&rsquo; The plague of death spreading through Israel because of David&rsquo;s sin is the concentrated form of what sin always produces — death spreading through the community by transgression (Rom 5:12: &lsquo;sin came into the world through one man, and death through sin, and so death spread to all men&rsquo;). The intercessor who stands in the gap between the living and the dead is prefigured in Num 16:48, where Aaron runs with his censer into the midst of the dying congregation and the plague is stopped at the place where he stands. The anti-type: Christ stands in the gap between the living and the dead, his death the atonement that arrests the plague at its source. Rom 5:9: &lsquo;since we have now been justified by his blood, how much more shall we be saved from God&rsquo;s wrath through him.&rsquo;</p>"
   }
 }
 
 def main():
-    books = [
-        ('ruth', RUTH_ECHO, RUTH_ORIGINAL, RUTH_CONTEXT, RUTH_CHRIST),
-        ('1samuel', SAMUEL1_ECHO, SAMUEL1_ORIGINAL, SAMUEL1_CONTEXT, SAMUEL1_CHRIST),
-        ('2samuel', SAMUEL2_ECHO, SAMUEL2_ORIGINAL, SAMUEL2_CONTEXT, SAMUEL2_CHRIST),
-    ]
-    for book, echo_d, orig_d, ctx_d, chr_d in books:
-        e = load_echo(book); merge_echo(e, echo_d); save_echo(book, e)
-        c = load_comm('mkt-original', book); merge_comm(c, orig_d); save_comm('mkt-original', book, c)
-        c = load_comm('mkt-context', book); merge_comm(c, ctx_d); save_comm('mkt-context', book, c)
-        c = load_comm('mkt-christ', book); merge_comm(c, chr_d); save_comm('mkt-christ', book, c)
-        print(f'{book}: all 4 layers written')
+    c = load_comm('mkt-christ', '2samuel')
+    merge_comm(c, CHRIST)
+    save_comm('mkt-christ', '2samuel', c)
+    count = sum(len(v) for v in CHRIST.values())
+    print(f'2samuel mkt-christ: wrote {count} verses across ch 24')
 
 if __name__ == '__main__':
     main()

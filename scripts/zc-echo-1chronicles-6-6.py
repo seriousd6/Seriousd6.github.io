@@ -51,6 +51,21 @@ def merge_comm(existing, new_data):
                 existing[ch][v] = html
 
 CHRON1_ECHO = {
+  "6": {
+    "4": [
+      {"type": "shadow", "target": "Heb 7:11", "note": "Eleazar to Phinehas — the Aaronic priestly succession traced here is the very lineage Hebrews addresses when asking whether perfection was attainable through the Levitical priesthood; the unbroken Aaronic line sets up the argument that a different priest after Melchizedek's order was needed."}
+    ],
+    "31": [
+      {"type": "allusion", "target": "Rev 5:9", "note": "David appointed Levites over the service of song before the ark — the organized temple singers established here anticipate the heavenly choir of Revelation 5:9 singing a new song before the Lamb; the Chronicler's emphasis on worship music points forward to eternal worship."}
+    ],
+    "49": [
+      {"type": "type", "target": "Heb 9:6-7", "note": "Aaron and his sons offering on the altar of burnt offering and the altar of incense — the Chronicler's summary of the Aaronic sacrificial ministry (burnt offering and incense) maps exactly onto what Hebrews 9:6-7 describes as the pattern the Levitical priests performed continuously, which Christ fulfills once for all as the high priest who passed through the greater and more perfect tent."},
+      {"type": "allusion", "target": "Rev 8:3", "note": "The altar of incense (v49) maintained by Aaron's sons anticipates the golden altar of incense in Revelation 8:3-4, where an angel offers incense with the prayers of all the saints before God's throne — the OT incense ministry finding its eschatological completion."}
+    ],
+    "57": [
+      {"type": "shadow", "target": "Heb 6:18", "note": "The cities of refuge assigned to Aaron's descendants — the institution of the city of refuge (a place where the inadvertent manslayer could flee and be safe from the avenger of blood) is the image behind Hebrews 6:18's 'we who have fled for refuge to lay hold of the hope set before us'; Christ is the ultimate city of refuge, the one to whom sinners flee and find safety from judgment."}
+    ]
+  },
   "17": {
     "13": [
       {"type": "fulfillment", "target": "Heb 1:5", "note": "I will be to him a father and he shall be to me a son — Chronicles repeats the Davidic covenant promise of 2 Sam 7:14; Hebrews cites it to establish Christ's superiority to angels as the eternal Son who holds the Davidic throne"}
