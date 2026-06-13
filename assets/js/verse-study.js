@@ -18,8 +18,6 @@ import { getNotes } from './storage.js';
 import { _HL_COLORS } from './storage.js';
 import { wireRefEl, wireRefLinks, applyHighlights } from './wire.js';
 import { expandMorphCode } from './interlinear.js';
-// loadParallels retained for reference — verse-study now uses loadEchoes (see AUD-9)
-import { loadParallels } from './parallels.js';
 import {
   _renderNotesPanel, _shareVerseAsImage,
   _extractCommHtml, _commAttr

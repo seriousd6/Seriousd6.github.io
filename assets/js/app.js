@@ -43,11 +43,9 @@ import {
   isCompareEnabled, getCompareVersion, setCompareVersion,
   initViewToggle, initFontSizeControls,
   initSidebarToggle, initXrefNotesToggle, initCommModeToggle,
-  initColumnsToggle, initReaderModeToggle, initNotesPanelToggle
+  initColumnsToggle, initReaderModeToggle, initNotesPanelToggle,
+  initParaViewToggle
 } from './reader.js';
-import {
-  initParallelToggle, getParallelsEnabled, setParallelsEnabled
-} from './parallels.js';
 import {
   initInterlinearToggle, initBookInfoToggle,
   getInterlinearEnabled, setInterlinearEnabled
@@ -59,6 +57,7 @@ import { initWordPage } from './word.js';
 import { initDailyPage, initMemorizePage, initPlansHomeWidget, _memHas, _memAdd, _memRemove, _memRefreshModalBtn } from './daily.js';
 import { initDictionaryPage, renderModalTopics, renderModalConfessions, renderModalFathers, renderModalDictionary } from './library.js';
 import { initBiblepediaPage } from './biblepedia.js';
+import { initEchoToggle } from './parallels.js';
 import { runAutoTagTerms, autoTagTerms, getTermMap2 } from './terms.js';
 import { runAutoTagPlaces, autoTagPlacesIn } from './places.js';
 import { initTimelinePage, initChurchTimelinePage } from './timeline.js';
@@ -169,7 +168,6 @@ function init() {
     // Detected by #reader-results — the container where chapter verses render.
     if (document.getElementById('reader-results')) {
       initReaderPage();
-      initParallelToggle();
       initCompareToggle();
       initInterlinearToggle();
       initBookInfoToggle();
@@ -179,8 +177,10 @@ function init() {
       initSidebarToggle();
       initFontSizeControls();
       initXrefNotesToggle();
+      initEchoToggle();
       initColumnsToggle();
       initReaderModeToggle();
+      initParaViewToggle();
       _injectShortcutsBtn();
     }
 

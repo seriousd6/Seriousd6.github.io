@@ -1255,7 +1255,9 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   /* On mobile keep only Compare + ⚙ View inline; hide the rest */
   #reader-interlinear-btn,
   #reader-bookinfo-btn,
-  #reader-xref-notes-btn { display: none; }
+  #reader-xref-notes-btn,
+  #reader-echoes-btn,
+  #reader-para-btn { display: none; }
 
   /* ── Results ─────────────────────────────────── */
   .reader-browse-hint { display: none; }
@@ -1297,41 +1299,6 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
     padding: 0;
     font-size: 0.85rem;
   }
-}
-
-/* ── Parallels toggle button ─────────────────────────────── */
-.reader-parallels-btn {
-  padding: 0.28rem 0.7rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  background: none;
-  font-family: var(--font-ui);
-  font-size: 0.82rem;
-  color: var(--color-muted);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.12s, border-color 0.12s, color 0.12s;
-}
-.reader-parallels-btn:hover {
-  background: rgba(184,134,11,0.07);
-  border-color: rgba(184,134,11,0.4);
-  color: var(--color-text);
-}
-.reader-parallels-btn--on {
-  background: var(--color-accent, #b8860b);
-  border-color: var(--color-accent, #b8860b);
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(184,134,11,0.35);
-}
-.reader-parallels-btn--on:hover {
-  background: #a07808;
-  border-color: #a07808;
-  color: #fff;
-}
-.reader-parallels-btn:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
 }
 
 /* ── Columns / Reader toggle buttons ─────────────────────── */
@@ -1425,6 +1392,40 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   color: #fff;
 }
 .reader-xref-notes-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.reader-echoes-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-echoes-btn:hover {
+  background: rgba(184,134,11,0.07);
+  border-color: rgba(184,134,11,0.4);
+  color: var(--color-text);
+}
+.reader-echoes-btn--on {
+  background: var(--color-accent, #b8860b);
+  border-color: var(--color-accent, #b8860b);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(184,134,11,0.35);
+}
+.reader-echoes-btn--on:hover {
+  background: #a07808;
+  border-color: #a07808;
+  color: #fff;
+}
+.reader-echoes-btn:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
@@ -2450,7 +2451,6 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   color: var(--color-btn-text, #e8c87a);
 }
 
-[data-theme="dark"] .reader-parallels-btn--on,
 [data-theme="dark"] .reader-compare-btn--on,
 [data-theme="dark"] .reader-interlinear-btn--on,
 [data-theme="dark"] .reader-bookinfo-btn--on,
@@ -2458,20 +2458,21 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
 [data-theme="dark"] .reader-font-size-btn--active,
 [data-theme="dark"] .reader-wide-btn--on,
 [data-theme="dark"] .reader-sidebar-btn--on,
-[data-theme="dark"] .reader-xref-notes-btn--on {
+[data-theme="dark"] .reader-xref-notes-btn--on,
+[data-theme="dark"] .reader-echoes-btn--on {
   background: var(--color-btn-bg, #3a2d18);
   border-color: var(--color-primary);
   color: var(--color-btn-text, #e8c87a);
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
-[data-theme="dark"] .reader-parallels-btn--on:hover,
 [data-theme="dark"] .reader-compare-btn--on:hover,
 [data-theme="dark"] .reader-interlinear-btn--on:hover,
 [data-theme="dark"] .reader-bookinfo-btn--on:hover,
 [data-theme="dark"] .reader-split-btn--on:hover,
 [data-theme="dark"] .reader-wide-btn--on:hover,
 [data-theme="dark"] .reader-sidebar-btn--on:hover,
-[data-theme="dark"] .reader-xref-notes-btn--on:hover {
+[data-theme="dark"] .reader-xref-notes-btn--on:hover,
+[data-theme="dark"] .reader-echoes-btn--on:hover {
   background: var(--color-btn-bg-hover, #4a3a22);
   border-color: var(--color-primary);
   color: var(--color-btn-text, #e8c87a);
@@ -2490,7 +2491,6 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
     border-color: var(--color-primary);
     color: var(--color-btn-text, #e8c87a);
   }
-  :root:not([data-theme="light"]) .reader-parallels-btn--on,
   :root:not([data-theme="light"]) .reader-compare-btn--on,
   :root:not([data-theme="light"]) .reader-interlinear-btn--on,
   :root:not([data-theme="light"]) .reader-bookinfo-btn--on,
@@ -2504,7 +2504,6 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
     color: var(--color-btn-text, #e8c87a);
     box-shadow: 0 1px 3px rgba(0,0,0,0.4);
   }
-  :root:not([data-theme="light"]) .reader-parallels-btn--on:hover,
   :root:not([data-theme="light"]) .reader-compare-btn--on:hover,
   :root:not([data-theme="light"]) .reader-interlinear-btn--on:hover,
   :root:not([data-theme="light"]) .reader-bookinfo-btn--on:hover,
@@ -2793,10 +2792,12 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   font-style: italic;
   margin: 0 0 .4rem;
 }
-/* On narrow screens stack columns as blocks so the reader stays readable */
-@media (max-width: 699px) {
-  .reader-comm-grid { display: block; }
-  .reader-comm-picker-row { display: flex; }
+/* On thin/mobile screens use flex so comm cells flow in DOM order — interleaving
+   is structural (insertBefore in _rebuildCommCells), not CSS order tricks.
+   Breakpoint at 1024px covers portrait tablets and thin laptops where the
+   1fr/4fr grid makes the verse column too narrow to read comfortably. */
+@media (max-width: 1024px) {
+  .reader-comm-grid { display: flex; flex-direction: column; }
   .reader-comm-cell--verse,
   .reader-comm-cell--comm { display: block; border-left: none; }
 }
@@ -2863,125 +2864,6 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
    regardless of screen width — arrow-key navigation doesn't apply on touch devices. */
 @media (pointer: coarse) {
   .reader-browse-hint { display: none; }
-}
-
-/* ── Echoes panel layout (reader-layout--echoes mode) ─────────────────────── */
-
-/* Base: panel is hidden until parallels is activated. */
-.reader-echoes-panel {
-  display: none;
-  flex-direction: column;
-  overflow-y: auto;
-  font-size: 0.88rem;
-}
-
-/* Outer layout: collapse to 1fr (xref panel hidden); reader-main takes full
-   outer width so its own inner grid controls the content split. */
-@media (min-width: 700px) {
-  .reader-layout--echoes {
-    grid-template-columns: 1fr !important;
-  }
-  .reader-layout--echoes.reader-layout--with-sidebar {
-    grid-template-columns: 160px 1fr !important;
-  }
-  .reader-layout--echoes .reader-xref-panel {
-    display: none !important;
-  }
-
-  /* Inner grid on reader-main: controls span full width (row 1),
-     results + echoes panel share row 2 at 50/50. */
-  .reader-layout--echoes .reader-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    align-items: start;
-    gap: 0;
-  }
-  .reader-layout--echoes .reader-controls {
-    grid-column: 1 / -1;
-    grid-row: 1;
-  }
-  .reader-layout--echoes #reader-results {
-    grid-column: 1;
-    grid-row: 2;
-    min-width: 0;
-  }
-  .reader-layout--echoes .reader-echoes-panel {
-    grid-column: 2;
-    grid-row: 2;
-    display: flex;
-    border-left: 1px solid var(--color-border);
-    padding: 0 0 2rem 0;
-    max-height: calc(100vh - 5rem);
-    position: sticky;
-    top: 1rem;
-    align-self: start;
-  }
-}
-
-/* Mobile: stack echoes below main text, full width. */
-@media (max-width: 699px) {
-  .reader-layout--echoes .reader-echoes-panel {
-    display: flex;
-    border-top: 2px solid var(--color-border);
-    max-height: 60vh;
-    padding: 0.5rem 0 1rem;
-  }
-}
-
-/* ── Echo panel interior ──────────────────────────────────────────────────── */
-
-.reader-echo-panel {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  flex: 1;
-}
-
-.reader-echo-panel__header {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  padding: 0.75rem 1rem 0.5rem;
-  border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
-  background: var(--color-bg);
-  z-index: 1;
-}
-
-.reader-echo-panel__title {
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-muted);
-}
-
-.reader-echo-panel__ref {
-  font-size: 0.8rem;
-  color: var(--color-text);
-  font-weight: 500;
-}
-
-.reader-echo-panel__count {
-  margin-left: auto;
-  font-size: 0.75rem;
-  color: var(--color-muted);
-}
-
-.reader-echo-panel__loading,
-.reader-echo-panel__empty {
-  padding: 1.25rem 1rem;
-  color: var(--color-muted);
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-.reader-echo-panel__list {
-  overflow-y: auto;
-  flex: 1;
 }
 
 /* ── Echo cards ────────────────────────────────────────────────────────────── */
@@ -3139,6 +3021,67 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   opacity: 0.55;
 }
 
+/* ── Inline echo marker (footnote-style dot after verse text) ─────────────── */
+
+.reader-echo-marker {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 3px;
+  vertical-align: super;
+  font-size: 0.58em;
+  background: none;
+  border: none;
+  padding: 1px 3px;
+  cursor: pointer;
+  color: var(--color-primary);
+  opacity: 0.65;
+  border-radius: 3px;
+  line-height: 1;
+  transition: opacity 0.15s, background 0.15s;
+}
+.reader-echo-marker:hover,
+.reader-echo-marker--open {
+  opacity: 1;
+  background: rgba(90, 110, 200, 0.13);
+}
+.reader-echo-marker__dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.reader-echo-marker__count {
+  font-size: 0.88em;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ── Inline echo expansion block ─────────────────────────────────────────── */
+
+.reader-echo-inline {
+  display: block;
+  margin: 0.3rem 0 0.7rem 0.25rem;
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0 4px 4px 0;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+.reader-echo-inline .reader-echo-card {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+.reader-echo-inline .reader-echo-card:last-child {
+  border-bottom: none;
+}
+/* Hide the v.N prefix inside inline cards — the reader already knows the verse */
+.reader-echo-inline .reader-echo-card__v {
+  display: none;
+}
+
 /* Hover highlight: coloured left border + tint matching the echo badge type */
 .reader-verse--echo-hover {
   border-left: 3px solid var(--color-primary) !important;
@@ -3197,4 +3140,94 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-shadow      { background: rgba(180, 80,255,0.25) !important; border-left-color: #c97aff !important; }
   :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-theme       { background: rgba( 40,190,220,0.25) !important; border-left-color: #60d0e8 !important; }
   :root:not([data-theme="light"]) .reader-verse--echo-hover.reader-verse--echo-type-parallel    { background: rgba(160,160,160,0.20) !important; border-left-color: #aaa    !important; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   Paragraph View (RD-PARA)
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Toggle button ───────────────────────────────────────── */
+.reader-para-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-para-btn:hover {
+  background: rgba(92,61,30,0.07);
+  border-color: rgba(92,61,30,0.35);
+  color: var(--color-text);
+}
+.reader-para-btn--on {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(92,61,30,0.25);
+}
+.reader-para-btn--on:hover {
+  background: #4a3016;
+  border-color: #4a3016;
+  color: #fff;
+}
+.reader-para-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Section heading ─────────────────────────────────────── */
+.reader-section-heading {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 1.6rem 0 0.4rem;
+  padding: 0;
+  line-height: 1.3;
+}
+.reader-section-heading:first-child { margin-top: 0.25rem; }
+
+/* ── Paragraph blocks ────────────────────────────────────── */
+.reader-para {
+  margin: 0 0 0.85rem;
+  display: block;
+}
+.reader-para:last-child { margin-bottom: 0; }
+
+/* Poetry: indented with a subtle left rule */
+.reader-para--poetry {
+  margin-left: 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--color-border);
+}
+
+/* Doxology: centred, slightly muted */
+.reader-para--doxology {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-primary);
+  padding: 0.2rem 0;
+}
+
+/* List: light indent */
+.reader-para--list {
+  margin-left: 1rem;
+}
+
+/* Columns mode: suppress column-break inside individual paragraphs */
+body.bsw-columns-on .reader-result-group__text--para .reader-para {
+  break-inside: avoid;
+}
+
+/* Dark-mode heading colour */
+:root:not([data-theme="light"]) .reader-section-heading {
+  color: color-mix(in srgb, var(--color-muted) 80%, var(--color-text) 20%);
 }

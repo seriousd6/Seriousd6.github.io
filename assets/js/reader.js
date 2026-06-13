@@ -20,7 +20,7 @@ import {
   wireRefLinks, wireRefEl, applyHighlights, applyBookmarks, autoTagRefs,
   autoTagBareRefs, autoTagBareChapters
 } from './wire.js';
-import { getParallelsEnabled, refreshEchoesPanel } from './parallels.js';
+import { markEchoVerses } from './parallels.js';
 import {
   getInterlinearEnabled, injectAllInterlinearRows
 } from './interlinear.js';
@@ -92,9 +92,8 @@ export function initCompareToggle() {
   btn.setAttribute('aria-pressed', isCompareEnabled() ? 'true' : 'false');
   btn.title     = 'Compare translations side by side';
   btn.textContent = '⇅ Compare';
-  var parallelsBtn = document.getElementById('reader-parallels-btn');
-  var hint         = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, parallelsBtn || hint || null);
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(btn, hint || null);
   btn.addEventListener('click', function () {
     var on = !isCompareEnabled();
     if (on) {
@@ -475,18 +474,26 @@ export function initReaderLookup() {
         return;
       }
 
-      applyHighlights(resultsEl);
-      applyBookmarks(resultsEl);
-      wireVerseNumberPopup(resultsEl);
-      wireVerseTextHighlight(resultsEl);
-      injectReaderFootnotes(resultsEl);
+      function _finalizeLookup() {
+        applyHighlights(resultsEl);
+        applyBookmarks(resultsEl);
+        wireVerseNumberPopup(resultsEl);
+        wireVerseTextHighlight(resultsEl);
+        injectReaderFootnotes(resultsEl);
 
-      if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
-      if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
-      if (getParallelsEnabled()) refreshEchoesPanel();
+        if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
+        if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
+        markEchoVerses();
 
-      _historyPush(q, ver);
-      _recordReadingDay();
+        _historyPush(q, ver);
+        _recordReadingDay();
+      }
+
+      if (isParaViewEnabled()) {
+        applyParagraphFormatting(resultsEl, window._readerGroups).then(_finalizeLookup).catch(_finalizeLookup);
+      } else {
+        _finalizeLookup();
+      }
     }).catch(function (err) {
       if (resultsEl) resultsEl.innerHTML = '<p class="reader-hint">Could not load passage.</p>';
       console.error('[BibleUI] reader error:', err);
@@ -1749,11 +1756,6 @@ export function initCommModeToggle() {
     }
   });
 
-  // INTENT: Expose _deactivateCommMode so parallels.js can enforce mutual exclusion
-  //   without a circular import — parallels calls this when turning parallels ON.
-  // CHANGE? If _deactivateCommMode is renamed, update this assignment and the
-  //   window._readerDeactivateComm call in parallels.js initParallelToggle.
-  // VERIFY: Enable Commentary, then click Parallels — Commentary should deactivate.
   window._readerDeactivateComm = _deactivateCommMode;
   window._readerDeactivateXref = _deactivateXrefMode;
 }
@@ -1761,12 +1763,8 @@ export function initCommModeToggle() {
 function _syncCommGridPage(groupEl) {
   var grid = groupEl.querySelector('.reader-comm-grid');
   if (!grid || !grid._verseData) return;
-  // Sync verse cell visibility to match current pagination state of each span
-  grid.querySelectorAll('.reader-comm-cell--verse').forEach(function (cell) {
-    var idx = parseInt(cell.dataset.commIdx, 10);
-    if (!isNaN(idx) && grid._verseData[idx]) {
-      cell.style.display = grid._verseData[idx].span.style.display;
-    }
+  grid._verseData.forEach(function (vd) {
+    if (vd.cell) vd.cell.style.display = vd.span.style.display;
   });
   _rebuildCommCells(grid);
 }
@@ -1775,9 +1773,8 @@ function _activateCommMode() {
   var parsed = _readerPanelParsed;
   if (!parsed || !parsed.bookId) return;
 
-  // Mutual exclusion: turn parallels and xref-mode off; if xref grid is in the DOM
-  // deactivate it first (re-renders clean text) then let loadReaderPanelContent re-enter.
-  if (window._readerTurnOffParallels) window._readerTurnOffParallels();
+  // Mutual exclusion with xref-mode: deactivate first (re-renders clean text)
+  // then let loadReaderPanelContent re-enter.
   var xrefModeBtn = document.getElementById('reader-xref-mode-toggle');
   if (xrefModeBtn && xrefModeBtn.getAttribute('aria-pressed') === 'true') {
     var commBtn2 = document.getElementById('reader-comm-toggle');
@@ -1835,7 +1832,6 @@ function _activateXrefMode() {
   var parsed = _readerPanelParsed;
   if (!parsed || !parsed.bookId) return;
 
-  if (window._readerTurnOffParallels) window._readerTurnOffParallels();
   // If commentary grid is in the DOM, deactivate it first (re-renders clean text)
   // then loadReaderPanelContent will re-enter _activateXrefMode.
   var commBtn = document.getElementById('reader-comm-toggle');
@@ -1981,7 +1977,8 @@ function _buildCommGrid() {
       return {
         span: span,
         ch:   parseInt(span.getAttribute('data-ch'), 10),
-        v:    parseInt(span.getAttribute('data-v'),  10)
+        v:    parseInt(span.getAttribute('data-v'),  10),
+        cell: null  // filled below; used by _rebuildCommCells and _syncCommGridPage
       };
     });
 
@@ -2002,6 +1999,7 @@ function _buildCommGrid() {
       // Hide cell when the verse is currently paginated out so no empty rows appear
       if (vd.span.style.display === 'none') cell.style.display = 'none';
       cell.appendChild(vd.span);
+      vd.cell = cell;  // store reference so _rebuildCommCells can find it without DOM query
       grid.appendChild(cell);
     });
 
@@ -2069,6 +2067,10 @@ function _rebuildCommCells(grid) {
     }
   });
 
+  // Insert each comm cell immediately after the last verse cell of its section.
+  // On desktop, grid-row/grid-column placement overrides DOM order so layout is
+  // unaffected. On mobile flex, DOM order determines visual order — inserting here
+  // gives verse₀…verseN, comm₀, verse(N+1)…, comm₁, … without any style.order.
   sections.forEach(function (sec) {
     var startRow  = sec.startIdx + 2; // +2: row 1 is the picker
     var spanCount = sec.endIdx - sec.startIdx + 1;
@@ -2102,7 +2104,10 @@ function _rebuildCommCells(grid) {
       cell.innerHTML = '<p class="reader-hint">No commentary available.</p>';
     }
 
-    grid.appendChild(cell);
+    // Insert after the last verse cell of this section (or append if this is the last section)
+    var nextVerse = sec.endIdx + 1 < verseData.length ? verseData[sec.endIdx + 1].cell : null;
+    if (nextVerse) grid.insertBefore(cell, nextVerse);
+    else grid.appendChild(cell);
   });
 }
 
@@ -2174,5 +2179,154 @@ export function initReaderModeToggle() {
     btn.classList.toggle('reader-mode-btn--on', on);
     btn.setAttribute('aria-pressed', on ? 'true' : 'false');
     document.body.classList.toggle('bsw-reader-mode', on);
+  });
+}
+
+// ── Paragraph View — RD-PARA ─────────────────────────────────────────────
+// INTENT: Restructures the flowing verse-span list into real paragraph blocks
+//   with section headings, using data/paragraphs/{book}.json. Verse spans are
+//   preserved intact so highlights, bookmarks, and click popups keep working.
+// CHANGE? The data path uses PARAGRAPHS_ROOT (= _resolve('../../data/paragraphs')).
+//   If the JSON directory moves, update both that constant and the doLookup call.
+// VERIFY: Load John 1, enable Paragraphs — "The Word in the Beginning" heading
+//   should appear; verse spans remain clickable; highlights applied after survive.
+
+var PARAGRAPHS_ROOT = _resolve('../../data/paragraphs');
+var _PARA_VIEW_KEY  = 'bsw_para_view';
+var _paraDataCache  = {};
+
+export function isParaViewEnabled() {
+  return localStorage.getItem(_PARA_VIEW_KEY) === '1';
+}
+
+function _loadParaData(bookId) {
+  if (_paraDataCache[bookId] !== undefined) return Promise.resolve(_paraDataCache[bookId]);
+  return fetch(PARAGRAPHS_ROOT + '/' + bookId + '.json')
+    .then(function (r) { if (!r.ok) throw new Error('no para data'); return r.json(); })
+    .then(function (data) { _paraDataCache[bookId] = data; return data; })
+    .catch(function () { _paraDataCache[bookId] = null; return null; });
+}
+
+// Returns the paragraph type that covers verse v (the last break with .v <= v).
+function _paraTypeAtVerse(breaks, v) {
+  var type = 'narrative';
+  for (var i = 0; i < breaks.length; i++) {
+    if (breaks[i].v <= v) type = breaks[i].type;
+    else break;
+  }
+  return type;
+}
+
+// Rebuilds textEl's children into heading + paragraph block structure.
+function _restructureForParagraphs(textEl, paraData) {
+  var items = [];
+  Array.from(textEl.childNodes).forEach(function (node) {
+    if (node.nodeType !== 1) return;
+    if (node.classList.contains('reader-verse')) {
+      items.push({ type: 'verse', el: node, ch: +node.dataset.ch || 0, v: +node.dataset.v || 0 });
+    } else if (node.classList.contains('reader-chapter-break')) {
+      items.push({ type: 'chbreak', el: node });
+    }
+  });
+  if (!items.length) return;
+
+  var newNodes    = [];
+  var currentPara = null;
+  var currentCh   = null;
+  var chData      = null;
+
+  function closePara() {
+    if (currentPara) { newNodes.push(currentPara); currentPara = null; }
+  }
+  function openPara(type) {
+    currentPara = document.createElement('p');
+    currentPara.className = 'reader-para reader-para--' + (type || 'narrative');
+  }
+
+  items.forEach(function (item) {
+    if (item.type === 'chbreak') {
+      closePara();
+      newNodes.push(item.el);
+      currentCh = null; chData = null;
+      return;
+    }
+
+    if (item.ch !== currentCh) {
+      currentCh = item.ch;
+      chData = paraData[String(item.ch)] || null;
+    }
+
+    var breaks   = (chData && chData.breaks)   ? chData.breaks   : [];
+    var headings = (chData && chData.headings)  ? chData.headings : [];
+
+    var breakEntry   = null;
+    var headingEntry = null;
+    for (var b = 0; b < breaks.length; b++)   { if (breaks[b].v   === item.v) { breakEntry   = breaks[b];   break; } }
+    for (var h = 0; h < headings.length; h++) { if (headings[h].before === item.v) { headingEntry = headings[h]; break; } }
+
+    if (breakEntry) {
+      closePara();
+      if (headingEntry) {
+        var hEl = document.createElement('h3');
+        hEl.className   = 'reader-section-heading';
+        hEl.textContent = headingEntry.text;
+        newNodes.push(hEl);
+      }
+      openPara(breakEntry.type);
+    } else if (!currentPara) {
+      // Mid-chapter range start: open para at the covering type with no heading
+      openPara(_paraTypeAtVerse(breaks, item.v));
+    }
+
+    currentPara.appendChild(item.el);
+  });
+  closePara();
+
+  // Replace textEl with a <div> (allows block children like <p> and <h3>)
+  var newContainer = document.createElement('div');
+  newContainer.className = textEl.className + ' reader-result-group__text--para';
+  newNodes.forEach(function (n) { newContainer.appendChild(n); });
+  if (textEl.parentNode) textEl.parentNode.replaceChild(newContainer, textEl);
+}
+
+// Applies paragraph formatting to all result groups. Returns a Promise that
+// resolves when all groups are restructured (data may need fetching).
+export function applyParagraphFormatting(resultsEl, groups) {
+  if (!resultsEl || !groups || !groups.length) return Promise.resolve();
+  var domGroups = Array.from(resultsEl.querySelectorAll('.reader-result-group'));
+  var tasks = domGroups.map(function (groupEl, gIdx) {
+    var g = groups[gIdx];
+    if (!g || !g.ref || !g.ref.bookId) return Promise.resolve();
+    var textEl = groupEl.querySelector('.reader-result-group__text');
+    if (!textEl) return Promise.resolve();
+    return _loadParaData(g.ref.bookId).then(function (paraData) {
+      if (paraData) _restructureForParagraphs(textEl, paraData);
+    });
+  });
+  return Promise.all(tasks);
+}
+
+export function initParaViewToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-para-btn')) return;
+
+  var on  = isParaViewEnabled();
+  var btn = document.createElement('button');
+  btn.id        = 'reader-para-btn';
+  btn.className = 'reader-para-btn' + (on ? ' reader-para-btn--on' : '');
+  btn.type      = 'button';
+  btn.textContent = '¶ Paragraphs';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.title = 'Show paragraph breaks and section headings';
+
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(btn, hint || null);
+
+  btn.addEventListener('click', function () {
+    on = !on;
+    try { localStorage.setItem(_PARA_VIEW_KEY, on ? '1' : '0'); } catch (e) {}
+    btn.classList.toggle('reader-para-btn--on', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (window._readerLookupFn) window._readerLookupFn();
   });
 }

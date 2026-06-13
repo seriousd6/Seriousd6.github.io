@@ -11,7 +11,7 @@ Read before starting: **BP_AGENT_GUIDE.md** → **BP_SCRIPT_GUIDE.md** → this 
 | Phase | Work Units | Complete | In Progress | Not Started |
 |---|---|---|---|---|
 | Phase 1 — Easton Main Dictionary (A–Z) | 65 | 0 | 0 | 65 |
-| Phase 2 — Gap Articles (Nave/Smith-only) | TBD (run BPG first) | 0 | 0 | TBD |
+| Phase 2 — Gap Articles (Nave/Smith-only) | 9 units (425 stubs) | 0 | 0 | 9 |
 
 **Total articles target:** ~4,000 (Phase 1) + ~1,000 (Phase 2 gaps, after BPG)
 
@@ -24,10 +24,10 @@ Output: `data/biblepedia/articles/{slug}.json` per entry in the unit.
 
 | Unit | Range | Count | Status | Script |
 |---|---|---|---|---|
-| A1 | Aaron → Acre | 75 | in-progress @ 2026-06-10T00:00:00Z | scripts/bp-a1.py |
-| A2 | Acts of the Apostles → Ahitub | 75 | not started | scripts/bp-a2.py |
-| A3 | Ahlab → Anakim | 75 | not started | scripts/bp-a3.py |
-| A4 | Anamim → Areopagus | 75 | not started | scripts/bp-a4.py |
+| A1 | Aaron → Acre | 75 | in-progress @ 2026-06-13T13:15:00Z | scripts/bp-a1.py |
+| A2 | Acts of the Apostles → Ahitub | 75 | in-progress @ 2026-06-13T13:15:30Z | scripts/bp-a2.py |
+| A3 | Ahlab → Anakim | 75 | in-progress @ 2026-06-13T13:18:28Z | scripts/bp-a3.py |
+| A4 | Anamim → Areopagus | 75 | in-progress @ 2026-06-13T13:20:00Z | scripts/bp-a4.py |
 | A5 | Aretas → Azaziah | 75 | not started | scripts/bp-a5.py |
 | A6 | Azekah → Azur and Azzur | 6 | not started | scripts/bp-a6.py |
 | B1 | Baal → Barsabas | 75 | not started | scripts/bp-b1.py |
@@ -101,4 +101,12 @@ Gap scripts use the naming scheme: `scripts/bp-gap-{topic-group}.py`
 
 | Unit | Topic Group | Count | Status | Script |
 |---|---|---|---|---|
-| (run BPG first — see BPG_PROGRESS.md) | | | | |
+| gap-doctrine | Core doctrines, major virtues, prophetic themes (score 33–70) | 27 | not started | scripts/bp-gap-doctrine.py |
+| gap-persons | Named biblical persons and places — Smith score-35 | 34 | not started | scripts/bp-gap-persons.py |
+| gap-ethics | Character, virtue, vice, and conduct topics (score 20–30) | 49 | not started | scripts/bp-gap-ethics.py |
+| gap-smith-a | Smith Bible Dictionary A–H culture/history/ritual (score 25) | 35 | not started | scripts/bp-gap-smith-a.py |
+| gap-smith-b | Smith Bible Dictionary I–Z persons/places/books (score 25) | 69 | not started | scripts/bp-gap-smith-b.py |
+| gap-ot-context | OT practices, law, places, and prophetic books (score 10) | 54 | not started | scripts/bp-gap-ot-context.py |
+| gap-nt-context | NT epistles, persons, practices, and intertestamental (score 10) | 61 | not started | scripts/bp-gap-nt-context.py |
+| gap-isbe-theology | ISBE scholarly theology, Christology, and textual studies (score 5) | 65 | not started | scripts/bp-gap-isbe.py |
+| gap-minor | Score-3 Nave stubs, minor concepts, and low-priority terms | 31 | not started | scripts/bp-gap-minor.py |

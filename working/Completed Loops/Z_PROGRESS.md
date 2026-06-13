@@ -1,6 +1,6 @@
-Last updated: 2026-06-12T03:25:00Z
+Last updated: 2026-06-13T08:05:00Z
 
-**Last updated: 2026-06-12 (Proverbs all 4 layers complete — 915/915 verses)**
+**Last updated: 2026-06-13 (1 Chronicles context ch26-28 fill complete; 1 Chronicles context now 29/29 = complete; OT context 39/39 — ALL OT LAYERS COMPLETE)**
 **Source of truth:** `data/echoes/`, `data/commentary/mkt-original/`, `data/commentary/mkt-context/`, `data/commentary/mkt-christ/`
 
 ---
@@ -10,7 +10,7 @@ Last updated: 2026-06-12T03:25:00Z
 | | Echo | Original | Context | Christ |
 |-|------|----------|---------|--------|
 | NT complete (books) | 27 / 27 | 27 / 27 | 27 / 27 | 27 / 27 |
-| OT complete (books) | 35 / 39 | 31 / 39 | 30 / 39 | 28 / 39 |
+| OT complete (books) | 39 / 39 | 39 / 39 | 39 / 39 | 39 / 39 |
 | NT in-progress | 0 | 0 | 0 | 0 |
 | OT in-progress | 0 | 0 | 0 | 0 |
 
@@ -56,20 +56,20 @@ Last updated: 2026-06-12T03:25:00Z
 |------|-----|------|----------|---------|--------|
 | Genesis | 50 | complete | complete | complete | complete |
 | Exodus | 40 | complete | complete | complete | complete |
-| Leviticus | 27 | complete | partial 25/27 | complete | partial 25/27 |
+| Leviticus | 27 | complete | complete | complete | complete |
 | Numbers | 36 | complete | complete | complete | complete |
-| Deuteronomy | 34 | partial 32/34 | complete | partial 31/34 | complete |
-| Joshua | 24 | complete | complete | complete | partial 22/24 |
-| Judges | 21 | complete | complete | complete | partial 17/21 |
+| Deuteronomy | 34 | complete | complete | complete | complete |
+| Joshua | 24 | complete | complete | complete | complete |
+| Judges | 21 | complete | complete | complete | complete |
 | Ruth | 4 | complete | complete | complete | complete |
-| 1 Samuel | 31 | complete | partial 19/31 | partial 23/31 | partial 24/31 |
-| 2 Samuel | 24 | complete | partial 13/24 | partial 17/24 | partial 17/24 |
-| 1 Kings | 22 | partial 21/22 | partial 18/22 | partial 20/22 | partial 10/22 |
-| 2 Kings | 25 | partial 11/25 | partial 21/25 | partial 14/25 | partial 13/25 |
-| 1 Chronicles | 29 | complete 29/29 | complete 29/29 | partial 25/29 | complete 29/29 |
-| 2 Chronicles | 36 | partial 33/36 | complete 36/36 | complete 36/36 | partial 35/36 |
-| Ezra | 10 | complete 10/10 | partial 7/10 | partial 3/10 | complete 10/10 |
-| Nehemiah | 13 | complete | complete | complete | partial 11/13 |
+| 1 Samuel | 31 | complete | complete | complete | complete |
+| 2 Samuel | 24 | complete | complete | complete | complete |
+| 1 Kings | 21 | complete | complete | complete | complete |
+| 2 Kings | 25 | complete | complete | complete | complete |
+| 1 Chronicles | 29 | complete | complete | complete | complete |
+| 2 Chronicles | 36 | complete | complete | complete | complete |
+| Ezra | 10 | complete | complete | complete | complete |
+| Nehemiah | 13 | complete | complete | complete | complete |
 | Esther | 10 | complete | complete | complete | complete |
 | Job | 42 | complete | complete | complete | complete |
 | Psalms | 150 | complete | complete | complete | complete |
@@ -91,8 +91,8 @@ Last updated: 2026-06-12T03:25:00Z
 | Habakkuk | 3 | complete | complete | complete | complete |
 | Zephaniah | 3 | complete | complete | complete | complete |
 | Haggai | 2 | complete | complete | complete | complete |
-| Zechariah | 14 | complete | partial 9/14 | partial 8/14 | partial 0/14 |
-| Malachi | 4 | complete | complete | partial 0/4 | partial 0/4 |
+| Zechariah | 14 | complete | complete | complete | complete |
+| Malachi | 4 | complete | complete | complete | complete |
 
 ---
 
@@ -345,8 +345,8 @@ Each slice ≤ 99 verses (computed from KJV verse counts, greedy packing).
 | context | zc-context-luke-19-20.py | Luke | 19–20 | complete |
 | context | zc-context-luke-21-21.py | Luke | 21 | complete |
 | context | zc-context-luke-22-22.py | Luke | 22 | complete |
-| context | zc-context-luke-23-23.py | Luke | 23 | complete |
-| context | zc-context-luke-24-24.py | Luke | 24 | complete |
+| context | zc-context-luke-23-24-fill.py | Luke | 23–24 | complete |
+| context | zc-context-luke-24-24.py | Luke | 24 | complete (merged into 23-24 fill) |
 | christ | zc-christ-luke-1-1.py | Luke | 1 | complete |
 | christ | zc-christ-luke-2-3.py | Luke | 2–3 | complete |
 | christ | zc-christ-luke-4-5.py | Luke | 4–5 | complete |
@@ -506,7 +506,7 @@ Each slice ≤ 99 verses (computed from KJV verse counts, greedy packing).
 | original | zc-original-2peter-1-3.py | 2 Peter | 1–3 | complete |
 | context | zc-context-2peter-1-3.py | 2 Peter | 1–3 | complete |
 | christ | zc-christ-2peter-1-3.py | 2 Peter | 1–3 | complete |
-| echo | zc-echo-2john-1-1.py | 2 John | 1 | complete |
+| echo | zc-echo-2john-fill.py | 2 John | 1 | complete |
 | original | zc-original-2john-1-1.py | 2 John | 1 | complete |
 | context | zc-context-2john-1-1.py | 2 John | 1 | complete |
 | christ | zc-christ-2john-1-1.py | 2 John | 1 | complete |
@@ -916,6 +916,10 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | christ | zc-christ-deuteronomy-28-29.py | Deuteronomy | 28–29 | complete |
 | christ | zc-christ-deuteronomy-30-31.py | Deuteronomy | 30–31 | complete |
 | christ | zc-christ-deuteronomy-32-34.py | Deuteronomy | 32–34 | complete |
+| original | zc-original-deuteronomy-3-4-fill.py | Deuteronomy | 3–4 (fill) | complete |
+| original | zc-original-deuteronomy-14-17-fill.py | Deuteronomy | 14–17 (fill) | complete |
+| original | zc-original-deuteronomy-26-27-fill.py | Deuteronomy | 26–27 (fill) | complete |
+| original | zc-original-deuteronomy-32-34-fill.py | Deuteronomy | 32–34 (fill) | complete |
 | echo | zc-echo-jeremiah-1-3.py | Jeremiah | 1–3 | complete |
 | echo | zc-echo-jeremiah-4-6.py | Jeremiah | 4–6 | complete |
 | echo | zc-echo-jeremiah-7-9.py | Jeremiah | 7–9 | complete |
@@ -967,7 +971,7 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | christ | zc-christ-jeremiah-1-3.py | Jeremiah | 1–3 | complete |
 | christ | zc-christ-jeremiah-4-6.py | Jeremiah | 4–6 | complete |
 | christ | zc-christ-jeremiah-7-9.py | Jeremiah | 7–9 | complete |
-| christ | zc-christ-jeremiah-10-13.py | Jeremiah | 10–13 | complete |
+| christ | zc-christ-jeremiah-fill.py | Jeremiah | 10–13 | complete |
 | christ | zc-christ-jeremiah-14-17.py | Jeremiah | 14–17 | complete |
 | christ | zc-christ-jeremiah-18-21.py | Jeremiah | 18–21 | complete |
 | christ | zc-christ-jeremiah-22-24.py | Jeremiah | 22–24 | complete |
@@ -1267,10 +1271,10 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | original | zc-original-judges-1-3.py | Judges | 1–3 | complete |
 | original | zc-original-judges-4-6.py | Judges | 4–6 | complete |
 | original | zc-original-judges-7-8.py | Judges | 7–8 | complete |
-| original | zc-original-judges-9-10.py | Judges | 9–10 | complete |
+| original | zc-original-judges-9-10-fill.py | Judges | 9–10 | complete |
 | original | zc-original-judges-11-13.py | Judges | 11–13 | complete |
 | original | zc-original-judges-14-17.py | Judges | 14–17 | complete |
-| original | zc-original-judges-18-19.py | Judges | 18–19 | complete |
+| original | zc-original-judges-18-19-fill.py | Judges | 18–19 | complete |
 | original | zc-original-judges-20-21.py | Judges | 20–21 | complete |
 | context | zc-context-judges-1-3.py | Judges | 1–3 | complete |
 | context | zc-context-judges-4-6.py | Judges | 4–6 | complete |
@@ -1280,6 +1284,10 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | context | zc-context-judges-14-17.py | Judges | 14–17 | complete |
 | context | zc-context-judges-18-19.py | Judges | 18–19 | complete |
 | context | zc-context-judges-20-21.py | Judges | 20–21 | complete |
+| context | zc-context-judges-1-3-fill.py | Judges | 1–3 (fill) | complete |
+| context | zc-context-judges-9-10-fill.py | Judges | 9–10 (fill) | complete |
+| context | zc-context-judges-18-19-fill.py | Judges | 18–19 (fill) | complete |
+| christ | zc-christ-judges-17-19-fill.py | Judges | 17–19 (fill) | complete |
 | christ | zc-christ-judges-1-3.py | Judges | 1–3 | complete |
 | christ | zc-christ-judges-4-6.py | Judges | 4–6 | complete |
 | christ | zc-christ-judges-7-8.py | Judges | 7–8 | complete |
@@ -1288,6 +1296,9 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | christ | zc-christ-judges-14-17.py | Judges | 14–17 | complete |
 | christ | zc-christ-judges-18-19.py | Judges | 18–19 | complete |
 | christ | zc-christ-judges-20-21.py | Judges | 20–21 | complete |
+| christ | zc-christ-judges-4-6-fill.py | Judges | 4–6 (fill) | complete |
+| christ | zc-christ-judges-14-16-fill.py | Judges | 14–16 (fill) | complete |
+| christ | zc-christ-judges-17-19-fill.py | Judges | 17–19 (fill) | complete |
 | echo | zc-echo-ruth-1-4.py | Ruth | 1–4 | complete |
 | original | zc-original-ruth-1-4.py | Ruth | 1–4 | complete |
 | context | zc-context-ruth-1-4.py | Ruth | 1–4 | complete |
@@ -1306,17 +1317,20 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | original | zc-original-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
 | original | zc-original-1samuel-9-12.py | 1 Samuel | 9–12 | complete |
 | original | zc-original-1samuel-13-14.py | 1 Samuel | 13–14 | complete |
+| original | zc-original-1samuel-13-14-fill.py | 1 Samuel | 13–14 (fill) | complete |
 | original | zc-original-1samuel-15-16.py | 1 Samuel | 15–16 | complete |
 | original | zc-original-1samuel-17-18.py | 1 Samuel | 17–18 | complete |
 | original | zc-original-1samuel-19-21.py | 1 Samuel | 19–21 | complete |
 | original | zc-original-1samuel-22-24.py | 1 Samuel | 22–24 | complete |
 | original | zc-original-1samuel-25-27.py | 1 Samuel | 25–27 | complete |
+| original | zc-original-1samuel-25-27-fill.py | 1 Samuel | 25–27 (fill) | complete |
 | original | zc-original-1samuel-28-31.py | 1 Samuel | 28–31 | complete |
 | context | zc-context-1samuel-1-3.py | 1 Samuel | 1–3 | complete |
 | context | zc-context-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
 | context | zc-context-1samuel-9-12.py | 1 Samuel | 9–12 | complete |
 | context | zc-context-1samuel-13-14.py | 1 Samuel | 13–14 | complete |
 | context | zc-context-1samuel-15-16.py | 1 Samuel | 15–16 | complete |
+| context | zc-context-1samuel-15-16-fill.py | 1 Samuel | 15–16 | complete |
 | context | zc-context-1samuel-17-18.py | 1 Samuel | 17–18 | complete |
 | context | zc-context-1samuel-19-21.py | 1 Samuel | 19–21 | complete |
 | context | zc-context-1samuel-22-24.py | 1 Samuel | 22–24 | complete |
@@ -1350,6 +1364,7 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | original | zc-original-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
 | original | zc-original-2samuel-22-23.py | 2 Samuel | 22–23 | complete |
 | original | zc-original-2samuel-24-24.py | 2 Samuel | 24 | complete |
+| original | zc-original-2samuel-24-fill.py | 2 Samuel | 24 (fill) | complete |
 | context | zc-context-2samuel-1-3.py | 2 Samuel | 1–3 | complete |
 | context | zc-context-2samuel-4-7.py | 2 Samuel | 4–7 | complete |
 | context | zc-context-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
@@ -1362,9 +1377,11 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | christ | zc-christ-2samuel-1-3.py | 2 Samuel | 1–3 | complete |
 | christ | zc-christ-2samuel-4-7.py | 2 Samuel | 4–7 | complete |
 | christ | zc-christ-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
+| christ | zc-christ-2samuel-8-11-fill.py | 2 Samuel | 8–11 (fill) | complete |
 | christ | zc-christ-2samuel-12-13.py | 2 Samuel | 12–13 | complete |
 | christ | zc-christ-2samuel-14-16.py | 2 Samuel | 14–16 | complete |
 | christ | zc-christ-2samuel-17-18.py | 2 Samuel | 17–18 | complete |
+| christ | zc-christ-2samuel-17-24-fill.py | 2 Samuel | 17–18+24 (fill) | complete |
 | christ | zc-christ-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
 | christ | zc-christ-2samuel-22-23.py | 2 Samuel | 22–23 | complete |
 | christ | zc-christ-2samuel-24-24.py | 2 Samuel | 24 | complete |
@@ -1380,12 +1397,15 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | echo | zc-echo-1kings-22-22.py | 1 Kings | 22 | complete |
 | original | zc-original-1kings-1-2.py | 1 Kings | 1–2 | complete |
 | original | zc-original-1kings-3-5.py | 1 Kings | 3–5 | complete |
+| original | zc-original-1kings-fill-3-5.py | 1 Kings | 3–5 (fill) | complete |
 | original | zc-original-1kings-6-7.py | 1 Kings | 6–7 | complete |
 | original | zc-original-1kings-8-9.py | 1 Kings | 8–9 | complete |
 | original | zc-original-1kings-10-11.py | 1 Kings | 10–11 | complete |
 | original | zc-original-1kings-12-14.py | 1 Kings | 12–14 | complete |
 | original | zc-original-1kings-15-17.py | 1 Kings | 15–17 | complete |
+| original | zc-original-1kings-15-17-fill.py | 1 Kings | 15–17 (fill) | complete |
 | original | zc-original-1kings-18-19.py | 1 Kings | 18–19 | complete |
+| original | zc-original-1kings-18-19-fill.py | 1 Kings | 18–19 (fill) | complete |
 | original | zc-original-1kings-20-21.py | 1 Kings | 20–21 | complete |
 | original | zc-original-1kings-22-22.py | 1 Kings | 22 | complete |
 | context | zc-context-1kings-1-2.py | 1 Kings | 1–2 | complete |
@@ -1398,16 +1418,23 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | context | zc-context-1kings-18-19.py | 1 Kings | 18–19 | complete |
 | context | zc-context-1kings-20-21.py | 1 Kings | 20–21 | complete |
 | context | zc-context-1kings-22-22.py | 1 Kings | 22 | complete |
+| context | zc-context-1kings-15-17-fill.py | 1 Kings | 15–17 | complete |
 | christ | zc-christ-1kings-1-2.py | 1 Kings | 1–2 | complete |
+| christ | zc-christ-1kings-1-2-fill.py | 1 Kings | 1–2 (fill) | complete |
 | christ | zc-christ-1kings-3-5.py | 1 Kings | 3–5 | complete |
 | christ | zc-christ-1kings-6-7.py | 1 Kings | 6–7 | complete |
 | christ | zc-christ-1kings-8-9.py | 1 Kings | 8–9 | complete |
+| christ | zc-christ-1kings-fill-8-9.py | 1 Kings | 8–9 (fill) | complete |
 | christ | zc-christ-1kings-10-11.py | 1 Kings | 10–11 | complete |
 | christ | zc-christ-1kings-12-14.py | 1 Kings | 12–14 | complete |
 | christ | zc-christ-1kings-15-17.py | 1 Kings | 15–17 | complete |
 | christ | zc-christ-1kings-18-19.py | 1 Kings | 18–19 | complete |
 | christ | zc-christ-1kings-20-21.py | 1 Kings | 20–21 | complete |
+| christ | zc-christ-1kings-20-21-fill.py | 1 Kings | 20–21 (fill) | complete |
 | christ | zc-christ-1kings-22-22.py | 1 Kings | 22 | complete |
+| christ | zc-christ-1kings-22-fill.py | 1 Kings | 22 (fill) | complete |
+| christ | zc-christ-1kings-12-14-fill.py | 1 Kings | 12–14 | complete |
+| christ | zc-christ-1kings-15-17-fill.py | 1 Kings | 15–17 (fill) | complete |
 | echo | zc-echo-2kings-1-3.py | 2 Kings | 1–3 | complete |
 | echo | zc-echo-2kings-4-5.py | 2 Kings | 4–5 | complete |
 | echo | zc-echo-2kings-6-8.py | 2 Kings | 6–8 | complete |
@@ -1417,30 +1444,44 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | echo | zc-echo-2kings-18-20.py | 2 Kings | 18–20 | complete |
 | echo | zc-echo-2kings-21-23.py | 2 Kings | 21–23 | complete |
 | echo | zc-echo-2kings-24-25.py | 2 Kings | 24–25 | complete |
+| echo | zc-echo-2kings-fill-10-15-21.py | 2 Kings | 10,15,21 (fill) | complete |
 | original | zc-original-2kings-1-3.py | 2 Kings | 1–3 | complete |
+| original | zc-original-2kings-fill-1-3.py | 2 Kings | 1–3 (fill) | complete |
 | original | zc-original-2kings-4-5.py | 2 Kings | 4–5 | complete |
 | original | zc-original-2kings-6-8.py | 2 Kings | 6–8 | complete |
 | original | zc-original-2kings-9-11.py | 2 Kings | 9–11 | complete |
+| original | zc-original-2kings-fill-9-11.py | 2 Kings | 9–11 (fill) | complete |
 | original | zc-original-2kings-12-14.py | 2 Kings | 12–14 | complete |
 | original | zc-original-2kings-15-17.py | 2 Kings | 15–17 | complete |
 | original | zc-original-2kings-18-20.py | 2 Kings | 18–20 | complete |
 | original | zc-original-2kings-21-23.py | 2 Kings | 21–23 | complete |
 | original | zc-original-2kings-24-25.py | 2 Kings | 24–25 | complete |
+| original | zc-original-2kings-24-25-fill.py | 2 Kings | 24–25 (fill) | complete |
+| original | zc-original-2kings-fill-15-20.py | 2 Kings | 15,20 (fill) | complete |
 | context | zc-context-2kings-1-3.py | 2 Kings | 1–3 | complete |
 | context | zc-context-2kings-4-5.py | 2 Kings | 4–5 | complete |
+| context | zc-context-2kings-4-6-fill.py | 2 Kings | 4–6 (fill) | complete |
+| context | zc-context-2kings-7-8-fill.py | 2 Kings | 7–8 (fill) | complete |
+| context | zc-context-2kings-12-14-fill.py | 2 Kings | 12–14 (fill) | complete |
 | context | zc-context-2kings-6-8.py | 2 Kings | 6–8 | complete |
 | context | zc-context-2kings-9-11.py | 2 Kings | 9–11 | complete |
 | context | zc-context-2kings-12-14.py | 2 Kings | 12–14 | complete |
 | context | zc-context-2kings-15-17.py | 2 Kings | 15–17 | complete |
 | context | zc-context-2kings-18-20.py | 2 Kings | 18–20 | complete |
+| context | zc-context-2kings-fill-18-19.py | 2 Kings | 18–19 (fill) | complete |
 | context | zc-context-2kings-21-23.py | 2 Kings | 21–23 | complete |
+| context | zc-context-2kings-21-22-fill.py | 2 Kings | 21–22 (fill) | complete |
 | context | zc-context-2kings-24-25.py | 2 Kings | 24–25 | complete |
+| context | zc-context-2kings-23-25-fill.py | 2 Kings | 23–25 (fill) | complete |
+| context | zc-context-fill-2kings20-1chron18-2sam10.py | 2 Kings/1 Chr/2 Sam | ch20/ch18/ch10 (fill) | complete |
 | christ | zc-christ-2kings-1-3.py | 2 Kings | 1–3 | complete |
 | christ | zc-christ-2kings-4-5.py | 2 Kings | 4–5 | complete |
 | christ | zc-christ-2kings-6-8.py | 2 Kings | 6–8 | complete |
 | christ | zc-christ-2kings-9-11.py | 2 Kings | 9–11 | complete |
 | christ | zc-christ-2kings-12-14.py | 2 Kings | 12–14 | complete |
 | christ | zc-christ-2kings-15-17.py | 2 Kings | 15–17 | complete |
+| christ | zc-christ-2kings-fill-15-17.py | 2 Kings | 15–17 (fill) | complete |
+| christ | zc-christ-2kings-fill-18-20.py | 2 Kings | 18–20 (fill) | complete |
 | christ | zc-christ-2kings-18-20.py | 2 Kings | 18–20 | complete |
 | christ | zc-christ-2kings-21-23.py | 2 Kings | 21–23 | complete |
 | christ | zc-christ-2kings-24-25.py | 2 Kings | 24–25 | complete |
@@ -1459,6 +1500,7 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | echo | zc-echo-1chronicles-29-29.py | 1 Chronicles | 29 | complete |
 | original | zc-original-1chronicles-1-1.py | 1 Chronicles | 1 | complete |
 | original | zc-original-1chronicles-2-3.py | 1 Chronicles | 2–3 | complete |
+| original | zc-original-1chronicles-2-3-fill.py | 1 Chronicles | 2–3 (fill) | complete |
 | original | zc-original-1chronicles-4-5.py | 1 Chronicles | 4–5 | complete |
 | original | zc-original-1chronicles-6-6.py | 1 Chronicles | 6 | complete |
 | original | zc-original-1chronicles-7-8.py | 1 Chronicles | 7–8 | complete |
@@ -1467,8 +1509,10 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | original | zc-original-1chronicles-13-15.py | 1 Chronicles | 13–15 | complete |
 | original | zc-original-1chronicles-16-18.py | 1 Chronicles | 16–18 | complete |
 | original | zc-original-1chronicles-19-22.py | 1 Chronicles | 19–22 | complete |
+| original | zc-original-1chronicles-21-22-fill.py | 1 Chronicles | 21–22 (fill) | complete |
 | original | zc-original-1chronicles-23-25.py | 1 Chronicles | 23–25 | complete |
 | original | zc-original-1chronicles-26-28.py | 1 Chronicles | 26–28 | complete |
+| original | zc-original-1chronicles-27-28-fill.py | 1 Chronicles | 27–28 (fill) | complete |
 | original | zc-original-1chronicles-29-29.py | 1 Chronicles | 29 | complete |
 | context | zc-context-1chronicles-1-1.py | 1 Chronicles | 1 | complete |
 | context | zc-context-1chronicles-2-3.py | 1 Chronicles | 2–3 | complete |
@@ -1512,10 +1556,11 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | original | zc-original-2chronicles-13-17.py | 2 Chronicles | 13–17 | complete |
 | original | zc-original-2chronicles-18-20.py | 2 Chronicles | 18–20 | complete |
 | original | zc-original-2chronicles-21-24.py | 2 Chronicles | 21–24 | complete |
-| original | zc-original-2chronicles-25-28.py | 2 Chronicles | 25–28 | complete |
+| original | zc-original-2chronicles-25-28-fill.py | 2 Chronicles | 25–28 | complete |
 | original | zc-original-2chronicles-29-31.py | 2 Chronicles | 29–31 | complete |
 | original | zc-original-2chronicles-32-34.py | 2 Chronicles | 32–34 | complete |
 | original | zc-original-2chronicles-35-36.py | 2 Chronicles | 35–36 | complete |
+| original | zc-original-2chronicles-1-5-fill.py | 2 Chronicles | 1–5 (fill) | complete |
 | context | zc-context-2chronicles-1-5.py | 2 Chronicles | 1–5 | complete |
 | context | zc-context-2chronicles-6-8.py | 2 Chronicles | 6–8 | complete |
 | context | zc-context-2chronicles-9-12.py | 2 Chronicles | 9–12 | complete |
@@ -1541,7 +1586,7 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | echo | zc-echo-ezra-8-10.py | Ezra | 8–10 | complete |
 | original | zc-original-ezra-1-3.py | Ezra | 1–3 | complete |
 | original | zc-original-ezra-4-7.py | Ezra | 4–7 | complete |
-| original | zc-original-ezra-8-10.py | Ezra | 8–10 | complete |
+| original | zc-original-ezra-fill.py | Ezra | 8–10 | complete |
 | context | zc-context-ezra-1-3.py | Ezra | 1–3 | complete |
 | context | zc-context-ezra-4-7.py | Ezra | 4–7 | complete |
 | context | zc-context-ezra-8-10.py | Ezra | 8–10 | complete |
@@ -1768,15 +1813,43 @@ Each slice ≤ 99 verses, except Psalm 119 (176 verses — longest chapter in th
 | echo | zc-echo-zechariah-8-13.py | Zechariah | 8–13 | complete |
 | echo | zc-echo-zechariah-14-14.py | Zechariah | 14 | complete |
 | original | zc-original-zechariah-1-7.py | Zechariah | 1–7 | complete |
-| original | zc-original-zechariah-8-13.py | Zechariah | 8–13 | in-progress @ 2026-06-11T12:00:00Z |
+| original | zc-original-zechariah-8-13.py | Zechariah | 8–13 | complete |
 | original | zc-original-zechariah-14-14.py | Zechariah | 14 | complete |
 | context | zc-context-zechariah-1-7.py | Zechariah | 1–7 | complete |
-| context | zc-context-zechariah-8-13.py | Zechariah | 8–13 | in-progress @ 2026-06-12T03:29:00Z |
+| context | zc-context-zechariah-8-13.py | Zechariah | 8–13 | complete |
 | context | zc-context-zechariah-14-14.py | Zechariah | 14 | complete |
-| christ | zc-christ-zechariah-1-7.py | Zechariah | 1–7 | not started |
-| christ | zc-christ-zechariah-8-13.py | Zechariah | 8–13 | partial |
-| christ | zc-christ-zechariah-14-14.py | Zechariah | 14 | not started |
+| christ | zc-christ-zechariah-1-7.py | Zechariah | 1–7 | complete |
+| christ | zc-christ-zechariah-8-13.py | Zechariah | 8–13 | complete |
+| christ | zc-christ-zechariah-14-14.py | Zechariah | 14 | complete |
 | echo | zc-echo-malachi-1-4.py | Malachi | 1–4 | complete |
 | original | zc-original-malachi-1-4.py | Malachi | 1–4 | complete |
 | context | zc-context-malachi-1-4.py | Malachi | 1–4 | complete |
-| christ | zc-christ-malachi-1-4.py | Malachi | 1–4 | partial |
+| christ | zc-christ-malachi-fill.py | Malachi | 1–4 | complete |
+| context | zc-context-1samuel-1-3.py | 1 Samuel | 1–3 | complete |
+| original | zc-original-1samuel-4-8.py | 1 Samuel | 4–8 | complete |
+| original | zc-original-2samuel-8-11.py | 2 Samuel | 8–11 | complete |
+| context | zc-context-2samuel-12-14.py | 2 Samuel | 12–14 | complete |
+| context | zc-context-2samuel-15-18.py | 2 Samuel | 15–18 | complete |
+| original | zc-original-2samuel-14-16.py | 2 Samuel | 14–16 | complete |
+| original | zc-original-2samuel-19-21.py | 2 Samuel | 19–21 | complete |
+| original | zc-original-2samuel-24.py | 2 Samuel | 24 | complete |
+| original | zc-original-1chronicles-19-20-26-fill.py | 1 Chronicles | 19–20, 26 (fill) | complete |
+| original | zc-original-1samuel-17-18-fill.py | 1 Samuel | 17–18 (fill) | complete |
+| original | zc-original-2kings-16-17-fill.py | 2 Kings | 16–17 (fill) | complete |
+| christ | zc-christ-1samuel-13-14-fill.py | 1 Samuel | 13–14 (fill) | complete |
+| original | zc-original-2kings-18-19-fill.py | 2 Kings | 18–19 (fill) | complete |
+| christ | zc-christ-2kings-6-8-fill.py | 2 Kings | 6–8 (fill) | complete |
+| christ | zc-christ-1samuel-17-18-fill.py | 1 Samuel | 17–18 (fill) | complete |
+| christ | zc-christ-2kings-12-14-fill.py | 2 Kings | 12–14 (fill) | complete |
+| christ | zc-christ-1samuel-22-24-fill.py | 1 Samuel | 22–24 (fill) | complete |
+| original | zc-original-1chronicles-7-8-fill.py | 1 Chronicles | 7–8 (fill) | complete |
+| christ | zc-christ-2kings-15-17-fill.py | 2 Kings | 15–17 (fill) | complete |
+| christ | zc-christ-2kings-18-20-fill.py | 2 Kings | 18–20 (fill) | complete |
+| context | zc-context-1chronicles-2-5-fill.py | 1 Chronicles | 2–5 (fill) | complete |
+| original | zc-original-1chronicles-13-15-fill.py | 1 Chronicles | 13–15 (fill) | complete |
+| original | zc-original-1chronicles-21-22-fill.py | 1 Chronicles | 21–22 (fill) | complete |
+| original | zc-original-1chronicles-27-28-fill.py | 1 Chronicles | 27–28 (fill) | complete |
+| context | zc-context-1chronicles-7-8-fill.py | 1 Chronicles | 7–8 (fill) | complete |
+| context | zc-context-1chronicles-16-17-fill.py | 1 Chronicles | 16–17 (fill) | complete |
+| context | zc-context-1chronicles-23-25-fill.py | 1 Chronicles | 23–25 (fill) | complete |
+| context | zc-context-1chronicles-26-28-fill.py | 1 Chronicles | 26–28 (fill) | complete |

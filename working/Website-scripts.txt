@@ -21,7 +21,7 @@ scp -r domad@192.168.86.50:/home/domad/Documents/bible-study-website C:\Users\Ad
 
 
 #commentary loop:
-/re
+/loop Read Z_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
 #Studies loop: (synthesis) 
 /loop Read WS_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websiteworking/. This is one iteration of a loop — claim and complete exactly one work unit from WS_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
