@@ -13,6 +13,7 @@
 'use strict';
 
 import { _resolve, initTheme, parseRef, loadBooks, loadVersions, loadInterlinear, loadStrongs, loadBook, getVersion, setVersion, loadCommentary, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, loadCrossRefs, parseCrossRefEntry, escHtml, INTERLINEAR_ROOT } from './core.js';
+import { autoTagTermsWhenReady } from './terms.js';
 
 /* ── URLs ──────────────────────────────────────────────────── */
 const PHASE_URLS = {
@@ -3759,6 +3760,7 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles, bibleBoo
   const noticeBanner = _renderPassageNoticeBanner(parsed, codesInPassage, seenFunctions, particles);
   const idiomPanel   = _renderPassageIdioms(codesInPassage);
   tilesEl.innerHTML = (noticeBanner + idiomPanel + legendHtml + html) || '<span class="sw-ptile-loading">No tokens found for this passage.</span>';
+  tilesEl.querySelectorAll('.sw-verse-translation').forEach(autoTagTermsWhenReady);
 
   // Wire tile click → open dossier
   // Shared tooltip element for tile hover previews

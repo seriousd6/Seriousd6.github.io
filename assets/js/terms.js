@@ -1,17 +1,15 @@
-/* terms.js — Term hover tooltip system (site-wide noun/concept linking) */
+/* terms.js — Term hover tooltip system (site-wide noun/concept linking)
+ *
+ * Loads data/biblepedia/index.json (single fetch replacing 4 separate source indexes)
+ * to power .term-link hover tooltips. All links resolve to /biblepedia/.
+ */
 'use strict';
 
-import {
-  escHtml,
-  _smithLoad, _smithData,
-  _hitchLoad, _hitchData
-} from './core.js';
+import { escHtml, _resolve } from './core.js';
 import { wireRefLinks } from './wire.js';
-import {
-  _naveLoad, _naveData, _naveMap,
-  _dictLoad, _dictData,
-  DICT_PAGE_URL, BIBLEPEDIA_URL
-} from './library.js';
+import { BIBLEPEDIA_URL } from './library.js';
+
+var BP_IDX_URL = _resolve('../../data/biblepedia/index.json');
 
 var _termTipEl     = null;
 var _termTipTimer  = null;
@@ -72,65 +70,42 @@ function _positionTermTip(anchor) {
   _termTipEl.style.left = left + 'px';
 }
 
+function _srcLabel(entry) {
+  var cat = entry.category;
+  if (cat === 'people')   return 'Person';
+  if (cat === 'places')   return 'Place';
+  if (cat === 'concepts') return 'Concept';
+  if (cat === 'names')    return 'Name';
+  return '';
+}
+
 function _showTermTip(anchor, key) {
   _buildTermTooltipDOM();
   var entry = _termMap2 && _termMap2[key];
   if (!entry) return;
 
-  var src = [];
-  if (entry.dictId)     src.push("Easton's");
-  if (entry.smithId)    src.push("Smith's");
-  if (entry.hitchId)    src.push("Names");
-  if (entry.naveSlugs && entry.naveSlugs.length) src.push("Nave's");
-
   var html =
     '<div class="bsw-term-tooltip__head">' +
       '<span class="bsw-term-tooltip__term">' + escHtml(entry.term) + '</span>' +
-      '<span class="bsw-term-tooltip__src">' + escHtml(src.join(' · ')) + '</span>' +
+      '<span class="bsw-term-tooltip__src">' + escHtml(_srcLabel(entry)) + '</span>' +
     '</div>' +
     '<div class="bsw-term-tooltip__body">';
 
-  if (entry.dictBrief) {
-    var brief = entry.dictBrief;
-    var dot = brief.indexOf('. ', 50);
-    if (dot > 0 && dot < 160) brief = brief.slice(0, dot + 1);
-    else if (brief.length > 120) brief = brief.slice(0, 117) + '…';
-    html += '<p class="bsw-term-tooltip__brief">' + escHtml(brief) + '</p>';
-  } else if (entry.smithBrief) {
-    var sBrief = entry.smithBrief;
-    var sDot = sBrief.indexOf('. ', 50);
-    if (sDot > 0 && sDot < 160) sBrief = sBrief.slice(0, sDot + 1);
-    else if (sBrief.length > 120) sBrief = sBrief.slice(0, 117) + '…';
-    html += '<p class="bsw-term-tooltip__brief">' + escHtml(sBrief) + '</p>';
+  if (entry.brief) {
+    html += '<p class="bsw-term-tooltip__brief">' + escHtml(entry.brief) + '</p>';
   }
 
-  if (entry.hitchMeaning) {
-    html += '<p class="bsw-term-tooltip__hitch"><span class="bsw-term-tooltip__hitch-label">Name: </span>' +
-      escHtml(entry.hitchMeaning) + '</p>';
-  }
-
-  if (entry.naveSlugs && entry.naveSlugs.length) {
-    html += '<div class="bsw-term-tooltip__nave"><p class="bsw-term-tooltip__nave-label">Nave\'s Topics</p><div class="bsw-term-tooltip__nave-chips">';
-    entry.naveSlugs.slice(0, 4).forEach(function (ns) {
-      var t = _naveMap && _naveMap[ns];
-      if (!t) return;
-      var href = DICT_PAGE_URL + '?entry=' + encodeURIComponent(t.slug) + '&src=nave';
-      html += '<a class="bsw-term-tooltip__nave-chip" href="' + escHtml(href) + '">' +
-        escHtml(t.title.charAt(0) + t.title.slice(1).toLowerCase()) +
-        ' <span style="opacity:.6">(' + t.verses.length + ')</span></a>';
-    });
-    html += '</div></div>';
+  if (entry.hitchcock_meaning) {
+    html += '<p class="bsw-term-tooltip__hitch">' +
+      '<span class="bsw-term-tooltip__hitch-label">Name: </span>' +
+      escHtml(entry.hitchcock_meaning) + '</p>';
   }
 
   html += '<div class="bsw-term-tooltip__links">';
-  if (entry.dictId || entry.smithId) {
-    var artSlug = entry.dictId || entry.smithId;
-    var bpHref = BIBLEPEDIA_URL + '?a=' + encodeURIComponent(artSlug);
-    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(bpHref) + '">Article &#x2192;</a>';
-  }
-  if (entry.naveSlugs && entry.naveSlugs.length) {
-    var nHref = DICT_PAGE_URL + '?entry=' + encodeURIComponent(entry.naveSlugs[0]) + '&src=nave';
-    html += '<a class="bsw-term-tooltip__link" href="' + escHtml(nHref) + '">Topics &#x2192;</a>';
+  if (entry.has_article) {
+    html += '<a class="bsw-term-tooltip__link" href="' +
+      escHtml(BIBLEPEDIA_URL + '?a=' + encodeURIComponent(entry.id)) +
+      '">Biblepedia &#x2192;</a>';
   }
   html += '</div></div>';
 
@@ -140,74 +115,47 @@ function _showTermTip(anchor, key) {
   _positionTermTip(anchor);
 }
 
+// INTENT: Guard against loading the ~2MB BP index on pages with no taggable content.
+// The index replaces 4 separate source fetches (Easton's, Smith's, Hitchcock's, Nave's).
+// Only articles with has_article:true are used for the multi-word regex to avoid bloating
+// the pattern with 2,000+ Nave-only stub phrases that rarely appear in prose.
 function _loadTermMap() {
   if (_termMap2) return Promise.resolve(_termMap2);
   if (_termMapReady) return _termMapReady;
-  _termMapReady = Promise.all([_dictLoad(), _naveLoad(), _smithLoad(), _hitchLoad()]).then(function () {
-    var map  = {};
+  _termMapReady = fetch(BP_IDX_URL)
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (data) {
+      var map = {};
 
-    if (_dictData) {
-      _dictData.forEach(function (e) {
-        var k = e.term.toLowerCase();
-        if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
-        map[k].dictId    = e.id;
-        map[k].dictBrief = e.brief;
+      data.forEach(function (entry) {
+        var k = entry.term.toLowerCase();
+        if (!map[k]) map[k] = entry;
       });
-    }
 
-    if (_naveData) {
-      _naveData.forEach(function (t) {
-        var title = t.title.charAt(0) + t.title.slice(1).toLowerCase();
-        var k = title.toLowerCase();
-        if (!map[k]) map[k] = { term: title, naveSlugs: [] };
-        else if (!map[k].term) map[k].term = title;
-        map[k].naveSlugs.push(t.slug);
-      });
-    }
+      _termMap2 = map;
 
-    if (_smithData) {
-      _smithData.forEach(function (e) {
-        var k = e.term.toLowerCase();
-        if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
-        if (!map[k].smithId && e.brief) {
-          map[k].smithId    = e.id;
-          map[k].smithBrief = e.brief;
+      // Multi-word regex: only full-article entries to keep pattern manageable
+      var multiKeys = Object.keys(map).filter(function (k) {
+        return k.indexOf(' ') >= 0 && k.length >= 4 && map[k].has_article;
+      }).sort(function (a, b) { return b.length - a.length; });
+
+      if (multiKeys.length) {
+        var escaped = multiKeys.map(function (k) {
+          return k.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&');
+        });
+        try {
+          _termMultiRe = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
+        } catch (e) {
+          _termMultiRe = null;
         }
-      });
-    }
-
-    if (_hitchData) {
-      _hitchData.forEach(function (e) {
-        var k = e.term.toLowerCase();
-        if (!map[k]) map[k] = { term: e.term, naveSlugs: [] };
-        map[k].hitchId      = e.id;
-        map[k].hitchMeaning = e.meaning;
-      });
-    }
-
-    _termMap2 = map;
-
-    var multiKeys = Object.keys(map).filter(function (k) {
-      return k.indexOf(' ') >= 0 && k.length >= 4;
-    }).sort(function (a, b) { return b.length - a.length; });
-
-    if (multiKeys.length) {
-      var escaped = multiKeys.map(function (k) {
-        return k.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&');
-      });
-      try {
-        _termMultiRe = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'gi');
-      } catch (e) {
-        _termMultiRe = null;
       }
-    }
 
-    _termSingleSet = new Set(Object.keys(map).filter(function (k) {
-      return k.indexOf(' ') < 0 && k.length >= 3;
-    }));
+      _termSingleSet = new Set(Object.keys(map).filter(function (k) {
+        return k.indexOf(' ') < 0 && k.length >= 3;
+      }));
 
-    return map;
-  });
+      return map;
+    });
   return _termMapReady;
 }
 
@@ -282,7 +230,7 @@ function _tagTextNode(textNode) {
     }
   }
 
-  var remaining = last === 0 ? text : (text.slice(last));
+  var remaining        = last === 0 ? text : text.slice(last);
   var remaining_offset = last;
 
   var wordRe = /\b([A-Z][a-z]{2,})\b/g;
@@ -301,7 +249,7 @@ function _tagTextNode(textNode) {
 
     var absPos  = remaining_offset + wpos;
     var pre     = absPos > 0 ? text.charAt(absPos - 1) : '';
-    if (absPos === 0 || /[.!?\n\r]/.test(pre)) continue;
+    if (absPos > 0 && /[.!?\n\r]/.test(pre)) continue;
     if (/["'"''""—]/.test(pre)) {
       var pre2 = absPos > 1 ? text.charAt(absPos - 2) : '';
       if (/[.!?\n]/.test(pre2)) continue;
@@ -355,14 +303,12 @@ export function autoTagTermsWhenReady(root) {
   _loadTermMap().then(function () { autoTagTerms(root); });
 }
 
-// INTENT: Guard against loading 3.2 MB of term-index data on pages with no taggable content
-//   (maps, history, search, library progress, etc.). Checks for `.term` elements AND any
-//   container matching `_AUTOTAG_SELECTORS` before triggering the network fetch.
-// CHANGE? If a new page type gains autotag-eligible content, ensure its container selector
-//   appears in `_AUTOTAG_SELECTORS` so this guard allows the load.
-// VERIFY: Open DevTools Network on `/history/` with cache cleared — no requests to
-//   `data/dictionary/index.json`, `data/smith/index.json`, or `data/topical/nave.json`.
-//   Open `/topics/christology/` — all term-index files load during idle.
+// INTENT: Guard against loading the ~2MB BP index on pages with no taggable content.
+// Checks for .term elements AND any container matching _AUTOTAG_SELECTORS before
+// triggering the network fetch. If a new page type gains autotag-eligible content,
+// add its container selector to _AUTOTAG_SELECTORS so this guard allows the load.
+// VERIFY: Open /maps/ with cache cleared — no request to data/biblepedia/index.json.
+//   Open /topics/christology/ — index.json loads during idle.
 export function runAutoTagTerms() {
   var hasTerms   = !!document.querySelector('.term');
   var hasContent = !!document.querySelector(_AUTOTAG_SELECTORS);

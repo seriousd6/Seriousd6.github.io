@@ -10,7 +10,7 @@ import {
   LIB_INDEX_URL, LIB_DOCS_BASE, LIB_ABBREV_MAP, libDocCache, libIndexCache,
   BOOK_MAP_LINKS, MAP_LABELS
 } from './core.js';
-import { autoTagTerms } from './terms.js';
+import { autoTagTerms, autoTagTermsWhenReady } from './terms.js';
 import {
   getNotes, getNote, saveNote, toggleHighlight, _HL_COLORS,
   _historyPush, _historyGet, _recordReadingDay, getNotesForVerse, getNotesForChapter,
@@ -22,7 +22,7 @@ import {
 } from './wire.js';
 import { markEchoVerses } from './parallels.js';
 import {
-  getInterlinearEnabled, injectAllInterlinearRows
+  getInterlinearEnabled, setInterlinearEnabled, injectAllInterlinearRows, setRiHighlightCode
 } from './interlinear.js';
 
 export { initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle, initSidebarToggle } from './interlinear.js';
@@ -282,6 +282,13 @@ var READ_KEY = 'bsw_chapter_read';
 // ── Stripped mode — no side panel (used when navigating from Reading Progress) ──
 var _strippedMode = !!new URLSearchParams(location.search).get('stripped');
 
+var STRONGS_REFS_URL   = _resolve('../../data/strongs/refs/');
+var _strongsBanner     = null;  // persists across doLookup re-renders in strongs mode
+var _strongsAllRefs    = null;  // full refs array for pagination
+var _strongsPage       = 0;     // current page index (0-based)
+var _strongsModeCode   = null;  // active strongs code, used to highlight matching tiles
+var STRONGS_PAGE_SIZE  = 100;   // range-refs per page
+
 // ── initReaderPage ────────────────────────────────────────────────────────
 export function initReaderPage() {
   initReaderLookup();
@@ -297,6 +304,87 @@ export function initReaderPage() {
   onVersionChange(function () {
     if (window._readerLookupFn) window._readerLookupFn();
   });
+}
+
+// ── Strong's occurrences mode ─────────────────────────────────────────────
+// Triggered by ?strongs=H7676 — fetches all verse refs for that code,
+// enables interlinear, paginates through them, and highlights matching tiles.
+
+function _strongsBuildBanner(data) {
+  var totalPages = Math.ceil(_strongsAllRefs.length / STRONGS_PAGE_SIZE);
+  var startRef   = _strongsPage * STRONGS_PAGE_SIZE + 1;
+  var endRef     = Math.min(startRef + STRONGS_PAGE_SIZE - 1, _strongsAllRefs.length);
+
+  var banner = document.createElement('div');
+  banner.className = 'reader-strongs-banner';
+  banner.innerHTML =
+    '<div class="reader-strongs-banner__info">' +
+      '<span class="reader-strongs-banner__code">' + escHtml(data.code) + '</span>' +
+      (data.lemma   ? ' <span class="reader-strongs-banner__lemma">'   + escHtml(data.lemma)              + '</span>' : '') +
+      (data.translit? ' <span class="reader-strongs-banner__translit">(' + escHtml(data.translit) + ')</span>' : '') +
+      (data.gloss   ? ' — <span class="reader-strongs-banner__gloss">' + escHtml(data.gloss)              + '</span>' : '') +
+    '</div>' +
+    '<div class="reader-strongs-banner__nav">' +
+      '<button class="reader-strongs-nav-btn" data-strongs-nav="prev"' + (_strongsPage === 0 ? ' disabled' : '') + '>&#x2039; Prev</button>' +
+      '<span class="reader-strongs-banner__count">' +
+        startRef + '–' + endRef + ' of ' + _strongsAllRefs.length +
+        ' passages (' + data.count + ' occurrences)' +
+      '</span>' +
+      '<button class="reader-strongs-nav-btn" data-strongs-nav="next"' + (_strongsPage >= totalPages - 1 ? ' disabled' : '') + '>Next &#x203a;</button>' +
+    '</div>';
+
+  return banner;
+}
+
+function _strongsRenderPage(data, input, doLookup) {
+  var pageRefs = _strongsAllRefs.slice(
+    _strongsPage * STRONGS_PAGE_SIZE,
+    (_strongsPage + 1) * STRONGS_PAGE_SIZE
+  );
+
+  _strongsBanner = _strongsBuildBanner(data);
+
+  // Wire nav buttons
+  _strongsBanner.querySelectorAll('[data-strongs-nav]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var dir = btn.getAttribute('data-strongs-nav');
+      if (dir === 'prev' && _strongsPage > 0) _strongsPage--;
+      else if (dir === 'next' && _strongsPage < Math.ceil(_strongsAllRefs.length / STRONGS_PAGE_SIZE) - 1) _strongsPage++;
+      else return;
+      _strongsRenderPage(data, input, doLookup);
+    });
+  });
+
+  input.value = pageRefs.join('; ');
+  doLookup();
+}
+
+function _initStrongsMode(code, input, doLookup, resultsEl) {
+  if (!resultsEl) return;
+  resultsEl.innerHTML = '<p class="reader-hint">Loading occurrences of ' + escHtml(code) + '…</p>';
+
+  fetch(STRONGS_REFS_URL + code.toLowerCase() + '.json')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (data) {
+      if (!data.refs || !data.refs.length) {
+        resultsEl.innerHTML = '<p class="reader-hint">No occurrences found for ' + escHtml(code) + '.</p>';
+        return;
+      }
+
+      _strongsAllRefs  = data.refs;
+      _strongsPage     = 0;
+      _strongsModeCode = code;
+
+      setInterlinearEnabled(true);
+      setRiHighlightCode(code);
+      var ilBtn = document.getElementById('reader-interlinear-btn');
+      if (ilBtn) ilBtn.classList.add('reader-interlinear-btn--on');
+
+      _strongsRenderPage(data, input, doLookup);
+    })
+    .catch(function () {
+      resultsEl.innerHTML = '<p class="reader-hint">Could not load occurrences for ' + escHtml(code) + '.</p>';
+    });
 }
 
 // ── initReaderLookup ──────────────────────────────────────────────────────
@@ -485,8 +573,12 @@ export function initReaderLookup() {
         if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
         markEchoVerses();
 
+        if (_strongsBanner && resultsEl) resultsEl.prepend(_strongsBanner);
+
         _historyPush(q, ver);
         _recordReadingDay();
+
+        resultsEl.querySelectorAll('.reader-result-group__text').forEach(autoTagTermsWhenReady);
       }
 
       if (isParaViewEnabled()) {
@@ -506,20 +598,32 @@ export function initReaderLookup() {
   //   If doLookup is ever renamed or this assignment is removed, all in-page navigation
   //   silently becomes a no-op with no JS error.
   window._readerLookupFn = doLookup;
-  if (btn) btn.addEventListener('click', doLookup);
+  function _clearStrongsMode() {
+    if (_strongsModeCode) {
+      _strongsModeCode = null;
+      _strongsAllRefs  = null;
+      _strongsBanner   = null;
+      setRiHighlightCode(null);
+    }
+  }
+
+  if (btn) btn.addEventListener('click', function () { _clearStrongsMode(); doLookup(); });
   input.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') { e.preventDefault(); doLookup(); }
+    if (e.key === 'Enter') { e.preventDefault(); _clearStrongsMode(); doLookup(); }
   });
   input.addEventListener('input', function () { setStatus(''); });
 
   // Pre-fill input from URL and trigger lookup
-  var params = new URLSearchParams(window.location.search);
-  var refStr = params.get('ref') || params.get('q') || '';
-  if (refStr) {
+  var params    = new URLSearchParams(window.location.search);
+  var resultsEl = document.getElementById('reader-results');
+  var refStr    = params.get('ref') || params.get('q') || '';
+  var strongsId = params.get('strongs') || '';
+  if (strongsId) {
+    _initStrongsMode(strongsId, input, doLookup, resultsEl);
+  } else if (refStr) {
     input.value = refStr;
     doLookup();
   } else {
-    var resultsEl = document.getElementById('reader-results');
     var hist = _historyGet();
     var lastRef = hist[0];
     if (lastRef && !sessionStorage.getItem('bsw_reader_resume_dismissed') && resultsEl) {

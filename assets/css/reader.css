@@ -1141,6 +1141,83 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   line-height: 1;
 }
 
+/* ── Strong's occurrences banner ──────────────────────────── */
+.reader-strongs-banner {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .65rem 1rem;
+  margin-bottom: 1rem;
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: .88rem;
+}
+
+.reader-strongs-banner__info {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .2rem .45rem;
+}
+
+.reader-strongs-banner__nav {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.reader-strongs-banner__code {
+  font-family: var(--font-mono, monospace);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: .15rem .4rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  letter-spacing: .04em;
+}
+
+.reader-strongs-banner__lemma {
+  font-size: 1.05rem;
+  font-family: var(--font-serif, serif);
+}
+
+.reader-strongs-banner__translit {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: .82rem;
+}
+
+.reader-strongs-banner__gloss {
+  font-weight: 600;
+}
+
+.reader-strongs-banner__count {
+  font-size: .75rem;
+  color: var(--color-muted);
+}
+
+.reader-strongs-nav-btn {
+  padding: .2rem .65rem;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 4px;
+  background: var(--color-bg);
+  font-size: .78rem;
+  cursor: pointer;
+  color: var(--color-primary);
+  transition: background .12s, border-color .12s;
+}
+.reader-strongs-nav-btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.reader-strongs-nav-btn:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
 /* ── RD-H: Empty state ──────────────────────────────────── */
 .reader-empty-state {
   text-align: center;
@@ -2041,6 +2118,25 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   border-color: var(--color-primary);
   background: var(--color-bg);
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Search-match highlight — tile whose Strong's code matches the active strongs search */
+.ri-tile--search-match {
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface, #faf8f3));
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+.ri-tile--search-match .ri-tile__s {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Highlighted English word in verse text on tile hover */
+mark.ri-word-hl {
+  background: color-mix(in srgb, var(--color-primary) 22%, transparent);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
 }
 .ri-tile__lemma {
   font-family: var(--font-body, Georgia, serif);

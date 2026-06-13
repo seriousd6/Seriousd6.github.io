@@ -27,7 +27,7 @@ import {
   renderVSTopics, renderVSDictionary,
   _dictEntriesForVerse, loadLibVerseIndex
 } from './library.js';
-import { autoTagTerms } from './terms.js';
+import { autoTagTerms, autoTagTermsWhenReady } from './terms.js';
 
 // ── Module state ──────────────────────────────────────────────────────────────
 var _vsActiveToken = null;
@@ -302,6 +302,8 @@ export function loadVerseStudyVerse(parsed, versionId) {
       if (pvText) {
         prevEl.innerHTML = '<sup class="vs-ctx-num">' + pv + '</sup>' +
           '<span class="vs-ctx-text">' + escHtml(pvText) + '</span>';
+        prevEl._termsTagged = false;
+        autoTagTermsWhenReady(prevEl);
       } else {
         prevEl.innerHTML = '';
       }
@@ -313,6 +315,8 @@ export function loadVerseStudyVerse(parsed, versionId) {
       if (nvText) {
         nextEl.innerHTML = '<sup class="vs-ctx-num">' + nv + '</sup>' +
           '<span class="vs-ctx-text">' + escHtml(nvText) + '</span>';
+        nextEl._termsTagged = false;
+        autoTagTermsWhenReady(nextEl);
       } else {
         nextEl.innerHTML = '';
       }

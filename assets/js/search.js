@@ -37,6 +37,7 @@ var _LIBRARY_ROOT = _resolve('../../library/');
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
 import { wireRefLinks, wireRefEl } from './wire.js';
 import { _showShortcutsOverlay } from './modal.js';
+import { autoTagTermsWhenReady } from './terms.js';
 
 // ── Session state ─────────────────────────────────────────────────────────
 var _searchDebounce    = null;
@@ -603,6 +604,7 @@ function _appendVerseResultBatch(sorted, query, offset, container) {
 
   container.insertAdjacentHTML('beforeend', html);
   wireRefLinks(container);
+  container.querySelectorAll('.bsw-search-result__text').forEach(autoTagTermsWhenReady);
 
   if (remaining > 0) {
     var btnLabel = 'Load ' + Math.min(_VERSE_BATCH, remaining) + ' more' +
@@ -906,6 +908,7 @@ function _exploreVerses(q, container) {
     }).join('');
     container.innerHTML = html + '<p class="omni-none" style="margin-top:.5rem">' + switchBtn + '</p>';
     wireRefLinks(container);
+    container.querySelectorAll('.bsw-search-result__text').forEach(autoTagTermsWhenReady);
   }
 
   // Wire the tab-switch button so clicking it switches to Verse Search and fires the search.

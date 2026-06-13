@@ -8,6 +8,7 @@ import {
 } from './core.js';
 import { wireRefLinks } from './wire.js';
 import { expandMorphCode } from './interlinear.js';
+import { autoTagTermsWhenReady } from './terms.js';
 
 var _wdCurrentFilter = null;
 var _wdCurrentBook   = null;
@@ -629,6 +630,7 @@ function _wdRenderVerses(strongsId) {
             ? escHtml(seg)
             : '<mark class="wd-highlight">' + escHtml(seg) + '</mark>';
         }).join('');
+        autoTagTermsWhenReady(textEl);
       } else {
         textEl.textContent = '(verse not available)';
       }

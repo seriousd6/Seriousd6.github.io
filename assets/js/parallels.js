@@ -4,6 +4,7 @@
 import {
   READER_URL, getVersion, loadBook, parseRef, escHtml, loadEchoes
 } from './core.js';
+import { autoTagTermsWhenReady } from './terms.js';
 
 // ── Echo toggle ──────────────────────────────────────────────────────────────
 var _ECHO_KEY = 'bsw_echoes';
@@ -319,6 +320,7 @@ function _loadEchoText(ref, version, container, page) {
     }
 
     container.innerHTML = textHtml + navHtml;
+    if (parts.length) autoTagTermsWhenReady(container);
 
     container.querySelectorAll('.reader-parallel-pager__btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
