@@ -45,7 +45,8 @@
       },
       {
         "v": 6,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 12,
@@ -71,11 +72,13 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "micah"
       },
       {
         "v": 5,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 8,
@@ -83,7 +86,8 @@
       },
       {
         "v": 9,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "micah"
       }
     ],
     "headings": [
@@ -113,7 +117,8 @@
       },
       {
         "v": 9,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       }
     ],
     "headings": [
@@ -135,7 +140,8 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 2,
@@ -181,15 +187,18 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 6,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "crowd"
       },
       {
         "v": 9,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       }
     ],
     "headings": [
@@ -223,7 +232,8 @@
       },
       {
         "v": 14,
-        "type": "dialogue"
+        "type": "prayer",
+        "speaker": "micah"
       },
       {
         "v": 18,

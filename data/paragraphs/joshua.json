@@ -527,7 +527,8 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "joshua"
       }
     ],
     "headings": [
@@ -541,11 +542,13 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 14,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "joshua"
       },
       {
         "v": 29,

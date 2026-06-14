@@ -7,6 +7,23 @@ To add a new looping project, see `working/todo-workflow.md` → "How to Add a L
 
 ---
 
+### Paragraph Annotation Upgrade (PARA2 loop)
+
+*Upgrades existing `data/paragraphs/{bookId}.json` (already complete for 66 books) with per-break speaker attribution, compound type flags, and thought breaks. Rendering engine (JS + CSS) is already built. Loop agents work book by book on the data annotation pass.*
+
+| File | Purpose |
+|---|---|
+| `PARA2_AGENT_PROMPT.md` | Paste prompt for each agent session |
+| `PARA2_AGENT_GUIDE.md` | Schema reference, speaker vocabulary, annotation rules |
+| `PARA2_PROGRESS.md` | Work queue — 38 books with dialogue breaks; phased by priority |
+
+- [ ] **PARA2-Phase1** — Gospels + Acts (John, Matthew, Mark, Luke, Acts — 5 books, ~149 dialogue breaks)
+- [ ] **PARA2-Phase2** — OT Narrative Dialogues (Job, Daniel, Chronicles, Samuel, etc.)
+- [ ] **PARA2-Phase3** — OT Prophets (oracle type upgrades, Ezekiel, Jeremiah, Amos, etc.)
+- [ ] **PARA2-Phase4** — NT Epistles, Wisdom, Revelation
+
+---
+
 ### Paragraph Structure Data (PARA loop)
 
 *Agent generates `data/paragraphs/{bookId}.json` for all 66 books — paragraph breaks, section types (narrative/poetry/dialogue/list/doxology), and section headings per chapter. Used by the reader's Print Mode to reformat verses into proper literary structure.*

@@ -23,7 +23,7 @@ For every book, these commentary JSON files exist in `data/commentary/`:
 
 | Source id | Path | Commentator | Notes |
 |-----------|------|-------------|-------|
-| `mhcc` | `data/commentary/mhcc/{book}.json` | Matthew Henry Concise | Puritanical, devotional, strong on application |
+| `mhcc` | `data/commentary/{book}.json` | Matthew Henry Concise | **Top-level path — no subdirectory.** Puritanical, devotional, strong on application |
 | `calvin` | `data/commentary/calvin/{book}.json` | John Calvin | Precise, grammatical, Reformed; strong on original languages |
 | `ellicott` | `data/commentary/ellicott/{book}.json` | Charles Ellicott | Verse-by-verse, scholarly, Anglican; strong on syntax |
 | `jfb` | `data/commentary/jfb/{book}.json` | Jamieson-Fausset-Brown | Encyclopedic, evangelical; strong on cross-reference |
@@ -31,6 +31,10 @@ For every book, these commentary JSON files exist in `data/commentary/`:
 | `wesley` | `data/commentary/wesley/{book}.json` | John Wesley | Brief, pastoral, practical |
 | `barnes` | `data/commentary/barnes/{book}.json` | Albert Barnes | NT only; thorough, Reformed Baptist |
 | `rwp` | `data/commentary/rwp/{book}.json` | Robertson's Word Pictures | NT only; grammatical, Greek syntax focus |
+| `catena` | `data/commentary/catena/{book}.json` | Catena Aurea (Aquinas) | Patristic chain commentary; 66 books |
+| `mkt-original` | `data/commentary/mkt-original/{book}.json` | MKT Original Languages | Greek/Hebrew word analysis; 66 books |
+| `mkt-context` | `data/commentary/mkt-context/{book}.json` | MKT Context | Historical/literary background; 66 books |
+| `mkt-christ` | `data/commentary/mkt-christ/{book}.json` | MKT Christological | Christological themes and typology; 66 books |
 
 **Reading the source files:** Each source file is structured `{ "ch": { "v": "<html>" } }`. Some sources use a section-entry approach — the closest key ≤ the verse number is the relevant entry. Check a few keys near your verse to find it.
 
@@ -150,6 +154,7 @@ Two agents must **not** work the same chapter range of the same book simultaneou
 
 - **`synthesis` ≠ a quote.** The synthesis is your prose. The voices array holds the quotes.
 - **`voices` ≠ all eight sources.** Only include sources that said something specifically useful about this verse. 2–4 voices is typical. 6 is the ceiling.
-- **Source section entries.** `data/commentary/mhcc/hebrews.json` key `"1": {"1": ...}` may have the commentary for verses 1–4 all in verse key `"1"`. Read the actual content to see what range it covers before excerpting.
+- **Source section entries.** `data/commentary/hebrews.json` (mhcc top-level) key `"1": {"1": ...}` may have the commentary for verses 1–4 all in verse key `"1"`. Read the actual content to see what range it covers before excerpting.
+- **mhcc path is unique.** Every other source uses `data/commentary/{src}/{book}.json`. mhcc alone is at `data/commentary/{book}.json` (top-level). Always special-case it when building paths in scripts.
 - **`key_tension` must be a sentence, not a word.** "Predestination vs. free will" is not a sentence. "Calvin reads the verb as a divine sovereign decree; Wesley takes it as a conditional promise that requires human response" is.
 - **HTML in synthesis and voices uses `<p>`, `<strong>`, `<em>` only.** No headings, lists, blockquotes, or links.

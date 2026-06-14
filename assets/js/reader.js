@@ -5,9 +5,8 @@ import {
   getVersion, setVersion, loadBook, loadCrossRefs, loadCommentary, parseRef, parseMultiRef,
   normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, MAPS_URL, escHtml,
   _compareCanonical, parseCrossRefEntry, resolveVerses,
-  ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
+  ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, decorateCatena, buildCatenaFilter, loadMktAll, decorateMkt,
   onVersionChange, _resolve, BOOKMARKS_URL, NOTES_URL,
-  LIB_INDEX_URL, LIB_DOCS_BASE, LIB_ABBREV_MAP, libDocCache, libIndexCache,
   BOOK_MAP_LINKS, MAP_LABELS
 } from './core.js';
 import { autoTagTerms, autoTagTermsWhenReady } from './terms.js';
@@ -21,6 +20,7 @@ import {
   autoTagBareRefs, autoTagBareChapters
 } from './wire.js';
 import { markEchoVerses } from './parallels.js';
+import { isParallelsEnabled, injectParallelPanels } from './synoptic.js';
 import {
   getInterlinearEnabled, setInterlinearEnabled, injectAllInterlinearRows, setRiHighlightCode
 } from './interlinear.js';
@@ -287,6 +287,7 @@ var _strongsBanner     = null;  // persists across doLookup re-renders in strong
 var _strongsAllRefs    = null;  // full refs array for pagination
 var _strongsPage       = 0;     // current page index (0-based)
 var _strongsModeCode   = null;  // active strongs code, used to highlight matching tiles
+var _strongsPageRefs   = null;  // current page's verse refs — fed to doLookup invisibly
 var STRONGS_PAGE_SIZE  = 100;   // range-refs per page
 
 // ── initReaderPage ────────────────────────────────────────────────────────
@@ -307,8 +308,19 @@ export function initReaderPage() {
 }
 
 // ── Strong's occurrences mode ─────────────────────────────────────────────
-// Triggered by ?strongs=H7676 — fetches all verse refs for that code,
-// enables interlinear, paginates through them, and highlights matching tiles.
+// Triggered by ?strongs=H7676 or by typing H123/G456 in the search input.
+// Fetches all verse refs for that code, enables interlinear, paginates,
+// and highlights the matching tile in each interlinear row.
+
+function _clearStrongsMode() {
+  if (_strongsModeCode) {
+    _strongsModeCode = null;
+    _strongsAllRefs  = null;
+    _strongsBanner   = null;
+    _strongsPageRefs = null;
+    setRiHighlightCode(null);
+  }
+}
 
 function _strongsBuildBanner(data) {
   var totalPages = Math.ceil(_strongsAllRefs.length / STRONGS_PAGE_SIZE);
@@ -320,9 +332,10 @@ function _strongsBuildBanner(data) {
   banner.innerHTML =
     '<div class="reader-strongs-banner__info">' +
       '<span class="reader-strongs-banner__code">' + escHtml(data.code) + '</span>' +
-      (data.lemma   ? ' <span class="reader-strongs-banner__lemma">'   + escHtml(data.lemma)              + '</span>' : '') +
+      (data.lemma   ? ' <span class="reader-strongs-banner__lemma">'    + escHtml(data.lemma)   + '</span>' : '') +
       (data.translit? ' <span class="reader-strongs-banner__translit">(' + escHtml(data.translit) + ')</span>' : '') +
-      (data.gloss   ? ' — <span class="reader-strongs-banner__gloss">' + escHtml(data.gloss)              + '</span>' : '') +
+      (data.gloss   ? ' — <span class="reader-strongs-banner__gloss">'  + escHtml(data.gloss)   + '</span>' : '') +
+      '<button class="reader-strongs-clear-btn" aria-label="Clear Strongs search" title="Clear search">&#x2715;</button>' +
     '</div>' +
     '<div class="reader-strongs-banner__nav">' +
       '<button class="reader-strongs-nav-btn" data-strongs-nav="prev"' + (_strongsPage === 0 ? ' disabled' : '') + '>&#x2039; Prev</button>' +
@@ -355,7 +368,23 @@ function _strongsRenderPage(data, input, doLookup) {
     });
   });
 
-  input.value = pageRefs.join('; ');
+  // Wire clear button
+  var clearBtn = _strongsBanner.querySelector('.reader-strongs-clear-btn');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      _clearStrongsMode();
+      input.value = '';
+      var rEl = document.getElementById('reader-results');
+      if (rEl) rEl.innerHTML = '';
+      var url = new URL(window.location.href);
+      url.searchParams.delete('strongs');
+      url.searchParams.delete('ref');
+      history.replaceState(null, '', url.toString());
+    });
+  }
+
+  // Store refs invisibly; input keeps showing the code
+  _strongsPageRefs = pageRefs;
   doLookup();
 }
 
@@ -374,6 +403,13 @@ function _initStrongsMode(code, input, doLookup, resultsEl) {
       _strongsAllRefs  = data.refs;
       _strongsPage     = 0;
       _strongsModeCode = code;
+
+      // Pin the code in the search box and update URL
+      input.value = code;
+      var _su = new URL(window.location.href);
+      _su.searchParams.set('strongs', code);
+      _su.searchParams.delete('ref');
+      history.replaceState(null, '', _su.toString());
 
       setInterlinearEnabled(true);
       setRiHighlightCode(code);
@@ -409,11 +445,20 @@ export function initReaderLookup() {
     var resultsEl = document.getElementById('reader-results');
     if (!q) { if (resultsEl) resultsEl.innerHTML = ''; return; }
 
-    var refs = parseMultiRef(q, null);
+    // Strong's code (H123 or G456) → occurrence mode (only when not already in Strongs mode)
+    if (!_strongsModeCode && /^[HG]\d+$/i.test(q)) {
+      _initStrongsMode(q.toUpperCase(), input, doLookup, resultsEl);
+      return;
+    }
+
+    // In Strongs mode: use the stashed page refs; the input just shows the code
+    var effectiveQ = (_strongsModeCode && _strongsPageRefs) ? _strongsPageRefs.join('; ') : q;
+
+    var refs = parseMultiRef(effectiveQ, null);
 
     // Bare book name → whole book as a single ref; chapter breaks are injected at render time.
     if (!refs.length) {
-      var _bid = normalizeBook(q);
+      var _bid = normalizeBook(effectiveQ);
       var _bkm = _bid && metaBooks && metaBooks.find(function (b) { return b.id === _bid; });
       if (_bkm) {
         refs.push({ bookId: _bkm.id, bookName: _bkm.name, ch: 1, v: 1,
@@ -430,9 +475,12 @@ export function initReaderLookup() {
     }
     setStatus('');
 
-    var url = new URL(window.location.href);
-    url.searchParams.set('ref', q);
-    history.replaceState(null, '', url.toString());
+    // URL is already ?strongs=CODE during Strongs mode; skip the ref update
+    if (!_strongsModeCode) {
+      var url = new URL(window.location.href);
+      url.searchParams.set('ref', q);
+      history.replaceState(null, '', url.toString());
+    }
 
     // Chapter-0 intercept → book introduction page
     if (refs.length === 1 && refs[0].bookId && refs[0].ch === 0) {
@@ -565,18 +613,20 @@ export function initReaderLookup() {
       function _finalizeLookup() {
         applyHighlights(resultsEl);
         applyBookmarks(resultsEl);
+        applyRedLetter(resultsEl);
         wireVerseNumberPopup(resultsEl);
         wireVerseTextHighlight(resultsEl);
         injectReaderFootnotes(resultsEl);
 
         if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
+        if (isParallelsEnabled()) injectParallelPanels(window._readerGroups, resultsEl);
         if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
         markEchoVerses();
 
         if (_strongsBanner && resultsEl) resultsEl.prepend(_strongsBanner);
 
-        _historyPush(q, ver);
-        _recordReadingDay();
+        if (!_strongsModeCode) _historyPush(q, ver);
+        if (!_strongsModeCode) _recordReadingDay();
 
         resultsEl.querySelectorAll('.reader-result-group__text').forEach(autoTagTermsWhenReady);
       }
@@ -598,14 +648,6 @@ export function initReaderLookup() {
   //   If doLookup is ever renamed or this assignment is removed, all in-page navigation
   //   silently becomes a no-op with no JS error.
   window._readerLookupFn = doLookup;
-  function _clearStrongsMode() {
-    if (_strongsModeCode) {
-      _strongsModeCode = null;
-      _strongsAllRefs  = null;
-      _strongsBanner   = null;
-      setRiHighlightCode(null);
-    }
-  }
 
   if (btn) btn.addEventListener('click', function () { _clearStrongsMode(); doLookup(); });
   input.addEventListener('keydown', function (e) {
@@ -769,63 +811,20 @@ export function initReaderBrowse() {
     bibleGroup.appendChild(opt);
   });
   bookSel.appendChild(bibleGroup);
-
-  // Library optgroup — loaded async
-  fetch(LIB_INDEX_URL)
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-    .then(function (docs) {
-      libIndexCache = docs;
-      var libGroup = document.createElement('optgroup');
-      libGroup.label = 'Library';
-      docs.forEach(function (d) {
-        var opt = document.createElement('option');
-        opt.value       = 'lib:' + d.abbrev.toLowerCase();
-        opt.textContent = d.abbrev + ' — ' + d.title;
-        libGroup.appendChild(opt);
-      });
-      bookSel.appendChild(libGroup);
-    })
-    .catch(function () {});
+  // (Library docs are browsed at /library/ and read at /library/read/ — they are
+  // intentionally NOT listed in this Scripture book picker.)
 
   bookSel.addEventListener('change', function () {
     var val = bookSel.value;
-
-    if (val && val.indexOf('lib:') === 0) {
-      var abbrevKey = val.slice(4);
-      var docId     = LIB_ABBREV_MAP[abbrevKey];
-      if (!docId) return;
-      var fillSections = function (doc) {
-        chSel._libDocId = docId;
-        chSel._bookId   = null;
-        chSel.innerHTML = '<option value="">§…</option>';
-        for (var i = 1; i <= doc.totalSections; i++) {
-          var o = document.createElement('option');
-          o.value = String(i); o.textContent = i;
-          chSel.appendChild(o);
-        }
-        chSel.disabled = false;
-      };
-      if (libDocCache[docId]) {
-        fillSections(libDocCache[docId]);
-      } else {
-        fetch(LIB_DOCS_BASE + '/' + docId + '.json')
-          .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-          .then(function (d) { libDocCache[docId] = d; fillSections(d); })
-          .catch(function () {});
-      }
-      return;
-    }
 
     var bk = metaBooks.find(function (b) { return b.id === val; });
     if (!bk) {
       chSel.innerHTML = '<option value="">Ch…</option>';
       chSel.disabled  = true;
       chSel._bookId   = null;
-      chSel._libDocId = null;
       return;
     }
     chSel._bookId   = bk.id;
-    chSel._libDocId = null;
     chSel.innerHTML = '<option value="">Ch…</option>';
     var introOpt = document.createElement('option');
     introOpt.value = '0'; introOpt.textContent = 'Intro';
@@ -842,13 +841,6 @@ export function initReaderBrowse() {
     if (!bookSel.value || !chSel.value) return;
     var val = bookSel.value;
     var lookupInput = document.getElementById('reader-lookup-input');
-
-    if (val.indexOf('lib:') === 0) {
-      var ref2 = val.slice(4).toUpperCase() + ' ' + chSel.value;
-      if (lookupInput) lookupInput.value = ref2;
-      if (window._readerLookupFn) window._readerLookupFn();
-      return;
-    }
 
     var bk = metaBooks.find(function (b) { return b.id === val; });
     if (!bk) return;
@@ -1276,33 +1268,59 @@ function _loadReaderCommentary(parsed, container) {
   var sel    = container.querySelector('.reader-panel-comm-select');
   var bodyEl = container.querySelector('.reader-panel-comm-body');
 
+  function _extractPanelHtml(data, startV, endV, sectionKeys) {
+    var chData = data && data[String(parsed.ch)];
+    if (!chData) return null;
+    var foundV = null;
+    for (var vi = startV; vi >= 1; vi--) {
+      if (chData[String(vi)]) { foundV = vi; break; }
+    }
+    if (foundV === null) return null;
+    var html = '<div class="reader-panel-comm-section">' + chData[String(foundV)] + '</div>';
+    sectionKeys.forEach(function (v) {
+      if (v > startV && v <= endV && chData[String(v)]) {
+        html += '<div class="reader-panel-comm-section">' + chData[String(v)] + '</div>';
+      }
+    });
+    return html;
+  }
+
   function loadSrc(source) {
     bodyEl.innerHTML = '<p class="reader-hint">Loading commentary…</p>';
-    loadCommentary(parsed.bookId, source).then(function (data) {
+    var startV = parsed.v || 1;
+    var endV   = parsed.wholeChapter ? 9999 : (parsed.endV || startV);
+
+    if (source === 'mkt') {
+      loadMktAll(parsed.bookId, parsed.ch).then(function (datasets) {
+        var htmls = datasets.map(function (data) {
+          if (!data) return null;
+          var chData = data[String(parsed.ch)];
+          if (!chData) return null;
+          var sectionKeys = Object.keys(chData).map(Number).sort(function (a, b) { return a - b; });
+          return _extractPanelHtml(data, startV, endV, sectionKeys);
+        });
+        var src2 = COMMENTARY_SOURCES.find(function (s) { return s.id === 'mkt'; });
+        var attrHtml = '<p class="reader-hint" style="margin-top:1rem;font-style:italic">' + escHtml((src2 && src2.attr) || '') + '</p>';
+        bodyEl.innerHTML = decorateMkt(htmls) + attrHtml;
+        wireRefLinks(bodyEl);
+      }).catch(function () {
+        bodyEl.innerHTML = '<p class="reader-hint">Could not load commentary.</p>';
+      });
+      return;
+    }
+
+    loadCommentary(parsed.bookId, source, parsed.ch).then(function (data) {
       if (!data) { bodyEl.innerHTML = '<p class="reader-hint">No commentary available.</p>'; return; }
       var chData = data[String(parsed.ch)];
       if (!chData) { bodyEl.innerHTML = '<p class="reader-hint">No commentary for this chapter.</p>'; return; }
-      // Find the nearest section at or before the starting verse.
       var sectionKeys = Object.keys(chData).map(Number).sort(function (a, b) { return a - b; });
-      var startV = parsed.v || 1;
-      var endV   = parsed.wholeChapter ? 9999 : (parsed.endV || startV);
-      var foundV = null;
-      for (var vi = startV; vi >= 1; vi--) {
-        if (chData[String(vi)]) { foundV = vi; break; }
-      }
-      var html = '';
-      if (foundV !== null) {
-        html += '<div class="reader-panel-comm-section">' + chData[String(foundV)] + '</div>';
-        sectionKeys.forEach(function (v) {
-          if (v > startV && v <= endV && chData[String(v)]) {
-            html += '<div class="reader-panel-comm-section">' + chData[String(v)] + '</div>';
-          }
-        });
-      }
+      var html = _extractPanelHtml(data, startV, endV, sectionKeys);
       if (!html) { bodyEl.innerHTML = '<p class="reader-hint">No commentary found for this passage.</p>'; return; }
+      if (source === 'cow') html = decorateCatena(html); // collapsible voices + Father badges
       var src2 = COMMENTARY_SOURCES.find(function (s) { return s.id === source; });
       html += '<p class="reader-hint" style="margin-top:1rem;font-style:italic">' + escHtml((src2 && src2.attr) || '') + '</p>';
       bodyEl.innerHTML = html;
+      if (source === 'cow') buildCatenaFilter(bodyEl);
       wireRefLinks(bodyEl);
     }).catch(function () {
       bodyEl.innerHTML = '<p class="reader-hint">Could not load commentary.</p>';
@@ -1903,11 +1921,21 @@ function _activateCommMode() {
   var chDataMap = {};
   _commModeChData = chDataMap;
 
-  Promise.all(COMMENTARY_SOURCES.map(function (s) {
-    return loadCommentary(bookId, s.id).then(function (bookData) {
-      chDataMap[s.id] = (bookData && bookData[String(ch)]) || null;
-    }).catch(function () { chDataMap[s.id] = null; });
-  })).then(function () {
+  // Load all standard sources, then load the three MKT sub-sources separately
+  // since 'mkt' is a composite and has no single data file of its own.
+  var standardSources = COMMENTARY_SOURCES.filter(function (s) { return s.id !== 'mkt'; });
+  var mktTrackIds = ['mkt-original', 'mkt-context', 'mkt-christ'];
+  Promise.all(
+    standardSources.map(function (s) {
+      return loadCommentary(bookId, s.id, ch).then(function (bookData) {
+        chDataMap[s.id] = (bookData && bookData[String(ch)]) || null;
+      }).catch(function () { chDataMap[s.id] = null; });
+    }).concat(mktTrackIds.map(function (id) {
+      return loadCommentary(bookId, id, ch).then(function (bookData) {
+        chDataMap[id] = (bookData && bookData[String(ch)]) || null;
+      }).catch(function () { chDataMap[id] = null; });
+    }))
+  ).then(function () {
     // Guard: a subsequent navigation may have replaced _commModeChData already
     if (_commModeChData === chDataMap) _buildCommGrid();
   });
@@ -2153,7 +2181,11 @@ function _rebuildCommCells(grid) {
   if (!grid._verseData) return;
   var verseData = grid._verseData;
   var srcId     = getCommentarySource();
-  var chd       = _commModeChData && _commModeChData[srcId];
+  // For mkt (composite), use mkt-original's chapter data to find section boundaries
+  // since 'mkt' has no single data file and the three tracks share the same verse layout.
+  var chd = srcId === 'mkt'
+    ? (_commModeChData && _commModeChData['mkt-original'])
+    : (_commModeChData && _commModeChData[srcId]);
 
   // Remove previous commentary cells, keep picker and verse cells
   grid.querySelectorAll('.reader-comm-cell--comm').forEach(function (el) { el.remove(); });
@@ -2189,7 +2221,16 @@ function _rebuildCommCells(grid) {
     });
     if (allHidden) cell.style.display = 'none';
 
-    if (sec.foundKey !== null && chd && chd[String(sec.foundKey)]) {
+    if (srcId === 'mkt') {
+      // Composite: pull the matching section from each of the three MKT tracks
+      var mktHtmls = ['mkt-original', 'mkt-context', 'mkt-christ'].map(function (tid) {
+        var td = _commModeChData && _commModeChData[tid];
+        if (!td || sec.foundKey === null || !td[String(sec.foundKey)]) return null;
+        return td[String(sec.foundKey)];
+      });
+      cell.innerHTML = decorateMkt(mktHtmls);
+      wireRefLinks(cell);
+    } else if (sec.foundKey !== null && chd && chd[String(sec.foundKey)]) {
       var html = chd[String(sec.foundKey)];
       // If this section's foundKey is before the first displayed verse, show a
       // section-range note so the reader knows the commentary covers more context.
@@ -2202,7 +2243,9 @@ function _rebuildCommCells(grid) {
         var rangeEnd = nextKey !== null ? (nextKey - 1) : '…';
         html = '<p class="reader-comm-span-note">▸ section v.' + sec.foundKey + '–' + rangeEnd + '</p>' + html;
       }
+      if (srcId === 'cow') html = decorateCatena(html); // collapsible voices + Father badges
       cell.innerHTML = html;
+      if (srcId === 'cow') buildCatenaFilter(cell);
       wireRefLinks(cell);
     } else {
       cell.innerHTML = '<p class="reader-hint">No commentary available.</p>';
@@ -2311,45 +2354,116 @@ function _loadParaData(bookId) {
     .catch(function () { _paraDataCache[bookId] = null; return null; });
 }
 
-// Returns the paragraph type that covers verse v (the last break with .v <= v).
-function _paraTypeAtVerse(breaks, v) {
-  var type = 'narrative';
+// INTENT: Returns the paragraph break info (type, speaker, flags) that covers verse v —
+//   the last real break entry (break !== false) at or before v.
+// CHANGE? If break entry schema changes, update the `b.break !== false` guard here and
+//   in _restructureForParagraphs's thought-break detection.
+// VERIFY: Load a mid-chapter range (e.g. John 6:30–40); the covering dialogue/speaker
+//   should open immediately on the first verse without a section heading.
+function _paraInfoAtVerse(breaks, v) {
+  var info = { type: 'narrative', speaker: null, flags: [] };
   for (var i = 0; i < breaks.length; i++) {
-    if (breaks[i].v <= v) type = breaks[i].type;
-    else break;
+    var b = breaks[i];
+    if (b.v > v) break;
+    if (b.break !== false) {
+      info.type    = b.type    || 'narrative';
+      info.speaker = b.speaker || null;
+      info.flags   = b.flags   || [];
+    }
   }
-  return type;
+  return info;
 }
 
-// Rebuilds textEl's children into heading + paragraph block structure.
+function _formatSpeakerLabel(s) {
+  var labels = {
+    jesus:'Jesus', god:'God', narrator:'Narrator', crowd:'The Crowd',
+    disciples:'Disciples', pharisees:'Pharisees', scribes:'Scribes',
+    sadducees:'Sadducees', pilate:'Pilate', herod:'Herod', angels:'Angels',
+    questioner:'Questioner', peter:'Peter', paul:'Paul', stephen:'Stephen',
+    nicodemus:'Nicodemus', eliphaz:'Eliphaz', bildad:'Bildad',
+    zophar:'Zophar', elihu:'Elihu', job:'Job', mary:'Mary', martha:'Martha',
+    gabriel:'Gabriel', satan:'Satan', serpent:'The Serpent',
+    // Literary/symbolic speakers where the fallback (simple capitalize) is misleading
+    wisdom:'Lady Wisdom', folly:'Lady Folly', teacher:'The Teacher',
+    psalmist:'The Psalmist', zion:'Daughter Zion',
+    bride:'The Bride', beloved:'The Beloved', friends:'The Friends',
+    // Title-based names that conventionally take "The"
+    rabshakeh:'The Rabshakeh', shunammite:'The Shunammite'
+  };
+  return labels[s] || (s.charAt(0).toUpperCase() + s.slice(1));
+}
+
+function _speakerChipClass(s) {
+  if (s === 'jesus') return 'reader-speaker-chip--jesus';
+  if (s === 'god')   return 'reader-speaker-chip--god';
+  return 'reader-speaker-chip--named';
+}
+
+// INTENT: Rebuilds textEl's verse spans into a nested structure of headings, speaker
+//   blocks, paragraphs, and thought breaks. Supports three new break-entry fields:
+//   speaker (string) — groups consecutive same-speaker paragraphs under a labelled chip;
+//   flags (string[]) — adds modifier classes like 'rhythmic' or 'enumerated';
+//   break:false — injects a visual gap within the current speaker block without opening a
+//   new paragraph section.
+// CHANGE? If the break entry schema gains new fields, update _paraInfoAtVerse and the
+//   breakEntry/thoughtBreak detection here. applyParagraphFormatting calls this function
+//   directly; the DOM replacement at the end must stay or the result container class breaks.
+// VERIFY: Load John 6 with paragraph view on — crowd/Jesus speaker chips should alternate
+//   from v26. Load John 14 with a thought break — a blank line gap should appear. Load
+//   any book without speaker fields (e.g. Psalms) — rendering must be identical to before.
 function _restructureForParagraphs(textEl, paraData) {
   var items = [];
   Array.from(textEl.childNodes).forEach(function (node) {
     if (node.nodeType !== 1) return;
-    if (node.classList.contains('reader-verse')) {
+    if (node.classList.contains('reader-verse'))
       items.push({ type: 'verse', el: node, ch: +node.dataset.ch || 0, v: +node.dataset.v || 0 });
-    } else if (node.classList.contains('reader-chapter-break')) {
+    else if (node.classList.contains('reader-chapter-break'))
       items.push({ type: 'chbreak', el: node });
-    }
   });
   if (!items.length) return;
 
-  var newNodes    = [];
-  var currentPara = null;
-  var currentCh   = null;
-  var chData      = null;
+  var newNodes       = [];
+  var currentPara    = null;
+  var currentBlock   = null;   // .reader-speaker-block <div>
+  var currentSpeaker = null;
+  var currentType    = null;
+  var currentFlags   = [];
+  var currentCh      = null;
+  var chData         = null;
 
   function closePara() {
-    if (currentPara) { newNodes.push(currentPara); currentPara = null; }
+    if (!currentPara) return;
+    (currentBlock || { appendChild: function (n) { newNodes.push(n); } }).appendChild(currentPara);
+    currentPara = null;
   }
-  function openPara(type) {
-    currentPara = document.createElement('p');
-    currentPara.className = 'reader-para reader-para--' + (type || 'narrative');
+  function closeBlock() {
+    if (!currentBlock) return;
+    newNodes.push(currentBlock);
+    currentBlock = null;
+    currentSpeaker = null;
+  }
+  function openBlock(speaker) {
+    var div  = document.createElement('div');
+    div.className = 'reader-speaker-block';
+    var chip = document.createElement('span');
+    chip.className   = 'reader-speaker-chip ' + _speakerChipClass(speaker);
+    chip.textContent = _formatSpeakerLabel(speaker);
+    div.appendChild(chip);
+    currentBlock   = div;
+    currentSpeaker = speaker;
+  }
+  function openPara(type, flags) {
+    var cls = 'reader-para reader-para--' + (type || 'narrative');
+    if (flags && flags.length) flags.forEach(function (f) { cls += ' reader-para--flag-' + f; });
+    currentPara  = document.createElement('p');
+    currentPara.className = cls;
+    currentType  = type  || 'narrative';
+    currentFlags = flags || [];
   }
 
   items.forEach(function (item) {
     if (item.type === 'chbreak') {
-      closePara();
+      closePara(); closeBlock();
       newNodes.push(item.el);
       currentCh = null; chData = null;
       return;
@@ -2357,36 +2471,78 @@ function _restructureForParagraphs(textEl, paraData) {
 
     if (item.ch !== currentCh) {
       currentCh = item.ch;
-      chData = paraData[String(item.ch)] || null;
+      chData    = paraData[String(item.ch)] || null;
     }
 
-    var breaks   = (chData && chData.breaks)   ? chData.breaks   : [];
-    var headings = (chData && chData.headings)  ? chData.headings : [];
+    var breaks   = (chData && chData.breaks)   || [];
+    var headings = (chData && chData.headings)  || [];
 
     var breakEntry   = null;
+    var thoughtBreak = false;
     var headingEntry = null;
-    for (var b = 0; b < breaks.length; b++)   { if (breaks[b].v   === item.v) { breakEntry   = breaks[b];   break; } }
-    for (var h = 0; h < headings.length; h++) { if (headings[h].before === item.v) { headingEntry = headings[h]; break; } }
+
+    for (var b = 0; b < breaks.length; b++) {
+      if (breaks[b].v === item.v) {
+        if (breaks[b].break === false) thoughtBreak = true;
+        else breakEntry = breaks[b];
+      }
+    }
+    for (var h = 0; h < headings.length; h++) {
+      if (headings[h].before === item.v) { headingEntry = headings[h]; break; }
+    }
+
+    // Thought break: inject a gap element within the current block, keep speaker context
+    if (thoughtBreak && !breakEntry) {
+      closePara();
+      var tb = document.createElement('div');
+      tb.className = 'reader-thought-break';
+      (currentBlock || { appendChild: function (n) { newNodes.push(n); } }).appendChild(tb);
+      openPara(currentType, currentFlags);
+      currentPara.appendChild(item.el);
+      return;
+    }
 
     if (breakEntry) {
+      var newType    = breakEntry.type    || 'narrative';
+      var newSpeaker = breakEntry.speaker || null;
+      var newFlags   = breakEntry.flags   || [];
+
       closePara();
+
+      // Heading always closes the current speaker block
       if (headingEntry) {
+        closeBlock();
         var hEl = document.createElement('h3');
         hEl.className   = 'reader-section-heading';
         hEl.textContent = headingEntry.text;
         newNodes.push(hEl);
       }
-      openPara(breakEntry.type);
+
+      if (newSpeaker) {
+        // Open a new block only if speaker changed or no block exists
+        if (newSpeaker !== currentSpeaker || !currentBlock) {
+          if (!headingEntry) closeBlock();  // heading already closed it
+          openBlock(newSpeaker);
+        }
+        // Same speaker continuing: no new block, chip hidden by CSS on non-first paras
+      } else {
+        if (!headingEntry) closeBlock();
+      }
+
+      openPara(newType, newFlags);
     } else if (!currentPara) {
-      // Mid-chapter range start: open para at the covering type with no heading
-      openPara(_paraTypeAtVerse(breaks, item.v));
+      // Mid-chapter range start: infer covering type/speaker/flags
+      var info = _paraInfoAtVerse(breaks, item.v);
+      if (info.speaker && !currentBlock) openBlock(info.speaker);
+      openPara(info.type, info.flags);
     }
 
     currentPara.appendChild(item.el);
   });
-  closePara();
 
-  // Replace textEl with a <div> (allows block children like <p> and <h3>)
+  closePara();
+  closeBlock();
+
   var newContainer = document.createElement('div');
   newContainer.className = textEl.className + ' reader-result-group__text--para';
   newNodes.forEach(function (n) { newContainer.appendChild(n); });
@@ -2408,6 +2564,67 @@ export function applyParagraphFormatting(resultsEl, groups) {
     });
   });
   return Promise.all(tasks);
+}
+
+// ── Red / Purple letter ──────────────────────────────────────────────────────
+// INTENT: Colours verse spans by speaker — red for Jesus, purple for God — using
+//   pre-built verse-range data from data/red-letter.json. Ranges are inclusive
+//   [start, end] pairs per chapter; a verse matches if it falls inside any pair.
+// CHANGE? red-letter.json format change requires updating _isRedLetterVerse.
+//   If the post-render chain changes, update the _applyRedLetter call site in
+//   _finalizeLookup (or applyParagraphFormatting .then()) in initReaderLookup.
+// VERIFY: Load John 3 — verses 3-21 should render in red. Load Matt 3 — v17
+//   "This is my beloved Son" should render in purple. Verse numbers stay gold.
+
+var _RED_LETTER_URL   = _resolve('../../data/red-letter.json');
+var _redLetterData    = null;   // null = not yet loaded; false = failed
+var _redLetterPromise = null;
+
+function _loadRedLetterData() {
+  if (_redLetterData !== null) return Promise.resolve(_redLetterData);
+  if (_redLetterPromise)       return _redLetterPromise;
+  _redLetterPromise = fetch(_RED_LETTER_URL)
+    .then(function (r) { if (!r.ok) throw new Error('no red-letter data'); return r.json(); })
+    .then(function (data) { _redLetterData = data; return data; })
+    .catch(function () { _redLetterData = false; return false; });
+  return _redLetterPromise;
+}
+
+// Returns 'jesus', 'god', or null for a given book/chapter/verse.
+function _redLetterSpeaker(bookId, ch, v) {
+  if (!_redLetterData) return null;
+  var speakers = ['jesus', 'god'];
+  for (var s = 0; s < speakers.length; s++) {
+    var spk = speakers[s];
+    var bookData = _redLetterData[spk] && _redLetterData[spk][bookId];
+    if (!bookData) continue;
+    var ranges = bookData[String(ch)];
+    if (!ranges) continue;
+    for (var r = 0; r < ranges.length; r++) {
+      if (v >= ranges[r][0] && v <= ranges[r][1]) return spk;
+    }
+  }
+  return null;
+}
+
+// Adds reader-verse--jesus / reader-verse--god classes to matching verse spans.
+export function applyRedLetter(resultsEl) {
+  return _loadRedLetterData().then(function (data) {
+    if (!data || !resultsEl) return;
+    var verses = resultsEl.querySelectorAll('.reader-verse[data-book]');
+    verses.forEach(function (span) {
+      var bookId = span.getAttribute('data-book').toLowerCase().replace(/\s+/g, '');
+      var ch = parseInt(span.getAttribute('data-ch'), 10);
+      var v  = parseInt(span.getAttribute('data-v'),  10);
+      var spk = _redLetterSpeaker(bookId, ch, v);
+      if (spk) {
+        span.classList.add('reader-verse--' + spk);
+        // AUD-21: non-colour cue for screen readers / hover (the visual non-colour
+        // marker is the verse-number glyph in reader.css).
+        span.setAttribute('title', spk === 'jesus' ? 'Words of Jesus' : 'Words of God');
+      }
+    });
+  });
 }
 
 export function initParaViewToggle() {

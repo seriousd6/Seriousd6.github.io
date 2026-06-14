@@ -322,11 +322,13 @@ function _injectInterlinearForVerse(verseEl) {
   loadInterlinear(bk.id).then(function (data) {
     if (!data) { row.innerHTML = '<p class="reader-hint">No interlinear data for this book.</p>'; return; }
     var chData = data[String(ch)];
-    if (!chData) { row.innerHTML = ''; return; }
+    // UX-15: remove (not blank) the injected row when a verse has no interlinear data, so
+    // no empty element is left behind and the guard in this fn allows a later re-injection.
+    if (!chData) { row.remove(); return; }
     var vData  = chData[String(v)];
-    if (!vData || !vData.length) { row.innerHTML = ''; return; }
+    if (!vData || !vData.length) { row.remove(); return; }
     renderReaderInterlinearRow(row, vData, bk.id);
-  }).catch(function () { row.innerHTML = ''; });
+  }).catch(function () { row.remove(); });
 }
 
 var ALIGN_ROOT  = _resolve('../../data/interlinear/align/');
@@ -416,8 +418,29 @@ var _RI_STOP = new Set([
   'thee','ye','art','doth','dost','thine','hast','wilt',
 ]);
 
-// Regex fallback: tries the full gloss as a phrase, then each content word longest-first,
-// then ±'s' plural/singular variants. Used when pre-computed alignment is unavailable.
+// Low-specificity words tried only after true content words (nouns/verbs) fail.
+var _RI_QUASI = new Set([
+  'every','each','both','some','any','many','few','several','much','less',
+  'other','another','same','such','else','whole','half','either','neither',
+  'just','still','again','thus','very','well','away','back',
+  'first','last','next','high','low','far','near','long','short','full',
+  'true','right','left','good','great','old','new','small','large','little',
+  'like','way','make','take','give','come','know','see','say',
+]);
+
+function _riWordPatterns(w) {
+  var we = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  var pats = [new RegExp('\\b' + we + '\\b', 'i')];
+  if (!w.endsWith('s')) {
+    pats.push(new RegExp('\\b' + we + 's\\b', 'i'));
+  } else if (w.length > 3) {
+    pats.push(new RegExp('\\b' + we.slice(0, -1) + '\\b', 'i'));
+  }
+  return pats;
+}
+
+// Regex fallback: tries full phrase, then tier-1 content words (nouns/verbs) longest-first,
+// then tier-2 quasi-function words. Used when pre-computed alignment is unavailable.
 function _riApplyWordHl(verseEl, engText) {
   _riClearWordHl();
   if (!engText || !verseEl) return;
@@ -425,21 +448,16 @@ function _riApplyWordHl(verseEl, engText) {
   var esc = engText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   var patterns = [new RegExp('\\b' + esc + '\\b', 'i')];
 
-  var words = engText.toLowerCase()
-    .split(/[\s\-]+/)
-    .map(function (w) { return w.replace(/[^a-z']/g, '').replace(/'s$/, ''); })
-    .filter(function (w) { return w.length > 2 && !_RI_STOP.has(w); });
-  words.sort(function (a, b) { return b.length - a.length; });
-
-  words.forEach(function (w) {
-    var we = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    patterns.push(new RegExp('\\b' + we + '\\b', 'i'));
-    // plural/singular variants
-    if (!w.endsWith('s')) {
-      patterns.push(new RegExp('\\b' + we + 's\\b', 'i'));
-    } else if (w.length > 3) {
-      patterns.push(new RegExp('\\b' + we.slice(0, -1) + '\\b', 'i'));
-    }
+  var tier1 = [], tier2 = [];
+  engText.toLowerCase().split(/[\s\-]+/).forEach(function (w) {
+    w = w.replace(/[^a-z']/g, '').replace(/'s$/, '');
+    if (w.length <= 2 || _RI_STOP.has(w)) return;
+    (_RI_QUASI.has(w) ? tier2 : tier1).push(w);
+  });
+  tier1.sort(function (a, b) { return b.length - a.length; });
+  tier2.sort(function (a, b) { return b.length - a.length; });
+  tier1.concat(tier2).forEach(function (w) {
+    _riWordPatterns(w).forEach(function (p) { patterns.push(p); });
   });
 
   var walker = _riTextWalker(verseEl);

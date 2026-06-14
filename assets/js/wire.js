@@ -478,7 +478,7 @@ export function populateInlineVerse(el, versionId) {
 // CHANGE? This function is wired as a version-change subscriber in app.js:
 //   onVersionChange(updateInlineVerses)  — if that line is removed, version switches
 //   will stop updating .bsw-verse embeds on every page. Inline verses also rely on
-//   populateInlineVerse fetching from the DATA_CACHE_V path; if the data URL shape
+//   populateInlineVerse fetching from the per-dataset data cache path; if the data URL shape
 //   changes in core.js, cached responses will serve stale content until sw.js is rebumped.
 // Called by the version-change callback in app.js whenever the user switches translations.
 export function updateInlineVerses(versionId) {

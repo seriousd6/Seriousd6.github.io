@@ -773,3 +773,177 @@ body.bsw-modal-open {
 }
 [data-theme="dark"] .src-badge { color: var(--color-muted); border-color: var(--color-border); background: transparent; }
 [data-theme="dark"] .src-badge--ai { background: rgba(184,134,11,0.12); color: #c9a030; border-color: #b8860b; }
+
+/* ── Patristic chain commentary — collapsible Father voices ─────────────────── */
+/* INTENT: The Catena-derived 'catena' source stacks many Father voices per pericope.
+   decorateCatena() (core.js) wraps each voice in <details class="catena-voice"> with
+   a name + tradition + period badge row. Solid-fill pills keep badges legible on both
+   light and dark surfaces with no per-theme overrides. Loaded globally via style.css
+   so it applies in the reader panel/grid, verse modal, and verse-study alike. */
+.catena-voice {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin: 0 0 var(--space-sm);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+.catena-voice > .cv-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  list-style: none;                 /* suppress default disclosure triangle */
+}
+.catena-voice > .cv-head::-webkit-details-marker { display: none; }
+.catena-voice > .cv-head::before {
+  content: '\25B8';                 /* ▸ custom disclosure marker */
+  color: var(--color-muted);
+  font-size: 0.85em;
+  transition: transform 0.15s ease;
+}
+.catena-voice[open] > .cv-head::before { transform: rotate(90deg); }
+.cv-name {
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-right: auto;               /* push tradition/period badges to the right */
+}
+/* CSS-39: the Father name is an <a> to their Biblepedia article — give it a link
+   affordance so it's discoverable (it otherwise looks identical to plain text). */
+a.cv-name { text-decoration: none; cursor: pointer; border-bottom: 1px dotted var(--color-border); }
+a.cv-name:hover { color: var(--color-accent); border-bottom-color: var(--color-accent); }
+a.cv-name:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 2px; }
+.cv-badge {
+  font-size: 0.7rem;
+  font-family: var(--font-ui);
+  line-height: 1.2;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: #fff;
+}
+.cv-greek      { background: #1d6b6b; }   /* Eastern / Greek fathers */
+.cv-latin      { background: #9a5a00; }   /* Western / Latin fathers */
+.cv-medieval   { background: #6b4a9a; }   /* Western medieval compilers */
+/* Post-Reformation traditions — same hues as lib-badge equivalents in library.css */
+.cv-ecumenical { background: var(--color-accent); }
+.cv-reformed   { background: #a0522d; }
+.cv-lutheran   { background: #4a7a56; }
+.cv-methodist  { background: #1a6b8a; }
+.cv-anglican   { background: #4a5f7a; }
+.cv-baptist    { background: #5c2d87; }
+.cv-other      { background: var(--color-muted); }
+/* Dark mode: lighten solid fills so white text stays readable */
+[data-theme="dark"] .cv-reformed   { background: #c47c4a; }
+[data-theme="dark"] .cv-lutheran   { background: #6aaa76; }
+[data-theme="dark"] .cv-methodist  { background: #3a9bba; }
+[data-theme="dark"] .cv-anglican   { background: #6a8fa8; }
+[data-theme="dark"] .cv-baptist    { background: #8b5fc7; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .cv-reformed   { background: #c47c4a; }
+  :root:not([data-theme="light"]) .cv-lutheran   { background: #6aaa76; }
+  :root:not([data-theme="light"]) .cv-methodist  { background: #3a9bba; }
+  :root:not([data-theme="light"]) .cv-anglican   { background: #6a8fa8; }
+  :root:not([data-theme="light"]) .cv-baptist    { background: #8b5fc7; }
+}
+.cv-period {                            /* secondary: outlined, muted */
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+.cv-body {
+  padding: 0.5rem 0.7rem 0.6rem;
+  border-top: 1px solid var(--color-border);
+  max-height: 12em;
+  overflow-y: auto;
+}
+.cv-body > p { margin: 0; }
+.catena-voice--hidden { display: none; }
+
+/* ── Catena voice filter — chips appear above voices when ≥2 voices are present ── */
+/* INTENT: buildCatenaFilter() (core.js) inserts this bar before the first voice; chips
+   toggle individual Father/commentator voices on/off for focused reading. Hidden state
+   persists across verse navigation within a session (module-level Set in core.js).
+   Consistent with .cv-badge sizing so the bar feels like part of the same system. */
+.catena-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.catena-filter__chip {
+  font-size: 0.72rem;
+  font-family: var(--font-ui);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.catena-filter__chip:hover { background: var(--color-bg-alt); }
+.catena-filter__chip--off {
+  opacity: 0.45;
+  text-decoration: line-through;
+  background: transparent;
+}
+.catena-filter__toggle {
+  font-size: 0.72rem;
+  font-family: var(--font-ui);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  cursor: pointer;
+  margin-left: auto;          /* push to the right end of the bar */
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.catena-filter__toggle:hover { background: var(--color-accent); color: #fff; }
+
+/* ── MKT Commentary cards — three expandable tracks per verse ─────────────── */
+/* INTENT: decorateMkt() (core.js) wraps the three MKT tracks in <details class="mkt-card">;
+   first card is open by default, others collapsed. Mirrors catena-voice aesthetics but uses
+   a teal-gold accent instead of tradition colours since tracks are topical not authorial.
+   Loaded globally so it applies in the reader panel/grid, verse modal, and verse-study. */
+.mkt-card {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  margin: 0 0 var(--space-sm);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+.mkt-card > .mkt-card__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--color-heading);
+  list-style: none;
+}
+.mkt-card > .mkt-card__head::-webkit-details-marker { display: none; }
+.mkt-card > .mkt-card__head::before {
+  content: '\25B8';
+  color: var(--color-muted);
+  font-size: 0.85em;
+  transition: transform 0.15s ease;
+}
+.mkt-card[open] > .mkt-card__head::before { transform: rotate(90deg); }
+.mkt-card__title {
+  font-size: 0.88rem;
+}
+.mkt-card__body {
+  padding: 0.5rem 0.7rem 0.6rem;
+  border-top: 1px solid var(--color-border);
+}
+.mkt-card__body--empty { color: var(--color-muted); font-style: italic; font-size: 0.9rem; }

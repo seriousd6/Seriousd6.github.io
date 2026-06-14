@@ -1,120 +1,337 @@
 {
   "1": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 3, "type": "poetry"},
-      {"v": 6, "type": "poetry"},
-      {"v": 9, "type": "poetry"},
-      {"v": 11, "type": "poetry"},
-      {"v": 13, "type": "poetry"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 3,
+        "type": "poetry"
+      },
+      {
+        "v": 6,
+        "type": "poetry"
+      },
+      {
+        "v": 9,
+        "type": "poetry"
+      },
+      {
+        "v": 11,
+        "type": "poetry"
+      },
+      {
+        "v": 13,
+        "type": "poetry"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Introduction"},
-      {"before": 3, "text": "Oracle Against Damascus"},
-      {"before": 6, "text": "Oracle Against Gaza"},
-      {"before": 9, "text": "Oracle Against Tyre"},
-      {"before": 11, "text": "Oracle Against Edom"},
-      {"before": 13, "text": "Oracle Against Ammon"}
+      {
+        "before": 1,
+        "text": "Introduction"
+      },
+      {
+        "before": 3,
+        "text": "Oracle Against Damascus"
+      },
+      {
+        "before": 6,
+        "text": "Oracle Against Gaza"
+      },
+      {
+        "before": 9,
+        "text": "Oracle Against Tyre"
+      },
+      {
+        "before": 11,
+        "text": "Oracle Against Edom"
+      },
+      {
+        "before": 13,
+        "text": "Oracle Against Ammon"
+      }
     ]
   },
   "2": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 4, "type": "poetry"},
-      {"v": 6, "type": "poetry"},
-      {"v": 14, "type": "poetry"}
+      {
+        "v": 1,
+        "type": "poetry"
+      },
+      {
+        "v": 4,
+        "type": "poetry"
+      },
+      {
+        "v": 6,
+        "type": "poetry"
+      },
+      {
+        "v": 14,
+        "type": "poetry"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Oracle Against Moab"},
-      {"before": 4, "text": "Oracle Against Judah"},
-      {"before": 6, "text": "Oracle Against Israel"},
-      {"before": 14, "text": "Israel Cannot Escape"}
+      {
+        "before": 1,
+        "text": "Oracle Against Moab"
+      },
+      {
+        "before": 4,
+        "text": "Oracle Against Judah"
+      },
+      {
+        "before": 6,
+        "text": "Oracle Against Israel"
+      },
+      {
+        "before": 14,
+        "text": "Israel Cannot Escape"
+      }
     ]
   },
   "3": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 9, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 9,
+        "type": "oracle",
+        "speaker": "god"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Hear This Word Against Israel"},
-      {"before": 9, "text": "Samaria's Sins Proclaimed"}
+      {
+        "before": 1,
+        "text": "Hear This Word Against Israel"
+      },
+      {
+        "before": 9,
+        "text": "Samaria's Sins Proclaimed"
+      }
     ]
   },
   "4": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 6, "type": "dialogue"},
-      {"v": 12, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 6,
+        "type": "oracle",
+        "speaker": "god",
+        "flags": [
+          "rhythmic"
+        ]
+      },
+      {
+        "v": 12,
+        "type": "oracle",
+        "speaker": "god"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Cows of Bashan Indicted"},
-      {"before": 6, "text": "Five Plagues Ignored"},
-      {"before": 12, "text": "Prepare to Meet Your God"}
+      {
+        "before": 1,
+        "text": "Cows of Bashan Indicted"
+      },
+      {
+        "before": 6,
+        "text": "Five Plagues Ignored"
+      },
+      {
+        "before": 12,
+        "text": "Prepare to Meet Your God"
+      }
     ]
   },
   "5": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 4, "type": "dialogue"},
-      {"v": 10, "type": "dialogue"},
-      {"v": 18, "type": "dialogue"},
-      {"v": 21, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "poetry"
+      },
+      {
+        "v": 4,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 10,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 18,
+        "type": "oracle",
+        "speaker": "god",
+        "flags": [
+          "woe"
+        ]
+      },
+      {
+        "v": 21,
+        "type": "oracle",
+        "speaker": "god"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "A Lament for Israel"},
-      {"before": 4, "text": "Seek the Lord and Live"},
-      {"before": 10, "text": "Justice Perverted"},
-      {"before": 18, "text": "Woe to Those Who Long for the Day of the Lord"},
-      {"before": 21, "text": "God Rejects False Worship"}
+      {
+        "before": 1,
+        "text": "A Lament for Israel"
+      },
+      {
+        "before": 4,
+        "text": "Seek the Lord and Live"
+      },
+      {
+        "before": 10,
+        "text": "Justice Perverted"
+      },
+      {
+        "before": 18,
+        "text": "Woe to Those Who Long for the Day of the Lord"
+      },
+      {
+        "before": 21,
+        "text": "God Rejects False Worship"
+      }
     ]
   },
   "6": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 8, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "oracle",
+        "speaker": "god",
+        "flags": [
+          "woe"
+        ]
+      },
+      {
+        "v": 8,
+        "type": "oracle",
+        "speaker": "god"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Woe to Those at Ease in Zion"},
-      {"before": 8, "text": "The Lord Abhors Israel's Pride"}
+      {
+        "before": 1,
+        "text": "Woe to Those at Ease in Zion"
+      },
+      {
+        "before": 8,
+        "text": "The Lord Abhors Israel's Pride"
+      }
     ]
   },
   "7": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 4, "type": "narrative"},
-      {"v": 7, "type": "narrative"},
-      {"v": 10, "type": "narrative"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 4,
+        "type": "narrative"
+      },
+      {
+        "v": 7,
+        "type": "narrative"
+      },
+      {
+        "v": 10,
+        "type": "narrative"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Vision of the Locusts"},
-      {"before": 4, "text": "Vision of the Fire"},
-      {"before": 7, "text": "Vision of the Plumb Line"},
-      {"before": 10, "text": "Amaziah Expels Amos"}
+      {
+        "before": 1,
+        "text": "Vision of the Locusts"
+      },
+      {
+        "before": 4,
+        "text": "Vision of the Fire"
+      },
+      {
+        "before": 7,
+        "text": "Vision of the Plumb Line"
+      },
+      {
+        "before": 10,
+        "text": "Amaziah Expels Amos"
+      }
     ]
   },
   "8": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 4, "type": "dialogue"},
-      {"v": 11, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 4,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 11,
+        "type": "oracle",
+        "speaker": "god"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Vision of Summer Fruit"},
-      {"before": 4, "text": "Those Who Exploit the Poor"},
-      {"before": 11, "text": "A Famine for God's Word"}
+      {
+        "before": 1,
+        "text": "Vision of Summer Fruit"
+      },
+      {
+        "before": 4,
+        "text": "Those Who Exploit the Poor"
+      },
+      {
+        "before": 11,
+        "text": "A Famine for God's Word"
+      }
     ]
   },
   "9": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 7, "type": "dialogue"},
-      {"v": 11, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 7,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 11,
+        "type": "oracle",
+        "speaker": "god"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Vision of the Lord at the Altar"},
-      {"before": 7, "text": "Israel Is Not Unique"},
-      {"before": 11, "text": "The Restoration of David's House"}
+      {
+        "before": 1,
+        "text": "Vision of the Lord at the Altar"
+      },
+      {
+        "before": 7,
+        "text": "Israel Is Not Unique"
+      },
+      {
+        "before": 11,
+        "text": "The Restoration of David's House"
+      }
     ]
   }
 }

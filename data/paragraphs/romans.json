@@ -87,7 +87,43 @@
     "breaks": [
       {
         "v": 1,
-        "type": "narrative"
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 2,
+        "type": "dialogue",
+        "speaker": "paul"
+      },
+      {
+        "v": 3,
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 4,
+        "type": "dialogue",
+        "speaker": "paul"
+      },
+      {
+        "v": 5,
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 6,
+        "type": "dialogue",
+        "speaker": "paul"
+      },
+      {
+        "v": 7,
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 8,
+        "type": "dialogue",
+        "speaker": "paul"
       },
       {
         "v": 9,
@@ -185,11 +221,23 @@
     "breaks": [
       {
         "v": 1,
-        "type": "narrative"
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 2,
+        "type": "dialogue",
+        "speaker": "paul"
       },
       {
         "v": 15,
-        "type": "narrative"
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 16,
+        "type": "dialogue",
+        "speaker": "paul"
       }
     ],
     "headings": [
@@ -290,12 +338,39 @@
         "type": "narrative"
       },
       {
+        "v": 12,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
         "v": 14,
-        "type": "narrative"
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 15,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
+        "v": 17,
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 19,
-        "type": "narrative"
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 20,
+        "type": "dialogue",
+        "speaker": "paul"
+      },
+      {
+        "v": 25,
+        "type": "oracle",
+        "speaker": "god"
       },
       {
         "v": 30,
@@ -338,6 +413,11 @@
       {
         "v": 14,
         "type": "narrative"
+      },
+      {
+        "v": 19,
+        "type": "oracle",
+        "speaker": "god"
       }
     ],
     "headings": [
@@ -362,6 +442,11 @@
         "type": "narrative"
       },
       {
+        "v": 4,
+        "type": "oracle",
+        "speaker": "god"
+      },
+      {
         "v": 11,
         "type": "narrative"
       },
@@ -370,12 +455,23 @@
         "type": "narrative"
       },
       {
+        "v": 19,
+        "type": "dialogue",
+        "speaker": "interlocutor"
+      },
+      {
+        "v": 20,
+        "type": "dialogue",
+        "speaker": "paul"
+      },
+      {
         "v": 25,
         "type": "narrative"
       },
       {
         "v": 33,
-        "type": "doxology"
+        "type": "prayer",
+        "speaker": "paul"
       }
     ],
     "headings": [

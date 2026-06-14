@@ -35,7 +35,8 @@ var CATEGORY_TILES = [
   { id: 'people',   label: 'People',   icon: '👤', desc: 'Biblical figures & patriarchs' },
   { id: 'places',   label: 'Places',   icon: '📍', desc: 'Cities, lands & geography' },
   { id: 'concepts', label: 'Concepts', icon: '📖', desc: 'Doctrine, themes & objects' },
-  { id: 'names',    label: 'Names',    icon: '✍',  desc: 'Etymology of Biblical names' }
+  { id: 'names',    label: 'Names',    icon: '✍',  desc: 'Etymology of Biblical names' },
+  { id: 'father',   label: 'Church Fathers', icon: '⛪', desc: 'Voices of the historic church' }
 ];
 
 var FEATURED_SLUGS = ['jerusalem', 'covenant', 'atonement', 'faith', 'prayer', 'grace', 'messiah'];
@@ -464,7 +465,11 @@ function _showArticle(container, slug) {
     var hitch      = _hitchMap && (_hitchMap[slug] || _findHitchByTitle(slug));
     var bpIdx      = _bpIdxMap && _bpIdxMap[slug];
 
-    if (!eastonMeta && !smithMeta && !isbeMeta) {
+    // Render if ANY source has the term — including a Biblepedia-only article (bpIdx),
+    // e.g. Cloud of Witnesses church fathers, which are absent from the biblical
+    // dictionaries Easton/Smith/ISBE. Without the bpIdx check those fall through to
+    // search and never open.
+    if (!eastonMeta && !smithMeta && !isbeMeta && !bpIdx) {
       _showSearchResults(container, slug.replace(/-/g, ' '));
       return;
     }
@@ -640,10 +645,21 @@ function _populateArticleBody(container, slug, term, eastonFull, smithFull, isbe
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (data && data.connections && data.connections.length) {
-          var slEl = document.createElement('div');
-          slEl.className = 'bp-strongs-section';
+          // Group all original-language words into one collapsible section (like the
+          // Nave's / Easton sections), each word a collapsed card inside it.
+          var nWords = data.connections.length;
+          var slEl = document.createElement('details');
+          slEl.className = 'bp-src-section';
           slEl.id = 'bp-strongs';
-          slEl.innerHTML = _renderStrongsSection(data.connections);
+          slEl.innerHTML =
+            '<summary class="bp-src-section__head">' +
+              '<span class="vs-dict-src-badge" data-dict-src="strongs">OL</span>' +
+              '<span class="bp-src-section__name">Original Languages' +
+                ' <span class="bp-src-section__count">(' + nWords + ' word' + (nWords !== 1 ? 's' : '') + ')</span>' +
+              '</span>' +
+              '<span class="bp-src-section__toggle">▸</span>' +
+            '</summary>' +
+            '<div class="bp-src-section__body">' + _renderStrongsSection(data.connections) + '</div>';
           bodyEl.appendChild(slEl);
         }
       })
@@ -774,13 +790,23 @@ var _BOOK_ABBREV = {genesis:'Gen',exodus:'Exo',leviticus:'Lev',numbers:'Num',deu
 
 var _NT_START_IDX = 39; // index of 'matthew' in _BOOK_ORDER (0-based)
 
+// INTENT: Each original-language word renders as an individually collapsible card
+//   (collapsed by default) inside the one "Original Languages" section, so a word-rich
+//   article shows a tidy list of informative title-bars the reader expands one at a time.
+// CHANGE? Each word is a <details class="bp-sl-card"> with an informative <summary>
+//   (code · lemma · transliteration · gloss · occurrence count); the heat map and stats
+//   live in the body, shown only when expanded. The outer "Original Languages" wrapper
+//   is built in _renderArticleShell. Heat-map cell logic unchanged.
+// VERIFY: Open a Biblepedia article with original-language data (e.g. a person/word like
+//   "aaron"); the "Original Languages" group lists collapsed word bars; each bar shows
+//   the Strong's code, the Greek/Hebrew word, transliteration, gloss, and count; clicking
+//   one expands its distribution heat map.
 function _renderStrongsSection(connections) {
-  var html = '<h3 class="bp-strongs-section__title">Original Language Connections</h3>';
-
-  connections.forEach(function (c) {
+  return connections.map(function (c) {
     var isHeb  = c.lang === 'hebrew';
     var pct    = c.total > 0 ? Math.round((c.count / c.total) * 100) : 0;
     var langLabel = isHeb ? 'Hebrew' : 'Greek';
+    var glossShort = c.gloss ? c.gloss.replace(/\.\s*$/, '') : '';
 
     // Build heat map cells
     var maxCount = Math.max.apply(null, _BOOK_ORDER.map(function (b) { return c.books[b] || 0; }));
@@ -798,15 +824,21 @@ function _renderStrongsSection(connections) {
         '</span>';
     }).join('');
 
-    html +=
-      '<div class="bp-sl-card">' +
-        '<div class="bp-sl-card__head">' +
-          '<span class="bp-sl-code bp-sl-code--' + c.lang + '">' + escHtml(c.code) + '</span>' +
-          '<span class="bp-sl-lemma">' + escHtml(c.lemma) + '</span>' +
-          (c.translit ? '<span class="bp-sl-translit">' + escHtml(c.translit) + '</span>' : '') +
-          '<span class="bp-sl-lang">' + langLabel + '</span>' +
-        '</div>' +
-        (c.gloss ? '<div class="bp-sl-gloss">' + escHtml(c.gloss) + '</div>' : '') +
+    // Informative title bar: code · word · transliteration · gloss · count
+    var summary =
+      '<summary class="bp-sl-card__head">' +
+        '<span class="bp-sl-chevron" aria-hidden="true">▸</span>' +
+        '<span class="bp-sl-code bp-sl-code--' + c.lang + '">' + escHtml(c.code) + '</span>' +
+        '<span class="bp-sl-lemma">' + escHtml(c.lemma) + '</span>' +
+        (c.translit ? '<span class="bp-sl-translit">' + escHtml(c.translit) + '</span>' : '') +
+        (glossShort ? '<span class="bp-sl-gloss-inline">' + escHtml(glossShort) + '</span>' : '') +
+        '<span class="bp-sl-count-chip" title="occurrences as this term">' + c.count + '×</span>' +
+      '</summary>';
+
+    var body =
+      '<div class="bp-sl-card__body">' +
+        '<div class="bp-sl-lang-line">' + langLabel +
+          (c.gloss ? ' &middot; ' + escHtml(c.gloss) : '') + '</div>' +
         (c.def ? '<div class="bp-sl-def">' + escHtml(c.def) + '</div>' : '') +
         '<div class="bp-sl-stats">' +
           '<span class="bp-sl-count"><strong>' + c.count + '</strong> occurrence' + (c.count !== 1 ? 's' : '') + ' as this term</span>' +
@@ -821,9 +853,9 @@ function _renderStrongsSection(connections) {
           '<span class="bp-sl-heatmap-legend__nt">NT</span>' +
         '</div>' +
       '</div>';
-  });
 
-  return html;
+    return '<details class="bp-sl-card">' + summary + body + '</details>';
+  }).join('');
 }
 
 // ── Wiki-link injection ────────────────────────────────────────────────────────
@@ -1014,11 +1046,11 @@ function _detectCategory(slug, term, hitch, meta) {
 }
 
 function _catClass(cat) {
-  return 'bp-cat-badge--' + (cat === 'people' ? 'people' : cat === 'places' ? 'place' : cat === 'names' ? 'name' : 'concept');
+  return 'bp-cat-badge--' + (cat === 'people' ? 'people' : cat === 'places' ? 'place' : cat === 'names' ? 'name' : cat === 'father' ? 'father' : 'concept');
 }
 
 function _catBadgeHtml(cat) {
-  var label = cat === 'people' ? 'Person' : cat === 'places' ? 'Place' : cat === 'names' ? 'Name' : 'Concept';
+  var label = cat === 'people' ? 'Person' : cat === 'places' ? 'Place' : cat === 'names' ? 'Name' : cat === 'father' ? 'Church Father' : 'Concept';
   return '<span class="bp-cat-badge ' + _catClass(cat) + '">' + escHtml(label) + '</span>';
 }
 

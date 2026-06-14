@@ -13,8 +13,27 @@ Thumbs.db
 /node_modules/
 npm-debug.log*
 
+# Python bytecode (one-off generation scripts produce these; never commit them)
+__pycache__/
+*.pyc
+
 # Local dev
 local-notes.md
+
+# Cloud of Witnesses / Catena raw source HTML caches (large, re-downloadable;
+# the committed intermediates in data/commentary/cow-sources/ are what cow-merge needs)
+working/catena-src/
+
+# ── Build / generation apparatus — NOT part of the deployed site ──────────────
+# Excluded so the published site stays lean (HTML/CSS/JS + data/ + assets only) and so the
+# copy-to-deployment step can use this file as its exclude-list. These live on disk but are
+# untracked. (Inline trailing comments are NOT allowed in .gitignore — keep patterns bare.)
+#   working/ = agent prompts, guides, progress trackers, todos, loop-archive
+#   scripts/ = build + one-off generation scripts (Python/shell)
+#   *.py     = any Python anywhere is build-time tooling, never runtime
+working/
+scripts/
+*.py
 
 # Agent workflow files (prompts, guides, progress trackers — not part of the site)
 /MKT_*.md

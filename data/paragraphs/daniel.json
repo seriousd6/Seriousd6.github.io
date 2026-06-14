@@ -1,163 +1,469 @@
 {
   "1": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 8, "type": "narrative"},
-      {"v": 17, "type": "narrative"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 8,
+        "type": "narrative"
+      },
+      {
+        "v": 17,
+        "type": "narrative"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Daniel and His Friends at Babylon"},
-      {"before": 8, "text": "The Test of Faith"},
-      {"before": 17, "text": "Daniel and His Friends Excel"}
+      {
+        "before": 1,
+        "text": "Daniel and His Friends at Babylon"
+      },
+      {
+        "before": 8,
+        "text": "The Test of Faith"
+      },
+      {
+        "before": 17,
+        "text": "Daniel and His Friends Excel"
+      }
     ]
   },
   "2": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 14, "type": "narrative"},
-      {"v": 24, "type": "narrative"},
-      {"v": 31, "type": "dialogue"},
-      {"v": 46, "type": "narrative"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 14,
+        "type": "narrative"
+      },
+      {
+        "v": 24,
+        "type": "narrative"
+      },
+      {
+        "v": 31,
+        "type": "dialogue",
+        "speaker": "daniel"
+      },
+      {
+        "v": 36,
+        "break": false
+      },
+      {
+        "v": 46,
+        "type": "narrative"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Nebuchadnezzar's Dream"},
-      {"before": 14, "text": "Daniel Intercedes"},
-      {"before": 31, "text": "The Dream Revealed"},
-      {"before": 46, "text": "Daniel Honored"}
+      {
+        "before": 1,
+        "text": "Nebuchadnezzar's Dream"
+      },
+      {
+        "before": 14,
+        "text": "Daniel Intercedes"
+      },
+      {
+        "before": 31,
+        "text": "The Dream Revealed"
+      },
+      {
+        "before": 46,
+        "text": "Daniel Honored"
+      }
     ]
   },
   "3": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 8, "type": "narrative"},
-      {"v": 19, "type": "narrative"},
-      {"v": 24, "type": "narrative"},
-      {"v": 28, "type": "narrative"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 8,
+        "type": "narrative"
+      },
+      {
+        "v": 19,
+        "type": "narrative"
+      },
+      {
+        "v": 24,
+        "type": "narrative"
+      },
+      {
+        "v": 28,
+        "type": "narrative"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "The Golden Image"},
-      {"before": 8, "text": "The Three Refused to Bow"},
-      {"before": 19, "text": "The Fiery Furnace"},
-      {"before": 24, "text": "A Fourth Figure in the Fire"},
-      {"before": 28, "text": "Nebuchadnezzar Praises God"}
+      {
+        "before": 1,
+        "text": "The Golden Image"
+      },
+      {
+        "before": 8,
+        "text": "The Three Refused to Bow"
+      },
+      {
+        "before": 19,
+        "text": "The Fiery Furnace"
+      },
+      {
+        "before": 24,
+        "text": "A Fourth Figure in the Fire"
+      },
+      {
+        "before": 28,
+        "text": "Nebuchadnezzar Praises God"
+      }
     ]
   },
   "4": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 4, "type": "narrative"},
-      {"v": 19, "type": "dialogue"},
-      {"v": 28, "type": "narrative"},
-      {"v": 34, "type": "poetry"}
+      {
+        "v": 1,
+        "type": "dialogue",
+        "speaker": "nebuchadnezzar"
+      },
+      {
+        "v": 4,
+        "type": "narrative"
+      },
+      {
+        "v": 19,
+        "type": "dialogue",
+        "speaker": "daniel"
+      },
+      {
+        "v": 28,
+        "type": "narrative"
+      },
+      {
+        "v": 34,
+        "type": "poetry"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Nebuchadnezzar's Proclamation"},
-      {"before": 4, "text": "The Dream of the Great Tree"},
-      {"before": 19, "text": "Daniel Interprets the Dream"},
-      {"before": 28, "text": "Nebuchadnezzar's Humbling"},
-      {"before": 34, "text": "Nebuchadnezzar Praises God"}
+      {
+        "before": 1,
+        "text": "Nebuchadnezzar's Proclamation"
+      },
+      {
+        "before": 4,
+        "text": "The Dream of the Great Tree"
+      },
+      {
+        "before": 19,
+        "text": "Daniel Interprets the Dream"
+      },
+      {
+        "before": 28,
+        "text": "Nebuchadnezzar's Humbling"
+      },
+      {
+        "before": 34,
+        "text": "Nebuchadnezzar Praises God"
+      }
     ]
   },
   "5": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 5, "type": "narrative"},
-      {"v": 13, "type": "narrative"},
-      {"v": 17, "type": "dialogue"},
-      {"v": 29, "type": "narrative"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 5,
+        "type": "narrative"
+      },
+      {
+        "v": 13,
+        "type": "narrative"
+      },
+      {
+        "v": 17,
+        "type": "dialogue",
+        "speaker": "daniel"
+      },
+      {
+        "v": 24,
+        "break": false
+      },
+      {
+        "v": 29,
+        "type": "narrative"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Belshazzar's Feast"},
-      {"before": 5, "text": "The Writing on the Wall"},
-      {"before": 13, "text": "Daniel Called"},
-      {"before": 17, "text": "Daniel Interprets the Writing"},
-      {"before": 29, "text": "Belshazzar Slain"}
+      {
+        "before": 1,
+        "text": "Belshazzar's Feast"
+      },
+      {
+        "before": 5,
+        "text": "The Writing on the Wall"
+      },
+      {
+        "before": 13,
+        "text": "Daniel Called"
+      },
+      {
+        "before": 17,
+        "text": "Daniel Interprets the Writing"
+      },
+      {
+        "before": 29,
+        "text": "Belshazzar Slain"
+      }
     ]
   },
   "6": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 10, "type": "narrative"},
-      {"v": 16, "type": "narrative"},
-      {"v": 25, "type": "narrative"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 10,
+        "type": "narrative"
+      },
+      {
+        "v": 16,
+        "type": "narrative"
+      },
+      {
+        "v": 25,
+        "type": "narrative"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "The Plot Against Daniel"},
-      {"before": 10, "text": "Daniel Prays and Is Arrested"},
-      {"before": 16, "text": "Daniel in the Lions' Den"},
-      {"before": 25, "text": "Darius's Decree"}
+      {
+        "before": 1,
+        "text": "The Plot Against Daniel"
+      },
+      {
+        "before": 10,
+        "text": "Daniel Prays and Is Arrested"
+      },
+      {
+        "before": 16,
+        "text": "Daniel in the Lions' Den"
+      },
+      {
+        "before": 25,
+        "text": "Darius's Decree"
+      }
     ]
   },
   "7": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 9, "type": "narrative"},
-      {"v": 15, "type": "dialogue"},
-      {"v": 19, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 9,
+        "type": "narrative"
+      },
+      {
+        "v": 15,
+        "type": "dialogue",
+        "speaker": "daniel"
+      },
+      {
+        "v": 19,
+        "type": "dialogue",
+        "speaker": "daniel"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Vision of the Four Beasts"},
-      {"before": 9, "text": "The Ancient of Days"},
-      {"before": 15, "text": "The Vision Interpreted"},
-      {"before": 19, "text": "The Meaning of the Fourth Beast"}
+      {
+        "before": 1,
+        "text": "Vision of the Four Beasts"
+      },
+      {
+        "before": 9,
+        "text": "The Ancient of Days"
+      },
+      {
+        "before": 15,
+        "text": "The Vision Interpreted"
+      },
+      {
+        "before": 19,
+        "text": "The Meaning of the Fourth Beast"
+      }
     ]
   },
   "8": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 15, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 15,
+        "type": "dialogue",
+        "speaker": "gabriel"
+      },
+      {
+        "v": 20,
+        "break": false
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Vision of the Ram and the Goat"},
-      {"before": 15, "text": "Gabriel Interprets the Vision"}
+      {
+        "before": 1,
+        "text": "Vision of the Ram and the Goat"
+      },
+      {
+        "before": 15,
+        "text": "Gabriel Interprets the Vision"
+      }
     ]
   },
   "9": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 4, "type": "dialogue"},
-      {"v": 20, "type": "narrative"},
-      {"v": 24, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 4,
+        "type": "prayer",
+        "speaker": "daniel"
+      },
+      {
+        "v": 11,
+        "break": false
+      },
+      {
+        "v": 20,
+        "type": "narrative"
+      },
+      {
+        "v": 24,
+        "type": "dialogue",
+        "speaker": "gabriel"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Daniel's Study of Jeremiah"},
-      {"before": 4, "text": "Daniel's Prayer of Confession"},
-      {"before": 20, "text": "Gabriel's Message"},
-      {"before": 24, "text": "The Seventy Weeks"}
+      {
+        "before": 1,
+        "text": "Daniel's Study of Jeremiah"
+      },
+      {
+        "before": 4,
+        "text": "Daniel's Prayer of Confession"
+      },
+      {
+        "before": 20,
+        "text": "Gabriel's Message"
+      },
+      {
+        "before": 24,
+        "text": "The Seventy Weeks"
+      }
     ]
   },
   "10": {
     "breaks": [
-      {"v": 1, "type": "narrative"},
-      {"v": 10, "type": "narrative"},
-      {"v": 18, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "narrative"
+      },
+      {
+        "v": 10,
+        "type": "narrative"
+      },
+      {
+        "v": 18,
+        "type": "dialogue",
+        "speaker": "angels"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "A Vision by the Tigris"},
-      {"before": 10, "text": "The Heavenly Messenger"},
-      {"before": 18, "text": "Strengthened for the Message"}
+      {
+        "before": 1,
+        "text": "A Vision by the Tigris"
+      },
+      {
+        "before": 10,
+        "text": "The Heavenly Messenger"
+      },
+      {
+        "before": 18,
+        "text": "Strengthened for the Message"
+      }
     ]
   },
   "11": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 21, "type": "dialogue"},
-      {"v": 36, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "dialogue",
+        "speaker": "angels"
+      },
+      {
+        "v": 10,
+        "break": false
+      },
+      {
+        "v": 21,
+        "type": "dialogue",
+        "speaker": "angels"
+      },
+      {
+        "v": 29,
+        "break": false
+      },
+      {
+        "v": 36,
+        "type": "dialogue",
+        "speaker": "angels"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "Kings of the South and North"},
-      {"before": 21, "text": "The Contemptible King"},
-      {"before": 36, "text": "The Willful King"}
+      {
+        "before": 1,
+        "text": "Kings of the South and North"
+      },
+      {
+        "before": 21,
+        "text": "The Contemptible King"
+      },
+      {
+        "before": 36,
+        "text": "The Willful King"
+      }
     ]
   },
   "12": {
     "breaks": [
-      {"v": 1, "type": "dialogue"},
-      {"v": 5, "type": "dialogue"}
+      {
+        "v": 1,
+        "type": "dialogue",
+        "speaker": "angels"
+      },
+      {
+        "v": 5,
+        "type": "dialogue",
+        "speaker": "angels"
+      }
     ],
     "headings": [
-      {"before": 1, "text": "The Time of the End"},
-      {"before": 5, "text": "Final Words to Daniel"}
+      {
+        "before": 1,
+        "text": "The Time of the End"
+      },
+      {
+        "before": 5,
+        "text": "Final Words to Daniel"
+      }
     ]
   }
 }

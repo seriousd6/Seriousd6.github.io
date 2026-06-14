@@ -1,18 +1,16 @@
 {
   "1": {
     "breaks": [
-      {
-        "v": 1,
-        "type": "narrative"
-      },
-      {
-        "v": 8,
-        "type": "narrative"
-      },
-      {
-        "v": 19,
-        "type": "narrative"
-      }
+      {"v": 1, "type": "narrative"},
+      {"v": 8, "type": "dialogue", "speaker": "naomi"},
+      {"v": 10, "type": "dialogue", "speaker": "crowd"},
+      {"v": 11, "type": "dialogue", "speaker": "naomi"},
+      {"v": 14, "type": "narrative"},
+      {"v": 15, "type": "dialogue", "speaker": "naomi"},
+      {"v": 16, "type": "dialogue", "speaker": "ruth"},
+      {"v": 18, "type": "narrative"},
+      {"v": 19, "type": "narrative"},
+      {"v": 20, "type": "dialogue", "speaker": "naomi"}
     ],
     "headings": [
       {
@@ -31,18 +29,19 @@
   },
   "2": {
     "breaks": [
-      {
-        "v": 1,
-        "type": "narrative"
-      },
-      {
-        "v": 8,
-        "type": "narrative"
-      },
-      {
-        "v": 17,
-        "type": "narrative"
-      }
+      {"v": 1, "type": "narrative"},
+      {"v": 2, "type": "dialogue", "speaker": "ruth"},
+      {"v": 3, "type": "narrative"},
+      {"v": 8, "type": "dialogue", "speaker": "boaz"},
+      {"v": 10, "type": "dialogue", "speaker": "ruth"},
+      {"v": 11, "type": "dialogue", "speaker": "boaz"},
+      {"v": 13, "type": "dialogue", "speaker": "ruth"},
+      {"v": 14, "type": "dialogue", "speaker": "boaz"},
+      {"v": 17, "type": "narrative"},
+      {"v": 19, "type": "dialogue", "speaker": "naomi"},
+      {"v": 21, "type": "dialogue", "speaker": "ruth"},
+      {"v": 22, "type": "dialogue", "speaker": "naomi"},
+      {"v": 23, "type": "narrative"}
     ],
     "headings": [
       {
@@ -61,14 +60,14 @@
   },
   "3": {
     "breaks": [
-      {
-        "v": 1,
-        "type": "narrative"
-      },
-      {
-        "v": 10,
-        "type": "narrative"
-      }
+      {"v": 1, "type": "dialogue", "speaker": "naomi"},
+      {"v": 5, "type": "dialogue", "speaker": "ruth"},
+      {"v": 6, "type": "narrative"},
+      {"v": 9, "type": "dialogue", "speaker": "ruth"},
+      {"v": 10, "type": "dialogue", "speaker": "boaz"},
+      {"v": 14, "type": "narrative"},
+      {"v": 16, "type": "dialogue", "speaker": "ruth"},
+      {"v": 18, "type": "dialogue", "speaker": "naomi"}
     ],
     "headings": [
       {
@@ -83,18 +82,16 @@
   },
   "4": {
     "breaks": [
-      {
-        "v": 1,
-        "type": "narrative"
-      },
-      {
-        "v": 13,
-        "type": "narrative"
-      },
-      {
-        "v": 18,
-        "type": "list"
-      }
+      {"v": 1, "type": "narrative"},
+      {"v": 3, "type": "dialogue", "speaker": "boaz"},
+      {"v": 6, "type": "dialogue", "speaker": "questioner"},
+      {"v": 9, "type": "dialogue", "speaker": "boaz"},
+      {"v": 11, "type": "dialogue", "speaker": "crowd"},
+      {"v": 13, "type": "narrative"},
+      {"v": 14, "type": "dialogue", "speaker": "crowd"},
+      {"v": 16, "type": "narrative"},
+      {"v": 17, "type": "dialogue", "speaker": "crowd"},
+      {"v": 18, "type": "list"}
     ],
     "headings": [
       {

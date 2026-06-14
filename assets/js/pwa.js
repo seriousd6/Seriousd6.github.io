@@ -96,7 +96,7 @@ export function initPWA() {
     //   fire 66 silent 404 requests during background precache.
     // CHANGE? If data files are added for a stub version, remove its "stub":true field in
     //   data/versions/versions.json and it will automatically be included here.
-    // VERIFY: After first page load, open DevTools Application → Cache Storage → bsw-data-v3;
+    // VERIFY: After first page load, open DevTools Application → Cache Storage → bsw-data-bible-*;
     //   no data/bible/DR/, data/bible/MKT-L/, or data/bible/AKJV/ entries should appear.
     function triggerPrecache(sw) {
       if (!sw || !metaBooks || !metaVersions) return;

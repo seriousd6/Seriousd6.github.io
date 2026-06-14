@@ -1,0 +1,54 @@
+{
+  "1": {
+    "voices": ["Hilary", "John Chrysostom", "Augustine of Hippo", "Origen", "John Gill",
+               "John Lightfoot", "Matthew Henry", "Albert Barnes", "Adam Clarke",
+               "Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley", "Cyril of Jerusalem"],
+    "schools": [
+      {"school": "grammatical-historical", "prevalence": "majority",
+       "summary": "Genesis/Bĕrēshîth echo; the timeless 'was' (ēn) reaching into eternity; anarthrous theos = qualitative full deity, not 'a god'."},
+      {"school": "reformed", "prevalence": "several",
+       "summary": "The essential (not written) Word; his eternal divinity grounds the necessity of redemption through the Son."},
+      {"school": "latin-fathers", "prevalence": "several",
+       "summary": "Augustinian: the natural man cannot perceive it; the verse is grasped by faith ('letters of gold')."},
+      {"school": "eastern-antiochene", "prevalence": "minority",
+       "summary": "Chrysostom: it is God who speaks through John, so we need not trace the evangelist's background."},
+      {"school": "wesleyan-arminian", "prevalence": "minority",
+       "summary": "The Word existed before all things began to be made."}
+    ],
+    "debates": [
+      {"question": "The sense of 'beginning' — the start of creation, or beyond time into eternity?",
+       "sides": [
+         {"position": "the Genesis beginning of creation", "holders": ["Lightfoot", "Wesley", "most expositors"]},
+         {"position": "reaching past creation into eternity", "holders": ["Robertson", "Origen"]}
+       ]}
+    ],
+    "outliers": [
+      {"voice": "Origen", "note": "Alexandrian: catalogues the many scriptural senses of 'beginning' and reads Christ himself as the Beginning/Wisdom."}
+    ],
+    "themes": ["deity of Christ", "eternal Word", "Genesis 1:1 echo", "the Word with God / distinct person"]
+  },
+  "14": {
+    "voices": ["Chrysostom", "John Chrysostom", "John Gill", "John Lightfoot", "Albert Barnes",
+               "Adam Clarke", "Charles Ellicott", "Jamieson, Fausset and Brown", "A.T. Robertson",
+               "John Calvin", "John Wesley", "Cyril of Jerusalem"],
+    "schools": [
+      {"school": "grammatical-historical", "prevalence": "majority",
+       "summary": "egeneto ('became', the historic Incarnation) over against ēn; anarthrous 'flesh' = full human nature, the whole man; explicitly anti-Docetic (Ellicott)."},
+      {"school": "reformed", "prevalence": "several",
+       "summary": "The Son alone — not Father or Spirit — clothed with our flesh and shown openly; continuity with the Word of v.1."},
+      {"school": "eastern-antiochene", "prevalence": "minority",
+       "summary": "Chrysostom: we are made sons because the Word became flesh; his glory was seen only through the Incarnation."},
+      {"school": "wesleyan-arminian", "prevalence": "minority",
+       "summary": "'Flesh' = the whole man; the beholding 'we' are the apostles; grace and truth come to us who are by nature otherwise."}
+    ],
+    "debates": [
+      {"question": "The sense of 'flesh' (sarx) here.",
+       "sides": [
+         {"position": "the whole man / full human nature", "holders": ["Barnes", "Ellicott", "Wesley", "consensus"]},
+         {"position": "canvassed as possibly 'corrupt nature' or 'the body' before settling on the whole man", "holders": ["Wesley"]}
+       ]}
+    ],
+    "outliers": [],
+    "themes": ["incarnation", "true humanity of Christ", "anti-Docetism", "glory beheld", "grace and truth"]
+  }
+}

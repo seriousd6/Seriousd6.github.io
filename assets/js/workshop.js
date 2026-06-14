@@ -4398,7 +4398,7 @@ async function _renderCommentaryTab(parsed, container) {
   var selectorHtml = '<div class="sw-comm-selector">'
     + '<label class="sw-comm-selector__label">Commentary:</label>'
     + '<select class="sw-comm-selector__sel" id="sw-comm-src-sel">'
-    + COMMENTARY_SOURCES.filter(function(s) { return !s.id.startsWith('mkt-'); })
+    + COMMENTARY_SOURCES.filter(function(s) { return s.id !== 'mkt' && !s.id.startsWith('mkt-'); })
         .map(function(s) {
           return '<option value="' + _esc(s.id) + '"' + (s.id === src ? ' selected' : '') + '>'
             + _esc(s.label) + '</option>';
@@ -4422,8 +4422,14 @@ async function _renderCommentaryTab(parsed, container) {
 async function _loadAndRenderCommentary(parsed, srcId, bodyEl) {
   if (!bodyEl) return;
   bodyEl.innerHTML = '<p class="sw-tab-stub sw-tab-stub--loading">Loading…</p>';
-  var data = await loadCommentary(parsed.bookId, srcId);
-  if (!data) {
+  // loadCommentary now fetches one chapter at a time; this tab can span a chapter range, so
+  // fetch each chapter in [parsed.ch, parsed.endCh] and merge back to the {ch:{v}} shape.
+  var chList = [];
+  for (var c = parsed.ch; c <= parsed.endCh; c++) chList.push(c);
+  var parts = await Promise.all(chList.map(function (c) { return loadCommentary(parsed.bookId, srcId, c); }));
+  var data = {};
+  parts.forEach(function (part) { if (part) Object.keys(part).forEach(function (k) { data[k] = part[k]; }); });
+  if (!Object.keys(data).length) {
     bodyEl.innerHTML = '<p class="sw-tab-stub">No commentary available for this book in the selected source.</p>';
     return;
   }

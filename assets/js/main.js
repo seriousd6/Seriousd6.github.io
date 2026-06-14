@@ -57,6 +57,7 @@
       { label: '📚 Studies',               href: _r('studies/') },
       { label: '✝ Discipline',             href: _r('discipline/') },
       { label: '🔬 Original Language Study', href: _r('translation/workshop/') },
+      { label: '⚙ Settings',                href: _r('settings/') },
       { label: 'ℹ About / AI',               href: _r('about/') }
     ],
     groups: [

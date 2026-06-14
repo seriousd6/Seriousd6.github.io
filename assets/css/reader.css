@@ -1085,6 +1085,17 @@ a.ri-tl-label:hover { color: var(--color-primary); }
   border-radius: 1px;
 }
 
+/* CSS-36: the cross-ref note marker hardcodes a light-mode blue; lighten it for dark
+   mode (manual toggle + system preference) so it stays legible on the dark surface. */
+[data-theme="dark"] .reader-xref-note { color: #7ab3d0; border-bottom-color: #7ab3d0; }
+[data-theme="dark"] .reader-xref-note:hover,
+[data-theme="dark"] .reader-xref-note:focus-visible { color: #a9d4ea; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .reader-xref-note { color: #7ab3d0; border-bottom-color: #7ab3d0; }
+  :root:not([data-theme="light"]) .reader-xref-note:hover,
+  :root:not([data-theme="light"]) .reader-xref-note:focus-visible { color: #a9d4ea; }
+}
+
 /* Hidden by default; .bsw-xref-notes-on on <body> reveals them */
 body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 
@@ -1156,9 +1167,27 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
 
 .reader-strongs-banner__info {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: .2rem .45rem;
+}
+
+.reader-strongs-clear-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: .85rem;
+  padding: .1rem .35rem;
+  border-radius: 3px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color .12s, background .12s;
+}
+.reader-strongs-clear-btn:hover {
+  color: var(--color-text);
+  background: var(--color-border, #ddd);
 }
 
 .reader-strongs-banner__nav {
@@ -1298,11 +1327,11 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
     order: 1;
   }
 
-  /* All dynamically injected buttons: row 2 */
+  /* All dynamically injected buttons: row 2. CSS-37: 44px min touch target. */
   .reader-browse-bar > button {
     order: 2;
     flex-shrink: 0;
-    min-height: 36px;
+    min-height: 44px;
     display: inline-flex;
     align-items: center;
     font-size: 0.84rem;
@@ -1313,11 +1342,11 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
     flex-shrink: 0;
   }
 
-  /* Font size buttons: square, readable */
+  /* Font size buttons: square, readable. CSS-37: 44px min touch target. */
   .reader-font-size-grp { margin-right: 0; }
   .reader-font-size-btn {
-    min-height: 36px;
-    min-width: 34px;
+    min-height: 44px;
+    min-width: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1334,6 +1363,7 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   #reader-bookinfo-btn,
   #reader-xref-notes-btn,
   #reader-echoes-btn,
+  #reader-parallels-btn,
   #reader-para-btn { display: none; }
 
   /* ── Results ─────────────────────────────────── */
@@ -1412,6 +1442,78 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   border-color: #4a3016;
   color: #fff;
 }
+
+/* ── Read-aloud (G2 audio) — button, current-verse highlight, control bar ───── */
+.reader-audio-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-audio-btn:hover { background: rgba(92,61,30,0.07); border-color: rgba(92,61,30,0.35); color: var(--color-text); }
+.reader-audio-btn--on { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); font-weight: 600; box-shadow: 0 1px 3px rgba(92,61,30,0.25); }
+.reader-audio-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* Verse currently being read aloud */
+.reader-verse--reading {
+  background: rgba(140, 106, 0, 0.14);
+  border-radius: 3px;
+  box-shadow: -3px 0 0 0 var(--color-accent);
+}
+
+/* Floating audio control bar (shown while reading) */
+.reader-audio-bar {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-text);
+}
+.reader-audio-bar__btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  color: var(--color-text);
+}
+.reader-audio-bar__btn:hover { background: var(--color-border); }
+.reader-audio-bar__btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.reader-audio-bar__rate { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--color-muted); }
+.reader-audio-bar__rate-sel {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  padding: 0.15rem 0.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+.reader-audio-bar__status { color: var(--color-muted); min-width: 4.5rem; }
+.reader-audio-bar__hint { color: var(--color-muted); font-size: 0.72rem; font-style: italic; }
+/* While reading, verses are click-to-jump targets */
+body.bsw-reader-audio-active #reader-results .reader-verse { cursor: pointer; }
+@media (max-width: 540px) { .reader-audio-bar__hint { display: none; } }
 .reader-columns-btn:focus-visible,
 .reader-mode-btn:focus-visible {
   outline: 2px solid var(--color-accent);
@@ -1505,6 +1607,202 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
 .reader-echoes-btn:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* ── Synoptic Parallels button ───────────────────────────── */
+.reader-parallels-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-parallels-btn:hover {
+  background: rgba(60,100,160,0.07);
+  border-color: rgba(60,100,160,0.4);
+  color: var(--color-text);
+}
+.reader-parallels-btn--on {
+  background: #3c64a0;
+  border-color: #3c64a0;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(60,100,160,0.35);
+}
+.reader-parallels-btn--on:hover {
+  background: #2d4f82;
+  border-color: #2d4f82;
+  color: #fff;
+}
+.reader-parallels-btn:focus-visible {
+  outline: 2px solid #3c64a0;
+  outline-offset: 2px;
+}
+
+/* ── Synoptic panel (⇔ Parallels) ───────────────────────── */
+.reader-synoptic-panel {
+  margin: 0.75rem 0 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+.reader-synoptic-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  background: var(--color-surface-2, #f5f5f5);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  cursor: pointer;
+}
+.reader-synoptic-label:hover { color: var(--color-text); }
+.reader-synoptic-label:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.reader-synoptic-chevron {
+  flex-shrink: 0;
+  font-size: 0.7em;
+  transition: transform 0.15s ease;
+}
+.reader-synoptic-panel--collapsed .reader-synoptic-chevron { transform: rotate(-90deg); }
+.reader-synoptic-panel--collapsed .reader-synoptic-grid { display: none; }
+.reader-synoptic-grid {
+  display: flex;
+  overflow-x: auto;
+}
+.reader-synoptic-col {
+  flex: 1 1 0;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--color-border);
+  transition: flex 0.18s ease, min-width 0.18s ease;
+}
+.reader-synoptic-col:last-child { border-right: none; }
+.reader-synoptic-col--collapsed {
+  flex: 0 0 34px;
+  min-width: 34px;
+  overflow: hidden;
+}
+.reader-synoptic-col-hdr {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.45rem;
+  background: var(--color-surface-2, #f5f5f5);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+.reader-synoptic-col-ref {
+  flex: 1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-text);
+}
+.reader-synoptic-col-collapse {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.18rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: color 0.1s, background 0.1s;
+}
+.reader-synoptic-col-collapse:hover {
+  color: var(--color-text);
+  background: var(--color-border);
+}
+/* Collapsed: rotate the header into a vertical strip */
+.reader-synoptic-col--collapsed .reader-synoptic-col-hdr {
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  min-height: 120px;
+  border-bottom: none;
+  padding: 0.5rem 0.2rem;
+  gap: 0.3rem;
+}
+.reader-synoptic-col--collapsed .reader-synoptic-col-ref {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-overflow: clip;
+  flex: 1;
+}
+.reader-synoptic-col--collapsed .reader-synoptic-col-text { display: none; }
+.reader-synoptic-col-text {
+  padding: 0.5rem 0.65rem;
+  line-height: 1.65;
+  flex: 1;
+}
+.reader-synoptic-col--loading .reader-synoptic-col-text {
+  color: var(--color-muted);
+  font-style: italic;
+}
+.reader-synoptic-text { margin: 0; }
+.reader-synoptic-vnum {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  vertical-align: super;
+  line-height: 0;
+  margin-right: 0.12em;
+  margin-left: 0.3em;
+  user-select: none;
+}
+.reader-synoptic-vnum:first-child { margin-left: 0; }
+.reader-synoptic-unavail {
+  color: var(--color-muted);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+/* Mobile: stack columns vertically */
+@media (max-width: 600px) {
+  .reader-synoptic-grid { flex-direction: column; }
+  .reader-synoptic-col {
+    min-width: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .reader-synoptic-col:last-child { border-bottom: none; }
+  .reader-synoptic-col--collapsed {
+    flex: 0 0 auto;
+    min-height: 36px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .reader-synoptic-col--collapsed .reader-synoptic-col-hdr {
+    flex-direction: row;
+    height: auto;
+    min-height: 0;
+    justify-content: flex-start;
+    border-bottom: none;
+    padding: 0.3rem 0.45rem;
+  }
+  .reader-synoptic-col--collapsed .reader-synoptic-col-ref {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
 }
 
 /* ── Parallel panels container ───────────────────────────── */
@@ -2555,7 +2853,8 @@ mark.ri-word-hl {
 [data-theme="dark"] .reader-wide-btn--on,
 [data-theme="dark"] .reader-sidebar-btn--on,
 [data-theme="dark"] .reader-xref-notes-btn--on,
-[data-theme="dark"] .reader-echoes-btn--on {
+[data-theme="dark"] .reader-echoes-btn--on,
+[data-theme="dark"] .reader-parallels-btn--on {
   background: var(--color-btn-bg, #3a2d18);
   border-color: var(--color-primary);
   color: var(--color-btn-text, #e8c87a);
@@ -2568,7 +2867,8 @@ mark.ri-word-hl {
 [data-theme="dark"] .reader-wide-btn--on:hover,
 [data-theme="dark"] .reader-sidebar-btn--on:hover,
 [data-theme="dark"] .reader-xref-notes-btn--on:hover,
-[data-theme="dark"] .reader-echoes-btn--on:hover {
+[data-theme="dark"] .reader-echoes-btn--on:hover,
+[data-theme="dark"] .reader-parallels-btn--on:hover {
   background: var(--color-btn-bg-hover, #4a3a22);
   border-color: var(--color-primary);
   color: var(--color-btn-text, #e8c87a);
@@ -2594,7 +2894,8 @@ mark.ri-word-hl {
   :root:not([data-theme="light"]) .reader-font-size-btn--active,
   :root:not([data-theme="light"]) .reader-wide-btn--on,
   :root:not([data-theme="light"]) .reader-sidebar-btn--on,
-  :root:not([data-theme="light"]) .reader-xref-notes-btn--on {
+  :root:not([data-theme="light"]) .reader-xref-notes-btn--on,
+  :root:not([data-theme="light"]) .reader-parallels-btn--on {
     background: var(--color-btn-bg, #3a2d18);
     border-color: var(--color-primary);
     color: var(--color-btn-text, #e8c87a);
@@ -2606,7 +2907,8 @@ mark.ri-word-hl {
   :root:not([data-theme="light"]) .reader-split-btn--on:hover,
   :root:not([data-theme="light"]) .reader-wide-btn--on:hover,
   :root:not([data-theme="light"]) .reader-sidebar-btn--on:hover,
-  :root:not([data-theme="light"]) .reader-xref-notes-btn--on:hover {
+  :root:not([data-theme="light"]) .reader-xref-notes-btn--on:hover,
+  :root:not([data-theme="light"]) .reader-parallels-btn--on:hover {
     background: var(--color-btn-bg-hover, #4a3a22);
     border-color: var(--color-primary);
     color: var(--color-btn-text, #e8c87a);
@@ -2900,6 +3202,25 @@ mark.ri-word-hl {
 [data-theme="dark"] .reader-comm-src-sel { background: var(--color-surface); }
 :root:not([data-theme="light"]) .reader-comm-src-sel { background: var(--color-surface); }
 
+/* Commentary + Passage Study Desk open together: keep the reader at 50/50 and render
+   commentary STACKED under each verse (the mobile layout), not the side-by-side 1fr/4fr
+   grid. Otherwise the comm-mode `grid-template-columns: 1fr !important` (line ~3122) fights
+   the study-open 50/50 grid and bloats the desk toward 60%, and the narrow main column is
+   far too tight for two commentary sub-columns. Mirrors the @media(max-width:1024px) rule. */
+@media (min-width: 700px) {
+  .reader-layout--study-open.reader-layout--comm-mode,
+  .reader-layout--study-open.reader-layout--comm-mode.reader-layout--with-sidebar {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+}
+.reader-layout--study-open.reader-layout--comm-mode .reader-comm-grid {
+  display: flex; flex-direction: column;
+}
+.reader-layout--study-open.reader-layout--comm-mode .reader-comm-cell--verse,
+.reader-layout--study-open.reader-layout--comm-mode .reader-comm-cell--comm {
+  display: block; border-left: none;
+}
+
 /* ── Cross-ref inline grid (60 % Bible / 40 % xrefs) ─────────────────────── */
 .reader-xref-grid {
   display: grid;
@@ -3105,50 +3426,52 @@ mark.ri-word-hl {
   position: relative;
 }
 
-.reader-verse--has-echo::before {
-  content: '';
-  position: absolute;
-  left: -0.85rem;
-  top: 0.35em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-primary);
-  opacity: 0.55;
-}
-
-/* ── Inline echo marker (footnote-style dot after verse text) ─────────────── */
+/* ── Inline connections chip (chain-link + count, after verse text) ───────── */
 
 .reader-echo-marker {
   display: inline-flex;
   align-items: center;
   gap: 2px;
-  margin-left: 3px;
+  margin-left: 4px;
+  margin-right: 5px;
   vertical-align: super;
-  font-size: 0.58em;
-  background: none;
+  font-size: 0.6em;
+  font-weight: 700;
+  background: var(--color-accent);
+  color: #fff;
   border: none;
-  padding: 1px 3px;
+  padding: 1px 6px 1px 4px;
   cursor: pointer;
-  color: var(--color-primary);
-  opacity: 0.65;
-  border-radius: 3px;
-  line-height: 1;
-  transition: opacity 0.15s, background 0.15s;
+  opacity: 0.92;
+  border-radius: 99px;
+  line-height: 1.4;
+  transition: opacity 0.15s, filter 0.15s, box-shadow 0.15s;
 }
+.reader-echo-marker:hover { opacity: 1; filter: brightness(1.08); }
+.reader-echo-marker:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; opacity: 1; }
+.reader-echo-marker__icon { font-size: 0.95em; }
 .reader-echo-marker:hover,
 .reader-echo-marker--open {
   opacity: 1;
-  background: rgba(90, 110, 200, 0.13);
+  box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-accent);
 }
-.reader-echo-marker__dot {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-  flex-shrink: 0;
+/* The verse whose connections panel is currently open — make the source obvious. */
+.reader-verse--echo-active {
+  background: rgba(140, 106, 0, 0.10);
+  border-radius: 3px;
+  box-shadow: -3px 0 0 0 var(--color-accent);
 }
+/* Header of the inline connections panel — names the verse it belongs to. */
+.reader-echo-inline__head {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  padding: 0.4rem 0.65rem;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(140, 106, 0, 0.06);
+}
+.reader-echo-inline__head strong { color: var(--color-text); }
+.reader-echo-inline__icon { margin-right: 0.3rem; }
 .reader-echo-marker__count {
   font-size: 0.88em;
   font-weight: 600;
@@ -3298,14 +3621,43 @@ mark.ri-word-hl {
 }
 .reader-para:last-child { margin-bottom: 0; }
 
-/* Poetry: indented with a subtle left rule */
+/* Poetry: indented with a subtle left rule; each verse forced onto its own line */
 .reader-para--poetry {
   margin-left: 1.25rem;
   padding-left: 0.75rem;
   border-left: 2px solid var(--color-border);
 }
+.reader-para--poetry .reader-verse {
+  display: block;
+  margin-bottom: 0.12em;
+}
+.reader-para--poetry .reader-verse:last-child { margin-bottom: 0; }
 
-/* Doxology: centred, slightly muted */
+/* Dialogue: book/novel style — prose flows inline, indented as speech */
+.reader-para--dialogue {
+  margin-left: 1.5rem;
+}
+/* Unannotated books: consecutive dialogue blocks collapse gap (legacy behaviour) */
+.reader-para--dialogue + .reader-para--dialogue {
+  margin-top: -0.5rem;
+}
+
+/* Prayer: like dialogue but addressed upward; italic + faint left rule */
+.reader-para--prayer {
+  margin-left: 1.5rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  font-style: italic;
+}
+
+/* Oracle: prophetic proclamation; stronger left rule in a muted purple tone */
+.reader-para--oracle {
+  margin-left: 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid color-mix(in srgb, #7b4fa0 50%, var(--color-border));
+}
+
+/* Doxology: centred, primary colour, italic — set-apart praise sections */
 .reader-para--doxology {
   text-align: center;
   font-style: italic;
@@ -3313,17 +3665,554 @@ mark.ri-word-hl {
   padding: 0.2rem 0;
 }
 
-/* List: light indent */
+/* List: each verse on its own line with an em-dash marker */
 .reader-para--list {
-  margin-left: 1rem;
+  margin-left: 1.25rem;
+  padding-left: 0.5rem;
 }
+.reader-para--list .reader-verse {
+  display: block;
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.18em;
+}
+.reader-para--list .reader-verse::before {
+  content: '\2014'; /* em dash */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-muted);
+  font-size: 0.85em;
+  line-height: inherit;
+}
+.reader-para--list .reader-verse:last-child { margin-bottom: 0; }
+
+/* ── Flag modifiers ──────────────────────────────────────── */
+
+/* rhythmic: block-per-verse with rhythm-tick left rule (Beatitudes, wisdom poetry) */
+.reader-para--flag-rhythmic .reader-verse {
+  display: block;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--color-border);
+  margin-bottom: 0.15em;
+}
+.reader-para--flag-rhythmic .reader-verse:last-child { margin-bottom: 0; }
+
+/* enumerated: block-per-verse with em-dash (list-of-signs in dialogue) */
+.reader-para--flag-enumerated .reader-verse {
+  display: block;
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.18em;
+}
+.reader-para--flag-enumerated .reader-verse::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-muted);
+  font-size: 0.85em;
+}
+.reader-para--flag-enumerated .reader-verse:last-child { margin-bottom: 0; }
+
+/* woe: warning accent on left (Matt 23 woe-oracles) */
+.reader-para--flag-woe {
+  border-left: 3px solid rgba(160, 60, 40, 0.35);
+  padding-left: 0.7rem;
+}
+
+/* ── Speaker blocks ──────────────────────────────────────── */
+.reader-speaker-block {
+  margin-bottom: 0.85rem;
+}
+.reader-speaker-block:last-child { margin-bottom: 0; }
+
+/* Paragraphs inside a speaker block: tighter continuation gap */
+.reader-speaker-block .reader-para {
+  margin-bottom: 0.4rem;
+}
+.reader-speaker-block .reader-para:last-child { margin-bottom: 0; }
+
+/* Cancel legacy consecutive-dialogue collapse inside speaker blocks */
+.reader-speaker-block .reader-para--dialogue + .reader-para--dialogue {
+  margin-top: 0;
+}
+
+.reader-speaker-chip {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.06rem 0.4rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-surface);
+  color: var(--color-muted);
+  line-height: 1.5;
+  user-select: none;
+}
+.reader-speaker-chip--jesus {
+  color: #b03a2e;
+  border-color: rgba(176, 58, 46, 0.3);
+  background: rgba(176, 58, 46, 0.05);
+}
+.reader-speaker-chip--god {
+  color: #6b2fa0;
+  border-color: rgba(107, 47, 160, 0.3);
+  background: rgba(107, 47, 160, 0.05);
+}
+.reader-speaker-chip--named {
+  color: var(--color-primary);
+  border-color: var(--color-border);
+}
+
+/* Thought break: blank-line gap within a speaker block */
+.reader-thought-break {
+  display: block;
+  height: 0.75rem;
+}
+body.bsw-reader-mode .reader-thought-break { height: 0.35rem; }
 
 /* Columns mode: suppress column-break inside individual paragraphs */
 body.bsw-columns-on .reader-result-group__text--para .reader-para {
   break-inside: avoid;
 }
 
+/* Red letter (Words of Jesus) and Purple letter (Words of God) */
+.reader-verse--jesus { color: #b03a2e; }
+.reader-verse--god   { color: #6b2fa0; }
+/* Verse numbers keep their accent gold regardless of speaker colour */
+.reader-verse--jesus .reader-verse__num,
+.reader-verse--god   .reader-verse__num { color: var(--color-accent); }
+
+/* AUD-21: non-colour speaker cue — a small distinct glyph after the verse number, so
+   red-letter speakers are distinguishable without relying on text colour (cross = Jesus,
+   star = God). Pairs with the title attribute set in applyRedLetter for hover / screen
+   readers. Kept small and muted to preserve the reading experience. */
+.reader-verse--jesus .reader-verse__num::after,
+.reader-verse--god   .reader-verse__num::after {
+  font-size: 0.66em;
+  vertical-align: super;
+  margin-left: 1px;
+  opacity: 0.75;
+}
+.reader-verse--jesus .reader-verse__num::after { content: '\271D'; }  /* ✝ Jesus */
+.reader-verse--god   .reader-verse__num::after { content: '\2736'; }  /* ✶ God */
+
+/* CSS-40: a verse can be both red-letter and highlighted; a same-hue highlight (red
+   text on red highlight, purple on purple) is unreadable. When highlighted, let the
+   highlight own the verse and revert the text to the normal high-contrast colour — the
+   speaker is still shown by the verse-number glyph and title (AUD-21). */
+[class*="reader-verse--hl-"].reader-verse--jesus,
+[class*="reader-verse--hl-"].reader-verse--god { color: var(--color-text); }
+
 /* Dark-mode heading colour */
 :root:not([data-theme="light"]) .reader-section-heading {
   color: color-mix(in srgb, var(--color-muted) 80%, var(--color-text) 20%);
 }
+
+/* Dark mode: soften red/purple letter to avoid harshness on dark backgrounds */
+[data-theme="dark"] .reader-verse--jesus { color: #e07060; }
+[data-theme="dark"] .reader-verse--god   { color: #a070e0; }
+/* CSS-40 (dark): highlighted red-letter verses revert to normal text colour here too
+   (higher specificity than the dark colour rules above, so it wins). */
+[data-theme="dark"] [class*="reader-verse--hl-"].reader-verse--jesus,
+[data-theme="dark"] [class*="reader-verse--hl-"].reader-verse--god { color: var(--color-text); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [class*="reader-verse--hl-"].reader-verse--jesus,
+  :root:not([data-theme="light"]) [class*="reader-verse--hl-"].reader-verse--god { color: var(--color-text); }
+}
+
+/* Dark mode speaker chips */
+[data-theme="dark"] .reader-speaker-chip--jesus {
+  color: #e07060;
+  border-color: rgba(224, 112, 96, 0.3);
+  background: rgba(224, 112, 96, 0.08);
+}
+[data-theme="dark"] .reader-speaker-chip--god {
+  color: #a070e0;
+  border-color: rgba(160, 112, 224, 0.3);
+  background: rgba(160, 112, 224, 0.08);
+}
+
+/* Woe-flag border is too dark at 35% opacity on the near-black dark-mode background;
+   use a brighter red at higher opacity so it remains a visible warning accent */
+[data-theme="dark"] .reader-para--flag-woe {
+  border-left-color: rgba(210, 90, 60, 0.55);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .reader-para--flag-woe {
+    border-left-color: rgba(210, 90, 60, 0.55);
+  }
+}
+
+/* ── Passage Study Desk (G3 phase 1) ──────────────────────────────────────── */
+.reader-study-btn {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: none;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.reader-study-btn:hover { background: rgba(92,61,30,0.07); border-color: rgba(92,61,30,0.35); color: var(--color-text); }
+.reader-study-btn--on { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); font-weight: 600; box-shadow: 0 1px 3px rgba(92,61,30,0.25); }
+.reader-study-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* Base / mobile: off-canvas drawer (slides in; no display toggle so it animates) */
+.reader-study-desk {
+  position: fixed;
+  top: var(--header-h, 0); right: 0; bottom: 0;
+  width: 92%; max-width: 440px; z-index: 950;
+  display: flex; flex-direction: column;
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  box-shadow: -4px 0 18px rgba(0,0,0,0.28);
+  transform: translateX(105%);
+  transition: transform 0.22s ease;
+}
+.reader-layout--study-open .reader-study-desk { transform: translateX(0); }
+
+@media (min-width: 700px) {
+  .reader-study-desk { display: none; }                         /* hidden unless open */
+  .reader-layout--study-open { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .reader-layout--study-open .reader-main { grid-column: 1; grid-row: 1; }
+  .reader-layout--study-open .reader-sidebar,
+  .reader-layout--study-open .reader-xref-panel { display: none; }
+  .reader-layout--study-open .reader-study-desk {
+    display: flex; position: sticky; top: 0.5rem;
+    grid-column: 2; grid-row: 1; transform: none;
+    width: auto; max-width: none; box-shadow: none;
+    border: 1px solid var(--color-border); border-radius: 8px;
+    max-height: calc(100vh - 1rem); overflow-y: auto;
+  }
+}
+
+.study-desk__head {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-subtle, rgba(140,106,0,0.05));
+  position: sticky; top: 0; z-index: 1;
+}
+.study-desk__title { font-family: var(--font-ui); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+.study-desk__ref { font-family: var(--font-ui); font-weight: 600; color: var(--color-heading); margin-right: auto; }
+.study-desk__close { border: none; background: none; cursor: pointer; font-size: 1rem; color: var(--color-muted); padding: 0.2rem 0.4rem; border-radius: 5px; }
+.study-desk__close:hover { background: var(--color-border); color: var(--color-text); }
+.study-desk__close:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.study-desk__body { padding: 0.6rem 0.9rem 2rem; font-family: var(--font-ui); }
+
+.study-empty { color: var(--color-muted); font-size: 0.85rem; padding: 1rem 0; }
+.study-section { margin-bottom: 1.2rem; }
+.study-section__title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-muted); margin-bottom: 0.4rem; }
+
+.study-outline { display: flex; flex-direction: column; gap: 0.15rem; }
+.study-outline__row { display: flex; align-items: stretch; gap: 0.15rem; }
+.study-outline__go {
+  display: flex; align-items: baseline; gap: 0.55rem; flex: 1 1 auto; min-width: 0;
+  text-align: left; cursor: pointer;
+  background: none; border: none; border-radius: 5px;
+  padding: 0.35rem 0.45rem; color: var(--color-text);
+  font-family: var(--font-ui); font-size: 0.85rem;
+}
+.study-outline__go:hover { background: rgba(140,106,0,0.08); }
+.study-outline__go:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -1px; }
+.study-outline__synth {
+  flex-shrink: 0; cursor: pointer; background: none; border: none; border-radius: 5px;
+  color: var(--color-accent); font-size: 0.92rem; padding: 0 0.45rem;
+}
+.study-outline__synth:hover { background: rgba(140,106,0,0.12); }
+.study-outline__synth:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -1px; }
+.study-outline__range { flex-shrink: 0; font-size: 0.72rem; font-weight: 600; color: var(--color-accent); min-width: 3.2rem; }
+.study-outline__title { color: var(--color-heading); }
+
+.study-speakers { display: flex; flex-direction: column; gap: 0.4rem; }
+.study-speaker { display: flex; align-items: baseline; gap: 0.5rem; }
+.study-speaker__ranges { font-size: 0.78rem; color: var(--color-muted); }
+
+/* Brief flash when an outline row scrolls the reader to a pericope */
+.reader-verse--study-flash { animation: study-flash 1.4s ease; }
+@keyframes study-flash {
+  0%, 100% { background: transparent; }
+  20%, 60% { background: rgba(140,106,0,0.18); border-radius: 3px; }
+}
+
+/* Collapsible section shell (header toggle + body) */
+.study-section { margin-bottom: 1rem; }
+.study-sec-toggle {
+  display: flex; align-items: center; gap: 0.4rem; width: 100%;
+  background: none; border: none; cursor: pointer; text-align: left;
+  padding: 0.3rem 0; margin-bottom: 0.4rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.study-sec-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--color-muted); }
+.study-sec-toggle:hover .study-sec-title { color: var(--color-text); }
+.study-sec-toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.study-sec-chevron { font-size: 0.7rem; color: var(--color-muted); transition: transform 0.15s ease; }
+.study-sec-toggle[aria-expanded="false"] .study-sec-chevron { transform: rotate(-90deg); }
+.study-sec-body[hidden] { display: none; }
+.study-sec-note { font-size: 0.76rem; color: var(--color-muted); margin: 0 0 0.4rem; }
+
+/* Book composition context (always-available "even with no location data" header) */
+.study-ctx {
+  background: rgba(140,106,0,0.05); border: 1px solid var(--color-border);
+  border-radius: 7px; padding: 0.55rem 0.65rem; margin-bottom: 0.7rem;
+}
+.study-ctx__row { display: flex; gap: 0.5rem; font-size: 0.83rem; margin-bottom: 0.15rem; }
+.study-ctx__k { flex-shrink: 0; min-width: 4.2rem; font-weight: 600; color: var(--color-muted); text-transform: uppercase; font-size: 0.66rem; letter-spacing: 0.05em; padding-top: 0.12rem; }
+.study-ctx__v { color: var(--color-heading); }
+.study-ctx__note { margin: 0.35rem 0 0; font-size: 0.8rem; color: var(--color-text); font-style: italic; }
+.study-conf {
+  font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 0.02rem 0.3rem; border-radius: 4px; vertical-align: middle; white-space: nowrap;
+}
+.study-conf--explicit { background: rgba(61,122,74,0.18); color: #3f8f50; }
+.study-conf--strong   { background: rgba(140,106,0,0.18); color: var(--color-accent); }
+.study-conf--probable { background: var(--color-border); color: var(--color-muted); }
+.study-conf--uncertain{ background: rgba(200,80,80,0.16); color: #c95555; }
+
+/* Per-period map block */
+.study-period { margin-bottom: 0.9rem; }
+.study-period__head { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); margin: 0 0 0.25rem; }
+.study-period__annot { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; color: var(--color-heading); margin-bottom: 0.35rem; }
+.study-era-dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); }
+
+/* Regional powers legend */
+.study-powers { display: flex; flex-wrap: wrap; gap: 0.3rem 0.7rem; margin-top: 0.4rem; }
+.study-power { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: var(--color-text); }
+.study-power__sw { width: 0.7rem; height: 0.7rem; border-radius: 3px; opacity: 0.7; flex-shrink: 0; }
+
+/* On-map power label + place-of-writing marker (Leaflet divIcons) */
+.study-power-label { pointer-events: none; }
+.study-power-label span {
+  font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; white-space: nowrap;
+  color: #4a3a10; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+}
+.study-write-marker {
+  font-size: 0.95rem; line-height: 20px; text-align: center;
+  background: var(--color-primary); color: var(--color-on-primary);
+  border-radius: 50%; box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* An async section placeholder that resolved to nothing collapses (no stray gap). */
+.study-sec-body:empty { display: none; }
+
+/* SD-P5 · Range scope control */
+.study-range {
+  display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+  margin-bottom: 1rem; padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.study-range__label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+.study-range__sel {
+  font-family: var(--font-ui); font-size: 0.85rem; padding: 0.15rem 0.3rem;
+  border: 1px solid var(--color-border); border-radius: 5px;
+  background: var(--color-bg); color: var(--color-text);
+}
+.study-range__dash { color: var(--color-muted); }
+.study-range__reset {
+  margin-left: auto; font-family: var(--font-ui); font-size: 0.75rem; cursor: pointer;
+  background: none; border: 1px solid var(--color-border); border-radius: 5px;
+  padding: 0.2rem 0.5rem; color: var(--color-muted);
+}
+.study-range__reset:hover { background: rgba(140,106,0,0.08); color: var(--color-text); }
+
+/* SD-P2 · Key words — collapsible content-word cards */
+.study-keywords { display: flex; flex-direction: column; gap: 0.15rem; }
+.study-kw { border-radius: 6px; }
+.study-kw--open { background: rgba(140,106,0,0.05); }
+.study-kw__toggle {
+  display: flex; align-items: baseline; gap: 0.45rem; width: 100%; text-align: left;
+  background: none; border: none; cursor: pointer; border-radius: 6px;
+  padding: 0.34rem 0.45rem; color: var(--color-text); font-family: var(--font-ui);
+}
+.study-kw__toggle:hover { background: rgba(140,106,0,0.08); }
+.study-kw__toggle:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -1px; }
+.study-kw__chevron { font-size: 0.65rem; color: var(--color-muted); transition: transform 0.15s ease; flex-shrink: 0; align-self: center; }
+.study-kw__toggle[aria-expanded="false"] .study-kw__chevron { transform: rotate(-90deg); }
+.study-kw__lemma { font-weight: 600; color: var(--color-heading); flex-shrink: 0; }
+.study-kw__translit { font-size: 0.78rem; font-style: italic; color: var(--color-muted); flex-shrink: 0; }
+.study-kw__gloss { font-size: 0.82rem; color: var(--color-text); flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.study-kw--open .study-kw__gloss { white-space: normal; }
+.study-kw__count {
+  flex-shrink: 0; font-size: 0.72rem; font-weight: 700; color: var(--color-accent);
+  background: rgba(140,106,0,0.1); border-radius: 999px; padding: 0.05rem 0.45rem;
+}
+.study-kw__body { padding: 0 0.5rem 0.5rem 1.4rem; }
+.study-kw__body[hidden] { display: none; }
+.study-kw__def { font-size: 0.82rem; color: var(--color-text); margin: 0.1rem 0 0.3rem; }
+.study-kw__deriv { font-size: 0.76rem; color: var(--color-muted); font-style: italic; margin: 0 0 0.35rem; }
+.study-kw__link { font-size: 0.8rem; font-weight: 600; }
+
+/* SD-P3b · Journeys legend + recipient/writer map markers */
+.study-journeys { display: flex; flex-direction: column; gap: 0.2rem; margin-top: 0.4rem; }
+.study-journey { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--color-text); }
+.study-journey__line { display: inline-block; width: 1.3rem; height: 3px; border-radius: 2px; flex-shrink: 0; }
+.study-sent-marker {
+  font-size: 0.8rem; line-height: 18px; text-align: center;
+  background: var(--color-accent); color: #fff;
+  border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+/* Place hover tooltip with a one-line significance (like the maps page) */
+.study-map-tip { max-width: 230px; white-space: normal; }
+.study-map-tip__desc { display: block; margin-top: 0.15rem; font-size: 0.72rem; opacity: 0.85; font-weight: 400; }
+
+/* ── Blades: drill-down panes layered over the desk ───────────────────────── */
+.study-bookbtn {
+  display: block; width: 100%; text-align: left; cursor: pointer;
+  font-family: var(--font-ui); font-size: 0.84rem; font-weight: 600; color: var(--color-heading);
+  background: rgba(140,106,0,0.06); border: 1px solid var(--color-border); border-radius: 7px;
+  padding: 0.5rem 0.7rem; margin-bottom: 0.9rem;
+}
+.study-bookbtn:hover { background: rgba(140,106,0,0.12); border-color: var(--color-accent); }
+.study-bookbtn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.study-kw__open {
+  display: inline-block; margin-top: 0.25rem; cursor: pointer;
+  font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; color: var(--color-accent);
+  background: none; border: none; padding: 0;
+}
+.study-kw__open:hover { text-decoration: underline; }
+
+.study-blade {
+  position: absolute; inset: 0; z-index: 6;
+  display: flex; flex-direction: column;
+  background: var(--color-surface);
+  transform: translateX(100%); visibility: hidden;
+  transition: transform 0.2s ease;
+}
+.reader-study-desk--blade .study-blade { transform: translateX(0); visibility: visible; }
+/* Lock the desk's own scroll while a blade is open so the absolute overlay stays put;
+   the blade body does its own scrolling. (Specificity matches the desktop overflow rule.) */
+.reader-study-desk--blade { overflow: hidden; }
+.reader-layout--study-open .reader-study-desk--blade { overflow: hidden; }
+.study-blade__head {
+  display: flex; align-items: center; gap: 0.3rem;
+  padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-subtle, rgba(140,106,0,0.05));
+  position: sticky; top: 0; z-index: 1;
+}
+.study-blade__back, .study-blade__close {
+  border: none; background: none; cursor: pointer; font-size: 1.05rem;
+  color: var(--color-muted); padding: 0.1rem 0.45rem; border-radius: 5px; flex-shrink: 0;
+}
+.study-blade__back:hover, .study-blade__close:hover { background: var(--color-border); color: var(--color-text); }
+.study-blade__back:focus-visible, .study-blade__close:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.study-blade__crumbs { display: flex; align-items: center; gap: 0.2rem; flex-wrap: wrap; margin-right: auto; font-family: var(--font-ui); }
+.study-blade__crumb { border: none; background: none; cursor: pointer; color: var(--color-muted); padding: 0.1rem 0.25rem; border-radius: 4px; font-size: 0.76rem; font-family: var(--font-ui); }
+.study-blade__crumb[aria-current="page"] { color: var(--color-heading); font-weight: 600; }
+.study-blade__crumb:hover { color: var(--color-text); text-decoration: underline; }
+.study-blade__sep { color: var(--color-muted); font-size: 0.76rem; }
+.study-blade__body { padding: 0.8rem 0.95rem 2rem; overflow-y: auto; font-family: var(--font-ui); }
+
+/* Word-study blade */
+.study-word__lemma { font-size: 1.5rem; font-weight: 700; color: var(--color-heading); line-height: 1.2; }
+.study-word__sub { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin: 0.15rem 0 0.5rem; }
+.study-word__translit { font-style: italic; color: var(--color-text); }
+.study-word__pron { color: var(--color-muted); font-size: 0.85rem; }
+.study-word__code { margin-left: auto; font-size: 0.72rem; font-weight: 700; color: var(--color-accent); background: rgba(140,106,0,0.1); border-radius: 999px; padding: 0.05rem 0.5rem; }
+.study-word__gloss { font-size: 0.86rem; color: var(--color-text); margin: 0 0 0.6rem; }
+.study-word__block { margin-top: 0.8rem; }
+.study-word__block h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin: 0 0 0.35rem; }
+.study-word__block p { font-size: 0.85rem; line-height: 1.55; margin: 0; }
+.study-word__deriv { font-size: 0.78rem; font-style: italic; color: var(--color-muted); margin: 0.3rem 0 0; }
+.study-word__refs { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
+.study-word__ref { font-size: 0.82rem; }
+.study-word__more { margin-top: 0.45rem; font-size: 0.78rem; cursor: pointer; background: none; border: 1px solid var(--color-border); border-radius: 5px; padding: 0.2rem 0.55rem; color: var(--color-muted); }
+.study-word__more:hover { background: rgba(140,106,0,0.08); color: var(--color-text); }
+.study-word__ext { display: inline-block; margin-top: 0.9rem; font-size: 0.8rem; font-weight: 600; }
+
+/* Book-details blade */
+.study-book__title { font-size: 1.25rem; font-weight: 700; color: var(--color-heading); margin-bottom: 0.5rem; }
+.study-book__sec { margin-top: 0.95rem; }
+.study-book__sec h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin: 0 0 0.3rem; }
+.study-book__sec p { font-size: 0.85rem; line-height: 1.55; margin: 0; color: var(--color-text); }
+.study-book__list { margin: 0; padding-left: 1.1rem; font-size: 0.85rem; line-height: 1.5; }
+.study-book__list li { margin-bottom: 0.15rem; }
+.study-book__outline { display: flex; flex-direction: column; gap: 0.25rem; }
+.study-book__orow { display: flex; gap: 0.55rem; font-size: 0.84rem; align-items: baseline; }
+.study-book__ochap { flex-shrink: 0; min-width: 4.8rem; color: var(--color-accent); font-weight: 600; font-size: 0.76rem; }
+.study-book__kv { margin-bottom: 0.5rem; }
+.study-book__kvnote { display: block; font-size: 0.78rem; color: var(--color-muted); line-height: 1.45; margin-top: 0.1rem; }
+.study-book__person { font-size: 0.84rem; line-height: 1.5; margin-bottom: 0.4rem; }
+.study-book__td { margin-bottom: 0.55rem; }
+.study-book__td h5 { font-size: 0.82rem; margin: 0 0 0.15rem; color: var(--color-heading); }
+.study-book__td p { font-size: 0.82rem; line-height: 1.5; margin: 0; color: var(--color-text); }
+
+/* Section-synthesis blade */
+.study-synth__label { font-size: 1.15rem; font-weight: 700; color: var(--color-heading); line-height: 1.25; }
+.study-synth__ref { font-size: 0.8rem; color: var(--color-muted); margin: 0.2rem 0 0.7rem; }
+.study-synth__intro { font-size: 0.88rem; line-height: 1.6; color: var(--color-text); margin-bottom: 0.8rem; }
+.study-synth__intro p { margin: 0 0 0.6rem; }
+.study-synth__domain {
+  border: 1px solid var(--color-border); border-radius: 7px; margin-bottom: 0.45rem;
+  background: rgba(140,106,0,0.03);
+}
+.study-synth__domain > summary {
+  cursor: pointer; padding: 0.5rem 0.65rem; font-weight: 600; font-size: 0.84rem;
+  color: var(--color-heading); list-style: none;
+}
+.study-synth__domain > summary::-webkit-details-marker { display: none; }
+.study-synth__domain > summary::before { content: '▸ '; color: var(--color-muted); }
+.study-synth__domain[open] > summary::before { content: '▾ '; }
+.study-synth__domain[open] > summary { border-bottom: 1px solid var(--color-border); }
+.study-synth__domain-body { padding: 0.6rem 0.7rem; font-size: 0.85rem; line-height: 1.6; color: var(--color-text); }
+.study-synth__domain-body p { margin: 0 0 0.55rem; }
+.study-synth__domain-body p:last-child { margin-bottom: 0; }
+.study-synth__refs { margin-top: 0.8rem; }
+.study-synth__refs > summary {
+  cursor: pointer; font-size: 0.78rem; font-weight: 600; color: var(--color-accent);
+  padding: 0.35rem 0; list-style: none;
+}
+.study-synth__refs > summary::-webkit-details-marker { display: none; }
+.study-synth__refs > summary::before { content: '🔗 '; }
+.study-synth__refs-body { padding: 0.3rem 0 0.5rem; }
+.study-synth__voices { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.3rem 0; }
+.study-synth__voice-chip {
+  font-size: 0.76rem; background: var(--color-bg); border: 1px solid var(--color-border);
+  border-radius: 999px; padding: 0.12rem 0.5rem; color: var(--color-text);
+}
+
+/* SD-P3 · Map (regional powers + landmark/passage places) */
+.study-map {
+  height: 240px; width: 100%; border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--color-border); background: var(--color-bg);
+}
+.study-map .leaflet-container { font-family: var(--font-ui); }
+
+/* SD-P4 · Connections */
+.study-conn__group { margin-bottom: 0.7rem; }
+.study-conn__head { font-size: 0.78rem; font-weight: 600; color: var(--color-heading); margin: 0 0 0.3rem; }
+.study-conn__refs { display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem; }
+.study-conn__ref { font-size: 0.85rem; }
+.study-echoes { display: flex; flex-direction: column; gap: 0.4rem; }
+.study-echo { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem; }
+.study-echo__type {
+  flex-shrink: 0; font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--color-accent); background: rgba(140,106,0,0.1); border-radius: 4px; padding: 0.05rem 0.35rem;
+}
+.study-echo__ref { font-size: 0.84rem; }
+.study-echo__note { font-size: 0.8rem; color: var(--color-muted); flex: 1 1 100%; }
+
+/* SD-P4 · Notes + export */
+.study-notes {
+  width: 100%; min-height: 90px; resize: vertical;
+  font-family: var(--font-ui); font-size: 0.88rem; line-height: 1.5;
+  padding: 0.5rem 0.6rem; border: 1px solid var(--color-border); border-radius: 6px;
+  background: var(--color-bg); color: var(--color-text); box-sizing: border-box;
+}
+.study-notes:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.study-export-row { margin-top: 0.55rem; }
+.study-export-btn {
+  font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; cursor: pointer;
+  background: var(--color-primary); color: var(--color-on-primary);
+  border: none; border-radius: 6px; padding: 0.4rem 0.8rem;
+}
+.study-export-btn:hover { filter: brightness(1.06); }
+.study-export-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }

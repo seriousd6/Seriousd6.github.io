@@ -7,42 +7,60 @@ python3 scripts/restart.py
 
 /remote-control
 
-#Remove the todo remote:
-ssh domad@192.168.86.50 "rm ~/Documents/bible-study-website/working/TODO.md"
-
-#Copy the file -
-scp "C:/Users/Administrator/Documents/GitHub/Seriousd6.github.io/working/TODO.md" domad@192.168.86.50:~/Documents/bible-study-website/working/TODO.md
-
-scp -r domad@192.168.86.50:/home/domad/Documents/bible-study-website C:\Users\Administrator\Documents\GitHub\Seriousd6.github.io
-
+## active
 
 #audit looping
-/loop Audit the Bible study site using working/audit-agent-guide.md. Pick the next unfinished dimension from the guide, read the relevant source files, and append any new findings to working/TODO.md using the format in the guide. Update the session log table at the bottom of audit-agent-guide.md with which dimension you completed.
+/loop Read working/AUDIT_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (group) from AUDIT_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+#verse audit 
+/loop Read VA_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websiteworking/. This is one iteration of a loop — claim and complete exactly one work unit from VA_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+Commentary A — per-verse COW synthesis:
+/loop Read SYNTH_VERSE_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (one book) from SYNTH_VERSE_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+Commentary B — per-section synthesis:
+/loop Read SYNTH_SECTION_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (one book) from SYNTH_SECTION_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+
+provenance: 
+/loop Read PROVENANCE_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+
+## Old:
+
+/loop Read LOOP_AGENT_PROMPT.md in full and follow every step exactly — pick 2–3 unclaimed tasks from working/TODO.md (no Z-suite, no claimed, no data-blocked, no Phase O), implement them, verify, and mark them done.
+
+
+## Archive:
 
 
 #commentary loop:
 /loop Read Z_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
-#Studies loop: (synthesis) 
-/loop Read WS_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websiteworking/. This is one iteration of a loop — claim and complete exactly one work unit from WS_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
-#todo looping: 
-/loop Read LOOP_AGENT_PROMPT.md in full and follow every step exactly — pick 2–3 unclaimed tasks from working/TODO.md (no Z-suite, no claimed, no data-blocked, no Phase O), implement them, verify, and mark them done.
-
-#Original language study:
-/loop Read BS_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websiteworking/. This is one iteration of a loop — claim and complete exactly one book, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
-#verse audit 
-/loop Read VA_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websiteworking/. This is one iteration of a loop — claim and complete exactly one work unit from VA_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
-provenance: 
-/loop Read PROVENANCE_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
 #reader -
 /loop Read PARA_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+#BPG — Gap Analysis:
+/loop Read BPG_AGENT_GUIDE.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
 BP — Article Synthesis:
 /loop Read BP_AGENT_GUIDE.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
-BPG — Gap Analysis:
-/loop Read BPG_AGENT_GUIDE.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+#Original language study:
+/loop Read BS_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websitew/orking/. This is one iteration of a loop — claim and complete exactly one book, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+Parallels prompt: 
+/loop Read SYNOPTIC_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit from SYNOPTIC_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+paragraph 2:
+/loop Read PARA2_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit from PARA2_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+#red letters: 
+/loop Read RL_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit from RL_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+#Cloud of witnesses, important to finish - afterwards, the synthesis work needs to be restarted.
+/loop Read working/COW_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/. This is one iteration of a loop — claim and complete exactly one work unit from COW_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+
+# Superseded - wide study synthesis commentary: (synthesis) 
+/loop Read WS_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit from WS_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.

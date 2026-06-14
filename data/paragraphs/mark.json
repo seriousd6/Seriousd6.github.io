@@ -81,11 +81,23 @@
       },
       {
         "v": 18,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "questioner"
+      },
+      {
+        "v": 19,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 23,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "pharisees"
+      },
+      {
+        "v": 25,
+        "type": "dialogue",
+        "speaker": "jesus"
       }
     ],
     "headings": [
@@ -123,7 +135,13 @@
       },
       {
         "v": 20,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "scribes"
+      },
+      {
+        "v": 23,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 31,
@@ -161,7 +179,13 @@
       },
       {
         "v": 10,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "disciples"
+      },
+      {
+        "v": 11,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 21,
@@ -287,11 +311,18 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "pharisees"
+      },
+      {
+        "v": 6,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 14,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 24,
@@ -329,11 +360,23 @@
       },
       {
         "v": 11,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "pharisees"
+      },
+      {
+        "v": 12,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 14,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "disciples"
+      },
+      {
+        "v": 15,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 22,
@@ -341,7 +384,18 @@
       },
       {
         "v": 27,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
+      },
+      {
+        "v": 28,
+        "type": "dialogue",
+        "speaker": "disciples"
+      },
+      {
+        "v": 29,
+        "type": "dialogue",
+        "speaker": "peter"
       },
       {
         "v": 31,
@@ -395,11 +449,13 @@
       },
       {
         "v": 33,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 42,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       }
     ],
     "headings": [
@@ -429,7 +485,13 @@
     "breaks": [
       {
         "v": 1,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "pharisees"
+      },
+      {
+        "v": 3,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 13,
@@ -437,11 +499,18 @@
       },
       {
         "v": 17,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "questioner"
+      },
+      {
+        "v": 18,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 23,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 32,
@@ -449,7 +518,13 @@
       },
       {
         "v": 35,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "disciples"
+      },
+      {
+        "v": 36,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 46,
@@ -503,7 +578,13 @@
       },
       {
         "v": 27,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "scribes"
+      },
+      {
+        "v": 29,
+        "type": "dialogue",
+        "speaker": "jesus"
       }
     ],
     "headings": [
@@ -533,23 +614,43 @@
       },
       {
         "v": 13,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "pharisees"
+      },
+      {
+        "v": 15,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 18,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "sadducees"
+      },
+      {
+        "v": 24,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 28,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "scribes"
+      },
+      {
+        "v": 29,
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 35,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 38,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 41,
@@ -595,19 +696,26 @@
       },
       {
         "v": 5,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 14,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus",
+        "flags": [
+          "enumerated"
+        ]
       },
       {
         "v": 24,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 32,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       }
     ],
     "headings": [
@@ -649,7 +757,8 @@
       },
       {
         "v": 27,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       },
       {
         "v": 32,
@@ -761,7 +870,8 @@
       },
       {
         "v": 14,
-        "type": "dialogue"
+        "type": "dialogue",
+        "speaker": "jesus"
       }
     ],
     "headings": [

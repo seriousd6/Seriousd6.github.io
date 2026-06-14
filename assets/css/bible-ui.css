@@ -1424,26 +1424,30 @@
 }
 
 /* ── "Verse Study" link in modal header ──────────────────── */
+/* G3: promoted to the primary "study this verse" action — a filled button that leads to
+   the full study workspace. Theme-aware (was a hardcoded blue that didn't adapt to dark). */
 .bsw-modal__verse-study-link {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.8rem;
-  color: #4a6a8a;
+  font-weight: 600;
+  color: var(--color-on-primary);
+  background: var(--color-primary);
   text-decoration: none;
   white-space: nowrap;
-  padding: 3px 8px;
-  border: 1px solid rgba(74, 106, 138, 0.35);
-  border-radius: 4px;
-  transition: background 0.12s, border-color 0.12s;
+  padding: 4px 10px;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  transition: filter 0.12s;
   flex-shrink: 0;
   margin-left: 0.5rem;
 }
 
 .bsw-modal__verse-study-link:hover,
 .bsw-modal__verse-study-link:focus-visible {
-  background: rgba(74, 106, 138, 0.1);
-  border-color: #4a6a8a;
-  outline: none;
-  color: #4a6a8a;
+  filter: brightness(1.12);
+  color: var(--color-on-primary);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
 }
 
 .bsw-modal__verse-study-link[hidden] { display: none; }

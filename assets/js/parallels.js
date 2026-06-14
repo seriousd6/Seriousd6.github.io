@@ -29,8 +29,8 @@ export function initEchoToggle() {
   btn.type      = 'button';
   btn.className = 'reader-echoes-btn' + (on ? ' reader-echoes-btn--on' : '');
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-  btn.title     = 'Show inline echo and connection dots next to verses';
-  btn.textContent = '◉ Parallels';
+  btn.title     = 'Show inline echo and connection links next to verses';
+  btn.textContent = '🔗 Connections';
 
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(btn, hint || null);
@@ -160,17 +160,26 @@ function _markEchoVerses(allEntries) {
       .forEach(function (verse) {
         verse.classList.add('reader-verse--has-echo');
 
+        var verseRef = ((verse.getAttribute('data-book') || '') + ' ' + ch + ':' + v).trim();
+
+        // INTENT: a high-visibility chip (link glyph + count) makes echo/connection
+        //   presence obvious at a glance; the active-verse highlight (toggled below)
+        //   plus the panel's "Connections for {ref}" header make it unambiguous which
+        //   verse a given marker and its open panel belong to.
+        // CHANGE? Styling lives in reader.css: .reader-echo-marker (chip),
+        //   .reader-verse--echo-active (open-verse highlight), .reader-echo-inline__head.
+        // VERIFY: Toggle "◉ Connections" on a chapter with echoes (e.g. Matthew 1) — each
+        //   marked verse shows a gold link-count chip; click one and that verse highlights
+        //   and the panel header names the verse.
         var marker = document.createElement('button');
         marker.className = 'reader-echo-marker';
         marker.type = 'button';
         marker.setAttribute('aria-expanded', 'false');
         marker.setAttribute('aria-label',
-          items.length + ' echo' + (items.length !== 1 ? 's' : '') + ' for verse ' + v);
+          'Connections: ' + items.length + ' for ' + verseRef);
         marker.innerHTML =
-          '<span class="reader-echo-marker__dot" aria-hidden="true"></span>' +
-          (items.length > 1
-            ? '<span class="reader-echo-marker__count" aria-hidden="true">' + items.length + '</span>'
-            : '');
+          '<span class="reader-echo-marker__icon" aria-hidden="true">🔗</span>' +
+          '<span class="reader-echo-marker__count" aria-hidden="true">' + items.length + '</span>';
         verse.appendChild(marker);
 
         var inlineBlock = document.createElement('div');
@@ -188,10 +197,11 @@ function _markEchoVerses(allEntries) {
           var expanded = marker.getAttribute('aria-expanded') === 'true';
           marker.setAttribute('aria-expanded', String(!expanded));
           marker.classList.toggle('reader-echo-marker--open', !expanded);
+          verse.classList.toggle('reader-verse--echo-active', !expanded);
           inlineBlock.hidden = expanded;
           if (!expanded && !built) {
             built = true;
-            _buildInlineCards(items, inlineBlock);
+            _buildInlineCards(items, inlineBlock, verseRef);
           }
         });
       });
@@ -201,8 +211,16 @@ function _markEchoVerses(allEntries) {
 // Build compact echo cards inside an inline expansion block.
 // Reuses badge/card styles from echo-card without the v. prefix (redundant
 // when the block is anchored to a specific verse).
-function _buildInlineCards(items, container) {
+function _buildInlineCards(items, container, verseRef) {
   var frag = document.createDocumentFragment();
+  if (verseRef) {
+    var head = document.createElement('div');
+    head.className = 'reader-echo-inline__head';
+    head.innerHTML =
+      '<span class="reader-echo-inline__icon" aria-hidden="true">🔗</span>' +
+      'Connections for <strong>' + escHtml(verseRef) + '</strong>';
+    frag.appendChild(head);
+  }
   items.forEach(function (item, idx) {
     var entry  = item.entry;
     var type   = entry.type || 'allusion';
@@ -266,6 +284,36 @@ function _buildInlineCards(items, container) {
     frag.appendChild(card);
   });
   container.appendChild(frag);
+}
+
+// INTENT: Render echo "connection" cards grouped by verse into an arbitrary container,
+//   reusing the reader's exact inline-card UI (badge + collapsible target + on-demand verse
+//   text). The Passage Study Desk calls this so its Connections section is identical to the
+//   reader's, except annotated per-verse ("Connections for {book ch:v}") and collapsed.
+// CHANGE? entries shape: [{book, ch, v, entry:{type,target,note}}]. Delegates to
+//   _buildInlineCards (one head + cards per verse); if that signature changes, update here.
+//   Caller owns the container (clear it before re-rendering a new passage).
+// VERIFY: Open the study desk on Matthew 1 with echoes present — the Connections section
+//   shows a "Connections for Matthew 1:1" head and the same expandable cards as the reader.
+export function renderEchoCardsGrouped(entries, container) {
+  if (!entries || !entries.length) return false;
+  var byVerse = Object.create(null), order = [];
+  entries.forEach(function (it) {
+    var k = it.ch + ':' + it.v;
+    if (!byVerse[k]) { byVerse[k] = []; order.push(k); }
+    byVerse[k].push(it);
+  });
+  order.sort(function (a, b) {
+    var pa = a.split(':'), pb = b.split(':');
+    return (pa[0] - pb[0]) || (pa[1] - pb[1]);
+  });
+  order.forEach(function (k) {
+    var items = byVerse[k];
+    var first = items[0];
+    var verseRef = ((first.book || '') + ' ' + first.ch + ':' + first.v).trim();
+    _buildInlineCards(items, container, verseRef);
+  });
+  return true;
 }
 
 var _PARALLEL_PAGE_SIZE = 5;

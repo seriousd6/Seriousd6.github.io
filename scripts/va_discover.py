@@ -17,7 +17,7 @@ import pathlib
 from datetime import datetime, timezone, timedelta
 
 ROOT = pathlib.Path('.')
-PROGRESS_FILE = ROOT / 'VA_PROGRESS.md'
+PROGRESS_FILE = ROOT / 'working' / 'VA_PROGRESS.md'
 
 # ---------------------------------------------------------------------------
 # Section definitions — mirrors va_process.py's understanding
@@ -41,13 +41,14 @@ SECTIONS = {
     },
     'M': {
         'label': 'MKT Commentaries',
+        # Per-chapter dirs: data/commentary/mkt-original/{book}/{ch}.json
         'globs': [
-            'data/commentary/mkt-original/*.json',
-            'data/commentary/mkt-context/*.json',
-            'data/commentary/mkt-christ/*.json',
+            'data/commentary/mkt-original/*/',
+            'data/commentary/mkt-context/*/',
+            'data/commentary/mkt-christ/*/',
         ],
         'rules': 'R1,R2,R3,R5,R6',
-        'file_type': 'json_commentary',
+        'file_type': 'json_commentary_chapter_dir',
     },
     'E': {
         'label': 'Echoes',
@@ -168,13 +169,18 @@ def parse_progress(text):
 
 
 def scan_section_files(section_code):
-    """Glob all files for a section, returning sorted list of relative path strings."""
+    """Glob all files/dirs for a section, returning sorted list of relative path strings.
+    Patterns ending in '/' match directories only; others match files only."""
     sec = SECTIONS[section_code]
     found = []
     for pattern in sec['globs']:
+        dir_pattern = pattern.endswith('/')
         for f in sorted(glob.glob(str(ROOT / pattern), recursive=True)):
-            rel = str(pathlib.Path(f).relative_to(ROOT))
-            found.append(rel)
+            p = pathlib.Path(f)
+            if dir_pattern and p.is_dir():
+                found.append(str(p.relative_to(ROOT)))
+            elif not dir_pattern and p.is_file():
+                found.append(str(p.relative_to(ROOT)))
     return sorted(set(found))
 
 
@@ -232,11 +238,9 @@ def build_progress_md(header_lines, sections):
         else:
             sec = sections[code]
             parts.append(f'\n{sec["raw_header"]}')
-            if sec.get('globs_comment'):
-                parts.append(sec['globs_comment'])
-            else:
-                globs_str = ' '.join(SECTIONS[code]['globs'])
-                parts.append(f'<!-- globs: {globs_str} -->')
+            # Always regenerate globs comment from current SECTIONS definition
+            globs_str = ' '.join(SECTIONS[code]['globs'])
+            parts.append(f'<!-- globs: {globs_str} -->')
             parts.append('')
             parts.append('| File | Status | Refs Fixed | Last Run | Notes |')
             parts.append('|---|---|---|---|---|')

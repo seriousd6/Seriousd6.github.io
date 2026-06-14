@@ -61,12 +61,16 @@ BOOK_ABBREVS = {
     'josh': 'Joshua', 'jos': 'Joshua',
     'judg': 'Judges', 'jdg': 'Judges',
     'ruth': 'Ruth',
-    '1sam': '1 Samuel', '1sa': '1 Samuel',
-    '2sam': '2 Samuel', '2sa': '2 Samuel',
+    '1sam': '1 Samuel', '1sa': '1 Samuel', '1 sam': '1 Samuel', '1 sa': '1 Samuel',
+    '2sam': '2 Samuel', '2sa': '2 Samuel', '2 sam': '2 Samuel', '2 sa': '2 Samuel',
     '1kgs': '1 Kings', '1ki': '1 Kings', '1king': '1 Kings', '1kings': '1 Kings',
+    '1 kgs': '1 Kings', '1 ki': '1 Kings', '1 king': '1 Kings',
     '2kgs': '2 Kings', '2ki': '2 Kings', '2king': '2 Kings', '2kings': '2 Kings',
+    '2 kgs': '2 Kings', '2 ki': '2 Kings', '2 king': '2 Kings',
     '1chr': '1 Chronicles', '1chron': '1 Chronicles', '1ch': '1 Chronicles',
+    '1 chr': '1 Chronicles', '1 chron': '1 Chronicles',
     '2chr': '2 Chronicles', '2chron': '2 Chronicles', '2ch': '2 Chronicles',
+    '2 chr': '2 Chronicles', '2 chron': '2 Chronicles',
     'ezra': 'Ezra',
     'neh': 'Nehemiah',
     'esth': 'Esther', 'est': 'Esther',
@@ -99,25 +103,27 @@ BOOK_ABBREVS = {
     'jn': 'John', 'jno': 'John',
     'acts': 'Acts',
     'rom': 'Romans',
-    '1cor': '1 Corinthians', '1co': '1 Corinthians',
-    '2cor': '2 Corinthians', '2co': '2 Corinthians',
+    '1cor': '1 Corinthians', '1co': '1 Corinthians', '1 cor': '1 Corinthians', '1 co': '1 Corinthians',
+    '2cor': '2 Corinthians', '2co': '2 Corinthians', '2 cor': '2 Corinthians', '2 co': '2 Corinthians',
     'gal': 'Galatians',
     'eph': 'Ephesians',
     'phil': 'Philippians', 'php': 'Philippians',
     'col': 'Colossians',
     '1thess': '1 Thessalonians', '1th': '1 Thessalonians', '1thes': '1 Thessalonians',
+    '1 thess': '1 Thessalonians', '1 th': '1 Thessalonians', '1 thes': '1 Thessalonians',
     '2thess': '2 Thessalonians', '2th': '2 Thessalonians', '2thes': '2 Thessalonians',
-    '1tim': '1 Timothy', '1ti': '1 Timothy',
-    '2tim': '2 Timothy', '2ti': '2 Timothy',
+    '2 thess': '2 Thessalonians', '2 th': '2 Thessalonians', '2 thes': '2 Thessalonians',
+    '1tim': '1 Timothy', '1ti': '1 Timothy', '1 tim': '1 Timothy', '1 ti': '1 Timothy',
+    '2tim': '2 Timothy', '2ti': '2 Timothy', '2 tim': '2 Timothy', '2 ti': '2 Timothy',
     'tit': 'Titus',
     'phlm': 'Philemon', 'phm': 'Philemon', 'philem': 'Philemon',
     'heb': 'Hebrews',
     'jas': 'James', 'jm': 'James',
-    '1pet': '1 Peter', '1pe': '1 Peter',
-    '2pet': '2 Peter', '2pe': '2 Peter',
-    '1jn': '1 John', '1john': '1 John',
-    '2jn': '2 John', '2john': '2 John',
-    '3jn': '3 John', '3john': '3 John',
+    '1pet': '1 Peter', '1pe': '1 Peter', '1 pet': '1 Peter', '1 pe': '1 Peter',
+    '2pet': '2 Peter', '2pe': '2 Peter', '2 pet': '2 Peter', '2 pe': '2 Peter',
+    '1jn': '1 John', '1john': '1 John', '1 jn': '1 John', '1 john': '1 John',
+    '2jn': '2 John', '2john': '2 John', '2 jn': '2 John', '2 john': '2 John',
+    '3jn': '3 John', '3john': '3 John', '3 jn': '3 John', '3 john': '3 John',
     'jude': 'Jude',
     'rev': 'Revelation', 'apoc': 'Revelation',
 }
@@ -322,6 +328,44 @@ def md5_of(content):
     return hashlib.md5(content.encode('utf-8')).hexdigest()
 
 
+def process_json_commentary_chapter_dir(path, book_name, dry_run=False, show_sample=0):
+    """Process a per-chapter commentary directory where each {ch}.json is {v: html_str}.
+    INTENT: commentary was split from per-book {ch:{v:html}} into per-chapter {v:html} files;
+    chapter number comes from the filename stem so R5/R6 bare-ref context stays accurate.
+    Returns (refs_found, refs_fixed, samples)."""
+    chapter_files = sorted(
+        [f for f in path.iterdir() if f.suffix == '.json' and f.stem.isdigit()],
+        key=lambda f: int(f.stem)
+    )
+    total_found = 0
+    total_fixed = 0
+    samples = []
+
+    for chapter_file in chapter_files:
+        chapter_num = chapter_file.stem
+        data = json.loads(chapter_file.read_text(encoding='utf-8'))
+        changed = False
+
+        for v_key in list(data.keys()):
+            original = data[v_key]
+            if not isinstance(original, str):
+                continue
+            tagged, n = tag_refs_in_html(original, book_name, chapter_num)
+            if n:
+                total_fixed += n
+                if len(samples) < show_sample:
+                    samples.append((original[:200], tagged[:200]))
+                changed = True
+            total_found += n + len(_EXISTING_REF_RE.findall(original))
+            if not dry_run:
+                data[v_key] = tagged
+
+        if not dry_run and changed:
+            chapter_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+
+    return total_found, total_fixed, samples
+
+
 def process_json_commentary(path, book_name, dry_run=False, show_sample=0):
     """Process {ch: {v: html_str}} commentary JSON. Returns (refs_found, refs_fixed, samples)."""
     data = json.loads(path.read_text(encoding='utf-8'))
@@ -499,11 +543,17 @@ def process_html_file(path, book_ctx=None, dry_run=False, show_sample=0):
 def detect_file_type(path):
     """Infer file type from path. Returns one of the TYPE constants."""
     p = pathlib.Path(path)
+    # Per-chapter commentary directory: commentary/{source}/{book}/
+    if p.is_dir():
+        parts_str = str(p)
+        if 'commentary' in parts_str and any(
+            src in parts_str for src in ['mkt-original', 'mkt-context', 'mkt-christ',
+                                          'ellicott', 'jfb', 'barnes', 'clarke',
+                                          'wesley', 'rwp', 'calvin', 'synthesis']
+        ):
+            return 'json_commentary_chapter_dir'
+        return 'html'
     if p.suffix == '.html':
-        if 'topics' in p.parts:
-            return 'html'
-        if 'library' in p.parts and 'html' in p.parts:
-            return 'html'
         return 'html'
     if p.suffix == '.json':
         parts_str = str(p)
@@ -523,8 +573,11 @@ def detect_file_type(path):
 
 
 def infer_book_from_path(path, file_type):
-    """Derive canonical book name from filename stem if applicable."""
+    """Derive canonical book name from filename stem (or directory name) if applicable."""
     p = pathlib.Path(path)
+    if file_type == 'json_commentary_chapter_dir':
+        # Book name is the directory itself (e.g., mkt-original/romans → Romans)
+        return stem_to_canonical(p.name)
     if file_type in ('json_commentary', 'json_echoes'):
         return stem_to_canonical(p.stem)
     return None
@@ -549,7 +602,7 @@ def main():
 
     path = pathlib.Path(args.filepath)
     if not path.exists():
-        print(f'ERROR: File not found: {path}', file=sys.stderr)
+        print(f'ERROR: File or directory not found: {path}', file=sys.stderr)
         sys.exit(1)
 
     file_type = args.file_type or detect_file_type(path)
@@ -562,7 +615,10 @@ def main():
     print(f'Dry run:   {dry_run}')
     print()
 
-    if file_type == 'json_commentary':
+    if file_type == 'json_commentary_chapter_dir':
+        refs_found, refs_fixed, samples = process_json_commentary_chapter_dir(
+            path, book_name, dry_run=dry_run, show_sample=args.show_sample)
+    elif file_type == 'json_commentary':
         refs_found, refs_fixed, samples = process_json_commentary(
             path, book_name, dry_run=dry_run, show_sample=args.show_sample)
     elif file_type == 'json_echoes':

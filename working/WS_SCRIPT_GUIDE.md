@@ -10,7 +10,7 @@ This document defines the Python script structure every agent must follow when g
 data/
   commentary/
     synthesis/                   ← WRITE TARGET — {book}.json per book
-    mhcc/{book}.json             ← READ — Matthew Henry Concise
+    {book}.json                  ← READ — Matthew Henry Concise (mhcc, TOP-LEVEL, no subdirectory)
     calvin/{book}.json           ← READ — Calvin's Commentaries
     ellicott/{book}.json         ← READ — Ellicott's Commentary
     jfb/{book}.json              ← READ — Jamieson-Fausset-Brown
@@ -18,6 +18,10 @@ data/
     wesley/{book}.json           ← READ — John Wesley
     barnes/{book}.json           ← READ — Albert Barnes (NT only)
     rwp/{book}.json              ← READ — Robertson's Word Pictures (NT only)
+    catena/{book}.json           ← READ — Catena Aurea / Aquinas patristic chain (66 books)
+    mkt-original/{book}.json     ← READ — MKT Original Languages / Greek-Hebrew analysis (66 books)
+    mkt-context/{book}.json      ← READ — MKT Context / historical-literary background (66 books)
+    mkt-christ/{book}.json       ← READ — MKT Christological / typology (66 books)
   interlinear/{book}.json        ← READ — authoritative verse inventory (chapter/verse keys)
 scripts/
   ws-synthesis-{book}-{start}-{end}.py   ← WRITE — one script per chapter range
@@ -157,9 +161,10 @@ ROOT = pathlib.Path('.')
 book = 'hebrews'
 ch = '1'
 
-sources = ['mhcc', 'calvin', 'ellicott', 'jfb', 'clarke', 'wesley', 'barnes']
+sources = ['mhcc', 'calvin', 'ellicott', 'jfb', 'clarke', 'wesley', 'barnes', 'catena', 'mkt-original', 'mkt-context', 'mkt-christ']
 for src in sources:
-    p = ROOT / 'data' / 'commentary' / src / f'{book}.json'
+    # mhcc is at data/commentary/{book}.json (top-level, no subdirectory)
+    p = ROOT / 'data' / 'commentary' / f'{book}.json' if src == 'mhcc' else ROOT / 'data' / 'commentary' / src / f'{book}.json'
     if not p.exists():
         print(f'{src}: not found')
         continue

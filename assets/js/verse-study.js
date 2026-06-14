@@ -4,7 +4,7 @@
 import {
   READER_URL, SEARCH_URL, WORD_URL, VERSE_STUDY_URL,
   metaVersions, metaBooks,
-  COMMENTARY_SOURCES, FATHER_SLUGS,
+  COMMENTARY_SOURCES, FATHER_SLUGS, decorateCatena, buildCatenaFilter, loadMktAll, decorateMkt,
   getVersion, onVersionChange, escHtml,
   parseRef, resolveVerses, loadBook,
   loadCrossRefs, loadCommentary, loadEchoes,
@@ -805,19 +805,37 @@ function loadVerseSections(parsed) {
   (function () {
     function vsLoadComm(src) {
       commSec.bodyEl.innerHTML = '<p class="bsw-modal__loading">Loading commentary…</p>';
-      loadCommentary(parsed.bookId, src).then(function (data) {
+
+      if (src === 'mkt') {
+        loadMktAll(parsed.bookId, parsed.ch).then(function (datasets) {
+          var htmls = datasets.map(function (data) { return _extractCommHtml(data, parsed, src).html; });
+          var cardsHtml = decorateMkt(htmls);
+          commSec.bodyEl.innerHTML = cardsHtml + '<p class="vs-commentary-attr">' + _commAttr(src) + '</p>';
+          wireRefLinks(commSec.bodyEl);
+          if (commSec.el.hasAttribute('hidden')) { commSec.el.removeAttribute('hidden'); vsRebuildNav(); }
+        }).catch(function () {
+          commSec.bodyEl.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary. Check your connection.</p>';
+        });
+        return;
+      }
+
+      loadCommentary(parsed.bookId, src, parsed.ch).then(function (data) {
         // _extractCommHtml returns {html, foundV} — destructure before use
         var commResult = _extractCommHtml(data, parsed, src);
         var html = commResult ? commResult.html : null;
+        if (html && src === 'cow') html = decorateCatena(html); // collapsible voices + Father badges
         var attrHtml = html ? '<p class="vs-commentary-attr">' + _commAttr(src) + '</p>' : '';
         if (!html && commSec.el.hasAttribute('hidden')) {
           commSec.el.remove(); vsRebuildNav(); return;
         }
         commSec.bodyEl.innerHTML = (html || '<p class="bsw-modal__commentary-empty">No commentary found for this verse.</p>') + attrHtml;
+        if (src === 'cow') buildCatenaFilter(commSec.bodyEl);
         wireRefLinks(commSec.bodyEl);
-        // VS-G: collapse long commentary entries with a "Read more" expand
+        // VS-G: collapse long commentary entries with a "Read more" expand.
+        // UX-17: skip the char-clamp for Cloud of Witnesses ('cow') and MKT — both use
+        // expandable cards already, clamping below the fold defeats per-card navigation.
         var COMM_THRESHOLD = 800;
-        if (commSec.bodyEl.textContent.length > COMM_THRESHOLD) {
+        if (src !== 'cow' && commSec.bodyEl.textContent.length > COMM_THRESHOLD) {
           var wrapper = document.createElement('div');
           wrapper.className = 'vs-comm-truncated';
           while (commSec.bodyEl.firstChild) wrapper.appendChild(commSec.bodyEl.firstChild);

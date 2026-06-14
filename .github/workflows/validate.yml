@@ -1,0 +1,34 @@
+name: Validate
+
+# Cheap, fast integrity gate for a data-heavy, multi-agent repo. Runs the data-integrity
+# assertions and the library format validator on every push / PR. No build step — the
+# site ships raw — so this is the project's main automated safety net.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Data integrity checks
+        run: python3 scripts/validate-data.py
+
+      - name: Library format (v2 standard)
+        run: python3 scripts/validate-library-format.py --all
+
+      - name: JS syntax (node --check on all modules)
+        run: |
+          if command -v node >/dev/null 2>&1; then
+            for f in assets/js/*.js sw.js; do node --check "$f"; done
+          else
+            echo "node unavailable; skipping JS syntax check"
+          fi

@@ -79,9 +79,10 @@ ROOT = pathlib.Path('.')
 book = 'hebrews'      # ← your book
 chapters = [1, 2]     # ← your range
 
-sources = ['mhcc', 'calvin', 'ellicott', 'jfb', 'clarke', 'wesley', 'barnes']
+sources = ['mhcc', 'calvin', 'ellicott', 'jfb', 'clarke', 'wesley', 'barnes', 'catena', 'mkt-original', 'mkt-context', 'mkt-christ']
 for src in sources:
-    p = ROOT / 'data' / 'commentary' / src / f'{book}.json'
+    # mhcc is at data/commentary/{book}.json (top-level, no subdirectory)
+    p = ROOT / 'data' / 'commentary' / f'{book}.json' if src == 'mhcc' else ROOT / 'data' / 'commentary' / src / f'{book}.json'
     if not p.exists():
         print(f'{src}: not found'); continue
     data = json.loads(p.read_text())
@@ -166,6 +167,8 @@ Re-read `WS_PROGRESS.md` after saving to confirm the `in-progress` text is gone.
 - The interlinear is the **authoritative verse inventory** — if a verse key exists in the interlinear, it must exist in the synthesis output
 - `key_tension` must be `None` in Python (serializes to `null` in JSON) when `consensus = "affirm"`
 - `barnes` and `rwp` are NT only — do not reference them for OT books
+- `mhcc` path is **top-level**: `data/commentary/{book}.json` — NOT `data/commentary/mhcc/{book}.json`
+- `catena`, `mkt-original`, `mkt-context`, `mkt-christ` are available for all 66 books
 - Run all scripts from the **repo root**: `python3 scripts/ws-synthesis-{bookId}-{start}-{end}.py`
 - For small epistles (Philemon, 2–3 John, Jude, Obadiah), the whole book fits in one script
 

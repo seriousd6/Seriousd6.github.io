@@ -594,6 +594,11 @@
 .dict-filter-chip__badge[data-dict-src="torrey"],
 .dict-item__src[data-dict-src="torrey"]  { background: #be123c; }
 
+/* Original-language (Strong's) section badge in Biblepedia articles */
+.vs-dict-src-badge[data-dict-src="strongs"],
+.dict-filter-chip__badge[data-dict-src="strongs"],
+.dict-item__src[data-dict-src="strongs"] { background: #0f766e; }
+
 [data-theme="dark"] .vs-dict-src-badge[data-dict-src="easton"],
 [data-theme="dark"] .dict-filter-chip__badge[data-dict-src="easton"],
 [data-theme="dark"] .dict-item__src[data-dict-src="easton"]  { background: #7c3aed; }

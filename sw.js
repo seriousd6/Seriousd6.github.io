@@ -3,18 +3,21 @@
  * ── Cache strategy ─────────────────────────────────────────────────────────
  *   HTML pages       → network-first  (always fresh when online)
  *   CSS / JS / icons → cache-first    (APP_CACHE_V; bump to bust)
- *   JSON data files  → cache-first    (DATA_CACHE_V; bump to bust independently)
+ *   JSON data files  → cache-first    in a PER-DATASET bucket (bsw-data-{seg}-{ver}),
+ *                      so each dataset busts independently (see DATA_VERSIONS below).
  *
  * ── How to invalidate on deploy ───────────────────────────────────────────
  *   • Changed HTML / CSS / JS / icons   → bump APP_CACHE_V (e.g. v19 → v20)
- *   • Changed data file schema (JSON)   → bump DATA_CACHE_V (e.g. v1 → v2)
- *   • Emergency full reset              → bump both
- *   On activate, all caches whose key is neither APP_CACHE_V nor DATA_CACHE_V
- *   are automatically deleted, so old caches are cleaned up on next SW update.
+ *   • Changed ONE dataset's JSON        → bump that dataset's entry in DATA_VERSIONS
+ *                                         (e.g. commentary v1 → v2); other buckets survive
+ *   • Changed many / unlisted datasets  → bump DATA_DEFAULT_V (clears all unlisted ones)
+ *   • Emergency full reset              → bump APP_CACHE_V + every DATA_VERSIONS entry
+ *   On activate, the current app shell + every still-current data bucket are kept; stale
+ *   data buckets and any older bsw-* cache are deleted.
  *
  * ── Rollback procedure ────────────────────────────────────────────────────
  *   1. Revert the bad commit and redeploy.
- *   2. Bump APP_CACHE_V (and DATA_CACHE_V if data changed) in the new deploy.
+ *   2. Bump APP_CACHE_V (and the affected DATA_VERSIONS entry if data changed).
  *   3. The F9 SW update toast prompts online users to reload; they get the
  *      reverted files immediately.  Offline users are unaffected until they
  *      come online and accept the update prompt.
@@ -22,8 +25,40 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v96';  // bump when HTML/CSS/JS/icon changes
-var DATA_CACHE_V = 'bsw-data-v3';  // bump when JSON data schema changes
+var APP_CACHE_V  = 'bsw-app-v140';  // bump when HTML/CSS/JS/icon changes
+
+// ── Per-dataset data caches ────────────────────────────────────────────────
+// A SINGLE global data cache meant every JSON tweak (e.g. one red-letter or commentary
+// edit) evicted ALL cached data (~800 MB), forcing users to re-download every large book.
+// Each top-level dataset under data/ now has its OWN versioned bucket: bsw-data-{seg}-{ver}.
+// Bump ONLY the dataset whose JSON changed; unlisted datasets fall back to DATA_DEFAULT_V.
+// A cached bucket is valid iff its version === the current version for its segment — the
+// activate handler deletes only the mismatched ones, so a red-letter bump never touches the
+// bible or commentary buckets. data/{dir}/… buckets by dir; root files (data/red-letter.json)
+// bucket by filename stem.
+// CHANGE? To invalidate one dataset, bump its entry below (or DATA_DEFAULT_V to clear all
+//   unlisted ones). _dataSeg / _dataCacheForPath drive the fetch routing AND the offline-
+//   download / precacheBible funcs — keep them consistent.
+var DATA_DEFAULT_V = 'v1';
+var DATA_VERSIONS = {
+  bible: 'v1', commentary: 'v1', interlinear: 'v1', strongs: 'v1',
+  crossrefs: 'v1', echoes: 'v1', parallels: 'v1', 'red-letter': 'v1',
+  library: 'v1', biblepedia: 'v1', maps: 'v1', timeline: 'v1', study: 'v1',
+  books: 'v1', dictionary: 'v1', smith: 'v1', hitchcock: 'v1', torrey: 'v1',
+  grammar: 'v1', plans: 'v1', devotionals: 'v1', translation: 'v1', synthesis: 'v1'
+};
+function _dataSeg(path) {
+  var m = path.match(/\/data\/([^\/?#]+)(\/|$)/);
+  if (!m) return 'misc';
+  return (m[2] === '/') ? m[1] : m[1].replace(/\.json$/, '');  // dir name, or root-file stem
+}
+function _dataVer(seg) { return DATA_VERSIONS[seg] || DATA_DEFAULT_V; }
+function _dataCacheName(seg) { return 'bsw-data-' + seg + '-' + _dataVer(seg); }
+function _dataCacheForPath(path) { return _dataCacheName(_dataSeg(path)); }
+function _cacheForUrl(url) {
+  var p; try { p = new URL(url, self.location.origin).pathname; } catch (e) { p = String(url); }
+  return _dataCacheForPath(p);
+}
 
 // App shell: files cached immediately on install
 var SHELL_URLS = [
@@ -33,6 +68,7 @@ var SHELL_URLS = [
   './search/index.html',
   './verse-study/index.html',
   './notes/index.html',
+  './settings/index.html',
   './bookmarks/index.html',
   './compare/index.html',
   './topics/index.html',
@@ -146,6 +182,8 @@ var SHELL_URLS = [
   './assets/js/pwa.js',
   './assets/js/search.js',
   './assets/js/reader.js',
+  './assets/js/reader-audio.js',
+  './assets/js/study-desk.js',
   './assets/js/parallels.js',
   './assets/js/interlinear.js',
   './assets/js/verse-study.js',
@@ -157,6 +195,7 @@ var SHELL_URLS = [
   './assets/js/maps.js',
   './assets/js/wordcloud.js',
   './assets/js/main.js',
+  './assets/js/settings.js',
   './assets/js/apocrypha-reader.js',
   './assets/js/discipline-strip.js',
   './assets/js/lib-browser.js',
@@ -281,14 +320,18 @@ self.addEventListener('install', function (e) {
 
 // ── Activate ───────────────────────────────────────────────────────────────
 self.addEventListener('activate', function (e) {
-  var currentCaches = [APP_CACHE_V, DATA_CACHE_V];
+  // Keep the current app shell and every per-dataset bucket whose version is still current;
+  // delete stale-versioned data buckets and any other old bsw-* cache (incl. the pre-split
+  // single global data cache). A foreign cache (not bsw-*) is left untouched.
   e.waitUntil(
     caches.keys().then(function (keys) {
-      return Promise.all(
-        keys
-          .filter(function (k) { return currentCaches.indexOf(k) === -1; })
-          .map(function (k) { return caches.delete(k); })
-      );
+      return Promise.all(keys.map(function (k) {
+        if (k === APP_CACHE_V) return null;                       // current app shell → keep
+        var m = /^bsw-data-(.+)-(v\d+)$/.exec(k);
+        if (m) return (m[2] === _dataVer(m[1])) ? null : caches.delete(k);  // data bucket: keep iff current
+        if (k.indexOf('bsw-') === 0) return caches.delete(k);     // old app/global cache → delete
+        return null;                                              // foreign cache → leave
+      }));
     }).then(function () {
       return self.clients.claim();
     })
@@ -312,9 +355,10 @@ self.addEventListener('fetch', function (e) {
     return;
   }
 
-  // JSON data files → cache-first in DATA_CACHE_V (bust independently of app shell)
+  // JSON data files → cache-first in this dataset's own bucket (so a bump to one dataset
+  // doesn't evict the others). _dataCacheForPath maps the URL to bsw-data-{seg}-{ver}.
   if (path.includes('/data/') || path.endsWith('.json')) {
-    e.respondWith(cacheFirst(req, DATA_CACHE_V));
+    e.respondWith(cacheFirst(req, _dataCacheForPath(path)));
     return;
   }
 
@@ -380,10 +424,88 @@ self.addEventListener('message', function (e) {
     precacheBible(e.data);
   }
 
+  // Settings → Offline: download or purge a named group's URL list, reporting
+  // {group, done, total, phase} progress back to the requesting page.
+  if (e.data.type === 'OFFLINE_DOWNLOAD') {
+    offlineDownload(e.data, e.source);
+  }
+  if (e.data.type === 'OFFLINE_PURGE') {
+    offlinePurge(e.data, e.source);
+  }
+
   if (e.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
+
+// INTENT: User-initiated offline store. Fetches/caches (or deletes) an explicit URL
+//   list into its per-dataset bucket and streams progress to the Settings page. Unlike the
+//   background precacheBible, this is foreground and explicit, so it uses a larger
+//   chunk and no inter-chunk delay; failures are skipped (a 404 for a non-existent
+//   commentary src×book combo is normal and must not abort the run).
+// CHANGE? Message shape: {type:'OFFLINE_DOWNLOAD'|'OFFLINE_PURGE', group:string,
+//   urls:string[]}. The Settings page (assets/js/settings.js) sends it and listens for
+//   {type:'OFFLINE_PROGRESS', group, done, total, phase:'download'|'purge'|'done'}.
+// VERIFY: Settings → Offline → Download "Maps & timeline"; the progress bar fills and
+//   DevTools → Cache Storage → bsw-data-maps-* gains data/maps/*.json entries.
+function _post(client, msg) {
+  if (client && client.postMessage) { client.postMessage(msg); return; }
+  // No direct sender (e.g. page sent via reg.active before controlling) — broadcast.
+  self.clients.matchAll({ type: 'window' }).then(function (cs) {
+    cs.forEach(function (c) { c.postMessage(msg); });
+  });
+}
+
+function offlineDownload(data, client) {
+  var urls = data.urls || [];
+  var group = data.group || '';
+  var total = urls.length, done = 0;
+  // Each URL is stored in its own dataset bucket (_cacheForUrl) so it is served by the
+  // cacheFirst routing and survives an unrelated dataset's version bump.
+  var CHUNK = 16, i = 0;
+  function next() {
+    if (i >= urls.length) {
+      _post(client, { type: 'OFFLINE_PROGRESS', group: group, done: done, total: total, phase: 'done' });
+      return;
+    }
+    var slice = urls.slice(i, i + CHUNK); i += CHUNK;
+    Promise.all(slice.map(function (url) {
+      return caches.open(_cacheForUrl(url)).then(function (cache) {
+        return cache.match(url).then(function (hit) {
+          if (hit) return;
+          return fetch(url).then(function (r) { if (r.ok) return cache.put(url, r.clone()); }).catch(function () {});
+        });
+      });
+    })).then(function () {
+      done += slice.length;
+      _post(client, { type: 'OFFLINE_PROGRESS', group: group, done: done, total: total, phase: 'download' });
+      setTimeout(next, 0);   // yield so foreground navigation stays responsive
+    });
+  }
+  next();
+}
+
+function offlinePurge(data, client) {
+  var urls = data.urls || [];
+  var group = data.group || '';
+  var total = urls.length, done = 0;
+  var CHUNK = 64, i = 0;
+  function next() {
+    if (i >= urls.length) {
+      _post(client, { type: 'OFFLINE_PROGRESS', group: group, done: done, total: total, phase: 'done' });
+      return;
+    }
+    var slice = urls.slice(i, i + CHUNK); i += CHUNK;
+    Promise.all(slice.map(function (url) {
+      return caches.open(_cacheForUrl(url)).then(function (cache) { return cache.delete(url); });
+    })).then(function () {
+      done += slice.length;
+      _post(client, { type: 'OFFLINE_PROGRESS', group: group, done: done, total: total, phase: 'purge' });
+      setTimeout(next, 0);
+    });
+  }
+  next();
+}
 
 // INTENT: Prefetches all Bible book JSON files for the given versions in the background
 //   after the first page load, so subsequent offline reads don't require a network connection.
@@ -417,7 +539,7 @@ function precacheBible(data) {
   });
 
   // Commentary is ~74 MB across 330 files; excluded from auto pre-cache.
-  // Each commentary file is cached on first access via the DATA_CACHE_V cacheFirst
+  // Each commentary file is cached on first access via the per-dataset cacheFirst
   // strategy, so offline support is preserved for books the user actually reads.
 
   urls.push(base + 'data/strongs/greek.json');
@@ -427,8 +549,9 @@ function precacheBible(data) {
     urls.push(base + 'data/parallels/' + bid + '.json');
   });
 
-  // All precached Bible data goes into DATA_CACHE_V
-  caches.open(DATA_CACHE_V).then(function (cache) {
+  // Each precached file goes into its own dataset bucket (bible/crossrefs/interlinear/…)
+  // via _cacheForUrl, matching the cacheFirst routing.
+  {
     var CHUNK = 6;
     var i = 0;
 
@@ -437,11 +560,13 @@ function precacheBible(data) {
       if (slice.length === 0) return;
       i += CHUNK;
       Promise.all(slice.map(function (url) {
-        return cache.match(url).then(function (hit) {
-          if (hit) return;
-          return fetch(url).then(function (r) {
-            if (r.ok) cache.put(url, r.clone());
-          }).catch(function () {});
+        return caches.open(_cacheForUrl(url)).then(function (cache) {
+          return cache.match(url).then(function (hit) {
+            if (hit) return;
+            return fetch(url).then(function (r) {
+              if (r.ok) cache.put(url, r.clone());
+            }).catch(function () {});
+          });
         });
       })).then(function () {
         setTimeout(nextChunk, 150);
@@ -449,5 +574,5 @@ function precacheBible(data) {
     }
 
     nextChunk();
-  });
+  }
 }

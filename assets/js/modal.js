@@ -5,7 +5,7 @@ import {
   getVersion, resolveVerses, loadCrossRefs, loadCommentary,
   parseCrossRefEntry, _compareCanonical, parseRef,
   escHtml, READER_URL, VERSE_STUDY_URL, COMPARE_URL,
-  COMMENTARY_SOURCES, getCommentarySource, setCommentarySource,
+  COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, decorateCatena, buildCatenaFilter, loadMktAll, decorateMkt,
   ATTRIBUTION, metaVersions, metaBooks,
   registerOpenModal, _resolve, NOTES_URL
 } from './core.js';
@@ -79,7 +79,7 @@ export function _commAttr(source) {
   //   public-domain sources get plain italic text. HTML output is safe because all
   //   content comes from the hardcoded COMMENTARY_SOURCES array, never user input.
   // CHANGE? If COMMENTARY_SOURCES moves to core.js or isAI semantics change, update here.
-  // VERIFY: Select "Original Language (MKT)" in verse study — attribution shows gold AI badge.
+  // VERIFY: Select "MKT Commentary" in verse study — attribution shows gold AI badge.
   var s = COMMENTARY_SOURCES.filter(function (x) { return x.id === source; })[0];
   if (!s) return source;
   if (s.isAI) {
@@ -121,7 +121,7 @@ export function buildModalDOM() {
     '<div class="bsw-modal__header">' +
       '<h2 class="bsw-modal__title" id="bsw-modal-title"></h2>' +
       '<a class="bsw-modal__read-ch" href="#">Read chapter</a>' +
-      '<a class="bsw-modal__verse-study-link" href="#" hidden>Verse Study ↗</a>' +
+      '<a class="bsw-modal__verse-study-link" href="#" hidden>📖 Study this verse</a>' +
       '<a class="bsw-modal__compare-link" href="#" hidden>All translations ↗</a>' +
       '<button class="bsw-modal__memory-btn" hidden aria-label="Add to memory">☆ Memorize</button>' +
       '<button class="bsw-modal__copy-quote-btn" hidden aria-label="Copy verse as quote">Quote</button>' +
@@ -1069,7 +1069,22 @@ export function renderCommentary(parsed, container) {
   function loadAndRender(src) {
     var bodyEl = container.querySelector('.bsw-modal__comm-body');
     if (bodyEl) bodyEl.innerHTML = '<p class="bsw-modal__loading">Loading commentary…</p>';
-    loadCommentary(parsed.bookId, src).then(function (data) {
+
+    if (src === 'mkt') {
+      loadMktAll(parsed.bookId, parsed.ch).then(function (datasets) {
+        var bodyEl2 = container.querySelector('.bsw-modal__comm-body');
+        if (!bodyEl2) return;
+        var htmls = datasets.map(function (data) { return _extractCommHtml(data, parsed, src).html; });
+        bodyEl2.innerHTML = decorateMkt(htmls) + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
+        wireRefLinks(bodyEl2);
+      }).catch(function () {
+        var bodyEl3 = container.querySelector('.bsw-modal__comm-body');
+        if (bodyEl3) bodyEl3.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary.</p>';
+      });
+      return;
+    }
+
+    loadCommentary(parsed.bookId, src, parsed.ch).then(function (data) {
       var result  = _extractCommHtml(data, parsed, src); // VM-H: now returns { html, foundV }
       var bodyEl2 = container.querySelector('.bsw-modal__comm-body');
       if (!bodyEl2) return;
@@ -1082,7 +1097,9 @@ export function renderCommentary(parsed, container) {
       if (!parsed.wholeChapter && result.foundV !== null && result.foundV !== parsed.v) {
         notice = '<p class="bsw-modal__comm-section-note">▸ This section covers verse ' + result.foundV + ' and following</p>';
       }
-      bodyEl2.innerHTML = notice + result.html + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
+      var commHtml = src === 'cow' ? decorateCatena(result.html) : result.html; // collapsible voices + Father badges
+      bodyEl2.innerHTML = notice + commHtml + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
+      if (src === 'cow') buildCatenaFilter(bodyEl2);
       wireRefLinks(bodyEl2);
     }).catch(function () {
       var bodyEl3 = container.querySelector('.bsw-modal__comm-body');

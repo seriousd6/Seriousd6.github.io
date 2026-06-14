@@ -66,6 +66,15 @@
 
   <!-- Chapter completion tracker: record when a chapter is rendered -->
   <script>
+  // INTENT: Mark a chapter "read" (date-stamped) in localStorage the first time the reader
+  //   renders it, by observing window._readerNavState (set by reader.js on every chapter
+  //   load) via a MutationObserver on #reader-results. Powers reading-progress surfaces.
+  // CHANGE? Couples to window._readerNavState (assets/js/reader.js — if it's renamed or
+  //   stops being set per chapter, tracking silently stops) and writes the bsw_chapter_read
+  //   localStorage key (read by /progress/ and /discipline/?tab=progress and reader.js's
+  //   "✓ Read" badge — keep the {bookId:{ch:'YYYY-MM-DD'}} shape if you change it here).
+  // VERIFY: Open a chapter in /read/ → DevTools → Application → localStorage → bsw_chapter_read
+  //   gains an entry for that book/chapter with today's date; reopening doesn't duplicate it.
   (function () {
     var READ_KEY = 'bsw_chapter_read';
     var _lastRecorded = null;

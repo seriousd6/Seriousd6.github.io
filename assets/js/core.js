@@ -653,6 +653,28 @@ export function loadCrossRefs(bookId) {
   return crossRefCache[bookId];
 }
 
+// ── loadParallels ─────────────────────────────────────────────────────────────
+// INTENT: Loads synoptic parallel passage data for a book from data/parallels/<bookId>.json.
+//   Schema: { "ch": { "v": [{end, label, type, refs:[{passage, label}]}] } }
+//   Resolves null when the file is absent; callers skip injection silently.
+// VERIFY: Navigate to Matthew 3 — Network tab should show one fetch to data/parallels/matthew.json;
+//   navigating again to the same chapter should not re-fetch.
+export function loadParallels(bookId) {
+  if (bookId in parallelsCache) return Promise.resolve(parallelsCache[bookId]);
+  var url = PARALLELS_ROOT + '/' + bookId + '.json';
+  parallelsCache[bookId] = fetch(url)
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      parallelsCache[bookId] = (data && Object.keys(data).length) ? data : null;
+      return parallelsCache[bookId];
+    })
+    .catch(function () { parallelsCache[bookId] = null; return null; });
+  return parallelsCache[bookId];
+}
+
 // ── loadEchoes ────────────────────────────────────────────────────────────────
 // INTENT: Loads OT→NT echo/allusion/typology data for a book from data/echoes/<bookId>.json.
 //   Schema: { "ch": { "v": [{type, target, note}] } } — same structural pattern as crossrefs.
@@ -695,45 +717,364 @@ export var ATTRIBUTION = {
 // data/commentary/<bookId>.json; all others live at data/commentary/<source>/<bookId>.json.
 // Users can switch sources via the verse modal.
 export var COMMENTARY_SOURCES = [
-  { id: 'mhcc',     label: 'Matthew Henry Concise',       attr: "Matthew Henry's Concise Commentary (Public Domain)" },
-  { id: 'ellicott', label: "Ellicott's Commentary",       attr: "Ellicott's Commentary for English Readers (Charles J. Ellicott ed., 1878–1884; Public Domain)" },
-  { id: 'jfb',      label: 'Jamieson-Fausset-Brown',      attr: 'Jamieson-Fausset-Brown Bible Commentary (Public Domain)' },
-  { id: 'clarke',  label: "Adam Clarke's Commentary",    attr: "Adam Clarke's Commentary on the Bible (Public Domain)" },
-  { id: 'calvin',  label: "Calvin's Commentaries",       attr: "Calvin's Collected Commentaries (Public Domain)" },
-  { id: 'barnes',  label: "Barnes' Notes (NT)",          attr: "Barnes' Notes on the Bible (Public Domain)" },
-  { id: 'rwp',     label: "Robertson's Word Pictures (NT)", attr: "Robertson's Word Pictures in the NT (A.T. Robertson, 1930–1933; Public Domain)" },
-  { id: 'wesley',  label: "Wesley's Notes",              attr: "Wesley's Explanatory Notes on the Bible (John Wesley, 1765; Public Domain)" },
-  { id: 'mkt-original', label: 'Original Language (MKT)', attr: 'MKT Commentary — Original Language. AI-assisted; see /about/ for methods and prompts.', isAI: true },
-  { id: 'mkt-context',  label: 'Historical Context (MKT)', attr: 'MKT Commentary — Historical Context. AI-assisted; see /about/ for methods and prompts.', isAI: true },
-  { id: 'mkt-christ',   label: 'Christ in Every Verse (MKT)', attr: 'MKT Commentary — Christ in Every Verse. AI-assisted; see /about/ for methods and prompts.', isAI: true }
+  // 'Cloud of Witnesses' is the project name for this patristic layer; the internal
+  // id is 'cow' (data path data/commentary/cow/, decorateCatena guard). The attr
+  // keeps honest credit to the underlying texts — Catena Aurea for the Gospels,
+  // plus Church Fathers and Reformers covering the full Bible.
+  { id: 'cow',  label: 'Cloud of Witnesses — Church Fathers', attr: "Cloud of Witnesses — a great cloud of witnesses (Heb 12:1), the historic church on every verse across the whole Bible. Primary text: Catena Aurea, Thomas Aquinas's chain of patristic comment (tr. J.H. Newman, 1841); supplemented by Chrysostom, Augustine, Calvin, Wesley, and many others. Public Domain." },
+  // 'cow-synthesis' distils ALL the Cloud-of-Witnesses voices on a verse into one ~500-word
+  // grounded summary (one HTML blob per verse, NOT the multi-voice format — so it renders plain,
+  // not via decorateCatena, whose guard is `=== 'cow'`). Data: data/commentary/cow-synthesis/{book}/{ch}.json.
+  { id: 'cow-synthesis', label: 'Cloud of Witnesses — Synthesis', attr: 'Cloud of Witnesses — Synthesis. An AI-assisted distillation of the historic church’s voices (see the Cloud of Witnesses source) into one summary per verse. Grounded in the public-domain texts listed there; see /about/ for methods. AI-assisted.', isAI: true },
+  // 'mkt' is a composite: three sub-sources loaded in parallel and shown as expandable cards.
+  // The actual data lives at mkt-original/, mkt-context/, mkt-christ/ — 'mkt' has no folder.
+  { id: 'mkt', label: 'MKT Commentary', attr: 'MKT Commentary. AI-assisted; see /about/ for methods and prompts.', isAI: true }
 ];
 
 // Active commentary source — always read from localStorage so changes made in
 // one module (modal, verse-study) are immediately visible in all others.
 export function getCommentarySource() {
-  try { return localStorage.getItem('bsw_comm_src') || 'mhcc'; } catch (e) { return 'mhcc'; }
+  try {
+    var src = localStorage.getItem('bsw_comm_src') || 'cow';
+    // Migrate old split mkt-* IDs to the unified 'mkt' entry
+    if (src === 'mkt-original' || src === 'mkt-context' || src === 'mkt-christ') return 'mkt';
+    // Migrate old 'catena' id → 'cow'; migrate removed single-source commentaries (folded into Cloud of Witnesses)
+    if (src === 'catena' || src === 'mhcc' || src === 'mhc' || src === 'ellicott' || src === 'jfb' ||
+        src === 'clarke' || src === 'calvin' || src === 'barnes' || src === 'rwp' ||
+        src === 'wesley') return 'cow';
+    return src;
+  } catch (e) { return 'cow'; }
 }
 export function setCommentarySource(id) {
   try { localStorage.setItem('bsw_comm_src', id); } catch (e) {}
 }
 
-export function loadCommentary(bookId, source) {
+// INTENT: Fetch commentary for the ACTIVE CHAPTER only — data/commentary/{src}/{book}/{ch}.json
+//   (mhcc: data/commentary/{book}/{ch}.json) — instead of the whole book. A verse tap used to
+//   pull the entire book file (Psalms + Cloud of Witnesses = 14 MB!); now it costs ~tens of KB.
+//   The per-chapter file is {v:html}; we wrap it back to the {ch:{v:html}} shape every caller
+//   (_extractCommHtml, comm-mode, MKT) already indexes via data[ch], so no caller logic changed.
+// CHANGE? Files are produced by scripts/split-commentary.py and (for cow) cow-merge.py. If a
+//   per-chapter file is absent we fall back to the whole-book file, so un-split sources still
+//   work. commentaryCache key is now source:bookId:ch. Callers must pass ch (parsed.ch).
+// VERIFY: Open Psalms 119 → DevTools Network shows commentary/.../psalms/119.json (~tens of KB),
+//   not psalms.json (MB). Switch sources → each fetches its own per-chapter file once.
+export function loadCommentary(bookId, source, ch) {
   source = source || getCommentarySource();
-  var url = source === 'mhcc'
-    ? COMMENTARY_ROOT + '/' + bookId + '.json'
-    : COMMENTARY_ROOT + '/' + source + '/' + bookId + '.json';
-  var key = source + ':' + bookId;
+  var base = source === 'mhcc'
+    ? COMMENTARY_ROOT + '/' + bookId
+    : COMMENTARY_ROOT + '/' + source + '/' + bookId;
+  var key = source + ':' + bookId + (ch != null ? ':' + ch : '');
   if (key in commentaryCache) return Promise.resolve(commentaryCache[key]);
-  return fetch(url)
-    .then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
+
+  function fetchWholeBook() {
+    return fetch(base + '.json')
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (data) {
+        commentaryCache[key] = (data && Object.keys(data).length) ? data : null;
+        return commentaryCache[key];
+      })
+      .catch(function () { commentaryCache[key] = null; return null; });
+  }
+  if (ch == null) return fetchWholeBook();   // legacy/whole-book callers
+
+  return fetch(base + '/' + ch + '.json')
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (data) {
-      commentaryCache[key] = (data && Object.keys(data).length) ? data : null;
-      return commentaryCache[key];
+      var wrapped = (data && Object.keys(data).length) ? (function () { var o = {}; o[String(ch)] = data; return o; })() : null;
+      commentaryCache[key] = wrapped;
+      return wrapped;
     })
-    .catch(function () { commentaryCache[key] = null; return null; });
+    .catch(function () { return fetchWholeBook(); });   // per-chapter missing → whole-book fallback
+}
+
+// ── MKT Commentary — multi-card loader + renderer ─────────────────────────
+// INTENT: 'mkt' is a composite of three sub-sources (original, context, christ) shown as
+//   three expandable <details> cards. loadMktAll fetches all three in parallel; decorateMkt
+//   renders already-extracted per-verse HTML blobs into the card layout. Callers extract
+//   per-verse HTML from each dataset using the normal _extractCommHtml helper, then pass
+//   the three html strings here.
+// CHANGE? If a fourth MKT track is added, append it to MKT_TRACKS and add a parameter to
+//   decorateMkt. If the card HTML structure changes, update .mkt-card CSS in style.css.
+// VERIFY: Open a verse with MKT Commentary selected → three cards labelled Original Language,
+//   Historical Context, Christ in Every Verse appear; all start collapsed.
+var MKT_TRACKS = [
+  { id: 'mkt-original', title: 'Original Language' },
+  { id: 'mkt-context',  title: 'Historical Context' },
+  { id: 'mkt-christ',   title: 'Christ in Every Verse' }
+];
+export function loadMktAll(bookId, ch) {
+  return Promise.all(MKT_TRACKS.map(function (t) { return loadCommentary(bookId, t.id, ch); }));
+}
+export function decorateMkt(htmls) {
+  // htmls is an array of [origHtml, contextHtml, christHtml], any may be null
+  return MKT_TRACKS.map(function (t, i) {
+    var html = htmls[i];
+    var openAttr = '';
+    var body = html
+      ? '<div class="mkt-card__body">' + html + '</div>'
+      : '<div class="mkt-card__body mkt-card__body--empty"><p>No commentary for this verse.</p></div>';
+    return '<details class="mkt-card"' + openAttr + '>' +
+           '<summary class="mkt-card__head"><span class="mkt-card__title">' + escHtml(t.title) + '</span></summary>' +
+           body + '</details>';
+  }).join('');
+}
+
+// ── Cloud of Witnesses voice metadata + decorator ────────────────────────
+// INTENT: The 'cow' source stacks many Church-Father voices per pericope.
+//   decorateCatena() rewrites each "<p><strong>Name:</strong> …</p>" voice emitted
+//   by cow-merge.py into a collapsible <details> carrying name + tradition + period
+//   badges, canonicalising the (sometimes abbreviated) source name via CATENA_FATHERS.
+//   It is applied at every cow render site (modal commentary, reader side-panel,
+//   reader inline grid, verse-study).
+// CHANGE? If cow-merge.py introduces a NEW Father tag, add its lowercased form to
+//   a row below — otherwise it renders name-only (no badges), which is the safe
+//   fallback. If cow-merge.py's per-voice markup changes from
+//   "<p><strong>Name:</strong> body</p>", update _CATENA_VOICE_RE to match.
+// VERIFY: Open any verse → switch source to Cloud of Witnesses; each voice has a ▸
+//   disclosure toggle and two badges (tradition, period); collapsing one hides only
+//   its body. An unrecognised Father shows its name with no badge.
+// Rows: [displayName, tradition, period, [raw variant tags, lowercased]]
+var _CATENA_ROWS = [
+  // Greek (Eastern) Fathers
+  ['John Chrysostom','Greek','c. 349–407',['chrysostom']],
+  ['Pseudo-Chrysostom','Greek','5th c.',['pseudo-chrysostom','pseudo-chys']],
+  ['Origen','Greek','c. 185–253',['origen']],
+  ['Pseudo-Origen','Greek','',['pseudo-origen']],
+  ['Cyril of Jerusalem','Greek','c. 313–386',['cyril of jerusalem']],
+  ['Cyril of Alexandria','Greek','c. 376–444',['cyril','cyril of alexandria']],
+  ['Basil the Great','Greek','c. 330–379',['basil']],
+  ['Pseudo-Basil','Greek','',['pseudo-basil']],
+  ['Eusebius of Caesarea','Greek','c. 263–339',['eusebius']],
+  ['Gregory of Nyssa','Greek','c. 335–395',['gregory of nyssa']],
+  ['Gregory Nazianzen','Greek','c. 329–390',['gregory nazianzen']],
+  ['Athanasius','Greek','c. 296–373',['athan','pseudo-athan']],
+  ['Theophylact','Greek (Byzantine)','c. 1055–1107',['theophylact']],
+  ['Titus of Bostra','Greek','d. c. 378',['titus bost','titus bostrensis']],
+  ['John of Damascus','Greek','c. 675–749',['damascene']],
+  ['Theodotus of Ancyra','Greek','d. c. 446',['theodotus']],
+  ['Theodoret of Cyrrhus','Greek','c. 393–457',['theodoret','theodoret of cyrrhus']],
+  ['Dionysius the Areopagite','Greek','c. 500',['dionys','dionysius ar']],
+  ['Epiphanius','Greek','c. 310–403',['epiphan']],
+  ['Gennadius','Greek','d. 471',['gennadius']],
+  ['Nemesius of Emesa','Greek','fl. c. 390',['nemesius']],
+  ['Maximus','Greek','',['maxim']],
+  ['Isidore of Pelusium','Greek','d. c. 450',['isidore peleus']],
+  ['Greek Exposition','Greek','',['greek ex']],
+  // Latin (Western) Fathers
+  ['Augustine of Hippo','Latin','354–430',['augustine']],
+  ['Pseudo-Augustine','Latin','',['pseudo-augustine']],
+  ['Jerome','Latin','c. 347–420',['jerome']],
+  ['Pseudo-Jerome','Latin','',['pseudo-jerome']],
+  ['Hilary of Poitiers','Latin','c. 310–367',['hilary','hil']],
+  ['Gregory the Great','Latin','c. 540–604',['gregory']],
+  ['Ambrose of Milan','Latin','c. 339–397',['ambrose']],
+  ['Leo the Great','Latin','c. 400–461',['leo']],
+  ['Tertullian','Latin','c. 155–220',['tertullian']],
+  ['Cyprian of Carthage','Latin','c. 210–258',['cyprian']],
+  ['Victorinus of Pettau','Latin','d. c. 304',['victorinus']],
+  ['Peter Chrysologus','Latin','c. 380–450',['chrysol','chrysologus']],
+  ['Isidore of Seville','Latin','c. 560–636',['isidore']],
+  // Medieval (Western) compilers
+  ['Bede','Medieval','c. 673–735',['bede']],
+  ['Alcuin of York','Medieval','c. 735–804',['alcuin']],
+  ['Rabanus Maurus','Medieval','c. 780–856',['raban','rabanus']],
+  ['Remigius of Auxerre','Medieval','c. 841–908',['remigius']],
+  ['Haymo of Halberstadt','Medieval','d. 853',['haymo']],
+  ['Glossa Ordinaria','Medieval','12th c.',['gloss']],
+  ['Petrus Alfonsi','Medieval','12th c.',['petrus alfonsus']],
+  // Conciliar
+  ['Council of Ephesus','Council','431',['the council of ephesus']],
+  // Post-Reformation commentators
+  ['John Gill','Reformed','1697–1771',['john gill','gill']],
+  ['Keil and Delitzsch','Lutheran','1866–1891',['keil','keil and delitzsch','kd','keil-delitzsch']],
+  ['John Lightfoot','Reformed','1602–1675',['john lightfoot','lightfoot']],
+  ['Matthew Henry','Reformed','1662–1714',['matthew henry']],
+  ['Albert Barnes','Reformed','1798–1870',['albert barnes','barnes']],
+  ['Adam Clarke','Methodist','1762–1832',['adam clarke','clarke']],
+  ['Charles Ellicott','Anglican','1819–1905',['charles ellicott','ellicott']],
+  ['Jamieson, Fausset and Brown','Reformed','1871',['jamieson, fausset and brown','jfb','jamieson']],
+  ['A.T. Robertson','Baptist','1863–1934',['a.t. robertson','robertson']],
+  ['John Calvin','Reformed','1509–1564',['john calvin','calvin']],
+  ['John Wesley','Methodist','1703–1791',['john wesley','wesley']],
+  ['C.H. Spurgeon','Reformed','1834–1892',['c.h. spurgeon','spurgeon']],
+  ['Martin Luther','Lutheran','1483–1546',['martin luther','luther']]
+];
+export var CATENA_FATHERS = (function () {
+  var m = Object.create(null);
+  _CATENA_ROWS.forEach(function (r) {
+    r[3].forEach(function (v) { m[v] = { display: r[0], tradition: r[1], period: r[2] }; });
+  });
+  return m;
+})();
+function _catenaTradClass(t) {
+  if (t === 'Greek' || t === 'Greek (Byzantine)') return 'greek';
+  if (t === 'Latin') return 'latin';
+  if (t === 'Medieval') return 'medieval';
+  if (t === 'Council') return 'ecumenical';
+  if (t === 'Reformed') return 'reformed';
+  if (t === 'Lutheran') return 'lutheran';
+  if (t === 'Methodist') return 'methodist';
+  if (t === 'Anglican') return 'anglican';
+  if (t === 'Baptist') return 'baptist';
+  return 'other';
+}
+// Each known Father's name links to their Biblepedia article at {biblepedia}?a={slug}.
+// The slug must match the article filename produced by scripts/cow-father-articles.py
+// — keep _cowSlug identical to that script's slugify (lowercase, non-alnum→'-').
+var _COW_BP_URL = _resolve('../../biblepedia/');
+export function cowSlug(name) {
+  return String(name).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+var _CATENA_VOICE_RE = /<p><strong>([^:<]+):<\/strong>\s*([\s\S]*?)<\/p>/g;
+// INTENT: Rewrite each "<p><strong>Name:</strong> body</p>" voice into a collapsible
+//   <details> carrying tradition/period badges. data-voice holds the cowSlug so the
+//   voice filter (buildCatenaFilter) can show/hide by slug without re-parsing HTML.
+// CHANGE? If voice HTML structure changes here, update buildCatenaFilter's querySelector
+//   and the .catena-voice[data-voice] CSS rule in style.css.
+// VERIFY: Open any verse with Cloud of Witnesses ('cow') → voices show collapsible cards with name + badges.
+export function decorateCatena(html) {
+  if (!html || html.indexOf('<strong>') < 0) return html;
+  return html.replace(_CATENA_VOICE_RE, function (_m, name, body) {
+    var meta = CATENA_FATHERS[name.trim().toLowerCase()];
+    var display = meta ? meta.display : name.trim();
+    var slug = cowSlug(display);
+    // Known Fathers get a clickable name → their Biblepedia entry; unknown raw tags
+    // (e.g. a malformed "Pseudo-") render as plain text since they have no article.
+    var head = meta
+      ? '<a class="cv-name" target="_blank" rel="noopener" href="' + _COW_BP_URL +
+        '?a=' + cowSlug(meta.display) + '">' + escHtml(display) + '</a>'
+      : '<span class="cv-name">' + escHtml(display) + '</span>';
+    if (meta && meta.tradition)
+      head += '<span class="cv-badge cv-' + _catenaTradClass(meta.tradition) + '">' +
+              escHtml(meta.tradition) + '</span>';
+    if (meta && meta.period)
+      head += '<span class="cv-badge cv-period">' + escHtml(meta.period) + '</span>';
+    return '<details class="catena-voice" data-voice="' + escHtml(slug) + '"><summary class="cv-head">' + head +
+           '</summary><div class="cv-body"><p>' + body + '</p></div></details>';
+  });
+}
+
+// INTENT: Build a voice-filter chip bar above a rendered catena block. Voices toggled
+//   off are hidden via CSS (.catena-voice--hidden). Hidden state persists across verse
+//   navigation within a session (module-level Set) so a user who hides Keil & Delitzsch
+//   sees it hidden on the next verse too. Filter only renders when ≥2 voices are present.
+// CHANGE? If decorateCatena's data-voice attr or .cv-name selector changes, update
+//   the querySelectorAll calls below. Chip styles live in style.css (.catena-filter*).
+// VERIFY: Open a verse with 3+ voices → filter chips appear; toggle one off → that
+//   voice disappears; navigate to next verse → the same voice stays hidden.
+// Exclusions are a GLOBAL, persisted preference (localStorage 'bsw_cow_hidden'): hiding a
+// Father applies to every verse and every render site, now and after reload.
+var _COW_HIDDEN_KEY = 'bsw_cow_hidden';
+var _hiddenCatenaVoices = (function () {
+  try { return new Set(JSON.parse(localStorage.getItem(_COW_HIDDEN_KEY) || '[]')); }
+  catch (e) { return new Set(); }
+})();
+function _saveHiddenCatena() {
+  try { localStorage.setItem(_COW_HIDDEN_KEY, JSON.stringify(Array.prototype.slice.call(_hiddenCatenaVoices))); } catch (e) {}
+}
+// Apply the current hidden set to EVERY catena voice on the page and sync EVERY chip, so
+// toggling one Father updates all rendered verses (e.g. the inline grid) at once.
+function _applyCatenaHiddenGlobally() {
+  document.querySelectorAll('.catena-voice[data-voice]').forEach(function (el) {
+    el.classList.toggle('catena-voice--hidden', _hiddenCatenaVoices.has(el.dataset.voice));
+  });
+  document.querySelectorAll('.catena-filter__chip[data-voice]').forEach(function (chip) {
+    var hidden = _hiddenCatenaVoices.has(chip.dataset.voice);
+    chip.classList.toggle('catena-filter__chip--off', hidden);
+    chip.setAttribute('aria-pressed', String(!hidden));
+  });
+}
+export function buildCatenaFilter(container) {
+  if (!container) return;
+  var voiceEls = container.querySelectorAll('.catena-voice[data-voice]');
+  if (voiceEls.length < 2) return;
+
+  var voices = [];
+  var seen = Object.create(null);
+  voiceEls.forEach(function (el) {
+    var slug = el.dataset.voice;
+    if (slug && !seen[slug]) {
+      seen[slug] = true;
+      var nameEl = el.querySelector('.cv-name');
+      voices.push({ slug: slug, label: nameEl ? nameEl.textContent.trim() : slug });
+    }
+  });
+  if (voices.length < 2) return;
+
+  var bar = document.createElement('div');
+  bar.className = 'catena-filter';
+  bar.setAttribute('aria-label', 'Filter voices');
+
+  voices.forEach(function (v) {
+    var chip = document.createElement('button');
+    chip.type = 'button';
+    chip.textContent = v.label;
+    chip.dataset.voice = v.slug;
+    var isHidden = _hiddenCatenaVoices.has(v.slug);
+    chip.className = 'catena-filter__chip' + (isHidden ? ' catena-filter__chip--off' : '');
+    chip.setAttribute('aria-pressed', String(!isHidden));
+    chip.addEventListener('click', function () {
+      var nowHidden = !_hiddenCatenaVoices.has(v.slug);
+      if (nowHidden) _hiddenCatenaVoices.add(v.slug);
+      else           _hiddenCatenaVoices.delete(v.slug);
+      _saveHiddenCatena();
+      _applyCatenaHiddenGlobally();   // update all verses + all chip bars on the page
+    });
+    bar.appendChild(chip);
+  });
+
+  // INTENT: Expand/collapse-all toggle sits at the right end of the filter bar.
+  //   Voices start closed (no `open` attr in decorateCatena), so the button's initial
+  //   label is "Expand all". It toggles the `open` attr on all non-hidden voices within
+  //   this container only — it's a local display convenience, not a persisted preference.
+  // CHANGE? If the container scope changes (e.g. multi-verse grid), update the
+  //   querySelectorAll selector here. The button's `aria-expanded` mirrors the expand state.
+  // VERIFY: Cloud of Witnesses panel → voices all closed; click "Expand all" → all open;
+  //   click "Collapse all" → all closed. Chip filters still work independently.
+  var toggleBtn = document.createElement('button');
+  toggleBtn.type = 'button';
+  toggleBtn.className = 'catena-filter__toggle';
+  toggleBtn.textContent = 'Expand all';
+  toggleBtn.setAttribute('aria-expanded', 'false');
+  toggleBtn.addEventListener('click', function () {
+    var expanding = toggleBtn.getAttribute('aria-expanded') === 'false';
+    container.querySelectorAll('.catena-voice:not(.catena-voice--hidden)').forEach(function (el) {
+      if (expanding) el.setAttribute('open', '');
+      else           el.removeAttribute('open');
+    });
+    toggleBtn.setAttribute('aria-expanded', String(expanding));
+    toggleBtn.textContent = expanding ? 'Collapse all' : 'Expand all';
+  });
+  bar.appendChild(toggleBtn);
+
+  // Apply persisted hidden state to freshly rendered voices
+  _hiddenCatenaVoices.forEach(function (slug) {
+    container.querySelectorAll('.catena-voice[data-voice="' + slug + '"]').forEach(function (el) {
+      el.classList.add('catena-voice--hidden');
+    });
+  });
+
+  var first = container.querySelector('.catena-voice');
+  if (first) container.insertBefore(bar, first);
+}
+
+// UX-16: the .cv-name link lives inside the voice's <summary>, so a plain click would
+//   BOTH open the Biblepedia article and toggle the <details>. A delegated capture-phase
+//   listener cancels the click's default action (which includes the summary toggle) and
+//   opens the article in a new tab itself, so following the link never collapses the voice.
+// CHANGE? Targets `a.cv-name` produced by decorateCatena above; if that class/structure
+//   changes, update the selector. One listener covers every render site (modal, reader
+//   panel, reader grid, verse-study) since they all inject decorateCatena output.
+// VERIFY: Open a Gospel verse → Cloud of Witnesses; click a Father name — the article opens
+//   in a new tab and the voice's expanded/collapsed state is unchanged.
+if (typeof document !== 'undefined') {
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest && e.target.closest('a.cv-name');
+    if (!a) return;
+    e.preventDefault();
+    window.open(a.href, '_blank', 'noopener');
+  });
 }
 
 // ── parseCrossRefEntry / crossRefScore / computeTextSimilarity ────────────

@@ -15,7 +15,11 @@
   "2": {
     "breaks": [
       { "v": 1, "type": "narrative" },
-      { "v": 14, "type": "narrative" }
+      { "v": 14, "type": "narrative" },
+      { "v": 16, "type": "dialogue", "speaker": "interlocutor" },
+      { "v": 17, "type": "dialogue", "speaker": "james" },
+      { "v": 18, "type": "dialogue", "speaker": "interlocutor" },
+      { "v": 19, "type": "dialogue", "speaker": "james" }
     ],
     "headings": [
       { "before": 1, "text": "Do Not Show Favoritism" },
@@ -35,7 +39,8 @@
   "4": {
     "breaks": [
       { "v": 1, "type": "narrative" },
-      { "v": 13, "type": "narrative" }
+      { "v": 13, "type": "dialogue", "speaker": "interlocutor" },
+      { "v": 15, "type": "dialogue", "speaker": "james" }
     ],
     "headings": [
       { "before": 1, "text": "Warning Against Worldliness" },

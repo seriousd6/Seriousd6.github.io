@@ -1,12 +1,14 @@
 {
   "1": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 2, "type": "poetry"},
-      {"v": 5, "type": "poetry"},
-      {"v": 9, "type": "poetry"},
-      {"v": 12, "type": "poetry"},
-      {"v": 15, "type": "poetry"}
+      {"v": 1, "type": "narrative"},
+      {"v": 2, "type": "dialogue", "speaker": "bride"},
+      {"v": 5, "type": "dialogue", "speaker": "bride"},
+      {"v": 9, "type": "dialogue", "speaker": "beloved"},
+      {"v": 11, "type": "dialogue", "speaker": "friends"},
+      {"v": 12, "type": "dialogue", "speaker": "bride"},
+      {"v": 15, "type": "dialogue", "speaker": "beloved"},
+      {"v": 16, "type": "dialogue", "speaker": "bride"}
     ],
     "headings": [
       {"before": 1, "text": "She: Longing for the Beloved"},
@@ -16,11 +18,14 @@
   },
   "2": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 4, "type": "poetry"},
-      {"v": 8, "type": "poetry"},
-      {"v": 14, "type": "poetry"},
-      {"v": 16, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "bride"},
+      {"v": 2, "type": "dialogue", "speaker": "beloved"},
+      {"v": 3, "type": "dialogue", "speaker": "bride"},
+      {"v": 4, "type": "dialogue", "speaker": "bride"},
+      {"v": 8, "type": "dialogue", "speaker": "bride"},
+      {"v": 10, "type": "dialogue", "speaker": "beloved"},
+      {"v": 14, "type": "dialogue", "speaker": "beloved"},
+      {"v": 16, "type": "dialogue", "speaker": "bride"}
     ],
     "headings": [
       {"before": 1, "text": "She: I Am a Rose of Sharon"},
@@ -31,8 +36,8 @@
   },
   "3": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 6, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "bride"},
+      {"v": 6, "type": "narrative"}
     ],
     "headings": [
       {"before": 1, "text": "She: Seeking in the Night"},
@@ -41,10 +46,10 @@
   },
   "4": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 9, "type": "poetry"},
-      {"v": 12, "type": "poetry"},
-      {"v": 16, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "beloved"},
+      {"v": 9, "type": "dialogue", "speaker": "beloved"},
+      {"v": 12, "type": "dialogue", "speaker": "beloved"},
+      {"v": 16, "type": "dialogue", "speaker": "bride"}
     ],
     "headings": [
       {"before": 1, "text": "He: The Beauty of the Bride"},
@@ -54,9 +59,10 @@
   },
   "5": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 2, "type": "poetry"},
-      {"v": 9, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "beloved"},
+      {"v": 2, "type": "dialogue", "speaker": "bride"},
+      {"v": 9, "type": "dialogue", "speaker": "friends"},
+      {"v": 10, "type": "dialogue", "speaker": "bride"}
     ],
     "headings": [
       {"before": 1, "text": "He: I Come to My Garden"},
@@ -66,10 +72,12 @@
   },
   "6": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 4, "type": "poetry"},
-      {"v": 10, "type": "poetry"},
-      {"v": 13, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "friends"},
+      {"v": 2, "type": "dialogue", "speaker": "bride"},
+      {"v": 4, "type": "dialogue", "speaker": "beloved"},
+      {"v": 10, "type": "dialogue", "speaker": "beloved"},
+      {"v": 11, "type": "dialogue", "speaker": "bride"},
+      {"v": 13, "type": "dialogue", "speaker": "beloved"}
     ],
     "headings": [
       {"before": 1, "text": "Daughters: Where Has He Gone?"},
@@ -79,8 +87,8 @@
   },
   "7": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 10, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "beloved"},
+      {"v": 10, "type": "dialogue", "speaker": "bride"}
     ],
     "headings": [
       {"before": 1, "text": "He: Further Praise of the Beloved"},
@@ -89,11 +97,12 @@
   },
   "8": {
     "breaks": [
-      {"v": 1, "type": "poetry"},
-      {"v": 5, "type": "poetry"},
-      {"v": 8, "type": "poetry"},
-      {"v": 11, "type": "poetry"},
-      {"v": 14, "type": "poetry"}
+      {"v": 1, "type": "dialogue", "speaker": "bride"},
+      {"v": 5, "type": "dialogue", "speaker": "bride"},
+      {"v": 8, "type": "dialogue", "speaker": "friends"},
+      {"v": 11, "type": "dialogue", "speaker": "bride"},
+      {"v": 13, "type": "dialogue", "speaker": "beloved"},
+      {"v": 14, "type": "dialogue", "speaker": "bride"}
     ],
     "headings": [
       {"before": 1, "text": "She: If Only You Were My Brother"},

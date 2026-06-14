@@ -46,6 +46,8 @@ import {
   initColumnsToggle, initReaderModeToggle, initNotesPanelToggle,
   initParaViewToggle
 } from './reader.js';
+import { initReaderAudio } from './reader-audio.js';
+import { initStudyDesk } from './study-desk.js';
 import {
   initInterlinearToggle, initBookInfoToggle,
   getInterlinearEnabled, setInterlinearEnabled
@@ -58,6 +60,7 @@ import { initDailyPage, initMemorizePage, initPlansHomeWidget, _memHas, _memAdd,
 import { initDictionaryPage, renderModalTopics, renderModalConfessions, renderModalFathers, renderModalDictionary } from './library.js';
 import { initBiblepediaPage } from './biblepedia.js';
 import { initEchoToggle } from './parallels.js';
+import { initParallelsToggle } from './synoptic.js';
 import { runAutoTagTerms, autoTagTerms, getTermMap2 } from './terms.js';
 import { runAutoTagPlaces, autoTagPlacesIn } from './places.js';
 import { initTimelinePage, initChurchTimelinePage } from './timeline.js';
@@ -178,9 +181,12 @@ function init() {
       initFontSizeControls();
       initXrefNotesToggle();
       initEchoToggle();
+      initParallelsToggle();
       initColumnsToggle();
       initReaderModeToggle();
       initParaViewToggle();
+      initReaderAudio();
+      initStudyDesk();
       _injectShortcutsBtn();
     }
 

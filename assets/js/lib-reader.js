@@ -185,7 +185,7 @@ function _render(doc, docId, content, entry) {
 
   var sections  = doc.sections || [];
   var paginated = sections.length > _PAGINATE_THRESHOLD;
-  var badge     = _TYPE_BADGE[doc.type] || 'ecumenical';
+  var badge     = (entry && entry.tradition) || _TYPE_BADGE[doc.type] || 'ecumenical';
   var label     = _TYPE_LABEL[doc.type] || doc.type;
   var author    = entry && entry.author;
 
