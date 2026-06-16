@@ -22,6 +22,16 @@ import json, os, re, glob, sys
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# DATA-15: map any singular category variant to its canonical plural key so the index
+# never contains both 'concept' and 'concepts' (the reader filters categories by exact match).
+_CATEGORY_CANON = {
+    'person': 'people', 'place': 'places', 'concept': 'concepts',
+    'name': 'names', 'event': 'events',
+}
+
+def _norm_category(cat):
+    return _CATEGORY_CANON.get(cat, cat or 'concepts')
+
 # ── HTML utilities ────────────────────────────────────────────────────────────
 
 def strip_html(html):
@@ -137,7 +147,9 @@ for filepath in article_files:
 
     art_id   = article.get('id', '')
     term     = article.get('term', '')
-    category = article.get('category', 'concepts')
+    # DATA-15: normalize to canonical plural category keys so the reader's exact-match
+    # category browse (biblepedia.js _getItemsByCategory) doesn't drop singular variants.
+    category = _norm_category(article.get('category', 'concepts'))
     key_refs = article.get('key_refs', [])[:6]
     intro    = article.get('intro', '')
     hm       = article.get('hitchcock_meaning')

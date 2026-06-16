@@ -14,7 +14,8 @@
 import { escHtml } from './core.js';
 import { wireRefLinks } from './wire.js';
 
-var _DATA_URL  = new URL('../../data/maps/timelapse.json', import.meta.url).href;
+var _DATA_URL    = new URL('../../data/maps/timelapse.json', import.meta.url).href;
+var _REGIONS_URL = new URL('../../data/maps/regions.json', import.meta.url).href;
 var TILE_URL   = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
 var TILE_ATTR  = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 
@@ -90,10 +91,20 @@ export function initTimelapsePage() {
   L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTR }).addTo(_map);
   _map.setView([33, 38], 5);
 
-  fetch(_DATA_URL)
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      _data = d;
+  // INTENT: Load the animation data plus the canonical region geometry. regions.json is the
+  //   single source of truth for empire/tribe shapes (A); timelapse.json's own coords are kept
+  //   only as a fallback so a missing/failed regions.json never blanks the map.
+  // CHANGE? regions.json entries link back via match:{layer,srcId}; if those ids drift from
+  //   timelapse.json empire/tribe ids, geometry silently falls back to timelapse.json coords.
+  // VERIFY: Load /maps/timelapse/ with regions.json present → tribe/empire outlines follow the
+  //   coastline (not rectangles). Block regions.json in DevTools → map still renders (fallback).
+  Promise.all([
+    fetch(_DATA_URL).then(function (r) { return r.json(); }),
+    fetch(_REGIONS_URL).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+  ])
+    .then(function (res) {
+      _data = res[0];
+      if (res[1]) _applyRegionGeometry(res[1]);
       _buildLayers();
       _buildEventList();
       _wireControls();
@@ -111,11 +122,50 @@ export function initTimelapsePage() {
     });
 }
 
+// INTENT: Overlay canonical geometry from regions.json onto the in-memory empires/tribes,
+//   so shapes have a single source. Each region links via match:{layer,srcId}; we use its
+//   first period's coords (the timelapse conveys time via opacity stages, not era switching).
+// CHANGE? If a region grows multiple periods AND the timelapse should switch shapes over time,
+//   replace "periods[0]" with a year-based pick keyed off the active era.
+// VERIFY: After load, _data.tribes.find(t=>t.id==='judah').coords matches the tribe-judah
+//   geometry in regions.json (≥8 points), not the old 4-point box.
+// Chaikin corner-cutting — rounds region polygons into organic outlines (matches maps.js).
+function _smoothRing(coords, iters) {
+  var pts = coords.slice();
+  if (pts.length > 1) {
+    var f = pts[0], l = pts[pts.length - 1];
+    if (f[0] === l[0] && f[1] === l[1]) pts.pop();
+  }
+  if (pts.length < 3) return coords;
+  iters = iters == null ? 2 : iters;
+  for (var k = 0; k < iters; k++) {
+    var out = [];
+    for (var i = 0; i < pts.length; i++) {
+      var a = pts[i], b = pts[(i + 1) % pts.length];
+      out.push([a[0] * 0.75 + b[0] * 0.25, a[1] * 0.75 + b[1] * 0.25]);
+      out.push([a[0] * 0.25 + b[0] * 0.75, a[1] * 0.25 + b[1] * 0.75]);
+    }
+    pts = out;
+  }
+  return pts;
+}
+
+function _applyRegionGeometry(regionsDoc) {
+  var byLayer = { empire: {}, tribe: {} };
+  (regionsDoc.regions || []).forEach(function (r) {
+    var m = r.match, p = r.periods && r.periods[0];
+    if (!m || !p || !p.coords || !byLayer[m.layer]) return;
+    byLayer[m.layer][m.srcId] = p.coords;
+  });
+  (_data.empires || []).forEach(function (e) { if (byLayer.empire[e.id]) e.coords = byLayer.empire[e.id]; });
+  (_data.tribes  || []).forEach(function (t) { if (byLayer.tribe[t.id])  t.coords = byLayer.tribe[t.id]; });
+}
+
 /* ── Pre-build all Leaflet layers (called once after data loads) ──────────── */
 function _buildLayers() {
   /* Empire polygons */
   (_data.empires || []).forEach(function (emp) {
-    var poly = L.polygon(emp.coords, {
+    var poly = L.polygon(_smoothRing(emp.coords, 2), {
       color:       emp.color,
       weight:      1,
       fillColor:   emp.color,
@@ -207,7 +257,7 @@ function _buildLayers() {
 
   /* Tribe polygons */
   (_data.tribes || []).forEach(function (tribe) {
-    var poly = L.polygon(tribe.coords, {
+    var poly = L.polygon(_smoothRing(tribe.coords, 2), {
       color: tribe.color,
       weight: 1,
       fillColor: tribe.color,

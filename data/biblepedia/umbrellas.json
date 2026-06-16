@@ -1,0 +1,307 @@
+{
+  "_doc": "Umbrella folds: each parent article absorbs its members as collapsible anchored sections (biblepedia.js _facetSectionsHtml). Members' index entries become anchored redirect stubs ({redirect:parent, anchor}). Applied by scripts/apply-biblepedia-umbrellas.py (idempotent; re-run after build-biblepedia-index.py). 'term'=original article term (search 'aka' label); 'title'=section heading.",
+  "umbrellas": {
+    "offering": {
+      "parent_term": "Offering",
+      "members": [
+        {
+          "id": "burnt-offering",
+          "anchor": "burnt-offering",
+          "title": "Burnt Offering",
+          "term": "Burnt Offering"
+        },
+        {
+          "id": "sin-offering",
+          "anchor": "sin-offering",
+          "title": "Sin-offering",
+          "term": "Sin-offering"
+        },
+        {
+          "id": "trespass-offering",
+          "anchor": "trespass-offering",
+          "title": "Trespass offering",
+          "term": "Trespass offering"
+        },
+        {
+          "id": "meat-offering",
+          "anchor": "meat-offering",
+          "title": "Grain (Meal) Offering",
+          "term": "Meat-offering"
+        },
+        {
+          "id": "peace-offerings",
+          "anchor": "peace-offerings",
+          "title": "Peace Offering",
+          "term": "Peace Offerings"
+        },
+        {
+          "id": "heave-offering",
+          "anchor": "heave-offering",
+          "title": "Heave Offering",
+          "term": "Heave Offering"
+        },
+        {
+          "id": "drink-offering",
+          "anchor": "drink-offering",
+          "title": "Drink-offering",
+          "term": "Drink-offering"
+        },
+        {
+          "id": "free-will-offering",
+          "anchor": "free-will-offering",
+          "title": "Free-will Offering",
+          "term": "Free-will Offering"
+        },
+        {
+          "id": "jealousy-offering",
+          "anchor": "jealousy-offering",
+          "title": "Jealousy Offering",
+          "term": "Jealousy Offering"
+        },
+        {
+          "id": "wood-offering",
+          "anchor": "wood-offering",
+          "title": "Wood-offering",
+          "term": "Wood-offering"
+        },
+        {
+          "id": "daily-sacrifice",
+          "anchor": "daily-sacrifice",
+          "title": "The Daily Sacrifice",
+          "term": "Daily Sacrifice"
+        }
+      ]
+    },
+    "feast": {
+      "parent_term": "Feast",
+      "members": [
+        {
+          "id": "passover",
+          "anchor": "passover",
+          "title": "Passover",
+          "term": "Passover"
+        },
+        {
+          "id": "pentecost",
+          "anchor": "pentecost",
+          "title": "Pentecost (Feast of Weeks)",
+          "term": "Pentecost"
+        },
+        {
+          "id": "tabernacles-feast-of",
+          "anchor": "tabernacles-feast-of",
+          "title": "Tabernacles, Feast of",
+          "term": "Tabernacles, Feast of"
+        },
+        {
+          "id": "trumpets-feast-of",
+          "anchor": "trumpets-feast-of",
+          "title": "Trumpets, Feast of",
+          "term": "Trumpets, Feast of"
+        },
+        {
+          "id": "day-of-atonement",
+          "anchor": "day-of-atonement",
+          "title": "Day of Atonement",
+          "term": "Day of Atonement"
+        },
+        {
+          "id": "dedication-feast-of-the",
+          "anchor": "dedication-feast-of-the",
+          "title": "Dedication, Feast of the",
+          "term": "Dedication, Feast of the"
+        },
+        {
+          "id": "new-moon-feast-of",
+          "anchor": "new-moon-feast-of",
+          "title": "New Moon, Feast of",
+          "term": "New Moon, Feast of"
+        },
+        {
+          "id": "purim",
+          "anchor": "purim",
+          "title": "Purim",
+          "term": "Purim"
+        },
+        {
+          "id": "jubilee",
+          "anchor": "jubilee",
+          "title": "The Year of Jubilee",
+          "term": "Jubilee"
+        }
+      ]
+    },
+    "god": {
+      "parent_term": "God",
+      "members": [
+        {
+          "id": "wrath",
+          "anchor": "wrath",
+          "title": "The Wrath of God",
+          "term": "Wrath"
+        },
+        {
+          "id": "providence",
+          "anchor": "providence",
+          "title": "Providence",
+          "term": "Providence"
+        },
+        {
+          "id": "sovereignty",
+          "anchor": "sovereignty",
+          "title": "The Sovereignty of God",
+          "term": "Sovereignty"
+        },
+        {
+          "id": "omnipotence",
+          "anchor": "omnipotence",
+          "title": "Omnipotence (All-Powerful)",
+          "term": "Omnipotence"
+        },
+        {
+          "id": "omniscience",
+          "anchor": "omniscience",
+          "title": "Omniscience (All-Knowing)",
+          "term": "Omniscience"
+        },
+        {
+          "id": "omnipresence",
+          "anchor": "omnipresence",
+          "title": "Omnipresence (Ever-Present)",
+          "term": "Omnipresence"
+        },
+        {
+          "id": "grace-of-god",
+          "anchor": "grace-of-god",
+          "title": "Grace of God",
+          "term": "Grace of God"
+        },
+        {
+          "id": "goodness-of-god",
+          "anchor": "goodness-of-god",
+          "title": "Goodness of God",
+          "term": "Goodness of God"
+        },
+        {
+          "id": "justice-of-god",
+          "anchor": "justice-of-god",
+          "title": "Justice of God",
+          "term": "Justice of God"
+        },
+        {
+          "id": "judgments-of-god",
+          "anchor": "judgments-of-god",
+          "title": "Judgments of God",
+          "term": "Judgments of God"
+        },
+        {
+          "id": "decrees-of-god",
+          "anchor": "decrees-of-god",
+          "title": "Decrees of God",
+          "term": "Decrees of God"
+        },
+        {
+          "id": "foreknowledge-of-god",
+          "anchor": "foreknowledge-of-god",
+          "title": "Foreknowledge of God",
+          "term": "Foreknowledge of God"
+        },
+        {
+          "id": "government-of-god",
+          "anchor": "government-of-god",
+          "title": "Government of God",
+          "term": "Government of God"
+        },
+        {
+          "id": "purpose-of-god",
+          "anchor": "purpose-of-god",
+          "title": "Purpose, of God",
+          "term": "Purpose, of God"
+        },
+        {
+          "id": "condescension-of-god",
+          "anchor": "condescension-of-god",
+          "title": "Condescension of God",
+          "term": "Condescension of God"
+        }
+      ]
+    },
+    "jesus-christ": {
+      "parent_term": "Jesus Christ",
+      "members": [
+        {
+          "id": "person-of-christ",
+          "anchor": "person-of-christ",
+          "title": "The Person of Christ",
+          "term": "Person of Christ"
+        },
+        {
+          "id": "offices-of-christ",
+          "anchor": "offices-of-christ",
+          "title": "The Offices of Christ (Prophet, Priest, King)",
+          "term": "Offices of Christ"
+        },
+        {
+          "id": "kingly-office-of-christ",
+          "anchor": "kingly-office-of-christ",
+          "title": "Kingly Office of Christ",
+          "term": "Kingly Office of Christ"
+        },
+        {
+          "id": "humiliation-of-christ",
+          "anchor": "humiliation-of-christ",
+          "title": "Humiliation of Christ",
+          "term": "Humiliation of Christ"
+        },
+        {
+          "id": "obedience-of-christ",
+          "anchor": "obedience-of-christ",
+          "title": "Obedience of Christ",
+          "term": "Obedience of Christ"
+        },
+        {
+          "id": "intercession-of-christ",
+          "anchor": "intercession-of-christ",
+          "title": "Intercession of Christ",
+          "term": "Intercession of Christ"
+        },
+        {
+          "id": "baptism-of-christ",
+          "anchor": "baptism-of-christ",
+          "title": "Baptism of Christ",
+          "term": "Baptism of Christ"
+        },
+        {
+          "id": "nativity-of-christ",
+          "anchor": "nativity-of-christ",
+          "title": "Nativity of Christ",
+          "term": "Nativity of Christ"
+        },
+        {
+          "id": "temptation-of-christ",
+          "anchor": "temptation-of-christ",
+          "title": "Temptation of Christ",
+          "term": "Temptation of Christ"
+        },
+        {
+          "id": "revelation-of-christ",
+          "anchor": "revelation-of-christ",
+          "title": "Revelation of Christ",
+          "term": "Revelation of Christ"
+        },
+        {
+          "id": "genealogy-of-jesus-christ",
+          "anchor": "genealogy-of-jesus-christ",
+          "title": "Genealogy of Jesus Christ",
+          "term": "Genealogy of Jesus Christ"
+        },
+        {
+          "id": "trial-of-jesus",
+          "anchor": "trial-of-jesus",
+          "title": "Trial of Jesus",
+          "term": "Trial of Jesus"
+        }
+      ]
+    }
+  }
+}

@@ -210,6 +210,15 @@
     display: inline-flex;
     align-items: center;
   }
+  /* CSS-41: find-bar controls need the same 44px tap target on mobile.
+     Icon buttons also get min-width so the magnifier/✕ aren't a thin sliver. */
+  .lr-find-btn, .lr-find-submit, .lr-find-close {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lr-find-btn, .lr-find-close { min-width: 44px; }
   /* Section tabs: enforce 44px touch target */
   .lr-tab {
     min-height: 44px;
@@ -361,6 +370,19 @@
   transition: color .12s;
 }
 .lr-find-close:hover { color: var(--color-primary); }
+/* UX-19: prev/next match steppers */
+.lr-find-nav {
+  padding: .3em .5em;
+  font-size: .9rem;
+  line-height: 1;
+  border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.lr-find-nav:hover { background: color-mix(in srgb, var(--color-primary) 8%, transparent); }
 
 /* ── Find highlight mark ───────────────────────────────────────────────────── */
 
@@ -392,6 +414,9 @@ mark.lr-find-mark {
 /* INTENT: Amber #92610a replaces the yellow #fde68a highlight so search matches stay
    clearly visible against the dark page — yellow washes out on the dark warm-brown surface. */
 [data-theme="dark"] mark.lr-find-mark { background: #92610a; color: #fff; }
+/* UX-19: the currently-focused match stands out from the other (amber) highlights */
+mark.lr-find-mark--current { background: #fb923c; color: #1a1208; box-shadow: 0 0 0 2px #fb923c; }
+[data-theme="dark"] mark.lr-find-mark--current { background: #c2410c; color: #fff; box-shadow: 0 0 0 2px #c2410c; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .lr-sidebar-inner { background: var(--color-surface, #1e1e1e); }
@@ -399,6 +424,7 @@ mark.lr-find-mark {
   :root:not([data-theme="light"]) .lr-find-bar   { background: var(--color-surface-alt, #222); }
   :root:not([data-theme="light"]) .lr-find-input { background: var(--color-surface, #1a1a1a); color: var(--color-text); }
   :root:not([data-theme="light"]) mark.lr-find-mark { background: #92610a; color: #fff; }
+  :root:not([data-theme="light"]) mark.lr-find-mark--current { background: #c2410c; color: #fff; box-shadow: 0 0 0 2px #c2410c; }
 }
 
 /* ── Tab bar (≤7 sections) ─────────────────────────────────────────────────── */

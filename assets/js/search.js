@@ -35,6 +35,7 @@ import {
 
 var _LIBRARY_ROOT = _resolve('../../library/');
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
+import { loadSectionBody, searchSectionsFull } from './sections.js';
 import { wireRefLinks, wireRefEl } from './wire.js';
 import { _showShortcutsOverlay } from './modal.js';
 import { autoTagTermsWhenReady } from './terms.js';
@@ -561,8 +562,19 @@ export function renderSearchResults(results, query) {
     });
   }
 
-  out.innerHTML = '<p class="omni-none">' + results.length + ' result' +
-    (results.length !== 1 ? 's' : '') + '</p>';
+  // AUD-24: count must reflect the post-filter list actually shown (`sorted`), not the
+  // pre-filter total (`results`). A testament/book filter shrinks `sorted`; reporting
+  // results.length over-counted and, when the filter excluded everything, showed
+  // "N results" above an empty list.
+  var filterActive = _filterBook || _filterTestament !== 'all';
+  if (!sorted.length && filterActive) {
+    out.innerHTML = '<p class="search-page-none">No results in the current filter. ' +
+      'Clear the filter to see all ' + results.length + '.</p>';
+    return;
+  }
+
+  out.innerHTML = '<p class="omni-none">' + sorted.length + ' result' +
+    (sorted.length !== 1 ? 's' : '') + '</p>';
 
   _appendVerseResultBatch(sorted, query, 0, out);
 }
@@ -797,6 +809,7 @@ export function handleExploreSearch(query) {
   // Build the five section skeletons in one pass.
   var SECTIONS = [
     { key: 'verses',     title: 'Verses' },
+    { key: 'sections',   title: 'Sections' },
     { key: 'words',      title: 'Word Studies' },
     { key: 'topics',     title: "Topics (Nave's)" },
     { key: 'torrey',     title: 'Torrey Topics' },
@@ -826,6 +839,7 @@ export function handleExploreSearch(query) {
   }
 
   var vb  = body('verses');
+  var scb = body('sections');
   var wb  = body('words');
   var tb  = body('topics');
   var rrb = body('torrey');
@@ -835,6 +849,7 @@ export function handleExploreSearch(query) {
   var gb  = body('guides');
 
   if (vb)  _exploreVerses(q, vb);
+  if (scb) _exploreSections(q, scb);
   if (wb)  _exploreWords(q, wb);
   if (tb)  _exploreTopics(q, tb);
   if (rrb) _exploreTorrey(q, rrb);
@@ -919,6 +934,75 @@ function _exploreVerses(q, container) {
         var inp = document.getElementById('bsw-search-input');
         if (inp && inp.value.trim()) handleSearchInput(inp.value.trim());
       }
+    });
+  });
+}
+
+// ── Explore: Sections (topical) ───────────────────────────────────────────
+// INTENT: Search the editorial section index (sections.js) for the query and render the
+//   matches WITH their verse sets inline — i.e. the topical search "outputs verse sets",
+//   not just links. Verses come straight from loadBook (cached per book) for each section's
+//   book/chapter/startV..endV range; the heading ref is a wired .ref (hover + click-to-read).
+// CHANGE? Caps: shows up to SEC_MAX sections, VERSE_MAX verses each, to bound fetches/DOM.
+//   If the sections-index schema (book/ch/startV/endV/ref/group) changes, update here.
+// VERIFY: Explore-search "parable of the sower" → a Sections group lists Matthew 13 / Mark 4 /
+//   Luke 8 each with the passage text shown beneath the heading.
+function _exploreSections(q, container) {
+  var SEC_MAX = 12, VERSE_MAX = 16;
+  loadSectionBody().then(function () {
+    var res   = searchSectionsFull(q);            // { title:[…], body:[…] }
+    var total = res.title.length + res.body.length;
+    _setExploreCount('sections', total);
+    if (!total) {
+      container.innerHTML = '<p class="omni-none">No sections match. Try “parables”, “beatitudes”, “sower”, “David and Goliath”.</p>';
+      return;
+    }
+    var version = getVersion();
+    // Title matches first, then fuzzy body-text matches; tag each so the UI can label body hits.
+    var show = res.title.slice(0, SEC_MAX).map(function (s) { return { s: s, via: 'title' }; });
+    if (show.length < SEC_MAX) {
+      show = show.concat(res.body.slice(0, SEC_MAX - show.length).map(function (s) { return { s: s, via: 'body' }; }));
+    }
+
+    // Load each needed book once (loadBook caches), then render verse sets.
+    var bookIds = {};
+    show.forEach(function (it) { bookIds[it.s.book] = true; });
+    Promise.all(Object.keys(bookIds).map(function (b) {
+      return loadBook(version, b).then(function (ch) { bookIds[b] = ch; }).catch(function () { bookIds[b] = null; });
+    })).then(function () {
+      var html = show.map(function (it) {
+        var s = it.s;
+        var chapters = bookIds[s.book];
+        var ch = chapters && chapters[String(s.ch)];
+        var versesHtml = '';
+        if (ch) {
+          var parts = [];
+          for (var v = s.startV; v <= s.endV && parts.length < VERSE_MAX; v++) {
+            var txt = ch[String(v)];
+            if (txt) parts.push('<span class="omni-sec__v"><sup>' + v + '</sup> ' + escHtml(txt) + '</span>');
+          }
+          if (s.endV - s.startV + 1 > VERSE_MAX) parts.push('<span class="omni-sec__more">…</span>');
+          versesHtml = parts.join(' ');
+        }
+        return '<div class="bsw-search-result omni-sec">' +
+          '<div class="omni-sec__head">' +
+            '<a class="bsw-search-result__ref ref" data-ref="' + escHtml(s.ref) + '">' +
+              escHtml(s.title) + ' · ' + escHtml(s.ref) + '</a>' +
+            (it.via === 'body'
+              ? '<span class="omni-sec__group omni-sec__group--body">in text</span>'
+              : (s.group && s.group !== 'Other Sections'
+                  ? '<span class="omni-sec__group">' + escHtml(s.group) + '</span>' : '')) +
+          '</div>' +
+          (versesHtml ? '<p class="omni-sec__verses">' + versesHtml + '</p>' : '') +
+        '</div>';
+      }).join('');
+      if (total > show.length) {
+        html += '<p class="omni-none" style="margin-top:.5rem">+' + (total - show.length) +
+          ' more — refine your search.</p>';
+      }
+      container.innerHTML = html;
+      wireRefLinks(container);
+      container.querySelectorAll('.omni-sec__verses').forEach(autoTagTermsWhenReady);
     });
   });
 }
@@ -1172,8 +1256,13 @@ function _exploreLibrary(q, container) {
 function _applyExploreFilter(filter) {
   _exploreFilter = filter;
   document.querySelectorAll('[data-explore-filter]').forEach(function (btn) {
-    btn.classList.toggle('explore-filter--active',
-      btn.getAttribute('data-explore-filter') === filter);
+    var on = btn.getAttribute('data-explore-filter') === filter;
+    // CSS-42: the styled class is `search-explore-filter--active` (matches the HTML's
+    // initial class + bible-ui.css); the old `explore-filter--active` had no CSS, so the
+    // active highlight never moved off "All".
+    btn.classList.toggle('search-explore-filter--active', on);
+    // AUD-25: expose toggle state to assistive tech.
+    btn.setAttribute('aria-pressed', String(on));
   });
   document.querySelectorAll('[data-explore-section]').forEach(function (sec) {
     var show = filter === 'all' || sec.getAttribute('data-explore-section') === filter;

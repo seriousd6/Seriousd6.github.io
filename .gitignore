@@ -31,9 +31,14 @@ working/catena-src/
 #   working/ = agent prompts, guides, progress trackers, todos, loop-archive
 #   scripts/ = build + one-off generation scripts (Python/shell)
 #   *.py     = any Python anywhere is build-time tooling, never runtime
+# Exception: the data/library/synthesis VALIDATORS are tracked so the CI workflow
+#   (.github/workflows/validate.yml) can run them on a fresh checkout (AUD-28).
 working/
-scripts/
+scripts/*
 *.py
+!scripts/validate-data.py
+!scripts/validate-library-format.py
+!scripts/validate-synthesis.py
 
 # Agent workflow files (prompts, guides, progress trackers — not part of the site)
 /MKT_*.md
@@ -59,3 +64,4 @@ memory/
 secrets.*
 credentials.*
 *.secret
+working/devotionals-raw/

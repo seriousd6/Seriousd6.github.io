@@ -25,7 +25,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v140';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v170';  // bump when HTML/CSS/JS/icon changes
 
 // ── Per-dataset data caches ────────────────────────────────────────────────
 // A SINGLE global data cache meant every JSON tweak (e.g. one red-letter or commentary
@@ -43,7 +43,7 @@ var DATA_DEFAULT_V = 'v1';
 var DATA_VERSIONS = {
   bible: 'v1', commentary: 'v1', interlinear: 'v1', strongs: 'v1',
   crossrefs: 'v1', echoes: 'v1', parallels: 'v1', 'red-letter': 'v1',
-  library: 'v1', biblepedia: 'v1', maps: 'v1', timeline: 'v1', study: 'v1',
+  library: 'v1', biblepedia: 'v17', maps: 'v4', timeline: 'v1', study: 'v1',
   books: 'v1', dictionary: 'v1', smith: 'v1', hitchcock: 'v1', torrey: 'v1',
   grammar: 'v1', plans: 'v1', devotionals: 'v1', translation: 'v1', synthesis: 'v1'
 };
@@ -151,7 +151,6 @@ var SHELL_URLS = [
   './assets/css/topic-shell.css',
   './assets/css/study-guide.css',
   './assets/css/study-nav.css',
-  './assets/css/word.css',
   './assets/css/dictionary.css',
   './assets/css/timeline.css',
   './assets/css/maps.css',
@@ -187,17 +186,16 @@ var SHELL_URLS = [
   './assets/js/parallels.js',
   './assets/js/interlinear.js',
   './assets/js/verse-study.js',
-  './assets/js/word.js',
   './assets/js/daily.js',
   './assets/js/library.js',
   './assets/js/terms.js',
+  './assets/js/sections.js',
   './assets/js/timeline.js',
   './assets/js/maps.js',
   './assets/js/wordcloud.js',
   './assets/js/main.js',
   './assets/js/settings.js',
   './assets/js/apocrypha-reader.js',
-  './assets/js/discipline-strip.js',
   './assets/js/lib-browser.js',
   './assets/js/lib-progress.js',
   './assets/js/lib-reader.js',
@@ -253,6 +251,11 @@ var SHELL_URLS = [
   './data/timeline/detail.json',
   './data/maps/places.json',
   './data/maps/timelapse.json',
+  './data/maps/regions.json',
+  './data/maps/place-coords.json',
+  './data/sections-index.json',
+  './data/sections-aliases.json',
+  './data/sections-body.json',
   './data/wordcloud/frequencies.json',
   // Translation Workshop (SW-A through SW-M) — added 2026-06-06
   './translation/workshop/index.html',
@@ -287,15 +290,6 @@ var SHELL_URLS = [
   './data/second-temple/context.json',
   // OT-in-NT quotations (SW-K)
   './data/ot-in-nt/quotations.json',
-  // Synthesis data (SW-M) — per-book, lazy-loaded; cache the ones written so far
-  './data/synthesis/genesis.json',
-  './data/synthesis/matthew.json',
-  './data/synthesis/john.json',
-  './data/synthesis/romans.json',
-  './data/synthesis/galatians.json',
-  './data/synthesis/hebrews.json',
-  './data/synthesis/psalms.json',
-  './data/synthesis/isaiah.json',
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────

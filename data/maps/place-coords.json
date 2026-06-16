@@ -1,0 +1,14269 @@
+{
+"_meta": {
+"purpose": "biblepedia place slug -> {lat, lon, conf, name, source}. Drives the Location mini-map on place articles (assets/js/biblepedia.js).",
+"coordOrder": "[lat, lon]",
+"confidence": "identified = dominant well-attested site; disputed = located but low-confidence/competing candidates; absent slug = location unknown.",
+"attribution": "Location data derived from OpenBible.info Bible Geocoding Data (github.com/openbibleinfo/Bible-Geocoding-Data), CC BY 4.0. Some entries (source:'curated') are supplemented for sites absent from that dataset.",
+"generator": "scripts/build-place-coords.py"
+},
+"places": {
+"abana": {
+"lat": 33.51354,
+"lon": 36.305,
+"conf": "identified",
+"name": "Abana",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"abarim": {
+"lat": 31.7539,
+"lon": 35.7152,
+"conf": "identified",
+"name": "Abarim",
+"types": [
+"mountain range"
+],
+"source": "openbible"
+},
+"abel-beth-maachah": {
+"lat": 33.25805,
+"lon": 35.58101,
+"conf": "identified",
+"name": "Abel-beth-maacah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"abel-meholah": {
+"lat": 32.3743,
+"lon": 35.56089,
+"conf": "identified",
+"name": "Abel-meholah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.32656,
+"lon": 35.50465,
+"name": "Tell el Hilu"
+},
+{
+"lat": 32.1762,
+"lon": 35.4933,
+"name": "Ras el Kharube"
+}
+]
+},
+"abel-mizraim": {
+"lat": 31.91489,
+"lon": 35.53045,
+"conf": "identified",
+"name": "Abel-mizraim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82038,
+"lon": 35.50116,
+"name": "Deir Hajla"
+},
+{
+"lat": 31.467,
+"lon": 34.4041,
+"name": "Tall al Ajjul"
+}
+]
+},
+"abez": {
+"lat": 32.65806,
+"lon": 35.50583,
+"conf": "disputed",
+"name": "Ebez",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.67914,
+"lon": 35.19695,
+"name": "Horbat Sefan"
+},
+{
+"lat": 32.59028,
+"lon": 35.52556,
+"name": "En haYadid"
+}
+]
+},
+"abilene": {
+"lat": 33.62667,
+"lon": 36.10583,
+"conf": "identified",
+"name": "Abilene",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"abronah": {
+"lat": 29.67291,
+"lon": 35.01392,
+"conf": "disputed",
+"name": "Abronah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.53068,
+"lon": 35.0,
+"name": "Aqaba"
+},
+{
+"lat": 29.57148,
+"lon": 34.96352,
+"name": "Eilat"
+}
+]
+},
+"accad": {
+"lat": 33.02556,
+"lon": 44.39194,
+"conf": "disputed",
+"name": "Accad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.09979,
+"lon": 44.29833,
+"name": "Tell ed Der"
+},
+{
+"lat": 32.54333,
+"lon": 44.42222,
+"name": "Babylon"
+}
+]
+},
+"accho": {
+"lat": 32.92111,
+"lon": 35.08833,
+"conf": "identified",
+"name": "Acco",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"aceldama": {
+"lat": 31.76841,
+"lon": 35.23288,
+"conf": "disputed",
+"name": "Akeldama",
+"types": [
+"field"
+],
+"source": "openbible"
+},
+"achaia": {
+"lat": 38.72,
+"lon": 22.54,
+"conf": "identified",
+"name": "Achaia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"achmetha": {
+"lat": 34.8065,
+"lon": 48.51625,
+"conf": "identified",
+"name": "Ecbatana",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"achor": {
+"lat": 31.71667,
+"lon": 35.38333,
+"conf": "identified",
+"name": "Valley of Achor",
+"types": [
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8443,
+"lon": 35.4143,
+"name": "Wadi Qelt"
+},
+{
+"lat": 31.89773,
+"lon": 35.41736,
+"name": "Wadi Nu’eima"
+}
+]
+},
+"achshaph": {
+"lat": 32.75885,
+"lon": 35.09027,
+"conf": "disputed",
+"name": "Achshaph",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.87276,
+"lon": 35.15133,
+"name": "Tell Keisan"
+},
+{
+"lat": 32.90139,
+"lon": 35.16944,
+"name": "Tell Bir el Gharbi"
+}
+]
+},
+"achzib": {
+"lat": 31.64207,
+"lon": 34.95302,
+"conf": "identified",
+"name": "Achzib",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.69013,
+"lon": 35.00328,
+"name": "Ain Kezbeh"
+}
+]
+},
+"adam-the-city-of": {
+"lat": 32.10393,
+"lon": 35.54679,
+"conf": "identified",
+"name": "Adam",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"adamah": {
+"lat": 32.79972,
+"lon": 35.45972,
+"conf": "disputed",
+"name": "Adamah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.94162,
+"lon": 35.5749,
+"name": "Hajar ed Damm"
+},
+{
+"lat": 32.74917,
+"lon": 35.45917,
+"name": "Tel Adami"
+}
+]
+},
+"admah": {
+"lat": 31.20849,
+"lon": 35.44922,
+"conf": "disputed",
+"name": "Admah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90094,
+"lon": 35.62455,
+"name": "Tall Nimrin"
+},
+{
+"lat": 30.87767,
+"lon": 35.43707,
+"name": "Khanazir"
+}
+]
+},
+"adramyttium": {
+"lat": 39.50067,
+"lon": 26.93272,
+"conf": "identified",
+"name": "Adramyttium",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"adria": {
+"lat": 38.0,
+"lon": 19.0,
+"conf": "identified",
+"name": "Adriatic Sea",
+"types": [
+"body of water"
+],
+"source": "openbible"
+},
+"adullam": {
+"lat": 31.65167,
+"lon": 35.00167,
+"conf": "identified",
+"name": "Adullam",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.655,
+"lon": 35.00389,
+"name": "Khirbet Id el Minya"
+}
+]
+},
+"adummim": {
+"lat": 31.8175,
+"lon": 35.36151,
+"conf": "identified",
+"name": "Adummim",
+"types": [
+"road"
+],
+"source": "openbible"
+},
+"aenon": {
+"lat": 32.38152,
+"lon": 35.52821,
+"conf": "disputed",
+"name": "Aenon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.30181,
+"lon": 35.3974,
+"name": "Khirbet Einun"
+},
+{
+"lat": 31.8375,
+"lon": 35.54944,
+"name": "Aenon"
+}
+]
+},
+"ahava": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Ahava",
+"types": [
+"canal",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.64392,
+"lon": 42.82314,
+"name": "Hit"
+},
+{
+"lat": 33.1815,
+"lon": 44.6991,
+"name": "Opis"
+}
+]
+},
+"ahlab": {
+"lat": 33.3178,
+"lon": 35.24337,
+"conf": "identified",
+"name": "Ahlab",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.16472,
+"lon": 35.16833,
+"name": "Ras el Biyada"
+}
+]
+},
+"ai": {
+"lat": 31.91694,
+"lon": 35.26111,
+"conf": "identified",
+"name": "Ai",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.91476,
+"lon": 35.2496,
+"name": "Khirbet el Maqatir"
+},
+{
+"lat": 31.89751,
+"lon": 35.22862,
+"name": "Khirbet Nisieh"
+}
+]
+},
+"ajalon": {
+"lat": 31.84111,
+"lon": 35.02361,
+"conf": "identified",
+"name": "Aijalon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8401,
+"lon": 35.0263,
+"name": "Tell el Kokah"
+},
+{
+"lat": 31.90517,
+"lon": 35.27038,
+"name": "Khirbet Haiyan"
+}
+]
+},
+"akeldama": {
+"lat": 31.76841,
+"lon": 35.23288,
+"conf": "disputed",
+"name": "Akeldama",
+"types": [
+"field"
+],
+"source": "openbible"
+},
+"akrabbim": {
+"lat": 30.9066,
+"lon": 35.13126,
+"conf": "identified",
+"name": "Akrabbim",
+"types": [
+"mountain pass"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.19417,
+"lon": 35.57667,
+"name": "Jebel Umm al Aqarib"
+}
+]
+},
+"alexandria": {
+"lat": 31.1825,
+"lon": 29.8965,
+"conf": "identified",
+"name": "Alexandria",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"allon-bachuth": {
+"lat": 31.92278,
+"lon": 35.24139,
+"conf": "identified",
+"name": "Allon-bacuth",
+"types": [
+"tree"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.92187,
+"lon": 35.24548,
+"name": "Burj Beitin"
+}
+]
+},
+"almon": {
+"lat": 31.8249,
+"lon": 35.2735,
+"conf": "identified",
+"name": "Almon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"alush": {
+"lat": 28.77031,
+"lon": 33.76749,
+"conf": "disputed",
+"name": "Alush",
+"types": [
+"campsite"
+],
+"source": "openbible"
+},
+"amana": {
+"lat": 33.68889,
+"lon": 36.03167,
+"conf": "identified",
+"name": "Amana",
+"types": [
+"mountain",
+"mountain ridge"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.56778,
+"lon": 35.96333,
+"name": "Mount Amana"
+}
+]
+},
+"ammah": {
+"lat": 31.84105,
+"lon": 35.27954,
+"conf": "identified",
+"name": "Ammah",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"amphipolis": {
+"lat": 40.82016,
+"lon": 23.84721,
+"conf": "identified",
+"name": "Amphipolis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"anab": {
+"lat": 31.4121,
+"lon": 34.9549,
+"conf": "identified",
+"name": "Anab",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.3959,
+"lon": 34.9308,
+"name": "Khirbet Anab al Kabir"
+}
+]
+},
+"ananiah": {
+"lat": 31.77166,
+"lon": 35.2559,
+"conf": "disputed",
+"name": "Ananiah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82988,
+"lon": 35.20801,
+"name": "Beit Hanina"
+}
+]
+},
+"anathoth": {
+"lat": 31.80752,
+"lon": 35.25758,
+"conf": "disputed",
+"name": "Anathoth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.81319,
+"lon": 35.26187,
+"name": "Anata"
+},
+{
+"lat": 31.81092,
+"lon": 35.2756,
+"name": "Khirbet Deir es Sidd"
+}
+]
+},
+"anem": {
+"lat": 32.67635,
+"lon": 35.54671,
+"conf": "disputed",
+"name": "Anem",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.71355,
+"lon": 35.49544,
+"name": "Khirbet Beit Jann"
+},
+{
+"lat": 32.46079,
+"lon": 35.29875,
+"name": "Tell Jenin"
+}
+]
+},
+"anim": {
+"lat": 31.3536,
+"lon": 35.06352,
+"conf": "identified",
+"name": "Anim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.36038,
+"lon": 35.07875,
+"name": "Khirbet Ghuweina el Fauqa"
+}
+]
+},
+"antioch": {
+"lat": 36.22669,
+"lon": 36.17174,
+"conf": "identified",
+"name": "Antioch",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"antipatris": {
+"lat": 32.105,
+"lon": 34.93042,
+"conf": "identified",
+"name": "Aphek",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"antonia": {
+"lat": 31.7813,
+"lon": 35.2364,
+"conf": "disputed",
+"name": "Fortress Antonia (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"aphek": {
+"lat": 32.8461,
+"lon": 35.1119,
+"conf": "identified",
+"name": "Aphek",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.0084,
+"lon": 35.1391,
+"name": "Tel Kabri"
+},
+{
+"lat": 34.06917,
+"lon": 35.88611,
+"name": "Afqa"
+}
+]
+},
+"apollonia": {
+"lat": 40.6237,
+"lon": 23.46968,
+"conf": "identified",
+"name": "Apollonia",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"appii-forum": {
+"lat": 41.46639,
+"lon": 12.9975,
+"conf": "identified",
+"name": "Forum of Appius",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"arab": {
+"lat": 31.43188,
+"lon": 35.02957,
+"conf": "identified",
+"name": "Arab",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60148,
+"lon": 35.15873,
+"name": "Khirbet ez Zawiya"
+}
+]
+},
+"arabah": {
+"lat": 30.41694,
+"lon": 35.15139,
+"conf": "identified",
+"name": "Arabah",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"arabia": {
+"lat": 23.0,
+"lon": 46.0,
+"conf": "identified",
+"name": "Arabia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"arad": {
+"lat": 31.28083,
+"lon": 35.125,
+"conf": "disputed",
+"name": "Arad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+},
+{
+"lat": 31.21229,
+"lon": 34.95828,
+"name": "Tel Masos"
+}
+]
+},
+"aram-naharaim": {
+"lat": 36.86444,
+"lon": 39.03278,
+"conf": "identified",
+"name": "Aram-naharaim",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"aram-zobah": {
+"lat": 33.93528,
+"lon": 36.15083,
+"conf": "disputed",
+"name": "Zobah",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ararat": {
+"lat": 39.70276,
+"lon": 44.30038,
+"conf": "identified",
+"name": "Ararat",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"areopagus": {
+"lat": 37.97222,
+"lon": 23.72361,
+"conf": "identified",
+"name": "Areopagus",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"argob": {
+"lat": 32.9695,
+"lon": 36.45538,
+"conf": "identified",
+"name": "Argob",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"arimathea": {
+"lat": 32.02806,
+"lon": 35.01944,
+"conf": "disputed",
+"name": "Arimathea",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.03286,
+"lon": 35.1025,
+"name": "Beit Rima"
+},
+{
+"lat": 31.85434,
+"lon": 35.23161,
+"name": "Al Ram"
+}
+]
+},
+"armageddon": {
+"lat": 32.58528,
+"lon": 35.18444,
+"conf": "identified",
+"name": "Armageddon",
+"types": [
+"mountain",
+"river",
+"settlement",
+"special",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.6725,
+"lon": 35.02333,
+"name": "Mount Carmel"
+},
+{
+"lat": 32.59639,
+"lon": 35.24194,
+"name": "Jezreel Valley"
+}
+]
+},
+"armenia": {
+"lat": 39.70276,
+"lon": 44.30038,
+"conf": "identified",
+"name": "Ararat",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"arnon": {
+"lat": 31.46583,
+"lon": 35.57333,
+"conf": "identified",
+"name": "Arnon",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"aroer": {
+"lat": 31.4708,
+"lon": 35.81939,
+"conf": "identified",
+"name": "Aroer",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"arpad": {
+"lat": 36.4725,
+"lon": 37.09472,
+"conf": "identified",
+"name": "Arpad",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"arvad": {
+"lat": 34.85611,
+"lon": 35.85833,
+"conf": "identified",
+"name": "Arvad",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ashdod": {
+"lat": 31.7572,
+"lon": 34.6578,
+"conf": "identified",
+"name": "Ashdod",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ashdoth-pisgah": {
+"lat": 31.76778,
+"lon": 35.72556,
+"conf": "disputed",
+"name": "Pisgah",
+"types": [
+"mountain",
+"mountain range",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76667,
+"lon": 35.75,
+"name": "Jabal al Naba"
+},
+{
+"lat": 31.7539,
+"lon": 35.7152,
+"name": "Abarim"
+}
+]
+},
+"ashkelon": {
+"lat": 31.66389,
+"lon": 34.54583,
+"conf": "identified",
+"name": "Ashkelon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ashtaroth": {
+"lat": 32.80417,
+"lon": 36.01583,
+"conf": "identified",
+"name": "Ashtaroth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ashteroth-karnaim": {
+"lat": 32.80417,
+"lon": 36.01583,
+"conf": "identified",
+"name": "Ashteroth-karnaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.83583,
+"lon": 36.035,
+"name": "Al Shaykh Saad"
+}
+]
+},
+"asia": {
+"lat": 38.4,
+"lon": 28.3,
+"conf": "identified",
+"name": "Asia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"assos": {
+"lat": 39.49056,
+"lon": 26.33667,
+"conf": "identified",
+"name": "Assos",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"assyria": {
+"lat": 36.3594,
+"lon": 43.1528,
+"conf": "identified",
+"name": "Assyria",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"assyria-asshur": {
+"lat": 35.45667,
+"lon": 43.2625,
+"conf": "identified",
+"name": "Asshur",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"atad": {
+"lat": 31.91489,
+"lon": 35.53045,
+"conf": "identified",
+"name": "Atad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82038,
+"lon": 35.50116,
+"name": "Deir Hajla"
+},
+{
+"lat": 31.467,
+"lon": 34.4041,
+"name": "Tall al Ajjul"
+}
+]
+},
+"ataroth": {
+"lat": 31.5753,
+"lon": 35.66594,
+"conf": "identified",
+"name": "Ataroth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"athens": {
+"lat": 37.97185,
+"lon": 23.72674,
+"conf": "identified",
+"name": "Athens",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"attalia": {
+"lat": 36.88127,
+"lon": 30.70361,
+"conf": "identified",
+"name": "Attalia",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ava": {
+"lat": 34.68472,
+"lon": 36.69056,
+"conf": "disputed",
+"name": "Avva",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.23787,
+"lon": 36.56947,
+"name": "Imma"
+},
+{
+"lat": 31.7823,
+"lon": 47.8694,
+"name": "Karkheh River"
+}
+]
+},
+"aven": {
+"lat": 31.92278,
+"lon": 35.24139,
+"conf": "identified",
+"name": "Aven",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.92187,
+"lon": 35.24548,
+"name": "Burj Beitin"
+}
+]
+},
+"azal": {
+"lat": 31.76083,
+"lon": 35.23167,
+"conf": "disputed",
+"name": "Azal",
+"types": [
+"river",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.91476,
+"lon": 35.2496,
+"name": "Khirbet el Maqatir"
+},
+{
+"lat": 31.90517,
+"lon": 35.27038,
+"name": "Khirbet Haiyan"
+}
+]
+},
+"azekah": {
+"lat": 31.70023,
+"lon": 34.9357,
+"conf": "identified",
+"name": "Azekah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"azotus": {
+"lat": 31.7572,
+"lon": 34.6578,
+"conf": "identified",
+"name": "Ashdod",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"baal-gad": {
+"lat": 33.46788,
+"lon": 35.74747,
+"conf": "disputed",
+"name": "Baal-gad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.24611,
+"lon": 35.69333,
+"name": "Banias"
+},
+{
+"lat": 33.4,
+"lon": 35.85,
+"name": "Mount Hermon"
+}
+]
+},
+"baal-hamon": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "disputed",
+"name": "Baal-hamon",
+"types": [
+"settlement",
+"special",
+"structure"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.12811,
+"lon": 35.15202,
+"name": "Umm el Awamid"
+},
+{
+"lat": 33.25805,
+"lon": 35.58101,
+"name": "Tel Abel Beth Maacah"
+}
+]
+},
+"baal-hazor": {
+"lat": 31.97861,
+"lon": 35.28611,
+"conf": "identified",
+"name": "Baal-hazor",
+"types": [
+"mountain",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.83218,
+"lon": 35.19546,
+"name": "Khirbet Hazzur"
+}
+]
+},
+"baal-hermon": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "identified",
+"name": "Baal-hermon",
+"types": [
+"mountain",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.38333,
+"lon": 35.68333,
+"name": "Hasbaya"
+},
+{
+"lat": 33.24611,
+"lon": 35.69333,
+"name": "Banias"
+}
+]
+},
+"baal-meon": {
+"lat": 31.6795,
+"lon": 35.73532,
+"conf": "identified",
+"name": "Baal-meon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"baal-perazim": {
+"lat": 31.74185,
+"lon": 35.18332,
+"conf": "disputed",
+"name": "Baal-perazim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76364,
+"lon": 35.23264,
+"name": "Abu Tor"
+},
+{
+"lat": 31.73085,
+"lon": 35.18701,
+"name": "Gilo"
+}
+]
+},
+"baal-shalisha": {
+"lat": 32.11031,
+"lon": 35.01182,
+"conf": "disputed",
+"name": "Baal-shalishah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9914,
+"lon": 35.3322,
+"name": "Khirbet Marjame"
+},
+{
+"lat": 31.9878,
+"lon": 35.3332,
+"name": "Ein Samia"
+}
+]
+},
+"baal-tamar": {
+"lat": 31.8315,
+"lon": 35.24128,
+"conf": "disputed",
+"name": "Baal-tamar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.87993,
+"lon": 35.21752,
+"name": "Khirbet Atara"
+},
+{
+"lat": 31.82131,
+"lon": 35.23547,
+"name": "Sahre al Gibiyeh"
+}
+]
+},
+"baal-zephon": {
+"lat": 30.86056,
+"lon": 32.17139,
+"conf": "disputed",
+"name": "Baal-zephon",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.21373,
+"lon": 33.067,
+"name": "Zahr al Qais"
+},
+{
+"lat": 31.04472,
+"lon": 32.66,
+"name": "Al Mahamdiyah"
+}
+]
+},
+"baalah": {
+"lat": 31.14205,
+"lon": 34.91217,
+"conf": "disputed",
+"name": "Baalah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.99104,
+"lon": 34.91132,
+"name": "Beer Yeroham"
+},
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+}
+]
+},
+"baalath": {
+"lat": 31.83851,
+"lon": 34.78225,
+"conf": "identified",
+"name": "Baalath",
+"types": [
+"hill",
+"mountain",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.84139,
+"lon": 34.78583,
+"name": "Mughar"
+},
+{
+"lat": 31.80896,
+"lon": 35.10378,
+"name": "Deir el Azar"
+}
+]
+},
+"baalath-beer": {
+"lat": 30.99104,
+"lon": 34.91132,
+"conf": "disputed",
+"name": "Baalath-beer",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+},
+{
+"lat": 31.21229,
+"lon": 34.95828,
+"name": "Tel Masos"
+}
+]
+},
+"baalbec": {
+"lat": 34.0072,
+"lon": 36.2039,
+"conf": "identified",
+"name": "Baalbek",
+"types": [],
+"source": "curated"
+},
+"baale-of-judah": {
+"lat": 31.80896,
+"lon": 35.10378,
+"conf": "identified",
+"name": "Baale-judah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"babel-tower-of": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Babel",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"babylon": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Babel",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"babylon-kingdom-of": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Babel",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"baca": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "disputed",
+"name": "Valley of Baca",
+"types": [
+"special",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.7632,
+"lon": 35.21912,
+"name": "Valley of Rephaim"
+},
+{
+"lat": 31.64016,
+"lon": 35.20236,
+"name": "El Baq’a"
+}
+]
+},
+"bahurim": {
+"lat": 31.7912,
+"lon": 35.25694,
+"conf": "disputed",
+"name": "Bahurim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79154,
+"lon": 35.2645,
+"name": "Khirbet Buqei Dan"
+}
+]
+},
+"balah": {
+"lat": 31.14205,
+"lon": 34.91217,
+"conf": "disputed",
+"name": "Balah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.99104,
+"lon": 34.91132,
+"name": "Beer Yeroham"
+},
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+}
+]
+},
+"bamoth": {
+"lat": 31.73179,
+"lon": 35.74089,
+"conf": "disputed",
+"name": "Bamoth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.59131,
+"lon": 35.68742,
+"name": "Jebel Ataruz"
+},
+{
+"lat": 31.60634,
+"lon": 35.76126,
+"name": "Khirbet Libb"
+}
+]
+},
+"bamoth-baal": {
+"lat": 31.73179,
+"lon": 35.74089,
+"conf": "disputed",
+"name": "Bamoth-baal",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.59131,
+"lon": 35.68742,
+"name": "Jebel Ataruz"
+},
+{
+"lat": 31.60634,
+"lon": 35.76126,
+"name": "Khirbet Libb"
+}
+]
+},
+"bashan": {
+"lat": 32.78111,
+"lon": 35.93472,
+"conf": "identified",
+"name": "Bashan",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"bashan-havoth-jair": {
+"lat": 32.5876,
+"lon": 35.7256,
+"conf": "disputed",
+"name": "Havvoth-jair",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"bashan-hill-of": {
+"lat": 32.66667,
+"lon": 36.73333,
+"conf": "disputed",
+"name": "Mount Bashan",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.4,
+"lon": 35.85,
+"name": "Mount Hermon"
+},
+{
+"lat": 32.16857,
+"lon": 35.23654,
+"name": "Jebel Salman"
+}
+]
+},
+"bath-rabbim": {
+"lat": 31.80081,
+"lon": 35.80906,
+"conf": "disputed",
+"name": "Bath-rabbim",
+"types": [
+"gate"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.71663,
+"lon": 35.85684,
+"name": "Tall Jalul"
+},
+{
+"lat": 31.8686,
+"lon": 35.8881,
+"name": "Tall al Umayri"
+}
+]
+},
+"bealoth": {
+"lat": 30.99104,
+"lon": 34.91132,
+"conf": "disputed",
+"name": "Bealoth",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.9929,
+"lon": 34.93972,
+"name": "Nahal Avnon Fortress"
+},
+{
+"lat": 31.21229,
+"lon": 34.95828,
+"name": "Tel Masos"
+}
+]
+},
+"beautiful-gate": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Beautiful Gate",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"beer": {
+"lat": 31.57194,
+"lon": 35.89333,
+"conf": "disputed",
+"name": "Beer",
+"types": [
+"campsite"
+],
+"source": "openbible"
+},
+"beer-elim": {
+"lat": 31.57194,
+"lon": 35.89333,
+"conf": "disputed",
+"name": "Beer-elim",
+"types": [
+"campsite",
+"settlement"
+],
+"source": "openbible"
+},
+"beer-lahai-roi": {
+"lat": 30.6875,
+"lon": 34.33333,
+"conf": "disputed",
+"name": "Beer-lahai-roi",
+"types": [
+"well"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.097,
+"lon": 34.652,
+"name": "Haluza"
+},
+{
+"lat": 30.38241,
+"lon": 34.17313,
+"name": "Jebel Umm el Bared"
+}
+]
+},
+"beeroth": {
+"lat": 31.82383,
+"lon": 35.1872,
+"conf": "disputed",
+"name": "Beeroth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.83273,
+"lon": 35.18015,
+"name": "Nabi Samwil"
+}
+]
+},
+"beeroth-of-the-children-of-jaakan": {
+"lat": 30.79176,
+"lon": 34.47252,
+"conf": "disputed",
+"name": "Beeroth Bene-jaakan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"beersheba": {
+"lat": 31.24472,
+"lon": 34.84083,
+"conf": "identified",
+"name": "Beersheba",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.23722,
+"lon": 34.79308,
+"name": "Bir es Seba"
+}
+]
+},
+"bela": {
+"lat": 31.0369,
+"lon": 35.48766,
+"conf": "disputed",
+"name": "Zoar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.20849,
+"lon": 35.44922,
+"name": "south of the Lisan"
+},
+{
+"lat": 31.795,
+"lon": 35.59528,
+"name": "north of the Dead Sea"
+}
+]
+},
+"bene-jaakan": {
+"lat": 30.79176,
+"lon": 34.47252,
+"conf": "disputed",
+"name": "Bene-jaakan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"berachah": {
+"lat": 31.60894,
+"lon": 35.17164,
+"conf": "disputed",
+"name": "Valley of Beracah",
+"types": [
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.64328,
+"lon": 35.14302,
+"name": "Khirbet Bereikut"
+},
+{
+"lat": 31.64016,
+"lon": 35.20236,
+"name": "El Baq’a"
+}
+]
+},
+"berea": {
+"lat": 40.51833,
+"lon": 22.2,
+"conf": "identified",
+"name": "Berea",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"besor": {
+"lat": 31.46423,
+"lon": 34.37568,
+"conf": "identified",
+"name": "Besor",
+"types": [
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.3986,
+"lon": 34.4362,
+"name": "Nahal Gerar"
+}
+]
+},
+"betah": {
+"lat": 34.36389,
+"lon": 36.41556,
+"conf": "disputed",
+"name": "Tibhath",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 34.00889,
+"lon": 36.14528,
+"name": "Beqaa Valley"
+},
+{
+"lat": 33.81848,
+"lon": 35.95848,
+"name": "Tell Dalhamiya"
+}
+]
+},
+"beth-anath": {
+"lat": 33.20028,
+"lon": 35.43306,
+"conf": "disputed",
+"name": "Beth-anath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.92849,
+"lon": 35.26779,
+"name": "Bi’ina"
+},
+{
+"lat": 33.35,
+"lon": 35.95,
+"name": "Hinah"
+}
+]
+},
+"beth-anoth": {
+"lat": 31.56209,
+"lon": 35.12622,
+"conf": "identified",
+"name": "Beth-anoth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5675,
+"lon": 35.14278,
+"name": "Khirbet Ras at Tawil"
+}
+]
+},
+"beth-arabah": {
+"lat": 31.84578,
+"lon": 35.50172,
+"conf": "disputed",
+"name": "Beth-arabah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77226,
+"lon": 35.51205,
+"name": "Rujm el Bahr"
+},
+{
+"lat": 31.79044,
+"lon": 35.44347,
+"name": "Tell Muhalhal"
+}
+]
+},
+"beth-aram": {
+"lat": 31.81926,
+"lon": 35.67188,
+"conf": "identified",
+"name": "Beth-haram",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82556,
+"lon": 35.64444,
+"name": "Tall er Rama"
+}
+]
+},
+"beth-arbel": {
+"lat": 32.55866,
+"lon": 35.84759,
+"conf": "identified",
+"name": "Beth-arbel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.81514,
+"lon": 35.48381,
+"name": "Horbat Arbel"
+}
+]
+},
+"beth-aven": {
+"lat": 31.86921,
+"lon": 35.26807,
+"conf": "disputed",
+"name": "Beth-aven",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.89583,
+"lon": 35.25417,
+"name": "Burqa"
+},
+{
+"lat": 31.89751,
+"lon": 35.22862,
+"name": "Khirbet Nisieh"
+}
+]
+},
+"beth-barah": {
+"lat": 32.1,
+"lon": 35.52,
+"conf": "disputed",
+"name": "Beth-barah",
+"types": [
+"ford",
+"region",
+"settlement",
+"special",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.83711,
+"lon": 35.5503,
+"name": "Al Maghtas"
+},
+{
+"lat": 32.85203,
+"lon": 36.19934,
+"name": "Raphana"
+}
+]
+},
+"beth-car": {
+"lat": 31.895,
+"lon": 35.08361,
+"conf": "disputed",
+"name": "Beth-car",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76448,
+"lon": 35.15945,
+"name": "Ein Karim"
+}
+]
+},
+"beth-dagon": {
+"lat": 31.98358,
+"lon": 34.80862,
+"conf": "disputed",
+"name": "Beth-dagon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.52403,
+"lon": 34.82719,
+"name": "Tel Haraqim"
+},
+{
+"lat": 32.00351,
+"lon": 34.82926,
+"name": "Bayt Dajan"
+}
+]
+},
+"beth-diblathaim": {
+"lat": 31.63873,
+"lon": 35.82658,
+"conf": "disputed",
+"name": "Beth-diblathaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60634,
+"lon": 35.76126,
+"name": "Khirbet Libb"
+},
+{
+"lat": 31.61922,
+"lon": 35.79365,
+"name": "Duleilat el Gharbiyeh"
+}
+]
+},
+"beth-gamul": {
+"lat": 31.4835,
+"lon": 35.89991,
+"conf": "identified",
+"name": "Beth-gamul",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"beth-gilgal": {
+"lat": 31.88188,
+"lon": 35.45997,
+"conf": "disputed",
+"name": "Beth-gilgal",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.15993,
+"lon": 35.51549,
+"name": "Bedhat esh Sha’ab"
+},
+{
+"lat": 32.24925,
+"lon": 35.3707,
+"name": "El ’Unuq"
+}
+]
+},
+"beth-haccerem": {
+"lat": 31.7399,
+"lon": 35.2169,
+"conf": "identified",
+"name": "Beth-haccherem",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76448,
+"lon": 35.15945,
+"name": "Ein Karim"
+},
+{
+"lat": 31.66583,
+"lon": 35.24139,
+"name": "Herodium"
+}
+]
+},
+"beth-horon": {
+"lat": 31.895,
+"lon": 35.08361,
+"conf": "identified",
+"name": "Beth-horon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"beth-jeshimoth": {
+"lat": 31.78255,
+"lon": 35.62125,
+"conf": "identified",
+"name": "Beth-jeshimoth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79355,
+"lon": 35.56333,
+"name": "Khirbet Suweimeh"
+}
+]
+},
+"beth-le-aphrah": {
+"lat": 31.55659,
+"lon": 35.03355,
+"conf": "disputed",
+"name": "Beth-le-aphrah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.56071,
+"lon": 34.85343,
+"name": "Wadi el Ghafar"
+},
+{
+"lat": 31.92278,
+"lon": 35.24139,
+"name": "Beitin"
+}
+]
+},
+"beth-peor": {
+"lat": 31.77702,
+"lon": 35.7385,
+"conf": "disputed",
+"name": "Beth-peor",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79846,
+"lon": 35.72238,
+"name": "Khirbet el Muhatta"
+},
+{
+"lat": 31.81926,
+"lon": 35.67188,
+"name": "Tall Iktanu"
+}
+]
+},
+"beth-phage": {
+"lat": 31.77762,
+"lon": 35.25084,
+"conf": "identified",
+"name": "Bethphage",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.7625,
+"lon": 35.26583,
+"name": "Abu Dis"
+},
+{
+"lat": 31.77166,
+"lon": 35.2559,
+"name": "Al Eizariya"
+}
+]
+},
+"beth-shean": {
+"lat": 32.50361,
+"lon": 35.50306,
+"conf": "identified",
+"name": "Beth-shan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"beth-shemesh": {
+"lat": 31.75062,
+"lon": 34.97474,
+"conf": "identified",
+"name": "Beth-shemesh",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"beth-tappuah": {
+"lat": 31.53856,
+"lon": 35.04622,
+"conf": "identified",
+"name": "Beth-tappuah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"bethabara": {
+"lat": 31.83711,
+"lon": 35.5503,
+"conf": "disputed",
+"name": "Bethany",
+"types": [
+"ford",
+"region",
+"settlement",
+"special",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.85203,
+"lon": 36.19934,
+"name": "Raphana"
+},
+{
+"lat": 31.77166,
+"lon": 35.2559,
+"name": "Al Eizariya"
+}
+]
+},
+"bethany": {
+"lat": 31.77166,
+"lon": 35.2559,
+"conf": "identified",
+"name": "Bethany",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"bethel": {
+"lat": 31.92278,
+"lon": 35.24139,
+"conf": "identified",
+"name": "Bethel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.92187,
+"lon": 35.24548,
+"name": "Burj Beitin"
+}
+]
+},
+"bether": {
+"lat": 31.73,
+"lon": 35.13556,
+"conf": "disputed",
+"name": "Bether",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible"
+},
+"bethesda": {
+"lat": 31.78139,
+"lon": 35.23583,
+"conf": "identified",
+"name": "Bethesda",
+"types": [
+"pool"
+],
+"source": "openbible"
+},
+"bethlehem": {
+"lat": 31.70431,
+"lon": 35.20764,
+"conf": "identified",
+"name": "Bethlehem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"bethsaida": {
+"lat": 32.91038,
+"lon": 35.63096,
+"conf": "disputed",
+"name": "Bethsaida",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.89353,
+"lon": 35.619,
+"name": "Al Araj"
+},
+{
+"lat": 32.88422,
+"lon": 35.63077,
+"name": "El Mess’adiyye"
+}
+]
+},
+"bethzur": {
+"lat": 31.58938,
+"lon": 35.09416,
+"conf": "identified",
+"name": "Beth-zur",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"bezek": {
+"lat": 32.36884,
+"lon": 35.39736,
+"conf": "disputed",
+"name": "Bezek",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.88032,
+"lon": 34.96492,
+"name": "Tell Bezqa"
+},
+{
+"lat": 32.35417,
+"lon": 35.3725,
+"name": "Khirbet Salhab"
+}
+]
+},
+"bezer": {
+"lat": 31.78603,
+"lon": 35.90168,
+"conf": "disputed",
+"name": "Bezer",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.71663,
+"lon": 35.85684,
+"name": "Tall Jalul"
+}
+]
+},
+"bithynia": {
+"lat": 40.5,
+"lon": 31.0,
+"conf": "identified",
+"name": "Bithynia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"bochim": {
+"lat": 31.92278,
+"lon": 35.24139,
+"conf": "identified",
+"name": "Bochim",
+"types": [
+"settlement",
+"tree"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.92187,
+"lon": 35.24548,
+"name": "Burj Beitin"
+}
+]
+},
+"bozrah": {
+"lat": 30.74584,
+"lon": 35.60392,
+"conf": "identified",
+"name": "Bozrah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"cabul": {
+"lat": 32.86833,
+"lon": 35.21139,
+"conf": "disputed",
+"name": "Cabul",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.8792,
+"lon": 35.22852,
+"name": "Rosh Zayit"
+}
+]
+},
+"caesarea": {
+"lat": 32.5,
+"lon": 34.89167,
+"conf": "identified",
+"name": "Caesarea",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"caesarea-philippi": {
+"lat": 33.24611,
+"lon": 35.69333,
+"conf": "identified",
+"name": "Caesarea Philippi",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"calah": {
+"lat": 36.09806,
+"lon": 43.32889,
+"conf": "identified",
+"name": "Calah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"calneh": {
+"lat": 32.12611,
+"lon": 45.23083,
+"conf": "disputed",
+"name": "Calneh",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.54022,
+"lon": 44.60428,
+"name": "Hursagkalamma"
+},
+{
+"lat": 36.29765,
+"lon": 36.54539,
+"name": "Chatal Huyuk"
+}
+]
+},
+"camon": {
+"lat": 32.5876,
+"lon": 35.7256,
+"conf": "disputed",
+"name": "Kamon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.59583,
+"lon": 35.70756,
+"name": "Umm el Ghozlan"
+},
+{
+"lat": 32.75616,
+"lon": 36.61899,
+"name": "Qanawat"
+}
+]
+},
+"cana": {
+"lat": 32.8222,
+"lon": 35.30269,
+"conf": "identified",
+"name": "Cana",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.74647,
+"lon": 35.33921,
+"name": "Kefr Kenna"
+},
+{
+"lat": 32.71313,
+"lon": 35.31996,
+"name": "Ain Qana"
+}
+]
+},
+"canaan": {
+"lat": 32.76667,
+"lon": 35.33333,
+"conf": "identified",
+"name": "Canaan",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"canaan-the-land-of": {
+"lat": 32.76667,
+"lon": 35.33333,
+"conf": "identified",
+"name": "Canaan",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"canneh": {
+"lat": 36.29257,
+"lon": 37.20553,
+"conf": "disputed",
+"name": "Canneh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.2475,
+"lon": 36.37639,
+"name": "Tell Tayinat"
+},
+{
+"lat": 14.025,
+"lon": 48.34194,
+"name": "Bir Ali"
+}
+]
+},
+"capernaum": {
+"lat": 32.88111,
+"lon": 35.575,
+"conf": "identified",
+"name": "Capernaum",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.86472,
+"lon": 35.53611,
+"name": "Khirbet Minyeh"
+}
+]
+},
+"caphtor": {
+"lat": 35.30972,
+"lon": 24.89333,
+"conf": "identified",
+"name": "Caphtor",
+"types": [
+"island",
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 38.67056,
+"lon": 34.83917,
+"name": "Cappadocia"
+},
+{
+"lat": 36.91303,
+"lon": 34.89206,
+"name": "Tarsus"
+}
+]
+},
+"caphtor-caphtorim": {
+"lat": 35.30972,
+"lon": 24.89333,
+"conf": "identified",
+"name": "Caphtor",
+"types": [
+"island",
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 38.67056,
+"lon": 34.83917,
+"name": "Cappadocia"
+},
+{
+"lat": 36.91303,
+"lon": 34.89206,
+"name": "Tarsus"
+}
+]
+},
+"cappadocia": {
+"lat": 38.67056,
+"lon": 34.83917,
+"conf": "identified",
+"name": "Cappadocia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"carchemish": {
+"lat": 36.82972,
+"lon": 38.015,
+"conf": "identified",
+"name": "Carchemish",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"carmel": {
+"lat": 31.42288,
+"lon": 35.13295,
+"conf": "identified",
+"name": "Carmel",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"casiphia": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Casiphia",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.09361,
+"lon": 44.58083,
+"name": "Ctesiphon"
+}
+]
+},
+"cauda": {
+"lat": 34.83333,
+"lon": 24.08333,
+"conf": "identified",
+"name": "Cauda",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"cenchrea": {
+"lat": 37.88434,
+"lon": 22.99682,
+"conf": "identified",
+"name": "Cenchreae",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"cesarea": {
+"lat": 32.5,
+"lon": 34.89167,
+"conf": "identified",
+"name": "Caesarea",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"chaldea": {
+"lat": 30.96222,
+"lon": 46.10444,
+"conf": "identified",
+"name": "Chaldea",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"charran": {
+"lat": 36.86444,
+"lon": 39.03278,
+"conf": "identified",
+"name": "Haran",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"chebar": {
+"lat": 32.12694,
+"lon": 45.23083,
+"conf": "identified",
+"name": "Chebar",
+"types": [
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 35.1303,
+"lon": 40.42728,
+"name": "Khabur River"
+}
+]
+},
+"chephirah": {
+"lat": 31.8309,
+"lon": 35.10677,
+"conf": "identified",
+"name": "Chephirah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"cherith": {
+"lat": 32.39472,
+"lon": 35.59139,
+"conf": "disputed",
+"name": "Cherith",
+"types": [
+"settlement",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8443,
+"lon": 35.4143,
+"name": "Wadi Qelt"
+},
+{
+"lat": 32.02819,
+"lon": 35.44124,
+"name": "Khirbet Fasayil"
+}
+]
+},
+"cherith-the-brook": {
+"lat": 32.39472,
+"lon": 35.59139,
+"conf": "disputed",
+"name": "Cherith",
+"types": [
+"settlement",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8443,
+"lon": 35.4143,
+"name": "Wadi Qelt"
+},
+{
+"lat": 32.02819,
+"lon": 35.44124,
+"name": "Khirbet Fasayil"
+}
+]
+},
+"chesalon": {
+"lat": 31.78111,
+"lon": 35.05111,
+"conf": "identified",
+"name": "Chesalon",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible"
+},
+"chesil": {
+"lat": 31.32731,
+"lon": 34.87847,
+"conf": "disputed",
+"name": "Chesil",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.34495,
+"lon": 35.12438,
+"name": "Khirbet el Qaryatein"
+},
+{
+"lat": 31.58938,
+"lon": 35.09416,
+"name": "Khirbet et Tubeiqa"
+}
+]
+},
+"chesulloth": {
+"lat": 32.68337,
+"lon": 35.32419,
+"conf": "identified",
+"name": "Chesulloth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"chezib": {
+"lat": 31.64207,
+"lon": 34.95302,
+"conf": "disputed",
+"name": "Chezib",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.69013,
+"lon": 35.00328,
+"name": "Ain Kezbeh"
+}
+]
+},
+"chilmad": {
+"lat": 34.8065,
+"lon": 48.51625,
+"conf": "disputed",
+"name": "Chilmad",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.38555,
+"lon": 36.68893,
+"name": "Tell Jindaris"
+},
+{
+"lat": 33.64392,
+"lon": 42.82314,
+"name": "Hit"
+}
+]
+},
+"chinnereth": {
+"lat": 32.86944,
+"lon": 35.53833,
+"conf": "identified",
+"name": "Chinnereth",
+"types": [
+"body of water",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.81891,
+"lon": 35.59003,
+"name": "Sea of Galilee"
+}
+]
+},
+"chios": {
+"lat": 38.3725,
+"lon": 26.1375,
+"conf": "identified",
+"name": "Chios",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"chor-ashan": {
+"lat": 31.28137,
+"lon": 34.7974,
+"conf": "disputed",
+"name": "Bor-ashan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.4558,
+"lon": 34.9098,
+"name": "Tell Beit Mirsim"
+},
+{
+"lat": 31.63336,
+"lon": 34.91661,
+"name": "Tel Goded"
+}
+]
+},
+"chorazin": {
+"lat": 32.91139,
+"lon": 35.56389,
+"conf": "identified",
+"name": "Chorazin",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"chozeba": {
+"lat": 31.64207,
+"lon": 34.95302,
+"conf": "disputed",
+"name": "Cozeba",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60991,
+"lon": 35.14515,
+"name": "Khirbet ed Dilb"
+},
+{
+"lat": 31.60089,
+"lon": 35.14779,
+"name": "Khirbet Kuweiziba"
+}
+]
+},
+"chun": {
+"lat": 34.25972,
+"lon": 36.42361,
+"conf": "disputed",
+"name": "Cun",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 34.08029,
+"lon": 36.21335,
+"name": "Tell Maqne"
+},
+{
+"lat": 33.93528,
+"lon": 36.15083,
+"name": "Brital"
+}
+]
+},
+"cilicia": {
+"lat": 36.91303,
+"lon": 34.89206,
+"conf": "identified",
+"name": "Cilicia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"cinnereth": {
+"lat": 32.86944,
+"lon": 35.53833,
+"conf": "identified",
+"name": "Chinnereth",
+"types": [
+"body of water",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.81891,
+"lon": 35.59003,
+"name": "Sea of Galilee"
+}
+]
+},
+"cnidus": {
+"lat": 36.68583,
+"lon": 27.375,
+"conf": "identified",
+"name": "Cnidus",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"coele-syria": {
+"lat": 33.43,
+"lon": 36.6475,
+"conf": "region",
+"name": "Coele-Syria",
+"types": [
+"region"
+],
+"source": "region",
+"region": "empire-aram-damascus"
+},
+"colossae": {
+"lat": 37.78664,
+"lon": 29.25994,
+"conf": "identified",
+"name": "Colossae",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"coos": {
+"lat": 36.81528,
+"lon": 27.11028,
+"conf": "identified",
+"name": "Cos",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"corinth": {
+"lat": 37.90579,
+"lon": 22.87874,
+"conf": "identified",
+"name": "Corinth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"crete": {
+"lat": 35.30972,
+"lon": 24.89333,
+"conf": "identified",
+"name": "Crete",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"cushan": {
+"lat": 28.4947,
+"lon": 35.0122,
+"conf": "identified",
+"name": "Cushan",
+"types": [
+"region",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.86444,
+"lon": 39.03278,
+"name": "Harran"
+},
+{
+"lat": 16.93514,
+"lon": 33.75075,
+"name": "Meroe"
+}
+]
+},
+"cuthah": {
+"lat": 32.76003,
+"lon": 44.61286,
+"conf": "identified",
+"name": "Cuth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"cyprus": {
+"lat": 35.0,
+"lon": 33.0,
+"conf": "identified",
+"name": "Cyprus",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"cyrene": {
+"lat": 32.82095,
+"lon": 21.85123,
+"conf": "identified",
+"name": "Cyrene",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"daberath": {
+"lat": 32.69728,
+"lon": 35.37753,
+"conf": "identified",
+"name": "Daberath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.38889,
+"lon": 35.38472,
+"name": "Raba"
+},
+{
+"lat": 32.5125,
+"lon": 35.3633,
+"name": "Arabbuna"
+}
+]
+},
+"dalmanutha": {
+"lat": 32.82707,
+"lon": 35.51355,
+"conf": "disputed",
+"name": "Dalmanutha",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.86044,
+"lon": 35.64637,
+"name": "eastern side of the Sea of Galilee"
+},
+{
+"lat": 32.87366,
+"lon": 35.54897,
+"name": "Tabgha"
+}
+]
+},
+"dalmatia": {
+"lat": 43.81276,
+"lon": 16.21876,
+"conf": "identified",
+"name": "Dalmatia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"damascus": {
+"lat": 33.51111,
+"lon": 36.30639,
+"conf": "identified",
+"name": "Damascus",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dan-jaan": {
+"lat": 33.249,
+"lon": 35.652,
+"conf": "identified",
+"name": "Dan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dannah": {
+"lat": 31.3698,
+"lon": 34.995,
+"conf": "disputed",
+"name": "Dannah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.4306,
+"lon": 34.9861,
+"name": "Deir ed Domeh"
+},
+{
+"lat": 31.55861,
+"lon": 34.97611,
+"name": "Idhna"
+}
+]
+},
+"david-city-of": {
+"lat": 31.77361,
+"lon": 35.23556,
+"conf": "identified",
+"name": "City of David",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dead-sea": {
+"lat": 31.5,
+"lon": 35.5,
+"conf": "identified",
+"name": "Salt Sea",
+"types": [
+"body of water"
+],
+"source": "openbible"
+},
+"debir": {
+"lat": 31.43209,
+"lon": 35.01485,
+"conf": "identified",
+"name": "Debir",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.47857,
+"lon": 35.03264,
+"name": "Khirbet Tarrama"
+},
+{
+"lat": 31.4558,
+"lon": 34.9098,
+"name": "Tell Beit Mirsim"
+}
+]
+},
+"decapolis": {
+"lat": 32.71667,
+"lon": 35.8,
+"conf": "identified",
+"name": "Decapolis",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"decision-valley-of": {
+"lat": 31.78028,
+"lon": 35.24,
+"conf": "identified",
+"name": "Valley of Decision",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"derbe": {
+"lat": 37.34857,
+"lon": 33.36145,
+"conf": "identified",
+"name": "Derbe",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 37.3188,
+"lon": 33.3948,
+"name": "Devri Şehri"
+},
+{
+"lat": 37.28196,
+"lon": 32.77766,
+"name": "Güdelisin"
+}
+]
+},
+"destruction-city-of": {
+"lat": 30.12944,
+"lon": 31.3075,
+"conf": "identified",
+"name": "City of Destruction",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.28889,
+"lon": 31.36056,
+"name": "Tell el Yahudiye"
+}
+]
+},
+"diblathaim": {
+"lat": 31.63873,
+"lon": 35.82658,
+"conf": "disputed",
+"name": "Beth-diblathaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60634,
+"lon": 35.76126,
+"name": "Khirbet Libb"
+},
+{
+"lat": 31.61922,
+"lon": 35.79365,
+"name": "Duleilat el Gharbiyeh"
+}
+]
+},
+"dibon": {
+"lat": 31.50224,
+"lon": 35.77657,
+"conf": "identified",
+"name": "Dibon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dimnah": {
+"lat": 32.78806,
+"lon": 35.31056,
+"conf": "disputed",
+"name": "Dimnah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.78892,
+"lon": 35.29321,
+"name": "Horbat Rumah"
+},
+{
+"lat": 32.79972,
+"lon": 35.45972,
+"name": "Qarn Hattin"
+}
+]
+},
+"dinhabah": {
+"lat": 31.79846,
+"lon": 35.72238,
+"conf": "disputed",
+"name": "Dinhabah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.35657,
+"lon": 35.75034,
+"name": "Dannea"
+}
+]
+},
+"dizahab": {
+"lat": 31.8066,
+"lon": 36.05075,
+"conf": "disputed",
+"name": "Dizahab",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.49306,
+"lon": 34.50472,
+"name": "Dahab"
+}
+]
+},
+"dophkah": {
+"lat": 29.03673,
+"lon": 33.45941,
+"conf": "disputed",
+"name": "Dophkah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dor": {
+"lat": 32.61743,
+"lon": 34.91636,
+"conf": "identified",
+"name": "Dor",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dothan": {
+"lat": 32.41353,
+"lon": 35.23986,
+"conf": "identified",
+"name": "Dothan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"dragon-well": {
+"lat": 31.7686,
+"lon": 35.2358,
+"conf": "disputed",
+"name": "En-rogel / the Dragon Well (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"dung-gate": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Dung Gate",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"dura": {
+"lat": 32.32,
+"lon": 44.50167,
+"conf": "disputed",
+"name": "Dura",
+"types": [
+"district in settlement",
+"natural area",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.54333,
+"lon": 44.42222,
+"name": "Babylon"
+},
+{
+"lat": 30.77444,
+"lon": 46.36556,
+"name": "Tall al Lahm"
+}
+]
+},
+"east-gate": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "East Gate",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"east-sea": {
+"lat": 31.5,
+"lon": 35.47,
+"conf": "identified",
+"name": "Dead Sea (the eastern sea)",
+"types": [],
+"source": "curated"
+},
+"ebal": {
+"lat": 32.234,
+"lon": 35.2733,
+"conf": "identified",
+"name": "Mount Ebal",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"ebal-mount": {
+"lat": 32.234,
+"lon": 35.2733,
+"conf": "identified",
+"name": "Mount Ebal",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"eben-ezer": {
+"lat": 32.1046,
+"lon": 34.9645,
+"conf": "identified",
+"name": "Ebenezer",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.08084,
+"lon": 34.95694,
+"name": "Majdel Yaba"
+}
+]
+},
+"ebronah": {
+"lat": 29.67291,
+"lon": 35.01392,
+"conf": "disputed",
+"name": "Abronah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.53068,
+"lon": 35.0,
+"name": "Aqaba"
+},
+{
+"lat": 29.57148,
+"lon": 34.96352,
+"name": "Eilat"
+}
+]
+},
+"ecbatana": {
+"lat": 34.8065,
+"lon": 48.51625,
+"conf": "identified",
+"name": "Ecbatana",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"edar": {
+"lat": 31.70731,
+"lon": 35.23011,
+"conf": "identified",
+"name": "Eder",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77361,
+"lon": 35.23556,
+"name": "City of David"
+},
+{
+"lat": 31.6793,
+"lon": 35.15464,
+"name": "Khirbet el Bira"
+}
+]
+},
+"eden": {
+"lat": 36.7014,
+"lon": 38.0865,
+"conf": "identified",
+"name": "Beth-eden",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"eder": {
+"lat": 31.70731,
+"lon": 35.23011,
+"conf": "identified",
+"name": "Eder",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77361,
+"lon": 35.23556,
+"name": "City of David"
+},
+{
+"lat": 31.6793,
+"lon": 35.15464,
+"name": "Khirbet el Bira"
+}
+]
+},
+"edom": {
+"lat": 30.74584,
+"lon": 35.60392,
+"conf": "identified",
+"name": "Edom",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"edrei": {
+"lat": 32.62528,
+"lon": 36.10611,
+"conf": "identified",
+"name": "Edrei",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"eglaim": {
+"lat": 31.18085,
+"lon": 35.71263,
+"conf": "disputed",
+"name": "Eglaim",
+"types": [
+"settlement",
+"special",
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.26895,
+"lon": 35.51674,
+"name": "Mazra"
+},
+{
+"lat": 31.28064,
+"lon": 35.53358,
+"name": "Mutraba"
+}
+]
+},
+"egypt": {
+"lat": 30.12944,
+"lon": 31.3075,
+"conf": "identified",
+"name": "Egypt",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ekron": {
+"lat": 31.7775,
+"lon": 34.85194,
+"conf": "identified",
+"name": "Ekron",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"el-bethel": {
+"lat": 31.92278,
+"lon": 35.24139,
+"conf": "identified",
+"name": "El-bethel",
+"types": [
+"altar"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.92187,
+"lon": 35.24548,
+"name": "Burj Beitin"
+}
+]
+},
+"el-paran": {
+"lat": 29.53068,
+"lon": 35.0,
+"conf": "disputed",
+"name": "El-paran",
+"types": [
+"island",
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.54718,
+"lon": 34.98026,
+"name": "Tell el Kheleifeh"
+},
+{
+"lat": 30.212,
+"lon": 35.5283,
+"name": "Ayl"
+}
+]
+},
+"elah": {
+"lat": 31.67542,
+"lon": 34.99802,
+"conf": "identified",
+"name": "Valley of Elah",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"elam": {
+"lat": 32.18922,
+"lon": 48.25778,
+"conf": "identified",
+"name": "Elam",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"elath": {
+"lat": 29.53068,
+"lon": 35.0,
+"conf": "identified",
+"name": "Elath",
+"types": [
+"island",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.54718,
+"lon": 34.98026,
+"name": "Tell el Kheleifeh"
+},
+{
+"lat": 29.46284,
+"lon": 34.86005,
+"name": "Jezirat Faraun"
+}
+]
+},
+"elath-eloth": {
+"lat": 29.53068,
+"lon": 35.0,
+"conf": "identified",
+"name": "Elath",
+"types": [
+"island",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.54718,
+"lon": 34.98026,
+"name": "Tell el Kheleifeh"
+},
+{
+"lat": 29.46284,
+"lon": 34.86005,
+"name": "Jezirat Faraun"
+}
+]
+},
+"elealeh": {
+"lat": 31.81931,
+"lon": 35.82832,
+"conf": "identified",
+"name": "Elealeh",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"elim": {
+"lat": 29.25472,
+"lon": 32.91583,
+"conf": "identified",
+"name": "Elim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.87694,
+"lon": 32.65833,
+"name": "Uyun Musa"
+},
+{
+"lat": 28.24168,
+"lon": 33.6222,
+"name": "El Tor"
+}
+]
+},
+"elkosh": {
+"lat": 33.12139,
+"lon": 35.33833,
+"conf": "disputed",
+"name": "Elkosh",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.59296,
+"lon": 34.89824,
+"name": "Tel Maresha"
+},
+{
+"lat": 32.88111,
+"lon": 35.575,
+"name": "Tell Hum"
+}
+]
+},
+"ellasar": {
+"lat": 35.45667,
+"lon": 43.2625,
+"conf": "disputed",
+"name": "Ellasar",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 38.67056,
+"lon": 34.83917,
+"name": "Cappadocia"
+},
+{
+"lat": 39.60611,
+"lon": 35.26139,
+"name": "Alishar Huyuk"
+}
+]
+},
+"eltekeh": {
+"lat": 31.8925,
+"lon": 34.76778,
+"conf": "disputed",
+"name": "Eltekeh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.85639,
+"lon": 34.86556,
+"name": "Tell Melat"
+},
+{
+"lat": 31.7775,
+"lon": 34.85194,
+"name": "Tel Miqne"
+}
+]
+},
+"emmaus": {
+"lat": 31.79289,
+"lon": 35.16419,
+"conf": "disputed",
+"name": "Emmaus",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8393,
+"lon": 34.98946,
+"name": "Emmaus Nicopolis"
+},
+{
+"lat": 31.83993,
+"lon": 35.13685,
+"name": "El Qubeibeh"
+}
+]
+},
+"en-eglaim": {
+"lat": 31.28064,
+"lon": 35.53358,
+"conf": "disputed",
+"name": "Eneglaim",
+"types": [
+"settlement",
+"special",
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.71444,
+"lon": 35.45333,
+"name": "Ain Feshkah"
+},
+{
+"lat": 31.82806,
+"lon": 35.51222,
+"name": "Ain Hajlah"
+}
+]
+},
+"en-gannim": {
+"lat": 31.74761,
+"lon": 34.96378,
+"conf": "disputed",
+"name": "En-gannim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.725,
+"lon": 34.97639,
+"name": "Beit Jimal"
+},
+{
+"lat": 31.70327,
+"lon": 35.00231,
+"name": "Khirbet Umm edh Dhiyab"
+}
+]
+},
+"en-hakkore": {
+"lat": 31.7488,
+"lon": 35.00101,
+"conf": "disputed",
+"name": "En-hakkore",
+"types": [
+"special",
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76372,
+"lon": 35.02579,
+"name": "Arak Ismain"
+},
+{
+"lat": 31.79541,
+"lon": 34.94916,
+"name": "Ayun Qara"
+}
+]
+},
+"en-rogel": {
+"lat": 31.7672,
+"lon": 35.23598,
+"conf": "identified",
+"name": "En-rogel",
+"types": [
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79813,
+"lon": 35.24803,
+"name": "Ain el Madauwerah"
+},
+{
+"lat": 31.77292,
+"lon": 35.23638,
+"name": "Gihon Spring"
+}
+]
+},
+"en-shemesh": {
+"lat": 31.77406,
+"lon": 35.27013,
+"conf": "identified",
+"name": "En-shemesh",
+"types": [
+"spring"
+],
+"source": "openbible"
+},
+"endor": {
+"lat": 32.64361,
+"lon": 35.39022,
+"conf": "identified",
+"name": "En-dor",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.55949,
+"lon": 35.21603,
+"name": "Tell Abu Qedeis"
+},
+{
+"lat": 32.51187,
+"lon": 35.26515,
+"name": "Khirbet Jadurah"
+}
+]
+},
+"engedi": {
+"lat": 31.45,
+"lon": 35.38333,
+"conf": "identified",
+"name": "Engedi",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ephes-dammim": {
+"lat": 31.68449,
+"lon": 35.05224,
+"conf": "identified",
+"name": "Ephes-dammim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.66791,
+"lon": 34.99327,
+"name": "Khirbet Beit Fasal"
+},
+{
+"lat": 31.6963,
+"lon": 34.9575,
+"name": "Khirbet Qeiyafa"
+}
+]
+},
+"ephesus": {
+"lat": 37.93912,
+"lon": 27.3407,
+"conf": "identified",
+"name": "Ephesus",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ephraim-gate-of": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Ephraim Gate",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"ephraim-in-the-wilderness": {
+"lat": 32.065,
+"lon": 35.2233,
+"conf": "region",
+"name": "Ephraim in the Wilderness",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-ephraim"
+},
+"ephraim-mount": {
+"lat": 31.95444,
+"lon": 35.30028,
+"conf": "disputed",
+"name": "Ephraim",
+"types": [
+"mountain",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79694,
+"lon": 35.14417,
+"name": "Al Qastal"
+}
+]
+},
+"ephraim-wood-of": {
+"lat": 31.95444,
+"lon": 35.30028,
+"conf": "disputed",
+"name": "Ephraim",
+"types": [
+"mountain",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79694,
+"lon": 35.14417,
+"name": "Al Qastal"
+}
+]
+},
+"ephratah": {
+"lat": 31.70431,
+"lon": 35.20764,
+"conf": "identified",
+"name": "Ephrathah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"esdraelon": {
+"lat": 32.59639,
+"lon": 35.24194,
+"conf": "identified",
+"name": "Valley of Jezreel",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"esek": {
+"lat": 31.4245,
+"lon": 34.6062,
+"conf": "disputed",
+"name": "Esek",
+"types": [
+"well"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.3986,
+"lon": 34.4362,
+"name": "Nahal Gerar"
+}
+]
+},
+"eshtaol": {
+"lat": 31.79773,
+"lon": 34.98597,
+"conf": "disputed",
+"name": "Eshtaol",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.7811,
+"lon": 35.0101,
+"name": "Eshtaol"
+},
+{
+"lat": 31.76733,
+"lon": 35.00144,
+"name": "Artuf"
+}
+]
+},
+"eshtemoa": {
+"lat": 31.40079,
+"lon": 35.06708,
+"conf": "identified",
+"name": "Eshtemoa",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"etam": {
+"lat": 31.76372,
+"lon": 35.02579,
+"conf": "identified",
+"name": "Etam",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.73484,
+"lon": 35.05297,
+"name": "Bayt Itab"
+},
+{
+"lat": 31.68478,
+"lon": 35.17884,
+"name": "Khirbet el Khokh"
+}
+]
+},
+"etham": {
+"lat": 30.86101,
+"lon": 32.35225,
+"conf": "disputed",
+"name": "Etham",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.5475,
+"lon": 31.96361,
+"name": "Tell er Retaba"
+},
+{
+"lat": 30.85,
+"lon": 32.31667,
+"name": "Al Qantarah"
+}
+]
+},
+"ethiopia": {
+"lat": 16.93514,
+"lon": 33.75075,
+"conf": "identified",
+"name": "Ethiopia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"euphrates": {
+"lat": 31.0043,
+"lon": 47.442,
+"conf": "identified",
+"name": "Euphrates",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"ezel": {
+"lat": 31.8575,
+"lon": 35.26111,
+"conf": "disputed",
+"name": "Ezel",
+"types": [
+"special",
+"stone heap"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82311,
+"lon": 35.23072,
+"name": "Tel el Ful"
+}
+]
+},
+"ezion-geber": {
+"lat": 29.46284,
+"lon": 34.86005,
+"conf": "disputed",
+"name": "Ezion-geber",
+"types": [
+"island",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.54718,
+"lon": 34.98026,
+"name": "Tell el Kheleifeh"
+},
+{
+"lat": 29.53068,
+"lon": 35.0,
+"name": "Aqaba"
+}
+]
+},
+"fair-havens": {
+"lat": 34.92969,
+"lon": 24.80031,
+"conf": "identified",
+"name": "Fair Havens",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"fountain-of-the-virgin": {
+"lat": 31.7736,
+"lon": 35.2364,
+"conf": "identified",
+"name": "Gihon Spring (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"fullers-field": {
+"lat": 31.7672,
+"lon": 35.23598,
+"conf": "disputed",
+"name": "Washer’s Field",
+"types": [
+"field"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77292,
+"lon": 35.23638,
+"name": "Gihon Spring"
+},
+{
+"lat": 31.79813,
+"lon": 35.24803,
+"name": "Ain el Madauwerah"
+}
+]
+},
+"gaash": {
+"lat": 32.00806,
+"lon": 35.10729,
+"conf": "identified",
+"name": "Gaash",
+"types": [
+"mountain",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9598,
+"lon": 35.092,
+"name": "Khirbet esh Shuna"
+}
+]
+},
+"gabbatha": {
+"lat": 31.77608,
+"lon": 35.22804,
+"conf": "identified",
+"name": "Gabbatha",
+"types": [
+"structure"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.78032,
+"lon": 35.23336,
+"name": "Convent of the Sisters of Zion"
+}
+]
+},
+"gadara": {
+"lat": 32.656,
+"lon": 35.67935,
+"conf": "identified",
+"name": "Gadara",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"gadarenes": {
+"lat": 32.656,
+"lon": 35.67935,
+"conf": "identified",
+"name": "Gadara",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"galatia": {
+"lat": 39.26667,
+"lon": 32.98333,
+"conf": "identified",
+"name": "Galatia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"galeed": {
+"lat": 32.11851,
+"lon": 35.77702,
+"conf": "disputed",
+"name": "Mizpah",
+"types": [
+"stone heap"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.49985,
+"lon": 36.01499,
+"name": "Tall er Rumeith"
+},
+{
+"lat": 32.13119,
+"lon": 35.76129,
+"name": "Khirbet er Rasuni"
+}
+]
+},
+"galilee": {
+"lat": 32.86944,
+"lon": 35.53833,
+"conf": "identified",
+"name": "Chinnereth",
+"types": [
+"body of water",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.81891,
+"lon": 35.59003,
+"name": "Sea of Galilee"
+}
+]
+},
+"galilee-sea-of": {
+"lat": 32.81891,
+"lon": 35.59003,
+"conf": "identified",
+"name": "Sea of Galilee",
+"types": [
+"body of water"
+],
+"source": "openbible"
+},
+"gallim": {
+"lat": 31.81544,
+"lon": 35.25078,
+"conf": "disputed",
+"name": "Gallim",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.84746,
+"lon": 35.236,
+"name": "Khirbet Erha"
+},
+{
+"lat": 31.76814,
+"lon": 34.86449,
+"name": "Jilya"
+}
+]
+},
+"gath": {
+"lat": 31.69972,
+"lon": 34.84694,
+"conf": "identified",
+"name": "Gath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.50259,
+"lon": 34.7583,
+"name": "Tel Nagila"
+},
+{
+"lat": 31.3912,
+"lon": 34.6816,
+"name": "Tell esh Sharia"
+}
+]
+},
+"gath-hepher": {
+"lat": 32.73806,
+"lon": 35.31972,
+"conf": "identified",
+"name": "Gath-hepher",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.73833,
+"lon": 35.32444,
+"name": "Mashhad"
+}
+]
+},
+"gath-rimmon": {
+"lat": 32.0917,
+"lon": 34.8075,
+"conf": "disputed",
+"name": "Gath-rimmon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.09944,
+"lon": 34.83694,
+"name": "Tel Zeton"
+},
+{
+"lat": 31.90302,
+"lon": 34.88994,
+"name": "Ras Abu Hamid"
+}
+]
+},
+"gaulanitis": {
+"lat": 32.78111,
+"lon": 35.93472,
+"conf": "identified",
+"name": "Golan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"gaza": {
+"lat": 31.504,
+"lon": 34.4644,
+"conf": "identified",
+"name": "Gaza",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"geba": {
+"lat": 31.8575,
+"lon": 35.26111,
+"conf": "identified",
+"name": "Geba",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82311,
+"lon": 35.23072,
+"name": "Tel el Ful"
+}
+]
+},
+"gebal": {
+"lat": 34.11917,
+"lon": 35.64583,
+"conf": "identified",
+"name": "Gebal",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"gebim": {
+"lat": 31.80752,
+"lon": 35.25758,
+"conf": "disputed",
+"name": "Gebim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.81319,
+"lon": 35.26187,
+"name": "Anata"
+},
+{
+"lat": 31.82014,
+"lon": 35.22322,
+"name": "Shufat"
+}
+]
+},
+"geder": {
+"lat": 31.63263,
+"lon": 35.09215,
+"conf": "disputed",
+"name": "Geder",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.3821,
+"lon": 34.6065,
+"name": "Tel Haror"
+},
+{
+"lat": 31.4558,
+"lon": 34.9098,
+"name": "Tell Beit Mirsim"
+}
+]
+},
+"gederah": {
+"lat": 31.6889,
+"lon": 34.99612,
+"conf": "disputed",
+"name": "Gederah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.63336,
+"lon": 34.91661,
+"name": "Tel Goded"
+},
+{
+"lat": 31.82294,
+"lon": 34.77774,
+"name": "Qatra"
+}
+]
+},
+"gedor": {
+"lat": 31.63263,
+"lon": 35.09215,
+"conf": "identified",
+"name": "Gedor",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"geliloth": {
+"lat": 31.79052,
+"lon": 35.32262,
+"conf": "disputed",
+"name": "Geliloth",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76492,
+"lon": 35.28876,
+"name": "El Khirbeh"
+},
+{
+"lat": 31.79239,
+"lon": 35.3363,
+"name": "Khan el Ahmar"
+}
+]
+},
+"gennesaret": {
+"lat": 32.86056,
+"lon": 35.50722,
+"conf": "identified",
+"name": "Gennesaret",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"gerar": {
+"lat": 31.3821,
+"lon": 34.6065,
+"conf": "identified",
+"name": "Gerar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.3912,
+"lon": 34.6816,
+"name": "Tell esh Sharia"
+},
+{
+"lat": 31.18386,
+"lon": 34.56705,
+"name": "Tell Tuweiyil"
+}
+]
+},
+"gergesa": {
+"lat": 32.82609,
+"lon": 35.65038,
+"conf": "identified",
+"name": "Gergesa",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"gerizim": {
+"lat": 32.19944,
+"lon": 35.27278,
+"conf": "identified",
+"name": "Mount Gerizim",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"geshur": {
+"lat": 32.76667,
+"lon": 35.7,
+"conf": "disputed",
+"name": "Geshur",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"gethsemane": {
+"lat": 31.77942,
+"lon": 35.23942,
+"conf": "identified",
+"name": "Gethsemane",
+"types": [
+"garden"
+],
+"source": "openbible"
+},
+"gezer": {
+"lat": 31.85917,
+"lon": 34.91917,
+"conf": "identified",
+"name": "Gezer",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"gibbethon": {
+"lat": 31.85639,
+"lon": 34.86556,
+"conf": "identified",
+"name": "Gibbethon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90302,
+"lon": 34.88994,
+"name": "Ras Abu Hamid"
+},
+{
+"lat": 31.85773,
+"lon": 34.8193,
+"name": "Aqir"
+}
+]
+},
+"gibeah": {
+"lat": 31.8575,
+"lon": 35.26111,
+"conf": "identified",
+"name": "Geba",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82311,
+"lon": 35.23072,
+"name": "Tel el Ful"
+}
+]
+},
+"gibeah-haaraloth": {
+"lat": 31.88188,
+"lon": 35.45997,
+"conf": "disputed",
+"name": "Gibeath-haaraloth",
+"types": [
+"hill"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.87172,
+"lon": 35.44456,
+"name": "Tell es Sultan"
+},
+{
+"lat": 32.15993,
+"lon": 35.51549,
+"name": "Bedhat esh Sha’ab"
+}
+]
+},
+"gibeah-of-judah": {
+"lat": 31.4478,
+"lon": 35.1022,
+"conf": "region",
+"name": "Gibeah of Judah",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-judah"
+},
+"gibeah-of-phinehas": {
+"lat": 32.065,
+"lon": 35.2233,
+"conf": "region",
+"name": "Gibeah of Phinehas",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-ephraim"
+},
+"gibeon": {
+"lat": 31.84745,
+"lon": 35.18335,
+"conf": "identified",
+"name": "Gibeon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"gihon": {
+"lat": 31.4653,
+"lon": 30.3667,
+"conf": "disputed",
+"name": "Gihon",
+"types": [
+"river",
+"special",
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77292,
+"lon": 35.23638,
+"name": "Gihon Spring"
+},
+{
+"lat": 31.7823,
+"lon": 47.8694,
+"name": "Karkheh River"
+}
+]
+},
+"gilboa": {
+"lat": 32.43389,
+"lon": 35.41444,
+"conf": "identified",
+"name": "Mount Gilboa",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"gilead": {
+"lat": 32.18702,
+"lon": 35.69211,
+"conf": "identified",
+"name": "Gilead",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"gilgal": {
+"lat": 31.88188,
+"lon": 35.45997,
+"conf": "disputed",
+"name": "Beth-gilgal",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.15993,
+"lon": 35.51549,
+"name": "Bedhat esh Sha’ab"
+},
+{
+"lat": 32.24925,
+"lon": 35.3707,
+"name": "El ’Unuq"
+}
+]
+},
+"giloh": {
+"lat": 31.43209,
+"lon": 35.01485,
+"conf": "disputed",
+"name": "Giloh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.40762,
+"lon": 34.9723,
+"name": "Dahriya"
+},
+{
+"lat": 31.43441,
+"lon": 34.95176,
+"name": "Khirbet Kafr Jul"
+}
+]
+},
+"gimzo": {
+"lat": 31.9297,
+"lon": 34.94681,
+"conf": "identified",
+"name": "Gimzo",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5477,
+"lon": 34.7302,
+"name": "Tel Hasi"
+}
+]
+},
+"gittah-hepher": {
+"lat": 32.73806,
+"lon": 35.31972,
+"conf": "identified",
+"name": "Gath-hepher",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.73833,
+"lon": 35.32444,
+"name": "Mashhad"
+}
+]
+},
+"gittaim": {
+"lat": 31.90302,
+"lon": 34.88994,
+"conf": "disputed",
+"name": "Gittaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9318,
+"lon": 34.87356,
+"name": "Ramla"
+},
+{
+"lat": 32.39835,
+"lon": 35.04005,
+"name": "Jett"
+}
+]
+},
+"goath": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Goah",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"gob": {
+"lat": 31.85917,
+"lon": 34.91917,
+"conf": "disputed",
+"name": "Gob",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.85639,
+"lon": 34.86556,
+"name": "Tell Melat"
+},
+{
+"lat": 31.6963,
+"lon": 34.9575,
+"name": "Khirbet Qeiyafa"
+}
+]
+},
+"golan": {
+"lat": 32.78111,
+"lon": 35.93472,
+"conf": "identified",
+"name": "Golan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"golgotha": {
+"lat": 31.77844,
+"lon": 35.22975,
+"conf": "disputed",
+"name": "Golgotha",
+"types": [
+"hill"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77663,
+"lon": 35.23069,
+"name": "Taylor Golgotha"
+},
+{
+"lat": 31.78396,
+"lon": 35.23015,
+"name": "Gordon’s Calvary"
+}
+]
+},
+"gomorrah": {
+"lat": 31.20849,
+"lon": 35.44922,
+"conf": "disputed",
+"name": "Gomorrah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.12976,
+"lon": 35.52937,
+"name": "Numeira"
+},
+{
+"lat": 31.795,
+"lon": 35.59528,
+"name": "north of the Dead Sea"
+}
+]
+},
+"goshen": {
+"lat": 30.79937,
+"lon": 31.83422,
+"conf": "identified",
+"name": "Goshen",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"gozan": {
+"lat": 36.82679,
+"lon": 40.03967,
+"conf": "identified",
+"name": "Gozan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"greece": {
+"lat": 37.97185,
+"lon": 23.72674,
+"conf": "identified",
+"name": "Greece",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"gur": {
+"lat": 32.44411,
+"lon": 35.2966,
+"conf": "identified",
+"name": "Gur",
+"types": [
+"hill"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.46607,
+"lon": 35.20166,
+"name": "between Ibleam and Megiddo"
+}
+]
+},
+"gur-baal": {
+"lat": 30.74584,
+"lon": 35.60392,
+"conf": "identified",
+"name": "Gurbaal",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.317,
+"lon": 35.407,
+"name": "Jebel Nebi Harun"
+},
+{
+"lat": 31.2328,
+"lon": 34.9867,
+"name": "Tel Ira"
+}
+]
+},
+"habor": {
+"lat": 35.1303,
+"lon": 40.42728,
+"conf": "identified",
+"name": "Habor",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"hachilah": {
+"lat": 31.4703,
+"lon": 35.2228,
+"conf": "disputed",
+"name": "Hachilah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hadad-rimmon": {
+"lat": 32.52439,
+"lon": 35.20408,
+"conf": "disputed",
+"name": "Hadad-rimmon",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.58528,
+"lon": 35.18444,
+"name": "Tel Megiddo"
+},
+{
+"lat": 32.57472,
+"lon": 35.17778,
+"name": "Lejjun"
+}
+]
+},
+"hadashah": {
+"lat": 31.62689,
+"lon": 34.84573,
+"conf": "identified",
+"name": "Hadashah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.55944,
+"lon": 34.71444,
+"name": "Tel Sheqef"
+},
+{
+"lat": 31.58031,
+"lon": 34.72949,
+"name": "Khirbet el Judeideh"
+}
+]
+},
+"hadattah": {
+"lat": 31.37333,
+"lon": 35.23361,
+"conf": "disputed",
+"name": "Hazor-hadattah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.90767,
+"lon": 34.85345,
+"name": "Horbat HaRoah"
+},
+{
+"lat": 31.20919,
+"lon": 35.16567,
+"name": "Horbat Uza"
+}
+]
+},
+"hadid": {
+"lat": 31.96332,
+"lon": 34.95176,
+"conf": "identified",
+"name": "Hadid",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hadrach": {
+"lat": 35.905,
+"lon": 36.79861,
+"conf": "identified",
+"name": "Hadrach",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 34.7238,
+"lon": 36.7144,
+"name": "Homs"
+}
+]
+},
+"halah": {
+"lat": 36.43173,
+"lon": 43.19459,
+"conf": "disputed",
+"name": "Halah",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.82679,
+"lon": 40.03967,
+"name": "Tell Halaf"
+},
+{
+"lat": 35.1303,
+"lon": 40.42728,
+"name": "Khabur River"
+}
+]
+},
+"halak": {
+"lat": 30.9144,
+"lon": 34.8287,
+"conf": "identified",
+"name": "Mount Halak",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"halhul": {
+"lat": 31.57741,
+"lon": 35.10725,
+"conf": "identified",
+"name": "Halhul",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hamath": {
+"lat": 35.1365,
+"lon": 36.75,
+"conf": "identified",
+"name": "Hamath",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hamath-zobah": {
+"lat": 35.1365,
+"lon": 36.75,
+"conf": "disputed",
+"name": "Hamath-zobah",
+"types": [
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 34.00761,
+"lon": 36.2044,
+"name": "Baalbek"
+},
+{
+"lat": 33.93528,
+"lon": 36.15083,
+"name": "Brital"
+}
+]
+},
+"hammath": {
+"lat": 32.76637,
+"lon": 35.55055,
+"conf": "identified",
+"name": "Hammath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80639,
+"lon": 35.52583,
+"name": "Tel Raqqat"
+}
+]
+},
+"hammon": {
+"lat": 33.12811,
+"lon": 35.15202,
+"conf": "identified",
+"name": "Hammon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hammoth-dor": {
+"lat": 32.76637,
+"lon": 35.55055,
+"conf": "disputed",
+"name": "Hammoth-dor",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80639,
+"lon": 35.52583,
+"name": "Tel Raqqat"
+}
+]
+},
+"hamon-gog": {
+"lat": 31.7539,
+"lon": 35.7152,
+"conf": "disputed",
+"name": "Valley of Hamon-gog",
+"types": [
+"special",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9547,
+"lon": 35.9343,
+"name": "Transjordan"
+},
+{
+"lat": 32.59639,
+"lon": 35.24194,
+"name": "Jezreel Valley"
+}
+]
+},
+"hamonah": {
+"lat": 31.7539,
+"lon": 35.7152,
+"conf": "disputed",
+"name": "Hamonah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9547,
+"lon": 35.9343,
+"name": "Transjordan"
+},
+{
+"lat": 32.59639,
+"lon": 35.24194,
+"name": "Jezreel Valley"
+}
+]
+},
+"hananeel": {
+"lat": 31.7825,
+"lon": 35.234,
+"conf": "disputed",
+"name": "Tower of Hananeel (Jerusalem wall)",
+"types": [],
+"source": "curated"
+},
+"hanes": {
+"lat": 29.08556,
+"lon": 30.93444,
+"conf": "disputed",
+"name": "Hanes",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.97806,
+"lon": 32.17556,
+"name": "Tell Belim"
+},
+{
+"lat": 30.97694,
+"lon": 31.88,
+"name": "Tanis"
+}
+]
+},
+"hara": {
+"lat": 36.82679,
+"lon": 40.03967,
+"conf": "disputed",
+"name": "Hara",
+"types": [
+"mountain range",
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 37.35361,
+"lon": 42.88083,
+"name": "El Gebal"
+},
+{
+"lat": 35.9264,
+"lon": 39.0788,
+"name": "Balikh River"
+}
+]
+},
+"haradah": {
+"lat": 30.50662,
+"lon": 34.30356,
+"conf": "disputed",
+"name": "Haradah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.98642,
+"lon": 34.47324,
+"name": "Jebel Aradeh"
+},
+{
+"lat": 30.35917,
+"lon": 34.4425,
+"name": "Jebel Araif en Nakah"
+}
+]
+},
+"haran": {
+"lat": 36.86444,
+"lon": 39.03278,
+"conf": "identified",
+"name": "Haran",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hareth": {
+"lat": 31.61411,
+"lon": 35.04313,
+"conf": "disputed",
+"name": "Hereth",
+"types": [
+"forest",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45026,
+"lon": 35.12738,
+"name": "Khirbet Khureise"
+}
+]
+},
+"harod": {
+"lat": 32.54861,
+"lon": 35.35583,
+"conf": "identified",
+"name": "Harod",
+"types": [
+"spring"
+],
+"source": "openbible"
+},
+"harosheth-of-the-gentiles": {
+"lat": 32.75885,
+"lon": 35.09027,
+"conf": "disputed",
+"name": "Harosheth-hagoyim",
+"types": [
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.48715,
+"lon": 35.09381,
+"name": "Ahwat"
+},
+{
+"lat": 32.50306,
+"lon": 35.28917,
+"name": "southern Jezreel Valley"
+}
+]
+},
+"hashmonah": {
+"lat": 30.66889,
+"lon": 34.36667,
+"conf": "disputed",
+"name": "Hashmonah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.6875,
+"lon": 34.33333,
+"name": "Ain Muweileh"
+},
+{
+"lat": 31.30992,
+"lon": 34.9078,
+"name": "Tell es Saqati"
+}
+]
+},
+"hauran": {
+"lat": 32.73009,
+"lon": 36.36812,
+"conf": "identified",
+"name": "Hauran",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"havilah": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "disputed",
+"name": "Havilah",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 23.0,
+"lon": 46.0,
+"name": "Arabian Peninsula"
+},
+{
+"lat": 15.3551,
+"lon": 44.2145,
+"name": "Sanaa"
+}
+]
+},
+"havoth-jair": {
+"lat": 32.5876,
+"lon": 35.7256,
+"conf": "disputed",
+"name": "Havvoth-jair",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"hazar-addar": {
+"lat": 30.58338,
+"lon": 34.48408,
+"conf": "disputed",
+"name": "Hazar-addar",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.64833,
+"lon": 34.42222,
+"name": "Ain el Qudeirat"
+},
+{
+"lat": 30.59462,
+"lon": 34.51416,
+"name": "Mesudat Ein Qedeis"
+}
+]
+},
+"hazar-enan": {
+"lat": 34.22944,
+"lon": 37.24056,
+"conf": "identified",
+"name": "Hazar-enan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.27944,
+"lon": 35.83028,
+"name": "Hader"
+}
+]
+},
+"hazar-gaddah": {
+"lat": 31.24472,
+"lon": 34.84083,
+"conf": "disputed",
+"name": "Hazar-gaddah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.68022,
+"lon": 34.49946,
+"name": "Mezudat Sheluhat Qadesh Barnea"
+},
+{
+"lat": 31.20919,
+"lon": 35.16567,
+"name": "Horbat Uza"
+}
+]
+},
+"hazar-hatticon": {
+"lat": 34.22944,
+"lon": 37.24056,
+"conf": "disputed",
+"name": "Hazer-hatticon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.27944,
+"lon": 35.83028,
+"name": "Hader"
+}
+]
+},
+"hazar-shual": {
+"lat": 31.24472,
+"lon": 34.84083,
+"conf": "disputed",
+"name": "Hazar-shual",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.2573,
+"lon": 34.92141,
+"name": "Khirbet el Waten"
+},
+{
+"lat": 31.27469,
+"lon": 34.83843,
+"name": "Hazar Betarim"
+}
+]
+},
+"hazar-susah": {
+"lat": 31.3445,
+"lon": 34.9014,
+"conf": "disputed",
+"name": "Hazar-susah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.26259,
+"lon": 34.52976,
+"name": "Sbalat Abu Susein"
+}
+]
+},
+"hazeroth": {
+"lat": 28.89694,
+"lon": 34.42167,
+"conf": "disputed",
+"name": "Hazeroth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.09176,
+"lon": 33.38012,
+"name": "Wadi al Aghaydira"
+}
+]
+},
+"hazezon-tamar": {
+"lat": 30.8087,
+"lon": 35.2459,
+"conf": "disputed",
+"name": "Hazazon-tamar",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45,
+"lon": 35.38333,
+"name": "Ein Gedi"
+},
+{
+"lat": 31.5607,
+"lon": 35.38364,
+"name": "Wadi Hasasah"
+}
+]
+},
+"hazor": {
+"lat": 33.01833,
+"lon": 35.56917,
+"conf": "identified",
+"name": "Hazor",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hazor-hadattah": {
+"lat": 31.37333,
+"lon": 35.23361,
+"conf": "disputed",
+"name": "Hazor-hadattah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.90767,
+"lon": 34.85345,
+"name": "Horbat HaRoah"
+},
+{
+"lat": 31.20919,
+"lon": 35.16567,
+"name": "Horbat Uza"
+}
+]
+},
+"hebron": {
+"lat": 31.52509,
+"lon": 35.10222,
+"conf": "identified",
+"name": "Hebron",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"helam": {
+"lat": 32.75,
+"lon": 36.24083,
+"conf": "disputed",
+"name": "Helam",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 34.40107,
+"lon": 36.63636,
+"name": "between Damascus and Hamath"
+},
+{
+"lat": 36.19917,
+"lon": 37.1625,
+"name": "Aleppo"
+}
+]
+},
+"helbah": {
+"lat": 33.3178,
+"lon": 35.24337,
+"conf": "disputed",
+"name": "Helbah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.16472,
+"lon": 35.16833,
+"name": "Ras el Biyada"
+}
+]
+},
+"helbon": {
+"lat": 33.6667,
+"lon": 36.25,
+"conf": "identified",
+"name": "Helbon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"heleph": {
+"lat": 32.72474,
+"lon": 35.41385,
+"conf": "identified",
+"name": "Heleph",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"heliopolis": {
+"lat": 30.12944,
+"lon": 31.3075,
+"conf": "identified",
+"name": "Heliopolis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"helkath": {
+"lat": 32.68528,
+"lon": 35.10972,
+"conf": "disputed",
+"name": "Helkath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.75885,
+"lon": 35.09027,
+"name": "Tel Regev"
+},
+{
+"lat": 32.72806,
+"lon": 35.09667,
+"name": "Tell Amr"
+}
+]
+},
+"helkath-hazzurim": {
+"lat": 31.84745,
+"lon": 35.18335,
+"conf": "identified",
+"name": "Helkath-hazzurim",
+"types": [
+"field"
+],
+"source": "openbible"
+},
+"hemath": {
+"lat": 32.76637,
+"lon": 35.55055,
+"conf": "disputed",
+"name": "Hammath",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80639,
+"lon": 35.52583,
+"name": "Tel Raqqat"
+}
+]
+},
+"hena": {
+"lat": 34.36861,
+"lon": 41.98194,
+"conf": "disputed",
+"name": "Hena",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 35.1365,
+"lon": 36.75,
+"name": "Hama"
+}
+]
+},
+"heres": {
+"lat": 31.9547,
+"lon": 35.9343,
+"conf": "disputed",
+"name": "Heres",
+"types": [
+"hill",
+"natural area",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.1966,
+"lon": 35.62118,
+"name": "Tell Deir Alla"
+},
+{
+"lat": 32.03467,
+"lon": 35.81014,
+"name": "Rujm Shajarat al Hunayti"
+}
+]
+},
+"hermon": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "identified",
+"name": "Mount Hermon",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"heshbon": {
+"lat": 31.80081,
+"lon": 35.80906,
+"conf": "disputed",
+"name": "Heshbon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.71663,
+"lon": 35.85684,
+"name": "Tall Jalul"
+},
+{
+"lat": 31.8686,
+"lon": 35.8881,
+"name": "Tall al Umayri"
+}
+]
+},
+"heshmon": {
+"lat": 31.30992,
+"lon": 34.9078,
+"conf": "disputed",
+"name": "Heshmon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.19291,
+"lon": 34.79361,
+"name": "Givat Hablanim"
+},
+{
+"lat": 30.6875,
+"lon": 34.33333,
+"name": "Ain Muweileh"
+}
+]
+},
+"hethlon": {
+"lat": 34.60306,
+"lon": 36.13361,
+"conf": "disputed",
+"name": "Hethlon",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 34.19491,
+"lon": 36.34956,
+"name": "Labweh"
+},
+{
+"lat": 33.40389,
+"lon": 35.27389,
+"name": "Adlun"
+}
+]
+},
+"hiddekel": {
+"lat": 31.0043,
+"lon": 47.4421,
+"conf": "identified",
+"name": "Tigris",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"hierapolis": {
+"lat": 37.92662,
+"lon": 29.12738,
+"conf": "identified",
+"name": "Hierapolis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"hill-of-evil-counsel": {
+"lat": 31.7569,
+"lon": 35.2294,
+"conf": "disputed",
+"name": "Hill of Evil Counsel (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"hinnom": {
+"lat": 31.76917,
+"lon": 35.22806,
+"conf": "identified",
+"name": "Valley of Hinnom",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"hobah": {
+"lat": 34.25,
+"lon": 37.06667,
+"conf": "disputed",
+"name": "Hobah",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.51111,
+"lon": 36.30639,
+"name": "Damascus"
+},
+{
+"lat": 33.50861,
+"lon": 36.46972,
+"name": "Tell el Salihiye"
+}
+]
+},
+"hor": {
+"lat": 30.83206,
+"lon": 35.05687,
+"conf": "disputed",
+"name": "Mount Hor",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.76517,
+"lon": 34.52912,
+"name": "Imaret el Khureisheh"
+},
+{
+"lat": 30.74704,
+"lon": 34.43891,
+"name": "Jebel es Sabha"
+}
+]
+},
+"horem": {
+"lat": 33.17451,
+"lon": 35.37661,
+"conf": "disputed",
+"name": "Horem",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.22167,
+"lon": 35.46444,
+"name": "Majdel Selem"
+},
+{
+"lat": 33.08333,
+"lon": 35.41667,
+"name": "Yarun"
+}
+]
+},
+"hormah": {
+"lat": 31.21229,
+"lon": 34.95828,
+"conf": "disputed",
+"name": "Hormah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.38333,
+"lon": 34.86564,
+"name": "Tel Halif"
+},
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+}
+]
+},
+"horonaim": {
+"lat": 31.09001,
+"lon": 35.64193,
+"conf": "disputed",
+"name": "Horonaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.25052,
+"lon": 35.68076,
+"name": "Ed Deir"
+},
+{
+"lat": 31.13788,
+"lon": 35.62223,
+"name": "Kathrabba"
+}
+]
+},
+"horse-gate": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Horse Gate",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"hosah": {
+"lat": 33.23674,
+"lon": 35.21519,
+"conf": "identified",
+"name": "Hosah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.24214,
+"lon": 35.23717,
+"name": "Khirbet el Hos"
+},
+{
+"lat": 33.27083,
+"lon": 35.19611,
+"name": "Tyre"
+}
+]
+},
+"hukkok": {
+"lat": 32.86428,
+"lon": 35.26345,
+"conf": "disputed",
+"name": "Hukkok",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.8847,
+"lon": 35.4789,
+"name": "Yaquq"
+}
+]
+},
+"ibleam": {
+"lat": 32.4462,
+"lon": 35.292,
+"conf": "identified",
+"name": "Ibleam",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"iconium": {
+"lat": 37.8722,
+"lon": 32.49233,
+"conf": "identified",
+"name": "Iconium",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"idalah": {
+"lat": 32.72579,
+"lon": 35.18343,
+"conf": "identified",
+"name": "Idalah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"iim": {
+"lat": 31.36475,
+"lon": 34.92061,
+"conf": "identified",
+"name": "Iim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.08057,
+"lon": 34.94081,
+"name": "Umm el Azam"
+},
+{
+"lat": 31.28137,
+"lon": 34.7974,
+"name": "Khirbet Asan"
+}
+]
+},
+"ije-abarim": {
+"lat": 30.956,
+"lon": 35.77948,
+"conf": "disputed",
+"name": "Iye-abarim",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.9899,
+"lon": 35.8613,
+"name": "Muhayy"
+},
+{
+"lat": 31.7539,
+"lon": 35.7152,
+"name": "Abarim"
+}
+]
+},
+"ijon": {
+"lat": 33.34528,
+"lon": 35.59,
+"conf": "identified",
+"name": "Ijon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.3611,
+"lon": 35.5921,
+"name": "Marjaayoun"
+}
+]
+},
+"illyricum": {
+"lat": 43.53944,
+"lon": 16.48306,
+"conf": "identified",
+"name": "Illyricum",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"india": {
+"lat": 23.9944,
+"lon": 67.4308,
+"conf": "identified",
+"name": "India",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ishtob": {
+"lat": 32.56333,
+"lon": 36.24389,
+"conf": "identified",
+"name": "Tob",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9128,
+"lon": 35.7518,
+"name": "Iraq al Amir"
+}
+]
+},
+"israel-kingdom-of": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Zion",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"italy": {
+"lat": 41.8922,
+"lon": 12.4852,
+"conf": "identified",
+"name": "Italy",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ituraea": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "identified",
+"name": "Ituraea",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ivah": {
+"lat": 34.68472,
+"lon": 36.69056,
+"conf": "disputed",
+"name": "Ivvah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.23787,
+"lon": 36.56947,
+"name": "Imma"
+},
+{
+"lat": 31.7823,
+"lon": 47.8694,
+"name": "Karkheh River"
+}
+]
+},
+"jaazer": {
+"lat": 31.94447,
+"lon": 35.83008,
+"conf": "disputed",
+"name": "Jazer",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.0064,
+"lon": 35.73498,
+"name": "Khirbet Jazzir"
+},
+{
+"lat": 31.95694,
+"lon": 35.81472,
+"name": "Khirbet es Sireh"
+}
+]
+},
+"jabbok": {
+"lat": 32.11525,
+"lon": 35.54306,
+"conf": "identified",
+"name": "Jabbok",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"jabesh": {
+"lat": 32.40237,
+"lon": 35.6823,
+"conf": "identified",
+"name": "Jabesh-gilead",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.39898,
+"lon": 35.59511,
+"name": "Tell Abu el Kharaz"
+},
+{
+"lat": 32.4002,
+"lon": 35.5905,
+"name": "Tall al Meqbarah"
+}
+]
+},
+"jabesh-gilead": {
+"lat": 32.40237,
+"lon": 35.6823,
+"conf": "identified",
+"name": "Jabesh-gilead",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.39898,
+"lon": 35.59511,
+"name": "Tell Abu el Kharaz"
+},
+{
+"lat": 32.4002,
+"lon": 35.5905,
+"name": "Tall al Meqbarah"
+}
+]
+},
+"jabneel": {
+"lat": 31.866,
+"lon": 34.7463,
+"conf": "identified",
+"name": "Jabneel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.92278,
+"lon": 34.69333,
+"name": "Yavne Yam"
+}
+]
+},
+"jabneh": {
+"lat": 31.866,
+"lon": 34.7463,
+"conf": "identified",
+"name": "Jabneel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.92278,
+"lon": 34.69333,
+"name": "Yavne Yam"
+}
+]
+},
+"jacobs-well": {
+"lat": 32.2103,
+"lon": 35.2814,
+"conf": "identified",
+"name": "Jacob's Well (Sychar)",
+"types": [],
+"source": "curated"
+},
+"jagur": {
+"lat": 31.2328,
+"lon": 34.9867,
+"conf": "identified",
+"name": "Jagur",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jahaz": {
+"lat": 31.58835,
+"lon": 35.90793,
+"conf": "disputed",
+"name": "Jahaz",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60634,
+"lon": 35.76126,
+"name": "Khirbet Libb"
+},
+{
+"lat": 31.57569,
+"lon": 35.87443,
+"name": "Er Remeil"
+}
+]
+},
+"janoah": {
+"lat": 32.15798,
+"lon": 35.36133,
+"conf": "identified",
+"name": "Janoah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.14544,
+"lon": 35.35568,
+"name": "Yanun"
+},
+{
+"lat": 32.23023,
+"lon": 35.42265,
+"name": "Bab en Naqb"
+}
+]
+},
+"janum": {
+"lat": 31.51591,
+"lon": 35.16416,
+"conf": "disputed",
+"name": "Janim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.51261,
+"lon": 35.07538,
+"name": "Khirbet Kan’an"
+}
+]
+},
+"jarmuth": {
+"lat": 31.7083,
+"lon": 34.975,
+"conf": "identified",
+"name": "Jarmuth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jattir": {
+"lat": 31.3525,
+"lon": 35.01611,
+"conf": "identified",
+"name": "Jattir",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jearim": {
+"lat": 31.78111,
+"lon": 35.05111,
+"conf": "identified",
+"name": "Mount Jearim",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"jebus": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Jebus",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77361,
+"lon": 35.23556,
+"name": "City of David"
+},
+{
+"lat": 31.82014,
+"lon": 35.22322,
+"name": "Shufat"
+}
+]
+},
+"jegar-sahadutha": {
+"lat": 32.11851,
+"lon": 35.77702,
+"conf": "disputed",
+"name": "Mizpah",
+"types": [
+"stone heap"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.49985,
+"lon": 36.01499,
+"name": "Tall er Rumeith"
+},
+{
+"lat": 32.13119,
+"lon": 35.76129,
+"name": "Khirbet er Rasuni"
+}
+]
+},
+"jehoshaphat-valley-of": {
+"lat": 31.78028,
+"lon": 35.24,
+"conf": "identified",
+"name": "Valley of Jehoshaphat",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"jericho": {
+"lat": 31.87172,
+"lon": 35.44456,
+"conf": "identified",
+"name": "Jericho",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jeruel": {
+"lat": 31.57972,
+"lon": 35.30917,
+"conf": "identified",
+"name": "Jeruel",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"jerusalem": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Jerusalem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jeshanah": {
+"lat": 31.99855,
+"lon": 35.26029,
+"conf": "identified",
+"name": "Jeshanah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jeshimon": {
+"lat": 31.4703,
+"lon": 35.2228,
+"conf": "disputed",
+"name": "Jeshimon",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"jethlah": {
+"lat": 31.84111,
+"lon": 35.02361,
+"conf": "disputed",
+"name": "Ithlah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82247,
+"lon": 35.07386,
+"name": "Bayt Thul"
+},
+{
+"lat": 31.8401,
+"lon": 35.0263,
+"name": "Tell el Kokah"
+}
+]
+},
+"jezreel": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "disputed",
+"name": "Jezreel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45973,
+"lon": 35.09866,
+"name": "Khirbet el Kufeir"
+},
+{
+"lat": 31.44888,
+"lon": 35.10611,
+"name": "Khirbet Fattuh"
+}
+]
+},
+"jezreel-ditch-of": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "disputed",
+"name": "Jezreel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45973,
+"lon": 35.09866,
+"name": "Khirbet el Kufeir"
+},
+{
+"lat": 31.44888,
+"lon": 35.10611,
+"name": "Khirbet Fattuh"
+}
+]
+},
+"jezreel-fountain-of": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "disputed",
+"name": "Jezreel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45973,
+"lon": 35.09866,
+"name": "Khirbet el Kufeir"
+},
+{
+"lat": 31.44888,
+"lon": 35.10611,
+"name": "Khirbet Fattuh"
+}
+]
+},
+"jezreel-portion-of": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "disputed",
+"name": "Jezreel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45973,
+"lon": 35.09866,
+"name": "Khirbet el Kufeir"
+},
+{
+"lat": 31.44888,
+"lon": 35.10611,
+"name": "Khirbet Fattuh"
+}
+]
+},
+"jezreel-tower-of": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "disputed",
+"name": "Jezreel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45973,
+"lon": 35.09866,
+"name": "Khirbet el Kufeir"
+},
+{
+"lat": 31.44888,
+"lon": 35.10611,
+"name": "Khirbet Fattuh"
+}
+]
+},
+"jezreel-valley-of": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "disputed",
+"name": "Jezreel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45973,
+"lon": 35.09866,
+"name": "Khirbet el Kufeir"
+},
+{
+"lat": 31.44888,
+"lon": 35.10611,
+"name": "Khirbet Fattuh"
+}
+]
+},
+"jokdeam": {
+"lat": 31.46197,
+"lon": 35.11849,
+"conf": "disputed",
+"name": "Jokdeam",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jokmeam": {
+"lat": 32.6641,
+"lon": 35.10827,
+"conf": "disputed",
+"name": "Jokmeam",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.13993,
+"lon": 35.48497,
+"name": "Tel al Mazar"
+},
+{
+"lat": 32.1321,
+"lon": 35.4878,
+"name": "Tell Simadi"
+}
+]
+},
+"jokneam": {
+"lat": 32.6641,
+"lon": 35.10827,
+"conf": "identified",
+"name": "Jokneam",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"joktheel": {
+"lat": 31.56528,
+"lon": 34.84917,
+"conf": "identified",
+"name": "Joktheel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.71944,
+"lon": 35.00129,
+"name": "Khirbet Zanu"
+},
+{
+"lat": 31.52994,
+"lon": 34.78959,
+"name": "Khirbet Umm al Baqar"
+}
+]
+},
+"joppa": {
+"lat": 32.05448,
+"lon": 34.75304,
+"conf": "identified",
+"name": "Joppa",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"jordan": {
+"lat": 31.76139,
+"lon": 35.55833,
+"conf": "identified",
+"name": "Jordan",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"judah-kingdom-of": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Jerusalem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"judea": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Judea",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"judgment-hall": {
+"lat": 31.779,
+"lon": 35.23,
+"conf": "disputed",
+"name": "Praetorium / Judgment Hall (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"juttah": {
+"lat": 31.44778,
+"lon": 35.09,
+"conf": "identified",
+"name": "Juttah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kabzeel": {
+"lat": 31.28619,
+"lon": 34.93235,
+"conf": "disputed",
+"name": "Kabzeel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.2328,
+"lon": 34.9867,
+"name": "Tel Ira"
+}
+]
+},
+"kadesh": {
+"lat": 34.55781,
+"lon": 36.5196,
+"conf": "identified",
+"name": "Kadesh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.11164,
+"lon": 35.52952,
+"name": "Tel Kedesh"
+},
+{
+"lat": 33.4,
+"lon": 35.85,
+"name": "Mount Hermon"
+}
+]
+},
+"kanah": {
+"lat": 32.127,
+"lon": 34.8954,
+"conf": "identified",
+"name": "Kanah",
+"types": [
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.10389,
+"lon": 34.77583,
+"name": "Yarkon River"
+}
+]
+},
+"karkaa": {
+"lat": 30.66667,
+"lon": 34.36667,
+"conf": "identified",
+"name": "Karka",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"karkor": {
+"lat": 31.36306,
+"lon": 37.54278,
+"conf": "disputed",
+"name": "Karkor",
+"types": [
+"settlement",
+"special",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.99954,
+"lon": 35.84866,
+"name": "Karkagheisch"
+},
+{
+"lat": 30.53139,
+"lon": 35.56083,
+"name": "Carcaria"
+}
+]
+},
+"kartah": {
+"lat": 33.11194,
+"lon": 35.4625,
+"conf": "disputed",
+"name": "Kartah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.68337,
+"lon": 35.32419,
+"name": "Iksal"
+},
+{
+"lat": 32.68722,
+"lon": 34.93833,
+"name": "Athlit"
+}
+]
+},
+"kartan": {
+"lat": 33.11194,
+"lon": 35.4625,
+"conf": "disputed",
+"name": "Kartan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80639,
+"lon": 35.52583,
+"name": "Tel Raqqat"
+}
+]
+},
+"kattath": {
+"lat": 32.62558,
+"lon": 35.03215,
+"conf": "disputed",
+"name": "Kattath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.77111,
+"lon": 35.10472,
+"name": "Tel Far"
+},
+{
+"lat": 32.8461,
+"lon": 35.1119,
+"name": "Tel Afek"
+}
+]
+},
+"kedemoth": {
+"lat": 31.53184,
+"lon": 35.88026,
+"conf": "disputed",
+"name": "Kedemoth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.57569,
+"lon": 35.87443,
+"name": "Er Remeil"
+},
+{
+"lat": 31.45534,
+"lon": 35.92035,
+"name": "Es Saliyeh"
+}
+]
+},
+"kedesh": {
+"lat": 33.11164,
+"lon": 35.52952,
+"conf": "identified",
+"name": "Kedesh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.735,
+"lon": 35.55555,
+"name": "Khirbet Qedish"
+},
+{
+"lat": 32.55949,
+"lon": 35.21603,
+"name": "Tell Abu Qedeis"
+}
+]
+},
+"kedron": {
+"lat": 31.78028,
+"lon": 35.24,
+"conf": "identified",
+"name": "Kidron",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"kehelathah": {
+"lat": 30.19306,
+"lon": 34.42111,
+"conf": "disputed",
+"name": "Kehelathah",
+"types": [
+"campsite",
+"settlement"
+],
+"source": "openbible"
+},
+"keilah": {
+"lat": 31.6137,
+"lon": 35.0036,
+"conf": "identified",
+"name": "Keilah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kenath": {
+"lat": 32.75616,
+"lon": 36.61899,
+"conf": "identified",
+"name": "Kenath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.68611,
+"lon": 36.34861,
+"name": "Krak Canatha"
+}
+]
+},
+"kerioth": {
+"lat": 31.54056,
+"lon": 35.68611,
+"conf": "identified",
+"name": "Kerioth",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.53184,
+"lon": 35.88026,
+"name": "Aleiyan"
+},
+{
+"lat": 31.28086,
+"lon": 35.75953,
+"name": "Misna"
+}
+]
+},
+"keziz": {
+"lat": 31.87172,
+"lon": 35.44456,
+"conf": "disputed",
+"name": "Emek-keziz",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9914,
+"lon": 35.3322,
+"name": "Khirbet Marjame"
+},
+{
+"lat": 31.82038,
+"lon": 35.50116,
+"name": "Deir Hajla"
+}
+]
+},
+"kibroth-hattaavah": {
+"lat": 28.78867,
+"lon": 34.27544,
+"conf": "disputed",
+"name": "Kibroth-hattaavah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.70667,
+"lon": 34.04194,
+"name": "Wadi Sa’l"
+},
+{
+"lat": 30.09176,
+"lon": 33.38012,
+"name": "Wadi al Aghaydira"
+}
+]
+},
+"kibzaim": {
+"lat": 32.13993,
+"lon": 35.48497,
+"conf": "disputed",
+"name": "Kibzaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.1321,
+"lon": 35.4878,
+"name": "Tell Simadi"
+},
+{
+"lat": 32.6641,
+"lon": 35.10827,
+"name": "Tel Yokneam"
+}
+]
+},
+"kidron": {
+"lat": 31.78028,
+"lon": 35.24,
+"conf": "identified",
+"name": "Kidron",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"kinah": {
+"lat": 31.20919,
+"lon": 35.16567,
+"conf": "disputed",
+"name": "Kinah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.17889,
+"lon": 35.17472,
+"name": "Wadi el Qeini"
+},
+{
+"lat": 31.30283,
+"lon": 35.14909,
+"name": "Horbat Tayyav"
+}
+]
+},
+"kings-dale": {
+"lat": 31.7775,
+"lon": 35.239,
+"conf": "disputed",
+"name": "King's Valley (Kidron, Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"kir": {
+"lat": 33.12361,
+"lon": 45.93139,
+"conf": "disputed",
+"name": "Kir",
+"types": [
+"mountain range",
+"region",
+"settlement",
+"special",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 39.2864,
+"lon": 49.4278,
+"name": "Kura River"
+},
+{
+"lat": 36.35435,
+"lon": 36.36153,
+"name": "Amuk Valley"
+}
+]
+},
+"kir-haraseth": {
+"lat": 31.18056,
+"lon": 35.70139,
+"conf": "identified",
+"name": "Kir-hareseth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kir-of-moab": {
+"lat": 31.18056,
+"lon": 35.70139,
+"conf": "identified",
+"name": "Kir-hareseth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kirjath": {
+"lat": 31.80896,
+"lon": 35.10378,
+"conf": "identified",
+"name": "Kiriath-jearim",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kirjath-arba": {
+"lat": 31.52509,
+"lon": 35.10222,
+"conf": "identified",
+"name": "Hebron",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kirjath-huzoth": {
+"lat": 31.50224,
+"lon": 35.77657,
+"conf": "disputed",
+"name": "Kiriath-huzoth",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.52754,
+"lon": 35.86707,
+"name": "El Keryeh"
+},
+{
+"lat": 31.73179,
+"lon": 35.74089,
+"name": "Khirbet el Quweiqiyeh"
+}
+]
+},
+"kirjath-jearim": {
+"lat": 31.80896,
+"lon": 35.10378,
+"conf": "identified",
+"name": "Kiriath-jearim",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"kirjath-sannah": {
+"lat": 31.43209,
+"lon": 35.01485,
+"conf": "identified",
+"name": "Debir",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.47857,
+"lon": 35.03264,
+"name": "Khirbet Tarrama"
+},
+{
+"lat": 31.4558,
+"lon": 34.9098,
+"name": "Tell Beit Mirsim"
+}
+]
+},
+"kirjath-sepher": {
+"lat": 31.43209,
+"lon": 35.01485,
+"conf": "identified",
+"name": "Debir",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.47857,
+"lon": 35.03264,
+"name": "Khirbet Tarrama"
+},
+{
+"lat": 31.4558,
+"lon": 34.9098,
+"name": "Tell Beit Mirsim"
+}
+]
+},
+"kirjathaim": {
+"lat": 31.74913,
+"lon": 35.74386,
+"conf": "disputed",
+"name": "Kiriathaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.70894,
+"lon": 35.6943,
+"name": "Khirbet el Qureiye"
+},
+{
+"lat": 31.54056,
+"lon": 35.68611,
+"name": "Al Qurayyat"
+}
+]
+},
+"kishion": {
+"lat": 32.66139,
+"lon": 35.39306,
+"conf": "disputed",
+"name": "Kishion",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.65345,
+"lon": 35.46614,
+"name": "Tell Rekhesh"
+},
+{
+"lat": 32.63139,
+"lon": 35.37194,
+"name": "Tell el Ajjul"
+}
+]
+},
+"kishon": {
+"lat": 32.81667,
+"lon": 35.03333,
+"conf": "identified",
+"name": "Kishon",
+"types": [
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.65238,
+"lon": 35.46318,
+"name": "Nahal Tabor"
+}
+]
+},
+"kithlish": {
+"lat": 31.52994,
+"lon": 34.78959,
+"conf": "disputed",
+"name": "Chitlish",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.55906,
+"lon": 34.95713,
+"name": "Khirbet er Ras"
+},
+{
+"lat": 31.54947,
+"lon": 34.62574,
+"name": "Horbat Gluma"
+}
+]
+},
+"kitron": {
+"lat": 32.62558,
+"lon": 35.03215,
+"conf": "disputed",
+"name": "Kitron",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.77111,
+"lon": 35.10472,
+"name": "Tel Far"
+},
+{
+"lat": 32.8461,
+"lon": 35.1119,
+"name": "Tel Afek"
+}
+]
+},
+"lachish": {
+"lat": 31.56528,
+"lon": 34.84917,
+"conf": "identified",
+"name": "Lachish",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"laish": {
+"lat": 33.249,
+"lon": 35.652,
+"conf": "identified",
+"name": "Dan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"laodicea": {
+"lat": 37.83583,
+"lon": 29.1075,
+"conf": "identified",
+"name": "Laodicea",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"lasaea": {
+"lat": 34.94056,
+"lon": 24.81111,
+"conf": "identified",
+"name": "Lasea",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"lasea": {
+"lat": 34.94056,
+"lon": 24.81111,
+"conf": "identified",
+"name": "Lasea",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"lasha": {
+"lat": 31.597,
+"lon": 35.55931,
+"conf": "disputed",
+"name": "Lasha",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.0369,
+"lon": 35.48766,
+"name": "Al Safi"
+},
+{
+"lat": 31.20849,
+"lon": 35.44922,
+"name": "south of the Lisan"
+}
+]
+},
+"lebanon": {
+"lat": 33.54,
+"lon": 35.58361,
+"conf": "identified",
+"name": "Lebanon",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"lebonah": {
+"lat": 32.05906,
+"lon": 35.24979,
+"conf": "disputed",
+"name": "Lebonah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.07111,
+"lon": 35.24111,
+"name": "Lubban Sherqujeh"
+}
+]
+},
+"lehi": {
+"lat": 31.7488,
+"lon": 35.00101,
+"conf": "disputed",
+"name": "Lehi",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76372,
+"lon": 35.02579,
+"name": "Arak Ismain"
+},
+{
+"lat": 31.73484,
+"lon": 35.05297,
+"name": "Bayt Itab"
+}
+]
+},
+"libnah": {
+"lat": 31.6299,
+"lon": 34.87347,
+"conf": "disputed",
+"name": "Libnah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.63336,
+"lon": 34.91661,
+"name": "Tel Goded"
+},
+{
+"lat": 31.64207,
+"lon": 34.95302,
+"name": "Tel el Beida"
+}
+]
+},
+"libya": {
+"lat": 32.82095,
+"lon": 21.85123,
+"conf": "identified",
+"name": "Libya",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"lo-debar": {
+"lat": 32.68393,
+"lon": 35.62992,
+"conf": "disputed",
+"name": "Lo-debar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.56576,
+"lon": 35.61221,
+"name": "Umm ed Debar"
+},
+{
+"lat": 32.4718,
+"lon": 35.5994,
+"name": "Tell el Hamme"
+}
+]
+},
+"luhith": {
+"lat": 31.13788,
+"lon": 35.62223,
+"conf": "identified",
+"name": "Luhith",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.0514,
+"lon": 35.58624,
+"name": "Medinet er Ras"
+}
+]
+},
+"luz": {
+"lat": 31.92278,
+"lon": 35.24139,
+"conf": "identified",
+"name": "Luz",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90514,
+"lon": 35.21496,
+"name": "Al Bira"
+},
+{
+"lat": 31.92187,
+"lon": 35.24548,
+"name": "Burj Beitin"
+}
+]
+},
+"lycaonia": {
+"lat": 38.0,
+"lon": 33.0,
+"conf": "identified",
+"name": "Lycaonia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"lycia": {
+"lat": 36.73333,
+"lon": 29.9,
+"conf": "identified",
+"name": "Lycia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"lydda": {
+"lat": 31.95,
+"lon": 34.9,
+"conf": "identified",
+"name": "Lod",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"lystra": {
+"lat": 37.6017,
+"lon": 32.3384,
+"conf": "identified",
+"name": "Lystra",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"maachah": {
+"lat": 33.25805,
+"lon": 35.58101,
+"conf": "identified",
+"name": "Maacah",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"maaleh-acrabbim": {
+"lat": 30.9066,
+"lon": 35.13126,
+"conf": "identified",
+"name": "Akrabbim",
+"types": [
+"mountain pass"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.19417,
+"lon": 35.57667,
+"name": "Jebel Umm al Aqarib"
+}
+]
+},
+"maarath": {
+"lat": 31.62071,
+"lon": 35.11352,
+"conf": "disputed",
+"name": "Maarath",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60148,
+"lon": 35.15873,
+"name": "Khirbet ez Zawiya"
+},
+{
+"lat": 31.65997,
+"lon": 35.10826,
+"name": "Khirbet el Hubeila"
+}
+]
+},
+"macedonia": {
+"lat": 41.6,
+"lon": 22.54,
+"conf": "identified",
+"name": "Macedonia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"machaerus": {
+"lat": 31.5664,
+"lon": 35.6247,
+"conf": "identified",
+"name": "Machaerus",
+"types": [],
+"source": "curated"
+},
+"machpelah": {
+"lat": 31.52467,
+"lon": 35.11076,
+"conf": "identified",
+"name": "Machpelah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"madmannah": {
+"lat": 31.35027,
+"lon": 34.92858,
+"conf": "identified",
+"name": "Madmannah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.37282,
+"lon": 34.93324,
+"name": "Khirbet Umm ed Demineh"
+},
+{
+"lat": 31.24857,
+"lon": 34.3099,
+"name": "Minieh"
+}
+]
+},
+"madmen": {
+"lat": 31.29182,
+"lon": 35.70481,
+"conf": "disputed",
+"name": "Madmen",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.28384,
+"lon": 35.69654,
+"name": "Haraziya"
+},
+{
+"lat": 31.50224,
+"lon": 35.77657,
+"name": "Tall Dhiban"
+}
+]
+},
+"madmenah": {
+"lat": 31.82014,
+"lon": 35.22322,
+"conf": "disputed",
+"name": "Madmenah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79861,
+"lon": 35.24833,
+"name": "Isawiya"
+}
+]
+},
+"madon": {
+"lat": 33.07678,
+"lon": 35.43235,
+"conf": "disputed",
+"name": "Madon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.79944,
+"lon": 35.46114,
+"name": "Khirbet Madin"
+},
+{
+"lat": 32.79972,
+"lon": 35.45972,
+"name": "Qarn Hattin"
+}
+]
+},
+"magdala": {
+"lat": 32.82707,
+"lon": 35.51355,
+"conf": "identified",
+"name": "Magdala",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"magog": {
+"lat": 38.48833,
+"lon": 28.04028,
+"conf": "disputed",
+"name": "Magog",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 44.94278,
+"lon": 34.12056,
+"name": "Scythian Neapolis"
+},
+{
+"lat": 32.54333,
+"lon": 44.42222,
+"name": "Babylon"
+}
+]
+},
+"mahanaim": {
+"lat": 32.18575,
+"lon": 35.68667,
+"conf": "identified",
+"name": "Mahanaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.14952,
+"lon": 35.69241,
+"name": "Tell Hejaj"
+},
+{
+"lat": 32.18702,
+"lon": 35.69211,
+"name": "Tell edh Dhahab esh Sherqiyeh"
+}
+]
+},
+"mahaneh-dan": {
+"lat": 31.77802,
+"lon": 34.99892,
+"conf": "identified",
+"name": "Mahaneh-dan",
+"types": [
+"campsite",
+"special"
+],
+"source": "openbible"
+},
+"makheloth": {
+"lat": 30.19306,
+"lon": 34.42111,
+"conf": "disputed",
+"name": "Makheloth",
+"types": [
+"campsite"
+],
+"source": "openbible"
+},
+"makkedah": {
+"lat": 31.53472,
+"lon": 34.96656,
+"conf": "disputed",
+"name": "Makkedah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5377,
+"lon": 34.9706,
+"name": "Khirbet Beit Maqdum"
+},
+{
+"lat": 31.4558,
+"lon": 34.9098,
+"name": "Tell Beit Mirsim"
+}
+]
+},
+"maktesh": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Mortar",
+"types": [
+"district in settlement"
+],
+"source": "openbible"
+},
+"mamre": {
+"lat": 31.55654,
+"lon": 35.10534,
+"conf": "identified",
+"name": "Mamre",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.536,
+"lon": 35.0856,
+"name": "Ain Sebta"
+},
+{
+"lat": 31.53502,
+"lon": 35.10203,
+"name": "Khirbet Nimreh"
+}
+]
+},
+"maon": {
+"lat": 31.40945,
+"lon": 35.13384,
+"conf": "identified",
+"name": "Maon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"marah": {
+"lat": 29.34604,
+"lon": 32.94284,
+"conf": "disputed",
+"name": "Marah",
+"types": [
+"body of water",
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.96667,
+"lon": 32.7,
+"name": "Bir Mara"
+},
+{
+"lat": 29.87694,
+"lon": 32.65833,
+"name": "Uyun Musa"
+}
+]
+},
+"maralah": {
+"lat": 32.65426,
+"lon": 35.16869,
+"conf": "disputed",
+"name": "Mareal",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.68333,
+"lon": 35.17417,
+"name": "Tell el Ghaltah"
+}
+]
+},
+"mareshah": {
+"lat": 31.59296,
+"lon": 34.89824,
+"conf": "identified",
+"name": "Mareshah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"maroth": {
+"lat": 31.62071,
+"lon": 35.11352,
+"conf": "disputed",
+"name": "Maroth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.62139,
+"lon": 35.10222,
+"name": "Beit Ummar"
+},
+{
+"lat": 31.65997,
+"lon": 35.10826,
+"name": "Khirbet el Hubeila"
+}
+]
+},
+"mars-hill": {
+"lat": 37.97222,
+"lon": 23.72361,
+"conf": "identified",
+"name": "Areopagus",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"mashal": {
+"lat": 32.87276,
+"lon": 35.15133,
+"conf": "disputed",
+"name": "Mishal",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.90139,
+"lon": 35.16944,
+"name": "Tell Bir el Gharbi"
+},
+{
+"lat": 32.7988,
+"lon": 35.07006,
+"name": "Tel Nahal"
+}
+]
+},
+"masrekah": {
+"lat": 29.94694,
+"lon": 35.46361,
+"conf": "identified",
+"name": "Masrekah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"massah": {
+"lat": 28.62306,
+"lon": 33.88028,
+"conf": "disputed",
+"name": "Massah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.7125,
+"lon": 33.61194,
+"name": "Wadi Feiran"
+},
+{
+"lat": 28.69944,
+"lon": 33.68167,
+"name": "Wadi el Sheikh"
+}
+]
+},
+"mattanah": {
+"lat": 31.58835,
+"lon": 35.90793,
+"conf": "identified",
+"name": "Mattanah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.18056,
+"lon": 35.70139,
+"name": "Kerak"
+},
+{
+"lat": 31.35991,
+"lon": 35.78276,
+"name": "Khirbet al Balua"
+}
+]
+},
+"me-jarkon": {
+"lat": 32.10389,
+"lon": 34.77583,
+"conf": "identified",
+"name": "Me-jarkon",
+"types": [
+"river",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.09977,
+"lon": 34.80174,
+"name": "Ayalon River"
+},
+{
+"lat": 32.10137,
+"lon": 34.79408,
+"name": "Tell Qasile"
+}
+]
+},
+"meah": {
+"lat": 31.7823,
+"lon": 35.2344,
+"conf": "disputed",
+"name": "Tower of the Hundred (Jerusalem wall)",
+"types": [],
+"source": "curated"
+},
+"mearah": {
+"lat": 33.54,
+"lon": 35.58361,
+"conf": "disputed",
+"name": "Mearah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.4941,
+"lon": 35.0545,
+"name": "Wadi Ara"
+},
+{
+"lat": 33.6031,
+"lon": 35.4582,
+"name": "El Mghairiye"
+}
+]
+},
+"medeba": {
+"lat": 31.71611,
+"lon": 35.79548,
+"conf": "identified",
+"name": "Medeba",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"media": {
+"lat": 34.8065,
+"lon": 48.51625,
+"conf": "identified",
+"name": "Media",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"megiddo": {
+"lat": 32.58528,
+"lon": 35.18444,
+"conf": "identified",
+"name": "Megiddo",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"mekonah": {
+"lat": 31.35027,
+"lon": 34.92858,
+"conf": "disputed",
+"name": "Meconah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.37282,
+"lon": 34.93324,
+"name": "Khirbet Umm ed Demineh"
+},
+{
+"lat": 31.3912,
+"lon": 34.6816,
+"name": "Tell esh Sharia"
+}
+]
+},
+"melita": {
+"lat": 35.93346,
+"lon": 14.41173,
+"conf": "identified",
+"name": "Malta",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"memphis": {
+"lat": 29.8488,
+"lon": 31.253,
+"conf": "identified",
+"name": "Memphis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"meonenim": {
+"lat": 32.21361,
+"lon": 35.28194,
+"conf": "identified",
+"name": "Diviners’ Oak",
+"types": [
+"tree"
+],
+"source": "openbible"
+},
+"mephaath": {
+"lat": 31.49972,
+"lon": 35.91972,
+"conf": "disputed",
+"name": "Mephaath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.85747,
+"lon": 35.93161,
+"name": "Tell Jawah"
+},
+{
+"lat": 31.86655,
+"lon": 35.93041,
+"name": "Khirbet Nefaah"
+}
+]
+},
+"merathaim": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Merathaim",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"meribah": {
+"lat": 30.64833,
+"lon": 34.42222,
+"conf": "identified",
+"name": "Meribah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.58338,
+"lon": 34.48408,
+"name": "Ein Qedeis"
+}
+]
+},
+"merom": {
+"lat": 33.07678,
+"lon": 35.43235,
+"conf": "disputed",
+"name": "Merom",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.79972,
+"lon": 35.45972,
+"name": "Qarn Hattin"
+},
+{
+"lat": 33.10111,
+"lon": 35.44389,
+"name": "Maroun al Ras"
+}
+]
+},
+"meroz": {
+"lat": 33.0322,
+"lon": 35.52987,
+"conf": "disputed",
+"name": "Meroz",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.12583,
+"lon": 35.44278,
+"name": "Bint Jbeil"
+},
+{
+"lat": 33.07583,
+"lon": 35.52833,
+"name": "Har Zevi"
+}
+]
+},
+"mesopotamia": {
+"lat": 36.86444,
+"lon": 39.03278,
+"conf": "identified",
+"name": "Mesopotamia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"metheg-ammah": {
+"lat": 31.69972,
+"lon": 34.84694,
+"conf": "disputed",
+"name": "Metheg-ammah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90302,
+"lon": 34.88994,
+"name": "Ras Abu Hamid"
+},
+{
+"lat": 31.3912,
+"lon": 34.6816,
+"name": "Tell esh Sharia"
+}
+]
+},
+"michmash": {
+"lat": 31.87282,
+"lon": 35.27686,
+"conf": "identified",
+"name": "Michmash",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.87971,
+"lon": 35.2751,
+"name": "Khirbet el Hara el Fawqa"
+}
+]
+},
+"michmethah": {
+"lat": 32.17719,
+"lon": 35.2672,
+"conf": "disputed",
+"name": "Michmethath",
+"types": [
+"mountain",
+"river",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.19836,
+"lon": 35.30698,
+"name": "Khirbet Ibn Naser"
+},
+{
+"lat": 32.236,
+"lon": 35.3316,
+"name": "Mount Kabir"
+}
+]
+},
+"middin": {
+"lat": 31.74153,
+"lon": 35.40589,
+"conf": "disputed",
+"name": "Middin",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.68181,
+"lon": 35.44253,
+"name": "Qashr el Yahud"
+},
+{
+"lat": 31.719,
+"lon": 35.366,
+"name": "Hyrcania"
+}
+]
+},
+"migdal-edar": {
+"lat": 31.70731,
+"lon": 35.23011,
+"conf": "identified",
+"name": "Eder",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77361,
+"lon": 35.23556,
+"name": "City of David"
+},
+{
+"lat": 31.6793,
+"lon": 35.15464,
+"name": "Khirbet el Bira"
+}
+]
+},
+"migdal-el": {
+"lat": 33.22167,
+"lon": 35.46444,
+"conf": "disputed",
+"name": "Migdal-el",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.08333,
+"lon": 35.41667,
+"name": "Yarun"
+},
+{
+"lat": 33.15998,
+"lon": 35.51579,
+"name": "Khirbet el Mejdel"
+}
+]
+},
+"migdal-gad": {
+"lat": 31.53721,
+"lon": 34.90191,
+"conf": "disputed",
+"name": "Migdal-gad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5477,
+"lon": 34.7302,
+"name": "Tel Hasi"
+},
+{
+"lat": 31.53687,
+"lon": 34.91318,
+"name": "Ed Dawaimeh"
+}
+]
+},
+"migdol": {
+"lat": 30.96478,
+"lon": 32.49286,
+"conf": "disputed",
+"name": "Migdol",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.5527,
+"lon": 32.099,
+"name": "Tell el Maskhuta"
+},
+{
+"lat": 30.907,
+"lon": 32.45,
+"name": "T-211"
+}
+]
+},
+"migron": {
+"lat": 31.86921,
+"lon": 35.26807,
+"conf": "disputed",
+"name": "Migron",
+"types": [
+"region",
+"river",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.85528,
+"lon": 35.28806,
+"name": "Nahal Mikhmash"
+},
+{
+"lat": 31.87282,
+"lon": 35.27686,
+"name": "Mukhmas"
+}
+]
+},
+"miletus": {
+"lat": 37.53111,
+"lon": 27.27556,
+"conf": "identified",
+"name": "Miletus",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"millo": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Millo",
+"types": [
+"fortification",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.7737,
+"lon": 35.23595,
+"name": "Stepped Stone Structure"
+},
+{
+"lat": 31.77361,
+"lon": 35.23556,
+"name": "City of David"
+}
+]
+},
+"minni": {
+"lat": 36.57028,
+"lon": 46.27528,
+"conf": "identified",
+"name": "Minni",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"minnith": {
+"lat": 31.82021,
+"lon": 35.87468,
+"conf": "identified",
+"name": "Minnith",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82175,
+"lon": 35.87338,
+"name": "Khirbet Hamzeh"
+},
+{
+"lat": 31.84055,
+"lon": 35.92751,
+"name": "Khirbet el Yadudeh"
+}
+]
+},
+"misgab": {
+"lat": 31.18056,
+"lon": 35.70139,
+"conf": "disputed",
+"name": "Misgab",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible"
+},
+"mishal": {
+"lat": 32.87276,
+"lon": 35.15133,
+"conf": "disputed",
+"name": "Mishal",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.90139,
+"lon": 35.16944,
+"name": "Tell Bir el Gharbi"
+},
+{
+"lat": 32.7988,
+"lon": 35.07006,
+"name": "Tel Nahal"
+}
+]
+},
+"misrephoth-maim": {
+"lat": 33.3384,
+"lon": 35.245,
+"conf": "disputed",
+"name": "Misrephoth-maim",
+"types": [
+"hill",
+"river",
+"settlement",
+"spring"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.08063,
+"lon": 35.11003,
+"name": "Ain Mesherfi"
+},
+{
+"lat": 33.08508,
+"lon": 35.10623,
+"name": "Khirbet el Musheirifeh"
+}
+]
+},
+"mithcah": {
+"lat": 30.64056,
+"lon": 34.41111,
+"conf": "disputed",
+"name": "Mithkah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.24472,
+"lon": 34.84083,
+"name": "Tel Beer Sheva"
+},
+{
+"lat": 30.6875,
+"lon": 34.33333,
+"name": "Ain Muweileh"
+}
+]
+},
+"mitylene": {
+"lat": 39.11048,
+"lon": 26.54705,
+"conf": "identified",
+"name": "Mitylene",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"mizar": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "disputed",
+"name": "Mount Mizar",
+"types": [
+"hill",
+"mountain",
+"settlement",
+"special",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77167,
+"lon": 35.22861,
+"name": "Mount Zion"
+},
+{
+"lat": 33.21885,
+"lon": 35.70992,
+"name": "Za’ura"
+}
+]
+},
+"mizpah": {
+"lat": 32.11851,
+"lon": 35.77702,
+"conf": "disputed",
+"name": "Mizpah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.49985,
+"lon": 36.01499,
+"name": "Tall er Rumeith"
+},
+{
+"lat": 32.13119,
+"lon": 35.76129,
+"name": "Khirbet er Rasuni"
+}
+]
+},
+"mizraim": {
+"lat": 27.08,
+"lon": 31.405,
+"conf": "region",
+"name": "Mizraim",
+"types": [
+"region"
+],
+"source": "region",
+"region": "empire-egypt-core"
+},
+"moab": {
+"lat": 31.18056,
+"lon": 35.70139,
+"conf": "identified",
+"name": "Moab",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"modin": {
+"lat": 31.899,
+"lon": 35.01,
+"conf": "disputed",
+"name": "Modiin",
+"types": [],
+"source": "curated"
+},
+"moladah": {
+"lat": 31.2573,
+"lon": 34.92141,
+"conf": "disputed",
+"name": "Moladah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+},
+{
+"lat": 31.25534,
+"lon": 35.06735,
+"name": "Khirbet Kuseife"
+}
+]
+},
+"moreh": {
+"lat": 32.21361,
+"lon": 35.28194,
+"conf": "identified",
+"name": "Moreh",
+"types": [
+"tree"
+],
+"source": "openbible"
+},
+"moreh-the-hill-of": {
+"lat": 32.21361,
+"lon": 35.28194,
+"conf": "identified",
+"name": "Moreh",
+"types": [
+"tree"
+],
+"source": "openbible"
+},
+"moresheth-gath": {
+"lat": 31.63336,
+"lon": 34.91661,
+"conf": "disputed",
+"name": "Moresheth-gath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.6292,
+"lon": 34.8303,
+"name": "Tel Zayit"
+},
+{
+"lat": 31.49181,
+"lon": 34.92806,
+"name": "Tell Eton"
+}
+]
+},
+"moriah": {
+"lat": 31.77778,
+"lon": 35.23556,
+"conf": "disputed",
+"name": "Moriah",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77166,
+"lon": 35.2559,
+"name": "Al Eizariya"
+},
+{
+"lat": 32.19944,
+"lon": 35.27278,
+"name": "Mount Gerizim"
+}
+]
+},
+"moriah-land-of": {
+"lat": 31.77778,
+"lon": 35.23556,
+"conf": "disputed",
+"name": "Moriah",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77166,
+"lon": 35.2559,
+"name": "Al Eizariya"
+},
+{
+"lat": 32.19944,
+"lon": 35.27278,
+"name": "Mount Gerizim"
+}
+]
+},
+"mosera": {
+"lat": 30.83206,
+"lon": 35.05687,
+"conf": "disputed",
+"name": "Moseroth",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.76517,
+"lon": 34.52912,
+"name": "Imaret el Khureisheh"
+},
+{
+"lat": 30.79176,
+"lon": 34.47252,
+"name": "Birein"
+}
+]
+},
+"moseroth": {
+"lat": 30.83206,
+"lon": 35.05687,
+"conf": "disputed",
+"name": "Moseroth",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.76517,
+"lon": 34.52912,
+"name": "Imaret el Khureisheh"
+},
+{
+"lat": 30.79176,
+"lon": 34.47252,
+"name": "Birein"
+}
+]
+},
+"mount": {
+"lat": 31.77795,
+"lon": 35.24569,
+"conf": "identified",
+"name": "Mount of Olives",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"mount-of-beatitudes": {
+"lat": 32.8808,
+"lon": 35.5556,
+"conf": "disputed",
+"name": "Mount of Beatitudes (traditional)",
+"types": [],
+"source": "curated"
+},
+"mount-of-corruption": {
+"lat": 31.77795,
+"lon": 35.24569,
+"conf": "identified",
+"name": "Mount of Olives",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"mozah": {
+"lat": 31.79289,
+"lon": 35.16419,
+"conf": "disputed",
+"name": "Mozah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.80687,
+"lon": 35.15943,
+"name": "Khirbet Beit Mizza"
+}
+]
+},
+"myra": {
+"lat": 36.25917,
+"lon": 29.98528,
+"conf": "identified",
+"name": "Myra",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"mysia": {
+"lat": 40.0,
+"lon": 28.5,
+"conf": "identified",
+"name": "Mysia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"naaran": {
+"lat": 31.89347,
+"lon": 35.42475,
+"conf": "identified",
+"name": "Naaran",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.89552,
+"lon": 35.42213,
+"name": "Ein ed Duyuk"
+},
+{
+"lat": 31.88188,
+"lon": 35.45997,
+"name": "Khirbet el Mefjir"
+}
+]
+},
+"naarath": {
+"lat": 31.89347,
+"lon": 35.42475,
+"conf": "identified",
+"name": "Naarah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.89552,
+"lon": 35.42213,
+"name": "Ein ed Duyuk"
+},
+{
+"lat": 31.88188,
+"lon": 35.45997,
+"name": "Khirbet el Mefjir"
+}
+]
+},
+"nahaliel": {
+"lat": 31.61806,
+"lon": 35.56722,
+"conf": "disputed",
+"name": "Nahaliel",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5559,
+"lon": 35.75724,
+"name": "Wadi al Wala"
+}
+]
+},
+"nahallal": {
+"lat": 32.67914,
+"lon": 35.19695,
+"conf": "disputed",
+"name": "Nahalal",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.7988,
+"lon": 35.07006,
+"name": "Tel Nahal"
+},
+{
+"lat": 32.6967,
+"lon": 35.2414,
+"name": "Ma’alul"
+}
+]
+},
+"nain": {
+"lat": 32.63069,
+"lon": 35.35014,
+"conf": "identified",
+"name": "Nain",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"naioth": {
+"lat": 31.85434,
+"lon": 35.23161,
+"conf": "disputed",
+"name": "Naioth",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.03286,
+"lon": 35.1025,
+"name": "Beit Rima"
+},
+{
+"lat": 31.89694,
+"lon": 35.20167,
+"name": "Ramallah"
+}
+]
+},
+"naphtali-mount": {
+"lat": 32.9829,
+"lon": 35.5371,
+"conf": "region",
+"name": "Naphtali, Mount",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-naphtali"
+},
+"nazareth": {
+"lat": 32.70214,
+"lon": 35.29769,
+"conf": "identified",
+"name": "Nazareth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"neah": {
+"lat": 32.8042,
+"lon": 35.42346,
+"conf": "disputed",
+"name": "Neah",
+"types": [
+"settlement",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80957,
+"lon": 35.33246,
+"name": "Beit Netofa Valley"
+},
+{
+"lat": 32.7988,
+"lon": 35.3051,
+"name": "Tell el Wawiyat"
+}
+]
+},
+"neapolis": {
+"lat": 40.935,
+"lon": 24.415,
+"conf": "identified",
+"name": "Neapolis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"neballat": {
+"lat": 31.98644,
+"lon": 34.9589,
+"conf": "identified",
+"name": "Neballat",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"nebo": {
+"lat": 31.76667,
+"lon": 35.75,
+"conf": "disputed",
+"name": "Mount Nebo",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76778,
+"lon": 35.72556,
+"name": "Rujm Siyaghah"
+},
+{
+"lat": 32.07154,
+"lon": 35.70855,
+"name": "Jebel Osha"
+}
+]
+},
+"neiel": {
+"lat": 32.8926,
+"lon": 35.2219,
+"conf": "identified",
+"name": "Neiel",
+"types": [
+"settlement",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80957,
+"lon": 35.33246,
+"name": "Beit Netofa Valley"
+},
+{
+"lat": 32.8042,
+"lon": 35.42346,
+"name": "Nimrin"
+}
+]
+},
+"nekeb": {
+"lat": 32.74917,
+"lon": 35.45917,
+"conf": "identified",
+"name": "Adami-nekeb",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.73448,
+"lon": 35.48123,
+"name": "Khirbet Bessum"
+},
+{
+"lat": 32.6343,
+"lon": 35.5394,
+"name": "Khirbet Idma"
+}
+]
+},
+"nephtoah": {
+"lat": 31.79439,
+"lon": 35.19661,
+"conf": "identified",
+"name": "Nephtoah",
+"types": [
+"spring"
+],
+"source": "openbible"
+},
+"netophah": {
+"lat": 31.66765,
+"lon": 35.22103,
+"conf": "identified",
+"name": "Netophah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"nezib": {
+"lat": 31.58586,
+"lon": 35.00979,
+"conf": "identified",
+"name": "Nezib",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"nibshan": {
+"lat": 31.69945,
+"lon": 35.38143,
+"conf": "disputed",
+"name": "Nibshan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.6242,
+"lon": 35.40968,
+"name": "Ain el Ghuweir"
+},
+{
+"lat": 31.68181,
+"lon": 35.44253,
+"name": "Qashr el Yahud"
+}
+]
+},
+"nicopolis": {
+"lat": 39.02349,
+"lon": 20.73736,
+"conf": "identified",
+"name": "Nicopolis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"nile": {
+"lat": 31.4653,
+"lon": 30.3667,
+"conf": "identified",
+"name": "Nile",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"nimrah": {
+"lat": 31.90911,
+"lon": 35.63872,
+"conf": "disputed",
+"name": "Nimrah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.90094,
+"lon": 35.62455,
+"name": "Tall Nimrin"
+}
+]
+},
+"nimrim-waters-of": {
+"lat": 31.13361,
+"lon": 35.52667,
+"conf": "identified",
+"name": "Nimrim",
+"types": [
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8794,
+"lon": 35.53933,
+"name": "Wadi Nimrin"
+}
+]
+},
+"nineveh": {
+"lat": 36.3594,
+"lon": 43.1528,
+"conf": "identified",
+"name": "Nineveh",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"no": {
+"lat": 25.72056,
+"lon": 32.61028,
+"conf": "identified",
+"name": "Thebes",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"no-amon": {
+"lat": 25.72056,
+"lon": 32.61028,
+"conf": "identified",
+"name": "Thebes",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"nob": {
+"lat": 31.7925,
+"lon": 35.24417,
+"conf": "disputed",
+"name": "Nob",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79489,
+"lon": 35.24263,
+"name": "Ras Umm et Tala"
+},
+{
+"lat": 31.79861,
+"lon": 35.24833,
+"name": "Isawiya"
+}
+]
+},
+"noph": {
+"lat": 29.8488,
+"lon": 31.253,
+"conf": "identified",
+"name": "Memphis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"nophah": {
+"lat": 31.18056,
+"lon": 35.70139,
+"conf": "disputed",
+"name": "Nophah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.75616,
+"lon": 36.61899,
+"name": "Qanawat"
+},
+{
+"lat": 32.68611,
+"lon": 36.34861,
+"name": "Krak Canatha"
+}
+]
+},
+"oboth": {
+"lat": 30.61667,
+"lon": 35.19,
+"conf": "disputed",
+"name": "Oboth",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.71507,
+"lon": 35.65508,
+"name": "Gharandal"
+},
+{
+"lat": 30.82991,
+"lon": 35.41082,
+"name": "Telah"
+}
+]
+},
+"old-gate": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Gate of Yeshanah",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"olives-mount-of": {
+"lat": 31.77795,
+"lon": 35.24569,
+"conf": "identified",
+"name": "Mount of Olives",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"on": {
+"lat": 30.12944,
+"lon": 31.3075,
+"conf": "identified",
+"name": "Heliopolis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"ono": {
+"lat": 32.02722,
+"lon": 34.86806,
+"conf": "identified",
+"name": "Ono",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.03126,
+"lon": 34.87127,
+"name": "Kafr Juna"
+}
+]
+},
+"ophel": {
+"lat": 31.77533,
+"lon": 35.23622,
+"conf": "identified",
+"name": "Ophel",
+"types": [
+"hill"
+],
+"source": "openbible"
+},
+"ophir": {
+"lat": 18.21667,
+"lon": 42.5,
+"conf": "disputed",
+"name": "Ophir",
+"types": [
+"island",
+"mine",
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 19.41422,
+"lon": 72.79516,
+"name": "Sopara"
+},
+{
+"lat": 11.595,
+"lon": 43.14806,
+"name": "Djibouti"
+}
+]
+},
+"ophni": {
+"lat": 31.96194,
+"lon": 35.21556,
+"conf": "identified",
+"name": "Ophni",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9653,
+"lon": 35.1909,
+"name": "Khirbet Bir Zeit"
+}
+]
+},
+"ophrah": {
+"lat": 31.95444,
+"lon": 35.30028,
+"conf": "identified",
+"name": "Ophrah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"padan": {
+"lat": 36.86444,
+"lon": 39.03278,
+"conf": "identified",
+"name": "Paddan-aram",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.84739,
+"lon": 38.90492,
+"name": "Tell Feddan"
+}
+]
+},
+"padan-aram": {
+"lat": 36.86444,
+"lon": 39.03278,
+"conf": "identified",
+"name": "Paddan-aram",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.84739,
+"lon": 38.90492,
+"name": "Tell Feddan"
+}
+]
+},
+"palestine": {
+"lat": 31.66389,
+"lon": 34.54583,
+"conf": "identified",
+"name": "Philistia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"pamphylia": {
+"lat": 37.0,
+"lon": 31.0,
+"conf": "identified",
+"name": "Pamphylia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"paphos": {
+"lat": 34.75567,
+"lon": 32.40417,
+"conf": "identified",
+"name": "Paphos",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"parah": {
+"lat": 31.8348,
+"lon": 35.31048,
+"conf": "disputed",
+"name": "Parah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.82859,
+"lon": 35.28618,
+"name": "Khirbet Abu Musarrah"
+},
+{
+"lat": 31.99377,
+"lon": 35.21248,
+"name": "Khirbet Tarafayn"
+}
+]
+},
+"paran": {
+"lat": 30.30322,
+"lon": 34.77667,
+"conf": "identified",
+"name": "Paran",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"paran-mount": {
+"lat": 30.30322,
+"lon": 34.77667,
+"conf": "identified",
+"name": "Paran",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"parbar": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Parbar",
+"types": [
+"structure"
+],
+"source": "openbible"
+},
+"parvaim": {
+"lat": 16.87194,
+"lon": 43.71139,
+"conf": "disputed",
+"name": "Parvaim",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 25.70934,
+"lon": 42.72595,
+"name": "Saq el Farwein"
+},
+{
+"lat": 14.2139,
+"lon": 44.40287,
+"name": "Zafar"
+}
+]
+},
+"pas-dammim": {
+"lat": 31.68449,
+"lon": 35.05224,
+"conf": "identified",
+"name": "Ephes-dammim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.66791,
+"lon": 34.99327,
+"name": "Khirbet Beit Fasal"
+},
+{
+"lat": 31.6963,
+"lon": 34.9575,
+"name": "Khirbet Qeiyafa"
+}
+]
+},
+"patara": {
+"lat": 36.26028,
+"lon": 29.31417,
+"conf": "identified",
+"name": "Patara",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"pathros": {
+"lat": 24.1,
+"lon": 32.7,
+"conf": "identified",
+"name": "Pathros",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"patmos": {
+"lat": 37.325,
+"lon": 26.54167,
+"conf": "identified",
+"name": "Patmos",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"pau": {
+"lat": 31.12139,
+"lon": 35.19,
+"conf": "disputed",
+"name": "Pau",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.81926,
+"lon": 35.67188,
+"name": "Tall Iktanu"
+},
+{
+"lat": 31.79846,
+"lon": 35.72238,
+"name": "Khirbet el Muhatta"
+}
+]
+},
+"pekod": {
+"lat": 31.36112,
+"lon": 47.44964,
+"conf": "identified",
+"name": "Pekod",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"penuel": {
+"lat": 32.18702,
+"lon": 35.69211,
+"conf": "identified",
+"name": "Penuel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.18575,
+"lon": 35.68667,
+"name": "Tell edh Dhahab el Gharbi"
+}
+]
+},
+"peor": {
+"lat": 31.77702,
+"lon": 35.7385,
+"conf": "disputed",
+"name": "Peor",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79846,
+"lon": 35.72238,
+"name": "Khirbet el Muhatta"
+},
+{
+"lat": 31.81926,
+"lon": 35.67188,
+"name": "Tall Iktanu"
+}
+]
+},
+"perazim-mount": {
+"lat": 31.78522,
+"lon": 35.20473,
+"conf": "disputed",
+"name": "Mount Perazim",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.74185,
+"lon": 35.18332,
+"name": "Ez Zuhur"
+},
+{
+"lat": 31.76364,
+"lon": 35.23264,
+"name": "Abu Tor"
+}
+]
+},
+"perez-uzzah": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Perez-uzzah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"perga": {
+"lat": 36.96035,
+"lon": 30.85369,
+"conf": "identified",
+"name": "Perga",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"pergamos": {
+"lat": 39.13216,
+"lon": 27.18421,
+"conf": "identified",
+"name": "Pergamum",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"persia": {
+"lat": 34.8065,
+"lon": 48.51625,
+"conf": "identified",
+"name": "Persia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"pethor": {
+"lat": 36.7014,
+"lon": 38.0865,
+"conf": "disputed",
+"name": "Pethor",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.65995,
+"lon": 38.0754,
+"name": "Tell Aushariye"
+}
+]
+},
+"petra": {
+"lat": 30.78087,
+"lon": 35.57446,
+"conf": "disputed",
+"name": "Sela",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.9066,
+"lon": 35.13126,
+"name": "Ma’ale Akrabbim"
+},
+{
+"lat": 30.32675,
+"lon": 35.434,
+"name": "Umm el Bayyara"
+}
+]
+},
+"pharpar": {
+"lat": 33.31362,
+"lon": 36.05553,
+"conf": "identified",
+"name": "Pharpar",
+"types": [
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.41667,
+"lon": 36.13333,
+"name": "Barbar River"
+},
+{
+"lat": 33.54056,
+"lon": 36.35306,
+"name": "Tora River"
+}
+]
+},
+"phenice": {
+"lat": 33.27083,
+"lon": 35.19611,
+"conf": "identified",
+"name": "Phoenicia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"phenicia": {
+"lat": 33.27083,
+"lon": 35.19611,
+"conf": "identified",
+"name": "Phoenicia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"philadelphia": {
+"lat": 38.35,
+"lon": 28.51667,
+"conf": "identified",
+"name": "Philadelphia",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"philippi": {
+"lat": 41.01207,
+"lon": 24.28458,
+"conf": "identified",
+"name": "Philippi",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"philistia": {
+"lat": 31.66389,
+"lon": 34.54583,
+"conf": "identified",
+"name": "Philistia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"phoenicia": {
+"lat": 33.27083,
+"lon": 35.19611,
+"conf": "identified",
+"name": "Phoenicia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"phrygia": {
+"lat": 39.0,
+"lon": 31.0,
+"conf": "identified",
+"name": "Phrygia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"pi-beseth": {
+"lat": 30.57278,
+"lon": 31.51,
+"conf": "identified",
+"name": "Pi-beseth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"pi-hahiroth": {
+"lat": 30.22518,
+"lon": 32.46951,
+"conf": "disputed",
+"name": "Pi-hahiroth",
+"types": [
+"mountain",
+"natural area",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.86056,
+"lon": 32.17139,
+"name": "Tell Defenneh"
+},
+{
+"lat": 31.04251,
+"lon": 32.54614,
+"name": "Tell el Farama"
+}
+]
+},
+"pirathon": {
+"lat": 32.19056,
+"lon": 35.16583,
+"conf": "identified",
+"name": "Pirathon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.8348,
+"lon": 35.31048,
+"name": "Khirbet Ein Fara"
+},
+{
+"lat": 31.82859,
+"lon": 35.28618,
+"name": "Khirbet Abu Musarrah"
+}
+]
+},
+"pisgah": {
+"lat": 31.76778,
+"lon": 35.72556,
+"conf": "disputed",
+"name": "Pisgah",
+"types": [
+"mountain",
+"mountain range",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76667,
+"lon": 35.75,
+"name": "Jabal al Naba"
+},
+{
+"lat": 31.7539,
+"lon": 35.7152,
+"name": "Abarim"
+}
+]
+},
+"pisidia": {
+"lat": 38.30611,
+"lon": 31.18917,
+"conf": "identified",
+"name": "Pisidia",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"pison": {
+"lat": 17.11972,
+"lon": 42.41639,
+"conf": "disputed",
+"name": "Pishon",
+"types": [
+"body of water",
+"river",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 26.0,
+"lon": 52.0,
+"name": "Persian Gulf"
+},
+{
+"lat": 17.76583,
+"lon": 42.9525,
+"name": "Wadi Bishah"
+}
+]
+},
+"pithom": {
+"lat": 30.5475,
+"lon": 31.96361,
+"conf": "disputed",
+"name": "Pithom",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.5527,
+"lon": 32.099,
+"name": "Tell el Maskhuta"
+},
+{
+"lat": 30.12944,
+"lon": 31.3075,
+"name": "Ain Shams"
+}
+]
+},
+"plain-of-mamre": {
+"lat": 31.55654,
+"lon": 35.10534,
+"conf": "identified",
+"name": "Mamre",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.536,
+"lon": 35.0856,
+"name": "Ain Sebta"
+},
+{
+"lat": 31.53502,
+"lon": 35.10203,
+"name": "Khirbet Nimreh"
+}
+]
+},
+"pontus": {
+"lat": 40.68,
+"lon": 37.83,
+"conf": "identified",
+"name": "Pontus",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"pools-of-solomon": {
+"lat": 31.6897,
+"lon": 35.1664,
+"conf": "identified",
+"name": "Solomon's Pools (near Bethlehem)",
+"types": [],
+"source": "curated"
+},
+"potters-field": {
+"lat": 31.7706,
+"lon": 35.2317,
+"conf": "disputed",
+"name": "Akeldama, Field of Blood (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"ptolemais": {
+"lat": 32.9214,
+"lon": 35.0692,
+"conf": "identified",
+"name": "Ptolemais",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"puteoli": {
+"lat": 40.82611,
+"lon": 14.12056,
+"conf": "identified",
+"name": "Puteoli",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"quarantania": {
+"lat": 31.8742,
+"lon": 35.429,
+"conf": "disputed",
+"name": "Mount of Temptation (traditional)",
+"types": [],
+"source": "curated"
+},
+"raamses": {
+"lat": 30.79937,
+"lon": 31.83422,
+"conf": "disputed",
+"name": "Rameses",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.78623,
+"lon": 31.82253,
+"name": "Tell el Daba"
+},
+{
+"lat": 31.04251,
+"lon": 32.54614,
+"name": "Tell el Farama"
+}
+]
+},
+"rabbah": {
+"lat": 31.9547,
+"lon": 35.9343,
+"conf": "identified",
+"name": "Rabbah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"rachal": {
+"lat": 31.42288,
+"lon": 35.13295,
+"conf": "identified",
+"name": "Racal",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"rakkath": {
+"lat": 32.80639,
+"lon": 35.52583,
+"conf": "identified",
+"name": "Rakkath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.77361,
+"lon": 35.54417,
+"name": "Tiberias"
+},
+{
+"lat": 32.80806,
+"lon": 35.52639,
+"name": "Khirbet el Fuliya"
+}
+]
+},
+"rakkon": {
+"lat": 32.13083,
+"lon": 34.78726,
+"conf": "disputed",
+"name": "Rakkon",
+"types": [
+"river",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.09977,
+"lon": 34.80174,
+"name": "Ayalon River"
+},
+{
+"lat": 32.0917,
+"lon": 34.8075,
+"name": "Tel Gerisa"
+}
+]
+},
+"ramah": {
+"lat": 31.85434,
+"lon": 35.23161,
+"conf": "identified",
+"name": "Ramah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.89694,
+"lon": 35.20167,
+"name": "Ramallah"
+},
+{
+"lat": 31.7399,
+"lon": 35.2169,
+"name": "Ramat Rahel"
+}
+]
+},
+"ramath-lehi": {
+"lat": 31.7488,
+"lon": 35.00101,
+"conf": "disputed",
+"name": "Ramath-lehi",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76372,
+"lon": 35.02579,
+"name": "Arak Ismain"
+},
+{
+"lat": 31.73484,
+"lon": 35.05297,
+"name": "Bayt Itab"
+}
+]
+},
+"ramath-mizpeh": {
+"lat": 32.11851,
+"lon": 35.77702,
+"conf": "disputed",
+"name": "Ramath-mizpeh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.873,
+"lon": 35.8167,
+"name": "Khirbet el Qar’a"
+},
+{
+"lat": 32.49985,
+"lon": 36.01499,
+"name": "Tall er Rumeith"
+}
+]
+},
+"ramath-of-the-south": {
+"lat": 30.9357,
+"lon": 34.7886,
+"conf": "region",
+"name": "Ramath of the south",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-simeon"
+},
+"ramathaim-zophim": {
+"lat": 31.85434,
+"lon": 35.23161,
+"conf": "disputed",
+"name": "Ramathaim-zophim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.02806,
+"lon": 35.01944,
+"name": "Rantis"
+},
+{
+"lat": 32.03286,
+"lon": 35.1025,
+"name": "Beit Rima"
+}
+]
+},
+"rameses": {
+"lat": 30.79937,
+"lon": 31.83422,
+"conf": "disputed",
+"name": "Rameses",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.78623,
+"lon": 31.82253,
+"name": "Tell el Daba"
+},
+{
+"lat": 31.04251,
+"lon": 32.54614,
+"name": "Tell el Farama"
+}
+]
+},
+"ramoth": {
+"lat": 32.49985,
+"lon": 36.01499,
+"conf": "identified",
+"name": "Ramah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.55917,
+"lon": 36.00694,
+"name": "Ar Ramtha"
+},
+{
+"lat": 32.03333,
+"lon": 35.73333,
+"name": "As Salt"
+}
+]
+},
+"ramoth-gilead": {
+"lat": 32.49985,
+"lon": 36.01499,
+"conf": "identified",
+"name": "Ramoth-gilead",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.55917,
+"lon": 36.00694,
+"name": "Ar Ramtha"
+},
+{
+"lat": 32.03333,
+"lon": 35.73333,
+"name": "As Salt"
+}
+]
+},
+"red-sea": {
+"lat": 28.75,
+"lon": 33.0,
+"conf": "disputed",
+"name": "Red Sea",
+"types": [
+"body of water",
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.33833,
+"lon": 32.37778,
+"name": "Bitter Lakes"
+},
+{
+"lat": 30.57778,
+"lon": 32.28889,
+"name": "Lake Timsah"
+}
+]
+},
+"rehob": {
+"lat": 34.00889,
+"lon": 36.14528,
+"conf": "disputed",
+"name": "Rehob",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.24611,
+"lon": 35.69333,
+"name": "Banias"
+},
+{
+"lat": 33.249,
+"lon": 35.652,
+"name": "upper Huleh Valley"
+}
+]
+},
+"rehoboth": {
+"lat": 31.03111,
+"lon": 34.56583,
+"conf": "identified",
+"name": "Rehoboth",
+"types": [
+"well"
+],
+"source": "openbible"
+},
+"remeth": {
+"lat": 32.59556,
+"lon": 35.52139,
+"conf": "disputed",
+"name": "Remeth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.59028,
+"lon": 35.52556,
+"name": "En haYadid"
+},
+{
+"lat": 32.65974,
+"lon": 35.53724,
+"name": "Khirbet ed Dir"
+}
+]
+},
+"remmon-methoar": {
+"lat": 32.78806,
+"lon": 35.31056,
+"conf": "identified",
+"name": "Rimmon",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.78892,
+"lon": 35.29321,
+"name": "Horbat Rumah"
+},
+{
+"lat": 32.79972,
+"lon": 35.45972,
+"name": "Qarn Hattin"
+}
+]
+},
+"rephaim-valley-of": {
+"lat": 31.7632,
+"lon": 35.21912,
+"conf": "identified",
+"name": "Valley of Rephaim",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"rephidim": {
+"lat": 28.62306,
+"lon": 33.88028,
+"conf": "disputed",
+"name": "Rephidim",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.7125,
+"lon": 33.61194,
+"name": "Wadi Feiran"
+},
+{
+"lat": 28.69944,
+"lon": 33.68167,
+"name": "Wadi el Sheikh"
+}
+]
+},
+"resen": {
+"lat": 36.1437,
+"lon": 43.31452,
+"conf": "disputed",
+"name": "Resen",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.15806,
+"lon": 43.25944,
+"name": "Hamam al Alil"
+},
+{
+"lat": 36.56669,
+"lon": 43.23489,
+"name": "Resh Eni"
+}
+]
+},
+"rezeph": {
+"lat": 35.62778,
+"lon": 38.75639,
+"conf": "identified",
+"name": "Rezeph",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 36.4345,
+"lon": 42.4177,
+"name": "Resappa"
+}
+]
+},
+"rhegium": {
+"lat": 38.1088,
+"lon": 15.64412,
+"conf": "identified",
+"name": "Rhegium",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"rhodes": {
+"lat": 26.65,
+"lon": 37.91667,
+"conf": "identified",
+"name": "Dedan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"riblah": {
+"lat": 34.45955,
+"lon": 36.57262,
+"conf": "identified",
+"name": "Riblah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"rimmon-parez": {
+"lat": 29.54022,
+"lon": 34.65429,
+"conf": "disputed",
+"name": "Rimmon-perez",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.57861,
+"lon": 34.81778,
+"name": "Wadi er Rummun"
+},
+{
+"lat": 31.37124,
+"lon": 34.86489,
+"name": "Khirbet Umm er Rammamin"
+}
+]
+},
+"rissah": {
+"lat": 28.026,
+"lon": 35.248,
+"conf": "disputed",
+"name": "Rissah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.00296,
+"lon": 34.68193,
+"name": "Kuntilet el Jerafi"
+}
+]
+},
+"rithmah": {
+"lat": 29.03369,
+"lon": 34.1255,
+"conf": "disputed",
+"name": "Rithmah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.59941,
+"lon": 34.36029,
+"name": "Wadi Abu Retemat"
+},
+{
+"lat": 27.86194,
+"lon": 36.22833,
+"name": "Wadi er Retame"
+}
+]
+},
+"river-of-egypt": {
+"lat": 31.14571,
+"lon": 33.80649,
+"conf": "identified",
+"name": "Brook of Egypt",
+"types": [
+"river",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.46423,
+"lon": 34.37568,
+"name": "Nahal HaBesor"
+},
+{
+"lat": 31.04251,
+"lon": 32.54614,
+"name": "Pelusiac branch of the Nile"
+}
+]
+},
+"rogelim": {
+"lat": 32.52789,
+"lon": 35.78063,
+"conf": "disputed",
+"name": "Rogelim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.53276,
+"lon": 35.7723,
+"name": "Tell Barsina"
+}
+]
+},
+"roman-empire": {
+"lat": 37.15,
+"lon": 23.95,
+"conf": "region",
+"name": "Roman Empire",
+"types": [
+"region"
+],
+"source": "region",
+"region": "empire-rome"
+},
+"rome": {
+"lat": 41.8922,
+"lon": 12.4852,
+"conf": "identified",
+"name": "Rome",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"rumah": {
+"lat": 32.78892,
+"lon": 35.29321,
+"conf": "identified",
+"name": "Rumah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.14756,
+"lon": 35.32158,
+"name": "Khirbet Urmah"
+},
+{
+"lat": 31.4306,
+"lon": 34.9861,
+"name": "Deir ed Domeh"
+}
+]
+},
+"salamis": {
+"lat": 35.18494,
+"lon": 33.90194,
+"conf": "identified",
+"name": "Salamis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"salcah": {
+"lat": 32.4939,
+"lon": 36.7105,
+"conf": "identified",
+"name": "Salecah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"salem": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Salem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"salim": {
+"lat": 32.39917,
+"lon": 35.52639,
+"conf": "disputed",
+"name": "Salim",
+"types": [
+"settlement",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.20871,
+"lon": 35.33033,
+"name": "Salim"
+},
+{
+"lat": 32.3743,
+"lon": 35.56089,
+"name": "Tell Abu Sus"
+}
+]
+},
+"salmone": {
+"lat": 35.31603,
+"lon": 26.31155,
+"conf": "identified",
+"name": "Salmone",
+"types": [
+"promontory"
+],
+"source": "openbible"
+},
+"salt-sea": {
+"lat": 31.5,
+"lon": 35.5,
+"conf": "identified",
+"name": "Salt Sea",
+"types": [
+"body of water"
+],
+"source": "openbible"
+},
+"salt-valley-of": {
+"lat": 31.05051,
+"lon": 35.40627,
+"conf": "disputed",
+"name": "Valley of Salt",
+"types": [
+"special",
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.216,
+"lon": 35.05055,
+"name": "Wadi el Milh"
+},
+{
+"lat": 31.95,
+"lon": 34.9,
+"name": "Lod"
+}
+]
+},
+"samaria": {
+"lat": 32.27611,
+"lon": 35.195,
+"conf": "identified",
+"name": "Samaria",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"samos": {
+"lat": 37.75,
+"lon": 26.8333,
+"conf": "identified",
+"name": "Samos",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"samothrace": {
+"lat": 40.45,
+"lon": 25.58333,
+"conf": "identified",
+"name": "Samothrace",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"samothracia": {
+"lat": 40.45,
+"lon": 25.58333,
+"conf": "identified",
+"name": "Samothrace",
+"types": [
+"island"
+],
+"source": "openbible"
+},
+"sansannah": {
+"lat": 31.3445,
+"lon": 34.9014,
+"conf": "identified",
+"name": "Sansannah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.26259,
+"lon": 34.52976,
+"name": "Sbalat Abu Susein"
+}
+]
+},
+"saphir": {
+"lat": 31.71323,
+"lon": 34.70424,
+"conf": "disputed",
+"name": "Shaphir",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.53472,
+"lon": 34.96656,
+"name": "Khirbet el Qom"
+},
+{
+"lat": 31.49181,
+"lon": 34.92806,
+"name": "Tell Eton"
+}
+]
+},
+"sardis": {
+"lat": 38.48833,
+"lon": 28.04028,
+"conf": "identified",
+"name": "Sardis",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sarepta": {
+"lat": 33.46423,
+"lon": 35.29514,
+"conf": "identified",
+"name": "Zarephath",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sea-of-jazer": {
+"lat": 32.0064,
+"lon": 35.73498,
+"conf": "disputed",
+"name": "Sea of Jazer",
+"types": [
+"body of water",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.94447,
+"lon": 35.83008,
+"name": "Khirbet Sara"
+},
+{
+"lat": 31.90559,
+"lon": 35.79588,
+"name": "Tell el Areme"
+}
+]
+},
+"sea-the": {
+"lat": 31.80482,
+"lon": 34.17035,
+"conf": "identified",
+"name": "Great Sea",
+"types": [
+"body of water"
+],
+"source": "openbible"
+},
+"seba": {
+"lat": 15.34833,
+"lon": 44.20639,
+"conf": "identified",
+"name": "Sheba",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"secacah": {
+"lat": 31.71684,
+"lon": 35.39159,
+"conf": "disputed",
+"name": "Secacah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.74083,
+"lon": 35.45861,
+"name": "Qumran"
+},
+{
+"lat": 31.71444,
+"lon": 35.45333,
+"name": "Ain Feshkah"
+}
+]
+},
+"sechu": {
+"lat": 31.93738,
+"lon": 35.14474,
+"conf": "identified",
+"name": "Secu",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"seir": {
+"lat": 30.1843,
+"lon": 35.3166,
+"conf": "identified",
+"name": "Mount Seir",
+"types": [
+"mountain range"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.885,
+"lon": 35.13472,
+"name": "mountains southwest of the Dead Sea"
+}
+]
+},
+"seirath": {
+"lat": 31.9878,
+"lon": 35.3332,
+"conf": "disputed",
+"name": "Seirah",
+"types": [
+"natural area",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.31722,
+"lon": 35.57,
+"name": "Jordan Valley"
+},
+{
+"lat": 31.18056,
+"lon": 35.70139,
+"name": "Kerak"
+}
+]
+},
+"sela": {
+"lat": 30.78087,
+"lon": 35.57446,
+"conf": "disputed",
+"name": "Sela",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.9066,
+"lon": 35.13126,
+"name": "Ma’ale Akrabbim"
+},
+{
+"lat": 30.32675,
+"lon": 35.434,
+"name": "Umm el Bayyara"
+}
+]
+},
+"sela-hammahlekoth": {
+"lat": 31.45151,
+"lon": 35.23289,
+"conf": "identified",
+"name": "Rock of Escape",
+"types": [
+"natural area"
+],
+"source": "openbible"
+},
+"seleucia": {
+"lat": 36.124,
+"lon": 35.922,
+"conf": "identified",
+"name": "Seleucia",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"senaah": {
+"lat": 31.9472,
+"lon": 35.39974,
+"conf": "disputed",
+"name": "Senaah",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.96618,
+"lon": 35.47177,
+"name": "Khirbat al Beiyudat"
+},
+{
+"lat": 31.94374,
+"lon": 35.40935,
+"name": "Khirbet el Aujah"
+}
+]
+},
+"seneh": {
+"lat": 31.85309,
+"lon": 35.28617,
+"conf": "identified",
+"name": "Seneh",
+"types": [
+"cliff"
+],
+"source": "openbible"
+},
+"sephar": {
+"lat": 14.2139,
+"lon": 44.40287,
+"conf": "disputed",
+"name": "Sephar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 17.00616,
+"lon": 54.13087,
+"name": "Al Baleed"
+}
+]
+},
+"sepharad": {
+"lat": 38.48833,
+"lon": 28.04028,
+"conf": "identified",
+"name": "Sepharad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 37.08194,
+"lon": 22.42361,
+"name": "Sparta"
+},
+{
+"lat": 39.0,
+"lon": 32.0,
+"name": "Asia Minor"
+}
+]
+},
+"sepharvaim": {
+"lat": 34.40107,
+"lon": 36.63636,
+"conf": "disputed",
+"name": "Sepharvaim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.05883,
+"lon": 44.25215,
+"name": "Sippar"
+},
+{
+"lat": 32.12611,
+"lon": 45.23083,
+"name": "Nippur"
+}
+]
+},
+"shaalabbin": {
+"lat": 31.86981,
+"lon": 34.98714,
+"conf": "identified",
+"name": "Shaalbim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.35417,
+"lon": 35.3725,
+"name": "Khirbet Salhab"
+}
+]
+},
+"shaaraim": {
+"lat": 31.7355,
+"lon": 35.02757,
+"conf": "disputed",
+"name": "Shaaraim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.6963,
+"lon": 34.9575,
+"name": "Khirbet Qeiyafa"
+},
+{
+"lat": 31.467,
+"lon": 34.4041,
+"name": "Tall al Ajjul"
+}
+]
+},
+"shalem": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Salem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"shalim-land-of": {
+"lat": 31.86981,
+"lon": 34.98714,
+"conf": "disputed",
+"name": "Shaalim",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.95444,
+"lon": 35.30028,
+"name": "Taybeh"
+},
+{
+"lat": 31.92972,
+"lon": 35.29889,
+"name": "Rammun"
+}
+]
+},
+"shalisha-land-of": {
+"lat": 32.1525,
+"lon": 35.04417,
+"conf": "disputed",
+"name": "Shalishah",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.11031,
+"lon": 35.01182,
+"name": "Khirbet Sirisye"
+},
+{
+"lat": 31.9914,
+"lon": 35.3322,
+"name": "Khirbet Marjame"
+}
+]
+},
+"shallecheth-the-gate-of": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Shallecheth",
+"types": [
+"gate"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77641,
+"lon": 35.23184,
+"name": "Israelite Tower"
+}
+]
+},
+"shamir": {
+"lat": 31.4184,
+"lon": 34.9318,
+"conf": "disputed",
+"name": "Shamir",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.4121,
+"lon": 34.9549,
+"name": "Khirbet Anab es Seghireh"
+},
+{
+"lat": 31.4355,
+"lon": 34.9265,
+"name": "Khirbet al Bira"
+}
+]
+},
+"shapher": {
+"lat": 30.50662,
+"lon": 34.30356,
+"conf": "disputed",
+"name": "Mount Shepher",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.98642,
+"lon": 34.47324,
+"name": "Jebel Aradeh"
+},
+{
+"lat": 30.35917,
+"lon": 34.4425,
+"name": "Jebel Araif en Nakah"
+}
+]
+},
+"sharaim": {
+"lat": 31.7355,
+"lon": 35.02757,
+"conf": "disputed",
+"name": "Shaaraim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.6963,
+"lon": 34.9575,
+"name": "Khirbet Qeiyafa"
+},
+{
+"lat": 31.467,
+"lon": 34.4041,
+"name": "Tall al Ajjul"
+}
+]
+},
+"sharon-saron": {
+"lat": 32.4,
+"lon": 34.883,
+"conf": "identified",
+"name": "Sharon",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"shaveh-kiriathaim": {
+"lat": 31.54056,
+"lon": 35.68611,
+"conf": "disputed",
+"name": "Shaveh-kiriathaim",
+"types": [
+"natural area"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.74913,
+"lon": 35.74386,
+"name": "Khirbet al Mukhayyat"
+},
+{
+"lat": 31.70894,
+"lon": 35.6943,
+"name": "Khirbet el Qureiye"
+}
+]
+},
+"shaveh-valley-of": {
+"lat": 31.7672,
+"lon": 35.23598,
+"conf": "disputed",
+"name": "Valley of Shaveh",
+"types": [
+"valley"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.78028,
+"lon": 35.24,
+"name": "Kidron River"
+},
+{
+"lat": 31.76917,
+"lon": 35.22806,
+"name": "Hinnom Valley"
+}
+]
+},
+"shebarim": {
+"lat": 31.90727,
+"lon": 35.31059,
+"conf": "disputed",
+"name": "Shebarim",
+"types": [
+"natural area",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.91694,
+"lon": 35.26111,
+"name": "Et Tell"
+},
+{
+"lat": 31.91476,
+"lon": 35.2496,
+"name": "Khirbet el Maqatir"
+}
+]
+},
+"shechem": {
+"lat": 32.21361,
+"lon": 35.28194,
+"conf": "identified",
+"name": "Shechem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sheep-gate": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Sheep Gate",
+"types": [
+"gate"
+],
+"source": "openbible"
+},
+"sheep-market": {
+"lat": 31.7814,
+"lon": 35.236,
+"conf": "disputed",
+"name": "Sheep Gate / Pool of Bethesda (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"shen": {
+"lat": 31.99855,
+"lon": 35.26029,
+"conf": "disputed",
+"name": "Shen",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible"
+},
+"shenir": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "identified",
+"name": "Senir",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"shepham": {
+"lat": 34.39674,
+"lon": 36.38715,
+"conf": "disputed",
+"name": "Shepham",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.53694,
+"lon": 36.36611,
+"name": "Arbin"
+},
+{
+"lat": 32.55866,
+"lon": 35.84759,
+"name": "Tall Irbid"
+}
+]
+},
+"sheshach": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Sheshach",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"shibmah": {
+"lat": 31.78236,
+"lon": 35.76131,
+"conf": "disputed",
+"name": "Sibmah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77702,
+"lon": 35.7385,
+"name": "Khirbet Ayun Musa"
+},
+{
+"lat": 31.6795,
+"lon": 35.73532,
+"name": "Ma‘in"
+}
+]
+},
+"shihor": {
+"lat": 31.4653,
+"lon": 30.3667,
+"conf": "identified",
+"name": "Nile",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"shihor-libnath": {
+"lat": 32.81667,
+"lon": 35.03333,
+"conf": "disputed",
+"name": "Shihor-libnath",
+"types": [
+"natural area",
+"region",
+"river",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.80083,
+"lon": 35.01917,
+"name": "Tell Abu Hawam"
+},
+{
+"lat": 32.55667,
+"lon": 34.92464,
+"name": "Kebara Swamps"
+}
+]
+},
+"shilhim": {
+"lat": 31.467,
+"lon": 34.4041,
+"conf": "disputed",
+"name": "Shilhim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.28194,
+"lon": 34.4825,
+"name": "Tel Sharuhen"
+},
+{
+"lat": 31.3821,
+"lon": 34.6065,
+"name": "Tel Haror"
+}
+]
+},
+"shiloah-the-waters-of": {
+"lat": 31.77056,
+"lon": 35.235,
+"conf": "identified",
+"name": "Shiloah",
+"types": [
+"pool"
+],
+"source": "openbible"
+},
+"shimron": {
+"lat": 32.70389,
+"lon": 35.21333,
+"conf": "identified",
+"name": "Shimron",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.10111,
+"lon": 35.44389,
+"name": "Maroun al Ras"
+}
+]
+},
+"shimron-meron": {
+"lat": 32.70389,
+"lon": 35.21333,
+"conf": "identified",
+"name": "Shimron-meron",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.10111,
+"lon": 35.44389,
+"name": "Maroun al Ras"
+}
+]
+},
+"shinar": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Shinar",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"shinar-the-land-of": {
+"lat": 32.54333,
+"lon": 44.42222,
+"conf": "identified",
+"name": "Shinar",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"shittim": {
+"lat": 31.84018,
+"lon": 35.67368,
+"conf": "identified",
+"name": "Shittim",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.85055,
+"lon": 35.65296,
+"name": "Tall Kafrayn"
+},
+{
+"lat": 31.84161,
+"lon": 35.68404,
+"name": "Tell Matabi"
+}
+]
+},
+"shoa": {
+"lat": 31.0043,
+"lon": 47.4421,
+"conf": "identified",
+"name": "Shoa",
+"types": [
+"people group"
+],
+"source": "openbible"
+},
+"shocho": {
+"lat": 31.6822,
+"lon": 34.9749,
+"conf": "identified",
+"name": "Socoh",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"shophan": {
+"lat": 31.59131,
+"lon": 35.68742,
+"conf": "disputed",
+"name": "Atroth-shophan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5753,
+"lon": 35.66594,
+"name": "Khirbet Ataruz"
+}
+]
+},
+"shual-the-land-of": {
+"lat": 31.95444,
+"lon": 35.30028,
+"conf": "disputed",
+"name": "Shual",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.92972,
+"lon": 35.29889,
+"name": "Rammun"
+}
+]
+},
+"shunem": {
+"lat": 32.60563,
+"lon": 35.33431,
+"conf": "identified",
+"name": "Shunem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"shur": {
+"lat": 30.49333,
+"lon": 32.95667,
+"conf": "identified",
+"name": "Shur",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 29.95583,
+"lon": 32.8725,
+"name": "Wadi as Sakriyat"
+},
+{
+"lat": 31.28194,
+"lon": 34.4825,
+"name": "Tel Sharuhen"
+}
+]
+},
+"shushan": {
+"lat": 32.18922,
+"lon": 48.25778,
+"conf": "identified",
+"name": "Susa",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sibmah": {
+"lat": 31.78236,
+"lon": 35.76131,
+"conf": "disputed",
+"name": "Sibmah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.77702,
+"lon": 35.7385,
+"name": "Khirbet Ayun Musa"
+},
+{
+"lat": 31.6795,
+"lon": 35.73532,
+"name": "Ma‘in"
+}
+]
+},
+"sichem": {
+"lat": 32.21361,
+"lon": 35.28194,
+"conf": "identified",
+"name": "Shechem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"siddim-vale-of": {
+"lat": 31.20849,
+"lon": 35.44922,
+"conf": "identified",
+"name": "Valley of Siddim",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"sidon": {
+"lat": 33.56099,
+"lon": 35.37194,
+"conf": "identified",
+"name": "Sidon",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"silla": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Silla",
+"types": [
+"fortification",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.7737,
+"lon": 35.23595,
+"name": "Stepped Stone Structure"
+},
+{
+"lat": 31.77361,
+"lon": 35.23556,
+"name": "City of David"
+}
+]
+},
+"siloah-the-pool-of": {
+"lat": 31.77056,
+"lon": 35.235,
+"conf": "identified",
+"name": "Siloam",
+"types": [
+"pool"
+],
+"source": "openbible"
+},
+"siloam": {
+"lat": 31.77056,
+"lon": 35.235,
+"conf": "identified",
+"name": "Siloam",
+"types": [
+"pool"
+],
+"source": "openbible"
+},
+"siloam-pool-of": {
+"lat": 31.77056,
+"lon": 35.235,
+"conf": "identified",
+"name": "Siloam",
+"types": [
+"pool"
+],
+"source": "openbible"
+},
+"siloam-tower-of": {
+"lat": 31.77056,
+"lon": 35.235,
+"conf": "identified",
+"name": "Siloam",
+"types": [
+"pool"
+],
+"source": "openbible"
+},
+"sin-wilderness-of": {
+"lat": 29.14778,
+"lon": 33.53667,
+"conf": "disputed",
+"name": "Sin",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.88333,
+"lon": 33.18333,
+"name": "El Marka"
+},
+{
+"lat": 28.24168,
+"lon": 33.6222,
+"name": "El Qaa"
+}
+]
+},
+"sinai": {
+"lat": 28.53972,
+"lon": 33.97333,
+"conf": "disputed",
+"name": "Mount Horeb",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.28333,
+"lon": 34.75,
+"name": "Har Karkom"
+},
+{
+"lat": 29.671,
+"lon": 32.961,
+"name": "Jebel Sin Bishar"
+}
+]
+},
+"sinim-the-land-of": {
+"lat": 24.08892,
+"lon": 32.89973,
+"conf": "identified",
+"name": "Syene",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sion": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "identified",
+"name": "Mount Hermon",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"siphmoth": {
+"lat": 31.40079,
+"lon": 35.06708,
+"conf": "identified",
+"name": "Siphmoth",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sirah": {
+"lat": 31.54192,
+"lon": 35.09882,
+"conf": "identified",
+"name": "Sirah",
+"types": [
+"well"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.5669,
+"lon": 35.10225,
+"name": "Serit el Bella"
+}
+]
+},
+"sirion": {
+"lat": 33.4,
+"lon": 35.85,
+"conf": "identified",
+"name": "Mount Hermon",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"sitnah": {
+"lat": 31.03113,
+"lon": 34.57253,
+"conf": "disputed",
+"name": "Sitnah",
+"types": [
+"well"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.03111,
+"lon": 34.56583,
+"name": "Ruheibeh"
+},
+{
+"lat": 31.3986,
+"lon": 34.4362,
+"name": "Nahal Gerar"
+}
+]
+},
+"smyrna": {
+"lat": 38.41889,
+"lon": 27.13778,
+"conf": "identified",
+"name": "Smyrna",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"socho": {
+"lat": 31.6822,
+"lon": 34.9749,
+"conf": "identified",
+"name": "Socoh",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sodom": {
+"lat": 31.20849,
+"lon": 35.44922,
+"conf": "disputed",
+"name": "Sodom",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.24873,
+"lon": 35.523,
+"name": "Bab edh Dhra"
+},
+{
+"lat": 31.795,
+"lon": 35.59528,
+"name": "north of the Dead Sea"
+}
+]
+},
+"sodoma": {
+"lat": 31.20849,
+"lon": 35.44922,
+"conf": "disputed",
+"name": "Sodom",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.24873,
+"lon": 35.523,
+"name": "Bab edh Dhra"
+},
+{
+"lat": 31.795,
+"lon": 35.59528,
+"name": "north of the Dead Sea"
+}
+]
+},
+"solomons-porch": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Solomon’s Portico",
+"types": [
+"structure"
+],
+"source": "openbible"
+},
+"sorek": {
+"lat": 31.75583,
+"lon": 35.05,
+"conf": "identified",
+"name": "Valley of Sorek",
+"types": [
+"valley"
+],
+"source": "openbible"
+},
+"south": {
+"lat": 31.24472,
+"lon": 34.84083,
+"conf": "identified",
+"name": "Negeb",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"spain": {
+"lat": 40.21,
+"lon": -4.35,
+"conf": "identified",
+"name": "Spain",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"stream-of-egypt": {
+"lat": 31.14571,
+"lon": 33.80649,
+"conf": "identified",
+"name": "Brook of Egypt",
+"types": [
+"river",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.46423,
+"lon": 34.37568,
+"name": "Nahal HaBesor"
+},
+{
+"lat": 31.04251,
+"lon": 32.54614,
+"name": "Pelusiac branch of the Nile"
+}
+]
+},
+"succoth": {
+"lat": 32.1966,
+"lon": 35.62118,
+"conf": "identified",
+"name": "Succoth",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.19321,
+"lon": 35.59396,
+"name": "Tell el Ekhsas"
+}
+]
+},
+"suph": {
+"lat": 28.75,
+"lon": 34.75,
+"conf": "disputed",
+"name": "Suph",
+"types": [
+"body of water",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.66561,
+"lon": 35.81749,
+"name": "Sufeh"
+}
+]
+},
+"suphah": {
+"lat": 31.66561,
+"lon": 35.81749,
+"conf": "disputed",
+"name": "Suphah",
+"types": [
+"body of water",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.75,
+"lon": 34.75,
+"name": "Gulf of Aqaba"
+}
+]
+},
+"susa": {
+"lat": 32.18922,
+"lon": 48.25778,
+"conf": "identified",
+"name": "Susa",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"sychar": {
+"lat": 32.21776,
+"lon": 35.28897,
+"conf": "identified",
+"name": "Sychar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.21361,
+"lon": 35.28194,
+"name": "Tell Balatah"
+}
+]
+},
+"sychem": {
+"lat": 32.21361,
+"lon": 35.28194,
+"conf": "identified",
+"name": "Shechem",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"syene": {
+"lat": 24.08892,
+"lon": 32.89973,
+"conf": "identified",
+"name": "Syene",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"syracuse": {
+"lat": 37.06389,
+"lon": 15.29306,
+"conf": "identified",
+"name": "Syracuse",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"syria": {
+"lat": 33.51111,
+"lon": 36.30639,
+"conf": "identified",
+"name": "Aram",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"taanach": {
+"lat": 32.52153,
+"lon": 35.21912,
+"conf": "identified",
+"name": "Taanach",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"taanath-shiloh": {
+"lat": 32.17635,
+"lon": 35.37093,
+"conf": "identified",
+"name": "Taanath-shiloh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.1523,
+"lon": 35.3939,
+"name": "Khirbet Tana et Tahta"
+}
+]
+},
+"tabbath": {
+"lat": 32.28684,
+"lon": 35.61893,
+"conf": "disputed",
+"name": "Tabbath",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"taberah": {
+"lat": 28.78867,
+"lon": 34.27544,
+"conf": "disputed",
+"name": "Taberah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 28.70667,
+"lon": 34.04194,
+"name": "Wadi Sa’l"
+},
+{
+"lat": 30.09176,
+"lon": 33.38012,
+"name": "Wadi al Aghaydira"
+}
+]
+},
+"tabor": {
+"lat": 32.68625,
+"lon": 35.39292,
+"conf": "identified",
+"name": "Mount Tabor",
+"types": [
+"mountain"
+],
+"source": "openbible"
+},
+"tadmor": {
+"lat": 34.547,
+"lon": 38.274,
+"conf": "identified",
+"name": "Tadmor",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tahapanes": {
+"lat": 30.86056,
+"lon": 32.17139,
+"conf": "identified",
+"name": "Tahpanhes",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tahtim-hodshi": {
+"lat": 34.55781,
+"lon": 36.5196,
+"conf": "identified",
+"name": "Kadesh",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.11164,
+"lon": 35.52952,
+"name": "Tel Kedesh"
+},
+{
+"lat": 33.4,
+"lon": 35.85,
+"name": "Mount Hermon"
+}
+]
+},
+"tanis": {
+"lat": 30.97694,
+"lon": 31.88,
+"conf": "identified",
+"name": "Zoan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tappuah": {
+"lat": 32.10415,
+"lon": 35.23007,
+"conf": "identified",
+"name": "Tappuah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tarah": {
+"lat": 30.64056,
+"lon": 34.41111,
+"conf": "disputed",
+"name": "Terah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.24472,
+"lon": 34.84083,
+"name": "Tel Beer Sheva"
+},
+{
+"lat": 30.6875,
+"lon": 34.33333,
+"name": "Ain Muweileh"
+}
+]
+},
+"tarshish": {
+"lat": 37.27194,
+"lon": -6.94417,
+"conf": "disputed",
+"name": "Tarshish",
+"types": [
+"island",
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 40.05,
+"lon": 9.08333,
+"name": "Sardinia"
+},
+{
+"lat": 36.85256,
+"lon": 10.32346,
+"name": "Carthage"
+}
+]
+},
+"tarsus": {
+"lat": 36.91303,
+"lon": 34.89206,
+"conf": "identified",
+"name": "Tarsus",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"taverns-the-three": {
+"lat": 41.56194,
+"lon": 12.87389,
+"conf": "identified",
+"name": "Three Taverns",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tekoa-tekoah": {
+"lat": 31.63247,
+"lon": 35.21048,
+"conf": "identified",
+"name": "Tekoa",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tel-abib": {
+"lat": 32.12611,
+"lon": 45.23083,
+"conf": "identified",
+"name": "Tel-abib",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.12694,
+"lon": 45.23083,
+"name": "Shatt en Nil"
+},
+{
+"lat": 35.1303,
+"lon": 40.42728,
+"name": "Khabur River"
+}
+]
+},
+"tel-haresha": {
+"lat": 32.12611,
+"lon": 45.23083,
+"conf": "disputed",
+"name": "Tel-harsha",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tel-melah": {
+"lat": 32.12611,
+"lon": 45.23083,
+"conf": "disputed",
+"name": "Tel-melah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.31667,
+"lon": 45.28333,
+"name": "Samawah"
+}
+]
+},
+"telaim": {
+"lat": 31.14205,
+"lon": 34.91217,
+"conf": "disputed",
+"name": "Telem",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.98982,
+"lon": 34.96526,
+"name": "Khirbet Umm es Salafe"
+},
+{
+"lat": 31.04903,
+"lon": 35.02882,
+"name": "Horbat Rahba"
+}
+]
+},
+"telassar": {
+"lat": 36.7014,
+"lon": 38.0865,
+"conf": "disputed",
+"name": "Telassar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 35.11194,
+"lon": 45.68639,
+"name": "Til Assuri"
+},
+{
+"lat": 36.37917,
+"lon": 42.44972,
+"name": "Tal Afar"
+}
+]
+},
+"telem": {
+"lat": 31.14205,
+"lon": 34.91217,
+"conf": "disputed",
+"name": "Telem",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.98982,
+"lon": 34.96526,
+"name": "Khirbet Umm es Salafe"
+},
+{
+"lat": 31.04903,
+"lon": 35.02882,
+"name": "Horbat Rahba"
+}
+]
+},
+"tema": {
+"lat": 27.6297,
+"lon": 38.55163,
+"conf": "identified",
+"name": "Tema",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"teman": {
+"lat": 30.33099,
+"lon": 35.48485,
+"conf": "disputed",
+"name": "Teman",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.74584,
+"lon": 35.60392,
+"name": "Buseira"
+},
+{
+"lat": 30.53139,
+"lon": 35.56083,
+"name": "Carcaria"
+}
+]
+},
+"tharshish": {
+"lat": 37.27194,
+"lon": -6.94417,
+"conf": "disputed",
+"name": "Tarshish",
+"types": [
+"island",
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 40.05,
+"lon": 9.08333,
+"name": "Sardinia"
+},
+{
+"lat": 36.85256,
+"lon": 10.32346,
+"name": "Carthage"
+}
+]
+},
+"thebez": {
+"lat": 32.32222,
+"lon": 35.36861,
+"conf": "identified",
+"name": "Thebez",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.2874,
+"lon": 35.3378,
+"name": "Tell el Farah"
+}
+]
+},
+"thessalonica": {
+"lat": 40.63777,
+"lon": 22.94577,
+"conf": "identified",
+"name": "Thessalonica",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"thyatira": {
+"lat": 38.92021,
+"lon": 27.83655,
+"conf": "identified",
+"name": "Thyatira",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tiberias": {
+"lat": 32.77361,
+"lon": 35.54417,
+"conf": "identified",
+"name": "Tiberias",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tiberias-sea-of": {
+"lat": 32.77361,
+"lon": 35.54417,
+"conf": "identified",
+"name": "Tiberias",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tigris": {
+"lat": 31.0043,
+"lon": 47.4421,
+"conf": "identified",
+"name": "Tigris",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"timnah": {
+"lat": 31.78483,
+"lon": 34.9103,
+"conf": "identified",
+"name": "Timnah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.74304,
+"lon": 34.93542,
+"name": "Horbat Timna"
+}
+]
+},
+"timnath": {
+"lat": 31.78483,
+"lon": 34.9103,
+"conf": "identified",
+"name": "Timnah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.74304,
+"lon": 34.93542,
+"name": "Horbat Timna"
+}
+]
+},
+"timnath-heres": {
+"lat": 32.00806,
+"lon": 35.10729,
+"conf": "identified",
+"name": "Timnath-heres",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"timnath-serah": {
+"lat": 32.00806,
+"lon": 35.10729,
+"conf": "identified",
+"name": "Timnath-heres",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tiphsah": {
+"lat": 35.95,
+"lon": 38.16667,
+"conf": "identified",
+"name": "Tiphsah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tirza": {
+"lat": 32.2874,
+"lon": 35.3378,
+"conf": "identified",
+"name": "Tirzah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tirzah": {
+"lat": 32.2874,
+"lon": 35.3378,
+"conf": "identified",
+"name": "Tirzah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tob-the-land-of": {
+"lat": 32.56333,
+"lon": 36.24389,
+"conf": "identified",
+"name": "Tob",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9128,
+"lon": 35.7518,
+"name": "Iraq al Amir"
+}
+]
+},
+"tochen": {
+"lat": 31.61593,
+"lon": 34.8783,
+"conf": "disputed",
+"name": "Tochen",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.98982,
+"lon": 34.96526,
+"name": "Khirbet Umm es Salafe"
+},
+{
+"lat": 31.04903,
+"lon": 35.02882,
+"name": "Horbat Rahba"
+}
+]
+},
+"tolad": {
+"lat": 31.24472,
+"lon": 34.84083,
+"conf": "disputed",
+"name": "Eltolad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.09135,
+"lon": 34.92296,
+"name": "Khirbet Erqa Saqra"
+},
+{
+"lat": 31.46213,
+"lon": 34.77652,
+"name": "Tell el Meleiha"
+}
+]
+},
+"tophel": {
+"lat": 30.8375,
+"lon": 35.60417,
+"conf": "disputed",
+"name": "Tophel",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.93961,
+"lon": 35.45884,
+"name": "between Punon and Zered"
+}
+]
+},
+"topheth": {
+"lat": 31.76917,
+"lon": 35.22806,
+"conf": "identified",
+"name": "Topheth",
+"types": [
+"altar"
+],
+"source": "openbible"
+},
+"tower-of-the-furnaces": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Tower of the Ovens",
+"types": [
+"structure"
+],
+"source": "openbible"
+},
+"trachonitis": {
+"lat": 32.9695,
+"lon": 36.45538,
+"conf": "identified",
+"name": "Trachonitis",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"troas": {
+"lat": 39.75194,
+"lon": 26.15861,
+"conf": "identified",
+"name": "Troas",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"trogyllium": {
+"lat": 37.65943,
+"lon": 27.00328,
+"conf": "identified",
+"name": "Trogyllium",
+"types": [
+"promontory"
+],
+"source": "openbible"
+},
+"tyre": {
+"lat": 33.27083,
+"lon": 35.19611,
+"conf": "identified",
+"name": "Tyre",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"tyropoeon-valley": {
+"lat": 31.776,
+"lon": 35.233,
+"conf": "identified",
+"name": "Tyropoeon Valley (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"ulai": {
+"lat": 32.40998,
+"lon": 48.14783,
+"conf": "identified",
+"name": "Ulai",
+"types": [
+"river"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.7823,
+"lon": 47.8694,
+"name": "Karkheh River"
+},
+{
+"lat": 30.4275,
+"lon": 48.1654,
+"name": "Karun River"
+}
+]
+},
+"ummah": {
+"lat": 32.92111,
+"lon": 35.08833,
+"conf": "disputed",
+"name": "Ummah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"uphaz": {
+"lat": 18.21667,
+"lon": 42.5,
+"conf": "disputed",
+"name": "Uphaz",
+"types": [
+"island",
+"mine",
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 19.41422,
+"lon": 72.79516,
+"name": "Sopara"
+},
+{
+"lat": 11.595,
+"lon": 43.14806,
+"name": "Djibouti"
+}
+]
+},
+"ur": {
+"lat": 30.96222,
+"lon": 46.10444,
+"conf": "identified",
+"name": "Ur",
+"types": [
+"region",
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 37.14778,
+"lon": 38.78444,
+"name": "Urfa"
+},
+{
+"lat": 40.25464,
+"lon": 40.226,
+"name": "Bayburt"
+}
+]
+},
+"uz-the-land-of": {
+"lat": 30.74584,
+"lon": 35.60392,
+"conf": "disputed",
+"name": "Uz",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.0,
+"lon": 37.75,
+"name": "Wadi Sirhan"
+},
+{
+"lat": 32.73009,
+"lon": 36.36812,
+"name": "Hauran"
+}
+]
+},
+"uzal": {
+"lat": 15.3551,
+"lon": 44.2145,
+"conf": "disputed",
+"name": "Uzal",
+"types": [
+"mountain",
+"region",
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 37.33333,
+"lon": 41.16667,
+"name": "Izalla"
+},
+{
+"lat": 24.4833,
+"lon": 39.8333,
+"name": "Azalla"
+}
+]
+},
+"uzza": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Uzza",
+"types": [
+"garden"
+],
+"source": "openbible"
+},
+"uzzen-sherah": {
+"lat": 31.895,
+"lon": 35.08361,
+"conf": "disputed",
+"name": "Uzzen-sheerah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.88742,
+"lon": 35.04409,
+"name": "Beit Sira"
+}
+]
+},
+"wailing-place-jews": {
+"lat": 31.7767,
+"lon": 35.2344,
+"conf": "identified",
+"name": "Western Wall (Jerusalem)",
+"types": [],
+"source": "curated"
+},
+"zaanaim": {
+"lat": 32.72113,
+"lon": 35.41064,
+"conf": "disputed",
+"name": "Zaanannim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.73448,
+"lon": 35.48123,
+"name": "Khirbet Bessum"
+},
+{
+"lat": 32.57472,
+"lon": 35.17778,
+"name": "Lejjun"
+}
+]
+},
+"zaanan": {
+"lat": 31.56528,
+"lon": 34.84917,
+"conf": "disputed",
+"name": "Zaanan",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.59943,
+"lon": 34.80394,
+"name": "Iraq el Kharab"
+},
+{
+"lat": 31.61209,
+"lon": 34.78622,
+"name": "Tel Erani"
+}
+]
+},
+"zaanannim": {
+"lat": 32.72113,
+"lon": 35.41064,
+"conf": "disputed",
+"name": "Zaanannim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.73448,
+"lon": 35.48123,
+"name": "Khirbet Bessum"
+},
+{
+"lat": 32.57472,
+"lon": 35.17778,
+"name": "Lejjun"
+}
+]
+},
+"zabulon": {
+"lat": 32.718,
+"lon": 35.268,
+"conf": "region",
+"name": "Zabulon",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-zebulun"
+},
+"zair": {
+"lat": 31.0369,
+"lon": 35.48766,
+"conf": "disputed",
+"name": "Zair",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.20849,
+"lon": 35.44922,
+"name": "south of the Lisan"
+},
+{
+"lat": 30.1843,
+"lon": 35.3166,
+"name": "Jebel esh Shera"
+}
+]
+},
+"zalmon": {
+"lat": 32.66667,
+"lon": 36.73333,
+"conf": "disputed",
+"name": "Zalmon",
+"types": [
+"mountain"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.4,
+"lon": 35.85,
+"name": "Mount Hermon"
+},
+{
+"lat": 32.22598,
+"lon": 35.35595,
+"name": "Jebel el Kabir"
+}
+]
+},
+"zalmonah": {
+"lat": 30.81217,
+"lon": 35.37339,
+"conf": "disputed",
+"name": "Zalmonah",
+"types": [
+"campsite"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 30.4136,
+"lon": 35.5677,
+"name": "Rujm Talat az Zalma"
+},
+{
+"lat": 29.54265,
+"lon": 35.13178,
+"name": "Wadi Umran"
+}
+]
+},
+"zanoah": {
+"lat": 31.71944,
+"lon": 35.00129,
+"conf": "identified",
+"name": "Zanoah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"zarephath": {
+"lat": 33.46423,
+"lon": 35.29514,
+"conf": "identified",
+"name": "Zarephath",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"zaretan": {
+"lat": 32.26769,
+"lon": 35.57724,
+"conf": "disputed",
+"name": "Zarethan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.14214,
+"lon": 35.58147,
+"name": "Tell Umm Hamad"
+},
+{
+"lat": 32.4002,
+"lon": 35.5905,
+"name": "Tall al Meqbarah"
+}
+]
+},
+"zareth-shahar": {
+"lat": 31.597,
+"lon": 35.55931,
+"conf": "disputed",
+"name": "Zereth-shahar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.60884,
+"lon": 35.56526,
+"name": "Ez Zarat"
+},
+{
+"lat": 31.60634,
+"lon": 35.76126,
+"name": "Khirbet Libb"
+}
+]
+},
+"zarthan": {
+"lat": 32.26769,
+"lon": 35.57724,
+"conf": "disputed",
+"name": "Zarethan",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.14214,
+"lon": 35.58147,
+"name": "Tell Umm Hamad"
+},
+{
+"lat": 32.4002,
+"lon": 35.5905,
+"name": "Tall al Meqbarah"
+}
+]
+},
+"zeboim": {
+"lat": 32.00295,
+"lon": 34.8955,
+"conf": "identified",
+"name": "Zeboim",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"zebulun-lot-of": {
+"lat": 32.718,
+"lon": 35.268,
+"conf": "region",
+"name": "Zebulun, Lot of",
+"types": [
+"region"
+],
+"source": "region",
+"region": "tribe-zebulun"
+},
+"zedad": {
+"lat": 34.31346,
+"lon": 36.92419,
+"conf": "identified",
+"name": "Zedad",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.28886,
+"lon": 35.59427,
+"name": "Khirbet Serada"
+}
+]
+},
+"zelah": {
+"lat": 31.80253,
+"lon": 35.20964,
+"conf": "disputed",
+"name": "Zela",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.84746,
+"lon": 35.236,
+"name": "Khirbet Erha"
+},
+{
+"lat": 31.89571,
+"lon": 35.21805,
+"name": "Khirbet Shab Salah"
+}
+]
+},
+"zemaraim": {
+"lat": 31.90879,
+"lon": 35.2117,
+"conf": "disputed",
+"name": "Zemaraim",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.9163,
+"lon": 35.4854,
+"name": "Khirbet es Samra"
+},
+{
+"lat": 31.92972,
+"lon": 35.29889,
+"name": "Rammun"
+}
+]
+},
+"zephath": {
+"lat": 31.21229,
+"lon": 34.95828,
+"conf": "disputed",
+"name": "Zephath",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.2172,
+"lon": 35.0258,
+"name": "Tel Malhata"
+},
+{
+"lat": 31.38333,
+"lon": 34.86564,
+"name": "Tel Halif"
+}
+]
+},
+"zered": {
+"lat": 31.02701,
+"lon": 35.48533,
+"conf": "identified",
+"name": "Zered",
+"types": [
+"river"
+],
+"source": "openbible"
+},
+"zereda": {
+"lat": 32.04638,
+"lon": 35.09719,
+"conf": "disputed",
+"name": "Zeredah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.04603,
+"lon": 35.05776,
+"name": "Ain Seridah"
+},
+{
+"lat": 32.05421,
+"lon": 35.05664,
+"name": "Khirbet Banat Barr"
+}
+]
+},
+"zeredathah": {
+"lat": 32.26769,
+"lon": 35.57724,
+"conf": "disputed",
+"name": "Zeredah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.14214,
+"lon": 35.58147,
+"name": "Tell Umm Hamad"
+},
+{
+"lat": 32.4002,
+"lon": 35.5905,
+"name": "Tall al Meqbarah"
+}
+]
+},
+"zererath": {
+"lat": 32.26769,
+"lon": 35.57724,
+"conf": "disputed",
+"name": "Zererah",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.2222,
+"lon": 35.6061,
+"name": "Tall el Mazar"
+},
+{
+"lat": 32.14214,
+"lon": 35.58147,
+"name": "Tell Umm Hamad"
+}
+]
+},
+"ziddim": {
+"lat": 32.80758,
+"lon": 35.45382,
+"conf": "disputed",
+"name": "Ziddim",
+"types": [
+"settlement",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.27083,
+"lon": 35.19611,
+"name": "Tyre"
+},
+{
+"lat": 32.735,
+"lon": 35.55555,
+"name": "Khirbet Qedish"
+}
+]
+},
+"ziklag": {
+"lat": 31.3912,
+"lon": 34.6816,
+"conf": "identified",
+"name": "Ziklag",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.38333,
+"lon": 34.86564,
+"name": "Tel Halif"
+},
+{
+"lat": 31.24472,
+"lon": 34.84083,
+"name": "Tel Beer Sheva"
+}
+]
+},
+"zin": {
+"lat": 30.971,
+"lon": 35.325,
+"conf": "identified",
+"name": "Zin",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"zion": {
+"lat": 31.77667,
+"lon": 35.23417,
+"conf": "identified",
+"name": "Zion",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"zior": {
+"lat": 31.52509,
+"lon": 35.10222,
+"conf": "disputed",
+"name": "Zior",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.58444,
+"lon": 35.14528,
+"name": "Sair"
+}
+]
+},
+"ziph": {
+"lat": 31.47475,
+"lon": 35.13514,
+"conf": "identified",
+"name": "Wilderness of Ziph",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"ziphron": {
+"lat": 34.26667,
+"lon": 37.06667,
+"conf": "disputed",
+"name": "Ziphron",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 33.87186,
+"lon": 36.81464,
+"name": "Zifran"
+},
+{
+"lat": 34.89528,
+"lon": 36.77806,
+"name": "Al Zaafaraniyah"
+}
+]
+},
+"ziz": {
+"lat": 31.5607,
+"lon": 35.38364,
+"conf": "identified",
+"name": "Ziz",
+"types": [
+"region",
+"wadi"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.45,
+"lon": 35.38333,
+"name": "Ein Gedi"
+}
+]
+},
+"zoan": {
+"lat": 30.97694,
+"lon": 31.88,
+"conf": "identified",
+"name": "Zoan",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"zoar": {
+"lat": 31.0369,
+"lon": 35.48766,
+"conf": "disputed",
+"name": "Zoar",
+"types": [
+"settlement"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.20849,
+"lon": 35.44922,
+"name": "south of the Lisan"
+},
+{
+"lat": 31.795,
+"lon": 35.59528,
+"name": "north of the Dead Sea"
+}
+]
+},
+"zobah": {
+"lat": 33.93528,
+"lon": 36.15083,
+"conf": "disputed",
+"name": "Zobah",
+"types": [
+"region"
+],
+"source": "openbible"
+},
+"zoheleth": {
+"lat": 31.7672,
+"lon": 35.23598,
+"conf": "identified",
+"name": "Serpent’s Stone",
+"types": [
+"rock"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.79813,
+"lon": 35.24803,
+"name": "Ain el Madauwerah"
+},
+{
+"lat": 31.77292,
+"lon": 35.23638,
+"name": "Gihon Spring"
+}
+]
+},
+"zophim-field-of": {
+"lat": 31.77107,
+"lon": 35.73394,
+"conf": "disputed",
+"name": "Zophim",
+"types": [
+"natural area",
+"special"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 31.76778,
+"lon": 35.72556,
+"name": "Rujm Siyaghah"
+},
+{
+"lat": 31.76667,
+"lon": 35.75,
+"name": "Jabal al Naba"
+}
+]
+},
+"zorah": {
+"lat": 31.77399,
+"lon": 34.98529,
+"conf": "identified",
+"name": "Zorah",
+"types": [
+"settlement"
+],
+"source": "openbible"
+},
+"zuph-land-of": {
+"lat": 31.85434,
+"lon": 35.23161,
+"conf": "disputed",
+"name": "Zuph",
+"types": [
+"region"
+],
+"source": "openbible",
+"alts": [
+{
+"lat": 32.02806,
+"lon": 35.01944,
+"name": "Rantis"
+},
+{
+"lat": 32.03286,
+"lon": 35.1025,
+"name": "Beit Rima"
+}
+]
+}
+}
+}

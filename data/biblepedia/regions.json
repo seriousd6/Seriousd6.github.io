@@ -1,0 +1,1365 @@
+{
+  "_doc": "Anchor-region registry. Each region's article (category=regions) authors link_tables and carries an interactive hero map; member place/event/people articles get an automatic 'In the region' backlink (biblepedia.js _renderRegionOf). Member ids must be CANONICAL article ids. places[]=article ids (coords from data/maps/place-coords.json). events[]={id, at:<place id> | coords:[lat,lon]} — events have no coords of their own, so each must be location-anchored. powers[]=associated power-region ids. map_region=id in data/maps/regions.json for the polygon backdrop (or null). focus=[lat,lon,zoom] for the maps deep-link. Validated by scripts/apply-biblepedia-regions.py. kind: power|land|sub-region (drives browse grouping).",
+  "regions": {
+    "egypt": {
+      "name": "Egypt",
+      "kind": "power",
+      "blurb": "The great Nile empire — house of bondage and, again and again, a place of refuge.",
+      "map_region": "empire-egypt-core",
+      "focus": [
+        29.5,
+        31.3,
+        6
+      ],
+      "powers": [],
+      "places": [
+        "goshen",
+        "rameses",
+        "pithom",
+        "on",
+        "zoan",
+        "memphis",
+        "nile",
+        "migdol",
+        "pi-hahiroth",
+        "red-sea"
+      ],
+      "events": [
+        {
+          "id": "exodus",
+          "at": "rameses"
+        },
+        {
+          "id": "plagues-of-egypt",
+          "at": "zoan"
+        }
+      ],
+      "people": [
+        "joseph",
+        "jacob",
+        "moses",
+        "aaron",
+        "hagar",
+        "pharaoh",
+        "jesus-christ"
+      ]
+    },
+    "galilee": {
+      "name": "Galilee",
+      "kind": "land",
+      "blurb": "The northern district of lakeside towns where Jesus launched his ministry.",
+      "map_region": "region-galilee",
+      "focus": [
+        32.82,
+        35.45,
+        9
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "nazareth",
+        "capernaum",
+        "cana",
+        "bethsaida",
+        "chorazin",
+        "tiberias",
+        "nain",
+        "magdala",
+        "gennesaret",
+        "galilee-sea-of"
+      ],
+      "events": [
+        {
+          "id": "sermon-on-the-mount",
+          "coords": [
+            32.88,
+            35.55
+          ]
+        },
+        {
+          "id": "transfiguration",
+          "coords": [
+            32.69,
+            35.39
+          ]
+        }
+      ],
+      "people": [
+        "jesus-christ",
+        "peter",
+        "andrew",
+        "james",
+        "john-the-apostle",
+        "philip",
+        "nathanael",
+        "matthew",
+        "herod-antipas"
+      ]
+    },
+    "assyria": {
+      "name": "Assyria",
+      "kind": "power",
+      "blurb": "The brutal Tigris empire — God’s rod against Israel, yet judged and cast down in turn.",
+      "map_region": "empire-assyria-core",
+      "focus": [
+        36.0,
+        43.0,
+        6
+      ],
+      "powers": [],
+      "places": [
+        "nineveh",
+        "calah",
+        "carchemish",
+        "haran",
+        "gozan",
+        "samaria",
+        "lachish",
+        "jerusalem"
+      ],
+      "events": [
+        {
+          "id": "exile",
+          "at": "samaria"
+        }
+      ],
+      "people": [
+        "tiglath-pileser-iii",
+        "shalmaneser",
+        "sargon",
+        "sennacherib",
+        "esarhaddon",
+        "rabshakeh",
+        "jonah",
+        "nahum",
+        "hezekiah",
+        "isaiah",
+        "nimrod"
+      ]
+    },
+    "babylonia": {
+      "name": "Babylonia",
+      "kind": "power",
+      "blurb": "Chaldean empire on the Euphrates that exiled Judah; Scripture's proud world-city.",
+      "map_region": "empire-babylon-core",
+      "focus": [
+        32.5,
+        44.4,
+        6
+      ],
+      "powers": [
+        "assyria",
+        "persia"
+      ],
+      "places": [
+        "babylon",
+        "shinar",
+        "chaldea",
+        "ur",
+        "euphrates",
+        "tigris",
+        "accad",
+        "calneh",
+        "chebar",
+        "carchemish"
+      ],
+      "events": [
+        {
+          "id": "babylonian-captivity",
+          "at": "babylon"
+        },
+        {
+          "id": "exile",
+          "at": "chebar"
+        }
+      ],
+      "people": [
+        "nimrod",
+        "nebuchadnezzar",
+        "belshazzar",
+        "daniel",
+        "ezekiel",
+        "jehoiachin",
+        "evil-merodach",
+        "cyrus"
+      ]
+    },
+    "persia": {
+      "name": "Persia",
+      "kind": "power",
+      "blurb": "The empire of restoration — God’s ‘anointed’ Cyrus sent the exiles home to rebuild.",
+      "map_region": "empire-persia-core",
+      "focus": [
+        32.5,
+        44.0,
+        5
+      ],
+      "powers": [],
+      "places": [
+        "susa",
+        "ecbatana",
+        "babylon",
+        "jerusalem"
+      ],
+      "events": [
+        {
+          "id": "pur-purim",
+          "at": "susa"
+        },
+        {
+          "id": "temple-the-second",
+          "at": "jerusalem"
+        }
+      ],
+      "people": [
+        "cyrus",
+        "darius",
+        "ahasuerus",
+        "artaxerxes",
+        "esther",
+        "mordecai",
+        "ezra",
+        "nehemiah",
+        "zerubbabel",
+        "daniel",
+        "haggai",
+        "zechariah"
+      ]
+    },
+    "greece": {
+      "name": "Greece",
+      "kind": "power",
+      "blurb": "Alexander's empire and the Aegean world where Paul brought the gospel into Europe.",
+      "map_region": "empire-macedon-empire",
+      "focus": [
+        39.5,
+        23.0,
+        6
+      ],
+      "powers": [
+        "persia",
+        "rome"
+      ],
+      "places": [
+        "athens",
+        "corinth",
+        "thessalonica",
+        "berea",
+        "philippi",
+        "neapolis",
+        "amphipolis",
+        "apollonia",
+        "nicopolis"
+      ],
+      "events": [],
+      "people": [
+        "alexander-the-great",
+        "paul",
+        "silas",
+        "timothy",
+        "luke",
+        "lydia",
+        "dionysius",
+        "gallio",
+        "apollos"
+      ]
+    },
+    "rome": {
+      "name": "Rome",
+      "kind": "power",
+      "blurb": "The empire of the New Testament — Babylon in symbol, yet the road the gospel ran.",
+      "map_region": "empire-rome",
+      "focus": [
+        38.0,
+        23.0,
+        4
+      ],
+      "powers": [],
+      "places": [
+        "rome",
+        "jerusalem",
+        "caesarea",
+        "corinth",
+        "ephesus",
+        "philippi",
+        "athens",
+        "puteoli",
+        "appii-forum"
+      ],
+      "events": [
+        {
+          "id": "crucifixion",
+          "at": "jerusalem"
+        }
+      ],
+      "people": [
+        "augustus",
+        "tiberius",
+        "pontius-pilate",
+        "claudius",
+        "nero",
+        "felix",
+        "festus",
+        "agrippa",
+        "gallio",
+        "julius",
+        "paul",
+        "peter",
+        "aquila",
+        "priscilla"
+      ]
+    },
+    "aram-region": {
+      "name": "Aram (Syria)",
+      "kind": "power",
+      "blurb": "Aramean kingdoms around Damascus — Israel's long rival; the Damascus road to Christ.",
+      "map_region": "empire-aram-damascus",
+      "focus": [
+        33.5,
+        36.3,
+        7
+      ],
+      "powers": [
+        "assyria",
+        "rome"
+      ],
+      "places": [
+        "damascus",
+        "zobah",
+        "hamath",
+        "aram-naharaim",
+        "ramoth-gilead",
+        "abana",
+        "pharpar",
+        "helbon",
+        "riblah",
+        "tadmor",
+        "kir",
+        "hauran"
+      ],
+      "events": [],
+      "people": [
+        "aram",
+        "rezon",
+        "hadadezer",
+        "ben-hadad",
+        "hazael",
+        "rezin",
+        "naaman",
+        "elisha"
+      ]
+    },
+    "philistia": {
+      "name": "Philistia",
+      "kind": "power",
+      "blurb": "The Philistine coast of the five cities — Israel’s archetypal foe from judges to David.",
+      "map_region": "empire-philistia",
+      "focus": [
+        31.6,
+        34.7,
+        8
+      ],
+      "powers": [],
+      "places": [
+        "gaza",
+        "ashdod",
+        "ashkelon",
+        "gath",
+        "ekron",
+        "gerar",
+        "ziklag",
+        "aphek",
+        "joppa"
+      ],
+      "events": [
+        {
+          "id": "ark",
+          "at": "ashdod"
+        }
+      ],
+      "people": [
+        "abimelech",
+        "samson",
+        "delilah",
+        "goliath",
+        "achish",
+        "david",
+        "samuel",
+        "saul"
+      ]
+    },
+    "phoenicia": {
+      "name": "Phoenicia",
+      "kind": "power",
+      "blurb": "The seafaring coast of Tyre and Sidon — temple-builders, Baal-exporters, gathered to Christ.",
+      "map_region": "empire-phoenicia",
+      "focus": [
+        33.9,
+        35.5,
+        8
+      ],
+      "powers": [
+        "babylonia",
+        "greece",
+        "rome"
+      ],
+      "places": [
+        "tyre",
+        "sidon",
+        "gebal",
+        "zarephath",
+        "arvad",
+        "ptolemais"
+      ],
+      "events": [],
+      "people": [
+        "hiram",
+        "jezebel",
+        "ahab",
+        "elijah",
+        "jesus-christ",
+        "paul"
+      ]
+    },
+    "seleucid-empire": {
+      "name": "Seleucid Empire",
+      "kind": "power",
+      "blurb": "Hellenistic realm of Antiochus IV — Daniel’s king of the North who defiled the temple.",
+      "map_region": "empire-seleucid",
+      "focus": [
+        34.0,
+        40.0,
+        5
+      ],
+      "powers": [],
+      "places": [
+        "antioch",
+        "seleucia",
+        "jerusalem",
+        "damascus",
+        "babylon",
+        "tarsus"
+      ],
+      "events": [
+        {
+          "id": "abomination-of-desolation",
+          "at": "jerusalem"
+        }
+      ],
+      "people": [
+        "alexander-the-great",
+        "seleucus",
+        "antiochus-iv-antiochus-epiphanes",
+        "daniel",
+        "mattathias",
+        "judas-maccabaeus"
+      ]
+    },
+    "canaan": {
+      "name": "Canaan (Promised Land)",
+      "kind": "land",
+      "blurb": "The land promised to Abraham, won under Joshua — sign of the rest fulfilled in Christ.",
+      "map_region": "empire-canaan-states",
+      "focus": [
+        31.8,
+        35.2,
+        8
+      ],
+      "powers": [],
+      "places": [
+        "jericho",
+        "ai",
+        "gibeon",
+        "hazor",
+        "lachish",
+        "gezer",
+        "shechem",
+        "hebron",
+        "bethel",
+        "gilgal",
+        "jerusalem",
+        "beersheba"
+      ],
+      "events": [],
+      "people": [
+        "abraham",
+        "melchizedek",
+        "joshua",
+        "caleb",
+        "rahab",
+        "achan"
+      ]
+    },
+    "wilderness-of-sinai": {
+      "name": "Wilderness of Sinai",
+      "kind": "land",
+      "blurb": "The forty-year desert school of the covenant — Israel tested, fed, and formed by the LORD.",
+      "map_region": "region-wilderness-of-sinai",
+      "focus": [
+        29.5,
+        34.0,
+        7
+      ],
+      "powers": [],
+      "places": [
+        "sinai",
+        "rephidim",
+        "marah",
+        "elim",
+        "meribah",
+        "kibroth-hattaavah",
+        "hazeroth",
+        "paran",
+        "red-sea"
+      ],
+      "events": [
+        {
+          "id": "golden-calf",
+          "at": "sinai"
+        },
+        {
+          "id": "quails",
+          "at": "kibroth-hattaavah"
+        },
+        {
+          "id": "brazen-serpent",
+          "at": "paran"
+        }
+      ],
+      "people": [
+        "moses",
+        "aaron",
+        "miriam",
+        "joshua",
+        "caleb",
+        "korah",
+        "jethro"
+      ]
+    },
+    "mesopotamia": {
+      "name": "Mesopotamia (Padan-aram)",
+      "kind": "land",
+      "blurb": "Land between the rivers — cradle of nations, patriarchal homeland, and place of exile.",
+      "map_region": "region-mesopotamia",
+      "focus": [
+        34.0,
+        43.0,
+        6
+      ],
+      "powers": [
+        "assyria",
+        "babylonia",
+        "persia"
+      ],
+      "places": [
+        "ur",
+        "haran",
+        "accad",
+        "calneh",
+        "nineveh",
+        "carchemish",
+        "gozan",
+        "pethor",
+        "tigris",
+        "euphrates"
+      ],
+      "events": [],
+      "people": [
+        "terah",
+        "abraham",
+        "nahor",
+        "laban",
+        "rebekah",
+        "jacob",
+        "balaam",
+        "chedorlaomer"
+      ]
+    },
+    "samaria": {
+      "name": "Samaria",
+      "kind": "land",
+      "blurb": "Capital and highlands of the northern kingdom — fallen for idolatry, won by the gospel.",
+      "map_region": "empire-israel-north",
+      "focus": [
+        32.2,
+        35.25,
+        9
+      ],
+      "powers": [
+        "assyria"
+      ],
+      "places": [
+        "samaria",
+        "shechem",
+        "sychar",
+        "gerizim",
+        "jezreel",
+        "dothan",
+        "tirzah",
+        "bethel"
+      ],
+      "events": [
+        {
+          "id": "exile",
+          "at": "samaria"
+        }
+      ],
+      "people": [
+        "omri",
+        "ahab",
+        "jezebel",
+        "elijah",
+        "elisha",
+        "jehu",
+        "jeroboam",
+        "hoshea",
+        "naboth",
+        "philip"
+      ]
+    },
+    "judea": {
+      "name": "Judea",
+      "kind": "land",
+      "blurb": "Southern hill country of Judah — David's homeland, birthplace of Messiah and the church.",
+      "map_region": "empire-judah",
+      "focus": [
+        31.7,
+        35.2,
+        9
+      ],
+      "powers": [
+        "babylonia",
+        "persia",
+        "rome"
+      ],
+      "places": [
+        "jerusalem",
+        "bethlehem",
+        "hebron",
+        "bethany",
+        "jericho",
+        "emmaus",
+        "lachish"
+      ],
+      "events": [
+        {
+          "id": "babylonian-captivity",
+          "at": "jerusalem"
+        }
+      ],
+      "people": [
+        "david",
+        "solomon",
+        "hezekiah",
+        "josiah",
+        "herod-the-great",
+        "jesus-christ",
+        "john-the-baptist",
+        "mary",
+        "pontius-pilate"
+      ]
+    },
+    "negev": {
+      "name": "The Negev",
+      "kind": "land",
+      "blurb": "The dry southern steppe — land of the patriarchs’ wells and David’s southern strongholds.",
+      "map_region": "region-negev",
+      "focus": [
+        30.9,
+        34.8,
+        8
+      ],
+      "powers": [],
+      "places": [
+        "beersheba",
+        "gerar",
+        "beer-lahai-roi",
+        "arad",
+        "hormah",
+        "ziklag",
+        "ezion-geber"
+      ],
+      "events": [],
+      "people": [
+        "abraham",
+        "isaac",
+        "jacob",
+        "hagar",
+        "ishmael",
+        "david"
+      ]
+    },
+    "bashan": {
+      "name": "Bashan",
+      "kind": "land",
+      "blurb": "Fertile Transjordan plateau of Og's giants and fat herds — proud power humbled by God.",
+      "map_region": "region-bashan",
+      "focus": [
+        32.8,
+        36.0,
+        8
+      ],
+      "powers": [
+        "aram-region",
+        "assyria"
+      ],
+      "places": [
+        "edrei",
+        "ashtaroth",
+        "golan",
+        "argob",
+        "hermon",
+        "caesarea-philippi"
+      ],
+      "events": [],
+      "people": [
+        "og",
+        "moses",
+        "jair",
+        "machir",
+        "manasseh"
+      ]
+    },
+    "gilead": {
+      "name": "Gilead",
+      "kind": "land",
+      "blurb": "Well-watered highlands east of Jordan — land of testimony, refuge, balm, and battle.",
+      "map_region": "region-gilead",
+      "focus": [
+        32.2,
+        35.8,
+        8
+      ],
+      "powers": [
+        "assyria",
+        "aram-region"
+      ],
+      "places": [
+        "ramoth-gilead",
+        "mahanaim",
+        "jabesh-gilead",
+        "jabbok",
+        "succoth",
+        "mizpah"
+      ],
+      "events": [
+        {
+          "id": "exile",
+          "at": "ramoth-gilead"
+        }
+      ],
+      "people": [
+        "jacob",
+        "laban",
+        "jephthah",
+        "jair",
+        "elijah",
+        "ahab",
+        "david",
+        "absalom",
+        "barzillai"
+      ]
+    },
+    "lebanon": {
+      "name": "Lebanon",
+      "kind": "land",
+      "blurb": "The cedar mountains north of Israel — glory for the temple, and a byword for pride brought low.",
+      "map_region": "region-lebanon",
+      "focus": [
+        33.7,
+        35.7,
+        8
+      ],
+      "powers": [
+        "phoenicia"
+      ],
+      "places": [
+        "hermon",
+        "baal-gad",
+        "sidon",
+        "tyre",
+        "gebal",
+        "zarephath",
+        "riblah"
+      ],
+      "events": [],
+      "people": [
+        "hiram",
+        "solomon",
+        "david",
+        "elijah"
+      ]
+    },
+    "transjordan": {
+      "name": "Transjordan",
+      "kind": "land",
+      "blurb": "Land beyond the Jordan — inheritance of Reuben, Gad and Manasseh, and Israel's threshold.",
+      "map_region": "region-transjordan",
+      "focus": [
+        31.9,
+        35.7,
+        8
+      ],
+      "powers": [
+        "aram-region",
+        "assyria"
+      ],
+      "places": [
+        "heshbon",
+        "dibon",
+        "ramoth-gilead",
+        "mahanaim",
+        "jabbok",
+        "nebo",
+        "pisgah",
+        "shittim",
+        "succoth",
+        "penuel",
+        "jabesh-gilead",
+        "aroer"
+      ],
+      "events": [],
+      "people": [
+        "jacob",
+        "moses",
+        "sihon",
+        "og",
+        "balaam",
+        "reuben",
+        "gad",
+        "jephthah",
+        "elijah"
+      ]
+    },
+    "moab": {
+      "name": "Moab",
+      "kind": "sub-region",
+      "blurb": "Plateau east of the Dead Sea — kin and foe of Israel, yet cradle of Ruth in David’s line.",
+      "map_region": "region-moab",
+      "focus": [
+        31.5,
+        35.7,
+        8
+      ],
+      "powers": [],
+      "places": [
+        "nebo",
+        "beth-peor",
+        "heshbon",
+        "medeba",
+        "dibon",
+        "arnon",
+        "zoar"
+      ],
+      "events": [
+        {
+          "id": "baal-peor",
+          "at": "beth-peor"
+        }
+      ],
+      "people": [
+        "lot",
+        "balak",
+        "balaam",
+        "eglon",
+        "ehud",
+        "ruth",
+        "naomi",
+        "boaz",
+        "mesha",
+        "moses"
+      ]
+    },
+    "perea": {
+      "name": "Perea",
+      "kind": "land",
+      "blurb": "Herodian land beyond the Jordan — John's baptizing ground and Christ's road to Jerusalem.",
+      "map_region": "region-perea",
+      "focus": [
+        31.85,
+        35.62,
+        9
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "bethabara",
+        "machaerus",
+        "aenon",
+        "salim",
+        "heshbon"
+      ],
+      "events": [],
+      "people": [
+        "john-the-baptist",
+        "herod-antipas",
+        "herodias",
+        "jesus-christ"
+      ]
+    },
+    "edom": {
+      "name": "Edom",
+      "kind": "sub-region",
+      "blurb": "Esau's red highlands of Seir — Israel's brother-nation, judged for pride and betrayal.",
+      "map_region": "region-edom",
+      "focus": [
+        30.6,
+        35.4,
+        8
+      ],
+      "powers": [
+        "babylonia",
+        "rome"
+      ],
+      "places": [
+        "bozrah",
+        "sela",
+        "teman",
+        "ezion-geber",
+        "elath",
+        "seir"
+      ],
+      "events": [],
+      "people": [
+        "esau",
+        "eliphaz",
+        "doeg",
+        "amalek",
+        "obadiah",
+        "herod-the-great"
+      ]
+    },
+    "ammon-region": {
+      "name": "Ammon",
+      "kind": "sub-region",
+      "blurb": "Plateau kingdom east of Gilead — son of Lot, foe of Israel, capital Rabbah (Amman).",
+      "map_region": "region-ammon",
+      "focus": [
+        31.95,
+        35.9,
+        8
+      ],
+      "powers": [],
+      "places": [
+        "rabbah",
+        "heshbon",
+        "jabbok",
+        "aroer",
+        "jabesh-gilead",
+        "mizpah"
+      ],
+      "events": [],
+      "people": [
+        "lot",
+        "jephthah",
+        "nahash",
+        "hanun",
+        "david",
+        "joab",
+        "tobiah",
+        "baalis"
+      ]
+    },
+    "midian-region": {
+      "name": "Midian",
+      "kind": "sub-region",
+      "blurb": "Desert land of nomads east of Aqaba — Moses' refuge and Gideon's great foe.",
+      "map_region": "region-midian",
+      "focus": [
+        28.5,
+        35.5,
+        7
+      ],
+      "powers": [],
+      "places": [
+        "sinai",
+        "paran",
+        "elath",
+        "ezion-geber"
+      ],
+      "events": [],
+      "people": [
+        "midian",
+        "jethro",
+        "zipporah",
+        "moses",
+        "gideon",
+        "zebah",
+        "zalmunna",
+        "zur",
+        "phinehas"
+      ]
+    },
+    "idumea": {
+      "name": "Idumea",
+      "kind": "sub-region",
+      "blurb": "Edom resettled in southern Judah — homeland of the Herods, drawn at last to Christ.",
+      "map_region": "region-idumea",
+      "focus": [
+        31.4,
+        35.05,
+        8
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "hebron",
+        "mareshah",
+        "ziph",
+        "eshtemoa",
+        "debir",
+        "beersheba",
+        "arad"
+      ],
+      "events": [],
+      "people": [
+        "esau",
+        "doeg",
+        "herod-the-great",
+        "herod-archelaus",
+        "herod-antipas"
+      ]
+    },
+    "decapolis": {
+      "name": "Decapolis",
+      "kind": "sub-region",
+      "blurb": "Ten Greek cities east of Galilee — pagan frontier reached early by the gospel.",
+      "map_region": "region-decapolis",
+      "focus": [
+        32.4,
+        35.9,
+        8
+      ],
+      "powers": [
+        "seleucid-empire",
+        "rome"
+      ],
+      "places": [
+        "beth-shean",
+        "gadara",
+        "rabbah",
+        "gergesa",
+        "damascus"
+      ],
+      "events": [],
+      "people": [
+        "jesus-christ",
+        "legion"
+      ]
+    },
+    "cyprus": {
+      "name": "Cyprus",
+      "kind": "sub-region",
+      "blurb": "Mediterranean island of Barnabas — first field of the first missionary journey.",
+      "map_region": "region-cyprus",
+      "focus": [
+        35.0,
+        33.2,
+        8
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "salamis",
+        "paphos"
+      ],
+      "events": [],
+      "people": [
+        "barnabas",
+        "mark",
+        "paul",
+        "sergius-paulus",
+        "elymas",
+        "mnason"
+      ]
+    },
+    "cilicia": {
+      "name": "Cilicia",
+      "kind": "sub-region",
+      "blurb": "Roman province of southeast Asia Minor — homeland of Paul, born at Tarsus.",
+      "map_region": "region-cilicia",
+      "focus": [
+        36.9,
+        34.9,
+        8
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "tarsus"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "barnabas",
+        "silas"
+      ]
+    },
+    "cappadocia": {
+      "name": "Cappadocia",
+      "kind": "sub-region",
+      "blurb": "High Anatolian plateau of Pentecost pilgrims and the Cappadocian Fathers of the Trinity.",
+      "map_region": "region-cappadocia",
+      "focus": [
+        38.67,
+        34.84,
+        7
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [],
+      "events": [],
+      "people": [
+        "peter",
+        "basil-the-great",
+        "gregory-nazianzen",
+        "gregory-of-nyssa"
+      ]
+    },
+    "galatia": {
+      "name": "Galatia",
+      "kind": "sub-region",
+      "blurb": "Celtic uplands of Asia Minor — Paul’s churches and the battleground of the gospel of grace.",
+      "map_region": "region-galatia",
+      "focus": [
+        37.6,
+        32.5,
+        7
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "iconium",
+        "lystra",
+        "derbe"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "barnabas",
+        "timothy",
+        "silas",
+        "titus"
+      ]
+    },
+    "asia": {
+      "name": "Asia",
+      "kind": "sub-region",
+      "blurb": "Roman Asia ruled from Ephesus — home of the seven churches and the Revelation.",
+      "map_region": "region-asia",
+      "focus": [
+        38.5,
+        27.8,
+        7
+      ],
+      "powers": [
+        "greece",
+        "rome"
+      ],
+      "places": [
+        "ephesus",
+        "smyrna",
+        "pergamos",
+        "thyatira",
+        "sardis",
+        "philadelphia",
+        "laodicea",
+        "miletus",
+        "troas",
+        "colossae",
+        "hierapolis",
+        "patmos"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "john-the-apostle",
+        "timothy",
+        "apollos",
+        "aquila",
+        "priscilla",
+        "demetrius",
+        "epaphras"
+      ]
+    },
+    "pamphylia": {
+      "name": "Pamphylia",
+      "kind": "sub-region",
+      "blurb": "Southern coast of Asia Minor — Perga and Attalia, where John Mark turned back.",
+      "map_region": "region-pamphylia",
+      "focus": [
+        36.9,
+        30.8,
+        8
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "perga",
+        "attalia"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "barnabas",
+        "mark"
+      ]
+    },
+    "macedonia": {
+      "name": "Macedonia",
+      "kind": "sub-region",
+      "blurb": "Northern Greek province where the gospel first entered Europe at the Macedonian call.",
+      "map_region": "region-macedonia",
+      "focus": [
+        40.8,
+        23.3,
+        7
+      ],
+      "powers": [
+        "greece",
+        "rome"
+      ],
+      "places": [
+        "philippi",
+        "thessalonica",
+        "berea",
+        "neapolis",
+        "amphipolis",
+        "apollonia"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "silas",
+        "timothy",
+        "luke",
+        "lydia",
+        "jason",
+        "aristarchus",
+        "sopater"
+      ]
+    },
+    "achaia": {
+      "name": "Achaia",
+      "kind": "sub-region",
+      "blurb": "Southern Greece — home of Greek wisdom where Paul preached Christ crucified.",
+      "map_region": "region-achaia",
+      "focus": [
+        37.95,
+        23.0,
+        7
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "corinth",
+        "athens",
+        "cenchrea",
+        "nicopolis"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "apollos",
+        "gallio",
+        "priscilla",
+        "aquila",
+        "crispus",
+        "stephanas"
+      ]
+    },
+    "arabia": {
+      "name": "Arabia",
+      "kind": "sub-region",
+      "blurb": "Desert peninsula of Ishmael's tribes and Nabataean traders — Paul's place of withdrawal.",
+      "map_region": "region-arabia",
+      "focus": [
+        28.5,
+        38.0,
+        6
+      ],
+      "powers": [],
+      "places": [
+        "sinai",
+        "petra",
+        "tema"
+      ],
+      "events": [],
+      "people": [
+        "paul",
+        "moses",
+        "hagar",
+        "ishmael",
+        "job",
+        "aretas",
+        "geshem"
+      ]
+    },
+    "pontus-bithynia": {
+      "name": "Pontus and Bithynia",
+      "kind": "sub-region",
+      "blurb": "Black Sea province closed to Paul — yet reached by the gospel, addressed by Peter.",
+      "map_region": "region-pontus-bithynia",
+      "focus": [
+        40.8,
+        33.0,
+        6
+      ],
+      "powers": [
+        "rome"
+      ],
+      "places": [
+        "bithynia",
+        "pontus",
+        "troas"
+      ],
+      "events": [],
+      "people": [
+        "peter",
+        "aquila",
+        "paul",
+        "silas",
+        "timothy"
+      ]
+    },
+    "cush-region": {
+      "name": "Cush (Ethiopia)",
+      "kind": "sub-region",
+      "blurb": "Nubian land beyond Egypt on the upper Nile — the far nation gathered to God in Christ.",
+      "map_region": "region-cush",
+      "focus": [
+        19.0,
+        32.5,
+        6
+      ],
+      "powers": [
+        "egypt",
+        "assyria"
+      ],
+      "places": [
+        "ethiopia",
+        "syene",
+        "no-amon"
+      ],
+      "events": [],
+      "people": [
+        "nimrod",
+        "zerah",
+        "tirhakah",
+        "ebed-melech",
+        "ethiopian-eunuch",
+        "candace",
+        "moses"
+      ]
+    }
+  }
+}

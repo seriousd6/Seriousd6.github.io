@@ -35,7 +35,21 @@ export var STORE_KEYS = {
   reflections:   'bsw_reflections',  // study reflection journal entries
   lib_progress:  'bsw_lib_progress', // library document reading positions
   chapter_read:  'bsw_chapter_read', // Bible chapter completion { bookId: { ch: dateStr } }
+  // DATA-16: previously-unbacked user-authored content stores
+  lib_complete:  'bsw_lib_complete',  // library "mark as read" completion log { docId: {...} }
+  sg_progress:   'bsw_sg_progress',   // study-guide section completion { slug: [sectionId,…] }
+  ws_decisions:  'bsw_ws_decisions',  // translation workshop decisions
+  ws_fc_deck:    'bsw_ws_fc_deck',    // workshop flashcard deck { greek:[…], hebrew:[…] }
+  ws_fc_progress:'bsw_ws_fc_progress',// workshop flashcard SRS progress { code:{…} }
 };
+
+// DATA-16: per-item content stored under one key *per item* can't be enumerated by a fixed
+// registry, so it is captured by prefix scan instead. These hold user-authored notes.
+var STORE_PREFIXES = [
+  'bsw_study_notes_',  // study-desk per book+chapter notes
+  'bsw_ws_notes_',     // workshop per-word/passage notes
+  'bsw_map_note_',     // maps per-place notes
+];
 
 var SCHEMA = 2;
 
@@ -49,6 +63,44 @@ function _get(key, fallback) {
 
 function _set(key, val) {
   try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+}
+
+// INTENT: Snapshot every per-item content key (those under STORE_PREFIXES) as raw strings,
+//   keyed by their full localStorage key, so they survive a backup→restore round-trip. A
+//   fixed key registry can't capture these because each note is its own dynamically-named key.
+// CHANGE? If a new per-item content prefix is added anywhere in the app, add it to
+//   STORE_PREFIXES or it won't be backed up (DATA-16).
+// VERIFY: Write a study-desk note, call exportAll() in console → result.prefixed has a
+//   "bsw_study_notes_…" entry with the note's raw value.
+function _exportPrefixed() {
+  var out = {};
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (!k) continue;
+      for (var p = 0; p < STORE_PREFIXES.length; p++) {
+        if (k.indexOf(STORE_PREFIXES[p]) === 0) { out[k] = localStorage.getItem(k); break; }
+      }
+    }
+  } catch (e) {}
+  return out;
+}
+
+// Merge two stored values without losing data: arrays union (deduped by JSON identity),
+// plain objects shallow-merge with incoming winning per key, primitives → incoming wins.
+function _mergeValue(existing, incoming) {
+  if (Array.isArray(existing) && Array.isArray(incoming)) {
+    var seen = {}, out = [];
+    existing.concat(incoming).forEach(function (x) {
+      var sig = JSON.stringify(x);
+      if (!seen[sig]) { seen[sig] = true; out.push(x); }
+    });
+    return out;
+  }
+  if (existing && incoming && typeof existing === 'object' && typeof incoming === 'object') {
+    return Object.assign({}, existing, incoming);
+  }
+  return incoming;
 }
 
 // ── Export ────────────────────────────────────────────────────────────────────
@@ -78,6 +130,13 @@ export function exportAll() {
     reflections:  _get(STORE_KEYS.reflections,  []),
     lib_progress: _get(STORE_KEYS.lib_progress, {}),
     chapter_read: _get(STORE_KEYS.chapter_read, {}),
+    // DATA-16
+    lib_complete:   _get(STORE_KEYS.lib_complete,   {}),
+    sg_progress:    _get(STORE_KEYS.sg_progress,    {}),
+    ws_decisions:   _get(STORE_KEYS.ws_decisions,   {}),
+    ws_fc_deck:     _get(STORE_KEYS.ws_fc_deck,     {}),
+    ws_fc_progress: _get(STORE_KEYS.ws_fc_progress, {}),
+    prefixed: _exportPrefixed(),
     prefs: {
       version:      localStorage.getItem(STORE_KEYS.ver)         || null,
       theme:        localStorage.getItem(STORE_KEYS.theme)       || null,
@@ -150,6 +209,12 @@ export function importAll(data, opts) {
     if (data.reflections  !== undefined) _set(STORE_KEYS.reflections,  data.reflections);
     if (data.lib_progress !== undefined) _set(STORE_KEYS.lib_progress, data.lib_progress);
     if (data.chapter_read !== undefined) _set(STORE_KEYS.chapter_read, data.chapter_read);
+    // DATA-16
+    if (data.lib_complete   !== undefined) _set(STORE_KEYS.lib_complete,   data.lib_complete);
+    if (data.sg_progress    !== undefined) _set(STORE_KEYS.sg_progress,    data.sg_progress);
+    if (data.ws_decisions   !== undefined) _set(STORE_KEYS.ws_decisions,   data.ws_decisions);
+    if (data.ws_fc_deck     !== undefined) _set(STORE_KEYS.ws_fc_deck,     data.ws_fc_deck);
+    if (data.ws_fc_progress !== undefined) _set(STORE_KEYS.ws_fc_progress, data.ws_fc_progress);
   } else {
     // plans — object merge
     if (data.plans && typeof data.plans === 'object') {
@@ -235,6 +300,23 @@ export function importAll(data, opts) {
       streak.days.sort();
       _set(STORE_KEYS.streak, streak);
     }
+    // DATA-16 — new content stores: shape-aware merge (object/array union, incoming wins)
+    ['lib_complete', 'sg_progress', 'ws_decisions', 'ws_fc_deck', 'ws_fc_progress'].forEach(function (k) {
+      if (data[k] === undefined || data[k] === null) return;
+      _set(STORE_KEYS[k], _mergeValue(_get(STORE_KEYS[k], Array.isArray(data[k]) ? [] : {}), data[k]));
+    });
+  }
+
+  // DATA-16 — per-item prefixed notes (study-desk / workshop / map). replace: overwrite;
+  // merge: only add keys not already present locally so existing notes are never clobbered.
+  if (data.prefixed && typeof data.prefixed === 'object') {
+    Object.keys(data.prefixed).forEach(function (k) {
+      var val = data.prefixed[k];
+      if (typeof val !== 'string') return;
+      if (mode === 'replace' || localStorage.getItem(k) === null) {
+        try { localStorage.setItem(k, val); } catch (e) {}
+      }
+    });
   }
 
   // Prefs always merge per-key (non-null values in backup win)
@@ -287,6 +369,19 @@ export function summarise(data) {
 
   if (Array.isArray(data.bookmarks) && data.bookmarks.length) {
     lines.push(data.bookmarks.length + ' bookmark' + (data.bookmarks.length !== 1 ? 's' : ''));
+  }
+  // DATA-16: surface the newly-backed-up content so the import dialog reflects it
+  if (data.lib_complete && typeof data.lib_complete === 'object') {
+    var nLib = Object.keys(data.lib_complete).length;
+    if (nLib) lines.push(nLib + ' library work' + (nLib !== 1 ? 's' : '') + ' completed');
+  }
+  if (data.ws_decisions && typeof data.ws_decisions === 'object') {
+    var nWs = Object.keys(data.ws_decisions).length;
+    if (nWs) lines.push(nWs + ' translation decision' + (nWs !== 1 ? 's' : ''));
+  }
+  if (data.prefixed && typeof data.prefixed === 'object') {
+    var nPref = Object.keys(data.prefixed).length;
+    if (nPref) lines.push(nPref + ' study/workshop note' + (nPref !== 1 ? 's' : ''));
   }
   if (data.streak && Array.isArray(data.streak.days) && data.streak.days.length) {
     lines.push(data.streak.days.length + ' reading day' + (data.streak.days.length !== 1 ? 's' : '') + ' in streak');

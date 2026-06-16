@@ -20,6 +20,7 @@ var _subPageState       = null;  // { goTo, current, total } — set by _wireSub
 var _findTerm      = '';    // active in-reader search term (persists across paginated re-renders)
 var _findMatchSecs = [];    // section indices containing the term (paginated mode)
 var _findCurrMatch = 0;     // which match index is currently shown
+var _findMarks     = [];    // scroll-mode: the <mark> nodes for the current term, in order
 var _findBarWired  = false; // header find bar only gets event listeners once per document
 
 // INTENT: Read saved section position from localStorage; handles both the legacy bare-integer
@@ -210,6 +211,8 @@ function _render(doc, docId, content, entry) {
       '<div class="lr-find-bar" id="lr-find-bar" hidden>' +
         '<input class="lr-find-input" id="lr-find-input" type="search" placeholder="Find in document…" autocomplete="off" aria-label="Find text">' +
         '<button class="lr-find-submit" id="lr-find-submit">Find</button>' +
+        '<button class="lr-find-nav lr-find-prev" id="lr-find-prev" aria-label="Previous match" hidden>&#x2191;</button>' +
+        '<button class="lr-find-nav lr-find-next" id="lr-find-next" aria-label="Next match" hidden>&#x2193;</button>' +
         '<span class="lr-find-result" id="lr-find-result"></span>' +
         '<button class="lr-find-close" id="lr-find-close" aria-label="Close find bar">&#x2715;</button>' +
       '</div>';
@@ -279,11 +282,29 @@ function _clearHighlights(el) {
 //         Stored as a module var so the wired listeners can always call the latest goTo.
 var _findGoTo = null;
 
+// INTENT: Step the active scroll-mode highlight to mark index i (wrapping), give it the
+//   --current class, scroll it into view, and update the "x / N" counter. Paginated mode
+//   steps whole sections instead (handled in the prev/next handlers), so this is scroll-only.
+// CHANGE? Relies on _findMarks being repopulated by doSearch on each new search; if the
+//   highlight class name lr-find-mark changes, update _highlightInEl/_clearHighlights too.
+// VERIFY: Search a common word in a single-section doc, click ▼ repeatedly — the active
+//   (orange) highlight advances through every match and the counter reads "2 / N", "3 / N"…
+function _findGotoMark(i, result) {
+  if (!_findMarks.length) return;
+  var n = _findMarks.length;
+  _findCurrMatch = (i % n + n) % n;
+  _findMarks.forEach(function (m, j) { m.classList.toggle('lr-find-mark--current', j === _findCurrMatch); });
+  _findMarks[_findCurrMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (result) result.textContent = (_findCurrMatch + 1) + ' / ' + n;
+}
+
 function _wireFindBar(header, body, doc, goToFn) {
   var btn    = header.querySelector('#lr-find-btn');
   var bar    = header.querySelector('#lr-find-bar');
   var input  = header.querySelector('#lr-find-input');
   var submit = header.querySelector('#lr-find-submit');
+  var prev   = header.querySelector('#lr-find-prev');
+  var next   = header.querySelector('#lr-find-next');
   var result = header.querySelector('#lr-find-result');
   var close  = header.querySelector('#lr-find-close');
   if (!btn || !bar) return;
@@ -291,19 +312,31 @@ function _wireFindBar(header, body, doc, goToFn) {
   // Keep the goTo reference current so the wired doSearch always uses the right closure
   _findGoTo = goToFn;
 
+  // Toggle prev/next visibility for a given match count (≥2 to be useful)
+  function showNav(total) {
+    var on = total > 1;
+    if (prev) prev.hidden = !on;
+    if (next) next.hidden = !on;
+  }
+
   // Restore search state after a paginated re-render (body innerHTML just changed)
   if (_findTerm) {
     input.value = _findTerm;
     bar.hidden  = false;
     var restored = _highlightInEl(body, _findTerm);
-    if (result) {
-      if (goToFn && _findMatchSecs.length > 1) {
-        result.textContent = 'Match ' + (_findCurrMatch + 1) + ' of ' + _findMatchSecs.length;
-      } else if (restored.length) {
-        result.textContent = restored.length + (restored.length !== 1 ? ' results' : ' result');
+    _findMarks = restored;
+    if (goToFn) {
+      // Paginated: matches are counted by section; show position within _findMatchSecs.
+      if (result && _findMatchSecs.length) {
+        result.textContent = (_findCurrMatch + 1) + ' / ' + _findMatchSecs.length;
       }
+      showNav(_findMatchSecs.length);
+      if (restored.length) restored[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // Scroll: step through the in-page marks directly.
+      showNav(restored.length);
+      if (restored.length) _findGotoMark(0, result);
     }
-    if (restored.length) restored[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   // Header elements persist across paginated re-renders — only wire listeners once per document
@@ -319,8 +352,10 @@ function _wireFindBar(header, body, doc, goToFn) {
     bar.hidden         = true;
     _findTerm          = '';
     _findMatchSecs     = [];
+    _findMarks         = [];
     input.value        = '';
     result.textContent = '';
+    showNav(0);
     _clearHighlights(body);
   });
 
@@ -328,28 +363,56 @@ function _wireFindBar(header, body, doc, goToFn) {
     var term = input.value.trim();
     _findTerm = term;
     _clearHighlights(body);
-    if (!term) { result.textContent = ''; return; }
+    _findMarks = [];
+    if (!term) { result.textContent = ''; showNav(0); return; }
 
     if (_findGoTo) {
-      // Paginated: search section strings, navigate to first match
+      // Paginated: search section strings, navigate to first matching section
       _findMatchSecs = [];
       _findCurrMatch = 0;
       doc.sections.forEach(function(s, i) {
         if (s.html.toLowerCase().indexOf(term.toLowerCase()) !== -1) _findMatchSecs.push(i);
       });
-      if (!_findMatchSecs.length) { result.textContent = 'Not found'; return; }
-      // _findGoTo re-renders content synchronously; the _wireFindBar restore handles highlight+result
+      if (!_findMatchSecs.length) { result.textContent = 'Not found'; showNav(0); return; }
+      // _findGoTo re-renders content synchronously; the _wireFindBar restore handles highlight+counter+nav
       _findGoTo(_findMatchSecs[0]);
     } else {
       var marks = _highlightInEl(body, term);
-      result.textContent = marks.length ? marks.length + (marks.length !== 1 ? ' results' : ' result') : 'Not found';
-      if (marks.length) marks[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      _findMarks = marks;
+      if (!marks.length) { result.textContent = 'Not found'; showNav(0); return; }
+      showNav(marks.length);
+      _findGotoMark(0, result);
     }
   }
 
+  // UX-19: step to the next/previous match. Scroll mode walks the in-page marks; paginated
+  // mode advances the matching-section index and re-renders (restore re-highlights + recounts).
+  function step(delta) {
+    if (_findGoTo) {
+      var n = _findMatchSecs.length;
+      if (n < 2) return;
+      _findCurrMatch = ((_findCurrMatch + delta) % n + n) % n;
+      _findGoTo(_findMatchSecs[_findCurrMatch]);
+    } else {
+      if (_findMarks.length < 2) return;
+      _findGotoMark(_findCurrMatch + delta, result);
+    }
+  }
+
+  if (prev) prev.addEventListener('click', function() { step(-1); });
+  if (next) next.addEventListener('click', function() { step(1); });
+
   submit.addEventListener('click', doSearch);
   input.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter')  { e.preventDefault(); doSearch(); }
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      // Enter re-runs a new search; once a term is active, Enter steps to the next match
+      // (Shift+Enter steps back) so repeated Enter cycles through results like a browser find.
+      var active = _findTerm === input.value.trim() && (_findMarks.length || _findMatchSecs.length);
+      if (!active)        doSearch();
+      else if (e.shiftKey) step(-1);
+      else                step(1);
+    }
     if (e.key === 'Escape') { bar.hidden = true; }
   });
 }

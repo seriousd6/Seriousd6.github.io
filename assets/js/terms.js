@@ -15,6 +15,7 @@ var _termTipEl     = null;
 var _termTipTimer  = null;
 var _termTipHide   = null;
 var _termMap2      = null;
+var _termById      = null;   // id -> entry, for resolving alias redirects to their canonical
 var _termMapReady  = null;
 var _termMultiRe   = null;
 var _termSingleSet = null;
@@ -71,12 +72,18 @@ function _positionTermTip(anchor) {
 }
 
 function _srcLabel(entry) {
-  var cat = entry.category;
-  if (cat === 'people')   return 'Person';
-  if (cat === 'places')   return 'Place';
-  if (cat === 'concepts') return 'Concept';
-  if (cat === 'names')    return 'Name';
-  return '';
+  // AUD-22: cover every category the index emits (incl. singular variants and the
+  // event/father/commentator categories) so the tooltip source label is never blank.
+  switch (entry.category) {
+    case 'people':                 return 'Person';
+    case 'places':  case 'place':  return 'Place';
+    case 'concepts': case 'concept': return 'Concept';
+    case 'names':   case 'name':   return 'Name';
+    case 'events':  case 'event':  return 'Event';
+    case 'father':                 return 'Church Father';
+    case 'commentator':            return 'Commentator';
+    default:                       return '';
+  }
 }
 
 function _showTermTip(anchor, key) {
@@ -84,9 +91,24 @@ function _showTermTip(anchor, key) {
   var entry = _termMap2 && _termMap2[key];
   if (!entry) return;
 
+  // INTENT: A merged alias (entry.redirect set, has_article:false) carries no article of its
+  //   own — pull the tooltip's details (brief, name-meaning, Biblepedia link) from the CANONICAL
+  //   article, while keeping the hovered alias word as the heading with an "(aka Canonical)" tag.
+  // CHANGE? Relies on _termById built in _loadTermMap and the redirect contract in
+  //   data/biblepedia/merges.json; same behaviour as _akaHtml/_showArticle in biblepedia.js.
+  // VERIFY: Hover "Calvary" anywhere in prose — tooltip heads "Calvary (aka Golgotha)", shows
+  //   Golgotha's brief, and the "Biblepedia →" link opens ?a=golgotha.
+  var hovered = entry;
+  if (entry.redirect && _termById && _termById[entry.redirect]) {
+    entry = _termById[entry.redirect];
+  }
+  var akaHtml = (entry !== hovered)
+    ? ' <span class="bsw-term-tooltip__aka">(aka ' + escHtml(entry.term) + ')</span>'
+    : '';
+
   var html =
     '<div class="bsw-term-tooltip__head">' +
-      '<span class="bsw-term-tooltip__term">' + escHtml(entry.term) + '</span>' +
+      '<span class="bsw-term-tooltip__term">' + escHtml(hovered.term) + akaHtml + '</span>' +
       '<span class="bsw-term-tooltip__src">' + escHtml(_srcLabel(entry)) + '</span>' +
     '</div>' +
     '<div class="bsw-term-tooltip__body">';
@@ -126,17 +148,21 @@ function _loadTermMap() {
     .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
     .then(function (data) {
       var map = {};
+      var byId = {};
 
       data.forEach(function (entry) {
         var k = entry.term.toLowerCase();
         if (!map[k]) map[k] = entry;
+        byId[entry.id] = entry;
       });
 
       _termMap2 = map;
+      _termById = byId;
 
-      // Multi-word regex: only full-article entries to keep pattern manageable
+      // Multi-word regex: full-article entries PLUS alias redirect pointers (so a merged
+      // alias name like "Judas, the Lord's Brother" still tags and routes to its canonical).
       var multiKeys = Object.keys(map).filter(function (k) {
-        return k.indexOf(' ') >= 0 && k.length >= 4 && map[k].has_article;
+        return k.indexOf(' ') >= 0 && k.length >= 4 && (map[k].has_article || map[k].redirect);
       }).sort(function (a, b) { return b.length - a.length; });
 
       if (multiKeys.length) {
@@ -155,6 +181,15 @@ function _loadTermMap() {
       }));
 
       return map;
+    })
+    .catch(function () {
+      // UX-18: a failed index fetch must resolve to an empty map (not reject) so callers'
+      // .then() chains run harmlessly and don't raise an unhandled rejection; term tagging
+      // simply does nothing this load.
+      _termMap2      = {};
+      _termMultiRe   = null;
+      _termSingleSet = new Set();
+      return _termMap2;
     });
   return _termMapReady;
 }

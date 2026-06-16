@@ -10,6 +10,7 @@ import {
   BOOK_MAP_LINKS, MAP_LABELS
 } from './core.js';
 import { autoTagTerms, autoTagTermsWhenReady } from './terms.js';
+import { loadSectionData, resolveAlias, runSectionSearch } from './sections.js';
 import {
   getNotes, getNote, saveNote, toggleHighlight, _HL_COLORS,
   _historyPush, _historyGet, _recordReadingDay, getNotesForVerse, getNotesForChapter,
@@ -20,7 +21,7 @@ import {
   autoTagBareRefs, autoTagBareChapters
 } from './wire.js';
 import { markEchoVerses } from './parallels.js';
-import { isParallelsEnabled, injectParallelPanels } from './synoptic.js';
+import { isParallelsEnabled, setParallelsEnabled, injectParallelPanels } from './synoptic.js';
 import {
   getInterlinearEnabled, setInterlinearEnabled, injectAllInterlinearRows, setRiHighlightCode
 } from './interlinear.js';
@@ -282,6 +283,13 @@ var READ_KEY = 'bsw_chapter_read';
 // ── Stripped mode — no side panel (used when navigating from Reading Progress) ──
 var _strippedMode = !!new URLSearchParams(location.search).get('stripped');
 
+// ── Study-view deep link (?study=1) ───────────────────────────────────────
+// Set when the reader is opened via the verse modal's "Study this verse" link. After the
+// passage finishes rendering, _activateStudyView turns on the inline study modes
+// (interlinear, echoes/parallels, commentary), opens the study desk, and scrolls to the
+// target verse. Consumed once then cleared so chapter navigation doesn't re-trigger it.
+var _pendingStudyVerse;   // number | null when a study deep-link is pending; undefined otherwise
+
 var STRONGS_REFS_URL   = _resolve('../../data/strongs/refs/');
 var _strongsBanner     = null;  // persists across doLookup re-renders in strongs mode
 var _strongsAllRefs    = null;  // full refs array for pagination
@@ -469,8 +477,18 @@ export function initReaderLookup() {
       }
     }
 
+    // Not a reference / Strong's code / book name → treat as a topical/section search
+    // (e.g. "parables", "parable of the sower", "beatitudes"). Aliases jump straight to a
+    // passage; everything else lists matching sections (or category suggestions) in the panel.
     if (!refs.length) {
-      setStatus('Could not parse — try: Gen 1, John 3:16-21');
+      var navigate = function (refStr) { input.value = refStr; doLookup(); };
+      if (resultsEl) resultsEl.innerHTML = '<p class="reader-hint">Searching sections…</p>';
+      loadSectionData().then(function () {
+        var alias = resolveAlias(q);
+        if (alias) { setStatus(''); navigate(alias.join('; ')); return; }
+        setStatus('');
+        runSectionSearch(q, resultsEl, navigate);
+      });
       return;
     }
     setStatus('');
@@ -629,6 +647,14 @@ export function initReaderLookup() {
         if (!_strongsModeCode) _recordReadingDay();
 
         resultsEl.querySelectorAll('.reader-result-group__text').forEach(autoTagTermsWhenReady);
+
+        // ?study=1 deep link: now that the passage is on the page, open the full study view.
+        // Cleared first (and undefined means "not pending") so chapter nav doesn't re-fire it.
+        if (typeof _pendingStudyVerse !== 'undefined') {
+          var _sv = _pendingStudyVerse;
+          _pendingStudyVerse = undefined;
+          setTimeout(function () { _activateStudyView(_sv); }, 80);
+        }
       }
 
       if (isParaViewEnabled()) {
@@ -664,6 +690,22 @@ export function initReaderLookup() {
     _initStrongsMode(strongsId, input, doLookup, resultsEl);
   } else if (refStr) {
     input.value = refStr;
+    // ?study=1 (from the verse modal's "Study this verse"): turn on the inline study modes
+    // BEFORE the first render so a single pass includes them — interlinear and parallels are
+    // localStorage-gated at render time, and commentary auto-activates from its toggle's
+    // pressed state. Priming here (before the toggle init* calls run) means their browse-bar
+    // buttons are created already in the on/pressed state. The parallels toggle is deliberately
+    // NOT clicked (its click handler re-renders the reader, which would race the study desk
+    // open below). The study desk open + verse scroll happen post-render via _pendingStudyVerse.
+    // NOTE: these toggles persist (sticky) like any manual toggle — subsequent chapters stay
+    // in study mode until the user turns them off.
+    if (params.get('study') === '1') {
+      setInterlinearEnabled(true);
+      setParallelsEnabled(true);
+      try { localStorage.setItem('bsw_reader_comm_mode', '1'); } catch (e) {}
+      var _sm = refStr.match(/:(\d+)/);
+      _pendingStudyVerse = _sm ? parseInt(_sm[1], 10) : null;
+    }
     doLookup();
   } else {
     var hist = _historyGet();
@@ -696,6 +738,31 @@ export function initReaderLookup() {
         '</div>';
     }
   }
+}
+
+// INTENT: Finish the ?study=1 study view once the passage has rendered. The inline modes
+//   (interlinear, parallels, commentary) were already primed before doLookup, so here we only
+//   open the passage study desk — its Connections + Encyclopedia sections satisfy the
+//   "connections" part — and scroll/flash the target verse. Echoes/parallel markers are on by
+//   default, so nothing extra is needed for them.
+// CHANGE? Opening the desk clicks reader-study-btn (created by initStudyDesk). The desk scopes
+//   itself to the loaded chapter. If the button id changes, update it here; a missing button is
+//   skipped so a stripped/embedded reader degrades gracefully.
+// VERIFY: From a verse modal, click "Study this verse" → reader loads the chapter with
+//   interlinear rows, the commentary grid, synoptic parallel panels, and the study desk open,
+//   scrolled to the verse with a brief highlight.
+function _activateStudyView(targetV) {
+  var studyBtn = document.getElementById('reader-study-btn');
+  if (studyBtn && studyBtn.getAttribute('aria-pressed') !== 'true') studyBtn.click();
+  if (targetV != null) _scrollReaderToVerse(targetV);
+}
+
+function _scrollReaderToVerse(v) {
+  var el = document.querySelector('#reader-results .reader-verse[data-v="' + v + '"]:not(.reader-compare-cell)');
+  if (!el) return;
+  el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  el.classList.add('reader-verse--study-flash');
+  setTimeout(function () { el.classList.remove('reader-verse--study-flash'); }, 1400);
 }
 
 function _buildNavButtons(parsedRef, pos) {

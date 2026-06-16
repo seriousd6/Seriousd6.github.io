@@ -24,6 +24,33 @@ var _lastTab     = 'verse'; // VM-F: persists last active tab within session
 // ── Cross-reference tab constants ─────────────────────────────────────────
 var XREF_CHAPTER_LIMIT = 5;
 
+// ── Connections tab (biblepedia badges) ───────────────────────────────────
+// The Connections tab replaces the old Topics tab: it surfaces the Biblepedia
+// articles whose key_refs land on the open reference, as clickable badges. Data
+// comes from the shared encyclopedia index (same file the reader study desk uses).
+// The index is ~1.7MB so it's fetched once on first activation and cached for the
+// page session; per-verse matching is cheap once it's in memory.
+var _BP_INDEX_URL = new URL('../../data/biblepedia/index.json', import.meta.url).href;
+var _BP_PAGE_URL  = new URL('../../biblepedia/', import.meta.url).href;   // article reader (?a=slug)
+var _bpIndexCache = null;
+function _loadBPIndex() {
+  if (_bpIndexCache) return Promise.resolve(_bpIndexCache);
+  return fetch(_BP_INDEX_URL).then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (d) { _bpIndexCache = Array.isArray(d) ? d : []; return _bpIndexCache; })
+    .catch(function () { _bpIndexCache = []; return _bpIndexCache; });
+}
+// True when the parsed reference `p` (a key_ref, which may itself be a verse range or span
+// chapters) overlaps the passage `parsed` is showing. Compares (chapter, verse) pairs
+// lexicographically: two ranges overlap when each starts no later than the other ends.
+function _refInParsed(p, parsed) {
+  if (!p || p.bookId !== parsed.bookId) return false;
+  function cmp(c1, v1, c2, v2) { return c1 !== c2 ? c1 - c2 : v1 - v2; }
+  var aSc = p.ch, aSv = p.v, aEc = p.endCh || p.ch, aEv = p.endV || p.v;
+  var bSc = parsed.ch, bSv = parsed.wholeChapter ? 1 : parsed.v;
+  var bEc = parsed.endCh || parsed.ch, bEv = parsed.wholeChapter ? 9999 : parsed.endV;
+  return cmp(aSc, aSv, bEc, bEv) <= 0 && cmp(bSc, bSv, aEc, aEv) <= 0;
+}
+
 // ── Memory helpers (bridged from daily.js via registration) ───────────────
 var _memHasFn     = null;
 var _memAddFn     = null;
@@ -124,8 +151,6 @@ export function buildModalDOM() {
       '<a class="bsw-modal__verse-study-link" href="#" hidden>📖 Study this verse</a>' +
       '<a class="bsw-modal__compare-link" href="#" hidden>All translations ↗</a>' +
       '<button class="bsw-modal__memory-btn" hidden aria-label="Add to memory">☆ Memorize</button>' +
-      '<button class="bsw-modal__copy-quote-btn" hidden aria-label="Copy verse as quote">Quote</button>' +
-      '<button class="bsw-modal__copy-ref-btn" hidden aria-label="Copy verse reference">Reference</button>' +
       '<button class="bsw-modal__share-btn" hidden aria-label="Share verse as image">Share</button>' +
       '<button class="bsw-modal__close" aria-label="Close verse viewer">✕</button>' +
     '</div>' +
@@ -136,13 +161,7 @@ export function buildModalDOM() {
     '<div class="bsw-modal__tabs" role="tablist">' +
       '<button class="bsw-modal__tab bsw-modal__tab--active" data-tab="verse" role="tab" aria-selected="true">Verse</button>' +
       '<button class="bsw-modal__tab" data-tab="notes" role="tab" aria-selected="false">Notes</button>' +
-      '<button class="bsw-modal__tab" data-tab="commentary" role="tab" aria-selected="false">Commentary</button>' +
-      '<button class="bsw-modal__tab" data-tab="wordstudy" role="tab" aria-selected="false">Word Study</button>' +
-      '<button class="bsw-modal__tab" data-tab="topics" role="tab" aria-selected="false">Topics</button>' +
-      '<button class="bsw-modal__tab" data-tab="confessions" role="tab" aria-selected="false">Confessions</button>' +
-      '<button class="bsw-modal__tab" data-tab="fathers" role="tab" aria-selected="false">Fathers</button>' +
-      '<button class="bsw-modal__tab" data-tab="dictionary" role="tab" aria-selected="false">Dictionary</button>' +
-      '<button class="bsw-modal__tab" data-tab="crossrefs" role="tab" aria-selected="false">Cross Refs</button>' +
+      '<button class="bsw-modal__tab" data-tab="connections" role="tab" aria-selected="false">Connections</button>' +
     '</div>' +
     '<div class="bsw-modal__split">' +
       '<button class="bsw-modal__prev-verse" hidden aria-label="Previous verse" title="Previous verse (k)">‹</button>' +
@@ -153,13 +172,7 @@ export function buildModalDOM() {
       '<button class="bsw-modal__next-verse" hidden aria-label="Next verse" title="Next verse (j)">›</button>' +
     '</div>' +
     '<div class="bsw-modal__notes-panel" hidden></div>' +
-    '<div class="bsw-modal__commentary-panel" hidden></div>' +
-    '<div class="bsw-modal__wordstudy-panel" hidden></div>' +
-    '<div class="bsw-modal__topics-panel" hidden></div>' +
-    '<div class="bsw-modal__confessions-panel" hidden></div>' +
-    '<div class="bsw-modal__fathers-panel" hidden></div>' +
-    '<div class="bsw-modal__dictionary-panel" hidden></div>' +
-    '<div class="bsw-modal__crossrefs-panel" hidden></div>';
+    '<div class="bsw-modal__connections-panel" hidden></div>';
 
   backdrop.appendChild(modal);
   document.body.appendChild(backdrop);
@@ -212,12 +225,6 @@ export function buildModalDOM() {
   modal.querySelector('#bsw-modal-version').addEventListener('change', function () {
     var ref = _modalEl._parsedRef;
     if (ref) renderModal(ref, this.value);
-  });
-  modal.querySelector('.bsw-modal__copy-quote-btn').addEventListener('click', function () {
-    _copyModalVerse(this, 'plain');
-  });
-  modal.querySelector('.bsw-modal__copy-ref-btn').addEventListener('click', function () {
-    _copyModalVerse(this, 'cite');
   });
   modal.querySelector('.bsw-modal__share-btn').addEventListener('click', function () {
     _shareModalVerseAsImage();
@@ -285,43 +292,17 @@ export function buildModalDOM() {
       b.classList.toggle('bsw-modal__tab--active', active);
       b.setAttribute('aria-selected', active ? 'true' : 'false');
     });
-    var splitEl    = modal.querySelector('.bsw-modal__split');
-    var notesEl    = modal.querySelector('.bsw-modal__notes-panel');
-    var commEl     = modal.querySelector('.bsw-modal__commentary-panel');
-    var wsEl       = modal.querySelector('.bsw-modal__wordstudy-panel');
-    var topicsEl   = modal.querySelector('.bsw-modal__topics-panel');
-    var confEl     = modal.querySelector('.bsw-modal__confessions-panel');
-    var fathersEl  = modal.querySelector('.bsw-modal__fathers-panel');
-    var dictEl     = modal.querySelector('.bsw-modal__dictionary-panel');
-    var xrefsEl    = modal.querySelector('.bsw-modal__crossrefs-panel');
-    var allPanels  = [splitEl, notesEl, commEl, wsEl, topicsEl, confEl, fathersEl, dictEl, xrefsEl];
-    allPanels.forEach(function (p) { if (p) p.setAttribute('hidden', ''); });
+    var splitEl  = modal.querySelector('.bsw-modal__split');
+    var notesEl  = modal.querySelector('.bsw-modal__notes-panel');
+    var connEl   = modal.querySelector('.bsw-modal__connections-panel');
+    [splitEl, notesEl, connEl].forEach(function (p) { if (p) p.setAttribute('hidden', ''); });
 
     if (tab === 'verse') {
       if (splitEl) splitEl.removeAttribute('hidden');
     } else if (tab === 'notes') {
       if (notesEl) { notesEl.removeAttribute('hidden'); _renderNotesPanel(_modalEl._parsedRef, notesEl); }
-    } else if (tab === 'commentary') {
-      if (commEl) { commEl.removeAttribute('hidden'); if (!commEl._commentaryLoaded) renderCommentary(_modalEl._parsedRef, commEl); }
-    } else if (tab === 'wordstudy') {
-      if (wsEl) { wsEl.removeAttribute('hidden'); if (!wsEl._wsLoaded && _renderModalWordStudyFn) _renderModalWordStudyFn(_modalEl._parsedRef, wsEl); }
-    } else if (tab === 'topics') {
-      if (topicsEl) { topicsEl.removeAttribute('hidden'); if (!topicsEl._topicsLoaded && _renderModalTopicsFn) _renderModalTopicsFn(_modalEl._parsedRef, topicsEl); }
-    } else if (tab === 'confessions') {
-      if (confEl) { confEl.removeAttribute('hidden'); if (!confEl._confLoaded && _renderModalConfessionsFn) _renderModalConfessionsFn(_modalEl._parsedRef, confEl); }
-    } else if (tab === 'fathers') {
-      if (fathersEl) { fathersEl.removeAttribute('hidden'); if (!fathersEl._fathersLoaded && _renderModalFathersFn) _renderModalFathersFn(_modalEl._parsedRef, fathersEl); }
-    } else if (tab === 'dictionary') {
-      if (dictEl) { dictEl.removeAttribute('hidden'); if (!dictEl._dictLoaded && _renderModalDictionaryFn) _renderModalDictionaryFn(_modalEl._parsedRef, dictEl); }
-    } else if (tab === 'crossrefs') {
-      if (xrefsEl) {
-        xrefsEl.removeAttribute('hidden');
-        if (!xrefsEl._xrefsLoaded) {
-          var _xVer = document.getElementById('bsw-modal-version');
-          renderModalCrossRefsTab(_modalEl._parsedRef, xrefsEl,
-            (_xVer && _xVer.value) ? _xVer.value : getVersion());
-        }
-      }
+    } else if (tab === 'connections') {
+      if (connEl) { connEl.removeAttribute('hidden'); if (!connEl._connLoaded) _renderConnectionsPanel(_modalEl._parsedRef, connEl); }
     }
   });
 }
@@ -399,29 +380,14 @@ export function renderModal(parsed, versionId) {
 
   var splitEl = _modalEl.querySelector('.bsw-modal__split');
   var notesEl = _modalEl.querySelector('.bsw-modal__notes-panel');
-  var commEl  = _modalEl.querySelector('.bsw-modal__commentary-panel');
-  var wsEl    = _modalEl.querySelector('.bsw-modal__wordstudy-panel');
+  var connResetEl = _modalEl.querySelector('.bsw-modal__connections-panel');
   if (bodyEl)  bodyEl.removeAttribute('hidden');
   if (attrElR) attrElR.removeAttribute('hidden');
   if (splitEl) splitEl.removeAttribute('hidden');
   if (notesEl) { notesEl.setAttribute('hidden', ''); notesEl.innerHTML = ''; }
-  if (commEl)  { commEl.setAttribute('hidden', '');  commEl._commentaryLoaded = false; }
-  if (wsEl)    { wsEl.setAttribute('hidden', '');    wsEl._wsLoaded = false; }
-
-  var topicsEl2 = _modalEl.querySelector('.bsw-modal__topics-panel');
-  if (topicsEl2) { topicsEl2.setAttribute('hidden', ''); topicsEl2._topicsLoaded = false; }
-  var confEl = _modalEl.querySelector('.bsw-modal__confessions-panel');
-  if (confEl)  { confEl.setAttribute('hidden', '');  confEl._confLoaded = false; }
-  var fathersPanelEl = _modalEl.querySelector('.bsw-modal__fathers-panel');
-  if (fathersPanelEl) { fathersPanelEl.setAttribute('hidden', ''); fathersPanelEl._fathersLoaded = false; }
-  var dictPanelEl = _modalEl.querySelector('.bsw-modal__dictionary-panel');
-  if (dictPanelEl) { dictPanelEl.setAttribute('hidden', ''); dictPanelEl._dictLoaded = false; }
-  var xrefsPanelEl = _modalEl.querySelector('.bsw-modal__crossrefs-panel');
-  if (xrefsPanelEl) { xrefsPanelEl.setAttribute('hidden', ''); xrefsPanelEl._xrefsLoaded = false; }
-  var copyQuoteReset = _modalEl.querySelector('.bsw-modal__copy-quote-btn');
-  if (copyQuoteReset) { copyQuoteReset.setAttribute('hidden', ''); copyQuoteReset.textContent = 'Quote'; }
-  var copyRefReset = _modalEl.querySelector('.bsw-modal__copy-ref-btn');
-  if (copyRefReset) { copyRefReset.setAttribute('hidden', ''); copyRefReset.textContent = 'Reference'; }
+  // Connections (biblepedia badges) reload per verse — drop the cached flag so the
+  // next activation re-matches against the new reference.
+  if (connResetEl) { connResetEl.setAttribute('hidden', ''); connResetEl._connLoaded = false; }
 
   var title  = _modalEl.querySelector('.bsw-modal__title');
   var body   = _modalEl.querySelector('.bsw-modal__body');
@@ -449,7 +415,10 @@ export function renderModal(parsed, versionId) {
   var isSingleVerse = !parsed.wholeChapter && parsed.ch === parsed.endCh && parsed.v === parsed.endV;
   var singleRef = encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + parsed.v);
   if (vsLink) {
-    if (isSingleVerse) { vsLink.href = VERSE_STUDY_URL + '?ref=' + singleRef; vsLink.removeAttribute('hidden'); }
+    // "Study this verse" now opens the passage in the reader with the study desk and the
+    // inline study modes (commentary, interlinear, parallels) auto-enabled — see the
+    // `study=1` handler in reader.js. The dedicated verse-study page is being retired.
+    if (isSingleVerse) { vsLink.href = READER_URL + '?ref=' + singleRef + '&study=1'; vsLink.removeAttribute('hidden'); }
     else { vsLink.setAttribute('hidden', ''); }
   }
   if (cmpLink) {
@@ -469,10 +438,6 @@ export function renderModal(parsed, versionId) {
       memBtn.setAttribute('hidden', '');
     }
   }
-  var copyQuoteBtn = _modalEl.querySelector('.bsw-modal__copy-quote-btn');
-  if (copyQuoteBtn) copyQuoteBtn.removeAttribute('hidden');
-  var copyRefBtn = _modalEl.querySelector('.bsw-modal__copy-ref-btn');
-  if (copyRefBtn) copyRefBtn.removeAttribute('hidden');
   var shareBtn = _modalEl.querySelector('.bsw-modal__share-btn');
   if (shareBtn) shareBtn.removeAttribute('hidden');
   // VM-I: show prev/next buttons only for single verse
@@ -592,170 +557,6 @@ function _injectModalFootnotes(parsed, bodyEl) {
   }).catch(function () {});
 }
 
-// INTENT: Load and render cross-references for `parsed` into `container`; handles both single-verse
-//   and range requests, capping at 4 chapters to avoid over-fetching multi-chapter passages.
-//   Cross-ref data is loaded via `loadCrossRefs(bookId)` from `core.js` (cached per book).
-// CHANGE? Cross-ref data lives at `data/crossrefs/{book}.json` (loaded by core.js); if the format
-//   changes, update `_extractCommHtml`-style extraction logic in this function's inner loop.
-// VERIFY: Open John 3:16 → cross-refs tab shows reference list with `.ref` link chips that
-//   open the linked verse on click; multi-verse range (John 3:16-18) shows refs for all verses.
-// ── renderCrossRefs ───────────────────────────────────────────────────────
-export function renderCrossRefs(parsed, container) {
-  if (!parsed) {
-    container.innerHTML = '<p class="bsw-modal__xrefs-empty">No reference selected.</p>';
-    return;
-  }
-  container._xrefLoaded = true;
-  container.innerHTML = '<p class="bsw-modal__loading">Loading cross-references…</p>';
-  var isSingle = !parsed.wholeChapter && (parsed.ch === parsed.endCh) && (parsed.v === parsed.endV);
-
-  loadCrossRefs(parsed.bookId).then(function (data) {
-    if (!data) {
-      container.innerHTML = '<p class="bsw-modal__xrefs-empty">No cross-references available for this book.</p>';
-      return;
-    }
-    var groups = [];
-    for (var c = parsed.ch; c <= Math.min(parsed.endCh, parsed.ch + 4); c++) {
-      var chData = data[String(c)];
-      if (!chData) continue;
-      var startV = (c === parsed.ch)   ? parsed.v   : 1;
-      var stopV  = (c === parsed.endCh) ? Math.min(parsed.endV, 9999) : 9999;
-      var keys   = Object.keys(chData).map(Number)
-        .filter(function (n) { return n >= startV && n <= stopV; })
-        .sort(function (a, b) { return a - b; });
-      keys.forEach(function (vNum) {
-        var rawRefs = chData[String(vNum)];
-        if (!rawRefs || !rawRefs.length) return;
-        var entries = rawRefs.map(parseCrossRefEntry);
-        if (!isSingle) {
-          entries.sort(function (a, b) { return b.votes - a.votes; });
-          entries = entries.slice(0, XREF_CHAPTER_LIMIT);
-        }
-        entries.sort(_compareCanonical);
-        groups.push({ ch: c, v: vNum, entries: entries });
-      });
-    }
-    if (!groups.length) {
-      container.innerHTML = '<p class="bsw-modal__xrefs-empty">No cross-references found for this passage.</p>';
-      return;
-    }
-    var hasScores = groups.some(function (g) { return g.entries.some(function (e) { return e.votes > 1; }); });
-    var html = '';
-    groups.forEach(function (g) {
-      if (!isSingle) {
-        html += '<div class="bsw-modal__xref-verse-label">' + escHtml(parsed.bookName) + ' ' + g.ch + ':' + g.v + '</div>';
-      }
-      html += '<div class="bsw-modal__xref-list">';
-      g.entries.forEach(function (entry) {
-        var tierClass = '';
-        if (hasScores) {
-          tierClass = entry.votes >= 15 ? ' bsw-xref--high' : entry.votes >= 6 ? ' bsw-xref--med' : ' bsw-xref--low';
-        }
-        html += '<a class="bsw-modal__xref-link' + tierClass + '" data-ref="' + escHtml(entry.ref) + '" role="button" tabindex="0">' + escHtml(entry.ref) + '</a>';
-      });
-      html += '</div>';
-    });
-    container.innerHTML = html;
-    container.querySelectorAll('.bsw-modal__xref-link').forEach(function (el) {
-      var p = parseRef(el.getAttribute('data-ref'));
-      if (p) wireRefEl(el, p);
-    });
-  }).catch(function () {
-    container.innerHTML = '<p class="bsw-modal__xrefs-empty">Could not load cross-reference data.</p>';
-  });
-}
-
-// ── renderModalCrossRefsTab ───────────────────────────────────────────────
-export function renderModalCrossRefsTab(parsed, container, versionId) {
-  container._xrefsLoaded = true;
-  container.innerHTML = '<p class="bsw-modal__loading">Loading cross-references…</p>';
-  var isSingle = !parsed.wholeChapter && parsed.ch === parsed.endCh && parsed.v === parsed.endV;
-
-  loadCrossRefs(parsed.bookId).then(function (xdata) {
-    if (!xdata) {
-      container.innerHTML = '<p class="bsw-modal__xrefs-empty">No cross-references available for this book.</p>';
-      return;
-    }
-    var allEntries = [];
-    for (var c = parsed.ch; c <= Math.min(parsed.endCh, parsed.ch + 4); c++) {
-      var chData = xdata[String(c)];
-      if (!chData) continue;
-      var startV = (c === parsed.ch)   ? parsed.v   : 1;
-      var stopV  = (c === parsed.endCh) ? Math.min(parsed.endV, 9999) : 9999;
-      Object.keys(chData).map(Number)
-        .filter(function (n) { return n >= startV && n <= stopV; })
-        .sort(function (a, b) { return a - b; })
-        .forEach(function (vNum) {
-          var rawRefs = chData[String(vNum)];
-          if (!rawRefs || !rawRefs.length) return;
-          var entries = rawRefs.map(parseCrossRefEntry);
-          if (!isSingle) {
-            entries.sort(function (a, b) { return b.votes - a.votes; });
-            entries = entries.slice(0, XREF_CHAPTER_LIMIT);
-          }
-          entries.sort(_compareCanonical);
-          entries.forEach(function (e) { allEntries.push(e); });
-        });
-    }
-    if (!allEntries.length) {
-      container.innerHTML = '<p class="bsw-modal__xrefs-empty">No cross-references found for this passage.</p>';
-      return;
-    }
-    container.innerHTML =
-      '<div class="bsw-modal__xref-tab-hdr">' + escHtml(parsed.display) + '</div>' +
-      '<div class="bsw-modal__xref-tab-scroll"></div>';
-    var scrollEl = container.querySelector('.bsw-modal__xref-tab-scroll');
-
-    resolveVerses(parsed, versionId).then(function (srcVerses) {
-      var srcText = srcVerses ? srcVerses.map(function (vr) { return vr.text; }).join(' — ') : '';
-      var srcEl   = container.querySelector('.bsw-modal__xref-tab-hdr');
-      if (srcEl && srcText) {
-        srcEl.innerHTML = escHtml(parsed.display) +
-          '<span class="bsw-modal__xref-tab-src-text">' + escHtml(srcText) + '</span>';
-      }
-    }).catch(function () {});
-
-    allEntries.forEach(function (entry) {
-      var p = parseRef(entry.ref);
-      if (!p) return;
-      var item     = document.createElement('div');
-      item.className = 'bsw-modal__xref-tab-item';
-      var refLabel = document.createElement('div');
-      refLabel.className = 'bsw-modal__xref-tab-ref';
-      refLabel.textContent = entry.ref;
-      refLabel.setAttribute('role', 'button');
-      refLabel.setAttribute('tabindex', '0');
-      wireRefEl(refLabel, p);
-      item.appendChild(refLabel);
-      var textEl = document.createElement('div');
-      textEl.className = 'bsw-modal__xref-tab-text';
-      textEl.textContent = '…';
-      item.appendChild(textEl);
-      scrollEl.appendChild(item);
-      resolveVerses(p, versionId).then(function (verses) {
-        if (!verses || !verses.length) { textEl.textContent = ''; return; }
-        // VM-G: prefix verse number when result spans multiple verses
-        textEl.textContent = verses.length === 1
-          ? verses[0].text
-          : verses.map(function (vr) { return vr.verse + ' ' + vr.text; }).join(' ');
-      }).catch(function () { textEl.textContent = ''; });
-    });
-  }).catch(function () {
-    container.innerHTML = '<p class="bsw-modal__xrefs-empty">Could not load cross-reference data.</p>';
-  });
-}
-
-// ── _buildCommPicker ──────────────────────────────────────────────────────
-function _buildCommPicker(currentSrc) {
-  var opts = COMMENTARY_SOURCES.map(function (s) {
-    return '<option value="' + s.id + '"' + (s.id === currentSrc ? ' selected' : '') + '>' + s.label + '</option>';
-  }).join('');
-  return '<div class="bsw-modal__comm-picker">' +
-    '<label class="bsw-modal__comm-label">Source:</label>' +
-    '<select class="bsw-modal__comm-select">' + opts + '</select>' +
-    '</div>';
-}
-
 // ── _extractCommHtml ──────────────────────────────────────────────────────
 // VM-H: returns { html, foundV } so callers can show a "nearest section" notice
 export function _extractCommHtml(data, parsed, source) {
@@ -785,6 +586,63 @@ export function _extractCommHtml(data, parsed, source) {
     }
   }
   return { html: html || null, foundV: foundV };
+}
+
+// INTENT: Render the Connections tab — Biblepedia article badges for the open reference.
+//   Matches index entries whose key_refs land inside `parsed` (via _refInParsed), groups
+//   them by category (people → places → events → concepts → …), and renders each as a chip
+//   linking to the article reader at /biblepedia/?a={id}. Lazy: only fires on first tab
+//   activation (guarded by container._connLoaded in the tab-switch handler) and the 1.7MB
+//   index is fetched once per session.
+// CHANGE? Index shape is { id, term, category, brief, key_refs, has_article } — mirrors the
+//   reader study desk's _bpMatches. If data/biblepedia/index.json changes, update both.
+// VERIFY: Open John 1:1 → Connections shows badges (e.g. "Word (Logos)", "Jesus Christ");
+//   click one → opens the Biblepedia article. A verse with no keyed articles shows an empty note.
+var _BP_CAT_ORDER = { people: 0, person: 0, places: 1, place: 1, events: 2, event: 2, concepts: 3, concept: 3, names: 4, name: 4, father: 5, commentator: 6 };
+export function _renderConnectionsPanel(parsed, container) {
+  container._connLoaded = true;
+  if (!parsed) { container.innerHTML = '<p class="bsw-modal__conn-empty">No reference selected.</p>'; return; }
+  container.innerHTML = '<p class="bsw-modal__loading">Finding connected articles…</p>';
+
+  _loadBPIndex().then(function (idx) {
+    // Guard against a version/verse change that swapped the open ref while we were fetching.
+    if (_modalEl && _modalEl._parsedRef !== parsed) return;
+    var matches = [];
+    idx.forEach(function (a) {
+      if (!a || a.has_article === false) return;
+      var refs = a.key_refs || [], hit = false;
+      for (var i = 0; i < refs.length && !hit; i++) {
+        var p = parseRef(refs[i]);
+        if (p && _refInParsed(p, parsed)) hit = true;
+      }
+      if (hit) matches.push(a);
+    });
+    matches.sort(function (a, b) {
+      var ca = _BP_CAT_ORDER[a.category] != null ? _BP_CAT_ORDER[a.category] : 9;
+      var cb = _BP_CAT_ORDER[b.category] != null ? _BP_CAT_ORDER[b.category] : 9;
+      if (ca !== cb) return ca - cb;
+      return String(a.term || '').localeCompare(String(b.term || ''));
+    });
+
+    if (!matches.length) {
+      container.innerHTML = '<p class="bsw-modal__conn-empty">No encyclopedia articles key to ' +
+        escHtml(parsed.display) + '.</p>';
+      return;
+    }
+    var n = matches.length;
+    var html = '<p class="bsw-modal__conn-note">' + n + ' encyclopedia article' + (n === 1 ? '' : 's') +
+      ' connected to ' + escHtml(parsed.display) + ':</p><div class="bsw-modal__conn-badges">';
+    matches.forEach(function (a) {
+      var href = _BP_PAGE_URL + '?a=' + encodeURIComponent(a.id);
+      var cat  = a.category ? '<span class="bsw-modal__conn-cat">' + escHtml(a.category) + '</span>' : '';
+      html += '<a class="bsw-modal__conn-badge" href="' + href + '" title="' +
+        escHtml(a.brief || a.term || '') + '">' + escHtml(a.term || a.id) + cat + '</a>';
+    });
+    html += '</div>';
+    container.innerHTML = html;
+  }).catch(function () {
+    container.innerHTML = '<p class="bsw-modal__conn-empty">Could not load encyclopedia index.</p>';
+  });
 }
 
 // INTENT: Update the "Notes" tab badge count by summing notes across the full verse range of
@@ -1050,73 +908,6 @@ export function _renderNotesPanel(parsed, container) {
   return refresh;
 }
 
-// INTENT: Render commentary for `parsed` using the currently selected source; a source picker
-//   dropdown is built from `COMMENTARY_SOURCES` (registered in core.js) and the last-used source
-//   is persisted in `localStorage` key `bsw_comm_src` so it survives across page loads.
-// CHANGE? New commentary sources must be registered via `registerCommentarySource()` in core.js —
-//   modal.js reads the registry but never writes to it. Data lives at `data/commentary/{src}/{book}.json`,
-//   fetched by `loadCommentary(bookId, src)` in core.js (cached per book+src pair).
-// VERIFY: Open John 3:16 → switch commentary source → selected source persists on next open;
-//   a book/verse with no commentary shows "No commentary found" rather than a loading spinner.
-// ── renderCommentary ──────────────────────────────────────────────────────
-export function renderCommentary(parsed, container) {
-  if (!parsed) {
-    container.innerHTML = '<p class="bsw-modal__commentary-empty">No reference selected.</p>';
-    return;
-  }
-  container._commentaryLoaded = true;
-
-  function loadAndRender(src) {
-    var bodyEl = container.querySelector('.bsw-modal__comm-body');
-    if (bodyEl) bodyEl.innerHTML = '<p class="bsw-modal__loading">Loading commentary…</p>';
-
-    if (src === 'mkt') {
-      loadMktAll(parsed.bookId, parsed.ch).then(function (datasets) {
-        var bodyEl2 = container.querySelector('.bsw-modal__comm-body');
-        if (!bodyEl2) return;
-        var htmls = datasets.map(function (data) { return _extractCommHtml(data, parsed, src).html; });
-        bodyEl2.innerHTML = decorateMkt(htmls) + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
-        wireRefLinks(bodyEl2);
-      }).catch(function () {
-        var bodyEl3 = container.querySelector('.bsw-modal__comm-body');
-        if (bodyEl3) bodyEl3.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary.</p>';
-      });
-      return;
-    }
-
-    loadCommentary(parsed.bookId, src, parsed.ch).then(function (data) {
-      var result  = _extractCommHtml(data, parsed, src); // VM-H: now returns { html, foundV }
-      var bodyEl2 = container.querySelector('.bsw-modal__comm-body');
-      if (!bodyEl2) return;
-      if (!result.html) {
-        bodyEl2.innerHTML = '<p class="bsw-modal__commentary-empty">No commentary found for this verse.</p>';
-        return;
-      }
-      // VM-H: prepend muted notice when commentary is a section that includes, not targets, the verse
-      var notice = '';
-      if (!parsed.wholeChapter && result.foundV !== null && result.foundV !== parsed.v) {
-        notice = '<p class="bsw-modal__comm-section-note">▸ This section covers verse ' + result.foundV + ' and following</p>';
-      }
-      var commHtml = src === 'cow' ? decorateCatena(result.html) : result.html; // collapsible voices + Father badges
-      bodyEl2.innerHTML = notice + commHtml + '<p class="bsw-modal__commentary-attr">' + _commAttr(src) + '</p>';
-      if (src === 'cow') buildCatenaFilter(bodyEl2);
-      wireRefLinks(bodyEl2);
-    }).catch(function () {
-      var bodyEl3 = container.querySelector('.bsw-modal__comm-body');
-      if (bodyEl3) bodyEl3.innerHTML = '<p class="bsw-modal__commentary-empty">Could not load commentary.</p>';
-    });
-  }
-
-  container.innerHTML = _buildCommPicker(getCommentarySource()) +
-    '<div class="bsw-modal__comm-body"><p class="bsw-modal__loading">Loading commentary…</p></div>';
-  var sel = container.querySelector('.bsw-modal__comm-select');
-  sel.addEventListener('change', function () {
-    setCommentarySource(sel.value);
-    loadAndRender(sel.value);
-  });
-  loadAndRender(getCommentarySource());
-}
-
 // ── hideModal ─────────────────────────────────────────────────────────────
 export function hideModal() {
   if (!_backdropEl) return;
@@ -1146,43 +937,6 @@ export function trapFocus(e) {
     if (document.activeElement === first) { e.preventDefault(); last.focus(); }
   } else {
     if (document.activeElement === last) { e.preventDefault(); first.focus(); }
-  }
-}
-
-// ── _copyModalVerse ───────────────────────────────────────────────────────
-function _copyModalVerse(btn, fmt) {
-  var parsed  = _modalEl && _modalEl._parsedRef;
-  if (!parsed) return;
-  var body    = _modalEl.querySelector('.bsw-modal__body');
-  var version = (document.getElementById('bsw-modal-version') || {}).value || getVersion();
-  // VM-A: read from .bsw-modal__verse-text spans to skip verse-number sups and xref sups
-  var textSpans = body ? body.querySelectorAll('.bsw-modal__verse-text') : [];
-  var texts    = [];
-  textSpans.forEach(function (el) {
-    var t = el.textContent.trim();
-    if (t) texts.push(t);
-  });
-  if (!texts.length) return;
-  var text  = texts.join(' ');
-  var ref   = parsed.display;
-  var plain = '"' + text + '" — ' + ref + ' (' + version.toUpperCase() + ')';
-  var toCopy = fmt === 'cite' ? (ref + ' (' + version.toUpperCase() + ')') : plain;
-  var origLabel = btn.textContent;
-
-  function _onCopied() {
-    btn.textContent = 'Copied!';
-    setTimeout(function () { btn.textContent = origLabel; }, 1800);
-  }
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(toCopy).then(_onCopied).catch(function () {});
-  } else {
-    var ta = document.createElement('textarea');
-    ta.value = toCopy; ta.style.position = 'fixed'; ta.style.opacity = '0';
-    document.body.appendChild(ta); ta.select();
-    try { document.execCommand('copy'); } catch (e) {}
-    document.body.removeChild(ta);
-    _onCopied();
   }
 }
 

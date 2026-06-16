@@ -4060,8 +4060,16 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
   background: var(--color-accent); color: #fff;
   border-radius: 4px; box-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
-/* Place hover tooltip with a one-line significance (like the maps page) */
-.study-map-tip { max-width: 230px; white-space: normal; }
+/* Place hover tooltip with a one-line significance (like the maps page).
+   Compound selector .leaflet-tooltip.study-map-tip (the element carries both classes)
+   outranks Leaflet's own `.leaflet-tooltip { white-space: nowrap }`, whose stylesheet
+   loads after reader.css — without this the desc text runs off the right edge of the
+   tooltip box unbounded. */
+.leaflet-tooltip.study-map-tip {
+  max-width: 230px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .study-map-tip__desc { display: block; margin-top: 0.15rem; font-size: 0.72rem; opacity: 0.85; font-weight: 400; }
 
 /* ── Blades: drill-down panes layered over the desk ───────────────────────── */
@@ -4183,6 +4191,11 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-map {
   height: 240px; width: 100%; border-radius: 8px; overflow: hidden;
   border: 1px solid var(--color-border); background: var(--color-bg);
+  /* Leaflet sets z-index up to 1000 on its own controls/panes. Without a stacking context here
+     those escape into the desk's context and paint OVER the blade overlay (.study-blade, z:6).
+     isolation:isolate (+ z-index:0 fallback) traps every Leaflet z-index inside this box at
+     level 0, so any blade that opens on top of the map stays on top. */
+  position: relative; z-index: 0; isolation: isolate;
 }
 .study-map .leaflet-container { font-family: var(--font-ui); }
 
@@ -4200,6 +4213,43 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-echo__ref { font-size: 0.84rem; }
 .study-echo__note { font-size: 0.8rem; color: var(--color-muted); flex: 1 1 100%; }
 
+/* SD · Encyclopedia (Biblepedia) blade — expandable article cards */
+.study-bp__intro { font-size: 0.85rem; line-height: 1.55; color: var(--color-text); margin: 0 0 0.8rem; }
+.study-bp-card {
+  border: 1px solid var(--color-border); border-radius: 7px; margin-bottom: 0.45rem;
+  background: rgba(140,106,0,0.03);
+}
+.study-bp-card__sum {
+  cursor: pointer; padding: 0.5rem 0.65rem; list-style: none;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.study-bp-card__sum::-webkit-details-marker { display: none; }
+.study-bp-card__sum::before { content: '▸'; color: var(--color-muted); flex-shrink: 0; }
+.study-bp-card[open] > .study-bp-card__sum::before { content: '▾'; }
+.study-bp-card[open] > .study-bp-card__sum { border-bottom: 1px solid var(--color-border); }
+.study-bp-card__term { font-weight: 600; font-size: 0.88rem; color: var(--color-heading); }
+.study-bp-card__cat {
+  margin-left: auto; flex-shrink: 0;
+  font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--color-muted); background: var(--color-bg);
+  border: 1px solid var(--color-border); border-radius: 999px; padding: 0.08rem 0.5rem;
+}
+.study-bp-card__cat--people { color: #3f8f50; }
+.study-bp-card__cat--places { color: #4a7bb0; }
+.study-bp-card__cat--events, .study-bp-card__cat--event { color: var(--color-accent); }
+.study-bp-card__body { padding: 0.6rem 0.7rem; }
+.study-bp-card__brief { font-size: 0.82rem; line-height: 1.55; color: var(--color-muted); margin: 0 0 0.5rem; }
+.study-bp-card__refs { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; margin: 0 0 0.6rem; }
+.study-bp-card__ref { font-size: 0.78rem; }
+.study-bp-card__intro { font-size: 0.85rem; line-height: 1.6; color: var(--color-text); }
+.study-bp-card__intro p { margin: 0 0 0.55rem; }
+.study-bp-card__intro p:last-child { margin-bottom: 0; }
+.study-bp-card__more {
+  display: inline-block; margin-top: 0.6rem; font-size: 0.8rem; font-weight: 600;
+  color: var(--color-accent);
+}
+.study-bp-card__more:hover { text-decoration: underline; }
+
 /* SD-P4 · Notes + export */
 .study-notes {
   width: 100%; min-height: 90px; resize: vertical;
@@ -4216,3 +4266,39 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 }
 .study-export-btn:hover { filter: brightness(1.06); }
 .study-export-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* ── Topical / section search results (reader lookup bar; see sections.js) ─────── */
+.reader-sections { padding: .25rem 0; }
+.reader-sec-summary {
+  font-size: .85rem; color: var(--color-muted, #888); margin: 0 0 .6rem;
+}
+.reader-sec-group { margin-bottom: .9rem; }
+.reader-sec-group__head {
+  font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em;
+  color: var(--color-primary, #5c3d1e); margin: 0 0 .35rem; padding-bottom: .2rem;
+  border-bottom: 1px solid var(--color-border, #e0d5c4);
+}
+.reader-sec-group__count { color: var(--color-muted, #888); font-weight: 500; }
+.reader-sec-item {
+  display: flex; align-items: baseline; justify-content: space-between; gap: .75rem;
+  width: 100%; text-align: left; min-height: 44px;
+  padding: .4rem .55rem; margin-bottom: .15rem;
+  background: transparent; border: 1px solid transparent; border-radius: 6px;
+  cursor: pointer; font-family: inherit; color: var(--color-text, #2c2416);
+  transition: background .12s, border-color .12s;
+}
+.reader-sec-item:hover { background: var(--color-surface-alt, rgba(200,169,110,.08)); border-color: var(--color-border, #e0d5c4); }
+.reader-sec-item:focus-visible { outline: 2px solid var(--color-accent, #c8a84b); outline-offset: 1px; }
+.reader-sec-item__title { font-size: .95rem; }
+.reader-sec-item__ref { font-size: .8rem; color: var(--color-muted, #888); white-space: nowrap; flex-shrink: 0; }
+.reader-sec-note { font-size: .72rem; font-style: italic; color: var(--color-muted, #888); margin: .5rem 0 0; }
+.reader-sec-suggest-label { font-size: .85rem; color: var(--color-muted, #888); margin: .5rem 0 .4rem; }
+.reader-sec-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.reader-sec-chip {
+  min-height: 36px; padding: .3rem .7rem;
+  background: var(--color-surface, #fff); border: 1px solid var(--color-border, #e0d5c4);
+  border-radius: 999px; cursor: pointer; font-family: inherit; font-size: .82rem;
+  color: var(--color-primary, #5c3d1e); transition: background .12s, border-color .12s;
+}
+.reader-sec-chip:hover { background: color-mix(in srgb, var(--color-primary) 8%, transparent); border-color: var(--color-primary, #5c3d1e); }
+.reader-sec-chip:focus-visible { outline: 2px solid var(--color-accent, #c8a84b); outline-offset: 1px; }

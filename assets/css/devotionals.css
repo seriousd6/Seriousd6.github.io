@@ -35,6 +35,42 @@
   margin-bottom: 1.5rem;
 }
 
+.devot-source {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.devot-source__label {
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--color-muted, #999);
+}
+
+.devot-source__select {
+  padding: .35rem 1.8rem .35rem .6rem;
+  border: 1px solid var(--color-border, #d0d0d0);
+  border-radius: 6px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text, #222);
+  font-size: .9rem;
+  font-family: inherit;
+  cursor: pointer;
+  /* Custom chevron so the control matches the date/nav buttons across themes. */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .6rem center;
+}
+
+.devot-source__select:hover {
+  border-color: var(--color-primary, #5c3d1e);
+}
+
 .devot-date-nav {
   display: flex;
   align-items: center;
@@ -171,6 +207,16 @@
 
 .devot-text p:last-child {
   margin-bottom: 0;
+}
+
+/* ── Author byline (shown for variety / multi-author collections) ────────────── */
+
+.devot-attribution {
+  margin: 1.25rem 0 0;
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--color-muted, #888);
+  text-align: right;
 }
 
 /* ── Responsive ─────────────────────────────────────────────────────────────── */

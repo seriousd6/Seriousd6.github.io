@@ -1,0 +1,237 @@
+{
+  "_doc": "Curated biblepedia group registry. Each group's hub article authors an in-body link_table; every member article shows a 'Member of' backlink to the groups listed here (computed at render time by biblepedia.js _renderMemberOf). Member ids must be CANONICAL article ids (post-merge). Adding a member here gives it the backlink; the hub's link_table is authored separately on the hub article for richer per-member cells.",
+  "groups": [
+    {
+      "id": "apostles",
+      "name": "The Twelve Apostles",
+      "members": [
+        "peter",
+        "andrew",
+        "james",
+        "john-the-apostle",
+        "philip",
+        "bartholomew",
+        "thomas",
+        "matthew",
+        "james-the-less",
+        "thaddaeus",
+        "simon",
+        "judas",
+        "matthias"
+      ]
+    },
+    {
+      "id": "trinity",
+      "name": "The Trinity",
+      "members": [
+        "god",
+        "jesus-christ",
+        "holy-spirit"
+      ]
+    },
+    {
+      "id": "seven-churches-of-revelation",
+      "name": "The Seven Churches of Revelation",
+      "members": [
+        "ephesus",
+        "smyrna",
+        "pergamos",
+        "thyatira",
+        "sardis",
+        "philadelphia",
+        "laodicea"
+      ]
+    },
+    {
+      "id": "patriarchs",
+      "name": "The Patriarchs",
+      "members": [
+        "abraham",
+        "isaac",
+        "jacob"
+      ]
+    },
+    {
+      "id": "sons-of-noah",
+      "name": "The Sons of Noah",
+      "members": [
+        "shem",
+        "ham",
+        "japheth"
+      ]
+    },
+    {
+      "id": "four-evangelists",
+      "name": "The Four Evangelists",
+      "members": [
+        "matthew",
+        "mark",
+        "luke",
+        "john-the-apostle"
+      ]
+    },
+    {
+      "id": "major-prophets",
+      "name": "The Major Prophets",
+      "members": [
+        "isaiah",
+        "jeremiah",
+        "ezekiel",
+        "daniel"
+      ]
+    },
+    {
+      "id": "minor-prophets",
+      "name": "The Twelve Minor Prophets",
+      "members": [
+        "hosea",
+        "joel",
+        "amos",
+        "obadiah",
+        "jonah",
+        "micah",
+        "nahum",
+        "habakkuk",
+        "zephaniah",
+        "haggai",
+        "zechariah",
+        "malachi"
+      ]
+    },
+    {
+      "id": "seven-deacons",
+      "name": "The Seven Deacons",
+      "members": [
+        "stephen",
+        "philip-the-evangelist",
+        "prochorus",
+        "nicanor",
+        "timon",
+        "parmenas",
+        "nicolas"
+      ]
+    },
+    {
+      "id": "archangels",
+      "name": "The Archangels",
+      "members": [
+        "michael",
+        "gabriel",
+        "raphael"
+      ]
+    },
+    {
+      "id": "herodian-dynasty",
+      "name": "The Herodian Dynasty",
+      "members": [
+        "herod-the-great",
+        "archelaus",
+        "herod-antipas",
+        "herod-philip-i",
+        "agrippa-i",
+        "agrippa-ii"
+      ]
+    },
+    {
+      "id": "twelve-tribes-of-israel",
+      "name": "The Twelve Tribes of Israel",
+      "members": [
+        "reuben",
+        "simeon",
+        "levi",
+        "judah",
+        "dan",
+        "naphtali",
+        "gad",
+        "asher",
+        "issachar",
+        "zebulun",
+        "joseph",
+        "benjamin"
+      ]
+    },
+    {
+      "id": "kings-of-judah",
+      "name": "The Kings of Judah",
+      "members": [
+        "rehoboam",
+        "abijah",
+        "asa",
+        "jehoshaphat",
+        "jehoram",
+        "ahaziah",
+        "athaliah",
+        "joash",
+        "amaziah",
+        "uzziah",
+        "jotham",
+        "ahaz",
+        "hezekiah",
+        "manasseh",
+        "amon",
+        "josiah",
+        "jehoahaz",
+        "jehoiakim",
+        "jehoiachin",
+        "zedekiah"
+      ]
+    },
+    {
+      "id": "kings-of-israel",
+      "name": "The Kings of the Northern Kingdom (Israel)",
+      "members": [
+        "jeroboam",
+        "nadab",
+        "baasha",
+        "elah",
+        "zimri",
+        "omri",
+        "ahab",
+        "ahaziah",
+        "jehoram",
+        "jehu",
+        "jehoahaz",
+        "jehoash",
+        "zechariah",
+        "shallum",
+        "menahem",
+        "pekahiah",
+        "pekah",
+        "hoshea"
+      ]
+    },
+    {
+      "id": "judges",
+      "name": "Judges",
+      "members": [
+        "othniel",
+        "ehud",
+        "shamgar",
+        "deborah",
+        "barak",
+        "gideon",
+        "tola",
+        "jair",
+        "jephthah",
+        "ibzan",
+        "elon",
+        "abdon",
+        "samson",
+        "eli",
+        "samuel"
+      ]
+    },
+    {
+      "id": "cities-of-refuge",
+      "name": "Cities of Refuge",
+      "members": [
+        "kedesh",
+        "shechem",
+        "hebron",
+        "bezer",
+        "ramoth-gilead",
+        "golan"
+      ]
+    }
+  ]
+}

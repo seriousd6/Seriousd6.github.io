@@ -71,6 +71,7 @@ and the item cannot be properly archived.
 | `AUD-` | Audit-discovered items that don't fit a more specific prefix |
 | `RI-` | Reader interlinear specific |
 | `WS-` | Translation Workshop specific |
+| `REF-` | Verse-notation compliance (bare `Book Ch:V` not wrapped in `.ref`) + internal-link/wikilink integrity (Audit Dim J) |
 
 Assign the next unused number for the prefix. Check `working/todo-archive.md` and the current
 `TODO.md` to find the highest existing number before picking the next one.

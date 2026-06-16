@@ -256,11 +256,23 @@ export function autoTagChapterRefs() {
       var bookId = normalizeBook(m[1]);
       if (!bookId) continue;
       var bk       = metaBooks.find(function (b) { return b.id === bookId; });
-      var ch       = parseInt(m[2], 10);
-      var endCh    = m[3] ? parseInt(m[3], 10) : ch;
       var bookName = bk ? bk.name : m[1];
-      var display  = bookName + ' ' + ch + (endCh !== ch ? '–' + endCh : '');
-      var parsed   = { bookId: bookId, bookName: bookName, ch: ch, v: 1, endCh: endCh, endV: 9999, display: display, raw: display, wholeChapter: true };
+      var n1       = parseInt(m[2], 10);
+      var n2       = m[3] ? parseInt(m[3], 10) : null;
+      // Single-chapter books (Obadiah/Philemon/Jude/2-3 John) are cited by verse, so
+      // "Jude 6" is Jude 1:6, not chapter 6. Mirror the same rule in core.js parseRef().
+      var singleCh = !!(bk && bk.chapters === 1);
+      var ch, endCh, display, parsed;
+      if (singleCh) {
+        var sV = n1, eV = (n2 != null ? n2 : n1);
+        ch = 1; endCh = 1;
+        display = bookName + ' ' + sV + (eV !== sV ? '–' + eV : '');
+        parsed  = { bookId: bookId, bookName: bookName, ch: 1, v: sV, endCh: 1, endV: eV, display: display, raw: display };
+      } else {
+        ch = n1; endCh = (n2 != null ? n2 : n1);
+        display = bookName + ' ' + ch + (endCh !== ch ? '–' + endCh : '');
+        parsed  = { bookId: bookId, bookName: bookName, ch: ch, v: 1, endCh: endCh, endV: 9999, display: display, raw: display, wholeChapter: true };
+      }
 
       if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
       var a = document.createElement('a');
@@ -270,8 +282,10 @@ export function autoTagChapterRefs() {
 
       curBookId   = bookId; curBookName = bookName;
       var contPos = m.index + m[0].length;
-      // Consume continuation chapter numbers (e.g. "Romans 5, 6, 7").
-      for (;;) {
+      // Consume continuation chapter numbers (e.g. "Romans 5, 6, 7"). Skipped for
+      // single-chapter books, where trailing numbers are verses, not chapters, and
+      // would otherwise be mis-tagged as nonexistent chapters.
+      for (; !singleCh ;) {
         var cm = text.slice(contPos).match(/^([,;]\s*)(\d+)(?!\s*[:\d])/);
         if (!cm) break;
         if (/^\s+[A-Za-z]/.test(text.slice(contPos + cm[0].length))) break;

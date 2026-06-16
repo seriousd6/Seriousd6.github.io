@@ -1,0 +1,1451 @@
+{
+ "version": 1,
+ "note": "Cross-cutting biblical-imagery/typology overlay. Keys are existing article ids; this registry never recategorizes an article. See working/MOTIFS_DESIGN.md.",
+ "families": {
+  "elemental": {
+   "name": "Elemental & Substance",
+   "order": 1,
+   "blurb": "Images drawn from the raw stuff of creation — water, fire, light, blood, oil."
+  },
+  "cosmic": {
+   "name": "Cosmic & Geographic",
+   "order": 2,
+   "blurb": "Places and spaces that carry theological weight — mountain, wilderness, garden, sea, city."
+  },
+  "flora": {
+   "name": "Flora",
+   "order": 3,
+   "blurb": "Plant imagery — vine, tree, seed, harvest, branch."
+  },
+  "fauna": {
+   "name": "Fauna",
+   "order": 4,
+   "blurb": "Creatures used as symbols — lamb, lion, serpent, dove, dragon."
+  },
+  "human": {
+   "name": "Human Roles & Relationships",
+   "order": 5,
+   "blurb": "Relational images — shepherd, king, father, bridegroom, redeemer, servant."
+  },
+  "body": {
+   "name": "Body & Garment",
+   "order": 6,
+   "blurb": "The body and what clothes it — heart, hand, name, garment, crown."
+  },
+  "cultic": {
+   "name": "Cultic Objects & Architecture",
+   "order": 7,
+   "blurb": "Worship furniture and sacred space — bread, cup, temple, altar, veil, lampstand."
+  },
+  "pattern": {
+   "name": "Pattern (Event-as-Type)",
+   "order": 8,
+   "blurb": "Redemptive events that recur as a shape — exodus, exile, flood, sabbath rest."
+  },
+  "number": {
+   "name": "Number",
+   "order": 9,
+   "blurb": "Symbolic quantities — seven, twelve, forty, three."
+  },
+  "color": {
+   "name": "Color",
+   "order": 10,
+   "blurb": "Symbolic hues — white, scarlet, blue, purple."
+  }
+ },
+ "modes": {
+  "image": "Image",
+  "type": "Type",
+  "title": "Title",
+  "number": "Number",
+  "color": "Color"
+ },
+ "motifs": {
+  "purple": {
+   "family": "color",
+   "modes": [
+    "color"
+   ],
+   "gloss": "Royalty and costly splendor — the hidden kingship of the crucified Lord."
+  },
+  "nakedness": {
+   "family": "body",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Exposure and shame from sin — covered by God's gracious clothing."
+  },
+  "remnant": {
+   "family": "pattern",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The faithful few God preserves through judgment to carry his purpose.",
+   "typology": {
+    "shadow": "God preserves a faithful remnant of Israel through flood, apostasy, and exile to keep his promise alive.",
+    "fulfillment": "The believing remnant of Israel, into which Gentiles are grafted, becomes the church — God's people chosen by grace.",
+    "fulfilled_in": "church",
+    "refs": [
+     "Isaiah 10:21-22",
+     "Romans 9:27",
+     "Romans 11:5"
+    ]
+   }
+  },
+  "scroll": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's enduring written word and decree — unsealed at last by the Lamb."
+  },
+  "door": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "The one point of access to God's presence — Christ the door to life."
+  },
+  "mustard-seed": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Tiny beginnings yielding the kingdom's vast, unstoppable growth."
+  },
+  "fig-tree": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Fruitfulness and covenant peace — or barrenness ripe for judgment."
+  },
+  "garden": {
+   "family": "cosmic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The watered place of God's presence — Eden lost, paradise restored.",
+   "typology": {
+    "shadow": "Eden, the garden-sanctuary of God's presence, is lost when sin drives humanity out and bars the tree of life.",
+    "fulfillment": "Through the risen Christ, communion is restored in the new creation — a garden-city with the river and tree of life.",
+    "fulfilled_in": "new-creation",
+    "refs": [
+     "Genesis 2:8-9",
+     "Genesis 3:23-24",
+     "Revelation 22:1-2"
+    ]
+   }
+  },
+  "name": {
+   "family": "body",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God's revealed character, presence, and renown — now borne by Jesus."
+  },
+  "bridegroom": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "God as the husband who weds himself to his people in covenant love.",
+   "typology": {
+    "shadow": "The LORD betroths himself to Israel as a husband, grieved by her unfaithfulness yet pledging to wed her forever.",
+    "fulfillment": "Christ the bridegroom gives himself for his bride the church, to present her holy and to wed her at the marriage of the Lamb.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Hosea 2:19-20",
+     "Isaiah 54:5",
+     "Ephesians 5:25-32",
+     "Revelation 19:7"
+    ]
+   }
+  },
+  "passover": {
+   "family": "pattern",
+   "modes": [
+    "type"
+   ],
+   "gloss": "The lamb's blood that turns away judgment and works redemption.",
+   "typology": {
+    "shadow": "The blood of the Passover lamb on the doorposts shields Israel from the destroyer and frees them from Egypt.",
+    "fulfillment": "Christ, our Passover lamb, is sacrificed so his blood shields his people from judgment and accomplishes the true exodus from sin and death.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 12:13",
+     "John 19:36",
+     "1 Corinthians 5:7",
+     "1 Peter 1:18-19"
+    ]
+   }
+  },
+  "fire": {
+   "family": "elemental",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God's holy, refining, and judging presence."
+  },
+  "light": {
+   "family": "elemental",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God's self-revelation, holiness, and life over against darkness."
+  },
+  "darkness": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Ignorance, evil, judgment, and the absence of God."
+  },
+  "blood": {
+   "family": "elemental",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Life poured out; the price and means of atonement.",
+   "typology": {
+    "shadow": "Sacrificial blood applied to make atonement and ratify covenant.",
+    "fulfillment": "The blood of Christ, shed once for all, cleanses and ratifies the new covenant.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Leviticus 17:11",
+     "Hebrews 9:22",
+     "Matthew 26:28",
+     "1 Peter 1:19"
+    ]
+   }
+  },
+  "oil": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Anointing, consecration, and the Holy Spirit."
+  },
+  "salt": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Preservation, purity, and covenant faithfulness."
+  },
+  "leaven": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "A small influence that permeates the whole — of sin or of the kingdom."
+  },
+  "gold": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Deity, purity, and supreme value."
+  },
+  "stone": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Permanence, witness, and the building of God's house."
+  },
+  "rock": {
+   "family": "elemental",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "God as refuge and foundation; the Rock that gave water.",
+   "typology": {
+    "shadow": "The rock at Horeb struck to give Israel water in the wilderness.",
+    "fulfillment": "Christ, the spiritual Rock who followed them and gives living water.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 17:6",
+     "Psalm 18:2",
+     "1 Corinthians 10:4"
+    ]
+   }
+  },
+  "zion": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The city of God; the dwelling of his people, earthly and heavenly."
+  },
+  "wilderness": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Place of testing, dependence, and encounter with God."
+  },
+  "desert": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Desolation and the proving ground of faith."
+  },
+  "city": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Human community — Babylon in rebellion, Jerusalem in covenant."
+  },
+  "babylon": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Proud, idolatrous world-power set against God."
+  },
+  "well": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Source of life and place of providential meeting."
+  },
+  "spring": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Fresh, living source of life from God."
+  },
+  "fountain": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God himself as the inexhaustible source of life."
+  },
+  "east": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Direction of exile and of return; the rising of light."
+  },
+  "vine": {
+   "family": "flora",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "Israel as God's planting; Christ as the true vine.",
+   "typology": {
+    "shadow": "Israel planted as the LORD's vineyard, called to bear fruit.",
+    "fulfillment": "Christ the true vine, in whom his people abide and bear fruit.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Isaiah 5:1-7",
+     "Psalm 80:8-9",
+     "John 15:1-5"
+    ]
+   }
+  },
+  "olive-tree": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Israel, peace, the Spirit's anointing, and the grafted-in nations."
+  },
+  "olive": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Fruit of peace, light, and anointing."
+  },
+  "cedar": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Majesty, strength, and stately growth."
+  },
+  "tree-of-life": {
+   "family": "flora",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Access to unending life in God's presence.",
+   "typology": {
+    "shadow": "The tree of life in Eden, barred after the fall.",
+    "fulfillment": "Restored access to the tree of life in the new creation through Christ.",
+    "fulfilled_in": "new-creation",
+    "refs": [
+     "Genesis 2:9",
+     "Genesis 3:22-24",
+     "Revelation 22:2",
+     "Revelation 22:14"
+    ]
+   }
+  },
+  "branch": {
+   "family": "flora",
+   "modes": [
+    "image",
+    "type",
+    "title"
+   ],
+   "gloss": "The messianic shoot from David's stump.",
+   "typology": {
+    "shadow": "A Branch promised from the line of Jesse and David.",
+    "fulfillment": "Jesus the righteous Branch, the King who reigns in righteousness.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Isaiah 11:1",
+     "Jeremiah 23:5",
+     "Zechariah 6:12"
+    ]
+   }
+  },
+  "harvest": {
+   "family": "flora",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Ingathering of God's people and the judgment at the end.",
+   "typology": {
+    "shadow": "The agricultural harvest and its firstfruits offered to God.",
+    "fulfillment": "The final ingathering of the redeemed and the separating judgment.",
+    "fulfilled_in": "new-creation",
+    "refs": [
+     "Joel 3:13",
+     "Matthew 13:39",
+     "Revelation 14:15"
+    ]
+   }
+  },
+  "wheat": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The righteous gathered into God's barn."
+  },
+  "tares": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The wicked growing among the righteous until judgment."
+  },
+  "lily": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's care, beauty, and provision for his people."
+  },
+  "lamb": {
+   "family": "fauna",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Innocent victim; the Lamb who takes away sin.",
+   "typology": {
+    "shadow": "The Passover and sacrificial lambs whose blood spared and atoned.",
+    "fulfillment": "Jesus, the Lamb of God who takes away the sin of the world.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 12:5-7",
+     "Isaiah 53:7",
+     "John 1:29",
+     "1 Peter 1:19",
+     "Revelation 5:6"
+    ]
+   }
+  },
+  "lion": {
+   "family": "fauna",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "Royal strength and judgment; the Lion of Judah; also the adversary."
+  },
+  "sheep": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's people — dependent, prone to stray, in need of a shepherd."
+  },
+  "shepherd": {
+   "family": "fauna",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "God and his appointed king as shepherd of the flock.",
+   "typology": {
+    "shadow": "The LORD as Israel's shepherd and the promise of one shepherd from David.",
+    "fulfillment": "Jesus the good shepherd who lays down his life for the sheep.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Psalm 23:1",
+     "Ezekiel 34:23",
+     "John 10:11",
+     "Hebrews 13:20"
+    ]
+   }
+  },
+  "serpent": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Deception, the curse, and the ancient enemy."
+  },
+  "dragon": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Chaos and Satan, the great enemy of God's people."
+  },
+  "dove": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Peace, innocence, and the descending Spirit."
+  },
+  "eagle": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Swiftness, renewal, and God's protective bearing of his people."
+  },
+  "ox": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Patient strength and faithful service."
+  },
+  "goat": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Sin offering and the separating of the unrighteous in judgment."
+  },
+  "fish": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Abundance and the gathering of people in mission."
+  },
+  "locust": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Devouring judgment and the day of the LORD."
+  },
+  "leviathan": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Untamable chaos-monster subdued by God alone."
+  },
+  "behemoth": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Primeval creature displaying the Creator's power."
+  },
+  "wolf": {
+   "family": "fauna",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Predatory danger — false teachers and enemies of the flock."
+  },
+  "scapegoat": {
+   "family": "fauna",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The goat bearing sin away into the wilderness.",
+   "typology": {
+    "shadow": "On the Day of Atonement, sins confessed over the goat sent away.",
+    "fulfillment": "Christ bearing his people's sin away, removing it as far as east from west.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Leviticus 16:20-22",
+     "Isaiah 53:6",
+     "Hebrews 9:11-14",
+     "1 Peter 2:24"
+    ]
+   }
+  },
+  "king": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God's reign and the Davidic king who represents it."
+  },
+  "father": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God's fatherly authority, care, and adopting love."
+  },
+  "bride": {
+   "family": "human",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's covenant people, betrothed and made faithful."
+  },
+  "husband": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God as the faithful husband of his covenant people."
+  },
+  "redeemer": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "The kinsman who buys back the enslaved and avenges the wronged.",
+   "typology": {
+    "shadow": "The kinsman-redeemer (goel) who redeems family, land, and life.",
+    "fulfillment": "Christ our Redeemer, who buys his people back with his own blood.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Leviticus 25:25",
+     "Ruth 4:9-10",
+     "Job 19:25",
+     "Galatians 4:4-5"
+    ]
+   }
+  },
+  "judge": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God who rules, vindicates the righteous, and condemns evil."
+  },
+  "priest": {
+   "family": "human",
+   "modes": [
+    "image",
+    "type",
+    "title"
+   ],
+   "gloss": "The mediator who offers sacrifice and intercedes.",
+   "typology": {
+    "shadow": "The Aaronic and Melchizedek priesthoods mediating between God and people.",
+    "fulfillment": "Jesus the great high priest, who ever lives to intercede.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 28:1",
+     "Psalm 110:4",
+     "Hebrews 4:14",
+     "Hebrews 7:24-25"
+    ]
+   }
+  },
+  "prophet": {
+   "family": "human",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The mouthpiece of God who speaks his word.",
+   "typology": {
+    "shadow": "Moses and the prophets, and the promise of a prophet like Moses.",
+    "fulfillment": "Jesus the prophet to whom all must listen.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Deuteronomy 18:15",
+     "Acts 3:22",
+     "Hebrews 1:1-2"
+    ]
+   }
+  },
+  "adoption": {
+   "family": "human",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Being made sons and heirs of God by grace."
+  },
+  "heart": {
+   "family": "body",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The inner person — the seat of will, thought, and worship."
+  },
+  "hand": {
+   "family": "body",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Power, agency, and the active work of God."
+  },
+  "circumcision": {
+   "family": "body",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The covenant sign cut in flesh; the call for a cut heart.",
+   "typology": {
+    "shadow": "Circumcision of the flesh as the sign of the Abrahamic covenant.",
+    "fulfillment": "Circumcision of the heart by the Spirit, made without hands in Christ.",
+    "fulfilled_in": "spirit",
+    "refs": [
+     "Genesis 17:10-11",
+     "Deuteronomy 30:6",
+     "Romans 2:28-29",
+     "Colossians 2:11"
+    ]
+   }
+  },
+  "crown": {
+   "family": "body",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Honor, sovereignty, and the reward of the faithful."
+  },
+  "bread": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "God's provision and sustenance; the bread of life.",
+   "typology": {
+    "shadow": "Manna in the wilderness and the showbread in the holy place.",
+    "fulfillment": "Jesus the bread of life, given for the world.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 16:4",
+     "Exodus 25:30",
+     "John 6:35",
+     "John 6:51"
+    ]
+   }
+  },
+  "wine": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Joy and gladness; the blood of the covenant; also the cup of wrath."
+  },
+  "cup": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "One's appointed portion — of blessing or of wrath."
+  },
+  "feast": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Covenant fellowship and the joy of God's presence.",
+   "typology": {
+    "shadow": "Israel's appointed feasts foreshadowing redemption's stages.",
+    "fulfillment": "Fulfilled in Christ and consummated at the marriage supper of the Lamb.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Leviticus 23:2",
+     "Colossians 2:16-17",
+     "Revelation 19:9"
+    ]
+   }
+  },
+  "banquet": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The messianic feast of the kingdom of God."
+  },
+  "temple": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "God's dwelling among his people.",
+   "typology": {
+    "shadow": "The Jerusalem temple as the place of God's presence.",
+    "fulfillment": "Christ's body, then his people and the new Jerusalem, as God's temple.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "1 Kings 8:10-11",
+     "John 2:19-21",
+     "1 Corinthians 3:16",
+     "Revelation 21:22"
+    ]
+   }
+  },
+  "tabernacle": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "God tabernacling in the midst of his people.",
+   "typology": {
+    "shadow": "The wilderness tent where God's glory dwelt among Israel.",
+    "fulfillment": "The Word made flesh who tabernacled among us; God dwelling with man.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 40:34",
+     "John 1:14",
+     "Hebrews 9:11",
+     "Revelation 21:3"
+    ]
+   }
+  },
+  "tent": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Pilgrim dwelling; the frailty and transience of earthly life."
+  },
+  "altar": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The place of sacrifice and of access to God."
+  },
+  "lamp": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's word and the witness of his people as light."
+  },
+  "veil": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The barrier guarding God's holiness.",
+   "typology": {
+    "shadow": "The veil shutting off the most holy place from the people.",
+    "fulfillment": "The veil torn at Christ's death, opening a new and living way to God.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 26:33",
+     "Matthew 27:51",
+     "Hebrews 10:19-20"
+    ]
+   }
+  },
+  "ark": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The ark of the covenant — God's throne and presence.",
+   "typology": {
+    "shadow": "The mercy seat over the ark where atonement blood was sprinkled.",
+    "fulfillment": "Christ the mercy seat (propitiation) where God and sinners meet.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 25:21-22",
+     "Leviticus 16:14",
+     "Romans 3:25",
+     "Hebrews 9:4-5"
+    ]
+   }
+  },
+  "yoke": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Servitude and burden, or willing discipleship under Christ."
+  },
+  "book": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's record and decree; the book of life."
+  },
+  "seal": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Ownership, authentication, and the security of the Spirit."
+  },
+  "sword": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Judgment, war, and the piercing word of God."
+  },
+  "manna": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Bread from heaven sustaining the pilgrim people.",
+   "typology": {
+    "shadow": "Daily manna feeding Israel in the wilderness.",
+    "fulfillment": "Jesus the true bread from heaven who gives eternal life.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 16:14-15",
+     "John 6:31-33",
+     "John 6:49-51"
+    ]
+   }
+  },
+  "cornerstone": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "title",
+    "type"
+   ],
+   "gloss": "The tested foundation stone of God's building.",
+   "typology": {
+    "shadow": "The stone the builders rejected, made the chief cornerstone.",
+    "fulfillment": "Christ the cornerstone on whom the whole structure is joined.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Psalm 118:22",
+     "Isaiah 28:16",
+     "Ephesians 2:20",
+     "1 Peter 2:6-7"
+    ]
+   }
+  },
+  "exodus": {
+   "family": "pattern",
+   "modes": [
+    "type"
+   ],
+   "gloss": "Deliverance from bondage into covenant freedom.",
+   "typology": {
+    "shadow": "The LORD redeeming Israel out of Egypt through the sea.",
+    "fulfillment": "Christ accomplishing the greater exodus, redeeming his people from sin.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 14:30",
+     "Luke 9:31",
+     "1 Corinthians 10:1-4"
+    ]
+   }
+  },
+  "exile": {
+   "family": "pattern",
+   "modes": [
+    "type"
+   ],
+   "gloss": "Estrangement under judgment, awaiting restoration.",
+   "typology": {
+    "shadow": "Israel driven from the land into Babylon for covenant breaking.",
+    "fulfillment": "Humanity's exile from Eden ended by Christ, who brings the people home.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "2 Kings 25:21",
+     "Jeremiah 29:10-14",
+     "1 Peter 1:1"
+    ]
+   }
+  },
+  "flood": {
+   "family": "pattern",
+   "modes": [
+    "type"
+   ],
+   "gloss": "Judgment on a corrupt world and salvation through it.",
+   "typology": {
+    "shadow": "The flood destroying the world while Noah's family was carried safely through.",
+    "fulfillment": "Baptism into Christ, who carries his people through judgment to new life.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 7:23",
+     "Matthew 24:37-39",
+     "1 Peter 3:20-21"
+    ]
+   }
+  },
+  "sabbath": {
+   "family": "pattern",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "God's rest, hallowed for his people.",
+   "typology": {
+    "shadow": "The weekly sabbath rest commanded for Israel.",
+    "fulfillment": "The sabbath rest that remains for God's people, entered through Christ.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 20:8-11",
+     "Matthew 11:28",
+     "Colossians 2:16-17",
+     "Hebrews 4:9-10"
+    ]
+   }
+  },
+  "rest": {
+   "family": "pattern",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The promised rest of God — land, peace, and his presence.",
+   "typology": {
+    "shadow": "The rest of Canaan that Joshua gave Israel, yet incomplete.",
+    "fulfillment": "The eternal rest into which Christ leads his people.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Joshua 21:44",
+     "Psalm 95:11",
+     "Hebrews 4:8-10"
+    ]
+   }
+  },
+  "brazen-serpent": {
+   "family": "pattern",
+   "modes": [
+    "type"
+   ],
+   "gloss": "The lifted-up sign that brings life to the dying.",
+   "typology": {
+    "shadow": "The bronze serpent lifted on a pole; all who looked lived.",
+    "fulfillment": "The Son of Man lifted up, that whoever believes has eternal life.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Numbers 21:8-9",
+     "John 3:14-15"
+    ]
+   }
+  },
+  "ladder": {
+   "family": "pattern",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The connection opened between heaven and earth.",
+   "typology": {
+    "shadow": "Jacob's ladder with angels ascending and descending.",
+    "fulfillment": "Christ the way by whom heaven is opened and access to God is given.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 28:12",
+     "John 1:51"
+    ]
+   }
+  },
+  "rainbow": {
+   "family": "pattern",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Sign of God's covenant mercy after judgment."
+  },
+  "adam": {
+   "family": "human",
+   "modes": [
+    "type"
+   ],
+   "gloss": "The first man and head of the human race.",
+   "typology": {
+    "shadow": "Adam, in whom all die, a type of the one to come.",
+    "fulfillment": "Christ the last Adam, the life-giving Spirit and head of a new humanity.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 2:7",
+     "Romans 5:14",
+     "1 Corinthians 15:22",
+     "1 Corinthians 15:45"
+    ]
+   }
+  },
+  "melchizedek": {
+   "family": "human",
+   "modes": [
+    "type"
+   ],
+   "gloss": "Priest-king of Salem who blessed Abraham.",
+   "typology": {
+    "shadow": "Melchizedek, priest forever without recorded genealogy.",
+    "fulfillment": "Christ, a priest forever after the order of Melchizedek.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 14:18-20",
+     "Psalm 110:4",
+     "Hebrews 7:1-3",
+     "Hebrews 7:15-17"
+    ]
+   }
+  },
+  "noah": {
+   "family": "human",
+   "modes": [
+    "type"
+   ],
+   "gloss": "The righteous man saved through the flood.",
+   "typology": {
+    "shadow": "Noah and his household carried through judgment in the ark.",
+    "fulfillment": "Christ, in whom the church is carried safely through judgment.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 6:8-9",
+     "Hebrews 11:7",
+     "1 Peter 3:20-21"
+    ]
+   }
+  },
+  "seven": {
+   "family": "number",
+   "modes": [
+    "number"
+   ],
+   "gloss": "Completeness, perfection, and covenant fullness."
+  },
+  "white": {
+   "family": "color",
+   "modes": [
+    "color"
+   ],
+   "gloss": "Purity, holiness, and victory."
+  },
+  "scarlet": {
+   "family": "color",
+   "modes": [
+    "color"
+   ],
+   "gloss": "Sin and the blood of sacrifice."
+  },
+  "crimson": {
+   "family": "color",
+   "modes": [
+    "color"
+   ],
+   "gloss": "Deep-dyed sin, cleansed white as snow."
+  },
+  "blue": {
+   "family": "color",
+   "modes": [
+    "color"
+   ],
+   "gloss": "Heaven, and the heavenly origin of the law."
+  },
+  "water": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "Life and chaos; God brings salvation, cleansing, and the Spirit through water."
+  },
+  "mountain": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The meeting-place of heaven and earth; where God descends and his kingdom is unveiled."
+  },
+  "sea": {
+   "family": "cosmic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The chaotic deep that only the Creator can bound; abolished in the new creation."
+  },
+  "servant": {
+   "family": "human",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The LORD's chosen instrument; fulfilled in Christ the suffering Servant.",
+   "typology": {
+    "shadow": "Moses, David, and faithful Israel bore the title \"servant of the LORD,\" and Isaiah foretold a Servant who would bear the people's sins.",
+    "fulfillment": "Jesus is the true Servant who, taking the form of a servant, fulfills Isaiah 53 by bearing sin and justifying many through obedient suffering.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Isaiah 42:1",
+     "Isaiah 53:11",
+     "Matthew 12:18",
+     "Philippians 2:7"
+    ]
+   }
+  },
+  "firstborn": {
+   "family": "human",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The preeminent heir consecrated to God; fulfilled in Christ, firstborn over all.",
+   "typology": {
+    "shadow": "Israel and the Davidic king are named God's firstborn — heir and ruler — yet the privilege is repeatedly forfeited or reassigned.",
+    "fulfillment": "Christ is the true firstborn: heir of all creation, firstborn from the dead, and elder brother of the redeemed who never forfeits his birthright.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 4:22-23",
+     "Psalm 89:27",
+     "Romans 8:29",
+     "Colossians 1:15-16",
+     "Colossians 1:18"
+    ]
+   }
+  },
+  "twelve": {
+   "family": "number",
+   "modes": [
+    "number"
+   ],
+   "gloss": "The number of God's complete covenant people: twelve tribes and twelve apostles."
+  },
+  "living-water": {
+   "family": "elemental",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "The fresh, flowing water of life; God himself, given by Christ and the Spirit."
+  },
+  "wind": {
+   "family": "elemental",
+   "modes": [
+    "image"
+   ],
+   "gloss": "One word for wind, breath, and Spirit: God's unseen, sovereign, life-giving power."
+  },
+  "the-way": {
+   "family": "cosmic",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "The path of life before God; Christ is himself the way to the Father."
+  },
+  "vineyard": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's cultivated people, planted and tended to bear the fruit of righteousness."
+  },
+  "seed": {
+   "family": "flora",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The buried grain that dies to bear fruit, and the promised offspring fulfilled in Christ.",
+   "typology": {
+    "shadow": "God promised the seed of the woman to crush the serpent and Abraham's seed to bless the nations, and the buried grain pictured life from death.",
+    "fulfillment": "Christ is the singular promised Seed who, like a grain of wheat, dies and rises to bear a great harvest and make all who are his Abraham's offspring.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 3:15",
+     "Genesis 22:18",
+     "John 12:24",
+     "Galatians 3:16"
+    ]
+   }
+  },
+  "firstfruits": {
+   "family": "flora",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The first of the harvest offered to God; a pledge that the full harvest will follow.",
+   "typology": {
+    "shadow": "Israel waved the first sheaf of the barley harvest before the LORD, offered before and guaranteeing the full harvest.",
+    "fulfillment": "The risen Christ is the firstfruits of those who sleep, his resurrection securing the full harvest of the resurrection of his people.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Leviticus 23:10-11",
+     "1 Corinthians 15:20",
+     "1 Corinthians 15:23",
+     "Romans 8:23"
+    ]
+   }
+  },
+  "thorns": {
+   "family": "flora",
+   "modes": [
+    "image"
+   ],
+   "gloss": "The emblem of the curse and futility of sin; worn as a crown by the suffering King."
+  },
+  "garment": {
+   "family": "body",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "Clothing as righteousness and standing before God; believers are clothed in Christ.",
+   "typology": {
+    "shadow": "God clothed Adam and Eve with garments of skin at the cost of life, and Israel longed for clean priestly vestments and the robe of righteousness to cover sin.",
+    "fulfillment": "In Christ believers \"put on Christ,\" exchanging filthy rags for the robe of salvation, made white in the blood of the Lamb.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Genesis 3:21",
+     "Isaiah 61:10",
+     "Galatians 3:27",
+     "Revelation 7:14"
+    ]
+   }
+  },
+  "lampstand": {
+   "family": "cultic",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "The golden lamp of continual light in the sanctuary; fulfilled in the Church bearing Christ's light.",
+   "typology": {
+    "shadow": "The seven-branched golden menorah gave continual light in the Holy Place, sustained by oil before the LORD.",
+    "fulfillment": "The Church is the golden lampstand among which the risen Christ walks, bearing his light to the world by the oil of the Spirit.",
+    "fulfilled_in": "church",
+    "refs": [
+     "Exodus 25:31-37",
+     "Zechariah 4:2-6",
+     "Revelation 1:20",
+     "Matthew 5:14-16"
+    ]
+   }
+  },
+  "table": {
+   "family": "cultic",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God hosting his people; communion and covenant fellowship at the LORD's table."
+  },
+  "day-of-the-lord": {
+   "family": "pattern",
+   "modes": [
+    "image"
+   ],
+   "gloss": "God's decisive day of judgment and salvation, fulfilled in the return of Christ."
+  },
+  "jubilee": {
+   "family": "pattern",
+   "modes": [
+    "type"
+   ],
+   "gloss": "The fiftieth-year release of debts and slaves, fulfilled in Christ's great liberation.",
+   "typology": {
+    "shadow": "Every fiftieth year Israel was to sound the trumpet, release debts, free slaves, and restore each family to its inheritance, all flowing from the Day of Atonement.",
+    "fulfillment": "Jesus proclaims the true and final Jubilee, releasing captives from sin, forgiving the debt we owe, and restoring our lost inheritance through his atonement.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Leviticus 25:10",
+     "Isaiah 61:1",
+     "Luke 4:18",
+     "John 8:36"
+    ]
+   }
+  },
+  "warrior": {
+   "family": "human",
+   "modes": [
+    "image",
+    "title"
+   ],
+   "gloss": "God as the mighty champion who fights to save his people; victorious in Christ."
+  },
+  "arm-of-the-lord": {
+   "family": "body",
+   "modes": [
+    "image",
+    "type"
+   ],
+   "gloss": "God's outstretched saving power; revealed and embodied in the crucified Christ.",
+   "typology": {
+    "shadow": "God redeemed Israel from Egypt with an outstretched arm and bared his holy arm to work salvation.",
+    "fulfillment": "The arm of the LORD is revealed in the Suffering Servant, Jesus Christ, God's saving power displayed through the cross.",
+    "fulfilled_in": "christ",
+    "refs": [
+     "Exodus 6:6",
+     "Isaiah 52:10",
+     "Isaiah 53:1-2",
+     "1 Corinthians 1:23-24"
+    ]
+   }
+  },
+  "three": {
+   "family": "number",
+   "modes": [
+    "number"
+   ],
+   "gloss": "Divine completeness and decisive action, marked supremely by the third-day resurrection."
+  },
+  "forty": {
+   "family": "number",
+   "modes": [
+    "number"
+   ],
+   "gloss": "A complete season of testing and discipline leading to a new beginning."
+  }
+ }
+}

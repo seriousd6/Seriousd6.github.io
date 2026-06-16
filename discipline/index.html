@@ -6,6 +6,7 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <meta name="description" content="Daily spiritual disciplines — reading plans, devotionals, memory, journal, and worship notes." />
   <title>Discipline — Bible Study</title>
+  <script>try{var t=localStorage.getItem('bsw_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <link rel="stylesheet" href="../assets/css/memorize.css" />
@@ -54,16 +55,21 @@
     <!-- ══════════════════════════ DEVOTIONALS PANEL ════════════════════════ -->
     <div id="disc-devotionals" class="disc-panel disc-devot-body" role="tabpanel" aria-labelledby="disc-tab-devotionals" hidden>
       <div class="devot-controls" style="margin-bottom:1.25rem">
+        <div class="devot-source">
+          <label class="devot-source__label" for="devot-collection">Devotional</label>
+          <!-- Options are populated from the DEVOT_COLLECTIONS registry in JS so adding a
+               new devotional series is data-only. Selection persists in localStorage. -->
+          <select class="devot-source__select" id="devot-collection" aria-label="Choose devotional collection"></select>
+        </div>
         <div class="devot-date-nav">
           <button class="devot-nav-btn" id="devot-prev" aria-label="Previous day">&#8592;</button>
           <input type="date" id="devot-date-input" class="devot-date-input" aria-label="Select date" />
           <button class="devot-nav-btn" id="devot-next" aria-label="Next day">&#8594;</button>
           <button class="devot-nav-btn devot-today-btn" id="devot-today">Today</button>
         </div>
-        <div class="devot-period-tabs" role="tablist" aria-label="Morning or Evening">
-          <button class="devot-period-tab is-active" data-period="morning" role="tab" aria-selected="true"  id="devot-tab-morning" aria-controls="devot-card">Morning</button>
-          <button class="devot-period-tab"           data-period="evening" role="tab" aria-selected="false" id="devot-tab-evening" aria-controls="devot-card">Evening</button>
-        </div>
+        <!-- Period tabs (e.g. Morning / Evening) are rebuilt by renderPeriodTabs() to match
+             the chosen collection's periods, and hidden for single-period collections. -->
+        <div class="devot-period-tabs" id="devot-period-tabs" role="tablist" aria-label="Time of day"></div>
       </div>
       <article class="devot-card" id="devot-card" role="tabpanel" aria-labelledby="devot-tab-morning" aria-live="polite">
         <div class="devot-card__loading" id="devot-loading">Loading…</div>
@@ -74,6 +80,7 @@
             <cite id="devot-verse-ref"></cite>
           </blockquote>
           <div class="devot-text" id="devot-text"></div>
+          <p class="devot-attribution" id="devot-attribution" hidden></p>
           <div class="devot-complete-row" id="devot-complete-row" hidden>
             <button class="devot-mark-btn" id="devot-mark-btn" type="button">Mark as read ✓</button>
             <span class="devot-done-msg" id="devot-done-msg" hidden>
@@ -524,10 +531,14 @@
       });
     }
 
-    /* handle URL on load */
+    /* handle URL on load — see deferred activation at the end of the IIFE.
+       NOTE: the initial activateTab() call must run AFTER every tab's vars
+       (PLAN_IDS, DEVOT_BASE, …) and init functions are defined below, since
+       activateTab immediately calls the active tab's init*(). Calling it here
+       (before those `var`s are assigned) threw "PLAN_IDS is undefined" and
+       aborted the rest of the IIFE, breaking most tabs. */
     var params  = new URLSearchParams(location.search);
     var initTab = params.get('tab') || localStorage.getItem('bsw_discipline_tab') || 'plans';
-    activateTab(initTab, true);
 
     /* ══════════════════════════ PLANS ══════════════════════════════════════ */
     var PLANS_KEY  = 'bsw_plans';
@@ -669,7 +680,60 @@
 
     /* ══════════════════════════ DEVOTIONALS ════════════════════════════════ */
     var DEVOT_BASE = '../data/devotionals/';
-    var _devotCache={}, _devotDate=new Date(), _devotPeriod='morning';
+    // Per-author/slot files + byline metadata. Mirrors DAILY_DEVOT_SOURCES in daily.js so
+    // the Discipline tab and the home-page devotional offer the same sources. To add an
+    // author: ship data/devotionals/<slug>.json and add an entry here.
+    var DEVOT_AUTHORS = {
+      'spurgeon-morning': { file:'spurgeon-morning.json', author:'Charles Spurgeon', work:'Morning by Morning' },
+      'spurgeon-evening': { file:'spurgeon-evening.json', author:'Charles Spurgeon', work:'Evening by Evening' },
+      'winslow-morning':  { file:'winslow-morning.json',  author:'Octavius Winslow', work:'Morning Thoughts' },
+      'winslow-evening':  { file:'winslow-evening.json',  author:'Octavius Winslow', work:'Evening Thoughts' }
+    };
+    // "Variety" rotates to a different author per day, per slot (matches daily.js).
+    var DEVOT_VARIETY = {
+      morning: ['winslow-morning', 'spurgeon-morning'],
+      evening: ['spurgeon-evening', 'winslow-evening']
+    };
+    // Dropdown collections. A `variety:true` collection rotates authors; otherwise `slug(p)`
+    // maps a period to a DEVOT_AUTHORS key. `periods` drives the period tabs (hidden if <2).
+    var DEVOT_COLLECTIONS = [
+      { id:'variety',  label:'Variety (rotating authors)', periods:['morning','evening'], variety:true },
+      { id:'spurgeon', label:'Spurgeon — Morning & Evening', periods:['morning','evening'],
+        slug:function(p){ return 'spurgeon-'+p; } },
+      { id:'winslow',  label:'Winslow — Morning & Evening', periods:['morning','evening'],
+        slug:function(p){ return 'winslow-'+p; } }
+    ];
+    var PERIOD_LABELS = { morning:'Morning', evening:'Evening', daily:'Daily' };
+    function periodLabel(p){ return PERIOD_LABELS[p] || (p ? p.charAt(0).toUpperCase()+p.slice(1) : ''); }
+
+    var _devotCache={}, _devotDate=new Date(), _devotPeriod='morning', _devotColl='variety', _devotLoadToken=0;
+    function currentColl(){
+      for (var i=0;i<DEVOT_COLLECTIONS.length;i++) if (DEVOT_COLLECTIONS[i].id===_devotColl) return DEVOT_COLLECTIONS[i];
+      return DEVOT_COLLECTIONS[0];
+    }
+    function dayOfYear(d){
+      return Math.floor((d - new Date(d.getFullYear(),0,0)) / 86400000);
+    }
+    // Fetch one author's entry for a date key → {slug, meta, entry} or null (gap/missing).
+    function devotFetchEntry(slug, key){
+      var meta=DEVOT_AUTHORS[slug];
+      if (!meta) return Promise.resolve(null);
+      if (_devotCache[slug]) return Promise.resolve(_devotCache[slug][key] ? {slug:slug,meta:meta,entry:_devotCache[slug][key]} : null);
+      return fetch(DEVOT_BASE+meta.file)
+        .then(function(r){ return r.ok?r.json():null; })
+        .then(function(data){ if(!data) return null; _devotCache[slug]=data; return data[key]?{slug:slug,meta:meta,entry:data[key]}:null; })
+        .catch(function(){ return null; });
+    }
+    // Walk the variety rotation (wrapping) until an author has an entry for the day.
+    function devotResolveVariety(period, key, doy){
+      var pool=DEVOT_VARIETY[period]||[];
+      if (!pool.length) return Promise.resolve(null);
+      var start=(doy-1+pool.length)%pool.length, order=[];
+      for (var i=0;i<pool.length;i++) order.push(pool[(start+i)%pool.length]);
+      var idx=0;
+      function tryNext(){ if(idx>=order.length) return null; return devotFetchEntry(order[idx++],key).then(function(r){ return r||tryNext(); }); }
+      return Promise.resolve().then(tryNext);
+    }
 
     function pad2(n){return n<10?'0'+n:''+n;}
     function dateToKey(d){return pad2(d.getMonth()+1)+'-'+pad2(d.getDate());}
@@ -677,7 +741,9 @@
     function fmtDevotLabel(d,p){
       var mo=['January','February','March','April','May','June','July','August','September','October','November','December'];
       var dw=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-      return dw[d.getDay()]+', '+mo[d.getMonth()]+' '+d.getDate()+' — '+(p==='morning'?'Morning':'Evening');
+      var base=dw[d.getDay()]+', '+mo[d.getMonth()]+' '+d.getDate();
+      // Only append the period when the collection actually has more than one.
+      return currentColl().periods.length>1 ? base+' — '+periodLabel(p) : base;
     }
 
     function devotShowLoading(){
@@ -685,7 +751,7 @@
       document.getElementById('devot-body').hidden=true;
       document.getElementById('devot-empty').hidden=true;
     }
-    function devotRender(entry,d,p){
+    function devotRender(entry,d,p,meta){
       if (!entry){
         document.getElementById('devot-loading').hidden=true;
         document.getElementById('devot-body').hidden=true;
@@ -698,6 +764,14 @@
       cite.innerHTML=entry.verse_ref?'<a class="ref" data-ref="'+entry.verse_ref+'">'+entry.verse_ref+'</a>':'';
       var paras=(entry.body||'').split(/\n+/).filter(function(x){return x.trim();});
       document.getElementById('devot-text').innerHTML=paras.map(function(x){return '<p>'+x.trim()+'</p>';}).join('');
+      // Author byline — shown when we know the source (always for variety/multi-author).
+      var by=document.getElementById('devot-attribution');
+      if (by){
+        if (meta && meta.author){
+          by.textContent='— '+meta.author+(meta.work?', '+meta.work:'');
+          by.hidden=false;
+        } else { by.hidden=true; }
+      }
       document.getElementById('devot-loading').hidden=true;
       document.getElementById('devot-empty').hidden=true;
       document.getElementById('devot-body').hidden=false;
@@ -705,12 +779,16 @@
     }
     function devotLoad(d,p){
       devotShowLoading();
-      var key=dateToKey(d);
-      if (_devotCache[p]){devotRender(_devotCache[p][key]||null,d,p);return;}
-      fetch(DEVOT_BASE+'spurgeon-'+p+'.json')
-        .then(function(r){return r.ok?r.json():Promise.reject(r.status);})
-        .then(function(data){_devotCache[p]=data;devotRender(data[key]||null,d,p);})
-        .catch(function(){devotRender(null,d,p);});
+      var coll=currentColl(), key=dateToKey(d);
+      // Capture the request so a slow fetch from a previous selection can't overwrite a newer one.
+      var token=(_devotLoadToken=(_devotLoadToken||0)+1);
+      var resolved = coll.variety
+        ? devotResolveVariety(p,key,dayOfYear(d))
+        : devotFetchEntry(coll.slug(p),key);
+      resolved.then(function(res){
+        if (token!==_devotLoadToken) return;             // a newer load superseded this one
+        devotRender(res&&res.entry||null, d, p, res&&res.meta);
+      }).catch(function(){ if(token===_devotLoadToken) devotRender(null,d,p); });
     }
     function devotSetDate(d){_devotDate=d;document.getElementById('devot-date-input').value=dateToValue(d);devotLoad(_devotDate,_devotPeriod);}
     function devotSetPeriod(p){
@@ -722,6 +800,38 @@
       devotLoad(_devotDate,_devotPeriod);
     }
 
+    // Rebuild the period tabs to match the active collection; hidden when it has only one period.
+    function renderPeriodTabs(){
+      var coll=currentColl(), box=document.getElementById('devot-period-tabs');
+      box.innerHTML='';
+      if (coll.periods.length<2){ box.hidden=true; return; }
+      box.hidden=false;
+      coll.periods.forEach(function(p){
+        var btn=document.createElement('button');
+        btn.className='devot-period-tab'+(p===_devotPeriod?' is-active':'');
+        btn.id='devot-tab-'+p;
+        btn.setAttribute('data-period',p);
+        btn.setAttribute('role','tab');
+        btn.setAttribute('aria-selected',p===_devotPeriod?'true':'false');
+        btn.setAttribute('aria-controls','devot-card');
+        btn.textContent=periodLabel(p);
+        btn.addEventListener('click',function(){ devotSetPeriod(p); localStorage.setItem('bsw_devot_period',p); });
+        box.appendChild(btn);
+      });
+    }
+
+    function devotSetCollection(id){
+      var coll=null;
+      for (var i=0;i<DEVOT_COLLECTIONS.length;i++) if (DEVOT_COLLECTIONS[i].id===id) coll=DEVOT_COLLECTIONS[i];
+      if (!coll) coll=DEVOT_COLLECTIONS[0];
+      _devotColl=coll.id;
+      localStorage.setItem('bsw_devot_collection',_devotColl);
+      // Keep the current period only if the new collection offers it.
+      if (coll.periods.indexOf(_devotPeriod)===-1) _devotPeriod=coll.periods[0];
+      renderPeriodTabs();
+      devotLoad(_devotDate,_devotPeriod);
+    }
+
     function initDevotionals(){
       document.getElementById('devot-prev').addEventListener('click',function(){var d=new Date(_devotDate);d.setDate(d.getDate()-1);devotSetDate(d);});
       document.getElementById('devot-next').addEventListener('click',function(){var d=new Date(_devotDate);d.setDate(d.getDate()+1);devotSetDate(d);});
@@ -730,11 +840,25 @@
         var parts=this.value.split('-');
         if(parts.length===3) devotSetDate(new Date(+parts[0],+parts[1]-1,+parts[2]));
       });
-      document.querySelectorAll('.devot-period-tab').forEach(function(btn){
-        btn.addEventListener('click',function(){devotSetPeriod(btn.getAttribute('data-period'));localStorage.setItem('bsw_devot_period',btn.getAttribute('data-period'));});
+
+      // Populate the collection dropdown from the registry and restore the saved choice.
+      var sel=document.getElementById('devot-collection');
+      DEVOT_COLLECTIONS.forEach(function(c){
+        var o=document.createElement('option'); o.value=c.id; o.textContent=c.label; sel.appendChild(o);
       });
-      var saved=localStorage.getItem('bsw_devot_period');
-      if (saved==='morning'||saved==='evening') { _devotPeriod=saved; devotSetPeriod(saved); }
+      var savedColl=localStorage.getItem('bsw_devot_collection');
+      if (savedColl && currentColl){
+        for (var i=0;i<DEVOT_COLLECTIONS.length;i++) if (DEVOT_COLLECTIONS[i].id===savedColl) _devotColl=savedColl;
+      }
+      sel.value=_devotColl;
+      sel.addEventListener('change',function(){ devotSetCollection(this.value); });
+
+      // Restore the saved period if the active collection supports it, else default to its first.
+      var savedPeriod=localStorage.getItem('bsw_devot_period');
+      if (savedPeriod && currentColl().periods.indexOf(savedPeriod)!==-1) _devotPeriod=savedPeriod;
+      else if (currentColl().periods.indexOf(_devotPeriod)===-1) _devotPeriod=currentColl().periods[0];
+
+      renderPeriodTabs();
       devotSetDate(new Date());
     }
 
@@ -1336,6 +1460,9 @@
       });
       renderGrat();
     } // end initGratitude
+
+    /* Activate the initial tab now that all tab vars + init functions exist. */
+    activateTab(initTab, true);
 
   }()); // end master IIFE
   </script>

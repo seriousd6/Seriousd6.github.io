@@ -1,54 +1,2561 @@
 {
-  "1": {
-    "voices": ["Hilary", "John Chrysostom", "Augustine of Hippo", "Origen", "John Gill",
-               "John Lightfoot", "Matthew Henry", "Albert Barnes", "Adam Clarke",
-               "Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority",
-       "summary": "Genesis/Bĕrēshîth echo; the timeless 'was' (ēn) reaching into eternity; anarthrous theos = qualitative full deity, not 'a god'."},
-      {"school": "reformed", "prevalence": "several",
-       "summary": "The essential (not written) Word; his eternal divinity grounds the necessity of redemption through the Son."},
-      {"school": "latin-fathers", "prevalence": "several",
-       "summary": "Augustinian: the natural man cannot perceive it; the verse is grasped by faith ('letters of gold')."},
-      {"school": "eastern-antiochene", "prevalence": "minority",
-       "summary": "Chrysostom: it is God who speaks through John, so we need not trace the evangelist's background."},
-      {"school": "wesleyan-arminian", "prevalence": "minority",
-       "summary": "The Word existed before all things began to be made."}
-    ],
-    "debates": [
-      {"question": "The sense of 'beginning' — the start of creation, or beyond time into eternity?",
-       "sides": [
-         {"position": "the Genesis beginning of creation", "holders": ["Lightfoot", "Wesley", "most expositors"]},
-         {"position": "reaching past creation into eternity", "holders": ["Robertson", "Origen"]}
-       ]}
-    ],
-    "outliers": [
-      {"voice": "Origen", "note": "Alexandrian: catalogues the many scriptural senses of 'beginning' and reads Christ himself as the Beginning/Wisdom."}
-    ],
-    "themes": ["deity of Christ", "eternal Word", "Genesis 1:1 echo", "the Word with God / distinct person"]
-  },
-  "14": {
-    "voices": ["Chrysostom", "John Chrysostom", "John Gill", "John Lightfoot", "Albert Barnes",
-               "Adam Clarke", "Charles Ellicott", "Jamieson, Fausset and Brown", "A.T. Robertson",
-               "John Calvin", "John Wesley", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority",
-       "summary": "egeneto ('became', the historic Incarnation) over against ēn; anarthrous 'flesh' = full human nature, the whole man; explicitly anti-Docetic (Ellicott)."},
-      {"school": "reformed", "prevalence": "several",
-       "summary": "The Son alone — not Father or Spirit — clothed with our flesh and shown openly; continuity with the Word of v.1."},
-      {"school": "eastern-antiochene", "prevalence": "minority",
-       "summary": "Chrysostom: we are made sons because the Word became flesh; his glory was seen only through the Incarnation."},
-      {"school": "wesleyan-arminian", "prevalence": "minority",
-       "summary": "'Flesh' = the whole man; the beholding 'we' are the apostles; grace and truth come to us who are by nature otherwise."}
-    ],
-    "debates": [
-      {"question": "The sense of 'flesh' (sarx) here.",
-       "sides": [
-         {"position": "the whole man / full human nature", "holders": ["Barnes", "Ellicott", "Wesley", "consensus"]},
-         {"position": "canvassed as possibly 'corrupt nature' or 'the body' before settling on the whole man", "holders": ["Wesley"]}
-       ]}
-    ],
-    "outliers": [],
-    "themes": ["incarnation", "true humanity of Christ", "anti-Docetism", "glory beheld", "grace and truth"]
-  }
+ "1": {
+  "voices": [
+   "Hilary",
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Origen",
+   "John Gill",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Genesis/Bĕrēshîth echo; the timeless 'was' (ēn) reaching into eternity; anarthrous theos = qualitative full deity, not 'a god'."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "The essential (not written) Word; his eternal divinity grounds the necessity of redemption through the Son."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustinian: the natural man cannot perceive it; the verse is grasped by faith ('letters of gold')."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: it is God who speaks through John, so we need not trace the evangelist's background."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "The Word existed before all things began to be made."
+   }
+  ],
+  "debates": [
+   {
+    "question": "The sense of 'beginning' — the start of creation, or beyond time into eternity?",
+    "sides": [
+     {
+      "position": "the Genesis beginning of creation",
+      "holders": [
+       "Lightfoot",
+       "Wesley",
+       "most expositors"
+      ]
+     },
+     {
+      "position": "reaching past creation into eternity",
+      "holders": [
+       "Robertson",
+       "Origen"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "note": "Alexandrian: catalogues the many scriptural senses of 'beginning' and reads Christ himself as the Beginning/Wisdom."
+   }
+  ],
+  "themes": [
+   "deity of Christ",
+   "eternal Word",
+   "Genesis 1:1 echo",
+   "the Word with God / distinct person"
+  ]
+ },
+ "2": {
+  "voices": [
+   "Hilary",
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "A guarded restatement of v.1 to prevent mistake; the Word a distinct person, eternally with God before creation."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Condenses the three assertions; the Word 'was before all time,' eternally with the Father."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Hilary: refers all to the one unbegotten God, guarding the oneness of God without obliterating the Person."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Repeats and contracts the three points of v.1 into one."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "eternal pre-existence",
+   "distinct personality",
+   "deity of Christ",
+   "recapitulation of v.1"
+  ]
+ },
+ "3": {
+  "voices": [
+   "Chrysostom",
+   "John Chrysostom",
+   "Origen",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "egeneto (came-to-be) of all things vs the timeless ēn of the Word; 'all things'=the universe, no exception (Col 1:16; Heb 1:2; Rev 4:11)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Deity proved from the work of creation; the name of God profits nothing unless faith feels it by experience."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Creation requires omnipotence, so a 'delegated' creatorship is absurd — Christ and the Father are one."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: 'nothing made without him' includes the intelligible, not only Moses' visible creation."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "minority",
+    "summary": "Origen weighs the senses of 'beginning'; Cyril of Jerusalem rebukes curiosity about thrones/dominions, themselves Christ's workmanship."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "creation through the Word",
+   "deity of Christ",
+   "Genesis 1:1 echo",
+   "anti-Arian (no delegated creation)"
+  ]
+ },
+ "4": {
+  "voices": [
+   "Theophylact",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "'Life' in the widest sense: the Logos creates and sustains all life (Gen 2:7; Heb 1:3; John 11:25)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "From creation to preservation — life originally and independently in him; the regular order of nature."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Theophylact with Augustine: 'light of men' is the intellectual light of the rational soul, given to man as God's image."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "The light is wisdom/holiness/happiness in man's original state; the animal life-principle is not itself the saving light."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How wide is 'life' — the sustaining of all creation, or specifically the spiritual life/light of men?",
+    "sides": [
+     {
+      "position": "life in the widest sense, the creation and preservation of all things",
+      "holders": [
+       "Robertson",
+       "Barnes",
+       "Calvin",
+       "Gill"
+      ]
+     },
+     {
+      "position": "the intellectual/spiritual light proper to rational souls",
+      "holders": [
+       "Theophylact",
+       "Wesley",
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "note": "Reads v.4 as the prologue's pivot from creation to redemption — the Word restores life to man dead in trespasses."
+   }
+  ],
+  "themes": [
+   "the Word as source of life",
+   "light of men",
+   "creation and preservation",
+   "image of God"
+  ]
+ },
+ "5": {
+  "voices": [
+   "Augustine of Hippo",
+   "Origen",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Augustine: the darkness fails to perceive the light — the blind man present to the sun yet absent from it."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The light 'keeps shining' (linear present); katelaben read as 'overcame/suppressed' (Clarke, Lightfoot) — the light breaks out through the shadows."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Men blind by nature; the light shines into a self-made darkness of vanity and lies."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen distinguishes the light shining in darkness (not overtaken) from the light in which there is no darkness at all (1 John 1:5)."
+   }
+  ],
+  "debates": [
+   {
+    "question": "The sense of katelaben — did the darkness fail to 'comprehend' (perceive) the light, or fail to 'overcome' (suppress) it?",
+    "sides": [
+     {
+      "position": "failed to perceive/receive it",
+      "holders": [
+       "Augustine",
+       "Wesley",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "failed to overcome/extinguish/hinder it",
+      "holders": [
+       "Clarke",
+       "Lightfoot",
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "note": "Distinguishes two lights — the one that shines in darkness unovertaken vs. the one in which there is no darkness at all."
+   }
+  ],
+  "themes": [
+   "light and darkness",
+   "fallen reason",
+   "the light unquenched",
+   "types of the law"
+  ]
+ },
+ "6": {
+  "voices": [
+   "Augustine",
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Origen",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "John 'came into being' (egeneto) vs the Word who 'was'; a man emphatically opposed to the Word, yet truly sent from God."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Augustine: a great man sent to witness that the One whose Godhead was concealed in flesh is more than man."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: as a 'messenger,' John's words are not his own but of Him who sent him."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "God sent the herald before his Christ that men might more willingly receive salvation; John's extraordinary birth and ministry."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry: the name John signifies 'gracious.'"
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen asks the 'whence and whither' of John's sending — to Israel, and in the deeper sense into the world."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "John the Baptist",
+   "divine commission",
+   "egeneto vs ēn",
+   "the forerunner"
+  ]
+ },
+ "7": {
+  "voices": [
+   "Origen",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "'Witness' (marturia) is a key Johannine word; its aim is conviction unto belief (cf. John 20:31)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "John's calling was to prepare a Church for Christ, inviting all and not coming on his own account."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen: against those who deny Christ was foretold — the Son does receive witnesses."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "John's testimony interwoven with the evangelist's, pointing men to the Lamb."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "witness",
+   "faith",
+   "purpose of John's ministry",
+   "the Light"
+  ]
+ },
+ "8": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "John was 'a light' (a lamp, John 5:35; cf. Matt 5:14) but not 'the Light' (to phōs); his office emphatically restated."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the warning lest John's brightness obscure Christ — men gazing on the dawn neglect the sun."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "lamp vs the Light",
+   "subordination of the forerunner",
+   "glory of Christ"
+  ]
+ },
+ "9": {
+  "voices": [
+   "Augustine",
+   "John Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "'True'=genuine/archetypal, not true-vs-false; debate over whether 'coming into the world' modifies 'every man' or 'the Light.'"
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: Christ shines from and by himself; all else borrows its splendour from him."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Augustine: man enlightened is called light, but the true Light is that which enlightens."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "A universal illumination — natural conscience (Wesley) and reason as a ray of the Logos (Clarke)."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does 'that cometh into the world' qualify 'every man' or 'the true Light'?",
+    "sides": [
+     {
+      "position": "every man (Hebrew idiom for all who are born)",
+      "holders": [
+       "Lightfoot"
+      ]
+     },
+     {
+      "position": "the true Light was coming into the world",
+      "holders": [
+       "Ellicott",
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense does the Light enlighten 'every man'?",
+    "sides": [
+     {
+      "position": "a universal natural light of conscience/reason",
+      "holders": [
+       "Wesley",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the saving light now manifested",
+      "holders": [
+       "Calvin",
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the true Light",
+   "universal illumination",
+   "deity of Christ",
+   "light and conscience"
+  ]
+ },
+ "10": {
+  "voices": [
+   "Augustine",
+   "Theophylact",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The imperfect 'was' = continuous pre-incarnate existence in the universe (Robertson); Barnes alone refers it to the Incarnation."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "An indictment of ingratitude: men drink from the stream and never think of the fountain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Clarke: Christ in the world from creation, governing it, speaking by prophets, appearing as the angel of Jehovah."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Augustine: 'world' names both the creation and 'the lovers of the world' who knew him not."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Theophylact wields the verse against Manichaean (evil world) and Arian (Son a creature) errors."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: Christ the Maker of things visible and invisible (Col 1:16)."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does 'he was in the world' mean pre-incarnate/providential presence or the Incarnation?",
+    "sides": [
+     {
+      "position": "continuous pre-incarnate presence throughout history",
+      "holders": [
+       "Robertson",
+       "Clarke",
+       "Gill",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "the Incarnation, dwelling among men",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the world's ignorance",
+   "creation through the Word",
+   "deity of Christ",
+   "anti-Manichaean/anti-Arian"
+  ]
+ },
+ "11": {
+  "voices": [
+   "Chrysostom",
+   "John Chrysostom",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Neuter ta idia ('his own home,' cf. John 19:27) vs masculine hoi idioi ('his own people/intimates') who received him not."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Rejection set against election: Israel his heritage by creation and choice, yet refusing him — the desperate malice of men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Christ came to his own country, city, temple; his own people received him not."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: he who fills all things 'came' purely in condescension, not for his own good."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: fulfils Mal 3:1 — 'the Lord shall come to His own temple.'"
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is the scope of 'his own' — the whole world he made, or Judea/Israel his chosen heritage?",
+    "sides": [
+     {
+      "position": "the world, his own by creation",
+      "holders": [
+       "Robertson",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Judea/Israel, his peculiar heritage",
+      "holders": [
+       "Barnes",
+       "Wesley",
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "rejection of Christ",
+   "election of Israel",
+   "historic advent",
+   "condescension"
+  ]
+ },
+ "12": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "exousia is 'right/privilege' rather than 'power'; the dignity of sonship now open to all nations."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "The universal 'as many as' implies contrast with Jewish boasting in descent — faith, not blood, receives."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Jews or Gentiles, the moment they believe they are sons; the Spirit of adoption cries 'Abba' (Rom 8:15)."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: believers are sons by adoption of grace, the Son alone Son by nature."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "adoption / sons of God",
+   "faith in his name",
+   "right vs power (exousia)",
+   "universality"
+  ]
+ },
+ "13": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Regeneration, the new birth of John 3:3; 'bloods' linked to Jewish circumcision/passover notions; descent from pious parents avails nothing."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "minority",
+    "summary": "Gill: regeneration, a partaking of the divine nature, the evidence of sonship."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "The threefold negation — not ancestry, nor natural generation, nor human adoption, but of God by his Spirit."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem: adoption of grace, beside the Son's sonship by nature."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "Records the ancient singular variant ('who was born,' Old Latin/Irenaeus/Tertullian) referring the clause to Christ and the Virgin Birth, while holding the plural (of believers) as the true text."
+   }
+  ],
+  "themes": [
+   "regeneration / new birth",
+   "divine sonship",
+   "against descent from Abraham",
+   "textual variant (Virgin Birth)"
+  ]
+ },
+ "14": {
+  "voices": [
+   "Chrysostom",
+   "John Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Jamieson, Fausset and Brown",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "egeneto ('became', the historic Incarnation) over against ēn; anarthrous 'flesh' = full human nature, the whole man; explicitly anti-Docetic (Ellicott)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "The Son alone — not Father or Spirit — clothed with our flesh and shown openly; continuity with the Word of v.1."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: we are made sons because the Word became flesh; his glory was seen only through the Incarnation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "'Flesh' = the whole man; the beholding 'we' are the apostles; grace and truth come to us who are by nature otherwise."
+   }
+  ],
+  "debates": [
+   {
+    "question": "The sense of 'flesh' (sarx) here.",
+    "sides": [
+     {
+      "position": "the whole man / full human nature",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Wesley",
+       "consensus"
+      ]
+     },
+     {
+      "position": "canvassed as possibly 'corrupt nature' or 'the body' before settling on the whole man",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "incarnation",
+   "true humanity of Christ",
+   "anti-Docetism",
+   "glory beheld",
+   "grace and truth"
+  ]
+ },
+ "15": {
+  "voices": [
+   "Alcuin",
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "'after me' in time, 'preferred before me' in rank, 'before me' in pre-existence; historic present marturei, abiding perfect kekragen."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "The present tense marks a continuing testimony, ever resounding in men's ears."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Alcuin: the witness declares both Christ's human excellence and the eternity of his Godhead."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: John witnessed without prior acquaintance, so not out of gratitude."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley: 'preferred before me' in office, 'before me' in nature; John knew him at the baptism."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry: as prophets cried aloud to show sin, John cried aloud to show the Saviour."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the Baptist's witness",
+   "pre-existence of Christ",
+   "dignity vs time",
+   "forerunner"
+  ]
+ },
+ "16": {
+  "voices": [
+   "Origen",
+   "John Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The evangelist's words (not the Baptist's), tied to v.14; plērōma the Pauline term for the fulness of God in Christ (Col 1:19; 2:9; Eph 1:23)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: Christ's office contains all blessings — seek no part of salvation elsewhere; the fountain flows when faith opens the channel."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "minority",
+    "summary": "Origen: a continuation of the Baptist's testimony, the ground of 'he was before me.'"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "'Grace for grace' = blessing heaped upon blessing, immeasurable grace."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Are these the Baptist's words or the evangelist's?",
+    "sides": [
+     {
+      "position": "the Baptist's, continuing his witness",
+      "holders": [
+       "Origen",
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "the evangelist's, connected to v.14",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "The sense of 'grace for grace'",
+    "sides": [
+     {
+      "position": "grace upon grace, accumulation of blessing",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "grace for the propagation of grace (apostleship)",
+      "holders": [
+       "Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "fulness of Christ",
+   "grace upon grace",
+   "plērōma",
+   "salvation found wholly in Christ"
+  ]
+ },
+ "17": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "edothē/dia Mōuseōs vs egeneto/dia Iēsou; first use of the full name 'Jesus Christ,' identifying the Logos with Jesus the Messiah; the law preparatory (Rom 4:15; Acts 15:10)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "An anticipation meeting Jewish over-esteem of Moses; the law convicts and condemns but gives no strength or forgiveness — Christ's power exalted."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley: grace opposed to wrath, truth to the law's shadows; Clarke: Christ the mediator of the new covenant (Heb 8:6; Gal 3:19)."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "law and grace",
+   "Moses and Christ",
+   "fulfilment over shadow",
+   "new covenant"
+  ]
+ },
+ "18": {
+  "voices": [
+   "Origen",
+   "Chrysostom",
+   "John Chrysostom",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "God invisible to the physical eye (Exod 33:20; Deut 4:12; Col 1:15); the variant 'only begotten God' vs 'only begotten Son.'"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: dwelling 'in the bosom' is far more than seeing — the Son knows the Father completely, not partially."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the knowledge of God is the door to all blessings, and it comes only through Christ — seek all things from him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "'Seen' = 'known' (1 John 3:6); none fully knows God but through Christ, though believers see him by faith."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "minority",
+    "summary": "Cyril of Jerusalem: OT theophanies saw 'the likeness of the glory,' not the incorporeal God himself."
+   }
+  ],
+  "debates": [
+   {
+    "question": "The sense of 'hath seen' God",
+    "sides": [
+     {
+      "position": "bodily/physical sight (none has ever had it)",
+      "holders": [
+       "Robertson",
+       "Cyril of Jerusalem"
+      ]
+     },
+     {
+      "position": "full knowledge ('seen'='known')",
+      "holders": [
+       "Clarke",
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "invisibility of God",
+   "Christ the revealer",
+   "in the bosom of the Father",
+   "deity of Christ"
+  ]
+ },
+ "19": {
+  "voices": [
+   "Origen",
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "'The Jews' = the nation's representative hierarchy in opposition; this testimony follows the Prologue and assumes the Synoptic baptism."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "minority",
+    "summary": "Origen: priests and Levites sent as kin to the priestly Baptist; the second of his testimonies."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin disputes 'hatred' as the motive — it was the natural duty of examining a new teacher."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Augustine: John the friend of the Bridegroom, zealous not for himself, granted to point Christ out."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry: the Sanhedrin, guides of the people, must themselves send to inquire."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What was the motive of the deputation?",
+    "sides": [
+     {
+      "position": "the official duty of examining a new teacher",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "hostility or a flattering readiness to honour him",
+      "holders": [
+       "others, disputed"
+      ]
+     }
+    ]
+   }
+  ],
+  "themes": [
+   "John's formal testimony",
+   "'the Jews'",
+   "priests and Levites",
+   "friend of the Bridegroom"
+  ]
+ },
+ "20": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The emphatic triple 'confessed/denied not/confessed' and the emphatic pronoun: 'It is not I who am the Christ.'"
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "An open confession without ambiguity or hypocrisy, expressly denying the Messianic claim."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Clarke: John renounces himself that Jesus may be all in all; he had nothing but what he received."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "humility of John",
+   "denial of Messiahship",
+   "honesty of the witness"
+  ]
+ },
+ "21": {
+  "voices": [
+   "Origen",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "John denies being the personal/returned Elijah, while being the Elijah of prophecy 'in spirit and power' (Luke 1:17); 'that prophet' = Deut 18:15."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "minority",
+    "summary": "Calvin: the Jews' error of transmigration — they expected the very Elijah of Ahab's day."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen frames the crux via Jesus' 'if ye will receive it, this is Elijah.'"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley: not the Tishbite in person; the scribes taught Elijah must come (Matt 17:10)."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How can John deny being Elijah when Jesus affirms it?",
+    "sides": [
+     {
+      "position": "he is not the personal/returned Elijah the Tishbite",
+      "holders": [
+       "Robertson",
+       "Calvin",
+       "Wesley",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "he is the Elijah of prophecy in spirit and power",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Origen"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Elijah to come",
+   "the prophet like Moses",
+   "forerunner identity",
+   "Mal 4:5 / Luke 1:17"
+  ]
+ },
+ "22": {
+  "voices": [
+   "Origen",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson"
+  ],
+  "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen: 'we know what you are not; now tell us of yourself.'"
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The shortened, urgent question; they must not return to their senders empty-handed."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill: after three negatives, they press for a positive self-account."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "demand for self-definition",
+   "the deputation's report",
+   "transition to v.23"
+  ]
+ },
+ "23": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "John applies Isa 40:3 to himself; he is 'a voice, not to be inquired about but heard,' his personality vanishing before the Coming One."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "The prophecy proves his commission — he does nothing but what God commanded, under the Spirit's direction."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley: 'nothing but a voice' that, once it has uttered its thought, dies into air."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem joins Isa 40:3 with its sequel — 'your redemption hath drawn nigh.'"
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "voice in the wilderness",
+   "Isaiah 40:3",
+   "humility",
+   "divine commission"
+  ]
+ },
+ "24": {
+  "voices": [
+   "Origen",
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "In John, with the Sadducees never named, 'Pharisees' approaches the sense of 'Sanhedrin'; the detail marks the writers' honesty."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen: the Pharisees come with a harder temper than the mild priests and Levites."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: men of authority, who therefore question his office and charge him with innovation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley: the Pharisees tenacious of old customs and jealous of any innovation."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the Pharisees",
+   "Pharisees as Sanhedrin in John",
+   "challenge to authority",
+   "scene-setting"
+  ]
+ },
+ "25": {
+  "voices": [
+   "Origen",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: a syllogism of three offices — only Messiah, Elijah, or the prophet could institute such a rite, so John's baptizing seems unlawful novelty."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Proselyte baptism existed for Gentiles; the scandal is that John baptizes Jews/Pharisees as if impure Gentiles (Ezek 36:25)."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "The procedural objection: John baptizes without Sanhedrin commission, and baptizes Jews, not only heathen."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen weighs whether this is a distinct, third testimony."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "authority to baptize",
+   "proselyte baptism",
+   "Jews needing cleansing",
+   "Messiah/Elijah/the prophet"
+  ]
+ },
+ "26": {
+  "voices": [
+   "Origen",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "John deflects rather than defends — mere water-baptism, preparatory; 'whom ye know not' is the tragedy of v.11, though John had already baptized Jesus."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: by sending them to the present Christ, John proves he is the true voice announcing the Church's renewal."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen defends the reply's relevance against Heracleon."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke: the One whose forerunner John is now dwells in Judea and will shortly appear."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "water baptism preparatory",
+   "the unknown Christ present",
+   "Israel's ignorance",
+   "pointing away to Christ"
+  ]
+ },
+ "27": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The clause 'preferred before me' is a scribal insertion from vv.15,30; loosing the sandal-thong was a slave's lowest office."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "John follows Christ in time but stands far below him in rank; the Baptist is only a herald sent on Christ's account."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem turns the 'not worthy' aside to Paul's like confession of unworthiness."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "Reads the verse homiletically through Paul's unworthiness rather than commenting on John the Baptist."
+   }
+  ],
+  "themes": [
+   "the Baptist's humility",
+   "forerunner",
+   "textual variant",
+   "unworthy to unloose the sandal"
+  ]
+ },
+ "28": {
+  "voices": [
+   "John Chrysostom",
+   "Origen",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "'Bethany beyond Jordan' is the true text on all Greek MSS; 'Bethabara' is Origen's later geographic conjecture."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen, finding Bethany too far from the river, argues for Bethabara, 'house of preparation.'"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom holds 'the more correct copies have Bethabara' and notes John's bold public testimony."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "minority",
+    "summary": "Calvin leaves the spelling open; the place authenticates the narrative before a great crowd."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did John write 'Bethany' or 'Bethabara' beyond Jordan?",
+    "sides": [
+     {
+      "position": "Bethany (original reading of the manuscripts)",
+      "holders": [
+       "Robertson",
+       "Barnes",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Bethabara (geographic/etymological reading)",
+      "holders": [
+       "Origen",
+       "Chrysostom",
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Bethany vs Bethabara",
+   "place authentication",
+   "eye-witness detail",
+   "the Baptist's boldness"
+  ]
+ },
+ "29": {
+  "voices": [
+   "Origen",
+   "Gregory the Great",
+   "Augustine of Hippo",
+   "John Gill",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The Lamb fulfils the daily sacrifice, Passover, and Isaiah 53; the present tense 'taketh away' is a continual bearing of the world's sin."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Christ's chief office: by his death he propitiates the Father; 'of the world' is offered to all but received by faith, overturning human satisfactions."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine: only Christ is the spotless Lamb, not conceived in sin; no sinful minister can take away sin, Christ alone."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Sin and the world are of equal extent; the atonement reaches all mankind, not Israel only."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen allegorises the lamb as the soul's daily reasonable sacrifice, morning and evening."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Matthew Henry's pastoral turn: if he takes away the sin of the world, why not my sin?"
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "note": "Alexandrian allegory of the daily lamb as the soul's reasonable sacrifice, beyond the plain sacrificial type."
+   }
+  ],
+  "themes": [
+   "Lamb of God",
+   "substitutionary atonement",
+   "Passover and daily sacrifice",
+   "Isaiah 53",
+   "sin of the world / scope of redemption"
+  ]
+ },
+ "30": {
+  "voices": [
+   "John Gill",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The third repetition (vv.15,27) of a proverbial saying; 'on behalf of whom' points to Jesus now present."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin's three claims: John prior only in time, Christ preferred in glory, grounded in his eternal pre-existent majesty."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "forerunner",
+   "pre-existence of Christ",
+   "repetition of the witness"
+  ]
+ },
+ "31": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "'I knew him not' disclaims personal intimacy (they lived apart), ruling out collusion; the aim of baptism was to manifest Messiah to Israel."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "John testifies by the Spirit and God's command, not human favour; being 'sent' shows sacraments are instituted by God alone."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Providence kept the kinsmen apart so John's witness could not be suspected of partiality."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "no collusion",
+   "divine commission of John",
+   "manifestation to Israel",
+   "baptism with water"
+  ]
+ },
+ "32": {
+  "voices": [
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Gregory the Great",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "majority",
+    "summary": "Augustine: a real dove, not Christ's first reception of the Spirit but its manifestation; the dove signifies unity/peace and shows the Trinity; Gregory: the Spirit abides on the Mediator alone."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The dove is the Semitic symbol of the Spirit; John's perfect 'I have beheld' marks the sign as abiding proof, presupposing the Synoptic baptism."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin reads the seeing sacramentally (sign and thing); the dove displays the Messiah's mildness; Christ receives the Spirit for his people."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: the descent manifests Christ, not supplies a lack, and fixes the Father's voice on him."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "dove as the Spirit",
+   "the abiding Spirit",
+   "Trinity at the baptism",
+   "sign and thing signified"
+  ]
+ },
+ "33": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "A.T. Robertson",
+   "John Calvin",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The descending Spirit was the God-given, infallible sign; John baptizes in water, the Messiah in the Holy Spirit."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin resolves Matthew 3:14: the 'knowledge' denied is intimacy; the sign confirms for our sake, like the token to Moses."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Augustine: John is true because sent by the Truth (Christ); the inseparable Trinity works in his sending."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Cyril: the heavens opened at the dignity of the One descending; the dove befits the innocent Spirit."
+   }
+  ],
+  "debates": [
+   {
+    "question": "If John 'knew him not,' why did he say 'I have need to be baptized of thee'?",
+    "sides": [
+     {
+      "position": "the 'knowledge' denied is personal intimacy; the dove was a confirming sign for our sake",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "the sign was simply how John would infallibly recognise the Messiah",
+      "holders": [
+       "Barnes",
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the appointed sign",
+   "baptism with the Holy Spirit",
+   "divine commission",
+   "John's reliability"
+  ]
+ },
+ "34": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Gill",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Perfect tenses mark an abiding eyewitness testimony; 'Son of God' is a Messianic title that also names the peculiar Son-Father relation."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the giver of the Spirit must be the Christ who reconciles men to God, so John's sight certifies the divine Sonship."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine sounds a contemplative note: the eternal Word alone abides and is worth loving."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Augustine of Hippo",
+    "note": "His Catena excerpt is a pastoral meditation on loving the abiding Word rather than direct exegesis of the title."
+   }
+  ],
+  "themes": [
+   "Son of God",
+   "eyewitness testimony",
+   "divine Sonship",
+   "goal of John's witness"
+  ]
+ },
+ "35": {
+  "voices": [
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Bede",
+   "Alcuin",
+   "Theophylact",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "majority",
+    "summary": "Augustine: John the friend of the bridegroom points his disciples away to Christ; Bede and Alcuin read it mystically (Law standing, Jesus walking)."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom: John waits by the river so Christ's own works may draw men, kindling a spark into flame."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "'Again' refers to v.29; the two disciples are Andrew (v.40) and the unnamed Beloved Disciple John, with an inner circle taught more."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "friend of the bridegroom",
+   "John points away to Christ",
+   "the two disciples",
+   "inner circle"
+  ]
+ },
+ "36": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The fixed gaze (emblepsas) pictures John's rapt contemplation; his last glimpse of Jesus, repeating the tribute of v.29; a model for ministers."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: John resigns his office to Christ; the church's small beginning magnifies its glory; the aim is to find forgiveness of sins in Christ."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Behold the Lamb of God",
+   "steadfast looking",
+   "John resigning his office",
+   "small beginnings of the church"
+  ]
+ },
+ "37": {
+  "voices": [
+   "Alcuin",
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Theophylact",
+   "Origen",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom: the humbler word 'Behold the Lamb' won them; John as the bridegroom's friend silently hands the bride to Christ."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The ingressive aorist marks the decisive following; John's willingness to lose disciples to Christ proves his sincerity."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine and Alcuin read 'Come and see' mystically: come by believing and working, then see by understanding."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Matthew Henry: Christ notices the first motion of a soul; 'What seek ye?' is the beginner's self-examination; now is the accepted time."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen counts the testimonies, John falling silent after six and Jesus asking 'seventhly.'"
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "note": "Numerological reading: six witnesses of John, then Jesus' seventh question."
+   }
+  ],
+  "themes": [
+   "first disciples follow",
+   "John points away",
+   "Come and see",
+   "first motions of the soul"
+  ]
+ },
+ "38": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The vivid 'turned'; 'What seek ye?' as the first words of Jesus in John; the evangelist translates 'Rabbi' for Greek/late readers; they seek a place for converse."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: 'Rabbi' marks them as learners taking the first step; seek to lodge with Christ, not smell the gospel at a distance."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "note": "Renders 'where dwellest thou' as 'where keepest thou sabbath?' and conjectures a sabbath-eve."
+   }
+  ],
+  "themes": [
+   "first words of Jesus",
+   "Rabbi / teacher",
+   "seeking Christ's dwelling",
+   "translation for Greek readers"
+  ]
+ },
+ "39": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Divided on the 'tenth hour': Roman 10 a.m. (Clarke, Robertson) vs Jewish 4 p.m. (Ellicott), with Barnes leaving it open; all keep the devotional memory of the hour."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "minority",
+    "summary": "Calvin reads Jewish time: evening near, two hours till sunset, the disciples too eager to mind lodging."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the 'tenth hour' reckoned by Roman or Jewish time?",
+    "sides": [
+     {
+      "position": "Roman time, about 10 a.m.",
+      "holders": [
+       "Clarke",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Jewish time, about 4 p.m.",
+      "holders": [
+       "Ellicott",
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Come and see",
+   "abiding with Christ",
+   "the tenth hour",
+   "Roman vs Jewish reckoning"
+  ]
+ },
+ "40": {
+  "voices": [
+   "John Gill",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "The unnamed second disciple is John himself, veiling his identity; Andrew is identified by relation to the famous Peter."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: faith spreads the light; Andrew with a spark enlightens his brother, and the eminent Peter is brought by the lesser Andrew."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Andrew",
+   "the unnamed Beloved Disciple",
+   "faith that spreads",
+   "chain of witness"
+  ]
+ },
+ "41": {
+  "voices": [
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Bede",
+   "Alcuin",
+   "Origen",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Textual question of 'first' (proton) vs 'the first' (protos), implying John also found James; 'Messias' (Hebrew) only here and 4:25."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine glosses Messias/Christus/Unctus, the Anointed; Bede presses to the name-change, Peter from petra."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin grounds 'Messiah' in Daniel 9:25, appropriated to the Redeemer; marvels so few received the long-awaited One."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Grace is communicative; each convert seeks first his own household."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen harmonises this finding with the later seaside call."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the text say Andrew found his brother 'first' (proton) or that he was 'the first' (protos) to do so?",
+    "sides": [
+     {
+      "position": "'first' (proton) — implying John then found James",
+      "holders": [
+       "Ellicott",
+       "Bernard"
+      ]
+     },
+     {
+      "position": "'the first' (protos) — Andrew the first to go after a brother",
+      "holders": [
+       "some MSS (Robertson notes)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "note": "Harmonises the finding here with the later call by the Sea of Galilee."
+   }
+  ],
+  "themes": [
+   "We have found the Messiah",
+   "evangelism of a brother",
+   "Messias/Christ",
+   "Peter the rock"
+  ]
+ },
+ "42": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Cephas (Aramaic) = Peter, a stone; the future 'shalt be called' is prophecy; the petra/petros distinction (though absent in Aramaic); Christ's omniscience foresees Peter's firmness."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the name is prophetic of what Christ would make him; polemic against Rome — Peter is founded on Christ, not the church's foundation or head."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the renaming make Peter the foundation/head of the church?",
+    "sides": [
+     {
+      "position": "No — Peter is himself built on Christ; the name magnifies grace, anticipating Matthew 16:18",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "It anchors Peter as the rock, by Christ's naming prerogative (Catena fathers)",
+      "holders": [
+       "Augustine (Catena)",
+       "Bede"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "renaming Simon to Cephas",
+   "Peter the stone",
+   "omniscience of Christ",
+   "Reformed anti-papal polemic"
+  ]
+ },
+ "43": {
+  "voices": [
+   "John Chrysostom",
+   "Alcuin",
+   "Theophylact",
+   "Augustine of Hippo",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom: Philip, taught by none but Christ, obeys instantly; the voice of Christ kindles love; choice freely made stands firm; choice fruit out of Galilee."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the efficacy of the gospel word — one word inflames Philip, yet preaching is fruitless unless secret grace quickens it."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes distinguishes this conviction from the later apostolic call (Matthew 4:18); 'Follow me' is Christ's recurring summons."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "minority",
+    "summary": "Alcuin reads Bethsaida ('house of hunters') and Galilee ('transition') mystically; 'Follow me' calls to imitate Christ's humility."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Matthew Henry: preventing grace — 'Jesus findeth Philip'; Christ sought and found us first."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Follow me",
+   "efficacy of the call",
+   "preventing grace",
+   "fruit out of Galilee"
+  ]
+ },
+ "44": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Jamieson, Fausset and Brown",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "An eye-witness touch: Bethsaida of Galilee (distinct from Bethsaida Julias) explains the chain of calling among townsmen."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the cursed town (Matthew 11:21) magnifies grace; JFB note the human means by which grace travels."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Bethsaida of Galilee",
+   "local eye-witness detail",
+   "grace from a cursed town",
+   "human means in evangelism"
+  ]
+ },
+ "45": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Philip's diligent search of Scripture (Deut 18, Gen 49); 'son of Joseph, of Nazareth' as common supposition; the evangelist's dramatic accuracy in giving words as spoken; Nathanael = Bartholomew."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: Philip's two errors are crowned because his sincere aim leads to the true Christ; better to stammer truly than eloquently introduce a false Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley: Philip thought him of Nazareth, not knowing of Bethlehem; Nathanael = Bartholomew."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "fulfilment of Moses and the prophets",
+   "Nathanael as Bartholomew",
+   "faulty but sincere witness",
+   "Jesus of Nazareth / son of Joseph"
+  ]
+ },
+ "46": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Nazareth's poor repute and town-rivalry (cf. John 7:52); Clarke's view that Nathanael looked for Messiah from Bethlehem; 'Come and see' answers prejudice by examination."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: a twofold error — believing Philip's misstatement and contempt of the place, both Satan's stratagems; yet Nathanael lets inquiry correct him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley: guard against popular prejudice; integrity opened Nathanael to the force of evidence."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "prejudice against Nazareth",
+   "Come and see",
+   "empirical faith",
+   "offence of Christ's lowliness"
+  ]
+ },
+ "47": {
+  "voices": [
+   "John Chrysostom",
+   "Augustine of Hippo",
+   "Theophylact",
+   "Gregory the Great",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "'Guile' (dolos) echoes Jacob's subtlety (Genesis 27:35 LXX); Nathanael an Israel without the supplanter's guile, at prayer under the fig tree (cf. Genesis 32:24, Isaiah 53:9)."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine: 'no guile' is not 'no sin'; guile is saying one thing and thinking another — Nathanael confesses sin rather than feigning righteousness."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: a definition of true Christianity, integrity vs hypocrisy; 'not all Israel who are of Israel' (Romans 9:6) forewarns of the nation's unbelief."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "minority",
+    "summary": "Chrysostom: Nathanael's honest hesitation, speaking neither for favour nor malice, shows him guileless and well-read in the prophets."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Israelite without guile",
+   "Jacob/Israel allusion",
+   "sincerity vs hypocrisy",
+   "the fig tree"
+  ]
+ },
+ "48": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The fig tree as a place of private prayer; Christ sees not the body but the secret heart and worship; he judges character by private devotion (Psalm 139:2)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: to know hearts and see the hidden belongs to God alone; even when we think not of Christ, we are observed by him."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "omniscience of Christ",
+   "secret prayer under the fig tree",
+   "heart-searching sight",
+   "divine knowledge"
+  ]
+ },
+ "49": {
+  "voices": [
+   "John Chrysostom",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom: Nathanael meant 'Son of God' of a mere man (he narrows it to 'King of Israel'), unlike Peter's confession of very God, so is led to greater things."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: a real but limited confession; faith fixes on Christ's office and power as King, yet 'King of Israel' is still within narrow bounds."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson and Barnes refuse to tone it down: both are Messianic titles (Psalm 2; cf. John 12:13), a noble acknowledgment that Christ is more than man."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How deep is Nathanael's confession — full deity or Messiah-as-man?",
+    "sides": [
+     {
+      "position": "a true but limited/incipient faith, to be enlarged",
+      "holders": [
+       "Chrysostom",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "a full and noble Messianic acknowledgment",
+      "holders": [
+       "Robertson",
+       "Barnes",
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Son of God",
+   "King of Israel",
+   "depth of confession",
+   "Messianic titles"
+  ]
+ },
+ "50": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "'Believest thou?' as question or (better) assertion (cf. John 20:29); the 'greater things' are the fuller proofs promised in v.51."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: not a reproof but approval of ready faith, to be confirmed by stronger arguments and a proof common to all."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "growing faith",
+   "greater things",
+   "approval of ready faith"
+  ]
+ },
+ "51": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Fulfils Jacob's ladder (Genesis 28:12); the doubled Amen marks Christ as 'the Amen'; heaven standing open = free intercourse (Isaiah 64:1; Acts 7:56); 'Son of man' = the race's representative, second Adam."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: not one time/place but a perpetual opened kingdom; angels minister to the whole Church for Christ's honour (Stephen, the mount, the Ascension)."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "minority",
+    "summary": "Wesley leans to particular future events — Christ coming in glory with the angels, or angelic ministry at resurrection and ascension."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril gathers from the doubled 'verily' the promise of eternal life by faith."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the 'hereafter' a perpetual mediatorial state or a series of future events?",
+    "sides": [
+     {
+      "position": "a perpetual opened heaven / mediatorial intercourse in Christ",
+      "holders": [
+       "Calvin",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "particular future events (glory, resurrection, ascension)",
+      "holders": [
+       "Wesley",
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "Cites the doubled 'verily' only for the catechesis on eternal life by faith."
+   }
+  ],
+  "themes": [
+   "Jacob's ladder",
+   "Son of man",
+   "heaven opened",
+   "Christ the bond of heaven and earth"
+  ]
+ }
 }

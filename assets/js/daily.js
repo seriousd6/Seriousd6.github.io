@@ -35,12 +35,41 @@ var DAILY_PLAN_META = [
 var _CATECHISM_PLAN_IDS = ['heidelberg-weekly', 'wsc-quarterly'];
 
 var DAILY_DEVOT_META = [
+  { id: 'variety',          label: 'Variety (rotating authors)' },
   { id: 'spurgeon-morning', label: 'Spurgeon — Morning' },
   { id: 'spurgeon-evening', label: 'Spurgeon — Evening' },
   { id: 'daily-psalms',     label: 'Daily Psalms' },
   { id: 'proverbs-month',   label: 'Proverbs of the Month' },
   { id: 'nt-daily',         label: 'NT Daily Reading' }
 ];
+
+// INTENT: Every file-backed devotional shares one JSON shape
+//   ("MM-DD" -> { verse_text, verse_ref, body }), so they render through a single
+//   code path (_dailyRenderDevotEntry). This map is the registry of those files
+//   plus the byline shown to the reader. Data is produced by
+//   scripts/build-devotionals.py from public-domain editions.
+// CHANGE? To add an author: ship its data/devotionals/<slug>.json and add an entry
+//   here, then list the slug in DAILY_VARIETY below to include it in the rotation.
+var DAILY_DEVOT_SOURCES = {
+  'spurgeon-morning': { file: 'spurgeon-morning.json', author: 'Charles Spurgeon', work: 'Morning by Morning' },
+  'spurgeon-evening': { file: 'spurgeon-evening.json', author: 'Charles Spurgeon', work: 'Evening by Evening' },
+  'winslow-morning':  { file: 'winslow-morning.json',  author: 'Octavius Winslow', work: 'Morning Thoughts' },
+  'winslow-evening':  { file: 'winslow-evening.json',  author: 'Octavius Winslow', work: 'Evening Thoughts' },
+  'meyer':            { file: 'meyer.json',            author: 'F.B. Meyer',       work: 'Our Daily Walk' }
+};
+
+// INTENT: "Variety" rotates to a different author each day, per slot. The index is
+//   keyed off day-of-year so it's stable within a day but cycles over time. Both
+//   lists are ordered by AUTHOR; the evening slot starts one step ahead of morning
+//   (see _dailyResolveVariety), so as long as no two adjacent entries share an
+//   author, morning and evening never show the same author on the same date.
+// CHANGE? Add new author slugs here once their data ships (period-neutral authors
+//   go in BOTH lists). Missing/gap days are handled at render time by falling
+//   through to the next author in rotation.
+var DAILY_VARIETY = {
+  morning: ['winslow-morning', 'spurgeon-morning', 'meyer'],
+  evening: ['winslow-evening', 'spurgeon-evening', 'meyer']
+};
 
 // ── Streak ────────────────────────────────────────────────────────────────────
 var STREAK_KEY = 'bsw_streak';
@@ -530,49 +559,95 @@ function _dailyRenderDevotional(source, period) {
     return;
   }
 
-  if (source === 'spurgeon-morning' || source === 'spurgeon-evening') {
-    var spPeriod = (source === 'spurgeon-morning') ? 'morning' : 'evening';
-    var fileName = (source === 'spurgeon-morning') ? 'spurgeon-morning.json' : 'spurgeon-evening.json';
+  // File-backed devotionals (Spurgeon, Winslow, …) and the "variety" rotation all
+  // share one JSON shape, so they render through the same path. Variety resolves
+  // to a per-day author for the current slot before rendering.
+  if (source === 'variety' || DAILY_DEVOT_SOURCES[source]) {
     var mm = String(now.getMonth() + 1).padStart(2, '0');
     var dd = String(now.getDate()).padStart(2, '0');
     var dateKey = mm + '-' + dd;
 
-    if (titleEl) {
-      titleEl.innerHTML = 'Spurgeon — ' + (spPeriod === 'morning' ? 'Morning' : 'Evening') +
-        ' <span class="daily-period-badge">' + (spPeriod === 'morning' ? '🌅 Morning' : '🌙 Evening') + '</span>';
-    }
+    var resolver = (source === 'variety')
+      ? _dailyResolveVariety(period, dateKey, dayOfYear)
+      : _dailyFetchDevotEntry(source, dateKey);
 
-    fetch(DAILY_DEVOT_BASE + '/' + fileName)
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(function (entries) {
-        var entry = entries[dateKey];
-        if (!entry) {
-          bodyEl.innerHTML = '<p class="daily-plan-empty">No entry for today.</p>';
-          return;
-        }
-        var ref = entry.verse_ref || '';
-        var refLink = ref
-          ? ' &nbsp;<a class="ref" data-ref="' + escHtml(ref) + '">' + escHtml(ref) + '</a>'
-          : '';
-        var paragraphs = entry.body.split('\n\n').filter(function (p) { return p.trim(); });
-        var bodyHtml = paragraphs.map(function (p) {
-          return '<p>' + escHtml(p.trim()) + '</p>';
-        }).join('');
-        bodyEl.innerHTML =
-          '<blockquote class="daily-spurgeon-verse">' +
-            escHtml(entry.verse_text) +
-            '<cite>' + refLink + '</cite>' +
-          '</blockquote>' +
-          '<div class="daily-spurgeon-body">' + bodyHtml + '</div>';
-        wireRefLinks(bodyEl);
-      })
-      .catch(function () {
-        bodyEl.innerHTML = '<p class="daily-plan-empty">Could not load Spurgeon devotional.</p>';
-      });
+    resolver.then(function (res) {
+      if (!res) {
+        bodyEl.innerHTML = '<p class="daily-plan-empty">No devotional for today.</p>';
+        return;
+      }
+      _dailyRenderDevotEntry(res, period);
+    });
     return;
   }
 
   bodyEl.innerHTML = '<p class="daily-plan-empty">Select a devotional source above.</p>';
+}
+
+// Fetch one author's entry for dateKey; resolves to {slug, meta, entry} or null
+// (null when the file is missing or has no entry for that day — e.g. a gap date).
+function _dailyFetchDevotEntry(slug, dateKey) {
+  var meta = DAILY_DEVOT_SOURCES[slug];
+  if (!meta) return Promise.resolve(null);
+  return fetch(DAILY_DEVOT_BASE + '/' + meta.file)
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (data) {
+      if (!data || !data[dateKey]) return null;
+      return { slug: slug, meta: meta, entry: data[dateKey] };
+    })
+    .catch(function () { return null; });
+}
+
+// Pick the day's author for a slot, walking the rotation (wrapping) until one has
+// an entry for today — so an author whose edition omits a date is skipped, not blank.
+function _dailyResolveVariety(period, dateKey, dayOfYear) {
+  var pool = DAILY_VARIETY[period] || [];
+  if (!pool.length) return Promise.resolve(null);
+  // Evening starts one author ahead of morning so the two slots don't coincide.
+  var offset = (period === 'evening') ? 1 : 0;
+  var start = (dayOfYear - 1 + offset) % pool.length;
+  var order = [];
+  for (var i = 0; i < pool.length; i++) order.push(pool[(start + i) % pool.length]);
+  var idx = 0;
+  function tryNext() {
+    if (idx >= order.length) return null;
+    return _dailyFetchDevotEntry(order[idx++], dateKey).then(function (res) {
+      return res || tryNext();
+    });
+  }
+  return Promise.resolve().then(tryNext);
+}
+
+// Render a resolved devotional entry ({slug, meta, entry}) with an author byline.
+function _dailyRenderDevotEntry(res, period) {
+  var titleEl = document.getElementById('daily-devot-title');
+  var bodyEl  = document.getElementById('daily-devot-content');
+  if (!bodyEl) return;
+  var meta = res.meta, entry = res.entry;
+
+  if (titleEl) {
+    titleEl.innerHTML = escHtml(meta.author) +
+      ' <span class="daily-period-badge">' +
+      (period === 'morning' ? '🌅 Morning' : '🌙 Evening') + '</span>';
+  }
+
+  var ref = entry.verse_ref || '';
+  var refLink = ref
+    ? ' &nbsp;<a class="ref" data-ref="' + escHtml(ref) + '">' + escHtml(ref) + '</a>'
+    : '';
+  var paragraphs = (entry.body || '').split('\n\n').filter(function (p) { return p.trim(); });
+  var bodyHtml = paragraphs.map(function (p) {
+    return '<p>' + escHtml(p.trim()) + '</p>';
+  }).join('');
+  bodyEl.innerHTML =
+    '<blockquote class="daily-spurgeon-verse">' +
+      escHtml(entry.verse_text) +
+      '<cite>' + refLink + '</cite>' +
+    '</blockquote>' +
+    '<div class="daily-spurgeon-body">' + bodyHtml + '</div>' +
+    '<p class="daily-devot-attribution">— ' + escHtml(meta.author) +
+      ', <em>' + escHtml(meta.work) + '</em></p>';
+  wireRefLinks(bodyEl);
 }
 
 function _dailySetupNotifications(period) {

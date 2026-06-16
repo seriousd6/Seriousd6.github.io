@@ -582,10 +582,14 @@ function _buildScopeButtons() {
     btn.textContent = scope.label;
     btn.dataset.scopeId = scope.id;
     btn.title = scope.shape.charAt(0).toUpperCase() + scope.shape.slice(1) + ' shape';
+    // AUD-25: aria-pressed mirrors the --active class for assistive tech.
+    btn.setAttribute('aria-pressed', String(scope.id === 'all'));
     btn.addEventListener('click', function () {
       _activeScope = scope.id;
       wrap.querySelectorAll('.wc-scope-btn').forEach(function (b) {
-        b.classList.toggle('wc-scope-btn--active', b.dataset.scopeId === scope.id);
+        var on = b.dataset.scopeId === scope.id;
+        b.classList.toggle('wc-scope-btn--active', on);
+        b.setAttribute('aria-pressed', String(on));
       });
       _render();
     });
@@ -596,18 +600,21 @@ function _buildScopeButtons() {
 function _wireProperToggle() {
   var btn = document.getElementById('wc-proper-toggle');
   if (!btn) return;
+  // AUD-25: keep aria-pressed in sync with the visual --on class so screen readers
+  // announce whether proper names are currently shown.
+  var sync = function () {
+    btn.classList.toggle('wc-proper-toggle--on', _showProper);
+    btn.setAttribute('aria-pressed', String(_showProper));
+    btn.textContent = _showProper ? 'Hide names' : 'Show names';
+  };
   // Restore persisted toggle state
   var stored = localStorage.getItem('bsw_wc_showProper');
-  if (stored !== null) {
-    _showProper = stored !== 'false';
-    btn.classList.toggle('wc-proper-toggle--on', _showProper);
-    btn.textContent = _showProper ? 'Hide names' : 'Show names';
-  }
+  if (stored !== null) _showProper = stored !== 'false';
+  sync();
   btn.addEventListener('click', function () {
     _showProper = !_showProper;
     localStorage.setItem('bsw_wc_showProper', String(_showProper));
-    btn.classList.toggle('wc-proper-toggle--on', _showProper);
-    btn.textContent = _showProper ? 'Hide names' : 'Show names';
+    sync();
     _render();
   });
 }
@@ -637,7 +644,9 @@ function _showDetail(word) {
   if (defEl)   defEl.innerHTML     = _buildBars(w);
 
   if (linkEl) {
-    linkEl.href = '../word/?s=' + encodeURIComponent(w.id) + '&from=wordcloud';
+    // PERF-10: link straight to the workshop (the old /word/ page is just a redirect now),
+    // avoiding an extra navigation hop.
+    linkEl.href = '../translation/workshop/?s=' + encodeURIComponent(w.id) + '&from=wordcloud';
   }
 
   panel.hidden = false;

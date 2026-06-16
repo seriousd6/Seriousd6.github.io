@@ -454,7 +454,44 @@ export function parseRef(str) {
   var m = str.match(
     /^((?:[1-4]\s+)?(?:[A-Za-z]+\s+)*[A-Za-z]+)\s+(\d+):(\d+)(?:-(?:(\d+):)?(\d+))?$/
   );
-  if (!m) return null;
+  // INTENT: When there's no ":verse", fall back to a whole-chapter / chapter-range
+  //   ref ("Isaiah 53", "Deuteronomy 28-30"). Without this, parseRef returned null and
+  //   wireRefLinks left such [data-ref] anchors inert — ~1,142 biblepedia chapter refs
+  //   looked clickable but did nothing. We emit the SAME shape autoTagChapterRefs uses
+  //   (v:1, endV:9999, wholeChapter:true) so the tooltip/modal open the whole chapter.
+  //   EXCEPTION: single-chapter books (Obadiah/Philemon/Jude/2-3 John) are cited by verse,
+  //   so a bare number is a VERSE of the one chapter ("Jude 6" = Jude 1:6), not a chapter —
+  //   we resolve those to a normal verse ref (no wholeChapter) using books.json `chapters`.
+  // CHANGE? Keep the whole-chapter object's fields in sync with the parsed object built in
+  //   wire.js autoTagChapterRefs(); modal.js resolveVerses / tooltip.js key off
+  //   wholeChapter + endV:9999. Verse-form match above must take priority (try it first).
+  //   The single-chapter branch relies on metaBooks[].chapters being present (from books.json).
+  // VERIFY: ?a=apostasy "Deuteronomy 28-30" opens the modal to those chapters; ?a=onesimus
+  //   "Philemon 10" opens the modal to Philemon 1:10 (a single verse, not "chapter 10").
+  if (!m) {
+    var cm = str.match(/^((?:[1-4]\s+)?(?:[A-Za-z]+\s+)*[A-Za-z]+)\s+(\d+)(?:-(\d+))?$/);
+    if (!cm) return null;
+    var cBookId = normalizeBook(cm[1]);
+    if (!cBookId) return null;
+    var cBook  = metaBooks && metaBooks.find(function (b) { return b.id === cBookId; });
+    var cName  = cBook ? cBook.name : cm[1];
+    var n1     = parseInt(cm[2], 10);
+    var n2     = cm[3] ? parseInt(cm[3], 10) : null;
+
+    if (cBook && cBook.chapters === 1) {
+      // Single-chapter book: the number(s) are verse(s) of chapter 1.
+      var sV = n1, eV = (n2 != null ? n2 : n1);
+      return { bookId: cBookId, bookName: cName, ch: 1, v: sV,
+               endCh: 1, endV: eV,
+               display: cName + ' ' + sV + (eV !== sV ? '–' + eV : ''), raw: str };
+    }
+
+    var cCh    = n1;
+    var cEndCh = (n2 != null ? n2 : n1);
+    var cDisp  = cName + ' ' + cCh + (cEndCh !== cCh ? '–' + cEndCh : '');
+    return { bookId: cBookId, bookName: cName, ch: cCh, v: 1,
+             endCh: cEndCh, endV: 9999, display: cDisp, raw: str, wholeChapter: true };
+  }
 
   var bookId = normalizeBook(m[1]);
   if (!bookId) return null;

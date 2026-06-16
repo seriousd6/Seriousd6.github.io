@@ -55,7 +55,6 @@ import {
 import {
   initVerseStudyPage, loadVerseStudyVerse, renderModalWordStudy
 } from './verse-study.js';
-import { initWordPage } from './word.js';
 import { initDailyPage, initMemorizePage, initPlansHomeWidget, _memHas, _memAdd, _memRemove, _memRefreshModalBtn } from './daily.js';
 import { initDictionaryPage, renderModalTopics, renderModalConfessions, renderModalFathers, renderModalDictionary } from './library.js';
 import { initBiblepediaPage } from './biblepedia.js';
@@ -194,12 +193,6 @@ function init() {
     // Detected by #vs-sections-container.
     if (document.getElementById('vs-sections-container')) {
       initVerseStudyPage();
-    }
-
-    // ── Word Study page (word/index.html) ─────────────────────────────────
-    // Detected by #wd-header.
-    if (document.getElementById('wd-header')) {
-      initWordPage();
     }
 
     // Auto-tag plain-text Bible refs and wire inline .bsw-verse elements

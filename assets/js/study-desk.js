@@ -51,6 +51,9 @@ var _JOURNEY_URL = new URL('../../data/study/journeys.json', import.meta.url).hr
 var _REFS_URL    = new URL('../../data/strongs/refs/', import.meta.url).href;
 var _INTRO_URL   = new URL('../../data/books/introductions/', import.meta.url).href;
 var _SYNTH_URL   = new URL('../../data/synthesis/', import.meta.url).href;
+var _BP_URL      = new URL('../../biblepedia/', import.meta.url).href;            // article reader page (?a=slug)
+var _BP_IDX_URL  = new URL('../../data/biblepedia/index.json', import.meta.url).href;
+var _BP_ART_URL  = new URL('../../data/biblepedia/articles/', import.meta.url).href;
 
 // Leaflet basemap config — mirrors maps.js so the desk map looks like the maps page.
 var _TILE_URL  = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
@@ -70,7 +73,7 @@ var _rangeFrom = 1, _rangeTo = 0, _maxV = 0;
 
 // Snapshot each section computed, so "Export study sheet" can assemble Markdown without
 // recomputing.
-var _lastData = { ref: '', outline: [], speakers: [], keywords: [], places: [], powers: [], context: null, xrefs: [], echoes: [] };
+var _lastData = { ref: '', outline: [], speakers: [], keywords: [], places: [], powers: [], context: null, xrefs: [], echoes: [], biblepedia: [] };
 
 var _COLLAPSE_KEY = 'bsw_study_collapsed';
 
@@ -134,6 +137,23 @@ function _loadSynthesis(bookId, ch) {
     .catch(function () { _synthCache[k] = {}; return {}; });
 }
 
+// Biblepedia: one shared index (term + brief + key_refs per entry), articles fetched on demand.
+// The index is ~1.7 MB so it's loaded once and cached for the session; per-article intros are
+// fetched lazily only when a card is expanded (a chapter can key dozens of articles).
+var _bpIdxCache = null, _bpArtCache = Object.create(null);
+function _loadBPIndex() {
+  if (_bpIdxCache) return Promise.resolve(_bpIdxCache);
+  return fetch(_BP_IDX_URL).then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (d) { _bpIdxCache = Array.isArray(d) ? d : []; return _bpIdxCache; })
+    .catch(function () { _bpIdxCache = []; return _bpIdxCache; });
+}
+function _loadBPArticle(id) {
+  if (_bpArtCache[id]) return Promise.resolve(_bpArtCache[id]);
+  return fetch(_BP_ART_URL + id + '.json').then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) { _bpArtCache[id] = d || {}; return _bpArtCache[id]; })
+    .catch(function () { _bpArtCache[id] = {}; return {}; });
+}
+
 // ── verse helpers ──────────────────────────────────────────────────────────
 function _maxVerse() {
   var max = 0;
@@ -165,11 +185,14 @@ function _scrollToVerse(v) {
 function _collapsedMap() { try { return JSON.parse(localStorage.getItem(_COLLAPSE_KEY) || '{}') || {}; } catch (e) { return {}; } }
 function _setCollapsed(id, on) {
   var c = _collapsedMap();
-  if (on) c[id] = 1; else delete c[id];
+  c[id] = on ? 1 : 0;   // store the explicit choice (incl. expand=0) so default-collapsed sections honour a user expand
   try { localStorage.setItem(_COLLAPSE_KEY, JSON.stringify(c)); } catch (e) {}
 }
-function _sectionShell(id, title) {
-  var isC = !!_collapsedMap()[id];
+// defaultCollapsed applies only when the user has no stored preference for this section (e.g.
+// the heavy Encyclopedia starts closed so its 1.7MB index isn't fetched until asked for).
+function _sectionShell(id, title, defaultCollapsed) {
+  var stored = _collapsedMap();
+  var isC = Object.prototype.hasOwnProperty.call(stored, id) ? !!stored[id] : !!defaultCollapsed;
   return '<section class="study-section" data-sec="' + id + '">' +
     '<button type="button" class="study-sec-toggle" aria-expanded="' + (isC ? 'false' : 'true') + '" aria-controls="' + id + '">' +
       '<span class="study-sec-chevron" aria-hidden="true">▾</span>' +
@@ -193,6 +216,10 @@ function _wireToggles() {
           pm.map.invalidateSize();
           if (pm.bounds) { try { pm.map.fitBounds(pm.bounds, { padding: [24, 24], maxZoom: 9 }); } catch (e) {} }
         });
+      }
+      // The Encyclopedia index is deferred until first expand (see _fillBiblepedia).
+      if (!open && body.id === 'sd-biblepedia' && _bpPending && _bpLoadedKey !== _bpPending.key) {
+        _bpLoad(_bpPending.bookId, _bpPending.ch, _bpPending.key);
       }
     });
   });
@@ -766,6 +793,85 @@ function _fillConnections(bookId, bookName, ch, key) {
   }).catch(function () { if (host.isConnected) host.innerHTML = '<p class="study-empty">Could not load.</p>'; });
 }
 
+// ── Encyclopedia (Biblepedia) ───────────────────────────────────────────────
+// Articles for which the current passage (book + chapter, narrowed by the range scope) is a
+// listed key reference. The section is just a launcher showing the count; the cards live in a
+// blade so the full intro text has room to breathe. Matching uses parseRef on each entry's
+// key_refs — the same curated "key references" the encyclopedia ships — so we surface the
+// articles a reader most needs here without a full per-verse concordance.
+function _bpMatches(idx, bookId, ch) {
+  if (!Array.isArray(idx)) return [];
+  var out = [];
+  idx.forEach(function (a) {
+    if (!a || a.has_article === false) return;          // only entries with a readable article
+    var refs = a.key_refs || [], hits = [];
+    for (var i = 0; i < refs.length; i++) {
+      var p = parseRef(refs[i]);
+      if (p && p.bookId === bookId && p.ch === ch && _inRange(p.v)) hits.push(p.display || refs[i]);
+    }
+    if (hits.length) out.push({ id: a.id, term: a.term, category: a.category, brief: a.brief || '', refs: hits });
+  });
+  // Group by kind (people → places → events → concepts → …), then alphabetical within a kind.
+  var order = { people: 0, places: 1, events: 2, event: 2, concepts: 3, concept: 3, names: 4, father: 5, commentator: 6 };
+  out.sort(function (a, b) {
+    var ca = order[a.category] != null ? order[a.category] : 9;
+    var cb = order[b.category] != null ? order[b.category] : 9;
+    if (ca !== cb) return ca - cb;
+    return String(a.term).localeCompare(String(b.term));
+  });
+  return out;
+}
+
+// Context of the last passage offered to the Encyclopedia, and the key it was actually loaded
+// for — so an expand can fire the deferred load and re-expands don't re-scan the same chapter.
+var _bpPending = null, _bpLoadedKey = null;
+
+// Write the live article count into the collapsed section's header so it reads "Encyclopedia (27)".
+function _setBPCount(n) {
+  var t = _bodyEl && _bodyEl.querySelector('[data-sec="sd-biblepedia"] .study-sec-title');
+  if (t) t.textContent = n ? 'Encyclopedia (' + n + ')' : 'Encyclopedia';
+}
+
+// Called on every chapter/range change. The 1.7MB index is NOT touched while the section is
+// collapsed — we only stash the context and show a hint; _wireToggles fires _bpLoad on first
+// expand. While expanded, refilling (e.g. a range change) re-runs the load with the new scope.
+function _fillBiblepedia(bookId, ch, key) {
+  var host = document.getElementById('sd-biblepedia');
+  if (!host) return;
+  _bpPending = { bookId: bookId, ch: ch, key: key };
+  _setBPCount(0);
+  if (host.hidden) {
+    _bpLoadedKey = null;                 // content is wiped; force a reload when next expanded
+    _lastData.biblepedia = [];
+    host.innerHTML = '<p class="study-empty">Expand to find encyclopedia articles for this passage.</p>';
+    return;
+  }
+  _bpLoad(bookId, ch, key);
+}
+
+function _bpLoad(bookId, ch, key) {
+  var host = document.getElementById('sd-biblepedia');
+  if (!host) return;
+  _lastData.biblepedia = [];
+  host.innerHTML = '<p class="study-empty">Loading…</p>';
+  _loadBPIndex().then(function (idx) {
+    if (_curKey !== key || !host.isConnected) return;
+    var matches = _bpMatches(idx, bookId, ch);
+    _lastData.biblepedia = matches;
+    _bpLoadedKey = key;
+    _setBPCount(matches.length);
+    if (!matches.length) { host.innerHTML = '<p class="study-empty">No encyclopedia articles for this range.</p>'; return; }
+    var n = matches.length;
+    host.innerHTML =
+      '<p class="study-sec-note">' + n + ' article' + (n === 1 ? '' : 's') + ' key to this passage.</p>' +
+      '<button type="button" class="study-bookbtn" id="sd-bp-open">📚 Read ' + n + ' article' + (n === 1 ? '' : 's') + ' as cards →</button>';
+    var btn = document.getElementById('sd-bp-open');
+    if (btn) btn.addEventListener('click', function () {
+      openBlade('biblepedia', { articles: matches, ref: _lastData.ref }, 'Encyclopedia');
+    });
+  }).catch(function () { if (host.isConnected) host.innerHTML = '<p class="study-empty">Could not load.</p>'; });
+}
+
 // ── Notes + export ─────────────────────────────────────────────────────────
 function _notesKey(bookId, ch) { return 'bsw_study_notes_' + bookId + '_' + ch; }
 function _fillNotes(bookId, ch) {
@@ -801,6 +907,7 @@ function _buildSheet(notes) {
   if (d.places.length) { L.push('## Places'); d.places.forEach(function (p) { L.push('- ' + p.name + ' (v' + p.verses.join(', ') + ')' + (p.under ? ' — under ' + p.under : '')); }); L.push(''); }
   if (d.xrefs.length) { L.push('## Cross-references'); L.push(d.xrefs.join('; ')); L.push(''); }
   if (d.echoes.length) { L.push('## Echoes & allusions'); d.echoes.forEach(function (e) { L.push('- ' + e); }); L.push(''); }
+  if (d.biblepedia && d.biblepedia.length) { L.push('## Encyclopedia articles'); d.biblepedia.forEach(function (b) { L.push('- **' + b.term + '**' + (b.category ? ' (' + b.category + ')' : '') + (b.refs && b.refs.length ? ' — ' + b.refs.join(', ') : '')); }); L.push(''); }
   if (notes && notes.trim()) { L.push('## Notes'); L.push(notes.trim()); L.push(''); }
   return L.join('\n');
 }
@@ -851,6 +958,7 @@ function _refillScoped(bookId, bookName, ch, key) {
   _fillKeywords(bookId, ch, key);
   _fillMaps(bookId, bookName, ch, key);
   _fillConnections(bookId, bookName, ch, key);
+  _fillBiblepedia(bookId, ch, key);
 }
 
 // ── Main render ────────────────────────────────────────────────────────────
@@ -886,6 +994,7 @@ function _render() {
       _sectionShell('sd-keywords', 'Key words') +
       _sectionShell('sd-maps', 'Where & when') +
       _sectionShell('sd-connections', 'Connections') +
+      _sectionShell('sd-biblepedia', 'Encyclopedia', true) +   // default-collapsed: defer the heavy index
       _sectionShell('sd-notes', 'Notes');
 
     var bookBtn = document.getElementById('sd-book-btn');
@@ -934,6 +1043,15 @@ function _setOpen(on) {
     _btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   }
   if (on) { _armObserver(); _render(); } else { _disarmObserver(); _destroyMaps(); _closeBlades(); }
+}
+
+// Escape backs out of the study surface: pop the top blade first (same as the breadcrumb
+// Back ‹), or close the whole desk when no blade is open. Registered once in initStudyDesk;
+// no-ops unless the desk is open, so it never swallows Escape elsewhere on the reader.
+function _onKeydown(e) {
+  if (e.key !== 'Escape' || !_open) return;
+  if (_bladeStack.length) { e.preventDefault(); _bladeBack(); }
+  else { e.preventDefault(); _setOpen(false); if (_btn) _btn.focus(); }
 }
 
 function _buildDesk() {
@@ -1222,9 +1340,83 @@ function _fillSynthVoices(bookId, ch, range) {
   }).catch(function () { host.innerHTML = '<p class="study-empty">Could not load voices.</p>'; });
 }
 
+// ── Encyclopedia blade ─────────────────────────────────────────────────────
+// INTENT: List every Biblepedia article keyed to the passage as an expandable card. The card
+//   summary (term + kind + the matched verses) is built from the already-loaded index; the full
+//   intro HTML we authored is fetched lazily on first expand, with a link out to the full article.
+// CHANGE? Opened from the "Encyclopedia" section launcher (_fillBiblepedia) with params.articles
+//   pre-computed by _bpMatches. Intros come from data/biblepedia/articles/{id}.json (.intro);
+//   "Read the full article" targets /biblepedia/?a={id}.
+// VERIFY: Study desk on Exodus 6 → Encyclopedia → "Read N articles as cards" → cards for Aaron,
+//   Moses, … ; expanding Aaron loads the intro paragraph + a working "Read the full article →".
+var _BP_CAT_LABELS = {
+  people: 'Person', places: 'Place', events: 'Event', event: 'Event',
+  concepts: 'Concept', concept: 'Concept', names: 'Name', father: 'Church Father', commentator: 'Commentator'
+};
+function _bpCatLabel(c) { return _BP_CAT_LABELS[c] || (c ? c.charAt(0).toUpperCase() + c.slice(1) : ''); }
+
+function _renderBiblepediaBlade(params, body) {
+  var arts = params.articles || [];
+  if (!arts.length) { body.innerHTML = '<p class="study-empty">No encyclopedia articles for this passage.</p>'; return; }
+  var html = '<div class="study-bp">' +
+    '<p class="study-bp__intro">' + arts.length + ' article' + (arts.length === 1 ? '' : 's') +
+      ' the encyclopedia keys to <strong>' + _esc(params.ref || 'this passage') + '</strong>. ' +
+      'Open a card for its full introduction.</p>';
+  arts.forEach(function (a) {
+    html += '<details class="study-bp-card" data-id="' + _esc(a.id) + '">' +
+      '<summary class="study-bp-card__sum">' +
+        '<span class="study-bp-card__term">' + _esc(a.term) + '</span>' +
+        (a.category ? '<span class="study-bp-card__cat study-bp-card__cat--' + _esc(a.category) + '">' + _esc(_bpCatLabel(a.category)) + '</span>' : '') +
+      '</summary>' +
+      '<div class="study-bp-card__body">' +
+        (a.brief ? '<p class="study-bp-card__brief">' + _esc(a.brief) + '</p>' : '') +
+        (a.refs && a.refs.length
+          ? '<div class="study-bp-card__refs">' + a.refs.map(function (r) {
+              return '<a class="ref study-bp-card__ref" data-ref="' + _esc(r) + '">' + _esc(r) + '</a>';
+            }).join('') + '</div>'
+          : '') +
+        '<div class="study-bp-card__lazy"><p class="study-empty">Loading…</p></div>' +
+      '</div>' +
+    '</details>';
+  });
+  html += '</div>';
+  body.innerHTML = html;
+  wireRefLinks(body);   // matched-verse chips scroll the reader
+
+  body.querySelectorAll('.study-bp-card').forEach(function (card) {
+    var loaded = false;
+    card.addEventListener('toggle', function () {
+      if (!card.open || loaded) return;
+      loaded = true;
+      _fillBPCard(card.getAttribute('data-id'), card.querySelector('.study-bp-card__lazy'));
+    });
+  });
+}
+
+function _fillBPCard(id, host) {
+  if (!host) return;
+  _loadBPArticle(id).then(function (art) {
+    if (!host.isConnected) return;
+    var intro = (art && art.intro) || '';
+    var more = '<a class="study-bp-card__more" target="_blank" rel="noopener" href="' +
+      _esc(_BP_URL + '?a=' + encodeURIComponent(id)) + '">Read the full article →</a>';
+    host.innerHTML = (intro ? '<div class="study-bp-card__intro">' + intro + '</div>'
+                            : '<p class="study-empty">No introduction available.</p>') + more;
+    // The index "brief" is usually the intro's first sentence — once the full intro is shown,
+    // drop the teaser so it isn't repeated verbatim. Kept as the only text if there's no intro.
+    if (intro) {
+      var brief = host.closest('.study-bp-card__body');
+      brief = brief && brief.querySelector('.study-bp-card__brief');
+      if (brief) brief.remove();
+    }
+    wireRefLinks(host);
+  }).catch(function () { host.innerHTML = '<p class="study-empty">Could not load this article.</p>'; });
+}
+
 _BLADES['word-study'] = _renderWordStudyBlade;
 _BLADES['book-details'] = _renderBookDetailsBlade;
 _BLADES['section-synthesis'] = _renderSectionSynthesisBlade;
+_BLADES['biblepedia'] = _renderBiblepediaBlade;
 
 export function initStudyDesk() {
   var browseBar = document.querySelector('.reader-browse-bar');
@@ -1241,6 +1433,7 @@ export function initStudyDesk() {
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(_btn, hint || null);
   _btn.addEventListener('click', function () { _setOpen(!_open); });
+  document.addEventListener('keydown', _onKeydown);
 
   _deskEl = _buildDesk();
   layout.appendChild(_deskEl);

@@ -73,6 +73,28 @@ body {
   transition: padding-left 0.22s ease;
 }
 
+/* AUD-27: skip-to-content link — off-screen until keyboard focus, then pinned top-left. */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  z-index: 2000;
+  margin: 8px;
+  padding: 0.5rem 0.9rem;
+  background: var(--color-primary, #5c3d1e);
+  color: var(--color-on-primary, #fff);
+  border-radius: 6px;
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease;
+}
+.skip-link:focus { transform: translateY(0); outline: 2px solid var(--color-accent, #c8a84b); outline-offset: 2px; }
+/* The focused <main> shouldn't show a persistent outline (it's a programmatic focus target). */
+main:focus { outline: none; }
+
 /* Collapsed: sidebar off-screen, content fills full width */
 body.sidebar-collapsed { padding-left: 0; }
 
@@ -639,6 +661,14 @@ span.term { font-weight: bold; color: var(--color-primary); }
   --color-muted:     #9a8870;
   --color-border:    #3a2e1e;
   --color-bg-alt:    #2a1f0f;
+  /* Subtle surfaces / soft text used across feature CSS (chips, badges, blurbs) via
+     var(--name, light-fallback). These were never defined, so dark mode silently fell
+     back to the LIGHT values (#f5f5f5 etc.) — light chip bg + light --color-text = unreadable
+     (e.g. the ?cat=motifs page). Defining them here switches those surfaces to the dark palette;
+     light mode is unaffected since it keeps using the fallbacks. */
+  --color-surface-subtle: #2a1f0f;
+  --color-surface-alt:    #382a16;
+  --color-text-soft:      #ab9a7e;
   --sb-bg:           #120d05;
   --sb-text:         #e8d9bb;
   --sb-muted:        #9e8a6e;   /* lightened from #7a6a55 — old value was 3.70:1, below WCAG AA 4.5:1 */
@@ -663,6 +693,9 @@ span.term { font-weight: bold; color: var(--color-primary); }
     --color-muted:     #9a8870;
     --color-border:    #3a2e1e;
     --color-bg-alt:    #2a1f0f;
+    --color-surface-subtle: #2a1f0f;  /* matches [data-theme="dark"] — see note there */
+    --color-surface-alt:    #382a16;
+    --color-text-soft:      #ab9a7e;
     --sb-bg:           #120d05;
     --sb-text:         #e8d9bb;
     --sb-muted:        #9e8a6e;   /* matches [data-theme="dark"] fix */

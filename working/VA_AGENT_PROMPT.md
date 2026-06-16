@@ -1,7 +1,7 @@
 /clear
 # Verse Auditor Agent Prompt
 
-This prompt runs in a loop — each session claims one file from VA_PROGRESS.md, wraps bare
+This prompt runs in a loop — each session claims **three files** from VA_PROGRESS.md, wraps bare
 scripture references with `<a class="ref" data-ref="...">` tags, and updates the tracker.
 Each iteration is fully self-contained. Working directory: repo root.
 
@@ -41,7 +41,10 @@ If not overdue: skip to Step 1.
 
 ---
 
-## Step 1 — Claim a work unit
+## Step 1 — Claim and process 3 work units
+
+Repeat Steps 1–5 **three times** before moving to Step 6. Each repetition claims one row,
+processes it, and marks it complete (or skipped) before claiming the next.
 
 Scan `VA_PROGRESS.md` section tables in priority order: **T → M → E → L → D → K → P → O**.
 
@@ -63,7 +66,40 @@ age = datetime.now(timezone.utc) - ts
 print('age:', age, '— stale' if age > timedelta(hours=1) else '— active, SKIP')
 ```
 
-### 1b. Claim it
+### 1b. mtime check (skip if file unchanged since last run)
+
+Read the `Last Run` cell from the row. If it is `—`, skip this check and go to 1c.
+
+Otherwise, check the file's modification time against `Last Run`:
+
+```python
+import os
+from datetime import datetime, timezone
+
+file_path = 'data/commentary/mkt-context/1chronicles'  # ← from row
+last_run  = '2026-06-15T01:59:52Z'                     # ← from row's Last Run cell
+
+if os.path.isdir(file_path):
+    mtimes = [os.path.getmtime(os.path.join(file_path, f))
+              for f in os.listdir(file_path)
+              if os.path.isfile(os.path.join(file_path, f))]
+    mtime = max(mtimes) if mtimes else 0
+else:
+    mtime = os.path.getmtime(file_path)
+
+file_modified = datetime.fromtimestamp(mtime, tz=timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+
+if last_run >= file_modified:
+    print(f'SKIP: unchanged (file_modified={file_modified}, last_run={last_run})')
+else:
+    print(f'PROCESS: changed (file_modified={file_modified}, last_run={last_run})')
+```
+
+**If SKIP:** Write to the row in one save: `Status → skipped`, `File Modified → file_modified`, `Notes → unchanged since {last_run}`. Do **not** claim as `in-progress`. Count as one work unit and move to the next candidate.
+
+**If PROCESS (or Last Run was `—`):** Continue to 1c.
+
+### 1c. Claim it
 
 ```python
 from datetime import datetime, timezone
@@ -146,13 +182,34 @@ Run idempotency check — `--dry-run` on the now-processed file should show `Ref
 python3 scripts/va_process.py data/commentary/ellicott/romans.json --dry-run
 ```
 
+Get the file's modification time to store in `File Modified`:
+
+```python
+import os
+from datetime import datetime, timezone
+
+file_path = 'data/commentary/ellicott/romans.json'  # ← from row
+
+if os.path.isdir(file_path):
+    mtimes = [os.path.getmtime(os.path.join(file_path, f))
+              for f in os.listdir(file_path)
+              if os.path.isfile(os.path.join(file_path, f))]
+    mtime = max(mtimes) if mtimes else 0
+else:
+    mtime = os.path.getmtime(file_path)
+
+file_modified = datetime.fromtimestamp(mtime, tz=timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+print(f'File Modified: {file_modified}')
+```
+
 Update the row in `VA_PROGRESS.md` in a **single save**:
 
 ```
-Status    → complete
-Refs Fixed → N    (use the refs_fixed number from Step 3 output)
-Last Run  → ISO timestamp (now)
-Notes     → any edge case observations, or — if clean
+Status        → complete
+Refs Fixed    → N    (use the refs_fixed number from Step 3 output)
+Last Run      → ISO timestamp (now)
+File Modified → file_modified from above
+Notes         → any edge case observations, or — if clean
 ```
 
 Re-read `VA_PROGRESS.md` after saving to confirm `in-progress` is gone from the row.
@@ -161,6 +218,7 @@ Re-read `VA_PROGRESS.md` after saving to confirm `in-progress` is gone from the 
 
 ## Step 6 — Loop completion check
 
+Run after all 3 files are processed (or after any skips that reduce the batch).
 Count active rows (status = `not_started` or `in-progress`):
 
 ```python
@@ -172,26 +230,46 @@ in_prog     = len(re.findall(r'\| in-progress @', text))
 print(f'Remaining: {not_started} not_started, {in_prog} in-progress')
 ```
 
-**If any `not_started` rows remain:** stop — this iteration is complete.
+**If any `not_started` rows remain:** stop — this iteration is complete. Proceed to Step 7.
 
 **If ALL rows are `complete`, `skipped`, or `removed`:**
-  1. Reset every `complete` and `skipped` row to `not_started`; clear Refs Fixed, Last Run, Notes to `—`
-  2. Increment `Loop restarts completed` in the header
-  3. Update the `Last discovery:` and `Next discovery due:` lines to trigger re-discovery next iteration
-  4. Save `VA_PROGRESS.md`
-  5. Print: `Loop N complete at <TIMESTAMP>. Restarting.`
-  6. Continue immediately to Step 0 (do not wait for ScheduleWakeup)
+  1. Print: `All files audited at <TIMESTAMP>. Loop complete — stopping.`
+  2. Do NOT call ScheduleWakeup. The loop ends here.
+  3. The user will restart the loop manually when they want another full pass.
+
+**Manual restart command** (run in repo root to reset statuses while preserving Last Run / File Modified):
+
+```python
+with open('working/VA_PROGRESS.md') as f:
+    lines = f.readlines()
+
+out = []
+for line in lines:
+    if line.startswith('|') and ('| complete |' in line or '| skipped |' in line):
+        parts = line.split('|')
+        if len(parts) == 8 and parts[2].strip() in ('complete', 'skipped'):
+            parts[2] = ' not_started '
+        out.append('|'.join(parts))
+    else:
+        out.append(line)
+
+with open('working/VA_PROGRESS.md', 'w') as f:
+    f.writelines(out)
+print('Reset complete.')
+```
 
 ---
 
 ## Step 7 — Schedule next wake
 
-After stopping (Step 6 first branch), call ScheduleWakeup with:
+Only reached if `not_started` rows remain (Step 6 first branch).
+
+After completing this iteration (all 3 files), run `/compact` before calling ScheduleWakeup.
+
+Call ScheduleWakeup with:
   - `delaySeconds`: 60
   - `reason`: `VA loop — processing next file in queue`
   - `prompt`: same /loop prompt used to start this session
-
-After completing this iteration, run `/compact` before calling ScheduleWakeup.
 
 ---
 

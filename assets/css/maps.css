@@ -193,6 +193,14 @@
   margin: 0 0 .45rem;
 }
 
+.maps-legend-note {
+  margin-top: .5rem;
+  font-size: .62rem;
+  font-style: italic;
+  color: var(--color-muted, #888);
+  opacity: .9;
+}
+
 .maps-legend-item {
   display: flex;
   align-items: center;

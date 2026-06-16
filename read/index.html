@@ -12,6 +12,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" id="bsw-tw-title" content="The Holy Bible — Bible Study" />
   <meta name="twitter:description" id="bsw-tw-desc" content="Read the Bible by reference with version switching." />
+  <script>try{var t=localStorage.getItem('bsw_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/bible-ui.css" />
   <link rel="stylesheet" href="../assets/css/reader.css" />
@@ -27,8 +28,9 @@
           <div class="reader-controls">
             <div class="reader-lookup-bar">
               <input id="reader-lookup-input" class="reader-lookup-input" type="search"
-                placeholder="Gen 1; John 3:16-21; Rom 8:28, 38-39"
-                autocomplete="off" spellcheck="false" aria-label="Go to Bible reference" />
+                placeholder="John 3:16 · Romans 8 · parables · the beatitudes"
+                autocomplete="off" spellcheck="false"
+                aria-label="Go to a passage, or search topics and sections" />
               <button id="reader-lookup-btn" class="reader-lookup-btn">Go</button>
               <span id="reader-lookup-status" class="reader-lookup-status" aria-live="polite"></span>
             </div>

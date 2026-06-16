@@ -8,6 +8,19 @@ import { wireRefLinks } from './wire.js';
 var TILE_URL  = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
 var TILE_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 
+/* ── Canonical region geometry (single source shared with the timelapse) ────── */
+// INTENT: data/maps/regions.json is the canonical, era-scoped source for region/empire/tribe
+//   outlines. maps.js loads it once in initMapsPage and scene render() functions pull geometry
+//   via _regionCoords(id, era). Inline coords remain at each call site as a safety fallback so
+//   a missing/failed regions.json never blanks a map (we can't visually verify here).
+// CHANGE? Region ids must match data/maps/regions.json `id` fields; era strings must match a
+//   period's `era`. If a scene needs a region not yet in regions.json, add it there (don't
+//   reintroduce a permanent inline-only shape) — the fallback arg is only a safety net.
+// VERIFY: Load /maps/#twelve-tribes → tribe outlines match regions.json (tribe-* settlement
+//   period). Block regions.json in DevTools → maps still render via inline fallbacks.
+var _REGIONS_URL = new URL('../../data/maps/regions.json', import.meta.url).href;
+var _REGIONS     = null;   // { id → region } once loaded; null until then / on failure
+
 /* ── Canonical city coordinates ──────────────────────────────────────────── */
 // INTENT: Single source of truth for recurring city lat/lon so future edits
 //   don't drift across render functions. All array form [lat, lon].
@@ -361,6 +374,21 @@ export function initMapsPage() {
     document.getElementById('maps-map').textContent = 'Map library failed to load. Please check your internet connection.';
     return;
   }
+  // Load canonical region geometry first so the first render() can use it; on failure we
+  // proceed with _REGIONS=null and every _region() call falls back to its inline coords.
+  fetch(_REGIONS_URL)
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (doc) {
+      if (doc && doc.regions) {
+        _REGIONS = {};
+        doc.regions.forEach(function (rg) { _REGIONS[rg.id] = rg; });
+      }
+    })
+    .catch(function () { /* fallbacks handle it */ })
+    .then(function () { _startMapsPage(); });
+}
+
+function _startMapsPage() {
   _buildNav();
   _wireDetailClose();
   _wireResetButton();
@@ -373,6 +401,24 @@ export function initMapsPage() {
     if (MAPS[i].id === hash) { initial = MAPS[i]; break; }
   }
   _selectMap(initial);
+  _applyFocusParam();
+}
+
+// INTENT: Let other pages deep-link the Maps page straight to a coordinate — a Biblepedia place
+//   article's "Open in full map" link is /maps/?focus=lat,lon[,zoom]. We fly there and drop a
+//   highlight ring so the user lands on the place they came from.
+// CHANGE? The link is built in assets/js/biblepedia.js (_renderLocationPanel); keep the param
+//   name/order ("focus=lat,lon,zoom") identical there. Runs after _selectMap so _leaflet exists.
+// VERIFY: open /maps/?focus=31.7767,35.2345,12 → map flies to Jerusalem with a red ring marker.
+function _applyFocusParam() {
+  var m = /[?&]focus=([^&#]+)/.exec(location.search);
+  if (!m || !_leaflet) return;
+  var p = decodeURIComponent(m[1]).split(',').map(parseFloat);
+  if (p.length < 2 || isNaN(p[0]) || isNaN(p[1])) return;
+  var zoom = (p.length > 2 && !isNaN(p[2])) ? p[2] : 11;
+  _leaflet.flyTo([p[0], p[1]], zoom);
+  L.circleMarker([p[0], p[1]], { radius: 11, color: '#c0392b', weight: 3, fillOpacity: 0.15 })
+    .addTo(_leaflet);
 }
 
 function _buildNav() {
@@ -557,6 +603,15 @@ function _buildLegend(items) {
     }
     container.appendChild(row);
   });
+
+  // D: regions are schematic teaching approximations — note it whenever the legend
+  // includes a filled-area (swatch) entry, i.e. the map is showing region boundaries.
+  if (items.some(function (it) { return it.type === 'swatch'; })) {
+    var note = document.createElement('div');
+    note.className = 'maps-legend-note';
+    note.textContent = 'Region boundaries are approximate.';
+    container.appendChild(note);
+  }
 }
 
 /* ── Region / border polygon helper ─────────────────────────────────────── */
@@ -564,15 +619,80 @@ function _buildLegend(items) {
    Placed UNDER city markers (added first, so markers render on top).
    label: optional short name rendered as a permanent div-icon at the centroid.
    color: CSS colour string.  fillOpacity default 0.08.                       */
-function _addRegion(coords, label, color, fillOpacity) {
-  var poly = L.polygon(coords, {
+// INTENT: Chaikin corner-cutting rounds a polygon's hard corners into an organic outline,
+//   so the schematic region boxes don't read as rectangles. Two passes (factor 0.25/0.75)
+//   keep the shape close to the authored extent while removing the boxy look. Operates on a
+//   closed ring; a trailing duplicate-of-first point is dropped so the seam doesn't kink.
+// CHANGE? More iterations = rounder + more vertices (2x each pass). If a region is authored
+//   with already-detailed coastline vertices, rounding still helps; lower to 1 if it over-softens.
+// VERIFY: On the Roman-provinces map the Galilee/Judea/etc. overlays render as rounded blobs,
+//   not axis-aligned rectangles.
+function _smoothRing(coords, iters) {
+  var pts = coords.slice();
+  if (pts.length > 1) {
+    var f = pts[0], l = pts[pts.length - 1];
+    if (f[0] === l[0] && f[1] === l[1]) pts.pop();   /* drop duplicate closing point */
+  }
+  if (pts.length < 3) return coords;
+  iters = iters == null ? 2 : iters;
+  for (var k = 0; k < iters; k++) {
+    var out = [];
+    for (var i = 0; i < pts.length; i++) {
+      var a = pts[i], b = pts[(i + 1) % pts.length];
+      out.push([a[0] * 0.75 + b[0] * 0.25, a[1] * 0.75 + b[1] * 0.25]);
+      out.push([a[0] * 0.25 + b[0] * 0.75, a[1] * 0.25 + b[1] * 0.75]);
+    }
+    pts = out;
+  }
+  return pts;
+}
+
+// INTENT: Resolve a region's polygon from the canonical regions.json by id, choosing the
+//   period whose [fromYear,toYear] window contains `era` (a year, negative=BC) when given,
+//   else the era string match, else the first period. Returns null when unavailable so the
+//   caller can fall back to its inline coords.
+// CHANGE? Period selection: pass a number (year) for time-accurate scenes, or a period.era
+//   string. If regions.json schema changes (periods[].coords), update here.
+// VERIFY: _regionCoords('tribe-judah') returns a ≥9-point ring on the twelve-tribes map.
+function _regionCoords(id, era) {
+  if (!_REGIONS) return null;
+  var r = _REGIONS[id];
+  if (!r || !r.periods || !r.periods.length) return null;
+  var p = null;
+  if (typeof era === 'number') {
+    p = r.periods.filter(function (x) {
+      return (x.fromYear == null || era >= x.fromYear) && (x.toYear == null || era <= x.toYear);
+    })[0];
+  } else if (typeof era === 'string') {
+    p = r.periods.filter(function (x) { return x.era === era; })[0];
+  }
+  p = p || r.periods[0];
+  return p && p.coords ? p.coords : null;
+}
+
+// _region: draw a region by canonical id (regions.json) with an inline fallback. Prefers the
+// shared geometry; `fallback` keeps the map working if regions.json is missing that id.
+function _region(id, era, fallback, label, color, fillOpacity, info) {
+  var coords = _regionCoords(id, era) || fallback;
+  if (!coords) return;
+  _addRegion(coords, label, color, fillOpacity, info);
+}
+
+// info (optional): a {name/desc/refs/significance} object → makes the region clickable,
+// surfacing its detail in the shared city-detail panel (reuses the twelve-tribes pattern).
+function _addRegion(coords, label, color, fillOpacity, info) {
+  var poly = L.polygon(_smoothRing(coords, 2), {
     color:       color,
     weight:      1,
     fillColor:   color,
     fillOpacity: fillOpacity != null ? fillOpacity : 0.09,
     dashArray:   '5 4',
-    interactive: false   /* don't steal clicks from city markers */
+    interactive: !!info   /* clickable only when it carries detail; else don't steal clicks */
   });
+  if (info) {
+    poly.bindTooltip(label || info.name || '', { sticky: true, direction: 'center' });
+    poly.on('click', function () { _showCityDetail(info); });
+  }
   _addLayer(poly);
   if (label) {
     var center = poly.getBounds().getCenter();
@@ -993,7 +1113,7 @@ function _stepSite(dir) {
 /* ── 1. Holy Land — Palestine in the time of Jesus ───────────────────────── */
 function _renderHolyLand(map) {
   /* Roman Empire — the overarching power controlling all of Palestine c. AD 27–30 */
-  _addRegion([[30.00,33.50],[30.00,37.50],[34.00,37.50],[34.00,33.50]], 'Roman Empire', '#8b0000', 0.04);
+  _region('empire-rome', 30, [[30.00,33.50],[30.00,37.50],[34.00,37.50],[34.00,33.50]], 'Roman Empire', '#8b0000', 0.04);
 
   /* Roman administrative provinces / regions c. AD 27–30 */
   _addRegion([[33.30,34.70],[33.30,35.70],[32.55,35.70],[32.55,34.70]], 'Galilee',   '#4a8c3f', 0.09);
@@ -1268,12 +1388,12 @@ function _renderDividedKingdom(map) {
   /* Rising Assyrian power in the north — the eventual destroyer of both kingdoms */
   _addRegion([[34.50,36.00],[34.50,46.00],[38.00,46.00],[38.00,36.00]], 'Assyrian Empire (rising power)', '#8b1a1a', 0.05);
   /* Egypt — the other great power dominating the south */
-  _addRegion([[23.00,26.00],[23.00,36.00],[30.50,36.00],[30.50,26.00]], 'Egypt', '#9b7000', 0.06);
+  _region('empire-egypt-core', -700, [[23.00,26.00],[23.00,36.00],[30.50,36.00],[30.50,26.00]], 'Egypt', '#9b7000', 0.06);
 
   /* Neighbouring nations / regions of the Divided Kingdom period */
-  _addRegion([[33.20,34.60],[33.20,35.55],[34.60,35.55],[34.60,34.60]], 'Phoenicia',    '#1a5fa8', 0.08);
-  _addRegion([[31.50,34.40],[31.50,34.90],[31.88,34.90],[31.88,34.40]], 'Philistia',    '#7b5ea7', 0.09);
-  _addRegion([[33.20,35.55],[33.20,37.00],[34.60,37.00],[34.60,35.55]], 'Aram-Damascus','#c44d29', 0.08);
+  _region('empire-phoenicia', -700, [[33.20,34.60],[33.20,35.55],[34.60,35.55],[34.60,34.60]], 'Phoenicia',    '#1a5fa8', 0.08);
+  _region('empire-philistia', -700, [[31.50,34.40],[31.50,34.90],[31.88,34.90],[31.88,34.40]], 'Philistia',    '#7b5ea7', 0.09);
+  _region('empire-aram-damascus', -800, [[33.20,35.55],[33.20,37.00],[34.60,37.00],[34.60,35.55]], 'Aram-Damascus','#c44d29', 0.08);
   _addRegion([[31.00,35.55],[31.00,36.40],[31.88,36.40],[31.88,35.55]], 'Moab',         '#9b7000', 0.09);
   _addRegion([[29.80,35.00],[29.80,36.40],[31.00,36.40],[31.00,35.00]], 'Edom',         '#8b1a1a', 0.08);
   _addRegion([[31.88,35.55],[31.88,36.40],[32.55,36.40],[32.55,35.55]], 'Ammon',        '#3d7a4a', 0.08);
@@ -1491,7 +1611,7 @@ function _renderPatriarchalJourneys(map) {
 /* ── 7. Conquest of Canaan ───────────────────────────────────────────────── */
 function _renderConquest(map) {
   /* Land of Canaan — the overarching pre-conquest territory Israel was promised */
-  _addRegion([[30.50,34.20],[30.50,36.00],[33.30,36.00],[33.30,34.20]], 'Land of Canaan', '#9b7000', 0.05);
+  _region('empire-canaan-states', -1400, [[30.50,34.20],[30.50,36.00],[33.30,36.00],[33.30,34.20]], 'Land of Canaan', '#9b7000', 0.05);
 
   /* Canaanite city-state regions and neighbours before the conquest */
   _addRegion([[31.50,34.40],[31.50,34.90],[32.55,34.90],[32.55,34.40]], 'Philistine plain',  '#7b5ea7', 0.08);
@@ -1761,7 +1881,7 @@ function _renderTwelveTribes(map) {
 
   /* Render each tribal territory as a filled polygon; click for tribe info */
   tribes.forEach(function (t) {
-    var poly = L.polygon(t.coords, {
+    var poly = L.polygon(_smoothRing(t.coords, 2), {
       color:       t.color,
       weight:      1.5,
       fillColor:   t.fillColor,
@@ -1817,7 +1937,7 @@ function _renderJudges(map) {
   _addRegion([[30.75,34.65],[30.75,35.55],[33.30,35.55],[33.30,34.65]], 'Israelite tribal territories', '#3d7a4a', 0.05);
 
   /* Surrounding peoples who oppressed and threatened Israel during the Judges period */
-  _addRegion([[31.50,34.40],[31.50,34.90],[31.88,34.90],[31.88,34.40]], 'Philistia',    '#7b5ea7', 0.10);
+  _region('empire-philistia', -1000, [[31.50,34.40],[31.50,34.90],[31.88,34.90],[31.88,34.40]], 'Philistia',    '#7b5ea7', 0.10);
   _addRegion([[31.00,34.60],[31.00,35.00],[31.50,35.00],[31.50,34.60]], 'Shephelah',    '#9b7000', 0.07);
   _addRegion([[31.88,35.55],[31.88,36.20],[32.55,36.20],[32.55,35.55]], 'Ammon/Gilead', '#3d7a4a', 0.07);
   _addRegion([[31.00,35.55],[31.00,36.20],[31.88,36.20],[31.88,35.55]], 'Moab',         '#c44d29', 0.07);
@@ -1899,7 +2019,7 @@ function _renderJudges(map) {
 /* ── 10. David's Kingdom and Military Campaigns ──────────────────────────── */
 function _renderDavidKingdom(map) {
   /* Egypt — the great southern empire David maintained relations with */
-  _addRegion([[23.00,28.00],[23.00,36.00],[30.00,36.00],[30.00,28.00]], 'Egypt', '#9b7000', 0.06);
+  _region('empire-egypt-core', -1000, [[23.00,28.00],[23.00,36.00],[30.00,36.00],[30.00,28.00]], 'Egypt', '#9b7000', 0.06);
   /* Neighbours outside David's direct control */
   _addRegion([[33.20,34.60],[33.20,35.55],[34.60,35.55],[34.60,34.60]], 'Phoenicia (allied)', '#1a5fa8', 0.07);
   _addRegion([[31.00,34.30],[31.00,34.80],[31.88,34.80],[31.88,34.30]], 'Philistia (subdued)','#7b5ea7', 0.08);
@@ -2000,9 +2120,9 @@ function _renderDavidKingdom(map) {
 /* ── 11. Assyrian & Babylonian Invasions ─────────────────────────────────── */
 function _renderInvasions(map) {
   /* Empire heartland zones showing the source of each invasion */
-  _addRegion([[35.00,37.00],[35.00,48.00],[38.00,48.00],[38.00,37.00]], 'Assyrian Empire',  '#8b1a1a', 0.07);
-  _addRegion([[30.00,38.00],[30.00,50.00],[35.00,50.00],[35.00,38.00]], 'Babylonian Empire','#1a3a6b', 0.07);
-  _addRegion([[22.00,26.00],[22.00,36.00],[30.00,36.00],[30.00,26.00]], 'Egypt',            '#9b7000', 0.07);
+  _region('empire-assyria-core', -700, [[35.00,37.00],[35.00,48.00],[38.00,48.00],[38.00,37.00]], 'Assyrian Empire',  '#8b1a1a', 0.07);
+  _region('empire-babylon-core', -590, [[30.00,38.00],[30.00,50.00],[35.00,50.00],[35.00,38.00]], 'Babylonian Empire','#1a3a6b', 0.07);
+  _region('empire-egypt-core', -600, [[22.00,26.00],[22.00,36.00],[30.00,36.00],[30.00,26.00]], 'Egypt',            '#9b7000', 0.07);
   _addRegion([[31.00,34.40],[31.00,36.00],[33.30,36.00],[33.30,34.40]], 'Israel / Judah',   '#3d7a4a', 0.06);
 
   /* ── Assyrian conquest of northern Israel, 722 BC (Sargon II) ── */
@@ -2238,7 +2358,7 @@ function _renderIntertestamental(map) {
   /* Ptolemaic sphere — Egypt and southern Palestine c. 323–198 BC */
   _addRegion([[22.00,24.00],[22.00,37.50],[34.50,37.50],[34.50,24.00]], 'Ptolemaic Sphere', '#9b7000', 0.07);
   /* Seleucid Empire — Syria, Mesopotamia c. 312–64 BC */
-  _addRegion([[34.50,34.00],[34.50,50.00],[42.00,50.00],[42.00,34.00]], 'Seleucid Empire',  '#7b5ea7', 0.07);
+  _region('empire-seleucid', -200, [[34.50,34.00],[34.50,50.00],[42.00,50.00],[42.00,34.00]], 'Seleucid Empire',  '#7b5ea7', 0.07);
   /* Hasmonean kingdom at greatest extent c. 100 BC — roughly all of Palestine */
   _addRegion([[30.50,34.20],[30.50,36.50],[33.30,36.50],[33.30,34.20]], 'Hasmonean Kingdom', '#b33c3c', 0.10);
   /* Nabataean kingdom — controls trade routes south and east of Judea */

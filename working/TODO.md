@@ -1,7 +1,8 @@
 # Bible Study Website — Working TODO
 
 Track progress here. Mark items `[x]` when complete.
-Completed items are archived in `working/todo-archive.md`.
+Completed items are archived in `working/todo-archive/` (one timestamped file per
+hygiene pass) and the older flat `working/todo-archive*.md`.
 
 ---
 
@@ -502,6 +503,18 @@ localStorage write paths, algorithms, and cross-module couplings.*
 
 ---
 
+### PWA-12 · `about/index.html` is the only page area missing from the offline app-shell precache *(MEDIUM)*
+
+**Problem:** `sw.js` `SHELL_URLS` precaches every page-area `*/index.html` on the site — including the two redirect stubs `./reflections/index.html` (line 137) and `./worship/index.html` (line 140), and the root `./` + `./index.html` (lines 65–66) — but `about/index.html` is absent (cross-checked the full `*/index.html` list against the 32 page directories; `about/` is the sole gap). The About page documents the site's AI-transparency and provenance system and is linked from the footer/nav, so a user who opens it while offline (or before it has ever been visited online) gets the offline fallback instead of the page. Stub redirect pages are cached while a real content page is not — a clear inconsistency.
+
+**Fix:**
+- [ ] `sw.js`: add `'./about/index.html',` to the `SHELL_URLS` array (alongside the other page-area entries).
+- [ ] `sw.js`: bump the app cache version (`bsw-app-v…`) so the new shell entry is precached on the next activation.
+
+**Verify:** Load the site once online, go offline (DevTools → Network → Offline), navigate to `/about/` — the full About page renders instead of `offline.html`.
+
+---
+
 ## Accessibility Audit — Dimension 10
 
 *Audit pass 2026-06-05. Checked: focus styles (sidebar, modal, reader, `.ref` links), ARIA roles and labels (sidebar collapse button, hamburger, nav, modal dialog, reader controls, discipline tabs), modal keyboard trap (`trapFocus` in `modal.js` — complete: Escape closes, Tab cycles, `_lastFocused.focus()` restores on close), color contrast (all primary color pairs pass WCAG AA), `alt` attributes (no `<img>` elements in main pages — site uses CSS/SVG/emoji icons), theme toggle button accessible name (visible text content serves as label), `discipline-strip.js` mobile label handling. Modal, reader, and search ARIA patterns are solid. 4 issues found.*
@@ -517,6 +530,21 @@ localStorage write paths, algorithms, and cross-module couplings.*
 ---
 
 *Audit pass 2026-06-06 (Cycle 4). Read: `assets/js/lib-reader.js`, `assets/js/lib-browser.js`, `assets/js/library.js` (dictionary page), `assets/js/lib-progress.js`. lib-progress.js is read-only (just links) — clean ✓. lib-reader find bar, pager prev/next, section select all have `aria-label` ✓. lib-browser toggle buttons update `aria-label` on state change ✓. Finding: five interactive control groups across three files use visual-only state (CSS classes) with no matching ARIA state attributes — screen readers cannot announce selected/active/on state.*
+
+---
+
+*Audit pass 2026-06-16 (Cycle 1, group `misc-pages`). Read: `index.html`, `about/index.html`, `apocrypha/index.html`, `church-history/index.html`, `studies/index.html`, `compare/index.html`, `reflections/` + `worship/` (redirect stubs). Verified: all pages have viewport + description meta + FOUC theme script ✓; verse-notation (Dim J) clean — the only bare refs are example text inside `placeholder` attributes (index.html:34, compare/index.html:203), correctly not links ✓; studies/ + compare/ fetches have `.catch` with visible empty/error states ✓; compare/ init failure carries full INTENT/CHANGE?/VERIFY ✓; studies/compare fetch paths resolve ✓. New a11y finding below (AUD-29).*
+
+### AUD-29 · Home devotional "tablist" and studies filter convey active state to sighted users only *(MEDIUM)*
+
+**Problem:** Two control groups in the `misc-pages` group expose selection state visually but not to assistive tech. (1) `index.html` line 65 declares `<div class="daily-devot-chips" role="tablist">` but the five `.daily-devot-chip` buttons inside it have no `role="tab"` and no `aria-selected`, and the `#daily-devot-content` panel (line 72) has no `role="tabpanel"` — `assets/js/daily.js` (lines 171–176) only toggles the `daily-devot-chip--active` CSS class. A screen reader announces a "tab list" containing zero tabs, and the active devotional source is never announced. (2) `studies/index.html` lines 128–130 are real `<button class="studies-filter-btn">` elements whose active filter is shown only via the `.active` CSS class (toggled in the inline script lines 308–313) with no `aria-pressed` — a screen reader user cannot tell which book filter is applied. This mirrors the already-fixed AUD-18 (notes/ tablist) pattern.
+
+**Fix:**
+- [ ] `index.html`: add `role="tab"` to each `.daily-devot-chip` button and `role="tabpanel"` + `aria-labelledby` to `#daily-devot-content`.
+- [ ] `assets/js/daily.js` (devot-chip click handler ~line 171–176): set `aria-selected="true"` on the chosen chip and `"false"` on the rest whenever `daily-devot-chip--active` is toggled (including the initial saved-state pass).
+- [ ] `studies/index.html`: give each `.studies-filter-btn` an initial `aria-pressed` (`"true"` on the default "All Books", `"false"` on the rest), and in the filter click handler (lines 308–313) update `aria-pressed` alongside the `.active` class toggle.
+
+**Verify:** With VoiceOver/NVDA on the home page, tabbing into the devotional chips announces "tab, selected" for the active source; on `studies/`, activating a filter announces the new button as "pressed".
 
 ---
 
@@ -987,184 +1015,20 @@ Document as known architectural limitation. No actionable code change until inte
 
 ---
 
-## Resolved — pending archive
+## Audit — reader-core (Cycle 2, 2026-06-14)
 
-### CSS-35 · Synoptic parallel labels showed `&#39;` mojibake *(RESOLVED 2026-06-13)*
+*Re-audit after the topical-search wiring landed in `reader.js`. The new `doLookup` topical branch is sound: it fires only on Go/Enter (not per-keystroke), `parseMultiRef` correctly handles the whole-chapter and chapter-range forms the aliases use (e.g. "Genesis 1-2", "Matthew 5-7"), `loadSectionData` degrades gracefully on fetch failure, and `.reader-sec-*` results have 44px targets + dark-mode tokens. One discoverability gap.*
 
-**Problem:** `assets/js/synoptic.js` `_buildPanel()` (line 116) set the pericope label via
-`labelRow.textContent = escHtml(pericope.label)`. `escHtml` encodes `'` → `&#39;` and
-`textContent` does not decode entities, so labels like "John's proclamation" rendered as
-"John&#39;s proclamation". The parallels data itself is clean (raw apostrophes).
-**Fix:** Removed the `escHtml` wrapper — `textContent` escapes safely on its own (escHtml is
-for `innerHTML` only). Bumped `APP_CACHE_V`.
-**Verify:** Open a Gospel chapter with a synoptic parallel (e.g. Mark 1), toggle the synoptic
-panel — pericope headers show a normal apostrophe. Antipattern documented in
-`AUDIT_AGENT_GUIDE.md` dimension D; codebase grep confirms no other `textContent = escHtml`
-or `.title/.ariaLabel = escHtml` instances.
+### NAV-8 · Reader lookup bar doesn't advertise the new topical/section search *(LOW)* — ✅ RESOLVED 2026-06-14
 
----
+**Problem:** `reader.js` `doLookup` now treats any non-reference / non-Strong's / non-book query as a topical/section search (e.g. "parables", "beatitudes", "David and Goliath" → matching passages). But `read/index.html` line 31 still shows `placeholder="Gen 1; John 3:16-21; Rom 8:28, 38-39"` and line 32 `aria-label="Go to Bible reference"` — neither hints that topics/sections work, so the feature is effectively undiscoverable from the reader. (The old "Could not parse" error was also removed, so a mistyped reference now silently becomes a topic search — fine, but unsignposted.)
 
-## Audit — reader-core (Cycle 1, 2026-06-14)
+**Fix:**
+- [x] `read/index.html`: extend the placeholder to signal topical search, e.g. `placeholder="John 3:16 · Romans 8 · parables · the beatitudes"`.
+- [x] `read/index.html`: update `aria-label` to e.g. "Go to a passage, or search topics and sections".
+- [x] (Optional) add a one-line `.reader-browse-hint` note ("Type a reference, or a topic like 'parables'").
 
-### CSS-36 · Cross-ref note marker color is hardcoded, no dark-mode override *(MEDIUM)* — ✅ RESOLVED 2026-06-14
-**Problem:** `assets/css/reader.css` `.reader-xref-note` (lines 1064, 1071) and its
-`:hover/:focus-visible` (line 1078) hardcode `color: #4a85a3` / `border-bottom: ... #4a85a3`
-and hover `#2d6080`. A grep of `reader.css` finds no `[data-theme="dark"] .reader-xref-note`
-override. The inline cross-reference superscript markers next to verses therefore render in
-a fixed light-mode mid-blue in dark mode, clashing with the dark surface and reducing contrast.
-**Fix:** Replace the hardcoded hexes with a theme variable (e.g. `var(--color-accent)` for
-text/border and a darker/lighter shade for hover via `color-mix` or a `[data-theme="dark"]`
-override block alongside the other dark overrides in `reader.css`).
-**Verify:** Open `/read/` in dark mode on a chapter with cross-refs (e.g. John 3); the xref
-note markers should sit in the accent/gold family, not light-mode blue.
-
-### CSS-37 · Reader toolbar touch targets below 44px on mobile *(MEDIUM)* — ✅ RESOLVED 2026-06-14
-**Problem:** In `assets/css/reader.css` `@media (max-width: 640px)`, `.reader-browse-bar > button`
-(line ~1323) and `.reader-font-size-btn` (lines ~1337–1338) set `min-height: 36px` /
-`min-width: 34px`, below the 44px touch-target minimum the rest of the same block uses for the
-lookup/browse controls (lines 1281/1285/1307). The font-size +/- buttons and injected toolbar
-buttons are harder to tap on phones.
-**Fix:** Raise `min-height` to 44px (and `min-width` to 44px for the square font-size buttons)
-in that media block, matching the lookup/browse controls.
-**Verify:** DevTools at 375px on `/read/`; the font-size and toolbar buttons measure ≥44px.
-
-### CODE-23 · Inline chapter-tracker script lacks required INTENT/CHANGE?/VERIFY *(LOW)* — ✅ RESOLVED 2026-06-14
-**Problem:** `read/index.html` lines 68–101 contain an inline IIFE that writes the
-`bsw_chapter_read` localStorage key (`recordChapter`) and depends on a `MutationObserver`
-reading `window._readerNavState` (set by `reader.js`). Per `working/CLAUDE.md`, code that
-writes localStorage and couples to cross-module global state requires `INTENT/CHANGE?/VERIFY`
-comments; only a one-line comment is present. If `reader.js` renames or stops setting
-`window._readerNavState`, chapter tracking silently breaks with no pointer to the coupling.
-**Fix:** Add the three-line comment block; `CHANGE?` must name `window._readerNavState`
-(reader.js) and the `bsw_chapter_read` key (read by `discipline`/`progress`).
-**Verify:** Comment present; reading a chapter still records it (DevTools → Application →
-localStorage `bsw_chapter_read`).
-
-### UX-14 · Library optgroup in the book picker: silent-fail + unbounded growth *(LOW)* — ✅ RESOLVED 2026-06-14 (dead code removed: the Library optgroup no longer appears in the Scripture book picker; library docs are browsed at /library/ and read at /library/read/)
-**Problem:** `assets/js/reader.js` `initReaderBrowse` (line 817) appends a "Library" optgroup
-to `#reader-book-select` by iterating *every* doc in `LIB_INDEX_URL` (line 823) — now 165 docs,
-so the book dropdown carries a 165-item Library group (awkward on mobile). The fetch's
-`.catch(function(){})` (line 831) is silent: if the index fails, the Library group simply never
-appears with no log or fallback.
-**Fix:** Consider capping/grouping the Library optgroup (or moving library navigation out of the
-book `<select>` to the dedicated `/library/` browser), and at minimum log/console-warn on the
-catch so a failed index load is diagnosable.
-**Verify:** `/read/` book dropdown is navigable on a 375px screen; with `LIB_INDEX_URL` blocked
-(DevTools offline), the failure is observable in console rather than silent.
-
----
-
-## Audit — reader-panels (Cycle 1, 2026-06-14)
-
-### CSS-38 · Synoptic panel collapse toggle has no visible focus style *(MEDIUM)* — ✅ RESOLVED 2026-06-14
-**Problem:** The synoptic parallel panel label is now a `<button class="reader-synoptic-label">`
-toggle (`assets/js/synoptic.js` `_buildPanel`), but `assets/css/reader.css` defines no
-`:focus-visible` rule for it (unlike the other reader buttons at lines 501, 698, 1077, 1434).
-With `border: none` and custom styling, a keyboard user tabbing onto the collapse toggle gets
-no consistent focus ring, so it's hard to tell it's focused.
-**Fix:** Add `.reader-synoptic-label:focus-visible { outline: 2px solid var(--color-accent);
-outline-offset: -2px; }` to `reader.css` near the other synoptic rules.
-**Verify:** On `/read/` (e.g. Mark 1) Tab to a synoptic panel label — a visible focus ring
-appears; Enter/Space toggles collapse.
-
-### UX-15 · Interlinear rows for verses with no data are left empty in the DOM *(LOW)* — ✅ RESOLVED 2026-06-14
-**Problem:** `assets/js/interlinear.js` `_injectInterlinearForVerse` inserts a
-`<div class="reader-interlinear-row">` (line 320) *before* loading data, then on no
-book/verse data or error sets `row.innerHTML = ''` (lines 325, 327, 329) instead of removing
-it. The empty row stays in the DOM (adding any row margin/padding as blank space under such
-verses), and the early-return guard at line 310 (`nextElementSibling … contains
-'reader-interlinear-row'`) then treats the empty row as "already injected", so toggling
-interlinear off/on won't retry or clean it up.
-**Fix:** Replace the three `row.innerHTML = ''` cases with `row.remove();` so verses without
-interlinear data leave no residual element and remain re-injectable.
-**Verify:** Enable interlinear on a chapter that mixes verses with and without alignment data;
-verses without data show no empty gap, and the injected rows count matches verses with data
-(DevTools → count `.reader-interlinear-row`).
-
----
-
-## Audit — cloud-of-witnesses (Cycle 1, 2026-06-14)
-
-*Validator clean: `validate-data.py` passes — 44 fathers all have Biblepedia articles, catena served shape valid. No mojibake antipattern. `decorateCatena` wired at all render sites (modal, reader panel, reader grid, verse-study).*
-
-### UX-16 · Clicking a Cloud-of-Witnesses father name both opens Biblepedia and toggles the voice *(MEDIUM)* — ✅ RESOLVED 2026-06-14
-**Problem:** In `assets/js/core.js` `decorateCatena()`, each father name is an
-`<a class="cv-name" target="_blank" …>` placed *inside* `<summary class="cv-head">` of the
-voice's `<details class="catena-voice">`. There is no `stopPropagation`/`preventDefault`, so
-clicking the name to open the father's Biblepedia article (new tab) *also* fires the native
-`<summary>` toggle — the voice collapses/expands underneath the user every time they follow
-the link. Affects the verse modal, reader commentary panel, reader inline grid, and verse-study.
-**Fix:** Stop the link click from toggling the details — e.g. add a delegated listener at the
-render sites (or in a small post-decorate wiring step) that calls `e.stopPropagation()` on
-clicks of `a.cv-name`; alternatively move the link out of `<summary>` into a non-summary head row.
-**Verify:** Open a Gospel verse → Cloud of Witnesses; click a father name — the Biblepedia
-article opens in a new tab and the voice's expanded/collapsed state does **not** change.
-
-### CSS-39 · Father-name Biblepedia link has no link affordance *(LOW)* — ✅ RESOLVED 2026-06-14
-**Problem:** `.cv-name` (assets/css/style.css:808) styles the father name as
-`font-weight:600; color:var(--color-heading)` with no link styling, but in `decorateCatena`
-it is rendered as an `<a>` to the father's Biblepedia article. There is no hover, underline,
-cursor, or color cue distinguishing it from the non-clickable badges/text, so users cannot tell
-the name is a link — the Biblepedia cross-link is effectively undiscoverable.
-**Fix:** Add `a.cv-name` affordance in `style.css` — e.g. `a.cv-name { text-decoration: none; }`
-`a.cv-name:hover, a.cv-name:focus-visible { text-decoration: underline; }` and a focus-visible
-outline; consider a subtle color/dotted-underline cue so it reads as a link at rest.
-**Verify:** Hover a father name in a Cloud-of-Witnesses voice — it shows a link affordance
-(underline/pointer); keyboard focus shows a visible ring.
-
----
-
-## Audit — red-letter (Cycle 1, 2026-06-14)
-
-*Validator clean: `validate-data.py` [3] passes — 234 red-letter ranges all valid and in-range (the RL loop is filling OT data; missing OT books are expected, not findings). Speaker chips use `textContent` safely (no mojibake). `.reader-verse--god/--jesus` have light + dark colour overrides.*
-
-### CSS-40 · Red-letter text clashes with same-hue highlight backgrounds *(MEDIUM)* — ✅ RESOLVED 2026-06-14
-**Problem:** `applyRedLetter` and `applyHighlights` (assets/js/reader.js) both add classes to the
-same `.reader-verse`, so a verse can be **both** red-letter and highlighted. `.reader-verse--jesus`
-sets red text `#b03a2e` and `.reader-verse--hl-red` sets a red background `rgba(220,80,80,0.36)`
-(assets/css/reader.css ~3694 / ~hl-red); likewise `.reader-verse--god` purple text `#6b2fa0` over
-`.reader-verse--hl-purple` purple background. Highlighting a verse of Jesus'/God's words in the
-matching colour renders red-on-red / purple-on-purple — very low contrast and hard to read.
-**Fix:** Make the two systems coexist — e.g. when a verse is highlighted, let the highlight set
-the text colour back to `var(--color-text)` (an `.reader-verse--hl-red.reader-verse--jesus`
-override), or give red-letter text a subtle outline/`text-shadow` so it stays legible on any
-highlight, or shift the hl-red/hl-purple tints so they don't collide with the speaker hues.
-**Verify:** Highlight a red-lettered verse (e.g. a saying of Jesus in Matthew 5) with the red
-highlight — the words remain clearly readable in both light and dark mode.
-
-### AUD-21 · Red-letter speaker is conveyed by colour alone (WCAG 1.4.1) *(LOW)* — ✅ RESOLVED 2026-06-14
-**Problem:** In the default reader view, the only indication that a verse contains Jesus' words
-(red) or God's words (purple) is the text colour (`.reader-verse--jesus/--god` in reader.css).
-There is no non-colour cue, so colour-blind users (and anyone who can't distinguish the hue from
-body text) get no signal — a WCAG 2.1 SC 1.4.1 (Use of Color) gap. The paragraph view's labelled
-speaker chips help, but the inline verse colouring does not.
-**Fix:** Add an optional non-colour affordance for red-letter verses — e.g. a small speaker glyph
-or left edge-marker on `.reader-verse--jesus/--god`, or a verse-number badge, surfaced at least
-when a "distinguish speakers without colour" preference is set. Keep it subtle to preserve the
-red-letter reading experience.
-**Verify:** With a greyscale/colour-blind simulation, red-letter verses are still distinguishable
-from surrounding narrative text.
-
----
-
-## Audit — modal-verse-study (Cycle 1, 2026-06-14)
-
-*Mostly clean: modal has role="dialog" + aria-modal + aria-labelledby, Escape/backdrop close, focus trap & restore, swipe-dismiss; error/empty states are thorough and specific; no mojibake antipattern; verse-study.css has dark-mode overrides and no stray hardcoded colors. One issue:*
-
-### UX-17 · Cloud-of-Witnesses commentary in verse-study is clamped, undercutting its collapsible voices *(MEDIUM)* — ✅ RESOLVED 2026-06-14
-**Problem:** In `assets/js/verse-study.js` (VS-G, lines 819–836), commentary whose
-`textContent.length > 800` is wrapped in `.vs-comm-truncated--clamped` (a max-height clamp with a
-"Read more ▾" button). When the source is **catena** (Cloud of Witnesses), the body was just
-decorated into many `<details open>` voice cards (line 812), whose combined text is almost always
-> 800 chars — so it is *always* clamped. The clamp cuts off voices below the fold, and because the
-per-voice `<details>` collapse is the intended way to manage that length, the two mechanisms fight:
-the reader can't collapse individual voices to navigate (they're hidden by the clamp), and "Read
-more" just dumps all of them. Net: the new collapsible-voices UX is defeated in verse-study.
-**Fix:** Skip the char-clamp when `src === 'catena'` (the per-voice collapse already handles
-length) — e.g. guard the `if (textContent.length > COMM_THRESHOLD)` block with `&& src !== 'catena'`;
-or, if a cap is still wanted, collapse all but the first N voices instead of a max-height clamp.
-**Verify:** Open verse-study on a verse with many Cloud-of-Witnesses voices (e.g. Matthew 5:3) →
-the voices show as individually collapsible cards with no "Read more" max-height clamp over them.
+**Verify:** Load `/read/` — the lookup placeholder shows a topic example; typing "parables" and pressing Go lists matching sections.
 
 
 ---

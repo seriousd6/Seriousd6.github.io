@@ -392,6 +392,23 @@
     document.body.appendChild(topbar);
     document.body.appendChild(backdrop);
 
+    /* AUD-27: skip-to-content link as the FIRST focusable element (WCAG 2.4.1 bypass-blocks).
+       Centralized here so every page gets it without editing 30+ HTML heads. Targets <main>,
+       which we give an id + tabindex(-1) so focus actually lands on the content. */
+    var main = document.querySelector('main');
+    if (main && !document.querySelector('.skip-link')) {
+      if (!main.id) main.id = 'main-content';
+      main.setAttribute('tabindex', '-1');
+      var skip = mk('a', 'skip-link');
+      skip.href = '#' + main.id;
+      skip.textContent = 'Skip to content';
+      skip.addEventListener('click', function () {
+        // Move focus to <main> (href alone scrolls but doesn't focus a non-interactive element).
+        setTimeout(function () { main.focus(); }, 0);
+      });
+      document.body.insertBefore(skip, document.body.firstChild);
+    }
+
     /* ── Initial collapse/overlay state ── */
     if (_isTopicPage) {
       document.body.classList.add('sidebar-overlay');

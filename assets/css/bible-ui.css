@@ -731,6 +731,19 @@
   margin: 0;
 }
 
+/* Explore "Sections" results — heading + its verse set (sections.js / _exploreSections) */
+.omni-sec { margin-bottom: 0.75rem; }
+.omni-sec__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; }
+.omni-sec__group {
+  font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--color-muted, #7a6a55); background: var(--color-surface-alt, rgba(200,169,110,.12));
+  padding: 0.05rem 0.4rem; border-radius: 999px;
+}
+.omni-sec__group--body { background: transparent; border: 1px solid var(--color-border, #d8c9ad); color: var(--color-muted, #7a6a55); font-style: italic; }
+.omni-sec__verses { margin: 0.25rem 0 0; font-size: 0.92rem; line-height: 1.65; color: var(--color-text, #2c2416); }
+.omni-sec__v sup { color: var(--color-muted, #7a6a55); font-size: 0.7rem; margin-right: 0.1rem; }
+.omni-sec__more { color: var(--color-muted, #7a6a55); }
+
 .omni-see-all {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.82rem;
@@ -1911,6 +1924,61 @@
 }
 .bsw-modal__topics-panel[hidden] { display: none; }
 
+/* ── Connections tab (biblepedia article badges) ───────────────────────── */
+.bsw-modal__connections-panel {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  flex: 1;
+  min-height: 0;
+}
+.bsw-modal__connections-panel[hidden] { display: none; }
+
+.bsw-modal__conn-note {
+  font-size: .8rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 .9rem;
+}
+.bsw-modal__conn-empty {
+  font-size: .85rem;
+  color: var(--color-muted, #888);
+  margin: .5rem 0;
+}
+.bsw-modal__conn-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.bsw-modal__conn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  background: none;
+  font-size: .82rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: background .13s, color .13s, box-shadow .13s;
+}
+.bsw-modal__conn-badge:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  text-decoration: none;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+.bsw-modal__conn-cat {
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .7;
+}
+
 .topical-modal-meta {
   font-size: .78rem;
   color: var(--color-muted, #888);
@@ -2098,6 +2166,13 @@
   font-size: .9rem;
   line-height: 1.6;
   margin: 0 0 .75rem;
+}
+/* Author byline under a devotional (esp. the rotating "Variety" source). */
+.daily-devot-attribution {
+  margin: .85rem 0 0;
+  font-size: .82rem;
+  text-align: right;
+  color: var(--color-muted, #888);
 }
 
 /* ── Verse Study page — Nave's Topics section chips ─────────────────────────── */
@@ -2498,6 +2573,13 @@
   font-size: .65rem;
   color: var(--color-muted, #9a8a72);
   font-style: italic;
+}
+/* "(aka Canonical)" tag when a merged alias term is hovered — see _showTermTip in terms.js */
+.bsw-term-tooltip__aka {
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0;
+  color: var(--color-muted, #9a8a72);
 }
 
 .bsw-term-tooltip__body {

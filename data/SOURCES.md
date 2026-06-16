@@ -197,6 +197,31 @@ changed, or removed. Include the commit hash or version tag so re-syncs are not 
 - **Last pulled:** 2026
 - **Commit/version:** n/a (file download)
 
+### Octavius Winslow — Morning Thoughts / Evening Thoughts (2026-06-15)
+- **Source:** https://www.gracegems.org/WINSLOW/ — *Morning Thoughts* (1856) &
+  *Evening Thoughts* (1858), "Daily Walking with God"
+- **Fetch script:** `scripts/build-devotionals.py` (slugs `winslow-morning`, `winslow-evening`)
+- **Data path:** `data/devotionals/winslow-morning.json`, `data/devotionals/winslow-evening.json`
+- **License:** Public domain (author d. 1878); GraceGems permits free redistribution
+- **Notes:** Powers the home-page "Variety" devotional (rotating authors per slot).
+  Raw HTML cached under `working/devotionals-raw/`. Verse refs normalized to the
+  project's canonical book names. The GraceGems edition omits a few days
+  (Mar 4, Mar 8, May 28, Jun 12, Jun 22 morning; Sep 24, Oct 18 evening); the
+  variety renderer falls through to the next author on gap dates.
+- **Last pulled:** 2026-06-15
+
+### F.B. Meyer — Our Daily Walk (2026-06-15)
+- **Source:** https://www.preceptaustin.org/ — *Our Daily Walk* (366 daily readings)
+- **Fetch script:** `scripts/build-devotionals.py` (slug `meyer`)
+- **Data path:** `data/devotionals/meyer.json`
+- **License:** Public domain (author d. 1929)
+- **Notes:** Part of the home-page "Variety" rotation. PreceptAustin uses
+  inconsistent month slugs (April is the bare `/our_daily_walk`; Jun/Jul/Sep are
+  spelled out) and decorates citations with "-note" links, "(R.V.)" tags, and
+  3-letter abbreviations — all normalized by the pipeline (0 unresolved refs, 366
+  entries). Each entry keeps its thematic title heading and closing PRAYER.
+- **Last pulled:** 2026-06-15
+
 ---
 
 ## Confessional Library

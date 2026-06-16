@@ -55,6 +55,10 @@
 .bp-cat-badge--event    { background: #b45309; }
 .bp-cat-badge--name     { background: #1e3a5f; }
 .bp-cat-badge--father   { background: #8c6a00; }
+.bp-cat-badge--commentator { background: #6d28d9; }
+/* Motif overlay badges — secondary to the category badge, never replacing it. */
+.bp-cat-badge--motif    { background: #0f766e; }   /* teal — imagery/metaphor */
+.bp-cat-badge--type     { background: #9a3412; }   /* burnt orange — typology/shadow→fulfillment */
 
 /* ── Home page ───────────────────────────────────────────────────────────── */
 
@@ -158,6 +162,68 @@
 .bp-category-tile__count {
   font-size: .72rem;
   color: var(--color-muted, #aaa);
+}
+
+/* Special cross-cut tiles (Anchors, Groups) — accent so they read as more than a category */
+.bp-category-tile--special {
+  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface, #fff));
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border, #e0e0e0));
+}
+.bp-category-tile--special:hover {
+  background: color-mix(in srgb, var(--color-primary) 14%, var(--color-surface, #fff));
+}
+
+/* Sub-heading line under a browse header (Groups / Anchors views) */
+.bp-browse-sub {
+  margin: -.4rem 0 1.1rem;
+  font-size: .85rem;
+  color: var(--color-muted, #888);
+  line-height: 1.5;
+}
+
+/* Groups view — one card per group, members linked inline */
+.bp-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .85rem;
+}
+.bp-group-card {
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 10px;
+  background: var(--color-surface, #fff);
+  padding: .85rem .9rem;
+}
+.bp-group-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.bp-group-card__title:hover { color: var(--color-primary); text-decoration: underline; }
+.bp-group-card__count {
+  display: block;
+  font-size: .72rem;
+  color: var(--color-muted, #999);
+  margin: .1rem 0 .55rem;
+}
+.bp-group-card__members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .5rem;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+.bp-group-card__members a { color: var(--color-primary); text-decoration: none; }
+.bp-group-card__members a:hover { text-decoration: underline; }
+
+/* Anchors view — sections per category */
+.bp-anchor-section { margin-bottom: 1.5rem; }
+.bp-anchor-section__head {
+  font-size: .95rem;
+  font-weight: 700;
+  margin: 0 0 .6rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid var(--color-border, #e0e0e0);
 }
 
 /* Featured article */
@@ -414,6 +480,15 @@
   flex: 1;
 }
 
+/* Alias/redirect pointer label, e.g. "Golgotha (aka Calvary)" — see _akaHtml in biblepedia.js */
+.bp-result-aka {
+  font-size: .78rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-muted, #777);
+  white-space: nowrap;
+}
+
 .bp-result-item__brief {
   font-size: .82rem;
   color: var(--color-muted, #777);
@@ -508,6 +583,140 @@
 
 .bp-synthesis p:last-child {
   margin-bottom: 0;
+}
+
+/* Facet sections — folded sub-topics as collapsible anchored panels (e.g. Wrath of God under God) */
+.bp-facets {
+  margin: 1.5rem 0;
+}
+.bp-facets__head {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 .75rem;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid var(--color-border, #e0e0e0);
+  color: var(--color-text, #1a1a1a);
+}
+.bp-facet {
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: .6rem;
+  scroll-margin-top: 1rem;
+}
+.bp-facet__summary {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem .9rem;
+  background: var(--color-surface-subtle, #f5f5f5);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+.bp-facet__summary::-webkit-details-marker { display: none; }
+.bp-facet__title {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--color-text, #1a1a1a);
+  flex: 1;
+}
+.bp-facet__toggle {
+  font-size: .72rem;
+  color: var(--color-muted, #bbb);
+  transition: transform .15s;
+}
+details.bp-facet[open] .bp-facet__toggle { transform: rotate(90deg); }
+details.bp-facet[open] .bp-facet__summary {
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+.bp-facet__body {
+  padding: .85rem 1rem 1rem;
+  line-height: 1.7;
+}
+.bp-facet__body > p:first-child { margin-top: 0; }
+.bp-facet__refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: .75rem;
+  padding-top: .6rem;
+  border-top: 1px dashed var(--color-border, #e8e8e8);
+}
+
+/* "Member of" — group links rendered as a row in the Quick Info sidebar */
+.bp-qi-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+.bp-qi-groups a {
+  text-decoration: none;
+  background: var(--color-surface-subtle, #f5f5f5);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 999px;
+  padding: .1rem .55rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.bp-qi-groups a:hover {
+  background: var(--color-surface-alt, #ececec);
+}
+
+/* Link table — in-body curated grid linking to each member article (e.g. the Twelve) */
+.bp-link-table {
+  margin: 0 0 1.5rem;
+}
+.bp-link-table__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 .6rem;
+  color: var(--color-text, #1a1a1a);
+}
+.bp-link-table__scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+}
+.bp-link-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .88rem;
+}
+.bp-link-table thead th {
+  text-align: left;
+  padding: .5rem .75rem;
+  background: var(--color-surface-subtle, #f5f5f5);
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--color-muted, #888);
+  white-space: nowrap;
+}
+.bp-link-table tbody td {
+  padding: .5rem .75rem;
+  border-bottom: 1px solid var(--color-border, #ededed);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.bp-link-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.bp-link-table tbody tr:hover td {
+  background: var(--color-surface-subtle, #fafafa);
+}
+.bp-link-table__name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.bp-link-table__note {
+  font-size: .8rem;
+  color: var(--color-muted, #888);
+  margin: .5rem 0 0;
+  line-height: 1.5;
 }
 
 /* Infobox */
@@ -674,6 +883,104 @@ details.bp-src-section[open] summary {
   display: flex;
   flex-direction: column;
   gap: .25rem;
+}
+
+/* "In the Library" panel: links out to full-text Library docs (creeds, father writings) */
+.bp-lib-refs {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.bp-lib-ref {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  padding: .4rem .5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background .1s;
+}
+.bp-lib-ref:hover {
+  background: var(--color-surface-subtle, #f5f5f5);
+  text-decoration: none;
+}
+.bp-lib-ref__title {
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.bp-lib-ref__title::before {
+  content: "📖 ";
+}
+.bp-lib-ref__meta {
+  font-size: .72rem;
+  color: var(--color-muted, #888);
+}
+
+/* "Location" panel: interactive Leaflet mini-map for place articles (data/maps/place-coords.json) */
+.bp-location-panel .bp-sidebar-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.bp-loc-badge {
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  padding: .12rem .42rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.bp-loc-badge--disputed { background: #f6e6c8; color: #8a5712; }
+.bp-loc-badge--region   { background: #e7ddf3; color: #573a87; }
+.bp-loc-map {
+  height: 200px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--color-surface-subtle, #eee);
+}
+/* keep Leaflet popups/controls in the site font rather than Leaflet's default sans stack */
+.bp-loc-map .leaflet-container { font: inherit; }
+.bp-loc-id {
+  margin: .5rem 0 0;
+  font-size: .78rem;
+  color: var(--color-muted, #777);
+}
+.bp-loc-foot {
+  margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+.bp-loc-openmap {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+.bp-loc-openmap:hover { text-decoration: underline; }
+.bp-loc-attr {
+  font-size: .66rem;
+  color: var(--color-muted, #999);
+}
+.bp-loc-attr a { color: inherit; }
+/* Connections panel: backlink count + typed groups */
+.bp-conn-backlinks {
+  font-size: .78rem;
+  color: var(--color-muted, #888);
+  margin: 0 0 .6rem;
+}
+.bp-conn-group { margin-bottom: .7rem; }
+.bp-conn-group__head {
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--color-muted, #888);
+  margin: 0 0 .3rem;
 }
 
 .bp-related-item {
@@ -1000,6 +1307,7 @@ details.bp-src-section[open] summary {
 
 [data-theme="dark"] .bp-infobox,
 [data-theme="dark"] .bp-src-section,
+[data-theme="dark"] .bp-facet,
 [data-theme="dark"] .bp-sidebar-panel,
 [data-theme="dark"] .bp-featured,
 [data-theme="dark"] .bp-category-tile {
@@ -1009,9 +1317,23 @@ details.bp-src-section[open] summary {
 [data-theme="dark"] .bp-infobox__head,
 [data-theme="dark"] .bp-src-section summary,
 [data-theme="dark"] .bp-src-section__head,
+[data-theme="dark"] .bp-facet__summary,
 [data-theme="dark"] .bp-sidebar-panel__head {
   background: var(--color-surface-alt, #2a2318);
 }
+
+/* Category badges: in dark mode the saturated/dark backgrounds blended into the page, so use
+   bright backgrounds with dark text for uniform legibility (e.g. the Concept badge on Trinity). */
+[data-theme="dark"] .bp-cat-badge { color: #15110b; }
+[data-theme="dark"] .bp-cat-badge--people     { background: #c4a5f7; }
+[data-theme="dark"] .bp-cat-badge--place      { background: #5fd3a3; }
+[data-theme="dark"] .bp-cat-badge--concept    { background: #82b1ff; }
+[data-theme="dark"] .bp-cat-badge--event      { background: #f0b366; }
+[data-theme="dark"] .bp-cat-badge--name       { background: #93b8e6; }
+[data-theme="dark"] .bp-cat-badge--father     { background: #e3c659; }
+[data-theme="dark"] .bp-cat-badge--commentator{ background: #c9adf7; }
+[data-theme="dark"] .bp-cat-badge--motif       { background: #5fd0c4; }
+[data-theme="dark"] .bp-cat-badge--type        { background: #f0a06a; }
 
 [data-theme="dark"] .bp-alpha-btn:hover,
 [data-theme="dark"] .bp-alpha-btn--active {
@@ -1035,6 +1357,7 @@ details.bp-src-section[open] summary {
   }
   :root:not([data-theme="light"]) .bp-infobox,
   :root:not([data-theme="light"]) .bp-src-section,
+  :root:not([data-theme="light"]) .bp-facet,
   :root:not([data-theme="light"]) .bp-sidebar-panel,
   :root:not([data-theme="light"]) .bp-featured,
   :root:not([data-theme="light"]) .bp-category-tile {
@@ -1043,9 +1366,18 @@ details.bp-src-section[open] summary {
   :root:not([data-theme="light"]) .bp-infobox__head,
   :root:not([data-theme="light"]) .bp-src-section summary,
   :root:not([data-theme="light"]) .bp-src-section__head,
+  :root:not([data-theme="light"]) .bp-facet__summary,
   :root:not([data-theme="light"]) .bp-sidebar-panel__head {
     background: var(--color-surface-alt, #2a2318);
   }
+  :root:not([data-theme="light"]) .bp-cat-badge { color: #15110b; }
+  :root:not([data-theme="light"]) .bp-cat-badge--people     { background: #c4a5f7; }
+  :root:not([data-theme="light"]) .bp-cat-badge--place      { background: #5fd3a3; }
+  :root:not([data-theme="light"]) .bp-cat-badge--concept    { background: #82b1ff; }
+  :root:not([data-theme="light"]) .bp-cat-badge--event      { background: #f0b366; }
+  :root:not([data-theme="light"]) .bp-cat-badge--name       { background: #93b8e6; }
+  :root:not([data-theme="light"]) .bp-cat-badge--father     { background: #e3c659; }
+  :root:not([data-theme="light"]) .bp-cat-badge--commentator{ background: #c9adf7; }
   :root:not([data-theme="light"]) .bp-alpha-btn:hover,
   :root:not([data-theme="light"]) .bp-alpha-btn--active {
     background: var(--color-btn-bg, #3a2d18);
@@ -1291,3 +1623,129 @@ details.bp-src-section[open] summary {
     color: #7aa0e0;
   }
 }
+
+/* ── Motif overlay ──────────────────────────────────────────────────────────────
+   Cross-cutting imagery/typology layer (data/biblepedia/motifs.json). Quick Info row,
+   the "Fulfilled in" typology panel, and the ?cat=motifs browse view. */
+
+/* Quick Info "Motif" row */
+.bp-qi-motif { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem; }
+.bp-qi-motif a {
+  text-decoration: none;
+  background: var(--color-surface-subtle, #f5f5f5);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 999px;
+  padding: .1rem .55rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.bp-qi-motif a:hover { background: var(--color-surface-alt, #ececec); }
+.bp-qi-motif__modes { font-size: .72rem; color: var(--color-text-soft, #6b7280); text-transform: capitalize; }
+
+/* "Fulfilled in" typology panel (sidebar) */
+.bp-motif-panel .bp-sidebar-panel__head {
+  background: #0f766e; color: #fff;
+}
+.bp-motif-typ { margin-bottom: .65rem; }
+.bp-motif-typ__label {
+  display: inline-block;
+  font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: #9a3412; margin-bottom: .15rem;
+}
+.bp-motif-typ__text { margin: 0; font-size: .88rem; line-height: 1.45; color: var(--color-text); }
+.bp-motif-typ__refs { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .4rem; }
+
+/* Motifs browse view (?cat=motifs) */
+.bp-motif-families { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.bp-motif-family__name {
+  display: flex; align-items: baseline; gap: .5rem;
+  font-size: 1.1rem; margin: 0 0 .25rem;
+}
+.bp-motif-family__count {
+  font-size: .78rem; font-weight: 600; color: var(--color-text-soft, #6b7280);
+  background: var(--color-surface-subtle, #f3f4f6); border-radius: 999px; padding: .05rem .5rem;
+}
+.bp-motif-family__blurb { margin: 0 0 .6rem; font-size: .88rem; color: var(--color-text-soft, #6b7280); }
+.bp-motif-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.bp-motif-chip {
+  display: inline-flex; align-items: center; gap: .35rem;
+  text-decoration: none;
+  background: var(--color-surface-subtle, #f5f5f5);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  padding: .3rem .6rem;
+  font-size: .9rem; font-weight: 600;
+  color: var(--color-text);
+  text-transform: capitalize;
+}
+.bp-motif-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.bp-motif-flag {
+  font-size: .6rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  border-radius: 4px; padding: .05rem .3rem; color: #fff;
+}
+.bp-motif-flag--type { background: #9a3412; }
+
+[data-theme="dark"] .bp-motif-panel .bp-sidebar-panel__head { background: #134e4a; color: #d6fff8; }
+[data-theme="dark"] .bp-motif-typ__label { color: #f0a06a; }
+[data-theme="dark"] .bp-motif-flag--type { background: #b45309; }
+
+/* ── Anchor regions ─────────────────────────────────────────────────────────────
+   The 'regions' category: a Regions browse view (?cat=regions), the in-article hero map
+   (_renderRegionMap), and the category badge. Colours use theme vars where text sits on a
+   surface so dark mode stays readable; fixed badge colours get explicit dark overrides. */
+
+/* Category badge — cyan, distinct from places (green) and motifs (teal) */
+.bp-cat-badge--region { background: #0e7490; }
+[data-theme="dark"] .bp-cat-badge--region { background: #56c7d6; }
+
+/* Regions browse view (?cat=regions) — mirrors the motif family browse */
+.bp-region-kinds { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }
+.bp-region-kind__name {
+  display: flex; align-items: baseline; gap: .5rem;
+  font-size: 1.1rem; margin: 0 0 .25rem;
+}
+.bp-region-kind__count {
+  font-size: .78rem; font-weight: 600; color: var(--color-text-soft, #6b7280);
+  background: var(--color-surface-subtle, #f3f4f6); border-radius: 999px; padding: .05rem .5rem;
+}
+.bp-region-kind__blurb { margin: 0 0 .6rem; font-size: .88rem; color: var(--color-text-soft, #6b7280); }
+.bp-region-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.bp-region-chip {
+  display: inline-flex; align-items: center; gap: .45rem;
+  text-decoration: none;
+  background: var(--color-surface-subtle, #f5f5f5);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  padding: .3rem .6rem;
+  font-size: .9rem; font-weight: 600;
+  color: var(--color-text);
+}
+.bp-region-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.bp-region-chip__count {
+  font-size: .68rem; font-weight: 700; color: #fff; background: #0e7490;
+  border-radius: 999px; padding: .02rem .4rem; min-width: 1.1rem; text-align: center;
+}
+[data-theme="dark"] .bp-region-chip__count { background: #0e7490; color: #d6f4fa; }
+
+/* In-article hero map (region articles). The mount also carries .bp-sidebar-panel for the
+   card chrome, but lives full-width in the main column. */
+.bp-region-map-wrap { margin: 0 0 1.5rem; }
+.bp-region-map-wrap .bp-sidebar-panel__head {
+  display: flex; align-items: center; justify-content: space-between; gap: .5rem; flex-wrap: wrap;
+}
+.bp-region-map {
+  height: 380px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--color-surface-subtle, #eee);
+}
+.bp-region-map .leaflet-container { font: inherit; }
+.bp-rmap-marker { cursor: pointer; }
+/* Legend in the panel head */
+.bp-rmap-legend { display: inline-flex; gap: .7rem; font-size: .7rem; font-weight: 600; }
+.bp-rmap-legend__item { display: inline-flex; align-items: center; gap: .3rem; }
+.bp-rmap-dot { width: .7rem; height: .7rem; border-radius: 50%; display: inline-block; }
+.bp-rmap-dot--place { background: #2f7d32; }
+.bp-rmap-dot--event { background: #c2410c; }

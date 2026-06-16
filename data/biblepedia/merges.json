@@ -1,0 +1,1640 @@
+{
+ "_doc": "Canonical biblepedia article merges (synonym/alternate-name consolidation). Each key is the canonical article id; aliases list the alternate articles folded into it. Apply with scripts/apply-biblepedia-merges.py, which: (1) sets each alias index.json entry to {redirect:<canonical>, has_article:false} so it stays searchable but routes to the canonical article, (2) writes the canonical entry's aliases[] (alternate display names, for term-tagging + search 'aka' label), (3) deletes the alias article JSON files. The canonical article's prose is hand-authored, not generated here. build-biblepedia-index.py and build-biblepedia-links.py must re-apply this file after any regen, since they rebuild index.json/links.json from the article files.",
+ "merges": {
+  "golgotha": {
+   "canonical_term": "Golgotha",
+   "aliases": [
+    {
+     "id": "calvary",
+     "term": "Calvary"
+    },
+    {
+     "id": "skull-the-place-of-a",
+     "term": "Skull, The place of a"
+    }
+   ],
+   "alias_terms": [
+    "Calvary",
+    "Skull, the place of a",
+    "the place of a skull"
+   ]
+  },
+  "kidron": {
+   "canonical_term": "Kidron",
+   "aliases": [
+    {
+     "id": "cedron",
+     "term": "Cedron"
+    }
+   ],
+   "alias_terms": [
+    "Cedron"
+   ]
+  },
+  "elijah": {
+   "canonical_term": "Elijah",
+   "aliases": [
+    {
+     "id": "elias",
+     "term": "Elias"
+    }
+   ],
+   "alias_terms": [
+    "Elias"
+   ]
+  },
+  "isaiah": {
+   "canonical_term": "Isaiah",
+   "aliases": [
+    {
+     "id": "esaias",
+     "term": "Esaias"
+    }
+   ],
+   "alias_terms": [
+    "Esaias"
+   ]
+  },
+  "hezekiah": {
+   "canonical_term": "Hezekiah",
+   "aliases": [
+    {
+     "id": "ezekias",
+     "term": "Ezekias"
+    }
+   ],
+   "alias_terms": [
+    "Ezekias"
+   ]
+  },
+  "gideon": {
+   "canonical_term": "Gideon",
+   "aliases": [
+    {
+     "id": "jerubbaal",
+     "term": "Jerubbaal"
+    }
+   ],
+   "alias_terms": [
+    "Jerubbaal"
+   ]
+  },
+  "hadadezer": {
+   "canonical_term": "Hadadezer",
+   "aliases": [
+    {
+     "id": "hadarezer",
+     "term": "Hadarezer"
+    }
+   ],
+   "alias_terms": [
+    "Hadarezer"
+   ]
+  },
+  "joppa": {
+   "canonical_term": "Joppa",
+   "aliases": [
+    {
+     "id": "japho",
+     "term": "Japho"
+    }
+   ],
+   "alias_terms": [
+    "Japho"
+   ]
+  },
+  "mark": {
+   "canonical_term": "Mark",
+   "aliases": [
+    {
+     "id": "marcus",
+     "term": "Marcus"
+    }
+   ],
+   "alias_terms": [
+    "Marcus"
+   ]
+  },
+  "uzziah": {
+   "canonical_term": "Uzziah",
+   "aliases": [
+    {
+     "id": "ozias",
+     "term": "Ozias"
+    }
+   ],
+   "alias_terms": [
+    "Ozias"
+   ]
+  },
+  "peruda": {
+   "canonical_term": "Peruda",
+   "aliases": [
+    {
+     "id": "perida",
+     "term": "Perida"
+    }
+   ],
+   "alias_terms": [
+    "Perida"
+   ]
+  },
+  "peleg": {
+   "canonical_term": "Peleg",
+   "aliases": [
+    {
+     "id": "phalec",
+     "term": "Phalec"
+    }
+   ],
+   "alias_terms": [
+    "Phalec"
+   ]
+  },
+  "thaddaeus": {
+   "canonical_term": "Thaddaeus",
+   "aliases": [
+    {
+     "id": "lebbaeus",
+     "term": "Lebbaeus"
+    }
+   ],
+   "alias_terms": [
+    "Lebbaeus"
+   ]
+  },
+  "shittim": {
+   "canonical_term": "Shittim",
+   "aliases": [
+    {
+     "id": "abel-shittim",
+     "term": "Abel-shittim"
+    }
+   ],
+   "alias_terms": [
+    "Abel-shittim"
+   ]
+  },
+  "jude": {
+   "canonical_term": "Jude",
+   "aliases": [
+    {
+     "id": "judas-the-lords-brother",
+     "term": "Judas, the Lord's Brother"
+    }
+   ],
+   "alias_terms": [
+    "Judas, the Lord's Brother"
+   ]
+  },
+  "ziza": {
+   "canonical_term": "Ziza",
+   "aliases": [
+    {
+     "id": "zina",
+     "term": "Zina"
+    }
+   ],
+   "alias_terms": [
+    "Zina"
+   ]
+  },
+  "sinai": {
+   "canonical_term": "Sinai",
+   "aliases": [
+    {
+     "id": "horeb",
+     "term": "Horeb"
+    }
+   ],
+   "alias_terms": [
+    "Horeb"
+   ]
+  },
+  "edom": {
+   "canonical_term": "Edom",
+   "aliases": [
+    {
+     "id": "idumaea",
+     "term": "Idumaea"
+    }
+   ],
+   "alias_terms": [
+    "Idumaea"
+   ]
+  },
+  "ramah": {
+   "canonical_term": "Ramah",
+   "aliases": [
+    {
+     "id": "rama",
+     "term": "Rama"
+    }
+   ],
+   "alias_terms": [
+    "Rama"
+   ]
+  },
+  "aphek": {
+   "canonical_term": "Aphek",
+   "aliases": [
+    {
+     "id": "aphik",
+     "term": "Aphik"
+    }
+   ],
+   "alias_terms": [
+    "Aphik"
+   ]
+  },
+  "cauda": {
+   "canonical_term": "Cauda",
+   "aliases": [
+    {
+     "id": "clauda",
+     "term": "Clauda"
+    }
+   ],
+   "alias_terms": [
+    "Clauda"
+   ]
+  },
+  "heleb": {
+   "canonical_term": "Heleb",
+   "aliases": [
+    {
+     "id": "heled",
+     "term": "Heled"
+    }
+   ],
+   "alias_terms": [
+    "Heled"
+   ]
+  },
+  "mishal": {
+   "canonical_term": "Mishal",
+   "aliases": [
+    {
+     "id": "misheal",
+     "term": "Misheal"
+    }
+   ],
+   "alias_terms": [
+    "Misheal"
+   ]
+  },
+  "shealtiel": {
+   "canonical_term": "Shealtiel",
+   "aliases": [
+    {
+     "id": "salathiel",
+     "term": "Salathiel"
+    }
+   ],
+   "alias_terms": [
+    "Salathiel"
+   ]
+  },
+  "shenir": {
+   "canonical_term": "Shenir",
+   "aliases": [
+    {
+     "id": "senir",
+     "term": "Senir"
+    }
+   ],
+   "alias_terms": [
+    "Senir"
+   ]
+  },
+  "sidon": {
+   "canonical_term": "Sidon",
+   "aliases": [
+    {
+     "id": "zidon",
+     "term": "Zidon"
+    }
+   ],
+   "alias_terms": [
+    "Zidon"
+   ]
+  },
+  "shihor": {
+   "canonical_term": "Shihor",
+   "aliases": [
+    {
+     "id": "sihor",
+     "term": "Sihor"
+    }
+   ],
+   "alias_terms": [
+    "Sihor"
+   ]
+  },
+  "topheth": {
+   "canonical_term": "Topheth",
+   "aliases": [
+    {
+     "id": "tophet",
+     "term": "Tophet"
+    }
+   ],
+   "alias_terms": [
+    "Tophet"
+   ]
+  },
+  "abomination-of-desolation": {
+   "canonical_term": "Abomination of Desolation",
+   "aliases": [
+    {
+     "id": "desolation-abomination-of",
+     "term": "Desolation, Abomination of"
+    }
+   ],
+   "alias_terms": [
+    "Desolation, Abomination of"
+   ]
+  },
+  "false-accusation": {
+   "canonical_term": "False Accusation",
+   "aliases": [
+    {
+     "id": "accusation-false",
+     "term": "Accusation, False"
+    }
+   ],
+   "alias_terms": [
+    "Accusation, False"
+   ]
+  },
+  "apocryphal-acts": {
+   "canonical_term": "Apocryphal Acts",
+   "aliases": [
+    {
+     "id": "acts-apocryphal",
+     "term": "Acts, Apocryphal"
+    }
+   ],
+   "alias_terms": [
+    "Acts, Apocryphal"
+   ]
+  },
+  "sin-against-the-holy-ghost-spirit": {
+   "canonical_term": "Sin Against the Holy Ghost (Spirit)",
+   "aliases": [
+    {
+     "id": "holy-ghost-spirit-sin-against-the",
+     "term": "Holy Ghost (Spirit), Sin Against The"
+    }
+   ],
+   "alias_terms": [
+    "Holy Ghost (Spirit), Sin Against The"
+   ]
+  },
+  "day-of-atonement": {
+   "canonical_term": "Day of Atonement",
+   "aliases": [
+    {
+     "id": "atonement-day-of",
+     "term": "Atonement, Day of"
+    },
+    {
+     "id": "atonement-the-day-of",
+     "term": "Atonement, the Day of"
+    }
+   ],
+   "alias_terms": [
+    "Atonement, Day of",
+    "Atonement, the Day of"
+   ]
+  },
+  "baca": {
+   "canonical_term": "Baca, Valley of",
+   "aliases": [
+    {
+     "id": "baca-valley-of",
+     "term": "Baca, Valley of"
+    }
+   ],
+   "alias_terms": [
+    "Baca, Valley of"
+   ]
+  },
+  "beer-lahai-roi": {
+   "canonical_term": "Beer-lahai-roi",
+   "aliases": [
+    {
+     "id": "lahairoi",
+     "term": "Beer-lahai-roi"
+    }
+   ],
+   "alias_terms": [
+    "Beer-lahai-roi"
+   ]
+  },
+  "bernice": {
+   "canonical_term": "Bernice",
+   "aliases": [
+    {
+     "id": "bernice-or-berenice",
+     "term": "Bernice"
+    }
+   ],
+   "alias_terms": [
+    "Bernice"
+   ]
+  },
+  "virgin-birth": {
+   "canonical_term": "Virgin Birth",
+   "aliases": [
+    {
+     "id": "birth-virgin",
+     "term": "Birth, Virgin"
+    }
+   ],
+   "alias_terms": [
+    "Birth, Virgin"
+   ]
+  },
+  "isaiah-book-of": {
+   "canonical_term": "Isaiah, Book of",
+   "aliases": [
+    {
+     "id": "isaiah-the-book-of",
+     "term": "Isaiah, The Book of"
+    }
+   ],
+   "alias_terms": [
+    "Isaiah, The Book of"
+   ]
+  },
+  "ruth-book-of": {
+   "canonical_term": "Ruth, Book of",
+   "aliases": [
+    {
+     "id": "ruth-the-book-of",
+     "term": "Ruth The Book of"
+    }
+   ],
+   "alias_terms": [
+    "Ruth The Book of"
+   ]
+  },
+  "maccabees-books-of": {
+   "canonical_term": "Maccabees, Books of",
+   "aliases": [
+    {
+     "id": "maccabees-books-of-the",
+     "term": "Maccabees, Books of the"
+    }
+   ],
+   "alias_terms": [
+    "Maccabees, Books of the"
+   ]
+  },
+  "caesarea-philippi": {
+   "canonical_term": "Caesarea Philippi",
+   "aliases": [
+    {
+     "id": "caesara-philippi",
+     "term": "Caesarea Philippi"
+    }
+   ],
+   "alias_terms": [
+    "Caesarea Philippi"
+   ]
+  },
+  "caiaphas": {
+   "canonical_term": "Caiaphas",
+   "aliases": [
+    {
+     "id": "caiaphas-or-caiaphas",
+     "term": "Caiaphas"
+    }
+   ],
+   "alias_terms": [
+    "Caiaphas"
+   ]
+  },
+  "canaanites": {
+   "canonical_term": "Canaanites",
+   "aliases": [
+    {
+     "id": "canaanites-the",
+     "term": "Canaanites, the"
+    }
+   ],
+   "alias_terms": [
+    "Canaanites, the"
+   ]
+  },
+  "candace": {
+   "canonical_term": "Candace",
+   "aliases": [
+    {
+     "id": "candace-or-candace",
+     "term": "Candace"
+    }
+   ],
+   "alias_terms": [
+    "Candace"
+   ]
+  },
+  "canon-of-the-old-testament": {
+   "canonical_term": "Canon of the Old Testament",
+   "aliases": [
+    {
+     "id": "old-testament-canon",
+     "term": "Old Testament Canon"
+    }
+   ],
+   "alias_terms": [
+    "Old Testament Canon"
+   ]
+  },
+  "cappadocia": {
+   "canonical_term": "Cappadocia",
+   "aliases": [
+    {
+     "id": "cappadocia-cappadocians",
+     "term": "Cappadocia"
+    }
+   ],
+   "alias_terms": [
+    "Cappadocia"
+   ]
+  },
+  "carchemish": {
+   "canonical_term": "Carchemish",
+   "aliases": [
+    {
+     "id": "charchemish",
+     "term": "Carchemish"
+    }
+   ],
+   "alias_terms": [
+    "Carchemish"
+   ]
+  },
+  "castor-and-pollux": {
+   "canonical_term": "Castor and Pollux",
+   "aliases": [
+    {
+     "id": "pollux",
+     "term": "Castor and Pollux"
+    }
+   ],
+   "alias_terms": [
+    "Castor and Pollux"
+   ]
+  },
+  "cenchrea": {
+   "canonical_term": "Cenchrea",
+   "aliases": [
+    {
+     "id": "cenchrea-or-cenchrea",
+     "term": "Cenchrea"
+    }
+   ],
+   "alias_terms": [
+    "Cenchrea"
+   ]
+  },
+  "chedorlaomer": {
+   "canonical_term": "Chedorlaomer",
+   "aliases": [
+    {
+     "id": "chedorlaomer-or-chedorlaomer",
+     "term": "Chedorlaomer"
+    }
+   ],
+   "alias_terms": [
+    "Chedorlaomer"
+   ]
+  },
+  "jesus-christ": {
+   "canonical_term": "Jesus Christ",
+   "aliases": [
+    {
+     "id": "jesus-the-christ",
+     "term": "Jesus, the Christ"
+    },
+    {
+     "id": "jesus",
+     "term": "Jesus"
+    }
+   ],
+   "alias_terms": [
+    "Jesus",
+    "Jesus, the Christ"
+   ]
+  },
+  "person-of-christ": {
+   "canonical_term": "Person of Christ",
+   "aliases": [
+    {
+     "id": "christ-person-of",
+     "term": "Christ, Person of"
+    }
+   ],
+   "alias_terms": [
+    "Christ, Person of"
+   ]
+  },
+  "cities-of-refuge": {
+   "canonical_term": "Cities of Refuge",
+   "aliases": [
+    {
+     "id": "refuge-cities-of",
+     "term": "Refuge, Cities of"
+    }
+   ],
+   "alias_terms": [
+    "Refuge, Cities of"
+   ]
+  },
+  "claudius-lysias": {
+   "canonical_term": "Claudius Lysias",
+   "aliases": [
+    {
+     "id": "lysias-claudius",
+     "term": "Lysias, Claudius"
+    }
+   ],
+   "alias_terms": [
+    "Lysias, Claudius"
+   ]
+  },
+  "coat-of-mail": {
+   "canonical_term": "Coat of mail",
+   "aliases": [
+    {
+     "id": "mail-coat-of",
+     "term": "Mail, Coat of"
+    }
+   ],
+   "alias_terms": [
+    "Mail, Coat of"
+   ]
+  },
+  "colossians-epistle-to-the": {
+   "canonical_term": "Colossians, Epistle to the",
+   "aliases": [
+    {
+     "id": "colossians-the-epistle-to-the",
+     "term": "Colossians, The Epistle to the"
+    }
+   ],
+   "alias_terms": [
+    "Colossians, The Epistle to the"
+   ]
+  },
+  "ten-commandments": {
+   "canonical_term": "Ten Commandments",
+   "aliases": [
+    {
+     "id": "commandments-the-ten",
+     "term": "Commandments, the Ten"
+    },
+    {
+     "id": "ten-commandments-the",
+     "term": "Ten Commandments, The"
+    }
+   ],
+   "alias_terms": [
+    "Commandments, the Ten",
+    "Ten Commandments, The"
+   ]
+  },
+  "mount-of-the-congregation": {
+   "canonical_term": "Mount of the Congregation",
+   "aliases": [
+    {
+     "id": "congregation-mount-of-the",
+     "term": "Congregation, Mount of the"
+    }
+   ],
+   "alias_terms": [
+    "Congregation, Mount of the"
+   ]
+  },
+  "kings-dale": {
+   "canonical_term": "King's Dale",
+   "aliases": [
+    {
+     "id": "dale-the-kings",
+     "term": "Dale, the King's"
+    }
+   ],
+   "alias_terms": [
+    "Dale, the King's"
+   ]
+  },
+  "lords-day": {
+   "canonical_term": "Lord's Day",
+   "aliases": [
+    {
+     "id": "lords-day-the",
+     "term": "Lord's Day, The"
+    }
+   ],
+   "alias_terms": [
+    "Lord's Day, The"
+   ]
+  },
+  "tenth-deal": {
+   "canonical_term": "Tenth Deal",
+   "aliases": [
+    {
+     "id": "deal-tenth",
+     "term": "Deal, Tenth"
+    }
+   ],
+   "alias_terms": [
+    "Deal, Tenth"
+   ]
+  },
+  "ephesians-epistle-to-the": {
+   "canonical_term": "Ephesians, Epistle to the",
+   "aliases": [
+    {
+     "id": "ephesians-the-epistle-to-the",
+     "term": "Ephesians, The Epistle to the"
+    }
+   ],
+   "alias_terms": [
+    "Ephesians, The Epistle to the"
+   ]
+  },
+  "galatians-epistle-to": {
+   "canonical_term": "Galatians, Epistle to",
+   "aliases": [
+    {
+     "id": "galatians-the-epistle-to-the",
+     "term": "Galatians, The Epistle to the"
+    }
+   ],
+   "alias_terms": [
+    "Galatians, The Epistle to the"
+   ]
+  },
+  "philippians-epistle-to": {
+   "canonical_term": "Philippians, Epistle to the",
+   "aliases": [
+    {
+     "id": "philippians-epistle-to-the",
+     "term": "Philippians, Epistle to the"
+    }
+   ],
+   "alias_terms": [
+    "Philippians, Epistle to the"
+   ]
+  },
+  "euodia": {
+   "canonical_term": "Euodia",
+   "aliases": [
+    {
+     "id": "euodias",
+     "term": "Euodia"
+    }
+   ],
+   "alias_terms": [
+    "Euodia"
+   ]
+  },
+  "exodus": {
+   "canonical_term": "Exodus",
+   "aliases": [
+    {
+     "id": "exodus-the",
+     "term": "Exodus, The"
+    }
+   ],
+   "alias_terms": [
+    "Exodus, The"
+   ]
+  },
+  "tabernacles-feast-of": {
+   "canonical_term": "Tabernacles, Feast of",
+   "aliases": [
+    {
+     "id": "tabernacles-the-feast-of",
+     "term": "Tabernacles, the Feast of"
+    }
+   ],
+   "alias_terms": [
+    "Tabernacles, the Feast of"
+   ]
+  },
+  "porcius-festus": {
+   "canonical_term": "Porcius Festus",
+   "aliases": [
+    {
+     "id": "festus-porcius",
+     "term": "Festus, Porcius"
+    }
+   ],
+   "alias_terms": [
+    "Festus, Porcius"
+   ]
+  },
+  "potters-field": {
+   "canonical_term": "Potter's Field",
+   "aliases": [
+    {
+     "id": "potters-field-the",
+     "term": "Potter's Field, The"
+    }
+   ],
+   "alias_terms": [
+    "Potter's Field, The"
+   ]
+  },
+  "lake-of-fire": {
+   "canonical_term": "Lake of Fire",
+   "aliases": [
+    {
+     "id": "fire-lake-of",
+     "term": "Fire, Lake of"
+    }
+   ],
+   "alias_terms": [
+    "Fire, Lake of"
+   ]
+  },
+  "tongues-gift-of": {
+   "canonical_term": "Tongues, Gift of",
+   "aliases": [
+    {
+     "id": "tongues-the-gift",
+     "term": "Tongues, Gift of"
+    }
+   ],
+   "alias_terms": [
+    "Tongues, Gift of"
+   ]
+  },
+  "spiritual-gifts": {
+   "canonical_term": "Spiritual Gifts",
+   "aliases": [
+    {
+     "id": "gifts-spiritual",
+     "term": "Gifts, Spiritual"
+    }
+   ],
+   "alias_terms": [
+    "Gifts, Spiritual"
+   ]
+  },
+  "son-of-god": {
+   "canonical_term": "Son of God",
+   "aliases": [
+    {
+     "id": "son-of-god-the",
+     "term": "Son of God, The"
+    }
+   ],
+   "alias_terms": [
+    "Son of God, The"
+   ]
+  },
+  "holy-spirit": {
+   "canonical_term": "Holy Spirit",
+   "aliases": [
+    {
+     "id": "spirit-holy",
+     "term": "Spirit, Holy"
+    }
+   ],
+   "alias_terms": [
+    "Spirit, Holy"
+   ]
+  },
+  "leprosy": {
+   "canonical_term": "Leprosy",
+   "aliases": [
+    {
+     "id": "leper-leprosy",
+     "term": "Leprosy"
+    }
+   ],
+   "alias_terms": [
+    "Leprosy"
+   ]
+  },
+  "lot": {
+   "canonical_term": "Lot",
+   "aliases": [
+    {
+     "id": "lot-the",
+     "term": "Lot, The"
+    }
+   ],
+   "alias_terms": [
+    "Lot, The"
+   ]
+  },
+  "son-of-man": {
+   "canonical_term": "Son of man",
+   "aliases": [
+    {
+     "id": "son-of-man-the",
+     "term": "Son of Man, The"
+    }
+   ],
+   "alias_terms": [
+    "Son of Man, The"
+   ]
+  },
+  "olives-mount-of": {
+   "canonical_term": "Olives, Mount of",
+   "aliases": [
+    {
+     "id": "olves-mount-of",
+     "term": "Olives, Mount of"
+    }
+   ],
+   "alias_terms": [
+    "Olives, Mount of"
+   ]
+  },
+  "paran": {
+   "canonical_term": "Paran",
+   "aliases": [
+    {
+     "id": "paran-elparan",
+     "term": "Paran"
+    }
+   ],
+   "alias_terms": [
+    "Paran"
+   ]
+  },
+  "samaritan-pentateuch": {
+   "canonical_term": "Samaritan Pentateuch",
+   "aliases": [
+    {
+     "id": "pentateuch-the-samaritan",
+     "term": "Pentateuch, The Samaritan"
+    }
+   ],
+   "alias_terms": [
+    "Pentateuch, The Samaritan"
+   ]
+  },
+  "pontius-pilate": {
+   "canonical_term": "Pontius Pilate",
+   "aliases": [
+    {
+     "id": "pilate-pontius",
+     "term": "Pilate, Pontius"
+    }
+   ],
+   "alias_terms": [
+    "Pilate, Pontius"
+   ]
+  },
+  "solomons-porch": {
+   "canonical_term": "Solomon's Porch",
+   "aliases": [
+    {
+     "id": "porch-solomons",
+     "term": "Solomon's Porch"
+    }
+   ],
+   "alias_terms": [
+    "Solomon's Porch"
+   ]
+  },
+  "rebekah": {
+   "canonical_term": "Rebekah",
+   "aliases": [
+    {
+     "id": "rebekah-rebecca",
+     "term": "Rebekah"
+    }
+   ],
+   "alias_terms": [
+    "Rebekah"
+   ]
+  },
+  "reconciliation": {
+   "canonical_term": "Reconciliation",
+   "aliases": [
+    {
+     "id": "reconcilation",
+     "term": "Reconciliation"
+    }
+   ],
+   "alias_terms": [
+    "Reconciliation"
+   ]
+  },
+  "sabbatical-year": {
+   "canonical_term": "Sabbatical year",
+   "aliases": [
+    {
+     "id": "year-sabbatical",
+     "term": "Year, Sabbatical"
+    }
+   ],
+   "alias_terms": [
+    "Year, Sabbatical"
+   ]
+  },
+  "samaria": {
+   "canonical_term": "Samaria",
+   "aliases": [
+    {
+     "id": "samaria-country-of",
+     "term": "Samaria"
+    }
+   ],
+   "alias_terms": [
+    "Samaria"
+   ]
+  },
+  "scribes": {
+   "canonical_term": "Scribes",
+   "aliases": [
+    {
+     "id": "scribe-s",
+     "term": "Scribes"
+    }
+   ],
+   "alias_terms": [
+    "Scribes"
+   ]
+  },
+  "seraphim": {
+   "canonical_term": "Seraphim",
+   "aliases": [
+    {
+     "id": "seraphim-seraphs",
+     "term": "Seraphim"
+    }
+   ],
+   "alias_terms": [
+    "Seraphim"
+   ]
+  },
+  "seventy-weeks": {
+   "canonical_term": "Seventy Weeks",
+   "aliases": [
+    {
+     "id": "weeks-seventy",
+     "term": "Weeks, Seventy"
+    }
+   ],
+   "alias_terms": [
+    "Weeks, Seventy"
+   ]
+  },
+  "shushan": {
+   "canonical_term": "Shushan",
+   "aliases": [
+    {
+     "id": "shushan-susa",
+     "term": "Shushan"
+    }
+   ],
+   "alias_terms": [
+    "Shushan"
+   ]
+  },
+  "spices": {
+   "canonical_term": "Spices",
+   "aliases": [
+    {
+     "id": "spice-spices",
+     "term": "Spices"
+    }
+   ],
+   "alias_terms": [
+    "Spices"
+   ]
+  },
+  "transfiguration": {
+   "canonical_term": "Transfiguration",
+   "aliases": [
+    {
+     "id": "transfiguration-the",
+     "term": "Transfiguration, the"
+    }
+   ],
+   "alias_terms": [
+    "Transfiguration, the"
+   ]
+  },
+  "tryphena-and-tryphosa": {
+   "canonical_term": "Tryphena and Tryphosa",
+   "aliases": [
+    {
+     "id": "tryphena",
+     "term": "Tryphena and Tryphosa"
+    }
+   ],
+   "alias_terms": [
+    "Tryphena and Tryphosa"
+   ]
+  },
+  "veil": {
+   "canonical_term": "Veil",
+   "aliases": [
+    {
+     "id": "veil-vail",
+     "term": "Veil"
+    }
+   ],
+   "alias_terms": [
+    "Veil"
+   ]
+  },
+  "word": {
+   "canonical_term": "Word",
+   "aliases": [
+    {
+     "id": "word-the",
+     "term": "Word, The"
+    }
+   ],
+   "alias_terms": [
+    "Word, The"
+   ]
+  },
+  "fall-of-man": {
+   "canonical_term": "Fall of Man",
+   "aliases": [
+    {
+     "id": "fall-the",
+     "term": "Fall, The"
+    }
+   ],
+   "alias_terms": [
+    "Fall, The",
+    "The Fall"
+   ]
+  },
+  "resurrection-of-christ": {
+   "canonical_term": "Resurrection of Christ",
+   "aliases": [
+    {
+     "id": "resurrection-of-jesus-christ-the",
+     "term": "Resurrection of Jesus Christ, The"
+    }
+   ],
+   "alias_terms": [
+    "Resurrection of Jesus Christ",
+    "Resurrection of Jesus Christ, The"
+   ]
+  },
+  "servant": {
+   "canonical_term": "Servant of the LORD",
+   "aliases": [
+    {
+     "id": "servant-of-yahweh",
+     "term": "Servant of Jehovah; Servant of the Lord; Servant of Yahweh"
+    }
+   ],
+   "alias_terms": [
+    "Servant of Jehovah",
+    "Servant of Jehovah; Servant of the Lord; Servant of Yahweh",
+    "Servant of Yahweh"
+   ]
+  },
+  "lords-supper": {
+   "canonical_term": "Lord's Supper",
+   "aliases": [
+    {
+     "id": "lords-supper;-eucharist",
+     "term": "Lord's Supper; Eucharist"
+    }
+   ],
+   "alias_terms": [
+    "Eucharist",
+    "Holy Communion",
+    "Lord's Supper; Eucharist"
+   ]
+  },
+  "apostasy": {
+   "canonical_term": "Apostasy",
+   "aliases": [
+    {
+     "id": "apostasy;-apostate",
+     "term": "Apostasy; Apostate"
+    }
+   ],
+   "alias_terms": [
+    "Apostasy; Apostate",
+    "Apostate"
+   ]
+  },
+  "redeemer": {
+   "canonical_term": "Redeemer",
+   "aliases": [
+    {
+     "id": "redeemer;-redemption",
+     "term": "Redeemer; Redemption"
+    }
+   ],
+   "alias_terms": [
+    "Redeemer; Redemption",
+    "Redemption"
+   ]
+  },
+  "witch": {
+   "canonical_term": "Witch",
+   "aliases": [
+    {
+     "id": "witch-witchcrafts",
+     "term": "Witch; Witchcrafts"
+    }
+   ],
+   "alias_terms": [
+    "Witch; Witchcrafts",
+    "Witchcraft"
+   ]
+  },
+  "burial": {
+   "canonical_term": "Burial",
+   "aliases": [
+    {
+     "id": "burial-sepulchres",
+     "term": "Burial; Sepulchres"
+    }
+   ],
+   "alias_terms": [
+    "Burial; Sepulchres",
+    "Sepulchres"
+   ]
+  },
+  "magic": {
+   "canonical_term": "Magic",
+   "aliases": [
+    {
+     "id": "magic-magicians",
+     "term": "Magic, Magicians"
+    }
+   ],
+   "alias_terms": [
+    "Magic, Magicians",
+    "Magicians"
+   ]
+  },
+  "theft": {
+   "canonical_term": "Theft",
+   "aliases": [
+    {
+     "id": "theft-and-thieves",
+     "term": "Theft and Thieves"
+    }
+   ],
+   "alias_terms": [
+    "Theft and Thieves",
+    "Thieves"
+   ]
+  },
+  "sower": {
+   "canonical_term": "Sower",
+   "aliases": [
+    {
+     "id": "sower-sowing",
+     "term": "Sower and Sowing"
+    }
+   ],
+   "alias_terms": [
+    "Sower and Sowing",
+    "Sowing"
+   ]
+  },
+  "proverbs": {
+   "canonical_term": "Proverbs",
+   "aliases": [
+    {
+     "id": "proverbs-book-of",
+     "term": "Proverbs, Book of"
+    }
+   ],
+   "alias_terms": [
+    "Book of Proverbs",
+    "Proverbs, Book of"
+   ]
+  },
+  "psalms": {
+   "canonical_term": "Psalms",
+   "aliases": [
+    {
+     "id": "psalms-book-of",
+     "term": "Psalms, Book of"
+    }
+   ],
+   "alias_terms": [
+    "Book of Psalms",
+    "Psalms, Book of"
+   ]
+  },
+  "james-epistle-of": {
+   "canonical_term": "James, Epistle of",
+   "aliases": [
+    {
+     "id": "james-the-general-epistle-of",
+     "term": "James, The General Epistle of"
+    }
+   ],
+   "alias_terms": [
+    "General Epistle of James",
+    "James, The General Epistle of"
+   ]
+  },
+  "john-first-epistle-of": {
+   "canonical_term": "John, First Epistle of",
+   "aliases": [
+    {
+     "id": "john-the-first-epistle-general-of",
+     "term": "John, The First Epistle General of"
+    }
+   ],
+   "alias_terms": [
+    "1 John",
+    "First Epistle General of John",
+    "John, The First Epistle General of"
+   ]
+  },
+  "philemon-epistle-to": {
+   "canonical_term": "Philemon, Epistle to",
+   "aliases": [
+    {
+     "id": "philemon-the-epistle-of-paul-to",
+     "term": "Philemon, The Epistle of Paul to"
+    }
+   ],
+   "alias_terms": [
+    "Epistle of Paul to Philemon",
+    "Philemon, The Epistle of Paul to"
+   ]
+  },
+  "kings-the-books-of": {
+   "canonical_term": "Kings, The Books of",
+   "aliases": [
+    {
+     "id": "kings-first-and-second-books-of",
+     "term": "Kings, First and Second Books of"
+    }
+   ],
+   "alias_terms": [
+    "First and Second Kings",
+    "Kings, First and Second Books of"
+   ]
+  },
+  "chronicles-books-of": {
+   "canonical_term": "Chronicles, Books of",
+   "aliases": [
+    {
+     "id": "chronicles-first-and-second-books-of",
+     "term": "Chronicles, First and Second Books of"
+    }
+   ],
+   "alias_terms": [
+    "Chronicles, First and Second Books of",
+    "First and Second Chronicles"
+   ]
+  },
+  "luke-gospel-of": {
+   "canonical_term": "Luke, Gospel of",
+   "aliases": [
+    {
+     "id": "luke-gospel-according-to",
+     "term": "Luke, Gospel according to"
+    }
+   ],
+   "alias_terms": [
+    "Gospel according to Luke",
+    "Luke, Gospel according to"
+   ]
+  },
+  "assyria": {
+   "canonical_term": "Assyria",
+   "aliases": [
+    {
+     "id": "assyria-asshur",
+     "term": "Assyria (Asshur)"
+    }
+   ],
+   "alias_terms": [
+    "Asshur",
+    "Assyria (Asshur)"
+   ]
+  },
+  "ass": {
+   "canonical_term": "Ass",
+   "aliases": [
+    {
+     "id": "ass-donkey",
+     "term": "Ass (Donkey)"
+    }
+   ],
+   "alias_terms": [
+    "Ass (Donkey)",
+    "Donkey"
+   ]
+  },
+  "leaven": {
+   "canonical_term": "Leaven",
+   "aliases": [
+    {
+     "id": "leaven-yeast",
+     "term": "Leaven (Yeast)"
+    }
+   ],
+   "alias_terms": [
+    "Leaven (Yeast)",
+    "Yeast"
+   ]
+  },
+  "caphtor": {
+   "canonical_term": "Caphtor",
+   "aliases": [
+    {
+     "id": "caphtor-caphtorim",
+     "term": "Caphtor, Caphtorim"
+    }
+   ],
+   "alias_terms": [
+    "Caphtor, Caphtorim",
+    "Caphtorim"
+   ]
+  },
+  "elath": {
+   "canonical_term": "Elath",
+   "aliases": [
+    {
+     "id": "elath-eloth",
+     "term": "Elath, Eloth"
+    }
+   ],
+   "alias_terms": [
+    "Elath, Eloth",
+    "Eloth"
+   ]
+  },
+  "revelation-of-john": {
+   "canonical_term": "Revelation of John",
+   "aliases": [
+    {
+     "id": "revelation-of-st.-john",
+     "term": "Revelation of St. John"
+    },
+    {
+     "id": "revelation-book-of",
+     "term": "Revelation, Book of"
+    }
+   ],
+   "alias_terms": [
+    "Apocalypse of John",
+    "Book of Revelation",
+    "Revelation of St. John",
+    "Revelation, Book of"
+   ]
+  },
+  "kingdom-of-god": {
+   "canonical_term": "Kingdom of God",
+   "aliases": [
+    {
+     "id": "kingdom-of-heaven",
+     "term": "Kingdom of Heaven"
+    },
+    {
+     "id": "kingdom-of-god-of-heaven-the",
+     "term": "Kingdom of God (of Heaven), The"
+    }
+   ],
+   "alias_terms": [
+    "Kingdom of God (of Heaven), The",
+    "Kingdom of Heaven"
+   ]
+  },
+  "immanuel": {
+   "canonical_term": "Immanuel",
+   "aliases": [
+    {
+     "id": "emmanuel",
+     "term": "Emmanuel"
+    }
+   ],
+   "alias_terms": [
+    "Emmanuel"
+   ]
+  },
+  "hallelujah": {
+   "canonical_term": "Hallelujah",
+   "aliases": [
+    {
+     "id": "alleluia",
+     "term": "Alleluia"
+    }
+   ],
+   "alias_terms": [
+    "Alleluia"
+   ]
+  },
+  "on": {
+   "canonical_term": "On",
+   "aliases": [
+    {
+     "id": "heliopolis",
+     "term": "Heliopolis"
+    }
+   ],
+   "alias_terms": [
+    "City of the Sun",
+    "Heliopolis"
+   ]
+  },
+  "cockatrice": {
+   "canonical_term": "Cockatrice",
+   "aliases": [
+    {
+     "id": "basilisk",
+     "term": "Basilisk"
+    }
+   ],
+   "alias_terms": [
+    "Basilisk"
+   ]
+  },
+  "shishak": {
+   "canonical_term": "Shishak",
+   "aliases": [
+    {
+     "id": "shishak-i",
+     "term": "Shishak I"
+    }
+   ],
+   "alias_terms": [
+    "Sheshonk I",
+    "Shishak I"
+   ]
+  },
+  "barsabas": {
+   "canonical_term": "Barsabas",
+   "aliases": [
+    {
+     "id": "barsabbas",
+     "term": "Barsabbas"
+    }
+   ],
+   "alias_terms": [
+    "Barsabbas"
+   ]
+  },
+  "sibmah": {
+   "canonical_term": "Sibmah",
+   "aliases": [
+    {
+     "id": "shibmah",
+     "term": "Shibmah"
+    }
+   ],
+   "alias_terms": [
+    "Shebam",
+    "Shibmah"
+   ]
+  },
+  "bitumen": {
+   "canonical_term": "Bitumen",
+   "aliases": [
+    {
+     "id": "slime",
+     "term": "Slime"
+    }
+   ],
+   "alias_terms": [
+    "Slime"
+   ]
+  },
+  "ararat": {
+   "canonical_term": "Ararat",
+   "aliases": [
+    {
+     "id": "armenia",
+     "term": "Armenia"
+    }
+   ],
+   "alias_terms": [
+    "Armenia"
+   ]
+  },
+  "goad": {
+   "canonical_term": "Goad",
+   "aliases": [
+    {
+     "id": "ox-goad",
+     "term": "Ox goad"
+    }
+   ],
+   "alias_terms": [
+    "Ox goad"
+   ]
+  }
+ }
+}
