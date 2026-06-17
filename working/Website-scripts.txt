@@ -9,22 +9,14 @@ python3 scripts/restart.py
 
 ## active
 
-#audit looping
-/loop Read working/AUDIT_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (group) from AUDIT_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
-#verse audit 
-/loop Read VA_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-websiteworking/. This is one iteration of a loop — claim and complete exactly one work unit from VA_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
 Commentary A — per-verse COW synthesis:
-/loop Read SYNTH_VERSE_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (one book) from SYNTH_VERSE_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
-Commentary B — per-section synthesis:
-/loop Read SYNTH_SECTION_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (one book) from SYNTH_SECTION_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
-
+/loop Read SYNTH_VERSE_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (one book) from SYNTH_VERSE_PROGRESS.md, then stop. 
 
 provenance: 
 /loop Read PROVENANCE_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
+#audit looping
+/loop Read working/AUDIT_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (group) from AUDIT_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
 ## Old:
 
@@ -61,6 +53,17 @@ paragraph 2:
 #Cloud of witnesses, important to finish - afterwards, the synthesis work needs to be restarted.
 /loop Read working/COW_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/. This is one iteration of a loop — claim and complete exactly one work unit from COW_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
 
-
 # Superseded - wide study synthesis commentary: (synthesis) 
 /loop Read WS_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit from WS_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+#verse audit 
+/loop Read VA_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly three work units from VA_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+# Anchor loop:
+/loop Read working/BP_ANCHOR_AGENT_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/. This is one iteration of a loop — claim and complete exactly one anchor (article) from BP_ANCHOR_PROGRESS.md, then stop. Before claiming, re-read your claimed row to confirm no other agent took it (pick the next not-started row if so). Commit only your article; if git's index is locked by another agent, wait briefly and retry. Then schedule the next iteration 5 minutes out.
+
+Commentary B — per-section synthesis:
+/loop Read SYNTH_SECTION_PROMPT.md in full and follow its instructions exactly. Working directory is /home/domad/Documents/bible-study-website/working/. This is one iteration of a loop — claim and complete exactly one work unit (one book) from SYNTH_SECTION_PROGRESS.md, then stop. After completing this iteration, run /compact before calling ScheduleWakeup.
+
+#map areas for biblepedia
+/loop working/POLYGON_AGENT_PROMPT.md
