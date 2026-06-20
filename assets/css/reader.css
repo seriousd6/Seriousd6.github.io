@@ -401,12 +401,18 @@
   white-space: nowrap;
 }
 
-/* ── View options popover (RD-B) ─────────────────────────────────────────── */
-.reader-view-wrap {
+/* ── View options + Study Tools popovers (RD-B) ──────────────────────────── */
+/* .reader-studytools-* mirrors .reader-view-* — the 📖 Study Tools popover groups
+   the study/reading toggles (Interlinear, Book Info, Commentary, Cross Refs,
+   Footnotes, Connections, Parallels, Study desk) on every viewport, restoring them
+   to phone users. (¶ Paragraphs is a display option and lives in the ⚙ View popover.) */
+.reader-view-wrap,
+.reader-studytools-wrap {
   position: relative;
   display: inline-block;
 }
-.reader-view-btn {
+.reader-view-btn,
+.reader-studytools-btn {
   padding: 0.28rem 0.7rem;
   border: 1px solid var(--color-border);
   border-radius: 4px;
@@ -418,17 +424,20 @@
   white-space: nowrap;
   transition: background 0.12s, border-color 0.12s, color 0.12s;
 }
-.reader-view-btn:hover {
+.reader-view-btn:hover,
+.reader-studytools-btn:hover {
   background: rgba(92,61,30,.06);
   border-color: var(--color-primary);
   color: var(--color-text);
 }
-.reader-view-btn[aria-expanded="true"] {
+.reader-view-btn[aria-expanded="true"],
+.reader-studytools-btn[aria-expanded="true"] {
   background: rgba(92,61,30,.08);
   border-color: var(--color-primary);
   color: var(--color-text);
 }
-.reader-view-popover {
+.reader-view-popover,
+.reader-studytools-popover {
   position: absolute;
   top: calc(100% + 4px);
   right: 0;
@@ -443,11 +452,14 @@
   flex-direction: column;
   gap: 0.3rem;
 }
-.reader-view-popover[hidden] { display: none; }
+.reader-view-popover[hidden],
+.reader-studytools-popover[hidden] { display: none; }
 /* Items inside the popover use their existing button styles;
    just ensure they render as full-width rows */
 .reader-view-popover > button,
-.reader-view-popover > div {
+.reader-view-popover > div,
+.reader-studytools-popover > button,
+.reader-studytools-popover > div {
   width: 100%;
   text-align: left;
   justify-content: flex-start;
@@ -1358,13 +1370,19 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   #reader-wide-btn,
   #reader-split-btn { display: none; }
 
-  /* On mobile keep only Compare + ⚙ View inline; hide the rest */
-  #reader-interlinear-btn,
-  #reader-bookinfo-btn,
-  #reader-xref-notes-btn,
-  #reader-echoes-btn,
-  #reader-parallels-btn,
-  #reader-para-btn { display: none; }
+  /* Interlinear / Book Info / Footnotes / Connections / Parallels / Paragraphs
+     are no longer hidden on phones — they now live inside the 📖 Study Tools
+     popover (built by initStudyToolsToggle), so mobile users reach them there. */
+
+  /* Popover menu items (View + Study Tools) need ≥44px tap targets on touch.
+     They are children of the popover, not direct .reader-browse-bar buttons,
+     so the generic 44px rule above doesn't reach them. */
+  .reader-view-btn,
+  .reader-studytools-btn,
+  .reader-view-popover > button,
+  .reader-studytools-popover > button {
+    min-height: 44px;
+  }
 
   /* ── Results ─────────────────────────────────── */
   .reader-browse-hint { display: none; }

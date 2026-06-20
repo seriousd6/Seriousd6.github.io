@@ -26,7 +26,7 @@ import {
   getInterlinearEnabled, setInterlinearEnabled, injectAllInterlinearRows, setRiHighlightCode
 } from './interlinear.js';
 
-export { initViewToggle, initSplitToggle, initFontSizeControls, initWideToggle, initSidebarToggle } from './interlinear.js';
+export { initViewToggle, initStudyToolsToggle, initSplitToggle, initFontSizeControls, initWideToggle, initSidebarToggle } from './interlinear.js';
 
 // ── Xref footnote-numbers toggle ──────────────────────────────────────────
 var XREF_NOTES_KEY = 'bsw_xref_notes';
@@ -61,8 +61,14 @@ export function initXrefNotesToggle() {
   btn.title     = 'Show cross-reference footnote numbers inline';
   btn.textContent = '† Footnotes';
 
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  // Prefer the 📖 Study Tools popover (interlinear.js); fall back to inline.
+  var stPop = document.getElementById('reader-studytools-popover');
+  if (stPop) {
+    stPop.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
 
   btn.addEventListener('click', function () {
     on = !on;
@@ -1913,8 +1919,11 @@ export function initCommModeToggle() {
   try { savedComm = localStorage.getItem('bsw_reader_comm_mode') === '1'; } catch (e) {}
   btn.setAttribute('aria-pressed', savedComm ? 'true' : 'false');
 
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  // Commentary + Cross Refs live in the 📖 Study Tools popover (fall back to inline).
+  var hint  = browseBar.querySelector('.reader-browse-hint');
+  var stPop = document.getElementById('reader-studytools-popover');
+  if (stPop) stPop.appendChild(btn);
+  else       browseBar.insertBefore(btn, hint || null);
 
   btn.addEventListener('click', function () {
     if (btn.getAttribute('aria-pressed') === 'true') {
@@ -1935,7 +1944,8 @@ export function initCommModeToggle() {
   try { savedXref = localStorage.getItem('bsw_reader_xref_mode') === '1'; } catch (e) {}
   xrefBtn.setAttribute('aria-pressed', savedXref ? 'true' : 'false');
 
-  browseBar.insertBefore(xrefBtn, hint || null);
+  if (stPop) stPop.appendChild(xrefBtn);
+  else       browseBar.insertBefore(xrefBtn, hint || null);
 
   xrefBtn.addEventListener('click', function () {
     if (xrefBtn.getAttribute('aria-pressed') === 'true') {
@@ -2707,8 +2717,15 @@ export function initParaViewToggle() {
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.title = 'Show paragraph breaks and section headings';
 
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  // Paragraph view is a display option → it lives in the ⚙ View popover
+  // (interlinear.js), not Study Tools. Fall back to inline if View isn't built.
+  var viewPop = document.getElementById('reader-view-popover');
+  if (viewPop) {
+    viewPop.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
 
   btn.addEventListener('click', function () {
     on = !on;

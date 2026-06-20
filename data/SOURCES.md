@@ -222,6 +222,19 @@ changed, or removed. Include the commit hash or version tag so re-syncs are not 
   entries). Each entry keeps its thematic title heading and closing PRAYER.
 - **Last pulled:** 2026-06-15
 
+### J.H. Jowett — My Daily Meditation for the Circling Year (2026-06-15)
+- **Source:** https://www.gutenberg.org/files/23241/23241-h/23241-h.htm (1914)
+- **Fetch script:** `scripts/build-devotionals.py` (slug `jowett`)
+- **Data path:** `data/devotionals/jowett.json`
+- **License:** Public domain (Project Gutenberg eBook #23241; author d. 1923)
+- **Notes:** Part of the home-page "Variety" rotation. Whole-year single page with
+  ordinal-word date headers ("JANUARY The First"), all-caps titles, dropcap
+  initials rendered as `<img alt="A">` (recovered), and Roman-numeral chapter
+  refs on their own line ("—Hebrews xi. 6-10") — all normalized (364 entries, 0
+  unresolved refs). Some readings cite a chapter only (rendered as a whole-chapter
+  ref, e.g. "Psalms 115").
+- **Last pulled:** 2026-06-15
+
 ---
 
 ## Confessional Library

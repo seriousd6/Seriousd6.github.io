@@ -32,8 +32,14 @@ export function initEchoToggle() {
   btn.title     = 'Show inline echo and connection links next to verses';
   btn.textContent = '🔗 Connections';
 
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  // Prefer the 📖 Study Tools popover (interlinear.js); fall back to inline.
+  var stPop = document.getElementById('reader-studytools-popover');
+  if (stPop) {
+    stPop.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
 
   btn.addEventListener('click', function () {
     on = !on;

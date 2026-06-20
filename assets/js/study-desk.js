@@ -1430,8 +1430,11 @@ export function initStudyDesk() {
   _btn.textContent = '📖 Study';
   _btn.title = 'Open the passage study desk';
   _btn.setAttribute('aria-pressed', 'false');
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(_btn, hint || null);
+  // The Study Desk opener lives in the 📖 Study Tools popover (fall back to inline).
+  var hint  = browseBar.querySelector('.reader-browse-hint');
+  var stPop = document.getElementById('reader-studytools-popover');
+  if (stPop) stPop.appendChild(_btn);
+  else       browseBar.insertBefore(_btn, hint || null);
   _btn.addEventListener('click', function () { _setOpen(!_open); });
   document.addEventListener('keydown', _onKeydown);
 

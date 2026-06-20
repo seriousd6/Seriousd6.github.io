@@ -1,443 +1,1002 @@
 {
-  "1": {
-    "voices": ["Jerome", "Rabanus", "Pseudo-Chrysostom", "Gloss", "Chrysostom", "Remigius", "Hilary", "Ambrose", "Augustine", "Pseudo-Athan", "Cyril of Alexandria", "Isidore", "Cyril", "Leo", "John Chrysostom", "John Gill", "John Lightfoot", "Matthew Henry", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Matthew's genealogy declares the humanity of Christ against heretics (Cerinthus, Ebion, Valentinus) who denied either his real flesh or his eternal pre-existence; the book of generation echoes 'the book of Adam' to frame Christ as the new Adam."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: this genealogy is the root of all blessings — God becoming man — so it is no small thing; Matthew writes to Jews to unfold the mystery of the Incarnation, distinct from John writing for Gentiles."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "The Greek biblos geneseos echoes Genesis 2:4 and 5:1; the title covers both the genealogy proper and perhaps the whole Gospel narrative; 'Jesus Christ' names kingly and priestly office together."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: the two lines (Matthew from Joseph, Luke debated as Mary's) both confirm the Davidic descent; the office of Christ the Anointed One carries both kingship and priesthood from their OT antecedents."},
-      {"school": "eastern-alexandrian", "prevalence": "minority", "summary": "Cyril of Alexandria and Pseudo-Athan press that the heretics who divide Christ into two persons are answered already by John 1:1 and Philippians 2:6 — the one Son is both God and man, not two subjects."}
-    ],
-    "debates": [
-      {
-        "question": "Does Isaiah 53:8 ('Who shall declare his generation?') contradict Matthew's opening?",
-        "sides": [
-          {"position": "Isaiah speaks of the divine generation which no one can declare; Matthew speaks of the human/incarnate generation, so there is no contradiction.", "holders": ["Jerome", "Remigius", "Cyril of Jerusalem"]},
-          {"position": "Very few can declare even the human generation — only Matthew and Luke have done so.", "holders": ["Remigius"]}
-        ]
-      },
-      {
-        "question": "Does the genealogy title cover only the birth narrative or the entire Gospel?",
-        "sides": [
-          {"position": "The title strictly covers only the genealogy and birth account that immediately follows.", "holders": ["John Wesley", "John Gill"]},
-          {"position": "Hebrew custom named books by their opening words, and the title may serve as the heading of the whole Gospel, as 'biblos geneseos' does in Genesis.", "holders": ["Rabanus", "Matthew Henry", "A.T. Robertson"]}
-        ]
-      }
-    ],
-    "outliers": [
-      {"voice": "Pseudo-Athan", "note": "Treats John 1:1 as the pre-emptive answer to heretics who would read Matthew's human genealogy as denying Christ's eternal divinity."},
-      {"voice": "Isidore", "note": "Argues from natural reason that it is fitting for God to assume a lowly form, whereas a man claiming to speak divinely would be self-contradictory."}
-    ],
-    "themes": ["genealogy of Christ", "incarnation", "new Adam", "heresy refuted", "biblos geneseos echo", "Jesus as king and priest"]
-  },
-  "2": {
-    "voices": ["Augustine", "Ambrose", "Chrysostom", "Gloss", "Pseudo-Chys", "Remigius", "Pseudo-Chrysostom", "John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Augustine: Matthew begins with Abraham because he traces Christ's flesh; Luke begins at baptism because he depicts the priestly Christ bearing sin. Ambrose: Abraham was first to deserve the witness of faith and the promise in his seed."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: Ishmael and Esau are passed over because they fell away from the true God; the brethren of Judah are included because all remained in God's people, though only Judah is in the messianic line."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Ellicott and Clarke: Ishmael and Esau are omitted as outside the covenant — 'In Isaac shall thy seed be called' (Genesis 21:12) — and Esau forfeited both birthright and blessing."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: that all twelve patriarchs are honoured (not just Judah) signals that the blessing in Christ encompasses the entire people of God equally adopted."}
-    ],
-    "debates": [
-      {
-        "question": "Why does Matthew begin with Abraham rather than Adam?",
-        "sides": [
-          {"position": "Matthew traces the incarnate/fleshly genealogy, so Abraham the father of the Jewish covenant is the proper starting point.", "holders": ["Augustine", "Ambrose", "Chrysostom"]},
-          {"position": "Abraham is named first in honour because he received the promise of blessing to all kindreds; David follows because he obtained the oracle of Christ's generation.", "holders": ["Ambrose"]}
-        ]
-      }
-    ],
-    "outliers": [
-      {"voice": "Pseudo-Chys", "note": "Reads 'Isaac' typologically as laughter — the rational joy of the heart, a mystery of Christ granted to aged parents, signifying that his birth was not by natural descent."}
-    ],
-    "themes": ["election in the line of promise", "Abraham faith", "covenant narrowing", "typology of patriarchs"]
-  },
-  "3": {
-    "voices": ["Gloss", "Augustine", "Jerome", "Ambrose", "Chrysostom", "Pseudo-Chys", "Pseudo-Chrysostom", "Remigius", "Raban", "John Gill", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "Jamieson, Fausset and Brown", "John Calvin", "John Wesley"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome and Ambrose: the women named in the genealogy are those Scripture has marked as sinners or outsiders, signifying that Christ comes for sinners and to carry the sins of all; Luke by contrast keeps the priestly line immaculate."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: the inclusion of Thamar and later Bathsheba signals that all are equally liable to sin — great patriarchs and kings alike — so none can boast before the law, and Christ comes to all."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Ellicott and Adam Clarke: women in genealogies are exceptional among Jews; those chosen have memorable roles in Israel's history. Barnes and JFB: Judah alone of the twelve is named because Messiah springs from him (Genesis 49:10)."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: that Christ the Son of God chose not to keep his descent pure from every stain is itself the 'emptying of himself' (Philippians 2:7) — a prelude to the Incarnation."}
-    ],
-    "debates": [
-      {
-        "question": "Why are sinful or foreign women included in the genealogy?",
-        "sides": [
-          {"position": "To show that Christ came to save sinners — born among sinners to put away the sins of all; the line of grace runs through failure.", "holders": ["Jerome", "Ambrose", "Chrysostom", "Calvin"]},
-          {"position": "These women, though blameworthy, were commendable for faith and conversion; Thamar and Ruth represent Gentiles grafted in.", "holders": ["Gloss", "John Wesley"]}
-        ]
-      }
-    ],
-    "outliers": [
-      {"voice": "Pseudo-Chys", "note": "Reads Zarah typologically as the Jewish people who first appeared in the light of faith and were marked with the scarlet thread, but were then overtaken by Phares (the Gentile church)."}
-    ],
-    "themes": ["sinners in the genealogy", "grace in failure", "Gentile inclusion", "Christ for sinners", "typological names"]
-  },
-  "4": {
-    "voices": ["John Gill", "Albert Barnes", "Charles Ellicott", "John Wesley"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Ellicott: Nahshon/Naasson was prince of the tribe of Judah at the Exodus (Numbers 1:7), a Jewish legend making him the first to enter the Red Sea — the genealogy runs through tribal leadership."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley notes Naasson's role as prince of Judah when Israel entered Canaan, connecting the genealogical names to redemptive history."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["Exodus period", "tribal leadership", "continuity of the line"]
-  },
-  "5": {
-    "voices": ["John Gill", "John Lightfoot", "Albert Barnes", "Charles Ellicott", "John Wesley"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Ellicott and Lightfoot: the Old Testament is silent on Salmon's marriage to Rahab; the fact was preserved in Davidic family tradition. Rahab's inclusion signals Gentile grafting into the messianic line."},
-      {"school": "puritan-evangelical", "prevalence": "minority", "summary": "Gill: Jewish tradition attests that the Messiah's descent ran through Rahab, and the silence of later compilers reflects their discomfort with her origin rather than historical doubt."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley notes the providential longevity of Salmon, Boaz, and Obed — each apparently fathering late — as a mark of divine ordering in the line."}
-    ],
-    "debates": [
-      {
-        "question": "Is the Rahab of Matthew 1:5 the same as Rahab the harlot of Jericho?",
-        "sides": [
-          {"position": "Yes — the name, timing, and tribal connection confirm it; this was preserved in family tradition and Jewish records.", "holders": ["John Gill", "John Lightfoot", "Charles Ellicott"]},
-          {"position": "Jewish writers acknowledged Rahab married a prince of Israel but sometimes misidentified the person, perhaps deliberately.", "holders": ["John Lightfoot"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["Rahab", "Gentile in messianic line", "Boaz and Ruth", "divine providence in genealogy"]
-  },
-  "6": {
-    "voices": ["Augustine", "Remigius", "Gloss", "Ambrose", "Pseudo-Chrysostom", "John Gill", "Albert Barnes", "Charles Ellicott", "John Calvin", "John Wesley"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Augustine: Matthew descends through Solomon (David's sin) while Luke ascends through Nathan (the prophet who rebuked sin) — each genealogy carries a theological point about grace through failure. Remigius: Bathsheba goes unnamed to keep Uriah's name prominent, recalling the crime against him."},
-      {"school": "eastern-antiochene", "prevalence": "minority", "summary": "Pseudo-Chrysostom reads Solomon's name ('peace-maker') typologically as Christ who subdued the nations."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: David is called 'the king' alone among all names because God chose him as the type of the coming Messiah; the title is not merely historical but points to Christ's kingship."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley: David is 'the king' because his throne is specifically the one given to the Messiah."}
-    ],
-    "debates": [
-      {
-        "question": "Why does Matthew descend through Solomon while Luke takes the Nathan line?",
-        "sides": [
-          {"position": "Matthew traces the legal/royal line through the sin (Solomon) to show grace in weakness; Luke traces the prophetic/priestly line through Nathan the prophet of repentance.", "holders": ["Augustine", "Ambrose"]},
-          {"position": "Matthew gives Joseph's legal descent; Luke gives Mary's natural descent through Nathan.", "holders": ["John Calvin", "John Lightfoot"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["David the king", "Bathsheba unnamed", "grace through sin", "two genealogy lines", "royal typology"]
-  },
-  "7": {
-    "voices": ["John Gill", "Albert Barnes"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Gill notes Rehoboam was born of Naamah an Ammonitess — another Gentile mother — and the genealogy continues through him."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["continuation of the royal line", "Gentile ancestry"]
-  },
-  "8": {
-    "voices": ["Jerome", "Hilary", "Pseudo-Chrysostom", "Augustine", "Gloss", "Ambrose", "Remigius", "Raban", "John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "John Wesley"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome, Augustine, Ambrose: three kings (Ahaziah, Joash, Amaziah) are omitted because they sinned continuously without repentance — connected to the cursed house of Ahab through intermarriage. The omission is deliberate, not an error."},
-      {"school": "eastern-antiochene", "prevalence": "minority", "summary": "Pseudo-Chrysostom: God's promise to cut off Ahab's line (through Jehu) is fulfilled; the royal succession resumes only after the fourth generation, just as the divine word declared."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Hilary: the Gentile alliance staining the royal race is purged; the line is taken up again four generations later, providentially purified."},
-      {"school": "grammatical-historical", "prevalence": "minority", "summary": "Clarke and Wesley: the omission of three kings is acknowledged; 'begat' can cover mediate descent, as Christ is mediately the son of David and Abraham."}
-    ],
-    "debates": [
-      {
-        "question": "Why are three kings omitted between Joram and Uzziah?",
-        "sides": [
-          {"position": "Their sins were continuous (intermarriage with Ahab's house) so they were excluded as unworthy of place in the messianic line.", "holders": ["Jerome", "Augustine", "Ambrose", "Pseudo-Chrysostom"]},
-          {"position": "The omission was made to keep three groups of fourteen — a schematic arrangement, not a theological exclusion.", "holders": ["Charles Ellicott", "Jamieson, Fausset and Brown"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["three omitted kings", "Ahab's cursed line", "14-generation scheme", "divine judgment in genealogy"]
-  },
-  "9": {
-    "voices": ["John Gill", "Albert Barnes", "Charles Ellicott", "Jamieson, Fausset and Brown"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Ellicott and JFB: the three omitted names (Ahaziah, Joash, Amaziah) before Uzziah were dropped to achieve the schematic grouping of fourteen, and possibly for religious reasons tied to the Ahab connection."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["genealogical omission", "14-generation pattern", "Uzziah/Ozias"]
-  },
-  "10": {
-    "voices": ["John Gill", "Albert Barnes"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Gill: Manasseh the notorious idolater is included; his later repentance (2 Chronicles 33) may lie in the background but the genealogy records the line of descent, not merit."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["Manasseh in the line", "continuity through failure"]
-  },
-  "11": {
-    "voices": ["John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "John Wesley"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Clarke, Ellicott, and Wesley: Josiah was not the immediate father of Jeconiah — Jehoiakim comes between — so 'begat' again covers mediate descent; 'his brethren' likely refers to his uncles (the sons of Josiah). The Babylonian exile is the pivot of the genealogy's third section."},
-      {"school": "puritan-evangelical", "prevalence": "minority", "summary": "Gill: the name Jechoniah may cover Jehoiakim the son and the grandson of the same name, explaining the apparent skip."}
-    ],
-    "debates": [
-      {
-        "question": "Who are 'his brethren' of Jechoniah at the time of the carrying away?",
-        "sides": [
-          {"position": "'His brethren' = the brothers/uncles of Jeconiah, the sons of Josiah.", "holders": ["John Wesley", "Charles Ellicott"]},
-          {"position": "Jechoniah had no brethren on record — a textual difficulty perhaps solved by reading 'Joakim' as an intermediate step.", "holders": ["Adam Clarke"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["Babylonian captivity", "Jeconiah", "mediate descent", "turning-point of the genealogy"]
-  },
-  "12": {
-    "voices": ["Pseudo-Chrysostom", "Ambrose", "Gloss", "Remigius", "Raban", "John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "John Calvin"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Ambrose and the Gloss wrestle with Jeremiah 22:30 — 'write this man childless' — and resolve it: Jeconiah will have no reigning descendant, but Christ does not reign as a Davidic king in that earthly sense; the spiritual kingdom is not excluded. Remigius reads the post-exilic names typologically as stages of Christ's saving work."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Clarke and Ellicott: genealogical difficulties (Salathiel/Pedaiah in 1 Chronicles 3 vs Matthew's sequence) likely reflect levirate or adoptive descent; the manuscripts of Chronicles have known corruptions."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: the captivity was a kind of death for the house of David; that the line continued at all through Zerubbabel is itself a wonder of providence, a foretaste of the resurrection to come in Christ."}
-    ],
-    "debates": [
-      {
-        "question": "Does Jeremiah 22:30 contradict Christ's descent from Jeconiah?",
-        "sides": [
-          {"position": "Jeremiah means no reigning king on David's earthly throne, not that Jeconiah would be literally childless; Christ's kingdom is spiritual and is not excluded.", "holders": ["Ambrose", "Gloss", "John Calvin"]},
-          {"position": "Jeconiah did have children in the captivity; 'childless' is relative to royal succession, not physical offspring.", "holders": ["Adam Clarke", "Charles Ellicott"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["Jeremiah's curse on Jeconiah", "Zerubbabel", "post-exile line", "providence in captivity"]
-  },
-  "13": {
-    "voices": ["John Gill", "Albert Barnes"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Gill: Abiud is not named in 1 Chronicles 3 among Zerubbabel's sons but may be the same as Meshullam the eldest, who had two names — a common Jewish practice."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["post-exilic genealogy", "Zerubbabel's descendants"]
-  },
-  "14": {
-    "voices": ["Albert Barnes"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "single", "summary": "Barnes provides no specific comment on verse 14 beyond the general genealogical note; the verse continues the post-exilic line whose names are otherwise unattested in the Old Testament."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["obscure post-exilic names", "continuity of the line to Christ"]
-  },
-  "15": {
-    "voices": ["Albert Barnes", "Jamieson, Fausset and Brown"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "JFB resolves the apparent contradiction with Jeremiah 22:30: Jeconiah was 'childless' only in the sense that none of his seed would prosper sitting on David's throne — but Christ's kingship is of a different order entirely."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["Jeremiah 22:30 resolution", "Christ's non-earthly kingship"]
-  },
-  "16": {
-    "voices": ["Gloss", "Jerome", "Eusebius", "Augustine", "Chrysostom", "Gennadius", "Hilary", "The Council of Ephesus", "Pseudo-Augustine", "John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "John Calvin", "John Wesley"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome and Eusebius resolve the Matthew/Luke discrepancy (Jacob vs Heli as Joseph's father) through the levirate law: one was the natural father, one the legal father. Augustine adds that the legal father is properly called 'father' since Joseph was adopted, not begotten, of his flesh."},
-      {"school": "eastern-antiochene", "prevalence": "minority", "summary": "Chrysostom: the genealogy ends at Joseph only because Joseph is included for Mary's sake — 'the husband of Mary' — the pivot phrase that switches the mode of birth."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin and Wesley: 'Jesus who is called Christ' — the surname points to the office, Anointed One, combining kingly and priestly functions traced from Joshua and Aaron."},
-      {"school": "grammatical-historical", "prevalence": "minority", "summary": "Lightfoot: Jewish law forbade tracing descent through the mother's family, so Matthew traces through Joseph; Luke traces through Mary's father Eli — both genealogies converge on Davidic descent."}
-    ],
-    "debates": [
-      {
-        "question": "How can Matthew name Jacob and Luke name Heli as Joseph's father?",
-        "sides": [
-          {"position": "Levirate marriage: one was the natural father (Jacob in Matthew), the other the legal father by levir obligation (Heli in Luke).", "holders": ["Jerome", "Eusebius"]},
-          {"position": "Matthew gives Joseph's legal/adoptive descent; Luke gives Mary's natural descent through her father Heli.", "holders": ["John Lightfoot", "John Calvin"]}
-        ]
-      }
-    ],
-    "outliers": [
-      {"voice": "The Council of Ephesus", "note": "Cited to warn against Nestorian division of Christ's person: the one born of Mary is the same Son of God, so 'of her Jesus was born' must be read as a full incarnational statement."}
-    ],
-    "themes": ["two genealogies harmonized", "levirate solution", "Joseph husband of Mary", "Theotokos", "Christ = Anointed One"]
-  },
-  "17": {
-    "voices": ["Pseudo-Chrysostom", "Chrysostom", "Ambrose", "Gloss", "Augustine", "Remigius", "John Chrysostom", "John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "John Wesley"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Augustine and Ambrose: the three groups of fourteen are not an exact historical count but a schematic summary; Matthew deliberately omits some names to achieve the pattern. The number fourteen may signal David (numerical value of the Hebrew letters D-V-D = 4+6+4=14) or the two weeks of years pointing to sabbath rest in Christ."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: the symmetry of the three fourteens shows divine ordering — the very number is a testimony to providence arranging history toward Christ's coming."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Ellicott, Clarke, and Lightfoot: the third group actually contains only thirteen names as counted, because Jeconiah serves double duty at the captivity hinge — a known exegetical crux."}
-    ],
-    "debates": [
-      {
-        "question": "What does the three-times-fourteen scheme signify, and why does the third group appear to have only thirteen?",
-        "sides": [
-          {"position": "The number fourteen = David (D=4, V=6, D=4 in Hebrew gematria) — each group signals 'David, David, David' pointing to the Davidic Christ.", "holders": ["Augustine", "Ambrose", "Matthew Henry"]},
-          {"position": "Jeconiah is counted in both the second and third groups, filling the thirteenth slot twice — the apparent deficit is resolved by his double role at the captivity pivot.", "holders": ["Charles Ellicott", "Adam Clarke"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["three fourteens", "David gematria", "schematic genealogy", "providence in number", "captivity as pivot"]
-  },
-  "18": {
-    "voices": ["Pseudo-Chrysostom", "Chrysostom", "Remigius", "Jerome", "Origen", "Cyril", "Chrysologus", "Gloss", "Bede", "Augustine", "Pseudo-Augustine", "Ambrose", "John Gill", "John Lightfoot", "Matthew Henry", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome, Augustine, Ambrose, and Bede press the theology of virginal conception: Christ was born without sexual union because sinful flesh could not be its vehicle; purity of body answered the purity of the one who would be without sin. Jerome lists why Mary was betrothed rather than a pure virgin: to certify the family line, avoid stoning, and provide a companion for flight into Egypt."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom and Pseudo-Chrysostom: 'Before they came together' does not mean Joseph later knew her; it cuts off any notion of natural birth and prepares the reader for the supernatural generation. The angel's announcement to Joseph is what the narrator now unpacks."},
-      {"school": "eastern-alexandrian", "prevalence": "several", "summary": "Origen and Cyril press 'mother of God' (Theotokos): to call Mary merely 'mother of Christ' is Nestorian; she bore the incarnate God himself. Chrysologus: virginity removes every human scruple about the divine conception."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Robertson and Clarke: Jewish betrothal had full legal force; the interval between betrothal and consummation (ten to twelve months) was legally binding, and infidelity during it was treated as adultery. Ellicott notes Matthew's silence about the Lucan annunciation — different source documents or authorial selection."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: the historian blends divine knowledge (the supernatural mode of conception) with the public perception Joseph had, narrating the discovery of the pregnancy before revealing to Joseph the divine cause."}
-    ],
-    "debates": [
-      {
-        "question": "Does 'before they came together' imply that Joseph and Mary subsequently did come together?",
-        "sides": [
-          {"position": "No — the phrase closes off any inference of natural birth; Mary remained a perpetual virgin.", "holders": ["Jerome", "Chrysostom", "Origen", "Cyril", "Augustine"]},
-          {"position": "The phrase simply emphasises the supernatural character of the conception without pronouncing on the later state of the marriage.", "holders": ["Charles Ellicott", "A.T. Robertson", "John Calvin"]}
-        ]
-      },
-      {
-        "question": "Is Mary rightly called 'Mother of God' (Theotokos)?",
-        "sides": [
-          {"position": "Yes — she bore the incarnate God, not merely a man named Christ; to deny Theotokos is Nestorianism.", "holders": ["Origen", "Cyril", "Chrysologus"]},
-          {"position": "The text says 'mother of Jesus' and does not require the full Theotokos formula, though Christ's divine identity is affirmed.", "holders": ["Gloss", "Bede"]}
-        ]
-      }
-    ],
-    "outliers": [
-      {"voice": "Bede", "note": "Notes that 'Mary' means 'Star of the Sea' in Hebrew and 'Mistress' in Syriac — the light-bearing mother of the Lord of salvation."}
-    ],
-    "themes": ["virginal conception", "betrothal customs", "Theotokos", "sinless birth", "Holy Spirit's agency"]
-  },
-  "19": {
-    "voices": ["Chrysostom", "Pseudo-Augustine", "Ambrose", "Jerome", "Augustine", "Rabanus", "Origen", "Gloss", "John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome and Augustine: Joseph's justice (dikaios) lay in his unwillingness to expose Mary publicly, resolved by his plan to put her away quietly. The fathers debate whether this shows righteousness toward Mary or the Mosaic law; Augustine and Origen suggest he already suspected something divine was happening."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: Joseph's decision to dismiss Mary quietly, rather than expose her, reflects both his merciful character and his perplexity — he could not account for the pregnancy by natural means and so did not presume to denounce what he could not understand."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Ellicott, Clarke, and Robertson: 'just' (dikaios) here means upright in relation to both law and mercy — not rigid legal adherence but moral integrity that preferred the private dissolution to public shame."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: Joseph is a 'just man' precisely in the sense that he would not rush to judgment; the suppression of the marriage is an act of discretion, waiting for further light."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley: Joseph's justice and mercy together explain the private intention — a man of integrity who would not harm the innocent even under apparent grounds for accusation."}
-    ],
-    "debates": [
-      {
-        "question": "What does 'just' (dikaios) mean applied to Joseph here — strict law-keeper or merciful man?",
-        "sides": [
-          {"position": "Joseph was righteous toward Mary: he was unwilling to expose her to death under the law, so mercy qualified his justice.", "holders": ["Jerome", "Ambrose", "Chrysostom", "Calvin"]},
-          {"position": "Joseph already divined something supernatural and therefore would not accuse what seemed divinely brought about — his justice was deference before mystery.", "holders": ["Origen", "Augustine"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["Joseph's justice", "private dismissal", "mercy and law", "perplexity before mystery", "betrothal dissolution"]
-  },
-  "20": {
-    "voices": ["Remigius", "Gloss", "Chrysostom", "Pseudo-Augustine", "Ambrose", "Raban", "Pseudo-Chrysostom", "Chrysologus", "Jerome", "Augustine", "John Gill", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome, Augustine, and Ambrose: the angel appears in a dream, the proper mode of divine communication to Joseph; 'son of David' is addressed to Joseph, not to confirm Joseph's paternity but to remind him that the child's belonging to David's line passes through his legal acknowledgment. The angelic command 'do not fear to take Mary' presupposes Joseph's troubled deliberation."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom and Pseudo-Chrysostom: the angel addresses Joseph as 'son of David' to trigger the messianic hope in his mind and prepare him to hear that this child is the promised king. The dream vision is fitting since Joseph was already spiritually wakeful in his deliberation."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Ellicott and Robertson: the Greek 'in a dream' (kat' onar) is Matthew's characteristic phrase for divine communication throughout the infancy narrative (Matthew 2:12,13,19,22); the address 'son of David' is integral to the royal identity claim Matthew is building from verse 1."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: the angel's intervention is mercy to Joseph in his perplexity; God does not leave his servant in confusion but interposes at the moment of decision."}
-    ],
-    "debates": [
-      {
-        "question": "Why does the angel address Joseph as 'son of David' rather than by name?",
-        "sides": [
-          {"position": "To awaken his Davidic consciousness and prepare him to receive that the child is the Davidic Messiah — the title activates the promise.", "holders": ["Chrysostom", "Pseudo-Chrysostom", "Cyril of Jerusalem"]},
-          {"position": "Because Joseph's legal sonship in David's line is what qualifies the child to be enrolled in the Davidic genealogy — the angel reminds him of his legal duty.", "holders": ["Jerome", "Augustine", "John Calvin"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["angelic dream vision", "son of David", "Joseph commanded", "fear not", "Holy Spirit's paternity"]
-  },
-  "21": {
-    "voices": ["Chrysostom", "Gloss", "Pseudo-Chrysostom", "Raban", "Jerome", "Remigius", "Chrysologus", "John Gill", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "Jamieson, Fausset and Brown", "A.T. Robertson", "John Calvin", "John Wesley", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome, Remigius, and Raban: the name Jesus (= Joshua, 'YHWH saves') defines the mission — salvation from sins, not merely political deliverance. The angel adds 'his people' to show that she bore him to the whole world, not to Joseph alone; 'his people' in the context of Matthew's argument means the covenant people Israel, expanding later to all nations."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: the angel confirms both the future birth ('she shall bring forth') and the name and mission ('he shall save'), stretching Joseph's understanding beyond the immediate to the eschatological. Chrysologus presses that the name is given before birth to assert divine foreknowledge."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Robertson and Ellicott: 'Jesus' (Iesous) = Hebrew Yehoshua/Joshua; the name was common but here carries unique weight because this bearer actually performs what all previous Joshuas only figured — the saving of the people from their sins, not from enemies."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: the specific definition of salvation — 'from their sins' — corrects the popular expectation of a political deliverer; the angel grounds the whole messianic hope in forgiveness, not national liberation."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley: the name Jesus respects chiefly the promise of blessing and salvation; 'Christ' (the anointed one) respects his offices as king and priest to execute that salvation."}
-    ],
-    "debates": [
-      {
-        "question": "Who are 'his people' that Jesus will save from their sins?",
-        "sides": [
-          {"position": "Israel primarily, as the covenant nation into which he was born — the immediate referent of Matthew's genealogy.", "holders": ["Jerome", "Remigius", "John Gill"]},
-          {"position": "'His people' left unspecified to signal universal scope — he bears the whole world, not any nation narrowly.", "holders": ["Chrysostom", "Pseudo-Chrysostom", "John Wesley"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["name of Jesus", "Joshua typology", "salvation from sins not enemies", "his people", "divine foreknowledge"]
-  },
-  "22": {
-    "voices": ["Remigius", "Gloss", "Chrysostom", "Jerome", "Leo", "Pseudo-Augustine", "Theodotus", "Raban", "Petrus Alfonsus", "Augustine", "John Chrysostom", "John Gill", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome, Leo, Augustine: the formula 'that it might be fulfilled' is Matthew's characteristic fulfilment citation; it establishes that the virginal birth was not improvised but ordained from Isaiah 7:14. Leo presses that both natures are already signalled — Emmanuel means 'God with us,' so the name itself prophesies the Incarnation."},
-      {"school": "eastern-antiochene", "prevalence": "several", "summary": "Chrysostom: the fulfilment citation is addressed to the reader, not to Joseph, and functions as Matthew's theological commentary — connecting the angelic instruction to the long-planned purpose of God in Scripture."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Robertson, Ellicott, and Calvin: Matthew's hina plērōthē ('that it might be fulfilled') indicates prophetic design, not mere coincidence; the formula appears throughout Matthew at key narrative junctures to demonstrate that Christ's life is the unfolding of Scripture."}
-    ],
-    "debates": [
-      {
-        "question": "Is Matthew citing Isaiah 7:14 as a prediction of the virginal birth specifically, or as a broader type?",
-        "sides": [
-          {"position": "The Isaiah prophecy was directly and uniquely about the virginal birth of the Messiah — the Hebrew 'almah means virgin here.", "holders": ["Jerome", "Leo", "Augustine", "John Gill"]},
-          {"position": "Isaiah 7:14 had a near-fulfilment in Ahaz's day and a deeper fulfilment in Christ; Matthew recognises the deeper sense.", "holders": ["Charles Ellicott", "A.T. Robertson", "Adam Clarke"]}
-        ]
-      }
-    ],
-    "outliers": [
-      {"voice": "Petrus Alfonsus", "note": "A converted Jewish scholar who defends the Matthean citation against Jewish objections, arguing the sign of 'God with us' could only be fulfilled in the Incarnation."},
-      {"voice": "Theodotus", "note": "Early voice cited for the Emmanuel prophecy's fulfilment in the unity of the divine and human in Christ."}
-    ],
-    "themes": ["fulfilment formula", "Isaiah 7:14", "Emmanuel", "prophetic design", "virginal birth foretold"]
-  },
-  "23": {
-    "voices": ["John Gill", "John Lightfoot", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Lightfoot, Ellicott, Robertson: the Hebrew 'almah in Isaiah 7:14 means a young woman of marriageable age; Matthew (and the LXX before him) reads parthenos ('virgin') — the grammatical-historical commentators grapple with the Hebrew but ultimately see the LXX reading confirmed by the event. Clarke canvasses the range of opinion."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: 'God with us' is not merely a sign-name but the substance of the Gospel — in Christ, God is personally present among his people, not figuratively but really."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley: Emmanuel meaning 'God with us' names the deepest mystery — that the divine presence dwelt in human flesh for our redemption."},
-      {"school": "eastern-antiochene", "prevalence": "single", "summary": "Cyril of Jerusalem: the Incarnation is the ultimate fulfilment of all OT theophanies — the 'God with us' of Sinai and the tabernacle now permanently embodied in Christ."}
-    ],
-    "debates": [
-      {
-        "question": "Does 'almah in Isaiah 7:14 mean 'virgin' (parthenos) or simply 'young woman'?",
-        "sides": [
-          {"position": "'Almah denotes a virgin; the LXX renders parthenos; and the unique sign (Matthew 1:23) demands an actual virgin birth.", "holders": ["John Gill", "John Calvin", "Cyril of Jerusalem"]},
-          {"position": "'Almah means 'young woman' in Hebrew; the virginal conception is not required by the Hebrew text but is confirmed by the event Matthew narrates.", "holders": ["Charles Ellicott", "Adam Clarke", "A.T. Robertson"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["almah/parthenos debate", "Isaiah 7:14 LXX", "Emmanuel = God with us", "Incarnation as divine presence"]
-  },
-  "24": {
-    "voices": ["Remigius", "Gloss", "Pseudo-Chrysostom", "Jerome", "John Gill", "Charles Ellicott", "A.T. Robertson", "John Calvin", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "latin-fathers", "prevalence": "majority", "summary": "Jerome, Remigius, and Gloss: Joseph's immediate obedience ('when he arose from sleep, he did as the angel commanded him') exemplifies prompt faith — the pattern of the man of God who acts on divine instruction without delay or qualification."},
-      {"school": "grammatical-historical", "prevalence": "several", "summary": "Ellicott and Robertson: Matthew's narrative economy is noted — Joseph's obedience is stated without elaboration, keeping focus on the divine initiative; the Greek aorist 'arose' and 'did' compress the obedience into a single faithful act."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: Joseph's obedience is the proof that faith does not delay — he rose, took Mary as his wife, exactly as commanded, trusting the divine word over appearances."}
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": ["Joseph's obedience", "prompt faith", "taking Mary as wife", "angelic command fulfilled"]
-  },
-  "25": {
-    "voices": ["John Gill", "Albert Barnes", "Adam Clarke", "Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley", "Cyril of Jerusalem"],
-    "schools": [
-      {"school": "grammatical-historical", "prevalence": "majority", "summary": "Ellicott and Robertson: 'knew her not till she had brought forth' uses the standard Greek heos ('until') which in Jewish idiom states what was true up to a point without pronouncing on what followed; Matthew's purpose is to emphasise the absolutely supernatural character of the birth, not to comment on Mary's subsequent state."},
-      {"school": "reformed", "prevalence": "minority", "summary": "Calvin: the 'until' clause is consistent with Mary's perpetual virginity but does not require it; Matthew's concern is that nothing of natural union contaminated the supernatural birth, not the later state of the marriage."},
-      {"school": "latin-fathers", "prevalence": "minority", "summary": "Gill cites patristic support for perpetual virginity; the point is that Jesus was named 'firstborn' as a legal title, not implying subsequent children."},
-      {"school": "wesleyan-arminian", "prevalence": "single", "summary": "Wesley: the text affirms the virginal birth; whether Mary later knew Joseph is a separate question the text leaves open."}
-    ],
-    "debates": [
-      {
-        "question": "Does 'knew her not until she had brought forth' imply Joseph subsequently did know her?",
-        "sides": [
-          {"position": "No — 'until' in Hebrew idiom need not imply a change after the stated point; Mary remained a perpetual virgin.", "holders": ["Jerome", "John Gill", "Cyril of Jerusalem"]},
-          {"position": "The text's purpose is to underscore the supernatural birth, not to rule on Mary's later state; normal marriage likely followed.", "holders": ["Charles Ellicott", "A.T. Robertson", "John Calvin", "John Wesley"]}
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": ["perpetual virginity debate", "heos ('until') idiom", "firstborn as legal title", "supernatural birth emphasis"]
-  }
+ "1": {
+  "voices": [
+   "Jerome",
+   "Rabanus",
+   "Pseudo-Chrysostom",
+   "Gloss",
+   "Chrysostom",
+   "Remigius",
+   "Hilary",
+   "Ambrose",
+   "Augustine",
+   "Pseudo-Athanasius",
+   "Cyril of Alexandria",
+   "Isidore",
+   "Leo",
+   "John Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "majority",
+    "summary": "Matthew (the ‘face of a man’) opens with Christ’s human genealogy; Isaiah’s ‘who shall declare his generation?’ (Isa 53:8) speaks of the divine; Ambrose: David and Abraham the two heads of the line."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Against the heretics who made Christ a mere man (Ebion, Paul of Samosata), the eternal deity is set — ‘In the beginning was the Word’ (Jn 1:1), ‘in the form of God’ (Phil 2:6); Cyril of Jerusalem: Son of David at the end of ages, Son of God before all ages."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "‘The book of the generation’ (biblos geneseōs), a Hebrew title for a narrative of descent; the carefully kept Jewish genealogies (Lightfoot)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin opens the debate whether both Evangelists trace through Joseph, or Matthew through Joseph and Luke through Mary."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Do Matthew and Luke both trace through Joseph, or Matthew through Joseph and Luke through Mary?",
+    "sides": [
+     {
+      "position": "Matthew through Joseph, Luke through Mary",
+      "holders": [
+       "some (noted by Calvin)"
+      ]
+     },
+     {
+      "position": "both through Joseph (Calvin’s leaning)",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "‘the book of the generation’",
+   "son of David, son of Abraham",
+   "God become man",
+   "against the heresies of a mere-man Christ"
+  ]
+ },
+ "2": {
+  "voices": [
+   "Augustine",
+   "Ambrose",
+   "Chrysostom",
+   "Gloss",
+   "Pseudo-Chrysostom",
+   "Remigius",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The line of promise traced (‘begat,’ egennēsen, = direct descent); Ishmael and Esau omitted as outside the covenant (Gen 21:12), yet ‘Judah and his brethren’ all named as the people of God."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose: Abraham the first witness of faith (Gen 15:6); Pseudo-Chrysostom finds Christ figured in the names — Isaac ‘laughter,’ Judah ‘confessor’ (Mt 11:25)."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the twelve patriarchs all given a place, all sharing the favour of adoption — the descent marked by sovereign election (Isaac not Ishmael, Jacob not Esau)."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the line of promise",
+   "Ishmael and Esau passed over",
+   "‘Judah and his brethren’",
+   "sovereign election"
+  ]
+ },
+ "3": {
+  "voices": [
+   "Gloss",
+   "Augustine",
+   "Jerome",
+   "Ambrose",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome: the genealogy names not holy women but such as Scripture condemned (Tamar), that ‘He who came for sinners, born of sinners, might put away the sins of all’; Ambrose contrasts Luke’s ‘immaculate’ priestly line."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The history of the line — Judah begat Phares and Zarah of Tamar before Egypt, on through Esrom and Aram (Gen 38:29; Ruth 4:18)."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Tamar named in the line",
+   "sinners in Christ’s ancestry",
+   "grace foreshadowed",
+   "the pedigree preaches the gospel"
+  ]
+ },
+ "4": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "unanimous",
+    "summary": "The line through the Exodus generation: Naasson (Nahshon), prince of Judah at the Exodus and brother-in-law of Aaron (Num 1:7; 1 Chr 2:10); the succession agreeing exactly with the OT records (Ruth 4:19-20)."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the Exodus generation",
+   "Naasson prince of Judah",
+   "the line preserved",
+   "agreement with Scripture"
+  ]
+ },
+ "5": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Matthew adds what the OT omits — that Boaz’s mother was Rahab the harlot of Jericho (Josh 6:25; Ruth 4:21) — and names Ruth the Moabitess (Ruth 4:13); two Gentile women gathered into the line by faith."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Rahab the harlot",
+   "Ruth the Moabitess",
+   "Gentiles and sinners in the line",
+   "grace foreshadowed"
+  ]
+ },
+ "6": {
+  "voices": [
+   "Augustine",
+   "Remigius",
+   "Gloss",
+   "Ambrose",
+   "Pseudo-Chrysostom",
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bathsheba is unnamed (called ‘wife of Urias’) to recall the great sin (Remigius, Gloss); Ambrose praises David’s repentance; Augustine: the descent through Solomon fits Christ’s taking on our sins."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin/Wesley: ‘the king’ is given to David alone, the type of the Messiah whose throne Christ inherits (Lk 1:32); Gill: the despised youngest son chosen by God."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "‘David the king’",
+   "the wife of Urias (Bathsheba)",
+   "David’s sin and repentance",
+   "the royal type of Christ"
+  ]
+ },
+ "7": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Pseudo-Chrysostom"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The line from Solomon’s glory into the divided kingdom: Roboam (born of Naamah the Ammonitess, 1 Kgs 14:21), Abia, Asa (1 Chr 3:10)."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom reads the names mystically — Solomon ‘the peacemaker,’ Roboam ‘by a multitude of people.’"
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Solomon to the divided kingdom",
+   "kings good and bad",
+   "persistence of grace",
+   "the throne kept for the Messiah"
+  ]
+ },
+ "8": {
+  "voices": [
+   "Jerome",
+   "Hilary",
+   "Pseudo-Chrysostom",
+   "Augustine",
+   "Gloss",
+   "Ambrose",
+   "Remigius",
+   "Rabanus",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Three kings (Ahaziah, Joash, Amaziah) omitted between Joram and Ozias (1 Chr 3:11-12) — ‘begat’ meaning mediate descent; the omission serving the three-fourteens structure (v.17)."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine: the three excluded for continuous wickedness; Hilary/Pseudo-Chrysostom: descendants of Ahab through Athaliah, cut off under the curse to the fourth generation — the Gentile stain purged."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why are the three kings omitted?",
+    "sides": [
+     {
+      "position": "divine judgment — descendants of Ahab under the curse / continuous wickedness",
+      "holders": [
+       "Augustine",
+       "Hilary",
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "position": "to fit the three-fourteens structure",
+      "holders": [
+       "Jamieson, Fausset and Brown",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "three kings omitted",
+   "the curse on Ahab’s house",
+   "judgment on apostasy",
+   "the genealogy’s structure"
+  ]
+ },
+ "9": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Ozias = Uzziah (leprous for presumption, 2 Chr 26:16); three kings omitted before him to compress into three fourteens (v.17); the line runs good king Jotham, wicked Ahaz, godly Hezekiah."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Uzziah, Jotham, Ahaz, Hezekiah",
+   "good and wicked kings",
+   "grace not bound by merit",
+   "the line preserved"
+  ]
+ },
+ "10": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "unanimous",
+    "summary": "The descent through Manasseh (born of Hephzibah, 2 Kgs 21:1) — ‘remarkable both for his sins and his humiliation’ (2 Chr 33:12-13) — through Amon to the reformer Josiah."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Manasseh in the line",
+   "sin and humiliation",
+   "grace to the worst of sinners",
+   "Josiah the reformer"
+  ]
+ },
+ "11": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Difficulties: Josiah was Jechonias’ grandfather (Jehoiakim omitted, 2 Kgs 23:34; 1 Chr 3:15-16); ‘his brethren’ = kinsmen/uncles; the verse marks the deportation to Babylon, the line’s lowest point yet unbroken."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Jechonias and his brethren",
+   "the carrying away to Babylon",
+   "an omitted link",
+   "the line preserved through exile"
+  ]
+ },
+ "12": {
+  "voices": [
+   "Pseudo-Chrysostom",
+   "Ambrose",
+   "Gloss",
+   "Remigius",
+   "Rabanus",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The line resumes after Babylon (Jechonias → Salathiel → Zorobabel, 1 Chr 3:17); Jeremiah’s ‘write this man childless’ (Jer 22:30) meant no descendant should prosper on David’s earthly throne, not absolute childlessness."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose raises the Jer 22:30 problem; Remigius and Rabanus read the post-exilic names as mystical figures of Christ."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: the captivity turned David’s royal descendants into exiles and slaves, yet was arranged by providence to preserve the seed."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How is Christ of Jechonias’ seed if Coniah was ‘written childless’ (Jer 22:30)?",
+    "sides": [
+     {
+      "position": "the prophecy meant no descendant prospering on David’s earthly throne, not childlessness",
+      "holders": [
+       "Jamieson, Fausset and Brown",
+       "John Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "after the captivity",
+   "Jechonias to Zorobabel",
+   "the Coniah-childless problem",
+   "the line preserved through exile"
+  ]
+ },
+ "13": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Remigius",
+   "Rabanus"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The line passes into post-exilic generations unrecorded in the OT (Abiud not in Chronicles, perhaps = Meshullam, 1 Chr 3:19), resting on the carefully kept Jewish registers."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Finding little history, the fathers read the names mystically — Remigius: Abiud = ‘He is my Father’ (Jn 10:30); Rabanus traces a moral sense pointing to Christ."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the obscure post-exilic names",
+   "the silent centuries",
+   "God’s hidden faithfulness",
+   "names pointing to Christ"
+  ]
+ },
+ "14": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Rabanus",
+   "Remigius"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The succession continues through Azor, Sadoc, Achim, Eliud — names belonging to the obscure inter-testamental period, recorded in the Evangelist’s source but nowhere else in Scripture."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "The fathers read the very names as hidden foreshadowings of Christ, after Rabanus and Remigius on the surrounding verses."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "unknown post-exilic names",
+   "the obscure and unremembered",
+   "God’s patience in silence",
+   "every link necessary"
+  ]
+ },
+ "15": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The last generations before Joseph (Eleazar, Matthan, Jacob), names not in the OT; JFB reaffirms the agreement with 1 Chr 3:17 and that Jer 22:30 is no contradiction."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the last generations before Joseph",
+   "Matthan and Jacob",
+   "the threshold of the nativity",
+   "centuries of providence"
+  ]
+ },
+ "16": {
+  "voices": [
+   "Gloss",
+   "Jerome",
+   "Eusebius",
+   "Augustine",
+   "Chrysostom",
+   "Gennadius",
+   "Hilary",
+   "The Council of Ephesus",
+   "Pseudo-Augustine",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The formula breaks: not ‘Joseph begat Jesus’ but ‘Joseph the husband of Mary, of whom (feminine) was born Jesus’ — guarding the virgin birth; the Joseph son-of-Jacob/son-of-Heli difference explained by nature/law, levirate (Eusebius), or Mary’s line (Lightfoot, Wesley)."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Joseph the legal/adoptive father (Augustine); ‘who is called Christ’ = anointed by the Spirit (Hilary); against Ebion (Gennadius), Nestorius (Ephesus), and dividing the one Christ (Pseudo-Augustine)."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why does Matthew call Joseph son of Jacob, and Luke son of Heli?",
+    "sides": [
+     {
+      "position": "father by nature vs. by law",
+      "holders": [
+       "Jerome",
+       "Augustine"
+      ]
+     },
+     {
+      "position": "levirate marriage (Matthan/Melchi)",
+      "holders": [
+       "Eusebius"
+      ]
+     },
+     {
+      "position": "Matthew traces Joseph’s line, Luke Mary’s",
+      "holders": [
+       "John Lightfoot",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "‘the husband of Mary’",
+   "the virgin birth formula",
+   "‘who is called Christ’ (anointed)",
+   "Son of David by law, Son of God by nature"
+  ]
+ },
+ "17": {
+  "voices": [
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Ambrose",
+   "Gloss",
+   "Augustine",
+   "Remigius",
+   "John Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The three groups of fourteen are a memoria technica (common among the Jews), of unequal length, with omitted names and an overlap (David ends/begins, Jesus ends) to make the count even."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom: the three divisions (patriarchs/judges, kings, post-exile) show that no change of government made the people better."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Remigius: fourteen = ten (Decalogue) + four (Gospels), Law and Gospel agreeing; Augustine: Jechonias counted twice at the captivity’s turning-point."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the three fourteens",
+   "memory aid",
+   "three epochs of Israel",
+   "faithfulness through every change"
+  ]
+ },
+ "18": {
+  "voices": [
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Remigius",
+   "Jerome",
+   "Origen",
+   "Cyril of Alexandria",
+   "Chrysologus",
+   "Gloss",
+   "Bede",
+   "Augustine",
+   "Pseudo-Augustine",
+   "Ambrose",
+   "John Gill",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The chain of begettings breaks for a unique birth; ‘espoused’ = a binding betrothal (husband/wife, not yet come together); the child conceived ‘of the Holy Ghost,’ not by man."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Origen and Cyril defend Mary as ‘mother of God’ against Nestorius — she bears the One who is God, not merely ‘the Christ.’"
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome: conceived of a virgin espoused that her family be known, she be shielded from the adultery-charge, and have a protector; Augustine: a wedlock without carnal desire, befitting the sinless One; Henry: adore the mystery."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the virgin conception",
+   "‘of the Holy Ghost’",
+   "mother of God (vs Nestorius)",
+   "the espoused virgin"
+  ]
+ },
+ "19": {
+  "voices": [
+   "Chrysostom",
+   "Pseudo-Augustine",
+   "Ambrose",
+   "Jerome",
+   "Augustine",
+   "Rabanus",
+   "Origen",
+   "Gloss",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "‘Just’ (dikaios, upright) Joseph would neither marry one supposed unfaithful nor expose her, but ‘put her away privily’ — the meeting of justice and mercy."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome/Augustine/Ambrose: to spare her was the higher righteousness — guiltless of her blood, yet not betraying her."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "minority",
+    "summary": "Origen: Joseph suspected no sin but, seeing a ‘great sacrament’ in her, withdrew in reverent awe, thinking himself unworthy."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why did the ‘just’ Joseph seek to put Mary away?",
+    "sides": [
+     {
+      "position": "believing her unfaithful, he chose the gentlest course mercy allowed",
+      "holders": [
+       "Jerome",
+       "Augustine",
+       "Ambrose"
+      ]
+     },
+     {
+      "position": "he suspected no sin but withdrew in awe before the mystery",
+      "holders": [
+       "Origen"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Joseph ‘a just man’",
+   "justice and mercy",
+   "‘put her away privily’",
+   "reverent awe (Origen)"
+  ]
+ },
+ "20": {
+  "voices": [
+   "Remigius",
+   "Gloss",
+   "Chrysostom",
+   "Pseudo-Augustine",
+   "Ambrose",
+   "Rabanus",
+   "Pseudo-Chrysostom",
+   "Chrysologus",
+   "Jerome",
+   "Augustine",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "At the point of Joseph’s perplexity the angel appears in a dream, addressing him ‘son of David’ (recalling the promise) and ‘fear not… for that which is conceived is of the Holy Ghost.’"
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine guards against making the Spirit the ‘father’ of Christ’s humanity (the Spirit is the agent, not father); Ambrose: calling Mary ‘wife’ does not deny her virginity."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: how seasonably the Lord aids his people — when he seems not to observe our cares, we are still under his eye."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the angel in a dream",
+   "‘Joseph, thou son of David, fear not’",
+   "conceived of the Holy Ghost",
+   "the Spirit agent not father"
+  ]
+ },
+ "21": {
+  "voices": [
+   "Chrysostom",
+   "Gloss",
+   "Pseudo-Chrysostom",
+   "Rabanus",
+   "Jerome",
+   "Remigius",
+   "Chrysologus",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "‘Jesus’ = Joshua, ‘he shall save’ — the name’s etymology given in ‘he shall save his people from their sins’; ‘call his name’ (not ‘give’), for the name was his from eternity."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Remigius: he saves his people (believers) from their sins, not from visible enemies; Chrysologus: ‘it is God that forgives sins,’ so the name proclaims him God."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the name JESUS (Saviour)",
+   "‘save his people from their sins’",
+   "salvation from sin, not Rome",
+   "deity implied"
+  ]
+ },
+ "22": {
+  "voices": [
+   "Remigius",
+   "Gloss",
+   "Chrysostom",
+   "Jerome",
+   "Leo",
+   "Pseudo-Augustine",
+   "Theodotus",
+   "Rabanus",
+   "Petrus Alfonsus",
+   "Augustine",
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "The Evangelist’s comment that the birth fulfils prophecy (Isa 7:14, to Ahaz ~740 BC); his custom of confirming from the OT for Jewish believers; the ‘that it might be fulfilled’ (hina plērōthē) marking a correspondence no accident."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom: the saying comprises the depths of mercy — the laws of nature broken, He who was above all made lower than all; Calvin: it includes all that is divine in Christ, not the bare name."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "‘that it might be fulfilled’",
+   "the nativity fulfils prophecy",
+   "Isaiah 7:14",
+   "promise and fulfilment"
+  ]
+ },
+ "23": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem",
+   "Theodotus",
+   "Jerome"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Isa 7:14 refers to Mary and her son, of no other; the ‘sign’ must be ‘new and wonderful’ — a true virgin’s conception, not a young woman’s ordinary birth (Jerome); ‘they shall call’ = he shall really be."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin: ‘Emmanuel, God with us’ teaches God present not merely by power but in the incarnate Son dwelling in our flesh; Theodotus: against Photinus, the child is God, not mere man."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does Isaiah’s ‘almah’ mean a true virgin?",
+    "sides": [
+     {
+      "position": "yes — only a virgin’s conception is a sign ‘new and wonderful’",
+      "holders": [
+       "Jerome",
+       "John Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "‘a virgin shall be with child’",
+   "Emmanuel, God with us",
+   "the deity of Christ",
+   "the incarnation foretold"
+  ]
+ },
+ "24": {
+  "voices": [
+   "Remigius",
+   "Gloss",
+   "Pseudo-Chrysostom",
+   "Jerome",
+   "John Gill",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Joseph promptly obeys, ‘taking his wife home’ (parelaben) — the formal completion of the marriage; his ready performance proves both his faith and his obedience (Calvin)."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "The Gloss: he did what, and as, the angel commanded — break off all delays; Remigius: by Joseph’s obedience we begin to be recalled, as by Adam’s disobedience we were ruined."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "Joseph’s prompt obedience",
+   "‘took unto him his wife’",
+   "faith expressed in action",
+   "obedience undoing Adam’s ruin"
+  ]
+ },
+ "25": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Jerome",
+   "Cyril of Jerusalem"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "‘Knew her not’ (euphemism, imperfect) = continence till Jesus’ birth, affirming the virgin birth; ‘firstborn’ is absent from the best MSS; ‘till’ need not imply union afterward (cf. 2 Sam 6:23)."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome, against Helvidius, defends Mary’s perpetual virginity — ‘till’ and ‘firstborn’ do not imply other children."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Barnes/Clarke/Calvin/Wesley: the virgin birth is affirmed, but Scripture neither affirms nor denies later children — the text leaves the question open."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does ‘till… firstborn’ mean Mary had other children?",
+    "sides": [
+     {
+      "position": "no — Mary remained ever-virgin (the phrasing implies nothing after)",
+      "holders": [
+       "Jerome",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "the text leaves it open; she may have had children later",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "‘knew her not till’",
+   "the virgin birth affirmed",
+   "perpetual virginity debated",
+   "Joseph names him JESUS"
+  ]
+ }
 }

@@ -55,7 +55,8 @@ var DAILY_DEVOT_SOURCES = {
   'spurgeon-evening': { file: 'spurgeon-evening.json', author: 'Charles Spurgeon', work: 'Evening by Evening' },
   'winslow-morning':  { file: 'winslow-morning.json',  author: 'Octavius Winslow', work: 'Morning Thoughts' },
   'winslow-evening':  { file: 'winslow-evening.json',  author: 'Octavius Winslow', work: 'Evening Thoughts' },
-  'meyer':            { file: 'meyer.json',            author: 'F.B. Meyer',       work: 'Our Daily Walk' }
+  'meyer':            { file: 'meyer.json',            author: 'F.B. Meyer',       work: 'Our Daily Walk' },
+  'jowett':           { file: 'jowett.json',           author: 'J.H. Jowett',      work: 'My Daily Meditation' }
 };
 
 // INTENT: "Variety" rotates to a different author each day, per slot. The index is
@@ -67,8 +68,8 @@ var DAILY_DEVOT_SOURCES = {
 //   go in BOTH lists). Missing/gap days are handled at render time by falling
 //   through to the next author in rotation.
 var DAILY_VARIETY = {
-  morning: ['winslow-morning', 'spurgeon-morning', 'meyer'],
-  evening: ['winslow-evening', 'spurgeon-evening', 'meyer']
+  morning: ['winslow-morning', 'spurgeon-morning', 'meyer', 'jowett'],
+  evening: ['winslow-evening', 'spurgeon-evening', 'meyer', 'jowett']
 };
 
 // ── Streak ────────────────────────────────────────────────────────────────────

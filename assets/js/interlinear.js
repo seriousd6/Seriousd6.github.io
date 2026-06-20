@@ -35,8 +35,14 @@ export function initInterlinearToggle() {
   btn.title     = 'Toggle interlinear view';
   btn.textContent = 'Interlinear';
 
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  // Prefer the 📖 Study Tools popover; fall back to inline if it isn't built yet.
+  var stPop = _getStudyToolsPopover();
+  if (stPop) {
+    stPop.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
 
   btn.addEventListener('click', function () {
     on = !on;
@@ -72,8 +78,14 @@ export function initBookInfoToggle() {
   btn.title     = 'Book introduction (opens full-page intro)';
   btn.textContent = 'Book Info';
 
-  var hint = browseBar.querySelector('.reader-browse-hint');
-  browseBar.insertBefore(btn, hint || null);
+  // Prefer the 📖 Study Tools popover; fall back to inline if it isn't built yet.
+  var stPop = _getStudyToolsPopover();
+  if (stPop) {
+    stPop.appendChild(btn);
+  } else {
+    var hint = browseBar.querySelector('.reader-browse-hint');
+    browseBar.insertBefore(btn, hint || null);
+  }
 
   btn.addEventListener('click', function () {
     var state = window._readerNavState;
@@ -141,6 +153,88 @@ export function initViewToggle() {
 
 function _getViewPopover() {
   return document.getElementById('reader-view-popover');
+}
+
+// ── initStudyToolsToggle — 📖 Study Tools popover ─────────────────────────
+// INTENT: A single home (on every viewport, mirroring the ⚙ View popover) for the
+//   study/reading feature toggles that previously sat inline in the browse bar and
+//   were hidden on phones: Interlinear, Book Info, Commentary, Cross Refs,
+//   † Footnotes, 🔗 Connections, ⇔ Parallels, and the 📖 Study desk opener. This
+//   restores those features to mobile users and declutters the bar. Build pattern is
+//   identical to initViewToggle: a trigger button + a hidden popover; each feature
+//   init appends its button into #reader-studytools-popover when it exists (else
+//   falls back to inline insertion). NOTE: ¶ Paragraphs is a *display* option and
+//   lives in the ⚙ View popover, not here.
+// CHANGE? Must be called BEFORE those feature inits in app.js so the popover exists
+//   when they call getElementById('reader-studytools-popover'). The inits that target
+//   it live in: interlinear.js (Interlinear, Book Info), reader.js
+//   (initXrefNotesToggle = Footnotes, initCommModeToggle = Commentary + Cross Refs),
+//   parallels.js (initEchoToggle = Connections), synoptic.js (initParallelsToggle),
+//   study-desk.js (initStudyDesk = 📖 Study) — keep the popover id in sync if renamed.
+//   reader.css hides nothing of these now; the old mobile `display:none` rules were
+//   removed because the buttons live inside the (reachable) popover.
+// VERIFY: Open /read/ at phone width → a 📖 Study Tools button sits in the browse bar;
+//   tap it → Interlinear / Book Info / Commentary / Cross Refs / † Footnotes /
+//   🔗 Connections / ⇔ Parallels / 📖 Study appear as full-width rows; tapping outside
+//   or pressing Esc closes it; each toggle still works. ¶ Paragraphs is in ⚙ View.
+export function initStudyToolsToggle() {
+  var browseBar = document.querySelector('.reader-browse-bar');
+  if (!browseBar || document.getElementById('reader-studytools-btn')) return;
+
+  var wrap = document.createElement('div');
+  wrap.className = 'reader-studytools-wrap';
+
+  var btn = document.createElement('button');
+  btn.id        = 'reader-studytools-btn';
+  btn.className = 'reader-studytools-btn';
+  btn.type      = 'button';
+  btn.title     = 'Study tools';
+  btn.setAttribute('aria-haspopup', 'true');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.textContent = '📖 Study Tools';
+
+  var popover = document.createElement('div');
+  popover.id        = 'reader-studytools-popover';
+  popover.className = 'reader-studytools-popover';
+  popover.setAttribute('hidden', '');
+
+  wrap.appendChild(btn);
+  wrap.appendChild(popover);
+
+  var hint = browseBar.querySelector('.reader-browse-hint');
+  browseBar.insertBefore(wrap, hint || null);
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = !popover.hasAttribute('hidden');
+    if (open) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      popover.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!wrap.contains(e.target)) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !popover.hasAttribute('hidden')) {
+      popover.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// Shared lookup used by the six study-feature inits (here + reader.js / parallels.js /
+// synoptic.js use getElementById directly) to decide popover vs inline placement.
+function _getStudyToolsPopover() {
+  return document.getElementById('reader-studytools-popover');
 }
 
 // ── initSplitToggle ───────────────────────────────────────────────────────

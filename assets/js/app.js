@@ -41,7 +41,7 @@ import { initSearchPage, buildSearchDOM } from './search.js';
 import {
   initReaderPage, initCompareToggle, injectComparePanel,
   isCompareEnabled, getCompareVersion, setCompareVersion,
-  initViewToggle, initFontSizeControls,
+  initViewToggle, initStudyToolsToggle, initFontSizeControls,
   initSidebarToggle, initXrefNotesToggle, initCommModeToggle,
   initColumnsToggle, initReaderModeToggle, initNotesPanelToggle,
   initParaViewToggle
@@ -171,11 +171,15 @@ function init() {
     if (document.getElementById('reader-results')) {
       initReaderPage();
       initCompareToggle();
+      // Build the two popovers first so their member toggles route into them:
+      // ⚙ View (layout) and 📖 Study Tools (study/reading features). The six study
+      // toggles below look up #reader-studytools-popover, so it must exist first.
+      initViewToggle();
+      initStudyToolsToggle();
       initInterlinearToggle();
       initBookInfoToggle();
       initCommModeToggle();
       initNotesPanelToggle();
-      initViewToggle();
       initSidebarToggle();
       initFontSizeControls();
       initXrefNotesToggle();
