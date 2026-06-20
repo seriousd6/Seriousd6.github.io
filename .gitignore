@@ -7,6 +7,7 @@ Thumbs.db
 .sublime/
 *.swp
 *~
+.vscode/
 
 # Build artifacts
 /dist/
@@ -64,4 +65,5 @@ memory/
 secrets.*
 credentials.*
 *.secret
+.git-credentials*
 working/devotionals-raw/
