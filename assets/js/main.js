@@ -216,7 +216,24 @@
   //   Desktop topic page      → overlays content (sidebar-overlay + sb-open toggle)
   //   Mobile (<1024 px)       → always overlay, toggled by hamburger button
   function buildSidebar() {
-    if (new URLSearchParams(location.search).get('minimal')) {
+    // INTENT: Suppress the sidebar/topbar whenever this page is embedded as a hub
+    //   "tab" — either explicitly via ?minimal=1 (the iframe data-src contract) OR
+    //   implicitly because we are rendered inside a frame. The frame check is the real
+    //   fix: hub iframes load the landing page with ?minimal=1, but in-iframe navigation
+    //   (clicking a topic card, a search result, any internal link) goes to a URL that
+    //   drops the param, which previously rebuilt the full sidebar *inside* the iframe.
+    //   Detecting the frame keeps every in-iframe page chrome-less regardless of its query.
+    // CHANGE? If a page should ever show its sidebar while framed, this gate must change;
+    //   the per-page inline `?minimal` blocks (footer hide + #explore-back-link reveal in
+    //   topics/, dictionary/, etc.) still key off the param only, so propagate ?minimal on
+    //   internal links there if that secondary chrome also needs to stay hidden in-frame.
+    // VERIFY: Open search/ → a hub tab (Topics/Study Guides/Dictionary/Word Cloud), click
+    //   through to a sub-page inside the panel: no left sidebar or mobile topbar should
+    //   appear in the iframe. Top-level (un-framed) pages still render the sidebar normally.
+    var framed;
+    try { framed = (window.self !== window.top); }
+    catch (e) { framed = true; }  // cross-origin parent throws → we are definitely embedded
+    if (framed || new URLSearchParams(location.search).get('minimal')) {
       /* No sidebar in minimal/iframe mode — remove the 240px body padding-left
          that style.css applies by default so the page fills the iframe fully. */
       document.body.classList.add('sidebar-collapsed');
