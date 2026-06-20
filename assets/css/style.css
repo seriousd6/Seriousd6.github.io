@@ -98,6 +98,11 @@ main:focus { outline: none; }
 /* Collapsed: sidebar off-screen, content fills full width */
 body.sidebar-collapsed { padding-left: 0; }
 
+/* Embedded as a hub "tab" (set by main.js, or by the inline frame check on pages
+   that don't load main.js): hide the global site footer so it never appears mid-iframe.
+   The sidebar/topbar are already suppressed by buildSidebar() returning early. */
+body.is-embedded .site-footer { display: none; }
+
 /* Overlay mode: sidebar is a drawer, never pushes content (topic pages + mobile) */
 body.sidebar-overlay { padding-left: 0 !important; }
 

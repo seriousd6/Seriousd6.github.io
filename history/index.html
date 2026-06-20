@@ -115,9 +115,8 @@
 
           if (isThis) {
             var iframe = panel.querySelector('iframe');
-            /* getAttribute returns null when src attr is absent — robust vs "about:blank" */
-            if (iframe && !iframe.getAttribute('src') && iframe.dataset.src) {
-              iframe.src = iframe.dataset.src;
+            /* Shared lazy-reveal (defined in main.js); true the first time it sets src */
+            if (window.bswRevealFrame(iframe)) {
               // INTENT: Show a friendly message if the sub-page can't load (offline, broken URL)
               //   so the user doesn't see a blank frame with no explanation.
               // CHANGE? If panel structure changes from a single iframe to something else,

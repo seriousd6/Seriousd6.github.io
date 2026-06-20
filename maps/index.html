@@ -107,15 +107,18 @@
   <script src="../assets/js/main.js"></script>
   <script type="module" src="../assets/js/app.js"></script>
   <script>
-    if (new URLSearchParams(location.search).get('minimal')) {
-      var bl = document.getElementById('hist-back-link');
-      if (bl) bl.removeAttribute('hidden');
-      /* When embedded in the history page iframe, the timelapse link must break
-         out of the iframe and switch the parent to the Animated Map tab — otherwise
-         the timelapse loads inside the Maps iframe while the tab still reads "Maps". */
-      var tl = document.querySelector('.maps-timelapse-link');
-      if (tl) { tl.href = '../history/?tab=timelapse'; tl.target = '_top'; }
-    }
+    /* The back link is revealed centrally by main.js (.hist-back-link). This block keeps
+       only the maps-specific fix: when embedded, the timelapse link must break out of the
+       iframe and switch the PARENT history page to the Animated Map tab — otherwise the
+       timelapse loads inside the Maps iframe while the tab still reads "Maps". Frame-aware
+       so it also holds after in-iframe navigation that drops ?minimal. */
+    (function () {
+      var framed; try { framed = (window.self !== window.top); } catch (e) { framed = true; }
+      if (framed || new URLSearchParams(location.search).get('minimal')) {
+        var tl = document.querySelector('.maps-timelapse-link');
+        if (tl) { tl.href = '../history/?tab=timelapse'; tl.target = '_top'; }
+      }
+    })();
   </script>
 </body>
 </html>

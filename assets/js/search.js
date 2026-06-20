@@ -158,10 +158,8 @@ export function initSearchPage(input) {
       var isThis = (ht === tab);
       panel.classList.toggle('explore-hub-panel--active', isThis);
       if (isThis) {
-        var iframe = panel.querySelector('iframe');
-        if (iframe && !iframe.getAttribute('src') && iframe.dataset.src) {
-          iframe.src = iframe.dataset.src;
-        }
+        /* Shared lazy-reveal helper defined in main.js (loaded before this module). */
+        window.bswRevealFrame(panel.querySelector('iframe'));
       }
     });
 

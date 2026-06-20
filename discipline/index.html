@@ -453,9 +453,8 @@
         var iframe = document.getElementById('disc-' + tab + '-iframe');
         if (iframe) {
           iframe.style.display = 'block';
-          if (!iframe.src || iframe.src === window.location.href) {
-            iframe.src = iframe.dataset.src;
-          }
+          /* Shared lazy-reveal (defined in main.js); src="" attr is falsy so it sets once. */
+          window.bswRevealFrame(iframe);
         }
       }
 

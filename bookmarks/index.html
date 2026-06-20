@@ -212,8 +212,11 @@
 
       render();
 
-      // When embedded as iframe (?minimal=1), hide the Home back-link (Reader link stays)
-      if (new URLSearchParams(location.search).get('minimal')) {
+      // When embedded as a hub tab, hide the Home back-link (Reader link stays). This page
+      // does not load main.js, so detect embedding here — framed (robust against in-iframe
+      // navigation that drops ?minimal) or explicit ?minimal=1.
+      var _framed; try { _framed = (window.self !== window.top); } catch (e) { _framed = true; }
+      if (_framed || new URLSearchParams(location.search).get('minimal')) {
         var homeLink = document.querySelector('.bookmarks-btn[href="../"]');
         if (homeLink) homeLink.hidden = true;
       }

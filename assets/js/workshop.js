@@ -2143,10 +2143,9 @@ function _doImport(file) {
 }
 
 /* ── Utility ───────────────────────────────────────────────── */
-function _esc(str) {
-  return String(str ?? '')
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
+// Use the shared escaper from core.js (imported above) rather than a local duplicate.
+// escHtml also escapes single quotes and guards null; aliased so existing _esc() calls stand.
+var _esc = escHtml;
 
 /* ── Depth toggle (SW-A/SW-G) ──────────────────────────────── */
 // INTENT: Depth controls how much of the dossier is shown. Reader (1) = essential

@@ -30,6 +30,26 @@
   var _root = _src ? new URL('../../', _src).href : '/';
   function _r(p) { return _root + p; }
 
+  /* ── Shared hub-tab helper ────────────────────────────────── */
+  // INTENT: Lazy-load a hub-tab iframe the first time its panel is shown — copy
+  //   data-src→src exactly once. The History, Discipline, and Explore/Search tab
+  //   controllers each used to re-implement this same 3-line reveal; this is the one
+  //   copy. main.js loads (classic script) before those inline/module scripts, so the
+  //   global is available to all three.
+  // CHANGE? Callers that need an error fallback or a load hook attach their own
+  //   listeners to the iframe (e.g. History adds a "could not load" message + a Leaflet
+  //   resize on load). Keep the getAttribute('src') check — it is null when the src
+  //   attribute is absent, which is more robust than reading the .src property ("about:blank").
+  // VERIFY: Open History / Discipline / Explore tabs; each panel's iframe issues exactly
+  //   one network request on first activation and is not refetched when re-selected.
+  window.bswRevealFrame = function (iframe) {
+    if (iframe && !iframe.getAttribute('src') && iframe.dataset && iframe.dataset.src) {
+      iframe.src = iframe.dataset.src;
+      return true;
+    }
+    return false;
+  };
+
   /* ── Module-level state shared between sidebar and reader ──── */
   // INTENT: BOOK_STUDIES is populated from data/books-content.json (primary) and
   //   data/topics.json (fallback). Both are async; _readerUpdate is set by
@@ -237,6 +257,22 @@
       /* No sidebar in minimal/iframe mode — remove the 240px body padding-left
          that style.css applies by default so the page fills the iframe fully. */
       document.body.classList.add('sidebar-collapsed');
+      /* is-embedded: single flag for "rendered as a hub tab". CSS hangs the footer
+         (and any other page chrome) off it, so we hide that chrome in one place
+         instead of per-page ?minimal scripts that break on in-iframe navigation. */
+      document.body.classList.add('is-embedded');
+      // Reveal the "← back to hub" link that embeddable pages keep hidden by default.
+      // INTENT: Centralizes the per-page `if (?minimal) { backlink.removeAttribute('hidden') }`
+      //   scripts that topics/progress/wordcloud/maps/tracker/church-history/timeline/notes
+      //   each duplicated. They use a few stable hooks (hist-/prog-/ms- classes + #trk-back-link),
+      //   so one selector covers them all; doing it here also makes it frame-aware.
+      // CHANGE? If a new embeddable page adds a back link, give it one of these classes/ids
+      //   (or extend this selector) instead of writing another inline ?minimal block.
+      // VERIFY: Open a History/Discipline/Explore sub-tab — the "← …" link shows in the frame;
+      //   visit the same page top-level (not embedded) and the link stays hidden.
+      document.querySelectorAll(
+        '.hist-back-link, .prog-back-link, .ms-back-link, #trk-back-link'
+      ).forEach(function (el) { el.hidden = false; });
       return;
     }
 

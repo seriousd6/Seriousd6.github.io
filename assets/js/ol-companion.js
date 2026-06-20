@@ -16,7 +16,7 @@
  */
 'use strict';
 
-import { _resolve } from './core.js';
+import { _resolve, escHtml } from './core.js';
 
 /* ── URL builders ──────────────────────────────────────────────── */
 // INTENT: Builds path to the per-chapter notes file — chapter granularity keeps each fetch
@@ -79,10 +79,9 @@ var DISP_LABELS = ['', 'minor debate', 'moderate debate', 'contested', 'major de
 var DISP_COLORS = ['', 'olc-disp-1', 'olc-disp-2', 'olc-disp-3', 'olc-disp-4'];
 
 /* ── Helpers ───────────────────────────────────────────────────── */
-function _esc(s) {
-  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
+// Use the shared escaper from core.js (also escapes single quotes; guards null) instead
+// of a local copy. Aliased to _esc so the ~20 existing call sites stay unchanged.
+var _esc = escHtml;
 
 function _pos_label(pos) {
   var MAP = {

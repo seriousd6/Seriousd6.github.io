@@ -49,12 +49,17 @@
   </main>
   <script type="module" src="../assets/js/app.js"></script>
   <script>
-    if (new URLSearchParams(location.search).get('minimal')) {
-      var bl = document.getElementById('explore-back-link');
-      if (bl) bl.removeAttribute('hidden');
-      var ft = document.querySelector('.site-footer');
-      if (ft) ft.hidden = true;
-    }
+    // This page does not load main.js, so flag the embedded state here. Treat the page
+    // as embedded when framed (robust against in-iframe navigation that drops ?minimal)
+    // or when ?minimal=1 is present. is-embedded lets style.css hide the site footer.
+    (function () {
+      var framed; try { framed = (window.self !== window.top); } catch (e) { framed = true; }
+      if (framed || new URLSearchParams(location.search).get('minimal')) {
+        document.body.classList.add('is-embedded');
+        var bl = document.getElementById('explore-back-link');
+        if (bl) bl.removeAttribute('hidden');
+      }
+    })();
   </script>
 </body>
 </html>
