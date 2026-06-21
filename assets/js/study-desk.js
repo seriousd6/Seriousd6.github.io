@@ -51,6 +51,7 @@ var _JOURNEY_URL = new URL('../../data/study/journeys.json', import.meta.url).hr
 var _REFS_URL    = new URL('../../data/strongs/refs/', import.meta.url).href;
 var _INTRO_URL   = new URL('../../data/books/introductions/', import.meta.url).href;
 var _SYNTH_URL   = new URL('../../data/synthesis/', import.meta.url).href;
+var _THEO_URL    = new URL('../../data/study/theological-terms.json', import.meta.url).href;  // Strong's code → weight (SD-T3)
 var _BP_URL      = new URL('../../biblepedia/', import.meta.url).href;            // article reader page (?a=slug)
 var _BP_IDX_URL  = new URL('../../data/biblepedia/index.json', import.meta.url).href;
 var _BP_ART_URL  = new URL('../../data/biblepedia/articles/', import.meta.url).href;
@@ -63,7 +64,7 @@ var _btn = null, _deskEl = null, _bodyEl = null, _observer = null;
 var _open = false;
 var _curKey = null;          // "bookId:ch" last rendered
 var _paraCache = Object.create(null);
-var _placesCache = null, _ctxCache = null, _bplaceCache = null, _powersCache = null, _journeyCache = null;
+var _placesCache = null, _ctxCache = null, _bplaceCache = null, _powersCache = null, _journeyCache = null, _theoCache = null;
 var _placeMaps = [];         // [{map, bounds}] — every Leaflet instance in the desk (destroy on re-render)
 var _leafletPromise = null;
 
@@ -110,6 +111,7 @@ function _loadPara(bookId) {
 }
 function _loadPlaces()    { return _loadJSON(_PLACES_URL, function(){return _placesCache;}, function(v){_placesCache=Array.isArray(v)?v:[];}); }
 function _loadCtx()       { return _loadJSON(_CTX_URL,    function(){return _ctxCache;},    function(v){_ctxCache=v;}); }
+function _loadTheo()      { return _loadJSON(_THEO_URL,   function(){return _theoCache;},   function(v){_theoCache=v;}); }
 function _loadBookPlaces(){ return _loadJSON(_BPLACE_URL, function(){return _bplaceCache;}, function(v){_bplaceCache=v;}); }
 function _loadPowers()    { return _loadJSON(_POWERS_URL, function(){return _powersCache;}, function(v){_powersCache=v;}); }
 function _loadJourneys()  { return _loadJSON(_JOURNEY_URL, function(){return _journeyCache;}, function(v){_journeyCache=v;}); }
@@ -236,7 +238,7 @@ function _fillOutline(headings, maxV) {
     var start = h.before;
     var end = (i + 1 < headings.length) ? headings[i + 1].before - 1 : (maxV || start);
     var range = end > start ? (start + '–' + end) : String(start);
-    _lastData.outline.push({ range: range, text: h.text });
+    _lastData.outline.push({ range: range, text: h.text, startV: start });
     // Each row = a scroll-to button + a ✦ "section synthesis" button that opens the blade.
     return '<div class="study-outline__row">' +
       '<button type="button" class="study-outline__go" data-v="' + start + '">' +
@@ -252,6 +254,12 @@ function _fillOutline(headings, maxV) {
   });
   host.querySelectorAll('.study-outline__synth').forEach(function (b) {
     b.addEventListener('click', function () {
+      // Remember the chosen section so the Synthesis binder tab reopens it (SD-T1).
+      _bladeCtx.section = {
+        startV: b.getAttribute('data-v'),
+        range: b.getAttribute('data-range'),
+        label: b.getAttribute('data-label')
+      };
       openBlade('section-synthesis', {
         bookId: nav.bookId, bookName: nav.bookName || nav.bookId, ch: nav.ch,
         startV: b.getAttribute('data-v'),
@@ -342,6 +350,7 @@ function _keywordCard(code, entry, gloss, count, lang) {
   });
   var openBtn = body.querySelector('.study-kw__open');
   if (openBtn) openBtn.addEventListener('click', function () {
+    _bladeCtx.word = { code: code, lang: lang };   // remember for the Word binder tab (SD-T1)
     openBlade('word-study', { code: code, lang: lang }, entry.lemma || code);
   });
   card.appendChild(btn); card.appendChild(body);
@@ -380,7 +389,7 @@ function _fillKeywords(bookId, ch, key) {
       content.forEach(function (code) {
         var entry = (dict && dict[code]) || {};
         var gloss = entry.gloss || counts[code].text || '';
-        _lastData.keywords.push({ lemma: entry.lemma || '', translit: entry.translit || '', gloss: gloss, count: counts[code].count });
+        _lastData.keywords.push({ code: code, lang: lang, lemma: entry.lemma || '', translit: entry.translit || '', gloss: gloss, count: counts[code].count });
         wrap.appendChild(_keywordCard(code, entry, gloss, counts[code].count, lang));
       });
     });
@@ -974,6 +983,7 @@ function _render() {
   }
   var key = nav.bookId + ':' + nav.ch;
   _curKey = key;
+  _bladeCtx = { word: null, section: null };   // new passage → forget the last tab selection
   var bookName = nav.bookName || nav.bookId;
   var ref = bookName + ' ' + nav.ch;
   _lastData.ref = ref;
@@ -1059,25 +1069,48 @@ function _buildDesk() {
   desk.id = 'reader-study-desk';
   desk.className = 'reader-study-desk';
   desk.setAttribute('aria-label', 'Passage study');
+  // Layout: [binder rail | main]. The rail is a flex sibling (never scrolls); `main` is the
+  // scroll container holding the head, the section body, and the blade overlay (which is
+  // absolute within `main`, so it covers head+body but leaves the rail visible → you can
+  // switch tools while a blade is open).
   desk.innerHTML =
-    '<div class="study-desk__head">' +
-      '<span class="study-desk__title">Passage Study</span>' +
-      '<span class="study-desk__ref"></span>' +
-      '<button class="study-desk__close" type="button" aria-label="Close study desk">✕</button>' +
+    '<div class="study-rail" role="tablist" aria-label="Study tools" aria-orientation="vertical">' +
+      _TOOLS.map(function (t, i) {
+        return '<button type="button" class="study-rail__tab' + (i === 0 ? ' study-rail__tab--active' : '') + '"' +
+          ' role="tab" data-tool="' + t.type + '" id="sd-tab-' + t.type + '" aria-controls="sd-blade-body"' +
+          ' aria-selected="' + (i === 0 ? 'true' : 'false') + '" tabindex="' + (i === 0 ? '0' : '-1') + '"' +
+          ' title="' + _esc(t.label) + '">' +
+          '<span class="study-rail__icon" aria-hidden="true">' + t.icon + '</span>' +
+          '<span class="study-rail__label">' + _esc(t.label) + '</span>' +
+        '</button>';
+      }).join('') +
     '</div>' +
-    '<div class="study-desk__body"></div>' +
-    '<div class="study-blade" id="sd-blade">' +
-      '<div class="study-blade__head">' +
-        '<button class="study-blade__back" type="button" aria-label="Back">‹</button>' +
-        '<nav class="study-blade__crumbs" aria-label="Breadcrumb"></nav>' +
-        '<button class="study-blade__close" type="button" aria-label="Close pane">✕</button>' +
+    '<div class="study-desk__main">' +
+      '<div class="study-desk__head">' +
+        '<span class="study-desk__title">Passage Study</span>' +
+        '<span class="study-desk__ref"></span>' +
+        '<button class="study-desk__close" type="button" aria-label="Close study desk">✕</button>' +
       '</div>' +
-      '<div class="study-blade__body" id="sd-blade-body"></div>' +
+      '<div class="study-desk__body"></div>' +
+      '<div class="study-blade" id="sd-blade">' +
+        '<div class="study-blade__head">' +
+          '<button class="study-blade__back" type="button" aria-label="Back">‹</button>' +
+          '<nav class="study-blade__crumbs" aria-label="Breadcrumb"></nav>' +
+          '<button class="study-blade__close" type="button" aria-label="Close pane">✕</button>' +
+        '</div>' +
+        '<div class="study-blade__body" id="sd-blade-body"></div>' +
+      '</div>' +
     '</div>';
   _bodyEl = desk.querySelector('.study-desk__body');
   desk.querySelector('.study-desk__close').addEventListener('click', function () { _setOpen(false); });
   desk.querySelector('.study-blade__back').addEventListener('click', _bladeBack);
   desk.querySelector('.study-blade__close').addEventListener('click', _closeBlades);
+  // Binder-tab rail: each divider switches the top-level tool (SD-T1).
+  var rail = desk.querySelector('.study-rail');
+  rail.querySelectorAll('.study-rail__tab').forEach(function (tab) {
+    tab.addEventListener('click', function () { openTool(tab.getAttribute('data-tool')); });
+  });
+  rail.addEventListener('keydown', _onRailKeydown);
   return desk;
 }
 
@@ -1097,6 +1130,107 @@ function _buildDesk() {
 var _bladeStack = [];
 var _BLADES = Object.create(null);
 
+// ── Binder tabs (SD-T1) ─────────────────────────────────────────────────────
+// INTENT: Make every blade reachable directly via a "school binder divider" rail on the
+//   desk, instead of only by drilling into a section. Two navigation axes: the rail switches
+//   the TOP-LEVEL tool (openTool resets the blade stack to that tool); the breadcrumb still
+//   walks DEPTH within a tool. _bladeCtx remembers the last word/section so switching tabs
+//   keeps your place. New tools appear in the rail automatically once added to _TOOLS.
+// CHANGE? Add a tool = push to _TOOLS (type must match a _BLADES key) + give it defaultParams
+//   built from the current passage + _bladeCtx. The first entry ('passage') is special — it
+//   closes blades back to the section list. Rail markup/wiring is in _buildDesk; active state
+//   is synced from _renderTopBlade / _closeBlades via _syncActiveTool.
+// VERIFY: Open the desk → a left rail lists Passage · Synthesis · Word · Encyc. · Book; click
+//   each to open its blade; arrow keys move between tabs; the active tab is highlighted.
+var _bladeCtx = { word: null, section: null };   // {code,lang} · {startV,range,label}
+
+var _TOOLS = [
+  { type: 'passage', label: 'Passage', icon: '📋' },   // returns to the section list
+  { type: 'section-synthesis', label: 'Synthesis', icon: '✦', scope: 'section',
+    from: 'the Outline section',
+    defaultParams: function () {
+      var nav = window._readerNavState; if (!nav || !nav.bookId) return null;
+      var sec = _bladeCtx.section || _lastData.outline[0]; if (!sec) return null;
+      return { bookId: nav.bookId, bookName: nav.bookName || nav.bookId, ch: nav.ch,
+               startV: sec.startV, range: sec.range, label: sec.label || sec.text };
+    } },
+  { type: 'word-study', label: 'Word', icon: '🔤', scope: 'word',
+    from: 'the Key words section (or tap a word in the passage)',
+    defaultParams: function () {
+      var w = _bladeCtx.word || _lastData.keywords[0];
+      if (!w || !w.code) return null;
+      return { code: w.code, lang: w.lang };
+    } },
+  { type: 'biblepedia', label: 'Encyc.', icon: '📚', scope: 'passage',
+    from: 'the Encyclopedia section',
+    defaultParams: function () { return { articles: _lastData.biblepedia || [], ref: _lastData.ref }; } },
+  { type: 'book-details', label: 'Book', icon: '📖', scope: 'book',
+    from: 'the “About book” button',
+    defaultParams: function () {
+      var nav = window._readerNavState; if (!nav || !nav.bookId) return null;
+      return { bookId: nav.bookId, bookName: nav.bookName || nav.bookId };
+    } }
+];
+function _toolFor(type) { for (var i = 0; i < _TOOLS.length; i++) if (_TOOLS[i].type === type) return _TOOLS[i]; return null; }
+function _toolTitle(type, params, tool) {
+  if (type === 'section-synthesis') return '✦ ' + (params.label || 'Synthesis');
+  if (type === 'word-study') return params.code || (tool && tool.label) || 'Word';
+  if (type === 'book-details') return params.bookName || (tool && tool.label) || 'Book';
+  if (type === 'biblepedia') return 'Encyclopedia';
+  return (tool && tool.label) || type;
+}
+
+// Lateral switch to a top-level tool: reset the blade stack to just that tool. When the tool
+// has no context yet (e.g. no word/section computed), show a prompt in the overlay instead.
+function openTool(type) {
+  if (!_deskEl) return;
+  if (type === 'passage') { _closeBlades(); _syncActiveTool('passage'); return; }
+  var tool = _toolFor(type);
+  if (!tool || !_BLADES[type]) return;
+  var params = tool.defaultParams ? tool.defaultParams() : {};
+  if (params == null) { _openToolPrompt(type, tool); return; }
+  _bladeStack = [{ type: type, params: params, title: _toolTitle(type, params, tool) }];
+  _renderTopBlade();
+}
+// Open the overlay for a context-less tool with a hint about where to launch it from.
+function _openToolPrompt(type, tool) {
+  _bladeStack = [];
+  _deskEl.classList.add('reader-study-desk--blade');
+  if (_deskEl) _deskEl.scrollTop = 0;
+  var crumbsEl = _deskEl.querySelector('.study-blade__crumbs');
+  if (crumbsEl) crumbsEl.innerHTML =
+    '<span class="study-blade__crumb" aria-current="page">' + _esc(tool.label) + '</span>';
+  var body = document.getElementById('sd-blade-body');
+  if (body) body.innerHTML = '<p class="study-empty">Nothing to show yet. Open <strong>' +
+    _esc(tool.label) + '</strong> from ' + _esc(tool.from || 'the passage sections') +
+    ' — it will appear here.</p>';
+  _syncActiveTool(type);
+}
+function _syncActiveTool(type) {
+  if (!_deskEl) return;
+  _deskEl.querySelectorAll('.study-rail__tab').forEach(function (tab) {
+    var on = tab.getAttribute('data-tool') === type;
+    tab.setAttribute('aria-selected', on ? 'true' : 'false');
+    tab.classList.toggle('study-rail__tab--active', on);
+  });
+}
+// Roving focus for the vertical tablist (arrows + Home/End); activation is via Enter/Space
+// (native button click → openTool), per the manual-activation tabs pattern.
+function _onRailKeydown(e) {
+  var tabs = Array.prototype.slice.call(e.currentTarget.querySelectorAll('.study-rail__tab'));
+  var idx = tabs.indexOf(document.activeElement);
+  if (idx < 0) return;
+  var next;
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight') next = (idx + 1) % tabs.length;
+  else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') next = (idx - 1 + tabs.length) % tabs.length;
+  else if (e.key === 'Home') next = 0;
+  else if (e.key === 'End') next = tabs.length - 1;
+  else return;
+  e.preventDefault();
+  tabs.forEach(function (t) { t.tabIndex = -1; });
+  tabs[next].tabIndex = 0; tabs[next].focus();
+}
+
 function openBlade(type, params, title) {
   if (!_BLADES[type] || !_deskEl) return;
   _bladeStack.push({ type: type, params: params || {}, title: title || type });
@@ -1113,6 +1247,7 @@ function _closeBlades() {
   if (_deskEl) _deskEl.classList.remove('reader-study-desk--blade');
   var b = document.getElementById('sd-blade-body');
   if (b) b.innerHTML = '';
+  _syncActiveTool('passage');   // back to the section list → "Passage" divider active
 }
 function _renderTopBlade() {
   var body = document.getElementById('sd-blade-body');
@@ -1132,6 +1267,7 @@ function _renderTopBlade() {
       c.addEventListener('click', function () { _bladeTo(parseInt(c.getAttribute('data-lvl'), 10)); });
     });
   }
+  _syncActiveTool(_bladeStack.length ? _bladeStack[0].type : 'passage');   // root tool = active divider
   var top = _bladeStack[_bladeStack.length - 1];
   body.innerHTML = '<p class="study-empty">Loading…</p>';
   _BLADES[top.type](top.params, body);
@@ -1139,15 +1275,92 @@ function _renderTopBlade() {
 
 // ── Word-study blade ───────────────────────────────────────────────────────
 function _refChip(r) { return '<a class="ref study-word__ref" data-ref="' + _esc(r) + '">' + _esc(r) + '</a>'; }
+var _WORD_HINT_KEY = 'bsw_studyword_hint';
+function _wordNoteHtml() {
+  var dismissed; try { dismissed = localStorage.getItem(_WORD_HINT_KEY) === '1'; } catch (e) { dismissed = false; }
+  if (dismissed) return '';
+  return '<div class="study-word-note" id="sd-word-note">' +
+    '<span>💡 Tap any word in the passage to study it here.</span>' +
+    '<button type="button" class="study-word-note__x" aria-label="Dismiss tip">✕</button></div>';
+}
+function _wireWordNote(scope) {
+  var x = scope.querySelector('.study-word-note__x');
+  if (x) x.addEventListener('click', function () {
+    try { localStorage.setItem(_WORD_HINT_KEY, '1'); } catch (e) {}
+    var n = document.getElementById('sd-word-note'); if (n) n.remove();
+  });
+}
+
+// Theological "starter" chips (SD-T3): the passage's repeated content words (already aggregated
+// into _lastData.keywords by _fillKeywords) ranked theological-first via theological-terms.json,
+// else by frequency. Each chip opens that word — a quick entry point + a hint of the key terms.
+function _fillWordStarters(lang, activeCode) {
+  var host = document.getElementById('sd-word-starters');
+  if (!host) return;
+  var kws = (_lastData.keywords || []).filter(function (k) { return k && k.code; });
+  if (!kws.length) { host.innerHTML = ''; return; }
+  _loadTheo().then(function (theo) {
+    if (!host.isConnected) return;
+    theo = theo || {};
+    var ranked = kws.slice().sort(function (a, b) {
+      var wa = theo[a.code] || 0, wb = theo[b.code] || 0;
+      if (wb !== wa) return wb - wa;            // theological weight first
+      return (b.count || 0) - (a.count || 0);   // then frequency
+    });
+    var theoOnly = ranked.filter(function (k) { return theo[k.code]; });
+    var pick = (theoOnly.length ? theoOnly : ranked).slice(0, 8);
+    if (!pick.length) { host.innerHTML = ''; return; }
+    host.innerHTML = '<p class="study-sec-note">' +
+      (theoOnly.length ? 'Key theological words here — tap to study:' : 'Key words here — tap to study:') + '</p>' +
+      '<div class="study-word-chips">' + pick.map(function (k) {
+        var on = String(k.code) === String(activeCode);
+        return '<button type="button" class="study-word-chip' + (on ? ' study-word-chip--active' : '') +
+          '" data-code="' + _esc(k.code) + '" data-lang="' + _esc(k.lang || lang) + '">' +
+          '<span class="study-word-chip__lemma">' + _esc(k.lemma || k.code) + '</span>' +
+          (k.gloss ? '<span class="study-word-chip__gloss">' + _esc(k.gloss) + '</span>' : '') +
+        '</button>';
+      }).join('') + '</div>';
+    host.querySelectorAll('.study-word-chip').forEach(function (chip) {
+      chip.addEventListener('click', function () { showWord(chip.getAttribute('data-code'), chip.getAttribute('data-lang')); });
+    });
+  });
+}
+
+// Reactive entry point (SD-T3): open or LIVE-UPDATE the Word tab for a Strong's code. Used by the
+// starter chips and by tapping a word in the reader (interlinear) when the desk is open.
+function showWord(code, lang) {
+  if (!_deskEl || !code) return;
+  lang = lang || (code.charAt(0) === 'H' ? 'hebrew' : 'greek');
+  _bladeCtx.word = { code: code, lang: lang };
+  var top = _bladeStack[_bladeStack.length - 1];
+  if (top && top.type === 'word-study') { top.params = { code: code, lang: lang }; top.title = code; }
+  else { _bladeStack = [{ type: 'word-study', params: { code: code, lang: lang }, title: code }]; }
+  _renderTopBlade();
+}
+
 function _renderWordStudyBlade(params, body) {
   var code = params.code;
   var lang = params.lang || (code && code.charAt(0) === 'H' ? 'hebrew' : 'greek');
+  body.innerHTML = _wordNoteHtml() +
+    '<div class="study-word-starters" id="sd-word-starters"></div>' +
+    '<div class="study-word-detail" id="sd-word-detail">' +
+    (code ? '<p class="study-empty">Loading…</p>'
+          : '<p class="study-empty">Pick a starter word above, or tap any word in the passage.</p>') +
+    '</div>';
+  _wireWordNote(body);
+  _fillWordStarters(lang, code);
+  if (code) _fillWordDetail(code, lang, document.getElementById('sd-word-detail'));
+}
+
+function _fillWordDetail(code, lang, host) {
+  if (!host) return;
   var lexType = (lang === 'hebrew') ? 'bdb' : 'thayer';
   Promise.all([
     loadStrongs(lang).catch(function () { return {}; }),
     loadLexicon(lexType).catch(function () { return {}; }),
     _loadRefs(code)
   ]).then(function (res) {
+    if (!host.isConnected) return;
     var dict = res[0] || {}, lex = res[1] || {}, refsData = res[2] || {};
     var s = dict[code] || {}, lx = lex[code] || {};
     var lemma = s.lemma || lx.lemma || refsData.lemma || code;
@@ -1180,15 +1393,15 @@ function _renderWordStudyBlade(params, body) {
     html += '<a class="study-word__ext" target="_blank" rel="noopener" href="' +
       _esc(WORD_URL + '?s=' + encodeURIComponent(code)) + '">Open in Translation Workshop →</a>';
 
-    body.innerHTML = html;
+    host.innerHTML = html;
     var more = document.getElementById('sd-word-more');
     if (more) more.addEventListener('click', function () {
       document.getElementById('sd-word-all').innerHTML = refs.map(_refChip).join('');
       more.remove();
-      wireRefLinks(body);
+      wireRefLinks(host);
     });
-    wireRefLinks(body);
-  }).catch(function () { body.innerHTML = '<p class="study-empty">Could not load this word.</p>'; });
+    wireRefLinks(host);
+  }).catch(function () { host.innerHTML = '<p class="study-empty">Could not load this word.</p>'; });
 }
 
 // ── Book-details blade ─────────────────────────────────────────────────────
@@ -1270,13 +1483,51 @@ function _findSynthSection(data, startV) {
   return hit;
 }
 
+// Horizontal chip row of the chapter's outline sections — lets the summary blades (Synthesis;
+// later Commentary/Witnesses) swap pericopes IN PLACE instead of going Back to the desk (SD-T2).
+function _sectionChips(activeStartV) {
+  var out = _lastData.outline || [];
+  if (out.length < 2) return '';   // nothing to switch between
+  return '<div class="study-secswitch" role="tablist" aria-label="Sections">' +
+    out.map(function (o) {
+      var on = String(o.startV) === String(activeStartV);
+      return '<button type="button" class="study-secswitch__chip' + (on ? ' study-secswitch__chip--active' : '') +
+        '" role="tab" aria-selected="' + (on ? 'true' : 'false') + '"' +
+        ' data-startv="' + _esc(String(o.startV)) + '" data-range="' + _esc(o.range) + '" data-label="' + _esc(o.text) + '">' +
+        '<span class="study-secswitch__range">' + _esc(o.range) + '</span>' +
+        '<span class="study-secswitch__label">' + _esc(o.text) + '</span>' +
+      '</button>';
+    }).join('') + '</div>';
+}
+function _wireSectionChips(scope, onPick) {
+  scope.querySelectorAll('.study-secswitch__chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      if (chip.getAttribute('aria-selected') === 'true') return;   // already showing
+      onPick({ startV: chip.getAttribute('data-startv'), range: chip.getAttribute('data-range'), label: chip.getAttribute('data-label') });
+    });
+  });
+}
+
 function _renderSectionSynthesisBlade(params, body) {
   var bookId = params.bookId, ch = params.ch, startV = params.startV;
+  // Section switcher pinned at the top (SD-T2): pick another pericope without leaving the blade.
+  body.innerHTML = _sectionChips(startV) +
+    '<div class="study-synth-content"><p class="study-empty">Loading…</p></div>';
+  _wireSectionChips(body, function (sec) {
+    _bladeCtx.section = sec;
+    var top = _bladeStack[_bladeStack.length - 1];
+    if (top) {
+      top.params = { bookId: bookId, bookName: params.bookName, ch: ch, startV: sec.startV, range: sec.range, label: sec.label };
+      top.title = '✦ ' + (sec.label || 'Synthesis');
+    }
+    _renderTopBlade();   // re-render chips (new active) + content + breadcrumb in place
+  });
+  var content = body.querySelector('.study-synth-content');
   _loadSynthesis(bookId, ch).then(function (data) {
-    if (!body.isConnected) return;
+    if (!content.isConnected) return;
     var sec = _findSynthSection(data, startV);
     if (!sec) {
-      body.innerHTML = '<p class="study-empty">No section synthesis for this passage yet.' +
+      content.innerHTML = '<p class="study-empty">No section synthesis for this passage yet.' +
         '<br><span class="study-sec-note">Pilot coverage: John 1.</span></p>';
       return;
     }
@@ -1298,10 +1549,9 @@ function _renderSectionSynthesisBlade(params, body) {
       _esc(sec.range || startV) + ')</summary>' +
       '<div class="study-synth__refs-body" id="sd-synth-voices"><p class="study-empty">Loading…</p></div></details>';
     html += '</div>';
-    body.innerHTML = html;
-    wireRefLinks(body);
-
-    var refsEl = body.querySelector('.study-synth__refs');
+    content.innerHTML = html;
+    wireRefLinks(content);
+    var refsEl = content.querySelector('.study-synth__refs');
     var loaded = false;
     if (refsEl) refsEl.addEventListener('toggle', function () {
       if (!refsEl.open || loaded) return;
@@ -1440,4 +1690,16 @@ export function initStudyDesk() {
 
   _deskEl = _buildDesk();
   layout.appendChild(_deskEl);
+
+  // Reactive word-study bridge for the reader (SD-T3). interlinear.js calls these globals so it
+  // need not import this module. open() reveals the desk; showWord() drives the Word tab;
+  // wordTabActive() lets a reader word-tap live-update the blade instead of a popover.
+  window.bswStudyDesk = {
+    isOpen: function () { return _open; },
+    open: function () { if (!_open && _btn) _btn.click(); },
+    showWord: showWord,
+    wordTabActive: function () {
+      return _open && _bladeStack.length > 0 && _bladeStack[_bladeStack.length - 1].type === 'word-study';
+    }
+  };
 }

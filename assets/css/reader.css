@@ -3886,16 +3886,27 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 
 /* Base / mobile: off-canvas drawer (slides in; no display toggle so it animates) */
 .reader-study-desk {
+  --sd-rail-w: 52px;
   position: fixed;
   top: var(--header-h, 0); right: 0; bottom: 0;
   width: 92%; max-width: 440px; z-index: 950;
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: row;          /* [binder rail | main]; SD-T1 */
+  overflow: hidden;                            /* the inner `main` is the scroll container */
   background: var(--color-surface);
   border-left: 1px solid var(--color-border);
   box-shadow: -4px 0 18px rgba(0,0,0,0.28);
   transform: translateX(105%);
   transition: transform 0.22s ease;
 }
+/* `main` holds head + section body + blade overlay, and owns the scroll (so the rail, a flex
+   sibling, never scrolls away). min-height:0 lets it shrink inside the bounded desk. */
+.study-desk__main {
+  flex: 1 1 auto; min-width: 0; min-height: 0;
+  display: flex; flex-direction: column; position: relative;
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+/* While a blade overlay is open, lock the section body behind it. */
+.reader-study-desk--blade .study-desk__main { overflow: hidden; }
 .reader-layout--study-open .reader-study-desk { transform: translateX(0); }
 
 @media (min-width: 700px) {
@@ -3909,7 +3920,7 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
     grid-column: 2; grid-row: 1; transform: none;
     width: auto; max-width: none; box-shadow: none;
     border: 1px solid var(--color-border); border-radius: 8px;
-    max-height: calc(100vh - 1rem); overflow-y: auto;
+    max-height: calc(100vh - 1rem); overflow: hidden;   /* inner `main` scrolls (SD-T1) */
   }
 }
 
@@ -3926,6 +3937,85 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-desk__close:hover { background: var(--color-border); color: var(--color-text); }
 .study-desk__close:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 .study-desk__body { padding: 0.6rem 0.9rem 2rem; font-family: var(--font-ui); }
+
+/* ── Binder-tab rail (SD-T1) ── a "school binder divider" spine on the desk's leading edge.
+   Each divider switches the top-level study tool (openTool); breadcrumb still handles depth.
+   A flex sibling of `main`, so it stays put while the body scrolls and stays visible above the
+   blade overlay (which lives inside `main`). */
+.study-rail {
+  flex: 0 0 var(--sd-rail-w); align-self: stretch;
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 0.35rem 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  background: var(--color-surface-subtle, rgba(140,106,0,0.06));
+  border-right: 1px solid var(--color-border);
+}
+.study-rail__tab {
+  flex: 0 0 auto; border: none; background: none; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 0.45rem 0.1rem; color: var(--color-muted);
+  border-left: 3px solid transparent; border-radius: 0 7px 7px 0;
+  font-family: var(--font-ui);
+}
+.study-rail__tab:hover { background: var(--color-border); color: var(--color-text); }
+.study-rail__tab--active {
+  background: var(--color-surface); color: var(--color-heading);
+  border-left-color: var(--color-accent); font-weight: 600;
+}
+.study-rail__tab:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.study-rail__icon  { font-size: 1.05rem; line-height: 1; }
+.study-rail__label { font-size: 0.56rem; line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; text-align: center; }
+
+/* ── Section switcher (SD-T2): chip row pinned atop the Synthesis/Commentary blades ── */
+.study-secswitch {
+  display: flex; gap: 0.3rem; overflow-x: auto; padding: 0 0 0.6rem;
+  margin-bottom: 0.6rem; border-bottom: 1px solid var(--color-border);
+  -webkit-overflow-scrolling: touch;
+}
+.study-secswitch__chip {
+  flex: 0 0 auto; max-width: 11rem; text-align: left; cursor: pointer;
+  display: flex; flex-direction: column; gap: 1px;
+  padding: 0.3rem 0.5rem; border: 1px solid var(--color-border); border-radius: 6px;
+  background: var(--color-surface); color: var(--color-text); font-family: var(--font-ui);
+}
+.study-secswitch__chip:hover { border-color: var(--color-accent); }
+.study-secswitch__chip--active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.study-secswitch__chip--active .study-secswitch__range { color: rgba(255,255,255,0.85); }
+.study-secswitch__chip:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.study-secswitch__range { font-size: 0.66rem; font-weight: 700; color: var(--color-muted); }
+.study-secswitch__label { font-size: 0.74rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ── Word study: info note + theological starter chips (SD-T3) ── */
+.study-word-note {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.55rem; margin-bottom: 0.6rem;
+  background: var(--color-surface-subtle, rgba(140,106,0,0.06));
+  border: 1px solid var(--color-border); border-radius: 6px;
+  font-size: 0.78rem; color: var(--color-text); font-family: var(--font-ui);
+}
+.study-word-note span { margin-right: auto; }
+.study-word-note__x { border: none; background: none; cursor: pointer; color: var(--color-muted); font-size: 0.85rem; padding: 0 0.2rem; border-radius: 4px; }
+.study-word-note__x:hover { background: var(--color-border); color: var(--color-text); }
+.study-word-starters { margin-bottom: 0.7rem; }
+.study-word-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.study-word-chip {
+  cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: 0;
+  padding: 0.25rem 0.5rem; border: 1px solid var(--color-border); border-radius: 999px;
+  background: var(--color-surface); color: var(--color-text); font-family: var(--font-ui);
+}
+.study-word-chip:hover { border-color: var(--color-accent); }
+.study-word-chip--active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.study-word-chip--active .study-word-chip__gloss { color: rgba(255,255,255,0.85); }
+.study-word-chip:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.study-word-chip__lemma { font-size: 0.82rem; font-weight: 600; }
+.study-word-chip__gloss { font-size: 0.62rem; color: var(--color-muted); }
+
+/* Reader interlinear popover: the "Study in desk" action (SD-T3). */
+.ri-popover__desk {
+  cursor: pointer; border: 1px solid var(--color-accent); background: var(--color-accent); color: #fff;
+  border-radius: 5px; padding: 0.2rem 0.5rem; font-size: 0.76rem; font-family: var(--font-ui); margin-right: 0.4rem;
+}
+.ri-popover__desk:hover { filter: brightness(1.05); }
+.ri-popover__desk:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 
 .study-empty { color: var(--color-muted); font-size: 0.85rem; padding: 1rem 0; }
 .study-section { margin-bottom: 1.2rem; }

@@ -602,6 +602,13 @@ export function renderReaderInterlinearRow(container, tokens, bookId) {
     container.querySelectorAll('.ri-tile').forEach(function (tile) {
       tile.addEventListener('click', function (e) {
         e.stopPropagation();
+        // SD-T3: when the study desk's Word tab is open, tapping a word live-updates the blade
+        // (reactive) instead of showing the small popover.
+        var code = tile.getAttribute('data-strongs');
+        if (code && window.bswStudyDesk && window.bswStudyDesk.wordTabActive()) {
+          window.bswStudyDesk.showWord(code);
+          return;
+        }
         _riShowPopover(tile, strongsDict);
       });
       if (isVerseEl) {
@@ -668,6 +675,9 @@ function _riShowPopover(tile, strongsDict) {
     (entry.def   ? '<p class="ri-popover__def">'   + escHtml(entry.def)   + '</p>' : '') +
     (entry.deriv ? '<p class="ri-popover__deriv">' + escHtml(entry.deriv) + '</p>' : '') +
     '<div class="ri-popover__links">' +
+      (window.bswStudyDesk
+        ? '<button type="button" class="ri-popover__desk" title="Study this word in the passage desk">Study in desk ▸</button>'
+        : '') +
       '<a class="vs-context-btn" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(strongs)) + '" ' +
          'title="Open full word study">Word Study →</a>' +
     '</div>';
@@ -676,6 +686,18 @@ function _riShowPopover(tile, strongsDict) {
   _riPopoverEl  = pop;
   _riActiveTile = tile;
   tile.classList.add('ri-tile--active');
+
+  // SD-T3: "Study in desk ▸" — open the study desk and route this word to the Word tab,
+  // then tear down the popover (same cleanup as the close button).
+  var deskBtn = pop.querySelector('.ri-popover__desk');
+  if (deskBtn) deskBtn.addEventListener('click', function () {
+    if (window.bswStudyDesk) { window.bswStudyDesk.open(); window.bswStudyDesk.showWord(strongs); }
+    if (_riScrollCleanup) { _riScrollCleanup(); _riScrollCleanup = null; }
+    tile.classList.remove('ri-tile--active');
+    _riActiveTile = null;
+    pop.remove();
+    _riPopoverEl = null;
+  });
 
   // RI-A: Viewport-clamped position — fixed element uses viewport coords, no scroll offset
   var POP_W = 280, POP_MARGIN = 8;
