@@ -120,7 +120,7 @@
     (function () {
       var KEY = 'bsw_bookmarks';
       var READER = '../read/';
-      var VS     = '../verse-study/';
+      var VS     = '../read/';   // SD-T5: verse study now opens in the reader's study desk
 
       function load() {
         try { return JSON.parse(localStorage.getItem(KEY) || '[]'); }
@@ -177,7 +177,7 @@
 
           var vsLink = document.createElement('a');
           vsLink.className = 'bookmarks-item__link';
-          vsLink.href = VS + '?ref=' + encodeURIComponent(ref);
+          vsLink.href = VS + '?ref=' + encodeURIComponent(ref) + '&study=1';
           vsLink.textContent = 'Study';
           li.appendChild(vsLink);
 

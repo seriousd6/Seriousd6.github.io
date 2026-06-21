@@ -4009,6 +4009,64 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-word-chip__lemma { font-size: 0.82rem; font-weight: 600; }
 .study-word-chip__gloss { font-size: 0.62rem; color: var(--color-muted); }
 
+/* ── Commentary / Witnesses blade (SD-T4) ── */
+.study-comm-srcrow { display: flex; align-items: center; gap: 0.4rem; margin: 0.5rem 0 0.6rem; }
+.study-comm-srclabel { font-size: 0.72rem; color: var(--color-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+.study-comm-src {
+  flex: 1 1 auto; min-width: 0; padding: 0.3rem 0.4rem; border-radius: 6px;
+  border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+  font-family: var(--font-ui); font-size: 0.78rem;
+}
+.study-comm-v { margin: 0 0 0.9rem; }
+.study-comm-v__num {
+  display: inline-block; margin: 0 0 0.3rem; padding: 0.08rem 0.45rem; cursor: pointer;
+  border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface-subtle, rgba(140,106,0,0.06));
+  color: var(--color-accent); font-weight: 700; font-size: 0.7rem; font-family: var(--font-ui);
+}
+.study-comm-v__num:hover { border-color: var(--color-accent); }
+.study-comm-v__body { font-size: 0.86rem; line-height: 1.5; }
+.study-comm-ai { margin-top: 0.6rem; font-style: italic; }
+
+/* ── Cross-version word blade (SD-T4) ── */
+.study-cv__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.2rem; }
+.study-cv__lemma { font-size: 1.3rem; font-weight: 700; color: var(--color-heading); }
+.study-cv__translit { font-size: 0.85rem; font-style: italic; color: var(--color-muted); }
+.study-cv__gloss { margin: 0.1rem 0 0.4rem; color: var(--color-text); }
+.study-cv__verse { margin: 0 0 0.8rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; }
+.study-cv__vnum {
+  display: block; width: 100%; text-align: left; cursor: pointer; padding: 0.35rem 0.55rem;
+  border: none; border-bottom: 1px solid var(--color-border); background: var(--color-surface-subtle, rgba(140,106,0,0.06));
+  color: var(--color-accent); font-weight: 700; font-size: 0.78rem; font-family: var(--font-ui);
+}
+.study-cv__vnum:hover { background: var(--color-border); }
+.study-cv__row { display: flex; gap: 0.5rem; padding: 0.3rem 0.55rem; font-size: 0.85rem; line-height: 1.45; }
+.study-cv__row + .study-cv__row { border-top: 1px dashed var(--color-border); }
+.study-cv__ver { flex: 0 0 3rem; font-weight: 700; font-size: 0.66rem; color: var(--color-muted); padding-top: 0.15rem; text-transform: uppercase; }
+.study-cv__txt { flex: 1 1 auto; }
+
+/* ── Place & time blade (SD-T4) ── */
+.study-pt__sec { margin: 0 0 1rem; }
+.study-pt__sec h4 { margin: 0 0 0.4rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-muted); }
+.study-pt__place { padding: 0.4rem 0; border-bottom: 1px solid var(--color-border); }
+.study-pt__pname { font-weight: 600; color: var(--color-heading); display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+.study-pt__under { font-size: 0.66rem; font-weight: 500; color: var(--color-muted); }
+.study-pt__pdesc { margin: 0.15rem 0; font-size: 0.8rem; color: var(--color-text); }
+.study-pt__plinks { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.2rem; }
+.study-pt__vbtn {
+  cursor: pointer; padding: 0.05rem 0.4rem; border: 1px solid var(--color-border); border-radius: 999px;
+  background: none; color: var(--color-accent); font-weight: 600; font-size: 0.7rem; font-family: var(--font-ui);
+}
+.study-pt__vbtn:hover { border-color: var(--color-accent); }
+.study-pt__map { font-size: 0.78rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+.study-pt__map:hover { text-decoration: underline; }
+.study-pt__period {
+  display: flex; align-items: center; gap: 0.45rem; padding: 0.4rem 0.5rem; margin-bottom: 0.3rem;
+  border: 1px solid var(--color-border); border-radius: 8px; text-decoration: none; color: var(--color-text);
+}
+.study-pt__period:hover { border-color: var(--color-accent); }
+.study-pt__era { flex: 1 1 auto; font-weight: 600; }
+.study-pt__go { font-size: 0.72rem; color: var(--color-accent); }
+
 /* Reader interlinear popover: the "Study in desk" action (SD-T3). */
 .ri-popover__desk {
   cursor: pointer; border: 1px solid var(--color-accent); background: var(--color-accent); color: #fff;

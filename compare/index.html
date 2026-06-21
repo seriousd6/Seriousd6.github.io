@@ -220,7 +220,7 @@
       var VERSIONS_URL = '../data/versions/versions.json';
       var BOOKS_URL    = '../data/bible/books.json';
       var READER_URL   = '../read/';
-      var VS_URL       = '../verse-study/';
+      var VS_URL       = '../read/';   // SD-T5: verse study now opens in the reader's study desk
 
       var versions   = null; // [{id, name, fullname}]
       var bookLookup = null; // normalized → bookId
@@ -334,7 +334,7 @@
         var html =
           '<h1 class="cmp-heading">' + _esc(parsed.display) + '</h1>' +
           '<p class="cmp-subhead">' + versions.length + ' translations · <a href="' +
-            VS_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + parsed.v) +
+            VS_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + parsed.v) + '&study=1' +
             '" style="color:var(--color-accent);text-decoration:none;">Word Study ↗</a>' +
           '</p>' +
           '<ul class="cmp-list" id="cmp-rows"></ul>' +

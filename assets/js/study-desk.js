@@ -37,7 +37,8 @@
  */
 
 import {
-  loadInterlinear, loadStrongs, loadCrossRefs, loadEchoes, loadLexicon, loadCommentary, parseRef, WORD_URL
+  loadInterlinear, loadStrongs, loadCrossRefs, loadEchoes, loadLexicon, loadCommentary, parseRef, WORD_URL,
+  COMMENTARY_SOURCES, getCommentarySource, decorateCatena, loadMktAll, decorateMkt, loadBook, MAPS_URL
 } from './core.js';
 import { wireRefLinks } from './wire.js';
 import { renderEchoCardsGrouped } from './parallels.js';
@@ -52,6 +53,7 @@ var _REFS_URL    = new URL('../../data/strongs/refs/', import.meta.url).href;
 var _INTRO_URL   = new URL('../../data/books/introductions/', import.meta.url).href;
 var _SYNTH_URL   = new URL('../../data/synthesis/', import.meta.url).href;
 var _THEO_URL    = new URL('../../data/study/theological-terms.json', import.meta.url).href;  // Strong's code → weight (SD-T3)
+var _TIMELINE_URL = new URL('../../timeline/', import.meta.url).href;             // timeline page (?era=id)
 var _BP_URL      = new URL('../../biblepedia/', import.meta.url).href;            // article reader page (?a=slug)
 var _BP_IDX_URL  = new URL('../../data/biblepedia/index.json', import.meta.url).href;
 var _BP_ART_URL  = new URL('../../data/biblepedia/articles/', import.meta.url).href;
@@ -1154,6 +1156,12 @@ var _TOOLS = [
       return { bookId: nav.bookId, bookName: nav.bookName || nav.bookId, ch: nav.ch,
                startV: sec.startV, range: sec.range, label: sec.label || sec.text };
     } },
+  { type: 'commentary', label: 'Commentary', icon: '🗒️', scope: 'section',
+    from: 'the Outline section',
+    defaultParams: function () { return _sectionToolParams({ source: _commDefaultSource() }); } },
+  { type: 'witnesses', label: 'Witnesses', icon: '☁️', scope: 'section',
+    from: 'the Outline section',
+    defaultParams: function () { return _sectionToolParams({ source: 'cow-synthesis' }); } },
   { type: 'word-study', label: 'Word', icon: '🔤', scope: 'word',
     from: 'the Key words section (or tap a word in the passage)',
     defaultParams: function () {
@@ -1161,6 +1169,16 @@ var _TOOLS = [
       if (!w || !w.code) return null;
       return { code: w.code, lang: w.lang };
     } },
+  { type: 'crossversion', label: 'Versions', icon: '⇄', scope: 'word',
+    from: 'the Key words section (or tap a word in the passage)',
+    defaultParams: function () {
+      var w = _bladeCtx.word || _lastData.keywords[0];
+      if (!w || !w.code) return null;
+      return { code: w.code, lang: w.lang };
+    } },
+  { type: 'placetime', label: 'Places', icon: '🗺️', scope: 'passage',
+    from: 'the Where & when section',
+    defaultParams: function () { return { ref: _lastData.ref }; } },
   { type: 'biblepedia', label: 'Encyc.', icon: '📚', scope: 'passage',
     from: 'the Encyclopedia section',
     defaultParams: function () { return { articles: _lastData.biblepedia || [], ref: _lastData.ref }; } },
@@ -1174,10 +1192,31 @@ var _TOOLS = [
 function _toolFor(type) { for (var i = 0; i < _TOOLS.length; i++) if (_TOOLS[i].type === type) return _TOOLS[i]; return null; }
 function _toolTitle(type, params, tool) {
   if (type === 'section-synthesis') return '✦ ' + (params.label || 'Synthesis');
+  if (type === 'commentary' || type === 'witnesses') return _commTitle(type, params.label);
   if (type === 'word-study') return params.code || (tool && tool.label) || 'Word';
+  if (type === 'crossversion') return 'Versions: ' + (params.code || 'word');
+  if (type === 'placetime') return 'Places & time';
   if (type === 'book-details') return params.bookName || (tool && tool.label) || 'Book';
   if (type === 'biblepedia') return 'Encyclopedia';
   return (tool && tool.label) || type;
+}
+// Section-scoped tools (Synthesis/Commentary/Witnesses) share the same launch context: the
+// pericope remembered in _bladeCtx.section (or the first Outline heading). `extra` carries
+// tool-specific params (e.g. the chosen commentary source).
+function _sectionToolParams(extra) {
+  var nav = window._readerNavState; if (!nav || !nav.bookId) return null;
+  var sec = _bladeCtx.section || _lastData.outline[0]; if (!sec) return null;
+  var p = { bookId: nav.bookId, bookName: nav.bookName || nav.bookId, ch: nav.ch,
+            startV: sec.startV, range: sec.range, label: sec.label || sec.text };
+  if (extra) for (var k in extra) p[k] = extra[k];
+  return p;
+}
+// The Commentary tab opens at the reader's current source — but never 'cow-synthesis', which is
+// the Witnesses tab's job (it's a distillation, not a commentary to browse). Falls back to 'cow'.
+function _commDefaultSource() { var s = getCommentarySource(); return s === 'cow-synthesis' ? 'cow' : s; }
+function _commTitle(type, secLabel) {
+  var base = type === 'witnesses' ? '☁️ Witnesses' : '🗒️ Commentary';
+  return secLabel ? base + ' · ' + secLabel : base;
 }
 
 // Lateral switch to a top-level tool: reset the blade stack to just that tool. When the tool
@@ -1663,10 +1702,222 @@ function _fillBPCard(id, host) {
   }).catch(function () { host.innerHTML = '<p class="study-empty">Could not load this article.</p>'; });
 }
 
+// ── Commentary / Witnesses blade (section-scoped, source-switchable) ────────
+// INTENT: Read the historic-church commentary for a pericope WITHOUT leaving the desk. One
+//   renderer backs two binder tabs: "Commentary" opens at the reader's current source (Cloud of
+//   Witnesses voices / MKT cards); "Witnesses" opens the per-verse Cloud-of-Witnesses synthesis.
+//   Both expose the same source selector + the SD-T2 section chips, so a reader can swap pericope
+//   or source in place. The full multi-voice text already lives in core.js's commentary layer —
+//   this just scopes + renders it (decorateCatena for 'cow', decorateMkt for 'mkt', plain HTML
+//   for the AI syntheses), per verse in the section's range.
+// CHANGE? Sources come from COMMENTARY_SOURCES. Data via loadCommentary/loadMktAll (per-chapter
+//   {ch:{v:html}}). Section range parsed from params.range. Registered for both 'commentary' and
+//   'witnesses' types (they differ only in the initial source + title).
+// VERIFY: Study desk → Commentary tab → source = Cloud of Witnesses → each verse of the section
+//   shows collapsible Father voices; switch to MKT → three cards per verse; Witnesses tab opens
+//   the synthesis paragraph per verse. Section chips swap the pericope without a Back trip.
+function _commSrcMeta(id) { for (var i = 0; i < COMMENTARY_SOURCES.length; i++) if (COMMENTARY_SOURCES[i].id === id) return COMMENTARY_SOURCES[i]; return null; }
+function _commSourceRow(source) {
+  return '<div class="study-comm-srcrow"><label class="study-comm-srclabel">Source</label>' +
+    '<select class="study-comm-src" aria-label="Commentary source">' +
+    COMMENTARY_SOURCES.map(function (s) {
+      return '<option value="' + _esc(s.id) + '"' + (s.id === source ? ' selected' : '') + '>' + _esc(s.label) + '</option>';
+    }).join('') + '</select></div>';
+}
+function _renderCommentaryBlade(params, body) {
+  var startV = params.startV;
+  var source = params.source || _commDefaultSource();
+  // Section switcher + source selector pinned at the top (SD-T2); content fills below.
+  body.innerHTML = _sectionChips(startV) + _commSourceRow(source) +
+    '<div class="study-comm-content"><p class="study-empty">Loading…</p></div>';
+  _wireSectionChips(body, function (sec) {
+    _bladeCtx.section = sec;
+    var top = _bladeStack[_bladeStack.length - 1];
+    if (top) {
+      top.params = Object.assign({}, top.params, { startV: sec.startV, range: sec.range, label: sec.label });
+      top.title = _commTitle(top.type, sec.label);
+    }
+    _renderTopBlade();   // re-render chips (new active) + source row + content in place
+  });
+  var sel = body.querySelector('.study-comm-src');
+  if (sel) sel.addEventListener('change', function () {
+    var top = _bladeStack[_bladeStack.length - 1];
+    if (top) top.params.source = sel.value;   // local to the blade — does NOT change the reader's source
+    _fillCommentaryContent(Object.assign({}, params, { source: sel.value }), body.querySelector('.study-comm-content'));
+  });
+  _fillCommentaryContent(Object.assign({}, params, { source: source }), body.querySelector('.study-comm-content'));
+}
+function _fillCommentaryContent(params, host) {
+  if (!host) return;
+  var bookId = params.bookId, ch = params.ch, source = params.source;
+  var m = /^(\d+)(?:[–-](\d+))?/.exec(String(params.range || params.startV));
+  var lo = m ? parseInt(m[1], 10) : parseInt(params.startV, 10), hi = (m && m[2]) ? parseInt(m[2], 10) : lo;
+  host.innerHTML = '<p class="study-empty">Loading…</p>';
+  var meta = _commSrcMeta(source);
+  var loader = source === 'mkt'
+    ? loadMktAll(bookId, ch).then(function (ds) { return { mkt: ds }; })
+    : loadCommentary(bookId, source, ch).then(function (d) { return { data: d }; });
+  loader.then(function (res) {
+    if (!host.isConnected) return;
+    var blocks = '', any = false;
+    for (var v = lo; v <= hi; v++) {
+      var vhtml = '';
+      if (source === 'mkt') {
+        var ds = res.mkt || [];
+        var parts = ds.map(function (d) { return (d && d[String(ch)] && d[String(ch)][String(v)]) || null; });
+        if (parts.some(function (x) { return x; })) vhtml = decorateMkt(parts);
+      } else {
+        var raw = res.data && res.data[String(ch)] && res.data[String(ch)][String(v)];
+        if (raw) vhtml = (source === 'cow') ? decorateCatena(raw) : raw;
+      }
+      if (!vhtml) continue;
+      any = true;
+      blocks += '<div class="study-comm-v"><button type="button" class="study-comm-v__num" data-v="' + v + '">v' + v + '</button>' +
+        '<div class="study-comm-v__body">' + vhtml + '</div></div>';
+    }
+    host.innerHTML = any
+      ? '<div class="study-comm" data-src="' + _esc(source) + '">' + blocks + '</div>' +
+        (meta && meta.isAI ? '<p class="study-sec-note study-comm-ai">✦ AI-assisted — see <a href="' + _esc(new URL('../../about/', import.meta.url).href) + '">/about/</a> for methods.</p>' : '')
+      : '<p class="study-empty">No ' + _esc((meta && meta.label) || 'commentary') + ' for vv. ' + lo + (hi > lo ? '–' + hi : '') + ' yet.</p>';
+    host.querySelectorAll('.study-comm-v__num').forEach(function (b) { b.addEventListener('click', function () { _scrollToVerse(b.getAttribute('data-v')); }); });
+    wireRefLinks(host);
+  }).catch(function () { if (host.isConnected) host.innerHTML = '<p class="study-empty">Could not load commentary.</p>'; });
+}
+
+// ── Cross-version word blade (scope:'word') ─────────────────────────────────
+// INTENT: Show how the original-language word in focus is carried across the major English
+//   translations. There is NO per-word alignment for KJV/BSB/WEB/ASV (only the interlinear's
+//   own base gloss is word-aligned), so rather than fake a word-to-word mapping, we surface the
+//   honest thing: each verse in this passage where the word occurs, shown across the four
+//   versions for side-by-side comparison, with the interlinear's gloss as the anchor.
+// CHANGE? Occurrences are detected from the loaded interlinear (data[ch][v] tokens whose .s ===
+//   code), range-scoped. Version text via loadBook(ver, bookId) → chapters[ch][v]. Uses
+//   _bladeCtx.word so the tab follows whatever word you last studied.
+// VERIFY: Study a Greek/Hebrew key word → Versions tab → the verses carrying it appear, each with
+//   KJV/BSB/WEB/ASV stacked; verse refs scroll the reader.
+var _CV_VERSIONS = [['KJV', 'KJV'], ['BSB', 'BSB'], ['WEB', 'WEB'], ['ASV', 'ASV']];
+function _renderCrossVersionBlade(params, body) {
+  var code = params.code;
+  var lang = params.lang || (code && code.charAt(0) === 'H' ? 'hebrew' : 'greek');
+  var nav = window._readerNavState || {};
+  if (!code || !nav.bookId) { body.innerHTML = '<p class="study-empty">Pick a word first — open one from the Key words section or tap a word in the passage.</p>'; return; }
+  body.innerHTML = '<p class="study-empty">Loading…</p>';
+  Promise.all([loadInterlinear(nav.bookId), loadStrongs(lang).catch(function () { return {}; })]).then(function (res) {
+    if (!body.isConnected) return;
+    var inter = res[0] || {}, dict = res[1] || {};
+    var chData = inter[String(nav.ch)] || {};
+    var verses = [], seen = Object.create(null);
+    Object.keys(chData).forEach(function (vk) {
+      var v = parseInt(vk, 10);
+      if (!_inRange(v)) return;
+      (chData[vk] || []).forEach(function (tok) {
+        if (tok && tok.s === code && !seen[v]) { seen[v] = 1; verses.push(v); }
+      });
+    });
+    verses.sort(function (a, b) { return a - b; });
+    var entry = dict[code] || {};
+    var header = '<div class="study-cv__head">' +
+      '<span class="study-cv__lemma">' + _esc(entry.lemma || code) + '</span>' +
+      (entry.translit ? '<span class="study-cv__translit">' + _esc(entry.translit) + '</span>' : '') +
+      '<span class="study-word__code">' + _esc(code) + '</span></div>' +
+      (entry.gloss ? '<p class="study-cv__gloss">' + _esc(entry.gloss) + '</p>' : '') +
+      '<p class="study-sec-note">These translations aren’t word-aligned, so each verse where ' +
+        _esc(entry.lemma || code) + ' occurs in this passage is shown across versions to compare.</p>';
+    if (!verses.length) { body.innerHTML = header + '<p class="study-empty">No occurrence of this word in the current range.</p>'; return; }
+    verses = verses.slice(0, 8);
+    body.innerHTML = header + '<div class="study-cv" id="sd-cv-list"><p class="study-empty">Loading versions…</p></div>';
+    var host = document.getElementById('sd-cv-list');
+    Promise.all(_CV_VERSIONS.map(function (vr) { return loadBook(vr[0], nav.bookId).catch(function () { return null; }); })).then(function (books) {
+      if (!host || !host.isConnected) return;
+      var html = verses.map(function (v) {
+        var rows = _CV_VERSIONS.map(function (vr, i) {
+          var chx = books[i] && books[i][String(nav.ch)];
+          var txt = chx && chx[String(v)];
+          if (!txt) return '';
+          return '<div class="study-cv__row"><span class="study-cv__ver">' + _esc(vr[1]) + '</span>' +
+            '<span class="study-cv__txt">' + _esc(txt) + '</span></div>';
+        }).join('');
+        return '<div class="study-cv__verse">' +
+          '<button type="button" class="study-cv__vnum" data-v="' + v + '">' + _esc(nav.bookName || nav.bookId) + ' ' + nav.ch + ':' + v + '</button>' +
+          (rows || '<p class="study-empty">Version text unavailable.</p>') + '</div>';
+      }).join('');
+      host.innerHTML = html;
+      host.querySelectorAll('.study-cv__vnum').forEach(function (b) { b.addEventListener('click', function () { _scrollToVerse(b.getAttribute('data-v')); }); });
+    });
+  }).catch(function () { if (body.isConnected) body.innerHTML = '<p class="study-empty">Could not load.</p>'; });
+}
+
+// ── Place & time blade (scope:'passage') ────────────────────────────────────
+// INTENT: A focused launcher for the passage's geography + period: the places named in the
+//   in-scope verses (each with a deep-link into the full /maps/ view and its controlling power)
+//   and the period(s) the passage belongs to (deep-linking the /timeline/). Complements the
+//   "Where & when" section (which draws the annotated map) with quick jumps out to the dedicated
+//   tools. Computes places itself (range-scoped _detectPlaces) so it's independent of whether the
+//   section's Leaflet map has finished building.
+// CHANGE? Places via _loadPlaces + _detectPlaces; period via _passagePeriods (events index) with
+//   the book's settingEra as a fallback. Map link: /maps/?focus=lat,lon,zoom; period link:
+//   /timeline/?era=id. Controller computed from _powersAt at the period's t.
+// VERIFY: Study Matthew 4 → Places tab → Capernaum/Nazareth listed with "Open in map ▸"; When
+//   shows "Life of Christ" linking the timeline. Romans 1 (no place) → graceful note + period.
+function _renderPlaceTimeBlade(params, body) {
+  var nav = window._readerNavState || {};
+  body.innerHTML = '<p class="study-empty">Loading…</p>';
+  Promise.all([_loadPlaces(), _loadPowers(), _loadCtx()]).then(function (res) {
+    if (!body.isConnected) return;
+    var allPlaces = res[0] || [], powers = res[1] || {}, ctx = (res[2] || {})[nav.bookId] || null;
+    var detected = _detectPlaces(allPlaces);                  // [{place, verses}] range-scoped
+    var periods = _passagePeriods(powers, nav.bookId, nav.ch);
+    if (!periods.length && ctx) periods = [{ era: ctx.settingEra, t: ctx.settingT, year: '', book: true }];
+    var powersAtT = (periods.length && periods[0].t != null) ? _powersAt(powers, periods[0].t) : [];
+
+    var html = '<div class="study-pt">';
+    html += '<div class="study-pt__sec"><h4>Places in this passage</h4>';
+    if (detected.length) {
+      html += '<div class="study-pt__places">' + detected.map(function (d) {
+        var p = d.place;
+        var ctrl = (p.lat != null && p.lon != null) ? _controllerOf(p.lat, p.lon, powersAtT) : null;
+        var focus = (p.lat != null && p.lon != null) ? (MAPS_URL + '?focus=' + p.lat + ',' + p.lon + ',9') : null;
+        return '<div class="study-pt__place">' +
+          '<div class="study-pt__pname">' + _esc(p.name) + (ctrl ? '<span class="study-pt__under">under ' + _esc(ctrl) + '</span>' : '') + '</div>' +
+          (p.desc ? '<p class="study-pt__pdesc">' + _esc(p.desc) + '</p>' : '') +
+          '<div class="study-pt__plinks">' +
+            (d.verses && d.verses.length ? '<button type="button" class="study-pt__vbtn" data-v="' + d.verses[0] + '">v' + d.verses.join(', ') + '</button>' : '') +
+            (focus ? '<a class="study-pt__map" target="_blank" rel="noopener" href="' + _esc(focus) + '">Open in map ▸</a>' : '') +
+          '</div></div>';
+      }).join('') + '</div>';
+    } else {
+      html += '<p class="study-empty">This passage names no specific location. See <strong>Where &amp; when</strong> for the book’s geographic setting.</p>';
+    }
+    html += '</div>';
+
+    html += '<div class="study-pt__sec"><h4>When</h4>';
+    if (periods.length && periods[0].era) {
+      html += '<div class="study-pt__periods">' + periods.map(function (pr) {
+        var link = _TIMELINE_URL + '?era=' + encodeURIComponent(pr.era);
+        return '<a class="study-pt__period" href="' + _esc(link) + '">' +
+          '<span class="study-era-dot" style="background:' + _esc(_eraColor(powers, pr.era)) + '"></span>' +
+          '<span class="study-pt__era">' + _esc(pr.era) + (pr.year ? ' · ' + _esc(pr.year) : '') + (pr.book ? ' (book setting)' : '') + '</span>' +
+          '<span class="study-pt__go">timeline ▸</span></a>';
+      }).join('') + '</div>';
+    } else {
+      html += '<p class="study-empty">No dated period detected for this passage.</p>';
+    }
+    if (ctx && ctx.writtenWhen) html += '<p class="study-sec-note">Written: ' + _esc(ctx.writtenWhen) + (ctx.writtenWhere ? ' · ' + _esc(ctx.writtenWhere.name) : '') + '</p>';
+    html += '</div></div>';
+
+    body.innerHTML = html;
+    body.querySelectorAll('.study-pt__vbtn').forEach(function (b) { b.addEventListener('click', function () { _scrollToVerse(b.getAttribute('data-v')); }); });
+  }).catch(function () { if (body.isConnected) body.innerHTML = '<p class="study-empty">Could not load.</p>'; });
+}
+
 _BLADES['word-study'] = _renderWordStudyBlade;
 _BLADES['book-details'] = _renderBookDetailsBlade;
 _BLADES['section-synthesis'] = _renderSectionSynthesisBlade;
 _BLADES['biblepedia'] = _renderBiblepediaBlade;
+_BLADES['commentary'] = _renderCommentaryBlade;
+_BLADES['witnesses'] = _renderCommentaryBlade;
+_BLADES['crossversion'] = _renderCrossVersionBlade;
+_BLADES['placetime'] = _renderPlaceTimeBlade;
 
 export function initStudyDesk() {
   var browseBar = document.querySelector('.reader-browse-bar');

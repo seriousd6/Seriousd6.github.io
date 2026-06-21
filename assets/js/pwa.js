@@ -8,7 +8,7 @@ export function _initOnboarding() {
   var overlay = document.createElement('div');
   overlay.className = 'bsw-onboard-overlay';
   var readerUrl  = READER_URL;
-  var vsUrl      = new URL('../../verse-study/', import.meta.url).href;
+  var vsUrl      = new URL('../../read/?study=1', import.meta.url).href;   // SD-T5: verse study lives in the reader's study desk
   var libraryUrl = new URL('../../library/', import.meta.url).href;
   var memUrl     = new URL('../../memorize/', import.meta.url).href;
   overlay.innerHTML =

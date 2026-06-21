@@ -627,7 +627,7 @@
     var NOTES_KEY   = 'bsw_notes';
     var NOTESV2_KEY = 'bsw_notes_v2';
     var READER_URL  = '../read/';
-    var VS_URL      = '../verse-study/';
+    var VS_URL      = '../read/';   // SD-T5: verse study now opens in the reader's study desk
     var HL_COLORS   = ['yellow','orange','pink','red','purple','lavender','green','teal','blue','mint'];
 
     /* ── State ──────────────────────────────────────────────────────────────── */
@@ -1026,7 +1026,7 @@
       var rl = document.createElement('a');
       rl.className = 'ms-card__link'; rl.href = READER_URL + '?ref=' + encodeURIComponent(ann.ref); rl.textContent = 'Read in context';
       var vsl = document.createElement('a');
-      vsl.className = 'ms-card__link'; vsl.href = VS_URL + '?ref=' + encodeURIComponent(ann.ref); vsl.textContent = 'Word study';
+      vsl.className = 'ms-card__link'; vsl.href = VS_URL + '?ref=' + encodeURIComponent(ann.ref) + '&study=1'; vsl.textContent = 'Word study';
       var del = mkEl('button', 'ms-card__del', 'Remove all');
       del.type = 'button'; del.title = 'Delete all annotations for this verse';
       del.addEventListener('click', function () {

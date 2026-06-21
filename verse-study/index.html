@@ -2,74 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <meta name="description" content="Deep-dive verse study: cross-references, commentary, parallel passages, and word study." />
-  <title>Verse Study — Bible Study</title>
-  <meta property="og:type" content="website" />
-  <meta property="og:title" id="bsw-og-title" content="Verse Study — Bible Study" />
-  <meta property="og:description" id="bsw-og-desc" content="Deep-dive verse study: cross-references, commentary, parallel passages, and word study." />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" id="bsw-tw-title" content="Verse Study — Bible Study" />
-  <meta name="twitter:description" id="bsw-tw-desc" content="Deep-dive verse study: cross-references, commentary, parallel passages, and word study." />
-  <script>try{var t=localStorage.getItem('bsw_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/bible-ui.css" />
-  <link rel="stylesheet" href="../assets/css/verse-study.css" />
-  <link rel="stylesheet" href="../assets/css/ol-companion.css" />
+  <title>Verse Study — moved to the Reader</title>
+  <meta name="robots" content="noindex" />
+  <!--
+    SD-T5: the standalone verse-study page is retired. Verse study now lives in the reader's
+    Passage Study Desk (open with `?study=1`). This stub preserves old/bookmarked
+    verse-study/?ref=… links by forwarding them to read/?ref=…&study=1, which opens the desk on
+    that verse. Inbound links elsewhere (compare/bookmarks/notes/modal) point straight at the
+    reader now; this is the safety net for anything already saved.
+  -->
+  <script>
+    (function () {
+      var qs = new URLSearchParams(location.search);
+      var ref = qs.get('ref') || '';
+      var v = qs.get('v') || '';
+      var dest = '../read/';
+      var out = new URLSearchParams();
+      if (ref) out.set('ref', ref);
+      if (v) out.set('v', v);
+      out.set('study', '1');
+      location.replace(dest + '?' + out.toString());
+    })();
+  </script>
 </head>
-<body class="verse-study-page">
-  <main>
-    <div id="vs-sticky-header" class="vs-header">
-      <div class="vs-header__topbar">
-        <a id="vs-back-link" class="vs-back-link" href="#">← Reader</a>
-        <a id="vs-prev-link" class="vs-adj-link" href="#" hidden aria-label="Previous verse">‹</a>
-        <span id="vs-header-ref" class="vs-header-ref" role="heading" aria-level="1"></span>
-        <a id="vs-next-link" class="vs-adj-link" href="#" hidden aria-label="Next verse">›</a>
-        <div class="version-picker">
-          <label for="bible-version" class="version-picker__label">Version:</label>
-          <select id="bible-version" class="version-picker__select"></select>
-        </div>
-      </div>
-      <div class="vs-verse-block">
-        <div id="vs-context-prev" class="vs-context-verse" hidden></div>
-        <div id="vs-focal-verse" class="vs-focal-verse">
-          <sup class="vs-focal-num" id="vs-focal-num"></sup>
-          <span class="vs-focal-text" id="vs-focal-text">Loading…</span>
-        </div>
-        <div id="vs-context-next" class="vs-context-verse" hidden></div>
-      </div>
-      <div class="vs-header__actions">
-        <button id="vs-context-toggle" class="vs-context-btn" aria-pressed="false">Context</button>
-        <button id="vs-memory-btn" class="vs-context-btn" type="button">☆ Memorize</button>
-        <button id="vs-copy-btn" class="vs-context-btn" type="button" hidden>Copy</button>
-        <button id="vs-share-btn" class="vs-context-btn" type="button" hidden>Share</button>
-      </div>
-      <div id="vs-token-row" class="vs-token-row" aria-label="Word tokens for study"></div>
-    </div>
-
-    <div class="vs-page-wrap">
-      <div class="vs-layout">
-        <nav id="vs-sidebar" class="vs-sidebar" aria-label="Verse study sections"></nav>
-        <div class="vs-main">
-          <div class="vs-mobile-nav" id="vs-mobile-nav" hidden>
-            <select id="vs-section-select" aria-label="Jump to section">
-              <option value="">Jump to section…</option>
-            </select>
-          </div>
-          <div id="vs-sections-container"></div>
-        </div>
-      </div>
-    </div>
+<body>
+  <main style="max-width:36rem;margin:4rem auto;padding:0 1rem;font-family:system-ui,sans-serif;line-height:1.6">
+    <h1 style="font-size:1.3rem">Verse study moved</h1>
+    <p>Verse study now opens in the reader’s Passage Study Desk. Redirecting you there…</p>
+    <p><a id="vs-fallback" href="../read/?study=1">Open the Reader →</a></p>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>Personal Bible study notes &amp; references.</p>
-    </div>
-  </footer>
-
-  <script src="../assets/js/main.js"></script>
-  <script type="module" src="../assets/js/app.js"></script>
+  <script>
+    // Keep the visible fallback link in sync with any ?ref the redirect is forwarding.
+    (function () {
+      var ref = new URLSearchParams(location.search).get('ref');
+      if (ref) document.getElementById('vs-fallback').href = '../read/?ref=' + encodeURIComponent(ref) + '&study=1';
+    })();
+  </script>
 </body>
 </html>
