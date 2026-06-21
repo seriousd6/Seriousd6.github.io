@@ -1737,17 +1737,16 @@ function _fillSynthVoices(bookId, ch, range) {
 }
 
 // ── Biblepedia blade ────────────────────────────────────────────────────────
-// INTENT: The passage's Biblepedia terms, GROUPED BY VERSE in reading order — one collapsible
-//   <details> per verse (open by default) so the reader can walk the chapter verse by verse and
-//   fold away the ones they're done with. An article keyed to several verses appears under each.
-//   Each card is a mini-article: term + kind + a short preview (first ~2 sentences / 200 words)
-//   ending "…" with a "Read the full article →" link; previews are real article text fetched per
-//   card (data/biblepedia/articles/{id}.json .intro), cached.
+// INTENT: The passage's Biblepedia terms ordered GENERAL → SPECIFIC and in reading order: concepts
+//   that run through the whole passage first, then few-verse concepts filed where they're first
+//   introduced, then single-verse concepts near their verse (see _renderBiblepediaBlade for the
+//   tiering). Each card is a mini-article: term + kind + verse badges (intro verse highlighted,
+//   the rest reference badges) + a short preview (first ~2 sentences / 200 words) ending "…" with a
+//   "Read the full article →" link; previews are real article text fetched per card
+//   (data/biblepedia/articles/{id}.json .intro), cached.
 // CHANGE? Opened from the "Biblepedia" section launcher (_fillBiblepedia) with params.articles
-//   pre-computed by _bpMatches (each carries .refs = matched verse displays). Grouping parses the
-//   verse from each ref via parseRef. Preview length via _previewFromHtml; full link → /biblepedia/?a={id}.
-// VERIFY: Study desk on John 1 → Biblepedia → a "John 1:1" group, "John 1:3" group, … each
-//   collapsible, listing that verse's articles with a 2-sentence teaser + "Read the full article →".
+//   pre-computed by _bpMatches (each carries .refs = matched verse displays); verses parsed via
+//   parseRef. Preview length via _previewFromHtml; full link → /biblepedia/?a={id}.
 var _BP_CAT_LABELS = {
   people: 'Person', places: 'Place', events: 'Event', event: 'Event',
   concepts: 'Concept', concept: 'Concept', names: 'Name', father: 'Church Father', commentator: 'Commentator'
@@ -1770,57 +1769,99 @@ function _previewFromHtml(html, maxSentences, maxWords) {
   return { text: picked, truncated: truncated };
 }
 
+// One card per article. `vs` is the sorted list of verses (within the passage) the article
+// touches: the first is where the reader is "introduced" to it, the rest are later references.
 function _bpCardHtml(a) {
+  var vs = a._vs || [];
+  var badges = vs.map(function (v, i) {
+    var intro = (i === 0);
+    return '<button type="button" class="study-bp-ref' + (intro ? ' study-bp-ref--intro' : '') +
+      '" data-v="' + v + '" title="' + (intro ? 'Introduced at v' + v : 'Referenced at v' + v) + '">v' + v + '</button>';
+  }).join('');
   return '<div class="study-bp-card" data-id="' + _esc(a.id) + '">' +
     '<div class="study-bp-card__sum">' +
       '<span class="study-bp-card__term">' + _esc(a.term) + '</span>' +
       (a.category ? '<span class="study-bp-card__cat study-bp-card__cat--' + _esc(a.category) + '">' + _esc(_bpCatLabel(a.category)) + '</span>' : '') +
     '</div>' +
+    (badges ? '<div class="study-bp-card__refs" aria-label="Verses in this passage">' + badges + '</div>' : '') +
     '<div class="study-bp-card__lazy"><p class="study-bp-card__preview study-bp-card__preview--load">' + _esc(a.brief || 'Loading…') + '</p></div>' +
   '</div>';
 }
+
+// INTENT: Order the passage's articles general → specific, in the sequence the reader meets them.
+//   Three tiers: (0) concepts that run THROUGH the passage (3+ verses spanning most of the range)
+//   come first; (1) concepts spanning a FEW verses, filed at the verse that introduces them, with
+//   reference badges for where they recur; (2) single-verse concepts, filed at their verse. Within
+//   every tier the sort is by first-appearance verse, so the column reads top-to-bottom in reading
+//   order. Each card carries verse badges (the intro verse highlighted) that scroll the reader.
+// CHANGE? Tier thresholds use the live reader range (_rangeFrom/_rangeTo). Verses come from
+//   parseRef over a.refs (the in-range hits from _bpMatches). Tier headers show only when more than
+//   one tier is populated, so a one-verse passage isn't cluttered.
+// VERIFY: Study desk on John 1 → Biblepedia → "Word/Logos" type concepts head the list under
+//   "Throughout the passage"; verse-local names sit lower under "Verse by verse", each near its verse.
+var _BP_TIER_LABELS = ['Throughout the passage', 'Across several verses', 'Verse by verse'];
 function _renderBiblepediaBlade(params, body) {
   var arts = params.articles || [];
   if (!arts.length) { body.innerHTML = '<p class="study-empty">No Biblepedia articles for this passage.</p>'; return; }
 
-  // Group by the verse each article keys to (one card per article per verse), ordered by verse.
-  var byVerse = Object.create(null), verseOrder = [], briefById = Object.create(null);
-  arts.forEach(function (a) {
+  var briefById = Object.create(null);
+  var rows = arts.map(function (a) {
     briefById[a.id] = a.brief || '';
-    var seen = Object.create(null);
+    var seen = Object.create(null), vs = [];
     (a.refs || []).forEach(function (r) {
       var p = parseRef(r);
-      var v = p ? p.v : null;
-      if (v == null || seen[v]) return;     // one card per article per verse
-      seen[v] = 1;
-      if (!byVerse[v]) { byVerse[v] = []; verseOrder.push(v); }
-      byVerse[v].push(a);
+      if (p && p.v != null && !seen[p.v]) { seen[p.v] = 1; vs.push(p.v); }
     });
+    vs.sort(function (x, y) { return x - y; });
+    a._vs = vs;
+    return { a: a, vs: vs };
   });
-  verseOrder.sort(function (a, b) { return a - b; });
+
+  // Tier thresholds relative to the actual passage range; fall back to the matched span if the
+  // range globals aren't meaningfully set.
+  var lo = _rangeFrom, hi = _rangeTo;
+  if (!(hi >= lo && hi > 0)) {
+    lo = Infinity; hi = 0;
+    rows.forEach(function (r) { r.vs.forEach(function (v) { if (v < lo) lo = v; if (v > hi) hi = v; }); });
+    if (!(hi >= lo)) { lo = 1; hi = 1; }
+  }
+  var range = hi - lo + 1;
+  rows.forEach(function (r) {
+    var vs = r.vs;
+    r.firstV = vs.length ? vs[0] : 9999;
+    r.count = vs.length;
+    var span = vs.length ? (vs[vs.length - 1] - vs[0] + 1) : 0;
+    var spanRatio = range > 1 ? span / range : 1;
+    r.tier = (r.count >= 3 && spanRatio >= 0.6) ? 0 : (r.count >= 2 ? 1 : 2);
+  });
+  rows.sort(function (x, y) {
+    if (x.tier !== y.tier) return x.tier - y.tier;          // general (broad) before specific
+    if (x.firstV !== y.firstV) return x.firstV - y.firstV;  // then in reading order
+    if (x.count !== y.count) return y.count - x.count;      // more-pervasive first on ties
+    return String(x.a.term).localeCompare(String(y.a.term));
+  });
+
+  var tiersPresent = Object.create(null);
+  rows.forEach(function (r) { tiersPresent[r.tier] = 1; });
+  var showHeaders = Object.keys(tiersPresent).length > 1;
 
   var html = '<div class="study-bp">' +
     '<p class="study-bp__intro">' + arts.length + ' Biblepedia article' + (arts.length === 1 ? '' : 's') +
-      ' across <strong>' + _esc(params.ref || 'this passage') + '</strong>, by verse.</p>';
-  verseOrder.forEach(function (v) {
-    var group = byVerse[v];
-    var label = (params.ref ? _esc(params.ref) + ':' : 'v') + v;
-    html += '<details class="study-bp-vgroup" open>' +
-      '<summary class="study-bp-vgroup__head">' +
-        '<span class="study-bp-vgroup__chev" aria-hidden="true">▾</span>' +
-        '<span class="study-bp-vgroup__ref">' + label + '</span>' +
-        '<button type="button" class="study-bp-vgroup__go" data-v="' + v + '" title="Scroll to verse" aria-label="Scroll to ' + label + '">↪</button>' +
-        '<span class="study-bp-vgroup__count">' + group.length + '</span>' +
-      '</summary>' +
-      '<div class="study-bp-vgroup__body">' + group.map(_bpCardHtml).join('') + '</div>' +
-    '</details>';
+      ' for <strong>' + _esc(params.ref || 'this passage') + '</strong> — general to specific, in reading order.</p>';
+  var lastTier = -1;
+  rows.forEach(function (r) {
+    if (showHeaders && r.tier !== lastTier) {
+      html += '<h4 class="study-bp-tier">' + _BP_TIER_LABELS[r.tier] + '</h4>';
+      lastTier = r.tier;
+    }
+    html += _bpCardHtml(r.a);
   });
   html += '</div>';
   body.innerHTML = html;
   wireRefLinks(body);
 
-  // Per-verse scroll buttons (don't toggle the <details> they sit in).
-  body.querySelectorAll('.study-bp-vgroup__go').forEach(function (b) {
+  // Verse badges scroll the reader to the verse.
+  body.querySelectorAll('.study-bp-ref').forEach(function (b) {
     b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); _scrollToVerse(b.getAttribute('data-v')); });
   });
   // Each card resolves its own intro → 2-sentence / 200-word preview + "Read the full article →".
@@ -1921,14 +1962,22 @@ function _fillCommentaryContent(params, host) {
       }
       if (!vhtml) continue;
       any = true;
-      blocks += '<div class="study-comm-v"><button type="button" class="study-comm-v__num" data-v="' + v + '">v' + v + '</button>' +
-        '<div class="study-comm-v__body">' + vhtml + '</div></div>';
+      // Each verse is an independently collapsible <details> (open by default) so a reader
+      // can fold away verses they've finished and keep the rail short. The verse-number button
+      // sits in the summary but stops propagation so tapping it scrolls the reader instead of
+      // toggling the disclosure.
+      blocks += '<details class="study-comm-v" open>' +
+        '<summary class="study-comm-v__head">' +
+          '<span class="study-comm-v__chev" aria-hidden="true">▾</span>' +
+          '<button type="button" class="study-comm-v__num" data-v="' + v + '">v' + v + '</button>' +
+        '</summary>' +
+        '<div class="study-comm-v__body">' + vhtml + '</div></details>';
     }
     host.innerHTML = any
       ? '<div class="study-comm" data-src="' + _esc(source) + '">' + blocks + '</div>' +
         (meta && meta.isAI ? '<p class="study-sec-note study-comm-ai">✦ AI-assisted — see <a href="' + _esc(new URL('../../about/', import.meta.url).href) + '">/about/</a> for methods.</p>' : '')
       : '<p class="study-empty">No ' + _esc((meta && meta.label) || 'commentary') + ' for vv. ' + lo + (hi > lo ? '–' + hi : '') + ' yet.</p>';
-    host.querySelectorAll('.study-comm-v__num').forEach(function (b) { b.addEventListener('click', function () { _scrollToVerse(b.getAttribute('data-v')); }); });
+    host.querySelectorAll('.study-comm-v__num').forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); _scrollToVerse(b.getAttribute('data-v')); }); });
     wireRefLinks(host);
   }).catch(function () { if (host.isConnected) host.innerHTML = '<p class="study-empty">Could not load commentary.</p>'; });
 }
