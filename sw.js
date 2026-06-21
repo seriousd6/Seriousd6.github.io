@@ -25,7 +25,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v173';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v180';  // bump when HTML/CSS/JS/icon changes
 
 // ── Per-dataset data caches ────────────────────────────────────────────────
 // A SINGLE global data cache meant every JSON tweak (e.g. one red-letter or commentary
@@ -43,7 +43,7 @@ var DATA_DEFAULT_V = 'v1';
 var DATA_VERSIONS = {
   bible: 'v1', commentary: 'v1', interlinear: 'v1', strongs: 'v1',
   crossrefs: 'v1', echoes: 'v1', parallels: 'v1', 'red-letter': 'v1',
-  library: 'v1', biblepedia: 'v17', maps: 'v4', timeline: 'v1', study: 'v1',
+  library: 'v1', biblepedia: 'v19', maps: 'v4', timeline: 'v1', study: 'v1',
   books: 'v1', dictionary: 'v1', smith: 'v1', hitchcock: 'v1', torrey: 'v1',
   grammar: 'v1', plans: 'v1', devotionals: 'v1', translation: 'v1', synthesis: 'v1'
 };

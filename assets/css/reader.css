@@ -3896,7 +3896,11 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
   border-left: 1px solid var(--color-border);
   box-shadow: -4px 0 18px rgba(0,0,0,0.28);
   transform: translateX(105%);
-  transition: transform 0.22s ease;
+  /* Off-canvas when closed. visibility:hidden (flipped after the slide-out finishes) keeps the
+     fixed, off-screen panel from painting past the right edge — which on mobile created a phantom
+     blank horizontal-scroll region. Mirrors the .study-blade off-canvas pattern. */
+  visibility: hidden;
+  transition: transform 0.22s ease, visibility 0s linear 0.22s;
 }
 /* `main` holds head + section body + blade overlay, and owns the scroll (so the rail, a flex
    sibling, never scrolls away). min-height:0 lets it shrink inside the bounded desk. */
@@ -3907,7 +3911,7 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 }
 /* While a blade overlay is open, lock the section body behind it. */
 .reader-study-desk--blade .study-desk__main { overflow: hidden; }
-.reader-layout--study-open .reader-study-desk { transform: translateX(0); }
+.reader-layout--study-open .reader-study-desk { transform: translateX(0); visibility: visible; transition: transform 0.22s ease, visibility 0s; }
 
 @media (min-width: 700px) {
   .reader-study-desk { display: none; }                         /* hidden unless open */
@@ -3944,15 +3948,15 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
    blade overlay (which lives inside `main`). */
 .study-rail {
   flex: 0 0 var(--sd-rail-w); align-self: stretch;
-  display: flex; flex-direction: column; gap: 2px;
-  padding: 0.35rem 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  display: flex; flex-direction: column; gap: 1px;
+  padding: 0.25rem 0; overflow: hidden;   /* no scroll: every tool fits via short, single-line labels */
   background: var(--color-surface-subtle, rgba(140,106,0,0.06));
   border-right: 1px solid var(--color-border);
 }
 .study-rail__tab {
-  flex: 0 0 auto; border: none; background: none; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  padding: 0.45rem 0.1rem; color: var(--color-muted);
+  flex: 1 1 auto; min-height: 0; border: none; background: none; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;
+  padding: 0.3rem 0.1rem; color: var(--color-muted);
   border-left: 3px solid transparent; border-radius: 0 7px 7px 0;
   font-family: var(--font-ui);
 }
@@ -3962,8 +3966,8 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
   border-left-color: var(--color-accent); font-weight: 600;
 }
 .study-rail__tab:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
-.study-rail__icon  { font-size: 1.05rem; line-height: 1; }
-.study-rail__label { font-size: 0.56rem; line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; text-align: center; }
+.study-rail__icon  { font-size: 1rem; line-height: 1; }
+.study-rail__label { font-size: 0.55rem; line-height: 1.05; letter-spacing: 0.01em; text-transform: uppercase; text-align: center; white-space: nowrap; }
 
 /* ── Section switcher (SD-T2): chip row pinned atop the Synthesis/Commentary blades ── */
 .study-secswitch {
@@ -4026,6 +4030,15 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-comm-v__num:hover { border-color: var(--color-accent); }
 .study-comm-v__body { font-size: 0.86rem; line-height: 1.5; }
 .study-comm-ai { margin-top: 0.6rem; font-style: italic; }
+/* Voices tab: a static "locked source" label where Commentary shows its picker. */
+.study-comm-locked {
+  margin: 0.5rem 0 0.6rem; padding: 0.25rem 0.5rem; display: inline-block;
+  border: 1px solid var(--color-border); border-radius: 6px;
+  background: var(--color-surface-subtle, rgba(140,106,0,0.06)); font-weight: 600;
+}
+/* Places tab: the moved "Where & when" map(s) sit above the deep-link lists. */
+.study-pt__maps { margin-bottom: 1rem; }
+.study-pt__maps .study-period:last-child { margin-bottom: 0; }
 
 /* ── Cross-version word blade (SD-T4) ── */
 .study-cv__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.2rem; }
@@ -4099,9 +4112,14 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-outline__range { flex-shrink: 0; font-size: 0.72rem; font-weight: 600; color: var(--color-accent); min-width: 3.2rem; }
 .study-outline__title { color: var(--color-heading); }
 
-.study-speakers { display: flex; flex-direction: column; gap: 0.4rem; }
-.study-speaker { display: flex; align-items: baseline; gap: 0.5rem; }
+.study-speakers { display: flex; flex-direction: column; gap: 0.55rem; }
+.study-speaker { display: flex; flex-direction: column; gap: 0.15rem; }
+.study-speaker__head { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.study-speaker__head .reader-speaker-chip { margin-bottom: 0; }
 .study-speaker__ranges { font-size: 0.78rem; color: var(--color-muted); }
+.study-speaker__detail { margin: 0; font-size: 0.82rem; line-height: 1.5; color: var(--color-text); }
+.study-speaker__link { cursor: pointer; text-decoration: none; }
+.study-speaker__link:hover { text-decoration: underline; filter: brightness(0.9); }
 
 /* Brief flash when an outline row scrolls the reader to a pericope */
 .reader-verse--study-flash { animation: study-flash 1.4s ease; }
@@ -4304,8 +4322,16 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 
 /* Book-details blade */
 .study-book__title { font-size: 1.25rem; font-weight: 700; color: var(--color-heading); margin-bottom: 0.5rem; }
-.study-book__sec { margin-top: 0.95rem; }
-.study-book__sec h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin: 0 0 0.3rem; }
+.study-book__sec { margin-top: 0.85rem; border-top: 1px solid var(--color-border); padding-top: 0.5rem; }
+.study-book__sechead {
+  display: flex; align-items: center; gap: 0.35rem; cursor: pointer; list-style: none;
+}
+.study-book__sechead::-webkit-details-marker { display: none; }
+.study-book__sechead:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.study-book__sec h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin: 0; }
+.study-book__chev { color: var(--color-muted); font-size: 0.7rem; transition: transform 0.15s ease; }
+.study-book__sec:not([open]) .study-book__chev { transform: rotate(-90deg); }
+.study-book__secbody { margin-top: 0.4rem; }
 .study-book__sec p { font-size: 0.85rem; line-height: 1.55; margin: 0; color: var(--color-text); }
 .study-book__list { margin: 0; padding-left: 1.1rem; font-size: 0.85rem; line-height: 1.5; }
 .study-book__list li { margin-bottom: 0.15rem; }
@@ -4379,21 +4405,38 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-echo__ref { font-size: 0.84rem; }
 .study-echo__note { font-size: 0.8rem; color: var(--color-muted); flex: 1 1 100%; }
 
-/* SD · Encyclopedia (Biblepedia) blade — expandable article cards */
+/* SD · Biblepedia blade — articles grouped by verse, each verse a collapsible group */
 .study-bp__intro { font-size: 0.85rem; line-height: 1.55; color: var(--color-text); margin: 0 0 0.8rem; }
+.study-bp-vgroup { margin-bottom: 0.6rem; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; }
+.study-bp-vgroup__head {
+  display: flex; align-items: center; gap: 0.4rem; cursor: pointer; list-style: none;
+  padding: 0.4rem 0.6rem; background: var(--color-surface-subtle, rgba(140,106,0,0.06));
+}
+.study-bp-vgroup__head::-webkit-details-marker { display: none; }
+.study-bp-vgroup__head:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.study-bp-vgroup__chev { color: var(--color-muted); font-size: 0.72rem; transition: transform 0.15s ease; }
+.study-bp-vgroup:not([open]) .study-bp-vgroup__chev { transform: rotate(-90deg); }
+.study-bp-vgroup__ref { font-weight: 700; font-size: 0.84rem; color: var(--color-accent); }
+.study-bp-vgroup__go {
+  border: none; background: none; cursor: pointer; color: var(--color-muted);
+  font-size: 0.82rem; padding: 0 0.25rem; border-radius: 4px; line-height: 1;
+}
+.study-bp-vgroup__go:hover { background: var(--color-border); color: var(--color-text); }
+.study-bp-vgroup__count {
+  margin-left: auto; flex-shrink: 0; font-size: 0.66rem; font-weight: 700;
+  color: var(--color-muted); background: var(--color-bg);
+  border: 1px solid var(--color-border); border-radius: 999px; padding: 0.02rem 0.45rem;
+}
+.study-bp-vgroup__body { padding: 0.55rem 0.6rem; }
+.study-bp-vgroup__body .study-bp-card:last-child { margin-bottom: 0; }
 .study-bp-card {
-  border: 1px solid var(--color-border); border-radius: 7px; margin-bottom: 0.45rem;
-  background: rgba(140,106,0,0.03);
+  border: 1px solid var(--color-border); border-radius: 7px; margin-bottom: 0.5rem;
+  background: rgba(140,106,0,0.03); padding: 0.55rem 0.7rem 0.65rem;
 }
 .study-bp-card__sum {
-  cursor: pointer; padding: 0.5rem 0.65rem; list-style: none;
-  display: flex; align-items: center; gap: 0.5rem;
+  display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;
 }
-.study-bp-card__sum::-webkit-details-marker { display: none; }
-.study-bp-card__sum::before { content: '▸'; color: var(--color-muted); flex-shrink: 0; }
-.study-bp-card[open] > .study-bp-card__sum::before { content: '▾'; }
-.study-bp-card[open] > .study-bp-card__sum { border-bottom: 1px solid var(--color-border); }
-.study-bp-card__term { font-weight: 600; font-size: 0.88rem; color: var(--color-heading); }
+.study-bp-card__term { font-weight: 600; font-size: 0.9rem; color: var(--color-heading); }
 .study-bp-card__cat {
   margin-left: auto; flex-shrink: 0;
   font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
@@ -4403,16 +4446,12 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 .study-bp-card__cat--people { color: #3f8f50; }
 .study-bp-card__cat--places { color: #4a7bb0; }
 .study-bp-card__cat--events, .study-bp-card__cat--event { color: var(--color-accent); }
-.study-bp-card__body { padding: 0.6rem 0.7rem; }
-.study-bp-card__brief { font-size: 0.82rem; line-height: 1.55; color: var(--color-muted); margin: 0 0 0.5rem; }
-.study-bp-card__refs { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; margin: 0 0 0.6rem; }
+.study-bp-card__refs { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; margin: 0 0 0.45rem; }
 .study-bp-card__ref { font-size: 0.78rem; }
-.study-bp-card__intro { font-size: 0.85rem; line-height: 1.6; color: var(--color-text); }
-.study-bp-card__intro p { margin: 0 0 0.55rem; }
-.study-bp-card__intro p:last-child { margin-bottom: 0; }
+.study-bp-card__preview { font-size: 0.85rem; line-height: 1.55; color: var(--color-text); margin: 0 0 0.45rem; }
+.study-bp-card__preview--load { color: var(--color-muted); }
 .study-bp-card__more {
-  display: inline-block; margin-top: 0.6rem; font-size: 0.8rem; font-weight: 600;
-  color: var(--color-accent);
+  display: inline-block; font-size: 0.8rem; font-weight: 600; color: var(--color-accent);
 }
 .study-bp-card__more:hover { text-decoration: underline; }
 

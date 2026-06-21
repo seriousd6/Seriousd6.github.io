@@ -271,7 +271,62 @@ function _fillOutline(headings, maxV) {
     });
   });
 }
-function _fillSpeakers(breaks, maxV) {
+// Speaker key → Biblepedia article id, so each speaker badge can carry a who-they-were detail and
+// link to the full article. Curated (verified slugs) for the known speaker vocabulary; an unknown
+// speaker key falls back to its own slug (covers Moses/David/etc.) and simply stays un-linked if
+// no such article exists. Narration/role voices have no person article.
+var _SPEAKER_BP = {
+  jesus: 'jesus-christ', god: 'god', john: 'john', peter: 'peter', paul: 'paul',
+  pharisees: 'pharisees', scribes: 'scribes', sadducees: 'sadducees',
+  pilate: 'pilate', herod: 'herod', angels: 'angel', disciples: 'apostles',
+  mary: 'mary', martha: 'martha', satan: 'satan', serpent: 'serpent', job: 'job'
+};
+var _SPEAKER_NOART = { narrative: 1, crowd: 1, questioner: 1, psalmist: 1, teacher: 1, wisdom: 1 };
+function _speakerBpId(spk) {
+  if (_SPEAKER_NOART[spk]) return null;
+  if (_SPEAKER_BP[spk]) return _SPEAKER_BP[spk];
+  return String(spk).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+// The narrator IS the book's traditional author. Books whose author is genuinely unknown/anonymous
+// (compiled or attributed only by uncertain tradition) link instead to a dedicated "Authorship of …"
+// Biblepedia article that explains why the author is unknown and what the tradition holds.
+var _BOOK_AUTHOR_ANON = {
+  esther: 'authorship-of-esther', job: 'authorship-of-job', hebrews: 'authorship-of-hebrews',
+  '1kings': 'authorship-of-kings', '2kings': 'authorship-of-kings', '2samuel': 'authorship-of-samuel'
+};
+// Named author → person-article slug. Keys are the cleaned, lower-cased author string from
+// book-context.json (parentheticals / co-authors stripped first by _resolveBookAuthor).
+var _AUTHOR_SLUG = {
+  'paul': 'paul', 'moses': 'moses', 'peter': 'peter', 'john the apostle': 'john', 'john': 'john',
+  'samuel': 'samuel', 'ezra': 'ezra', 'solomon': 'solomon', 'david': 'david', 'jeremiah': 'jeremiah',
+  'isaiah': 'isaiah', 'matthew': 'matthew', 'john mark': 'mark', 'mark': 'mark', 'luke': 'luke',
+  'james': 'james', 'jude': 'jude', 'joshua': 'joshua', 'daniel': 'daniel', 'ezekiel': 'ezekiel',
+  'nehemiah': 'nehemiah', 'amos': 'amos', 'hosea': 'hosea', 'joel': 'joel', 'jonah': 'jonah',
+  'micah': 'micah', 'nahum': 'nahum', 'habakkuk': 'habakkuk', 'zephaniah': 'zephaniah',
+  'haggai': 'haggai', 'zechariah': 'zechariah', 'malachi': 'malachi', 'obadiah': 'obadiah'
+};
+// → { name, id }. name is the badge suffix ("Narration — {name}"); id is the article to link.
+function _resolveBookAuthor(bookId, ctx) {
+  if (_BOOK_AUTHOR_ANON[bookId]) return { name: 'author unknown', id: _BOOK_AUTHOR_ANON[bookId] };
+  var raw = (ctx && ctx.author) || '';
+  // Drop parentheticals, then take the first author before a list separator or "and".
+  var cleaned = raw.replace(/\s*\([^)]*\)/g, '').split(/[;,]| and /i)[0].trim();
+  var slug = _AUTHOR_SLUG[cleaned.toLowerCase()];
+  var name = cleaned.replace(/\s+the\s+apostle$/i, '');   // "John the apostle" → "John"
+  return { name: name, id: slug || null };
+}
+
+// INTENT: Show WHO speaks in the passage as badges — a single voice gets a "speaking throughout"
+//   badge with a one-line bio from its Biblepedia article; multiple voices each get a badge with
+//   the verse ranges they speak. Tapping a badge jumps to the full Biblepedia article.
+// CHANGE? Speaker→article map is _SPEAKER_BP; bios come from data/biblepedia/articles/{id}.json
+//   (.intro, trimmed by _previewFromHtml) — fetched per speaker (small, cached), NOT via the
+//   1.7MB index, so this stays cheap. If paragraph data adds a new speaker key, add it to
+//   _SPEAKER_BP (or _SPEAKER_NOART) or it falls back to a slug guess.
+// VERIFY: Study John 17 (Jesus throughout) → one "Jesus" badge, "speaking throughout", a bio line,
+//   click → /biblepedia/?a=jesus-christ. Study a dialogue chapter → a badge per speaker with ranges.
+function _fillSpeakers(breaks, maxV, bookId) {
   var host = document.getElementById('sd-speakers');
   _lastData.speakers = [];
   if (!host) return;
@@ -285,13 +340,49 @@ function _fillSpeakers(breaks, maxV) {
     if (!bySpeaker[spk]) { bySpeaker[spk] = []; order.push(spk); }
     bySpeaker[spk].push(range);
   });
-  if (order.length < 2) { host.innerHTML = '<p class="study-empty">One voice throughout.</p>'; return; }
-  host.innerHTML = '<div class="study-speakers">' + order.map(function (spk) {
-    _lastData.speakers.push({ label: _speakerLabel(spk), ranges: bySpeaker[spk].join(', ') });
-    return '<div class="study-speaker">' +
-      '<span class="reader-speaker-chip ' + _speakerClass(spk) + '">' + _esc(_speakerLabel(spk)) + '</span>' +
-      '<span class="study-speaker__ranges">' + bySpeaker[spk].map(_esc).join(', ') + '</span></div>';
-  }).join('') + '</div>';
+  var single = order.length < 2;
+  host.innerHTML = '<p class="study-empty">Loading…</p>';
+  // Book-context gives us the traditional author, so the narrator badge can read "Narration — Paul"
+  // and link to that author (or, for anonymous books, to an "Authorship of …" article).
+  _loadCtx().then(function (all) {
+    if (!host.isConnected) return;
+    var ctx = (all || {})[bookId] || {};
+    // Resolve each speaker → { label, articleId } before fetching, so badges render complete.
+    var resolved = order.map(function (spk) {
+      if (spk === 'narrative') {
+        var au = _resolveBookAuthor(bookId, ctx);
+        return { label: au.name ? ('Narration — ' + au.name) : 'Narration', articleId: au.id };
+      }
+      return { label: _speakerLabel(spk), articleId: _speakerBpId(spk) };
+    });
+    return Promise.all(resolved.map(function (r) {
+      if (!r.articleId) return Promise.resolve(null);
+      return _loadBPArticle(r.articleId)
+        .then(function (art) { return (art && art.intro) ? { id: r.articleId, intro: art.intro } : null; })
+        .catch(function () { return null; });
+    })).then(function (arts) {
+      if (!host.isConnected) return;
+      host.innerHTML = '<div class="study-speakers' + (single ? ' study-speakers--single' : '') + '">' + order.map(function (spk, i) {
+        var label = resolved[i].label;
+        var where = single ? 'speaking throughout' : ('vv. ' + bySpeaker[spk].join(', '));
+        _lastData.speakers.push({ label: label, ranges: single ? 'throughout' : bySpeaker[spk].join(', ') });
+        var found = arts[i];
+        var chipCls = 'reader-speaker-chip ' + _speakerClass(spk);
+        var chip = found
+          ? '<a class="' + chipCls + ' study-speaker__link" href="' + _esc(_BP_URL + '?a=' + encodeURIComponent(found.id)) + '">' + _esc(label) + ' ↗</a>'
+          : '<span class="' + chipCls + '">' + _esc(label) + '</span>';
+        var bio = '';
+        if (found) {
+          var pv = _previewFromHtml(found.intro, 1, 30);
+          if (pv.text) bio = '<p class="study-speaker__detail">' + _esc(pv.text) + (pv.truncated ? ' …' : '') + '</p>';
+        }
+        return '<div class="study-speaker">' +
+          '<div class="study-speaker__head">' + chip +
+            '<span class="study-speaker__ranges">' + _esc(where) + '</span></div>' +
+          bio + '</div>';
+      }).join('') + '</div>';
+    });
+  });
 }
 
 // ── Key-word usage (interlinear + Strong's aggregation) ────────────────────
@@ -556,8 +647,10 @@ function _centroid(coords) {
 }
 
 // ── "Where & when" — book-context + regional-powers + landmark maps ────────
-function _fillMaps(bookId, bookName, ch, key) {
-  var host = document.getElementById('sd-maps');
+// hostEl lets the Places binder tab (_renderPlaceTimeBlade) render the same annotated maps into
+// its own blade body; with no host it falls back to the (now removed) section element, a no-op.
+function _fillMaps(bookId, bookName, ch, key, hostEl) {
+  var host = hostEl || document.getElementById('sd-maps');
   if (!host) return;
   _lastData.places = []; _lastData.powers = []; _lastData.context = null;
   host.innerHTML = '<p class="study-empty">Loading…</p>';
@@ -837,10 +930,10 @@ function _bpMatches(idx, bookId, ch) {
 // for — so an expand can fire the deferred load and re-expands don't re-scan the same chapter.
 var _bpPending = null, _bpLoadedKey = null;
 
-// Write the live article count into the collapsed section's header so it reads "Encyclopedia (27)".
+// Write the live article count into the collapsed section's header so it reads "Biblepedia (27)".
 function _setBPCount(n) {
   var t = _bodyEl && _bodyEl.querySelector('[data-sec="sd-biblepedia"] .study-sec-title');
-  if (t) t.textContent = n ? 'Encyclopedia (' + n + ')' : 'Encyclopedia';
+  if (t) t.textContent = n ? 'Biblepedia (' + n + ')' : 'Biblepedia';
 }
 
 // Called on every chapter/range change. The 1.7MB index is NOT touched while the section is
@@ -854,7 +947,7 @@ function _fillBiblepedia(bookId, ch, key) {
   if (host.hidden) {
     _bpLoadedKey = null;                 // content is wiped; force a reload when next expanded
     _lastData.biblepedia = [];
-    host.innerHTML = '<p class="study-empty">Expand to find encyclopedia articles for this passage.</p>';
+    host.innerHTML = '<p class="study-empty">Expand to find Biblepedia articles for this passage.</p>';
     return;
   }
   _bpLoad(bookId, ch, key);
@@ -871,14 +964,14 @@ function _bpLoad(bookId, ch, key) {
     _lastData.biblepedia = matches;
     _bpLoadedKey = key;
     _setBPCount(matches.length);
-    if (!matches.length) { host.innerHTML = '<p class="study-empty">No encyclopedia articles for this range.</p>'; return; }
+    if (!matches.length) { host.innerHTML = '<p class="study-empty">No Biblepedia articles for this range.</p>'; return; }
     var n = matches.length;
     host.innerHTML =
       '<p class="study-sec-note">' + n + ' article' + (n === 1 ? '' : 's') + ' key to this passage.</p>' +
       '<button type="button" class="study-bookbtn" id="sd-bp-open">📚 Read ' + n + ' article' + (n === 1 ? '' : 's') + ' as cards →</button>';
     var btn = document.getElementById('sd-bp-open');
     if (btn) btn.addEventListener('click', function () {
-      openBlade('biblepedia', { articles: matches, ref: _lastData.ref }, 'Encyclopedia');
+      openBlade('biblepedia', { articles: matches, ref: _lastData.ref }, 'Biblepedia');
     });
   }).catch(function () { if (host.isConnected) host.innerHTML = '<p class="study-empty">Could not load.</p>'; });
 }
@@ -918,7 +1011,7 @@ function _buildSheet(notes) {
   if (d.places.length) { L.push('## Places'); d.places.forEach(function (p) { L.push('- ' + p.name + ' (v' + p.verses.join(', ') + ')' + (p.under ? ' — under ' + p.under : '')); }); L.push(''); }
   if (d.xrefs.length) { L.push('## Cross-references'); L.push(d.xrefs.join('; ')); L.push(''); }
   if (d.echoes.length) { L.push('## Echoes & allusions'); d.echoes.forEach(function (e) { L.push('- ' + e); }); L.push(''); }
-  if (d.biblepedia && d.biblepedia.length) { L.push('## Encyclopedia articles'); d.biblepedia.forEach(function (b) { L.push('- **' + b.term + '**' + (b.category ? ' (' + b.category + ')' : '') + (b.refs && b.refs.length ? ' — ' + b.refs.join(', ') : '')); }); L.push(''); }
+  if (d.biblepedia && d.biblepedia.length) { L.push('## Biblepedia articles'); d.biblepedia.forEach(function (b) { L.push('- **' + b.term + '**' + (b.category ? ' (' + b.category + ')' : '') + (b.refs && b.refs.length ? ' — ' + b.refs.join(', ') : '')); }); L.push(''); }
   if (notes && notes.trim()) { L.push('## Notes'); L.push(notes.trim()); L.push(''); }
   return L.join('\n');
 }
@@ -967,7 +1060,7 @@ function _wireRange(bookId, bookName, ch, key) {
 function _refillScoped(bookId, bookName, ch, key) {
   _destroyMaps();
   _fillKeywords(bookId, ch, key);
-  _fillMaps(bookId, bookName, ch, key);
+  // "Where & when" maps moved to the Places tab (_renderPlaceTimeBlade) — built on demand there.
   _fillConnections(bookId, bookName, ch, key);
   _fillBiblepedia(bookId, ch, key);
 }
@@ -1004,9 +1097,9 @@ function _render() {
       _sectionShell('sd-outline', 'Outline') +
       _sectionShell('sd-speakers', 'Speakers') +
       _sectionShell('sd-keywords', 'Key words') +
-      _sectionShell('sd-maps', 'Where & when') +
+      // "Where & when" map now lives in the Places binder tab (_renderPlaceTimeBlade), not here.
       _sectionShell('sd-connections', 'Connections') +
-      _sectionShell('sd-biblepedia', 'Encyclopedia', true) +   // default-collapsed: defer the heavy index
+      _sectionShell('sd-biblepedia', 'Biblepedia', true) +   // default-collapsed: defer the heavy index
       _sectionShell('sd-notes', 'Notes');
 
     var bookBtn = document.getElementById('sd-book-btn');
@@ -1016,7 +1109,7 @@ function _render() {
     _wireToggles();
     _wireRange(nav.bookId, bookName, nav.ch, key);
     _fillOutline(chData && chData.headings, _maxV);
-    _fillSpeakers(chData && chData.breaks, _maxV);
+    _fillSpeakers(chData && chData.breaks, _maxV, nav.bookId);
     _fillNotes(nav.bookId, nav.ch);
     _refillScoped(nav.bookId, bookName, nav.ch, key);
   });
@@ -1081,7 +1174,7 @@ function _buildDesk() {
         return '<button type="button" class="study-rail__tab' + (i === 0 ? ' study-rail__tab--active' : '') + '"' +
           ' role="tab" data-tool="' + t.type + '" id="sd-tab-' + t.type + '" aria-controls="sd-blade-body"' +
           ' aria-selected="' + (i === 0 ? 'true' : 'false') + '" tabindex="' + (i === 0 ? '0' : '-1') + '"' +
-          ' title="' + _esc(t.label) + '">' +
+          ' title="' + _esc(t.full || t.label) + '">' +
           '<span class="study-rail__icon" aria-hidden="true">' + t.icon + '</span>' +
           '<span class="study-rail__label">' + _esc(t.label) + '</span>' +
         '</button>';
@@ -1148,7 +1241,7 @@ var _bladeCtx = { word: null, section: null };   // {code,lang} · {startV,range
 
 var _TOOLS = [
   { type: 'passage', label: 'Passage', icon: '📋' },   // returns to the section list
-  { type: 'section-synthesis', label: 'Synthesis', icon: '✦', scope: 'section',
+  { type: 'section-synthesis', label: 'Synth', full: 'Synthesis', icon: '✦', scope: 'section',
     from: 'the Outline section',
     defaultParams: function () {
       var nav = window._readerNavState; if (!nav || !nav.bookId) return null;
@@ -1156,12 +1249,12 @@ var _TOOLS = [
       return { bookId: nav.bookId, bookName: nav.bookName || nav.bookId, ch: nav.ch,
                startV: sec.startV, range: sec.range, label: sec.label || sec.text };
     } },
-  { type: 'commentary', label: 'Commentary', icon: '🗒️', scope: 'section',
+  { type: 'commentary', label: 'Comm.', full: 'Commentary', icon: '🗒️', scope: 'section',
     from: 'the Outline section',
     defaultParams: function () { return _sectionToolParams({ source: _commDefaultSource() }); } },
-  { type: 'witnesses', label: 'Witnesses', icon: '☁️', scope: 'section',
+  { type: 'witnesses', label: 'Voices', icon: '☁️', scope: 'section',
     from: 'the Outline section',
-    defaultParams: function () { return _sectionToolParams({ source: 'cow-synthesis' }); } },
+    defaultParams: function () { return _sectionToolParams({ source: 'cow' }); } },   // locked to Cloud of Witnesses — Church Fathers
   { type: 'word-study', label: 'Word', icon: '🔤', scope: 'word',
     from: 'the Key words section (or tap a word in the passage)',
     defaultParams: function () {
@@ -1169,7 +1262,7 @@ var _TOOLS = [
       if (!w || !w.code) return null;
       return { code: w.code, lang: w.lang };
     } },
-  { type: 'crossversion', label: 'Versions', icon: '⇄', scope: 'word',
+  { type: 'crossversion', label: 'Vers.', full: 'Versions', icon: '⇄', scope: 'word',
     from: 'the Key words section (or tap a word in the passage)',
     defaultParams: function () {
       var w = _bladeCtx.word || _lastData.keywords[0];
@@ -1179,8 +1272,8 @@ var _TOOLS = [
   { type: 'placetime', label: 'Places', icon: '🗺️', scope: 'passage',
     from: 'the Where & when section',
     defaultParams: function () { return { ref: _lastData.ref }; } },
-  { type: 'biblepedia', label: 'Encyc.', icon: '📚', scope: 'passage',
-    from: 'the Encyclopedia section',
+  { type: 'biblepedia', label: 'Pedia', full: 'Biblepedia', icon: '📚', scope: 'passage',
+    from: 'the Biblepedia section',
     defaultParams: function () { return { articles: _lastData.biblepedia || [], ref: _lastData.ref }; } },
   { type: 'book-details', label: 'Book', icon: '📖', scope: 'book',
     from: 'the “About book” button',
@@ -1197,7 +1290,7 @@ function _toolTitle(type, params, tool) {
   if (type === 'crossversion') return 'Versions: ' + (params.code || 'word');
   if (type === 'placetime') return 'Places & time';
   if (type === 'book-details') return params.bookName || (tool && tool.label) || 'Book';
-  if (type === 'biblepedia') return 'Encyclopedia';
+  if (type === 'biblepedia') return 'Biblepedia';
   return (tool && tool.label) || type;
 }
 // Section-scoped tools (Synthesis/Commentary/Witnesses) share the same launch context: the
@@ -1211,11 +1304,13 @@ function _sectionToolParams(extra) {
   if (extra) for (var k in extra) p[k] = extra[k];
   return p;
 }
-// The Commentary tab opens at the reader's current source — but never 'cow-synthesis', which is
-// the Witnesses tab's job (it's a distillation, not a commentary to browse). Falls back to 'cow'.
-function _commDefaultSource() { var s = getCommentarySource(); return s === 'cow-synthesis' ? 'cow' : s; }
+// The Commentary tab never offers 'cow' (the raw Church-Father voices) — that's the dedicated,
+// locked Voices tab. Its picker is the rest of COMMENTARY_SOURCES (cow-synthesis, mkt). The
+// default opens at the reader's current source, mapping 'cow' → its synthesis.
+function _commDefaultSource() { var s = getCommentarySource(); return s === 'cow' ? 'cow-synthesis' : s; }
+function _commSources() { return COMMENTARY_SOURCES.filter(function (s) { return s.id !== 'cow'; }); }
 function _commTitle(type, secLabel) {
-  var base = type === 'witnesses' ? '☁️ Witnesses' : '🗒️ Commentary';
+  var base = type === 'witnesses' ? '☁️ Voices' : '🗒️ Commentary';
   return secLabel ? base + ' · ' + secLabel : base;
 }
 
@@ -1283,6 +1378,7 @@ function _bladeTo(level) {
 }
 function _closeBlades() {
   _bladeStack = [];
+  _destroyMaps();   // tear down any Leaflet maps the Places blade built (only blade that makes them)
   if (_deskEl) _deskEl.classList.remove('reader-study-desk--blade');
   var b = document.getElementById('sd-blade-body');
   if (b) b.innerHTML = '';
@@ -1292,6 +1388,7 @@ function _renderTopBlade() {
   var body = document.getElementById('sd-blade-body');
   var crumbsEl = _deskEl && _deskEl.querySelector('.study-blade__crumbs');
   if (!body) return;
+  _destroyMaps();   // leaving/replacing a blade: drop the Places blade's maps so they don't leak
   _deskEl.classList.add('reader-study-desk--blade');
   if (_deskEl) _deskEl.scrollTop = 0;   // overlay aligns to the desk's visible top
   var crumbs = '<button type="button" class="study-blade__crumb" data-lvl="0">Passage</button>';
@@ -1353,10 +1450,13 @@ function _fillWordStarters(lang, activeCode) {
       (theoOnly.length ? 'Key theological words here — tap to study:' : 'Key words here — tap to study:') + '</p>' +
       '<div class="study-word-chips">' + pick.map(function (k) {
         var on = String(k.code) === String(activeCode);
+        // Always show the English equivalent: prefer the gloss ("love"), fall back to the
+        // transliteration ("agapē") so no badge is ever original-script-only.
+        var eng = k.gloss || k.translit || '';
         return '<button type="button" class="study-word-chip' + (on ? ' study-word-chip--active' : '') +
           '" data-code="' + _esc(k.code) + '" data-lang="' + _esc(k.lang || lang) + '">' +
           '<span class="study-word-chip__lemma">' + _esc(k.lemma || k.code) + '</span>' +
-          (k.gloss ? '<span class="study-word-chip__gloss">' + _esc(k.gloss) + '</span>' : '') +
+          (eng ? '<span class="study-word-chip__gloss">' + _esc(eng) + '</span>' : '') +
         '</button>';
       }).join('') + '</div>';
     host.querySelectorAll('.study-word-chip').forEach(function (chip) {
@@ -1444,8 +1544,15 @@ function _fillWordDetail(code, lang, host) {
 }
 
 // ── Book-details blade ─────────────────────────────────────────────────────
+// Each book-detail section (Setting, Purpose, Themes, …) is a collapsible <details>, open by
+// default so the article reads normally but can be folded away to scan the headings.
 function _bookSec(title, content) {
-  return content ? '<div class="study-book__sec"><h4>' + _esc(title) + '</h4>' + content + '</div>' : '';
+  return content
+    ? '<details class="study-book__sec" open>' +
+        '<summary class="study-book__sechead"><span class="study-book__chev" aria-hidden="true">▾</span><h4>' + _esc(title) + '</h4></summary>' +
+        '<div class="study-book__secbody">' + content + '</div>' +
+      '</details>'
+    : '';
 }
 function _renderBookDetailsBlade(params, body) {
   var bookId = params.bookId;
@@ -1629,120 +1736,162 @@ function _fillSynthVoices(bookId, ch, range) {
   }).catch(function () { host.innerHTML = '<p class="study-empty">Could not load voices.</p>'; });
 }
 
-// ── Encyclopedia blade ─────────────────────────────────────────────────────
-// INTENT: List every Biblepedia article keyed to the passage as an expandable card. The card
-//   summary (term + kind + the matched verses) is built from the already-loaded index; the full
-//   intro HTML we authored is fetched lazily on first expand, with a link out to the full article.
-// CHANGE? Opened from the "Encyclopedia" section launcher (_fillBiblepedia) with params.articles
-//   pre-computed by _bpMatches. Intros come from data/biblepedia/articles/{id}.json (.intro);
-//   "Read the full article" targets /biblepedia/?a={id}.
-// VERIFY: Study desk on Exodus 6 → Encyclopedia → "Read N articles as cards" → cards for Aaron,
-//   Moses, … ; expanding Aaron loads the intro paragraph + a working "Read the full article →".
+// ── Biblepedia blade ────────────────────────────────────────────────────────
+// INTENT: The passage's Biblepedia terms, GROUPED BY VERSE in reading order — one collapsible
+//   <details> per verse (open by default) so the reader can walk the chapter verse by verse and
+//   fold away the ones they're done with. An article keyed to several verses appears under each.
+//   Each card is a mini-article: term + kind + a short preview (first ~2 sentences / 200 words)
+//   ending "…" with a "Read the full article →" link; previews are real article text fetched per
+//   card (data/biblepedia/articles/{id}.json .intro), cached.
+// CHANGE? Opened from the "Biblepedia" section launcher (_fillBiblepedia) with params.articles
+//   pre-computed by _bpMatches (each carries .refs = matched verse displays). Grouping parses the
+//   verse from each ref via parseRef. Preview length via _previewFromHtml; full link → /biblepedia/?a={id}.
+// VERIFY: Study desk on John 1 → Biblepedia → a "John 1:1" group, "John 1:3" group, … each
+//   collapsible, listing that verse's articles with a 2-sentence teaser + "Read the full article →".
 var _BP_CAT_LABELS = {
   people: 'Person', places: 'Place', events: 'Event', event: 'Event',
   concepts: 'Concept', concept: 'Concept', names: 'Name', father: 'Church Father', commentator: 'Commentator'
 };
 function _bpCatLabel(c) { return _BP_CAT_LABELS[c] || (c ? c.charAt(0).toUpperCase() + c.slice(1) : ''); }
 
+// Plain-text preview from intro HTML: first `maxSentences` sentences, hard-capped at `maxWords`.
+// Returns {text, truncated} so the caller can append an ellipsis only when something was cut.
+function _previewFromHtml(html, maxSentences, maxWords) {
+  var tmp = document.createElement('div');
+  tmp.innerHTML = html || '';
+  var text = (tmp.textContent || '').replace(/\s+/g, ' ').trim();
+  if (!text) return { text: '', truncated: false };
+  var sentences = text.match(/[^.!?]+[.!?]+(?:["'’”)\]]+)?/g) || [text];
+  var picked = sentences.slice(0, maxSentences).join(' ').trim();
+  var truncated = sentences.length > maxSentences;
+  var words = picked.split(/\s+/);
+  if (words.length > maxWords) { picked = words.slice(0, maxWords).join(' '); truncated = true; }
+  if (picked.length < text.length) truncated = true;
+  return { text: picked, truncated: truncated };
+}
+
+function _bpCardHtml(a) {
+  return '<div class="study-bp-card" data-id="' + _esc(a.id) + '">' +
+    '<div class="study-bp-card__sum">' +
+      '<span class="study-bp-card__term">' + _esc(a.term) + '</span>' +
+      (a.category ? '<span class="study-bp-card__cat study-bp-card__cat--' + _esc(a.category) + '">' + _esc(_bpCatLabel(a.category)) + '</span>' : '') +
+    '</div>' +
+    '<div class="study-bp-card__lazy"><p class="study-bp-card__preview study-bp-card__preview--load">' + _esc(a.brief || 'Loading…') + '</p></div>' +
+  '</div>';
+}
 function _renderBiblepediaBlade(params, body) {
   var arts = params.articles || [];
-  if (!arts.length) { body.innerHTML = '<p class="study-empty">No encyclopedia articles for this passage.</p>'; return; }
-  var html = '<div class="study-bp">' +
-    '<p class="study-bp__intro">' + arts.length + ' article' + (arts.length === 1 ? '' : 's') +
-      ' the encyclopedia keys to <strong>' + _esc(params.ref || 'this passage') + '</strong>. ' +
-      'Open a card for its full introduction.</p>';
+  if (!arts.length) { body.innerHTML = '<p class="study-empty">No Biblepedia articles for this passage.</p>'; return; }
+
+  // Group by the verse each article keys to (one card per article per verse), ordered by verse.
+  var byVerse = Object.create(null), verseOrder = [], briefById = Object.create(null);
   arts.forEach(function (a) {
-    html += '<details class="study-bp-card" data-id="' + _esc(a.id) + '">' +
-      '<summary class="study-bp-card__sum">' +
-        '<span class="study-bp-card__term">' + _esc(a.term) + '</span>' +
-        (a.category ? '<span class="study-bp-card__cat study-bp-card__cat--' + _esc(a.category) + '">' + _esc(_bpCatLabel(a.category)) + '</span>' : '') +
+    briefById[a.id] = a.brief || '';
+    var seen = Object.create(null);
+    (a.refs || []).forEach(function (r) {
+      var p = parseRef(r);
+      var v = p ? p.v : null;
+      if (v == null || seen[v]) return;     // one card per article per verse
+      seen[v] = 1;
+      if (!byVerse[v]) { byVerse[v] = []; verseOrder.push(v); }
+      byVerse[v].push(a);
+    });
+  });
+  verseOrder.sort(function (a, b) { return a - b; });
+
+  var html = '<div class="study-bp">' +
+    '<p class="study-bp__intro">' + arts.length + ' Biblepedia article' + (arts.length === 1 ? '' : 's') +
+      ' across <strong>' + _esc(params.ref || 'this passage') + '</strong>, by verse.</p>';
+  verseOrder.forEach(function (v) {
+    var group = byVerse[v];
+    var label = (params.ref ? _esc(params.ref) + ':' : 'v') + v;
+    html += '<details class="study-bp-vgroup" open>' +
+      '<summary class="study-bp-vgroup__head">' +
+        '<span class="study-bp-vgroup__chev" aria-hidden="true">▾</span>' +
+        '<span class="study-bp-vgroup__ref">' + label + '</span>' +
+        '<button type="button" class="study-bp-vgroup__go" data-v="' + v + '" title="Scroll to verse" aria-label="Scroll to ' + label + '">↪</button>' +
+        '<span class="study-bp-vgroup__count">' + group.length + '</span>' +
       '</summary>' +
-      '<div class="study-bp-card__body">' +
-        (a.brief ? '<p class="study-bp-card__brief">' + _esc(a.brief) + '</p>' : '') +
-        (a.refs && a.refs.length
-          ? '<div class="study-bp-card__refs">' + a.refs.map(function (r) {
-              return '<a class="ref study-bp-card__ref" data-ref="' + _esc(r) + '">' + _esc(r) + '</a>';
-            }).join('') + '</div>'
-          : '') +
-        '<div class="study-bp-card__lazy"><p class="study-empty">Loading…</p></div>' +
-      '</div>' +
+      '<div class="study-bp-vgroup__body">' + group.map(_bpCardHtml).join('') + '</div>' +
     '</details>';
   });
   html += '</div>';
   body.innerHTML = html;
-  wireRefLinks(body);   // matched-verse chips scroll the reader
+  wireRefLinks(body);
 
+  // Per-verse scroll buttons (don't toggle the <details> they sit in).
+  body.querySelectorAll('.study-bp-vgroup__go').forEach(function (b) {
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); _scrollToVerse(b.getAttribute('data-v')); });
+  });
+  // Each card resolves its own intro → 2-sentence / 200-word preview + "Read the full article →".
   body.querySelectorAll('.study-bp-card').forEach(function (card) {
-    var loaded = false;
-    card.addEventListener('toggle', function () {
-      if (!card.open || loaded) return;
-      loaded = true;
-      _fillBPCard(card.getAttribute('data-id'), card.querySelector('.study-bp-card__lazy'));
-    });
+    var id = card.getAttribute('data-id');
+    _fillBPCard(id, card.querySelector('.study-bp-card__lazy'), briefById[id]);
   });
 }
 
-function _fillBPCard(id, host) {
+function _fillBPCard(id, host, brief) {
   if (!host) return;
+  var more = '<a class="study-bp-card__more" target="_blank" rel="noopener" href="' +
+    _esc(_BP_URL + '?a=' + encodeURIComponent(id)) + '">Read the full article →</a>';
   _loadBPArticle(id).then(function (art) {
     if (!host.isConnected) return;
-    var intro = (art && art.intro) || '';
-    var more = '<a class="study-bp-card__more" target="_blank" rel="noopener" href="' +
-      _esc(_BP_URL + '?a=' + encodeURIComponent(id)) + '">Read the full article →</a>';
-    host.innerHTML = (intro ? '<div class="study-bp-card__intro">' + intro + '</div>'
-                            : '<p class="study-empty">No introduction available.</p>') + more;
-    // The index "brief" is usually the intro's first sentence — once the full intro is shown,
-    // drop the teaser so it isn't repeated verbatim. Kept as the only text if there's no intro.
-    if (intro) {
-      var brief = host.closest('.study-bp-card__body');
-      brief = brief && brief.querySelector('.study-bp-card__brief');
-      if (brief) brief.remove();
-    }
-    wireRefLinks(host);
-  }).catch(function () { host.innerHTML = '<p class="study-empty">Could not load this article.</p>'; });
+    var pv = _previewFromHtml((art && art.intro) || '', 2, 200);
+    var text = pv.text || brief || '';
+    host.innerHTML = text
+      ? '<p class="study-bp-card__preview">' + _esc(text) + (pv.truncated ? ' …' : '') + '</p>' + more
+      : '<p class="study-empty">No introduction available.</p>' + more;
+  }).catch(function () {
+    if (!host.isConnected) return;
+    host.innerHTML = (brief ? '<p class="study-bp-card__preview">' + _esc(brief) + ' …</p>' : '<p class="study-empty">Could not load this article.</p>') + more;
+  });
 }
 
-// ── Commentary / Witnesses blade (section-scoped, source-switchable) ────────
+// ── Commentary / Voices blade (section-scoped) ──────────────────────────────
 // INTENT: Read the historic-church commentary for a pericope WITHOUT leaving the desk. One
-//   renderer backs two binder tabs: "Commentary" opens at the reader's current source (Cloud of
-//   Witnesses voices / MKT cards); "Witnesses" opens the per-verse Cloud-of-Witnesses synthesis.
-//   Both expose the same source selector + the SD-T2 section chips, so a reader can swap pericope
-//   or source in place. The full multi-voice text already lives in core.js's commentary layer —
-//   this just scopes + renders it (decorateCatena for 'cow', decorateMkt for 'mkt', plain HTML
-//   for the AI syntheses), per verse in the section's range.
-// CHANGE? Sources come from COMMENTARY_SOURCES. Data via loadCommentary/loadMktAll (per-chapter
-//   {ch:{v:html}}). Section range parsed from params.range. Registered for both 'commentary' and
-//   'witnesses' types (they differ only in the initial source + title).
-// VERIFY: Study desk → Commentary tab → source = Cloud of Witnesses → each verse of the section
-//   shows collapsible Father voices; switch to MKT → three cards per verse; Witnesses tab opens
-//   the synthesis paragraph per verse. Section chips swap the pericope without a Back trip.
+//   renderer backs two binder tabs: "Voices" is LOCKED to Cloud of Witnesses — Church Fathers
+//   (the raw multi-voice catena, no picker); "Commentary" offers the rest of COMMENTARY_SOURCES
+//   (the COW synthesis, MKT cards) via a source selector — the raw 'cow' is intentionally absent
+//   there because it has its own Voices tab. Both share the SD-T2 section chips. The full text
+//   already lives in core.js's commentary layer — this just scopes + renders it (decorateCatena
+//   for 'cow', decorateMkt for 'mkt', plain HTML for the syntheses), per verse in the range.
+// CHANGE? Voices is keyed by type 'witnesses' (source forced to 'cow', picker suppressed).
+//   Commentary picker = _commSources() (COMMENTARY_SOURCES minus 'cow'). Data via
+//   loadCommentary/loadMktAll (per-chapter {ch:{v:html}}); range parsed from params.range.
+// VERIFY: Study desk → Voices tab → collapsible Father voices per verse, NO source dropdown;
+//   Commentary tab → dropdown lists Synthesis + MKT only (no "Church Fathers"); section chips
+//   swap the pericope without a Back trip.
 function _commSrcMeta(id) { for (var i = 0; i < COMMENTARY_SOURCES.length; i++) if (COMMENTARY_SOURCES[i].id === id) return COMMENTARY_SOURCES[i]; return null; }
 function _commSourceRow(source) {
   return '<div class="study-comm-srcrow"><label class="study-comm-srclabel">Source</label>' +
     '<select class="study-comm-src" aria-label="Commentary source">' +
-    COMMENTARY_SOURCES.map(function (s) {
+    _commSources().map(function (s) {
       return '<option value="' + _esc(s.id) + '"' + (s.id === source ? ' selected' : '') + '>' + _esc(s.label) + '</option>';
     }).join('') + '</select></div>';
 }
 function _renderCommentaryBlade(params, body) {
+  var top = _bladeStack[_bladeStack.length - 1];
+  var type = top ? top.type : 'commentary';
+  var isVoices = (type === 'witnesses');                 // Voices = locked to Cloud of Witnesses (cow)
   var startV = params.startV;
-  var source = params.source || _commDefaultSource();
-  // Section switcher + source selector pinned at the top (SD-T2); content fills below.
-  body.innerHTML = _sectionChips(startV) + _commSourceRow(source) +
+  var source = isVoices ? 'cow' : (params.source || _commDefaultSource());
+  // Section switcher pinned at the top (SD-T2); Commentary also gets a source selector; content below.
+  body.innerHTML = _sectionChips(startV) +
+    (isVoices ? '<p class="study-sec-note study-comm-locked">Cloud of Witnesses — Church Fathers</p>' : _commSourceRow(source)) +
     '<div class="study-comm-content"><p class="study-empty">Loading…</p></div>';
   _wireSectionChips(body, function (sec) {
     _bladeCtx.section = sec;
-    var top = _bladeStack[_bladeStack.length - 1];
-    if (top) {
-      top.params = Object.assign({}, top.params, { startV: sec.startV, range: sec.range, label: sec.label });
-      top.title = _commTitle(top.type, sec.label);
+    var t = _bladeStack[_bladeStack.length - 1];
+    if (t) {
+      t.params = Object.assign({}, t.params, { startV: sec.startV, range: sec.range, label: sec.label });
+      t.title = _commTitle(t.type, sec.label);
     }
     _renderTopBlade();   // re-render chips (new active) + source row + content in place
   });
   var sel = body.querySelector('.study-comm-src');
   if (sel) sel.addEventListener('change', function () {
-    var top = _bladeStack[_bladeStack.length - 1];
-    if (top) top.params.source = sel.value;   // local to the blade — does NOT change the reader's source
+    var t = _bladeStack[_bladeStack.length - 1];
+    if (t) t.params.source = sel.value;   // local to the blade — does NOT change the reader's source
     _fillCommentaryContent(Object.assign({}, params, { source: sel.value }), body.querySelector('.study-comm-content'));
   });
   _fillCommentaryContent(Object.assign({}, params, { source: source }), body.querySelector('.study-comm-content'));
@@ -1795,7 +1944,10 @@ function _fillCommentaryContent(params, host) {
 //   _bladeCtx.word so the tab follows whatever word you last studied.
 // VERIFY: Study a Greek/Hebrew key word → Versions tab → the verses carrying it appear, each with
 //   KJV/BSB/WEB/ASV stacked; verse refs scroll the reader.
-var _CV_VERSIONS = [['KJV', 'KJV'], ['BSB', 'BSB'], ['WEB', 'WEB'], ['ASV', 'ASV']];
+// loadBook() understands the MKT tier ids (data/translation/draft/{tier}) too, so the three
+// MKT renderings sit alongside the public-domain versions; missing drafts just .catch → null.
+var _CV_VERSIONS = [['KJV', 'KJV'], ['BSB', 'BSB'], ['WEB', 'WEB'], ['ASV', 'ASV'],
+  ['MKT-L', 'MKT-L'], ['MKT-M', 'MKT-M'], ['MKT-T', 'MKT-T']];
 function _renderCrossVersionBlade(params, body) {
   var code = params.code;
   var lang = params.lang || (code && code.charAt(0) === 'H' ? 'hebrew' : 'greek');
@@ -1861,7 +2013,18 @@ function _renderCrossVersionBlade(params, body) {
 //   shows "Life of Christ" linking the timeline. Romans 1 (no place) → graceful note + period.
 function _renderPlaceTimeBlade(params, body) {
   var nav = window._readerNavState || {};
-  body.innerHTML = '<p class="study-empty">Loading…</p>';
+  // Two parts: the annotated "Where & when" map(s) (moved here from the section list), then quick
+  // deep-link lists for the passage's places and period.
+  body.innerHTML =
+    '<div class="study-pt">' +
+      '<div class="study-pt__maps" id="sd-pt-maps"><p class="study-empty">Loading map…</p></div>' +
+      '<div class="study-pt__lists" id="sd-pt-lists"><p class="study-empty">Loading…</p></div>' +
+    '</div>';
+  _fillMaps(nav.bookId, nav.bookName || nav.bookId, nav.ch, _curKey, document.getElementById('sd-pt-maps'));
+  _fillPlaceTimeLists(nav, document.getElementById('sd-pt-lists'));
+}
+function _fillPlaceTimeLists(nav, body) {
+  if (!body) return;
   Promise.all([_loadPlaces(), _loadPowers(), _loadCtx()]).then(function (res) {
     if (!body.isConnected) return;
     var allPlaces = res[0] || [], powers = res[1] || {}, ctx = (res[2] || {})[nav.bookId] || null;
@@ -1870,7 +2033,7 @@ function _renderPlaceTimeBlade(params, body) {
     if (!periods.length && ctx) periods = [{ era: ctx.settingEra, t: ctx.settingT, year: '', book: true }];
     var powersAtT = (periods.length && periods[0].t != null) ? _powersAt(powers, periods[0].t) : [];
 
-    var html = '<div class="study-pt">';
+    var html = '';
     html += '<div class="study-pt__sec"><h4>Places in this passage</h4>';
     if (detected.length) {
       html += '<div class="study-pt__places">' + detected.map(function (d) {
@@ -1886,7 +2049,7 @@ function _renderPlaceTimeBlade(params, body) {
           '</div></div>';
       }).join('') + '</div>';
     } else {
-      html += '<p class="study-empty">This passage names no specific location. See <strong>Where &amp; when</strong> for the book’s geographic setting.</p>';
+      html += '<p class="study-empty">This passage names no specific location — the map above shows the book’s geographic setting.</p>';
     }
     html += '</div>';
 
@@ -1902,8 +2065,8 @@ function _renderPlaceTimeBlade(params, body) {
     } else {
       html += '<p class="study-empty">No dated period detected for this passage.</p>';
     }
-    if (ctx && ctx.writtenWhen) html += '<p class="study-sec-note">Written: ' + _esc(ctx.writtenWhen) + (ctx.writtenWhere ? ' · ' + _esc(ctx.writtenWhere.name) : '') + '</p>';
-    html += '</div></div>';
+    // (Author/written/setting already appear in the map header above, so not repeated here.)
+    html += '</div>';
 
     body.innerHTML = html;
     body.querySelectorAll('.study-pt__vbtn').forEach(function (b) { b.addEventListener('click', function () { _scrollToVerse(b.getAttribute('data-v')); }); });

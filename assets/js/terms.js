@@ -71,6 +71,18 @@ function _positionTermTip(anchor) {
   _termTipEl.style.left = left + 'px';
 }
 
+// Returns true when two term strings contain the same set of significant words
+// (case-insensitive, ignoring punctuation and the joiners "of"/"the"), i.e. one is a
+// reordering of the other. Used to hide a redundant "(aka …)" for forward place aliases.
+function _sameWordSet(a, b) {
+  function sig(s) {
+    return s.toLowerCase().split(/[^a-z]+/).filter(function (w) {
+      return w && w !== 'of' && w !== 'the';
+    }).sort().join(' ');
+  }
+  return sig(a) === sig(b);
+}
+
 function _srcLabel(entry) {
   // AUD-22: cover every category the index emits (incl. singular variants and the
   // event/father/commentator categories) so the tooltip source label is never blank.
@@ -102,7 +114,13 @@ function _showTermTip(anchor, key) {
   if (entry.redirect && _termById && _termById[entry.redirect]) {
     entry = _termById[entry.redirect];
   }
-  var akaHtml = (entry !== hovered)
+  // INTENT: Suppress the "(aka …)" tag when the hovered alias is merely a word-reordering
+  //   of the canonical term — e.g. the forward place alias "Mount of Olives" redirecting to
+  //   the inverted dictionary headword "Olives, Mount of". Showing "(aka Olives, Mount of)"
+  //   there is noise; a genuinely different synonym (e.g. "Calvary" → "Golgotha") still shows.
+  // VERIFY: Hover "Mount of Olives" in a chapter — heading reads "Mount of Olives" with no aka;
+  //   hover "Mount Zion" — heading "Mount Zion (aka Zion)" still shows the real canonical.
+  var akaHtml = (entry !== hovered && !_sameWordSet(hovered.term, entry.term))
     ? ' <span class="bsw-term-tooltip__aka">(aka ' + escHtml(entry.term) + ')</span>'
     : '';
 
