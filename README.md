@@ -6,13 +6,14 @@ PWA with full offline support.
 
 ## Live Site
 
-> https://seriousd6.github.io/
+> https://kingdombiblestudy.com/
 
-## Architecture (Astro migration, July 2026)
+## Architecture (Astro, since July 2026)
 
-The site is mid-migration to [Astro](https://astro.build). Pages are authored as
-`.astro` files sharing one layout; the runtime (JS modules, CSS, Bible data,
-service worker) is untouched and ships verbatim.
+Pages are authored as `.astro` files sharing one layout; the runtime (JS
+modules, CSS, Bible data, service worker) ships verbatim. `src/pages/` is the
+single source of truth for page HTML — the legacy root `*.html` pages were
+retired after the cutover.
 
 ```
 ├── src/
@@ -32,13 +33,13 @@ service worker) is untouched and ships verbatim.
     └── deploy.yml           # Pages deploy — manual until cutover (see file header)
 ```
 
-**Overlay layout:** until cutover, GitHub Pages serves the branch directly, so the
-legacy root `*.html` pages remain in place and the Astro tree is purely additive.
-`tools/root-statics.mjs` bridges `astro dev` to the root `assets/`/`data/` dirs;
-`deploy.yml` copies them into `dist/` for Actions-based deploys. A handful of
-redirect stubs (`devotionals/`, `plans/`, `word/`, …) and the `_template` scaffolds
-are excluded from conversion and ship verbatim — the copy lists live in
-`tools/root-statics.mjs` and `deploy.yml` and must stay in sync.
+**Overlay layout:** the static runtime tree stays at the repo root (the hourly
+data auto-sync writes to `data/` — do not move it). `tools/root-statics.mjs`
+bridges `astro dev` to the root `assets/`/`data/` dirs; `deploy.yml` copies them
+into `dist/` for the Pages deploy. A handful of redirect stubs (`devotionals/`,
+`plans/`, `word/`, …) and the `_template` scaffolds are not Astro pages and ship
+verbatim — the copy lists live in `tools/root-statics.mjs` and `deploy.yml` and
+must stay in sync.
 
 ## Development
 
@@ -46,12 +47,11 @@ are excluded from conversion and ship verbatim — the copy lists live in
 npm install
 npm run dev       # localhost:4321 — pages from src/, statics from repo root
 npm run build     # dist/ (page HTML only; deploy workflow adds the static tree)
-npm run diff      # verify dist/ pages are DOM-identical to the legacy HTML
 ```
 
-Pre-cutover, the legacy root HTML is still what production serves: page edits must
-go into **both** the root HTML and `src/pages/` (or edit root HTML and re-run
-`npm run convert`). Post-cutover, `src/pages/` is the single source of truth.
+Every push to `master` deploys via `.github/workflows/deploy.yml`.
+(`npm run convert` / `npm run diff` were the one-time migration tooling — kept
+for reference; the legacy HTML they operated on is gone.)
 
 ## Adding a page
 

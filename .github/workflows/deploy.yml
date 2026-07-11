@@ -1,23 +1,18 @@
 name: Deploy (Astro)
 
-# Builds the Astro site and deploys it to GitHub Pages.
-#
-# ── CUTOVER (not yet done — site currently serves the branch directly) ──
-# 1. Repo Settings → Pages → Source: change "Deploy from a branch" to "GitHub Actions".
-# 2. Replace the `workflow_dispatch` trigger below with:
-#      push:
-#        branches: [ master ]
-#      workflow_dispatch:
-#    so every push (including the hourly data auto-sync) redeploys.
-# 3. After a verified deploy, the legacy root *.html pages can be deleted
-#    (their Astro sources in src/pages/ are now the source of truth).
-# Rollback at any time: flip Pages Source back to "Deploy from a branch".
+# Builds the Astro site and deploys it to GitHub Pages (kingdombiblestudy.com).
+# Cutover completed 2026-07-11: Pages Source is "GitHub Actions" and src/pages/
+# is the single source of truth for page HTML. Every push to master (including
+# the hourly data auto-sync) redeploys. Rollback: rerun a previous successful
+# run of this workflow, or `git revert` and push.
 #
 # The copy step below must stay in sync with STATIC_DIRS / STATIC_FILES in
 # tools/root-statics.mjs (the dev-server equivalent) and VERBATIM_PAGES in
 # tools/convert-pages.mjs.
 
 on:
+  push:
+    branches: [ master ]
   workflow_dispatch:
 
 permissions:

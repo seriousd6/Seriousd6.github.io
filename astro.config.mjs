@@ -8,7 +8,7 @@ import rootStatics from './tools/root-statics.mjs';
 // untouched; rootStatics() serves those root paths during `astro dev`, and the
 // deploy workflow copies them into dist/ after `astro build`.
 export default defineConfig({
-  site: 'https://seriousd6.github.io',
+  site: 'https://kingdombiblestudy.com',
   // Ship page markup un-minified so dist output stays diffable against the
   // legacy hand-authored HTML (Phase-1 acceptance is a clean DOM diff).
   compressHTML: false,
