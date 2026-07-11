@@ -164,7 +164,7 @@
 .plan-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-card, 12px);
   padding: 1.1rem 1.2rem;
   margin-bottom: 1rem;
 }
@@ -349,7 +349,7 @@
 /* form */
 .journal-form {
   background: var(--color-surface); border: 1px solid var(--color-primary);
-  border-radius: 8px; padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
+  border-radius: var(--radius-card, 12px); padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
 }
 .journal-form h2 { font-size: 1rem; margin: 0 0 .85rem; color: var(--color-primary); }
 .journal-field { margin-bottom: .75rem; }
@@ -397,7 +397,7 @@
 /* entry cards */
 .journal-entry {
   background: var(--color-surface); border: 1px solid var(--color-border);
-  border-radius: 8px; margin-bottom: .85rem; overflow: hidden;
+  border-radius: var(--radius-card, 12px); margin-bottom: .85rem; overflow: hidden;
 }
 .journal-entry--has-updates { border-left: 3px solid var(--color-accent); }
 .journal-entry--answered    { border-left: 3px solid #4caf50; }
@@ -512,7 +512,7 @@
 
 .worship-form {
   background: var(--color-surface); border: 1px solid var(--color-primary);
-  border-radius: 8px; padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
+  border-radius: var(--radius-card, 12px); padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
 }
 .worship-form h2 { font-size: 1rem; margin: 0 0 .85rem; color: var(--color-primary); }
 .worship-field { margin-bottom: .7rem; }
@@ -537,7 +537,7 @@
 
 .worship-entry {
   background: var(--color-surface); border: 1px solid var(--color-border);
-  border-radius: 8px; margin-bottom: .75rem; overflow: hidden;
+  border-radius: var(--radius-card, 12px); margin-bottom: .75rem; overflow: hidden;
 }
 .worship-entry__head {
   display: flex; align-items: flex-start; justify-content: space-between;

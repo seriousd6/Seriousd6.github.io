@@ -50,7 +50,7 @@
   display: flex;
   align-items: stretch;
   border: 1px solid var(--color-border, #e0e0e0);
-  border-radius: 12px;
+  border-radius: var(--radius-card, 12px);
   overflow: hidden;
   background: var(--color-surface, #fff);
   /* 1.5rem main padding + ~90px for lb-header + 2px border */
