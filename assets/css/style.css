@@ -583,14 +583,16 @@ span.term { font-weight: bold; color: var(--color-primary); }
 
 /* ── Footer ── */
 .site-footer {
-  background: var(--color-primary);
-  color: #e8d9bb;
+  /* Candlelight: quiet hairline footer instead of the old oak slab */
+  background: none;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
   padding: var(--space-lg) 0;
   margin-top: var(--space-xl);
   font-family: var(--font-ui);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
-.site-footer a { color: #f5e6c8; }
+.site-footer a { color: var(--color-accent); }
 .small { font-size: 0.8rem; opacity: 0.75; margin-top: var(--space-xs); }
 
 /* ── Today's Reading home widget ── */

@@ -33,7 +33,8 @@
 .daily-card {
   background: var(--color-surface, #fff);
   border: 1px solid var(--color-border, #e0e0e0);
-  border-radius: 10px;
+  border-radius: var(--radius-card, 12px);
+  box-shadow: var(--shadow-card, none);
   margin-bottom: 1.25rem;
   overflow: hidden;
 }
@@ -49,11 +50,14 @@
 }
 
 .daily-card__title {
-  font-size: 1rem;
-  font-weight: 700;
+  /* Candlelight: card titles set as quiet uppercase UI labels */
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: .74rem;
+  font-weight: 600;
   margin: 0;
-  color: var(--color-heading, var(--color-text));
-  letter-spacing: .01em;
+  color: var(--color-muted, #7c6e56);
+  letter-spacing: .15em;
+  text-transform: uppercase;
 }
 
 /* ── Plan/devotional selects ────────────────────────────────────────────────── */
