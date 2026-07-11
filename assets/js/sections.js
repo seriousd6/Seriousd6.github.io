@@ -13,11 +13,11 @@
  */
 'use strict';
 
-import { escHtml } from './core.js';
+import { _resolve, escHtml } from './core.js';
 
-var _IDX_URL   = new URL('../../data/sections-index.json', import.meta.url).href;
-var _ALIAS_URL = new URL('../../data/sections-aliases.json', import.meta.url).href;
-var _BODY_URL  = new URL('../../data/sections-body.json', import.meta.url).href;
+var _IDX_URL   = _resolve('../../data/sections-index.json');
+var _ALIAS_URL = _resolve('../../data/sections-aliases.json');
+var _BODY_URL  = _resolve('../../data/sections-body.json');
 
 var _sections  = null;   // array from sections-index.json
 var _aliases   = null;   // { normalizedPhrase → { title, refs } }

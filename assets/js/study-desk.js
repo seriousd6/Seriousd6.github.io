@@ -36,27 +36,27 @@
  *   Collapse a section → it stays collapsed after navigating chapters.
  */
 
-import {
+import { _resolve,
   loadInterlinear, loadStrongs, loadCrossRefs, loadEchoes, loadLexicon, loadCommentary, parseRef, WORD_URL,
   COMMENTARY_SOURCES, getCommentarySource, decorateCatena, loadMktAll, decorateMkt, loadBook, MAPS_URL
 } from './core.js';
 import { wireRefLinks } from './wire.js';
 import { renderEchoCardsGrouped } from './parallels.js';
 
-var _PARA_URL   = new URL('../../data/paragraphs/', import.meta.url).href;
-var _PLACES_URL = new URL('../../data/maps/places.json', import.meta.url).href;
-var _CTX_URL    = new URL('../../data/study/book-context.json', import.meta.url).href;
-var _BPLACE_URL = new URL('../../data/study/book-places.json', import.meta.url).href;
-var _POWERS_URL = new URL('../../data/study/era-powers.json', import.meta.url).href;
-var _JOURNEY_URL = new URL('../../data/study/journeys.json', import.meta.url).href;
-var _REFS_URL    = new URL('../../data/strongs/refs/', import.meta.url).href;
-var _INTRO_URL   = new URL('../../data/books/introductions/', import.meta.url).href;
-var _SYNTH_URL   = new URL('../../data/synthesis/', import.meta.url).href;
-var _THEO_URL    = new URL('../../data/study/theological-terms.json', import.meta.url).href;  // Strong's code → weight (SD-T3)
-var _TIMELINE_URL = new URL('../../timeline/', import.meta.url).href;             // timeline page (?era=id)
-var _BP_URL      = new URL('../../biblepedia/', import.meta.url).href;            // article reader page (?a=slug)
-var _BP_IDX_URL  = new URL('../../data/biblepedia/index.json', import.meta.url).href;
-var _BP_ART_URL  = new URL('../../data/biblepedia/articles/', import.meta.url).href;
+var _PARA_URL   = _resolve('../../data/paragraphs/');
+var _PLACES_URL = _resolve('../../data/maps/places.json');
+var _CTX_URL    = _resolve('../../data/study/book-context.json');
+var _BPLACE_URL = _resolve('../../data/study/book-places.json');
+var _POWERS_URL = _resolve('../../data/study/era-powers.json');
+var _JOURNEY_URL = _resolve('../../data/study/journeys.json');
+var _REFS_URL    = _resolve('../../data/strongs/refs/');
+var _INTRO_URL   = _resolve('../../data/books/introductions/');
+var _SYNTH_URL   = _resolve('../../data/synthesis/');
+var _THEO_URL    = _resolve('../../data/study/theological-terms.json');  // Strong's code → weight (SD-T3)
+var _TIMELINE_URL = _resolve('../../timeline/');             // timeline page (?era=id)
+var _BP_URL      = _resolve('../../biblepedia/');            // article reader page (?a=slug)
+var _BP_IDX_URL  = _resolve('../../data/biblepedia/index.json');
+var _BP_ART_URL  = _resolve('../../data/biblepedia/articles/');
 
 // Leaflet basemap config — mirrors maps.js so the desk map looks like the maps page.
 var _TILE_URL  = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
@@ -1975,7 +1975,7 @@ function _fillCommentaryContent(params, host) {
     }
     host.innerHTML = any
       ? '<div class="study-comm" data-src="' + _esc(source) + '">' + blocks + '</div>' +
-        (meta && meta.isAI ? '<p class="study-sec-note study-comm-ai">✦ AI-assisted — see <a href="' + _esc(new URL('../../about/', import.meta.url).href) + '">/about/</a> for methods.</p>' : '')
+        (meta && meta.isAI ? '<p class="study-sec-note study-comm-ai">✦ AI-assisted — see <a href="' + _esc(_resolve('../../about/')) + '">/about/</a> for methods.</p>' : '')
       : '<p class="study-empty">No ' + _esc((meta && meta.label) || 'commentary') + ' for vv. ' + lo + (hi > lo ? '–' + hi : '') + ' yet.</p>';
     host.querySelectorAll('.study-comm-v__num').forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); _scrollToVerse(b.getAttribute('data-v')); }); });
     wireRefLinks(host);

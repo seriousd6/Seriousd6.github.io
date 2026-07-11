@@ -31,7 +31,7 @@ jobs:
       - name: JS syntax (node --check on all modules)
         run: |
           if command -v node >/dev/null 2>&1; then
-            for f in assets/js/*.js sw.js tools/*.mjs; do node --check "$f"; done
+            for f in assets/js/*.js assets/js/entries/*.js sw.js tools/*.mjs; do node --check "$f"; done
           else
             echo "node unavailable; skipping JS syntax check"
           fi

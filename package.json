@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node tools/build-assets.mjs",
     "preview": "astro preview",
     "convert": "node tools/convert-pages.mjs",
-    "diff": "node tools/diff-pages.mjs"
+    "diff": "node tools/diff-pages.mjs",
+    "build:assets": "node tools/build-assets.mjs"
   },
   "dependencies": {
     "astro": "^6.4.8"

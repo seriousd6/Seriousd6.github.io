@@ -11,11 +11,11 @@
  */
 'use strict';
 
-import { escHtml } from './core.js';
+import { _resolve, escHtml } from './core.js';
 import { wireRefLinks } from './wire.js';
 
-var _DATA_URL    = new URL('../../data/maps/timelapse.json', import.meta.url).href;
-var _REGIONS_URL = new URL('../../data/maps/regions.json', import.meta.url).href;
+var _DATA_URL    = _resolve('../../data/maps/timelapse.json');
+var _REGIONS_URL = _resolve('../../data/maps/regions.json');
 var TILE_URL   = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
 var TILE_ATTR  = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
 

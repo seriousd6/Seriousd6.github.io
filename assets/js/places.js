@@ -11,10 +11,10 @@
  */
 'use strict';
 
-import { escHtml, MAPS_URL } from './core.js';
+import { _resolve, escHtml, MAPS_URL } from './core.js';
 
 /* ── Data URL (relative to this file) ───────────────────────────────────── */
-var _PLACES_URL = new URL('../../data/maps/places.json', import.meta.url).href;
+var _PLACES_URL = _resolve('../../data/maps/places.json');
 
 /* ── State ───────────────────────────────────────────────────────────────── */
 var _placesReady  = null;          // Promise; resolves once places are loaded

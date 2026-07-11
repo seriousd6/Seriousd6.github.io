@@ -6,9 +6,13 @@ name: Deploy (Astro)
 # the hourly data auto-sync) redeploys. Rollback: rerun a previous successful
 # run of this workflow, or `git revert` and push.
 #
-# The copy step below must stay in sync with STATIC_DIRS / STATIC_FILES in
-# tools/root-statics.mjs (the dev-server equivalent) and VERBATIM_PAGES in
-# tools/convert-pages.mjs.
+# Phase 3 (2026-07-11): `npm run build` = astro build + tools/build-assets.mjs.
+# The asset step bundles/minifies assets/js through Vite (stable entry URLs,
+# hashed chunks), minifies assets/css in place, and writes dist/sw.js with a
+# regenerated precache list + content-hash APP_CACHE_V. The copy step below
+# only handles what the build doesn't: data/, scaffolds, and verbatim stubs.
+# It must stay in sync with STATIC_DIRS / STATIC_FILES in tools/root-statics.mjs
+# (the dev-server equivalent).
 
 on:
   push:
@@ -40,10 +44,11 @@ jobs:
           npm ci
           npm run build
 
-      - name: Copy legacy static tree into dist
+      - name: Copy remaining static tree into dist
         run: |
-          cp -r assets data dist/
-          cp sw.js manifest.json favicon.ico favicon.svg offline.html dist/
+          # assets/, sw.js, manifest, favicons, offline.html are emitted by
+          # tools/build-assets.mjs (npm run build) — only data/ + verbatim HTML here.
+          cp -r data dist/
           # Authoring scaffolds (Astro skips _-prefixed routes)
           mkdir -p dist/topics dist/study-guides
           cp -r topics/_template topics/_template-book dist/topics/

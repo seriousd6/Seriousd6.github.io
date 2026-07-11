@@ -24,11 +24,18 @@ retired after the cutover.
 │   ├── components/Sidebar.astro  # Static site nav (edit nav links HERE;
 │   │                        #   assets/js/main.js only wires behavior)
 │   └── pages/               # One .astro file per page, mirrors URL structure
-├── assets/                  # css/, js/ (ES modules), fonts/ — served as-is
+├── assets/                  # css/, js/ (ES modules), fonts/ — SOURCE tree; the
+│   │                        #   build bundles js/ through Vite (stable entry URLs
+│   │                        #   under entries/, hashed minified chunks) and
+│   │                        #   minifies css/ in place. `astro dev` serves it raw.
 ├── data/                    # Bible text, commentary, library JSON (~50k files);
 │   │                        #   written hourly by the local auto-sync — do not move
-├── sw.js                    # Service worker (bump APP_CACHE_V on asset changes)
+├── sw.js                    # Service worker. APP_CACHE_V + the JS/CSS precache
+│   │                        #   list are stamped at build time (BUILD:ASSETS
+│   │                        #   markers) — no manual bumps for JS/CSS changes
 ├── tools/
+│   ├── build-assets.mjs     # Vite-bundles entries, minifies stable files + CSS,
+│   │                        #   regenerates the sw.js precache into dist/
 │   ├── root-statics.mjs     # Dev-server middleware: serves the root static tree
 │   ├── convert-pages.mjs    # One-time legacy HTML → .astro converter
 │   └── diff-pages.mjs       # DOM-diffs dist/ against legacy root HTML

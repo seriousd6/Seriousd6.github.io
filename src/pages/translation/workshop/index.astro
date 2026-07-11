@@ -235,14 +235,5 @@ import Base from '../../../layouts/Base.astro';
       </div>
     </div>
 
-  </div><script type="module" is:inline="">
-    import { initTheme } from '../../assets/js/core.js';
-    import { initWorkshopPage } from '../../assets/js/workshop.js';
-    initTheme();
-    initWorkshopPage().catch(err => {
-      const el = document.getElementById('ws-loading-text');
-      if (el) el.textContent = 'Error loading: ' + err.message;
-      console.error('[Workshop]', err);
-    });
-  </script>
+  </div><script type="module" src="../../assets/js/entries/workshop.js" is:inline=""></script>
 </Base>

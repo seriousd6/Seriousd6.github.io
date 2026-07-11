@@ -114,7 +114,31 @@ cross-module callback registration in `app.js` must be preserved in `core-boot.j
 
 ---
 
-## Phase 3 — Bring assets into the Astro/Vite pipeline
+## Phase 3 — Bring assets into the Astro/Vite pipeline  ·  ✅ **DONE 2026-07-11**
+
+**Shipped:** `tools/build-assets.mjs` runs after `astro build` (`npm run build` does both):
+
+- The 17 entries are Vite-bundled: **entry URLs stay stable** (`entries/<name>.js`, so
+  Base.astro + verbatim HTML never learn about hashes) while shared code becomes
+  content-hashed minified chunks; dynamic imports become lazy hashed chunks.
+- `core.js`/`tracker.js` are **externals at stable URLs** — both are also imported by
+  inline page scripts (home/discipline/tracker), and bundled copies would fork their
+  module state. Verified single-instance: `markDone()` through the bundled entry fires
+  `onUpdate` subscribers registered via the stable import.
+- Workshop's inline imports became `entries/workshop.js` so its chain bundles too.
+- 7 modules resolved data URLs via `new URL(…, import.meta.url)` — broken inside
+  chunks; all rewritten to core.js `_resolve()` (chunk depth also pinned as defense).
+- CSS minified in place (same URLs); classic/inline-only files (`main.js`,
+  `settings.js`, `store.js`, `sg-progress.js`) ship as stable minified copies.
+- `sw.js`: precache list between `BUILD:ASSETS` markers + `APP_CACHE_V` are generated
+  at build from the emitted bytes — **manual version bumps for JS/CSS are retired**.
+- `deploy.yml` copy step shrank to data/ + scaffolds + stubs; `validate.yml` now
+  syntax-checks `entries/` too. `astro dev` still serves the raw tree (native ESM).
+
+**Result:** JS tree 1.9 MB → 880 KB emitted, CSS 876 → 628 KB. Functional pass against
+the built dist: 8/9 pages (maps' Leaflet CDN is blocked in the sandbox — environmental).
+
+### Original Phase 3 plan (for reference)
 
 **Goal:** let Astro/Vite bundle, tree-shake, code-split, and content-hash the JS/CSS
 that Phase 2 split by hand — and retire manual cache-busting (`?v=2`, `APP_CACHE_V`).

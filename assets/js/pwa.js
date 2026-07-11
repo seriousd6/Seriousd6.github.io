@@ -1,16 +1,16 @@
 /* pwa.js — Service Worker registration, PWA manifest injection, onboarding, SW update toast */
 'use strict';
 
-import { SW_URL, MANIFEST_URL, SITE_ROOT, READER_URL, escHtml, metaBooks, metaVersions } from './core.js';
+import { _resolve, SW_URL, MANIFEST_URL, SITE_ROOT, READER_URL, escHtml, metaBooks, metaVersions } from './core.js';
 
 export function _initOnboarding() {
   if (localStorage.getItem('bsw_onboarded')) return;
   var overlay = document.createElement('div');
   overlay.className = 'bsw-onboard-overlay';
   var readerUrl  = READER_URL;
-  var vsUrl      = new URL('../../read/?study=1', import.meta.url).href;   // SD-T5: verse study lives in the reader's study desk
-  var libraryUrl = new URL('../../library/', import.meta.url).href;
-  var memUrl     = new URL('../../memorize/', import.meta.url).href;
+  var vsUrl      = _resolve('../../read/?study=1');   // SD-T5: verse study lives in the reader's study desk
+  var libraryUrl = _resolve('../../library/');
+  var memUrl     = _resolve('../../memorize/');
   overlay.innerHTML =
     '<div class="bsw-onboard-card">' +
       '<h2 class="bsw-onboard-title">Welcome to Kingdom Bible Study</h2>' +
@@ -84,7 +84,7 @@ export function initPWA() {
   if (!document.querySelector('link[rel="apple-touch-icon"]')) {
     var touchIcon = document.createElement('link');
     touchIcon.rel  = 'apple-touch-icon';
-    touchIcon.href = new URL('../../assets/icon-192.png', import.meta.url).href;
+    touchIcon.href = _resolve('../../assets/icon-192.png');
     document.head.appendChild(touchIcon);
   }
 

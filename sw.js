@@ -139,6 +139,20 @@ var SHELL_URLS = [
   './tracker/index.html',
   './worship/index.html',
   './offline.html',
+  './memorize/index.html',
+  './journal/index.html',
+  './study-guides/index.html',
+  './study-guides/hebrews/index.html',
+  './study-guides/ephesians/index.html',
+  './study-guides/romans-1-8/index.html',
+  './study-guides/sermon-on-the-mount/index.html',
+  './study-guides/psalms/index.html',
+  // ── BUILD:ASSETS-START ────────────────────────────────────────────────────
+  // JS/CSS precache list. In the committed source this is the literal dev tree;
+  // tools/build-assets.mjs REGENERATES everything between these markers at build
+  // time (bundled entries, hashed chunks, stable externals, minified CSS) and
+  // stamps APP_CACHE_V with a content hash. Do not hand-edit between markers
+  // except to keep the dev list in sync with new source files.
   './assets/css/style.css',
   './assets/css/bible-ui.css',
   './assets/css/daily.css',
@@ -164,14 +178,6 @@ var SHELL_URLS = [
   './assets/css/ol-companion.css',
   './assets/css/timelapse.css',
   './assets/css/topical.css',
-  './memorize/index.html',
-  './journal/index.html',
-  './study-guides/index.html',
-  './study-guides/hebrews/index.html',
-  './study-guides/ephesians/index.html',
-  './study-guides/romans-1-8/index.html',
-  './study-guides/sermon-on-the-mount/index.html',
-  './study-guides/psalms/index.html',
   './assets/js/core-boot.js',
   './assets/js/entries/generic.js',
   './assets/js/entries/home.js',
@@ -225,6 +231,9 @@ var SHELL_URLS = [
   './assets/js/sync.js',
   './assets/js/timelapse-map.js',
   './assets/js/tracker.js',
+  './assets/css/workshop.css',
+  './assets/js/workshop.js',
+  // ── BUILD:ASSETS-END ──────────────────────────────────────────────────────
   './favicon.svg',
   './favicon.ico',
   './manifest.json',
@@ -279,8 +288,6 @@ var SHELL_URLS = [
   './data/wordcloud/frequencies.json',
   // Translation Workshop (SW-A through SW-M) — added 2026-06-06
   './translation/workshop/index.html',
-  './assets/css/workshop.css',
-  './assets/js/workshop.js',
   // Grammar data (SW-B particles, morphSig; SW-C debates; SW-H cognates; SW-I semantic; SW-J author-freq)
   './data/grammar/greek-particles.json',
   './data/grammar/hebrew-particles.json',

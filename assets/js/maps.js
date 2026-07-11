@@ -1,7 +1,7 @@
 /* maps.js — Biblical Maps page (Leaflet.js + CartoDB Voyager tiles) */
 'use strict';
 
-import { escHtml, READER_URL } from './core.js';
+import { _resolve, escHtml, READER_URL } from './core.js';
 import { wireRefLinks } from './wire.js';
 
 /* ── Tile layer ──────────────────────────────────────────────────────────── */
@@ -18,7 +18,7 @@ var TILE_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenSt
 //   reintroduce a permanent inline-only shape) — the fallback arg is only a safety net.
 // VERIFY: Load /maps/#twelve-tribes → tribe outlines match regions.json (tribe-* settlement
 //   period). Block regions.json in DevTools → maps still render via inline fallbacks.
-var _REGIONS_URL = new URL('../../data/maps/regions.json', import.meta.url).href;
+var _REGIONS_URL = _resolve('../../data/maps/regions.json');
 var _REGIONS     = null;   // { id → region } once loaded; null until then / on failure
 
 /* ── Canonical city coordinates ──────────────────────────────────────────── */

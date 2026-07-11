@@ -30,8 +30,8 @@ var XREF_CHAPTER_LIMIT = 5;
 // comes from the shared encyclopedia index (same file the reader study desk uses).
 // The index is ~1.7MB so it's fetched once on first activation and cached for the
 // page session; per-verse matching is cheap once it's in memory.
-var _BP_INDEX_URL = new URL('../../data/biblepedia/index.json', import.meta.url).href;
-var _BP_PAGE_URL  = new URL('../../biblepedia/', import.meta.url).href;   // article reader (?a=slug)
+var _BP_INDEX_URL = _resolve('../../data/biblepedia/index.json');
+var _BP_PAGE_URL  = _resolve('../../biblepedia/');   // article reader (?a=slug)
 var _bpIndexCache = null;
 function _loadBPIndex() {
   if (_bpIndexCache) return Promise.resolve(_bpIndexCache);
