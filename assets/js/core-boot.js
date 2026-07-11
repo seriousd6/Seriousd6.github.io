@@ -109,25 +109,12 @@ window.BibleUI = {
 };
 
 // ── buildSearchNav ─────────────────────────────────────────────────────────
-// The sidebar Search button + global hotkeys, moved here from search.js so
-// non-search pages don't load the 60 KB search engine for a nav button.
-// Behavior is verbatim from the old buildSearchDOM (minus its search-page
-// init tail, which entries/search.js now owns).
+// Global search hotkeys, moved here from search.js so non-search pages don't
+// load the 60 KB search engine for them. (The old injected sidebar Search
+// button was removed in Phase 5: its `.version-picker` anchor disappeared in
+// the Candlelight static-sidebar refactor, so it had been silently dead —
+// the sidebar's 🔍 Explore link is the navigation affordance.)
 function buildSearchNav() {
-  var vp = document.querySelector('.version-picker');
-  if (vp && !document.getElementById('bsw-search-btn')) {
-    var btn = document.createElement('button');
-    btn.id        = 'bsw-search-btn';
-    btn.className = 'bsw-search-btn';
-    btn.setAttribute('aria-label', 'Search verses (Ctrl+K)');
-    btn.textContent = 'Search';
-    vp.parentNode.insertBefore(btn, vp);
-    btn.addEventListener('click', function () {
-      var inp = document.getElementById('bsw-search-input');
-      if (inp) { inp.focus(); inp.select(); } else { window.location.href = SEARCH_URL; }
-    });
-  }
-
   // Ctrl+K: focus the search input if on the search page, otherwise navigate.
   document.addEventListener('keydown', function (e) {
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
@@ -181,7 +168,7 @@ export function boot(pageInit, opts) {
       // a few ms later via dynamic import is indistinguishable.
       import('./apocrypha-reader.js').then(function (m) { m.wireApoRefLinks(); });
       wireVersionPicker();
-      buildSearchNav();      // adds the Search button to the sidebar on every page
+      buildSearchNav();      // global search hotkeys (Ctrl+K, ?)
 
       if (pageInit && opts.early) pageInit();
 

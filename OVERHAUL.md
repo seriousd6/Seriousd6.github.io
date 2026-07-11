@@ -2,6 +2,15 @@
 
 _Regenerated 2026-07-11 from a fresh read of the repo._
 
+> **STATUS: ALL PHASES COMPLETE (2026-07-11).** Phases 2 → 5 shipped in sequence on
+> `claude/repo-overhaul-context-1ixq9c`; each phase section below carries its completion
+> record. Headline results: per-page eager JS 1,800 KB → 200 KB on generic pages; assets
+> bundled/minified/hashed through Vite with a build-generated service-worker precache;
+> 4,418 Biblepedia articles + 143 library documents statically rendered
+> (render-then-enhance) and surfaced via sitemap; dead code removed. Phase 4's smaller
+> leftovers (reading-plan tables stay client-side by design — build date ≠ view date) and
+> Phase 5's deferred items are documented in place.
+
 ## What "migrated to Astro" really means here
 
 The July-2026 cutover was billed as complete, but it only finished **Phase 1: the
@@ -213,7 +222,26 @@ client-rendered DOM by design).
 
 ---
 
-## Phase 5 — Componentize & converge
+## Phase 5 — Componentize & converge  ·  ✅ **DONE 2026-07-11**
+
+**Shipped:**
+- Dead code removed: `word.js`, `provenance.js`, `discipline-strip.js` (zero references;
+  the Vite build already excluded them from dist) and the dead sidebar Search-button
+  injection in core-boot (its `.version-picker` anchor vanished in the Candlelight
+  static-sidebar commit; the sidebar's 🔍 Explore link is the affordance — Ctrl+K/`?`
+  hotkeys kept).
+- `compressHTML: true` — the Phase-1 DOM-diff acceptance it existed for is retired.
+- `@astrojs/sitemap` + `robots.txt`: all 4,635 pages (incl. the new biblepedia/library
+  statics) surface in `sitemap-index.xml`.
+- README architecture section rewritten to match the finished state.
+
+**Deferred (deliberately):** converting the modal/tooltip/version-picker to framework
+islands — the plain-JS modules are bundled, lazy, and shared; a framework would add a
+runtime for no functional gain. Also left: the `_template` scaffolds (authoring aids),
+the `dictionary/` redirect page's vestigial markup, and `verse-study.js`/`ol-companion.js`
+(reachable via the documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
+
+### Original Phase 5 plan (for reference)
 
 **Goal:** collapse the remaining duplication and the transitional apparatus.
 

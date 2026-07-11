@@ -158,7 +158,7 @@ sw = sw.replace(
 fs.writeFileSync(path.join(DIST, 'sw.js'), sw);
 
 // ── 6. Root PWA statics ────────────────────────────────────────────────────
-for (const f of ['manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html']) {
+for (const f of ['manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html', 'robots.txt']) {
   fs.copyFileSync(path.join(ROOT, f), path.join(DIST, f));
 }
 

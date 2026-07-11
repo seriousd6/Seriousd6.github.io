@@ -14,7 +14,7 @@ const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
 // and the VERBATIM_PAGES list in convert-pages.mjs.
 const STATIC_DIRS = ['assets', 'data', 'topics/_template', 'topics/_template-book', 'study-guides/_template'];
 const STATIC_FILES = [
-  'sw.js', 'manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html',
+  'sw.js', 'manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html', 'robots.txt',
   // Redirect/retirement stubs excluded from Astro conversion:
   'devotionals/index.html', 'journal/index.html', 'memorize/index.html',
   'plans/index.html', 'reflections/index.html', 'worship/index.html',

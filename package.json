@@ -11,6 +11,7 @@
     "build:assets": "node tools/build-assets.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.8"
   },
   "devDependencies": {

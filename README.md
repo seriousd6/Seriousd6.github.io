@@ -8,61 +8,74 @@ PWA with full offline support.
 
 > https://kingdombiblestudy.com/
 
-## Architecture (Astro, since July 2026)
+## Architecture (Astro, overhauled July 2026)
 
-Pages are authored as `.astro` files sharing one layout; the runtime (JS
-modules, CSS, Bible data, service worker) ships verbatim. `src/pages/` is the
-single source of truth for page HTML — the legacy root `*.html` pages were
-retired after the cutover.
+Pages are authored as `.astro` files sharing one layout. Data-driven content is
+**statically rendered at build time** (4,400+ Biblepedia articles, 143 library
+documents) with the client apps enhancing in place; page JavaScript is split
+into per-page entries bundled through Vite. `src/pages/` is the single source
+of truth for page HTML.
 
 ```
 ├── src/
 │   ├── layouts/Base.astro   # Universal shell: head boilerplate, theme bootstrap,
 │   │                        #   base CSS, sidebar, footer, main.js + per-page
-│   │                        #   entry module (assets/js/entries/{entry}.js;
-│   │                        #   shared boot lives in assets/js/core-boot.js)
+│   │                        #   entry module (entry prop → assets/js/entries/*)
 │   ├── components/Sidebar.astro  # Static site nav (edit nav links HERE;
 │   │                        #   assets/js/main.js only wires behavior)
 │   └── pages/               # One .astro file per page, mirrors URL structure
-├── assets/                  # css/, js/ (ES modules), fonts/ — SOURCE tree; the
-│   │                        #   build bundles js/ through Vite (stable entry URLs
-│   │                        #   under entries/, hashed minified chunks) and
-│   │                        #   minifies css/ in place. `astro dev` serves it raw.
+│       ├── biblepedia/[slug]/    # 4,418 static articles from data/biblepedia
+│       └── library/read/[doc]/   # 143 static documents from data/library
+├── assets/                  # css/, js/, fonts/ — SOURCE tree; `astro dev`
+│   │                        #   serves it raw (native ESM), the build bundles it
+│   ├── js/core-boot.js      # Shared boot: theme, PWA, Bible metadata, modal,
+│   │                        #   ref wiring, window.BibleUI. Heavy modules load
+│   │                        #   lazily (idle-time dynamic imports)
+│   └── js/entries/          # One thin entry per page family; Base.astro's
+│                            #   `entry` prop selects it (default "generic")
 ├── data/                    # Bible text, commentary, library JSON (~50k files);
-│   │                        #   written hourly by the local auto-sync — do not move
+│                            #   written hourly by the local auto-sync — do not move
 ├── sw.js                    # Service worker. APP_CACHE_V + the JS/CSS precache
-│   │                        #   list are stamped at build time (BUILD:ASSETS
-│   │                        #   markers) — no manual bumps for JS/CSS changes
+│                            #   list are GENERATED at build (BUILD:ASSETS markers)
+│                            #   — no manual version bumps for JS/CSS changes
 ├── tools/
-│   ├── build-assets.mjs     # Vite-bundles entries, minifies stable files + CSS,
-│   │                        #   regenerates the sw.js precache into dist/
+│   ├── build-assets.mjs     # Post-astro build step: Vite-bundles entries (stable
+│   │                        #   entry URLs, hashed minified chunks), externalizes
+│   │                        #   core.js/tracker.js (inline scripts import them —
+│   │                        #   single module instance), minifies CSS + classic
+│   │                        #   scripts, regenerates sw.js into dist/
 │   ├── root-statics.mjs     # Dev-server middleware: serves the root static tree
-│   ├── convert-pages.mjs    # One-time legacy HTML → .astro converter
-│   └── diff-pages.mjs       # DOM-diffs dist/ against legacy root HTML
+│   ├── convert-pages.mjs    # One-time legacy HTML → .astro converter (reference)
+│   └── diff-pages.mjs       # One-time DOM-diff tool from the cutover (reference)
 └── .github/workflows/
-    ├── validate.yml         # Data integrity + JS syntax + Astro build (every push)
-    └── deploy.yml           # Pages deploy — manual until cutover (see file header)
+    ├── validate.yml         # Data integrity + JS syntax + full build (every push)
+    └── deploy.yml           # Pages deploy on every push to master
 ```
 
-**Overlay layout:** the static runtime tree stays at the repo root (the hourly
+**Overlay layout:** the runtime data tree stays at the repo root (the hourly
 data auto-sync writes to `data/` — do not move it). `tools/root-statics.mjs`
-bridges `astro dev` to the root `assets/`/`data/` dirs; `deploy.yml` copies them
-into `dist/` for the Pages deploy. A handful of redirect stubs (`devotionals/`,
-`plans/`, `word/`, …) and the `_template` scaffolds are not Astro pages and ship
-verbatim — the copy lists live in `tools/root-statics.mjs` and `deploy.yml` and
-must stay in sync.
+bridges `astro dev` to the root `assets/`/`data/` dirs; `npm run build` emits
+assets + sw.js + PWA statics into `dist/`, and `deploy.yml` adds `data/`, the
+`_template` scaffolds, and the verbatim redirect stubs (`devotionals/`,
+`plans/`, `word/`, …). The verbatim-file lists in `tools/root-statics.mjs` and
+`deploy.yml` must stay in sync.
+
+**Render-then-enhance:** Biblepedia articles (`/biblepedia/<slug>/`) and
+library documents (`/library/read/<id>/`) are full static HTML — crawlable
+(see `sitemap-index.xml`), instant on first paint, readable without JS. On
+load, the same client apps that serve the legacy `?a=`/`?doc=` URLs detect the
+path and replace the static DOM with the enriched interactive view. There is
+one implementation of each app; static HTML is its build-time snapshot.
 
 ## Development
 
 ```bash
 npm install
-npm run dev       # localhost:4321 — pages from src/, statics from repo root
-npm run build     # dist/ (page HTML only; deploy workflow adds the static tree)
+npm run dev       # localhost:4321 — pages from src/, statics from repo root (unbundled)
+npm run build     # astro build + tools/build-assets.mjs → complete dist/ minus data/
 ```
 
 Every push to `master` deploys via `.github/workflows/deploy.yml`.
-(`npm run convert` / `npm run diff` were the one-time migration tooling — kept
-for reference; the legacy HTML they operated on is gone.)
 
 ## Adding a page
 
@@ -81,7 +94,19 @@ Extra CSS goes in a `<Fragment slot="head-end">`; inline scripts/styles need
 `is:inline`. Use `<a class="ref" data-ref="Romans 8:28">` for hotlinked Bible
 references (wired by `assets/js/wire.js`).
 
+If the page needs its own feature module, add a thin entry to
+`assets/js/entries/` (import `boot` from `../core-boot.js`, call your init in
+the callback) and set `entry="<name>"` on `<Base>`. The Vite build picks up new
+entries automatically; keep imports relative and resolve data URLs through
+`core.js`'s `_resolve()` (never `import.meta.url` — it breaks inside chunks).
+
 ## Validation
 
 `python3 scripts/validate-data.py` and `python3 scripts/validate-library-format.py --all`
-guard the data tree; CI also runs `node --check` over all JS and a full Astro build.
+guard the data tree; CI also runs `node --check` over all JS (including
+`assets/js/entries/`) and the full production build.
+
+## Overhaul history
+
+See [`OVERHAUL.md`](OVERHAUL.md) for the July 2026 JS→Astro migration plan and
+its phase-by-phase completion record.
