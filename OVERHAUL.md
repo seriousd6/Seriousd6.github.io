@@ -162,7 +162,28 @@ offline-load smoke test.
 
 ---
 
-## Phase 4 — Static-render the data-driven content (the real payoff)
+## Phase 4 — Static-render the data-driven content (the real payoff)  ·  🔄 in progress
+
+### Family 1: Biblepedia articles — ✅ DONE 2026-07-11
+
+**4,418 static article pages** at `/biblepedia/<slug>/` via `src/pages/biblepedia/[slug]/index.astro`
+(getStaticPaths over `data/biblepedia/index.json` ∩ existing article files, `has_article !== false`,
+URL-safe ids — the ~7 ids with `;`/`[]` stay on the client `?a=` route). Pattern is
+**render-then-enhance**: the static page carries breadcrumb, header, synthesis intro (whose
+`data-ref` hotlinks wire into the verse modal via core-boot), key references (href'd to the
+reader for no-JS), and sources; on load the biblepedia entry detects the path (same dispatch
+as `?a=`) and `_showArticle` swaps in the fully enriched client view (source full-texts,
+connections, location maps). No second implementation to maintain — static HTML is the
+crawler/first-paint/no-JS surface. Modal Connections badges now emit the canonical path URLs;
+alias redirects and odd ids keep working via `?a=`. Build: 4,492 pages in ~10 s.
+
+Verified: no-JS article renders full content; JS enhancement keeps the canonical URL;
+legacy `?a=` and the hub home unaffected; badges link `/biblepedia/<slug>/`.
+
+**Remaining families:** library browser lists (143 docs), reading-plan tables, topics
+index. Same render-then-enhance pattern where a client app owns the page.
+
+### Original Phase 4 plan (for reference)
 
 **Goal:** stop shipping JS to render content that is fixed at build time. Read `data/`
 JSON in `.astro` frontmatter and emit real HTML; hydrate only genuinely interactive bits

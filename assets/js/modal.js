@@ -620,7 +620,11 @@ export function _renderConnectionsPanel(parsed, container) {
     var html = '<p class="bsw-modal__conn-note">' + n + ' encyclopedia article' + (n === 1 ? '' : 's') +
       ' connected to ' + escHtml(parsed.display) + ':</p><div class="bsw-modal__conn-badges">';
     matches.forEach(function (a) {
-      var href = _BP_PAGE_URL + '?a=' + encodeURIComponent(a.id);
+      var safeSlug = /^[a-z0-9.-]+$/.test(a.id);
+      // Static article pages (Phase 4) are canonical; a handful of ids with
+      // path-unsafe characters stay on the client-rendered ?a= route.
+      var href = safeSlug ? _BP_PAGE_URL + a.id + '/'
+                          : _BP_PAGE_URL + '?a=' + encodeURIComponent(a.id);
       var cat  = a.category ? '<span class="bsw-modal__conn-cat">' + escHtml(a.category) + '</span>' : '';
       html += '<a class="bsw-modal__conn-badge" href="' + href + '" title="' +
         escHtml(a.brief || a.term || '') + '">' + escHtml(a.term || a.id) + cat + '</a>';

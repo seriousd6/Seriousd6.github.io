@@ -222,6 +222,14 @@ export function initBiblepediaPage() {
 
   var params   = new URLSearchParams(window.location.search);
   var slug     = (params.get('a') || params.get('entry') || '').toLowerCase().replace(/\s+/g, '-');
+  // Static article pages (Phase 4): /biblepedia/<slug>/ is pre-rendered at build
+  // time; detect the path and enhance it exactly like the ?a= flow (the client
+  // render replaces the static DOM with the enriched view).
+  if (!slug) {
+    var cleanPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    var pathMatch = cleanPath.match(/\/biblepedia\/([a-z0-9.-]+)\/$/);
+    if (pathMatch) slug = pathMatch[1];
+  }
   var query    = params.get('q') || '';
   var category = params.get('cat') || '';
 

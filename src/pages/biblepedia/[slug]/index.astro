@@ -1,0 +1,112 @@
+---
+// Biblepedia article — static render (Phase 4, render-then-enhance).
+//
+// Each article page is emitted at build time from data/biblepedia/articles/
+// so the synthesis intro, key references, and quick info are real HTML:
+// crawlable, instant on first paint, and readable with JS disabled. The
+// pre-rendered intro already carries <a class="ref" data-ref> hotlinks that
+// core-boot's wireRefLinks turns into verse-modal triggers.
+//
+// On load, the biblepedia entry detects the /biblepedia/<slug>/ path (same
+// dispatch as ?a=<slug>) and _showArticle REPLACES this static DOM with the
+// fully enriched client view (source full-texts, connections, location map)
+// — identical to the ?a= experience today. Static HTML is the fallback and
+// the crawler surface, not a second implementation to maintain.
+//
+// Ids that are unsafe in a path segment (a handful contain ';' or brackets)
+// are skipped here and remain client-rendered via ?a=.
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const root = path.resolve('./data/biblepedia');
+  const index = JSON.parse(fs.readFileSync(path.join(root, 'index.json'), 'utf8'));
+  const files = new Set(fs.readdirSync(path.join(root, 'articles')).map(f => f.replace(/\.json$/, '')));
+  const safe = /^[a-z0-9.-]+$/;
+  return index
+    .filter(e => e.has_article !== false && files.has(e.id) && safe.test(e.id))
+    .map(e => {
+      const article = JSON.parse(fs.readFileSync(path.join(root, 'articles', `${e.id}.json`), 'utf8'));
+      return { params: { slug: e.id }, props: { meta: e, article } };
+    });
+}
+
+const { meta, article } = Astro.props;
+const term = article.term || meta.term;
+const cat = article.category || meta.category || 'concepts';
+const CAT = {
+  people:      { cls: 'people',      label: 'Person' },
+  places:      { cls: 'place',       label: 'Place' },
+  concepts:    { cls: 'concept',     label: 'Concept' },
+  names:       { cls: 'name',        label: 'Name' },
+  events:      { cls: 'event',       label: 'Event' },
+  father:      { cls: 'father',      label: 'Church Father' },
+  commentator: { cls: 'commentator', label: 'Commentator' },
+  regions:     { cls: 'region',      label: 'Region' },
+}[cat] || { cls: 'concept', label: 'Concept' };
+
+const meaning = article.hitchcock_meaning;
+const keyRefs = article.key_refs || meta.key_refs || [];
+const SOURCE_NAMES = {
+  easton: "Easton's Bible Dictionary (1897)",
+  smith:  "Smith's Bible Dictionary (1884)",
+  isbe:   'International Standard Bible Encyclopedia (1915)',
+  hitchcock: "Hitchcock's Bible Names (1874)",
+  nave:   "Nave's Topical Bible (1896)",
+};
+const sources = Object.keys(article.source_ids || {}).map(k => SOURCE_NAMES[k] || k);
+const brief = (meta.brief || '').slice(0, 158);
+const description = brief || `${term} — Biblepedia article on Kingdom Bible Study.`;
+const readerHref = (ref) => `/read/?ref=${encodeURIComponent(ref)}`;
+---
+
+<Base entry="biblepedia" title={`${term} — Biblepedia — Kingdom Bible Study`} description={description} footer={false}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="/assets/css/dictionary.css"><link rel="stylesheet" href="/assets/css/biblepedia.css">
+</Fragment>
+<main>
+    <div id="bp-container" class="container bp-page">
+      <nav class="bp-breadcrumb">
+        <a href="/biblepedia/">Biblepedia</a>
+        <span class="bp-breadcrumb__sep">›</span>
+        <span class={`bp-cat-badge bp-cat-badge--${CAT.cls}`} style="font-size:.72rem">{CAT.label}</span>
+        <span class="bp-breadcrumb__sep">›</span>
+        <span>{term}</span>
+      </nav>
+      <header class="bp-article__header">
+        <div class="bp-article__title-row">
+          <h1 class="bp-article__title">{term}</h1>
+          <div class="bp-article__badges">
+            <span class={`bp-cat-badge bp-cat-badge--${CAT.cls}`}>{CAT.label}</span>
+            {meaning && cat !== 'names' && <span class="bp-cat-badge bp-cat-badge--name">Name</span>}
+          </div>
+        </div>
+        {meaning && <p class="bp-article__meaning">Name meaning: "{meaning}"</p>}
+      </header>
+      <div class="bp-article__layout">
+        <div class="bp-article__main">
+          <div class="bp-synthesis" set:html={article.intro} />
+        </div>
+        <aside class="bp-article__sidebar">
+          <div class="bp-sidebar-panel">
+            <div class="bp-sidebar-panel__head">Key References</div>
+            <div class="bp-sidebar-panel__body">
+              {keyRefs.length
+                ? <ul class="bp-keyrefs">{keyRefs.map(r => <li><a class="ref" data-ref={r} href={readerHref(r)}>{r}</a></li>)}</ul>
+                : <p class="bp-sidebar-empty">None listed.</p>}
+            </div>
+          </div>
+          {sources.length > 0 && (
+            <div class="bp-sidebar-panel">
+              <div class="bp-sidebar-panel__head">Sources</div>
+              <div class="bp-sidebar-panel__body">
+                <ul class="bp-keyrefs">{sources.map(s => <li>{s}</li>)}</ul>
+              </div>
+            </div>
+          )}
+        </aside>
+      </div>
+    </div>
+  </main>
+</Base>
