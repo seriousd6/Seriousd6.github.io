@@ -50,7 +50,16 @@ module script. That per-page-entry model just needs to become the default.
 
 ---
 
-## Phase 2 — De-monolith the client runtime  ·  _recommended next step_
+## Phase 2 — De-monolith the client runtime  ·  ✅ **DONE 2026-07-11**
+
+**Shipped:** `assets/js/core-boot.js` (shared boot, `boot(pageInit, opts)`) + 15 entry
+modules under `assets/js/entries/`; `Base.astro` gained an `entry` prop (default
+`generic`); `app.js` deleted; `sw.js` precache updated, `APP_CACHE_V` → v185 (also
+fixed pre-existing precache gaps: `synoptic.js`, `biblepedia.js`). Measured transitive
+payload: generic pages **1,800 KB → 509 KB (−72 %)**; reader 779 KB; maps 694 KB.
+Remaining fat in core-boot is the modal-renderer set (`verse-study`/`daily`/`library`/
+`search` + deps) — lazy-loading those on first modal-tab click is the Phase 2.5
+follow-up, or falls out naturally in Phase 3/4.
 
 **Goal:** each page loads only the JS it uses. Kill the 1.8 MB-on-every-page tax.
 

@@ -2,7 +2,8 @@
 // Base.astro — the universal page shell (Phase-1 structural migration).
 // Owns exactly the boilerplate every legacy page duplicated verbatim:
 // charset/viewport/favicon, the FOUC theme bootstrap, the two base
-// stylesheets, the standard footer, and the main.js/app.js script pair.
+// stylesheets, the standard footer, and the main.js + per-page entry
+// script pair (Phase 2: entries/{entry}.js replaced the app.js monolith).
 // Everything page-specific (og/twitter meta, extra CSS, inline scripts,
 // nonstandard footers) passes through untouched via slots:
 //   slot="head"          → head content between <title> and the theme script
@@ -20,7 +21,9 @@ interface Props {
   bodyAttrs?: Record<string, string>; // all <body> attributes (class, data-*) verbatim
   bibleUi?: boolean; // <link bible-ui.css> — on for all but a few pages
   mainJs?: boolean;  // classic script: sidebar/nav injection
-  appJs?: boolean;   // ES-module feature entry point
+  appJs?: boolean;   // ES-module feature entry point (set false to opt out entirely)
+  entry?: string;    // per-page entry module in assets/js/entries/ (default "generic");
+                     //   pages with a feature module name theirs (e.g. "reader", "maps")
   footer?: boolean;  // standard site footer line
 }
 const {
@@ -30,6 +33,7 @@ const {
   bibleUi = true,
   mainJs = true,
   appJs = true,
+  entry = 'generic',
   footer = true,
 } = Astro.props;
 import Sidebar from '../components/Sidebar.astro';
@@ -79,7 +83,7 @@ const isTopicPage = /^\/topics\/[^/]+\/$/.test(Astro.url.pathname);
     </footer>
   )}
   {mainJs && <script is:inline src="/assets/js/main.js"></script>}
-  {appJs && <script is:inline type="module" src="/assets/js/app.js"></script>}
+  {appJs && <script is:inline type="module" src={`/assets/js/entries/${entry}.js`}></script>}
   <slot name="after-scripts" />
 </body>
 </html>

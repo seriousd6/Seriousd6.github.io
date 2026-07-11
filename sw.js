@@ -25,7 +25,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v184';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v185';  // bump when HTML/CSS/JS/icon changes
 
 // ── Per-dataset data caches ────────────────────────────────────────────────
 // A SINGLE global data cache meant every JSON tweak (e.g. one red-letter or commentary
@@ -172,7 +172,22 @@ var SHELL_URLS = [
   './study-guides/romans-1-8/index.html',
   './study-guides/sermon-on-the-mount/index.html',
   './study-guides/psalms/index.html',
-  './assets/js/app.js',
+  './assets/js/core-boot.js',
+  './assets/js/entries/generic.js',
+  './assets/js/entries/home.js',
+  './assets/js/entries/reader.js',
+  './assets/js/entries/memorize.js',
+  './assets/js/entries/biblepedia.js',
+  './assets/js/entries/timeline.js',
+  './assets/js/entries/church-history.js',
+  './assets/js/entries/maps.js',
+  './assets/js/entries/timelapse.js',
+  './assets/js/entries/wordcloud.js',
+  './assets/js/entries/lib-reader.js',
+  './assets/js/entries/lib-browser.js',
+  './assets/js/entries/lib-progress.js',
+  './assets/js/entries/apocrypha.js',
+  './assets/js/entries/settings.js',
   './assets/js/core.js',
   './assets/js/storage.js',
   './assets/js/tooltip.js',
@@ -184,6 +199,8 @@ var SHELL_URLS = [
   './assets/js/reader-audio.js',
   './assets/js/study-desk.js',
   './assets/js/parallels.js',
+  './assets/js/synoptic.js',
+  './assets/js/biblepedia.js',
   './assets/js/interlinear.js',
   './assets/js/verse-study.js',
   './assets/js/daily.js',
@@ -396,7 +413,7 @@ function networkFirst(req, cacheName) {
 //   First-time requests have no cached copy so the network fetch is awaited directly.
 // CHANGE? If a resource should never serve stale (e.g. a version manifest), use
 //   networkFirst instead; changing here would affect all CSS/JS/JSON routing.
-// VERIFY: Load /assets/js/app.js, go offline in DevTools, reload — the file should
+// VERIFY: Load /assets/js/core-boot.js, go offline in DevTools, reload — the file should
 //   still load from cache with no network error in the console.
 function cacheFirst(req, cacheName) {
   return caches.open(cacheName).then(function (cache) {
