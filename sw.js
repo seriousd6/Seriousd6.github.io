@@ -25,7 +25,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v182';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v183';  // bump when HTML/CSS/JS/icon changes
 
 // ── Per-dataset data caches ────────────────────────────────────────────────
 // A SINGLE global data cache meant every JSON tweak (e.g. one red-letter or commentary
@@ -203,6 +203,7 @@ var SHELL_URLS = [
   './assets/js/places.js',
   './assets/js/sg-progress.js',
   './assets/js/store.js',
+  './assets/js/sync.js',
   './assets/js/timelapse-map.js',
   './assets/js/tracker.js',
   './favicon.svg',

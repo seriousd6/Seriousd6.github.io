@@ -1,5 +1,5 @@
 /**
- * main.js — builds and wires the left sidebar navigation.
+ * main.js — wires the statically-rendered left sidebar navigation.
  *
  * Loaded as a plain <script> (not a module) so it runs before app.js and can
  * insert the sidebar synchronously. This guarantees #bible-version exists in the
@@ -64,68 +64,7 @@
   var _bookContent   = null;
   var _readerUpdate  = null;
 
-  /* ── Nav data ─────────────────────────────────────────────── */
-  // Static navigation tree. The "topics" group's subgroup items start empty —
-  // loadTopics() appends links after fetching data/topics.json.
-  // Library items are hardcoded here since they don't change without a code edit.
-  // Tool links appear above the collapsible groups so they're always visible.
-  var NAV = {
-    tools: [
-      { label: '📖 The Holy Bible',        href: _r('read/') },
-      { label: '📜 Apocrypha',             href: _r('apocrypha/') },
-      { label: '🔍 Explore',               href: _r('search/') },
-      { label: '📚 Studies',               href: _r('studies/') },
-      { label: '✝ Discipline',             href: _r('discipline/') },
-      { label: '🔬 Original Language Study', href: _r('translation/workshop/') },
-      { label: '⚙ Settings',                href: _r('settings/') },
-      { label: 'ℹ About / AI',               href: _r('about/') }
-    ],
-    groups: [
-      {
-        id: 'history',
-        label: 'History',
-        icon: '🕰',
-        children: [
-          { label: '📜 Biblical Timeline',  href: _r('history/?tab=timeline') },
-          { label: '⛪ Church History',     href: _r('history/?tab=church') },
-          { label: '🗺 Maps',               href: _r('history/?tab=maps') },
-          { label: '🎬 Animated Map',       href: _r('history/?tab=timelapse') }
-        ]
-      },
-      {
-        id: 'explore',
-        label: 'Explore',
-        icon: '🔍',
-        children: [
-          { label: '🔍 Search',        href: _r('search/') },
-          { label: '📑 Topics',        href: _r('search/?tab=topics') },
-          { label: '📖 Study Guides',  href: _r('search/?tab=guides') },
-          { label: '📘 Biblepedia',     href: _r('biblepedia/') },
-          { label: '☁ Word Cloud',     href: _r('search/?tab=wordcloud') }
-        ]
-      },
-      {
-        id: 'discipline',
-        label: 'Discipline',
-        icon: '✝',
-        children: [
-          { label: '✝ Discipline Hub',    href: _r('discipline/') },
-          { label: '📅 Discipline History', href: _r('discipline/?tab=history') },
-          { label: '📊 Reading Progress', href: _r('progress/') }
-        ]
-      },
-      {
-        id: 'library',
-        label: 'Library',
-        icon: '📚',
-        children: [
-          { label: '📋 Library',                href: _r('library/') },
-          { label: '📚 Reading History',        href: _r('library/progress/') }
-        ],
-        subgroups: []
-      }
-    ]
-  };
+  // Nav data now lives in src/components/Sidebar.astro (statically rendered).
 
   /* ── URL helpers ──────────────────────────────────────────── */
   // _norm: normalises a URL to always end with '/' and strips trailing index.html
@@ -143,26 +82,6 @@
   function isAncestor(href) {
     var n = _norm(href);
     return n !== _rootN && _locN !== n && _locN.startsWith(n);
-  }
-
-  function subgroupHasActive(sg) {
-    for (var i = 0; i < sg.items.length; i++) {
-      if (isActive(sg.items[i].href) || isAncestor(sg.items[i].href)) return true;
-    }
-    return false;
-  }
-
-  function groupHasActive(group) {
-    var s;
-    for (var i = 0; i < group.children.length; i++) {
-      if (isActive(group.children[i].href) || isAncestor(group.children[i].href)) return true;
-    }
-    if (group.subgroups) {
-      for (s = 0; s < group.subgroups.length; s++) {
-        if (subgroupHasActive(group.subgroups[s])) return true;
-      }
-    }
-    return false;
   }
 
   // _isTopicPage: true when viewing an individual topic (e.g. /topics/prayer/).
@@ -185,295 +104,119 @@
     return e;
   }
 
-  /* ── Build a collapsible sub-group within a group ── */
-  function buildSubgroup(sg, groupId) {
-    var active = subgroupHasActive(sg);
-    var sgId   = 'sbsg-' + groupId + '-' + sg.id;
-
-    var wrapper = mk('div', 'sb-subgroup');
-
-    var btn = mk('button', 'sb-subgroup-btn');
-    btn.setAttribute('aria-expanded', active ? 'true' : 'false');
-    btn.setAttribute('aria-controls', sgId);
-    if (active) btn.classList.add('is-active');
-
-    var lbl   = mk('span', 'sb-subgroup-label');
-    lbl.textContent = sg.label;
-    var arrow = mk('span', 'sb-subgroup-arrow');
-    arrow.innerHTML = '&#x25B6;';
-    btn.appendChild(lbl);
-    btn.appendChild(arrow);
-
-    var items = mk('div', 'sb-subgroup-items');
-    items.id = sgId;
-    if (!active) items.setAttribute('hidden', '');
-
-    sg.items.forEach(function (child) {
-      var a = mk('a', 'sb-subchild');
-      a.href = child.href;
-      a.textContent = child.label;
-      if (isActive(child.href)) a.setAttribute('aria-current', 'page');
-      items.appendChild(a);
-    });
-
-    btn.addEventListener('click', function () {
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
-      if (open) { items.setAttribute('hidden', ''); }
-      else      { items.removeAttribute('hidden'); }
-    });
-
-    wrapper.appendChild(btn);
-    wrapper.appendChild(items);
-    return wrapper;
-  }
-
-  /* ── Build sidebar ────────────────────────────────────────── */
-  // Constructs and inserts the full sidebar DOM before any other body content.
-  // Also creates the collapse tab, mobile topbar (hamburger), and backdrop overlay.
-  // Collapse behaviour differs by context:
-  //   Desktop non-topic page  → pushes content (sidebar-collapsed class on body)
-  //   Desktop topic page      → overlays content (sidebar-overlay + sb-open toggle)
-  //   Mobile (<1024 px)       → always overlay, toggled by hamburger button
-  function buildSidebar() {
-    // INTENT: Suppress the sidebar/topbar whenever this page is embedded as a hub
-    //   "tab" — either explicitly via ?minimal=1 (the iframe data-src contract) OR
-    //   implicitly because we are rendered inside a frame. The frame check is the real
-    //   fix: hub iframes load the landing page with ?minimal=1, but in-iframe navigation
-    //   (clicking a topic card, a search result, any internal link) goes to a URL that
-    //   drops the param, which previously rebuilt the full sidebar *inside* the iframe.
-    //   Detecting the frame keeps every in-iframe page chrome-less regardless of its query.
-    // CHANGE? If a page should ever show its sidebar while framed, this gate must change;
-    //   the per-page inline `?minimal` blocks (footer hide + #explore-back-link reveal in
-    //   topics/, dictionary/, etc.) still key off the param only, so propagate ?minimal on
-    //   internal links there if that secondary chrome also needs to stay hidden in-frame.
-    // VERIFY: Open search/ → a hub tab (Topics/Study Guides/Dictionary/Word Cloud), click
-    //   through to a sub-page inside the panel: no left sidebar or mobile topbar should
-    //   appear in the iframe. Top-level (un-framed) pages still render the sidebar normally.
+  /* ── Wire sidebar ─────────────────────────────────────────── */
+  // The sidebar DOM is now rendered statically at build time by
+  // src/components/Sidebar.astro (same markup buildSidebar() used to create).
+  // This function only WIRES it: active-link marking (runtime because ?tab=
+  // query links decide it), group toggles, collapse/overlay/mobile behavior,
+  // theme button, and skip-link focus. Body state classes (sidebar-collapsed /
+  // sidebar-overlay / is-embedded) are applied pre-paint by the inline
+  // bootstrap in src/layouts/Base.astro; this re-applies them as a fallback
+  // for any cached page that predates the bootstrap.
+  // CHANGE? Selector contract with Sidebar.astro: #site-sidebar,
+  //   .sb-collapse-btn, .sidebar-tab, .mobile-topbar__hamburger,
+  //   .sidebar-backdrop, #bsw-theme-btn, .sb-group > .sb-group-btn +
+  //   .sb-group-items. Keep both files in sync.
+  // VERIFY: Sidebar visible with correct active link on load; collapse state
+  //   persists across reloads; hamburger works < 1024px; hub-tab iframes
+  //   (History/Discipline/Explore) show no sidebar inside the frame.
+  function wireSidebar() {
+    // Embedded as a hub "tab" (iframe or ?minimal=1): suppress all chrome.
+    // The Base.astro bootstrap already added sidebar-collapsed + is-embedded
+    // pre-paint (CSS hides the chrome); this fallback covers cached pages and
+    // also reveals the per-page "← back to hub" links.
     var framed;
     try { framed = (window.self !== window.top); }
-    catch (e) { framed = true; }  // cross-origin parent throws → we are definitely embedded
+    catch (e) { framed = true; }  // cross-origin parent throws → definitely embedded
     if (framed || new URLSearchParams(location.search).get('minimal')) {
-      /* No sidebar in minimal/iframe mode — remove the 240px body padding-left
-         that style.css applies by default so the page fills the iframe fully. */
       document.body.classList.add('sidebar-collapsed');
-      /* is-embedded: single flag for "rendered as a hub tab". CSS hangs the footer
-         (and any other page chrome) off it, so we hide that chrome in one place
-         instead of per-page ?minimal scripts that break on in-iframe navigation. */
       document.body.classList.add('is-embedded');
-      // Reveal the "← back to hub" link that embeddable pages keep hidden by default.
-      // INTENT: Centralizes the per-page `if (?minimal) { backlink.removeAttribute('hidden') }`
-      //   scripts that topics/progress/wordcloud/maps/tracker/church-history/timeline/notes
-      //   each duplicated. They use a few stable hooks (hist-/prog-/ms- classes + #trk-back-link),
-      //   so one selector covers them all; doing it here also makes it frame-aware.
-      // CHANGE? If a new embeddable page adds a back link, give it one of these classes/ids
-      //   (or extend this selector) instead of writing another inline ?minimal block.
-      // VERIFY: Open a History/Discipline/Explore sub-tab — the "← …" link shows in the frame;
-      //   visit the same page top-level (not embedded) and the link stays hidden.
       document.querySelectorAll(
         '.hist-back-link, .prog-back-link, .ms-back-link, #trk-back-link'
       ).forEach(function (el) { el.hidden = false; });
       return;
     }
 
-    var sidebar = mk('aside', 'site-sidebar');
-    sidebar.id  = 'site-sidebar';
-    sidebar.setAttribute('aria-label', 'Site navigation');
+    var sidebar = document.getElementById('site-sidebar');
+    if (!sidebar) return; // page ships without the static sidebar
 
-    /* Head: logo + collapse button */
-    var head   = mk('div', 'sb-head');
-    var logo   = mk('a', 'sb-logo');
-    logo.href  = _r('');
-    logo.textContent = '📖 Kingdom Bible Study';
-    var colBtn = mk('button', 'sb-collapse-btn');
-    colBtn.setAttribute('aria-label', 'Collapse sidebar');
-    colBtn.setAttribute('aria-controls', 'site-sidebar');
-    colBtn.innerHTML = '&#x2039;';
-    head.appendChild(logo);
-    head.appendChild(colBtn);
-    sidebar.appendChild(head);
+    var colBtn    = sidebar.querySelector('.sb-collapse-btn');
+    var tab       = document.querySelector('.sidebar-tab');
+    var hamburger = document.querySelector('.mobile-topbar__hamburger');
+    var backdrop  = document.querySelector('.sidebar-backdrop');
+    if (!colBtn || !tab || !hamburger || !backdrop) return;
 
-    /* Scrollable nav */
-    var nav = mk('div', 'sb-nav');
-    nav.setAttribute('role', 'navigation');
-
-    /* Home link */
-    var homeLink = mk('a', 'sb-link');
-    homeLink.href = _r('');
-    homeLink.textContent = 'Home';
-    if (_locN === _rootN) homeLink.setAttribute('aria-current', 'page');
-    nav.appendChild(homeLink);
-
-    /* Version picker — must exist synchronously so app.js can call
-     * populateVersionPicker() and wireVersionPicker() after metadata loads.
-     * The <select> starts empty; app.js fills it from versions.json. */
-    var verRow    = mk('div', 'sb-version');
-    var verLabel  = document.createElement('label');
-    verLabel.setAttribute('for', 'bible-version');
-    verLabel.textContent = 'Version:';
-    var verSelect = document.createElement('select');
-    verSelect.id  = 'bible-version';
-    verRow.appendChild(verLabel);
-    verRow.appendChild(verSelect);
-    nav.appendChild(verRow);
-
-    nav.appendChild(mk('div', 'sb-divider'));
-
-    /* Tool links */
-    NAV.tools.forEach(function (tool) {
-      var a   = mk('a', 'sb-group-btn');
-      a.href  = tool.href;
-      var lbl = mk('span', 'sb-group-label');
-      lbl.textContent = tool.label;
-      a.appendChild(lbl);
-      if (isActive(tool.href)) {
+    /* ── Active-link marking ── */
+    // Done at runtime (not build time) because hrefs like history/?tab=church
+    // are active only for a matching query string.
+    Array.prototype.forEach.call(sidebar.querySelectorAll('a[href]'), function (a) {
+      if (isActive(a.href)) {
         a.setAttribute('aria-current', 'page');
-        a.classList.add('is-active');
+        if (a.classList.contains('sb-group-btn')) a.classList.add('is-active');
       }
-      nav.appendChild(a);
     });
 
-    nav.appendChild(mk('div', 'sb-divider'));
-
-    /* Groups */
-    NAV.groups.forEach(function (group) {
-      var active = groupHasActive(group);
-
-      var wrapper = mk('div', 'sb-group');
-
-      var btn = mk('button', 'sb-group-btn');
-      btn.setAttribute('aria-expanded', active ? 'true' : 'false');
-      btn.setAttribute('aria-controls', 'sbg-' + group.id);
-      if (active) btn.classList.add('is-active');
-
-      var lbl   = mk('span', 'sb-group-label');
-      lbl.textContent = group.icon + ' ' + group.label;
-      var arrow = mk('span', 'sb-group-arrow');
-      arrow.innerHTML = '&#x25B6;';
-      btn.appendChild(lbl);
-      btn.appendChild(arrow);
-
-      var items = mk('div', 'sb-group-items');
-      items.id  = 'sbg-' + group.id;
-      if (!active) items.setAttribute('hidden', '');
-
-      group.children.forEach(function (child) {
-        var a = mk('a', 'sb-child');
-        a.href = child.href;
-        a.textContent = child.label;
-        if (isActive(child.href)) a.setAttribute('aria-current', 'page');
-        items.appendChild(a);
+    /* ── Expand the group containing the active page ── */
+    Array.prototype.forEach.call(sidebar.querySelectorAll('.sb-group'), function (group) {
+      var btn   = group.querySelector('.sb-group-btn');
+      var items = group.querySelector('.sb-group-items');
+      if (!btn || !items) return;
+      var active = false;
+      Array.prototype.forEach.call(items.querySelectorAll('a[href]'), function (a) {
+        if (isActive(a.href) || isAncestor(a.href)) active = true;
       });
-
-      if (group.subgroups) {
-        group.subgroups.forEach(function (sg) {
-          items.appendChild(buildSubgroup(sg, group.id));
-        });
+      if (active) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+        items.removeAttribute('hidden');
       }
-
       btn.addEventListener('click', function () {
         var open = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', open ? 'false' : 'true');
         if (open) { items.setAttribute('hidden', ''); }
         else      { items.removeAttribute('hidden'); }
       });
-
-      wrapper.appendChild(btn);
-      wrapper.appendChild(items);
-      nav.appendChild(wrapper);
     });
 
-    /* Theme toggle — appended at the bottom of the nav scroll area */
-    nav.appendChild(mk('div', 'sb-divider'));
-    var themeBtn = mk('button', '');
-    themeBtn.id = 'bsw-theme-btn';
+    /* ── Theme toggle ── */
+    var themeBtn = document.getElementById('bsw-theme-btn');
     function _isDark() {
       var th = document.documentElement.getAttribute('data-theme');
       if (th) return th === 'dark';
       return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
     function _updateThemeLabel() {
-      themeBtn.textContent = _isDark() ? '☀ Light Mode' : '🌙 Dark Mode';
+      if (themeBtn) themeBtn.textContent = _isDark() ? '☀ Light Mode' : '🌙 Dark Mode';
     }
     _updateThemeLabel();
-    themeBtn.addEventListener('click', function () {
-      var next = _isDark() ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('bsw_theme', next); } catch (e) {}
-      _updateThemeLabel();
-    });
-    nav.appendChild(themeBtn);
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function () {
+        var next = _isDark() ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('bsw_theme', next); } catch (e) {}
+        _updateThemeLabel();
+      });
+    }
 
-    sidebar.appendChild(nav);
-
-    /* Translation Workshop — pinned footer at the very bottom of the sidebar */
-    var sbFooter = mk('div', 'sb-footer');
-    var wsLink = mk('a', 'sb-workshop-link');
-    wsLink.href = _r('translation/workshop/');
-    wsLink.textContent = '⚙ Translation Workshop';
-    if (isActive(_r('translation/workshop/'))) wsLink.setAttribute('aria-current', 'page');
-    sbFooter.appendChild(wsLink);
-    sidebar.appendChild(sbFooter);
-
-    /* Collapse tab */
-    var tab = mk('button', 'sidebar-tab');
-    tab.setAttribute('aria-label', 'Toggle sidebar');
-    tab.setAttribute('aria-controls', 'site-sidebar');
-    tab.innerHTML = '&#x2039;';
-
-    /* Mobile topbar */
-    var topbar    = mk('div', 'mobile-topbar');
-    topbar.setAttribute('role', 'banner');
-    var hamburger = mk('button', 'mobile-topbar__hamburger');
-    hamburger.setAttribute('aria-label', 'Open navigation');
-    hamburger.setAttribute('aria-expanded', 'false');
-    hamburger.setAttribute('aria-controls', 'site-sidebar');
-    hamburger.innerHTML = '&#9776;';
-    var topLogo   = mk('a', 'mobile-topbar__logo');
-    topLogo.href  = _r('');
-    topLogo.textContent = '📖 Kingdom Bible Study';
-    topbar.appendChild(hamburger);
-    topbar.appendChild(topLogo);
-
-    /* Backdrop */
-    var backdrop = mk('div', 'sidebar-backdrop');
-    backdrop.setAttribute('aria-hidden', 'true');
-
-    /* Inject into DOM */
-    document.body.insertBefore(sidebar, document.body.firstChild);
-    document.body.appendChild(tab);
-    document.body.appendChild(topbar);
-    document.body.appendChild(backdrop);
-
-    /* AUD-27: skip-to-content link as the FIRST focusable element (WCAG 2.4.1 bypass-blocks).
-       Centralized here so every page gets it without editing 30+ HTML heads. Targets <main>,
-       which we give an id + tabindex(-1) so focus actually lands on the content. */
+    /* ── Skip link (AUD-27, WCAG 2.4.1): point it at <main> and move focus ── */
     var main = document.querySelector('main');
-    if (main && !document.querySelector('.skip-link')) {
+    var skip = document.querySelector('.skip-link');
+    if (main && skip) {
       if (!main.id) main.id = 'main-content';
       main.setAttribute('tabindex', '-1');
-      var skip = mk('a', 'skip-link');
       skip.href = '#' + main.id;
-      skip.textContent = 'Skip to content';
       skip.addEventListener('click', function () {
-        // Move focus to <main> (href alone scrolls but doesn't focus a non-interactive element).
         setTimeout(function () { main.focus(); }, 0);
       });
-      document.body.insertBefore(skip, document.body.firstChild);
     }
 
     /* ── Initial collapse/overlay state ── */
+    // Fallback for cached pages without the pre-paint bootstrap; harmless
+    // re-add when the bootstrap already ran.
     if (_isTopicPage) {
       document.body.classList.add('sidebar-overlay');
-      tab.innerHTML = '&#x203A;';
-    } else {
-      var saved = getState();
-      if (saved === 'collapsed') {
-        document.body.classList.add('sidebar-collapsed');
-        tab.innerHTML = '&#x203A;';
-        colBtn.innerHTML = '&#x203A;';
-        colBtn.setAttribute('aria-label', 'Expand sidebar');
-      }
+    } else if (getState() === 'collapsed') {
+      document.body.classList.add('sidebar-collapsed');
     }
 
     /* ── Event helpers ── */
@@ -485,6 +228,12 @@
       colBtn.innerHTML = c;
       colBtn.setAttribute('aria-label', collapsed ? 'Expand sidebar' : 'Collapse sidebar');
     }
+
+    // Sync arrow glyphs with whatever state the bootstrap applied.
+    setCollapseArrow(
+      document.body.classList.contains('sidebar-collapsed') ||
+      (document.body.classList.contains('sidebar-overlay') && !document.body.classList.contains('sb-open'))
+    );
 
     function desktopToggle() {
       var collapsed = document.body.classList.toggle('sidebar-collapsed');
@@ -666,7 +415,7 @@
     }
   }
 
-  buildSidebar();
+  wireSidebar();
   initReaderStudyLink();
   loadBooksContent();
   loadTopics();

@@ -15,19 +15,26 @@
 [hidden] { display: none !important; }
 
 :root {
-  /* Colors */
-  --color-bg:        #faf8f4;
-  --color-surface:   #ffffff;
+  /* Colors — "Candlelight" palette (July 2026 redesign): warmer parchment
+     ground, warm off-white surfaces, hairline borders. Gold accent kept at the
+     WCAG-checked value. */
+  --color-bg:        #f6f1e6;
+  --color-surface:   #fffdf7;
   --color-primary:   #5c3d1e;
   --color-on-primary: #fff;     /* text color for elements with background: var(--color-primary); dark mode overrides this */
   --color-accent:    #8c6a00;   /* darkened from #b8860b — old value failed WCAG AA 4.5:1 on light bg */
-  --color-text:      #2c2416;
+  --color-text:      #2b2113;
   --color-heading:   var(--color-text); /* inherits text color so dark mode adapts automatically */
-  --color-muted:     #7a6a55;
-  --color-border:    #e0d5c4;
+  --color-muted:     #7c6e56;
+  --color-border:    #e6dcc5;
+
+  /* Card treatment — hairline border + soft warm shadow. Per-page CSS adopts
+     these incrementally; keep values in sync with the Candlelight mockup. */
+  --shadow-card:     0 1px 3px rgba(70, 50, 20, 0.07), 0 6px 18px rgba(70, 50, 20, 0.05);
+  --radius-card:     12px;
 
   /* Sidebar */
-  --sb-bg:           #32200e;
+  --sb-bg:           #2c1e0e;
   --sb-text:         #e8d9bb;
   --sb-muted:        #a08a68;   /* darkened from #9a8060 — old value was 4.18:1, below WCAG AA 4.5:1 */
   --sb-hover:        rgba(255,255,255,0.07);
@@ -657,15 +664,17 @@ span.term { font-weight: bold; color: var(--color-primary); }
 /* System default:  prefers-color-scheme:dark applies when no manual override    */
 
 [data-theme="dark"] {
-  --color-bg:        #1a1208;
-  --color-surface:   #231a0d;
+  /* "Candlelight" dark — candlelit deep brown rather than gray-black. */
+  --color-bg:        #1f1810;
+  --color-surface:   #292016;
   --color-primary:   #e8c87a;
-  --color-on-primary: #1a1208;  /* dark text on golden primary bg — white (#fff) fails at ~1.5:1 in dark mode */
+  --color-on-primary: #1f1810;  /* dark text on golden primary bg — white (#fff) fails at ~1.5:1 in dark mode */
   --color-accent:    #d4a017;
-  --color-text:      #e8dfc8;
-  --color-muted:     #9a8870;
-  --color-border:    #3a2e1e;
-  --color-bg-alt:    #2a1f0f;
+  --color-text:      #ecdfc8;
+  --color-muted:     #a8977a;
+  --color-border:    #3c3221;
+  --color-bg-alt:    #2a2114;
+  --shadow-card:     0 1px 3px rgba(0, 0, 0, 0.4);
   /* Subtle surfaces / soft text used across feature CSS (chips, badges, blurbs) via
      var(--name, light-fallback). These were never defined, so dark mode silently fell
      back to the LIGHT values (#f5f5f5 etc.) — light chip bg + light --color-text = unreadable
@@ -689,15 +698,16 @@ span.term { font-weight: bold; color: var(--color-primary); }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --color-bg:        #1a1208;
-    --color-surface:   #231a0d;
+    --color-bg:        #1f1810;
+    --color-surface:   #292016;
     --color-primary:   #e8c87a;
-    --color-on-primary: #1a1208;  /* matches [data-theme="dark"] */
+    --color-on-primary: #1f1810;  /* matches [data-theme="dark"] */
     --color-accent:    #d4a017;
-    --color-text:      #e8dfc8;
-    --color-muted:     #9a8870;
-    --color-border:    #3a2e1e;
-    --color-bg-alt:    #2a1f0f;
+    --color-text:      #ecdfc8;
+    --color-muted:     #a8977a;
+    --color-border:    #3c3221;
+    --color-bg-alt:    #2a2114;
+    --shadow-card:     0 1px 3px rgba(0, 0, 0, 0.4);
     --color-surface-subtle: #2a1f0f;  /* matches [data-theme="dark"] — see note there */
     --color-surface-alt:    #382a16;
     --color-text-soft:      #ab9a7e;
@@ -716,14 +726,27 @@ span.term { font-weight: bold; color: var(--color-primary); }
 
 /* Footer: swap yellow bg for dark surface in dark mode */
 [data-theme="dark"] .site-footer {
-  background: #231a0d;
-  border-top: 1px solid #3a2e1e;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .site-footer {
-    background: #231a0d;
-    border-top: 1px solid #3a2e1e;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
   }
+}
+
+/* ── Embedded (hub-tab iframe / ?minimal=1) chrome suppression ── */
+/* The sidebar/topbar now ship statically in the HTML (src/components/
+   Sidebar.astro), so embedded pages must hide them via CSS. The is-embedded
+   class is applied pre-paint by the Base.astro bootstrap (and re-applied by
+   wireSidebar as a fallback). sidebar-collapsed removes the body padding. */
+body.is-embedded .site-sidebar,
+body.is-embedded .sidebar-tab,
+body.is-embedded .mobile-topbar,
+body.is-embedded .sidebar-backdrop,
+body.is-embedded .skip-link {
+  display: none !important;
 }
 
 /* Translation Workshop — pinned footer inside sidebar */
@@ -985,3 +1008,45 @@ a.cv-name:focus-visible { outline: 2px solid var(--color-accent); outline-offset
   border-top: 1px solid var(--color-border);
 }
 .mkt-card__body--empty { color: var(--color-muted); font-style: italic; font-size: 0.9rem; }
+
+/* ── Sync & Backup section (settings page — rendered by assets/js/sync.js) ── */
+/* INTENT: layout-only helpers for the Google Drive sync UI inside #sync-section.
+   Buttons deliberately reuse the settings page's own .set-btn classes (defined
+   inline on settings/index); these rules cover just the rows, status line, and
+   the "not configured" setup card, all on existing design tokens. */
+.sync-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-ui);
+}
+.sync-last { font-size: 0.85rem; color: var(--color-muted); }
+.sync-last strong { color: var(--color-text); }
+.sync-note {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+  margin: 0.4rem 0 0;
+}
+.sync-status {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  min-height: 1.2em;   /* reserve the line so status updates don't shift layout */
+  margin-top: 0.4rem;
+}
+.sync-setup {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  line-height: 1.5;
+}
+.sync-setup ol { margin: 0.5rem 0 0; padding-left: 1.4rem; }
+.sync-setup code { font-family: var(--font-mono); font-size: 0.85em; color: var(--color-text); }

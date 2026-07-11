@@ -72,6 +72,7 @@ import { initLibProgressPage } from './lib-progress.js';
 import { initWorkshopPage } from './workshop.js';
 import { initOLSection } from './ol-companion.js';
 import { initApocryphaReader, wireApoRefLinks } from './apocrypha-reader.js';
+import { initSyncSection } from './sync.js';
 
 // ── Register cross-module callbacks ───────────────────────────────────────
 // These connect the modal to feature-module renderers without creating circular
@@ -274,6 +275,10 @@ function init() {
     if (document.getElementById('apoc-reader-results')) {
       initApocryphaReader();
     }
+
+    // ── Settings page — Sync & Backup (settings/index.html) ───────────────
+    // Self-guards on #sync-section, so this is a no-op on every other page.
+    initSyncSection();
 
     // History widget appears on the home page sidebar — tracks recently visited refs.
     initHistoryWidget();

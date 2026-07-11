@@ -18,7 +18,9 @@ retired after the cutover.
 ```
 ├── src/
 │   ├── layouts/Base.astro   # Universal shell: head boilerplate, theme bootstrap,
-│   │                        #   base CSS, footer, main.js/app.js pair
+│   │                        #   base CSS, sidebar, footer, main.js/app.js pair
+│   ├── components/Sidebar.astro  # Static site nav (edit nav links HERE;
+│   │                        #   assets/js/main.js only wires behavior)
 │   └── pages/               # One .astro file per page, mirrors URL structure
 ├── assets/                  # css/, js/ (ES modules), fonts/ — served as-is
 ├── data/                    # Bible text, commentary, library JSON (~50k files);

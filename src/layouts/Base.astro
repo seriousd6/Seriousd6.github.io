@@ -32,6 +32,10 @@ const {
   appJs = true,
   footer = true,
 } = Astro.props;
+import Sidebar from '../components/Sidebar.astro';
+// Topic pages use overlay mode (sidebar floats over content). Must match the
+// _isTopicPage regex in assets/js/main.js.
+const isTopicPage = /^\/topics\/[^/]+\/$/.test(Astro.url.pathname);
 ---
 
 <html lang="en">
@@ -49,6 +53,23 @@ const {
   <slot name="head-end" />
 </head>
 <body {...bodyAttrs}>
+  {mainJs && (
+    <script is:inline data-topic-page={isTopicPage ? '1' : ''}>
+      /* Pre-paint state bootstrap: apply persisted sidebar collapse, topic-page
+         overlay mode, and embedded (iframe / ?minimal=1) chrome suppression
+         BEFORE the static sidebar paints. Mirrors the class logic in
+         assets/js/main.js (wireSidebar) — keep in sync. */
+      (function () {
+        var b = document.body, cl = b.classList;
+        var framed; try { framed = window.self !== window.top; } catch (e) { framed = true; }
+        var minimal = false; try { minimal = !!new URLSearchParams(location.search).get('minimal'); } catch (e) {}
+        if (framed || minimal) { cl.add('sidebar-collapsed', 'is-embedded'); return; }
+        if (document.currentScript.getAttribute('data-topic-page')) { cl.add('sidebar-overlay'); return; }
+        try { if (localStorage.getItem('bsw_sidebar') === 'collapsed') cl.add('sidebar-collapsed'); } catch (e) {}
+      })();
+    </script>
+  )}
+  {mainJs && <Sidebar />}
   <slot />
   {footer && (
     <footer class="site-footer">

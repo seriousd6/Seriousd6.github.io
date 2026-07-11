@@ -1,0 +1,111 @@
+---
+// Sidebar.astro — static render of the site chrome that main.js used to build
+// at runtime (buildSidebar). The DOM ships in the HTML for instant paint and
+// no-JS navigation; assets/js/main.js now only WIRES it (collapse state,
+// hamburger, group toggles, theme button, active-link marking — active state
+// depends on query strings like history/?tab=church, so it stays client-side).
+//
+// Contract with assets/js/main.js (wireSidebar) — keep in sync:
+//   #site-sidebar, .sb-collapse-btn, .sidebar-tab, .mobile-topbar__hamburger,
+//   .sidebar-backdrop, #bsw-theme-btn, #bible-version, .sb-group > .sb-group-btn
+//   + .sb-group-items[hidden], nav links (.sb-link/.sb-group-btn/.sb-child).
+// Groups render collapsed; wireSidebar expands the group containing the active
+// page. The pre-paint state bootstrap in Base.astro sets body classes
+// (sidebar-collapsed / sidebar-overlay / is-embedded) before this paints.
+const NAV = {
+  tools: [
+    { label: '📖 The Holy Bible', href: '/read/' },
+    { label: '📜 Apocrypha', href: '/apocrypha/' },
+    { label: '🔍 Explore', href: '/search/' },
+    { label: '📚 Studies', href: '/studies/' },
+    { label: '✝ Discipline', href: '/discipline/' },
+    { label: '🔬 Original Language Study', href: '/translation/workshop/' },
+    { label: '⚙ Settings', href: '/settings/' },
+    { label: 'ℹ About / AI', href: '/about/' },
+  ],
+  groups: [
+    {
+      id: 'history',
+      label: '🕰 History',
+      children: [
+        { label: '📜 Biblical Timeline', href: '/history/?tab=timeline' },
+        { label: '⛪ Church History', href: '/history/?tab=church' },
+        { label: '🗺 Maps', href: '/history/?tab=maps' },
+        { label: '🎬 Animated Map', href: '/history/?tab=timelapse' },
+      ],
+    },
+    {
+      id: 'explore',
+      label: '🔍 Explore',
+      children: [
+        { label: '🔍 Search', href: '/search/' },
+        { label: '📑 Topics', href: '/search/?tab=topics' },
+        { label: '📖 Study Guides', href: '/search/?tab=guides' },
+        { label: '📘 Biblepedia', href: '/biblepedia/' },
+        { label: '☁ Word Cloud', href: '/search/?tab=wordcloud' },
+      ],
+    },
+    {
+      id: 'discipline',
+      label: '✝ Discipline',
+      children: [
+        { label: '✝ Discipline Hub', href: '/discipline/' },
+        { label: '📅 Discipline History', href: '/discipline/?tab=history' },
+        { label: '📊 Reading Progress', href: '/progress/' },
+      ],
+    },
+    {
+      id: 'library',
+      label: '📚 Library',
+      children: [
+        { label: '📋 Library', href: '/library/' },
+        { label: '📚 Reading History', href: '/library/progress/' },
+      ],
+    },
+  ],
+};
+---
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<aside class="site-sidebar" id="site-sidebar" aria-label="Site navigation">
+  <div class="sb-head">
+    <a class="sb-logo" href="/">📖 Kingdom Bible Study</a>
+    <button class="sb-collapse-btn" aria-label="Collapse sidebar" aria-controls="site-sidebar">&#x2039;</button>
+  </div>
+  <div class="sb-nav" role="navigation">
+    <a class="sb-link" href="/">Home</a>
+    <div class="sb-version">
+      <label for="bible-version">Version:</label>
+      <select id="bible-version"></select>
+    </div>
+    <div class="sb-divider"></div>
+    {NAV.tools.map((tool) => (
+      <a class="sb-group-btn" href={tool.href}><span class="sb-group-label">{tool.label}</span></a>
+    ))}
+    <div class="sb-divider"></div>
+    {NAV.groups.map((group) => (
+      <div class="sb-group">
+        <button class="sb-group-btn" aria-expanded="false" aria-controls={`sbg-${group.id}`}>
+          <span class="sb-group-label">{group.label}</span>
+          <span class="sb-group-arrow">&#x25B6;</span>
+        </button>
+        <div class="sb-group-items" id={`sbg-${group.id}`} hidden>
+          {group.children.map((child) => (
+            <a class="sb-child" href={child.href}>{child.label}</a>
+          ))}
+        </div>
+      </div>
+    ))}
+    <div class="sb-divider"></div>
+    <button id="bsw-theme-btn">🌙 Dark Mode</button>
+  </div>
+  <div class="sb-footer">
+    <a class="sb-workshop-link" href="/translation/workshop/">⚙ Translation Workshop</a>
+  </div>
+</aside>
+<button class="sidebar-tab" aria-label="Toggle sidebar" aria-controls="site-sidebar">&#x2039;</button>
+<div class="mobile-topbar" role="banner">
+  <button class="mobile-topbar__hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="site-sidebar">&#9776;</button>
+  <a class="mobile-topbar__logo" href="/">📖 Kingdom Bible Study</a>
+</div>
+<div class="sidebar-backdrop" aria-hidden="true"></div>
