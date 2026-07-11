@@ -317,28 +317,58 @@ function _renderConnecting() {
     '</div>';
 }
 
+// _whatSyncsHtml: plain-language disclosure of exactly what a backup contains
+// and where it goes. Shown in both signed-in and signed-out states; the full
+// statement lives at /privacy/.
+function _whatSyncsHtml() {
+  return (
+    '<details class="sync-what">' +
+      '<summary>What gets synced, and where it goes</summary>' +
+      '<p>A backup is a single file containing your <strong>study data from this ' +
+        'browser</strong>: reading progress and plans, notes and highlights, bookmarks, ' +
+        'prayer journal, gratitude and reflection entries, scripture memory, worship log, ' +
+        'discipline history, and site preferences.</p>' +
+      '<p>It is sent <strong>directly from your browser to a private app-data area of ' +
+        'your own Google Drive</strong> — this site has no servers, and no one else ' +
+        '(including the site) can read that area. Data comes back out only when you ' +
+        'restore it on a device. It is never evaluated, shared, or sold. ' +
+        '<a href="/privacy/">Privacy policy</a></p>' +
+    '</details>'
+  );
+}
+
 function _renderSignedOut() {
   _body.innerHTML =
     '<div class="sync-row">' +
+      '<span class="sync-badge sync-badge--off"><span class="sync-dot" aria-hidden="true"></span>Not connected</span>' +
       '<button type="button" class="set-btn set-btn--primary" id="sync-connect">Connect Google Drive</button>' +
     '</div>' +
     '<p class="sync-note">Backups go only to a private app-data area of your own ' +
       'Google Drive — nothing is ever sent to this site or anyone else.</p>' +
+    _whatSyncsHtml() +
     '<div class="sync-status" id="sync-status" role="status" aria-live="polite"></div>';
   document.getElementById('sync-connect').addEventListener('click', _onConnectClick);
 }
 
 function _renderSignedIn() {
   var st = _getSyncState();
+  // Live transparency line: how much data a backup covers right now.
+  var snap = _buildSnapshot();
+  var keys = Object.keys(snap.data).length;
+  var kb   = Math.max(1, Math.round(JSON.stringify(snap).length / 1024));
   _body.innerHTML =
     '<div class="sync-row">' +
+      '<span class="sync-badge sync-badge--on"><span class="sync-dot" aria-hidden="true"></span>Connected to Google Drive</span>' +
       '<span class="sync-last">Last backup: <strong id="sync-last-time"></strong></span>' +
     '</div>' +
+    '<p class="sync-note">Backing up <strong>' + keys + ' item' + (keys === 1 ? '' : 's') +
+      ' (~' + kb + ' KB)</strong> from this browser to the private app-data area of your own Drive.</p>' +
     '<div class="sync-row">' +
       '<button type="button" class="set-btn set-btn--primary" id="sync-backup">Back up now</button>' +
       '<button type="button" class="set-btn" id="sync-restore">Restore from backup</button>' +
       '<button type="button" class="set-btn set-btn--danger" id="sync-disconnect">Disconnect</button>' +
     '</div>' +
+    _whatSyncsHtml() +
     '<div class="sync-status" id="sync-status" role="status" aria-live="polite"></div>';
   _updateLastBackup(st.lastBackupAt || null);
   document.getElementById('sync-backup').addEventListener('click', function () {

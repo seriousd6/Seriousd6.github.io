@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Privacy Policy — Kingdom Bible Study"} description={"How Kingdom Bible Study handles your data: everything stays in your browser and, if you enable sync, in your own Google Drive. Nothing is evaluated, shared, or sold."}>
+<Fragment slot="head-end">
+<style is:inline>
+  .policy-page { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .policy-page h1 { font-size: 1.7rem; margin-bottom: 0.3rem; }
+  .policy-page .policy-date { font-family: var(--font-ui); font-size: 0.8rem; color: var(--color-muted); margin-bottom: 2rem; }
+  .policy-page h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; }
+  .policy-page p, .policy-page li { font-size: 0.98rem; line-height: 1.7; }
+  .policy-page ul { padding-left: 1.4rem; margin: 0.5rem 0 1rem; }
+  .policy-page li { margin-bottom: 0.35rem; }
+  .policy-page a { color: var(--color-accent); }
+  .policy-summary {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card, 12px);
+    box-shadow: var(--shadow-card, none);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+</style>
+</Fragment>
+<main>
+  <div class="container policy-page">
+    <h1>Privacy Policy</h1>
+    <p class="policy-date">Effective July 11, 2026 · kingdombiblestudy.com</p>
+
+    <div class="policy-summary">
+      <strong>The short version:</strong> your study data lives in your browser.
+      If you connect Google Drive sync, a backup of that data is stored in
+      <em>your own</em> Google Drive so you can continue on another device.
+      This site has no servers, no accounts, no analytics, and no access to your
+      data. Nothing is ever evaluated, shared, or sold — by anyone, for anything.
+    </div>
+
+    <h2>What this site stores, and where</h2>
+    <p>
+      Kingdom Bible Study is a personal Bible study application. Everything you
+      create while using it — reading progress and plans, notes and highlights,
+      bookmarks, prayer journal entries, gratitude and reflection entries,
+      scripture memory, worship log, discipline history, and site preferences —
+      is stored <strong>locally in your browser</strong> (localStorage). By
+      default it never leaves your device.
+    </p>
+
+    <h2>Google Drive sync (optional)</h2>
+    <p>
+      If you choose to connect Google Drive in <a href="/settings/">Settings →
+      Sync &amp; Backup</a>, the site stores a single backup file of the data
+      listed above in the <strong>private application-data area of your own
+      Google Drive</strong>, and retrieves it to bring another device up to
+      date. That is the sync feature's only purpose:
+      <strong>cross-device continuation of your own progress, prayers, notes,
+      and study data</strong>.
+    </p>
+    <ul>
+      <li>The backup travels <strong>directly from your browser to Google</strong>.
+        This site is statically hosted and has no servers of its own — there is
+        no intermediary that could see, copy, or retain your data.</li>
+      <li>The site requests only the <code>drive.appdata</code> permission: a
+        hidden app-specific area of your Drive. It <strong>cannot</strong> see,
+        read, or touch any of your other Drive files.</li>
+      <li>The site operator has <strong>no access</strong> to your Google
+        account, your Drive, or your backups.</li>
+      <li>Your data is <strong>never evaluated, analyzed, profiled, shared,
+        rented, or sold</strong>. There is no advertising and no analytics.</li>
+      <li>Kingdom Bible Study's use of information received from Google APIs
+        adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+        API Services User Data Policy</a>, including the Limited Use
+        requirements.</li>
+    </ul>
+
+    <h2>Your controls</h2>
+    <ul>
+      <li><strong>Disconnect</strong> at any time in Settings → Sync &amp; Backup
+        — the site loses all access to your Drive immediately.</li>
+      <li><strong>Revoke access</strong> from Google's side at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+      <li><strong>Delete the backup</strong> in Google Drive: Settings (in Drive)
+        → Manage apps → Kingdom Bible Study → delete hidden app data.</li>
+      <li><strong>Delete local data</strong> by clearing this site's storage in
+        your browser settings.</li>
+    </ul>
+
+    <h2>Cookies and tracking</h2>
+    <p>
+      This site sets no tracking cookies and runs no analytics. Browser storage
+      is used solely to make the app itself work (your data and preferences,
+      plus offline caching of scripture and app files by the service worker).
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy changes, the new version will be posted at this address
+      with an updated effective date. Questions can be raised on the
+      <a href="https://github.com/seriousd6/Seriousd6.github.io">project's
+      GitHub repository</a>.
+    </p>
+
+    <p><a href="/terms/">Terms of Service →</a></p>
+  </div>
+</main>
+</Base>

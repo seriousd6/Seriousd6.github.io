@@ -104,6 +104,15 @@ bundled + lazy already), `_template` scaffolds, `dictionary/` redirect page's
 vestigial markup, `verse-study.js`/`ol-companion.js` (reachable via the
 documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
 
+### Privacy, terms & sync transparency (2026-07-11)
+- **/privacy/ + /terms/ pages**: plain-language policy — data lives in the
+  browser and (optionally) the user's own Drive app-data area for cross-device
+  continuation only; never evaluated, shared, or sold; includes the Google API
+  Limited Use statement. Linked from the site footer and the sync UI.
+- **Sync UI transparency**: green/gray connected badge, live "backing up N
+  items (~KB)" line, and a "What gets synced, and where it goes" disclosure in
+  Settings → Sync & Backup.
+
 ### Housekeeping (2026-07-11)
 - CI fixed twice: branch filter (`main` → `master`; it had never run) and
   missing `beautifulsoup4` install. Validate is green and runs the full
