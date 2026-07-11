@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install validator dependencies
+        run: pip install beautifulsoup4
+
       - name: Data integrity checks
         run: python3 scripts/validate-data.py
 
