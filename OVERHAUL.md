@@ -1,277 +1,199 @@
-# JS → Astro Migration — Overhaul Plan
+# UI Overhaul Plan — Kingdom Bible Study
 
-_Regenerated 2026-07-11 from a fresh read of the repo._
+> Status document for the July 2026 site overhaul: Astro migration + "Candlelight"
+> redesign + rebrand + Google Drive sync + JS-runtime/data-page overhaul.
+> Kept current as phases land.
+> Last updated: **2026-07-11** · Live: https://kingdombiblestudy.com
 
-> **STATUS: ALL PHASES COMPLETE (2026-07-11).** Phases 2 → 5 shipped in sequence on
-> `claude/repo-overhaul-context-1ixq9c`; each phase section below carries its completion
-> record. Headline results: per-page eager JS 1,800 KB → 200 KB on generic pages; assets
-> bundled/minified/hashed through Vite with a build-generated service-worker precache;
-> 4,418 Biblepedia articles + 143 library documents statically rendered
-> (render-then-enhance) and surfaced via sitemap; dead code removed. Phase 4's smaller
-> leftovers (reading-plan tables stay client-side by design — build date ≠ view date) and
-> Phase 5's deferred items are documented in place.
+## Decisions
 
-## What "migrated to Astro" really means here
+- **Framework**: migrate the hand-authored static site to **Astro** (static output,
+  GitHub Pages via Actions).
+- **Asset pipeline** *(revised 2026-07-11)*: `assets/js` **is** bundled now — the
+  original "ship verbatim" decision existed because modules relied on
+  `import.meta.url` data paths and `?v=` cache-busters. Those blockers were removed
+  (all data URLs resolve through `core.js _resolve()`; content hashing replaced
+  `?v=`), and `tools/build-assets.mjs` Vite-bundles per-page entries with stable
+  URLs + hashed minified chunks. `astro dev` still serves the raw tree as native ESM.
+- **Design direction**: **Candlelight** — the site's existing warm
+  parchment/oak/gold identity, kept but disciplined. Chosen from three mocked
+  directions (Candlelight / Study Desk / Rubric); mockups:
+  https://claude.ai/code/artifact/fbf24564-2d1c-416d-ba0d-27f6c9080f36
+- **Brand**: "Bible Study" → **"Kingdom Bible Study"**, matching the
+  kingdombiblestudy.com custom domain.
+- **Sync**: personalized cross-device sync via **Google Identity Services +
+  Drive `appDataFolder`** (user's own Drive, no backend, $0).
+- **Static-first content** *(2026-07-11)*: data-driven pages render at build time
+  ("render-then-enhance") — the client app that serves the legacy query-param URLs
+  detects the static path and replaces the pre-rendered DOM with the enriched view.
+  One implementation per app; static HTML is its build-time snapshot.
 
-The July-2026 cutover was billed as complete, but it only finished **Phase 1: the
-structural shell**. Astro is currently used as an HTML templating layer and nothing
-more:
+## Completed
 
-- All 74 pages are `.astro` files sharing `src/layouts/Base.astro` +
-  `src/components/Sidebar.astro`.
-- `astro.config.mjs` sets `compressHTML: false` and `build.format: 'preserve'`
-  **specifically so `dist/` DOM-diffs clean against the retired legacy HTML** — the
-  Phase-1 acceptance test. Astro is deliberately producing byte-similar output.
-- **Zero** framework islands, `client:*` directives, or `.astro` content components.
-- `assets/js` and `assets/css` are **not** in Astro's build pipeline. They live at the
-  repo root and are copied verbatim by the `root-statics.mjs` dev middleware and by
-  `deploy.yml`. No bundling, tree-shaking, hashing, or code-splitting happens.
+### Phase 0–1 — Astro structural migration (2026-07-11)
+- 75 pages converted to `src/pages/*.astro` sharing `src/layouts/Base.astro`;
+  DOM-diff-verified **identical** to the legacy HTML before cutover
+  (`tools/convert-pages.mjs` / `tools/diff-pages.mjs`, now historical).
+- **Overlay layout**: `assets/`, `data/`, `sw.js` stay at the repo root (the
+  hourly data auto-sync writes there). `tools/root-statics.mjs` serves them in
+  `astro dev`; `.github/workflows/deploy.yml` copies what the build doesn't emit.
+- 9 redirect stubs + `_template` scaffolds + `offline.html` ship verbatim —
+  copy lists live in `root-statics.mjs` and `deploy.yml` (keep in sync).
+- Cutover complete: Pages source = GitHub Actions, auto-deploy on every push
+  to master, legacy root HTML deleted. Rollback = revert + push.
 
-The content itself is still a **client-rendered JS app wrapped in an Astro shell**.
-Pages ship empty scaffolding `<div id="…">` landmarks, and 40 JS modules (**1.8 MB**
-total) inject the actual content at runtime.
+### Rebrand (2026-07-11)
+- Titles/OG metas across all pages, sidebar logo, PWA manifest
+  (name "Kingdom Bible Study", short_name "Kingdom"), onboarding, share-scene
+  canvas, dynamic `document.title` strings, offline page.
 
-### The central problem
+### Phase 2 (Candlelight) — design application (2026-07-11)
+- **Static sidebar**: nav renders at build time from
+  `src/components/Sidebar.astro` (edit nav links THERE); `assets/js/main.js`
+  only wires behavior. Pre-paint bootstrap in `Base.astro` applies
+  collapse/overlay/embedded state before first paint.
+- **Tokens** (`assets/css/style.css`): warmer parchment ground, warm off-white
+  surfaces, hairline borders, deeper oak sidebar; candlelit deep-brown dark
+  mode; new `--shadow-card` / `--radius-card` tokens.
+- **Cards**: home page + 21 surfaces across bible-ui / library / lib-browser /
+  discipline / biblepedia adopted the tokens. `reader.css` deliberately keeps
+  its compact 6px style. Footer is a quiet hairline rule in both themes.
 
-`assets/js/app.js` **statically imports 30 of the 40 modules** and is loaded on nearly
-every page via `Base.astro` (`appJs` defaults to `true`). It then guards each module's
-`init()` behind a `getElementById` check. Net effect: **every page downloads and parses
-~1.8 MB of JavaScript to use one module.** For a PWA whose whole value proposition is
-offline speed, this is the biggest single regression to fix, and it is entirely
-mechanical to unwind.
+### Google Drive sync — built, dormant (2026-07-11)
+- `assets/js/sync.js` + Settings → "Sync & Backup": backup/restore of all
+  `bsw_*` localStorage state to the user's Drive app-data area; auto-backup
+  with change detection; confirm-gated restore.
+- **Activation blocked on one manual step** (see below).
 
-A pattern for the fix already exists in-repo: `dictionary` and `translation/workshop`
-set `appJs={false}` / `mainJs={false}` and supply their own inline `slot="after-scripts"`
-module script. That per-page-entry model just needs to become the default.
+### JS runtime & data-page overhaul, Phases 2–5 (2026-07-11)
 
-## Guardrails (invariants every phase must hold)
+Shipped in sequence on `claude/repo-overhaul-context-1ixq9c` (per-phase detail
+in the commit messages):
 
-1. **`data/` is immovable.** ~50k files written hourly by the local auto-sync. Read it,
-   never relocate it. Build-time reads (Astro frontmatter `import`/`fs`) are fine.
-2. **The site is served from the repo root of a user GitHub Pages site.** Root-absolute
-   asset URLs (`/assets/js/...`) must keep resolving.
-3. **Keep the copy lists in `tools/root-statics.mjs` and `.github/workflows/deploy.yml`
-   in sync** whenever files move into or out of the overlay tree.
-4. **`sw.js`**: bump `APP_CACHE_V` on any asset-URL change; reconcile its precache
-   manifest when asset paths change (Phase 3+).
-5. **Redirect stubs and `_template` scaffolds** ship verbatim — not Astro pages.
-6. CI must stay green: `validate.yml` (data validators + `node --check` + `astro build`).
+- **Per-page JS entries** *(Phase 2 + 2.5)* — the `app.js` monolith (30 static
+  imports, ~1.8 MB parsed on every page) is gone. Each page loads a thin entry
+  from `assets/js/entries/` (selected by Base.astro's `entry` prop, default
+  `generic`); the shared boot lives in `assets/js/core-boot.js`, which
+  lazy-loads heavy pieces (terms/places tagging at idle, search engine only on
+  the search page, `mem.js` extracted from daily.js for the modal's Memorize
+  button, dead modal-renderer bridge deleted).
+  **Eager JS on generic pages: 1,800 KB → 200 KB (−89 %)**; reader 558 KB.
+- **Vite asset pipeline** *(Phase 3)* — `npm run build` = `astro build` +
+  `tools/build-assets.mjs`: entries bundle with **stable URLs** + hashed
+  minified chunks; `core.js`/`tracker.js` are stable externals (inline page
+  scripts import them — single module instance); CSS minified in place;
+  `sw.js`'s JS/CSS precache list and `APP_CACHE_V` are **generated from the
+  emitted bytes** (manual cache bumps for JS/CSS are retired). Emitted:
+  JS 1.9 MB → 880 KB, CSS 876 → 628 KB.
+- **Static data pages** *(Phase 4)* — **4,418 Biblepedia articles** at
+  `/biblepedia/<slug>/` and **143 library documents** at `/library/read/<id>/`
+  render at build time (render-then-enhance; legacy `?a=`/`?doc=` URLs still
+  work; link emitters point at the canonical paths). The library browser's
+  catalog is crawlable no-JS. Reading-plan tables stay client-side by design
+  (build date ≠ view date). Build: 4,635 pages in ~35 s.
+- **Convergence** *(Phase 5)* — dead modules deleted (`word.js`,
+  `provenance.js`, `discipline-strip.js`, the dead sidebar Search-button
+  injection); `compressHTML: true`; `@astrojs/sitemap` + `robots.txt`
+  (all 4,635 pages in `sitemap-index.xml`); README architecture rewritten.
 
----
+Deferred deliberately: framework islands for modal/tooltip (plain JS is
+bundled + lazy already), `_template` scaffolds, `dictionary/` redirect page's
+vestigial markup, `verse-study.js`/`ol-companion.js` (reachable via the
+documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
 
-## Phase 2 — De-monolith the client runtime  ·  ✅ **DONE 2026-07-11**
+### Housekeeping (2026-07-11)
+- CI fixed twice: branch filter (`main` → `master`; it had never run) and
+  missing `beautifulsoup4` install. Validate is green and runs the full
+  production build (astro + assets) on every push.
+- Astro 5.18.2 → **6.4.8** + esbuild override `^0.28.1` →
+  **0 open Dependabot alerts**.
 
-**Shipped:** `assets/js/core-boot.js` (shared boot, `boot(pageInit, opts)`) + 15 entry
-modules under `assets/js/entries/`; `Base.astro` gained an `entry` prop (default
-`generic`); `app.js` deleted; `sw.js` precache updated, `APP_CACHE_V` → v185 (also
-fixed pre-existing precache gaps: `synoptic.js`, `biblepedia.js`). Measured transitive
-payload: generic pages **1,800 KB → 509 KB (−72 %)**; reader 779 KB; maps 694 KB.
-Remaining fat in core-boot is the modal-renderer set (`verse-study`/`daily`/`library`/
-`search` + deps) — lazy-loading those on first modal-tab click is the Phase 2.5
-follow-up, or falls out naturally in Phase 3/4.
+## Next up
 
-### Phase 2.5 — ✅ **DONE 2026-07-11**
+1. **Activate Drive sync** — follow "Google Drive sync activation" below
+   (~10 min, free, user action only).
+2. **Remaining Candlelight polish** (optional, incremental):
+   - Study-guide / topic page typography alignment (they carry their own
+     Google-Fonts look today).
+   - Reader study-desk panels onto the card token language, if desired.
+3. **Unscheduled candidates**: content collections for topics/study-guides,
+   Astro view transitions, self-hosting Leaflet (maps currently load it from
+   unpkg — an offline gap), static rendering for more page families.
 
-The "modal-renderer set" turned out to be mostly **dead code**: modal.js stored the five
-registered tab renderers but never invoked them (tabs are Verse/Notes/Connections;
-verse-study.js imports library.js renderers directly). Shipped:
+## Google Drive sync activation — step by step
 
-- Dead `registerModal*` bridge removed from modal.js + core-boot; `verse-study.js`
-  (+`interlinear.js`) and `library.js` fall out of the eager graph entirely.
-- `mem.js` extracted from daily.js (memory-verse localStorage/SRS helpers) so the
-  modal's Memorize button no longer drags the 62 KB daily page module everywhere.
-- Sidebar Search button + Ctrl+K/`?` hotkeys inlined into core-boot (`buildSearchNav`);
-  the 60 KB search engine now loads only on `search/` via its own `entries/search.js`.
-- `terms.js`/`places.js` dynamic-imported in their existing idle slots;
-  `apocrypha-reader.js` fire-and-forget after `wireRefLinks`; `BibleUI.initOLSection` /
-  `autoTagPlacesIn` became lazy wrappers (their callers already tolerate promises).
-- `sw.js` → v186 (+`mem.js`, `entries/search.js` precached).
+Everything here is free: no billing account, no verification review. Do it
+signed into the Google account whose Drive should hold the backups.
 
-**Eager payload: generic pages 509 → 200 KB** (−89 % vs the original 1,800 KB);
-reader 558 KB; maps 385 KB. Verified with a headless-Chromium functional pass: modal
-opens via ref click, search returns results, John 3:16 renders, library populates,
-Ctrl+K navigates, `window.BibleUI` surface exact.
+### 1. Create the project
+Go to https://console.cloud.google.com (accept terms on first visit). Project
+picker in the top bar → **New project** → name it `Kingdom Bible Study` →
+Create. No billing account, no organization.
 
-_Known pre-existing issue (not fixed here):_ the injected sidebar Search **button** has
-been dead since the Candlelight static-sidebar commit — its `.version-picker` anchor no
-longer exists (the sidebar's 🔍 Explore link covers navigation; Ctrl+K still works).
-Decide in Phase 5 whether to re-anchor it next to `#bible-version` or delete the code.
+### 2. Enable the Drive API
+With that project selected: **APIs & Services → Library** → search
+**"Google Drive API"** → open it → **Enable**. (Grants the project permission
+to call the API; stores nothing.)
 
-**Goal:** each page loads only the JS it uses. Kill the 1.8 MB-on-every-page tax.
+### 3. Configure the consent screen
+**APIs & Services → OAuth consent screen** (newer console layouts:
+**Google Auth Platform → Branding / Audience**):
+- **User type**: External (personal Gmail can't pick Internal — fine).
+- **App name**: Kingdom Bible Study; your email for support + developer contact.
+  Skip logo and all optional fields.
+- **Publishing status / Audience**: leave in **Testing** — important. Under
+  **Test users**, **add your own Gmail address**. Testing mode + you as a test
+  user means Google's app-verification review never applies.
+- If a **Scopes** / "Data Access" step is offered, add
+  `https://www.googleapis.com/auth/drive.appdata` ("See, create, and delete its
+  own configuration data in your Google Drive"). If you can't find that UI,
+  skip it — the app requests the scope at sign-in time anyway.
 
-**Approach (low risk, no pipeline change yet):**
-- Create thin per-page entry modules under `assets/js/entries/` (e.g. `reader.entry.js`,
-  `library.entry.js`, `home.entry.js`) that import only `core.js` + the module(s) that
-  page actually needs, then call that page's `init()` directly (drop the `getElementById`
-  dispatch — the entry *is* the dispatch).
-- Add an `entry` prop to `Base.astro`; when set, emit
-  `<script type="module" src="/assets/js/entries/{entry}.js">` instead of the shared
-  `app.js`. Default `appJs` stays until every page declares an entry, then retire `app.js`.
-- Factor the truly-shared boot (theme, PWA register, storage migrations, version/book
-  load, tooltip/modal/ref-wiring, search button) into one `core-boot.js` every entry
-  imports, so the modal/version-picker/search still work everywhere.
+### 4. Create the OAuth client ID
+**APIs & Services → Credentials → + Create Credentials → OAuth client ID**:
+- **Application type**: Web application. Name: anything (e.g. `kbs-web`).
+- **Authorized JavaScript origins** — add BOTH:
+  - `https://kingdombiblestudy.com`
+  - `http://localhost:4321`  (so sync works in `npm run dev`)
+- **Authorized redirect URIs**: leave **empty** (Google Identity Services
+  token flow doesn't use one).
+- Create → copy the **Client ID** (long string ending in
+  `.apps.googleusercontent.com`). Ignore the client secret — a browser-only
+  app never uses it, and the client ID itself is not a secret (the origin
+  allowlist is what controls use).
 
-**Acceptance:**
-- Per-page transferred JS drops from ~1.8 MB to that page's real footprint.
-- DOM diff vs. current `dist/` unchanged (content still client-rendered, just less code).
-- Manual smoke of each page family: reader, verse-study, library, dictionary, biblepedia,
-  timeline, maps, daily/plans, memorize, topics, workshop — features intact, no console
-  errors, `window.BibleUI.openReader('john',3,16)` still navigates.
+### 5. Wire it into the site
+- Paste the client ID into `var GOOGLE_CLIENT_ID = '...'` at the top of
+  `assets/js/sync.js`.
+- Commit + push (deploys automatically — the build stamps a new asset hash,
+  so no manual `APP_CACHE_V` bump is needed anymore). Or paste the client ID
+  into a Claude Code session and ask it to do this step.
 
-**Risk:** low. Pure import-graph surgery; the `window.BibleUI` public surface and
-cross-module callback registration in `app.js` must be preserved in `core-boot.js`.
+### 6. First connection — what to expect
+- Settings → **Sync & Backup** → **Connect Google Drive**.
+- Google shows **"Google hasn't verified this app"** — normal Testing-mode
+  banner; as a registered test user, continue past it.
+- Backups land in a hidden Drive app-data area (not visible among your files,
+  readable only by this app; counts against your normal Drive storage — the
+  file is kilobytes). Auto-backup runs on Settings visits when data changed;
+  access tokens renew silently, with an occasional re-approval popup if the
+  browser blocks silent renewal.
+- To sever access later: the Disconnect button, or
+  https://myaccount.google.com/permissions.
 
----
+## Operational notes
 
-## Phase 3 — Bring assets into the Astro/Vite pipeline  ·  ✅ **DONE 2026-07-11**
-
-**Shipped:** `tools/build-assets.mjs` runs after `astro build` (`npm run build` does both):
-
-- The 17 entries are Vite-bundled: **entry URLs stay stable** (`entries/<name>.js`, so
-  Base.astro + verbatim HTML never learn about hashes) while shared code becomes
-  content-hashed minified chunks; dynamic imports become lazy hashed chunks.
-- `core.js`/`tracker.js` are **externals at stable URLs** — both are also imported by
-  inline page scripts (home/discipline/tracker), and bundled copies would fork their
-  module state. Verified single-instance: `markDone()` through the bundled entry fires
-  `onUpdate` subscribers registered via the stable import.
-- Workshop's inline imports became `entries/workshop.js` so its chain bundles too.
-- 7 modules resolved data URLs via `new URL(…, import.meta.url)` — broken inside
-  chunks; all rewritten to core.js `_resolve()` (chunk depth also pinned as defense).
-- CSS minified in place (same URLs); classic/inline-only files (`main.js`,
-  `settings.js`, `store.js`, `sg-progress.js`) ship as stable minified copies.
-- `sw.js`: precache list between `BUILD:ASSETS` markers + `APP_CACHE_V` are generated
-  at build from the emitted bytes — **manual version bumps for JS/CSS are retired**.
-- `deploy.yml` copy step shrank to data/ + scaffolds + stubs; `validate.yml` now
-  syntax-checks `entries/` too. `astro dev` still serves the raw tree (native ESM).
-
-**Result:** JS tree 1.9 MB → 880 KB emitted, CSS 876 → 628 KB. Functional pass against
-the built dist: 8/9 pages (maps' Leaflet CDN is blocked in the sandbox — environmental).
-
-### Original Phase 3 plan (for reference)
-
-**Goal:** let Astro/Vite bundle, tree-shake, code-split, and content-hash the JS/CSS
-that Phase 2 split by hand — and retire manual cache-busting (`?v=2`, `APP_CACHE_V`).
-
-**Approach:**
-- Move `assets/js` + `assets/css` under `src/` (or import them from `.astro` frontmatter)
-  so Vite owns them. Keep `data/`, `sw.js`, fonts, icons in the root overlay.
-- Replace hand-written entry `<script>` tags with Astro `<script>`/component imports so
-  hashing + splitting are automatic.
-- Reconcile `sw.js`: precache the hashed asset URLs Astro emits (generate its manifest at
-  build time instead of hand-maintaining it); collapse `APP_CACHE_V` bumping into the
-  build hash.
-- Trim `root-statics.mjs` / `deploy.yml` copy lists to what still lives at root.
-
-**Acceptance:** identical rendered pages; assets fingerprinted; `astro build` produces the
-full deployable tree (fewer manual copy steps); offline/PWA still passes an install +
-offline-load smoke test.
-
-**Risk:** medium — touches the deploy overlay and the service worker. Do it behind a
-`dist/` diff and a real offline test before flipping `deploy.yml`.
-
----
-
-## Phase 4 — Static-render the data-driven content (the real payoff)  ·  🔄 in progress
-
-### Family 1: Biblepedia articles — ✅ DONE 2026-07-11
-
-**4,418 static article pages** at `/biblepedia/<slug>/` via `src/pages/biblepedia/[slug]/index.astro`
-(getStaticPaths over `data/biblepedia/index.json` ∩ existing article files, `has_article !== false`,
-URL-safe ids — the ~7 ids with `;`/`[]` stay on the client `?a=` route). Pattern is
-**render-then-enhance**: the static page carries breadcrumb, header, synthesis intro (whose
-`data-ref` hotlinks wire into the verse modal via core-boot), key references (href'd to the
-reader for no-JS), and sources; on load the biblepedia entry detects the path (same dispatch
-as `?a=`) and `_showArticle` swaps in the fully enriched client view (source full-texts,
-connections, location maps). No second implementation to maintain — static HTML is the
-crawler/first-paint/no-JS surface. Modal Connections badges now emit the canonical path URLs;
-alias redirects and odd ids keep working via `?a=`. Build: 4,492 pages in ~10 s.
-
-Verified: no-JS article renders full content; JS enhancement keeps the canonical URL;
-legacy `?a=` and the hub home unaffected; badges link `/biblepedia/<slug>/`.
-
-**Remaining families:** library browser lists (143 docs), reading-plan tables, topics
-index. Same render-then-enhance pattern where a client app owns the page.
-
-### Original Phase 4 plan (for reference)
-
-**Goal:** stop shipping JS to render content that is fixed at build time. Read `data/`
-JSON in `.astro` frontmatter and emit real HTML; hydrate only genuinely interactive bits
-as islands.
-
-**Prioritize by (static-ness × first-paint/SEO value):**
-1. **Library** browser lists, author/creed/confession/catechism pages — content is a
-   direct projection of `data/library/**`. Strong SSG candidate; the inline reader can
-   stay an island.
-2. **Topics** pages and `topics/_template` — largely static prose already.
-3. **Dictionary / Biblepedia / ISBE / Smith / Torrey / Hitchcock** entries — huge, static,
-   SEO-valuable; render entries at build time, keep search as an island.
-4. **Reading plans / daily** tables from `data/plans/**` — static tables + a small
-   progress island.
-
-Leave inherently interactive, state-heavy surfaces (reader with live translation compare,
-maps/timelapse, workshop, verse-study desk, wordcloud) as client apps — convert their
-mount to an Astro island (`client:visible` / `client:idle`) rather than SSG-ing them.
-
-**Acceptance:** targeted pages render meaningful content with **JS disabled**; hydration
-scoped to interactive widgets only; measurable JS-payload and first-paint improvement.
-
-**Risk:** medium–high, per page family. Do it page-family by page-family, each behind a
-visual + DOM check. This is where Astro finally earns its place; also where the diff-clean
-acceptance from Phase 1 is intentionally *retired* (SSG output will differ from the legacy
-client-rendered DOM by design).
-
----
-
-## Phase 5 — Componentize & converge  ·  ✅ **DONE 2026-07-11**
-
-**Shipped:**
-- Dead code removed: `word.js`, `provenance.js`, `discipline-strip.js` (zero references;
-  the Vite build already excluded them from dist) and the dead sidebar Search-button
-  injection in core-boot (its `.version-picker` anchor vanished in the Candlelight
-  static-sidebar commit; the sidebar's 🔍 Explore link is the affordance — Ctrl+K/`?`
-  hotkeys kept).
-- `compressHTML: true` — the Phase-1 DOM-diff acceptance it existed for is retired.
-- `@astrojs/sitemap` + `robots.txt`: all 4,635 pages (incl. the new biblepedia/library
-  statics) surface in `sitemap-index.xml`.
-- README architecture section rewritten to match the finished state.
-
-**Deferred (deliberately):** converting the modal/tooltip/version-picker to framework
-islands — the plain-JS modules are bundled, lazy, and shared; a framework would add a
-runtime for no functional gain. Also left: the `_template` scaffolds (authoring aids),
-the `dictionary/` redirect page's vestigial markup, and `verse-study.js`/`ol-companion.js`
-(reachable via the documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
-
-### Original Phase 5 plan (for reference)
-
-**Goal:** collapse the remaining duplication and the transitional apparatus.
-
-- Extract repeated shell chunks into `.astro` components / islands: the verse **modal**,
-  **tooltip**, **version picker**, sidebar **search** button, home **card grid**, the
-  `_template` / `_template-book` scaffolds.
-- Where content is fully SSG'd, drop those paths from the root overlay and the copy lists.
-- Consider relaxing `compressHTML: false` / `format: 'preserve'` once the DOM-diff
-  acceptance is no longer needed (post-Phase-4).
-- Final PWA/offline pass; update `README.md` architecture section to match reality.
-
----
-
-## Sequencing & ROI
-
-| Phase | Effort | Risk | Payoff | Do when |
-|------|--------|------|--------|---------|
-| 2 — per-page entries | S–M | Low | **High** (kills 1.8 MB tax) | **Now** |
-| 3 — assets into Vite | M | Med | High (hashing, splitting, sw) | After 2 |
-| 4 — SSG data pages | L | Med–High | **Highest** (real Astro win) | Incremental, after 3 |
-| 5 — componentize | M | Low | Medium (maintainability) | Ongoing / last |
-
-**Recommended immediate step:** Phase 2. It's mechanical, reversible, needs no pipeline or
-service-worker changes, and delivers the largest user-visible speedup on its own.
-
-## Open decisions (need owner input before locking scope)
-
-- **How far to go?** Phase 2 alone is a big, safe win. Phases 4–5 are a genuine
-  re-architecture — confirm appetite before starting them.
-- **Deploy-pipeline tolerance:** Phase 3 changes `deploy.yml` and `sw.js`. Confirm we can
-  test an offline install against a preview before flipping the live deploy.
-- **Keep this plan tracked in-repo or in `working/`?** `OVERHAUL.md` at root is committed
-  and deployed as a static file; `working/` is gitignored. Say which you prefer.
+- **`APP_CACHE_V` and the JS/CSS precache list are stamped at build time**
+  (`tools/build-assets.mjs`, `BUILD:ASSETS` markers in `sw.js`) — asset changes
+  deploy with correct cache-busting automatically. Manual bumps are only ever
+  needed for the hand-listed HTML/data entries in `SHELL_URLS`.
+- Page edits happen in `src/pages/`; nav edits in `src/components/Sidebar.astro`;
+  local page-generating tooling must author `.astro`, not raw HTML.
+- New pages with their own feature module: add a thin entry under
+  `assets/js/entries/` and set `entry="<name>"` on `<Base>` (see README).
+  Resolve data URLs through `core.js _resolve()` — never `import.meta.url`
+  (it breaks inside bundled chunks).
+- `npm run dev` (localhost:4321) serves pages from `src/` and statics from the
+  repo root (unbundled native ESM); every push to master deploys (~2–3 min).
+- Design token source of truth: `:root` blocks in `assets/css/style.css`
+  (light + two dark blocks — keep all three in sync).

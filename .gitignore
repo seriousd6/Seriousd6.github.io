@@ -34,7 +34,6 @@ working/catena-src/
 #   *.py     = any Python anywhere is build-time tooling, never runtime
 # Exception: the data/library/synthesis VALIDATORS are tracked so the CI workflow
 #   (.github/workflows/validate.yml) can run them on a fresh checkout (AUD-28).
-working/
 scripts/*
 *.py
 !scripts/validate-data.py
