@@ -25,7 +25,7 @@
 
 'use strict';
 
-var APP_CACHE_V  = 'bsw-app-v181';  // bump when HTML/CSS/JS/icon changes
+var APP_CACHE_V  = 'bsw-app-v182';  // bump when HTML/CSS/JS/icon changes
 
 // ── Per-dataset data caches ────────────────────────────────────────────────
 // A SINGLE global data cache meant every JSON tweak (e.g. one red-letter or commentary

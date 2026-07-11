@@ -1,0 +1,64 @@
+---
+// Base.astro — the universal page shell (Phase-1 structural migration).
+// Owns exactly the boilerplate every legacy page duplicated verbatim:
+// charset/viewport/favicon, the FOUC theme bootstrap, the two base
+// stylesheets, the standard footer, and the main.js/app.js script pair.
+// Everything page-specific (og/twitter meta, extra CSS, inline scripts,
+// nonstandard footers) passes through untouched via slots:
+//   slot="head"          → head content between <title> and the theme script
+//   slot="head-pre-css"  → head content between the theme script and style.css
+//                          (e.g. the maps pages' Leaflet CDN stylesheet)
+//   slot="head-end"      → head content after the base stylesheets (page CSS)
+//   default slot         → body content up to the site footer
+//   slot="after-scripts" → body content after the main.js/app.js pair
+// Asset URLs are root-absolute: this is a root-domain user site, and main.js
+// derives the site root from its own src, so /assets/js/main.js resolves it
+// to "/" exactly as the legacy relative paths did.
+interface Props {
+  title: string;
+  description?: string;
+  bodyAttrs?: Record<string, string>; // all <body> attributes (class, data-*) verbatim
+  bibleUi?: boolean; // <link bible-ui.css> — on for all but a few pages
+  mainJs?: boolean;  // classic script: sidebar/nav injection
+  appJs?: boolean;   // ES-module feature entry point
+  footer?: boolean;  // standard site footer line
+}
+const {
+  title,
+  description,
+  bodyAttrs = {},
+  bibleUi = true,
+  mainJs = true,
+  appJs = true,
+  footer = true,
+} = Astro.props;
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  {description && <meta name="description" content={description} />}
+  <title>{title}</title>
+  <slot name="head" />
+  <script is:inline>try{var t=localStorage.getItem('bsw_theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <slot name="head-pre-css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  {bibleUi && <link rel="stylesheet" href="/assets/css/bible-ui.css" />}
+  <slot name="head-end" />
+</head>
+<body {...bodyAttrs}>
+  <slot />
+  {footer && (
+    <footer class="site-footer">
+      <div class="container">
+        <p>Personal Bible study notes &amp; references.</p>
+      </div>
+    </footer>
+  )}
+  {mainJs && <script is:inline src="/assets/js/main.js"></script>}
+  {appJs && <script is:inline type="module" src="/assets/js/app.js"></script>}
+  <slot name="after-scripts" />
+</body>
+</html>

@@ -1,0 +1,457 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"All Translations — Kingdom Bible Study"} description={"Compare one Bible verse across all available translations side by side."} mainJs={false} footer={false}>
+<Fragment slot="head">
+<meta property="og:type" content="website"><meta property="og:title" id="bsw-og-title" content="All Translations — Kingdom Bible Study"><meta property="og:description" id="bsw-og-desc" content="Compare one Bible verse across all available translations side by side."><meta name="twitter:card" content="summary"><meta name="twitter:title" id="bsw-tw-title" content="All Translations — Kingdom Bible Study"><meta name="twitter:description" id="bsw-tw-desc" content="Compare one Bible verse across all available translations side by side.">
+</Fragment>
+<Fragment slot="head-end">
+<style is:inline="">
+    .cmp-page { max-width: 760px; margin: 0 auto; }
+
+    /* ── Nav bar ─────────────────────────────────────────── */
+    .cmp-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .cmp-nav__link {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .cmp-nav__link:hover { text-decoration: underline; }
+    .cmp-nav__sep { color: var(--color-border); }
+
+    /* ── Lookup bar ──────────────────────────────────────── */
+    .cmp-lookup {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .cmp-lookup__input {
+      flex: 1;
+      min-width: 180px;
+      font-family: var(--font-ui);
+      font-size: 0.95rem;
+      padding: 0.4rem 0.75rem;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+    .cmp-lookup__btn {
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--color-primary);
+      background: var(--color-primary);
+      color: var(--color-on-primary);
+      cursor: pointer;
+    }
+    .cmp-lookup__btn:hover { opacity: 0.88; }
+
+    /* ── Heading ─────────────────────────────────────────── */
+    .cmp-heading {
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      margin: 0 0 0.35rem;
+    }
+    .cmp-subhead {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      margin: 0 0 1.25rem;
+    }
+
+    /* ── Version rows ────────────────────────────────────── */
+    .cmp-list { list-style: none; margin: 0; padding: 0; }
+
+    .cmp-row {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      margin-bottom: 0.65rem;
+      background: var(--color-surface);
+      padding: 0.85rem 1rem 0.9rem;
+    }
+    .cmp-row--preferred {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 1px var(--color-primary);
+    }
+
+    .cmp-row__header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .cmp-row__id {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.1rem 0.45rem;
+    }
+    .cmp-row__name {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      flex: 1;
+    }
+    .cmp-row__ref-link {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .cmp-row__ref-link:hover { text-decoration: underline; }
+
+    .cmp-row__text {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .cmp-row__text--loading {
+      color: var(--color-muted);
+      font-style: italic;
+    }
+    .cmp-row__text--error {
+      color: var(--color-muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── Adjacent verse nav ──────────────────────────────── */
+    .cmp-adj {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.25rem;
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+    }
+    .cmp-adj__link {
+      color: var(--color-accent);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+    }
+    .cmp-adj__link:hover { background: var(--color-border); }
+    .cmp-adj__link[hidden] { visibility: hidden; }
+
+    /* ── Copy button ─────────────────────────────────────── */
+    .cmp-copy-btn {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid var(--color-border);
+      background: none;
+      color: var(--color-muted);
+      cursor: pointer;
+      margin-left: auto;
+    }
+    .cmp-copy-btn:hover { background: var(--color-border); color: var(--color-text); }
+
+    .cmp-hint {
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      padding: 2rem 0;
+      text-align: center;
+    }
+  </style>
+</Fragment>
+<main>
+    <div class="container cmp-page">
+
+      <nav class="cmp-nav">
+        <a class="cmp-nav__link" href="../">Home</a>
+        <span class="cmp-nav__sep">›</span>
+        <a class="cmp-nav__link" id="cmp-reader-link" href="../read/">Reader</a>
+        <span class="cmp-nav__sep">›</span>
+        <span id="cmp-nav-ref" style="font-family:var(--font-ui);font-size:0.82rem;color:var(--color-muted);">All Translations</span>
+      </nav>
+
+      <form class="cmp-lookup" id="cmp-form">
+        <input class="cmp-lookup__input" id="cmp-ref-input" type="text" placeholder="e.g. John 3:16 or Romans 8:28" aria-label="Bible verse reference" autocomplete="off" spellcheck="false">
+        <button class="cmp-lookup__btn" type="submit">Compare</button>
+      </form>
+
+      <div id="cmp-output">
+        <p class="cmp-hint" id="cmp-hint">Enter a verse reference above to compare all translations.</p>
+      </div>
+
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<script is:inline="">
+    (function () {
+      var DATA_ROOT    = '../data/bible';
+      var VERSIONS_URL = '../data/versions/versions.json';
+      var BOOKS_URL    = '../data/bible/books.json';
+      var READER_URL   = '../read/';
+      var VS_URL       = '../read/';   // SD-T5: verse study now opens in the reader's study desk
+
+      var versions   = null; // [{id, name, fullname}]
+      var bookLookup = null; // normalized → bookId
+      var bookMeta   = null; // [{id, name, chapters}]
+
+      // ── Normalize / lookup ─────────────────────────────────────────────────
+      function normStr(s) {
+        return s.toLowerCase().replace(/[.\s]+/g, '').replace(/^(1st|2nd|3rd|i+)/, function (m) {
+          return { '1st': '1', '2nd': '2', '3rd': '3', 'i': '1', 'ii': '2', 'iii': '3' }[m] || m;
+        });
+      }
+
+      function lookupBook(name) {
+        if (!bookLookup) return null;
+        var key = normStr(name);
+        return bookLookup[key] || null;
+      }
+
+      function parseRef(str) {
+        str = str.trim().replace(/[–—]/g, '-');
+        var m = str.match(/^((?:[1-4]\s+)?(?:[A-Za-z]+\s+)*[A-Za-z]+)\s+(\d+):(\d+)$/);
+        if (!m) return null;
+        var bookId = lookupBook(m[1]);
+        if (!bookId) return null;
+        var bk = bookMeta && bookMeta.find(function (b) { return b.id === bookId; });
+        return {
+          bookId: bookId,
+          bookName: bk ? bk.name : m[1],
+          chapters: bk ? bk.chapters : 1,
+          ch: parseInt(m[2], 10),
+          v:  parseInt(m[3], 10),
+        };
+      }
+
+      // ── Data loading ───────────────────────────────────────────────────────
+      var bookCache = Object.create(null); // "ver:bookId" → chapters or null
+
+      function loadBook(ver, bookId) {
+        var key = ver + ':' + bookId;
+        if (key in bookCache) return Promise.resolve(bookCache[key]);
+        return fetch(DATA_ROOT + '/' + ver + '/' + bookId + '.json')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            bookCache[key] = (d && d.chapters) ? d.chapters : null;
+            return bookCache[key];
+          })
+          .catch(function () { bookCache[key] = null; return null; });
+      }
+
+      function getVerse(ver, bookId, ch, v) {
+        return loadBook(ver, bookId).then(function (chapters) {
+          if (!chapters) return null;
+          var chData = chapters[String(ch)];
+          if (!chData) return null;
+          return chData[String(v)] || null;
+        });
+      }
+
+      // ── Build / update adjacent verse links ───────────────────────────────
+      function adjHref(parsed, delta) {
+        // Move by verse delta; clamp to chapter bounds using the preferred version's data
+        return loadBook(versions[0].id, parsed.bookId).then(function (chapters) {
+          var chData = chapters && chapters[String(parsed.ch)];
+          var maxV = chData ? Object.keys(chData).length : parsed.v;
+          var newV  = parsed.v + delta;
+          var newCh = parsed.ch;
+          if (newV < 1) {
+            newCh = parsed.ch - 1;
+            if (newCh < 1) return null;
+            var prevCh = chapters && chapters[String(newCh)];
+            newV = prevCh ? Object.keys(prevCh).length : 1;
+          } else if (newV > maxV) {
+            newCh = parsed.ch + 1;
+            if (newCh > parsed.chapters) return null;
+            newV = 1;
+          }
+          return parsed.bookName + ' ' + newCh + ':' + newV;
+        });
+      }
+
+      // ── Render ─────────────────────────────────────────────────────────────
+      function render(parsed) {
+        var out = document.getElementById('cmp-output');
+        var preferred = window.BibleUI ? window.BibleUI.getVersion() : (versions[0] && versions[0].id);
+
+        // Update page meta
+        document.title = parsed.display + ' — All Translations — Kingdom Bible Study';
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.content = parsed.display + ' in all available Bible translations.';
+        var _ogTitle = parsed.display + ' — All Translations';
+        var _ogDesc  = parsed.display + ' in all available Bible translations.';
+        ['bsw-og-title','bsw-tw-title'].forEach(function (id) { var el = document.getElementById(id); if (el) el.setAttribute('content', _ogTitle); });
+        ['bsw-og-desc', 'bsw-tw-desc' ].forEach(function (id) { var el = document.getElementById(id); if (el) el.setAttribute('content', _ogDesc); });
+
+        // Breadcrumb nav ref
+        var navRef = document.getElementById('cmp-nav-ref');
+        if (navRef) navRef.textContent = parsed.display;
+
+        // Reader link
+        var readerLink = document.getElementById('cmp-reader-link');
+        if (readerLink) {
+          readerLink.href = READER_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch);
+          readerLink.textContent = parsed.bookName + ' ' + parsed.ch;
+        }
+
+        // Update URL without reload
+        var newUrl = '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + parsed.v);
+        if (history.replaceState) history.replaceState(null, '', newUrl);
+
+        // Build output HTML
+        var html =
+          '<h1 class="cmp-heading">' + _esc(parsed.display) + '</h1>' +
+          '<p class="cmp-subhead">' + versions.length + ' translations · <a href="' +
+            VS_URL + '?ref=' + encodeURIComponent(parsed.bookName + ' ' + parsed.ch + ':' + parsed.v) + '&study=1' +
+            '" style="color:var(--color-accent);text-decoration:none;">Word Study ↗</a>' +
+          '</p>' +
+          '<ul class="cmp-list" id="cmp-rows"></ul>' +
+          '<div class="cmp-adj">' +
+            '<a class="cmp-adj__link" id="cmp-prev" href="#">← Prev verse</a>' +
+            '<a class="cmp-adj__link" id="cmp-next" href="#">Next verse →</a>' +
+          '</div>';
+        out.innerHTML = html;
+
+        var rowsEl = document.getElementById('cmp-rows');
+
+        // Render each version row
+        versions.forEach(function (ver) {
+          var li = document.createElement('li');
+          li.className = 'cmp-row' + (ver.id === preferred ? ' cmp-row--preferred' : '');
+          li.innerHTML =
+            '<div class="cmp-row__header">' +
+              '<span class="cmp-row__id">' + _esc(ver.id) + '</span>' +
+              '<span class="cmp-row__name">' + _esc(ver.fullname || ver.name || ver.id) + '</span>' +
+            '</div>' +
+            '<p class="cmp-row__text cmp-row__text--loading">Loading…</p>';
+          rowsEl.appendChild(li);
+
+          var textEl = li.querySelector('.cmp-row__text');
+          getVerse(ver.id, parsed.bookId, parsed.ch, parsed.v)
+            .then(function (text) {
+              if (text) {
+                textEl.className = 'cmp-row__text';
+                textEl.textContent = text;
+              } else {
+                textEl.className = 'cmp-row__text cmp-row__text--error';
+                textEl.textContent = 'Not available in this translation.';
+              }
+            });
+        });
+
+        // Adjacent verse links
+        adjHref(parsed, -1).then(function (ref) {
+          var el = document.getElementById('cmp-prev');
+          if (!el) return;
+          if (ref) {
+            el.href = '?ref=' + encodeURIComponent(ref);
+            el.onclick = function (e) { e.preventDefault(); navigate(ref); };
+          } else {
+            el.setAttribute('hidden', '');
+          }
+        });
+        adjHref(parsed, 1).then(function (ref) {
+          var el = document.getElementById('cmp-next');
+          if (!el) return;
+          if (ref) {
+            el.href = '?ref=' + encodeURIComponent(ref);
+            el.onclick = function (e) { e.preventDefault(); navigate(ref); };
+          } else {
+            el.setAttribute('hidden', '');
+          }
+        });
+      }
+
+      function navigate(refStr) {
+        var parsed = parseRef(refStr);
+        if (!parsed) return;
+        parsed.display = parsed.bookName + ' ' + parsed.ch + ':' + parsed.v;
+        var input = document.getElementById('cmp-ref-input');
+        if (input) input.value = parsed.display;
+        render(parsed);
+      }
+
+      function _esc(s) {
+        return String(s)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      // ── Init ───────────────────────────────────────────────────────────────
+      Promise.all([
+        fetch(VERSIONS_URL).then(function (r) { return r.json(); }),
+        fetch(BOOKS_URL).then(function (r) { return r.json(); }),
+      ]).then(function (results) {
+        versions = results[0];
+        bookMeta = results[1];
+
+        // Build lookup: normalized name → bookId
+        bookLookup = Object.create(null);
+        bookMeta.forEach(function (b) {
+          bookLookup[normStr(b.id)]   = b.id;
+          bookLookup[normStr(b.name)] = b.id;
+          if (b.abbrev) bookLookup[normStr(b.abbrev)] = b.id;
+        });
+
+        // Parse ref from URL
+        var params = new URLSearchParams(window.location.search);
+        var refStr = params.get('ref') || '';
+        var input  = document.getElementById('cmp-ref-input');
+        if (refStr && input) input.value = refStr;
+
+        if (refStr) {
+          var parsed = parseRef(refStr);
+          if (parsed) {
+            parsed.display = parsed.bookName + ' ' + parsed.ch + ':' + parsed.v;
+            render(parsed);
+            if (input) input.value = parsed.display;
+          } else {
+            document.getElementById('cmp-hint').textContent =
+              'Could not parse "' + refStr + '" — try "Book Chapter:Verse" format.';
+          }
+        }
+      }).catch(function (err) {
+        // INTENT: Show a user-visible message when init data fails — without this,
+        //   bookMeta stays null and all searches silently bail at the if(!bookMeta) guard.
+        // CHANGE? If #cmp-hint is renamed, update selector here and in the form-submit handler.
+        // VERIFY: Throttle to Offline in DevTools before page load → hint reads
+        //   "Failed to load version data. Please refresh to try again."
+        document.getElementById('cmp-hint').textContent =
+          'Failed to load version data. Please refresh to try again.';
+        console.error('[compare] init failed:', err);
+      });
+
+      // Form submit
+      document.getElementById('cmp-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var val = document.getElementById('cmp-ref-input').value.trim();
+        if (!val) return;
+        if (!bookMeta) return; // not loaded yet
+        navigate(val);
+      });
+
+      // BibleUI for tooltip/modal system
+      if (window.BibleUI) window.BibleUI.init();
+    })();
+  </script>
+</Fragment>
+</Base>

@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Biblepedia — Kingdom Bible Study"} description={"Biblepedia — a wiki-style Bible reference with 4,500+ articles on Biblical people, places, concepts, and topics."} footer={false}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../assets/css/dictionary.css"><link rel="stylesheet" href="../assets/css/biblepedia.css">
+</Fragment>
+<main>
+    <div id="bp-container" class="container bp-page">
+      <p class="bp-loading-init">Loading Biblepedia…</p>
+    </div>
+  </main><footer class="site-footer">
+    <div class="container">
+      <p>Easton's Bible Dictionary (1897) · Smith's Bible Dictionary (1884) · Int'l Standard Bible Encyclopaedia (1915) · Hitchcock's Bible Names (1874) · Nave's Topical Bible (1896) · Torrey's Topical Textbook (1897) — public domain.</p>
+    </div>
+  </footer>
+</Base>

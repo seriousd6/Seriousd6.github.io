@@ -177,7 +177,7 @@ function _volHtml(doc, entry) {
 
 
 function _render(doc, docId, content, entry) {
-  document.title = doc.title + ' — Library — Bible Study';
+  document.title = doc.title + ' — Library — Kingdom Bible Study';
 
   _findTerm      = '';
   _findMatchSecs = [];

@@ -1,0 +1,32 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base title={"Library — Kingdom Bible Study"} description={"Read historic Christian documents — creeds, confessions, catechisms, and church fathers."}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../../assets/css/library.css"><link rel="stylesheet" href="../../assets/css/lib-reader.css">
+</Fragment>
+<main>
+    <div class="container lr-page">
+
+      <div class="lr-header" id="lib-reader-header">
+        <a class="lr-back" href="../">← Library</a>
+      </div>
+
+      <div class="lr-layout">
+
+        <aside class="lr-sidebar">
+          <div class="lr-sidebar-inner" id="lib-reader-toc">
+            <!-- table of contents injected by JS -->
+          </div>
+        </aside>
+
+        <div class="lr-main" id="lib-reader-content">
+          <p class="lr-loading">Loading…</p>
+        </div>
+
+      </div><!-- /.lr-layout -->
+
+    </div><!-- /.container -->
+  </main>
+</Base>

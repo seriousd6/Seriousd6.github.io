@@ -49,7 +49,7 @@ export function initWordPage() {
     return;
   }
 
-  document.title = rawId + ' — Word Study — Bible Study';
+  document.title = rawId + ' — Word Study — Kingdom Bible Study';
 
   var backLink = document.getElementById('wd-back-link');
   if (backLink) {

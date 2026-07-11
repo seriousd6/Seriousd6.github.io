@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Church History Timeline — Kingdom Bible Study"} description={"Interactive church history timeline from Pentecost to the present — the Apostolic Age, the Fathers, the Councils, the Reformation, and beyond."} footer={false}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../assets/css/timeline.css">
+</Fragment>
+<main>
+    <div class="container tl2-page">
+
+      <div class="tl2-header">
+        <h1 class="tl2-title">Church History Timeline</h1>
+        <p class="tl2-sub">Select an era · then an event · to read details · <a href="../timeline/">← Biblical Timeline</a></p>
+        <a class="hist-back-link" href="../history/" id="hist-back-link" hidden="">← History</a>
+      </div>
+
+      <!-- 3-column layout; id="church-timeline-container" for app.js detection -->
+      <div class="tl2-layout" id="church-timeline-container">
+
+        <!-- Column 1: Era spine (always visible) -->
+        <div class="tl2-col tl2-col--eras">
+          <div class="tl2-col-label">Era</div>
+          <div class="tl2-spine-wrap" id="tl2-eras-spine">
+            <!-- era nodes injected by JS -->
+          </div>
+        </div>
+
+        <!-- Column 2: Sub-event spine -->
+        <div class="tl2-col tl2-col--events">
+          <div class="tl2-col-label" id="tl2-events-label">Events</div>
+          <input class="tl2-search" type="search" placeholder="Search events…" aria-label="Search events">
+          <div class="tl2-spine-wrap" id="tl2-events-spine">
+            <p class="tl2-placeholder">← Select an era</p>
+          </div>
+        </div>
+
+        <!-- Column 3: Detail panel -->
+        <div class="tl2-col tl2-col--detail">
+          <div class="tl2-col-label">Detail</div>
+          <div id="tl-detail">
+            <p class="tl2-placeholder">← Select an event</p>
+          </div>
+        </div>
+
+      </div><!-- /.tl2-layout -->
+    </div><!-- /.container -->
+  </main>
+</Base>

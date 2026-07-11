@@ -13,7 +13,7 @@ export function _initOnboarding() {
   var memUrl     = new URL('../../memorize/', import.meta.url).href;
   overlay.innerHTML =
     '<div class="bsw-onboard-card">' +
-      '<h2 class="bsw-onboard-title">Welcome to Bible Study</h2>' +
+      '<h2 class="bsw-onboard-title">Welcome to Kingdom Bible Study</h2>' +
       '<p class="bsw-onboard-sub">A personal offline Bible tool — no account needed, everything saved in your browser.</p>' +
       '<div class="bsw-onboard-features">' +
         '<a class="bsw-onboard-feature" href="' + escHtml(readerUrl) + '">' +

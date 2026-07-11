@@ -1,0 +1,75 @@
+name: Deploy (Astro)
+
+# Builds the Astro site and deploys it to GitHub Pages.
+#
+# ── CUTOVER (not yet done — site currently serves the branch directly) ──
+# 1. Repo Settings → Pages → Source: change "Deploy from a branch" to "GitHub Actions".
+# 2. Replace the `workflow_dispatch` trigger below with:
+#      push:
+#        branches: [ master ]
+#      workflow_dispatch:
+#    so every push (including the hourly data auto-sync) redeploys.
+# 3. After a verified deploy, the legacy root *.html pages can be deleted
+#    (their Astro sources in src/pages/ are now the source of truth).
+# Rollback at any time: flip Pages Source back to "Deploy from a branch".
+#
+# The copy step below must stay in sync with STATIC_DIRS / STATIC_FILES in
+# tools/root-statics.mjs (the dev-server equivalent) and VERBATIM_PAGES in
+# tools/convert-pages.mjs.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build site
+        run: |
+          npm ci
+          npm run build
+
+      - name: Copy legacy static tree into dist
+        run: |
+          cp -r assets data dist/
+          cp sw.js manifest.json favicon.ico favicon.svg offline.html dist/
+          # Authoring scaffolds (Astro skips _-prefixed routes)
+          mkdir -p dist/topics dist/study-guides
+          cp -r topics/_template topics/_template-book dist/topics/
+          cp -r study-guides/_template dist/study-guides/
+          # Redirect/retirement stubs excluded from Astro conversion
+          for stub in devotionals journal memorize plans reflections worship word verse-study; do
+            mkdir -p "dist/$stub"
+            cp "$stub/index.html" "dist/$stub/"
+          done
+          cp topics/index.html dist/topics/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

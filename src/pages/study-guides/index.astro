@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Study Guides — Kingdom Bible Study"} description={"Structured multi-session Bible study guides with teaching content and discussion questions."} mainJs={false} footer={false}>
+<main>
+    <div class="container">
+      <a class="hist-back-link" href="../search/?tab=guides" id="explore-back-link" target="_top" hidden="">← Explore</a>
+      <h1>Study Guides</h1>
+      <p>Structured multi-session guides for group or personal study. Each guide has teaching content, key passages, and discussion questions per session.</p>
+
+      <div class="topic-grid">
+
+        <a class="topic-card" href="hebrews/">
+          <h3>Hebrews: The Better Covenant</h3>
+          <p>13 chapters · A chapter-by-chapter study tracking the sustained argument that Jesus is the fulfilment and surpassing of the old covenant.</p>
+        </a>
+
+        <a class="topic-card" href="ephesians/">
+          <h3>Ephesians: Every Spiritual Blessing</h3>
+          <p>6 sessions · From cosmic election to household ethics — Paul's most concentrated presentation of the gospel and its implications for the church.</p>
+        </a>
+
+        <a class="topic-card" href="romans-1-8/">
+          <h3>Romans 1–8: The Righteousness of God</h3>
+          <p>8 sessions · The universal problem of sin, justification by faith alone, union with Christ, and life in the Spirit.</p>
+        </a>
+
+        <a class="topic-card" href="sermon-on-the-mount/">
+          <h3>The Sermon on the Mount</h3>
+          <p>5 sessions · Matthew 5–7 — the Beatitudes, the Antitheses, prayer, anxiety, and the two ways — the ethics of the kingdom.</p>
+        </a>
+
+        <a class="topic-card" href="psalms/">
+          <h3>The Psalms: A 4-Week Devotional</h3>
+          <p>4 sessions · Lament, praise, royal-messianic, and trust psalms — learning to pray the whole Psalter with Israel.</p>
+        </a>
+
+      </div>
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<script is:inline="">
+    // This page does not load main.js, so flag the embedded state here. Treat the page
+    // as embedded when framed (robust against in-iframe navigation that drops ?minimal)
+    // or when ?minimal=1 is present. is-embedded lets style.css hide the site footer.
+    (function () {
+      var framed; try { framed = (window.self !== window.top); } catch (e) { framed = true; }
+      if (framed || new URLSearchParams(location.search).get('minimal')) {
+        document.body.classList.add('is-embedded');
+        var bl = document.getElementById('explore-back-link');
+        if (bl) bl.removeAttribute('hidden');
+      }
+    })();
+  </script>
+</Fragment>
+</Base>

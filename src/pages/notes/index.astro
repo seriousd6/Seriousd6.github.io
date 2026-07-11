@@ -1,0 +1,1567 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"My Study — Kingdom Bible Study"} description={"Review and manage your Bible highlights, notes, and tags."} footer={false}>
+<Fragment slot="head-end">
+<style is:inline="">
+    .ms-back-link { display:inline-block; font-family:var(--font-ui); font-size:.8rem; color:var(--color-muted); text-decoration:none; padding:.4rem 0 .2rem; margin-bottom:.5rem; }
+    .ms-back-link:hover { color:var(--color-primary); }
+    /* ── Layout ── */
+    .ms-page { max-width: 780px; margin: 0 auto; padding-bottom: 5rem; }
+
+    /* ── Header ── */
+    .ms-header { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    .ms-header__title { flex: 1; margin: 0; font-size: 1.5rem; min-width: 0; }
+    .ms-btn {
+      font-family: var(--font-ui); font-size: 0.82rem;
+      padding: 0.35rem 0.85rem; border-radius: 5px;
+      border: 1px solid var(--color-border); cursor: pointer;
+      background: var(--color-surface); color: var(--color-text);
+      text-decoration: none; white-space: nowrap;
+    }
+    .ms-btn:hover { background: var(--color-border); }
+    /* Full-site backup buttons stand out slightly from notes-only buttons */
+    .ms-btn--all-export,
+    .ms-btn--all-import {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+    .ms-btn--all-export:hover,
+    .ms-btn--all-import:hover {
+      background: var(--color-primary);
+      color: var(--color-on-primary);
+    }
+
+    /* ── Tabs ── */
+    .ms-tabs { display: flex; gap: 0; margin-bottom: 1rem; border-bottom: 2px solid var(--color-border); }
+    .ms-tab {
+      font-family: var(--font-ui); font-size: 0.87rem;
+      padding: 0.48rem 1.1rem; border: none; background: none;
+      cursor: pointer; color: var(--color-muted);
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      border-radius: 4px 4px 0 0;
+    }
+    .ms-tab:hover { color: var(--color-text); }
+    .ms-tab--active { color: var(--color-primary); border-bottom-color: var(--color-primary); font-weight: 600; }
+
+    /* ── Filter bar ── */
+    .ms-filters { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.65rem; flex-wrap: wrap; }
+    .ms-filter-group { display: flex; align-items: center; gap: 0.35rem; }
+    .ms-filter-label { font-family: var(--font-ui); font-size: 0.77rem; color: var(--color-muted); white-space: nowrap; }
+    .ms-filter-select {
+      font-family: var(--font-ui); font-size: 0.82rem;
+      padding: 0.28rem 0.55rem; border: 1px solid var(--color-border);
+      border-radius: 5px; background: var(--color-surface); color: var(--color-text); cursor: pointer;
+    }
+    .ms-tag-filter-row { display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center; margin-bottom: 0.55rem; }
+    .ms-tag-filter-chip {
+      font-family: var(--font-ui); font-size: 0.74rem;
+      padding: 0.18rem 0.6rem; border-radius: 12px;
+      border: 1px solid var(--color-border); background: var(--color-surface);
+      color: var(--color-muted); cursor: pointer; white-space: nowrap;
+    }
+    .ms-tag-filter-chip:hover { border-color: var(--color-primary); color: var(--color-text); }
+    .ms-tag-filter-chip--on { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+
+    /* ── Active filter badges ── */
+    .ms-active-filters { display: flex; gap: 0.3rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.45rem; min-height: 0; }
+    .ms-active-filter {
+      display: inline-flex; align-items: center; gap: 0.2rem;
+      font-family: var(--font-ui); font-size: 0.74rem;
+      padding: 0.15rem 0.5rem; border-radius: 12px;
+      background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+      color: var(--color-primary);
+    }
+    .ms-active-filter__rm { background: none; border: none; cursor: pointer; color: var(--color-muted); font-size: 0.85rem; padding: 0; line-height: 1; }
+    .ms-active-filter__rm:hover { color: #c00; }
+
+    /* ── Meta row (count + sort) ── */
+    .ms-meta-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.65rem; flex-wrap: wrap; }
+    .ms-count { font-family: var(--font-ui); font-size: 0.83rem; color: var(--color-muted); flex: 1; }
+    .ms-sort-row { display: flex; align-items: center; gap: 0.3rem; }
+    .ms-sort-label { font-family: var(--font-ui); font-size: 0.77rem; color: var(--color-muted); }
+    .ms-sort-sel {
+      font-family: var(--font-ui); font-size: 0.8rem;
+      padding: 0.2rem 0.5rem; border: 1px solid var(--color-border);
+      border-radius: 4px; background: var(--color-surface); color: var(--color-text);
+    }
+
+    /* ── Add Note form ── */
+    .ms-add-form {
+      border: 1px solid var(--color-border); border-radius: 8px;
+      background: var(--color-surface); margin-bottom: 1.1rem; overflow: hidden;
+    }
+    .ms-add-toggle {
+      display: flex; align-items: center; gap: 0.45rem; width: 100%;
+      background: none; border: none; cursor: pointer;
+      padding: 0.72rem 1rem; font-family: var(--font-ui); font-size: 0.9rem;
+      color: var(--color-primary); font-weight: 600; text-align: left;
+    }
+    .ms-add-toggle::before { content: '+'; font-size: 1.1rem; line-height: 1; }
+    .ms-add-toggle--open::before { content: '−'; }
+    .ms-add-body { padding: 0 1rem 1rem; display: none; }
+    .ms-add-body--open { display: block; }
+    .ms-add-row { display: flex; gap: 0.7rem; align-items: flex-start; flex-wrap: wrap; margin-bottom: 0.6rem; }
+    .ms-add-field { display: flex; flex-direction: column; gap: 0.28rem; }
+    .ms-add-field--grow { flex: 1; min-width: 160px; }
+    .ms-add-lbl { font-family: var(--font-ui); font-size: 0.74rem; color: var(--color-muted); }
+    .ms-add-input {
+      font-family: var(--font-ui); font-size: 0.88rem;
+      padding: 0.38rem 0.72rem; border: 1px solid var(--color-border);
+      border-radius: 5px; background: var(--color-bg, #fff); color: var(--color-text);
+    }
+    .ms-add-input:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+    .ms-add-hl { display: flex; gap: 0.3rem; flex-wrap: wrap; align-items: center; padding-top: 0.1rem; }
+    .ms-add-hl-btn {
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 2px solid transparent; cursor: pointer; flex-shrink: 0;
+      transition: transform 0.1s;
+    }
+    .ms-add-hl-btn:hover { transform: scale(1.18); }
+    .ms-add-hl-btn--active { border-color: var(--color-text) !important; transform: scale(1.14); }
+    .ms-add-hl-none {
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 2px solid var(--color-border); cursor: pointer;
+      background: none; display: flex; align-items: center; justify-content: center;
+      font-size: 0.6rem; color: var(--color-muted); flex-shrink: 0;
+    }
+    .ms-add-hl-none--active { border-color: var(--color-primary); color: var(--color-primary); }
+    .ms-add-hl-btn[data-c="yellow"]   { background: #f5d020; }
+    .ms-add-hl-btn[data-c="orange"]   { background: #e07820; }
+    .ms-add-hl-btn[data-c="pink"]     { background: #e05080; }
+    .ms-add-hl-btn[data-c="red"]      { background: #c83030; }
+    .ms-add-hl-btn[data-c="purple"]   { background: #8838c8; }
+    .ms-add-hl-btn[data-c="lavender"] { background: #8878c0; }
+    .ms-add-hl-btn[data-c="green"]    { background: #2a8a2a; }
+    .ms-add-hl-btn[data-c="teal"]     { background: #1a8880; }
+    .ms-add-hl-btn[data-c="blue"]     { background: #2060c0; }
+    .ms-add-hl-btn[data-c="mint"]     { background: #28a890; }
+    .ms-add-tags-row { display: flex; flex-wrap: wrap; gap: 0.28rem; align-items: center; }
+    .ms-add-textarea {
+      font-family: var(--font-body, serif); font-size: 0.9rem;
+      width: 100%; min-height: 78px; resize: vertical;
+      padding: 0.48rem 0.72rem; border: 1px solid var(--color-border);
+      border-radius: 5px; background: var(--color-bg, #fff); color: var(--color-text);
+      box-sizing: border-box;
+    }
+    .ms-add-textarea:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+    .ms-add-footer { display: flex; align-items: center; gap: 0.75rem; padding-top: 0.2rem; }
+    .ms-add-save {
+      font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600;
+      padding: 0.42rem 1.25rem; border-radius: 5px; border: none; cursor: pointer;
+      background: var(--color-primary); color: var(--color-on-primary);
+    }
+    .ms-add-save:hover { opacity: 0.85; }
+    .ms-add-hint { font-family: var(--font-ui); font-size: 0.76rem; color: var(--color-muted); }
+    .ms-add-tag-input {
+      border: 1px solid var(--color-border); border-radius: 12px;
+      padding: 0.12rem 0.6rem; font-family: var(--font-ui); font-size: 0.72rem;
+      background: transparent; color: var(--color-text); width: 85px;
+    }
+
+    /* ── Multi-ref verse entry ── */
+    .ms-ref-chips {
+      display: flex; flex-wrap: wrap; gap: 0.3rem; align-items: center;
+      padding: 0.32rem 0.55rem; border: 1px solid var(--color-border);
+      border-radius: 6px; background: var(--color-bg, #fff); min-height: 2.3rem;
+    }
+    .ms-ref-chip {
+      display: inline-flex; align-items: center; gap: 0.18rem;
+      background: color-mix(in srgb, var(--color-primary) 11%, transparent);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 28%, transparent);
+      color: var(--color-primary); border-radius: 5px;
+      padding: 0.14rem 0.32rem 0.14rem 0.58rem;
+      font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500; white-space: nowrap;
+    }
+    .ms-ref-chip__rm { background: none; border: none; cursor: pointer; color: var(--color-muted); font-size: 0.82rem; padding: 0; line-height: 1; }
+    .ms-ref-chip__rm:hover { color: #c00; }
+    .ms-ref-type-inp {
+      border: none; outline: none; font-family: var(--font-ui); font-size: 0.83rem;
+      background: transparent; color: var(--color-text); min-width: 120px; flex: 1; padding: 0.1rem 0.15rem;
+    }
+    .ms-ref-type-inp::placeholder { color: var(--color-muted); }
+    .ms-pick-btn {
+      font-family: var(--font-ui); font-size: 0.76rem; font-weight: 500;
+      padding: 0.18rem 0.62rem; border-radius: 5px; cursor: pointer;
+      border: 1px solid var(--color-primary); color: var(--color-primary);
+      background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .ms-pick-btn:hover { background: color-mix(in srgb, var(--color-primary) 14%, transparent); }
+    .ms-ref-hint { font-family: var(--font-ui); font-size: 0.71rem; color: var(--color-muted); margin-top: 0.22rem; }
+
+    /* ── Verse picker dialog ── */
+    .ms-vp-dialog {
+      border: 1px solid var(--color-border); border-radius: 10px;
+      padding: 0; background: var(--color-surface); color: var(--color-text);
+      max-width: 360px; width: 92vw;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    }
+    .ms-vp-dialog::backdrop { background: rgba(0,0,0,0.42); }
+    .ms-vp__head { display: flex; align-items: center; padding: 0.72rem 1rem 0.55rem; border-bottom: 1px solid var(--color-border); }
+    .ms-vp__title { flex: 1; font-family: var(--font-ui); font-size: 0.95rem; font-weight: 700; color: var(--color-text); }
+    .ms-vp__close { background: none; border: none; cursor: pointer; color: var(--color-muted); font-size: 1.1rem; padding: 0.1rem 0.35rem; border-radius: 4px; }
+    .ms-vp__close:hover { color: var(--color-text); background: var(--color-border); }
+    .ms-vp__body { padding: 0.85rem 1rem 1rem; }
+    .ms-vp__row { margin-bottom: 0.65rem; }
+    .ms-vp__row--inline { display: flex; align-items: center; gap: 0.48rem; flex-wrap: wrap; margin-bottom: 0.55rem; }
+    .ms-vp__lbl { font-family: var(--font-ui); font-size: 0.75rem; color: var(--color-muted); display: block; margin-bottom: 0.2rem; white-space: nowrap; }
+    .ms-vp__row--inline .ms-vp__lbl { margin-bottom: 0; }
+    .ms-vp__sel {
+      width: 100%; font-family: var(--font-ui); font-size: 0.88rem;
+      padding: 0.35rem 0.6rem; border: 1px solid var(--color-border);
+      border-radius: 5px; background: var(--color-bg, #fff); color: var(--color-text);
+    }
+    .ms-vp__num {
+      width: 60px; font-family: var(--font-ui); font-size: 0.88rem;
+      padding: 0.35rem 0.5rem; border: 1px solid var(--color-border);
+      border-radius: 5px; background: var(--color-bg, #fff); color: var(--color-text);
+      text-align: center;
+    }
+    .ms-vp__range-lbl { display: flex; align-items: center; gap: 0.38rem; font-family: var(--font-ui); font-size: 0.82rem; color: var(--color-text); cursor: pointer; white-space: nowrap; }
+    .ms-vp__range-end { display: flex; align-items: center; gap: 0.48rem; margin-top: 0.38rem; flex-wrap: wrap; }
+    .ms-vp__preview {
+      font-family: var(--font-ui); font-size: 1rem; font-weight: 700; color: var(--color-primary);
+      padding: 0.42rem 0.65rem; min-height: 1.5rem;
+      background: color-mix(in srgb, var(--color-primary) 7%, transparent);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+      border-radius: 6px; margin: 0.55rem 0 0.75rem;
+    }
+    .ms-vp__actions { display: flex; gap: 0.5rem; }
+    .ms-vp__add-btn {
+      font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600;
+      padding: 0.42rem 1.1rem; border-radius: 5px; cursor: pointer;
+      background: var(--color-primary); border: 1px solid var(--color-primary); color: var(--color-on-primary);
+    }
+    .ms-vp__add-btn:hover { opacity: 0.85; }
+    .ms-vp__cancel-btn {
+      font-family: var(--font-ui); font-size: 0.88rem;
+      padding: 0.42rem 1.1rem; border-radius: 5px; cursor: pointer;
+      background: none; border: 1px solid var(--color-border); color: var(--color-muted);
+    }
+    .ms-vp__cancel-btn:hover { background: var(--color-border); color: var(--color-text); }
+    [data-theme="dark"] .ms-vp__add-btn { background: var(--color-btn-bg,#3a2d18); border-color: var(--color-primary); color: var(--color-btn-text,#e8c87a); }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .ms-vp__add-btn { background: var(--color-btn-bg,#3a2d18); border-color: var(--color-primary); color: var(--color-btn-text,#e8c87a); }
+    }
+
+    /* ── Search input ── */
+    .ms-search-input {
+      width: 100%; font-family: var(--font-ui); font-size: 0.92rem;
+      padding: 0.5rem 0.85rem; border: 1px solid var(--color-border);
+      border-radius: 6px; background: var(--color-surface); color: var(--color-text);
+      margin-bottom: 0.85rem; box-sizing: border-box;
+    }
+    .ms-search-input:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+
+    /* ── Verse cards ── */
+    .ms-list { list-style: none; margin: 0; padding: 0; }
+    .ms-card {
+      border: 1px solid var(--color-border); border-radius: 8px;
+      margin-bottom: 0.65rem; background: var(--color-surface); overflow: hidden;
+    }
+    .ms-card--hl-yellow   { border-left: 4px solid #c9a000; }
+    .ms-card--hl-orange   { border-left: 4px solid #b35f00; }
+    .ms-card--hl-pink     { border-left: 4px solid #a83060; }
+    .ms-card--hl-red      { border-left: 4px solid #962020; }
+    .ms-card--hl-purple   { border-left: 4px solid #6b2a9e; }
+    .ms-card--hl-lavender { border-left: 4px solid #5a4a8e; }
+    .ms-card--hl-green    { border-left: 4px solid #2d7a2d; }
+    .ms-card--hl-teal     { border-left: 4px solid #1a7570; }
+    .ms-card--hl-blue     { border-left: 4px solid #1a5fa8; }
+    .ms-card--hl-mint     { border-left: 4px solid #1a7a6e; }
+    .ms-card--selected { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+    .ms-card__inner { padding: 0.68rem 1rem 0.62rem; }
+    .ms-card__header { display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.28rem; flex-wrap: wrap; }
+    .ms-card__chk { width: 15px; height: 15px; cursor: pointer; flex-shrink: 0; }
+    .ms-card__ref { font-family: var(--font-ui); font-weight: 700; color: var(--color-primary); font-size: 0.96rem; }
+    .ms-card__hl-badge {
+      font-family: var(--font-ui); font-size: 0.69rem;
+      padding: 0.07rem 0.42rem; border-radius: 10px; border: 1px solid currentColor;
+    }
+    .ms-card__hl-badge--yellow   { color: #856800; background: rgba(255,220,50, 0.18); }
+    .ms-card__hl-badge--orange   { color: #b35f00; background: rgba(255,145,30, 0.15); }
+    .ms-card__hl-badge--pink     { color: #a83060; background: rgba(210,60, 120,0.13); }
+    .ms-card__hl-badge--red      { color: #962020; background: rgba(210,50, 50, 0.13); }
+    .ms-card__hl-badge--purple   { color: #6b2a9e; background: rgba(160,80, 200,0.11); }
+    .ms-card__hl-badge--lavender { color: #5a4a8e; background: rgba(180,155,230,0.16); }
+    .ms-card__hl-badge--green    { color: #2d7a2d; background: rgba(70, 180,90, 0.13); }
+    .ms-card__hl-badge--teal     { color: #1a7570; background: rgba(30, 175,160,0.11); }
+    .ms-card__hl-badge--blue     { color: #1a5fa8; background: rgba(50, 130,220,0.11); }
+    .ms-card__hl-badge--mint     { color: #1a7a6e; background: rgba(100,210,190,0.13); }
+    .ms-card__tags { display: flex; flex-wrap: wrap; gap: 0.28rem; align-items: center; margin: 0.2rem 0 0.3rem; min-height: 1.55rem; }
+    .ms-card__tag {
+      display: inline-flex; align-items: center; gap: 0.14rem;
+      background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 24%, transparent);
+      color: var(--color-primary); border-radius: 12px;
+      padding: 0.08rem 0.33rem 0.08rem 0.48rem;
+      font-family: var(--font-ui); font-size: 0.69rem; font-weight: 500;
+    }
+    .ms-card__tag-rm { background: none; border: none; cursor: pointer; color: var(--color-muted); font-size: 0.78rem; padding: 0; line-height: 1; }
+    .ms-card__tag-rm:hover { color: #c00; }
+    .ms-card__tag-input {
+      border: 1px solid var(--color-border); border-radius: 12px;
+      padding: 0.08rem 0.52rem; font-family: var(--font-ui); font-size: 0.69rem;
+      background: transparent; color: var(--color-text); width: 78px;
+    }
+    .ms-card__notes { margin: 0.18rem 0 0.35rem; }
+    .ms-card__note-p {
+      font-family: var(--font-body, serif); font-size: 0.87rem;
+      color: var(--color-text); margin: 0 0 0.28rem; white-space: pre-wrap;
+    }
+    .ms-card__note-p--clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .ms-card__note-meta { font-family: var(--font-ui); font-size: 0.71rem; color: var(--color-muted); margin-bottom: 0.12rem; }
+    .ms-card__more { background: none; border: none; cursor: pointer; font-family: var(--font-ui); font-size: 0.75rem; color: var(--color-primary); padding: 0; margin-bottom: 0.2rem; }
+    .ms-card__actions { display: flex; gap: 0.55rem; flex-wrap: wrap; align-items: center; border-top: 1px solid var(--color-border); padding-top: 0.38rem; margin-top: 0.3rem; }
+    .ms-card__link { font-family: var(--font-ui); font-size: 0.77rem; color: var(--color-primary); text-decoration: none; }
+    .ms-card__link:hover { text-decoration: underline; }
+    .ms-card__del { font-family: var(--font-ui); font-size: 0.77rem; color: var(--color-muted); background: none; border: none; cursor: pointer; padding: 0; margin-left: auto; }
+    .ms-card__del:hover { color: #c00; }
+
+    /* ── By Tag view ── */
+    .ms-tag-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    .ms-tag-item {
+      display: inline-flex; align-items: center; gap: 0.38rem;
+      padding: 0.42rem 0.9rem; border-radius: 20px; cursor: pointer;
+      border: 1px solid color-mix(in srgb, var(--color-primary) 28%, transparent);
+      background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+      color: var(--color-primary); font-family: var(--font-ui); font-size: 0.85rem; font-weight: 500;
+    }
+    .ms-tag-item:hover { background: color-mix(in srgb, var(--color-primary) 14%, transparent); }
+    .ms-tag-item__count {
+      background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+      border-radius: 10px; padding: 0 0.4rem;
+      font-size: 0.71rem; font-weight: 600; min-width: 1.4em; text-align: center;
+    }
+    .ms-tag-manage { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border); }
+    .ms-tag-manage__title { font-family: var(--font-ui); font-size: 0.83rem; font-weight: 600; color: var(--color-muted); margin: 0 0 0.6rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .ms-tag-manage__row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.38rem; }
+    .ms-tag-manage__name { font-family: var(--font-ui); font-size: 0.85rem; color: var(--color-text); flex: 1; }
+    .ms-tag-manage__btn { font-family: var(--font-ui); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; }
+    .ms-tag-manage__btn:hover { background: var(--color-border); }
+    .ms-tag-manage__del { color: #a00; border-color: transparent; }
+
+    /* ── By Highlight view ── */
+    .ms-hl-grid { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 0.5rem; }
+    .ms-hl-item {
+      display: flex; flex-direction: column; align-items: center; gap: 0.32rem;
+      padding: 0.72rem 1rem; border-radius: 8px; cursor: pointer;
+      border: 2px solid transparent; background: var(--color-surface);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-text);
+      min-width: 68px; transition: border-color 0.12s;
+    }
+    .ms-hl-item:hover { border-color: var(--color-border); }
+    .ms-hl-item--active { border-color: var(--color-primary) !important; }
+    .ms-hl-swatch { width: 28px; height: 28px; border-radius: 50%; }
+    .ms-hl-swatch--yellow   { background: #f5d020; }
+    .ms-hl-swatch--orange   { background: #e07820; }
+    .ms-hl-swatch--pink     { background: #e05080; }
+    .ms-hl-swatch--red      { background: #c83030; }
+    .ms-hl-swatch--purple   { background: #8838c8; }
+    .ms-hl-swatch--lavender { background: #8878c0; }
+    .ms-hl-swatch--green    { background: #2a8a2a; }
+    .ms-hl-swatch--teal     { background: #1a8880; }
+    .ms-hl-swatch--blue     { background: #2060c0; }
+    .ms-hl-swatch--mint     { background: #28a890; }
+    .ms-hl-count { font-size: 0.73rem; color: var(--color-muted); }
+
+    /* ── Empty state ── */
+    .ms-empty { font-family: var(--font-ui); color: var(--color-muted); padding: 2rem 0 1rem; font-size: 0.95rem; text-align: center; }
+
+    /* ── Bulk bar ── */
+    .ms-bulk-bar {
+      position: fixed; bottom: 1.25rem; left: 50%; transform: translateX(-50%);
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 0.58rem 1rem;
+      display: flex; align-items: center; gap: 0.65rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+      font-family: var(--font-ui); font-size: 0.84rem;
+      z-index: 900; min-width: 290px; flex-wrap: wrap;
+    }
+    .ms-bulk-label { color: var(--color-muted); white-space: nowrap; flex-shrink: 0; }
+    .ms-bulk-input {
+      flex: 1; min-width: 90px; font-family: var(--font-ui); font-size: 0.82rem;
+      padding: 0.27rem 0.6rem; border: 1px solid var(--color-border);
+      border-radius: 12px; background: transparent; color: var(--color-text);
+    }
+    .ms-bulk-add {
+      font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
+      padding: 0.3rem 0.75rem; border-radius: 5px; cursor: pointer;
+      background: var(--color-primary); border: 1px solid var(--color-primary); color: var(--color-on-primary);
+      white-space: nowrap;
+    }
+    .ms-bulk-rm {
+      font-family: var(--font-ui); font-size: 0.8rem; font-weight: 500;
+      padding: 0.3rem 0.75rem; border-radius: 5px; cursor: pointer;
+      background: none; border: 1px solid var(--color-border); color: var(--color-muted);
+      white-space: nowrap;
+    }
+    .ms-bulk-clear { background: none; border: none; cursor: pointer; color: var(--color-muted); font-size: 0.8rem; padding: 0; flex-shrink: 0; }
+    .ms-bulk-clear:hover { color: #c00; }
+
+    /* ── Toast ── */
+    .ms-toast {
+      position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%);
+      background: #2a4a2a; color: #d4f0d4;
+      font-family: var(--font-ui); font-size: 0.87rem;
+      padding: 0.55rem 1.2rem; border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+      z-index: 9999; max-width: 90vw; text-align: center;
+    }
+    .ms-toast--error { background: #4a2a2a; color: #f0d4d4; }
+    .ms-toast--warn  { background: #3d3a1a; color: #f0e8a0; }
+
+    /* ── Dark mode: highlight borders ── */
+    [data-theme="dark"] .ms-card--hl-yellow   { border-left-color: #d4a820; }
+    [data-theme="dark"] .ms-card--hl-orange   { border-left-color: #c87830; }
+    [data-theme="dark"] .ms-card--hl-pink     { border-left-color: #c84880; }
+    [data-theme="dark"] .ms-card--hl-red      { border-left-color: #c03838; }
+    [data-theme="dark"] .ms-card--hl-purple   { border-left-color: #9040c8; }
+    [data-theme="dark"] .ms-card--hl-lavender { border-left-color: #7868b8; }
+    [data-theme="dark"] .ms-card--hl-green    { border-left-color: #38aa38; }
+    [data-theme="dark"] .ms-card--hl-teal     { border-left-color: #1a9090; }
+    [data-theme="dark"] .ms-card--hl-blue     { border-left-color: #2878d0; }
+    [data-theme="dark"] .ms-card--hl-mint     { border-left-color: #1a9880; }
+    [data-theme="dark"] .ms-card__hl-badge--yellow   { color: #e8c030; background: rgba(255,210,  0,0.14); }
+    [data-theme="dark"] .ms-card__hl-badge--orange   { color: #e08030; background: rgba(255,135, 20,0.12); }
+    [data-theme="dark"] .ms-card__hl-badge--pink     { color: #e06090; background: rgba(230, 70,135,0.12); }
+    [data-theme="dark"] .ms-card__hl-badge--red      { color: #e05050; background: rgba(210, 55, 55,0.11); }
+    [data-theme="dark"] .ms-card__hl-badge--purple   { color: #b070f0; background: rgba(155, 60,215,0.11); }
+    [data-theme="dark"] .ms-card__hl-badge--lavender { color: #9888e0; background: rgba(165,135,240,0.13); }
+    [data-theme="dark"] .ms-card__hl-badge--green    { color: #40c860; background: rgba( 65,195, 85,0.12); }
+    [data-theme="dark"] .ms-card__hl-badge--teal     { color: #30c0b0; background: rgba( 30,185,170,0.11); }
+    [data-theme="dark"] .ms-card__hl-badge--blue     { color: #5098f0; background: rgba( 55,145,255,0.12); }
+    [data-theme="dark"] .ms-card__hl-badge--mint     { color: #50d0c0; background: rgba( 90,215,195,0.12); }
+    [data-theme="dark"] .ms-add-save { background: var(--color-btn-bg, #3a2d18); color: var(--color-btn-text, #e8c87a); }
+    [data-theme="dark"] .ms-bulk-add { background: var(--color-btn-bg, #3a2d18); border-color: var(--color-primary); color: var(--color-btn-text, #e8c87a); }
+    [data-theme="dark"] .ms-tag-filter-chip--on { background: var(--color-btn-bg, #3a2d18); border-color: var(--color-primary); color: var(--color-btn-text, #e8c87a); }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .ms-card--hl-yellow   { border-left-color: #d4a820; }
+      :root:not([data-theme="light"]) .ms-card--hl-orange   { border-left-color: #c87830; }
+      :root:not([data-theme="light"]) .ms-card--hl-pink     { border-left-color: #c84880; }
+      :root:not([data-theme="light"]) .ms-card--hl-red      { border-left-color: #c03838; }
+      :root:not([data-theme="light"]) .ms-card--hl-purple   { border-left-color: #9040c8; }
+      :root:not([data-theme="light"]) .ms-card--hl-lavender { border-left-color: #7868b8; }
+      :root:not([data-theme="light"]) .ms-card--hl-green    { border-left-color: #38aa38; }
+      :root:not([data-theme="light"]) .ms-card--hl-teal     { border-left-color: #1a9090; }
+      :root:not([data-theme="light"]) .ms-card--hl-blue     { border-left-color: #2878d0; }
+      :root:not([data-theme="light"]) .ms-card--hl-mint     { border-left-color: #1a9880; }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--yellow   { color: #e8c030; background: rgba(255,210,  0,0.14); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--orange   { color: #e08030; background: rgba(255,135, 20,0.12); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--pink     { color: #e06090; background: rgba(230, 70,135,0.12); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--red      { color: #e05050; background: rgba(210, 55, 55,0.11); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--purple   { color: #b070f0; background: rgba(155, 60,215,0.11); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--lavender { color: #9888e0; background: rgba(165,135,240,0.13); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--green    { color: #40c860; background: rgba( 65,195, 85,0.12); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--teal     { color: #30c0b0; background: rgba( 30,185,170,0.11); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--blue     { color: #5098f0; background: rgba( 55,145,255,0.12); }
+      :root:not([data-theme="light"]) .ms-card__hl-badge--mint     { color: #50d0c0; background: rgba( 90,215,195,0.12); }
+      :root:not([data-theme="light"]) .ms-add-save { background: var(--color-btn-bg, #3a2d18); color: var(--color-btn-text, #e8c87a); }
+      :root:not([data-theme="light"]) .ms-bulk-add { background: var(--color-btn-bg, #3a2d18); border-color: var(--color-primary); color: var(--color-btn-text, #e8c87a); }
+      :root:not([data-theme="light"]) .ms-tag-filter-chip--on { background: var(--color-btn-bg, #3a2d18); border-color: var(--color-primary); color: var(--color-btn-text, #e8c87a); }
+    }
+  </style>
+</Fragment>
+<main>
+    <div class="container ms-page">
+
+      <!-- Back link shown only when embedded via ?minimal=1 -->
+      <a class="ms-back-link" id="ms-back-link" href="../discipline/?tab=notes" hidden="">← Disciplines</a>
+
+      <!-- Header -->
+      <div class="ms-header">
+        <h1 class="ms-header__title">My Study</h1>
+        <!-- Full-site backup (all discipline data) -->
+        <button class="ms-btn ms-btn--all-export" id="ms-all-export" type="button">↓ Export all data</button>
+        <button class="ms-btn ms-btn--all-import" id="ms-all-import" type="button">↑ Import all data</button>
+        <input type="file" id="ms-all-import-file" accept=".json" style="display:none">
+        <!-- Notes-only backup -->
+        <button class="ms-btn" id="ms-import-btn" type="button">Import notes</button>
+        <input type="file" id="ms-import-file" accept=".json" style="display:none">
+        <button class="ms-btn" id="ms-export-text" type="button">Export text</button>
+        <button class="ms-btn" id="ms-export-json" type="button">Export notes</button>
+        <a class="ms-btn" href="../">← Home</a>
+      </div>
+
+      <!-- Tabs -->
+      <div class="ms-tabs" role="tablist">
+        <button class="ms-tab ms-tab--active" data-tab="all" role="tab" aria-selected="true" type="button">All</button>
+        <button class="ms-tab" data-tab="tags" role="tab" aria-selected="false" type="button">By Tag</button>
+        <button class="ms-tab" data-tab="highlights" role="tab" aria-selected="false" type="button">By Highlight</button>
+        <button class="ms-tab" data-tab="search" role="tab" aria-selected="false" type="button">Search</button>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="ms-filters">
+        <div class="ms-filter-group">
+          <label class="ms-filter-label" for="ms-filter-testament">Testament:</label>
+          <select id="ms-filter-testament" class="ms-filter-select">
+            <option value="all">All</option>
+            <option value="OT">Old Testament</option>
+            <option value="NT">New Testament</option>
+          </select>
+        </div>
+        <div class="ms-filter-group">
+          <label class="ms-filter-label" for="ms-filter-book">Book:</label>
+          <select id="ms-filter-book" class="ms-filter-select">
+            <option value="">All books</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tag filter chips (hidden when no tags) -->
+      <div class="ms-tag-filter-row" id="ms-tag-filter-chips" style="display:none;"></div>
+
+      <!-- Active filter badges -->
+      <div id="ms-active-badges" class="ms-active-filters"></div>
+
+      <!-- Dynamic content area -->
+      <div id="ms-main"></div>
+
+    </div>
+  </main><!-- Bulk tag bar (fixed, shown when cards are selected) --><div id="ms-bulk-bar" class="ms-bulk-bar" hidden="">
+    <span id="ms-bulk-count" class="ms-bulk-label">0 selected</span>
+    <input id="ms-bulk-input" class="ms-bulk-input" type="text" placeholder="tag name…">
+    <button id="ms-bulk-add" class="ms-bulk-add" type="button">Add tag</button>
+    <button id="ms-bulk-rm" class="ms-bulk-rm" type="button">Remove tag</button>
+    <button id="ms-bulk-clear" class="ms-bulk-clear" type="button">✕ Clear</button>
+  </div><!-- Toast --><div id="ms-toast" class="ms-toast" hidden=""></div><!-- Verse picker dialog --><dialog id="ms-vp-dialog" class="ms-vp-dialog">
+    <div class="ms-vp__head">
+      <span class="ms-vp__title">Select a Verse</span>
+      <button id="ms-vp-close" class="ms-vp__close" type="button">✕</button>
+    </div>
+    <div class="ms-vp__body">
+      <div class="ms-vp__row">
+        <label class="ms-vp__lbl" for="ms-vp-book">Book</label>
+        <select id="ms-vp-book" class="ms-vp__sel"></select>
+      </div>
+      <div class="ms-vp__row--inline">
+        <label class="ms-vp__lbl" for="ms-vp-ch">Chapter</label>
+        <input id="ms-vp-ch" class="ms-vp__num" type="number" min="1" max="150" value="1">
+        <label class="ms-vp__lbl" for="ms-vp-sv">Verse</label>
+        <input id="ms-vp-sv" class="ms-vp__num" type="number" min="1" max="176" value="1">
+      </div>
+      <div class="ms-vp__row" style="margin-top:0.5rem;">
+        <label class="ms-vp__range-lbl">
+          <input id="ms-vp-range" type="checkbox">
+          Range through…
+        </label>
+        <div id="ms-vp-range-end" class="ms-vp__range-end" hidden="">
+          <label class="ms-vp__lbl" for="ms-vp-ech">ch.</label>
+          <input id="ms-vp-ech" class="ms-vp__num" type="number" min="1" max="150" value="1">
+          <label class="ms-vp__lbl" for="ms-vp-ev">v.</label>
+          <input id="ms-vp-ev" class="ms-vp__num" type="number" min="1" max="176" value="2">
+        </div>
+      </div>
+      <div class="ms-vp__preview" id="ms-vp-preview">—</div>
+      <div class="ms-vp__actions">
+        <button id="ms-vp-add" class="ms-vp__add-btn" type="button">Add verse</button>
+        <button id="ms-vp-cancel" class="ms-vp__cancel-btn" type="button">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+<Fragment slot="after-scripts">
+<!-- Full-site backup/restore wired to store.js --><script type="module" is:inline="">
+  import { downloadBackup, importAll, readBackupFile, summarise } from '../assets/js/store.js';
+
+  document.getElementById('ms-all-export').addEventListener('click', function () {
+    downloadBackup();
+  });
+
+  var allImportFile = document.getElementById('ms-all-import-file');
+  document.getElementById('ms-all-import').addEventListener('click', function () {
+    allImportFile.click();
+  });
+
+  allImportFile.addEventListener('change', function () {
+    var file = this.files && this.files[0];
+    if (!file) return;
+    this.value = '';
+    readBackupFile(file).then(function (data) {
+      var summary = summarise(data);
+      // OK = replace, Cancel = merge — replace is the destructive path so it
+      // gets the confirm prompt; merge is the safe default.
+      var replace = confirm(
+        'Backup contents:\n\n' + summary + '\n\n' +
+        'Click OK to REPLACE all local data with this backup.\n' +
+        'Click Cancel to MERGE (add new entries, keep existing data).'
+      );
+      importAll(data, { mode: replace ? 'replace' : 'merge' });
+      alert((replace ? 'Replaced' : 'Merged') + ' all data. The page will reload.');
+      location.reload();
+    }).catch(function (err) {
+      alert('Import failed: ' + err.message);
+    });
+  });
+  </script><script is:inline="">
+  (function () {
+    'use strict';
+
+    var NOTES_KEY   = 'bsw_notes';
+    var NOTESV2_KEY = 'bsw_notes_v2';
+    var READER_URL  = '../read/';
+    var VS_URL      = '../read/';   // SD-T5: verse study now opens in the reader's study desk
+    var HL_COLORS   = ['yellow','orange','pink','red','purple','lavender','green','teal','blue','mint'];
+
+    /* ── State ──────────────────────────────────────────────────────────────── */
+    var _tab        = 'all';
+    var _testament  = 'all';
+    var _book       = '';
+    var _activeTags = [];
+    var _activeHl   = '';
+    var _sort       = 'canonical';
+    var _searchQ    = '';
+    var _selected   = {};
+    var _expanded   = {};
+    var _books      = [];
+    var _bookMap    = {};
+    var _anns       = [];
+    var _formOpen   = false;
+    var _formHl     = '';
+    var _formTags   = [];
+    var _formRefs   = [];
+    var _booksLoaded = false;
+
+    /* ── Data access ────────────────────────────────────────────────────────── */
+    function getNotes1() {
+      try { return JSON.parse(localStorage.getItem(NOTES_KEY) || '{}'); }
+      catch (e) { return {}; }
+    }
+    function saveNotes1(obj) { localStorage.setItem(NOTES_KEY, JSON.stringify(obj)); }
+
+    function getNotes2() {
+      try { return JSON.parse(localStorage.getItem(NOTESV2_KEY) || '[]'); }
+      catch (e) { return []; }
+    }
+    function saveNotes2(arr) { localStorage.setItem(NOTESV2_KEY, JSON.stringify(arr)); }
+
+    function normHl(val) {
+      if (!val) return '';
+      if (val === true) return 'yellow';
+      return val;
+    }
+
+    /* ── Book map ───────────────────────────────────────────────────────────── */
+    function buildBookMap() {
+      _bookMap = {};
+      _books.forEach(function (b) {
+        _bookMap[b.name.toLowerCase()] = b;
+        (b.abbrevs || []).forEach(function (a) { _bookMap[a.toLowerCase()] = b; });
+      });
+    }
+
+    function parseRef(str) {
+      str = (str || '').trim();
+      var m = str.match(/^(\d?\s*[a-z][a-z\s]*?)\s+(\d+)(?::(\d+))?/i);
+      if (!m) return null;
+      var book = _bookMap[m[1].trim().toLowerCase()];
+      if (!book) return null;
+      return { book: book, ch: parseInt(m[2], 10), v: m[3] ? parseInt(m[3], 10) : 1 };
+    }
+
+    /* ── Build merged annotations ───────────────────────────────────────────── */
+    function buildAnnotations() {
+      var n1 = getNotes1();
+      var n2 = getNotes2();
+
+      var v2ByRef = {};
+      n2.forEach(function (note) {
+        var d = note.display || '';
+        if (!v2ByRef[d]) v2ByRef[d] = [];
+        v2ByRef[d].push(note);
+      });
+
+      var allRefs = {};
+      Object.keys(n1).forEach(function (r) { allRefs[r] = true; });
+      Object.keys(v2ByRef).forEach(function (r) { allRefs[r] = true; });
+
+      var anns = [];
+      Object.keys(allRefs).forEach(function (ref) {
+        var d1 = n1[ref] || {};
+        var v2 = v2ByRef[ref] || [];
+        var hl = normHl(d1.highlight);
+        if (!hl && !d1.note && !(d1.tags && d1.tags.length) && !v2.length) return;
+
+        var p = parseRef(ref);
+        var lastUpdated = 0;
+        v2.forEach(function (n) {
+          var t = Math.max(n.updated || 0, n.created || 0);
+          if (t > lastUpdated) lastUpdated = t;
+        });
+
+        anns.push({
+          ref:         ref,
+          book:        p ? p.book : null,
+          bookNumber:  p ? p.book.bookNumber : 9999,
+          bookName:    p ? p.book.name : '',
+          testament:   p ? p.book.testament : '',
+          ch:          p ? p.ch : 0,
+          v:           p ? p.v  : 0,
+          highlight:   hl,
+          tags:        Array.isArray(d1.tags) ? d1.tags.slice() : [],
+          legacyNote:  d1.note || '',
+          v2Notes:     v2,
+          lastUpdated: lastUpdated,
+        });
+      });
+
+      _anns = anns;
+    }
+
+    function getAllTagCounts() {
+      var counts = {};
+      _anns.forEach(function (a) {
+        a.tags.forEach(function (t) { counts[t] = (counts[t] || 0) + 1; });
+      });
+      return counts;
+    }
+
+    function getAnnotatedBooks() {
+      var seen = {};
+      _anns.forEach(function (a) { if (a.book) seen[a.book.name] = a.book; });
+      var arr = [];
+      Object.keys(seen).forEach(function (k) { arr.push(seen[k]); });
+      return arr.sort(function (a, b) { return a.bookNumber - b.bookNumber; });
+    }
+
+    /* ── Filter + sort ──────────────────────────────────────────────────────── */
+    function getVisible() {
+      return _anns.filter(function (a) {
+        if (_testament !== 'all' && a.testament !== _testament) return false;
+        if (_book && a.bookName !== _book) return false;
+        if (_activeHl && a.highlight !== _activeHl) return false;
+        if (_activeTags.length) {
+          var hasAny = _activeTags.some(function (t) { return a.tags.indexOf(t) !== -1; });
+          if (!hasAny) return false;
+        }
+        if (_searchQ) {
+          var q = _searchQ.toLowerCase();
+          var hit = a.ref.toLowerCase().indexOf(q) !== -1
+            || a.legacyNote.toLowerCase().indexOf(q) !== -1
+            || a.v2Notes.some(function (n) { return (n.text || '').toLowerCase().indexOf(q) !== -1; })
+            || a.tags.some(function (t) { return t.toLowerCase().indexOf(q) !== -1; });
+          if (!hit) return false;
+        }
+        return true;
+      }).sort(function (a, b) {
+        if (_sort === 'recent') return (b.lastUpdated || 0) - (a.lastUpdated || 0);
+        if (a.bookNumber !== b.bookNumber) return a.bookNumber - b.bookNumber;
+        if (a.ch !== b.ch) return a.ch - b.ch;
+        return a.v - b.v;
+      });
+    }
+
+    /* ── Render ─────────────────────────────────────────────────────────────── */
+    function render() {
+      renderTabs();
+      renderBookFilter();
+      renderTagFilterChips();
+      renderActiveBadges();
+
+      var main = document.getElementById('ms-main');
+      main.innerHTML = '';
+
+      if (_tab === 'tags')       { renderTagView(main); return; }
+      if (_tab === 'highlights') { renderHlView(main);  return; }
+
+      if (_tab === 'search') {
+        var sinp = document.createElement('input');
+        sinp.type = 'search';
+        sinp.className = 'ms-search-input';
+        sinp.placeholder = 'Search notes, references, tags…';
+        sinp.value = _searchQ;
+        sinp.addEventListener('input', function () {
+          _searchQ = this.value.trim();
+          var om = document.getElementById('ms-dyn-meta');
+          var ol = document.getElementById('ms-dyn-list');
+          if (om) om.parentNode.removeChild(om);
+          if (ol) ol.parentNode.removeChild(ol);
+          appendListTo(main, true);
+        });
+        main.appendChild(sinp);
+        setTimeout(function () { sinp.focus(); }, 40);
+      } else {
+        main.appendChild(buildAddForm());
+      }
+
+      appendListTo(main, _tab === 'search');
+    }
+
+    function renderTabs() {
+      document.querySelectorAll('.ms-tab').forEach(function (t) {
+        var active = t.getAttribute('data-tab') === _tab;
+        t.classList.toggle('ms-tab--active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+    }
+
+    function renderBookFilter() {
+      var sel = document.getElementById('ms-filter-book');
+      if (!sel) return;
+      sel.innerHTML = '<option value="">All books</option>';
+      getAnnotatedBooks().forEach(function (b) {
+        var opt = document.createElement('option');
+        opt.value = b.name; opt.textContent = b.name; opt.selected = (b.name === _book);
+        sel.appendChild(opt);
+      });
+    }
+
+    function renderTagFilterChips() {
+      var container = document.getElementById('ms-tag-filter-chips');
+      if (!container) return;
+      container.innerHTML = '';
+      var counts = getAllTagCounts();
+      var tags = Object.keys(counts).sort();
+      if (!tags.length) { container.style.display = 'none'; return; }
+      container.style.display = '';
+      tags.forEach(function (tag) {
+        var chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'ms-tag-filter-chip' + (_activeTags.indexOf(tag) !== -1 ? ' ms-tag-filter-chip--on' : '');
+        chip.textContent = '#' + tag + ' (' + counts[tag] + ')';
+        chip.addEventListener('click', function () {
+          var idx = _activeTags.indexOf(tag);
+          if (idx !== -1) { _activeTags.splice(idx, 1); }
+          else { _activeTags.push(tag); if (_tab !== 'all' && _tab !== 'search') _tab = 'all'; }
+          render();
+        });
+        container.appendChild(chip);
+      });
+    }
+
+    function renderActiveBadges() {
+      var container = document.getElementById('ms-active-badges');
+      if (!container) return;
+      container.innerHTML = '';
+
+      function badge(label, onRm) {
+        var el = document.createElement('span');
+        el.className = 'ms-active-filter';
+        el.appendChild(document.createTextNode(label + ' '));
+        var rm = document.createElement('button');
+        rm.type = 'button'; rm.className = 'ms-active-filter__rm'; rm.textContent = '×';
+        rm.addEventListener('click', onRm);
+        el.appendChild(rm); container.appendChild(el);
+      }
+
+      if (_testament !== 'all') badge(_testament === 'OT' ? 'Old Testament' : 'New Testament', function () {
+        _testament = 'all'; document.getElementById('ms-filter-testament').value = 'all'; render();
+      });
+      if (_book) badge(_book, function () {
+        _book = ''; document.getElementById('ms-filter-book').value = ''; render();
+      });
+      if (_activeHl) badge('★ ' + _activeHl, function () { _activeHl = ''; render(); });
+      _activeTags.slice().forEach(function (tag) {
+        badge('#' + tag, function () {
+          _activeTags = _activeTags.filter(function (t) { return t !== tag; }); render();
+        });
+      });
+    }
+
+    function appendListTo(parent, isSearch) {
+      var visible = getVisible();
+
+      /* count + sort row */
+      var meta = mkEl('div', 'ms-meta-row');
+      meta.id = 'ms-dyn-meta';
+      var countEl = mkEl('span', 'ms-count');
+      if (_anns.length === 0) {
+        countEl.textContent = '';
+      } else if (visible.length === _anns.length) {
+        countEl.textContent = _anns.length + ' annotated verse' + (_anns.length !== 1 ? 's' : '');
+      } else {
+        countEl.textContent = 'Showing ' + visible.length + ' of ' + _anns.length;
+      }
+      meta.appendChild(countEl);
+
+      var sortRow = mkEl('div', 'ms-sort-row');
+      var sortSel = document.createElement('select');
+      sortSel.className = 'ms-sort-sel';
+      sortSel.innerHTML = '<option value="canonical">Bible order</option><option value="recent">Most recent</option>';
+      sortSel.value = _sort;
+      sortSel.addEventListener('change', function () { _sort = this.value; render(); });
+      sortRow.appendChild(mkEl('span', 'ms-sort-label', 'Sort:'));
+      sortRow.appendChild(sortSel);
+      meta.appendChild(sortRow);
+      parent.appendChild(meta);
+
+      if (visible.length === 0) {
+        var empty = mkEl('p', 'ms-empty');
+        empty.id = 'ms-dyn-list';
+        if (_anns.length === 0) {
+          empty.textContent = 'No annotations yet. Open the Reader, tap a verse number, and use the Notes tab to highlight or add a note.';
+        } else if (isSearch && !_searchQ) {
+          empty.textContent = 'Type above to search your notes…';
+        } else {
+          empty.textContent = 'No annotations match the current filters.';
+        }
+        parent.appendChild(empty);
+        return;
+      }
+
+      var list = mkEl('ul', 'ms-list');
+      list.id = 'ms-dyn-list';
+      visible.forEach(function (ann) { list.appendChild(buildCard(ann)); });
+      parent.appendChild(list);
+    }
+
+    /* ── Card builder ───────────────────────────────────────────────────────── */
+    function buildCard(ann) {
+      var li = mkEl('li', 'ms-card' + (ann.highlight ? ' ms-card--hl-' + ann.highlight : '') +
+                          (_selected[ann.ref] ? ' ms-card--selected' : ''));
+
+      var inner = mkEl('div', 'ms-card__inner');
+
+      /* header: checkbox + ref + highlight badge */
+      var header = mkEl('div', 'ms-card__header');
+      var chk = document.createElement('input');
+      chk.type = 'checkbox'; chk.className = 'ms-card__chk';
+      chk.checked = !!_selected[ann.ref]; chk.title = 'Select for bulk tag';
+      chk.addEventListener('change', function () {
+        if (this.checked) _selected[ann.ref] = true; else delete _selected[ann.ref];
+        li.classList.toggle('ms-card--selected', !!_selected[ann.ref]);
+        updateBulkBar();
+      });
+      header.appendChild(chk);
+      header.appendChild(mkEl('span', 'ms-card__ref', ann.ref));
+      if (ann.highlight) {
+        var badge = mkEl('span', 'ms-card__hl-badge ms-card__hl-badge--' + ann.highlight, '★ ' + ann.highlight);
+        header.appendChild(badge);
+      }
+      inner.appendChild(header);
+
+      /* tags row — refreshes in-place without full re-render */
+      var tagsRow = mkEl('div', 'ms-card__tags');
+      function refreshTags() {
+        tagsRow.innerHTML = '';
+        var d1 = getNotes1();
+        var entry = d1[ann.ref] || {};
+        var tags = Array.isArray(entry.tags) ? entry.tags : [];
+        ann.tags = tags;
+        tags.forEach(function (tag) {
+          var chip = mkEl('span', 'ms-card__tag', tag);
+          var rm = mkEl('button', 'ms-card__tag-rm', '×');
+          rm.type = 'button'; rm.title = 'Remove tag';
+          rm.addEventListener('click', function () {
+            tagOpLocal(ann.ref, 'remove', tag);
+            buildAnnotations(); refreshTags(); renderTagFilterChips();
+          });
+          chip.appendChild(rm); tagsRow.appendChild(chip);
+        });
+        var inp = document.createElement('input');
+        inp.type = 'text'; inp.className = 'ms-card__tag-input'; inp.placeholder = '+ tag';
+        inp.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ',') {
+            e.preventDefault();
+            var val = inp.value.replace(/,/g, '').trim().toLowerCase();
+            if (val) { tagOpLocal(ann.ref, 'add', val); buildAnnotations(); inp.value = ''; refreshTags(); renderTagFilterChips(); }
+          }
+        });
+        tagsRow.appendChild(inp);
+      }
+      refreshTags();
+      inner.appendChild(tagsRow);
+
+      /* notes area */
+      var notesArea = mkEl('div', 'ms-card__notes');
+      var hasNote = ann.legacyNote || ann.v2Notes.length;
+      if (hasNote) {
+        var isLong = (ann.legacyNote.length > 200) || ann.v2Notes.length > 1;
+        var isExp  = !!_expanded[ann.ref];
+
+        if (ann.legacyNote) {
+          var lp = mkEl('p', 'ms-card__note-p' + (!isExp && isLong ? ' ms-card__note-p--clamp' : ''), ann.legacyNote);
+          notesArea.appendChild(lp);
+        }
+        ann.v2Notes.forEach(function (n, idx) {
+          if (!isExp && idx > 0) return;
+          if (ann.v2Notes.length > 1) {
+            notesArea.appendChild(mkEl('p', 'ms-card__note-meta',
+              new Date(n.updated || n.created || 0).toLocaleDateString()));
+          }
+          var cls = 'ms-card__note-p' + (!isExp && isLong && !ann.legacyNote ? ' ms-card__note-p--clamp' : '');
+          notesArea.appendChild(mkEl('p', cls, n.text || ''));
+        });
+        if (isLong) {
+          var tog = mkEl('button', 'ms-card__more', isExp ? 'Show less' : 'Show more');
+          tog.type = 'button';
+          tog.addEventListener('click', function () {
+            _expanded[ann.ref] = !_expanded[ann.ref];
+            li.replaceWith(buildCard(ann));
+          });
+          notesArea.appendChild(tog);
+        }
+      }
+      inner.appendChild(notesArea);
+
+      /* actions */
+      var actions = mkEl('div', 'ms-card__actions');
+      var rl = document.createElement('a');
+      rl.className = 'ms-card__link'; rl.href = READER_URL + '?ref=' + encodeURIComponent(ann.ref); rl.textContent = 'Read in context';
+      var vsl = document.createElement('a');
+      vsl.className = 'ms-card__link'; vsl.href = VS_URL + '?ref=' + encodeURIComponent(ann.ref) + '&study=1'; vsl.textContent = 'Word study';
+      var del = mkEl('button', 'ms-card__del', 'Remove all');
+      del.type = 'button'; del.title = 'Delete all annotations for this verse';
+      del.addEventListener('click', function () {
+        if (!confirm('Remove all annotations for ' + ann.ref + '?')) return;
+        var d1 = getNotes1(); delete d1[ann.ref]; saveNotes1(d1);
+        saveNotes2(getNotes2().filter(function (n) { return n.display !== ann.ref; }));
+        delete _selected[ann.ref];
+        buildAnnotations(); render(); updateBulkBar();
+      });
+      actions.appendChild(rl); actions.appendChild(vsl); actions.appendChild(del);
+      inner.appendChild(actions);
+      li.appendChild(inner);
+      return li;
+    }
+
+    /* ── Add Note form ──────────────────────────────────────────────────────── */
+    function buildAddForm() {
+      var form = mkEl('div', 'ms-add-form');
+
+      var toggle = mkEl('button', 'ms-add-toggle' + (_formOpen ? ' ms-add-toggle--open' : ''), 'Add note to a verse');
+      toggle.type = 'button';
+      form.appendChild(toggle);
+
+      var body = mkEl('div', 'ms-add-body' + (_formOpen ? ' ms-add-body--open' : ''));
+
+      /* row 1: refs area + highlight */
+      var row1 = mkEl('div', 'ms-add-row');
+      var refField = mkEl('div', 'ms-add-field ms-add-field--grow');
+      refField.appendChild(mkEl('label', 'ms-add-lbl', 'Verses'));
+
+      /* chip container — chips + inline text input + browse button all flow together */
+      var refChipsEl = mkEl('div', 'ms-ref-chips');
+
+      function syncRefChips() {
+        refChipsEl.innerHTML = '';
+        _formRefs.forEach(function (ref) {
+          var chip = mkEl('span', 'ms-ref-chip', ref);
+          var rm = mkEl('button', 'ms-ref-chip__rm', '×');
+          rm.type = 'button'; rm.title = 'Remove';
+          rm.addEventListener('click', function () {
+            _formRefs = _formRefs.filter(function (r) { return r !== ref; });
+            syncRefChips();
+          });
+          chip.appendChild(rm); refChipsEl.appendChild(chip);
+        });
+
+        var typeInp = document.createElement('input');
+        typeInp.type = 'text'; typeInp.className = 'ms-ref-type-inp';
+        typeInp.placeholder = _formRefs.length ? 'add another…' : 'e.g. John 3:16, Rom 8:28';
+        typeInp.autocomplete = 'off';
+        typeInp.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ',') {
+            e.preventDefault();
+            var raw = typeInp.value.trim().replace(/,$/, '');
+            if (!raw) return;
+            var canon = canonicalizeRef(raw);
+            if (!canon) { showToast('Could not parse "' + raw + '" — try "John 3:16"', 'warn'); return; }
+            if (_formRefs.indexOf(canon) === -1) _formRefs.push(canon);
+            typeInp.value = ''; syncRefChips();
+          }
+        });
+        typeInp.addEventListener('blur', function () {
+          var raw = typeInp.value.trim();
+          if (!raw) return;
+          var canon = canonicalizeRef(raw);
+          if (canon && _formRefs.indexOf(canon) === -1) { _formRefs.push(canon); typeInp.value = ''; syncRefChips(); }
+        });
+        refChipsEl.appendChild(typeInp);
+
+        var pickBtn = mkEl('button', 'ms-pick-btn', '+ Browse');
+        pickBtn.type = 'button';
+        pickBtn.title = 'Open verse selector';
+        pickBtn.addEventListener('click', openVersePicker);
+        refChipsEl.appendChild(pickBtn);
+      }
+      syncRefChips();
+
+      refField.appendChild(refChipsEl);
+      refField.appendChild(mkEl('span', 'ms-ref-hint', 'Type and press Enter, use commas, or Browse to select. Multiple verses share the same note.'));
+      row1.appendChild(refField);
+
+      var hlField = mkEl('div', 'ms-add-field');
+      hlField.appendChild(mkEl('label', 'ms-add-lbl', 'Highlight'));
+      var hlRow = mkEl('div', 'ms-add-hl');
+      var noneBtn = mkEl('button', 'ms-add-hl-none' + (!_formHl ? ' ms-add-hl-none--active' : ''), '∅');
+      noneBtn.type = 'button'; noneBtn.title = 'No highlight';
+      noneBtn.addEventListener('click', function () { _formHl = ''; syncSwatches(); });
+      hlRow.appendChild(noneBtn);
+      HL_COLORS.forEach(function (c) {
+        var sw = mkEl('button', 'ms-add-hl-btn' + (_formHl === c ? ' ms-add-hl-btn--active' : ''));
+        sw.type = 'button'; sw.setAttribute('data-c', c); sw.title = c;
+        sw.addEventListener('click', function () { _formHl = c; syncSwatches(); });
+        hlRow.appendChild(sw);
+      });
+      function syncSwatches() {
+        noneBtn.className = 'ms-add-hl-none' + (!_formHl ? ' ms-add-hl-none--active' : '');
+        hlRow.querySelectorAll('.ms-add-hl-btn').forEach(function (s) {
+          s.classList.toggle('ms-add-hl-btn--active', s.getAttribute('data-c') === _formHl);
+        });
+      }
+      hlField.appendChild(hlRow);
+      row1.appendChild(hlField);
+      body.appendChild(row1);
+
+      /* row 2: tags */
+      var row2 = mkEl('div', 'ms-add-row');
+      var tagsField = mkEl('div', 'ms-add-field ms-add-field--grow');
+      tagsField.appendChild(mkEl('label', 'ms-add-lbl', 'Tags — press Enter or comma to add'));
+      var tagsArea = mkEl('div', 'ms-add-tags-row');
+      var formTagInp = document.createElement('input');
+      formTagInp.type = 'text'; formTagInp.className = 'ms-add-tag-input'; formTagInp.placeholder = 'tag…';
+      function addFormTag(tag) {
+        tag = tag.replace(/,/g,'').trim().toLowerCase();
+        if (!tag || _formTags.indexOf(tag) !== -1) return;
+        _formTags.push(tag); syncFormTags();
+      }
+      function syncFormTags() {
+        tagsArea.innerHTML = '';
+        _formTags.forEach(function (tag) {
+          var chip = mkEl('span', 'ms-card__tag', tag);
+          var rm = mkEl('button', 'ms-card__tag-rm', '×');
+          rm.type = 'button';
+          rm.addEventListener('click', function () {
+            _formTags = _formTags.filter(function (t) { return t !== tag; }); syncFormTags();
+          });
+          chip.appendChild(rm); tagsArea.appendChild(chip);
+        });
+        formTagInp.value = ''; tagsArea.appendChild(formTagInp);
+      }
+      formTagInp.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ',') { e.preventDefault(); addFormTag(formTagInp.value); }
+      });
+      syncFormTags();
+      tagsField.appendChild(tagsArea);
+      row2.appendChild(tagsField);
+      body.appendChild(row2);
+
+      /* note textarea */
+      var noteField = mkEl('div', 'ms-add-field');
+      noteField.style.marginBottom = '0.65rem';
+      noteField.appendChild(mkEl('label', 'ms-add-lbl', 'Note (optional)'));
+      var noteTA = document.createElement('textarea');
+      noteTA.className = 'ms-add-textarea'; noteTA.placeholder = 'Your thoughts on this verse…';
+      noteField.appendChild(noteTA);
+      body.appendChild(noteField);
+
+      /* footer */
+      var footer = mkEl('div', 'ms-add-footer');
+      var saveBtn = mkEl('button', 'ms-add-save', 'Save');
+      saveBtn.type = 'button';
+      saveBtn.addEventListener('click', function () { saveNewNote(noteTA); });
+      footer.appendChild(saveBtn);
+      footer.appendChild(mkEl('span', 'ms-add-hint', 'Saved locally on this device.'));
+      body.appendChild(footer);
+
+      toggle.addEventListener('click', function () {
+        _formOpen = !_formOpen;
+        toggle.className = 'ms-add-toggle' + (_formOpen ? ' ms-add-toggle--open' : '');
+        body.className = 'ms-add-body' + (_formOpen ? ' ms-add-body--open' : '');
+        if (_formOpen) setTimeout(function () {
+          var ti = form.querySelector('.ms-ref-type-inp'); if (ti) ti.focus();
+        }, 40);
+      });
+
+      form.appendChild(body);
+      return form;
+    }
+
+    /* Canonicalize a user-typed ref string → "Genesis 1:1" format, or null */
+    function canonicalizeRef(str) {
+      var p = parseRef(str);
+      if (p) return p.book.name + ' ' + p.ch + ':' + p.v;
+      if (!_booksLoaded) return str.trim() || null; // books not yet loaded, pass through
+      return null;
+    }
+
+    function saveNewNote(noteTA) {
+      /* flush anything left in the type input */
+      var typeInp = document.querySelector('.ms-ref-type-inp');
+      if (typeInp && typeInp.value.trim()) {
+        var canon = canonicalizeRef(typeInp.value.trim());
+        if (canon && _formRefs.indexOf(canon) === -1) _formRefs.push(canon);
+        typeInp.value = '';
+      }
+
+      if (!_formRefs.length) {
+        showToast('Add at least one verse reference.', 'warn');
+        if (typeInp) typeInp.focus();
+        return;
+      }
+
+      var noteText = noteTA.value.trim();
+      var d1 = getNotes1();
+      var d2 = noteText ? getNotes2() : null;
+      var savedRefs = [];
+
+      _formRefs.forEach(function (ref, i) {
+        var entry = d1[ref] || {};
+        if (_formHl) entry.highlight = _formHl;
+        if (_formTags.length) {
+          var tags = Array.isArray(entry.tags) ? entry.tags : [];
+          _formTags.forEach(function (t) { if (tags.indexOf(t) === -1) tags.push(t); });
+          entry.tags = tags;
+        }
+        if (noteText && !entry.note) entry.note = noteText;
+        d1[ref] = entry;
+        savedRefs.push(ref);
+
+        if (d2) {
+          var p = parseRef(ref); // null for range refs — that's fine
+          d2.push({
+            id: Date.now() + '-' + i + '-' + Math.random().toString(36).slice(2),
+            bookId: p ? p.book.id : '', ch: p ? p.ch : 0, v: p ? p.v : 0,
+            endCh: null, endV: null, display: ref, text: noteText,
+            created: Date.now(), updated: Date.now(),
+          });
+        }
+      });
+
+      saveNotes1(d1);
+      if (d2) saveNotes2(d2);
+
+      _formRefs = []; noteTA.value = ''; _formHl = ''; _formTags = []; _formOpen = false;
+      buildAnnotations(); render();
+      showToast('Saved ' + savedRefs.length + ' verse' + (savedRefs.length !== 1 ? 's' : '') + '.');
+    }
+
+    /* ── By Tag view ────────────────────────────────────────────────────────── */
+    function renderTagView(parent) {
+      var counts = getAllTagCounts();
+      var tags = Object.keys(counts).sort();
+
+      if (!tags.length) {
+        parent.appendChild(mkEl('p', 'ms-empty', 'No tags yet. Add tags to verses from the Reader or from any verse card.'));
+        return;
+      }
+
+      var grid = mkEl('div', 'ms-tag-grid');
+      tags.forEach(function (tag) {
+        var btn = mkEl('button', 'ms-tag-item');
+        btn.type = 'button';
+        btn.appendChild(document.createTextNode(tag + ' '));
+        var cnt = mkEl('span', 'ms-tag-item__count', counts[tag]);
+        btn.appendChild(cnt);
+        btn.addEventListener('click', function () { _activeTags = [tag]; _tab = 'all'; render(); });
+        grid.appendChild(btn);
+      });
+      parent.appendChild(grid);
+
+      /* tag management: rename + delete */
+      var manage = mkEl('div', 'ms-tag-manage');
+      manage.appendChild(mkEl('p', 'ms-tag-manage__title', 'Manage tags'));
+      tags.forEach(function (tag) {
+        var row = mkEl('div', 'ms-tag-manage__row');
+        row.appendChild(mkEl('span', 'ms-tag-manage__name',
+          '#' + tag + ' — ' + counts[tag] + ' verse' + (counts[tag] !== 1 ? 's' : '')));
+        var renBtn = mkEl('button', 'ms-tag-manage__btn', 'Rename');
+        renBtn.type = 'button';
+        renBtn.addEventListener('click', function () {
+          var nw = prompt('Rename "' + tag + '" to:', tag);
+          if (!nw) return; nw = nw.trim().toLowerCase();
+          if (!nw || nw === tag) return;
+          renameTagGlobal(tag, nw); buildAnnotations(); render();
+        });
+        var delBtn = mkEl('button', 'ms-tag-manage__btn ms-tag-manage__del', 'Delete');
+        delBtn.type = 'button';
+        delBtn.addEventListener('click', function () {
+          if (!confirm('Delete tag "' + tag + '" from all verses?')) return;
+          deleteTagGlobal(tag); buildAnnotations(); render();
+        });
+        row.appendChild(renBtn); row.appendChild(delBtn);
+        manage.appendChild(row);
+      });
+      parent.appendChild(manage);
+    }
+
+    /* ── By Highlight view ──────────────────────────────────────────────────── */
+    function renderHlView(parent) {
+      var hlCounts = {};
+      _anns.forEach(function (a) { if (a.highlight) hlCounts[a.highlight] = (hlCounts[a.highlight] || 0) + 1; });
+      var total = Object.keys(hlCounts).reduce(function (s, k) { return s + hlCounts[k]; }, 0);
+
+      if (!total) {
+        parent.appendChild(mkEl('p', 'ms-empty', 'No highlights yet. Tap a verse number in the Reader to highlight it.'));
+        return;
+      }
+
+      var grid = mkEl('div', 'ms-hl-grid');
+      HL_COLORS.forEach(function (c) {
+        if (!hlCounts[c]) return;
+        var btn = mkEl('button', 'ms-hl-item' + (_activeHl === c ? ' ms-hl-item--active' : ''));
+        btn.type = 'button';
+        btn.appendChild(mkEl('span', 'ms-hl-swatch ms-hl-swatch--' + c));
+        btn.appendChild(document.createTextNode(c.charAt(0).toUpperCase() + c.slice(1)));
+        btn.appendChild(mkEl('span', 'ms-hl-count', hlCounts[c] + ' verse' + (hlCounts[c] !== 1 ? 's' : '')));
+        btn.addEventListener('click', function () { _activeHl = (_activeHl === c) ? '' : c; _tab = 'all'; render(); });
+        grid.appendChild(btn);
+      });
+      parent.appendChild(grid);
+    }
+
+    /* ── Bulk bar ───────────────────────────────────────────────────────────── */
+    function updateBulkBar() {
+      var count = Object.keys(_selected).length;
+      var bar = document.getElementById('ms-bulk-bar');
+      bar.hidden = (count === 0);
+      document.getElementById('ms-bulk-count').textContent = count + ' selected';
+    }
+
+    function doBulkTag(op) {
+      var inp = document.getElementById('ms-bulk-input');
+      var tag = inp.value.trim().toLowerCase();
+      if (!tag) { showToast('Enter a tag name first.', 'warn'); return; }
+      var refs = Object.keys(_selected);
+      var d1 = getNotes1();
+      refs.forEach(function (ref) {
+        var entry = d1[ref] || {};
+        var tags = Array.isArray(entry.tags) ? entry.tags : [];
+        if (op === 'add') { if (tags.indexOf(tag) === -1) tags.push(tag); }
+        else              { tags = tags.filter(function (t) { return t !== tag; }); }
+        entry.tags = tags; d1[ref] = entry;
+      });
+      saveNotes1(d1); _selected = {}; inp.value = '';
+      buildAnnotations(); render(); updateBulkBar();
+      showToast((op === 'add' ? 'Added' : 'Removed') + ' "' + tag + '" on ' + refs.length + ' verse' + (refs.length !== 1 ? 's' : '') + '.');
+    }
+
+    /* ── Tag helpers ────────────────────────────────────────────────────────── */
+    function tagOpLocal(ref, op, tag) {
+      var d1 = getNotes1();
+      var entry = d1[ref] || {};
+      var tags = Array.isArray(entry.tags) ? entry.tags : [];
+      if (op === 'add') { if (tags.indexOf(tag) === -1) tags.push(tag); }
+      else              { tags = tags.filter(function (t) { return t !== tag; }); }
+      entry.tags = tags; d1[ref] = entry; saveNotes1(d1);
+    }
+
+    function renameTagGlobal(oldTag, newTag) {
+      var d1 = getNotes1();
+      Object.keys(d1).forEach(function (ref) {
+        var entry = d1[ref]; if (!entry || !Array.isArray(entry.tags)) return;
+        var idx = entry.tags.indexOf(oldTag); if (idx === -1) return;
+        entry.tags.splice(idx, 1);
+        if (entry.tags.indexOf(newTag) === -1) entry.tags.push(newTag);
+      });
+      saveNotes1(d1);
+    }
+
+    function deleteTagGlobal(tag) {
+      var d1 = getNotes1();
+      Object.keys(d1).forEach(function (ref) {
+        var entry = d1[ref]; if (!entry || !Array.isArray(entry.tags)) return;
+        entry.tags = entry.tags.filter(function (t) { return t !== tag; });
+      });
+      saveNotes1(d1);
+    }
+
+    /* ── Import / Export ────────────────────────────────────────────────────── */
+    function setupIO() {
+      document.getElementById('ms-import-btn').addEventListener('click', function () {
+        document.getElementById('ms-import-file').click();
+      });
+      document.getElementById('ms-import-file').addEventListener('change', function () {
+        var file = this.files && this.files[0]; if (!file) return; this.value = '';
+        var fr = new FileReader();
+        fr.onload = function (ev) {
+          var imp;
+          try { imp = JSON.parse(ev.target.result); } catch (e) { showToast('Invalid JSON.', 'error'); return; }
+          if (typeof imp !== 'object' || Array.isArray(imp) || !imp) { showToast('Unexpected format.', 'error'); return; }
+          var valid = Object.keys(imp).filter(function (k) {
+            var v = imp[k]; return v && typeof v === 'object' && ('highlight' in v || 'note' in v || 'tags' in v);
+          });
+          if (!valid.length) { showToast('No notes found in file.', 'error'); return; }
+          var existing = getNotes1(); var added = 0, skipped = 0;
+          valid.forEach(function (k) { if (existing[k]) { skipped++; } else { existing[k] = imp[k]; added++; } });
+          saveNotes1(existing); buildAnnotations(); render();
+          var msg = 'Imported ' + added + ' entr' + (added === 1 ? 'y' : 'ies') + '.';
+          if (skipped) msg += ' ' + skipped + ' duplicate' + (skipped !== 1 ? 's' : '') + ' skipped.';
+          showToast(msg);
+        };
+        fr.onerror = function () { showToast('Could not read file.', 'error'); };
+        fr.readAsText(file);
+      });
+      document.getElementById('ms-export-json').addEventListener('click', function () {
+        var d1 = getNotes1();
+        if (!Object.keys(d1).length) { showToast('No notes to export.', 'warn'); return; }
+        dlBlob(new Blob([JSON.stringify(d1, null, 2)], { type: 'application/json' }), 'bible-notes.json');
+      });
+      document.getElementById('ms-export-text').addEventListener('click', function () {
+        var d1 = getNotes1(); var refs = Object.keys(d1);
+        if (!refs.length) { showToast('No notes to export.', 'warn'); return; }
+        var lines = refs.map(function (ref) {
+          var n = d1[ref]; var parts = [ref];
+          if (n.highlight) parts.push('[highlight: ' + n.highlight + ']');
+          if (n.tags && n.tags.length) parts.push('[tags: ' + n.tags.join(', ') + ']');
+          if (n.note) parts.push(n.note);
+          return parts.join('\n');
+        });
+        dlBlob(new Blob([lines.join('\n\n')], { type: 'text/plain' }), 'bible-notes.txt');
+      });
+    }
+
+    function dlBlob(blob, name) {
+      var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; a.click();
+    }
+
+    /* ── Verse picker ───────────────────────────────────────────────────────── */
+    function openVersePicker() {
+      var dlg = document.getElementById('ms-vp-dialog');
+      if (!dlg) return;
+
+      /* Populate book select on first open */
+      var bookSel = document.getElementById('ms-vp-book');
+      if (!bookSel.options.length) {
+        if (!_books.length) { showToast('Book data not loaded yet — type the reference manually.', 'warn'); return; }
+        _books.forEach(function (b) {
+          var opt = document.createElement('option');
+          opt.value = b.name; opt.textContent = b.name;
+          opt.setAttribute('data-maxch', b.chapters);
+          bookSel.appendChild(opt);
+        });
+      }
+
+      /* Reset to sensible defaults */
+      document.getElementById('ms-vp-ch').value = 1;
+      document.getElementById('ms-vp-sv').value = 1;
+      document.getElementById('ms-vp-range').checked = false;
+      document.getElementById('ms-vp-range-end').hidden = true;
+      document.getElementById('ms-vp-ech').value = 1;
+      document.getElementById('ms-vp-ev').value = 1;
+      vpUpdateChMax();
+      vpUpdatePreview();
+      dlg.showModal();
+    }
+
+    function vpUpdateChMax() {
+      var bookSel = document.getElementById('ms-vp-book');
+      var opt = bookSel.options[bookSel.selectedIndex];
+      if (!opt) return;
+      var max = parseInt(opt.getAttribute('data-maxch'), 10) || 150;
+      var chInp = document.getElementById('ms-vp-ch');
+      var eChInp = document.getElementById('ms-vp-ech');
+      chInp.max = max; eChInp.max = max;
+      if (parseInt(chInp.value, 10) > max)  chInp.value  = max;
+      if (parseInt(eChInp.value, 10) > max) eChInp.value = max;
+    }
+
+    function vpBuildRef() {
+      var book  = document.getElementById('ms-vp-book').value;
+      if (!book) return '';
+      var ch    = Math.max(1, parseInt(document.getElementById('ms-vp-ch').value, 10) || 1);
+      var sv    = Math.max(1, parseInt(document.getElementById('ms-vp-sv').value, 10) || 1);
+      var range = document.getElementById('ms-vp-range').checked;
+      if (!range) return book + ' ' + ch + ':' + sv;
+      var eCh = Math.max(ch, parseInt(document.getElementById('ms-vp-ech').value, 10) || ch);
+      var ev  = Math.max(1,  parseInt(document.getElementById('ms-vp-ev').value, 10) || sv);
+      if (eCh === ch && ev <= sv) return book + ' ' + ch + ':' + sv;
+      if (eCh === ch) return book + ' ' + ch + ':' + sv + '–' + ev;
+      return book + ' ' + ch + ':' + sv + '–' + eCh + ':' + ev;
+    }
+
+    function vpUpdatePreview() {
+      var p = document.getElementById('ms-vp-preview');
+      if (p) p.textContent = vpBuildRef() || '—';
+    }
+
+    function initVersePicker() {
+      var dlg     = document.getElementById('ms-vp-dialog');
+      if (!dlg) return;
+      var bookSel = document.getElementById('ms-vp-book');
+      var chInp   = document.getElementById('ms-vp-ch');
+      var svInp   = document.getElementById('ms-vp-sv');
+      var rangeChk= document.getElementById('ms-vp-range');
+      var rangeEnd= document.getElementById('ms-vp-range-end');
+      var eChInp  = document.getElementById('ms-vp-ech');
+      var evInp   = document.getElementById('ms-vp-ev');
+
+      bookSel.addEventListener('change', function () { vpUpdateChMax(); vpUpdatePreview(); });
+      [chInp, svInp, eChInp, evInp].forEach(function (inp) { inp.addEventListener('input', vpUpdatePreview); });
+
+      rangeChk.addEventListener('change', function () {
+        rangeEnd.hidden = !this.checked;
+        if (this.checked) {
+          eChInp.value = chInp.value;
+          evInp.value = Math.max(1, (parseInt(svInp.value, 10) || 1) + 1);
+        }
+        vpUpdatePreview();
+      });
+
+      document.getElementById('ms-vp-close').addEventListener('click',  function () { dlg.close(); });
+      document.getElementById('ms-vp-cancel').addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+
+      document.getElementById('ms-vp-add').addEventListener('click', function () {
+        var ref = vpBuildRef();
+        if (!ref || ref === '—') { showToast('Select a book first.', 'warn'); return; }
+        if (_formRefs.indexOf(ref) === -1) _formRefs.push(ref);
+        dlg.close();
+        /* Re-render to update chips; _formOpen stays true so form stays open */
+        render();
+      });
+    }
+
+    /* ── Toast ──────────────────────────────────────────────────────────────── */
+    var _toastTimer = null;
+    function showToast(msg, type) {
+      var t = document.getElementById('ms-toast');
+      t.textContent = msg;
+      t.className = 'ms-toast' + (type === 'error' ? ' ms-toast--error' : type === 'warn' ? ' ms-toast--warn' : '');
+      t.hidden = false;
+      if (_toastTimer) clearTimeout(_toastTimer);
+      _toastTimer = setTimeout(function () { t.hidden = true; }, 4000);
+    }
+
+    /* ── Tiny DOM helper ────────────────────────────────────────────────────── */
+    function mkEl(tag, cls, text) {
+      var e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text != null) e.textContent = text;
+      return e;
+    }
+
+    /* ── Init ───────────────────────────────────────────────────────────────── */
+    document.querySelectorAll('.ms-tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        _tab = tab.getAttribute('data-tab');
+        if (_tab !== 'search') _searchQ = '';
+        render();
+      });
+    });
+    document.getElementById('ms-filter-testament').addEventListener('change', function () {
+      _testament = this.value; render();
+    });
+    document.getElementById('ms-filter-book').addEventListener('change', function () {
+      _book = this.value; render();
+    });
+    document.getElementById('ms-bulk-add').addEventListener('click', function () { doBulkTag('add'); });
+    document.getElementById('ms-bulk-rm').addEventListener('click',  function () { doBulkTag('remove'); });
+    document.getElementById('ms-bulk-clear').addEventListener('click', function () {
+      _selected = {}; updateBulkBar(); render();
+    });
+    document.getElementById('ms-bulk-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') doBulkTag('add');
+    });
+
+    setupIO();
+
+    initVersePicker();
+
+    fetch('../data/bible/books.json')
+      .then(function (r) { return r.json(); })
+      .then(function (books) { _books = books; buildBookMap(); _booksLoaded = true; })
+      .catch(function () { _booksLoaded = true; })
+      .then(function () { buildAnnotations(); render(); });
+
+  })();
+  </script>
+</Fragment>
+</Base>

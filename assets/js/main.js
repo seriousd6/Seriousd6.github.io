@@ -284,7 +284,7 @@
     var head   = mk('div', 'sb-head');
     var logo   = mk('a', 'sb-logo');
     logo.href  = _r('');
-    logo.textContent = '📖 Bible Study';
+    logo.textContent = '📖 Kingdom Bible Study';
     var colBtn = mk('button', 'sb-collapse-btn');
     colBtn.setAttribute('aria-label', 'Collapse sidebar');
     colBtn.setAttribute('aria-controls', 'site-sidebar');
@@ -431,7 +431,7 @@
     hamburger.innerHTML = '&#9776;';
     var topLogo   = mk('a', 'mobile-topbar__logo');
     topLogo.href  = _r('');
-    topLogo.textContent = '📖 Bible Study';
+    topLogo.textContent = '📖 Kingdom Bible Study';
     topbar.appendChild(hamburger);
     topbar.appendChild(topLogo);
 

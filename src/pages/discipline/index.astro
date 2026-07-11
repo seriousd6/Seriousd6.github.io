@@ -1,0 +1,1701 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Discipline — Kingdom Bible Study"} description={"Daily spiritual disciplines — reading plans, devotionals, memory, journal, and worship notes."}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../assets/css/memorize.css"><link rel="stylesheet" href="../assets/css/devotionals.css"><link rel="stylesheet" href="../assets/css/discipline.css">
+</Fragment>
+<main>
+
+    <!-- ── Sticky tab bar ─────────────────────────────────────────────────── -->
+    <div class="disc-tabbar-wrap">
+      <div class="disc-tabbar" role="tablist" aria-label="Discipline tabs">
+        <button class="disc-tab disc-tab--active" data-tab="plans" role="tab" aria-selected="true" id="disc-tab-plans" aria-controls="disc-plans">
+          <span class="disc-dot" id="dot-reading"></span>📅 Plans
+        </button>
+        <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false" id="disc-tab-devotionals" aria-controls="disc-devotionals">
+          <span class="disc-dot" id="dot-devotional"></span>🌅 Devotionals
+        </button>
+        <button class="disc-tab" data-tab="memory" role="tab" aria-selected="false" id="disc-tab-memory" aria-controls="disc-memory">
+          <span class="disc-dot" id="dot-memory"></span>⭐ Memory
+        </button>
+        <button class="disc-tab" data-tab="journal" role="tab" aria-selected="false" id="disc-tab-journal" aria-controls="disc-journal">
+          <span class="disc-dot" id="dot-prayer"></span>✍️ Journal
+        </button>
+        <button class="disc-tab" data-tab="worship" role="tab" aria-selected="false" id="disc-tab-worship" aria-controls="disc-worship">
+          <span class="disc-dot" id="dot-worship"></span>⛪ Worship
+        </button>
+        <button class="disc-tab disc-tab--more" id="disc-more-btn" type="button" aria-haspopup="true" aria-expanded="false">More ▾</button>
+      </div>
+      <div class="disc-more-menu" id="disc-more-menu" hidden="" role="menu">
+        <button class="disc-more-item" data-tab="notes" role="menuitem" type="button">📝 My Notes</button>
+        <button class="disc-more-item" data-tab="progress" role="menuitem" type="button">📊 Reading Progress</button>
+        <button class="disc-more-item" data-tab="history" role="menuitem" type="button">📅 History</button>
+      </div>
+    </div>
+
+    <!-- ── Daily summary strip ───────────────────────────────────────────── -->
+    <div class="disc-today-strip" id="disc-today-strip"></div>
+
+    <!-- ══════════════════════════ PLANS PANEL ══════════════════════════════ -->
+    <div id="disc-plans" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-plans" hidden="">
+      <p class="plans-loading" id="plans-list-msg">Loading plans…</p>
+      <div id="plans-list"></div>
+    </div>
+
+    <!-- ══════════════════════════ DEVOTIONALS PANEL ════════════════════════ -->
+    <div id="disc-devotionals" class="disc-panel disc-devot-body" role="tabpanel" aria-labelledby="disc-tab-devotionals" hidden="">
+      <div class="devot-controls" style="margin-bottom:1.25rem">
+        <div class="devot-source">
+          <label class="devot-source__label" for="devot-collection">Devotional</label>
+          <!-- Options are populated from the DEVOT_COLLECTIONS registry in JS so adding a
+               new devotional series is data-only. Selection persists in localStorage. -->
+          <select class="devot-source__select" id="devot-collection" aria-label="Choose devotional collection"></select>
+        </div>
+        <div class="devot-date-nav">
+          <button class="devot-nav-btn" id="devot-prev" aria-label="Previous day">←</button>
+          <input type="date" id="devot-date-input" class="devot-date-input" aria-label="Select date">
+          <button class="devot-nav-btn" id="devot-next" aria-label="Next day">→</button>
+          <button class="devot-nav-btn devot-today-btn" id="devot-today">Today</button>
+        </div>
+        <!-- Period tabs (e.g. Morning / Evening) are rebuilt by renderPeriodTabs() to match
+             the chosen collection's periods, and hidden for single-period collections. -->
+        <div class="devot-period-tabs" id="devot-period-tabs" role="tablist" aria-label="Time of day"></div>
+      </div>
+      <article class="devot-card" id="devot-card" role="tabpanel" aria-labelledby="devot-tab-morning" aria-live="polite">
+        <div class="devot-card__loading" id="devot-loading">Loading…</div>
+        <div class="devot-card__body" id="devot-body" hidden="">
+          <div class="devot-card__date-label" id="devot-date-label"></div>
+          <blockquote class="devot-verse" id="devot-verse-block">
+            <p id="devot-verse-text"></p>
+            <cite id="devot-verse-ref"></cite>
+          </blockquote>
+          <div class="devot-text" id="devot-text"></div>
+          <p class="devot-attribution" id="devot-attribution" hidden=""></p>
+          <div class="devot-complete-row" id="devot-complete-row" hidden="">
+            <button class="devot-mark-btn" id="devot-mark-btn" type="button">Mark as read ✓</button>
+            <span class="devot-done-msg" id="devot-done-msg" hidden="">
+              ✓ Devotional complete for today &nbsp;·&nbsp;
+              <a href="?tab=journal&amp;jtab=reflections" style="color:var(--color-primary);font-weight:500;font-size:.82rem">Write a reflection →</a>
+            </span>
+          </div>
+        </div>
+        <div class="devot-card__empty" id="devot-empty" hidden="">
+          No entry found for this date.
+        </div>
+      </article>
+    </div>
+
+    <!-- ══════════════════════════ MEMORY PANEL ═════════════════════════════ -->
+    <div id="disc-memory" class="disc-panel disc-memory-body" role="tabpanel" aria-labelledby="disc-tab-memory" hidden="">
+      <div class="mem-header">
+        <h1 class="mem-title">⭐ Scripture Memory</h1>
+        <p class="mem-subtitle">Memorize verses using spaced repetition — reviewed at the right time, every time.</p>
+      </div>
+      <div class="mem-tabs" role="tablist">
+        <button class="mem-tab mem-tab--active" data-tab="browse" role="tab" aria-selected="true" id="mem-browse-tab" aria-controls="mem-browse-panel">Browse</button>
+        <button class="mem-tab" data-tab="review" role="tab" aria-selected="false" id="mem-review-tab" aria-controls="mem-review-panel">Review <span id="mem-due-badge" class="mem-badge" hidden=""></span></button>
+        <button class="mem-tab" data-tab="ol" role="tab" aria-selected="false" id="mem-ol-tab" aria-controls="mem-ol-panel">Original Language <span id="ol-due-badge" class="mem-badge" hidden=""></span></button>
+      </div>
+      <div id="mem-browse-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-browse-tab">
+        <div class="mem-add-row">
+          <input id="mem-add-input" type="text" class="mem-add-input" placeholder="Add a verse — e.g. John 3:16" aria-label="Add a verse — e.g. John 3:16" autocomplete="off">
+          <button id="mem-add-btn" class="mem-add-btn">Add verse</button>
+        </div>
+        <div class="mem-add-row">
+          <input id="mem-add-passage-input" type="text" class="mem-add-input" placeholder="Add a passage — e.g. Romans 8:28-30" aria-label="Add a passage — e.g. Romans 8:28-30" autocomplete="off">
+          <button id="mem-add-passage-btn" class="mem-add-btn" style="white-space:nowrap">Add passage</button>
+        </div>
+        <p id="mem-add-error" class="mem-add-error" hidden=""></p>
+        <div class="mem-mode-row">
+          <label class="mem-mode-label" for="mem-mode-select">Flashcard mode:</label>
+          <select id="mem-mode-select" class="mem-mode-select">
+            <option value="ref-to-text">Reference → Recall text</option>
+            <option value="text-to-ref">Text → Recall reference</option>
+          </select>
+          <label class="mem-mode-label mem-scope-label" for="mem-scope-select">Review:</label>
+          <select id="mem-scope-select" class="mem-mode-select" aria-label="Review scope"></select>
+        </div>
+        <div id="mem-tag-filter-row" class="mem-tag-filter-row" hidden=""></div>
+        <div id="mem-list" class="mem-list"></div>
+        <div id="mem-list-footer" class="mem-list-footer" hidden="">
+          <button id="mem-anki-btn" class="mem-anki-btn" type="button">Export for Anki</button>
+        </div>
+        <div id="mem-empty" class="bsw-empty-state" hidden="">
+          <span class="bsw-empty-state__glyph" aria-hidden="true">◈</span>
+          <p class="bsw-empty-state__title">No verses yet</p>
+          <p class="bsw-empty-state__desc">Add a reference above, or click the star button inside any verse modal while reading.</p>
+          <a class="bsw-empty-state__cta" href="../read/">Open Reader</a>
+        </div>
+      </div>
+      <div id="mem-review-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-review-tab" hidden="">
+        <div id="mem-review-progress" class="mem-progress"></div>
+        <div id="mem-card" class="mem-card">
+          <div id="mem-card-front" class="mem-card__front"></div>
+          <div id="mem-card-back" class="mem-card__back" hidden=""></div>
+          <div id="mem-card-actions" class="mem-card__actions" hidden="">
+            <button class="mem-rate-btn mem-rate-btn--again" data-score="0">Again <kbd>1</kbd></button>
+            <button class="mem-rate-btn mem-rate-btn--hard" data-score="1">Hard <kbd>2</kbd></button>
+            <button class="mem-rate-btn mem-rate-btn--good" data-score="2">Good <kbd>3</kbd></button>
+            <button class="mem-rate-btn mem-rate-btn--easy" data-score="3">Easy <kbd>4</kbd></button>
+          </div>
+        </div>
+        <div id="mem-review-done" class="mem-review-done" hidden="">
+          <p>🎉 All done for today! Come back tomorrow for your next review.</p>
+          <p style="font-size:.85rem;margin-bottom:1rem">
+            <a href="?tab=journal&amp;jtab=reflections" style="color:var(--color-primary);font-weight:500">📓 Write a reflection on what you studied →</a>
+          </p>
+          <button id="mem-back-browse" class="mem-back-btn">Back to Browse</button>
+        </div>
+      </div>
+
+      <!-- ── Original Language flashcard panel ───────────────────── -->
+      <div id="mem-ol-panel" class="mem-panel" role="tabpanel" aria-labelledby="mem-ol-tab" hidden="">
+
+        <!-- Deck list view -->
+        <div id="ol-list-view">
+          <div class="mem-ol-header">
+            <p id="ol-deck-info" class="mem-ol-info"></p>
+            <div class="mem-ol-controls">
+              <select id="ol-lang-filter" class="mem-mode-select" aria-label="Language filter">
+                <option value="all">All languages</option>
+                <option value="greek">Greek only</option>
+                <option value="hebrew">Hebrew only</option>
+              </select>
+              <button id="ol-review-btn" class="mem-add-btn" type="button" disabled="">Review Due</button>
+            </div>
+          </div>
+          <div id="ol-word-list" class="mem-ol-list"></div>
+          <div id="ol-empty" class="bsw-empty-state" hidden="">
+            <span class="bsw-empty-state__glyph" aria-hidden="true">α</span>
+            <p class="bsw-empty-state__title">No words in your deck yet</p>
+            <p class="bsw-empty-state__desc">Study a passage in the Original Language Study tool, then click ☆ on any word to add it here.</p>
+            <a class="bsw-empty-state__cta" href="../translation/workshop/">Open Original Language Study</a>
+          </div>
+        </div>
+
+        <!-- Flashcard review view (hidden until started) -->
+        <div id="ol-review-view" hidden="">
+          <div id="ol-review-progress" class="mem-progress"></div>
+          <div class="mem-card" id="ol-card">
+            <div id="ol-front" class="mem-card__front mem-ol-card__front"></div>
+            <div id="ol-back" class="mem-card__back  mem-ol-card__back" hidden=""></div>
+            <div id="ol-actions" class="mem-card__actions" hidden="">
+              <button class="mem-rate-btn mem-rate-btn--again" data-rating="again">Again<br><small>1 day</small></button>
+              <button class="mem-rate-btn mem-rate-btn--hard" data-rating="hard">Hard<br><small>3 days</small></button>
+              <button class="mem-rate-btn mem-rate-btn--good" data-rating="good">Good<br><small>7 days</small></button>
+              <button class="mem-rate-btn mem-rate-btn--easy" data-rating="easy">Easy<br><small>21 days</small></button>
+            </div>
+          </div>
+          <div id="ol-done" class="mem-review-done" hidden="">
+            <p>All caught up! Your Greek and Hebrew vocabulary is reviewed for today.</p>
+            <p style="font-size:.85rem;margin-bottom:1rem">
+              <a href="../translation/workshop/" style="color:var(--color-primary);font-weight:500">Study more passages to discover new words →</a>
+            </p>
+            <button id="ol-back-btn" class="mem-back-btn" type="button">Back to Deck</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ JOURNAL PANEL ════════════════════════════ -->
+    <div id="disc-journal" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-journal" hidden="">
+      <div class="journal-tabs" role="tablist" aria-label="Journal sections">
+        <button class="journal-tab journal-tab--active" data-jtab="prayers" role="tab" aria-selected="true" id="journal-tab-prayers" aria-controls="journal-prayers-panel">🙏 Prayers</button>
+        <button class="journal-tab" data-jtab="reflections" role="tab" aria-selected="false" id="journal-tab-reflections" aria-controls="journal-reflections-panel">📓 Reflections</button>
+        <button class="journal-tab" data-jtab="gratitude" role="tab" aria-selected="false" id="journal-tab-gratitude" aria-controls="journal-gratitude-panel">🌿 Gratitude</button>
+      </div>
+      <!-- Prayers panel -->
+      <div id="journal-prayers-panel" role="tabpanel" aria-labelledby="journal-tab-prayers">
+        <div class="journal-bar">
+          <button class="journal-btn journal-btn--primary" id="journal-new-btn" type="button">+ New Prayer</button>
+          <div class="journal-status-filters" role="group" aria-label="Filter by prayer status">
+            <button class="journal-status-btn journal-status-btn--active" data-status="all" type="button">All</button>
+            <button class="journal-status-btn" data-status="open" type="button">Open</button>
+            <button class="journal-status-btn" data-status="answered" type="button">✓ Answered</button>
+          </div>
+          <input class="journal-search" type="search" id="journal-search" placeholder="Search prayers…" aria-label="Search prayers">
+          <span class="journal-count" id="journal-count"></span>
+        </div>
+        <div id="journal-tag-filters" class="journal-tag-filters"></div>
+        <div id="journal-form-container"></div>
+        <div id="journal-list"></div>
+        <div class="journal-export-row" id="journal-export-row" hidden="">
+          <button class="journal-btn" id="journal-export-btn" type="button">Export JSON</button>
+          <button class="journal-btn" id="journal-import-btn" type="button">Import backup</button>
+          <input type="file" id="journal-import-file" accept=".json" style="display:none">
+        </div>
+      </div>
+      <!-- Reflections panel -->
+      <div id="journal-reflections-panel" role="tabpanel" aria-labelledby="journal-tab-reflections" hidden="">
+        <div class="journal-bar">
+          <button class="journal-btn journal-btn--primary" id="refl-new-btn" type="button">+ New Reflection</button>
+          <input class="journal-search" type="search" id="refl-search" placeholder="Search reflections…" aria-label="Search reflections">
+          <span class="journal-count" id="refl-count"></span>
+        </div>
+        <div id="refl-tag-filters" class="journal-tag-filters"></div>
+        <div id="refl-form-container"></div>
+        <div id="refl-list"></div>
+      </div>
+      <!-- Gratitude panel -->
+      <div id="journal-gratitude-panel" role="tabpanel" aria-labelledby="journal-tab-gratitude" hidden="">
+        <p class="grat-prompt">What are you grateful for today?</p>
+        <div class="grat-bar">
+          <button class="journal-btn journal-btn--primary" id="grat-new-btn" type="button">+ New Entry</button>
+          <input class="journal-search" type="search" id="grat-search" placeholder="Search entries…" aria-label="Search gratitude entries">
+          <span class="journal-count" id="grat-count"></span>
+        </div>
+        <div id="grat-form-container"></div>
+        <div id="grat-list"></div>
+        <div class="journal-export-row" id="grat-export-row" hidden="">
+          <button class="journal-btn" id="grat-export-btn" type="button">Export JSON</button>
+          <button class="journal-btn" id="grat-import-btn" type="button">Import backup</button>
+          <input type="file" id="grat-import-file" accept=".json" style="display:none">
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ WORSHIP PANEL ════════════════════════════ -->
+    <div id="disc-worship" class="disc-panel disc-body" role="tabpanel" aria-labelledby="disc-tab-worship" hidden="">
+      <div class="worship-tabs" role="tablist" aria-label="Worship sections">
+        <button class="worship-tab worship-tab--active" data-wtab="sermons" role="tab" aria-selected="true" id="worship-tab-sermons" aria-controls="worship-sermons-panel">Sermon Notes</button>
+        <button class="worship-tab" data-wtab="fasting" role="tab" aria-selected="false" id="worship-tab-fasting" aria-controls="worship-fasting-panel">Fasting Log</button>
+      </div>
+      <div id="worship-sermons-panel" role="tabpanel" aria-labelledby="worship-tab-sermons">
+        <div class="worship-bar">
+          <button class="worship-btn worship-btn--primary" id="worship-new-btn" type="button">+ New Entry</button>
+          <input class="worship-search" type="search" id="worship-search" placeholder="Search sermons…" aria-label="Search sermon notes">
+          <span class="worship-count" id="worship-count"></span>
+        </div>
+        <div id="worship-form-container"></div>
+        <div id="worship-list"></div>
+      </div>
+      <div id="worship-fasting-panel" role="tabpanel" aria-labelledby="worship-tab-fasting" hidden="">
+        <div class="worship-bar">
+          <button class="worship-btn worship-btn--primary" id="fast-new-btn" type="button">+ Log Fast</button>
+          <span class="worship-count" id="fast-count"></span>
+        </div>
+        <div id="fast-form-container"></div>
+        <div id="fast-list"></div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ NOTES PANEL ══════════════════════════════ -->
+    <div id="disc-notes" class="disc-panel" hidden="">
+      <iframe id="disc-notes-iframe" class="disc-embed-frame" data-src="../notes/?minimal=1" src="" style="display:none" title="My Notes"></iframe>
+    </div>
+
+    <!-- ══════════════════════════ PROGRESS PANEL ═══════════════════════════ -->
+    <div id="disc-progress" class="disc-panel" hidden="">
+      <iframe id="disc-progress-iframe" class="disc-embed-frame" data-src="../progress/?minimal=1" src="" style="display:none" title="Reading Progress"></iframe>
+    </div>
+
+    <!-- ══════════════════════════ HISTORY PANEL ════════════════════════════ -->
+    <div id="disc-history" class="disc-panel" hidden="">
+      <iframe id="disc-history-iframe" class="disc-embed-frame" data-src="../tracker/?minimal=1" src="" style="display:none" title="Discipline History"></iframe>
+    </div>
+
+  </main>
+<Fragment slot="after-scripts">
+<!-- Status dots + devotional/memory tracker wiring --><script type="module" is:inline="">
+  import { getToday, markDone, isDone, onUpdate } from '../assets/js/tracker.js';
+
+  var DOT_COLORS = {
+    reading:    '#5c3d1e',
+    devotional: '#e67e22',
+    memory:     '#2980b9',
+    prayer:     '#8e44ad',
+    reflection: '#16a085',
+    worship:    '#4caf50',
+  };
+  // Tab → primary discipline key for that tab's dot
+  var TAB_KEYS = { plans: 'reading', devotionals: 'devotional', memory: 'memory', journal: 'prayer', worship: 'worship' };
+
+  function updateDots() {
+    var status = getToday();
+    Object.entries(TAB_KEYS).forEach(function (pair) {
+      var tab = pair[0], key = pair[1];
+      var el = document.getElementById('dot-' + key);
+      if (!el) return;
+      var done = !!status[key];
+      el.style.background = done ? DOT_COLORS[key] : 'var(--color-border)';
+      el.title = key.charAt(0).toUpperCase() + key.slice(1) + (done ? ' ✓' : ' ○');
+    });
+  }
+
+  function updateStrip() {
+    var strip = document.getElementById('disc-today-strip');
+    if (!strip) return;
+    var status = getToday();
+    var keys = ['reading', 'devotional', 'memory', 'prayer', 'worship', 'gratitude'];
+    var done = keys.filter(function (k) { return !!status[k]; }).length;
+    if (done === 0) { strip.style.display = 'none'; return; }
+    strip.style.display = '';
+    var dotsHtml = keys.map(function (k) {
+      var color = !!status[k] ? (DOT_COLORS[k] || '#16a085') : 'var(--color-border)';
+      return '<span class="disc-dot disc-dot--strip" style="background:' + color + '" title="' + k + (status[k] ? ' ✓' : '') + '"></span>';
+    }).join('');
+    strip.innerHTML = '<span class="disc-strip-label">Today: ' + done + ' / ' + keys.length + ' complete</span>' + dotsHtml;
+  }
+
+  updateDots();
+  updateStrip();
+  onUpdate(function () { updateDots(); updateStrip(); });
+  window.addEventListener('storage', function (e) {
+    var keys = ['bsw_tracker','bsw_plans','bsw_journal','bsw_reflections','bsw_worship','bsw_gratitude'];
+    if (keys.indexOf(e.key) !== -1) { updateDots(); updateStrip(); }
+  });
+
+  // ── Devotional tracker ──────────────────────────────────────────────────
+  var _today = (function () {
+    var d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  }());
+
+  function _isToday() { var inp = document.getElementById('devot-date-input'); return inp && inp.value === _today; }
+
+  function _syncDevotUI() {
+    var row = document.getElementById('devot-complete-row');
+    var markBtn = document.getElementById('devot-mark-btn');
+    var doneMsg = document.getElementById('devot-done-msg');
+    var body    = document.getElementById('devot-body');
+    if (!row || !body) return;
+    var todayShowing = _isToday() && !body.hidden;
+    row.hidden = !todayShowing;
+    if (!todayShowing) return;
+    var alreadyDone = isDone('devotional');
+    markBtn.hidden = alreadyDone;
+    doneMsg.hidden = !alreadyDone;
+    if (!alreadyDone) { markDone('devotional'); markBtn.hidden = true; doneMsg.hidden = false; updateDots(); }
+  }
+
+  document.getElementById('devot-mark-btn').addEventListener('click', function () {
+    markDone('devotional');
+    document.getElementById('devot-mark-btn').hidden = true;
+    document.getElementById('devot-done-msg').hidden = false;
+    updateDots();
+  });
+
+  var bodyEl = document.getElementById('devot-body');
+  if (bodyEl && typeof MutationObserver !== 'undefined') {
+    new MutationObserver(_syncDevotUI).observe(bodyEl, { attributes: true, attributeFilter: ['hidden'] });
+  }
+
+  // ── Memory tracker ──────────────────────────────────────────────────────
+  var doneEl = document.getElementById('mem-review-done');
+  if (doneEl && typeof MutationObserver !== 'undefined') {
+    new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        if (m.type === 'attributes' && m.attributeName === 'hidden' && !doneEl.hidden) {
+          if (!isDone('memory')) { markDone('memory'); updateDots(); }
+        }
+      });
+    }).observe(doneEl, { attributes: true, attributeFilter: ['hidden'] });
+  }
+  </script><!-- ════════════════ Tab switching + all content IIFEs ════════════════ --><script is:inline="">
+  (function () {
+    'use strict';
+
+    /* ── Tab routing ──────────────────────────────────────────────────────── */
+    var _inited = {};
+
+    function activateTab(tab, skipHistory) {
+      document.querySelectorAll('.disc-panel').forEach(function (p) { p.hidden = true; });
+      var panel = document.getElementById('disc-' + tab);
+      if (panel) panel.hidden = false;
+
+      // Update tab button active states
+      document.querySelectorAll('.disc-tab[data-tab]').forEach(function (btn) {
+        var isThis = btn.getAttribute('data-tab') === tab;
+        btn.classList.toggle('disc-tab--active', isThis);
+        btn.setAttribute('aria-selected', isThis ? 'true' : 'false');
+      });
+
+      // Update "More" button label when a More-menu tab is active
+      var moreBtn = document.getElementById('disc-more-btn');
+      var moreTabs = ['notes', 'progress', 'history'];
+      var moreLabels = { notes: '📝 My Notes ▾', progress: '📊 Progress ▾', history: '📅 History ▾' };
+      if (moreBtn) {
+        if (moreTabs.indexOf(tab) !== -1) {
+          moreBtn.textContent = moreLabels[tab] || 'More ▾';
+          moreBtn.classList.add('disc-tab--active');
+        } else {
+          moreBtn.textContent = 'More ▾';
+          moreBtn.classList.remove('disc-tab--active');
+        }
+      }
+
+      // Lazy-load iframe panels
+      if (tab === 'notes' || tab === 'progress' || tab === 'history') {
+        var iframe = document.getElementById('disc-' + tab + '-iframe');
+        if (iframe) {
+          iframe.style.display = 'block';
+          /* Shared lazy-reveal (defined in main.js); src="" attr is falsy so it sets once. */
+          window.bswRevealFrame(iframe);
+        }
+      }
+
+      if (!skipHistory) {
+        var qs = '?tab=' + tab;
+        var jtab = new URLSearchParams(location.search).get('jtab');
+        if (tab === 'journal' && jtab) qs += '&jtab=' + jtab;
+        var wtab = new URLSearchParams(location.search).get('wtab');
+        if (tab === 'worship' && wtab) qs += '&wtab=' + wtab;
+        history.replaceState(null, '', qs);
+        localStorage.setItem('bsw_discipline_tab', tab);
+      }
+
+      if (!_inited[tab]) {
+        _inited[tab] = true;
+        if (tab === 'plans')       initPlans();
+        if (tab === 'devotionals') initDevotionals();
+        if (tab === 'journal')     initJournal();
+        if (tab === 'worship')     initWorship();
+        // memory: app.js calls initMemorizePage() automatically via #mem-list
+      }
+    }
+
+    document.querySelectorAll('.disc-tab[data-tab]').forEach(function (btn) {
+      btn.addEventListener('click', function () { activateTab(btn.getAttribute('data-tab')); });
+    });
+
+    // ── More ▾ dropdown ─────────────────────────────────────────────────────
+    var _moreMenu = document.getElementById('disc-more-menu');
+    var _moreBtn  = document.getElementById('disc-more-btn');
+
+    if (_moreBtn && _moreMenu) {
+      _moreBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = !_moreMenu.hidden;
+        _moreMenu.hidden = open;
+        _moreBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+      _moreMenu.querySelectorAll('.disc-more-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+          _moreMenu.hidden = true;
+          _moreBtn.setAttribute('aria-expanded', 'false');
+          activateTab(item.getAttribute('data-tab'));
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('#disc-more-btn, #disc-more-menu')) {
+          _moreMenu.hidden = true;
+          _moreBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      _moreMenu.addEventListener('keydown', function (e) {
+        var items = Array.from(_moreMenu.querySelectorAll('.disc-more-item'));
+        var idx   = items.indexOf(document.activeElement);
+        if (e.key === 'Escape') {
+          _moreMenu.hidden = true;
+          _moreBtn.setAttribute('aria-expanded', 'false');
+          _moreBtn.focus();
+          e.preventDefault();
+        } else if (e.key === 'ArrowDown') {
+          items[(idx + 1) % items.length].focus();
+          e.preventDefault();
+        } else if (e.key === 'ArrowUp') {
+          items[(idx - 1 + items.length) % items.length].focus();
+          e.preventDefault();
+        } else if (e.key === 'Home') {
+          items[0].focus();
+          e.preventDefault();
+        } else if (e.key === 'End') {
+          items[items.length - 1].focus();
+          e.preventDefault();
+        }
+      });
+    }
+
+    /* handle URL on load — see deferred activation at the end of the IIFE.
+       NOTE: the initial activateTab() call must run AFTER every tab's vars
+       (PLAN_IDS, DEVOT_BASE, …) and init functions are defined below, since
+       activateTab immediately calls the active tab's init*(). Calling it here
+       (before those `var`s are assigned) threw "PLAN_IDS is undefined" and
+       aborted the rest of the IIFE, breaking most tabs. */
+    var params  = new URLSearchParams(location.search);
+    var initTab = params.get('tab') || localStorage.getItem('bsw_discipline_tab') || 'plans';
+
+    /* ══════════════════════════ PLANS ══════════════════════════════════════ */
+    var PLANS_KEY  = 'bsw_plans';
+    var PLANS_ROOT = '../data/plans';
+    var READ_URL   = '../read/';
+    var PLAN_IDS   = ['bible-in-a-year','bible-in-a-year-chronological','mcheyne','nt-90-days','psalms-proverbs','gospels-30-days','heidelberg-weekly','wsc-quarterly'];
+
+    function getState()   { try { return JSON.parse(localStorage.getItem(PLANS_KEY)||'{}'); } catch(e) { return {}; } }
+    function saveState(s) { localStorage.setItem(PLANS_KEY, JSON.stringify(s)); }
+    function todayStr()   { return new Date().toISOString().slice(0,10); }
+    function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    function dayNum(state) {
+      if (!state||!state.startDate) return 1;
+      var start=new Date(state.startDate+'T00:00:00'), today=new Date();
+      today=new Date(today.getFullYear(),today.getMonth(),today.getDate());
+      return Math.floor((today-start)/86400000)+1;
+    }
+    function passageUrl(p) { return READ_URL+'?ref='+encodeURIComponent(p); }
+
+    function renderAllPlans(planDataList) {
+      var state=getState(), listEl=document.getElementById('plans-list');
+      listEl.innerHTML='';
+      planDataList.forEach(function(plan){ listEl.appendChild(renderPlanCard(plan,state[plan.id])); });
+    }
+
+    function renderPlanCard(plan,enrollment) {
+      var enrolled=!!(enrollment&&enrollment.startDate);
+      var card=document.createElement('div');
+      card.className='plan-card'+(enrolled?' plan-card--enrolled':'');
+      card.dataset.planId=plan.id;
+      var top=document.createElement('div'); top.className='plan-card__top';
+      var info=document.createElement('div'); info.className='plan-card__info';
+      info.innerHTML='<div class="plan-card__title">'+esc(plan.title)+'</div><div class="plan-card__meta">'+plan.total_days+' days</div><div class="plan-card__desc">'+esc(plan.description)+'</div>';
+      var actions=document.createElement('div'); actions.className='plan-card__actions';
+      if (!enrolled) {
+        var sb=document.createElement('button'); sb.className='plan-btn plan-btn--primary'; sb.textContent='Start Plan';
+        sb.addEventListener('click',function(){ enrollPlan(plan); }); actions.appendChild(sb);
+      } else {
+        var db=document.createElement('button'); db.className='plan-btn plan-btn--danger'; db.textContent='Unenroll';
+        db.addEventListener('click',function(){ unenrollPlan(plan.id); }); actions.appendChild(db);
+      }
+      top.appendChild(info); top.appendChild(actions); card.appendChild(top);
+      if (enrolled) card.appendChild(renderTodaySection(plan,enrollment));
+      var det=document.createElement('div'); det.className='plan-detail';
+      var tog=document.createElement('button'); tog.className='plan-detail-toggle';
+      tog.textContent=enrolled?'View full schedule ▾':'Preview schedule ▾';
+      var cal=document.createElement('div'); cal.className='plan-calendar';
+      tog.addEventListener('click',function(){
+        var open=cal.classList.toggle('plan-calendar--open');
+        tog.textContent=open?(enrolled?'Hide schedule ▴':'Hide preview ▴'):(enrolled?'View full schedule ▾':'Preview schedule ▾');
+        if (open&&!cal.dataset.built){buildCalendar(cal,plan,enrollment);cal.dataset.built='1';}
+      });
+      det.appendChild(tog); det.appendChild(cal); card.appendChild(det);
+      return card;
+    }
+
+    function renderTodaySection(plan,enrollment) {
+      var div=document.createElement('div'); div.className='plan-today';
+      var dn=dayNum(enrollment);
+      if (dn<1||dn>plan.total_days){
+        div.innerHTML='<div class="plan-today__label">Plan complete!</div><p class="plan-today__complete-msg">You\'ve finished '+esc(plan.title)+'. 🎉</p>';
+        return div;
+      }
+      var day=plan.days[dn-1], done=!!(enrollment.completed&&enrollment.completed[dn]);
+      var daysCompleted=Object.keys(enrollment.completed||{}).length;
+      var startDt=new Date(enrollment.startDate+'T00:00:00'), finishDt=new Date(startDt.getTime());
+      finishDt.setDate(finishDt.getDate()+plan.total_days-1);
+      var finishStr=finishDt.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});
+      div.innerHTML='<div class="plan-today__label">Today\'s Reading — Day '+dn+' of '+plan.total_days+'</div>'+
+        '<div class="plan-today__progress">'+progressBar(dn,plan.total_days)+' '+daysCompleted+' of '+plan.total_days+' days done &nbsp;·&nbsp; '+Math.round(dn/plan.total_days*100)+'% &nbsp;·&nbsp; Finish by '+finishStr+'</div>';
+      var passDiv=document.createElement('div'); passDiv.className='plan-today__passages';
+      if (day.passages&&day.passages.length) {
+        day.passages.forEach(function(p){
+          var a=document.createElement('a'); a.className='plan-today__passage'; a.href=passageUrl(p); a.textContent=p; passDiv.appendChild(a);
+        });
+      } else if (day.href) {
+        var a=document.createElement('a'); a.className='plan-today__passage'; a.href='../'+day.href; a.textContent=day.label||('Day '+day.day); passDiv.appendChild(a);
+        if (day.desc){var ds=document.createElement('span');ds.className='plan-today__desc';ds.textContent=day.desc;passDiv.appendChild(ds);}
+      }
+      div.appendChild(passDiv);
+      var doneDiv=document.createElement('div'); doneDiv.className='plan-today__done';
+      var markBtn=document.createElement('button');
+      markBtn.className='plan-btn'+(done?' plan-today__mark plan-today__mark--done':' plan-today__mark');
+      markBtn.textContent=done?'✓ Marked complete':'Mark day complete';
+      markBtn.addEventListener('click',function(){
+        var s=getState(); if(!s[plan.id])return; if(!s[plan.id].completed)s[plan.id].completed={};
+        if(done){delete s[plan.id].completed[dn];done=false;markBtn.className='plan-today__mark';markBtn.textContent='Mark day complete';
+          var oldCta=doneDiv.querySelector('.disc-cta-link');if(oldCta)oldCta.remove();}
+        else{s[plan.id].completed[dn]=true;done=true;markBtn.className='plan-today__mark plan-today__mark--done';markBtn.textContent='✓ Marked complete';
+          var cta=document.createElement('a');cta.className='disc-cta-link';cta.href='?tab=journal&jtab=reflections';cta.textContent='Write a reflection on today\'s reading →';doneDiv.appendChild(cta);}
+        saveState(s);
+      });
+      doneDiv.appendChild(markBtn); div.appendChild(doneDiv);
+      return div;
+    }
+
+    function buildCalendar(cal,plan,enrollment) {
+      var today=dayNum(enrollment||{}),comp=(enrollment&&enrollment.completed)||{};
+      var show=enrollment?plan.days:plan.days.slice(0,14);
+      show.forEach(function(day){
+        var dn=day.day,isToday=enrollment&&dn===today,isDone=!!comp[dn];
+        var row=document.createElement('div');
+        row.className='plan-calendar__row'+(isToday?' plan-calendar__row--today':'')+(isDone?' plan-calendar__row--done':'');
+        var passText=day.passages?day.passages.join(', '):(day.label||('Day '+dn))+(day.desc?' — '+day.desc:'');
+        row.innerHTML='<span class="plan-calendar__check">'+(isDone?'✓':'')+'</span>'+
+          '<span class="plan-calendar__day">'+esc(day.label||('Day '+dn))+'</span>'+
+          '<span class="plan-calendar__passages">'+esc(passText)+'</span>';
+        cal.appendChild(row);
+      });
+      if (!enrollment&&plan.days.length>14){
+        var more=document.createElement('p'); more.style.cssText='font-size:.78rem;color:var(--color-muted);margin-top:.4rem;';
+        more.textContent='… and '+(plan.days.length-14)+' more days. Start the plan to see the full schedule.'; cal.appendChild(more);
+      }
+    }
+
+    function progressBar(cur,total){
+      var pct=Math.round(cur/total*100);
+      return '<span style="display:inline-block;width:60px;height:6px;background:var(--color-border);border-radius:3px;vertical-align:middle;position:relative;">'+
+        '<span style="display:block;height:100%;width:'+pct+'%;background:var(--color-primary);border-radius:3px;"></span></span>';
+    }
+
+    function enrollPlan(plan){var s=getState();s[plan.id]={startDate:todayStr(),completed:{}};saveState(s);loadAndRenderPlans();}
+    function unenrollPlan(id){if(!confirm('Remove this reading plan and all progress?'))return;var s=getState();delete s[id];saveState(s);loadAndRenderPlans();}
+
+    function loadAndRenderPlans() {
+      var listEl=document.getElementById('plans-list');
+      if (listEl) listEl.innerHTML='<p class="plans-loading">Loading…</p>';
+      Promise.all(PLAN_IDS.map(function(id){
+        return fetch(PLANS_ROOT+'/'+id+'.json').then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+      })).then(function(plans){
+        var msg=document.getElementById('plans-list-msg');
+        if (msg) msg.setAttribute('hidden','');
+        renderAllPlans(plans.filter(Boolean));
+      });
+    }
+
+    function initPlans() { loadAndRenderPlans(); }
+
+    /* ══════════════════════════ DEVOTIONALS ════════════════════════════════ */
+    var DEVOT_BASE = '../data/devotionals/';
+    // Per-author/slot files + byline metadata. Mirrors DAILY_DEVOT_SOURCES in daily.js so
+    // the Discipline tab and the home-page devotional offer the same sources. To add an
+    // author: ship data/devotionals/<slug>.json and add an entry here.
+    var DEVOT_AUTHORS = {
+      'spurgeon-morning': { file:'spurgeon-morning.json', author:'Charles Spurgeon', work:'Morning by Morning' },
+      'spurgeon-evening': { file:'spurgeon-evening.json', author:'Charles Spurgeon', work:'Evening by Evening' },
+      'winslow-morning':  { file:'winslow-morning.json',  author:'Octavius Winslow', work:'Morning Thoughts' },
+      'winslow-evening':  { file:'winslow-evening.json',  author:'Octavius Winslow', work:'Evening Thoughts' }
+    };
+    // "Variety" rotates to a different author per day, per slot (matches daily.js).
+    var DEVOT_VARIETY = {
+      morning: ['winslow-morning', 'spurgeon-morning'],
+      evening: ['spurgeon-evening', 'winslow-evening']
+    };
+    // Dropdown collections. A `variety:true` collection rotates authors; otherwise `slug(p)`
+    // maps a period to a DEVOT_AUTHORS key. `periods` drives the period tabs (hidden if <2).
+    var DEVOT_COLLECTIONS = [
+      { id:'variety',  label:'Variety (rotating authors)', periods:['morning','evening'], variety:true },
+      { id:'spurgeon', label:'Spurgeon — Morning & Evening', periods:['morning','evening'],
+        slug:function(p){ return 'spurgeon-'+p; } },
+      { id:'winslow',  label:'Winslow — Morning & Evening', periods:['morning','evening'],
+        slug:function(p){ return 'winslow-'+p; } }
+    ];
+    var PERIOD_LABELS = { morning:'Morning', evening:'Evening', daily:'Daily' };
+    function periodLabel(p){ return PERIOD_LABELS[p] || (p ? p.charAt(0).toUpperCase()+p.slice(1) : ''); }
+
+    var _devotCache={}, _devotDate=new Date(), _devotPeriod='morning', _devotColl='variety', _devotLoadToken=0;
+    function currentColl(){
+      for (var i=0;i<DEVOT_COLLECTIONS.length;i++) if (DEVOT_COLLECTIONS[i].id===_devotColl) return DEVOT_COLLECTIONS[i];
+      return DEVOT_COLLECTIONS[0];
+    }
+    function dayOfYear(d){
+      return Math.floor((d - new Date(d.getFullYear(),0,0)) / 86400000);
+    }
+    // Fetch one author's entry for a date key → {slug, meta, entry} or null (gap/missing).
+    function devotFetchEntry(slug, key){
+      var meta=DEVOT_AUTHORS[slug];
+      if (!meta) return Promise.resolve(null);
+      if (_devotCache[slug]) return Promise.resolve(_devotCache[slug][key] ? {slug:slug,meta:meta,entry:_devotCache[slug][key]} : null);
+      return fetch(DEVOT_BASE+meta.file)
+        .then(function(r){ return r.ok?r.json():null; })
+        .then(function(data){ if(!data) return null; _devotCache[slug]=data; return data[key]?{slug:slug,meta:meta,entry:data[key]}:null; })
+        .catch(function(){ return null; });
+    }
+    // Walk the variety rotation (wrapping) until an author has an entry for the day.
+    function devotResolveVariety(period, key, doy){
+      var pool=DEVOT_VARIETY[period]||[];
+      if (!pool.length) return Promise.resolve(null);
+      var start=(doy-1+pool.length)%pool.length, order=[];
+      for (var i=0;i<pool.length;i++) order.push(pool[(start+i)%pool.length]);
+      var idx=0;
+      function tryNext(){ if(idx>=order.length) return null; return devotFetchEntry(order[idx++],key).then(function(r){ return r||tryNext(); }); }
+      return Promise.resolve().then(tryNext);
+    }
+
+    function pad2(n){return n<10?'0'+n:''+n;}
+    function dateToKey(d){return pad2(d.getMonth()+1)+'-'+pad2(d.getDate());}
+    function dateToValue(d){return d.getFullYear()+'-'+pad2(d.getMonth()+1)+'-'+pad2(d.getDate());}
+    function fmtDevotLabel(d,p){
+      var mo=['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var dw=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      var base=dw[d.getDay()]+', '+mo[d.getMonth()]+' '+d.getDate();
+      // Only append the period when the collection actually has more than one.
+      return currentColl().periods.length>1 ? base+' — '+periodLabel(p) : base;
+    }
+
+    function devotShowLoading(){
+      document.getElementById('devot-loading').hidden=false;
+      document.getElementById('devot-body').hidden=true;
+      document.getElementById('devot-empty').hidden=true;
+    }
+    function devotRender(entry,d,p,meta){
+      if (!entry){
+        document.getElementById('devot-loading').hidden=true;
+        document.getElementById('devot-body').hidden=true;
+        document.getElementById('devot-empty').hidden=false;
+        return;
+      }
+      document.getElementById('devot-date-label').textContent=fmtDevotLabel(d,p);
+      document.getElementById('devot-verse-text').textContent=entry.verse_text||'';
+      var cite=document.getElementById('devot-verse-ref');
+      cite.innerHTML=entry.verse_ref?'<a class="ref" data-ref="'+entry.verse_ref+'">'+entry.verse_ref+'</a>':'';
+      var paras=(entry.body||'').split(/\n+/).filter(function(x){return x.trim();});
+      document.getElementById('devot-text').innerHTML=paras.map(function(x){return '<p>'+x.trim()+'</p>';}).join('');
+      // Author byline — shown when we know the source (always for variety/multi-author).
+      var by=document.getElementById('devot-attribution');
+      if (by){
+        if (meta && meta.author){
+          by.textContent='— '+meta.author+(meta.work?', '+meta.work:'');
+          by.hidden=false;
+        } else { by.hidden=true; }
+      }
+      document.getElementById('devot-loading').hidden=true;
+      document.getElementById('devot-empty').hidden=true;
+      document.getElementById('devot-body').hidden=false;
+      if(window._bswWireRefs){window._bswWireRefs(document.getElementById('devot-text'));window._bswWireRefs(cite);}
+    }
+    function devotLoad(d,p){
+      devotShowLoading();
+      var coll=currentColl(), key=dateToKey(d);
+      // Capture the request so a slow fetch from a previous selection can't overwrite a newer one.
+      var token=(_devotLoadToken=(_devotLoadToken||0)+1);
+      var resolved = coll.variety
+        ? devotResolveVariety(p,key,dayOfYear(d))
+        : devotFetchEntry(coll.slug(p),key);
+      resolved.then(function(res){
+        if (token!==_devotLoadToken) return;             // a newer load superseded this one
+        devotRender(res&&res.entry||null, d, p, res&&res.meta);
+      }).catch(function(){ if(token===_devotLoadToken) devotRender(null,d,p); });
+    }
+    function devotSetDate(d){_devotDate=d;document.getElementById('devot-date-input').value=dateToValue(d);devotLoad(_devotDate,_devotPeriod);}
+    function devotSetPeriod(p){
+      _devotPeriod=p;
+      document.querySelectorAll('.devot-period-tab').forEach(function(btn){
+        var isThis=btn.getAttribute('data-period')===p;
+        btn.classList.toggle('is-active',isThis); btn.setAttribute('aria-selected',isThis?'true':'false');
+      });
+      devotLoad(_devotDate,_devotPeriod);
+    }
+
+    // Rebuild the period tabs to match the active collection; hidden when it has only one period.
+    function renderPeriodTabs(){
+      var coll=currentColl(), box=document.getElementById('devot-period-tabs');
+      box.innerHTML='';
+      if (coll.periods.length<2){ box.hidden=true; return; }
+      box.hidden=false;
+      coll.periods.forEach(function(p){
+        var btn=document.createElement('button');
+        btn.className='devot-period-tab'+(p===_devotPeriod?' is-active':'');
+        btn.id='devot-tab-'+p;
+        btn.setAttribute('data-period',p);
+        btn.setAttribute('role','tab');
+        btn.setAttribute('aria-selected',p===_devotPeriod?'true':'false');
+        btn.setAttribute('aria-controls','devot-card');
+        btn.textContent=periodLabel(p);
+        btn.addEventListener('click',function(){ devotSetPeriod(p); localStorage.setItem('bsw_devot_period',p); });
+        box.appendChild(btn);
+      });
+    }
+
+    function devotSetCollection(id){
+      var coll=null;
+      for (var i=0;i<DEVOT_COLLECTIONS.length;i++) if (DEVOT_COLLECTIONS[i].id===id) coll=DEVOT_COLLECTIONS[i];
+      if (!coll) coll=DEVOT_COLLECTIONS[0];
+      _devotColl=coll.id;
+      localStorage.setItem('bsw_devot_collection',_devotColl);
+      // Keep the current period only if the new collection offers it.
+      if (coll.periods.indexOf(_devotPeriod)===-1) _devotPeriod=coll.periods[0];
+      renderPeriodTabs();
+      devotLoad(_devotDate,_devotPeriod);
+    }
+
+    function initDevotionals(){
+      document.getElementById('devot-prev').addEventListener('click',function(){var d=new Date(_devotDate);d.setDate(d.getDate()-1);devotSetDate(d);});
+      document.getElementById('devot-next').addEventListener('click',function(){var d=new Date(_devotDate);d.setDate(d.getDate()+1);devotSetDate(d);});
+      document.getElementById('devot-today').addEventListener('click',function(){devotSetDate(new Date());});
+      document.getElementById('devot-date-input').addEventListener('change',function(){
+        var parts=this.value.split('-');
+        if(parts.length===3) devotSetDate(new Date(+parts[0],+parts[1]-1,+parts[2]));
+      });
+
+      // Populate the collection dropdown from the registry and restore the saved choice.
+      var sel=document.getElementById('devot-collection');
+      DEVOT_COLLECTIONS.forEach(function(c){
+        var o=document.createElement('option'); o.value=c.id; o.textContent=c.label; sel.appendChild(o);
+      });
+      var savedColl=localStorage.getItem('bsw_devot_collection');
+      if (savedColl && currentColl){
+        for (var i=0;i<DEVOT_COLLECTIONS.length;i++) if (DEVOT_COLLECTIONS[i].id===savedColl) _devotColl=savedColl;
+      }
+      sel.value=_devotColl;
+      sel.addEventListener('change',function(){ devotSetCollection(this.value); });
+
+      // Restore the saved period if the active collection supports it, else default to its first.
+      var savedPeriod=localStorage.getItem('bsw_devot_period');
+      if (savedPeriod && currentColl().periods.indexOf(savedPeriod)!==-1) _devotPeriod=savedPeriod;
+      else if (currentColl().periods.indexOf(_devotPeriod)===-1) _devotPeriod=currentColl().periods[0];
+
+      renderPeriodTabs();
+      devotSetDate(new Date());
+    }
+
+    /* ══════════════════════════ JOURNAL ════════════════════════════════════ */
+    function initJournal() {
+      // ── Journal sub-tab switching ──────────────────────────────────────
+      var prayersPanel=document.getElementById('journal-prayers-panel');
+      var reflPanel=document.getElementById('journal-reflections-panel');
+      var gratPanel=document.getElementById('journal-gratitude-panel');
+      var _gratInited=false;
+
+      function switchJournalTab(tab) {
+        prayersPanel.hidden=(tab!=='prayers');
+        reflPanel.hidden=(tab!=='reflections');
+        gratPanel.hidden=(tab!=='gratitude');
+        document.querySelectorAll('[data-jtab]').forEach(function(btn){
+          var isThis=btn.getAttribute('data-jtab')===tab;
+          btn.classList.toggle('journal-tab--active',isThis);
+          btn.setAttribute('aria-selected',isThis?'true':'false');
+        });
+        var qs='?tab=journal'; if(tab!=='prayers') qs+='&jtab='+tab;
+        history.replaceState(null,'',qs);
+        if (tab==='gratitude'&&!_gratInited){_gratInited=true;initGratitude();}
+      }
+      document.querySelectorAll('[data-jtab]').forEach(function(btn){
+        btn.addEventListener('click',function(){switchJournalTab(btn.getAttribute('data-jtab'));});
+      });
+      var jtab=new URLSearchParams(location.search).get('jtab');
+      if (jtab==='reflections') switchJournalTab('reflections');
+      else if (jtab==='gratitude') switchJournalTab('gratitude');
+
+      // ── Prayers IIFE ──────────────────────────────────────────────────
+      (function(){
+        var JOURNAL_KEY='bsw_journal', READ_URL='../read/';
+        var _editId=null, _searchQ='', _tagFilter=null, _statusFilter='all', _formTags=[], _searchTimer=null;
+        function load(){try{return JSON.parse(localStorage.getItem(JOURNAL_KEY)||'[]');}catch(e){return[];}}
+        function save(a){localStorage.setItem(JOURNAL_KEY,JSON.stringify(a));}
+        function fmt(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'short',month:'long',day:'numeric',year:'numeric'});}
+        function fmtS(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});}
+        function escJ(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+        function todayJ(){return new Date().toISOString().slice(0,10);}
+        function tagCategory(t){var l=t.toLowerCase();if(l.startsWith('people:')||l.startsWith('person:'))return'people';if(l.startsWith('place:')||l.startsWith('location:'))return'place';if(l.startsWith('topic:')||l.startsWith('theme:'))return'topic';return'default';}
+        function tagDisplay(t){var c=t.indexOf(':');return c!==-1?t.slice(c+1):t;}
+        function tagClass(t){return'journal-tag journal-tag--'+tagCategory(t);}
+        function renderTagChip(t,rm){
+          var cat=tagCategory(t),disp=escJ(tagDisplay(t));
+          var pre=cat!=='default'?'<span style="opacity:.6;font-size:.65rem">'+escJ(cat.slice(0,1).toUpperCase())+' </span>':'';
+          return '<span class="'+escJ(tagClass(t))+'" data-tag="'+escJ(t)+'">'+pre+disp+(rm?'<button class="journal-tag__rm" data-rm-tag="'+escJ(t)+'" type="button">×</button>':'')+'</span>';
+        }
+        function allTags(){var s={};load().forEach(function(e){(e.tags||[]).forEach(function(t){s[t]=true;});});return Object.keys(s).sort();}
+        function buildTagInput(existing){
+          _formTags=existing?existing.slice():[];
+          var wrap=document.createElement('div');wrap.className='journal-tag-input-wrap';
+          var inp=document.createElement('input');inp.className='journal-tag-bare-input';inp.type='text';inp.placeholder='Add tag…';
+          function refresh(){
+            wrap.querySelectorAll('.journal-tag').forEach(function(c){c.remove();});
+            _formTags.forEach(function(t){
+              var chip=document.createElement('span');chip.innerHTML=renderTagChip(t,true);
+              var inner=chip.firstChild;
+              inner.querySelector('[data-rm-tag]').addEventListener('click',function(ev){ev.stopPropagation();_formTags=_formTags.filter(function(x){return x!==t;});refresh();});
+              wrap.insertBefore(inner,inp);
+            });
+          }
+          refresh();
+          function addTag(raw){var t=raw.trim().toLowerCase().replace(/\s+/g,'-');if(!t||_formTags.indexOf(t)!==-1)return;_formTags.push(t);refresh();inp.value='';}
+          inp.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===','){e.preventDefault();addTag(inp.value);}if(e.key==='Backspace'&&!inp.value&&_formTags.length){_formTags.pop();refresh();}});
+          inp.addEventListener('blur',function(){if(inp.value.trim())addTag(inp.value);});
+          wrap.addEventListener('click',function(e){if(e.target===wrap)inp.focus();});
+          wrap.appendChild(inp);
+          var catRow=document.createElement('div');catRow.className='journal-tag-category-btns';
+          [['People','people:'],['Place','place:'],['Topic','topic:']].forEach(function(pair){
+            var b=document.createElement('button');b.className='journal-cat-btn';b.type='button';b.textContent='+ '+pair[0];
+            b.addEventListener('click',function(){inp.value=pair[1];inp.focus();});catRow.appendChild(b);
+          });
+          var cont=document.createElement('div');cont.appendChild(wrap);cont.appendChild(catRow);return cont;
+        }
+        function showForm(entry){
+          _editId=entry?entry.id:null;var isEdit=!!entry;
+          var fc=document.getElementById('journal-form-container');
+          var form=document.createElement('div');form.className='journal-form';
+          form.innerHTML='<h2>'+(isEdit?'Edit Prayer':'New Prayer')+'</h2>'+
+            '<div class="journal-field"><label for="j-date">Date</label><input class="journal-input" type="date" id="j-date" value="'+escJ(isEdit?entry.date:todayJ())+'" /></div>'+
+            '<div class="journal-field"><label for="j-title">Title <span>(optional)</span></label><input class="journal-input" type="text" id="j-title" placeholder="e.g. For John\'s recovery…" value="'+escJ(isEdit?(entry.title||''):'')+'\" maxlength="120" /></div>'+
+            '<div class="journal-field"><label for="j-body">Prayer / Reflection</label><textarea class="journal-textarea" id="j-body" placeholder="Write your prayer here…">'+escJ(isEdit?(entry.body||''):'')+'</textarea></div>'+
+            '<div class="journal-field"><label for="j-refs">Scripture References <span>(comma-separated)</span></label><input class="journal-input" type="text" id="j-refs" placeholder="e.g. John 3:16, Psalm 23:1" value="'+escJ(isEdit?((entry.refs||[]).join(', ')):'')+'\" /></div>'+
+            '<div class="journal-field" id="j-tags-field"><label>Tags <span>(Enter to add)</span></label></div>'+
+            '<div class="journal-form-actions"><button class="journal-btn" id="j-cancel" type="button">Cancel</button><button class="journal-btn journal-btn--primary" id="j-save" type="button">'+(isEdit?'Save changes':'Save prayer')+'</button></div>';
+          fc.innerHTML='';fc.appendChild(form);
+          form.querySelector('#j-tags-field').appendChild(buildTagInput(isEdit?(entry.tags||[]):[]));
+          form.querySelector('#j-cancel').addEventListener('click',hideForm);
+          form.querySelector('#j-save').addEventListener('click',saveEntry);
+          form.querySelector('#j-body').focus();
+        }
+        function hideForm(){_editId=null;_formTags=[];document.getElementById('journal-form-container').innerHTML='';}
+        function saveEntry(){
+          var bare=document.getElementById('j-tag-input');
+          if(bare&&bare.value.trim()){var t=bare.value.trim().toLowerCase().replace(/\s+/g,'-');if(t&&_formTags.indexOf(t)===-1)_formTags.push(t);}
+          var date=(document.getElementById('j-date').value||todayJ()).trim();
+          var title=document.getElementById('j-title').value.trim();
+          var body=document.getElementById('j-body').value.trim();
+          var refs=(document.getElementById('j-refs').value.trim()||'').split(',').map(function(r){return r.trim();}).filter(Boolean);
+          var tags=_formTags.slice();
+          if(!body&&!title){alert('Please add a title or prayer text.');return;}
+          var entries=load();
+          if(_editId){entries=entries.map(function(e){return e.id===_editId?Object.assign({},e,{date,title,body,refs,tags,modified:Date.now()}):e;});}
+          else{entries.unshift({id:Date.now(),date,title,body,refs,tags,updates:[],created:Date.now()});}
+          save(entries);hideForm();render();
+        }
+        function renderTagFilters(){
+          var el=document.getElementById('journal-tag-filters'),tags=allTags();
+          if(!tags.length){el.innerHTML='';return;}
+          var html=_tagFilter?'<button class="journal-filter-chip journal-filter-chip--clear" id="jf-clear">× Clear filter</button>':'';
+          tags.forEach(function(t){
+            var cat=tagCategory(t),dis=tagDisplay(t),pre=cat!=='default'?cat.slice(0,1).toUpperCase()+' · ':'';
+            html+='<button class="journal-filter-chip'+((_tagFilter===t)?' journal-filter-chip--active':'')+'" data-filter-tag="'+escJ(t)+'">'+escJ(pre+dis)+'</button>';
+          });
+          el.innerHTML=html;
+          el.querySelectorAll('[data-filter-tag]').forEach(function(btn){btn.addEventListener('click',function(){_tagFilter=(_tagFilter===btn.dataset.filterTag)?null:btn.dataset.filterTag;render();});});
+          var cl=el.querySelector('#jf-clear');if(cl)cl.addEventListener('click',function(){_tagFilter=null;render();});
+        }
+        function render(){
+          renderTagFilters();
+          var entries=load(),listEl=document.getElementById('journal-list'),countEl=document.getElementById('journal-count'),exportRow=document.getElementById('journal-export-row');
+          entries.sort(function(a,b){return b.date>a.date?1:(b.date<a.date?-1:(b.created||0)-(a.created||0));});
+          var q=_searchQ.toLowerCase();
+          var filtered=entries.filter(function(e){
+            if(_statusFilter==='answered'&&!e.answered)return false;
+            if(_statusFilter==='open'&&e.answered)return false;
+            if(_tagFilter&&(e.tags||[]).indexOf(_tagFilter)===-1)return false;
+            if(!q)return true;
+            return [e.title,e.body,(e.tags||[]).join(' '),(e.refs||[]).join(' '),(e.updates||[]).map(function(u){return u.body||'';}).join(' ')].join(' ').toLowerCase().includes(q);
+          });
+          countEl.textContent=filtered.length+' of '+entries.length+' prayers';
+          exportRow.hidden=entries.length===0;
+          if(!filtered.length){listEl.innerHTML='<div class="journal-empty">'+(entries.length?'No prayers match your filter.':'No prayers yet. Start by recording a prayer.')+'</div>';return;}
+          listEl.innerHTML='';filtered.forEach(function(entry){listEl.appendChild(buildEntryCard(entry));});
+        }
+        function buildEntryCard(entry){
+          var updates=entry.updates||[],hasUpdates=updates.length>0;
+          var card=document.createElement('div');
+          card.className='journal-entry'+(entry.answered?' journal-entry--answered':(hasUpdates?' journal-entry--has-updates':''));
+          var preview=(entry.body||'').replace(/\n/g,' ').slice(0,80)+(((entry.body||'').length>80)?'…':'');
+          var tagsHtml=(entry.tags||[]).length?'<div class="journal-entry-tags">'+(entry.tags||[]).map(function(t){return renderTagChip(t,false);}).join('')+'</div>':'';
+          var answeredBadge=entry.answered?'<span class="journal-answered-badge">✓ Answered</span>':'';
+          var updateBadge=(!entry.answered&&hasUpdates)?'<span class="journal-update-badge">'+updates.length+' update'+(updates.length!==1?'s':'')+'</span>':'';
+          var head=document.createElement('div');head.className='journal-entry__head';
+          head.innerHTML='<div class="journal-entry__meta"><div class="journal-entry__date">'+escJ(fmt(entry.date))+'</div><div class="journal-entry__title">'+escJ(entry.title||'Untitled')+'</div>'+(preview?'<div class="journal-entry__preview">'+escJ(preview)+'</div>':'')+tagsHtml+'</div>'+
+            '<div class="journal-entry__actions">'+answeredBadge+updateBadge+'<div class="journal-entry__btns">'+
+            '<button class="journal-entry__btn" data-action="answered" type="button">'+(entry.answered?'↩ Reopen':'✓ Answered')+'</button>'+
+            '<button class="journal-entry__btn" data-action="edit" type="button">Edit</button>'+
+            '<button class="journal-entry__btn journal-entry__btn--del" data-action="del" type="button">Delete</button></div></div>';
+          var body=document.createElement('div');body.className='journal-entry__body';body.appendChild(buildThread(entry));
+          head.addEventListener('click',function(e){
+            if(e.target.closest('[data-action]'))return;
+            if(e.target.closest('.journal-tag')){var t=e.target.closest('.journal-tag').dataset.tag;if(t){_tagFilter=(_tagFilter===t)?null:t;render();return;}}
+            body.classList.toggle('journal-entry__body--open');
+          });
+          head.querySelector('[data-action="answered"]').addEventListener('click',function(ev){
+            ev.stopPropagation();var all=load();var idx=all.findIndex(function(x){return x.id===entry.id;});if(idx===-1)return;
+            if(all[idx].answered){delete all[idx].answered;delete all[idx].answeredDate;}else{all[idx].answered=true;all[idx].answeredDate=todayJ();}
+            save(all);render();
+          });
+          head.querySelector('[data-action="edit"]').addEventListener('click',function(){var e=load().find(function(x){return x.id===entry.id;});if(e)showForm(e);});
+          head.querySelector('[data-action="del"]').addEventListener('click',function(){if(!confirm('Delete this prayer and all its updates?'))return;save(load().filter(function(x){return x.id!==entry.id;}));render();});
+          card.appendChild(head);card.appendChild(body);return card;
+        }
+        function buildThread(entry){
+          var updates=entry.updates||[],wrap=document.createElement('div');wrap.className='journal-thread';
+          var orig=document.createElement('div');orig.className='journal-thread-item journal-thread-item--original';
+          var refsHtml='';if((entry.refs||[]).length){refsHtml='<div class="journal-thread-refs">'+(entry.refs||[]).map(function(r){return'<a class="journal-thread-ref ref" data-ref="'+escJ(r)+'" href="'+escJ(READ_URL+'?ref='+encodeURIComponent(r))+'">'+escJ(r)+'</a>';}).join('')+'</div>';}
+          orig.innerHTML='<div class="journal-thread-header"><span class="journal-thread-label">Original Prayer</span><span class="journal-thread-date">'+escJ(fmtS(entry.date))+'</span></div><p class="journal-thread-text">'+escJ(entry.body||'')+'</p>'+refsHtml;
+          wrap.appendChild(orig);
+          updates.forEach(function(upd){wrap.appendChild(buildUpdateItem(entry.id,upd));});
+          var uArea=document.createElement('div');uArea.className='journal-update-area';
+          var addBtn=document.createElement('button');addBtn.className='journal-add-update-btn';addBtn.type='button';addBtn.textContent='+ Add update';
+          var uForm=document.createElement('div');uForm.className='journal-update-form';uForm.setAttribute('hidden','');
+          uForm.innerHTML='<input class="journal-input" type="date" id="jup-date-'+entry.id+'" value="'+todayJ()+'" style="margin-bottom:.4rem"/>'+
+            '<textarea class="journal-textarea" id="jup-body-'+entry.id+'" placeholder="What\'s the update? (answered prayer, progress, new request…)"></textarea>'+
+            '<div class="journal-form-actions"><button class="journal-btn" id="jup-cancel-'+entry.id+'" type="button">Cancel</button><button class="journal-btn journal-btn--primary" id="jup-save-'+entry.id+'" type="button">Save update</button></div>';
+          addBtn.addEventListener('click',function(){uForm.removeAttribute('hidden');addBtn.setAttribute('hidden','');uForm.querySelector('#jup-body-'+entry.id).focus();});
+          uForm.querySelector('#jup-cancel-'+entry.id).addEventListener('click',function(){uForm.setAttribute('hidden','');addBtn.removeAttribute('hidden');});
+          uForm.querySelector('#jup-save-'+entry.id).addEventListener('click',function(){
+            var date=(uForm.querySelector('#jup-date-'+entry.id).value||todayJ()).trim();
+            var body=uForm.querySelector('#jup-body-'+entry.id).value.trim();
+            if(!body){alert('Please write an update.');return;}
+            var all=load(),idx=all.findIndex(function(x){return x.id===entry.id;});if(idx===-1)return;
+            if(!all[idx].updates)all[idx].updates=[];
+            all[idx].updates.push({id:Date.now(),date,body,created:Date.now()});
+            save(all);render();
+          });
+          uArea.appendChild(addBtn);uArea.appendChild(uForm);wrap.appendChild(uArea);return wrap;
+        }
+        function buildUpdateItem(entryId,upd){
+          var item=document.createElement('div');item.className='journal-thread-item';
+          item.innerHTML='<div class="journal-thread-header"><span class="journal-thread-label" style="color:var(--color-accent)">Update</span><span class="journal-thread-date">'+escJ(fmtS(upd.date))+'</span><button class="journal-thread-del" title="Delete update" type="button">×</button></div><p class="journal-thread-text">'+escJ(upd.body||'')+'</p>';
+          item.querySelector('.journal-thread-del').addEventListener('click',function(){
+            if(!confirm('Delete this update?'))return;
+            var all=load(),entry=all.find(function(x){return x.id===entryId;});if(!entry)return;
+            entry.updates=(entry.updates||[]).filter(function(u){return u.id!==upd.id;});save(all);render();
+          });
+          return item;
+        }
+        // Export / Import
+        document.getElementById('journal-export-btn').addEventListener('click',function(){
+          var d1=load();if(!Object.keys(d1).length&&!d1.length){return;}
+          var blob=new Blob([JSON.stringify(load(),null,2)],{type:'application/json'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='bsw-journal-'+todayJ()+'.json';a.click();URL.revokeObjectURL(url);
+        });
+        document.getElementById('journal-import-btn').addEventListener('click',function(){document.getElementById('journal-import-file').click();});
+        document.getElementById('journal-import-file').addEventListener('change',function(e){
+          var file=e.target.files&&e.target.files[0];if(!file)return;this.value='';
+          var fr=new FileReader();fr.onload=function(ev){
+            var imp;try{imp=JSON.parse(ev.target.result);}catch(e){alert('Invalid JSON.');return;}
+            if(!Array.isArray(imp)){alert('Unexpected format.');return;}
+            var existing=load(),existIds={},added=0,skipped=0;
+            existing.forEach(function(x){existIds[x.id]=true;});
+            imp.forEach(function(x){if(x.id&&existIds[x.id])skipped++;else{existing.push(x);added++;}});
+            save(existing);render();
+            alert('Imported '+added+' entr'+(added===1?'y':'ies')+'.'+(skipped?' '+skipped+' duplicate'+(skipped!==1?'s':'')+' skipped.':''));
+          };fr.readAsText(file);
+        });
+        document.querySelectorAll('[data-status]').forEach(function(btn){
+          btn.addEventListener('click',function(){
+            _statusFilter=btn.getAttribute('data-status');
+            document.querySelectorAll('[data-status]').forEach(function(b){b.classList.toggle('journal-status-btn--active',b===btn);});
+            render();
+          });
+        });
+        document.getElementById('journal-search').addEventListener('input',function(){_searchQ=this.value.trim();clearTimeout(_searchTimer);_searchTimer=setTimeout(render,150);});
+        document.getElementById('journal-new-btn').addEventListener('click',function(){showForm(null);document.getElementById('journal-form-container').scrollIntoView({behavior:'smooth',block:'nearest'});});
+        render();
+      }());
+
+      // ── Reflections sub-IIFE ──────────────────────────────────────────
+      (function(){
+        var REFL_KEY='bsw_reflections',READ_URL='../read/';
+        var _rEditId=null,_rSearchQ='',_rTagFilter=null,_rFormTags=[],_rSearchTimer=null;
+        function loadR(){try{return JSON.parse(localStorage.getItem(REFL_KEY)||'[]');}catch(e){return[];}}
+        function saveR(a){localStorage.setItem(REFL_KEY,JSON.stringify(a));}
+        function todayR(){return new Date().toISOString().slice(0,10);}
+        function escR(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+        function fmtR(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'short',month:'long',day:'numeric',year:'numeric'});}
+        function allReflTags(){var s={};loadR().forEach(function(e){(e.tags||[]).forEach(function(t){s[t]=true;});});return Object.keys(s).sort();}
+        function buildReflTagInput(existing){
+          _rFormTags=existing?existing.slice():[];
+          var wrap=document.createElement('div');wrap.className='journal-tag-input-wrap';
+          var inp=document.createElement('input');inp.className='journal-tag-bare-input';inp.type='text';inp.placeholder='Add tag…';
+          function refresh(){
+            wrap.querySelectorAll('.journal-tag').forEach(function(c){c.remove();});
+            _rFormTags.forEach(function(t){
+              var chip=document.createElement('span');chip.innerHTML='<span class="journal-tag journal-tag--default" data-tag="'+escR(t)+'">'+escR(t)+'<button class="journal-tag__rm" data-rm-tag="'+escR(t)+'" type="button">×</button></span>';
+              var inner=chip.firstChild;inner.querySelector('[data-rm-tag]').addEventListener('click',function(ev){ev.stopPropagation();_rFormTags=_rFormTags.filter(function(x){return x!==t;});refresh();});
+              wrap.insertBefore(inner,inp);
+            });
+          }
+          refresh();
+          function addTag(raw){var t=raw.trim().toLowerCase().replace(/\s+/g,'-');if(!t||_rFormTags.indexOf(t)!==-1)return;_rFormTags.push(t);refresh();inp.value='';}
+          inp.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===','){e.preventDefault();addTag(inp.value);}if(e.key==='Backspace'&&!inp.value&&_rFormTags.length){_rFormTags.pop();refresh();}});
+          inp.addEventListener('blur',function(){if(inp.value.trim())addTag(inp.value);});
+          wrap.addEventListener('click',function(e){if(e.target===wrap)inp.focus();});
+          wrap.appendChild(inp);return wrap;
+        }
+        function showReflForm(entry){
+          _rEditId=entry?entry.id:null;var isEdit=!!entry;
+          var fc=document.getElementById('refl-form-container');
+          var form=document.createElement('div');form.className='journal-form';
+          form.innerHTML='<h2>'+(isEdit?'Edit Reflection':'New Reflection')+'</h2>'+
+            '<div style="display:flex;gap:.6rem;flex-wrap:wrap">'+
+              '<div class="journal-field" style="flex:1;min-width:140px"><label for="rf-date">Date</label><input class="journal-input" type="date" id="rf-date" value="'+escR(isEdit?entry.date:todayR())+'" /></div>'+
+              '<div class="journal-field" style="flex:2;min-width:200px"><label for="rf-passage">Passage <span>(optional)</span></label><input class="journal-input" type="text" id="rf-passage" placeholder="e.g. Genesis 22:14" value="'+escR(isEdit?(entry.passage||''):'')+'\" /></div>'+
+            '</div>'+
+            '<div class="journal-field"><label for="rf-title">Title <span>(optional)</span></label><input class="journal-input" type="text" id="rf-title" placeholder="A short heading…" value="'+escR(isEdit?(entry.title||''):'')+'\" maxlength="120" /></div>'+
+            '<div class="journal-field"><label for="rf-body">Reflection</label><textarea class="journal-textarea" id="rf-body" placeholder="What struck you? Questions raised? Connections? What is God teaching you?">'+escR(isEdit?(entry.body||''):'')+'</textarea></div>'+
+            '<div class="journal-field" id="rf-tags-field"><label>Tags <span>(Enter to add)</span></label></div>'+
+            '<div class="journal-form-actions"><button class="journal-btn" id="rf-cancel" type="button">Cancel</button><button class="journal-btn journal-btn--primary" id="rf-save" type="button">'+(isEdit?'Save changes':'Save reflection')+'</button></div>';
+          fc.innerHTML='';fc.appendChild(form);
+          form.querySelector('#rf-tags-field').appendChild(buildReflTagInput(isEdit?(entry.tags||[]):[]));
+          form.querySelector('#rf-cancel').addEventListener('click',hideReflForm);
+          form.querySelector('#rf-save').addEventListener('click',saveReflEntry);
+          form.querySelector('#rf-body').focus();
+        }
+        function hideReflForm(){_rEditId=null;_rFormTags=[];document.getElementById('refl-form-container').innerHTML='';}
+        function saveReflEntry(){
+          var bare=document.querySelector('#refl-form-container .journal-tag-bare-input');
+          if(bare&&bare.value.trim()){var t=bare.value.trim().toLowerCase().replace(/\s+/g,'-');if(t&&_rFormTags.indexOf(t)===-1)_rFormTags.push(t);}
+          var date=(document.getElementById('rf-date').value||todayR()).trim();
+          var passage=document.getElementById('rf-passage').value.trim();
+          var title=document.getElementById('rf-title').value.trim();
+          var body=document.getElementById('rf-body').value.trim();
+          var tags=_rFormTags.slice();
+          if(!body&&!title){alert('Please add a title or reflection text.');return;}
+          var entries=loadR();
+          if(_rEditId){entries=entries.map(function(e){return e.id===_rEditId?Object.assign({},e,{date,passage,title,body,tags,modified:Date.now()}):e;});}
+          else{entries.unshift({id:Date.now(),date,passage,title,body,tags,created:Date.now()});}
+          saveR(entries);hideReflForm();renderRefl();
+        }
+        function renderReflTagFilters(){
+          var el=document.getElementById('refl-tag-filters'),tags=allReflTags();
+          if(!tags.length){el.innerHTML='';return;}
+          var html=_rTagFilter?'<button class="journal-filter-chip journal-filter-chip--clear" id="rf-clear">× Clear</button>':'';
+          tags.forEach(function(t){html+='<button class="journal-filter-chip'+((_rTagFilter===t)?' journal-filter-chip--active':'')+'" data-rtag="'+escR(t)+'">'+escR(t)+'</button>';});
+          el.innerHTML=html;
+          el.querySelectorAll('[data-rtag]').forEach(function(btn){btn.addEventListener('click',function(){_rTagFilter=(_rTagFilter===btn.dataset.rtag)?null:btn.dataset.rtag;renderRefl();});});
+          var cl=el.querySelector('#rf-clear');if(cl)cl.addEventListener('click',function(){_rTagFilter=null;renderRefl();});
+        }
+        function renderRefl(){
+          renderReflTagFilters();
+          var entries=loadR(),listEl=document.getElementById('refl-list'),countEl=document.getElementById('refl-count');
+          entries.sort(function(a,b){return b.date>a.date?1:(b.date<a.date?-1:(b.created||0)-(a.created||0));});
+          var q=_rSearchQ.toLowerCase();
+          var filtered=entries.filter(function(e){if(_rTagFilter&&(e.tags||[]).indexOf(_rTagFilter)===-1)return false;if(!q)return true;return[e.title,e.body,e.passage,(e.tags||[]).join(' ')].join(' ').toLowerCase().includes(q);});
+          countEl.textContent=filtered.length+' of '+entries.length+' reflections';
+          if(!filtered.length){listEl.innerHTML='<div class="journal-empty">'+(entries.length?'No reflections match.':'No reflections yet.')+'</div>';return;}
+          listEl.innerHTML='';filtered.forEach(function(entry){listEl.appendChild(buildReflCard(entry));});
+        }
+        function buildReflCard(entry){
+          var card=document.createElement('div');card.className='journal-entry'+(entry.passage?' journal-entry--has-updates':'');
+          var preview=(entry.body||'').replace(/\n/g,' ').slice(0,90)+((entry.body||'').length>90?'…':'');
+          var tagsHtml=(entry.tags||[]).length?'<div class="journal-entry-tags">'+(entry.tags||[]).map(function(t){return'<span class="journal-tag journal-tag--topic" style="cursor:pointer" data-tag="'+escR(t)+'">'+escR(t)+'</span>';}).join('')+'</div>':'';
+          var head=document.createElement('div');head.className='journal-entry__head';
+          head.innerHTML='<div class="journal-entry__meta"><div class="journal-entry__date">'+escR(fmtR(entry.date))+'</div>'+(entry.title?'<div class="journal-entry__title">'+escR(entry.title)+'</div>':'')+(preview?'<div class="journal-entry__preview">'+escR(preview)+'</div>':'')+(entry.passage?'<div style="font-size:.78rem;color:var(--color-primary);font-weight:600;margin-top:.12rem">'+escR(entry.passage)+'</div>':'')+tagsHtml+'</div>'+
+            '<div class="journal-entry__btns"><button class="journal-entry__btn" data-action="edit" type="button">Edit</button><button class="journal-entry__btn journal-entry__btn--del" data-action="del" type="button">Delete</button></div>';
+          var body=document.createElement('div');body.className='journal-entry__body';
+          body.innerHTML=(entry.passage?'<p style="margin-bottom:.5rem"><a class="ref" data-ref="'+escR(entry.passage)+'" href="'+escR(READ_URL+'?ref='+encodeURIComponent(entry.passage))+'" style="color:var(--color-primary);font-weight:600;text-decoration:none">'+escR(entry.passage)+'</a></p>':'')+'<p style="font-family:Georgia,serif;font-size:.92rem;line-height:1.7;color:var(--color-text);white-space:pre-wrap;margin:0">'+escR(entry.body||'')+'</p>';
+          head.addEventListener('click',function(e){
+            if(e.target.closest('[data-action]'))return;
+            var chip=e.target.closest('[data-tag]');if(chip){_rTagFilter=(_rTagFilter===chip.dataset.tag)?null:chip.dataset.tag;renderRefl();return;}
+            body.classList.toggle('journal-entry__body--open');
+          });
+          head.querySelector('[data-action="edit"]').addEventListener('click',function(){var e=loadR().find(function(x){return x.id===entry.id;});if(e)showReflForm(e);});
+          head.querySelector('[data-action="del"]').addEventListener('click',function(){if(!confirm('Delete this reflection?'))return;saveR(loadR().filter(function(x){return x.id!==entry.id;}));renderRefl();});
+          card.appendChild(head);card.appendChild(body);return card;
+        }
+        document.getElementById('refl-new-btn').addEventListener('click',function(){showReflForm(null);});
+        document.getElementById('refl-search').addEventListener('input',function(){_rSearchQ=this.value.trim();clearTimeout(_rSearchTimer);_rSearchTimer=setTimeout(renderRefl,150);});
+        renderRefl();
+      }());
+    } // end initJournal
+
+    /* ══════════════════════════ WORSHIP ════════════════════════════════════ */
+    function initWorship() {
+      // Worship sub-tab switching with URL + localStorage persistence (D-I)
+      function switchWtab(tab, skipUrl) {
+        document.getElementById('worship-sermons-panel').hidden=(tab!=='sermons');
+        document.getElementById('worship-fasting-panel').hidden=(tab!=='fasting');
+        document.querySelectorAll('[data-wtab]').forEach(function(b){
+          b.classList.toggle('worship-tab--active',b.getAttribute('data-wtab')===tab);
+          b.setAttribute('aria-selected',b.getAttribute('data-wtab')===tab?'true':'false');
+        });
+        localStorage.setItem('bsw_worship_wtab', tab);
+        if (!skipUrl) history.replaceState(null,'','?tab=worship&wtab='+tab);
+      }
+      document.querySelectorAll('[data-wtab]').forEach(function(btn){
+        btn.addEventListener('click',function(){switchWtab(btn.getAttribute('data-wtab'));});
+      });
+      // Restore persisted sub-tab on init
+      var savedWtab = new URLSearchParams(location.search).get('wtab') || localStorage.getItem('bsw_worship_wtab') || 'sermons';
+      switchWtab(savedWtab, true);
+
+      var WORSHIP_KEY='bsw_worship', FASTING_KEY='bsw_fasting', READ_URL='../read/';
+      function loadW(){try{return JSON.parse(localStorage.getItem(WORSHIP_KEY)||'[]');}catch(e){return[];}}
+      function saveW(a){localStorage.setItem(WORSHIP_KEY,JSON.stringify(a));}
+      function loadF(){try{return JSON.parse(localStorage.getItem(FASTING_KEY)||'[]');}catch(e){return[];}}
+      function saveF(a){localStorage.setItem(FASTING_KEY,JSON.stringify(a));}
+      function todayW(){return new Date().toISOString().slice(0,10);}
+      function escW(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      function fmtW(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'});}
+      function fmtWS(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});}
+
+      var _wEditId=null, _wSearchQ='', _wEditFastId=null, _wSearchTimer=null;
+
+      function showSermonForm(entry){
+        _wEditId=entry?entry.id:null;var isEdit=!!entry;
+        var fc=document.getElementById('worship-form-container');
+        var form=document.createElement('div');form.className='worship-form';
+        form.innerHTML='<h2>'+(isEdit?'Edit Entry':'New Sermon Entry')+'</h2>'+
+          '<div class="worship-row"><div class="worship-field"><label for="ws-date">Date</label><input class="worship-input" type="date" id="ws-date" value="'+escW(isEdit?entry.date:todayW())+'" /></div><div class="worship-field"><label for="ws-church">Church <span>(optional)</span></label><input class="worship-input" type="text" id="ws-church" placeholder="e.g. Grace Church" value="'+escW(isEdit?(entry.church||''):'')+'\" /></div></div>'+
+          '<div class="worship-row"><div class="worship-field"><label for="ws-preacher">Preacher <span>(optional)</span></label><input class="worship-input" type="text" id="ws-preacher" placeholder="e.g. John Smith" value="'+escW(isEdit?(entry.preacher||''):'')+'\" /></div><div class="worship-field"><label for="ws-passage">Passage <span>(optional)</span></label><input class="worship-input" type="text" id="ws-passage" placeholder="e.g. Romans 8:28" value="'+escW(isEdit?(entry.passage||''):'')+'\" /></div></div>'+
+          '<div class="worship-field"><label for="ws-title">Sermon Title <span>(optional)</span></label><input class="worship-input" type="text" id="ws-title" placeholder="e.g. The Golden Chain" value="'+escW(isEdit?(entry.title||''):'')+'\" /></div>'+
+          '<div class="worship-checkbox-row"><label class="worship-checkbox-label"><input type="checkbox" id="ws-attended" '+((!isEdit||entry.attended!==false)?'checked':'')+' /> Attended</label><label class="worship-checkbox-label"><input type="checkbox" id="ws-communion" '+((isEdit&&entry.communion)?'checked':'')+' /> Communion</label></div>'+
+          '<div class="worship-field"><label for="ws-notes">Sermon Notes</label><textarea class="worship-textarea" id="ws-notes" placeholder="Main points, observations…">'+escW(isEdit?(entry.notes||''):'')+'</textarea></div>'+
+          '<div class="worship-field"><label for="ws-takeaways">Key Takeaways <span>(optional)</span></label><textarea class="worship-textarea" style="min-height:60px" id="ws-takeaways" placeholder="What will you carry into the week?">'+escW(isEdit?(entry.takeaways||''):'')+'</textarea></div>'+
+          '<div class="worship-form-actions"><button class="worship-btn" id="ws-cancel" type="button">Cancel</button><button class="worship-btn worship-btn--primary" id="ws-save" type="button">'+(isEdit?'Save changes':'Save entry')+'</button></div>';
+        fc.innerHTML='';fc.appendChild(form);
+        form.querySelector('#ws-cancel').addEventListener('click',hideSermonForm);
+        form.querySelector('#ws-save').addEventListener('click',saveSermonEntry);
+        form.querySelector('#ws-notes').focus();
+      }
+      function hideSermonForm(){_wEditId=null;document.getElementById('worship-form-container').innerHTML='';}
+      function saveSermonEntry(){
+        var date=(document.getElementById('ws-date').value||todayW()).trim();
+        var church=document.getElementById('ws-church').value.trim();
+        var preacher=document.getElementById('ws-preacher').value.trim();
+        var passage=document.getElementById('ws-passage').value.trim();
+        var title=document.getElementById('ws-title').value.trim();
+        var attended=document.getElementById('ws-attended').checked;
+        var communion=document.getElementById('ws-communion').checked;
+        var notes=document.getElementById('ws-notes').value.trim();
+        var takeaways=document.getElementById('ws-takeaways').value.trim();
+        if(!notes&&!title){alert('Please add a sermon title or notes.');return;}
+        var entries=loadW();
+        if(_wEditId){entries=entries.map(function(e){return e.id===_wEditId?Object.assign({},e,{date,church,preacher,passage,title,attended,communion,notes,takeaways,modified:Date.now()}):e;});}
+        else{entries.unshift({id:Date.now(),date,church,preacher,passage,title,attended,communion,notes,takeaways,created:Date.now()});}
+        var isNew = !_wEditId;
+        saveW(entries);hideSermonForm();renderSermons();
+        // D-K: prompt reflection after a new sermon entry
+        if (isNew) {
+          var fc2 = document.getElementById('worship-form-container');
+          var cta = document.createElement('p'); cta.className = 'worship-post-cta';
+          cta.innerHTML = 'Sermon logged. <a href="?tab=journal&amp;jtab=reflections">Write a reflection →</a>';
+          fc2.appendChild(cta);
+          setTimeout(function () { if (fc2.contains(cta)) cta.remove(); }, 6000);
+        }
+      }
+      function renderSermons(){
+        var entries=loadW(),listEl=document.getElementById('worship-list'),countEl=document.getElementById('worship-count');
+        entries.sort(function(a,b){return b.date>a.date?1:-1;});
+        var q=_wSearchQ.toLowerCase();
+        var filtered=q?entries.filter(function(e){return[e.title,e.church,e.preacher,e.passage,e.notes,e.takeaways].join(' ').toLowerCase().includes(q);}):entries;
+        countEl.textContent=filtered.length+' of '+entries.length+' entries';
+        if(!filtered.length){listEl.innerHTML='<div class="worship-empty">'+(entries.length?'No entries match.':'No sermon entries yet.')+'</div>';return;}
+        listEl.innerHTML='';filtered.forEach(function(entry){listEl.appendChild(buildSermonCard(entry));});
+      }
+      function buildSermonCard(entry){
+        var card=document.createElement('div');card.className='worship-entry';
+        var sub=[];if(entry.church)sub.push(entry.church);if(entry.preacher)sub.push(entry.preacher);
+        var head=document.createElement('div');head.className='worship-entry__head';
+        head.innerHTML='<div class="worship-entry__meta"><div class="worship-entry__date">'+escW(fmtW(entry.date))+'</div><div class="worship-entry__title">'+escW(entry.title||'Sermon Entry')+'</div>'+(sub.length?'<div class="worship-entry__sub">'+escW(sub.join(' · '))+'</div>':'')+
+          '<div class="worship-badges">'+(entry.passage?'<span class="worship-badge">'+escW(entry.passage)+'</span>':'')+(entry.attended?'<span class="worship-badge worship-badge--green">Attended</span>':'')+(entry.communion?'<span class="worship-badge worship-badge--green">Communion</span>':'')+'</div></div>'+
+          '<div class="worship-entry__btns"><button class="worship-btn worship-btn--sm" data-action="edit" type="button">Edit</button><button class="worship-btn worship-btn--sm worship-btn--del" data-action="del" type="button">Delete</button></div>';
+        var body=document.createElement('div');body.className='worship-entry__body';
+        var bh='';
+        if(entry.passage)bh+='<div class="worship-body-section"><div class="worship-body-label">Passage</div><a class="worship-passage-link ref" data-ref="'+escW(entry.passage)+'" href="'+escW(READ_URL+'?ref='+encodeURIComponent(entry.passage))+'">'+escW(entry.passage)+'</a></div>';
+        if(entry.notes)bh+='<div class="worship-body-section"><div class="worship-body-label">Sermon Notes</div><p class="worship-body-text">'+escW(entry.notes)+'</p></div>';
+        if(entry.takeaways)bh+='<div class="worship-body-section"><div class="worship-body-label">Key Takeaways</div><p class="worship-body-text">'+escW(entry.takeaways)+'</p></div>';
+        body.innerHTML=bh;
+        head.addEventListener('click',function(e){if(e.target.closest('[data-action]'))return;body.classList.toggle('worship-entry__body--open');});
+        head.querySelector('[data-action="edit"]').addEventListener('click',function(){var e=loadW().find(function(x){return x.id===entry.id;});if(e)showSermonForm(e);});
+        head.querySelector('[data-action="del"]').addEventListener('click',function(){if(!confirm('Delete this sermon entry?'))return;saveW(loadW().filter(function(x){return x.id!==entry.id;}));renderSermons();});
+        card.appendChild(head);card.appendChild(body);return card;
+      }
+
+      // Fasting
+      function showFastForm(entry){
+        _wEditFastId=entry?entry.id:null;var isEdit=!!entry;
+        var fc=document.getElementById('fast-form-container');
+        var form=document.createElement('div');form.className='worship-form';
+        form.innerHTML='<h2>'+(isEdit?'Edit Fast':'Log a Fast')+'</h2>'+
+          '<div class="worship-row"><div class="worship-field"><label for="fs-date">Date</label><input class="worship-input" type="date" id="fs-date" value="'+escW(isEdit?entry.date:todayW())+'" /></div>'+
+          '<div class="worship-field"><label for="fs-type">Type</label><select class="worship-input" id="fs-type">'+
+            ['full','partial','liquid'].map(function(t){return'<option value="'+t+'"'+((isEdit&&entry.type===t)||(!isEdit&&t==='full')?' selected':'')+'>'+{full:'Full fast',partial:'Partial fast',liquid:'Liquid fast'}[t]+'</option>';}).join('')+
+          '</select></div><div class="worship-field"><label for="fs-hours">Duration <span>(hours)</span></label><input class="worship-input" type="number" id="fs-hours" min="0" max="168" value="'+escW(isEdit?(entry.hours||0):24)+'" /></div></div>'+
+          '<div class="worship-field"><label for="fs-notes">Notes <span>(optional)</span></label><textarea class="worship-textarea" style="min-height:72px" id="fs-notes" placeholder="Purpose, Scripture, how it went…">'+escW(isEdit?(entry.notes||''):'')+'</textarea></div>'+
+          '<div class="worship-form-actions"><button class="worship-btn" id="fs-cancel" type="button">Cancel</button><button class="worship-btn worship-btn--primary" id="fs-save" type="button">'+(isEdit?'Save changes':'Save fast')+'</button></div>';
+        fc.innerHTML='';fc.appendChild(form);
+        form.querySelector('#fs-cancel').addEventListener('click',function(){_wEditFastId=null;fc.innerHTML='';});
+        form.querySelector('#fs-save').addEventListener('click',function(){
+          var date=(document.getElementById('fs-date').value||todayW()).trim();
+          var type=document.getElementById('fs-type').value;
+          var hours=parseInt(document.getElementById('fs-hours').value,10)||0;
+          var notes=document.getElementById('fs-notes').value.trim();
+          var fasts=loadF();
+          if(_wEditFastId){fasts=fasts.map(function(e){return e.id===_wEditFastId?Object.assign({},e,{date,type,hours,notes,modified:Date.now()}):e;});}
+          else{fasts.unshift({id:Date.now(),date,type,hours,notes,created:Date.now()});}
+          saveF(fasts);_wEditFastId=null;fc.innerHTML='';renderFasts();
+        });
+      }
+      function renderFasts(){
+        var fasts=loadF(),listEl=document.getElementById('fast-list'),countEl=document.getElementById('fast-count');
+        fasts.sort(function(a,b){return b.date>a.date?1:-1;});
+        countEl.textContent=fasts.length+' fast'+(fasts.length!==1?'s':'')+' logged';
+        if(!fasts.length){listEl.innerHTML='<div class="worship-empty">No fasts logged yet.</div>';return;}
+        listEl.innerHTML='';
+        fasts.forEach(function(fast){
+          var card=document.createElement('div');card.className='worship-entry';
+          var typeLabel={full:'Full fast',partial:'Partial fast',liquid:'Liquid fast'}[fast.type]||fast.type;
+          var dur=fast.hours>0?fast.hours+'h':'All day';
+          var head=document.createElement('div');head.className='worship-entry__head';
+          head.innerHTML='<div class="worship-entry__meta"><div class="worship-entry__date">'+escW(fmtW(fast.date))+'</div><div class="worship-entry__title"><span class="worship-badge fast-type-'+escW(fast.type)+'">'+escW(typeLabel)+'</span> <span style="font-size:.85rem;color:var(--color-muted);font-weight:400">'+escW(dur)+'</span></div>'+(fast.notes?'<div class="worship-entry__sub" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:300px">'+escW(fast.notes.slice(0,80))+'</div>':'')+'</div>'+
+            '<div class="worship-entry__btns"><button class="worship-btn worship-btn--sm" data-action="edit" type="button">Edit</button><button class="worship-btn worship-btn--sm worship-btn--del" data-action="del" type="button">Delete</button></div>';
+          var body=document.createElement('div');body.className='worship-entry__body';
+          if(fast.notes)body.innerHTML='<div class="worship-body-section"><div class="worship-body-label">Notes</div><p class="worship-body-text">'+escW(fast.notes)+'</p></div>';
+          head.addEventListener('click',function(e){if(e.target.closest('[data-action]'))return;if(fast.notes)body.classList.toggle('worship-entry__body--open');});
+          head.querySelector('[data-action="edit"]').addEventListener('click',function(){var e=loadF().find(function(x){return x.id===fast.id;});if(e)showFastForm(e);});
+          head.querySelector('[data-action="del"]').addEventListener('click',function(){if(!confirm('Delete this fast?'))return;saveF(loadF().filter(function(x){return x.id!==fast.id;}));renderFasts();});
+          card.appendChild(head);card.appendChild(body);listEl.appendChild(card);
+        });
+      }
+
+      document.getElementById('worship-new-btn').addEventListener('click',function(){showSermonForm(null);});
+      document.getElementById('worship-search').addEventListener('input',function(){_wSearchQ=this.value.trim();clearTimeout(_wSearchTimer);_wSearchTimer=setTimeout(renderSermons,150);});
+      document.getElementById('fast-new-btn').addEventListener('click',function(){showFastForm(null);});
+      renderSermons(); renderFasts();
+    } // end initWorship
+
+    /* ══════════════════════════ GRATITUDE ══════════════════════════════════ */
+    function initGratitude() {
+      var GRAT_KEY='bsw_gratitude';
+      var _gEditId=null, _gSearchQ='', _gFormTags=[], _gSearchTimer=null;
+      function loadG(){try{return JSON.parse(localStorage.getItem(GRAT_KEY)||'[]');}catch(e){return[];}}
+      function saveG(a){localStorage.setItem(GRAT_KEY,JSON.stringify(a));}
+      function todayG(){return new Date().toISOString().slice(0,10);}
+      function escG(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      function fmtG(s){if(!s)return'';var d=new Date(s+'T00:00:00');return d.toLocaleDateString(undefined,{weekday:'short',month:'long',day:'numeric',year:'numeric'});}
+
+      function buildGTagInput(existing){
+        _gFormTags=existing?existing.slice():[];
+        var wrap=document.createElement('div');wrap.className='journal-tag-input-wrap';
+        var inp=document.createElement('input');inp.className='journal-tag-bare-input';inp.type='text';inp.placeholder='Add tag…';
+        function refresh(){
+          wrap.querySelectorAll('.journal-tag').forEach(function(c){c.remove();});
+          _gFormTags.forEach(function(t){
+            var chip=document.createElement('span');
+            chip.innerHTML='<span class="journal-tag journal-tag--default" data-tag="'+escG(t)+'">'+escG(t)+'<button class="journal-tag__rm" data-rm-tag="'+escG(t)+'" type="button">×</button></span>';
+            var inner=chip.firstChild;
+            inner.querySelector('[data-rm-tag]').addEventListener('click',function(ev){ev.stopPropagation();_gFormTags=_gFormTags.filter(function(x){return x!==t;});refresh();});
+            wrap.insertBefore(inner,inp);
+          });
+        }
+        refresh();
+        function addTag(raw){var t=raw.trim().toLowerCase().replace(/\s+/g,'-');if(!t||_gFormTags.indexOf(t)!==-1)return;_gFormTags.push(t);refresh();inp.value='';}
+        inp.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===','){e.preventDefault();addTag(inp.value);}if(e.key==='Backspace'&&!inp.value&&_gFormTags.length){_gFormTags.pop();refresh();}});
+        inp.addEventListener('blur',function(){if(inp.value.trim())addTag(inp.value);});
+        wrap.addEventListener('click',function(e){if(e.target===wrap)inp.focus();});
+        wrap.appendChild(inp);return wrap;
+      }
+
+      function showGratForm(entry){
+        _gEditId=entry?entry.id:null;var isEdit=!!entry;
+        var fc=document.getElementById('grat-form-container');
+        var form=document.createElement('div');form.className='journal-form';
+        form.innerHTML='<h2>'+(isEdit?'Edit Entry':'New Gratitude Entry')+'</h2>'+
+          '<div class="journal-field"><label for="g-date">Date</label><input class="journal-input" type="date" id="g-date" value="'+escG(isEdit?entry.date:todayG())+'" /></div>'+
+          '<div class="journal-field"><label for="g-text">What are you grateful for?</label><textarea class="journal-textarea" id="g-text" placeholder="I am grateful for…">'+escG(isEdit?(entry.text||''):'')+'</textarea></div>'+
+          '<div class="journal-field" id="g-tags-field"><label>Tags <span>(Enter to add)</span></label></div>'+
+          '<div class="journal-form-actions"><button class="journal-btn" id="g-cancel" type="button">Cancel</button><button class="journal-btn journal-btn--primary" id="g-save" type="button">'+(isEdit?'Save changes':'Save entry')+'</button></div>';
+        fc.innerHTML='';fc.appendChild(form);
+        form.querySelector('#g-tags-field').appendChild(buildGTagInput(isEdit?(entry.tags||[]):[]));
+        form.querySelector('#g-cancel').addEventListener('click',hideGratForm);
+        form.querySelector('#g-save').addEventListener('click',saveGratEntry);
+        form.querySelector('#g-text').focus();
+      }
+      function hideGratForm(){_gEditId=null;_gFormTags=[];document.getElementById('grat-form-container').innerHTML='';}
+      function saveGratEntry(){
+        var bare=document.querySelector('#grat-form-container .journal-tag-bare-input');
+        if(bare&&bare.value.trim()){var t=bare.value.trim().toLowerCase().replace(/\s+/g,'-');if(t&&_gFormTags.indexOf(t)===-1)_gFormTags.push(t);}
+        var date=(document.getElementById('g-date').value||todayG()).trim();
+        var text=document.getElementById('g-text').value.trim();
+        var tags=_gFormTags.slice();
+        if(!text){alert('Please write what you are grateful for.');return;}
+        var entries=loadG();
+        if(_gEditId){entries=entries.map(function(e){return e.id===_gEditId?Object.assign({},e,{date,text,tags,modified:Date.now()}):e;});}
+        else{entries.unshift({id:Date.now(),date,text,tags,created:Date.now()});}
+        saveG(entries);hideGratForm();renderGrat();
+      }
+
+      function renderGrat(){
+        var entries=loadG(),listEl=document.getElementById('grat-list'),countEl=document.getElementById('grat-count'),exportRow=document.getElementById('grat-export-row');
+        entries.sort(function(a,b){return b.date>a.date?1:(b.date<a.date?-1:(b.created||0)-(a.created||0));});
+        var q=_gSearchQ.toLowerCase();
+        var filtered=q?entries.filter(function(e){return[e.text,(e.tags||[]).join(' ')].join(' ').toLowerCase().includes(q);}):entries;
+        countEl.textContent=filtered.length+' of '+entries.length+' entries';
+        exportRow.hidden=entries.length===0;
+        if(!filtered.length){listEl.innerHTML='<div class="journal-empty">'+(entries.length?'No entries match.':'No gratitude entries yet. Start by recording something you\'re thankful for.')+'</div>';return;}
+        listEl.innerHTML='';
+        filtered.forEach(function(entry){
+          var card=document.createElement('div');card.className='journal-entry';
+          var preview=(entry.text||'').replace(/\n/g,' ').slice(0,90)+((entry.text||'').length>90?'…':'');
+          var tagsHtml=(entry.tags||[]).length?'<div class="journal-entry-tags">'+(entry.tags||[]).map(function(t){return'<span class="journal-tag journal-tag--default">'+escG(t)+'</span>';}).join('')+'</div>':'';
+          var head=document.createElement('div');head.className='journal-entry__head';
+          head.innerHTML='<div class="journal-entry__meta"><div class="journal-entry__date">'+escG(fmtG(entry.date))+'</div>'+(preview?'<div class="journal-entry__preview">'+escG(preview)+'</div>':'')+tagsHtml+'</div>'+
+            '<div class="journal-entry__btns"><button class="journal-entry__btn" data-action="edit" type="button">Edit</button><button class="journal-entry__btn journal-entry__btn--del" data-action="del" type="button">Delete</button></div>';
+          var body=document.createElement('div');body.className='journal-entry__body';
+          body.innerHTML='<p style="font-family:Georgia,serif;font-size:.92rem;line-height:1.7;white-space:pre-wrap;margin:0">'+escG(entry.text||'')+'</p>';
+          head.addEventListener('click',function(e){if(e.target.closest('[data-action]'))return;body.classList.toggle('journal-entry__body--open');});
+          head.querySelector('[data-action="edit"]').addEventListener('click',function(){var e=loadG().find(function(x){return x.id===entry.id;});if(e)showGratForm(e);});
+          head.querySelector('[data-action="del"]').addEventListener('click',function(){if(!confirm('Delete this entry?'))return;saveG(loadG().filter(function(x){return x.id!==entry.id;}));renderGrat();});
+          card.appendChild(head);card.appendChild(body);listEl.appendChild(card);
+        });
+      }
+
+      document.getElementById('grat-new-btn').addEventListener('click',function(){showGratForm(null);});
+      document.getElementById('grat-search').addEventListener('input',function(){_gSearchQ=this.value.trim();clearTimeout(_gSearchTimer);_gSearchTimer=setTimeout(renderGrat,150);});
+      document.getElementById('grat-export-btn').addEventListener('click',function(){
+        var d=loadG();if(!d.length)return;
+        var blob=new Blob([JSON.stringify(d,null,2)],{type:'application/json'});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download='bsw-gratitude-'+todayG()+'.json';a.click();URL.revokeObjectURL(url);
+      });
+      document.getElementById('grat-import-btn').addEventListener('click',function(){document.getElementById('grat-import-file').click();});
+      document.getElementById('grat-import-file').addEventListener('change',function(e){
+        var file=e.target.files&&e.target.files[0];if(!file)return;this.value='';
+        var fr=new FileReader();fr.onload=function(ev){
+          var imp;try{imp=JSON.parse(ev.target.result);}catch(e){alert('Invalid JSON.');return;}
+          if(!Array.isArray(imp)){alert('Unexpected format.');return;}
+          var existing=loadG(),existIds={},added=0,skipped=0;
+          existing.forEach(function(x){existIds[x.id]=true;});
+          imp.forEach(function(x){if(x.id&&existIds[x.id])skipped++;else{existing.push(x);added++;}});
+          saveG(existing);renderGrat();
+          alert('Imported '+added+' entr'+(added===1?'y':'ies')+'.'+(skipped?' '+skipped+' duplicate'+(skipped!==1?'s':'')+' skipped.':''));
+        };fr.readAsText(file);
+      });
+      renderGrat();
+    } // end initGratitude
+
+    /* Activate the initial tab now that all tab vars + init functions exist. */
+    activateTab(initTab, true);
+
+  }()); // end master IIFE
+  </script><!-- Original Language flashcard panel — reads bsw_ws_fc_deck / bsw_ws_fc_progress --><script type="module" is:inline="">
+  import { loadStrongs } from '../assets/js/core.js';
+
+  var SK_DECK     = 'bsw_ws_fc_deck';
+  var SK_PROGRESS = 'bsw_ws_fc_progress';
+  var FC_INTERVALS = { again: 1, hard: 3, good: 7, easy: 21 };
+
+  var _strongsCache = {};   // lang → dict object
+  var _olInited     = false;
+  var _olQueue      = [];   // codes for current review session
+  var _olIdx        = 0;
+  var _olLang       = 'all';
+
+  function _getDeck() {
+    try { var d = JSON.parse(localStorage.getItem(SK_DECK) || '{}'); return { greek: d.greek || [], hebrew: d.hebrew || [] }; }
+    catch (e) { return { greek: [], hebrew: [] }; }
+  }
+  function _removeFromDeck(code) {
+    var d = _getDeck();
+    d.greek  = d.greek.filter(function (c) { return c !== code; });
+    d.hebrew = d.hebrew.filter(function (c) { return c !== code; });
+    try { localStorage.setItem(SK_DECK, JSON.stringify(d)); } catch (e) {}
+    _renderOlList();
+  }
+  function _getProgress() {
+    try { return JSON.parse(localStorage.getItem(SK_PROGRESS) || '{}'); } catch (e) { return {}; }
+  }
+  function _saveProgress(p) {
+    try { localStorage.setItem(SK_PROGRESS, JSON.stringify(p)); } catch (e) {}
+  }
+  function _today() {
+    return new Date().toISOString().slice(0, 10);
+  }
+  function _isDue(code) {
+    var p = _getProgress()[code];
+    if (!p || !p.due) return true;
+    return p.due <= _today();
+  }
+
+  // Wire the "Original Language" mem-tab button
+  var olBtn = document.getElementById('mem-ol-tab');
+  if (olBtn) {
+    olBtn.addEventListener('click', function () {
+      // Switch mem-tab active states
+      document.querySelectorAll('.mem-tab').forEach(function (b) {
+        b.classList.toggle('mem-tab--active', b === olBtn);
+        b.setAttribute('aria-selected', b === olBtn ? 'true' : 'false');
+      });
+      document.querySelectorAll('.mem-panel').forEach(function (p) { p.hidden = true; });
+      var panel = document.getElementById('mem-ol-panel');
+      if (panel) { panel.hidden = false; _initOlPanel(); }
+    });
+  }
+
+  async function _initOlPanel() {
+    if (_olInited) { _renderOlList(); return; }
+    _olInited = true;
+
+    var deck = _getDeck();
+    var allCodes = [...deck.greek, ...deck.hebrew];
+    if (allCodes.length === 0) {
+      document.getElementById('ol-empty').removeAttribute('hidden');
+      document.getElementById('ol-word-list').hidden = true;
+      document.getElementById('ol-deck-info').textContent = 'No words in your deck yet.';
+      return;
+    }
+
+    // Load strongs data for each language that has entries in the deck
+    if (deck.greek.length && !_strongsCache.greek) {
+      _strongsCache.greek = await loadStrongs('greek').catch(function () { return {}; });
+    }
+    if (deck.hebrew.length && !_strongsCache.hebrew) {
+      _strongsCache.hebrew = await loadStrongs('hebrew').catch(function () { return {}; });
+    }
+
+    // Wire lang filter and review button
+    var langSel = document.getElementById('ol-lang-filter');
+    if (langSel) {
+      langSel.addEventListener('change', function () {
+        _olLang = langSel.value;
+        _renderOlList();
+      });
+    }
+    var reviewBtn = document.getElementById('ol-review-btn');
+    if (reviewBtn) {
+      reviewBtn.addEventListener('click', _startOlReview);
+    }
+    document.getElementById('ol-back-btn').addEventListener('click', function () {
+      document.getElementById('ol-review-view').hidden = true;
+      document.getElementById('ol-list-view').hidden = false;
+      _renderOlList();
+    });
+
+    _renderOlList();
+  }
+
+  function _getFilteredCodes() {
+    var deck = _getDeck();
+    var codes = [];
+    if (_olLang === 'all' || _olLang === 'greek')  codes = codes.concat(deck.greek);
+    if (_olLang === 'all' || _olLang === 'hebrew') codes = codes.concat(deck.hebrew);
+    return codes;
+  }
+
+  function _getEntry(code) {
+    var lang = code.startsWith('G') ? 'greek' : 'hebrew';
+    return (_strongsCache[lang] || {})[code];
+  }
+
+  function _renderOlList() {
+    var codes  = _getFilteredCodes();
+    var prog   = _getProgress();
+    var listEl = document.getElementById('ol-word-list');
+    var infoEl = document.getElementById('ol-deck-info');
+    var emptyEl = document.getElementById('ol-empty');
+    var reviewBtn = document.getElementById('ol-review-btn');
+
+    if (!codes.length) {
+      emptyEl.removeAttribute('hidden');
+      listEl.innerHTML = '';
+      if (infoEl) infoEl.textContent = 'No words match the current filter.';
+      if (reviewBtn) reviewBtn.disabled = true;
+      return;
+    }
+    emptyEl.setAttribute('hidden', '');
+
+    var dueCount = codes.filter(_isDue).length;
+    if (infoEl) infoEl.textContent = codes.length + ' word' + (codes.length === 1 ? '' : 's') + ' in deck · ' + dueCount + ' due today';
+    if (reviewBtn) {
+      reviewBtn.disabled = dueCount === 0;
+      reviewBtn.textContent = dueCount > 0 ? 'Review Due (' + dueCount + ')' : 'All reviewed';
+    }
+
+    // Update badge
+    var badge = document.getElementById('ol-due-badge');
+    if (badge) {
+      if (dueCount > 0) { badge.textContent = dueCount; badge.removeAttribute('hidden'); }
+      else badge.setAttribute('hidden', '');
+    }
+
+    listEl.innerHTML = '';
+    codes.forEach(function (code) {
+      var entry = _getEntry(code);
+      if (!entry) return;
+      var due = _isDue(code);
+      var p   = prog[code];
+      var daysLabel = '';
+      if (!due && p && p.due) {
+        var daysLeft = Math.round((new Date(p.due) - new Date()) / 86400000);
+        daysLabel = 'in ' + daysLeft + ' day' + (daysLeft === 1 ? '' : 's');
+      }
+      var item = document.createElement('div');
+      item.className = 'mem-item' + (due ? ' mem-item--due' : '');
+      item.innerHTML = '<div class="mem-item__ref" style="font-family:\'Noto Serif\',serif;font-size:1.1rem">' + (entry.lemma || code) + '</div>'
+        + '<div class="mem-item__text">' + (entry.gloss || entry.meaning || '') + ' <span class="mem-item__badge">' + code + '</span></div>'
+        + '<div class="mem-item__status' + (due ? ' mem-item__status--due' : '') + '">' + (due ? 'Due today' : daysLabel) + '</div>'
+        + '<button class="mem-ol-remove-btn" type="button" title="Remove from deck" data-code="' + code + '">✕ Remove</button>';
+      item.querySelector('.mem-ol-remove-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        _removeFromDeck(code);
+      });
+      listEl.appendChild(item);
+    });
+  }
+
+  function _startOlReview() {
+    var codes = _getFilteredCodes().filter(_isDue);
+    if (!codes.length) return;
+    // Shuffle
+    _olQueue = codes.slice().sort(function () { return Math.random() - 0.5; });
+    _olIdx = 0;
+    document.getElementById('ol-list-view').hidden = true;
+    document.getElementById('ol-review-view').hidden = false;
+    _showOlCard();
+  }
+
+  function _showOlCard() {
+    var doneEl  = document.getElementById('ol-done');
+    var cardEl  = document.getElementById('ol-card');
+    var progEl  = document.getElementById('ol-review-progress');
+
+    if (_olIdx >= _olQueue.length) {
+      cardEl.hidden = true;
+      doneEl.removeAttribute('hidden');
+      if (progEl) progEl.textContent = 'Session complete — ' + _olQueue.length + ' word' + (_olQueue.length === 1 ? '' : 's') + ' reviewed.';
+      return;
+    }
+
+    cardEl.hidden = false;
+    doneEl.setAttribute('hidden', '');
+
+    var code  = _olQueue[_olIdx];
+    var entry = _getEntry(code);
+    var lang  = code.startsWith('G') ? 'Greek' : 'Hebrew';
+
+    var frontEl   = document.getElementById('ol-front');
+    var backEl    = document.getElementById('ol-back');
+    var actionsEl = document.getElementById('ol-actions');
+
+    frontEl.innerHTML = '<div style="font-size:2rem;font-family:\'Noto Serif\',serif;font-weight:700;margin-bottom:0.5rem">'
+      + (entry ? (entry.lemma || code) : code) + '</div>'
+      + '<div style="font-size:0.8rem;color:var(--color-text-muted,#888)">' + lang + ' · ' + code + '</div>'
+      + '<button class="mem-reveal-btn" id="ol-reveal-btn" type="button">Tap to reveal →</button>';
+    backEl.innerHTML = '<div style="font-size:1.8rem;font-family:\'Noto Serif\',serif;font-weight:700">' + (entry ? (entry.lemma || code) : code) + '</div>'
+      + (entry && entry.translit ? '<div style="font-style:italic;color:var(--color-text-muted,#888);margin:0.25rem 0">' + entry.translit + '</div>' : '')
+      + '<div style="font-size:1.1rem;font-weight:600;color:var(--color-primary,#c8a96e);margin:0.4rem 0">"' + (entry ? (entry.gloss || entry.meaning || '') : '') + '"</div>'
+      + (entry && entry.pos ? '<div style="font-size:0.78rem;color:var(--color-text-muted,#888);text-transform:uppercase;letter-spacing:0.05em">' + entry.pos + '</div>' : '');
+    backEl.setAttribute('hidden', '');
+    actionsEl.setAttribute('hidden', '');
+
+    if (progEl) progEl.textContent = (_olIdx + 1) + ' / ' + _olQueue.length;
+
+    document.getElementById('ol-reveal-btn').addEventListener('click', function () {
+      backEl.removeAttribute('hidden');
+      actionsEl.removeAttribute('hidden');
+      document.querySelector('#ol-front .mem-reveal-btn').style.display = 'none';
+    });
+
+    // Wire rating buttons
+    actionsEl.querySelectorAll('.mem-rate-btn[data-rating]').forEach(function (btn) {
+      btn.onclick = function () {
+        var rating = btn.dataset.rating;
+        var prog = _getProgress();
+        var days = FC_INTERVALS[rating] || 7;
+        var nextDue = new Date();
+        nextDue.setDate(nextDue.getDate() + days);
+        prog[code] = { due: nextDue.toISOString().slice(0, 10), interval: days };
+        _saveProgress(prog);
+        _olIdx++;
+        _showOlCard();
+      };
+    });
+  }
+
+  // Wire keyboard shortcuts during review (1-4)
+  document.addEventListener('keydown', function (e) {
+    var panel = document.getElementById('mem-ol-panel');
+    if (!panel || panel.hidden) return;
+    var rv = document.getElementById('ol-review-view');
+    if (!rv || rv.hidden) return;
+    var actEl = document.getElementById('ol-actions');
+    if (actEl && !actEl.hidden) {
+      var ratings = ['again', 'hard', 'good', 'easy'];
+      var idx = {'1':0,'2':1,'3':2,'4':3}[e.key];
+      if (idx !== undefined) { actEl.querySelectorAll('.mem-rate-btn[data-rating]')[idx].click(); }
+    } else {
+      if (e.key === ' ' || e.key === 'Enter') {
+        var revBtn = document.getElementById('ol-reveal-btn');
+        if (revBtn) revBtn.click();
+        e.preventDefault();
+      }
+    }
+  });
+  </script>
+</Fragment>
+</Base>

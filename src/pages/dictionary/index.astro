@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Bible Reference — Kingdom Bible Study"} description={"Bible Reference — search across Easton's and Smith's Bible Dictionaries, Hitchcock's Bible Names, and Nave's and Torrey's Topical Bibles."} mainJs={false} appJs={false} footer={false}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../assets/css/dictionary.css">
+</Fragment>
+<main>
+    <div class="container dict-page">
+
+      <a class="hist-back-link" href="../search/?tab=dictionary" id="explore-back-link" target="_top" hidden="">← Explore</a>
+      <div class="dict-header">
+        <h1 class="dict-title">Bible Reference</h1>
+        <p class="dict-sub">Dictionary, names, and topical resources — search or browse by letter</p>
+      </div>
+
+      <div class="dict-search-row">
+        <input id="dict-search" type="search" class="dict-search-input" placeholder="Search all sources… e.g. grace, tabernacle, prayer" autocomplete="off" spellcheck="false">
+        <span id="dict-search-count" class="dict-search-count" hidden=""></span>
+      </div>
+
+      <!-- Source filter chips — injected by JS so adding new sources needs no HTML change -->
+      <div id="dict-source-filters" class="dict-source-filters" role="group" aria-label="Filter by source"></div>
+
+      <div class="dict-alpha" id="dict-alpha" role="tablist" aria-label="Browse by letter"></div>
+
+      <div class="dict-body" id="dict-body">
+        <div class="dict-list-col">
+          <div id="dict-list" class="dict-list"></div>
+          <p id="dict-loading" class="dict-loading">Loading…</p>
+          <p id="dict-empty" class="dict-empty" hidden="">No entries found.</p>
+        </div>
+        <div class="dict-detail-col" id="dict-detail-col" hidden="">
+          <div id="dict-detail" class="dict-detail">
+            <p class="dict-detail-placeholder">Select an entry to read its definition.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main><footer class="site-footer">
+    <div class="container">
+      <p>Easton's Bible Dictionary (1897) · Smith's Bible Dictionary (1884) · Hitchcock's Bible Names (1874) · Nave's Topical Bible (1896) · Torrey's Topical Textbook (1897) — public domain.</p>
+    </div>
+  </footer><script is:inline="">
+    // Redirect all dictionary traffic to Biblepedia, translating old ?entry= to ?a=
+    // Topical entries (?src=nave/torrey) redirect to biblepedia home since topical
+    // browsing is also accessible via /search/?tab=dictionary.
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var entry  = params.get('entry');
+      var src    = params.get('src') || '';
+      var base   = new URL('../biblepedia/', location.href).href;
+      if (entry && src !== 'nave' && src !== 'torrey') {
+        location.replace(base + '?a=' + encodeURIComponent(entry));
+      } else {
+        location.replace(base);
+      }
+    })();
+  </script>
+</Base>

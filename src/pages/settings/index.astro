@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Settings — Kingdom Bible Study"} description={"Settings — manage offline data and download Bible study features for use without a connection."} footer={false}>
+<Fragment slot="head-end">
+<style is:inline="">
+    .set-page { max-width: 820px; margin: 0 auto; padding-bottom: 5rem; }
+    .set-h1 { font-size: 1.6rem; margin: 0 0 0.25rem; }
+    .set-sub { font-family: var(--font-ui); color: var(--color-muted); font-size: 0.9rem; margin: 0 0 1.5rem; }
+    .set-section { margin-bottom: 2rem; }
+    .set-section__title { font-family: var(--font-ui); font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .set-section__note { font-family: var(--font-ui); font-size: 0.85rem; color: var(--color-muted); margin: 0 0 1rem; line-height: 1.5; }
+
+    /* Summary bar */
+    .set-summary {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 1.2rem;
+      font-family: var(--font-ui); font-size: 0.85rem;
+    }
+    .set-summary__fact { color: var(--color-muted); }
+    .set-summary__fact strong { color: var(--color-text); }
+    .set-summary__spacer { flex: 1; }
+
+    .set-btn {
+      font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
+      padding: 0.4rem 0.85rem; border-radius: 6px; cursor: pointer;
+      border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+      white-space: nowrap;
+    }
+    .set-btn:hover:not(:disabled) { background: var(--color-border); }
+    .set-btn:disabled { opacity: 0.5; cursor: default; }
+    .set-btn--primary { border-color: var(--color-primary); color: var(--color-on-primary); background: var(--color-primary); }
+    .set-btn--primary:hover:not(:disabled) { filter: brightness(1.08); background: var(--color-primary); }
+    .set-btn--danger { border-color: #b03a2e; color: #b03a2e; background: transparent; }
+    .set-btn--danger:hover:not(:disabled) { background: #b03a2e; color: #fff; }
+    .set-btn--dl { border-color: var(--color-primary); color: var(--color-primary); }
+    .set-btn--dl:hover:not(:disabled) { background: var(--color-primary); color: var(--color-on-primary); }
+    .set-btn--rm { font-weight: 400; }
+
+    /* Group cards */
+    .set-grp {
+      display: flex; gap: 1rem; align-items: flex-start;
+      border: 1px solid var(--color-border); border-radius: 8px;
+      padding: 0.85rem 1rem; margin-bottom: 0.6rem; background: var(--color-surface);
+    }
+    .set-grp__main { flex: 1; min-width: 0; }
+    .set-grp__head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+    .set-grp__label { font-family: var(--font-ui); font-weight: 600; font-size: 0.95rem; color: var(--color-heading); }
+    .set-grp__size { font-family: var(--font-ui); font-size: 0.75rem; color: var(--color-muted); }
+    .set-grp__desc { font-family: var(--font-ui); font-size: 0.8rem; color: var(--color-muted); margin-top: 0.2rem; line-height: 1.45; }
+    .set-grp__barwrap { margin-top: 0.55rem; height: 6px; background: var(--color-border); border-radius: 99px; overflow: hidden; }
+    .set-grp__bar { height: 100%; width: 0; background: var(--color-primary); transition: width 0.2s ease; }
+    .set-grp__side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.45rem; flex-shrink: 0; }
+    .set-grp__status { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-muted); white-space: nowrap; }
+    .set-grp__status--done { color: #1d7a4d; font-weight: 600; }
+    .set-grp__status--working { color: var(--color-primary); }
+    .set-grp__btns { display: flex; gap: 0.35rem; }
+    .set-grp__btns .set-btn { padding: 0.3rem 0.7rem; font-size: 0.75rem; }
+
+    .set-nosw, .set-err {
+      font-family: var(--font-ui); font-size: 0.85rem; color: #b03a2e;
+      background: rgba(176,58,46,0.08); border: 1px solid rgba(176,58,46,0.3);
+      border-radius: 6px; padding: 0.7rem 0.9rem; margin-bottom: 1rem;
+    }
+    .set-back { display: inline-block; font-family: var(--font-ui); font-size: 0.8rem; color: var(--color-muted); text-decoration: none; padding: 0.4rem 0 0.6rem; }
+    .set-back:hover { color: var(--color-primary); }
+    @media (max-width: 540px) {
+      .set-grp { flex-direction: column; gap: 0.6rem; }
+      .set-grp__side { align-items: flex-start; width: 100%; }
+    }
+    [data-theme="dark"] .set-grp__status--done { color: #5fc98a; }
+  </style>
+</Fragment>
+<main>
+    <div class="container set-page">
+      <a class="set-back" href="../">← Home</a>
+      <h1 class="set-h1">Settings</h1>
+      <p class="set-sub">Manage how this Bible study app stores data on your device.</p>
+
+      <section class="set-section">
+        <h2 class="set-section__title">Offline data</h2>
+        <p class="set-section__note">
+          The app stays light by default — only the passages and resources you actually open are
+          saved for offline use, which keeps things fast on mobile data. To make a whole feature
+          available without a connection, download it below. You can remove any feature later to
+          free up space. Everything is stored privately on this device.
+        </p>
+
+        <div class="set-nosw" id="set-nosw" style="display:none">
+          Offline storage isn’t available in this browser (no service worker support).
+        </div>
+
+        <div class="set-summary">
+          <span class="set-summary__fact">Offline storage: <strong id="set-storage">—</strong></span>
+          <span class="set-summary__fact">· Full library: <strong id="set-total">—</strong></span>
+          <span class="set-summary__spacer"></span>
+          <button class="set-btn set-btn--primary" id="set-dl-all" type="button">Download everything</button>
+          <button class="set-btn set-btn--danger" id="set-purge-all" type="button">Remove all</button>
+        </div>
+
+        <div id="set-groups"></div>
+      </section>
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<script src="../assets/js/settings.js" is:inline=""></script>
+</Fragment>
+</Base>

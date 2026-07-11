@@ -1,0 +1,115 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Biblical Maps — Kingdom Bible Study"} description={"Biblical geography maps — explore the Holy Land, Exodus route, Paul's journeys, and more."} footer={false}>
+<Fragment slot="head-pre-css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="">
+</Fragment>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../assets/css/maps.css">
+</Fragment>
+<main>
+    <div class="container maps-page">
+
+      <div class="maps-header">
+        <div>
+          <h1 class="maps-title">Biblical Maps</h1>
+          <p class="maps-sub">Explore the geography of redemptive history</p>
+        </div>
+        <div style="display:flex;gap:.75rem;align-items:center">
+          <a class="hist-back-link" href="../history/?tab=maps" id="hist-back-link" hidden="">← History</a>
+          <a class="maps-timelapse-link" href="timelapse/" title="View the historical time-lapse">⏱ Time-Lapse</a>
+        </div>
+      </div>
+
+      <div id="maps-container" class="maps-layout">
+
+        <!-- Map selector nav -->
+        <div class="maps-selector-col">
+          <nav id="maps-nav" class="maps-nav" aria-label="Map selection"></nav>
+          <div class="maps-legend" id="maps-legend" hidden=""></div>
+        </div>
+
+        <!-- Map + detail panel side by side, no title bar above the map -->
+        <div class="maps-display-col">
+          <div class="maps-content-row">
+
+            <div class="maps-map-wrapper">
+              <div id="maps-map" class="maps-map-container"></div>
+            </div>
+
+            <!-- Right panel: header → tab bar → body (overview/sites/city-detail) -->
+            <div class="maps-detail-panel">
+
+              <div class="maps-panel-header">
+                <div class="maps-panel-header-text">
+                  <h2 id="maps-map-title" class="maps-map-title"></h2>
+                  <p id="maps-map-sub" class="maps-map-sub"></p>
+                  <a id="maps-tl-chip" class="maps-tl-chip" hidden=""></a>
+                </div>
+                <button id="maps-reset-view" class="maps-reset-btn" title="Reset map view" aria-label="Reset map view">↺</button>
+              </div>
+
+              <!-- Tab bar: Overview / Sites / Refs -->
+              <div class="maps-panel-tabs" role="tablist" aria-label="Map panel">
+                <button class="maps-tab maps-tab--active" id="maps-tab-overview" role="tab" aria-selected="true">Overview</button>
+                <button class="maps-tab" id="maps-tab-sites" role="tab" aria-selected="false">Sites</button>
+                <button class="maps-tab" id="maps-tab-refs" role="tab" aria-selected="false">Refs</button>
+              </div>
+
+              <div class="maps-panel-body">
+
+                <!-- Overview tab — default, fills the body -->
+                <div id="maps-overview" class="maps-detail-overview"></div>
+
+                <!-- Sites tab — list of all named markers + filter input -->
+                <div id="maps-site-index" class="maps-site-index" hidden="">
+                  <input class="maps-site-search" id="maps-site-search" type="search" placeholder="Filter sites…" autocomplete="off">
+                  <div class="maps-site-list" id="maps-site-list"></div>
+                </div>
+
+                <!-- Refs tab — all scripture refs from all cities in the current map -->
+                <div id="maps-refs-index" class="maps-refs-index" hidden=""></div>
+
+                <!-- City detail — overlays everything when a marker is opened -->
+                <div id="maps-city-detail" class="maps-city-detail" hidden="">
+                  <button id="maps-city-close" class="maps-city-close" aria-label="Close">✕</button>
+                  <!-- Prev / Next site navigation -->
+                  <div class="maps-city-nav" id="maps-city-nav" hidden="">
+                    <button class="maps-city-nav-btn" id="maps-city-prev" aria-label="Previous site">←</button>
+                    <span class="maps-city-nav-pos" id="maps-city-nav-pos"></span>
+                    <button class="maps-city-nav-btn" id="maps-city-next" aria-label="Next site">→</button>
+                  </div>
+                  <h3 id="maps-city-name" class="maps-city-name"></h3>
+                  <p id="maps-city-desc" class="maps-city-desc"></p>
+                  <p id="maps-city-significance" class="maps-city-significance" hidden=""></p>
+                  <div id="maps-city-refs" class="maps-city-refs"></div>
+                </div>
+
+              </div><!-- .maps-panel-body -->
+            </div><!-- .maps-detail-panel -->
+
+          </div><!-- .maps-content-row -->
+        </div><!-- .maps-display-col -->
+
+      </div><!-- .maps-layout -->
+    </div><!-- .container.maps-page -->
+  </main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="" is:inline=""></script>
+<Fragment slot="after-scripts">
+<script is:inline="">
+    /* The back link is revealed centrally by main.js (.hist-back-link). This block keeps
+       only the maps-specific fix: when embedded, the timelapse link must break out of the
+       iframe and switch the PARENT history page to the Animated Map tab — otherwise the
+       timelapse loads inside the Maps iframe while the tab still reads "Maps". Frame-aware
+       so it also holds after in-iframe navigation that drops ?minimal. */
+    (function () {
+      var framed; try { framed = (window.self !== window.top); } catch (e) { framed = true; }
+      if (framed || new URLSearchParams(location.search).get('minimal')) {
+        var tl = document.querySelector('.maps-timelapse-link');
+        if (tl) { tl.href = '../history/?tab=timelapse'; tl.target = '_top'; }
+      }
+    })();
+  </script>
+</Fragment>
+</Base>

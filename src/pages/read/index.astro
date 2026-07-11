@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"The Holy Bible — Kingdom Bible Study"} description={"Read the Bible by reference with version switching."} bodyAttrs={{"class":"reader-page"}}>
+<Fragment slot="head">
+<meta property="og:type" content="website"><meta property="og:title" id="bsw-og-title" content="The Holy Bible — Kingdom Bible Study"><meta property="og:description" id="bsw-og-desc" content="Read the Bible by reference with version switching."><meta name="twitter:card" content="summary"><meta name="twitter:title" id="bsw-tw-title" content="The Holy Bible — Kingdom Bible Study"><meta name="twitter:description" id="bsw-tw-desc" content="Read the Bible by reference with version switching.">
+</Fragment>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../assets/css/reader.css">
+</Fragment>
+<main>
+    <div class="container">
+      <div class="reader-layout">
+
+        <nav id="reader-sidebar" class="reader-sidebar" aria-label="Chapter list"></nav>
+
+        <div class="reader-main">
+          <div class="reader-controls">
+            <div class="reader-lookup-bar">
+              <input id="reader-lookup-input" class="reader-lookup-input" type="search" placeholder="John 3:16 · Romans 8 · parables · the beatitudes" autocomplete="off" spellcheck="false" aria-label="Go to a passage, or search topics and sections">
+              <button id="reader-lookup-btn" class="reader-lookup-btn">Go</button>
+              <span id="reader-lookup-status" class="reader-lookup-status" aria-live="polite"></span>
+            </div>
+            <div class="reader-browse-bar">
+              <label class="reader-browse-label" for="reader-book-select">Browse:</label>
+              <select id="reader-book-select" class="reader-browse-select" aria-label="Select book">
+                <option value="">Book…</option>
+              </select>
+              <select id="reader-ch-select" class="reader-browse-select" aria-label="Select chapter" disabled="">
+                <option value="">Ch…</option>
+              </select>
+              <select id="reader-ver-select" class="reader-browse-select reader-browse-select--ver" aria-label="Select translation"></select>
+              <span class="reader-browse-hint">j / → next chapter &nbsp;·&nbsp; k / ← prev</span>
+            </div>
+          </div>
+
+          <div id="reader-results" class="reader-results"></div>
+
+        </div>
+
+        <aside id="reader-xref-panel" class="reader-xref-panel" aria-label="Cross-references"></aside>
+
+      </div>
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<!-- Chapter completion tracker: record when a chapter is rendered --><script is:inline="">
+  // INTENT: Mark a chapter "read" (date-stamped) in localStorage the first time the reader
+  //   renders it, by observing window._readerNavState (set by reader.js on every chapter
+  //   load) via a MutationObserver on #reader-results. Powers reading-progress surfaces.
+  // CHANGE? Couples to window._readerNavState (assets/js/reader.js — if it's renamed or
+  //   stops being set per chapter, tracking silently stops) and writes the bsw_chapter_read
+  //   localStorage key (read by /progress/ and /discipline/?tab=progress and reader.js's
+  //   "✓ Read" badge — keep the {bookId:{ch:'YYYY-MM-DD'}} shape if you change it here).
+  // VERIFY: Open a chapter in /read/ → DevTools → Application → localStorage → bsw_chapter_read
+  //   gains an entry for that book/chapter with today's date; reopening doesn't duplicate it.
+  (function () {
+    var READ_KEY = 'bsw_chapter_read';
+    var _lastRecorded = null;
+
+    function recordChapter(bookId, ch) {
+      var key = bookId + ':' + ch;
+      if (_lastRecorded === key) return;
+      _lastRecorded = key;
+      try {
+        var data  = JSON.parse(localStorage.getItem(READ_KEY) || '{}');
+        if (!data[bookId]) data[bookId] = {};
+        if (!data[bookId][String(ch)]) {
+          data[bookId][String(ch)] = new Date().toISOString().slice(0, 10);
+          localStorage.setItem(READ_KEY, JSON.stringify(data));
+        }
+      } catch (e) {}
+    }
+
+    // Watch window._readerNavState which reader.js sets on every chapter load
+    var _prevBookId = null, _prevCh = null;
+    var _resultsEl  = document.getElementById('reader-results');
+    if (_resultsEl && typeof MutationObserver !== 'undefined') {
+      new MutationObserver(function () {
+        var nav = window._readerNavState;
+        if (!nav || !nav.bookId || !nav.ch) return;
+        if (nav.bookId !== _prevBookId || nav.ch !== _prevCh) {
+          _prevBookId = nav.bookId;
+          _prevCh     = nav.ch;
+          recordChapter(nav.bookId, nav.ch);
+        }
+      }).observe(_resultsEl, { childList: true });
+    }
+  }());
+  </script>
+</Fragment>
+</Base>

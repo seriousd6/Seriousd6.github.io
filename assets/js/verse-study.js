@@ -87,7 +87,7 @@ export function initVerseStudyPage() {
 
   var headerRef = document.getElementById('vs-header-ref');
   if (headerRef) headerRef.textContent = parsed.display;
-  document.title = parsed.display + ' — Verse Study — Bible Study';
+  document.title = parsed.display + ' — Verse Study — Kingdom Bible Study';
 
   var backLink = document.getElementById('vs-back-link');
   if (backLink) {

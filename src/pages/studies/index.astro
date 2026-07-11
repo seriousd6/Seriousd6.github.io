@@ -1,0 +1,320 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Studies — Kingdom Bible Study"} description={"Study resources for every book of the Bible — book guides, deep dives, and verse-by-verse commentary from the classic tradition."} footer={false}>
+<Fragment slot="head-end">
+<style is:inline="">
+    .studies-page { padding: 2rem 1.5rem 4rem; max-width: 960px; margin: 0 auto; }
+
+    .studies-header { margin-bottom: 2rem; }
+    .studies-header h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .studies-header p  { color: var(--color-muted); font-size: 0.95rem; }
+
+    /* Filter bar */
+    .studies-filters {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 2rem; align-items: center;
+    }
+    .studies-filter-btn {
+      padding: 0.35rem 0.85rem; border-radius: 20px;
+      border: 1px solid var(--color-border); background: var(--color-surface);
+      color: var(--color-muted); font-size: 0.8rem; font-weight: 500;
+      cursor: pointer; transition: all 0.1s;
+    }
+    .studies-filter-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .studies-filter-btn.active {
+      background: var(--color-primary); color: var(--color-on-primary, #fff);
+      border-color: var(--color-primary);
+    }
+    [data-theme="dark"] .studies-filter-btn.active { color: #1a1a1a; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .studies-filter-btn.active { color: #1a1a1a; }
+    }
+    .studies-filter-sep { width: 1px; height: 1.5rem; background: var(--color-border); margin: 0 0.25rem; }
+
+    /* Section headings */
+    .studies-section { margin-bottom: 2.5rem; }
+    .studies-section-head {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--color-muted);
+      margin-bottom: 0.75rem; padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Book grid */
+    .studies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 0.6rem;
+    }
+
+    /* Book card */
+    .studies-card {
+      display: flex; flex-direction: column; gap: 0.35rem;
+      padding: 0.75rem 1rem; border-radius: 8px;
+      border: 1px solid var(--color-border); background: var(--color-surface);
+      text-decoration: none; color: inherit;
+      transition: border-color 0.12s, box-shadow 0.12s;
+    }
+    .studies-card:hover { border-color: var(--color-primary); box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .studies-card--empty { opacity: 0.42; cursor: default; pointer-events: none; }
+    .studies-card--empty:hover { border-color: var(--color-border); box-shadow: none; }
+
+    .studies-card__top { display: flex; align-items: baseline; gap: 0.5rem; }
+    .studies-card__name {
+      font-size: 0.95rem; font-weight: 600; flex: 1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .studies-card__ch { font-size: 0.72rem; color: var(--color-muted); flex-shrink: 0; }
+
+    .studies-card__tiers { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+    .studies-tier-badge {
+      font-size: 0.63rem; font-weight: 600; letter-spacing: 0.04em;
+      padding: 0.12rem 0.45rem; border-radius: 10px;
+      border: 1px solid currentColor;
+    }
+    .studies-tier-badge--guide      { color: #1e6e4a; }
+    .studies-tier-badge--deep-dive  { color: #1e3a6e; }
+    .studies-tier-badge--commentary { color: #5c1a1a; }
+    .studies-tier-badge--none {
+      color: var(--color-muted); border-style: dashed; font-weight: 400;
+      opacity: 0.6;
+    }
+    [data-theme="dark"] .studies-tier-badge--guide      { color: #5db88a; }
+    [data-theme="dark"] .studies-tier-badge--deep-dive  { color: #7ba4dc; }
+    [data-theme="dark"] .studies-tier-badge--commentary { color: #c47a7a; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .studies-tier-badge--guide      { color: #5db88a; }
+      :root:not([data-theme="light"]) .studies-tier-badge--deep-dive  { color: #7ba4dc; }
+      :root:not([data-theme="light"]) .studies-tier-badge--commentary { color: #c47a7a; }
+    }
+
+    /* Topical articles */
+    .studies-topical-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.6rem;
+    }
+    .studies-topical-card {
+      display: block; padding: 0.75rem 1rem; border-radius: 8px;
+      border: 1px solid var(--color-border); background: var(--color-surface);
+      text-decoration: none; color: var(--color-text);
+      font-size: 0.88rem; font-weight: 500;
+      transition: border-color 0.12s, box-shadow 0.12s;
+    }
+    .studies-topical-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+
+    .studies-empty { color: var(--color-muted); font-size: 0.9rem; padding: 1rem 0; }
+  </style>
+</Fragment>
+<main>
+  <div class="studies-page">
+    <div class="studies-header">
+      <h1>Studies</h1>
+      <p>Book guides, deep dives, and verse-by-verse commentary for every book of the Bible.</p>
+    </div>
+
+    <div class="studies-filters" id="studies-filters">
+      <button class="studies-filter-btn active" data-filter="all">All Books</button>
+      <button class="studies-filter-btn" data-filter="ot">Old Testament</button>
+      <button class="studies-filter-btn" data-filter="nt">New Testament</button>
+      <span class="studies-filter-sep" aria-hidden="true"></span>
+      <button class="studies-filter-btn" data-filter="has-content">Has Content</button>
+    </div>
+
+    <div id="studies-content">
+      <p class="studies-empty">Loading…</p>
+    </div>
+  </div>
+</main><script is:inline="">
+/* INTENT: Fetches data/books-content.json and data/bible/books.json to render a
+   book grid organized by testament. Tier badges show which tiers exist per book.
+   Cards with no content are dimmed. Topical articles render in a separate section.
+   Filter buttons filter by testament or content presence without a page reload.
+CHANGE? If books-content.json schema changes (guide/deep_dive/commentary keys),
+   update tierBadge() and renderCard(). If the books-content.json url field format
+   changes, update the href logic in renderCard().
+VERIFY: Page shows 66 book cards in OT/NT sections. "Has Content" filter shows 6.
+   Clicking a Hebrews card navigates to study-guides/hebrews/. Topical articles
+   section shows 6 entries below the book grid. */
+
+(function () {
+  var DISPLAY_NAMES = {
+    '1samuel':'1 Samuel','2samuel':'2 Samuel','1kings':'1 Kings','2kings':'2 Kings',
+    '1chronicles':'1 Chronicles','2chronicles':'2 Chronicles','songofsolomon':'Song of Solomon',
+    '1corinthians':'1 Corinthians','2corinthians':'2 Corinthians',
+    '1thessalonians':'1 Thessalonians','2thessalonians':'2 Thessalonians',
+    '1timothy':'1 Timothy','2timothy':'2 Timothy',
+    '1peter':'1 Peter','2peter':'2 Peter',
+    '1john':'1 John','2john':'2 John','3john':'3 John'
+  };
+
+  function displayName(id, fallback) {
+    return DISPLAY_NAMES[id] || fallback || (id.charAt(0).toUpperCase() + id.slice(1));
+  }
+
+  function _r(path) { return '../' + path; }
+
+  var _currentFilter = 'all';
+  var _allBooks = [];
+
+  function tierBadge(exists, label, cls) {
+    var mod = exists ? 'studies-tier-badge--' + cls : 'studies-tier-badge--none';
+    return '<span class="studies-tier-badge ' + mod + '">' + label + '</span>';
+  }
+
+  function bestUrl(bc) {
+    if (bc.deep_dive  && bc.deep_dive.exists)  return _r(bc.deep_dive.url);
+    if (bc.guide      && bc.guide.exists)       return _r(bc.guide.url);
+    if (bc.commentary && bc.commentary.exists)  return _r(bc.commentary.url);
+    return null;
+  }
+
+  function renderCard(entry) {
+    var bc = entry.bc;
+    var href = bestUrl(bc);
+    var hasAny = !!href;
+
+    var card = document.createElement(hasAny ? 'a' : 'div');
+    card.className = 'studies-card' + (hasAny ? '' : ' studies-card--empty');
+    card.dataset.bookId = entry.id;
+    card.dataset.testament = entry.testament.toLowerCase();
+    if (hasAny) card.href = href;
+
+    card.innerHTML =
+      '<div class="studies-card__top">' +
+        '<span class="studies-card__name">' + entry.name + '</span>' +
+        '<span class="studies-card__ch">' + entry.chapters + ' chs</span>' +
+      '</div>' +
+      '<div class="studies-card__tiers">' +
+        tierBadge(bc.guide && bc.guide.exists, 'Guide', 'guide') +
+        tierBadge(bc.deep_dive && bc.deep_dive.exists, 'Deep Dive', 'deep-dive') +
+        tierBadge(bc.commentary && bc.commentary.exists, 'Commentary', 'commentary') +
+      '</div>';
+    return card;
+  }
+
+  function applyFilter() {
+    _allBooks.forEach(function (entry) {
+      var card = document.querySelector('[data-book-id="' + entry.id + '"]');
+      if (!card) return;
+      var t = entry.testament.toLowerCase();
+      var bc = entry.bc;
+      var hasAny = (bc.guide && bc.guide.exists) ||
+                   (bc.deep_dive && bc.deep_dive.exists) ||
+                   (bc.commentary && bc.commentary.exists);
+      var show = true;
+      if      (_currentFilter === 'ot')          show = (t === 'ot');
+      else if (_currentFilter === 'nt')          show = (t === 'nt');
+      else if (_currentFilter === 'has-content') show = hasAny;
+      card.style.display = show ? '' : 'none';
+    });
+
+    ['ot','nt'].forEach(function (t) {
+      var sec = document.getElementById('studies-section-' + t);
+      if (!sec) return;
+      var g = document.getElementById('studies-grid-' + t);
+      var anyVisible = g && Array.from(g.children).some(function (c) {
+        return c.style.display !== 'none';
+      });
+      sec.style.display = anyVisible ? '' : 'none';
+    });
+  }
+
+  function mkSection(id, label) {
+    var sec = document.createElement('div');
+    sec.className = 'studies-section';
+    sec.id = 'studies-section-' + id;
+    var head = document.createElement('div');
+    head.className = 'studies-section-head';
+    head.textContent = label;
+    sec.appendChild(head);
+    var grid = document.createElement('div');
+    grid.className = 'studies-grid';
+    grid.id = 'studies-grid-' + id;
+    sec.appendChild(grid);
+    return sec;
+  }
+
+  function render(booksData, contentData) {
+    var bc = contentData.books || {};
+    var topical = contentData.topical || [];
+
+    // Build canonical book list (OT order first, then NT)
+    var order = [];
+    booksData.forEach(function (b) {
+      order.push({
+        id:        b.id,
+        name:      displayName(b.id, b.name),
+        testament: b.testament,
+        chapters:  b.chapters,
+        bc:        bc[b.id] || { guide: {exists:false}, deep_dive: {exists:false}, commentary: {exists:false} }
+      });
+    });
+    _allBooks = order;
+
+    var content = document.getElementById('studies-content');
+    content.innerHTML = '';
+
+    var secOT = mkSection('ot', 'Old Testament');
+    var secNT = mkSection('nt', 'New Testament');
+    var gridOT = secOT.querySelector('.studies-grid');
+    var gridNT = secNT.querySelector('.studies-grid');
+
+    order.forEach(function (entry) {
+      var card = renderCard(entry);
+      (entry.testament === 'OT' ? gridOT : gridNT).appendChild(card);
+    });
+
+    content.appendChild(secOT);
+    content.appendChild(secNT);
+
+    if (topical.length) {
+      var secTop = document.createElement('div');
+      secTop.className = 'studies-section';
+      secTop.id = 'studies-section-topical';
+      var headTop = document.createElement('div');
+      headTop.className = 'studies-section-head';
+      headTop.textContent = 'Topical Studies';
+      secTop.appendChild(headTop);
+      var gridTop = document.createElement('div');
+      gridTop.className = 'studies-topical-grid';
+      topical.forEach(function (t) {
+        var a = document.createElement('a');
+        a.className = 'studies-topical-card';
+        a.href = _r(t.url);
+        a.textContent = t.label;
+        gridTop.appendChild(a);
+      });
+      secTop.appendChild(gridTop);
+      content.appendChild(secTop);
+    }
+
+    document.getElementById('studies-filters').addEventListener('click', function (e) {
+      var btn = e.target.closest('.studies-filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('.studies-filter-btn').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      _currentFilter = btn.dataset.filter;
+      applyFilter();
+    });
+  }
+
+  Promise.all([
+    fetch('../data/bible/books.json').then(function (r) { return r.json(); }),
+    fetch('../data/books-content.json').then(function (r) { return r.json(); })
+  ]).then(function (results) {
+    render(results[0], results[1]);
+  }).catch(function () {
+    var c = document.getElementById('studies-content');
+    if (c) c.innerHTML = '<p class="studies-empty">Could not load study data. Please try refreshing.</p>';
+  });
+})();
+</script>
+</Base>

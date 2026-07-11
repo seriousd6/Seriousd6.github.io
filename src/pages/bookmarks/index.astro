@@ -1,0 +1,219 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Bookmarks — Kingdom Bible Study"} description={"Your bookmarked Bible verses."} mainJs={false} footer={false}>
+<Fragment slot="head-end">
+<style is:inline="">
+    .bookmarks-page { max-width: 640px; margin: 0 auto; }
+    .bookmarks-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .bookmarks-toolbar__title { flex: 1; margin: 0; font-size: 1.5rem; }
+    .bookmarks-btn {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 5px;
+      border: 1px solid var(--color-border);
+      cursor: pointer;
+      background: var(--color-surface);
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    .bookmarks-btn:hover { background: var(--color-border); }
+    .bookmarks-list { list-style: none; margin: 0; padding: 0; }
+    .bookmarks-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 0.85rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .bookmarks-item:last-child { border-bottom: none; }
+    .bookmarks-item__star {
+      color: var(--color-accent);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .bookmarks-item__ref {
+      flex: 1;
+      font-family: var(--font-ui);
+      font-weight: 600;
+      color: var(--color-primary);
+      font-size: 0.95rem;
+    }
+    .bookmarks-item__link {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .bookmarks-item__link:hover { text-decoration: underline; }
+    .bookmarks-item__sep {
+      color: var(--color-border);
+      font-size: 0.75rem;
+    }
+    .bookmarks-item__del {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--color-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+    }
+    .bookmarks-item__del:hover { color: #c00; }
+    .bookmarks-count {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      margin: 0 0 1rem;
+    }
+    .bookmarks-list-wrap {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      background: var(--color-surface);
+      overflow: hidden;
+    }
+  </style>
+</Fragment>
+<main>
+    <div class="container bookmarks-page">
+
+      <div class="bookmarks-toolbar">
+        <h1 class="bookmarks-toolbar__title">★ Bookmarks</h1>
+        <button class="bookmarks-btn" id="bm-clear-all" type="button">Clear all</button>
+        <a class="bookmarks-btn" id="bm-reader-link" href="../read/">← Reader</a>
+        <a class="bookmarks-btn" href="../">← Home</a>
+      </div>
+
+      <p class="bookmarks-count" id="bm-count"></p>
+
+      <div class="bookmarks-list-wrap" id="bm-list-wrap">
+        <ul class="bookmarks-list" id="bm-list"></ul>
+      </div>
+      <div class="bsw-empty-state" id="bm-empty" hidden="">
+        <span class="bsw-empty-state__glyph" aria-hidden="true">☆</span>
+        <p class="bsw-empty-state__title">No bookmarks yet</p>
+        <p class="bsw-empty-state__desc">Save verses to come back to them quickly. In the Reader, click any verse number and choose "Bookmark".</p>
+        <a class="bsw-empty-state__cta" href="../read/">Open Reader</a>
+      </div>
+
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<script is:inline="">
+    (function () {
+      var KEY = 'bsw_bookmarks';
+      var READER = '../read/';
+      var VS     = '../read/';   // SD-T5: verse study now opens in the reader's study desk
+
+      function load() {
+        try { return JSON.parse(localStorage.getItem(KEY) || '[]'); }
+        catch (e) { return []; }
+      }
+      function save(list) {
+        localStorage.setItem(KEY, JSON.stringify(list));
+      }
+
+      function render() {
+        var list = load();
+        var listEl = document.getElementById('bm-list');
+        var emptyEl = document.getElementById('bm-empty');
+        var countEl = document.getElementById('bm-count');
+        var wrapEl  = document.getElementById('bm-list-wrap');
+
+        listEl.innerHTML = '';
+
+        if (list.length === 0) {
+          emptyEl.hidden = false;
+          wrapEl.hidden  = true;
+          countEl.textContent = '';
+          return;
+        }
+
+        emptyEl.hidden = true;
+        wrapEl.hidden  = false;
+        countEl.textContent = list.length + ' bookmark' + (list.length !== 1 ? 's' : '');
+
+        list.forEach(function (ref, idx) {
+          var li = document.createElement('li');
+          li.className = 'bookmarks-item';
+
+          var star = document.createElement('span');
+          star.className = 'bookmarks-item__star';
+          star.textContent = '★';
+          li.appendChild(star);
+
+          var refEl = document.createElement('span');
+          refEl.className = 'bookmarks-item__ref';
+          refEl.textContent = ref;
+          li.appendChild(refEl);
+
+          var readLink = document.createElement('a');
+          readLink.className = 'bookmarks-item__link';
+          readLink.href = READER + '?ref=' + encodeURIComponent(ref);
+          readLink.textContent = 'Read';
+          li.appendChild(readLink);
+
+          var sep = document.createElement('span');
+          sep.className = 'bookmarks-item__sep';
+          sep.textContent = '|';
+          li.appendChild(sep);
+
+          var vsLink = document.createElement('a');
+          vsLink.className = 'bookmarks-item__link';
+          vsLink.href = VS + '?ref=' + encodeURIComponent(ref) + '&study=1';
+          vsLink.textContent = 'Study';
+          li.appendChild(vsLink);
+
+          var del = document.createElement('button');
+          del.className = 'bookmarks-item__del';
+          del.type = 'button';
+          del.textContent = '✕';
+          del.title = 'Remove bookmark';
+          del.addEventListener('click', (function (r) {
+            return function () {
+              var l = load();
+              var i = l.indexOf(r);
+              if (i !== -1) l.splice(i, 1);
+              save(l);
+              render();
+            };
+          }(ref)));
+          li.appendChild(del);
+
+          listEl.appendChild(li);
+        });
+      }
+
+      document.getElementById('bm-clear-all').addEventListener('click', function () {
+        var list = load();
+        if (list.length === 0) return;
+        if (confirm('Remove all ' + list.length + ' bookmark' + (list.length !== 1 ? 's' : '') + '?')) {
+          save([]);
+          render();
+        }
+      });
+
+      render();
+
+      // When embedded as a hub tab, hide the Home back-link (Reader link stays). This page
+      // does not load main.js, so detect embedding here — framed (robust against in-iframe
+      // navigation that drops ?minimal) or explicit ?minimal=1.
+      var _framed; try { _framed = (window.self !== window.top); } catch (e) { _framed = true; }
+      if (_framed || new URLSearchParams(location.search).get('minimal')) {
+        var homeLink = document.querySelector('.bookmarks-btn[href="../"]');
+        if (homeLink) homeLink.hidden = true;
+      }
+    })();
+  </script>
+</Fragment>
+</Base>

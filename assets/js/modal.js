@@ -1027,7 +1027,7 @@ function _drawShareCanvas(canvas, presetId, fontId, verseText, refDisplay, versi
     ctx.fillStyle = accentColor;
     ctx.font = '500 20px ' + font.stack;
     ctx.textAlign = 'left';
-    ctx.fillText('Bible Study', 60, 52);
+    ctx.fillText('Kingdom Bible Study', 60, 52);
 
     /* verse text — Dancing Script starts at 52px because it renders smaller */
     var maxW = W - 160;

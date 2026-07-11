@@ -1,0 +1,18 @@
+{
+  "name": "bible-study-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "convert": "node tools/convert-pages.mjs",
+    "diff": "node tools/diff-pages.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "parse5": "^7.1.2"
+  }
+}

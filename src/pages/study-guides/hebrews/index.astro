@@ -1,0 +1,1711 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base title={"Hebrews: The Better Covenant — Study Guide — Kingdom Bible Study"} description={"A chapter-by-chapter deep study of the book of Hebrews — tracking the sustained argument from the Son's supremacy through the better priesthood, covenant, and sacrifice to the great call to run by faith."} bodyAttrs={{"class":"tg-study"}}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../../assets/css/topic-guide.css"><link rel="stylesheet" href="../../assets/css/study-guide.css"><style is:inline="">
+    .sg-chapter-header {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-bottom: 0.375rem;
+      flex-wrap: wrap;
+    }
+    .sg-chapter-num {
+      background: var(--color-primary);
+      color: var(--color-on-primary);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.75rem;
+      border-radius: 2rem;
+      white-space: nowrap;
+    }
+    .sg-chapter-ref {
+      font-size: 0.875rem;
+      color: var(--color-muted);
+      font-style: italic;
+    }
+    .sg-wave {
+      border-left: 3px solid var(--color-primary);
+      background: var(--color-surface-alt, rgba(90,60,20,0.05));
+      padding: 0.875rem 1.25rem;
+      margin: 1.25rem 0 1.75rem;
+      border-radius: 0 0.375rem 0.375rem 0;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+    .sg-wave strong { color: var(--color-primary); }
+    .sg-ot-context {
+      border-left-color: #7a5c1e !important;
+      background: #fdf8f0 !important;
+    }
+    .sg-ot-context .tg-note__label { color: #7a5c1e !important; }
+    @media (prefers-color-scheme: dark) {
+      .sg-ot-context {
+        background: rgba(180,140,60,0.09) !important;
+        border-left-color: #b89850 !important;
+      }
+    }
+    .sg-warning {
+      border-left: 3px solid #b83232;
+      background: rgba(184,50,50,0.06);
+      padding: 0.875rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 0.375rem 0.375rem 0;
+    }
+    .sg-warning__label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #b83232;
+      margin-bottom: 0.35rem;
+    }
+    .sg-questions {
+      background: var(--color-surface-alt, rgba(0,0,0,0.03));
+      border: 1px solid var(--color-border);
+      border-radius: 0.5rem;
+      padding: 1.25rem 1.5rem 1rem;
+      margin-top: 2.25rem;
+    }
+    .sg-questions__heading {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--color-muted);
+      margin-bottom: 0.875rem;
+    }
+    .sg-questions__list { padding-left: 1.25rem; margin: 0; }
+    .sg-questions__list li { margin-bottom: 0.8rem; line-height: 1.65; }
+    .sg-questions__list li:last-child { margin-bottom: 0; }
+    .sg-overview-table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.9rem; }
+    .sg-overview-table th {
+      text-align: left; padding: 0.5rem 0.75rem;
+      background: var(--color-primary); color: var(--color-on-primary);
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .sg-overview-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+    .sg-overview-table tr:last-child td { border-bottom: none; }
+    .sg-divider { border: none; border-top: 2px solid var(--color-border); margin: 3rem 0; }
+
+    /* ── Chapter tab bar ──────────────────────────────────────── */
+    .sg-tabs {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--color-bg, #fff);
+      border-bottom: 2px solid var(--color-border);
+      /* pull full width outside the container */
+      margin: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .sg-tabs::-webkit-scrollbar { display: none; }
+    .sg-tabs__inner {
+      display: flex;
+      min-width: max-content;
+      padding: 0 1rem;
+    }
+    .sg-tab-btn {
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 0.625rem 0.8rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      margin-bottom: -2px;        /* overlap the nav border-bottom */
+      transition: color 0.12s, border-color 0.12s;
+      line-height: 1;
+    }
+    .sg-tab-btn:hover { color: var(--color-text); }
+    .sg-tab-btn.is-active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+      font-weight: 700;
+    }
+    /* Separator before "1" */
+    .sg-tab-btn[data-target="ch-1"] { border-left: 1px solid var(--color-border); margin-left: 0.5rem; padding-left: 1rem; }
+  </style>
+</Fragment>
+<nav class="bk-tier-nav" aria-label="Study tiers" data-tier="guide">
+    <div class="bk-tier-nav__inner">
+      <a class="bk-tier-nav__book" href=".">Hebrews</a>
+      <ol class="bk-tier-nav__list">
+        <li data-tier-item="guide"><a class="bk-tier-nav__link" href="." aria-current="page"><span class="bk-tier-nav__icon">◎</span><span class="bk-tier-nav__label">Study Guide</span><span class="bk-tier-nav__sub">Chapter study</span></a></li>
+        <li data-tier-item="deep-dive"><a class="bk-tier-nav__link" href="../../topics/hebrews/deep-dive.html"><span class="bk-tier-nav__icon">⊕</span><span class="bk-tier-nav__label">Deep Dive</span><span class="bk-tier-nav__sub">Scholarly analysis</span></a></li>
+        <li data-tier-item="commentary" hidden=""><a class="bk-tier-nav__link" href="../../topics/hebrews/commentary.html"><span class="bk-tier-nav__icon">❧</span><span class="bk-tier-nav__label">Commentary</span><span class="bk-tier-nav__sub">Classic voices</span></a></li>
+      </ol>
+      <a class="bk-tier-nav__back" href="../../studies/">← All Studies</a>
+    </div>
+  </nav><header class="tg-hero tg-hero--cross" style="--tg-accent: #1e3a6e">
+    <div class="tg-hero__inner">
+      <span class="tg-hero__type">Study Guide · 13 Chapters</span>
+      <h1 class="tg-hero__title">Hebrews: The Better Covenant</h1>
+      <p class="tg-hero__intro">
+        The book of Hebrews makes the most sustained, OT-saturated argument in the New Testament:
+        Jesus is the fulfilment and surpassing of everything God did in the old covenant — as
+        prophet, priest, king, sacrifice, and covenant mediator. This guide works chapter by
+        chapter, returning to every major Old Testament passage in its original context so the
+        writer's case lands with its full cumulative force.
+      </p>
+      <blockquote class="tg-hero__key-verse">
+        <p>Long ago, at many times and in many ways, God spoke to our fathers by the prophets,
+           but in these last days he has spoken to us by his Son.</p>
+        <cite><a class="ref" data-ref="Hebrews 1:1-2">Hebrews 1:1–2</a></cite>
+      </blockquote>
+    </div>
+  </header><nav class="sg-tabs" aria-label="Chapter navigation">
+    <div class="sg-tabs__inner">
+      <button class="sg-tab-btn" data-target="introduction">Introduction</button>
+      <button class="sg-tab-btn" data-target="ch-1" title="God Has Spoken in His Son">1</button>
+      <button class="sg-tab-btn" data-target="ch-2" title="Made Like His Brothers">2</button>
+      <button class="sg-tab-btn" data-target="ch-3" title="Do Not Harden Your Hearts">3</button>
+      <button class="sg-tab-btn" data-target="ch-4" title="Entering God's Rest">4</button>
+      <button class="sg-tab-btn" data-target="ch-5" title="He Learned Obedience">5</button>
+      <button class="sg-tab-btn" data-target="ch-6" title="The Anchor of Hope">6</button>
+      <button class="sg-tab-btn" data-target="ch-7" title="A Priest Forever">7</button>
+      <button class="sg-tab-btn" data-target="ch-8" title="Written on Their Hearts">8</button>
+      <button class="sg-tab-btn" data-target="ch-9" title="The Better Sanctuary">9</button>
+      <button class="sg-tab-btn" data-target="ch-10" title="Once for All">10</button>
+      <button class="sg-tab-btn" data-target="ch-11" title="By Faith">11</button>
+      <button class="sg-tab-btn" data-target="ch-12" title="The Unshakeable Kingdom">12</button>
+      <button class="sg-tab-btn" data-target="ch-13" title="Outside the Camp">13</button>
+    </div>
+  </nav><main>
+    <div class="container">
+
+      <section class="tg-section" id="introduction">
+        <h2 class="tg-section__heading">How to Use This Guide</h2>
+        <p>Hebrews calls itself "a word of exhortation" (<a class="ref" data-ref="Hebrews 13:22">13:22</a>) —
+        the same phrase used of a synagogue homily in <a class="ref" data-ref="Acts 13:15">Acts 13:15</a>.
+        It was a sermon before it was a letter, designed to be heard as a continuous argument. Every
+        chapter builds on the last. The writer is not cataloguing truths; he is making a case —
+        a relentless, OT-saturated case that Jesus is better than everything the congregation
+        might return to.</p>
+        <p>The danger he is addressing is not heresy but <em>drift</em>: a community tempted
+        to step back from costly allegiance to Jesus, pulled by social pressure, persecution,
+        or nostalgia for the old covenant's visible forms. His answer is not to argue them
+        into compliance but to show them — with overwhelming scriptural evidence — what they
+        would be abandoning.</p>
+        <p>Each chapter below includes: <strong>The Argument</strong> (what move the writer is
+        making here and how it fits the overall case), <strong>OT Background boxes</strong>
+        (the original context of every major quotation, read before Hebrews deploys it), and
+        <strong>Discussion Questions</strong>.</p>
+
+        <table class="sg-overview-table">
+          <thead><tr><th>Chapter</th><th>Title</th><th>Key OT Texts</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#ch-1">1</a></td><td>God Has Spoken in His Son</td><td>Ps 2; 2 Sam 7; Ps 45; Ps 102; Ps 110</td></tr>
+            <tr><td><a href="#ch-2">2</a></td><td>Made Like His Brothers</td><td>Ps 8; Ps 22; Isa 8</td></tr>
+            <tr><td><a href="#ch-3">3</a></td><td>Do Not Harden Your Hearts</td><td>Num 12; Ps 95; Num 13–14</td></tr>
+            <tr><td><a href="#ch-4">4</a></td><td>Entering God's Rest</td><td>Ps 95; Gen 2; Josh 22</td></tr>
+            <tr><td><a href="#ch-5">5</a></td><td>He Learned Obedience</td><td>Ps 2; Ps 110; Lev 16</td></tr>
+            <tr><td><a href="#ch-6">6</a></td><td>The Anchor of Hope</td><td>Gen 22</td></tr>
+            <tr><td><a href="#ch-7">7</a></td><td>A Priest Forever</td><td>Gen 14; Ps 110:4</td></tr>
+            <tr><td><a href="#ch-8">8</a></td><td>Written on Their Hearts</td><td>Exod 25; Jer 31</td></tr>
+            <tr><td><a href="#ch-9">9</a></td><td>The Better Sanctuary</td><td>Lev 16; Exod 24</td></tr>
+            <tr><td><a href="#ch-10">10</a></td><td>Once for All</td><td>Ps 40; Jer 31; Hab 2; Deut 32</td></tr>
+            <tr><td><a href="#ch-11">11</a></td><td>By Faith</td><td>Gen 4–22; Exod 2–14; Josh 2</td></tr>
+            <tr><td><a href="#ch-12">12</a></td><td>The Unshakeable Kingdom</td><td>Prov 3; Exod 19; Hag 2</td></tr>
+            <tr><td><a href="#ch-13">13</a></td><td>Outside the Camp</td><td>Deut 31; Josh 1; Ps 118</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 1 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-1">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 1</span>
+          <span class="sg-chapter-ref">Hebrews 1:1–14</span>
+        </div>
+        <h2 class="tg-section__heading">God Has Spoken in His Son</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> Before asking anything of the reader, the writer builds
+          the entire foundation — who Jesus is. The opening is a single, elaborately constructed
+          Greek sentence that assigns the Son seven attributes spanning creation, sustaining
+          providence, priestly atonement, and royal enthronement. Then seven Old Testament
+          quotations are chained together to prove one point: the Son categorically surpasses
+          the angels. This matters because the law was given through angel-mediation (Gal 3:19;
+          Acts 7:53). A word that comes through the Son is therefore a word of higher authority
+          than the law.
+        </div>
+
+        <p>The seven attributes in vv.2–3 are not random: they move from the Son's cosmic role
+        (heir, creator, radiance, exact imprint, sustainer) through his redemptive act
+        (purification for sins) to his present royal position (seated at the right hand).
+        That sequence — cosmic → priestly → royal — is the skeleton of the whole letter. Chapter 1
+        states it in one breath; chapters 7–10 will unpack the priestly element alone.</p>
+
+        <p>"Exact imprint of his nature" (<em>charakter tēs hypostaseōs</em>): <em>charakter</em>
+        is the impression left by a die-stamp — not merely resembling the original but carrying
+        identical form. The Son does not approximate the Father; he is the Father's nature made
+        visible. "Radiance of his glory" (<em>apaugasma</em>): not reflected light but outshining
+        — the light that light comes from. Both images insist on identity, not likeness.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 2 (The Messianic King)</span>
+          <p>A royal enthronement psalm, used at Davidic coronations. The nations conspire against
+          God's anointed; God laughs and installs his king on Zion. The divine address:
+          <em>"You are my Son; today I have begotten you"</em>
+          (<a class="ref" data-ref="Psalm 2:7">v.7</a>) is a royal adoption formula — the
+          moment of coronation as the moment of entering the father-son covenant relationship
+          with God. The NT applies Psalm 2:7 consistently to the <em>resurrection and
+          exaltation</em> (see <a class="ref" data-ref="Acts 13:33">Acts 13:33</a>;
+          <a class="ref" data-ref="Romans 1:4">Rom 1:4</a>): the ultimate enthronement was
+          Easter and Ascension, not Bethlehem.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · 2 Samuel 7:12–14 (The Davidic Covenant)</span>
+          <p>Nathan's oracle to David: God will build David a dynasty; one of his sons will build
+          the temple, and God says, <em>"I will be his Father, and he will be my Son"</em>
+          (<a class="ref" data-ref="2 Samuel 7:14">2 Sam 7:14</a>). No historical Davidic king
+          fully inhabits this covenant formula — the prophets keep pointing beyond
+          (<a class="ref" data-ref="Isaiah 9:6-7">Isa 9:6–7</a>;
+          <a class="ref" data-ref="Ezekiel 34:23-24">Ezek 34:23–24</a>). Hebrews 1:5 pairs
+          this with Psalm 2:7 as the two foundational Davidic covenant texts, and notes that
+          God never said either of them to an angel. The category "Son" in this covenantal,
+          royal sense belongs exclusively to Christ.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 45:6–7 (The King Called God)</span>
+          <p>A royal wedding song in which the king is addressed as <em>Elohim</em> — God
+          (<a class="ref" data-ref="Psalm 45:6">v.6</a>). This always puzzled Jewish interpreters:
+          how can a mortal Davidic king be called God? Hebrews 1:8–9 quotes it of the Son without
+          softening. The "problem" of Psalm 45 resolves only when you see it was written for the
+          divine-human king. Note also v.9: "God, <em>your</em> God, has anointed you" — within
+          the Son's divine identity, there is real relational distinction from the Father.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 102:25–27 (The Eternal Creator)</span>
+          <p>A lament psalm. The psalmist is suffering; he anchors his hope in the contrast between
+          creation's impermanence and God's eternity: <em>"Of old you laid the foundation of the
+          earth… They will perish, but you will remain"</em>
+          (<a class="ref" data-ref="Psalm 102:25-27">vv.25–27</a>). This address is directed to
+          YHWH. Hebrews 1:10–12 applies it directly to the Son — one of the NT's clearest
+          identifications of Jesus with Israel's covenant God.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 110:1 (The Most Cited OT Verse in the NT)</span>
+          <p><em>"The LORD said to my Lord: 'Sit at my right hand, until I make your enemies
+          your footstool'"</em> (<a class="ref" data-ref="Psalm 110:1">v.1</a>). David calls his
+          own descendant "my Lord" — the Messiah is simultaneously David's son and David's Lord.
+          The NT cites Psalm 110 more than any other OT text. In Hebrews it anchors three moments:
+          1:13 (the Son's enthronement), 8:1 (the seated high priest), and 10:12–13 (the completed
+          sacrifice). The "until" keeps the eschatological tension alive: enthronement is real,
+          full subjection is still coming. Psalm 110:4 will reappear in chapters 5 and 7 as the
+          key text for the Melchizedekian priesthood.</p>
+        </div>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The opening contrasts God speaking "at many times and in many ways" through the
+            prophets with the final word in the Son. How does this framing help you understand
+            the relationship between the Old and New Testaments? Does it suggest the OT is less
+            valuable, or differently valuable?</li>
+            <li>The Son is described as both the "radiance of God's glory" and the "exact imprint
+            of his nature." What do both images together tell us about the relationship between
+            Jesus and the Father?</li>
+            <li>Seven OT texts — from royal psalms, a covenant oracle, and a lament — all
+            converge on Christ in this one chapter. What does it say about how to read the OT
+            that such different texts point to the same person?</li>
+            <li>The angels mediated the old covenant law. If the Son outranks them, what does
+            that imply about the authority of the word he brings?</li>
+            <li>The writer's first move is establishing <em>who Jesus is</em> before making any
+            demands. Why start with Christology? What changes in a congregation when they are
+            gripped by who Christ actually is?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 2 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-2">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 2</span>
+          <span class="sg-chapter-ref">Hebrews 2:1–18</span>
+        </div>
+        <h2 class="tg-section__heading">Made Like His Brothers</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> Chapter 1 established the Son's transcendence. Now the
+          argument makes its first paradoxical turn: the same Son became <em>lower</em> than the
+          angels — and this is not an embarrassment but a necessity. The incarnation is the
+          redemptive strategy through which he qualifies as the merciful and faithful high priest.
+          Two OT texts (Psalm 8 and Psalm 22) and one prophetic passage (Isaiah 8) show that the
+          Son has entered fully into human experience — including its suffering and its cry —
+          and is therefore fitted to represent us.
+        </div>
+
+        <div class="sg-warning">
+          <span class="sg-warning__label">Warning 1 — <a class="ref" data-ref="Hebrews 2:1-4">2:1–4</a></span>
+          <p>The first of five warnings. If the word given through angels (the Mosaic law) carried
+          severe penalties for disobedience, how much more serious to neglect the salvation
+          announced by the Lord himself? The danger is <em>drift</em> (<em>pararreō</em> — like
+          a ship slipping its moorings while no one watches). Not violent rejection but gradual,
+          negligent loosening of grip.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 8 (Humanity's Calling and Its Recovery)</span>
+          <p>David looks at the night sky and asks, <em>"What is man that you are mindful of
+          him?"</em> — then immediately reverses: humanity is crowned with glory and honour,
+          given dominion over all creation (<a class="ref" data-ref="Psalm 8:4-6">vv.4–6</a>).
+          The psalm's OT background is <a class="ref" data-ref="Genesis 1:26-28">Genesis 1:26–28</a>:
+          humanity as God's royal steward. But the vocation is visibly unfulfilled — creation
+          is not "in subjection" to humanity in any meaningful sense. The tension between the
+          declared destiny and the observable reality is precisely what Hebrews 2:8 names:
+          "we do not yet see everything in subjection to him."</p>
+          <p>The move in 2:9 is decisive: <em>"But we see him — Jesus"</em> — the singular
+          human who has been crowned with glory and honour, through death. He did not bypass
+          the vocation of humanity; he fulfilled it by going lower (into mortality, into the
+          curse) and through that descent brought many sons to glory. The Son entered what Psalm 8
+          describes as humanity's calling, and through his own death and resurrection opened the
+          way for its recovery.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 22:22 (The Forsaken Son Who Leads Worship)</span>
+          <p>Psalm 22 opens with the cry of dereliction that Jesus quoted from the cross:
+          <em>"My God, my God, why have you forsaken me?"</em> The psalm traces the full depth
+          of abandonment — mocked, surrounded, laid in the dust of death. But it does not end
+          in silence. After the depths, a turn: <em>"I will declare your name to my brothers;
+          in the midst of the congregation I will praise you"</em>
+          (<a class="ref" data-ref="Psalm 22:22">v.22</a>). The one who was forsaken becomes
+          the one who leads the assembly in praise. Hebrews 2:12 places this declaration in
+          the risen Christ's mouth: he has come through forsakenness, and now stands in the
+          congregation — singing. The resurrection did not put Christ at a safe distance from
+          suffering; it put him in the middle of his brothers, having been there.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Isaiah 8:17–18 (The Faithful Remnant)</span>
+          <p>King Ahaz faces the Syro-Ephraimitic coalition; the nation chooses political
+          calculation over trust in God. Isaiah refuses to follow the crowd and positions himself
+          as a faithful remnant: <em>"I will trust in him… Here am I and the children God has
+          given me"</em> (<a class="ref" data-ref="Isaiah 8:17-18">vv.17–18</a>). Isaiah and
+          his disciples become a sign community — a small remnant embodying trust in God's word
+          while the majority turns away. Hebrews 2:13 places both phrases in Christ's mouth:
+          he is the one who trusted the Father through the cross (the ultimate trust-in-darkness),
+          and he and "the children God has given him" are the new faithful remnant around whom
+          the people of God are reconstituted.</p>
+        </div>
+
+        <p>"He had to be made like his brothers in every respect, so that he might become a
+        merciful and faithful high priest" (<a class="ref" data-ref="Hebrews 2:17">2:17</a>). Two qualifications: <strong>merciful</strong>
+        (he can sympathise because he has inhabited what we inhabit — hunger, grief, betrayal,
+        the approach of death) and <strong>faithful</strong> (he can represent us before God
+        because he fulfilled the human vocation we failed, without sinning). The incarnation
+        is not incidental to the priestly argument — it is its prerequisite.</p>
+
+        <p>"Made perfect through suffering" (<a class="ref" data-ref="Hebrews 2:10">2:10</a>): <em>teleioō</em> means to bring to completion,
+        to fit for purpose. The suffering did not fix a moral flaw; it completed a formation —
+        the Son entered the full range of creaturely experience and in doing so was fitted to be
+        the pioneer who leads many sons through death into glory.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Psalm 8 describes humanity as crowned stewards of creation, yet "we do not yet
+            see everything in subjection" (<a class="ref" data-ref="Hebrews 2:8">2:8</a>). Where do you most feel the gap between human
+            calling and human reality — in your own life, or in the world?</li>
+            <li>The risen Jesus stands in the congregation singing (Ps 22:22). What does it mean
+            that the one who was forsaken on the cross is now present in the assembly of his
+            people? Does your experience of gathered worship reflect this?</li>
+            <li>The first warning is against <em>drifting</em> — not deliberate rebellion but
+            gradual neglect. What conditions cause spiritual drift? What does the writer imply
+            is the remedy?</li>
+            <li>If Jesus had bypassed suffering and gone directly to resurrection, what would we
+            have lost? Why does the <em>path</em> he took matter, not just the destination he
+            reached?</li>
+            <li>The incarnation qualifies Jesus to be our high priest. What does it mean to you
+            that your mediator before God is someone who has actually felt what you feel?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 3 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-3">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 3</span>
+          <span class="sg-chapter-ref">Hebrews 3:1–19</span>
+        </div>
+        <h2 class="tg-section__heading">Do Not Harden Your Hearts</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The comparison shifts from angels to Moses — the supreme
+          human mediator of the old covenant. The writer grants Moses every honour the tradition
+          gives him, then draws one structural distinction: Moses was faithful <em>in</em> the
+          household as a servant; the Son is faithful <em>over</em> it as heir. Having established
+          this, the writer deploys Psalm 95 — the ancient warning not to repeat the wilderness
+          generation's catastrophic failure — and holds it over the congregation as a burning
+          mirror. The warning will carry through into chapter 4.
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Numbers 12:6–8 (Moses, the Unique Prophet)</span>
+          <p>When Miriam and Aaron challenge Moses's unique authority, God himself speaks in his
+          defence: while other prophets receive dreams and visions, Moses he speaks with
+          <em>face to face</em>, in plain speech, not riddles — "he is faithful in all my house"
+          (<a class="ref" data-ref="Numbers 12:7">Num 12:7</a>). This is the commendation
+          Hebrews 3:2 quotes. The writer is honouring Moses to the hilt before drawing the
+          contrast. Moses is not diminished; he is placed in his proper category — and that
+          category is servant, not Son.</p>
+        </div>
+
+        <p>The Moses/Son contrast is structural, not comparative. "Moses was faithful in all
+        God's house as a servant… but Christ is faithful over God's house as a Son" (<a class="ref" data-ref="Hebrews 3:5-6">3:5–6</a>).
+        The servant is inside the structure; the Son is the heir the whole structure was built
+        for and points toward. Moses gave the signpost; Jesus is the destination. Moses bore
+        witness to things that "would be spoken later" — his entire ministry was forward-pointing,
+        anticipatory, incomplete by design.</p>
+
+        <div class="sg-warning">
+          <span class="sg-warning__label">Warning 2 (Part 1) — <a class="ref" data-ref="Hebrews 3:7-19">3:7–19</a></span>
+          <p>The second and most extended warning passage, built entirely from Psalm 95.
+          Its logic: if Israel in the wilderness heard God's voice and hardened their hearts,
+          forfeiting entry into the land, what will happen to those who hear the Son and turn
+          away? The warning is introduced with <em>"as the Holy Spirit says"</em> — present
+          tense. The psalm is being spoken now, to this congregation.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 95 and Numbers 13–14 (The Kadesh Barnea Crisis)</span>
+          <p>Psalm 95 opens as a call to worship — joyful, communal, exuberant. Then without
+          transition it pivots: <em>"Today, if you hear his voice, do not harden your hearts,
+          as at Meribah, as on the day at Massah in the wilderness"</em>
+          (<a class="ref" data-ref="Psalm 95:7-8">vv.7–8</a>). The event recalled is
+          <a class="ref" data-ref="Numbers 13:1-14:45">Numbers 13–14</a>: twelve spies return
+          from Canaan; ten report impossibility; two (Caleb and Joshua) urge trust. The people
+          choose fear. God's verdict: the entire generation that witnessed his signs in Egypt
+          and the wilderness will not enter the land
+          (<a class="ref" data-ref="Numbers 14:22-23">Num 14:22–23</a>). They wander until
+          they die within sight of what they forfeited.</p>
+          <p>The psalmist takes this historical catastrophe and converts it into a
+          <em>perpetual present-tense warning</em>. The word "today" refuses to let Kadesh Barnea
+          become a safely distant past event. It remains the template for every generation's
+          response to God's voice. Hebrews seizes this "today" and makes it the hinge of the
+          warning: the same choice is live for this congregation right now.</p>
+          <p>Three times in chapter 3 (vv.8, 15, 4:7) the writer hammers the "today." It is not
+          a literary device; it is the pastoral claim that the offer of rest is present-tense and
+          can be present-tense forfeited.</p>
+        </div>
+
+        <p>The chapter ends with a diagnostic question: "Who were those who heard and yet rebelled?
+        Was it not all those who left Egypt led by Moses? And with whom was he provoked for forty
+        years? Was it not with those who sinned, whose bodies fell in the wilderness?" (<a class="ref" data-ref="Hebrews 3:16-17">3:16–17</a>).
+        The rhetorical answer is devastating: people who had seen the plagues, walked through the
+        sea, eaten manna, drunk from the rock — and still would not trust. Their failure was not
+        ignorance; it was unbelief in the face of evidence. "So we see that they were unable to
+        enter because of unbelief" (<a class="ref" data-ref="Hebrews 3:19">3:19</a>). Unbelief, not capability, is the issue.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Moses is honoured as "faithful in all God's house" — and then placed in the
+            category of servant, not Son. How does this help you hold Moses and Jesus together
+            properly? What does it mean to read the Torah in light of its own servant-role?</li>
+            <li>The Kadesh Barnea generation saw God's miracles in Egypt and the wilderness and
+            still turned back. How is it possible to witness clear evidence of God's faithfulness
+            and still fail to trust him when it counts?</li>
+            <li>Psalm 95 converts a past catastrophe into a present-tense warning by using the
+            word "today." What does it mean that this ancient psalm is "the Holy Spirit speaking"
+            to us now? Do you read OT narratives as warnings that apply to you personally?</li>
+            <li>The wilderness generation's failure was unbelief — not ignorance, not sinlessness,
+            but refusal to trust God's word when it was costly. What is the equivalent pressure
+            point for your own faith right now?</li>
+            <li>The writer addresses a community in danger of drift, not apostasy. What is the
+            difference between drifting and deliberate rejection? Why might drift be the
+            more common danger?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 4 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-4">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 4</span>
+          <span class="sg-chapter-ref">Hebrews 4:1–16</span>
+        </div>
+        <h2 class="tg-section__heading">Entering God's Rest</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The Psalm 95 warning continues, but now the writer
+          develops what "God's rest" actually means. The land of Canaan was never the full
+          content of the promise — Psalm 95 was written after Joshua's conquest and still
+          offered and threatened the rest. The writer reaches behind Canaan to Genesis 2: God's
+          own Sabbath rest, the goal creation was always moving toward. That rest is still open.
+          The chapter closes with the pivot that opens the letter's second great movement:
+          the great high priest.
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Genesis 2:1–3 (The Seventh Day — Still Open)</span>
+          <p>After six days of creation, each marked by "there was evening and morning," God
+          rests on the seventh day and hallows it. Unlike the other six days, the seventh has
+          no closing formula. The Rabbis noticed this: the seventh day has no "evening" —
+          it is still ongoing. God's Sabbath rest is not terminated; it continues as the
+          eschatological goal toward which creation moves.</p>
+          <p>Hebrews 4:3–4 quotes <a class="ref" data-ref="Genesis 2:2">Genesis 2:2</a> and
+          makes it foundational: the "rest" Psalm 95 warns about is not the land of Canaan —
+          it is participation in the Sabbath God entered on the seventh day of creation. The
+          land was a type, an earthly pointer. The true rest is eschatological communion with
+          God in the new creation. This is what the wilderness generation forfeited, what
+          Joshua's generation only partially entered, and what is still open — "there remains
+          a Sabbath rest for the people of God" (<a class="ref" data-ref="Hebrews 4:9">4:9</a>).</p>
+        </div>
+
+        <p>The logical sequence of 4:1–11 is carefully constructed. The promise of rest
+        was announced in the Torah (Psalm 95 = Mosaic period). It was not fully received
+        in Joshua's conquest — because the psalm speaks of it as still available
+        <em>after</em> Joshua (<a class="ref" data-ref="Hebrews 4:8">4:8</a>). Therefore it points to something beyond Canaan. What?
+        The rest God himself entered — the Sabbath of the new creation. And since the offer
+        is still live ("a Sabbath rest remains"), the warning is still live too: "Let us
+        therefore strive to enter that rest, so that no one may fall by the same sort of
+        disobedience" (<a class="ref" data-ref="Hebrews 4:11">4:11</a>). Resting and striving are not opposites here — the striving
+        is the daily, deliberate refusal to harden the heart.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · The Word of God as Sword (<a class="ref" data-ref="Hebrews 4:12-13">4:12–13</a>)</span>
+          <p>The passage closes with a description of the word of God that is also a description
+          of what just happened to the reader: "living and active, sharper than any two-edged
+          sword, piercing to the division of soul and spirit, of joints and marrow, and
+          discerning the thoughts and intentions of the heart" (<a class="ref" data-ref="Hebrews 4:12">4:12</a>). This is not a general
+          statement about Scripture in the abstract — it is the writer naming the effect of
+          the warning they just received. The word of God sees through all pretence. Then 4:13
+          pivots: "before him to whom we must give account" — the word is also the Son, the
+          divine judge before whom all is naked and exposed. The threat is personal, not
+          impersonal. And immediately, before the reader can despair, 4:14 turns it into an
+          invitation: the same Son is our great high priest. The judge and the advocate are
+          the same person.</p>
+        </div>
+
+        <p>Verses 14–16 are a hinge: they complete the warning section and open the priesthood
+        section. "Since then we have a great high priest who has passed through the heavens,
+        Jesus, the Son of God, let us hold fast our confession." The logic: the one who sees
+        through us is the same one who intercedes for us. Knowing this, we do not flee the
+        throne of grace — we come boldly.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The writer argues that the promised "rest" was always greater than the land of
+            Canaan — it was participation in God's own Sabbath. What does it mean for the
+            Christian life that the ultimate rest is eschatological — not yet fully received?
+            How should that shape how you hold both present experience and future hope?</li>
+            <li>"There remains a Sabbath rest for the people of God" (<a class="ref" data-ref="Hebrews 4:9">4:9</a>). What does entering
+            God's rest look like in practice today? Is it rest <em>from</em> something, or
+            rest <em>in</em> something?</li>
+            <li>The word of God is described as a two-edged sword that discerns the thoughts
+            and intentions of the heart. When has Scripture done that to you — cut through the
+            surface and exposed something deeper?</li>
+            <li>The transition from 4:13 (all is naked before the divine judge) to 4:14–16
+            (come boldly to the throne of grace) is abrupt. What makes that movement possible?
+            What would be missing if you only had one without the other?</li>
+            <li>"He was tempted as we are, yet without sin" (<a class="ref" data-ref="Hebrews 4:15">4:15</a>). Why does the writer insist
+            on both parts of that clause together? What does "yet without sin" do to the
+            sympathy the first part establishes?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 5 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-5">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 5</span>
+          <span class="sg-chapter-ref">Hebrews 5:1–14</span>
+        </div>
+        <h2 class="tg-section__heading">He Learned Obedience</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The high priest is now introduced formally, and the
+          writer establishes two qualifications: he must be able to sympathise (he comes from
+          among the people he represents), and he must be divinely appointed (no one seizes
+          this office). Both qualifications are met in Christ — but in a way that exceeds
+          Aaron. The Aaronic appointment was by hereditary law; Christ's was by divine oath
+          to a different order entirely. The chapter ends with a warning that the congregation
+          is too immature to receive what the writer is about to teach.
+        </div>
+
+        <p>The Aaronic high priest was qualified by limitation: he was taken from among men,
+        subject to weakness, able to deal gently with the ignorant and wayward "since he himself
+        is beset with weakness" (<a class="ref" data-ref="Hebrews 5:2">5:2</a>). He offered sacrifice for his own sins as well as the
+        people's. His sympathy was earned by shared frailty. And he did not appoint himself —
+        God called him, as he called Aaron (<a class="ref" data-ref="Hebrews 5:4">5:4</a>).</p>
+
+        <p>Christ's qualifications are both parallel and surpassing. He was "heard" in his prayers
+        "because of his reverence" (<a class="ref" data-ref="Hebrews 5:7">5:7</a>) — the Gethsemane prayers with "loud crying and tears,
+        to him who was able to save him from death." He was not saved <em>from</em> death but
+        <em>through</em> it — the answer to his prayer was resurrection, not exemption. And
+        "although he was a Son, he learned obedience through what he suffered" (<a class="ref" data-ref="Hebrews 5:8">5:8</a>). This is
+        not a deficiency in the eternal Son; it is the description of what genuine human
+        obedience requires — actual testing, actual cost, actual choice under pressure when
+        the alternative is real.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Leviticus 16 (The Day of Atonement)</span>
+          <p>Yom Kippur is the climax of the Levitical calendar. Once per year, on the tenth of
+          the seventh month, the high priest alone entered the Most Holy Place — the inner chamber
+          where the ark rested and God's glory dwelt. But not without blood
+          (<a class="ref" data-ref="Leviticus 16:2">Lev 16:2</a>). The ritual required two animals:
+          a bull for the high priest's own sin, a goat for the people's. The high priest carried
+          blood into the inner sanctuary and sprinkled it on and before the mercy seat
+          (<a class="ref" data-ref="Leviticus 16:15">Lev 16:15</a>). A second goat — the scapegoat
+          — had the sins of the people confessed over it and was driven into the wilderness.</p>
+          <p>The repetition is the point Hebrews will seize: if the sacrifice truly and permanently
+          dealt with sin, why do it again next year? The annual return is the system's built-in
+          confession that the problem remains unresolved. Yom Kippur was not a solution; it was
+          a holding pattern, maintaining covenant relationship while pointing forward to a
+          once-for-all answer. The spatial logic also matters: the Most Holy Place was accessible
+          to one person, once a year. The veil was a boundary announcing that the way into God's
+          direct presence had not yet been opened (<a class="ref" data-ref="Hebrews 9:8">9:8</a>).</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 110:4 (First Appearance — the Eternal Priest)</span>
+          <p>Psalm 110 contains two oracles. The first (v.1: "Sit at my right hand") opened
+          chapter 1. The second appears here for the first time: <em>"The LORD has sworn and
+          will not change his mind, 'You are a priest forever, after the order of
+          Melchizedek'"</em> (<a class="ref" data-ref="Psalm 110:4">v.4</a>). The writer quotes
+          it twice in chapter 5 (vv.6 and 10) but does not yet explain it — he is deliberately
+          building anticipation. Chapter 7 will be entirely devoted to unpacking what this
+          oracle means. For now, the key observation: unlike Aaron's appointment by hereditary
+          law, this priest is appointed by an irrevocable divine <em>oath</em> to a different
+          order entirely. The oath and the order are both significant, and both will be
+          fully argued later.</p>
+        </div>
+
+        <p>The chapter ends with an uncomfortable pastoral diagnosis: "About this we have much
+        to say, and it is hard to explain, since you have become dull of hearing" (<a class="ref" data-ref="Hebrews 5:11">5:11</a>).
+        The Greek <em>nōthroi</em> means sluggish, slow, dulled by disuse. They are not new
+        believers — "by this time you ought to be teachers" (<a class="ref" data-ref="Hebrews 5:12">5:12</a>). But they have regressed
+        to needing milk when solid food is what the argument requires. The warning is not
+        harsh condemnation but urgent pastoral pressure: what follows in chapters 7–10 requires
+        theological engagement. You cannot drift through it.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Jesus prayed with "loud crying and tears" to be saved from death (<a class="ref" data-ref="Hebrews 5:7">5:7</a>) and was
+            "heard because of his reverence." He was not saved from death but through it. What
+            does this tell you about what it means to have your prayer answered? How does it
+            reshape what you expect from God when you pray in extremity?</li>
+            <li>"He learned obedience through what he suffered" (<a class="ref" data-ref="Hebrews 5:8">5:8</a>). If the eternal Son of
+            God had to <em>learn</em> obedience through actual suffering, what does that say
+            about the nature of human obedience? What is it about suffering that teaches what
+            nothing else can?</li>
+            <li>The Yom Kippur ritual had to be repeated every year — the repetition was its
+            confession of inadequacy. Are there areas of your Christian life where you keep
+            returning to deal with something that you have not yet trusted Christ to have
+            fully resolved?</li>
+            <li>The writer accuses the congregation of being "dull of hearing" — spiritually
+            sluggish, still on milk when they should be on solid food. What produces spiritual
+            sluggishness? What is the cure?</li>
+            <li>The Aaronic high priest could sympathise because he shared the people's weakness;
+            Christ can sympathise because he shared the people's suffering. What is the
+            difference — and does it matter?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 6 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-6">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 6</span>
+          <span class="sg-chapter-ref">Hebrews 6:1–20</span>
+        </div>
+        <h2 class="tg-section__heading">The Anchor of Hope</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The most alarming warning in the letter is issued here,
+          then deliberately counterbalanced by the most secure ground of hope: God's sworn oath
+          to Abraham. The writer is not trying to paralyse his readers with fear — he moves
+          quickly through the danger to the anchor. The warning defines what falling away looks
+          like and why it is so severe. The anchor shows why those who hold fast have every
+          reason for confidence that cannot be shaken.
+        </div>
+
+        <div class="sg-warning">
+          <span class="sg-warning__label">Warning 3 — <a class="ref" data-ref="Hebrews 6:4-8">6:4–8</a></span>
+          <p>The writer describes those who have "been enlightened, who have tasted the heavenly
+          gift, and have shared in the Holy Spirit, and have tasted the goodness of the word of
+          God and the powers of the age to come" — and who then fall away. He says it is
+          "impossible to renew them again to repentance." This passage has generated enormous
+          debate; the key to reading it rightly is the logic that follows. The writer is not
+          setting a limit on divine forgiveness. He is making a structural argument: there is
+          only one sacrifice that removes sin — Christ's. If you repudiate that sacrifice, there
+          is no alternative sacrifice to which you can appeal. Re-crucifying Christ is not an
+          option. The warning is aimed not at those who have stumbled and feel guilt (the letter
+          is full of encouragement for them) but at those considering a cool, deliberate, final
+          repudiation of Christ. "Falling away" here means apostasy — not failure.</p>
+        </div>
+
+        <p>The writer pivots immediately: "though we speak in this way, yet in your case, beloved,
+        we feel sure of better things" (<a class="ref" data-ref="Hebrews 6:9">6:9</a>). The warning was not the writer's verdict on the
+        congregation — it was the warning about what would be true <em>if</em> they went that
+        direction. He is confident they will not. The agricultural image of 6:7–8 reinforces this:
+        land that drinks rain and bears a harvest is blessed; land that produces only thorns is
+        cursed and burned. The question is what kind of land you are — and the writer believes
+        they are the fruitful kind.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Genesis 22:15–18 (God Swears by Himself)</span>
+          <p>After Abraham raises the knife over Isaac and God provides the ram,
+          God speaks again — and this time what he says is unprecedented. He swears by himself:
+          <em>"By myself I have sworn, declares the LORD, because you have done this and have
+          not withheld your son, your only son, I will surely bless you and multiply your
+          offspring"</em> (<a class="ref" data-ref="Genesis 22:16-17">Gen 22:16–17</a>).
+          God cannot swear by anything greater than himself, so he swears by himself. The promise
+          becomes doubly secured: the word of God <em>plus</em> the oath of God.</p>
+          <p>Hebrews 6:13–18 draws on this to describe the nature of Christian hope. Abraham
+          waited patiently and received what was promised (<a class="ref" data-ref="Hebrews 6:15">6:15</a>). The heirs of that same promise
+          now have "two unchangeable things, in which it is impossible for God to lie" — the
+          promise and the oath — as the twin moorings of hope. The "anchor of the soul" (<a class="ref" data-ref="Hebrews 6:19">6:19</a>)
+          reaches into the inner place behind the curtain — the heavenly Most Holy Place —
+          where Jesus has gone as forerunner. The anchor holds not because of how tightly we
+          grip it but because of what it is fixed to.</p>
+        </div>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The severe warning of 6:4–6 has troubled readers for centuries. Read it carefully:
+            what kind of "falling away" is being described? What is the structural reason the
+            writer gives for why it is impossible to renew such a person to repentance?</li>
+            <li>The writer moves quickly from warning (<a class="ref" data-ref="Hebrews 6:4-8">6:4–8</a>) to confidence (<a class="ref" data-ref="Hebrews 6:9-12">6:9–12</a>). How does
+            the pastoral tone shift? What does this tell you about how to use warning passages
+            with a congregation?</li>
+            <li>God swears by himself because there is nothing greater to swear by. What does
+            this tell you about the certainty of God's promises? Do you tend to root your
+            confidence in your own faith, or in the promise and oath that are external to you?</li>
+            <li>The "anchor of the soul" is an image of something reaching outside this world
+            into the heavenly sanctuary. What does it mean practically to have your hope fixed
+            to something outside the visible, shakeable world?</li>
+            <li>Abraham received what was promised after patient waiting. How long have you been
+            waiting for something God has promised? What does Abraham's example say about the
+            posture of waiting?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 7 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-7">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 7</span>
+          <span class="sg-chapter-ref">Hebrews 7:1–28</span>
+        </div>
+        <h2 class="tg-section__heading">A Priest Forever</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> Chapter 7 is the structural heart of the letter. The
+          Melchizedek priesthood — introduced twice and left unexplained — is now fully developed.
+          The writer takes two OT texts that seemed minor and obscure (twelve verses in Genesis 14,
+          one verse in Psalm 110) and builds from them an airtight case: the Levitical priesthood
+          was always temporary, always pointing beyond itself, and Scripture itself announced that
+          a different order was coming. The change of priesthood requires a change of law — and
+          the whole Mosaic legal system changes with it.
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Genesis 14:17–20 (Melchizedek Meets Abraham)</span>
+          <p>Abraham has just defeated the four kings who captured Lot. On his return he is met
+          by two kings: the king of Sodom (who offers him the spoils) and the king of Salem.
+          Before the exchange with the king of Sodom, there is a brief, strange encounter:
+          <em>"And Melchizedek king of Salem brought out bread and wine. He was priest of God
+          Most High. And he blessed him and said, 'Blessed be Abram by God Most High… and
+          blessed be God Most High, who has delivered your enemies into your hand.' And Abram
+          gave him a tenth of everything"</em>
+          (<a class="ref" data-ref="Genesis 14:18-20">Gen 14:18–20</a>). Then Melchizedek
+          disappears from the narrative entirely. No genealogy, no birth, no death. He appears
+          once more in the whole OT — in one verse of Psalm 110.</p>
+          <p>The writer treats the narrative's silence as theologically loaded. In the carefully
+          genealogical world of the Torah, to have no recorded parentage, no birth, no death is
+          extraordinary. Hebrews 7:3 notes he is presented "without father, without mother,
+          without genealogy, having neither beginning of days nor end of life" — not a claim
+          that Melchizedek was not a real human being, but a hermeneutical observation: the
+          text presents him outside the hereditary, birth-and-death structures of the
+          Levitical system. He "resembles the Son of God" in this textual presentation —
+          a priest who stands outside time's normal constraints.</p>
+        </div>
+
+        <p>Two arguments emerge from the Genesis 14 episode. First, the <strong>tithe</strong>:
+        Abraham — the patriarch, the father of the nation, in whose loins all Israel exists —
+        tithed to Melchizedek. Levi, though not yet born, was already "in Abraham's loins"
+        (<a class="ref" data-ref="Hebrews 7:10">7:10</a>). Therefore Levi tithed to Melchizedek. The priesthood that receives tithes from
+        Israel was itself in a tributary position to Melchizedek's order. Second, the
+        <strong>blessing</strong>: "the inferior is blessed by the superior" (<a class="ref" data-ref="Hebrews 7:7">7:7</a>). The one
+        who received the covenant promises — Abraham — was blessed by Melchizedek. The
+        hierarchy is clear: Melchizedek's order stands above even the Abrahamic covenant figures.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 110:4 (The Divine Oath to the Eternal Priest)</span>
+          <p>The full force of the single verse: <em>"The LORD has sworn and will not change his
+          mind, 'You are a priest forever, after the order of Melchizedek'"</em>
+          (<a class="ref" data-ref="Psalm 110:4">Ps 110:4</a>). Three elements are decisive:</p>
+          <ul>
+            <li><strong>An oath, not a law:</strong> The Levitical priesthood was established by
+            hereditary legal requirement. This priesthood is established by God's irrevocable
+            sworn word — a higher ordination.</li>
+            <li><strong>"Will not change his mind":</strong> The Levitical priesthood could be
+            and was abolished when the temple fell. This one cannot be, because it rests on
+            God's unchanging oath.</li>
+            <li><strong>"Forever":</strong> Levitical priests died and were replaced. This priest
+            "holds his priesthood permanently, because he continues forever" (<a class="ref" data-ref="Hebrews 7:24">7:24</a>). His
+            priesthood is <em>indestructible</em> (7:16 — <em>akatalyton</em>).</li>
+          </ul>
+        </div>
+
+        <p>"When there is a change in the priesthood, there is necessarily a change in the law
+        as well" (<a class="ref" data-ref="Hebrews 7:12">7:12</a>). The entire Mosaic legal system was organised around the Levitical
+        priesthood — its calendar, sacrifices, purity laws, and access to God. If the
+        priesthood changes, the law changes. Jesus belongs to the tribe of Judah, not Levi
+        (<a class="ref" data-ref="Hebrews 7:14">7:14</a>). Moses said nothing about priests coming from Judah. Christ's priesthood is
+        therefore not a modification of the Mosaic system — it is the arrival of something
+        the Mosaic system was always pointing toward and was never sufficient to produce.</p>
+
+        <p>The chapter closes with accumulating contrasts. Levitical priests: many, because
+        death interrupted each one. Jesus: holds his priesthood permanently. They: offered
+        sacrifices daily for their own sins first, then the people's. He: offered himself once,
+        needing no sacrifice for himself. They: appointed by legal requirement. He: appointed
+        by the oath of God. "He is able to save to the uttermost those who draw near to God
+        through him, since he always lives to make intercession for them" (<a class="ref" data-ref="Hebrews 7:25">7:25</a>).</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The writer builds a major theological argument from twelve verses about a
+            figure who appears twice in the entire OT. What does this tell you about how
+            the writer reads Scripture — and about what it means for you to read the OT
+            in light of Christ?</li>
+            <li>The change of priesthood requires a change of law. How does this help you
+            think about the relationship between the Mosaic law and the Christian life?
+            What has changed, and why?</li>
+            <li>The Levitical priests were appointed by heredity; Christ by God's oath.
+            Why does the mode of appointment matter? What does a priesthood established
+            by oath give the believer that heredity cannot?</li>
+            <li>"He always lives to make intercession" (<a class="ref" data-ref="Hebrews 7:25">7:25</a>). Christ is actively interceding
+            for you right now. What would it change in how you approach God — and how you
+            face difficulty — if you took that seriously?</li>
+            <li>The Levitical priests had to offer for their own sins before they could
+            offer for the people's. What changes in the nature of representation when the
+            priest has no sin of his own to deal with first?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 8 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-8">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 8</span>
+          <span class="sg-chapter-ref">Hebrews 8:1–13</span>
+        </div>
+        <h2 class="tg-section__heading">Written on Their Hearts</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The priestly argument expands to encompass everything
+          the priesthood served: the sanctuary and the covenant. If the Levitical priesthood
+          was a shadow, the sanctuary it served was a shadow too — a copy of the heavenly
+          reality where Christ now ministers. And if the old priesthood inaugurated a covenant,
+          the better priesthood inaugurates a better covenant. The writer's strategic move:
+          rather than arguing against the old covenant, he quotes the prophet Jeremiah — Israel's
+          own prophet — announcing its obsolescence from within the OT itself.
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Exodus 25:8–9, 40 (The Pattern on the Mountain)</span>
+          <p>When God instructs Moses to build the tabernacle, the instructions are not left to
+          human creativity: <em>"Exactly as I show you concerning the pattern of the tabernacle,
+          and of all its furniture, so you shall make it"</em>
+          (<a class="ref" data-ref="Exodus 25:9">Exod 25:9</a>); and again: <em>"See that you
+          make them after the pattern for them, which is being shown you on the mountain"</em>
+          (<a class="ref" data-ref="Exodus 25:40">Exod 25:40</a>). The word "pattern" —
+          <em>tabnît</em> in Hebrew, <em>typos</em> in the LXX — means a model or blueprint.
+          The earthly tabernacle is built according to a heavenly original.</p>
+          <p>Hebrews 8:5 quotes v.40: the Levitical priests serve "a copy and shadow of the
+          heavenly things." This is not an insult to the tabernacle — it was God-given, and
+          real. But a shadow is real precisely because it is caused by something more solid.
+          The tabernacle was the God-given pointer toward the true sanctuary — the presence
+          of God himself — where Christ now ministers.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Jeremiah 31:31–34 (The New Covenant in its Original Context)</span>
+          <p>Historical context: Jerusalem has fallen, or is falling, to Babylon. The Mosaic
+          covenant — given at Sinai, repeatedly broken — is being judged. The prophets called
+          Israel back; they did not return. Now exile is coming. In the middle of this
+          catastrophe, God speaks through Jeremiah the most hopeful passage in the OT:</p>
+          <blockquote class="scripture">
+            "Behold, the days are coming, declares the LORD, when I will make a new covenant
+            with the house of Israel and the house of Judah, not like the covenant that I made
+            with their fathers on the day when I took them by the hand to bring them out of
+            Egypt, my covenant that they broke, though I was their husband, declares the LORD.
+            For this is the covenant that I will make with the house of Israel after those days,
+            declares the LORD: I will put my law within them, and I will write it on their
+            hearts. And I will be their God, and they shall be my people. And no longer shall
+            each one teach his neighbour and each his brother, saying, 'Know the LORD,' for
+            they shall all know me, from the least of them to the greatest, declares the LORD.
+            For I will forgive their iniquity, and I will remember their sin no more."
+            <cite><a class="ref" data-ref="Jeremiah 31:31-34">Jeremiah 31:31–34</a></cite>
+          </blockquote>
+          <p>Four contrasts with the Mosaic covenant are built into the promise:</p>
+          <ul>
+            <li><strong>External → Internal:</strong> The Mosaic law was written on stone tablets.
+            The new covenant law will be written on the heart — obedience arising from
+            transformed desire, not merely commanded obligation.</li>
+            <li><strong>Mediated → Direct:</strong> The Mosaic covenant required a mediating
+            class — priests, prophets, teachers — to communicate God's will. In the new covenant,
+            "they shall all know me, from the least to the greatest." Direct, personal knowledge
+            of God without a human intermediary class.</li>
+            <li><strong>Repeated → Finished:</strong> The Mosaic system required constant
+            repetition because it could not permanently resolve sin. The new covenant rests on
+            a once-for-all forgiveness: "I will remember their sin no more."</li>
+            <li><strong>Breakable → Secured:</strong> Israel broke the Mosaic covenant repeatedly.
+            The new covenant is not conditioned on their faithfulness but on God's own work within
+            them to produce what the law demanded.</li>
+          </ul>
+          <p>The writer's devastating strategic point: God himself, through his own prophet,
+          declared the first covenant obsolete — "what is becoming obsolete and growing old is
+          ready to vanish away" (<a class="ref" data-ref="Hebrews 8:13">8:13</a>). The congregation does not need to take the writer's word
+          for it; Jeremiah said it centuries earlier.</p>
+        </div>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Jeremiah announced the new covenant while Jerusalem was being destroyed — God's
+            greatest promise in Israel's darkest hour. What does this say about how God works?
+            Where do you see the same pattern — promise and hope emerging from failure?</li>
+            <li>The law "on the heart" rather than "on stone" — what is the difference in
+            practice? What does obedience that arises from within rather than being imposed
+            from without actually look like? Have you experienced both?</li>
+            <li>"They shall all know me, from the least of them to the greatest." What does
+            this direct-access promise do to the way you think about your relationship with
+            God? Do you live as though you have that direct access, or as though you still
+            need something — or someone — to mediate it?</li>
+            <li>"I will remember their sin no more" — complete forgiveness. Is there anything
+            you have confessed but still carry? What would it mean to receive this promise
+            as yours?</li>
+            <li>One part of the OT (Jeremiah) announces the obsolescence of another part
+            of the OT (the Mosaic covenant). What does this tell you about how to read the
+            OT — and about the nature of progressive revelation?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 9 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-9">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 9</span>
+          <span class="sg-chapter-ref">Hebrews 9:1–28</span>
+        </div>
+        <h2 class="tg-section__heading">The Better Sanctuary</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The argument turns from the covenant to the mechanics
+          of atonement — blood. The old covenant was not merely a set of laws; it was a whole
+          ritual apparatus of tabernacle, priesthood, and sacrifice that dealt with sin and
+          maintained access to a holy God. The writer walks through the tabernacle layout and
+          the Day of Atonement with deliberate care, then shows at each point how Christ's single
+          self-offering replaces the entire system — doing permanently and inwardly what the
+          system could only do annually and externally.
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Leviticus 16 (Yom Kippur — The Full Ritual)</span>
+          <p>The high priest had to prepare himself before he could act for the people. He bathed,
+          dressed in simple linen (not the ornate high priestly garments), and offered a bull for
+          his own sin. Then the two goats: lots were cast to determine which became the sin offering
+          and which the scapegoat (<a class="ref" data-ref="Leviticus 16:8">v.8</a>). The blood of
+          the sin-offering goat was taken by the high priest — alone, the only person in Israel
+          permitted to enter — into the Most Holy Place and sprinkled on and before the mercy seat
+          (<a class="ref" data-ref="Leviticus 16:15">v.15</a>).</p>
+          <p>The spatial layout is theologically significant. The outer Holy Place was accessible
+          to the priests daily. The inner Most Holy Place — where the ark sat, where God's presence
+          dwelt between the cherubim — was accessible to one person, once a year, with blood.
+          Hebrews 9:7–8 draws the conclusion explicitly: this restriction was "a parable for the
+          present age, indicating that the way into the holy places is not yet opened as long as
+          the first section is still standing." The architecture of the tabernacle was itself a
+          statement of incompletion — a deliberately maintained distance that proclaimed: the
+          full opening of the way to God is still coming.</p>
+        </div>
+
+        <p>The writer's critique of the Levitical sacrifices is precise: they could cleanse
+        <em>external</em> impurity, dealing with "food and drink and various washings, regulations
+        for the body" (<a class="ref" data-ref="Hebrews 9:10">9:10</a>), but they "cannot perfect the conscience of the worshipper" (<a class="ref" data-ref="Hebrews 9:9">9:9</a>).
+        They maintained the worshipper's covenant status without giving him the deep interior
+        certainty that sin has been truly and finally dealt with. Christ's offering addresses
+        exactly this deficit. He entered "through his own blood, thus securing an eternal
+        redemption" (<a class="ref" data-ref="Hebrews 9:12">9:12</a>). If animal blood could sanctify the flesh — and it could, God
+        appointed it for that purpose — "how much more will the blood of Christ, who through
+        the eternal Spirit offered himself without blemish to God, purify our conscience from
+        dead works to serve the living God" (<a class="ref" data-ref="Hebrews 9:14">9:14</a>).</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Exodus 24:3–8 (The Covenant Ratified by Blood)</span>
+          <p>After Moses reads the Book of the Covenant and the people declare "all that the LORD
+          has spoken we will do," Moses takes the blood of the sacrificed oxen — half thrown on
+          the altar, half on the people — and declares: <em>"Behold the blood of the covenant
+          that the LORD has made with you in accordance with all these words"</em>
+          (<a class="ref" data-ref="Exodus 24:8">Exod 24:8</a>). The covenant is not merely
+          verbal; it is ratified in blood. Blood represents life (Lev 17:11), and a covenant
+          between a holy God and a sinful people requires the acknowledgment that sin brings
+          death. The Sinai blood-throwing is both purification and pledge.</p>
+          <p>Hebrews 9:19–22 quotes this and draws the principle: "almost everything is purified
+          with blood, and without the shedding of blood there is no forgiveness of sins" (<a class="ref" data-ref="Hebrews 9:22">9:22</a>).
+          The Sinai ceremony enacted what the cross fulfils — the true covenant ratification,
+          in the blood of the mediator himself.</p>
+        </div>
+
+        <p>The climactic claim is chronological: Christ appeared "at the end of the ages to put
+        away sin by the sacrifice of himself" (<a class="ref" data-ref="Hebrews 9:26">9:26</a>). Not at some mid-point needing repetition —
+        at the end, the culmination of all the ages of sacrifice. His single offering put away
+        the sin that all previous sacrifices had gestured toward but could not remove. The
+        chapter closes with the universal analogy: it is appointed for man to die once and then
+        face judgement; so Christ was offered once to bear the sins of many and will appear a
+        second time — not to deal with sin again but to bring salvation to those waiting for him.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The tabernacle's restricted access was a deliberate architectural statement that
+            the way into God's presence was not yet fully open. When the temple veil tore at
+            the crucifixion (<a class="ref" data-ref="Matthew 27:51">Matt 27:51</a>), what was
+            being declared? What does open access to God look like for you in practice?</li>
+            <li>The Levitical sacrifices could cleanse external impurity but could not "perfect
+            the conscience" (<a class="ref" data-ref="Hebrews 9:9">9:9</a>). What is the difference between external religious compliance
+            and a genuinely clear conscience before God? Have you experienced both?</li>
+            <li>"Without the shedding of blood there is no forgiveness of sins" (<a class="ref" data-ref="Hebrews 9:22">9:22</a>).
+            Why does forgiveness require blood? What does this principle reveal about the
+            nature of sin and about God's holiness?</li>
+            <li>Christ appeared "at the end of the ages" to deal with sin once. What does it
+            mean that you live after that event? How should the "once for all" character of
+            the atonement shape your confidence before God?</li>
+            <li>Christ will appear a second time "not to deal with sin but to save those who
+            are eagerly waiting for him" (<a class="ref" data-ref="Hebrews 9:28">9:28</a>). What does "eagerly waiting" actually look
+            like in how you live day to day?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 10 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-10">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 10</span>
+          <span class="sg-chapter-ref">Hebrews 10:1–39</span>
+        </div>
+        <h2 class="tg-section__heading">Once for All</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> Chapter 10 is the climax of the priestly argument and
+          the pivot into the letter's great call to faithfulness. A final definitive argument
+          from Psalm 40 establishes that Christ's sacrifice was what God desired all along.
+          The priestly case closes with Jeremiah 31 quoted again: forgiveness is complete;
+          there is no further sacrifice needed. Then comes the most severe warning in the letter.
+          Then an equally urgent pastoral appeal: hold fast; do not throw away your confidence;
+          you have done this before, you can do it again.
+        </div>
+
+        <p>"The law has but a shadow of the good things to come… it can never, by the same
+        sacrifices continually offered year after year, make perfect those who draw near"
+        (<a class="ref" data-ref="Hebrews 10:1">10:1</a>). The argument is elegant and remorseless: if the annual sacrifices had genuinely
+        resolved sin, there would be no need to keep returning. The repetition is the system's
+        built-in confession of inadequacy. "In these sacrifices there is a reminder of sins
+        every year" (<a class="ref" data-ref="Hebrews 10:3">10:3</a>) — not a removal. Not a resolution. A reminder. The worshipper left
+        the temple with the same sins he brought in, deferred for another year.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Psalm 40:6–8 (A Body You Prepared)</span>
+          <p>Psalm 40 is a psalm of David — thanksgiving after deliverance. In the middle of his
+          praise, David makes a startling statement about the sacrificial system: <em>"In
+          sacrifice and offering you have not delighted… burnt offering and sin offering you
+          have not required. Then I said, 'Behold, I have come; in the scroll of the book it
+          is written of me: I delight to do your will, O my God'"</em>
+          (<a class="ref" data-ref="Psalm 40:6-8">Ps 40:6–8</a>).</p>
+          <p>The Hebrew of v.6 reads "you have dug/opened ears for me" — probably meaning
+          something like: you have made me attentive and fitted for obedience. The Greek LXX
+          (which the writer of Hebrews uses) translates this as <em>"a body you have prepared
+          for me"</em>. This opens a window the NT writer seizes: the one speaking in the psalm
+          offers not an animal but a body — himself — as the fulfilment of God's will.
+          Hebrews 10:5–7 places these words in Christ's mouth at the incarnation: "When coming
+          into the world, he said…" The body prepared for him is the incarnate body in which
+          he walked to the cross. The contrast is explicit: God did not ultimately desire the
+          sacrifices — not because they were evil, but because they were always pointing beyond
+          themselves to this. The Son offers what God always desired: perfect obedience in a
+          human body, culminating in self-giving death.</p>
+        </div>
+
+        <p>The priestly argument closes cleanly: "by a single offering he has perfected for all
+        time those who are being sanctified" (<a class="ref" data-ref="Hebrews 10:14">10:14</a>). Two verbs: <em>perfected</em> (completed,
+        past tense) and <em>being sanctified</em> (ongoing, present tense). The standing before
+        God is permanent; the transformation is still in process. Jeremiah 31 is then quoted
+        again (<a class="ref" data-ref="Hebrews 10:16-17">10:16–17</a>) — specifically the final clause: "I will remember their sin no more."
+        The conclusion is definitive: "Where there is forgiveness of these, there is no longer
+        any offering for sin" (<a class="ref" data-ref="Hebrews 10:18">10:18</a>). The entire sacrificial system is fulfilled. Nothing remains
+        to be added.</p>
+
+        <div class="sg-warning">
+          <span class="sg-warning__label">Warning 4 — <a class="ref" data-ref="Hebrews 10:26-31">10:26–31</a></span>
+          <p>"If we go on sinning deliberately after receiving the knowledge of the truth, there
+          is no longer a sacrifice for sins, but a fearful expectation of judgement and a fury
+          of fire that will consume the adversaries" (<a class="ref" data-ref="Hebrews 10:26-27">10:26–27</a>). The logic follows directly from
+          the preceding: the entire system of sacrifice is now fulfilled in Christ's one offering.
+          If you reject that offering — not stumble, but deliberately repudiate it — there is no
+          further sacrifice to appeal to. The OT is closed. The writer quotes
+          <a class="ref" data-ref="Deuteronomy 32:35-36">Deuteronomy 32:35–36</a>: "Vengeance
+          is mine, I will repay" and "The Lord will judge his people." Then the most searching
+          sentence in the letter: "It is a fearful thing to fall into the hands of the living
+          God" (<a class="ref" data-ref="Hebrews 10:31">10:31</a>). He does not soften it.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Habakkuk 2:3–4 (The Righteous Shall Live by Faith)</span>
+          <p>Habakkuk is confounded by God's use of Babylon — a more wicked nation — as his
+          instrument against Israel. He positions himself on a watchtower and waits for God's
+          answer. The answer, in 2:2–4, is famous: write the vision plainly; even if it delays,
+          wait for it. <em>"The righteous shall live by his faith"</em>
+          (<a class="ref" data-ref="Habakkuk 2:4">Hab 2:4</a>). The contrast in Habakkuk is
+          between the arrogant man — never satisfied, always seizing — and the righteous man
+          who lives by <em>'emunah</em>: steadfast faithfulness, patient reliance on God when
+          circumstances make no sense.</p>
+          <p>Hebrews 10:37–38 quotes Habakkuk (combined with the "little while" of
+          <a class="ref" data-ref="Isaiah 26:20">Isa 26:20</a>): "a little while, and the
+          coming one will come… but my righteous one shall live by faith." The congregation
+          is being called to Habakkuk's posture — waiting on the watchtower for God's word
+          to be vindicated, trusting in the dark, not shrinking back. This sets up everything
+          chapter 11 is about to demonstrate.</p>
+        </div>
+
+        <p>The appeal that closes the chapter is one of the letter's most pastorally direct
+        moments. The writer recalls their earlier days: the suffering they endured, the compassion
+        they showed to prisoners, the joyful acceptance of the plundering of their property
+        (<a class="ref" data-ref="Hebrews 10:32-34">10:32–34</a>). There was a time when they did this well. "Therefore do not throw away
+        your confidence, which has a great reward. For you have need of endurance, so that
+        when you have done the will of God you may receive what is promised" (<a class="ref" data-ref="Hebrews 10:35-36">10:35–36</a>).
+        The confidence was not misplaced; do not discard it now.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The repetition of the annual sacrifices was their built-in confession of
+            inadequacy. Are there ways in your own Christian life where you keep returning
+            to deal with something you have not yet trusted Christ to have fully and finally
+            resolved? What would it mean to rest in the completed work?</li>
+            <li>Psalm 40 puts in Christ's mouth: "A body you prepared for me… I have come
+            to do your will." The incarnation as the ultimate act of obedience. What does it
+            say about God that what he desired all along was not animal blood but the willing
+            self-offering of a human being in perfect faithfulness?</li>
+            <li>Hebrews 10:14: "perfected for all time" (past tense) "those who are being
+            sanctified" (present tense). How do you hold these two together? What is completed,
+            and what is still in process?</li>
+            <li>The writer recalls the congregation's early boldness — joyfully accepting the
+            plundering of their property. What enabled that kind of costly faith? What tends
+            to erode it over time?</li>
+            <li>Habakkuk waited on a watchtower for God to vindicate what he could not yet see.
+            What are you waiting for God to fulfil or vindicate in your own life? What does
+            "living by faith" look like in that specific situation?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 11 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-11">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 11</span>
+          <span class="sg-chapter-ref">Hebrews 11:1–40</span>
+        </div>
+        <h2 class="tg-section__heading">By Faith</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> Having established what Christ has done (chs. 7–10)
+          and issued the call to persevering faith (<a class="ref" data-ref="Hebrews 10:38-39">10:38–39</a>), the writer now demonstrates what
+          that faith looks like across the entire sweep of redemptive history. Chapter 11 is not
+          a hall of heroes — it is a demonstration of a single thesis: the people of God have
+          always lived by acting on God's word before they could see its fulfilment. Every figure
+          in the list did something costly and concrete in response to a divine word, without
+          receiving the complete promise in their lifetime. And the chapter's final twist: they
+          could not be perfected without us. The OT saints were waiting for this congregation.
+        </div>
+
+        <p>"Faith is the assurance of things hoped for, the conviction of things not seen"
+        (<a class="ref" data-ref="Hebrews 11:1">11:1</a>). Two Greek words: <em>hypostasis</em> — used in commerce and law for a title
+        deed or foundation — means the present substance of what is hoped for, not a feeling
+        of optimism. <em>Elenchos</em> — meaning evidence or proof — means faith is not merely
+        subjective belief but a seeing of realities the physical eye cannot perceive. Faith is
+        the title deed to the inheritance, held in hand before the property is received.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Genesis 4–5 (Abel and Enoch)</span>
+          <p><strong>Abel</strong> (<a class="ref" data-ref="Genesis 4:3-5">Gen 4:3–5</a>):
+          The text does not explain why God accepted Abel's offering and not Cain's. Hebrews 11:4
+          says Abel offered "a more acceptable sacrifice" by faith. His blood "still speaks" after
+          his death (<a class="ref" data-ref="Hebrews 11:4">11:4</a>; <a class="ref" data-ref="Hebrews 12:24">12:24</a>): faith that costs everything does not fall silent.</p>
+          <p><strong>Enoch</strong> (<a class="ref" data-ref="Genesis 5:24">Gen 5:24</a>): In a
+          genealogy of repeated "and he died," Enoch does not die — "God took him." Hebrews 11:5–6
+          draws from this the irreducible axiom: "Whoever would draw near to God must believe that
+          he exists and that he rewards those who seek him." Faith in God's existence and goodness
+          is the minimum without which approach to God is impossible.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Genesis 6–9, 12, 15, 22 (Noah, Abraham, Sarah)</span>
+          <p><strong>Noah</strong> (<a class="ref" data-ref="Genesis 6:13-22">Gen 6:13–22</a>):
+          God warns of a flood that has not yet appeared. Noah builds an ark — a public, visible
+          act of trust in an unseen future event. His faith condemned the world that watched him
+          build, and he became "an heir of the righteousness that comes by faith" (<a class="ref" data-ref="Hebrews 11:7">11:7</a>).</p>
+          <p><strong>Abraham</strong> (<a class="ref" data-ref="Genesis 12:1-4">Gen 12:1–4</a>;
+          <a class="ref" data-ref="Genesis 22:1-19">22:1–19</a>): Called to leave Ur for a land
+          he had not seen, Abraham obeyed because he had a word. He lived in tents in the promised
+          land as a resident alien — not because the land was insufficient but because he was
+          "looking forward to the city that has foundations, whose designer and builder is God"
+          (<a class="ref" data-ref="Hebrews 11:10">11:10</a>). Canaan was never the destination; it was the pointer. When God told him to
+          sacrifice Isaac — the son through whom all the promises would come — Abraham obeyed,
+          "reasoning that God was able even to raise him from the dead" (<a class="ref" data-ref="Hebrews 11:19">11:19</a>). He got Isaac back
+          "figuratively speaking" — as a figure of resurrection. His faith was not optimism; it
+          was a conviction about God's power over death.</p>
+          <p><strong>Sarah</strong> (<a class="ref" data-ref="Genesis 18:10-15">Gen 18:10–15</a>):
+          She "considered him faithful who had promised" (<a class="ref" data-ref="Hebrews 11:11">11:11</a>) — even after she had laughed.
+          Faith is not the absence of struggle; it is the return to trust after the laugh.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Exodus 2–14 (Moses — Three Faith Acts)</span>
+          <p>Moses's faith is described in three movements. First, he refused Egypt's treasures —
+          "choosing rather to be mistreated with the people of God than to enjoy the fleeting
+          pleasures of sin" (<a class="ref" data-ref="Hebrews 11:25">11:25</a>). The pleasures were real; they were simply temporary, and he
+          calculated the reward of faith outweighed them. Second, he left Egypt "not being afraid
+          of the anger of the king, for he endured as seeing him who is invisible" (<a class="ref" data-ref="Hebrews 11:27">11:27</a>) — the
+          invisible God was more real to Moses than the visible fury of Pharaoh. Third, the
+          Passover: blood on the doorposts, trusting the destroyer would pass over those who
+          obeyed the word (<a class="ref" data-ref="Exodus 12:21-28">Exod 12:21–28</a>).
+          No visible confirmation yet. Only the word.</p>
+        </div>
+
+        <p>The chapter's structure reveals the pattern: every figure received a divine word,
+        acted on it before seeing the outcome, and died without receiving the full promise.
+        "These all died in faith, not having received the things promised, but having seen them
+        and greeted them from afar" (<a class="ref" data-ref="Hebrews 11:13">11:13</a>). They acknowledged themselves "strangers and exiles"
+        — they were not looking for earthly settlement but for "a better country, that is, a
+        heavenly one" (<a class="ref" data-ref="Hebrews 11:16">11:16</a>). God is not ashamed to be called their God; he has prepared a
+        city for them.</p>
+
+        <p>The chapter's final turn is its most extraordinary. Not only did the faithful suffer —
+        some received what was promised; others were tortured, imprisoned, killed, and did not
+        receive deliverance. Not because their faith failed, but because "God had provided
+        something better for us, that apart from us they should not be made perfect" (<a class="ref" data-ref="Hebrews 11:40">11:40</a>).
+        The OT saints could not reach completion — the <em>teleios</em> state, the fullness of
+        what faith reaches for — without the community to whom this letter is written. The
+        writer is telling his audience: you are the reason the OT story makes sense. Do not
+        drift. They were waiting for you.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>Faith is defined as the "title deed" of things hoped for. What are you holding
+            a title deed to right now — trusting God for something not yet visible? What does
+            it feel like to act on that trust before the fulfilment arrives?</li>
+            <li>Every figure in chapter 11 died without receiving the complete promise. How
+            does this reshape your expectations of the Christian life? What would change if
+            you took seriously that many of God's promises are not meant to be fully received
+            in this lifetime?</li>
+            <li>Abraham was looking for "the city with foundations" — not Canaan but the
+            heavenly city. In what ways are you living as a stranger and exile? In what ways
+            have you made yourself too at home in the present world?</li>
+            <li>Moses "endured as seeing him who is invisible" (<a class="ref" data-ref="Hebrews 11:27">11:27</a>). What does it mean
+            practically to live as though God is more real than the visible pressures that
+            make faithfulness costly?</li>
+            <li>The OT saints "were not perfected apart from us." They were waiting for us.
+            We need them. How does this mutual dependence across time affect the way you think
+            about belonging to the church — and about your own role in the continuing story?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 12 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-12">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 12</span>
+          <span class="sg-chapter-ref">Hebrews 12:1–29</span>
+        </div>
+        <h2 class="tg-section__heading">The Unshakeable Kingdom</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The cloud of witnesses from chapter 11 now becomes
+          the stands around the track. Jesus himself is presented as the ultimate chapter-11
+          figure — the pioneer of faith who ran the hardest course. Three OT passages are
+          brought in: Proverbs 3 reframes suffering as sonship; Exodus 19 and the contrast
+          with Zion shows what has changed; Haggai 2 names what cannot be shaken. The chapter
+          ends with the fifth and final warning — and the ground for unshakeable confidence.
+        </div>
+
+        <p>"Since we are surrounded by so great a cloud of witnesses, let us also lay aside
+        every weight, and sin which clings so closely, and let us run with endurance the race
+        that is set before us" (<a class="ref" data-ref="Hebrews 12:1">12:1</a>). The cloud of witnesses is the specific people listed
+        in chapter 11 — they have run their leg; the baton is with us. "Lay aside every
+        weight" distinguishes between sin and encumbrance: some things that slow the run are
+        not sins but good things that have become consuming. Both must go.</p>
+
+        <p>"Looking to Jesus, the founder and perfecter of faith" (<a class="ref" data-ref="Hebrews 12:2">12:2</a>). Jesus is not only
+        the <em>object</em> of faith but its author and perfecter — the one who brought faith
+        to its fullest expression. He is the ultimate chapter-11 figure: he acted on the
+        Father's word (the cross) before receiving what was promised (the glory). "For the joy
+        set before him he endured the cross, despising the shame, and is seated at the right
+        hand of the throne of God." The joy was not the cross itself; the joy was the glory
+        beyond it. He held the future reality as more real than the present suffering. That is
+        precisely the faith the rest of chapter 11 demonstrated — in the Son himself, to its
+        absolute limit.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Proverbs 3:11–12 (Discipline as Sonship)</span>
+          <p>In Proverbs 3, a father counsels his son on the value of wisdom. Among the counsels:
+          <em>"My son, do not despise the LORD's discipline or be weary of his reproof, for the
+          LORD reproves him whom he loves, as a father the son in whom he delights"</em>
+          (<a class="ref" data-ref="Proverbs 3:11-12">Prov 3:11–12</a>). The logic: reproof
+          is a sign of love, not rejection. The father who never disciplines does not love enough
+          to invest in formation. The father who does is declaring, by the act, that the
+          relationship is worth the discomfort.</p>
+          <p>Hebrews 12:5–11 applies this to the congregation's suffering. They are not being
+          abandoned; they are being treated as sons. "If you are left without discipline, in
+          which all have participated, then you are illegitimate children and not sons" (<a class="ref" data-ref="Hebrews 12:8">12:8</a>).
+          The training metaphor is athletic: "the peaceful fruit of righteousness" comes to
+          "those who have been trained by it" (<a class="ref" data-ref="Hebrews 12:11">12:11</a>). The training hurts. The fruit is worth it.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Exodus 19–20 (Sinai — The Terrifying Mountain)</span>
+          <p>At Sinai, the encounter was designed to overwhelm. God set boundaries around the
+          mountain: anyone touching it, even an animal, must be stoned
+          (<a class="ref" data-ref="Exodus 19:12-13">Exod 19:12–13</a>). The mountain blazed
+          with fire; thick darkness; a tempest; a trumpet blast; a voice so terrible the people
+          begged it to stop, saying they would die if they heard more
+          (<a class="ref" data-ref="Deuteronomy 5:25">Deut 5:25</a>). Even Moses said, "I
+          tremble with fear" (<a class="ref" data-ref="Deuteronomy 9:19">Deut 9:19</a>). The
+          terror communicated the absolute holiness of God and the absolute distance that sin
+          creates. The mountain could not be touched. God could not be approached. This is what
+          the first covenant looked like from the human side.</p>
+          <p>Hebrews 12:18–24 sets this against where the congregation has <em>actually</em> come:
+          not Sinai but Zion — "the city of the living God, the heavenly Jerusalem, and to
+          innumerable angels in festal gathering, and to the assembly of the firstborn who are
+          enrolled in heaven, and to God, the judge of all, and to the spirits of the righteous
+          made perfect, and to Jesus, the mediator of a new covenant, and to the sprinkled blood
+          that speaks a better word than the blood of Abel." Every element is a deliberate
+          contrast. Sinai: fire, darkness, exclusion, death for approaching. Zion: festival, full
+          assembly, direct access, the mediator's blood that speaks forgiveness, not vengeance.
+          The requirement of holiness has not been lowered — "our God is a consuming fire"
+          (<a class="ref" data-ref="Hebrews 12:29">12:29</a>) — but the mediation is now perfect.</p>
+        </div>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Haggai 2:6–7 (The Coming Shaking)</span>
+          <p>After the return from Babylon, the rebuilt temple is a disappointment — smaller,
+          less glorious than Solomon's. The people are discouraged. God speaks through Haggai:
+          <em>"Yet once more, in a little while, I will shake the heavens and the earth and the
+          sea and the dry land. And I will shake all nations, so that the treasures of all nations
+          shall come in, and I will fill this house with glory"</em>
+          (<a class="ref" data-ref="Haggai 2:6-7">Hag 2:6–7</a>). The shaking is eschatological:
+          God will remove everything removable, and what remains will be filled with his glory.</p>
+          <p>Hebrews 12:26–27 quotes Haggai and applies it to the present: "This phrase, 'yet
+          once more,' indicates the removal of things that are shaken — things that have been made —
+          in order that the things that cannot be shaken may remain." The Mosaic covenant,
+          Levitical priesthood, earthly sanctuary — all were shakeable, temporary, created things.
+          What cannot be shaken is the kingdom of God. "Therefore let us be grateful for receiving
+          a kingdom that cannot be shaken, and thus let us offer to God acceptable worship, with
+          reverence and awe, for our God is a consuming fire" (<a class="ref" data-ref="Hebrews 12:28-29">12:28–29</a>).</p>
+        </div>
+
+        <div class="sg-warning">
+          <span class="sg-warning__label">Warning 5 — <a class="ref" data-ref="Hebrews 12:25-29">12:25–29</a></span>
+          <p>The fifth and final warning follows the Sinai/Zion contrast directly. If those
+          who refused the one who warned them on earth (at Sinai) did not escape, how much
+          less will we escape if we refuse the one who warns from heaven? The warning lands
+          inside the framework of the unshakeable kingdom. Those who are receiving a kingdom
+          that cannot be removed are being warned not to be among those shaken by it. Gratitude
+          and awe — "with reverence and fear" — are the appropriate response to receiving
+          what cannot be taken away.</p>
+        </div>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>"Looking to Jesus, the founder and perfecter of faith, who for the joy set
+            before him endured the cross" (<a class="ref" data-ref="Hebrews 12:2">12:2</a>). Jesus is the ultimate person of faith —
+            acting on God's word before seeing the glory. How does this image of Jesus change
+            how you read chapter 11? How does it change how you think about what faith is?</li>
+            <li>Discipline is reframed as evidence of sonship — the father who disciplines is
+            the father who is investing. Have you had a season in which you came to understand
+            a painful experience as God's formation rather than his absence? What did the
+            reframe change?</li>
+            <li>Sinai: fire, exclusion, terror. Zion: festival, community, access. Both describe
+            an encounter with the same holy God. What is the difference — and where does your
+            own experience of approaching God tend to feel more like Sinai or Zion?</li>
+            <li>The shakeable things — the Mosaic system, the earthly sanctuary, everything
+            created — are being removed. What "shakeable" things in your own life are you
+            tempted to anchor your security to? What does it mean to live from the unshakeable
+            kingdom instead?</li>
+            <li>"Our God is a consuming fire" (<a class="ref" data-ref="Hebrews 12:29">12:29</a>) — the last word is not comfort but awe.
+            Why does the writer end the theological climax of the letter with this image? What
+            should our access to a consuming-fire God produce in us?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <!-- ══════════════════════════════ CHAPTER 13 ══════════════════════════════ -->
+      <section class="tg-section" id="ch-13">
+        <div class="sg-chapter-header">
+          <span class="sg-chapter-num">Chapter 13</span>
+          <span class="sg-chapter-ref">Hebrews 13:1–25</span>
+        </div>
+        <h2 class="tg-section__heading">Outside the Camp</h2>
+
+        <div class="sg-wave">
+          <strong>The argument:</strong> The theological argument is complete. Chapter 13 is
+          its lived-out shape — what it looks like when the better covenant is real in a
+          community. The sequence of exhortations is not an afterthought; it is the proof
+          that chapters 1–12 have done their work. The chapter's theological centre is
+          vv.12–14: Jesus suffered outside the camp — the place of shame and exclusion — and
+          his people are called to follow him there. The logic is simple and total: we have
+          no lasting city here; we seek the one that is coming.
+        </div>
+
+        <p>The practical exhortations (vv.1–6) are arrayed in quick succession: brotherly love;
+        hospitality to strangers (some have thereby entertained angels — the writer is thinking
+        of <a class="ref" data-ref="Genesis 18:1-3">Genesis 18</a> and
+        <a class="ref" data-ref="Genesis 19:1-3">19:1–3</a>); solidarity with those in prison
+        and those mistreated; fidelity in marriage; freedom from the love of money. These are
+        not arbitrary moral demands. They are the texture of a community that believes what
+        chapters 1–12 have argued — a community that is not clinging to earthly security because
+        its security is elsewhere.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · Deuteronomy 31:6 / Joshua 1:5 + Psalm 118:6</span>
+          <p>Two great courage texts from Israel's history anchor the financial exhortation.
+          "I will never leave you nor forsake you" is God's word to Joshua as he prepares to
+          enter the land — the commission to face the most daunting challenge of his life
+          (<a class="ref" data-ref="Deuteronomy 31:6">Deut 31:6</a>;
+          <a class="ref" data-ref="Joshua 1:5">Josh 1:5</a>). These words were not originally
+          a comfort verse for generic difficulty; they were a war commission for the leader
+          who would carry the whole project of covenant settlement on his shoulders.
+          Hebrews 13:5 quotes them as the ground for contentment and freedom from money-love:
+          because God will never leave us, we do not need to grasp at earthly security.</p>
+          <p><a class="ref" data-ref="Psalm 118:6">Psalm 118:6</a> then follows: "The LORD is
+          my helper; I will not fear; what can man do to me?" Psalm 118 is the psalm of
+          the one who was surrounded by enemies, pressed hard to the point of falling —
+          and yet trusted the God who is stronger. The stone the builders rejected became
+          the cornerstone (<a class="ref" data-ref="Psalm 118:22">v.22</a>; cf.
+          <a class="ref" data-ref="Matthew 21:42">Matt 21:42</a>). The psalm was written
+          from within extremity, not from safety. "What can man do to me?" is not bravado;
+          it is the conclusion of someone who has been in the fire and found God faithful
+          there. Hebrews applies both texts to a congregation facing social pressure and
+          economic threat: the same God who was with Joshua at the Jordan and the psalmist
+          in his siege is with you now. "So we can confidently say, 'The Lord is my helper;
+          I will not fear.'"</p>
+        </div>
+
+        <p>"Jesus also suffered outside the gate in order to sanctify the people through his
+        own blood. Therefore let us go to him outside the camp and bear the reproach he
+        endured" (<a class="ref" data-ref="Hebrews 13:12-13">13:12–13</a>). The "camp" in the Mosaic system was the organised life of Israel —
+        the place of purity, belonging, religious standing. Criminals, lepers, and the executed
+        were sent outside the camp. Jesus died there — not in the temple, not at a respectable
+        distance, but in the place of shame and exclusion. His people are to follow him there,
+        not seek shelter inside the camp's respectability.</p>
+
+        <p>"For here we have no lasting city, but we seek the city that is to come" (<a class="ref" data-ref="Hebrews 13:14">13:14</a>).
+        This is the whole letter's argument compressed into one clause. The congregation is
+        not abandoning something real and solid when they leave the camp — they are refusing
+        to settle for what was always designed to be temporary. The city they seek has
+        foundations (<a class="ref" data-ref="Hebrews 11:10">11:10</a>). The city they are giving up has none that will last.</p>
+
+        <div class="tg-note sg-ot-context">
+          <span class="tg-note__label">OT Background · The Camp in the Mosaic System</span>
+          <p>In the wilderness, the Israelite camp was organised around the tabernacle at its
+          centre. Holiness radiated outward from the Most Holy Place, and the rules about who
+          could be near determined who could be in the camp at all. Lepers, those with
+          discharges, and the ritually unclean were excluded from the camp
+          (<a class="ref" data-ref="Numbers 5:2-3">Num 5:2–3</a>). The sin offering whose
+          blood was taken into the sanctuary — the Yom Kippur goat — had its body burned
+          "outside the camp" (<a class="ref" data-ref="Leviticus 16:27">Lev 16:27</a>).
+          The bodies of criminals were executed and buried outside the city. "Outside the
+          camp" was where the rejected, the unclean, and the condemned went.</p>
+          <p>Jesus was crucified at Golgotha — outside the city walls of Jerusalem.
+          The writer sees this as theologically charged: the one who was the sin offering
+          suffered in the place where sin offerings were disposed of. And those who follow
+          him are called to that same place — outside the walls of respectable, socially
+          validated religious belonging. The reproach is real. The city that is coming
+          is realer still.</p>
+        </div>
+
+        <p>The letter closes with a doxology that gathers up its entire argument: "Now may the
+        God of peace who brought again from the dead our Lord Jesus, the great shepherd of the
+        sheep, by the blood of the eternal covenant, equip you with everything good that you
+        may do his will, working in us that which is pleasing in his sight, through Jesus Christ,
+        to whom be glory forever and ever. Amen" (<a class="ref" data-ref="Hebrews 13:20-21">13:20–21</a>). The resurrection, the blood, the
+        eternal covenant, the equipping — everything argued across thirteen chapters is here
+        gathered into a prayer. What God has done (resurrection) is the ground for what he will
+        do (equipping). The blood of the eternal covenant is the instrument. The goal is doing
+        his will in a way that pleases him. And the whole thing is through Jesus Christ — the
+        one the letter has been arguing for, from beginning to end.</p>
+
+        <div class="sg-questions">
+          <p class="sg-questions__heading">Discussion Questions</p>
+          <ol class="sg-questions__list">
+            <li>The practical exhortations of chapter 13 (hospitality, solidarity with prisoners,
+            freedom from money-love) follow directly from the theological argument of chapters
+            1–12. Which of these exhortations hits hardest for you personally, and how does the
+            theology behind it change how you receive the command?</li>
+            <li>God's word to Joshua — "I will never leave you nor forsake you" — was originally
+            a war commission, not a comfort verse. How does knowing the original context change
+            how you receive it? Does it strengthen or complicate the promise for you?</li>
+            <li>"Go to him outside the camp and bear the reproach he endured" (<a class="ref" data-ref="Hebrews 13:13">13:13</a>). What is
+            "the camp" in your context — the place of social respectability or religious
+            belonging that Jesus calls you to leave? What would going "outside the camp" actually
+            cost you?</li>
+            <li>"Here we have no lasting city, but we seek the city that is to come" (<a class="ref" data-ref="Hebrews 13:14">13:14</a>).
+            Looking back over the whole letter, how has the argument shaped your sense of what
+            is permanent and what is temporary? What has shifted for you?</li>
+            <li>The closing doxology (<a class="ref" data-ref="Hebrews 13:20-21">13:20–21</a>) gathers the whole letter's argument into a
+            prayer: resurrection, blood, eternal covenant, equipping. What is the connection
+            between what God has done in Christ and what he is now doing in you? How does
+            the "therefore" of the whole letter land for you personally?</li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="sg-divider">
+
+      <div class="tg-reading">
+        <h2 class="tg-reading__title">For Further Study</h2>
+        <p class="tg-reading__item">
+          <cite>The Epistle to the Hebrews</cite>, F. F. Bruce. NICNT, Eerdmans, 1990.
+          <em>The standard evangelical commentary — thorough on the OT background and the Greek.
+          The first place to turn for any exegetical question.</em>
+        </p>
+        <p class="tg-reading__item">
+          <cite>Hebrews</cite>, Thomas Schreiner. BTCP, B&amp;H Academic, 2015.
+          <em>Theologically rich and pastorally warm. Particularly good on the warning passages
+          and their pastoral function.</em>
+        </p>
+        <p class="tg-reading__item">
+          <cite>The Letter to the Hebrews</cite>, Peter O'Brien. PNTC, Eerdmans, 2010.
+          <em>Detailed and consistently excellent on the argument structure and theological
+          synthesis. For those wanting deeper engagement with the text.</em>
+        </p>
+        <p class="tg-reading__item">
+          <cite>Hebrews: An Introduction and Commentary</cite>, Donald Guthrie. TNTC, IVP, 1983.
+          <em>Compact and reliable — good single-volume reference for group leaders.</em>
+        </p>
+        <p class="tg-reading__item">
+          <cite>Preaching Christ from the Old Testament</cite>, Sidney Greidanus. Eerdmans, 1999.
+          <em>Not a Hebrews commentary, but essential background for understanding how Hebrews
+          reads the OT — the hermeneutics behind the catena method.</em>
+        </p>
+      </div>
+
+      <div class="tg-related">
+        <h2 class="tg-related__title">Related Studies</h2>
+        <ul class="tg-related__list">
+          <li><a class="tg-related__link" href="../../topics/covenants/">The Covenants</a></li>
+          <li><a class="tg-related__link" href="../../topics/christology/">Christology</a></li>
+          <li><a class="tg-related__link" href="../romans-1-8/">Romans 1–8 Study Guide</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<script is:inline="">
+  (function () {
+    var tabs      = Array.from(document.querySelectorAll('.sg-tab-btn'));
+    var sections  = Array.from(document.querySelectorAll('.tg-section'));
+    var dividers  = Array.from(document.querySelectorAll('.sg-divider'));
+    var further   = document.querySelector('.tg-reading');
+    var tabNav    = document.querySelector('.sg-tabs');
+    var validIds  = sections.map(function (s) { return s.id; });
+
+    function activate(id, scroll) {
+      // hide all sections and all visual separators
+      sections.forEach(function (s) { s.hidden = true; });
+      dividers.forEach(function (d) { d.hidden = true; });
+
+      // further-study block shown alongside ch-13 only
+      if (further) further.hidden = (id !== 'ch-13');
+
+      // reveal the target section
+      var target = document.getElementById(id);
+      if (target) target.hidden = false;
+
+      // sync tab active state
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.dataset.target === id);
+      });
+
+      // keep the active tab visible in the scrollable bar
+      var activeTab = document.querySelector('.sg-tab-btn.is-active');
+      if (activeTab) activeTab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+
+      // update the URL hash so the link is bookmarkable / shareable
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+
+      // on explicit tab click, scroll the tab bar to the top of the viewport
+      if (scroll && tabNav) tabNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // wire tab buttons
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () { activate(t.dataset.target, true); });
+    });
+
+    // handle browser back/forward
+    window.addEventListener('popstate', function () {
+      var h = location.hash.replace('#', '');
+      activate(validIds.indexOf(h) !== -1 ? h : validIds[0]);
+    });
+
+    // initial activation — honour the URL hash, default to introduction
+    var hash = location.hash.replace('#', '');
+    activate(validIds.indexOf(hash) !== -1 ? hash : 'introduction');
+  })();
+  </script><script type="module" is:inline="">
+    import { initSgProgress } from '../../assets/js/sg-progress.js';
+    initSgProgress('hebrews', 14);
+  </script>
+</Fragment>
+</Base>

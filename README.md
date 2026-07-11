@@ -1,78 +1,76 @@
-# Bible Study Website
+# Kingdom Bible Study
 
-A personal Bible study reference site hosted on GitHub Pages.
-
-## Features (planned / in progress)
-
-- 📖 Multiple Bible versions (KJV, NIV, ESV, NASB …)
-- 🔗 Hotlinked Bible references throughout all content
-- 📚 Topical study pages (Prayer, Revelation, …)
-- 🔍 Cross-reference lookup
-- 📱 Mobile-friendly layout
+A personal Bible study site — reader, word study, cross-references, devotionals,
+disciplines tracking, and a church-history library — hosted on GitHub Pages as a
+PWA with full offline support.
 
 ## Live Site
 
-> https://<your-github-username>.github.io/bible-study/
+> https://seriousd6.github.io/
 
-## Project Structure
+## Architecture (Astro migration, July 2026)
+
+The site is mid-migration to [Astro](https://astro.build). Pages are authored as
+`.astro` files sharing one layout; the runtime (JS modules, CSS, Bible data,
+service worker) is untouched and ships verbatim.
 
 ```
-bible-study/
-├── index.html              # Home / landing page
-├── assets/
-│   ├── css/style.css       # Global styles
-│   ├── js/main.js          # Core JS (reference linking, etc.)
-│   └── images/
-├── data/
-│   ├── versions/           # Metadata for each Bible version
-│   ├── books/              # Book/chapter/verse structure (JSON)
-│   └── references/         # Pre-built cross-reference maps
-├── topics/
-│   ├── index.html          # Topics listing page
-│   ├── prayer/index.html
-│   ├── revelation/index.html
-│   └── _template/          # Copy this to start a new topic
-├── _includes/              # Shared HTML partials (header, footer, …)
-├── _layouts/               # Base page layouts
-└── scripts/                # Build / utility scripts
+├── src/
+│   ├── layouts/Base.astro   # Universal shell: head boilerplate, theme bootstrap,
+│   │                        #   base CSS, footer, main.js/app.js pair
+│   └── pages/               # One .astro file per page, mirrors URL structure
+├── assets/                  # css/, js/ (ES modules), fonts/ — served as-is
+├── data/                    # Bible text, commentary, library JSON (~50k files);
+│   │                        #   written hourly by the local auto-sync — do not move
+├── sw.js                    # Service worker (bump APP_CACHE_V on asset changes)
+├── tools/
+│   ├── root-statics.mjs     # Dev-server middleware: serves the root static tree
+│   ├── convert-pages.mjs    # One-time legacy HTML → .astro converter
+│   └── diff-pages.mjs       # DOM-diffs dist/ against legacy root HTML
+└── .github/workflows/
+    ├── validate.yml         # Data integrity + JS syntax + Astro build (every push)
+    └── deploy.yml           # Pages deploy — manual until cutover (see file header)
 ```
 
-## Adding a New Topic
-
-1. Copy `topics/_template/` to `topics/<your-topic>/`
-2. Edit `topics/<your-topic>/index.html`
-3. Add a card in `topics/index.html`
-4. Use `<a class="ref" data-ref="John 3:16">John 3:16</a>` for hotlinked references
-
-## Bible Reference Linking
-
-Any element with `class="ref"` and a `data-ref` attribute is auto-linked by
-`assets/js/main.js` to the configured Bible API (Bible Gateway by default).
-
-```html
-<a class="ref" data-ref="Romans 8:28">Romans 8:28</a>
-```
-
-## GitHub Pages Setup
-
-1. Push to GitHub
-2. Go to **Settings → Pages**
-3. Source: `main` branch, `/ (root)` folder
-4. Your site is live at `https://<username>.github.io/<repo>/`
+**Overlay layout:** until cutover, GitHub Pages serves the branch directly, so the
+legacy root `*.html` pages remain in place and the Astro tree is purely additive.
+`tools/root-statics.mjs` bridges `astro dev` to the root `assets/`/`data/` dirs;
+`deploy.yml` copies them into `dist/` for Actions-based deploys. A handful of
+redirect stubs (`devotionals/`, `plans/`, `word/`, …) and the `_template` scaffolds
+are excluded from conversion and ship verbatim — the copy lists live in
+`tools/root-statics.mjs` and `deploy.yml` and must stay in sync.
 
 ## Development
 
-Open any `.html` file directly in a browser for local preview — no build step
-required. For live-reload during editing, run:
-
 ```bash
-# Python 3 (built-in)
-python3 -m http.server 8080
+npm install
+npm run dev       # localhost:4321 — pages from src/, statics from repo root
+npm run build     # dist/ (page HTML only; deploy workflow adds the static tree)
+npm run diff      # verify dist/ pages are DOM-identical to the legacy HTML
 ```
 
-Then visit `http://localhost:8080`.
+Pre-cutover, the legacy root HTML is still what production serves: page edits must
+go into **both** the root HTML and `src/pages/` (or edit root HTML and re-run
+`npm run convert`). Post-cutover, `src/pages/` is the single source of truth.
 
-## Claude Agent Notes
+## Adding a page
 
-See `CLAUDE.md` for project context and conventions used when working with
-Claude Code or Claude AI assistance.
+Create `src/pages/<section>/index.astro` using `Base.astro`:
+
+```astro
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title={"My Page — Kingdom Bible Study"} description={"…"}>
+  <main>…</main>
+</Base>
+```
+
+Extra CSS goes in a `<Fragment slot="head-end">`; inline scripts/styles need
+`is:inline`. Use `<a class="ref" data-ref="Romans 8:28">` for hotlinked Bible
+references (wired by `assets/js/wire.js`).
+
+## Validation
+
+`python3 scripts/validate-data.py` and `python3 scripts/validate-library-format.py --all`
+guard the data tree; CI also runs `node --check` over all JS and a full Astro build.

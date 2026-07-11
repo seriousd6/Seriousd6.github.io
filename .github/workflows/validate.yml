@@ -1,12 +1,12 @@
 name: Validate
 
 # Cheap, fast integrity gate for a data-heavy, multi-agent repo. Runs the data-integrity
-# assertions and the library format validator on every push / PR. No build step — the
-# site ships raw — so this is the project's main automated safety net.
+# assertions, the library format validator, and (since the Astro migration) a site build
+# on every push / PR. This is the project's main automated safety net.
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
 
 jobs:
@@ -28,7 +28,17 @@ jobs:
       - name: JS syntax (node --check on all modules)
         run: |
           if command -v node >/dev/null 2>&1; then
-            for f in assets/js/*.js sw.js; do node --check "$f"; done
+            for f in assets/js/*.js sw.js tools/*.mjs; do node --check "$f"; done
           else
             echo "node unavailable; skipping JS syntax check"
           fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Astro build
+        run: |
+          npm ci
+          npm run build
