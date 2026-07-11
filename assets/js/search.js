@@ -1,9 +1,9 @@
 /* search.js — Search page init, verse search, Strong's, explore/omni-search, topics search.
  *
  * Entry points:
- *   buildSearchDOM()  — called from app.js on every page; injects the global Search button
- *                       into the sidebar and wires Ctrl+K to open the search page.
- *   initSearchPage()  — called only on search/index.html; wires the full search UI.
+ *   initSearchPage()  — called by entries/search.js only on search/index.html; wires the
+ *                       full search UI. (The global sidebar Search button + hotkeys live
+ *                       in core-boot.js buildSearchNav so other pages don't load this file.)
  *
  * The page has two top-level modes toggled by [data-search-tab]:
  *   "verse"   — full-text keyword search across all Bible book JSON files.
@@ -26,7 +26,7 @@
 
 import {
   getVersion, loadBook, parseRef, normalizeBook, metaBooks, bookLookup, bookOrder,
-  SEARCH_URL, READER_URL, STRONGS_ROOT, TOPICS_ROOT, WORD_URL, TOPICS_INDEX_URL,
+  READER_URL, STRONGS_ROOT, TOPICS_ROOT, WORD_URL, TOPICS_INDEX_URL,
   escHtml, computeTextSimilarity, _scoreResult,
   _loadLibIndex, _loadLibSearch, libIndexCache, bookCache,
   loadStrongs, _smithLoad, _smithData, _resolve,
@@ -37,7 +37,6 @@ var _LIBRARY_ROOT = _resolve('../../library/');
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
 import { loadSectionBody, searchSectionsFull } from './sections.js';
 import { wireRefLinks, wireRefEl } from './wire.js';
-import { _showShortcutsOverlay } from './modal.js';
 import { autoTagTermsWhenReady } from './terms.js';
 
 // ── Session state ─────────────────────────────────────────────────────────
@@ -73,45 +72,10 @@ var _switchSearchTab   = null;
 // OS-C: module-level ref so _toggleRecentSearches can call it without knowing the active tab
 var _fireSearch        = null;
 
-// ── buildSearchDOM ────────────────────────────────────────────────────────
-// Injected on every page by app.js after books/versions load.
-export function buildSearchDOM() {
-  var vp = document.querySelector('.version-picker');
-  if (vp && !document.getElementById('bsw-search-btn')) {
-    var btn = document.createElement('button');
-    btn.id        = 'bsw-search-btn';
-    btn.className = 'bsw-search-btn';
-    btn.setAttribute('aria-label', 'Search verses (Ctrl+K)');
-    btn.textContent = 'Search';
-    vp.parentNode.insertBefore(btn, vp);
-    btn.addEventListener('click', function () {
-      var inp = document.getElementById('bsw-search-input');
-      if (inp) { inp.focus(); inp.select(); } else { window.location.href = SEARCH_URL; }
-    });
-  }
-
-  // Ctrl+K: focus the search input if on the search page, otherwise navigate.
-  document.addEventListener('keydown', function (e) {
-    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-      e.preventDefault();
-      var inp = document.getElementById('bsw-search-input');
-      if (inp) { inp.focus(); inp.select(); } else { window.location.href = SEARCH_URL; }
-    }
-  });
-
-  // '?' opens the keyboard shortcuts overlay.
-  // '/' focuses the reader search bar (only on the reader page).
-  document.addEventListener('keydown', function (e) {
-    if (e.key !== '?' && e.key !== '/') return;
-    if (e.key === '/' && !document.getElementById('reader-results')) return;
-    var tag = document.activeElement && document.activeElement.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
-    if (e.key === '?') { e.preventDefault(); _showShortcutsOverlay(); }
-  });
-
-  var pageInput = document.getElementById('bsw-search-input');
-  if (pageInput) initSearchPage(pageInput);
-}
+// (Phase 2.5: buildSearchDOM moved to core-boot.js as buildSearchNav — the
+// sidebar Search button and global hotkeys must exist on every page WITHOUT
+// loading this whole module. The search page's own entry calls initSearchPage
+// directly.)
 
 // ── initSearchPage ────────────────────────────────────────────────────────
 // Wires all interactive elements on search/index.html.

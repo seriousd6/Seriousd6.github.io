@@ -61,6 +61,33 @@ Remaining fat in core-boot is the modal-renderer set (`verse-study`/`daily`/`lib
 `search` + deps) — lazy-loading those on first modal-tab click is the Phase 2.5
 follow-up, or falls out naturally in Phase 3/4.
 
+### Phase 2.5 — ✅ **DONE 2026-07-11**
+
+The "modal-renderer set" turned out to be mostly **dead code**: modal.js stored the five
+registered tab renderers but never invoked them (tabs are Verse/Notes/Connections;
+verse-study.js imports library.js renderers directly). Shipped:
+
+- Dead `registerModal*` bridge removed from modal.js + core-boot; `verse-study.js`
+  (+`interlinear.js`) and `library.js` fall out of the eager graph entirely.
+- `mem.js` extracted from daily.js (memory-verse localStorage/SRS helpers) so the
+  modal's Memorize button no longer drags the 62 KB daily page module everywhere.
+- Sidebar Search button + Ctrl+K/`?` hotkeys inlined into core-boot (`buildSearchNav`);
+  the 60 KB search engine now loads only on `search/` via its own `entries/search.js`.
+- `terms.js`/`places.js` dynamic-imported in their existing idle slots;
+  `apocrypha-reader.js` fire-and-forget after `wireRefLinks`; `BibleUI.initOLSection` /
+  `autoTagPlacesIn` became lazy wrappers (their callers already tolerate promises).
+- `sw.js` → v186 (+`mem.js`, `entries/search.js` precached).
+
+**Eager payload: generic pages 509 → 200 KB** (−89 % vs the original 1,800 KB);
+reader 558 KB; maps 385 KB. Verified with a headless-Chromium functional pass: modal
+opens via ref click, search returns results, John 3:16 renders, library populates,
+Ctrl+K navigates, `window.BibleUI` surface exact.
+
+_Known pre-existing issue (not fixed here):_ the injected sidebar Search **button** has
+been dead since the Candlelight static-sidebar commit — its `.version-picker` anchor no
+longer exists (the sidebar's 🔍 Explore link covers navigation; Ctrl+K still works).
+Decide in Phase 5 whether to re-anchor it next to `#bible-version` or delete the code.
+
 **Goal:** each page loads only the JS it uses. Kill the 1.8 MB-on-every-page tax.
 
 **Approach (low risk, no pipeline change yet):**

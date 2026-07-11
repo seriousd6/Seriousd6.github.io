@@ -78,23 +78,10 @@ function _maybeAutoTag(el) {
   }
 }
 
-// ── Word study + confessions/fathers/topics/dictionary bridges ────────────
-var _renderModalWordStudyFn  = null;
-var _renderModalTopicsFn     = null;
-var _renderModalConfessionsFn = null;
-var _renderModalFathersFn    = null;
-var _renderModalDictionaryFn = null;
-
-// CHANGE? All five register* functions below are called by app.js after the relevant
-//   modules are imported (verse-study.js for word study, daily.js for topics/confessions/
-//   fathers/dictionary). If any registration is skipped, that modal tab silently renders
-//   empty — no error is thrown. If a module's render function is renamed, update both the
-//   app.js import and the corresponding registerModal* call here.
-export function registerModalWordStudy(fn)     { _renderModalWordStudyFn   = fn; }
-export function registerModalTopics(fn)        { _renderModalTopicsFn      = fn; }
-export function registerModalConfessions(fn)   { _renderModalConfessionsFn = fn; }
-export function registerModalFathers(fn)       { _renderModalFathersFn     = fn; }
-export function registerModalDictionary(fn)    { _renderModalDictionaryFn  = fn; }
+// (Phase 2.5: the old registerModalWordStudy/Topics/Confessions/Fathers/Dictionary
+// bridge was removed — the stored callbacks were never invoked. The modal's tabs
+// are Verse/Notes/Connections; verse-study.js imports the library.js renderers
+// directly for its own sections.)
 
 // ── Commentary source state ───────────────────────────────────────────────
 // Reads are always fresh via getCommentarySource() (see core.js) so that changes
