@@ -59,11 +59,14 @@
   discipline / biblepedia adopted the tokens. `reader.css` deliberately keeps
   its compact 6px style. Footer is a quiet hairline rule in both themes.
 
-### Google Drive sync — built, dormant (2026-07-11)
+### Google Drive sync — built and ACTIVE (2026-07-11)
 - `assets/js/sync.js` + Settings → "Sync & Backup": backup/restore of all
   `bsw_*` localStorage state to the user's Drive app-data area; auto-backup
   with change detection; confirm-gated restore.
-- **Activation blocked on one manual step** (see below).
+- Google Cloud config done (project + Drive API + Testing-mode consent screen
+  + web client ID); client ID wired into `sync.js`. The OAuth app stays in
+  **Testing** mode deliberately — see the activation section below for the
+  console steps if the client ID ever needs recreating.
 
 ### JS runtime & data-page overhaul, Phases 2–5 (2026-07-11)
 
@@ -110,13 +113,11 @@ documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
 
 ## Next up
 
-1. **Activate Drive sync** — follow "Google Drive sync activation" below
-   (~10 min, free, user action only).
-2. **Remaining Candlelight polish** (optional, incremental):
+1. **Remaining Candlelight polish** (optional, incremental):
    - Study-guide / topic page typography alignment (they carry their own
      Google-Fonts look today).
    - Reader study-desk panels onto the card token language, if desired.
-3. **Unscheduled candidates**: content collections for topics/study-guides,
+2. **Unscheduled candidates**: content collections for topics/study-guides,
    Astro view transitions, self-hosting Leaflet (maps currently load it from
    unpkg — an offline gap), static rendering for more page families.
 

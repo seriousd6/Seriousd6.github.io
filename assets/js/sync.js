@@ -25,7 +25,7 @@
 //   4. Paste the client ID (ends in .apps.googleusercontent.com) below.
 // While this is empty, the Sync & Backup section renders a "not configured"
 // note instead of the connect UI, so shipping it blank is harmless.
-var GOOGLE_CLIENT_ID = '';
+var GOOGLE_CLIENT_ID = '748747372821-u7p9esfm653b0pm9f0iqoo2nhcdripoo.apps.googleusercontent.com';
 
 var SYNC_STATE_KEY  = 'bsw_sync_state';   // { connected, lastBackupAt, lastHash }
 var BACKUP_FILENAME = 'kbs-backup.json';
