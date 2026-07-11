@@ -1,5 +1,20 @@
 ---
+// Phase 4: the document list renders statically (default year-asc sort, real
+// links to the static /library/read/<id>/ pages) so the catalog is crawlable
+// and usable with JS disabled. lib-browser.js rebuilds the column on load —
+// it must apply persisted filters and URL state — replacing these anchors
+// with its interactive buttons.
+import fs from 'node:fs';
 import Base from '../../layouts/Base.astro';
+
+const index = JSON.parse(fs.readFileSync('./data/library/index.json', 'utf8'));
+const docs = [...index].sort((a, b) => (a.year || 0) - (b.year || 0));
+const TRAD = { ecumenical: 'Ecumenical', patristic: 'Patristic', reformed: 'Reformed',
+               lutheran: 'Lutheran', anglican: 'Anglican', baptist: 'Baptist',
+               catholic: 'Catholic', medieval: 'Medieval' };
+const TYPE = { creed: 'Creed', confession: 'Confession', catechism: 'Catechism',
+               father: 'Church Father', council: 'Council', treatise: 'Treatise' };
+const yearStr = (y) => !y ? '' : (y < 500 ? `c. ${y} AD` : String(y));
 ---
 
 <Base entry="lib-browser" title={"Library — Kingdom Bible Study"} description={"Christian library — browse creeds, confessions, catechisms, and church fathers with filtering and an inline reader."} bodyAttrs={{"class":"lb-browser-page"}}>
@@ -52,7 +67,16 @@ import Base from '../../layouts/Base.astro';
             <!-- sort control injected by JS -->
           </div>
           <div id="lb-list">
-            <!-- document items injected by JS -->
+            {docs.map(doc => (
+              <a class="lb-list-item" href={`/library/read/${doc.id}/`} title={doc.title}>
+                <span class={`lb-item-abbrev lb-item-abbrev--${doc.tradition}`}>{doc.abbrev}</span>
+                <span class="lb-item-body">
+                  <span class="lb-item-title">{doc.title}{doc.volume_label && doc.volume !== 0 && <span class="lb-item-vol-badge">{doc.volume_label}</span>}</span>
+                  <span class="lb-item-meta">{[yearStr(doc.year), TRAD[doc.tradition] || doc.tradition, TYPE[doc.type] || doc.type].filter(Boolean).join(' · ')}</span>
+                  {doc.desc && <span class="lb-item-desc">{doc.desc}</span>}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
 

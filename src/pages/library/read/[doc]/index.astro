@@ -1,0 +1,98 @@
+---
+// Library document — static render (Phase 4, render-then-enhance).
+//
+// Every catalog entry in data/library/index.json gets a page at
+// /library/read/<id>/ with its header, full table of contents, and document
+// text rendered at build time — crawlable and readable with JS disabled.
+// Documents over the STATIC_CAP get their opening sections plus the full TOC
+// (emitting a 4 MB Summa page would double the transfer for JS users, who
+// re-fetch the source file the moment the reader enhances).
+//
+// On load, entries/lib-reader.js detects the /library/read/<id>/ path (same
+// dispatch as ?doc=<id>) and initLibReaderPage replaces this static DOM with
+// the paginated interactive reader — TOC nav, position restore, font
+// controls — identical to the ?doc= experience.
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../../../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const root = path.resolve('./data/library');
+  const index = JSON.parse(fs.readFileSync(path.join(root, 'index.json'), 'utf8'));
+  return index.map(entry => {
+    let sections;
+    if (entry.html_url) {
+      // v2 format: the file root is a bare sequence of <section data-heading="…">
+      // blocks; split on section starts (no closing-tag matching needed).
+      const raw = fs.readFileSync(path.join(root, 'html', entry.html_url), 'utf8');
+      sections = raw.split(/(?=<section\s+data-heading=)/).filter(c => c.trim()).map(chunk => {
+        const m = chunk.match(/^<section\s+data-heading="([^"]*)"/);
+        return { heading: m ? m[1] : '', html: chunk };
+      });
+    } else {
+      const doc = JSON.parse(fs.readFileSync(path.join(root, 'docs', `${entry.id}.json`), 'utf8'));
+      sections = (doc.sections || []).map(s => ({ heading: s.heading || '', html: s.html || '' }));
+    }
+    return { params: { doc: entry.id }, props: { entry, sections } };
+  });
+}
+
+const { entry, sections } = Astro.props;
+const STATIC_CAP = 120_000; // chars of section HTML rendered statically
+
+let budget = STATIC_CAP;
+const shown = [];
+for (const s of sections) {
+  if (budget - s.html.length < 0 && shown.length > 0) break;
+  budget -= s.html.length;
+  shown.push(s);
+}
+const truncated = shown.length < sections.length;
+const meta = [entry.author, entry.year ? String(entry.year) : null].filter(Boolean).join(' · ');
+const description = (entry.desc || `${entry.title} — full text in the Kingdom Bible Study library.`).slice(0, 158);
+---
+
+<Base entry="lib-reader" title={`${entry.title} — Library — Kingdom Bible Study`} description={description}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="/assets/css/library.css"><link rel="stylesheet" href="/assets/css/lib-reader.css">
+</Fragment>
+<main>
+    <div class="container lr-page">
+
+      <div class="lr-header" id="lib-reader-header">
+        <a class="lr-back" href="/library/">← Library</a>
+        <h1 class="lr-title">{entry.title}</h1>
+        {meta && <p class="lr-meta">{meta}</p>}
+        {entry.desc && <p class="lr-desc">{entry.desc}</p>}
+      </div>
+
+      <div class="lr-layout">
+
+        <aside class="lr-sidebar">
+          <div class="lr-sidebar-inner" id="lib-reader-toc">
+            <ol class="lr-toc-static">
+              {sections.map((s, i) => <li><a href={`#lr-sec-${i + 1}`}>{s.heading || `Section ${i + 1}`}</a></li>)}
+            </ol>
+          </div>
+        </aside>
+
+        <div class="lr-main" id="lib-reader-content">
+          {shown.map((s, i) => (
+            <section class="lr-doc-section" id={`lr-sec-${i + 1}`}>
+              {!s.html.includes('<h2') && s.heading && <h2 class="lib-section__title">{s.heading}</h2>}
+              <Fragment set:html={s.html} />
+            </section>
+          ))}
+          {truncated && (
+            <p class="lr-loading">
+              Showing the opening {shown.length} of {sections.length} sections — the full
+              document loads in the interactive reader.
+            </p>
+          )}
+        </div>
+
+      </div><!-- /.lr-layout -->
+
+    </div><!-- /.container -->
+  </main>
+</Base>

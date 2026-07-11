@@ -854,7 +854,7 @@ function _readerHeaderHtml(doc, entry, volHtml, extraHtml) {
   var year        = entry && entry.year;
   var yearStr     = year ? (year < 500 ? 'c. ' + year + ' AD' : String(year)) : '';
   var author      = entry && entry.author;
-  var readerHref  = _resolve('../../library/read/') + '?doc=' + encodeURIComponent(doc.id);
+  var readerHref  = _resolve('../../library/read/') + encodeURIComponent(doc.id) + '/';  // static page (Phase 4); ?doc= still works
   return (
     '<div class="lb-reader-header">' +
       '<div class="lb-reader-title-row">' +

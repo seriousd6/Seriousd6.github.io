@@ -80,6 +80,13 @@ export function initLibReaderPage() {
 
   var _params = new URLSearchParams(window.location.search);
   var docId   = _params.get('doc');
+  // Static document pages (Phase 4): /library/read/<id>/ is pre-rendered at
+  // build time; derive the id from the path and enhance exactly like ?doc=.
+  if (!docId) {
+    var cleanPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    var pathMatch = cleanPath.match(/\/library\/read\/([a-z0-9-]+)\/$/);
+    if (pathMatch) docId = pathMatch[1];
+  }
   if (!docId) {
     content.innerHTML = '<p class="lr-error">No document specified. <a href="../">Return to Library</a></p>';
     return;

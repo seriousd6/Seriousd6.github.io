@@ -143,7 +143,7 @@ function _render(root, log, index) {
       var trad  = entry.tradition || 'ecumenical';
       var color = _TRAD_COLORS[trad] || '#888';
       var tradLabel = _TRAD_DISPLAY[trad] || trad;
-      var readHref  = _resolve('../../library/read/') + '?doc=' + encodeURIComponent(id);
+      var readHref  = _resolve('../../library/read/') + encodeURIComponent(id) + '/';  // static page (Phase 4); ?doc= still works
       logHtml +=
         '<div class="lp-log-item">' +
           '<div class="lp-log-main">' +
