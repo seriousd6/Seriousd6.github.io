@@ -1,0 +1,130 @@
+---
+// /answers/<slug>/ — static topical answer pages (Heights H1b).
+//
+// "What does the Bible say about X?" gets a real page: the topic's key verses
+// WITH their text (BSB, resolved at build), the full reference list, and
+// cross-links into the rest of the site. Sourced from Nave's Topical Bible
+// (data/topical/nave.json, 5.3k topics; the ~650 heads with no verses are
+// skipped). Every reference is a hotlinked .ref, so the generic entry's boot
+// wires them straight into the verse modal — the static page IS the feature;
+// nothing replaces it on load.
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const nave = JSON.parse(fs.readFileSync('./data/topical/nave.json', 'utf8'));
+  const bpIndex = JSON.parse(fs.readFileSync('./data/biblepedia/index.json', 'utf8'));
+  const bpIds = new Set(bpIndex.filter(e => e.has_article !== false).map(e => e.id));
+
+  // BSB book cache: "1 Chronicles" → data/bible/BSB/1chronicles.json, loaded once.
+  const bookCache = new Map();
+  const bookFile = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const loadBook = (name) => {
+    const id = bookFile(name);
+    if (!bookCache.has(id)) {
+      const p = path.join('./data/bible/BSB', `${id}.json`);
+      bookCache.set(id, fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null);
+    }
+    return bookCache.get(id);
+  };
+  const REF_RE = /^((?:[1-3] )?[A-Za-z. ]+?) (\d+)(?::(\d+)(?:-(\d+))?)?$/;
+  const verseText = (ref) => {
+    const m = REF_RE.exec(ref.trim());
+    if (!m || !m[3]) return null;               // whole-chapter refs: link only
+    const book = loadBook(m[1]);
+    const ch = book && book.chapters && book.chapters[m[2]];
+    const t = ch && ch[m[3]];
+    return t ? String(t).replace(/<[^>]+>/g, '') : null;
+  };
+  const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z])/g, (s, a, b) => a + b.toUpperCase());
+
+  const entries = nave.filter(e => (e.verses || []).length > 0);
+  return entries.map((e, i) => {
+    const preview = [];
+    for (const ref of e.verses) {
+      if (preview.length >= 8) break;
+      const text = verseText(ref);
+      if (text) preview.push({ ref, text });
+    }
+    const related = [];
+    for (let d = 1; related.length < 6 && d < 40; d++) {
+      for (const j of [i - d, i + d]) {
+        if (related.length < 6 && entries[j]) related.push({ slug: entries[j].slug, title: titleCase(entries[j].title) });
+      }
+    }
+    return {
+      params: { slug: e.slug },
+      props: {
+        title: titleCase(e.title),
+        verses: e.verses,
+        preview,
+        bpLink: bpIds.has(e.slug) ? `/biblepedia/${e.slug}/` : null,
+        related,
+      },
+    };
+  });
+}
+
+const { title, verses, preview, bpLink, related } = Astro.props;
+const MAX_LIST = 400;
+const listed = verses.slice(0, MAX_LIST);
+const desc = preview.length
+  ? `${verses.length} Bible verses on ${title}, from Nave's Topical Bible — starting with ${preview[0].ref}: “${preview[0].text.slice(0, 90)}…”`
+  : `${verses.length} Bible references on ${title}, from Nave's Topical Bible.`;
+const exploreHref = `/search/?tab=explore&q=${encodeURIComponent(title.toLowerCase())}`;
+---
+
+<Base entry="generic" title={`What does the Bible say about ${title}? — Kingdom Bible Study`} description={desc.slice(0, 158)}>
+<Fragment slot="head-end">
+<style is:inline>
+  .ans { max-width: 780px; margin: 0 auto; padding: 1.8rem 1.2rem 4rem; }
+  .ans-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.3rem; }
+  .ans h1 { font-family: var(--font-ui); font-weight: 800; letter-spacing: -0.02em; font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 0.35rem; }
+  .ans-src { font-family: var(--font-ui); font-size: 0.85rem; color: var(--color-muted); margin: 0 0 1.6rem; }
+  .ans-verse { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); padding: 0.95rem 1.15rem; margin-bottom: 0.8rem; }
+  .ans-verse blockquote { margin: 0 0 0.45rem; font-family: var(--font-body); font-size: 1.06rem; line-height: 1.75; }
+  .ans-verse cite { font-style: normal; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 650; }
+  .ans-all { margin-top: 1.6rem; }
+  .ans-all summary { font-family: var(--font-ui); font-weight: 650; font-size: 0.92rem; cursor: pointer; color: var(--color-primary); }
+  .ans-reflist { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0.9rem 0 0; }
+  .ans-reflist a { font-family: var(--font-ui); font-size: 0.8rem; border: 1px solid var(--color-border); border-radius: 999px; padding: 0.2rem 0.6rem; }
+  .ans-links { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid var(--color-border); font-family: var(--font-ui); font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; }
+  .ans-rel { margin-top: 1.4rem; }
+  .ans-rel h2 { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.5rem; }
+  .ans-rel a { font-family: var(--font-ui); font-size: 0.84rem; border: 1px solid var(--color-border); border-radius: 999px; padding: 0.22rem 0.7rem; display: inline-block; margin: 0 0.35rem 0.4rem 0; }
+</style>
+</Fragment>
+<main>
+  <div class="ans">
+    <p class="ans-eyebrow">What the Bible says about</p>
+    <h1>{title}</h1>
+    <p class="ans-src">{verses.length} reference{verses.length === 1 ? '' : 's'} · Nave's Topical Bible (1896) · tap any verse for study tools</p>
+
+    {preview.map(v => (
+      <div class="ans-verse">
+        <blockquote>“{v.text}”</blockquote>
+        <cite>— <a class="ref" data-ref={v.ref} href={`/read/?ref=${encodeURIComponent(v.ref)}`}>{v.ref}</a> <span style="color:var(--color-muted); font-weight:400">BSB</span></cite>
+      </div>
+    ))}
+
+    <details class="ans-all" open={preview.length === 0}>
+      <summary>All {listed.length}{verses.length > MAX_LIST ? ` of ${verses.length}` : ''} references</summary>
+      <div class="ans-reflist">
+        {listed.map(r => <a class="ref" data-ref={r} href={`/read/?ref=${encodeURIComponent(r)}`}>{r}</a>)}
+      </div>
+      {verses.length > MAX_LIST && <p style="font-family:var(--font-ui); font-size:0.85rem; color:var(--color-muted)">The full list is large — <a href={exploreHref}>explore “{title}” in search</a> for the rest.</p>}
+    </details>
+
+    <div class="ans-links">
+      {bpLink && <a href={bpLink}>Read the {title} encyclopedia article →</a>}
+      <a href={exploreHref}>Everything on “{title}” in Explore →</a>
+    </div>
+
+    <div class="ans-rel">
+      <h2>Nearby topics</h2>
+      {related.map(r => <a href={`/answers/${r.slug}/`}>{r.title}</a>)}
+    </div>
+  </div>
+</main>
+</Base>

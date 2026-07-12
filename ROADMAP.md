@@ -79,9 +79,14 @@ When a chapter loads, show what the site has for it.
 
 ## Status
 
-- H1a — pending
-- H1b — pending
-- H2 — pending
+- H1a — **DONE** (2026-07-12): question-boilerplate → topic kernel; zero-result
+  verse searches hand off to Omni with a note.
+- H1b — **DONE** (2026-07-12): 4,674 static answer pages at `/answers/<slug>/`
+  (+ letter index at `/answers/`) from Nave's — key verses with BSB text
+  resolved at build, hotlinked to the verse modal, full reference list,
+  biblepedia cross-links, in the sitemap; Omni topic chips link there.
+- H2 — **DONE** (2026-07-12): apparatus rail gained state-aware Commentary /
+  Interlinear / Parallels chips mirroring the Study Tools toggles.
 - H3 — pending
 - H4 — pending
 - H5 — pending

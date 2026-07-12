@@ -701,7 +701,7 @@ export function handleTopicsSearch(query) {
     out.innerHTML = '<div class="omni-topics-row">' +
       res.slice(0, 100).map(function (t) {
         return '<a class="omni-topic-chip" href="' +
-          escHtml(TOPICS_ROOT + '?topic=' + encodeURIComponent(t.slug)) + '">' +
+          escHtml('/answers/' + t.slug + '/') + '">' +
           escHtml(t.title) +
           '<span class="omni-topic-chip__count"> (' + t.verses.length + ')</span>' +
         '</a>';

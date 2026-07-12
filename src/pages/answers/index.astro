@@ -1,0 +1,47 @@
+---
+// /answers/ — index of the topical answer pages, grouped by letter.
+import fs from 'node:fs';
+import Base from '../../layouts/Base.astro';
+
+const nave = JSON.parse(fs.readFileSync('./data/topical/nave.json', 'utf8'));
+const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z])/g, (s, a, b) => a + b.toUpperCase());
+const entries = nave.filter(e => (e.verses || []).length > 0)
+  .map(e => ({ slug: e.slug, title: titleCase(e.title), n: e.verses.length }));
+const byLetter = {};
+for (const e of entries) {
+  const L = /^[A-Z]/.test(e.title[0]) ? e.title[0] : '#';
+  (byLetter[L] = byLetter[L] || []).push(e);
+}
+const letters = Object.keys(byLetter).sort();
+---
+
+<Base entry="generic" title={"What does the Bible say about…? — Kingdom Bible Study"} description={`Topical Bible answers — ${entries.length} topics from Nave's Topical Bible, each with key verses and full references.`}>
+<Fragment slot="head-end">
+<style is:inline>
+  .ansx { max-width: 880px; margin: 0 auto; padding: 1.8rem 1.2rem 4rem; }
+  .ansx h1 { font-family: var(--font-ui); font-weight: 800; letter-spacing: -0.02em; font-size: clamp(1.5rem, 4vw, 2rem); margin: 0 0 0.4rem; }
+  .ansx-sub { font-family: var(--font-ui); color: var(--color-muted); font-size: 0.95rem; margin: 0 0 1.6rem; }
+  .ansx details { border-top: 1px solid var(--color-border); padding: 0.55rem 0; }
+  .ansx summary { font-family: var(--font-ui); font-weight: 700; cursor: pointer; }
+  .ansx-list { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 0 0.3rem; }
+  .ansx-list a { font-family: var(--font-ui); font-size: 0.82rem; border: 1px solid var(--color-border); border-radius: 999px; padding: 0.2rem 0.65rem; }
+  .ansx-list a b { font-weight: 400; color: var(--color-muted); }
+</style>
+</Fragment>
+<main>
+  <div class="ansx">
+    <h1>What does the Bible say about…</h1>
+    <p class="ansx-sub">{entries.length} topics from Nave's Topical Bible (1896) — each with key verses, the full
+    reference list, and links deeper into the site. Or just type your question into
+    <a href="/search/">Explore</a>.</p>
+    {letters.map(L => (
+      <details>
+        <summary>{L} <span style="color:var(--color-muted); font-weight:400">· {byLetter[L].length}</span></summary>
+        <div class="ansx-list">
+          {byLetter[L].map(e => <a href={`/answers/${e.slug}/`}>{e.title} <b>({e.n})</b></a>)}
+        </div>
+      </details>
+    ))}
+  </div>
+</main>
+</Base>
