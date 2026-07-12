@@ -3557,6 +3557,15 @@ kbd {
 .bsw-onboard-actions {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.bsw-onboard-tour {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--color-primary);
 }
 .bsw-onboard-btn {
   font-family: var(--font-ui);

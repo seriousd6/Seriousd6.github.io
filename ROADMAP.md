@@ -107,11 +107,14 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   keep their existing 1-tap `.term-link`. Verified: tap "devil" in Matthew 4 →
   "Read the Devil article" → `/biblepedia/devil/`.
 
-### H3 — First-run demonstration
+### H3 — First-run demonstration  ·  DONE 2026-07-12
 - The onboarding names 4 features; the site has 15, and the *chain*
   (verse → modal → connections → word study → article) is the product.
-- MVP: a "See everything on one verse" card in onboarding + a `/tour/` page
-  that walks John 3:16 through the whole chain with deep links.
+- Shipped: `/tour/` — "Everything on one verse" walks John 3:16 through the
+  chain in 7 live steps (verse modal demo in-page, word tap, `?strongs=G25`
+  occurrences, `?study=1` full apparatus, biblepedia, `/answers/love/`,
+  memorize). Onboarding gained a "See everything on one verse →" link beside
+  Get started; the sidebar gained Tools → Site Tour.
 
 ### H4 — Mobile & accessibility audit
 - Dedicated phone pass over reader, library browser, discipline hub, search
@@ -136,6 +139,7 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
 - H6 (audit) — **RUN + FIXED** (2026-07-12): audit found 13/16 intents ≤2
   taps; the three offenders — word→lexicon (E), place→map (G),
   person→article (H) — are fixed and verified. **16/16 intents now ≤2 taps.**
-- H3 — pending
+- H3 — **DONE** (2026-07-12): `/tour/` walkthrough of John 3:16 through the
+  whole chain with live deep links; onboarding tour CTA; sidebar Site Tour.
 - H4 — pending
 - H5 — pending

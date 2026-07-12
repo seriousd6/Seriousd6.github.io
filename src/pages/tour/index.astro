@@ -1,0 +1,135 @@
+---
+// /tour/ — "Everything on one verse" (Heights H3).
+//
+// The onboarding names four features; the site has fifteen, and the CHAIN —
+// verse → modal → word → lexicon → occurrences → article → topic → practice —
+// is the product. This page walks John 3:16 through that whole chain with
+// live deep links. It runs on the generic entry, so the .ref chip in step 1
+// opens the real verse modal right here on the page: the tour demonstrates
+// itself. Every link below is a real, tested deep link — keep them working
+// (reader ?ref/?study=1/?strongs=, /biblepedia/<id>/, /answers/<slug>/).
+import Base from '../../layouts/Base.astro';
+
+const STEPS = [
+  {
+    n: 1,
+    title: 'Start with a verse',
+    body: 'Everywhere on this site, a verse reference is a doorway. Tap the one below — a study panel opens right here: every translation side by side, cross-references, your notes, and more.',
+    demo: true,
+  },
+  {
+    n: 2,
+    title: 'Tap any word',
+    body: 'In the reader, every word of scripture is tappable. Tap “loved” in John 3:16 and a small card shows the Greek behind it — ἀγαπάω agapáō — with its meaning, a link to the full word study, and highlight colors for the verse.',
+    href: '/read/?ref=John+3%3A16',
+    link: 'Open John 3:16 in the reader',
+  },
+  {
+    n: 3,
+    title: 'Follow the word through Scripture',
+    body: 'One tap more and you can trace agapáō — the word for God’s self-giving love — through every verse where it appears, in the original language.',
+    href: '/read/?strongs=G25',
+    link: 'Every occurrence of agapáō (G25)',
+  },
+  {
+    n: 4,
+    title: 'Open the full apparatus',
+    body: 'Study mode turns everything on at once: the Greek interlinear under each verse, three commentaries, parallel passages, and the study desk. The chips beside the text show what’s available for any chapter you read.',
+    href: '/read/?ref=John+3%3A16&study=1',
+    link: 'Open John 3:16 in study mode',
+  },
+  {
+    n: 5,
+    title: 'Meet the people and places',
+    body: 'Names in scripture are quietly underlined. Tap one to see who they are — and follow through to a 4,600-article encyclopedia of people, places, and concepts.',
+    href: '/biblepedia/jesus-christ/',
+    link: 'Read the Jesus Christ article',
+  },
+  {
+    n: 6,
+    title: 'Ask the question behind the verse',
+    body: 'John 3:16 is about love. Ask the site “what does the Bible say about love?” — or any question like it — and get a real answer: hundreds of verses, organized, every one tappable.',
+    href: '/answers/love/',
+    link: 'What the Bible says about love',
+  },
+  {
+    n: 7,
+    title: 'Keep it',
+    body: 'When a verse matters to you, memorize it with spaced-repetition flashcards, journal on it, and build a daily reading habit — no account, everything saved on your device, fully offline.',
+    href: '/memorize/',
+    link: 'Start memorizing',
+  },
+];
+---
+
+<Base title="Tour — everything on one verse — Kingdom Bible Study" description="A two-minute tour of Kingdom Bible Study: one verse, John 3:16, walked through translations, Greek word study, commentary, encyclopedia, topics, and memorization.">
+<Fragment slot="head-end">
+<style is:inline>
+  .tour { max-width: 720px; margin: 0 auto; padding: 1.8rem 1.2rem 4rem; }
+  .tour-eyebrow { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent); margin: 0 0 0.3rem; }
+  .tour h1 { font-family: var(--font-ui); font-weight: 800; letter-spacing: -0.02em; font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 0.4rem; }
+  .tour-sub { font-family: var(--font-ui); font-size: 0.95rem; color: var(--color-muted); margin: 0 0 2rem; max-width: 56ch; }
+  .tour-step { display: flex; gap: 0.9rem; margin-bottom: 1.5rem; }
+  .tour-step__n {
+    flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--color-primary); color: #fff;
+    font-family: var(--font-ui); font-weight: 700; font-size: 0.85rem;
+    display: flex; align-items: center; justify-content: center; margin-top: 0.1rem;
+  }
+  .tour-step__body { min-width: 0; }
+  .tour-step h2 { font-family: var(--font-ui); font-size: 1.05rem; font-weight: 700; margin: 0 0 0.3rem; }
+  .tour-step p { font-family: var(--font-ui); font-size: 0.92rem; line-height: 1.65; color: var(--color-text); margin: 0 0 0.5rem; }
+  .tour-step__link {
+    display: inline-block; font-family: var(--font-ui); font-size: 0.86rem; font-weight: 650;
+    border: 1px solid var(--color-border); border-radius: 999px; padding: 0.3rem 0.85rem;
+    transition: border-color .12s;
+  }
+  .tour-step__link:hover { border-color: var(--color-primary); text-decoration: none; }
+  .tour-verse {
+    background: var(--color-surface); border: 1px solid var(--color-border);
+    border-radius: var(--radius-card); box-shadow: var(--shadow-card);
+    padding: 1rem 1.15rem; margin: 0.2rem 0 0.5rem;
+  }
+  .tour-verse blockquote { margin: 0 0 0.45rem; font-family: var(--font-body); font-size: 1.08rem; line-height: 1.75; }
+  .tour-verse cite { font-style: normal; font-family: var(--font-ui); font-size: 0.84rem; font-weight: 650; }
+  .tour-verse__hint { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-muted); }
+  .tour-cta { margin-top: 2.4rem; padding-top: 1.4rem; border-top: 1px solid var(--color-border); font-family: var(--font-ui); }
+  .tour-cta p { font-size: 0.95rem; color: var(--color-muted); margin: 0 0 0.8rem; }
+  .tour-cta a {
+    display: inline-block; background: var(--color-primary); color: #fff;
+    font-weight: 700; font-size: 0.95rem; border-radius: 999px; padding: 0.55rem 1.4rem;
+  }
+  .tour-cta a:hover { opacity: 0.9; text-decoration: none; color: #fff; }
+</style>
+</Fragment>
+<main>
+  <div class="tour">
+    <p class="tour-eyebrow">Two-minute tour</p>
+    <h1>Everything on one verse</h1>
+    <p class="tour-sub">This site holds more than it shows at first glance. Here is all of it, on the best-known verse in the Bible — every step is live, so tap along.</p>
+
+    {STEPS.map(s => (
+      <div class="tour-step">
+        <div class="tour-step__n">{s.n}</div>
+        <div class="tour-step__body">
+          <h2>{s.title}</h2>
+          <p>{s.body}</p>
+          {s.demo && (
+            <div class="tour-verse">
+              <blockquote>“For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life.”</blockquote>
+              <cite>— <a class="ref" data-ref="John 3:16" href="/read/?ref=John+3%3A16">John 3:16</a> <span style="color:var(--color-muted); font-weight:400">BSB</span></cite>
+              <div class="tour-verse__hint">↑ tap the reference</div>
+            </div>
+          )}
+          {s.href && <a class="tour-step__link" href={s.href}>{s.link} →</a>}
+        </div>
+      </div>
+    ))}
+
+    <div class="tour-cta">
+      <p>That was one verse. Sixty-six books are waiting.</p>
+      <a href="/read/">Start reading →</a>
+    </div>
+  </div>
+</main>
+</Base>

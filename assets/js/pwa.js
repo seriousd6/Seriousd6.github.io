@@ -34,6 +34,7 @@ export function _initOnboarding() {
         '</a>' +
       '</div>' +
       '<div class="bsw-onboard-actions">' +
+        '<a class="bsw-onboard-tour" id="bsw-onboard-tour" href="' + escHtml(_resolve('../../tour/')) + '">See everything on one verse &#x2192;</a>' +
         '<button class="bsw-onboard-btn" id="bsw-onboard-start">Get started</button>' +
       '</div>' +
     '</div>';
@@ -43,6 +44,10 @@ export function _initOnboarding() {
     overlay.remove();
   };
   overlay.querySelector('#bsw-onboard-start').addEventListener('click', dismiss);
+  // The tour link navigates; just mark onboarding done so it doesn't reappear.
+  overlay.querySelector('#bsw-onboard-tour').addEventListener('click', function () {
+    localStorage.setItem('bsw_onboarded', '1');
+  });
   overlay.addEventListener('click', function (e) { if (e.target === overlay) dismiss(); });
   document.addEventListener('keydown', function onKey(e) {
     if (e.key === 'Escape') { dismiss(); document.removeEventListener('keydown', onKey); }
