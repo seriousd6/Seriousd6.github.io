@@ -33,7 +33,7 @@ var XREF_CHAPTER_LIMIT = 5;
 var _BP_INDEX_URL = _resolve('../../data/biblepedia/index.json');
 var _BP_PAGE_URL  = _resolve('../../biblepedia/');   // article reader (?a=slug)
 var _bpIndexCache = null;
-function _loadBPIndex() {
+export function _loadBPIndex() {
   if (_bpIndexCache) return Promise.resolve(_bpIndexCache);
   return fetch(_BP_INDEX_URL).then(function (r) { return r.ok ? r.json() : []; })
     .then(function (d) { _bpIndexCache = Array.isArray(d) ? d : []; return _bpIndexCache; })

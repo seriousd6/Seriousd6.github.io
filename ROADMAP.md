@@ -85,21 +85,27 @@ taps after arrival (T = typing). Target: ≤2 from the natural starting point.
 | O | Study a whole book | home | Studies → book | 2 | ✓ |
 | P | Resume where I left off | home | The Holy Bible → "Continue where you left off" banner | 2 | ✓ |
 
-**Score: 13 of 16 intents at ≤2 taps.** The two hard failures are the two
-remaining un-hubbed nouns:
+**Score at audit time: 13 of 16 intents at ≤2 taps.** The offenders were the
+remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps**):
 
-- **E · Word → lexicon.** The site's richest layer (Strong's + interlinear +
-  workshop) is unreachable from the text itself. Fix: word-tap opens a compact
-  lexeme popover (lemma, gloss, Strong's link, "open word study") — the
-  verse-modal treatment applied to words.
-- **G · Place → map/article.** One-line-scale fix on the data path (tag
-  `#reader-results` after chapter render — the machinery and quiet `.map-place`
-  styling already exist, and the rail's places chip is already wired to count
-  them), plus a decision: place tags add a third always-on markup layer to
-  scripture. Options: (a) always-on quiet tags like terms; (b) tags off, places
-  surfaced only via the rail chip (count → tap → list panel). Owner's call.
-- **H · Person → article** rides along with E: the same tap-popover pattern
-  serves person names via the biblepedia index that terms.js already loads.
+- **E · Word → lexicon — FIXED.** `reader-wordtap.js`: tapping a plain word in
+  scripture opens a compact popover with the matched Strong's lemma /
+  transliteration / gloss (resolved against the verse's interlinear tokens),
+  plus "All occurrences" and "Full word study" (deep-links into the study
+  desk's word blade). Defers to every existing tap surface — refs, terms,
+  places, echo markers, verse numbers — and stands down when the interlinear
+  view is active or text is selected. Verified: tap "tempted" in Matthew 4 →
+  πειράζω peirázō G3985; "Full word study" opens the desk on G3985.
+- **G · Place → map — FIXED.** `reader-rail.js` now runs `autoTagPlacesIn` on
+  `#reader-results` once per chapter (keyed book|chapter so the rail's
+  mutation observer doesn't loop). Chose option (a): always-on quiet tags,
+  same treatment as terms. Verified: Matthew 4 tags 4 places, the rail chip
+  counts them, hover shows the place tip.
+- **H · Person → article — FIXED**, riding along with E: the word-tap popover
+  checks the biblepedia index and adds a "Read the … article" action when the
+  word names an article. Names the term layer already links (e.g. "Jesus")
+  keep their existing 1-tap `.term-link`. Verified: tap "devil" in Matthew 4 →
+  "Read the Devil article" → `/biblepedia/devil/`.
 
 ### H3 — First-run demonstration
 - The onboarding names 4 features; the site has 15, and the *chain*
@@ -127,7 +133,9 @@ remaining un-hubbed nouns:
   biblepedia cross-links, in the sitemap; Omni topic chips link there.
 - H2 — **DONE** (2026-07-12): apparatus rail gained state-aware Commentary /
   Interlinear / Parallels chips mirroring the Study Tools toggles.
-- H6 (audit) — **RUN** (2026-07-12): 13/16 intents ≤2 taps; offenders are word→lexicon (E), place→map (G), person→article (H). Fix scoping above.
+- H6 (audit) — **RUN + FIXED** (2026-07-12): audit found 13/16 intents ≤2
+  taps; the three offenders — word→lexicon (E), place→map (G),
+  person→article (H) — are fixed and verified. **16/16 intents now ≤2 taps.**
 - H3 — pending
 - H4 — pending
 - H5 — pending

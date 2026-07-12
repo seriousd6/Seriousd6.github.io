@@ -20,6 +20,7 @@ import { initEchoToggle } from '../parallels.js';
 import { initParallelsToggle } from '../synoptic.js';
 import { _injectShortcutsBtn } from '../modal.js';
 import { initReaderRail } from '../reader-rail.js';
+import { initWordTap } from '../reader-wordtap.js';
 
 boot(function () {
   initReaderPage();
@@ -45,4 +46,5 @@ boot(function () {
   initStudyDesk();
   _injectShortcutsBtn();
   initReaderRail();
+  initWordTap();
 }, { early: true });

@@ -4610,3 +4610,33 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
   color: var(--color-on-primary);
 }
 .reader-rail__chip--on:hover { color: var(--color-on-primary); border-color: var(--color-primary); }
+
+/* ── Word-tap lexeme popover (Heights audit fix E) ─────────────────────────── */
+.bsw-wordtap {
+  position: absolute;
+  z-index: 9500;
+  min-width: 220px;
+  max-width: 320px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.16);
+  padding: 0.7rem 0.85rem 0.75rem;
+  font-family: var(--font-ui);
+}
+.bsw-wordtap__word { font-family: var(--font-body); font-size: 1.15rem; font-weight: 650; margin-bottom: 0.2rem; }
+.bsw-wordtap__lex { font-size: 0.85rem; line-height: 1.5; }
+.bsw-wordtap__lemma { font-size: 1.02rem; font-weight: 600; }
+.bsw-wordtap__translit { font-style: italic; color: var(--color-muted); }
+.bsw-wordtap__code { font-size: 0.72rem; font-weight: 700; color: var(--color-accent); letter-spacing: 0.03em; }
+.bsw-wordtap__gloss { color: var(--color-muted); margin-top: 0.15rem; }
+.bsw-wordtap__dim { color: var(--color-muted); font-size: 0.82rem; }
+.bsw-wordtap__actions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+.bsw-wordtap__action {
+  font-family: var(--font-ui); font-size: 0.78rem; font-weight: 650;
+  border: 1px solid var(--color-border); border-radius: 999px;
+  padding: 0.22rem 0.7rem; background: none; color: var(--color-primary);
+  cursor: pointer; text-decoration: none;
+}
+.bsw-wordtap__action:hover { border-color: var(--color-primary); }
+.bsw-wordtap__action:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }

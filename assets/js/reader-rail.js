@@ -50,9 +50,25 @@ function _clickIfPresent(id) {
   if (el) el.click();
 }
 
+var _lastTagKey = null;
+
 function _buildRail(results) {
   var old = results.querySelector('.reader-rail');
   if (old) old.remove();
+
+  // Heights audit fix G: the place layer never tagged scripture (places.js
+  // _TARGETS covers intros/timelines/maps/topics only). Tag each freshly
+  // rendered chapter exactly once, keyed on book|chapter — the tag mutations
+  // re-trigger this observer, whose rebuild then counts them; the key check
+  // stops the loop there. The container persists across chapters, so re-arm
+  // autoTagPlacesIn's per-element guard before calling.
+  var nav = _navState();
+  var tagKey = nav && nav.bookId && nav.ch ? nav.bookId + '|' + nav.ch : null;
+  if (tagKey && tagKey !== _lastTagKey && window.BibleUI && window.BibleUI.autoTagPlacesIn) {
+    _lastTagKey = tagKey;
+    results._placesTagged = false;
+    window.BibleUI.autoTagPlacesIn(results);
+  }
 
   var echoes = results.querySelectorAll('.reader-echo-marker').length;
   var places = results.querySelectorAll('.map-place').length;
