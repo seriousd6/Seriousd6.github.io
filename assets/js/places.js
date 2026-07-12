@@ -19,6 +19,8 @@ var _PLACES_URL = _resolve('../../data/maps/places.json');
 /* ── State ───────────────────────────────────────────────────────────────── */
 var _placesReady  = null;          // Promise; resolves once places are loaded
 var _placesByName = null;          // Map: lowercase name/alias → place entry
+var _placesById   = null;          // Map: place id → place entry
+var _placesAll    = null;          // Array of all place entries
 var _placeRe      = null;          // Combined alternation regex (longest first)
 
 /* ── Tooltip DOM ─────────────────────────────────────────────────────────── */
@@ -46,9 +48,12 @@ export function loadPlaces() {
 
 function _buildIndex(places) {
   _placesByName = Object.create(null);
+  _placesById   = Object.create(null);
+  _placesAll    = places;
   var allNames = [];
 
   places.forEach(function (p) {
+    _placesById[p.id] = p;
     var names = [p.name].concat(p.aliases || []);
     names.forEach(function (n) {
       if (n.length < 3) return;
@@ -79,8 +84,10 @@ function _walkText(root, cb) {
       var p = node.parentElement;
       if (!p) return NodeFilter.FILTER_SKIP;
       if (_SKIP_TAGS[p.tagName]) return NodeFilter.FILTER_SKIP;
-      /* Skip inside existing interactive elements */
-      if (p.closest('a, [data-ref], .map-place, .bsw-term, .bsw-modal-backdrop, .maps-page'))
+      /* Skip inside existing interactive elements. .term-link is excluded so a
+         place tag never NESTS inside a term tag (two stacked hover tooltips);
+         the upgrade pass in autoTagPlaces converts those term-links instead. */
+      if (p.closest('a, [data-ref], .map-place, .term-link, .bsw-term, .bsw-modal-backdrop, .maps-page'))
         return NodeFilter.FILTER_SKIP;
       return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
     }
@@ -91,10 +98,42 @@ function _walkText(root, cb) {
   nodes.forEach(cb);
 }
 
+/* ── Anchor factory ──────────────────────────────────────────────────────── */
+/* The href deep-links the maps page to the place itself: ?focus=lat,lon,zoom
+   flies there and drops a highlight ring, #mapId selects the era map first
+   (both handled in maps.js _initMapsPage/_applyFocusParam). */
+export function placeMapHref(place, mapId) {
+  return MAPS_URL + '?focus=' + place.lat + ',' + place.lon + ',10#' + (mapId || place.mapId);
+}
+
+function _makePlaceAnchor(place, text) {
+  var a = document.createElement('a');
+  a.className = 'map-place';
+  a.href      = placeMapHref(place);
+  a.target    = '_blank';
+  a.rel       = 'noopener';
+  a.setAttribute('data-place-id', place.id);
+  a.textContent = text;
+  a.addEventListener('mouseenter', function () { _scheduleShow(a, place); });
+  a.addEventListener('mouseleave', function () { _scheduleHide(); });
+  a.addEventListener('focus',      function () { _scheduleShow(a, place); });
+  a.addEventListener('blur',       function () { _scheduleHide(); });
+  return a;
+}
+
 /* ── Core tagger ─────────────────────────────────────────────────────────── */
 export function autoTagPlaces(rootEl) {
   if (!_placeRe || !_placesByName) return;
   var root = rootEl || document.body;
+
+  /* Upgrade pass: a name that is BOTH a biblepedia term and a place (e.g.
+     Samaria) may already be wrapped as a hover-only .term-link. Replacing the
+     span (listeners go with the node) makes the place layer own it — one
+     tooltip, a real map link, and the place popup covers the article link. */
+  root.querySelectorAll('span.term-link').forEach(function (el) {
+    var place = _placesByName[(el.textContent || '').trim().toLowerCase()];
+    if (place && el.parentNode) el.replaceWith(_makePlaceAnchor(place, el.textContent));
+  });
 
   _walkText(root, function (textNode) {
     var text = textNode.nodeValue;
@@ -113,23 +152,7 @@ export function autoTagPlaces(rootEl) {
         frag.appendChild(document.createTextNode(text.slice(last, m.index)));
       }
 
-      var a = document.createElement('a');
-      a.className         = 'map-place';
-      a.href              = MAPS_URL + '#' + place.mapId;
-      a.target            = '_blank';
-      a.rel               = 'noopener';
-      a.setAttribute('data-place-id', place.id);
-      a.textContent       = m[0];
-
-      /* Capture for closure */
-      (function (anchor, pl) {
-        anchor.addEventListener('mouseenter', function () { _scheduleShow(anchor, pl); });
-        anchor.addEventListener('mouseleave', function () { _scheduleHide(); });
-        anchor.addEventListener('focus',      function () { _scheduleShow(anchor, pl); });
-        anchor.addEventListener('blur',       function () { _scheduleHide(); });
-      }(a, place));
-
-      frag.appendChild(a);
+      frag.appendChild(_makePlaceAnchor(place, m[0]));
       last = m.index + m[0].length;
     }
 
@@ -210,6 +233,18 @@ function _cancelHide() {
   if (_hideTimer) { clearTimeout(_hideTimer); _hideTimer = null; }
 }
 
+/* ── Accessors for the reader's place popup (reader-place.js) ────────────── */
+export function getPlace(id) { return (_placesById && _placesById[id]) || null; }
+export function getAllPlaces() { return _placesAll || []; }
+/* Cancels a pending hover show and hides the tip — the popup takes over. */
+export function hidePlaceTip() {
+  if (_showTimer) { clearTimeout(_showTimer); _showTimer = null; }
+  if (_tip) {
+    _tip.classList.remove('bsw-place-tip--visible');
+    _tip.setAttribute('aria-hidden', 'true');
+  }
+}
+
 function _showTip(anchor, place) {
   _buildTip();
   var mapLabel = place.mapId.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
@@ -219,7 +254,7 @@ function _showTip(anchor, place) {
       '<span class="bsw-place-tip__name">' + escHtml(place.name) + '</span>' +
     '</div>' +
     '<p class="bsw-place-tip__desc">' + escHtml(place.desc) + '</p>' +
-    '<a class="bsw-place-tip__link" href="' + escHtml(MAPS_URL + '#' + place.mapId) + '" target="_blank" rel="noopener">' +
+    '<a class="bsw-place-tip__link" href="' + escHtml(placeMapHref(place)) + '" target="_blank" rel="noopener">' +
       'View on Map · ' + escHtml(mapLabel) + ' →' +
     '</a>';
 

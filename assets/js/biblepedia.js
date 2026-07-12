@@ -15,6 +15,7 @@ import {
   BIBLEPEDIA_URL
 } from './library.js';
 import { wireRefLinks } from './wire.js';
+import { ensureLeaflet as _ensureLeaflet, CARTO_TILES, CARTO_ATTR } from './leaflet-loader.js';
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
@@ -116,33 +117,8 @@ function _placeCoordsLoad() {
   return _placeCoords;
 }
 
-// INTENT: Lazy-inject Leaflet's CSS+JS (same pinned 1.9.4 the Maps page uses) the first time a
-//   place article needs a map, so the Biblepedia page ships no map library until it's used.
-// CHANGE? Touches the global `window.L`. Keep the version + SRI hashes identical to
-//   maps/index.html; if you change one, change both or tiles/markers break. Resolves once L exists.
-// VERIFY: Open a place article → one leaflet.js + leaflet.css request in Network; reopening
-//   another place article issues NO second request (promise is cached).
-var _leafletReady = null;
-function _ensureLeaflet() {
-  if (window.L) return Promise.resolve();
-  if (_leafletReady) return _leafletReady;
-  _leafletReady = new Promise(function (resolve, reject) {
-    var css = document.createElement('link');
-    css.rel = 'stylesheet';
-    css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    css.integrity = 'sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H';
-    css.crossOrigin = '';
-    document.head.appendChild(css);
-    var js = document.createElement('script');
-    js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    js.integrity = 'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH';
-    js.crossOrigin = '';
-    js.onload = function () { resolve(); };
-    js.onerror = reject;
-    document.head.appendChild(js);
-  });
-  return _leafletReady;
-}
+// Leaflet lazy-load moved to leaflet-loader.js (shared with the reader's
+// place popup); imported above as _ensureLeaflet.
 
 var VIDX_CACHE = {};
 
@@ -1441,9 +1417,7 @@ function _renderLibraryPanel(container, bpArticle) {
 }
 
 // ── Location mini-map panel (place articles only) ─────────────────────────────
-var CARTO_TILES = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-var CARTO_ATTR  = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' +
-                  ' &copy; <a href="https://carto.com/attributions">CARTO</a>';
+// (CARTO_TILES / CARTO_ATTR come from leaflet-loader.js)
 
 function _locNorm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ''); }
 

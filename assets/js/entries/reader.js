@@ -21,6 +21,7 @@ import { initParallelsToggle } from '../synoptic.js';
 import { _injectShortcutsBtn } from '../modal.js';
 import { initReaderRail } from '../reader-rail.js';
 import { initWordTap } from '../reader-wordtap.js';
+import { initPlacePopup } from '../reader-place.js';
 
 boot(function () {
   initReaderPage();
@@ -47,4 +48,5 @@ boot(function () {
   _injectShortcutsBtn();
   initReaderRail();
   initWordTap();
+  initPlacePopup();
 }, { early: true });
