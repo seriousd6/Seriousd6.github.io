@@ -58,7 +58,7 @@ function _buildRail(results) {
   var places = results.querySelectorAll('.map-place').length;
   var notes  = _notesCountFor(_navState());
 
-  if (!echoes && !places && !notes) return;
+  // Tool chips render regardless; count chips only when nonzero.
 
   var rail = document.createElement('div');
   rail.className = 'reader-rail';
@@ -79,6 +79,32 @@ function _buildRail(results) {
   if (notes) rail.appendChild(_chip('notes', notes,
     'Your notes on this chapter — open the notes panel',
     function () { _clickIfPresent('reader-notes-panel-btn'); }));
+
+  // Feature chips (Heights H2): the depth that used to hide inside the Study
+  // Tools popover advertises itself at the chapter head. Each chip mirrors and
+  // drives its existing toggle button, so the popover controls stay in sync.
+  [
+    { id: 'reader-comm-toggle',      label: 'commentary',  title: 'Toggle inline commentary (Matthew Henry, Barnes, JFB)' },
+    { id: 'reader-interlinear-btn',  label: 'interlinear', title: 'Toggle the Greek/Hebrew interlinear view' },
+    { id: 'reader-parallels-btn',    label: 'parallels',   title: 'Toggle synoptic parallel passages' }
+  ].forEach(function (f) {
+    var target = document.getElementById(f.id);
+    if (!target) return;
+    var on = target.getAttribute('aria-pressed') === 'true';
+    var chip = document.createElement('button');
+    chip.className = 'reader-rail__chip reader-rail__chip--tool' + (on ? ' reader-rail__chip--on' : '');
+    chip.type = 'button';
+    chip.title = f.title;
+    chip.setAttribute('aria-pressed', on ? 'true' : 'false');
+    chip.textContent = f.label;
+    chip.addEventListener('click', function () {
+      target.click();
+      var nowOn = target.getAttribute('aria-pressed') === 'true';
+      chip.classList.toggle('reader-rail__chip--on', nowOn);
+      chip.setAttribute('aria-pressed', nowOn ? 'true' : 'false');
+    });
+    rail.appendChild(chip);
+  });
 
   // Ahead of the chapter heading if we can find it, else prepend.
   var heading = results.querySelector('.reader-section-heading, h2');

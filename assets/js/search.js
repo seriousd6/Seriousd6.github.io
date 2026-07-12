@@ -362,8 +362,37 @@ function _toggleRecentSearches(input, show) {
 //
 // Quoted phrases ("the word was God") are supported: the quotes are stripped and
 // the inner phrase is used verbatim as the search string, bypassing fuzzy matching.
+// ── Query understanding (Heights H1a) ─────────────────────────────────────
+// Newcomers type questions, not keywords: "what does the bible say about
+// anxiety". Strip the question boilerplate down to the topic kernel so the
+// pipeline searches "anxiety". Bounded, conservative patterns — a query that
+// doesn't match them passes through untouched.
+var _KERNEL_PATTERNS = [
+  /^what\s+does\s+(the\s+)?(bible|scripture|word)\s+say\s+(about|on|regarding)\s+/i,
+  /^what\s+(is|was|are|were)\s+/i,
+  /^who\s+(is|was|were)\s+/i,
+  /^where\s+in\s+the\s+bible\s+(is|does|can\s+i\s+find)\s*/i,
+  /^(bible\s+)?(verses?|scriptures?|passages?)\s+(about|on|for|regarding)\s+/i,
+  /^(tell\s+me\s+about|meaning\s+of|definition\s+of)\s+/i,
+  /^(how\s+to|how\s+do\s+i|how\s+can\s+i)\s+/i
+];
+export function _topicKernel(query) {
+  var q = String(query || '').trim().replace(/[?!.]+$/, '');
+  for (var i = 0; i < _KERNEL_PATTERNS.length; i++) {
+    if (_KERNEL_PATTERNS[i].test(q)) {
+      q = q.replace(_KERNEL_PATTERNS[i], '');
+      break;   // one layer of boilerplate is the realistic case
+    }
+  }
+  q = q.replace(/^(the|a|an)\s+/i, '').trim();
+  return q.length >= 3 ? q : String(query || '').trim();
+}
+
 export function handleSearchInput(query) {
   if (!query || query.length < 3) return;
+  // Question-shaped queries search by their topic kernel.
+  var _kernel = _topicKernel(query);
+  if (_kernel !== query) query = _kernel;
   var gen = ++_searchGeneration;
   var version = getVersion();
 
@@ -491,6 +520,16 @@ export function renderSearchResults(results, query) {
   var sortRow = document.getElementById('bsw-search-sort-row');
 
   if (!results || !results.length) {
+    // Heights H1a: a topical query with no verbatim verse hits shouldn't
+    // dead-end — the omni search usually has dictionary/topic/library answers.
+    if (_searchPageTab === 'verse' && _switchSearchTab && !parseRef(query)) {
+      out.innerHTML = '<p class="search-page-none">No exact verse matches for "' + escHtml(query) +
+        '" — showing everything we have on it.</p>';
+      if (sortRow) sortRow.hidden = true;
+      _switchSearchTab('explore');
+      handleExploreSearch(query);
+      return;
+    }
     out.innerHTML = '<p class="search-page-none">No results for "' + escHtml(query) + '".</p>';
     if (sortRow) sortRow.hidden = true;
     return;
