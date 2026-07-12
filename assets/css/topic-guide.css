@@ -335,8 +335,8 @@
 
 /* Application callout */
 .tg-application {
-  background: rgba(184,134,11,0.07);
-  border: 1px solid rgba(184,134,11,0.25);
+  background: color-mix(in srgb, var(--color-accent) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent);
   border-left: 4px solid var(--color-accent);
   border-radius: 0 6px 6px 0;
   padding: 1rem 1.25rem;
@@ -407,7 +407,7 @@
 
 /* Example / illustration */
 .tg-example {
-  background: rgba(92, 61, 30, 0.04);
+  background: color-mix(in srgb, var(--color-primary) 4%, transparent);
   border-radius: 6px;
   padding: 0.9rem 1.1rem;
   margin: var(--space-md) 0;
@@ -536,12 +536,12 @@
 
 /* ── Dark-mode overrides ─────────────────────────────────────────────────── */
 [data-theme="dark"] .tg-compare th {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .tg-compare th {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
   }
 }

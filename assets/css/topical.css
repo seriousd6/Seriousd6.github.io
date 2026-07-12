@@ -319,9 +319,9 @@
 [data-theme="dark"] .topical-read-all:hover,
 [data-theme="dark"] .topical-ref-chip:hover,
 [data-theme="dark"] .topical-src-tab--active {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
   box-shadow: none;
 }
 @media (prefers-color-scheme: dark) {
@@ -330,9 +330,9 @@
   :root:not([data-theme="light"]) .topical-read-all:hover,
   :root:not([data-theme="light"]) .topical-ref-chip:hover,
   :root:not([data-theme="light"]) .topical-src-tab--active {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
     box-shadow: none;
   }
 }

@@ -1339,9 +1339,9 @@ details.bp-src-section[open] summary {
 
 [data-theme="dark"] .bp-alpha-btn:hover,
 [data-theme="dark"] .bp-alpha-btn--active {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1382,9 +1382,9 @@ details.bp-src-section[open] summary {
   :root:not([data-theme="light"]) .bp-cat-badge--commentator{ background: #c2b295; }
   :root:not([data-theme="light"]) .bp-alpha-btn:hover,
   :root:not([data-theme="light"]) .bp-alpha-btn--active {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
 }
 

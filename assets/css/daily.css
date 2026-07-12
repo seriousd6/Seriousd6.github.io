@@ -55,7 +55,7 @@
   font-size: .74rem;
   font-weight: 600;
   margin: 0;
-  color: var(--color-muted, #7c6e56);
+  color: var(--color-muted);
   letter-spacing: .15em;
   text-transform: uppercase;
 }
@@ -301,7 +301,7 @@
 }
 .daily-plan-progress-fill {
   height: 100%;
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   border-radius: 3px;
   transition: width .4s ease;
 }
@@ -330,7 +330,7 @@
 .daily-streak-num {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   line-height: 1;
 }
 .daily-streak-label {
@@ -343,7 +343,7 @@
 .daily-streak-cta {
   margin-left: auto;
   font-size: .85rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   font-weight: 600;
   text-decoration: none;
 }
@@ -372,7 +372,7 @@
   transition: background 0.12s;
 }
 .daily-history-item:hover { background: var(--color-bg-alt, #f6f2ea); }
-.daily-history-ref { font-weight: 600; font-size: 0.92rem; color: var(--color-primary, #5c3d1e); }
+.daily-history-ref { font-weight: 600; font-size: 0.92rem; color: var(--color-primary); }
 .daily-history-meta { font-size: 0.75rem; color: var(--color-muted, #7a6a55); white-space: nowrap; }
 
 /* ── Today's Disciplines tracker card ──────────────────────────────────────── */
@@ -445,22 +445,22 @@
 
 /* ── Dark-mode button/banner overrides ──────────────────────────────────── */
 [data-theme="dark"] .daily-passage-chip:hover {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
 }
 [data-theme="dark"] .daily-read-all {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
   border: 1px solid var(--color-primary);
 }
 [data-theme="dark"] .daily-read-all:hover {
   opacity: 1;
-  background: var(--color-btn-bg-hover, #4a3a22);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg-hover);
+  color: var(--color-btn-text);
 }
 [data-theme="dark"] .daily-period-badge {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
 }
 [data-theme="dark"] .daily-notif-banner {
   background: var(--color-surface-alt, #2b3226);
@@ -487,22 +487,22 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .daily-passage-chip:hover {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .daily-read-all {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
     border: 1px solid var(--color-primary);
   }
   :root:not([data-theme="light"]) .daily-read-all:hover {
     opacity: 1;
-    background: var(--color-btn-bg-hover, #4a3a22);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg-hover);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .daily-period-badge {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .daily-notif-banner {
     background: #243020;

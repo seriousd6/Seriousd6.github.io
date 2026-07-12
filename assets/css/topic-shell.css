@@ -14,7 +14,7 @@
   right: 0;
   height: var(--header-h, 52px);
   z-index: 1000;
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary);
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
 }
 
 .site-header--topic .site-nav a {
-  color: #e8d9bb;
+  color: var(--sb-text);
   text-decoration: none;
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.9rem;
@@ -107,7 +107,7 @@
   background: transparent;
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 4px;
-  color: #e8d9bb;
+  color: var(--sb-text);
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
@@ -123,7 +123,7 @@
   border: 1px solid rgba(255,255,255,0.4);
   border-radius: 20px;
   padding: 0.16rem 0.75rem;
-  color: #e8d9bb;
+  color: var(--sb-text);
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.88rem;
   text-decoration: none;
@@ -149,7 +149,7 @@
   border-radius: 20px;
   padding: 0.16rem 0.75rem;
   background: transparent;
-  color: #e8d9bb;
+  color: var(--sb-text);
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.88rem;
   cursor: pointer;
@@ -196,8 +196,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.9rem 1.25rem;
-  border-bottom: 1px solid rgba(92,61,30,0.15);
-  background: #5c3d1e;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 15%, transparent);
+  background: var(--color-primary);
   flex-shrink: 0;
 }
 .nav-panel__heading {
@@ -209,7 +209,7 @@
 .nav-panel__close {
   background: transparent;
   border: none;
-  color: #e8d9bb;
+  color: var(--sb-text);
   font-size: 1.25rem;
   cursor: pointer;
   line-height: 1;
@@ -241,11 +241,11 @@
 }
 .nav-panel__list a:hover {
   background: #faf8f4;
-  color: #5c3d1e;
+  color: var(--color-primary);
 }
 .nav-panel__list a[aria-current="page"] {
   background: #f0e9dc;
-  color: #5c3d1e;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -262,12 +262,12 @@
 /* Topic header bg flips to bright yellow in dark mode; replace with dark     */
 /* surface — white text already provides excellent contrast on dark bg.        */
 [data-theme="dark"] .site-header--topic {
-  background: #2a1f0f;
+  background: var(--color-surface-subtle);
   box-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .site-header--topic {
-    background: #2a1f0f;
+    background: var(--color-surface-subtle);
     box-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
 }

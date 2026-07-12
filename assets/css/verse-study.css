@@ -883,18 +883,18 @@
 [data-theme="dark"] .vs-context-btn--on,
 [data-theme="dark"] .vs-token--active,
 [data-theme="dark"] .vs-xref-link:hover {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .vs-context-btn:hover,
   :root:not([data-theme="light"]) .vs-context-btn--on,
   :root:not([data-theme="light"]) .vs-token--active,
   :root:not([data-theme="light"]) .vs-xref-link:hover {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
 }
 

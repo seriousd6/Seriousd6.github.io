@@ -107,7 +107,7 @@
   font-family: var(--font-body, Georgia, serif);
   font-size: 1.05rem;
   font-weight: bold;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   margin: 0;
   padding: 0;
   border: none;
@@ -132,7 +132,7 @@
 .bsw-modal__close:focus-visible {
   background: var(--color-border, #e0d5c4);
   border-color: var(--color-border, #e0d5c4);
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   outline: none;
 }
 
@@ -194,15 +194,15 @@
   flex-shrink: 0;
 }
 .bsw-modal__tab:hover {
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 .bsw-modal__tab--active {
-  color: var(--color-primary, #5c3d1e);
-  border-bottom-color: var(--color-accent, #b8860b);
+  color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
   font-weight: 600;
 }
 .bsw-modal__tab:focus-visible {
-  outline: 2px solid var(--color-accent, #b8860b);
+  outline: 2px solid var(--color-accent);
   outline-offset: -2px;
 }
 
@@ -217,13 +217,13 @@
   font-size: 0.6rem;
   font-weight: 700;
   color: var(--color-on-primary);
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   border-radius: 8px;
   line-height: 1;
   vertical-align: middle;
 }
 .bsw-modal__tab--active .bsw-modal__tab-badge {
-  background: var(--color-accent, #b8860b);
+  background: var(--color-accent);
 }
 
 /* Verse body */
@@ -256,7 +256,7 @@
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   margin: 0.85rem 0 0.4rem;
 }
 .bsw-modal__xref-verse-label:first-child { margin-top: 0; }
@@ -271,10 +271,10 @@
 .bsw-modal__xref-link {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.82rem;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   text-decoration: none;
   padding: 0.2rem 0.55rem;
-  border: 1px solid rgba(184, 134, 11, 0.3);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
   border-radius: 3px;
   cursor: pointer;
   transition: background 0.12s, border-color 0.12s, color 0.12s;
@@ -282,9 +282,9 @@
 }
 .bsw-modal__xref-link:hover,
 .bsw-modal__xref-link:focus-visible {
-  background: rgba(184, 134, 11, 0.1);
-  border-color: var(--color-accent, #b8860b);
-  color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-color: var(--color-accent);
+  color: var(--color-primary);
   outline: none;
 }
 
@@ -293,11 +293,11 @@
    Med:  moderate agreement (6–14 votes).
    Low:  base TSK-level ref (1–5 votes).  */
 .bsw-modal__xref-link.bsw-xref--high {
-  border-color: rgba(184, 134, 11, 0.55);
+  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
   font-weight: 600;
 }
 .bsw-modal__xref-link.bsw-xref--med {
-  border-color: rgba(184, 134, 11, 0.35);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
 }
 .bsw-modal__xref-link.bsw-xref--low {
   opacity: 0.72;
@@ -315,7 +315,7 @@
   font-size: 0.62rem;
   font-family: var(--font-ui, system-ui, sans-serif);
   font-weight: 700;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   vertical-align: super;
   margin-right: 0.2em;
   user-select: none;
@@ -376,7 +376,7 @@
   font-family: var(--font-ui, system-ui, sans-serif);
   font-weight: 700;
   vertical-align: super;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   user-select: none;
   margin-right: 0.2em;
 }
@@ -390,7 +390,7 @@
 .bsw-search-btn {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.28);
-  color: #e8d9bb;
+  color: var(--sb-text);
   cursor: pointer;
   padding: 3px 10px;
   border-radius: 4px;
@@ -453,7 +453,7 @@
   font-family: var(--font-body, Georgia, serif);
   font-size: 1rem;
   font-weight: bold;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   margin: 0;
   padding: 0;
   border: none;
@@ -475,7 +475,7 @@
 .bsw-search-close:focus-visible {
   background: var(--color-border, #e0d5c4);
   border-color: var(--color-border, #e0d5c4);
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   outline: none;
 }
 
@@ -499,7 +499,7 @@
   background: var(--color-surface, #fff);
 }
 .bsw-search-input:focus {
-  outline: 2px solid var(--color-accent, #b8860b);
+  outline: 2px solid var(--color-accent);
   outline-offset: 1px;
   border-color: transparent;
 }
@@ -542,7 +542,7 @@
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   margin-bottom: 0.2rem;
 }
 
@@ -554,8 +554,8 @@
 }
 
 .bsw-search__highlight {
-  background: rgba(184, 134, 11, 0.18);
-  color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  color: var(--color-primary);
   border-radius: 2px;
   font-style: normal;
 }
@@ -590,7 +590,7 @@
 
 .search-go-btn {
   padding: 0 1.2rem;
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -632,12 +632,12 @@
 }
 
 .search-tab:hover {
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 
 .search-tab--active {
-  color: var(--color-primary, #5c3d1e);
-  border-bottom-color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
 /* ── Explore mode filter pills ───────────────────────────── */
@@ -669,17 +669,17 @@
 }
 
 .search-explore-filter:hover {
-  border-color: var(--color-accent, #b8860b);
-  color: var(--color-accent, #b8860b);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .search-explore-filter--active {
-  background: var(--color-primary, #5c3d1e);
-  border-color: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   color: var(--color-on-primary);
 }
 .search-explore-filter--active:hover {
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary);
 }
 
@@ -704,7 +704,7 @@
 .omni-section__title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -747,7 +747,7 @@
 .omni-see-all {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.82rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   background: none;
   border: 1px solid var(--color-border, #e0d5c4);
   border-radius: 5px;
@@ -760,8 +760,8 @@
 }
 
 .omni-see-all:hover {
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 8%, transparent);
-  border-color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border-color: var(--color-primary);
 }
 
 /* ── Word Studies chips (omni explore) ───────────────────── */
@@ -785,8 +785,8 @@
 
 .omni-word-chip:hover,
 .omni-word-chip:focus {
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 6%, transparent);
-  border-color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+  border-color: var(--color-primary);
   outline: none;
 }
 
@@ -799,7 +799,7 @@
 
 .omni-word-chip__lemma {
   font-size: 0.95rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 
 .omni-word-chip__gloss {
@@ -814,7 +814,7 @@
 .omni-strongs-card {
   padding: 0.75rem 1rem;
   border: 1px solid var(--color-border, #e0d5c4);
-  border-left: 3px solid var(--color-primary, #5c3d1e);
+  border-left: 3px solid var(--color-primary);
   border-radius: var(--radius-card, 12px);
   background: var(--color-surface, #fff);
   display: flex;
@@ -832,7 +832,7 @@
 
 .omni-strongs-card__lemma {
   font-size: 1.1rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 
 .omni-strongs-card__translit {
@@ -849,7 +849,7 @@
 .omni-strongs-card__link {
   margin-left: auto;
   font-size: 0.8rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   background: none;
   border: 1px solid var(--color-border, #e0d5c4);
   border-radius: 5px;
@@ -859,8 +859,8 @@
 }
 
 .omni-strongs-card__link:hover {
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 8%, transparent);
-  border-color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  border-color: var(--color-primary);
 }
 
 /* ── Nave topic chips (omni explore) ─────────────────────── */
@@ -886,8 +886,8 @@
 }
 
 .omni-topic-chip:hover {
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 10%, transparent);
-  border-color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-color: var(--color-primary);
 }
 
 .omni-topic-chip__count {
@@ -919,7 +919,7 @@
 .omni-lib-card__title {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   text-decoration: none;
   flex: 1;
 }
@@ -958,8 +958,8 @@
 }
 .search-page-input:focus {
   outline: none;
-  border-color: var(--color-accent, #b8860b);
-  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.14);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 14%, transparent);
 }
 
 .search-page-status {
@@ -1052,7 +1052,7 @@
 .search-chip:hover,
 .search-chip:focus {
   background: var(--color-bg, #faf6f0);
-  border-color: var(--color-accent, #b8860b);
+  border-color: var(--color-accent);
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
   outline: none;
 }
@@ -1060,7 +1060,7 @@
 .search-chip__ref {
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1096,17 +1096,17 @@
 }
 
 .search-mode-btn:hover {
-  border-color: var(--color-accent, #b8860b);
-  color: var(--color-accent, #b8860b);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .search-mode-btn--active {
-  background: var(--color-primary, #5c3d1e);
-  border-color: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   color: var(--color-on-primary);
 }
 .search-mode-btn--active:hover {
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary);
 }
 
@@ -1143,14 +1143,14 @@
 }
 
 .search-filter-toggle--active {
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 10%, transparent);
-  border-color: var(--color-primary, #5c3d1e);
-  color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .search-filter-summary {
   font-size: 0.78rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   font-style: italic;
 }
 
@@ -1223,8 +1223,8 @@
 }
 
 .search-history-chip:hover {
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 10%, transparent);
-  border-color: var(--color-primary, #5c3d1e);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border-color: var(--color-primary);
 }
 
 .search-history-clear {
@@ -1238,13 +1238,13 @@
   text-decoration: underline;
 }
 
-.search-history-clear:hover { color: var(--color-primary, #5c3d1e); }
+.search-history-clear:hover { color: var(--color-primary); }
 
 /* ── Topic search results ────────────────────────────────── */
 .search-topic-result {
   padding: 0.85rem 1.1rem;
   border: 1px solid var(--color-border, #e0d5c4);
-  border-left: 3px solid var(--color-primary, #5c3d1e);
+  border-left: 3px solid var(--color-primary);
   border-radius: 6px;
   margin-bottom: 0.65rem;
   background: var(--color-surface, #fff);
@@ -1262,7 +1262,7 @@
 
 .str-topic-link {
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   text-decoration: none;
 }
 .str-topic-link:hover { text-decoration: underline; }
@@ -1288,7 +1288,7 @@
 }
 
 .search-highlight {
-  background: color-mix(in srgb, var(--color-accent, #b8860b) 22%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 22%, transparent);
   border-radius: 2px;
   padding: 0 1px;
 }
@@ -1308,7 +1308,7 @@
   padding: 0.7rem 1rem;
   background: var(--color-bg, #faf8f4);
   border: 1px solid var(--color-border, #e0d5c4);
-  border-left: 3px solid var(--color-accent, #b8860b);
+  border-left: 3px solid var(--color-accent);
   border-radius: 6px;
   margin-bottom: 1rem;
 }
@@ -1317,7 +1317,7 @@
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   letter-spacing: 0.04em;
 }
 
@@ -1366,7 +1366,7 @@
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   margin-bottom: 0.4rem;
 }
 
@@ -1376,7 +1376,7 @@
   font-style: normal;
   letter-spacing: 0;
   text-transform: none;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
@@ -1402,7 +1402,7 @@
 .bsw-modal__chapter-more-link {
   font-style: normal;
   font-weight: 600;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -1417,11 +1417,11 @@
 .bsw-modal__read-ch {
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.8rem;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   text-decoration: none;
   white-space: nowrap;
   padding: 3px 8px;
-  border: 1px solid rgba(184, 134, 11, 0.35);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
   border-radius: 4px;
   transition: background 0.12s, border-color 0.12s;
   flex-shrink: 0;
@@ -1430,10 +1430,10 @@
 
 .bsw-modal__read-ch:hover,
 .bsw-modal__read-ch:focus-visible {
-  background: rgba(184, 134, 11, 0.1);
-  border-color: var(--color-accent, #b8860b);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-color: var(--color-accent);
   outline: none;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
 }
 
 /* ── "Verse Study" link in modal header ──────────────────── */
@@ -1482,7 +1482,7 @@
 }
 .bsw-modal__compare-link:hover {
   background: var(--color-border, #e0d5c4);
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 .bsw-modal__compare-link[hidden] { display: none; }
 
@@ -1501,18 +1501,18 @@
   flex-shrink: 0;
   margin-left: 0.25rem;
 }
-.bsw-modal__memory-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.bsw-modal__memory-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary); }
 .bsw-modal__memory-btn[hidden] { display: none; }
 
 /* Active state: verse is in memory list */
 .bsw-modal__memory-btn--active {
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary, #fff);
-  border-color: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary);
 }
 .bsw-modal__memory-btn--active:hover {
-  background: var(--color-primary, #5c3d1e);
-  border-color: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   color: var(--color-on-primary, #fff);
   opacity: 0.85;
 }
@@ -1536,7 +1536,7 @@
 }
 .bsw-modal__copy-quote-btn:hover,
 .bsw-modal__copy-ref-btn:hover,
-.bsw-modal__share-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.bsw-modal__share-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary); }
 .bsw-modal__copy-quote-btn[hidden],
 .bsw-modal__copy-ref-btn[hidden],
 .bsw-modal__share-btn[hidden] { display: none; }
@@ -1560,7 +1560,7 @@
   transition: background 0.12s, border-color 0.12s, color 0.12s;
 }
 .bsw-modal__prev-verse:hover,
-.bsw-modal__next-verse:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.bsw-modal__next-verse:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary); }
 .bsw-modal__prev-verse[hidden],
 .bsw-modal__next-verse[hidden] { display: none; }
 
@@ -1588,7 +1588,7 @@
 
 .bsw-search-result__read:hover,
 .bsw-search-result__read:focus-visible {
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   border-color: var(--color-muted, #7a6a55);
   outline: none;
 }
@@ -1626,8 +1626,8 @@
   font-size: 0.55rem;
   font-family: var(--font-ui, system-ui, sans-serif);
   font-weight: 700;
-  color: var(--color-accent, #b8860b);
-  background: color-mix(in srgb, var(--color-accent, #b8860b) 12%, transparent);
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
   border-radius: 3px;
   cursor: pointer;
   vertical-align: super;
@@ -1636,7 +1636,7 @@
   user-select: none;
 }
 .bsw-modal__xref-note:hover {
-  background: var(--color-accent, #b8860b);
+  background: var(--color-accent);
   color: #fff;
 }
 
@@ -1713,7 +1713,7 @@
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
 }
 
 .bsw-modal__commentary-attr {
@@ -1776,7 +1776,7 @@
 
 .bsw-ws-strongs {
   font-weight: 700;
-  color: var(--color-accent, #b8860b);
+  color: var(--color-accent);
   font-size: 0.8rem;
   white-space: nowrap;
 }
@@ -2072,7 +2072,7 @@
 .topical-dict-block__link {
   font-size: .75rem;
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   text-decoration: none;
 }
 .topical-dict-block__link:hover { text-decoration: underline; }
@@ -2103,7 +2103,7 @@
   display: block;
   font-size: .78rem;
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   margin-bottom: .2rem;
 }
 .bsw-conf-item__text {
@@ -2150,7 +2150,7 @@
 
 /* ── Spurgeon devotional on home page ─────────────────────────────────────────── */
 .daily-spurgeon-verse {
-  border-left: 3px solid var(--color-primary, #5c3d1e);
+  border-left: 3px solid var(--color-primary);
   margin: 0 0 1rem;
   padding: .5rem .85rem;
   font-style: italic;
@@ -2261,7 +2261,7 @@
   color: var(--color-primary);
 }
 .vs-verse-popup__action--active {
-  color: #b8860b;
+  color: var(--color-accent);
   font-weight: 600;
 }
 
@@ -2496,7 +2496,7 @@
 .bsw-dict-panel-entry__term {
   font-size: .9rem;
   font-weight: 700;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   margin: 0 0 .35rem;
 }
 
@@ -2525,7 +2525,7 @@
   transition: border-color .12s, color .12s;
 }
 .term-link:hover {
-  border-bottom-color: var(--color-accent, #b8860b);
+  border-bottom-color: var(--color-accent);
   color: inherit;
 }
 
@@ -2567,7 +2567,7 @@
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .04em;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 .bsw-term-tooltip__src {
   font-size: .65rem;
@@ -2616,16 +2616,16 @@
   font-weight: 500;
   padding: .15rem .5rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--color-primary, #5c3d1e) 8%, transparent);
-  color: var(--color-primary, #5c3d1e);
-  border: 1px solid color-mix(in srgb, var(--color-primary, #5c3d1e) 22%, transparent);
+  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
   text-decoration: none;
   pointer-events: auto;
   cursor: pointer;
   transition: background .12s, color .12s;
 }
 .bsw-term-tooltip__nave-chip:hover {
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary);
   text-decoration: none;
 }
@@ -2641,7 +2641,7 @@
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: .72rem;
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   text-decoration: none;
 }
 .bsw-term-tooltip__link:hover { text-decoration: underline; }
@@ -2663,7 +2663,7 @@
 .search-dict-result {
   padding: 0.85rem 1.1rem;
   border: 1px solid var(--color-border, #e0d5c4);
-  border-left: 3px solid var(--color-accent, #b8860b);
+  border-left: 3px solid var(--color-accent);
   border-radius: 6px;
   margin-bottom: 0.65rem;
   background: var(--color-surface, #fff);
@@ -2677,7 +2677,7 @@
 .sdr-term {
   font-weight: 700;
   font-size: 1rem;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   text-decoration: none;
 }
 .sdr-term:hover { text-decoration: underline; }
@@ -2729,7 +2729,7 @@
 .bsw-sw-toast[hidden] { display: none; }
 .bsw-sw-toast__btn {
   padding: 0.25rem 0.75rem;
-  background: var(--color-accent, #b8860b);
+  background: var(--color-accent);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -2783,7 +2783,7 @@
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   margin: 0;
 }
 .bsw-shortcuts-close {
@@ -2852,7 +2852,7 @@ kbd {
   transition: background 0.12s, color 0.12s;
   margin-right: 0.25rem;
 }
-.reader-shortcuts-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary, #5c3d1e); }
+.reader-shortcuts-btn:hover { background: var(--color-border, #e0d5c4); color: var(--color-primary); }
 
 /* ── Compact 3-item timeline in Book Info panel ──────────────────────────── */
 .reader-bookinfo-timeline {
@@ -3042,7 +3042,7 @@ kbd {
 }
 
 /* ── Filled-button dark-mode overrides ─────────────────────────────────────
-   --color-primary in dark mode is bright gold (#e8c87a) — fine for text but
+   --color-primary in dark mode is bright gold (var(--color-primary)) — fine for text but
    not as a solid button fill with white text.  Override all filled buttons to
    use the dark warm surface + golden text palette defined in style.css.
    ─────────────────────────────────────────────────────────────────────────── */
@@ -3051,28 +3051,28 @@ kbd {
 [data-theme="dark"] .search-explore-filter--active:hover,
 [data-theme="dark"] .search-mode-btn--active,
 [data-theme="dark"] .search-mode-btn--active:hover {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 
 [data-theme="dark"] .bsw-modal__xref-note:hover,
 [data-theme="dark"] .topical-modal-chip:hover,
 [data-theme="dark"] .vs-topical-item:hover {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
   box-shadow: none;
 }
 
 [data-theme="dark"] .vs-verse-popup__save-btn {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 
 [data-theme="dark"] .bsw-term-tooltip__nave-chip:hover {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
 }
 
 /* Toast container uses --color-text as bg (dark in light mode); in dark mode that becomes light cream
@@ -3084,15 +3084,15 @@ kbd {
 [data-theme="dark"] .bsw-sw-toast__dismiss { color: var(--color-muted, #9a8870); }
 [data-theme="dark"] .bsw-sw-toast__dismiss:hover { color: var(--color-text, #e8dfc8); }
 [data-theme="dark"] .bsw-sw-toast__btn {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
   border: 1px solid var(--color-accent);
 }
 
 [data-theme="dark"] .bsw-empty-state__cta,
 [data-theme="dark"] .bsw-empty-state__cta:hover {
-  background: var(--color-btn-bg, #3a2d18);
-  color: var(--color-btn-text, #e8c87a);
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
   border: 1px solid var(--color-primary);
 }
 
@@ -3101,25 +3101,25 @@ kbd {
   :root:not([data-theme="light"]) .search-explore-filter--active:hover,
   :root:not([data-theme="light"]) .search-mode-btn--active,
   :root:not([data-theme="light"]) .search-mode-btn--active:hover {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .bsw-modal__xref-note:hover,
   :root:not([data-theme="light"]) .topical-modal-chip:hover,
   :root:not([data-theme="light"]) .vs-topical-item:hover {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
     box-shadow: none;
   }
   :root:not([data-theme="light"]) .vs-verse-popup__save-btn {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .bsw-term-tooltip__nave-chip:hover {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .bsw-sw-toast {
     background: #231a0d;
@@ -3128,14 +3128,14 @@ kbd {
   :root:not([data-theme="light"]) .bsw-sw-toast__dismiss { color: var(--color-muted, #9a8870); }
   :root:not([data-theme="light"]) .bsw-sw-toast__dismiss:hover { color: var(--color-text, #e8dfc8); }
   :root:not([data-theme="light"]) .bsw-sw-toast__btn {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
     border: 1px solid var(--color-accent);
   }
   :root:not([data-theme="light"]) .bsw-empty-state__cta,
   :root:not([data-theme="light"]) .bsw-empty-state__cta:hover {
-    background: var(--color-btn-bg, #3a2d18);
-    color: var(--color-btn-text, #e8c87a);
+    background: var(--color-btn-bg);
+    color: var(--color-btn-text);
     border: 1px solid var(--color-primary);
   }
 }
@@ -3930,7 +3930,7 @@ kbd {
 
 /* ── Dark mode: elements that use var(--color-primary) as background ─────── */
 /* INTENT: search-go-btn, verse-study-link, and place-tip-link all use
-   color:#fff or dark colors that fail in dark mode where --color-primary = #e8c87a
+   color:#fff or dark colors that fail in dark mode where --color-primary = var(--color-primary)
    (golden). --color-on-primary (#1a1208) is the correct text color for golden bg. */
 [data-theme="dark"] .search-go-btn,
 [data-theme="dark"] .search-go-btn:hover,

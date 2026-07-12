@@ -428,7 +428,7 @@
   display: block;
   box-sizing: border-box;
 }
-.tl2-search:focus { outline: none; border-color: var(--color-primary, #5c3d1e); }
+.tl2-search:focus { outline: none; border-color: var(--color-primary); }
 
 /* TLU-C: prev/next navigation bar */
 .tl-detail-nav {
@@ -444,7 +444,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
   font-size: .78rem;
   padding: .1rem .2rem;
 }

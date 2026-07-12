@@ -666,7 +666,7 @@
 }
 .wd-related-pill:hover {
   border-color: var(--color-primary);
-  background: var(--color-primary-faint, rgba(92,61,30,.06));
+  background: var(--color-primary-faint, color-mix(in srgb, var(--color-primary) 6%, transparent));
 }
 .wd-related-id {
   font-size: .7rem;
@@ -742,19 +742,19 @@
 /* ── Dark-mode button overrides ─────────────────────────────────────────── */
 [data-theme="dark"] .wd-book-pill:hover,
 [data-theme="dark"] .wd-book-pill--active {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 [data-theme="dark"] .wd-book-pill:hover .wd-book-count,
-[data-theme="dark"] .wd-book-pill--active .wd-book-count { color: var(--color-btn-text, #e8c87a); }
+[data-theme="dark"] .wd-book-pill--active .wd-book-count { color: var(--color-btn-text); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .wd-book-pill:hover,
   :root:not([data-theme="light"]) .wd-book-pill--active {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
   :root:not([data-theme="light"]) .wd-book-pill:hover .wd-book-count,
-  :root:not([data-theme="light"]) .wd-book-pill--active .wd-book-count { color: var(--color-btn-text, #e8c87a); }
+  :root:not([data-theme="light"]) .wd-book-pill--active .wd-book-count { color: var(--color-btn-text); }
 }

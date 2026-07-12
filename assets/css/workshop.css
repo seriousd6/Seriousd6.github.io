@@ -41,7 +41,7 @@
   transition: opacity 0.15s, color 0.15s;
   white-space: nowrap;
 }
-.ws-back-link:hover { opacity: 1; color: var(--sb-text, #e8d9bb); }
+.ws-back-link:hover { opacity: 1; color: var(--sb-text); }
 .ws-topbar__sep { color: var(--sb-muted, #9a8060); opacity: 0.4; font-size: 0.8rem; }
 .ws-topbar__private {
   font-size: 0.65rem;

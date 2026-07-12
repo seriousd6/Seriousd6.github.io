@@ -119,7 +119,7 @@ body {
   z-index: 2000;
   margin: 8px;
   padding: 0.5rem 0.9rem;
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary, #fff);
   border-radius: 6px;
   font-family: var(--font-ui, sans-serif);
@@ -809,7 +809,7 @@ body.is-embedded .skip-link {
   transition: opacity 0.15s, color 0.15s;
   box-sizing: border-box;
 }
-.sb-workshop-link:hover { opacity: 1; color: var(--sb-text, #e8d9bb); }
+.sb-workshop-link:hover { opacity: 1; color: var(--sb-text); }
 .sb-workshop-link[aria-current="page"] { color: var(--color-primary, #c8a96e); opacity: 1; }
 
 /* Dark mode toggle button (injected into sidebar footer by main.js) */
@@ -823,7 +823,7 @@ body.is-embedded .skip-link {
   padding: 0.45rem 1rem;
   font-family: var(--font-ui, system-ui, sans-serif);
   font-size: 0.83rem;
-  color: var(--sb-text, #e8d9bb);
+  color: var(--sb-text);
   cursor: pointer;
   text-align: left;
   opacity: 0.75;
@@ -870,12 +870,12 @@ body.bsw-modal-open {
 .src-badge a:hover { color: var(--color-accent); }
 /* AI-assisted content gets a warm gold tint to distinguish from verbatim external sources */
 .src-badge--ai {
-  border-color: #b8860b;
-  color: #8c6a00;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
   background: #fffbf0;
 }
 [data-theme="dark"] .src-badge { color: var(--color-muted); border-color: var(--color-border); background: transparent; }
-[data-theme="dark"] .src-badge--ai { background: rgba(184,134,11,0.12); color: #c9a030; border-color: #b8860b; }
+[data-theme="dark"] .src-badge--ai { background: color-mix(in srgb, var(--color-accent) 12%, transparent); color: #c9a030; border-color: var(--color-accent); }
 
 /* ── Patristic chain commentary — collapsible Father voices ─────────────────── */
 /* INTENT: The Catena-derived 'catena' source stacks many Father voices per pericope.

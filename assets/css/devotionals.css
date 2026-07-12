@@ -68,7 +68,7 @@
 }
 
 .devot-source__select:hover {
-  border-color: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary);
 }
 
 .devot-date-nav {
@@ -91,13 +91,13 @@
 
 .devot-nav-btn:hover {
   background: var(--color-surface-hover, #f3f3f3);
-  border-color: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary);
 }
 
 .devot-today-btn {
   font-size: .82rem;
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 
 .devot-date-input {
@@ -128,9 +128,9 @@
 }
 
 .devot-period-tab.is-active {
-  background: var(--color-primary, #5c3d1e);
+  background: var(--color-primary);
   color: var(--color-on-primary);
-  border-color: var(--color-primary, #5c3d1e);
+  border-color: var(--color-primary);
 }
 
 /* ── Card ───────────────────────────────────────────────────────────────────── */
@@ -167,7 +167,7 @@
 /* ── Verse block ─────────────────────────────────────────────────────────────── */
 
 .devot-verse {
-  border-left: 3px solid var(--color-primary, #5c3d1e);
+  border-left: 3px solid var(--color-primary);
   margin: 0 0 1.5rem;
   padding: .5rem 0 .5rem 1.1rem;
 }
@@ -184,7 +184,7 @@
   font-style: normal;
   font-size: .88rem;
   font-weight: 600;
-  color: var(--color-primary, #5c3d1e);
+  color: var(--color-primary);
 }
 
 .devot-verse cite a {
@@ -235,15 +235,15 @@
 
 /* ── Dark-mode button overrides ─────────────────────────────────────────── */
 [data-theme="dark"] .devot-period-tab.is-active {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .devot-period-tab.is-active {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
 }
 

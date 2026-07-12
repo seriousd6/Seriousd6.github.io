@@ -587,9 +587,9 @@
 [data-theme="dark"] .mem-back-btn,
 [data-theme="dark"] .bsw-modal__memory-btn:hover,
 [data-theme="dark"] .bsw-modal__memory-btn--active {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .mem-badge,
@@ -599,8 +599,8 @@
   :root:not([data-theme="light"]) .mem-back-btn,
   :root:not([data-theme="light"]) .bsw-modal__memory-btn:hover,
   :root:not([data-theme="light"]) .bsw-modal__memory-btn--active {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
 }

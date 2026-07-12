@@ -543,18 +543,18 @@
 [data-theme="dark"] .dict-alpha-btn--active,
 [data-theme="dark"] .dict-ref-chip:hover,
 [data-theme="dark"] .dict-src-tab--active {
-  background: var(--color-btn-bg, #3a2d18);
+  background: var(--color-btn-bg);
   border-color: var(--color-primary);
-  color: var(--color-btn-text, #e8c87a);
+  color: var(--color-btn-text);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .dict-alpha-btn:hover,
   :root:not([data-theme="light"]) .dict-alpha-btn--active,
   :root:not([data-theme="light"]) .dict-ref-chip:hover,
   :root:not([data-theme="light"]) .dict-src-tab--active {
-    background: var(--color-btn-bg, #3a2d18);
+    background: var(--color-btn-bg);
     border-color: var(--color-primary);
-    color: var(--color-btn-text, #e8c87a);
+    color: var(--color-btn-text);
   }
 }
 
