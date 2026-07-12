@@ -19,6 +19,7 @@ import { initInterlinearToggle, initBookInfoToggle } from '../interlinear.js';
 import { initEchoToggle } from '../parallels.js';
 import { initParallelsToggle } from '../synoptic.js';
 import { _injectShortcutsBtn } from '../modal.js';
+import { initReaderRail } from '../reader-rail.js';
 
 boot(function () {
   initReaderPage();
@@ -43,4 +44,5 @@ boot(function () {
   initReaderAudio();
   initStudyDesk();
   _injectShortcutsBtn();
+  initReaderRail();
 }, { early: true });
