@@ -144,11 +144,27 @@ documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
 - Verified: full functional pass on the built dist (home plan, reader, modal,
   biblepedia, library doc, discipline) with zero page errors.
 
-**Remaining Daylight increments:** reader toolbar consolidation (Aa menu) + chip-rail
-apparatus; topics/study-guides onto the shared shell (kills their alien navy design +
-the unstyled tier-nav bug); home hierarchy (banner demotion, BEHIND → grace-based);
-library filter chips; hardcoded-hex sweeps (workshop 587, biblepedia 226, lib-browser
-160 hexes); full sans-default/serif-opt-in type inversion.
+### Daylight increment 2 — surfaces (2026-07-12)
+- **Reader toolbar consolidated**: lookup, browse selects, and every feature toggle
+  flow as one wrapping control band under a single hairline (desktop ≥641px;
+  mobile keeps its stacked 44px layout). "Browse:" label and keyboard-hint text
+  retired; buttons de-emojied (⚙ View → **Aa** with aria-label, 📖 Study Tools →
+  Study Tools, ⇅ Compare → Compare, 🔊 Listen → Listen/Pause/Resume).
+- **Topics & study guides in-family**: the seven `--bk-accent` genre tints retuned
+  to the Daylight field set (epistle navy → slate #3a4a70, prophecy violet →
+  #4f4a78, …); the two pages loading Google Fonts (Cinzel/EB Garamond/…) now fall
+  back to the self-hosted faces — no external font requests anywhere. Study-guide
+  pages + template finally link `book-study.css`, fixing the long-unstyled tier nav.
+- **Home hierarchy**: the notification banner moved from above the greeting to the
+  end of the page; the red BEHIND stamp became a muted "catching up" chip (brass on
+  subtle surface; "ahead" wears olive).
+- **Library filters**: tradition/era/type chips render as wrapped pill rows instead
+  of a ~30-row stack of full-width buttons.
+
+**Remaining Daylight increments:** chip-rail apparatus in the reader (aggregate
+cross-refs/parallels/places per passage — the JS-heavy piece); emoji sweep in
+in-page links/JS-rendered labels; hardcoded-hex sweeps (workshop 587, biblepedia
+~200, lib-browser 160 hexes); full sans-default/serif-opt-in type inversion.
 
 ## Next up
 

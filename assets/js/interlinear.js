@@ -109,9 +109,10 @@ export function initViewToggle() {
   btn.id        = 'reader-view-btn';
   btn.className = 'reader-view-btn';
   btn.title     = 'View options';
+  btn.setAttribute('aria-label', 'Reading view options');
   btn.setAttribute('aria-haspopup', 'true');
   btn.setAttribute('aria-expanded', 'false');
-  btn.textContent = '⚙ View';
+  btn.textContent = 'Aa';
 
   var popover = document.createElement('div');
   popover.id        = 'reader-view-popover';
@@ -191,7 +192,7 @@ export function initStudyToolsToggle() {
   btn.title     = 'Study tools';
   btn.setAttribute('aria-haspopup', 'true');
   btn.setAttribute('aria-expanded', 'false');
-  btn.textContent = '📖 Study Tools';
+  btn.textContent = 'Study Tools';
 
   var popover = document.createElement('div');
   popover.id        = 'reader-studytools-popover';

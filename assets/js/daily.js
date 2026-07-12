@@ -309,7 +309,9 @@ function _dailyRenderPlan(planId) {
         '<div class="daily-plan-progress-bar"><div class="daily-plan-progress-fill" style="width:' + pct + '%"></div></div>' +
         '<span class="daily-plan-progress-text">' + pct + '%' +
         (finishLabel ? ' &nbsp;·&nbsp; Finish: ' + finishLabel : '') +
-        ' &nbsp;<span class="daily-plan-pace daily-plan-pace--' + paceStatus + '">' + paceStatus.replace('-', ' ') + '</span></span>' +
+        ' &nbsp;<span class="daily-plan-pace daily-plan-pace--' + paceStatus + '">' +
+        (paceStatus === 'behind' ? 'catching up' : paceStatus === 'ahead' ? 'ahead' : 'on track') +
+        '</span></span>' +
         '</div>' +
         '<p class="daily-plan-day">' +
         (plan.type === 'catechism'
@@ -687,7 +689,9 @@ function _dailyShowNotifBanner() {
     '<span>Get notified when your morning & evening devotional changes.</span>' +
     '<button id="daily-notif-allow">Enable notifications</button>' +
     '<button class="daily-notif-dismiss" aria-label="Dismiss">✕</button>';
-  page.insertBefore(banner, page.firstChild);
+  // Daylight: the nudge lives at the end of the page — the day's scripture
+  // greets first, the permission ask waits its turn.
+  page.appendChild(banner);
   banner.querySelector('#daily-notif-allow').addEventListener('click', function () {
     Notification.requestPermission().then(function (perm) {
       if (perm === 'granted') _dailyFireNotification(_dailyPeriod());

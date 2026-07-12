@@ -552,8 +552,8 @@
   padding: .1rem .4rem;
   background: var(--color-border);
 }
-.daily-plan-pace--ahead   { color: #2e7d32; background: rgba(46,125,50,.1); }
-.daily-plan-pace--behind  { color: #b71c1c; background: rgba(183,28,28,.1); }
+.daily-plan-pace--ahead   { color: var(--color-primary, #55682f); background: var(--color-surface-subtle, rgba(85,104,47,.1)); }
+.daily-plan-pace--behind  { color: var(--color-accent, #7a6222); background: var(--color-surface-subtle, rgba(122,98,34,.08)); }
 .daily-plan-pace--on-track { color: var(--color-muted); }
 
 /* ── HP-C: Disciplines completion count + memory due badge ──────────────────── */

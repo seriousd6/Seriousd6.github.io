@@ -17,71 +17,71 @@
 
 /* Torah / Pentateuch (Gen–Deut) — crimson, covenant, law */
 .bk-torah {
-  --bk-accent:      #7a2030;
-  --bk-accent-mid:  #a33045;
-  --bk-accent-soft: rgba(122, 32, 48, 0.12);
-  --bk-accent-dim:  rgba(122, 32, 48, 0.06);
-  --bk-badge-bg:    #7a2030;
+  --bk-accent:      #7a3242;
+  --bk-accent-mid:  #9a4a5c;
+  --bk-accent-soft: rgba(122, 50, 66, 0.12);
+  --bk-accent-dim:  rgba(122, 50, 66, 0.06);
+  --bk-badge-bg:    #7a3242;
   --bk-genre-name:  "Torah";
 }
 
 /* History (Josh–Esth, Acts) — olive, chronicle, narrative */
 .bk-history {
-  --bk-accent:      #3d5a2a;
-  --bk-accent-mid:  #567a3c;
-  --bk-accent-soft: rgba(61, 90, 42, 0.12);
-  --bk-accent-dim:  rgba(61, 90, 42, 0.06);
-  --bk-badge-bg:    #3d5a2a;
+  --bk-accent:      #4d5f2a;
+  --bk-accent-mid:  #68803c;
+  --bk-accent-soft: rgba(77, 95, 42, 0.12);
+  --bk-accent-dim:  rgba(77, 95, 42, 0.06);
+  --bk-badge-bg:    #4d5f2a;
   --bk-genre-name:  "History";
 }
 
 /* Wisdom / Poetry (Job, Pss, Prov, Eccl, Song) — amber, candlelight */
 .bk-wisdom {
-  --bk-accent:      #7a5c0e;
-  --bk-accent-mid:  #a07c18;
-  --bk-accent-soft: rgba(122, 92, 14, 0.12);
-  --bk-accent-dim:  rgba(122, 92, 14, 0.06);
-  --bk-badge-bg:    #7a5c0e;
+  --bk-accent:      #7a6222;
+  --bk-accent-mid:  #9a7f33;
+  --bk-accent-soft: rgba(122, 98, 34, 0.12);
+  --bk-accent-dim:  rgba(122, 98, 34, 0.06);
+  --bk-badge-bg:    #7a6222;
   --bk-genre-name:  "Wisdom & Poetry";
 }
 
 /* Prophecy (Isa–Mal) — violet, divine oracle */
 .bk-prophecy {
-  --bk-accent:      #52278a;
-  --bk-accent-mid:  #7040b0;
-  --bk-accent-soft: rgba(82, 39, 138, 0.12);
-  --bk-accent-dim:  rgba(82, 39, 138, 0.06);
-  --bk-badge-bg:    #52278a;
+  --bk-accent:      #4f4a78;
+  --bk-accent-mid:  #6a6499;
+  --bk-accent-soft: rgba(79, 74, 120, 0.12);
+  --bk-accent-dim:  rgba(79, 74, 120, 0.06);
+  --bk-badge-bg:    #4f4a78;
   --bk-genre-name:  "Prophecy";
 }
 
 /* Gospel (Matt, Mark, Luke, John) — teal, good news */
 .bk-gospel {
-  --bk-accent:      #1a5f6e;
-  --bk-accent-mid:  #247f92;
-  --bk-accent-soft: rgba(26, 95, 110, 0.12);
-  --bk-accent-dim:  rgba(26, 95, 110, 0.06);
-  --bk-badge-bg:    #1a5f6e;
+  --bk-accent:      #2a6a60;
+  --bk-accent-mid:  #3d8a7d;
+  --bk-accent-soft: rgba(42, 106, 96, 0.12);
+  --bk-accent-dim:  rgba(42, 106, 96, 0.06);
+  --bk-badge-bg:    #2a6a60;
   --bk-genre-name:  "Gospel";
 }
 
 /* Epistle (Rom–Jude) — navy, teaching letters */
 .bk-epistle {
-  --bk-accent:      #1e3a6e;
-  --bk-accent-mid:  #2e56a0;
-  --bk-accent-soft: rgba(30, 58, 110, 0.12);
-  --bk-accent-dim:  rgba(30, 58, 110, 0.06);
-  --bk-badge-bg:    #1e3a6e;
+  --bk-accent:      #3a4a70;
+  --bk-accent-mid:  #526491;
+  --bk-accent-soft: rgba(58, 74, 112, 0.12);
+  --bk-accent-dim:  rgba(58, 74, 112, 0.06);
+  --bk-badge-bg:    #3a4a70;
   --bk-genre-name:  "Epistle";
 }
 
 /* Apocalyptic (Dan, Rev) — scarlet, judgment and glory */
 .bk-apocalyptic {
-  --bk-accent:      #8a1a1a;
-  --bk-accent-mid:  #b02424;
-  --bk-accent-soft: rgba(138, 26, 26, 0.12);
-  --bk-accent-dim:  rgba(138, 26, 26, 0.06);
-  --bk-badge-bg:    #8a1a1a;
+  --bk-accent:      #7e2f1a;
+  --bk-accent-mid:  #a04327;
+  --bk-accent-soft: rgba(126, 47, 26, 0.12);
+  --bk-accent-dim:  rgba(126, 47, 26, 0.06);
+  --bk-badge-bg:    #7e2f1a;
   --bk-genre-name:  "Apocalyptic";
 }
 

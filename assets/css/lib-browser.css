@@ -195,18 +195,21 @@
 .lb-search::placeholder { color: var(--color-muted, #bbb); }
 
 .lb-chips {
+  /* Daylight: wrapped pill row instead of a stack of full-width buttons —
+     the filter column shrinks from ~30 rows to a few compact lines. */
   display: flex;
-  flex-direction: column;
-  gap: .18rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .3rem;
 }
 
 .lb-chip {
   font-size: .76rem;
   font-weight: 500;
   text-align: left;
-  padding: .28rem .55rem;
+  padding: .24rem .62rem;
   border: 1px solid var(--color-border, #e0e0e0);
-  border-radius: 5px;
+  border-radius: 999px;
   background: none;
   color: var(--color-text);
   cursor: pointer;

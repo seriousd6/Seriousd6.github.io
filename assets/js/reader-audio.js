@@ -143,7 +143,7 @@ function _updateUi() {
     var active  = _state !== 'stopped';
     _btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     _btn.classList.toggle('reader-audio-btn--on', active);
-    _btn.textContent = playing ? '⏸ Reading' : (active ? '▶ Resume' : '🔊 Listen');
+    _btn.textContent = playing ? 'Pause' : (active ? 'Resume' : 'Listen');
   }
   if (_barEl) {
     _barEl.hidden = _state === 'stopped';
@@ -191,7 +191,7 @@ export function initReaderAudio() {
   _btn.id        = 'reader-audio-btn';
   _btn.className = 'reader-audio-btn';
   _btn.type      = 'button';
-  _btn.textContent = '🔊 Listen';
+  _btn.textContent = 'Listen';
   _btn.title     = 'Read this passage aloud';
   _btn.setAttribute('aria-pressed', 'false');
 

@@ -4534,3 +4534,36 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
   font-size: 0.66em;
   font-weight: 700;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Daylight increment 2 — consolidated reader toolbar.
+   Desktop: lookup, browse selects, and every feature toggle flow as ONE
+   wrapping control band under a single hairline (display:contents lifts the
+   two legacy bar wrappers' children into the shared flex row without touching
+   the JS insertion points). Mobile (≤640px) keeps its dedicated stacked
+   layout and 44px targets.
+   ══════════════════════════════════════════════════════════════════════════ */
+@media (min-width: 641px) {
+  .reader-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem 0.55rem;
+    padding: 0.55rem 0 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1.4rem;
+  }
+  .reader-controls .reader-lookup-bar,
+  .reader-controls .reader-browse-bar { display: contents; }
+  .reader-lookup-input {
+    flex: 1 1 200px;
+    max-width: 330px;
+  }
+  /* The keyboard hint reads as documentation, not control — retire it from
+     the band (the ? shortcuts overlay covers discovery). */
+  .reader-browse-hint { display: none; }
+  .reader-browse-label { display: none; }
+}
+/* Tighter, calmer selects + lookup in both layouts */
+.reader-browse-select { border-radius: 7px; }
+.reader-lookup-input { border-radius: 7px; }
