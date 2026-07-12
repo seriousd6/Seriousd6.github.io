@@ -183,6 +183,11 @@ headless-Chromium functional pass and screenshot review in both themes.
 
 ## Next up
 
+> **The active plan has moved to [`ROADMAP.md`](ROADMAP.md)** — the 2026-07-12
+> outside evaluation (overall grade: B+) and the phased path to the heights
+> (query understanding, apparatus surfacing, topical answer pages, audits).
+
+
 1. **Remaining Candlelight polish** (optional, incremental):
    - Study-guide / topic page typography alignment (they carry their own
      Google-Fonts look today).
