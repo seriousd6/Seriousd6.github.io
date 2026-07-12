@@ -37,6 +37,9 @@
   position: relative;
 }
 .disc-tabbar::-webkit-scrollbar { display: none; }
+/* Inner tablist wrapper (ARIA: only tabs may be tablist children; the More
+   menu button sits beside it as a sibling). Flex-through — layout unchanged. */
+.disc-tablist { display: flex; flex-shrink: 0; }
 
 /* More ▾ overflow drawer */
 .disc-tab--more {

@@ -615,7 +615,12 @@
   border-bottom: 2px solid var(--color-border, #e0d5c4);
   margin-top: 0.75rem;
   margin-bottom: 0.15rem;
+  /* Six tabs don't fit a phone: scroll within the row, never the page */
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.search-tab-row::-webkit-scrollbar { display: none; }
+.search-tab { flex-shrink: 0; white-space: nowrap; }
 
 .search-tab {
   font-family: var(--font-ui, system-ui, sans-serif);
@@ -2839,7 +2844,7 @@ kbd {
 
 /* ? button in reader browse bar */
 .reader-shortcuts-btn {
-  padding: 0.22rem 0.55rem;
+  padding: 0.5rem 0.7rem;   /* H4: was 28×22 — ≥32px touch target */
   border: 1px solid var(--color-border, #e0d5c4);
   border-radius: 4px;
   background: none;

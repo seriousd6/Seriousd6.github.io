@@ -205,11 +205,17 @@ export function initDailyPage() {
   var defaultDevot = period === 'morning' ? 'spurgeon-morning' : 'spurgeon-evening';
   var savedDevot = localStorage.getItem(DAILY_DEVOT_KEY) || defaultDevot;
   var devotChips = document.querySelectorAll('.daily-devot-chip');
+  var _setDevotChip = function (active) {
+    devotChips.forEach(function (c) {
+      var on = c === active;
+      c.classList.toggle('daily-devot-chip--active', on);
+      c.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  };
   devotChips.forEach(function (chip) {
-    if (chip.dataset.src === savedDevot) chip.classList.add('daily-devot-chip--active');
+    if (chip.dataset.src === savedDevot) _setDevotChip(chip);
     chip.addEventListener('click', function () {
-      devotChips.forEach(function (c) { c.classList.remove('daily-devot-chip--active'); });
-      chip.classList.add('daily-devot-chip--active');
+      _setDevotChip(chip);
       localStorage.setItem(DAILY_DEVOT_KEY, chip.dataset.src);
       _dailyRenderDevotional(chip.dataset.src, period);
     });

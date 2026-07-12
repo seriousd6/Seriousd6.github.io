@@ -10,22 +10,26 @@ import Base from '../../layouts/Base.astro';
 
     <!-- ── Sticky tab bar ─────────────────────────────────────────────────── -->
     <div class="disc-tabbar-wrap">
-      <div class="disc-tabbar" role="tablist" aria-label="Discipline tabs">
-        <button class="disc-tab disc-tab--active" data-tab="plans" role="tab" aria-selected="true" id="disc-tab-plans" aria-controls="disc-plans">
-          <span class="disc-dot" id="dot-reading"></span>Plans
-        </button>
-        <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false" id="disc-tab-devotionals" aria-controls="disc-devotionals">
-          <span class="disc-dot" id="dot-devotional"></span>Devotionals
-        </button>
-        <button class="disc-tab" data-tab="memory" role="tab" aria-selected="false" id="disc-tab-memory" aria-controls="disc-memory">
-          <span class="disc-dot" id="dot-memory"></span>Memory
-        </button>
-        <button class="disc-tab" data-tab="journal" role="tab" aria-selected="false" id="disc-tab-journal" aria-controls="disc-journal">
-          <span class="disc-dot" id="dot-prayer"></span>Journal
-        </button>
-        <button class="disc-tab" data-tab="worship" role="tab" aria-selected="false" id="disc-tab-worship" aria-controls="disc-worship">
-          <span class="disc-dot" id="dot-worship"></span>Worship
-        </button>
+      <!-- The More button is a menu trigger, not a tab — it lives beside the
+           tablist, not inside it (ARIA: tablist children must be tabs). -->
+      <div class="disc-tabbar">
+        <div class="disc-tablist" role="tablist" aria-label="Discipline tabs">
+          <button class="disc-tab disc-tab--active" data-tab="plans" role="tab" aria-selected="true" id="disc-tab-plans" aria-controls="disc-plans">
+            <span class="disc-dot" id="dot-reading"></span>Plans
+          </button>
+          <button class="disc-tab" data-tab="devotionals" role="tab" aria-selected="false" id="disc-tab-devotionals" aria-controls="disc-devotionals">
+            <span class="disc-dot" id="dot-devotional"></span>Devotionals
+          </button>
+          <button class="disc-tab" data-tab="memory" role="tab" aria-selected="false" id="disc-tab-memory" aria-controls="disc-memory">
+            <span class="disc-dot" id="dot-memory"></span>Memory
+          </button>
+          <button class="disc-tab" data-tab="journal" role="tab" aria-selected="false" id="disc-tab-journal" aria-controls="disc-journal">
+            <span class="disc-dot" id="dot-prayer"></span>Journal
+          </button>
+          <button class="disc-tab" data-tab="worship" role="tab" aria-selected="false" id="disc-tab-worship" aria-controls="disc-worship">
+            <span class="disc-dot" id="dot-worship"></span>Worship
+          </button>
+        </div>
         <button class="disc-tab disc-tab--more" id="disc-more-btn" type="button" aria-haspopup="true" aria-expanded="false">More ▾</button>
       </div>
       <div class="disc-more-menu" id="disc-more-menu" hidden="" role="menu">

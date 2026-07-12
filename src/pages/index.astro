@@ -50,13 +50,14 @@ import Base from '../layouts/Base.astro';
         <div class="daily-card__head">
           <h2 id="daily-devot-title" class="daily-card__title">Morning Devotional</h2>
         </div>
-        <div class="daily-devot-chips" role="tablist">
-          <button class="daily-devot-chip" data-src="variety">✦ Variety</button>
-          <button class="daily-devot-chip" data-src="spurgeon-morning">Spurgeon AM</button>
-          <button class="daily-devot-chip" data-src="spurgeon-evening">Spurgeon PM</button>
-          <button class="daily-devot-chip" data-src="daily-psalms">Psalms</button>
-          <button class="daily-devot-chip" data-src="proverbs-month">Proverbs</button>
-          <button class="daily-devot-chip" data-src="nt-daily">NT Daily</button>
+        <!-- Source-picker chips, not tabs (no tabpanels): pressed-button semantics. -->
+        <div class="daily-devot-chips" role="group" aria-label="Devotional source">
+          <button class="daily-devot-chip" data-src="variety" aria-pressed="false">✦ Variety</button>
+          <button class="daily-devot-chip" data-src="spurgeon-morning" aria-pressed="false">Spurgeon AM</button>
+          <button class="daily-devot-chip" data-src="spurgeon-evening" aria-pressed="false">Spurgeon PM</button>
+          <button class="daily-devot-chip" data-src="daily-psalms" aria-pressed="false">Psalms</button>
+          <button class="daily-devot-chip" data-src="proverbs-month" aria-pressed="false">Proverbs</button>
+          <button class="daily-devot-chip" data-src="nt-daily" aria-pressed="false">NT Daily</button>
         </div>
         <div id="daily-devot-content" class="daily-devot-body"></div>
       </section>

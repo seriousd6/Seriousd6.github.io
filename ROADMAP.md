@@ -116,10 +116,21 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   memorize). Onboarding gained a "See everything on one verse →" link beside
   Get started; the sidebar gained Tools → Site Tour.
 
-### H4 — Mobile & accessibility audit
-- Dedicated phone pass over reader, library browser, discipline hub, search
-  (biblepedia was fixed reactively; the rest never had one).
-- axe-core automated pass + keyboard walk of the main flows; fix what it finds.
+### H4 — Mobile & accessibility audit  ·  DONE 2026-07-12
+- Ran axe-core (WCAG 2.0/2.1 A+AA) + structural mobile checks (390px) over
+  9 pages + 2 desktop passes, and a keyboard walk of the reader.
+- Found & fixed: 3 critical `aria-required-children` (home devot chips were a
+  role-less-children tablist → now `role="group"` with managed `aria-pressed`;
+  the discipline More menu button lived inside the tablist → moved beside a
+  new inner `.disc-tablist`); horizontal page overflow on mobile /search/
+  (tab row now scrolls in place) and /discipline/?tab=memory (mode row wraps);
+  tiny tap targets (echo markers 16×9 → ~28×25 effective via a hit-area
+  pseudo-element with zero visual change; notification dismiss and keyboard-
+  shortcuts buttons padded to ≥32px).
+- Clean at close: axe zero violations on all 11 passes, no horizontal
+  overflow, skip link + visible focus + logical tab order confirmed. The
+  remaining flagged inline prose links (biblepedia refs) fall under the WCAG
+  target-size inline exception.
 
 ### H5 — Search performance
 - Verse search fetches whole books in loops; fine on broadband, sluggish on
@@ -141,5 +152,7 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   person→article (H) — are fixed and verified. **16/16 intents now ≤2 taps.**
 - H3 — **DONE** (2026-07-12): `/tour/` walkthrough of John 3:16 through the
   whole chain with live deep links; onboarding tour CTA; sidebar Site Tour.
-- H4 — pending
+- H4 — **DONE** (2026-07-12): axe + mobile + keyboard audit; 3 critical ARIA
+  violations, 2 mobile overflows, and the tiny-tap-target set all fixed;
+  axe clean on all 11 passes.
 - H5 — pending

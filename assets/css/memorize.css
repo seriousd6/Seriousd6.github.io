@@ -113,6 +113,7 @@
 .mem-mode-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;              /* two label+select pairs don't fit a phone */
   gap: .6rem;
   margin-bottom: 1rem;
 }

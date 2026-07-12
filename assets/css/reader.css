@@ -4527,7 +4527,11 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
   padding: 0 5px;
   vertical-align: 0.28em;
   opacity: 0.85;
+  /* H4: the visible chip is ~16×9 — far under a usable touch target. The
+     pseudo-element extends the hit area to ~28×25 without moving a pixel. */
+  position: relative;
 }
+.reader-echo-marker::after { content: ''; position: absolute; inset: -8px -6px; }
 .reader-echo-marker__count {
   color: var(--color-accent);
   font-family: var(--font-ui);
