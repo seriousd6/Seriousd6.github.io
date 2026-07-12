@@ -129,13 +129,17 @@ function _fillMiniMap(place) {
     var L = window.L;
     _leafletMap = L.map(mapEl, { zoomControl: true, attributionControl: true, scrollWheelZoom: false });
     L.tileLayer(CARTO_TILES, { maxZoom: 19, attribution: CARTO_ATTR }).addTo(_leafletMap);
-    _leafletMap.setView([place.lat, place.lon], 9);
+    // Regions (Galilee, Judea, …) are areas, not points: wider view, and the
+    // neighbor sweep widens with it so the towns of the region show.
+    var isRegion = !!place.region;
+    var reach    = isRegion ? 1.4 : 0.9;
+    _leafletMap.setView([place.lat, place.lon], isRegion ? 8 : 9);
 
     // Neighbors first so the target draws on top.
     getAllPlaces()
       .filter(function (p) {
-        return p.id !== place.id &&
-               Math.abs(p.lat - place.lat) < 0.9 && Math.abs(p.lon - place.lon) < 0.9;
+        return p.id !== place.id && !p.region &&
+               Math.abs(p.lat - place.lat) < reach && Math.abs(p.lon - place.lon) < reach;
       })
       .sort(function (a, b) {
         var da = Math.hypot(a.lat - place.lat, a.lon - place.lon);
@@ -149,9 +153,11 @@ function _fillMiniMap(place) {
         }).addTo(_leafletMap).bindTooltip(escHtml(p.name));
       });
 
-    // The tapped place: selected ring, label shown.
+    // The tapped place: a soft wide disc for a region, a selected ring for a
+    // town — labeled either way.
     L.circleMarker([place.lat, place.lon], {
-      radius: 9, color: '#c0392b', weight: 3, fillColor: '#c0392b', fillOpacity: 0.25,
+      radius: isRegion ? 26 : 9, color: '#c0392b', weight: isRegion ? 2 : 3,
+      fillColor: '#c0392b', fillOpacity: isRegion ? 0.10 : 0.25,
     }).addTo(_leafletMap).bindTooltip(escHtml(place.name), { permanent: true, direction: 'top' }).openTooltip();
 
     // The popup just animated in; Leaflet measured a mid-animation size.

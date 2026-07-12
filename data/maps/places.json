@@ -1,77 +1,995 @@
 [
-  {"id":"jerusalem","name":"Jerusalem","aliases":["Zion","City of David","holy city","the city"],"mapId":"holy-land","lat":31.7767,"lon":35.2345,"desc":"Capital of Israel and Judah; site of the Temple, the Crucifixion, Resurrection, and Pentecost."},
-  {"id":"bethlehem","name":"Bethlehem","aliases":["Bethlehem of Judah","Bethlehem Ephrathah"],"mapId":"holy-land","lat":31.7054,"lon":35.2024,"desc":"Birthplace of David and of Jesus, fulfilling Micah's prophecy."},
-  {"id":"nazareth","name":"Nazareth","aliases":[],"mapId":"holy-land","lat":32.6996,"lon":35.3035,"desc":"Where Jesus grew up and spent thirty years before his public ministry."},
-  {"id":"capernaum","name":"Capernaum","aliases":[],"mapId":"holy-land","lat":32.8823,"lon":35.5753,"desc":"Jesus's base of ministry in Galilee; home of Peter; site of the Bread of Life discourse."},
-  {"id":"jericho","name":"Jericho","aliases":["city of palms"],"mapId":"holy-land","lat":31.8535,"lon":35.4616,"desc":"The oldest city in the world; its walls fell at Israel's shout under Joshua."},
-  {"id":"hebron","name":"Hebron","aliases":["Kiriath Arba","Mamre"],"mapId":"holy-land","lat":31.5327,"lon":35.0957,"desc":"Abraham's home in Canaan; site of the cave of Machpelah where the patriarchs are buried."},
-  {"id":"beersheba","name":"Beersheba","aliases":["Beer-sheba"],"mapId":"holy-land","lat":31.2518,"lon":34.7915,"desc":"Southernmost city of the promised land — 'from Dan to Beersheba' marked all Israel."},
-  {"id":"gaza","name":"Gaza","aliases":[],"mapId":"holy-land","lat":31.5017,"lon":34.4674,"desc":"Philistine stronghold where Samson was imprisoned and died pulling down Dagon's temple."},
-  {"id":"samaria","name":"Samaria","aliases":["Sebaste"],"mapId":"divided-kingdom","lat":32.2781,"lon":35.1981,"desc":"Capital of the northern kingdom of Israel, built by Omri; fell to Assyria in 722 BC."},
-  {"id":"shechem","name":"Shechem","aliases":["Sychar"],"mapId":"patriarchal-journeys","lat":32.1990,"lon":35.2830,"desc":"Abraham's first stop in Canaan; site of Jacob's well where Jesus spoke with the Samaritan woman."},
-  {"id":"bethel","name":"Bethel","aliases":["Beth-el","Beth Aven","Luz"],"mapId":"patriarchal-journeys","lat":31.9270,"lon":35.2240,"desc":"Where Jacob saw the ladder reaching to heaven and named it 'house of God'."},
-  {"id":"shiloh","name":"Shiloh","aliases":[],"mapId":"twelve-tribes","lat":32.0570,"lon":35.2870,"desc":"The Tabernacle rested here for ~300 years; where Joshua divided the land among the tribes."},
-  {"id":"megiddo","name":"Megiddo","aliases":["Armageddon","Har Megiddo"],"mapId":"divided-kingdom","lat":32.5880,"lon":35.1850,"desc":"Strategic fortress city guarding the Jezreel Valley pass; site of many decisive battles."},
-  {"id":"caesarea","name":"Caesarea","aliases":["Caesarea Maritima","Caesarea on the Sea"],"mapId":"holy-land","lat":32.5025,"lon":34.8958,"desc":"Herod's great port city; where Peter preached to Cornelius and Paul was imprisoned for two years."},
-  {"id":"joppa","name":"Joppa","aliases":["Jaffa","Japho"],"mapId":"holy-land","lat":32.0560,"lon":34.7544,"desc":"Ancient port city; Jonah boarded a ship here to flee from God; Peter raised Dorcas here."},
-  {"id":"tyre","name":"Tyre","aliases":[],"mapId":"ancient-near-east","lat":33.2710,"lon":35.1960,"desc":"Premier Phoenician port city; Hiram supplied cedar and craftsmen for Solomon's Temple."},
-  {"id":"sidon","name":"Sidon","aliases":["Zidon"],"mapId":"ancient-near-east","lat":33.5640,"lon":35.3710,"desc":"Leading Phoenician city; Jezebel was a Sidonian princess; Elijah was sustained near here."},
-  {"id":"dan","name":"Dan","aliases":["Laish"],"mapId":"twelve-tribes","lat":33.2484,"lon":35.6514,"desc":"Northernmost city of Israel; Jeroboam erected a golden calf here; 'from Dan to Beersheba'."},
-  {"id":"lachish","name":"Lachish","aliases":[],"mapId":"invasions","lat":31.5600,"lon":34.8470,"desc":"Second-most important city of Judah; famously besieged by Sennacherib, depicted in Nineveh palace reliefs."},
-  {"id":"hazor","name":"Hazor","aliases":[],"mapId":"conquest","lat":33.0170,"lon":35.5680,"desc":"'Formerly the head of all those kingdoms'; Joshua burned it; archaeology confirms the conquest destruction layer."},
-  {"id":"gibeon","name":"Gibeon","aliases":[],"mapId":"conquest","lat":31.8360,"lon":35.1710,"desc":"Where the sun stood still a full day as Joshua defeated the five-king coalition."},
-  {"id":"gilgal","name":"Gilgal","aliases":[],"mapId":"conquest","lat":31.8750,"lon":35.4400,"desc":"Israel's base camp after crossing the Jordan; where the reproach of Egypt was rolled away."},
-  {"id":"ai","name":"Ai","aliases":[],"mapId":"conquest","lat":31.9200,"lon":35.2800,"desc":"Site of Israel's initial defeat (due to Achan's sin), then taken by a masterful ambush under Joshua."},
-  {"id":"dothan","name":"Dothan","aliases":[],"mapId":"patriarchal-journeys","lat":32.4200,"lon":35.2200,"desc":"Where Joseph was sold by his brothers to an Ishmaelite caravan; also Elisha saw the chariots of fire."},
-  {"id":"jezreel","name":"Jezreel","aliases":[],"mapId":"divided-kingdom","lat":32.4570,"lon":35.3060,"desc":"Ahab's palace; site of Naboth's vineyard; scene of Jehu's execution of the Omri dynasty."},
-  {"id":"caesarea-philippi","name":"Caesarea Philippi","aliases":[],"mapId":"holy-land","lat":33.2481,"lon":35.6943,"desc":"At the foot of Mount Hermon where Peter confessed: 'You are the Christ, the Son of the living God.'"},
-  {"id":"emmaus","name":"Emmaus","aliases":[],"mapId":"holy-land","lat":31.8388,"lon":35.0611,"desc":"Two disciples met the risen Jesus on this road; he revealed himself in the breaking of bread."},
-  {"id":"bethany","name":"Bethany","aliases":[],"mapId":"holy-land","lat":31.7742,"lon":35.2590,"desc":"Home of Mary, Martha, and Lazarus; Jesus raised Lazarus here four days after his death."},
-  {"id":"qumran","name":"Qumran","aliases":[],"mapId":"holy-land","lat":31.7426,"lon":35.4573,"desc":"Community on the Dead Sea shore where the Dead Sea Scrolls were hidden in caves."},
-  {"id":"ashdod","name":"Ashdod","aliases":[],"mapId":"judges","lat":31.8100,"lon":34.6490,"desc":"Philistine city where the captured ark was placed in Dagon's temple; Dagon fell face-down before it."},
-  {"id":"gath","name":"Gath","aliases":[],"mapId":"judges","lat":31.7290,"lon":34.8530,"desc":"Hometown of Goliath; David feigned madness here before King Achish while fleeing Saul."},
-  {"id":"aphek","name":"Aphek","aliases":["Ebenezer"],"mapId":"judges","lat":32.0960,"lon":34.9120,"desc":"Where the Philistines captured the ark of God; 30,000 Israelites fell; Hophni and Phinehas died."},
-  {"id":"tirzah","name":"Tirzah","aliases":[],"mapId":"divided-kingdom","lat":32.3370,"lon":35.3480,"desc":"First capital of the northern kingdom before Samaria was built; praised for beauty in Song of Solomon."},
-  {"id":"mahanaim","name":"Mahanaim","aliases":["Mahanaim"],"mapId":"patriarchal-journeys","lat":32.1900,"lon":35.7500,"desc":"Where angels met Jacob returning from Haran; later where David fled during Absalom's revolt."},
-  {"id":"peniel","name":"Peniel","aliases":["Penuel"],"mapId":"patriarchal-journeys","lat":32.1700,"lon":35.6000,"desc":"Where Jacob wrestled with God until dawn and received the name Israel — 'one who strives with God'."},
-  {"id":"ziklag","name":"Ziklag","aliases":[],"mapId":"david-kingdom","lat":31.3900,"lon":34.7000,"desc":"Given to David by Achish; the Amalekites burned it; David heard of Saul's death here."},
-  {"id":"rameses","name":"Rameses","aliases":["Goshen","Rameses of Goshen","Raamses"],"mapId":"exodus","lat":30.7800,"lon":31.8200,"desc":"The city built by Israelite forced labor in Egypt; Israel set out from here on Passover night."},
-  {"id":"sinai","name":"Sinai","aliases":["Mount Sinai","Horeb","Mount Horeb","Jebel Musa"],"mapId":"exodus","lat":28.5400,"lon":33.9800,"desc":"The mountain of God; where the Ten Commandments were given, the covenant ratified, and the Tabernacle built."},
-  {"id":"kadesh-barnea","name":"Kadesh-barnea","aliases":["Kadesh","Meribah-Kadesh"],"mapId":"exodus","lat":30.6200,"lon":34.4300,"desc":"Where the twelve spies returned; Israel's unbelief condemned them to forty years of wilderness wandering."},
-  {"id":"ezion-geber","name":"Ezion-geber","aliases":["Ezion Geber","Elath","Eloth"],"mapId":"exodus","lat":29.5500,"lon":34.9500,"desc":"Port at the tip of the Gulf of Aqaba; Solomon built his fleet here for the Ophir trade voyages."},
-  {"id":"nebo","name":"Nebo","aliases":["Mount Nebo","Pisgah"],"mapId":"exodus","lat":31.7600,"lon":35.7300,"desc":"Where Moses saw the promised land and died at 120 years old; God himself buried him here."},
-  {"id":"babylon","name":"Babylon","aliases":["Babel","land of Shinar"],"mapId":"invasions","lat":32.5360,"lon":44.4210,"desc":"Capital of Nebuchadnezzar's empire; the exiles were brought here; Daniel served in its court."},
-  {"id":"nineveh","name":"Nineveh","aliases":[],"mapId":"invasions","lat":36.3590,"lon":43.1600,"desc":"Capital of Assyria; Jonah preached here and they repented; Nahum prophesied its destruction in 612 BC."},
-  {"id":"ur","name":"Ur","aliases":["Ur of the Chaldeans","Ur of the Chaldees"],"mapId":"patriarchal-journeys","lat":30.9630,"lon":46.1040,"desc":"Abraham's homeland in southern Mesopotamia; God called him out to go to an unknown land on faith alone."},
-  {"id":"haran","name":"Haran","aliases":["Paddan-Aram","Harran"],"mapId":"patriarchal-journeys","lat":36.8630,"lon":39.0200,"desc":"Abraham's family stopped here; Jacob fled here from Esau and served Laban twenty years."},
-  {"id":"carchemish","name":"Carchemish","aliases":[],"mapId":"invasions","lat":36.8440,"lon":38.0060,"desc":"Where Nebuchadnezzar crushed Egypt in 605 BC — the decisive battle that began the Babylonian era."},
-  {"id":"susa","name":"Susa","aliases":["Shushan"],"mapId":"return-exile","lat":32.1890,"lon":48.2550,"desc":"Persian winter capital; where Esther saved the Jewish people and Nehemiah served as cupbearer to Artaxerxes."},
-  {"id":"persepolis","name":"Persepolis","aliases":[],"mapId":"return-exile","lat":29.9350,"lon":52.8910,"desc":"Ceremonial capital of the Persian empire; built by Darius and Xerxes who authorized the return from exile."},
-  {"id":"nippur","name":"Nippur","aliases":[],"mapId":"return-exile","lat":32.1270,"lon":45.2370,"desc":"Major Babylonian city where many Jewish exiles settled; business tablets preserve dozens of Hebrew names."},
-  {"id":"damascus","name":"Damascus","aliases":["Aram-Damascus"],"mapId":"ancient-near-east","lat":33.5140,"lon":36.2760,"desc":"Capital of Aram; David conquered it; fell to Tiglath-Pileser; Paul was converted on the road here."},
-  {"id":"memphis","name":"Memphis","aliases":["Noph","No"],"mapId":"ancient-near-east","lat":29.8490,"lon":31.2500,"desc":"Ancient capital of Egypt during the Patriarchal period and Exodus; Isaiah prophesied its desolation."},
-  {"id":"antioch-syria","name":"Antioch","aliases":["Antioch of Syria","Syrian Antioch"],"mapId":"paul-journeys","lat":36.2000,"lon":36.1600,"desc":"The first great Gentile church; where believers were first called 'Christians'; sending base for Paul's journeys."},
-  {"id":"ephesus","name":"Ephesus","aliases":[],"mapId":"paul-journeys","lat":37.9390,"lon":27.3410,"desc":"Largest port in Asia Minor; Paul spent three years here; home of one of the seven churches of Revelation."},
-  {"id":"corinth","name":"Corinth","aliases":[],"mapId":"paul-journeys","lat":37.9100,"lon":22.8800,"desc":"Cosmopolitan port city; Paul spent 18 months here and wrote Romans from this city."},
-  {"id":"athens","name":"Athens","aliases":[],"mapId":"paul-journeys","lat":37.9800,"lon":23.7300,"desc":"Paul preached on the Areopagus, declaring the identity of the Unknown God and proclaiming the resurrection."},
-  {"id":"thessalonica","name":"Thessalonica","aliases":[],"mapId":"paul-journeys","lat":40.6400,"lon":22.9400,"desc":"Paul planted a church here in three Sabbaths; he wrote 1–2 Thessalonians to encourage this persecuted congregation."},
-  {"id":"philippi","name":"Philippi","aliases":[],"mapId":"paul-journeys","lat":41.0100,"lon":24.2800,"desc":"The first church planted in Europe; Lydia was its first convert; Paul wrote his most joyful letter to it."},
-  {"id":"rome","name":"Rome","aliases":[],"mapId":"paul-journeys","lat":41.9000,"lon":12.5000,"desc":"Paul arrived under house arrest and spent two years preaching the kingdom to all who came."},
-  {"id":"troas","name":"Troas","aliases":["Alexandria Troas"],"mapId":"paul-journeys","lat":39.7700,"lon":26.1200,"desc":"Paul received the Macedonian vision here — 'Come over to Macedonia and help us' — and the gospel entered Europe."},
-  {"id":"malta","name":"Malta","aliases":["Melita"],"mapId":"paul-journeys","lat":35.9000,"lon":14.5000,"desc":"Paul was shipwrecked here; he survived a viper bite and healed many on the island over three months."},
-  {"id":"lystra","name":"Lystra","aliases":[],"mapId":"paul-journeys","lat":37.5800,"lon":32.3400,"desc":"Paul healed a lame man here, was stoned and left for dead; Timothy — his closest companion — was from Lystra."},
-  {"id":"patmos","name":"Patmos","aliases":[],"mapId":"seven-churches","lat":37.3020,"lon":26.5480,"desc":"The island where John was exiled and received the entire book of Revelation from the risen Christ."},
-  {"id":"smyrna","name":"Smyrna","aliases":[],"mapId":"seven-churches","lat":38.4200,"lon":27.1400,"desc":"A persecuted church receiving no rebuke from Christ; Polycarp was martyred here c. AD 155."},
-  {"id":"pergamum","name":"Pergamum","aliases":["Pergamon"],"mapId":"seven-churches","lat":39.1210,"lon":27.1840,"desc":"'Where Satan's throne is'; the church held fast even where Antipas was martyred for his faith."},
-  {"id":"sardis","name":"Sardis","aliases":[],"mapId":"seven-churches","lat":38.4910,"lon":28.0420,"desc":"'A reputation for being alive, but you are dead' — a church as complacent as its twice-captured citadel."},
-  {"id":"laodicea","name":"Laodicea","aliases":[],"mapId":"seven-churches","lat":37.8260,"lon":29.1130,"desc":"The self-sufficient, lukewarm church; Christ stands outside knocking: 'If anyone hears my voice and opens the door…'"},
-  {"id":"philadelphia","name":"Philadelphia","aliases":[],"mapId":"seven-churches","lat":38.3430,"lon":28.5190,"desc":"Faithful under weakness; Christ set before them an open door no one can shut."},
-  {"id":"thyatira","name":"Thyatira","aliases":[],"mapId":"seven-churches","lat":38.9200,"lon":27.8440,"desc":"A trade-guild city where Lydia was from; the church tolerated a false prophetess teaching compromise."},
-  {"id":"rabbah","name":"Rabbah","aliases":["Rabbath-Ammon","Ammon"],"mapId":"judges","lat":31.9550,"lon":35.9450,"desc":"Capital of Ammon (modern Amman); besieged by Joab during David's sin with Bathsheba."},
-  {"id":"marah","name":"Marah","aliases":[],"mapId":"exodus","lat":29.3000,"lon":32.8500,"desc":"The first test after the Red Sea — bitter water made sweet when Moses cast a tree into it."},
-  {"id":"riblah","name":"Riblah","aliases":[],"mapId":"invasions","lat":34.5000,"lon":36.6000,"desc":"Nebuchadnezzar's field headquarters; where Zedekiah's sons were killed before his eyes before blinding."},
-  {"id":"zoar","name":"Zoar","aliases":["Bela"],"mapId":"patriarchal-journeys","lat":31.0500,"lon":35.5000,"desc":"The small city Lot fled to when Sodom was destroyed by fire and sulfur from heaven."},
-  {"id":"moriah","name":"Moriah","aliases":["Mount Moriah"],"mapId":"patriarchal-journeys","lat":31.7770,"lon":35.2340,"desc":"Where Abraham bound Isaac in obedience to God; the same mountain where Solomon built the Temple."},
-  {"id":"valley-of-elah","name":"Valley of Elah","aliases":[],"mapId":"david-kingdom","lat":31.6970,"lon":34.9740,"desc":"Where David killed Goliath with a stone from the brook — the defining confrontation of the young shepherd's faith."},
-  {"id":"mizpah","name":"Mizpah","aliases":["Mizpeh"],"mapId":"judges","lat":31.8630,"lon":35.1420,"desc":"Where Samuel gathered Israel to repent; later where the tribes mustered after the Gibeah atrocity."}
+ {
+  "id": "jerusalem",
+  "name": "Jerusalem",
+  "aliases": [
+   "Zion",
+   "City of David",
+   "holy city",
+   "the city"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.7767,
+  "lon": 35.2345,
+  "desc": "Capital of Israel and Judah; site of the Temple, the Crucifixion, Resurrection, and Pentecost."
+ },
+ {
+  "id": "bethlehem",
+  "name": "Bethlehem",
+  "aliases": [
+   "Bethlehem of Judah",
+   "Bethlehem Ephrathah"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.7054,
+  "lon": 35.2024,
+  "desc": "Birthplace of David and of Jesus, fulfilling Micah's prophecy."
+ },
+ {
+  "id": "nazareth",
+  "name": "Nazareth",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 32.6996,
+  "lon": 35.3035,
+  "desc": "Where Jesus grew up and spent thirty years before his public ministry."
+ },
+ {
+  "id": "capernaum",
+  "name": "Capernaum",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 32.8823,
+  "lon": 35.5753,
+  "desc": "Jesus's base of ministry in Galilee; home of Peter; site of the Bread of Life discourse."
+ },
+ {
+  "id": "jericho",
+  "name": "Jericho",
+  "aliases": [
+   "city of palms"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.8535,
+  "lon": 35.4616,
+  "desc": "The oldest city in the world; its walls fell at Israel's shout under Joshua."
+ },
+ {
+  "id": "hebron",
+  "name": "Hebron",
+  "aliases": [
+   "Kiriath Arba",
+   "Mamre"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.5327,
+  "lon": 35.0957,
+  "desc": "Abraham's home in Canaan; site of the cave of Machpelah where the patriarchs are buried."
+ },
+ {
+  "id": "beersheba",
+  "name": "Beersheba",
+  "aliases": [
+   "Beer-sheba"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.2518,
+  "lon": 34.7915,
+  "desc": "Southernmost city of the promised land — 'from Dan to Beersheba' marked all Israel."
+ },
+ {
+  "id": "gaza",
+  "name": "Gaza",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 31.5017,
+  "lon": 34.4674,
+  "desc": "Philistine stronghold where Samson was imprisoned and died pulling down Dagon's temple."
+ },
+ {
+  "id": "samaria",
+  "name": "Samaria",
+  "aliases": [
+   "Sebaste"
+  ],
+  "mapId": "divided-kingdom",
+  "lat": 32.2781,
+  "lon": 35.1981,
+  "desc": "Capital of the northern kingdom of Israel, built by Omri; fell to Assyria in 722 BC."
+ },
+ {
+  "id": "shechem",
+  "name": "Shechem",
+  "aliases": [
+   "Sychar"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 32.199,
+  "lon": 35.283,
+  "desc": "Abraham's first stop in Canaan; site of Jacob's well where Jesus spoke with the Samaritan woman."
+ },
+ {
+  "id": "bethel",
+  "name": "Bethel",
+  "aliases": [
+   "Beth-el",
+   "Beth Aven",
+   "Luz"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 31.927,
+  "lon": 35.224,
+  "desc": "Where Jacob saw the ladder reaching to heaven and named it 'house of God'."
+ },
+ {
+  "id": "shiloh",
+  "name": "Shiloh",
+  "aliases": [],
+  "mapId": "twelve-tribes",
+  "lat": 32.057,
+  "lon": 35.287,
+  "desc": "The Tabernacle rested here for ~300 years; where Joshua divided the land among the tribes."
+ },
+ {
+  "id": "megiddo",
+  "name": "Megiddo",
+  "aliases": [
+   "Armageddon",
+   "Har Megiddo"
+  ],
+  "mapId": "divided-kingdom",
+  "lat": 32.588,
+  "lon": 35.185,
+  "desc": "Strategic fortress city guarding the Jezreel Valley pass; site of many decisive battles."
+ },
+ {
+  "id": "caesarea",
+  "name": "Caesarea",
+  "aliases": [
+   "Caesarea Maritima",
+   "Caesarea on the Sea"
+  ],
+  "mapId": "holy-land",
+  "lat": 32.5025,
+  "lon": 34.8958,
+  "desc": "Herod's great port city; where Peter preached to Cornelius and Paul was imprisoned for two years."
+ },
+ {
+  "id": "joppa",
+  "name": "Joppa",
+  "aliases": [
+   "Jaffa",
+   "Japho"
+  ],
+  "mapId": "holy-land",
+  "lat": 32.056,
+  "lon": 34.7544,
+  "desc": "Ancient port city; Jonah boarded a ship here to flee from God; Peter raised Dorcas here."
+ },
+ {
+  "id": "tyre",
+  "name": "Tyre",
+  "aliases": [],
+  "mapId": "ancient-near-east",
+  "lat": 33.271,
+  "lon": 35.196,
+  "desc": "Premier Phoenician port city; Hiram supplied cedar and craftsmen for Solomon's Temple."
+ },
+ {
+  "id": "sidon",
+  "name": "Sidon",
+  "aliases": [
+   "Zidon"
+  ],
+  "mapId": "ancient-near-east",
+  "lat": 33.564,
+  "lon": 35.371,
+  "desc": "Leading Phoenician city; Jezebel was a Sidonian princess; Elijah was sustained near here."
+ },
+ {
+  "id": "dan",
+  "name": "Dan",
+  "aliases": [
+   "Laish"
+  ],
+  "mapId": "twelve-tribes",
+  "lat": 33.2484,
+  "lon": 35.6514,
+  "desc": "Northernmost city of Israel; Jeroboam erected a golden calf here; 'from Dan to Beersheba'."
+ },
+ {
+  "id": "lachish",
+  "name": "Lachish",
+  "aliases": [],
+  "mapId": "invasions",
+  "lat": 31.56,
+  "lon": 34.847,
+  "desc": "Second-most important city of Judah; famously besieged by Sennacherib, depicted in Nineveh palace reliefs."
+ },
+ {
+  "id": "hazor",
+  "name": "Hazor",
+  "aliases": [],
+  "mapId": "conquest",
+  "lat": 33.017,
+  "lon": 35.568,
+  "desc": "'Formerly the head of all those kingdoms'; Joshua burned it; archaeology confirms the conquest destruction layer."
+ },
+ {
+  "id": "gibeon",
+  "name": "Gibeon",
+  "aliases": [],
+  "mapId": "conquest",
+  "lat": 31.836,
+  "lon": 35.171,
+  "desc": "Where the sun stood still a full day as Joshua defeated the five-king coalition."
+ },
+ {
+  "id": "gilgal",
+  "name": "Gilgal",
+  "aliases": [],
+  "mapId": "conquest",
+  "lat": 31.875,
+  "lon": 35.44,
+  "desc": "Israel's base camp after crossing the Jordan; where the reproach of Egypt was rolled away."
+ },
+ {
+  "id": "ai",
+  "name": "Ai",
+  "aliases": [],
+  "mapId": "conquest",
+  "lat": 31.92,
+  "lon": 35.28,
+  "desc": "Site of Israel's initial defeat (due to Achan's sin), then taken by a masterful ambush under Joshua."
+ },
+ {
+  "id": "dothan",
+  "name": "Dothan",
+  "aliases": [],
+  "mapId": "patriarchal-journeys",
+  "lat": 32.42,
+  "lon": 35.22,
+  "desc": "Where Joseph was sold by his brothers to an Ishmaelite caravan; also Elisha saw the chariots of fire."
+ },
+ {
+  "id": "jezreel",
+  "name": "Jezreel",
+  "aliases": [],
+  "mapId": "divided-kingdom",
+  "lat": 32.457,
+  "lon": 35.306,
+  "desc": "Ahab's palace; site of Naboth's vineyard; scene of Jehu's execution of the Omri dynasty."
+ },
+ {
+  "id": "caesarea-philippi",
+  "name": "Caesarea Philippi",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 33.2481,
+  "lon": 35.6943,
+  "desc": "At the foot of Mount Hermon where Peter confessed: 'You are the Christ, the Son of the living God.'"
+ },
+ {
+  "id": "emmaus",
+  "name": "Emmaus",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 31.8388,
+  "lon": 35.0611,
+  "desc": "Two disciples met the risen Jesus on this road; he revealed himself in the breaking of bread."
+ },
+ {
+  "id": "bethany",
+  "name": "Bethany",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 31.7742,
+  "lon": 35.259,
+  "desc": "Home of Mary, Martha, and Lazarus; Jesus raised Lazarus here four days after his death."
+ },
+ {
+  "id": "qumran",
+  "name": "Qumran",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 31.7426,
+  "lon": 35.4573,
+  "desc": "Community on the Dead Sea shore where the Dead Sea Scrolls were hidden in caves."
+ },
+ {
+  "id": "ashdod",
+  "name": "Ashdod",
+  "aliases": [],
+  "mapId": "judges",
+  "lat": 31.81,
+  "lon": 34.649,
+  "desc": "Philistine city where the captured ark was placed in Dagon's temple; Dagon fell face-down before it."
+ },
+ {
+  "id": "gath",
+  "name": "Gath",
+  "aliases": [],
+  "mapId": "judges",
+  "lat": 31.729,
+  "lon": 34.853,
+  "desc": "Hometown of Goliath; David feigned madness here before King Achish while fleeing Saul."
+ },
+ {
+  "id": "aphek",
+  "name": "Aphek",
+  "aliases": [
+   "Ebenezer"
+  ],
+  "mapId": "judges",
+  "lat": 32.096,
+  "lon": 34.912,
+  "desc": "Where the Philistines captured the ark of God; 30,000 Israelites fell; Hophni and Phinehas died."
+ },
+ {
+  "id": "tirzah",
+  "name": "Tirzah",
+  "aliases": [],
+  "mapId": "divided-kingdom",
+  "lat": 32.337,
+  "lon": 35.348,
+  "desc": "First capital of the northern kingdom before Samaria was built; praised for beauty in Song of Solomon."
+ },
+ {
+  "id": "mahanaim",
+  "name": "Mahanaim",
+  "aliases": [
+   "Mahanaim"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 32.19,
+  "lon": 35.75,
+  "desc": "Where angels met Jacob returning from Haran; later where David fled during Absalom's revolt."
+ },
+ {
+  "id": "peniel",
+  "name": "Peniel",
+  "aliases": [
+   "Penuel"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 32.17,
+  "lon": 35.6,
+  "desc": "Where Jacob wrestled with God until dawn and received the name Israel — 'one who strives with God'."
+ },
+ {
+  "id": "ziklag",
+  "name": "Ziklag",
+  "aliases": [],
+  "mapId": "david-kingdom",
+  "lat": 31.39,
+  "lon": 34.7,
+  "desc": "Given to David by Achish; the Amalekites burned it; David heard of Saul's death here."
+ },
+ {
+  "id": "rameses",
+  "name": "Rameses",
+  "aliases": [
+   "Goshen",
+   "Rameses of Goshen",
+   "Raamses"
+  ],
+  "mapId": "exodus",
+  "lat": 30.78,
+  "lon": 31.82,
+  "desc": "The city built by Israelite forced labor in Egypt; Israel set out from here on Passover night."
+ },
+ {
+  "id": "sinai",
+  "name": "Sinai",
+  "aliases": [
+   "Mount Sinai",
+   "Horeb",
+   "Mount Horeb",
+   "Jebel Musa"
+  ],
+  "mapId": "exodus",
+  "lat": 28.54,
+  "lon": 33.98,
+  "desc": "The mountain of God; where the Ten Commandments were given, the covenant ratified, and the Tabernacle built."
+ },
+ {
+  "id": "kadesh-barnea",
+  "name": "Kadesh-barnea",
+  "aliases": [
+   "Kadesh",
+   "Meribah-Kadesh"
+  ],
+  "mapId": "exodus",
+  "lat": 30.62,
+  "lon": 34.43,
+  "desc": "Where the twelve spies returned; Israel's unbelief condemned them to forty years of wilderness wandering."
+ },
+ {
+  "id": "ezion-geber",
+  "name": "Ezion-geber",
+  "aliases": [
+   "Ezion Geber",
+   "Elath",
+   "Eloth"
+  ],
+  "mapId": "exodus",
+  "lat": 29.55,
+  "lon": 34.95,
+  "desc": "Port at the tip of the Gulf of Aqaba; Solomon built his fleet here for the Ophir trade voyages."
+ },
+ {
+  "id": "nebo",
+  "name": "Nebo",
+  "aliases": [
+   "Mount Nebo",
+   "Pisgah"
+  ],
+  "mapId": "exodus",
+  "lat": 31.76,
+  "lon": 35.73,
+  "desc": "Where Moses saw the promised land and died at 120 years old; God himself buried him here."
+ },
+ {
+  "id": "babylon",
+  "name": "Babylon",
+  "aliases": [
+   "Babel",
+   "land of Shinar"
+  ],
+  "mapId": "invasions",
+  "lat": 32.536,
+  "lon": 44.421,
+  "desc": "Capital of Nebuchadnezzar's empire; the exiles were brought here; Daniel served in its court."
+ },
+ {
+  "id": "nineveh",
+  "name": "Nineveh",
+  "aliases": [],
+  "mapId": "invasions",
+  "lat": 36.359,
+  "lon": 43.16,
+  "desc": "Capital of Assyria; Jonah preached here and they repented; Nahum prophesied its destruction in 612 BC."
+ },
+ {
+  "id": "ur",
+  "name": "Ur",
+  "aliases": [
+   "Ur of the Chaldeans",
+   "Ur of the Chaldees"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 30.963,
+  "lon": 46.104,
+  "desc": "Abraham's homeland in southern Mesopotamia; God called him out to go to an unknown land on faith alone."
+ },
+ {
+  "id": "haran",
+  "name": "Haran",
+  "aliases": [
+   "Paddan-Aram",
+   "Harran"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 36.863,
+  "lon": 39.02,
+  "desc": "Abraham's family stopped here; Jacob fled here from Esau and served Laban twenty years."
+ },
+ {
+  "id": "carchemish",
+  "name": "Carchemish",
+  "aliases": [],
+  "mapId": "invasions",
+  "lat": 36.844,
+  "lon": 38.006,
+  "desc": "Where Nebuchadnezzar crushed Egypt in 605 BC — the decisive battle that began the Babylonian era."
+ },
+ {
+  "id": "susa",
+  "name": "Susa",
+  "aliases": [
+   "Shushan"
+  ],
+  "mapId": "return-exile",
+  "lat": 32.189,
+  "lon": 48.255,
+  "desc": "Persian winter capital; where Esther saved the Jewish people and Nehemiah served as cupbearer to Artaxerxes."
+ },
+ {
+  "id": "persepolis",
+  "name": "Persepolis",
+  "aliases": [],
+  "mapId": "return-exile",
+  "lat": 29.935,
+  "lon": 52.891,
+  "desc": "Ceremonial capital of the Persian empire; built by Darius and Xerxes who authorized the return from exile."
+ },
+ {
+  "id": "nippur",
+  "name": "Nippur",
+  "aliases": [],
+  "mapId": "return-exile",
+  "lat": 32.127,
+  "lon": 45.237,
+  "desc": "Major Babylonian city where many Jewish exiles settled; business tablets preserve dozens of Hebrew names."
+ },
+ {
+  "id": "damascus",
+  "name": "Damascus",
+  "aliases": [
+   "Aram-Damascus"
+  ],
+  "mapId": "ancient-near-east",
+  "lat": 33.514,
+  "lon": 36.276,
+  "desc": "Capital of Aram; David conquered it; fell to Tiglath-Pileser; Paul was converted on the road here."
+ },
+ {
+  "id": "memphis",
+  "name": "Memphis",
+  "aliases": [
+   "Noph",
+   "No"
+  ],
+  "mapId": "ancient-near-east",
+  "lat": 29.849,
+  "lon": 31.25,
+  "desc": "Ancient capital of Egypt during the Patriarchal period and Exodus; Isaiah prophesied its desolation."
+ },
+ {
+  "id": "antioch-syria",
+  "name": "Antioch",
+  "aliases": [
+   "Antioch of Syria",
+   "Syrian Antioch"
+  ],
+  "mapId": "paul-journeys",
+  "lat": 36.2,
+  "lon": 36.16,
+  "desc": "The first great Gentile church; where believers were first called 'Christians'; sending base for Paul's journeys."
+ },
+ {
+  "id": "ephesus",
+  "name": "Ephesus",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 37.939,
+  "lon": 27.341,
+  "desc": "Largest port in Asia Minor; Paul spent three years here; home of one of the seven churches of Revelation."
+ },
+ {
+  "id": "corinth",
+  "name": "Corinth",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 37.91,
+  "lon": 22.88,
+  "desc": "Cosmopolitan port city; Paul spent 18 months here and wrote Romans from this city."
+ },
+ {
+  "id": "athens",
+  "name": "Athens",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 37.98,
+  "lon": 23.73,
+  "desc": "Paul preached on the Areopagus, declaring the identity of the Unknown God and proclaiming the resurrection."
+ },
+ {
+  "id": "thessalonica",
+  "name": "Thessalonica",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 40.64,
+  "lon": 22.94,
+  "desc": "Paul planted a church here in three Sabbaths; he wrote 1–2 Thessalonians to encourage this persecuted congregation."
+ },
+ {
+  "id": "philippi",
+  "name": "Philippi",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 41.01,
+  "lon": 24.28,
+  "desc": "The first church planted in Europe; Lydia was its first convert; Paul wrote his most joyful letter to it."
+ },
+ {
+  "id": "rome",
+  "name": "Rome",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 41.9,
+  "lon": 12.5,
+  "desc": "Paul arrived under house arrest and spent two years preaching the kingdom to all who came."
+ },
+ {
+  "id": "troas",
+  "name": "Troas",
+  "aliases": [
+   "Alexandria Troas"
+  ],
+  "mapId": "paul-journeys",
+  "lat": 39.77,
+  "lon": 26.12,
+  "desc": "Paul received the Macedonian vision here — 'Come over to Macedonia and help us' — and the gospel entered Europe."
+ },
+ {
+  "id": "malta",
+  "name": "Malta",
+  "aliases": [
+   "Melita"
+  ],
+  "mapId": "paul-journeys",
+  "lat": 35.9,
+  "lon": 14.5,
+  "desc": "Paul was shipwrecked here; he survived a viper bite and healed many on the island over three months."
+ },
+ {
+  "id": "lystra",
+  "name": "Lystra",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 37.58,
+  "lon": 32.34,
+  "desc": "Paul healed a lame man here, was stoned and left for dead; Timothy — his closest companion — was from Lystra."
+ },
+ {
+  "id": "patmos",
+  "name": "Patmos",
+  "aliases": [],
+  "mapId": "seven-churches",
+  "lat": 37.302,
+  "lon": 26.548,
+  "desc": "The island where John was exiled and received the entire book of Revelation from the risen Christ."
+ },
+ {
+  "id": "smyrna",
+  "name": "Smyrna",
+  "aliases": [],
+  "mapId": "seven-churches",
+  "lat": 38.42,
+  "lon": 27.14,
+  "desc": "A persecuted church receiving no rebuke from Christ; Polycarp was martyred here c. AD 155."
+ },
+ {
+  "id": "pergamum",
+  "name": "Pergamum",
+  "aliases": [
+   "Pergamon"
+  ],
+  "mapId": "seven-churches",
+  "lat": 39.121,
+  "lon": 27.184,
+  "desc": "'Where Satan's throne is'; the church held fast even where Antipas was martyred for his faith."
+ },
+ {
+  "id": "sardis",
+  "name": "Sardis",
+  "aliases": [],
+  "mapId": "seven-churches",
+  "lat": 38.491,
+  "lon": 28.042,
+  "desc": "'A reputation for being alive, but you are dead' — a church as complacent as its twice-captured citadel."
+ },
+ {
+  "id": "laodicea",
+  "name": "Laodicea",
+  "aliases": [],
+  "mapId": "seven-churches",
+  "lat": 37.826,
+  "lon": 29.113,
+  "desc": "The self-sufficient, lukewarm church; Christ stands outside knocking: 'If anyone hears my voice and opens the door…'"
+ },
+ {
+  "id": "philadelphia",
+  "name": "Philadelphia",
+  "aliases": [],
+  "mapId": "seven-churches",
+  "lat": 38.343,
+  "lon": 28.519,
+  "desc": "Faithful under weakness; Christ set before them an open door no one can shut."
+ },
+ {
+  "id": "thyatira",
+  "name": "Thyatira",
+  "aliases": [],
+  "mapId": "seven-churches",
+  "lat": 38.92,
+  "lon": 27.844,
+  "desc": "A trade-guild city where Lydia was from; the church tolerated a false prophetess teaching compromise."
+ },
+ {
+  "id": "rabbah",
+  "name": "Rabbah",
+  "aliases": [
+   "Rabbath-Ammon",
+   "Ammon"
+  ],
+  "mapId": "judges",
+  "lat": 31.955,
+  "lon": 35.945,
+  "desc": "Capital of Ammon (modern Amman); besieged by Joab during David's sin with Bathsheba."
+ },
+ {
+  "id": "marah",
+  "name": "Marah",
+  "aliases": [],
+  "mapId": "exodus",
+  "lat": 29.3,
+  "lon": 32.85,
+  "desc": "The first test after the Red Sea — bitter water made sweet when Moses cast a tree into it."
+ },
+ {
+  "id": "riblah",
+  "name": "Riblah",
+  "aliases": [],
+  "mapId": "invasions",
+  "lat": 34.5,
+  "lon": 36.6,
+  "desc": "Nebuchadnezzar's field headquarters; where Zedekiah's sons were killed before his eyes before blinding."
+ },
+ {
+  "id": "zoar",
+  "name": "Zoar",
+  "aliases": [
+   "Bela"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 31.05,
+  "lon": 35.5,
+  "desc": "The small city Lot fled to when Sodom was destroyed by fire and sulfur from heaven."
+ },
+ {
+  "id": "moriah",
+  "name": "Moriah",
+  "aliases": [
+   "Mount Moriah"
+  ],
+  "mapId": "patriarchal-journeys",
+  "lat": 31.777,
+  "lon": 35.234,
+  "desc": "Where Abraham bound Isaac in obedience to God; the same mountain where Solomon built the Temple."
+ },
+ {
+  "id": "valley-of-elah",
+  "name": "Valley of Elah",
+  "aliases": [],
+  "mapId": "david-kingdom",
+  "lat": 31.697,
+  "lon": 34.974,
+  "desc": "Where David killed Goliath with a stone from the brook — the defining confrontation of the young shepherd's faith."
+ },
+ {
+  "id": "mizpah",
+  "name": "Mizpah",
+  "aliases": [
+   "Mizpeh"
+  ],
+  "mapId": "judges",
+  "lat": 31.863,
+  "lon": 35.142,
+  "desc": "Where Samuel gathered Israel to repent; later where the tribes mustered after the Gibeah atrocity."
+ },
+ {
+  "id": "galilee",
+  "name": "Galilee",
+  "aliases": [
+   "Galilee of the Gentiles"
+  ],
+  "mapId": "holy-land",
+  "lat": 32.8,
+  "lon": 35.5,
+  "region": true,
+  "desc": "Northern region of Palestine around the Sea of Galilee; home of Nazareth and Capernaum, and the base of most of Jesus's public ministry."
+ },
+ {
+  "id": "judea",
+  "name": "Judea",
+  "aliases": [
+   "Judaea"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.7,
+  "lon": 35.1,
+  "region": true,
+  "desc": "Southern region of Palestine centered on Jerusalem; the heartland of the old kingdom of Judah and the stage of the Passion week."
+ },
+ {
+  "id": "sea-of-galilee",
+  "name": "Sea of Galilee",
+  "aliases": [
+   "Lake of Gennesaret",
+   "Sea of Tiberias"
+  ],
+  "mapId": "holy-land",
+  "lat": 32.82,
+  "lon": 35.59,
+  "region": true,
+  "desc": "Freshwater lake in northern Palestine; scene of the calling of the fishermen, the stilling of the storm, and Jesus walking on water."
+ },
+ {
+  "id": "decapolis",
+  "name": "Decapolis",
+  "aliases": [],
+  "mapId": "holy-land",
+  "lat": 32.5,
+  "lon": 35.9,
+  "region": true,
+  "desc": "League of ten Hellenistic cities east and south of the Sea of Galilee; largely Gentile territory where the healed demoniac proclaimed Jesus."
+ },
+ {
+  "id": "perea",
+  "name": "Perea",
+  "aliases": [
+   "beyond the Jordan"
+  ],
+  "mapId": "holy-land",
+  "lat": 31.9,
+  "lon": 35.65,
+  "region": true,
+  "desc": "Region east of the Jordan ruled by Herod Antipas; John baptized here, and Jesus ministered here on the way to His final Passover."
+ },
+ {
+  "id": "phoenicia",
+  "name": "Phoenicia",
+  "aliases": [
+   "Tyre and Sidon"
+  ],
+  "mapId": "holy-land",
+  "lat": 33.3,
+  "lon": 35.3,
+  "region": true,
+  "desc": "Coastal region north of Galilee with the great ports of Tyre and Sidon; Jesus healed the Syrophoenician woman's daughter here."
+ },
+ {
+  "id": "canaan",
+  "name": "Canaan",
+  "aliases": [
+   "Land of Canaan"
+  ],
+  "mapId": "conquest",
+  "lat": 31.9,
+  "lon": 35.2,
+  "region": true,
+  "desc": "The land promised to Abraham and his offspring; conquered under Joshua and apportioned among the twelve tribes."
+ },
+ {
+  "id": "egypt",
+  "name": "Egypt",
+  "aliases": [
+   "Land of Egypt"
+  ],
+  "mapId": "exodus",
+  "lat": 30.0,
+  "lon": 31.2,
+  "region": true,
+  "desc": "Great kingdom of the Nile; Israel's house of bondage, refuge of the patriarchs and of the child Jesus, and the land of the Exodus."
+ },
+ {
+  "id": "assyria",
+  "name": "Assyria",
+  "aliases": [],
+  "mapId": "invasions",
+  "lat": 36.0,
+  "lon": 43.3,
+  "region": true,
+  "desc": "Mesopotamian empire centered on Nineveh; instrument of judgment that carried the northern kingdom into exile in 722 BC."
+ },
+ {
+  "id": "babylonia",
+  "name": "Babylonia",
+  "aliases": [
+   "Chaldea",
+   "land of the Chaldeans"
+  ],
+  "mapId": "invasions",
+  "lat": 32.5,
+  "lon": 44.4,
+  "region": true,
+  "desc": "Empire of Nebuchadnezzar centered on Babylon; destroyed Jerusalem in 586 BC and held Judah in seventy years of exile."
+ },
+ {
+  "id": "philistia",
+  "name": "Philistia",
+  "aliases": [],
+  "mapId": "judges",
+  "lat": 31.65,
+  "lon": 34.65,
+  "region": true,
+  "desc": "Coastal plain of the five Philistine cities — Gaza, Ashdod, Ashkelon, Gath, Ekron; Israel's chief rival from the judges to David."
+ },
+ {
+  "id": "edom",
+  "name": "Edom",
+  "aliases": [
+   "Idumea",
+   "Seir"
+  ],
+  "mapId": "divided-kingdom",
+  "lat": 30.7,
+  "lon": 35.6,
+  "region": true,
+  "desc": "Mountain kingdom of Esau's descendants south of the Dead Sea; judged by the prophets for its violence against brother Jacob."
+ },
+ {
+  "id": "moab",
+  "name": "Moab",
+  "aliases": [
+   "plains of Moab"
+  ],
+  "mapId": "divided-kingdom",
+  "lat": 31.5,
+  "lon": 35.75,
+  "region": true,
+  "desc": "Kingdom east of the Dead Sea; home of Ruth, refuge of David's parents, and the plateau where Moses viewed the promised land."
+ },
+ {
+  "id": "ammon",
+  "name": "Ammon",
+  "aliases": [],
+  "mapId": "divided-kingdom",
+  "lat": 31.95,
+  "lon": 35.9,
+  "region": true,
+  "desc": "Kingdom east of the Jordan around Rabbah (modern Amman); recurring adversary of Israel from the judges to the exile."
+ },
+ {
+  "id": "mesopotamia",
+  "name": "Mesopotamia",
+  "aliases": [],
+  "mapId": "ancient-near-east",
+  "lat": 35.0,
+  "lon": 40.0,
+  "region": true,
+  "desc": "The land between the Tigris and Euphrates — cradle of Ur and Haran, homeland of Abraham before God's call."
+ },
+ {
+  "id": "persia",
+  "name": "Persia",
+  "aliases": [],
+  "mapId": "return-exile",
+  "lat": 32.0,
+  "lon": 53.0,
+  "region": true,
+  "desc": "Empire of Cyrus, Darius, and Artaxerxes that succeeded Babylon; its kings decreed the return from exile and the rebuilding of Jerusalem."
+ },
+ {
+  "id": "macedonia",
+  "name": "Macedonia",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 40.8,
+  "lon": 22.5,
+  "region": true,
+  "desc": "Roman province of northern Greece; Paul crossed here after the Macedonian vision, planting Philippi, Thessalonica, and Berea."
+ },
+ {
+  "id": "achaia",
+  "name": "Achaia",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 37.9,
+  "lon": 22.9,
+  "region": true,
+  "desc": "Roman province of southern Greece with Athens and Corinth; Paul ministered eighteen months in Corinth under Gallio's rule."
+ },
+ {
+  "id": "cyprus",
+  "name": "Cyprus",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 35.0,
+  "lon": 33.2,
+  "region": true,
+  "desc": "Mediterranean island and Barnabas's homeland; first stop of the first missionary journey, where the proconsul Sergius Paulus believed."
+ },
+ {
+  "id": "crete",
+  "name": "Crete",
+  "aliases": [],
+  "mapId": "paul-journeys",
+  "lat": 35.2,
+  "lon": 24.9,
+  "region": true,
+  "desc": "Large Mediterranean island passed on Paul's voyage to Rome; Titus was later left here to set the churches in order."
+ }
 ]
