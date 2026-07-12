@@ -103,9 +103,11 @@
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  /* Daylight type inversion: the instrument speaks Archivo by default;
+     scripture and long-form prose opt back into Literata below. */
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.65;
   padding-left: var(--sidebar-w);
   transition: padding-left 0.22s ease;
 }
@@ -1210,3 +1212,38 @@ a.cv-name:focus-visible { outline: 2px solid var(--color-accent); outline-offset
 
 /* Daylight: onboarding feature icons as stroke SVGs */
 .bsw-onboard-svg { width: 24px; height: 24px; color: var(--color-primary); }
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Daylight type inversion — serif opt-in.
+   The UI face is the default; these containers carry scripture or historic/
+   long-form prose and read in Literata at a book-like measure. Feature CSS
+   that already sets var(--font-body) explicitly (topic guides, book studies,
+   verse panels, library curated pages, modal verse text) is unaffected.
+   ══════════════════════════════════════════════════════════════════════════ */
+#reader-results,
+#apoc-reader-results,
+#lib-reader-content,
+#lb-reader,
+#bp-article-body,
+.bp-article__main,
+.bp-synthesis,
+.daily-votd-body,
+.daily-devot-text,
+.devot-text,
+blockquote.scripture,
+.lib-doc,
+.bsw-verse {
+  font-family: var(--font-body);
+  font-size: 1.07em;
+  line-height: 1.8;
+}
+/* UI islands inside reading surfaces stay in the UI face */
+#reader-results button,
+#reader-results select,
+#lib-reader-content button,
+#bp-article-body button,
+.lib-doc button,
+.reader-rail__chip {
+  font-family: var(--font-ui);
+}

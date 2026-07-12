@@ -161,10 +161,25 @@ documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
 - **Library filters**: tradition/era/type chips render as wrapped pill rows instead
   of a ~30-row stack of full-width buttons.
 
-**Remaining Daylight increments:** chip-rail apparatus in the reader (aggregate
-cross-refs/parallels/places per passage — the JS-heavy piece); emoji sweep in
-in-page links/JS-rendered labels; hardcoded-hex sweeps (workshop 587, biblepedia
-~200, lib-browser 160 hexes); full sans-default/serif-opt-in type inversion.
+### Daylight increments 3–6 — completion (2026-07-12)
+- **3 · Apparatus rail** (`assets/js/reader-rail.js`): chapter-head chips counting
+  connections / places / notes, built from a debounced MutationObserver over
+  `#reader-results` (zero reader.js surgery); chips scroll to the first marker or
+  open the notes panel.
+- **4 · Emoji sweep**: colored pictographs out of every tab bar/button/label;
+  stroke SVGs on the biblepedia hub tiles and onboarding cards; typographic
+  glyphs (arrows, ✓✕★☆✦☰⚑) deliberately kept.
+- **5 · Hex sweep**: 336 lines across 18 CSS files stop hardcoding the old
+  Candlelight palette — former token literals → `var(--token)`, rgba overlays →
+  `color-mix`, stale `var(--x, #hex)` fallbacks collapsed. Dictionary source
+  badges (E/S/IS/H/N/T/Str) retinted to the field set.
+- **6 · Type inversion**: `body` speaks Archivo; scripture/long-form containers
+  (`#reader-results`, apocrypha, library readers + curated `.lib-doc` pages,
+  biblepedia article bodies, VOTD/devotionals, `blockquote.scripture`,
+  `.bsw-verse`) opt back into Literata at a book-like measure.
+
+**The Daylight overhaul is complete.** Every increment carried a full
+headless-Chromium functional pass and screenshot review in both themes.
 
 ## Next up
 
