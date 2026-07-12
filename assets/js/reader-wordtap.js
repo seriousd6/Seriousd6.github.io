@@ -133,15 +133,25 @@ function _fillLexeme(pop, word, verse) {
   }).catch(fallback);
 }
 
-function _fillArticle(pop, word) {
+function _fillArticle(pop, word, termKey) {
   _loadBPIndex().then(function (idx) {
     if (!_pop || _pop !== pop || !idx) return;
-    var w = word.toLowerCase();
+    var k = (termKey || word).toLowerCase();
     var hit = idx.find(function (a) {
-      return a.has_article !== false && (a.id === w || String(a.term || '').toLowerCase() === w);
+      return a.id === k || String(a.term || '').toLowerCase() === k;
     });
-    if (hit && /^[a-z0-9.-]+$/.test(hit.id)) {
-      _addAction(pop, 'Read the ' + (hit.term || word) + ' article', null, '/biblepedia/' + hit.id + '/');
+    if (!hit) return;
+    // A merged alias (redirect set, no article of its own) borrows its
+    // canonical entry's brief and article — same contract terms.js honors.
+    var entry = hit.redirect ? (idx.find(function (a) { return a.id === hit.redirect; }) || hit) : hit;
+    if (entry.brief) {
+      var b = document.createElement('div');
+      b.className = 'bsw-wordtap__brief';
+      b.textContent = entry.brief;
+      pop.insertBefore(b, pop.querySelector('.bsw-wordtap__actions'));
+    }
+    if (entry.has_article !== false && /^[a-z0-9.-]+$/.test(entry.id)) {
+      _addAction(pop, 'Read the ' + (entry.term || word) + ' article', null, '/biblepedia/' + entry.id + '/');
     }
   }).catch(function () {});
 }
@@ -193,11 +203,16 @@ export function initWordTap() {
   // (which includes the highlight row) replaces the standalone picker for
   // that tap; whitespace taps fall through to the picker unchanged.
   results.addEventListener('click', function (e) {
-    // Defer to every existing interactive surface.
-    if (e.target.closest('a, button, select, input, sup, [data-ref], .term-link, .map-place, ' +
+    // Term-links (biblepedia highlighted words) are hover-only spans — no tap
+    // behavior of their own — so the popover takes their taps too, seeded
+    // with the term key for an exact article match.
+    var termEl = e.target.closest('.term-link');
+    // Defer to every other existing interactive surface.
+    if (!termEl &&
+        e.target.closest('a, button, select, input, sup, [data-ref], .map-place, ' +
                          '.reader-echo-marker, .reader-verse__num, .reader-xref-note, [class*="il-"]')) return;
     var verseEl = e.target.closest('.reader-verse');
-    if (!verseEl) return;
+    if (!verseEl && !termEl) return;
     // The interlinear view owns word taps when active.
     var ilBtn = document.getElementById('reader-interlinear-btn');
     if (ilBtn && ilBtn.getAttribute('aria-pressed') === 'true') return;
@@ -205,23 +220,33 @@ export function initWordTap() {
     var sel = window.getSelection && window.getSelection();
     if (sel && !sel.isCollapsed) return;
 
-    var word = _wordAtPoint(e.clientX, e.clientY);
+    var word, termKey = null;
+    if (termEl) {
+      word = termEl.textContent.trim();
+      termKey = (termEl.dataset.termKey || word).toLowerCase();
+      // terms.js is already loaded (it created the tag), so this resolves from
+      // cache — cancel its pending tooltip before it can cover the popover.
+      import('./terms.js').then(function (m) { m.hideTermTip(); }).catch(function () {});
+    } else {
+      word = _wordAtPoint(e.clientX, e.clientY);
+    }
     if (!word) { _closePopover(); return; }
 
     e.stopPropagation();
     document.querySelectorAll('.reader-hl-picker').forEach(function (p) { p.hidden = true; });
 
-    var book = verseEl.getAttribute('data-book');
-    var ch   = verseEl.getAttribute('data-ch');
-    var v    = verseEl.getAttribute('data-v');
-    var numEl = verseEl.querySelector('.reader-verse__num');
+    var book = verseEl && verseEl.getAttribute('data-book');
+    var ch   = verseEl && verseEl.getAttribute('data-ch');
+    var v    = verseEl && verseEl.getAttribute('data-v');
+    var numEl = verseEl && verseEl.querySelector('.reader-verse__num');
     var verse = v ? parseInt(v, 10) : (numEl ? parseInt(numEl.textContent, 10) : null);
 
     var rect = { left: e.clientX, bottom: e.clientY + 4 };
     var pop = _showPopover(word, rect);
     _addAction(pop, 'All occurrences', null, '/search/?q=' + encodeURIComponent(word.toLowerCase()));
-    _fillLexeme(pop, word, verse);
-    _fillArticle(pop, word);
+    if (verse) _fillLexeme(pop, word, verse);
+    else { var lexEl = pop.querySelector('.bsw-wordtap__lex'); if (lexEl) lexEl.remove(); }
+    _fillArticle(pop, word, termKey);
     if (book && ch && v) _addHighlightRow(pop, verseEl, book + ' ' + ch + ':' + v);
   }, true);
 }

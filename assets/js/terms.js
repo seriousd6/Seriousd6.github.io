@@ -56,6 +56,14 @@ function _hideTermTip() {
   }
 }
 
+// For the reader's word-tap popover, which takes over term taps: cancels any
+// pending show (a tap fires mouseenter first, arming the 250ms timer) and
+// hides the tooltip so it can't appear over the popover.
+export function hideTermTip() {
+  if (_termTipTimer) { clearTimeout(_termTipTimer); _termTipTimer = null; }
+  _hideTermTip();
+}
+
 function _positionTermTip(anchor) {
   if (!_termTipEl) return;
   var r  = anchor.getBoundingClientRect();
