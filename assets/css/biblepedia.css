@@ -566,8 +566,12 @@
   .bp-article__layout {
     grid-template-columns: 1fr;
   }
+  /* Article text FIRST on phones. The old `order: -1` floated the sidebar
+     above the article — fine when it was one small Quick Info box, but the
+     full panel stack (Quick Info + Key Verses + Sources + Connections +
+     Related) grew to ~1300px and buried the article off-screen. */
   .bp-article__sidebar {
-    order: -1;
+    order: 0;
   }
 }
 
