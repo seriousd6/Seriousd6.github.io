@@ -529,7 +529,7 @@ function _makeController(cfg) {
         '<span class="tl-detail-maps-label">Read in Library</span>' +
         libLinks.map(function(l) {
           return '<a class="tl-detail-lib-chip" href="' + escHtml(libRoot + l.docId + '/') + '">' +
-            '📖 ' + escHtml(l.label) +
+            escHtml(l.label) +
           '</a>';
         }).join('') +
       '</div>';

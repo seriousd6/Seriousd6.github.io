@@ -1751,3 +1751,7 @@ details.bp-src-section[open] summary {
 .bp-rmap-dot { width: .7rem; height: .7rem; border-radius: 50%; display: inline-block; }
 .bp-rmap-dot--place { background: #2f7d32; }
 .bp-rmap-dot--event { background: #c2410c; }
+
+/* Daylight: stroke SVG category icons (replacing emoji) */
+.bp-cat-svg { width: 1.35em; height: 1.35em; vertical-align: -0.22em; }
+.bp-category-tile__icon .bp-cat-svg { width: 26px; height: 26px; color: var(--color-primary); }

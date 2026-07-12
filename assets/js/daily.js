@@ -418,7 +418,7 @@ function _dailyRenderVOTD() {
           ' &nbsp;<a class="daily-devot-link" href="' + escHtml(DAILY_CALENDAR_BASE + '?ref=' + encodeURIComponent(ref)) + '">Read in context &rarr;</a></cite>' +
           '<div class="daily-votd-actions">' +
             '<button class="daily-votd-btn" id="daily-votd-copy">Copy</button>' +
-            '<button class="daily-votd-btn" id="daily-votd-mem">' + (_memHas(ref) ? '⭐ Memorizing' : '☆ Memorize') + '</button>' +
+            '<button class="daily-votd-btn" id="daily-votd-mem">' + (_memHas(ref) ? '★ Memorizing' : '☆ Memorize') + '</button>' +
             '<button class="daily-votd-btn" id="daily-votd-share">Share image</button>' +
           '</div>';
         wireRefLinks(el);
@@ -437,10 +437,10 @@ function _dailyRenderVOTD() {
           memBtn.addEventListener('click', function () {
             if (_memHas(ref)) {
               // already memorizing — no toggle out from here, just confirm
-              memBtn.textContent = '⭐ Memorizing';
+              memBtn.textContent = '★ Memorizing';
             } else {
               _memAdd(ref);
-              memBtn.textContent = '⭐ Memorizing';
+              memBtn.textContent = '★ Memorizing';
             }
           });
         }

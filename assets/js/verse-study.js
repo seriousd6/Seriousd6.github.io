@@ -126,7 +126,7 @@ export function initVerseStudyPage() {
       try {
         var state = JSON.parse(localStorage.getItem('bsw_memory') || '{}');
         var has = !!state[vsMemRef];
-        vsMemBtn.textContent = has ? '⭐ Memorizing' : '☆ Memorize';
+        vsMemBtn.textContent = has ? '★ Memorizing' : '☆ Memorize';
         vsMemBtn.classList.toggle('vs-context-btn--on', has);
       } catch (e) {}
     }

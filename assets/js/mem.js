@@ -102,7 +102,7 @@ export function _memRefreshModalBtn(ref) {
   var btn = modalEl && modalEl.querySelector('.bsw-modal__memory-btn');
   if (!btn) return;
   var has = _memHas(ref);
-  btn.textContent = has ? '⭐ Memorizing' : '☆ Memorize';
+  btn.textContent = has ? '★ Memorizing' : '☆ Memorize';
   btn.classList.toggle('bsw-modal__memory-btn--active', has);
   btn._memRef = ref;
 }

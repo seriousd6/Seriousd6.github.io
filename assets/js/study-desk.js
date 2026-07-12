@@ -968,7 +968,7 @@ function _bpLoad(bookId, ch, key) {
     var n = matches.length;
     host.innerHTML =
       '<p class="study-sec-note">' + n + ' article' + (n === 1 ? '' : 's') + ' key to this passage.</p>' +
-      '<button type="button" class="study-bookbtn" id="sd-bp-open">📚 Read ' + n + ' article' + (n === 1 ? '' : 's') + ' as cards →</button>';
+      '<button type="button" class="study-bookbtn" id="sd-bp-open">Read ' + n + ' article' + (n === 1 ? '' : 's') + ' as cards →</button>';
     var btn = document.getElementById('sd-bp-open');
     if (btn) btn.addEventListener('click', function () {
       openBlade('biblepedia', { articles: matches, ref: _lastData.ref }, 'Biblepedia');

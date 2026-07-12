@@ -1207,3 +1207,6 @@ a.cv-name:focus-visible { outline: 2px solid var(--color-accent); outline-offset
 
 /* Mobile topbar picks up the UI face + green panel automatically via tokens */
 .mobile-topbar__logo { font-family: var(--font-ui); font-weight: 700; }
+
+/* Daylight: onboarding feature icons as stroke SVGs */
+.bsw-onboard-svg { width: 24px; height: 24px; color: var(--color-primary); }

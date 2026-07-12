@@ -814,7 +814,7 @@ function _showCityDetail(city) {
     var mapChip = document.createElement('a');
     mapChip.className   = 'maps-city-map-chip';
     mapChip.href        = '#jerusalem';
-    mapChip.textContent = '🗺 View city map';
+    mapChip.textContent = 'View city map';
     mapChip.addEventListener('click', function (e) {
       e.preventDefault();
       for (var i = 0; i < MAPS.length; i++) {
@@ -836,7 +836,7 @@ function _showCityDetail(city) {
     noteWrap.className = 'maps-city-notes-wrap';
     var noteToggle = document.createElement('button');
     noteToggle.className   = 'maps-city-notes-btn';
-    noteToggle.textContent = noteVal ? '📝 Note' : '📝 Add note';
+    noteToggle.textContent = noteVal ? 'Note' : 'Add note';
     var noteArea = document.createElement('textarea');
     noteArea.className   = 'maps-city-notes-textarea';
     noteArea.placeholder = 'Your study notes…';
@@ -847,7 +847,7 @@ function _showCityDetail(city) {
       if (!noteArea.hidden) noteArea.focus();
     });
     noteArea.addEventListener('input', function () {
-      noteToggle.textContent = noteArea.value.trim() ? '📝 Note' : '📝 Add note';
+      noteToggle.textContent = noteArea.value.trim() ? 'Note' : 'Add note';
     });
     noteArea.addEventListener('blur', function () {
       var v = noteArea.value.trim();

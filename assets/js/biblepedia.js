@@ -172,22 +172,22 @@ var _docListenOnce = false;  // whether the global mousedown handler is register
 var _searchToken   = 0;      // incremented on every _showSearchResults call to cancel stale renders
 
 var CATEGORY_TILES = [
-  { id: 'people',   label: 'People',   icon: '👤', desc: 'Biblical figures & patriarchs' },
-  { id: 'places',   label: 'Places',   icon: '📍', desc: 'Cities, lands & geography' },
-  { id: 'regions',  label: 'Regions',  icon: '🗺', desc: 'Lands & powers, with maps' },
-  { id: 'concepts', label: 'Concepts', icon: '📖', desc: 'Doctrine, themes & objects' },
-  { id: 'names',    label: 'Names',    icon: '✍',  desc: 'Etymology of Biblical names' },
-  { id: 'events',   label: 'Events',   icon: '⚡', desc: 'Key events & episodes' },
-  { id: 'father',   label: 'Church Fathers', icon: '⛪', desc: 'Voices of the historic church' },
-  { id: 'commentator', label: 'Commentators', icon: '🖋', desc: 'Classic Bible commentators' }
+  { id: 'people',   label: 'People',   icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx=\"12\" cy=\"8\" r=\"3.5\"/><path d=\"M5 20a7 7 0 0 1 14 0\"/></svg>', desc: 'Biblical figures & patriarchs' },
+  { id: 'places',   label: 'Places',   icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z\"/><circle cx=\"12\" cy=\"11\" r=\"2\"/></svg>', desc: 'Cities, lands & geography' },
+  { id: 'regions',  label: 'Regions',  icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13\"/></svg>', desc: 'Lands & powers, with maps' },
+  { id: 'concepts', label: 'Concepts', icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z\"/><path d=\"M4 18.5A2.5 2.5 0 0 1 6.5 16H20\"/></svg>', desc: 'Doctrine, themes & objects' },
+  { id: 'names',    label: 'Names',    icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19z\"/><path d=\"M13 8l3 3\"/></svg>',  desc: 'Etymology of Biblical names' },
+  { id: 'events',   label: 'Events',   icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M13 3L5 13h5l-1 8 8-10h-5z\"/></svg>', desc: 'Key events & episodes' },
+  { id: 'father',   label: 'Church Fathers', icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M12 3v4M10 5h4M6 21v-8l6-4 6 4v8M6 21h12M10 21v-4h4v4\"/></svg>', desc: 'Voices of the historic church' },
+  { id: 'commentator', label: 'Commentators', icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19z\"/><path d=\"M13 8l3 3\"/></svg>', desc: 'Classic Bible commentators' }
 ];
 
 // Special browse views (not real categories): curated cross-cuts surfaced as home tiles and
 // routed through _showCategory → _showAnchors / _showGroups.
 var SPECIAL_TILES = [
-  { id: 'anchors', label: 'Anchors', icon: '⚓', desc: 'The major people, places & concepts', special: true },
-  { id: 'groups',  label: 'Groups',  icon: '🗂', desc: 'The Twelve, the kings, the tribes…',  special: true },
-  { id: 'motifs',  label: 'Motifs',  icon: '🕊', desc: 'Imagery, metaphor & types of Christ', special: true }
+  { id: 'anchors', label: 'Anchors', icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx=\"12\" cy=\"5\" r=\"2\"/><path d=\"M12 7v14M5 12H3a9 9 0 0 0 18 0h-2M12 21a9 9 0 0 1-9-9M12 21a9 9 0 0 0 9-9\"/></svg>', desc: 'The major people, places & concepts', special: true },
+  { id: 'groups',  label: 'Groups',  icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><path d=\"M3 10h18\"/></svg>', desc: 'The Twelve, the kings, the tribes…',  special: true },
+  { id: 'motifs',  label: 'Motifs',  icon: '<svg class="bp-cat-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d=\"M20 6c-5 0-8 3-9 7l-5-2-3 2 5 4c1 3 4 4 7 4 5 0 7-6 7-11z\"/><path d=\"M16 9h.01\"/></svg>', desc: 'Imagery, metaphor & types of Christ', special: true }
 ];
 
 var FEATURED_SLUGS = ['jerusalem', 'covenant', 'atonement', 'faith', 'prayer', 'grace', 'messiah'];

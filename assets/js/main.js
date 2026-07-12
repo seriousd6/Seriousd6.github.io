@@ -348,7 +348,7 @@
   function getBannerItems(bookId, ch) {
     if (!_bookContent || !_bookContent.books) {
       var legacy = BOOK_STUDIES[bookId];
-      return legacy ? [{ label: 'Study resource', href: legacy.href, icon: '📖' }] : null;
+      return legacy ? [{ label: 'Study resource', href: legacy.href, icon: '' }] : null;
     }
     var bc = _bookContent.books[bookId];
     if (!bc) return null;
@@ -394,7 +394,7 @@
       var ch     = (state && state.ch != null) ? state.ch : -1;
       var items  = getBannerItems(bookId, ch);
       if (items && items.length) {
-        var html = '<span class="reader-study-banner__icon" aria-hidden="true">📖</span>' +
+        var html = ''+
                    '<span class="reader-study-banner__text">Study resources:</span>';
         items.forEach(function (item, i) {
           if (i > 0) html += '<span class="reader-study-banner__sep" aria-hidden="true"> · </span>';

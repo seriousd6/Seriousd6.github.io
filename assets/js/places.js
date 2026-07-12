@@ -215,7 +215,7 @@ function _showTip(anchor, place) {
   var mapLabel = place.mapId.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   _tip.innerHTML =
     '<div class="bsw-place-tip__header">' +
-      '<span class="bsw-place-tip__pin">📍</span>' +
+      ''+
       '<span class="bsw-place-tip__name">' + escHtml(place.name) + '</span>' +
     '</div>' +
     '<p class="bsw-place-tip__desc">' + escHtml(place.desc) + '</p>' +

@@ -30,7 +30,7 @@ export function initEchoToggle() {
   btn.className = 'reader-echoes-btn' + (on ? ' reader-echoes-btn--on' : '');
   btn.setAttribute('aria-pressed', on ? 'true' : 'false');
   btn.title     = 'Show inline echo and connection links next to verses';
-  btn.textContent = '🔗 Connections';
+  btn.textContent = 'Connections';
 
   // Prefer the 📖 Study Tools popover (interlinear.js); fall back to inline.
   var stPop = document.getElementById('reader-studytools-popover');

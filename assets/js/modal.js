@@ -135,7 +135,7 @@ export function buildModalDOM() {
     '<div class="bsw-modal__header">' +
       '<h2 class="bsw-modal__title" id="bsw-modal-title"></h2>' +
       '<a class="bsw-modal__read-ch" href="#">Read chapter</a>' +
-      '<a class="bsw-modal__verse-study-link" href="#" hidden>📖 Study this verse</a>' +
+      '<a class="bsw-modal__verse-study-link" href="#" hidden>Study this verse</a>' +
       '<a class="bsw-modal__compare-link" href="#" hidden>All translations ↗</a>' +
       '<button class="bsw-modal__memory-btn" hidden aria-label="Add to memory">☆ Memorize</button>' +
       '<button class="bsw-modal__share-btn" hidden aria-label="Share verse as image">Share</button>' +
@@ -418,7 +418,7 @@ export function renderModal(parsed, versionId) {
     if (isSingleVerse && _memHasFn) {
       var memRef = parsed.bookName + ' ' + parsed.ch + ':' + parsed.v;
       memBtn._memRef    = memRef;
-      memBtn.textContent = _memHasFn(memRef) ? '⭐ Memorizing' : '☆ Memorize';
+      memBtn.textContent = _memHasFn(memRef) ? '★ Memorizing' : '☆ Memorize';
       memBtn.classList.toggle('bsw-modal__memory-btn--active', _memHasFn(memRef));
       memBtn.removeAttribute('hidden');
     } else {

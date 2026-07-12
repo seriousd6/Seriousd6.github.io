@@ -17,19 +17,19 @@ export function _initOnboarding() {
       '<p class="bsw-onboard-sub">A personal offline Bible tool — no account needed, everything saved in your browser.</p>' +
       '<div class="bsw-onboard-features">' +
         '<a class="bsw-onboard-feature" href="' + escHtml(readerUrl) + '">' +
-          '<span class="bsw-onboard-icon">&#x1F4D6;</span>' +
+          '<span class="bsw-onboard-icon"><svg class=\"bsw-onboard-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z\"/><path d=\"M4 18.5A2.5 2.5 0 0 1 6.5 16H20\"/></svg></span>' +
           '<div><strong>Bible Reader</strong><p>Any passage across multiple translations, with cross-references and commentary.</p></div>' +
         '</a>' +
         '<a class="bsw-onboard-feature" href="' + escHtml(vsUrl) + '">' +
-          '<span class="bsw-onboard-icon">&#x1F50D;</span>' +
+          '<span class="bsw-onboard-icon"><svg class=\"bsw-onboard-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"6\"/><path d=\"M20 20l-4.5-4.5\"/></svg></span>' +
           '<div><strong>Verse Study</strong><p>Deep-dive any verse: Strong\'s lexicon, interlinear, parallel passages, and more.</p></div>' +
         '</a>' +
         '<a class="bsw-onboard-feature" href="' + escHtml(libraryUrl) + '">' +
-          '<span class="bsw-onboard-icon">&#x1F4DA;</span>' +
+          '<span class="bsw-onboard-icon"><svg class=\"bsw-onboard-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M5 21V5a2 2 0 0 1 2-2h3v18zM10 21V3h4v18zM14 21l3.5-17.5L21 4l-3 17z\"/></svg></span>' +
           '<div><strong>Library</strong><p>Historic confessions and catechisms — Westminster, Heidelberg, Nicene Creed, and more.</p></div>' +
         '</a>' +
         '<a class="bsw-onboard-feature" href="' + escHtml(memUrl) + '">' +
-          '<span class="bsw-onboard-icon">&#x1F9E0;</span>' +
+          '<span class="bsw-onboard-icon"><svg class=\"bsw-onboard-svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M12 3l2.7 5.7 6.3.8-4.6 4.3 1.2 6.2-5.6-3.1-5.6 3.1 1.2-6.2L3 9.5l6.3-.8z\"/></svg></span>' +
           '<div><strong>Scripture Memory</strong><p>Spaced-repetition flashcards to memorize Bible verses at your own pace.</p></div>' +
         '</a>' +
       '</div>' +

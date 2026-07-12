@@ -60,13 +60,13 @@ const NT_BOOKS = new Set(BOOK_ORDER_NT.map(function([id]) { return id; }));
 
 /* ── Phase definitions ─────────────────────────────────────── */
 const PHASES = [
-  { id: 'dashboard',  label: 'Dashboard',               icon: '📊' },
-  { id: 'primer',     label: 'Language Primers',         icon: '📖' },
+  { id: 'dashboard',  label: 'Dashboard',               icon: '' },
+  { id: 'primer',     label: 'Language Primers',         icon: '' },
   { id: 'phase1',     label: 'Phase 1 — Top NT Greek',  icon: '①' },
   { id: 'phase2',     label: 'Phase 2 — Top OT Hebrew', icon: '②' },
   { id: 'phase5',     label: 'Contested Terms',          icon: '⚑' },
-  { id: 'all-greek',  label: 'All Greek',                icon: '🔤' },
-  { id: 'all-hebrew', label: 'All Hebrew',               icon: '🔤' },
+  { id: 'all-greek',  label: 'All Greek',                icon: '' },
+  { id: 'all-hebrew', label: 'All Hebrew',               icon: '' },
 ];
 
 /* ── Module state ──────────────────────────────────────────── */
