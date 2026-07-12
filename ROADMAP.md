@@ -61,6 +61,46 @@ When a chapter loads, show what the site has for it.
   toggles (open the feature, not blind-toggle; the connections-chip lesson).
 - The rail becomes the front door to the depth that today hides in popovers.
 
+### H6 — Click-distance audit  ·  RUN 2026-07-12
+
+Sixteen top intents, walked in a real browser against the built site. Counts are
+taps after arrival (T = typing). Target: ≤2 from the natural starting point.
+
+| # | Intent | From | Path | Cost | Verdict |
+|---|--------|------|------|------|---------|
+| A | Read today's plan reading | home | "Read all today's sections" | 1 | ✓ |
+| B | Look up John 3:16 | home / reader | lookup box → Go | T+1 | ✓ |
+| C | "What does the Bible say about X" | home | Explore → type (kernel + omni fallback + /answers/ pages) | T+1 | ✓ *(was a dead end)* |
+| D | Commentary on this chapter | reader | rail chip | 1 | ✓ *(was 3, behind popover)* |
+| E | **What does this word mean** | reader | Study Tools → Interlinear/Study desk → navigate | **4+, undiscoverable** | ✗ |
+| F | Cross-refs for a verse | reader | echo chip on the verse | 1 | ✓ |
+| G | **Where is this place** | reader | **no path** — place layer never tags scripture (`places.js _TARGETS` covers intros/timeline/maps/topics only; manual `autoTagPlacesIn(#reader-results)` tags Matthew 4 fine) | ∞ | ✗ |
+| H | Who was Melchizedek | reader | verse tap → Connections → article | 3 | ~ |
+| I | Compare translations | reader | verse tap → All translations (or toolbar Compare) | 1–2 | ✓ |
+| J | Memorize this verse | reader | verse tap → Memorize | 2 | ✓ |
+| K | Note on a verse | reader | verse number tap (Notes panel default-on) | 1 | ✓ |
+| L | Read a confession | home | Library → document | 2 | ✓ |
+| M | See reading progress | home | sidebar | 1 | ✓ |
+| N | Find a half-remembered phrase | anywhere | Ctrl+K → type ("cloud of witnesses" → exact hit) | T+1 | ✓ |
+| O | Study a whole book | home | Studies → book | 2 | ✓ |
+| P | Resume where I left off | home | The Holy Bible → "Continue where you left off" banner | 2 | ✓ |
+
+**Score: 13 of 16 intents at ≤2 taps.** The two hard failures are the two
+remaining un-hubbed nouns:
+
+- **E · Word → lexicon.** The site's richest layer (Strong's + interlinear +
+  workshop) is unreachable from the text itself. Fix: word-tap opens a compact
+  lexeme popover (lemma, gloss, Strong's link, "open word study") — the
+  verse-modal treatment applied to words.
+- **G · Place → map/article.** One-line-scale fix on the data path (tag
+  `#reader-results` after chapter render — the machinery and quiet `.map-place`
+  styling already exist, and the rail's places chip is already wired to count
+  them), plus a decision: place tags add a third always-on markup layer to
+  scripture. Options: (a) always-on quiet tags like terms; (b) tags off, places
+  surfaced only via the rail chip (count → tap → list panel). Owner's call.
+- **H · Person → article** rides along with E: the same tap-popover pattern
+  serves person names via the biblepedia index that terms.js already loads.
+
 ### H3 — First-run demonstration
 - The onboarding names 4 features; the site has 15, and the *chain*
   (verse → modal → connections → word study → article) is the product.
@@ -87,6 +127,7 @@ When a chapter loads, show what the site has for it.
   biblepedia cross-links, in the sitemap; Omni topic chips link there.
 - H2 — **DONE** (2026-07-12): apparatus rail gained state-aware Commentary /
   Interlinear / Parallels chips mirroring the Study Tools toggles.
+- H6 (audit) — **RUN** (2026-07-12): 13/16 intents ≤2 taps; offenders are word→lexicon (E), place→map (G), person→article (H). Fix scoping above.
 - H3 — pending
 - H4 — pending
 - H5 — pending
