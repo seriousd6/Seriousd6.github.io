@@ -17,6 +17,8 @@
 
 import { loadInterlinear, loadStrongs, escHtml } from './core.js';
 import { _loadBPIndex } from './modal.js';
+import { _HL_COLORS, getNote, toggleHighlight } from './storage.js';
+import { applyHighlights } from './wire.js';
 
 var _pop = null;
 
@@ -144,15 +146,52 @@ function _fillArticle(pop, word) {
   }).catch(function () {});
 }
 
+// ── Verse highlight row ─────────────────────────────────────────────────────
+// The verse-text tap used to open reader.js's standalone highlight picker;
+// this popover now owns that gesture (the tap stops propagating below), so it
+// carries the swatch row too — same storage, same .bsw-hl-swatch classes the
+// verse modal's Notes tab uses. Highlighting stays two taps: verse, swatch.
+function _addHighlightRow(pop, verseEl, ref) {
+  var row = document.createElement('div');
+  row.className = 'bsw-wordtap__hl';
+  var lbl = document.createElement('span');
+  lbl.className = 'bsw-hl-label';
+  lbl.textContent = 'Highlight verse:';
+  row.appendChild(lbl);
+  var note = getNote(ref);
+  var cur = note && note.highlight;
+  if (cur === true) cur = 'yellow';
+  var refresh = function (active) {
+    row.querySelectorAll('.bsw-hl-swatch[data-c]').forEach(function (s) {
+      s.classList.toggle('bsw-hl-swatch--active', !!(active && s.getAttribute('data-c') === active));
+    });
+  };
+  _HL_COLORS.forEach(function (c) {
+    var sw = document.createElement('button');
+    sw.type = 'button';
+    sw.className = 'bsw-hl-swatch bsw-hl-swatch--' + c + (cur === c ? ' bsw-hl-swatch--active' : '');
+    sw.title = c.charAt(0).toUpperCase() + c.slice(1) + ' highlight';
+    sw.setAttribute('aria-label', 'Highlight ' + c);
+    sw.setAttribute('data-c', c);
+    sw.addEventListener('click', function () {
+      refresh(toggleHighlight(ref, c));
+      applyHighlights(verseEl.closest('#reader-results') || verseEl.parentElement);
+    });
+    row.appendChild(sw);
+  });
+  pop.appendChild(row);
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────
 export function initWordTap() {
   var results = document.getElementById('reader-results');
   if (!results) return;
 
-  // Capture phase: a handler deeper in the reader stops propagation on
-  // verse-text clicks (it produces no visible behavior of its own), so a
-  // bubble-phase listener here never fires. The guards below still defer to
-  // every interactive surface before we act.
+  // Capture phase: reader.js's wireVerseTextHighlight listens on each verse
+  // and stops propagation, so a bubble-phase listener here never fires. When
+  // a word IS under the tap we stop propagation ourselves — this popover
+  // (which includes the highlight row) replaces the standalone picker for
+  // that tap; whitespace taps fall through to the picker unchanged.
   results.addEventListener('click', function (e) {
     // Defer to every existing interactive surface.
     if (e.target.closest('a, button, select, input, sup, [data-ref], .term-link, .map-place, ' +
@@ -169,13 +208,20 @@ export function initWordTap() {
     var word = _wordAtPoint(e.clientX, e.clientY);
     if (!word) { _closePopover(); return; }
 
+    e.stopPropagation();
+    document.querySelectorAll('.reader-hl-picker').forEach(function (p) { p.hidden = true; });
+
+    var book = verseEl.getAttribute('data-book');
+    var ch   = verseEl.getAttribute('data-ch');
+    var v    = verseEl.getAttribute('data-v');
     var numEl = verseEl.querySelector('.reader-verse__num');
-    var verse = numEl ? parseInt(numEl.textContent, 10) : null;
+    var verse = v ? parseInt(v, 10) : (numEl ? parseInt(numEl.textContent, 10) : null);
 
     var rect = { left: e.clientX, bottom: e.clientY + 4 };
     var pop = _showPopover(word, rect);
     _addAction(pop, 'All occurrences', null, '/search/?q=' + encodeURIComponent(word.toLowerCase()));
     _fillLexeme(pop, word, verse);
     _fillArticle(pop, word);
+    if (book && ch && v) _addHighlightRow(pop, verseEl, book + ' ' + ch + ':' + v);
   }, true);
 }
