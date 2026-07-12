@@ -1,0 +1,112 @@
+---
+// /design/ — the Daylight living style guide. Every swatch and specimen reads
+// the real tokens from assets/css/style.css at render time (CSS custom
+// properties), so this page stays truthful as the system evolves. When adding
+// a component pattern to the site, add its specimen here in the same change.
+import Base from '../../layouts/Base.astro';
+---
+
+<Base title={"Design System — Kingdom Bible Study"} description={"Daylight design system — tokens, type, and components for Kingdom Bible Study."} appJs={false} footer={false}>
+<Fragment slot="head-end">
+<style is:inline>
+  .dg { max-width: 880px; margin: 0 auto; padding: 2.2rem 1.4rem 4rem; }
+  .dg h1 { font-family: var(--font-ui); font-weight: 800; letter-spacing: -0.02em; font-size: 2rem; margin: 0 0 0.4rem; }
+  .dg .sub { color: var(--color-muted); font-family: var(--font-ui); margin: 0 0 2.4rem; font-size: 0.95rem; }
+  .dg h2 { font-family: var(--font-ui); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.01em; margin: 2.6rem 0 1rem; padding-top: 1.4rem; border-top: 1px solid var(--color-border); }
+  .dg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .dg-sw { border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; background: var(--color-surface); }
+  .dg-sw i { display: block; height: 52px; }
+  .dg-sw b { display: block; font-family: var(--font-ui); font-size: 0.72rem; font-weight: 650; padding: 7px 10px 1px; }
+  .dg-sw span { display: block; font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-muted); padding: 0 10px 8px; }
+  .dg-type p { margin: 0.4rem 0; }
+  .dg-scripture { font-family: var(--font-body); font-size: 1.1rem; line-height: 1.85; max-width: 62ch; }
+  .dg-scripture .rl { color: var(--color-ember); }
+  .dg-scripture .vn { font-family: var(--font-ui); font-size: 0.62em; vertical-align: super; font-weight: 700; color: var(--color-accent); padding-right: 0.25em; }
+  .dg-scripture .tl { border-bottom: 1px dotted color-mix(in srgb, var(--color-muted) 55%, transparent); }
+  .dg-ui-sample { font-family: var(--font-ui); }
+  .dg-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0.6rem 0; }
+  .dg-btn { font-family: var(--font-ui); font-size: 0.85rem; font-weight: 650; padding: 0.45rem 0.95rem; border-radius: 9px; border: 1px solid transparent; cursor: pointer; }
+  .dg-btn--pri { background: var(--color-primary); color: var(--color-on-primary); }
+  .dg-btn--sec { border-color: var(--color-border); color: var(--color-text); background: var(--color-surface); }
+  .dg-btn--ghost { color: var(--color-accent); background: none; }
+  .dg-tabs { display: flex; gap: 2px; border-bottom: 2px solid var(--color-border); font-family: var(--font-ui); }
+  .dg-tab { font-size: 0.85rem; font-weight: 600; color: var(--color-muted); padding: 0.45rem 0.85rem 0.55rem; margin-bottom: -2px; border-bottom: 2px solid transparent; }
+  .dg-tab--on { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+  .dg-badge { font-family: var(--font-ui); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 6px; color: #fff; }
+  .dg-note { font-family: var(--font-ui); font-size: 0.85rem; color: var(--color-muted); max-width: 70ch; }
+  .dg-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); padding: 1.1rem 1.3rem; max-width: 420px; }
+  .dg-card h3 { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.6rem; }
+  .dg-card p { margin: 0; font-size: 0.95rem; }
+</style>
+</Fragment>
+<main>
+  <div class="dg">
+    <h1>Daylight</h1>
+    <p class="sub">The Kingdom Bible Study design system — olive &amp; brass on paper-white, Archivo for the
+    instrument, Literata for the Word. Every specimen below reads the live tokens from
+    <code>assets/css/style.css</code>.</p>
+
+    <h2>Color</h2>
+    <div class="dg-swatches">
+      <div class="dg-sw"><i style="background:var(--color-bg); border-bottom:1px solid var(--color-border)"></i><b>Paper</b><span>--color-bg</span></div>
+      <div class="dg-sw"><i style="background:var(--color-surface); border-bottom:1px solid var(--color-border)"></i><b>Surface</b><span>--color-surface</span></div>
+      <div class="dg-sw"><i style="background:var(--color-text)"></i><b>Ink</b><span>--color-text</span></div>
+      <div class="dg-sw"><i style="background:var(--color-primary)"></i><b>Olive · primary</b><span>--color-primary</span></div>
+      <div class="dg-sw"><i style="background:var(--color-accent)"></i><b>Brass · accent</b><span>--color-accent</span></div>
+      <div class="dg-sw"><i style="background:var(--color-ember)"></i><b>Ember · red letter</b><span>--color-ember</span></div>
+      <div class="dg-sw"><i style="background:var(--color-muted)"></i><b>Muted</b><span>--color-muted</span></div>
+      <div class="dg-sw"><i style="background:var(--color-surface-subtle); border-bottom:1px solid var(--color-border)"></i><b>Subtle surface</b><span>--color-surface-subtle</span></div>
+      <div class="dg-sw"><i style="background:var(--sb-bg)"></i><b>Sidebar panel</b><span>--sb-bg</span></div>
+    </div>
+    <p class="dg-note" style="margin-top:0.8rem">Olive is the laurel — interactive primary. Brass is the
+    lampstand — secondary accents, verse numbers, counts. Ember belongs to the words of Christ and is never
+    used for errors (semantic red stays separate). Toggle the site theme to see the Evening values.</p>
+
+    <h2>Type</h2>
+    <div class="dg-type">
+      <p class="dg-ui-sample" style="font-weight:800; font-size:1.5rem; letter-spacing:-0.02em">Archivo carries the instrument — headings, nav, buttons, data.</p>
+      <p class="dg-scripture" style="margin-top:1rem"><span class="vn">16</span><span class="rl">“For God so
+      loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish
+      but have <span class="tl">eternal life</span>.”</span> <span class="vn">17</span>For God did not send
+      His Son into the world to condemn the world, but to save the world through Him.</p>
+      <p class="dg-note">Literata carries scripture and long-form prose (<code>--font-body</code>). Verse
+      numbers are brass Archivo superscripts; the words of Christ are ember; tagged terms carry a one-pixel
+      dotted rule in a muted tone — study markup stays on without shouting.</p>
+    </div>
+
+    <h2>Buttons</h2>
+    <div class="dg-row">
+      <button class="dg-btn dg-btn--pri">Read today's plan</button>
+      <button class="dg-btn dg-btn--sec">Compare</button>
+      <button class="dg-btn dg-btn--ghost">View all notes</button>
+    </div>
+    <p class="dg-note">One system: olive primary, hairline secondary, brass ghost. No other button styles.</p>
+
+    <h2>Tabs</h2>
+    <div class="dg-tabs">
+      <span class="dg-tab dg-tab--on">Verse</span><span class="dg-tab">Notes</span><span class="dg-tab">Connections</span>
+    </div>
+    <p class="dg-note" style="margin-top:0.7rem">The single tab pattern for every surface — Explore hub,
+    Discipline hub, modal, topic tiers.</p>
+
+    <h2>Biblepedia category badges — field set</h2>
+    <div class="dg-row">
+      <span class="dg-badge" style="background:#4d5f2a">Person</span>
+      <span class="dg-badge" style="background:#33655a">Place</span>
+      <span class="dg-badge" style="background:#46557e">Concept</span>
+      <span class="dg-badge" style="background:#a2571d">Event</span>
+      <span class="dg-badge" style="background:#55604f">Name</span>
+      <span class="dg-badge" style="background:#7a6222">Father</span>
+      <span class="dg-badge" style="background:#22766c">Motif</span>
+      <span class="dg-badge" style="background:#8c3f22">Type</span>
+      <span class="dg-badge" style="background:#34677a">Region</span>
+    </div>
+
+    <h2>Card</h2>
+    <div class="dg-card">
+      <h3>Verse of the day</h3>
+      <p class="dg-scripture" style="font-size:1rem">“Your word is a lamp to my feet and a light to my path.”</p>
+    </div>
+  </div>
+</main>
+</Base>

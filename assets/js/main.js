@@ -115,8 +115,9 @@
   // for any cached page that predates the bootstrap.
   // CHANGE? Selector contract with Sidebar.astro: #site-sidebar,
   //   .sb-collapse-btn, .sidebar-tab, .mobile-topbar__hamburger,
-  //   .sidebar-backdrop, #bsw-theme-btn, .sb-group > .sb-group-btn +
-  //   .sb-group-items. Keep both files in sync.
+  //   .sidebar-backdrop, #bsw-theme-btn, nav links (.sb-link/.sb-group-btn).
+  //   (The .sb-group accordion was retired in the Daylight IA; the group loop
+  //   below is kept as a no-op for safety.) Keep both files in sync.
   // VERIFY: Sidebar visible with correct active link on load; collapse state
   //   persists across reloads; hamburger works < 1024px; hub-tab iframes
   //   (History/Discipline/Explore) show no sidebar inside the frame.
@@ -186,7 +187,7 @@
       return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
     function _updateThemeLabel() {
-      if (themeBtn) themeBtn.textContent = _isDark() ? '☀ Light Mode' : '🌙 Dark Mode';
+      if (themeBtn) themeBtn.textContent = _isDark() ? 'Light Mode' : 'Dark Mode';
     }
     _updateThemeLabel();
     if (themeBtn) {

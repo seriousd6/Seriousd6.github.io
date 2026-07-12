@@ -137,7 +137,7 @@ function walk(dir, out = []) {
 }
 const emitted = walk(path.join(DIST, 'assets'))
   .map(p => './' + path.relative(DIST, p).split(path.sep).join('/'))
-  .filter(p => p.endsWith('.js') || p.endsWith('.css'))
+  .filter(p => p.endsWith('.js') || p.endsWith('.css') || p.endsWith('.woff2'))
   .sort();
 
 const digest = createHash('sha256');

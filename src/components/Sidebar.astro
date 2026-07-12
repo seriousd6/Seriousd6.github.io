@@ -1,111 +1,112 @@
 ---
-// Sidebar.astro — static render of the site chrome that main.js used to build
-// at runtime (buildSidebar). The DOM ships in the HTML for instant paint and
-// no-JS navigation; assets/js/main.js now only WIRES it (collapse state,
-// hamburger, group toggles, theme button, active-link marking — active state
-// depends on query strings like history/?tab=church, so it stays client-side).
+// Sidebar.astro — static render of the site chrome; assets/js/main.js only
+// WIRES it (collapse state, hamburger, theme button, active-link marking).
+//
+// Daylight IA (July 2026 UI overhaul): one flat hierarchy under four section
+// labels — Read / Study / Practice / Tools — replacing the old two-tier
+// tools+accordion layout whose labels overlapped ("Explore" and "Discipline"
+// each appeared twice). Destinations dropped from the nav remain reachable
+// in-page: Word Cloud lives in Explore's tabs, Discipline History in the
+// Discipline hub tabs, Library Reading History in the Library header.
+// Icons are inline stroke SVGs on currentColor (no emoji).
 //
 // Contract with assets/js/main.js (wireSidebar) — keep in sync:
 //   #site-sidebar, .sb-collapse-btn, .sidebar-tab, .mobile-topbar__hamburger,
-//   .sidebar-backdrop, #bsw-theme-btn, #bible-version, .sb-group > .sb-group-btn
-//   + .sb-group-items[hidden], nav links (.sb-link/.sb-group-btn/.sb-child).
-// Groups render collapsed; wireSidebar expands the group containing the active
-// page. The pre-paint state bootstrap in Base.astro sets body classes
+//   .sidebar-backdrop, #bsw-theme-btn, #bible-version, nav links
+//   (.sb-link/.sb-group-btn/.sb-child). The accordion (.sb-group) is gone;
+//   wireSidebar's group logic no-ops when no .sb-group exists.
+// The pre-paint state bootstrap in Base.astro sets body classes
 // (sidebar-collapsed / sidebar-overlay / is-embedded) before this paints.
-const NAV = {
-  tools: [
-    { label: '📖 The Holy Bible', href: '/read/' },
-    { label: '📜 Apocrypha', href: '/apocrypha/' },
-    { label: '🔍 Explore', href: '/search/' },
-    { label: '📚 Studies', href: '/studies/' },
-    { label: '✝ Discipline', href: '/discipline/' },
-    { label: '🔬 Original Language Study', href: '/translation/workshop/' },
-    { label: '⚙ Settings', href: '/settings/' },
-    { label: 'ℹ About / AI', href: '/about/' },
-  ],
-  groups: [
-    {
-      id: 'history',
-      label: '🕰 History',
-      children: [
-        { label: '📜 Biblical Timeline', href: '/history/?tab=timeline' },
-        { label: '⛪ Church History', href: '/history/?tab=church' },
-        { label: '🗺 Maps', href: '/history/?tab=maps' },
-        { label: '🎬 Animated Map', href: '/history/?tab=timelapse' },
-      ],
-    },
-    {
-      id: 'explore',
-      label: '🔍 Explore',
-      children: [
-        { label: '🔍 Search', href: '/search/' },
-        { label: '📑 Topics', href: '/search/?tab=topics' },
-        { label: '📖 Study Guides', href: '/search/?tab=guides' },
-        { label: '📘 Biblepedia', href: '/biblepedia/' },
-        { label: '☁ Word Cloud', href: '/search/?tab=wordcloud' },
-      ],
-    },
-    {
-      id: 'discipline',
-      label: '✝ Discipline',
-      children: [
-        { label: '✝ Discipline Hub', href: '/discipline/' },
-        { label: '📅 Discipline History', href: '/discipline/?tab=history' },
-        { label: '📊 Reading Progress', href: '/progress/' },
-      ],
-    },
-    {
-      id: 'library',
-      label: '📚 Library',
-      children: [
-        { label: '📋 Library', href: '/library/' },
-        { label: '📚 Reading History', href: '/library/progress/' },
-      ],
-    },
-  ],
+const SECTIONS = [
+  {
+    label: 'Read',
+    items: [
+      { label: 'The Holy Bible', href: '/read/', icon: 'book' },
+      { label: 'Apocrypha', href: '/apocrypha/', icon: 'scroll' },
+    ],
+  },
+  {
+    label: 'Study',
+    items: [
+      { label: 'Explore', href: '/search/', icon: 'search' },
+      { label: 'Studies', href: '/studies/', icon: 'list' },
+      { label: 'Biblepedia', href: '/biblepedia/', icon: 'globe' },
+      { label: 'Library', href: '/library/', icon: 'books' },
+      { label: 'Maps & Timeline', href: '/history/', icon: 'map' },
+    ],
+  },
+  {
+    label: 'Practice',
+    items: [
+      { label: 'Discipline', href: '/discipline/', icon: 'heart' },
+      { label: 'Reading Progress', href: '/progress/', icon: 'chart' },
+    ],
+  },
+  {
+    label: 'Tools',
+    items: [
+      { label: 'Original Language Study', href: '/translation/workshop/', icon: 'flask' },
+      { label: 'Settings', href: '/settings/', icon: 'gear' },
+      { label: 'About / AI', href: '/about/', icon: 'info' },
+    ],
+  },
+];
+
+// Stroke icon paths (24×24 viewBox, 1.8 stroke, round caps) — drawn from
+// simple primitives so they render crisply at 15px.
+const ICONS = {
+  book:   '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20"/>',
+  scroll: '<path d="M6 3v18M18 3v18M6 7h12M6 17h12"/>',
+  search: '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
+  list:   '<path d="M4 6h16M4 12h16M4 18h10"/>',
+  globe:  '<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17"/>',
+  books:  '<path d="M5 21V5a2 2 0 0 1 2-2h3v18zM10 21V3h4v18zM14 21l3.5-17.5L21 4l-3 17z"/>',
+  map:    '<path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3zM9 4v13M15 7v13"/>',
+  heart:  '<path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z"/>',
+  chart:  '<path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/>',
+  flask:  '<path d="M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M8 3h8M7.5 15h9"/>',
+  gear:   '<circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M5 12H3M21 12h-2M6.5 6.5L5 5M19 19l-1.5-1.5M17.5 6.5L19 5M5 19l1.5-1.5"/>',
+  info:   '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 7.5v.5"/>',
+  home:   '<path d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/>',
 };
 ---
 
 <a class="skip-link" href="#main-content">Skip to content</a>
 <aside class="site-sidebar" id="site-sidebar" aria-label="Site navigation">
   <div class="sb-head">
-    <a class="sb-logo" href="/">📖 Kingdom Bible Study</a>
+    <a class="sb-logo" href="/">
+      <svg class="sb-logo__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><Fragment set:html={ICONS.book} /></svg>
+      <span>Kingdom Bible Study</span>
+    </a>
     <button class="sb-collapse-btn" aria-label="Collapse sidebar" aria-controls="site-sidebar">&#x2039;</button>
   </div>
   <div class="sb-nav" role="navigation">
-    <a class="sb-link" href="/">Home</a>
+    <a class="sb-link sb-item" href="/">
+      <svg class="sb-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><Fragment set:html={ICONS.home} /></svg>
+      Home
+    </a>
+    {SECTIONS.map((section) => (
+      <div class="sb-section">
+        <div class="sb-section-label">{section.label}</div>
+        {section.items.map((item) => (
+          <a class="sb-group-btn sb-item" href={item.href}>
+            <svg class="sb-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><Fragment set:html={ICONS[item.icon]} /></svg>
+            <span class="sb-group-label">{item.label}</span>
+          </a>
+        ))}
+      </div>
+    ))}
+    <div class="sb-divider"></div>
     <div class="sb-version">
       <label for="bible-version">Version:</label>
       <select id="bible-version"></select>
     </div>
-    <div class="sb-divider"></div>
-    {NAV.tools.map((tool) => (
-      <a class="sb-group-btn" href={tool.href}><span class="sb-group-label">{tool.label}</span></a>
-    ))}
-    <div class="sb-divider"></div>
-    {NAV.groups.map((group) => (
-      <div class="sb-group">
-        <button class="sb-group-btn" aria-expanded="false" aria-controls={`sbg-${group.id}`}>
-          <span class="sb-group-label">{group.label}</span>
-          <span class="sb-group-arrow">&#x25B6;</span>
-        </button>
-        <div class="sb-group-items" id={`sbg-${group.id}`} hidden>
-          {group.children.map((child) => (
-            <a class="sb-child" href={child.href}>{child.label}</a>
-          ))}
-        </div>
-      </div>
-    ))}
-    <div class="sb-divider"></div>
-    <button id="bsw-theme-btn">🌙 Dark Mode</button>
-  </div>
-  <div class="sb-footer">
-    <a class="sb-workshop-link" href="/translation/workshop/">⚙ Translation Workshop</a>
+    <button id="bsw-theme-btn">Dark Mode</button>
   </div>
 </aside>
 <button class="sidebar-tab" aria-label="Toggle sidebar" aria-controls="site-sidebar">&#x2039;</button>
 <div class="mobile-topbar" role="banner">
   <button class="mobile-topbar__hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="site-sidebar">&#9776;</button>
-  <a class="mobile-topbar__logo" href="/">📖 Kingdom Bible Study</a>
+  <a class="mobile-topbar__logo" href="/">Kingdom Bible Study</a>
 </div>
 <div class="sidebar-backdrop" aria-hidden="true"></div>

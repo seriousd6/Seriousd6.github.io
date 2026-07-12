@@ -463,8 +463,27 @@
   color: var(--color-btn-text, #e8c87a);
 }
 [data-theme="dark"] .daily-notif-banner {
-  background: #243020;
-  color: var(--color-text, #e8dfc8);
+  background: var(--color-surface-alt, #2b3226);
+  color: var(--color-text, #e6e9df);
+}
+/* The banner button inherits --color-on-primary, which is near-black in dark
+   mode (it sits on the lifted-olive primary elsewhere) — restate it here so
+   the button is legible on the dark banner. */
+[data-theme="dark"] .daily-notif-banner button {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.25);
+  color: var(--color-text, #e6e9df);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .daily-notif-banner {
+    background: var(--color-surface-alt, #2b3226);
+    color: var(--color-text, #e6e9df);
+  }
+  :root:not([data-theme="light"]) .daily-notif-banner button {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.25);
+    color: var(--color-text, #e6e9df);
+  }
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .daily-passage-chip:hover {

@@ -49,16 +49,18 @@
   color: #fff;
 }
 
-.bp-cat-badge--people   { background: #7c3aed; }
-.bp-cat-badge--place    { background: #065f46; }
-.bp-cat-badge--concept  { background: #1d4ed8; }
-.bp-cat-badge--event    { background: #b45309; }
-.bp-cat-badge--name     { background: #1e3a5f; }
-.bp-cat-badge--father   { background: #8c6a00; }
-.bp-cat-badge--commentator { background: #6d28d9; }
+/* Daylight field set — earthy, desaturated hues harmonized with olive/brass/ember;
+   every fill holds 4.5:1 with the white badge text. */
+.bp-cat-badge--people   { background: #4d5f2a; }
+.bp-cat-badge--place    { background: #33655a; }
+.bp-cat-badge--concept  { background: #46557e; }
+.bp-cat-badge--event    { background: #a2571d; }
+.bp-cat-badge--name     { background: #55604f; }
+.bp-cat-badge--father   { background: #7a6222; }
+.bp-cat-badge--commentator { background: #6d5c43; }
 /* Motif overlay badges — secondary to the category badge, never replacing it. */
-.bp-cat-badge--motif    { background: #0f766e; }   /* teal — imagery/metaphor */
-.bp-cat-badge--type     { background: #9a3412; }   /* burnt orange — typology/shadow→fulfillment */
+.bp-cat-badge--motif    { background: #22766c; }   /* sea-moss — imagery/metaphor */
+.bp-cat-badge--type     { background: #8c3f22; }   /* ember — typology/shadow→fulfillment */
 
 /* ── Home page ───────────────────────────────────────────────────────────── */
 
@@ -1325,15 +1327,15 @@ details.bp-src-section[open] summary {
 /* Category badges: in dark mode the saturated/dark backgrounds blended into the page, so use
    bright backgrounds with dark text for uniform legibility (e.g. the Concept badge on Trinity). */
 [data-theme="dark"] .bp-cat-badge { color: #15110b; }
-[data-theme="dark"] .bp-cat-badge--people     { background: #c4a5f7; }
-[data-theme="dark"] .bp-cat-badge--place      { background: #5fd3a3; }
-[data-theme="dark"] .bp-cat-badge--concept    { background: #82b1ff; }
-[data-theme="dark"] .bp-cat-badge--event      { background: #f0b366; }
-[data-theme="dark"] .bp-cat-badge--name       { background: #93b8e6; }
-[data-theme="dark"] .bp-cat-badge--father     { background: #e3c659; }
-[data-theme="dark"] .bp-cat-badge--commentator{ background: #c9adf7; }
-[data-theme="dark"] .bp-cat-badge--motif       { background: #5fd0c4; }
-[data-theme="dark"] .bp-cat-badge--type        { background: #f0a06a; }
+[data-theme="dark"] .bp-cat-badge--people     { background: #b8ca8b; }
+[data-theme="dark"] .bp-cat-badge--place      { background: #82c7b4; }
+[data-theme="dark"] .bp-cat-badge--concept    { background: #a4b4e6; }
+[data-theme="dark"] .bp-cat-badge--event      { background: #e6a86b; }
+[data-theme="dark"] .bp-cat-badge--name       { background: #b7c0ae; }
+[data-theme="dark"] .bp-cat-badge--father     { background: #d8bc6d; }
+[data-theme="dark"] .bp-cat-badge--commentator{ background: #c2b295; }
+[data-theme="dark"] .bp-cat-badge--motif       { background: #7ccec2; }
+[data-theme="dark"] .bp-cat-badge--type        { background: #e08e66; }
 
 [data-theme="dark"] .bp-alpha-btn:hover,
 [data-theme="dark"] .bp-alpha-btn--active {
@@ -1371,13 +1373,13 @@ details.bp-src-section[open] summary {
     background: var(--color-surface-alt, #2a2318);
   }
   :root:not([data-theme="light"]) .bp-cat-badge { color: #15110b; }
-  :root:not([data-theme="light"]) .bp-cat-badge--people     { background: #c4a5f7; }
-  :root:not([data-theme="light"]) .bp-cat-badge--place      { background: #5fd3a3; }
-  :root:not([data-theme="light"]) .bp-cat-badge--concept    { background: #82b1ff; }
-  :root:not([data-theme="light"]) .bp-cat-badge--event      { background: #f0b366; }
-  :root:not([data-theme="light"]) .bp-cat-badge--name       { background: #93b8e6; }
-  :root:not([data-theme="light"]) .bp-cat-badge--father     { background: #e3c659; }
-  :root:not([data-theme="light"]) .bp-cat-badge--commentator{ background: #c9adf7; }
+  :root:not([data-theme="light"]) .bp-cat-badge--people     { background: #b8ca8b; }
+  :root:not([data-theme="light"]) .bp-cat-badge--place      { background: #82c7b4; }
+  :root:not([data-theme="light"]) .bp-cat-badge--concept    { background: #a4b4e6; }
+  :root:not([data-theme="light"]) .bp-cat-badge--event      { background: #e6a86b; }
+  :root:not([data-theme="light"]) .bp-cat-badge--name       { background: #b7c0ae; }
+  :root:not([data-theme="light"]) .bp-cat-badge--father     { background: #d8bc6d; }
+  :root:not([data-theme="light"]) .bp-cat-badge--commentator{ background: #c2b295; }
   :root:not([data-theme="light"]) .bp-alpha-btn:hover,
   :root:not([data-theme="light"]) .bp-alpha-btn--active {
     background: var(--color-btn-bg, #3a2d18);
@@ -1696,8 +1698,8 @@ details.bp-src-section[open] summary {
    surface so dark mode stays readable; fixed badge colours get explicit dark overrides. */
 
 /* Category badge — cyan, distinct from places (green) and motifs (teal) */
-.bp-cat-badge--region { background: #0e7490; }
-[data-theme="dark"] .bp-cat-badge--region { background: #56c7d6; }
+.bp-cat-badge--region { background: #34677a; }
+[data-theme="dark"] .bp-cat-badge--region { background: #8ec5d4; }
 
 /* Regions browse view (?cat=regions) — mirrors the motif family browse */
 .bp-region-kinds { display: flex; flex-direction: column; gap: 1.4rem; margin-top: 1rem; }

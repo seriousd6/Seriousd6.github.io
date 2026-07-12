@@ -11,42 +11,72 @@
   font-display: swap;
 }
 
+/* Daylight type pair (July 2026 redesign) — self-hosted variable subsets.
+   Archivo carries all UI chrome; Literata carries scripture and long-form prose. */
+@font-face {
+  font-family: 'Archivo Variable';
+  src: url('../fonts/archivo-latin-wght-normal.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Literata Variable';
+  src: url('../fonts/literata-latin-wght-normal.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Literata Variable';
+  src: url('../fonts/literata-latin-wght-italic.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Ensure [hidden] is always respected even when CSS sets display */
 [hidden] { display: none !important; }
 
 :root {
-  /* Colors — "Candlelight" palette (July 2026 redesign): warmer parchment
-     ground, warm off-white surfaces, hairline borders. Gold accent kept at the
-     WCAG-checked value. */
-  --color-bg:        #f6f1e6;
-  --color-surface:   #fffdf7;
-  --color-primary:   #5c3d1e;
-  --color-on-primary: #fff;     /* text color for elements with background: var(--color-primary); dark mode overrides this */
-  --color-accent:    #8c6a00;   /* darkened from #b8860b — old value failed WCAG AA 4.5:1 on light bg */
-  --color-text:      #2b2113;
+  /* Colors — "Daylight" palette (July 2026 UI overhaul): paper-white ground,
+     green-biased ink, olive primary (laurel) with brass secondary (lampstand),
+     ember for red-letter text. All text values checked against WCAG AA. */
+  --color-bg:        #fbfbf8;
+  --color-surface:   #ffffff;
+  --color-primary:   #55682f;
+  --color-on-primary: #fbfbf8;  /* text color for elements with background: var(--color-primary); dark mode overrides this */
+  --color-accent:    #7a6222;   /* brass, darkened for 4.5:1 on the paper ground */
+  --color-ember:     #8c3f22;   /* words of Christ (red letter) and warm emphasis */
+  --color-text:      #20241e;
   --color-heading:   var(--color-text); /* inherits text color so dark mode adapts automatically */
-  --color-muted:     #7c6e56;
-  --color-border:    #e6dcc5;
+  --color-muted:     #666d5e;
+  --color-border:    #dde0d4;
+  --color-surface-subtle: #f1f3ea;
+  --color-surface-alt:    #e9ecdf;
+  --color-text-soft:      #6f7765;
 
-  /* Card treatment — hairline border + soft warm shadow. Per-page CSS adopts
-     these incrementally; keep values in sync with the Candlelight mockup. */
-  --shadow-card:     0 1px 3px rgba(70, 50, 20, 0.07), 0 6px 18px rgba(70, 50, 20, 0.05);
-  --radius-card:     12px;
+  /* Card treatment — hairline border + soft cool-green shadow. */
+  --shadow-card:     0 1px 3px rgba(32, 36, 30, 0.06), 0 6px 18px rgba(32, 36, 30, 0.05);
+  --radius-card:     10px;
 
-  /* Sidebar */
-  --sb-bg:           #2c1e0e;
-  --sb-text:         #e8d9bb;
-  --sb-muted:        #a08a68;   /* darkened from #9a8060 — old value was 4.18:1, below WCAG AA 4.5:1 */
-  --sb-hover:        rgba(255,255,255,0.07);
-  --sb-active-bg:    rgba(255,255,255,0.12);
-  --sb-active-fg:    #e8c87a;
-  --sb-accent:       #b8860b;
+  /* Sidebar — deep green-ink panel */
+  --sb-bg:           #23281f;
+  --sb-text:         #c3c9b7;
+  --sb-muted:        #8f9782;
+  --sb-hover:        rgba(255,255,255,0.06);
+  --sb-active-bg:    #333b2b;
+  --sb-active-fg:    #f0f3e9;
+  --sb-accent:       #b4c58a;
   --sidebar-w:       240px;
   --topbar-h:        48px;
 
-  /* Typography */
-  --font-body:    Georgia, 'Times New Roman', serif;
-  --font-ui:      system-ui, sans-serif;
+  /* Typography — Daylight pair. Scripture and long-form prose inherit
+     --font-body (Literata); every piece of UI chrome opts into --font-ui
+     (Archivo). --font-serif is an alias some feature CSS references. */
+  --font-body:    'Literata Variable', Georgia, 'Times New Roman', serif;
+  --font-serif:   var(--font-body);
+  --font-ui:      'Archivo Variable', system-ui, sans-serif;
   --font-mono:    'Courier New', monospace;
 
   /* Spacing */
@@ -547,11 +577,16 @@ blockquote.scripture cite {
 
 /* ── Bible reference links ── */
 a.ref {
-  color: var(--color-accent);
+  /* Daylight: refs stay in the ink so scripture reads as text, not a link farm;
+     the quiet dotted rule is the affordance, brass arrives on hover. */
+  color: inherit;
   text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   cursor: pointer;
 }
-a.ref:hover { text-decoration: underline; }
+a.ref:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
 a.ref:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 2px; }
 
 /* ── Key terms ── */
@@ -666,62 +701,67 @@ span.term { font-weight: bold; color: var(--color-primary); }
 /* System default:  prefers-color-scheme:dark applies when no manual override    */
 
 [data-theme="dark"] {
-  /* "Candlelight" dark — candlelit deep brown rather than gray-black. */
-  --color-bg:        #1f1810;
-  --color-surface:   #292016;
-  --color-primary:   #e8c87a;
-  --color-on-primary: #1f1810;  /* dark text on golden primary bg — white (#fff) fails at ~1.5:1 in dark mode */
-  --color-accent:    #d4a017;
-  --color-text:      #ecdfc8;
-  --color-muted:     #a8977a;
-  --color-border:    #3c3221;
-  --color-bg-alt:    #2a2114;
+  /* "Daylight" dark — Evening: deep moss-black ground, lifted olive primary,
+     brightened brass accent, softened ember. */
+  --color-bg:        #171a15;
+  --color-surface:   #1e221c;
+  --color-primary:   #93a968;
+  --color-on-primary: #171a15;  /* dark text on lifted-olive primary — white fails contrast on it */
+  --color-accent:    #c0a055;
+  --color-ember:     #cd8663;
+  --color-text:      #e6e9df;
+  --color-muted:     #99a18c;
+  --color-border:    #2e332a;
+  --color-bg-alt:    #21261e;
   --shadow-card:     0 1px 3px rgba(0, 0, 0, 0.4);
   /* Subtle surfaces / soft text used across feature CSS (chips, badges, blurbs) via
      var(--name, light-fallback). These were never defined, so dark mode silently fell
      back to the LIGHT values (#f5f5f5 etc.) — light chip bg + light --color-text = unreadable
      (e.g. the ?cat=motifs page). Defining them here switches those surfaces to the dark palette;
      light mode is unaffected since it keeps using the fallbacks. */
-  --color-surface-subtle: #2a1f0f;
-  --color-surface-alt:    #382a16;
-  --color-text-soft:      #ab9a7e;
-  --sb-bg:           #120d05;
-  --sb-text:         #e8d9bb;
-  --sb-muted:        #9e8a6e;   /* lightened from #7a6a55 — old value was 3.70:1, below WCAG AA 4.5:1 */
+  --color-surface-subtle: #232a20;
+  --color-surface-alt:    #2b3226;
+  --color-text-soft:      #8f977f;
+  --sb-bg:           #12150f;
+  --sb-text:         #c3c9b7;
+  --sb-muted:        #8f9782;
   --sb-hover:        rgba(255,255,255,0.06);
-  --sb-active-bg:    rgba(255,255,255,0.1);
-  --sb-active-fg:    #e8c87a;
-  /* Filled button surfaces — dark bg + golden text avoids white-on-yellow */
-  --color-btn-bg:       #3a2d18;
-  --color-btn-text:     #e8c87a;
-  --color-btn-bg-hover: #4a3a22;
+  --sb-active-bg:    #2b3226;
+  --sb-active-fg:    #e2e8d4;
+  --sb-accent:       #93a968;
+  /* Filled button surfaces — moss bg + pale-olive text */
+  --color-btn-bg:       #2b3226;
+  --color-btn-text:     #c9d3ae;
+  --color-btn-bg-hover: #364031;
   color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --color-bg:        #1f1810;
-    --color-surface:   #292016;
-    --color-primary:   #e8c87a;
-    --color-on-primary: #1f1810;  /* matches [data-theme="dark"] */
-    --color-accent:    #d4a017;
-    --color-text:      #ecdfc8;
-    --color-muted:     #a8977a;
-    --color-border:    #3c3221;
-    --color-bg-alt:    #2a2114;
+    --color-bg:        #171a15;
+    --color-surface:   #1e221c;
+    --color-primary:   #93a968;
+    --color-on-primary: #171a15;  /* matches [data-theme="dark"] */
+    --color-accent:    #c0a055;
+    --color-ember:     #cd8663;
+    --color-text:      #e6e9df;
+    --color-muted:     #99a18c;
+    --color-border:    #2e332a;
+    --color-bg-alt:    #21261e;
     --shadow-card:     0 1px 3px rgba(0, 0, 0, 0.4);
-    --color-surface-subtle: #2a1f0f;  /* matches [data-theme="dark"] — see note there */
-    --color-surface-alt:    #382a16;
-    --color-text-soft:      #ab9a7e;
-    --sb-bg:           #120d05;
-    --sb-text:         #e8d9bb;
-    --sb-muted:        #9e8a6e;   /* matches [data-theme="dark"] fix */
+    --color-surface-subtle: #232a20;  /* matches [data-theme="dark"] — see note there */
+    --color-surface-alt:    #2b3226;
+    --color-text-soft:      #8f977f;
+    --sb-bg:           #12150f;
+    --sb-text:         #c3c9b7;
+    --sb-muted:        #8f9782;   /* matches [data-theme="dark"] */
     --sb-hover:        rgba(255,255,255,0.06);
-    --sb-active-bg:    rgba(255,255,255,0.1);
-    --sb-active-fg:    #e8c87a;
-    --color-btn-bg:       #3a2d18;
-    --color-btn-text:     #e8c87a;
-    --color-btn-bg-hover: #4a3a22;
+    --sb-active-bg:    #2b3226;
+    --sb-active-fg:    #e2e8d4;
+    --sb-accent:       #93a968;
+    --color-btn-bg:       #2b3226;
+    --color-btn-text:     #c9d3ae;
+    --color-btn-bg-hover: #364031;
     color-scheme: dark;
   }
 }
@@ -1090,3 +1130,80 @@ a.cv-name:focus-visible { outline: 2px solid var(--color-accent); outline-offset
 .sync-what summary:hover { color: var(--color-accent); }
 .sync-what p { margin: 0.55rem 0 0; }
 .sync-what a { color: var(--color-accent); }
+/* ════════════════════════════════════════════════════════════════════════
+   Daylight sidebar additions (July 2026 UI overhaul) — the flat
+   Read / Study / Practice / Tools hierarchy with stroke SVG icons.
+   ════════════════════════════════════════════════════════════════════════ */
+.sb-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--sb-active-fg);
+}
+.sb-logo__icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--sb-accent); }
+
+.sb-section { padding-top: 0.55rem; }
+.sb-section-label {
+  padding: 0.35rem 1rem 0.3rem;
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--sb-muted);
+  user-select: none;
+}
+
+/* Icon rows — .sb-item composes onto .sb-link / .sb-group-btn */
+.sb-item { display: flex; align-items: center; gap: 0.6rem; }
+.sb-item__icon {
+  width: 15px; height: 15px; flex-shrink: 0;
+  color: var(--sb-muted);
+  transition: color 0.1s;
+}
+.sb-item:hover .sb-item__icon,
+.sb-item[aria-current="page"] .sb-item__icon { color: var(--sb-accent); }
+.sb-item[aria-current="page"] { border-radius: 0 6px 6px 0; }
+
+/* Version picker + theme button, quieted to match */
+.sb-version { padding: 0.55rem 1rem 0.2rem; }
+.sb-version label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--sb-muted);
+  margin-bottom: 0.3rem;
+}
+.sb-version select {
+  width: 100%;
+  background: var(--sb-active-bg);
+  color: var(--sb-text);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 7px;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+}
+#bsw-theme-btn {
+  margin: 0.55rem 1rem 0;
+  padding: 0.38rem 0.75rem;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 7px;
+  color: var(--sb-text);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+#bsw-theme-btn:hover { background: var(--sb-hover); color: #fff; }
+
+/* Mobile topbar picks up the UI face + green panel automatically via tokens */
+.mobile-topbar__logo { font-family: var(--font-ui); font-weight: 700; }

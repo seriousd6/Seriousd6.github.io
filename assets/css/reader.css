@@ -3800,8 +3800,8 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 }
 
 /* Red letter (Words of Jesus) and Purple letter (Words of God) */
-.reader-verse--jesus { color: #b03a2e; }
-.reader-verse--god   { color: #6b2fa0; }
+.reader-verse--jesus { color: var(--color-ember, #8c3f22); }
+.reader-verse--god   { color: #59617e; }
 /* Verse numbers keep their accent gold regardless of speaker colour */
 .reader-verse--jesus .reader-verse__num,
 .reader-verse--god   .reader-verse__num { color: var(--color-accent); }
@@ -4514,3 +4514,23 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 }
 .reader-sec-chip:hover { background: color-mix(in srgb, var(--color-primary) 8%, transparent); border-color: var(--color-primary, #5c3d1e); }
 .reader-sec-chip:focus-visible { outline: 2px solid var(--color-accent, #c8a84b); outline-offset: 1px; }
+
+
+/* ── Daylight: quiet the in-text apparatus ─────────────────────────────────
+   The echo/cross-ref marker keeps its tap target but loses the emoji; the
+   count reads as a small brass superscript chip instead of a gold pill. */
+.reader-echo-marker__icon { display: none; }
+.reader-echo-marker {
+  background: var(--color-surface-subtle, #f1f3ea);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0 5px;
+  vertical-align: 0.28em;
+  opacity: 0.85;
+}
+.reader-echo-marker__count {
+  color: var(--color-accent);
+  font-family: var(--font-ui);
+  font-size: 0.66em;
+  font-weight: 700;
+}

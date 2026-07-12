@@ -23,6 +23,14 @@
   kingdombiblestudy.com custom domain.
 - **Sync**: personalized cross-device sync via **Google Identity Services +
   Drive `appDataFolder`** (user's own Drive, no backend, $0).
+- **Design direction — "Daylight"** *(2026-07-12, supersedes Candlelight)*: chosen from
+  three mocked directions (Rubric / Lapis / Daylight —
+  https://claude.ai/code/artifact/3d419123-5e13-44d3-b76f-2c904d0d8b07). Paper-white
+  ground, green-biased ink, **olive** primary (laurel) + **brass** accent (lampstand) +
+  **ember** for red-letter; Archivo (variable) for all UI chrome, Literata (variable)
+  for scripture/long-form; stroke SVG icons replace emoji; study markup stays always-on
+  but quieted. Dark theme is "Evening" (moss-black). Token source of truth unchanged:
+  `:root` blocks in `assets/css/style.css`; living style guide at `/design/`.
 - **Static-first content** *(2026-07-11)*: data-driven pages render at build time
   ("render-then-enhance") — the client app that serves the legacy query-param URLs
   detects the static path and replaces the pre-rendered DOM with the enriched view.
@@ -119,6 +127,28 @@ documented `BibleUI.initOLSection` API; emitted only as a lazy chunk).
   production build (astro + assets) on every push.
 - Astro 5.18.2 → **6.4.8** + esbuild override `^0.28.1` →
   **0 open Dependabot alerts**.
+
+### Daylight increment 1 — foundation (2026-07-12)
+- Retokened `style.css` (light + both dark paths) to the Daylight palette; self-hosted
+  Archivo + Literata variable subsets (via @fontsource, build-time dep); fonts join the
+  generated sw precache.
+- Sidebar rebuilt: flat **Read / Study / Practice / Tools** IA with stroke SVG icons
+  (accordion + duplicate labels gone, wordmark no longer truncates, version picker
+  moved below nav; `wireSidebar` contract preserved — its group loop no-ops).
+- Reader markup quieted: red-letter → ember token, term links → 1px muted dotted,
+  ref links stay ink-colored with a faint dotted rule (brass on hover), the gold 🔗
+  echo pills → small bordered brass-count chips (emoji hidden).
+- Biblepedia category badges retinted to the earthy "field set" (light + both dark
+  paths); dark notification-banner button contrast fixed.
+- `/design/` style guide added (token-driven specimens).
+- Verified: full functional pass on the built dist (home plan, reader, modal,
+  biblepedia, library doc, discipline) with zero page errors.
+
+**Remaining Daylight increments:** reader toolbar consolidation (Aa menu) + chip-rail
+apparatus; topics/study-guides onto the shared shell (kills their alien navy design +
+the unstyled tier-nav bug); home hierarchy (banner demotion, BEHIND → grace-based);
+library filter chips; hardcoded-hex sweeps (workshop 587, biblepedia 226, lib-browser
+160 hexes); full sans-default/serif-opt-in type inversion.
 
 ## Next up
 
