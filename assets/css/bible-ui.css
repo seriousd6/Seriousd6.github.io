@@ -730,6 +730,14 @@
   font-style: italic;
 }
 
+/* H5: capped-index note above verse results */
+.search-index-note {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-muted, #7a6a55);
+  margin: 0 0 0.6rem;
+}
+
 .omni-none {
   font-size: 0.85rem;
   color: var(--color-muted, #7a6a55);

@@ -163,3 +163,8 @@ for (const f of ['manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html', 
 }
 
 console.log(`[build-assets] ${emitted.length} JS/CSS assets emitted; APP_CACHE_V=bsw-app-${hash}`);
+
+// ── 7. Verse search index (H5) ─────────────────────────────────────────────
+// Runs after the sw precache walk on purpose: the index JSON is fetched at
+// runtime (and cached by the data strategy), never precached.
+await import('./build-search-index.mjs');

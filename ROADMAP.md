@@ -132,10 +132,21 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   remaining flagged inline prose links (biblepedia refs) fall under the WCAG
   target-size inline exception.
 
-### H5 — Search performance
-- Verse search fetches whole books in loops; fine on broadband, sluggish on
-  phones. Build-time compact index (stem → refs) served as static JSON chunks.
-- Defer until H1 proves what queries actually look like.
+### H5 — Search performance  ·  DONE 2026-07-12
+- Verse search fetched all 66 books (several MB) and scanned linearly on every
+  query. Now: `tools/build-search-index.mjs` emits a token → verse-id inverted
+  index for BSB at build time (14,270 tokens, 26 letter chunks, ~2.1 MB raw,
+  never precached), delta-encoded ids in `books.json` order.
+- `assets/js/search-index.js` + the indexed path in `search.js`: one ~100 KB
+  chunk per query word, substring-compatible token matching (unions every
+  token containing the word, so "love" still hits "beloved"), AND-intersection
+  for multi-word, phrase verification against real text for quoted queries,
+  and text fetched only for the books of the top results (capped at 400
+  results / 24 books with an honest "strongest N of M" note).
+- Measured: "love one another" 3 chunks + 11 books (was 66); "cloud of
+  witnesses" 1 book; anxiety question-kernel 6 books. Non-indexed versions
+  (KJV etc.), offline, and dev fall back to the legacy loop automatically;
+  the zero-result → Omni handoff (H1a) is preserved.
 
 ## Status
 
@@ -155,4 +166,8 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
 - H4 — **DONE** (2026-07-12): axe + mobile + keyboard audit; 3 critical ARIA
   violations, 2 mobile overflows, and the tiny-tap-target set all fixed;
   axe clean on all 11 passes.
-- H5 — pending
+- H5 — **DONE** (2026-07-12): build-time inverted index for BSB verse search;
+  one letter-chunk per query word + top-result book fetches instead of the
+  66-book scan; automatic legacy fallback for other versions and offline.
+
+**All Heights phases (H1–H6) are complete.**

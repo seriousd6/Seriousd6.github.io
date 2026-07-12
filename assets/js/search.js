@@ -35,6 +35,7 @@ import {
 
 var _LIBRARY_ROOT = _resolve('../../library/');
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
+import { searchIndexLookup } from './search-index.js';
 import { loadSectionBody, searchSectionsFull } from './sections.js';
 import { wireRefLinks, wireRefEl } from './wire.js';
 import { autoTagTermsWhenReady } from './terms.js';
@@ -436,74 +437,153 @@ export function handleSearchInput(query) {
   var andWords = (!literal && q.indexOf(' ') !== -1) ? q.split(/\s+/).filter(Boolean) : null;
 
   var books = metaBooks || [];
-  var results = [];
-  var pending = 0;
 
   var booksToSearch = _filterBook
     ? books.filter(function (b) { return b.id === _filterBook; })
     : (_filterTestament === 'ot' ? books.filter(function (b) { return b.testament === 'OT'; })
        : _filterTestament === 'nt' ? books.filter(function (b) { return b.testament === 'NT'; })
        : books);
+  if (booksToSearch.length === 0) { renderSearchResults([], query); return; }
 
-  // Show a loading indicator immediately so the user knows work is underway.
-  // INTENT: When no filter narrows the search, append a filter tip so users know they can reduce
-  //   the 66-book concurrent fetch by selecting OT / NT / Book first. This doesn't batch the
-  //   requests but reduces how often cold 66-book loads happen.
-  // CHANGE? If the filter UI changes from OT/NT/Book buttons to something else, update the tip text.
-  // VERIFY: Search "love" with no filter — loading message should include "Tip: use OT/NT/Book…".
-  //   Search "grace" with OT selected — tip should NOT appear (booksToSearch.length < 66).
   var _searchOut = document.getElementById('bsw-search-output');
   var _sortRow   = document.getElementById('bsw-search-sort-row');
-  var _tipHtml   = (booksToSearch.length === 66)
-    ? ' <span class="omni-filter-tip">Tip: use OT / NT / Book filters to search faster.</span>'
-    : '';
-  if (_searchOut) _searchOut.innerHTML = '<p class="omni-loading">Searching ' + booksToSearch.length + ' books…' + _tipHtml + '</p>';
+  if (_searchOut) _searchOut.innerHTML = '<p class="omni-loading">Searching…</p>';
   if (_sortRow) _sortRow.hidden = true;
-  var _partialDone = false;
 
-  booksToSearch.forEach(function (book) {
-    pending++;
-    loadBook(version, book.id).then(function (chapters) {
-      if (gen !== _searchGeneration) { pending--; return; }
-      if (chapters) {
-        Object.keys(chapters).forEach(function (chStr) {
-          Object.keys(chapters[chStr]).forEach(function (vStr) {
-            var text = chapters[chStr][vStr];
-            var tl   = text && text.toLowerCase();
-            var matches = tl && (andWords
-              ? andWords.every(function (w) { return tl.indexOf(w) !== -1; })
-              : tl.indexOf(q) !== -1);
-            if (matches) {
-              results.push({
-                ref:    book.name + ' ' + chStr + ':' + vStr,
-                bookId: book.id,
-                ch:     parseInt(chStr, 10),
-                v:      parseInt(vStr, 10),
-                text:   text,
-                // Score with the original (possibly multi-word) query, not the literal,
-                // so that "love one another" ranks verses with all three words higher.
-                score:  _scoreResult(text, literal || query)
-              });
-            }
+  // ── H5: indexed path ─────────────────────────────────────────────────────
+  // The build-time token index (search-index.js) answers "which verses" from
+  // one small chunk per query word; only the books needed to DISPLAY the top
+  // matches are fetched for their text. Falls back to the legacy 66-book scan
+  // whenever the index can't serve (non-indexed version, offline, dev).
+  var idxWords = (literal || query).toLowerCase().replace(/[‘’]/g, "'")
+    .split(/[^a-z']+/)
+    .map(function (w) { return w.replace(/^'+|'+$/g, ''); })
+    .filter(function (w) { return w.length >= 2; });
+  var allowed = booksToSearch.length === books.length
+    ? null
+    : new Set(booksToSearch.map(function (b) { return bookOrder[b.id]; }));
+  var INDEX_CAP = 400;
+
+  searchIndexLookup(version, idxWords, allowed).then(function (matches) {
+    if (gen !== _searchGeneration) return;
+    if (!matches) { _legacyScan(); return; }
+    if (!matches.length) {
+      _lastSearchResults = [];
+      _lastSearchQuery   = query;
+      renderSearchResults([], query);
+      return;
+    }
+    // Cap results AND distinct books: a broad word's top 400 can span 50+
+    // books, and fetching each one's text defeats the point on a phone. The
+    // strongest matches always survive (matches arrive weight-sorted); later
+    // ones only join from books already being fetched.
+    var MAX_BOOKS = 24;
+    var byBook = {};
+    var taken = 0;
+    for (var mi = 0; mi < matches.length && taken < INDEX_CAP; mi++) {
+      var m = matches[mi];
+      if (!byBook[m.bookIdx] && Object.keys(byBook).length >= MAX_BOOKS) continue;
+      (byBook[m.bookIdx] = byBook[m.bookIdx] || []).push(m);
+      taken++;
+    }
+    Promise.all(Object.keys(byBook).map(function (bi) {
+      return loadBook(version, books[bi].id)
+        .then(function (chapters) { return { bi: bi, chapters: chapters }; })
+        .catch(function () { return null; });
+    })).then(function (loaded) {
+      if (gen !== _searchGeneration) return;
+      var qNorm = q.replace(/[‘’]/g, "'");
+      var results = [];
+      loaded.forEach(function (entry) {
+        if (!entry || !entry.chapters) return;
+        byBook[entry.bi].forEach(function (m) {
+          var chObj = entry.chapters[String(m.ch)];
+          var text  = chObj && chObj[String(m.v)];
+          if (!text) return;
+          // Quoted phrases: the index only supplies candidates (verses with
+          // every word); the exact phrase is verified against the text.
+          if (literal && text.toLowerCase().replace(/[‘’]/g, "'").indexOf(qNorm) === -1) return;
+          results.push({
+            ref:    books[entry.bi].name + ' ' + m.ch + ':' + m.v,
+            bookId: books[entry.bi].id,
+            ch:     m.ch,
+            v:      m.v,
+            text:   text,
+            score:  _scoreResult(text, literal || query)
           });
         });
+      });
+      _lastSearchResults = results;
+      _lastSearchQuery   = query;
+      renderSearchResults(results, query);
+      if (matches.length > taken) {
+        var out = document.getElementById('bsw-search-output');
+        if (out && results.length) {
+          var note = document.createElement('p');
+          note.className = 'search-index-note';
+          note.textContent = 'Showing the strongest ' + results.length + ' of ' +
+            matches.length + ' matching verses — use the OT / NT / Book filters to narrow the rest.';
+          out.insertBefore(note, out.firstChild);
+        }
       }
-      pending--;
-      // Render a first-pass preview as soon as 20+ results accumulate so the user
-      // sees something while the remaining books still load.
-      if (!_partialDone && results.length >= 20 && gen === _searchGeneration) {
-        _partialDone = true;
-        renderSearchResults(results.slice(), query);
-      }
-      if (pending === 0 && gen === _searchGeneration) {
-        _lastSearchResults = results;
-        _lastSearchQuery   = query;
-        renderSearchResults(results, query);
-      }
-    }).catch(function () { pending--; });
-  });
+    });
+  }).catch(function () { if (gen === _searchGeneration) _legacyScan(); });
 
-  if (booksToSearch.length === 0) renderSearchResults([], query);
+  // ── Legacy path: fetch every book in scope and scan linearly ─────────────
+  function _legacyScan() {
+    var results = [];
+    var pending = 0;
+    // INTENT: When no filter narrows the search, append a filter tip so users know they can
+    //   reduce the 66-book concurrent fetch by selecting OT / NT / Book first.
+    var _tipHtml = (booksToSearch.length === 66)
+      ? ' <span class="omni-filter-tip">Tip: use OT / NT / Book filters to search faster.</span>'
+      : '';
+    var out = document.getElementById('bsw-search-output');
+    if (out) out.innerHTML = '<p class="omni-loading">Searching ' + booksToSearch.length + ' books…' + _tipHtml + '</p>';
+    var _partialDone = false;
+
+    booksToSearch.forEach(function (book) {
+      pending++;
+      loadBook(version, book.id).then(function (chapters) {
+        if (gen !== _searchGeneration) { pending--; return; }
+        if (chapters) {
+          Object.keys(chapters).forEach(function (chStr) {
+            Object.keys(chapters[chStr]).forEach(function (vStr) {
+              var text = chapters[chStr][vStr];
+              var tl   = text && text.toLowerCase();
+              var matches = tl && (andWords
+                ? andWords.every(function (w) { return tl.indexOf(w) !== -1; })
+                : tl.indexOf(q) !== -1);
+              if (matches) {
+                results.push({
+                  ref:    book.name + ' ' + chStr + ':' + vStr,
+                  bookId: book.id,
+                  ch:     parseInt(chStr, 10),
+                  v:      parseInt(vStr, 10),
+                  text:   text,
+                  // Score with the original (possibly multi-word) query, not the literal,
+                  // so that "love one another" ranks verses with all three words higher.
+                  score:  _scoreResult(text, literal || query)
+                });
+              }
+            });
+          });
+        }
+        pending--;
+        // Render a first-pass preview as soon as 20+ results accumulate so the user
+        // sees something while the remaining books still load.
+        if (!_partialDone && results.length >= 20 && gen === _searchGeneration) {
+          _partialDone = true;
+          renderSearchResults(results.slice(), query);
+        }
+        if (pending === 0 && gen === _searchGeneration) {
+          _lastSearchResults = results;
+          _lastSearchQuery   = query;
+          renderSearchResults(results, query);
+        }
+      }).catch(function () { pending--; });
+    });
+  }
 }
 
 // ── renderSearchResults ───────────────────────────────────────────────────
