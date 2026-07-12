@@ -1326,11 +1326,27 @@ function openTool(type) {
   _bladeStack = [{ type: type, params: params, title: _toolTitle(type, params, tool) }];
   _renderTopBlade();
 }
+// The desk element itself is overflow:hidden — .study-desk__main is the real
+// scroll container (and the blade overlay's offset parent). Resetting scroll
+// anywhere else is a no-op, which is exactly the bug that let a scrolled-down
+// desk show stale passage content beneath a freshly opened blade.
+function _deskMain() {
+  return _deskEl && _deskEl.querySelector('.study-desk__main');
+}
+var _passageScroll = 0;   // reading position in the passage list, restored on blade close
+function _enterBladeMode() {
+  var main = _deskMain();
+  if (_deskEl && !_deskEl.classList.contains('reader-study-desk--blade') && main) {
+    _passageScroll = main.scrollTop;   // remember where the user was reading
+  }
+  _deskEl.classList.add('reader-study-desk--blade');
+  if (main) main.scrollTop = 0;        // align the inset:0 overlay with the viewport
+  if (_deskEl) _deskEl.scrollTop = 0;
+}
 // Open the overlay for a context-less tool with a hint about where to launch it from.
 function _openToolPrompt(type, tool) {
   _bladeStack = [];
-  _deskEl.classList.add('reader-study-desk--blade');
-  if (_deskEl) _deskEl.scrollTop = 0;
+  _enterBladeMode();
   var crumbsEl = _deskEl.querySelector('.study-blade__crumbs');
   if (crumbsEl) crumbsEl.innerHTML =
     '<span class="study-blade__crumb" aria-current="page">' + _esc(tool.label) + '</span>';
@@ -1382,6 +1398,8 @@ function _closeBlades() {
   if (_deskEl) _deskEl.classList.remove('reader-study-desk--blade');
   var b = document.getElementById('sd-blade-body');
   if (b) b.innerHTML = '';
+  var main = _deskMain();
+  if (main) main.scrollTop = _passageScroll;   // resume where the user was reading
   _syncActiveTool('passage');   // back to the section list → "Passage" divider active
 }
 function _renderTopBlade() {
@@ -1389,8 +1407,7 @@ function _renderTopBlade() {
   var crumbsEl = _deskEl && _deskEl.querySelector('.study-blade__crumbs');
   if (!body) return;
   _destroyMaps();   // leaving/replacing a blade: drop the Places blade's maps so they don't leak
-  _deskEl.classList.add('reader-study-desk--blade');
-  if (_deskEl) _deskEl.scrollTop = 0;   // overlay aligns to the desk's visible top
+  _enterBladeMode();
   var crumbs = '<button type="button" class="study-blade__crumb" data-lvl="0">Passage</button>';
   _bladeStack.forEach(function (b2, i) {
     crumbs += '<span class="study-blade__sep" aria-hidden="true">›</span>' +
@@ -1406,6 +1423,10 @@ function _renderTopBlade() {
   _syncActiveTool(_bladeStack.length ? _bladeStack[0].type : 'passage');   // root tool = active divider
   var top = _bladeStack[_bladeStack.length - 1];
   body.innerHTML = '<p class="study-empty">Loading…</p>';
+  // Replacing one blade with another: the blade body keeps its own scroll
+  // offset across innerHTML swaps, so start the new tool at its top.
+  var scroller = body.closest('.study-blade__body') || body;
+  scroller.scrollTop = 0;
   _BLADES[top.type](top.params, body);
 }
 
@@ -2140,7 +2161,7 @@ export function initStudyDesk() {
   _btn.id = 'reader-study-btn';
   _btn.className = 'reader-study-btn';
   _btn.type = 'button';
-  _btn.textContent = '📖 Study';
+  _btn.textContent = 'Study';
   _btn.title = 'Open the passage study desk';
   _btn.setAttribute('aria-pressed', 'false');
   // The Study Desk opener lives in the 📖 Study Tools popover (fall back to inline).
