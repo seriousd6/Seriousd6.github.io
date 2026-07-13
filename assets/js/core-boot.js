@@ -155,8 +155,15 @@ export function boot(pageInit, opts) {
   opts = opts || {};
 
   function init() {
+    // Frame-lite boot (A1): embedded pages — Desk panels, ?minimal=1 hubs —
+    // skip the PWA layer entirely. Each panel used to register the service
+    // worker, inject manifest/meta, and fire the 66-book precache message
+    // as if it were a standalone visit; the HOST page owns all of that.
+    var _framed;
+    try { _framed = window.self !== window.top; } catch (e) { _framed = true; }
+
     initTheme();
-    initPWA();
+    if (!_framed) initPWA();
     _runStorageMigrations();
     initDeskFrame();   // no-op unless framed under the Desk (see desk-frame.js)
 
@@ -181,8 +188,9 @@ export function boot(pageInit, opts) {
 
       if (pageInit && !opts.early) pageInit();
 
-      // History widget appears on the home page sidebar — tracks recently visited refs.
-      initHistoryWidget();
+      // History widget appears on the home page sidebar — tracks recently
+      // visited refs. Frames have no sidebar; skip the work.
+      if (!_framed) initHistoryWidget();
 
       // Signal that metaBooks and metaVersions are ready — fires any callbacks
       // registered via onBibleReady() in other modules.

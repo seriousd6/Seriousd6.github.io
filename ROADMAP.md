@@ -273,3 +273,39 @@ behind popovers — are gone, and the site now has a work surface none of the
 free competitors have. What separates it from an A: mobile is corrected
 rather than designed-for, desk panel weight (each panel is a full page),
 linking discoverability, and search ranking still being literal-match.
+
+## The A gaps — plan (2026-07-13)
+
+The four items between A− and A, ordered smallest to largest so each ships
+on its own:
+
+### A1 — Frame-lite panels  ·  panel weight
+Every Desk panel boots like a standalone visit: it registers the service
+worker, injects PWA meta, and fires the 66-book precache message — per
+panel. Framed pages skip the PWA layer (registration, manifest/meta
+injection, precache trigger) and the history widget; the host page owns
+those. Measure the request/byte delta on a cold two-panel desk landing.
+
+### A2 — Linking discoverability  ·  the 🔗 needs a first use
+When the Desk first holds two or more linkable panels and none is linked,
+show a one-time dismissible hint anchored at the link toggle ("Link panels
+so they navigate together"). Dismissal (or first use of 🔗) persists.
+
+### A3 — Search stemming + synonyms  ·  literal-match ranking
+Query-side stemming over the existing index: a query word also matches
+tokens sharing its stem (light suffix stripping: s/es/ed/ing/ly), weighted
+between exact and prefix — "loving" finds "love". Plus a small curated
+synonym table for common study queries (anxiety→worry/anxious/cares,
+money→riches/wealth/mammon, …) applied as OR-expansions with a note in the
+results. No index rebuild required.
+
+### A4 — A phone surface, not a stack  ·  mobile designed-for
+The Desk on a phone becomes one panel at a time with a bottom tab strip
+(panel titles as tabs; swipe or tap to switch; add/close from a sheet).
+The layout tree is shared with desktop — only the presentation differs.
+Follow with a phone pass over the tour and answers pages.
+
+- A1 — **DONE** (2026-07-13): framed pages skip the PWA layer + history widget; cold two-panel desk landing dropped 2,291 KB → 424 KB (−82%).
+- A2 — pending
+- A3 — pending
+- A4 — pending
