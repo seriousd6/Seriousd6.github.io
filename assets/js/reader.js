@@ -98,8 +98,8 @@ export function initCompareToggle() {
   btn.id        = 'reader-compare-btn';
   btn.className = 'reader-compare-btn' + (isCompareEnabled() ? ' reader-compare-btn--on' : '');
   btn.setAttribute('aria-pressed', isCompareEnabled() ? 'true' : 'false');
-  btn.title     = 'Compare translations side by side';
-  btn.textContent = 'Compare';
+  btn.title     = 'Read a second translation side by side with this one';
+  btn.textContent = '2 Versions';
   var hint = browseBar.querySelector('.reader-browse-hint');
   browseBar.insertBefore(btn, hint || null);
   btn.addEventListener('click', function () {

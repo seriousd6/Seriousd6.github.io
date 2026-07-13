@@ -670,15 +670,30 @@ function _makeController(cfg) {
             try { evParam = sessionStorage.getItem(storageKey + '_event') || ''; } catch (e) {}
           }
 
+          var restored = false;
           if (eraParam) {
             var matchEra = data.eras.find(function(e) { return e.id === eraParam; });
             if (matchEra) {
+              restored = true;
               _selectEra(matchEra);
               if (evParam) {
                 var matchEv = data.events.find(function(e) { return e.id === evParam; });
                 if (matchEv) _clickEvent(matchEv, matchEra);
               }
             }
+          }
+          if (!restored) {
+            // Land with the earliest era open (same ordering as the spine)
+            // instead of an empty events pane.
+            var eraMin = {};
+            data.events.forEach(function(ev) {
+              if (eraMin[ev.era] === undefined || ev.yearNum < eraMin[ev.era])
+                eraMin[ev.era] = ev.yearNum;
+            });
+            var firstEra = data.eras
+              .filter(function(e) { return eraMin[e.id] !== undefined; })
+              .sort(function(a, b) { return eraMin[a.id] - eraMin[b.id]; })[0];
+            if (firstEra) _selectEra(firstEra);
           }
         })
         .catch(function(err) {

@@ -12,41 +12,44 @@ Fixed during this audit (commit `4617a585`): "anxiety" had no answers page
 unreachable (no sidebar link, no search pointer), trailing "?" broke query
 intent. Those are not re-listed below.
 
+**Status (2026-07-13, post-audit fix batches P1–P6):** items marked ✔ below
+are fixed and verified; items marked ✕ were withdrawn after closer
+investigation showed the finding was wrong. Unmarked items remain open.
+
 ---
 
 ## 1 · Outright bugs found
 
-- ●●● **[bug] /about/ overflows phones by 148px** — horizontal page scroll on
+- ✔ ●●● **[bug] /about/ overflows phones by 148px** — horizontal page scroll on
   every mobile visit to the transparency page.
-- ●● **[bug] Compare fires 12 guaranteed 404s per lookup** — it fetches every
+- ✔ ●● **[bug] Compare fires 12 guaranteed 404s per lookup** — it fetches every
   version in versions.json, including the 12 `stub:true` versions with no
   data files (YLT, DBY, GNV, AKJV, WEBBE, MKT-L/M/T, DR, KJV-APO, WEB-CE,
   BRENTON). Wasted requests, console noise, and 12 dead rows attempted per
   verse. The precache path already knows to filter these; compare doesn't.
-- ●● **[bug] Workshop "Choose your study depth" dialog renders detached** —
+- ✔ ●● **[bug] Workshop "Choose your study depth" dialog renders detached** —
   an unstyled card floating at the top-left of the page with no backdrop or
   centering, above a separate app frame. First impression of the deepest tool
   on the site is a layout accident.
-- ● **[bug] /history/ era column layout glitches** — era labels overlap their
+- ✔ ● **[bug] /history/ era column layout glitches** — era labels overlap their
   count badges ("Conquest & Judges", "Between the Testaments"), and huge
   uneven vertical gaps between eras make the timeline read as broken.
 
 ## 2 · Search & discovery
 
-- ●●● **[quality] Generated answers pages are unranked** — the 233 text-
+- ✔ ●●● **[quality] Generated answers pages are unranked** (now ranked, with curated pinned openers for modern topics) — the 233 text-
   matched topics list verses in canonical order, so the strongest verse isn't
   first (fixed for "anxiety" only by luck of Psalms coming early). They
   should rank exact-word hits above synonym hits before capping at 40.
 - ●● **[quality] Verse ranking is still shallow** — weight = match-type sum;
   no phrase proximity, no verse-length normalization, no popularity signal.
   "love" returns Genesis 22:2 first because canonical order breaks ties.
-- ●● **[ia] Two search UIs with different powers** — Ctrl+K quick-search and
-  /search/ have different feature sets (the quick panel doesn't know about
-  kernels/synonyms/answers cards). A stranger who finds one never learns the
-  other exists.
-- ●● **[quality] No typo tolerance** — "anxeity" returns nothing and doesn't
+- ✕ ●● **[ia] Two search UIs with different powers** — WITHDRAWN: closer
+  reading of core-boot.js shows Ctrl+K simply focuses or navigates to
+  /search/ — there is no second search UI, so feature parity is automatic.
+- ✔ ●● **[quality] No typo tolerance** — "anxeity" returns nothing and doesn't
   suggest "anxiety". One edit-distance pass over the token list would fix it.
-- ● **[ia] Omni sections vs answers pages overlap** — the Omni "topics"
+- ✔ ● **[ia] Omni sections vs answers pages overlap** (topic chips now link to /answers/ pages) — the Omni "topics"
   section and /answers/ serve the same intent with different presentations;
   the Omni topic section could simply BE the answers preview.
 - ● **[quality] Synonym table is 24 hand-picked entries** — good ones, but a
@@ -56,19 +59,20 @@ intent. Those are not re-listed below.
 
 ## 3 · Information architecture & redundancy
 
-- ●●● **[ia] Three home-shaped sidebar entries** — Home (→ Desk on desktop,
+- ✔ ●●● **[ia] Three home-shaped sidebar entries** — Home (→ Desk on desktop,
   → daily page on phone), The Desk, and Today. Three labels, two
   destinations, platform-dependent behavior. "Home" should collapse into one
   clear entry per platform.
-- ●●● **[ia] The graveyard of orphan pages** — /notes/, /bookmarks/,
+- ✔ ●●● **[ia] The graveyard of orphan pages** (adopted into the shell or redirected; sidebar links added) — /notes/, /bookmarks/,
   /compare/, /tracker/, /wordcloud/, /maps/, /timeline/, /church-history/,
   /study-guides/ are all real pages reachable only through in-page links (or
   not at all). Bookmarks and My Study even have their own nonstandard chrome
   ("← Home" buttons, no sidebar) — they predate the shell and it shows.
-- ●● **[ia] Compare exists three times** — reader toolbar Compare toggle,
-  the /compare/ page, and the verse modal's All Translations tab: three UIs,
-  three codepaths, same job. Pick the page (it's the best one, now desk-
-  linkable), route the other two into it.
+- ✔ ●● **[ia] Compare exists three times** — CORRECTED: the verse modal's
+  "All translations" was already a plain link into /compare/ (no third
+  codepath). What remained was a naming collision: the reader toolbar's
+  side-by-side second-translation toggle was also labeled "Compare". Renamed
+  to "2 Versions" so the two features read as distinct.
 - ●● **[ia] Word study exists four times** — word-tap popover → desk word
   blade; workshop Word Study tab; interlinear tile taps; biblepedia Strong's
   pages. Each renders lexeme data differently. The desk word blade should be
@@ -77,26 +81,27 @@ intent. Those are not re-listed below.
   notes ("My Study"), Discipline journal + reflections, and memory-verse
   notes. A user asking "where did I write that?" has three answers. At
   minimum My Study should show journal entries too.
-- ●● **[ux] /studies/ is a wall of disabled cards** — 60+ grayed-out books
+- ✔ ●● **[ux] /studies/ is a wall of disabled cards** — 60+ grayed-out books
   with dead Guide/Deep-Dive/Commentary chips; only a handful have content.
   The default view should be "Has Content", with the rest behind "all books"
   — advertise what exists, not what doesn't.
 - ● **[ia] /history/ hub duplicates standalone routes** — its four tabs
   (Biblical Timeline / Church History / Maps / Animated Map) are also
   /timeline/, /church-history/, /maps/ + timelapse; hub tabs reload full
-  pages rather than switching. And the hub lands on an empty three-pane
-  miller view ("Select an era · then an event") — an empty state as a front
-  door.
-- ● **[ia] /tracker/ duplicates the Today tracker card** as a standalone
+  pages rather than switching. ~~And the hub lands on an empty three-pane
+  miller view~~ (✔ fixed: the timeline now auto-selects the earliest era on
+  arrival, so the events column is populated). The tab/route duplication
+  remains open.
+- ✔ ● **[ia] /tracker/ duplicates the Today tracker card** as a standalone
   orphan page.
-- ● **[ux] My Study header has six buttons** — Export all data / Import all
+- ✔ ● **[ux] My Study header has six buttons** — Export all data / Import all
   data / Import notes / Export text / Export notes / ← Home. Two overlapping
   import/export systems side by side, plus a Home button next to a sidebar
   that has Home. Should be one Export/Import pair with format options.
 
 ## 4 · The Desk
 
-- ●● **[ux] No per-panel back/address control** — navigate a biblepedia
+- ✔ ●● **[ux] No per-panel back/address control** — navigate a biblepedia
   panel three articles deep and there's no back button; browser Back pops
   the top window's history unpredictably (iframe navigations share the
   session history). Panels need a small back affordance (history.back() on
@@ -116,11 +121,11 @@ intent. Those are not re-listed below.
 
 ## 5 · Performance & network
 
-- ●●● **[perf] The 1.8 MB biblepedia index is idle-fetched on nearly every
+- ✔ ●●● **[perf] The 1.8 MB biblepedia index is idle-fetched on nearly every
   content page** to power term tooltips (and now word-tap article actions).
   The tooltip needs term/id/brief/category — a trimmed terms-index (~300 KB)
   would serve the hover layer, with the full index only on biblepedia itself.
-- ●● **[perf] nave.json is 1.4 MB** and fetched whole by the Omni topics
+- ✔ ●● **[perf] nave.json is 1.4 MB** (topics-lite.json, 176 KB) and fetched whole by the Omni topics
   section at runtime; the topic chips need slug+title+count (~150 KB).
 - ●● **[perf] reader.css is 120 KB** (uncompressed) of everything the reader
   family ever needed — desk popovers, blades, rails, print, compare — parsed
@@ -137,7 +142,7 @@ intent. Those are not re-listed below.
 
 ## 6 · Mobile
 
-- ●● **[bug] /about/ overflow** (see §1).
+- ✔ ●● **[bug] /about/ overflow** (see §1).
 - ● **[ux] Desk tab strip lacks swipe** — tabs tap fine, but the natural
   phone gesture (swipe between panels) isn't wired.
 - ● **[ux] Reader toolbar is still dense on phones** — lookup, book/chapter
@@ -146,7 +151,7 @@ intent. Those are not re-listed below.
 
 ## 7 · Accessibility
 
-- ●● **[a11y] Word-tap is mouse/touch-only** — the richest hub (lexeme
+- ✔ ●● **[a11y] Word-tap is mouse/touch-only** (keyboard path: select word + W, listed in the ? overlay) — the richest hub (lexeme
   popover) can't be opened from the keyboard at all; term/place anchors can
   be focused but words can't. A keyboard path (e.g. verse focus + key) or an
   equivalent command is needed.
@@ -159,8 +164,8 @@ intent. Those are not re-listed below.
 
 ## 8 · Content & quality
 
-- ●● **[quality] Workshop dashboard opens with "GREEK REVIEWED 0 of 5,523 ·
-  0%"** — a demotivating zero-state for a tool most users open once; the
+- ✔ ●● **[quality] Workshop dashboard opens with "GREEK REVIEWED 0 of 5,523 ·
+  0%"** (getting-started zero-state added) — a demotivating zero-state for a tool most users open once; the
   wall-of-text "Dashboard" panel reads like documentation, not UI.
 - ● **[quality] Nave ALL-CAPS titles titleCase imperfectly** — "Ai" fine,
   but multi-part heads like "Olives, Mount Of" keep odd inversions from the

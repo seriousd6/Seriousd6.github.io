@@ -231,22 +231,6 @@ export function initSearchPage(input) {
     });
   }
 
-  // Sub-tabs (Strong's, Topics, Dictionary) — fire their own handler when activated.
-  var subTabBtns = document.querySelectorAll('[data-sub-tab]');
-  subTabBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var tab = btn.getAttribute('data-sub-tab');
-      subTabBtns.forEach(function (b) { b.classList.toggle('sub-tab--active', b === btn); });
-      document.querySelectorAll('[data-sub-ctx]').forEach(function (ctx) {
-        ctx.hidden = ctx.getAttribute('data-sub-ctx') !== tab;
-      });
-      var q = input.value.trim();
-      if (tab === 'strongs' && q) handleStrongsSearch(q);
-      if (tab === 'topics'  && q) handleTopicsSearch(q);
-      if (tab === 'dict'    && q) handleDictSearch(q);
-    });
-  });
-
   // Explore section filter buttons.
   document.querySelectorAll('[data-explore-filter]').forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -794,115 +778,6 @@ function _appendVerseResultBatch(sorted, query, offset, container) {
     });
     container.appendChild(moreBtn);
   }
-}
-
-// ── handleStrongsSearch ───────────────────────────────────────────────────
-// Searches both Greek and Hebrew Strong's dictionaries.
-// Matches on number, lemma, transliteration, or definition.
-export function handleStrongsSearch(query) {
-  var out = document.getElementById('bsw-strongs-output');
-  if (!out) return;
-  out.innerHTML = '<p class="omni-loading">Loading…</p>';
-
-  var q = query.trim().toLowerCase();
-  Promise.all([loadStrongs('greek'), loadStrongs('hebrew')]).then(function (dicts) {
-    var results = [];
-    dicts.forEach(function (dict) {
-      if (!dict) return;
-      Object.keys(dict).forEach(function (key) {
-        var entry = dict[key];
-        var lemma = (entry.lemma || '').toLowerCase();
-        var trans = (entry.translit || '').toLowerCase();
-        var defn  = (entry.definition || '').toLowerCase();
-        if (lemma.indexOf(q) >= 0 || trans.indexOf(q) >= 0 ||
-            defn.indexOf(q) >= 0 || key.toLowerCase() === q) {
-          results.push({ key: key, entry: entry });
-        }
-      });
-    });
-    renderStrongsResults(results, query, out);
-  }).catch(function () {
-    out.innerHTML = "<p class=\"omni-none\">Could not load Strong's data.</p>";
-  });
-}
-
-export function renderStrongsResults(results, query, out) {
-  if (!out) return;
-  if (!results.length) {
-    out.innerHTML = "<p class=\"omni-none\">No Strong's entries for \"" + escHtml(query) + "\".</p>";
-    return;
-  }
-  out.innerHTML = results.slice(0, 50).map(function (r) {
-    var e    = r.entry;
-    var href = escHtml(WORD_URL + '?s=' + encodeURIComponent(r.key));
-    return '<div class="omni-strongs-card">' +
-      '<span class="omni-strongs-card__code">' + escHtml(r.key) + '</span>' +
-      '<span class="omni-strongs-card__lemma">' + escHtml(e.lemma || '') + '</span>' +
-      (e.translit
-        ? '<span class="omni-strongs-card__translit">(' + escHtml(e.translit) + ')</span>'
-        : '') +
-      '<span class="omni-strongs-card__gloss">' +
-        escHtml((e.definition || '').slice(0, 120)) + '</span>' +
-      '<a class="omni-strongs-card__link" href="' + href + '">Study →</a>' +
-    '</div>';
-  }).join('');
-}
-
-// ── handleTopicsSearch ────────────────────────────────────────────────────
-// Searches Nave's Topical Bible for topic titles containing the query.
-export function handleTopicsSearch(query) {
-  var out = document.getElementById('bsw-topics-output');
-  if (!out) return;
-  out.innerHTML = '<p class="omni-loading">Loading…</p>';
-  _loadTopicsLite().then(function (topics) {
-    if (!topics) { out.innerHTML = '<p class="omni-none">Could not load topics.</p>'; return; }
-    var q   = query.toLowerCase();
-    var res = topics.filter(function (t) { return t.t.toLowerCase().indexOf(q) >= 0; });
-    if (!res.length) {
-      out.innerHTML = '<p class="omni-none">No topics for "' + escHtml(query) + '".</p>';
-      return;
-    }
-    out.innerHTML = '<div class="omni-topics-row">' +
-      res.slice(0, 100).map(function (t) {
-        return '<a class="omni-topic-chip" href="' +
-          escHtml('/answers/' + t.s + '/') + '">' +
-          escHtml(t.t) +
-          '<span class="omni-topic-chip__count"> (' + (t.n || '·') + ')</span>' +
-        '</a>';
-      }).join('') +
-    '</div>';
-  });
-}
-
-// ── handleDictSearch ──────────────────────────────────────────────────────
-// Searches Smith's Bible Dictionary index for entries whose term contains the query.
-// Writes up to 20 results into #bsw-dict-search-output (shown on the dict sub-tab).
-export function handleDictSearch(query) {
-  var out = document.getElementById('bsw-dict-search-output');
-  if (!out) return;
-  out.innerHTML = '<p class="omni-loading">Loading…</p>';
-  _smithLoad().then(function () {
-    if (!_smithData) {
-      out.innerHTML = '<p class="omni-none">Could not load dictionary.</p>';
-      return;
-    }
-    var q   = query.toLowerCase();
-    var res = _smithData.filter(function (e) { return e.term.toLowerCase().indexOf(q) >= 0; });
-    if (!res.length) {
-      out.innerHTML = '<p class="omni-none">No dictionary entries for "' + escHtml(query) + '".</p>';
-      return;
-    }
-    out.innerHTML = res.slice(0, 20).map(function (e) {
-      var href = escHtml(DICT_PAGE_URL + '?entry=' + encodeURIComponent(e.id));
-      return '<div class="search-dict-result">' +
-        '<div class="sdr-head">' +
-          '<a class="sdr-term" href="' + href + '">' + escHtml(e.term) + '</a>' +
-          "<span class=\"sdr-source\">Smith's</span>" +
-        '</div>' +
-        (e.brief ? '<p class="sdr-brief">' + escHtml(e.brief) + '</p>' : '') +
-      '</div>';
-    }).join('');
-  });
 }
 
 // ── extractLiteral / fuzzyMatchVerse / highlightMatch ─────────────────────
