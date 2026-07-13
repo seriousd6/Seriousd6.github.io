@@ -81,21 +81,22 @@ investigation showed the finding was wrong. Unmarked items remain open.
   all point there; the passage-desk word blade serves in-page study; the
   Translation Workshop remains as the explicitly-labeled specialist dossier,
   linked from the strongs banner and the word blade.
-- ●● **[ia] Three annotation systems with unclear boundaries** — reader verse
-  notes ("My Study"), Discipline journal + reflections, and memory-verse
-  notes. A user asking "where did I write that?" has three answers. At
-  minimum My Study should show journal entries too.
+- ✔ ●● **[ia] Three annotation systems with unclear boundaries** — My Study
+  gained a Journal tab surfacing the Disciplines prayer journal and study
+  reflections read-only (dates, text, refs, tags, links back to edit in
+  Disciplines), so "where did I write that?" has one answer. The systems
+  keep separate storage by design (verse-anchored vs date-anchored).
 - ✔ ●● **[ux] /studies/ is a wall of disabled cards** — 60+ grayed-out books
   with dead Guide/Deep-Dive/Commentary chips; only a handful have content.
   The default view should be "Has Content", with the rest behind "all books"
   — advertise what exists, not what doesn't.
-- ● **[ia] /history/ hub duplicates standalone routes** — its four tabs
-  (Biblical Timeline / Church History / Maps / Animated Map) are also
-  /timeline/, /church-history/, /maps/ + timelapse; hub tabs reload full
-  pages rather than switching. ~~And the hub lands on an empty three-pane
-  miller view~~ (✔ fixed: the timeline now auto-selects the earliest era on
-  arrival, so the events column is populated). The tab/route duplication
-  remains open.
+- ✕ ● **[ia] /history/ hub duplicates standalone routes** — WITHDRAWN
+  after re-testing: the hub's tabs switch same-document (lazy-loaded
+  iframes shown/hidden; verified the page never reloads on tab clicks),
+  and framing the standalone routes with ?minimal=1 is the same
+  composition pattern the Desk uses — the standalone routes exist for
+  deep links. The one real defect here — landing on an empty three-pane
+  view — was ✔ fixed (the timeline auto-selects the earliest era).
 - ✔ ● **[ia] /tracker/ duplicates the Today tracker card** as a standalone
   orphan page.
 - ✔ ● **[ux] My Study header has six buttons** — Export all data / Import all
@@ -110,9 +111,10 @@ investigation showed the finding was wrong. Unmarked items remain open.
   the top window's history unpredictably (iframe navigations share the
   session history). Panels need a small back affordance (history.back() on
   the frame) and/or breadcrumb.
-- ●● **[ux] Layouts aren't shareable or savable** — one implicit layout in
-  localStorage; no named layouts, no URL encoding (`/desk/#bible+maps`), no
-  "send this workspace to my other device" (the Drive sync doesn't cover it).
+- ✔ ●● **[ux] Layouts aren't shareable or savable** — Layouts ▾ menu added:
+  named save/load/delete, `/desk/#bible+maps` hash form, and a copy-able
+  share link encoding the full tree (`/desk/#z=…`) that reproduces the
+  workspace on any device.
 - ● **[ux] One global link-set** — Logos has A/B/C link groups; here every
   linked panel joins the same set, so two independent linked pairs aren't
   possible.

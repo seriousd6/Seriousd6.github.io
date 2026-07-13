@@ -267,6 +267,19 @@ import Base from '../../layouts/Base.astro';
     }
     .ms-search-input:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 
+    /* ── Journal view (P10) ── */
+    .ms-journal-note { font-family: var(--font-ui); font-size: 0.84rem; color: var(--color-muted); margin: 0.2rem 0 1rem; }
+    .ms-journal-sec { margin-bottom: 1.6rem; }
+    .ms-journal-sec__head { display: flex; align-items: baseline; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 0.55rem; }
+    .ms-journal-sec__title { font-family: var(--font-ui); font-size: 1.02rem; font-weight: 750; margin: 0; }
+    .ms-journal-sec__open { font-family: var(--font-ui); font-size: 0.8rem; }
+    .ms-journal-date { font-family: var(--font-ui); font-size: 0.75rem; color: var(--color-muted); }
+    .ms-journal-body { font-family: var(--font-body); font-size: 0.94rem; line-height: 1.6; margin: 0.15rem 0 0.35rem; white-space: pre-line; }
+    .ms-journal-refs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.25rem 0; }
+    .ms-journal-ref { font-family: var(--font-ui); font-size: 0.78rem; border: 1px solid var(--color-border); border-radius: 999px; padding: 0.12rem 0.55rem; }
+    .ms-journal-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.25rem; }
+    .ms-journal-tag { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-muted); border: 1px solid var(--color-border); border-radius: 999px; padding: 0.08rem 0.5rem; }
+
     /* ── Verse cards ── */
     .ms-list { list-style: none; margin: 0; padding: 0; }
     .ms-card {
@@ -510,6 +523,7 @@ import Base from '../../layouts/Base.astro';
         <button class="ms-tab" data-tab="tags" role="tab" aria-selected="false" type="button">By Tag</button>
         <button class="ms-tab" data-tab="highlights" role="tab" aria-selected="false" type="button">By Highlight</button>
         <button class="ms-tab" data-tab="search" role="tab" aria-selected="false" type="button">Search</button>
+        <button class="ms-tab" data-tab="journal" role="tab" aria-selected="false" type="button">Journal</button>
       </div>
 
       <!-- Filter bar -->
@@ -782,8 +796,13 @@ import Base from '../../layouts/Base.astro';
       var main = document.getElementById('ms-main');
       main.innerHTML = '';
 
+      /* Verse filters don't apply to the journal view */
+      var filtersEl = document.querySelector('.ms-filters');
+      if (filtersEl) filtersEl.style.display = (_tab === 'journal') ? 'none' : '';
+
       if (_tab === 'tags')       { renderTagView(main); return; }
       if (_tab === 'highlights') { renderHlView(main);  return; }
+      if (_tab === 'journal')    { renderJournalView(main); return; }
 
       if (_tab === 'search') {
         var sinp = document.createElement('input');
@@ -1295,6 +1314,76 @@ import Base from '../../layouts/Base.astro';
         manage.appendChild(row);
       });
       parent.appendChild(manage);
+    }
+
+    /* ── Journal view (P10) ─────────────────────────────────────────────────── */
+    /* Read-only window into the Disciplines journal (bsw_journal) and study
+       reflections (bsw_reflections) so "where did I write that?" has one
+       answer. Entries are written and edited on the Disciplines page. */
+    function renderJournalView(parent) {
+      function loadArr(key) {
+        try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch (e) { return []; }
+      }
+      function fmtDate(sd) {
+        if (!sd) return '';
+        try {
+          return new Date(sd + 'T00:00:00').toLocaleDateString(undefined,
+            { month: 'short', day: 'numeric', year: 'numeric' });
+        } catch (e) { return sd; }
+      }
+      function section(title, entries, tabId, emptyMsg, passageField) {
+        var sec = mkEl('div', 'ms-journal-sec');
+        var head = mkEl('div', 'ms-journal-sec__head');
+        head.appendChild(mkEl('h2', 'ms-journal-sec__title', title + (entries.length ? ' (' + entries.length + ')' : '')));
+        var open = document.createElement('a');
+        open.className = 'ms-journal-sec__open';
+        open.href = '../discipline/?tab=' + tabId;
+        open.textContent = 'Open in Disciplines →';
+        head.appendChild(open);
+        sec.appendChild(head);
+        if (!entries.length) { sec.appendChild(mkEl('p', 'ms-empty', emptyMsg)); return sec; }
+        entries.slice()
+          .sort(function (a, b) { return String(b.date || '').localeCompare(String(a.date || '')); })
+          .forEach(function (e) {
+            var card  = mkEl('div', 'ms-card');
+            var inner = mkEl('div', 'ms-card__inner');
+            var h     = mkEl('div', 'ms-card__header');
+            h.appendChild(mkEl('span', 'ms-card__ref', e.title || (passageField && e[passageField]) || 'Untitled'));
+            h.appendChild(mkEl('span', 'ms-journal-date', fmtDate(e.date)));
+            inner.appendChild(h);
+            if (e.body) {
+              var bodyText = String(e.body);
+              inner.appendChild(mkEl('p', 'ms-journal-body',
+                bodyText.length > 280 ? bodyText.slice(0, 280) + '…' : bodyText));
+            }
+            var refs = passageField ? (e[passageField] ? [e[passageField]] : []) : (e.refs || []);
+            if (refs.length) {
+              var rr = mkEl('div', 'ms-journal-refs');
+              refs.forEach(function (r) {
+                var a = document.createElement('a');
+                a.className = 'ms-journal-ref';
+                a.href = '../read/?ref=' + encodeURIComponent(r);
+                a.textContent = r;
+                rr.appendChild(a);
+              });
+              inner.appendChild(rr);
+            }
+            if (e.tags && e.tags.length) {
+              var tr = mkEl('div', 'ms-journal-tags');
+              e.tags.forEach(function (t) { tr.appendChild(mkEl('span', 'ms-journal-tag', t)); });
+              inner.appendChild(tr);
+            }
+            card.appendChild(inner);
+            sec.appendChild(card);
+          });
+        return sec;
+      }
+      parent.appendChild(mkEl('p', 'ms-journal-note',
+        'Prayers and reflections are written on the Disciplines page — surfaced here so all your writing lives in one place.'));
+      parent.appendChild(section('Reflections', loadArr('bsw_reflections'), 'reflections',
+        'No reflections yet — write one from the Disciplines page.', 'passage'));
+      parent.appendChild(section('Prayer journal', loadArr('bsw_journal'), 'journal',
+        'No prayer entries yet — write one from the Disciplines page.', null));
     }
 
     /* ── By Highlight view ──────────────────────────────────────────────────── */
