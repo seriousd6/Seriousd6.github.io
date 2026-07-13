@@ -341,6 +341,16 @@ function _themeApply(theme) {
 }
 
 export function initTheme() {
+  // Live-follow theme changes made in OTHER windows: the storage event fires
+  // in every same-origin window except the one that wrote the key — exactly
+  // the Desk's panel iframes (and other open tabs) when the toggle is
+  // clicked. Registered unconditionally so panels obey the switch mid-session.
+  window.addEventListener('storage', function (e) {
+    if (e.key !== THEME_KEY) return;
+    if (e.newValue) { _themeApply(e.newValue); return; }
+    _themeApply(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  });
+
   var saved = localStorage.getItem(THEME_KEY);
   if (saved) { _themeApply(saved); return; }
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
