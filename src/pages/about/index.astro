@@ -39,11 +39,11 @@ import Base from '../../layouts/Base.astro';
     .about-callout p { margin: 0; }
 
     /* Data sources table */
-    .src-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; font-family: var(--font-ui); margin-bottom: 1.5rem; }
+    .src-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; font-family: var(--font-ui); margin-bottom: 1.5rem; display: block; overflow-x: auto; }
     .src-table th { background: var(--color-primary); color: #fff; padding: 0.45rem 0.7rem; text-align: left; font-weight: 600; }
     .src-table td { padding: 0.4rem 0.7rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
-    .src-table tr:nth-child(even) td { background: #faf7f2; }
-    .src-table tr:hover td { background: #f5efe3; }
+    .src-table tr:nth-child(even) td { background: color-mix(in srgb, var(--color-border) 22%, var(--color-surface)); }
+    .src-table tr:hover td { background: color-mix(in srgb, var(--color-border) 40%, var(--color-surface)); }
     .src-table a { color: var(--color-accent); }
     .src-table .cat-row td {
       background: #f2ece0; font-weight: 600; color: var(--color-primary);
@@ -60,7 +60,7 @@ import Base from '../../layouts/Base.astro';
 
     .workflow-card {
       border: 1px solid var(--color-border); border-radius: 8px;
-      background: #fffbf4; padding: 1rem 1.1rem;
+      background: var(--color-surface); padding: 1rem 1.1rem;
     }
     .workflow-card .wf-title {
       font-size: 0.95rem; font-weight: 700; color: var(--color-primary);
@@ -74,8 +74,7 @@ import Base from '../../layouts/Base.astro';
     .workflow-card .wf-path {
       font-size: 0.75rem; font-family: var(--font-mono);
       background: #ede8df; border-radius: 4px; padding: 3px 6px;
-      display: inline-block; margin-top: 0.25rem; color: #4a3520;
-    }
+      display: inline-block; margin-top: 0.25rem; color: #4a3520;; display: block; overflow-wrap: anywhere; word-break: break-all; }
     .workflow-card .wf-model {
       font-size: 0.72rem; font-family: var(--font-ui); color: var(--color-muted);
       margin-top: 0.5rem;

@@ -2683,7 +2683,8 @@ em.sw-dict-hi { font-style: normal; background: rgba(200,169,110,0.3); border-ra
   padding: 1.1rem 1.25rem 1.25rem;
   border: 2px solid var(--color-primary, #8b4513);
   border-radius: 10px;
-  background: var(--color-primary, #8b4513)06;
+  /* was `var(...)06` — invalid CSS, so the card rendered with no background */
+  background: color-mix(in srgb, var(--color-primary, #8b4513) 5%, var(--color-surface, #fff));
   max-width: 680px;
 }
 .sw-depth-prompt__title {

@@ -409,6 +409,18 @@
   line-height: 1.4;
 }
 
+/* Era nodes: year + count share a row (three stacked lines made each node
+   ~60px tall — taller than the spine could space them, so the crowded
+   post-Exodus eras overlapped each other's badges). */
+.tl2-era-node .tl2-node-text {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: .4rem;
+}
+.tl2-era-node .tl2-node-label { grid-column: 1 / -1; }
+.tl2-era-node .tl2-node-count { margin-top: 0; justify-self: start; }
+
 /* TLU-G: extrabiblical indicator on event nodes */
 .tl2-ev-arch { font-size: .6rem; opacity: .55; margin-left: .1rem; }
 

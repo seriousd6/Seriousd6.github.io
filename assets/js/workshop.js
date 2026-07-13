@@ -2211,8 +2211,12 @@ function _showDepthPrompt() {
     banner.remove();
   });
 
-  // Insert at the top of the page, before existing content
-  host.insertBefore(banner, host.firstChild);
+  // Above the passage-entry area (the thing it explains) — NOT at the top of
+  // .ws-page, which put it above the app's own topbar as a detached floating
+  // card. Falls back to page-top only if the entry area is ever renamed.
+  var anchor = document.getElementById('sw-passage-entry');
+  if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(banner, anchor);
+  else host.insertBefore(banner, host.firstChild);
 }
 function _applyDepth(level) {
   _depth = level;

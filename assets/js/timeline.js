@@ -114,8 +114,11 @@ function _makeController(cfg) {
 
     // TLU-H: separate pinned (consummation) from proportionally-positioned eras
     var yearNums  = eras.map(function(e) { return eraMin[e.id]; });
+    // 8.5% of the ~600px spine ≈ 51px — an era node (label + year + count
+    // badge) is ~48px tall, so 6% slots made the crowded post-Exodus eras
+    // overlap each other's badges.
     var raw       = _proportionalPositions(yearNums, 6);
-    var positions = _enforceMinGap(raw.slice(), 6);
+    var positions = _enforceMinGap(raw.slice(), 8.5);
 
     eras.forEach(function(era, i) {
       wrap.appendChild(_makeEraNode(era, positions[i], eraMin[era.id]));

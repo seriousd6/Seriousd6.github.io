@@ -401,7 +401,9 @@ import Base from '../../layouts/Base.astro';
         fetch(VERSIONS_URL).then(function (r) { return r.json(); }),
         fetch(BOOKS_URL).then(function (r) { return r.json(); }),
       ]).then(function (results) {
-        versions = results[0];
+        // Stub versions (stub:true) and version groups have no book JSON —
+        // rendering them meant 12 guaranteed 404s and 12 dead rows per verse.
+        versions = results[0].filter(function (v) { return !v.stub && !v.group && v.tier < 3; });
         bookMeta = results[1];
 
         // Build lookup: normalized name → bookId
