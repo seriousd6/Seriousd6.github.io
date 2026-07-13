@@ -201,6 +201,12 @@ function _fillBiblepedia(place) {
 export function initPlacePopup() {
   var results = document.getElementById('reader-results');
   if (!results) return;
+  // Registered globally so places.js's hover tooltip can route its link here
+  // (open the popup) instead of navigating to the maps page.
+  window.__bswOpenPlacePopup = function (id) {
+    var place = getPlace(id);
+    if (place) _openPlacePopup(place);
+  };
   // Capture phase, same reason as reader-wordtap.js: deeper reader handlers
   // stop propagation. Plain click only — modified clicks (new tab) keep the
   // anchor's own maps deep link.

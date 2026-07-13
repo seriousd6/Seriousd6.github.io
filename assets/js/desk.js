@@ -41,6 +41,7 @@ var _root    = null;   // layout tree root node
 var _rootEl  = null;   // #desk-root
 var _panels  = Object.create(null);   // panel id → element
 var _uid     = 1;
+var _maxId   = null;   // maximized panel id (transient — not persisted)
 
 function _nid() { return 'n' + (_uid++); }
 
@@ -82,6 +83,7 @@ function _findParent(node, id, parent) {
 function _splitPanel(panelId, dir, url, title) {
   var hit = _findParent(_root, panelId, null);
   if (!hit || hit.node.t !== 'p') return null;
+  _maxId = null;   // splitting implies working with the layout again
   var oldNode = hit.node;
   var fresh   = _panelNode(url || null, title);   // url omitted → chooser
   var split   = { t: 's', id: _nid(), d: dir, r: 0.5, a: oldNode, b: fresh };
@@ -96,6 +98,7 @@ function _splitPanel(panelId, dir, url, title) {
 function _closePanel(panelId) {
   var hit = _findParent(_root, panelId, null);
   if (!hit) return;
+  if (_maxId === panelId) _maxId = null;
   var el = _panels[panelId];
   if (el) { el.remove(); delete _panels[panelId]; }
   if (!hit.parent) {
@@ -145,6 +148,7 @@ function _buildPanelEl(node) {
         'aria-pressed="' + (node.link ? 'true' : 'false') + '">🔗</button>' +
       '<button class="desk-panel__btn" data-act="split-r" title="Split right" aria-label="Split right">◫</button>' +
       '<button class="desk-panel__btn" data-act="split-d" title="Split down" aria-label="Split down">⬓</button>' +
+      '<button class="desk-panel__btn desk-panel__btn--max" data-act="max" title="Maximize panel" aria-label="Maximize panel" aria-pressed="false">⛶</button>' +
       '<button class="desk-panel__btn" data-act="close" title="Close panel" aria-label="Close panel">✕</button>' +
     '</header>' +
     '<div class="desk-panel__body"></div>';
@@ -156,6 +160,10 @@ function _buildPanelEl(node) {
     if (act === 'split-r') _splitPanel(node.id, 'row');
     else if (act === 'split-d') _splitPanel(node.id, 'col');
     else if (act === 'close') _closePanel(node.id);
+    else if (act === 'max') {
+      _maxId = _maxId === node.id ? null : node.id;
+      _layout();
+    }
     else if (act === 'link') {
       node.link = !node.link;
       btn.setAttribute('aria-pressed', node.link ? 'true' : 'false');
@@ -255,6 +263,23 @@ function _layout() {
   var seen = Object.create(null);
   var narrow = window.innerWidth < 900;
 
+  // Maximize: the chosen panel gets the whole surface; the others stay
+  // mounted (hidden iframes keep their state) until restored.
+  if (_maxId && !narrow) {
+    var all = _collectPanels(_root, []);
+    var maxNode = all.filter(function (n) { return n.id === _maxId; })[0];
+    if (!maxNode) { _maxId = null; }
+    else {
+      all.forEach(function (n) {
+        seen[n.id] = 1;
+        if (n.id === _maxId) { _place(n, { x: 0, y: 0, w: W, h: H }); }
+        else if (_panels[n.id]) { _panels[n.id].classList.add('desk-panel--hidden'); }
+      });
+      _syncMaxButtons();
+      return;
+    }
+  }
+
   if (narrow) {
     // Phone / narrow: stack every panel full-width in tree order.
     var flat = [];
@@ -298,6 +323,14 @@ function _layout() {
   Object.keys(_panels).forEach(function (id) {
     if (!seen[id]) { _panels[id].remove(); delete _panels[id]; }
   });
+  _syncMaxButtons();
+}
+
+function _syncMaxButtons() {
+  Object.keys(_panels).forEach(function (id) {
+    var btn = _panels[id].querySelector('.desk-panel__btn--max');
+    if (btn) btn.setAttribute('aria-pressed', _maxId === id ? 'true' : 'false');
+  });
 }
 
 function _place(node, rect) {
@@ -307,6 +340,7 @@ function _place(node, rect) {
     _panels[node.id] = el;
     _rootEl.appendChild(el);
   }
+  el.classList.remove('desk-panel--hidden');
   el.style.cssText = 'left:' + rect.x + 'px;top:' + rect.y + 'px;width:' + rect.w + 'px;height:' + rect.h + 'px;';
 }
 

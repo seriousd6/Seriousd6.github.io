@@ -95,6 +95,12 @@
 }
 /* A panel that just received content from another panel's click */
 .desk-panel--flash { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+/* Non-maximized siblings stay mounted (hidden iframes keep state) */
+.desk-panel--hidden { display: none; }
+.desk-panel__btn--max[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  color: var(--color-accent);
+}
 .desk-panel__body { flex: 1; min-height: 0; position: relative; }
 .desk-panel__frame {
   width: 100%;

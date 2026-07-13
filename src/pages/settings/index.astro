@@ -80,6 +80,31 @@ import Base from '../../layouts/Base.astro';
       <p class="set-sub">Manage how this Bible study app stores data on your device.</p>
 
       <section class="set-section">
+        <h2 class="set-section__title">Home page</h2>
+        <p class="set-section__note">
+          On wide screens the site opens in the Desk — the multi-panel work surface. Turn this
+          off to land on the daily Today page instead; the Desk stays one click away in the
+          sidebar either way.
+        </p>
+        <label style="display:flex; align-items:center; gap:0.55rem; font-family:var(--font-ui); font-size:0.92rem; cursor:pointer;">
+          <input type="checkbox" id="set-desk-home">
+          Open the Desk as home on desktop
+        </label>
+        <script is:inline>
+          (function () {
+            var cb = document.getElementById('set-desk-home');
+            try { cb.checked = localStorage.getItem('bsw_desk_home') !== '0'; } catch (e) {}
+            cb.addEventListener('change', function () {
+              try {
+                if (cb.checked) localStorage.removeItem('bsw_desk_home');
+                else localStorage.setItem('bsw_desk_home', '0');
+              } catch (e) {}
+            });
+          })();
+        </script>
+      </section>
+
+      <section class="set-section">
         <h2 class="set-section__title">Offline data</h2>
         <p class="set-section__note">
           The app stays light by default — only the passages and resources you actually open are

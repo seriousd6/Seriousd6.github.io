@@ -210,9 +210,14 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   don't ping-pong. Each reader keeps its own version → side-by-side
   translation study.
 
-### D3 — candidates (not started)
-- Named layouts / presets ("Sermon prep", "Language study"), maximize toggle,
-  drag-to-rearrange panels.
-- Linked non-reader followers (maps fly to places, commentary follows ref).
-- A Settings toggle for the desk-as-home redirect (the localStorage flag is
-  already honored).
+### D3 — maximize, desk-home setting, tooltip → popup  ·  DONE 2026-07-13
+- Panel maximize toggle (⛶): the chosen panel takes the whole surface;
+  siblings stay mounted (hidden iframes keep their state) until restored.
+  Splitting or closing exits maximize. Transient — not persisted.
+- Settings → "Home page": "Open the Desk as home on desktop" checkbox wired
+  to the `bsw_desk_home` flag the / redirect already honors.
+- The reader's place hover-tooltip link now opens the place popup (mini-map,
+  article, explorer links) instead of navigating to the maps page; outside
+  the reader it stays a maps deep link. (Layout presets skipped per owner;
+  drag-to-rearrange and linked non-reader followers remain future
+  candidates.)

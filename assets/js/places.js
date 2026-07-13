@@ -248,6 +248,11 @@ export function hidePlaceTip() {
 function _showTip(anchor, place) {
   _buildTip();
   var mapLabel = place.mapId.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  // Where the reader's place popup is available (reader-place.js registers
+  // window.__bswOpenPlacePopup), the tooltip link opens THAT — the popup has
+  // the mini-map, article, and explorer links. Elsewhere it stays a plain
+  // maps deep link (href kept as the fallback either way).
+  var hasPopup = typeof window.__bswOpenPlacePopup === 'function';
   _tip.innerHTML =
     '<div class="bsw-place-tip__header">' +
       ''+
@@ -255,8 +260,17 @@ function _showTip(anchor, place) {
     '</div>' +
     '<p class="bsw-place-tip__desc">' + escHtml(place.desc) + '</p>' +
     '<a class="bsw-place-tip__link" href="' + escHtml(placeMapHref(place)) + '" target="_blank" rel="noopener">' +
-      'View on Map · ' + escHtml(mapLabel) + ' →' +
+      (hasPopup ? 'Place details →' : 'View on Map · ' + escHtml(mapLabel) + ' →') +
     '</a>';
+  if (hasPopup) {
+    _tip.querySelector('.bsw-place-tip__link').addEventListener('click', function (ev) {
+      if (ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.altKey || ev.button !== 0) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      hidePlaceTip();
+      window.__bswOpenPlacePopup(place.id);
+    });
+  }
 
   _tip.classList.add('bsw-place-tip--visible');
   _tip.setAttribute('aria-hidden', 'false');
