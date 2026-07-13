@@ -409,17 +409,17 @@
   line-height: 1.4;
 }
 
-/* Era nodes: year + count share a row (three stacked lines made each node
-   ~60px tall — taller than the spine could space them, so the crowded
-   post-Exodus eras overlapped each other's badges). */
+/* Era nodes (P18): row 1 = label + count badge, row 2 = the era's full time
+   span — two compact lines instead of three. */
 .tl2-era-node .tl2-node-text {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   column-gap: .4rem;
 }
-.tl2-era-node .tl2-node-label { grid-column: 1 / -1; }
-.tl2-era-node .tl2-node-count { margin-top: 0; justify-self: start; }
+.tl2-era-node .tl2-node-label { grid-column: 1; }
+.tl2-era-node .tl2-node-count { margin-top: 0; justify-self: start; grid-column: 2; }
+.tl2-era-node .tl2-node-year  { grid-column: 1 / -1; white-space: nowrap; }
 
 /* TLU-G: extrabiblical indicator on event nodes */
 .tl2-ev-arch { font-size: .6rem; opacity: .55; margin-left: .1rem; }
@@ -555,4 +555,22 @@
   :root:not([data-theme="light"]) .tl-detail-lib-chip               { color: #4fb3b3; border-color: #4fb3b3; }
   :root:not([data-theme="light"]) .tl-detail-crossover__label,
   :root:not([data-theme="light"]) .tl-detail-crossover__link        { color: #6baed6; }
+}
+
+/* ── Compact spines for short viewports (P18) ───────────────────────────────
+   Inside a desk panel (or any squat window) the %-positioned spine nodes
+   compress into each other. Below 640px of height the era and event columns
+   fall back to plain stacked flow — source order is already chronological. */
+@media (max-height: 640px) {
+  .tl2-era-node, .tl2-event-node {
+    position: static;
+    transform: none;
+  }
+  #tl2-eras-spine, #tl2-events-spine {
+    display: flex;
+    flex-direction: column;
+    gap: .05rem;
+    padding: .25rem 0;
+  }
+  .tl2-spine-wrap { min-height: 0; }
 }

@@ -234,7 +234,7 @@ export function initWordTap() {
     var rc = sel.getRangeAt(0).getBoundingClientRect();
     var anchorEl = sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode;
     e.preventDefault();
-    _openWordPopover(word, null, anchorEl && anchorEl.closest('.reader-verse'), { left: rc.left, bottom: rc.bottom });
+    _openWordPopover(word, null, anchorEl && anchorEl.closest('.reader-verse, .reader-compare-cell'), { left: rc.left, bottom: rc.bottom });
   });
 
   // Capture phase: reader.js's wireVerseTextHighlight listens on each verse
@@ -251,7 +251,7 @@ export function initWordTap() {
     if (!termEl &&
         e.target.closest('a, button, select, input, sup, [data-ref], .map-place, ' +
                          '.reader-echo-marker, .reader-verse__num, .reader-xref-note, [class*="il-"]')) return;
-    var verseEl = e.target.closest('.reader-verse');
+    var verseEl = e.target.closest('.reader-verse, .reader-compare-cell');
     if (!verseEl && !termEl) return;
     // The interlinear view owns word taps when active.
     var ilBtn = document.getElementById('reader-interlinear-btn');

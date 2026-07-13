@@ -103,10 +103,12 @@ function _makeController(cfg) {
     var wrap = document.getElementById('tl2-eras-spine');
     if (!wrap || !_data) return;
 
-    var eraMin = {};
+    var eraMin = {}, eraMax = {};
     _data.events.forEach(function(ev) {
       if (eraMin[ev.era] === undefined || ev.yearNum < eraMin[ev.era])
         eraMin[ev.era] = ev.yearNum;
+      if (eraMax[ev.era] === undefined || ev.yearNum > eraMax[ev.era])
+        eraMax[ev.era] = ev.yearNum;
     });
 
     var eras = _data.eras.filter(function(e) { return eraMin[e.id] !== undefined; });
@@ -121,11 +123,24 @@ function _makeController(cfg) {
     var positions = _enforceMinGap(raw.slice(), 8.5);
 
     eras.forEach(function(era, i) {
-      wrap.appendChild(_makeEraNode(era, positions[i], eraMin[era.id]));
+      wrap.appendChild(_makeEraNode(era, positions[i], eraMin[era.id], eraMax[era.id]));
     });
   }
 
-  function _makeEraNode(era, pct, minYear) {
+  function _fmtYear(y) {
+    return y < 0 ? Math.abs(y) + ' BC' : 'AD ' + y;
+  }
+
+  // "c. 4004–2350 BC" / "6 BC – AD 100" — era time span for the spine node.
+  function _fmtSpan(minY, maxY) {
+    if (minY == null || minY >= 9000) return '—';
+    if (maxY == null || maxY >= 9000 || maxY === minY) return 'c. ' + _fmtYear(minY);
+    if (minY < 0 && maxY < 0) return 'c. ' + Math.abs(minY) + '–' + Math.abs(maxY) + ' BC';
+    if (minY >= 0 && maxY >= 0) return 'c. AD ' + minY + '–' + maxY;
+    return 'c. ' + _fmtYear(minY) + ' – ' + _fmtYear(maxY);
+  }
+
+  function _makeEraNode(era, pct, minYear, maxYear) {
     var btn = document.createElement('button');
     btn.className     = 'tl2-era-node';
     btn.style.top     = pct + '%';
@@ -143,16 +158,11 @@ function _makeController(cfg) {
     lbl.className   = 'tl2-node-label';
     lbl.textContent = era.label;
 
-    // TLU-H: consummation era has minYear 9999 — show meaningful label
+    // TLU-H: consummation era has minYear 9999 — _fmtSpan shows '—'.
+    // P18: full era span ("c. 4004–2350 BC"), not just the first year.
     var yr = document.createElement('span');
     yr.className   = 'tl2-node-year';
-    if (minYear == null || minYear >= 9000) {
-      yr.textContent = '—';
-    } else {
-      yr.textContent = minYear < 0
-        ? 'c. ' + Math.abs(minYear) + ' BC'
-        : 'AD ' + minYear;
-    }
+    yr.textContent = _fmtSpan(minYear, maxYear);
 
     // TLU-G: event count badge
     var count = _data
@@ -163,8 +173,8 @@ function _makeController(cfg) {
     countBadge.textContent = count;
 
     text.appendChild(lbl);
-    text.appendChild(yr);
     text.appendChild(countBadge);
+    text.appendChild(yr);
     btn.appendChild(dot);
     btn.appendChild(text);
 

@@ -159,6 +159,8 @@ export function injectComparePanel(groups, cmpVer, resultsEl) {
       cellA.className = 'reader-compare-cell reader-compare-cell--a';
       cellA.dataset.verse = key;
       cellA.setAttribute('data-book', g.ref.bookName);
+      cellA.setAttribute('data-ch', String(vObj.chapter));
+      cellA.setAttribute('data-v', String(vObj.verse));
       var supA = document.createElement('sup');
       supA.className = 'reader-verse__num reader-compare-vnum';
       supA.textContent = String(vObj.verse);
@@ -198,6 +200,8 @@ export function injectComparePanel(groups, cmpVer, resultsEl) {
         cell.innerHTML = '';
         if (text) {
           cell.setAttribute('data-book', g.ref.bookName);
+          cell.setAttribute('data-ch', key2.split(':')[0]);
+          cell.setAttribute('data-v', vNum);
           var supB = document.createElement('sup');
           supB.className = 'reader-verse__num reader-compare-vnum';
           supB.textContent = vNum;
