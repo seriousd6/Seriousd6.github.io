@@ -12,9 +12,10 @@ import {
 import {
   getNotes, getNote, saveNote, toggleHighlight, getTags, addTag, removeTag,
   _HL_COLORS, createNoteV2, updateNoteV2, deleteNoteV2,
-  getNotesForVerse, _noteRelTime, _historyPush, _recordReadingDay
+  getNotesForVerse, _noteRelTime, _historyPush, _recordReadingDay,
+  isBookmarked, toggleBookmark
 } from './storage.js';
-import { wireRefEl, wireRefLinks, applyHighlights, applyModalHighlights } from './wire.js';
+import { wireRefEl, wireRefLinks, applyHighlights, applyModalHighlights, applyBookmarks } from './wire.js';
 
 var _backdropEl  = null;
 var _modalEl     = null;
@@ -138,6 +139,7 @@ export function buildModalDOM() {
       '<a class="bsw-modal__verse-study-link" href="#" hidden>Study this verse</a>' +
       '<a class="bsw-modal__compare-link" href="#" hidden>All translations ↗</a>' +
       '<button class="bsw-modal__memory-btn" hidden aria-label="Add to memory">☆ Memorize</button>' +
+      '<button class="bsw-modal__memory-btn bsw-modal__bookmark-btn" hidden aria-label="Bookmark this verse">☆ Bookmark</button>' +
       '<button class="bsw-modal__share-btn" hidden aria-label="Share verse as image">Share</button>' +
       '<button class="bsw-modal__close" aria-label="Close verse viewer">✕</button>' +
     '</div>' +
@@ -177,6 +179,16 @@ export function buildModalDOM() {
       if (_memAddFn) _memAddFn(ref);
     }
     if (_memRefreshFn) _memRefreshFn(ref);
+  });
+  modal.querySelector('.bsw-modal__bookmark-btn').addEventListener('click', function () {
+    var ref = this._bmRef;
+    if (!ref) return;
+    var on = toggleBookmark(ref);
+    this.textContent = on ? '★ Bookmarked' : '☆ Bookmark';
+    this.classList.toggle('bsw-modal__memory-btn--active', on);
+    // Refresh the reader's verse-number stars if a reader is on this page.
+    var rr = document.getElementById('reader-results');
+    if (rr) applyBookmarks(rr);
   });
   backdrop.addEventListener('click', function (e) {
     if (e.target === backdrop) hideModal();
@@ -423,6 +435,19 @@ export function renderModal(parsed, versionId) {
       memBtn.removeAttribute('hidden');
     } else {
       memBtn.setAttribute('hidden', '');
+    }
+  }
+  var bmBtn = _modalEl.querySelector('.bsw-modal__bookmark-btn');
+  if (bmBtn) {
+    if (isSingleVerse) {
+      var bmRef = parsed.bookName + ' ' + parsed.ch + ':' + parsed.v;
+      var bmOn  = isBookmarked(bmRef);
+      bmBtn._bmRef = bmRef;
+      bmBtn.textContent = bmOn ? '★ Bookmarked' : '☆ Bookmark';
+      bmBtn.classList.toggle('bsw-modal__memory-btn--active', bmOn);
+      bmBtn.removeAttribute('hidden');
+    } else {
+      bmBtn.setAttribute('hidden', '');
     }
   }
   var shareBtn = _modalEl.querySelector('.bsw-modal__share-btn');

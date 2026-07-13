@@ -754,6 +754,44 @@
 .search-answers-card span { color: var(--color-muted, #7a6a55); font-size: 0.86rem; }
 .search-answers-card:hover { text-decoration: none; border-color: var(--color-accent, #7a6222); }
 
+/* P8: inline key verses under the answers card (search integration) */
+.search-answers-panel { margin: 0 0 0.8rem; }
+.search-answers-panel .search-answers-card { margin: 0; }
+.search-answers-panel:has(.search-answers-verses) .search-answers-card {
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+.search-answers-verses {
+  border: 1px solid var(--color-primary, #55682f);
+  border-top: 1px dashed var(--color-border, #e0d5c4);
+  border-radius: 0 0 10px 10px;
+  background: var(--color-surface, #fff);
+  padding: 0.15rem 0.95rem 0.7rem;
+}
+.search-answers-verse {
+  padding: 0.55rem 0 0.4rem;
+  border-bottom: 1px dashed var(--color-border, #e0d5c4);
+}
+.search-answers-verse:last-of-type { border-bottom: none; }
+.search-answers-verse blockquote {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.search-answers-verse cite {
+  font-style: normal;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.search-answers-more {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+}
+
 .omni-none {
   font-size: 0.85rem;
   color: var(--color-muted, #7a6a55);

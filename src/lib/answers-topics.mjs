@@ -135,6 +135,9 @@ export function buildAnswerTopics() {
     topics.push({ slug: key, title: key.toUpperCase(), verses: rankWithPins(key, refs, canon, MAX_GENERATED), generated: true });
   }
 
-  _cache = topics;
-  return topics;
+  // Nave has a couple of duplicate heads (SIN, REVERENCE); first wins so the
+  // page and key.json routes never emit conflicting-path warnings.
+  const seenSlugs = new Set();
+  _cache = topics.filter(t => !seenSlugs.has(t.slug) && seenSlugs.add(t.slug));
+  return _cache;
 }

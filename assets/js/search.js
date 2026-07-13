@@ -634,9 +634,22 @@ export function handleSearchInput(query) {
   }
 }
 
-// ── Answers card ──────────────────────────────────────────────────────────
-// A topical query whose /answers/ page exists gets that page offered FIRST,
-// above the raw verse list — the curated answer beats 400 hits.
+// ── Answers panel ─────────────────────────────────────────────────────────
+// A topical query whose /answers/ page exists gets its curated key verses
+// rendered INLINE above the raw verse list (P8) — the answer comes to the
+// search instead of sending the user away. The header links to the full
+// topic page; each verse is a live .ref (verse modal on tap). The ranked ref
+// list comes from the per-topic key.json; text resolves from the client's
+// cached BSB books.
+var _answersKeyCache = Object.create(null);
+function _loadAnswersKey(slug) {
+  if (_answersKeyCache[slug]) return _answersKeyCache[slug];
+  _answersKeyCache[slug] = fetch('/answers/' + slug + '/key.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; });
+  return _answersKeyCache[slug];
+}
+
 function _maybeAnswersCard(query, gen) {
   var slug = query.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   if (!slug || slug.length < 3) return;
@@ -644,13 +657,60 @@ function _maybeAnswersCard(query, gen) {
     if (!slugs || !slugs.has(slug)) return;
     if (gen !== _searchGeneration) return;
     var out = document.getElementById('bsw-search-output');
-    if (!out || out.querySelector('.search-answers-card')) return;
-    var card = document.createElement('a');
-    card.className = 'search-answers-card';
-    card.href = '/answers/' + slug + '/';
-    card.innerHTML = 'What does the Bible say about <b>' + escHtml(query.toLowerCase()) + '</b>?' +
-      ' <span>— the full topic page with key verses →</span>';
-    out.insertBefore(card, out.firstChild);
+    if (!out || out.querySelector('.search-answers-panel')) return;
+
+    // Shell first: the link card works even if key.json can't be fetched.
+    var panel = document.createElement('div');
+    panel.className = 'search-answers-panel';
+    panel.innerHTML =
+      '<a class="search-answers-card" href="/answers/' + slug + '/">' +
+        'What does the Bible say about <b>' + escHtml(query.toLowerCase()) + '</b>?' +
+        ' <span>— full topic page →</span></a>';
+    out.insertBefore(panel, out.firstChild);
+
+    _loadAnswersKey(slug).then(function (key) {
+      if (!key || !key.refs || !key.refs.length) return;
+      if (gen !== _searchGeneration || !panel.isConnected) return;
+      // Resolve up to 4 single-verse refs against the current version.
+      var version = getVersion();
+      var parsed = [];
+      key.refs.forEach(function (ref) {
+        if (parsed.length >= 8) return;
+        var pr = parseRef(ref);
+        if (pr && pr.v) parsed.push({ ref: ref, pr: pr });
+      });
+      if (!parsed.length) return;
+      var books = {};
+      parsed.forEach(function (it) { books[it.pr.bookId] = true; });
+      Promise.all(Object.keys(books).map(function (id) {
+        return loadBook(version, id)
+          .then(function (ch) { books[id] = ch; })
+          .catch(function () { books[id] = null; });
+      })).then(function () {
+        if (gen !== _searchGeneration || !panel.isConnected) return;
+        var cards = [];
+        parsed.forEach(function (it) {
+          if (cards.length >= 4) return;
+          var ch = books[it.pr.bookId];
+          var text = ch && ch[String(it.pr.ch)] && ch[String(it.pr.ch)][String(it.pr.v)];
+          if (!text) return;
+          cards.push(
+            '<div class="search-answers-verse">' +
+              '<blockquote>“' + escHtml(text) + '”</blockquote>' +
+              '<cite>— <a class="ref" data-ref="' + escHtml(it.ref) + '">' + escHtml(it.ref) + '</a></cite>' +
+            '</div>');
+        });
+        if (!cards.length) return;
+        var wrap = document.createElement('div');
+        wrap.className = 'search-answers-verses';
+        wrap.innerHTML = cards.join('') +
+          (key.n > cards.length
+            ? '<a class="search-answers-more" href="/answers/' + slug + '/">All ' + key.n + ' references →</a>'
+            : '');
+        panel.appendChild(wrap);
+        wireRefLinks(wrap);
+      });
+    });
   });
 }
 
