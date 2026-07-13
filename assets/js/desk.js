@@ -19,6 +19,7 @@
 import { resourcePrefix } from './desk-frame.js';
 
 var LS_KEY  = 'bsw_desk_layout_v1';
+var NAMES_KEY = 'bsw_desk_layouts_v1';   // named layouts: { name: strippedTree }
 var GUTTER  = 6;      // divider thickness, px
 var MIN_R   = 0.12;   // divider drag clamp
 
@@ -69,6 +70,74 @@ function _load() {
       n.id = _nid();
       if (n.t === 's') { walk(n.a); walk(n.b); }
     })(tree);
+    return tree;
+  } catch (e) { return null; }
+}
+
+// ── Named + shareable layouts (P9) ──────────────────────────────────────────
+// A stripped tree carries only shape + urls (ids and per-panel history are
+// session state). _reviveTree validates everything on the way back in — a
+// shared #z= link is untrusted input, so panel urls must be same-origin
+// absolute paths.
+function _stripTree(n) {
+  if (n.t === 's') return { t: 's', d: n.d, r: n.r, a: _stripTree(n.a), b: _stripTree(n.b) };
+  return { t: 'p', url: n.url, title: n.title };
+}
+function _reviveTree(n) {
+  if (!n || (n.t !== 's' && n.t !== 'p')) throw new Error('bad node');
+  if (n.t === 's') {
+    return { t: 's', id: _nid(), d: n.d === 'col' ? 'col' : 'row',
+             r: Math.min(0.88, Math.max(0.12, +n.r || 0.5)),
+             a: _reviveTree(n.a), b: _reviveTree(n.b) };
+  }
+  var url = (typeof n.url === 'string' && n.url.charAt(0) === '/' && n.url.charAt(1) !== '/') ? n.url : null;
+  return { t: 'p', id: _nid(), url: url, title: String(n.title || '') };
+}
+function _namedLayouts() {
+  try { return JSON.parse(localStorage.getItem(NAMES_KEY) || '{}'); } catch (e) { return {}; }
+}
+function _setNamedLayouts(map) {
+  try { localStorage.setItem(NAMES_KEY, JSON.stringify(map)); } catch (e) {}
+}
+// Swap the whole surface to a new tree (named-layout load, shared link).
+function _applyTree(tree) {
+  Object.keys(_panels).forEach(function (id) { _panels[id].remove(); delete _panels[id]; });
+  _maxId = null;
+  _mobileActive = null;
+  _root = tree;
+  _layout();
+  _save();
+}
+function _shareLink() {
+  var json = JSON.stringify(_stripTree(_root));
+  var b64  = btoa(unescape(encodeURIComponent(json)))
+    .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  return location.origin + '/desk/#z=' + b64;
+}
+// /desk/#bible+maps (resource keys) or /desk/#z=<b64 tree> from "Copy share
+// link". Returns null when the hash is absent or unusable.
+function _treeFromHash() {
+  var h = location.hash.replace(/^#/, '');
+  if (!h) return null;
+  try {
+    if (h.indexOf('z=') === 0) {
+      var b = h.slice(2).replace(/-/g, '+').replace(/_/g, '/');
+      return _reviveTree(JSON.parse(decodeURIComponent(escape(atob(b)))));
+    }
+    var nodes = [];
+    decodeURIComponent(h).split('+').forEach(function (k) {
+      k = k.toLowerCase().trim();
+      if (!k) return;
+      var res = RESOURCES.filter(function (r) {
+        return r.k === k || r.url.split('/').filter(Boolean)[0] === k;
+      })[0];
+      if (res) nodes.push(_panelNode(res.url, res.label));
+    });
+    if (!nodes.length) return null;
+    var tree = nodes[nodes.length - 1];
+    for (var i = nodes.length - 2; i >= 0; i--) {
+      tree = { t: 's', id: _nid(), d: 'row', r: 1 / (nodes.length - i), a: nodes[i], b: tree };
+    }
     return tree;
   } catch (e) { return null; }
 }
@@ -718,11 +787,99 @@ function _barDragStart(e, srcId) {
 }
 
 // ── Init ────────────────────────────────────────────────────────────────────
+// ── Layouts menu (P9) ───────────────────────────────────────────────────────
+var _layMenuEl = null;
+
+function _renderLayoutsMenu() {
+  var saved = _namedLayouts();
+  var names = Object.keys(saved).sort();
+  _layMenuEl.innerHTML =
+    (names.length
+      ? names.map(function (n) {
+          return '<div class="desk-lay-row">' +
+            '<button type="button" class="desk-lay-load" data-n="' + _esc(n) + '">' + _esc(n) + '</button>' +
+            '<button type="button" class="desk-lay-del" data-n="' + _esc(n) + '" aria-label="Delete layout ' + _esc(n) + '">✕</button>' +
+          '</div>';
+        }).join('')
+      : '<p class="desk-lay-empty">No saved layouts yet.</p>') +
+    '<div class="desk-lay-saverow">' +
+      '<input type="text" class="desk-lay-name" placeholder="Layout name" maxlength="40" aria-label="Layout name">' +
+      '<button type="button" class="desk-lay-savebtn">Save</button>' +
+    '</div>' +
+    '<button type="button" class="desk-lay-share">Copy share link</button>';
+
+  _layMenuEl.querySelectorAll('.desk-lay-load').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var tree = _namedLayouts()[btn.getAttribute('data-n')];
+      if (!tree) return;
+      try { _applyTree(_reviveTree(tree)); } catch (e) { return; }
+      _closeLayoutsMenu();
+    });
+  });
+  _layMenuEl.querySelectorAll('.desk-lay-del').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var map = _namedLayouts();
+      delete map[btn.getAttribute('data-n')];
+      _setNamedLayouts(map);
+      _renderLayoutsMenu();
+    });
+  });
+  var nameInput = _layMenuEl.querySelector('.desk-lay-name');
+  var saveIt = function () {
+    var name = nameInput.value.trim();
+    if (!name) { nameInput.focus(); return; }
+    var map = _namedLayouts();
+    map[name] = _stripTree(_root);
+    _setNamedLayouts(map);
+    _renderLayoutsMenu();
+  };
+  _layMenuEl.querySelector('.desk-lay-savebtn').addEventListener('click', saveIt);
+  nameInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') saveIt(); });
+  var shareBtn = _layMenuEl.querySelector('.desk-lay-share');
+  shareBtn.addEventListener('click', function () {
+    var link = _shareLink();
+    var ok = function () { shareBtn.textContent = 'Copied ✓'; setTimeout(function () { shareBtn.textContent = 'Copy share link'; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(link).then(ok, function () { window.prompt('Share this layout:', link); });
+    } else {
+      window.prompt('Share this layout:', link);
+    }
+  });
+}
+
+function _closeLayoutsMenu() {
+  if (_layMenuEl) { _layMenuEl.remove(); _layMenuEl = null; }
+}
+
+function _toggleLayoutsMenu(anchorBtn) {
+  if (_layMenuEl) { _closeLayoutsMenu(); return; }
+  _layMenuEl = document.createElement('div');
+  _layMenuEl.className = 'desk-lay-menu';
+  _renderLayoutsMenu();
+  anchorBtn.parentNode.appendChild(_layMenuEl);
+  var r = anchorBtn.getBoundingClientRect();
+  _layMenuEl.style.top   = (r.bottom + 6) + 'px';
+  _layMenuEl.style.right = Math.max(8, window.innerWidth - r.right) + 'px';
+  setTimeout(function () {
+    document.addEventListener('pointerdown', function outside(e) {
+      if (_layMenuEl && !_layMenuEl.contains(e.target) && e.target !== anchorBtn) {
+        _closeLayoutsMenu();
+        document.removeEventListener('pointerdown', outside);
+      }
+    });
+  }, 0);
+}
+
 export function initDesk() {
   _rootEl = document.getElementById('desk-root');
   if (!_rootEl) return;
-  _root = _load() || _defaultLayout();
+  var fromHash = _treeFromHash();
+  _root = fromHash || _load() || _defaultLayout();
   _layout();
+  if (fromHash) {
+    _save();   // a shared layout becomes the working layout
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  }
   window.addEventListener('message', _onFrameMessage);
 
   // Shortcuts while the Desk document itself has focus (chrome, dividers);
@@ -738,6 +895,8 @@ export function initDesk() {
 
   var addBtn = document.getElementById('desk-add-btn');
   if (addBtn) addBtn.addEventListener('click', _addPanelToRoot);
+  var layBtn = document.getElementById('desk-layouts-btn');
+  if (layBtn) layBtn.addEventListener('click', function () { _toggleLayoutsMenu(layBtn); });
   var resetBtn = document.getElementById('desk-reset-btn');
   if (resetBtn) resetBtn.addEventListener('click', function () {
     Object.keys(_panels).forEach(function (id) { _panels[id].remove(); delete _panels[id]; });

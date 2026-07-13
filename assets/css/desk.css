@@ -277,3 +277,73 @@
   .desk-toolbar__hint { display: none; }
   .desk-panel { border-radius: 0; border-left: none; border-right: none; }
 }
+
+/* ── Layouts menu (P9) ─────────────────────────────────────────────────── */
+.desk-lay-menu {
+  position: fixed;
+  z-index: 60;
+  min-width: 240px;
+  max-width: 320px;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-card, 0 6px 24px rgba(0,0,0,.14));
+  padding: 0.55rem;
+  font-family: var(--font-ui);
+}
+.desk-lay-row { display: flex; align-items: center; gap: 0.3rem; }
+.desk-lay-load {
+  flex: 1;
+  text-align: left;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.desk-lay-load:hover { background: color-mix(in srgb, var(--color-primary) 10%, transparent); }
+.desk-lay-del {
+  border: none;
+  background: none;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  border-radius: 6px;
+}
+.desk-lay-del:hover { color: var(--color-danger, #a33); background: color-mix(in srgb, currentColor 10%, transparent); }
+.desk-lay-empty { margin: 0.1rem 0.2rem 0.4rem; font-size: 0.82rem; color: var(--color-muted); }
+.desk-lay-saverow {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.45rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+.desk-lay-name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg, transparent);
+  color: var(--color-text);
+}
+.desk-lay-savebtn, .desk-lay-share {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 650;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.desk-lay-savebtn:hover, .desk-lay-share:hover { border-color: var(--color-primary); }
+.desk-lay-share { display: block; width: 100%; margin-top: 0.45rem; }
