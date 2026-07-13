@@ -245,3 +245,31 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   exempt. Toolbar hint documents them.
 - Desk panels also follow live Dark/Light toggles now (storage-event theme
   sync in initTheme — covers other open tabs too).
+
+## Re-evaluation — 2026-07-13
+
+Second outsider pass, same method as the 2026-07-12 evaluation: cold profile,
+real browser, natural questions, feature hunting without insider knowledge.
+(One regression was caught and fixed during the pass itself: desktop
+first-runs landed on the Desk without the welcome card — it rendered inside
+the Today panel instead. Framed pages no longer onboard; the Desk does.)
+
+| Dimension | Was | Now | What changed |
+|---|---|---|---|
+| Content breadth | A | **A** | Unchanged (plus 20 region gazetteer entries) |
+| Reading experience | A− | **A** | Every noun is now a hub: word taps (lexeme + highlight), term taps (article), place taps (era-aware map popup) — all quiet until touched |
+| Study depth | B+ | **A−** | The Desk: independent readers, linked navigation, compare + maps followers, drag-to-rearrange, shortcuts — genuine parallel study |
+| Discovery & search | C | **A−** | Question kernels, Omni fallback, 4,674 answer pages, indexed verse search (1 chunk + top-result books vs 66-book scans) |
+| Feature discoverability | C+ | **B+** | Apparatus rail chips, /tour/, onboarding with tour CTA (now on the Desk too), 12-resource panel chooser. Gap: panel linking itself needs a first-use hint |
+| Practice loop | B+ | **A−** | Today is the Desk's default first panel — the daily loop sits beside the text instead of behind a nav click |
+| Mobile | B− | **B+** | H4 audit: axe clean ×11, overflows fixed, tap targets ≥32px. Desk degrades to a stacked feed — serviceable, not a surface |
+| Performance & offline | A− | **A−** | Search is dramatically cheaper; but desk-as-home loads two full pages cold (~2.3 MB uncompressed) — panel weight is the new cost to watch |
+| Trust & provenance | A− | **A−** | Unchanged |
+| **Work surface** (new) | — | **A−** | Splits, linking, followers, re-dock, maximize, shortcuts, persistence. Gaps: named layouts, per-panel memory cost, no phone surface |
+
+**Overall: B+ → A−.** The two C-grade failures that defined the first
+evaluation — a stranger's first question dead-ending, and the depth hiding
+behind popovers — are gone, and the site now has a work surface none of the
+free competitors have. What separates it from an A: mobile is corrected
+rather than designed-for, desk panel weight (each panel is a full page),
+linking discoverability, and search ranking still being literal-match.

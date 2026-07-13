@@ -5,6 +5,11 @@ import { _resolve, SW_URL, MANIFEST_URL, SITE_ROOT, READER_URL, escHtml, metaBoo
 
 export function _initOnboarding() {
   if (localStorage.getItem('bsw_onboarded')) return;
+  // Never onboard inside an embedded frame (a Desk panel, ?minimal=1): the
+  // host page owns first-run. Without this, a cold visitor to the Desk got
+  // the welcome card squeezed inside the Today panel instead of over the
+  // surface.
+  try { if (window.self !== window.top) return; } catch (e) { return; }
   var overlay = document.createElement('div');
   overlay.className = 'bsw-onboard-overlay';
   var readerUrl  = READER_URL;
