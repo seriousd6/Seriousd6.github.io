@@ -40,16 +40,31 @@ export function decodeVerseId(id) {
   return { bookIdx: id >> 16, ch: (id >> 8) & 0xff, v: id & 0xff };
 }
 
-// One word → { verseId: bestMatchWeight } across every token containing it.
-// Weights: exact token 4, token starts with the word 2, substring 1.
+// Light stemmer (A3): enough to connect a query's inflection to the text's
+// ("loving" ↔ "loved" ↔ "love") without a real morphology pass. Suffix
+// strip + trailing-e drop; short words pass through.
+export function stemWord(w) {
+  if (w.length > 4 && /ies$/.test(w)) return w.slice(0, -3) + 'y';
+  var s = w.replace(/(ing|ed|es|ly|s)$/, '');
+  if (s.length < 3) s = w;
+  return s.replace(/e$/, '');
+}
+
+// One word → { verseId: bestMatchWeight } across every token containing it
+// or sharing its stem. Weights: exact 4, stem match 3, prefix 2, substring 1.
 function _wordMatches(version, word) {
   var letter = /^[a-z]/.test(word) ? word[0] : '0';
+  var qStem = stemWord(word);
   return _loadChunk(version, letter).then(function (tokens) {
     if (!tokens) return null;
     var hits = Object.create(null);
     for (var tok in tokens) {
-      if (tok.indexOf(word) === -1) continue;
-      var w = tok === word ? 4 : (tok.indexOf(word) === 0 ? 2 : 1);
+      var w;
+      if (tok === word) w = 4;
+      else if (stemWord(tok) === qStem) w = 3;
+      else if (tok.indexOf(word) === 0) w = 2;
+      else if (tok.indexOf(word) !== -1) w = 1;
+      else continue;
       var ids = _decode(tokens[tok]);
       for (var i = 0; i < ids.length; i++) {
         if (!(hits[ids[i]] >= w)) hits[ids[i]] = w;
@@ -59,17 +74,38 @@ function _wordMatches(version, word) {
   });
 }
 
-// words: lowercase, length ≥ 2, apostrophes normalized (’ → ').
-// allowedBookIdx: Set of book indexes (testament/book filter), or null for all.
-// Resolves [{id, bookIdx, ch, v, weight}] sorted by weight desc, or null when
-// the index can't serve this query.
-export function searchIndexLookup(version, words, allowedBookIdx) {
+// groups: one entry per query word, each an array of alternatives
+// [{ w: 'anxiety', syn: false }, { w: 'worry', syn: true }, …] — lowercase,
+// length ≥ 2, apostrophes normalized (’ → '). Alternatives OR within a
+// group (synonym weights halved); groups AND across.
+// allowedBookIdx: Set of book indexes (testament/book filter), or null.
+// Resolves [{id, bookIdx, ch, v, weight}] sorted by weight desc, or null
+// when the index can't serve this query.
+export function searchIndexLookup(version, groups, allowedBookIdx) {
   if (!INDEXED_VERSIONS[version]) return Promise.resolve(null);
-  if (!words.length) return Promise.resolve(null);
-  return Promise.all(words.map(function (w) { return _wordMatches(version, w); }))
+  if (!groups.length) return Promise.resolve(null);
+
+  function groupMatches(group) {
+    return Promise.all(group.map(function (alt) { return _wordMatches(version, alt.w); }))
+      .then(function (maps) {
+        if (!maps[0]) return null;   // the primary word's chunk must load
+        var merged = Object.create(null);
+        maps.forEach(function (m, i) {
+          if (!m) return;
+          var syn = group[i].syn;
+          for (var idStr in m) {
+            var w = syn ? Math.max(1, Math.round(m[idStr] / 2)) : m[idStr];
+            if (!(merged[idStr] >= w)) merged[idStr] = w;
+          }
+        });
+        return merged;
+      });
+  }
+
+  return Promise.all(groups.map(groupMatches))
     .then(function (maps) {
       for (var m = 0; m < maps.length; m++) if (!maps[m]) return null;   // fallback
-      // AND-intersect: a verse must match every word; weight = sum.
+      // AND-intersect: a verse must match every group; weight = sum.
       var out = [];
       var first = maps[0];
       for (var idStr in first) {

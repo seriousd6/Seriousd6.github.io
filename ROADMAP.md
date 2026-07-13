@@ -306,6 +306,6 @@ The layout tree is shared with desktop — only the presentation differs.
 Follow with a phone pass over the tour and answers pages.
 
 - A1 — **DONE** (2026-07-13): framed pages skip the PWA layer + history widget; cold two-panel desk landing dropped 2,291 KB → 424 KB (−82%).
-- A2 — pending
-- A3 — pending
-- A4 — pending
+- A2 — **DONE** (2026-07-13): one-time 🔗 hint when two linkable panels exist and none is linked; retires on dismiss or first link.
+- A3 — **DONE** (2026-07-13): query-side stemming ("loving" → 631 matches incl. love/loved) weighted between exact and prefix; 18-entry synonym table OR-expands (anxiety → anxious/worry/worried/cares, 106 matches) with an "Also searched related words" note.
+- A4 — **DONE** (2026-07-13): narrow Desk is one panel + a bottom tab strip; panels lazy-build on first tab tap and stay mounted after (state kept); add/split focus the new chooser tab.

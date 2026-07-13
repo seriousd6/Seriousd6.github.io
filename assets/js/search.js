@@ -459,12 +459,47 @@ export function handleSearchInput(query) {
     .split(/[^a-z']+/)
     .map(function (w) { return w.replace(/^'+|'+$/g, ''); })
     .filter(function (w) { return w.length >= 2; });
+
+  // A3: curated synonym expansions — the gap between how people ask and how
+  // the text says it. Applied as OR-alternatives (half weight) within each
+  // word's group; skipped for quoted-phrase queries (the phrase is verified
+  // literally). Surfaced to the user in a note under the results.
+  var SYNONYMS = {
+    anxiety:     ['anxious', 'worry', 'worried', 'cares'],
+    worry:       ['anxious', 'anxiety', 'cares'],
+    anxious:     ['anxiety', 'worry', 'cares'],
+    money:       ['riches', 'wealth', 'mammon'],
+    wealth:      ['riches', 'money', 'mammon'],
+    anger:       ['wrath', 'angry'],
+    fear:        ['afraid', 'dread', 'terror'],
+    afraid:      ['fear', 'dread'],
+    forgiveness: ['forgive', 'forgiven', 'pardon'],
+    marriage:    ['marry', 'wife', 'husband'],
+    salvation:   ['saved', 'save', 'deliverance'],
+    prayer:      ['pray', 'praying', 'supplication'],
+    joy:         ['rejoice', 'gladness', 'glad'],
+    sin:         ['iniquity', 'transgression', 'trespass'],
+    death:       ['die', 'died', 'grave'],
+    heaven:      ['heavens', 'paradise'],
+    work:        ['labor', 'toil', 'deeds'],
+    friendship:  ['friend', 'friends', 'companion'],
+  };
+  var synUsed = [];
+  var idxGroups = idxWords.map(function (w) {
+    var group = [{ w: w, syn: false }];
+    if (!literal && SYNONYMS[w]) {
+      SYNONYMS[w].forEach(function (s) { group.push({ w: s, syn: true }); });
+      synUsed.push(w + ' → ' + SYNONYMS[w].join(', '));
+    }
+    return group;
+  });
+
   var allowed = booksToSearch.length === books.length
     ? null
     : new Set(booksToSearch.map(function (b) { return bookOrder[b.id]; }));
   var INDEX_CAP = 400;
 
-  searchIndexLookup(version, idxWords, allowed).then(function (matches) {
+  searchIndexLookup(version, idxGroups, allowed).then(function (matches) {
     if (gen !== _searchGeneration) return;
     if (!matches) { _legacyScan(); return; }
     if (!matches.length) {
@@ -516,13 +551,20 @@ export function handleSearchInput(query) {
       _lastSearchResults = results;
       _lastSearchQuery   = query;
       renderSearchResults(results, query);
-      if (matches.length > taken) {
-        var out = document.getElementById('bsw-search-output');
-        if (out && results.length) {
+      var out = document.getElementById('bsw-search-output');
+      if (out && results.length) {
+        var noteBits = [];
+        if (matches.length > taken) {
+          noteBits.push('Showing the strongest ' + results.length + ' of ' +
+            matches.length + ' matching verses — use the OT / NT / Book filters to narrow the rest.');
+        }
+        if (synUsed.length) {
+          noteBits.push('Also searched related words: ' + synUsed.join(' · ') + '.');
+        }
+        if (noteBits.length) {
           var note = document.createElement('p');
           note.className = 'search-index-note';
-          note.textContent = 'Showing the strongest ' + results.length + ' of ' +
-            matches.length + ' matching verses — use the OT / NT / Book filters to narrow the rest.';
+          note.textContent = noteBits.join(' ');
           out.insertBefore(note, out.firstChild);
         }
       }

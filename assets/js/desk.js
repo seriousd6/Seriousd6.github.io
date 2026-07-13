@@ -86,6 +86,7 @@ function _splitPanel(panelId, dir, url, title) {
   _maxId = null;   // splitting implies working with the layout again
   var oldNode = hit.node;
   var fresh   = _panelNode(url || null, title);   // url omitted → chooser
+  if (window.innerWidth < 900) _mobileActive = fresh.id;
   var split   = { t: 's', id: _nid(), d: dir, r: 0.5, a: oldNode, b: fresh };
   if (!hit.parent) _root = split;
   else if (hit.parent.a === oldNode) hit.parent.a = split;
@@ -145,6 +146,7 @@ function _dockNode(node, targetId, quad) {
 function _addPanelToRoot() {
   var fresh = _panelNode(null);
   _root = { t: 's', id: _nid(), d: 'row', r: 0.62, a: _root, b: fresh };
+  if (window.innerWidth < 900) _mobileActive = fresh.id;   // show the chooser
   _layout();
   _save();
 }
@@ -194,6 +196,7 @@ function _buildPanelEl(node) {
     if (act === 'link') {
       node.link = !node.link;
       btn.setAttribute('aria-pressed', node.link ? 'true' : 'false');
+      _retireLinkHint();   // the feature has been discovered
       _save();
     } else {
       _panelAction(node.id, act);
@@ -226,6 +229,8 @@ function _mountFrame(el, node) {
         node.title = t.replace(/\s+—.*$/, '');
         var tEl = el.querySelector('.desk-panel__title');
         if (tEl) tEl.textContent = node.title;
+        var tabBtn = _rootEl && _rootEl.querySelector('.desk-tab-btn[data-id="' + node.id + '"]');
+        if (tabBtn) tabBtn.textContent = node.title;
       }
     } catch (e) {}
     // The link toggle means something on Bible panels (follow navigation)
@@ -235,6 +240,7 @@ function _mountFrame(el, node) {
       var rp = resourcePrefix(node.url || '');
       linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare';
     }
+    _maybeLinkHint();
     _save();
   });
   body.appendChild(frame);
@@ -313,16 +319,26 @@ function _layout() {
     }
   }
 
+  var oldTabbar = _rootEl.querySelector('.desk-tabbar');
+  if (oldTabbar) oldTabbar.remove();
+
   if (narrow) {
-    // Phone / narrow: stack every panel full-width in tree order.
-    var flat = [];
-    (function collect(n) { if (n.t === 'p') flat.push(n); else { collect(n.a); collect(n.b); } })(_root);
-    var PH = Math.max(340, Math.round(window.innerHeight * 0.72));
-    _rootEl.style.height = (flat.length * (PH + GUTTER)) + 'px';
-    flat.forEach(function (n, i) {
-      _place(n, { x: 0, y: i * (PH + GUTTER), w: W, h: PH });
+    // Phone (A4): one panel at a time + a bottom tab strip. Inactive panels
+    // that have been visited stay mounted (hidden iframes keep state);
+    // never-visited ones aren't built until their tab is tapped, so a phone
+    // doesn't pay for the whole layout up front.
+    var flat = _collectPanels(_root, []);
+    if (!flat.length) return;
+    if (!_mobileActive || !flat.some(function (n) { return n.id === _mobileActive; })) {
+      _mobileActive = flat[0].id;
+    }
+    var TAB_H = 46;
+    flat.forEach(function (n) {
       seen[n.id] = 1;
+      if (n.id === _mobileActive) _place(n, { x: 0, y: 0, w: W, h: H - TAB_H });
+      else if (_panels[n.id]) _panels[n.id].classList.add('desk-panel--hidden');
     });
+    _buildMobileTabbar(flat);
   } else {
     _rootEl.style.height = '';
     (function walk(n, rect) {
@@ -357,6 +373,34 @@ function _layout() {
     if (!seen[id]) { _panels[id].remove(); delete _panels[id]; }
   });
   _syncMaxButtons();
+}
+
+var _mobileActive = null;   // narrow-mode visible panel id
+
+function _buildMobileTabbar(flat) {
+  var bar = document.createElement('div');
+  bar.className = 'desk-tabbar';
+  bar.setAttribute('role', 'tablist');
+  bar.setAttribute('aria-label', 'Desk panels');
+  flat.forEach(function (n) {
+    var btn = document.createElement('button');
+    btn.className = 'desk-tab-btn' + (n.id === _mobileActive ? ' desk-tab-btn--active' : '');
+    btn.type = 'button';
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-selected', n.id === _mobileActive ? 'true' : 'false');
+    btn.setAttribute('data-id', n.id);
+    btn.textContent = n.title || (n.url ? _resourceLabel(n.url) : 'New panel');
+    btn.addEventListener('click', function () { _mobileActive = n.id; _layout(); });
+    bar.appendChild(btn);
+  });
+  var add = document.createElement('button');
+  add.className = 'desk-tab-btn desk-tab-btn--add';
+  add.type = 'button';
+  add.setAttribute('aria-label', 'Add panel');
+  add.textContent = '+';
+  add.addEventListener('click', _addPanelToRoot);
+  bar.appendChild(add);
+  _rootEl.appendChild(bar);
 }
 
 function _syncMaxButtons() {
@@ -509,6 +553,42 @@ function _onFrameMessage(e) {
       }
     });
   }
+}
+
+// ── Linking first-use hint (A2) ─────────────────────────────────────────────
+// The 🔗 toggle is the least discoverable desk feature. The first time the
+// surface holds two+ linkable panels with none linked, a one-time hint
+// appears beside the toggle. Dismissing it — or using any link toggle —
+// retires it for good.
+var HINT_KEY = 'bsw_desk_linkhint';
+var LINKABLE = { read: 1, maps: 1, compare: 1 };
+
+function _retireLinkHint() {
+  try { localStorage.setItem(HINT_KEY, '1'); } catch (e) {}
+  var tip = _rootEl && _rootEl.querySelector('.desk-link-hint');
+  if (tip) tip.remove();
+}
+
+function _maybeLinkHint() {
+  try { if (localStorage.getItem(HINT_KEY)) return; } catch (e) { return; }
+  if (!_rootEl || _rootEl.querySelector('.desk-link-hint')) return;
+  var linkables = _collectPanels(_root, []).filter(function (n) {
+    return LINKABLE[resourcePrefix(n.url || '')];
+  });
+  if (linkables.length < 2) return;
+  if (linkables.some(function (n) { return n.link; })) { _retireLinkHint(); return; }
+  var host = _panels[linkables[0].id];
+  var btn = host && host.querySelector('.desk-panel__btn--link');
+  if (!btn || btn.hidden) return;
+  var tip = document.createElement('div');
+  tip.className = 'desk-link-hint';
+  tip.setAttribute('role', 'note');
+  tip.innerHTML =
+    'Tip: <b>link panels</b> with the 🔗 above — linked Bibles navigate together, ' +
+    'and linked Maps and Compare panels follow along. ' +
+    '<button class="desk-link-hint__x" aria-label="Dismiss tip">Got it</button>';
+  host.appendChild(tip);
+  tip.querySelector('.desk-link-hint__x').addEventListener('click', _retireLinkHint);
 }
 
 // ── Panel actions (shared by bar buttons, shortcuts, frame-forwarded keys) ──

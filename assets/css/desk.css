@@ -139,6 +139,37 @@
   background: color-mix(in srgb, var(--color-accent) 45%, transparent);
 }
 
+/* ── Linking first-use hint ──────────────────────────────────────────────── */
+.desk-link-hint {
+  position: absolute;
+  top: 34px;
+  right: 8px;
+  z-index: 8;
+  max-width: 260px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  padding: 0.55rem 0.7rem;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+.desk-link-hint__x {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
 /* ── Resource chooser ────────────────────────────────────────────────────── */
 .desk-chooser {
   height: 100%;
@@ -200,8 +231,48 @@
   cursor: pointer;
 }
 
-/* ── Narrow screens: desk.js stacks panels; the root scrolls ─────────────── */
+/* ── Narrow screens (A4): one panel at a time + bottom tab strip ─────────── */
+.desk-tabbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 46px;
+  display: flex;
+  align-items: stretch;
+  gap: 0.25rem;
+  padding: 0.3rem 0.4rem calc(0.3rem + env(safe-area-inset-bottom, 0px));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  overflow-x: auto;
+  scrollbar-width: none;
+  z-index: 10;
+}
+.desk-tabbar::-webkit-scrollbar { display: none; }
+.desk-tab-btn {
+  flex: 0 0 auto;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 650;
+  padding: 0 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-muted);
+  cursor: pointer;
+  max-width: 46vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.desk-tab-btn--active {
+  color: var(--color-text);
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg));
+}
+.desk-tab-btn--add { font-size: 1rem; font-weight: 700; color: var(--color-primary); }
+
 @media (max-width: 900px) {
-  .desk-root { overflow-y: auto; }
   .desk-toolbar__hint { display: none; }
+  .desk-panel { border-radius: 0; border-left: none; border-right: none; }
 }
