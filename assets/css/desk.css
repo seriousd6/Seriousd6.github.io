@@ -100,6 +100,7 @@
   cursor: pointer;
 }
 .desk-panel__btn:hover { background: var(--color-border); color: var(--color-text); }
+.desk-panel__btn--back { font-size: 0.85rem; padding: 0.28rem 0.4rem; }
 .desk-panel__btn--link { font-size: 0.68rem; opacity: 0.55; }
 .desk-panel__btn--link[aria-pressed="true"] {
   opacity: 1;

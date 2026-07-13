@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 ---
 
-<Base title={"Bookmarks — Kingdom Bible Study"} description={"Your bookmarked Bible verses."} mainJs={false} footer={false}>
+<Base title={"Bookmarks — Kingdom Bible Study"} description={"Your bookmarked Bible verses."}>
 <Fragment slot="head-end">
 <style is:inline="">
     .bookmarks-page { max-width: 640px; margin: 0 auto; }
@@ -91,7 +91,6 @@ import Base from '../../layouts/Base.astro';
         <h1 class="bookmarks-toolbar__title">★ Bookmarks</h1>
         <button class="bookmarks-btn" id="bm-clear-all" type="button">Clear all</button>
         <a class="bookmarks-btn" id="bm-reader-link" href="../read/">← Reader</a>
-        <a class="bookmarks-btn" href="../">← Home</a>
       </div>
 
       <p class="bookmarks-count" id="bm-count"></p>

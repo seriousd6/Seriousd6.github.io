@@ -193,9 +193,44 @@ function _addHighlightRow(pop, verseEl, ref) {
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────
+// Shared popover assembly for both entry paths (tap, and the keyboard
+// selection + W shortcut).
+function _openWordPopover(word, termKey, verseEl, rect) {
+  document.querySelectorAll('.reader-hl-picker').forEach(function (p) { p.hidden = true; });
+  var book = verseEl && verseEl.getAttribute('data-book');
+  var ch   = verseEl && verseEl.getAttribute('data-ch');
+  var v    = verseEl && verseEl.getAttribute('data-v');
+  var numEl = verseEl && verseEl.querySelector('.reader-verse__num');
+  var verse = v ? parseInt(v, 10) : (numEl ? parseInt(numEl.textContent, 10) : null);
+
+  var pop = _showPopover(word, rect);
+  _addAction(pop, 'All occurrences', null, '/search/?q=' + encodeURIComponent(word.toLowerCase()));
+  if (verse) _fillLexeme(pop, word, verse);
+  else { var lexEl = pop.querySelector('.bsw-wordtap__lex'); if (lexEl) lexEl.remove(); }
+  _fillArticle(pop, word, termKey);
+  if (book && ch && v) _addHighlightRow(pop, verseEl, book + ' ' + ch + ':' + v);
+}
+
 export function initWordTap() {
   var results = document.getElementById('reader-results');
   if (!results) return;
+
+  // Keyboard path (a11y): select a word — Shift+arrows works without a
+  // pointer — and press W. Documented in the reader shortcuts overlay.
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'w' && e.key !== 'W') return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    var t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+    var sel = window.getSelection && window.getSelection();
+    if (!sel || sel.isCollapsed || !sel.anchorNode || !results.contains(sel.anchorNode)) return;
+    var word = String(sel.toString()).trim().split(/\s+/)[0].replace(/^[^A-Za-z’']+|[^A-Za-z’']+$/g, '');
+    if (!word || word.length < 2) return;
+    var rc = sel.getRangeAt(0).getBoundingClientRect();
+    var anchorEl = sel.anchorNode.nodeType === 3 ? sel.anchorNode.parentElement : sel.anchorNode;
+    e.preventDefault();
+    _openWordPopover(word, null, anchorEl && anchorEl.closest('.reader-verse'), { left: rc.left, bottom: rc.bottom });
+  });
 
   // Capture phase: reader.js's wireVerseTextHighlight listens on each verse
   // and stops propagation, so a bubble-phase listener here never fires. When
@@ -233,20 +268,6 @@ export function initWordTap() {
     if (!word) { _closePopover(); return; }
 
     e.stopPropagation();
-    document.querySelectorAll('.reader-hl-picker').forEach(function (p) { p.hidden = true; });
-
-    var book = verseEl && verseEl.getAttribute('data-book');
-    var ch   = verseEl && verseEl.getAttribute('data-ch');
-    var v    = verseEl && verseEl.getAttribute('data-v');
-    var numEl = verseEl && verseEl.querySelector('.reader-verse__num');
-    var verse = v ? parseInt(v, 10) : (numEl ? parseInt(numEl.textContent, 10) : null);
-
-    var rect = { left: e.clientX, bottom: e.clientY + 4 };
-    var pop = _showPopover(word, rect);
-    _addAction(pop, 'All occurrences', null, '/search/?q=' + encodeURIComponent(word.toLowerCase()));
-    if (verse) _fillLexeme(pop, word, verse);
-    else { var lexEl = pop.querySelector('.bsw-wordtap__lex'); if (lexEl) lexEl.remove(); }
-    _fillArticle(pop, word, termKey);
-    if (book && ch && v) _addHighlightRow(pop, verseEl, book + ' ' + ch + ':' + v);
+    _openWordPopover(word, termKey, verseEl, { left: e.clientX, bottom: e.clientY + 4 });
   }, true);
 }

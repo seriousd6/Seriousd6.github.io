@@ -1224,6 +1224,7 @@ export function _showShortcutsOverlay() {
             '<dl class="bsw-shortcuts-list">' +
               '<dt><kbd>j</kbd> / <kbd>→</kbd></dt><dd>Next chapter</dd>' +
               '<dt><kbd>k</kbd> / <kbd>←</kbd></dt><dd>Previous chapter</dd>' +
+              '<dt><kbd>w</kbd></dt><dd>Word study for the selected word</dd>' +
               '<dt><kbd>Esc</kbd></dt><dd>Close modal or popup</dd>' +
             '</dl></div>' +
           '<div class="bsw-shortcuts-group"><h3 class="bsw-shortcuts-group-label">Verse Study</h3>' +

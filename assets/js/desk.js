@@ -171,6 +171,8 @@ function _buildPanelEl(node) {
   el.setAttribute('data-panel-id', node.id);
   el.innerHTML =
     '<header class="desk-panel__bar">' +
+      '<button class="desk-panel__btn desk-panel__btn--back" data-act="back" hidden ' +
+        'title="Back (this panel)" aria-label="Back in this panel">←</button>' +
       '<span class="desk-panel__title">' + _esc(node.title || (node.url ? _resourceLabel(node.url) : 'New panel')) + '</span>' +
       '<span class="desk-panel__spacer"></span>' +
       '<button class="desk-panel__btn desk-panel__btn--link" data-act="link" hidden ' +
@@ -198,6 +200,18 @@ function _buildPanelEl(node) {
       btn.setAttribute('aria-pressed', node.link ? 'true' : 'false');
       _retireLinkHint();   // the feature has been discovered
       _save();
+    } else if (act === 'back') {
+      // Panel-local back: our own URL stack + location.replace, because the
+      // frame's history.back() walks the SHARED session history and can pop
+      // another panel's (or the Desk's) entry instead.
+      var prev = node.hist && node.hist.pop();
+      if (prev) {
+        node._goingBack = true;
+        var f = el.querySelector('iframe');
+        if (f) { try { f.contentWindow.location.replace(prev); } catch (err) { f.src = prev; } }
+      }
+      btn.hidden = !(node.hist && node.hist.length);
+      _save();
     } else {
       _panelAction(node.id, act);
     }
@@ -220,10 +234,21 @@ function _mountFrame(el, node) {
     // load because navigation replaces the frame's document.
     try { frame.contentWindow.postMessage({ type: 'bsw-desk-hello' }, location.origin); } catch (e) {}
     // Same-origin: track in-panel navigation so the layout restores where
-    // the user actually was, and let the page retitle the panel bar.
+    // the user actually was, and let the page retitle the panel bar. Each
+    // navigation also feeds the panel's own back stack (the ← button).
     try {
       var loc = frame.contentWindow.location;
-      if (loc && loc.pathname) node.url = loc.pathname + loc.search;
+      if (loc && loc.pathname) {
+        var newUrl = loc.pathname + loc.search;
+        if (node.url && node.url !== newUrl && !node._goingBack) {
+          (node.hist = node.hist || []).push(node.url);
+          if (node.hist.length > 20) node.hist.shift();
+        }
+        node._goingBack = false;
+        node.url = newUrl;
+        var backBtn = el.querySelector('.desk-panel__btn--back');
+        if (backBtn) backBtn.hidden = !(node.hist && node.hist.length);
+      }
       var t = frame.contentDocument && frame.contentDocument.title;
       if (t) {
         node.title = t.replace(/\s+—.*$/, '');
