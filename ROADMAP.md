@@ -192,10 +192,27 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   Desk's default first panel). Sidebar: Read → The Desk; Practice → Today.
 - Narrow screens: `/desk/` stacks panels full-width in tree order.
 
-### D2 — candidates (not started)
-- Panel linking: a link-set so verse navigation in one panel drives linked
-  reader/commentary panels (postMessage protocol).
+### D2 — panel linking + cross-resource opens  ·  DONE 2026-07-13
+- postMessage protocol (same-origin checked both ways): the Desk announces
+  itself to every frame on load (`bsw-desk-hello`, arming `desk-frame.js`
+  loaded by core-boot on all pages — no-op outside the Desk).
+- **Cross-resource clicks open panels, not replace content.** Inside a
+  panel, a link to a different resource (reader → biblepedia article, maps,
+  answers, …) posts `bsw-desk-open`: the Desk reuses an existing panel of
+  that resource (navigates it + flash outline — the Logos "target panel"
+  behavior) or splits the source panel along its longer axis. Same-resource
+  navigation (next chapter, another article) stays in-panel; modified
+  clicks and external links keep browser behavior.
+- **Reader linking.** Bible panels get a 🔗 toggle (persisted). A linked
+  reader emits `bsw-desk-nav` on every lookup (reader.js, at the URL
+  update); the Desk forwards `bsw-desk-goto` to the other linked readers,
+  which follow via the exposed lookup — loop-guarded so linked readers
+  don't ping-pong. Each reader keeps its own version → side-by-side
+  translation study.
+
+### D3 — candidates (not started)
 - Named layouts / presets ("Sermon prep", "Language study"), maximize toggle,
   drag-to-rearrange panels.
+- Linked non-reader followers (maps fly to places, commentary follows ref).
 - A Settings toggle for the desk-as-home redirect (the localStorage flag is
   already honored).

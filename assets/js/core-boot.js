@@ -46,6 +46,7 @@ import {
 } from './wire.js';
 import { initPWA } from './pwa.js';
 import { _memHas, _memAdd, _memRemove, _memRefreshModalBtn } from './mem.js';
+import { initDeskFrame } from './desk-frame.js';
 
 // ── Register cross-module callbacks ───────────────────────────────────────
 // Give the modal access to the memorisation helpers so it can show the
@@ -157,6 +158,7 @@ export function boot(pageInit, opts) {
     initTheme();
     initPWA();
     _runStorageMigrations();
+    initDeskFrame();   // no-op unless framed under the Desk (see desk-frame.js)
 
     Promise.all([loadVersions(), loadBooks()]).then(function () {
       populateVersionPicker();

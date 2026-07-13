@@ -21,6 +21,7 @@ import {
   autoTagBareRefs, autoTagBareChapters
 } from './wire.js';
 import { markEchoVerses } from './parallels.js';
+import { emitDeskNav } from './desk-frame.js';
 import { isParallelsEnabled, setParallelsEnabled, injectParallelPanels } from './synoptic.js';
 import {
   getInterlinearEnabled, setInterlinearEnabled, injectAllInterlinearRows, setRiHighlightCode
@@ -277,6 +278,7 @@ window._readerGroups    = [];
 //   onVersionChange callback, and the keyboard nav handler. Removing or renaming the
 //   assignment breaks all in-page navigation without any JS error — it just silently noops.
 window._readerLookupFn  = null;
+var _deskFollowing = false;   // true while a lookup is following a Desk goto
 
 // ── Chapter read tracking ─────────────────────────────────────────────────
 // INTENT: Module-level constant so the key is visible in search and easy to update.
@@ -309,6 +311,19 @@ export function initReaderPage() {
   initReaderLookup();
   initReaderBrowse();
   initReaderKeyboard();
+
+  // Desk panel linking: a link-toggled sibling reader navigated — follow it.
+  // _deskFollowing suppresses this reader's own emitDeskNav during the
+  // lookup (which runs synchronously up to the URL update) so two linked
+  // readers don't ping-pong.
+  window.addEventListener('bsw:desk-goto', function (e) {
+    var input = document.getElementById('reader-lookup-input');
+    if (!input || !window._readerLookupFn || !e.detail || !e.detail.ref) return;
+    if (input.value.trim() === e.detail.ref) return;   // already there
+    _deskFollowing = true;
+    input.value = e.detail.ref;
+    try { window._readerLookupFn(); } finally { _deskFollowing = false; }
+  });
   if (_strippedMode) {
     var panel = document.getElementById('reader-xref-panel');
     if (panel) panel.hidden = true;
@@ -504,6 +519,10 @@ export function initReaderLookup() {
       var url = new URL(window.location.href);
       url.searchParams.set('ref', q);
       history.replaceState(null, '', url.toString());
+      // Desk panel linking: tell the surface where this reader landed, so
+      // link-toggled sibling readers can follow. Suppressed while THIS
+      // lookup is itself following a goto (loop guard).
+      if (!_deskFollowing) emitDeskNav(q);
     }
 
     // Chapter-0 intercept → book introduction page

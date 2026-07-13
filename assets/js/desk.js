@@ -16,6 +16,8 @@
  */
 'use strict';
 
+import { resourcePrefix } from './desk-frame.js';
+
 var LS_KEY  = 'bsw_desk_layout_v1';
 var GUTTER  = 6;      // divider thickness, px
 var MIN_R   = 0.12;   // divider drag clamp
@@ -77,17 +79,18 @@ function _findParent(node, id, parent) {
   return _findParent(node.a, id, node) || _findParent(node.b, id, node);
 }
 
-function _splitPanel(panelId, dir) {
+function _splitPanel(panelId, dir, url, title) {
   var hit = _findParent(_root, panelId, null);
-  if (!hit || hit.node.t !== 'p') return;
+  if (!hit || hit.node.t !== 'p') return null;
   var oldNode = hit.node;
-  var fresh   = _panelNode(null);   // chooser
+  var fresh   = _panelNode(url || null, title);   // url omitted → chooser
   var split   = { t: 's', id: _nid(), d: dir, r: 0.5, a: oldNode, b: fresh };
   if (!hit.parent) _root = split;
   else if (hit.parent.a === oldNode) hit.parent.a = split;
   else hit.parent.b = split;
   _layout();
   _save();
+  return fresh;
 }
 
 function _closePanel(panelId) {
@@ -137,6 +140,9 @@ function _buildPanelEl(node) {
     '<header class="desk-panel__bar">' +
       '<span class="desk-panel__title">' + _esc(node.title || (node.url ? _resourceLabel(node.url) : 'New panel')) + '</span>' +
       '<span class="desk-panel__spacer"></span>' +
+      '<button class="desk-panel__btn desk-panel__btn--link" data-act="link" hidden ' +
+        'title="Link navigation: linked Bible panels follow each other" aria-label="Link panel navigation" ' +
+        'aria-pressed="' + (node.link ? 'true' : 'false') + '">🔗</button>' +
       '<button class="desk-panel__btn" data-act="split-r" title="Split right" aria-label="Split right">◫</button>' +
       '<button class="desk-panel__btn" data-act="split-d" title="Split down" aria-label="Split down">⬓</button>' +
       '<button class="desk-panel__btn" data-act="close" title="Close panel" aria-label="Close panel">✕</button>' +
@@ -150,6 +156,11 @@ function _buildPanelEl(node) {
     if (act === 'split-r') _splitPanel(node.id, 'row');
     else if (act === 'split-d') _splitPanel(node.id, 'col');
     else if (act === 'close') _closePanel(node.id);
+    else if (act === 'link') {
+      node.link = !node.link;
+      btn.setAttribute('aria-pressed', node.link ? 'true' : 'false');
+      _save();
+    }
   });
 
   if (node.url) _mountFrame(el, node);
@@ -164,6 +175,10 @@ function _mountFrame(el, node) {
   frame.src = node.url;
   frame.setAttribute('title', node.title || _resourceLabel(node.url));
   frame.addEventListener('load', function () {
+    // Announce the Desk to the page (arms desk-frame.js: cross-resource
+    // clicks become panels, reader linking activates). Re-sent on every
+    // load because navigation replaces the frame's document.
+    try { frame.contentWindow.postMessage({ type: 'bsw-desk-hello' }, location.origin); } catch (e) {}
     // Same-origin: track in-panel navigation so the layout restores where
     // the user actually was, and let the page retitle the panel bar.
     try {
@@ -176,6 +191,9 @@ function _mountFrame(el, node) {
         if (tEl) tEl.textContent = node.title;
       }
     } catch (e) {}
+    // The link toggle only means something on Bible panels.
+    var linkBtn = el.querySelector('.desk-panel__btn--link');
+    if (linkBtn) linkBtn.hidden = resourcePrefix(node.url || '') !== 'read';
     _save();
   });
   body.appendChild(frame);
@@ -336,12 +354,80 @@ function _dragStart(e) {
   document.addEventListener('pointerup', up);
 }
 
+// ── Frame messages: cross-resource opens + reader linking ──────────────────
+function _panelByWindow(win) {
+  var ids = Object.keys(_panels);
+  for (var i = 0; i < ids.length; i++) {
+    var f = _panels[ids[i]].querySelector('iframe');
+    if (f && f.contentWindow === win) return ids[i];
+  }
+  return null;
+}
+
+function _collectPanels(n, out) {
+  if (n.t === 'p') out.push(n);
+  else { _collectPanels(n.a, out); _collectPanels(n.b, out); }
+  return out;
+}
+
+function _flash(id) {
+  var el = _panels[id];
+  if (!el) return;
+  el.classList.add('desk-panel--flash');
+  setTimeout(function () { el.classList.remove('desk-panel--flash'); }, 900);
+}
+
+function _onFrameMessage(e) {
+  if (e.origin !== location.origin || !e.data || !e.data.type) return;
+  var srcId = _panelByWindow(e.source);
+  if (!srcId) return;
+
+  if (e.data.type === 'bsw-desk-open' && e.data.url) {
+    var url = String(e.data.url);
+    if (resourcePrefix(url) === 'desk') return;
+    // Reuse: if another panel already shows this resource, navigate it there
+    // (the Logos "target panel" behavior) instead of tiling endlessly.
+    var target = _collectPanels(_root, []).filter(function (n) {
+      return n.id !== srcId && n.url && resourcePrefix(n.url) === resourcePrefix(url);
+    })[0];
+    if (target) {
+      var f = _panels[target.id] && _panels[target.id].querySelector('iframe');
+      if (f) {
+        try { f.contentWindow.location.replace(url); } catch (err) { f.src = url; }
+        target.url = url;
+        _flash(target.id);
+        _save();
+        return;
+      }
+    }
+    // No panel to reuse: split the source along its longer axis.
+    var srcEl = _panels[srcId];
+    var dir = srcEl && srcEl.offsetHeight > srcEl.offsetWidth ? 'col' : 'row';
+    var fresh = _splitPanel(srcId, dir, url, _resourceLabel(url));
+    if (fresh) _flash(fresh.id);
+    return;
+  }
+
+  if (e.data.type === 'bsw-desk-nav' && e.data.ref) {
+    var hit = _findParent(_root, srcId, null);
+    if (!hit || !hit.node.link) return;   // source isn't link-toggled
+    _collectPanels(_root, []).forEach(function (n) {
+      if (n.id === srcId || !n.link || resourcePrefix(n.url || '') !== 'read') return;
+      var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
+      if (f) {
+        try { f.contentWindow.postMessage({ type: 'bsw-desk-goto', ref: e.data.ref }, location.origin); } catch (err) {}
+      }
+    });
+  }
+}
+
 // ── Init ────────────────────────────────────────────────────────────────────
 export function initDesk() {
   _rootEl = document.getElementById('desk-root');
   if (!_rootEl) return;
   _root = _load() || _defaultLayout();
   _layout();
+  window.addEventListener('message', _onFrameMessage);
 
   var addBtn = document.getElementById('desk-add-btn');
   if (addBtn) addBtn.addEventListener('click', _addPanelToRoot);

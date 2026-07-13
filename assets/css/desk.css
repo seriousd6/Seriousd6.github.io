@@ -87,6 +87,14 @@
   cursor: pointer;
 }
 .desk-panel__btn:hover { background: var(--color-border); color: var(--color-text); }
+.desk-panel__btn--link { font-size: 0.68rem; opacity: 0.55; }
+.desk-panel__btn--link[aria-pressed="true"] {
+  opacity: 1;
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  color: var(--color-accent);
+}
+/* A panel that just received content from another panel's click */
+.desk-panel--flash { outline: 2px solid var(--color-accent); outline-offset: -2px; }
 .desk-panel__body { flex: 1; min-height: 0; position: relative; }
 .desk-panel__frame {
   width: 100%;
