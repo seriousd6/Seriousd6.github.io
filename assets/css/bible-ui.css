@@ -3973,29 +3973,12 @@ kbd {
 [data-theme="dark"] .search-go-btn,
 [data-theme="dark"] .search-go-btn:hover,
 [data-theme="dark"] .search-go-btn:focus-visible { color: var(--color-on-primary); }
-[data-theme="dark"] .bsw-modal__verse-study-link {
-  color: #6baed6;
-  border-color: rgba(107, 174, 214, 0.45);
-}
-[data-theme="dark"] .bsw-modal__verse-study-link:hover,
-[data-theme="dark"] .bsw-modal__verse-study-link:focus-visible {
-  background: rgba(107, 174, 214, 0.12);
-  border-color: #6baed6;
-  color: #6baed6;
-}
+/* (The old blue verse-study-link dark override is gone: it predated the
+   solid --color-primary fill and painted light-blue text on olive. The base
+   rule's --color-on-primary token is correct in both themes.) */
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .search-go-btn,
   :root:not([data-theme="light"]) .search-go-btn:hover,
   :root:not([data-theme="light"]) .search-go-btn:focus-visible { color: var(--color-on-primary); }
-  :root:not([data-theme="light"]) .bsw-modal__verse-study-link {
-    color: #6baed6;
-    border-color: rgba(107, 174, 214, 0.45);
-  }
-  :root:not([data-theme="light"]) .bsw-modal__verse-study-link:hover,
-  :root:not([data-theme="light"]) .bsw-modal__verse-study-link:focus-visible {
-    background: rgba(107, 174, 214, 0.12);
-    border-color: #6baed6;
-    color: #6baed6;
-  }
 }
