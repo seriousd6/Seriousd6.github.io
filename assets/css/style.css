@@ -60,14 +60,19 @@
   --shadow-card:     0 1px 3px rgba(32, 36, 30, 0.06), 0 6px 18px rgba(32, 36, 30, 0.05);
   --radius-card:     10px;
 
-  /* Sidebar — deep green-ink panel */
-  --sb-bg:           #23281f;
-  --sb-text:         #c3c9b7;
-  --sb-muted:        #8f9782;
-  --sb-hover:        rgba(255,255,255,0.06);
-  --sb-active-bg:    #333b2b;
-  --sb-active-fg:    #f0f3e9;
-  --sb-accent:       #b4c58a;
+  /* Sidebar — follows the theme (P17): light paper panel here; the dark
+     blocks below restore the deep green-ink treatment. */
+  --sb-bg:           #eef0e5;
+  --sb-text:         #454d3b;
+  --sb-muted:        #79816c;
+  --sb-hover:        rgba(0,0,0,0.05);
+  --sb-active-bg:    #dfe4cf;
+  --sb-active-fg:    #232a1a;
+  --sb-accent:       #55682f;
+  --sb-logo:         #3d4432;
+  --sb-dim:          #8a8468;
+  --sb-border:       rgba(0,0,0,0.12);
+  --sb-scroll:       rgba(0,0,0,0.18);
   --sidebar-w:       240px;
   --topbar-h:        48px;
 
@@ -157,7 +162,7 @@ body.sidebar-overlay { padding-left: 0 !important; }
   overflow: hidden;
   transform: translateX(0);
   transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-  border-right: 1px solid rgba(0,0,0,0.4);
+  border-right: 1px solid var(--sb-border);
 }
 
 body.sidebar-collapsed .site-sidebar,
@@ -175,12 +180,12 @@ body.sb-open .site-sidebar {
   align-items: center;
   justify-content: space-between;
   padding: 0.9rem 0.9rem 0.75rem 1rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--sb-border);
   flex-shrink: 0;
 }
 
 .sb-logo {
-  color: #f0e6d0;
+  color: var(--sb-logo);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: bold;
@@ -190,7 +195,7 @@ body.sb-open .site-sidebar {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sb-logo:hover { color: #fff; }
+.sb-logo:hover { color: var(--sb-active-fg); }
 
 .sb-collapse-btn {
   background: none;
@@ -214,11 +219,11 @@ body.sb-open .site-sidebar {
   overflow-x: hidden;
   padding: 0.5rem 0 1rem;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.15) transparent;
+  scrollbar-color: var(--sb-scroll) transparent;
 }
 .sb-nav::-webkit-scrollbar { width: 4px; }
 .sb-nav::-webkit-scrollbar-track { background: transparent; }
-.sb-nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+.sb-nav::-webkit-scrollbar-thumb { background: var(--sb-scroll); border-radius: 2px; }
 
 /* ── Sidebar links ── */
 .sb-link {
@@ -236,7 +241,7 @@ body.sb-open .site-sidebar {
 }
 .sb-link:hover {
   background: var(--sb-hover);
-  color: #fff;
+  color: var(--sb-active-fg);
 }
 .sb-link[aria-current="page"] {
   color: var(--sb-active-fg);
@@ -266,7 +271,7 @@ body.sb-open .site-sidebar {
   transition: background 0.1s, color 0.1s, border-color 0.1s;
   white-space: nowrap;
 }
-.sb-group-btn:hover { background: var(--sb-hover); color: #fff; }
+.sb-group-btn:hover { background: var(--sb-hover); color: var(--sb-active-fg); }
 .sb-group-btn.is-active {
   color: var(--sb-active-fg);
   border-left-color: var(--sb-accent);
@@ -301,14 +306,14 @@ body.sb-open .site-sidebar {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  color: #9a7a50;   /* lightened from #6a5540 — old value was 2.21:1, below WCAG AA 3.0:1 minimum */
+  color: var(--sb-dim);
 }
 
 /* Child links */
 .sb-child {
   display: block;
   padding: 0.35rem 1rem 0.35rem 1.5rem;
-  color: #c4b490;
+  color: var(--sb-dim);
   text-decoration: none;
   font-family: var(--font-ui);
   font-size: 0.82rem;
@@ -318,7 +323,7 @@ body.sb-open .site-sidebar {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sb-child:hover { background: var(--sb-hover); color: #f0e6d0; }
+.sb-child:hover { background: var(--sb-hover); color: var(--sb-active-fg); }
 .sb-child[aria-current="page"] {
   color: var(--sb-active-fg);
   background: var(--sb-active-bg);
@@ -335,7 +340,7 @@ body.sb-open .site-sidebar {
   background: none;
   border: none;
   border-left: 3px solid transparent;
-  color: #b8a880;
+  color: var(--sb-dim);
   font-family: var(--font-ui);
   font-size: 0.79rem;
   cursor: pointer;
@@ -344,7 +349,7 @@ body.sb-open .site-sidebar {
   transition: background 0.1s, color 0.1s;
   white-space: nowrap;
 }
-.sb-subgroup-btn:hover { background: var(--sb-hover); color: #f0e6d0; }
+.sb-subgroup-btn:hover { background: var(--sb-hover); color: var(--sb-active-fg); }
 .sb-subgroup-btn.is-active { color: var(--sb-active-fg); border-left-color: var(--sb-accent); }
 .sb-subgroup-btn:focus-visible { outline: 2px solid var(--sb-accent); outline-offset: -2px; }
 
@@ -364,7 +369,7 @@ body.sb-open .site-sidebar {
 .sb-subchild {
   display: block;
   padding: 0.28rem 1rem 0.28rem 2.4rem;
-  color: #9e8f6e;
+  color: var(--sb-dim);
   text-decoration: none;
   font-family: var(--font-ui);
   font-size: 0.79rem;
@@ -374,7 +379,7 @@ body.sb-open .site-sidebar {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.sb-subchild:hover { background: var(--sb-hover); color: #f0e6d0; }
+.sb-subchild:hover { background: var(--sb-hover); color: var(--sb-active-fg); }
 .sb-subchild[aria-current="page"] {
   color: var(--sb-active-fg);
   background: var(--sb-active-bg);
@@ -473,7 +478,7 @@ body.sb-open .sidebar-tab { left: var(--sidebar-w) !important; }
 .mobile-topbar__hamburger:focus-visible { outline: 2px solid var(--sb-accent); }
 
 .mobile-topbar__logo {
-  color: #f0e6d0;
+  color: var(--sb-logo);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: bold;
@@ -731,6 +736,10 @@ span.term { font-weight: bold; color: var(--color-primary); }
   --sb-active-bg:    #2b3226;
   --sb-active-fg:    #e2e8d4;
   --sb-accent:       #93a968;
+  --sb-logo:         #f0e6d0;
+  --sb-dim:          #9e8f6e;
+  --sb-border:       rgba(255,255,255,0.1);
+  --sb-scroll:       rgba(255,255,255,0.15);
   /* Filled button surfaces — moss bg + pale-olive text */
   --color-btn-bg:       #2b3226;
   --color-btn-text:     #c9d3ae;
@@ -761,6 +770,10 @@ span.term { font-weight: bold; color: var(--color-primary); }
     --sb-active-bg:    #2b3226;
     --sb-active-fg:    #e2e8d4;
     --sb-accent:       #93a968;
+  --sb-logo:         #f0e6d0;
+  --sb-dim:          #9e8f6e;
+  --sb-border:       rgba(255,255,255,0.1);
+  --sb-scroll:       rgba(255,255,255,0.15);
     --color-btn-bg:       #2b3226;
     --color-btn-text:     #c9d3ae;
     --color-btn-bg-hover: #364031;

@@ -23,6 +23,7 @@
 
 import { getNotesForChapter } from './storage.js';
 import { emitDeskPlaces } from './desk-frame.js';
+import { BOOK_ERA } from './reader-place.js';
 
 var _observer = null;
 var _debounce = null;
@@ -89,7 +90,10 @@ function _buildRail(results) {
         var id = a.getAttribute('data-place-id');
         if (id && !seenIds[id]) { seenIds[id] = 1; ids.push(id); }
       });
-      emitDeskPlaces(tagKey.replace('|', ' '), ids);
+      var nav = _navState();
+      // P17: linked maps panels auto-snap to the era map that fits the book
+      // being read (John → NT Palestine) before drawing the chapter's places.
+      emitDeskPlaces(tagKey.replace('|', ' '), ids, (nav && nav.bookId && BOOK_ERA[nav.bookId]) || null);
     }
   }
 

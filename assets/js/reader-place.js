@@ -41,7 +41,7 @@ var ERA_TITLES = {
 // Which era map fits the book being read (coarse on purpose — it picks the
 // map the reference belongs to, e.g. John → NT Palestine). Books not listed
 // fall back to the place's own home map (place.mapId).
-var BOOK_ERA = {
+export var BOOK_ERA = {
   genesis: 'patriarchal-journeys',
   exodus: 'exodus', leviticus: 'exodus', numbers: 'exodus', deuteronomy: 'exodus',
   joshua: 'conquest',

@@ -726,7 +726,7 @@ function _onFrameMessage(e) {
       if (n.id === srcId || !n.link || resourcePrefix(n.url || '') !== 'maps') return;
       var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
       if (f) {
-        try { f.contentWindow.postMessage({ type: 'bsw-desk-show-places', ref: e.data.ref, ids: e.data.ids }, location.origin); } catch (err) {}
+        try { f.contentWindow.postMessage({ type: 'bsw-desk-show-places', ref: e.data.ref, ids: e.data.ids, mapId: e.data.mapId || null }, location.origin); } catch (err) {}
       }
     });
   }

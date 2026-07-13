@@ -397,6 +397,13 @@ var _followLayer = null;
 function _wireDeskFollow() {
   window.addEventListener('bsw:desk-show-places', function (e) {
     if (!_leaflet || !window.L || !e.detail || !e.detail.ids) return;
+    // P17: snap to the era map that fits the linked reader's book (John →
+    // NT Palestine) before drawing its chapter places, so multi-era places
+    // render in the right historical context.
+    if (e.detail.mapId && (!_currentMapDef || _currentMapDef.id !== e.detail.mapId)) {
+      var target = MAPS.filter(function (m) { return m.id === e.detail.mapId; })[0];
+      if (target) _selectMap(target);
+    }
     loadPlaces().then(function () {
       if (!_leaflet) return;
       if (_followLayer) { try { _leaflet.removeLayer(_followLayer); } catch (err) {} _followLayer = null; }

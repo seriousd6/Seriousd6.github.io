@@ -52,7 +52,7 @@ export function initDeskFrame() {
       window.dispatchEvent(new CustomEvent('bsw:desk-goto', { detail: { ref: e.data.ref } }));
     }
     if (e.data.type === 'bsw-desk-show-places' && e.data.ids) {
-      window.dispatchEvent(new CustomEvent('bsw:desk-show-places', { detail: { ref: e.data.ref, ids: e.data.ids } }));
+      window.dispatchEvent(new CustomEvent('bsw:desk-show-places', { detail: { ref: e.data.ref, ids: e.data.ids, mapId: e.data.mapId || null } }));
     }
   });
 
