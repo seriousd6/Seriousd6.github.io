@@ -37,7 +37,9 @@ export async function getStaticPaths() {
     const t = ch && ch[m[3]];
     return t ? String(t).replace(/<[^>]+>/g, '') : null;
   };
-  const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z])/g, (s, a, b) => a + b.toUpperCase());
+  const TC_SMALL = new Set(['of', 'the', 'and', 'in', 'on', 'at', 'to', 'for', 'with', 'by', 'a', 'an', 'or']);
+  const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z][a-z']*)/g,
+    (m, pre, w, off) => pre + ((off > 0 && TC_SMALL.has(w)) ? w : w.charAt(0).toUpperCase() + w.slice(1)));
 
   const entries = buildAnswerTopics();
   return entries.map((e, i) => {

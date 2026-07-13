@@ -37,6 +37,22 @@ const PINNED = {
   patience:    ['James 1:3', 'Romans 12:12', 'Galatians 6:9', 'Psalms 27:14'],
   healing:     ['Psalms 147:3', 'James 5:16', 'Jeremiah 17:14', '1 Peter 2:24'],
   forgiveness: ['1 John 1:9', 'Ephesians 4:32', 'Colossians 3:13', 'Matthew 6:14'],
+  doubt:       ['Mark 9:24', 'James 1:6', 'Matthew 14:31', 'John 20:29'],
+  pride:       ['Proverbs 16:18', 'James 4:6', 'Proverbs 11:2', 'Philippians 2:3'],
+  jealousy:    ['Proverbs 14:30', 'James 3:16', '1 Corinthians 13:4', 'Galatians 5:26'],
+  envy:        ['Proverbs 14:30', 'James 3:16', '1 Corinthians 13:4', 'Psalms 37:1'],
+  greed:       ['Luke 12:15', '1 Timothy 6:10', 'Hebrews 13:5', 'Ecclesiastes 5:10'],
+  gossip:      ['Proverbs 16:28', 'Proverbs 11:13', 'Ephesians 4:29', 'James 1:26'],
+  lying:       ['Proverbs 12:22', 'Colossians 3:9', 'Ephesians 4:25', 'Exodus 20:16'],
+  honesty:     ['Ephesians 4:25', 'Proverbs 12:22', 'Colossians 3:9', 'Proverbs 11:3'],
+  laziness:    ['Proverbs 13:4', 'Proverbs 6:6', 'Colossians 3:23', '2 Thessalonians 3:10'],
+  courage:     ['Joshua 1:9', 'Deuteronomy 31:6', 'Psalms 27:14', '1 Corinthians 16:13'],
+  gratitude:   ['1 Thessalonians 5:18', 'Psalms 107:1', 'Colossians 3:17', 'Philippians 4:6'],
+  generosity:  ['2 Corinthians 9:7', 'Proverbs 11:25', 'Acts 20:35', 'Luke 6:38'],
+  addiction:   ['John 8:36', '1 Corinthians 10:13', '2 Corinthians 5:17', 'Romans 6:14'],
+  grief:       ['Matthew 5:4', 'Psalms 34:18', 'Revelation 21:4', '1 Thessalonians 4:13'],
+  guilt:       ['Romans 8:1', '1 John 1:9', 'Psalms 103:12', 'Isaiah 1:18'],
+  shame:       ['Romans 10:11', 'Psalms 34:5', 'Isaiah 61:7', 'Romans 8:1'],
 };
 
 function rankWithPins(slug, refs, canon, max) {

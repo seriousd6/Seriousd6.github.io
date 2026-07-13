@@ -258,6 +258,14 @@ function _wireTermEl(el) {
   var key = (el.dataset.termKey || el.textContent || '').toLowerCase().trim();
   el.addEventListener('mouseenter', function () { _scheduleTermShow(el, key); });
   el.addEventListener('mouseleave', function () { _scheduleTermHide(); });
+  // Keyboard parity (P13): term spans are focusable and show/hide the tooltip
+  // on focus/blur — the same contract place anchors already honor.
+  if (el.tabIndex < 0) el.tabIndex = 0;
+  el.addEventListener('focus', function () { _scheduleTermShow(el, key); });
+  el.addEventListener('blur',  function () { _scheduleTermHide(); });
+  el.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') _hideTermTip();
+  });
   el.addEventListener('click', function () {
     if (_termTipEl && _termTipEl.classList.contains('bsw-term-tooltip--visible')) {
       _hideTermTip();

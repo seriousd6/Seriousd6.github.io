@@ -52,10 +52,12 @@ investigation showed the finding was wrong. Unmarked items remain open.
 - ✔ ● **[ia] Omni sections vs answers pages overlap** (topic chips now link to /answers/ pages) — the Omni "topics"
   section and /answers/ serve the same intent with different presentations;
   the Omni topic section could simply BE the answers preview.
-- ● **[quality] Synonym table is 24 hand-picked entries** — good ones, but a
-  systematic pass (lemma-based, from the interlinear data the site already
-  has) would cover far more ("crucifixion" → "crucified" works via stem, but
-  "resurrection" → "raised" doesn't).
+- ✔ ● **[quality] Synonym table is 24 hand-picked entries** — expanded to 46
+  curated entries (resurrection→raised/risen, grace, doubt, pride, greed,
+  gossip, courage, gratitude, addiction, grief, guilt, shame, …), each new
+  modern-question key pinned with pastor-grade opening verses; 4 new
+  /answers/ pages generated. A lemma-based systematic pass remains a
+  future option.
 
 ## 3 · Information architecture & redundancy
 
@@ -170,18 +172,19 @@ investigation showed the finding was wrong. Unmarked items remain open.
   dividers are now focusable separators resized with arrow keys (focus
   survives the relayout). Drag-to-re-dock remains pointer-only; splitting
   to a chosen side + close/re-open covers that path from the keyboard.
-- ● **[a11y] Hover tooltips (term/place) don't appear on focus for the
-  word-tap-upgraded surfaces** — places.js wires focus/blur, terms.js only
-  mouseenter/leave.
+- ✔ ● **[a11y] Hover tooltips (term/place) don't appear on focus** — term
+  spans are now focusable and show/hide the tooltip on focus/blur (Escape
+  dismisses), matching the contract place anchors already honored.
 
 ## 8 · Content & quality
 
 - ✔ ●● **[quality] Workshop dashboard opens with "GREEK REVIEWED 0 of 5,523 ·
   0%"** (getting-started zero-state added) — a demotivating zero-state for a tool most users open once; the
   wall-of-text "Dashboard" panel reads like documentation, not UI.
-- ● **[quality] Nave ALL-CAPS titles titleCase imperfectly** — "Ai" fine,
-  but multi-part heads like "Olives, Mount Of" keep odd inversions from the
-  1896 source on answers pages.
+- ✔ ● **[quality] Nave ALL-CAPS titles titleCase imperfectly** — small
+  words (of/the/and/…) now stay lowercase unless leading: "Olives, Mount
+  of", "The Lord of Hosts". The 1896 comma-inversions themselves are kept
+  (they are the source's headword form).
 - ● **[quality] Answers preview is BSB-only and first-8-parseable** — a
   chapter-level or unparseable ref silently drops out of the preview cards.
 - ● **[quality] Generated answers cap at 40 canonical refs** with no "why

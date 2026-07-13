@@ -3,7 +3,9 @@
 import Base from '../../layouts/Base.astro';
 import { buildAnswerTopics } from '../../lib/answers-topics.mjs';
 
-const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z])/g, (s, a, b) => a + b.toUpperCase());
+const TC_SMALL = new Set(['of', 'the', 'and', 'in', 'on', 'at', 'to', 'for', 'with', 'by', 'a', 'an', 'or']);
+const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z][a-z']*)/g,
+  (m, pre, w, off) => pre + ((off > 0 && TC_SMALL.has(w)) ? w : w.charAt(0).toUpperCase() + w.slice(1)));
 const entries = buildAnswerTopics()
   .map(e => ({ slug: e.slug, title: titleCase(e.title), n: e.verses.length }));
 const byLetter = {};
