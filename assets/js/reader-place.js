@@ -14,7 +14,7 @@
 import { escHtml } from './core.js';
 import { getPlace, getAllPlaces, hidePlaceTip, placeMapHref } from './places.js';
 import { ensureLeaflet, CARTO_TILES, CARTO_ATTR } from './leaflet-loader.js';
-import { _loadBPIndex } from './modal.js';
+import { loadBPLite } from './bp-lite.js';
 
 // ── Era selection ───────────────────────────────────────────────────────────
 // The maps page's era maps, titled as maps.js titles them (subtitle text and
@@ -172,7 +172,7 @@ function _fillMiniMap(place) {
 
 // Biblepedia brief + full-article link, matched by place id then name.
 function _fillBiblepedia(place) {
-  _loadBPIndex().then(function (idx) {
+  loadBPLite().then(function (idx) {
     if (!_backdrop || !idx) return;
     var name = place.name.toLowerCase();
     var hit = idx.find(function (a) {

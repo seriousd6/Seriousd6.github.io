@@ -164,6 +164,25 @@ for (const f of ['manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html', 
 
 console.log(`[build-assets] ${emitted.length} JS/CSS assets emitted; APP_CACHE_V=bsw-app-${hash}`);
 
+// ── 6.4 Lite biblepedia index ───────────────────────────────────────────────
+// The hover-tooltip / word-tap layer needs only a subset of the 1.8 MB
+// biblepedia index; assets/js/bp-lite.js fetches this instead.
+{
+  const full = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/biblepedia/index.json'), 'utf8'));
+  const lite = full.map(e => {
+    const o = { id: e.id, term: e.term, category: e.category };
+    if (e.brief) o.brief = e.brief;
+    if (e.hitchcock_meaning) o.hitchcock_meaning = e.hitchcock_meaning;
+    if (e.has_article !== undefined) o.has_article = e.has_article;
+    if (e.redirect) o.redirect = e.redirect;
+    if (e.aliases && e.aliases.length) o.aliases = e.aliases;
+    return o;
+  });
+  const json = JSON.stringify(lite);
+  fs.writeFileSync(path.join(DIST, 'assets', 'bp-lite.json'), json);
+  console.log(`[build-assets] bp-lite.json: ${lite.length} entries, ${(json.length / 1024).toFixed(0)} KB (full: ${(fs.statSync(path.join(ROOT, 'data/biblepedia/index.json')).size / 1024).toFixed(0)} KB)`);
+}
+
 // ── 6.5 Answers-page manifest ───────────────────────────────────────────────
 // The slug list of built /answers/ pages, so the verse search can offer a
 // topic's answer page without risking a 404 (fetched lazily by search.js).

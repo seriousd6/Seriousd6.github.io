@@ -8,8 +8,7 @@
 import { escHtml, _resolve } from './core.js';
 import { wireRefLinks } from './wire.js';
 import { BIBLEPEDIA_URL } from './library.js';
-
-var BP_IDX_URL = _resolve('../../data/biblepedia/index.json');
+import { loadBPLite } from './bp-lite.js';
 
 var _termTipEl     = null;
 var _termTipTimer  = null;
@@ -170,8 +169,11 @@ function _showTermTip(anchor, key) {
 function _loadTermMap() {
   if (_termMap2) return Promise.resolve(_termMap2);
   if (_termMapReady) return _termMapReady;
-  _termMapReady = fetch(BP_IDX_URL)
-    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+  _termMapReady = loadBPLite()
+    .then(function (data) {
+      if (!data) return Promise.reject('no index');
+      return data;
+    })
     .then(function (data) {
       var map = {};
       var byId = {};

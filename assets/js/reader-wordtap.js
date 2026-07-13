@@ -16,7 +16,7 @@
 'use strict';
 
 import { loadInterlinear, loadStrongs, escHtml } from './core.js';
-import { _loadBPIndex } from './modal.js';
+import { loadBPLite } from './bp-lite.js';
 import { _HL_COLORS, getNote, toggleHighlight } from './storage.js';
 import { applyHighlights } from './wire.js';
 
@@ -134,7 +134,7 @@ function _fillLexeme(pop, word, verse) {
 }
 
 function _fillArticle(pop, word, termKey) {
-  _loadBPIndex().then(function (idx) {
+  loadBPLite().then(function (idx) {
     if (!_pop || _pop !== pop || !idx) return;
     var k = (termKey || word).toLowerCase();
     var hit = idx.find(function (a) {
