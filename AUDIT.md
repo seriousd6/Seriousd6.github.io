@@ -1,0 +1,189 @@
+# Adversarial Audit — 2026-07-13
+
+Every route crawled cold (desktop 1366px + phone 390px), errors and weights
+measured, screenshots reviewed, code paths traced. Nothing exempted. This is
+the "everything wrong" list — bugs, inefficiencies, redundancies, design
+debt, and missed usefulness — ordered by section, each item tagged
+**[bug]** / **[perf]** / **[ux]** / **[ia]** (information architecture) /
+**[a11y]** / **[quality]**, with severity ●●● high, ●● medium, ● low.
+
+Fixed during this audit (commit `4617a585`): "anxiety" had no answers page
+(649 Nave stubs skipped — 233 now generated from text), answers pages were
+unreachable (no sidebar link, no search pointer), trailing "?" broke query
+intent. Those are not re-listed below.
+
+---
+
+## 1 · Outright bugs found
+
+- ●●● **[bug] /about/ overflows phones by 148px** — horizontal page scroll on
+  every mobile visit to the transparency page.
+- ●● **[bug] Compare fires 12 guaranteed 404s per lookup** — it fetches every
+  version in versions.json, including the 12 `stub:true` versions with no
+  data files (YLT, DBY, GNV, AKJV, WEBBE, MKT-L/M/T, DR, KJV-APO, WEB-CE,
+  BRENTON). Wasted requests, console noise, and 12 dead rows attempted per
+  verse. The precache path already knows to filter these; compare doesn't.
+- ●● **[bug] Workshop "Choose your study depth" dialog renders detached** —
+  an unstyled card floating at the top-left of the page with no backdrop or
+  centering, above a separate app frame. First impression of the deepest tool
+  on the site is a layout accident.
+- ● **[bug] /history/ era column layout glitches** — era labels overlap their
+  count badges ("Conquest & Judges", "Between the Testaments"), and huge
+  uneven vertical gaps between eras make the timeline read as broken.
+
+## 2 · Search & discovery
+
+- ●●● **[quality] Generated answers pages are unranked** — the 233 text-
+  matched topics list verses in canonical order, so the strongest verse isn't
+  first (fixed for "anxiety" only by luck of Psalms coming early). They
+  should rank exact-word hits above synonym hits before capping at 40.
+- ●● **[quality] Verse ranking is still shallow** — weight = match-type sum;
+  no phrase proximity, no verse-length normalization, no popularity signal.
+  "love" returns Genesis 22:2 first because canonical order breaks ties.
+- ●● **[ia] Two search UIs with different powers** — Ctrl+K quick-search and
+  /search/ have different feature sets (the quick panel doesn't know about
+  kernels/synonyms/answers cards). A stranger who finds one never learns the
+  other exists.
+- ●● **[quality] No typo tolerance** — "anxeity" returns nothing and doesn't
+  suggest "anxiety". One edit-distance pass over the token list would fix it.
+- ● **[ia] Omni sections vs answers pages overlap** — the Omni "topics"
+  section and /answers/ serve the same intent with different presentations;
+  the Omni topic section could simply BE the answers preview.
+- ● **[quality] Synonym table is 24 hand-picked entries** — good ones, but a
+  systematic pass (lemma-based, from the interlinear data the site already
+  has) would cover far more ("crucifixion" → "crucified" works via stem, but
+  "resurrection" → "raised" doesn't).
+
+## 3 · Information architecture & redundancy
+
+- ●●● **[ia] Three home-shaped sidebar entries** — Home (→ Desk on desktop,
+  → daily page on phone), The Desk, and Today. Three labels, two
+  destinations, platform-dependent behavior. "Home" should collapse into one
+  clear entry per platform.
+- ●●● **[ia] The graveyard of orphan pages** — /notes/, /bookmarks/,
+  /compare/, /tracker/, /wordcloud/, /maps/, /timeline/, /church-history/,
+  /study-guides/ are all real pages reachable only through in-page links (or
+  not at all). Bookmarks and My Study even have their own nonstandard chrome
+  ("← Home" buttons, no sidebar) — they predate the shell and it shows.
+- ●● **[ia] Compare exists three times** — reader toolbar Compare toggle,
+  the /compare/ page, and the verse modal's All Translations tab: three UIs,
+  three codepaths, same job. Pick the page (it's the best one, now desk-
+  linkable), route the other two into it.
+- ●● **[ia] Word study exists four times** — word-tap popover → desk word
+  blade; workshop Word Study tab; interlinear tile taps; biblepedia Strong's
+  pages. Each renders lexeme data differently. The desk word blade should be
+  THE surface, with others deep-linking into it.
+- ●● **[ia] Three annotation systems with unclear boundaries** — reader verse
+  notes ("My Study"), Discipline journal + reflections, and memory-verse
+  notes. A user asking "where did I write that?" has three answers. At
+  minimum My Study should show journal entries too.
+- ●● **[ux] /studies/ is a wall of disabled cards** — 60+ grayed-out books
+  with dead Guide/Deep-Dive/Commentary chips; only a handful have content.
+  The default view should be "Has Content", with the rest behind "all books"
+  — advertise what exists, not what doesn't.
+- ● **[ia] /history/ hub duplicates standalone routes** — its four tabs
+  (Biblical Timeline / Church History / Maps / Animated Map) are also
+  /timeline/, /church-history/, /maps/ + timelapse; hub tabs reload full
+  pages rather than switching. And the hub lands on an empty three-pane
+  miller view ("Select an era · then an event") — an empty state as a front
+  door.
+- ● **[ia] /tracker/ duplicates the Today tracker card** as a standalone
+  orphan page.
+- ● **[ux] My Study header has six buttons** — Export all data / Import all
+  data / Import notes / Export text / Export notes / ← Home. Two overlapping
+  import/export systems side by side, plus a Home button next to a sidebar
+  that has Home. Should be one Export/Import pair with format options.
+
+## 4 · The Desk
+
+- ●● **[ux] No per-panel back/address control** — navigate a biblepedia
+  panel three articles deep and there's no back button; browser Back pops
+  the top window's history unpredictably (iframe navigations share the
+  session history). Panels need a small back affordance (history.back() on
+  the frame) and/or breadcrumb.
+- ●● **[ux] Layouts aren't shareable or savable** — one implicit layout in
+  localStorage; no named layouts, no URL encoding (`/desk/#bible+maps`), no
+  "send this workspace to my other device" (the Drive sync doesn't cover it).
+- ● **[ux] One global link-set** — Logos has A/B/C link groups; here every
+  linked panel joins the same set, so two independent linked pairs aren't
+  possible.
+- ● **[perf] Desktop restore builds every panel eagerly** — the phone desk
+  lazy-builds per tab, but a restored 6-panel desktop layout loads six full
+  pages at once (~130 KB JS/CSS each after frame-lite, plus data). Off-screen
+  is impossible on desktop, but staggered/idle mounting isn't.
+- ● **[ux] Chooser can't open an arbitrary page** — 12 fixed resources; no
+  "open any URL/topic/article" input except the Bible passage field.
+
+## 5 · Performance & network
+
+- ●●● **[perf] The 1.8 MB biblepedia index is idle-fetched on nearly every
+  content page** to power term tooltips (and now word-tap article actions).
+  The tooltip needs term/id/brief/category — a trimmed terms-index (~300 KB)
+  would serve the hover layer, with the full index only on biblepedia itself.
+- ●● **[perf] nave.json is 1.4 MB** and fetched whole by the Omni topics
+  section at runtime; the topic chips need slug+title+count (~150 KB).
+- ●● **[perf] reader.css is 120 KB** (uncompressed) of everything the reader
+  family ever needed — desk popovers, blades, rails, print, compare — parsed
+  by every reader panel. Worth splitting the desk-blade/apparatus layers.
+- ● **[perf] /read/?ref=John+3 costs ~2.1 MB cold** — fonts + book JSON +
+  crossrefs + commentary + interlinear all land on first paint; some of it
+  (commentary, interlinear) could defer until toggled. Warm loads are fine.
+- ● **[perf] The answers build scans the whole BSB twice** — once in
+  answers-topics.mjs, once in build-search-index.mjs (build went 15 s →
+  35 s). Share one tokenization pass.
+- ● **[perf] sw.js precaches 225 assets on install** — includes every page
+  family's entry+chunks whether or not the user ever visits; consider tiering
+  (shell now, features on first use — the data layer already works this way).
+
+## 6 · Mobile
+
+- ●● **[bug] /about/ overflow** (see §1).
+- ● **[ux] Desk tab strip lacks swipe** — tabs tap fine, but the natural
+  phone gesture (swipe between panels) isn't wired.
+- ● **[ux] Reader toolbar is still dense on phones** — lookup, book/chapter
+  selects, version, Compare, Aa, Study Tools, Notes, Listen, ? in two
+  wrapping rows before any scripture shows.
+
+## 7 · Accessibility
+
+- ●● **[a11y] Word-tap is mouse/touch-only** — the richest hub (lexeme
+  popover) can't be opened from the keyboard at all; term/place anchors can
+  be focused but words can't. A keyboard path (e.g. verse focus + key) or an
+  equivalent command is needed.
+- ● **[a11y] Desk drag interactions have no keyboard equivalent** — divider
+  resize and drag-to-re-dock are pointer-only (split/close/maximize do have
+  shortcuts).
+- ● **[a11y] Hover tooltips (term/place) don't appear on focus for the
+  word-tap-upgraded surfaces** — places.js wires focus/blur, terms.js only
+  mouseenter/leave.
+
+## 8 · Content & quality
+
+- ●● **[quality] Workshop dashboard opens with "GREEK REVIEWED 0 of 5,523 ·
+  0%"** — a demotivating zero-state for a tool most users open once; the
+  wall-of-text "Dashboard" panel reads like documentation, not UI.
+- ● **[quality] Nave ALL-CAPS titles titleCase imperfectly** — "Ai" fine,
+  but multi-part heads like "Olives, Mount Of" keep odd inversions from the
+  1896 source on answers pages.
+- ● **[quality] Answers preview is BSB-only and first-8-parseable** — a
+  chapter-level or unparseable ref silently drops out of the preview cards.
+- ● **[quality] Generated answers cap at 40 canonical refs** with no "why
+  these" note beyond the source line.
+
+## 9 · Environmental (not actionable in code)
+
+- Leaflet + tiles come from CDNs — maps/mini-maps die offline (they degrade
+  with notes + working links, by design). Self-hosting Leaflet would remove
+  the unpkg dependency; tiles can't realistically be self-hosted.
+
+---
+
+## Priority order (if fixing top-down)
+
+1. §1 bugs (about overflow, compare 404s, workshop dialog, history layout)
+2. Rank the generated answers pages; trim the term-tooltip index (§2, §5)
+3. IA collapse: home trinity, orphan adoption or removal, studies default
+   filter, compare unification (§3)
+4. Desk panel back button + named layouts (§4)
+5. Keyboard path for word-tap (§7)
+6. The rest as taste dictates.
