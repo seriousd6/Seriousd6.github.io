@@ -354,7 +354,7 @@ function _mountFrameNow(el, node) {
     var linkBtn = el.querySelector('.desk-panel__btn--link');
     if (linkBtn) {
       var rp = resourcePrefix(node.url || '');
-      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare';
+      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare' && rp !== 'translation';
     }
     _maybeLinkHint();
     _save();
@@ -702,7 +702,7 @@ function _onFrameMessage(e) {
     if (!hit || !hit.node.link) return;   // source isn't link-toggled
     _collectPanels(_root, []).forEach(function (n) {
       var rp = resourcePrefix(n.url || '');
-      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare')) return;
+      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare' && rp !== 'translation')) return;
       var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
       if (f) {
         try { f.contentWindow.postMessage({ type: 'bsw-desk-goto', ref: e.data.ref }, location.origin); } catch (err) {}
@@ -719,6 +719,21 @@ function _onFrameMessage(e) {
 
   // A linked reader's chapter finished tagging its places → linked maps
   // panels show them (markers + fit).
+  // P19: linked readers scroll together — whichever the user scrolls leads.
+  if (e.data.type === 'bsw-desk-scroll') {
+    var scrollHit = _findParent(_root, srcId, null);
+    if (!scrollHit || !scrollHit.node.link) return;
+    if (resourcePrefix(scrollHit.node.url || '') !== 'read') return;
+    _collectPanels(_root, []).forEach(function (n) {
+      if (n.id === srcId || !n.link || resourcePrefix(n.url || '') !== 'read') return;
+      var f2 = _panels[n.id] && _panels[n.id].querySelector('iframe');
+      if (f2) {
+        try { f2.contentWindow.postMessage({ type: 'bsw-desk-scroll-to', anchor: e.data.anchor, ratio: e.data.ratio }, location.origin); } catch (err) {}
+      }
+    });
+    return;
+  }
+
   if (e.data.type === 'bsw-desk-places' && e.data.ids) {
     var srcHit = _findParent(_root, srcId, null);
     if (!srcHit || !srcHit.node.link) return;
@@ -738,7 +753,7 @@ function _onFrameMessage(e) {
 // appears beside the toggle. Dismissing it — or using any link toggle —
 // retires it for good.
 var HINT_KEY = 'bsw_desk_linkhint';
-var LINKABLE = { read: 1, maps: 1, compare: 1 };
+var LINKABLE = { read: 1, maps: 1, compare: 1, translation: 1 };
 
 function _retireLinkHint() {
   try { localStorage.setItem(HINT_KEY, '1'); } catch (e) {}
@@ -983,6 +998,31 @@ export function initDesk() {
   if (addBtn) addBtn.addEventListener('click', _addPanelToRoot);
   var layBtn = document.getElementById('desk-layouts-btn');
   if (layBtn) layBtn.addEventListener('click', function () { _toggleLayoutsMenu(layBtn); });
+
+  // P19: one text-size control for every panel. The zoom factor persists in
+  // localStorage (each frame applies it at boot — same origin) and is
+  // broadcast to live frames so changes land without reloads.
+  function _deskZoom() {
+    var z = 1;
+    try { z = parseFloat(localStorage.getItem('bsw_desk_zoom')) || 1; } catch (e) {}
+    return Math.min(1.4, Math.max(0.8, z));
+  }
+  function _setDeskZoom(z) {
+    z = Math.round(Math.min(1.4, Math.max(0.8, z)) * 100) / 100;
+    try { localStorage.setItem('bsw_desk_zoom', String(z)); } catch (e) {}
+    Object.keys(_panels).forEach(function (id) {
+      var f = _panels[id].querySelector('iframe');
+      if (f) { try { f.contentWindow.postMessage({ type: 'bsw-desk-zoom', zoom: z }, location.origin); } catch (e) {} }
+    });
+    var lbl = document.getElementById('desk-zoom-label');
+    if (lbl) lbl.textContent = Math.round(z * 100) + '%';
+  }
+  var zoomOut = document.getElementById('desk-zoom-out');
+  var zoomIn  = document.getElementById('desk-zoom-in');
+  if (zoomOut) zoomOut.addEventListener('click', function () { _setDeskZoom(_deskZoom() - 0.1); });
+  if (zoomIn)  zoomIn.addEventListener('click', function () { _setDeskZoom(_deskZoom() + 0.1); });
+  var lbl0 = document.getElementById('desk-zoom-label');
+  if (lbl0 && _deskZoom() !== 1) lbl0.textContent = Math.round(_deskZoom() * 100) + '%';
   var resetBtn = document.getElementById('desk-reset-btn');
   if (resetBtn) resetBtn.addEventListener('click', function () {
     Object.keys(_panels).forEach(function (id) { _panels[id].remove(); delete _panels[id]; });

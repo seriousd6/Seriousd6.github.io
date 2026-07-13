@@ -353,3 +353,12 @@
   outline: 2px solid var(--color-accent, #7a6222);
   outline-offset: -1px;
 }
+
+/* P19: desk-wide text size */
+.desk-toolbar__zoom {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  min-width: 2.2em;
+  text-align: center;
+}

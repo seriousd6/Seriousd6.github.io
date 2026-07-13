@@ -5592,4 +5592,15 @@ export async function initWorkshopPage() {
     if ($refInput) $refInput.value = autoRef;
     _studyPassage(autoRef);
   }
+
+  // P19: verse lock — a link-toggled workshop panel in the Desk follows the
+  // linked reader's navigation (desk-frame.js dispatches bsw:desk-goto).
+  window.addEventListener('bsw:desk-goto', async function (e) {
+    var ref = e.detail && e.detail.ref;
+    if (!ref) return;
+    if (ref.indexOf(':') === -1) ref += ':1';
+    await loadBooks();
+    if ($refInput) $refInput.value = ref;
+    _studyPassage(ref);
+  });
 }

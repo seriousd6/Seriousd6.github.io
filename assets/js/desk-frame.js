@@ -42,14 +42,85 @@ export function emitDeskPlaces(ref, ids) {
   try { window.parent.postMessage({ type: 'bsw-desk-places', ref: ref, ids: ids }, location.origin); } catch (e) {}
 }
 
+// P19: linked readers scroll together. The leading panel emits a verse
+// anchor (first visible verse + its viewport offset) so followers align by
+// CONTENT, not pixel ratio — verse heights differ between panels; the ratio
+// rides along as a fallback. _scrollFollowUntil suppresses re-emitting while
+// an incoming sync is being applied (feedback-loop guard).
+var _scrollFollowUntil = 0;
+
+function _wireScrollSync() {
+  if (resourcePrefix(location.pathname) !== 'read') return;
+  var pending = false;
+  window.addEventListener('scroll', function () {
+    if (!_underDesk || pending || Date.now() < _scrollFollowUntil) return;
+    pending = true;
+    requestAnimationFrame(function () {
+      pending = false;
+      if (Date.now() < _scrollFollowUntil) return;
+      var anchor = null;
+      var verses = document.querySelectorAll('.reader-verse[data-v]');
+      for (var i = 0; i < verses.length; i++) {
+        var r = verses[i].getBoundingClientRect();
+        if (r.bottom > 60) {
+          anchor = { ch: verses[i].getAttribute('data-ch'), v: verses[i].getAttribute('data-v'), off: Math.round(r.top) };
+          break;
+        }
+      }
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - doc.clientHeight;
+      try {
+        window.parent.postMessage({
+          type: 'bsw-desk-scroll', anchor: anchor,
+          ratio: max > 0 ? doc.scrollTop / max : 0
+        }, location.origin);
+      } catch (e) {}
+    });
+  }, { passive: true });
+}
+
+// P19: shared text size. Applied at boot from localStorage (same origin as
+// the desk) and live on broadcast.
+function _applyDeskZoom(z) {
+  z = Math.min(1.4, Math.max(0.8, parseFloat(z) || 1));
+  document.documentElement.style.fontSize = z === 1 ? '' : (z * 100) + '%';
+}
+
 export function initDeskFrame() {
   if (!_framed) return;
+
+  try {
+    var z0 = localStorage.getItem('bsw_desk_zoom');
+    if (z0) _applyDeskZoom(z0);
+  } catch (e) {}
+  _wireScrollSync();
 
   window.addEventListener('message', function (e) {
     if (e.origin !== location.origin || !e.data) return;
     if (e.data.type === 'bsw-desk-hello') { _underDesk = true; return; }
     if (e.data.type === 'bsw-desk-goto' && e.data.ref) {
       window.dispatchEvent(new CustomEvent('bsw:desk-goto', { detail: { ref: e.data.ref } }));
+    }
+    if (e.data.type === 'bsw-desk-scroll-to') {
+      _scrollFollowUntil = Date.now() + 350;
+      var a = e.data.anchor;
+      var applied = false;
+      if (a && a.v) {
+        var el = document.querySelector('.reader-verse[data-ch="' + a.ch + '"][data-v="' + a.v + '"]');
+        if (el) {
+          window.scrollBy(0, el.getBoundingClientRect().top - (a.off || 0));
+          applied = true;
+        }
+      }
+      if (!applied && typeof e.data.ratio === 'number') {
+        var doc = document.documentElement;
+        doc.scrollTop = e.data.ratio * (doc.scrollHeight - doc.clientHeight);
+      }
+      return;
+    }
+    if (e.data.type === 'bsw-desk-zoom') {
+      _applyDeskZoom(e.data.zoom);
+      return;
     }
     if (e.data.type === 'bsw-desk-show-places' && e.data.ids) {
       window.dispatchEvent(new CustomEvent('bsw:desk-show-places', { detail: { ref: e.data.ref, ids: e.data.ids, mapId: e.data.mapId || null } }));
