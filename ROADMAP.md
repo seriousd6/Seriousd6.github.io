@@ -171,3 +171,31 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   66-book scan; automatic legacy fallback for other versions and offline.
 
 **All Heights phases (H1–H6) are complete.**
+
+## Beyond the Heights — The Desk (Logos-style work surface)
+
+### D1 — Surface v1  ·  DONE 2026-07-13
+- `/desk/`: a recursive split layout of panels, each an iframe hosting an
+  existing page (framed pages strip their own chrome pre-paint), so multiple
+  `/read/` panels give genuinely independent Bible readers. Panels split
+  right/down, close, and resize with draggable dividers; the tree drives
+  geometry only — panel elements are never reparented (reparenting an iframe
+  reloads it). Layout + per-panel URLs persist to localStorage; in-panel
+  navigation is tracked same-origin and the page's title names the panel bar.
+- Resource chooser per new panel: Bible (with optional passage), Today,
+  Search, Biblepedia, Library, Answers, Maps, Timeline, Compare, Original
+  Languages, Discipline, Notes.
+- Landing: desktop `/` redirects pre-paint to the Desk (default layout =
+  Today + Bible); phones keep the daily page; escape hatches `?classic=1`
+  and `localStorage bsw_desk_home='0'`. The daily dashboard moved to a
+  shared `DailyHome.astro` used by both `/` and the new `/today/` (also the
+  Desk's default first panel). Sidebar: Read → The Desk; Practice → Today.
+- Narrow screens: `/desk/` stacks panels full-width in tree order.
+
+### D2 — candidates (not started)
+- Panel linking: a link-set so verse navigation in one panel drives linked
+  reader/commentary panels (postMessage protocol).
+- Named layouts / presets ("Sermon prep", "Language study"), maximize toggle,
+  drag-to-rearrange panels.
+- A Settings toggle for the desk-as-home redirect (the localStorage flag is
+  already honored).

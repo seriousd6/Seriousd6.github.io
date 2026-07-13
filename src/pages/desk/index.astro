@@ -1,0 +1,24 @@
+---
+// /desk/ — the Logos-style work surface. A recursive split layout of panels,
+// each an iframe hosting an existing page (framed pages strip their own
+// chrome pre-paint — see Base.astro's embed bootstrap), so multiple Bible
+// readers run side by side with fully independent state. Layout lives in
+// localStorage; assets/js/desk.js owns everything inside #desk-root.
+import Base from '../../layouts/Base.astro';
+---
+
+<Base entry="desk" title={"The Desk — Kingdom Bible Study"} description={"A multi-panel study surface: Bible readers, search, encyclopedia, library, and maps side by side."} footer={false}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="/assets/css/desk.css">
+</Fragment>
+<main class="desk-main">
+  <div class="desk-toolbar">
+    <span class="desk-toolbar__title">The Desk</span>
+    <span class="desk-toolbar__hint">Split any panel to add a resource · drag dividers to resize</span>
+    <span class="desk-toolbar__spacer"></span>
+    <button class="desk-toolbar__btn" id="desk-add-btn" type="button">+ Panel</button>
+    <button class="desk-toolbar__btn" id="desk-reset-btn" type="button">Reset layout</button>
+  </div>
+  <div class="desk-root" id="desk-root"></div>
+</main>
+</Base>

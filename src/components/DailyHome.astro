@@ -1,0 +1,310 @@
+---
+// DailyHome.astro — the daily dashboard (verse of the day, reading plan,
+// devotional, disciplines tracker, studies, continue-reading). Shared by
+// /today/ and by / (which, on wide screens, redirects to the Desk — the
+// daily page remains the phone landing and the Desk's default first panel).
+// All URLs are root-absolute so the component renders at any path depth.
+---
+
+<main>
+    <div class="container daily-page">
+
+      <!-- Greeting -->
+      <div class="daily-header">
+        <p id="daily-greeting" class="daily-greeting"></p>
+        <h1 id="daily-date" class="daily-date"></h1>
+      </div>
+
+      <!-- HP-G: Quick verse lookup -->
+      <form class="daily-search-row" id="daily-verse-form" role="search">
+        <input class="daily-search-input" id="daily-verse-input" type="search" placeholder="Look up a verse — John 3:16, Romans 8…" aria-label="Verse lookup">
+        <button class="daily-search-btn" type="submit">Go</button>
+      </form>
+
+      <!-- ── Verse of the Day ── -->
+      <section class="daily-card" id="daily-votd-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Verse of the Day</h2>
+        </div>
+        <div id="daily-votd-content" class="daily-votd-body"></div>
+      </section>
+
+      <!-- ── Today's Reading ── -->
+      <section class="daily-card" id="daily-reading-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Today's Reading</h2>
+          <select id="daily-plan-select" class="daily-select" aria-label="Choose reading plan"></select>
+        </div>
+        <div id="daily-plan-content" class="daily-plan-body"></div>
+        <div id="daily-plan-datepicker" class="daily-datepicker" hidden="">
+          <label for="daily-start-date">Started on:</label>
+          <input type="date" id="daily-start-date" class="daily-date-input">
+        </div>
+      </section>
+
+      <!-- ── Daily Devotional ── -->
+      <section class="daily-card" id="daily-devot-card">
+        <div class="daily-card__head">
+          <h2 id="daily-devot-title" class="daily-card__title">Morning Devotional</h2>
+        </div>
+        <!-- Source-picker chips, not tabs (no tabpanels): pressed-button semantics. -->
+        <div class="daily-devot-chips" role="group" aria-label="Devotional source">
+          <button class="daily-devot-chip" data-src="variety" aria-pressed="false">✦ Variety</button>
+          <button class="daily-devot-chip" data-src="spurgeon-morning" aria-pressed="false">Spurgeon AM</button>
+          <button class="daily-devot-chip" data-src="spurgeon-evening" aria-pressed="false">Spurgeon PM</button>
+          <button class="daily-devot-chip" data-src="daily-psalms" aria-pressed="false">Psalms</button>
+          <button class="daily-devot-chip" data-src="proverbs-month" aria-pressed="false">Proverbs</button>
+          <button class="daily-devot-chip" data-src="nt-daily" aria-pressed="false">NT Daily</button>
+        </div>
+        <div id="daily-devot-content" class="daily-devot-body"></div>
+      </section>
+
+      <!-- ── Today's Disciplines tracker ── -->
+      <section class="daily-card" id="daily-tracker-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Today's Disciplines</h2>
+          <span id="daily-tracker-count" class="daily-tracker-count"></span>
+          <a href="/discipline/?tab=history" class="daily-streak-cta" style="font-size:.78rem">History →</a>
+        </div>
+        <ul class="daily-tracker-list" id="daily-tracker-list" aria-label="Today's discipline checklist">
+          <!-- populated by tracker module -->
+        </ul>
+      </section>
+
+      <!-- ── Studies ── -->
+      <section class="daily-card" id="daily-studies-card">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Studies</h2>
+          <a href="/studies/" class="daily-streak-cta" style="font-size:.78rem">All studies →</a>
+        </div>
+        <div id="daily-studies-body" class="daily-history-body"></div>
+      </section>
+
+      <!-- ── Continue Reading ── -->
+      <section class="daily-card daily-card--history" id="daily-history-card" hidden="">
+        <div class="daily-card__head">
+          <h2 class="daily-card__title">Continue Reading</h2>
+        </div>
+        <div id="daily-history-content" class="daily-history-body" hidden=""></div>
+        <div id="daily-lib-history" class="daily-history-body"></div>
+      </section>
+
+    </div>
+  </main>
+<Fragment slot="after-scripts">
+<script type="module" is:inline="">
+  import { getToday, onUpdate } from '/assets/js/tracker.js';
+
+  var ROOT = '/';
+
+  var D = ROOT + 'discipline/';
+  var DISCIPLINES = [
+    { key: 'reading',    label: 'Reading Plan',       href: D + '?tab=plans',                     doneLink: 'View plan',        todoLink: 'Go to plan' },
+    { key: 'devotional', label: 'Devotional',          href: D + '?tab=devotionals',               doneLink: 'View devotional',  todoLink: 'Read today\'s' },
+    { key: 'memory',     label: 'Scripture Memory',    href: D + '?tab=memory',                    doneLink: 'View memory',      todoLink: 'Start review' },
+    { key: 'prayer',     label: 'Prayer Journal',      href: D + '?tab=journal',                   doneLink: 'View journal',     todoLink: 'Write a prayer' },
+    { key: 'reflection', label: 'Study Reflection',    href: D + '?tab=journal&jtab=reflections',  doneLink: 'View reflections', todoLink: 'Write a reflection' },
+    { key: 'worship',    label: 'Worship (this week)', href: D + '?tab=worship',                   doneLink: 'View worship',     todoLink: 'Log sermon' },
+    { key: 'gratitude',  label: 'Gratitude Entry',     href: D + '?tab=journal&jtab=gratitude',    doneLink: 'View entries',     todoLink: 'Write today\'s' },
+  ];
+
+  function renderTracker() {
+    var listEl = document.getElementById('daily-tracker-list');
+    if (!listEl) return;
+    var status = getToday();
+    listEl.innerHTML = '';
+    var doneCount = 0;
+    var today = new Date().toISOString().slice(0, 10);
+    DISCIPLINES.forEach(function (d) {
+      var done = !!status[d.key];
+      if (done) doneCount++;
+      var li   = document.createElement('li');
+      li.className = 'daily-tracker-item' + (done ? ' daily-tracker-item--done' : '');
+
+      var check = document.createElement('span');
+      check.className = 'daily-tracker-check';
+      check.setAttribute('aria-hidden', 'true');
+      check.textContent = done ? '✓' : '';
+
+      var label = document.createElement('span');
+      label.className = 'daily-tracker-label';
+      label.textContent = d.label;
+
+      // HP-C: memory due badge on the Scripture Memory row
+      if (d.key === 'memory') {
+        try {
+          var memData = JSON.parse(localStorage.getItem('bsw_memory') || '{}');
+          var dueCount = Object.values(memData).filter(function (m) { return m.nextReview && m.nextReview <= today; }).length;
+          if (dueCount > 0) {
+            var badge = document.createElement('span');
+            badge.className = 'daily-mem-badge';
+            badge.textContent = dueCount + ' due';
+            label.appendChild(badge);
+          }
+        } catch (_) {}
+      }
+
+      var link = document.createElement('a');
+      link.className = 'daily-tracker-link';
+      link.href = d.href;
+      link.textContent = done ? d.doneLink : d.todoLink;
+
+      li.appendChild(check);
+      li.appendChild(label);
+      li.appendChild(link);
+      listEl.appendChild(li);
+    });
+    var countEl = document.getElementById('daily-tracker-count');
+    if (countEl) countEl.textContent = doneCount + ' / ' + DISCIPLINES.length + ' complete';
+  }
+
+  renderTracker();
+  onUpdate(renderTracker);
+
+  var _LIB_SUGGESTIONS = [
+    { id: 'augustine-confessions',         title: "Confessions",                     author: "Augustine",          desc: "The original spiritual autobiography — a soul's restless journey to God." },
+    { id: 'imitation-of-christ',           title: "Imitation of Christ",             author: "Thomas à Kempis",    desc: "The most-read devotional after the Bible. Short chapters, deep wisdom." },
+    { id: 'brother-lawrence-practice',     title: "Practice of the Presence of God", author: "Brother Lawrence",   desc: "A kitchen monk's secret: finding God in the smallest daily actions." },
+    { id: 'ryle-holiness',                 title: "Holiness",                        author: "J.C. Ryle",          desc: "What does sanctification actually look like? Ryle is bracingly direct." },
+    { id: 'pilgrims-progress',             title: "Pilgrim's Progress",              author: "John Bunyan",        desc: "The great allegory of the Christian life — readable in a few evenings." },
+    { id: 'chesterton-orthodoxy',          title: "Orthodoxy",                       author: "G.K. Chesterton",    desc: "A journalist stumbles into Christianity and finds it stranger than he imagined." },
+    { id: 'athanasius-on-incarnation',     title: "On the Incarnation",              author: "Athanasius",         desc: "C.S. Lewis called this the first patristic work every Christian should read." },
+    { id: 'spurgeon-all-of-grace',         title: "All of Grace",                    author: "C.H. Spurgeon",      desc: "Spurgeon at his most evangelistic — the whole gospel in a short book." },
+    { id: 'machen-christianity-liberalism',title: "Christianity and Liberalism",     author: "J. Gresham Machen",  desc: "A precise defense of historic Christianity against modernist revision." },
+    { id: 'murray-deeper-christian-life',  title: "The Deeper Christian Life",       author: "Andrew Murray",      desc: "Four short meditations on the fullness of life in the Spirit." },
+    { id: 'calvin-institutes-book1',       title: "Institutes — Book I",             author: "John Calvin",        desc: "The knowledge of God the Creator. Start here before tackling the full Institutes." },
+    { id: 'owen-mortification',            title: "On the Mortification of Sin",     author: "John Owen",          desc: "'Be killing sin or sin will be killing you.' Owen's most practical work." },
+  ];
+
+  // SG-D: study guide slugs for home-page "Continue" card
+  var _SG_META = [
+    { slug: 'hebrews',            title: 'Hebrews: The Better Covenant',      total: 14, href: ROOT + 'study-guides/hebrews/' },
+    { slug: 'romans-1-8',         title: 'Romans 1–8: The Righteousness of God', total: 9, href: ROOT + 'study-guides/romans-1-8/' },
+    { slug: 'ephesians',          title: 'Ephesians: Every Spiritual Blessing', total: 7, href: ROOT + 'study-guides/ephesians/' },
+    { slug: 'sermon-on-the-mount',title: 'The Sermon on the Mount',           total: 6, href: ROOT + 'study-guides/sermon-on-the-mount/' },
+    { slug: 'psalms',             title: 'The Psalms: A 4-Week Devotional',   total: 5, href: ROOT + 'study-guides/psalms/' },
+  ];
+
+  function renderLibHistory() {
+    var el = document.getElementById('daily-lib-history');
+    if (!el) return;
+    try {
+      // SG-D: prepend most recently in-progress study guide
+      var sgHtml = '';
+      try {
+        var sgData = JSON.parse(localStorage.getItem('bsw_sg_progress') || '{}');
+        var sgActive = _SG_META.filter(function (g) { return sgData[g.slug] && sgData[g.slug].length > 0 && sgData[g.slug].length < g.total; });
+        sgActive.sort(function (a, b) {
+          var ta = sgData[a.slug + '_lastUpdated'] || '';
+          var tb = sgData[b.slug + '_lastUpdated'] || '';
+          return tb > ta ? 1 : -1;
+        });
+        if (sgActive.length) {
+          var g  = sgActive[0];
+          var done = sgData[g.slug].length;
+          sgHtml = '<a class="daily-history-item" href="' + g.href + '">' +
+            '<span class="daily-history-ref">' + g.title + '</span>' +
+            '<span class="daily-history-meta">' + done + ' / ' + g.total + ' sessions complete</span>' +
+          '</a>';
+        }
+      } catch (_) {}
+
+      var data = JSON.parse(localStorage.getItem('bsw_lib_progress') || '{}');
+      var docs = Object.values(data).sort(function (a, b) { return b.lastRead > a.lastRead ? 1 : -1; }).slice(0, 3);
+      if (!docs.length && !sgHtml) {
+        // Pick a suggestion that rotates daily
+        var doy = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+        var sug = _LIB_SUGGESTIONS[doy % _LIB_SUGGESTIONS.length];
+        var href = ROOT + 'library/?doc=' + encodeURIComponent(sug.id);
+        el.hidden = false;
+        el.innerHTML =
+          '<p class="daily-lib-suggest-lbl">Start reading</p>' +
+          '<a class="daily-history-item daily-lib-suggest" href="' + href + '">' +
+            '<span class="daily-history-ref">' + sug.title +
+              ' <span class="daily-hist-tradition">' + sug.author + '</span></span>' +
+            '<span class="daily-history-meta daily-lib-suggest-desc">' + sug.desc + '</span>' +
+          '</a>';
+        var card = document.getElementById('daily-history-card');
+        if (card) card.removeAttribute('hidden');
+        return;
+      }
+      el.hidden = false;
+      el.innerHTML = sgHtml + docs.map(function (d) {
+        var tradChip = d.tradition ? '<span class="daily-hist-tradition">' + d.tradition + '</span>' : '';
+        return '<a class="daily-history-item" href="' + d.href + '">' +
+          '<span class="daily-history-ref">' + d.title + tradChip + '</span>' +
+          '<span class="daily-history-meta">' + d.lastRead + '</span>' +
+        '</a>';
+      }).join('');
+      // Show the parent card if it was hidden
+      var card = document.getElementById('daily-history-card');
+      if (card) card.removeAttribute('hidden');
+    } catch (_) {}
+  }
+
+  renderLibHistory();
+
+  // SG-I: Populate the Studies card — shows in-progress guide or featured static links
+  function renderStudiesCard() {
+    var el = document.getElementById('daily-studies-body');
+    if (!el) return;
+    try {
+      var sgData = JSON.parse(localStorage.getItem('bsw_sg_progress') || '{}');
+      var active = _SG_META.filter(function (g) { return sgData[g.slug] && sgData[g.slug].length > 0 && sgData[g.slug].length < g.total; });
+      active.sort(function (a, b) {
+        var ta = sgData[a.slug + '_lastUpdated'] || '';
+        var tb = sgData[b.slug + '_lastUpdated'] || '';
+        return tb > ta ? 1 : -1;
+      });
+      if (active.length) {
+        var g    = active[0];
+        var done = sgData[g.slug].length;
+        el.innerHTML = '<a class="daily-history-item" href="' + g.href + '">' +
+          '<span class="daily-history-ref">' + g.title + '</span>' +
+          '<span class="daily-history-meta">Continue — ' + done + ' / ' + g.total + ' sessions complete</span>' +
+        '</a>';
+        return;
+      }
+    } catch (_) {}
+    // No in-progress guide — show featured static links
+    el.innerHTML = [
+      { title: 'Hebrews: The Better Covenant',      href: ROOT + 'study-guides/hebrews/',    meta: '13 chapters · Study Guide' },
+      { title: 'Justification by Faith',             href: ROOT + 'topics/justification/',   meta: 'Topical Article' },
+      { title: 'Romans 1–8: The Righteousness of God', href: ROOT + 'study-guides/romans-1-8/', meta: '8 sessions · Study Guide' },
+    ].map(function (item) {
+      return '<a class="daily-history-item" href="' + item.href + '">' +
+        '<span class="daily-history-ref">📖 ' + item.title + '</span>' +
+        '<span class="daily-history-meta">' + item.meta + '</span>' +
+      '</a>';
+    }).join('');
+  }
+  renderStudiesCard();
+
+  // HP-G: Quick verse search
+  var _verseForm = document.getElementById('daily-verse-form');
+  if (_verseForm) {
+    _verseForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = document.getElementById('daily-verse-input').value.trim();
+      if (q) window.location.href = ROOT + 'read/?ref=' + encodeURIComponent(q);
+    });
+  }
+
+  // Re-render on localStorage changes from other tabs
+  window.addEventListener('storage', function (e) {
+    if (e.key === 'bsw_tracker' || e.key === 'bsw_plans' || e.key === 'bsw_journal' ||
+        e.key === 'bsw_gratitude' || e.key === 'bsw_reflections' || e.key === 'bsw_worship') {
+      renderTracker();
+    }
+    if (e.key === 'bsw_lib_progress' || e.key === 'bsw_sg_progress') { renderLibHistory(); renderStudiesCard(); }
+  });
+
+  // Re-render 300 ms after any click in case a same-tab action changed the data
+  // (e.g. plan mark-complete via the home page's daily widget).
+  var _debounce;
+  document.addEventListener('click', function () {
+    clearTimeout(_debounce);
+    _debounce = setTimeout(renderTracker, 300);
+  });
+  </script>
+</Fragment>

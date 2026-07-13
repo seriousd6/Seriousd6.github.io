@@ -1,0 +1,180 @@
+/* desk.css — the Logos-style work surface (/desk/, assets/js/desk.js). */
+
+.desk-main {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+/* ── Toolbar ─────────────────────────────────────────────────────────────── */
+.desk-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.45rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-family: var(--font-ui);
+  flex: 0 0 auto;
+}
+.desk-toolbar__title { font-weight: 800; letter-spacing: -0.01em; font-size: 0.95rem; }
+.desk-toolbar__hint { font-size: 0.76rem; color: var(--color-muted); }
+.desk-toolbar__spacer { flex: 1; }
+.desk-toolbar__btn {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 650;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: none;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color .12s;
+}
+.desk-toolbar__btn:hover { border-color: var(--color-primary); }
+
+/* ── Surface ─────────────────────────────────────────────────────────────── */
+.desk-root {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ── Panels (absolutely positioned; never reparented) ────────────────────── */
+.desk-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+.desk-panel__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.15rem 0.3rem 0.15rem 0.65rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  font-family: var(--font-ui);
+  flex: 0 0 auto;
+}
+.desk-panel__title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.desk-panel__spacer { flex: 1; }
+.desk-panel__btn {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 0.32rem 0.42rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.desk-panel__btn:hover { background: var(--color-border); color: var(--color-text); }
+.desk-panel__body { flex: 1; min-height: 0; position: relative; }
+.desk-panel__frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: var(--color-bg);
+}
+/* While a divider drags, iframes must not swallow pointer events. */
+.desk-root--dragging .desk-panel__frame { pointer-events: none; }
+.desk-root--dragging { cursor: grabbing; }
+
+/* ── Dividers ────────────────────────────────────────────────────────────── */
+.desk-divider {
+  position: absolute;
+  z-index: 5;
+  background: transparent;
+  transition: background .12s;
+}
+.desk-divider--row { cursor: col-resize; }
+.desk-divider--col { cursor: row-resize; }
+.desk-divider:hover, .desk-root--dragging .desk-divider {
+  background: color-mix(in srgb, var(--color-accent) 45%, transparent);
+}
+
+/* ── Resource chooser ────────────────────────────────────────────────────── */
+.desk-chooser {
+  height: 100%;
+  overflow-y: auto;
+  padding: 1.1rem 1.2rem;
+  font-family: var(--font-ui);
+}
+.desk-chooser__head {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 0.7rem;
+}
+.desk-chooser__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+.desk-chooser__item {
+  font-family: var(--font-ui);
+  font-size: 0.86rem;
+  font-weight: 650;
+  padding: 0.65rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .12s;
+}
+.desk-chooser__item:hover { border-color: var(--color-primary); }
+.desk-chooser__refrow {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+.desk-chooser__refinput {
+  flex: 1;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.desk-chooser__go {
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ── Narrow screens: desk.js stacks panels; the root scrolls ─────────────── */
+@media (max-width: 900px) {
+  .desk-root { overflow-y: auto; }
+  .desk-toolbar__hint { display: none; }
+}

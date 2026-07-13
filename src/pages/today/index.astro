@@ -1,0 +1,15 @@
+---
+// /today/ — the daily dashboard at a stable address: the Desk's default
+// first panel, and the place the sidebar's "Today" link goes. Identical
+// content to / (shared DailyHome component); / additionally redirects wide
+// screens into the Desk.
+import Base from '../../layouts/Base.astro';
+import DailyHome from '../../components/DailyHome.astro';
+---
+
+<Base entry="home" title={"Today — Kingdom Bible Study"} description={"Daily Bible reading, verse of the day, devotional, and discipline tracker."}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="/assets/css/daily.css">
+</Fragment>
+<DailyHome />
+</Base>
