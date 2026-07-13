@@ -233,3 +233,15 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   the dock side. Drop is pure tree surgery (detach + dock, then relayout),
   so panel iframes never reload mid-rearrange (verified: an in-frame JS
   marker survives the move).
+
+### D5 — compare follower + keyboard shortcuts  ·  DONE 2026-07-13
+- Compare panels join the link set: a link-toggled All-Translations panel
+  follows a linked reader's navigation (chapter refs land on verse 1) —
+  verified John 3:16 filling all 16 version rows on follow.
+- Desk shortcuts, working from the surface AND from inside any panel
+  (frames forward the combo): Ctrl+Shift+→ split right, Ctrl+Shift+↓ split
+  down, Ctrl+Shift+⏎ maximize, Ctrl+Shift+⌫ close. The acted-on panel is
+  the one under the pointer / last interacted with; editable fields are
+  exempt. Toolbar hint documents them.
+- Desk panels also follow live Dark/Light toggles now (storage-event theme
+  sync in initTheme — covers other open tabs too).

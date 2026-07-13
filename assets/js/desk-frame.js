@@ -56,6 +56,21 @@ export function initDeskFrame() {
     }
   });
 
+  // Desk keyboard shortcuts typed while this frame has focus — forwarded to
+  // the surface, which acts on this panel. Same combo map as desk.js
+  // deskKeyAction (keep in sync): Ctrl+Shift+→ split right, ↓ split down,
+  // ⏎ maximize, ⌫ close. Skipped inside editable fields.
+  document.addEventListener('keydown', function (e) {
+    if (!_underDesk) return;
+    if (!(e.ctrlKey || e.metaKey) || !e.shiftKey) return;
+    var t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    var act = { ArrowRight: 'split-r', ArrowDown: 'split-d', Enter: 'max', Backspace: 'close' }[e.key];
+    if (!act) return;
+    e.preventDefault();
+    try { window.parent.postMessage({ type: 'bsw-desk-key', act: act }, location.origin); } catch (err) {}
+  }, true);
+
   // Document capture so this sees the click before any in-page handler that
   // stops propagation. Only ACTS on cross-resource anchor clicks under the
   // Desk; everything else falls through untouched.

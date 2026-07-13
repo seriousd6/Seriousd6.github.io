@@ -449,6 +449,16 @@ import Base from '../../layouts/Base.astro';
         navigate(val);
       });
 
+      // Desk panel linking (desk-frame.js re-dispatches the Desk's goto):
+      // follow a linked reader. Chapter-level refs land on verse 1 — this
+      // page compares one verse at a time.
+      window.addEventListener('bsw:desk-goto', function (e) {
+        var ref = e.detail && e.detail.ref;
+        if (!ref || !bookMeta) return;
+        if (ref.indexOf(':') === -1) ref += ':1';
+        navigate(ref);
+      });
+
     })();
   </script>
 </Fragment>

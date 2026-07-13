@@ -181,6 +181,7 @@ function _buildPanelEl(node) {
     '</header>' +
     '<div class="desk-panel__body"></div>';
 
+  el.addEventListener('pointerenter', function () { _activeId = node.id; });
   el.querySelector('.desk-panel__bar').addEventListener('pointerdown', function (e) {
     if (e.target.closest('.desk-panel__btn') || e.button !== 0) return;
     _barDragStart(e, node.id);
@@ -190,17 +191,12 @@ function _buildPanelEl(node) {
     var btn = e.target.closest('.desk-panel__btn');
     if (!btn) return;
     var act = btn.getAttribute('data-act');
-    if (act === 'split-r') _splitPanel(node.id, 'row');
-    else if (act === 'split-d') _splitPanel(node.id, 'col');
-    else if (act === 'close') _closePanel(node.id);
-    else if (act === 'max') {
-      _maxId = _maxId === node.id ? null : node.id;
-      _layout();
-    }
-    else if (act === 'link') {
+    if (act === 'link') {
       node.link = !node.link;
       btn.setAttribute('aria-pressed', node.link ? 'true' : 'false');
       _save();
+    } else {
+      _panelAction(node.id, act);
     }
   });
 
@@ -237,7 +233,7 @@ function _mountFrame(el, node) {
     var linkBtn = el.querySelector('.desk-panel__btn--link');
     if (linkBtn) {
       var rp = resourcePrefix(node.url || '');
-      linkBtn.hidden = rp !== 'read' && rp !== 'maps';
+      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare';
     }
     _save();
   });
@@ -452,6 +448,7 @@ function _onFrameMessage(e) {
   if (e.origin !== location.origin || !e.data || !e.data.type) return;
   var srcId = _panelByWindow(e.source);
   if (!srcId) return;
+  _activeId = srcId;   // the panel the user is interacting with
 
   if (e.data.type === 'bsw-desk-open' && e.data.url) {
     var url = String(e.data.url);
@@ -483,12 +480,19 @@ function _onFrameMessage(e) {
     var hit = _findParent(_root, srcId, null);
     if (!hit || !hit.node.link) return;   // source isn't link-toggled
     _collectPanels(_root, []).forEach(function (n) {
-      if (n.id === srcId || !n.link || resourcePrefix(n.url || '') !== 'read') return;
+      var rp = resourcePrefix(n.url || '');
+      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare')) return;
       var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
       if (f) {
         try { f.contentWindow.postMessage({ type: 'bsw-desk-goto', ref: e.data.ref }, location.origin); } catch (err) {}
       }
     });
+    return;
+  }
+
+  // A panel forwarded a Desk keyboard shortcut (typed while its frame had focus).
+  if (e.data.type === 'bsw-desk-key' && e.data.act) {
+    _panelAction(srcId, e.data.act);
     return;
   }
 
@@ -505,6 +509,32 @@ function _onFrameMessage(e) {
       }
     });
   }
+}
+
+// ── Panel actions (shared by bar buttons, shortcuts, frame-forwarded keys) ──
+var _activeId = null;   // last panel the pointer entered / that messaged us
+
+function _panelAction(panelId, act) {
+  if (!panelId || !_panels[panelId]) return;
+  if (act === 'split-r') _splitPanel(panelId, 'row');
+  else if (act === 'split-d') _splitPanel(panelId, 'col');
+  else if (act === 'close') _closePanel(panelId);
+  else if (act === 'max') { _maxId = _maxId === panelId ? null : panelId; _layout(); }
+}
+
+// Ctrl+Shift+→ split right · Ctrl+Shift+↓ split down · Ctrl+Shift+⏎ maximize
+// · Ctrl+Shift+⌫ close. Shared map with desk-frame.js — keep in sync.
+export function deskKeyAction(e) {
+  if (!(e.ctrlKey || e.metaKey) || !e.shiftKey) return null;
+  var t = e.target;
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return null;
+  switch (e.key) {
+    case 'ArrowRight': return 'split-r';
+    case 'ArrowDown':  return 'split-d';
+    case 'Enter':      return 'max';
+    case 'Backspace':  return 'close';
+  }
+  return null;
 }
 
 // ── Drag a panel bar to re-dock it beside another panel ────────────────────
@@ -589,6 +619,17 @@ export function initDesk() {
   _root = _load() || _defaultLayout();
   _layout();
   window.addEventListener('message', _onFrameMessage);
+
+  // Shortcuts while the Desk document itself has focus (chrome, dividers);
+  // desk-frame.js forwards the same combos typed inside panel frames.
+  document.addEventListener('keydown', function (e) {
+    var act = deskKeyAction(e);
+    if (!act) return;
+    var target = _activeId && _panels[_activeId] ? _activeId : _collectPanels(_root, [])[0] && _collectPanels(_root, [])[0].id;
+    if (!target) return;
+    e.preventDefault();
+    _panelAction(target, act);
+  });
 
   var addBtn = document.getElementById('desk-add-btn');
   if (addBtn) addBtn.addEventListener('click', _addPanelToRoot);
