@@ -218,6 +218,18 @@ remaining un-hubbed nouns — all three fixed 2026-07-12 (**16/16 now ≤2 taps*
   to the `bsw_desk_home` flag the / redirect already honors.
 - The reader's place hover-tooltip link now opens the place popup (mini-map,
   article, explorer links) instead of navigating to the maps page; outside
-  the reader it stays a maps deep link. (Layout presets skipped per owner;
-  drag-to-rearrange and linked non-reader followers remain future
-  candidates.)
+  the reader it stays a maps deep link. (Layout presets skipped per owner.)
+
+### D4 — linked maps follower + drag-to-rearrange  ·  DONE 2026-07-13
+- Maps panels join the link set: when a linked reader's chapter finishes
+  tagging its places, reader-rail emits the place ids (`bsw-desk-places`,
+  re-emitted when late tag passes change the count); the Desk forwards to
+  link-toggled maps panels; maps.js drops ring markers on whichever era map
+  is showing and fits the view (fly-to for a single place). Verified through
+  the full pipeline — Matthew 4 delivers jerusalem/galilee/nazareth/
+  capernaum/sea-of-galilee/decapolis/judea to the maps frame.
+- Drag-to-rearrange: drag any panel bar onto another panel — the nearest
+  edge (left/right/top/bottom half, shown as an accent drop hint) becomes
+  the dock side. Drop is pure tree surgery (detach + dock, then relayout),
+  so panel iframes never reload mid-rearrange (verified: an in-frame JS
+  marker survives the move).

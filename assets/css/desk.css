@@ -65,6 +65,19 @@
   background: var(--color-bg);
   font-family: var(--font-ui);
   flex: 0 0 auto;
+  cursor: grab;               /* drag the bar to re-dock the panel */
+  touch-action: none;
+  user-select: none;
+}
+.desk-root--moving, .desk-root--moving .desk-panel__bar { cursor: grabbing; }
+.desk-drop-hint {
+  position: absolute;
+  z-index: 9;
+  display: none;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--color-accent) 22%, transparent);
+  border: 2px solid var(--color-accent);
+  border-radius: 8px;
 }
 .desk-panel__title {
   font-size: 0.76rem;

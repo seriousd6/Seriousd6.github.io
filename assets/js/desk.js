@@ -114,6 +114,34 @@ function _closePanel(panelId) {
   _save();
 }
 
+// Detach a panel node from the tree (its element stays mounted — dock it
+// again right away). Returns null for the tree's only panel.
+function _detachNode(panelId) {
+  var hit = _findParent(_root, panelId, null);
+  if (!hit || !hit.parent) return null;
+  var node = hit.node;
+  var sibling = hit.parent.a === node ? hit.parent.b : hit.parent.a;
+  var gp = _findParent(_root, hit.parent.id, null);
+  if (!gp || !gp.parent) _root = sibling;
+  else if (gp.parent.a === hit.parent) gp.parent.a = sibling;
+  else gp.parent.b = sibling;
+  return node;
+}
+
+// Insert a detached node beside the target panel, on the given side.
+function _dockNode(node, targetId, quad) {
+  var hit = _findParent(_root, targetId, null);
+  if (!hit) return;
+  var target = hit.node;
+  var dir   = (quad === 'left' || quad === 'right') ? 'row' : 'col';
+  var first = (quad === 'left' || quad === 'top');
+  var split = { t: 's', id: _nid(), d: dir, r: 0.5,
+                a: first ? node : target, b: first ? target : node };
+  if (!hit.parent) _root = split;
+  else if (hit.parent.a === target) hit.parent.a = split;
+  else hit.parent.b = split;
+}
+
 function _addPanelToRoot() {
   var fresh = _panelNode(null);
   _root = { t: 's', id: _nid(), d: 'row', r: 0.62, a: _root, b: fresh };
@@ -152,6 +180,11 @@ function _buildPanelEl(node) {
       '<button class="desk-panel__btn" data-act="close" title="Close panel" aria-label="Close panel">✕</button>' +
     '</header>' +
     '<div class="desk-panel__body"></div>';
+
+  el.querySelector('.desk-panel__bar').addEventListener('pointerdown', function (e) {
+    if (e.target.closest('.desk-panel__btn') || e.button !== 0) return;
+    _barDragStart(e, node.id);
+  });
 
   el.addEventListener('click', function (e) {
     var btn = e.target.closest('.desk-panel__btn');
@@ -199,9 +232,13 @@ function _mountFrame(el, node) {
         if (tEl) tEl.textContent = node.title;
       }
     } catch (e) {}
-    // The link toggle only means something on Bible panels.
+    // The link toggle means something on Bible panels (follow navigation)
+    // and maps panels (show a linked reader's chapter places).
     var linkBtn = el.querySelector('.desk-panel__btn--link');
-    if (linkBtn) linkBtn.hidden = resourcePrefix(node.url || '') !== 'read';
+    if (linkBtn) {
+      var rp = resourcePrefix(node.url || '');
+      linkBtn.hidden = rp !== 'read' && rp !== 'maps';
+    }
     _save();
   });
   body.appendChild(frame);
@@ -452,7 +489,97 @@ function _onFrameMessage(e) {
         try { f.contentWindow.postMessage({ type: 'bsw-desk-goto', ref: e.data.ref }, location.origin); } catch (err) {}
       }
     });
+    return;
   }
+
+  // A linked reader's chapter finished tagging its places → linked maps
+  // panels show them (markers + fit).
+  if (e.data.type === 'bsw-desk-places' && e.data.ids) {
+    var srcHit = _findParent(_root, srcId, null);
+    if (!srcHit || !srcHit.node.link) return;
+    _collectPanels(_root, []).forEach(function (n) {
+      if (n.id === srcId || !n.link || resourcePrefix(n.url || '') !== 'maps') return;
+      var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
+      if (f) {
+        try { f.contentWindow.postMessage({ type: 'bsw-desk-show-places', ref: e.data.ref, ids: e.data.ids }, location.origin); } catch (err) {}
+      }
+    });
+  }
+}
+
+// ── Drag a panel bar to re-dock it beside another panel ────────────────────
+// Pure tree surgery on drop (detach + dock) — panel elements never move in
+// the DOM, so iframes never reload mid-rearrange.
+var _dropHint = null;
+
+function _quadrantAt(el, x, y) {
+  var r = el.getBoundingClientRect();
+  var rx = (x - r.left) / r.width, ry = (y - r.top) / r.height;
+  // Nearest edge wins; ties prefer horizontal docking.
+  var d = [ { q: 'left', v: rx }, { q: 'right', v: 1 - rx }, { q: 'top', v: ry }, { q: 'bottom', v: 1 - ry } ];
+  d.sort(function (a, b) { return a.v - b.v; });
+  return d[0].q;
+}
+
+function _hintRect(el, quad) {
+  var r = el.getBoundingClientRect(), o = _rootEl.getBoundingClientRect();
+  var x = r.left - o.left, y = r.top - o.top, w = r.width, h = r.height;
+  if (quad === 'left')   return { x: x, y: y, w: w / 2, h: h };
+  if (quad === 'right')  return { x: x + w / 2, y: y, w: w / 2, h: h };
+  if (quad === 'top')    return { x: x, y: y, w: w, h: h / 2 };
+  return { x: x, y: y + h / 2, w: w, h: h / 2 };
+}
+
+function _barDragStart(e, srcId) {
+  if (window.innerWidth < 900 || _maxId) return;
+  var startX = e.clientX, startY = e.clientY;
+  var dragging = false;
+  var target = null, quad = null;
+
+  function move(ev) {
+    if (!dragging) {
+      if (Math.abs(ev.clientX - startX) < 6 && Math.abs(ev.clientY - startY) < 6) return;
+      dragging = true;
+      _rootEl.classList.add('desk-root--dragging', 'desk-root--moving');
+      if (!_dropHint) {
+        _dropHint = document.createElement('div');
+        _dropHint.className = 'desk-drop-hint';
+        _rootEl.appendChild(_dropHint);
+      }
+    }
+    target = null;
+    var ids = Object.keys(_panels);
+    for (var i = 0; i < ids.length; i++) {
+      if (ids[i] === srcId) continue;
+      var r = _panels[ids[i]].getBoundingClientRect();
+      if (ev.clientX >= r.left && ev.clientX <= r.right && ev.clientY >= r.top && ev.clientY <= r.bottom) {
+        target = ids[i];
+        break;
+      }
+    }
+    if (target) {
+      quad = _quadrantAt(_panels[target], ev.clientX, ev.clientY);
+      var hr = _hintRect(_panels[target], quad);
+      _dropHint.style.cssText = 'display:block;left:' + hr.x + 'px;top:' + hr.y + 'px;width:' + hr.w + 'px;height:' + hr.h + 'px;';
+    } else {
+      quad = null;
+      _dropHint.style.display = 'none';
+    }
+  }
+  function up() {
+    document.removeEventListener('pointermove', move);
+    document.removeEventListener('pointerup', up);
+    _rootEl.classList.remove('desk-root--dragging', 'desk-root--moving');
+    if (_dropHint) _dropHint.style.display = 'none';
+    if (!dragging || !target || !quad || target === srcId) return;
+    var node = _detachNode(srcId);
+    if (!node) return;
+    _dockNode(node, target, quad);
+    _layout();
+    _save();
+  }
+  document.addEventListener('pointermove', move);
+  document.addEventListener('pointerup', up);
 }
 
 // ── Init ────────────────────────────────────────────────────────────────────

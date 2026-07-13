@@ -22,9 +22,11 @@
 'use strict';
 
 import { getNotesForChapter } from './storage.js';
+import { emitDeskPlaces } from './desk-frame.js';
 
 var _observer = null;
 var _debounce = null;
+var _lastPlacesEmit = null;   // tagKey|count — re-emit only when either changes
 
 function _navState() {
   return (typeof window !== 'undefined' && window._readerNavState) || null;
@@ -73,6 +75,23 @@ function _buildRail(results) {
   var echoes = results.querySelectorAll('.reader-echo-marker').length;
   var places = results.querySelectorAll('.map-place').length;
   var notes  = _notesCountFor(_navState());
+
+  // Desk linking: hand the chapter's tagged places to link-toggled maps
+  // panels (no-op outside the Desk). Tag passes land asynchronously, so
+  // re-emit whenever the chapter key OR the count changes.
+  if (places && tagKey) {
+    var emitKey = tagKey + '|' + places;
+    if (emitKey !== _lastPlacesEmit) {
+      _lastPlacesEmit = emitKey;
+      var ids = [];
+      var seenIds = {};
+      results.querySelectorAll('.map-place[data-place-id]').forEach(function (a) {
+        var id = a.getAttribute('data-place-id');
+        if (id && !seenIds[id]) { seenIds[id] = 1; ids.push(id); }
+      });
+      emitDeskPlaces(tagKey.replace('|', ' '), ids);
+    }
+  }
 
   // Tool chips render regardless; count chips only when nonzero.
 

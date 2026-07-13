@@ -35,6 +35,13 @@ export function emitDeskNav(ref) {
   try { window.parent.postMessage({ type: 'bsw-desk-nav', ref: ref }, location.origin); } catch (e) {}
 }
 
+// Reader → Desk: the tagged places of the rendered chapter (reader-rail.js),
+// forwarded by the Desk to link-toggled maps panels.
+export function emitDeskPlaces(ref, ids) {
+  if (!_underDesk || !ids || !ids.length) return;
+  try { window.parent.postMessage({ type: 'bsw-desk-places', ref: ref, ids: ids }, location.origin); } catch (e) {}
+}
+
 export function initDeskFrame() {
   if (!_framed) return;
 
@@ -43,6 +50,9 @@ export function initDeskFrame() {
     if (e.data.type === 'bsw-desk-hello') { _underDesk = true; return; }
     if (e.data.type === 'bsw-desk-goto' && e.data.ref) {
       window.dispatchEvent(new CustomEvent('bsw:desk-goto', { detail: { ref: e.data.ref } }));
+    }
+    if (e.data.type === 'bsw-desk-show-places' && e.data.ids) {
+      window.dispatchEvent(new CustomEvent('bsw:desk-show-places', { detail: { ref: e.data.ref, ids: e.data.ids } }));
     }
   });
 

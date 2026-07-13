@@ -3,6 +3,7 @@
 
 import { _resolve, escHtml, READER_URL } from './core.js';
 import { wireRefLinks } from './wire.js';
+import { loadPlaces, getPlace } from './places.js';
 
 /* ── Tile layer ──────────────────────────────────────────────────────────── */
 var TILE_URL  = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
@@ -388,8 +389,40 @@ export function initMapsPage() {
     .then(function () { _startMapsPage(); });
 }
 
+// ── Desk linking: show a linked reader's chapter places ────────────────────
+// desk-frame.js re-dispatches the Desk's bsw-desk-show-places postMessage as
+// this window event. Markers land on whichever era map is showing; a chapter
+// change replaces the layer.
+var _followLayer = null;
+function _wireDeskFollow() {
+  window.addEventListener('bsw:desk-show-places', function (e) {
+    if (!_leaflet || !window.L || !e.detail || !e.detail.ids) return;
+    loadPlaces().then(function () {
+      if (!_leaflet) return;
+      if (_followLayer) { try { _leaflet.removeLayer(_followLayer); } catch (err) {} _followLayer = null; }
+      var group = L.layerGroup();
+      var pts = [];
+      e.detail.ids.forEach(function (id) {
+        var p = getPlace(id);
+        if (!p || typeof p.lat !== 'number') return;
+        pts.push([p.lat, p.lon]);
+        L.circleMarker([p.lat, p.lon], {
+          radius: p.region ? 14 : 8, color: '#c0392b', weight: 3,
+          fillColor: '#c0392b', fillOpacity: p.region ? 0.08 : 0.2
+        }).bindTooltip(escHtml(p.name)).addTo(group);
+      });
+      if (!pts.length) return;
+      group.addTo(_leaflet);
+      _followLayer = group;
+      if (pts.length === 1) _leaflet.flyTo(pts[0], 9);
+      else _leaflet.fitBounds(pts, { padding: [40, 40], maxZoom: 9 });
+    });
+  });
+}
+
 function _startMapsPage() {
   _buildNav();
+  _wireDeskFollow();
   _wireDetailClose();
   _wireResetButton();
   _wireTabs();
