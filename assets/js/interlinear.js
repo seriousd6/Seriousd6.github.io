@@ -97,6 +97,18 @@ export function initBookInfoToggle() {
 }
 
 
+// The ⚙ View (Aa) and 📖 Study Tools popovers are siblings on the browse bar;
+// their trigger clicks stopPropagation, so the outside-click closer never sees
+// them — opening one must explicitly close the other or they overlap.
+function _closePopoverById(popId, btnId) {
+  var pop = document.getElementById(popId);
+  if (pop && !pop.hasAttribute('hidden')) {
+    pop.setAttribute('hidden', '');
+    var b = document.getElementById(btnId);
+    if (b) b.setAttribute('aria-expanded', 'false');
+  }
+}
+
 // ── initViewToggle — ⚙ View popover (RD-B) ───────────────────────────────
 export function initViewToggle() {
   var browseBar = document.querySelector('.reader-browse-bar');
@@ -132,6 +144,7 @@ export function initViewToggle() {
       popover.setAttribute('hidden', '');
       btn.setAttribute('aria-expanded', 'false');
     } else {
+      _closePopoverById('reader-studytools-popover', 'reader-studytools-btn');
       popover.removeAttribute('hidden');
       btn.setAttribute('aria-expanded', 'true');
     }
@@ -212,6 +225,7 @@ export function initStudyToolsToggle() {
       popover.setAttribute('hidden', '');
       btn.setAttribute('aria-expanded', 'false');
     } else {
+      _closePopoverById('reader-view-popover', 'reader-view-btn');
       popover.removeAttribute('hidden');
       btn.setAttribute('aria-expanded', 'true');
     }

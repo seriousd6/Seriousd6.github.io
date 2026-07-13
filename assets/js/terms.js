@@ -125,6 +125,10 @@ function _ensureBriefs() {
 }
 
 function _showTermTip(anchor, key) {
+  // The anchor can be gone by the time a scheduled show fires (chapter nav
+  // replaced the text) — positioning against a detached node lands the tip
+  // at the viewport's top-left and nothing ever hides it.
+  if (!anchor || !anchor.isConnected) { _hideTermTip(); return; }
   _buildTermTooltipDOM();
   var entry = _termMap2 && _termMap2[key];
   if (!entry) return;

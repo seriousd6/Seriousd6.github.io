@@ -122,6 +122,7 @@ function _treeFromHash() {
   try {
     if (h.indexOf('z=') === 0) {
       var b = h.slice(2).replace(/-/g, '+').replace(/_/g, '/');
+      while (b.length % 4) b += '=';   // some browsers' atob wants padding
       return _reviveTree(JSON.parse(decodeURIComponent(escape(atob(b)))));
     }
     var nodes = [];
@@ -139,7 +140,10 @@ function _treeFromHash() {
       tree = { t: 's', id: _nid(), d: 'row', r: 1 / (nodes.length - i), a: nodes[i], b: tree };
     }
     return tree;
-  } catch (e) { return null; }
+  } catch (e) {
+    try { console.warn('[desk] could not apply shared layout:', e); } catch (e2) {}
+    return null;
+  }
 }
 
 // ── Tree ops ────────────────────────────────────────────────────────────────
@@ -598,6 +602,9 @@ function _dragStart(e) {
   if (!hit) return;
   var split = hit.node;
   e.preventDefault();
+  // preventDefault suppresses pointerdown's native focus — restore it so a
+  // click followed by arrow keys resizes (P12 keyboard path).
+  try { e.currentTarget.focus(); } catch (err) {}
   _rootEl.classList.add('desk-root--dragging');
   var rootRect = _rootEl.getBoundingClientRect();
 

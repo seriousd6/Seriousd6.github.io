@@ -132,8 +132,11 @@
     if (framed || new URLSearchParams(location.search).get('minimal')) {
       document.body.classList.add('sidebar-collapsed');
       document.body.classList.add('is-embedded');
+      // .hist-back-link stays hidden: inside the /history/ hub it re-nests
+      // the hub into its own iframe, and inside the Desk it spawns duplicate
+      // panels. The sidebar (unframed) already links to History.
       document.querySelectorAll(
-        '.hist-back-link, .prog-back-link, .ms-back-link, #trk-back-link'
+        '.prog-back-link, .ms-back-link, #trk-back-link'
       ).forEach(function (el) { el.hidden = false; });
       return;
     }

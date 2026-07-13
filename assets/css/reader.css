@@ -1681,7 +1681,7 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   align-items: center;
   gap: 0.45rem;
   width: 100%;
-  background: var(--color-surface-2, #f5f5f5);
+  background: color-mix(in srgb, var(--color-text) 6%, var(--color-surface));
   padding: 0.4rem 0.75rem;
   font-family: var(--font-ui);
   font-size: 0.72rem;
@@ -1726,7 +1726,7 @@ body.bsw-reader-mode .reader-result-group__title { display: none; }
   align-items: center;
   gap: 0.35rem;
   padding: 0.3rem 0.45rem;
-  background: var(--color-surface-2, #f5f5f5);
+  background: color-mix(in srgb, var(--color-text) 6%, var(--color-surface));
   border-bottom: 1px solid var(--color-border);
   flex-shrink: 0;
 }
@@ -3874,6 +3874,12 @@ body.bsw-columns-on .reader-result-group__text--para .reader-para {
 }
 
 /* ── Passage Study Desk (G3 phase 1) ──────────────────────────────────────── */
+/* The desk's full styling lives in reader-study.css (P11 split), loaded on the
+   first open. The drawer element is BUILT eagerly, so without this guard it
+   renders as raw unstyled content at the end of the reader. reader-study.css
+   loads later in the cascade and flips display back on. */
+.reader-study-desk { display: none; }
+
 .reader-study-btn {
   padding: 0.28rem 0.7rem;
   border: 1px solid var(--color-border);
