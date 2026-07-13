@@ -255,6 +255,7 @@ function _buildPanelEl(node) {
     '<div class="desk-panel__body"></div>';
 
   el.addEventListener('pointerenter', function () { _activeId = node.id; });
+  _wireSwipe(el.querySelector('.desk-panel__bar'));
   el.querySelector('.desk-panel__bar').addEventListener('pointerdown', function (e) {
     if (e.target.closest('.desk-panel__btn') || e.button !== 0) return;
     _barDragStart(e, node.id);
@@ -291,7 +292,24 @@ function _buildPanelEl(node) {
   return el;
 }
 
+// P12: while the saved layout restores, panels after the first mount their
+// iframes staggered (+300 ms each) so a many-panel desk doesn't fire every
+// page load at once. Splits and chooser picks after boot mount immediately.
+var _booting = false;
+var _bootMounts = 0;
+
 function _mountFrame(el, node) {
+  if (_booting && _bootMounts++ > 0) {
+    var delay = _bootMounts * 300;
+    setTimeout(function () {
+      if (el.isConnected && !el.querySelector('iframe')) _mountFrameNow(el, node);
+    }, delay);
+    return;
+  }
+  _mountFrameNow(el, node);
+}
+
+function _mountFrameNow(el, node) {
   var body = el.querySelector('.desk-panel__body');
   var frame = document.createElement('iframe');
   frame.className = 'desk-panel__frame';
@@ -456,6 +474,11 @@ function _layout() {
         div.style.cssText = 'left:' + rect.x + 'px;top:' + (rect.y + hA) + 'px;width:' + rect.w + 'px;height:' + GUTTER + 'px;';
       }
       div.addEventListener('pointerdown', _dragStart);
+      div.tabIndex = 0;
+      div.setAttribute('role', 'separator');
+      div.setAttribute('aria-orientation', n.d === 'row' ? 'vertical' : 'horizontal');
+      div.setAttribute('aria-label', 'Resize panels (arrow keys)');
+      div.addEventListener('keydown', _dividerKeydown);
       _rootEl.appendChild(div);
       walk(n.a, a);
       walk(n.b, b);
@@ -487,6 +510,7 @@ function _buildMobileTabbar(flat) {
     btn.addEventListener('click', function () { _mobileActive = n.id; _layout(); });
     bar.appendChild(btn);
   });
+  _wireTabSwipe(bar, flat);
   var add = document.createElement('button');
   add.className = 'desk-tab-btn desk-tab-btn--add';
   add.type = 'button';
@@ -496,6 +520,38 @@ function _buildMobileTabbar(flat) {
   bar.appendChild(add);
   _rootEl.appendChild(bar);
 }
+
+// P12: phone swipe — a horizontal swipe on the tab strip (or a panel's title
+// bar) moves to the previous/next panel. The panel BODY can't host this: it's
+// an iframe, and touches inside it never reach the desk document.
+function _swipeToNeighbor(dir) {
+  var flat = _collectPanels(_root, []);
+  var idx = -1;
+  flat.forEach(function (n, i) { if (n.id === _mobileActive) idx = i; });
+  if (idx === -1) return;
+  var next = flat[idx + dir];
+  if (!next) return;
+  _mobileActive = next.id;
+  _layout();
+}
+
+function _wireSwipe(el) {
+  var x0 = null, y0 = null;
+  el.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) { x0 = null; return; }
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+  }, { passive: true });
+  el.addEventListener('touchend', function (e) {
+    if (x0 === null || window.innerWidth >= 900) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - x0, dy = t.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 55 || Math.abs(dy) > 45) return;
+    _swipeToNeighbor(dx < 0 ? 1 : -1);   // swipe left → next panel
+  }, { passive: true });
+}
+
+function _wireTabSwipe(bar) { _wireSwipe(bar); }
 
 function _syncMaxButtons() {
   Object.keys(_panels).forEach(function (id) {
@@ -513,6 +569,26 @@ function _place(node, rect) {
   }
   el.classList.remove('desk-panel--hidden');
   el.style.cssText = 'left:' + rect.x + 'px;top:' + rect.y + 'px;width:' + rect.w + 'px;height:' + rect.h + 'px;';
+}
+
+// P12: keyboard divider resize. Arrows nudge the split ratio; _layout()
+// rebuilds every divider element, so focus is re-planted on the new element
+// carrying the same split id.
+function _dividerKeydown(e) {
+  var splitId = e.currentTarget.getAttribute('data-split-id');
+  var hit = _findParent(_root, splitId, null);
+  if (!hit || hit.node.t !== 's') return;
+  var split = hit.node;
+  var delta = 0;
+  if (split.d === 'row')  delta = e.key === 'ArrowLeft' ? -0.03 : e.key === 'ArrowRight' ? 0.03 : 0;
+  else                    delta = e.key === 'ArrowUp'   ? -0.03 : e.key === 'ArrowDown'  ? 0.03 : 0;
+  if (!delta) return;
+  e.preventDefault();
+  split.r = Math.max(MIN_R, Math.min(1 - MIN_R, split.r + delta));
+  _layout();
+  _save();
+  var fresh = _rootEl.querySelector('.desk-divider[data-split-id="' + splitId + '"]');
+  if (fresh) fresh.focus();
 }
 
 // ── Divider drag ────────────────────────────────────────────────────────────
@@ -875,7 +951,10 @@ export function initDesk() {
   if (!_rootEl) return;
   var fromHash = _treeFromHash();
   _root = fromHash || _load() || _defaultLayout();
+  _booting = true;
+  _bootMounts = 0;
   _layout();
+  _booting = false;
   if (fromHash) {
     _save();   // a shared layout becomes the working layout
     try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}

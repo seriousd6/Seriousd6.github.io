@@ -118,10 +118,9 @@ investigation showed the finding was wrong. Unmarked items remain open.
 - ● **[ux] One global link-set** — Logos has A/B/C link groups; here every
   linked panel joins the same set, so two independent linked pairs aren't
   possible.
-- ● **[perf] Desktop restore builds every panel eagerly** — the phone desk
-  lazy-builds per tab, but a restored 6-panel desktop layout loads six full
-  pages at once (~130 KB JS/CSS each after frame-lite, plus data). Off-screen
-  is impossible on desktop, but staggered/idle mounting isn't.
+- ✔ ● **[perf] Desktop restore builds every panel eagerly** — restore-time
+  panels now mount staggered (first immediately, +300 ms each), so a big
+  layout no longer fires every page load in the same beat.
 - ● **[ux] Chooser can't open an arbitrary page** — 12 fixed resources; no
   "open any URL/topic/article" input except the Bible passage field.
 
@@ -153,8 +152,10 @@ investigation showed the finding was wrong. Unmarked items remain open.
 ## 6 · Mobile
 
 - ✔ ●● **[bug] /about/ overflow** (see §1).
-- ● **[ux] Desk tab strip lacks swipe** — tabs tap fine, but the natural
-  phone gesture (swipe between panels) isn't wired.
+- ✔ ● **[ux] Desk tab strip lacks swipe** — horizontal swipe on the tab
+  strip or a panel's title bar now moves between panels (the panel body
+  can't host the gesture: it's an iframe, and its touches never reach the
+  desk document).
 - ● **[ux] Reader toolbar is still dense on phones** — lookup, book/chapter
   selects, version, Compare, Aa, Study Tools, Notes, Listen, ? in two
   wrapping rows before any scripture shows.
@@ -165,9 +166,10 @@ investigation showed the finding was wrong. Unmarked items remain open.
   popover) can't be opened from the keyboard at all; term/place anchors can
   be focused but words can't. A keyboard path (e.g. verse focus + key) or an
   equivalent command is needed.
-- ● **[a11y] Desk drag interactions have no keyboard equivalent** — divider
-  resize and drag-to-re-dock are pointer-only (split/close/maximize do have
-  shortcuts).
+- ◐ ● **[a11y] Desk drag interactions have no keyboard equivalent** —
+  dividers are now focusable separators resized with arrow keys (focus
+  survives the relayout). Drag-to-re-dock remains pointer-only; splitting
+  to a chosen side + close/re-open covers that path from the keyboard.
 - ● **[a11y] Hover tooltips (term/place) don't appear on focus for the
   word-tap-upgraded surfaces** — places.js wires focus/blur, terms.js only
   mouseenter/leave.

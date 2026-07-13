@@ -347,3 +347,9 @@
 }
 .desk-lay-savebtn:hover, .desk-lay-share:hover { border-color: var(--color-primary); }
 .desk-lay-share { display: block; width: 100%; margin-top: 0.45rem; }
+
+/* P12: keyboard-focusable dividers */
+.desk-divider:focus-visible {
+  outline: 2px solid var(--color-accent, #7a6222);
+  outline-offset: -1px;
+}
