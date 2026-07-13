@@ -1139,7 +1139,30 @@ function _armObserver() {
 }
 function _disarmObserver() { if (_observer) { _observer.disconnect(); _observer = null; } }
 
+// P11: the desk's stylesheet (reader-study.css) is split out of reader.css
+// and loads on the first open, so plain reading never parses it. The link is
+// injected before the drawer reveals; a fallback timer keeps a broken fetch
+// from wedging the button.
+var _cssReady = null;
+function _ensureStudyCss() {
+  if (_cssReady) return _cssReady;
+  _cssReady = new Promise(function (resolve) {
+    var l = document.createElement('link');
+    l.rel = 'stylesheet';
+    l.href = '/assets/css/reader-study.css';
+    l.onload = l.onerror = function () { resolve(); };
+    document.head.appendChild(l);
+    setTimeout(resolve, 500);
+  });
+  return _cssReady;
+}
+
 function _setOpen(on) {
+  if (on && !_cssReady) {
+    // First open: let the stylesheet land, then run the real open.
+    _ensureStudyCss().then(function () { _setOpen(on); });
+    return;
+  }
   _open = on;
   var layout = document.querySelector('.reader-layout');
   if (layout) layout.classList.toggle('reader-layout--study-open', on);

@@ -181,6 +181,14 @@ console.log(`[build-assets] ${emitted.length} JS/CSS assets emitted; APP_CACHE_V
   const json = JSON.stringify(lite);
   fs.writeFileSync(path.join(DIST, 'assets', 'bp-lite.json'), json);
   console.log(`[build-assets] bp-lite.json: ${lite.length} entries, ${(json.length / 1024).toFixed(0)} KB (full: ${(fs.statSync(path.join(ROOT, 'data/biblepedia/index.json')).size / 1024).toFixed(0)} KB)`);
+
+  // bp-tag.json (P11): the tagging layer needs term/id/link fields on nearly
+  // every content page but briefs only on an actual hover/tap — dropping
+  // brief + hitchcock_meaning cuts the on-load fetch to ~a third.
+  const tag = lite.map(({ brief, hitchcock_meaning, ...rest }) => rest);
+  const tagJson = JSON.stringify(tag);
+  fs.writeFileSync(path.join(DIST, 'assets', 'bp-tag.json'), tagJson);
+  console.log(`[build-assets] bp-tag.json: ${(tagJson.length / 1024).toFixed(0)} KB`);
 }
 
 // ── 6.5 Answers-page manifest ───────────────────────────────────────────────

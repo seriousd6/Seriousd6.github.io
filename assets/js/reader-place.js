@@ -14,7 +14,7 @@
 import { escHtml } from './core.js';
 import { getPlace, getAllPlaces, hidePlaceTip, placeMapHref } from './places.js';
 import { ensureLeaflet, CARTO_TILES, CARTO_ATTR } from './leaflet-loader.js';
-import { loadBPLite } from './bp-lite.js';
+import { loadBPLite, loadBPTag } from './bp-lite.js';
 
 // ── Era selection ───────────────────────────────────────────────────────────
 // The maps page's era maps, titled as maps.js titles them (subtitle text and
@@ -172,7 +172,7 @@ function _fillMiniMap(place) {
 
 // Biblepedia brief + full-article link, matched by place id then name.
 function _fillBiblepedia(place) {
-  loadBPLite().then(function (idx) {
+  loadBPTag().then(function (idx) {
     if (!_backdrop || !idx) return;
     var name = place.name.toLowerCase();
     var hit = idx.find(function (a) {
@@ -180,13 +180,18 @@ function _fillBiblepedia(place) {
     });
     if (!hit) return;
     var entry = hit.redirect ? (idx.find(function (a) { return a.id === hit.redirect; }) || hit) : hit;
-    if (entry.brief && entry.brief !== place.desc) {
-      var b = document.createElement('p');
-      b.className = 'bsw-placepop__brief';
-      b.textContent = entry.brief;
-      var desc = _backdrop.querySelector('.bsw-placepop__desc');
-      desc.insertAdjacentElement('afterend', b);
-    }
+    // The tag index has no prose — the brief arrives from the full index below.
+    loadBPLite().then(function (full) {
+      if (!_backdrop || !full) return;
+      var fe = full.find(function (a) { return a.id === entry.id; });
+      if (fe && fe.brief && fe.brief !== place.desc) {
+        var b = document.createElement('p');
+        b.className = 'bsw-placepop__brief';
+        b.textContent = fe.brief;
+        var desc = _backdrop.querySelector('.bsw-placepop__desc');
+        if (desc) desc.insertAdjacentElement('afterend', b);
+      }
+    }).catch(function () {});
     if (entry.has_article !== false && /^[a-z0-9.-]+$/.test(entry.id)) {
       var a = document.createElement('a');
       a.className = 'bsw-placepop__action';

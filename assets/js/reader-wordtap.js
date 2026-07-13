@@ -16,7 +16,7 @@
 'use strict';
 
 import { loadInterlinear, loadStrongs, escHtml } from './core.js';
-import { loadBPLite } from './bp-lite.js';
+import { loadBPLite, loadBPTag } from './bp-lite.js';
 import { _HL_COLORS, getNote, toggleHighlight } from './storage.js';
 import { applyHighlights } from './wire.js';
 
@@ -134,7 +134,7 @@ function _fillLexeme(pop, word, verse) {
 }
 
 function _fillArticle(pop, word, termKey) {
-  loadBPLite().then(function (idx) {
+  loadBPTag().then(function (idx) {
     if (!_pop || _pop !== pop || !idx) return;
     var k = (termKey || word).toLowerCase();
     var hit = idx.find(function (a) {
@@ -144,15 +144,20 @@ function _fillArticle(pop, word, termKey) {
     // A merged alias (redirect set, no article of its own) borrows its
     // canonical entry's brief and article — same contract terms.js honors.
     var entry = hit.redirect ? (idx.find(function (a) { return a.id === hit.redirect; }) || hit) : hit;
-    if (entry.brief) {
-      var b = document.createElement('div');
-      b.className = 'bsw-wordtap__brief';
-      b.textContent = entry.brief;
-      pop.insertBefore(b, pop.querySelector('.bsw-wordtap__actions'));
-    }
     if (entry.has_article !== false && /^[a-z0-9.-]+$/.test(entry.id)) {
       _addAction(pop, 'Read the ' + (entry.term || word) + ' article', null, '/biblepedia/' + entry.id + '/');
     }
+    // The tag index has no prose — fetch the brief-carrying index for the blurb.
+    loadBPLite().then(function (full) {
+      if (!_pop || _pop !== pop || !full) return;
+      var fe = full.find(function (a) { return a.id === entry.id; });
+      if (fe && fe.brief) {
+        var b = document.createElement('div');
+        b.className = 'bsw-wordtap__brief';
+        b.textContent = fe.brief;
+        pop.insertBefore(b, pop.querySelector('.bsw-wordtap__actions'));
+      }
+    }).catch(function () {});
   }).catch(function () {});
 }
 

@@ -128,17 +128,21 @@ investigation showed the finding was wrong. Unmarked items remain open.
 ## 5 · Performance & network
 
 - ✔ ●●● **[perf] The 1.8 MB biblepedia index is idle-fetched on nearly every
-  content page** to power term tooltips (and now word-tap article actions).
+  content page** (second pass: pages now tag with 367 KB bp-tag.json; briefs load on first hover) to power term tooltips (and now word-tap article actions).
   The tooltip needs term/id/brief/category — a trimmed terms-index (~300 KB)
   would serve the hover layer, with the full index only on biblepedia itself.
 - ✔ ●● **[perf] nave.json is 1.4 MB** (topics-lite.json, 176 KB) and fetched whole by the Omni topics
   section at runtime; the topic chips need slug+title+count (~150 KB).
-- ●● **[perf] reader.css is 120 KB** (uncompressed) of everything the reader
-  family ever needed — desk popovers, blades, rails, print, compare — parsed
-  by every reader panel. Worth splitting the desk-blade/apparatus layers.
-- ● **[perf] /read/?ref=John+3 costs ~2.1 MB cold** — fonts + book JSON +
-  crossrefs + commentary + interlinear all land on first paint; some of it
-  (commentary, interlinear) could defer until toggled. Warm loads are fine.
+- ✔ ●● **[perf] reader.css is 120 KB** — the Passage Study Desk layer
+  (~36 KB: drawer, blades, binder rail) now lives in reader-study.css,
+  injected on the first Study-button press; plain reading parses 131→92 KB
+  (minified) and never pays for the desk.
+- ✔ ● **[perf] /read/?ref=John+3 costs ~2.1 MB cold** — re-measured at
+  2.65 MB, now 1.82 MB (−31%): the tagging layer fetches bp-tag.json
+  (367 KB, no briefs) instead of bp-lite (1.2 MB) — the brief-carrying
+  index loads only on the first tooltip/tap — and crossref + echo marker
+  data (~700 KB) defers to idle so it never blocks first paint.
+  Commentary/interlinear were already toggle-gated.
 - ● **[perf] The answers build scans the whole BSB twice** — once in
   answers-topics.mjs, once in build-search-index.mjs (build went 15 s →
   35 s). Share one tokenization pass.

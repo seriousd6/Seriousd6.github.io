@@ -661,12 +661,18 @@ export function initReaderLookup() {
         applyRedLetter(resultsEl);
         wireVerseNumberPopup(resultsEl);
         wireVerseTextHighlight(resultsEl);
-        injectReaderFootnotes(resultsEl);
 
         if (isCompareEnabled()) injectComparePanel(window._readerGroups, getCompareVersion(), resultsEl);
         if (isParallelsEnabled()) injectParallelPanels(window._readerGroups, resultsEl);
         if (getInterlinearEnabled()) injectAllInterlinearRows(resultsEl);
-        markEchoVerses();
+
+        // P11: crossref + echo markers pull ~700 KB of apparatus data per book;
+        // neither blocks reading, so fetch them after first paint settles.
+        var _idle = window.requestIdleCallback || function (fn) { return setTimeout(fn, 350); };
+        _idle(function () {
+          injectReaderFootnotes(resultsEl);
+          markEchoVerses();
+        }, { timeout: 2500 });
 
         if (_strongsBanner && resultsEl) resultsEl.prepend(_strongsBanner);
 

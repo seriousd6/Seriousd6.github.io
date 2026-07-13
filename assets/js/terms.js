@@ -8,7 +8,7 @@
 import { escHtml, _resolve } from './core.js';
 import { wireRefLinks } from './wire.js';
 import { BIBLEPEDIA_URL } from './library.js';
-import { loadBPLite } from './bp-lite.js';
+import { loadBPLite, loadBPTag } from './bp-lite.js';
 
 var _termTipEl     = null;
 var _termTipTimer  = null;
@@ -105,10 +105,30 @@ function _srcLabel(entry) {
   }
 }
 
+var _termTipKey = null;
+var _briefsReady = null;
+// The tag index carries no prose; on the first tooltip, pull the brief-
+// carrying index once and graft brief/hitchcock_meaning onto the live
+// entries, then re-render the still-open tooltip.
+function _ensureBriefs() {
+  if (_briefsReady) return _briefsReady;
+  _briefsReady = loadBPLite().then(function (data) {
+    if (!data || !_termById) return;
+    data.forEach(function (e) {
+      var t = _termById[e.id];
+      if (!t) return;
+      if (e.brief) t.brief = e.brief;
+      if (e.hitchcock_meaning) t.hitchcock_meaning = e.hitchcock_meaning;
+    });
+  }).catch(function () {});
+  return _briefsReady;
+}
+
 function _showTermTip(anchor, key) {
   _buildTermTooltipDOM();
   var entry = _termMap2 && _termMap2[key];
   if (!entry) return;
+  _termTipKey = key;
 
   // INTENT: A merged alias (entry.redirect set, has_article:false) carries no article of its
   //   own — pull the tooltip's details (brief, name-meaning, Biblepedia link) from the CANONICAL
@@ -160,6 +180,16 @@ function _showTermTip(anchor, key) {
   _termTipEl.classList.add('bsw-term-tooltip--visible');
   _termTipEl.setAttribute('aria-hidden', 'false');
   _positionTermTip(anchor);
+
+  if (!entry.brief && !entry.hitchcock_meaning) {
+    _ensureBriefs().then(function () {
+      if (_termTipKey === key && _termTipEl &&
+          _termTipEl.classList.contains('bsw-term-tooltip--visible') &&
+          (entry.brief || entry.hitchcock_meaning)) {
+        _showTermTip(anchor, key);
+      }
+    });
+  }
 }
 
 // INTENT: Guard against loading the ~2MB BP index on pages with no taggable content.
@@ -169,7 +199,7 @@ function _showTermTip(anchor, key) {
 function _loadTermMap() {
   if (_termMap2) return Promise.resolve(_termMap2);
   if (_termMapReady) return _termMapReady;
-  _termMapReady = loadBPLite()
+  _termMapReady = loadBPTag()
     .then(function (data) {
       if (!data) return Promise.reject('no index');
       return data;

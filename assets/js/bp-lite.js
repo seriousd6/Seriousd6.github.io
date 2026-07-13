@@ -15,6 +15,18 @@
 import { _resolve } from './core.js';
 
 var _ready = null;
+var _tagReady = null;
+
+// Tagging-layer index (P11): same array shape as bp-lite minus brief /
+// hitchcock_meaning (~1/3 the bytes). Pages tag with this; the brief-carrying
+// index loads only when a tooltip/popup actually needs prose.
+export function loadBPTag() {
+  if (_tagReady) return _tagReady;
+  _tagReady = fetch(_resolve('../bp-tag.json'))
+    .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+    .catch(function () { return loadBPLite(); });
+  return _tagReady;
+}
 
 export function loadBPLite() {
   if (_ready) return _ready;
