@@ -68,30 +68,23 @@
   overflow: hidden;
 }
 
-/* ── Mobile: stack vertically ────────────────────────────────────────────── */
+/* (Mobile block moved to the end of the file — see P16 note there.) */
 
-@media (max-width: 700px) {
-  .maps-page   { height: auto; overflow: visible; padding-top: .5rem; }
-  .maps-layout { grid-template-columns: 1fr; flex: none; overflow: visible; }
-  .maps-nav {
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    flex: none;
-    gap: .35rem;
-    padding-bottom: .2rem;
-    -webkit-overflow-scrolling: touch;
-  }
-  .maps-nav-btn        { flex-shrink: 0; white-space: nowrap; min-height: 2.75rem; }
-  .maps-nav-group-label { display: none; }
-  .maps-content-row    { flex-direction: column; }
-  .maps-map-wrapper    { flex: none; height: 300px; }
-  .maps-map-container  { height: 100%; }
-  .maps-detail-panel   { width: 100%; height: auto; min-height: 220px; }
-  .maps-panel-body     { height: 220px; }
-  /* WCAG 2.5.5: ensure 44px touch targets for panel tabs and city nav on mobile */
-  .maps-tab            { min-height: 2.75rem; }
-  .maps-city-nav-btn   { min-height: 2.75rem; }
+
+/* P16: map-selector dropdown — hidden on desktop, replaces the button
+   column at narrow widths (phones AND slim desk panels, since iframes get
+   their own viewport width). */
+.maps-nav-select {
+  display: none;
+  width: 100%;
+  font-family: var(--font-ui);
+  font-size: 1rem;             /* 16px stops iOS auto-zoom */
+  padding: .55rem .6rem;
+  margin-bottom: .5rem;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 8px;
+  background: var(--color-surface, #fff);
+  color: var(--color-text);
 }
 
 /* ── Map selector nav ────────────────────────────────────────────────────── */
@@ -837,4 +830,27 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .maps-map-container  { background: #1a2a35; }
   :root:not([data-theme="light"]) .maps-site-item-star { color: #e05060; }
+}
+
+/* ── Mobile: stack vertically (P16) ─────────────────────────────────────────
+   This block MUST stay at the END of the file: it shares specificity with the
+   base rules above, so source order is what lets it win. It originally sat
+   near the top, where every later base rule silently overrode it — the real
+   reason the maps page never actually used its phone layout. */
+@media (max-width: 700px) {
+  .maps-page   { height: auto; overflow: visible; padding-top: .5rem; }
+  .maps-layout { grid-template-columns: 1fr; flex: none; overflow: visible; }
+  /* P16: dropdown selector instead of the button column; details stack
+     below a taller map. */
+  .maps-nav            { display: none; }
+  .maps-nav-select     { display: block; }
+  .maps-legend         { display: none; }
+  .maps-content-row    { flex-direction: column; }
+  .maps-map-wrapper    { flex: none; height: min(52vh, 420px); }
+  .maps-map-container  { height: 100%; }
+  .maps-detail-panel   { width: 100%; height: auto; min-height: 240px; }
+  .maps-panel-body     { height: auto; min-height: 200px; max-height: 45vh; }
+  /* WCAG 2.5.5: ensure 44px touch targets for panel tabs and city nav on mobile */
+  .maps-tab            { min-height: 2.75rem; }
+  .maps-city-nav-btn   { min-height: 2.75rem; }
 }

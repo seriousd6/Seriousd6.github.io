@@ -4,7 +4,7 @@ import Base from '../../../layouts/Base.astro';
 
 <Base title={"Biblical History Time-Lapse — Kingdom Bible Study"} description={"Watch the rise and fall of empires, the journeys of the patriarchs and apostles, and the unfolding of God's redemptive plan across 2,000 years of history."} mainJs={false} appJs={false} footer={false}>
 <Fragment slot="head-pre-css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="">
+<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">
 </Fragment>
 <Fragment slot="head-end">
 <link rel="stylesheet" href="../../assets/css/timelapse.css?v=2">
@@ -73,5 +73,5 @@ import Base from '../../../layouts/Base.astro';
       </div>
 
     </div>
-  </main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="" is:inline=""></script><script src="../../assets/js/main.js?v=2" is:inline=""></script><script type="module" src="../../assets/js/entries/timelapse.js" is:inline=""></script>
+  </main><script src="/assets/vendor/leaflet/leaflet.js" is:inline=""></script><script src="../../assets/js/main.js?v=2" is:inline=""></script><script type="module" src="../../assets/js/entries/timelapse.js" is:inline=""></script>
 </Base>

@@ -27,7 +27,7 @@
  *     data/study/book-places.json   — per-book landmark place ids (generated from the text)
  *     data/study/era-powers.json    — eras + empire polygons/opacity-stages + event→ref index
  *   (regenerate the latter three via scripts/generate-book-context.py / -book-places.py /
- *    -era-powers.py). Leaflet is lazy-loaded from unpkg ONLY when a map is shown — it is not
+ *    -era-powers.py). Leaflet is lazy-loaded (self-hosted vendor copy) ONLY when a map is shown — it is not
  *   on the reader page otherwise; _ensureLeaflet waits for the stylesheet too, or the map
  *   panes are unpositioned and render blank.
  * VERIFY: Open /read/, load Romans 1, "📖 Study" → "Where & when" shows "Written from Corinth
@@ -600,7 +600,7 @@ function _passagePeriods(powers, bookId, ch) {
 }
 
 // ── Leaflet lazy-load (waits for CSS too) ──────────────────────────────────
-// INTENT: Load Leaflet (CSS + JS) from unpkg on first map use. The reader page does NOT ship
+// INTENT: Load Leaflet (CSS + JS, self-hosted) on first map use. The reader page does NOT ship
 //   Leaflet. Critically resolves only after BOTH the stylesheet and script load — resolving on
 //   the script alone leaves the map panes unpositioned (blank tiles), which is the "map isn't
 //   rendering at all" bug. Caches the in-flight promise.
@@ -618,7 +618,7 @@ function _ensureLeaflet() {
     else if (!link) {
       link = document.createElement('link');
       link.id = 'sd-leaflet-css'; link.rel = 'stylesheet';
-      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'; link.crossOrigin = '';
+      link.href = '/assets/vendor/leaflet/leaflet.css';
       link.onload = function () { link.dataset.loaded = '1'; cssReady = true; maybe(); };
       link.onerror = function () { cssReady = true; maybe(); };  // proceed; tiles may still paint
       document.head.appendChild(link);
@@ -627,7 +627,7 @@ function _ensureLeaflet() {
       cssReady = true;  // already in DOM, assume usable
     }
     var s = document.createElement('script');
-    s.id = 'sd-leaflet-js'; s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.crossOrigin = '';
+    s.id = 'sd-leaflet-js'; s.src = '/assets/vendor/leaflet/leaflet.js';
     s.onload = function () { jsReady = true; maybe(); };
     s.onerror = function () { _leafletPromise = null; reject(new Error('leaflet load failed')); };
     document.head.appendChild(s);

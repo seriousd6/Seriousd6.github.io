@@ -118,7 +118,7 @@ for (const f of [...EXTERNAL_STABLE, ...COPY_STABLE]) {
 for (const f of fs.readdirSync(path.join(ROOT, 'assets', 'css')).filter(f => f.endsWith('.css'))) {
   await minifyTo(`assets/css/${f}`, `assets/css/${f}`);
 }
-for (const dir of ['fonts', 'share-scenes']) {
+for (const dir of ['fonts', 'share-scenes', 'vendor']) {
   const from = path.join(ROOT, 'assets', dir);
   if (fs.existsSync(from)) fs.cpSync(from, path.join(DIST, 'assets', dir), { recursive: true });
 }

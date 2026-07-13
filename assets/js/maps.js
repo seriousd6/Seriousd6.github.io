@@ -475,6 +475,31 @@ function _buildNav() {
       nav.appendChild(btn);
     });
   });
+
+  // P16: narrow widths (phones, slim desk panels) swap the button column for
+  // a dropdown — CSS shows exactly one of the two. Kept in sync by _selectMap.
+  var sel = document.createElement('select');
+  sel.id = 'maps-nav-select';
+  sel.className = 'maps-nav-select';
+  sel.setAttribute('aria-label', 'Choose a map');
+  GROUPS.forEach(function (g) {
+    var og = document.createElement('optgroup');
+    og.label = g.label;
+    g.ids.forEach(function (id) {
+      var m = byId[id];
+      if (!m) return;
+      var opt = document.createElement('option');
+      opt.value = m.id;
+      opt.textContent = m.icon + ' ' + m.label;
+      og.appendChild(opt);
+    });
+    sel.appendChild(og);
+  });
+  sel.addEventListener('change', function () {
+    var m = byId[sel.value];
+    if (m) _selectMap(m);
+  });
+  nav.parentNode.insertBefore(sel, nav);
 }
 
 function _selectMap(map) {
@@ -487,6 +512,8 @@ function _selectMap(map) {
     b.classList.toggle('maps-nav-btn--active', isActive);
     b.setAttribute('aria-current', String(isActive));
   });
+  var navSel = document.getElementById('maps-nav-select');
+  if (navSel && navSel.value !== map.id) navSel.value = map.id;
 
   /* update title / sub */
   var titleEl  = document.getElementById('maps-map-title');

@@ -15,18 +15,17 @@ export function ensureLeaflet() {
   if (window.L) return Promise.resolve();
   if (_leafletReady) return _leafletReady;
   _leafletReady = new Promise(function (resolve, reject) {
+    // Self-hosted (P16): unpkg was a single point of failure — blocked CDNs
+    // and flaky mobile connections left the maps pages dead. The vendored
+    // copy also precaches, so map chrome works offline (tiles still can't).
     var css = document.createElement('link');
     css.rel = 'stylesheet';
-    css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    css.integrity = 'sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H';
-    css.crossOrigin = '';
+    css.href = '/assets/vendor/leaflet/leaflet.css';
     document.head.appendChild(css);
     var js = document.createElement('script');
-    js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    js.integrity = 'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH';
-    js.crossOrigin = '';
+    js.src = '/assets/vendor/leaflet/leaflet.js';
     js.onload = function () { resolve(); };
-    js.onerror = function () { _leafletReady = null; reject(new Error('Leaflet CDN unreachable')); };
+    js.onerror = function () { _leafletReady = null; reject(new Error('Leaflet failed to load')); };
     document.head.appendChild(js);
   });
   return _leafletReady;
