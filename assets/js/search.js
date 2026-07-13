@@ -40,6 +40,24 @@ import { SYNONYMS } from './search-synonyms.js';
 
 // Lazy list of built /answers/ pages (emitted by tools/build-assets.mjs) so
 // topical queries can surface their answer page without risking a 404.
+// Lite topic list {s: slug, t: title, n: verse count} emitted by
+// tools/build-assets.mjs — the chip renderers need those three fields, not
+// the 1.4 MB nave.json. Bare-repo dev servers fall back to deriving the
+// same shape from nave.
+var _topicsLite = null;
+function _loadTopicsLite() {
+  if (_topicsLite) return _topicsLite;
+  _topicsLite = fetch(_resolve('../topics-lite.json'))
+    .then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+    .catch(function () {
+      return _naveLoad().then(function () {
+        return _naveData ? _naveData.filter(function (t) { return (t.verses || []).length > 0; })
+          .map(function (t) { return { s: t.slug, t: t.title, n: t.verses.length }; }) : null;
+      });
+    });
+  return _topicsLite;
+}
+
 var _answersSlugs = null;
 function _loadAnswersSlugs() {
   if (_answersSlugs) return _answersSlugs;
@@ -555,6 +573,11 @@ export function handleSearchInput(query) {
           noteBits.push('Showing the strongest ' + results.length + ' of ' +
             matches.length + ' matching verses — use the OT / NT / Book filters to narrow the rest.');
         }
+        if (matches.corrections && matches.corrections.length) {
+          noteBits.push('Showing results for ' + matches.corrections.map(function (c) {
+            return '“' + c.to + '” (you typed “' + c.from + '”)';
+          }).join(', ') + '.');
+        }
         if (synUsed.length) {
           noteBits.push('Also searched related words: ' + synUsed.join(' · ') + '.');
         }
@@ -831,10 +854,10 @@ export function handleTopicsSearch(query) {
   var out = document.getElementById('bsw-topics-output');
   if (!out) return;
   out.innerHTML = '<p class="omni-loading">Loading…</p>';
-  _naveLoad().then(function () {
-    if (!_naveData) { out.innerHTML = '<p class="omni-none">Could not load topics.</p>'; return; }
+  _loadTopicsLite().then(function (topics) {
+    if (!topics) { out.innerHTML = '<p class="omni-none">Could not load topics.</p>'; return; }
     var q   = query.toLowerCase();
-    var res = _naveData.filter(function (t) { return t.title.toLowerCase().indexOf(q) >= 0; });
+    var res = topics.filter(function (t) { return t.t.toLowerCase().indexOf(q) >= 0; });
     if (!res.length) {
       out.innerHTML = '<p class="omni-none">No topics for "' + escHtml(query) + '".</p>';
       return;
@@ -842,9 +865,9 @@ export function handleTopicsSearch(query) {
     out.innerHTML = '<div class="omni-topics-row">' +
       res.slice(0, 100).map(function (t) {
         return '<a class="omni-topic-chip" href="' +
-          escHtml('/answers/' + t.slug + '/') + '">' +
-          escHtml(t.title) +
-          '<span class="omni-topic-chip__count"> (' + t.verses.length + ')</span>' +
+          escHtml('/answers/' + t.s + '/') + '">' +
+          escHtml(t.t) +
+          '<span class="omni-topic-chip__count"> (' + (t.n || '·') + ')</span>' +
         '</a>';
       }).join('') +
     '</div>';
@@ -1223,18 +1246,18 @@ function _exploreWords(q, container) {
 // ── Explore: Topics (Nave's) ──────────────────────────────────────────────
 // Shows up to 20 Nave's topic chips whose title contains the query string.
 function _exploreTopics(q, container) {
-  _naveLoad().then(function () {
-    if (!_naveData) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
+  _loadTopicsLite().then(function (topics) {
+    if (!topics) { container.innerHTML = '<p class="omni-none">—</p>'; return; }
     var ql  = q.toLowerCase();
-    var res = _naveData.filter(function (t) { return t.title.toLowerCase().indexOf(ql) >= 0; });
+    var res = topics.filter(function (t) { return t.t.toLowerCase().indexOf(ql) >= 0; });
     _setExploreCount('topics', res.length);
     if (!res.length) { container.innerHTML = '<p class="omni-none">No topics found.</p>'; return; }
     container.innerHTML = '<div class="omni-topics-row">' +
       res.slice(0, 20).map(function (t) {
         return '<a class="omni-topic-chip" href="' +
-          escHtml(DICT_PAGE_URL + '?entry=' + encodeURIComponent(t.slug) + '&src=nave') + '">' +
-          escHtml(t.title) +
-          ' <span class="omni-topic-chip__count">(' + t.verses.length + ')</span></a>';
+          escHtml('/answers/' + t.s + '/') + '">' +
+          escHtml(t.t) +
+          ' <span class="omni-topic-chip__count">(' + (t.n || '·') + ')</span></a>';
       }).join('') +
     '</div>';
   });

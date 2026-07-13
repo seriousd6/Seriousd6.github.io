@@ -195,6 +195,27 @@ console.log(`[build-assets] ${emitted.length} JS/CSS assets emitted; APP_CACHE_V
   console.log(`[build-assets] answers-index.json: ${slugs.length} topic pages`);
 }
 
+// ── 6.6 Topics-lite ─────────────────────────────────────────────────────────
+// The Omni/Topics chip renderers need slug+title+count, not the 1.4 MB
+// nave.json. Covers Nave heads with verses plus the generated answer topics
+// (title reconstructed from the slug; no count).
+{
+  const nave = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/topical/nave.json'), 'utf8'));
+  const lite = nave.filter(e => (e.verses || []).length > 0)
+    .map(e => ({ s: e.slug, t: e.title, n: e.verses.length }));
+  const have = new Set(lite.map(e => e.s));
+  const ansDir = path.join(DIST, 'answers');
+  if (fs.existsSync(ansDir)) {
+    for (const slug of fs.readdirSync(ansDir)) {
+      if (have.has(slug) || !fs.statSync(path.join(ansDir, slug)).isDirectory()) continue;
+      lite.push({ s: slug, t: slug.replace(/-/g, ' ').toUpperCase() });
+    }
+  }
+  const json = JSON.stringify(lite);
+  fs.writeFileSync(path.join(DIST, 'assets', 'topics-lite.json'), json);
+  console.log(`[build-assets] topics-lite.json: ${lite.length} topics, ${(json.length / 1024).toFixed(0)} KB (nave.json: ${(fs.statSync(path.join(ROOT, 'data/topical/nave.json')).size / 1024).toFixed(0)} KB)`);
+}
+
 // ── 7. Verse search index (H5) ─────────────────────────────────────────────
 // Runs after the sw precache walk on purpose: the index JSON is fetched at
 // runtime (and cached by the data strategy), never precached.

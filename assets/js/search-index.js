@@ -50,27 +50,70 @@ export function stemWord(w) {
   return s.replace(/e$/, '');
 }
 
+// Damerau-ish edit distance capped at 2 — enough for "did you mean".
+function _editDist(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 3;
+  var prev = [], cur = [];
+  for (var j = 0; j <= b.length; j++) prev[j] = j;
+  for (var i = 1; i <= a.length; i++) {
+    cur = [i];
+    var rowMin = i;
+    for (var k = 1; k <= b.length; k++) {
+      var cost = a[i - 1] === b[k - 1] ? 0 : 1;
+      cur[k] = Math.min(prev[k] + 1, cur[k - 1] + 1, prev[k - 1] + cost);
+      if (i > 1 && k > 1 && a[i - 1] === b[k - 2] && a[i - 2] === b[k - 1]) {
+        cur[k] = Math.min(cur[k], prev[k - 1]);   // transposition ≈ 1 via substitution row
+      }
+      if (cur[k] < rowMin) rowMin = cur[k];
+    }
+    if (rowMin > 2) return 3;   // row minimum exceeds cap — bail
+    prev = cur;
+  }
+  return prev[b.length];
+}
+
 // One word → { verseId: bestMatchWeight } across every token containing it
 // or sharing its stem. Weights: exact 4, stem match 3, prefix 2, substring 1.
+// Typo fallback: a word with NO matches at all retries as its closest token
+// (edit distance ≤ 2, same first letter) and reports the correction via
+// hits._corrected so the UI can say "showing results for …".
 function _wordMatches(version, word) {
   var letter = /^[a-z]/.test(word) ? word[0] : '0';
   var qStem = stemWord(word);
   return _loadChunk(version, letter).then(function (tokens) {
     if (!tokens) return null;
-    var hits = Object.create(null);
-    for (var tok in tokens) {
-      var w;
-      if (tok === word) w = 4;
-      else if (stemWord(tok) === qStem) w = 3;
-      else if (tok.indexOf(word) === 0) w = 2;
-      else if (tok.indexOf(word) !== -1) w = 1;
-      else continue;
-      var ids = _decode(tokens[tok]);
-      for (var i = 0; i < ids.length; i++) {
-        if (!(hits[ids[i]] >= w)) hits[ids[i]] = w;
+    function collect(target, tStem) {
+      var out = Object.create(null);
+      var any = false;
+      for (var tok in tokens) {
+        var w;
+        if (tok === target) w = 4;
+        else if (stemWord(tok) === tStem) w = 3;
+        else if (tok.indexOf(target) === 0) w = 2;
+        else if (tok.indexOf(target) !== -1) w = 1;
+        else continue;
+        any = true;
+        var ids = _decode(tokens[tok]);
+        for (var i = 0; i < ids.length; i++) {
+          if (!(out[ids[i]] >= w)) out[ids[i]] = w;
+        }
       }
+      return any ? out : null;
     }
-    return hits;
+    var hits = collect(word, qStem);
+    if (hits) return hits;
+    if (word.length < 4) return Object.create(null);
+    // No token matched anywhere — assume a typo and take the closest token.
+    var best = null, bestD = 3, bestN = 0;
+    for (var tok2 in tokens) {
+      var d = _editDist(word, tok2);
+      var n = tokens[tok2].length;
+      if (d < bestD || (d === bestD && n > bestN)) { best = tok2; bestD = d; bestN = n; }
+    }
+    if (!best || bestD > 2) return Object.create(null);
+    var corrected = collect(best, stemWord(best)) || Object.create(null);
+    corrected._corrected = best;
+    return corrected;
   });
 }
 
@@ -90,29 +133,36 @@ export function searchIndexLookup(version, groups, allowedBookIdx) {
       .then(function (maps) {
         if (!maps[0]) return null;   // the primary word's chunk must load
         var merged = Object.create(null);
+        var corrections = [];
         maps.forEach(function (m, i) {
           if (!m) return;
+          if (m._corrected && !group[i].syn) corrections.push({ from: group[i].w, to: m._corrected });
           var syn = group[i].syn;
           for (var idStr in m) {
+            if (idStr === '_corrected') continue;
             var w = syn ? Math.max(1, Math.round(m[idStr] / 2)) : m[idStr];
             if (!(merged[idStr] >= w)) merged[idStr] = w;
           }
         });
-        return merged;
+        return { map: merged, corrections: corrections };
       });
   }
 
   return Promise.all(groups.map(groupMatches))
-    .then(function (maps) {
-      for (var m = 0; m < maps.length; m++) if (!maps[m]) return null;   // fallback
+    .then(function (results) {
+      var corrections = [];
+      for (var m = 0; m < results.length; m++) {
+        if (!results[m]) return null;   // fallback
+        corrections = corrections.concat(results[m].corrections);
+      }
       // AND-intersect: a verse must match every group; weight = sum.
       var out = [];
-      var first = maps[0];
+      var first = results[0].map;
       for (var idStr in first) {
         var weight = first[idStr];
         var ok = true;
-        for (var j = 1; j < maps.length; j++) {
-          var w2 = maps[j][idStr];
+        for (var j = 1; j < results.length; j++) {
+          var w2 = results[j].map[idStr];
           if (!w2) { ok = false; break; }
           weight += w2;
         }
@@ -123,6 +173,7 @@ export function searchIndexLookup(version, groups, allowedBookIdx) {
         out.push({ id: id, bookIdx: d.bookIdx, ch: d.ch, v: d.v, weight: weight });
       }
       out.sort(function (a, b) { return b.weight - a.weight || a.id - b.id; });
+      out.corrections = corrections;   // "did you mean" info for the UI
       return out;
     });
 }

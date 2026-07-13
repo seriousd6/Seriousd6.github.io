@@ -2028,6 +2028,7 @@ function _renderDashboard() {
       starting point, then add <strong>Contextual Renderings</strong> wherever a passage, book,
       or construction calls for something different.
     </p>
+    ${(st.gConf || st.hConf || st.disputed || st.locked || st.deferred) ? `
     <div class="ws-dash-grid">
       <div class="ws-dash-card">
         <div class="ws-dash-card__label">Greek Reviewed</div>
@@ -2056,7 +2057,16 @@ function _renderDashboard() {
         <div class="ws-dash-card__value">${st.disputed} / ${st.locked}</div>
         <div class="ws-dash-card__sub">${st.deferred} deferred</div>
       </div>
-    </div>
+    </div>` : `
+    <div class="ws-dash-card" style="max-width:560px">
+      <div class="ws-dash-card__label">Getting started</div>
+      <div class="ws-dash-card__sub" style="font-size:.9rem;line-height:1.6;margin-top:.35rem">
+        Look up any word or verse above to open its dossier — your review
+        progress across the ${st.gTotal.toLocaleString()} Greek and
+        ${st.hTotal.toLocaleString()} Hebrew lemmas will appear here once you
+        rate your first entry.
+      </div>
+    </div>`}
     <p style="font-size:.82rem;color:var(--color-muted);max-width:560px;line-height:1.6;margin-top:1rem">
       <strong>Start with Phase 1</strong> (top 200 NT Greek, covering ~80% of NT occurrences), then Phase 2
       (top 200 OT Hebrew). Phase 5 (Contested Terms) should be reviewed last.
