@@ -751,6 +751,18 @@
   color: var(--color-text);
 }
 .search-answers-card b { color: var(--color-primary, #55682f); }
+
+/* P20: curated topic verses boosted into the raw result list */
+.bsw-search-result--curated { border-left: 3px solid var(--color-primary, #55682f); }
+.bsw-search-result__key {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary, #55682f);
+  margin-left: 0.5rem;
+}
 .search-answers-card span { color: var(--color-muted, #7a6a55); font-size: 0.86rem; }
 .search-answers-card:hover { text-decoration: none; border-color: var(--color-accent, #7a6222); }
 

@@ -541,6 +541,9 @@ export function handleSearchInput(query) {
           });
         });
       });
+      return _applyCuratedBoost(results, query).then(function (boosted) {
+      if (gen !== _searchGeneration) return;
+      results = boosted;
       _lastSearchResults = results;
       _lastSearchQuery   = query;
       renderSearchResults(results, query);
@@ -567,6 +570,7 @@ export function handleSearchInput(query) {
         }
       }
       _maybeAnswersCard(query, gen);
+      });
     });
   }).catch(function () { if (gen === _searchGeneration) _legacyScan(); });
 
@@ -618,14 +622,69 @@ export function handleSearchInput(query) {
           renderSearchResults(results.slice(), query);
         }
         if (pending === 0 && gen === _searchGeneration) {
-          _lastSearchResults = results;
-          _lastSearchQuery   = query;
-          renderSearchResults(results, query);
-          _maybeAnswersCard(query, gen);
+          _applyCuratedBoost(results, query).then(function (boosted) {
+            if (gen !== _searchGeneration) return;
+            _lastSearchResults = boosted;
+            _lastSearchQuery   = query;
+            renderSearchResults(boosted, query);
+            _maybeAnswersCard(query, gen);
+          });
         }
       }).catch(function () { pending--; });
     });
   }
+}
+
+// ── Curated relevance boost (P20) ─────────────────────────────────────────
+// "Relevant" = the word is in the verse OR the verse is conceptually close
+// (casting cares → anxiety). The topic pages already encode the conceptual
+// side (pinned + ranked refs); when a query matches a topic, its curated
+// refs get a large score boost so they LEAD the raw list — and curated refs
+// the text scan missed entirely are injected with their text.
+function _applyCuratedBoost(results, query) {
+  var slug = query.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  if (!slug || slug.length < 3 || /^\d/.test(slug)) return Promise.resolve(results);
+  return _loadAnswersSlugs().then(function (slugs) {
+    if (!slugs || !slugs.has(slug)) return results;
+    return _loadAnswersKey(slug).then(function (key) {
+      if (!key || !key.refs || !key.refs.length) return results;
+      var version = getVersion();
+      var byKey = {};
+      results.forEach(function (r) { byKey[r.bookId + '|' + r.ch + '|' + r.v] = r; });
+      var missing = [];
+      key.refs.forEach(function (ref, i) {
+        var pr = parseRef(ref);
+        if (!pr || !pr.v) return;
+        // 250-point base: any curated verse outranks any pure text match
+        // (_scoreResult caps at 100); among curated, curation order + text
+        // score combine — a curated verse containing the word ranks highest.
+        var boost = 250 - i * 10;
+        var hit = byKey[pr.bookId + '|' + pr.ch + '|' + pr.v];
+        // Damped text contribution: curation rank dominates among curated
+        // verses, but containing the word still lifts (1 Peter 5:7 over
+        // equal-rank concept-only refs) — "curation and signal combined".
+        if (hit) { hit.score = boost + Math.round((hit.score || 0) * 0.3); hit._curated = true; }
+        else missing.push({ pr: pr, boost: boost });
+      });
+      if (!missing.length) return results;
+      var books = {};
+      missing.forEach(function (m) { books[m.pr.bookId] = null; });
+      return Promise.all(Object.keys(books).map(function (id) {
+        return loadBook(version, id)
+          .then(function (ch) { books[id] = ch; })
+          .catch(function () {});
+      })).then(function () {
+        missing.forEach(function (m) {
+          var chData = books[m.pr.bookId];
+          var text = chData && chData[String(m.pr.ch)] && chData[String(m.pr.ch)][String(m.pr.v)];
+          if (!text) return;
+          results.push({ ref: m.pr.display, bookId: m.pr.bookId, ch: m.pr.ch, v: m.pr.v,
+                         text: text, score: m.boost, _curated: true });
+        });
+        return results;
+      });
+    });
+  }).catch(function () { return results; });
 }
 
 // ── Answers panel ─────────────────────────────────────────────────────────
@@ -799,9 +858,10 @@ function _appendVerseResultBatch(sorted, query, offset, container) {
           escHtml(text.slice(idx + ql.length))
         : escHtml(text);
     })();
-    return '<div class="bsw-search-result">' +
+    return '<div class="bsw-search-result' + (r._curated ? ' bsw-search-result--curated' : '') + '">' +
       '<a class="bsw-search-result__ref ref" data-ref="' + escHtml(r.ref) + '">' +
         escHtml(r.ref) + '</a>' +
+      (r._curated ? '<span class="bsw-search-result__key">key verse</span>' : '') +
       '<p class="bsw-search-result__text">' + display + '</p>' +
       '</div>';
   }).join('');
