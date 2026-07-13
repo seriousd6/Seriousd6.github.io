@@ -12,6 +12,16 @@ import Base from '../../layouts/Base.astro';
 
     /* ── Header ── */
     .ms-header { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+    .ms-more { position: relative; display: inline-block; }
+    .ms-more summary { list-style: none; cursor: pointer; }
+    .ms-more summary::-webkit-details-marker { display: none; }
+    .ms-more__menu {
+      position: absolute; right: 0; top: calc(100% + 4px); z-index: 30;
+      display: flex; flex-direction: column; gap: 4px; padding: 6px;
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,.14); min-width: 190px;
+    }
+
     .ms-header__title { flex: 1; margin: 0; font-size: 1.5rem; min-width: 0; }
     .ms-btn {
       font-family: var(--font-ui); font-size: 0.82rem;
@@ -477,16 +487,21 @@ import Base from '../../layouts/Base.astro';
       <!-- Header -->
       <div class="ms-header">
         <h1 class="ms-header__title">My Study</h1>
-        <!-- Full-site backup (all discipline data) -->
+        <!-- Full-site backup (all discipline data) — the primary pair. The
+             notes-only variants live behind one menu, and the old "← Home"
+             button is gone (the sidebar is right there). -->
         <button class="ms-btn ms-btn--all-export" id="ms-all-export" type="button">↓ Export all data</button>
         <button class="ms-btn ms-btn--all-import" id="ms-all-import" type="button">↑ Import all data</button>
         <input type="file" id="ms-all-import-file" accept=".json" style="display:none">
-        <!-- Notes-only backup -->
-        <button class="ms-btn" id="ms-import-btn" type="button">Import notes</button>
-        <input type="file" id="ms-import-file" accept=".json" style="display:none">
-        <button class="ms-btn" id="ms-export-text" type="button">Export text</button>
-        <button class="ms-btn" id="ms-export-json" type="button">Export notes</button>
-        <a class="ms-btn" href="../">← Home</a>
+        <details class="ms-more">
+          <summary class="ms-btn">Notes only ▾</summary>
+          <div class="ms-more__menu">
+            <button class="ms-btn" id="ms-export-json" type="button">Export notes (JSON)</button>
+            <button class="ms-btn" id="ms-export-text" type="button">Export notes (text)</button>
+            <button class="ms-btn" id="ms-import-btn" type="button">Import notes</button>
+            <input type="file" id="ms-import-file" accept=".json" style="display:none">
+          </div>
+        </details>
       </div>
 
       <!-- Tabs -->

@@ -89,10 +89,9 @@ const ICONS = {
     <button class="sb-collapse-btn" aria-label="Collapse sidebar" aria-controls="site-sidebar">&#x2039;</button>
   </div>
   <div class="sb-nav" role="navigation">
-    <a class="sb-link sb-item" href="/">
-      <svg class="sb-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><Fragment set:html={ICONS.home} /></svg>
-      Home
-    </a>
+    <!-- No separate "Home" entry: the logo above links home, and Home was a
+         third home-shaped label beside The Desk (desktop home) and Today
+         (the daily page). Two entries, two destinations. -->
     {SECTIONS.map((section) => (
       <div class="sb-section">
         <div class="sb-section-label">{section.label}</div>

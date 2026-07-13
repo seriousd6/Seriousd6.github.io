@@ -119,11 +119,11 @@ import Base from '../../layouts/Base.astro';
     </div>
 
     <div class="studies-filters" id="studies-filters">
-      <button class="studies-filter-btn active" data-filter="all">All Books</button>
+      <button class="studies-filter-btn" data-filter="all">All Books</button>
       <button class="studies-filter-btn" data-filter="ot">Old Testament</button>
       <button class="studies-filter-btn" data-filter="nt">New Testament</button>
       <span class="studies-filter-sep" aria-hidden="true"></span>
-      <button class="studies-filter-btn" data-filter="has-content">Has Content</button>
+      <button class="studies-filter-btn active" data-filter="has-content">Has Content</button>
     </div>
 
     <div id="studies-content">
@@ -159,7 +159,7 @@ VERIFY: Page shows 66 book cards in OT/NT sections. "Has Content" filter shows 6
 
   function _r(path) { return '../' + path; }
 
-  var _currentFilter = 'all';
+  var _currentFilter = 'has-content';
   var _allBooks = [];
 
   function tierBadge(exists, label, cls) {
@@ -293,6 +293,8 @@ VERIFY: Page shows 66 book cards in OT/NT sections. "Has Content" filter shows 6
       secTop.appendChild(gridTop);
       content.appendChild(secTop);
     }
+
+    applyFilter();   // apply the default (Has Content) to the initial render
 
     document.getElementById('studies-filters').addEventListener('click', function (e) {
       var btn = e.target.closest('.studies-filter-btn');
