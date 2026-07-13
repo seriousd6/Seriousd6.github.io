@@ -26,7 +26,7 @@
 
 import {
   getVersion, loadBook, parseRef, normalizeBook, metaBooks, bookLookup, bookOrder,
-  READER_URL, STRONGS_ROOT, TOPICS_ROOT, WORD_URL, TOPICS_INDEX_URL,
+  READER_URL, STRONGS_ROOT, TOPICS_ROOT, TOPICS_INDEX_URL,
   escHtml, computeTextSimilarity, _scoreResult,
   _loadLibIndex, _loadLibSearch, libIndexCache, bookCache,
   loadStrongs, _smithLoad, _smithData, _resolve,
@@ -1047,6 +1047,25 @@ function _exploreSections(q, container) {
   });
 }
 
+function _foldDiacritics(s) {
+  return s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s;
+}
+
+function _strongsCardHtml(r) {
+  var e    = r.entry;
+  var href = escHtml(READER_URL + '?strongs=' + encodeURIComponent(r.key));
+  return '<div class="omni-strongs-card">' +
+    '<span class="omni-strongs-card__code">' + escHtml(r.key) + '</span>' +
+    '<span class="omni-strongs-card__lemma">' + escHtml(e.lemma || '') + '</span>' +
+    (e.translit
+      ? '<span class="omni-strongs-card__translit">(' + escHtml(e.translit) + ')</span>'
+      : '') +
+    '<span class="omni-strongs-card__gloss">' +
+      escHtml((e.def || '').slice(0, 100)) + '</span>' +
+    '<a class="omni-strongs-card__link" href="' + href + '">Study →</a>' +
+  '</div>';
+}
+
 // ── Explore: Word Studies ─────────────────────────────────────────────────
 // If the query is a Strong's number (G/H + digits), link directly to the word study page.
 // Otherwise search both Greek and Hebrew Strong's dictionaries for matching
@@ -1055,7 +1074,7 @@ function _exploreWords(q, container) {
   // Direct Strong's number — skip the dictionary scan entirely.
   if (/^[GgHh]\d+$/.test(q.trim())) {
     var id   = q.trim().toUpperCase();
-    var href = escHtml(WORD_URL + '?s=' + encodeURIComponent(id));
+    var href = escHtml(READER_URL + '?strongs=' + encodeURIComponent(id));
     container.innerHTML =
       '<a class="omni-see-all" href="' + href + '">' +
         'Open word study for ' + escHtml(id) + ' →</a>';
@@ -1065,6 +1084,7 @@ function _exploreWords(q, container) {
   container.innerHTML = '<p class="omni-loading">Loading…</p>';
 
   var ql = q.toLowerCase();
+  var qf = _foldDiacritics(ql);
   // Whole-word boundary check so "love" doesn't match "beloved" as a primary hit.
   var wordRe = new RegExp('\\b' + ql.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
   Promise.all([loadStrongs('greek'), loadStrongs('hebrew')]).then(function (dicts) {
@@ -1075,9 +1095,9 @@ function _exploreWords(q, container) {
       Object.keys(dict).forEach(function (key) {
         var e     = dict[key];
         var lemma = (e.lemma || '').toLowerCase();
-        var trans = (e.translit || '').toLowerCase();
-        var defn  = e.definition || '';
-        if (lemma.indexOf(ql) >= 0 || trans.indexOf(ql) >= 0 || key.toLowerCase() === ql) {
+        var trans = _foldDiacritics((e.translit || '').toLowerCase());
+        var defn  = e.def || '';
+        if (lemma.indexOf(ql) >= 0 || trans.indexOf(qf) >= 0 || key.toLowerCase() === ql) {
           primary.push({ key: key, entry: e });
         } else if (wordRe.test(defn)) {
           byDefn.push({ key: key, entry: e });
@@ -1094,25 +1114,14 @@ function _exploreWords(q, container) {
     }
 
     _setExploreCount('words', results.length);
-    var shown = results.slice(0, 8);
-    container.innerHTML = shown.map(function (r) {
-      var e    = r.entry;
-      var href = escHtml(WORD_URL + '?s=' + encodeURIComponent(r.key));
-      return '<div class="omni-strongs-card">' +
-        '<span class="omni-strongs-card__code">' + escHtml(r.key) + '</span>' +
-        '<span class="omni-strongs-card__lemma">' + escHtml(e.lemma || '') + '</span>' +
-        (e.translit
-          ? '<span class="omni-strongs-card__translit">(' + escHtml(e.translit) + ')</span>'
-          : '') +
-        '<span class="omni-strongs-card__gloss">' +
-          escHtml((e.definition || '').slice(0, 100)) + '</span>' +
-        '<a class="omni-strongs-card__link" href="' + href + '">Study →</a>' +
-      '</div>';
-    }).join('') +
+    container.innerHTML = results.slice(0, 8).map(_strongsCardHtml).join('') +
     (results.length > 8
-      ? '<a class="omni-see-all" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(q)) +
-          '">See all ' + results.length + " matches →</a>"
+      ? '<button type="button" class="omni-see-all omni-see-all--btn">Show all ' + results.length + " matches</button>"
       : '');
+    var moreBtn = container.querySelector('.omni-see-all--btn');
+    if (moreBtn) moreBtn.addEventListener('click', function () {
+      container.innerHTML = results.map(_strongsCardHtml).join('');
+    });
   }).catch(function () {
     container.innerHTML = "<p class=\"omni-none\">Could not load Strong's data.</p>";
   });

@@ -4906,7 +4906,7 @@ async function _renderWordStudyPanel(code) {
 
   } else {
     // ── Strongs-only fallback (word not in curated vocab set) ─────────────
-    var definition = sEntry.definition || sEntry.long_definition || '';
+    var definition = sEntry.def || sEntry.definition || sEntry.long_definition || '';
     if (definition) {
       leftHtml += '<div class="sw-ws-section-head">Definition</div>'
         + '<div class="sw-ws-prose">' + _esc(definition) + '</div>';

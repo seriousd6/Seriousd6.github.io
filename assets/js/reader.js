@@ -3,7 +3,7 @@
 
 import {
   getVersion, setVersion, loadBook, loadCrossRefs, loadCommentary, parseRef, parseMultiRef,
-  normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, MAPS_URL, escHtml,
+  normalizeBook, metaBooks, metaVersions, bookOrder, READER_URL, SEARCH_URL, MAPS_URL, WORD_URL, escHtml,
   _compareCanonical, parseCrossRefEntry, resolveVerses,
   ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, decorateCatena, buildCatenaFilter, loadMktAll, decorateMkt,
   onVersionChange, _resolve, BOOKMARKS_URL, NOTES_URL,
@@ -364,6 +364,8 @@ function _strongsBuildBanner(data) {
       (data.lemma   ? ' <span class="reader-strongs-banner__lemma">'    + escHtml(data.lemma)   + '</span>' : '') +
       (data.translit? ' <span class="reader-strongs-banner__translit">(' + escHtml(data.translit) + ')</span>' : '') +
       (data.gloss   ? ' — <span class="reader-strongs-banner__gloss">'  + escHtml(data.gloss)   + '</span>' : '') +
+      ' <a class="reader-strongs-banner__ws" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(data.code)) + '" ' +
+        'title="Full lexical dossier in the Translation Workshop">Workshop →</a>' +
       '<button class="reader-strongs-clear-btn" aria-label="Clear Strongs search" title="Clear search">&#x2715;</button>' +
     '</div>' +
     '<div class="reader-strongs-banner__nav">' +

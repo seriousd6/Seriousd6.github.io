@@ -3,7 +3,7 @@
 
 import {
   _resolve, getVersion, loadBook, loadInterlinear, loadStrongs, loadLexicon,
-  metaBooks, metaVersions, bookOrder, READER_URL, WORD_URL, escHtml, parseRef
+  metaBooks, metaVersions, bookOrder, READER_URL, escHtml, parseRef
 } from './core.js';
 
 export var INTERLINEAR_KEY = 'bsw_interlinear';
@@ -644,13 +644,13 @@ function _riShowPopover(tile, strongsDict) {
   //   within viewport bounds (fixed element — scroll offsets must NOT be added to
   //   getBoundingClientRect coords); closes on scroll so it never floats adrift.
   // CHANGE? POP_W (280) must match .ri-popover width in reader.css (line 2022).
-  //   WORD_URL is imported from core.js; if the word/ path changes, update core.js line 45.
+  //   The occurrences link targets the reader's ?strongs= mode (READER_URL from core.js).
   //   _riScrollCleanup is module-level — if you add new close triggers (e.g. Escape),
   //   call _riScrollCleanup() and null it before removing the popover.
   // VERIFY: Click a tile near the right edge → popover stays fully within viewport.
   //   Click a tile near the bottom → popover flips above the tile.
   //   Open popover; scroll the reader → popover disappears immediately.
-  //   Popover shows "Word Study →" link navigating to word/?s=G3056 (or correct code).
+  //   Popover shows "All occurrences →" link navigating to read/?strongs=G3056 (or correct code).
   var strongs = tile.getAttribute('data-strongs');
   if (!strongs) return;
   var entry = strongsDict && strongsDict[strongs];
@@ -679,8 +679,8 @@ function _riShowPopover(tile, strongsDict) {
       (window.bswStudyDesk
         ? '<button type="button" class="ri-popover__desk" title="Study this word in the passage desk">Study in desk ▸</button>'
         : '') +
-      '<a class="vs-context-btn" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(strongs)) + '" ' +
-         'title="Open full word study">Word Study →</a>' +
+      '<a class="vs-context-btn" href="' + escHtml(READER_URL + '?strongs=' + encodeURIComponent(strongs)) + '" ' +
+         'title="Read every occurrence of this word in context">All occurrences →</a>' +
     '</div>';
 
   document.body.appendChild(pop);

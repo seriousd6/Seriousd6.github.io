@@ -15,8 +15,7 @@
  *     exactly as it tolerated the term-map fetch before)
  *   - apocrypha-reader.js   → fire-and-forget right after wireRefLinks
  *     (wireApoRefLinks awaits its own abbrev-map fetch anyway)
- *   - ol-companion.js / places.js on window.BibleUI → lazy async wrappers;
- *     the only initOLSection caller (verse-study.js) already chains .catch on
+ *   - places.js on window.BibleUI → lazy async wrapper;
  *     the returned promise, and autoTagPlacesIn callers are fire-and-forget
  *   - search.js             → never loaded here; the sidebar Search button and
  *     hotkeys are inlined below (buildSearchNav), and the search page's own
@@ -77,8 +76,6 @@ onVersionChange(function (id) {
 //   - openReader:      topic-page inline <script> blocks (pass bookId string)
 //   - autoTagPlacesIn: timeline.js after dynamic re-renders; reader.js on lookup
 //                      (lazy: fire-and-forget wrapper importing places.js)
-//   - initOLSection:   verse-study.js word-study sections (lazy: returns the
-//                      import().then(...) promise; the caller chains .catch)
 //   - getVersion/setVersion: version picker in topics/_template inline script
 //   Do not add new window.* state outside this object; use entry callbacks instead.
 // VERIFY: From any topic page DevTools console, confirm `window.BibleUI.openModal`
@@ -88,12 +85,6 @@ window.BibleUI = {
   getVersion:      getVersion,
   setVersion:      setVersion,
   openModal:       openModal,
-  initOLSection:   function () {
-    var args = arguments;
-    return import('./ol-companion.js').then(function (m) {
-      return m.initOLSection.apply(null, args);
-    });
-  },
   autoTagPlacesIn: function (el) {
     import('./places.js').then(function (m) { m.autoTagPlacesIn(el); });
   },

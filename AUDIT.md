@@ -73,10 +73,14 @@ investigation showed the finding was wrong. Unmarked items remain open.
   codepath). What remained was a naming collision: the reader toolbar's
   side-by-side second-translation toggle was also labeled "Compare". Renamed
   to "2 Versions" so the two features read as distinct.
-- ●● **[ia] Word study exists four times** — word-tap popover → desk word
-  blade; workshop Word Study tab; interlinear tile taps; biblepedia Strong's
-  pages. Each renders lexeme data differently. The desk word blade should be
-  THE surface, with others deep-linking into it.
+- ✔ ●● **[ia] Word study exists four times** — unified on the reader's
+  `?strongs=` occurrence-browser mode as the canonical deep link (it was
+  already the richest surface: lemma banner + paged passages + interlinear
+  highlight, and biblepedia already targeted it). The verse modal's "Word
+  Deep Dive", search's Strong's cards, and the interlinear tile popover now
+  all point there; the passage-desk word blade serves in-page study; the
+  Translation Workshop remains as the explicitly-labeled specialist dossier,
+  linked from the strongs banner and the word blade.
 - ●● **[ia] Three annotation systems with unclear boundaries** — reader verse
   notes ("My Study"), Discipline journal + reflections, and memory-verse
   notes. A user asking "where did I write that?" has three answers. At

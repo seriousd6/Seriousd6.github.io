@@ -1239,6 +1239,12 @@ body:not(.bsw-xref-notes-on) .reader-xref-note { display: none; }
   color: var(--color-muted);
 }
 
+.reader-strongs-banner__ws {
+  font-size: .78rem;
+  white-space: nowrap;
+  margin-left: .35rem;
+}
+
 .reader-strongs-nav-btn {
   padding: .2rem .65rem;
   border: 1px solid var(--color-border, #ddd);

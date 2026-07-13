@@ -4,7 +4,7 @@
 import {
   getVersion, resolveVerses, loadCrossRefs, loadCommentary,
   parseCrossRefEntry, _compareCanonical, parseRef,
-  escHtml, READER_URL, VERSE_STUDY_URL, COMPARE_URL,
+  escHtml, READER_URL, COMPARE_URL,
   COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, decorateCatena, buildCatenaFilter, loadMktAll, decorateMkt,
   ATTRIBUTION, metaVersions, metaBooks,
   registerOpenModal, _resolve, NOTES_URL
