@@ -11,9 +11,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import Base from '../../../layouts/Base.astro';
+import { buildAnswerTopics } from '../../../lib/answers-topics.mjs';
 
 export async function getStaticPaths() {
-  const nave = JSON.parse(fs.readFileSync('./data/topical/nave.json', 'utf8'));
   const bpIndex = JSON.parse(fs.readFileSync('./data/biblepedia/index.json', 'utf8'));
   const bpIds = new Set(bpIndex.filter(e => e.has_article !== false).map(e => e.id));
 
@@ -39,7 +39,7 @@ export async function getStaticPaths() {
   };
   const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z])/g, (s, a, b) => a + b.toUpperCase());
 
-  const entries = nave.filter(e => (e.verses || []).length > 0);
+  const entries = buildAnswerTopics();
   return entries.map((e, i) => {
     const preview = [];
     for (const ref of e.verses) {
@@ -59,6 +59,7 @@ export async function getStaticPaths() {
         title: titleCase(e.title),
         verses: e.verses,
         preview,
+        generated: e.generated,
         bpLink: bpIds.has(e.slug) ? `/biblepedia/${e.slug}/` : null,
         related,
       },
@@ -66,12 +67,15 @@ export async function getStaticPaths() {
   });
 }
 
-const { title, verses, preview, bpLink, related } = Astro.props;
+const { title, verses, preview, generated, bpLink, related } = Astro.props;
+const source = generated
+  ? 'matched from the Berean Standard Bible text'
+  : "Nave's Topical Bible (1896)";
 const MAX_LIST = 400;
 const listed = verses.slice(0, MAX_LIST);
 const desc = preview.length
-  ? `${verses.length} Bible verses on ${title}, from Nave's Topical Bible — starting with ${preview[0].ref}: “${preview[0].text.slice(0, 90)}…”`
-  : `${verses.length} Bible references on ${title}, from Nave's Topical Bible.`;
+  ? `${verses.length} Bible verses on ${title} — starting with ${preview[0].ref}: “${preview[0].text.slice(0, 90)}…”`
+  : `${verses.length} Bible references on ${title}.`;
 const exploreHref = `/search/?tab=explore&q=${encodeURIComponent(title.toLowerCase())}`;
 ---
 
@@ -99,7 +103,7 @@ const exploreHref = `/search/?tab=explore&q=${encodeURIComponent(title.toLowerCa
   <div class="ans">
     <p class="ans-eyebrow">What the Bible says about</p>
     <h1>{title}</h1>
-    <p class="ans-src">{verses.length} reference{verses.length === 1 ? '' : 's'} · Nave's Topical Bible (1896) · tap any verse for study tools</p>
+    <p class="ans-src">{verses.length} reference{verses.length === 1 ? '' : 's'} · {source} · tap any verse for study tools</p>
 
     {preview.map(v => (
       <div class="ans-verse">

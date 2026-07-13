@@ -1,11 +1,10 @@
 ---
 // /answers/ — index of the topical answer pages, grouped by letter.
-import fs from 'node:fs';
 import Base from '../../layouts/Base.astro';
+import { buildAnswerTopics } from '../../lib/answers-topics.mjs';
 
-const nave = JSON.parse(fs.readFileSync('./data/topical/nave.json', 'utf8'));
 const titleCase = (t) => t.toLowerCase().replace(/(^|[\s(-])([a-z])/g, (s, a, b) => a + b.toUpperCase());
-const entries = nave.filter(e => (e.verses || []).length > 0)
+const entries = buildAnswerTopics()
   .map(e => ({ slug: e.slug, title: titleCase(e.title), n: e.verses.length }));
 const byLetter = {};
 for (const e of entries) {
@@ -15,7 +14,7 @@ for (const e of entries) {
 const letters = Object.keys(byLetter).sort();
 ---
 
-<Base entry="generic" title={"What does the Bible say about…? — Kingdom Bible Study"} description={`Topical Bible answers — ${entries.length} topics from Nave's Topical Bible, each with key verses and full references.`}>
+<Base entry="generic" title={"What does the Bible say about…? — Kingdom Bible Study"} description={`Topical Bible answers — ${entries.length} topics, each with key verses and full references.`}>
 <Fragment slot="head-end">
 <style is:inline>
   .ansx { max-width: 880px; margin: 0 auto; padding: 1.8rem 1.2rem 4rem; }
@@ -31,7 +30,8 @@ const letters = Object.keys(byLetter).sort();
 <main>
   <div class="ansx">
     <h1>What does the Bible say about…</h1>
-    <p class="ansx-sub">{entries.length} topics from Nave's Topical Bible (1896) — each with key verses, the full
+    <p class="ansx-sub">{entries.length} topics — from Nave's Topical Bible (1896), filled out with
+    text matches from the Berean Standard Bible — each with key verses, the full
     reference list, and links deeper into the site. Or just type your question into
     <a href="/search/">Explore</a>.</p>
     {letters.map(L => (

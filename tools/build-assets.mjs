@@ -164,6 +164,18 @@ for (const f of ['manifest.json', 'favicon.ico', 'favicon.svg', 'offline.html', 
 
 console.log(`[build-assets] ${emitted.length} JS/CSS assets emitted; APP_CACHE_V=bsw-app-${hash}`);
 
+// ── 6.5 Answers-page manifest ───────────────────────────────────────────────
+// The slug list of built /answers/ pages, so the verse search can offer a
+// topic's answer page without risking a 404 (fetched lazily by search.js).
+{
+  const ansDir = path.join(DIST, 'answers');
+  const slugs = fs.existsSync(ansDir)
+    ? fs.readdirSync(ansDir, { withFileTypes: true }).filter(e => e.isDirectory()).map(e => e.name).sort()
+    : [];
+  fs.writeFileSync(path.join(DIST, 'assets', 'answers-index.json'), JSON.stringify(slugs));
+  console.log(`[build-assets] answers-index.json: ${slugs.length} topic pages`);
+}
+
 // ── 7. Verse search index (H5) ─────────────────────────────────────────────
 // Runs after the sw precache walk on purpose: the index JSON is fetched at
 // runtime (and cached by the data strategy), never precached.

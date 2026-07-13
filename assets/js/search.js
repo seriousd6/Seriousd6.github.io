@@ -36,6 +36,19 @@ import {
 var _LIBRARY_ROOT = _resolve('../../library/');
 import { _naveLoad, _naveData, DICT_PAGE_URL } from './library.js';
 import { searchIndexLookup } from './search-index.js';
+import { SYNONYMS } from './search-synonyms.js';
+
+// Lazy list of built /answers/ pages (emitted by tools/build-assets.mjs) so
+// topical queries can surface their answer page without risking a 404.
+var _answersSlugs = null;
+function _loadAnswersSlugs() {
+  if (_answersSlugs) return _answersSlugs;
+  _answersSlugs = fetch(_resolve('../answers-index.json'))
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (list) { return list ? new Set(list) : null; })
+    .catch(function () { return null; });
+  return _answersSlugs;
+}
 import { loadSectionBody, searchSectionsFull } from './sections.js';
 import { wireRefLinks, wireRefEl } from './wire.js';
 import { autoTagTermsWhenReady } from './terms.js';
@@ -390,7 +403,11 @@ export function _topicKernel(query) {
 }
 
 export function handleSearchInput(query) {
-  if (!query || query.length < 3) return;
+  if (!query) return;
+  // "anxiety?" is "anxiety" — trailing question/exclamation punctuation is
+  // part of how people type, not of any word or reference.
+  query = query.replace(/[\s?!.]+$/, '');
+  if (query.length < 3) return;
   // Question-shaped queries search by their topic kernel.
   var _kernel = _topicKernel(query);
   if (_kernel !== query) query = _kernel;
@@ -460,30 +477,10 @@ export function handleSearchInput(query) {
     .map(function (w) { return w.replace(/^'+|'+$/g, ''); })
     .filter(function (w) { return w.length >= 2; });
 
-  // A3: curated synonym expansions — the gap between how people ask and how
-  // the text says it. Applied as OR-alternatives (half weight) within each
-  // word's group; skipped for quoted-phrase queries (the phrase is verified
-  // literally). Surfaced to the user in a note under the results.
-  var SYNONYMS = {
-    anxiety:     ['anxious', 'worry', 'worried', 'cares'],
-    worry:       ['anxious', 'anxiety', 'cares'],
-    anxious:     ['anxiety', 'worry', 'cares'],
-    money:       ['riches', 'wealth', 'mammon'],
-    wealth:      ['riches', 'money', 'mammon'],
-    anger:       ['wrath', 'angry'],
-    fear:        ['afraid', 'dread', 'terror'],
-    afraid:      ['fear', 'dread'],
-    forgiveness: ['forgive', 'forgiven', 'pardon'],
-    marriage:    ['marry', 'wife', 'husband'],
-    salvation:   ['saved', 'save', 'deliverance'],
-    prayer:      ['pray', 'praying', 'supplication'],
-    joy:         ['rejoice', 'gladness', 'glad'],
-    sin:         ['iniquity', 'transgression', 'trespass'],
-    death:       ['die', 'died', 'grave'],
-    heaven:      ['heavens', 'paradise'],
-    work:        ['labor', 'toil', 'deeds'],
-    friendship:  ['friend', 'friends', 'companion'],
-  };
+  // A3: curated synonym expansions (assets/js/search-synonyms.js — shared
+  // with the build-time answers-page generator). Applied as OR-alternatives
+  // (half weight) within each word's group; skipped for quoted-phrase
+  // queries. Surfaced to the user in a note under the results.
   var synUsed = [];
   var idxGroups = idxWords.map(function (w) {
     var group = [{ w: w, syn: false }];
@@ -568,6 +565,7 @@ export function handleSearchInput(query) {
           out.insertBefore(note, out.firstChild);
         }
       }
+      _maybeAnswersCard(query, gen);
     });
   }).catch(function () { if (gen === _searchGeneration) _legacyScan(); });
 
@@ -622,10 +620,31 @@ export function handleSearchInput(query) {
           _lastSearchResults = results;
           _lastSearchQuery   = query;
           renderSearchResults(results, query);
+          _maybeAnswersCard(query, gen);
         }
       }).catch(function () { pending--; });
     });
   }
+}
+
+// ── Answers card ──────────────────────────────────────────────────────────
+// A topical query whose /answers/ page exists gets that page offered FIRST,
+// above the raw verse list — the curated answer beats 400 hits.
+function _maybeAnswersCard(query, gen) {
+  var slug = query.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  if (!slug || slug.length < 3) return;
+  _loadAnswersSlugs().then(function (slugs) {
+    if (!slugs || !slugs.has(slug)) return;
+    if (gen !== _searchGeneration) return;
+    var out = document.getElementById('bsw-search-output');
+    if (!out || out.querySelector('.search-answers-card')) return;
+    var card = document.createElement('a');
+    card.className = 'search-answers-card';
+    card.href = '/answers/' + slug + '/';
+    card.innerHTML = 'What does the Bible say about <b>' + escHtml(query.toLowerCase()) + '</b>?' +
+      ' <span>— the full topic page with key verses →</span>';
+    out.insertBefore(card, out.firstChild);
+  });
 }
 
 // ── renderSearchResults ───────────────────────────────────────────────────

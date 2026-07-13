@@ -738,6 +738,22 @@
   margin: 0 0 0.6rem;
 }
 
+/* Topical answer-page card offered above raw verse results */
+.search-answers-card {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  background: color-mix(in srgb, var(--color-primary, #55682f) 8%, var(--color-surface, #fff));
+  border: 1px solid var(--color-primary, #55682f);
+  border-radius: 10px;
+  padding: 0.7rem 0.95rem;
+  margin: 0 0 0.8rem;
+  color: var(--color-text);
+}
+.search-answers-card b { color: var(--color-primary, #55682f); }
+.search-answers-card span { color: var(--color-muted, #7a6a55); font-size: 0.86rem; }
+.search-answers-card:hover { text-decoration: none; border-color: var(--color-accent, #7a6222); }
+
 .omni-none {
   font-size: 0.85rem;
   color: var(--color-muted, #7a6a55);
