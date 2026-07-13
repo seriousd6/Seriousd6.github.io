@@ -160,8 +160,9 @@ export function initSearchPage(input) {
     });
 
     if (!isHubTab) {
+      // P15: one search tool — verse controls and omni sections share the tab.
       if (verseCtx)   verseCtx.hidden   = (tab !== 'verse');
-      if (exploreCtx) exploreCtx.hidden = (tab !== 'explore');
+      if (exploreCtx) exploreCtx.hidden = (tab !== 'verse');
     }
 
     // Persist tab selection.
@@ -173,12 +174,7 @@ export function initSearchPage(input) {
 
   tabBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var tab = btn.getAttribute('data-search-tab');
-      setSearchTab(tab);
-      if (tab === 'explore') {
-        var q = input.value.trim();
-        if (q.length >= 2) handleExploreSearch(q);
-      }
+      setSearchTab(btn.getAttribute('data-search-tab'));
     });
   });
 
@@ -244,8 +240,7 @@ export function initSearchPage(input) {
     clearTimeout(_searchDebounce);
     var q = input.value.trim();
     if (!q) { _clearResults(); return; }
-    if (_searchPageTab === 'verse') handleSearchInput(q);
-    else if (_searchPageTab === 'explore') handleExploreSearch(q);
+    if (_searchPageTab === 'verse') { handleSearchInput(q); handleExploreSearch(q); }
   };
 
   // Search button — forces an immediate re-run on click.
@@ -264,8 +259,7 @@ export function initSearchPage(input) {
     _toggleRecentSearches(input, !q);
     if (!q) { _clearResults(); return; }
     _searchDebounce = setTimeout(function () {
-      if (_searchPageTab === 'verse') handleSearchInput(q);
-      else if (_searchPageTab === 'explore') handleExploreSearch(q);
+      if (_searchPageTab === 'verse') { handleSearchInput(q); handleExploreSearch(q); }
     }, 250);
   });
 
@@ -296,21 +290,21 @@ export function initSearchPage(input) {
     try { return localStorage.getItem('bsw_explore_tab'); } catch (e) { return null; }
   }());
 
+  if (tabParam === 'explore') tabParam = 'verse';   // merged tab (P15)
   if (tabParam && tabParam !== 'verse') {
     setSearchTab(tabParam);
-    if (tabParam === 'explore' && qParam) {
-      input.value = qParam;
-      handleExploreSearch(qParam);
-    }
   } else if (qParam) {
     input.value = qParam;
     handleSearchInput(qParam);
+    handleExploreSearch(qParam);
   }
 }
 
 function _clearResults() {
   var out = document.getElementById('bsw-search-output');
   if (out) out.innerHTML = '';
+  var ex = document.getElementById('bsw-explore-output');
+  if (ex) ex.innerHTML = '';
 }
 
 // ── Recent searches dropdown ──────────────────────────────────────────────
@@ -728,17 +722,10 @@ export function renderSearchResults(results, query) {
   var sortRow = document.getElementById('bsw-search-sort-row');
 
   if (!results || !results.length) {
-    // Heights H1a: a topical query with no verbatim verse hits shouldn't
-    // dead-end — the omni search usually has dictionary/topic/library answers.
-    if (_searchPageTab === 'verse' && _switchSearchTab && !parseRef(query)) {
-      out.innerHTML = '<p class="search-page-none">No exact verse matches for "' + escHtml(query) +
-        '" — showing everything we have on it.</p>';
-      if (sortRow) sortRow.hidden = true;
-      _switchSearchTab('explore');
-      handleExploreSearch(query);
-      return;
-    }
-    out.innerHTML = '<p class="search-page-none">No results for "' + escHtml(query) + '".</p>';
+    // P15: no dead-end and no tab switch — the omni sections render below
+    // this message for every query.
+    out.innerHTML = '<p class="search-page-none">No exact verse matches for "' + escHtml(query) +
+      '" — related results below.</p>';
     if (sortRow) sortRow.hidden = true;
     return;
   }
@@ -908,7 +895,6 @@ export function handleExploreSearch(query) {
 
   // Build the five section skeletons in one pass.
   var SECTIONS = [
-    { key: 'verses',     title: 'Verses' },
     { key: 'sections',   title: 'Sections' },
     { key: 'words',      title: 'Word Studies' },
     { key: 'topics',     title: "Topics (Nave's)" },
@@ -938,7 +924,6 @@ export function handleExploreSearch(query) {
     return out.querySelector('[data-explore-body="' + key + '"]');
   }
 
-  var vb  = body('verses');
   var scb = body('sections');
   var wb  = body('words');
   var tb  = body('topics');
@@ -948,7 +933,6 @@ export function handleExploreSearch(query) {
   var lb  = body('library');
   var gb  = body('guides');
 
-  if (vb)  _exploreVerses(q, vb);
   if (scb) _exploreSections(q, scb);
   if (wb)  _exploreWords(q, wb);
   if (tb)  _exploreTopics(q, tb);
@@ -957,85 +941,6 @@ export function handleExploreSearch(query) {
   if (nb)  _exploreNames(q, nb);
   if (lb)  _exploreLibrary(q, lb);
   if (gb)  _exploreGuides(q, gb);
-}
-
-// ── Explore: Verses ───────────────────────────────────────────────────────
-// Shows the verse if the query is a direct reference.
-// For keyword queries, scans books already in the fetch cache so no new network
-// requests are made — then shows up to 5 preview matches plus a link to switch
-// to the full Verse Search tab.
-function _exploreVerses(q, container) {
-  var parsed = parseRef(q);
-  if (parsed) {
-    container.innerHTML =
-      '<a class="bsw-search-result__ref ref" data-ref="' + escHtml(parsed.display) + '">' +
-        escHtml(parsed.display) + '</a>';
-    wireRefLinks(container);
-    return;
-  }
-
-  // Scan only already-cached book data to avoid firing dozens of new fetches
-  // just for a 5-result preview.
-  var version = getVersion();
-  var ql      = q.toLowerCase();
-  var preview = [];
-
-  var books = metaBooks || [];
-  for (var i = 0; i < books.length && preview.length < 5; i++) {
-    var cacheKey = version + ':' + books[i].id;
-    var chapters = bookCache[cacheKey];
-    if (!chapters) continue;
-    var chKeys = Object.keys(chapters);
-    for (var ci = 0; ci < chKeys.length && preview.length < 5; ci++) {
-      var ch   = chapters[chKeys[ci]];
-      var vKeys = Object.keys(ch);
-      for (var vi = 0; vi < vKeys.length && preview.length < 5; vi++) {
-        var text = ch[vKeys[vi]];
-        if (text && text.toLowerCase().indexOf(ql) !== -1) {
-          preview.push({
-            ref:  books[i].name + ' ' + chKeys[ci] + ':' + vKeys[vi],
-            text: text
-          });
-        }
-      }
-    }
-  }
-
-  var switchBtn = '<button class="omni-see-all" type="button" data-switch-tab="verse">' +
-    'Full verse search →</button>';
-
-  _setExploreCount('verses', preview.length);
-  if (!preview.length) {
-    container.innerHTML = '<p class="omni-none">Switch to Verse Search for full results. ' + switchBtn + '</p>';
-  } else {
-    var html = preview.map(function (r) {
-      var idx     = r.text.toLowerCase().indexOf(ql);
-      var display = idx >= 0
-        ? escHtml(r.text.slice(0, idx)) +
-          '<mark>' + escHtml(r.text.slice(idx, idx + q.length)) + '</mark>' +
-          escHtml(r.text.slice(idx + q.length))
-        : escHtml(r.text);
-      return '<div class="bsw-search-result">' +
-        '<a class="bsw-search-result__ref ref" data-ref="' + escHtml(r.ref) + '">' +
-          escHtml(r.ref) + '</a>' +
-        '<p class="bsw-search-result__text">' + display + '</p>' +
-      '</div>';
-    }).join('');
-    container.innerHTML = html + '<p class="omni-none" style="margin-top:.5rem">' + switchBtn + '</p>';
-    wireRefLinks(container);
-    container.querySelectorAll('.bsw-search-result__text').forEach(autoTagTermsWhenReady);
-  }
-
-  // Wire the tab-switch button so clicking it switches to Verse Search and fires the search.
-  container.querySelectorAll('[data-switch-tab]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (_switchSearchTab) {
-        _switchSearchTab('verse');
-        var inp = document.getElementById('bsw-search-input');
-        if (inp && inp.value.trim()) handleSearchInput(inp.value.trim());
-      }
-    });
-  });
 }
 
 // ── Explore: Sections (topical) ───────────────────────────────────────────
