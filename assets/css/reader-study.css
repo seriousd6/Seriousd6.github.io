@@ -600,3 +600,27 @@
 }
 .study-export-btn:hover { filter: brightness(1.06); }
 .study-export-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* ── /study/passage/ solo panel (P26) ───────────────────────────────────────
+   The drawer element becomes the page: in-flow, full width, no slide-in,
+   no close affordance. Blades keep their absolute overlay behavior because
+   the container stays a positioned box. */
+body.study-solo .study-panel-main { height: calc(100vh - var(--topbar-h, 0px)); }
+body.study-solo #study-panel-root { height: 100%; }
+body.study-solo .reader-study-desk {
+  position: relative;
+  top: auto; right: auto; bottom: auto;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  transform: none;
+  visibility: visible;
+  transition: none;
+  border-left: none;
+  box-shadow: none;
+  z-index: auto;
+}
+body.study-solo .study-desk__close { display: none; }
+@media (min-width: 1024px) {
+  body.study-solo .study-panel-main { height: 100vh; }
+}

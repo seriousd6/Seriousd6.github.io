@@ -1,0 +1,16 @@
+---
+// /study/passage/ — the Passage Study surface as its own page (P26).
+// On the Desk it is a linkable panel that follows a reader; standalone it
+// studies ?ref= directly. The in-reader drawer remains for single-window use.
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base entry="study-panel" title={"Passage Study — Kingdom Bible Study"} description={"Passage study: outline, speakers, key words, places, context, cross references, and echoes for any chapter."} bodyAttrs={{"class":"study-solo"}} footer={false}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="/assets/css/reader.css">
+<link rel="stylesheet" href="/assets/css/reader-study.css">
+</Fragment>
+<main class="study-panel-main">
+  <div id="study-panel-root"></div>
+</main>
+</Base>

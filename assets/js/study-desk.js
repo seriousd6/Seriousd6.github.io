@@ -38,8 +38,10 @@
 
 import { _resolve,
   loadInterlinear, loadStrongs, loadCrossRefs, loadEchoes, loadLexicon, loadCommentary, parseRef, WORD_URL,
-  COMMENTARY_SOURCES, getCommentarySource, decorateCatena, loadMktAll, decorateMkt, loadBook, MAPS_URL
+  COMMENTARY_SOURCES, getCommentarySource, decorateCatena, loadMktAll, decorateMkt, loadBook, MAPS_URL,
+  getVersion
 } from './core.js';
+import { emitDeskWord } from './desk-frame.js';
 import { wireRefLinks } from './wire.js';
 import { renderEchoCardsGrouped } from './parallels.js';
 
@@ -158,8 +160,19 @@ function _loadBPArticle(id) {
     .catch(function () { _bpArtCache[id] = {}; return {}; });
 }
 
+// ── Solo panel mode (P26 — study-blade decomposition) ──────────────────────
+// /study/passage/ runs this module WITHOUT a reader on the page: the panel
+// loads its own chapter text (loadBook) and follows a linked reader via
+// bsw:desk-goto. _soloVerses replaces the two reader-DOM reads (_maxVerse,
+// _detectPlaces); everything else is already data-driven.
+var _soloMode   = false;
+var _soloVerses = null;   // [{ v, text }] for the current chapter
+
 // ── verse helpers ──────────────────────────────────────────────────────────
 function _maxVerse() {
+  if (_soloVerses) {
+    return _soloVerses.reduce(function (m, x) { return Math.max(m, x.v); }, 0);
+  }
   var max = 0;
   document.querySelectorAll('#reader-results .reader-verse[data-v]').forEach(function (el) {
     if (el.closest('.reader-compare-cell')) return;
@@ -507,7 +520,9 @@ function _placeTerms(p) {
 // Places named in the in-scope verses (case-sensitive word-boundary match). [{place, verses}]
 function _detectPlaces(places) {
   var verses = [];
-  document.querySelectorAll('#reader-results .reader-verse[data-v]').forEach(function (el) {
+  if (_soloVerses) {
+    verses = _soloVerses.filter(function (x) { return _inRange(x.v); });
+  } else document.querySelectorAll('#reader-results .reader-verse[data-v]').forEach(function (el) {
     if (el.closest('.reader-compare-cell')) return;
     var v = parseInt(el.getAttribute('data-v'), 10);
     if (!_inRange(v)) return;
@@ -1158,6 +1173,7 @@ function _ensureStudyCss() {
 }
 
 function _setOpen(on) {
+  if (_soloMode && !on) return;   // the solo panel IS the page
   if (on && !_cssReady) {
     // First open: let the stylesheet land, then run the real open.
     _ensureStudyCss().then(function () { _setOpen(on); });
@@ -1405,6 +1421,9 @@ function _onRailKeydown(e) {
 }
 
 function openBlade(type, params, title) {
+  // P26: word blades also feed linked Word Dossier panels (keyword cards
+  // open blades directly, bypassing showWord's emit).
+  if (type === 'word-study' && params && params.code) emitDeskWord(params.code, params.lang);
   if (!_BLADES[type] || !_deskEl) return;
   _bladeStack.push({ type: type, params: params || {}, title: title || type });
   _renderTopBlade();
@@ -1514,6 +1533,7 @@ function _fillWordStarters(lang, activeCode) {
 function showWord(code, lang) {
   if (!_deskEl || !code) return;
   lang = lang || (code.charAt(0) === 'H' ? 'hebrew' : 'greek');
+  emitDeskWord(code, lang);   // P26: linked Word Dossier panels follow
   _bladeCtx.word = { code: code, lang: lang };
   var top = _bladeStack[_bladeStack.length - 1];
   if (top && top.type === 'word-study') { top.params = { code: code, lang: lang }; top.title = code; }
@@ -2209,4 +2229,47 @@ export function initStudyDesk() {
       return _open && _bladeStack.length > 0 && _bladeStack[_bladeStack.length - 1].type === 'word-study';
     }
   };
+}
+
+// ── /study/passage/ — the study drawer as a standalone desk panel (P26) ─────
+// The full binder-rail surface without a reader on the page: chapter text
+// loads via loadBook (feeding _soloVerses), navigation comes from ?ref= and
+// a linked reader's bsw:desk-goto. The in-reader drawer is untouched.
+export function initStudyPanelPage() {
+  var host = document.getElementById('study-panel-root');
+  if (!host) return;
+  _soloMode = true;
+  document.body.classList.add('study-solo');
+
+  _deskEl = _buildDesk();
+  host.appendChild(_deskEl);
+  document.addEventListener('keydown', _onKeydown);   // Escape pops blades
+
+  function go(ref) {
+    var p = parseRef(ref);
+    if (!p) return;
+    loadBook(getVersion(), p.bookId).then(function (chapters) {
+      var ch = chapters && chapters[String(p.ch)];
+      _soloVerses = ch
+        ? Object.keys(ch).map(function (v) { return { v: parseInt(v, 10), text: String(ch[v]) }; })
+        : [];
+      window._readerNavState = { bookId: p.bookId, ch: p.ch, bookName: p.bookName };
+      _curKey = null;   // force a fresh render for the new chapter
+      _ensureStudyCss().then(function () {
+        _open = true;
+        _render();
+      });
+    }).catch(function () {
+      if (_bodyEl) _bodyEl.innerHTML = '<p class="study-empty">Could not load that passage.</p>';
+    });
+  }
+
+  var params = new URLSearchParams(location.search);
+  go(params.get('ref') || 'John 1');
+
+  // Verse lock: follow a linked reader's navigation.
+  window.addEventListener('bsw:desk-goto', function (e) {
+    var ref = e.detail && e.detail.ref;
+    if (ref) go(ref);
+  });
 }

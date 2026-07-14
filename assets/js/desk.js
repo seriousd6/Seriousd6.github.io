@@ -33,6 +33,7 @@ var RESOURCES = [
   { k: 'maps',       label: 'Maps',               url: '/maps/' },
   { k: 'timeline',   label: 'Timeline',           url: '/timeline/' },
   { k: 'compare',    label: 'Compare',            url: '/compare/' },
+  { k: 'passage',    label: 'Passage Study',      url: '/study/passage/' },
   { k: 'olword',     label: 'Word Dossier',       url: '/ol/word/' },
   { k: 'olverse',    label: 'OL Verse',           url: '/ol/verse/' },
   { k: 'workshop',   label: 'Original Languages', url: '/translation/workshop/' },
@@ -356,7 +357,7 @@ function _mountFrameNow(el, node) {
     var linkBtn = el.querySelector('.desk-panel__btn--link');
     if (linkBtn) {
       var rp = resourcePrefix(node.url || '');
-      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare' && rp !== 'translation' && rp !== 'ol';
+      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare' && rp !== 'translation' && rp !== 'ol' && rp !== 'study';
     }
     _maybeLinkHint();
     _save();
@@ -704,7 +705,7 @@ function _onFrameMessage(e) {
     if (!hit || !hit.node.link) return;   // source isn't link-toggled
     _collectPanels(_root, []).forEach(function (n) {
       var rp = resourcePrefix(n.url || '');
-      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare' && rp !== 'translation' && rp !== 'ol')) return;
+      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare' && rp !== 'translation' && rp !== 'ol' && rp !== 'study')) return;
       var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
       if (f) {
         try { f.contentWindow.postMessage({ type: 'bsw-desk-goto', ref: e.data.ref }, location.origin); } catch (err) {}
@@ -770,7 +771,7 @@ function _onFrameMessage(e) {
 // appears beside the toggle. Dismissing it — or using any link toggle —
 // retires it for good.
 var HINT_KEY = 'bsw_desk_linkhint';
-var LINKABLE = { read: 1, maps: 1, compare: 1, translation: 1, ol: 1 };
+var LINKABLE = { read: 1, maps: 1, compare: 1, translation: 1, ol: 1, study: 1 };
 
 function _retireLinkHint() {
   try { localStorage.setItem(HINT_KEY, '1'); } catch (e) {}

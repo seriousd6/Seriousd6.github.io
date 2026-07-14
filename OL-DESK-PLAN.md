@@ -94,6 +94,16 @@ the blades share renderers with `ol-word`/`ol-verse` once those exist
 maps follower that already exists). Expected outcome: the in-reader drawer
 stays for phones/single-window use; on the Desk, each blade is a panel.
 
+IMPLEMENTED (P26, 2026-07-14): /study/passage/ is the whole drawer as a
+linkable desk resource ("Passage Study") — initStudyPanelPage() in
+study-desk.js runs the surface without a reader on the page (_soloVerses
+feeds the two reader-DOM reads from loadBook), follows bsw:desk-goto, and
+its word blades/keyword cards emit bsw-desk-word so linked Word Dossier
+panels follow. The Word/Vers./Places blades' standalone equivalents were
+already covered by /ol/word/, /compare/, and the maps follower — so the
+drawer-as-panel plus those three IS the full §2b decomposition. The
+in-reader drawer is untouched (regression-verified).
+
 ## 3 · Phases
 
 ### Phase 1 — carve seams inside the monolith (no behavior change)
