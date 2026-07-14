@@ -3,7 +3,7 @@
 
 import {
   _resolve, getVersion, loadBook, loadInterlinear, loadStrongs, loadLexicon,
-  metaBooks, metaVersions, bookOrder, READER_URL, escHtml, parseRef
+  metaBooks, metaVersions, bookOrder, READER_URL, WORD_URL, escHtml, parseRef
 } from './core.js';
 import { emitDeskWord } from './desk-frame.js';
 
@@ -697,6 +697,8 @@ function _riShowPopover(tile, strongsDict) {
         : '') +
       '<a class="vs-context-btn" href="' + escHtml(READER_URL + '?strongs=' + encodeURIComponent(strongs)) + '" ' +
          'title="Read every occurrence of this word in context">All occurrences →</a>' +
+      '<a class="vs-context-btn" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(strongs)) + '" ' +
+         'title="Full lexical dossier for this word">Word Dossier →</a>' +
     '</div>';
 
   document.body.appendChild(pop);

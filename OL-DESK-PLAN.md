@@ -139,7 +139,10 @@ navigate chapter → ol-verse follows; tap word → ol-word follows.
 - Search explore Strong's cards keep pointing at `/read/?strongs=`
   (occurrence browsing) — the reader remains the occurrences surface;
   `ol-word` is the dossier surface. The strongs banner links to BOTH.
-- Sidebar Tools: "Original Language Study" → `/ol/word/`.
+- Sidebar Tools: "Original Language Study" stays on the FULL app until
+  Phase 4 executes the flashcards/primer/translation-mode decisions —
+  redirecting it now would orphan those modes (deviation from the original
+  Phase 3 text, recorded 2026-07-14).
 Gate: no in-app link targets /translation/workshop/ except the redirect.
 
 ### Phase 4 — retire the monolith

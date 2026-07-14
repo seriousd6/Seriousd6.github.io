@@ -1574,7 +1574,7 @@ function _fillWordDetail(code, lang, host) {
       (refs.length > 40 ? '<button type="button" class="study-word__more" id="sd-word-more">Show all ' + refs.length + '</button>' : '') + '</div>';
 
     html += '<a class="study-word__ext" target="_blank" rel="noopener" href="' +
-      _esc(WORD_URL + '?s=' + encodeURIComponent(code)) + '">Open in Translation Workshop →</a>';
+      _esc(WORD_URL + '?s=' + encodeURIComponent(code)) + '">Word Dossier →</a>';
 
     host.innerHTML = html;
     var more = document.getElementById('sd-word-more');

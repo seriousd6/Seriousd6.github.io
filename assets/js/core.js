@@ -41,7 +41,7 @@ export var READER_URL       = _resolve('../../read/');
 export var MAPS_URL         = _resolve('../../maps/');
 export var LIB_READER_URL   = _resolve('../../library/read/');
 export var COMPARE_URL      = _resolve('../../compare/');
-export var WORD_URL         = _resolve('../../translation/workshop/'); // explicit Workshop links only; word-study deep links use READER_URL + '?strongs='
+export var WORD_URL         = _resolve('../../ol/word/'); // the Word Dossier (?s=CODE); occurrence browsing uses READER_URL + '?strongs='
 export var STORAGE_KEY      = 'bsw_version';   // localStorage key for the user's chosen Bible version
 
 // ── Map cross-references ───────────────────────────────────────────────────

@@ -369,7 +369,7 @@ function _strongsBuildBanner(data) {
       (data.translit? ' <span class="reader-strongs-banner__translit">(' + escHtml(data.translit) + ')</span>' : '') +
       (data.gloss   ? ' — <span class="reader-strongs-banner__gloss">'  + escHtml(data.gloss)   + '</span>' : '') +
       ' <a class="reader-strongs-banner__ws" href="' + escHtml(WORD_URL + '?s=' + encodeURIComponent(data.code)) + '" ' +
-        'title="Full lexical dossier in the Translation Workshop">Workshop →</a>' +
+        'title="Full lexical dossier for this word">Dossier →</a>' +
       '<button class="reader-strongs-clear-btn" aria-label="Clear Strongs search" title="Clear search">&#x2715;</button>' +
     '</div>' +
     '<div class="reader-strongs-banner__nav">' +
