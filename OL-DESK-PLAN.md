@@ -82,6 +82,18 @@ last and only if still wanted — it is the least-used surface.
   `/ol/word/` (preserving `?s=` and `?ref=` params → the matching new
   route) so every existing deep link keeps working.
 
+## 2b · Also in scope (owner directive, 2026-07-14): the reader's Study tab
+
+The reader's Passage Study Desk (study-desk.js — the drawer with the
+Passage / Synth / Comm. / Voices / Word / Vers. / Places / Pedia / Book
+binder rail) decomposes the same way: each binder blade is a candidate
+desk panel type that follows a linked reader instead of living inside the
+reader's own drawer. Sequencing: AFTER the workshop phases below, because
+the blades share renderers with `ol-word`/`ol-verse` once those exist
+(the Word blade IS the dossier; the Vers. blade IS compare; Places is the
+maps follower that already exists). Expected outcome: the in-reader drawer
+stays for phones/single-window use; on the Desk, each blade is a panel.
+
 ## 3 · Phases
 
 ### Phase 1 — carve seams inside the monolith (no behavior change)
@@ -101,6 +113,11 @@ Gate: build passes, workshop behaves identically, bundle graph shows the
 three chunks shared.
 
 ### Phase 2 — the two new pages + desk registration
+Strangler-fig start (2026-07-14): the /ol/word/ and /ol/verse/ routes ship
+FIRST as thin facades over the existing workshop module — a solo flag
+(path-derived) hides the mode bar/dashboard/advanced chrome and boots the
+right mode; the desk word-lock message lands end-to-end. The module split
+underneath (ol-dossier.js etc.) then proceeds without route churn.
 - `src/pages/ol/word/index.astro` (entry `ol-word`) and
   `src/pages/ol/verse/index.astro` (entry `ol-verse`): minimal chrome, one
   host element, boot calls the Phase-1 module directly. No dashboard, no

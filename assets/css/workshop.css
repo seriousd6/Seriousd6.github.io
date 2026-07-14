@@ -3736,3 +3736,11 @@ details[open] > .sw-tradition-era::before { content: '▼ '; }
 /* These are only meaningful inside the @media (max-width: 760px) block */
 .sw-dossier-backdrop { display: none; }
 .sw-dossier-handle   { display: none; }
+
+/* ── P22 solo facades (/ol/word/, /ol/verse/) ───────────────────────────────
+   The same app shell boots with one mode; the desk panel provides the
+   chrome, so the workshop's own topbar / mode bar / advanced tools hide. */
+.sw-solo .ws-topbar,
+.sw-solo .sw-mode-bar,
+.sw-solo #sw-advanced-panel { display: none !important; }
+.sw-solo .ws-page { padding-top: 0; }

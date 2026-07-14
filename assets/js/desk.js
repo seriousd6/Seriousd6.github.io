@@ -33,6 +33,8 @@ var RESOURCES = [
   { k: 'maps',       label: 'Maps',               url: '/maps/' },
   { k: 'timeline',   label: 'Timeline',           url: '/timeline/' },
   { k: 'compare',    label: 'Compare',            url: '/compare/' },
+  { k: 'olword',     label: 'Word Dossier',       url: '/ol/word/' },
+  { k: 'olverse',    label: 'OL Verse',           url: '/ol/verse/' },
   { k: 'workshop',   label: 'Original Languages', url: '/translation/workshop/' },
   { k: 'discipline', label: 'Discipline',         url: '/discipline/' },
   { k: 'notes',      label: 'My Notes',           url: '/notes/' },
@@ -354,7 +356,7 @@ function _mountFrameNow(el, node) {
     var linkBtn = el.querySelector('.desk-panel__btn--link');
     if (linkBtn) {
       var rp = resourcePrefix(node.url || '');
-      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare' && rp !== 'translation';
+      linkBtn.hidden = rp !== 'read' && rp !== 'maps' && rp !== 'compare' && rp !== 'translation' && rp !== 'ol';
     }
     _maybeLinkHint();
     _save();
@@ -702,7 +704,7 @@ function _onFrameMessage(e) {
     if (!hit || !hit.node.link) return;   // source isn't link-toggled
     _collectPanels(_root, []).forEach(function (n) {
       var rp = resourcePrefix(n.url || '');
-      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare' && rp !== 'translation')) return;
+      if (n.id === srcId || !n.link || (rp !== 'read' && rp !== 'compare' && rp !== 'translation' && rp !== 'ol')) return;
       var f = _panels[n.id] && _panels[n.id].querySelector('iframe');
       if (f) {
         try { f.contentWindow.postMessage({ type: 'bsw-desk-goto', ref: e.data.ref }, location.origin); } catch (err) {}
@@ -719,6 +721,21 @@ function _onFrameMessage(e) {
 
   // A linked reader's chapter finished tagging its places → linked maps
   // panels show them (markers + fit).
+  // P22 word lock: word taps in a linked panel drive linked dossier panels.
+  if (e.data.type === 'bsw-desk-word' && e.data.code) {
+    var wHit = _findParent(_root, srcId, null);
+    if (!wHit || !wHit.node.link) return;
+    _collectPanels(_root, []).forEach(function (n) {
+      var rp2 = resourcePrefix(n.url || '');
+      if (n.id === srcId || !n.link || (rp2 !== 'ol' && rp2 !== 'translation')) return;
+      var fw = _panels[n.id] && _panels[n.id].querySelector('iframe');
+      if (fw) {
+        try { fw.contentWindow.postMessage({ type: 'bsw-desk-show-word', code: e.data.code, lang: e.data.lang || null }, location.origin); } catch (err) {}
+      }
+    });
+    return;
+  }
+
   // P19: linked readers scroll together — whichever the user scrolls leads.
   if (e.data.type === 'bsw-desk-scroll') {
     var scrollHit = _findParent(_root, srcId, null);
@@ -753,7 +770,7 @@ function _onFrameMessage(e) {
 // appears beside the toggle. Dismissing it — or using any link toggle —
 // retires it for good.
 var HINT_KEY = 'bsw_desk_linkhint';
-var LINKABLE = { read: 1, maps: 1, compare: 1, translation: 1 };
+var LINKABLE = { read: 1, maps: 1, compare: 1, translation: 1, ol: 1 };
 
 function _retireLinkHint() {
   try { localStorage.setItem(HINT_KEY, '1'); } catch (e) {}

@@ -37,9 +37,15 @@ export function emitDeskNav(ref) {
 
 // Reader → Desk: the tagged places of the rendered chapter (reader-rail.js),
 // forwarded by the Desk to link-toggled maps panels.
-export function emitDeskPlaces(ref, ids) {
+export function emitDeskPlaces(ref, ids, mapId) {
   if (!_underDesk || !ids || !ids.length) return;
-  try { window.parent.postMessage({ type: 'bsw-desk-places', ref: ref, ids: ids }, location.origin); } catch (e) {}
+  try { window.parent.postMessage({ type: 'bsw-desk-places', ref: ref, ids: ids, mapId: mapId || null }, location.origin); } catch (e) {}
+}
+
+// P22 word lock: a linked dossier panel follows word taps anywhere.
+export function emitDeskWord(code, lang) {
+  if (!_underDesk || !code) return;
+  try { window.parent.postMessage({ type: 'bsw-desk-word', code: code, lang: lang || null }, location.origin); } catch (e) {}
 }
 
 // P19: linked readers scroll together. The leading panel emits a verse
@@ -121,6 +127,9 @@ export function initDeskFrame() {
     if (e.data.type === 'bsw-desk-zoom') {
       _applyDeskZoom(e.data.zoom);
       return;
+    }
+    if (e.data.type === 'bsw-desk-show-word' && e.data.code) {
+      window.dispatchEvent(new CustomEvent('bsw:desk-word', { detail: { code: e.data.code, lang: e.data.lang || null } }));
     }
     if (e.data.type === 'bsw-desk-show-places' && e.data.ids) {
       window.dispatchEvent(new CustomEvent('bsw:desk-show-places', { detail: { ref: e.data.ref, ids: e.data.ids, mapId: e.data.mapId || null } }));

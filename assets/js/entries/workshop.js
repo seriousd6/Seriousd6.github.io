@@ -7,9 +7,13 @@
  * chain like every other page module.
  */
 import { initTheme } from '../core.js';
+import { initDeskFrame } from '../desk-frame.js';
 import { initWorkshopPage } from '../workshop.js';
 
 initTheme();
+// The workshop family skips the shared core-boot, so the desk-frame message
+// listener (verse lock, word lock) must be armed here; no-op unframed.
+initDeskFrame();
 initWorkshopPage().catch(function (err) {
   var el = document.getElementById('ws-loading-text');
   if (el) el.textContent = 'Error loading: ' + err.message;

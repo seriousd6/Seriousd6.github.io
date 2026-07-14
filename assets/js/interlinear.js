@@ -5,6 +5,7 @@ import {
   _resolve, getVersion, loadBook, loadInterlinear, loadStrongs, loadLexicon,
   metaBooks, metaVersions, bookOrder, READER_URL, escHtml, parseRef
 } from './core.js';
+import { emitDeskWord } from './desk-frame.js';
 
 export var INTERLINEAR_KEY = 'bsw_interlinear';
 var _riPopoverEl     = null;
@@ -669,6 +670,7 @@ function _riShowPopover(tile, strongsDict) {
   if (!strongs) return;
   var entry = strongsDict && strongsDict[strongs];
   if (!entry) return;
+  emitDeskWord(strongs);   // P22: linked Word Dossier panels follow tile taps
 
   // Tear down any existing popover and its scroll listener
   if (_riScrollCleanup)  { _riScrollCleanup(); _riScrollCleanup = null; }

@@ -18,6 +18,7 @@
 import { loadInterlinear, loadStrongs, escHtml } from './core.js';
 import { loadBPLite, loadBPTag } from './bp-lite.js';
 import { _HL_COLORS, getNote, toggleHighlight } from './storage.js';
+import { emitDeskWord } from './desk-frame.js';
 import { applyHighlights } from './wire.js';
 
 var _pop = null;
@@ -122,6 +123,9 @@ function _fillLexeme(pop, word, verse) {
         ' <span class="bsw-wordtap__code">' + escHtml(tok.s) + '</span>' +
         '<div class="bsw-wordtap__gloss">' + escHtml(String(entry.gloss || entry.def || '').split(';')[0]) + '</div>'
       );
+      // P22 word lock: any resolved word tap also feeds linked Word Dossier
+      // panels on the Desk (no-op outside it).
+      emitDeskWord(tok.s);
       if (window.bswStudyDesk) {
         _addAction(pop, 'Full word study', function () {
           _closePopover();

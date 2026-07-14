@@ -19,6 +19,7 @@ import {
   _loadParticles, _loadMorphSig, _loadLiterary, _loadDebates, _loadCultural, _loadIdioms, _loadCognates, _loadOTinNT,
   _loadAuthorFreq, _loadSemanticFields, _loadSTContext, _loadSynthesis,
 } from './ol-data.js';
+import { emitDeskWord } from './desk-frame.js';
 import { autoTagTermsWhenReady } from './terms.js';
 
 /* ── URLs ──────────────────────────────────────────────────── */
@@ -3621,6 +3622,9 @@ function _renderPassageTiles(parsed, interData, strongsDict, particles, bibleBoo
 // CHANGE? If _studyMode values change, update the verse-mode branch condition below.
 // VERIFY: In verse mode, click a tile → Word tab activates with full dossier content.
 async function _openWord(code) {
+  // P22: feed linked Word Dossier panels (a solo dossier is the receiver,
+  // so it does not re-emit — loop guard).
+  if (_solo !== 'word') emitDeskWord(code);
   _lastWordCode = code;
 
   // Determine render target: verse mode → Word tab; otherwise → main dossier column
@@ -5026,7 +5030,13 @@ function _renderBookTab(tab, bookId, bookCtx, freqData, idiomsArr, container, la
 }
 
 /* ── Init ──────────────────────────────────────────────────── */
+// P22 (OL-DESK-PLAN.md Phase 2): the /ol/word/ and /ol/verse/ routes reuse
+// this whole app as solo facades — one mode, shell chrome hidden via CSS.
+var _solo = location.pathname.indexOf('/ol/word') === 0 ? 'word'
+          : location.pathname.indexOf('/ol/verse') === 0 ? 'verse' : null;
+
 export async function initWorkshopPage() {
+  if (_solo) document.body.classList.add('sw-solo', 'sw-solo-' + _solo);
   $nav         = document.getElementById('ws-nav');
   $queue       = document.getElementById('ws-queue');
   $count       = document.getElementById('ws-count');
@@ -5250,9 +5260,17 @@ export async function initWorkshopPage() {
   var params = new URLSearchParams(location.search);
   var autoCode = params.get('s');
   var autoRef  = params.get('ref');
+  if (_solo === 'word') {
+    // Solo dossier facade: word mode is the whole page. _openWord targets the
+    // third (dossier) column, which word mode hides — the word-mode panel
+    // renderer is the right sink here.
+    _setStudyMode('word');
+    _initDictPanel();
+  }
   if (autoCode) {
     await loadBooks();
-    _openWord(autoCode);
+    if (_solo === 'word') _renderWordStudyPanel(autoCode.toUpperCase());
+    else _openWord(autoCode);
   } else if (autoRef) {
     await loadBooks();
     if ($refInput) $refInput.value = autoRef;
@@ -5261,12 +5279,24 @@ export async function initWorkshopPage() {
 
   // P19: verse lock — a link-toggled workshop panel in the Desk follows the
   // linked reader's navigation (desk-frame.js dispatches bsw:desk-goto).
+  // A solo Word Dossier panel ignores passage navigation — it follows words.
   window.addEventListener('bsw:desk-goto', async function (e) {
+    if (_solo === 'word') return;
     var ref = e.detail && e.detail.ref;
     if (!ref) return;
     if (ref.indexOf(':') === -1) ref += ':1';
     await loadBooks();
     if ($refInput) $refInput.value = ref;
     _studyPassage(ref);
+  });
+
+  // P22 word lock: word taps in linked panels (reader word-tap, interlinear
+  // tiles, another OL panel) drive this dossier.
+  window.addEventListener('bsw:desk-word', async function (e) {
+    var code = e.detail && e.detail.code;
+    if (!code || !/^[GH]\d+$/i.test(code)) return;
+    await loadBooks();
+    if (_studyMode === 'word') _renderWordStudyPanel(code.toUpperCase());
+    else _openWord(code.toUpperCase());
   });
 }
