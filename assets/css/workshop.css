@@ -3744,3 +3744,9 @@ details[open] > .sw-tradition-era::before { content: '▼ '; }
 .sw-solo .sw-mode-bar,
 .sw-solo #sw-advanced-panel { display: none !important; }
 .sw-solo .ws-page { padding-top: 0; }
+
+/* P27 dedupe: in the solo Original Language panel, Cross-refs and Commentary
+   are the reader's / Passage Study's jobs — hiding them keeps each panel's
+   role distinct. The full workshop page (deep links) keeps all tabs. */
+.sw-solo-verse .sw-tab-btn[data-tab="crossrefs"],
+.sw-solo-verse .sw-tab-btn[data-tab="commentary"] { display: none; }

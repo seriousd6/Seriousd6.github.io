@@ -23,22 +23,23 @@ var NAMES_KEY = 'bsw_desk_layouts_v1';   // named layouts: { name: strippedTree 
 var GUTTER  = 6;      // divider thickness, px
 var MIN_R   = 0.12;   // divider drag clamp
 
+// P27 dedupe: one entry per concept. "Original Languages" (the workshop
+// shell) is superseded by Word Dossier + Original Language; "Topical
+// Answers" lives inside Search now. Groups keep the chooser scannable.
 var RESOURCES = [
-  { k: 'bible',      label: 'Bible',              url: '/read/',                 ref: true },
-  { k: 'today',      label: 'Today',              url: '/today/' },
-  { k: 'search',     label: 'Search / Explore',   url: '/search/' },
-  { k: 'biblepedia', label: 'Biblepedia',         url: '/biblepedia/' },
-  { k: 'library',    label: 'Library',            url: '/library/' },
-  { k: 'answers',    label: 'Topical Answers',    url: '/answers/' },
-  { k: 'maps',       label: 'Maps',               url: '/maps/' },
-  { k: 'timeline',   label: 'Timeline',           url: '/timeline/' },
-  { k: 'compare',    label: 'Compare',            url: '/compare/' },
-  { k: 'passage',    label: 'Passage Study',      url: '/study/passage/' },
-  { k: 'olword',     label: 'Word Dossier',       url: '/ol/word/' },
-  { k: 'olverse',    label: 'OL Verse',           url: '/ol/verse/' },
-  { k: 'workshop',   label: 'Original Languages', url: '/translation/workshop/' },
-  { k: 'discipline', label: 'Discipline',         url: '/discipline/' },
-  { k: 'notes',      label: 'My Notes',           url: '/notes/' },
+  { k: 'bible',      label: 'Bible',              url: '/read/',           group: 'Read',    ref: true },
+  { k: 'compare',    label: 'Compare',            url: '/compare/',        group: 'Read' },
+  { k: 'passage',    label: 'Passage Study',      url: '/study/passage/',  group: 'Study' },
+  { k: 'olword',     label: 'Word Dossier',       url: '/ol/word/',        group: 'Study' },
+  { k: 'olverse',    label: 'Original Language',  url: '/ol/verse/',       group: 'Study' },
+  { k: 'biblepedia', label: 'Biblepedia',         url: '/biblepedia/',     group: 'Study' },
+  { k: 'library',    label: 'Library',            url: '/library/',        group: 'Study' },
+  { k: 'search',     label: 'Search / Explore',   url: '/search/',         group: 'Explore' },
+  { k: 'maps',       label: 'Maps',               url: '/maps/',           group: 'Explore' },
+  { k: 'timeline',   label: 'Timeline',           url: '/timeline/',       group: 'Explore' },
+  { k: 'today',      label: 'Today',              url: '/today/',          group: 'Daily' },
+  { k: 'discipline', label: 'Discipline',         url: '/discipline/',     group: 'Daily' },
+  { k: 'notes',      label: 'My Notes',           url: '/notes/',          group: 'Daily' },
 ];
 
 var _root    = null;   // layout tree root node
@@ -369,13 +370,22 @@ function _mountChooser(el, node) {
   var body = el.querySelector('.desk-panel__body');
   var box = document.createElement('div');
   box.className = 'desk-chooser';
+  var groups = [];
+  RESOURCES.forEach(function (r) {
+    var g = groups[groups.length - 1];
+    if (!g || g.name !== r.group) { g = { name: r.group, items: [] }; groups.push(g); }
+    g.items.push(r);
+  });
   box.innerHTML =
     '<p class="desk-chooser__head">Open a resource</p>' +
-    '<div class="desk-chooser__grid">' +
-      RESOURCES.map(function (r) {
-        return '<button class="desk-chooser__item" data-k="' + r.k + '">' + _esc(r.label) + '</button>';
-      }).join('') +
-    '</div>' +
+    groups.map(function (g) {
+      return '<p class="desk-chooser__group">' + _esc(g.name) + '</p>' +
+        '<div class="desk-chooser__grid">' +
+        g.items.map(function (r) {
+          return '<button class="desk-chooser__item" data-k="' + r.k + '">' + _esc(r.label) + '</button>';
+        }).join('') +
+        '</div>';
+    }).join('') +
     '<form class="desk-chooser__refrow" hidden>' +
       '<input class="desk-chooser__refinput" type="text" placeholder="Passage — John 3, Psalm 23… (optional)" aria-label="Passage">' +
       '<button class="desk-chooser__go" type="submit">Open Bible</button>' +

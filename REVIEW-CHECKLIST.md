@@ -77,8 +77,12 @@ does not match its expectation is a bug report.
 17. **The drawer is untouched** — on /read/, Study Tools → Study still
     opens the in-reader drawer exactly as before (this is the phone/
     single-window path).
-18. **The four-panel rig** — Bible + Passage Study + OL Verse + Word
-    Dossier, all linked: navigate and tap. If this feels right, the
-    decomposition thesis is proven; note anything that feels redundant
-    between Passage Study and OL Verse — that overlap is the next thing
-    to trim.
+18. **The four-panel rig** — Bible + Passage Study + Original Language +
+    Word Dossier, all linked: navigate and tap. If this feels right, the
+    decomposition thesis is proven.
+19. **Deduped chooser (P27)** — the + Panel chooser is grouped
+    (Read / Study / Explore / Daily), 13 entries: "Original Languages"
+    and "Topical Answers" are gone (superseded by the Study panels and
+    Search). The Original Language panel shows six tabs — Cross-refs and
+    Commentary were removed there because the reader and Passage Study
+    own those jobs. Does every remaining tab feel like its own concept?

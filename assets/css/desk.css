@@ -362,3 +362,15 @@
   min-width: 2.2em;
   text-align: center;
 }
+
+/* P27: chooser groups */
+.desk-chooser__group {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0.9rem 0 0.35rem;
+}
+.desk-chooser__group:first-of-type { margin-top: 0.4rem; }
