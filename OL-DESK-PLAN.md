@@ -146,6 +146,24 @@ navigate chapter → ol-verse follows; tap word → ol-word follows.
 Gate: no in-app link targets /translation/workshop/ except the redirect.
 
 ### Phase 4 — retire the monolith
+Owner decisions (2026-07-14):
+(a) Flashcards live in the WORD TAB (button moved from the topbar into the
+    word-mode header, so /ol/word/ panels carry it) and stay visible from
+    Disciplines — Memory → Original Language already reads the same deck
+    (bsw_ws_fc_deck), and now links "🄯 Flashcards →" (/ol/word/?fc=1,
+    which boots straight into review).
+(b) Dashboard + review queue: RETIRED.
+(c) Translation mode: RETIRED (the ⚙ advanced panel is gone; dashboard,
+    queue, and primer were translation-mode phases, so they retire with
+    it). Stored decisions (localStorage) remain untouched.
+(d) Book Study mode: retires from the OL app; its content concept folds
+    into the §2b study-blade decomposition (the reader's Book blade).
+
+Phase 4a (shipped): decisions applied — flashcards relocated + ?fc=1 deep
+link, translation chrome removed with guards, sidebar → /ol/word/.
+Phase 4b (remaining): /translation/workshop/ → param-preserving redirect;
+purge the dead translation/dashboard/queue/primer code from workshop.js;
+decide where primer content resurfaces (candidate: ol-verse Grammar tab).
 - /translation/workshop/ → param-preserving redirect page.
 - Dashboard/queue code deleted; flashcards decision executed; primer
   extracted; dead loaders pruned from workshop.js until nothing imports it

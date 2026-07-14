@@ -23,22 +23,12 @@ const { title } = Astro.props;
         <span>Original Language Study</span>
       </div>
       <div class="ws-topbar__stats" id="ws-topbar-stats"></div>
-      <div class="ws-topbar__actions">
-        <button class="ws-btn ws-btn--sm sw-flashcard-nav-btn" id="sw-flashcard-nav-btn" type="button" title="Vocabulary flashcard review">🄯 Flashcards <span id="sw-fc-due-badge" class="sw-fc-due-badge"></span></button>
-        <button class="ws-btn ws-btn--sm ws-btn--ghost" id="sw-advanced-toggle" type="button" title="Translation workshop tools">⚙</button>
-      </div>
+      <div class="ws-topbar__actions"></div>
     </div>
 
-    <!-- Advanced tools panel (translation workflow — hidden by default) -->
-    <div id="sw-advanced-panel" class="sw-advanced-panel" hidden="">
-      <div class="sw-advanced-panel__inner">
-        <span class="sw-advanced-panel__label">Translation Workshop</span>
-        <button class="ws-btn ws-btn--sm" id="sw-trans-toggle-btn" type="button">Translation mode</button>
-        <button class="ws-btn ws-btn--sm" id="ws-import-btn">Import decisions</button>
-        <button class="ws-btn ws-btn--sm" id="ws-export-btn">Export JSON</button>
-        <input type="file" id="ws-import-file" accept=".json" hidden="">
-      </div>
-    </div>
+    <!-- Translation mode / dashboard / queue retired (owner decision,
+         OL-DESK-PLAN.md Phase 4a). Stored decisions stay untouched in
+         localStorage. -->
 
     <!-- Loading state -->
     <div id="ws-loading" class="ws-loading">
@@ -142,6 +132,7 @@ const { title } = Astro.props;
             <div class="sw-ws-search-bar">
               <input type="text" id="sw-ws-input" class="sw-ws-input" placeholder="Search a word, gloss, or Strong's code… e.g. love, logos, G3056" autocomplete="off" spellcheck="false">
               <button type="button" class="ws-btn ws-btn--sm" id="sw-ws-dict-toggle" title="Toggle dictionary / glossary">📖 Dictionary</button>
+              <button type="button" class="ws-btn ws-btn--sm sw-flashcard-nav-btn" id="sw-flashcard-nav-btn" title="Vocabulary flashcard review">🄯 Flashcards <span id="sw-fc-due-badge" class="sw-fc-due-badge"></span></button>
             </div>
           </div>
 

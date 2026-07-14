@@ -5102,12 +5102,16 @@ export async function initWorkshopPage() {
     _searchTimer = setTimeout(_applyFilter, 200);
   });
 
-  // Export / Import
-  document.getElementById('ws-export-btn').addEventListener('click', _doExport);
-  document.getElementById('ws-import-btn').addEventListener('click', () =>
+  // Export / Import (translation-mode chrome retired in Phase 4a; guards keep
+  // this wiring inert until the code purge removes it)
+  var $exportBtn = document.getElementById('ws-export-btn');
+  if ($exportBtn) $exportBtn.addEventListener('click', _doExport);
+  var $importBtn = document.getElementById('ws-import-btn');
+  if ($importBtn) $importBtn.addEventListener('click', () =>
     document.getElementById('ws-import-file').click()
   );
-  document.getElementById('ws-import-file').addEventListener('change', e => {
+  var $importFile = document.getElementById('ws-import-file');
+  if ($importFile) $importFile.addEventListener('change', e => {
     const file = e.target.files?.[0];
     if (file) _doImport(file);
     e.target.value = '';
@@ -5266,6 +5270,10 @@ export async function initWorkshopPage() {
     // renderer is the right sink here.
     _setStudyMode('word');
     _initDictPanel();
+  }
+  if (params.get('fc') === '1') {
+    // Deep link from Disciplines: straight into flashcard review.
+    _fcOpenView();
   }
   if (autoCode) {
     await loadBooks();
