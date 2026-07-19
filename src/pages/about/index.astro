@@ -304,7 +304,7 @@ import Base from '../../layouts/Base.astro';
         <div class="wf-title">Synthesis Commentary</div>
         <div class="wf-scope">Aggregated verse notes drawing on multiple public-domain commentaries</div>
         <p>For verses where multiple historic commentators agree, an agent was asked to synthesize the convergent scholarly consensus into a single note, citing which commentators contributed. For verses where commentators disagree significantly, the synthesis notes the disagreement rather than smoothing it over. All synthesis commentary is flagged with an AI badge in the UI.</p>
-        <code class="wf-path">data/commentary/synthesis/&#123;book&#125;.json</code>
+        <code class="wf-path">data/commentary/cow-synthesis/&#123;book&#125;/&#123;ch&#125;.json · data/synthesis/&#123;book&#125;/&#123;ch&#125;.json</code>
         <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
       </div>
 
@@ -312,7 +312,7 @@ import Base from '../../layouts/Base.astro';
         <div class="wf-title">Christological &amp; Contextual Commentary (ZC)</div>
         <div class="wf-scope">Specialized commentary patches for Christ-focus, historical context, and original language</div>
         <p>The Zebra Critical workflow produced three layers of supplemental commentary: <strong>Christ-focused</strong> notes tracing each passage's connection to Christ, <strong>historical context</strong> notes (Second Temple period, Greco-Roman world, intertextual background), and <strong>original language</strong> notes highlighting what the Hebrew or Greek reveals that English translations miss. These are stored separately from the historic commentaries.</p>
-        <code class="wf-path">data/commentary/mkt-christ|mkt-context|mkt-original/&#123;book&#125;.json</code>
+        <code class="wf-path">data/commentary/mkt-christ|mkt-context|mkt-original/&#123;book&#125;/&#123;ch&#125;.json</code>
         <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
       </div>
 
@@ -336,7 +336,7 @@ import Base from '../../layouts/Base.astro';
         <div class="wf-title">Site Code &amp; UI (Loop Agent)</div>
         <div class="wf-scope">All JavaScript, HTML, and CSS for the site interface</div>
         <p>The entire site codebase — navigation, reader, word study, verse study, translation workshop, maps, timeline, library browser, and all other UI features — was built with Claude Code (Claude acting as a coding assistant in a local terminal session). The agent worked from a TODO list, read the existing code, implemented changes, and the site owner reviewed every diff before committing. No code was deployed without human review.</p>
-        <code class="wf-path">assets/js/*.js · assets/css/*.css · */index.html</code>
+        <code class="wf-path">src/pages/**/*.astro · assets/js/*.js · assets/css/*.css</code>
         <div class="wf-model">Model: claude-sonnet-4-6 · Overseen by: David Seis · 2026</div>
       </div>
     </div>
@@ -349,7 +349,7 @@ import Base from '../../layouts/Base.astro';
 
     <details class="prompt-block">
       <summary>MKT Translation Agent Prompt — the prompt given to each translation agent session</summary>
-      <div class="prompt-meta">File: <code>working/MKT_AGENT_PROMPT.md</code> · Used for: Bible translation (MKT) — copy-pasted to start each agent session</div>
+      <div class="prompt-meta">File: <code>docs/agents/mkt-translation-agent.md</code> · Used for: Bible translation (MKT) — copy-pasted to start each agent session</div>
       <pre># MKT Translation Agent Prompt
 
 Copy and paste this entire prompt to a new agent session to claim and complete one work unit.
@@ -463,7 +463,7 @@ Edit `MKT_PROGRESS.md`:
 
     <details class="prompt-block">
       <summary>Book Study Agent Prompt — the prompt given to each book study agent session</summary>
-      <div class="prompt-meta">File: <code>working/BS_AGENT_PROMPT.md</code> · Used for: Book Study (BS) — one book per session, 66 total</div>
+      <div class="prompt-meta">File: <code>docs/agents/book-study-agent.md</code> · Used for: Book Study (BS) — one book per session, 66 total</div>
       <pre># Book Study Agent Prompt
 
 This prompt runs in a loop — each session claims one book, generates its supplemental data,
@@ -576,11 +576,11 @@ Edit `BS_PROGRESS.md` in a **single save**:
 
     <details class="prompt-block">
       <summary>Loop Agent Prompt — the prompt given to general UI/code maintenance agents</summary>
-      <div class="prompt-meta">File: <code>working/LOOP_AGENT_PROMPT.md</code> · Used for: all ongoing UI bug fixes and feature work via the TODO.md queue</div>
+      <div class="prompt-meta">File: <code>docs/agents/loop-agent.md</code> · Used for: all ongoing UI bug fixes and feature work via the docs/TODO.md queue</div>
       <pre>## Before doing anything else, read these files in full, in order:
 
 1. `CLAUDE.md` — project constraints, comment requirements, what not to do
-2. `working/site-overview.md` — architecture, module map, CSS system, localStorage keys
+2. `docs/site-overview.md` — architecture, module map, CSS system, localStorage keys
 3. `CODING_RULES.md` — hard syntax and pattern rules for this codebase
 4. `CODING_PHILOSOPHY.md` — how to think about changes, scope discipline
 
@@ -588,15 +588,15 @@ Do not skip any of these. They are short and will save you from expensive mistak
 
 ---
 
-## Step 1 — Pick 2–3 work items from `working/TODO.md`
+## Step 1 — Pick 2–3 work items from `docs/TODO.md`
 
-Read `working/TODO.md` in full first. Then apply these filters:
+Read `docs/TODO.md` in full first. Then apply these filters:
 
 ### Skip entirely:
 - The entire **Z4–Z8 MKT Commentary Suite** section
 - The entire **Phase Z — Modern Kingdom Translation** section
 - The entire **Phase O — Long-term / Deferred** section
-- Any row marked `*(claimed — see working/inprogress-*.md)*`
+- Any row marked `*(claimed — see docs/inprogress-*.md)*`
 - Any item that contains `DATA BLOCKED`
 - Any item whose Fix says `"Agents generate …"` — those are data-generation tasks
 
@@ -619,7 +619,7 @@ For each item you've selected, before claiming it:
 
 ## Step 3 — Claim the items
 
-In `working/TODO.md`, append ` *(agent: in-progress)*` to each item's heading line.
+In `docs/TODO.md`, append ` *(agent: in-progress)*` to each item's heading line.
 Save the file. Re-read it to confirm the change landed.
 
 ---
@@ -630,7 +630,7 @@ For each claimed item, read:
 - The file(s) named in the **Problem** section
 - Any sibling functions that the Fix will affect
 - The corresponding `.css` file if CSS changes are part of the Fix
-- `working/site-overview.md` if you need architectural context
+- `docs/site-overview.md` if you need architectural context
 
 Read enough to understand **why** the current code works before changing it.
 
@@ -668,13 +668,13 @@ For CSS changes:
 
 ## Step 7 — Mark complete and summarize
 
-For each completed item in `working/TODO.md`:
+For each completed item in `docs/TODO.md`:
 1. Change [ ] to [x] on every sub-item you completed
 2. Remove the *(agent: in-progress)* suffix from the heading
 3. If partially complete, note what remains
 
 After updating the file, write a brief summary: what changed, which files were modified,
-any edge cases or caveats. Move completed tasks to working/todo-archive.md.
+any edge cases or caveats. Move completed tasks to docs/todo-archive.md.
 
 ---
 
@@ -697,7 +697,7 @@ any edge cases or caveats. Move completed tasks to working/todo-archive.md.
 
     <details class="prompt-block">
       <summary>Book Study Guide (excerpt) — the reference document all BS agents read before writing</summary>
-      <div class="prompt-meta">File: <code>working/BS_AGENT_GUIDE.md</code> · Defines quality standards for key vocabulary, language notes, reception, and reading guide</div>
+      <div class="prompt-meta">File: <code>docs/agents/book-study-agent.md</code> (excerpt; full guide pending recovery) · Defines quality standards for key vocabulary, language notes, reception, and reading guide</div>
       <pre>## What the Book Study adds (summary of BS_AGENT_GUIDE.md)
 
 ### key_vocabulary (12–18 entries per book)
@@ -762,11 +762,11 @@ A short paragraph that illuminates is better than a list of names.
     <h2>The Citation &amp; Provenance System</h2>
     <p>Every piece of data on this site is mapped to its source in <code>data/provenance.json</code>. Pages that render data from AI-assisted sources display a <span class="src-badge src-badge--ai">AI-assisted · <a href="/about/">details</a></span> badge. Pages that render verbatim public-domain scholarship display a <span class="src-badge">Barnes Notes · 1832–1885 · Public Domain</span> badge.</p>
 
-    <p>An ongoing looping process (<code>working/PROVENANCE_AGENT_GUIDE.md</code>) progressively adds a <code>"_source"</code> field to individual JSON data files, prioritizing AI-generated content first. The progress is tracked in <code>working/PROVENANCE_PROGRESS.md</code>. As this work proceeds, more of the raw data files will carry inline source attribution in addition to the UI badges.</p>
+    <p>An ongoing looping process (<code>docs/agents/provenance-loop.md</code>) progressively adds a <code>"_source"</code> field to individual JSON data files, prioritizing AI-generated content first. As this work proceeds, more of the raw data files will carry inline source attribution in addition to the UI badges.</p>
 
     <p>If you find a specific piece of content you believe is inaccurate, misleading, or incorrectly attributed, the source badge will tell you what category of content it is. For AI-generated content (language notes, translation choices, echo connections), the prompts above document exactly what constraints were in place. For historic commentaries, the original public-domain text is authoritative.</p>
 
-    <p>The full repository — including all data files, fetch scripts, build scripts, agent guides, and working notes — is publicly available:</p>
+    <p>The full repository — including all data files, build tooling, data validators, and the agent prompts and loop procedures under <code>docs/</code> — is publicly available:</p>
     <p><a href="https://github.com/seriousd6/Seriousd6.github.io" target="_blank" rel="noopener">github.com/seriousd6/Seriousd6.github.io</a></p>
   </section>
 

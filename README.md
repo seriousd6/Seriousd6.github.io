@@ -44,9 +44,8 @@ of truth for page HTML.
 │   │                        #   core.js/tracker.js (inline scripts import them —
 │   │                        #   single module instance), minifies CSS + classic
 │   │                        #   scripts, regenerates sw.js into dist/
-│   ├── root-statics.mjs     # Dev-server middleware: serves the root static tree
-│   ├── convert-pages.mjs    # One-time legacy HTML → .astro converter (reference)
-│   └── diff-pages.mjs       # One-time DOM-diff tool from the cutover (reference)
+│   ├── build-search-index.mjs  # Build-time inverted verse-search index (BSB)
+│   └── root-statics.mjs     # Dev-server middleware: serves the root static tree
 └── .github/workflows/
     ├── validate.yml         # Data integrity + JS syntax + full build (every push)
     └── deploy.yml           # Pages deploy on every push to master
@@ -102,11 +101,17 @@ entries automatically; keep imports relative and resolve data URLs through
 
 ## Validation
 
-`python3 scripts/validate-data.py` and `python3 scripts/validate-library-format.py --all`
-guard the data tree; CI also runs `node --check` over all JS (including
-`assets/js/entries/`) and the full production build.
+`python3 scripts/validate-data.py`, `python3 scripts/validate-library-format.py --all`,
+and `python3 scripts/validate-synthesis.py` guard the data tree; CI runs all
+three plus `node --check` over all JS (including `assets/js/entries/`) and the
+full production build.
 
-## Overhaul history
+## Project docs
 
-See [`OVERHAUL.md`](OVERHAUL.md) for the July 2026 JS→Astro migration plan and
-its phase-by-phase completion record.
+Start at [`CLAUDE.md`](CLAUDE.md) (the agent/developer hub). The canonical task
+list is [`docs/TODO.md`](docs/TODO.md), live status in
+[`docs/STATUS.md`](docs/STATUS.md), active plans in [`docs/plans/`](docs/plans/),
+agent prompts and loop procedures in [`docs/agents/`](docs/agents/), and
+completed records — including the July 2026 JS→Astro migration
+([`docs/archive/OVERHAUL.md`](docs/archive/OVERHAUL.md)) — in
+[`docs/archive/`](docs/archive/).

@@ -1,8 +1,6 @@
 # TODO
 
-> **The master task list has moved.**
->
-> Active tasks: [`working/TODO.md`](working/TODO.md)
-> Completed tasks: [`working/todo-archive.md`](working/todo-archive.md)
+The canonical task list is **[docs/TODO.md](docs/TODO.md)**
+(status: [docs/STATUS.md](docs/STATUS.md) · start here: [CLAUDE.md](CLAUDE.md)).
 
-Agents and automated workflows should use `working/TODO.md` as the canonical task list.
+Agents and automated workflows use `docs/TODO.md` as the single task queue.

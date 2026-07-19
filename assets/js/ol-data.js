@@ -1,6 +1,6 @@
 /* ol-data.js — the original-language data layer (P21 Phase 1).
  *
- * Extracted verbatim from workshop.js per OL-DESK-PLAN.md: every reference
+ * Extracted verbatim from workshop.js per docs/plans/OL-DESK-PLAN.md: every reference
  * cache and its lazy loader, so the coming /ol/word/ and /ol/verse/ desk
  * pages share one data layer with the (interim) workshop shell. Caches are
  * exported live bindings — loaders reassign them here and importers see the

@@ -121,7 +121,7 @@ function _getRecentPassages() {
   } catch(e) { return []; }
 }
 
-// P21 Phase 1 (OL-DESK-PLAN.md): the OL reference caches and their loaders
+// P21 Phase 1 (docs/plans/OL-DESK-PLAN.md): the OL reference caches and their loaders
 // moved to ol-data.js so the coming /ol/ desk pages share one data layer.
 let _interData      = null; // last-loaded interlinear book data; set by _studyPassage, read by _renderWordStudyPanel concordance
 
@@ -531,7 +531,7 @@ function _renderGrammarSection(code, lang) {
 //   and adds a "→ Full Word Study" button; skips deep-dive sections not needed for verse reading.
 //   The mobile bottom sheet behavior is skipped when a custom targetEl is provided.
 // CHANGE? If $dossier element ID changes, update the querySelector fallback below.
-//   If compact sections change, update SW-U5 notes in TODO.md.
+//   If compact sections change, update SW-U5 notes in docs/TODO.md.
 // VERIFY: Click any tile in verse mode → "Word" tab shows compact dossier + "Full Word Study" btn.
 //   Click the "Full Word Study" btn → switches to Word Study mode with the full dossier.
 function _renderDossier(code, targetEl, compact) {
@@ -5030,7 +5030,7 @@ function _renderBookTab(tab, bookId, bookCtx, freqData, idiomsArr, container, la
 }
 
 /* ── Init ──────────────────────────────────────────────────── */
-// P22 (OL-DESK-PLAN.md Phase 2): the /ol/word/ and /ol/verse/ routes reuse
+// P22 (docs/plans/OL-DESK-PLAN.md Phase 2): the /ol/word/ and /ol/verse/ routes reuse
 // this whole app as solo facades — one mode, shell chrome hidden via CSS.
 var _solo = location.pathname.indexOf('/ol/word') === 0 ? 'word'
           : location.pathname.indexOf('/ol/verse') === 0 ? 'verse' : null;

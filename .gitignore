@@ -14,46 +14,35 @@ Thumbs.db
 /node_modules/
 npm-debug.log*
 
-# Python bytecode (one-off generation scripts produce these; never commit them)
+# Python bytecode
 __pycache__/
 *.pyc
 
 # Local dev
 local-notes.md
 
-# Cloud of Witnesses / Catena raw source HTML caches (large, re-downloadable;
-# the committed intermediates in data/commentary/cow-sources/ are what cow-merge needs)
+# ── Policy (revised 2026-07-19) ───────────────────────────────────────────────
+# Deploys are an explicit allowlist (deploy.yml: built dist/ + data/ + the stub
+# copy list), so tracked docs and tooling can never leak onto the site. The old
+# gitignore-as-deploy-exclude-list role is retired. KNOWLEDGE IS TRACKED:
+# task lists, plans, agent prompts/guides, and generation scripts belong in
+# docs/ and scripts/. Only regenerable caches, machine-local state, and
+# secrets stay ignored below.
+
+# Regenerable raw-source caches (large, re-downloadable; the committed
+# intermediates in data/commentary/cow-sources/ are what synthesis consumes)
 working/catena-src/
+working/devotionals-raw/
 
-# ── Build / generation apparatus — NOT part of the deployed site ──────────────
-# Excluded so the published site stays lean (HTML/CSS/JS + data/ + assets only) and so the
-# copy-to-deployment step can use this file as its exclude-list. These live on disk but are
-# untracked. (Inline trailing comments are NOT allowed in .gitignore — keep patterns bare.)
-#   working/ = agent prompts, guides, progress trackers, todos, loop-archive
-#   scripts/ = build + one-off generation scripts (Python/shell)
-#   *.py     = any Python anywhere is build-time tooling, never runtime
-# Exception: the data/library/synthesis VALIDATORS are tracked so the CI workflow
-#   (.github/workflows/validate.yml) can run them on a fresh checkout (AUD-28).
-scripts/*
-*.py
-!scripts/validate-data.py
-!scripts/validate-library-format.py
-!scripts/validate-synthesis.py
+# Agent per-chapter work dirs (COW synthesis loop); build junk, never deployed
+scratchpad/
 
-# Agent workflow files (prompts, guides, progress trackers — not part of the site)
-/MKT_*.md
-/Z_*.md
-/TRANSLATION_AGENT_GUIDE.md
-
-# Extra resources (local reference material, not part of the site)
+# Local reference material (not part of the site)
 Z-ExtraResources/
 
-# Claude Code config (local settings, memory, worktrees — not part of the site)
+# Claude Code local config / session memory (machine-specific)
 .claude/
 memory/
-
-# PowerShell scripts (local utilities, not part of the site)
-*.ps1
 
 # Secrets / credentials
 .env*
@@ -65,10 +54,6 @@ secrets.*
 credentials.*
 *.secret
 .git-credentials*
-working/devotionals-raw/
 
 # Astro
 /.astro/
-
-# Agent per-chapter work dirs (COW synthesis loop); build junk, never deployed
-scratchpad/

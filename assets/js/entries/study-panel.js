@@ -1,5 +1,5 @@
 /* entries/study-panel.js — /study/passage/: the reader's Passage Study
- * drawer as a standalone, linkable desk panel (P26, OL-DESK-PLAN.md §2b).
+ * drawer as a standalone, linkable desk panel (P26, docs/plans/OL-DESK-PLAN.md §2b).
  * Shared boot gives it the verse modal, ref wiring, terms, and — in frames —
  * the desk protocol (goto follow, word emits).
  */
