@@ -28,6 +28,9 @@ jobs:
       - name: Library format (v2 standard)
         run: python3 scripts/validate-library-format.py --all
 
+      - name: Synthesis format (Commentary A prose+tags, Commentary B sections)
+        run: python3 scripts/validate-synthesis.py
+
       - name: JS syntax (node --check on all modules)
         run: |
           if command -v node >/dev/null 2>&1; then
