@@ -6,12 +6,9 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 
 ## Now
 
-- [ ] **COW synthesis loop — resume at the frontier** (2 Kings 12; 603 chapters
-  remain of 1,189). Procedure: [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
-- [ ] **COW repairs — 4 chapters fail `validate-synthesis.py`**: John 4 (all 54
-  verses under-length — old degenerate run), Luke 13 (4 verses), Genesis 41
-  (vv. 8, 12, 15 over-length), 1 Samuel 5 (v. 11 over-length). Regenerate/trim
-  to the 350–650-word contract. CI stays red-on-push until these pass.
+- [ ] **COW synthesis loop — continue at the frontier** (2 Kings 14; 602
+  chapters remain of 1,189; corpus currently validates clean). Procedure:
+  [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
 - [ ] **Owner: run [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)** (19 points,
   2026-07-14). Item 13's answer (which dossier sections you use) gates the
   workshop.js purge below.

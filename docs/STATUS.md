@@ -1,7 +1,7 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-07-19** (central docs restructure)
+> Last updated: **2026-07-19** (restructure + COW repairs + 2 Kings 12)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -12,8 +12,9 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight**: COW synthesis — 586/1,189 chapters done (frontier: 2 Kings 12;
-  stalled 2026-07-14, resuming), plus 4 chapters failing validation to repair;
+- **In flight**: COW synthesis — 587/1,189 chapters done (frontier:
+  2 Kings 14); the 62 legacy validator failures (John 4, Luke 13, Genesis 41,
+  1 Samuel 5) are repaired and the full corpus validates clean;
   OL Phase 4b pending the owner review ([REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)).
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
