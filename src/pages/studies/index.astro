@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 ---
 
-<Base title={"Studies — Kingdom Bible Study"} description={"Study resources for every book of the Bible — book guides, deep dives, and verse-by-verse commentary from the classic tradition."} footer={false}>
+<Base title={"Studies — Kingdom Bible Study"} description={"Study resources for every book of the Bible — book guides, Bible study guides, and verse-by-verse commentary from the classic tradition."} footer={false}>
 <Fragment slot="head-end">
 <style is:inline="">
     .studies-page { padding: 2rem 1.5rem 4rem; max-width: 960px; margin: 0 auto; }
@@ -115,7 +115,7 @@ import Base from '../../layouts/Base.astro';
   <div class="studies-page">
     <div class="studies-header">
       <h1>Studies</h1>
-      <p>Book guides, deep dives, and verse-by-verse commentary for every book of the Bible.</p>
+      <p>Book guides, Bible study guides, and verse-by-verse commentary for every book of the Bible.</p>
     </div>
 
     <div class="studies-filters" id="studies-filters">
@@ -192,7 +192,7 @@ VERIFY: Page shows 66 book cards in OT/NT sections. "Has Content" filter shows 6
       '</div>' +
       '<div class="studies-card__tiers">' +
         tierBadge(bc.guide && bc.guide.exists, 'Guide', 'guide') +
-        tierBadge(bc.deep_dive && bc.deep_dive.exists, 'Deep Dive', 'deep-dive') +
+        tierBadge(bc.deep_dive && bc.deep_dive.exists, 'Bible Study Guide', 'deep-dive') +
         tierBadge(bc.commentary && bc.commentary.exists, 'Commentary', 'commentary') +
       '</div>';
     return card;

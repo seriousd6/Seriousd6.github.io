@@ -1,0 +1,103 @@
+{
+  "id": "philemon",
+  "title": "Philemon",
+  "testament": "NT",
+  "genre": "epistle",
+  "overview": {
+    "argument": "<p>Philemon is a single sustained act of persuasion. Paul writes not to argue a doctrine but to win a decision: that Philemon receive back his runaway slave Onesimus <a class=\"ref\" data-ref=\"Philemon 1:16\">no longer as a slave but as a beloved brother</a>. The letter moves in one graceful arc — a greeting that names Paul a prisoner rather than an apostle (<a class=\"ref\" data-ref=\"Philemon 1:1\">vv.1–3</a>); a thanksgiving that praises Philemon’s love and so wins his heart before asking anything (<a class=\"ref\" data-ref=\"Philemon 1:4\">vv.4–7</a>); the appeal itself, which sets aside command for entreaty (<a class=\"ref\" data-ref=\"Philemon 1:8\">vv.8–16</a>); the climactic request to receive Onesimus as Paul himself, with Paul’s own hand pledging any debt (<a class=\"ref\" data-ref=\"Philemon 1:17\">vv.17–20</a>); and a confident close that hints at even more than is asked (<a class=\"ref\" data-ref=\"Philemon 1:21\">vv.21–25</a>). Every step builds pressure without a single command.</p>",
+    "occasion": "<p>Paul writes from prison, about <strong>AD 60–62</strong>, during the same Roman imprisonment that produced Colossians — Onesimus is named in both (<a class=\"ref\" data-ref=\"Colossians 4:9\">Colossians 4:9</a>). Onesimus, a slave of Philemon (a wealthy believer whose house hosted the Colossian church), had run away, likely after wronging his master (<a class=\"ref\" data-ref=\"Philemon 1:18\">v.18</a>), reached Paul in Rome, and was converted under his ministry (<a class=\"ref\" data-ref=\"Philemon 1:10\">v.10</a>). Both justice and Roman law required the slave’s return; Paul sends him back carrying this letter, which never demands emancipation yet makes refusal nearly unthinkable.</p>",
+    "theology": "<p>The letter is the New Testament’s most concrete engagement with slavery, and it works not by decree but by a new relationship. If Christ has made master and slave brothers (<a class=\"ref\" data-ref=\"Galatians 3:28\">Galatians 3:28</a>), the bond that names one the property of the other cannot survive the acknowledgment. Alongside this runs the ethic of free persuasion — Paul will have no forced goodness (<a class=\"ref\" data-ref=\"Philemon 1:14\">v.14</a>) — and a vivid picture of substitution: the apostle offers to bear another’s debt so the wronged party may receive the debtor freely (<a class=\"ref\" data-ref=\"Philemon 1:18\">vv.18–19</a>).</p>",
+    "christ": "<p>Paul’s whole appeal is shaped like the gospel he preaches. He intercedes for a guilty runaway, identifies himself so wholly with him that to receive Onesimus is to receive Paul (<a class=\"ref\" data-ref=\"Philemon 1:17\">v.17</a>), and takes the debt upon his own account — <em>charge that to me; I will repay</em> (<a class=\"ref\" data-ref=\"Philemon 1:18\">vv.18–19</a>). The witnesses across the centuries have seen here a transparent image of Christ, who stands surety for sinners and bids the Father reckon their debt to him. The one-new-humanity of the gospel is worked out in a single household.</p>",
+    "structure": [
+      {
+        "label": "Greeting: a prisoner, not an apostle",
+        "range": "1-3",
+        "gist": "Paul writes by affection, not authority."
+      },
+      {
+        "label": "Thanksgiving for Philemon’s love",
+        "range": "4-7",
+        "gist": "Praise and prayer prepare the plea."
+      },
+      {
+        "label": "Love’s appeal, not a command",
+        "range": "8-11",
+        "gist": "Paul lays down his authority to beseech."
+      },
+      {
+        "label": "No longer a slave, but a brother",
+        "range": "12-16",
+        "gist": "The gospel remakes the master–slave bond."
+      },
+      {
+        "label": "Receive him as myself — charge it to me",
+        "range": "17-20",
+        "gist": "The climax: identification and imputed debt."
+      },
+      {
+        "label": "Confidence, and a lodging",
+        "range": "21-22",
+        "gist": "Paul trusts Philemon to do even more."
+      },
+      {
+        "label": "Final greetings and grace",
+        "range": "23-25",
+        "gist": "The circle of friends seals the appeal."
+      }
+    ]
+  },
+  "witnesses": [
+    "John Chrysostom",
+    "John Calvin",
+    "Matthew Henry",
+    "John Gill",
+    "Albert Barnes",
+    "Adam Clarke",
+    "Charles Ellicott",
+    "A.T. Robertson"
+  ],
+  "external": [
+    {
+      "name": "F.F. Bruce",
+      "work": "The Epistles to the Colossians, to Philemon, and to the Ephesians (NICNT)",
+      "year": "1984",
+      "note": "Paul never demands abolition, yet the letter breathes an atmosphere in which slavery could only wilt and die."
+    },
+    {
+      "name": "N.T. Wright",
+      "work": "Colossians and Philemon (Tyndale NT Commentaries)",
+      "year": "1986",
+      "note": "Reads the letter as gospel-shaped reconciliation and partnership (koinonia)."
+    },
+    {
+      "name": "John M.G. Barclay",
+      "work": "\"Paul, Philemon and the Dilemma of Christian Slave-Ownership\" (NTS 37)",
+      "year": "1991",
+      "note": "Highlights the studied ambiguity of what exactly Paul asks — reception, freedom, or both."
+    },
+    {
+      "name": "Markus Barth & Helmut Blanke",
+      "work": "The Letter to Philemon (Eerdmans Critical Commentary)",
+      "year": "2000",
+      "note": "Traces the theology of Paul’s surety and the letter’s social vision."
+    },
+    {
+      "name": "Scot McKnight",
+      "work": "The Letter to Philemon (NICNT)",
+      "year": "2017",
+      "note": "Reads the appeal through the lens of the house church and Onesimus as brother at the table."
+    }
+  ],
+  "ai_assisted": true,
+  "_source": {
+    "kind": "commentary",
+    "method": "ai-assisted",
+    "generated": "2026-07-19",
+    "inputs": [
+      "data/commentary/cow/philemon/1.json",
+      "data/commentary/cow-synthesis/philemon/1.json",
+      "data/books/introductions/philemon.json",
+      "external scholarship (attributed, paraphrased)"
+    ]
+  }
+}

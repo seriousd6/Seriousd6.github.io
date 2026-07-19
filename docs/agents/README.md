@@ -6,6 +6,12 @@
 - `book-study-agent.md` — Book Study Agent Prompt plus the surviving BS Agent Guide excerpt: per-book key vocabulary, language notes, reception, and reading guide (formerly `working/BS_AGENT_PROMPT.md` + excerpt of `working/BS_AGENT_GUIDE.md`).
 - `loop-agent.md` — Loop Agent Prompt: general UI/code maintenance loop driven by the TODO queue, including the codebase map table (formerly `working/LOOP_AGENT_PROMPT.md`).
 - `provenance-loop.md` — Short description of the provenance loop that adds `"_source"` fields to JSON data files (formerly `working/PROVENANCE_AGENT_GUIDE.md`; only the description survives).
+- `cow-synthesis-loop.md` — Cloud-of-Witnesses per-verse synthesis loop (Commentary A): distils the catena into one ~500-word grounded summary per verse.
+- `book-guide-loop.md` — **Book Guide loop** (Studies Tier 1): a general overview per book. Output `data/books/guide/<book>.json`.
+- `book-study-guide-loop.md` — **Bible Study Guide loop** (Studies Tier 2, formerly "Deep Dive"): chapter-by-chapter group session guides. Output `data/books/study-guide/<book>.json`.
+- `book-commentary-loop.md` — **Book Commentary loop** (Studies Tier 3, the capstone): the full treatment — various voices, section by section then verse by verse, internal Cloud-of-Witnesses + attributed external scholarship. Output `data/commentary/exposition/<book>/`.
+
+The three book-capstone loops fill in the **Studies tool** (`/studies/`) for all 66 books; their shared architecture (schemas, page, provenance, illuminated styling, the Deep Dive → Bible Study Guide rename) is in [../plans/book-capstone-plan.md](../plans/book-capstone-plan.md).
 
 ## Provenance note
 

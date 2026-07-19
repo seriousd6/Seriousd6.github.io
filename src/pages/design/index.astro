@@ -37,6 +37,20 @@ import Base from '../../layouts/Base.astro';
   .dg-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-card); box-shadow: var(--shadow-card); padding: 1.1rem 1.3rem; max-width: 420px; }
   .dg-card h3 { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-muted); margin: 0 0 0.6rem; }
   .dg-card p { margin: 0; font-size: 0.95rem; }
+  .dg-illum { border: 1px solid var(--color-border); border-radius: 10px; padding: 1.3rem 1.5rem; background: var(--color-surface); max-width: 640px; }
+  .dg-illum-rule { display: flex; align-items: center; gap: 0.9rem; margin: 0 0 1rem; }
+  .dg-illum-rule i { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--ill-gild) 60%, transparent), transparent); }
+  .dg-illum-rule b { color: var(--ill-gild); font-size: 0.9rem; }
+  .dg-illum-rubric { display: flex; align-items: baseline; gap: 0.5rem; font-family: var(--font-ui); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-ember); padding-bottom: 0.4rem; border-bottom: 1px solid color-mix(in srgb, var(--ill-gild) 32%, transparent); margin-bottom: 0.65rem; }
+  .dg-illum-rubric .m { color: var(--ill-gild); }
+  .dg-illum-rubric .r { margin-left: auto; font-weight: 500; letter-spacing: 0; text-transform: none; font-size: 0.76rem; color: var(--color-muted); }
+  .dg-illum-expo { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.85; color: var(--color-text); }
+  .dg-illum-expo > p:first-of-type::first-letter { float: left; font-family: var(--font-body); font-weight: 900; font-size: 3.4em; line-height: 0.72; margin: 0.04em 0.09em 0 0; color: var(--color-accent); text-shadow: 0 1px 0 color-mix(in srgb, var(--ill-gild) 55%, transparent); }
+  .dg-illum-voices { margin-top: 1rem; padding: 0.9rem 1.1rem; border-radius: 8px; background: color-mix(in srgb, var(--ill-gild) 8%, var(--color-surface)); border: 1px solid color-mix(in srgb, var(--ill-gild) 34%, transparent); }
+  .dg-illum-voices .h { font-family: var(--font-ui); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 0.5rem; }
+  .dg-illum-voices .v { font-family: var(--font-body); font-size: 0.92rem; line-height: 1.6; color: var(--color-text); }
+  .dg-illum-voices .n { font-family: var(--font-ui); font-weight: 700; color: var(--color-heading); }
+  .dg-illum-voices .t { font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-on-primary); background: var(--color-accent); border-radius: 999px; padding: 0.07rem 0.48rem; vertical-align: 0.08em; }
 </style>
 </Fragment>
 <main>
@@ -106,6 +120,20 @@ import Base from '../../layouts/Base.astro';
     <div class="dg-card">
       <h3>Verse of the day</h3>
       <p class="dg-scripture" style="font-size:1rem">“Your word is a lamp to my feet and a light to my path.”</p>
+    </div>
+
+    <h2>Illuminated Commentary</h2>
+    <p class="dg-note" style="margin-bottom:1rem">The capstone per-book Commentary tier (<code>/topics/&lt;book&gt;/commentary.html</code>) — "illuminated-on-paper": Daylight's paper-white ground kept, with gilt hairline ornaments, an ember rubric section head, a Literata-900 drop cap, and warm parchment-tinted witness panels. No new font. Full styles in <code>assets/css/commentary.css</code>.</p>
+    <div class="dg-illum">
+      <div class="dg-illum-rule" aria-hidden="true"><i></i><b>✦</b><i></i></div>
+      <div class="dg-illum-rubric"><span class="m">❧</span><span>The Appeal for Onesimus</span><span class="r">Philemon 1:8–16</span></div>
+      <div class="dg-illum-expo">
+        <p>Paul does not command; he appeals. The apostle who could order Philemon to his duty chooses instead to bind him with love — sending back the runaway slave Onesimus not as property but as “a beloved brother,” and staking his own account against the debt.</p>
+      </div>
+      <div class="dg-illum-voices">
+        <div class="h">Voices on this section</div>
+        <div class="v"><span class="n">John Chrysostom</span> <span class="t">eastern</span> reads Paul's tact as the very art of Christian persuasion — grace, not compulsion, is what wins a brother.</div>
+      </div>
     </div>
   </div>
 </main>

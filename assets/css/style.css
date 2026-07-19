@@ -97,6 +97,13 @@
 
   /* Reader font size — toggled by F3 controls */
   --reader-font-size: 1rem;
+
+  /* Illuminated — capstone commentary accents (see assets/css/commentary.css).
+     Gilt hairline for ornaments (no text-contrast requirement); warm parchment
+     tint for witness panels. Rubric heads reuse --color-ember. Keep all three
+     :root blocks in sync. */
+  --ill-gild:      #a9862f;
+  --ill-parchment: #faf4e6;
 }
 
 /* ── Reset ── */
@@ -744,6 +751,9 @@ span.term { font-weight: bold; color: var(--color-primary); }
   --color-btn-bg:       #2b3226;
   --color-btn-text:     #c9d3ae;
   --color-btn-bg-hover: #364031;
+  /* Illuminated — Evening: brighter gilt, warm-dark parchment. */
+  --ill-gild:      #c9a85a;
+  --ill-parchment: #251f15;
   color-scheme: dark;
 }
 
@@ -777,6 +787,8 @@ span.term { font-weight: bold; color: var(--color-primary); }
     --color-btn-bg:       #2b3226;
     --color-btn-text:     #c9d3ae;
     --color-btn-bg-hover: #364031;
+    --ill-gild:      #c9a85a;
+    --ill-parchment: #251f15;
     color-scheme: dark;
   }
 }

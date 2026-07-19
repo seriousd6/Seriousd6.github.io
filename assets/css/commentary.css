@@ -1,0 +1,369 @@
+/* ============================================================
+   Commentary — Illuminated capstone stylesheet
+   ============================================================
+
+   Tier 3 of the Studies tool. Loaded by src/pages/topics/[book]/commentary.astro
+   ALONGSIDE book-study.css (which supplies the genre-tinted tier nav, hero, and
+   facts chrome via the bk-* classes on <body>).
+
+   Design language: "illuminated-on-paper" — Daylight's paper-white ground kept,
+   with gilt hairline ornaments (--ill-gild), ember rubric section heads
+   (--color-ember), warm parchment-tinted witness panels (--ill-parchment via
+   color-mix), and a Literata-900 drop cap opening each chapter. No new font.
+
+   All classes are prefixed bkc- and scoped under body.commentary-page. Genre
+   accent comes from the bk-<genre> class already on <body> (--bk-accent).
+   ============================================================ */
+
+/* ── Hero — illuminated variant of bk-hero ─────────────────── */
+.commentary-page .bkc-hero {
+  border-bottom: 2px solid var(--ill-gild);
+}
+.commentary-page .bkc-hero__eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 0.35rem;
+}
+
+/* ── AI-assisted provenance badge ──────────────────────────── */
+.commentary-page .bkc-meta-row { margin: 1rem 0 1.25rem; }
+.commentary-page .bkc-aibadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--ill-gild) 12%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--ill-gild) 40%, transparent);
+  border-radius: 999px;
+  padding: 0.22rem 0.75rem;
+}
+.commentary-page .bkc-aibadge a { color: inherit; text-decoration: underline; }
+
+/* Facts panel — gilt top rule instead of the genre accent */
+.commentary-page .bkc-facts { border-top-color: var(--ill-gild); }
+
+/* ── Gilt rule ornament ────────────────────────────────────── */
+.commentary-page .bkc-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: var(--space-lg) 0;
+}
+.commentary-page .bkc-rule::before,
+.commentary-page .bkc-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent,
+    color-mix(in srgb, var(--ill-gild) 60%, transparent), transparent);
+}
+.commentary-page .bkc-rule__mark { color: var(--ill-gild); font-size: 0.95rem; line-height: 1; }
+
+/* ── Book overview ─────────────────────────────────────────── */
+.commentary-page .bkc-overview { margin: var(--space-lg) 0; }
+.commentary-page .bkc-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  gap: 1rem 1.75rem;
+}
+.commentary-page .bkc-od__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--ill-gild) 28%, transparent);
+}
+.commentary-page .bkc-od__body {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+.commentary-page .bkc-od__body p { margin: 0 0 0.6rem; }
+.commentary-page .bkc-od__body p:last-child { margin-bottom: 0; }
+
+/* Structure outline */
+.commentary-page .bkc-structure {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0.9rem 1.15rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--ill-gild) 6%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--ill-gild) 28%, transparent);
+}
+.commentary-page .bkc-structure__item {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.1rem 0.85rem;
+  padding: 0.4rem 0;
+  align-items: baseline;
+}
+.commentary-page .bkc-structure__item + .bkc-structure__item {
+  border-top: 1px solid var(--color-border);
+}
+.commentary-page .bkc-structure__range {
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+.commentary-page .bkc-structure__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-heading);
+}
+.commentary-page .bkc-structure__gist {
+  grid-column: 2;
+  font-size: 0.86rem;
+  color: var(--color-muted);
+}
+
+/* ── Chapter ───────────────────────────────────────────────── */
+.commentary-page .bkc-chapter {
+  margin-top: var(--space-xl);
+  scroll-margin-top: calc(var(--header-h, 0px) + 4rem);
+}
+.commentary-page .bkc-chapter:first-of-type { margin-top: var(--space-lg); }
+.commentary-page .bkc-chapter__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--ill-gild) 35%, transparent);
+}
+.commentary-page .bkc-chapter__num {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bk-accent, var(--color-primary));
+}
+.commentary-page .bkc-chapter__read {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.commentary-page .bkc-chapter__read:hover { color: var(--color-accent); }
+
+/* ── Section (pericope) ────────────────────────────────────── */
+.commentary-page .bkc-section {
+  margin: var(--space-lg) 0;
+  scroll-margin-top: calc(var(--header-h, 0px) + 4rem);
+}
+
+/* Rubric section head — ember, small-caps, with a gilt ❧ mark */
+.commentary-page .bkc-rubric {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ember);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--ill-gild) 32%, transparent);
+}
+.commentary-page .bkc-rubric__mark { color: var(--ill-gild); font-size: 1rem; }
+.commentary-page .bkc-rubric__label { flex: 0 1 auto; }
+.commentary-page .bkc-rubric__ref {
+  margin-left: auto;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-size: 0.76rem;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+.commentary-page a.bkc-rubric__ref:hover { color: var(--color-accent); }
+
+/* Flowing exposition */
+.commentary-page .bkc-exposition {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--color-text);
+  max-width: 68ch;
+  margin: 0.65rem 0 1.1rem;
+}
+.commentary-page .bkc-exposition p { margin: 0 0 0.95rem; }
+.commentary-page .bkc-exposition p:last-child { margin-bottom: 0; }
+
+/* Illuminated drop cap — opens the first section of each chapter */
+.commentary-page .bkc-exposition--lead > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 3.5em;
+  line-height: 0.72;
+  padding: 0.02em 0.02em 0 0;
+  margin: 0.04em 0.09em 0 0;
+  color: var(--color-accent);
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--ill-gild) 55%, transparent);
+}
+
+/* ── Verse-by-verse notes ──────────────────────────────────── */
+.commentary-page .bkc-verses {
+  margin: 1rem 0 1.25rem;
+  border-top: 1px solid color-mix(in srgb, var(--ill-gild) 22%, transparent);
+}
+.commentary-page .bkc-verse {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 0 0.9rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.commentary-page .bkc-verse__num { margin: 0; }
+.commentary-page .bkc-verse__num a.ref {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.commentary-page .bkc-verse__note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.72;
+  color: var(--color-text);
+}
+.commentary-page .bkc-verse__note p { margin: 0 0 0.5rem; }
+.commentary-page .bkc-verse__note p:last-child { margin-bottom: 0; }
+
+/* ── Voices panel — parchment aside ────────────────────────── */
+.commentary-page .bkc-voices {
+  margin: 1rem 0 1.25rem;
+  padding: 0.95rem 1.15rem;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--ill-gild) 8%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--ill-gild) 34%, transparent);
+}
+.commentary-page .bkc-voices__head {
+  font-family: var(--font-ui);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.65rem;
+}
+.commentary-page .bkc-voice {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  line-height: 1.62;
+  color: var(--color-text);
+}
+.commentary-page .bkc-voice:last-child { margin-bottom: 0; }
+.commentary-page .bkc-voice__name {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-right: 0.4rem;
+}
+.commentary-page .bkc-voice__work { font-weight: 400; font-style: italic; color: var(--color-muted); }
+.commentary-page .bkc-voice__trad {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-on-primary, #fff);
+  background: var(--color-accent);
+  border-radius: 999px;
+  padding: 0.07rem 0.48rem;
+  margin-right: 0.4rem;
+  vertical-align: 0.08em;
+}
+.commentary-page .bkc-voice__trad--ext { background: var(--color-muted); }
+.commentary-page .bkc-voice__point { color: var(--color-text); }
+
+/* ── Application — closing pastoral turn ───────────────────── */
+.commentary-page .bkc-application {
+  margin: 1.1rem 0 0;
+  padding: 0.85rem 1.15rem;
+  border-left: 3px solid var(--ill-gild);
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--color-ember) 6%, transparent);
+}
+.commentary-page .bkc-application__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ember);
+  margin-bottom: 0.35rem;
+}
+.commentary-page .bkc-application__body {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+.commentary-page .bkc-application__body p { margin: 0 0 0.5rem; }
+.commentary-page .bkc-application__body p:last-child { margin-bottom: 0; }
+
+/* ── Sources footer ────────────────────────────────────────── */
+.commentary-page .bkc-sources { margin: var(--space-xl) 0 var(--space-lg); }
+.commentary-page .bkc-sources__head {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 0.7rem;
+}
+.commentary-page .bkc-sources__group { font-size: 0.9rem; line-height: 1.7; color: var(--color-text); margin: 0 0 0.6rem; }
+.commentary-page .bkc-sources__label {
+  font-family: var(--font-ui);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-right: 0.4rem;
+}
+.commentary-page .bkc-sources__ext {
+  margin: 0 0 0.7rem 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+.commentary-page .bkc-sources__ext li { margin-bottom: 0.3rem; }
+.commentary-page .bkc-sources__note { font-size: 0.8rem; color: var(--color-muted); font-style: italic; }
+.commentary-page .bkc-sources__note a { color: var(--color-accent); }
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .commentary-page .bkc-verse { grid-template-columns: 1fr; gap: 0.15rem; padding: 0.6rem 0; }
+  .commentary-page .bkc-structure__item { grid-template-columns: 1fr; }
+  .commentary-page .bkc-structure__gist { grid-column: 1; }
+  .commentary-page .bkc-exposition--lead > p:first-of-type::first-letter { font-size: 3em; }
+  .commentary-page .bkc-rubric__ref { margin-left: 0; flex-basis: 100%; }
+}

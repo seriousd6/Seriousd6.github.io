@@ -963,10 +963,12 @@
         "url": "topics/philemon/deep-dive.html"
       },
       "commentary": {
-        "exists": false,
+        "exists": true,
         "url": "topics/philemon/commentary.html",
-        "coverage": "none",
-        "chapters_done": [],
+        "coverage": "complete",
+        "chapters_done": [
+          1
+        ],
         "chapters_total": 1
       }
     },

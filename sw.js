@@ -81,6 +81,7 @@ var SHELL_URLS = [
   './topics/covenants/index.html',
   './topics/christology/index.html',
   './topics/psalms/index.html',
+  './topics/philemon/commentary.html',
   './library/ignatius/index.html',
   './library/justin-martyr/index.html',
   './library/irenaeus/index.html',

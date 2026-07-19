@@ -988,7 +988,7 @@ body.bk-nt { background-color: #f8f9fc; }
 
 /* ── Tier navigation strip ──────────────────────────────────── */
 /* Shared across all three tiers for a given book. Appears at top of each
-   tier page and links between Guide / Deep Dive / Commentary.
+   tier page and links between Guide / Bible Study Guide / Commentary.
    Active item styled via [data-tier=X] [data-tier-item=X] — no JS needed.
    Items for tiers not yet written: add [hidden] on the <li> element.         */
 .bk-tier-nav {

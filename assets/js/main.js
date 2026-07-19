@@ -340,13 +340,13 @@
   /* ── Tier-aware banner items ─────────────────────────────── */
   // INTENT: Returns an array of { label, href, icon } items for the reader study
   //   banner, choosing the most contextually useful tiers based on navigation state.
-  //   ch===0 = book intro (show all tiers); ch>0 = chapter view (prefer deep dive).
+  //   ch===0 = book intro (show all tiers); ch>0 = chapter view (prefer study guide).
   //   Falls back to the legacy BOOK_STUDIES single-link if _bookContent is absent.
   // CHANGE? If books-content.json adds new tiers or renames guide/deep_dive/
   //   commentary keys, update the bc field reads here. If reader.js adds a verse
   //   field to _readerNavState, add verse-level Tier 3 preference logic.
   // VERIFY: Reader at Romans intro (ch=0) → banner shows all available tiers.
-  //   Reader at Romans 8 (ch=8) → banner shows "Deep dive" link to topics/romans/.
+  //   Reader at Romans 8 (ch=8) → banner shows "Bible Study Guide" link to topics/romans/.
   //   Reader at Genesis 1 → banner is hidden (no content).
   function getBannerItems(bookId, ch) {
     if (!_bookContent || !_bookContent.books) {
@@ -357,16 +357,16 @@
     if (!bc) return null;
     var items = [];
     if (ch === 0) {
-      if (bc.deep_dive  && bc.deep_dive.exists)  items.push({ label: 'Deep Dive',   href: _r(bc.deep_dive.url),  icon: '⊕' });
-      if (bc.guide      && bc.guide.exists)       items.push({ label: 'Study Guide', href: _r(bc.guide.url),      icon: '◎' });
+      if (bc.deep_dive  && bc.deep_dive.exists)  items.push({ label: 'Bible Study Guide', href: _r(bc.deep_dive.url),  icon: '⊕' });
+      if (bc.guide      && bc.guide.exists)       items.push({ label: 'Book Guide',   href: _r(bc.guide.url),      icon: '◎' });
       if (bc.commentary && bc.commentary.exists)  items.push({ label: 'Commentary',  href: _r(bc.commentary.url), icon: '❧' });
     } else {
       if (bc.commentary && bc.commentary.exists && bc.commentary.chapters_done.indexOf(ch) !== -1)
         items.push({ label: 'Verse commentary', href: _r(bc.commentary.url + '#ch-' + ch), icon: '❧' });
       else if (bc.deep_dive && bc.deep_dive.exists)
-        items.push({ label: 'Deep dive',  href: _r(bc.deep_dive.url), icon: '⊕' });
+        items.push({ label: 'Bible Study Guide',  href: _r(bc.deep_dive.url), icon: '⊕' });
       if (bc.guide && bc.guide.exists)
-        items.push({ label: 'Study guide', href: _r(bc.guide.url), icon: '◎' });
+        items.push({ label: 'Book Guide', href: _r(bc.guide.url), icon: '◎' });
     }
     return items.length ? items : null;
   }
@@ -379,7 +379,7 @@
   // CHANGE? If reader.js changes the _readerNavState shape (bookId, ch keys),
   //   update the destructuring below. If getBannerItems() signature changes, update
   //   the call here.
-  // VERIFY: Reader on Romans 8 → banner shows "⊕ Deep dive" + "◎ Study guide".
+  // VERIFY: Reader on Romans 8 → banner shows "⊕ Bible Study Guide" + "◎ Book Guide".
   //   Reader on Genesis 1 → banner hidden. Navigate back to Romans → banner
   //   reappears without a page reload.
   function initReaderStudyLink() {

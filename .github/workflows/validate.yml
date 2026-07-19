@@ -31,6 +31,9 @@ jobs:
       - name: Synthesis format (Commentary A prose+tags, Commentary B sections)
         run: python3 scripts/validate-synthesis.py
 
+      - name: Capstone format (book commentary + guide + study-guide loops)
+        run: python3 scripts/validate-commentary.py
+
       - name: JS syntax (node --check on all modules)
         run: |
           if command -v node >/dev/null 2>&1; then
