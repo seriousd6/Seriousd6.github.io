@@ -1,54 +1,64 @@
 {
   "1": {
     "voices": [
-      "Gloss",
-      "Chrysostom",
-      "Alcuin",
-      "Augustine",
-      "Augustine of Hippo",
-      "John Gill",
-      "Matthew Henry",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
       "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
+      "Charles Ellicott",
+      "Adam Clarke",
+      "John Wesley",
+      "John Gill",
+      "Albert Barnes",
+      "Matthew Henry",
+      "Augustine of Hippo",
+      "John Chrysostom",
+      "John Calvin"
     ],
     "schools": [
       {
-        "school": "latin-fathers",
-        "prevalence": "majority",
-        "summary": "Departure from Judea was prudent humility — pacifying envy, not avoiding destiny; Christ's omniscience is stressed."
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson defends the reading 'the Lord'; Ellicott and Clarke hear the clause as the informers' very words; the Pharisees who broke John now turn on Jesus."
       },
       {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "Jesus knew all things as God; strategic retreat before the appointed time."
+        "summary": "Gill hears omniscience in 'the Lord knew'; Calvin reads the withdrawal as a rule of vocation — neither fearful retreat nor rash exposure."
       },
       {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Text-critical note: Lord vs. Jesus; departure tied to Pharisee jealousy of growing popularity."
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry suspects the report exaggerated, and finds a good sign in enemies enraged at the gospel's success."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: Christ fled envy, not danger, to teach that flight from persecution is no sin."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: the retreat pacified envy and guarded the reality of the incarnation from doubt."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Wesley: the Lord knew, 'though none informed him of it.'"
       }
     ],
     "debates": [
       {
-        "question": "What prompts the withdrawal — fear, humility, or providence?",
+        "question": "How did Jesus know what the Pharisees had heard?",
         "sides": [
           {
-            "position": "Prudential avoidance: time to die had not come",
+            "position": "divine omniscience — none informed him",
             "holders": [
-              "Calvin",
-              "Barnes",
-              "Wesley"
+              "Wesley",
+              "Gill"
             ]
           },
           {
-            "position": "Pacifying envy and preventing false inference about his body",
+            "position": "left open — omniscience or human report",
             "holders": [
-              "Chrysostom",
-              "Augustine"
+              "Barnes"
             ]
           }
         ]
@@ -56,111 +66,247 @@
     ],
     "outliers": [],
     "themes": [
-      "omniscience",
-      "Pharisee opposition",
-      "withdrawal",
-      "baptism"
+      "the Pharisees' envy",
+      "Christ's knowledge",
+      "strategic withdrawal",
+      "John's ministry eclipsed"
     ]
   },
   "2": {
     "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
+      "Augustine of Hippo",
       "Charles Ellicott",
+      "John Chrysostom",
+      "Albert Barnes",
+      "Matthew Henry",
       "A.T. Robertson",
-      "John Calvin"
+      "John Calvin",
+      "Alcuin"
     ],
     "schools": [
       {
-        "school": "reformed",
+        "school": "latin-fathers",
         "prevalence": "several",
-        "summary": "Baptism's validity rests not on the minister but on Christ the Author — ministers are subordinate agents."
+        "summary": "Augustine: he baptized in that he cleansed, baptized not in that he dipped not; Alcuin: the Spirit could be possessed secretly before Pentecost."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: Jesus withheld water-baptism because the Spirit was not yet given; the disciples' baptism only brought men to Christ."
       },
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Clarifies that Jesus himself did not baptize, correcting the report reaching the Pharisees; disciples assisted."
+        "prevalence": "several",
+        "summary": "Ellicott: the parenthesis corrects the report, not the writer; Robertson: the imperfect makes non-baptizing Jesus' habit, unmentioned again till the Great Commission."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry gives six reasons Christ baptized not, chiefly to show sacraments do not depend on the administering hand."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: baptism's power hangs on its Author, not its minister — the argument against Anabaptists as against Donatists."
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "Christ and water-baptism",
+      "ministry of the disciples",
+      "validity of sacraments",
+      "baptism of the Spirit"
+    ]
+  },
+  "3": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Wesley",
+      "John Gill",
+      "Albert Barnes",
+      "Matthew Henry",
+      "John Chrysostom",
+      "Alcuin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson weighs the verb 'left' and John's design of supplementing the Synoptics; Ellicott defends 'again' and dates the start of the Galilean ministry here."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Gill: after some eight months in Judea Jesus withdrew, not in fear but to avoid provoking the Pharisees before his time."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Wesley: he left to shun the effects of their resentment."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: an example of 'flee to another city' — we may change our place, though not our religion."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: as the expelled apostles went to the Gentiles, so Christ goes toward the Samaritans — but only in passing."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Alcuin allegorizes: leaving Judea is leaving unbelief; entering Galilee, the fickle world — a passage from vices to virtues."
       }
     ],
     "debates": [],
     "outliers": [
       {
-        "voice": "A.T. Robertson",
-        "note": "Notes this is the only NT instance of kaítoige (and yet indeed), marking the parenthetic correction as forceful."
+        "voice": "Alcuin",
+        "note": "Reads the itinerary mystically where all others read strategy and chronology."
       }
     ],
     "themes": [
-      "baptism",
-      "ministry",
-      "sacrament"
-    ]
-  },
-  "3": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Departure timed to avoid Pharisee confrontation; route toward Galilee confirmed; text-critical note on 'again'."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "departure",
-      "Galilee",
-      "timing"
+      "withdrawal to Galilee",
+      "the appointed hour",
+      "prudence under persecution",
+      "harmony with the Synoptics"
     ]
   },
   "4": {
     "voices": [
-      "John Gill",
-      "John Lightfoot",
-      "Matthew Henry",
       "Albert Barnes",
       "Adam Clarke",
-      "Charles Ellicott",
+      "John Lightfoot",
       "A.T. Robertson",
-      "John Calvin",
+      "John Gill",
+      "Charles Ellicott",
+      "Matthew Henry",
+      "John Chrysostom",
       "John Wesley"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
         "prevalence": "majority",
-        "summary": "Samaria lay directly between Judea and Galilee; the usual route for Galileans went through it; Josephus confirms this."
+        "summary": "The necessity is geographic: the direct road from Judea to Galilee ran through Samaria, the Galileans' customary festival route per Josephus."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Gill adds a deeper necessity — the effectual calling of a woman and other Samaritans given to Christ by the Father."
       },
       {
         "school": "puritan-evangelical",
-        "prevalence": "single",
-        "summary": "Historical background of Samaritan mixed origins; theological purpose in going through Samaria."
+        "prevalence": "minority",
+        "summary": "Henry holds road and errand together: no other way, yet a lost sheep to be sought; hasten through places of temptation."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom recounts Samaria's history — Assyrian colonists half-converted, worshipping God alongside their idols."
       }
     ],
     "debates": [
       {
-        "question": "Does 'he must needs' imply geographical necessity or divine appointment?",
+        "question": "Does 'must needs' name mere geography or divine purpose?",
         "sides": [
           {
-            "position": "Simply geographical — no other road was practicable",
+            "position": "the only proper road — a plain geographic necessity",
             "holders": [
-              "Lightfoot",
+              "Barnes",
               "Clarke",
+              "Wesley",
               "Robertson",
-              "Wesley"
+              "Lightfoot"
             ]
           },
           {
-            "position": "Also providential — the encounter was purposed",
+            "position": "a necessity of grace: the calling of the Samaritans lay within his design",
+            "holders": [
+              "Gill",
+              "Ellicott",
+              "Matthew Henry (in part)"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Illustrates the route with Biddulph's 1601 travel journal of the road from Galilee."
+      }
+    ],
+    "themes": [
+      "the road through Samaria",
+      "divine necessity",
+      "Jews and Samaritans",
+      "the lost sheep"
+    ]
+  },
+  "5": {
+    "voices": [
+      "John Gill",
+      "Adam Clarke",
+      "John Calvin",
+      "John Wesley",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "John Lightfoot",
+      "Theophylact",
+      "Alcuin",
+      "John Chrysostom"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Divided on Sychar: Ellicott argues for a distinct village (modern Askar); Barnes and Robertson weigh both identifications; all rehearse the patriarchal deeds to the parcel of ground."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill and Calvin take Sychar as Shechem under an altered name, Calvin citing Jerome's suspicion of the reading."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke derives the name from 'drunken', Isaiah's charge against Ephraim; Wesley simply equates Sychar with Shechem."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Theophylact: the ground is named to explain the woman's boast and to show Gentiles succeeding Jews is nothing new; Chrysostom recalls Dinah's avenging there."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Alcuin: the parcel was left to Christ, whom Joseph typified — the legal heir now visits his inheritance."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Is Sychar Shechem itself or a separate village?",
+        "sides": [
+          {
+            "position": "Shechem under a corrupted or contemptuous name",
+            "holders": [
+              "Gill",
+              "Clarke",
+              "Wesley",
+              "Jerome (per Calvin)"
+            ]
+          },
+          {
+            "position": "a distinct place, surviving in the village Askar near the well",
             "holders": [
               "Ellicott",
-              "Henry"
+              "Robertson (inclining)"
             ]
           }
         ]
@@ -168,47 +314,299 @@
     ],
     "outliers": [],
     "themes": [
-      "Samaria",
-      "journey",
-      "providence",
-      "geography"
+      "Sychar and Shechem",
+      "Jacob's parcel of ground",
+      "patriarchal inheritance",
+      "typology of Joseph"
     ]
   },
-  "5": {
+  "6": {
     "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "Adam Clarke",
+      "Albert Barnes",
       "John Gill",
       "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
+      "John Chrysostom",
+      "Augustine of Hippo",
       "John Calvin",
-      "John Wesley"
+      "Matthew Henry",
+      "Alcuin"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
         "prevalence": "majority",
-        "summary": "Sychar = Shechem (ancient Sichem); Jacob's gift to Joseph (Gen 48:22); detailed notes on location near Ebal/Gerizim."
+        "summary": "Robertson notes spring versus dug well; Ellicott and the travellers' reports fix the site; the descriptive imperfect bears an eyewitness stamp."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "several",
+        "summary": "Augustine: strong because the Word, weak because the Word made flesh; with Alcuin he counts the sixth hour as the world's sixth age."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin: the weariness was real, fitting him to be a high priest touched with our infirmities."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: a true man, a poor man, a tender man — toil came in with sin and Christ submitted to it."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: 'thus' means on the bare ground, wearied, waiting for the disciples."
       }
     ],
     "debates": [
       {
-        "question": "Is Sychar identical with Shechem or a variant form?",
+        "question": "What time is 'the sixth hour'?",
         "sides": [
           {
-            "position": "Sychar is a variant form of Shechem",
+            "position": "Jewish reckoning: about noon — heat, thirst, and the dinner errand",
             "holders": [
-              "Gill",
               "Barnes",
               "Clarke",
-              "Wesley"
+              "Ellicott"
             ]
           },
           {
-            "position": "The form was already in popular use by John's time",
+            "position": "Roman reckoning: about six in the evening, the usual hour for drawing water",
             "holders": [
+              "Robertson",
+              "Macknight (per Clarke)"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Augustine of Hippo",
+        "note": "Allegorizes the well's depth as the earth into which Christ descended in the world's sixth age."
+      }
+    ],
+    "themes": [
+      "Jacob's well",
+      "the weariness of Christ",
+      "true humanity",
+      "the sixth hour"
+    ]
+  },
+  "7": {
+    "voices": [
+      "John Chrysostom",
+      "John Gill",
+      "Theophylact",
+      "Charles Ellicott",
+      "John Calvin",
+      "Augustine of Hippo",
+      "Albert Barnes",
+      "John Wesley",
+      "A.T. Robertson",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom clears Jesus of inconsistency — the meeting arose by chance; Theophylact insists the thirst was real."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill: her coming was providence, not chance — a chosen vessel while Judea's wise were passed by; Calvin: real thirst, yet her salvation preferred to his own wants."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: he thirsted for her faith; the foreign woman is a type of the Gentile Church about to be justified."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "A woman of the country, not the city; the historical present, Rebekah's parallel, and the customs of women at wells."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Wesley: one conversation brought her to knowledge the apostles were long in attaining."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Did the woman come by chance or by providence?",
+        "sides": [
+          {
+            "position": "quite by chance — Jesus did not plan the encounter",
+            "holders": [
+              "Chrysostom"
+            ]
+          },
+          {
+            "position": "by the providence of God, ordering all by his purpose",
+            "holders": [
+              "Gill"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "the Samaritan woman",
+      "thirst for faith",
+      "providence",
+      "type of the Church"
+    ]
+  },
+  "8": {
+    "voices": [
+      "John Lightfoot",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Wesley",
+      "John Gill",
+      "John Chrysostom",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Lightfoot sets the anathema against the Talmud's own loophole on Cuthite victuals; Ellicott notes Galilean laxity; Robertson and Ellicott parse tense and 'food.'"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Gill: the absence was opportune — Christ spared his disciples offence and the woman public shame."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: no store of food, no attendants — the Master training the newly exalted to humility."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: Christ paid for his meat, filled the catering-time with soul-work, and could dine by a draw-well contentedly."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Wesley: the note simply explains the request — else he needed not have asked her."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Why does the Evangelist mention the disciples' absence?",
+        "sides": [
+          {
+            "position": "simply to explain the request — else he needed not have asked her",
+            "holders": [
+              "Wesley",
+              "Ellicott"
+            ]
+          },
+          {
+            "position": "to show Christ chose their absence for a private, unshaming dealing with the woman",
+            "holders": [
+              "Gill"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Quotes the threefold Samaritan anathema of Ezra's day in full from the rabbinic sources."
+      }
+    ],
+    "themes": [
+      "buying food in Samaria",
+      "Jewish-Samaritan rules",
+      "humility of Christ",
+      "private dealing with souls"
+    ]
+  },
+  "9": {
+    "voices": [
+      "John Gill",
+      "John Calvin",
+      "John Wesley",
+      "A.T. Robertson",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "John Lightfoot",
+      "John Chrysostom",
+      "Augustine of Hippo"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill and Calvin hear a jeering reproach; Calvin indicts both her wounded pride and the Jews' zeal worn as a cloak for carnal hatred."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "The explanatory clause is the Evangelist's note; Lightfoot argues 'no dealings' overstates a narrower refusal of communion; Ellicott and Robertson supply the Samaritans' history and the curses."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Wesley hears open simplicity, not malice; Clarke weighs dress and dialect and the Jews' 'most merciful wish' of annihilation."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: she knew him by figure and speech; Christ asked what custom disallowed on purpose, to abolish such observances."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: Jews would not use Samaritan vessels — hence her astonishment at his asking to drink from hers."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Who says 'Jews have no dealings with Samaritans'?",
+        "sides": [
+          {
+            "position": "the Evangelist's explanatory note for Greek readers",
+            "holders": [
+              "Clarke",
+              "Ellicott",
+              "Robertson"
+            ]
+          },
+          {
+            "position": "more naturally the woman's own jeer",
+            "holders": [
+              "Calvin"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Is her astonishment mockery or simplicity?",
+        "sides": [
+          {
+            "position": "scoffing reproach",
+            "holders": [
+              "Gill",
               "Calvin",
+              "Bernard (per Robertson)"
+            ]
+          },
+          {
+            "position": "open simplicity or plain surprise",
+            "holders": [
+              "Wesley",
               "Robertson"
             ]
           }
@@ -217,182 +615,71 @@
     ],
     "outliers": [],
     "themes": [
-      "geography",
-      "Jacob",
-      "Shechem",
-      "Joseph"
-    ]
-  },
-  "6": {
-    "voices": [
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Jacob's well identified archaeologically; Jesus's weariness is real human exhaustion from noon journey; distinction between pege (spring) and phrear (cistern) noted."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "Jacob's well",
-      "humanity of Jesus",
-      "weariness",
-      "noon"
-    ]
-  },
-  "7": {
-    "voices": [
-      "Chrysostom",
-      "Theophylact",
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "eastern-antiochene",
-        "prevalence": "majority",
-        "summary": "The conversation arose naturally from circumstance; Jesus thirsts for her faith as well as water."
-      },
-      {
-        "school": "grammatical-historical",
-        "prevalence": "several",
-        "summary": "Woman is from the country of Samaria, not the city; the request opens the dialogue naturally."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Jesus availed himself of the opportunity for instruction — circumstance becomes occasion for grace."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "Samaritan woman",
-      "thirst",
-      "opportunity",
-      "grace"
-    ]
-  },
-  "8": {
-    "voices": [
-      "John Gill",
-      "John Lightfoot",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Disciples absent to buy food; Jesus alone created the opportunity; tension with Jewish prohibition on Samaritan food noted."
-      }
-    ],
-    "debates": [],
-    "outliers": [
-      {
-        "voice": "John Lightfoot",
-        "note": "Raises the Jewish prohibition on eating Samaritan food and flags tension with disciples going to buy from them."
-      }
-    ],
-    "themes": [
-      "disciples",
-      "alone",
-      "providence"
-    ]
-  },
-  "9": {
-    "voices": [
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Jewish-Samaritan enmity grounded in history; textual note on syngchraomai; woman's response is half-scoffing."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "The woman disdains Christ initially; her remark is a retort to perceived Jewish contempt."
-      }
-    ],
-    "debates": [],
-    "outliers": [
-      {
-        "voice": "John Lightfoot",
-        "note": "Argues the Greek overstates; Jews had commercial dealings with Samaritans but avoided social friendship."
-      }
-    ],
-    "themes": [
-      "ethnic barrier",
-      "Jewish-Samaritan hostility",
-      "social context"
+      "Jews and Samaritans",
+      "national enmity",
+      "the woman's astonishment",
+      "breaking custom"
     ]
   },
   "10": {
     "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
       "Charles Ellicott",
       "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
+      "Adam Clarke",
+      "Albert Barnes",
+      "John Wesley",
+      "Augustine of Hippo",
+      "John Chrysostom",
+      "Origen",
+      "John Calvin"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
         "prevalence": "majority",
-        "summary": "Gift of God = either Christ himself (John 3:16) or the gracious opportunity; living water = flowing water, but Jesus means the Spirit and grace."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Astonishing condescension to offer grace to one so undeserving."
+        "summary": "Ellicott's role-reversal reading; Robertson's unfulfilled condition and the gift as the gift of John 3:16; Jacob's well itself only a cistern."
       },
       {
         "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke and Wesley: the free gift is Christ, the living water the Spirit and its fruits — allegory drawn from nature's simplest necessities."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: living water flows from a spring and dies when cut from its fountain-head; Christ thirsted for her faith."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: fire and water name the operations of one grace — consuming sin, cleansing and refreshing souls."
+      },
+      {
+        "school": "eastern-alexandrian",
         "prevalence": "single",
-        "summary": "The stress lies on 'thou wouldst have asked of him' — faith and asking are the required response."
+        "summary": "Origen: no one receives a divine gift who does not ask — even the Son is bidden to ask."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin: unmerited calling made visible — Isaiah's 'found by them that sought me not'; knowledge of the gift begins in known poverty."
       }
     ],
     "debates": [
       {
-        "question": "What is 'the gift of God' here?",
+        "question": "What is 'the gift of God'?",
         "sides": [
           {
-            "position": "Christ himself, the Father's gift to the world",
+            "position": "Christ himself, God's free gift to the world",
             "holders": [
               "Clarke",
-              "Barnes",
-              "Ellicott"
+              "Robertson (with Westcott)"
             ]
           },
           {
-            "position": "The gracious opportunity now being offered to her",
+            "position": "the present opportunity of salvation, or the living water itself",
             "holders": [
-              "Calvin"
+              "Barnes"
             ]
           }
         ]
@@ -400,172 +687,346 @@
     ],
     "outliers": [],
     "themes": [
+      "the gift of God",
       "living water",
-      "gift",
-      "grace",
-      "Spirit"
+      "the Holy Spirit",
+      "asking and receiving"
     ]
   },
   "11": {
     "voices": [
+      "Charles Ellicott",
+      "John Chrysostom",
       "John Gill",
+      "John Calvin",
       "John Lightfoot",
       "Albert Barnes",
       "Adam Clarke",
-      "Charles Ellicott",
       "A.T. Robertson",
-      "John Calvin"
+      "Augustine of Hippo"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Woman's misunderstanding is literal: he has no bucket, the well is deep; living water taken as spring water — natural misreading."
+        "prevalence": "several",
+        "summary": "The practical objection detailed — no rope, a hundred-foot shaft, the kept bucket; John's word for the well shifts from spring to pit."
       },
       {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "Woman's tone has shifted to respect; her misunderstanding is common human limitation."
+        "summary": "Gill and Calvin: 'Sir' is common civility; she still disdains and even mocks, answering figure with jibe."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: the words raised her notions of Christ — she now thinks him no common person."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: she reads living water as well-water and sets up the comparison with Jacob that follows."
       }
     ],
-    "debates": [],
+    "debates": [
+      {
+        "question": "Does her 'Sir' mark dawning reverence or continued mockery?",
+        "sides": [
+          {
+            "position": "a changed tone — she feels the latent force of his words",
+            "holders": [
+              "Ellicott",
+              "Chrysostom"
+            ]
+          },
+          {
+            "position": "mere civility masking scorn — she laughs in her sleeve",
+            "holders": [
+              "Gill",
+              "Calvin",
+              "Lightfoot"
+            ]
+          }
+        ]
+      }
+    ],
     "outliers": [],
     "themes": [
-      "misunderstanding",
-      "living water",
-      "bucket",
-      "well"
+      "nothing to draw with",
+      "the deep well",
+      "literal-mindedness",
+      "her tone toward Christ"
     ]
   },
   "12": {
     "voices": [
       "John Gill",
-      "Albert Barnes",
       "Adam Clarke",
-      "Charles Ellicott",
+      "John Wesley",
       "A.T. Robertson",
+      "Charles Ellicott",
+      "Albert Barnes",
       "John Calvin",
-      "John Wesley"
+      "John Chrysostom",
+      "Bede",
+      "Theophylact",
+      "Origen"
     ],
     "schools": [
       {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Art thou greater than our father Jacob?' — Greek expects negative answer; Samaritan claim to descent from Jacob via Joseph."
-      },
-      {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "The comparison reveals the smallness of her conception; Jesus does not deny being greater — he implies it."
+        "summary": "Gill unmasks the 'mixed medley' behind the boast; Calvin: she compares the servant to the master — as Papists boast of Fathers they do not follow."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The claim ran through Joseph and Ephraim; her question expects the answer no; Ellicott explains why the well was the Samaritans' one unbroken continuity."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Clarke grants the ten-tribes ancestry but calls the current race corrupted; Wesley: 'so they fancied.'"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: she thrusts herself upon the Jewish stock; Theophylact: 'and his cattle' commends the water's abundance."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Bede's kinder gloss: she claims Jacob as father because she lives under Moses' law on Jacob's ground."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen allegorizes: the well is Scripture — the learned drink as Jacob's sons, the simple as his cattle."
       }
     ],
-    "debates": [],
-    "outliers": [],
+    "debates": [
+      {
+        "question": "Had the Samaritans any right to call Jacob 'our father'?",
+        "sides": [
+          {
+            "position": "none — a planted, mixed people boasting a borrowed pedigree",
+            "holders": [
+              "Gill",
+              "Calvin",
+              "Wesley",
+              "Clarke"
+            ]
+          },
+          {
+            "position": "a qualified right — dwellers on Jacob's ground under Moses' law, through Joseph's tribes",
+            "holders": [
+              "Bede",
+              "Robertson (reporting the claim)"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Origen",
+        "note": "Alone turns the well itself into an allegory of Scripture and its readers."
+      }
+    ],
     "themes": [
-      "Jacob",
-      "father",
-      "comparison",
-      "messianic identity"
+      "our father Jacob",
+      "ancestral boasting",
+      "Samaritan origins",
+      "veneration of men"
     ]
   },
   "13": {
     "voices": [
-      "Chrysostom",
-      "Theophylact",
-      "John Gill",
+      "John Chrysostom",
       "Albert Barnes",
+      "John Gill",
       "A.T. Robertson",
+      "Augustine of Hippo",
       "John Calvin"
     ],
     "schools": [
       {
         "school": "eastern-antiochene",
-        "prevalence": "majority",
-        "summary": "Jesus leads the woman by degrees from natural to spiritual; the contrast is between material and spiritual sustenance."
+        "prevalence": "several",
+        "summary": "Chrysostom: Jesus implies rather than asserts his superiority to Jacob, and depreciates nothing — thirst simply returns; fire and water name grace's operations."
       },
       {
         "school": "grammatical-historical",
         "prevalence": "several",
-        "summary": "Greek tense distinction: present participle vs. aorist subjunctive — physical water requires repeated drinking; spiritual water quenches permanently."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "living water",
-      "spiritual vs physical",
-      "thirst",
-      "repetition"
-    ]
-  },
-  "14": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Wesley",
-      "Cyril of Jerusalem"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Shall never thirst' = strongest double negative; water is the Spirit and grace; inner spring vs. external supply."
+        "summary": "Barnes: an answer by inference, not assertion; Robertson: the present participle — keep on drinking — against the once-for-all draught to come."
       },
       {
-        "school": "wesleyan-arminian",
-        "prevalence": "single",
-        "summary": "If thirst returns it is the person's fault, not the water's; the spring of grace continually supplies."
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: the well is the pleasure of the world, drawn with the waterpot of lust, and it always leaves one thirsty again."
       },
       {
-        "school": "eastern-alexandrian",
-        "prevalence": "single",
-        "summary": "Cyril of Jerusalem reads the living water as the Spirit given in baptism, drawing on John 7:37-39."
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill notes the patient gentleness under scoffing; Calvin: one water serves the decaying body for a time, the other quickens the soul eternally."
       }
     ],
     "debates": [],
     "outliers": [
       {
-        "voice": "Cyril of Jerusalem",
-        "note": "Applies the living water explicitly to the Spirit of baptism, reading through John 7:37–39."
+        "voice": "Augustine of Hippo",
+        "note": "Reads the well allegorically as worldly pleasure while the rest stay with the natural fact."
       }
     ],
     "themes": [
-      "living water",
-      "Holy Spirit",
-      "eternal life",
-      "inner spring"
+      "thirsting again",
+      "two kinds of water",
+      "greater than Jacob",
+      "perpetual grace"
     ]
   },
-  "15": {
+  "14": {
     "voices": [
-      "John Gill",
+      "John Wesley",
       "Albert Barnes",
       "Adam Clarke",
-      "Charles Ellicott",
       "A.T. Robertson",
+      "Charles Ellicott",
+      "John Gill",
+      "Cyril of Jerusalem",
+      "Theophylact",
       "John Calvin"
     ],
     "schools": [
       {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: an inward fountain becoming an ocean of streams — yet never thirsting only 'provided he continue to drink'; Clarke chains life, Spirit, and indwelling Christ."
+      },
+      {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Woman still misunderstands — takes living water literally; she desires relief from daily water-carrying rather than spiritual renewal."
+        "prevalence": "several",
+        "summary": "The strongest possible negative; water that leaps up; the implied answer that only one greater than Jacob could promise it."
       },
       {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "Her request shows she has not yet allowed Christ's authority to penetrate; only when sin is exposed will genuine desire awaken."
+        "summary": "Gill: the water is the Spirit and his grace; Calvin: a continual watering that overflows into blessed immortality."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Cyril: a new kind of water, the Spirit promised to believers; Theophylact: grace's seed grows by the saints' own cultivation."
       }
     ],
-    "debates": [],
+    "debates": [
+      {
+        "question": "Can the one who drinks ever thirst again?",
+        "sides": [
+          {
+            "position": "perseverance conditioned on continuing to drink — thirst returning is the man's fault",
+            "holders": [
+              "Wesley"
+            ]
+          },
+          {
+            "position": "a perennial fountain that will never fail the renewed",
+            "holders": [
+              "Calvin",
+              "Barnes"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "fountain within",
+      "never thirst",
+      "the Spirit's indwelling",
+      "everlasting life"
+    ]
+  },
+  "15": {
+    "voices": [
+      "Matthew Henry",
+      "John Calvin",
+      "John Lightfoot",
+      "A.T. Robertson",
+      "John Chrysostom",
+      "Augustine of Hippo",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry states the dilemma honestly: taunting ridicule, or a well-meant but weak and ignorant desire — hard to say."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: she understands but despises — doctrine cannot enter while the speaker's authority is denied."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson: half-ironical yet puzzled and attracted; Lightfoot: scoff, not supplication; Ellicott dismisses Godet's 'passing by' conjecture."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom traces her ascent by degrees — she now prefers Christ to the patriarch Jacob, though not yet knowing the gift."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: carnal but sincere — if Elijah could be kept from thirst forty days, why not for ever?"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Clarke: her curiosity was excited by design, preparing her mind for the truths to come."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Is 'give me this water' jest or earnest?",
+        "sides": [
+          {
+            "position": "a scoffing challenge",
+            "holders": [
+              "Calvin",
+              "Lightfoot",
+              "Gill"
+            ]
+          },
+          {
+            "position": "a sincere though carnal and ignorant desire",
+            "holders": [
+              "Chrysostom",
+              "Augustine",
+              "Clarke"
+            ]
+          },
+          {
+            "position": "genuinely ambiguous — half irony, half attraction",
+            "holders": [
+              "Matthew Henry",
+              "Robertson"
+            ]
+          }
+        ]
+      }
+    ],
     "outliers": [],
     "themes": [
       "misunderstanding",
-      "literal reading",
-      "preparation for conversion"
+      "carnal desire",
+      "curiosity awakened",
+      "the slow ascent of faith"
     ]
   },
   "16": {
@@ -580,23 +1041,33 @@
     ],
     "schools": [
       {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Go call thy husband — Jesus shifts method to convict conscience; a deliberate change of approach."
-      },
-      {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "Christ does not abandon her but takes another method; he strikes directly at her bosom sin."
+        "summary": "No change of subject but the appropriate remedy: Christ strikes the scoffer's conscience with conviction of sin, the ploughshare that must break hard ground before doctrine can profit."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "A deliberate, delicate-yet-pungent method: by showing her that he knew her life, Jesus proves himself qualified to teach her and prepares her to own him Messiah."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke's two purposes — make her consider her state, show that he knew her heart; Wesley: he strikes directly at her bosom sin."
       }
     ],
     "debates": [],
-    "outliers": [],
+    "outliers": [
+      {
+        "voice": "A.T. Robertson",
+        "note": "Conjectures that she may have started to leave, that her trips to the well were partly for her husband, and that part of the conversation may be unpreserved."
+      }
+    ],
     "themes": [
-      "conscience",
-      "sin",
-      "husband",
-      "conviction"
+      "conviction of sin",
+      "christ's knowledge of the heart",
+      "pastoral method",
+      "repentance before doctrine"
     ]
   },
   "17": {
@@ -611,22 +1082,52 @@
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'I have no husband' — true but evasive; aner means both man and husband, so she veils her situation with technically true language."
+        "prevalence": "several",
+        "summary": "Her four true words are an evasion: the Greek word veils the difference between her 'man' and a legal husband, and Jesus reads the double sense as only he can."
       },
       {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "The stroke has gone deeper — woman does not leave in anger; her answer shows a conscience newly touched."
+        "summary": "Gill lets the answer be candid truth spoken to a stranger; Calvin has Christ press the ulcer more sharply, reading her past as divorce upon divorce ending in fornication."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Wesley: in all our Lord's discourses, the utmost weightiness and yet the utmost courtesy."
       }
     ],
-    "debates": [],
-    "outliers": [],
+    "debates": [
+      {
+        "question": "Is 'I have no husband' candid confession or veiled evasion?",
+        "sides": [
+          {
+            "position": "an evasion — true words meant to convey an untruth",
+            "holders": [
+              "Barnes",
+              "Robertson",
+              "Ellicott"
+            ]
+          },
+          {
+            "position": "a plain truth, spoken freely because a stranger heard it and it served her purpose",
+            "holders": [
+              "Gill"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Calvin",
+        "note": "Reconstructs her history: a froward, disobedient wife who constrained her husbands to divorce her, then fell to open fornication."
+      }
+    ],
     "themes": [
-      "evasion",
-      "conscience",
-      "truth",
-      "half-truth"
+      "evasion and truth",
+      "christ's omniscience",
+      "awakened conscience",
+      "the double sense of 'husband'"
     ]
   },
   "18": {
@@ -641,46 +1142,629 @@
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Five husbands: either widowed successively, or divorced; current man is not legally her husband; Clarke allows she may have been legally married to all five."
+        "prevalence": "several",
+        "summary": "They divide over her guilt: Lightfoot reads five divorces for adultery and a sixth man who is an adulterer; Barnes leaves death, divorce, or desertion open but calls the present union unlawful; Ellicott holds death and sin together and stresses that Christ knows all."
       },
       {
         "school": "reformed",
         "prevalence": "single",
-        "summary": "Lightfoot reads serial adultery; Christ stops her mouth with the evidence of her own life."
+        "summary": "Gill: possibly five lawful marriages ended by death, 'or rather' five divorces for adultery — the one cause of divorce the Samaritans, holding only Moses' law, admitted."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke will not call her a prostitute — the adulteress was put to death, not divorced — and airs Pearce's reading that no reproof is intended; Wesley leaves the question to her own awakened conscience."
       }
     ],
     "debates": [
       {
-        "question": "Were the five marriages legitimate?",
+        "question": "How guilty do the five husbands and the sixth man prove her?",
         "sides": [
           {
-            "position": "She had been legitimately married five times, divorced through misbehavior",
+            "position": "divorced five times for her adulteries; the man she now has is an adulterer",
+            "holders": [
+              "Lightfoot",
+              "Gill"
+            ]
+          },
+          {
+            "position": "the marriages may have been lawful and the divorces blameless or capricious; Pearce even reads the sixth as a betrothed not yet brought home, with no reproof intended",
             "holders": [
               "Clarke"
             ]
           },
           {
-            "position": "Adultery and serial divorce are implied",
+            "position": "the histories stay open, but the present connection is unlawful",
             "holders": [
-              "Lightfoot",
-              "Gill"
+              "Barnes",
+              "Ellicott"
             ]
           }
         ]
       }
     ],
-    "outliers": [],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Collects the tradition's exaggerations — Heracleon gives her six husbands, Jerome twenty-two."
+      },
+      {
+        "voice": "John Lightfoot",
+        "note": "Brings rabbinic evidence that 'the Cuthites do not understand the law about betrothings and divorcings.'"
+      }
+    ],
     "themes": [
-      "omniscience",
-      "five husbands",
-      "moral exposure",
-      "marriage"
+      "the five husbands",
+      "divorce and adultery",
+      "guilt laid bare",
+      "christ's knowledge of her life"
     ]
   },
   "19": {
     "voices": [
-      "Chrysostom",
+      "John Chrysostom",
+      "Augustine of Hippo",
+      "Albert Barnes",
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Gill",
+      "Adam Clarke",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: unoffended by the rebuke, her admiration rises, and she asks nothing of this life — she is eager for doctrine."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine: the 'husband' — the understanding — is beginning to come to her; she thought him a prophet, and he was."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "'Prophet' here means not a foreteller but one who read her heart and life; Robertson: 'I am beginning to perceive,' with the emphasis on 'thou.'"
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: the fruit of the reproof — repentance is the commencement of docility and opens the gate of Christ's school; Gill notes her changed countenance and tone."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke: she thought him qualified to settle the great dispute, though not yet Messiah; Wesley: so soon was her heart touched."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Does her confession lead her to evade or to inquire?",
+        "sides": [
+          {
+            "position": "glad to turn the talk from her life to a speculative religious dispute",
+            "holders": [
+              "Barnes",
+              "Robertson"
+            ]
+          },
+          {
+            "position": "genuinely awakened — eager for doctrine and desiring instruction of her own accord",
+            "holders": [
+              "Chrysostom",
+              "Calvin",
+              "Wesley"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Augustine of Hippo",
+        "note": "Continues his allegory of the summoned husband: the understanding, not yet fully come, beginning to be present in her."
+      }
+    ],
+    "themes": [
+      "perceiving a prophet",
+      "awakened conscience",
+      "eagerness for doctrine",
+      "evasion or earnestness"
+    ]
+  },
+  "20": {
+    "voices": [
+      "John Gill",
+      "A.T. Robertson",
+      "Adam Clarke",
+      "John Lightfoot",
+      "Albert Barnes",
+      "Augustine of Hippo",
+      "John Chrysostom",
+      "Origen",
+      "Charles Ellicott",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "They reconstruct the claim: patriarchal altars at Shechem, Sanballat's rival temple destroyed by Hyrcanus, and a Samaritan Pentateuch altered at Deuteronomy 27:4."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine stages the great dispute: did our fathers who pleased God worship in that temple, or in this mountain?"
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: by 'our fathers' she means Abraham, said to have offered up Isaac here."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen turns the quarrel to etymology: Gerizim 'division' befits the Samaritans, type of heretics; Sion 'watch-tower' the Jews, type of true believers."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: she sincerely consults about pure worship, and the Samaritans' plea from the fathers becomes his treatise on false imitation — patriarchal liberty ended when God fixed his place."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke and Wesley supply the history of Sanballat's temple for the expelled Manasseh; Wesley thinks her question the most important of all."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Why does she raise the Gerizim-or-Jerusalem question?",
+        "sides": [
+          {
+            "position": "to deflect — she will speak of anything rather than of self",
+            "holders": [
+              "Ellicott",
+              "Robertson"
+            ]
+          },
+          {
+            "position": "a sincere inquiry after the pure worship of God — 'a mistaken opinion' to call it cunning",
+            "holders": [
+              "Calvin",
+              "Wesley"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Is the Samaritan reading 'Gerizim' at Deuteronomy 27:4 a corruption or the true text?",
+        "sides": [
+          {
+            "position": "a notorious partisan falsification",
+            "holders": [
+              "Lightfoot",
+              "Barnes"
+            ]
+          },
+          {
+            "position": "Kennicott, reported by Clarke, strongly contends Gerizim is the genuine reading",
+            "holders": [
+              "Clarke"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Adds the Talmud's satire: the mountain holy because not overflown by the deluge — 'a doughty reason indeed!'"
+      }
+    ],
+    "themes": [
+      "mount gerizim",
+      "the samaritan schism",
+      "the plea of the fathers",
+      "place of worship"
+    ]
+  },
+  "21": {
+    "voices": [
+      "John Wesley",
+      "A.T. Robertson",
+      "John Chrysostom",
+      "Alcuin",
+      "Augustine of Hippo",
+      "Albert Barnes",
+      "John Calvin",
+      "Charles Ellicott",
+      "Adam Clarke",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: faith is the sacred anchor demanded; a greater doctrine is revealed to her than to Nicodemus or Nathanael, and both places lose their priority in dignity."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "several",
+        "summary": "Alcuin: 'the hour cometh' is the Gospel dispensation, shadows of types withdrawing before truth; Augustine: 'believe me' fits now that the husband — the understanding — is present."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Worship is emancipated from bondage to place — not abolished at Jerusalem or Gerizim, but no longer confined to either."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: Moses' order was for a time; the partition-wall comes down, and 'Father' quietly supplants the 'fathers' she had pleaded — a common Father to all."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: 'believe me' occurs only here, and to a Samaritan; Clarke: 'the Father' shows the mild, tender nature of the Gospel dispensation."
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the hour cometh",
+      "worship unbound from place",
+      "the fatherhood of god",
+      "faith before doctrine"
+    ]
+  },
+  "22": {
+    "voices": [
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Chrysostom",
+      "John Gill",
+      "John Wesley",
+      "Adam Clarke",
+      "Augustine of Hippo",
+      "Albert Barnes",
+      "John Calvin",
+      "Origen"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott defends the clause as certainly original and thoroughly Hebrew; Robertson: the Samaritans knew whom to worship but did not know him, and the Messiah, God's Son, was a Jew."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: they worshipped a local, partial God mingled with idols; Christ counts himself with the Jews in condescension, and 'salvation' includes his own presence in the flesh."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: without knowledge from the word we worship a phantom, not God — all 'good intentions' struck as by a thunderbolt."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley sets their fear of the Lord beside the service of their own gods; Clarke holds the idolatry was laid aside after Sanballat's temple, the defect lying in the rejected prophets."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine: 'we know what we worship' is spoken not for the reprobate Jews but for the party from whom apostles and prophets came."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen mystically: 'ye' are all who read Scripture in an heretical sense; 'we' the Word and those conformed to his image."
+      }
+    ],
+    "debates": [
+      {
+        "question": "In what sense did the Samaritans worship 'they know not what'?",
+        "sides": [
+          {
+            "position": "their worship was still entangled with idolatry — a local, partial god",
+            "holders": [
+              "Chrysostom",
+              "Gill",
+              "Wesley"
+            ]
+          },
+          {
+            "position": "they worshipped the true God ignorantly, the idolatry long laid aside — their defect was rejecting the prophets",
+            "holders": [
+              "Clarke",
+              "Robertson"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "What is the 'salvation' that is of the Jews?",
+        "sides": [
+          {
+            "position": "the Saviour, the Messiah himself",
+            "holders": [
+              "Clarke",
+              "Barnes"
+            ]
+          },
+          {
+            "position": "the whole saving knowledge of God flowing from the Jews, of which Christ's presence is part",
+            "holders": [
+              "Chrysostom",
+              "Calvin"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Origen",
+        "note": "Reads 'ye' and 'we' mystically — heretical readers of Scripture over against the Word and those conformed to his image."
+      }
+    ],
+    "themes": [
+      "salvation is of the jews",
+      "knowledge in worship",
+      "samaritan ignorance",
+      "the oracles of god"
+    ]
+  },
+  "23": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Chrysostom",
+      "Origen",
+      "Albert Barnes",
+      "John Calvin",
+      "Adam Clarke",
+      "Cyril of Jerusalem",
+      "John Gill",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "'And now is' could not be said in v.21: spiritual independence of place begins at once, and the Father is pictured seeking worshippers — a doctrine running through the Gospel."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom: no far prediction — the event approaches your very doors; the 'true' worshippers are marked off from the false; Cyril cites the verse to teach worship of God in the Spirit."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: two hours — a perfect, purely spiritual worship and an earthly one — and a 'Jerusalem' which is the Church, itself destined to pass."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: worship is the inward faith of the heart; the Law's worship was spiritual in substance, carnal in form — and Popery has rebuilt the shadows thicker than the Jewish."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke: worship must spring from the heart through the influence of the Holy Ghost; Wesley: not here or there only, but at all times and in all places."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Does 'in spirit' mean the worshipper's inward heart or worship wrought by the Holy Spirit?",
+        "sides": [
+          {
+            "position": "the human spirit — mind, soul, heart — opposed to rites and external pomp",
+            "holders": [
+              "Barnes",
+              "Calvin",
+              "Chrysostom"
+            ]
+          },
+          {
+            "position": "worship animated by the Holy Ghost, the human spirit being his shrine",
+            "holders": [
+              "Clarke",
+              "Robertson",
+              "Ellicott",
+              "Cyril of Jerusalem"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Origen",
+        "note": "Finds two hours and an allegorical Jerusalem — the Church — where even the angels' worship does not remain; the perfect hour makes worshippers sons."
+      }
+    ],
+    "themes": [
+      "worship in spirit and truth",
+      "the hour now is",
+      "the father seeking worshippers",
+      "end of ceremonies"
+    ]
+  },
+  "24": {
+    "voices": [
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Gill",
+      "John Calvin",
+      "John Chrysostom",
+      "Origen",
+      "Hilary",
+      "Theophylact",
+      "Augustine of Hippo",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "'God is spirit' — anarthrous like 'God is light' and 'God is love'; the real 'must' of worship, aimed at a Samaritan theology that already refused anthropomorphism."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill unfolds the divine simplicity and will even read 'the Spirit is God'; Calvin holds the sentence to its point — the Father's spiritual nature — and calls its anti-Arian use a strain."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom: the incorporeal God is worshipped with the soul, not the body; Theophylact: 'in truth' guards against heretics who worship with the mind alone."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: God is Spirit as constituting our real life, as breath constitutes the body's."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "several",
+        "summary": "Hilary: the liberty and uncircumscribed nature of spiritual worship; Augustine: descend that you may ascend — pray in yourself, but first become the temple of God."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke: among the most sublime and necessary truths in the compass of nature; Wesley: worship suitable to his nature — faith, love, and holiness animating all."
+      }
+    ],
+    "debates": [
+      {
+        "question": "What may 'God is a Spirit' be made to prove?",
+        "sides": [
+          {
+            "position": "it reaches the whole Trinity — Gill will even read 'the Spirit is God,' the description agreeing with each divine person",
+            "holders": [
+              "Gill"
+            ]
+          },
+          {
+            "position": "it declares simply the Father's spiritual nature grounding spiritual worship — improper to strain it against the Arians",
+            "holders": [
+              "Calvin"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Corroborates the doctrine from the East, quoting Abu'l Fazel and Creeshna's Geeta on worship in holiness of spirit."
+      }
+    ],
+    "themes": [
+      "god is spirit",
+      "divine incorporeality",
+      "spiritual worship",
+      "worship and truth"
+    ]
+  },
+  "25": {
+    "voices": [
+      "John Chrysostom",
+      "Augustine of Hippo",
+      "Origen",
+      "Cyril of Jerusalem",
+      "John Gill",
+      "John Calvin",
+      "John Wesley",
+      "Adam Clarke",
+      "Albert Barnes",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Lightfoot"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The Samaritan Messianic hope rested on the books of Moses they owned; 'which is called Christ' is the evangelist's gloss, and her present tense 'Messias cometh' trembles on the edge of a guess."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom grounds the expectation in Shiloh and the Prophet like Moses; Cyril of Jerusalem folds the passage into his catechesis on the Holy Ghost."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill reads honest indecision referred to the Messiah's coming; Calvin hears a compressed confession that the Law gave only first principles and that Christ's doctrine is final."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke's manuscripts read 'we know' — all Samaria expected the advent from promises in Moses; Wesley hears joy and desire of fuller instruction."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine plays on Messias/Christ/Unctus — she knew who could teach her but not Who was teaching her — and finds the five senses at last giving way to the name of Christ."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen defines the very word 'Gospel' as glad promise, and recalls Samaria's counterfeit christ Dositheus."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Whence did the woman and her people learn to look for 'Messias'?",
+        "sides": [
+          {
+            "position": "from the books of Moses themselves — Shiloh and the Prophet like Moses",
+            "holders": [
+              "Chrysostom",
+              "Barnes",
+              "Clarke",
+              "Robertson"
+            ]
+          },
+          {
+            "position": "the name Messias is absent from the Pentateuch; the Samaritans, like the Sadducees, likely used the Prophets privately while barring them from public reading",
+            "holders": [
+              "Lightfoot"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Raises the Sadducee comparison and the rabbinic rules of synagogue reading to explain how a Pentateuch-only people knew the name Messias."
+      },
+      {
+        "voice": "Origen",
+        "note": "Digresses to define the word 'Gospel' itself and records the Samaritan pseudo-christ Dositheus."
+      }
+    ],
+    "themes": [
+      "samaritan messianic expectation",
+      "he will tell us all things",
+      "moses foretelling christ",
+      "messias which is called christ"
+    ]
+  },
+  "26": {
+    "voices": [
+      "John Chrysostom",
       "John Gill",
       "Albert Barnes",
       "Adam Clarke",
@@ -691,27 +1775,539 @@
     ],
     "schools": [
       {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The first open profession of Messiahship — matched in plainness only by John 9:37 — made safely in Samaria, where no envy or political fire could catch."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke (with Bishop Pearce) and Wesley explain the reserve toward the Jews: a plain claim there would have bred insurrection or accusation before his hour."
+      },
+      {
         "school": "eastern-antiochene",
-        "prevalence": "majority",
-        "summary": "Woman's admiration is raised; she receives the rebuke and does not depart; recognition of prophet is fruit of reproof."
+        "prevalence": "single",
+        "summary": "Chrysostom: disclosed now and not at first, lest it seem vanity — open to the simple-hearted woman, withheld from those who asked only to do him injury."
       },
       {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "Conviction opens the heart to instruction; she is now ready and requests it."
+        "summary": "Gill marks the opportunity taken; Calvin reads the confession as Christ assuming his office of Teacher, the name Messiah a seal ratifying the gospel (Isaiah 61:1)."
       }
     ],
     "debates": [],
     "outliers": [],
     "themes": [
-      "prophet",
-      "recognition",
-      "repentance",
-      "open heart"
+      "first messianic self-disclosure",
+      "i that speak am he",
+      "christ the teacher",
+      "reserve before the jews",
+      "simplicity of heart"
     ]
   },
-  "20": {
+  "27": {
     "voices": [
+      "John Chrysostom",
+      "Augustine of Hippo",
+      "John Gill",
+      "John Lightfoot",
+      "Matthew Henry",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The Greek says 'with a woman': the shock was a rabbi conversing publicly with any woman, against rabbinic precept; the imperfect tense keeps them staring — and silent."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley and Clarke widen the marvel — a woman, and of the hateful nation; Clarke adds the abiding eastern custom against speaking even to one's own wife in the street."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin traces the wonder to two causes, both reverent and both wrong, and makes their unasked question a rule of modest silence before what God has not yet revealed."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine acquits the disciples: they marvelled at his goodness — he who came to seek the lost was seeking the lost one — and suspected no evil."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: for all their wonder they asked nothing, so great was their awe and their care to keep the rank of disciples."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry suspects something amiss in the marvelling, like the Pharisees at the publicans, yet praises their silent acquiescence in whatever Christ says and does."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Was the disciples' astonishment blameless?",
+        "sides": [
+          {
+            "position": "they marvelled at his goodness and suspected no evil",
+            "holders": [
+              "Augustine"
+            ]
+          },
+          {
+            "position": "perhaps something amiss in it — akin to the Pharisees' offence at his eating with publicans and sinners",
+            "holders": [
+              "Matthew Henry"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Documents the rabbinic maxims through the Berurea stories — 'do not multiply discourse with a woman,' 'a woman ought not to be wise above her distaff.'"
+      }
+    ],
+    "themes": [
+      "talking with a woman",
+      "rabbinic precept",
+      "reverent silence",
+      "awe of the master",
+      "seeking the lost"
+    ]
+  },
+  "28": {
+    "voices": [
+      "John Chrysostom",
+      "Augustine of Hippo",
+      "Origen",
+      "John Gill",
+      "John Lightfoot",
+      "Matthew Henry",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: the forgotten pitcher expresses the ardor of her zeal — faith by nature wishes others to share — and she was no usurping teacher, only a trumpet or bell calling men to Christ."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Excitement and haste in the ingressive aorist (the pot too large for speed anyhow); Ellicott reads the abandoned vessel as a pledge of return and a mark of the eyewitness."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: kindled to fire, she leaves the errand itself; as the apostles left their nets, she leaves her waterpot and evangelizes a whole city unbidden."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine allegorizes the waterpot as the love of this world left behind — would-be preachers must first leave their waterpots at the well."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: she lays aside low bodily cares and her former desires — giving up the sixth man for a seventh, she is converted to chastity."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry holds all the readings at once: kindness to Christ, haste with good tidings, and a holy carelessness of the world."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Clarke and Wesley: so penetrated with the truths she heard that she forgot her errand — 'forgetting smaller things.'"
+      }
+    ],
+    "debates": [
+      {
+        "question": "Why did she leave the waterpot?",
+        "sides": [
+          {
+            "position": "haste, excitement, and the forgetfulness of zeal",
+            "holders": [
+              "Calvin",
+              "Gill",
+              "Barnes",
+              "Clarke",
+              "Robertson",
+              "Wesley"
+            ]
+          },
+          {
+            "position": "kindness — that Jesus and his disciples might have wherewithal to drink",
+            "holders": [
+              "Lightfoot",
+              "Matthew Henry"
+            ]
+          },
+          {
+            "position": "a figure of renounced worldliness and concupiscence",
+            "holders": [
+              "Augustine",
+              "Origen",
+              "Chrysostom"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Charles Ellicott",
+        "note": "Reads the left waterpot as a pledge of her return and a quiet mark of the eyewitness who related the incident."
+      }
+    ],
+    "themes": [
+      "the abandoned waterpot",
+      "zeal of new faith",
+      "woman as evangelist",
+      "renouncing the world",
+      "haste with good tidings"
+    ]
+  },
+  "29": {
+    "voices": [
+      "John Chrysostom",
+      "Alcuin",
+      "Cyril of Jerusalem",
+      "John Gill",
+      "John Lightfoot",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom: 'come, see' asks the easier thing and trusts the well itself to convince; Cyril points the antithesis — the chief priests knew him not, a woman of Samaria proclaimed him."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Alcuin: she preaches by degrees, first calling him only 'a man,' lest anger forestall the hearing."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The particle expects no 'yes' — a hesitant, tactful question that piques curiosity; Robertson thinks 'all that ever I did' the exaggeration of a guilty conscience."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin defends her from lying — Christ had compassed her whole life in few words — and admires zeal that spares not her own reputation; Gill: 'come,' for she means to return with them, desiring more of Christ."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: Christ said little, but her awakened conscience told her the rest; Clarke cites the Jewish test that Messiah must tell the secrets of hearts — fatal to Barchochab."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Is 'he told me all things that ever I did' strictly true?",
+        "sides": [
+          {
+            "position": "a guilty conscience exaggerates — there is no 'ever' in the Greek",
+            "holders": [
+              "Robertson"
+            ]
+          },
+          {
+            "position": "no lie: Christ compendiously showed her whole life, and conscience supplied the rest",
+            "holders": [
+              "Calvin",
+              "Wesley",
+              "Barnes"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Brings the rabbinic doctrine of the Messiah's 'scent' (Isaiah 11:3) and Ben Coziba's fatal failure of the test — the woman argued from Christ's knowledge of her hidden deeds."
+      },
+      {
+        "voice": "Cyril of Jerusalem",
+        "note": "Turns the verse into catechetical antithesis: the chief priests knew him not; the devils, and a woman of Samaria, confessed him."
+      }
+    ],
+    "themes": [
+      "come and see",
+      "tactful witness",
+      "omniscience as messianic proof",
+      "conscience awakened"
+    ]
+  },
+  "30": {
+    "voices": [
+      "John Gill",
+      "Matthew Henry",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Aorist then imperfect: a rush out of the gate, then a long procession still on the way — during which the discourse of John 4:31-38 was spoken."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "single",
+        "summary": "Henry: God honored an unlikely witness, as once he sent lepers with tidings to Samaria; they went out to Christ rather than sending for him — and these crowds crossing the fields are the whitening harvest."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill: 'the men,' as the Syriac expressly reads — the inhabitants of Sychar left their business to come out."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke: such effect had one woman's simple testimony; they were still coming while the discourse with the disciples passed."
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "power of simple testimony",
+      "the procession from sychar",
+      "coming to see for themselves",
+      "harvest in view"
+    ]
+  },
+  "31": {
+    "voices": [
+      "Augustine of Hippo",
+      "John Chrysostom",
+      "Origen",
+      "John Gill",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Wesley"
+    ],
+    "schools": [
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen fixes the 'mean while' between the woman's going and the town's coming, and reads the entreaty mystically — feeding the Word lest he fail within them."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine: the disciples, returned from buying food, offer Christ some."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: they all press him at once — not impatience, but love and tenderness toward a wearied Master."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott would restore 'Rabbi' for the ambiguous 'Master'; Robertson's imperfect — 'they kept beseeching him' — shows concern for his comfort outrunning their surprise."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill: all this passed while the woman was telling the city of the wonderful person at Jacob's well."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Wesley: 'in the meantime' — before the people came."
+      }
+    ],
+    "debates": [],
+    "outliers": [
+      {
+        "voice": "Origen",
+        "note": "Alone allegorizes the meal: souls need food as bodies do — milk for infants, solid meat for the grown — and the disciples feed the Word that he may abide with his nourishers."
+      }
+    ],
+    "themes": [
+      "master, eat",
+      "tenderness of the disciples",
+      "rabbi",
+      "the interval at the well"
+    ]
+  },
+  "32": {
+    "voices": [
+      "John Chrysostom",
+      "Theophylact",
+      "Origen",
+      "John Gill",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: no asceticism, but the kingdom of God preferred to the body's comforts — do not lose the causes of life for the sake of life itself; Gill adds a textual crumb from the versions."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom and Theophylact: his food is the salvation of men — the Samaritans even now coming to believe — spoken figuratively so that the meaning dawns with greater force."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: a rule for teachers set over the weak, who may always say 'I have meat to eat that ye know not of.'"
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Emphatic I/ye; 'food' is the very word that bears the weight of John 6:27 and 6:55."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke: earthly substances, rightly understood, are the types and shadows of heavenly things."
+      }
+    ],
+    "debates": [],
+    "outliers": [
+      {
+        "voice": "Origen",
+        "note": "Extends the saying into his doctrine of graded spiritual capacities — milk for babes, solid meat for the strong."
+      }
+    ],
+    "themes": [
+      "meat ye know not of",
+      "zeal for souls",
+      "figurative speech",
+      "kingdom before comfort"
+    ]
+  },
+  "33": {
+    "voices": [
+      "Augustine of Hippo",
+      "John Chrysostom",
+      "Theophylact",
+      "John Gill",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson"
+    ],
+    "schools": [
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine: the woman misunderstood the water; behold, the disciples misunderstand the meat."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "A question expecting the answer no — surely no one, surely not the Samaritan woman, brought him food; they take his words in the ordinary sense."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom hears reverence in the whisper; Theophylact infers that the Lord customarily received support, dignifying poverty and the maintenance of teachers."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill: spoken privately among themselves, yet in his hearing — and he knew what they said."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke: perhaps they wondered whether he had been fed preternaturally, remembering Elijah's ravens and angel and their Lord's wilderness repast."
+      }
+    ],
+    "debates": [],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Supposes the disciples thought of preternatural feeding — Elijah fed by ravens and by an angel, and the angels' ministry of Matthew 4:11."
+      },
+      {
+        "voice": "Theophylact",
+        "note": "Draws from the question a doctrine of ministerial support: teachers should depend on others for food, that they may be free for the ministry of the word."
+      }
+    ],
+    "themes": [
+      "slow to understand",
+      "literal minds",
+      "reverent whisper",
+      "support of teachers"
+    ]
+  },
+  "34": {
+    "voices": [
+      "John Wesley",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "John Calvin",
+      "John Gill",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "'My food' is doing the Father's will: Ellicott reads the purpose-verbs and MSS tenses, Robertson traces 'finish' forward to 'It is finished', Barnes sees absorption in God's will conquering fatigue and hunger."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: Christ's greatest delight was the calling given him — to advance God's kingdom and restore lost souls — and he feels the same zeal for our salvation now; Gill fixes the hearers as the disciples."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: the meat is what satisfies the soul's strongest appetite; Clarke turns the verse into a charge of ministerial zeal for perishing souls."
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "doing the father's will",
+      "spiritual food",
+      "zeal for souls",
+      "finishing the work"
+    ]
+  },
+  "35": {
+    "voices": [
+      "John Chrysostom",
+      "Theophylact",
+      "Augustine of Hippo",
+      "Origen",
       "John Gill",
       "John Lightfoot",
       "Albert Barnes",
@@ -724,30 +2320,262 @@
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Woman gestures to Mount Gerizim; historical background of the Samaritan schism; patriarchal worship at Shechem."
+        "prevalence": "several",
+        "summary": "Divided over 'four months' — proverb (Barnes) or winter time-note (Ellicott, Lightfoot) — but agreed the whitening fields are the approaching Samaritans."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom and Theophylact: the expectant Samaritan crowd is the white field; Christ teaches from the objects at hand for vividness and memory."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine: intent on beginning the work, Christ hastens to send labourers — one harvest at the apostles' feet in Acts, another at the end of the world reaped by angels."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen allegorizes consistently: the four months are the four elements of natural life, the harvest the end of the world; fields whiten when the Word lights up Scripture."
       },
       {
         "school": "reformed",
         "prevalence": "several",
-        "summary": "She passes from the particular to the general — from her sin to the great question of true worship."
+        "summary": "Calvin: ripe corn cannot bear delay — men count the days to the earthly harvest but doze over the heavenly wheat; Gill counts eight months spent, four remaining to passover."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: the Samaritans, ripe for the Gospel, covered the ground; Clarke computes the calendar minutely yet concludes the words are an illustration."
       }
     ],
     "debates": [
       {
-        "question": "Is the question about worship an evasion of the moral challenge?",
+        "question": "Is 'yet four months, and then cometh harvest' a proverb or a note of actual time?",
         "sides": [
           {
-            "position": "It is an evasion, a change of subject to avoid personal discomfort",
+            "position": "a proverbial saying about the interval from sowing to harvest",
             "holders": [
+              "Barnes"
+            ]
+          },
+          {
+            "position": "a literal chronological note fixing the scene in winter (Tebeth/December-January)",
+            "holders": [
+              "Ellicott",
+              "Gill",
+              "Clarke",
+              "Lightfoot"
+            ]
+          },
+          {
+            "position": "impossible to decide, though the Greek leans against the proverb",
+            "holders": [
+              "Robertson"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Do the four months admit a literal sense at all?",
+        "sides": [
+          {
+            "position": "an image drawn from the actual season and the approaching crowd",
+            "holders": [
+              "Chrysostom",
+              "Theophylact",
+              "Barnes",
+              "Ellicott"
+            ]
+          },
+          {
+            "position": "allegory throughout — four elements of natural life, harvest the end of the world",
+            "holders": [
+              "Origen"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Shows from the rabbinic calendar that the barley for that harvest was not yet even sown when Jesus pointed to fields 'white already'."
+      },
+      {
+        "voice": "Adam Clarke",
+        "note": "Conjectures that the Samaritans' white raiment helped suggest the image of fields white to harvest."
+      }
+    ],
+    "themes": [
+      "spiritual harvest",
+      "fields white",
+      "gospel urgency",
+      "chronology of the ministry"
+    ]
+  },
+  "36": {
+    "voices": [
+      "Adam Clarke",
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Wesley",
+      "John Gill",
+      "Albert Barnes",
+      "John Calvin",
+      "Cyril of Jerusalem"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "'Already' opens the verse: the spiritual reaper need not wait four months; the wages are the joy of gathering souls into eternal life, sower and reapers rejoicing at once."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: Christ the sower, soul-winners the reapers, rejoicing together in heaven; Clarke: sower and reaper are one person — Christ — with seed-time and harvest on the same day."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill allegorizes the sickle-work of the ministry; Calvin insists the promised wages are an undeserved reward confirming justification by faith, and reads sowing and reaping as Law and Gospel."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Cyril of Jerusalem cites the verse in catechesis: eternal life is gained by the preaching of the Gospel."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Who is the reaper in this verse?",
+        "sides": [
+          {
+            "position": "the disciples and ministers reap what Christ sowed",
+            "holders": [
+              "Ellicott",
+              "Robertson",
+              "Wesley",
               "Gill"
             ]
           },
           {
-            "position": "She genuinely moves to the deepest religious question she knows",
+            "position": "Christ himself, sower and reaper of the same field on the same day",
             "holders": [
-              "Calvin",
-              "Wesley",
+              "Clarke"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Cyril of Jerusalem",
+        "note": "Uses the verse in a catechetical list of texts on how eternal life is gained — by faith and by the preaching of the Gospel."
+      }
+    ],
+    "themes": [
+      "wages of the reaper",
+      "joy of harvest",
+      "sower and reaper together",
+      "law and gospel",
+      "eternal life"
+    ]
+  },
+  "37": {
+    "voices": [
+      "Albert Barnes",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Wesley",
+      "John Calvin",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "A proverb known to Greeks, Romans, and Scripture; Ellicott: 'true' in John's deeper sense — the world's bitter saying idealised in the gospel relation of sower and reaper."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: the prophets and Christ sow, the apostles and succeeding ministers reap; Clarke parades the pagan parallels and preserves Bishop Pearce's reading."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: the prophets rejoiced in their lifetime but are not now conscious witnesses of the Church; ministers must throw their labours into a common stock without envy; Gill: the common proverb is here verified."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Whence comes the proverb 'one soweth and another reapeth'?",
+        "sides": [
+          {
+            "position": "common Greek and Latin proverbial stock, with Jewish parallels",
+            "holders": [
+              "Barnes",
+              "Clarke"
+            ]
+          },
+          {
+            "position": "primarily the Old Testament scriptures",
+            "holders": [
+              "Ellicott"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Quotes Virgil's 'Sic vos non vobis' at length and preserves Bishop Pearce's turn — the disciples were 'sent away' to the city chiefly so that a harvest might await their return."
+      }
+    ],
+    "themes": [
+      "sower and reaper",
+      "proverbs",
+      "ministerial envy",
+      "deferred fruit"
+    ]
+  },
+  "38": {
+    "voices": [
+      "Albert Barnes",
+      "A.T. Robertson",
+      "Charles Ellicott",
+      "John Gill"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "The emphatic 'I sent you' contrasts the reapers with prior labourers — variously the prophets, the Baptist, and Christ; Robertson sees the word proved when Philip later reaped Samaria."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill: 'I sent you to reap' is the disciples' commission to preach the Gospel and gather in souls."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Who are the 'other men' who laboured?",
+        "sides": [
+          {
+            "position": "the whole preparatory line — the prophets, the Jewish teachers, John the Baptist, and Christ's own ministry",
+            "holders": [
+              "Barnes",
+              "Robertson"
+            ]
+          },
+          {
+            "position": "in the immediate application Christ himself alone (perhaps with the woman), the plural notwithstanding",
+            "holders": [
               "Ellicott"
             ]
           }
@@ -756,800 +2584,275 @@
     ],
     "outliers": [],
     "themes": [
-      "Gerizim",
-      "Jerusalem",
-      "worship",
-      "Samaritan-Jewish debate"
-    ]
-  },
-  "21": {
-    "voices": [
-      "John Chrysostom",
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Believe me' — unique address; announces the abolition of local, ceremonial worship; the hour is coming."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "The ceremonial law is set aside; the particular, fixed place of worship prescribed by Moses was temporary."
-      },
-      {
-        "school": "eastern-antiochene",
-        "prevalence": "single",
-        "summary": "Chrysostom: this teaching requires faith before everything — without it, the great doctrines cannot be received."
-      }
-    ],
-    "debates": [],
-    "outliers": [
-      {
-        "voice": "John Chrysostom",
-        "note": "Opens his homily with an extended meditation on faith as the necessary precondition for receiving this teaching."
-      }
-    ],
-    "themes": [
-      "worship",
-      "abolition of ceremony",
-      "spirit",
-      "the hour"
-    ]
-  },
-  "22": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Samaritan worship defective because they rejected the Prophets; Jewish worship superior; salvation is of the Jews = Messiah comes through Israel."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Samaritan religion is superstitious for rejecting the prophets; but the ceremonial distinctions are shortly to be abolished."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "Samaritan deficiency",
-      "Jewish privilege",
-      "salvation",
-      "Messiah from Israel"
-    ]
-  },
-  "23": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley",
-      "Cyril of Jerusalem"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'And now is' added — present spiritual independence begins immediately; true worshippers worship in reality, not just ceremonially."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Christ abolishes external ceremonies; the epoch of spiritual worship has begun."
-      },
-      {
-        "school": "wesleyan-arminian",
-        "prevalence": "single",
-        "summary": "True worshippers worship at all times and in all places — no longer geographically restricted."
-      }
-    ],
-    "debates": [],
-    "outliers": [
-      {
-        "voice": "Cyril of Jerusalem",
-        "note": "Reads spirit and truth pneumatologically — the Holy Spirit given in baptism is the agent of true worship; cites John 3:5."
-      }
-    ],
-    "themes": [
-      "spirit and truth",
-      "worship",
-      "the Father",
-      "now is"
-    ]
-  },
-  "24": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley",
-      "Cyril of Jerusalem"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'God is spirit' — anarthrous predicate; parallel to God is Light (1 John 1:5) and God is Love (1 John 4:8); non-corporeality of God."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Human flesh delights in external forms; God's spiritual nature requires spiritual worship — the argument from divine nature."
-      },
-      {
-        "school": "wesleyan-arminian",
-        "prevalence": "single",
-        "summary": "God is Spirit = full of all spiritual perfections; worship must be by faith and love, not bodies and places."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "nature of God",
-      "spiritual worship",
-      "immateriality"
-    ]
-  },
-  "25": {
-    "voices": [
-      "Chrysostom",
-      "Origen",
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Samaritans expected a Messiah based on Deut 18:18 (prophet like Moses); Lightfoot examines how they knew the term without the Prophets."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Her expectation is the fruit of Mosaic deposit; now she is prepared to refer all to the Messiah."
-      },
-      {
-        "school": "eastern-antiochene",
-        "prevalence": "single",
-        "summary": "Chrysostom: the woman is struck with astonishment at the loftiness of his teaching and recognizes the one who will tell us all things."
-      }
-    ],
-    "debates": [],
-    "outliers": [
-      {
-        "voice": "Lightfoot",
-        "note": "Examines how Samaritans knew the term Messiah if they rejected the Prophets — argues the Pentateuch alone (esp. Deut 18:18) was sufficient."
-      }
-    ],
-    "themes": [
-      "Messiah",
-      "Samaritan expectation",
-      "revelation",
-      "preparation"
-    ]
-  },
-  "26": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "First explicit, open Messianic self-declaration; Jesus spoke most plainly here, not to Jews; safer to do so in Samaria."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Jesus presents himself as her Teacher in compliance with her expectation; proceeds to fuller instruction."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "Messianic self-disclosure",
-      "I AM",
-      "identity",
-      "Samaria"
-    ]
-  },
-  "27": {
-    "voices": [
-      "Chrysostom",
-      "Origen",
-      "John Gill",
-      "John Lightfoot",
-      "Matthew Henry",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "eastern-antiochene",
-        "prevalence": "majority",
-        "summary": "Disciples marvelled at Jesus speaking with a woman in public — contrary to rabbinic custom; their restraint shows respect."
-      },
-      {
-        "school": "grammatical-historical",
-        "prevalence": "several",
-        "summary": "Imperfect tense: disciples kept marvelling; the woman departed as soon as they came."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "disciples",
-      "marvel",
-      "woman",
-      "Rabbinic custom"
-    ]
-  },
-  "28": {
-    "voices": [
-      "John Chrysostom",
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Abandoned waterpot = haste and excitement; first aorist indicates she left it immediately; the waterpot as pledge of return and mark of firsthand witness."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "The nature of faith is that when we become partakers of eternal life, we wish to bring others to share."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "witness",
-      "haste",
-      "waterpot",
-      "faith and witness"
-    ]
-  },
-  "29": {
-    "voices": [
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Come, see a man who told me all things I did' — slight exaggeration; Greek meti question invites inquiry rather than asserting."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "She speaks modestly to leave them to their own inquiry — she invites, not dictates."
-      }
-    ],
-    "debates": [
-      {
-        "question": "Is her testimony hesitant or confident?",
-        "sides": [
-          {
-            "position": "Already convinced but speaks modestly to invite others to judge for themselves",
-            "holders": [
-              "Calvin",
-              "Barnes",
-              "Robertson"
-            ]
-          },
-          {
-            "position": "Still uncertain and includes herself in the inquiry",
-            "holders": [
-              "Gill"
-            ]
-          }
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": [
-      "witness",
-      "testimony",
-      "invitation",
-      "all things I did"
-    ]
-  },
-  "30": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Went out' (aorist, effective) vs. 'were coming' (imperfect, continuous): the Samaritans left at once and were still on the way during the conversation of vv.31-38."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "Samaritans respond",
-      "harvest",
-      "coming to Christ"
-    ]
-  },
-  "31": {
-    "voices": [
-      "Augustine",
-      "Theophylact",
-      "John Gill",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "eastern-antiochene",
-        "prevalence": "majority",
-        "summary": "Disciples offer food out of care; Christ was fatigued; their request is simple and affectionate."
-      },
-      {
-        "school": "grammatical-historical",
-        "prevalence": "several",
-        "summary": "Imperfect tense: disciples kept beseeching him; Rabbi is the correct translation of the address."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "disciples",
-      "food",
-      "teacher",
-      "care"
-    ]
-  },
-  "32": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Meat/food ye know not of' — emphatic pronoun contrast: I vs. ye; the food is doing the Father's will."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Not a permanent principle of asceticism but a specific instance of zeal that overrides hunger when a soul is being won."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "spiritual food",
-      "mission",
-      "zeal",
-      "Father's will"
-    ]
-  },
-  "33": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Disciples wonder if someone has brought food supernaturally; the negative particle expects no but they cannot be sure."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "misunderstanding",
-      "disciples",
-      "literal reading"
-    ]
-  },
-  "34": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'My meat is to do the will' — two purpose clauses: that I may do the will and finish the work; Christ's Messianic consciousness is clear and steady."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "several",
-        "summary": "Calvin: doing God's will is not merely highly valued but the supreme delight — as David valued the Law."
-      },
-      {
-        "school": "wesleyan-arminian",
-        "prevalence": "single",
-        "summary": "Wesley: 'My meat — that which satisfies the strongest appetite of my soul.'"
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "Father's will",
-      "Messianic mission",
-      "food",
-      "completion"
-    ]
-  },
-  "35": {
-    "voices": [
-      "Chrysostom",
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "eastern-antiochene",
-        "prevalence": "majority",
-        "summary": "Material harvest is four months away; spiritual harvest is now — the Samaritans approaching are the whitening fields."
-      },
-      {
-        "school": "grammatical-historical",
-        "prevalence": "several",
-        "summary": "'Four months' may be a common proverb or a specific calendar note; either way, the spiritual harvest does not wait."
-      }
-    ],
-    "debates": [
-      {
-        "question": "Is 'four months to harvest' a proverb or a calendar note?",
-        "sides": [
-          {
-            "position": "A rustic proverb about the interval from sowing to harvest",
-            "holders": [
-              "Barnes",
-              "Robertson"
-            ]
-          },
-          {
-            "position": "A specific chronological note placing the scene in December",
-            "holders": [
-              "Lightfoot",
-              "Gill"
-            ]
-          }
-        ]
-      }
-    ],
-    "outliers": [],
-    "themes": [
-      "harvest",
-      "fields white",
-      "mission",
-      "urgency"
-    ]
-  },
-  "36": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley",
-      "Cyril of Jerusalem"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Reaper receives wages and gathers fruit for eternal life; sower and reaper rejoice together — present harvest removes the usual separation."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: a large and most excellent reward is reserved for our labor — the motive for missionary diligence."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "wages",
-      "joy",
-      "sower and reaper",
-      "eternal life"
-    ]
-  },
-  "37": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "The proverb 'one soweth, another reapeth' is verified in the spiritual realm; known in Greek and Hebrew literature."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: the disciples reap what the prophets sowed; this was not resented because the laborers shared the same cause."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "proverb",
-      "sowing and reaping",
-      "labor",
-      "prophets and apostles"
-    ]
-  },
-  "38": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Charles Ellicott",
-      "A.T. Robertson"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'I sent you to reap' — emphatic I; the disciples enter into others' labors: the prophets, John the Baptist, Christ himself have been the sowers."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "apostolic mission",
-      "entering into labor",
-      "sowing and reaping",
-      "prophets"
+      "entering others' labours",
+      "humility in success",
+      "the commission to reap",
+      "perseverance in sowing"
     ]
   },
   "39": {
     "voices": [
-      "Origen",
-      "John Gill",
-      "Albert Barnes",
       "Adam Clarke",
+      "John Chrysostom",
       "Charles Ellicott",
       "A.T. Robertson",
-      "John Calvin"
+      "Albert Barnes",
+      "John Calvin",
+      "Origen",
+      "Augustine of Hippo",
+      "John Gill"
     ],
     "schools": [
       {
-        "school": "eastern-alexandrian",
+        "school": "wesleyan-arminian",
         "prevalence": "single",
-        "summary": "Origen: many believing on one woman's word shows the Spirit's harvest work."
+        "summary": "Clarke: the woman was the first apostle of Christ in Samaria; the repeated phrase hints at a fuller conversation than John records."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: the townsmen reasoned soundly from the woman's self-accusing admiration and believed on her testimony alone, without a sign."
       },
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Many Samaritans believed because of the saying of the woman who testified; her faithful witness was effective."
+        "prevalence": "several",
+        "summary": "The Jews refused a great prophet's witness while Samaria accepted a woman's; her discreet, frank testimony had its share in the harvest, and the success rebukes our despair."
       },
       {
         "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: 'believed' is used inaccurately — this is a commencement of faith, docility God honours; Gill fixes the city as Sychar in Samaria."
+      },
+      {
+        "school": "eastern-alexandrian",
         "prevalence": "single",
-        "summary": "Calvin: the word is used inaccurately — initial faith was faith in the woman's word, soon deepened by hearing Jesus himself."
+        "summary": "Origen: the woman's report grounded their belief before the enlightening power of the Word was visible; allegorically, they leave the city of heterodox doctrine to come to Jesus."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Augustine: they knew Christ first by report, then by presence — the woman figures the Church announcing Christ to those still outside the fold."
       }
     ],
-    "debates": [],
-    "outliers": [],
+    "debates": [
+      {
+        "question": "How complete was the faith produced by the woman's word?",
+        "sides": [
+          {
+            "position": "real, admirable faith — believing without signs and surpassing the sign-fed Jews",
+            "holders": [
+              "Chrysostom"
+            ]
+          },
+          {
+            "position": "a commencement — acknowledgment of a Prophet, perfected only on hearing Christ himself",
+            "holders": [
+              "Calvin",
+              "Origen",
+              "Augustine"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Origen",
+        "note": "Allegorizes the forbidden 'city of the Samaritans' as heterodox doctrine, and says the townsmen were 'not yet ready for the third day'."
+      }
+    ],
     "themes": [
-      "Samaritan faith",
-      "testimony",
-      "evangelism",
-      "believing"
+      "testimony of the woman",
+      "faith without signs",
+      "jews and samaritans contrasted",
+      "beginnings of faith"
     ]
   },
   "40": {
     "voices": [
       "John Chrysostom",
-      "John Gill",
       "Adam Clarke",
       "Charles Ellicott",
-      "A.T. Robertson"
+      "A.T. Robertson",
+      "John Gill"
     ],
     "schools": [
       {
         "school": "eastern-antiochene",
         "prevalence": "single",
-        "summary": "Chrysostom: the Samaritans' superiority to the Jews is shown by their reception of Christ; envy and malice destroyed Jewish advantage."
+        "summary": "Chrysostom: the sign-fed Jews expelled Christ while the sign-less Samaritans besought him to stay — envy and vainglory mar everything."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke: no miracle at Sychar because none was needed — where the doctrine is credited, no miracle is necessary."
       },
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Jesus abode two days with the Samaritans; no recorded miracles — they believed his word alone."
+        "prevalence": "several",
+        "summary": "Ellicott: a Jew accepts the hospitality of Samaria as the next step of their faith; Robertson: two days of continuous revival across the Jew-Samaritan divide."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill: at the woman's urging they heard Christ for themselves and were thoroughly persuaded he was the Messiah; the Ethiopic version reads 'all the Samaritans'."
       }
     ],
     "debates": [],
-    "outliers": [],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Digresses on why miracles are not wrought now: they served only to establish the doctrines of Christianity where first preached."
+      }
+    ],
     "themes": [
-      "two days",
-      "Samaritan hospitality",
-      "faith without miracles"
+      "christ received by outsiders",
+      "faith without miracles",
+      "the two days",
+      "hospitality of samaria"
     ]
   },
   "41": {
     "voices": [
-      "John Gill",
       "Charles Ellicott",
       "A.T. Robertson",
+      "John Gill",
       "John Calvin"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Many more believed' — pollō pleiones (more by much); Jesus's direct ministry exceeded the woman's witness numerically."
+        "prevalence": "several",
+        "summary": "Ellicott meditates on the veiled two days — the Fatherhood of God burning in mixed, despised Samaria; Robertson: 'more by much' than v.39, Jesus reaping faster than the woman."
       },
       {
         "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: example teaches that we ought never to refrain from working when opportunity is given."
+        "prevalence": "several",
+        "summary": "Gill: the versions read 'believed on him' — a larger multitude won by Christ's own preaching; Calvin: the fruit of the stay teaches us never to refrain from advancing God's kingdom."
       }
     ],
     "debates": [],
     "outliers": [],
     "themes": [
-      "growth",
-      "direct encounter",
-      "word",
-      "more believe"
+      "belief through christ's own word",
+      "the hidden two days",
+      "growth of faith"
     ]
   },
   "42": {
     "voices": [
-      "John Gill",
-      "Adam Clarke",
-      "Charles Ellicott",
       "A.T. Robertson",
-      "John Calvin"
+      "John Calvin",
+      "Charles Ellicott",
+      "John Gill",
+      "Adam Clarke"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Not because of thy talk but we have ourselves heard' — transition from testimony-based to direct-encounter faith; lalia (talk) vs. direct word."
+        "prevalence": "several",
+        "summary": "Robertson studies lalia and the perfect 'we have heard', and defends the first-century title 'Saviour of the world' from the inscriptions; Ellicott strips the text to 'truly the Saviour of the world' and marks the growth from hearing to knowing."
       },
       {
         "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: their faith now rests on the word of God itself — Christ speaking by his ministers — and the salvation he brought is common to the whole world; Gill: the woman, having tasted grace, could not leave him."
+      },
+      {
+        "school": "wesleyan-arminian",
         "prevalence": "single",
-        "summary": "Calvin: they acknowledge greater authority to Christ's own word; her witness had led them to the source."
+        "summary": "Clarke: the Saviour not of the Jews only, but of the Samaritans and the whole Gentile world."
       }
     ],
     "debates": [],
-    "outliers": [],
+    "outliers": [
+      {
+        "voice": "A.T. Robertson",
+        "note": "Mounts an epigraphic defence of 'Saviour of the world' from Deissmann's emperor inscriptions against Bernard's scepticism."
+      }
+    ],
     "themes": [
-      "direct encounter",
-      "testimony leads to personal faith",
-      "Saviour of the world"
+      "saviour of the world",
+      "faith from christ's own word",
+      "development of faith",
+      "universal salvation"
     ]
   },
   "43": {
     "voices": [
-      "Augustine",
-      "Augustine of Hippo",
       "John Gill",
-      "Matthew Henry",
-      "Albert Barnes",
-      "Adam Clarke",
       "Charles Ellicott",
       "A.T. Robertson",
-      "John Wesley"
+      "Augustine of Hippo",
+      "John Chrysostom",
+      "Theophylact",
+      "John Wesley",
+      "Albert Barnes",
+      "Adam Clarke",
+      "Matthew Henry",
+      "Origen"
     ],
     "schools": [
       {
-        "school": "latin-fathers",
-        "prevalence": "several",
-        "summary": "Augustine addresses the seeming contradiction: Jesus leaves Samaria for Galilee where a prophet has no honor — but proceeds to receive honor there."
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Gill: the two days at Sychar were the means of many conversions before the journey resumed."
       },
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "The proverb applies to Nazareth specifically, not all Galilee; Jesus avoids Nazareth and goes to Cana where he is received."
+        "prevalence": "several",
+        "summary": "'The two days' are those of v.40; the moderns read 'his own country' as Nazareth, which Jesus pointedly avoids for Cana."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine's grim symmetry: two days in Samaria brought faith, the same in Galilee brought none."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: the dishonouring country is Capernaum; Theophylact: the clause explains why Jesus was not always in Galilee."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: prophets are most despised at home — Joseph, David, Jeremiah, and Christ's own kin prove it."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: the prophets' country was Judea, and the proverb reaches even pagan teachers despised by their fellow-citizens."
       }
     ],
     "debates": [
       {
-        "question": "Why does John say Jesus went to Galilee where a prophet has no honor, if the Galileans received him?",
+        "question": "Which is the 'own country' that gave no honour?",
         "sides": [
           {
-            "position": "The proverb applies specifically to Nazareth, not all Galilee",
+            "position": "Nazareth, as in the Synoptic uses of the proverb",
             "holders": [
+              "Wesley",
+              "Clarke (with Pearce)",
               "Barnes",
-              "Robertson",
-              "Clarke"
+              "Matthew Henry"
             ]
           },
           {
-            "position": "The honor they gave was shallow and based on miracles, not true faith",
+            "position": "Capernaum, where he had most resided",
             "holders": [
-              "Augustine",
-              "Henry"
+              "Chrysostom"
+            ]
+          },
+          {
+            "position": "Galilee at large, which believed not",
+            "holders": [
+              "Augustine"
+            ]
+          },
+          {
+            "position": "Judea, the country of the prophets",
+            "holders": [
+              "Origen"
             ]
           }
         ]
@@ -1557,339 +2860,386 @@
     ],
     "outliers": [],
     "themes": [
-      "Galilee",
-      "prophet",
-      "honor",
-      "Nazareth"
+      "departure from Samaria",
+      "a prophet without honour",
+      "Nazareth avoided",
+      "Galilee"
     ]
   },
   "44": {
     "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
       "A.T. Robertson",
+      "Charles Ellicott",
+      "Albert Barnes",
+      "John Calvin",
+      "Adam Clarke",
       "John Wesley"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "The Evangelist quotes the proverb as explanation of why Jesus avoided Nazareth and went to Cana; John's editorial note."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "proverb",
-      "prophet",
-      "home country",
-      "Nazareth"
-    ]
-  },
-  "45": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Galileans received him because they had seen his Jerusalem miracles at the Passover (John 2:23); Calvin: uncertain how long this honor lasted."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "reception",
-      "miracles",
-      "faith based on signs",
-      "Passover"
-    ]
-  },
-  "46": {
-    "voices": [
-      "Chrysostom",
-      "Gregory",
-      "Origen",
-      "John Gill",
-      "John Lightfoot",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "eastern-antiochene",
         "prevalence": "several",
-        "summary": "Jesus returns to Cana to confirm and deepen the faith his first miracle produced."
+        "summary": "Robertson canvasses all four referents and settles on Galilee as John's meaning; Ellicott rejects every geographical dodge — the honour is brought from without."
       },
       {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Nobleman (basilikos) = officer of Herod's court; Capernaum a day's journey away; the scene is set for a distance miracle."
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin: the country is Nazareth; the proverb states what commonly happens and must not be pressed into universal accuracy."
       },
       {
-        "school": "latin-fathers",
-        "prevalence": "single",
-        "summary": "Gregory: the nobleman's faith was deficient — he thought Jesus must come down to heal; the miracle will correct this."
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Clarke and Wesley rest on the Synoptic key — the saying was always spoken of Nazareth."
       }
     ],
     "debates": [
       {
-        "question": "Who is the nobleman (basilikos)?",
+        "question": "How does the proverb explain the journey into Galilee?",
         "sides": [
           {
-            "position": "An officer of Herod Antipas's court",
+            "position": "he went where he had no fame yet, to labour where honour was absent",
             "holders": [
-              "Lightfoot",
-              "Barnes",
-              "Clarke"
+              "Robertson"
             ]
           },
           {
-            "position": "A member of the Herodian family or royal descent",
+            "position": "he came to his own country only after honour had been won elsewhere — a prophet's friends are the last to hear",
             "holders": [
-              "Gill",
+              "Ellicott"
+            ]
+          },
+          {
+            "position": "he entered Galilee but shunned Nazareth, the one town the proverb fits",
+            "holders": [
+              "Clarke (with Pearce)",
+              "Wesley",
+              "Barnes",
               "Calvin"
             ]
           }
         ]
       }
     ],
-    "outliers": [],
+    "outliers": [
+      {
+        "voice": "John Calvin",
+        "note": "Treats the saying as a secular proverb with parallels in common speech, tracing its truth to familiarity and envy, and noting Paul calls even Epimenides a prophet."
+      }
+    ],
     "themes": [
-      "Cana",
-      "nobleman",
-      "royal official",
-      "second sign"
+      "his own country",
+      "the proverb's referent",
+      "honour from without",
+      "Nazareth"
+    ]
+  },
+  "45": {
+    "voices": [
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Calvin",
+      "Origen",
+      "Matthew Henry",
+      "Bede"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The welcome rests on the perfect participle — having seen the unrecorded Jerusalem signs; the feast-going Galileans were predisposed as the Samaritans were not."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Clarke: they received him as the promised Messiah because of the Passover miracles."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin doubts the honour's durability — nothing is more forgotten than God's gifts; miracles serve to prepare the way for doctrine."
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: the temple-cleansing had impressed them with Christ's majesty, and the feast providentially prepared their reception."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: diligent attendance on ordinances brought the Galileans more benefit than they expected."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "single",
+        "summary": "Bede allegorizes the homecoming: at the end of the world the Lord returns to Judea, the Gentiles being confirmed in love."
+      }
+    ],
+    "debates": [
+      {
+        "question": "How much was the Galilean welcome worth?",
+        "sides": [
+          {
+            "position": "a kindly, believing reception of God's messenger, even of the Messiah",
+            "holders": [
+              "Barnes",
+              "Clarke"
+            ]
+          },
+          {
+            "position": "a sign-fed honour of uncertain duration",
+            "holders": [
+              "Calvin"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Bede",
+        "note": "Reads the return to Galilee as a figure of Christ's return to Judea at the end of the world."
+      }
+    ],
+    "themes": [
+      "the Galilean reception",
+      "miracles at the feast",
+      "sign-fed faith",
+      "providential preparation"
+    ]
+  },
+  "46": {
+    "voices": [
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "John Chrysostom",
+      "Augustine of Hippo",
+      "John Calvin",
+      "Adam Clarke",
+      "John Lightfoot",
+      "Origen",
+      "Theophylact",
+      "Albert Barnes"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "The basilikos is a courtier of Herod Antipas — perhaps Chuza or Manaen, proof wanting; Cana chosen for the memory of the first sign."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "several",
+        "summary": "Chrysostom: Jesus returns to confirm the faith the wine-miracle produced, and proves this man distinct from Matthew's centurion; Theophylact: the reminder honours Samaritan faith by contrast."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: at the wedding only the disciples believed — he visits again to try a second time."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin: no 'little king' but a gentleman of Herod's court; the rank is named because it makes the miracle more illustrious."
+      }
+    ],
+    "debates": [
+      {
+        "question": "Who was the nobleman?",
+        "sides": [
+          {
+            "position": "a courtier of Herod Antipas — perhaps Chuza or Manaen",
+            "holders": [
+              "Clarke",
+              "Ellicott",
+              "Robertson",
+              "Barnes"
+            ]
+          },
+          {
+            "position": "possibly an officer of Caesar's household on commission",
+            "holders": [
+              "Origen",
+              "Calvin (allowing it)"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Makes him an Herodian by conviction, tying the family to the party politics of Matthew 22:16."
+      }
+    ],
+    "themes": [
+      "return to Cana",
+      "the nobleman",
+      "Herod's court",
+      "fever at Capernaum"
     ]
   },
   "47": {
     "voices": [
       "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
       "Charles Ellicott",
       "A.T. Robertson",
+      "Albert Barnes",
+      "Matthew Henry",
       "John Calvin",
       "John Wesley"
     ],
     "schools": [
       {
         "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Nobleman hears of Jesus's arrival and travels twenty miles to ask for healing; faith is present but limited by belief in bodily necessity."
+        "prevalence": "several",
+        "summary": "The fame had spread twenty-five miles; the tenses show a man who went at once and kept on begging; his faith was real but bound Christ to bodily presence."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: sincerity and infirmity mixed — like Naaman he expects the healer's hand; we may pray but not prescribe."
       },
       {
         "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill notes the spreading fame; Calvin: applying to Christ was faith, limiting his manner of helping was ignorance of anything above a prophet."
+      },
+      {
+        "school": "wesleyan-arminian",
         "prevalence": "single",
-        "summary": "Calvin: he limits Christ's manner of granting assistance by connecting power to physical presence — a common form of weak faith."
+        "summary": "Wesley: 'come down' is literal — Cana stood much higher than Capernaum."
       }
     ],
     "debates": [],
     "outliers": [],
     "themes": [
-      "faith",
-      "physical presence",
-      "distance",
-      "father's love"
+      "a father's errand",
+      "faith with infirmity",
+      "bodily presence",
+      "the dying son"
     ]
   },
   "48": {
     "voices": [
       "John Gill",
+      "John Calvin",
       "Albert Barnes",
       "Adam Clarke",
       "Charles Ellicott",
+      "John Wesley",
       "A.T. Robertson",
-      "John Wesley"
+      "Augustine of Hippo",
+      "John Lightfoot"
     ],
     "schools": [
       {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill hears roughness of reproof; Calvin: the harshness strikes a nation that left no room for the word, craving only wonders — the same disease as today's 'first show miracles.'"
+      },
+      {
         "school": "grammatical-historical",
         "prevalence": "majority",
-        "summary": "The rebuke is addressed to the plural ye — the Galileans collectively; the contrast with sign-free Samaritan faith is made explicit."
+        "summary": "The plural 'ye' aims past the nobleman at the Galileans; faith that demands a miracle is not faith but sight; Robertson hears disappointment at being taken for a mere wonder-worker."
       },
       {
         "school": "wesleyan-arminian",
-        "prevalence": "single",
-        "summary": "Adam Clarke: the nobleman had faith but not enough — the rebuke corrects its insufficiency."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "signs and wonders",
-      "faith",
-      "Samaritan contrast",
-      "rebuke"
-    ]
-  },
-  "49": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Nobleman does not argue but renews his plea; the urgency of 'ere my child die' shows love and desperation."
+        "prevalence": "several",
+        "summary": "Wesley and Clarke set the Samaritans' wordless-sign faith against Galilee; Clarke: the man had faith, only not enough, and miracle-grace is not saving grace."
       },
       {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: Christ does not altogether reject him — the rebuke was corrective; perseverance in prayer is evidence of faith."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "perseverance",
-      "prayer",
-      "faith",
-      "urgency of love"
-    ]
-  },
-  "50": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'Go thy way; thy son liveth' — a kind and tender address; the man believes on the word before any sign is seen."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: the astonishing kindness and condescension of Christ — he stretches his power beyond what was expected."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "word of command",
-      "faith",
-      "healing",
-      "thy son liveth"
-    ]
-  },
-  "51": {
-    "voices": [
-      "John Gill",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "Genitive absolute construction; servants confirmed 'your boy lives' using present tense; the faith of John 4:50 is confirmed before arrival."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: the effect of faith together with the efficacy of the word — as Christ by a word restores, so in one moment the father regains his son."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "confirmation",
-      "servants",
-      "faith",
-      "word and effect"
-    ]
-  },
-  "52": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin",
-      "John Wesley"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "The inquiry about the hour confirms the miracle; 'seventh hour' = 1pm; kompsoteron eschen is a medical Greek term for taking a turn for the better."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: God provides the inquiry by divine impulse, so that the truth of the miracle might be rendered conspicuous."
-      }
-    ],
-    "debates": [],
-    "outliers": [],
-    "themes": [
-      "hour",
-      "healing",
-      "confirmation",
-      "seventh hour"
-    ]
-  },
-  "53": {
-    "voices": [
-      "John Gill",
-      "Albert Barnes",
-      "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson",
-      "John Calvin"
-    ],
-    "schools": [
-      {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "The father knew (came to know) that it was the same hour; 'himself believed' — aorist, complete faith in Jesus himself; whole household converts."
-      },
-      {
-        "school": "reformed",
-        "prevalence": "single",
-        "summary": "Calvin: the earlier belief (v.50) was trust in the word; this is full personal faith in Jesus himself as Messiah."
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Augustine: the request was near a test of Christ's power; the believer's mind should rise above seeking even miracles, which are wrought on mutable things."
       }
     ],
     "debates": [
       {
-        "question": "How does v.53 'he believed' relate to v.50 'the man believed'?",
+        "question": "How much faith did the nobleman have when rebuked?",
         "sides": [
           {
-            "position": "V.50 was trust in the word; v.53 is complete personal faith in Jesus himself",
+            "position": "some, but not enough — else he had not come at all",
             "holders": [
-              "Calvin",
-              "Robertson"
+              "Clarke"
             ]
           },
           {
-            "position": "V.53 refers to fuller assurance and household conversion",
+            "position": "lukewarm, cold, or possibly none — a testing of Christ",
             "holders": [
-              "Clarke",
-              "Barnes"
+              "Augustine"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "John Lightfoot",
+        "note": "Aims the rebuke at Herod's court in particular, which discounted the Baptist because he did no miracle."
+      }
+    ],
+    "themes": [
+      "signs and wonders",
+      "rebuke of sign-seeking",
+      "Samaria versus Galilee",
+      "faith and sight"
+    ]
+  },
+  "49": {
+    "voices": [
+      "John Calvin",
+      "Matthew Henry",
+      "Gregory the Great",
+      "A.T. Robertson",
+      "John Chrysostom",
+      "Adam Clarke",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin: a courtier who takes roughness in modest silence — adversity had subdued the pride we all share; the reproof corrected, it did not reject."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: patient under reproof yet wrestling on; but he thinks Christ can heal the sick, not raise the dead, and hurries him as if he might slip his time."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Gregory: the deficiency named — he thought the Lord could not save unless personally present."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: an earthly mind hurrying Christ along, perhaps asking in outright unbelief, as desperate fathers try every means."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Robertson with Bengel: power only before death, the assumption of Martha and Mary; Ellicott: sorrow is the birth-pang of faith — weak, but there; the diminutive 'my little child.'"
+      }
+    ],
+    "debates": [
+      {
+        "question": "Does the renewed plea show budding faith or persisting unbelief?",
+        "sides": [
+          {
+            "position": "humbled perseverance — faith weak but real, born of sorrow",
+            "holders": [
+              "Calvin",
+              "Matthew Henry",
+              "Ellicott"
+            ]
+          },
+          {
+            "position": "an earthly mind, possibly asking in unbelief",
+            "holders": [
+              "Chrysostom",
+              "Gregory the Great"
             ]
           }
         ]
@@ -1897,10 +3247,266 @@
     ],
     "outliers": [],
     "themes": [
-      "full faith",
-      "household",
-      "miracle confirmed",
-      "Messiah"
+      "come down ere my child die",
+      "persistent pleading",
+      "limits set on Christ's power",
+      "a father's love"
+    ]
+  },
+  "50": {
+    "voices": [
+      "John Calvin",
+      "Albert Barnes",
+      "Adam Clarke",
+      "John Gill",
+      "Gregory the Great",
+      "John Chrysostom",
+      "A.T. Robertson",
+      "Charles Ellicott"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Calvin: astonishing condescension — more granted than asked, that we learn not to prescribe; a half-heathen profits more by one word than crowds by many sermons."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Instantaneous aorist faith acting itself out in the imperfect 'started on his way'; Ellicott: he now believes on Christ's own word, no longer on testimony."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Clarke: the refusal to go down was the cure of unbelief — Christ heals absent by the energy that fills heaven and earth; yet the faith may still have hung on a condition."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "minority",
+        "summary": "Gregory: present where invited even when absent, saving by command as he created by will — and a blow to pride, who walked for the servant but not for the courtier's son."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "minority",
+        "summary": "Chrysostom: the Lord offered to visit the centurion of confirmed faith, refused the nobleman of imperfect faith — and by refusing enlightened him."
+      }
+    ],
+    "debates": [
+      {
+        "question": "How complete was the faith with which he 'believed the word'?",
+        "sides": [
+          {
+            "position": "instantaneous, genuine trust in the bare word",
+            "holders": [
+              "Robertson",
+              "Calvin",
+              "Barnes"
+            ]
+          },
+          {
+            "position": "real but conditional and incomplete until confirmed",
+            "holders": [
+              "Clarke",
+              "Chrysostom"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "thy son liveth",
+      "healing at a distance",
+      "the bare word believed",
+      "prayer answered otherwise"
+    ]
+  },
+  "51": {
+    "voices": [
+      "Charles Ellicott",
+      "Origen",
+      "John Chrysostom",
+      "A.T. Robertson",
+      "John Gill",
+      "John Calvin"
+    ],
+    "schools": [
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "Ellicott walks the anxious road home; Robertson traces the ladder of words for the boy — son, little child, and the servants' familiar 'thy boy.'"
+      },
+      {
+        "school": "eastern-alexandrian",
+        "prevalence": "single",
+        "summary": "Origen: servants sent out to meet their master display his rank."
+      },
+      {
+        "school": "eastern-antiochene",
+        "prevalence": "single",
+        "summary": "Chrysostom: the servants came to cancel the visit — the household still thought of Christ as a physician no longer wanted."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill dates the descent to the next day; Calvin: the word's efficacy met by faith's effect — God's power stands ready where unbelief does not shut the door, and his delays make great haste."
+      }
+    ],
+    "debates": [],
+    "outliers": [],
+    "themes": [
+      "the meeting on the road",
+      "thy son liveth confirmed",
+      "efficacy of the word",
+      "divine delays"
+    ]
+  },
+  "52": {
+    "voices": [
+      "John Gill",
+      "John Wesley",
+      "John Calvin",
+      "Adam Clarke",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Matthew Henry"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "several",
+        "summary": "Gill: he never doubted, but compared; Calvin: a secret impulse of God made the miracle conspicuous beyond the reach of chance."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "majority",
+        "summary": "Ellicott defends Jewish reckoning and dissolves the 'yesterday' puzzle by the sunset day-change; Robertson reads Roman time and the physician's idiom 'took a turn for the better.'"
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "several",
+        "summary": "Wesley: exact consideration of God's works increases faith; Clarke suspects a lingering test of natural cause versus Christ's power, and reports Macknight's 7 p.m. argument."
+      },
+      {
+        "school": "puritan-evangelical",
+        "prevalence": "minority",
+        "summary": "Henry: the precision proves the cure sudden — dictum factum — and its synchronism with the word adorns Providence."
+      }
+    ],
+    "debates": [
+      {
+        "question": "What time was 'the seventh hour'?",
+        "sides": [
+          {
+            "position": "Jewish reckoning, about one in the afternoon — 'yesterday' explained by the sunset day-change",
+            "holders": [
+              "Barnes",
+              "Ellicott",
+              "Matthew Henry"
+            ]
+          },
+          {
+            "position": "Roman reckoning, about seven in the evening",
+            "holders": [
+              "Robertson",
+              "Macknight (per Clarke)"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Why did the father ask the hour?",
+        "sides": [
+          {
+            "position": "to confirm and publish an undoubted miracle",
+            "holders": [
+              "Gill",
+              "Wesley",
+              "Calvin"
+            ]
+          },
+          {
+            "position": "still to sift natural recovery from divine power",
+            "holders": [
+              "Clarke"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [],
+    "themes": [
+      "the seventh hour",
+      "sudden cure",
+      "reckoning of hours",
+      "faith confirmed by inquiry"
+    ]
+  },
+  "53": {
+    "voices": [
+      "John Calvin",
+      "Bede",
+      "Augustine of Hippo",
+      "Charles Ellicott",
+      "A.T. Robertson",
+      "Albert Barnes",
+      "Adam Clarke"
+    ],
+    "schools": [
+      {
+        "school": "reformed",
+        "prevalence": "minority",
+        "summary": "Calvin resolves the paradox of a believer beginning to believe: a Jew's general faith, then a particular faith for his son, now saving faith in the Son of God."
+      },
+      {
+        "school": "latin-fathers",
+        "prevalence": "several",
+        "summary": "Bede: faith has beginning, growth, and maturity; Augustine sharpens it — he did not truly believe when he first petitioned."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "several",
+        "summary": "The first whole household to believe, forerunner of Crispus; Ellicott finds a second miracle — new life in the father's own spirit; Barnes reads the scene's evidential force."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "minority",
+        "summary": "Clarke: the family, warmed by God's kindness to the child, believed the more easily — in very faithfulness God had afflicted them."
+      }
+    ],
+    "debates": [
+      {
+        "question": "When did the nobleman's faith properly begin?",
+        "sides": [
+          {
+            "position": "it grew by stages from petition to word to confirmation",
+            "holders": [
+              "Bede",
+              "Calvin",
+              "Ellicott"
+            ]
+          },
+          {
+            "position": "only now — the first petition was not yet belief",
+            "holders": [
+              "Augustine"
+            ]
+          }
+        ]
+      }
+    ],
+    "outliers": [
+      {
+        "voice": "Adam Clarke",
+        "note": "Prints the Talmud's tale of Chanina and Gamaliel's son with Schoettgen's verdict: a fable copied, egg-like, from the Gospel."
+      }
+    ],
+    "themes": [
+      "himself believed",
+      "a believing household",
+      "stages of faith",
+      "affliction turned to salvation"
     ]
   },
   "54": {
@@ -1908,28 +3514,56 @@
       "John Chrysostom",
       "John Gill",
       "Adam Clarke",
-      "Charles Ellicott",
-      "A.T. Robertson"
+      "Charles Ellicott"
     ],
     "schools": [
       {
-        "school": "grammatical-historical",
-        "prevalence": "majority",
-        "summary": "'This is again the second miracle' — the qualifier 'coming out of Judea into Galilee' restricts the count to the Galilean series; not the second miracle overall."
-      },
-      {
         "school": "eastern-antiochene",
         "prevalence": "single",
-        "summary": "Chrysostom: every word of Scripture is precious and should not be passed over without attention."
+        "summary": "Chrysostom: no jot of Scripture is idle — even 'second' is written to exalt the Samaritans, who believed with no miracle at all."
+      },
+      {
+        "school": "reformed",
+        "prevalence": "single",
+        "summary": "Gill: the second wrought in Cana — many Judean signs stand between the wedding and this healing."
+      },
+      {
+        "school": "wesleyan-arminian",
+        "prevalence": "single",
+        "summary": "Clarke construes 'again' with the coming out of Judea, and reads the whole chapter as a lesson in particular providence."
+      },
+      {
+        "school": "grammatical-historical",
+        "prevalence": "single",
+        "summary": "Ellicott: 'this again, a second sign' — the family now the unit of Christian life; eight differences prove this no double of the centurion's story."
       }
     ],
-    "debates": [],
+    "debates": [
+      {
+        "question": "Is this the centurion's servant retold?",
+        "sides": [
+          {
+            "position": "one story in two forms, as suspected since Irenaeus",
+            "holders": [
+              "some ancients (per Ellicott)"
+            ]
+          },
+          {
+            "position": "two distinct miracles — son not servant, Jew not Gentile, Cana not Capernaum, rebuke not marvel",
+            "holders": [
+              "Ellicott",
+              "Chrysostom"
+            ]
+          }
+        ]
+      }
+    ],
     "outliers": [],
     "themes": [
-      "second sign",
-      "Cana",
-      "miracle series",
-      "signs in John"
+      "the second sign",
+      "Cana and Capernaum",
+      "Samaritan faith exalted",
+      "particular providence"
     ]
   }
 }
