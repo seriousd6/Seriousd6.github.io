@@ -97,8 +97,13 @@ def validate_chapter(book, ch):
         check(False, f'C {book} {ch}: chapter file missing ({p})'); return
     data = load(p)
     check(isinstance(data, dict) and data, f'C {book} {ch}: is a non-empty object keyed by section-start verse')
+    cmeta = data.get('_meta') or {}
+    if cmeta.get('reflection'):
+        check_refs(f'C {book} {ch} _meta.reflection', *(cmeta.get('reflection') or []))
     covered = []
     for k, sec in data.items():
+        if k == '_meta':
+            continue
         lab = f'C {book} {ch}:{k}'
         check(str(k).isdigit(), f'{lab}: section key is a verse number')
         check(isinstance(sec, dict) and sec.get('pericope_label') and sec.get('range'),
@@ -113,7 +118,8 @@ def validate_chapter(book, ch):
             if isinstance(vn, dict) and str(vn.get('v', '')).isdigit():
                 covered.append(str(vn['v']))
             check_refs(f'{lab} v.{vn.get("v")}', vn.get('note') if isinstance(vn, dict) else '')
-        check_refs(lab, sec.get('exposition'), sec.get('application'))
+        check_refs(lab, sec.get('exposition'), sec.get('application'),
+                   sec.get('original_language'), sec.get('historical_context'), sec.get('christ'))
         for w in (sec.get('witnesses') or []):
             check(isinstance(w, dict) and w.get('voice'), f'{lab}: each witness has a voice name')
         for x in (sec.get('external') or []):

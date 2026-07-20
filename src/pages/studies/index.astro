@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 ---
 
-<Base title={"Studies — Kingdom Bible Study"} description={"Study resources for every book of the Bible — book guides, Bible study guides, and verse-by-verse commentary from the classic tradition."} footer={false}>
+<Base title={"Studies — Kingdom Bible Study"} description={"The fullest study of every book of the Bible — intro, timeline, and a verse-by-verse synthesized commentary drawing on the Cloud of Witnesses and attributed scholarship."} footer={false}>
 <Fragment slot="head-end">
 <style is:inline="">
     .studies-page { padding: 2rem 1.5rem 4rem; max-width: 960px; margin: 0 auto; }
@@ -115,7 +115,7 @@ import Base from '../../layouts/Base.astro';
   <div class="studies-page">
     <div class="studies-header">
       <h1>Studies</h1>
-      <p>Book guides, Bible study guides, and verse-by-verse commentary for every book of the Bible.</p>
+      <p>One full treatment per book — intro, timeline, and a verse-by-verse synthesized commentary.</p>
     </div>
 
     <div class="studies-filters" id="studies-filters">
@@ -168,9 +168,9 @@ VERIFY: Page shows 66 book cards in OT/NT sections. "Has Content" filter shows 6
   }
 
   function bestUrl(bc) {
-    if (bc.deep_dive  && bc.deep_dive.exists)  return _r(bc.deep_dive.url);
-    if (bc.guide      && bc.guide.exists)       return _r(bc.guide.url);
-    if (bc.commentary && bc.commentary.exists)  return _r(bc.commentary.url);
+    if (bc.commentary && bc.commentary.exists)  return _r(bc.commentary.url); // the Full Treatment
+    if (bc.guide      && bc.guide.exists)       return _r(bc.guide.url);      // legacy hand-authored fallback
+    if (bc.deep_dive  && bc.deep_dive.exists)   return _r(bc.deep_dive.url);
     return null;
   }
 
@@ -191,9 +191,11 @@ VERIFY: Page shows 66 book cards in OT/NT sections. "Has Content" filter shows 6
         '<span class="studies-card__ch">' + entry.chapters + ' chs</span>' +
       '</div>' +
       '<div class="studies-card__tiers">' +
-        tierBadge(bc.guide && bc.guide.exists, 'Guide', 'guide') +
-        tierBadge(bc.deep_dive && bc.deep_dive.exists, 'Bible Study Guide', 'deep-dive') +
-        tierBadge(bc.commentary && bc.commentary.exists, 'Commentary', 'commentary') +
+        ( (bc.commentary && bc.commentary.exists)
+            ? '<span class="studies-tier-badge studies-tier-badge--commentary">Full Treatment</span>'
+            : ((bc.guide && bc.guide.exists) || (bc.deep_dive && bc.deep_dive.exists))
+                ? '<span class="studies-tier-badge studies-tier-badge--deep-dive">Study</span>'
+                : '<span class="studies-tier-badge studies-tier-badge--none">—</span>' ) +
       '</div>';
     return card;
   }

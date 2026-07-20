@@ -1,124 +1,135 @@
 ---
-// Per-book Commentary — Tier 3 of the Studies tool (the capstone).
+// Per-book FULL TREATMENT — the single, fullest book-level study on the site.
+// (2026-07-20 reshape: the former three tiers collapsed into this one page.)
 //
-// One static page per book that has data/commentary/exposition/<book>/_book.json,
-// generated from that overview plus each data/commentary/exposition/<book>/<ch>.json
-// (section -> verse-by-verse). Route: /topics/<book>/commentary.html — the URL
-// contract already reserved in data/books-content.json. This dynamic [book] route
-// coexists with the five literal topics/<book>/ dirs (which have no commentary.astro),
-// so it may include those books too with no conflict.
+// One static page per book that has data/commentary/exposition/<book>/_book.json.
+// Structure: a rich INTRO consolidating everything the site already holds per book
+// (overview, author/date/setting/purpose, themes, outline, TIMELINE, key people,
+// key vocabulary + language notes, reception, literary/cultural context) followed
+// by the fully synthesized COMMENTARY in per-chapter divisions (lenses +
+// verse-by-verse + witnesses/external + a "For reflection" set). Many-chapter books
+// get a chapter picker + lazy-load (entry="commentary"); small books render every
+// division statically. Route: /topics/<book>/commentary.html.
 //
-// Render-then-enhance: the prose is real HTML with <a class="ref" data-ref> hotlinks
-// that core-boot's wireRefLinks (entry="generic") turns into verse-modal triggers.
-// Styling: book-study.css supplies the genre-tinted chrome (tier nav, hero, facts);
-// commentary.css adds the illuminated-on-paper capstone treatment.
-//
-// See docs/agents/book-commentary-loop.md for the data schema this reads and
-// docs/plans/book-capstone-plan.md for how the three tiers fit together.
+// See docs/agents/book-commentary-loop.md + docs/plans/book-capstone-plan.md.
 import fs from 'node:fs';
 import path from 'node:path';
 import Base from '../../../layouts/Base.astro';
 
-// NOTE: getStaticPaths runs in an isolated scope (Astro hoists it before render),
-// so its helpers/constants must live INSIDE it — only module imports are visible.
+const LAZY_THRESHOLD = 6; // books with more chapters-with-data than this lazy-load
+
 export async function getStaticPaths() {
-  const EXPO_ROOT = path.resolve('./data/commentary/exposition');
-  const readJSON = (p) => {
-    try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return null; }
-  };
+  const readJSON = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return null; } };
   const books = readJSON(path.resolve('./data/bible/books.json')) || [];
-  const content = readJSON(path.resolve('./data/books-content.json')) || { books: {} };
+  const genreMap = readJSON(path.resolve('./data/literary/genre.json')) || {};
+  const cultMap = readJSON(path.resolve('./data/cultural/book-context.json')) || {};
   const out = [];
   for (const b of books) {
-    const dir = path.join(EXPO_ROOT, b.id);
+    const dir = path.resolve('./data/commentary/exposition', b.id);
     const meta = readJSON(path.join(dir, '_book.json'));
-    if (!meta) continue;                       // only books with a commentary overview
+    if (!meta) continue;
     const chapters = [];
     for (let ch = 1; ch <= b.chapters; ch++) {
       const chData = readJSON(path.join(dir, `${ch}.json`));
       if (!chData) continue;
+      const cmeta = chData._meta || {};
       const sections = Object.keys(chData)
+        .filter(k => k !== '_meta')
         .sort((a, z) => parseInt(a, 10) - parseInt(z, 10))
         .map(k => ({ start: k, ...chData[k] }));
-      chapters.push({ ch, sections });
+      chapters.push({ ch, title: cmeta.title || '', reflection: cmeta.reflection || [], sections });
     }
-    const intro = readJSON(path.resolve('./data/books/introductions', `${b.id}.json`));
-    const bc = (content.books && content.books[b.id]) || {};
     out.push({
       params: { book: b.id },
       props: {
-        book: b, meta, chapters, intro,
-        tiers: {
-          guide:    !!(bc.guide && bc.guide.exists),
-          deepDive: !!(bc.deep_dive && bc.deep_dive.exists),
-        },
+        book: b,
+        meta,
+        chapters,
+        intro: readJSON(path.resolve('./data/books/introductions', `${b.id}.json`)),
+        study: readJSON(path.resolve('./data/workshop/book-study', `${b.id}.json`)),
+        genre: (genreMap && genreMap[b.id]) || null,
+        cult: (cultMap && cultMap[b.id]) || null,
       },
     });
   }
   return out;
 }
 
-const { book, meta, chapters, intro, tiers } = Astro.props;
+const { book, meta, chapters, intro, study, genre: gen, cult } = Astro.props;
 
-// books.json genre strings ("pauline epistle", "law", …) → the bk-<genre> classes
-// that book-study.css defines. _book.json may name its own genre directly.
 function bkGenre(g) {
   g = (g || '').toLowerCase();
-  if (/torah|law|pentateuch/.test(g))      return 'torah';
-  if (/gospel/.test(g))                    return 'gospel';
-  if (/apocalyp|revelation/.test(g))       return 'apocalyptic';
-  if (/prophe/.test(g))                    return 'prophecy';
-  if (/wisdom|poetry|psalm/.test(g))       return 'wisdom';
-  if (/epistle|letter/.test(g))            return 'epistle';
-  if (/history|acts|narrative/.test(g))    return 'history';
+  if (/torah|law|pentateuch/.test(g))   return 'torah';
+  if (/gospel/.test(g))                 return 'gospel';
+  if (/apocalyp|revelation/.test(g))    return 'apocalyptic';
+  if (/prophe/.test(g))                 return 'prophecy';
+  if (/wisdom|poetry|psalm/.test(g))    return 'wisdom';
+  if (/epistle|letter/.test(g))         return 'epistle';
+  if (/history|acts|narrative/.test(g)) return 'history';
   return 'epistle';
 }
 const genre = (meta.genre && /^(torah|history|wisdom|prophecy|gospel|epistle|apocalyptic)$/.test(meta.genre))
   ? meta.genre : bkGenre(book.genre);
 const testClass = book.testament === 'OT' ? 'bk-ot' : 'bk-nt';
-const bodyClass = `${testClass} bk-${genre} commentary-page`;
+const bodyClass = `${testClass} bk-${genre} commentary-page treatment-page`;
 const testamentLabel = book.testament === 'OT' ? 'Old Testament' : 'New Testament';
-const GENRE_LABEL = {
-  torah: 'Torah', history: 'History', wisdom: 'Wisdom & Poetry', prophecy: 'Prophecy',
-  gospel: 'Gospel', epistle: 'Epistle', apocalyptic: 'Apocalyptic',
-};
+const GENRE_LABEL = { torah: 'Torah', history: 'History', wisdom: 'Wisdom & Poetry', prophecy: 'Prophecy', gospel: 'Gospel', epistle: 'Epistle', apocalyptic: 'Apocalyptic' };
 const genreLabel = GENRE_LABEL[genre] || 'Scripture';
 const ov = meta.overview || {};
-const title = `${book.name} — Commentary — Kingdom Bible Study`;
-const description = `Verse-by-verse commentary on ${book.name} — the full treatment, section by section, drawing on the Cloud of Witnesses and attributed scholarship. AI-assisted.`;
-const readerHref = (ref) => `/read/?ref=${encodeURIComponent(ref)}`;
-const multiChapter = chapters.length > 1;
+const readerHref = (r) => `/read/?ref=${encodeURIComponent(r)}`;
+const title = `${book.name} — Full Treatment — Kingdom Bible Study`;
+const description = `The fullest study of ${book.name} on the site — intro, timeline, and a verse-by-verse synthesized commentary drawing on the Cloud of Witnesses and attributed scholarship. AI-assisted.`;
+
+const keyVerse = (intro && (intro.key_verse || (intro.key_verses && intro.key_verses[0] && intro.key_verses[0].ref))) || null;
+const timeline = (intro && intro.timeline) || null;
+const tlEvents = timeline ? [
+  ...(timeline.before || []).map(e => ({ ...e, phase: 'before' })),
+  ...(timeline.after || []).map(e => ({ ...e, phase: 'after' })),
+] : [];
+const keyPeople = (intro && intro.key_people) || [];
+const themes = (intro && intro.themes) || [];
+const outline = (intro && intro.outline) || [];
+const vocab = (study && study.key_vocabulary) || [];
+
+const multi = chapters.length > 1;
+const lazy = chapters.length > LAZY_THRESHOLD;
+// statically rendered chapters: all if not lazy, else just the first (lazy loads the rest)
+const staticChapters = lazy ? chapters.slice(0, 1) : chapters;
+const chapterList = chapters.map(c => c.ch);
 ---
 
-<Base entry="generic" title={title} description={description} bodyAttrs={{ class: bodyClass }} footer={false}>
+<Base entry="commentary" title={title} description={description} bodyAttrs={{ class: bodyClass }} footer={false}>
 <Fragment slot="head-end">
 <link rel="stylesheet" href="../../assets/css/book-study.css"><link rel="stylesheet" href="../../assets/css/commentary.css">
 </Fragment>
 <main>
-
-  <nav class="bk-tier-nav" aria-label="Study tiers" data-tier="commentary">
+  <nav class="bk-tier-nav" aria-label="Book" data-tier="commentary">
     <div class="bk-tier-nav__inner">
-      <a class="bk-tier-nav__book" href={tiers.guide ? '.' : readerHref(book.name)}>{book.name}</a>
-      <ol class="bk-tier-nav__list">
-        <li data-tier-item="guide" hidden={!tiers.guide}><a class="bk-tier-nav__link" href="index.html"><span class="bk-tier-nav__icon">◎</span><span class="bk-tier-nav__label">Book Guide</span><span class="bk-tier-nav__sub">Overview</span></a></li>
-        <li data-tier-item="deep-dive" hidden={!tiers.deepDive}><a class="bk-tier-nav__link" href="deep-dive.html"><span class="bk-tier-nav__icon">⊕</span><span class="bk-tier-nav__label">Bible Study Guide</span><span class="bk-tier-nav__sub">Group sessions</span></a></li>
-        <li data-tier-item="commentary"><a class="bk-tier-nav__link" href="commentary.html" aria-current="page"><span class="bk-tier-nav__icon">❧</span><span class="bk-tier-nav__label">Commentary</span><span class="bk-tier-nav__sub">Verse by verse</span></a></li>
-      </ol>
+      <a class="bk-tier-nav__book" href={readerHref(book.name)}>{book.name}</a>
+      <span class="bkc-treatment-tag">Full Treatment</span>
       <a class="bk-tier-nav__back" href="../../studies/">← All Studies</a>
     </div>
   </nav>
 
-  <div class="container commentary">
+  <div class="container commentary treatment"
+       data-book={book.id} data-book-name={book.name}
+       data-chapters={chapterList.join(',')} data-lazy={lazy ? '1' : ''}>
 
+    <!-- ══ INTRO ══ -->
     <header class="bk-hero bkc-hero">
       <div class="bk-hero__inner">
         <div class="bk-hero__badges">
           <span class="bk-badge bk-badge--testament">{testamentLabel}</span>
           <span class="bk-badge bk-badge--genre">{genreLabel}</span>
         </div>
-        <p class="bkc-hero__eyebrow">Commentary</p>
+        <p class="bkc-hero__eyebrow">Full Treatment</p>
         <h1 class="bk-hero__title">{book.name}</h1>
-        <p class="bk-hero__subtitle">The full treatment — section by section, verse by verse, with the Cloud of Witnesses and attributed scholarship.</p>
+        {intro && intro.purpose && <p class="bk-hero__subtitle">{intro.purpose}</p>}
+        {keyVerse && (
+          <blockquote class="bk-hero__key-verse">
+            <p><a class="ref" data-ref={keyVerse} href={readerHref(keyVerse)}>{keyVerse}</a></p>
+          </blockquote>
+        )}
       </div>
     </header>
 
@@ -126,28 +137,32 @@ const multiChapter = chapters.length > 1;
       <span class="bkc-aibadge">✦ AI-assisted · attributed sources · <a href="/about/">details</a></span>
     </div>
 
-    {intro && (intro.author || intro.date || intro.setting || intro.purpose) && (
+    {intro && (intro.author || intro.date || intro.setting) && (
       <div class="bk-facts bkc-facts">
         <dl class="bk-facts__grid">
           {intro.author  && <Fragment><dt>Author</dt><dd>{intro.author}</dd></Fragment>}
           {intro.date    && <Fragment><dt>Date</dt><dd>{intro.date}</dd></Fragment>}
           {intro.setting && <Fragment><dt>Setting</dt><dd>{intro.setting}</dd></Fragment>}
-          {intro.purpose && <Fragment><dt>Purpose</dt><dd>{intro.purpose}</dd></Fragment>}
+          {book.chapters && <Fragment><dt>Chapters</dt><dd>{book.chapters}</dd></Fragment>}
         </dl>
       </div>
     )}
 
-    <section class="bkc-overview" aria-label="Book overview">
+    <section class="bkc-overview" aria-label="Overview">
       <div class="bkc-rule" aria-hidden="true"><span class="bkc-rule__mark">✦</span></div>
       <div class="bkc-overview__grid">
         {ov.argument && <div class="bkc-od"><span class="bkc-od__label">The Argument</span><div class="bkc-od__body" set:html={ov.argument} /></div>}
         {ov.occasion && <div class="bkc-od"><span class="bkc-od__label">Occasion</span><div class="bkc-od__body" set:html={ov.occasion} /></div>}
         {ov.theology && <div class="bkc-od"><span class="bkc-od__label">Theology</span><div class="bkc-od__body" set:html={ov.theology} /></div>}
-        {ov.christ   && <div class="bkc-od"><span class="bkc-od__label">Christ in {book.name}</span><div class="bkc-od__body" set:html={ov.christ} /></div>}
+        {(ov.christ || (intro && intro.christ_connection)) && <div class="bkc-od"><span class="bkc-od__label">Christ in {book.name}</span><div class="bkc-od__body" set:html={ov.christ || intro.christ_connection} /></div>}
       </div>
-      {ov.structure && ov.structure.length > 0 && (
+    </section>
+
+    {(outline.length > 0 || (ov.structure && ov.structure.length > 0)) && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Structure</h2>
         <ol class="bkc-structure">
-          {ov.structure.map(s => (
+          {(ov.structure && ov.structure.length ? ov.structure.map(s => ({ label: s.label, range: s.range, gist: s.gist })) : outline.map(o => ({ label: o.label, range: (o.chapters || o.ref || ''), gist: '' }))).map(s => (
             <li class="bkc-structure__item">
               <span class="bkc-structure__range">{s.range}</span>
               <span class="bkc-structure__label">{s.label}</span>
@@ -155,70 +170,146 @@ const multiChapter = chapters.length > 1;
             </li>
           ))}
         </ol>
-      )}
-    </section>
+      </section>
+    )}
 
-    {chapters.map(chp => (
-      <section class="bkc-chapter" id={`ch-${chp.ch}`}>
-        {multiChapter && (
+    {tlEvents.length > 0 && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Timeline</h2>
+        <ol class="bkc-timeline">
+          {tlEvents.map(e => (
+            <li class={`bkc-tl__item bkc-tl__item--${e.phase}`}>
+              {e.year && <span class="bkc-tl__year">{e.year}</span>}
+              <span class="bkc-tl__label">{e.ref ? <a class="ref" data-ref={e.ref} href={readerHref(e.ref)}>{e.label}</a> : e.label}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {keyPeople.length > 0 && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Key people</h2>
+        <div class="bkc-people">
+          {keyPeople.map(p => (
+            <div class="bkc-person"><span class="bkc-person__name">{p.name}</span><span class="bkc-person__role">{p.role}</span></div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {themes.length > 0 && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Themes</h2>
+        <div class="bkc-themes">{themes.map(t => <span class="bkc-theme">{t}</span>)}</div>
+      </section>
+    )}
+
+    {vocab.length > 0 && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Key vocabulary</h2>
+        <dl class="bkc-vocab">
+          {vocab.map(v => (
+            <div class="bkc-vocab__row">
+              <dt class="bkc-vocab__term">{v.lemma}{v.translit && <span class="bkc-vocab__tr"> {v.translit}</span>}{v.gloss && <span class="bkc-vocab__gloss"> — “{v.gloss}”</span>}</dt>
+              {v.significance && <dd class="bkc-vocab__sig">{v.significance}</dd>}
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {study && study.language_notes && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Original language</h2>
+        <div class="bkc-prose" set:html={study.language_notes} />
+      </section>
+    )}
+
+    {(cult && cult.historical_context) && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Historical &amp; cultural context</h2>
+        <div class="bkc-prose"><p>{cult.historical_context}</p></div>
+        {gen && gen.literary_note && <div class="bkc-prose"><p><strong>Literary:</strong> {gen.literary_note}</p></div>}
+      </section>
+    )}
+
+    {study && study.reception && (
+      <section class="bkc-intro-block">
+        <h2 class="bkc-intro-head">Reception</h2>
+        <div class="bkc-prose" set:html={study.reception} />
+      </section>
+    )}
+
+    <!-- ══ COMMENTARY ══ -->
+    <div class="bkc-rule bkc-rule--major" aria-hidden="true"><span class="bkc-rule__mark">❦</span></div>
+    <h2 class="bkc-commentary-head">Commentary</h2>
+
+    {multi && (
+      <nav class="bkc-chapternav" aria-label="Chapters" data-current="1">
+        <span class="bkc-chapternav__label">Chapter</span>
+        <div class="bkc-chapternav__grid">
+          {chapterList.map(n => (
+            <a class={`bkc-chapternav__btn${n === chapterList[0] ? ' is-active' : ''}`} href={`#ch-${n}`} data-ch={n}>{n}</a>
+          ))}
+        </div>
+      </nav>
+    )}
+
+    <div id="bkc-commentary" class="bkc-commentary-host">
+      {staticChapters.map(chp => (
+        <section class="bkc-chapter" id={`ch-${chp.ch}`} data-ch={chp.ch}>
           <div class="bkc-chapter__head">
             <span class="bkc-chapter__num">{book.name} {chp.ch}</span>
+            {chp.title && <span class="bkc-chapter__title">{chp.title}</span>}
             <a class="bkc-chapter__read ref" data-ref={`${book.name} ${chp.ch}`} href={readerHref(`${book.name} ${chp.ch}`)}>read the chapter →</a>
           </div>
-        )}
-        {chp.sections.map((sec, i) => (
-          <article class="bkc-section" id={`ch-${chp.ch}-v-${sec.start}`}>
-            <h2 class="bkc-rubric">
-              <span class="bkc-rubric__mark" aria-hidden="true">❧</span>
-              <span class="bkc-rubric__label">{sec.pericope_label}</span>
-              {sec.range && <a class="bkc-rubric__ref ref" data-ref={`${book.name} ${chp.ch}:${sec.range}`} href={readerHref(`${book.name} ${chp.ch}:${sec.range}`)}>{book.name} {chp.ch}:{sec.range}</a>}
-            </h2>
 
-            {sec.exposition && (
-              <div class={`bkc-exposition${i === 0 ? ' bkc-exposition--lead' : ''}`} set:html={sec.exposition} />
-            )}
+          {chp.sections.map((sec, i) => (
+            <article class="bkc-section" id={`ch-${chp.ch}-v-${sec.start}`}>
+              <h3 class="bkc-rubric">
+                <span class="bkc-rubric__mark" aria-hidden="true">❧</span>
+                <span class="bkc-rubric__label">{sec.pericope_label}</span>
+                {sec.range && <a class="bkc-rubric__ref ref" data-ref={`${book.name} ${chp.ch}:${sec.range}`} href={readerHref(`${book.name} ${chp.ch}:${sec.range}`)}>{book.name} {chp.ch}:{sec.range}</a>}
+              </h3>
+              {sec.exposition && <div class={`bkc-exposition${i === 0 ? ' bkc-exposition--lead' : ''}`} set:html={sec.exposition} />}
+              {sec.original_language && <div class="bkc-lens bkc-lens--lang"><span class="bkc-lens__label">Original language</span><div class="bkc-lens__body" set:html={sec.original_language} /></div>}
+              {sec.historical_context && <div class="bkc-lens bkc-lens--hist"><span class="bkc-lens__label">Historical context</span><div class="bkc-lens__body" set:html={sec.historical_context} /></div>}
+              {sec.christ && <div class="bkc-lens bkc-lens--christ"><span class="bkc-lens__label">Christ here</span><div class="bkc-lens__body" set:html={sec.christ} /></div>}
+              {sec.verses && sec.verses.length > 0 && (
+                <dl class="bkc-verses">
+                  {sec.verses.map(v => (
+                    <div class="bkc-verse">
+                      <dt class="bkc-verse__num"><a class="ref" data-ref={`${book.name} ${chp.ch}:${v.v}`} href={readerHref(`${book.name} ${chp.ch}:${v.v}`)}>v.{v.v}</a></dt>
+                      <dd class="bkc-verse__note" set:html={v.note} />
+                    </div>
+                  ))}
+                </dl>
+              )}
+              {((sec.witnesses && sec.witnesses.length) || (sec.external && sec.external.length)) && (
+                <aside class="bkc-voices">
+                  <div class="bkc-voices__head">Voices on this section</div>
+                  {(sec.witnesses || []).map(w => (
+                    <div class="bkc-voice"><span class="bkc-voice__name">{w.voice}</span>{w.tradition && <span class="bkc-voice__trad">{w.tradition}</span>}{w.point && <span class="bkc-voice__point" set:html={w.point} />}</div>
+                  ))}
+                  {(sec.external || []).map(x => (
+                    <div class="bkc-voice bkc-voice--external"><span class="bkc-voice__name">{x.name}{x.work && <span class="bkc-voice__work">, {x.work}{x.year ? ` (${x.year})` : ''}</span>}</span><span class="bkc-voice__trad bkc-voice__trad--ext">external</span>{x.point && <span class="bkc-voice__point" set:html={x.point} />}</div>
+                  ))}
+                </aside>
+              )}
+              {sec.application && <div class="bkc-application"><span class="bkc-application__label">For today</span><div class="bkc-application__body" set:html={sec.application} /></div>}
+            </article>
+          ))}
 
-            {sec.verses && sec.verses.length > 0 && (
-              <dl class="bkc-verses">
-                {sec.verses.map(v => (
-                  <div class="bkc-verse">
-                    <dt class="bkc-verse__num"><a class="ref" data-ref={`${book.name} ${chp.ch}:${v.v}`} href={readerHref(`${book.name} ${chp.ch}:${v.v}`)}>v.{v.v}</a></dt>
-                    <dd class="bkc-verse__note" set:html={v.note} />
-                  </div>
-                ))}
-              </dl>
-            )}
-
-            {((sec.witnesses && sec.witnesses.length) || (sec.external && sec.external.length)) && (
-              <aside class="bkc-voices">
-                <div class="bkc-voices__head">Voices on this section</div>
-                {(sec.witnesses || []).map(w => (
-                  <div class="bkc-voice">
-                    <span class="bkc-voice__name">{w.voice}</span>
-                    {w.tradition && <span class="bkc-voice__trad">{w.tradition}</span>}
-                    {w.point && <span class="bkc-voice__point" set:html={w.point} />}
-                  </div>
-                ))}
-                {(sec.external || []).map(x => (
-                  <div class="bkc-voice bkc-voice--external">
-                    <span class="bkc-voice__name">{x.name}{x.work && <span class="bkc-voice__work">, {x.work}{x.year ? ` (${x.year})` : ''}</span>}</span>
-                    <span class="bkc-voice__trad bkc-voice__trad--ext">external</span>
-                    {x.point && <span class="bkc-voice__point" set:html={x.point} />}
-                  </div>
-                ))}
-              </aside>
-            )}
-
-            {sec.application && (
-              <div class="bkc-application">
-                <span class="bkc-application__label">For today</span>
-                <div class="bkc-application__body" set:html={sec.application} />
-              </div>
-            )}
-          </article>
-        ))}
-      </section>
-    ))}
+          {chp.reflection && chp.reflection.length > 0 && (
+            <div class="bkc-reflection">
+              <span class="bkc-reflection__label">For reflection</span>
+              <ol class="bkc-reflection__list">{chp.reflection.map(q => <li set:html={q} />)}</ol>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
 
     {(meta.witnesses && meta.witnesses.length > 0) || (meta.external && meta.external.length > 0) ? (
       <section class="bkc-sources" aria-label="Sources drawn on">
@@ -234,10 +325,10 @@ const multiChapter = chapters.length > 1;
             ))}
           </ul>
         )}
-        <p class="bkc-sources__note">This commentary is AI-assisted: it distils the site's Cloud-of-Witnesses catena and names external scholarship in paraphrase — no source is reproduced verbatim. See <a href="/about/">Citation &amp; Provenance</a>.</p>
+        <p class="bkc-sources__note">This treatment is AI-assisted: it consolidates the site's per-book study data and distils the Cloud-of-Witnesses catena, naming external scholarship in paraphrase — no source is reproduced verbatim. See <a href="/about/">Citation &amp; Provenance</a>.</p>
       </section>
     ) : null}
 
-  </div><!-- /.commentary -->
+  </div><!-- /.treatment -->
 </main>
 </Base>

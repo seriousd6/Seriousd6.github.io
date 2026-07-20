@@ -1,9 +1,24 @@
-# Book Capstone Plan — filling the Studies tool for all 66 books
+# Book Capstone Plan — the one Full Treatment per book
 
-> Authored 2026-07-19. The design spine for three autonomous content loops that
-> fill in the **Studies tool** (`/studies/`) so every book of the Bible carries
-> all three study tiers. Keep this current if the contract changes; the loop
-> procedure docs in `docs/agents/` implement what this file specifies.
+> Authored 2026-07-19; **reshaped 2026-07-20** to a single per-book treatment.
+> The design spine for the **Studies tool** (`/studies/`): one autonomous loop that
+> builds, for every book, **one "Full Treatment" page** — the fullest book-level
+> study on the site. Keep this current if the contract changes.
+>
+> ## 2026-07-20 reshape — three tiers collapsed into one
+>
+> The earlier three-tier model (Guide + Bible Study Guide + Commentary) was
+> **collapsed to remove repetition**. There is now **one page per book**: a rich
+> **Intro** (consolidating everything already on the site per book — overview,
+> author/date/setting/purpose, themes, outline, **timeline**, key people, key
+> vocabulary + language notes, reception, and literary/cultural context) followed
+> by the **fully synthesized commentary** in **per-chapter divisions** (each with
+> original-language / historical-context / Christ lenses, verse-by-verse notes, the
+> Cloud of Witnesses + external scholarship, and an optional "For reflection" set).
+> Many-chapter books (Psalms, Isaiah) use a **chapter picker + lazy-load**. The
+> separate Guide and Bible-Study-Guide tiers/pages are **retired** (their best
+> content folds into the Intro and the per-chapter reflection). Sections below that
+> still describe three tiers are historical — the single-treatment model governs.
 
 ## The target: the Studies tool
 
@@ -136,7 +151,11 @@ narrative blocks may span chapters.
 
 ### Tier 3 — `data/commentary/exposition/<book>/` (the capstone)
 Two file kinds per book, mirroring the site's existing book-level /
-per-chapter split (cf. `data/synthesis/<book>.json` + `<book>/<ch>.json`).
+per-chapter split (cf. `data/synthesis/<book>.json` + `<book>/<ch>.json`). The
+commentary is the **full synthesis** — for each section and verse, as many
+perspectives as the text warrants: original language, historical context, Christ,
+the Cloud of Witnesses, and attributed external scholarship (rendered as
+per-section "lens" blocks on the page).
 
 **`_book.json`** — book-level commentary overview:
 ```json
@@ -163,14 +182,17 @@ verse-by-verse:
   "1": {
     "pericope_label": "Greeting",
     "range": "1-3",
-    "exposition": "<html>",       // flowing commentary on the section as a whole (gets the illuminated drop cap)
+    "exposition": "<html>",           // flowing commentary on the section (gets the illuminated drop cap)
+    "original_language": "<html>",    // optional — key Greek/Hebrew terms; what English loses
+    "historical_context": "<html>",   // optional — setting / background behind the section
+    "christ": "<html>",               // optional — Christ in this section
     "verses": [
-      { "v": "1", "note": "<html>" },   // verse-by-verse, weaving the attributed voices inline
+      { "v": "1", "note": "<html>" }, // verse-by-verse, weaving witnesses + perspectives inline
       { "v": "2", "note": "<html>" }
     ],
     "witnesses": [ { "voice": "John Chrysostom", "tradition": "eastern", "point": "…" } ],
     "external":  [ { "name": "…", "point": "…" } ],
-    "application": "<html>"        // optional
+    "application": "<html>"           // optional
   }
 }
 ```
@@ -188,20 +210,35 @@ never copied verbatim** — the same posture the COW synthesis uses for its
 witnesses. This keeps the [provenance loop](../agents/provenance-loop.md) able
 to validate `_source` presence across the new trees.
 
-## Frontier rules (how each loop knows what's next)
+## The pipeline (combined, gated) — how ordering works
 
-Progress is **derived from the data tree**, per the repo's autonomous-loop
-policy (`CLAUDE.md`) — the human tracker tables in each loop doc are a
-dashboard, not the source of truth.
+The three tiers run as **one gated pipeline per book**: Guide → Bible Study Guide
+→ Commentary, each stage startable only after the previous is `✅` (Guide starts
+from 0). Ordering, claims, and the reframe backlog are governed by a **single
+tracker**, not per-loop frontiers:
+[agents/study-pipeline.md](../agents/study-pipeline.md) +
+[agents/study-pipeline-tracker.md](../agents/study-pipeline-tracker.md). Each
+iteration: claim a tracker cell → do the stage → validate → flip
+`books-content.json` → mark the tracker `✅`, all in one commit. The three stage
+docs own each stage's schema and quality bar; the pipeline owns the order.
 
-- **Guide**: walk `books.json` in canonical order; next unit = first book whose
-  `data/books/guide/<book>.json` is missing.
-- **Bible Study Guide**: same walk; next unit = first book whose
-  `data/books/study-guide/<book>.json` is missing.
-- **Commentary**: walk `books.json`; within a book, walk chapters `1..N`; next
-  unit = first `(book, ch)` whose `data/commentary/exposition/<book>/<ch>.json`
-  is missing, given `_book.json` exists (write `_book.json` first). A book is
-  "done" when all its chapters plus `_book.json` exist.
+## Reframing the hand-authored books
+
+Four books already have hand-authored pages whose content is **mis-tiered** under
+the new definitions (`romans`, `psalms`, `revelation`, `hebrews`; the topical
+`sermon-on-the-mount` is not a tracked book). Their Guide/Study-Guide stages
+**re-sort existing content** into the correct tier rather than writing cold —
+marked `♻️` in the tracker.
+
+**Worked example — Hebrews** (its two pages are effectively swapped):
+- `study-guides/hebrews/` ("Study Guide") is a 13-chapter chapter-by-chapter study
+  (*The Argument* + OT-background boxes + discussion questions) → this is
+  **Bible Study Guide** (Tier 2) content: one session per chapter.
+- `topics/hebrews/deep-dive.astro` ("Bible Study Guide") is a book overview (hero,
+  facts, outline, genre & rhetorical structure) → **morph into the Guide**
+  (Tier 1): orientation, how-to-read, structure, Christ, key passages, themes.
+Then Commentary (Tier 3) is generated fresh as the full synthesis. Full procedure:
+[agents/study-pipeline.md](../agents/study-pipeline.md) ("Reframe rule").
 
 ## Validation
 

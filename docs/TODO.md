@@ -9,23 +9,22 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 ### Looping work — fills the Studies tool (`/studies/`)
 
 > Shared architecture: [plans/book-capstone-plan.md](plans/book-capstone-plan.md).
-> Each loop derives its frontier from the data tree, commits per work-unit, and
-> must pass `python scripts/validate-commentary.py` (or `validate-synthesis.py`)
-> before committing. No pushes without owner approval.
+> The book pipeline is claimed + tracked in one place
+> ([agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md)); COW +
+> provenance derive their frontier from the data tree. Every loop commits per
+> work-unit and must pass its validator before committing. No pushes without
+> owner approval.
 
+- [ ] **Book Treatment loop** — the single per-book study that fills the Studies
+  tool for all 66 books: **one Full Treatment** per book (auto-assembled intro +
+  synthesized multi-perspective commentary in per-chapter divisions, chapter
+  picker + lazy-load for big books). One tracker, agent-claimed. Entry:
+  [agents/study-pipeline.md](agents/study-pipeline.md); tracker:
+  [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md). Seeded:
+  **Philemon**. Reframe backlog (`♻️`): romans, psalms, revelation, hebrews.
 - [ ] **COW synthesis loop — continue at the frontier** (2 Kings 14; 602
   chapters remain of 1,189; corpus currently validates clean). Procedure:
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
-- [ ] **Book Commentary loop — the capstone** (Studies Tier 3). Full section→verse
-  treatment per book: internal Cloud of Witnesses + attributed external sources,
-  illuminated page. **Seed reference: Philemon** (overview + ch 1, live at
-  `topics/philemon/commentary.html`). Frontier = first `(book, ch)` missing under
-  `data/commentary/exposition/`. [agents/book-commentary-loop.md](agents/book-commentary-loop.md).
-- [ ] **Book Guide loop** (Studies Tier 1) — general overview per book →
-  `data/books/guide/<book>.json`. [agents/book-guide-loop.md](agents/book-guide-loop.md).
-- [ ] **Bible Study Guide loop** (Studies Tier 2, formerly "Deep Dive") —
-  chapter-by-chapter group session guides → `data/books/study-guide/<book>.json`.
-  [agents/book-study-guide-loop.md](agents/book-study-guide-loop.md).
 - [ ] **Provenance loop — add `_source` fields** across the data tree, AI-generated
   content first. [agents/provenance-loop.md](agents/provenance-loop.md).
 - [ ] **Owner: run [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)** (19 points,
@@ -45,16 +44,15 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 
 ## Next
 
-- [x] **Generated pages for all three tiers** — built: `topics/[book]/index.astro`
-  (Guide), `topics/[book]/deep-dive.astro` (Bible Study Guide),
-  `topics/[book]/commentary.astro` (Commentary). Each `getStaticPaths` over its
-  loop's data tree, auto-excluding the hand-authored literal dirs. **Philemon**
-  seeds all three. The three loops now just need to produce data per book.
-- [ ] Reconcile the legacy `/study-guides/` hub (5 hand-authored) with the per-book
-  Bible Study Guide tier once the loop produces session data.
-- [ ] The 5 hand-authored "Deep Dive" pages still hold scholarly content under the
-  new **Bible Study Guide** label — superseded by the study-guide loop as it reaches
-  each book (romans, psalms, revelation, hebrews, sermon-on-the-mount).
+- [x] **One Full Treatment page** built — `topics/[book]/commentary.astro`: rich
+  intro (overview, timeline, key people, vocabulary, language, reception, literary/
+  cultural) + synthesized commentary in per-chapter divisions + per-chapter
+  reflection + chapter-picker/lazy-load. **Philemon** seeds it. (2026-07-20 reshape
+  collapsed the three tiers into this; the Guide/Study-Guide pages + docs were removed.)
+- [ ] Retire/redirect the hand-authored `topics/{romans,psalms,revelation,hebrews}/`
+  {index,deep-dive} pages and the `/study-guides/` hub once each book's Full
+  Treatment is generated (reframe folds their content in — see
+  [agents/study-pipeline.md](agents/study-pipeline.md)).
 - [ ] Delete merged remote branch `claude/repo-overhaul-context-1ixq9c`
   (0 ahead of master; remote op — bundle with the next approved push).
 - [ ] Audit leftovers ([archive/AUDIT.md](archive/AUDIT.md)): verse-ranking

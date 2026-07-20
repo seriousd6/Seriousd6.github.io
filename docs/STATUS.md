@@ -1,7 +1,7 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-07-19** (Studies capstone: 3 loops + illuminated Commentary page)
+> Last updated: **2026-07-20** (Studies reshape: one Full Treatment per book)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -16,18 +16,20 @@
   2 Kings 14); the 62 legacy validator failures (John 4, Luke 13, Genesis 41,
   1 Samuel 5) are repaired and the full corpus validates clean;
   OL Phase 4b pending the owner review ([REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)).
-- **Studies capstone (new 2026-07-19)**: three loops now fill the Studies tool
-  (`/studies/`) for all 66 books — Book Guide (Tier 1), Bible Study Guide (Tier 2,
-  renamed from "Deep Dive"), and the Book Commentary capstone (Tier 3). The
-  illuminated per-book Commentary page is built (`topics/[book]/commentary.astro`
-  + `assets/css/commentary.css`), seeded with **Philemon** (section→verse, Cloud
-  of Witnesses + attributed external scholarship, AI-assisted). Guarded by
-  `scripts/validate-commentary.py` (wired into CI). Plan:
-  [plans/book-capstone-plan.md](plans/book-capstone-plan.md). **All three tier
-  page templates are built** (`topics/[book]/{index,deep-dive,commentary}.astro`),
-  and **Philemon** now seeds all three tiers (Guide + Bible Study Guide + Commentary),
-  lighting every badge on its Studies card. The loops now just produce per-book data.
-  Philemon commentary is **deployed** (pushed 2026-07-19).
+- **Studies — one Full Treatment per book (reshaped 2026-07-20)**: the earlier
+  three tiers were **collapsed into a single per-book page** — a rich intro
+  (overview, **timeline**, key people, key vocabulary, language notes, reception,
+  literary/cultural — auto-consolidated from the existing data trees) followed by
+  the synthesized commentary in per-chapter divisions (original-language /
+  historical / Christ lenses, verse-by-verse, Cloud of Witnesses + attributed
+  external scholarship, per-chapter "For reflection"), with a chapter picker +
+  lazy-load for many-chapter books. Page `topics/[book]/commentary.astro` +
+  `assets/js/entries/commentary.js` + `assets/css/commentary.css`; one loop + one
+  tracker ([agents/study-pipeline.md](agents/study-pipeline.md)). Seeded:
+  **Philemon**. The Guide/Study-Guide tiers, pages, data, and stage docs were
+  removed. Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier
+  3-tier commit was pushed but its deploy is stuck in an ongoing GitHub Actions
+  outage; this reshape supersedes it and is **local-only pending review**.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

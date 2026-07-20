@@ -222,6 +222,31 @@
   text-shadow: 0 1px 0 color-mix(in srgb, var(--ill-gild) 55%, transparent);
 }
 
+/* ── Perspective lenses (original language / historical context / Christ) ── */
+.commentary-page .bkc-lens {
+  margin: 0.85rem 0;
+  padding: 0.7rem 1rem 0.75rem 1.1rem;
+  border-left: 3px solid var(--lens-color, var(--color-accent));
+  border-radius: 0 6px 6px 0;
+  background: color-mix(in srgb, var(--lens-color, var(--color-accent)) 6%, var(--color-surface));
+}
+.commentary-page .bkc-lens__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lens-color, var(--color-accent));
+  margin-bottom: 0.3rem;
+}
+.commentary-page .bkc-lens__body { font-family: var(--font-body); font-size: 0.96rem; line-height: 1.7; color: var(--color-text); }
+.commentary-page .bkc-lens__body p { margin: 0 0 0.5rem; }
+.commentary-page .bkc-lens__body p:last-child { margin-bottom: 0; }
+.commentary-page .bkc-lens--lang   { --lens-color: var(--color-accent); }   /* brass — language */
+.commentary-page .bkc-lens--hist   { --lens-color: var(--color-primary); }  /* olive — history */
+.commentary-page .bkc-lens--christ { --lens-color: var(--color-ember); }    /* ember — Christ */
+
 /* ── Verse-by-verse notes ──────────────────────────────────── */
 .commentary-page .bkc-verses {
   margin: 1rem 0 1.25rem;
@@ -358,6 +383,95 @@
 .commentary-page .bkc-sources__ext li { margin-bottom: 0.3rem; }
 .commentary-page .bkc-sources__note { font-size: 0.8rem; color: var(--color-muted); font-style: italic; }
 .commentary-page .bkc-sources__note a { color: var(--color-accent); }
+
+/* ── Full-treatment intro consolidation ────────────────────── */
+.treatment-page .bkc-treatment-tag {
+  font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--color-on-primary, #fff);
+  background: var(--color-accent); border-radius: 999px; padding: 0.12rem 0.55rem; white-space: nowrap;
+}
+.treatment-page .bkc-intro-block { margin: var(--space-lg) 0; }
+.treatment-page .bkc-intro-head {
+  font-family: var(--font-ui); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--color-accent);
+  margin: 0 0 0.7rem; padding-bottom: 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--ill-gild) 30%, transparent);
+}
+.treatment-page .bkc-prose { font-family: var(--font-body); font-size: 0.99rem; line-height: 1.75; color: var(--color-text); max-width: 68ch; }
+.treatment-page .bkc-prose p { margin: 0 0 0.7rem; }
+.treatment-page .bkc-prose p:last-child { margin-bottom: 0; }
+
+/* Timeline — vertical, gilt spine */
+.treatment-page .bkc-timeline { list-style: none; margin: 0; padding: 0 0 0 1rem; border-left: 2px solid color-mix(in srgb, var(--ill-gild) 40%, transparent); }
+.treatment-page .bkc-tl__item { position: relative; padding: 0.3rem 0 0.55rem 0.9rem; font-size: 0.93rem; line-height: 1.55; }
+.treatment-page .bkc-tl__item::before {
+  content: ""; position: absolute; left: -1.42rem; top: 0.62rem; width: 9px; height: 9px; border-radius: 50%;
+  background: var(--ill-gild); box-shadow: 0 0 0 3px var(--color-bg);
+}
+.treatment-page .bkc-tl__item--after::before { background: var(--color-primary); }
+.treatment-page .bkc-tl__year { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; color: var(--color-accent); margin-right: 0.5rem; }
+.treatment-page .bkc-tl__label { color: var(--color-text); }
+
+/* Key people */
+.treatment-page .bkc-people { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.6rem; }
+.treatment-page .bkc-person { border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: 0 6px 6px 0; padding: 0.6rem 0.85rem; background: var(--color-surface); }
+.treatment-page .bkc-person__name { display: block; font-family: var(--font-body); font-weight: bold; color: var(--color-heading); margin-bottom: 0.2rem; }
+.treatment-page .bkc-person__role { font-size: 0.88rem; line-height: 1.55; color: var(--color-muted); }
+
+/* Themes */
+.treatment-page .bkc-themes { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.treatment-page .bkc-theme {
+  font-family: var(--font-ui); font-size: 0.76rem; font-weight: 600;
+  background: color-mix(in srgb, var(--color-accent) 10%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+  color: var(--color-accent); border-radius: 999px; padding: 0.2rem 0.7rem;
+}
+
+/* Key vocabulary */
+.treatment-page .bkc-vocab { margin: 0; }
+.treatment-page .bkc-vocab__row { padding: 0.55rem 0; border-bottom: 1px solid var(--color-border); }
+.treatment-page .bkc-vocab__row:last-child { border-bottom: none; }
+.treatment-page .bkc-vocab__term { font-family: var(--font-body); font-size: 1.02rem; color: var(--color-heading); margin: 0; }
+.treatment-page .bkc-vocab__tr { font-style: italic; color: var(--color-muted); font-size: 0.9rem; }
+.treatment-page .bkc-vocab__gloss { color: var(--color-accent); font-size: 0.92rem; }
+.treatment-page .bkc-vocab__sig { margin: 0.2rem 0 0; font-size: 0.92rem; line-height: 1.6; color: var(--color-text); }
+
+/* Major divider + commentary heading */
+.commentary-page .bkc-rule--major { margin: var(--space-xl) 0 var(--space-md); }
+.commentary-page .bkc-rule--major .bkc-rule__mark { font-size: 1.3rem; }
+.commentary-page .bkc-commentary-head {
+  font-family: var(--font-body); font-size: 1.7rem; font-weight: 900; text-align: center;
+  color: var(--bk-accent, var(--color-primary)); margin: 0 0 var(--space-md); letter-spacing: 0.01em;
+}
+.commentary-page .bkc-chapter__title { font-family: var(--font-body); font-style: italic; color: var(--color-text-soft, var(--color-muted)); font-size: 0.95rem; }
+
+/* Chapter picker */
+.commentary-page .bkc-chapternav {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.55rem 0; margin: 0 0 var(--space-md);
+  background: var(--color-bg); border-bottom: 1px solid color-mix(in srgb, var(--ill-gild) 30%, transparent);
+}
+.commentary-page .bkc-chapternav__label { font-family: var(--font-ui); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted); flex-shrink: 0; }
+.commentary-page .bkc-chapternav__grid { display: flex; flex-wrap: wrap; gap: 0.3rem; overflow-x: auto; }
+.commentary-page .bkc-chapternav__btn {
+  font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; min-width: 1.9rem; text-align: center;
+  padding: 0.2rem 0.5rem; border-radius: 6px; border: 1px solid var(--color-border);
+  background: var(--color-surface); color: var(--color-muted); text-decoration: none;
+}
+.commentary-page .bkc-chapternav__btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.commentary-page .bkc-chapternav__btn.is-active { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-primary, #fff); }
+
+/* For-reflection block */
+.commentary-page .bkc-reflection {
+  margin: 1.25rem 0 0; padding: 0.9rem 1.15rem; border-radius: 8px;
+  background: color-mix(in srgb, var(--color-primary) 5%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+.commentary-page .bkc-reflection__label { display: block; font-family: var(--font-ui); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.5rem; }
+.commentary-page .bkc-reflection__list { margin: 0 0 0 1.2rem; padding: 0; font-size: 0.94rem; line-height: 1.6; }
+.commentary-page .bkc-reflection__list li { margin-bottom: 0.45rem; }
+.commentary-page .bkc-reflection__list li:last-child { margin-bottom: 0; }
 
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 600px) {
