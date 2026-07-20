@@ -1,7 +1,7 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-07-20** (Studies reshape: one Full Treatment per book)
+> Last updated: **2026-07-20** (Studies reshape + Hebrews Full Treatment reframe)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -25,11 +25,14 @@
   external scholarship, per-chapter "For reflection"), with a chapter picker +
   lazy-load for many-chapter books. Page `topics/[book]/commentary.astro` +
   `assets/js/entries/commentary.js` + `assets/css/commentary.css`; one loop + one
-  tracker ([agents/study-pipeline.md](agents/study-pipeline.md)). Seeded:
-  **Philemon**. The Guide/Study-Guide tiers, pages, data, and stage docs were
-  removed. Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier
-  3-tier commit was pushed but its deploy is stuck in an ongoing GitHub Actions
-  outage; this reshape supersedes it and is **local-only pending review**.
+  tracker ([agents/study-pipeline.md](agents/study-pipeline.md)). Done:
+  **Philemon** (seed, 1 ch) and **Hebrews** (reframe — overview + 13 chapters,
+  303 verse notes, generated via a 12-agent fan-out; the hand-authored
+  `deep-dive` + `study-guides/hebrews/` pages now redirect to the treatment).
+  The Guide/Study-Guide tiers, pages, data, and stage docs were removed. Guarded
+  by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit was
+  pushed but its deploy is stuck in an ongoing GitHub Actions outage; this reshape
+  + the Hebrews treatment supersede it and are **local-only pending review**.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

@@ -974,18 +974,18 @@
     },
     "hebrews": {
       "guide": {
-        "exists": true,
+        "exists": false,
         "url": "study-guides/hebrews/"
       },
       "deep_dive": {
-        "exists": true,
+        "exists": false,
         "url": "topics/hebrews/deep-dive.html"
       },
       "commentary": {
-        "exists": false,
+        "exists": true,
         "url": "topics/hebrews/commentary.html",
-        "coverage": "none",
-        "chapters_done": [],
+        "coverage": "full",
+        "chapters_done": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
         "chapters_total": 13
       }
     },

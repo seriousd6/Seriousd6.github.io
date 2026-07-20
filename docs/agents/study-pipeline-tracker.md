@@ -9,8 +9,9 @@
 > `✅` complete (overview + all chapters exist + validate) · `♻️` reframe (fold
 > existing hand-authored content into the treatment).
 >
-> Snapshot: **1/66** treatments complete, **4** to reframe. Reference
-> exemplar: **Philemon**. Reframe exemplar: **Hebrews**.
+> Snapshot: **2/66** treatments complete, **3** to reframe. Reference
+> exemplar: **Philemon**. Reframe exemplar (done): **Hebrews** (overview +
+> 13 chapters, 303 verse notes).
 
 | # | Book | T | Ch | Full Treatment |
 |---:|------|:--:|--:|:--------------:|
@@ -71,7 +72,7 @@
 | 55 | 2 Timothy | NT | 4 | ⬜ |
 | 56 | Titus | NT | 3 | ⬜ |
 | 57 | Philemon | NT | 1 | ✅ |
-| 58 | Hebrews | NT | 13 | ♻️ |
+| 58 | Hebrews | NT | 13 | ✅ |
 | 59 | James | NT | 5 | ⬜ |
 | 60 | 1 Peter | NT | 5 | ⬜ |
 | 61 | 2 Peter | NT | 3 | ⬜ |

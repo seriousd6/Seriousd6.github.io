@@ -20,8 +20,9 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   synthesized multi-perspective commentary in per-chapter divisions, chapter
   picker + lazy-load for big books). One tracker, agent-claimed. Entry:
   [agents/study-pipeline.md](agents/study-pipeline.md); tracker:
-  [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md). Seeded:
-  **Philemon**. Reframe backlog (`♻️`): romans, psalms, revelation, hebrews.
+  [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md). Done:
+  **Philemon** (seed), **Hebrews** (reframe — overview + 13 ch, 303 verse notes).
+  Reframe backlog (`♻️`): romans, psalms, revelation.
 - [ ] **COW synthesis loop — continue at the frontier** (2 Kings 14; 602
   chapters remain of 1,189; corpus currently validates clean). Procedure:
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
@@ -49,10 +50,12 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   cultural) + synthesized commentary in per-chapter divisions + per-chapter
   reflection + chapter-picker/lazy-load. **Philemon** seeds it. (2026-07-20 reshape
   collapsed the three tiers into this; the Guide/Study-Guide pages + docs were removed.)
-- [ ] Retire/redirect the hand-authored `topics/{romans,psalms,revelation,hebrews}/`
+- [ ] Retire/redirect the hand-authored `topics/{romans,psalms,revelation}/`
   {index,deep-dive} pages and the `/study-guides/` hub once each book's Full
   Treatment is generated (reframe folds their content in — see
-  [agents/study-pipeline.md](agents/study-pipeline.md)).
+  [agents/study-pipeline.md](agents/study-pipeline.md)). **Hebrews done**
+  (`topics/hebrews/deep-dive.astro` + `study-guides/hebrews/` now redirect to the
+  Full Treatment).
 - [ ] Delete merged remote branch `claude/repo-overhaul-context-1ixq9c`
   (0 ahead of master; remote op — bundle with the next approved push).
 - [ ] Audit leftovers ([archive/AUDIT.md](archive/AUDIT.md)): verse-ranking
