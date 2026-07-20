@@ -45,12 +45,11 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 
 ## Next
 
-- [ ] **Generated pages for Tiers 1 & 2**: render Book Guide (`topics/[book]/`)
-  and Bible Study Guide (`topics/[book]/deep-dive`) from the loop data via
-  `getStaticPaths`, reusing the finished `book-study.css` `bk-*` template and
-  excluding the 5 hand-authored literal dirs. The Tier 3 commentary page
-  (`topics/[book]/commentary.astro`) is already built; these two are the next
-  render step so the guide/study-guide loops light up their badges.
+- [x] **Generated pages for all three tiers** — built: `topics/[book]/index.astro`
+  (Guide), `topics/[book]/deep-dive.astro` (Bible Study Guide),
+  `topics/[book]/commentary.astro` (Commentary). Each `getStaticPaths` over its
+  loop's data tree, auto-excluding the hand-authored literal dirs. **Philemon**
+  seeds all three. The three loops now just need to produce data per book.
 - [ ] Reconcile the legacy `/study-guides/` hub (5 hand-authored) with the per-book
   Bible Study Guide tier once the loop produces session data.
 - [ ] The 5 hand-authored "Deep Dive" pages still hold scholarly content under the

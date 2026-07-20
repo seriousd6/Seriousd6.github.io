@@ -1,0 +1,167 @@
+---
+// Per-book Bible Study Guide — Tier 2 of the Studies tool (formerly "Deep Dive").
+//
+// One static page per book that has data/books/study-guide/<book>.json — the
+// chapter-by-chapter group session guides. Route: /topics/<book>/deep-dive.html
+// (the reserved deep_dive URL; internal slug kept for stability). Yields ONLY
+// books without a hand-authored literal topics/<book>/deep-dive.astro (romans,
+// psalms, revelation, hebrews, sermon-on-the-mount), so no route collision.
+//
+// Chrome reuses book-study.css (bk-*); session layout is scoped inline (bsg-*).
+// See docs/agents/book-study-guide-loop.md + docs/plans/book-capstone-plan.md.
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const readJSON = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return null; } };
+  const books = readJSON(path.resolve('./data/bible/books.json')) || [];
+  const content = readJSON(path.resolve('./data/books-content.json')) || { books: {} };
+  const out = [];
+  for (const b of books) {
+    const sg = readJSON(path.resolve('./data/books/study-guide', `${b.id}.json`));
+    if (!sg) continue;
+    if (fs.existsSync(path.resolve('./src/pages/topics', b.id, 'deep-dive.astro'))) continue;
+    const bc = (content.books && content.books[b.id]) || {};
+    out.push({
+      params: { book: b.id },
+      props: {
+        book: b, sg,
+        tiers: {
+          guide:      !!(bc.guide && bc.guide.exists),
+          commentary: !!(bc.commentary && bc.commentary.exists),
+        },
+      },
+    });
+  }
+  return out;
+}
+
+const { book, sg, tiers } = Astro.props;
+
+function bkGenre(g) {
+  g = (g || '').toLowerCase();
+  if (/torah|law|pentateuch/.test(g))   return 'torah';
+  if (/gospel/.test(g))                 return 'gospel';
+  if (/apocalyp|revelation/.test(g))    return 'apocalyptic';
+  if (/prophe/.test(g))                 return 'prophecy';
+  if (/wisdom|poetry|psalm/.test(g))    return 'wisdom';
+  if (/epistle|letter/.test(g))         return 'epistle';
+  if (/history|acts|narrative/.test(g)) return 'history';
+  return 'epistle';
+}
+const genre = bkGenre(book.genre);
+const testClass = book.testament === 'OT' ? 'bk-ot' : 'bk-nt';
+const testamentLabel = book.testament === 'OT' ? 'Old Testament' : 'New Testament';
+const GENRE_LABEL = { torah: 'Torah', history: 'History', wisdom: 'Wisdom & Poetry', prophecy: 'Prophecy', gospel: 'Gospel', epistle: 'Epistle', apocalyptic: 'Apocalyptic' };
+const readerHref = (r) => `/read/?ref=${encodeURIComponent(r)}`;
+const title = `${book.name} — Bible Study Guide — Kingdom Bible Study`;
+const description = `A chapter-by-chapter Bible study guide for ${book.name} — group session questions for observation, interpretation, and application.`;
+const sessions = sg.sessions || [];
+---
+
+<Base title={title} description={description} bodyAttrs={{ class: `${testClass} bk-${genre}` }}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../../assets/css/book-study.css">
+<style is:inline>
+  .bsg-intro { font-family: var(--font-body); font-size: 1rem; line-height: 1.75; color: var(--color-text); max-width: 66ch; margin: 0 0 var(--space-lg); }
+  .bsg-session { border: 1px solid var(--bk-accent-soft, var(--color-border)); border-radius: 10px; background: var(--color-surface); padding: 1.1rem 1.35rem 1.35rem; margin: 0 0 1.1rem; scroll-margin-top: 4rem; }
+  .bsg-session__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; padding-bottom: 0.5rem; margin-bottom: 0.8rem; border-bottom: 2px solid var(--bk-accent-soft, var(--color-border)); }
+  .bsg-session__num { font-family: var(--font-ui); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bk-accent, var(--color-primary)); background: var(--bk-accent-soft, rgba(0,0,0,0.05)); padding: 0.15rem 0.6rem; border-radius: 999px; }
+  .bsg-session__title { font-family: var(--font-body); font-size: 1.25rem; font-weight: bold; color: var(--bk-accent, var(--color-heading)); margin: 0; }
+  .bsg-session__range { margin-left: auto; font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-muted); text-decoration: none; }
+  .bsg-bigidea { border-left: 4px solid var(--bk-accent, var(--color-primary)); background: var(--bk-accent-dim, rgba(0,0,0,0.03)); border-radius: 0 6px 6px 0; padding: 0.7rem 1rem; margin: 0 0 0.9rem; font-family: var(--font-body); }
+  .bsg-bigidea__label { display: block; font-family: var(--font-ui); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bk-accent, var(--color-primary)); margin-bottom: 0.25rem; }
+  .bsg-bigidea p { margin: 0; }
+  .bsg-line { font-size: 0.95rem; line-height: 1.6; margin: 0.6rem 0; }
+  .bsg-tag { display: inline-block; font-family: var(--font-ui); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--bk-accent, var(--color-primary)); border-radius: 999px; padding: 0.08rem 0.5rem; margin-right: 0.45rem; vertical-align: 0.08em; }
+  .bsg-tag--pray { background: var(--color-ember); }
+  .bsg-qgroup { margin: 0.85rem 0 0; }
+  .bsg-qgroup__label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bk-accent, var(--color-primary)); margin: 0 0 0.35rem; }
+  .bsg-qlist { margin: 0 0 0 1.2rem; padding: 0; font-size: 0.95rem; line-height: 1.6; }
+  .bsg-qlist li { margin-bottom: 0.4rem; }
+  .bsg-leader { margin-top: 1rem; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-surface-subtle, rgba(0,0,0,0.02)); padding: 0.4rem 0.9rem; }
+  .bsg-leader > summary { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-muted); cursor: pointer; padding: 0.35rem 0; }
+  .bsg-leader[open] > summary { margin-bottom: 0.4rem; border-bottom: 1px solid var(--color-border); }
+  .bsg-leader__body { font-size: 0.92rem; line-height: 1.65; color: var(--color-text); padding-bottom: 0.4rem; }
+</style>
+</Fragment>
+<main>
+
+  <nav class="bk-tier-nav" aria-label="Study tiers" data-tier="deep-dive">
+    <div class="bk-tier-nav__inner">
+      <a class="bk-tier-nav__book" href={tiers.guide ? '.' : readerHref(book.name)}>{book.name}</a>
+      <ol class="bk-tier-nav__list">
+        <li data-tier-item="guide" hidden={!tiers.guide}><a class="bk-tier-nav__link" href="index.html"><span class="bk-tier-nav__icon">◎</span><span class="bk-tier-nav__label">Book Guide</span><span class="bk-tier-nav__sub">Overview</span></a></li>
+        <li data-tier-item="deep-dive"><a class="bk-tier-nav__link" href="deep-dive.html" aria-current="page"><span class="bk-tier-nav__icon">⊕</span><span class="bk-tier-nav__label">Bible Study Guide</span><span class="bk-tier-nav__sub">Group sessions</span></a></li>
+        <li data-tier-item="commentary" hidden={!tiers.commentary}><a class="bk-tier-nav__link" href="commentary.html"><span class="bk-tier-nav__icon">❧</span><span class="bk-tier-nav__label">Commentary</span><span class="bk-tier-nav__sub">Verse by verse</span></a></li>
+      </ol>
+      <a class="bk-tier-nav__back" href="../../studies/">← All Studies</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <header class="bk-hero">
+      <div class="bk-hero__inner">
+        <div class="bk-hero__badges">
+          <span class="bk-badge bk-badge--testament">{testamentLabel}</span>
+          <span class="bk-badge bk-badge--genre">{GENRE_LABEL[genre] || 'Scripture'}</span>
+        </div>
+        <h1 class="bk-hero__title">{book.name}</h1>
+        <p class="bk-hero__subtitle">A Bible study guide — chapter-by-chapter group sessions for observation, interpretation, and application.</p>
+      </div>
+    </header>
+
+    {sg.intro && <div class="bsg-intro" set:html={sg.intro} />}
+
+    {sessions.map(s => (
+      <section class="bsg-session" id={`session-${s.session}`}>
+        <div class="bsg-session__head">
+          <span class="bsg-session__num">Session {s.session}</span>
+          <h2 class="bsg-session__title">{s.title}</h2>
+          {s.range && <a class="bsg-session__range ref" data-ref={`${book.name} ${s.range}`} href={readerHref(`${book.name} ${s.range}`)}>{book.name} {s.range}</a>}
+        </div>
+
+        {s.big_idea && (
+          <div class="bsg-bigidea">
+            <span class="bsg-bigidea__label">Big idea</span>
+            <div set:html={s.big_idea} />
+          </div>
+        )}
+
+        {s.open && <p class="bsg-line"><span class="bsg-tag">Open</span><span set:html={s.open} /></p>}
+
+        {s.observe && s.observe.length > 0 && (
+          <div class="bsg-qgroup">
+            <p class="bsg-qgroup__label">Observe — what does it say?</p>
+            <ol class="bsg-qlist">{s.observe.map(q => <li set:html={q} />)}</ol>
+          </div>
+        )}
+        {s.interpret && s.interpret.length > 0 && (
+          <div class="bsg-qgroup">
+            <p class="bsg-qgroup__label">Interpret — what does it mean?</p>
+            <ol class="bsg-qlist">{s.interpret.map(q => <li set:html={q} />)}</ol>
+          </div>
+        )}
+        {s.apply && s.apply.length > 0 && (
+          <div class="bsg-qgroup">
+            <p class="bsg-qgroup__label">Apply — so what?</p>
+            <ol class="bsg-qlist">{s.apply.map(q => <li set:html={q} />)}</ol>
+          </div>
+        )}
+
+        {s.pray && <p class="bsg-line"><span class="bsg-tag bsg-tag--pray">Pray</span><span set:html={s.pray} /></p>}
+
+        {s.leader_notes && (
+          <details class="bsg-leader">
+            <summary>Leader notes</summary>
+            <div class="bsg-leader__body" set:html={s.leader_notes} />
+          </details>
+        )}
+      </section>
+    ))}
+
+  </div>
+</main>
+</Base>

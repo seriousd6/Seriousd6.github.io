@@ -1,0 +1,162 @@
+---
+// Per-book Book Guide — Tier 1 of the Studies tool.
+//
+// One static page per book that has data/books/guide/<book>.json, generated from
+// that guide plus the book intro. Route: /topics/<book>/ — the URL contract in
+// data/books-content.json. This dynamic [book] route yields ONLY books without a
+// hand-authored literal topics/<book>/index.astro (romans, psalms, revelation,
+// hebrews), so there is no route collision with those pages or the topic pages.
+//
+// Styling reuses book-study.css (bk-*). Render-then-enhance: prose is real HTML
+// with <a class="ref"> hotlinks wired by entry="generic". See
+// docs/agents/book-guide-loop.md + docs/plans/book-capstone-plan.md.
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const readJSON = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return null; } };
+  const books = readJSON(path.resolve('./data/bible/books.json')) || [];
+  const content = readJSON(path.resolve('./data/books-content.json')) || { books: {} };
+  const out = [];
+  for (const b of books) {
+    const guide = readJSON(path.resolve('./data/books/guide', `${b.id}.json`));
+    if (!guide) continue;                                   // only books with guide data
+    // Skip books that have a hand-authored literal page — it owns /topics/<id>/.
+    if (fs.existsSync(path.resolve('./src/pages/topics', b.id, 'index.astro'))) continue;
+    const intro = readJSON(path.resolve('./data/books/introductions', `${b.id}.json`));
+    const bc = (content.books && content.books[b.id]) || {};
+    out.push({
+      params: { book: b.id },
+      props: {
+        book: b, guide, intro,
+        tiers: {
+          deepDive:   !!(bc.deep_dive && bc.deep_dive.exists),
+          commentary: !!(bc.commentary && bc.commentary.exists),
+        },
+      },
+    });
+  }
+  return out;
+}
+
+const { book, guide, intro, tiers } = Astro.props;
+
+function bkGenre(g) {
+  g = (g || '').toLowerCase();
+  if (/torah|law|pentateuch/.test(g))   return 'torah';
+  if (/gospel/.test(g))                 return 'gospel';
+  if (/apocalyp|revelation/.test(g))    return 'apocalyptic';
+  if (/prophe/.test(g))                 return 'prophecy';
+  if (/wisdom|poetry|psalm/.test(g))    return 'wisdom';
+  if (/epistle|letter/.test(g))         return 'epistle';
+  if (/history|acts|narrative/.test(g)) return 'history';
+  return 'epistle';
+}
+const genre = bkGenre(book.genre);
+const testClass = book.testament === 'OT' ? 'bk-ot' : 'bk-nt';
+const testamentLabel = book.testament === 'OT' ? 'Old Testament' : 'New Testament';
+const GENRE_LABEL = { torah: 'Torah', history: 'History', wisdom: 'Wisdom & Poetry', prophecy: 'Prophecy', gospel: 'Gospel', epistle: 'Epistle', apocalyptic: 'Apocalyptic' };
+const readerHref = (r) => `/read/?ref=${encodeURIComponent(r)}`;
+const title = `${book.name} — Book Guide — Kingdom Bible Study`;
+const description = (guide.one_line || `Book Guide to ${book.name}.`).replace(/<[^>]+>/g, '');
+---
+
+<Base title={title} description={description} bodyAttrs={{ class: `${testClass} bk-${genre}` }}>
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../../assets/css/book-study.css">
+</Fragment>
+<main>
+
+  <nav class="bk-tier-nav" aria-label="Study tiers" data-tier="guide">
+    <div class="bk-tier-nav__inner">
+      <a class="bk-tier-nav__book" href=".">{book.name}</a>
+      <ol class="bk-tier-nav__list">
+        <li data-tier-item="guide"><a class="bk-tier-nav__link" href="index.html" aria-current="page"><span class="bk-tier-nav__icon">◎</span><span class="bk-tier-nav__label">Book Guide</span><span class="bk-tier-nav__sub">Overview</span></a></li>
+        <li data-tier-item="deep-dive" hidden={!tiers.deepDive}><a class="bk-tier-nav__link" href="deep-dive.html"><span class="bk-tier-nav__icon">⊕</span><span class="bk-tier-nav__label">Bible Study Guide</span><span class="bk-tier-nav__sub">Group sessions</span></a></li>
+        <li data-tier-item="commentary" hidden={!tiers.commentary}><a class="bk-tier-nav__link" href="commentary.html"><span class="bk-tier-nav__icon">❧</span><span class="bk-tier-nav__label">Commentary</span><span class="bk-tier-nav__sub">Verse by verse</span></a></li>
+      </ol>
+      <a class="bk-tier-nav__back" href="../../studies/">← All Studies</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <header class="bk-hero">
+      <div class="bk-hero__inner">
+        <div class="bk-hero__badges">
+          <span class="bk-badge bk-badge--testament">{testamentLabel}</span>
+          <span class="bk-badge bk-badge--genre">{GENRE_LABEL[genre] || 'Scripture'}</span>
+        </div>
+        <h1 class="bk-hero__title">{book.name}</h1>
+        {guide.one_line && <p class="bk-hero__subtitle">{guide.one_line}</p>}
+      </div>
+    </header>
+
+    {intro && (intro.author || intro.date || intro.setting || intro.purpose) && (
+      <div class="bk-facts">
+        <dl class="bk-facts__grid">
+          {intro.author  && <Fragment><dt>Author</dt><dd>{intro.author}</dd></Fragment>}
+          {intro.date    && <Fragment><dt>Date</dt><dd>{intro.date}</dd></Fragment>}
+          {intro.setting && <Fragment><dt>Setting</dt><dd>{intro.setting}</dd></Fragment>}
+          {intro.purpose && <Fragment><dt>Purpose</dt><dd>{intro.purpose}</dd></Fragment>}
+        </dl>
+      </div>
+    )}
+
+    {guide.structure && guide.structure.length > 0 && (
+      <nav class="bk-outline" aria-label="Book outline">
+        <h2 class="bk-outline__title">At a glance</h2>
+        <ol class="bk-outline__list">
+          {guide.structure.map(s => (
+            <li><strong>{s.label}</strong> <span style="color:var(--color-muted)">({book.name} {s.range})</span>{s.gist && <> — {s.gist}</>}</li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
+    {guide.orientation && (
+      <section class="bk-section">
+        <h2 class="bk-section__heading">Orientation</h2>
+        <div set:html={guide.orientation} />
+      </section>
+    )}
+
+    {guide.how_to_read && (
+      <section class="bk-section">
+        <h2 class="bk-section__heading">How to read {book.name}</h2>
+        <div set:html={guide.how_to_read} />
+      </section>
+    )}
+
+    {guide.christ_in_book && (
+      <section class="bk-section">
+        <h2 class="bk-section__heading">Christ in {book.name}</h2>
+        <div set:html={guide.christ_in_book} />
+      </section>
+    )}
+
+    {guide.key_passages && guide.key_passages.length > 0 && (
+      <section class="bk-section">
+        <h2 class="bk-section__heading">Key passages</h2>
+        {guide.key_passages.map(k => (
+          <div class="bk-key-term">
+            <a class="bk-key-term__word ref" data-ref={k.ref} href={readerHref(k.ref)}>{k.ref}</a>
+            {k.why && <span class="bk-key-term__def">{k.why}</span>}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {guide.themes && guide.themes.length > 0 && (
+      <section class="bk-section">
+        <h2 class="bk-section__heading">Themes</h2>
+        <div class="bk-hero__badges">
+          {guide.themes.map(t => <span class="bk-psalm-type">{t}</span>)}
+        </div>
+      </section>
+    )}
+
+  </div>
+</main>
+</Base>

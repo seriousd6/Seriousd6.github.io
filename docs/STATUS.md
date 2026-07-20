@@ -23,8 +23,11 @@
   + `assets/css/commentary.css`), seeded with **Philemon** (section→verse, Cloud
   of Witnesses + attributed external scholarship, AI-assisted). Guarded by
   `scripts/validate-commentary.py` (wired into CI). Plan:
-  [plans/book-capstone-plan.md](plans/book-capstone-plan.md). Guide/Study-Guide
-  generated pages are the next render step (see TODO Next).
+  [plans/book-capstone-plan.md](plans/book-capstone-plan.md). **All three tier
+  page templates are built** (`topics/[book]/{index,deep-dive,commentary}.astro`),
+  and **Philemon** now seeds all three tiers (Guide + Bible Study Guide + Commentary),
+  lighting every badge on its Studies card. The loops now just produce per-book data.
+  Philemon commentary is **deployed** (pushed 2026-07-19).
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,
