@@ -29,9 +29,11 @@ the same script's `--section` mode.
 Progress is derived from the data itself — there is no tracker file. Walk the
 books in canonical order (`data/bible/books.json`); the next work unit is the
 first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of 2026-07-19: **587/1,189 done,
-frontier = 2 Kings 14** (Genesis→1 Kings and the whole NT are complete;
-2 Kings is missing 14, 15, 17–25; Chronicles→Malachi untouched).
+source `cow/<book>/<ch>.json` exists. As of **2026-07-22: 598/1,189 done
+(50.3%), frontier = 1 Chronicles 1** (Genesis→**2 Kings** and the whole NT are
+now complete; Chronicles→Malachi is the remaining OT back-half, still
+untouched). NB the NT was synthesized in an earlier pass, so the frontier is
+purely OT — the count is not a single canonical sweep.
 
 ## Per-chapter procedure
 

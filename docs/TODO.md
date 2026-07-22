@@ -16,9 +16,11 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 > owner approval.
 
 - [ ] **COW synthesis loop — continue at the OT frontier** *(active focus —
-  2026-07-22)*. **587/1,189 = 49.4% done** (Genesis→1 Kings + the whole NT
-  complete; corpus validates clean). Frontier = **2 Kings 14**; 2 Kings still
-  needs 14, 15, 17–25, then 1 Chronicles → Malachi + the poetic/wisdom books.
+  2026-07-22)*. **598/1,189 = 50.3% done** (Genesis→**2 Kings** + the whole NT
+  complete; corpus validates clean). **2 Kings finished 2026-07-22.** Frontier =
+  **1 Chronicles 1**; the remaining OT back-half is 1 Chronicles → Malachi + the
+  poetic/wisdom books (~591 ch). NB 1 Chronicles 1–9 are dense genealogy chapters
+  with sparse catena — calibrate the fan-out on genealogy content before scaling.
   This also unblocks the Book Treatment loop (a book is treatment-eligible only
   once its synthesis is done). Procedure:
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
