@@ -15,19 +15,24 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 > work-unit and must pass its validator before committing. No pushes without
 > owner approval.
 
-- [ ] **Book Treatment loop** — the single per-book study that fills the Studies
-  tool for all 66 books: **one Full Treatment** per book (auto-assembled intro +
-  synthesized multi-perspective commentary in per-chapter divisions, chapter
-  picker + lazy-load for big books). One tracker, agent-claimed. Entry:
-  [agents/study-pipeline.md](agents/study-pipeline.md); tracker:
-  [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md). Done:
-  **Philemon** (seed), **Hebrews**, **Romans** (16 ch), **Revelation** (22 ch).
-  In progress: **Psalms** (`🔄`) — overview + a starter batch done; 150 chapters
-  remain and the treatment page needs a big-book nav (grouped by the 5 books /
-  search) before the picker scales to 150.
-- [ ] **COW synthesis loop — continue at the frontier** (2 Kings 14; 602
-  chapters remain of 1,189; corpus currently validates clean). Procedure:
+- [ ] **COW synthesis loop — continue at the OT frontier** *(active focus —
+  2026-07-22)*. **587/1,189 = 49.4% done** (Genesis→1 Kings + the whole NT
+  complete; corpus validates clean). Frontier = **2 Kings 14**; 2 Kings still
+  needs 14, 15, 17–25, then 1 Chronicles → Malachi + the poetic/wisdom books.
+  This also unblocks the Book Treatment loop (a book is treatment-eligible only
+  once its synthesis is done). Procedure:
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
+- [ ] **Book Treatment loop** — the single per-book study that fills the Studies
+  tool: **one Full Treatment** per book (auto-assembled intro + synthesized
+  multi-perspective commentary in per-chapter divisions, chapter picker +
+  lazy-load for big books). One tracker, agent-claimed. Entry:
+  [agents/study-pipeline.md](agents/study-pipeline.md); tracker:
+  [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md).
+  **Eligibility: only books with complete COW synthesis** (38 today). Done:
+  **Philemon** (seed), **Hebrews**, **Romans** (16 ch), **Revelation** (22 ch);
+  34 eligible books remain. **Psalms is `⛔` blocked** — no COW synthesis; its
+  overview `_book.json` is kept as a head-start (not wired), and it will need a
+  big-book nav (grouped by the 5 books / search) before its 150-ch picker scales.
 - [ ] **Provenance loop — add `_source` fields** across the data tree, AI-generated
   content first. [agents/provenance-loop.md](agents/provenance-loop.md).
 - [ ] **Owner: run [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)** (19 points,

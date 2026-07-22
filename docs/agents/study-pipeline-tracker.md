@@ -7,12 +7,21 @@
 >
 > Legend: `⬜` not started · `🔄 @<ISO-time> <agent> (n/N ch)` in progress ·
 > `✅` complete (overview + all chapters exist + validate) · `♻️` reframe (fold
-> existing hand-authored content into the treatment).
+> existing hand-authored content into the treatment) · `⛔` blocked (no COW
+> synthesis yet — not eligible).
+>
+> **Eligibility rule (owner, 2026-07-22):** a book gets a Full Treatment ONLY
+> once its COW synthesis is complete — the treatment is built on the distilled
+> `cow-synthesis/` tree, not the raw catena. Today **38 books** qualify
+> (Genesis–1 Kings + the whole NT); the 27 zero-synthesis OT books and partial
+> 2 Kings are blocked until the COW loop reaches them. See
+> [cow-synthesis-loop.md](cow-synthesis-loop.md).
 >
 > Snapshot: **4/66** treatments complete (Philemon, Hebrews, **Romans**,
-> **Revelation**). Reference exemplar: **Philemon**. Reframe exemplars done:
-> Hebrews, Romans (16 ch), Revelation (22 ch). **Psalms** is the last reframe,
-> now in progress (overview done; 150 chapters + a big-book nav = multi-session).
+> **Revelation**); **34** more eligible now. Reference exemplar: **Philemon**.
+> Reframe exemplars done: Hebrews, Romans (16 ch), Revelation (22 ch).
+> **Psalms** is `⛔` blocked — it has NO COW synthesis; its overview `_book.json`
+> is kept as a head-start for when synthesis lands.
 
 | # | Book | T | Ch | Full Treatment |
 |---:|------|:--:|--:|:--------------:|
@@ -34,7 +43,7 @@
 | 16 | Nehemiah | OT | 13 | ⬜ |
 | 17 | Esther | OT | 10 | ⬜ |
 | 18 | Job | OT | 42 | ⬜ |
-| 19 | Psalms | OT | 150 | 🔄 (overview + starter) |
+| 19 | Psalms | OT | 150 | ⛔ blocked — no COW synthesis (overview only) |
 | 20 | Proverbs | OT | 31 | ⬜ |
 | 21 | Ecclesiastes | OT | 12 | ⬜ |
 | 22 | Song of Solomon | OT | 8 | ⬜ |

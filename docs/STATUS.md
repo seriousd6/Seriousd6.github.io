@@ -1,7 +1,8 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-07-22** (Full Treatments: Romans + Revelation; Psalms started)
+> Last updated: **2026-07-22** (Full Treatments: Romans + Revelation; treatment
+> eligibility tied to COW synthesis; pivot to advancing the COW loop)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -16,10 +17,15 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight**: COW synthesis — 587/1,189 chapters done (frontier:
-  2 Kings 14); the 62 legacy validator failures (John 4, Luke 13, Genesis 41,
-  1 Samuel 5) are repaired and the full corpus validates clean;
-  OL Phase 4b pending the owner review ([REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)).
+- **In flight (active focus)**: **COW synthesis — 587/1,189 chapters = 49.4%.**
+  NOT a single canonical frontier: **Genesis→1 Kings and the entire NT are
+  complete**; the gap is the OT back-half (2 Kings 15 → Malachi + the poetic/
+  wisdom books). OT frontier = **2 Kings 14** (2 Kings still needs 14, 15, 17–25).
+  Advancing this loop is the current focus — it also gates the Studies tool, since
+  a book earns a Full Treatment only after its synthesis is done (see below). The
+  62 legacy validator failures (John 4, Luke 13, Genesis 41, 1 Samuel 5) are
+  repaired and the full corpus validates clean; OL Phase 4b pending the owner
+  review ([REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)).
 - **Studies — one Full Treatment per book (reshaped 2026-07-20)**: the earlier
   three tiers were **collapsed into a single per-book page** — a rich intro
   (overview, **timeline**, key people, key vocabulary, language notes, reception,
@@ -34,10 +40,14 @@
   **Revelation** (22 ch) — Romans + Revelation generated 2026-07-22 via a 38-agent
   fan-out (overviews hand-written; chapters by subagents; each validated + BSB
   versification-checked before commit). Their hand-authored `topics/<book>/
-  {index,deep-dive}` pages now redirect to the treatment. **In progress:**
-  **Psalms** (`🔄`) — overview done; 150 chapters remain and the treatment page
-  needs a big-book nav (grouped by the 5 books / search) before the picker scales
-  to 150. The Guide/Study-Guide tiers, pages, data, and stage docs were removed.
+  {index,deep-dive}` pages now redirect to the treatment. **Eligibility (owner,
+  2026-07-22):** a book is treatment-ready ONLY when its COW synthesis is
+  complete — **38 books qualify today** (Genesis–1 Kings + all NT); 34 remain
+  eligible. **Psalms is `⛔` blocked** — it has NO synthesis; its overview
+  `_book.json` is kept as a head-start, but no chapters were generated and it is
+  not wired live. (It will also need a big-book nav — grouped by the 5 books /
+  search — before its 150-chapter picker scales.) The Guide/Study-Guide tiers,
+  pages, data, and stage docs were removed.
   Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit
   was pushed but its deploy is stuck in an ongoing GitHub Actions outage; all of
   this supersedes it and is **local-only pending review**.
