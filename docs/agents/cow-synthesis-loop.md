@@ -54,7 +54,15 @@ purely OT — the count is not a single canonical sweep.
    **Source noise**: the catena files contain scrape residue (page chrome,
    CSS/JS fragments) and occasionally a witness fragment that clearly
    belongs to another passage — skip both entirely; never synthesize a view
-   from them.
+   from them. **Skip noise SILENTLY**: the reader-facing prose must NEVER
+   narrate the skipping — no "scrape residue", "page chrome", "the source's
+   noise", "belongs to another passage", "credited to no witness", or any
+   mention that a fragment was set aside. Omit the noise as though it were
+   never in the source (the 2 Kings 13 gold standard does this). A reader must
+   not be able to tell any editing happened. Likewise never log the noise as a
+   `debate` or `outlier` in the tags. (Verify with a grep for those phrases
+   before committing — a 2026-07-22 batch shipped meta-commentary that had to
+   be regenerated.)
 3. Write the parallel tags file — per verse:
    - `voices`: non-empty list of commentator FULL names ("Keil and
      Delitzsch", "Matthew Henry").
