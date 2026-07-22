@@ -139,11 +139,11 @@ const chapterList = chapters.map(c => c.ch);
 
     {intro && (intro.author || intro.date || intro.setting) && (
       <div class="bk-facts bkc-facts">
-        <dl class="bk-facts__grid">
-          {intro.author  && <Fragment><dt>Author</dt><dd>{intro.author}</dd></Fragment>}
-          {intro.date    && <Fragment><dt>Date</dt><dd>{intro.date}</dd></Fragment>}
-          {intro.setting && <Fragment><dt>Setting</dt><dd>{intro.setting}</dd></Fragment>}
-          {book.chapters && <Fragment><dt>Chapters</dt><dd>{book.chapters}</dd></Fragment>}
+        <dl class="bkc-facts__grid">
+          {intro.author  && <div class="bkc-fact"><dt>Author</dt><dd>{intro.author}</dd></div>}
+          {intro.date    && <div class="bkc-fact"><dt>Date</dt><dd>{intro.date}</dd></div>}
+          {intro.setting && <div class="bkc-fact"><dt>Setting</dt><dd>{intro.setting}</dd></div>}
+          {book.chapters && <div class="bkc-fact"><dt>Chapters</dt><dd>{book.chapters}</dd></div>}
         </dl>
       </div>
     )}
@@ -212,7 +212,7 @@ const chapterList = chapters.map(c => c.ch);
           {vocab.map(v => (
             <div class="bkc-vocab__row">
               <dt class="bkc-vocab__term">{v.lemma}{v.translit && <span class="bkc-vocab__tr"> {v.translit}</span>}{v.gloss && <span class="bkc-vocab__gloss"> — “{v.gloss}”</span>}</dt>
-              {v.significance && <dd class="bkc-vocab__sig">{v.significance}</dd>}
+              {v.significance && <dd class="bkc-vocab__sig" set:html={v.significance} />}
             </div>
           ))}
         </dl>

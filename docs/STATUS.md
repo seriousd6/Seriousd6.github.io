@@ -5,7 +5,11 @@
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
-- **Design**: Daylight (2026-07-12).
+- **Design**: Daylight (2026-07-12). Self-hosted font subsets extended to
+  **Greek + Greek-Extended (polytonic) + Latin-Extended** (2026-07-21) so
+  original-language notes (Greek words, macron transliterations) render in
+  Literata rather than a mismatched/absent OS fallback — still fully self-hosted
+  (no external fonts). Build auto-precaches them + bumps `APP_CACHE_V`.
 - **Completed arcs** (records in [archive/](archive/)): Astro migration +
   rebrand ([OVERHAUL.md](archive/OVERHAUL.md)); Heights H1–H6, Desk D1–D5,
   A-gaps A1–A4 ([ROADMAP.md](archive/ROADMAP.md) — outside re-evaluation

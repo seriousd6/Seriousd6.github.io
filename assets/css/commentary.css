@@ -46,8 +46,25 @@
 }
 .commentary-page .bkc-aibadge a { color: inherit; text-decoration: underline; }
 
-/* Facts panel — gilt top rule instead of the genre accent */
+/* Facts panel — gilt top rule instead of the genre accent. Each fact is a
+   self-contained label-over-value card so dt/dd stay paired in the grid (the
+   shared .bk-facts__grid scatters dt/dd as independent auto-flow cells). */
 .commentary-page .bkc-facts { border-top-color: var(--ill-gild); }
+.commentary-page .bkc-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.9rem 1.75rem;
+  margin: 0;
+}
+.commentary-page .bkc-fact { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.commentary-page .bkc-fact dt {
+  font-family: var(--font-ui); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-muted);
+}
+.commentary-page .bkc-fact dd {
+  margin: 0; font-family: var(--font-body); font-size: 0.98rem;
+  line-height: 1.5; color: var(--color-text);
+}
 
 /* ── Gilt rule ornament ────────────────────────────────────── */
 .commentary-page .bkc-rule {
