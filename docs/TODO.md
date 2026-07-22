@@ -21,8 +21,10 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   picker + lazy-load for big books). One tracker, agent-claimed. Entry:
   [agents/study-pipeline.md](agents/study-pipeline.md); tracker:
   [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md). Done:
-  **Philemon** (seed), **Hebrews** (reframe — overview + 13 ch, 303 verse notes).
-  Reframe backlog (`♻️`): romans, psalms, revelation.
+  **Philemon** (seed), **Hebrews**, **Romans** (16 ch), **Revelation** (22 ch).
+  In progress: **Psalms** (`🔄`) — overview + a starter batch done; 150 chapters
+  remain and the treatment page needs a big-book nav (grouped by the 5 books /
+  search) before the picker scales to 150.
 - [ ] **COW synthesis loop — continue at the frontier** (2 Kings 14; 602
   chapters remain of 1,189; corpus currently validates clean). Procedure:
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
@@ -50,12 +52,12 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   cultural) + synthesized commentary in per-chapter divisions + per-chapter
   reflection + chapter-picker/lazy-load. **Philemon** seeds it. (2026-07-20 reshape
   collapsed the three tiers into this; the Guide/Study-Guide pages + docs were removed.)
-- [ ] Retire/redirect the hand-authored `topics/{romans,psalms,revelation}/`
-  {index,deep-dive} pages and the `/study-guides/` hub once each book's Full
-  Treatment is generated (reframe folds their content in — see
-  [agents/study-pipeline.md](agents/study-pipeline.md)). **Hebrews done**
-  (`topics/hebrews/deep-dive.astro` + `study-guides/hebrews/` now redirect to the
-  Full Treatment).
+- [ ] Retire/redirect the hand-authored `topics/psalms/` {index,deep-dive} pages +
+  `study-guides/psalms/` once the Psalms Full Treatment is generated (reframe folds
+  their content in — see [agents/study-pipeline.md](agents/study-pipeline.md)).
+  **Done:** Hebrews, Romans, Revelation — their `topics/<book>/{index,deep-dive}`
+  (+ `study-guides/hebrews/`) now redirect to the Full Treatment. Also still to do:
+  the `/study-guides/` hub itself once Psalms is retired.
 - [ ] Delete merged remote branch `claude/repo-overhaul-context-1ixq9c`
   (0 ahead of master; remote op — bundle with the next approved push).
 - [ ] Audit leftovers ([archive/AUDIT.md](archive/AUDIT.md)): verse-ranking

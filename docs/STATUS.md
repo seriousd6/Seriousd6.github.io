@@ -1,7 +1,7 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-07-20** (Studies reshape + Hebrews Full Treatment reframe)
+> Last updated: **2026-07-22** (Full Treatments: Romans + Revelation; Psalms started)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -29,14 +29,18 @@
   external scholarship, per-chapter "For reflection"), with a chapter picker +
   lazy-load for many-chapter books. Page `topics/[book]/commentary.astro` +
   `assets/js/entries/commentary.js` + `assets/css/commentary.css`; one loop + one
-  tracker ([agents/study-pipeline.md](agents/study-pipeline.md)). Done:
-  **Philemon** (seed, 1 ch) and **Hebrews** (reframe — overview + 13 chapters,
-  303 verse notes, generated via a 12-agent fan-out; the hand-authored
-  `deep-dive` + `study-guides/hebrews/` pages now redirect to the treatment).
-  The Guide/Study-Guide tiers, pages, data, and stage docs were removed. Guarded
-  by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit was
-  pushed but its deploy is stuck in an ongoing GitHub Actions outage; this reshape
-  + the Hebrews treatment supersede it and are **local-only pending review**.
+  tracker ([agents/study-pipeline.md](agents/study-pipeline.md)). **Done (4/66):**
+  **Philemon** (seed, 1 ch), **Hebrews** (13 ch), **Romans** (16 ch), and
+  **Revelation** (22 ch) — Romans + Revelation generated 2026-07-22 via a 38-agent
+  fan-out (overviews hand-written; chapters by subagents; each validated + BSB
+  versification-checked before commit). Their hand-authored `topics/<book>/
+  {index,deep-dive}` pages now redirect to the treatment. **In progress:**
+  **Psalms** (`🔄`) — overview done; 150 chapters remain and the treatment page
+  needs a big-book nav (grouped by the 5 books / search) before the picker scales
+  to 150. The Guide/Study-Guide tiers, pages, data, and stage docs were removed.
+  Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit
+  was pushed but its deploy is stuck in an ongoing GitHub Actions outage; all of
+  this supersedes it and is **local-only pending review**.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

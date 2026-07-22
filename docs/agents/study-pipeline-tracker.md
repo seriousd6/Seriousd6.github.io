@@ -9,9 +9,10 @@
 > `✅` complete (overview + all chapters exist + validate) · `♻️` reframe (fold
 > existing hand-authored content into the treatment).
 >
-> Snapshot: **2/66** treatments complete, **3** to reframe. Reference
-> exemplar: **Philemon**. Reframe exemplar (done): **Hebrews** (overview +
-> 13 chapters, 303 verse notes).
+> Snapshot: **4/66** treatments complete (Philemon, Hebrews, **Romans**,
+> **Revelation**). Reference exemplar: **Philemon**. Reframe exemplars done:
+> Hebrews, Romans (16 ch), Revelation (22 ch). **Psalms** is the last reframe,
+> now in progress (overview done; 150 chapters + a big-book nav = multi-session).
 
 | # | Book | T | Ch | Full Treatment |
 |---:|------|:--:|--:|:--------------:|
@@ -33,7 +34,7 @@
 | 16 | Nehemiah | OT | 13 | ⬜ |
 | 17 | Esther | OT | 10 | ⬜ |
 | 18 | Job | OT | 42 | ⬜ |
-| 19 | Psalms | OT | 150 | ♻️ |
+| 19 | Psalms | OT | 150 | 🔄 (overview + starter) |
 | 20 | Proverbs | OT | 31 | ⬜ |
 | 21 | Ecclesiastes | OT | 12 | ⬜ |
 | 22 | Song of Solomon | OT | 8 | ⬜ |
@@ -59,7 +60,7 @@
 | 42 | Luke | NT | 24 | ⬜ |
 | 43 | John | NT | 21 | ⬜ |
 | 44 | Acts | NT | 28 | ⬜ |
-| 45 | Romans | NT | 16 | ♻️ |
+| 45 | Romans | NT | 16 | ✅ |
 | 46 | 1 Corinthians | NT | 16 | ⬜ |
 | 47 | 2 Corinthians | NT | 13 | ⬜ |
 | 48 | Galatians | NT | 6 | ⬜ |
@@ -80,4 +81,4 @@
 | 63 | 2 John | NT | 1 | ⬜ |
 | 64 | 3 John | NT | 1 | ⬜ |
 | 65 | Jude | NT | 1 | ⬜ |
-| 66 | Revelation | NT | 22 | ♻️ |
+| 66 | Revelation | NT | 22 | ✅ |

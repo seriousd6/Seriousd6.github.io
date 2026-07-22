@@ -751,18 +751,18 @@
     },
     "romans": {
       "guide": {
-        "exists": true,
+        "exists": false,
         "url": "topics/romans/index.html"
       },
       "deep_dive": {
-        "exists": true,
+        "exists": false,
         "url": "topics/romans/deep-dive.html"
       },
       "commentary": {
-        "exists": false,
+        "exists": true,
         "url": "topics/romans/commentary.html",
-        "coverage": "none",
-        "chapters_done": [],
+        "coverage": "full",
+        "chapters_done": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
         "chapters_total": 16
       }
     },
@@ -1110,18 +1110,18 @@
     },
     "revelation": {
       "guide": {
-        "exists": true,
+        "exists": false,
         "url": "topics/revelation/index.html"
       },
       "deep_dive": {
-        "exists": true,
+        "exists": false,
         "url": "topics/revelation/deep-dive.html"
       },
       "commentary": {
-        "exists": false,
+        "exists": true,
         "url": "topics/revelation/commentary.html",
-        "coverage": "none",
-        "chapters_done": [],
+        "coverage": "full",
+        "chapters_done": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
         "chapters_total": 22
       }
     }
