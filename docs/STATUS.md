@@ -2,8 +2,8 @@
 
 > Update this file in the same commit as the work it describes.
 > Last updated: **2026-07-22** (Full Treatments: Romans + Revelation; treatment
-> eligibility tied to COW synthesis; **2 Kings COW synthesis complete → 50.3%**,
-> frontier now 1 Chronicles)
+> eligibility tied to COW synthesis; **2 Kings + 1 Chronicles COW synthesis
+> complete → 52.7%**, frontier now 2 Chronicles)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -18,12 +18,13 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight (active focus)**: **COW synthesis — 598/1,189 chapters = 50.3%.**
-  NOT a single canonical frontier: **Genesis→2 Kings and the entire NT are
-  complete** (2 Kings finished 2026-07-22 — all 11 remaining chapters 14, 15,
-  17–25 synthesized via a calibrated fan-out, each hard-read + validated before
-  commit); the gap is now the OT back-half (**1 Chronicles → Malachi** + the
-  poetic/wisdom books). OT frontier = **1 Chronicles 1**. Advancing this loop is
+- **In flight (active focus)**: **COW synthesis — 627/1,189 chapters = 52.7%.**
+  NOT a single canonical frontier: **Genesis→1 Chronicles and the entire NT are
+  complete** (2 Kings + all 29 chapters of 1 Chronicles finished 2026-07-22 via
+  calibrated fan-outs — genealogy + narrative profiles both calibrated; each
+  chapter hard-read + validated before commit); the gap is now the OT back-half
+  (**2 Chronicles → Malachi** + the poetic/wisdom books). OT frontier =
+  **2 Chronicles 1**. Advancing this loop is
   the current focus — it also gates the Studies tool, since a book earns a Full
   Treatment only after its synthesis is done (see below). The
   62 legacy validator failures (John 4, Luke 13, Genesis 41, 1 Samuel 5) are
