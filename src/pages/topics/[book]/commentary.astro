@@ -39,6 +39,10 @@ export async function getStaticPaths() {
         .map(k => ({ start: k, ...chData[k] }));
       chapters.push({ ch, title: cmeta.title || '', reflection: cmeta.reflection || [], sections });
     }
+    // Only emit a treatment page once the book has at least one chapter of
+    // commentary. A book with only an overview _book.json (e.g. Psalms, kept as
+    // a head-start while it awaits COW synthesis) must NOT ship a chapterless page.
+    if (!chapters.length) continue;
     out.push({
       params: { book: b.id },
       props: {
