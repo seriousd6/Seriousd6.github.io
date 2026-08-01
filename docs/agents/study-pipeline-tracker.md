@@ -12,13 +12,14 @@
 >
 > **Eligibility rule (owner, 2026-07-22):** a book gets a Full Treatment ONLY
 > once its COW synthesis is complete — the treatment is built on the distilled
-> `cow-synthesis/` tree, not the raw catena. Today **38 books** qualify
-> (Genesis–1 Kings + the whole NT); the 27 zero-synthesis OT books and partial
-> 2 Kings are blocked until the COW loop reaches them. See
-> [cow-synthesis-loop.md](cow-synthesis-loop.md).
+> `cow-synthesis/` tree, not the raw catena. Today **41 books** qualify
+> (Genesis–**2 Chronicles** + the whole NT — 2 Kings, 1 Chronicles, and all 36
+> chapters of 2 Chronicles finished 2026-07-22); the remaining zero-synthesis OT
+> books (Ezra→Malachi + poetic/wisdom) are blocked until the COW loop reaches
+> them. See [cow-synthesis-loop.md](cow-synthesis-loop.md).
 >
 > Snapshot: **4/66** treatments complete (Philemon, Hebrews, **Romans**,
-> **Revelation**); **34** more eligible now. Reference exemplar: **Philemon**.
+> **Revelation**); **37** more eligible now. Reference exemplar: **Philemon**.
 > Reframe exemplars done: Hebrews, Romans (16 ch), Revelation (22 ch).
 > **Psalms** is `⛔` blocked — it has NO COW synthesis; its overview `_book.json`
 > is kept as a head-start for when synthesis lands.

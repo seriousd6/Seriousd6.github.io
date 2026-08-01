@@ -2,9 +2,8 @@
 
 > Update this file in the same commit as the work it describes.
 > Last updated: **2026-07-22** (Full Treatments: Romans + Revelation; treatment
-> eligibility tied to COW synthesis; **2 Kings + 1 Chronicles + 2 Chronicles 1–29
-> COW synthesis complete → 55.2%**, frontier now 2 Chronicles 30; ch30–36 blocked
-> on a weekly API limit that resets Jul 25, 1pm ET)
+> eligibility tied to COW synthesis; **2 Kings + 1 Chronicles + 2 Chronicles
+> COW synthesis complete (2 Chronicles 36/36) → 55.8%**, frontier now Ezra 1)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -19,15 +18,13 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight (active focus)**: **COW synthesis — 656/1,189 chapters = 55.2%.**
-  NOT a single canonical frontier: **Genesis→1 Chronicles, 2 Chronicles 1–29,
-  and the entire NT are complete** (2 Kings + 1 Chronicles + 2 Chronicles 1–29
-  finished 2026-07-22 via calibrated fan-outs — genealogy + narrative profiles
-  both calibrated; each chapter validated + scrape-meta-scanned before commit);
-  the gap is now the OT back-half (**2 Chronicles 30 → Malachi** + the
-  poetic/wisdom books). OT frontier = **2 Chronicles 30** (30–36 were fanned out
-  but the subagents hit a **weekly API limit, resets Jul 25, 1pm ET**, before
-  writing — nothing partial; resume there). Advancing this loop is
+- **In flight (active focus)**: **COW synthesis — 663/1,189 chapters = 55.8%.**
+  NOT a single canonical frontier: **Genesis→2 Chronicles and the entire NT are
+  complete** (2 Kings + 1 Chronicles + all 36 chapters of 2 Chronicles finished
+  2026-07-22 via calibrated fan-outs — genealogy + narrative profiles both
+  calibrated; each chapter validated + scrape-meta-scanned before commit); the
+  gap is now the OT back-half (**Ezra → Malachi** + the poetic/wisdom books). OT
+  frontier = **Ezra 1**. Advancing this loop is
   the current focus — it also gates the Studies tool, since a book earns a Full
   Treatment only after its synthesis is done (see below). The
   62 legacy validator failures (John 4, Luke 13, Genesis 41, 1 Samuel 5) are
