@@ -29,10 +29,13 @@ the same script's `--section` mode.
 Progress is derived from the data itself — there is no tracker file. Walk the
 books in canonical order (`data/bible/books.json`); the next work unit is the
 first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of **2026-08-01: 686/1,189 done
-(57.7%), frontier = Esther 1** (Genesis→**Nehemiah** and the whole NT are now
-complete; **Nehemiah finished 13/13 2026-08-01**; Esther→Malachi + the
-poetic/wisdom books are the remaining OT back-half). NB the
+source `cow/<book>/<ch>.json` exists. As of **2026-08-01: 696/1,189 done
+(58.5%), frontier = Job 1** (Genesis→**Esther** and the whole NT are now
+complete; **Esther finished 10/10 2026-08-01**; Job→Malachi + the
+poetic/wisdom books are the remaining OT back-half. Job is the first
+poetic/wisdom book — its narrative frame (1–2, 42) follows the usual profile,
+but the dialogue-poetry (3–41) has the witnesses discussing Hebrew parallelism,
+textual difficulties, and the flow of the argument rather than events). NB the
 NT was synthesized in an earlier pass, so the frontier is purely OT — the count
 is not a single canonical sweep.
 
