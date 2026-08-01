@@ -29,11 +29,25 @@ the same script's `--section` mode.
 Progress is derived from the data itself — there is no tracker file. Walk the
 books in canonical order (`data/bible/books.json`); the next work unit is the
 first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of **2026-07-22: 627/1,189 done
-(52.7%), frontier = 2 Chronicles 1** (Genesis→**1 Chronicles** and the whole NT
-are now complete; 2 Chronicles→Malachi is the remaining OT back-half, still
-untouched). NB the NT was synthesized in an earlier pass, so the frontier is
-purely OT — the count is not a single canonical sweep.
+source `cow/<book>/<ch>.json` exists. As of **2026-07-22: 656/1,189 done
+(55.2%), frontier = 2 Chronicles 30** (Genesis→**1 Chronicles**, **2 Chronicles
+1–29**, and the whole NT are now complete; 2 Chronicles 30→Malachi is the
+remaining OT back-half). NB the NT was synthesized in an earlier pass, so the
+frontier is purely OT — the count is not a single canonical sweep.
+
+> **Resume note (2026-07-22):** 2 Chronicles 30–36 were fanned out but the
+> subagents died on a **weekly API limit (resets Jul 25, 1pm America/New_York)**
+> before writing any output — nothing partial landed, tree is clean. Resume the
+> 7 remaining chapters (30, 31, 32, 33, 34, 35, 36) after the reset to finish
+> the book, then checkpoint + advance to Ezra.
+
+> **Out-of-range source key (2026-07-22):** some `cow/` chapters carry a scrape
+> key whose verse number is out-of-range for the chapter and whose content is
+> entirely foreign-passage material (e.g. **2 Chronicles 27** source has a key
+> `16` — 2 Chron 27 has only 9 verses — holding Matthew Henry on 2 Chron 28,
+> Ahaz). Treat these as scrape corruption: **omit them** rather than synthesize a
+> nonexistent verse (documented in the ch27 commit). A source-vs-synthesis
+> key-diff will legitimately show ch27 as 9-vs-10; that is expected, not a defect.
 
 ## Per-chapter procedure
 
