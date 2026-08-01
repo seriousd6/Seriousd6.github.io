@@ -29,12 +29,12 @@ the same script's `--section` mode.
 Progress is derived from the data itself — there is no tracker file. Walk the
 books in canonical order (`data/bible/books.json`); the next work unit is the
 first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of **2026-07-22: 663/1,189 done
-(55.8%), frontier = Ezra 1** (Genesis→**2 Chronicles** and the whole NT are now
-complete; **2 Chronicles finished 36/36 2026-07-22**; Ezra→Malachi + the
-poetic/wisdom books are the remaining OT back-half). NB the NT was synthesized in
-an earlier pass, so the frontier is purely OT — the count is not a single
-canonical sweep.
+source `cow/<book>/<ch>.json` exists. As of **2026-07-22: 673/1,189 done
+(56.6%), frontier = Nehemiah 1** (Genesis→**Ezra** and the whole NT are now
+complete; **2 Chronicles finished 36/36 + Ezra finished 10/10 2026-07-22**;
+Nehemiah→Malachi + the poetic/wisdom books are the remaining OT back-half). NB the
+NT was synthesized in an earlier pass, so the frontier is purely OT — the count
+is not a single canonical sweep.
 
 > **Out-of-range source key (2026-07-22):** some `cow/` chapters carry a scrape
 > key whose verse number is out-of-range for the chapter and whose content is
