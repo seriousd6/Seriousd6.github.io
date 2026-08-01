@@ -52,11 +52,15 @@ is not a single canonical sweep.
 2. Write the prose file: for EVERY verse in the chapter (mirror the source
    file's verse keys EXACTLY — never renumber or re-versify), one HTML string
    that narrates what the witnesses say — attributed by name, with each
-   commentator's school named inline in the corpus's DISPLAY form:
-   `<strong>Reformed</strong>`, `<strong>Wesleyan</strong>`,
-   `<strong>puritan</strong>`, `<strong>grammatical-historical</strong>`
-   (the enum slugs like `wesleyan-arminian` appear only in tags files, never
-   in prose). Real disagreements surface as disagreements; scripture
+   commentator's school named inline as a `<strong>` tag carrying the FULL
+   enum slug, exactly as it appears in the tags file:
+   `<strong>reformed</strong>`, `<strong>wesleyan-arminian</strong>`,
+   `<strong>puritan-evangelical</strong>`, `<strong>grammatical-historical</strong>`
+   (the whole shipped corpus — the 2 Kings 13 gold standard included — uses the
+   enum slug inline, NOT a short form like `wesleyan`/`puritan`; the reader layer
+   renders `<strong>` as plain bold, so a short-form file is visibly inconsistent
+   with every other chapter. A 2026-08-01 Esther batch shipped short forms and had
+   to be normalized). Real disagreements surface as disagreements; scripture
    references are `<a class="ref" data-ref="2 Kings 13:10">v.10</a>` (NEVER
    a bare "Book Ch:V" outside an anchor; chapter-only citations point at
    verse 1, e.g. `data-ref="2 Chronicles 24:1"`).
