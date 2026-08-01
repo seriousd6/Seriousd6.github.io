@@ -16,15 +16,15 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 > owner approval.
 
 - [ ] **COW synthesis loop — continue at the OT frontier** *(active focus —
-  2026-07-22)*. **673/1,189 = 56.6% done** (Genesis→**Ezra** + the whole NT
+  2026-08-01)*. **686/1,189 = 57.7% done** (Genesis→**Nehemiah** + the whole NT
   complete; corpus validates clean). **2 Kings + 1 Chronicles + 2 Chronicles
-  (36/36) + Ezra (10/10) finished 2026-07-22** (genealogy/register + narrative
-  fan-out profiles both calibrated). Frontier = **Nehemiah 1**; the remaining OT
-  back-half is Nehemiah → Malachi + the poetic/wisdom books (~516 ch). Mirror the
-  source's sparse verse keys exactly, EXCEPT omit out-of-range scrape keys (see
-  loop-doc ch27 note). This also unblocks the Book Treatment loop (a book is
-  treatment-eligible only once its synthesis is done — **2 Chronicles + Ezra now
-  eligible**). Procedure:
+  (36/36) + Ezra (10/10) + Nehemiah (13/13) finished** (genealogy/register +
+  narrative fan-out profiles both calibrated). Frontier = **Esther 1**; the
+  remaining OT back-half is Esther → Malachi + the poetic/wisdom books (~503 ch).
+  Mirror the source's sparse verse keys exactly, EXCEPT omit out-of-range scrape
+  keys (see loop-doc ch27 note). This also unblocks the Book Treatment loop (a
+  book is treatment-eligible only once its synthesis is done — **2 Chronicles +
+  Ezra + Nehemiah now eligible**). Procedure:
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
 - [ ] **Book Treatment loop** — the single per-book study that fills the Studies
   tool: **one Full Treatment** per book (auto-assembled intro + synthesized

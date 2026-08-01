@@ -29,10 +29,10 @@ the same script's `--section` mode.
 Progress is derived from the data itself — there is no tracker file. Walk the
 books in canonical order (`data/bible/books.json`); the next work unit is the
 first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of **2026-07-22: 673/1,189 done
-(56.6%), frontier = Nehemiah 1** (Genesis→**Ezra** and the whole NT are now
-complete; **2 Chronicles finished 36/36 + Ezra finished 10/10 2026-07-22**;
-Nehemiah→Malachi + the poetic/wisdom books are the remaining OT back-half). NB the
+source `cow/<book>/<ch>.json` exists. As of **2026-08-01: 686/1,189 done
+(57.7%), frontier = Esther 1** (Genesis→**Nehemiah** and the whole NT are now
+complete; **Nehemiah finished 13/13 2026-08-01**; Esther→Malachi + the
+poetic/wisdom books are the remaining OT back-half). NB the
 NT was synthesized in an earlier pass, so the frontier is purely OT — the count
 is not a single canonical sweep.
 

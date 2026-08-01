@@ -1,9 +1,9 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-07-22** (Full Treatments: Romans + Revelation; treatment
-> eligibility tied to COW synthesis; **2 Chronicles (36/36) + Ezra (10/10) COW
-> synthesis complete → 56.6%**, frontier now Nehemiah 1)
+> Last updated: **2026-08-01** (Full Treatments: Romans + Revelation; treatment
+> eligibility tied to COW synthesis; **Nehemiah (13/13) COW synthesis complete →
+> 57.7%**, frontier now Esther 1)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -18,13 +18,13 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight (active focus)**: **COW synthesis — 673/1,189 chapters = 56.6%.**
-  NOT a single canonical frontier: **Genesis→Ezra and the entire NT are complete**
-  (2 Kings + 1 Chronicles + all 36 chapters of 2 Chronicles + all 10 of Ezra
-  finished 2026-07-22 via calibrated fan-outs — genealogy/register + narrative
+- **In flight (active focus)**: **COW synthesis — 686/1,189 chapters = 57.7%.**
+  NOT a single canonical frontier: **Genesis→Nehemiah and the entire NT are complete**
+  (2 Kings + 1 Chronicles + all 36 chapters of 2 Chronicles + all 10 of Ezra +
+  all 13 of Nehemiah finished — genealogy/register + narrative
   profiles both calibrated; each chapter validated + scrape-meta-scanned before
-  commit); the gap is now the OT back-half (**Nehemiah → Malachi** + the
-  poetic/wisdom books). OT frontier = **Nehemiah 1**. Advancing this loop is
+  commit); the gap is now the OT back-half (**Esther → Malachi** + the
+  poetic/wisdom books). OT frontier = **Esther 1**. Advancing this loop is
   the current focus — it also gates the Studies tool, since a book earns a Full
   Treatment only after its synthesis is done (see below). The
   62 legacy validator failures (John 4, Luke 13, Genesis 41, 1 Samuel 5) are
