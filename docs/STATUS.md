@@ -1,9 +1,9 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-01** (Full Treatments: Romans + Revelation; treatment
-> eligibility tied to COW synthesis; **Esther (10/10) COW synthesis complete →
-> 58.5%**, frontier now Job 1)
+> Last updated: **2026-08-02** (Full Treatments: Romans + Revelation; treatment
+> eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
+> 62.1%**, frontier now Psalms 1)
 
 - **Site**: LIVE at https://kingdombiblestudy.com — deploy on every push to
   master (owner approval required before pushing).
@@ -18,13 +18,13 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight (active focus)**: **COW synthesis — 696/1,189 chapters = 58.5%.**
-  NOT a single canonical frontier: **Genesis→Esther and the entire NT are complete**
-  (2 Kings + 1 Chronicles + all 36 chapters of 2 Chronicles + all 10 of Ezra +
-  all 13 of Nehemiah + all 10 of Esther finished — genealogy/register + narrative
-  profiles both calibrated; each chapter validated + scrape-meta-scanned before
-  commit); the gap is now the OT back-half (**Job → Malachi** + the
-  poetic/wisdom books). OT frontier = **Job 1** (the first poetic/wisdom book).
+- **In flight (active focus)**: **COW synthesis — 738/1,189 chapters = 62.1%.**
+  NOT a single canonical frontier: **Genesis→Job and the entire NT are complete**
+  (2 Chronicles + Ezra + Nehemiah + Esther + all 42 of **Job** finished —
+  genealogy/register + narrative + dialogue-poetry profiles all calibrated;
+  each chapter validated + scrape-meta-scanned + anti-templating-checked before
+  commit); the gap is now the OT back-half (**Psalms → Malachi** + the remaining
+  poetic/wisdom books). OT frontier = **Psalms 1** (pure Hebrew poetry, 150 ch).
   Advancing this loop is
   the current focus — it also gates the Studies tool, since a book earns a Full
   Treatment only after its synthesis is done (see below). The

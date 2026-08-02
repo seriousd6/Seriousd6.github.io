@@ -29,13 +29,14 @@ the same script's `--section` mode.
 Progress is derived from the data itself — there is no tracker file. Walk the
 books in canonical order (`data/bible/books.json`); the next work unit is the
 first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of **2026-08-01: 696/1,189 done
-(58.5%), frontier = Job 1** (Genesis→**Esther** and the whole NT are now
-complete; **Esther finished 10/10 2026-08-01**; Job→Malachi + the
-poetic/wisdom books are the remaining OT back-half. Job is the first
-poetic/wisdom book — its narrative frame (1–2, 42) follows the usual profile,
-but the dialogue-poetry (3–41) has the witnesses discussing Hebrew parallelism,
-textual difficulties, and the flow of the argument rather than events). NB the
+source `cow/<book>/<ch>.json` exists. As of **2026-08-02: 738/1,189 done
+(62.1%), frontier = Psalms 1** (Genesis→**Job** and the whole NT are now
+complete; **Job finished 42/42 2026-08-02**; Psalms→Malachi + the remaining
+poetic/wisdom books are the OT back-half. Psalms is pure Hebrew poetry — apply
+the Job dialogue-poetry profile (witnesses on wording, imagery, textual
+variants, and the flow of the psalm rather than events) with the
+**anti-templating rule** below; chapters range from 2 verses (Ps 117) to 176
+(Ps 119), so size waves accordingly). NB the
 NT was synthesized in an earlier pass, so the frontier is purely OT — the count
 is not a single canonical sweep.
 
@@ -115,6 +116,14 @@ is not a single canonical sweep.
   lint" (lost with `working/`; pending recovery) that blocked degenerate
   filler — the under-length John 4 output shows the failure mode it guarded
   against. Vary openings and structure verse to verse; let the material lead.
+- **Anti-templating (poetry chapters especially):** do NOT open verse after
+  verse with the full KJV verse in quotes followed by an em-dash. That rote
+  "quote-the-verse, dash, comment" shape reads as a template even when the
+  bodies differ (Job 5 shipped 26/27 verses that way and had to be
+  regenerated). Most verses should open with a framing sentence and weave the
+  quoted phrase in mid-sentence; keep quote-led openings a minority (rule of
+  thumb ≤ ~⅓ of the chapter). A quick check: count verses whose visible text
+  starts with a quotation mark before committing.
 - Where witnesses genuinely divide (e.g. who the "saviour" of 2 Kings 13:5
   is), present the debate honestly and record it in `debates`.
 

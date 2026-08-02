@@ -16,17 +16,18 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 > owner approval.
 
 - [ ] **COW synthesis loop — continue at the OT frontier** *(active focus —
-  2026-08-01)*. **696/1,189 = 58.5% done** (Genesis→**Esther** + the whole NT
-  complete; corpus validates clean). **2 Kings + 1 Chronicles + 2 Chronicles
-  (36/36) + Ezra (10/10) + Nehemiah (13/13) + Esther (10/10) finished**
-  (genealogy/register + narrative fan-out profiles both calibrated). Frontier =
-  **Job 1** — the first poetic/wisdom book (narrative frame 1–2/42 + dialogue-
-  poetry 3–41); the remaining OT back-half is Job → Malachi + the poetic/wisdom
-  books (~493 ch). Mirror the source's sparse verse keys exactly, EXCEPT omit
+  2026-08-02)*. **738/1,189 = 62.1% done** (Genesis→**Job** + the whole NT
+  complete; corpus validates clean). **2 Chronicles + Ezra + Nehemiah + Esther +
+  Job (42/42) finished** (narrative + genealogy/register + dialogue-poetry
+  profiles all calibrated; anti-templating check added — see loop-doc). Frontier =
+  **Psalms 1** — pure Hebrew poetry, 150 ch (verse counts range 2 → 176), the
+  largest remaining book; then the rest of Psalms → Malachi + poetic/wisdom
+  (~451 ch). Mirror the source's sparse verse keys exactly, EXCEPT omit
   out-of-range scrape keys (see loop-doc ch27 note). This also unblocks the Book
   Treatment loop (a book is treatment-eligible only once its synthesis is done —
-  **2 Chronicles + Ezra + Nehemiah + Esther now eligible**). Procedure:
-  [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
+  **2 Chronicles + Ezra + Nehemiah + Esther + Job now eligible**; completing
+  Psalms synthesis will finally unblock the long-pending Psalms treatment).
+  Procedure: [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
 - [ ] **Book Treatment loop** — the single per-book study that fills the Studies
   tool: **one Full Treatment** per book (auto-assembled intro + synthesized
   multi-perspective commentary in per-chapter divisions, chapter picker +
