@@ -55,15 +55,19 @@ is not a single canonical sweep.
 2. Write the prose file: for EVERY verse in the chapter (mirror the source
    file's verse keys EXACTLY — never renumber or re-versify), one HTML string
    that narrates what the witnesses say — attributed by name, with each
-   commentator's school named inline as a `<strong>` tag carrying the FULL
-   enum slug, exactly as it appears in the tags file:
+   commentator's school named inline as a `<strong>` tag. **Going-forward
+   convention: use the FULL enum slug** exactly as it appears in the tags file —
    `<strong>reformed</strong>`, `<strong>wesleyan-arminian</strong>`,
    `<strong>puritan-evangelical</strong>`, `<strong>grammatical-historical</strong>`
-   (the whole shipped corpus — the 2 Kings 13 gold standard included — uses the
-   enum slug inline, NOT a short form like `wesleyan`/`puritan`; the reader layer
-   renders `<strong>` as plain bold, so a short-form file is visibly inconsistent
-   with every other chapter. A 2026-08-01 Esther batch shipped short forms and had
-   to be normalized). Real disagreements surface as disagreements; scripture
+   — since that is the plurality form (~81% of school-label occurrences, 5.4k vs
+   1.3k short) and it matches the tags. NB the shipped corpus is historically
+   **inconsistent** on this cosmetic point: `<strong>` is used freely for
+   commentator names (`<strong>Gill</strong>`), key terms, and schools in short
+   (`puritan`/`wesleyan`) and mixed-case (`Reformed`) forms — the reader layer
+   renders `<strong>` as plain bold, so none of it fails validation or misleads a
+   reader. Don't retrofit old chapters; just follow the full-slug convention in
+   new work. (A 2026-08-01 Esther batch was normalized short→full to match.)
+   Real disagreements surface as disagreements; scripture
    references are `<a class="ref" data-ref="2 Kings 13:10">v.10</a>` (NEVER
    a bare "Book Ch:V" outside an anchor; chapter-only citations point at
    verse 1, e.g. `data-ref="2 Chronicles 24:1"`).
