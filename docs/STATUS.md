@@ -100,7 +100,7 @@
   `scripts/synthesis-frontier.py` serves both queues from the metadata
   (generate: 432 chapters; repair: 447), and `backfill-synthesis-qa.py
   --standard current` stamps finished work, refusing anything that grades C/D or
-  names an ungrounded voice.
+  names an ungrounded voice. `synthesis-loop.py` runs the whole cycle unattended.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

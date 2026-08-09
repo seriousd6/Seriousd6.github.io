@@ -159,6 +159,12 @@ def main():
     ap.add_argument('--boilerplate', type=int, default=25)
     ap.add_argument('--fail-over', type=int, default=None,
                     help='exit 1 if more than N verses carry a PAD flag')
+    ap.add_argument('--enforce-all', action='store_true',
+                    help='with --gate: judge every verse in scope on its merits, '
+                         'ignoring the legacy exemption. Use when checking a '
+                         'chapter you have just rewritten — its verses still '
+                         'carry the OLD stamp, so a plain --gate would skip them '
+                         'and pass vacuously')
     ap.add_argument('--gate', action='store_true',
                     help='CI mode: enforce the standard on verses written to it, '
                          'exempt the tracked legacy debt, exit 1 on any violation')
@@ -349,7 +355,7 @@ def main():
         print(f'\nwrote {a.json}')
 
     if a.gate:
-        return run_gate(verses)
+        return run_gate(verses, enforce_all=a.enforce_all)
 
     if a.fail_over is not None and fl.get('PAD', 0) > a.fail_over:
         return 1
@@ -371,15 +377,25 @@ def main():
 # is protected against regression.
 FATAL_FLAGS = ('UNSOURCED', 'NOISE', 'META', 'SLOT')
 
-def run_gate(verses):
+def run_gate(verses, enforce_all=False):
     unstamped, legacy, enforced, violations = [], 0, 0, []
     for r in verses:
         qa = r.get('qa')
         if not isinstance(qa, dict):
-            unstamped.append(r); continue
+            if not enforce_all:
+                unstamped.append(r); continue
+            qa = {}
         std = qa.get('standard')
-        if std == QA.LEGACY_STANDARD:
+        if std == QA.LEGACY_STANDARD and not enforce_all:
             legacy += 1; continue
+        if enforce_all:
+            enforced += 1
+            bad = [f for f in FATAL_FLAGS if f in r['flags']]
+            if bad:
+                violations.append((r, 'defect: ' + ','.join(bad)))
+            elif r['grade'] not in ('A', 'B'):
+                violations.append((r, f'grade {r["grade"]} (must be A or B)'))
+            continue
         if std != QA.CURRENT_STANDARD:
             violations.append((r, f'unknown qa.standard {std!r}')); continue
         enforced += 1
@@ -390,7 +406,8 @@ def run_gate(verses):
             violations.append((r, f'grade {r["grade"]} (must be A or B)'))
 
     print('\n' + '=' * 78)
-    print(f'CI GATE — standard {QA.CURRENT_STANDARD}')
+    print(f'CI GATE — standard {QA.CURRENT_STANDARD}'
+          + ('  [--enforce-all: legacy exemption ignored]' if enforce_all else ''))
     print('=' * 78)
     print(f'  enforced (current standard) : {enforced}')
     print(f'  exempt   (tracked debt)     : {legacy} / baseline {QA.LEGACY_BASELINE}')

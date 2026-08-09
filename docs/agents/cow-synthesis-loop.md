@@ -70,6 +70,43 @@ canonical sweep.
 > nonexistent verse (documented in the ch27 commit). A source-vs-synthesis
 > key-diff will legitimately show ch27 as 9-vs-10; that is expected, not a defect.
 
+## Running it unattended
+
+`scripts/synthesis-loop.py` owns everything mechanical — choosing the unit,
+verifying it, stamping it, committing it, and refusing anything that has not
+earned the standard. **An agent only has to write the prose and tags files.**
+
+```sh
+while unit=$(python3 scripts/synthesis-loop.py next --queue repair --worst-first); do
+  set -- $unit; book=$1; ch=$2
+
+  #  ... the agent writes cow-synthesis/$book/$ch.json + the tags file here ...
+
+  python3 scripts/synthesis-loop.py finish "$book" "$ch" --repair --unattended || continue
+done
+```
+
+`finish` runs validator → chapter lint → stamp → chapter gate → corpus gate →
+commit, and stops before the commit on any failure, so bad work cannot land.
+
+**Exit codes** (stable; the loop depends on them): `0` success · `2` usage ·
+`3` queue empty, stop · `4` chapter failed verification, nothing committed.
+
+Two details that make unattended running safe:
+
+- **`--unattended` reverts a failed chapter** after copying it to
+  `scratchpad/rejected/<book>-<ch>-<timestamp>/`, so the tree stays clean and the
+  next iteration proceeds. Losing one chapter's output is cheap — the source
+  catena is untouched and it can be regenerated; a stalled loop with a dirty tree
+  is not. Without the flag the files are left in place for inspection.
+- **The chapter lint runs `--enforce-all`.** A chapter under repair still carries
+  its OLD `legacy-unversioned` stamp, which the plain gate skips — so without
+  this the first check would pass vacuously on exactly the work it is meant to
+  judge. (It did, until it was caught in testing.)
+
+`--dry-run` rehearses the whole chain, stamp and both gates included, then
+restores the tags file so the tree is unchanged.
+
 ## Per-chapter procedure
 
 1. **Study one finished pair first** (e.g. `cow-synthesis/2kings/13.json` +

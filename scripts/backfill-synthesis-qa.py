@@ -84,6 +84,10 @@ def grade_of(m):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--book')
+    ap.add_argument('--chapter',
+                    help='restrict to one chapter — required for unattended '
+                         'stamping, so a part-repaired book does not refuse on '
+                         'the chapters not yet done')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--overwrite', action='store_true')
     ap.add_argument('--standard', choices=['legacy', 'current'], default='legacy',
@@ -94,7 +98,8 @@ def main():
 
     dates = chapter_dates()
     src = QA.SourceIndex(ROOT)
-    pattern = os.path.join(ROOT, 'data/commentary/cow-synthesis', a.book or '*', '*.json')
+    pattern = os.path.join(ROOT, 'data/commentary/cow-synthesis', a.book or '*',
+                           f'{a.chapter}.json' if a.chapter else '*.json')
     files = sorted(glob.glob(pattern))
     if not files:
         print(f'no files matched {pattern}', file=sys.stderr)
