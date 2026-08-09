@@ -34,6 +34,14 @@ jobs:
       - name: Capstone format (book commentary + guide + study-guide loops)
         run: python3 scripts/validate-commentary.py
 
+      # Quality gate for Commentary A. A ratchet, not a cliff: the 2026-07-22
+      # debt is stamped legacy-unversioned in each verse's qa block and skipped,
+      # so this is green today; every verse written or repaired to the current
+      # standard is held to it, and the exempt set may shrink but never grow.
+      # See docs/plans/cow-synthesis-quality-audit.md.
+      - name: Synthesis quality gate (anti-template lint)
+        run: python3 scripts/audit-synthesis-quality.py --gate --worst 0 --boilerplate 0
+
       - name: JS syntax (node --check on all modules)
         run: |
           if command -v node >/dev/null 2>&1; then

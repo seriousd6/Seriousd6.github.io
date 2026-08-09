@@ -209,7 +209,29 @@ Backfill tool: `scripts/backfill-synthesis-qa.py`. It preserves each file's own
 indentation — the tags tree mixes 1-space, 2-space and flush-left, and
 normalising it buries the real change under ~380k lines of churn.
 
-## 9. Repair scope, if approved
+## 9. The CI gate (enabled 2026-08-09)
+
+`validate.yml` now runs `audit-synthesis-quality.py --gate` on every push. It is
+a **ratchet, not a cliff** — a gate that judged the whole corpus would be
+permanently red and therefore ignored:
+
+| verse state | gate behaviour |
+|---|---|
+| `qa.standard: cow-prose-rules-2026-08-09` | enforced in full — must grade A/B, no UNSOURCED/NOISE/META/SLOT |
+| `qa.standard: legacy-unversioned` | skipped as tracked debt |
+| no `qa` block | **fails** — otherwise omitting metadata would be the easy way to dodge the gate |
+| legacy count above `LEGACY_BASELINE` (21,682) | **fails** — the exemption may shrink as chapters are repaired, never grow |
+
+Green today: 0 enforced, 21,682 exempt, 0 unstamped. Every verse written or
+repaired from now on is protected against regression, and the exempt count is a
+live progress meter for the repair.
+
+All four paths are tested in isolation: a real grade-A chapter stamped to the
+current standard passes; a padded verse fails on grade; a verse naming an
+unsourced voice fails on UNSOURCED; an unstamped verse and an inflated legacy
+count each fail.
+
+## 10. Repair scope, if approved
 
 - ~9,354 grade-D verses across ~356 chapters need regeneration.
 - Priority order by reader impact: Romans, Hebrews, 1–2 Corinthians, Genesis,
@@ -217,14 +239,14 @@ normalising it buries the real change under ~380k lines of churn.
 - Already clean, leave alone: Job, Psalms, 1–2 Kings, 1–2 Chronicles, 2 Samuel,
   Ezra, Esther, Nehemiah, Matthew, John.
 
-## 10. Running the lint
+## 11. Running the lint
 
 ```
 python3 scripts/audit-synthesis-quality.py                      # whole corpus
 python3 scripts/audit-synthesis-quality.py --book romans        # one book
 python3 scripts/audit-synthesis-quality.py --book psalms --chapter 21
 python3 scripts/audit-synthesis-quality.py --json out.json      # machine-readable
-python3 scripts/audit-synthesis-quality.py --fail-over 0        # CI-style gate
+python3 scripts/audit-synthesis-quality.py --gate               # the CI gate
 ```
 
 Thresholds are calibrated against the loop's own gold standard (2 Kings 13 and

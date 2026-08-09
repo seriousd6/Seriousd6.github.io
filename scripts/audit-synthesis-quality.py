@@ -159,6 +159,9 @@ def main():
     ap.add_argument('--boilerplate', type=int, default=25)
     ap.add_argument('--fail-over', type=int, default=None,
                     help='exit 1 if more than N verses carry a PAD flag')
+    ap.add_argument('--gate', action='store_true',
+                    help='CI mode: enforce the standard on verses written to it, '
+                         'exempt the tracked legacy debt, exit 1 on any violation')
     a = ap.parse_args()
 
     pattern = os.path.join(SYN, a.book or '*', f'{a.chapter}.json' if a.chapter else '*.json')
@@ -345,8 +348,72 @@ def main():
                   open(a.json, 'w'), indent=1)
         print(f'\nwrote {a.json}')
 
+    if a.gate:
+        return run_gate(verses)
+
     if a.fail_over is not None and fl.get('PAD', 0) > a.fail_over:
         return 1
+    return 0
+
+
+# ── CI gate ─────────────────────────────────────────────────────────────────
+# A ratchet, not a cliff. The corpus is 43% grade D, so a gate that judged every
+# verse would be permanently red and therefore useless. Instead:
+#
+#   * verses stamped with the CURRENT standard are held to it in full;
+#   * verses stamped legacy-unversioned are the tracked 2026-07-22 debt and are
+#     skipped — but their number may never exceed the recorded baseline, so the
+#     exemption cannot be used to smuggle new work in;
+#   * a verse with NO qa block fails outright, because omitting the metadata
+#     would otherwise be the easiest way to dodge the gate.
+#
+# Net effect: CI is green today, and every verse written or repaired from now on
+# is protected against regression.
+FATAL_FLAGS = ('UNSOURCED', 'NOISE', 'META', 'SLOT')
+
+def run_gate(verses):
+    unstamped, legacy, enforced, violations = [], 0, 0, []
+    for r in verses:
+        qa = r.get('qa')
+        if not isinstance(qa, dict):
+            unstamped.append(r); continue
+        std = qa.get('standard')
+        if std == QA.LEGACY_STANDARD:
+            legacy += 1; continue
+        if std != QA.CURRENT_STANDARD:
+            violations.append((r, f'unknown qa.standard {std!r}')); continue
+        enforced += 1
+        bad = [f for f in FATAL_FLAGS if f in r['flags']]
+        if bad:
+            violations.append((r, 'defect: ' + ','.join(bad)))
+        elif r['grade'] not in ('A', 'B'):
+            violations.append((r, f'grade {r["grade"]} (must be A or B)'))
+
+    print('\n' + '=' * 78)
+    print(f'CI GATE — standard {QA.CURRENT_STANDARD}')
+    print('=' * 78)
+    print(f'  enforced (current standard) : {enforced}')
+    print(f'  exempt   (tracked debt)     : {legacy} / baseline {QA.LEGACY_BASELINE}')
+    print(f'  unstamped (no qa block)     : {len(unstamped)}')
+    print(f'  violations                  : {len(violations)}')
+
+    fail = False
+    if legacy > QA.LEGACY_BASELINE:
+        print(f'\n  FAIL: the legacy exemption grew ({legacy} > {QA.LEGACY_BASELINE}).')
+        print('        New work must be stamped with the current standard.')
+        fail = True
+    for r in unstamped[:20]:
+        print(f'  FAIL {r["book"]} {r["ch"]}:{r["v"]} — no qa block; stamp it before committing')
+    if len(unstamped) > 20:
+        print(f'  ... and {len(unstamped) - 20} more unstamped')
+    for r, why in violations[:30]:
+        print(f'  FAIL {r["book"]} {r["ch"]}:{r["v"]} — {why}')
+    if len(violations) > 30:
+        print(f'  ... and {len(violations) - 30} more violations')
+
+    if unstamped or violations or fail:
+        return 1
+    print('\n  gate passed')
     return 0
 
 if __name__ == '__main__':

@@ -107,8 +107,12 @@ is not a single canonical sweep.
    prose/tags keys must match 1:1; every ref linked; school slugs/prevalence
    from the enums), then
    `python3 scripts/audit-synthesis-quality.py --book <book> --chapter <ch>`
-   (**every verse must grade A or B**; any NOISE/META/SLOT flag is a hard stop).
-   The validator cannot see whether the length was *earned*; the lint can.
+   (**every verse must grade A or B**; any UNSOURCED/NOISE/META/SLOT flag is a
+   hard stop). The validator cannot see whether the length was *earned*; the
+   lint can. **CI runs `--gate` on every push**, so a chapter that fails the lint
+   fails the build — stamp each verse's `qa` block with
+   `standard: cow-prose-rules-2026-08-09` and the checks you performed, or the
+   gate rejects it as unstamped.
 5. Commit exactly: `COW synthesis: <book> <ch> (<N> verses)`.
    Scratch work goes in `scratchpad/` (gitignored). Do not push — pushes
    deploy production and need owner approval.

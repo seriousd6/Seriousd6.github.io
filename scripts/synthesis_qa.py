@@ -35,6 +35,14 @@ STANDARDS = {
         'Written before any recorded standard; length/refs/tags only.',
 }
 CURRENT_STANDARD = 'cow-prose-rules-2026-08-09'
+LEGACY_STANDARD = 'legacy-unversioned'
+
+# Verses carrying LEGACY_STANDARD are the known debt from the 2026-07-22 batch:
+# the CI gate exempts them so it can be switched on before the repair lands.
+# This baseline is the ratchet — the exempt set may SHRINK as chapters are
+# repaired, never grow. Raising it is how the exemption would quietly become a
+# loophole, so the gate fails if the legacy count exceeds it.
+LEGACY_BASELINE = 21682
 
 # Check ids. A verse lists the ones actually performed on it.
 CHECKS = {
