@@ -69,8 +69,13 @@
   seven traditions each stated at its strongest with its weakest link; the tests
   Scripture gives and how to run them; keeping the fire and the way back.
   Even-handed by owner direction — comfort and warning held in tension rather
-  than one traded for the other — and it states its own position and that
-  position's weaknesses in the hub. **Korah's Rebellion (2026-08-09)** at
+  than one traded for the other. It represents all seven traditions at their
+  strongest but **does adjudicate**: Part II demonstrates in a 14-row table that
+  three of the five harmonising strategies are one reading which carries every
+  hard text without forcing any, and Part III states the verdict plainly,
+  separating exegetical strain (a real defect) from metaphysical mystery (which
+  Scripture itself retains). The hub says where it lands up front.
+  **Korah's Rebellion (2026-08-09)** at
   `topics/korahs-rebellion/`: text/composition/reception, the theological sprawl,
   the divided church, the NT's answer, and spiritual abuse. Its Part V was drafted
   and owner-reviewed before the pages were built.
