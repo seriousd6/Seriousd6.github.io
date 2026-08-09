@@ -63,9 +63,12 @@
   the book-commentary chapter picker (`.bkc-chapternav`), reused as the generic
   `.tg-tabs` component in `topic-guide.css` + `assets/js/entries/study-tabs.js`.
   Every panel ships in the HTML and is hidden by JS, so with scripting off the
-  study degrades to one long readable page. Korah's Rebellion is converted; its
-  old `part-N.html` URLs are redirect stubs to `#part-N`. **`salvation-assurance`
-  is still five separate pages and can adopt the same component unchanged.**
+  study degrades to one long readable page. Both five-part studies are converted —
+  Korah's Rebellion and Assurance of Salvation — with their old `part-N.html`
+  URLs kept as redirect stubs to `#part-N`. The transform itself is a tracked
+  tool, `scripts/compose-study-tabs.py`, which infers accent, hero variant,
+  titles and part bodies from the existing files, so a future multi-part study
+  converts in one command.
 - **Topical studies (hand-authored, separate from the book pipeline)**: eight
   live under `topics/`, listed via the `topical` array in
   `data/books-content.json`. Both newest ones are five-part studies built on the
