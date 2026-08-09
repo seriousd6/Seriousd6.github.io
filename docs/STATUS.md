@@ -74,8 +74,11 @@
   earned). The lost **anti-template lint is recovered** as
   `scripts/audit-synthesis-quality.py`. Audit + proposed prompt fixes:
   [plans/cow-synthesis-quality-audit.md](plans/cow-synthesis-quality-audit.md).
-  No regeneration started; awaiting owner decisions on the prompt and the
-  350-word floor.
+  **Prevention is in place** (2026-08-09): six prose rules added to the loop
+  prompt, the lint is a required pre-commit gate, and the `thin` exemption now
+  lets genuinely sparse verses come in at 120–349 words — validated against the
+  source (catena ≤ 200 words), so the flag cannot excuse a lazy entry. No
+  regeneration of the existing debt has started.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

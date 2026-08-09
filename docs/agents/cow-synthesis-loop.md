@@ -101,17 +101,78 @@ is not a single canonical sweep.
      Ellicott)".
    - `outliers`: `[{voice, note}]`.
    - `themes`: short strings.
-4. **Validate before committing** — must pass clean:
-   `python scripts/validate-synthesis.py --verse <book> <ch>`
-   (350–650 words per verse targeting ~500; prose/tags keys must match 1:1;
-   every ref linked; school slugs/prevalence from the enums).
+4. **Validate AND lint before committing** — both must pass clean:
+   `python3 scripts/validate-synthesis.py --verse <book> <ch>`
+   (350–650 words per verse targeting ~500 — or the thin exemption below;
+   prose/tags keys must match 1:1; every ref linked; school slugs/prevalence
+   from the enums), then
+   `python3 scripts/audit-synthesis-quality.py --book <book> --chapter <ch>`
+   (**every verse must grade A or B**; any NOISE/META/SLOT flag is a hard stop).
+   The validator cannot see whether the length was *earned*; the lint can.
 5. Commit exactly: `COW synthesis: <book> <ch> (<N> verses)`.
    Scratch work goes in `scratchpad/` (gitignored). Do not push — pushes
    deploy production and need owner approval.
 
+## Prose rules (2026-08-09 — after the quality audit)
+
+The [quality audit](../plans/cow-synthesis-quality-audit.md) found 43% of the
+corpus was filler that passed every validator. These rules exist because each
+was violated at scale; the lint enforces them mechanically.
+
+**1. Banned carrier phrases.** These were used as filler to reach the floor —
+"the verse displays" 49,437 times, "the witnesses note" 45,395 times (up to 13
+in a single verse). Do not use any of them as a stock sentence opener:
+
+> the verse displays · the witnesses note · so the witnesses · the grammatical
+> voices note · the lesson the expositors draw · the witnesses do not divide ·
+> the verse holds together · the shared, dominant note
+
+Naming what a witness says is fine — *"Gill reads the fruit of the offspring"*.
+Wrapping every clause in a stock carrier is not. **No carrier sentence may open
+more than one paragraph in a verse.**
+
+**2. Never narrate the source's thinness.** The reader must not be told that the
+comment is brief, that the witnesses said little, or that the synthesis is short
+as a result. "The very brief comment matches the very brief verse" shipped 2,399
+times. If the witnesses say little, **write less** — see the thin exemption.
+
+**3. Never narrate the skipping of noise.** Already a rule; restated because 28
+verses shipped "The Jamieson-Fausset-Brown note here is misplaced". Omit the
+residue as though it were never in the source.
+
+**4. The floor is a floor, not a target.** 350 words is the minimum for a verse
+with normal witness material, not a quota to reach. Padding to hit it is the
+single defect that produced the audit.
+
+**5. Cap re-quoting.** Quoted scripture must not exceed roughly a fifth of the
+verse, and **the same fragment must never be quoted twice**. Re-quoting the
+verse to add length is padding.
+
+**6. No slot-lists.** The degenerate `; the <clause> (<gloss>); the <clause>
+(<gloss>)` shape — walking the verse phrase by phrase in parentheses — is
+banned outright. It was the worst offender in Joshua and Numbers.
+
+### The thin exemption
+
+Some verses genuinely carry two lines of witness material. Forcing those to 350
+words is what manufactured the filler, so the contract now allows an opt-out:
+
+- Set `"thin": true` on the verse's **tags** entry.
+- The verse's prose must then be **120–349 words**.
+- The exemption is checked against the source, not taken on trust: the catena
+  blob for that verse must be **≤ 200 visible words**. A rich source marked
+  thin fails; a thin flag left on a verse that grew past 349 words fails.
+
+Use it where it is true. A thin entry that says one thing well is worth more
+than 350 words that say it four times.
+
 ## Quality bar
 
 - Grounded ONLY in what the sources say — never invent a commentator's view.
+- **Length follows the material.** A verse with rich witnesses runs long; a
+  verse with sparse ones runs short and is marked `thin`. Writing every verse to
+  ~430 words regardless of the source is the signature of the defect the audit
+  found.
 - Narrative prose, not a template. The original run had an "anti-template
   lint" (lost with `working/`; pending recovery) that blocked degenerate
   filler — the under-length John 4 output shows the failure mode it guarded

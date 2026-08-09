@@ -52,6 +52,29 @@ def load(p):
     return json.loads(open(p, encoding='utf-8').read())
 
 # ── Commentary A ────────────────────────────────────────────────────────────
+# ── the thin-verse exemption (owner decision, 2026-08-09) ───────────────────
+# The 350-word floor is what manufactured the corpus's filler: a verse with two
+# lines of witness material was still required to reach 350 words, so the loop
+# padded. See docs/plans/cow-synthesis-quality-audit.md.
+#
+# A verse may set `"thin": true` in its TAGS entry to opt out of the floor. The
+# exemption is not the author's say-so — it is checked against the source: the
+# catena blob for that verse must actually be sparse, and the prose must
+# actually be short. Both directions are enforced so the flag cannot be used to
+# excuse a lazy entry on a rich source, nor left on a verse that grew.
+THIN_SOURCE_MAX = 200   # visible words of catena below which "thin" is allowed
+THIN_MIN, THIN_MAX = 120, 349
+
+def source_words(book, ch, v):
+    """Visible word count of the catena for one verse, or None if unavailable."""
+    p = os.path.join(ROOT, 'data/commentary/cow', book, f'{ch}.json')
+    if not os.path.exists(p):
+        return None
+    try:
+        return words(load(p).get(v, ''))
+    except Exception:
+        return None
+
 def validate_verse(book, ch):
     prose_p = os.path.join(ROOT, 'data/commentary/cow-synthesis', book, f'{ch}.json')
     tags_p  = os.path.join(ROOT, 'data/commentary/cow-synthesis-tags', book, f'{ch}.json')
@@ -62,8 +85,19 @@ def validate_verse(book, ch):
     check(bool(tags), f'A {book} {ch}: tags file present')
     for v, html in prose.items():
         w = words(html)
-        check(isinstance(html, str) and html.strip().startswith('<') and 350 <= w <= 650,
-              f'A {book} {ch}:{v}: prose is HTML, {w} words (target ~500, 350–650)')
+        is_html = isinstance(html, str) and html.strip().startswith('<')
+        thin = bool((tags.get(v) or {}).get('thin')) if isinstance(tags.get(v), dict) else False
+        if thin:
+            sw = source_words(book, ch, v)
+            check(sw is None or sw <= THIN_SOURCE_MAX,
+                  f'A {book} {ch}:{v}: "thin" is justified by the source '
+                  f'({sw} source words, must be <= {THIN_SOURCE_MAX})')
+            check(is_html and THIN_MIN <= w <= THIN_MAX,
+                  f'A {book} {ch}:{v}: thin verse is HTML, {w} words '
+                  f'({THIN_MIN}-{THIN_MAX}; drop the flag if it grew past {THIN_MAX})')
+        else:
+            check(is_html and 350 <= w <= 650,
+                  f'A {book} {ch}:{v}: prose is HTML, {w} words (target ~500, 350–650)')
         ul = unlinked_refs(html)
         check(not ul, f'A {book} {ch}:{v}: every scripture ref is a .ref link (unlinked: {ul[:4]})')
         t = tags.get(v)

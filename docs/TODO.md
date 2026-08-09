@@ -47,9 +47,14 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   grade-D verses across 356 chapters. Everything generated 07-23 onward is
   clean (0.0%), so the current per-chapter procedure is sound and the debt is
   historical. Anti-template lint recovered as
-  `scripts/audit-synthesis-quality.py`. **Blocked on two owner decisions:** the
-  proposed loop-prompt changes (audit §6) and the 350-word-floor tension
-  (§7 — the floor is what manufactured the filler).
+  `scripts/audit-synthesis-quality.py`. **Prevention is DONE (2026-08-09):** the
+  six prose rules are in the loop prompt, the lint is a required pre-commit gate
+  alongside the validator, and the owner chose the `thin` exemption for the
+  350-word floor (source-checked, implemented in `validate-synthesis.py`).
+  **Remaining: the repair itself** — ~9,354 grade-D verses in ~356 chapters,
+  priority Romans, Hebrews, 1–2 Corinthians, Genesis, Exodus, Judges. Not
+  started; needs an owner call on scope. Note the lint cannot become a CI gate
+  until the repair lands (the corpus would fail it today).
 - [ ] **Provenance loop — add `_source` fields** across the data tree, AI-generated
   content first. [agents/provenance-loop.md](agents/provenance-loop.md).
 - [ ] **Owner: run [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)** (19 points,

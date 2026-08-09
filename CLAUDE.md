@@ -1,8 +1,12 @@
 # CLAUDE.md — Kingdom Bible Study
 
-Live PWA at https://kingdombiblestudy.com (GitHub Pages). **Every push to master
-deploys production. Do not push without explicit owner approval.** Local commits
-are always fine.
+Live PWA at https://kingdombiblestudy.com (GitHub Pages). Every push to master
+deploys production.
+
+**Push policy (owner, 2026-08-09):** pushing master is **standing-approved** —
+the owner's stop hook asks for it, so don't ask each time. Still stop and ask
+before anything hard to undo: history rewrites, force-pushes, deleting remote
+branches, or mass regeneration of the data tree. Local commits are always fine.
 
 ## Read first
 

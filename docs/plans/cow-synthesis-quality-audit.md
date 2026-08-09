@@ -9,8 +9,9 @@
 > — this is the **anti-template lint** the TODO lists as lost with the `working/`
 > tree. It is now recovered and tracked.
 >
-> **Nothing has been regenerated.** This document identifies the defect and
-> proposes the loop-prompt changes; repair is a separate decision.
+> **Nothing has been regenerated.** The prompt changes (§6) and the floor
+> decision (§7) are applied, so *new* work is protected. Repairing the existing
+> 9,354 grade-D verses is a separate, much larger decision (§8).
 
 ---
 
@@ -107,9 +108,10 @@ Two things I checked and cleared, so effort is not wasted on them:
   `validate-library-format` all pass. This is a quality gap, not a correctness
   one — which is exactly why it survived.
 
-## 6. Proposed loop-prompt changes
+## 6. Loop-prompt changes — APPLIED 2026-08-09
 
-For review before any regeneration. Each maps to a measured defect.
+All six are now in [`docs/agents/cow-synthesis-loop.md`](../agents/cow-synthesis-loop.md)
+under "Prose rules". Each maps to a measured defect.
 
 1. **Ban the stock carriers outright.** Name them: "the verse displays", "the
    witnesses note", "so the witnesses", "the grammatical voices note", "the
@@ -126,9 +128,27 @@ For review before any regeneration. Each maps to a measured defect.
 6. **Require the lint to pass before commit**, alongside the validator:
    `python3 scripts/audit-synthesis-quality.py --book <book> --chapter <ch>`.
 
-## 7. The unresolved tension the owner should decide
+## 7. RESOLVED — the 350-word floor (owner decision, 2026-08-09)
 
-Recommendations 2 and 3 collide with `validate-synthesis.py`'s hard 350-word
+**Chosen: option (b), the `thin` exemption.** Implemented in
+`scripts/validate-synthesis.py` and documented in the loop prompt.
+
+A verse may set `"thin": true` on its tags entry; its prose must then be
+120–349 words, and the exemption is validated against the source rather than
+taken on trust — the catena blob must be ≤ 200 visible words. A rich source
+marked thin fails; a thin flag left on a verse that grew past 349 fails; a short
+verse without the flag still fails the normal floor. All four paths are tested.
+
+The evidence behind the decision: even in the **clean** batch, verses with under
+100 words of source still produce a median of 431 words of synthesis — a 4–5×
+expansion. Synthesis length sits at 410–440 words across every band of source
+richness, which is the signature of writing to a target rather than to the
+material. 13.5% of the clean batch has sparse sources, so the exemption has real
+work to do.
+
+### The original framing, kept for the record
+
+The tension as first written: recommendations 2 and 3 collide with `validate-synthesis.py`'s hard 350-word
 floor. Some verses genuinely have two lines of witness material; the honest
 output is 150 words, and the floor forbids it. **The floor is what manufactured
 the filler.** Options:
