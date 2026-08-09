@@ -100,13 +100,40 @@ to tell any editing happened." They are not merely dull; they break the contract
 
 Two things I checked and cleared, so effort is not wasted on them:
 
-- **No fabricated commentators.** Every voice named in the tags appears in that
-  chapter's source catena — 21,682 verses, zero exceptions. A naive per-verse
-  check reports ~180 false positives (commentators legitimately span verse keys);
-  check at chapter level.
 - **The validators are sound.** `validate-synthesis`, `validate-data`, and
   `validate-library-format` all pass. This is a quality gap, not a correctness
   one — which is exactly why it survived.
+
+### CORRECTION (2026-08-09, later the same day)
+
+An earlier version of this section claimed *"no fabricated commentators —
+21,682 verses, zero exceptions."* **That was wrong.** The scan behind it ran
+over Psalms only; I generalised it to the corpus without re-running. Corrected
+finding, after checking every verse against the merged catena **and** all 36
+`cow-sources/` corpora, with tolerance for name variants:
+
+**101 verses attribute material to a commentator who has no comment on that
+chapter in any source tree** (0.47% of the corpus).
+
+| voice | verses | books |
+|---|---:|---|
+| Charles Ellicott | 98 | Joshua 87, Nehemiah 11 |
+| Gregory | 2 | John |
+| Tertullian | 1 | 2 Corinthians |
+
+The pattern is the tell: **Ellicott's own corpus covers Joshua 1–11 and 13 —
+chapter 12 is missing — and Joshua 12 is precisely where the synthesis invents
+him.** Nehemiah is identical (corpus has every chapter but 7; chapter 7 is
+flagged). The generator filled a slot the source could not fill rather than
+leaving it empty.
+
+Three earlier versions of this check were wrong in the other direction, which is
+worth recording so the next person doesn't repeat them: matching on a voice's
+last name flags every "X of Y" patristic name (Pelusium, Hippo, Nyssa are
+places); a ≥4-character token filter silently drops "Leo"; and checking only the
+merged `cow/` catena misses everything drawn from `cow-sources/`. Raw flags fell
+368 → 202 → 101 as each was fixed. **Ground the check before trusting the
+count.**
 
 ## 6. Loop-prompt changes — APPLIED 2026-08-09
 
@@ -165,7 +192,24 @@ I'd take **(b)**: it preserves the reader experience, records the fact where a
 tool can see it, and removes the incentive to pad. It is also the smallest
 change to the existing contract.
 
-## 8. Repair scope, if approved
+## 8. Per-verse QA metadata (added 2026-08-09)
+
+Every verse now carries a `qa` block on its tags entry: schema version, the
+standard it was written to, the date, the grade it scored, the checks actually
+performed, and the tool that graded it. Contract in `scripts/synthesis_qa.py`;
+shape enforced by `validate-synthesis.py`; drift between recorded and recomputed
+grade reported by the lint.
+
+All 21,682 existing verses are stamped `legacy-unversioned` with their audit
+grade — **the repair backlog is now machine-readable**, so the next wave can
+select work with a query instead of a re-scan. Verses with unsourced
+attributions additionally carry `ungrounded_voices`.
+
+Backfill tool: `scripts/backfill-synthesis-qa.py`. It preserves each file's own
+indentation — the tags tree mixes 1-space, 2-space and flush-left, and
+normalising it buries the real change under ~380k lines of churn.
+
+## 9. Repair scope, if approved
 
 - ~9,354 grade-D verses across ~356 chapters need regeneration.
 - Priority order by reader impact: Romans, Hebrews, 1–2 Corinthians, Genesis,
@@ -173,7 +217,7 @@ change to the existing contract.
 - Already clean, leave alone: Job, Psalms, 1–2 Kings, 1–2 Chronicles, 2 Samuel,
   Ezra, Esther, Nehemiah, Matthew, John.
 
-## 9. Running the lint
+## 10. Running the lint
 
 ```
 python3 scripts/audit-synthesis-quality.py                      # whole corpus

@@ -20,6 +20,8 @@ No args validates everything that exists under both trees.
 Exit non-zero on any failure.
 """
 import json, os, re, sys, glob
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import synthesis_qa as QA
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 fails = []
@@ -102,6 +104,9 @@ def validate_verse(book, ch):
         check(not ul, f'A {book} {ch}:{v}: every scripture ref is a .ref link (unlinked: {ul[:4]})')
         t = tags.get(v)
         check(isinstance(t, dict), f'A {book} {ch}:{v}: has a tags entry')
+        if isinstance(t, dict) and 'qa' in t:
+            probs = QA.qa_problems(t['qa'])
+            check(not probs, f'A {book} {ch}:{v}: qa block is well formed ({"; ".join(probs)})')
         if not isinstance(t, dict):
             continue
         check(isinstance(t.get('voices'), list) and t['voices'],

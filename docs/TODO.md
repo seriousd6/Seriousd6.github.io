@@ -54,7 +54,13 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   **Remaining: the repair itself** — ~9,354 grade-D verses in ~356 chapters,
   priority Romans, Hebrews, 1–2 Corinthians, Genesis, Exodus, Judges. Not
   started; needs an owner call on scope. Note the lint cannot become a CI gate
-  until the repair lands (the corpus would fail it today).
+  until the repair lands (the corpus would fail it today). **The backlog is now
+  machine-readable**: every verse carries a `qa` block with the standard it was
+  written to and the grade it scored, so the repair loop can select work by
+  query (`qa.grade == "D"`) instead of re-scanning. **Also found: 101 verses
+  attribute views to a commentator absent from every source corpus** (98
+  Ellicott, in Joshua and Nehemiah) — flagged `UNSOURCED` by the lint and
+  recorded per-verse as `qa.ungrounded_voices`.
 - [ ] **Provenance loop — add `_source` fields** across the data tree, AI-generated
   content first. [agents/provenance-loop.md](agents/provenance-loop.md).
 - [ ] **Owner: run [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)** (19 points,

@@ -152,6 +152,47 @@ verse to add length is padding.
 (<gloss>)` shape — walking the verse phrase by phrase in parentheses — is
 banned outright. It was the worst offender in Joshua and Numbers.
 
+### Fidelity — the attribution rule
+
+**Never name a commentator who has no comment on the chapter.** The audit found
+101 verses attributing views to a witness absent from every source corpus — 98
+of them Ellicott, and the pattern gives the cause away: **Ellicott's corpus
+covers Joshua 1–11 and 13, and the fabrication is in chapter 12.** The generator
+filled the slot it expected rather than leaving it empty.
+
+- A voice may only be named if it appears in `cow/<book>/<ch>.json` **or** in one
+  of the 36 `cow-sources/<slug>/` corpora for that book and chapter.
+- Voices legitimately span verse keys, so check the whole chapter, not the verse.
+- If a witness has nothing on this chapter, **say nothing in his name.** A verse
+  with three witnesses is not worse than one with five.
+- The lint enforces this as `UNSOURCED`; it is a hard stop.
+
+### Per-verse QA metadata
+
+Every verse's tags entry carries a `qa` block recording what was actually done
+to it — so the next wave of repairs can tell "written to the current standard"
+from "not yet looked at" without re-reading the corpus:
+
+```json
+"qa": {
+  "v": 1,
+  "standard": "cow-prose-rules-2026-08-09",
+  "generated": "2026-08-09",
+  "grade": "A",
+  "checks": ["length", "refs-linked", "tags-match", "schools-valid",
+             "voices-sourced", "no-meta", "no-noise", "no-slot",
+             "no-carriers", "quotes-capped"],
+  "lint": "audit-synthesis-quality/1"
+}
+```
+
+The contract, the check ids, and the standard names live in
+`scripts/synthesis_qa.py`; `validate-synthesis.py` enforces the block's shape and
+the lint reports drift between the recorded grade and the recomputed one. New
+work must stamp `standard: cow-prose-rules-2026-08-09` and list every check it
+passed. Existing verses carry `legacy-unversioned` plus the grade they scored in
+the 2026-08-09 audit — that is the repair backlog, machine-readable.
+
 ### The thin exemption
 
 Some verses genuinely carry two lines of witness material. Forcing those to 350

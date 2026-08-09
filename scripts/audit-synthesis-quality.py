@@ -24,6 +24,8 @@ Exit code is 0 always in report mode; use --fail-over N to make CI-style gates.
 This is a *quality* signal, not a correctness gate: read the flagged verses.
 """
 import json, os, re, sys, glob, argparse, zlib
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import synthesis_qa as QA
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -125,6 +127,8 @@ def flags_for(m, chapter_tmpl_hits, floor_lo=350, floor_hi=375):
     """Flags are tiered: NOISE/META/SLOT are categorical defects (a reader can see
     them); PAD/THIN are statistical and want a human read before acting."""
     f = []
+    if m.get('ungrounded'):
+        f.append('UNSOURCED')
     if m['noise']:
         f.append('NOISE')
     if m['meta']:
@@ -163,6 +167,7 @@ def main():
         print(f'no files matched {pattern}', file=sys.stderr)
         return 2
 
+    SRC = QA.SourceIndex(ROOT)
     verses = []                      # per-verse records
     corpus_sentences = Counter()     # normalized sentence -> count
     sentence_example = {}
@@ -172,6 +177,8 @@ def main():
         book = path.split(os.sep)[-2]
         ch = os.path.basename(path)[:-5]
         data = json.load(open(path, encoding='utf-8'))
+        tpath = path.replace('cow-synthesis', 'cow-synthesis-tags')
+        tags = json.load(open(tpath, encoding='utf-8')) if os.path.exists(tpath) else {}
 
         per_verse_sents = {}
         quote_led = 0
@@ -182,6 +189,9 @@ def main():
             for s in sents:
                 corpus_sentences[s] += 1
                 sentence_example.setdefault(s, f'{book} {ch}:{v}')
+            t = tags.get(v) if isinstance(tags.get(v), dict) else {}
+            m['ungrounded'] = SRC.ungrounded_voices(book, ch, t.get('voices'))
+            m['qa'] = t.get('qa')
             verses.append({'book': book, 'ch': ch, 'v': v, **m})
 
         # cross-verse templating: sentences shared between different verses
@@ -237,7 +247,7 @@ def main():
 
     fl = Counter(f for r in verses for f in r['flags'])
     print('\nFLAG COUNTS')
-    for k in ('NOISE', 'META', 'SLOT', 'PAD', 'THIN', 'FLOOR', 'TMPL'):
+    for k in ('UNSOURCED', 'NOISE', 'META', 'SLOT', 'PAD', 'THIN', 'FLOOR', 'TMPL'):
         print(f'  {k:6s} {fl.get(k,0):6d} ({100*fl.get(k,0)/n:5.1f}%)')
 
     # correlation: does hugging the floor predict padding?
@@ -269,6 +279,28 @@ def main():
           f'mean TTR {sum(r["ttr"] for r in far)/len(far):.3f}   '
           f'mean zip {sum(r["compress"] for r in far)/len(far):.3f}' if far else '  none')
 
+    # fidelity: attributions with no comment on that chapter in any source corpus
+    ung = [r for r in verses if r.get('ungrounded')]
+    print('\nFIDELITY — attributions not groundable in ANY source corpus')
+    print(f'  {len(ung)} verses ({100*len(ung)/n:.2f}%)')
+    cnt = Counter(v for r in ung for v in r['ungrounded'])
+    for name, k in cnt.most_common(8):
+        books = sorted({r['book'] for r in ung if name in r['ungrounded']})
+        print(f'    {k:5d}x  {name:24s} {", ".join(books)[:52]}')
+
+    # qa metadata coverage + drift between recorded and recomputed grade
+    have = [r for r in verses if r.get('qa')]
+    print('\nQA METADATA')
+    print(f'  verses carrying a qa block: {len(have)}/{n} ({100*len(have)/n:.1f}%)')
+    if have:
+        std = Counter(r['qa'].get('standard') for r in have)
+        for k, c in std.most_common():
+            print(f'    standard {k}: {c}')
+        drift = [r for r in have if r['qa'].get('grade') != r['grade']]
+        print(f'  recorded grade differs from recomputed: {len(drift)}')
+        for r in drift[:5]:
+            print(f'    {r["book"]} {r["ch"]}:{r["v"]}  recorded {r["qa"].get("grade")} -> now {r["grade"]}')
+
     # corpus boilerplate
     print(f'\nCORPUS BOILERPLATE — most reused sentences (>= {MIN_SENT_WORDS} words)')
     for s, k in corpus_sentences.most_common(a.boilerplate):
@@ -279,7 +311,7 @@ def main():
 
     # worst verses
     def severity(r):
-        return (r['noise'] * 5 + r['slot'] * 3 + r['meta'] * 2
+        return (len(r.get('ungrounded') or []) * 6 + r['noise'] * 5 + r['slot'] * 3 + r['meta'] * 2
                 + r['dup_ngram_frac'] * 4 + r['dup_sentences'] * 0.5
                 + (0.62 - r['ttr']) * 3 + (0.40 - r['compress']) * 6
                 + r.get('tmpl_hits', 0) * 0.1)

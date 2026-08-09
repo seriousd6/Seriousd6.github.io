@@ -72,7 +72,20 @@
    "the greatness of Ahasuerus",
    "the identity of the king",
    "revenue after the Greek wars"
-  ]
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "legacy-unversioned",
+   "generated": "2026-08-01",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid"
+   ],
+   "lint": "audit-synthesis-quality/1"
+  }
  },
  "2": {
   "voices": [
@@ -111,7 +124,20 @@
    "lost records versus enduring Scripture",
    "the kingdom of God as the days of heaven",
    "the might of Ahasuerus"
-  ]
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "legacy-unversioned",
+   "generated": "2026-08-01",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid"
+   ],
+   "lint": "audit-synthesis-quality/1"
+  }
  },
  "3": {
   "voices": [
@@ -154,6 +180,19 @@
    "great and good",
    "seeking the wealth of his people",
    "the Hebrew text ends and the apocryphal additions"
-  ]
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "legacy-unversioned",
+   "generated": "2026-08-01",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid"
+   ],
+   "lint": "audit-synthesis-quality/1"
+  }
  }
 }
