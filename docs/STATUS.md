@@ -120,6 +120,18 @@
   (generate: 432 chapters; repair: 447), and `backfill-synthesis-qa.py
   --standard current` stamps finished work, refusing anything that grades C/D or
   names an ungrounded voice. `synthesis-loop.py` runs the whole cycle unattended.
+- **Disciplines (2026-08-09)**: completion is no longer purely auto-detected.
+  `assets/js/tracker.js` resolves every discipline as *manual override → derived*,
+  where the override is three-state (`true` force-on / `false` force-off / absent
+  = auto) and stored per date under `bsw_tracker[date].manual`. `markDone`,
+  `getStatus` and every `is*Done` take an optional date, so past days are
+  addressable. The home-page checklist circles are buttons (`toggleManual`), and
+  a toggle that lands back on the detected value *clears* the override rather
+  than pinning it. Reading plans gained a **catch-up list** of past unmarked days
+  and a **clickable full schedule** (`setDayDone(planId, dayNum, done)` writes
+  `bsw_plans[...].completed[day] = <date>`, which is what tracker reads back).
+  Disclosure state lives outside the cards so marking a day does not collapse
+  what is open.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

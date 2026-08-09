@@ -105,6 +105,17 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   Desk A/B/C link groups; answers preview caps/notes.
 - [ ] About page (`src/pages/about/index.astro`): its prompt copies now mirror
   `docs/agents/` — keep them in sync when prompts change.
+- [x] **Discipline: catch-up + manual ticks** (2026-08-09) — two owner-reported gaps.
+  (1) A missed reading-plan day was invisible and unmarkable: the card only ever
+  showed *today*. Enrolled plans now carry a **catch-up list** (every past
+  unmarked day, with its calendar date, its passage links and a tick), and the
+  **full schedule is clickable**, so any day — past, today or ahead — can be
+  marked or unmarked. That is the "select the date" path. (2) The home-page and
+  Discipline checklists were read-only and purely auto-detected, so a devotional
+  read on paper never counted. `tracker.js` now carries a **three-state manual
+  override** per discipline per date (force-on / force-off / auto) that every
+  `is*Done` consults first; the home checklist circles are buttons. Covered by
+  27 unit assertions + 20 browser assertions (see the commit).
 - [x] **Topical study: Assurance of Salvation** (2026-08-09) — five-part
   hand-authored study at `topics/salvation-assurance/` (`index` hub +
   `part-1`…`part-5`) on the `topic-guide.css` component set: the OT→NT thread of

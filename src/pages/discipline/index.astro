@@ -305,7 +305,7 @@ import Base from '../../layouts/Base.astro';
   </main>
 <Fragment slot="after-scripts">
 <!-- Status dots + devotional/memory tracker wiring --><script type="module" is:inline="">
-  import { getToday, markDone, isDone, onUpdate } from '../assets/js/tracker.js';
+  import { getToday, markDone, isDone, isAuto, onUpdate } from '../assets/js/tracker.js';
 
   var DOT_COLORS = {
     reading:    '#5c3d1e',
@@ -373,7 +373,11 @@ import Base from '../../layouts/Base.astro';
     var alreadyDone = isDone('devotional');
     markBtn.hidden = alreadyDone;
     doneMsg.hidden = !alreadyDone;
-    if (!alreadyDone) { markDone('devotional'); markBtn.hidden = true; doneMsg.hidden = false; updateDots(); }
+    /* Auto-mark on view, but never override a deliberate un-tick from the checklist —
+       isAuto() is false once the user has said "no" for today. */
+    if (!alreadyDone && isAuto('devotional')) {
+      markDone('devotional'); markBtn.hidden = true; doneMsg.hidden = false; updateDots();
+    }
   }
 
   document.getElementById('devot-mark-btn').addEventListener('click', function () {
@@ -542,6 +546,54 @@ import Base from '../../layouts/Base.astro';
     }
     function passageUrl(p) { return READ_URL+'?ref='+encodeURIComponent(p); }
 
+    /* Plan JSON is cached after the first fetch so toggling a day re-renders from
+       memory instead of refetching every plan file. */
+    var _planCache = null;
+    /* Disclosure state keyed by plan id, kept outside the cards so a re-render
+       (triggered by marking any day) does not collapse what the user had open. */
+    var _openSchedule = {}, _openCatchUp = {};
+
+    function rerenderPlans() {
+      if (!_planCache) return;
+      var y = window.scrollY;
+      renderAllPlans(_planCache);
+      window.scrollTo(0, y);
+    }
+
+    // INTENT: Mark or unmark ANY day of a plan, not just today's — the single primitive
+    //   behind both the catch-up list and the clickable full schedule.
+    // CHANGE? Writes bsw_plans[planId].completed[dayNum]; tracker.js:_rawReadingDone reads
+    //   the same shape to decide whether the reading discipline is done for a given date.
+    //   Storing the completion DATE (not just true) keeps that mapping auditable.
+    function setDayDone(planId, dayNum, done) {
+      var s = getState();
+      if (!s[planId]) return;
+      if (!s[planId].completed) s[planId].completed = {};
+      if (done) s[planId].completed[dayNum] = todayStr();
+      else delete s[planId].completed[dayNum];
+      saveState(s);
+      rerenderPlans();
+    }
+
+    function isDayDone(enrollment, dayNum) {
+      return !!(enrollment && enrollment.completed && enrollment.completed[dayNum]);
+    }
+
+    /* Day numbers that are in the past (or today) and still unmarked. */
+    function missedDays(plan, enrollment) {
+      var dn = Math.min(dayNum(enrollment), plan.total_days), out = [];
+      for (var i = 1; i < dn; i++) if (!isDayDone(enrollment, i)) out.push(i);
+      return out;
+    }
+
+    /* The calendar date a given plan day falls on — lets the catch-up list say *when*. */
+    function dayDateLabel(enrollment, dn) {
+      if (!enrollment || !enrollment.startDate) return '';
+      var d = new Date(enrollment.startDate + 'T00:00:00');
+      d.setDate(d.getDate() + dn - 1);
+      return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    }
+
     function renderAllPlans(planDataList) {
       var state=getState(), listEl=document.getElementById('plans-list');
       listEl.innerHTML='';
@@ -568,13 +620,25 @@ import Base from '../../layouts/Base.astro';
       if (enrolled) card.appendChild(renderTodaySection(plan,enrollment));
       var det=document.createElement('div'); det.className='plan-detail';
       var tog=document.createElement('button'); tog.className='plan-detail-toggle';
-      tog.textContent=enrolled?'View full schedule ▾':'Preview schedule ▾';
       var cal=document.createElement('div'); cal.className='plan-calendar';
+      function labelFor(open){
+        return open?(enrolled?'Hide schedule ▴':'Hide preview ▴'):(enrolled?'View full schedule ▾':'Preview schedule ▾');
+      }
+      /* Marking a day re-renders the card, so the open/closed state of the schedule has to
+         live outside it — otherwise ticking a row inside the schedule would close it. */
+      function openCal(){
+        cal.classList.add('plan-calendar--open');
+        if (!cal.dataset.built){ buildCalendar(cal,plan,enrollment); cal.dataset.built='1'; }
+        tog.textContent=labelFor(true);
+      }
+      tog.textContent=labelFor(!!_openSchedule[plan.id]);
       tog.addEventListener('click',function(){
-        var open=cal.classList.toggle('plan-calendar--open');
-        tog.textContent=open?(enrolled?'Hide schedule ▴':'Hide preview ▴'):(enrolled?'View full schedule ▾':'Preview schedule ▾');
-        if (open&&!cal.dataset.built){buildCalendar(cal,plan,enrollment);cal.dataset.built='1';}
+        var willOpen=!cal.classList.contains('plan-calendar--open');
+        _openSchedule[plan.id]=willOpen;
+        if (willOpen) openCal();
+        else { cal.classList.remove('plan-calendar--open'); tog.textContent=labelFor(false); }
       });
+      if (_openSchedule[plan.id]) openCal();
       det.appendChild(tog); det.appendChild(cal); card.appendChild(det);
       return card;
     }
@@ -607,25 +671,111 @@ import Base from '../../layouts/Base.astro';
       var markBtn=document.createElement('button');
       markBtn.className='plan-btn'+(done?' plan-today__mark plan-today__mark--done':' plan-today__mark');
       markBtn.textContent=done?'✓ Marked complete':'Mark day complete';
-      markBtn.addEventListener('click',function(){
-        var s=getState(); if(!s[plan.id])return; if(!s[plan.id].completed)s[plan.id].completed={};
-        if(done){delete s[plan.id].completed[dn];done=false;markBtn.className='plan-today__mark';markBtn.textContent='Mark day complete';
-          var oldCta=doneDiv.querySelector('.disc-cta-link');if(oldCta)oldCta.remove();}
-        else{s[plan.id].completed[dn]=true;done=true;markBtn.className='plan-today__mark plan-today__mark--done';markBtn.textContent='✓ Marked complete';
-          var cta=document.createElement('a');cta.className='disc-cta-link';cta.href='?tab=journal&jtab=reflections';cta.textContent='Write a reflection on today\'s reading →';doneDiv.appendChild(cta);}
-        saveState(s);
-      });
-      doneDiv.appendChild(markBtn); div.appendChild(doneDiv);
+      /* Routed through setDayDone so the catch-up count and the schedule stay in step;
+         the card re-renders, which is why the reflection CTA is rendered from state
+         below rather than appended here. */
+      markBtn.addEventListener('click',function(){ setDayDone(plan.id,dn,!done); });
+      doneDiv.appendChild(markBtn);
+      if (done){
+        var cta=document.createElement('a'); cta.className='disc-cta-link';
+        cta.href='?tab=journal&jtab=reflections';
+        cta.textContent='Write a reflection on today\'s reading →';
+        doneDiv.appendChild(cta);
+      }
+      div.appendChild(doneDiv);
+      var catchUp=renderCatchUp(plan,enrollment);
+      if (catchUp) div.appendChild(catchUp);
       return div;
     }
 
+    // INTENT: Missing a few days is the normal failure mode of a year-long plan, and the
+    //   old card only ever showed today — so a missed day was invisible and unmarkable.
+    //   This lists every past day still unmarked, with its date, its passages, and a tick.
+    // CHANGE? Renders at most CATCH_UP_MAX rows; the remainder are reachable through the
+    //   full schedule below, which is also clickable. Raising the cap makes very stale
+    //   year-plans render hundreds of rows into the panel.
+    var CATCH_UP_MAX = 30;
+
+    function renderCatchUp(plan,enrollment) {
+      var missed=missedDays(plan,enrollment);
+      if (!missed.length) return null;
+
+      var wrap=document.createElement('div'); wrap.className='plan-catchup';
+      var head=document.createElement('button');
+      head.type='button'; head.className='plan-catchup__toggle';
+      head.setAttribute('aria-expanded','false');
+      var noun=missed.length===1?'day':'days';
+      head.innerHTML='<span class="plan-catchup__badge">'+missed.length+'</span> '+
+        noun+' to catch up <span class="plan-catchup__chev">▾</span>';
+
+      var body=document.createElement('div'); body.className='plan-catchup__body';
+      body.hidden=!_openCatchUp[plan.id];
+      head.setAttribute('aria-expanded', body.hidden?'false':'true');
+      head.querySelector('.plan-catchup__chev').textContent = body.hidden?'▾':'▴';
+      head.addEventListener('click',function(){
+        body.hidden=!body.hidden;
+        _openCatchUp[plan.id]=!body.hidden;
+        head.setAttribute('aria-expanded', body.hidden?'false':'true');
+        head.querySelector('.plan-catchup__chev').textContent = body.hidden?'▾':'▴';
+      });
+
+      missed.slice(0,CATCH_UP_MAX).forEach(function(dn){
+        var day=plan.days[dn-1]; if(!day) return;
+        var row=document.createElement('div'); row.className='plan-catchup__row';
+
+        var tick=document.createElement('button');
+        tick.type='button'; tick.className='plan-catchup__tick';
+        tick.setAttribute('aria-label','Mark '+(day.label||('Day '+dn))+' complete');
+        tick.title='Mark complete';
+        tick.addEventListener('click',function(){ setDayDone(plan.id,dn,true); });
+
+        var meta=document.createElement('span'); meta.className='plan-catchup__day';
+        meta.textContent=(day.label||('Day '+dn));
+        var when=dayDateLabel(enrollment,dn);
+        if (when){ var w=document.createElement('span'); w.className='plan-catchup__date'; w.textContent=when; meta.appendChild(w); }
+
+        var pass=document.createElement('span'); pass.className='plan-catchup__passages';
+        if (day.passages&&day.passages.length){
+          day.passages.forEach(function(p){
+            var a=document.createElement('a'); a.className='plan-catchup__passage';
+            a.href=passageUrl(p); a.textContent=p; pass.appendChild(a);
+          });
+        } else if (day.href){
+          var a2=document.createElement('a'); a2.className='plan-catchup__passage';
+          a2.href='../'+day.href; a2.textContent=day.label||('Day '+dn); pass.appendChild(a2);
+        }
+
+        row.appendChild(tick); row.appendChild(meta); row.appendChild(pass);
+        body.appendChild(row);
+      });
+
+      if (missed.length>CATCH_UP_MAX){
+        var more=document.createElement('p'); more.className='plan-catchup__more';
+        more.textContent='… and '+(missed.length-CATCH_UP_MAX)+' more. Open the full schedule below to mark any day.';
+        body.appendChild(more);
+      }
+
+      wrap.appendChild(head); wrap.appendChild(body);
+      return wrap;
+    }
+
+    // INTENT: In an enrolled plan every row is a control, so any day — past, today, or
+    //   ahead — can be marked or unmarked. This is the "select the date" path: the schedule
+    //   itself is the date picker. Preview mode (not enrolled) stays read-only.
     function buildCalendar(cal,plan,enrollment) {
       var today=dayNum(enrollment||{}),comp=(enrollment&&enrollment.completed)||{};
       var show=enrollment?plan.days:plan.days.slice(0,14);
       show.forEach(function(day){
         var dn=day.day,isToday=enrollment&&dn===today,isDone=!!comp[dn];
-        var row=document.createElement('div');
-        row.className='plan-calendar__row'+(isToday?' plan-calendar__row--today':'')+(isDone?' plan-calendar__row--done':'');
+        var row=document.createElement(enrollment?'button':'div');
+        if (enrollment){
+          row.type='button';
+          row.setAttribute('aria-pressed',isDone?'true':'false');
+          row.title=isDone?'Marked complete — click to un-mark':'Click to mark complete';
+          row.addEventListener('click',function(){ setDayDone(plan.id,dn,!isDone); });
+        }
+        row.className='plan-calendar__row'+(enrollment?' plan-calendar__row--btn':'')+
+          (isToday?' plan-calendar__row--today':'')+(isDone?' plan-calendar__row--done':'');
         var passText=day.passages?day.passages.join(', '):(day.label||('Day '+dn))+(day.desc?' — '+day.desc:'');
         row.innerHTML='<span class="plan-calendar__check">'+(isDone?'✓':'')+'</span>'+
           '<span class="plan-calendar__day">'+esc(day.label||('Day '+dn))+'</span>'+
@@ -655,7 +805,8 @@ import Base from '../../layouts/Base.astro';
       })).then(function(plans){
         var msg=document.getElementById('plans-list-msg');
         if (msg) msg.setAttribute('hidden','');
-        renderAllPlans(plans.filter(Boolean));
+        _planCache=plans.filter(Boolean);
+        renderAllPlans(_planCache);
       });
     }
 

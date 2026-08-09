@@ -246,12 +246,62 @@
   background: none; border: none; cursor: pointer; padding: 0;
 }
 .plan-detail-toggle:hover { text-decoration: underline; }
+/* ── Catch-up (missed days) ─────────────────────────────────────────────────── */
+
+.plan-catchup { margin-top: .75rem; padding-top: .7rem; border-top: 1px dashed var(--color-border); }
+.plan-catchup__toggle {
+  display: flex; align-items: center; gap: .45rem;
+  background: none; border: none; padding: 0; cursor: pointer;
+  font: inherit; font-size: .82rem; font-weight: 600; color: var(--color-text);
+}
+.plan-catchup__toggle:hover { color: var(--color-primary); }
+.plan-catchup__badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 1.35rem; height: 1.35rem; padding: 0 .35rem;
+  border-radius: 999px; background: #c0783c; color: #fff;
+  font-size: .74rem; font-weight: 700;
+}
+.plan-catchup__chev { color: var(--color-muted); font-size: .75rem; }
+.plan-catchup__body { margin-top: .55rem; }
+.plan-catchup__row {
+  display: flex; align-items: baseline; gap: .55rem;
+  padding: .3rem 0; border-bottom: 1px solid var(--color-border); font-size: .82rem;
+}
+.plan-catchup__row:last-child { border-bottom: none; }
+.plan-catchup__tick {
+  flex-shrink: 0; width: 1.1rem; height: 1.1rem; padding: 0;
+  border: 2px solid var(--color-border); border-radius: 4px;
+  background: transparent; cursor: pointer; align-self: center;
+}
+.plan-catchup__tick:hover  { border-color: #4caf50; background: #e8f5e9; }
+.plan-catchup__tick:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.plan-catchup__day  { min-width: 68px; color: var(--color-muted); flex-shrink: 0; }
+.plan-catchup__date { display: block; font-size: .7rem; opacity: .8; }
+.plan-catchup__passages { flex: 1; display: flex; flex-wrap: wrap; gap: .35rem; }
+.plan-catchup__passage {
+  padding: .1rem .4rem; border: 1px solid var(--color-border); border-radius: 4px;
+  font-size: .76rem; color: var(--color-text); text-decoration: none;
+}
+.plan-catchup__passage:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.plan-catchup__more { font-size: .76rem; color: var(--color-muted); margin: .45rem 0 0; }
+
+/* ── Full schedule ──────────────────────────────────────────────────────────── */
+
 .plan-calendar { margin-top: .6rem; display: none; }
 .plan-calendar--open { display: block; }
 .plan-calendar__row {
   display: flex; align-items: baseline; gap: .6rem;
   padding: .25rem 0; border-bottom: 1px solid var(--color-border); font-size: .83rem;
 }
+/* Enrolled plans render each row as a button so any day can be (un)marked. */
+.plan-calendar__row--btn {
+  width: 100%; background: none; border-left: none; border-right: none; border-top: none;
+  font: inherit; font-size: .83rem; text-align: left; cursor: pointer;
+}
+.plan-calendar__row--btn:hover { background: var(--color-surface); }
+.plan-calendar__row--btn:focus-visible { outline: 2px solid var(--color-primary); outline-offset: -2px; }
+.plan-calendar__row--btn .plan-calendar__check::before { content: '○'; color: var(--color-border); }
+.plan-calendar__row--btn.plan-calendar__row--done .plan-calendar__check::before { content: none; }
 .plan-calendar__row:last-child { border-bottom: none; }
 .plan-calendar__row--today .plan-calendar__day { font-weight: 700; color: var(--color-primary); }
 .plan-calendar__row--done  .plan-calendar__passages { text-decoration: line-through; color: var(--color-muted); }

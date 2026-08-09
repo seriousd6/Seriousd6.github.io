@@ -69,6 +69,7 @@
         <ul class="daily-tracker-list" id="daily-tracker-list" aria-label="Today's discipline checklist">
           <!-- populated by tracker module -->
         </ul>
+        <p class="daily-tracker-hint">Most rows tick themselves when you use the tools. Click any circle to mark it by hand.</p>
       </section>
 
       <!-- ── Studies ── -->
@@ -93,7 +94,7 @@
   </main>
 <Fragment slot="after-scripts">
 <script type="module" is:inline="">
-  import { getToday, onUpdate } from '/assets/js/tracker.js';
+  import { getToday, onUpdate, toggleManual, isAuto } from '/assets/js/tracker.js';
 
   var ROOT = '/';
 
@@ -119,12 +120,23 @@
       var done = !!status[d.key];
       if (done) doneCount++;
       var li   = document.createElement('li');
-      li.className = 'daily-tracker-item' + (done ? ' daily-tracker-item--done' : '');
+      li.className = 'daily-tracker-item' + (done ? ' daily-tracker-item--done' : '') +
+        (isAuto(d.key) ? '' : ' daily-tracker-item--manual');
 
-      var check = document.createElement('span');
+      // The check circle is a real control: auto-detection cannot see a devotional read
+      // on paper or a prayer that was never typed up, so every row can be ticked by hand.
+      // Toggling back to whatever was auto-detected clears the override rather than
+      // pinning it — see toggleManual() in tracker.js.
+      var check = document.createElement('button');
+      check.type = 'button';
       check.className = 'daily-tracker-check';
-      check.setAttribute('aria-hidden', 'true');
+      check.setAttribute('aria-pressed', done ? 'true' : 'false');
+      check.setAttribute('aria-label', (done ? 'Mark not done: ' : 'Mark done: ') + d.label);
+      check.title = isAuto(d.key)
+        ? (done ? 'Detected automatically — click to un-mark' : 'Click to mark complete')
+        : (done ? 'Marked by hand — click to un-mark' : 'Un-marked by hand — click to mark complete');
       check.textContent = done ? '✓' : '';
+      check.addEventListener('click', function () { toggleManual(d.key); renderTracker(); });
 
       var label = document.createElement('span');
       label.className = 'daily-tracker-label';
