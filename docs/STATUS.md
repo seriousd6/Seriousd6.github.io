@@ -1,7 +1,8 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-02** (Full Treatments: Romans + Revelation; treatment
+> Last updated: **2026-08-09** (new five-part topical study: Korah's Rebellion.
+> Previously 2026-08-02: Full Treatments Romans + Revelation; treatment
 > eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
 > 62.1%**, frontier now Psalms 1)
 
@@ -56,6 +57,15 @@
   Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit
   was pushed but its deploy is stuck in an ongoing GitHub Actions outage; all of
   this supersedes it and is **local-only pending review**.
+- **Topical studies (hand-authored, separate from the book pipeline)**: seven
+  live under `topics/`, listed via the `topical` array in
+  `data/books-content.json`. Newest is **Korah's Rebellion (2026-08-09)** —
+  a five-part study of Numbers 16–17 at `topics/korahs-rebellion/`
+  (`index` hub + `part-1`…`part-5`): text/composition/reception, the theological
+  sprawl, the divided church, the NT's answer, and spiritual abuse. Built on the
+  `topic-guide.css` component set with no per-study CSS; each part carries its
+  own sticky TOC, further-reading list, and prev/next nav. Part V was drafted and
+  owner-reviewed before the pages were built.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,
