@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- RETIRED PAGE — redirects to /studies/ since the Studies reshape.
+       It previously carried a hand-maintained grid of topic cards. Those cards
+       rendered for nobody (the refresh below fires first), yet the list read as
+       a registry: two studies in a row were "registered" by adding a card here
+       and stayed unreachable. The cards are gone so the file cannot mislead again.
+
+       THE REGISTRY IS data/books-content.json — books[] and topical[]. It drives
+       /studies/, and scripts/validate-topics-registry.py fails CI if a live
+       study is missing from it. -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -16,83 +25,8 @@
     <div class="container">
       <a class="hist-back-link" href="../search/?tab=topics" id="explore-back-link" target="_top" hidden>← Explore</a>
       <h1>Studies</h1>
-      <p>Browse by Bible book or topical study.</p>
-
-      <section id="books">
-        <h2>Bible Books</h2>
-        <div class="topic-grid">
-          <a class="topic-card" href="revelation/">
-            <h3>📜 Book of Revelation</h3>
-            <p>Chapter-by-chapter study through Revelation with cross-references.</p>
-          </a>
-          <a class="topic-card" href="sermon-on-the-mount/">
-            <h3>⛰️ Sermon on the Mount</h3>
-            <p>Verse-by-verse guide to Matthew 5–7 — the Beatitudes, the Antitheses, the Lord's Prayer, and the Two Ways.</p>
-          </a>
-          <a class="topic-card" href="romans/">
-            <h3>Romans</h3>
-            <p>Chapter-by-chapter study of Paul's magnum opus — sin, justification, sanctification, Israel, and Christian ethics.</p>
-          </a>
-          <a class="topic-card" href="psalms/">
-            <h3>📖 The Psalms</h3>
-            <p>The Five Books of the Psalter — lament, praise, penitential, royal-messianic, and wisdom psalms — with a guide to praying with the Psalter.</p>
-          </a>
-          <!-- ADD NEW BOOK CARDS HERE -->
-        </div>
-      </section>
-
-      <section id="topics">
-        <h2>Topical Studies</h2>
-        <div class="topic-grid">
-          <a class="topic-card" href="prayer/">
-            <h3>🙏 Prayer</h3>
-            <p>Biblical foundations of prayer, key passages, and study notes.</p>
-          </a>
-          <a class="topic-card" href="justification/">
-            <h3>✝️ Justification by Faith</h3>
-            <p>How sinners are declared righteous before God — sola fide, imputed righteousness, and assurance.</p>
-          </a>
-          <a class="topic-card" href="holy-spirit/">
-            <h3>🕊️ The Holy Spirit</h3>
-            <p>Person and work of the third member of the Trinity — regeneration, indwelling, fruit, and gifts.</p>
-          </a>
-          <a class="topic-card" href="covenants/">
-            <h3>The Covenants of Scripture</h3>
-            <p>A biblical-theological survey of all major covenants — from Eden through the New Covenant — and how they form one story of redemption.</p>
-          </a>
-          <a class="topic-card" href="christology/">
-            <h3>Christology: The Person &amp; Work of Christ</h3>
-            <p>Eternal Son, incarnation, two natures, threefold office, atonement, resurrection, exaltation, and return.</p>
-          </a>
-          <a class="topic-card" href="holy-catholic-church/">
-            <h3>The Holy Catholic Church</h3>
-            <p>Biblical ecclesiology from OT roots through Pentecost, the four marks, sacraments, church order, heresies, the Reformation, modern branches, and what the faithful person should do.</p>
-          </a>
-          <a class="topic-card" href="church-authority/">
-            <h3>Church Authority, Scripture, and Tradition</h3>
-            <p>Where does final authority in the church reside? A comprehensive comparison of how the Catholic, Orthodox, and Protestant traditions ground authority in Scripture, tradition, and office — with the biblical evidence examined fairly.</p>
-          </a>
-          <a class="topic-card" href="korahs-rebellion/">
-            <h3>Korah's Rebellion</h3>
-            <p>A five-part study of Numbers 16&ndash;17 &mdash; the text and its composition, the doctrines it opens, the divided church, the answer the New Testament gives, and the passage&rsquo;s misuse in spiritual abuse.</p>
-          </a>
-          <a class="topic-card" href="salvation-assurance/">
-            <h3>Assurance of Salvation</h3>
-            <p>A five-part study &mdash; the thread of salvation from Eden to the new covenant, the competing verses read in context, seven traditions each stated at its strongest, the tests Scripture gives, and the way back.</p>
-          </a>
-          <!-- ADD NEW TOPIC CARDS HERE -->
-        </div>
-      </section>
+      <p>This page has moved to <a href="../studies/">Studies</a>. Redirecting…</p>
     </div>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>Personal Bible study notes &amp; references.</p>
-    </div>
-  </footer>
-
-    <script src="../assets/js/main.js"></script>
-    <script type="module" src="../assets/js/entries/generic.js"></script>
 </body>
 </html>

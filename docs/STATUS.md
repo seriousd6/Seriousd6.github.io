@@ -69,6 +69,14 @@
   tool, `scripts/compose-study-tabs.py`, which infers accent, hero variant,
   titles and part bodies from the existing files, so a future multi-part study
   converts in one command.
+- **One registry, enforced (2026-08-09)**: `data/books-content.json` is the
+  single source of truth for what the site offers. `/topics/index.html` had
+  looked like a second registry — it carries (carried) a hand-maintained card
+  grid — but has redirected to `/studies/` since the Studies reshape, so its
+  cards rendered for nobody; **church-authority sat live and unreachable**
+  because it was registered only there. It is now in `topical[]`, the dead grid
+  is removed, and `scripts/validate-topics-registry.py` fails CI if any live
+  study under `src/pages/topics/<slug>/` is missing from the registry.
 - **Topical studies (hand-authored, separate from the book pipeline)**: eight
   live under `topics/`, listed via the `topical` array in
   `data/books-content.json`. Both newest ones are five-part studies built on the

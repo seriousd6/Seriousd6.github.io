@@ -49,8 +49,16 @@ branches, or mass regeneration of the data tree. Local commits are always fine.
 ## Validation
 
 `python scripts/validate-data.py`, `validate-library-format.py --all`, and
-`validate-synthesis.py` guard the data tree; CI (`validate.yml`) runs all three
-plus `node --check` over all JS and the full production build on every push/PR.
+`validate-synthesis.py` guard the data tree; `validate-topics-registry.py`
+guards discoverability; CI (`validate.yml`) runs all four plus the Commentary A
+quality gate (`audit-synthesis-quality.py --gate`), `node --check` over all JS,
+and the full production build on every push/PR.
+
+**Registry:** `data/books-content.json` is the ONE source of truth for what the
+site offers — `books[]` and `topical[]` drive `/studies/`. `/topics/index.html`
+is a retired redirect; adding a card there registers nothing (two studies were
+lost that way). `validate-topics-registry.py` fails the build if a live study
+under `src/pages/topics/<slug>/` is in neither list.
 
 ## Ground rules
 
