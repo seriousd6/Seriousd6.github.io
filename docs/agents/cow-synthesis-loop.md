@@ -26,19 +26,41 @@ the same script's `--section` mode.
 
 ## Frontier rule (how the loop knows what's next)
 
-Progress is derived from the data itself — there is no tracker file. Walk the
-books in canonical order (`data/bible/books.json`); the next work unit is the
-first chapter whose `cow-synthesis/<book>/<ch>.json` is missing, given the
-source `cow/<book>/<ch>.json` exists. As of **2026-08-02: 738/1,189 done
-(62.1%), frontier = Psalms 1** (Genesis→**Job** and the whole NT are now
-complete; **Job finished 42/42 2026-08-02**; Psalms→Malachi + the remaining
-poetic/wisdom books are the OT back-half. Psalms is pure Hebrew poetry — apply
-the Job dialogue-poetry profile (witnesses on wording, imagery, textual
-variants, and the flow of the psalm rather than events) with the
-**anti-templating rule** below; chapters range from 2 verses (Ps 117) to 176
-(Ps 119), so size waves accordingly). NB the
-NT was synthesized in an earlier pass, so the frontier is purely OT — the count
-is not a single canonical sweep.
+Progress is derived from the data itself — there is no tracker file, and since
+2026-08-09 the per-verse `qa` metadata makes both queues queryable. **Do not
+hand-count and do not trust a figure written in this file: ask the tool.**
+
+```
+python3 scripts/synthesis-frontier.py                    # summary + both queues
+python3 scripts/synthesis-frontier.py --next             # one unit: "<book> <ch>"
+python3 scripts/synthesis-frontier.py --next --queue repair --worst-first
+```
+
+There are **two queues**, and a loop should drain them in this order:
+
+| queue | what it holds | how it is derived |
+|---|---|---|
+| **generate** | chapters with a source catena but no synthesis | `cow/<book>/<ch>.json` exists, `cow-synthesis/<book>/<ch>.json` does not |
+| **repair** | chapters carrying the 2026-07-22 debt | any verse with `qa.standard == legacy-unversioned` and `qa.grade` in C/D, any unstamped verse, or any verse with `qa.ungrounded_voices` |
+
+`--next` prints one `<book> <ch>` line and exits 3 when the queue is empty, so a
+shell loop can drive itself:
+
+```sh
+unit=$(python3 scripts/synthesis-frontier.py --next --queue repair) || exit 0
+set -- $unit; book=$1; ch=$2
+```
+
+`--worst-first` orders the repair queue by defect weight, counting a fidelity
+defect three times a grade defect — so the chapters that invent commentators
+(Joshua 21, Joshua 12) come before the merely padded ones.
+
+**Book profiles still matter.** Psalms is pure Hebrew poetry — apply the Job
+dialogue-poetry profile (witnesses on wording, imagery, textual variants, and
+the flow of the psalm rather than events); chapters range from 2 verses (Ps 117)
+to 176 (Ps 119), so size waves accordingly. NB the NT was synthesized in an
+earlier pass, so the generate queue is purely OT — the count is not a single
+canonical sweep.
 
 > **Out-of-range source key (2026-07-22):** some `cow/` chapters carry a scrape
 > key whose verse number is out-of-range for the chapter and whose content is
@@ -101,6 +123,9 @@ is not a single canonical sweep.
      Ellicott)".
    - `outliers`: `[{voice, note}]`.
    - `themes`: short strings.
+   - `qa`: the metadata block — **required, or CI rejects the chapter as
+     unstamped.** Do not hand-write it; step 5 stamps it from the measured
+     result, so it cannot claim a grade the prose did not earn.
 4. **Validate AND lint before committing** — both must pass clean:
    `python3 scripts/validate-synthesis.py --verse <book> <ch>`
    (350–650 words per verse targeting ~500 — or the thin exemption below;
@@ -113,9 +138,49 @@ is not a single canonical sweep.
    fails the build — stamp each verse's `qa` block with
    `standard: cow-prose-rules-2026-08-09` and the checks you performed, or the
    gate rejects it as unstamped.
-5. Commit exactly: `COW synthesis: <book> <ch> (<N> verses)`.
+5. **Stamp the qa block** once validator and lint are clean:
+
+   ```
+   python3 scripts/backfill-synthesis-qa.py --book <book> --standard current --overwrite
+   ```
+
+   This measures each verse and writes `standard: cow-prose-rules-2026-08-09`,
+   the grade, the date, and the full check list. It **refuses** any verse that
+   grades C/D or names an ungrounded voice — the standard is a claim about
+   quality, so it has to be earned. If it refuses, fix the prose and re-run;
+   never hand-edit a `qa` block to get past it.
+6. Confirm the gate agrees, exactly as CI will run it:
+   `python3 scripts/audit-synthesis-quality.py --gate`
+7. Commit exactly: `COW synthesis: <book> <ch> (<N> verses)`.
+   For repair work: `COW synthesis repair: <book> <ch> (<N> verses)`.
    Scratch work goes in `scratchpad/` (gitignored). Do not push — pushes
    deploy production and need owner approval.
+
+## Repair procedure (the 2026-07-22 debt)
+
+Same loop, different queue. 9,354 verses across ~356 chapters were written to no
+standard and graded C or D by the
+[quality audit](../plans/cow-synthesis-quality-audit.md). Repair is regeneration
+of the prose, not patching: a padded verse cannot be trimmed into a good one,
+because the material was never there.
+
+1. `python3 scripts/synthesis-frontier.py --next --queue repair --worst-first`
+2. **Read the existing prose first, to see what the defect actually is.** The
+   audit names three shapes: stock carriers ("the witnesses note" up to 13 times
+   in a verse), the verse re-quoted to add length, and the parenthesised
+   slot-list. Recognising which one is in front of you is quicker than diagnosing
+   from scratch.
+3. Regenerate the chapter from `cow/<book>/<ch>.json` under the prose rules
+   below. Where the sources are genuinely thin, use the **thin exemption** rather
+   than padding — that is the whole reason it exists.
+4. **Drop, don't launder, an ungrounded attribution.** If the old prose credits a
+   witness with no comment on this chapter, he does not appear in the new prose
+   at all. Do not go looking for something else of his to say instead.
+5. Validate, lint, stamp (`--standard current`), gate, commit — steps 4–7 of the
+   per-chapter procedure.
+
+The exempt count in `--gate` output is the progress meter: it starts at 21,682
+and falls as chapters are repaired. It may never rise.
 
 ## Prose rules (2026-08-09 — after the quality audit)
 

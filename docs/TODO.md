@@ -53,7 +53,10 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   350-word floor (source-checked, implemented in `validate-synthesis.py`).
   **Remaining: the repair itself** — ~9,354 grade-D verses in ~356 chapters,
   priority Romans, Hebrews, 1–2 Corinthians, Genesis, Exodus, Judges. Not
-  started; needs an owner call on scope. Note the lint cannot become a CI gate
+  started; needs an owner call on scope. **The loop is ready to run it**:
+  `scripts/synthesis-frontier.py` derives both queues (generate / repair) from
+  the qa metadata, `--next` drives a shell loop, and the repair procedure is
+  documented in [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md). Note the lint cannot become a CI gate
   **The lint is now a CI gate** (`validate.yml`), exempting the legacy debt via
   `qa.standard` so it is green today while protecting all new and repaired work;
   the exempt count doubles as the repair progress meter. **The backlog is now

@@ -233,9 +233,16 @@ count each fail.
 
 ## 10. Repair scope, if approved
 
-- ~9,354 grade-D verses across ~356 chapters need regeneration.
-- Priority order by reader impact: Romans, Hebrews, 1–2 Corinthians, Genesis,
-  Exodus, Judges (heavily read, 90–100% C+D).
+The queue is derived from the metadata, not from this list — run
+`python3 scripts/synthesis-frontier.py --queue repair --worst-first`, which
+weights a fidelity defect three times a grade defect and so leads with the
+chapters that invent commentators (Joshua 21, Joshua 12).
+
+- ~9,354 grade-D verses across ~447 chapters flagged for repair.
+- Procedure: "Repair procedure" in
+  [`docs/agents/cow-synthesis-loop.md`](../agents/cow-synthesis-loop.md).
+- By reader impact the heavy books are Romans, Hebrews, 1–2 Corinthians,
+  Genesis, Exodus, Judges (90–100% C+D).
 - Already clean, leave alone: Job, Psalms, 1–2 Kings, 1–2 Chronicles, 2 Samuel,
   Ezra, Esther, Nehemiah, Matthew, John.
 

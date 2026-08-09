@@ -84,7 +84,11 @@
   per-verse `qa` block (standard, date, grade, checks performed), so the repair
   backlog is machine-readable, and **the lint runs as a CI gate** — a ratchet
   that exempts the legacy debt by `qa.standard`, fails any unstamped verse, and
-  refuses to let the exempt set grow. No regeneration of the debt has started.
+  refuses to let the exempt set grow. No regeneration of the debt has started, but **the loop is ready to start it** —
+  `scripts/synthesis-frontier.py` serves both queues from the metadata
+  (generate: 432 chapters; repair: 447), and `backfill-synthesis-qa.py
+  --standard current` stamps finished work, refusing anything that grades C/D or
+  names an ungrounded voice.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,

@@ -22,7 +22,9 @@ bytes — the tags tree is not uniform (most files are 1-space, some, e.g.
 john/4.json, are 2-space). Normalising them would bury the added blocks in
 hundreds of thousands of lines of reformatting churn.
 """
-import json, os, re, sys, glob, argparse, subprocess, collections
+import json, os, re, sys, glob, argparse, subprocess, collections, datetime
+
+TODAY = datetime.date.today().isoformat()
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -34,6 +36,10 @@ audit = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(audit)
 
 LEGACY_CHECKS = ['length', 'refs-linked', 'tags-match', 'schools-valid']
+# What a chapter written to the current standard has actually been through.
+CURRENT_CHECKS = ['length', 'refs-linked', 'tags-match', 'schools-valid',
+                  'voices-sourced', 'no-meta', 'no-noise', 'no-slot',
+                  'no-carriers', 'quotes-capped']
 
 def chapter_dates():
     """book/chapter -> the date its synthesis file first appeared."""
@@ -80,6 +86,10 @@ def main():
     ap.add_argument('--book')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--overwrite', action='store_true')
+    ap.add_argument('--standard', choices=['legacy', 'current'], default='legacy',
+                    help="'current' stamps a finished chapter to "
+                         f"{QA.CURRENT_STANDARD} — refused unless every verse "
+                         "grades A/B with no ungrounded voices")
     a = ap.parse_args()
 
     dates = chapter_dates()
@@ -90,9 +100,16 @@ def main():
         print(f'no files matched {pattern}', file=sys.stderr)
         return 2
 
+    current = a.standard == 'current'
+    if current and not a.book:
+        print('--standard current is per-chapter work; pass --book (and normally '
+              'one chapter\'s worth of files at a time)', file=sys.stderr)
+        return 2
+
     stamped = skipped = 0
     grades = collections.Counter()
     touched = 0
+    refused = []
     for prose_p in files:
         book = prose_p.split(os.sep)[-2]
         ch = os.path.basename(prose_p)[:-5]
@@ -114,17 +131,24 @@ def main():
                 continue
             m, _, _ = audit.verse_metrics(html)
             g = grade_of(m)
+            ung = src.ungrounded_voices(book, ch, t.get('voices'))
+            if current:
+                # The current standard is a claim about quality, so it has to be
+                # earned. Refuse rather than stamp a lie the CI gate will catch.
+                if g not in ('A', 'B'):
+                    refused.append(f'{book} {ch}:{v} grades {g}'); continue
+                if ung:
+                    refused.append(f'{book} {ch}:{v} ungrounded: {", ".join(ung)}'); continue
             grades[g] += 1
             qa = collections.OrderedDict([
                 ('v', QA.QA_SCHEMA_VERSION),
-                ('standard', 'legacy-unversioned'),
-                ('generated', gen),
+                ('standard', QA.CURRENT_STANDARD if current else QA.LEGACY_STANDARD),
+                ('generated', TODAY if current else gen),
                 ('grade', g),
-                ('checks', list(LEGACY_CHECKS)),
+                ('checks', list(CURRENT_CHECKS if current else LEGACY_CHECKS)),
                 ('lint', 'audit-synthesis-quality/1'),
             ])
-            ung = src.ungrounded_voices(book, ch, t.get('voices'))
-            if ung:
+            if ung and not current:
                 qa['ungrounded_voices'] = ung
             t['qa'] = qa
             stamped += 1
@@ -138,6 +162,14 @@ def main():
     print(f'{"would stamp" if a.dry_run else "stamped"}: {stamped} verses '
           f'across {touched or len(files)} files   (skipped {skipped} already stamped)')
     print('  grades:', dict(sorted(grades.items())))
+    if refused:
+        print(f'\n  REFUSED {len(refused)} verses — the current standard must be earned:')
+        for r in refused[:20]:
+            print(f'    {r}')
+        if len(refused) > 20:
+            print(f'    ... and {len(refused)-20} more')
+        print('  Fix the prose and re-run; do not hand-edit the qa block.')
+        return 1
     return 0
 
 if __name__ == '__main__':
