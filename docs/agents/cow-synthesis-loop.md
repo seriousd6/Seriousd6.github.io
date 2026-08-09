@@ -127,6 +127,31 @@ is not a single canonical sweep.
 - Where witnesses genuinely divide (e.g. who the "saviour" of 2 Kings 13:5
   is), present the debate honestly and record it in `debates`.
 
+## Repairs (resolved 2026-08-09) — Psalms 21
+
+Psalms 21 shipped (commit `98557344`) with five verses under the 350-word floor
+(vv. 5, 6, 10, 11, 12 at 319–349), turning CI red on master. Repaired by
+expanding each from material already in `cow/psalms/21.json` that the first pass
+left unused — Matthew Henry on vv. 5–6 (the source's Henry block sits under key
+`1` and runs through v. 6), Keil and Delitzsch's `שׁוּה על` / Gen 12:2 note and
+their `נטה רעה` idiom (their blocks span verse ranges under keys `4` and `10`),
+Ellicott's second reference at v. 10, and Gill's fuller staging at v. 12.
+Tags updated in step (Henry → `puritan-evangelical` at vv. 5–6; K&D added at
+v. 11).
+
+**Two things this chapter illustrates for future work:**
+
+- **Voices legitimately spill across verse keys.** A per-verse check of
+  "is this commentator in this verse's source?" produces heavy false positives —
+  Keil and Delitzsch head their blocks with a verse range, and Matthew Henry's
+  run covers a whole strophe. Check the WHOLE chapter source before concluding a
+  voice was invented. (A scan of Psalms 1–24 flags 180+ per-verse mismatches and
+  **zero** chapter-level ones.)
+- **Psalms 21 key `13` carries scrape residue** — a Jamieson, Fausset and Brown
+  block on 2 Chronicles 31 (Hezekiah and the temple courses). Correctly omitted
+  in both passes; do not synthesize from it. Note that "Hezekiah" appears
+  legitimately in vv. 1 and 4, where Clarke discusses the psalm's occasion.
+
 ## Repairs (resolved 2026-07-19)
 
 The 62 validator failures found when wiring CI (John 4 wholesale, Luke 13 ×4,

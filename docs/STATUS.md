@@ -1,7 +1,8 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-09** (new five-part topical study: Korah's Rebellion.
+> Last updated: **2026-08-09** (Psalms 21 COW synthesis repaired — CI green again;
+> new five-part topical study: Korah's Rebellion.
 > Previously 2026-08-02: Full Treatments Romans + Revelation; treatment
 > eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
 > 62.1%**, frontier now Psalms 1)
