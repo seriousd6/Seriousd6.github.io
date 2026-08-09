@@ -58,6 +58,14 @@
   Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit
   was pushed but its deploy is stuck in an ongoing GitHub Actions outage; all of
   this supersedes it and is **local-only pending review**.
+- **Multi-part studies use sub-tabs (2026-08-09)**: a five-part study is one
+  page with a sticky part-picker, not five linked pages — the same paradigm as
+  the book-commentary chapter picker (`.bkc-chapternav`), reused as the generic
+  `.tg-tabs` component in `topic-guide.css` + `assets/js/entries/study-tabs.js`.
+  Every panel ships in the HTML and is hidden by JS, so with scripting off the
+  study degrades to one long readable page. Korah's Rebellion is converted; its
+  old `part-N.html` URLs are redirect stubs to `#part-N`. **`salvation-assurance`
+  is still five separate pages and can adopt the same component unchanged.**
 - **Topical studies (hand-authored, separate from the book pipeline)**: eight
   live under `topics/`, listed via the `topical` array in
   `data/books-content.json`. Both newest ones are five-part studies built on the

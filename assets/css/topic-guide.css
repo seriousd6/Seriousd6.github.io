@@ -545,3 +545,76 @@
     color: var(--color-btn-text);
   }
 }
+
+/* ── Multi-part study tabs ───────────────────────────────────
+   Same paradigm as the book-commentary chapter picker
+   (.bkc-chapternav in commentary.css): a sticky bar of numbered
+   buttons, one panel visible at a time, deep-linkable by hash.
+   Generic — any study with .tg-part panels can use it, so the
+   five-part studies share one component.
+   Wired by assets/js/entries/study-tabs.js. */
+.tg-tabs {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.55rem 0; margin: 0 0 var(--space-md);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+.tg-tabs__label {
+  font-family: var(--font-ui); font-size: 0.64rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-muted); flex-shrink: 0;
+}
+.tg-tabs__grid {
+  /* One scrollable row rather than wrapping: a bar that grows to two lines
+     shifts the content under it every time the active tab changes rows. */
+  display: flex; flex-wrap: nowrap; gap: 0.3rem;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.tg-tabs__btn {
+  font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
+  min-width: 1.9rem; text-align: center; white-space: nowrap;
+  padding: 0.2rem 0.6rem; border-radius: 6px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface); color: var(--color-muted);
+  text-decoration: none; cursor: pointer;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.tg-tabs__btn:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+.tg-tabs__btn.is-active {
+  background: var(--tg-accent, var(--color-primary));
+  border-color: var(--tg-accent, var(--color-primary));
+  color: #fff;
+}
+
+/* Panels: one visible at a time once JS is running. Without JS every
+   panel stays visible, so the study degrades to one long readable page
+   rather than to a blank one. */
+.tg-part[hidden] { display: none; }
+/* Clear the sticky tab bar when jumping to a panel or an in-panel anchor,
+   otherwise the heading lands underneath it. */
+.tg-part, .tg-part .tg-section { scroll-margin-top: 4.5rem; }
+.tg-part__head { margin-bottom: var(--space-md); }
+.tg-part__kicker {
+  display: inline-block; font-family: var(--font-ui); font-size: 0.64rem;
+  font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--tg-accent, var(--color-primary)); margin-bottom: 0.4rem;
+}
+.tg-part__title {
+  font-family: var(--font-body); font-size: 1.55rem; line-height: 1.2;
+  color: var(--color-primary); margin: 0 0 0.5rem;
+}
+.tg-part__intro { color: var(--color-text); margin-bottom: var(--space-md); }
+.tg-part__verse {
+  border-left: 3px solid var(--tg-accent, var(--color-primary));
+  padding: 0.5rem 0 0.5rem 1rem; margin: 0 0 var(--space-md);
+  font-family: var(--font-body); font-style: italic; color: var(--color-muted);
+}
+.tg-part__verse cite { display: block; font-style: normal; font-size: 0.8rem; margin-top: 0.3rem; }
+
+@media (max-width: 640px) {
+  .tg-tabs { gap: 0.4rem; }
+  .tg-tabs__label { display: none; }
+  .tg-part__title { font-size: 1.3rem; }
+}
