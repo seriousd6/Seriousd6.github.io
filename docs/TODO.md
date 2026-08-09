@@ -39,6 +39,17 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   34 eligible books remain. **Psalms is `⛔` blocked** — no COW synthesis; its
   overview `_book.json` is kept as a head-start (not wired), and it will need a
   big-book nav (grouped by the 5 books / search) before its 150-ch picker scales.
+- [ ] **COW synthesis quality debt — 43% of the corpus is filler**
+  *(audit done 2026-08-09, repair NOT started —
+  [plans/cow-synthesis-quality-audit.md](plans/cow-synthesis-quality-audit.md))*.
+  The 2026-07-22 mass batch (19,178 verses, 88% of the corpus) reached the
+  350-word floor with stock carrier phrases and re-quoted scripture: 9,354
+  grade-D verses across 356 chapters. Everything generated 07-23 onward is
+  clean (0.0%), so the current per-chapter procedure is sound and the debt is
+  historical. Anti-template lint recovered as
+  `scripts/audit-synthesis-quality.py`. **Blocked on two owner decisions:** the
+  proposed loop-prompt changes (audit §6) and the 350-word-floor tension
+  (§7 — the floor is what manufactured the filler).
 - [ ] **Provenance loop — add `_source` fields** across the data tree, AI-generated
   content first. [agents/provenance-loop.md](agents/provenance-loop.md).
 - [ ] **Owner: run [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)** (19 points,

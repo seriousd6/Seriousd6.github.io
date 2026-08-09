@@ -67,6 +67,15 @@
   `topic-guide.css` component set with no per-study CSS; each part carries its
   own sticky TOC, further-reading list, and prev/next nav. Part V was drafted and
   owner-reviewed before the pages were built.
+- **COW synthesis quality (2026-08-09)**: full-corpus audit found **43% of
+  Commentary A is degenerate filler** — 9,354 grade-D verses in 356 chapters,
+  all from the single 2026-07-22 mass batch; everything generated since is
+  clean. The validators never saw it (they check length, not whether length was
+  earned). The lost **anti-template lint is recovered** as
+  `scripts/audit-synthesis-quality.py`. Audit + proposed prompt fixes:
+  [plans/cow-synthesis-quality-audit.md](plans/cow-synthesis-quality-audit.md).
+  No regeneration started; awaiting owner decisions on the prompt and the
+  350-word floor.
 - **Pending recovery**: the original `working/` guides + generation scripts
   live on the owner's other machine (see TODO).
 - **CI**: `validate.yml` (data + library + synthesis validators, JS syntax,
