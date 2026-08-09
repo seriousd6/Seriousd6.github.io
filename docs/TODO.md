@@ -104,6 +104,14 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   Desk A/B/C link groups; answers preview caps/notes.
 - [ ] About page (`src/pages/about/index.astro`): its prompt copies now mirror
   `docs/agents/` — keep them in sync when prompts change.
+- [x] **Topical study: Assurance of Salvation** (2026-08-09) — five-part
+  hand-authored study at `topics/salvation-assurance/` (`index` hub +
+  `part-1`…`part-5`) on the `topic-guide.css` component set: the OT→NT thread of
+  salvation, the competing verses read in context, seven traditions at their
+  strongest, the tests of faith, and keeping the fire / the way back. Registered
+  in the `topical` array of `data/books-content.json` so it lists under
+  `/studies/`. Structure and pastoral balance (even-handed) were owner-chosen
+  before drafting.
 - [x] **Topical study: Korah's Rebellion** (2026-08-09) — five-part hand-authored
   study at `topics/korahs-rebellion/` (`index` hub + `part-1`…`part-5`) on the
   `topic-guide.css` component set. Registered in the `topical` array of

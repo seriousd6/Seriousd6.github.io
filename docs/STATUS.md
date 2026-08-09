@@ -2,7 +2,7 @@
 
 > Update this file in the same commit as the work it describes.
 > Last updated: **2026-08-09** (Psalms 21 COW synthesis repaired — CI green again;
-> new five-part topical study: Korah's Rebellion.
+> two new five-part topical studies: Korah's Rebellion and Assurance of Salvation.
 > Previously 2026-08-02: Full Treatments Romans + Revelation; treatment
 > eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
 > 62.1%**, frontier now Psalms 1)
@@ -58,15 +58,22 @@
   Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit
   was pushed but its deploy is stuck in an ongoing GitHub Actions outage; all of
   this supersedes it and is **local-only pending review**.
-- **Topical studies (hand-authored, separate from the book pipeline)**: seven
+- **Topical studies (hand-authored, separate from the book pipeline)**: eight
   live under `topics/`, listed via the `topical` array in
-  `data/books-content.json`. Newest is **Korah's Rebellion (2026-08-09)** —
-  a five-part study of Numbers 16–17 at `topics/korahs-rebellion/`
-  (`index` hub + `part-1`…`part-5`): text/composition/reception, the theological
-  sprawl, the divided church, the NT's answer, and spiritual abuse. Built on the
+  `data/books-content.json`. Both newest ones are five-part studies built on the
   `topic-guide.css` component set with no per-study CSS; each part carries its
-  own sticky TOC, further-reading list, and prev/next nav. Part V was drafted and
-  owner-reviewed before the pages were built.
+  own sticky TOC, further-reading list, and prev/next nav.
+  **Assurance of Salvation (2026-08-09)** at `topics/salvation-assurance/`
+  (`index` hub + `part-1`…`part-5`): the OT→NT thread of salvation; the keeping
+  and warning texts read in context with the six hardest passages worked closely;
+  seven traditions each stated at its strongest with its weakest link; the tests
+  Scripture gives and how to run them; keeping the fire and the way back.
+  Even-handed by owner direction — comfort and warning held in tension rather
+  than one traded for the other — and it states its own position and that
+  position's weaknesses in the hub. **Korah's Rebellion (2026-08-09)** at
+  `topics/korahs-rebellion/`: text/composition/reception, the theological sprawl,
+  the divided church, the NT's answer, and spiritual abuse. Its Part V was drafted
+  and owner-reviewed before the pages were built.
 - **COW synthesis quality (2026-08-09)**: full-corpus audit found **43% of
   Commentary A is degenerate filler** — 9,354 grade-D verses in 356 chapters,
   all from the single 2026-07-22 mass batch; everything generated since is
