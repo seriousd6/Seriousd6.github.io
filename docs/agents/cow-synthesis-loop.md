@@ -86,8 +86,10 @@ while unit=$(python3 scripts/synthesis-loop.py next --queue repair --worst-first
 done
 ```
 
-`finish` runs validator → chapter lint → stamp → chapter gate → corpus gate →
-commit, and stops before the commit on any failure, so bad work cannot land.
+`finish` runs validator → chapter lint → **fidelity** → stamp → chapter gate →
+corpus gate → commit, and stops before the commit on any failure, so bad work
+cannot land. The fidelity step fails unless every verse carries a self-grade —
+that one cannot be automated away, which is exactly why it is a gate.
 
 **Exit codes** (stable; the loop depends on them): `0` success · `2` usage ·
 `3` queue empty, stop · `4` chapter failed verification, nothing committed.
@@ -160,10 +162,41 @@ restores the tags file so the tree is unchanged.
      Ellicott)".
    - `outliers`: `[{voice, note}]`.
    - `themes`: short strings.
+   - `fidelity`: **your own read-back verdict, one per verse** — see step 4.
    - `qa`: the metadata block — **required, or CI rejects the chapter as
      unstamped.** Do not hand-write it; step 5 stamps it from the measured
      result, so it cannot claim a grade the prose did not earn.
-4. **Validate AND lint before committing** — both must pass clean:
+4. **Read it back and self-grade the fidelity of every verse.** This is the
+   one check no script can perform. The lint measures repetition and confirms a
+   named voice exists somewhere in the chapter's sources; neither tells you
+   whether a 430-word paraphrase of 90 words of Gill still says what Gill said.
+
+   ```
+   python3 scripts/synthesis-fidelity.py --book <book> --chapter <ch>
+   ```
+
+   It prints source and synthesis side by side with the signals that predict
+   where invention hides — **expansion ratio** (corpus median is 0.84x, because
+   a synthesis normally distils; past ~6x the prose is mostly not coming from
+   the page in front of it), **unsourced proper nouns**, and **ungrounded
+   voices**. Read each verse against its source and record the verdict on the
+   tags entry, beside `voices`:
+
+   ```json
+   "fidelity": {"grade": "A", "checked_by": "self"}
+   "fidelity": {"grade": "B", "checked_by": "self", "note": "why it leans"}
+   ```
+
+   > **A** — every claim traces to the source; the expansion is framing, not new
+   > content. **B** — faithful but stretched; the prose leans further than the
+   > witness does. A note is required, so "B" cannot become a shrug.
+   > **C** — an unsupported claim is present. Do not record it and ship;
+   > **rewrite the verse.** The validator rejects a stored C.
+
+   Grade honestly. A quietly wrong B costs a reader more than an admitted one,
+   and the whole point of the audit was that nothing was watching this.
+
+5. **Validate AND lint before committing** — both must pass clean:
    `python3 scripts/validate-synthesis.py --verse <book> <ch>`
    (350–650 words per verse targeting ~500 — or the thin exemption below;
    prose/tags keys must match 1:1; every ref linked; school slugs/prevalence
@@ -175,20 +208,23 @@ restores the tags file so the tree is unchanged.
    fails the build — stamp each verse's `qa` block with
    `standard: cow-prose-rules-2026-08-09` and the checks you performed, or the
    gate rejects it as unstamped.
-5. **Stamp the qa block** once validator and lint are clean:
+6. **Stamp the qa block** once validator, lint and fidelity are clean:
 
    ```
    python3 scripts/backfill-synthesis-qa.py --book <book> --standard current --overwrite
    ```
 
    This measures each verse and writes `standard: cow-prose-rules-2026-08-09`,
-   the grade, the date, and the full check list. It **refuses** any verse that
-   grades C/D or names an ungrounded voice — the standard is a claim about
+   the grade, the date, the full check list, and your fidelity verdict with the
+   expansion ratio filled in by the tool — so the measured number cannot be
+   typed by hand and the judgement cannot be manufactured by a script. It
+   **refuses** any verse that grades C/D, names an ungrounded voice, or carries
+   no fidelity self-grade — the standard is a claim about
    quality, so it has to be earned. If it refuses, fix the prose and re-run;
    never hand-edit a `qa` block to get past it.
-6. Confirm the gate agrees, exactly as CI will run it:
+7. Confirm the gate agrees, exactly as CI will run it:
    `python3 scripts/audit-synthesis-quality.py --gate`
-7. Commit exactly: `COW synthesis: <book> <ch> (<N> verses)`.
+8. Commit exactly: `COW synthesis: <book> <ch> (<N> verses)`.
    For repair work: `COW synthesis repair: <book> <ch> (<N> verses)`.
    Scratch work goes in `scratchpad/` (gitignored). Do not push — pushes
    deploy production and need owner approval.

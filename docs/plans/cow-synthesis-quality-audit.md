@@ -104,6 +104,29 @@ Two things I checked and cleared, so effort is not wasted on them:
   `validate-library-format` all pass. This is a quality gap, not a correctness
   one — which is exactly why it survived.
 
+### Fidelity is now graded, not assumed (added 2026-08-09)
+
+The audit could clear *fabricated commentators* mechanically but not *fabricated
+claims* — whether a 430-word paraphrase of 90 words of Gill still says what Gill
+said. That is a reading task, so it is now a required step rather than a hope:
+
+- `scripts/synthesis-fidelity.py` lays source and synthesis side by side with the
+  signals that predict where invention hides — expansion ratio (corpus median
+  **0.84x**, since a synthesis normally distils; **7% exceed 6x**), unsourced
+  proper nouns, ungrounded voices.
+- The writer records a per-verse verdict on the tags entry: **A** supported,
+  **B** stretched (note required), **C** unsupported (rewrite — a stored C is
+  rejected).
+- `backfill --standard current` folds it into `qa.fidelity` and fills the
+  expansion ratio itself, so the measurement cannot be hand-typed and the
+  judgement cannot be script-generated. A verse without a grade will not stamp.
+- `synthesis-loop.py finish` runs it as its own gate between the lint and the
+  stamp, and `validate-synthesis.py` requires it on anything carrying the
+  current standard — so CI enforces it too.
+
+Discrimination check: Joshua 21 flags all 45 verses (every one carrying the
+Ellicott fabrication); Psalms 21 flags none.
+
 ### CORRECTION (2026-08-09, later the same day)
 
 An earlier version of this section claimed *"no fabricated commentators —

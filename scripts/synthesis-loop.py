@@ -19,9 +19,13 @@ EXIT CODES (stable — a shell loop depends on them)
     3  queue empty — nothing left to do, stop the loop
     4  the chapter failed verification; nothing was committed
 
-`finish` runs, in order: validator -> lint (chapter) -> stamp -> gate (chapter)
--> gate (corpus) -> commit. Any failure stops before the commit, so bad work
-cannot land.
+`finish` runs, in order: validator -> lint (chapter) -> fidelity -> stamp ->
+gate (chapter) -> gate (corpus) -> commit. Any failure stops before the commit,
+so bad work cannot land.
+
+The fidelity step is the one a script cannot do for you: it fails unless every
+verse carries a self-grade recorded by whoever wrote the prose, after reading it
+back against its source.
 
 WITH --unattended a failed chapter is copied to scratchpad/rejected/ and then
 reverted with git checkout, leaving a clean tree so the next iteration can
@@ -94,6 +98,13 @@ def cmd_finish(a):
         ('lint (chapter)', [PY, 'scripts/audit-synthesis-quality.py',
                             '--gate', '--enforce-all', '--book', book,
                             '--chapter', ch, '--worst', '0', '--boilerplate', '0']),
+        # Self-grading is a separate step from the lint because it answers a
+        # different question: not "is this prose repetitive" but "does it say
+        # only what the witnesses say". No script can judge that, so this fails
+        # unless the writer has recorded a grade for every verse.
+        ('fidelity (self-graded)', [PY, 'scripts/synthesis-fidelity.py',
+                                    '--book', book, '--chapter', ch,
+                                    '--signals-only']),
     ]
     for name, args in steps:
         r = run(args)

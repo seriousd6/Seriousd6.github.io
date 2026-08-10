@@ -56,8 +56,53 @@ CHECKS = {
     'no-slot':        'no degenerate "; the <clause> (<gloss>)" slot-lists',
     'no-carriers':    'no banned stock carrier phrase used as filler',
     'quotes-capped':  'quoted scripture within budget, no fragment quoted twice',
+    'fidelity-self-graded':
+                      'the writer re-read each verse against its source and '
+                      'graded whether the prose says only what the witnesses say',
 }
 GRADES = ('A', 'B', 'C', 'D')
+
+# ── fidelity ────────────────────────────────────────────────────────────────
+# The lint can measure repetition and whether a NAMED voice exists in the
+# source. It cannot judge whether a 430-word paraphrase of 90 words of Gill
+# still says what Gill said — that is a reading task, so it is graded by the
+# writer and recorded, not inferred.
+#
+#   A  every claim traces to the source; expansion is framing, not new content
+#   B  faithful, but stretched — the prose leans further than the witness does
+#   C  contains a claim the source does not support (do not ship; rewrite)
+#
+# A note is required for anything below A, so "B" cannot become a shrug.
+FIDELITY_GRADES = ('A', 'B', 'C')
+# Expansion beyond this is not wrong, but it is where invention would live:
+# 7% of the corpus is above it, and a 400-word verse built on 15 words of
+# catena deserves a second look before it ships.
+STRETCH_RATIO = 6.0
+
+def expansion_ratio(prose_words, source_words):
+    if not source_words:
+        return None
+    return round(prose_words / source_words, 2)
+
+def fidelity_problems(f, required):
+    if f is None:
+        return ['fidelity is required for the current standard — the writer '
+                'must re-read each verse against its source and grade it'] if required else []
+    if not isinstance(f, dict):
+        return ['fidelity must be an object']
+    p = []
+    if f.get('grade') not in FIDELITY_GRADES:
+        p.append(f'fidelity.grade must be one of {FIDELITY_GRADES}')
+    if f.get('grade') == 'C':
+        p.append('fidelity.grade C means an unsupported claim is present — '
+                 'rewrite the verse rather than recording it')
+    if f.get('grade') in ('B', 'C') and not str(f.get('note') or '').strip():
+        p.append('fidelity.note is required when the grade is not A')
+    if 'expansion' in f and not isinstance(f['expansion'], (int, float, type(None))):
+        p.append('fidelity.expansion must be a number')
+    if not str(f.get('checked_by') or '').strip():
+        p.append('fidelity.checked_by must say who graded it')
+    return p
 
 TAG = re.compile(r'<[^>]+>')
 def visible(html):
@@ -154,4 +199,8 @@ def qa_problems(qa):
             p.append(f'qa.checks has unknown ids: {unknown}')
     if not isinstance(qa.get('lint'), str) or not qa.get('lint'):
         p.append('qa.lint must name the tool that graded it')
+    # Fidelity is mandatory for work written to the current standard, and absent
+    # from the legacy debt (nobody read those against their sources).
+    p += fidelity_problems(qa.get('fidelity'),
+                           required=qa.get('standard') == CURRENT_STANDARD)
     return p

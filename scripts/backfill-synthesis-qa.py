@@ -39,7 +39,7 @@ LEGACY_CHECKS = ['length', 'refs-linked', 'tags-match', 'schools-valid']
 # What a chapter written to the current standard has actually been through.
 CURRENT_CHECKS = ['length', 'refs-linked', 'tags-match', 'schools-valid',
                   'voices-sourced', 'no-meta', 'no-noise', 'no-slot',
-                  'no-carriers', 'quotes-capped']
+                  'no-carriers', 'quotes-capped', 'fidelity-self-graded']
 
 def chapter_dates():
     """book/chapter -> the date its synthesis file first appeared."""
@@ -74,6 +74,18 @@ def detect_indent(raw, default=1):
         if st.startswith('"'):
             return len(line) - len(st)
     return default
+
+_SRC_CACHE = {}
+def source_text(book, ch, v):
+    """The catena blob for one verse, for the expansion ratio."""
+    key = (book, ch)
+    if key not in _SRC_CACHE:
+        p = os.path.join(ROOT, 'data/commentary/cow', book, f'{ch}.json')
+        try:
+            _SRC_CACHE[key] = json.load(open(p, encoding='utf-8'))
+        except Exception:
+            _SRC_CACHE[key] = {}
+    return _SRC_CACHE[key].get(v, '')
 
 def grade_of(m):
     z, t = m['compress'], m['ttr']
@@ -137,7 +149,23 @@ def main():
             m, _, _ = audit.verse_metrics(html)
             g = grade_of(m)
             ung = src.ungrounded_voices(book, ch, t.get('voices'))
+
+            # The writer records the fidelity judgement as a sibling of `voices`;
+            # we fold it into the qa block and fill `expansion` ourselves, so the
+            # measured number cannot be typed in by hand and the judgement cannot
+            # be synthesised by a script. Neither half is much use alone.
+            fid = t.pop('fidelity', None) or (t.get('qa') or {}).get('fidelity')
+            if fid is not None:
+                fid = dict(fid)
+                fid.setdefault('checked_by', 'self')
+                fid['expansion'] = QA.expansion_ratio(
+                    QA.visible(html) and len(QA.visible(html).split()),
+                    len(QA.visible(source_text(book, ch, v)).split()))
+
             if current:
+                probs = QA.fidelity_problems(fid, required=True)
+                if probs:
+                    refused.append(f'{book} {ch}:{v} fidelity — {probs[0]}'); continue
                 # The current standard is a claim about quality, so it has to be
                 # earned. Refuse rather than stamp a lie the CI gate will catch.
                 if g not in ('A', 'B'):
@@ -153,6 +181,8 @@ def main():
                 ('checks', list(CURRENT_CHECKS if current else LEGACY_CHECKS)),
                 ('lint', 'audit-synthesis-quality/1'),
             ])
+            if fid is not None:
+                qa['fidelity'] = fid
             if ung and not current:
                 qa['ungrounded_voices'] = ung
             t['qa'] = qa
