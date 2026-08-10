@@ -125,6 +125,33 @@
         "12"
       ],
       "note": "First draft brought in Gibeon and Caleb from Joshua 9, 10 and 14 - true facts, absent from this catena. Rewritten before commit rather than graded B. Same failure mode as joshua 21; it recurs on list chapters where the register itself says almost nothing."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "4",
+        "16",
+        "40",
+        "82"
+      ],
+      "note": "BLOCKED, not attempted. Four verses measure over 200 raw source words so the validator refuses the thin exemption, but hold only 15-86 usable words once the Jamieson-Fausset-Brown scrape residue is dropped (Day of Atonement, the scapegoat, covering the blood of game - all Leviticus 16/17, foreign to Numbers 7). Writing them to the 350-word floor would be a 17x expansion of pure padding, which is the exact defect this repair effort exists to remove; marking them thin fails the validator's source check. There is no honest way to pass this chapter under the current contract."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "7",
+      "note": "Corpus-wide scan: 575 verses across 387 chapters have this shape - raw blob over 200 words, usable material under 200 once the noise block is dropped. Worst offenders psalms 78, ezekiel 23, numbers 31 (6 verses each). The two rules genuinely conflict: 'skip noise silently' tells the writer to ignore the residue, while the thin exemption measures the source WITH it. The fix is one line in validate-synthesis.py source_words(): measure after stripping the same noise the writer is required to ignore. That LOOSENS the exemption, so no committed chapter can break. Not changed unilaterally - the loop doc records the floor and the exemption as owner decisions."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "7",
+      "note": "Numbers 7 is also the largest unit in the corpus at 89 verses, 72 of them the repeated tribal offering with 12-21 words of source each. Even unblocked it is the chapter most likely to produce templated filler, and the anti-templating rule (Job 5 precedent) bites hardest here. Worth handling deliberately rather than as a routine queue item."
     }
   ]
 }
