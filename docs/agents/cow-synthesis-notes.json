@@ -64,6 +64,67 @@
       "book": "joshua",
       "chapter": "21",
       "note": "First draft introduced facts absent from this catena: Deborah and Elijah at the Kishon, Jacob naming Mahanaim, Moses sending from the wilderness of Kedemoth, and a Numbers 35:6 citation. All removed before commit rather than recorded as B; an unsupported claim is a rewrite, not a note."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "12",
+      "verses": [
+        "4",
+        "10"
+      ],
+      "note": "Graded B: v4 uses Henry's summer/winter detail from his block under verse 1; v10 uses K&D's Geder and Hormah identifications from the verse 8 block. Both grounded in the chapter, not in the verse's own slot."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "12",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "Every Jamieson, Fausset and Brown block in this chapter is scrape residue on the covenant blessings and Psalm 144, foreign to Joshua 12. Omitted silently; JFB is named nowhere."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "12",
+      "note": "Ellicott appears nowhere in this chapter's catena or corpora. This is the second half of the documented Joshua fabrication (ch 12 and ch 21). Dropped entirely."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "12",
+      "note": "ENTITIES flags for Edomite, Jerome, Isaiah, Acts, Sidetes and Onomasticon are all false positives: inflections and spelling variants of source terms (Henry's Edom, Gill's Jerom, Clarke's Sydetes, K&D's Onom.) plus book names inside ref links that the detector cannot see."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "12",
+      "verses": [
+        "12",
+        "19"
+      ],
+      "note": "STRETCH of 8.3x and 11.2x are inherent to the thin exemption: a 12-19 word catena against a 120-word floor. The prose stays inside what Gill supplies."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "12",
+      "verses": [
+        "10",
+        "11",
+        "12"
+      ],
+      "note": "First draft brought in Gibeon and Caleb from Joshua 9, 10 and 14 - true facts, absent from this catena. Rewritten before commit rather than graded B. Same failure mode as joshua 21; it recurs on list chapters where the register itself says almost nothing."
     }
   ]
 }
