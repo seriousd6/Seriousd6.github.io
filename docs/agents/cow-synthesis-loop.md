@@ -72,6 +72,21 @@ canonical sweep.
 
 ## Running it unattended
 
+**Launch prompt:** [cow-synthesis-loop-prompt.md](cow-synthesis-loop-prompt.md)
+— paste it into a fresh session and leave it. **Notebook:**
+[cow-synthesis-notes.json](cow-synthesis-notes.json) — an unattended loop cannot
+stop and ask, so fidelity calls worth a second opinion, tool flags it overrode,
+source defects, and chapters the driver rejected all go there:
+
+```
+python3 scripts/synthesis-note.py --book <book> --chapter <ch> \
+    --kind <fidelity|disagreement|source-defect|observation> --note "..."
+python3 scripts/synthesis-note.py --list [--kind ...] [--since YYYY-MM-DD]
+```
+
+The driver writes a `rejected` note itself whenever `--unattended` reverts a
+chapter, so a failure that nobody watched still leaves a trail.
+
 `scripts/synthesis-loop.py` owns everything mechanical — choosing the unit,
 verifying it, stamping it, committing it, and refusing anything that has not
 earned the standard. **An agent only has to write the prose and tags files.**

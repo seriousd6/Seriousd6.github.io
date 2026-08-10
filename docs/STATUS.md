@@ -122,7 +122,9 @@
   `scripts/synthesis-frontier.py` serves both queues from the metadata
   (generate: 432 chapters; repair: 447), and `backfill-synthesis-qa.py
   --standard current` stamps finished work, refusing anything that grades C/D or
-  names an ungrounded voice. `synthesis-loop.py` runs the whole cycle unattended.
+  names an ungrounded voice. `synthesis-loop.py` runs the whole cycle unattended; the launch prompt is
+  `docs/agents/cow-synthesis-loop-prompt.md` and the run writes what it could
+  not stop to ask into `docs/agents/cow-synthesis-notes.json`.
 - **Disciplines (2026-08-09)**: completion is no longer purely auto-detected.
   `assets/js/tracker.js` resolves every discipline as *manual override → derived*,
   where the override is three-state (`true` force-on / `false` force-off / absent

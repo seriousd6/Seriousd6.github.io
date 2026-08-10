@@ -55,9 +55,15 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   priority Romans, Hebrews, 1–2 Corinthians, Genesis, Exodus, Judges. Not
   started; needs an owner call on scope. **The loop is ready to run it**:
   `scripts/synthesis-frontier.py` derives both queues (generate / repair) from
-  the qa metadata, `synthesis-loop.py` drives it unattended (verify → stamp →
-  gate → commit, reverting anything that fails), and the repair procedure is
-  documented in [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md). Note the lint cannot become a CI gate
+  the qa metadata, `synthesis-loop.py` drives it unattended (verify → lint →
+  fidelity → stamp → gate → commit, reverting anything that fails), and the
+  repair procedure is documented in
+  [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md). Launch prompt:
+  [agents/cow-synthesis-loop-prompt.md](agents/cow-synthesis-loop-prompt.md);
+  the run's notebook is
+  [agents/cow-synthesis-notes.json](agents/cow-synthesis-notes.json) — read it
+  after a run, it is where an unattended loop puts what it could not stop to ask.
+  Note the lint cannot become a CI gate
   **The lint is now a CI gate** (`validate.yml`), exempting the legacy debt via
   `qa.standard` so it is green today while protecting all new and repaired work;
   the exempt count doubles as the repair progress meter. **The backlog is now

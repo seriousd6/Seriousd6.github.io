@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "purpose": "Append-only notebook for the COW synthesis loop. The loop runs unattended, so anything a human would want to know afterwards goes here instead of stopping the run: fidelity judgements worth a second opinion, tool flags the writer overrode, defects found in the source, and chapters the driver rejected.",
+  "how": "Never hand-edit. Append with: python3 scripts/synthesis-note.py --book <book> --chapter <ch> --kind <kind> --note '<text>' [--verses 3,7]. Review with: python3 scripts/synthesis-note.py --list [--kind ...] [--since YYYY-MM-DD].",
+  "kinds": {
+    "fidelity": "why a verse was graded B, or an A that felt borderline",
+    "disagreement": "a STRETCH / ENTITIES / UNSOURCED flag the writer judged a false positive, and why",
+    "source-defect": "scrape residue, a misplaced witness block, an out-of-range verse key",
+    "rejected": "written by the driver when a chapter fails verification and is reverted",
+    "observation": "anything else the next reader should know"
+  },
+  "entries": [
+    {
+      "at": "2026-08-10",
+      "kind": "rejected",
+      "book": "joshua",
+      "chapter": "21",
+      "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/joshua-21-20260810-012608"
+    }
+  ]
+}

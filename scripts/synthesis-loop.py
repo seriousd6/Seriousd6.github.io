@@ -111,7 +111,7 @@ def cmd_finish(a):
         if r.returncode != 0:
             say(name, False)
             print((r.stdout or '')[-2500:])
-            return fail(a, book, ch)
+            return fail(a, book, ch, f'failed {name}')
         say(name, True)
 
     # A dry run must leave no residue, but it should still exercise the stamp
@@ -128,7 +128,7 @@ def cmd_finish(a):
         print((r.stdout or '')[-2500:])
         if snapshot is not None:
             open(tags_abs, 'w', encoding='utf-8').write(snapshot)
-        return fail(a, book, ch)
+        return fail(a, book, ch, 'did not earn the current standard at the stamp')
     say('stamp', True, (r.stdout or '').strip().splitlines()[0] if r.stdout else '')
 
     for name, args in [
@@ -144,7 +144,7 @@ def cmd_finish(a):
             print((r.stdout or '')[-2500:])
             if snapshot is not None:
                 open(tags_abs, 'w', encoding='utf-8').write(snapshot)
-            return fail(a, book, ch)
+            return fail(a, book, ch, f'failed {name}')
         say(name, True)
 
     n = len(json.load(open(prose, encoding='utf-8')))
@@ -164,10 +164,20 @@ def cmd_finish(a):
     say('commit', True, msg)
     return 0
 
-def fail(a, book, ch):
+def note(book, ch, kind, text):
+    """Record something for a human to read later. An unattended loop cannot
+    stop and ask, so a rejection that leaves no trace is a rejection nobody
+    learns from."""
+    run([PY, 'scripts/synthesis-note.py', '--book', book, '--chapter', str(ch),
+         '--kind', kind, '--note', text[:500]])
+
+def fail(a, book, ch, why=''):
     if a.unattended:
         dest = quarantine(book, ch)
         run(['git', 'checkout', '--'] + chapter_files(book, ch))
+        note(book, ch, 'rejected',
+             f'{why or "failed verification"}; reverted, attempt kept at '
+             f'{os.path.relpath(dest, ROOT)}')
         print(f'  reverted; rejected attempt kept at {os.path.relpath(dest, ROOT)}')
     else:
         print('  files left in place for inspection '
