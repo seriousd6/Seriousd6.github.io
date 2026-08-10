@@ -9,5 +9,61 @@
     "rejected": "written by the driver when a chapter fails verification and is reverted",
     "observation": "anything else the next reader should know"
   },
-  "entries": []
+  "entries": [
+    {
+      "at": "2026-08-10",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "21",
+      "verses": [
+        "13",
+        "38",
+        "42"
+      ],
+      "note": "Graded B: each leans on a Keil and Delitzsch or Matthew Henry block filed under a different verse key (K&D vv.10-13 resumption, Henry v9 on Mahanaim, K&D v37 distributive gloss). Faithful to the chapter's catena, not to the verse's own slot."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "21",
+      "verses": [
+        "9",
+        "15",
+        "27",
+        "33",
+        "39",
+        "45"
+      ],
+      "note": "Every Jamieson, Fausset and Brown block in this chapter is scrape residue from elsewhere: Deuteronomy on lending, Exodus on the Hebrew servant, and repeated Passover/feast material. All omitted silently; JFB is named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "21",
+      "note": "Ellicott appears nowhere in this chapter's catena or corpora, yet the OLD prose named him on all 45 verses. This is the documented Joshua fabrication from the 2026-08-09 audit. Dropped entirely rather than re-grounded."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "21",
+      "note": "ENTITIES flags for Chronicler, Maccabean, Zebulunite judged false positives: my own descriptive nouns, and Maccabean is grounded since K&D cite 1 Macc 5:26 on Busra."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "21",
+      "note": "Expansion of 3x-8x on the thin verses is inherent to the thin exemption, which pairs a 20-30 word catena with a 120-word floor. Not evidence of invention."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "21",
+      "note": "First draft introduced facts absent from this catena: Deborah and Elijah at the Kishon, Jacob naming Mahanaim, Moses sending from the wilderness of Kedemoth, and a Numbers 35:6 citation. All removed before commit rather than recorded as B; an unsupported claim is a rewrite, not a note."
+    }
+  ]
 }
