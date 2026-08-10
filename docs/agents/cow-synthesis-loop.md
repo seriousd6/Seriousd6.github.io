@@ -34,7 +34,15 @@ hand-count and do not trust a figure written in this file: ask the tool.**
 python3 scripts/synthesis-frontier.py                    # summary + both queues
 python3 scripts/synthesis-frontier.py --next             # one unit: "<book> <ch>"
 python3 scripts/synthesis-frontier.py --next --queue repair --worst-first
+python3 scripts/synthesis-frontier.py --next --queue auto --worst-first
 ```
+
+**`--queue auto` is how you run the corpus to completion in one pass**: it serves
+repair until that queue is empty, then generation, and exits 3 only when both are
+done. Repair leads deliberately — finishing the corpus while 43% of what is
+already published is filler would only grow the surface to fix. In this mode
+`--next` prints `<queue> <book> <ch>`, so the caller knows which kind of work it
+picked up.
 
 There are **two queues**, and a loop should drain them in this order:
 
@@ -49,6 +57,10 @@ shell loop can drive itself:
 ```sh
 unit=$(python3 scripts/synthesis-frontier.py --next --queue repair) || exit 0
 set -- $unit; book=$1; ch=$2
+
+# or, to run everything to completion (three fields, repair first):
+unit=$(python3 scripts/synthesis-frontier.py --next --queue auto) || exit 0
+set -- $unit; queue=$1; book=$2; ch=$3
 ```
 
 `--worst-first` orders the repair queue by defect weight, counting a fidelity
@@ -92,14 +104,19 @@ verifying it, stamping it, committing it, and refusing anything that has not
 earned the standard. **An agent only has to write the prose and tags files.**
 
 ```sh
-while unit=$(python3 scripts/synthesis-loop.py next --queue repair --worst-first); do
-  set -- $unit; book=$1; ch=$2
+while unit=$(python3 scripts/synthesis-loop.py next --queue auto --worst-first); do
+  set -- $unit; queue=$1; book=$2; ch=$3
 
-  #  ... the agent writes cow-synthesis/$book/$ch.json + the tags file here ...
+  #  ... the agent writes cow-synthesis/$book/$ch.json + the tags file here,
+  #      and records a fidelity self-grade on every tags entry ...
 
-  python3 scripts/synthesis-loop.py finish "$book" "$ch" --repair --unattended || continue
+  python3 scripts/synthesis-loop.py finish "$book" "$ch" --unattended || continue
 done
 ```
+
+`finish` infers repair-vs-generate from the tree (a chapter already tracked in
+HEAD is being rewritten), so the commit message is right without the caller
+passing a flag it could get wrong.
 
 `finish` runs validator → chapter lint → **fidelity** → stamp → chapter gate →
 corpus gate → commit, and stops before the commit on any failure, so bad work

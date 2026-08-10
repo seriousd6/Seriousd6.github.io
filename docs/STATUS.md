@@ -122,7 +122,9 @@
   `scripts/synthesis-frontier.py` serves both queues from the metadata
   (generate: 432 chapters; repair: 447), and `backfill-synthesis-qa.py
   --standard current` stamps finished work, refusing anything that grades C/D or
-  names an ungrounded voice. `synthesis-loop.py` runs the whole cycle unattended; the launch prompt is
+  names an ungrounded voice. `synthesis-loop.py` runs the whole cycle unattended and `--queue auto` takes
+  the corpus to completion in one pass (repair first, then generation, exit 3
+  only when both are done); the launch prompt is
   `docs/agents/cow-synthesis-loop-prompt.md` and the run writes what it could
   not stop to ask into `docs/agents/cow-synthesis-notes.json`.
 - **Disciplines (2026-08-09)**: completion is no longer purely auto-detected.

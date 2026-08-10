@@ -84,7 +84,11 @@ def scan():
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--queue', choices=['generate', 'repair'], default=None)
+    ap.add_argument('--queue', choices=['generate', 'repair', 'auto'], default=None,
+                    help="'auto' drains repair first, then generation, and is "
+                         "empty only when both are — use it to run the corpus to "
+                         "completion in one pass. With --next it prints "
+                         "'<queue> <book> <ch>' so the caller knows which it got.")
     ap.add_argument('--next', action='store_true')
     ap.add_argument('--stats', action='store_true')
     ap.add_argument('--limit', type=int, default=25)
@@ -97,6 +101,15 @@ def main():
         repair.sort(key=lambda r: -(r[3] + r[4] * 3))
 
     if a.next:
+        if a.queue == 'auto':
+            # Repair before generation: finishing the corpus while 43% of what is
+            # already published is filler would just grow the surface to fix.
+            q, items = ('repair', repair) if repair else ('generate', generate)
+            if not items:
+                print('both queues empty', file=sys.stderr)
+                return 3
+            print(f'{q} {items[0][0]} {items[0][1]}')
+            return 0
         q = a.queue or ('generate' if generate else 'repair')
         items = generate if q == 'generate' else repair
         if not items:

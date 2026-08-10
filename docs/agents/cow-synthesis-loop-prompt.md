@@ -1,13 +1,15 @@
 # COW Synthesis Loop — the launch prompt
 
 Paste the block below as the first message of a fresh session in the repo. It is
-written for an **unattended** run: the loop never stops to ask, and anything a
-human would want to know goes into
+written for an **unattended** run to completion: the loop never stops to ask, and
+anything a human would want to know goes into
 [`cow-synthesis-notes.json`](cow-synthesis-notes.json) to be read later.
 
-Swap `--queue repair --worst-first` for `--queue generate` to extend coverage
-instead of repairing the 2026-07-22 debt. **Pass `--queue` explicitly** — with no
-argument the frontier defaults to `generate` whenever that queue is non-empty.
+It uses `--queue auto`, which **drains the repair queue first and then moves on
+to generation**, and reports empty only when both are done. Repair leads because
+finishing the corpus while 43% of what is already published is filler would just
+grow the surface to fix. `--next` prints `<queue> <book> <ch>` in this mode, so
+the loop knows which kind of work it just picked up.
 
 Do not run two loops at once: nothing claims a chapter off the queue, so two
 agents will pick the same one and collide at the commit.
@@ -15,22 +17,30 @@ agents will pick the same one and collide at the commit.
 ---
 
 ```
-Run the COW synthesis repair loop, unattended, until the queue is empty.
+Run the COW synthesis loop, unattended, until the whole corpus is done — every
+chapter repaired and every remaining chapter generated.
 
 The procedure is docs/agents/cow-synthesis-loop.md — read it in full first and
 follow it rather than this summary wherever they differ.
 
-Work the repair queue, worst first. Per chapter:
+Per chapter:
 
-1. unit=$(python3 scripts/synthesis-loop.py next --queue repair --worst-first)
-   Exit 3 means the queue is empty — that is the only reason to stop.
+1. unit=$(python3 scripts/synthesis-loop.py next --queue auto --worst-first)
+   set -- $unit; queue=$1; book=$2; ch=$3
+   The queue is "repair" while damaged chapters remain, then "generate" for
+   chapters with a source catena but no synthesis yet. Exit 3 means BOTH queues
+   are empty — that is the only reason to stop.
 
-2. Read the EXISTING prose first to see which defect shape it is: stock carrier
-   phrases, the verse re-quoted for length, or the parenthesised slot-list.
+2. If queue is "repair", read the EXISTING prose first to see which defect shape
+   it is: stock carrier phrases, the verse re-quoted for length, or the
+   parenthesised slot-list. If queue is "generate" there is nothing to read yet
+   — study a finished chapter instead (cow-synthesis/2kings/13.json is the gold
+   standard) and match its voice.
 
-3. Read data/commentary/cow/<book>/<ch>.json and rewrite the chapter under the
-   prose rules in the loop doc. Regenerate, do not trim — a padded verse cannot
-   be trimmed into a good one, because the material was never there.
+3. Read data/commentary/cow/<book>/<ch>.json and write the chapter under the
+   prose rules in the loop doc. On a repair, regenerate rather than trim — a
+   padded verse cannot be trimmed into a good one, because the material was
+   never there.
    - Mirror the source's verse keys exactly.
    - Where the sources are genuinely thin, use the thin exemption
      ("thin": true on the tags entry, prose 120–349 words) rather than padding.
@@ -50,10 +60,12 @@ Work the repair queue, worst first. Per chapter:
    advisory: a verse that expands 1.2x with no odd proper nouns can still put a
    claim in a commentator's mouth, and that is exactly the case no tool sees.
 
-5. python3 scripts/synthesis-loop.py finish <book> <ch> --repair --unattended
+5. python3 scripts/synthesis-loop.py finish "$book" "$ch" --unattended
    Runs validator → lint → fidelity → stamp → gates → commit, and refuses
    anything that has not earned the standard. Exit 4 means it failed, reverted,
-   and recorded a note; go to the next chapter.
+   and recorded a note; go to the next chapter. It works out repair-vs-generate
+   from the tree itself, so the commit message is right without you passing a
+   flag.
 
 Notes instead of stopping. You are unattended, so never pause for review — write
 it down and carry on:
@@ -71,7 +83,9 @@ Rules:
 - Never hand-edit a qa block. Step 5 writes it.
 - Do not push. The commits stay local for review.
 - If the same chapter fails twice, note it and move on; do not keep retrying.
-- Stop only when the queue is empty (exit 3).
+- Do not switch queues by hand; --queue auto does it. Repair finishes first.
+- Stop only when BOTH queues are empty (exit 3). That is the end of the corpus:
+  1,189 chapters synthesized and none carrying the legacy debt.
 
 Start by running: python3 scripts/synthesis-loop.py status
 ```
@@ -81,6 +95,7 @@ Start by running: python3 scripts/synthesis-loop.py status
 ## Reviewing afterwards
 
 ```sh
+python3 scripts/synthesis-loop.py next --queue auto       # what it would do next
 python3 scripts/synthesis-note.py --list                 # everything
 python3 scripts/synthesis-note.py --list --kind rejected # what the driver refused
 python3 scripts/synthesis-note.py --list --kind disagreement
@@ -88,8 +103,10 @@ python3 scripts/synthesis-loop.py status                 # queue + grade movemen
 git log --oneline origin/master..                        # what it actually committed
 ```
 
-The exempt count in `status` is the progress meter: it starts at 21,682 and only
-falls. Rejected attempts are kept under `scratchpad/rejected/` (gitignored) if
+Two progress meters in `status`: the **exempt count** starts at 21,682 and only
+falls as chapters are repaired, and **synthesized** climbs from 757/1,189 as
+generation proceeds. The run is over when the first reaches zero and the second
+reaches 1,189. Rejected attempts are kept under `scratchpad/rejected/` (gitignored) if
 you want to see what was thrown away.
 
 ## A caution about the fidelity grade

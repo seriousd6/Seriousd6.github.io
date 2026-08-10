@@ -148,7 +148,11 @@ def cmd_finish(a):
         say(name, True)
 
     n = len(json.load(open(prose, encoding='utf-8')))
-    verb = 'repair: ' if a.repair else ''
+    # Whether this is a repair is a fact about the tree, not a flag the caller
+    # has to remember: a chapter already tracked in HEAD is being rewritten.
+    tracked = run(['git', 'ls-files', '--error-unmatch',
+                   chapter_files(book, ch)[0]]).returncode == 0
+    verb = 'repair: ' if (a.repair or tracked) else ''
     msg = f'COW synthesis {verb}{book} {ch} ({n} verses)'.replace('  ', ' ')
     if a.dry_run:
         if snapshot is not None:
@@ -189,7 +193,9 @@ def main():
     sub = ap.add_subparsers(dest='cmd', required=True)
 
     p = sub.add_parser('next'); p.set_defaults(fn=cmd_next)
-    p.add_argument('--queue', choices=['generate', 'repair'])
+    p.add_argument('--queue', choices=['generate', 'repair', 'auto'],
+                   help="'auto' drains repair first, then generation, and is "
+                        "empty only when both are; prints '<queue> <book> <ch>'")
     p.add_argument('--worst-first', action='store_true')
 
     p = sub.add_parser('status'); p.set_defaults(fn=cmd_status)
@@ -197,7 +203,8 @@ def main():
     p = sub.add_parser('finish'); p.set_defaults(fn=cmd_finish)
     p.add_argument('book'); p.add_argument('chapter')
     p.add_argument('--repair', action='store_true',
-                   help='use the repair commit-message form')
+                   help='force the repair commit-message form (otherwise '
+                        'inferred: a chapter already tracked in HEAD is a repair)')
     p.add_argument('--unattended', action='store_true',
                    help='revert a failed chapter (quarantining it first) so the '
                         'loop can continue without a dirty tree')
