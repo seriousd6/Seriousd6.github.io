@@ -67,13 +67,29 @@ def load(p):
 THIN_SOURCE_MAX = 200   # visible words of catena below which "thin" is allowed
 THIN_MIN, THIN_MAX = 120, 349
 
-def source_words(book, ch, v):
-    """Visible word count of the catena for one verse, or None if unavailable."""
+def source_blob(book, ch, v):
+    """The raw catena for one verse, or None if unavailable."""
     p = os.path.join(ROOT, 'data/commentary/cow', book, f'{ch}.json')
     if not os.path.exists(p):
         return None
     try:
-        return words(load(p).get(v, ''))
+        return load(p).get(v, '')
+    except Exception:
+        return None
+
+def source_words(book, ch, v, excluded=None):
+    """Catena words for one verse, minus any voice blocks declared as residue.
+
+    Measures the source the way the writer is required to READ it: the prose
+    rules oblige them to ignore scrape residue, so a blob that is mostly residue
+    must not be counted as a rich source. See synthesis_qa.usable_source_words
+    for why the exclusion is declared rather than detected.
+    """
+    blob = source_blob(book, ch, v)
+    if blob is None:
+        return None
+    try:
+        return QA.usable_source_words(blob, excluded)
     except Exception:
         return None
 
@@ -88,12 +104,23 @@ def validate_verse(book, ch):
     for v, html in prose.items():
         w = words(html)
         is_html = isinstance(html, str) and html.strip().startswith('<')
-        thin = bool((tags.get(v) or {}).get('thin')) if isinstance(tags.get(v), dict) else False
+        tag_entry = tags.get(v) if isinstance(tags.get(v), dict) else {}
+        thin = bool(tag_entry.get('thin'))
+        excluded = tag_entry.get('excluded_voices') or []
+        if excluded:
+            # A declared exclusion must name a block that is actually in this
+            # verse's blob, so the field cannot be padded with names to buy a
+            # thin pass on a rich source.
+            bogus = QA.undeclarable_voices(source_blob(book, ch, v) or '', excluded)
+            check(not bogus,
+                  f'A {book} {ch}:{v}: excluded_voices names a block absent from '
+                  f'this verse\'s source ({bogus})')
         if thin:
-            sw = source_words(book, ch, v)
+            sw = source_words(book, ch, v, excluded)
             check(sw is None or sw <= THIN_SOURCE_MAX,
                   f'A {book} {ch}:{v}: "thin" is justified by the source '
-                  f'({sw} source words, must be <= {THIN_SOURCE_MAX})')
+                  f'({sw} usable source words after {len(excluded)} declared '
+                  f'exclusion(s), must be <= {THIN_SOURCE_MAX})')
             check(is_html and THIN_MIN <= w <= THIN_MAX,
                   f'A {book} {ch}:{v}: thin verse is HTML, {w} words '
                   f'({THIN_MIN}-{THIN_MAX}; drop the flag if it grew past {THIN_MAX})')

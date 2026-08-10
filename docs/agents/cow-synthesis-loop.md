@@ -381,6 +381,41 @@ words is what manufactured the filler, so the contract now allows an opt-out:
 Use it where it is true. A thin entry that says one thing well is worth more
 than 350 words that say it four times.
 
+#### Declaring scrape residue (2026-08-10)
+
+The exemption used to measure the RAW blob, which collided with the rule that
+the writer must ignore scrape residue. Where a verse is mostly residue the two
+rules left **no legal output**: over 200 raw words refused the exemption, and
+the handful of usable words could not honestly reach the 350-word floor. That is
+padding by contract — the very defect the repair exists to remove. Found on
+**numbers 7** (vv. 4, 16, 40, 82, all Jamieson-Fausset-Brown blocks on Leviticus
+16–17 filed under Numbers); a corpus scan put the shape at **575 verses across
+387 chapters**, so it blocks roughly a third of the corpus.
+
+The source is now measured the way the writer is required to READ it. Declare
+the residue on the verse's tags entry, as a sibling of `voices`:
+
+```json
+"excluded_voices": ["Jamieson, Fausset and Brown"]
+```
+
+`source_words` then subtracts those blocks before applying the ≤ 200 test.
+
+- **Declared, not detected.** No automatic residue-sniffing: a rule that guessed
+  wrong would silently license a short verse on a rich source, and no cheap
+  textual test separates "JFB on the Day of Atonement, filed under Numbers 7"
+  from "JFB on Numbers 7". Same division of labour as the fidelity self-grade —
+  the human judges, the tool verifies the shape.
+- **It cannot be gamed.** A declared voice must actually head a block in that
+  verse's blob, or the validator fails the verse, so the field cannot be padded
+  with names to buy a thin pass.
+- **It cannot break committed work.** Excluding a voice only lowers the measured
+  source, and the only check reading it is an upper bound. With no exclusions
+  declared the measurement is byte-identical to the old behaviour.
+- Excluding a block does **not** license mentioning it. The residue still goes
+  unnarrated in the prose, and the reason for the exclusion belongs in the
+  notebook as a `source-defect` note.
+
 ## Quality bar
 
 - Grounded ONLY in what the sources say — never invent a commentator's view.

@@ -109,6 +109,71 @@ def visible(html):
     return re.sub(r'\s+', ' ', TAG.sub(' ', str(html or ''))).strip()
 
 
+# ── source residue and the thin exemption ───────────────────────────────────
+# The prose rules require the writer to ignore scrape residue — a witness block
+# that plainly belongs to another passage — and to omit it silently. But the
+# thin exemption measures the RAW catena blob. Where a verse is mostly residue
+# the two rules leave no legal output: over 200 raw words refuses the
+# exemption, and the handful of usable words cannot honestly reach the 350-word
+# floor. That is padding by contract, which is the defect the whole repair
+# effort exists to remove. (Found on numbers 7; a corpus scan put the shape at
+# 575 verses across 387 chapters.)
+#
+# The fix is to measure the source the way the writer is required to READ it.
+# What is deliberately NOT done here is automatic residue detection: a rule that
+# guessed wrong would silently license a short verse on a rich source, and no
+# cheap textual test separates "JFB on the Day of Atonement, filed under Numbers
+# 7" from "JFB on Numbers 7". So the exclusion is DECLARED on the tags entry and
+# VERIFIED here — the same division of labour as the fidelity self-grade:
+#
+#     "excluded_voices": ["Jamieson, Fausset and Brown"]
+#
+# A declared voice must actually appear in the blob, so the field cannot be
+# decorated with names to buy a thin pass, and every use of it is auditable
+# per verse. Excluding a voice only ever LOWERS the measured source, and the
+# only check that reads it is an upper bound (sw <= 200), so this can never
+# turn a passing verse into a failing one.
+
+# Display labels as they appear at the head of a segment in the merged catena.
+VOICE_LABELS = [
+    'Jamieson, Fausset and Brown', 'Keil and Delitzsch', 'Matthew Henry',
+    'Adam Clarke', 'John Calvin', 'John Wesley', 'John Gill', 'Albert Barnes',
+    'Charles Ellicott', 'Robertson', 'Charles Spurgeon', 'Martin Luther',
+    'Augustine', 'Chrysostom', 'Origen', 'Basil', 'Bede', 'Tertullian',
+    'Theodoret', 'Victorinus', 'Cyril', 'Gregory', 'Leo', 'Lightfoot',
+]
+_LABEL_RE = re.compile('(' + '|'.join(re.escape(v) for v in VOICE_LABELS) + r')\s*:')
+
+
+def split_voices(blob):
+    """Merged catena -> [(voice_label_or_None, segment_text)] in order."""
+    text = visible(blob)
+    parts, last, name = [], 0, None
+    for m in _LABEL_RE.finditer(text):
+        if m.start() > last:
+            parts.append((name, text[last:m.start()].strip()))
+        name = m.group(1)
+        last = m.end()
+    parts.append((name, text[last:].strip()))
+    return [(n, s) for n, s in parts if s]
+
+
+def usable_source_words(blob, excluded_voices=None):
+    """Visible words of a catena minus the voice blocks declared as residue."""
+    ex = {str(v).strip().lower() for v in (excluded_voices or []) if str(v).strip()}
+    if not ex:
+        return len(visible(blob).split())
+    return sum(len(seg.split()) for name, seg in split_voices(blob)
+               if not (name and name.lower() in ex))
+
+
+def undeclarable_voices(blob, excluded_voices):
+    """Declared exclusions that do not actually occur in this verse's blob."""
+    present = {n.lower() for n, _ in split_voices(blob) if n}
+    return [v for v in (excluded_voices or [])
+            if str(v).strip().lower() not in present]
+
+
 # ── voice grounding ─────────────────────────────────────────────────────────
 # A voice is grounded if any distinctive token of its name appears in the
 # merged catena OR any per-commentator corpus for that book+chapter.

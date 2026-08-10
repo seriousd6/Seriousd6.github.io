@@ -152,6 +152,13 @@
       "book": "numbers",
       "chapter": "7",
       "note": "Numbers 7 is also the largest unit in the corpus at 89 verses, 72 of them the repeated tribal offering with 12-21 words of source each. Even unblocked it is the chapter most likely to produce templated filler, and the anti-templating rule (Job 5 precedent) bites hardest here. Worth handling deliberately rather than as a routine queue item."
+    },
+    {
+      "at": "2026-08-10",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "7",
+      "note": "RESOLVED: owner approved the contract change. source_words now subtracts voice blocks declared on the tags entry as excluded_voices, so the thin exemption measures the source the way the writer is required to read it. Declared rather than auto-detected, and a declared voice must actually head a block in that verse's blob. numbers 7 vv 4/16/40/82 are now thin-eligible (18/84/13/13 usable words). Full corpus validator, quality gate, data and commentary validators all pass unchanged."
     }
   ]
 }
