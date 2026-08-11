@@ -174,6 +174,79 @@ def undeclarable_voices(blob, excluded_voices):
             if str(v).strip().lower() not in present]
 
 
+# ── pericopes: one entry covering a span of verses ──────────────────────────
+# Some passages say the same thing many times over. Numbers 7 runs the identical
+# tribal offering twelve times; a register chapter lists towns. Writing one entry
+# per verse there produces twelve near-identical write-ups, which reads as
+# template however carefully each is worded — and templating is the defect the
+# audit found.
+#
+# A tags entry may therefore cover a SPAN instead of a single verse:
+#
+#     "12": { "range": "12-17", "pericope_label": "Nahshon of Judah offers", ... }
+#
+# The prose file carries ONE entry, keyed at the range start. "pericope" is the
+# vocabulary Commentary B already uses (pericope_label + range), so the two
+# commentaries name the same idea the same way.
+#
+# The reader needs no new data to render this: every render path already
+# resolves a verse by walking back to the nearest key, so a span is found by the
+# verses inside it, and the grid already gives one commentary cell spanning the
+# section's rows. What the display could not do before was state the span
+# HONESTLY — it inferred the end from the next key, which is only true if the
+# keys have no gaps. Enforcing exact coverage here is what makes that inference
+# sound, and is why the rule below is coverage rather than "keys must exist".
+_RANGE_RE = re.compile(r'^\s*(\d+)\s*(?:[-–]\s*(\d+))?\s*$')
+
+
+def parse_range(key, rng):
+    """('12', '12-17') -> (12, 17). A missing/blank range is the single verse."""
+    if rng is None or str(rng).strip() == '':
+        n = int(key)
+        return (n, n)
+    m = _RANGE_RE.match(str(rng))
+    if not m:
+        raise ValueError(f'unparseable range {rng!r}')
+    lo = int(m.group(1))
+    hi = int(m.group(2)) if m.group(2) else lo
+    return (lo, hi)
+
+
+def coverage_problems(source_keys, entries):
+    """Check that the declared spans tile the chapter exactly.
+
+    `entries` is {prose_key: range_string_or_None}. Returns a list of human
+    problems: a span whose key is not its own start, a verse covered twice, a
+    verse covered not at all, or a span reaching outside the chapter.
+    """
+    problems, seen = [], {}
+    want = {int(k) for k in source_keys}
+    for key in sorted(entries, key=lambda k: int(k)):
+        try:
+            lo, hi = parse_range(key, entries[key])
+        except ValueError as e:
+            problems.append(f'{key}: {e}')
+            continue
+        if lo != int(key):
+            problems.append(f'{key}: range starts at {lo}, so it must be keyed "{lo}"')
+        if hi < lo:
+            problems.append(f'{key}: range ends ({hi}) before it starts ({lo})')
+            continue
+        for v in range(lo, hi + 1):
+            if v in seen:
+                problems.append(f'verse {v} is covered twice (by {seen[v]} and {key})')
+            seen[v] = key
+    missing = sorted(want - set(seen))
+    if missing:
+        problems.append(f'verses covered by no entry: {missing[:12]}'
+                        + ('…' if len(missing) > 12 else ''))
+    extra = sorted(set(seen) - want)
+    if extra:
+        problems.append(f'entries cover verses absent from the source: {extra[:12]}'
+                        + ('…' if len(extra) > 12 else ''))
+    return problems
+
+
 # ── voice grounding ─────────────────────────────────────────────────────────
 # A voice is grounded if any distinctive token of its name appears in the
 # merged catena OR any per-commentator corpus for that book+chapter.

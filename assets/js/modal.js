@@ -569,36 +569,10 @@ function _injectModalFootnotes(parsed, bodyEl) {
   }).catch(function () {});
 }
 
-// ── _extractCommHtml ──────────────────────────────────────────────────────
-// VM-H: returns { html, foundV } so callers can show a "nearest section" notice
-export function _extractCommHtml(data, parsed, source) {
-  if (!data) return { html: null, foundV: null };
-  var chData = data[String(parsed.ch)];
-  if (!chData) return { html: null, foundV: null };
-  var sectionKeys = Object.keys(chData).map(Number).sort(function (a, b) { return a - b; });
-  var html   = '';
-  var endV   = parsed.wholeChapter ? 9999 : parsed.endV;
-  var startV = parsed.v;
-  var foundV = null;
-  if (parsed.wholeChapter) {
-    sectionKeys.forEach(function (v) {
-      html += '<div class="bsw-modal__commentary-section">' + chData[String(v)] + '</div>';
-    });
-  } else {
-    for (var v = startV; v >= 1; v--) {
-      if (chData[String(v)]) { foundV = v; break; }
-    }
-    if (foundV !== null) {
-      html = '<div class="bsw-modal__commentary-section">' + chData[String(foundV)] + '</div>';
-      sectionKeys.forEach(function (v) {
-        if (v > startV && v <= endV && chData[String(v)]) {
-          html += '<div class="bsw-modal__commentary-section">' + chData[String(v)] + '</div>';
-        }
-      });
-    }
-  }
-  return { html: html || null, foundV: foundV };
-}
+// NOTE: _extractCommHtml lived here and was exported for a "nearest section"
+// notice that no caller ever rendered. It had zero call sites; the live
+// per-verse extraction is reader.js (_extractPanelHtml and the comm grid).
+// Removed 2026-08-10 with the pericope work rather than taught about ranges.
 
 // INTENT: Render the Connections tab — Biblepedia article badges for the open reference.
 //   Matches index entries whose key_refs land inside `parsed` (via _refInParsed), groups

@@ -67,15 +67,20 @@ def load(p):
 THIN_SOURCE_MAX = 200   # visible words of catena below which "thin" is allowed
 THIN_MIN, THIN_MAX = 120, 349
 
-def source_blob(book, ch, v):
-    """The raw catena for one verse, or None if unavailable."""
+def source_chapter(book, ch):
+    """The whole catena for a chapter as {verse: blob}, or None."""
     p = os.path.join(ROOT, 'data/commentary/cow', book, f'{ch}.json')
     if not os.path.exists(p):
         return None
     try:
-        return load(p).get(v, '')
+        return load(p)
     except Exception:
         return None
+
+def source_blob(book, ch, v):
+    """The raw catena for one verse, or None if unavailable."""
+    src = source_chapter(book, ch)
+    return None if src is None else src.get(v, '')
 
 def source_words(book, ch, v, excluded=None):
     """Catena words for one verse, minus any voice blocks declared as residue.
@@ -101,26 +106,55 @@ def validate_verse(book, ch):
     prose = load(prose_p)
     tags  = load(tags_p) if os.path.exists(tags_p) else {}
     check(bool(tags), f'A {book} {ch}: tags file present')
+
+    # Coverage replaces the old "one entry per source verse" rule. An entry may
+    # declare a range and stand for a span of verses (a pericope), but the spans
+    # must tile the chapter EXACTLY — no gaps, no overlaps. The reader infers a
+    # section's end from the next key, so a gap would make it advertise a span it
+    # does not actually cover; this check is what makes that inference honest.
+    #
+    # Scoped to chapters that ACTUALLY declare a range. Enforcing it everywhere
+    # would retroactively fail work that predates pericopes, and for good
+    # reasons: the corpus legitimately omits out-of-range scrape keys (the
+    # documented 2 Chronicles 27 key "16" holds Matthew Henry on chapter 28),
+    # and a few chapters carry a synthesis for a verse the catena lacks. Those
+    # are recorded as advisories by --coverage rather than failures here.
+    src_all = source_chapter(book, ch)
+    spans = {k: ((tags.get(k) or {}).get('range') if isinstance(tags.get(k), dict) else None)
+             for k in prose}
+    if src_all and any(spans.values()):
+        cov = QA.coverage_problems(src_all.keys(), spans)
+        check(not cov, f'A {book} {ch}: pericopes tile the chapter ({"; ".join(cov[:3])})')
+
     for v, html in prose.items():
         w = words(html)
         is_html = isinstance(html, str) and html.strip().startswith('<')
         tag_entry = tags.get(v) if isinstance(tags.get(v), dict) else {}
         thin = bool(tag_entry.get('thin'))
         excluded = tag_entry.get('excluded_voices') or []
+        try:
+            lo, hi = QA.parse_range(v, tag_entry.get('range'))
+        except ValueError:
+            lo, hi = int(v), int(v)
+        span = list(range(lo, hi + 1))
         if excluded:
             # A declared exclusion must name a block that is actually in this
             # verse's blob, so the field cannot be padded with names to buy a
             # thin pass on a rich source.
-            bogus = QA.undeclarable_voices(source_blob(book, ch, v) or '', excluded)
+            # A declared exclusion must name a block somewhere in the span this
+            # entry covers, so the field cannot be padded with names.
+            blob_all = ' '.join(str(source_blob(book, ch, str(x)) or '') for x in span)
+            bogus = QA.undeclarable_voices(blob_all, excluded)
             check(not bogus,
                   f'A {book} {ch}:{v}: excluded_voices names a block absent from '
-                  f'this verse\'s source ({bogus})')
+                  f'this entry\'s source ({bogus})')
         if thin:
-            sw = source_words(book, ch, v, excluded)
-            check(sw is None or sw <= THIN_SOURCE_MAX,
+            # A pericope's source is the union of the verses it covers.
+            sw = sum((source_words(book, ch, str(x), excluded) or 0) for x in span)
+            check(sw <= THIN_SOURCE_MAX,
                   f'A {book} {ch}:{v}: "thin" is justified by the source '
-                  f'({sw} usable source words after {len(excluded)} declared '
-                  f'exclusion(s), must be <= {THIN_SOURCE_MAX})')
+                  f'({sw} usable source words across {len(span)} verse(s) after '
+                  f'{len(excluded)} declared exclusion(s), must be <= {THIN_SOURCE_MAX})')
             check(is_html and THIN_MIN <= w <= THIN_MAX,
                   f'A {book} {ch}:{v}: thin verse is HTML, {w} words '
                   f'({THIN_MIN}-{THIN_MAX}; drop the flag if it grew past {THIN_MAX})')

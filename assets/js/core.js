@@ -799,7 +799,7 @@ export function setCommentarySource(id) {
 //   (mhcc: data/commentary/{book}/{ch}.json) — instead of the whole book. A verse tap used to
 //   pull the entire book file (Psalms + Cloud of Witnesses = 14 MB!); now it costs ~tens of KB.
 //   The per-chapter file is {v:html}; we wrap it back to the {ch:{v:html}} shape every caller
-//   (_extractCommHtml, comm-mode, MKT) already indexes via data[ch], so no caller logic changed.
+//   (the reader's panel extractor, comm-mode, MKT) already indexes via data[ch], so no caller logic changed.
 // CHANGE? Files are produced by scripts/split-commentary.py and (for cow) cow-merge.py. If a
 //   per-chapter file is absent we fall back to the whole-book file, so un-split sources still
 //   work. commentaryCache key is now source:bookId:ch. Callers must pass ch (parsed.ch).
@@ -838,7 +838,7 @@ export function loadCommentary(bookId, source, ch) {
 // INTENT: 'mkt' is a composite of three sub-sources (original, context, christ) shown as
 //   three expandable <details> cards. loadMktAll fetches all three in parallel; decorateMkt
 //   renders already-extracted per-verse HTML blobs into the card layout. Callers extract
-//   per-verse HTML from each dataset using the normal _extractCommHtml helper, then pass
+//   per-verse HTML from each dataset using the reader's normal extraction helper, then pass
 //   the three html strings here.
 // CHANGE? If a fourth MKT track is added, append it to MKT_TRACKS and add a parameter to
 //   decorateMkt. If the card HTML structure changes, update .mkt-card CSS in style.css.
@@ -864,6 +864,25 @@ export function decorateMkt(htmls) {
            '<summary class="mkt-card__head"><span class="mkt-card__title">' + escHtml(t.title) + '</span></summary>' +
            body + '</details>';
   }).join('');
+}
+
+// INTENT: The span a commentary entry actually covers, for the "vv.12–17" label.
+//   Commentary A may key ONE entry to a pericope (see synthesis_qa.py); every
+//   render path already resolves a verse by walking back to the nearest key, so
+//   the span is simply "this key up to the verse before the next one".
+// CHANGE? The end is inferred from the next key, which is only sound because
+//   validate-synthesis.py requires a chapter using ranges to tile exactly — no
+//   gaps, no overlaps. If that check is relaxed the label can overstate the span.
+//   `lastV` clamps the final entry to the last verse on the page rather than
+//   running to infinity.
+// VERIFY: A chapter whose entries are keyed 1,2,…  labels nothing (every span is
+//   one verse); an entry keyed 12 with the next key at 18 labels "vv.12–17".
+export function commSpan(chd, key, lastV) {
+  var keys = Object.keys(chd || {}).map(Number).sort(function (a, b) { return a - b; });
+  for (var i = 0; i < keys.length; i++) {
+    if (keys[i] > key) return { start: key, end: keys[i] - 1 };
+  }
+  return { start: key, end: (lastV != null && lastV > key) ? lastV : key };
 }
 
 // ── Cloud of Witnesses voice metadata + decorator ────────────────────────

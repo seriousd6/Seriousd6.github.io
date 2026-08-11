@@ -416,6 +416,58 @@ the residue on the verse's tags entry, as a sibling of `voices`:
   unnarrated in the prose, and the reason for the exclusion belongs in the
   notebook as a `source-defect` note.
 
+### Pericopes — one entry over a span of verses (2026-08-10)
+
+Some passages say the same thing many times. Numbers 7 runs the identical tribal
+offering **twelve times**; a register chapter lists towns. One entry per verse
+there produces twelve near-identical write-ups, which reads as template however
+carefully each is worded — and templating is the defect the audit found.
+
+An entry may therefore cover a span. Key the prose at the span's start, and
+declare the range on the tags entry:
+
+```json
+"12": {
+  "range": "12-17",
+  "pericope_label": "Nahshon of Judah brings the first offering",
+  "voices": [ … ], "schools": [ … ], "fidelity": { … }
+}
+```
+
+`pericope` and `range` are the vocabulary Commentary B already uses, so both
+commentaries name the same idea the same way.
+
+**Rules.**
+
+- The prose file carries **one** entry, keyed at the range start.
+- Within a chapter that uses ranges, the spans must **tile it exactly** — every
+  source verse covered once, no gaps, no overlaps. The validator enforces this
+  (`pericopes tile the chapter`), and it is not decoration: the reader infers a
+  section's end from the next key, so a gap would make it advertise a span it
+  does not cover.
+- The entry is **one unit of commentary**, so the ordinary window applies to it
+  as a whole: 350–650 words, or 120–349 with `thin`. A pericope is not licence
+  to write twelve verses' worth in one blob.
+- For `thin`, the source is the **union** of the verses covered, after any
+  `excluded_voices`.
+- Chapters that do not declare a range are untouched, and coverage is not
+  enforced on them — several legitimately omit out-of-range scrape keys (the
+  documented 2 Chronicles 27 key `16`).
+
+**When to group.** Where the material is genuinely continuous or repetitive:
+a repeated liturgical formula, a register of names, a list of towns, a genealogy.
+Group by what the witnesses treat as one unit, not by what is convenient. Where
+the witnesses say something distinct about a verse, that verse keeps its own
+entry even inside a repetitive stretch — Numbers 7's first prince (Nahshon)
+draws comment the other eleven do not, so verses 12–17 group but Judah's day
+should not be swallowed into a twelve-tribe blob.
+
+**The display needs nothing new.** Every render path already resolves a verse by
+walking back to the nearest key, and the reader's inline grid already gives one
+commentary cell spanning the section's rows — so a pericope shows once beside
+all its verses rather than repeating. The grid and the side panel label it
+`▸ commentary on vv.12–17` (`core.js commSpan`).
+
 ## Quality bar
 
 - Grounded ONLY in what the sources say — never invent a commentator's view.

@@ -7,7 +7,7 @@ import {
   _compareCanonical, parseCrossRefEntry, resolveVerses,
   ATTRIBUTION, COMMENTARY_SOURCES, getCommentarySource, setCommentarySource, decorateCatena, buildCatenaFilter, loadMktAll, decorateMkt,
   onVersionChange, _resolve, BOOKMARKS_URL, NOTES_URL,
-  BOOK_MAP_LINKS, MAP_LABELS
+  BOOK_MAP_LINKS, MAP_LABELS, commSpan
 } from './core.js';
 import { autoTagTerms, autoTagTermsWhenReady } from './terms.js';
 import { loadSectionData, resolveAlias, runSectionSearch } from './sections.js';
@@ -1380,11 +1380,19 @@ function _loadReaderCommentary(parsed, container) {
       if (chData[String(vi)]) { foundV = vi; break; }
     }
     if (foundV === null) return null;
-    var html = '<div class="reader-panel-comm-section">' + chData[String(foundV)] + '</div>';
+    // Label a section that covers more than the verse asked for, so a pericope
+    // reads as "commentary on vv.12–17" rather than looking like a note on v.12
+    // that has turned up under v.15 for no stated reason.
+    function _section(key) {
+      var span = commSpan(chData, key, null);
+      var note = span.end > span.start
+        ? '<p class="reader-comm-span-note">▸ commentary on vv.' + span.start + '–' + span.end + '</p>'
+        : '';
+      return '<div class="reader-panel-comm-section">' + note + chData[String(key)] + '</div>';
+    }
+    var html = _section(foundV);
     sectionKeys.forEach(function (v) {
-      if (v > startV && v <= endV && chData[String(v)]) {
-        html += '<div class="reader-panel-comm-section">' + chData[String(v)] + '</div>';
-      }
+      if (v > startV && v <= endV && chData[String(v)]) html += _section(v);
     });
     return html;
   }
@@ -2340,16 +2348,16 @@ function _rebuildCommCells(grid) {
       wireRefLinks(cell);
     } else if (sec.foundKey !== null && chd && chd[String(sec.foundKey)]) {
       var html = chd[String(sec.foundKey)];
-      // If this section's foundKey is before the first displayed verse, show a
-      // section-range note so the reader knows the commentary covers more context.
-      if (sec.foundKey < verseData[sec.startIdx].v) {
-        var allKeys = Object.keys(chd).map(Number).sort(function (a, b) { return a - b; });
-        var nextKey = null;
-        for (var k = 0; k < allKeys.length; k++) {
-          if (allKeys[k] > sec.foundKey) { nextKey = allKeys[k]; break; }
-        }
-        var rangeEnd = nextKey !== null ? (nextKey - 1) : '…';
-        html = '<p class="reader-comm-span-note">▸ section v.' + sec.foundKey + '–' + rangeEnd + '</p>' + html;
+      // Say what the entry covers whenever it covers more than one verse — not
+      // only when the reader has scrolled past its start. Landing on the first
+      // verse of a pericope used to give no hint that the note ran on.
+      // The end comes from the next key, clamped to the last verse actually on
+      // the page: a chapter's final entry has no next key, and printing "v.40–…"
+      // (the old fallback) told the reader nothing.
+      var span = commSpan(chd, sec.foundKey, verseData[verseData.length - 1].v);
+      if (span.end > span.start) {
+        html = '<p class="reader-comm-span-note">▸ commentary on vv.' + span.start +
+               '–' + span.end + '</p>' + html;
       }
       if (srcId === 'cow') html = decorateCatena(html); // collapsible voices + Father badges
       cell.innerHTML = html;
