@@ -164,6 +164,81 @@
       "at": "2026-08-11",
       "kind": "observation",
       "note": "Pericope grouping landed 2026-08-10. A tags entry may carry range + pericope_label and stand for a span; prose is keyed at the span start. Where ranges are used the spans must tile the chapter exactly. Coverage is NOT enforced on chapters without ranges: a scan found 8 pre-existing gaps that are legitimate or historical - 2chronicles 27 (the documented out-of-range scrape key 16), galatians 2 (29) and 1corinthians 16 (55) are out-of-range keys correctly omitted; deuteronomy 14 (8,14), numbers 26 (60), numbers 29 (4,10,22,28,34) and numbers 34 (25) are in-range source keys with no synthesis; romans 16 carries a synthesis for v24 which the catena lacks. Worth a look, none caused by this change."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34",
+        "40",
+        "46",
+        "52",
+        "64",
+        "82"
+      ],
+      "note": "cow/numbers/7.json carries Jamieson, Fausset and Brown blocks that are Leviticus 16 Day-of-Atonement scrape residue (the scapegoat lots, the high priest's linen and pontifical dress, the sprinkling before the mercy seat) filed under vv. 4, 10, 16, 22, 28, 34, 40, 46, 52, 64 and 82. Declared as excluded_voices on every entry covering those keys; JFB is named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "7",
+      "note": "Rewritten as 19 pericope entries tiling all 89 verses: 1; 2-3; 4-5; 6-9; 10-11; then one entry per tribal day (12-17 ... 78-83); 84-88; 89. The twelve days are the case the pericope contract was built for — vv.18-83 are almost entirely 'See Gill on' stubs plus JFB residue, so ten of the twelve day entries take the thin exemption. Each day was given a distinct centre of gravity from the chapter's own witnesses (Clarke's camp-order table, Calvin on Judah's banner and on Reuben's fourth day, Henry on the identical gifts, on why the record repeats, on the sabbath and on the sin offering, Clarke on the sabbath and the Hebrew idiom for eleven) so that twelve identical offerings do not produce twelve identical write-ups."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "18",
+        "24",
+        "30",
+        "36",
+        "42",
+        "54",
+        "60",
+        "66",
+        "78"
+      ],
+      "note": "Nine day entries graded B (18-23, 24-29, 30-35, 36-41, 42-47, 54-59, 60-65, 66-71, 78-83): each is carried by a witness block filed under a different verse of this chapter — Clarke's table at v14, Calvin at v12, Henry at v10, K&D at v11 — because the verses in the span itself carry no comment beyond the recitation of the gift. Faithful to the chapter's catena, not to the span's own slot. Graded A where the substance sits inside the span (12-17, 48-53, 72-77)."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "18",
+        "24",
+        "30",
+        "36",
+        "42",
+        "54",
+        "60",
+        "66",
+        "78"
+      ],
+      "note": "STRETCH flags of 10x-24x on the day pericopes and on 6-9 are false positives: synthesis-fidelity measures prose against the START-VERSE blob only, and these entries draw legitimately on chapter-level blocks (Henry's essay under key 1 covers vv.6-9; Clarke's table under key 14 covers all twelve days). ENTITIES flags Corinthians/James/Hebrews come from anchoring cross-references the witnesses themselves cite (Henry on 1 Cor 10:13, 1 Cor 15:23, Jas 2:1, Heb 6:10; Clarke on Heb 1:1-2)."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "14",
+        "17"
+      ],
+      "note": "Clarke's tabulated summary under key 14 misstates the peace offering as 'Five oxen, five rams, five he-goats, and five lambs'; the chapter text and Clarke's own running commentary give two oxen. Followed the text (two oxen) rather than the table."
     }
   ]
 }
