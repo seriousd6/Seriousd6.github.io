@@ -277,6 +277,50 @@
         "5"
       ],
       "note": "Calvin's block at v5 refuses every proposed solution to the ten portions and says the data are insufficient. Recorded as a third side in the debate rather than harmonised away, since he is explicitly contradicting the reckonings Gill, Clarke and Wesley give."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "24",
+      "verses": [
+        "6",
+        "18",
+        "30",
+        "36",
+        "42",
+        "60",
+        "66"
+      ],
+      "note": "Every Jamieson, Fausset and Brown block in cow/genesis/24.json is scrape residue from Genesis 20-21: Abimelech and Abraham's equivocation (vv.6, 18), the naming and circumcision of Isaac (v.30), the weaning feast (v.36), the two peoples from a family brawl (v.42), the Beersheba wells (v.60), and the grove of tamarisks (v.66). Declared excluded_voices on every entry covering those keys; JFB is named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "24",
+      "note": "Rewritten as 21 pericope entries tiling all 67 verses: 1-4; 5-8; 9; 10-11; 12-14; 15-17; 18-21; 22-25; 26-27; 28-32; 33-38; 39-44; 45-49; 50-52; 53; 54-56; 57-58; 59-61; 62-63; 64-65; 66-67. The chapter is 31,571 usable source words across seven witnesses, so the grouping follows the narrative's own joints rather than thinness; the one genuinely repetitive stretch is the servant's retelling at 33-49, where Gill's comment is largely cross-references back to the first telling."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "24",
+      "verses": [
+        "39",
+        "66"
+      ],
+      "note": "STRETCH 24.68x at 39-44 and 6.82x at 66-67 are false positives: synthesis-fidelity measures the start-verse blob (19 and 84 words) but the pericopes' sources are the unions of their spans (334 and 2637 usable words), giving about 1.4x and 0.22x."
+    },
+    {
+      "at": "2026-08-12",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "24",
+      "verses": [
+        "65"
+      ],
+      "note": "'Abimelech' appears once in the 64-65 entry and is NOT drawn from the JFB residue: Ellicott's own note on the veil at v.65 says that after marriage it was seldom worn at this early period, 'and so both the Egyptians and Abimelech saw Sarah's beauty'. Flagged here because the residue in this chapter is Genesis 20 material, so the name could look like leakage on a later audit."
     }
   ]
 }
