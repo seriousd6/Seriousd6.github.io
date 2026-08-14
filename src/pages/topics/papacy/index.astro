@@ -1,0 +1,2601 @@
+---
+import Base from '../../../layouts/Base.astro';
+---
+
+<Base title={"The Papacy: What the Evidence Supports — Kingdom Bible Study"} description={"A sourced, even-handed study of the papacy — the seven distinct claims unbundled and graded separately, every relevant text examined in context, the historical record from 1 Clement to Vatican I quoted from the primary sources, the rules of evidence that actually divide the sides, and the ground a believer can stand on regarding church authority."} bodyAttrs={{"class":"tg-study"}} entry="study-tabs">
+<Fragment slot="head-end">
+<link rel="stylesheet" href="../../assets/css/topic-guide.css">
+<style is:inline>
+  /* Source apparatus — this study cites more than the shared component set
+     anticipates, so two small additions live here rather than in
+     topic-guide.css, which is shared by every topical study. */
+  .pp-grade { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .95rem; }
+  .pp-grade th, .pp-grade td { border: 1px solid var(--color-border, #dde0d4); padding: .55rem .7rem; text-align: left; vertical-align: top; }
+  .pp-grade th { background: color-mix(in srgb, var(--tg-accent, #6b2137) 8%, transparent); font-weight: 600; }
+  .pp-grade td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .pp-verdict { font-weight: 600; white-space: nowrap; }
+  .pp-src { margin: 0 0 1.05rem 0; padding-left: 1.6rem; text-indent: -1.6rem; line-height: 1.6; }
+  .pp-src cite { font-style: italic; }
+  .pp-src .pp-src__note { display: block; text-indent: 0; padding-left: 0; opacity: .85; font-size: .93em; margin-top: .15rem; }
+</style>
+</Fragment>
+<nav class="tg-breadcrumb"><a href="../../studies/">← Studies</a></nav><header class="tg-hero tg-hero--stripes" style="--tg-accent: #6b2137">
+    <div class="tg-hero__inner">
+      <span class="tg-hero__type">Topical Study · Six Parts</span>
+      <h1 class="tg-hero__title">The Papacy</h1>
+      <p class="tg-hero__intro">
+        Is the papacy an office Christ instituted, or a development that grew past
+        — and at points against — what Scripture teaches about authority in the
+        church? The question is usually argued as one thing. It is at least seven
+        things, and they are not equally supported. This study separates them,
+        examines every text that bears on them, quotes the historical record from
+        the primary sources rather than from summaries of them, states each side's
+        best case in the form its own best advocates would recognise, and then says
+        plainly where the ground is firm.
+      </p>
+      <blockquote class="tg-hero__key-verse">
+        <p>And I tell you that you are Peter, and on this rock I will build My church,
+           and the gates of Hades will not prevail against it.</p>
+        <cite><a class="ref" data-ref="Matthew 16:18">Matthew 16:18</a></cite>
+      </blockquote>
+    </div>
+  </header><main style="--tg-accent: #6b2137">
+    <div class="container">
+
+      <nav class="tg-tabs" aria-label="Study parts" data-current="overview">
+        <span class="tg-tabs__label">Part</span>
+        <div class="tg-tabs__grid">
+          <a class="tg-tabs__btn is-active" href="#overview" data-part="overview" aria-current="true">Overview</a>
+          <a class="tg-tabs__btn" href="#part-1" data-part="part-1">I · The Case For</a>
+          <a class="tg-tabs__btn" href="#part-2" data-part="part-2">II · The Case Against</a>
+          <a class="tg-tabs__btn" href="#part-3" data-part="part-3">III · The Record</a>
+          <a class="tg-tabs__btn" href="#part-4" data-part="part-4">IV · Rules of Evidence</a>
+          <a class="tg-tabs__btn" href="#part-5" data-part="part-5">V · The Ground</a>
+          <a class="tg-tabs__btn" href="#sources" data-part="sources">Sources</a>
+        </div>
+      </nav>
+
+      <!-- ══════════════════════════════════════════════════════
+           OVERVIEW
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="overview" aria-labelledby="overview-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Overview</span>
+          <h2 class="tg-part__title" id="overview-h">Seven Claims, Not One</h2>
+          <p class="tg-part__intro">Almost all bad argument on this subject — in both
+          directions — comes from treating "the papacy" as a single package that must
+          be swallowed or spat out whole. It is not one claim. It is a stack of seven,
+          each of which needs its own evidence, and the stack is strongest at the
+          bottom and weakest at the top.</p>
+        </div>
+
+        <section class="tg-section" id="unbundling">
+          <h2 class="tg-section__heading">The Stack</h2>
+
+          <p>Each step below is a separate historical or exegetical claim. Granting one
+          does not grant the next. A Protestant who denies the first is arguing against
+          the text; a Catholic who thinks the first proves the seventh has skipped five
+          arguments.</p>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>#</th><th>The claim</th><th>Where it would have to come from</th><th>This study's verdict</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Peter held a real primacy among the Twelve.</td>
+                <td>The Gospels and Acts.</td>
+                <td class="pp-verdict">Strong</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Peter went to Rome and died there.</td>
+                <td>Early historical witness.</td>
+                <td class="pp-verdict">Strong</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Peter was "bishop of Rome" in the later monarchical sense.</td>
+                <td>Second-century church order.</td>
+                <td class="pp-verdict">Weak</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Peter's primacy was a transmissible <em>office</em>, not a personal distinction.</td>
+                <td>Inference from <a class="ref" data-ref="Isaiah 22:22">Isaiah 22</a> and <a class="ref" data-ref="Acts 1:20">Acts 1</a>.</td>
+                <td class="pp-verdict">Contested inference</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>That office passes specifically and <em>exclusively</em> to the bishop of Rome.</td>
+                <td>Tradition; no scriptural statement exists.</td>
+                <td class="pp-verdict">Tradition only</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>The holder has universal, ordinary, immediate jurisdiction over every Christian.</td>
+                <td>Vatican I, <em>Pastor Aeternus</em> ch. 3 (1870).</td>
+                <td class="pp-verdict">Counter-evidenced</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>He teaches infallibly under defined conditions.</td>
+                <td>Vatican I, <em>Pastor Aeternus</em> ch. 4 (1870).</td>
+                <td class="pp-verdict">Counter-evidenced</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tg-note">
+            <span class="tg-note__label">Why the split matters pastorally</span>
+            <p>A believer who has been told "Peter was just one apostle among equals"
+            and then reads <a class="ref" data-ref="Matthew 16:18">Matthew 16</a> honestly
+            can feel the floor move. That reaction is a symptom of having been handed a
+            weak version of a position that has a strong version. The strong version
+            grants claims 1 and 2 without flinching, and puts its weight exactly where
+            the evidence thins — at 6 and 7. This study is built that way.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="what-1870-says">
+          <h2 class="tg-section__heading">What Is Actually Being Claimed</h2>
+
+          <p>It is worth reading the defined doctrine before arguing about it. Vatican I
+          (1870) defined two things. First, jurisdiction:</p>
+
+          <blockquote class="scripture">
+            We teach and declare that, by divine ordinance, the Roman church possesses a
+            pre-eminence of ordinary power over every other church, and that this
+            jurisdictional power of the Roman pontiff is both episcopal and immediate.
+            Both clergy and faithful, of whatever rite and dignity, both singly and
+            collectively, are bound to submit to this power by the duty of hierarchical
+            subordination and true obedience.
+            <cite>Vatican I, <em>Pastor Aeternus</em> ch. 3 (18 July 1870)</cite>
+          </blockquote>
+
+          <p>Second, infallibility:</p>
+
+          <blockquote class="scripture">
+            We teach and define as a divinely revealed dogma that when the Roman Pontiff
+            speaks <em>ex cathedra</em>, that is, when, in the exercise of his office as
+            shepherd and teacher of all Christians, in virtue of his supreme apostolic
+            authority, he defines a doctrine concerning faith or morals to be held by the
+            whole Church, he possesses, by the divine assistance promised to him in
+            blessed Peter, that infallibility which the divine Redeemer willed his Church
+            to enjoy in defining doctrine concerning faith or morals.
+            <cite>Vatican I, <em>Pastor Aeternus</em> ch. 4 (18 July 1870)</cite>
+          </blockquote>
+
+          <p>Three things follow immediately, and both sides should hold to them.</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Impeccability is not claimed</span>
+            <div class="tg-point__heading">Arguments that lead with the Borgias attack a
+            claim no one makes.</div>
+            <p>Nothing in the definition asserts that popes are holy, wise, or even
+            personally orthodox in their private opinions. The tenth-century papacy and
+            the Renaissance papacy are appalling by any standard, and Catholic historians
+            say so more bluntly than Protestant ones — Eamon Duffy's <em>Saints and
+            Sinners</em> is the standard example. But moral scandal is not evidence
+            against the doctrine as defined, and time spent on it is time not spent on
+            the actual question.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">The conditions are narrow</span>
+            <div class="tg-point__heading">Infallibility attaches to defining acts, not to
+            everything a pope says.</div>
+            <p>By common Catholic reckoning the definition has been invoked
+            unambiguously twice — the Immaculate Conception (1854) and the Assumption
+            (1950). Encyclicals, interviews, and off-hand remarks are not
+            <em>ex cathedra</em>. Any critique that treats every papal sentence as a test
+            case is critiquing a doctrine that does not exist.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">But the definitions are strong</span>
+            <div class="tg-point__heading">"Ordinary," "immediate," and "of whatever rite
+            and dignity" are the load-bearing words.</div>
+            <p><em>Ordinary</em> means the power belongs to the office rather than being
+            delegated for a case; <em>immediate</em> means it reaches each Christian
+            directly, not through their own bishop. That is a very large claim, and it is
+            the one the historical record tests hardest. It is also the one the Christian
+            East has always refused — while accepting apostolic succession, the
+            episcopate, the sacraments, the councils, and tradition as authoritative.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="method">
+          <h2 class="tg-section__heading">How This Study Handles Evidence</h2>
+
+          <p>Four rules, stated up front so they can be checked.</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">1 · Primary sources, quoted, with the edition named</span>
+            <p class="tg-principle__text">Every patristic and conciliar quotation in Part III
+            is reproduced from a text you can open — most of them from this site's own
+            <a href="../../library/">Library</a>. Where a text is quoted from a translation
+            with known variants (Cyprian above all), the recension is named. The
+            <a href="#sources">Sources</a> tab lists every one with its edition.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">2 · Silence is weighed, not weaponised</span>
+            <p class="tg-principle__text">"The New Testament never says X" is a real datum
+            when X is the kind of thing the documents would be expected to say, and a weak
+            one otherwise. The same standard is applied to both sides — including to
+            arguments this study accepts.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">3 · Each position is stated at full strength before it is answered</span>
+            <p class="tg-principle__text">If you cannot state the other side's best argument
+            in a form its advocates would sign, you do not yet know whether you disagree
+            with it.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">4 · The conclusion names its own prior</span>
+            <p class="tg-principle__text">Part V reaches a verdict, and then says what has
+            to be true about how God preserves his church for that verdict to hold, and
+            what evidence would overturn it. A conclusion that cannot say what would
+            change it is not a conclusion; it is a loyalty.</p>
+          </div>
+        </section>
+      </section><!-- /overview -->
+
+      <!-- ══════════════════════════════════════════════════════
+           PART I — THE CASE FOR
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="part-1" aria-labelledby="part-1-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Part I</span>
+          <h2 class="tg-part__title" id="part-1-h">The Case For, at Its Strongest</h2>
+          <p class="tg-part__intro">Everything in this part is the strongest form of the
+          argument for Petrine primacy, stated without hedging and without an immediate
+          rebuttal attached. Objections come in Part II. Reading them together is the
+          only way to weigh them.</p>
+          <p class="tg-part__verse"><a class="ref" data-ref="Matthew 16:19">Matthew 16:19</a> · <a class="ref" data-ref="Isaiah 22:22">Isaiah 22:22</a> · <a class="ref" data-ref="John 21:17">John 21:17</a> · <a class="ref" data-ref="Luke 22:32">Luke 22:32</a></p>
+        </div>
+
+        <nav class="tg-toc tg-toc--sticky" aria-label="Part I contents">
+          <h2 class="tg-toc__title">In this part</h2>
+          <ol class="tg-toc__list">
+            <li><a href="#rock">The Rock and the Name</a></li>
+            <li><a href="#keys">The Keys — and Why Isaiah 22 Is the Best Argument</a></li>
+            <li><a href="#shepherd">Shepherd and Strengthener</a></li>
+            <li><a href="#narrative">The Narrative Pattern</a></li>
+            <li><a href="#for-history">The Early Historical Case</a></li>
+          </ol>
+        </nav>
+
+        <section class="tg-section" id="rock">
+          <h2 class="tg-section__heading">The Rock and the Name</h2>
+
+          <blockquote class="scripture">
+            Simon Peter answered, "You are the Christ, the Son of the living God."
+            Jesus replied, "Blessed are you, Simon son of Jonah! For this was not revealed
+            to you by flesh and blood, but by My Father in heaven. And I tell you that you
+            are Peter, and on this rock I will build My church, and the gates of Hades will
+            not prevail against it. I will give you the keys of the kingdom of heaven.
+            Whatever you bind on earth will be bound in heaven, and whatever you loose on
+            earth will be loosed in heaven."
+            <cite><a class="ref" data-ref="Matthew 16:16-19">Matthew 16:16–19</a></cite>
+          </blockquote>
+
+          <p>Three features of this text carry real weight, and one popular Protestant
+          argument against it does not.</p>
+
+          <h3 class="tg-subsection">The name is given, not observed</h3>
+
+          <p>Jesus does not remark that Simon is rock-like. He renames him. In Scripture
+          a divine renaming marks a change of vocation and standing —
+          Abram to Abraham, Jacob to Israel. No other disciple is renamed by Jesus with a
+          commission attached. The Sons of Thunder receive a nickname
+          (<a class="ref" data-ref="Mark 3:17">Mark 3:17</a>); Simon receives a
+          designation that the church then uses as his name for the rest of the
+          New Testament.</p>
+
+          <h3 class="tg-subsection">The Aramaic collapses the wordplay gap</h3>
+
+          <div class="tg-definition">
+            <span class="tg-definition__term">Kepha</span>
+            <span class="tg-definition__original">כֵּיפָא (Aramaic) · Κηφᾶς (Cephas) · Πέτρος / πέτρα (Petros / petra)</span>
+            <span class="tg-definition__def">The Aramaic word underlying both halves of the
+            saying is almost certainly the same: "you are <em>kepha</em>, and on this
+            <em>kepha</em> I will build." Paul preserves the Aramaic form as Peter's actual
+            name — <em>Cephas</em> — nine times
+            (<a class="ref" data-ref="1 Corinthians 1:12">1 Cor 1:12</a>;
+            <a class="ref" data-ref="Galatians 2:9">Gal 2:9</a>, and elsewhere), and John
+            gives the translation explicitly at
+            <a class="ref" data-ref="John 1:42">John 1:42</a>. The Syriac Peshitta, in a
+            language cognate with Aramaic, uses one word in both clauses.</span>
+          </div>
+
+          <p>Which is why the familiar Protestant argument — that <em>petros</em> means a
+          small stone and <em>petra</em> a bedrock, so Peter is a pebble and the confession
+          is the cliff — should be retired. The distinction is largely a feature of older
+          poetic Greek and had substantially eroded by the first century. D. A. Carson,
+          who is not arguing for the papacy, puts the grammatical point plainly: had
+          Matthew wanted to say Peter was a mere stone in contrast to Christ the rock, the
+          available word was <em>lithos</em>; the reason Greek shifts from
+          <em>Petros</em> to <em>petra</em> is that <em>petra</em> is feminine and cannot
+          serve as a man's name without wrecking the pun that is the whole point of the
+          sentence.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">Conceded, and it matters</span>
+            <p>The most natural reading of <a class="ref" data-ref="Matthew 16:18">Matthew
+            16:18</a> in its own grammar is that the rock is Peter — Peter as the man who
+            has just made that confession. A great many Protestant commentators grant
+            this and locate their disagreement further up the stack, at claims 4 through 7.
+            That is the honest place for the disagreement to sit. An argument that has to
+            win at verse 18 to survive is an argument built on sand.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="keys">
+          <h2 class="tg-section__heading">The Keys — and Why Isaiah 22 Is the Best Argument</h2>
+
+          <p>This is the single strongest argument for reading Peter's commission as an
+          office rather than a personal honour, and it is the one most often skipped by
+          Protestant treatments. It deserves to be laid out in full.</p>
+
+          <p>"The keys of the kingdom" is not generic authority language. It is a quotation
+          of a specific Old Testament office:</p>
+
+          <blockquote class="scripture">
+            On that day I will summon My servant, Eliakim son of Hilkiah. I will clothe him
+            with your robe and tie your sash around him. I will put your authority in his
+            hand, and he will be a father to the dwellers of Jerusalem and to the house of
+            Judah. I will place on his shoulder the key to the house of David. What he opens
+            no one can shut, and what he shuts no one can open. I will drive him like a peg
+            into a firm place, and he will be a throne of glory for the house of his father.
+            <cite><a class="ref" data-ref="Isaiah 22:20-23">Isaiah 22:20–23</a></cite>
+          </blockquote>
+
+          <p>Four correspondences, and they are not loose:</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">The key</span>
+            <div class="tg-point__heading">A singular key, held by a singular officer, over
+            a house belonging to someone else.</div>
+            <p>Eliakim is the royal steward — the <em>al habbayit</em>, the one "over the
+            house," who governs the household in the king's name. He does not own the
+            house. He runs it.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Opening and shutting</span>
+            <div class="tg-point__heading">The same authority-couplet appears in both texts.</div>
+            <p>Isaiah's "what he opens no one can shut" answers to Matthew's binding and
+            loosing that stands in heaven. The steward's decisions are ratified above his
+            own head.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Fatherhood</span>
+            <div class="tg-point__heading">"He will be a father to the dwellers of Jerusalem."</div>
+            <p>The steward's relation to the household is paternal. Whatever one thinks of
+            the later title, the Old Testament office it echoes is described in exactly
+            this language.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Succession</span>
+            <div class="tg-point__heading">Eliakim receives the office <em>from Shebna</em>.</div>
+            <p>This is the heart of the argument. Isaiah 22 is not the institution of an
+            office; it is a <strong>transfer</strong> of one. Shebna is deposed
+            (<a class="ref" data-ref="Isaiah 22:15-19">Isa 22:15–19</a>) and Eliakim
+            installed. The office therefore visibly outlives its holder. If Jesus reaches
+            for that oracle to describe what he is giving Peter, he is reaching for a
+            successive office, not a personal medal.</p>
+          </div>
+
+          <p>Add to this the pattern of <a class="ref" data-ref="Acts 1:20">Acts 1:20</a>,
+          where the apostles fill Judas's place by citing "May another take his position"
+          — Greek <em>episkopē</em>, the same root as the word later used for the bishop's
+          office. The apostles themselves treated an apostolic place as something that
+          could be filled again.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">State this argument honestly or not at all</span>
+            <p>The Isaiah 22 case is not apologetic ingenuity applied after the fact. The
+            allusion is real, the vocabulary overlap is dense, and the successive character
+            of the Eliakim office is on the page. Any treatment of the papacy that does not
+            engage it is arguing against a weaker case than the one that exists. Part II
+            answers it — from within Scripture's own use of the same oracle — but it
+            answers it as a serious argument.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="shepherd">
+          <h2 class="tg-section__heading">Shepherd and Strengthener</h2>
+
+          <h3 class="tg-subsection">"Feed my sheep"</h3>
+
+          <blockquote class="scripture">
+            Jesus asked a second time, "Simon son of John, do you love Me?" "Yes, Lord," he
+            answered, "You know I love You." Jesus told him, "Shepherd My sheep."
+            <cite><a class="ref" data-ref="John 21:16">John 21:16</a></cite>
+          </blockquote>
+
+          <p>Three times — answering the three denials — the risen Christ commissions Peter
+          over his flock. The verb in verse 16 is <em>poimainō</em>, to shepherd or rule as
+          a shepherd; the object is not "your sheep" but <em>mine</em>. The flock remains
+          Christ's; Peter is put over it. Nothing comparable is said to any other disciple
+          individually.</p>
+
+          <h3 class="tg-subsection">The prayer for Peter's faith</h3>
+
+          <p>The subtler text, and often missed because English flattens it:</p>
+
+          <blockquote class="scripture">
+            Simon, Simon, Satan has asked to sift each of you like wheat. But I have prayed
+            for you, Simon, that your faith will not fail. And when you have turned back,
+            strengthen your brothers.
+            <cite><a class="ref" data-ref="Luke 22:31-32">Luke 22:31–32</a></cite>
+          </blockquote>
+
+          <p>The Greek shifts number mid-saying. Satan demanded <em>all of you</em>
+          (plural); Christ prays for <em>you</em>, singular — Peter — that his faith
+          specifically may not give out; and the purpose clause is that Peter, once
+          restored, will be the one who steadies the rest. A prayer of Christ's for the
+          persistence of one man's faith, offered with a view to that man stabilising the
+          others, is exactly the shape of what later gets called the Petrine ministry.</p>
+        </section>
+
+        <section class="tg-section" id="narrative">
+          <h2 class="tg-section__heading">The Narrative Pattern</h2>
+
+          <p>Beyond the three great texts, the sheer shape of the Gospels and Acts is
+          evidence, and it is cumulative rather than decisive at any one point.</p>
+
+          <div class="tg-timeline">
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Four lists</span><span>Peter is named first in <strong>every</strong> apostolic list — <a class="ref" data-ref="Matthew 10:2">Matt 10:2</a>; <a class="ref" data-ref="Mark 3:16">Mark 3:16</a>; <a class="ref" data-ref="Luke 6:14">Luke 6:14</a>; <a class="ref" data-ref="Acts 1:13">Acts 1:13</a>. Judas is always last. The order is not alphabetical, chronological, or by age.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Matt 10:2</span><span>"first, Simon, called Peter" — <em>prōtos</em>. In a list of twelve, a word meaning "number one" is redundant; Matthew supplies it anyway.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Acts 1</span><span>Peter convenes the assembly and directs the replacement of Judas.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Acts 2</span><span>Peter preaches at Pentecost — the kingdom opened to Israel.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Acts 8</span><span>Peter (with John) is the apostolic presence when Samaria receives the Spirit.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Acts 10</span><span>Peter is given the vision and opens the door to the Gentiles at Cornelius's house.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Acts 15</span><span>At the Jerusalem council Peter speaks first, and the debate stops when he finishes (<a class="ref" data-ref="Acts 15:12">v. 12</a>).</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">1 Cor 15:5</span><span>In the earliest resurrection creed Paul quotes, the risen Christ "appeared to Cephas and then to the Twelve."</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">Gal 1:18</span><span>Paul's first Jerusalem visit after conversion is specifically to <em>see Cephas</em> — the verb <em>historēsai</em> suggests a visit made to consult a person of consequence.</span></div>
+          </div>
+
+          <p>Peter's name occurs more often in the New Testament than any other disciple's
+          by a wide margin. He speaks more, is addressed more, is corrected more, and is
+          the only disciple whose personal fortunes the narrative keeps tracking. He is
+          plainly not one apostle among interchangeable equals, and any account that makes
+          him one is not reading the documents.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">On counting names</span>
+            <p>Word-counts are often quoted here without checking. Searching the Berean
+            Standard Bible used by this site, "Peter" occurs 181 times in the New Testament
+            and "Cephas" 9 more. The raw count for "John" (160) looks comparable but is
+            inflated by John the Baptist, the Fourth Gospel's title, and "Simon son of
+            John." The qualitative claim — Peter dominates the apostolic narrative — is
+            secure; the tidy numerical claims that circulate are usually not, so this study
+            rests on the four list-orders instead, which anyone can check in a minute.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="for-history">
+          <h2 class="tg-section__heading">The Early Historical Case</h2>
+
+          <p>Three historical points belong on this side of the ledger, and Part III
+          documents them from the sources.</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Rome's preeminence is early, not medieval</span>
+            <div class="tg-point__heading">By AD 96 the Roman church is intervening in
+            another city's internal affairs; by AD 180 Irenaeus is citing Rome as the
+            reference standard for apostolic tradition.</div>
+            <p>Whatever those facts prove, they are not a later invention retrojected. The
+            claim that "Rome was nobody until the Middle Ages" is simply false, and any
+            Protestant argument that depends on it is built on a mistake.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Rome's doctrinal record was good</span>
+            <div class="tg-point__heading">In the great controversies, Rome held.</div>
+            <p>Rome stood by Nicaea and by Athanasius when much of the East went Arian;
+            Leo's <em>Tome</em> supplied the decisive Christological formula at Chalcedon;
+            Rome resisted Monothelitism after the Honorius episode. A believer weighing
+            this question should notice that the see whose authority is in dispute was, on
+            the substance of Christology, right more often than its critics.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Peter died in Rome</span>
+            <div class="tg-point__heading">This is as well attested as most facts of the
+            period.</div>
+            <p>1 Clement 5 (c. 96) reports Peter's martyrdom; Ignatius writes to Rome as
+            the church where Peter and Paul gave commands (c. 107–117); Dionysius of
+            Corinth (c. 170) says both apostles taught in Italy and were martyred; and
+            Gaius of Rome (c. 200) points to their "trophies" on the Vatican hill and the
+            Ostian Way. <a class="ref" data-ref="1 Peter 5:13">1 Peter 5:13</a>'s greeting
+            from "Babylon" is very widely read as Rome. Denying claim 2 is a losing
+            position and Protestants should stop trying to hold it.</p>
+          </div>
+        </section>
+      </section><!-- /part-1 -->
+
+      <!-- ══════════════════════════════════════════════════════
+           PART II — THE CASE AGAINST
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="part-2" aria-labelledby="part-2-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Part II</span>
+          <h2 class="tg-part__title" id="part-2-h">The Case Against, from the Whole Canon</h2>
+          <p class="tg-part__intro">The counter-case is not lexical and it is not an
+          argument from silence. It is canonical: when the rest of the New Testament picks
+          up the very language of Matthew 16, it distributes what Matthew 16 concentrates
+          — and when it picks up the Isaiah 22 oracle, it gives the key to Christ.</p>
+          <p class="tg-part__verse"><a class="ref" data-ref="Revelation 3:7">Revelation 3:7</a> · <a class="ref" data-ref="Matthew 18:18">Matthew 18:18</a> · <a class="ref" data-ref="1 Peter 5:1">1 Peter 5:1</a> · <a class="ref" data-ref="Galatians 2:11">Galatians 2:11</a></p>
+        </div>
+
+        <nav class="tg-toc tg-toc--sticky" aria-label="Part II contents">
+          <h2 class="tg-toc__title">In this part</h2>
+          <ol class="tg-toc__list">
+            <li><a href="#who-holds-the-key">Who Actually Holds the Key of David</a></li>
+            <li><a href="#peg">The Rest of the Eliakim Oracle</a></li>
+            <li><a href="#distributed">Everything Given to Peter Is Given to the Others</a></li>
+            <li><a href="#foundation">Foundation Language Is Corporate</a></li>
+            <li><a href="#peter-in-acts">Peter's Own Behaviour in Acts</a></li>
+            <li><a href="#paul">Paul on Peter</a></li>
+            <li><a href="#peters-letter">Peter's Own Letter</a></li>
+            <li><a href="#grain">The Grain of Christ's Teaching on Authority</a></li>
+            <li><a href="#silences">The Silences, Weighed</a></li>
+          </ol>
+        </nav>
+
+        <section class="tg-section" id="who-holds-the-key">
+          <h2 class="tg-section__heading">Who Actually Holds the Key of David</h2>
+
+          <p>Part I made the Isaiah 22 argument at full strength. Here is the answer, and
+          it comes from inside the New Testament rather than from outside it.</p>
+
+          <p>The Eliakim oracle is quoted once in the New Testament. Not in Matthew — in
+          Revelation. And it is applied to Jesus, with the opening-and-shutting couplet
+          intact and in Isaiah's own words:</p>
+
+          <blockquote class="scripture">
+            These are the words of the One who is holy and true, who holds the key of David.
+            What He opens no one can shut, and what He shuts no one can open.
+            <cite><a class="ref" data-ref="Revelation 3:7">Revelation 3:7</a></cite>
+          </blockquote>
+
+          <p>Set the two side by side. Isaiah 22:22 — "I will place on his shoulder the key
+          to the house of David. What he opens no one can shut, and what he shuts no one can
+          open." Revelation 3:7 — "who holds the key of David. What He opens no one can shut,
+          and what He shuts no one can open." That is not an allusion; it is a citation, and
+          the subject is Christ.</p>
+
+          <p>The same book has already told us who is holding keys and which ones:</p>
+
+          <blockquote class="scripture">
+            I was dead, and behold, now I am alive forever and ever! And I hold the keys of
+            Death and of Hades.
+            <cite><a class="ref" data-ref="Revelation 1:18">Revelation 1:18</a></cite>
+          </blockquote>
+
+          <p>Which reaches back and grips <a class="ref" data-ref="Matthew 16:18">Matthew
+          16:18</a> itself: Christ promises that the gates of <em>Hades</em> will not
+          prevail — and Revelation says why. He holds that key personally.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">The Catholic answer to this, which is a real one</span>
+            <p>A Catholic reply is available and should be stated: of course Christ holds
+            the key — he is the King. Eliakim held the key <em>of the house of David</em>
+            while David's heir reigned. A steward's key is always the king's key, held on
+            his behalf and in his absence; Revelation 3:7 establishes whose key it is, not
+            that no one is ever given it. That is a coherent reading and it is not a dodge.</p>
+            <p>The rejoinder is about where the weight falls. If Matthew 16 is deliberately
+            invoking the steward office, then the New Testament's own later use of that
+            oracle is the best available commentary on it — and that use puts the key back
+            in the hands of the King, in the risen Christ's own self-description to seven
+            churches that are given no Roman reference point at all. Meanwhile the offices
+            the New Testament does describe for the post-apostolic church, in the letters
+            written to organise it, are <em>presbyteros</em> and <em>episkopos</em> —
+            plural in each city, and never singular over all cities. The steward reading is
+            an inference the New Testament had the vocabulary to draw and did not draw.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="peg">
+          <h2 class="tg-section__heading">The Rest of the Eliakim Oracle</h2>
+
+          <p>The Isaiah 22 argument almost always stops at verse 23 — "I will drive him like
+          a peg into a firm place." Read three verses further:</p>
+
+          <blockquote class="scripture">
+            So they will hang on him all the glory of his father's house: the descendants and
+            the offshoots — all the lesser vessels, from bowls to every kind of jar. In that
+            day, declares the LORD of Hosts, the peg driven into a firm place will give way;
+            it will be sheared off and fall, and the load upon it will be cut down. Indeed,
+            the LORD has spoken.
+            <cite><a class="ref" data-ref="Isaiah 22:24-25">Isaiah 22:24–25</a></cite>
+          </blockquote>
+
+          <p>The oracle ends with the peg failing under the weight hung on it. Whatever else
+          Isaiah 22 is, it is not a charter of indefectible succession. It is a warning
+          about what happens when a household hangs all its glory on one man — bowls, jars,
+          descendants, offshoots, the whole family fortune loaded onto a single fixture
+          until it shears off the wall.</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The point, stated fairly</span>
+            <p class="tg-principle__text">This does not refute the Catholic reading. If
+            Christ borrows an image, he is not obliged to import every detail of its
+            original context — and the New Testament regularly takes up Old Testament
+            figures and transposes them. But it does mean the passage cannot be used as a
+            guarantee of permanence while the verses that describe the office collapsing
+            are quietly left out. If Isaiah 22 is admissible as evidence for the office, it
+            is admissible for its ending too.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="distributed">
+          <h2 class="tg-section__heading">Everything Given to Peter Is Given to the Others</h2>
+
+          <p>Take the components of the Matthew 16 commission one at a time and follow them
+          through the rest of the Gospels. Each is re-issued in the plural.</p>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>Given to Peter</th><th>Given to the others</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Binding and loosing<br><a class="ref" data-ref="Matthew 16:19">Matt 16:19</a></td>
+                <td>"Truly I tell you, whatever <strong>you</strong> bind on earth will be bound in heaven" — plural, to the disciples, in the context of church discipline, with the church itself as the final court (<a class="ref" data-ref="Matthew 18:17-18">Matt 18:17–18</a>).</td>
+              </tr>
+              <tr>
+                <td>Shepherding Christ's flock<br><a class="ref" data-ref="John 21:16">John 21:16</a></td>
+                <td>The identical charge to the Ephesian elders — plural — "Be shepherds of the church of God" (<a class="ref" data-ref="Acts 20:28">Acts 20:28</a>), and to elders generally (<a class="ref" data-ref="1 Peter 5:2">1 Pet 5:2</a>), by Peter.</td>
+              </tr>
+              <tr>
+                <td>Remitting sins (implied in the keys)</td>
+                <td>"If you forgive anyone his sins, they are forgiven" — spoken to the assembled disciples (<a class="ref" data-ref="John 20:22-23">John 20:22–23</a>).</td>
+              </tr>
+              <tr>
+                <td>Foundation of the church<br><a class="ref" data-ref="Matthew 16:18">Matt 16:18</a></td>
+                <td>"Built on the foundation of the apostles and prophets" (<a class="ref" data-ref="Ephesians 2:20">Eph 2:20</a>); twelve foundations bearing twelve names (<a class="ref" data-ref="Revelation 21:14">Rev 21:14</a>).</td>
+              </tr>
+              <tr>
+                <td>A throne in the kingdom</td>
+                <td>Twelve thrones, judging the twelve tribes — promised to all of them in the same breath as the rebuke about greatness (<a class="ref" data-ref="Luke 22:29-30">Luke 22:29–30</a>; <a class="ref" data-ref="Matthew 19:28">Matt 19:28</a>).</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>The pattern is consistent: whatever is uniquely Peter's, none of the
+          <em>powers</em> are. What remains unique is his priority — he is first, he is
+          named, he goes ahead. That is a primacy of initiative and witness. It is not
+          obviously a jurisdiction, and the New Testament never turns it into one.</p>
+
+          <h3 class="tg-subsection">The context of Luke 22 is usually cut off</h3>
+
+          <p>Part I quoted "I have prayed for you, Simon." Read the verses immediately
+          before it:</p>
+
+          <blockquote class="scripture">
+            A dispute also arose among the disciples as to which of them would be considered
+            the greatest. So Jesus declared, "The kings of the Gentiles lord it over them,
+            and those in authority over them call themselves benefactors. But you shall not
+            be like them. Instead, the greatest among you should be like the youngest, and
+            the one who leads like the one who serves… And I bestow on you a kingdom, just as
+            My Father has bestowed one on Me, so that you may eat and drink at My table in My
+            kingdom, and sit on thrones, judging the twelve tribes of Israel. Simon, Simon,
+            Satan has asked to sift each of you like wheat…"
+            <cite><a class="ref" data-ref="Luke 22:24-31">Luke 22:24–31</a></cite>
+          </blockquote>
+
+          <p>The prayer for Peter is spoken four verses after Christ forbade the ranking
+          question and one verse after he conferred the kingdom on all twelve. Whatever
+          "strengthen your brothers" means, Luke has framed it so that it cannot mean
+          "you are the greatest" — because Luke has just recorded Jesus refusing that
+          question when it was asked directly. And the very next thing Jesus says to Peter
+          is that he will deny him three times before morning.</p>
+        </section>
+
+        <section class="tg-section" id="foundation">
+          <h2 class="tg-section__heading">Foundation Language Is Corporate</h2>
+
+          <p>Three texts, each from a different author, each using building language about
+          the church, and none of them singular:</p>
+
+          <blockquote class="scripture">
+            Therefore you are no longer strangers and foreigners, but fellow citizens with
+            the saints and members of God's household, built on the foundation of the
+            apostles and prophets, with Christ Jesus Himself as the cornerstone.
+            <cite><a class="ref" data-ref="Ephesians 2:19-20">Ephesians 2:19–20</a></cite>
+          </blockquote>
+
+          <blockquote class="scripture">
+            By the grace God has given me, I laid a foundation as an expert builder… For no
+            one can lay a foundation other than the one already laid, which is Jesus Christ.
+            <cite><a class="ref" data-ref="1 Corinthians 3:10-11">1 Corinthians 3:10–11</a></cite>
+          </blockquote>
+
+          <blockquote class="scripture">
+            The wall of the city had twelve foundations bearing the names of the twelve
+            apostles of the Lamb.
+            <cite><a class="ref" data-ref="Revelation 21:14">Revelation 21:14</a></cite>
+          </blockquote>
+
+          <p>John's vision of the consummated church is the strongest of the three, because
+          it is precisely the moment when a single Petrine foundation would be visible if
+          there were one. There are twelve, and they are equal courses in one wall.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">The counter, granted</span>
+            <p>A foundation of twelve does not exclude one of the twelve having a role
+            among them, any more than a college of apostles excludes a spokesman. Ephesians
+            2:20 and Matthew 16:18 are not in contradiction; Peter can be the rock
+            <em>within</em> an apostolic foundation. What these texts do establish is the
+            <em>category</em>: foundations are laid once, by the apostolic generation, and
+            the New Testament's own picture of the finished building has twelve names on it
+            and no thirteenth course added later.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="peter-in-acts">
+          <h2 class="tg-section__heading">Peter's Own Behaviour in Acts</h2>
+
+          <p>Acts is the one book that shows the apostolic church actually governing itself.
+          Peter is prominent throughout the first half — and in five specific places he does
+          not behave as a monarch would.</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">He is sent</span>
+            <div class="tg-point__heading"><a class="ref" data-ref="Acts 8:14">Acts 8:14</a>
+            — "the apostles in Jerusalem… sent Peter and John."</div>
+            <p>Whatever else is true of an office with universal immediate jurisdiction, its
+            holder is not dispatched by a committee. In Luke's grammar, the apostles are the
+            subject and Peter is the object.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">He is called to account, and answers</span>
+            <div class="tg-point__heading"><a class="ref" data-ref="Acts 11:2-4">Acts
+            11:2–4</a> — the circumcised believers "took issue with him," and Peter
+            "explained."</div>
+            <p>He does not invoke his commission. He gives a defence, and it is
+            <em>accepted</em> (v. 18) — which is to say, ratified by the body. That is how a
+            colleague behaves, not a sovereign.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">James renders the verdict</span>
+            <div class="tg-point__heading"><a class="ref" data-ref="Acts 15:19">Acts
+            15:19</a> — "It is my judgment, therefore…"</div>
+            <p>At the council Peter's testimony is decisive in the debate — Part I is right
+            about that. But the summing-up, the scriptural warrant, and the ruling come from
+            James; and the decree goes out in the name of "the apostles and elders, with the
+            whole church" (<a class="ref" data-ref="Acts 15:22">v. 22</a>) under the formula
+            "It seemed good to the Holy Spirit and to us"
+            (<a class="ref" data-ref="Acts 15:28">v. 28</a>). That is a conciliar decision
+            procedure, and it is the only one the New Testament shows us.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">He reports to James</span>
+            <div class="tg-point__heading"><a class="ref" data-ref="Acts 12:17">Acts
+            12:17</a> — "Send word to James and to the brothers."</div>
+            <p>Freed from prison, Peter's instruction is to notify James — and then he
+            leaves. From that point Luke's Jerusalem narrative belongs to James
+            (<a class="ref" data-ref="Acts 21:18">Acts 21:18</a>: "Paul went in with us to
+            see James, and all the elders were present" — Peter is not mentioned).</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">He refuses obeisance</span>
+            <div class="tg-point__heading"><a class="ref" data-ref="Acts 10:25-26">Acts
+            10:25–26</a> — "Stand up. I am only a man myself."</div>
+            <p>A small scene, and easy to over-read. But it is the one moment in Acts where
+            someone kneels to Peter, and Peter's instinct is to get him off the floor.</p>
+          </div>
+
+          <h3 class="tg-subsection">And the one succession Acts does record</h3>
+
+          <p>Acts 1 is cited by the Catholic side as proof that apostolic places can be
+          filled again — fairly, since that is what happens. But read the qualification
+          the apostles set:</p>
+
+          <blockquote class="scripture">
+            Therefore it is necessary to choose one of the men who have accompanied us the
+            whole time the Lord Jesus went in and out among us, beginning from John's baptism
+            until the day Jesus was taken up from us. For one of these must become a witness
+            with us of His resurrection.
+            <cite><a class="ref" data-ref="Acts 1:21-22">Acts 1:21–22</a></cite>
+          </blockquote>
+
+          <p>Two features cut against using this as a succession template. The requirement
+          is <strong>eyewitness of the entire ministry and of the resurrection</strong> —
+          a qualification that expires with that generation and cannot be transmitted. And
+          the vacancy exists because of <strong>defection</strong>: Judas abandoned his place.
+          When an apostle simply dies — James the son of Zebedee, executed in
+          <a class="ref" data-ref="Acts 12:2">Acts 12:2</a> — nobody is appointed to replace
+          him, and Luke does not treat this as a problem needing a solution.</p>
+        </section>
+
+        <section class="tg-section" id="paul">
+          <h2 class="tg-section__heading">Paul on Peter</h2>
+
+          <p>Galatians 1–2 is Paul's own account of his relations with the Jerusalem
+          apostles, written to establish that his gospel did not come from them. It is the
+          most direct evidence we have about how an apostle regarded Peter's standing.</p>
+
+          <blockquote class="scripture">
+            But as for the highly esteemed — whatever they were makes no difference to me;
+            God does not show favoritism — those leaders added nothing to me. On the
+            contrary, they saw that I had been entrusted to preach the gospel to the
+            uncircumcised, just as Peter had been to the circumcised… And recognizing the
+            grace that I had been given, James, Cephas, and John — those reputed to be
+            pillars — gave me and Barnabas the right hand of fellowship.
+            <cite><a class="ref" data-ref="Galatians 2:6-9">Galatians 2:6–9</a></cite>
+          </blockquote>
+
+          <p>Four things in this passage:</p>
+
+          <ul>
+            <li><strong>Parallel commissions, not a chain of command.</strong> Peter to the
+            circumcised, Paul to the Gentiles — an apportionment of mission between peers.
+            Paul does not describe himself as licensed by Peter.</li>
+            <li><strong>Pillars, plural — and James is named first.</strong> If there is a
+            rank order in Paul's phrasing, Peter is not at the top of it.</li>
+            <li><strong>"Added nothing to me."</strong> The Jerusalem leadership had no
+            content to supply and, in Paul's telling, no authority to withhold approval.</li>
+            <li><strong>And then the rebuke.</strong></li>
+          </ul>
+
+          <blockquote class="scripture">
+            When Cephas came to Antioch, however, I opposed him to his face, because he stood
+            to be condemned… When I saw that they were not walking in line with the truth of
+            the gospel, I said to Cephas in front of them all…
+            <cite><a class="ref" data-ref="Galatians 2:11-14">Galatians 2:11–14</a></cite>
+          </blockquote>
+
+          <p>Paul corrects Peter publicly, on a matter of the gospel's integrity, and writes
+          it into a circular letter for churches to read. He does not appeal to Peter; he
+          confronts him. And the confrontation is not treated as insubordination requiring
+          justification — it is offered as evidence of Paul's own apostolic standing.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">Stated fairly</span>
+            <p>This does not disprove a Petrine primacy. Catholic readers have always
+            observed, correctly, that Peter's error at Antioch was in <em>conduct</em>, not
+            in doctrinal definition, and that the later doctrine of infallibility is
+            expressly limited to defining acts and would not be touched by it. Popes have
+            been rebuked by saints throughout the tradition. What Galatians 2 does show is
+            that in the apostolic era, a peer's public correction of Peter — on the truth of
+            the gospel, before the whole congregation — was a normal and defensible thing
+            to do, and Paul expects his readers to think so too.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="peters-letter">
+          <h2 class="tg-section__heading">Peter's Own Letter</h2>
+
+          <p>If any document in the New Testament might be expected to reflect a Petrine
+          office, it is the letter Peter wrote to churches across five provinces of Asia
+          Minor. Here is how he identifies himself in relation to their leaders:</p>
+
+          <blockquote class="scripture">
+            As a fellow elder, a witness of Christ's sufferings, and a partaker of the glory
+            to be revealed, I appeal to the elders among you: Be shepherds of God's flock
+            that is among you, watching over them not out of compulsion, but because it is
+            God's will; not out of greed, but out of eagerness; not lording it over those
+            entrusted to you, but being examples to the flock. And when the Chief Shepherd
+            appears, you will receive the crown of glory that will never fade away.
+            <cite><a class="ref" data-ref="1 Peter 5:1-4">1 Peter 5:1–4</a></cite>
+          </blockquote>
+
+          <p>Four words are doing very heavy work.</p>
+
+          <div class="tg-definition">
+            <span class="tg-definition__term">Fellow elder</span>
+            <span class="tg-definition__original">συμπρεσβύτερος (sympresbyteros)</span>
+            <span class="tg-definition__def">Not "chief of the elders" but the
+            <em>syn-</em> compound: alongside, together with. Peter places himself in the
+            same rank as the men he is addressing. He had the vocabulary for hierarchy and
+            he used the vocabulary for solidarity.</span>
+          </div>
+
+          <div class="tg-definition">
+            <span class="tg-definition__term">Not lording it over</span>
+            <span class="tg-definition__original">μὴ κατακυριεύοντες (mē katakyrieuontes)</span>
+            <span class="tg-definition__def">The compound verb Jesus used of the Gentile
+            rulers in <a class="ref" data-ref="Matthew 20:25">Matthew 20:25</a> —
+            <em>katakyrieuousin</em>, "lord it over them" — now negated and applied by Peter
+            to pastoral office. Peter is quoting the Lord's prohibition and legislating it
+            for church leaders.</span>
+          </div>
+
+          <div class="tg-definition">
+            <span class="tg-definition__term">Chief Shepherd</span>
+            <span class="tg-definition__original">ἀρχιποίμην (archipoimēn)</span>
+            <span class="tg-definition__def">The only "chief shepherd" in the letter is
+            Christ, who has not yet appeared. Elders are under-shepherds awaiting his
+            return. There is no intermediate tier.</span>
+          </div>
+
+          <p>And earlier in the same letter, Peter takes the stone-and-building imagery of
+          Matthew 16 and hands it to everybody:</p>
+
+          <blockquote class="scripture">
+            As you come to Him, the living stone, rejected by men but chosen and precious in
+            God's sight, you also, like living stones, are being built into a spiritual house
+            to be a holy priesthood… "See, I lay in Zion a stone, a chosen and precious
+            cornerstone."
+            <cite><a class="ref" data-ref="1 Peter 2:4-6">1 Peter 2:4–6</a></cite>
+          </blockquote>
+
+          <p>The man whom Christ called <em>kepha</em> writes a letter about stones and
+          building in which Christ is the living stone and the cornerstone, and every
+          believer is a living stone in the wall. His own name is not in the metaphor.</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The single hardest datum for claim 6</span>
+            <p class="tg-principle__text">The office claims universal, ordinary, immediate
+            jurisdiction on the basis of what Christ gave Peter. Peter's own surviving
+            letter addresses churches he did not found, in the one place where he had every
+            occasion to speak as their superior, and he calls himself their colleague and
+            forbids to church leaders precisely the posture the office later assumed. That
+            is not silence; it is testimony in the opposite direction, from the only
+            witness whose testimony would be decisive.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="grain">
+          <h2 class="tg-section__heading">The Grain of Christ's Teaching on Authority</h2>
+
+          <p>The objection here is not merely that the papacy is absent from Scripture. It
+          is that Scripture's explicit teaching about power in the church runs in a
+          particular direction, and the direction is inversion.</p>
+
+          <blockquote class="scripture">
+            You know that the rulers of the Gentiles lord it over them, and their superiors
+            exercise authority over them. It shall not be this way among you. Instead,
+            whoever wants to become great among you must be your servant, and whoever wants
+            to be first among you must be your slave — just as the Son of Man did not come
+            to be served, but to serve, and to give His life as a ransom for many.
+            <cite><a class="ref" data-ref="Matthew 20:25-28">Matthew 20:25–28</a></cite>
+          </blockquote>
+
+          <blockquote class="scripture">
+            But you are not to be called "Rabbi," for you have one Teacher, and you are all
+            brothers. And do not call anyone on earth your father, for you have one Father,
+            who is in heaven. Nor are you to be called instructors, for you have one
+            Instructor, the Christ. The greatest among you shall be your servant.
+            <cite><a class="ref" data-ref="Matthew 23:8-11">Matthew 23:8–11</a></cite>
+          </blockquote>
+
+          <p>And the headship texts are unambiguous about who occupies the position:</p>
+
+          <ul>
+            <li>"God… made Him head over everything for the church, which is His body"
+            (<a class="ref" data-ref="Ephesians 1:22-23">Eph 1:22–23</a>).</li>
+            <li>"He is the head of the body, the church… so that in all things He may have
+            preeminence" (<a class="ref" data-ref="Colossians 1:18">Col 1:18</a>).</li>
+            <li>"When the Chief Shepherd appears"
+            (<a class="ref" data-ref="1 Peter 5:4">1 Pet 5:4</a>).</li>
+          </ul>
+
+          <div class="tg-note">
+            <span class="tg-note__label">Where this argument is weaker than it sounds</span>
+            <p>Matthew 23:9 cannot mean that the word "father" is forbidden, or Paul broke
+            it in the next generation ("I became your father through the gospel,"
+            <a class="ref" data-ref="1 Corinthians 4:15">1 Cor 4:15</a>), and Stephen breaks
+            it in <a class="ref" data-ref="Acts 7:2">Acts 7:2</a>. The prohibition is
+            against a <em>class</em> of honorific that relocates to a man what belongs to
+            God. Used as a knock-down argument against the title "pope," it proves too much
+            and collapses. Used as evidence of the direction of Christ's teaching about
+            ecclesial rank, it is sound. Take it for what it is.</p>
+            <p>The same care applies to Matthew 20:25–28. Christ is not abolishing office —
+            he says "whoever wants to be <em>first</em>," which presumes someone will be.
+            He is redefining what being first consists of. A defender of the papacy can say,
+            entirely consistently, that <em>servus servorum Dei</em> is exactly this
+            teaching institutionalised. The force of the objection is not that leadership is
+            forbidden but that a claim to ordinary, immediate jurisdiction over every
+            baptised person on earth is a strange thing to grow out of this soil.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="silences">
+          <h2 class="tg-section__heading">The Silences, Weighed</h2>
+
+          <p>Arguments from silence are only as good as the expectation behind them. Here
+          are the New Testament's silences, ranked by how much they should count.</p>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>The silence</th><th>How much weight it bears</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No text says Peter's primacy passes to a successor.</td>
+                <td><strong>Considerable.</strong> The Pastoral Epistles exist precisely to
+                arrange the church's leadership after the apostles — qualifications,
+                appointments, transmission of teaching
+                (<a class="ref" data-ref="2 Timothy 2:2">2 Tim 2:2</a>;
+                <a class="ref" data-ref="Titus 1:5">Titus 1:5</a>). They set out elders and
+                overseers and deacons, and nothing above them.</td>
+              </tr>
+              <tr>
+                <td>No text identifies Rome as Peter's see, or any see as inheriting his place.</td>
+                <td><strong>Considerable.</strong> Antioch also claimed Peter as founder,
+                with early support; the New Testament arbitrates between neither because it
+                shows no awareness of the question.</td>
+              </tr>
+              <tr>
+                <td>Romans 16 greets some twenty-six people by name and does not mention Peter.</td>
+                <td><strong>Moderate.</strong> Real, but explicable — Peter may simply not
+                have been there when Paul wrote (c. AD 57), which is also consistent with
+                Paul's stated policy of not building "on someone else's foundation"
+                (<a class="ref" data-ref="Romans 15:20">Rom 15:20</a>) — a policy he would
+                have been breaking by writing Romans at all if Peter had already founded
+                that church.</td>
+              </tr>
+              <tr>
+                <td>Revelation's letters go to seven churches of Asia, with no Roman reference point.</td>
+                <td><strong>Moderate.</strong> Christ addresses seven congregations
+                individually, corrects them individually, and appoints no earthly
+                clearing-house. But the book's genre and geography limit the inference.</td>
+              </tr>
+              <tr>
+                <td>No New Testament church has a single bishop over its elders.</td>
+                <td><strong>Considerable — and this one is positive evidence, not silence.</strong>
+                Paul summons "the elders" of Ephesus and calls those same men "overseers"
+                (<a class="ref" data-ref="Acts 20:17">Acts 20:17</a>,
+                <a class="ref" data-ref="Acts 20:28">28</a>); Titus is to appoint "elders in
+                every town," then describes the qualifications of "an overseer"
+                (<a class="ref" data-ref="Titus 1:5-7">Titus 1:5–7</a>); Philippians is
+                addressed to "the overseers and deacons," plural, in one city
+                (<a class="ref" data-ref="Philippians 1:1">Phil 1:1</a>). Claim 3 — Peter as
+                monarchical bishop of Rome — requires an office that did not yet exist in
+                that form anywhere.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tg-note">
+            <span class="tg-note__label">The honest counter-silence</span>
+            <p>Protestants owe the same test in return. The New Testament also contains no
+            table of contents, no doctrine of the canon, no word <em>Trinity</em>, and no
+            statement that Scripture alone is the final authority in the form the
+            Reformation asserted. If "not explicit in the text, therefore not binding" is
+            the rule, it takes down more than the papacy. Part IV takes this seriously
+            rather than waving at it, because it is the strongest card the other side holds.</p>
+          </div>
+        </section>
+      </section><!-- /part-2 -->
+
+      <!-- ══════════════════════════════════════════════════════
+           PART III — THE RECORD
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="part-3" aria-labelledby="part-3-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Part III</span>
+          <h2 class="tg-part__title" id="part-3-h">The Historical Record, in Order</h2>
+          <p class="tg-part__intro">What follows is chronological, quoted from primary
+          sources, and deliberately includes the episodes that cut against this study's own
+          conclusion. Where a text is famously disputed, the dispute is described rather
+          than resolved by fiat. Full citations are on the <a href="#sources">Sources</a>
+          tab.</p>
+        </div>
+
+        <nav class="tg-toc tg-toc--sticky" aria-label="Part III contents">
+          <h2 class="tg-toc__title">In this part</h2>
+          <ol class="tg-toc__list">
+            <li><a href="#h-clement">AD 96 · 1 Clement</a></li>
+            <li><a href="#h-ignatius">c. 107–117 · Ignatius</a></li>
+            <li><a href="#h-irenaeus">c. 180 · Irenaeus</a></li>
+            <li><a href="#h-victor">c. 190 · Victor and the Easter Controversy</a></li>
+            <li><a href="#h-cyprian">c. 250s · Cyprian and Firmilian</a></li>
+            <li><a href="#h-nicaea">325–381 · Nicaea and Constantinople</a></li>
+            <li><a href="#h-chalcedon">431–451 · Ephesus, Leo, and Chalcedon</a></li>
+            <li><a href="#h-gregory">c. 590–604 · Gregory the Great</a></li>
+            <li><a href="#h-honorius">638–681 · Honorius</a></li>
+            <li><a href="#h-forgeries">9th–15th c. · The Forgeries</a></li>
+            <li><a href="#h-schism">1378–1417 · The Great Western Schism</a></li>
+            <li><a href="#h-vatican">1870–today · Vatican I and After</a></li>
+          </ol>
+        </nav>
+
+        <section class="tg-section" id="h-clement">
+          <h2 class="tg-section__heading">AD 96 · 1 Clement</h2>
+
+          <p>The Roman church writes to Corinth about a leadership dispute, in a notably
+          firm tone. It is the earliest Christian document outside the New Testament that
+          shows one church addressing another's internal affairs.</p>
+
+          <p><strong>For Rome:</strong> the letter is unmistakably authoritative in tone,
+          and Irenaeus later cites it as an act of the Roman church. It also contains the
+          earliest explicit doctrine of ministerial succession:</p>
+
+          <blockquote class="scripture">
+            Our apostles also knew, through our Lord Jesus Christ, that there would be strife
+            on account of the office of the episcopate. For this reason, therefore, inasmuch
+            as they had obtained a perfect fore-knowledge of this, they appointed those
+            [ministers] already mentioned, and afterwards gave instructions, that when these
+            should fall asleep, other approved men should succeed them in their ministry.
+            <cite>1 Clement 44 (Roberts–Donaldson, <em>Ante-Nicene Fathers</em> I) · <a href="../../library/read/clement-first-epistle/">read in the Library</a></cite>
+          </blockquote>
+
+          <p><strong>Against a papal reading:</strong> four things, all on the face of the
+          document.</p>
+
+          <ul>
+            <li><strong>No author, no title, no office invoked.</strong> The letter opens:
+            "The church of God which sojourns at Rome, to the church of God sojourning at
+            Corinth." Clement never names himself. There is no "I, Clement, bishop of
+            Rome"; there is a congregation writing to a congregation.</li>
+            <li><strong>It argues from Scripture and from order</strong> — at length, with
+            examples from Israel's history and even from the Roman army — not from a right
+            to command.</li>
+            <li><strong>Bishops and presbyters are the same men.</strong> In the passage
+            just quoted, those who are ejected from "the episcopate" are, two sentences
+            later, "those presbyters who, having finished their course…" The words are used
+            interchangeably, exactly as in the New Testament.</li>
+            <li><strong>Appointment is congregational.</strong> Successors are installed
+            "with the consent of the whole church."</li>
+          </ul>
+
+          <div class="tg-note">
+            <span class="tg-note__label">A precision worth keeping</span>
+            <p>1 Clement 5 is regularly cited as proof that Peter died in Rome. What it
+            actually says is that Peter "endured not one or two, but numerous labours; and
+            when he had at length suffered martyrdom, departed to the place of glory due to
+            him." No city is named — for Peter or, in so many words, for Paul. The
+            inference to Rome is a good one (the letter is Roman, and the two apostles are
+            held up as the local generation's own examples), but it is an inference. The
+            explicit locating evidence comes later, from Dionysius of Corinth and Gaius.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-ignatius">
+          <h2 class="tg-section__heading">c. 107–117 · Ignatius of Antioch</h2>
+
+          <p>Ignatius is our great early witness to the threefold ministry. He writes seven
+          letters on his way to martyrdom, and in six of them he presses obedience to the
+          local bishop relentlessly — "do nothing without the bishop."</p>
+
+          <p><strong>For Rome:</strong> his greeting to the Roman church is extraordinary
+          among the seven:</p>
+
+          <blockquote class="scripture">
+            …the church which presides in the place of the region of the Romans, worthy of
+            God, worthy of honour, worthy of the highest happiness, worthy of praise… and
+            which presides over love.
+            <cite>Ignatius, <em>To the Romans</em>, salutation (ANF I) · <a href="../../library/read/ignatius-romans/">read in the Library</a></cite>
+          </blockquote>
+
+          <p>"Presides over love" — Greek <em>prokathēmenē tēs agapēs</em> — is read by
+          Catholic scholars as an early acknowledgement of Roman primacy, and by others as
+          preeminence <em>in</em> charity: Rome was famously generous with alms, a
+          reputation Dionysius of Corinth attests around AD 170.</p>
+
+          <p><strong>Against:</strong> two facts, both striking.</p>
+
+          <ul>
+            <li><strong>The letter to Rome is the only one of the seven that never mentions
+            a bishop there.</strong> The man whose entire programme is submission to the
+            bishop writes to Rome and has no bishop to name. On the evidence of Ignatius
+            himself, Rome in c. 110 does not yet have the monarchical episcopate that
+            Antioch and the Asian churches already have.</li>
+            <li><strong>He names Peter <em>and</em> Paul, together, as the church's
+            apostolic authorities</strong> — "I do not, as Peter and Paul, issue commandments
+            unto you. They were apostles; I am but a condemned man." Rome's apostolic
+            dignity, at its earliest attestation, is a joint one.</li>
+          </ul>
+        </section>
+
+        <section class="tg-section" id="h-irenaeus">
+          <h2 class="tg-section__heading">c. 180 · Irenaeus, <em>Against Heresies</em> III.3</h2>
+
+          <p>This is the pivot text of the whole debate, and it is genuinely contested. The
+          Greek original is lost; we have a Latin translation whose key phrase is ambiguous.</p>
+
+          <blockquote class="scripture">
+            Since, however, it would be very tedious, in such a volume as this, to reckon up
+            the successions of all the churches, we do put to confusion all those who…
+            assemble in unauthorized meetings; [we do this, I say,] by indicating that
+            tradition derived from the apostles, of the very great, the very ancient, and
+            universally known church founded and organized at Rome by the two most glorious
+            apostles, Peter and Paul… For it is a matter of necessity that every church
+            should agree with this church, on account of its pre-eminent authority, that is,
+            the faithful everywhere, inasmuch as the apostolical tradition has been preserved
+            continuously by those [faithful men] who exist everywhere.
+            <cite>Irenaeus, <em>Against Heresies</em> III.3.2 (ANF I) · <a href="../../library/read/irenaeus-against-heresies/">read in the Library</a></cite>
+          </blockquote>
+
+          <p><strong>For Rome:</strong> this is the strongest early evidence there is. A
+          bishop in Gaul, writing about a doctrinal test, names Rome as the church with
+          which every church must agree, gives its succession list from Linus onward, and
+          grounds this in its apostolic origin. It is not nothing, and the common Protestant
+          move of explaining it away is unconvincing.</p>
+
+          <p><strong>Against a jurisdictional reading:</strong> three points, the first two
+          from the passage itself.</p>
+
+          <ul>
+            <li><strong>Irenaeus's own argument is that <em>any</em> apostolic church would
+            serve.</strong> He says explicitly that listing all the successions would be
+            "very tedious" and that he therefore takes Rome as his example. He then cites
+            Smyrna and Polycarp, and Ephesus, in the same demonstration. Rome is the best
+            available specimen of a universal rule, not the rule itself.</li>
+            <li><strong>The key phrase is ambiguous in the Latin.</strong> <em>Convenire ad</em>
+            can mean "agree with" or "resort to"; <em>potentiorem principalitatem</em> can be
+            "more powerful authority" or "more excellent origin." The ANF rendering above
+            takes one option; the sentence has been construed both ways by competent
+            scholars for four centuries. A doctrine of universal jurisdiction should not
+            rest on a disputed clause in a translation of a lost original.</li>
+            <li><strong>The succession is of teaching, not of jurisdiction.</strong> The
+            whole context is a test for identifying apostolic doctrine against Gnostic
+            claims to secret tradition. It is an epistemological argument, not a
+            constitutional one.</li>
+          </ul>
+        </section>
+
+        <section class="tg-section" id="h-victor">
+          <h2 class="tg-section__heading">c. 190 · Victor and the Easter Controversy</h2>
+
+          <p>Victor of Rome attempted to cut off the churches of Asia from communion over
+          the date of Easter. Eusebius preserves the episode.</p>
+
+          <p><strong>For Rome:</strong> this is an exercise of something very like universal
+          jurisdiction, and it is early. A bishop of Rome believed he could excommunicate
+          entire provinces. Whatever else is true, the claim is not a medieval fabrication.</p>
+
+          <p><strong>Against:</strong> the outcome. Polycrates of Ephesus refused, citing
+          the tradition of the Asian churches and their own apostolic graves. Other bishops,
+          Irenaeus prominent among them, rebuked Victor sharply and urged him "to consider
+          the things of peace, and of neighborly unity and love." The excommunication did
+          not stick, and communion continued. Eusebius records that the parties "parted from
+          each other in peace, both those who observed, and those who did not, maintaining
+          the peace of the whole church."</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The pattern this episode establishes</span>
+            <p class="tg-principle__text">The claim existed early. Acceptance of the claim
+            did not. That distinction runs through the next thousand years and is the single
+            most important thing to hold on to when reading the record: evidence that Rome
+            <em>asserted</em> authority is not evidence that the church <em>recognised</em>
+            it, and the sources very often preserve both the assertion and the refusal in
+            the same paragraph.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-cyprian">
+          <h2 class="tg-section__heading">c. 250s · Cyprian of Carthage and Firmilian</h2>
+
+          <p>Cyprian is the hardest case for the Catholic side, and the textual situation
+          has to be described honestly because it cuts both ways.</p>
+
+          <h3 class="tg-subsection">The two recensions of <em>De Unitate</em> 4</h3>
+
+          <p>Chapter 4 of <em>On the Unity of the Church</em> survives in two forms. One —
+          the "Primacy Text" — contains phrases about the primacy given to Peter and the
+          chair of Peter. The other, the primitive text, does not. Most modern scholarship,
+          Catholic included, holds that both may derive from Cyprian himself, the longer
+          being an earlier draft later revised. The text printed in the standard English
+          <em>Ante-Nicene Fathers</em> edition — the one in this site's Library — is the
+          primitive recension:</p>
+
+          <blockquote class="scripture">
+            And although to all the apostles, after His resurrection, He gives an equal power…
+            yet, that He might set forth unity, He arranged by His authority the origin of
+            that unity, as beginning from one. Assuredly the rest of the apostles were also
+            the same as was Peter, endowed with a like partnership both of honour and power;
+            but the beginning proceeds from unity.
+            <cite>Cyprian, <em>On the Unity of the Church</em> 4 (ANF V, primitive recension) · <a href="../../library/read/cyprian-on-unity/">read in the Library</a></cite>
+          </blockquote>
+
+          <p>This is Cyprian's actual doctrine and it is coherent: the chair of Peter is a
+          symbol of the <em>oneness</em> of the episcopate, and every bishop sits in it.
+          "The episcopate is one, each part of which is held by each one for the whole"
+          (ch. 5). Peter's priority is a picture of unity, not a grant of superiority.</p>
+
+          <h3 class="tg-subsection">And then his practice</h3>
+
+          <p>Whatever one makes of the recensions, Cyprian's conduct is unambiguous. He
+          defied Pope Stephen outright over the rebaptism of heretics, and opened the
+          Council of Carthage in September 256 — eighty-seven bishops present — with a
+          statement that could not be plainer:</p>
+
+          <blockquote class="scripture">
+            For neither does any of us set himself up as a bishop of bishops, nor by tyrannical
+            terror does any compel his colleague to the necessity of obedience; since every
+            bishop, according to the allowance of his liberty and power, has his own proper
+            right of judgment, and can no more be judged by another than he himself can judge
+            another.
+            <cite>Cyprian, opening address, Seventh Council of Carthage (256) — <em>Sententiae Episcoporum</em>, preface (ANF V; Latin in CSEL 3.1, ed. Hartel)</cite>
+          </blockquote>
+
+          <p>And Firmilian of Caesarea, writing to Cyprian in the same controversy, treated
+          Stephen's appeal to succession from Peter as not merely wrong but absurd, and
+          accused him of cutting himself off from unity by his own act.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">What this does and does not show</span>
+            <p>It does not show that Rome had no special standing — Cyprian himself calls
+            Rome "the chief church whence priestly unity takes its source" in another
+            letter, and he corresponded with Rome constantly. What it shows is that in the
+            mid-third century a major bishop, backed by a council of eighty-seven, could
+            regard a Roman claim to bind other bishops as an overreach, say so publicly,
+            act on it, and remain a saint of the church. That is not compatible with claim
+            6 being recognised doctrine in 256.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-nicaea">
+          <h2 class="tg-section__heading">325–381 · Nicaea and Constantinople</h2>
+
+          <p>Two conciliar canons, quoted in full because their plain sense is the argument.</p>
+
+          <blockquote class="scripture">
+            Let the ancient customs in Egypt, Libya, and Pentapolis prevail, that the Bishop
+            of Alexandria have jurisdiction in all these, since the like is customary for the
+            Bishop of Rome also. Likewise in Antioch and the other provinces, let the
+            churches retain their privileges.
+            <cite>Council of Nicaea (325), Canon VI · <a href="../../library/nicaea-i/">read in the Library</a></cite>
+          </blockquote>
+
+          <p>Read plainly: Rome's authority is <em>regional</em> ("the like is customary"),
+          <em>customary</em> rather than divinely instituted, and listed alongside two peers
+          as an illustration of a rule Alexandria also enjoys. The first ecumenical council
+          describes Rome's jurisdiction, and describes it as one of three.</p>
+
+          <blockquote class="scripture">
+            The Bishop of Constantinople, however, shall have the prerogative of honor after
+            the Bishop of Rome; because Constantinople is New Rome.
+            <cite>Council of Constantinople (381), Canon III · <a href="../../library/constantinople-i/">read in the Library</a></cite>
+          </blockquote>
+
+          <p>Constantinople is elevated to second place on an explicitly political rationale
+          — it is the new imperial capital. If Rome's own rank derived from Peter, this is a
+          very strange way for an ecumenical council to reason about the rank immediately
+          below it.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">Fairness on Sardica</span>
+            <p>The Catholic side has a real counterweight in this period. The Council of
+            Sardica (343/4) granted, in canons 3–5, that a deposed bishop could appeal to
+            the bishop of Rome for review — the first formal legal recognition of a Roman
+            appellate jurisdiction beyond its own region. Rome also received and vindicated
+            Athanasius when the East had condemned him, and Athanasius was right.</p>
+            <p>Two qualifications belong with it. Sardica was a Western council whose canons
+            the East largely did not receive. And the canons later caused a scandal: when
+            Rome cited them to the African bishops in the Apiarius affair (417–419) it cited
+            them <em>as canons of Nicaea</em>. The Africans checked their own copies of
+            Nicaea, wrote to Alexandria and Constantinople for authenticated texts, found
+            the canons were not there, and told Rome so.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-chalcedon">
+          <h2 class="tg-section__heading">431–451 · Ephesus, Leo, and Chalcedon</h2>
+
+          <p>The fifth century is where the strongest papal claims and the strongest
+          counter-evidence sit in the same room.</p>
+
+          <h3 class="tg-subsection">The high-water marks</h3>
+
+          <ul>
+            <li><strong>Ephesus (431).</strong> The papal legate Philip declared to the
+            council that "the holy and most blessed Peter, the prince and head of the
+            Apostles… received from Our Lord… the keys of the kingdom… who, down to this day,
+            and for evermore, lives and exercises judgment in his successors." That is claim
+            4 and claim 5 stated explicitly, in a council, in 431.</li>
+            <li><strong>Leo the Great (440–461)</strong> articulated Petrine succession more
+            fully than anyone before him, preaching that Peter should be regarded as present
+            in the person of his unworthy heir, and building the theology of the office on
+            Roman legal concepts of inheritance.</li>
+            <li><strong>Chalcedon (451).</strong> Leo's <em>Tome</em> was read and acclaimed:
+            "Peter has spoken through Leo." Rome supplied the formula that settled the
+            Christological question for the whole church.</li>
+          </ul>
+
+          <h3 class="tg-subsection">And the counter-evidence, from the same council</h3>
+
+          <ul>
+            <li>The bishops did not simply receive the <em>Tome</em> on Leo's authority.
+            They examined it against Cyril of Alexandria, whose orthodoxy was the agreed
+            standard; a group of Illyrian and Palestinian bishops raised objections that had
+            to be answered before it was accepted. The acclamation is a verdict about the
+            content, reached after scrutiny — "Peter has spoken through Leo" because what
+            Leo said was found to be true.</li>
+            <li>The same council passed Canon XXVIII — over Rome's protest — and its
+            reasoning is the sharpest datum in the whole record:</li>
+          </ul>
+
+          <blockquote class="scripture">
+            For the Fathers rightly granted prerogatives to the throne of old Rome, because it
+            was the royal city. And the One Hundred and Fifty most religious Bishops, actuated
+            by the same consideration, gave equal prerogatives to the most holy throne of New
+            Rome, justly judging that the city which is honored with the Sovereignty and the
+            Senate… should in ecclesiastical matters also be magnified as she is, and rank next
+            after her.
+            <cite>Council of Chalcedon (451), Canon XXVIII · <a href="../../library/chalcedon-451/">read in the Library</a></cite>
+          </blockquote>
+
+          <p>An ecumenical council states, as its explicit rationale, that Rome's
+          prerogatives were granted <em>by the Fathers</em> and <em>because Rome was the
+          imperial city</em>. Not because of Peter. Rome objected; Leo refused to confirm
+          the canon; the canon stood in the East regardless.</p>
+        </section>
+
+        <section class="tg-section" id="h-gregory">
+          <h2 class="tg-section__heading">c. 590–604 · Gregory the Great</h2>
+
+          <p>When the patriarch of Constantinople took the title "ecumenical" — universal —
+          patriarch, Gregory of Rome objected in the strongest terms available to him:
+          whoever calls himself, or desires to be called, universal priest is in his elation
+          the forerunner of Antichrist. He refused the title for Constantinople and refused
+          it for himself, preferring <em>servus servorum Dei</em>, servant of the servants
+          of God — a formula the papacy has used ever since.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">In fairness, both ways</span>
+            <p>This is often deployed as a knockout and it is not one. Gregory also
+            exercised very considerable authority over other sees, intervened widely, and
+            could speak of the see of Peter as having a care extending over the whole
+            church. His objection was to a specific title he read as implying that other
+            bishops were not truly bishops — which is not identical to the 1870 definition.</p>
+            <p>What remains, and is not neutralised, is that the greatest pope of the
+            patristic West thought the phrase "universal bishop" was a title no Christian
+            minister should bear. Whether or not that touches <em>Pastor Aeternus</em>
+            technically, it tells you what the office understood itself to be in 595.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-honorius">
+          <h2 class="tg-section__heading">638–681 · Honorius</h2>
+
+          <p>Pope Honorius I, in correspondence with Sergius of Constantinople, endorsed
+          language later judged Monothelite. Forty-three years after his death, an
+          ecumenical council condemned him by name:</p>
+
+          <blockquote class="scripture">
+            And with these we define that there shall be expelled from the holy Church of God
+            and anathematized Honorius who was some time Pope of Old Rome, because of what we
+            found written by him to Sergius, that in all respects he followed his view and
+            confirmed his impious doctrines.
+            <cite>Third Council of Constantinople (681), Session XIII</cite>
+          </blockquote>
+
+          <p>Pope Leo II confirmed the council's acts and, in his letter of confirmation,
+          charged Honorius with having failed to sanctify the apostolic church with the
+          teaching of apostolic tradition and with having permitted its purity to be
+          polluted by profane treachery.</p>
+
+          <p><strong>The standard Catholic reply</strong> is internally coherent and should
+          be stated: Honorius was condemned for negligence — for failing to extinguish the
+          flame — rather than for defining heresy; his letters were private correspondence,
+          not <em>ex cathedra</em> acts; and under the 1870 conditions they would not
+          qualify. That is a fair reading of the letters.</p>
+
+          <p><strong>What it does not remove</strong> is the shape of the episode. An
+          ecumenical council judged a pope, and a pope ratified the judgment. The anathema
+          against Honorius was then written into the profession of faith that each new pope
+          swore in the <em>Liber Diurnus</em> from roughly the seventh century to the
+          eleventh, and it survived in the lessons for the feast of Leo II in the Roman
+          Breviary until it was removed. For four centuries, part of becoming pope was
+          anathematising a predecessor.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">And Honorius is not alone</span>
+            <p>Two more cases belong here for completeness. <strong>Vigilius</strong>
+            (537–555) changed position repeatedly in the Three Chapters controversy, was
+            excommunicated by an African synod, and finally submitted to the Second Council
+            of Constantinople. <strong>Zosimus</strong> (417–418) initially pronounced
+            Caelestius and Pelagius orthodox and reversed himself only after the African
+            bishops pressed him hard. Augustine's famous line about that affair —
+            <em>causa finita est</em>, "the case is closed" (Sermon 131.10) — is regularly
+            quoted as "Rome has spoken, the case is closed." Augustine did not write those
+            first three words.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-forgeries">
+          <h2 class="tg-section__heading">9th–15th c. · The Forgeries</h2>
+
+          <p>The medieval consolidation of papal authority rested substantially on two
+          bodies of documents now universally acknowledged to be forgeries.</p>
+
+          <div class="tg-timeline">
+            <div class="tg-timeline__row"><span class="tg-timeline__date">c. 850</span><span><strong>The Pseudo-Isidorian Decretals</strong> — a large collection of fabricated papal letters, purportedly from the earliest centuries, asserting sweeping Roman jurisdiction and the right of appeal to Rome over the heads of metropolitans. Cited as authentic for seven hundred years.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">c. 750–850</span><span><strong>The Donation of Constantine</strong> — a forged imperial grant of primacy over the other patriarchates and temporal sovereignty in the West.</span></div>
+            <div class="tg-timeline__row"><span class="tg-timeline__date">1433 / 1440</span><span>Exposed as forgeries — Nicholas of Cusa on historical grounds, Lorenzo Valla on philological ones. Both were Catholics; Cusa became a cardinal.</span></div>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">What this proves and what it does not</span>
+            <p class="tg-principle__text">It does not disprove the doctrine. A true claim can
+            be defended with bad evidence, and the modern Catholic case does not rest on
+            these documents. What it does is disable one specific argument permanently: no
+            appeal to the <em>unbroken continuity</em> of the papal claim can be made without
+            accounting for the fact that a substantial portion of the medieval evidence for
+            that continuity was manufactured, and that Catholic scholarship is what exposed
+            it.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-schism">
+          <h2 class="tg-section__heading">1378–1417 · The Great Western Schism</h2>
+
+          <p>This is the sharpest practical problem in the record, and it is not a polemical
+          construction — it is the Catholic Church's own history.</p>
+
+          <p>From 1378 there were two claimants to the papacy, each with obedient nations,
+          bishops, and canonised saints behind him. From 1409 there were three. For
+          thirty-nine years no Christian on earth could say with certainty who the pope
+          was, and the question could not be settled by appeal to the papacy, because the
+          papacy was the thing in dispute.</p>
+
+          <p>It was resolved by a council. The Council of Constance, in its fifth session,
+          declared:</p>
+
+          <blockquote class="scripture">
+            …representing the Catholic church militant, it holds power immediately from
+            Christ, and that anyone of whatsoever state or dignity, even if it be the papal,
+            is bound to obey it in matters which pertain to the faith, the rooting out of the
+            said schism, and the general reform of the church in head and members.
+            <cite>Council of Constance, <em>Haec Sancta Synodus</em>, session V (6 April 1415)</cite>
+          </blockquote>
+
+          <p>Constance deposed two claimants, accepted the resignation of a third, and
+          elected Martin V. The line of succession Rome recognises as valid today was
+          settled by a council acting on the premise that a council outranks a pope — a
+          premise later popes rejected, and which Catholic theology has been trying to
+          integrate ever since.</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The argument this retires</span>
+            <p class="tg-principle__text">The most common practical case for the papacy is
+            that it supplies a certainty Protestantism cannot: a living voice that can tell
+            you what the church teaches. For thirty-nine years, that voice spoke in triplicate
+            and contradicted itself, and the only instrument that could resolve it was the
+            one the office denies is superior to it. Whatever the papacy is for, it is not a
+            guarantee against exactly this.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="h-vatican">
+          <h2 class="tg-section__heading">1870–today · Vatican I and After</h2>
+
+          <p>Two things are worth knowing about 1870 that rarely make it into popular
+          argument on either side.</p>
+
+          <p><strong>The definition was contested inside the council.</strong> A substantial
+          minority of bishops — including a large part of the German, Austro-Hungarian,
+          French and American episcopate, and historians of the calibre of Hefele — opposed
+          the definition as inopportune or as historically unsupportable. Around sixty
+          left Rome before the final vote rather than vote against it. The council was
+          suspended within weeks when Italian troops entered Rome, so it never took up the
+          treatment of the bishops that would have balanced the treatment of the pope.
+          Vatican II supplied that ninety-five years later in <em>Lumen Gentium</em> 22–23,
+          setting papal primacy inside episcopal collegiality.</p>
+
+          <p><strong>Rome itself now treats the form as open.</strong> In 1995 John Paul II
+          did something without real precedent:</p>
+
+          <blockquote class="scripture">
+            I am convinced that I have a particular responsibility in this regard, above all in
+            acknowledging the ecumenical aspirations of the majority of the Christian
+            Communities, and in heeding the request made of me to find a way of exercising the
+            primacy which, while in no way renouncing what is essential to its mission, is
+            nonetheless open to a new situation.
+            <cite>John Paul II, <em>Ut Unum Sint</em> §95 (25 May 1995)</cite>
+          </blockquote>
+
+          <p>That invitation was taken up. In June 2024 the Dicastery for Promoting Christian
+          Unity published <em>The Bishop of Rome: Primacy and Synodality in the Ecumenical
+          Dialogues and in the Responses to the Encyclical</em> Ut Unum Sint — a synthesis of
+          thirty years of replies from Orthodox, Anglican, Lutheran, Reformed and other
+          communions. It discusses, without dismissing them, calls for a "re-reception" of
+          Vatican I that would read its definitions in their historical context, and proposes
+          a differentiated exercise of the primacy.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">Why a Protestant should care about that document</span>
+            <p>Because it concedes the shape of the problem. The substance is held to be
+            unalterable, but the <em>form</em> — how the primacy is exercised, and how much
+            of 1870's phrasing was shaped by the nineteenth-century crisis it was written in
+            — is treated by Rome's own ecumenical office as open for discussion. Anyone
+            arguing that the Catholic position is a monolith that has never examined itself
+            should read it first.</p>
+          </div>
+        </section>
+      </section><!-- /part-3 -->
+
+      <!-- ══════════════════════════════════════════════════════
+           PART IV — RULES OF EVIDENCE
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="part-4" aria-labelledby="part-4-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Part IV</span>
+          <h2 class="tg-part__title" id="part-4-h">The Real Crux: Rules of Evidence</h2>
+          <p class="tg-part__intro">The two sides largely agree about the facts in Part III.
+          What they disagree about is what the facts are allowed to prove. That is why five
+          hundred years of argument have not settled it — the rules of evidence are
+          themselves the thing in dispute.</p>
+        </div>
+
+        <nav class="tg-toc tg-toc--sticky" aria-label="Part IV contents">
+          <h2 class="tg-toc__title">In this part</h2>
+          <ol class="tg-toc__list">
+            <li><a href="#newman">Newman: the Acorn and the Oak</a></li>
+            <li><a href="#vincent">Vincent: What the Whole Church Received</a></li>
+            <li><a href="#canon">The Canon Objection, Taken Seriously</a></li>
+            <li><a href="#orthodox">The Orthodox Witness</a></li>
+            <li><a href="#three-questions">Three Questions Each Side Must Answer</a></li>
+          </ol>
+        </nav>
+
+        <section class="tg-section" id="newman">
+          <h2 class="tg-section__heading">Newman: the Acorn and the Oak</h2>
+
+          <p>John Henry Newman's <em>Essay on the Development of Christian Doctrine</em>
+          (1845) is the serious Catholic answer to everything in Part III, and it deserves
+          better than the dismissal it usually gets.</p>
+
+          <p>The argument: doctrine develops. The church does not receive a finished system
+          of propositions; it receives a living deposit, and comes over time to understand
+          explicitly what it always held implicitly. The acorn is not the oak, but the oak
+          is what the acorn was <em>for</em>. On this account, the absence of a fully
+          articulated papacy in the second century no more disproves it than the absence of
+          <em>homoousios</em>, or of a two-natures formula, or of a canon list, disproves
+          those. Newman supplied seven notes for distinguishing genuine development from
+          corruption — preservation of type, continuity of principles, assimilative power,
+          logical sequence, anticipation of its future, conservative action on its past, and
+          chronic vigour.</p>
+
+          <p>This is not special pleading. It is a real account of how doctrinal history
+          actually looks, and any Protestant who argues "not explicit in the second century,
+          therefore false" is holding a rule that would also delete the Nicene formula, the
+          doctrine of the two natures, and the canon of the New Testament.</p>
+        </section>
+
+        <section class="tg-section" id="vincent">
+          <h2 class="tg-section__heading">Vincent: What the Whole Church Received</h2>
+
+          <p>The serious answer back is older than the challenge. Vincent of Lérins, writing
+          in 434 — a Catholic monk, working out how to tell orthodoxy from novelty:</p>
+
+          <blockquote class="scripture">
+            Moreover, in the Catholic Church itself, all possible care must be taken, that we
+            hold that faith which has been believed everywhere, always, by all. For that is
+            truly and in the strictest sense "Catholic," which, as the name itself and the
+            reason of the thing declare, comprehends all universally. This rule we shall
+            observe if we follow universality, antiquity, consent.
+            <cite>Vincent of Lérins, <em>Commonitory</em> II.6 (NPNF2 XI) · <a href="../../library/read/vincent-of-lerins-commonitory/">read in the Library</a></cite>
+          </blockquote>
+
+          <p>Apply the three tests to papal supremacy and to Nicene Trinitarianism and they
+          come apart:</p>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>Test</th><th>Nicene Trinitarianism</th><th>Papal supremacy (claims 6–7)</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Universality</strong></td>
+                <td>Confessed by East and West alike, and by every continuing communion since — Catholic, Orthodox, Oriental, Protestant.</td>
+                <td>Never received in the East; rejected by half the church; the presenting issue of the schism that split Christendom.</td>
+              </tr>
+              <tr>
+                <td><strong>Antiquity</strong></td>
+                <td>The material is in the New Testament; the controversy is about how to say it.</td>
+                <td>Claims 6 and 7 are not visible in the first three centuries, and the record contains positive counter-evidence.</td>
+              </tr>
+              <tr>
+                <td><strong>Consent</strong></td>
+                <td>Defined by council and received by the whole church, over decades, after fierce dispute.</td>
+                <td>Defined at a council of one communion, in 1870, against sustained internal opposition, with the other communions absent.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The distinction that carries the weight</span>
+            <p class="tg-principle__text">Newman is right that doctrine develops. Vincent
+            supplies the test for which developments are the church's and which are one
+            party's. A development that the whole church ratifies conciliarly looks
+            categorically different from one defined <em>against</em> sustained internal
+            opposition and never received by the other half. The Trinity passes the test the
+            papacy fails, and it fails it on the very ground — catholicity — that the papacy
+            exists to secure.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="canon">
+          <h2 class="tg-section__heading">The Canon Objection, Taken Seriously</h2>
+
+          <p>The strongest card the Catholic side holds is not Matthew 16. It is this:</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">The objection</span>
+            <div class="tg-point__heading">You accept a sixty-six book canon on the authority
+            of a church whose authority you deny.</div>
+            <p>There is no inspired table of contents. Hebrews, James, 2 Peter, 2–3 John,
+            Jude and Revelation were disputed for centuries. The list Protestants use for the
+            New Testament is the list the fourth-century church settled on — the same church
+            with bishops, councils, and a see of Rome. If that church could not be trusted to
+            get ecclesiology right, why is it trusted to get the canon right? And if
+            Scripture is the sole final norm, what norms the list?</p>
+          </div>
+
+          <p>The objection is real, and glib answers are worse than none. Three replies of
+          differing strength:</p>
+
+          <ul>
+            <li><strong>Recognition is not creation.</strong> The classical Protestant claim
+            is that the church <em>received</em> the canon rather than conferring authority
+            on it — the books were authoritative as apostolic before any list existed, and
+            the councils recorded a consensus that had already largely formed by use. This is
+            a real distinction, though it does not eliminate the church's role; it
+            characterises it.</li>
+            <li><strong>The canon is a different kind of judgment.</strong> Identifying which
+            documents are apostolic is a historical question about a closed set with
+            observable evidence — authorship, antiquity, catholic use. Defining an office
+            with universal immediate jurisdiction is a constitutional claim about the present
+            with no comparable evidentiary base. That the church could do the first well
+            does not entail it did the second well.</li>
+            <li><strong>And the church that settled the canon is not the church that defined
+            1870.</strong> The fourth-century consensus was reached by the undivided
+            church — East and West, in conciliar process, by the very method Vincent
+            describes. The papal definitions were not. A Protestant is not being arbitrary in
+            receiving the first and refusing the second; he is applying one consistent
+            standard, and it is the standard the ancient church itself used.</li>
+          </ul>
+
+          <div class="tg-note">
+            <span class="tg-note__label">What honesty requires here</span>
+            <p>These replies are good, but they are not costless. A Protestant does depend on
+            the judgment of the early church at the point of the canon, and should say so
+            without embarrassment rather than pretending to a self-authenticating list. The
+            position is not "the church has no authority"; it is "the church's authority is
+            real, ministerial, and answerable to the apostolic word it received." Anyone
+            arguing this question should be able to say that sentence out loud without
+            flinching, because it is what the Reformers actually held. See the companion
+            study <a href="../church-authority/">Church Authority, Scripture, and
+            Tradition</a> for the longer treatment.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="orthodox">
+          <h2 class="tg-section__heading">The Orthodox Witness</h2>
+
+          <p>This is the most important consideration in the entire debate, and Protestant
+          treatments routinely skip it.</p>
+
+          <p>The Eastern Orthodox churches accept everything Protestants are usually accused
+          of rejecting out of modern individualism: apostolic succession, the threefold
+          ministry, sacramental theology, the real presence, tradition as authoritative
+          alongside Scripture, the seven ecumenical councils, the veneration of saints, the
+          Theotokos, monasticism, and a high doctrine of the visible church. They are not
+          low-church, not sixteenth-century, and not anti-traditional by any definition.</p>
+
+          <p>And they reject universal jurisdiction and papal infallibility — and always
+          have. Their position: Rome held a genuine primacy. First among equals. The senior
+          see, whose bishop presided in honour, whose voice carried unique weight, and to
+          whom appeal could be made. But not jurisdiction over the other patriarchates, and
+          not a charism of infallibility residing in one man apart from the church's
+          reception.</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">Why this is decisive for how the argument is framed</span>
+            <p class="tg-principle__text">It makes it impossible to explain the rejection of
+            the papacy as a by-product of the Reformation, of private judgment, of
+            nationalism, or of a low view of tradition. A communion that shares Rome's entire
+            sacramental and traditional framework, and which was there for the whole first
+            millennium, reached the opposite conclusion about claims 6 and 7 — and reached it
+            from inside the tradition rather than in reaction against it. The Protestant
+            objection is not a novelty; it is the second half of an argument the East was
+            already having.</p>
+          </div>
+
+          <p>It also supplies a constructive model that neither pure papalism nor pure
+          congregationalism offers: a primacy that is real, honoured, and useful — a court of
+          appeal, a voice of witness, a focus of unity — without being a jurisdiction. That
+          is roughly what the first millennium looks like when read without either
+          confession's spectacles, and it is roughly what Rome's own 2024 study document is
+          circling.</p>
+        </section>
+
+        <section class="tg-section" id="three-questions">
+          <h2 class="tg-section__heading">Three Questions Each Side Must Answer</h2>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>To the Catholic</th><th>To the Protestant</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>If claims 6–7 were part of the deposit, why did Cyprian and eighty-seven
+                bishops, Nicaea's canon 6, Chalcedon's canon 28, and Gregory the Great all
+                speak as though they were not — and none of them was corrected for it?</td>
+                <td>If the church that gave you the canon was so wrong about its own
+                constitution, on what principled basis do you trust its judgment about which
+                books are Scripture?</td>
+              </tr>
+              <tr>
+                <td>If the office guarantees certainty, what was it guaranteeing between 1378
+                and 1417 — and by what authority did a council settle it?</td>
+                <td>If Scripture is clear, why has <em>sola scriptura</em> produced a
+                fragmented and mutually contradicting set of churches, and what is your
+                actual mechanism for adjudicating a doctrinal dispute?</td>
+              </tr>
+              <tr>
+                <td>Why does Peter, in the one letter he wrote, describe himself as a fellow
+                elder and forbid to church leaders the posture the office later assumed?</td>
+                <td>Why do you keep the creeds, the canon, and the Christological
+                definitions of councils whose ecclesial authority you deny?</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Neither column is unanswerable. Both columns are uncomfortable. Anyone who finds
+          only one of them uncomfortable has not understood the other side.</p>
+        </section>
+      </section><!-- /part-4 -->
+
+      <!-- ══════════════════════════════════════════════════════
+           PART V — THE GROUND
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="part-5" aria-labelledby="part-5-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Part V</span>
+          <h2 class="tg-part__title" id="part-5-h">The Ground to Stand On</h2>
+          <p class="tg-part__intro">A verdict on each of the seven claims, the single thread
+          that runs through the biblical material, the positive doctrine of church authority
+          that a believer can actually live in, and an honest statement of what this
+          conclusion depends on and what would overturn it.</p>
+          <p class="tg-part__verse"><a class="ref" data-ref="Colossians 1:18">Colossians 1:18</a> · <a class="ref" data-ref="1 Peter 5:1-4">1 Peter 5:1–4</a> · <a class="ref" data-ref="Hebrews 13:17">Hebrews 13:17</a></p>
+        </div>
+
+        <nav class="tg-toc tg-toc--sticky" aria-label="Part V contents">
+          <h2 class="tg-toc__title">In this part</h2>
+          <ol class="tg-toc__list">
+            <li><a href="#verdict">The Verdict, Claim by Claim</a></li>
+            <li><a href="#thread">The Thread: Christ Holds the Keys</a></li>
+            <li><a href="#positive">Five Planks You Can Stand On</a></li>
+            <li><a href="#prior">Naming the Prior — and What Would Change It</a></li>
+            <li><a href="#charity">How to Hold This Toward Catholic Believers</a></li>
+          </ol>
+        </nav>
+
+        <section class="tg-section" id="verdict">
+          <h2 class="tg-section__heading">The Verdict, Claim by Claim</h2>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>#</th><th>Claim</th><th>Verdict and why</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Peter's primacy among the Twelve</td>
+                <td><strong>Well supported.</strong> First in all four lists, renamed by
+                Christ with a commission attached, given the keys, commissioned to shepherd,
+                prayed for by name, and dominant in Acts 1–12. Protestants routinely minimise
+                this beyond what the text permits.</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Peter died in Rome</td>
+                <td><strong>Historically solid.</strong> 1 Clement 5, Ignatius, Dionysius of
+                Corinth, Gaius's "trophies," and the natural reading of
+                <a class="ref" data-ref="1 Peter 5:13">1 Peter 5:13</a>. Contesting this is a
+                waste of a Protestant's credibility.</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Peter as monarchical bishop of Rome</td>
+                <td><strong>Weak.</strong> The office did not exist in that form when Peter
+                died. 1 Clement uses "bishop" and "presbyter" interchangeably in AD 96;
+                Ignatius, whose whole theme is the bishop, has no Roman bishop to name around
+                110. Catholic historians largely grant that Rome was led by a college of
+                presbyters into the second century.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Primacy as a transmissible office</td>
+                <td><strong>A reasonable inference Scripture never draws.</strong> Isaiah 22
+                and Acts 1 make it arguable. But the New Testament's own use of the Isaiah 22
+                key gives it to Christ (<a class="ref" data-ref="Revelation 3:7">Rev 3:7</a>);
+                the qualification for filling an apostolic place is non-transmissible
+                (<a class="ref" data-ref="Acts 1:21-22">Acts 1:21–22</a>); James's death
+                produces no replacement; and the letters that organise the post-apostolic
+                church install elders and overseers with nothing above them.</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Transmission exclusively to Rome</td>
+                <td><strong>Tradition, not Scripture — and the early tradition says something
+                milder.</strong> The second- and third-century sources read far more "Rome is
+                preeminent" than "Rome alone is Peter's heir." Antioch also claimed Peter;
+                Cyprian thought every bishop's chair was Peter's chair.</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Universal, ordinary, immediate jurisdiction</td>
+                <td><strong>Counter-evidenced.</strong> Nicaea describes Rome's authority as
+                regional and customary; Chalcedon grounds its prerogatives in imperial status;
+                Cyprian with eighty-seven bishops denies any bishop of bishops; Victor's
+                excommunication failed; Gregory calls the universal title a mark of Antichrist;
+                the East never received it.</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Infallibility as defined in 1870</td>
+                <td><strong>Counter-evidenced, and the counterexamples bite hardest.</strong>
+                Honorius condemned by a council and by his successor; Zosimus reversed;
+                Vigilius humiliated; the Schism; Constance. The 1870 conditions are internally
+                coherent, but they were formulated afterwards, partly in view of exactly these
+                cases — which is what makes them look, historically, like a boundary drawn
+                around the damage rather than a description of what the church had always
+                believed.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The fair summary</span>
+            <p class="tg-principle__text">There is genuine, defensible ground to say the
+            papacy as now constituted is a development that goes beyond what Christ
+            instituted, and that at specific points it runs against the grain of what
+            Scripture teaches about authority in the church. That position is held by the
+            Orthodox East, by the Reformation churches, and by a number of Catholic
+            historians who then locate their assent in the Church's authority rather than in
+            the historical record — which is an intellectually honest place to stand and
+            worth respecting.</p>
+            <p class="tg-principle__text">But the maximal negative — that the papacy is pure
+            invention, a Constantinian corruption, that Rome was nobody until the Middle Ages
+            — is not fair to the evidence either, and a believer who argues that way will be
+            embarrassed by the first serious Catholic they meet.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="thread">
+          <h2 class="tg-section__heading">The Thread: Christ Holds the Keys</h2>
+
+          <p>Running underneath every text in Parts I and II there is one line, and it is the
+          most right thread available here. It is not primarily a thread <em>against</em>
+          Rome. It is a positive account of what the New Testament does with authority.</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">One · The key of David belongs to the King</span>
+            <p>Isaiah's steward oracle is picked up exactly once in the New Testament, and
+            it lands on Jesus — "who holds the key of David. What He opens no one can shut"
+            (<a class="ref" data-ref="Revelation 3:7">Rev 3:7</a>). He holds the keys of Death
+            and Hades personally (<a class="ref" data-ref="Revelation 1:18">Rev 1:18</a>) —
+            which is why the gates of Hades cannot prevail
+            (<a class="ref" data-ref="Matthew 16:18">Matt 16:18</a>). The church's security is
+            not a chain of custody. It is whose hand the key is in.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Two · The keys Peter received were used to open doors, and the doors stayed open</span>
+            <p>Watch what Peter actually does with them in Acts. He opens the kingdom to Israel
+            at Pentecost (Acts 2), to the Samaritans (Acts 8), and to the Gentiles at
+            Cornelius's house (Acts 10) — and he says so himself at the council: "God made a
+            choice among you that the Gentiles would hear from my lips the message of the
+            gospel and believe" (<a class="ref" data-ref="Acts 15:7">Acts 15:7</a>). That is a
+            foundational act, and foundations are laid once. It is precisely the sense in
+            which Peter is a rock the church is built on — and precisely why the New Testament
+            has no mechanism for a successor to it. The door does not need opening twice.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Three · What continues is the deposit, carried by ordinary plural office</span>
+            <p>The New Testament is intensely interested in continuity — but the thing handed
+            on is <em>the word</em>: "the things that you have heard me say among many
+            witnesses, entrust these to faithful men who will be qualified to teach others as
+            well" (<a class="ref" data-ref="2 Timothy 2:2">2 Tim 2:2</a>). The carriers are
+            elders and overseers, appointed in every town, plural in each congregation,
+            qualified by character, and accountable
+            (<a class="ref" data-ref="Titus 1:5-7">Titus 1:5–7</a>;
+            <a class="ref" data-ref="Acts 20:17">Acts 20:17</a>, <a class="ref" data-ref="Acts 20:28">28</a>;
+            <a class="ref" data-ref="Philippians 1:1">Phil 1:1</a>). Succession of doctrine,
+            yes, emphatically. Succession to Peter's chair, nowhere.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">Four · The one who was given the keys tells us how to hold office</span>
+            <p>And this is the hinge. If any man could have claimed monarchy, it was Peter.
+            What he wrote is: "As a fellow elder… I appeal to the elders among you… not
+            lording it over those entrusted to you, but being examples to the flock. And when
+            the Chief Shepherd appears…"
+            (<a class="ref" data-ref="1 Peter 5:1-4">1 Pet 5:1–4</a>). The rock describes
+            himself as one stone among living stones
+            (<a class="ref" data-ref="1 Peter 2:5">1 Pet 2:5</a>), the shepherd describes
+            himself as an under-shepherd, and the man given the keys tells church leaders not
+            to lord it — using the exact verb Christ used of the Gentile kings.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">The thread in one sentence</span>
+            <p class="tg-principle__text">Christ alone holds the keys and remains the head of
+            his church; he gave the apostles a once-laid foundation, with Peter first among
+            them to open the doors; and what he left standing afterwards is not a throne but
+            a plural, local, accountable, serving eldership carrying an apostolic word that
+            outranks all of them — which is why the church is preserved not by the
+            indefectibility of one office-holder but by the faithfulness of the Chief Shepherd
+            who has not yet appeared.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="positive">
+          <h2 class="tg-section__heading">Five Planks You Can Stand On</h2>
+
+          <p>The question was not only "is the papacy true" but "what is the best ground for
+          a believer regarding church authority." Those are different questions, and the
+          second is more important. Answering the first negatively settles nothing by itself
+          — a believer needs somewhere to stand, not merely somewhere to refuse.</p>
+
+          <div class="tg-application">
+            <span class="tg-application__label">Plank 1 · Christ is the head, and the position is filled</span>
+            <p>"He is the head of the body, the church… so that in all things He may have
+            preeminence" (<a class="ref" data-ref="Colossians 1:18">Col 1:18</a>;
+            <a class="ref" data-ref="Ephesians 1:22">Eph 1:22</a>). The church has never for
+            one hour been without its head, in any century, under any pope or none. This is
+            the first plank because it is the one that removes the anxiety. The visible unity
+            of the church does not rest on a man, and its survival never has.</p>
+          </div>
+
+          <div class="tg-application">
+            <span class="tg-application__label">Plank 2 · Scripture is the final norm — which is not the same as the only authority</span>
+            <p>The Reformation claim was <em>norma normans non normata</em>: the norm that
+            norms and is not normed. Creeds, councils, confessions, elders and traditions all
+            have real authority; they are simply answerable. "Hold to the traditions that you
+            were taught by us" (<a class="ref" data-ref="2 Thessalonians 2:15">2 Thess
+            2:15</a>) and "the church of the living God, the pillar and foundation of the
+            truth" (<a class="ref" data-ref="1 Timothy 3:15">1 Tim 3:15</a>) are in the same
+            Bible as the Bereans checking Paul against the Scriptures
+            (<a class="ref" data-ref="Acts 17:11">Acts 17:11</a>). <em>Sola scriptura</em> was
+            never <em>solo scriptura</em> — me and my Bible, with fifteen centuries deleted.
+            That distortion is a real error, it has done real damage, and Rome is right to
+            press it.</p>
+          </div>
+
+          <div class="tg-application">
+            <span class="tg-application__label">Plank 3 · Submit to actual, local, plural, accountable authority</span>
+            <p>This is where the doctrine becomes practical, and where most Protestants who
+            are sound on paper are disobedient in fact. "Obey your leaders and submit to them,
+            for they watch over your souls as those who must give an account"
+            (<a class="ref" data-ref="Hebrews 13:17">Heb 13:17</a>). Not a suggestion. The New
+            Testament knows nothing of a Christian with no church, no elders, and no one with
+            standing to correct him. If your objection to the papacy is that no man should
+            have authority over your conscience, you have not read the New Testament; you have
+            read a pamphlet. The biblical pattern is authority that is <em>real</em> — with
+            teeth, up to and including exclusion
+            (<a class="ref" data-ref="Matthew 18:17">Matt 18:17</a>) — and simultaneously
+            <em>plural, local, qualified by character, and answerable to the word.</em></p>
+          </div>
+
+          <div class="tg-application">
+            <span class="tg-application__label">Plank 4 · Decide together — the conciliar pattern</span>
+            <p>Acts 15 is the only decision procedure the New Testament actually shows us:
+            the matter is aired, witnesses testify, Scripture is consulted, a judgment is
+            framed, and it goes out from "the apostles and elders, with the whole church"
+            under the words "It seemed good to the Holy Spirit and to us"
+            (<a class="ref" data-ref="Acts 15:22">Acts 15:22</a>,
+            <a class="ref" data-ref="Acts 15:28">28</a>). That is why the ecumenical creeds
+            carry the weight they do — not because a see decreed them, but because the church
+            examined and received them. Hold the creeds. Say them. They are yours.</p>
+          </div>
+
+          <div class="tg-application">
+            <span class="tg-application__label">Plank 5 · Catholicity is a duty, not a slogan</span>
+            <p>"One holy catholic and apostolic church" is in the creed you confess. If the
+            objection to Rome is that it broke catholicity by defining against the rest, then
+            a Protestant who treats the two thousand years before his own tradition as an
+            embarrassment has made the same mistake in the opposite direction. Read the
+            Fathers. Learn from the East. Take the historic church as family rather than as
+            an opponent's evidence. The strongest version of this position is the one that
+            can state the other side's best case without flinching — and the one most at home
+            in Christian history, not least at home in it.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="prior">
+          <h2 class="tg-section__heading">Naming the Prior — and What Would Change It</h2>
+
+          <p>Here is the thing most treatments of this subject will not say. The verdict above
+          is not derived from the evidence alone. It depends on a prior conviction about how
+          God preserves his church, and that prior is doing real work.</p>
+
+          <div class="tg-point">
+            <span class="tg-point__label">If Scripture is the sole final norm</span>
+            <p>…and the apostolic deposit is complete and inscripturated, then silence and
+            tension in the record are decisive. An office not visible in the sources for
+            three centuries, and contradicted at points by them, has to justify itself —
+            and cannot.</p>
+          </div>
+
+          <div class="tg-point">
+            <span class="tg-point__label">If Christ endowed his church with a living teaching office</span>
+            <p>…that carries the deposit forward, then silence is exactly what an acorn
+            looks like, development is the norm rather than the problem, and the
+            counterexamples are the ordinary friction of history rather than refutations.</p>
+          </div>
+
+          <p>Neither side is being irrational. They are applying different rules of evidence,
+          and the rules are themselves the thing in dispute. That is not a reason to shrug —
+          this study has given a verdict and stands by it — but it is a reason to hold the
+          verdict without contempt.</p>
+
+          <div class="tg-note">
+            <span class="tg-note__label">What would move this conclusion</span>
+            <p>A conclusion that cannot say what would change it is a loyalty, not an
+            argument. Three things would substantially move it:</p>
+            <p><strong>(a)</strong> Clear second- or third-century evidence, from outside
+            Rome, of the church treating a Roman judgment as binding <em>because</em> of the
+            Petrine office — not merely deferring to Rome's weight, but acknowledging an
+            obligation. Victor's failed excommunication and Cyprian's defiance are currently
+            the closest tests, and both went the other way.</p>
+            <p><strong>(b)</strong> A demonstration that <a class="ref" data-ref="Revelation 3:7">Revelation
+            3:7</a> and <a class="ref" data-ref="Matthew 16:19">Matthew 16:19</a> can be shown
+            from the text to be complementary in the specific sense the steward reading needs —
+            that the New Testament itself understands the key to be delegated onward. At
+            present the inference runs the other way.</p>
+            <p><strong>(c)</strong> An account of Vincent's canon on which papal supremacy
+            passes it. This is the most likely place for the Catholic case to be strengthened,
+            and Rome's own 2024 study document is working in that direction.</p>
+          </div>
+        </section>
+
+        <section class="tg-section" id="charity">
+          <h2 class="tg-section__heading">How to Hold This Toward Catholic Believers</h2>
+
+          <p>Four things, and they matter as much as the argument.</p>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">Get the disagreement in the right place</span>
+            <p class="tg-principle__text">The papacy is a serious error about the
+            <em>shape</em> of authority in the church. It is not, by itself, a denial of the
+            gospel. The Reformation's central material disagreement with Rome was about
+            justification, not about ecclesiology — see the companion study
+            <a href="../justification/">Justification by Faith</a> — and the ecclesiological
+            question is the formal one that keeps the material one unresolved. Getting these
+            in the right order prevents a great deal of unnecessary heat.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">Assume the person in front of you knows their own faith</span>
+            <p class="tg-principle__text">Most Catholic believers are not defending
+            <em>Pastor Aeternus</em> chapter 3 from memory; they are worshipping Christ in
+            the church that baptised them. An argument that requires them to be stupid or
+            dishonest is a bad argument, and it will be obvious to them before it is obvious
+            to you.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">Concede what is true, immediately and without payment</span>
+            <p class="tg-principle__text">Peter's primacy is real. Peter died in Rome. Rome's
+            preeminence is early. Rome's doctrinal record in the Christological controversies
+            was better than most of its critics'. The <em>petros/petra</em> argument is bad
+            and should be dropped. Say all of this first. A person who has heard you give
+            ground where ground is due will hear you when you hold it.</p>
+          </div>
+
+          <div class="tg-principle">
+            <span class="tg-principle__label">Remember what the argument is for</span>
+            <p class="tg-principle__text">Christ prayed that they may be one
+            (<a class="ref" data-ref="John 17:21">John 17:21</a>). This question is one of
+            the two or three that keep that prayer visibly unanswered, and anyone who enjoys
+            arguing it has lost the plot. The right posture toward a division this old is
+            grief, clarity, and hope — in that order.</p>
+          </div>
+
+          <div class="tg-note">
+            <span class="tg-note__label">The last word to the other side</span>
+            <p>In <em>Ut Unum Sint</em> §95 a pope asked other Christians to help him find a
+            new way of exercising the primacy — an admission that the form is open even
+            though the substance is held not to be. Whatever one concludes about claims 1
+            through 7, that is not the request of a closed system, and it deserves a better
+            answer than a slogan.</p>
+          </div>
+        </section>
+      </section><!-- /part-5 -->
+
+      <!-- ══════════════════════════════════════════════════════
+           SOURCES
+           ═══════════════════════════════════════════════════ -->
+
+      <section class="tg-part" id="sources" aria-labelledby="sources-h">
+        <div class="tg-part__head">
+          <span class="tg-part__kicker">Apparatus</span>
+          <h2 class="tg-part__title" id="sources-h">Sources</h2>
+          <p class="tg-part__intro">Every quotation in this study, with the edition it was
+          taken from. Texts marked <em>Library</em> are held on this site and can be read in
+          full. Scripture is quoted from the Berean Standard Bible unless noted.</p>
+        </div>
+
+        <section class="tg-section" id="src-primary">
+          <h2 class="tg-section__heading">Primary Texts — Fathers</h2>
+
+          <p class="pp-src"><cite>First Epistle of Clement to the Corinthians</cite>, c. AD 96.
+          Chapters 1 (salutation), 5 (Peter and Paul), 44 (episcopate / presbyters).
+          Roberts–Donaldson translation, <em>Ante-Nicene Fathers</em> vol. I.
+          <a href="../../library/read/clement-first-epistle/">Library</a>.
+          <span class="pp-src__note">Quoted here for the letter's corporate self-designation,
+          its interchangeable use of "episcopate" and "presbyters," and the earliest explicit
+          statement of ministerial succession.</span></p>
+
+          <p class="pp-src"><cite>Ignatius of Antioch, Epistle to the Romans</cite>, c. AD 107–117.
+          Salutation ("presides in the place of the region of the Romans… presides over love")
+          and ch. 4 ("I do not, as Peter and Paul, issue commandments unto you").
+          <em>Ante-Nicene Fathers</em> vol. I. <a href="../../library/read/ignatius-romans/">Library</a>.
+          <span class="pp-src__note">The ANF text prints both the shorter and longer
+          recensions; the shorter is the critical text and is what is quoted above. Ignatius's
+          other six letters are also in the Library.</span></p>
+
+          <p class="pp-src"><cite>Irenaeus of Lyons, Against Heresies</cite> III.3.1–3, c. AD 180.
+          <em>Ante-Nicene Fathers</em> vol. I.
+          <a href="../../library/read/irenaeus-against-heresies/">Library</a>.
+          <span class="pp-src__note">The Greek of III.3.2 is lost; the surviving Latin
+          (<em>convenire ad… propter potentiorem principalitatem</em>) is the disputed text.
+          The ANF rendering "agree with… on account of its pre-eminent authority" is one of
+          two defensible construals and is identified as such in Part III.</span></p>
+
+          <p class="pp-src"><cite>Eusebius of Caesarea, Ecclesiastical History</cite>.
+          Book II.25 (Gaius on the "trophies" at the Vatican and the Ostian Way; Dionysius of
+          Corinth on Peter and Paul in Italy); Book V.23–25 (Victor, Polycrates, and the
+          Easter controversy). Nicene and Post-Nicene Fathers, series II, vol. I.
+          <span class="pp-src__note">This site's Library holds an abridged Eusebius; the
+          passages above were verified against the NPNF2 text rather than the Library
+          selection, and are cited by book and chapter accordingly.</span></p>
+
+          <p class="pp-src"><cite>Cyprian of Carthage, On the Unity of the Church</cite>, ch. 4–5, c. AD 251.
+          <em>Ante-Nicene Fathers</em> vol. V. <a href="../../library/read/cyprian-on-unity/">Library</a>.
+          <span class="pp-src__note">Chapter 4 exists in two recensions. The ANF text — the one
+          quoted here and held in the Library — is the <strong>primitive</strong> recension,
+          which contains "the rest of the apostles were also the same as was Peter, endowed
+          with a like partnership both of honour and power" and does <em>not</em> contain the
+          "Primacy Text" phrases about the chair of Peter. Both recensions may be Cyprian's
+          own; the point is not that one is forged but that his practice is unambiguous either
+          way.</span></p>
+
+          <p class="pp-src"><cite>Cyprian, opening address to the Seventh Council of Carthage</cite>
+          (September 256), preserved as the preface to the <em>Sententiae Episcoporum</em>.
+          <em>Ante-Nicene Fathers</em> vol. V; Latin text in <em>Corpus Scriptorum
+          Ecclesiasticorum Latinorum</em> 3.1, ed. W. Hartel (Vienna, 1868):
+          <em>neque enim quisquam nostrum episcopum se episcoporum constituit</em>.</p>
+
+          <p class="pp-src"><cite>Firmilian of Caesarea to Cyprian</cite> — Cyprian,
+          <em>Epistle</em> 74 (ANF numbering 74; Hartel 75), c. 256.
+          <span class="pp-src__note">Cited in Part III for Firmilian's rejection of Stephen's
+          appeal to succession from Peter. Summarised rather than quoted, since the passage is
+          long and its force is cumulative.</span></p>
+
+          <p class="pp-src"><cite>Vincent of Lérins, Commonitory</cite> II.6, AD 434.
+          Nicene and Post-Nicene Fathers, series II, vol. XI.
+          <a href="../../library/read/vincent-of-lerins-commonitory/">Library</a>.</p>
+
+          <p class="pp-src"><cite>Leo the Great</cite>, <em>Sermons</em> 3–5 (Petrine
+          succession and the pope as Peter's heir) and the <em>Tome</em> (Ep. 28) of 449.
+          NPNF2 vol. XII.
+          <span class="pp-src__note">Sermon 3 was preached on the anniversary of Leo's
+          election, 19 September 443.</span></p>
+
+          <p class="pp-src"><cite>Gregory the Great, Register of Epistles</cite>, Book V
+          (letters to John of Constantinople, the Emperor Maurice, and Eulogius of Alexandria
+          on the title "universal bishop"), and Book VII.33. NPNF2 vol. XII–XIII.
+          <span class="pp-src__note">The "forerunner of Antichrist" language recurs across
+          several letters rather than sitting in one; Part III paraphrases rather than
+          pinning it to a single citation.</span></p>
+
+          <p class="pp-src"><cite>Augustine, Retractationes</cite> I.21.1, c. AD 427.
+          <span class="pp-src__note">A correction to how this passage is often reported:
+          Augustine sets out both readings of the rock — Peter, and the Christ whom Peter
+          confessed — and explicitly leaves the choice to the reader without declaring for
+          either. He is frequently quoted as having "leaned toward Christ" in the
+          <em>Retractationes</em>; that leaning is visible in his sermons (e.g.
+          <em>Sermon</em> 76; <em>Tractates on John</em> 124) but not in this passage.
+          Augustine's <em>Sermon</em> 131.10 is the source of <em>causa finita est</em> — the
+          familiar "Rome has spoken, the case is closed" is not in the text.</span></p>
+        </section>
+
+        <section class="tg-section" id="src-councils">
+          <h2 class="tg-section__heading">Councils and Magisterial Documents</h2>
+
+          <p class="pp-src"><cite>Council of Nicaea I</cite> (325), Canon VI.
+          <a href="../../library/nicaea-i/">Library</a>.</p>
+
+          <p class="pp-src"><cite>Council of Constantinople I</cite> (381), Canons II–III.
+          <a href="../../library/constantinople-i/">Library</a>.</p>
+
+          <p class="pp-src"><cite>Council of Ephesus</cite> (431) — the speech of the papal
+          legate Philip on Peter's successors, session III. Acts in Mansi IV;
+          English in NPNF2 vol. XIV. <a href="../../library/ephesus-431/">Library</a>.</p>
+
+          <p class="pp-src"><cite>Council of Chalcedon</cite> (451) — the reading and
+          acclamation of Leo's <em>Tome</em> (session II) and Canon XXVIII.
+          <a href="../../library/chalcedon-451/">Library</a>.</p>
+
+          <p class="pp-src"><cite>Council of Sardica</cite> (343/4), Canons 3–5.
+          NPNF2 vol. XIV.
+          <span class="pp-src__note">Later cited to the African bishops <em>as Nicene</em>
+          during the Apiarius affair (417–419), which is how the discrepancy came to
+          light.</span></p>
+
+          <p class="pp-src"><cite>Third Council of Constantinople</cite> (680–681),
+          Session XIII (anathema of Honorius) and the final session; Pope Leo II's letter of
+          confirmation (682). NPNF2 vol. XIV, with the standard excursus on the condemnation
+          of Honorius.
+          <span class="pp-src__note">The papal profession of faith in the
+          <em>Liber Diurnus Romanorum Pontificum</em> included the anathema against Honorius
+          from roughly the seventh to the eleventh century; the reference survived in the
+          Roman Breviary lessons for the feast of Leo II before being removed.</span></p>
+
+          <p class="pp-src"><cite>Council of Constance</cite>, <em>Haec Sancta Synodus</em>,
+          session V (6 April 1415).
+          <span class="pp-src__note">Its status in Catholic theology remains disputed —
+          whether it was ever validly promulgated, and whether it binds outside the emergency
+          it addressed. Its historical effect is not disputed: it is the instrument by which
+          the schism was ended and the recognised line restored.</span></p>
+
+          <p class="pp-src"><cite>Vatican I, Pastor Aeternus</cite>, chapters 3 and 4
+          (18 July 1870).
+          <span class="pp-src__note">The two definitions quoted in the Overview are the whole
+          of what is being argued about in claims 6 and 7.</span></p>
+
+          <p class="pp-src"><cite>Vatican II, Lumen Gentium</cite> 22–25 (1964) — primacy set
+          within episcopal collegiality.</p>
+
+          <p class="pp-src"><cite>John Paul II, Ut Unum Sint</cite> §§88–96 (25 May 1995) —
+          especially §95, the invitation to other Christians to help find a new way of
+          exercising the primacy.</p>
+
+          <p class="pp-src"><cite>Dicastery for Promoting Christian Unity, The Bishop of Rome:
+          Primacy and Synodality in the Ecumenical Dialogues and in the Responses to the
+          Encyclical</cite> Ut Unum Sint (13 June 2024).
+          <span class="pp-src__note">A study document, not magisterial teaching. It
+          synthesises thirty years of ecumenical responses and discusses proposals for a
+          "re-reception" of Vatican I in its historical context.</span></p>
+        </section>
+
+        <section class="tg-section" id="src-modern">
+          <h2 class="tg-section__heading">Modern Scholarship</h2>
+
+          <p class="pp-src"><cite>Papal Primacy: From Its Origins to the Present</cite>,
+          Klaus Schatz, SJ. Trans. J. A. Otto and L. M. Maloney. Collegeville: Liturgical
+          Press, 1996.
+          <span class="pp-src__note">A Catholic Jesuit historian, and unusually candid: "If
+          one had asked a Christian in the year 100, 200, or even 300 whether the bishop of
+          Rome was the head of all Christians… he or she would certainly have said no."
+          Schatz's own conclusion is that this is because the question presupposes categories
+          that had not yet developed — which is Newman's argument applied to the data. Start
+          here if you read only one book.</span></p>
+
+          <p class="pp-src"><cite>From Paul to Valentinus: Christians at Rome in the First Two
+          Centuries</cite>, Peter Lampe. Trans. M. Steinhauser. Minneapolis: Fortress, 2003
+          (German 1987/1989).
+          <span class="pp-src__note">The standard study of Roman Christianity's social
+          organisation. Lampe's "fractionation" thesis — that Roman Christianity was a
+          network of household congregations governed by a college of presbyters — is the
+          principal scholarly basis for the judgment that Rome had no monarchical bishop
+          until the later second century.</span></p>
+
+          <p class="pp-src"><cite>From Apostles to Bishops: The Development of the Episcopacy
+          in the Early Church</cite>, Francis A. Sullivan, SJ. New York: Paulist, 2001.
+          <span class="pp-src__note">A Catholic theologian granting the same point from the
+          inside: hardly any scholar doubts that the church of Rome was still led by a group
+          of presbyters for at least part of the second century. Sullivan then argues that
+          the development was nonetheless guided — which is exactly the argument this study
+          engages in Part IV rather than dismissing.</span></p>
+
+          <p class="pp-src"><cite>Saints and Sinners: A History of the Popes</cite>, Eamon
+          Duffy. 4th ed. New Haven: Yale University Press, 2014.
+          <span class="pp-src__note">Catholic, readable, and unsparing. The best single
+          narrative history.</span></p>
+
+          <p class="pp-src"><cite>The Primacy of Peter: Essays in Ecclesiology and the Early
+          Church</cite>, ed. John Meyendorff. Crestwood: St Vladimir's Seminary Press, 1992.
+          <span class="pp-src__note">The Orthodox case, including Nicholas Afanasiev's
+          influential essay on the eucharistic ecclesiology underlying the Eastern
+          objection.</span></p>
+
+          <p class="pp-src"><cite>The Rise of the Papacy</cite>, Robert B. Eno, SS.
+          Wilmington: Michael Glazier, 1990.
+          <span class="pp-src__note">A Catholic historian's account of the development,
+          notably measured on the second and third centuries.</span></p>
+
+          <p class="pp-src"><cite>Upon This Rock: St. Peter and the Primacy of Rome in
+          Scripture and the Early Church</cite>, Stephen K. Ray. San Francisco: Ignatius,
+          1999.
+          <span class="pp-src__note">The Catholic apologetic case, densely footnoted. Read it
+          for the strongest popular-level statement of claims 1–5.</span></p>
+
+          <p class="pp-src"><cite>The Church of Rome at the Bar of History</cite>, William
+          Webster. Edinburgh: Banner of Truth, 1995.
+          <span class="pp-src__note">The Protestant historical case, and the standard
+          collection of the patristic counter-evidence.</span></p>
+
+          <p class="pp-src"><cite>An Essay on the Development of Christian Doctrine</cite>,
+          John Henry Newman, 1845 (rev. 1878).
+          <span class="pp-src__note">Not optional. Any judgment against the papacy that has
+          not reckoned with Newman is provisional. Newman's <em>Apologia Pro Vita Sua</em>
+          is in this site's <a href="../../library/">Library</a>.</span></p>
+
+          <p class="pp-src"><cite>The Gospel According to Matthew</cite>, D. A. Carson
+          (Expositor's Bible Commentary), on 16:13–20.
+          <span class="pp-src__note">Cited in Part I for the judgment that the
+          <em>petros/petra</em> argument does not carry the weight commonly placed on it —
+          from a commentator who does not draw Catholic conclusions from that
+          concession.</span></p>
+        </section>
+
+        <section class="tg-section" id="src-scripture">
+          <h2 class="tg-section__heading">Scripture Examined in This Study</h2>
+
+          <p>Every passage that bears materially on the question, grouped by what it is
+          usually asked to prove. Each is discussed in the part indicated.</p>
+
+          <table class="pp-grade">
+            <thead>
+              <tr><th>Texts</th><th>Bearing</th><th>Part</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a class="ref" data-ref="Matthew 16:13-23">Matt 16:13–23</a>;
+                <a class="ref" data-ref="Isaiah 22:15-25">Isa 22:15–25</a>;
+                <a class="ref" data-ref="John 1:42">John 1:42</a></td>
+                <td>The rock, the keys, the steward oracle — and the renaming.</td>
+                <td>I, II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Revelation 3:7">Rev 3:7</a>;
+                <a class="ref" data-ref="Revelation 1:18">Rev 1:18</a>;
+                <a class="ref" data-ref="Matthew 23:13">Matt 23:13</a></td>
+                <td>Who holds the key of David; keys used well and badly.</td>
+                <td>II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="John 21:15-23">John 21:15–23</a>;
+                <a class="ref" data-ref="Luke 22:24-34">Luke 22:24–34</a></td>
+                <td>The shepherd commission and the prayer for Peter's faith — with their contexts.</td>
+                <td>I, II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Matthew 10:2">Matt 10:2</a>;
+                <a class="ref" data-ref="Mark 3:16">Mark 3:16</a>;
+                <a class="ref" data-ref="Luke 6:14">Luke 6:14</a>;
+                <a class="ref" data-ref="Acts 1:13">Acts 1:13</a></td>
+                <td>Peter first in all four apostolic lists; <em>prōtos</em>.</td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Matthew 18:15-20">Matt 18:15–20</a>;
+                <a class="ref" data-ref="John 20:21-23">John 20:21–23</a></td>
+                <td>Binding, loosing and remission given in the plural.</td>
+                <td>II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Ephesians 2:19-22">Eph 2:19–22</a>;
+                <a class="ref" data-ref="1 Corinthians 3:10-11">1 Cor 3:10–11</a>;
+                <a class="ref" data-ref="Revelation 21:14">Rev 21:14</a></td>
+                <td>Foundation language is corporate; Christ is the cornerstone.</td>
+                <td>II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Acts 1:15-26">Acts 1:15–26</a>;
+                <a class="ref" data-ref="Acts 12:1-2">Acts 12:1–2</a></td>
+                <td>The one apostolic succession recorded — its cause and its qualification.</td>
+                <td>II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Acts 2:14">Acts 2:14</a>;
+                <a class="ref" data-ref="Acts 8:14">Acts 8:14</a>;
+                <a class="ref" data-ref="Acts 10:25-26">Acts 10:25–26</a>;
+                <a class="ref" data-ref="Acts 11:1-18">Acts 11:1–18</a>;
+                <a class="ref" data-ref="Acts 12:17">Acts 12:17</a>;
+                <a class="ref" data-ref="Acts 15:6-29">Acts 15:6–29</a>;
+                <a class="ref" data-ref="Acts 21:18">Acts 21:18</a></td>
+                <td>Peter's actual conduct and standing in the apostolic church; the conciliar pattern.</td>
+                <td>I, II, V</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Galatians 1:18-19">Gal 1:18–19</a>;
+                <a class="ref" data-ref="Galatians 2:6-14">Gal 2:6–14</a>;
+                <a class="ref" data-ref="1 Corinthians 1:12">1 Cor 1:12</a>;
+                <a class="ref" data-ref="1 Corinthians 15:5">1 Cor 15:5</a></td>
+                <td>Paul on Peter — consultation, parallel commission, public rebuke.</td>
+                <td>I, II</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="1 Peter 2:4-8">1 Pet 2:4–8</a>;
+                <a class="ref" data-ref="1 Peter 5:1-5">1 Pet 5:1–5</a>;
+                <a class="ref" data-ref="1 Peter 5:13">1 Pet 5:13</a></td>
+                <td>Peter's own self-description, his charge to elders, and "Babylon."</td>
+                <td>I, II, V</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Matthew 20:25-28">Matt 20:25–28</a>;
+                <a class="ref" data-ref="Matthew 23:8-12">Matt 23:8–12</a>;
+                <a class="ref" data-ref="Ephesians 1:22-23">Eph 1:22–23</a>;
+                <a class="ref" data-ref="Colossians 1:18">Col 1:18</a></td>
+                <td>The grain of Christ's teaching on authority; the headship texts.</td>
+                <td>II, V</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Acts 20:17">Acts 20:17</a>,
+                <a class="ref" data-ref="Acts 20:28">28</a>;
+                <a class="ref" data-ref="Titus 1:5-7">Titus 1:5–7</a>;
+                <a class="ref" data-ref="Philippians 1:1">Phil 1:1</a>;
+                <a class="ref" data-ref="2 Timothy 2:2">2 Tim 2:2</a></td>
+                <td>Church order after the apostles — elders and overseers, plural, and the deposit handed on.</td>
+                <td>II, V</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Hebrews 13:17">Heb 13:17</a>;
+                <a class="ref" data-ref="2 Thessalonians 2:15">2 Thess 2:15</a>;
+                <a class="ref" data-ref="1 Timothy 3:15">1 Tim 3:15</a>;
+                <a class="ref" data-ref="Acts 17:11">Acts 17:11</a></td>
+                <td>Real authority, real tradition, real accountability to the word.</td>
+                <td>IV, V</td>
+              </tr>
+              <tr>
+                <td><a class="ref" data-ref="Romans 15:20">Rom 15:20</a>;
+                <a class="ref" data-ref="Romans 16:1-16">Rom 16:1–16</a></td>
+                <td>The Romans silence, and what it is and is not worth.</td>
+                <td>II</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div class="tg-reading">
+          <h2 class="tg-reading__title">If You Read Four Things</h2>
+          <p class="tg-reading__item">
+            <cite>Papal Primacy: From Its Origins to the Present</cite>, Klaus Schatz.
+            <em>The most useful single book on this page. A Catholic historian who will tell
+            you what the sources say before telling you what he concludes from them.</em>
+          </p>
+          <p class="tg-reading__item">
+            <cite>An Essay on the Development of Christian Doctrine</cite>, John Henry Newman.
+            <em>The argument you have to beat. If your position cannot survive Newman, it is
+            not a position yet.</em>
+          </p>
+          <p class="tg-reading__item">
+            <cite>The Primacy of Peter</cite>, ed. John Meyendorff.
+            <em>The Orthodox voice — which is the one that shows this is not a Protestant
+            quarrel.</em>
+          </p>
+          <p class="tg-reading__item">
+            <cite>The Bishop of Rome</cite> (Dicastery for Promoting Christian Unity, 2024).
+            <em>Free, current, and the clearest evidence that Rome regards the form of the
+            primacy as an open question.</em>
+          </p>
+        </div>
+      </section><!-- /sources -->
+
+      <div class="tg-related">
+        <h2 class="tg-related__title">Related Studies</h2>
+        <ul class="tg-related__list">
+          <li><a class="tg-related__link" href="../church-authority/">Church Authority, Scripture, and Tradition</a></li>
+          <li><a class="tg-related__link" href="../holy-catholic-church/">The Holy Catholic Church</a></li>
+          <li><a class="tg-related__link" href="../justification/">Justification by Faith</a></li>
+          <li><a class="tg-related__link" href="../korahs-rebellion/">Korah's Rebellion</a></li>
+          <li><a class="tg-related__link" href="../christology/">Christology: The Person &amp; Work of Christ</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+</Base>

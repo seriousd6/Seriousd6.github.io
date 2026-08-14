@@ -1,13 +1,14 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-15** (Assurance of Salvation grew a sixth part — the
-> corpus-by-corpus register, pinpoint confessional sourcing, and an honest count
-> of what each reading has to force; the study is now reconciled to six parts
-> throughout). Previously **2026-08-14**: COW synthesis repair scheduled — a
-> bounded batch every 30 minutes, concurrency-safe; Psalms 21 repaired and CI
-> green again; two new multi-part topical studies: Korah's Rebellion and
-> Assurance of Salvation.
+> Last updated: **2026-08-15** (new six-part topical study, **The Papacy**, with a
+> full primary-source apparatus and a Sources tab; and Assurance of Salvation grew
+> a sixth part — the corpus-by-corpus register, pinpoint confessional sourcing, and
+> an honest count of what each reading has to force; that study is now reconciled
+> to six parts throughout). Previously **2026-08-14**: COW synthesis repair
+> scheduled — a bounded batch every 30 minutes, concurrency-safe; Psalms 21
+> repaired and CI green again; two new multi-part topical studies: Korah's
+> Rebellion and Assurance of Salvation.
 > Previously 2026-08-02: Full Treatments Romans + Revelation; treatment
 > eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
 > 62.1%**, frontier now Psalms 1)

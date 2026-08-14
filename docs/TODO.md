@@ -128,6 +128,24 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   override** per discipline per date (force-on / force-off / auto) that every
   `is*Done` consults first; the home checklist circles are buttons. Covered by
   27 unit assertions + 20 browser assertions (see the commit).
+- [x] **Topical study: The Papacy** (2026-08-15) — six-part hand-authored study at
+  `topics/papacy/` (Overview + Parts I–V + a **Sources** tab) on the
+  `topic-guide.css` component set, registered in the `topical` array of
+  `data/books-content.json`. Deliberately distinct from `topics/church-authority/`,
+  which covers the general authority question and treats the papacy in one
+  section; this study is the deep-dive. Method: the debate is unbundled into
+  **seven separately-graded claims** (Petrine primacy → Rome → transmissible
+  office → exclusivity → universal jurisdiction → infallibility), each side is
+  stated at full strength before it is answered, and every patristic/conciliar
+  quotation is taken from a primary text — most of them from `data/library/`, so
+  the page links into `/library/read/<id>/` for the reader to check. Verified
+  verbatim from the local corpus: 1 Clement 1/5/44, Ignatius *Rom.* salutation +
+  ch. 4, Irenaeus *AH* III.3.1–3, Cyprian *De Unit.* 4–5 (the **primitive**
+  recension — ANF prints it, so the "Primacy Text" phrases are correctly absent),
+  Vincent *Comm.* II.6, Nicaea c. VI, Constantinople I c. III, Chalcedon c. XXVIII.
+  All 95 distinct `data-ref` values were machine-checked against `data/bible/BSB`.
+  A small scoped `<style is:inline>` block adds the two table/citation classes the
+  shared component set lacks (`.pp-grade`, `.pp-src`).
 - [x] **Topical study: Assurance of Salvation** (2026-08-09, extended 2026-08-15)
   — six-part hand-authored study at `topics/salvation-assurance/` (`index` hub +
   `part-1`…`part-6`) on the `topic-guide.css` component set: the OT→NT thread of
