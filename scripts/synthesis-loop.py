@@ -10,7 +10,7 @@ everything mechanical is here, so a run can be left alone.
     python3 scripts/synthesis-loop.py next                    # what to work on
     python3 scripts/synthesis-loop.py next --queue repair --worst-first
     python3 scripts/synthesis-loop.py finish <book> <ch>      # verify+stamp+commit
-    python3 scripts/synthesis-loop.py finish <book> <ch> --unattended
+    python3 scripts/synthesis-loop.py finish <book> <ch> --unattended --push
     python3 scripts/synthesis-loop.py status
 
 EXIT CODES (stable — a shell loop depends on them)
@@ -18,6 +18,7 @@ EXIT CODES (stable — a shell loop depends on them)
     2  usage error
     3  queue empty — nothing left to do, stop the loop
     4  the chapter failed verification; nothing was committed
+    5  --push only: another run finished this chapter first; ours was dropped
 
 `finish` runs, in order: validator -> lint (chapter) -> fidelity -> stamp ->
 gate (chapter) -> gate (corpus) -> commit. Any failure stops before the commit,
@@ -27,13 +28,20 @@ The fidelity step is the one a script cannot do for you: it fails unless every
 verse carries a self-grade recorded by whoever wrote the prose, after reading it
 back against its source.
 
+WITH --push the finished chapter is synced onto origin/master and pushed. That
+is not optional for a scheduled run: those fire in fresh containers, so a commit
+that is never pushed dies with the container. The sync is a rebuild rather than a
+rebase — the chapter files and any new notebook entries are replayed on top of
+the current origin/master — so it cannot leave a conflicted tree, and a chapter
+another run finished first is detected and dropped instead of fought over.
+
 WITH --unattended a failed chapter is copied to scratchpad/rejected/ and then
 reverted with git checkout, leaving a clean tree so the next iteration can
 proceed. Without it the files are left in place for inspection and the loop
 stops. Losing one chapter's output is cheap — the source catena is untouched and
 it can be regenerated; a stalled loop with a dirty tree is not.
 """
-import os, sys, subprocess, argparse, shutil, datetime, json
+import os, sys, subprocess, argparse, shutil, datetime, json, time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -47,6 +55,8 @@ def say(step, ok, detail=''):
     mark = 'ok  ' if ok else 'FAIL'
     print(f'  [{mark}] {step}{(" — " + detail) if detail else ""}')
 
+NOTES_REL = 'docs/agents/cow-synthesis-notes.json'
+
 def chapter_files(book, ch):
     return [f'data/commentary/cow-synthesis/{book}/{ch}.json',
             f'data/commentary/cow-synthesis-tags/{book}/{ch}.json']
@@ -57,6 +67,8 @@ def cmd_next(a):
         args += ['--queue', a.queue]
     if a.worst_first:
         args += ['--worst-first']
+    if a.spread:
+        args += ['--spread', str(a.spread)]
     r = run(args)
     if r.returncode == 3:
         print('queue empty', file=sys.stderr)
@@ -160,13 +172,102 @@ def cmd_finish(a):
         say('commit', True, f'(dry run) would commit: {msg}')
         say('restore', True, 'dry run left the tree unchanged')
         return 0
+    base = (run(['git', 'merge-base', 'HEAD', 'origin/master']).stdout or '').strip()
     run(['git', 'add'] + chapter_files(book, ch))
     r = run(['git', 'commit', '-m', msg])
     if r.returncode != 0:
         say('commit', False, (r.stdout or r.stderr or '').strip()[:200])
         return 4
     say('commit', True, msg)
+    if a.push:
+        if not base:
+            say('push', False, 'no merge-base with origin/master')
+            return 4
+        return push_chapter(book, ch, msg, base)
     return 0
+
+def notes_entries(ref=None):
+    """The notebook's entry list, from a git ref or from the working tree."""
+    if ref:
+        r = run(['git', 'show', f'{ref}:{NOTES_REL}'])
+        if r.returncode != 0:
+            return []
+        text = r.stdout
+    else:
+        p = os.path.join(ROOT, NOTES_REL)
+        if not os.path.exists(p):
+            return []
+        text = open(p, encoding='utf-8').read()
+    try:
+        return json.loads(text).get('entries') or []
+    except Exception:
+        return []
+
+def append_notes(entries):
+    if not entries:
+        return
+    p = os.path.join(ROOT, NOTES_REL)
+    data = json.load(open(p, encoding='utf-8'))
+    data.setdefault('entries', []).extend(entries)
+    with open(p, 'w', encoding='utf-8') as fh:
+        json.dump(data, fh, indent=2, ensure_ascii=False)
+        fh.write('\n')
+
+def push_chapter(book, ch, msg, base):
+    """Replay this chapter (and any notes written for it) onto origin/master.
+
+    Deliberately NOT a rebase. A rebase of two runs that touched the same JSON
+    leaves a conflicted tree that an unattended session cannot resolve, and the
+    notebook conflicts on every parallel append because both sides grow the same
+    array. Rebuilding instead is total: reset to origin, write the files back,
+    re-append the notes, commit once. The only thing that can go wrong is losing
+    a race, and that is checked for explicitly.
+    """
+    files = [f for f in chapter_files(book, ch)
+             if os.path.exists(os.path.join(ROOT, f))]
+    blobs = {f: open(os.path.join(ROOT, f), encoding='utf-8').read() for f in files}
+    mine = unpushed_notes(base)
+
+    for attempt in range(4):
+        r = run(['git', 'fetch', 'origin', 'master'])
+        if r.returncode != 0:
+            if attempt == 3:
+                say('push', False, 'could not fetch origin/master')
+                return 4
+            time.sleep(2 ** (attempt + 1))
+            continue
+
+        # Did someone else finish this chapter while we were writing it?
+        if run(['git', 'diff', '--quiet', base, 'origin/master', '--']
+               + chapter_files(book, ch)).returncode != 0:
+            run(['git', 'reset', '--hard', 'origin/master'])
+            append_notes(mine)
+            if mine:
+                run(['git', 'add', NOTES_REL])
+                run(['git', 'commit', '-m', f'Loop notes: {book} {ch}'])
+                run(['git', 'push', 'origin', 'master'])
+            say('push', True, f'another run finished {book} {ch} first — dropped ours')
+            return 5
+
+        run(['git', 'reset', '--hard', 'origin/master'])
+        for rel, text in blobs.items():
+            dest = os.path.join(ROOT, rel)
+            os.makedirs(os.path.dirname(dest), exist_ok=True)
+            open(dest, 'w', encoding='utf-8').write(text)
+        append_notes(mine)
+        run(['git', 'add'] + list(blobs) + ([NOTES_REL] if mine else []))
+        r = run(['git', 'commit', '-m', msg])
+        if r.returncode != 0:
+            say('push', False, 'nothing to commit after rebuilding onto origin')
+            return 4
+        r = run(['git', 'push', '-u', 'origin', 'master'])
+        if r.returncode == 0:
+            say('push', True, 'origin/master')
+            return 0
+        if attempt < 3:
+            time.sleep(2 ** (attempt + 1))
+    say('push', False, 'push rejected four times')
+    return 4
 
 def note(book, ch, kind, text):
     """Record something for a human to read later. An unattended loop cannot
@@ -174,6 +275,35 @@ def note(book, ch, kind, text):
     learns from."""
     run([PY, 'scripts/synthesis-note.py', '--book', book, '--chapter', str(ch),
          '--kind', kind, '--note', text[:500]])
+
+def unpushed_notes(ref):
+    """Entries present locally but not in `ref`, compared by content.
+
+    Positional slicing is wrong here: another run may have pushed notes of its
+    own, so the remote's list can be longer than ours and still be missing
+    everything we wrote.
+    """
+    seen = {json.dumps(e, sort_keys=True) for e in notes_entries(ref)}
+    return [e for e in notes_entries()
+            if json.dumps(e, sort_keys=True) not in seen]
+
+def push_notes(msg):
+    """Land the notebook on its own. A scheduled run dies with its container, so
+    a note that is only written to the working tree is a note nobody reads."""
+    for attempt in range(4):
+        run(['git', 'fetch', 'origin', 'master'])
+        mine = unpushed_notes('origin/master')
+        if not mine:
+            return
+        run(['git', 'reset', '--hard', 'origin/master'])
+        append_notes(mine)
+        run(['git', 'add', NOTES_REL])
+        if run(['git', 'commit', '-m', msg]).returncode != 0:
+            return
+        if run(['git', 'push', '-u', 'origin', 'master']).returncode == 0:
+            say('push (notes)', True, msg)
+            return
+        time.sleep(2 ** (attempt + 1))
 
 def fail(a, book, ch, why=''):
     if a.unattended:
@@ -183,6 +313,8 @@ def fail(a, book, ch, why=''):
              f'{why or "failed verification"}; reverted, attempt kept at '
              f'{os.path.relpath(dest, ROOT)}')
         print(f'  reverted; rejected attempt kept at {os.path.relpath(dest, ROOT)}')
+        if getattr(a, 'push', False):
+            push_notes(f'Loop notes: {book} {ch} rejected')
     else:
         print('  files left in place for inspection '
               '(use --unattended to auto-revert and keep the loop moving)')
@@ -197,6 +329,9 @@ def main():
                    help="'auto' drains repair first, then generation, and is "
                         "empty only when both are; prints '<queue> <book> <ch>'")
     p.add_argument('--worst-first', action='store_true')
+    p.add_argument('--spread', type=int, default=0, metavar='N',
+                   help='pick uniformly from the first N of the queue instead '
+                        'of its head — use it when runs may overlap')
 
     p = sub.add_parser('status'); p.set_defaults(fn=cmd_status)
 
@@ -208,6 +343,9 @@ def main():
     p.add_argument('--unattended', action='store_true',
                    help='revert a failed chapter (quarantining it first) so the '
                         'loop can continue without a dirty tree')
+    p.add_argument('--push', action='store_true',
+                   help='sync onto origin/master and push — required for a '
+                        'scheduled run, whose container does not outlive it')
     p.add_argument('--dry-run', action='store_true')
 
     a = ap.parse_args()

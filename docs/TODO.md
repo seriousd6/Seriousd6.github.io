@@ -63,6 +63,13 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   the run's notebook is
   [agents/cow-synthesis-notes.json](agents/cow-synthesis-notes.json) — read it
   after a run, it is where an unattended loop puts what it could not stop to ask.
+  **Scheduled since 2026-08-14**: two Routines fire a bounded 3-chapter batch
+  every 30 minutes into a fresh session, using
+  [agents/cow-synthesis-scheduled-prompt.md](agents/cow-synthesis-scheduled-prompt.md).
+  Those runs overlap, so they pick with `--spread 40` and land work with
+  `finish --push`, which drops a chapter another run already finished (exit 5)
+  instead of clobbering it. Progress is the two meters in
+  `synthesis-loop.py status`, not the number of runs.
   Note the lint cannot become a CI gate
   **The lint is now a CI gate** (`validate.yml`), exempting the legacy debt via
   `qa.standard` so it is green today while protecting all new and repaired work;

@@ -1,7 +1,8 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-09** (Psalms 21 COW synthesis repaired — CI green again;
+> Last updated: **2026-08-14** (COW synthesis repair scheduled — a bounded batch
+> every 30 minutes, concurrency-safe; Psalms 21 repaired and CI green again;
 > two new five-part topical studies: Korah's Rebellion and Assurance of Salvation.
 > Previously 2026-08-02: Full Treatments Romans + Revelation; treatment
 > eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
@@ -127,6 +128,15 @@
   only when both are done); the launch prompt is
   `docs/agents/cow-synthesis-loop-prompt.md` and the run writes what it could
   not stop to ask into `docs/agents/cow-synthesis-notes.json`.
+- **COW synthesis is scheduled (2026-08-14)**: two Routines, an hour apart in
+  phase, fire every 30 minutes into a fresh session running
+  `docs/agents/cow-synthesis-scheduled-prompt.md` — a bounded 3-chapter batch,
+  then stop. Because those runs overlap, two things changed in the driver:
+  `--spread N` picks at random from the queue's worst N so concurrent runs rarely
+  choose the same chapter, and `finish --push` lands work on `origin/master` by
+  rebuilding onto it (never rebasing), dropping its own prose but keeping its
+  notes when another run finished the same chapter first (exit 5). Rejection
+  notes are pushed too — a scheduled run's container does not outlive it.
 - **Disciplines (2026-08-09)**: completion is no longer purely auto-detected.
   `assets/js/tracker.js` resolves every discipline as *manual override → derived*,
   where the override is three-state (`true` force-on / `false` force-off / absent

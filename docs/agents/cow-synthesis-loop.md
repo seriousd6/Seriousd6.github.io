@@ -35,6 +35,7 @@ python3 scripts/synthesis-frontier.py                    # summary + both queues
 python3 scripts/synthesis-frontier.py --next             # one unit: "<book> <ch>"
 python3 scripts/synthesis-frontier.py --next --queue repair --worst-first
 python3 scripts/synthesis-frontier.py --next --queue auto --worst-first
+python3 scripts/synthesis-frontier.py --next --queue auto --spread 40   # concurrent runs
 ```
 
 **`--queue auto` is how you run the corpus to completion in one pass**: it serves
@@ -83,6 +84,15 @@ canonical sweep.
 > key-diff will legitimately show ch27 as 9-vs-10; that is expected, not a defect.
 
 ## Running it unattended
+
+Two shapes, and they are not interchangeable:
+
+| | one long session | a Routine every 30 min |
+|---|---|---|
+| prompt | [cow-synthesis-loop-prompt.md](cow-synthesis-loop-prompt.md) | [cow-synthesis-scheduled-prompt.md](cow-synthesis-scheduled-prompt.md) |
+| scope | runs to completion | a bounded batch, then stops |
+| commits | stay local for review | **pushed** — the container does not outlive the run |
+| picking | head of the queue | `--spread 40`, because runs overlap |
 
 **Launch prompt:** [cow-synthesis-loop-prompt.md](cow-synthesis-loop-prompt.md)
 — paste it into a fresh session and leave it. **Notebook:**
@@ -140,6 +150,33 @@ Two details that make unattended running safe:
 
 `--dry-run` rehearses the whole chain, stamp and both gates included, then
 restores the tags file so the tree is unchanged.
+
+### Running several at once (2026-08-14)
+
+The original rule here was "do not run two loops at once", because nothing claims
+a chapter off the queue. Scheduling changed the trade: a 30-minute cadence means
+overlapping sessions by construction, so the collision is handled instead of
+forbidden.
+
+- **`--spread N`** (frontier and `next`) picks uniformly from the queue's first N
+  instead of its head. The queue is deterministic, so without this two runs
+  asking at the same moment get the same chapter every time. This does not
+  prevent collisions; it makes them rare.
+- **`finish --push`** handles the collision that still happens. It compares the
+  chapter on `origin/master` against this run's fork point: unchanged means we
+  won, so the work is replayed onto the current origin and pushed; changed means
+  another run got there first, so **our prose is dropped and our notes are
+  kept**, exit **5**. Losing a race costs one chapter's tokens and nothing else.
+- The push is a **rebuild, not a rebase** — reset to `origin/master`, write the
+  chapter files back, re-append any notebook entries, commit once. An unattended
+  session cannot resolve a conflicted tree, and the notebook conflicts on every
+  parallel append because both sides grow the same array; rebuilding has no
+  conflict to resolve. Notebook entries are diffed **by content**, not by
+  position, so a run whose notes were written while the remote notebook grew
+  still lands them.
+- A rejected chapter's `rejected` note is pushed too. A note that only reaches
+  the working tree of a container that is about to be reclaimed is a note nobody
+  reads.
 
 ## Per-chapter procedure
 

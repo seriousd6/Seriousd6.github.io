@@ -22,7 +22,7 @@ queue is empty, so a loop can drive itself:
     unit=$(python3 scripts/synthesis-frontier.py --next --queue repair) || exit 0
     set -- $unit; book=$1; ch=$2
 """
-import json, os, sys, glob, argparse, collections
+import json, os, sys, glob, argparse, collections, random
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -82,6 +82,18 @@ def scan():
                 repair.append((b, ch, ', '.join(why), bad, ung))
     return generate, repair, stats
 
+def choose(items, spread):
+    """Head of the queue, or a uniform pick from its first `spread` entries.
+
+    Concurrent runs are the reason this exists. The queue is deterministic, so
+    two sessions that ask at the same moment get the same chapter and one of
+    them wastes its work. Spreading the pick over a window makes that rare
+    without needing a lock: with 40 candidates a collision costs one chapter,
+    and the pusher that loses the race detects it and moves on."""
+    if spread and len(items) > 1:
+        return items[random.randrange(min(spread, len(items)))]
+    return items[0]
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--queue', choices=['generate', 'repair', 'auto'], default=None,
@@ -94,6 +106,10 @@ def main():
     ap.add_argument('--limit', type=int, default=25)
     ap.add_argument('--worst-first', action='store_true',
                     help='repair queue ordered by defect count, not canonical order')
+    ap.add_argument('--spread', type=int, default=0, metavar='N',
+                    help='with --next, pick uniformly from the first N of the '
+                         'queue instead of its head, so concurrent runs rarely '
+                         'land on the same chapter')
     a = ap.parse_args()
 
     generate, repair, stats = scan()
@@ -108,14 +124,16 @@ def main():
             if not items:
                 print('both queues empty', file=sys.stderr)
                 return 3
-            print(f'{q} {items[0][0]} {items[0][1]}')
+            row = choose(items, a.spread)
+            print(f'{q} {row[0]} {row[1]}')
             return 0
         q = a.queue or ('generate' if generate else 'repair')
         items = generate if q == 'generate' else repair
         if not items:
             print(f'{q} queue empty', file=sys.stderr)
             return 3
-        print(f'{items[0][0]} {items[0][1]}')
+        row = choose(items, a.spread)
+        print(f'{row[0]} {row[1]}')
         return 0
 
     total_src = sum(len(chapters_of('cow', b)) for b in canonical_books())
