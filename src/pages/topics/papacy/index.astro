@@ -9,11 +9,14 @@ import Base from '../../../layouts/Base.astro';
   /* Source apparatus — this study cites more than the shared component set
      anticipates, so two small additions live here rather than in
      topic-guide.css, which is shared by every topical study. */
-  .pp-grade { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .95rem; }
+  /* Wide tables scroll inside their own box rather than pushing the page. */
+  .pp-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; }
+  .pp-grade { width: 100%; border-collapse: collapse; font-size: .95rem; }
   .pp-grade th, .pp-grade td { border: 1px solid var(--color-border, #dde0d4); padding: .55rem .7rem; text-align: left; vertical-align: top; }
   .pp-grade th { background: color-mix(in srgb, var(--tg-accent, #6b2137) 8%, transparent); font-weight: 600; }
-  .pp-grade td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .pp-verdict { font-weight: 600; white-space: nowrap; }
+  .pp-grade td { font-variant-numeric: tabular-nums; }
+  .pp-verdict { font-weight: 600; }
+  @media (max-width: 700px) { .pp-grade { font-size: .88rem; } }
   .pp-src { margin: 0 0 1.05rem 0; padding-left: 1.6rem; text-indent: -1.6rem; line-height: 1.6; }
   .pp-src cite { font-style: italic; }
   .pp-src .pp-src__note { display: block; text-indent: 0; padding-left: 0; opacity: .85; font-size: .93em; margin-top: .15rem; }
@@ -78,6 +81,7 @@ import Base from '../../../layouts/Base.astro';
           the text; a Catholic who thinks the first proves the seventh has skipped five
           arguments.</p>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>#</th><th>The claim</th><th>Where it would have to come from</th><th>This study's verdict</th></tr>
@@ -127,6 +131,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
 
           <div class="tg-note">
             <span class="tg-note__label">Why the split matters pastorally</span>
@@ -647,6 +652,7 @@ import Base from '../../../layouts/Base.astro';
           <p>Take the components of the Matthew 16 commission one at a time and follow them
           through the rest of the Gospels. Each is re-issued in the plural.</p>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>Given to Peter</th><th>Given to the others</th></tr>
@@ -674,6 +680,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
 
           <p>The pattern is consistent: whatever is uniquely Peter's, none of the
           <em>powers</em> are. What remains unique is his priority — he is first, he is
@@ -1015,6 +1022,7 @@ import Base from '../../../layouts/Base.astro';
           <p>Arguments from silence are only as good as the expectation behind them. Here
           are the New Testament's silences, ranked by how much they should count.</p>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>The silence</th><th>How much weight it bears</th></tr>
@@ -1065,6 +1073,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
 
           <div class="tg-note">
             <span class="tg-note__label">The honest counter-silence</span>
@@ -1685,6 +1694,7 @@ import Base from '../../../layouts/Base.astro';
           <p>Apply the three tests to papal supremacy and to Nicene Trinitarianism and they
           come apart:</p>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>Test</th><th>Nicene Trinitarianism</th><th>Papal supremacy (claims 6–7)</th></tr>
@@ -1707,6 +1717,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
 
           <div class="tg-principle">
             <span class="tg-principle__label">The distinction that carries the weight</span>
@@ -1818,6 +1829,7 @@ import Base from '../../../layouts/Base.astro';
         <section class="tg-section" id="three-questions">
           <h2 class="tg-section__heading">Three Questions Each Side Must Answer</h2>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>To the Catholic</th><th>To the Protestant</th></tr>
@@ -1846,6 +1858,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
 
           <p>Neither column is unanswerable. Both columns are uncomfortable. Anyone who finds
           only one of them uncomfortable has not understood the other side.</p>
@@ -1881,6 +1894,7 @@ import Base from '../../../layouts/Base.astro';
         <section class="tg-section" id="verdict">
           <h2 class="tg-section__heading">The Verdict, Claim by Claim</h2>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>#</th><th>Claim</th><th>Verdict and why</th></tr>
@@ -1952,6 +1966,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
 
           <div class="tg-principle">
             <span class="tg-principle__label">The fair summary</span>
@@ -2447,6 +2462,7 @@ import Base from '../../../layouts/Base.astro';
           <p>Every passage that bears materially on the question, grouped by what it is
           usually asked to prove. Each is discussed in the part indicated.</p>
 
+          <div class="pp-scroll">
           <table class="pp-grade">
             <thead>
               <tr><th>Texts</th><th>Bearing</th><th>Part</th></tr>
@@ -2558,6 +2574,7 @@ import Base from '../../../layouts/Base.astro';
               </tr>
             </tbody>
           </table>
+          </div>
         </section>
 
         <div class="tg-reading">
