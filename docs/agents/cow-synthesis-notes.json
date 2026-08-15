@@ -321,6 +321,90 @@
         "65"
       ],
       "note": "'Abimelech' appears once in the 64-65 entry and is NOT drawn from the JFB residue: Ellicott's own note on the veil at v.65 says that after marriage it was seldom worn at this early period, 'and so both the Egyptians and Abimelech saw Sarah's beauty'. Flagged here because the residue in this chapter is Genesis 20 material, so the name could look like leakage on a later audit."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "32",
+      "verses": [
+        "41"
+      ],
+      "note": "Numbers 32:41 source is ~1230 raw words but only ~250 are commentary (Gill, Clarke quoting Ainsworth, Ellicott). The rest is StudyLight page chrome: CSS blocks, inline JS, the site's book_data array, nav menus and a Cloudflare challenge snippet. Omitted silently and unnarrated, per the loop rules. Voices legitimately used at v41 also come from the Keil and Delitzsch block filed under key 40, which runs through vv.40-42."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "32",
+      "verses": [
+        "5",
+        "23",
+        "29"
+      ],
+      "note": "Three Jamieson, Fausset and Brown blocks in this chapter carry foreign-passage material: v.5 holds JFB on the silver chargers and bowls of Numbers 7 plus his note on the flocks offered there; v.23 holds JFB on the laying of hands upon the Levites (Numbers 8); v.29 holds a fragment on carrying the covered furniture into the tabernacle (Numbers 4). All three declared as excluded_voices on the tags entries and omitted from the prose. JFB therefore appears in no verse of this chapter and is named nowhere."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "32",
+      "verses": [
+        "25"
+      ],
+      "note": "Numbers 32:25 source blob ends with scrape residue from the site's pager ('Next: Numbers Chapter 33 Sacred Texts | Bible << Previous: John Gill's Exposition ...'). Not attributable to any witness, so not declarable as excluded_voices; simply omitted. It inflates the measured source for the thin test by roughly 35 words, which the 25-27 pericope still passes."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "32",
+      "verses": [
+        "3",
+        "4",
+        "13",
+        "21",
+        "22"
+      ],
+      "note": "Five verses self-graded B, all for the same reason: a paragraph of the entry is the summary's own framing rather than a claim traceable to a named witness. v.3 — the contrast between the town-list as a claim and the same list as an inventory at the chapter's close. v.4 — the request set out as a syllogism whose flaw is in the conclusion (the criticism itself is Calvin's and Henry's). v.13 — what the recital means for the men listening, drawn from Ellicott's identification of the forty years as the fulfilment Moses himself announced. v.21 — that the tribes' own wording left the term of service conveniently open and Moses replaces it with one only God can close. v.22 — that the verse never treats the eastern country as second-best. No claim is put into any commentator's mouth in these; the grade marks framing weight, not invention."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "32",
+      "verses": [
+        "18",
+        "25",
+        "31",
+        "34",
+        "37",
+        "39",
+        "23",
+        "29",
+        "9"
+      ],
+      "note": "synthesis-fidelity.py measures a pericope entry's expansion ratio against the KEY verse's source only, not the union of the span, so every ranged entry in this chapter reads as a stretch it is not. The STRETCH flag on v.18 (9.6x) is the clearest case: the 18-19 entry has 380 usable source words against 413 prose words, i.e. 1.09x. Same false positive shape at 9-11 (2.0x actual), 23-24 (1.18x), 25-27 (2.2x), 29-30 (1.3x), 31-32 (1.2x), 34-36 (0.70x), 37-38 (1.0x), 39-40 (1.18x). All judged false positives. Worth teaching the tool to sum the span when a range is declared."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "32",
+      "verses": [
+        "23",
+        "34",
+        "41",
+        "42"
+      ],
+      "note": "ENTITIES flags judged false positives. v.23 'Cain' — Calvin cites Genesis 4:7 without naming him; the identification of who that sentence was spoken to is a factual gloss on his own citation, not a view attributed to him. v.34 'Amman' — Keil and Delitzsch write it, but the scrape has stripped the diacritic to 'Ammn' so the matcher misses it; 'Gideon' identifies the episode at Judges 8:11, which K&D cite by reference only. v.41 'Pileser' — Clarke's quoted text spells it 'Tiglath-Pilneser'; normalised. v.42 'Geshur' spells the source's 'Gesur' as 1 Chronicles 2:23 does, and 'Kanatha' transliterates the source's Greek. K&D's 'Jotan' was dropped from the prose rather than guessed at."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "32",
+      "note": "Numbers 32 repaired as 30 entries over 42 verses, using nine pericopes where the material is continuous or repetitive: 9-11 (the Eshcol recital), 18-19, 23-24, 25-27, 29-30, 31-32, 34-36 (Gad's town register), 37-38 (Reuben's), 39-40 (Machir). Spans tile the chapter exactly. Six entries take the thin exemption. The old prose carried all three audit defect shapes at once — 'The witnesses note' opening most sentences, the KJV verse re-quoted as the opening of all 42 entries, and the parenthesised slot-list ('walking the verse through: the X — gloss; the Y — gloss') in every verse. Regenerated rather than trimmed."
     }
   ]
 }
