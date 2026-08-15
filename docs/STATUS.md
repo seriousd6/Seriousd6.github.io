@@ -104,7 +104,7 @@
   active tab scrolled into the strip on switch and deep-link, a re-measure on
   `document.fonts.ready`, and the touch scrollbar hidden. `topics/prayer/`'s
   `.word-table` got the `.tg-compare` scroll treatment for the same reason.
-  Covered by a browser sweep: 15 hero pages × 3 widths, plus both studies at
+  Covered by a browser sweep: 16 hero pages × 3 widths, plus all three tabbed studies at
   375/412/1280 asserting no clipped labels, no page-level horizontal scroll,
   ≥32px targets, sticky bars clearing the topbar and each other, no occluded
   part heading and no scroll creep on repeat clicks.
