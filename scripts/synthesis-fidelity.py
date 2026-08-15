@@ -16,7 +16,10 @@ SIGNALS (advisory — a high number is a place to look, not a verdict):
 
   expansion   prose words / source words. Corpus median is 0.84x: a synthesis
               normally DISTILS its catena. Past ~6x (7% of the corpus) the prose
-              is mostly not coming from the page in front of it.
+              is mostly not coming from the page in front of it. A pericope
+              entry is measured against the UNION of the verses its `range`
+              covers, not the blob under its start key — measuring the key
+              alone made every ranged entry read as a stretch it was not.
   entities    proper nouns in the prose that appear nowhere in the source or the
               KJV text of the verse — the shape a fabricated attribution takes.
   voices      tagged voices with no comment on this chapter in any corpus. This
@@ -106,16 +109,22 @@ def main():
 
     rows, flagged = [], 0
     for v, html in prose.items():
+        t = tags.get(v) if isinstance(tags.get(v), dict) else {}
+        # A pericope entry stands on the whole span it covers, so that is what
+        # it must be measured against; anything else grades the writer on a
+        # denominator no rule uses. See QA.span_source_text.
+        keys = QA.span_keys(v, t.get('range'))
+        stext = vis(QA.span_source_text(src, v, t.get('range')))
         ptext = vis(html)
-        stext = vis(src.get(v, ''))
-        pool = (stext + ' ' + chapter_pool + ' ' + str(kjv.get(v, ''))).lower()
+        pool = (stext + ' ' + chapter_pool + ' '
+                + ' '.join(str(kjv.get(k, '')) for k in keys)).lower()
         pw, sw = len(ptext.split()), len(stext.split())
         ratio = QA.expansion_ratio(pw, sw)
         ents = entities(ptext, pool)
-        t = tags.get(v) if isinstance(tags.get(v), dict) else {}
         ung = index.ungrounded_voices(book, ch, t.get('voices'))
         fid = t.get('fidelity') or (t.get('qa') or {}).get('fidelity')
-        row = {'verse': v, 'prose_words': pw, 'source_words': sw,
+        row = {'verse': v, 'range': t.get('range'), 'span': keys,
+               'prose_words': pw, 'source_words': sw,
                'expansion': ratio, 'entities': ents, 'ungrounded_voices': ung,
                'fidelity': fid,
                'stretch': bool(ratio and ratio > QA.STRETCH_RATIO)}
@@ -140,13 +149,15 @@ def main():
         if r['ungrounded_voices']:
             marks.append('UNSOURCED: ' + ', '.join(r['ungrounded_voices']))
         have = (r['fidelity'] or {}).get('grade')
-        print(f'\nv{r["verse"]}  source {r["source_words"]}w -> prose {r["prose_words"]}w '
+        label = f'v{r["verse"]}' if not r['range'] else f'vv.{r["range"]}'
+        print(f'\n{label}  source {r["source_words"]}w -> prose {r["prose_words"]}w '
               f'({r["expansion"]}x)   self-grade: {have or "MISSING"}')
         for m in marks:
             print(f'    ! {m}')
         if not a.signals_only:
             print('    --- source ---')
-            print('    ' + (vis(src.get(r['verse'], '')) or '(none)')[:1200])
+            span_src = vis(QA.span_source_text(src, r['verse'], r['range']))
+            print('    ' + (span_src or '(none)')[:1200])
             print('    --- synthesis ---')
             print('    ' + vis(prose[r['verse']])[:1200])
 

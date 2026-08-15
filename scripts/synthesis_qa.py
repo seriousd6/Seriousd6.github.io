@@ -212,6 +212,38 @@ def parse_range(key, rng):
     return (lo, hi)
 
 
+def span_keys(key, rng):
+    """The source keys an entry covers, as strings. Unparseable ranges degrade
+    to the single verse rather than raising — the range's SHAPE is the
+    validator's business, and a measurement tool must not die on bad data."""
+    try:
+        lo, hi = parse_range(key, rng)
+    except ValueError:
+        lo = hi = int(key)
+    return [str(v) for v in range(lo, hi + 1)]
+
+
+def span_source_text(source, key, rng=None):
+    """The catena an entry actually stands on, joined across its span.
+
+    A pericope covers a range of verses, so its source is the UNION of the
+    verses it covers — not the blob filed under its start key. Measuring only
+    the start key makes every ranged entry look like an invention: the Numbers
+    32 "18-19" entry read as 9.6x expansion against the 43 words under key 18,
+    where the real figure is 1.09x against the 380 words of the span. The thin
+    exemption in validate-synthesis.py has always summed the span; the expansion
+    ratio did not, and the two must agree or the writer is graded against a
+    denominator no rule uses.
+    """
+    return ' '.join(str(source.get(k) or '') for k in span_keys(key, rng))
+
+
+def span_source_words(source, key, rng=None, excluded_voices=None):
+    """Usable words of the span's catena, after any declared residue."""
+    return sum(usable_source_words(source.get(k) or '', excluded_voices)
+               for k in span_keys(key, rng))
+
+
 def coverage_problems(source_keys, entries):
     """Check that the declared spans tile the chapter exactly.
 

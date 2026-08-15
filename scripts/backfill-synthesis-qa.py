@@ -76,8 +76,7 @@ def detect_indent(raw, default=1):
     return default
 
 _SRC_CACHE = {}
-def source_text(book, ch, v):
-    """The catena blob for one verse, for the expansion ratio."""
+def source_chapter(book, ch):
     key = (book, ch)
     if key not in _SRC_CACHE:
         p = os.path.join(ROOT, 'data/commentary/cow', book, f'{ch}.json')
@@ -85,7 +84,18 @@ def source_text(book, ch, v):
             _SRC_CACHE[key] = json.load(open(p, encoding='utf-8'))
         except Exception:
             _SRC_CACHE[key] = {}
-    return _SRC_CACHE[key].get(v, '')
+    return _SRC_CACHE[key]
+
+def source_text(book, ch, v, rng=None):
+    """The catena an entry stands on, for the expansion ratio.
+
+    Summed across the entry's span when it declares a `range`: a pericope's
+    source is the union of the verses it covers, and stamping the ratio against
+    the start key alone recorded numbers like 24.1x for Numbers 7 entries whose
+    real figure is near 1x. Must stay in step with synthesis-fidelity.py, since
+    the writer grades from that reading and this stores the measurement.
+    """
+    return QA.span_source_text(source_chapter(book, ch), v, rng)
 
 def grade_of(m):
     z, t = m['compress'], m['ttr']
@@ -106,6 +116,12 @@ def main():
                     help="'current' stamps a finished chapter to "
                          f"{QA.CURRENT_STANDARD} — refused unless every verse "
                          "grades A/B with no ungrounded voices")
+    ap.add_argument('--keep-generated', action='store_true',
+                    help='preserve each verse\'s existing qa.generated date. Use '
+                         'when re-stamping to correct a MEASUREMENT rather than '
+                         'because the prose was rewritten — a re-measurement is '
+                         'not a regeneration, and without this the pass would '
+                         'silently redate work it did not touch.')
     a = ap.parse_args()
 
     dates = chapter_dates()
@@ -160,7 +176,7 @@ def main():
                 fid.setdefault('checked_by', 'self')
                 fid['expansion'] = QA.expansion_ratio(
                     QA.visible(html) and len(QA.visible(html).split()),
-                    len(QA.visible(source_text(book, ch, v)).split()))
+                    len(QA.visible(source_text(book, ch, v, t.get('range'))).split()))
 
             if current:
                 probs = QA.fidelity_problems(fid, required=True)
@@ -173,10 +189,15 @@ def main():
                 if ung:
                     refused.append(f'{book} {ch}:{v} ungrounded: {", ".join(ung)}'); continue
             grades[g] += 1
+            # A repair IS a regeneration, so `finish` advances the date; a pass
+            # that only re-measures must not. Nothing in the data distinguishes
+            # the two, so the caller says which it is.
+            was = (t.get('qa') or {}).get('generated')
+            stamp_date = was if (a.keep_generated and was) else (TODAY if current else gen)
             qa = collections.OrderedDict([
                 ('v', QA.QA_SCHEMA_VERSION),
                 ('standard', QA.CURRENT_STANDARD if current else QA.LEGACY_STANDARD),
-                ('generated', TODAY if current else gen),
+                ('generated', stamp_date),
                 ('grade', g),
                 ('checks', list(CURRENT_CHECKS if current else LEGACY_CHECKS)),
                 ('lint', 'audit-synthesis-quality/1'),

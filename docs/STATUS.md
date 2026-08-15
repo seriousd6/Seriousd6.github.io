@@ -1,9 +1,12 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-15** (new six-part topical study, **The Papacy**, with a
-> full primary-source apparatus and a Sources tab; and Assurance of Salvation grew
-> a sixth part — the corpus-by-corpus register, pinpoint confessional sourcing, and
+> Last updated: **2026-08-15** (COW synthesis: numbers 32 and acts 19 repaired;
+> the fidelity expansion ratio now sums a pericope's span instead of its start
+> key, and the 50 ranged entries across four chapters were re-stamped with the
+> real numbers. Same day: new six-part topical study, **The Papacy**, with a full
+> primary-source apparatus and a Sources tab; and Assurance of Salvation grew a
+> sixth part — the corpus-by-corpus register, pinpoint confessional sourcing, and
 > an honest count of what each reading has to force; that study is now reconciled
 > to six parts throughout). Previously **2026-08-14**: COW synthesis repair
 > scheduled — a bounded batch every 30 minutes, concurrency-safe; Psalms 21

@@ -70,6 +70,15 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   `finish --push`, which drops a chapter another run already finished (exit 5)
   instead of clobbering it. Progress is the two meters in
   `synthesis-loop.py status`, not the number of runs.
+  **Tooling fix 2026-08-15**: the expansion ratio now measures a pericope
+  against the union of the verses its `range` covers, as the thin exemption
+  always did — measuring the start key alone made every ranged entry read as a
+  stretch it was not (Numbers 32 `18-19` at a reported 9.6x is really 1.09x;
+  Numbers 7 reported up to 24.1x). `QA.span_source_text` is the one answer to
+  "what does this entry stand on", used by both `synthesis-fidelity.py` and the
+  `expansion` that `backfill-synthesis-qa.py` stamps; the 50 affected entries in
+  the four range-using chapters were re-stamped with the new
+  `--keep-generated`, so only the numbers moved.
   **The lint is now a CI gate** (`validate.yml`), exempting the legacy debt via
   `qa.standard` so it is green today while protecting all new and repaired work;
   the exempt count doubles as the repair progress meter. **The backlog is now

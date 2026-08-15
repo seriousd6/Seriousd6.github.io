@@ -248,8 +248,10 @@ forbidden.
    where invention hides — **expansion ratio** (corpus median is 0.84x, because
    a synthesis normally distils; past ~6x the prose is mostly not coming from
    the page in front of it), **unsourced proper nouns**, and **ungrounded
-   voices**. Read each verse against its source and record the verdict on the
-   tags entry, beside `voices`:
+   voices**. A pericope is measured against the **union of the verses its
+   `range` covers** (`QA.span_source_text`), the same span the thin exemption
+   sums — see the 2026-08-15 note below. Read each verse against its source and
+   record the verdict on the tags entry, beside `voices`:
 
    ```json
    "fidelity": {"grade": "A", "checked_by": "self"}
@@ -487,6 +489,7 @@ commentaries name the same idea the same way.
   to write twelve verses' worth in one blob.
 - For `thin`, the source is the **union** of the verses covered, after any
   `excluded_voices`.
+- So is the **expansion ratio** (fixed 2026-08-15 — see below).
 - Chapters that do not declare a range are untouched, and coverage is not
   enforced on them — several legitimately omit out-of-range scrape keys (the
   documented 2 Chronicles 27 key `16`).
@@ -504,6 +507,35 @@ walking back to the nearest key, and the reader's inline grid already gives one
 commentary cell spanning the section's rows — so a pericope shows once beside
 all its verses rather than repeating. The grid and the side panel label it
 `▸ commentary on vv.12–17` (`core.js commSpan`).
+
+#### Measuring a span (fixed 2026-08-15)
+
+The thin exemption summed the span from the day pericopes shipped; the
+**expansion ratio did not**. Both `synthesis-fidelity.py` and the `expansion`
+that `backfill-synthesis-qa.py` stamps into the qa block measured the blob under
+the entry's **start key** alone, so every ranged entry read as a stretch it was
+not — Numbers 32's `18-19` reported 9.6x against the 43 words under key 18 where
+the real figure is 1.09x against the span's 380; Numbers 7's tribal-offering
+pericopes reported up to 24.1x for prose that is actually near 1x. Nine of the
+nine ranged entries in Numbers 32 were affected, and 50 across the four chapters
+that use ranges (`genesis/24`, `joshua/17`, `numbers/7`, `numbers/32`).
+
+`QA.span_source_text` / `QA.span_keys` are now the single place that answers
+"what does this entry stand on", and both tools go through them. The four
+chapters were re-stamped with `--keep-generated` so the stored numbers are the
+real ones; only `expansion` changed, and the exempt count did not move.
+
+Two things this leaves behind for whoever touches it next:
+
+- **A measurement pass is not a regeneration.** `--standard current` stamps
+  `generated: TODAY`, which is right when `finish` has just written the chapter
+  and wrong when a later pass only re-measures it. `--keep-generated` preserves
+  the existing date; use it for any correction that does not rewrite prose.
+- **The ratio still counts scrape residue in the denominator**, because it uses
+  the raw blob rather than `usable_source_words`. That understates the ratio on
+  chrome-heavy verses (acts 19:21 reads 0.08x against 8,295 raw words of which
+  ~2,600 are commentary). It errs toward *not* flagging, so it was left alone —
+  but it is why a low ratio is not by itself evidence of anything.
 
 ## Quality bar
 
