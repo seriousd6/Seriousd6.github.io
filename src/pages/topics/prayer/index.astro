@@ -165,6 +165,12 @@ em     { color: var(--pr-text-dim); font-style: italic; }
 .word-table td   { padding: 10px 12px; border-bottom: 1px solid var(--pr-border-f); color: var(--pr-text-dim); vertical-align: top; }
 .word-table tr:last-child td { border-bottom: none; }
 .word-table .term { font-style: italic; color: var(--pr-text-dim); }
+/* Its three columns cannot fit a phone, and an un-wrapped table drags the
+   whole document sideways with it. Scroll the table, not the page — the same
+   treatment .tg-compare gets in topic-guide.css. */
+@media (max-width: 640px) {
+  .word-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+}
 
 /* ── Divider ────────────────────────────────────────── */
 .divider { border: none; border-top: 1px solid var(--pr-border-f); margin: 2.5rem 0; position: relative; }

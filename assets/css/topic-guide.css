@@ -21,9 +21,27 @@
 /* ── Defaults (fallback if --tg-accent not set) ─────────────── */
 .tg-hero { --tg-accent: var(--color-primary); }
 
+/* Sticky offset. The site's mobile topbar is fixed and appears at <=1023px
+   (style.css), so anything sticking to top:0 below that width slides under it
+   and vanishes — which is what the part picker and the in-part Contents bar
+   were both doing on a phone. Same convention as .sg-tabs, .disc-tabbar-wrap
+   and the library reader. --tg-tabs-h is measured and set by study-tabs.js on
+   studies that have a part picker, and is absent (so 0) on those that do not. */
+.tg-study { --tg-offset: 0px; }
+@media (max-width: 1023px) {
+  .tg-study { --tg-offset: var(--topbar-h, 48px); }
+}
+
 /* ── Hero — unique per study, color set via --tg-accent ──────── */
 .tg-hero {
-  margin: 0 calc(-1 * var(--space-md)) var(--space-lg);
+  /* The bleed used to be `0 calc(-1 * var(--space-md))`, which assumes a
+     container with that much horizontal padding to bleed back into. On every
+     study that ships today the hero is a direct child of <body> (the
+     .container starts inside <main>, after the hero), so the negative margins
+     had nothing to cancel and pushed the document 2rem wider than the
+     viewport — 16px of sideways scroll on a phone, on every study page.
+     topics/prayer/ was already carrying a local override for exactly this. */
+  margin: 0 0 var(--space-lg);
   padding: var(--space-xl) var(--space-md) var(--space-lg);
   background-color: var(--tg-accent);
   background-image:
@@ -185,7 +203,9 @@
 /* SG-E: sticky horizontal ToC bar for long articles */
 .tg-toc--sticky {
   position: sticky;
-  top: 0;
+  /* Stacks below the part picker rather than underneath it: both were pinned
+     at top:0, and the picker's higher z-index simply hid this one. */
+  top: calc(var(--tg-offset, 0px) + var(--tg-tabs-h, 0px));
   z-index: 30;
   background: var(--color-bg);
   border-radius: 0;
@@ -210,9 +230,11 @@
   list-style: none;
   align-items: center;
 }
-.tg-toc--sticky .tg-toc__list li { margin-bottom: 0; white-space: nowrap; }
+/* flex:0 0 auto for the same reason as .tg-tabs__btn — as shrinkable items in
+   a nowrap row these get squeezed under their own nowrap label and clip. */
+.tg-toc--sticky .tg-toc__list li { margin-bottom: 0; white-space: nowrap; flex: 0 0 auto; }
 .tg-toc--sticky .tg-toc__list a {
-  display: inline-block;
+  display: inline-flex; align-items: center; min-height: 2rem;
   padding: 0.3rem 0.7rem;
   border-radius: 2rem;
   font-size: 0.8rem;
@@ -550,11 +572,11 @@
    Same paradigm as the book-commentary chapter picker
    (.bkc-chapternav in commentary.css): a sticky bar of numbered
    buttons, one panel visible at a time, deep-linkable by hash.
-   Generic — any study with .tg-part panels can use it, so the
-   five-part studies share one component.
+   Generic — any study with .tg-part panels can use it, so every
+   multi-part study shares one component.
    Wired by assets/js/entries/study-tabs.js. */
 .tg-tabs {
-  position: sticky; top: 0; z-index: 40;
+  position: sticky; top: var(--tg-offset, 0px); z-index: 40;
   display: flex; align-items: center; gap: 0.6rem;
   padding: 0.55rem 0; margin: 0 0 var(--space-md);
   background: var(--color-bg);
@@ -566,14 +588,38 @@
   color: var(--color-muted); flex-shrink: 0;
 }
 .tg-tabs__grid {
-  /* One scrollable row rather than wrapping: a bar that grows to two lines
-     shifts the content under it every time the active tab changes rows. */
+  /* One scrollable row rather than wrapping: a bar that grows to several lines
+     is a sticky header that eats a phone viewport. min-width:0 lets this shrink
+     inside the flex bar, which is what makes overflow-x actually engage. */
   display: flex; flex-wrap: nowrap; gap: 0.3rem;
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  flex: 1 1 auto; min-width: 0;
+  overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 0.3rem;
+}
+/* Fade the edge the strip continues past, so a phone reader can see that
+   there are more parts off-screen. Classes are kept by study-tabs.js. */
+.tg-tabs__grid.is-overflowing {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 1.4rem, #000 calc(100% - 1.4rem), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 1.4rem, #000 calc(100% - 1.4rem), transparent 100%);
+}
+.tg-tabs__grid.is-overflowing.at-start {
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.4rem), transparent 100%);
+  mask-image: linear-gradient(to right, #000 calc(100% - 1.4rem), transparent 100%);
+}
+.tg-tabs__grid.is-overflowing.at-end {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 1.4rem);
+  mask-image: linear-gradient(to right, transparent 0, #000 1.4rem);
 }
 .tg-tabs__btn {
   font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600;
+  /* flex:0 0 auto is the whole point — as shrinkable items in a nowrap row
+     these were being squeezed narrower than their own nowrap labels, which
+     clipped every tab to a few characters instead of scrolling the row. */
+  flex: 0 0 auto; scroll-snap-align: start;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 2rem;
   min-width: 1.9rem; text-align: center; white-space: nowrap;
   padding: 0.2rem 0.6rem; border-radius: 6px;
   border: 1px solid var(--color-border);
@@ -592,9 +638,12 @@
    panel stays visible, so the study degrades to one long readable page
    rather than to a blank one. */
 .tg-part[hidden] { display: none; }
-/* Clear the sticky tab bar when jumping to a panel or an in-panel anchor,
-   otherwise the heading lands underneath it. */
-.tg-part, .tg-part .tg-section { scroll-margin-top: 4.5rem; }
+/* Clear whatever is pinned above when jumping to a panel or an in-panel
+   anchor, otherwise the heading lands underneath it. On mobile that stack is
+   the topbar plus the part picker, not the picker alone. */
+.tg-part, .tg-part .tg-section {
+  scroll-margin-top: calc(var(--tg-offset, 0px) + var(--tg-tabs-h, 3rem) + 1rem);
+}
 .tg-part__head { margin-bottom: var(--space-md); }
 .tg-part__kicker {
   display: inline-block; font-family: var(--font-ui); font-size: 0.64rem;
@@ -614,7 +663,17 @@
 .tg-part__verse cite { display: block; font-style: normal; font-size: 0.8rem; margin-top: 0.3rem; }
 
 @media (max-width: 640px) {
-  .tg-tabs { gap: 0.4rem; }
+  .tg-tabs { gap: 0.4rem; padding: 0.4rem 0; }
   .tg-tabs__label { display: none; }
+  /* 44px thumb target, the same figure .sg-tab-btn uses. */
+  .tg-tabs__btn { min-height: 44px; padding: 0.3rem 0.7rem; }
+  .tg-toc--sticky .tg-toc__list a { min-height: 44px; }
   .tg-part__title { font-size: 1.3rem; }
+}
+
+/* On touch the thin scrollbar is a stripe of chrome under the tabs that
+   nobody can grab; the edge fade and the drag itself are the affordance. */
+@media (hover: none) and (pointer: coarse) {
+  .tg-tabs__grid { scrollbar-width: none; }
+  .tg-tabs__grid::-webkit-scrollbar { width: 0; height: 0; }
 }

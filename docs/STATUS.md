@@ -1,10 +1,13 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-15** (COW synthesis: numbers 32 and acts 19 repaired;
+> Last updated: **2026-08-15** (study part picker made mobile-usable — clipped
+> tab labels, sticky bars hidden under the fixed topbar, and a study-wide 16px
+> horizontal page scroll all fixed, across every study that uses the component.
+> Same day: COW synthesis: numbers 32 and acts 19 repaired;
 > the fidelity expansion ratio now sums a pericope's span instead of its start
 > key, and the 50 ranged entries across four chapters were re-stamped with the
-> real numbers. Same day: new six-part topical study, **The Papacy**, with a full
+> real numbers; new six-part topical study, **The Papacy**, with a full
 > primary-source apparatus and a Sources tab; and Assurance of Salvation grew a
 > sixth part — the corpus-by-corpus register, pinpoint confessional sourcing, and
 > an honest count of what each reading has to force; that study is now reconciled
@@ -78,6 +81,33 @@
   tool, `scripts/compose-study-tabs.py`, which infers accent, hero variant,
   titles and part bodies from the existing files, so a future multi-part study
   converts in one command.
+- **Study part picker is mobile-usable (2026-08-15)**: owner-reported — on a
+  phone the tabs rendered as a row of clipped stubs ("Over", "I · Fror",
+  "II · Comp"). Four separate faults, all in the shared components so both
+  studies were affected: (1) `.tg-tabs__btn` were shrinkable flex items in a
+  `nowrap` row, so they were squeezed *narrower than their own nowrap labels*
+  instead of letting the row scroll — `flex: 0 0 auto` is the fix, and
+  `.tg-toc--sticky .tg-toc__list li` had the identical bug; (2) `.tg-tabs` and
+  `.tg-toc--sticky` both pinned at `top: 0`, so they slid under the fixed
+  `.mobile-topbar` (which appears at ≤1023px) and under each other — they now
+  stack on `--tg-offset` + `--tg-tabs-h`, the same `--topbar-h` convention
+  `.sg-tabs` and `.disc-tabbar-wrap` already use, with the bar's height
+  measured and published by `study-tabs.js`; (3) the tab click handler scrolled
+  to the *sticky* bar's measured top, which is already the pinned offset, so
+  every click walked the page a little further down — it scrolls the panel now
+  and lets `scroll-margin-top` do the arithmetic; (4) `.tg-hero`'s bleed
+  margin (`0 calc(-1 * var(--space-md))`) assumed a padded container, but on
+  every study the hero is a direct child of `<body>`, so it pushed the document
+  2rem wider than the viewport — 16px of sideways scroll on every study page
+  (`topics/prayer/` was already carrying a local workaround). Also: 44px thumb
+  targets, scroll-snap, an edge fade when the strip continues off-screen, the
+  active tab scrolled into the strip on switch and deep-link, a re-measure on
+  `document.fonts.ready`, and the touch scrollbar hidden. `topics/prayer/`'s
+  `.word-table` got the `.tg-compare` scroll treatment for the same reason.
+  Covered by a browser sweep: 15 hero pages × 3 widths, plus both studies at
+  375/412/1280 asserting no clipped labels, no page-level horizontal scroll,
+  ≥32px targets, sticky bars clearing the topbar and each other, no occluded
+  part heading and no scroll creep on repeat clicks.
 - **One registry, enforced (2026-08-09)**: `data/books-content.json` is the
   single source of truth for what the site offers. `/topics/index.html` had
   looked like a second registry — it carries (carried) a hand-maintained card
