@@ -405,6 +405,83 @@
       "book": "numbers",
       "chapter": "32",
       "note": "Numbers 32 repaired as 30 entries over 42 verses, using nine pericopes where the material is continuous or repetitive: 9-11 (the Eshcol recital), 18-19, 23-24, 25-27, 29-30, 31-32, 34-36 (Gad's town register), 37-38 (Reuben's), 39-40 (Machir). Spans tile the chapter exactly. Six entries take the thin exemption. The old prose carried all three audit defect shapes at once — 'The witnesses note' opening most sentences, the KJV verse re-quoted as the opening of all 42 entries, and the parenthesised slot-list ('walking the verse through: the X — gloss; the Y — gloss') in every verse. Regenerated rather than trimmed."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "19",
+      "note": "Cyril of Jerusalem blocks appear under acts 19 keys 1, 2, 5, 6, 10, 19 and 34, and every one of them is foreign-passage material: Antioch and Barnabas (Acts 11/13) at v.1, the garden tomb and the resurrection at v.2, baptism of water and Spirit at v.5, Eldad and Modad at v.6, the new Jerusalem at v.10, a doxology on the Spirit's works at v.19, and the devils confessing Christ at v.34. They read like consecutive paragraphs of the Catechetical Lectures distributed across the chapter by the scraper. All omitted silently and unnarrated; Cyril is named in no verse but 41. They could NOT be declared as excluded_voices because synthesis_qa.split_voices does not recognise 'Cyril of Jerusalem' as a block head, so the validator rejects the declaration."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "19",
+      "verses": [
+        "41"
+      ],
+      "note": "The Cyril of Jerusalem block at acts 19:41 is the one legitimate one in the chapter: he quotes this very verse ('when he had thus spoken, he dismissed the Assembly') to argue that the word ecclesia covers a mob in a theatre as well as the Church, and builds the creed article on it. Used, and credited, at v.41 only. SourceIndex.ungrounded_voices confirms him grounded for the chapter."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "19",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35"
+      ],
+      "note": "Six Jamieson, Fausset and Brown blocks in this chapter are foreign-passage material, all of it from the passion and resurrection narratives: Clopas and Alpheus (John 19:25) at v.5; the sabbath eve and the breaking of legs (John 19:31) at vv.11 and 17; the rock-hewn tomb at v.23; Peter and John at the sepulchre at v.29; Mary and the two angels at v.35. All declared as excluded_voices on the tags entries and omitted from the prose. JFB is named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "19",
+      "verses": [
+        "21",
+        "40"
+      ],
+      "note": "Two verses carry heavy StudyLight page chrome that inflates the measured source: v.21 is 8,295 raw words of which perhaps 2,600 are commentary (the rest is Chrysostom's homily plus a large block of CSS, inline JS, the site's book_data array and nav menus), and v.40 has the same tail. The fidelity tool therefore reports v.21 at 0.08x, which is an artefact of the chrome rather than a real compression. Same shape as the numbers 32:41 defect noted 2026-08-15."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "19",
+      "verses": [
+        "7",
+        "28",
+        "36",
+        "39"
+      ],
+      "note": "Four verses self-graded B, each for the same reason: one closing paragraph of the entry is the summary's own framing rather than a claim traceable to a named witness. v.7 — the number twelve weighed against what these men had just confessed not to know. v.28 — that the shout answers nothing in what Demetrius reported Paul as saying. v.36 — that the recorder's counsel against haste is good whatever the creed of the man giving it. v.39 — that he has sorted a religious emergency into two ordinary categories with a venue for each. No claim is put into any commentator's mouth; the grade marks framing weight. Every other verse graded A, and the chapter's expansion ratios are unusually low (median well under 0.5x) because the sources are very full."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "19",
+      "verses": [
+        "11",
+        "17",
+        "19",
+        "24",
+        "29"
+      ],
+      "note": "Five ENTITIES flags judged false positives. v.11 'Maccabees' — Robertson cites 'III Macc. 3:7', which the matcher does not expand. v.17 'Nazianzus' — Clarke spells it 'Nazianzen'; the prose was changed to match his spelling, so this flag should clear on the next run. v.19 'Eustathius' — Barnes cites him as 'Eustha. ad Homer. Odys.'; the name was expanded. v.24 'Hindu' — Ellicott writes 'Hindoo idol'; spelling normalised. v.29 'Hermae' — Ellicott writes 'Hermae-busts' with a ligature the scrape mangles. None introduces a claim absent from the source."
+    },
+    {
+      "at": "2026-08-15",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "19",
+      "note": "acts 19 repaired as 41 entries, one per verse — no pericopes, because every verse in this chapter draws distinct comment from six to nine witnesses, and grouping would have discarded material rather than avoided templating. Only v.7 (134 usable source words) took the thin exemption. The old prose carried all three audit defect shapes: 'The witnesses note' opening most sentences, the full KJV verse in quotes at the head of all 41 entries, and near-duplicate sentences restating the same point three or four times. Regenerated throughout. John Chrysostom's homily block sits under key 8 but covers vv.8-40, and is drawn on at vv.8, 13, 21, 24, 25 and 26."
     }
   ]
 }
