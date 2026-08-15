@@ -70,7 +70,6 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   `finish --push`, which drops a chapter another run already finished (exit 5)
   instead of clobbering it. Progress is the two meters in
   `synthesis-loop.py status`, not the number of runs.
-  Note the lint cannot become a CI gate
   **The lint is now a CI gate** (`validate.yml`), exempting the legacy debt via
   `qa.standard` so it is green today while protecting all new and repaired work;
   the exempt count doubles as the repair progress meter. **The backlog is now
@@ -129,14 +128,27 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   override** per discipline per date (force-on / force-off / auto) that every
   `is*Done` consults first; the home checklist circles are buttons. Covered by
   27 unit assertions + 20 browser assertions (see the commit).
-- [x] **Topical study: Assurance of Salvation** (2026-08-09) — five-part
-  hand-authored study at `topics/salvation-assurance/` (`index` hub +
-  `part-1`…`part-5`) on the `topic-guide.css` component set: the OT→NT thread of
+- [x] **Topical study: Assurance of Salvation** (2026-08-09, extended 2026-08-15)
+  — six-part hand-authored study at `topics/salvation-assurance/` (`index` hub +
+  `part-1`…`part-6`) on the `topic-guide.css` component set: the OT→NT thread of
   salvation, the competing verses read in context, seven traditions at their
-  strongest, the tests of faith, and keeping the fire / the way back. Registered
+  strongest, the tests of faith, keeping the fire / the way back, and the
+  whole-canon register. Registered
   in the `topical` array of `data/books-content.json` so it lists under
   `/studies/`. Structure and pastoral balance (even-handed) were owner-chosen
   before drafting.
+  **Part VI (2026-08-15)** answers the owner's ask for exhaustive sourcing and a
+  most-right stance that survives *all* of Scripture rather than a curated
+  shortlist: ~200 passages walked corpus by corpus, the six hard texts the study
+  had been avoiding worked closely, pinpoint confessional citations for all seven
+  traditions, and a forced-reading count per position (frame 4 → **1**;
+  "believers really fall" 15; Free Grace 9+; Trent 6) with the argument for why
+  zero would be a warning sign rather than a win. All 549 scripture refs on the
+  page are wired as `data-ref` anchors. The rest of the study was reconciled to
+  six parts in the same pass — hero, page description, part kickers, the
+  overview's part map, and forward links from Part II's and Part III's verdicts
+  to the fuller register, so the earlier "carries every hard text" claim now
+  reads at its true scope.
 - [x] **Topical study: Korah's Rebellion** (2026-08-09) — five-part hand-authored
   study at `topics/korahs-rebellion/` (`index` hub + `part-1`…`part-5`) on the
   `topic-guide.css` component set. Registered in the `topical` array of

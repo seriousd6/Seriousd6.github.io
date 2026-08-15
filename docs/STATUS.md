@@ -1,9 +1,13 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-14** (COW synthesis repair scheduled — a bounded batch
-> every 30 minutes, concurrency-safe; Psalms 21 repaired and CI green again;
-> two new five-part topical studies: Korah's Rebellion and Assurance of Salvation.
+> Last updated: **2026-08-15** (Assurance of Salvation grew a sixth part — the
+> corpus-by-corpus register, pinpoint confessional sourcing, and an honest count
+> of what each reading has to force; the study is now reconciled to six parts
+> throughout). Previously **2026-08-14**: COW synthesis repair scheduled — a
+> bounded batch every 30 minutes, concurrency-safe; Psalms 21 repaired and CI
+> green again; two new multi-part topical studies: Korah's Rebellion and
+> Assurance of Salvation.
 > Previously 2026-08-02: Full Treatments Romans + Revelation; treatment
 > eligibility tied to COW synthesis; **Job (42/42) COW synthesis complete →
 > 62.1%**, frontier now Psalms 1)
@@ -59,13 +63,13 @@
   Guarded by `scripts/validate-commentary.py` (CI). Note: the earlier 3-tier commit
   was pushed but its deploy is stuck in an ongoing GitHub Actions outage; all of
   this supersedes it and is **local-only pending review**.
-- **Multi-part studies use sub-tabs (2026-08-09)**: a five-part study is one
-  page with a sticky part-picker, not five linked pages — the same paradigm as
+- **Multi-part studies use sub-tabs (2026-08-09)**: a multi-part study is one
+  page with a sticky part-picker, not N linked pages — the same paradigm as
   the book-commentary chapter picker (`.bkc-chapternav`), reused as the generic
   `.tg-tabs` component in `topic-guide.css` + `assets/js/entries/study-tabs.js`.
   Every panel ships in the HTML and is hidden by JS, so with scripting off the
-  study degrades to one long readable page. Both five-part studies are converted —
-  Korah's Rebellion and Assurance of Salvation — with their old `part-N.html`
+  study degrades to one long readable page. Both are converted —
+  Korah's Rebellion (five parts) and Assurance of Salvation (six) — with their old `part-N.html`
   URLs kept as redirect stubs to `#part-N`. The transform itself is a tracked
   tool, `scripts/compose-study-tabs.py`, which infers accent, hero variant,
   titles and part bodies from the existing files, so a future multi-part study
@@ -80,11 +84,12 @@
   study under `src/pages/topics/<slug>/` is missing from the registry.
 - **Topical studies (hand-authored, separate from the book pipeline)**: eight
   live under `topics/`, listed via the `topical` array in
-  `data/books-content.json`. Both newest ones are five-part studies built on the
+  `data/books-content.json`. Both newest ones are multi-part studies built on the
   `topic-guide.css` component set with no per-study CSS; each part carries its
   own sticky TOC, further-reading list, and prev/next nav.
-  **Assurance of Salvation (2026-08-09)** at `topics/salvation-assurance/`
-  (`index` hub + `part-1`…`part-5`): the OT→NT thread of salvation; the keeping
+  **Assurance of Salvation (2026-08-09, extended 2026-08-15)** at
+  `topics/salvation-assurance/` (`index` hub + `part-1`…`part-6`): the OT→NT
+  thread of salvation; the keeping
   and warning texts read in context with the six hardest passages worked closely;
   seven traditions each stated at its strongest with its weakest link; the tests
   Scripture gives and how to run them; keeping the fire and the way back.
@@ -92,9 +97,31 @@
   than one traded for the other. It represents all seven traditions at their
   strongest but **does adjudicate**: Part II demonstrates in a 14-row table that
   three of the five harmonising strategies are one reading which carries every
-  hard text without forcing any, and Part III states the verdict plainly,
-  separating exegetical strain (a real defect) from metaphysical mystery (which
-  Scripture itself retains). The hub says where it lands up front.
+  hard text in that part without forcing any, and Part III states the verdict
+  plainly, separating exegetical strain (a real defect) from metaphysical
+  mystery (which Scripture itself retains). The hub says where it lands up front.
+  **Part VI, "The Whole Canon" (2026-08-15)**, is the audit the first five parts
+  owed. Parts II–III argued from ~30 texts, and they were the famous thirty; a
+  curated sample can only show a reading survives the passages its author picked.
+  Part VI walks the canon corpus by corpus (Torah · Historical · Psalms and
+  Wisdom · Prophets · Gospels · Acts and Paul · Hebrews, General, Revelation)
+  over **~200 passages**, adds the **six texts the study had been avoiding**
+  (Matthew 18:23–35, Exodus 32:33, 1 Samuel 16:14 / Psalm 51:11,
+  Luke 8:13, Simon Magus, Revelation 3:5 / 22:19), and then **counts the forced
+  readings on every side**: the frame 4 → **1**, "believers really fall" 15,
+  Free Grace 9+, Trent 6. The four became one on textual grounds, not by
+  softening — Revelation 22:19 was never a cost (Erasmus back-translated
+  Revelation's last six verses from the Vulgate; the Greek reads ξύλου τῆς ζωῆς),
+  Luke 8:13 and Acts 8:13 cost a fraction each, and Matthew 18:23–35 keeps a real
+  residue because v.35 is Christ's own application rather than parable machinery.
+  A companion section argues **why zero is the wrong target** — a frictionless
+  reading matches the failure mode the site's own quality audit catches, and
+  *where* the costs fall (the frame's in parable and narrative, the rivals' in
+  flat didactic assertion) is more probative than how many there are. Every
+  tradition now carries **pinpoint confessional citations** (Canons of Dort,
+  Westminster, the Articles of Religion, Trent's Session VI, the Chafer/Hodges
+  line) rather than tradition names, and all **549 scripture references on the
+  page are wired** as `data-ref` anchors.
   **Korah's Rebellion (2026-08-09)** at
   `topics/korahs-rebellion/`: text/composition/reception, the theological sprawl,
   the divided church, the NT's answer, and spiritual abuse. Its Part V was drafted
