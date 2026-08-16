@@ -1065,6 +1065,17 @@
         "48"
       ],
       "note": "Ten entries self-graded A; two graded B, both for the same kind of reason. The 18-24 entry closes by observing that the three southern-camp tribes all shrank while the first two of the eastern camp both grew — a juxtaposition no witness makes, though every element of it is theirs, and the prose says so explicitly rather than implying a source. The 48-49 entry ends with two cross-chapter observations of the same kind: that Naphtali, Zebulun and Dan are the only tribes whose family lists need no explanatory note, and that Naphtali's decrease alone is left without an assigned cause. Both are checkable against the chapter; neither is stated by a commentator. Also recorded: the ENTITIES flag on the Levite entry was a spelling normalisation ('Korahite' for the source's 'Korhites'), removed rather than defended."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "31",
+      "verses": [
+        "36",
+        "42"
+      ],
+      "note": "BLOCKER — this chapter cannot be written to contract as the source stands, and the next worker will hit the same wall. Two findings. (1) The catena is incomplete: source keys are 1-32, 36, 37, 42, 48-54; verses 33-35, 38-41 and 43-47 are absent entirely. (2) An identical 207-word Jamieson, Fausset and Brown block on the tribal princes' offerings of Numbers 7 ('This tribe being stationed on the right side of Judah, offered next through its representative...') is mechanically inserted at every SIXTH key — 6, 12, 18, 24, 30, 36, 42, 48, 54. It is unmistakable scrape residue. Keys 36 and 42 contain nothing else: QA.usable_source_words returns 0 for both after the JFB exclusion. The conflict: verse 42 is isolated (41 and 43 are not source keys), so no pericope range can absorb it without covering verses absent from the source, which coverage_problems rejects; and declaring a range ANYWHERE in the chapter switches coverage enforcement on for the whole chapter, which then demands an entry for key 42 that cannot honestly be written. Three ways out, none of which an unattended run should choose alone: (a) write the chapter with NO declared range, which leaves coverage unenforced so keys 36 and 42 can simply be omitted as residue-only, on the 2 Chronicles 27 key-16 precedent — but then several tiny verses (v.21 has 23 usable words, v.29 has 36, v.16 and v.31 have 50) must each carry a 120-word thin entry, which is padding by contract at 3-5x; (b) drop keys 36 and 42 from the source file as scrape corruption, which makes the ranged solution legal and is the cleanest fix, but edits the data tree; (c) re-scrape the chapter, since 12 of 54 verses are missing anyway. Recommend (b) or (c), owner's call. Chapter size for whoever takes it after the fix: 42 keys, 19,991 source words."
     }
   ]
 }
