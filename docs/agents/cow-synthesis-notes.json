@@ -1250,6 +1250,13 @@
         "34"
       ],
       "note": "Three genuine disagreements preserved rather than smoothed: what 'his foot' was (Clarke and Ellicott a pedestal, Keil a separate drawing-vessel, Henry and Wesley a basin receiving water from spouts); what 'pure myrrh' is (Clarke has myrrh gathered by incision, Ellicott has the freely-flowing sort and calls incision-myrrh the inferior kind); and whether galbanum smelled sweet (Ellicott disagreeable but useful as a fixative, Calvin sweet, arguing from the death penalty on private use)."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "7",
+      "note": "Not attempted (worker context exhausted; nothing claimed). 40 verses, 75,582 source words — the largest unit offered in six picks, and unlike Joshua 15 or 19 it is dense doctrinal argument on marriage and celibacy with no register structure, so pericope grouping buys almost nothing and it needs near per-verse treatment. Budget it as a whole batch for a fresh worker, or more. WORTH THE MAINTAINER'S ATTENTION, measured rather than impressionistic: --worst-first systematically hands out chapters well above corpus size. Across all 1,189 cow chapters the median is 19,611 source words and the mean 27,059; the visible head of the worst-first repair queue has a median of 30,409 and a mean of 36,482, i.e. roughly 1.55x the corpus median. The cause is structural, not a bug — defect weight counts defective verses, and verse count correlates with source size, so the worst-first ordering is also a longest-first ordering. Two consequences. (1) A batch budget should be planned around ~30k source words per chapter, not the corpus median. (2) The tail is severe: 1 Corinthians 15 sits in the current window at 116,326 words and the corpus maximum is 150,785, while 37.6% of all chapters are 25k or larger. If workers are to keep clearing the queue rather than returning surveys, the scheduled prompt's 'up to 2 chapters' is the wrong unit for this end of the queue — one chapter, or an explicit size cap on the pick, would fit it better. My own six picks bear this out: 34.7k, 28.3k, 30.6k, 68.7k, 20.0k, 18.9k and now 75.6k."
     }
   ]
 }
