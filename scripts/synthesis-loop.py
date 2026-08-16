@@ -11,6 +11,7 @@ everything mechanical is here, so a run can be left alone.
     python3 scripts/synthesis-loop.py next --queue repair --worst-first
     python3 scripts/synthesis-loop.py finish <book> <ch>      # verify+stamp+commit
     python3 scripts/synthesis-loop.py finish <book> <ch> --unattended --push
+    python3 scripts/synthesis-loop.py size <book> <ch>        # how big a unit is
     python3 scripts/synthesis-loop.py status
 
 EXIT CODES (stable — a shell loop depends on them)
@@ -77,6 +78,26 @@ def cmd_next(a):
         sys.stderr.write(r.stderr)
         return r.returncode
     print(r.stdout.strip())
+    return 0
+
+def cmd_size(a):
+    """Source words in a chapter, so a batch can be budgeted before it starts.
+
+    --worst-first is also longest-first: defect weight counts defective verses
+    and verse count tracks source size, so the head of the repair queue runs
+    about 1.55x the corpus median. A fixed "two chapters per batch" is therefore
+    the wrong unit at this end of the queue, and a worker that can measure the
+    unit first can decide whether it is a whole batch on its own.
+    """
+    sys.path.insert(0, HERE)
+    import synthesis_qa as QA
+    p = os.path.join(ROOT, f'data/commentary/cow/{a.book}/{a.chapter}.json')
+    if not os.path.exists(p):
+        print(f'no source catena for {a.book} {a.chapter}', file=sys.stderr)
+        return 2
+    src = json.load(open(p, encoding='utf-8'))
+    total = sum(QA.usable_source_words(blob or '') for blob in src.values())
+    print(f'{a.book} {a.chapter}: {len(src)} source keys, {total} usable source words')
     return 0
 
 def cmd_status(a):
@@ -228,6 +249,10 @@ def push_chapter(book, ch, msg, base):
     blobs = {f: open(os.path.join(ROOT, f), encoding='utf-8').read() for f in files}
     mine = unpushed_notes(base)
 
+    # HEAD:master, never 'master': a scheduled container checks out at a
+    # detached HEAD, where the local 'master' ref is whatever the clone left
+    # behind. Pushing it sends a stale commit and is rejected every time, which
+    # reads as "push rejected four times" on work that was perfectly sound.
     for attempt in range(4):
         r = run(['git', 'fetch', 'origin', 'master'])
         if r.returncode != 0:
@@ -245,7 +270,7 @@ def push_chapter(book, ch, msg, base):
             if mine:
                 run(['git', 'add', NOTES_REL])
                 run(['git', 'commit', '-m', f'Loop notes: {book} {ch}'])
-                run(['git', 'push', 'origin', 'master'])
+                run(['git', 'push', 'origin', 'HEAD:master'])
             say('push', True, f'another run finished {book} {ch} first — dropped ours')
             return 5
 
@@ -260,7 +285,7 @@ def push_chapter(book, ch, msg, base):
         if r.returncode != 0:
             say('push', False, 'nothing to commit after rebuilding onto origin')
             return 4
-        r = run(['git', 'push', '-u', 'origin', 'master'])
+        r = run(['git', 'push', 'origin', 'HEAD:master'])
         if r.returncode == 0:
             say('push', True, 'origin/master')
             return 0
@@ -300,7 +325,7 @@ def push_notes(msg):
         run(['git', 'add', NOTES_REL])
         if run(['git', 'commit', '-m', msg]).returncode != 0:
             return
-        if run(['git', 'push', '-u', 'origin', 'master']).returncode == 0:
+        if run(['git', 'push', 'origin', 'HEAD:master']).returncode == 0:
             say('push (notes)', True, msg)
             return
         time.sleep(2 ** (attempt + 1))
@@ -332,6 +357,9 @@ def main():
     p.add_argument('--spread', type=int, default=0, metavar='N',
                    help='pick uniformly from the first N of the queue instead '
                         'of its head — use it when runs may overlap')
+
+    p = sub.add_parser('size'); p.set_defaults(fn=cmd_size)
+    p.add_argument('book'); p.add_argument('chapter')
 
     p = sub.add_parser('status'); p.set_defaults(fn=cmd_status)
 

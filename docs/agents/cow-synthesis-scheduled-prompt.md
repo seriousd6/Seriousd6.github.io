@@ -17,10 +17,29 @@ cosmetic — two things change and both are load-bearing:
   drops its own prose (keeping its notes) rather than clobbering the winner.
   That is exit code **5**, and it is a normal outcome, not a failure.
 
-Each run does a **bounded batch** (3 chapters below) rather than running to
-completion, so a session's lifetime stays near the firing interval instead of
-growing without limit. Raise or lower that number to trade throughput against
-token spend; it is the only knob that matters.
+Each run does a **bounded batch** rather than running to completion, so a
+session's lifetime stays near the firing interval instead of growing without
+limit.
+
+**Budget the batch by source words, not by chapter count.** `--worst-first` is
+also longest-first: defect weight counts defective verses, and verse count
+tracks source size, so the head of the repair queue runs about **1.55x the corpus
+median** (30.4k words against 19.6k). The tail is worse — 1 Corinthians 15 is
+116k words and the corpus maximum is 151k, with 37.6% of chapters at 25k or
+larger. A flat "two chapters" therefore asks for a fixed amount of work and gets
+a wildly variable one; measured across six consecutive picks by one worker:
+34.7k, 28.3k, 30.6k, 68.7k, 20.0k, 18.9k, 75.6k. The last was abandoned
+unattempted when the worker ran out of context.
+
+So measure the unit before committing to it:
+
+```sh
+python3 scripts/synthesis-loop.py size <book> <ch>
+```
+
+Over ~40k usable source words, that chapter is the whole batch. Under it, two
+are reasonable. (Figures above measured 2026-08-16 by a live worker and
+reproduced by `size`.)
 
 ---
 
@@ -112,7 +131,9 @@ Other rules:
 - If the same chapter fails twice, note it and move on; do not keep retrying.
 - Do not switch queues by hand; --queue auto does it. Repair finishes first.
 - Do not touch anything outside data/commentary/cow-synthesis*/ and the notebook.
-- After 3 chapters, stop. Another run fires in 30 minutes and will continue.
+- When the batch budget is spent, stop. Another run fires in 30 minutes and
+  will continue. Never start a chapter you cannot finish — an abandoned pick
+  costs the queue nothing but costs the run everything.
 
 Finish by reporting: which chapters landed, which were dropped to a race, which
 failed, and what "python3 scripts/synthesis-loop.py status" says now.
