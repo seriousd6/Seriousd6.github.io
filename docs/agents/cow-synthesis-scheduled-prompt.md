@@ -123,14 +123,47 @@ failed, and what "python3 scripts/synthesis-loop.py status" says now.
 ## Arming and disarming
 
 Two Routines an hour apart in phase give a 30-minute cadence (a Routine's
-minimum interval is hourly). List them, and stop them, with:
+minimum interval is hourly).
+
+**A Routine must fire into a persistent session that already has the repo.**
+This was learned the expensive way on 2026-08-15: the first attempt used
+`create_new_session_on_fire`, which fired 56 times over 28 hours and produced
+absolutely nothing. `create_trigger` has no `source_url` parameter and the
+account's environment carries no repository binding of its own, so every fired
+session came up with **no clone** and died on the first command. The failure is
+silent and easy to mistake for the loop being slow: the Routine reports firing on
+schedule, `last_fired_at` advances, and no session appears in the session list
+(scheduled runs are excluded from it by default) — the only honest signal is that
+the frontier meters do not move.
+
+So the shape is: **long-lived workers, poked on a schedule.**
 
 ```sh
-# from a session in this repo
+# one worker per Routine, each created WITH the repo attached
+mcp__Claude_Code_Remote__create_session \
+    source_url=https://github.com/seriousd6/Seriousd6.github.io \
+    source_revision=master  permission_mode=auto  tags='["cow-synthesis-batch"]'
+
+# a Routine that pokes that worker, rather than spawning a blank one
+mcp__Claude_Code_Remote__create_trigger \
+    persistent_session_id=session_...  cron_expression='13 * * * *'
+
 mcp__Claude_Code_Remote__list_triggers
 mcp__Claude_Code_Remote__update_trigger  trigger_id=... enabled=false   # pause
 mcp__Claude_Code_Remote__delete_trigger  trigger_id=...                 # remove
 ```
+
+`update_trigger` cannot add or change a session binding — to repoint a Routine at
+a different worker, delete it and create a new one.
+
+Two workers 30 minutes out of phase keep the concurrency the `--spread` and
+exit-5 machinery was built for. The cost of a persistent worker is context
+growth: it compacts as the pokes accumulate, so each poke asks it to flag when
+its context is getting long, and a worker that says so should be replaced with a
+fresh session rather than nursed.
+
+**Check the meters, not the firings.** A Routine that fires perfectly and does
+nothing looks identical to one that is working, from everywhere except the data.
 
 ## Watching it
 

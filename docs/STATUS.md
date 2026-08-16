@@ -198,6 +198,14 @@
   rebuilding onto it (never rebasing), dropping its own prose but keeping its
   notes when another run finished the same chapter first (exit 5). Rejection
   notes are pushed too — a scheduled run's container does not outlive it.
+  **Corrected 2026-08-16**: the first arming used `create_new_session_on_fire`
+  and fired 56 times over 28 hours for zero output — `create_trigger` takes no
+  `source_url` and the environment binds no repository, so every fired session
+  came up without a clone. Routines now poke two long-lived worker sessions that
+  were created with the repo attached, 30 minutes out of phase. The lesson is in
+  `docs/agents/cow-synthesis-scheduled-prompt.md`: a Routine that fires on
+  schedule and does nothing is indistinguishable from a working one except in the
+  frontier meters, so judge it by those.
 - **Disciplines (2026-08-09)**: completion is no longer purely auto-detected.
   `assets/js/tracker.js` resolves every discipline as *manual override → derived*,
   where the override is three-state (`true` force-on / `false` force-off / absent
