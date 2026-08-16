@@ -609,6 +609,95 @@
       "book": "exodus",
       "chapter": "25",
       "note": "Driver/environment bug worth fixing: in the scheduled CCR container the repo is checked out with a DETACHED HEAD. synthesis-loop.py push_chapter runs 'git push -u origin master', which in that state pushes the stale local branch 'master' rather than HEAD, so every attempt is rejected as non-fast-forward and finish reports 'push rejected four times' (exit 4) even though the commit is sound and 'git push origin HEAD:master' would fast-forward. Worked around by hand this run: git checkout -B master <commit>, git reset --mixed origin/master, re-run finish --push. Suggested fix: push HEAD:master, or refuse to start when HEAD is detached."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "47"
+      ],
+      "note": "Six Jamieson, Fausset and Brown blocks in this chapter carry foreign-passage material, all of it from Leviticus 25-26: v.5 on the redemption of land and the Jubilee; v.11 on the sale of houses in walled towns; v.17 on lending to a poor brother without usury; v.23 and v.29 (the same block twice) on the Hebrew servant redeemed before the Jubilee; v.47 on the barley and wheat harvests and the vintage. All six declared as excluded_voices on the covering tags entries and omitted from the prose. JFB is therefore named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "48"
+      ],
+      "note": "The Ellicott block filed under v.48 ends in StudyLight page chrome — site footer, copyright text, nav menu and several kilobytes of inline CSS — which inflates the measured source for the 46-50 span by roughly 1,400 words. Not attributable to any witness, so not declarable as excluded_voices; simply omitted. The span is far too rich for the thin exemption to be in question either way."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "3",
+        "4",
+        "8",
+        "12",
+        "16",
+        "20",
+        "23",
+        "28",
+        "31",
+        "36",
+        "41",
+        "46"
+      ],
+      "note": "Repaired as 13 pericope entries tiling all 50 verses: 1-2, 3, 4-7, 8-11, 12-15, 16-19, 20-22, 23-27, 28-30, 31-35, 36-40, 41-45, 46-50. The chapter's per-verse source is very unevenly distributed (v.1 alone carries 4,722 usable words, v.20 carries 15) because Henry, Keil and Delitzsch and Calvin all comment in blocks covering whole sections filed under the opening key. Splitting on the narrative seams rather than the verse boundaries keeps each entry standing on a span its own witnesses actually cover. v.3 is left alone because the rebels' speech is a self-contained unit with 799 words of comment on it. No thin exemptions: the leanest span (28-30) still carries 1,092 usable source words."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "28"
+      ],
+      "note": "The 28-30 entry self-graded B. Henry lists the deaths that would have disproved Moses (plague, fire from heaven, the sword) and separately calls the earth opening 'a punishment without precedent'; the entry joins those into the inference that fire from heaven was named precisely because it had precedent and this appeal required something with none. The claim is sound and nothing is put into Henry's mouth, but the connective is the summary's, not his. Every other entry graded A."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "32",
+        "38",
+        "39"
+      ],
+      "note": "Two live disagreements recorded in tags rather than smoothed over. (1) Whether Korah died in the chasm or in the fire: Ellicott and Wesley both argue for the fire, from the sons who did not die, from Deuteronomy 11:6 naming only Dathan and Abiram, and from Psalm 106:17-18 dividing the two punishments — against the plain reading of v.32 and the later summary that names Korah with the other two. (2) What metal the priests' own censers were: Gill says silver (gold only on the day of atonement) and reads the specification of brass here as marking Korah's vessels off from Aaron's; Ellicott finds no sufficient authority for silver and points to Exodus 38:3. Also recorded: Calvin holds the censers were preserved as accursed under a ban, against the commoner view that a thing once put to holy use may not return to common service."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "40"
+      ],
+      "note": "Ellicott's note on v.40 cites the Jude parallel as 'Numbers 16:11' — a misprint for Jude 11, since the sentence is about the apostle warning Christians by this example. Written as 'the epistle of Jude' with no numeric ref rather than reproducing the bad citation."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "16",
+      "verses": [
+        "49"
+      ],
+      "note": "Calvin reckons the company destroyed with Korah at 'about three hundred' where the text says two hundred and fifty; the figure is his, and the entry attributes it to him rather than correcting it silently or repeating it as fact."
     }
   ]
 }
