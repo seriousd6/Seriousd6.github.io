@@ -1328,6 +1328,89 @@
         "28"
       ],
       "note": "Entries 1 and 28 first graded B on repetition — low type-token ratio, not duplicated content (dupfrac 0.000 on both). The cause is the chapter's own vocabulary: offering, trespass, sin, peace, burnt, altar, priest, breast, shoulder recur unavoidably. Fixed by deliberately varying the surrounding prose rather than by cutting substance, which took both to A. Worth expecting on any Leviticus sacrifice chapter."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26",
+        "31",
+        "32",
+        "38",
+        "44",
+        "50",
+        "56",
+        "62"
+      ],
+      "note": "Jamieson, Fausset and Brown is scrape residue throughout this chapter — twelve verses carry a JFB block and not one of them is about Joshua 15. The recurring texts are from Deuteronomy 9-10 (the golden calf, the tables of stone) and Deuteronomy 4-6 (the repetition of precepts). Declared as excluded_voices on eleven of the sixteen entries."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "15",
+      "verses": [
+        "37",
+        "63"
+      ],
+      "note": "Ellicott's blocks at v.37 and v.63 both run off into StudyLight page chrome: stylesheet rules, the full nav menu, a Cloudflare challenge snippet, a Stripe public key and the book_data array. Omitted; only the commentary proper was used."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "13",
+        "20",
+        "55"
+      ],
+      "note": "A 63-verse boundary-and-town-list chapter, 30,562 source words, cut into sixteen entries. The voice map drove every span: Henry has blocks only at vv.1, 13, 20 and 28-35, Calvin only at 1, 13, 14, 18, 20 and 63, and both write section overviews rather than verse notes, so their material had to be used inside the entry covering the verse it is filed under. Two ghost attributions surfaced in the first check — Henry's Bethlehem remark and his note on the wilderness being thinly settled, both from the v.20 block, quoted in the 55-60 and 61-62 entries — and were rewritten out. The town lists (21-62) are mostly Gill and Keil at 200-300 words a verse; grouping them by the chapter's own district headings gives entries of workable length at expansion ratios of 0.15x to 0.36x."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "8",
+        "14",
+        "17",
+        "20",
+        "42",
+        "61"
+      ],
+      "note": "Seven disagreements preserved rather than smoothed: whether the lot governed the division among families as well as tribes (Gill against Clarke and Wesley); what the river of Egypt is (Clarke calls it undecidable, Ellicott and Keil name the Wady el-Arish); where the valley of Hinnom lay (Jerome and Clarke east of Jerusalem, Reland and Keil south of Zion); when Caleb drove out the Anakim (Gill before Joshua's death, Calvin after); how Othniel was related to Caleb (Gill makes him a nephew to save the marriage from the incest law, Keil makes him Caleb's own younger brother and denies the law applies); why the town totals do not match the names (Simeon's transfer, the definition of a city, or corrupt compound names); why Gath and Ashkelon are unnamed (Gill's 'the three stand for the rest' against Keil's 'both lie inside the boundaries already given'); and how habitable the desert of Judah was (Keil's terrible desert against Gill's many cities and villages)."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "15",
+      "verses": [
+        "58"
+      ],
+      "note": "Clarke at v.58 reports that the Alexandrian and Vatican manuscripts of the Septuagint insert eleven further towns here, Ephratha (Bethlehem) among them, that Jerome knew them, and that Kennicott would restore them, explaining the loss as a transcriber's eye skipping between two occurrences of 'and their villages'. Keil independently records the same gap. This bears directly on Henry's remark at v.20 that Bethlehem's absence shows how little the town then was — if the eleven belong, the absence is a copyist's slip. The two are filed under different verses and so sit in different entries; the connection is drawn in the 55-60 entry without attributing Henry's remark there."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "33",
+        "61"
+      ],
+      "note": "Two ENTITIES flags kept deliberately. 'Hadireh' is the source's 'Hadîreh' with the circumflex stripped. 'Onomasticon' expands the source's standing abbreviation 'Onom.' — same class as the Whitfield/Jerom spellings kept in earlier chapters. Four other flags were genuine and were fixed: 'Anakim' (Calvin spells it Enakim, Keil Anakites) reworded away; 'Masoretes' (source has Masorites) reworded to the received accentuation; 'Watchtower' was my translation of Keil's Alba Specula and was reverted to the Latin; 'Safieh' and 'Esdud' were misspellings of the source's Saphieh and of a mangled Esdûd."
     }
   ]
 }
