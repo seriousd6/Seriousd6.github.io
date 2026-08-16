@@ -1994,6 +1994,77 @@
         "34"
       ],
       "note": "Clarke's comparison of the consecration with the Roman taurobolium is the most striking single note in the chapter, and its direction is worth preserving exactly. He does not treat the Hebrew rite as a variant of the pagan one: he judges the Roman ceremony to bear a striking allusion to Aaron's consecration, to have probably been borrowed from it, and then to have been disguised by Rome's own superstitions. He returns to it at v.36 to make the chapter's whole logic turn on it — these rites are significant taken in reference to Christ's priesthood, and taken out of that relation would be as absurd and nugatory as the making of a Roman pontiff."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "Five JFB blocks in this chapter are scrape residue from Acts 13-14, not comment on Romans 11: v2 carries a fragment on Elymas and the proconsul, v8 a 220-word travel narrative on Perga and Pisidian Antioch (Howson quoted), v14 'cherished he them (as a nurse the infant in her bosom)', v20 a note on David's seed and the name Jesus, v26 a fragment on Gentile proselytes and 'the Jew first'. JFB has no genuine comment anywhere in Romans 11. None were declared as excluded_voices because no verse needed the thin exemption; they were simply ignored, as the prose rules require."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "11",
+      "verses": [
+        "10",
+        "22",
+        "36"
+      ],
+      "note": "Three further residue blocks: Lightfoot at v10 is a Prov 27:22 note plus running page headers ('HOR HEBRAICHZ ET TALMUDICE'); Lightfoot at v22 opens with a Rom 8:22 fragment before turning to a genuine preface on Romans 11 (the on-topic half was used); Ellicott at v36 is ~100 words of real comment followed by ~1,150 words of StudyLight page furniture — nav menus, CSS and inline JavaScript. The Ellicott case is the largest single residue block found so far and inflates that verse's raw source count from ~130 to 1,278."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "11",
+      "note": "Matthew Henry's whole-chapter exposition (8,127 words) is filed under key 1, with a further 2,075 under key 33 and short blocks at 11 and 22. Henry's comment on vv.2-32 is therefore not available at those verses, and naming him there would attribute material the verse's own catena does not carry; he appears in voices only at 1, 22 and 33. The same shape will recur wherever a whole-chapter expositor was scraped verse-by-verse — worth checking key 1 for an oversized block before assuming a chapter is voice-poor in the middle."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "11",
+      "note": "Names quoted INSIDE a block are not voices. Calvin's editorial apparatus here names Chrysostom, Origen, Ambrose, Augustine, Grotius, Pareus, Beza, Griesbach, Mede and Turrettin; the UNSOURCED check is chapter-level, so it passes on any of them who comment elsewhere in the chapter and will not catch the error. Voices were therefore derived by intersecting the names used in the prose with the names that actually head a block in that verse's own catena. That caught three real misattributions before they landed (Calvin at v4, Henry at v5 and v36) and three near-misses (Chrysostom at 15, 32, 33, where Calvin's editor is merely quoting him)."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "11",
+      "verses": [
+        "15",
+        "26",
+        "29"
+      ],
+      "note": "Three axes run the length of this chapter and are worth carrying into Romans 9-10 and Galatians. (1) 'Life from the dead' at v15: Calvin argues from the sentence's balance that it must describe a revival among the Gentiles, and names Chrysostom and Theodoret as holding the last-resurrection reading he rejects; Theodoret's own block confirms it exactly, and Ellicott sides with him. (2) 'All Israel' at v26: Gill insists on the Jewish nation as a body and names the corporate reading as the one he rejects; Calvin takes it for the whole people of God from both, appealing to Galatians 6:16; Theodoret at v27 independently agrees with Calvin; Robertson sets both out and declines. (3) 'Without repentance' at v29: Barnes makes it secure perseverance, while Theodoret argues from Saul, Solomon and the Jews themselves that God does resume gifts on ingratitude, and points to the Gentile threat at v22. In each case the Antiochene voice is on the opposite side from the one a reader would predict from the chapter's Reformed centre of gravity."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "11",
+      "verses": [
+        "7",
+        "19",
+        "25"
+      ],
+      "note": "Calvin's 19th-century editor openly contradicts Calvin three times in this chapter, and the dissents are substantive enough to be worth tagging as their own voice if the corpus ever supports it. At v7 the editor calls Calvin's derivation of the prophetic hardening from eternal reprobation 'not satisfactory' and 'beyond the evident meaning of the Apostle'. At v19 he rebuts the inference that faith may fail, distinguishing the Gentile world from the individual. At v25 he says flatly that Calvin's explanation 'is by no means satisfactory' and that making Israel mean the people of God destroys the contrast the argument runs on. Written into the prose as 'his editor', since the block is filed under Calvin's name."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "11",
+      "note": "Sizing note for the batch-budget rule. Romans 11 measured 75,205 usable source words across 36 keys — 3.8x the corpus median and nearly 2x the 40k 'whole batch' line — and was still writable per-verse in one batch, because a rich source makes each entry EASIER, not harder: every verse had 490-10,918 words behind it, so there was never a hunt for material and never a thin exemption. The cost is reading, not writing. What actually made it tractable was that the two largest blocks are not per-verse material at all: Henry's 8,127 words at key 1 cover the whole chapter and are read once. Suggested refinement to 'size': report the largest single block alongside the total, since a chapter whose bulk sits in one whole-chapter exposition is far cheaper than its word count implies."
     }
   ]
 }
