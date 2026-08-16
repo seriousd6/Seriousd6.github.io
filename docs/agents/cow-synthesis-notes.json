@@ -602,6 +602,13 @@
         "40"
       ],
       "note": "Four ENTITIES flags judged false positives. 'Noah' at v.10 and v.17 glosses Genesis 6:14, which Ellicott and Keil and Delitzsch both cite by chapter and verse (tebah as against aron; kaphar as 'to pitch'). 'Englished' at v.29 is an ordinary English verb, not a proper noun. 'Ephesus' at v.40 names the city of the silver shrines for Diana that Clarke cites from Acts 19:24 — a geographic gloss on his own citation, not a view attributed to him."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "note": "Driver/environment bug worth fixing: in the scheduled CCR container the repo is checked out with a DETACHED HEAD. synthesis-loop.py push_chapter runs 'git push -u origin master', which in that state pushes the stale local branch 'master' rather than HEAD, so every attempt is rejected as non-fast-forward and finish reports 'push rejected four times' (exit 4) even though the commit is sound and 'git push origin HEAD:master' would fast-forward. Worked around by hand this run: git checkout -B master <commit>, git reset --mixed origin/master, re-run finish --push. Suggested fix: push HEAD:master, or refuse to start when HEAD is detached."
     }
   ]
 }
