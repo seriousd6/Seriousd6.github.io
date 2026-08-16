@@ -1549,6 +1549,75 @@
         "1"
       ],
       "note": "Zero ENTITIES signals on the whole chapter — the first clean fidelity read-back in this run. The reason is probably that Exodus 26 has almost no place-names and no modern site identifications; the flags in Exodus 30, Joshua 15 and Deuteronomy 2 were nearly all transliterated toponyms or diacritics stripped from surveyors' spellings."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "29",
+      "verses": [
+        "5",
+        "17",
+        "23",
+        "29",
+        "35",
+        "41"
+      ],
+      "note": "Jamieson, Fausset and Brown is scrape residue at six verses in this chapter, none of it on Exodus 29: fragments about the wilderness murmuring, the quails and the tamarisk manna, and the faithful scouts. Declared as excluded_voices on entries 4, 15, 22, 26, 35 and 38."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "29",
+      "verses": [
+        "46"
+      ],
+      "note": "Ellicott's block at v.46 runs off into StudyLight page chrome (footer, terms-of-use links). Omitted; only the commentary proper was used."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "29",
+      "verses": [
+        "42",
+        "43"
+      ],
+      "note": "Eleven entries over 46 verses, 20,291 source words. One ghost attribution caught before validating: Keil and Delitzsch quoted in the 43-46 entry, where their block actually sits at v.42 and so falls in the 38-42 span. Replaced with Clarke and Ellicott, who do have blocks at 43-46. Six other entries first showed a substantive voice as excludable — Gill at v.1, Gill in 4-9, Wesley and Clarke in 15-18, Ellicott and Wesley in 26-34, Clarke in 38-42, Gill in 43-46 — in every case because I had simply not used a commentator who had real material there. All six were written in rather than declared excluded; excluded_voices is for residue, not for a writer's omissions."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "29",
+      "verses": [
+        "37"
+      ],
+      "note": "One three-way disagreement preserved, on 'whatsoever toucheth the altar shall be holy'. Calvin reads it of the offerings, the altar sanctifying the victims laid on it, and notes but rejects the masculine reading that would make it the priest. Clarke reads it as property: whatever was laid on the altar became the Lord's and had to be wholly devoted. Ellicott turns the grammar round and makes it a prohibition — 'must be holy', nothing unholy may touch it, the future carrying imperative force as in the Ten Commandments."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "29",
+      "verses": [
+        "22",
+        "30",
+        "38"
+      ],
+      "note": "Three passages in this catena are unusually rich and worth knowing about. Clarke at v.22 relays Houbigant's conjecture that the waving and heaving of the offerings traced the figure of the cross, and is careful to present it as a conjecture he will not assert. Clarke at v.30 turns the seven days into a full excursus on the number seven — the Hebrew number of perfection, the Essene formula preserved by Philo and Josephus, the Pythagorean triangle and square, Cicero's 'knot and cement of all things' — and ends by leaving the ancient philosophers to judge their own meaning. Calvin at v.38 refuses to let the oil and wine of the daily offering be read as flavouring, since God was not gratified by their savour and did not wish to make epicures of the priests under colour of religion."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "29",
+      "verses": [
+        "2",
+        "19"
+      ],
+      "note": "Zero ENTITIES signals again, as in Exodus 26 — these tabernacle and consecration chapters carry almost no place-names. But two entries first graded B on repetition (2-3 and 19-21, ttr 0.562 and 0.579, dupfrac 0.000). The cause is the same as in Leviticus 7: the chapter's own vocabulary — bread, cake, unleavened, oil, blood, hands — recurs unavoidably. Fixed by varying the surrounding prose rather than cutting substance, which took both to A."
     }
   ]
 }
