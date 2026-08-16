@@ -770,6 +770,70 @@
         "16"
       ],
       "note": "Signals judged and overridden. The 2.38x expansion on the thin entry 13 is real but harmless: the source is 80 words (Gill on why the law is called a covenant, plus Ellicott's two bare cross-references), and 190 words is the shortest honest treatment of it; Keil and Delitzsch's block under key 11 covers vv.11-13 and supplies the rest. The ENTITIES flag 'Greeks' at vv.15-16 is a false positive — Clarke writes of 'the Greek and Roman Venus' in that verse's own block."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "10",
+        "14",
+        "19",
+        "21",
+        "33",
+        "36",
+        "39",
+        "48",
+        "54"
+      ],
+      "note": "Repaired as 12 pericope entries tiling all 57 verses: 1-3, 4-7, 8-9, 10-13, 14-18, 19-20, 21-32, 33-35, 36-38, 39-47, 48-53, 54-57. The seams are the chapter's own — the examination outside the camp, the bird rite, the two washings, the eighth-day offerings, the blood and oil, the closing sacrifices, the poor man's substitute, then the four stages of the house law, then the colophon. vv.21-32 are one entry because the section is an explicit repetition of vv.10-20 at a lower price, and vv.39-47 are one because the four verses on scraping and replastering carry only ~200 usable source words on their own — too thin for the floor, ample when read with the demolition and the quarantine rules they belong to. No thin exemptions anywhere: the leanest span (19-20) still carries 492 usable words."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "14",
+      "verses": [
+        "26",
+        "38"
+      ],
+      "note": "Two Jamieson, Fausset and Brown blocks in this chapter carry foreign-passage material, both from Exodus 25 on the tabernacle furniture: v.26 holds his note on beating a winged figure out of a solid piece of gold, and v.38 his long passage on the tabernacle as a schoolmaster to Christ, the ark and mercy seat, the showbread table and the candlestick. Both declared as excluded_voices on the covering tags entries and omitted from the prose. JFB is named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "14",
+      "verses": [
+        "57"
+      ],
+      "note": "The Ellicott block filed under v.57 ends in several kilobytes of StudyLight page chrome — inline CSS, the site's book_data array, the whole navigation menu, a Cloudflare challenge snippet and a Stripe public key — which inflates the measured source for the 54-57 span from roughly 690 real words to 1,757. Omitted silently and unnarrated. The span is comfortably above the thin threshold either way."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "14",
+      "verses": [
+        "8",
+        "34",
+        "57"
+      ],
+      "note": "Three live disagreements recorded in tags rather than smoothed over. (1) Whether the seclusion was hygienic or purely ceremonial: Ellicott states flatly that leprosy was not contagious and argues it from the emptying of the house before inspection (v.36), while Wesley has the man kept out of his tent lest leprosy still lurking in him infect his family (v.8). (2) Whether house-leprosy was supernatural: Ellicott takes 'I put the plague' at face value as the immediate hand of God, Clarke answers that scripture often represents God as doing what in providence he only permits, and guesses animalcula. (3) What 'to teach' governs in v.57: Ellicott reads it as instruction against the time when the cases would have to be judged in the land, the ancient authorities and the Chaldee as instruction about which days a plague may be inspected on — Wesley's gloss, that the priest was tied to rules the people could discern as well as he could, sits with neither exactly."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "14",
+      "verses": [
+        "36"
+      ],
+      "note": "The 36-38 entry self-graded B. Ellicott argues that clearing the house before the inspection shows the law did not regard leprosy as infectious; the entry adds the sharpening clause that a real infection would hardly have been let out of the door ahead of the inspection. The inference is his and the clause is faithful to it, but the formulation is the summary's. Every other entry graded A."
     }
   ]
 }
