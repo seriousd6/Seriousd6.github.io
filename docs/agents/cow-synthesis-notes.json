@@ -1840,6 +1840,81 @@
         "21"
       ],
       "note": "Drafting for lexical variety from the outset — short genitive chains, concrete nouns, varied verbs — held every entry in this chapter at grade A with no repetition-repair pass, where Exodus 40 needed two entries rewritten after they graded B on ttr alone. The remaining cost is still the ceiling: most first drafts landed 40 to 170 words over 650. The 21-28 entry ran the other way and had to be grown from 300 to 390, since that span is almost entirely 'See Gill on' stubs with only Gill at vv.21, 25 and 28, Wesley at v.21 and Ellicott at v.28 carrying content."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "16",
+        "28"
+      ],
+      "note": "Numbers 33 has no keys 26 or 27, so spans had to break at 25|28. It is also one of the chapters the quality audit names as known-degenerate (ttr 0.31-0.37 alongside Joshua 17), and the reason is visible in the source: vv.19-36 are mostly one-line Clarke entries saying a place is unknown, with Gill supplying mileages and nothing else. Wide spans (16-25, 28-40, 41-49) were the only way to reach the floor without padding, and the middle entries are built almost entirely from Clarke's site identifications and Gill's distances."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "3",
+        "16",
+        "28",
+        "55"
+      ],
+      "note": "JFB is residue throughout as usual. Two further exclusions are of a different kind: Keil's blocks at v.17 and v.55 are bare scripture quotation with no comment (declared excluded on the 16-25 and 55-56 entries), and Ellicott at v.40 is a single cross-reference, 'See Numbers 21:1, and Note' (excluded on 28-40). Verse 56 additionally carries the StudyLight CSS and nav-menu chrome after Ellicott's note, and Calvin's block at v.14 of the neighbouring chapter has the same defect."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "28",
+        "41"
+      ],
+      "note": "Three ENTITIES signals, all of them my own tidying of the source rather than anything the sources said. I had written Elanitic where the scrape has Elantic, Moserah where Gill has Mosera, and Idumean where Clarke has 'a place in Idumea'. All three reverted to the source forms — including the apparent typo Elantic, on the Deuteronomy 2 precedent of keeping a source's orthography rather than silently correcting it. The general lesson is the same one the Numbers 10 note recorded: adjectives and normalised spellings I supply are attributions the catena does not carry."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "41"
+      ],
+      "note": "A third word-count in the pipeline, worth knowing about. Entry 41-49 measured 647 by synthesis_qa.visible (which is what validate-synthesis uses and what the finish validator gates on) but 651 by audit-synthesis-quality's own tokeniser, which put it in the 651+ length bucket. My regex spot-check gave 639. Three counters, three answers; drafting to about 640 by QA.visible keeps clear of all of them."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "16"
+      ],
+      "note": "Why Taberah is missing from the itinerary. Gill gives two answers — either it was the same place as Kibroth-hattaavah or lay beside it, or, on Aben Ezra's view, Israel camped there only one day and so it does not rank among the journeys. Clarke reasons from distance instead: three days' march were needed to reach this point, so other stations must have stood between and gone unrecorded because they were unremarkable. The two explanations are not compatible, since Clarke's makes the list selective and Gill's makes it complete."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "28"
+      ],
+      "note": "Where Aaron died. Deuteronomy has Israel reaching Mosera from Bene-jaakan and places Aaron's death there; this chapter reverses the order and puts the death at Hor. Gill follows Jarchi in supposing they doubled back (Hashmonah to Mosera, then Bene-jaakan, then Mosera again, the two places twenty-four miles apart); Clarke resolves it geographically, making Mosera, Moseroth and Hor three names for one site, or Moseroth a village near the mountain. Recorded as a debate rather than harmonised."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "33",
+      "verses": [
+        "3"
+      ],
+      "note": "Whether the gods of Egypt were literally overthrown. Wesley takes the clause doubly — the false gods were the beasts the Egyptians worshipped, which died when the firstborn of man and beast were struck, and their images too were probably thrown down as Dagon was before the ark. Calvin calls it a silly imagination that every idol toppled of itself, holding that God triumphed over them by proving they could not help their worshippers and by exposing the magicians' trickery."
     }
   ]
 }
