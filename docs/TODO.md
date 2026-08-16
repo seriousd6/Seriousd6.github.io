@@ -137,6 +137,27 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   override** per discipline per date (force-on / force-off / auto) that every
   `is*Done` consults first; the home checklist circles are buttons. Covered by
   27 unit assertions + 20 browser assertions (see the commit).
+- [x] **Topical study: The Straight and Narrow Path** (2026-08-16) — single-page
+  hand-authored study at `topics/narrow-path/` on the `topic-guide.css`
+  component set (sticky TOC, no per-study CSS), registered in the `topical`
+  array of `data/books-content.json`. Owner-requested subject: what it means to
+  walk with the Lord. Nine sections — the narrow gate read in its Sermon on the
+  Mount context (including the "strait"→"straight" mishearing and θλίβω, the
+  pressed-in road); the `hithhallēk` walk vocabulary from Enoch to 1 John;
+  doing what is right in one's own eyes (Judges 17:6 / 21:25, Deut 12:8,
+  Prov 21:2) with the four external correctives; Korah's use of a *true* text
+  (Exod 19:6) for personal gain, with four marks that separate it from honest
+  disagreement and a note on the passage's own abuse; the wilderness grumbling
+  that Jude 11/16 files alongside Korah, with the lament-vs-grumbling
+  distinction (direction, not intensity) and Paul's Deut 32:5 inversion in
+  Phil 2:15; love as the road's surface rather than a further rule; abiding
+  (John 15, μένω) as what powers the walking; and endurance, with the
+  call-to-endure / promise-of-preservation texts set in one table rather than
+  resolved in favour of one tradition. Closes with a concrete-habits section.
+  All 86 `data-ref` anchors use canonical book names and the single-chapter
+  verse convention (`Jude 11`); TOC anchors and section ids verified to match.
+  Cross-links to Korah's Rebellion, Assurance of Salvation, the Sermon on the
+  Mount, and the Holy Spirit.
 - [x] **Topical study: The Papacy** (2026-08-15) — six-part hand-authored study at
   `topics/papacy/` (Overview + Parts I–V + a **Sources** tab) on the
   `topic-guide.css` component set, registered in the `topical` array of
