@@ -1257,6 +1257,77 @@
       "book": "1corinthians",
       "chapter": "7",
       "note": "Not attempted (worker context exhausted; nothing claimed). 40 verses, 75,582 source words — the largest unit offered in six picks, and unlike Joshua 15 or 19 it is dense doctrinal argument on marriage and celibacy with no register structure, so pericope grouping buys almost nothing and it needs near per-verse treatment. Budget it as a whole batch for a fresh worker, or more. WORTH THE MAINTAINER'S ATTENTION, measured rather than impressionistic: --worst-first systematically hands out chapters well above corpus size. Across all 1,189 cow chapters the median is 19,611 source words and the mean 27,059; the visible head of the worst-first repair queue has a median of 30,409 and a mean of 36,482, i.e. roughly 1.55x the corpus median. The cause is structural, not a bug — defect weight counts defective verses, and verse count correlates with source size, so the worst-first ordering is also a longest-first ordering. Two consequences. (1) A batch budget should be planned around ~30k source words per chapter, not the corpus median. (2) The tail is severe: 1 Corinthians 15 sits in the current window at 116,326 words and the corpus maximum is 150,785, while 37.6% of all chapters are 25k or larger. If workers are to keep clearing the queue rather than returning surveys, the scheduled prompt's 'up to 2 chapters' is the wrong unit for this end of the queue — one chapter, or an explicit size cap on the pick, would fit it better. My own six picks bear this out: 34.7k, 28.3k, 30.6k, 68.7k, 20.0k, 18.9k and now 75.6k."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "31"
+      ],
+      "note": "Jamieson, Fausset and Brown appears five times in this chapter as scrape residue, every block belonging to Exodus 30-31: the laver at v.1, the anointing oil at v.7, the oil again at v.13, the incense at v.19, and Bezaleel's skill at v.31. None touches Leviticus 7. Declared as excluded_voices on entries 1, 5, 12, 19 and 28."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "7",
+      "verses": [
+        "37",
+        "38"
+      ],
+      "note": "Ellicott's block at v.37 runs off into StudyLight page chrome — stylesheet rules, the whole nav menu, a Cloudflare challenge snippet, a Stripe public key and the full book_data array. Gill's block at v.38 ends with Next/Previous index links. Omitted; only the commentary proper was used."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "11",
+        "28",
+        "35"
+      ],
+      "note": "Per-verse voice map was built BEFORE spans were chosen this time, and it drove the boundaries. Henry has blocks only at vv.1, 11, 28 and 35, and the v.1 block is his overview of the whole first section, so his material on the skin and the meat offerings had to sit inside the 1-4 entry rather than the 8-10 one. Calvin appears only at 6, 11, 16, 19, 23 and 37. Spans were laid out so every cited voice falls inside its own span, and the used-vs-present check returned zero ghosts on the first pass."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "16",
+        "37"
+      ],
+      "note": "Four genuine disagreements preserved: how wide the occasion for a thanksgiving offering runs (Jarchi, Aben Ezra and Ellicott confine it to notable deliverances, Gill extends it to the common mercies of life); what marks off the second class of peace offering (Ellicott's canon-law distinction between a vow binding the person and a freewill offering binding only the animal, against Calvin's reading that the vow meant here is simple rather than conditional, since a conditional vow paid would be thanksgiving); where the laws were given (Gill reads 'in mount Sinai' as by or near it, after the tabernacle stood, while Clarke has them given on the mount itself); and what 'the law of the consecrations' names (Ellicott the high priest's meat offering on entering office, Wesley the sacrifice at the consecration of the priests)."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "7",
+      "verses": [
+        "8"
+      ],
+      "note": "Clarke's block at v.8 carries a long Virgil quotation on sleeping upon sacrificial fleeces for dreams and an equally long note from Sir Walter Scott on the Highland togharm. Both are Clarke's own comparative material, so they were summarised rather than quoted, and kept — they are the most distinctive thing in the chapter's catena."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "28"
+      ],
+      "note": "Entries 1 and 28 first graded B on repetition — low type-token ratio, not duplicated content (dupfrac 0.000 on both). The cause is the chapter's own vocabulary: offering, trespass, sin, peace, burnt, altar, priest, breast, shoulder recur unavoidably. Fixed by deliberately varying the surrounding prose rather than by cutting substance, which took both to A. Worth expecting on any Leviticus sacrifice chapter."
     }
   ]
 }
