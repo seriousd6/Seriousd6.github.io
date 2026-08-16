@@ -1,1816 +1,901 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Chrysostom",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Lightfoot",
+   "Matthew Henry"
   ],
+  "range": "1-2",
+  "pericope_label": "follow after charity — and what the gift of tongues was",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul, having exalted love in ch. 13, bids them 'follow after' (pursue earnestly) charity, making it the first object and atmosphere of all gift-use; they may desire spiritual gifts (charismata), but especially prophesying — the gift of edifying inspired speech in the known tongue, superior to tongues for the church's good (Barnes, Robertson)."
-   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (with Henry): love is to be pursued above all, and among gifts prophecy preferred; the chapter's whole aim is to subordinate the showy gift of tongues to the edifying gift of prophecy, all governed by love."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Follow after charity, and desire spiritual gifts",
-   "but rather that ye may prophesy",
-   "love and prophecy above tongues",
-   "edification under love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Chrysostom builds the whole comment on the verb of pursuit — a man in chase looks at nothing else, and love keeps escaping because we prefer everything to her."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Tongue' denotes the power of speaking a foreign language (as at Pentecost, Acts 2), 'unknown' supplied because unknown to the hearers; since no one present understands, the speaker addresses God (who understands all) rather than men, who derive no instruction; the gift exercised without interpretation profits the assembly nothing (Barnes, Robertson)."
+    "summary": "Ellicott argues at length that the gift was not a gift of languages, from the vocabulary, from its never being used to preach to foreigners, and from the description here; Lightfoot argues from plausibility that no Corinthian minister would stand up in Arabic or Armenian; Robertson glosses the verb for understanding as getting the sense rather than the sound."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): 'in the spirit he speaketh mysteries' — by the Spirit (or in his own spirit) he utters truths hidden from the hearers because unintelligible to them; the gift, though real, is unfruitful without interpretation."
+    "prevalence": "several",
+    "summary": "Calvin reaches for the proverb about preaching to the bare walls, takes the mysteries in a bad sense as dark and involved sayings against Chrysostom, and notes with Ellicott that <em>unknown</em> is not in the original; Gill hears the violence of hunting in the opening verb."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains why only two gifts are compared — tongues was the more ostentatious and the more fit to gratify pride — and holds that gifts are proper objects of desire only in subordination to grace."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the chapter crowded with difficulties and prefers Lightfoot's solution, that the tongue meant is Hebrew restored to the church."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What was the gift of tongues?",
+    "positions": [
+     "Ellicott: not languages at all, but impassioned utterance expressing feeling rather than thought, unintelligible without interpretation",
+     "Lightfoot and Clarke: the Hebrew, a dead language restored to the church, in which the scriptures were read as in the synagogue"
+    ]
+   },
+   {
+    "question": "What are the mysteries spoken in the spirit?",
+    "positions": [
+     "Chrysostom: special revelations from God",
+     "Calvin: dark and involved sayings, obscure and of no profit"
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "he that speaketh in an unknown tongue speaketh not unto men, but unto God",
-   "no man understandeth him; howbeit in the spirit he speaketh mysteries",
-   "the tongue not understood by men",
-   "unprofitable without interpretation"
+   "follow after charity; desire spiritual gifts",
+   "he that speaketh in a tongue speaketh not unto men, but unto God",
+   "in the spirit he speaketh mysteries"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "3": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "By contrast with tongues, the prophet (one who speaks intelligibly under inspiration) 'speaketh unto men' to their profit, in three ways: edification (building up in faith), exhortation (stirring to duty), and comfort (consolation in trial) — the very things the assembly needs and that unintelligible tongues cannot give (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: because prophecy is understood, it actually builds, rouses, and consoles the church — proving it the greater gift for public worship."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that prophesieth speaketh unto men to edification, and exhortation, and comfort",
-   "prophecy edifies, exhorts, and comforts",
-   "the threefold profit of prophecy",
-   "intelligible inspired speech"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "3-5",
+  "pericope_label": "prophecy edifies the church; tongues edify the speaker",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The decisive comparison: the tongue-speaker 'edifieth himself' only — he may be inwardly moved and benefited, but the assembly gains nothing; the prophet 'edifieth the church' — the whole body is built up; in public worship the aim is the edification of all, which tongues alone do not serve (Barnes, Robertson)."
+    "summary": "Ellicott sets the contrast as communion with God against communion with the brethren, and notes that Paul applies his word for building up to a single man on his own account, which is unusual and sharpens the antithesis; Lightfoot widens prophecy to cover singing psalms as well as teaching; Robertson glosses the three words of v.3 and the absent article before <em>church</em>."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): the worth of a public gift is measured by its usefulness to the church; prophecy, edifying all, is therefore preferable to tongues, which edify only the speaker."
+    "prevalence": "several",
+    "summary": "Calvin defines prophecy as doctrine fitted to edify rather than foretelling, insists that whatever is done in the church must be for the common benefit, and turns the commendation of languages against contemporaries who declaim against them; Gill puts the practical difference in a clause."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke holds that a useful preacher unskilled in learned languages is greater in God's sight than a man with tongues who does not interpret; Wesley limits the self-edification to the most favourable supposition."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "He that speaketh in an unknown tongue edifieth himself",
-   "he that prophesieth edifieth the church",
-   "prophecy edifies the church, tongues only oneself",
-   "the measure of a public gift"
+   "he that prophesieth speaketh unto edification, and exhortation, and comfort",
+   "he that speaketh in a tongue edifieth himself",
+   "greater is he that prophesieth than he that speaketh with tongues"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul does not despise tongues — he would be glad if all had the gift — but prefers that they prophesy, the more useful gift; the prophet is 'greater' (more useful in the church) than the tongue-speaker, unless the latter also interprets, so that the church may understand and be edified; interpretation puts tongues on a level with prophecy for usefulness (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): edification ('that the church may receive edifying') is the measure throughout; whatever builds up the church is to be preferred."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I would that ye all spake with tongues, but rather that ye prophesied",
-   "greater is he that prophesieth than he that speaketh with tongues, except he interpret",
-   "prophecy preferred unless tongues interpreted",
-   "edification the standard"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "6-9",
+  "pericope_label": "the pipe, the harp and the trumpet",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul applies the principle to himself: if even he came to them speaking only in tongues, he would profit them nothing, unless he also spoke intelligibly — by revelation (a truth disclosed), knowledge (understanding imparted), prophesying (inspired edifying speech), or doctrine (teaching), all conveyed so as to be understood (Barnes, Robertson, Henry)."
+    "summary": "Ellicott keeps the illustrations distinct — the first about each instrument having its own sound, the second about distinct notes within one instrument; Robertson glosses the rare vocabulary and calls the word for distinct speech a hint for speakers."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the gift is worthless to hearers unless it conveys understanding; even an apostle's tongues, uninterpreted, would not edify the church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if I come unto you speaking with tongues, what shall I profit you",
-   "except I shall speak... by revelation, or by knowledge, or by prophesying, or by doctrine",
-   "tongues profitless without intelligible teaching",
-   "the necessity of understanding"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul argues from lifeless instruments (the pipe/flute and harp): even they must give 'a distinction in the sounds' — distinct, recognizable notes — or no one can tell what tune is played; if even instruments must produce intelligible, distinguishable sounds to convey a tune, how much more must human speech be intelligible to convey meaning (Barnes, Robertson)."
+    "summary": "Calvin lingers over the trumpet, the Lacedemonians preferring the flute lest the army charge too hotly, and grants with Plato that music has real power over the manners of a state; Gill notes that Paul argues from his own case."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: confused, indistinct sounds (whether of instruments or of tongues) convey nothing; clarity is essential to communication."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "things without life giving sound, whether pipe or harp",
-   "except they give a distinction in the sounds, how shall it be known what is piped or harped",
-   "the analogy of lifeless instruments",
-   "the need of distinct sounds"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A second musical illustration: the war-trumpet, whose distinct calls signal the army; if it gives 'an uncertain sound' (indistinct, ambiguous), no soldier can know whether to prepare for battle, advance, or retreat — an unclear signal producing confusion and unreadiness, clarity being essential where action depends on the message (Barnes, Robertson)."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws out how much is conceded — an apostle with all his furniture could not edify unless he spoke to the capacity of his hearers, and an exposition in such a tongue would itself need expounding."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: as an indistinct trumpet fails its purpose, so unintelligible tongues fail to rouse or instruct the church; the message must be clear to have effect."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if the trumpet give an uncertain sound, who shall prepare himself to the battle",
-   "the analogy of the trumpet",
-   "an uncertain sound fails its purpose",
-   "clarity essential to the signal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul applies the musical illustrations: 'so likewise ye' — unless they utter 'words easy to be understood' (intelligible, plain), no one will know what is spoken, and they speak in vain; 'into the air' is a vivid image of unintelligible speech wasted, reaching no understanding, accomplishing nothing (Barnes, Robertson)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the whole point of speech is to convey meaning; tongues without interpretation, however impressive, are empty sound spoken into the air."
+    "summary": "Clarke says a speech not understood is dissipated in the air and such gifts are good for nothing; Wesley treats the phrase as proverbial for the utter loss of one's labour."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "except ye utter by the tongue words easy to be understood, how shall it be known what is spoken",
-   "ye shall speak into the air",
-   "intelligible words or speaking into the air",
-   "the futility of unintelligible speech"
+   "except I shall speak to you by revelation",
+   "if the trumpet give an uncertain sound",
+   "ye shall speak into the air"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "10": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul observes that there are many kinds of 'voices' (languages, tongues) in the world, and none is 'without signification' — each language conveys real meaning to those who know it; since every language is meaningful to its own speakers, a language is useful only where it is understood, meaning depending on the hearer's comprehension (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: languages are not empty sounds but vehicles of meaning — yet meaning unshared is useless; the gift of tongues, to profit, requires that the meaning be conveyed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "so many kinds of voices in the world, and none of them is without signification",
-   "every language has meaning",
-   "meaning useful only where understood",
-   "the dependence on comprehension"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Gill"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "10-12",
+  "pericope_label": "so many kinds of voices, and none without signification",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul draws the inference: if he does not know the meaning of a language ('the voice'), then he and the speaker are mutual 'barbarians' — the Greek term for a foreigner whose speech is unintelligible; without shared understanding, speaker and hearer are as strangers to one another, communication failing entirely (Barnes, Robertson)."
+    "summary": "Ellicott holds that no word in any language can be meaningless, the thought existing first and the word being invented to express it, and sums the three illustrations as one argument that conveying distinct ideas is the test of usefulness; Robertson traces the word for a barbarian to the mimicking of unintelligible sound."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: so it is in the church when tongues are used without interpretation — speaker and hearers are mutually estranged, the assembly profiting nothing."
+    "prevalence": "several",
+    "summary": "Calvin extends the argument past men to the whole order of nature, every creature having its own cry, and makes the rule that the tongue ought to be an index of the mind — so that a man chattering in an unknown tongue keeps aloof from the church rather than holding fellowship with it; Gill counts the languages of the world at whatever number one likes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the opening words as introducing an example rather than a count, each tongue having its own articulation and emphasis."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "if I know not the meaning of the voice, I shall be unto him that speaketh a barbarian",
-   "speaker and hearer made foreigners",
-   "mutual estrangement without understanding",
-   "the failure of communication"
+   "none of them is without signification",
+   "I shall be unto him that speaketh a barbarian",
+   "seek that ye may excel to the edifying of the church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul turns their very zeal to good account: 'forasmuch as ye are zealous' (eager, ambitious) for spiritual gifts, let them direct that zeal rightly — to 'excel to the edifying of the church,' to abound in gifts useful for building up the body; edification of the church being the measure by which gifts are to be valued and sought (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul does not quench their zeal but channels it — seek to abound, but in the gifts that build up the church, not in the showy gift of tongues."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forasmuch as ye are zealous of spiritual gifts, seek that ye may excel to the edifying of the church",
-   "seek gifts that edify the church",
-   "edification the goal of holy ambition",
-   "zeal redirected to usefulness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Chrysostom",
+   "John Calvin"
   ],
+  "range": "13-14",
+  "pericope_label": "let him pray that he may interpret",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom is followed by Calvin in taking the spirit here to mean the spiritual gift itself rather than the Holy Spirit or a faculty of the soul."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The practical instruction: one who has the gift of tongues should 'pray that he may interpret' — seek (by prayer) the further gift of interpretation, so that what he speaks may be made intelligible and edify the church; tongues become useful when interpreted (Barnes, Robertson)."
+    "summary": "Ellicott notes that the Greek hints the gift of interpretation will be granted as well as sought, and keeps the fruitlessness in view as fruitlessness towards others, Paul speaking throughout of public worship; Robertson says the alternative is to stop talking in a tongue, and applies the word for unfruitful to an intellect that gets no benefit."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the gift of tongues, to be of any public use, must be joined to interpretation; hence the speaker is to seek that gift, that his tongue may serve the church."
+    "prevalence": "single",
+    "summary": "Calvin rules out two older readings of <em>spirit</em>, faces the difficulty that nobody is recorded as speaking by the Spirit in a language unknown to himself, and answers that Paul supposes a case for the sake of argument — from which he draws a doctrine of prayer against praying with the lips only."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the verse through his Hebrew theory, of a man who reads the prophets in the original and must pray to be able to open them to others."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Calvin objects that it would be absurd for the Spirit to frame a Roman tongue to pronounce Greek words the speaker did not know, as magpies and crows are taught to mimic human voices — so the case must be a supposition."
+  ],
   "themes": [
-   "let him that speaketh in an unknown tongue pray that he may interpret",
-   "praying for interpretation",
-   "tongues made useful by interpretation",
-   "the goal of edification"
+   "let him pray that he may interpret",
+   "my spirit prayeth, but my understanding is unfruitful",
+   "the gift of interpretation as the remedy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "If one prays in a tongue, 'my spirit prayeth' — his own inner being (or the Spirit's gift in him) is engaged and devout, but only privately; while the 'understanding' (nous, the rational mind) is 'unfruitful,' bearing no fruit for others, so the prayer profits neither the assembly nor fully himself (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): true worship engages both the affections (spirit) and the understanding; prayer in a tongue, lacking the latter's fruit, is defective for public use."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if I pray in an unknown tongue, my spirit prayeth, but my understanding is unfruitful",
-   "the understanding unfruitful in tongue-prayer",
-   "worship engaging spirit and mind",
-   "the defect of tongue-prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "15-19",
+  "pericope_label": "I will pray with the spirit and with the understanding also",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul resolves the matter: he will pray 'with the spirit' (with devout affection, or the Spirit's gift) and 'with the understanding also' (intelligibly, so the mind is engaged and others edified), both together; the same applying to singing — praise too engaging both the heart's devotion and the intelligent understanding, in a known tongue (Barnes, Robertson)."
+    "summary": "Ellicott takes the congregational Amen back to the earliest apostolic times and reads the position of the unlearned man as that of a layman; Robertson explains the word as meaning a private person uninitiated in the gift, who will not know when to say Amen at the close of an ecstatic prayer."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): acceptable public worship — whether prayer or praise — requires the union of fervent spirit and enlightened understanding; neither devotion without intelligence nor intelligence without devotion suffices."
+    "prevalence": "single",
+    "summary": "Gill catches the rabbinic idiom of the question that opens the passage and reads the answer as refusing to lay the gift aside; he is at pains that the five words carry nothing they were later made to carry."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry insists Paul is not forbidding prayer or song under a divine impulse."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies what the Amen was worth to a Jewish hearer and closes the section with Bishop Pearce's key to the chapter, that <em>understanding</em> means the hearer's grasp of what is said and <em>spirit</em> the speaker's own; Wesley glosses praying with the understanding as praying in a rational manner."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
    "I will pray with the spirit, and I will pray with the understanding also",
-   "I will sing with the spirit, and with the understanding also",
-   "worship with spirit and understanding",
-   "heart and mind united"
+   "how shall he say Amen at thy giving of thanks?",
+   "rather five words with my understanding than ten thousand in an unknown tongue"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "If one gives thanks only 'with the spirit' (in a tongue, without the understanding), the worship is not shared; 'he that occupieth the room (place) of the unlearned' (the ordinary worshipper) cannot say the 'Amen' — the assenting response by which the congregation makes the prayer its own — because he does not understand what is said (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): public prayer is to be intelligible so that the people may join in it and assent with the 'Amen'; unintelligible prayer excludes the congregation from worship."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how shall he that occupieth the room of the unlearned say Amen at thy giving of thanks",
-   "seeing he understandeth not what thou sayest",
-   "the unlearned unable to say Amen",
-   "intelligible common prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul concedes the tongue-speaker 'givest thanks well' — his thanksgiving may be genuine, devout, and good in itself — 'but the other is not edified,' the hearer gains nothing; however excellent the prayer in itself, if it is unintelligible the other worshipper is not built up, and the public good is not served, for in public worship edification of the hearer is the test (Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou verily givest thanks well, but the other is not edified",
-   "good thanksgiving failing to edify others",
-   "sincerity not excusing uselessness",
-   "edification the test"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul forestalls the charge that he disparages tongues from lacking the gift: on the contrary, he thanks God that he himself speaks with tongues more than all of them — he possesses the gift abundantly; this gives weight to his counsel, as one not envious or deficient but richly endowed with the very gift he subordinates to prophecy (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul does not condemn tongues but their misuse; his own large possession of the gift proves he values it rightly, while still preferring edification."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I thank my God, I speak with tongues more than ye all",
-   "Paul's abundant gift of tongues",
-   "not disparaging the gift but its misuse",
-   "credibility of his counsel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's striking comparison: in the assembly he would rather speak five intelligible words (that teach others) than ten thousand in an unknown tongue — the proportion (five to ten thousand) dramatizing the worthlessness of unintelligible speech for public use; the intelligible words teach and edify the hearers, the value of public speech lying in its usefulness to all (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): in the church, the briefest intelligible instruction infinitely outweighs the most copious unintelligible utterance; edification, not display, is the measure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I had rather speak five words with my understanding... than ten thousand words in an unknown tongue",
-   "that by my voice I might teach others also",
-   "a few intelligible words over many in a tongue",
-   "edification over display"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
   "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Chrysostom",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "20-22",
+  "pericope_label": "be not children in understanding",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the change of tone and the fitness of the example — children gape after trifles — and shows why wisdom and simplicity each need the other."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul gently rebukes their childishness: in prizing the showy gift of tongues over the useful gift of prophecy, they were acting like children, drawn to the impressive rather than the profitable; the wordplay urging them to be like children in 'malice' (evil, vice) — innocent, free from guile — but 'men' in 'understanding' (judgment, sense), mature and discerning (Barnes, Robertson)."
+    "summary": "Ellicott and Robertson separate the three ages named in the Greek and render the verbs as processes: cease becoming children in intellect, keep on becoming adults."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Chrysostom): childlike innocence in regard to evil is good, but childish judgment in spiritual matters is to be put away; maturity of understanding would correct their misplaced zeal for tongues."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be not children in understanding",
-   "in malice be ye children, but in understanding be men",
-   "children in malice, men in understanding",
-   "the call to discerning maturity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul quotes Isaiah 28:11-12 ('the law' used broadly for the Old Testament): God would speak to his rebellious people 'with men of other tongues' — through foreign-speaking conquerors (the Assyrians), a sign of judgment; yet even this strange speech did not bring the people to obedience ('they will not hear'), the tongues serving as a token of judgment on unbelief, not a means of convincing the disobedient (Barnes, Robertson)."
+    "summary": "Calvin sets the quotation in its own context at length, the threat being that men who will not hear God speaking plainly shall hear him in the accents of a foreign army, so that the Corinthians are pursuing as a benefit what God sends as a punishment; Gill shows that <em>the law</em> here means the whole Old Testament."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry agrees that tongues as they used them were a token of judgment rather than mercy."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the original tongues were a sign to a rebellious people who still would not hear; this prepares for Paul's point (v.22) that tongues are a sign to unbelievers, not the edifying gift for the church."
+    "prevalence": "several",
+    "summary": "Clarke separates the three words and presses the warning that a blessing may prove a curse; Wesley admires the stroke as oratory and adds that religion was meant to exalt the natural faculties, not destroy them."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Calvin turns the verse against a use made of Christian simplicity in his own day, since it is easier to govern the uninstructed and Paul plainly wants believers as fully grown in understanding as possible."
+  ],
   "themes": [
-   "With men of other tongues... will I speak unto this people; and yet... will they not hear me",
-   "the prophetic word on tongues",
-   "tongues a sign that did not convert the rebellious",
-   "the precedent of Isaiah"
+   "in malice be ye children, but in understanding be men",
+   "with men of other tongues will I speak unto this people",
+   "tongues are for a sign, not to them that believe"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Tongues are a miraculous sign meant to convince unbelievers of the truth of the gospel — an evidence (which God alone could give) that the religion is from God, designed to aid in its propagation (as at Pentecost); prophecy is chiefly for believers, to edify the church, not so striking a proof to gainsayers but better adapted to nurture the faithful (Barnes, Clarke, Wesley)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Gill): drawing on v.21's Isaiah quote, tongues are a sign of judgment upon unbelievers — a punishment by which God inflicts vengeance on the rebellious, not properly a blessing bestowed on believers; Calvin allows the alternative that, as a miracle, they served to prepare those at a distance for obedience, but the Corinthians prized them out of place, neglecting prophecy."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
    }
-  ],
-  "debates": [
-   {
-    "question": "In what sense are tongues 'a sign to them that believe not'?",
-    "sides": [
-     {
-      "position": "A miraculous sign to convince unbelievers that the gospel is from God",
-      "holders": [
-       "Barnes",
-       "Clarke",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "A sign of judgment/punishment upon the rebellious unbelieving (from the Isaiah quote, v.21)",
-      "holders": [
-       "Calvin",
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "tongues are for a sign, not to them that believe, but to them that believe not",
-   "prophesying... for them which believe",
-   "tongues a sign to unbelievers",
-   "conviction or judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley"
   ],
+  "range": "23-25",
+  "pericope_label": "the unbeliever who comes in",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul pictures the consequence of their disorder: if the whole assembly all spoke in tongues at once, and an 'unlearned' person (a plain inquirer) or 'unbeliever' came in, he would find only unintelligible babble and conclude they were 'mad' (insane, raving) — far from convincing the outsider, such confusion would repel him, the gift abused bringing the gospel into contempt (Barnes, Robertson)."
+    "summary": "Ellicott insists neither scene is of everyone speaking at once but of one gift exclusively cultivated, follows the steps by which the visitor is convicted, and quotes Bengel's inversion — he will confess that you are not mad but that God is in you; Robertson says they will seem a congregation of lunatics and notes that the confession itself is a quotation."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the very gift meant (in some sense) for outsiders, when used indiscriminately, drives them away; disorder discredits the worship."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke grants the visitor could hardly think otherwise, and supplies the mechanism of the conviction — the prophets often having the discernment of spirits; Wesley reads something into the change from plural to singular between the two cases."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "if... all speak with tongues, and there come in those that are unlearned, or unbelievers, will they not say that ye are mad",
-   "indiscriminate tongues making the church seem mad",
-   "disorder repelling the outsider",
-   "the gospel discredited"
+   "will they not say that ye are mad?",
+   "he is convinced of all, he is judged of all",
+   "the secrets of his heart are made manifest"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The opposite effect of prophecy: if all (in turn) prophesy intelligibly, and an unbeliever or inquirer comes in, 'he is convinced of all' — convicted, his sin and need brought home by the plain, searching truth he hears; 'judged of all' meaning examined, searched, brought under scrutiny, the intelligible word probing his conscience and exposing his true state (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: intelligible prophecy reaches the heart, convicting and humbling the hearer — the very effect that unintelligible tongues cannot produce; this proves prophecy the more useful even toward outsiders."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if all prophesy, and there come in one that believeth not... he is convinced of all, he is judged of all",
-   "prophecy convicting the unbeliever",
-   "the searching power of intelligible truth",
-   "prophecy useful even toward outsiders"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The result of prophecy's searching power: the hidden things of the hearer's heart are laid bare — he feels his secret sins and thoughts exposed by the truth, as though the speaker knew him; convicted and humbled, he falls down in worship, acknowledging God's presence and power, and confesses that God is truly among them — the very conversion the gift of tongues could not produce (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the convinced unbeliever testifies that God is truly present among them — the intelligible word having revealed the divine presence in the assembly."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the secrets of his heart made manifest",
-   "falling down on his face he will worship God, and report that God is in you of a truth",
-   "conviction issuing in worship",
-   "the converting power of prophecy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "26-28",
+  "pericope_label": "let all things be done unto edifying",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul describes the actual confusion: each member, eager to display his gift, came with something to contribute — a psalm, a teaching, a tongue, a revelation, an interpretation — all pressing forward at once, in disorder; and lays down the governing rule, 'let all things be done unto edifying,' every exercise of gift aiming at building up the church, not at self-display (Barnes, Robertson, Henry)."
+    "summary": "Ellicott reads the opening question as asking what follows from the whole argument and describes the assembly with each gift uppermost in its owner's mind; Robertson notes the continuous imperative — the man without an interpreter is not to speak in a tongue even once; Lightfoot is cited for a more orderly account of the confusion."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: edification is the test and the regulator of all that is done in worship; whatever does not build up is out of place."
+    "prevalence": "single",
+    "summary": "Calvin admires the balance — no gift of God set aside, however small, but ambition kept from usurping the place due to God's glory — and reads the alternative to public speech as private thanksgiving."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry allows two readings of the confusion and asks what edification could come of such an uproar."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is unsatisfied with the orderly account and thinks each man simply wished to put himself forward; Wesley pictures every one gathering a little company about him as in the schools of the philosophers, and infers from the rule that the gift could be exercised at will without a new miracle."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "every one of you hath a psalm... hath an interpretation",
-   "Let all things be done unto edifying",
-   "the rule of edification",
-   "building up, not self-display"
+   "every one of you hath a psalm, hath a doctrine",
+   "by two, or at the most by three, and by course",
+   "let him keep silence in the church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's specific rules for tongues in the assembly: only two, or at most three, are to speak in a tongue at any meeting, and 'by course' (in turn, one after another) — not all at once, not endlessly; and one is to interpret what is spoken, so that the tongue, otherwise useless, may edify the church (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: these limits curb the disorder and ensure that even tongues, when used, serve edification through interpretation; the gift is regulated, not forbidden."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let it be by two, or at the most by three, and that by course",
-   "let one interpret",
-   "the regulation of tongues",
-   "tongues curbed and made useful"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The firm direction: if no interpreter is present, the tongue-speaker is to 'keep silence in the church' — not to speak in a tongue at all, since it would not edify; the gift may still be used privately, 'to himself, and to God,' in inward or solitary devotion, but the public assembly is not the place for it without interpretation (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the public exercise of any gift is bound by the rule of edification; what cannot edify the church is to be kept private."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if there be no interpreter, let him keep silence in the church",
-   "let him speak to himself, and to God",
-   "silence without an interpreter",
-   "the uninterpreted tongue kept private"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "29": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The parallel rule for prophecy: let the prophets (those with the gift) speak 'two or three' at a meeting — an orderly number, not all at once — and 'let the other judge' (let the rest weigh, discern, evaluate what is spoken), testing the prophecies whether they are of God and true; the gift is not exempt from examination (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Cyril): prophecy is to be subject to discernment, that error or pretended inspiration may be detected; the church is to weigh what is taught by the rule of Scripture."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let the prophets speak two or three, and let the other judge",
-   "the regulation of prophets",
-   "prophecy subject to discernment",
-   "the prophecies tested"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The orderly direction: if, while one is speaking, something is revealed to another who is seated, the one speaking ('the first') is to 'hold his peace' (stop, give way) — that the new revelation may be heard, one at a time; the prophets are to defer to one another, the gift exercised in turn with consideration (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: even inspired speech is to be governed by decorum and mutual yielding; the Spirit's gifts do not justify confusion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If any thing be revealed to another that sitteth by, let the first hold his peace",
-   "a new revelation yields the floor",
-   "mutual deference among prophets",
-   "order preventing confusion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "29-33",
+  "pericope_label": "the spirits of the prophets are subject to the prophets",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The reason for the rule of yielding: all who have the gift may prophesy, but 'one by one' (in turn, successively) — so that the orderly exercise allows all the hearers to 'learn' (be instructed) and 'be comforted' (consoled, encouraged); the orderly successive prophesying serving the whole assembly's instruction and consolation (Barnes, Robertson)."
+    "summary": "Ellicott anticipates the excuse that the Spirit overcame them and gives Paul's answer, and describes the mechanics of the interruption when a revelation came suddenly to a man sitting by; Robertson takes the judging as discerning whether what is said is really of the Spirit, and calls it a principle some had forgotten."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: order is not the enemy but the servant of edification; by speaking in turn, the gifts profit all, where confusion would profit none."
+    "prevalence": "single",
+    "summary": "Calvin explains why prophecy gets the same allowance as tongues, wants the less skilful kept from crowding out the better qualified, and answers the objection that God's doctrine should be beyond scrutiny — what is permitted is judging by the Spirit whether what is set before them is his word."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke traces the practice of judging to the synagogue and gives the reason for caution, that a man might claim prophecy without being sent; Wesley presses the contrast with heathen priests, whose possession forced them to speak like madmen."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "ye may all prophesy one by one, that all may learn, and all may be comforted",
-   "orderly prophecy benefiting all",
-   "order serving edification",
-   "instruction and consolation"
+   "let the prophets speak two or three, and let the other judge",
+   "ye may all prophesy one by one, that all may learn",
+   "God is not the author of confusion, but of peace"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of the rule of order: 'the spirits of the prophets are subject to the prophets' — the prophetic impulse (or the gift) is under the control of the prophet himself; he is not seized by an irresistible frenzy but can govern his exercise, speaking or keeping silence as order requires, and so is responsible to observe order, unable to excuse confusion by pleading uncontrollable inspiration (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: unlike the pagan oracles, who raved beyond self-control, the true gifts of the Spirit leave the prophet master of himself, able to submit to decorum."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the spirits of the prophets are subject to the prophets",
-   "the prophets' self-control",
-   "the gift under the prophet's control",
-   "unlike pagan frenzy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The great ground of order: God is 'not the author of confusion' (disorder, tumult, akatastasia) — the disorderly worship of the Corinthians could not be from him, for his nature and his Spirit produce order, not chaos; rather he is the author 'of peace,' of harmony, concord, and calm order, so that worship reflecting his character will be peaceable and orderly (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'as in all churches of the saints' — the practice of all the churches confirms it; orderly, peaceable worship is the universal rule, and the Corinthians' confusion an aberration."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God is not the author of confusion, but of peace",
-   "as in all churches of the saints",
-   "God the author of peace",
-   "orderly worship reflecting God's nature"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "34": {
   "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Chrysostom",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul forbids women to 'speak' in the public assembly — to teach, lead, or address the congregation authoritatively; the silence enjoined concerns public, authoritative speaking, grounded in the order of subjection ('as saith the law,' Genesis 3:16). Reconciled with 11:5 (women praying or prophesying) by holding the prohibition is of authoritative public teaching and disorderly speaking, or that 11:5 reproved only the manner (Barnes, Robertson, Gill)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the sequence — a third disorder after the tongues and the prophesyings — and notes that Paul asks not merely for silence but for subjection."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: Paul represses the women's unseasonable boldness with much authority, citing the law ('thy desire shall be to thy husband, and he shall rule over thee,' Genesis 3:16); not merely silence but subjection — what they wish to learn, let them ask at home; if even the gifted must speak in turn, much more the women who prate idly."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott joins the appeal to the practice of all the churches to this rule rather than to what precedes; Robertson takes the difficulty head on rather than resolving it, setting Paul's plain meaning beside the daughters of Philip and the practice of his own day, and ending in a request for patience rather than a ruling."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin argues from incompatibility, teaching being a position of superiority, but enters two large qualifications — that this concerns ordinary service in a settled church, and that the matters treated are things indifferent."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Paul enjoins silence so far that women must not even ask questions in the church but ask their husbands at home (cf. 1 Timothy 2:11-12); the intimation of 11:5 that women sometimes prayed or prophesied he does not there simply condemn but the manner (uncovered), while here he seems to forbid all public performances of theirs in the assembly."
+    "prevalence": "single",
+    "summary": "Henry takes the prohibition to cover praying and prophesying alike, and grants that the earlier chapter seems to assume women did both."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke restricts the prohibition to questioning, disputing and fault-finding on the synagogue model, and is explicit that a woman given an influence to teach was to obey it; Wesley enters the same exception in his first clause."
    }
   ],
   "debates": [
    {
-    "question": "Is the silence enjoined on women absolute, or limited to authoritative teaching / disorderly speaking (consistent with 11:5)?",
-    "sides": [
-     {
-      "position": "A real prohibition of women teaching or speaking authoritatively (and even asking questions) in the assembly",
-      "holders": [
-       "Chrysostom",
-       "Gill",
-       "Henry",
-       "Calvin"
-      ]
-     },
-     {
-      "position": "Limited to authoritative public teaching or disorderly speaking, not contradicting the veiled praying/prophesying of 11:5",
-      "holders": [
-       "Barnes",
-       "Robertson"
-      ]
-     }
+    "question": "What does the silence cover?",
+    "positions": [
+     "Clarke and Wesley: disputing and questioning in the assembly, leaving the earlier chapter and any extraordinary impulse untouched",
+     "Henry and Calvin: public speaking generally, teaching being inconsistent with subjection — though Calvin allows a necessity may require it",
+     "Robertson declines to draw the line and asks for patience"
     ]
    }
   ],
   "outliers": [],
   "themes": [
-   "Let your women keep silence in the churches",
-   "they are commanded to be under obedience, as also saith the law",
-   "the command for women's silence",
-   "the women-silence debate"
+   "let your women keep silence in the churches",
+   "as also saith the law",
+   "let them be under obedience"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "35": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "Chrysostom",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "35-36",
+  "pericope_label": "let them ask their husbands at home",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul provides for the women's instruction: if they wish to learn or have questions, they are to ask their own husbands at home — not to interrupt or speak in the public assembly; the ground being propriety, it being 'a shame' (unbecoming, disgraceful) in that setting for women to speak (address, hold forth) in the public assembly, contrary to the modesty and order befitting them (Barnes, Robertson, Gill)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom answers the objection that they might as well not be present — they are to hear what they ought, and learn the rest at home."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (with Calvin): the rule preserves decorum and the order of subjection; the women's instruction is provided for, but in a way consistent with their place — what they would learn, let them ask at home."
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reads the provision as a concession about where questions belong rather than a further restriction."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin is careful that it should not shut women out of learning, and notes that Paul does not forbid consulting the prophets where a husband cannot answer."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives the rebuke its edge — a church that behaved in a manner by itself and would not endure regulation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the word for shame of the conduct rather than the sex, and takes it as further evidence that the disorderly are in view; Wesley marks only the place and the persons."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
    "if they will learn any thing, let them ask their husbands at home",
-   "it is a shame for women to speak in the church",
-   "asking at home",
-   "the unseemliness of women speaking publicly"
+   "came the word of God out from you?",
+   "or came it unto you only?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul rebukes their independent spirit: did the word of God originate 'out from you' (from Corinth)? or did it come 'unto you only' (to Corinth alone)? — exposing the arrogance of their thinking themselves free to set their own customs against the practice of all the churches; the questions humble their pride, since they were neither the source nor the sole recipients of the gospel (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): the Corinthians' self-willed innovations (in tongues, in the women's speaking) are checked by reminding them they are but one church among many, bound by the common order."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "The closing sentences of the entry answer Paul's two rhetorical questions in the summary's own voice — that neither can be answered in a way leaving Corinth free to make its own rules, and that the argument returns to the appeal to all the churches with which the section opened. Henry supplies the purpose of the questions and Ellicott the link to the churches; drawing them together into an answer is the summary's.",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "came the word of God out from you? or came it unto you only",
-   "the rebuke of Corinthian self-assertion",
-   "one church among many",
-   "bound by the common order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "37": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul addresses those who claimed to be prophets or spiritually gifted — the very ones likely to resist his regulations — and lays down the decisive test: the truly spiritual will recognize that Paul's directions are not his own opinions but 'the commandments of the Lord,' divinely authoritative; submission to apostolic teaching is the mark of genuine spirituality (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul asserts the inspired, binding character of his instructions; to reject them is to prove oneself not truly spiritual, whatever one's claims."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If any man think himself to be a prophet, or spiritual",
-   "let him acknowledge that the things that I write unto you are the commandments of the Lord",
-   "the test of true spirituality",
-   "submission to the apostolic word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "37-40",
+  "pericope_label": "let all things be done decently and in order",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's solemn close to the appeal: if anyone is 'ignorant' (refuses to recognize the authority of his command, persists in not knowing), then 'let him be ignorant' — Paul leaves him to his chosen ignorance, refusing to argue further; not indifference but a grave warning, the one who wilfully rejects apostolic authority left to his own obstinacy (some texts read 'he is not recognized' by God, Barnes, Robertson)."
+    "summary": "Ellicott calls this the clearest statement of Paul's claim to inspiration anywhere, gives both readings of the textual variant in v.38 with equal weight, and applies the closing principle both to outbreaks of fanaticism and to services held in a tongue the people do not understand; Robertson notes who would be quick to resent the sharpness."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: where a man persists in refusing plain, divinely authorized instruction, further reasoning is useless; he is abandoned to his self-chosen blindness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if any man be ignorant, let him be ignorant",
-   "the warning to the wilfully ignorant",
-   "the obstinate left to his ignorance",
-   "a grave dismissal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's summary conclusion: 'covet (earnestly desire) to prophesy' — pursue the more useful gift — yet 'forbid not to speak with tongues' — do not prohibit the genuine gift of tongues, rightly used; the whole chapter has regulated, not banned, tongues, prophecy being the greater gift but tongues not to be despised where exercised in order and with interpretation (Barnes, Robertson)."
+    "prevalence": "single",
+    "summary": "Calvin sets the claim in the frame of the chapter — the judging he assigned to the prophets is what he now invites — but cautions that not everyone may advance it, and explains how rules of external order can be called commandments without binding like the laws of worship."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul neither exalts tongues unduly (as the Corinthians did) nor suppresses them entirely; he gives each gift its proper place under the rule of edification."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the sentence as self-testing, compresses v.38 into a phrase, and takes the closing words apart, remarking that the manner of doing a thing often gives the act all its use."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How should v.38 be read?",
+    "positions": [
+     "if any man be ignorant, let him be ignorant — his opposition need give no further concern",
+     "if any man knows not this, he is himself not known — that is, not known of God"
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
+   "the things that I write unto you are the commandments of the Lord",
    "covet to prophesy, and forbid not to speak with tongues",
-   "the summary verdict",
-   "prophecy preferred, tongues permitted",
-   "each gift its place"
+   "let all things be done decently and in order"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul closes the whole discussion of worship with a comprehensive rule: 'let all things be done decently (becomingly, with seemliness) and in order (according to a fitting arrangement, without confusion)' — the governing standard for all that is done in the assembly; the two marks being propriety (becoming God's worship) and regularity (each thing in its place), the opposite of the Corinthian confusion (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): this principle governs not only the matters Paul has addressed but the whole conduct of public worship in every age; decency and order are abiding requirements of Christian assembly."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let all things be done decently and in order",
-   "the great rule of decency and order",
-   "propriety and regularity in worship",
-   "the abiding standard for the assembly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

@@ -1076,6 +1076,66 @@
         "42"
       ],
       "note": "BLOCKER — this chapter cannot be written to contract as the source stands, and the next worker will hit the same wall. Two findings. (1) The catena is incomplete: source keys are 1-32, 36, 37, 42, 48-54; verses 33-35, 38-41 and 43-47 are absent entirely. (2) An identical 207-word Jamieson, Fausset and Brown block on the tribal princes' offerings of Numbers 7 ('This tribe being stationed on the right side of Judah, offered next through its representative...') is mechanically inserted at every SIXTH key — 6, 12, 18, 24, 30, 36, 42, 48, 54. It is unmistakable scrape residue. Keys 36 and 42 contain nothing else: QA.usable_source_words returns 0 for both after the JFB exclusion. The conflict: verse 42 is isolated (41 and 43 are not source keys), so no pericope range can absorb it without covering verses absent from the source, which coverage_problems rejects; and declaring a range ANYWHERE in the chapter switches coverage enforcement on for the whole chapter, which then demands an entry for key 42 that cannot honestly be written. Three ways out, none of which an unattended run should choose alone: (a) write the chapter with NO declared range, which leaves coverage unenforced so keys 36 and 42 can simply be omitted as residue-only, on the 2 Chronicles 27 key-16 precedent — but then several tiny verses (v.21 has 23 usable words, v.29 has 36, v.16 and v.31 have 50) must each carry a 120-word thin entry, which is padding by contract at 3-5x; (b) drop keys 36 and 42 from the source file as scrape corruption, which makes the ranged solution legal and is the cleanest fix, but edits the data tree; (c) re-scrape the chapter, since 12 of 54 verses are missing anyway. Recommend (b) or (c), owner's call. Chapter size for whoever takes it after the fix: 42 keys, 19,991 source words."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "10",
+        "13",
+        "15",
+        "20",
+        "23",
+        "26",
+        "29",
+        "34",
+        "35",
+        "37"
+      ],
+      "note": "Repaired as 13 pericope entries tiling all 40 verses: 1-2, 3-5, 6-9, 10-12, 13-14, 15-19, 20-22, 23-25, 26-28, 29-33, 34, 35-36, 37-40. The seams follow Paul's own argument — the two gifts compared, the three illustrations from sound, the prayer that needs interpreting, the resolution and the five words, the quotation from Isaiah, the two visitors, the rules for tongues, the rules for prophecy, the rule about women, the appeal to the other churches, and the summing-up. v.34 stands alone because the treatment of it needs room for a genuine three-way disagreement. Source is enormous (58,535 usable words) and evenly heavy, so every entry compresses hard: expansion runs 0.06x-0.22x, the lowest ratios this loop has produced. No thin exemptions — the leanest span carries 2,529 usable words."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "5",
+        "29",
+        "40"
+      ],
+      "note": "Three kinds of residue in this chapter's source, all omitted silently. (1) The Lightfoot block under v.1 is his note on 1 Corinthians 13:2 — 'to know all mysteries' and 'to remove mountains' — filed one chapter late. (2) Six Jamieson, Fausset and Brown blocks carry foreign-passage material, the one under v.5 being on Acts 24 (Tertullus and the Sanhedrim deputation); declared as excluded_voices on the six covering entries, and JFB is named nowhere in the chapter. (3) A Cyril of Jerusalem catechetical block under v.29 is on the crucifixion — the vinegar and the gall — and is not declarable as excluded_voices on that span, so it was simply omitted. The Ellicott block under v.40 also ends in StudyLight page chrome."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "14",
+      "verses": [
+        "2",
+        "14",
+        "34",
+        "38"
+      ],
+      "note": "Four disagreements recorded in tags rather than smoothed over, and the first is the chapter's whole crux. (1) What the gift of tongues was (v.2): Ellicott argues at length that it was not languages at all — from the vocabulary (glossa never dialektos), from its never being used to preach to foreigners (the apostles did not understand Lycaonian), and from the description here of impassioned utterance expressing feeling rather than thought; Lightfoot and Clarke hold it was Hebrew, a dead language restored to the church and read there as in the synagogue. Ellicott and Calvin both note that the word 'unknown' is not in the Greek at all but was supplied by the seventeenth-century revisers, which quietly settles the question in favour of one theory wherever the AV is read. (2) What the mysteries of v.2 are: special revelations from God (Chrysostom) or dark and involved sayings of no profit (Calvin). (3) What the silence of v.34 covers: disputing and questioning on the synagogue model, leaving 1 Cor 11 and any extraordinary impulse untouched (Clarke, Wesley); public speaking generally, teaching being inconsistent with subjection, though Calvin allows a necessity may require it (Henry, Calvin); or Robertson, who declines to draw the line at all, sets Paul's plain meaning beside the daughters of Philip and the practice of his own day, and ends asking for patience rather than issuing a ruling. His refusal is recorded as a position in its own right, not flattened into one of the other two. (4) The textual variant at v.38, where Ellicott gives both readings equal weight."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "14",
+      "verses": [
+        "35",
+        "1",
+        "15"
+      ],
+      "note": "Twelve entries self-graded A; one B. The 35-36 entry closes by answering Paul's two rhetorical questions in the summary's own voice — that neither can be answered in a way that leaves Corinth free to make its own rules, and that the argument has returned to the appeal to all the churches with which the section opened. Henry supplies the purpose of the questions and Ellicott the link to the churches; drawing them together into an answer is mine. Two ENTITIES flags judged false positives and left standing: 'Whitefield' where Ellicott's text spells it 'Whitfield', and 'Jerome' where Gill has 'Jerom' — both standard modern spellings of the same men, consistent with how this loop has handled Nazianzen and Tiglath-Pileser elsewhere. A third flag ('Athens', derived from Calvin's 'Athenians') was removed by rewording rather than defended."
     }
   ]
 }
