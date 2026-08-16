@@ -2142,6 +2142,16 @@
         "33"
       ],
       "note": "Clarke reads the Midianite muster in v33 as retaliation for the destruction of Baal's altar; Gill denies any connection and makes it the ordinary harvest raid, Ellicott agrees with Gill, and Henry allows Clarke's reading as possible but prefers the other. Recorded in the entry's debates rather than resolved."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "6",
+      "verses": [
+        "31"
+      ],
+      "note": "Repair to what I landed in 591f5b1a: entry 31 carried a malformed paragraph boundary, </p<p> instead of </p><p>, introduced when a paragraph was appended programmatically. The validator's HTML check did not catch it. Fixed in place; a sweep of the whole cow-synthesis tree found no other instance."
     }
   ]
 }
