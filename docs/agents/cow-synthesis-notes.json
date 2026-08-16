@@ -2236,6 +2236,20 @@
       "book": "genesis",
       "chapter": "37",
       "note": "Shape note for whoever takes genesis 37 (Joseph's dreams and his sale into Egypt). Scenes: 1-4 Joseph's report of his brothers and the coat, with the hatred it breeds; 5-8 the first dream, the sheaves; 9-11 the second dream, sun moon and stars, and Jacob's rebuke while he observes the saying; 12-17 the errand to Shechem and the man in the field who redirects him to Dothan; 18-22 the plot, and Reuben's intervention to save him; 23-24 the stripping and the empty pit; 25-28 the Ishmeelite caravan, Judah's proposal, and the sale; 29-30 Reuben returning to the pit; 31-35 the coat dipped in blood and Jacob's mourning; 36 the sale to Potiphar. Two entries can carry real weight for a whole chapter here: 12-17 (the unnamed man at Shechem, on whom the witnesses converge) and 25-28 (the Ishmeelite/Midianite question, where the commentators genuinely disagree about how many parties handled the sale). Everything else has distinct per-verse comment and should keep its own entry. Note that 36 keys against 36 verses means the source is complete, so tiling is available if ranges are wanted."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "rejected",
+      "book": "judges",
+      "chapter": "11",
+      "note": "Declined by worker B for context capacity — nothing written. Judges 11 is 40 keys / 29,358 usable source words, median 329 per key: 19 verses at 350+, 12 in the 200-349 tight band and 9 in the thin band, so 21 of 40 need special handling. It is LARGER than genesis 37 on every axis (40 entries vs 36, 29.4k vs 24.0k words, 21 vs 14 special-handling verses), and genesis 37 was declined last batch on the same grounds, so taking this one would be inconsistent. Jephthah's chapter is worth a careful worker in any case: the vow at 30-31 and 34-40 is one of the sharpest disagreements in the corpus (whether the daughter was sacrificed or devoted to virginity), and the diplomatic history Jephthah recites to the king of Ammon at 12-28 is the longest sustained argument in Judges."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "11",
+      "note": "READY WORK QUEUE — three chapters scoped by worker B across batches 16-18, each declined for worker context rather than for any defect. A fresh worker can take these in order without running the picker or re-deriving any numbers; shape notes for the first two are already filed under their own entries. (1) genesis 37 — 36 keys / 23,957 words, 22 verses at 350+, cheapest of the three, nine scenes mapped, pericope candidates at 12-17 and 25-28. (2) genesis 31 — 55 keys / 33,830 words, 30 verses at 350+, eleven scenes mapped, pericope candidates at 4-13 and 36-42. (3) judges 11 — 40 keys / 29,358 words, 19 verses at 350+, the heaviest per-verse of the three. Ordering is by ascending cost, not by queue position. If the picker ever grows a --max-verses bound, these three are the calibration set: all sit under the 40k word line and all were nevertheless too large for a partly-spent worker, which is the gap the word budget alone does not see."
     }
   ]
 }
