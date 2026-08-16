@@ -2086,6 +2086,62 @@
       "book": "luke",
       "chapter": "22",
       "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/luke-22-20260816-204530"
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "6",
+      "verses": [
+        "11",
+        "25",
+        "33"
+      ],
+      "note": "Henry's blocks in this chapter are section overviews filed at a single verse: the one at v11 discusses the whole angel narrative through v24, the one at v25 runs to v32, and the one at v33 covers the muster and both fleece signs to v40. Under the filing rule his material can only be used in the entry whose span contains the verse it is filed under, so entries 11, 25 and 33 carry as much of each overview as 650 words allow and the later entries in each stretch (12-24, 26-32, 34-40) have no Henry at all. Nothing was moved forward into a span where Henry has no block."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "6",
+      "verses": [
+        "40"
+      ],
+      "note": "The catena entry for v40 ends with roughly a thousand words of scraped StudyLight site chrome — navigation menus, CSS, JavaScript and a book list — appended after Ellicott's note. The commentary text itself is intact and was used; the residue was ignored. Reported source word counts for the 39-40 span are inflated by it (1588 nominal against roughly 520 of real commentary)."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "38"
+      ],
+      "note": "Jamieson, Fausset and Brown appears at vv.2, 8, 14, 20 and 38 with material belonging to other books entirely — stone weights and Proverbs at v14, Amalek and Exodus 17 at v20, Hebrew tithing law at v38. Declared excluded_voices in entries 1, 7, 14, 19 and 36 as scrape residue, not as an omission."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "6",
+      "verses": [
+        "32"
+      ],
+      "note": "Keil and Delitzsch's exposition of the name Jerubbaal is filed at v31, not v32, even though it comments on v32. The span ghost check caught it credited in entry 32; the material was moved into entry 31, which is where its source key sits, and entry 32 was rebuilt from Gill, Clarke and Ellicott alone."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "6",
+      "verses": [
+        "33"
+      ],
+      "note": "Clarke reads the Midianite muster in v33 as retaliation for the destruction of Baal's altar; Gill denies any connection and makes it the ordinary harvest raid, Ellicott agrees with Gill, and Henry allows Clarke's reading as possible but prefers the other. Recorded in the entry's debates rather than resolved."
     }
   ]
 }
