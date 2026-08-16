@@ -2152,6 +2152,62 @@
         "31"
       ],
       "note": "Repair to what I landed in 591f5b1a: entry 31 carried a malformed paragraph boundary, </p<p> instead of </p><p>, introduced when a paragraph was appended programmatically. The validator's HTML check did not catch it. Fixed in place; a sweep of the whole cow-synthesis tree found no other instance."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "36",
+      "verses": [
+        "1",
+        "13",
+        "31",
+        "37",
+        "43"
+      ],
+      "note": "Jamieson, Fausset and Brown appears at vv.1, 13, 31, 37 and 43 with material from Genesis 30-31 entirely — Jacob's hazel rods at v1, his decision to leave Laban at v13, Laban's pursuit to Gilead at v37, the teraphim at v43. Declared excluded_voices in entries 1, 12, 31 and 43 as scrape residue, not as an omission."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "36",
+      "verses": [
+        "32",
+        "40"
+      ],
+      "note": "Two further defects in this catena. Keil and Delitzsch's entry at v32 is bare Scripture text for vv.32-40 with no comment attached beyond a parallel reference, so they are declared excluded in entry 32 rather than cited for words they did not write. And Ellicott's block at v40 ends with roughly a thousand words of scraped StudyLight site chrome — menus, CSS, JavaScript, a book list — appended after his note; the commentary itself is intact and was used, but the reported source-word count for v40 is inflated by it."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "36",
+      "verses": [
+        "24"
+      ],
+      "note": "The Calvin block at v24 contains an interpolated editorial footnote in the English edition, discussing whether the disputed word means mules or warm springs and saying the reader may see the question discussed in a note on the verse. That is the translator speaking, not Calvin; it was not attributed to him. Calvin's own comment assumes the mule reading and reproves Anah for an unnatural pursuit."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "36",
+      "verses": [
+        "9",
+        "20"
+      ],
+      "note": "Wesley's blocks at v10 and v20 are abridgements of Henry's at v9 and v20, following them point by point and frequently word for word. Written up as one position held by two voices rather than as independent agreement, so that the school summaries do not read as corroboration where there is none."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "36",
+      "verses": [
+        "24"
+      ],
+      "note": "The largest dispute in the chapter is what Anah found in the wilderness. Clarke surveys Jerome, the Greek, the Syriac, Onkelos, the Samaritan, the Targum of Jonathan, Kimchi, Jarchi, Bochart, Gusset and Wagenseil, then settles for mules unknown before Anah's day; Ellicott argues horses were not yet in Palestine and adopts Jerome's Punic sense of hot springs, naming Calirrhoe; Calvin and Wesley both read mules and draw opposite morals — an unnatural pursuit and a reward of diligence. Recorded in the entry's debates rather than resolved."
     }
   ]
 }
