@@ -1,7 +1,11 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-15** (study part picker made mobile-usable — clipped
+> Last updated: **2026-08-16** (new single-page topical study, **The Straight
+> and Narrow Path**, at `topics/narrow-path/` — walking with the Lord, from the
+> narrow gate through self-deception, Korah's Scripture-twisting, wilderness
+> grumbling, love, abiding, and endurance; registered in `topical[]`).
+> Previously **2026-08-15**: study part picker made mobile-usable — clipped
 > tab labels, sticky bars hidden under the fixed topbar, and a study-wide 16px
 > horizontal page scroll all fixed, across every study that uses the component.
 > Same day: COW synthesis: numbers 32 and acts 19 repaired;
@@ -116,11 +120,20 @@
   because it was registered only there. It is now in `topical[]`, the dead grid
   is removed, and `scripts/validate-topics-registry.py` fails CI if any live
   study under `src/pages/topics/<slug>/` is missing from the registry.
-- **Topical studies (hand-authored, separate from the book pipeline)**: eight
+- **Topical studies (hand-authored, separate from the book pipeline)**: eleven
   live under `topics/`, listed via the `topical` array in
-  `data/books-content.json`. Both newest ones are multi-part studies built on the
+  `data/books-content.json`. The multi-part ones are built on the
   `topic-guide.css` component set with no per-study CSS; each part carries its
   own sticky TOC, further-reading list, and prev/next nav.
+  **The Straight and Narrow Path (2026-08-16)** at `topics/narrow-path/` is the
+  newest and is single-page: walking with the Lord in nine sections — the narrow
+  gate in its Sermon on the Mount context, the `hithhallēk` walk vocabulary,
+  doing what is right in one's own eyes and the four correctives, Korah's use of
+  a true text for personal gain (with the marks that separate it from honest
+  disagreement, and a note on the passage's own abuse), the wilderness grumbling
+  Jude files alongside Korah plus the lament-vs-grumbling distinction, love as
+  the road's surface, abiding (John 15), and endurance with the
+  call/preservation texts tabled rather than resolved for one tradition.
   **Assurance of Salvation (2026-08-09, extended 2026-08-15)** at
   `topics/salvation-assurance/` (`index` hub + `part-1`…`part-6`): the OT→NT
   thread of salvation; the keeping
