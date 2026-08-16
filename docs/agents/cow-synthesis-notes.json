@@ -1686,6 +1686,84 @@
         "21"
       ],
       "note": "Ellicott and Wesley read the Gershonite load in opposite orders. Ellicott makes the first item the fine twined linen curtains of the mishkan (holding the woodwork subsidiary to them) and the goats' hair the tent's; Wesley makes the first item the goats' hair covering and the second the ten linen curtains. Kept as a debate rather than smoothed — the two readings assign the same objects to different phrases."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "3",
+        "12",
+        "35"
+      ],
+      "note": "The catena for this chapter has no keys 10, 11 or 39, so pericope spans cannot be drawn freely: coverage_problems fails any entry covering a verse absent from the source. Spans therefore break at 9|12 (entry '3' runs 3-9, the next starts at 12) and the chapter's last entry stops at 38 rather than 39. Tiling verified at 36 keys."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "1",
+        "3",
+        "12",
+        "20",
+        "27"
+      ],
+      "note": "JFB is residue everywhere in this chapter. Every JFB block is Exodus 26-27 material — the boards that formed the walls, the five cross bars and the middle bar, the dimensions of the brazen altar and its horns, the court's sixty brazen pillars — filed under Exodus 40 verses. Declared in excluded_voices on every entry whose span contains one."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "2",
+        "35"
+      ],
+      "note": "Keil and Delitzsch appear at v2 and again at v35 as bare scripture text with no comment attached: the block quotes Exodus 40:2-9 and 40:35-38 verbatim and stops. Declared in excluded_voices on both entries rather than cited. Keil's substantive notes in this chapter sit at vv.18, 21, 23 and 30, and are used there."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "2"
+      ],
+      "note": "The span ghost check caught a real misattribution. My first draft of the v2 entry credited Henry, alongside Wesley, with the computation that the first day of the first month fell fourteen days short of a year from the exodus. Henry's block is filed at v1, not v2; only Wesley carries that material within the span. Rewritten to Wesley alone, whose v2 note also supplies the Hezekiah precedent and the observation about the new moon — both of which the first draft had dropped."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "1",
+        "27"
+      ],
+      "note": "Entries '1' and '27' first graded B on lexical variety (ttr 0.548 and 0.545) with dupfrac 0.000, no repeated n-grams and no duplicate sentences — nothing a reader would call repetition. The cause was density of function words in long 'the X of the Y' chains plus the chapter's own unavoidable nouns (tabernacle, altar, door, place, hanging). Both were rewritten with more varied diction and shorter genitive chains rather than cut for length, taking ttr to 0.705 and 0.692 and the chapter to 100 percent grade A."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "18"
+      ],
+      "note": "Three readings of the tent spread abroad over the tabernacle, kept as a debate rather than smoothed. Gill takes it for the goats'-hair curtains; Clarke for the whole set of coverings of rams' skins and goats' hair thrown over the building, the tabernacle having no other roof; Ellicott separates the verse's two clauses, making the goats' hair the ohel proper and the rams' and seals' skins the miksêh laid above it."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "40",
+      "verses": [
+        "2"
+      ],
+      "note": "Calvin denies the premise the chronological notes rest on. He cannot approve the opinion that the tabernacle was only now set up: it was complete before Moses' second ascent, and had stood pitched outside the camp in token of divorce since the golden calf, so the setting-up means its restoration to its proper place in the midst of the people. Clarke and Ellicott both reckon the dates on the opposite assumption. Recorded as a debate on the '2' entry."
     }
   ]
 }
