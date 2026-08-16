@@ -2065,6 +2065,27 @@
       "book": "romans",
       "chapter": "11",
       "note": "Sizing note for the batch-budget rule. Romans 11 measured 75,205 usable source words across 36 keys — 3.8x the corpus median and nearly 2x the 40k 'whole batch' line — and was still writable per-verse in one batch, because a rich source makes each entry EASIER, not harder: every verse had 490-10,918 words behind it, so there was never a hunt for material and never a thin exemption. The cost is reading, not writing. What actually made it tractable was that the two largest blocks are not per-verse material at all: Henry's 8,127 words at key 1 cover the whole chapter and are read once. Suggested refinement to 'size': report the largest single block alongside the total, since a chapter whose bulk sits in one whole-chapter exposition is far cheaper than its word count implies."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "rejected",
+      "book": "luke",
+      "chapter": "22",
+      "note": "Declined by worker B (not attempted, nothing written). 71 keys / 63,923 usable source words. The source-word budget passes it as a single big chapter, but the writing load tracks VERSE COUNT, not word count, and on that axis this is roughly twice the job romans 11 was: 71 entries against 36, from a SMALLER total (63.9k vs 75.2k). Median verse here is 416 source words against romans 11's ~2,000. Worse, the distribution is bimodal and the thin half is the expensive half: 24 verses under 200 words (each needs a thin exemption and a 120-349 word entry), 10 in the 200-349 band (no exemption available, so each must reach the 350 floor from at most 349 words of source — exactly the shape that produces PAD/META/NOISE flags), and only 37 comfortably writable. So 34 of 71 entries need individual special handling. Not started rather than abandoned mid-way."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "22",
+      "note": "Suggested second dimension for 'size'. Two numbers would have made this call in one line instead of three probes: VERSE COUNT (the writing load — entries are the unit of work, and each costs roughly the same regardless of how rich its source is) and the count of keys under 200 and under 350 source words (the special-handling load — thin exemptions and floor-band verses are where padding gets manufactured). romans 11 and luke 22 are the two ends of the same trap: romans 11 looked expensive at 75,205 words and was cheap because the bulk was one whole-chapter Henry block read once across 36 rich verses; luke 22 looks comparable at 63,923 and is far more expensive because it is 71 mostly-thin verses. A single total cannot separate them. Proposed output: 'luke 22: 71 keys, 63923 usable source words (median 416/key; 24 keys <200w, 10 in 200-349w)'."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "rejected",
+      "book": "luke",
+      "chapter": "22",
+      "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/luke-22-20260816-204530"
     }
   ]
 }
