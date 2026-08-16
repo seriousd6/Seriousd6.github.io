@@ -1618,6 +1618,74 @@
         "19"
       ],
       "note": "Zero ENTITIES signals again, as in Exodus 26 — these tabernacle and consecration chapters carry almost no place-names. But two entries first graded B on repetition (2-3 and 19-21, ttr 0.562 and 0.579, dupfrac 0.000). The cause is the same as in Leviticus 7: the chapter's own vocabulary — bread, cake, unleavened, oil, blood, hands — recurs unavoidably. Fixed by varying the surrounding prose rather than cutting substance, which took both to A."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "4",
+      "verses": [
+        "34",
+        "44"
+      ],
+      "note": "The numbering section (34-49) had to be split at 44 because the whole of it as one entry ran 890 words. The split is uneven on purpose: Henry, Calvin, Keil and Clarke all have their blocks filed at vv.34-36, so everything substantive lives in 34-43, and 44-49 carries only Wesley at v44, Ellicott at v48 and Gill's closing note at v49 — 414 words, the tightest entry in the chapter but clear of the floor."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "4",
+      "verses": [
+        "34"
+      ],
+      "note": "Gill is declared in excluded_voices for the 34-43 entry. He is present in every verse of that span but only as lemma stubs and 'See Gill on' cross-references — there is no exposition to synthesise. This is residue in the scrape, not an omission of mine; the ghost check reported him as declarable because his name recurs so often."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "9",
+        "17",
+        "21",
+        "28",
+        "34",
+        "44"
+      ],
+      "note": "JFB is residue throughout this chapter: every JFB block is Leviticus 14 leper-purification material (the two birds, the trespass offering, the log of oil), unrelated to Numbers 4. Declared in excluded_voices on every entry whose span contains one. Verse 48 additionally carries StudyLight page chrome — the CSS block, the nav menu and the commentary index — which is why 'Adam Clarke' appears in the 44-49 blob without Clarke having any note there."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "4",
+      "verses": [
+        "9",
+        "17"
+      ],
+      "note": "Two ENTITIES signals came from my own glosses, not the sources, and both were removed. At vv.9-14 I had expanded Ellicott's bare cross-reference to Numbers 13:23 into 'the cluster of Eshcol'; at vv.17-20 I had expanded Keil's bare citation of 1 Samuel 6:19 into 'the men of Beth-shemesh'. Both facts are true and neither is in the catena — filling in a proper name a commentator only pointed at is an attribution the source does not carry."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "4",
+      "verses": [
+        "34"
+      ],
+      "note": "Clarke's table as scraped is internally corrupt: it prints 22,300 Levites in all with '3,580 fit for service and 13,720 unfit', where 8,580 + 13,720 = 22,300. I reported the two figures that add (22,300 total, 13,720 unfit) and left the garbled one alone. The live disagreement is real and worth keeping: Clarke's addition of the two censuses gives 22,300, while Keil and Ellicott both put the tribe at 22,000."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "4",
+      "verses": [
+        "21"
+      ],
+      "note": "Ellicott and Wesley read the Gershonite load in opposite orders. Ellicott makes the first item the fine twined linen curtains of the mishkan (holding the woodwork subsidiary to them) and the goats' hair the tent's; Wesley makes the first item the goats' hair covering and the second the ten linen curtains. Kept as a debate rather than smoothed — the two readings assign the same objects to different phrases."
     }
   ]
 }
