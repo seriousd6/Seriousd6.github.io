@@ -985,6 +985,86 @@
       "book": "acts",
       "chapter": "5",
       "note": "Not attempted this run (worker context exhausted; nothing is claimed, so the next --spread pick can take it freely). Survey recorded so the next worker need not redo it. This is the largest repair unit I have been offered: 42 verses, 68,739 source words — more than twice Joshua 15 and nearly two and a half times Deuteronomy 4. Budget accordingly; a fresh worker should probably plan on this being its whole batch. Eleven witnesses, including five that do not appear in the OT chapters: John Lightfoot, Albert Barnes, A.T. Robertson, John Chrysostom and Cyril of Jerusalem. SCHOOL MAPPING IS AN OPEN QUESTION for those five and must be settled before writing, since the tags enum is fixed. A scan of all 757 stamped tag files gives only one clean signal — Albert Barnes appears as the sole voice on two verses, both tagged grammatical-historical. For the other four the corpus offers no single-voice verse, so co-occurrence counts are uninformative; read a finished NT chapter's tags directly rather than inferring. Section structure is legible from where Matthew Henry's large blocks sit (vv.1, 17, 26, plus Chrysostom at 17 and 34): Ananias and Sapphira 1-11, the signs and the growing multitude 12-16, arrest and the night release 17-26, the apostles before the council 27-32, Gamaliel's counsel and the beating 33-42. The thin verses that will need grouping are 18, 22, 23, 25, 27 and 35."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "26",
+      "verses": [
+        "17",
+        "25",
+        "31",
+        "32",
+        "33",
+        "40",
+        "41",
+        "46",
+        "47",
+        "50"
+      ],
+      "note": "STRUCTURAL: this chapter's source is missing ten verse keys entirely — 17, 25, 31, 32, 33, 40, 41, 46, 47 and 50 — so the present keys fall into seven contiguous runs (1-16, 18-24, 26-30, 34-39, 42-45, 48-49, 51-65). A pericope range may not straddle a gap, since validate-synthesis.py expands the range and fails on 'entries cover verses absent from the source'. The first cut of this chapter used the natural tribal groupings (12-22, 23-34, 35-43, 44-51) and was rejected for exactly that reason; the spans were re-cut to sit inside the runs. Worth knowing before laying out any chapter whose source has holes: check the key set first, not just the verse count."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "5",
+        "12",
+        "18",
+        "26",
+        "34",
+        "42",
+        "48",
+        "51",
+        "52",
+        "57",
+        "63"
+      ],
+      "note": "Repaired as 12 pericope entries tiling every present key: 1-4, 5-11, 12-16, 18-24, 26-30, 34-39, 42-45, 48-49, 51, 52-56, 57-62, 63-65. The seams follow the census itself — the command to number, Reuben with the Korah excursus, then the tribes in the order of the four camps, the total, the law of division, the Levites, and the closing verification against the Sinai roll. The tribal spans are shorter than the argument would otherwise want because of the source gaps (see the structural note), so the treatment of each tribe is split across the run boundary that falls inside it. No thin exemptions: the leanest span (48-49) carries 398 usable source words."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "26",
+      "verses": [
+        "12",
+        "18",
+        "24",
+        "30",
+        "36",
+        "42",
+        "48",
+        "54",
+        "60"
+      ],
+      "note": "Nine Jamieson, Fausset and Brown blocks in this chapter are the same misfiled passage repeated: his note on the Kohathites being mentioned first for their connection with Aaron, on the common priests covering the sacred vessels before the Kohathites might approach, and on the exception to the rule barring entry to the holy place — all of it commentary on Numbers 4, none of it on the census. Declared as excluded_voices on every covering tags entry; JFB is named nowhere in the chapter. The Ellicott block under v.64 also ends in StudyLight page chrome (site footer, nav menu and several kilobytes of inline CSS), omitted silently."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "26",
+      "verses": [
+        "10",
+        "59"
+      ],
+      "note": "Two disagreements recorded in tags rather than smoothed over. (1) Whether Korah died in the earthquake or the fire (v.10): Ellicott reads the Hebrew as it stands, which makes him swallowed up with Dathan and Abiram, but reports the Samaritan Pentateuch transposing the phrase so that the fire devoured Korah with the two hundred and fifty; Clarke follows the Samaritan, and Gill and Wesley reach the same result from the sense, taking the words to mean the things belonging to Korah. Note this is the same crux the loop met from the other side in Numbers 16, where the tags record it as a debate between Ellicott and Wesley on one side and the plain reading of v.32 on the other. (2) Who Jochebed was (v.59): Calvin and the plain reading make her Levi's own daughter, so that Amram married his aunt — which Calvin treats as an ingenuous confession of family dishonour that magnifies God's indulgence — while Ellicott reports the view that she was a granddaughter or remoter descendant and Amram a different man from Kohath's son."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "26",
+      "verses": [
+        "18",
+        "48"
+      ],
+      "note": "Ten entries self-graded A; two graded B, both for the same kind of reason. The 18-24 entry closes by observing that the three southern-camp tribes all shrank while the first two of the eastern camp both grew — a juxtaposition no witness makes, though every element of it is theirs, and the prose says so explicitly rather than implying a source. The 48-49 entry ends with two cross-chapter observations of the same kind: that Naphtali, Zebulun and Dan are the only tribes whose family lists need no explanatory note, and that Naphtali's decrease alone is left without an assigned cause. Both are checkable against the chapter; neither is stated by a commentator. Also recorded: the ENTITIES flag on the Levite entry was a spelling normalisation ('Korahite' for the source's 'Korhites'), removed rather than defended."
     }
   ]
 }
