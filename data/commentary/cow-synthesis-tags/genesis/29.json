@@ -2,285 +2,192 @@
  "1": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Jacob continues his journey to the land of the east: 'then Jacob went on his journey, and came into the land of the people of the east' — the Hebrew ('Jacob lifted up his feet') suggesting that, after the vision and the promise at Bethel (28:12-15), Jacob went forward with renewed cheer and lightness of step (the comfort of the covenant-God speeding the pilgrim on, the encouraged traveler); the lively phrase — Jacob, assured of God's presence (28:15), proceeding with courage and gladness (the comfort of the vision bearing him up, the pilgrim strengthened for the way); 'came into the land of the people of the east' (Jacob reaching the region of Mesopotamia/Padan-aram, the lands east of Canaan, the kindred, 28:2, the providence bringing him to the place of his kindred, the setting for the meeting at the well, vv.2-14) — Ellicott, Gill, Henry, Calvin."
+    "summary": "Gill reads the Hebrew idiom of lifting up the feet as a mark of cheerfulness rather than of walking, the promises at Bethel having gladdened Jacob, and reports the Jewish saying that his heart lifted his legs so that he walked apace. Calvin finds in the same words the extraordinary strength of his faith, in setting out for a land he did not know, and says of the meeting that followed that Jacob did not fall in with those shepherds accidentally but was guided by a hidden hand, the men who could direct him being brought there at the same hour — so that whenever we wander through intricate windings we should look with the eyes of faith at the secret providence that leads us to unexpected results."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks what the narrative withholds: every stage of Israel's later march is recorded, but no journal of Jacob's expedition past Bethel, since he had no more such nights and no more such visions, that one being meant for a feast and not for daily bread. He notes the manner of the going and of the arrival — Jacob unburdened by cares, and providence bringing him to the very field where his uncle's flocks were watered — and takes from it his standing lesson, that God is to be acknowledged in the small circumstances that make an undertaking successful, so that timely help is neither chance nor fortune but providence. The rest of his comment runs ahead into the scene at the well: the shepherds' care of their sheep illustrating the concern of the great Shepherd for his flock; the stone explained three ways, as securing scarce water, as sheltering the well, or as keeping the lambs from drowning; the shepherds' watering together showing that separate interests should not keep men from joint help; and Jacob's calling strangers brethren showing both that we should speak civilly and that a man upon his preferment was not ashamed of his trade."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the original very remarkable and hears the same cheerfulness in it, Jacob having seen that with God for his protector he had nothing to fear; he adds that kedem, easterns, covers in the sacred writers all Mesopotamia and the country beyond the Euphrates."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott glosses the phrase as hastening forward, and draws the picture out: confirmed in the birthright by God as well as man, and promised the divine presence and a safe return, Jacob casts no wistful glances back but travels under the inspiriting influence of hope. He takes the people of the east here for the tribes of northern Mesopotamia rather than the Arabians the phrase usually means."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Then Jacob went on his journey, and came into the land of the people of the east",
-   "Jacob continuing his journey to the land of the east",
-   "the encouraged pilgrim, cheered by the vision at Bethel (28:15)",
-   "the providence bringing him to the kindred's land (28:2)"
+   "lifting up the feet",
+   "no more visions after Bethel",
+   "providence in small circumstances",
+   "civility to strangers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.39
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "John Wesley"
+   "Keil and Delitzsch"
   ],
+  "range": "2-3",
+  "pericope_label": "The well in the field and the stone upon it",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supposes the well was sought and not stumbled on — Jacob knowing that households and shepherds water there and that he could ask after Laban, or else looking for the particular well where his grandfather's servant had met Rebekah — and passes on two travellers' claims, a fountain at Orpha which Jews, Armenians and Turks alike called Jacob's well, and a fine well near Alexandretta not far from what the Greeks show as the ruins of Laban's house."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the word for the flocks means small cattle, that sheep in cold countries seldom drink though the practice was probably different in a hot one, and that the three flocks already at the well were not Laban's. He thinks the stone was made large on purpose against anyone minded to foul the water or fill the well up, which is why the first to arrive waited for the rest and they worked in concert, and reports a textual difficulty besides: where the Hebrew says all the flocks were gathered and rolled the stone away, the Samaritan reads shepherds, a reading Houbigant presses hard, since flocks can neither roll a stone nor water sheep. Wesley allows the stone three uses — securing a property in scarce water, saving the well from the sun's heat, and keeping the lambs from drowning in it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Jacob finds the well with the great stone: 'and he looked, and behold a well in the field, and, lo, there were three flocks of sheep lying by it; for out of that well they watered the flocks: and a great stone was upon the well's mouth' — Jacob coming upon a well in the field, with three flocks waiting to be watered (the well a place of meeting, as for Abraham's servant, 24:11, the pastoral scene, the setting for the meeting with Rachel, v.6); 'a great stone was upon the well's mouth' (a heavy stone covering the well, to protect the water, and to keep it from being used until all the flocks gathered, v.8, the stone Jacob would roll away, v.10, the custom of the place); the well, the flocks, and the stone setting the scene for the providential meeting (vv.9-12) — Jacob brought to the very well where Rachel would come (the providence ordering the encounter, as with Rebekah, ch. 24, the setting for the founding of the family) — Keil and Delitzsch, Gill, Clarke, Ellicott."
+    "summary": "Ellicott rules out one identification, this being not Rebekah's well, which stood just outside the city and was reached by steps, whereas this lies in the open pasture. Rendering the clause as the stone upon the well's mouth was great, he gives the dry country round Haran a practical reason for it — to keep the well from choking with sand — and two social ones, that it restricted the water to fixed hours, needing two or three men to shift it, and that it may have marked private ownership, no possession being more valued than a well. He notices who is served first: the shepherds all wait for Rachel and her sheep drink before flocks that were there long before her, which suggests Laban held at least the first claim, no such courtesy having been shown to the daughters of Jethro. Keil and Delitzsch infer the well's distance from the town from Jacob's having to ask the men where they were from."
    }
   ],
-  "debates": [],
+  "debates": [
+   "What the stone was for. Clarke makes it a guard against tampering that obliged the shepherds to act in concert; Ellicott gives it a practical reason in the sand and two social ones, restricted hours and private ownership; Wesley allows scarcity, the sun's heat, and the safety of the lambs."
+  ],
   "outliers": [],
   "themes": [
-   "And he looked, and behold a well in the field, and, lo, there were three flocks of sheep lying by it... and a great stone was upon the well's mouth",
-   "Jacob finding the well with the great stone",
-   "the pastoral well, a place of meeting (24:11), the heavy stone (v.8)",
-   "the setting for the providential meeting with Rachel (vv.9-12)"
+   "the well in the open field",
+   "the great stone",
+   "a first claim on the water",
+   "flocks or shepherds"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The custom of watering when all the flocks gathered: 'and thither were all the flocks gathered: and they rolled the stone from the well's mouth, and watered the sheep, and put the stone again upon the well's mouth in his place' — the custom: the shepherds waiting until all the flocks gathered, then together rolling away the heavy stone, watering the sheep, and replacing the stone (the orderly, communal watering, the heavy stone requiring many hands, or much strength, the custom that Jacob would override, v.10); the rolling of the heavy stone — requiring the gathered shepherds (the protection of the well, the communal arrangement); 'put the stone again upon the well's mouth in his place' (the stone replaced after watering, to guard the well, the careful custom, the setting for Jacob's feat, v.10, rolling the stone alone, and the meeting with Rachel) — Gill, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And thither were all the flocks gathered: and they rolled the stone from the well's mouth, and watered the sheep, and put the stone again upon the well's mouth in his place",
-   "the custom of watering when all the flocks gathered",
-   "the communal watering, the heavy stone requiring many hands",
-   "the custom that Jacob would override alone (v.10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob inquires of the shepherds: 'and Jacob said unto them, My brethren, whence be ye? And they said, Of Haran are we' — Jacob courteously addressing the shepherds ('My brethren') and asking where they were from, they answering, 'Of Haran' (the providence — Jacob had reached the very place, Haran, the kindred, 28:10, he sought, the courteous inquiry); Jacob's friendly address ('My brethren') — the courteous manner of the patriarch (the polite inquiry, the seeking of information about the place and the kindred); 'Of Haran are we' (the shepherds of Haran, the city of Nahor, the kindred, 24:10; 27:43, the providence bringing Jacob exactly to the right place, the way to learning of Laban, v.5, and meeting Rachel, v.6, the encounter at the well) — Gill, Clarke, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jacob said unto them, My brethren, whence be ye? And they said, Of Haran are we",
-   "Jacob inquiring of the shepherds",
-   "the courteous address and inquiry of the patriarch",
-   "the providence bringing Jacob exactly to Haran, the kindred's place (24:10; 27:43)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
    "Adam Clarke",
    "Charles Ellicott"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob asks after Laban: 'and he said unto them, Know ye Laban the son of Nahor? And they said, We know him' — Jacob asking after Laban (his uncle, Rebekah's brother, 24:29, 'son of Nahor,' i.e., grandson of Nahor, 22:20-23, or 'son' used loosely for descendant), the shepherds knowing him (the providence bringing Jacob to those who knew his kindred, the way to the meeting); Laban reckoned 'son of Nahor' (descendant, properly son of Bethuel, son of Nahor, 24:24, the kindred of Abraham, the family Jacob sought, 28:2); 'We know him' (the shepherds knowing Laban, the providence confirming Jacob's arrival at the right place, the way to learning of Rachel's coming, v.6, the encounter ordered) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto them, Know ye Laban the son of Nahor? And they said, We know him",
-   "Jacob asking after Laban",
-   "Laban the kindred of Abraham (24:29; 22:20-23)",
-   "the providence confirming Jacob's arrival at the right place"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
+  "excluded_voices": [
    "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The news that Laban was well and Rachel was coming: 'and he said unto them, Is he well? And they said, He is well: and, behold, Rachel his daughter cometh with the sheep' — Jacob asking after Laban's welfare (the Hebrew, 'Is there peace to him?'), the shepherds answering that he was well (the courteous inquiry after the kindred's welfare, the friendly news); as Jacob asked, 'behold, Rachel his daughter cometh with the sheep' (at that very moment Rachel, Laban's daughter, the shepherdess, coming with the flock, the providence bringing her at the very time, as Rebekah came as Abraham's servant prayed, 24:15, the timely meeting, the daughter who would be Jacob's beloved wife); Rachel a keeper of her father's sheep (v.9, the providence bringing the future wife at the moment of the inquiry, the meeting at the well, as with Rebekah, ch. 24, the encounter that would found the family) — Keil and Delitzsch, Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto them, Is he well? And they said, He is well: and, behold, Rachel his daughter cometh with the sheep",
-   "the news that Laban was well and Rachel was coming",
-   "the timely providence bringing Rachel at the very moment (as Rebekah, 24:15)",
-   "the future wife coming to the well, the shepherdess (v.9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "Jamieson, Fausset and Brown"
   ],
+  "range": "4-8",
+  "pericope_label": "The shepherds questioned",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Jacob urges the shepherds to water and feed the flocks: 'and he said, Lo, it is yet high day, neither is it time that the cattle should be gathered together: water ye the sheep, and go and feed them' — Jacob observing that it was still broad day (high noon, not evening), not yet time to gather the flocks for the night (the suggestion that they should water and graze the sheep, not idle, the practical observation of the husbandman); Jacob's counsel — to water the sheep and return them to pasture (not waste the day, whether from diligence, or from a wish, it may be, to have Rachel come and the shepherds gone, the practical, industrious suggestion); Jacob's urging the shepherds to water and feed reflecting his industrious spirit (the diligent shepherd, as he would prove with Laban's flocks, chs. 30-31, perhaps also his eagerness regarding Rachel's coming, the practical counsel) — Ellicott, Gill, JFB, Clarke."
+    "summary": "Gill observes that Jacob plainly spoke to the keepers and not to the flocks; guesses that Nahor was named rather than Bethuel because Haran was his city, and that Bethuel may have been dead and Laban head of the family; reads the greeting as the Hebrew idiom asking whether there is peace to him, covering health, household and estate together; takes the high day for noon, when flocks in hot countries were made to lie down by still waters; and offers for the refusal either the weight of the stone, which Jarchi says took all the shepherds together, or a custom agreed among them that it should not be opened for any one flock. Calvin hears in the salutation the frankness of that age — the fraternal name is often abused now by dishonest men, but friendly intercourse was then more faithfully cultivated. The same manners explain Rachel's tending the flock, which shows the frugality of a house that abounded with servants and thought it disgraceful to rear children in idleness, softness and indulgence, whereas ambition and refinement have since made manners so effeminate that women are ashamed of their proper office; and they explain the freedom of Jacob's kiss, much greater liberty being allowed in a chaste and modest way of living. Calvin also corrects the order of the narrative: Jacob did not kiss Rachel until he had told her he was her kinsman."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke raises the question how the two parties understood one another, Laban's household speaking Chaldee and not Hebrew, and answers it twice — the names Leah afterwards gave her children show the tongues had many words in common, and Jacob may have learned Chaldee from his mother, whose native speech it was. He glosses the greeting as asking after prosperity, notes that Rachel's name means a ewe and guesses she got it from her fondness for the animals, and reads Jacob's advice as saying that the day is but half run and it is far too early to fold them."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott makes Nahor the founder of the family, the immigrant from Ur who came to fill Abraham's place when he left. He corrects the phrase about gathering the cattle to folding them, says plainly why Jacob was surprised — several hours of daylight remained — and why the men were not, since if the well was Laban's, waiting for Rachel needed no explanation; and he would render their answer more exactly, then they roll the stone away and we water the sheep, the removal following as soon as all the flocks are collected."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "And he said, Lo, it is yet high day, neither is it time that the cattle should be gathered together: water ye the sheep, and go and feed them",
-   "Jacob urging the shepherds to water and feed the flocks",
-   "the practical observation and counsel of the husbandman",
-   "Jacob's industrious spirit (the diligent shepherd, chs. 30-31)"
+   "my brethren, whence be ye",
+   "Chaldee and Hebrew",
+   "is there peace to him",
+   "we cannot until all are gathered"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The shepherds' explanation of the custom: 'and they said, We cannot, until all the flocks be gathered together, and till they roll the stone from the well's mouth; then we water the sheep' — the shepherds explaining that they could not water until all the flocks were gathered and the heavy stone rolled away (by the joint effort, the custom, v.3, the heavy stone requiring many hands, the orderly, communal arrangement); the shepherds waiting for all the flocks (the custom of watering together, v.3, the orderly sharing of the well, the reason they did not water yet); 'till they roll the stone from the well's mouth' (the heavy stone, v.2, requiring the gathered shepherds to roll it, the labor, the custom that Jacob would override alone, v.10, rolling it single-handed, moved by the sight of Rachel, the contrast that displayed Jacob's strength) — Ellicott, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they said, We cannot, until all the flocks be gathered together, and till they roll the stone from the well's mouth; then we water the sheep",
-   "the shepherds' explanation of the custom",
-   "the communal watering and the heavy stone (vv.2-3)",
-   "the custom that Jacob would override alone (v.10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
@@ -288,211 +195,127 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Rachel arrives with her father's sheep: 'and while he yet spake with them, Rachel came with her father's sheep: for she kept them' — as Jacob still spoke with the shepherds, Rachel arriving with Laban's flock (the providence bringing her at the very moment, as foretold, v.6, as Rebekah, 24:15, the timely arrival of the future wife, the meeting at the well); Rachel keeping her father's sheep — a shepherdess (the daughter of a wealthy man, yet tending the flock, the simple, industrious life of the patriarchal household, as Rebekah drew water, ch. 24, the honest labor of the maiden, the future wife at her work); 'for she kept them' (Rachel the keeper of the sheep, the industrious maiden, the providence bringing her to the well at the moment Jacob was there, the meeting that would lead to the marriage, vv.10-30) — Ellicott, Gill, Henry, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And while he yet spake with them, Rachel came with her father's sheep: for she kept them",
-   "Rachel arriving with her father's sheep",
-   "the providential arrival at the very moment (v.6; 24:15)",
-   "the industrious shepherdess, the future wife at her work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott"
   ],
+  "range": "9-12",
+  "pericope_label": "Rachel at the well",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill puts the kiss after the disclosure, a courtesy once Jacob had told her what she was to him, has the shepherds waiting for that flock alone, and notes with Aben Ezra that the telling came before both the kiss and the weeping."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls Rachel's keeping the flock her humility and industry, notes that her name signifies a sheep, and says that honest useful labour is what nobody need be ashamed of and no bar to preferment. He reads the meeting as courtship and providence together: knowing his errand, Jacob may well have thought at once that this must be his wife, and being smitten with an honest comely face — sun-burnt, likely, and in the homely dress of a shepherdess — he is wonderfully officious to serve her. That she runs home rather than answer is to her credit, since she would not entertain a kinsman's address without her father's approbation, and such mutual respect at a first interview presaged a happy couple. What looked fortuitous was providence giving Jacob satisfaction the moment he reached the place he was bound for, as Abraham's servant had been met on a like errand. Henry also dismisses the rabbinic conceit that Jacob wept because Eliphaz had waylaid and stripped him at Esau's father's command: it was his passion for Rachel and the surprise of the meeting that drew those tears."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Jacob rolls away the stone and waters Rachel's flock: 'and it came to pass, when Jacob saw Rachel the daughter of Laban his mother's brother, and the sheep of Laban his mother's brother, that Jacob went near, and rolled the stone from the well's mouth, and watered the flock of Laban his mother's brother' — Jacob, seeing his cousin Rachel (and the flock of his uncle Laban, the threefold 'his mother's brother' stressing the kindred, the moving sight of the kindred, the recognition that prompted his eager action); Jacob 'rolled the stone from the well's mouth' — single-handed (the stone the shepherds rolled only together, v.8, the feat of strength, moved by the sight of Rachel, love and kinship lending vigor, the eager courtesy, the patriarch's strength); 'watered the flock of Laban his mother's brother' (Jacob watering Rachel's, Laban's, sheep, the courteous service to his kindred, the eager helpfulness, the meeting that led to the kiss and the welcome, vv.11-14) — Ellicott, Gill, Clarke, Calvin."
+    "summary": "Clarke presses the defence of working women further — they were plainly not shut up at home until marriage, whatever gloss is put on the word for a virgin as one concealed, nor was it beneath the greatest chief's daughters to draw water or herd sheep; wealth then lay in flocks, and honest labour honours high and low alike, there being no discredit in the meanest office that honestly serves the family. He will not let Jacob have all the credit for the stone, Laban's flock being probably the last with a right to the well, so that Jacob assisted the shepherds rather than acting alone. He defends the kiss as the simple and pure way the first inhabitants of the earth testified friendship, abused by hypocrites and disgraced by moralists who stumbled at innocent tokens of kindness while capable of the grossest impurity, and takes the raised voice for thanksgiving and the weeping for a sense of God's goodness and his own unworthiness. Wesley repeats Henry's reading of the meeting almost word for word."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott brings the scene into his own century, citing Mr Malan's sight of a sheik's daughter driving her fine patriarchal sheep to a well in this very region, and does the arithmetic on Rachel: at least forty years passed between this meeting and the birth of Benjamin, so she must have been a mere child. He gives the same order of events as Gill and makes the sequence the point — Jacob first made himself useful, then said who he was, claimed her as a cousin and kissed her, and only then burst into tears; in that outburst, he says, we see the beginning of his lifelong love for the beautiful child he had so opportunely met."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "And it came to pass, when Jacob saw Rachel... that Jacob went near, and rolled the stone from the well's mouth, and watered the flock of Laban his mother's brother",
-   "Jacob rolling away the stone and watering Rachel's flock",
-   "the feat of strength single-handed (the shepherds rolled it only together, v.8)",
-   "the eager, courteous service to his kindred, moved by the sight of Rachel"
+   "a shepherdess of rank",
+   "honest labour no discredit",
+   "the kiss and the weeping",
+   "providence at the journey’s end"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob kisses Rachel and weeps for joy: 'and Jacob kissed Rachel, and lifted up his voice, and wept' — Jacob greeting his cousin Rachel with a kiss (the customary kiss of kindred and greeting in the East, as a relative, not yet a lover, the affectionate greeting of the kinsman, the meeting of the future husband and wife); Jacob 'lifted up his voice, and wept' — wept aloud, for joy and emotion: joy at finding his kindred (the safe arrival, the providence, the answered hope, the overflow of feeling at the meeting, perhaps mingled with the memory of his exile and his mother, Rebekah, Rachel's aunt, the tears of a full heart); Jacob's tears the overflow of a heart full of joy and gratitude — finding the kindred, the providence of God bringing him safely to the right place (the emotion of the lonely pilgrim met by his own, the affectionate, grateful tears) — Ellicott, Gill, Clarke, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jacob kissed Rachel, and lifted up his voice, and wept",
-   "Jacob kissing Rachel and weeping for joy",
-   "the kiss of kindred and the tears of joy at finding his own",
-   "the overflow of a grateful heart, the providence bringing the pilgrim safely to the kindred"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob reveals his kinship, Rachel runs to tell Laban: 'and Jacob told Rachel that he was her father's brother, and that he was Rebekah's son: and she ran and told her father' — Jacob revealing his kinship: he was Laban's 'brother' (kinsman, nephew) and Rebekah's son (Rachel's aunt's son, her cousin, the disclosure of the relation, the explanation of his coming); the relation — Jacob the son of Rebekah (Laban's sister, 24:29), so Laban's nephew (loosely 'brother,' kinsman, the kindred connection that explained the meeting, the cousin revealed); 'she ran and told her father' (Rachel hastening home with the news, as Rebekah had run, 24:28, the eager report, the news that brought Laban out to meet Jacob, v.13, the providence advancing the meeting) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jacob told Rachel that he was her father's brother, and that he was Rebekah's son: and she ran and told her father",
-   "Jacob revealing his kinship and Rachel running to tell Laban",
-   "the kindred connection (Rebekah, Laban's sister, 24:29)",
-   "the eager report that brought Laban out (as Rebekah, 24:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban welcomes Jacob into his house: 'and it came to pass, when Laban heard the tidings of Jacob his sister's son, that he ran to meet him, and embraced him, and kissed him, and brought him to his house. And he told Laban all these things' — Laban, hearing of Jacob (his nephew, Rebekah's son), running out, embracing and kissing him, and bringing him home (the hospitable welcome of the kindred, as Laban had welcomed Abraham's servant, 24:29-31, the warm reception); Laban's eager welcome — running, embracing, kissing (the affection of the kindred, though Laban's later conduct, chs. 30-31, would show his covetousness, some noting his eagerness may have been partly an eye to gain, recalling the gifts of ch. 24, the warm reception of the nephew); 'he told Laban all these things' (Jacob recounting to Laban all that had happened, his coming, the reason, perhaps the family matters, the full account, the establishing of the relation and the welcome into the house, the beginning of the sojourn, vv.14-30) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass, when Laban heard the tidings of Jacob his sister's son, that he ran to meet him, and embraced him, and kissed him, and brought him to his house",
-   "Laban welcoming Jacob into his house",
-   "the hospitable reception of the kindred (as 24:29-31)",
-   "Jacob's full account, the beginning of the sojourn (vv.14-30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
+   "Charles Ellicott"
   ],
+  "range": "13-14",
+  "pericope_label": "Laban's welcome",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Laban owns Jacob as kindred: 'and Laban said to him, Surely thou art my bone and my flesh. And he abode with him the space of a month' — Laban acknowledging Jacob as his near kinsman ('bone and flesh,' the same blood, as 2:23; 2 Samuel 5:1, the owning of the relation, the welcome of the nephew as family, the close kinship affirmed); the phrase 'bone and flesh' — the acknowledgment of close blood-relation (Laban owning Jacob as his own kindred, the basis for the welcome and the sojourn); 'he abode with him the space of a month' (Jacob staying a month, perhaps working, making himself useful, before the bargain, v.15, the beginning of the long sojourn, twenty years, 31:38, the setting for the agreement about wages, v.15, and the marriages) — Ellicott, Gill, Calvin, Clarke."
+    "summary": "Gill has the report cover both the kinship and the feat, and notes that the Jewish writers make the message chiefly about the display of strength; he and Clarke gloss the phrase about bone and flesh plainly as nearest kin. Calvin supplies the conversation the narrative omits: Laban had once seen a servant of Abraham's arrive loaded with wealth, so a poor opinion of a nephew who came with nothing might have entered his mind at once, and Jacob had to explain why he had left and why he was so contemptibly clothed — probably with signs and marks his mother had furnished, which is why Laban's exclamation reads as a verdict. Calvin then widens the principle: blood teaches men to help one another, but kindness ought to extend further and diffuse itself through the whole human race, and the spiritual relationship God creates among the faithful ought to be far more effectual still. Of the month he makes a probation, in which Jacob's not sitting idle and eating another's bread for nothing obliged Laban to admit that something beyond his keep was owing; and of Laban's question about serving for nothing he sets out two senses before choosing the second, that Laban was unwilling to exact unpaid service under colour of relationship. What Moses means us to see is a principle of equity in Laban's own mouth — until, a little while after, practice came and Laban forgot every word of it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads son as descendant, Laban being Bethuel's son and Nahor's grandson."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott explains why the news went to the father rather than the mother's household, as Rebekah's had: this was simply the hospitable reception of a relative, and to Laban it must have been welcome, calling to mind how seventy-seven years before he had watched his sister leave to marry the son of a distant sheik. One thing puzzles him — that so old a man's daughters should be so young — and he offers two solutions, children of a wife of his old age or granddaughters counted as his own, preferring the first since Laban's sons go unmentioned for two chapters. He renders the month exactly as a month of days, meaning a full one."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Calvin turns Laban's fair-sounding question into a case study in self-deception: men seldom err in general principles and confess with one mouth that every man should have his due, yet the moment they descend to their own affairs self-love blinds them — hence the proverb that nobody is a fit judge in his own cause."
+  ],
   "themes": [
-   "And Laban said to him, Surely thou art my bone and my flesh. And he abode with him the space of a month",
-   "Laban owning Jacob as kindred",
-   "the acknowledgment of close blood-relation ('bone and flesh,' 2:23)",
-   "the beginning of the long sojourn (a month, then twenty years, 31:38)"
+   "my bone and my flesh",
+   "kindred and the human race",
+   "a month of probation",
+   "equity in the mouth of Laban"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.66
+   }
   }
  },
  "15": {
@@ -500,721 +323,571 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban proposes wages for Jacob's service: 'and Laban said unto Jacob, Because thou art my brother, shouldest thou therefore serve me for nought? tell me, what shall thy wages be?' — Laban, seeing Jacob serve (the month, v.14), proposing to give him wages (not to let a kinsman serve for nothing, the seemingly generous offer, yet, the witnesses note, Laban's words may already betray his eye to gain, the shrewd bargainer, who would prove covetous, chs. 30-31); the offer — that Jacob should not serve for nothing (the appearance of fairness, the setting for the bargain, the seven years for Rachel, v.18, Laban's proposal that opened the way); 'tell me, what shall thy wages be?' (Laban inviting Jacob to name his wages, the occasion for Jacob, who loved Rachel, v.18, to offer seven years' service for her, the bargain that would lead to the deception, vv.21-25, Laban's shrewd opening, he gained seven years' service, and would gain seven more) — Ellicott, Gill, Henry, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Laban said unto Jacob, Because thou art my brother, shouldest thou therefore serve me for nought? tell me, what shall thy wages be?",
-   "Laban proposing wages for Jacob's service",
-   "the seemingly generous offer (yet with an eye to gain, chs. 30-31)",
-   "the bargain opened, the occasion for the seven years for Rachel (v.18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban's two daughters introduced: 'and Laban had two daughters: the name of the elder was Leah, and the name of the younger was Rachel' — Laban having two daughters: Leah (the elder, whose name may mean 'weary,' or 'wild cow') and Rachel (the younger, 'ewe,' the introduction of the two who would become Jacob's wives, the elder and younger, on whose order the deception would turn, v.26); Leah the elder daughter (the firstborn, v.26) — the one Laban would substitute for Rachel (v.23, the mother of Reuben, Simeon, Levi, Judah, vv.32-35, and so of the royal and priestly tribes, the elder sister); 'the younger was Rachel' (the younger, beautiful, v.17, beloved of Jacob, v.18, the future favored wife, the mother of Joseph and Benjamin, the younger sister, for whom Jacob would serve) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Laban had two daughters: the name of the elder was Leah, and the name of the younger was Rachel",
-   "Laban's two daughters introduced",
-   "Leah the elder (mother of the royal and priestly tribes) and Rachel the younger (the beloved)",
-   "the order on which the deception would turn (v.26)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "15-17",
+  "pericope_label": "The bargain proposed; Leah and Rachel",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes tender-eyed for blear-eyed, a moisture that reddened them and made her less agreeable to look at, though he records that Onkelos rendered it the other way, as if her beauty lay in her eyes and nowhere else."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls the contract fair and reads Laban's reasoning approvingly — if Jacob is respectful enough to serve for nothing, Laban will not be unjust enough to take advantage of his necessity or his good nature — from which he draws the rule that inferior relations must not be imposed on, and that if it is their duty to serve us it is ours to reward them. He praises what Jacob did with the month, applying himself to his uncle's business like a man of business with no stock of his own, and observes that wherever we are it is good to be employed in something useful. He also does the arithmetic and finds it startling: Jacob was seventy-seven when he bound himself apprentice for a wife and kept sheep for a wife, a thing his posterity are reminded of long afterwards as a mark of the meanness of their origin."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The contrast of the two sisters: 'Leah was tender eyed; but Rachel was beautiful and well favoured' — Leah's eyes 'tender' (weak, delicate, perhaps dull or lacking lustre, the Hebrew rakkoth, variously taken as weak/dim eyes, or, by some, soft, gentle eyes, in any case Leah lacking the striking beauty of Rachel, the less attractive sister, in the world's eyes, yet the one God would favor with children, v.31); the various senses of 'tender eyed' — weak, dull eyes (the dominant reading), or, less likely, soft, lovely eyes (the contrast with Rachel's full beauty, Leah's lesser comeliness); 'Rachel was beautiful and well favoured' (Rachel beautiful in form and face, the comely sister, beloved of Jacob, v.18, the contrast, Leah plain, Rachel beautiful, that shaped Jacob's preference and the rivalry to come, the beauty that won Jacob's love) — Ellicott, Gill, Clarke, Calvin."
+    "summary": "Clarke suspects a motive under Laban's fairness, calling him a very saving if not covetous man who had watched a month's work and meant to secure so useful a servant. On the disputed word he dissents from the others: the Hebrew means soft, delicate, lovely, the reverse of the sense usually given it, and since the writer is comparing the sisters, Leah's chief recommendation was precisely her soft and beautiful eyes while Rachel was beautiful in shape, person, mien and gait. He explains why Jacob offered service rather than money from the custom by which the father received a portion for his daughter rather than giving one with her, quoting a Hindoo lawgiver that a person may become a slave on account of love or to obtain a wife, and turns the point into a complaint about his own age, when the bad education of women makes a dowry necessary, whereas formerly a man who got a wife almost invariably got a prize. Wesley follows Henry, making the age seventy."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes that Jacob had already given a full account of himself on arrival, so Laban probably expected the very answer he got, though the proposal was fair and upright. He agrees with the unflattering sense of the disputed word — Leah, whose name means languor or weariness, had dull bleared eyes, probably from some form of ophthalmia common in that hot sandy region, which in the East counted a great defect where bright eyes were much admired — and ends the comparison where neither of the others goes: it was not Rachel, with her fair face and her husband's lasting love, who became mother of the Messiah's progenitor, but the weary-eyed Leah."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether Leah's eyes were a defect or her one beauty. Gill and Ellicott take tender-eyed as blear or dull, a blemish in Eastern reckoning; Clarke argues the Hebrew means soft and lovely and makes her eyes the very thing that recommended her, the comparison still leaving the balance with Rachel; Gill records Onkelos on Clarke's side."
+  ],
   "outliers": [],
   "themes": [
-   "Leah was tender eyed; but Rachel was beautiful and well favoured",
-   "the contrast of the two sisters",
-   "Leah tender (weak/dim) eyed, the less comely, yet whom God would favor with children (v.31)",
-   "Rachel beautiful and well favoured, whom Jacob loved (v.18)"
+   "what shall thy wages be",
+   "tender eyed",
+   "seven years for Rachel",
+   "the weary-eyed mother"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "Charles Ellicott"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob's love for Rachel and his offer of seven years' service: 'and Jacob loved Rachel; and said, I will serve thee seven years for Rachel thy younger daughter' — Jacob loving Rachel (the beautiful younger daughter, v.17, the genuine, deep affection of the patriarch, the love that would shape his offer and his long service, the love that made the years light, v.20); Jacob offering 'I will serve thee seven years for Rachel thy younger daughter' — to serve Laban seven years for Rachel (in place of a dowry, which Jacob, a fugitive without goods, could not pay, the labor as the bride-price, the custom where a portion was wanting, the long service offered for love, the bargain, which Laban accepted, v.19, and used to his own gain); 'Rachel thy younger daughter' (Jacob specifying Rachel, the younger, the precise naming that Laban would later exploit, substituting Leah, the elder, vv.23-26, the love fixed on Rachel, the bargain made for her) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jacob loved Rachel; and said, I will serve thee seven years for Rachel thy younger daughter",
-   "Jacob's love for Rachel and his offer of seven years' service",
-   "the long service as the bride-price (the portion he could not pay)",
-   "the love fixed on the younger daughter, specified (vv.23-26)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
+  "excluded_voices": [
    "Jamieson, Fausset and Brown"
   ],
+  "range": "18-19",
+  "pericope_label": "Seven years for Rachel",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "majority",
+    "summary": "Gill dates the love from the well, Jacob having loved Rachel from the moment he saw her, and will not take Laban's answer at face value, agreeing with the Targum of Jonathan that it was spoken deceitfully by a man who already meant to impose on him. Calvin refuses to call the transaction anything but what it was: a shameful barbarity to hand over a daughter as the reward of service and make her the subject of barter, when Laban should have assigned her a portion and dealt liberally with his son-in-law, and instead defrauded him of his wages under the pretext of kinship. Moses is recording nothing rare, he adds — men do not put their daughters up for sale, but the desire of gain hurries most of them far enough to prostitute their honour and sell their souls. On Jacob's preference Calvin is careful rather than censorious: to be drawn by elegance of form is no sin provided reason keeps the ascendancy, though he suspects self-indulgence in asking the younger sister to the injury of the elder and undervaluing what Leah had. What he praises without qualification is the seven years, in which a man felt no weariness and kept his chastity, living under one roof in daily familiar intercourse and abstaining from every impropriety."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban accepts Jacob's offer: 'and Laban said, It is better that I give her to thee, than that I should give her to another man: abide with me' — Laban accepting the bargain, saying it was better to give Rachel to Jacob (a kinsman) than to a stranger (the seemingly favorable answer, the agreement to the seven years' service, the consent that bound Jacob to the long labor, and would lead to the deception, vv.23-26); Laban's words — preferring to keep the match in the family (the kinsman over the stranger, yet, the witnesses note, Laban's real motive likely gain, the seven years' service, and the keeping of Jacob, the prosperer, chs. 30-31, the consent with an eye to advantage); 'abide with me' (Laban bidding Jacob stay and serve, the binding of the bargain, the beginning of the long service, the setting for the deception, vv.21-26, and the marriages) — Ellicott, Gill, JFB."
+    "prevalence": "single",
+    "summary": "Ellicott attends to how Rachel is named — the Hebrew calls her the little one, as Leah is the great one, meaning simply the younger — and explains the shape of the offer, since wives had to be purchased in the East and Jacob, having brought none of the rich presents Abraham once sent, had nothing but his own service to give. He adds a consequence to watch for: such a sale being ordinarily veiled under the specious form of freewill gifts, both daughters will afterwards be found offended at being so openly bartered. Laban's reply he finds entirely in keeping with the country's custom, Arabs still preferring a relative as husband for a daughter, the elder cousins claiming the elder daughters and the younger the younger, so that Jacob as a second son had a claim upon Rachel; and he reports the rabbinic notion that Leah's eyes were weak from weeping because Esau had never come to marry her, calling it absurd but good evidence that cousin-marriage was an established rule."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether Laban's answer was honest. Gill, with the Targum of Jonathan, takes it as spoken deceitfully by a man already meaning to impose on Jacob; Ellicott reads it as the ordinary custom of the country, cousins having a recognised claim on cousins."
+  ],
   "outliers": [],
   "themes": [
-   "And Laban said, It is better that I give her to thee, than that I should give her to another man: abide with me",
-   "Laban accepting Jacob's offer",
-   "the consent (with an eye to gain) binding Jacob to the seven years' service",
-   "the way to the deception (vv.23-26) and the marriages"
+   "thy daughter, the little one",
+   "wives bought in the East",
+   "cousin-marriage",
+   "seven years and chastity"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.61
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "Charles Ellicott",
    "John Wesley",
-   "John Calvin"
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The seven years that seemed but a few days for love: 'and Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her' — Jacob faithfully serving Laban the full seven years (as the bride-price, v.18, the long labor of the patriarch, the diligent service, which Laban profited by, chs. 30-31, the years of faithful work for love); the beautiful word — 'they seemed unto him but a few days, for the love he had to her': the seven years (a long time) seeming short to Jacob because of his love for Rachel (the power of love to make hard and long labor light and brief, the truest picture of love's labor — that affection sweetens toil and shortens time, the patriarch's deep, patient love, 'love makes the longest service short, and the hardest easy,' the proverbial wisdom, some applying it to the believer's love for Christ, which makes service and waiting light, the love that counts the years but a few days); Jacob's seven years' patient service for love displaying the constancy and depth of his affection (the contrast with the world's hasty, shallow loves, the labor of love, 1 Thessalonians 1:3, the patience that love inspires, the years made short by love) — Ellicott, Gill, Wesley, Calvin."
-   }
-  ],
-  "debates": [
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says only that Jacob served the whole term, diligently, faithfully and patiently."
+   },
    {
-    "question": "What does 'they seemed but a few days, for the love he had to her' display?",
-    "sides": [
-     {
-      "position": "The power of love to make long, hard service light and brief - the truest picture of love's labor (love makes the longest service short, the hardest easy), the patriarch's deep, patient love; applied by some to the believer's love for Christ",
-      "holders": [
-       "Wesley",
-       "Calvin",
-       "Gill",
-       "Ellicott",
-       "the grammatical-historical reading"
-      ]
-     }
-    ]
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the seven years into a survey of how wives were got. In ancient times all nations gave dowries for their wives, and many still do: Shechem offered whatever was asked for Dinah, Eliezer carried a profusion of silver and gold for Rebekah, David had to kill Goliath and then a hundred Philistines for Michal, and Hosea bought his wife for fifteen pieces of silver and a homer and a half of barley; the same held among the ancient Greeks, Indians and Germans, the Romans had a marriage by purchase, and the Tartars and Turks still buy their wives. He then sets down Herodotus on the Babylonians, where every district sold its marriageable virgins once a year, the fairest first and at the highest price, the money from the handsome making the portion of the deformed, with security required of every purchaser that he would live with the woman as his wife — a custom Laban followed in spirit though not in letter when he used Rachel's beauty to dispose of Leah. On the years seeming a few days he reports the opinion that Jacob received Rachel soon after the first month and served afterwards, and the alternative that he was fifty-seven rather than seventy-seven; and he answers the incredulity of the thing twice over, since Jacob had the continual company of his chosen bride and since love affairs among the patriarchs were never carried to the pitch of insanity they reach in modern times. Wesley takes the phrase somewhere else entirely: an age of work will be but a few days to those that love God and long for Christ's appearing."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reckons the age at fifty-seven at least and explains it by the late marriages of the patriarchs generally, who arrived at manhood only slowly; on that footing the warmth of Jacob's affection needs no apology, and it was no passing emotion but lasted his whole life. He marks the verse as a turning point, this being the last of the late marriages, since Jacob's own sons married young."
    }
   ],
-  "outliers": [],
+  "debates": [],
+  "outliers": [
+   "Clarke's parallel for Laban's dealing is Herodotus on the Babylonian marriage auction, where the price fetched by the beautiful supplied the portion of the deformed — a custom he thinks Laban followed in spirit when he used Rachel's beauty to dispose of Leah."
+  ],
   "themes": [
-   "And Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her",
-   "the seven years that seemed but a few days for love (the crux of love's labor)",
-   "the power of love to make long, hard service light and brief",
-   "the patriarch's deep, patient love (applied by some to the believer's love for Christ)"
+   "dowries among the nations",
+   "the Babylonian auction",
+   "they seemed but a few days",
+   "the last late marriage"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.66
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "21-24",
+  "pericope_label": "The feast and the substitution",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has Jacob challenge Rachel as his wife already, hers by contract with the conditions performed; takes the feast for a public act, Laban gathering the chief men of Haran to make the marriage open and authentic; sets the substitution after the feast, the guests gone and night fallen, a fit season for such a design; and on the handmaid observes that it was usual to give several at such a time, as Rebekah seems to have had, whereas Leah had one, and that one was the whole portion Jacob got with her — reporting the Targum of Jonathan's claim that Zilpah was Laban's own daughter by a concubine. Calvin restrains the scale of the feast, not a supper for the whole town but many guests as at any splendid wedding, and finds a motive in the splendour: Laban took the more trouble in order to bind Jacob by shame, so that he should not afterwards make light of the marriage he had been tricked into. From the same verse he draws the custom the deception turned on, that out of regard for the modesty of brides they were led veiled into the chamber — that ancient discipline being now thrown off, he adds, men have become almost brutal."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the word for the feast as one of drinking and reasons that sacrifices were probably offered and libations poured out, a cup of wine being handed to every guest with particular ceremonies. He lists the conditions that let the substitution succeed — the bride always veiled, the chamber generally dark, and Leah brought in at evening — and notes the legal point about the handmaid, that slaves given to a daughter at her marriage were her peculiar property, over whom the husband had neither right nor power."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Jacob claims his wife after the seven years: 'and Jacob said unto Laban, Give me my wife, for my days are fulfilled, that I may go in unto her' — Jacob, the seven years (v.20) fulfilled, claiming Rachel as his wife (the term of service complete, the patriarch asking for the promised bride, the claim that Laban would answer with the deception, vv.22-25); Jacob's 'days are fulfilled' — the seven years completed (v.20, the term of the bargain, v.18, done, the just claim of the promised wife, the patriarch's right); 'that I may go in unto her' (Jacob seeking the consummation of the marriage, the plain, honest claim, the request that set the stage for Laban's substitution of Leah, vv.22-25, the marriage at hand) — Ellicott, Gill."
+    "summary": "Ellicott glosses the demand as the appointed term of service being finished, and concludes flatly that the marriage took place at the end of the seven years. He adds that the bride was carried closely veiled to the bridegroom's house and that there was probably some similarity of voice and figure between the sisters, then draws a conclusion the others do not: Leah must have been party to the fraud, so that Jacob's later dislike of her was not altogether without reason. On the handmaid he sharpens the comparison, Bethuel having given Rebekah her nurse Deborah and damsels besides, though she had been bought with presents of unusual costliness. Keil and Delitzsch look ahead to the excuse Laban would make in the morning and refuse it outright: if the custom of not giving the younger before the first-born really held in Haran, as it has in ancient India and elsewhere, he was bound to have told Jacob beforehand."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone concludes that Leah was a party to her father's fraud, and uses it to make Jacob's later dislike of her not altogether unreasonable."
+  ],
   "themes": [
-   "And Jacob said unto Laban, Give me my wife, for my days are fulfilled, that I may go in unto her",
-   "Jacob claiming his wife after the seven years",
-   "the term of service complete (v.20), the just claim of the promised bride",
-   "the claim Laban would answer with the deception (vv.22-25)"
+   "give me my wife",
+   "a feast of drinking",
+   "the veiled bride",
+   "one handmaid for a portion"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wedding feast Laban made: 'and Laban gathered together all the men of the place, and made a feast' — Laban making a wedding feast, gathering the men of the place (the customary marriage celebration, the wedding feast lasting a week, v.27; Judges 14:10-12, the public solemnity, the occasion under cover of which Laban would substitute Leah, v.23); the gathering of the men — the public wedding feast (the festivity, the cover, the evening, v.23, and perhaps the veiling of the bride and the wine, for the deception); 'made a feast' (the marriage feast, the joy and ceremony, yet the occasion of Laban's fraud, substituting the veiled Leah at evening, v.23, the festivity that masked the deception, the wedding that turned to guile) — Keil and Delitzsch, Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.74
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Laban gathered together all the men of the place, and made a feast",
-   "the wedding feast Laban made",
-   "the customary marriage celebration (lasting a week, v.27)",
-   "the occasion under cover of which Laban would substitute Leah (v.23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban substitutes Leah by night: 'and it came to pass in the evening, that he took Leah his daughter, and brought her to him; and he went in unto her' — at evening (in the dark, the bride veiled, v.25), Laban bringing Leah (not Rachel) to Jacob (the fraud — the elder substituted for the younger, the deception under cover of night and the veil, Laban's guile); the means of the deception — the darkness, the veiled bride (the Eastern custom of the heavily veiled bride), and perhaps the wine of the feast (v.22, Jacob deceived as to which sister, the fraud accomplished, Leah brought in Rachel's place); 'he went in unto her' (Jacob, deceived, consummating the marriage with Leah, thinking her Rachel, the deception complete, the discovery to come in the morning, v.25, the elder sister married to Jacob, and so the mother of the elder tribes, vv.32-35) — Ellicott, Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass in the evening, that he took Leah his daughter, and brought her to him; and he went in unto her",
-   "Laban substituting Leah by night",
-   "the fraud - the elder substituted for the younger, under the veil and the dark",
-   "the deception that married Leah to the unwitting Jacob (discovered, v.25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban gives Zilpah to Leah: 'and Laban gave unto his daughter Leah Zilpah his maid for an handmaid' — Laban giving Leah a maidservant, Zilpah (as a wedding-gift, the custom of giving a handmaid to the bride, as Rebekah had her nurse and damsels, 24:59, 61, the provision for the bride, Zilpah who would later bear Jacob sons, Gad and Asher, 30:9-13, the handmaid given); Zilpah given to Leah (a maidservant, fewer than Bethuel gave Rebekah, 24:61, the witnesses note, the customary provision, the handmaid who would bear two of the twelve sons, 30:9-13); Zilpah, given to Leah, would (with Bilhah, v.29) become a mother of the tribes (Gad, Asher, 30:9-13, the providence preparing the handmaids whose sons would be numbered among the twelve, the household of Jacob being gathered) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Laban gave unto his daughter Leah Zilpah his maid for an handmaid",
-   "Laban giving Zilpah to Leah",
-   "the customary provision of a handmaid for the bride (24:59)",
-   "Zilpah the future mother of Gad and Asher (30:9-13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
    "John Gill",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "25-26",
+  "pericope_label": "The morning discovery and the excuse",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Jacob discovers the deception (the deceiver deceived): 'and it came to pass, that in the morning, behold, it was Leah: and he said to Laban, What is this thou hast done unto me? did not I serve with thee for Rachel? wherefore then hast thou beguiled me?' — 'in the morning, behold, it was Leah' (when daylight came, Jacob discovering that he had been given Leah, not Rachel, the deception exposed, the shock of the morning, and here the witnesses marking the striking providence — the deceiver Jacob now himself deceived: he who had personated his elder brother Esau to deceive his blind father, ch. 27, getting the blessing by guile, now, in the dark, deceived by the substitution of the elder sister for the younger, the just retribution, God repaying Jacob in his own coin, measure for measure, the supplanter supplanted, the chastening of the deceiver by deception); Jacob's just complaint — he had served for Rachel (vv.18-20), yet Leah was given (the protest against the fraud, the wronged Jacob, yet feeling now what he had made his father and Esau feel, ch. 27); 'wherefore then hast thou beguiled me?' (Jacob charging Laban with beguiling, deceiving, him, the very word that fit his own former deceit, the deceiver crying out against deception, the providence, and Laban's guile, overruled to chasten and humble the patriarch, the bitter lesson) — Calvin, Gill, Wesley."
-   }
-  ],
-  "debates": [
+    "summary": "Gill wonders how the night had not betrayed her, unless the sisters sounded alike or Leah kept silence, and finds her hard to excuse — the sin is adultery and incest — though he assembles what can be said: obedience to her father, the wish of an eldest daughter for a husband first, and above all the promised seed that was to run in Jacob's line, with Schmidt's suggestion that Laban had persuaded her the contract was made on her account. He takes Laban at his word about the custom, noting that he denies neither the deceit nor the agreement but pleads the usage of the city against both. Calvin thinks Jacob's expostulation justified and Laban's answer no excuse, though he grants it a pretext, and draws from it the shape of the whole man: once deceitful men have turned aside from truth they make no end of transgressing, and always keep some pretext to clear themselves. He counts the offences in order — seven years' labour demanded for a daughter, the daughter sold without a dowry, and worst of all the nephew robbed of his betrothed wife."
+   },
    {
-    "question": "What does Jacob's being deceived display?",
-    "sides": [
-     {
-      "position": "The deceiver deceived - Jacob, who deceived his blind father by personating the elder Esau (ch. 27), now himself deceived in the dark by the elder Leah substituted for the younger Rachel; the just retribution of God, repaying the supplanter in his own coin (measure for measure)",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Wesley",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And it came to pass, that in the morning, behold, it was Leah... wherefore then hast thou beguiled me?",
-   "Jacob discovering the deception (the crux of the deceiver deceived)",
-   "Jacob, who deceived his blind father by personating the elder (ch. 27), now deceived by the elder sister",
-   "the just retribution of God, repaying the supplanter in his own coin (measure for measure)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks the rule genuine and old, daughters being early given in marriage by seniority, and remarks that the Hindoos, the oldest people now existing next to the Jews, hold it not as custom but as positive law, counting it an offence equal to adultery to marry while an elder sibling is unmarried — Laban's words, he says, are literally what a Hindoo would say. What he holds against him is the concealment, the custom kept back until Leah had been delivered. Wesley states the retribution in a sentence: Jacob had cheated his own father by pretending to be Esau, and now his father-in-law cheated him; and on the custom he says we have reason to think there was none, and if there was, Laban should have said so when he took seven years' service for the younger daughter."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Laban's excuse - the custom of the firstborn: 'and Laban said, It must not be so done in our country, to give the younger before the firstborn' — Laban excusing his fraud by pleading the custom of the place: not to give the younger daughter in marriage before the elder (firstborn, the plea of custom, true in itself, an Eastern custom, used to cover the deceit, Laban not denying the beguiling, v.25, but justifying it by custom); the custom — to marry the elder daughter before the younger (a known Eastern custom, yet, the witnesses note, Laban should have said so at the first, v.18, the custom pleaded only after the fraud, the excuse covering the guile); Laban's plea of 'the firstborn before the younger' carrying an unintended sting — Jacob, who had set the younger (himself) before the firstborn (Esau), getting the birthright and blessing (25:33; 27), now answered by the very principle (the firstborn's right) he had overturned (the providence in Laban's words, the deceiver met by his own deed) — Keil and Delitzsch, Gill, Clarke, Ellicott."
+    "summary": "Ellicott is sceptical of the custom: the practice is such as Laban describes in India, but there is no proof of it among the Bedaween, and since Leah apparently loved Jacob and Laban wanted his service continued, he suspects a plot between the two of them on a pretext overstrained if not false — Jacob plainly knew of no such rule and would never have given seven years for Leah. Keil and Delitzsch look past the excuse to what it produced and refuse both ways of settling it: the bigamy is not to be judged by a Mosaic law against marrying two sisters that did not yet exist, nor set down as incest, as Calvin sets it down, but neither is it justified on the ground that God's blessing afterwards made it the means of multiplying Abraham's seed into a nation."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether the custom Laban pleaded existed. Clarke thinks it genuine and ancient, citing Hindoo law, and blames only the concealment; Ellicott finds no evidence of it among the Bedaween and suspects a plot between Laban and Leah; Wesley doubts there was any such custom at all; Gill takes the plea at face value."
+  ],
   "outliers": [],
   "themes": [
-   "And Laban said, It must not be so done in our country, to give the younger before the firstborn",
-   "Laban's excuse - the custom of the firstborn",
-   "the plea of custom (true in itself) used to cover the deceit (pleaded only after the fraud)",
-   "the irony - the firstborn's right answering Jacob, who set the younger before the firstborn (25:33; 27)"
+   "behold, it was Leah",
+   "the custom of the place",
+   "measure for measure",
+   "how to judge the bigamy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
   }
  },
  "27": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban's offer of Rachel for a second seven years: 'fulfil her week, and we will give thee this also for the service which thou shalt serve with me yet seven other years' — Laban bidding Jacob complete Leah's marriage-week (the wedding feast lasting seven days, Judges 14:12, after the week, Rachel also given, the week of Leah to be honored before the second marriage, the custom of the wedding-week); Laban offering 'this also' (Rachel) after Leah's week — Jacob to have both sisters (the bigamy, two wives in eight days, v.28, the offer that bound Jacob to a second term, the two sisters married, the source of the rivalry, chs. 30, the marriage not to be judged by the later law, Leviticus 18:18, the witnesses note, there being then no positive law against it, yet not justified); 'for the service which thou shalt serve with me yet seven other years' (Laban exacting a second seven years' service for Rachel, the shrewd bargainer gaining fourteen years of Jacob's labor, the covetous Laban, chs. 30-31, profiting by Jacob, the long service for the beloved wife) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Fulfil her week, and we will give thee this also for the service which thou shalt serve with me yet seven other years",
-   "Laban's offer of Rachel for a second seven years",
-   "Jacob to have both sisters (the bigamy), the source of the rivalry (chs. 30)",
-   "the shrewd Laban gaining fourteen years of Jacob's labor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob fulfills the week and receives Rachel: 'and Jacob did so, and fulfilled her week: and he gave him Rachel his daughter to wife also' — Jacob accepting Laban's terms (v.27), completing Leah's marriage-week, and receiving Rachel also (the patriarch yielding to the situation, bound by the fraud, and by his love for Rachel, the two sisters now both his wives, within eight days, the bigamy accomplished); Jacob completing Leah's seven-day wedding feast (v.27) before taking Rachel (the honoring of the week, the second marriage following); 'he gave him Rachel his daughter to wife also' (Rachel given as a second wife, the beloved, v.30, the two sisters married to Jacob, the source of the rivalry and the gathering of the tribes, chs. 30, the bigamy, not justified, yet overruled by God to multiply the seed, the witnesses note) — Keil and Delitzsch, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jacob did so, and fulfilled her week: and he gave him Rachel his daughter to wife also",
-   "Jacob fulfilling the week and receiving Rachel",
-   "the two sisters both his wives within eight days (the bigamy)",
-   "the source of the rivalry and the gathering of the tribes (chs. 30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Laban gives Bilhah to Rachel: 'and Laban gave to Rachel his daughter Bilhah his handmaid to be her maid' — Laban giving Rachel a maidservant, Bilhah (as he had given Zilpah to Leah, v.24, the customary wedding-gift of a handmaid, 24:59, Bilhah who would later bear Jacob sons, Dan and Naphtali, 30:3-8, the handmaid given); Bilhah given to Rachel — the maidservant of the beloved wife (the handmaid who would bear two of the twelve sons, 30:3-8, the customary provision); Bilhah, given to Rachel, would (with Zilpah, v.24) become a mother of the tribes (Dan, Naphtali, 30:3-8, the providence gathering the four mothers, Leah, Rachel, Zilpah, Bilhah, whose sons would be the twelve tribes of Israel, the household of Jacob being formed) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Laban gave to Rachel his daughter Bilhah his handmaid to be her maid",
-   "Laban giving Bilhah to Rachel",
-   "the customary handmaid for the bride (as Zilpah to Leah, v.24)",
-   "Bilhah the future mother of Dan and Naphtali (30:3-8), the four mothers gathered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob loves Rachel more and serves a second seven years: 'and he went in also unto Rachel, and he loved also Rachel more than Leah, and served with him yet seven other years' — Jacob taking Rachel also to wife and loving her more than Leah (the preference for the beloved Rachel, the beautiful, v.17, for whom he had served, the favoritism that would breed the rivalry and Leah's grief, vv.31-35, the divided affection, as Isaac and Rebekah's, 25:28); Jacob's loving Rachel more leaving Leah less loved (hated, v.31, i.e., loved less) — the source of Leah's sorrow (the bitter fruit of the bigamy and the deception, the rivalry of the sisters, the unloved Leah whom God would regard, v.31); 'served with him yet seven other years' (Jacob serving the second seven years for Rachel, v.27, the long labor, fourteen years in all, for the two wives, the diligent service under the covetous Laban, chs. 30-31, the patriarch's toil for his family) — Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he went in also unto Rachel, and he loved also Rachel more than Leah, and served with him yet seven other years",
-   "Jacob loving Rachel more and serving a second seven years",
-   "the preference that grieved the less-loved Leah (v.31), the divided affection (25:28)",
-   "the fourteen years' service for the two wives"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The LORD opens Leah's womb because she was hated (God's regard for the unloved): 'and when the LORD saw that Leah was hated, he opened her womb: but Rachel was barren' — 'the LORD saw that Leah was hated' — 'hated' here meaning loved less (the comparative, as v.30, loved less than Rachel, the Hebrew idiom, cf. Luke 14:26; Malachi 1:3, Leah the unloved, slighted wife, and the LORD 'saw' her affliction, the slighted, sorrowful wife, the eye of God on the despised, God's notice of the unloved); God 'opened her womb' — gave Leah children (while Rachel, the loved, was barren, the tender compassion of God toward the unloved and afflicted — that the despised wife was regarded and comforted by the LORD with the blessing of children, the divine redress of the imbalance, the loved wife barren, the unloved fruitful, the providence that comforted Leah and humbled the favored Rachel, the LORD's care for the slighted, Psalm 113:7-9, the witnesses noting that 'the despised and afflicted of men are regarded by the Lord'); 'but Rachel was barren' (the beloved Rachel childless, for a time, the contrast, the loved barren, the unloved fruitful, displaying God's sovereign, gracious ordering — comforting the afflicted Leah, and, in time, teaching Rachel to seek God, 30:1, 22, the providence balancing the household, the mercy to the unloved) — Calvin, Gill, Wesley, Henry, JFB."
+    "summary": "Gill takes the week for Leah's, the seven days of marriage feasting and not a week of years of service, citing the Jewish writers and the Targum of Jerusalem. Calvin alone refers the demonstrative to Rachel and reads the verse as the purchase of marriage with her by a second seven years — not that Laban put off the wedding to the term's end, but that Jacob was bound into a fresh servitude. He is harshest of all on Laban, calling him callous in wickedness: had he owned ten more daughters he would have disposed of them the same way, and the graver charge is what he did to the household, involving his nephew in polygamy and setting two sisters in one bed so that each became the other's competitor and they spent their lives in hostility. Better to repudiate an unloved wife, Calvin argues, than keep her captive and let a second consume her with grief — which is why the Lord by Malachi pronounces divorce more tolerable than polygamy. Nor does he let Jacob off: he might have dismissed Leah, who had never been his lawful wife, marriage being constituted by mutual consent, and instead doubled his fault by polygamy and trebled it by an incestuous marriage."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke adds the practical reason Laban could not hand Rachel over at once, the solemnities having begun before all the men of the place, and probably a wish to keep the fraud out of the public eye; he reckons the cost at fourteen years' service instead of seven, since Jacob would hardly have served seven days for Leah, and observes that what a man sows he reaps — Jacob had practised deceit and is now deceived, and Laban was deceived himself after. Wesley reads it as a snare rather than a bargain: Jacob had no design of multiplying wives and would have kept as true to Rachel as his father to Rebekah, having lived without a wife to his eighty-fourth year, and it was Laban who forced him into a strait where he had colourable reason for marrying both."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott puts the delay in terms of honour, since forsaking Leah during those days would have been an insult her brothers must have avenged, so that Jacob, appeased by the promise of Rachel at the week's end and unwilling to quarrel with the household, submitted to the wrong. He notes that the Hebrew is remarkable — fulfil the week of this, and we will give thee also the this for the service — and insists the idiom means the one and the other, so the first can only be Leah and the second only Rachel."
    }
   ],
   "debates": [
-   {
-    "question": "What does the LORD's opening Leah's womb 'because she was hated' display?",
-    "sides": [
-     {
-      "position": "God's regard for the unloved - 'hated' meaning loved less (v.30; Luke 14:26); the LORD seeing and compassionating the slighted Leah and comforting her with children (while the loved Rachel was barren), the tender mercy toward the despised and afflicted (Psalm 113:7-9)",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Wesley",
-       "Henry",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "Whose week the verse means. Gill, Clarke and Ellicott all take it for Leah's marriage feast, Ellicott arguing from the Hebrew idiom that the first demonstrative can only be Leah and the second Rachel; Calvin refers it to Rachel and reads the clause as the purchase of a marriage with her by a further seven years."
   ],
   "outliers": [],
   "themes": [
-   "And when the LORD saw that Leah was hated, he opened her womb: but Rachel was barren",
-   "the LORD opening Leah's womb because she was hated (the crux of God's regard for the unloved)",
-   "'hated' meaning loved less (v.30; Luke 14:26); the LORD seeing and compassionating the slighted Leah",
-   "the tender mercy of God toward the despised and afflicted (Psalm 113:7-9)"
+   "fulfil her week",
+   "fourteen years for seven",
+   "two sisters in one marriage",
+   "what a man sows"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
+  }
+ },
+ "28": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "28-30",
+  "pericope_label": "Rachel given, and seven years more",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill leaves the justification open. Marrying two sisters was forbidden by the law of Moses and polygamy disallowed later, yet both were dispensed with earlier; he sees an overruling providence, which brings good out of evil, since the Messiah was to spring from Leah and not Rachel, and pleads necessity besides, one sister having been ignorantly defiled and the other his by contract. Calvin takes the whole episode as a warning against the habit of looking to the fathers: Moses meant to exhibit Jacob's sins so that we might learn to fear and square every action by the sole rule of God's word, since if so holy a patriarch fell this grievously, none of us is safe except as God keeps him. It shows how dangerous it is to imitate the fathers while neglecting the law of the Lord — and yet the foolish Papists will observe as law whatever they find the fathers to have done. Nor is Leah spared: she was not despised without fault of her own, having knowingly taken her sister's husband, though her fault is no excuse for Jacob's lust."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke acquits him. It is perfectly plain that Jacob did not serve another seven years before getting Rachel, and such connections, now called incestuous, were allowable then; no blame appears to attach to him, though the women's jealousies vexed him ever after. He even makes the case the origin of a later statute, the law forbidding a man to take a wife to her sister to vex her in her lifetime."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott asks outright how, after the monogamy of Abraham and the stricter monogamy of Isaac, Jacob came to have two wives, and reports Abravanel's answer that he acted as his brother's substitute in taking the elder and stayed free to marry the younger. His own view is simpler: Jacob regarded Rachel as his own, polygamy was not forbidden, and the only alternative, divorcing Leah, would have been worse. Keil and Delitzsch call it sinful weakness — the fault showing in his loving Rachel more, and the chastisement in the hated wife's being blessed with children while Rachel long remained unfruitful, by which it appeared once more that the origin of Israel was a work not of nature but of grace."
+   }
+  ],
+  "debates": [
+   "Whether Jacob is to be blamed for the double marriage. Clarke acquits him, the practice being lawful in that age; Ellicott defends him as doing justice to Rachel where divorce would have been worse; Gill leaves it open and pleads necessity and providence; Keil and Delitzsch call it sinful weakness while refusing both Calvin's charge of incest and any justification from the outcome; Calvin holds he doubled his fault by polygamy and trebled it by incest."
+  ],
+  "outliers": [],
+  "themes": [
+   "two wives in eight days",
+   "whether Jacob is blameable",
+   "imitating the fathers",
+   "nature and grace"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.61
+   }
+  }
+ },
+ "31": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes hated comparatively, since Jacob did a husband's duty to Leah, and lists what may be said for the difference — she had not Rachel's beauty, was never his choice, was imposed on him by deceit. Calvin steers between the extremes and makes the word a charge against Jacob rather than a description of his feelings: Moses chooses so hard a word to amplify the fault of a man who did not discharge a husband's duty. He presses the distinction because many suppose they have done their duty if they stop short of mortal hatred, whereas the Holy Spirit pronounces those hated who are not sufficiently loved — not open displeasure only, but the neglect of brethren and the cold charity that reigns in the world, so that married people who never openly disagree may still be guilty. He also reads the birth as a correction, Jacob's extravagant love being tamed by the rod, and takes from it that offspring is a special gift of God and that children conciliate husbands to wives."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the providence as a balancing of accounts: Leah, the less beloved, is blessed with children while Rachel is denied them, Providence keeping the scale even by setting crosses and comforts one against another so that nobody is too much elevated or cast down — Rachel wanting children and having her husband's love, Leah wanting the love and being fruitful, as between Elkana's two wives. The child was three things at once: a rebuke to Jacob for making so great a difference between women he was equally related to, a check to Rachel, and a comfort to Leah under the contempt put on her."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the verse into a rule of interpretation that he thinks settles some disputed passages: to hate, in the idiom, means simply to love less, and on that footing the saying that Jacob was loved and Esau hated means only a greater degree of affection shown to one family than the other, in an earthly portion and in the choice of the Messiah's line — not one word of it touching the eternal state of either nation. Those who prop up the peculiarities of their creed with such texts, he ends, greatly err. Wesley adds the comparison that makes the hard word bearable, that in this sense a man is required to hate father and mother in comparison with Christ."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott refuses the softening: we must not tone it down too much, for plainly Leah was not the object of love at all; it was her fruitfulness that gave her value in her husband's eyes, and when that ceased he neglected her utterly."
+   }
+  ],
+  "debates": [
+   "How far to soften the word hated. Gill and Clarke take it comparatively, Clarke building on it a rule that settles the saying about Jacob and Esau; Ellicott refuses the softening and holds Leah was not loved at all; Calvin makes it neither, treating the word as a charge against Jacob for loving insufficiently."
+  ],
+  "outliers": [],
+  "themes": [
+   "what hatred means here",
+   "crosses and comforts balanced",
+   "Jacob loved and Esau hated",
+   "the barren and the fruitful"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
   }
  },
  "32": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "32-33",
+  "pericope_label": "Reuben and Simeon",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The birth of Reuben and Leah's hope: 'and Leah conceived, and bare a son, and she called his name Reuben: for she said, Surely the LORD hath looked upon my affliction; now therefore my husband will love me' — Leah bearing her firstborn and naming him Reuben ('see, a son,' or 'the LORD hath looked,' the name commemorating that the LORD had looked upon her affliction, her being unloved, v.31, the acknowledgment of God's notice, the gratitude of the regarded wife); Leah owning 'the LORD hath looked upon my affliction' (God having seen her sorrow, the slighted wife, v.31, the comfort of God's notice, the faith that ascribed the child to the LORD's compassion, the regarded affliction); 'now therefore my husband will love me' (Leah hoping that, having borne a son, Jacob would now love her, the craving of the unloved wife for her husband's affection, the natural desire, yet still looking to the husband's love, the hope that would not be fully met, and would turn, at last, to praising God, v.35) — Keil and Delitzsch, Gill, Calvin, Wesley."
+    "summary": "Gill hesitates between two derivations of the first name — see the son, as if she called the household to look, or rather God has seen and provided a son, which he thinks fits the verse better — and allows a guess about her hopes before correcting it: she may have imagined this was the promised seed, but if so she was greatly mistaken, for this son proved unstable and did not excel. He adds that the births came as fast as they well could, and reports the Jewish notion that Leah brought forth her sons at seven months. Calvin makes the naming an act of gratitude and infers a habit of prayer behind it, since thanksgiving is proof of prayer beforehand and those who hope for nothing from God bury his favours in forgetfulness; God's benefits, he adds, were better appreciated in that age than in his own, when a profane stupor so occupies nearly all men that, like cattle, they swallow whatever kindness God bestows. The verse teaches besides that those unjustly despised by men are regarded by the Lord — a consolation to the faithful, who are mostly despised in the world."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the first name literally, behold a son, because Jehovah had looked on her affliction. Wesley reads the series as the record of a marriage: Leah appears very ambitious of her husband's love and reckoned the want of it her affliction, not upbraiding him with it as his fault but laying it to heart as her grief, which she had the more reason to bear because she had consented to the fraud by which she became his wife. Her fourth she called praise — and this, Wesley adds, was he of whom, as concerning the flesh, Christ came; whatever is the matter of our rejoicing ought to be the matter of our thanksgiving, and all our praises must centre in Christ, as their matter and Mediator both."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch say the names indicate her state of mind throughout, this first taken as a pledge that the Lord had regarded her misery, so that now her husband would love her."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "And Leah conceived, and bare a son, and she called his name Reuben: for she said, Surely the LORD hath looked upon my affliction; now therefore my husband will love me",
-   "the birth of Reuben and Leah's hope of her husband's love",
-   "the LORD's notice of her affliction owned (v.31), the regarded wife",
-   "the craving of the unloved for her husband's love (which would turn to praising God, v.35)"
+   "names as commentary",
+   "gratitude implies prayer",
+   "the despised regarded",
+   "praise and the line of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The birth of Simeon, the LORD hearing Leah was hated: 'and she conceived again, and bare a son; and said, Because the LORD hath heard that I was hated, he hath therefore given me this son also: and she called his name Simeon' — Leah bearing a second son and naming him Simeon ('hearing,' from the LORD's hearing, the name commemorating that the LORD had heard she was hated, loved less, v.31, the acknowledgment of God's hearing, the comfort of the regarded wife); Leah owning 'the LORD hath heard that I was hated' (God having heard her affliction, the slighted wife, the comfort of God's hearing, as Reuben commemorated his looking, v.32, the faith ascribing the son to the LORD, the despised wife regarded by the God who hears); 'she called his name Simeon (hearing)' (the second son a token of God's hearing, the unloved wife comforted again, yet still, as Reuben, v.32, the longing for her husband's love mingled with the gratitude, the regarded Leah, the God who hears the afflicted, Psalm 34:6) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.63
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And she conceived again, and bare a son... Because the LORD hath heard that I was hated, he hath therefore given me this son also: and she called his name Simeon",
-   "the birth of Simeon, the LORD hearing Leah was hated",
-   "Simeon ('hearing'), the token of God's hearing the slighted wife (v.31)",
-   "the unloved wife comforted by the God who hears the afflicted (Psalm 34:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "34": {
@@ -1222,82 +895,54 @@
    "John Gill",
    "Adam Clarke"
   ],
+  "range": "34-35",
+  "pericope_label": "Levi and Judah",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The birth of Levi and Leah's hope of being joined: 'and she conceived again, and bare a son; and said, Now this time will my husband be joined unto me, because I have born him three sons: therefore was his name called Levi' — Leah bearing a third son and hoping that now, having borne three sons, Jacob would be joined (attached, knit in affection) to her (the continued craving of the unloved wife for her husband's love, the hope renewed with each son, the longing for the marriage-bond of affection); the longing — that Jacob would be 'joined' (the word from which 'Levi' is derived) to her in love (the unloved wife still seeking her husband's affection, the hope, still set on the husband, renewed); 'his name called Levi (joined)' (the third son named Levi, from the hope of being joined to Jacob, the name commemorating the longing, and Levi, the priestly tribe, the line of the priesthood, Exodus 32:26-29, the son named in hope) — Gill, Clarke."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill dwells on the fourth name because of what came out of it: this was a son in whose line and from whose tribe the Messiah was to spring, and Leah, who had praised God already for looking on her affliction and hearing her, now determines to praise him more than ever. He passes on the Targum of Jonathan's reason for the name — that from this son should come kings, and David the king, who should praise the Lord — and asks why she may not as well be supposed to have known that the Messiah would spring from him, which would greatly heighten her joy; and he adds from the Jewish writers a calendar of the four births and the ages the sons reached."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the third name as a calculation, supposing Leah reckoned that after so many children Jacob would be bound to her at least as strongly as to Rachel, and notices where the name led, since from this son sprang the Levites, who instead of the first-born were joined to the priests in the service of the sanctuary. The fourth he renders a confessor, one who acknowledges God and that every good thing comes out of his hand — the name the Jews take from this patriarch, and which, if it could now be rightly applied, would mean a people that confess God. On the closing words he corrects the English: she stood still from bearing is what the Hebrew says, which does not mean she ceased entirely, since she had several children afterwards, the pause being probably caused by a temporary suspension of Jacob's company through Rachel's jealous management."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Clarke closes the chapter with a complaint about naming in his own day: the ancients called their children after some remarkable providence, whereas we impose names as on cattle, so that the dog, the horse, the monkey and the parrot share names that pass for Christian — some absurd, some ridiculous, and a third sort impious, taken from the demon gods of heathenism."
+  ],
   "themes": [
-   "And she conceived again, and bare a son... Now this time will my husband be joined unto me, because I have born him three sons: therefore was his name called Levi",
-   "the birth of Levi and Leah's hope of being joined to her husband",
-   "the continued craving of the unloved wife for Jacob's love",
-   "Levi ('joined'), the son named in hope (the priestly tribe)"
+   "Levi and the Levites",
+   "Judah the confessor",
+   "she stood still from bearing",
+   "names and providence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-16",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The birth of Judah and Leah's turning to praise: 'and she conceived again, and bare a son: and she said, Now will I praise the LORD: therefore she called his name Judah; and left bearing' — at the birth of her fourth son, Leah saying, 'Now will I praise the LORD' — a marked turning: with the first three sons, Leah's words still looking to her husband's love (vv.32-34, 'now will my husband love me... be joined to me'), but now, at the fourth, she rising above the craving for human affection to pure praise of God — 'now will I praise the LORD' (the heart at last fixed on God rather than on her husband's love, the lesson that the soul finds rest not in human love but in praising God, the turning from self to praise); Leah calling his name Judah ('praise,' from the resolve to praise the LORD, yehudah, a confession/praise, and the witnesses marking the great significance: Judah the tribe of the kings, David, and the line of the Messiah, springing from him, Matthew 1:2-3; Hebrews 7:14, 'our Lord sprang out of Judah,' the Lion of the tribe of Judah, Revelation 5:5, the providence that gave the royal and Messianic line through Leah's fourth son, named 'praise,' the unloved wife the mother of the line of Christ, 'the Messiah springing from him, which gave occasion of joy and praise'); 'and left bearing' (Leah ceasing, for a time, from bearing, resuming later, 30:17-21, the pause after the four sons, Leah the mother of Reuben, Simeon, Levi, and Judah, a third of the tribes, including the royal and priestly lines) — Clarke, Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
    }
-  ],
-  "debates": [
-   {
-    "question": "What does Leah's 'Now will I praise the LORD' (Judah) display?",
-    "sides": [
-     {
-      "position": "The turning of Leah's heart - from craving her husband's love (vv.32-34) to pure praise of God, the heart fixed on God rather than human affection; and Judah ('praise') the tribe of the kings and the line of the Messiah (Hebrews 7:14; Revelation 5:5), the unloved wife the mother of the line of Christ",
-      "holders": [
-       "Clarke",
-       "Calvin",
-       "Gill",
-       "the grammatical-historical reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And she conceived again, and bare a son: and she said, Now will I praise the LORD: therefore she called his name Judah; and left bearing",
-   "the birth of Judah and Leah's turning to praise (the crux of 'now will I praise the LORD')",
-   "Leah rising from craving her husband's love (vv.32-34) to pure praise of God",
-   "Judah ('praise'), the tribe of the kings and the line of the Messiah (Hebrews 7:14; Revelation 5:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

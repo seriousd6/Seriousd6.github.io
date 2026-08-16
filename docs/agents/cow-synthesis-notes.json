@@ -2250,6 +2250,73 @@
       "book": "judges",
       "chapter": "11",
       "note": "READY WORK QUEUE — three chapters scoped by worker B across batches 16-18, each declined for worker context rather than for any defect. A fresh worker can take these in order without running the picker or re-deriving any numbers; shape notes for the first two are already filed under their own entries. (1) genesis 37 — 36 keys / 23,957 words, 22 verses at 350+, cheapest of the three, nine scenes mapped, pericope candidates at 12-17 and 25-28. (2) genesis 31 — 55 keys / 33,830 words, 30 verses at 350+, eleven scenes mapped, pericope candidates at 4-13 and 36-42. (3) judges 11 — 40 keys / 29,358 words, 19 verses at 350+, the heaviest per-verse of the three. Ordering is by ascending cost, not by queue position. If the picker ever grows a --max-verses bound, these three are the calibration set: all sit under the 40k word line and all were nevertheless too large for a partly-spent worker, which is the gap the word budget alone does not see."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "29",
+      "verses": [
+        "7",
+        "19",
+        "31"
+      ],
+      "note": "Jamieson, Fausset and Brown appears at vv.7, 19 and 31 with material from other chapters — a note on death reconciling estranged relatives at v7, a bare sentence fragment ('account of the leading events in his life') at v19, and lentil pottage from Genesis 25 at v31. Declared excluded_voices in entries 4, 18 and 31 as scrape residue, not as omissions."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "29",
+      "verses": [
+        "6",
+        "16"
+      ],
+      "note": "Keil and Delitzsch's blocks at v6 and v16 are bare Scripture quotation for vv.6-13 and vv.16-21 with no comment attached. Declared excluded in entries 4 and 15 rather than cited for words they did not write. Their blocks at v2, v22, v26 and v28 do carry real comment and are used."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "29",
+      "verses": [
+        "1",
+        "18"
+      ],
+      "note": "The English edition of Calvin carries translator's footnotes inside the commentary text, as it does in genesis 36. At v1 an editorial gloss supplies 'the phrase is emphatic, and implies that he traveled on briskly and cheerfully, notwithstanding his age'; at v18 the editor inserts a demurral against Calvin's charge about the dissoluteness of his own day, and quotes Clarke by name on Leah's eyes inside Calvin's paragraph. None of this was attributed to Calvin, and the Clarke quotation was taken from Clarke's own block rather than through Calvin's."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "29",
+      "verses": [
+        "2",
+        "9",
+        "15",
+        "31"
+      ],
+      "note": "Wesley's blocks at vv.2, 9, 15 and 31 are abridgements of Henry's at vv.1, 9, 15 and 31, frequently word for word. Where both fall in one span they are written up as one position held by two voices. Where they fall in different spans — Henry at v1, Wesley at v2 — the material is stated in the entry that holds each writer's own block, without naming the other, so that neither the prose nor the ghost check credits Henry outside his span."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "29",
+      "verses": [
+        "26"
+      ],
+      "note": "Filing catch the span ghost check cannot make. Keil and Delitzsch's argument that the bigamy is not to be judged by the Mosaic law, nor set down as incest, nor justified by its outcome, is filed at v26, but I first wrote it into the 28-30 entry, where Keil is legitimately present for a different block at v28. The check passed because it verifies a cited voice is somewhere in the span, not that the cited material is. Found by reading the excluded_voices report and moved into the 25-26 entry."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "29",
+      "verses": [
+        "17"
+      ],
+      "note": "Whether Leah's eyes were her defect or her one beauty. Gill and Ellicott take tender-eyed as blear or dull — Ellicott diagnosing ophthalmia and noting that in the East such eyes were a great defect — while Clarke argues the Hebrew means soft, delicate and lovely, the reverse of the received sense, so that her eyes were precisely what recommended her. Gill records Onkelos on Clarke's side. Recorded in the entry's debates rather than resolved."
     }
   ]
 }
