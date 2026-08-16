@@ -487,6 +487,59 @@
       "at": "2026-08-15",
       "kind": "observation",
       "note": "FIXED 2026-08-15: the pericope expansion-ratio defect reported from the numbers 32 run is closed. QA.span_source_text/span_keys now answer 'what does this entry stand on', and both synthesis-fidelity.py and the expansion that backfill-synthesis-qa.py stamps go through them, so a ranged entry is measured against the union of its span — the same span the thin exemption has always summed. All 50 ranged entries in the four chapters that use ranges (genesis/24, joshua/17, numbers/7, numbers/32) were re-stamped with the real numbers using the new --keep-generated flag, which preserves qa.generated because a re-measurement is not a regeneration. 14 false STRETCH flags disappeared (worst: numbers 7:6 at a reported 24.12x, really 0.93x; genesis 24:39 at 24.68x, really 1.4x; numbers 32:18 at 9.6x, really 1.09x). Verified against a HEAD worktree that non-ranged chapters are byte-identical. Left deliberately unchanged: the ratio still counts scrape residue in the denominator, which understates it on chrome-heavy verses but errs toward not flagging."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "Five Jamieson, Fausset and Brown blocks in this chapter are foreign-passage material and were declared as excluded_voices on the entries covering them: v.5 holds JFB on the proclamation of the divine name at Exodus 34; vv.11, 17, 23 and 29 all carry the same fragment about bowing the head to royalty in the East. JFB is named nowhere in the prose. The v.47 blob also ends in a long tail of StudyLight page chrome (CSS, inline JS, the site's book_data array), which inflates its measured source from ~350 real words to 1,379."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "44"
+      ],
+      "note": "Ellicott's note on leviticus 11:44 introduces the quotation 'be ye holy, for I am holy' with 'the Apostle Paul uses the same admonition' and then quotes 1 Peter 1:15-16. The attribution is wrong in the source. The prose credits it to 'the apostle' without naming him and anchors 1 Peter 1:15, so the error is neither reproduced nor silently corrected into a claim Ellicott did not make."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "17",
+        "20",
+        "29"
+      ],
+      "note": "Three ENTITIES flags judged false positives, all spelling normalisations of the source's older forms: v.17 'Delft' (Gill writes 'the city of Delf in Holland'), v.20 'Libyans' (Wesley writes 'Lybians'), v.29 'Nile' (Keil and Delitzsch write 'lacerta Nilotica', which the matcher does not expand). None introduces a claim absent from the source."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "39"
+      ],
+      "note": "One entry self-graded B: the 39-40 pericope, whose closing paragraph sets the chapter's remediable ceremonial defilement (water, a broken pot, the coming of evening) against the excision reserved for deliberate contempt. The excision itself is Ellicott's and Wesley's point on this verse; the contrast drawn across the whole chapter is the summary's own framing. Every other entry graded A. Expansion ratios run 0.14x-0.73x — heavy distillation throughout, since the sources here are enormous and largely natural-history digression."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "11",
+      "note": "leviticus 11 repaired as 15 entries over 47 verses, using pericopes throughout because this is a register chapter of exactly the shape the rule was written for: vv.4-7 repeat one formula word for word, vv.10-12 repeat 'abomination' three times, and the bird, insect and creeping-thing lists are catalogues. Spans: 1-2, 3, 4-8, 9-12, 13-16, 17-19, 20-23, 24-28, 29-31, 32-35, 36-38, 39-40, 41-43, 44-45, 46-47; they tile the chapter exactly. No thin exemptions — every span is richly sourced. Verse 3 kept its own entry because the two marks of the clean beast draw distinct comment from six witnesses. The old prose carried all three audit defect shapes. The chapter's real spine is a running disagreement about WHY the law exists: Clarke argues hard for a hygienic purpose and Henry, Gill and Wesley allow it a place, while Calvin refuses it three separate times in the sharpest language in the chapter ('those who imagine that God here had regard to their health... pervert by their vain speculation the whole force and utility of this law'), and Wesley finally says there was no real uncleanness in the creatures at all. That division is recorded as a debate on vv.1-2 and again on vv.44-45."
     }
   ]
 }
