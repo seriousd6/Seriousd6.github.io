@@ -540,6 +540,68 @@
       "book": "leviticus",
       "chapter": "11",
       "note": "leviticus 11 repaired as 15 entries over 47 verses, using pericopes throughout because this is a register chapter of exactly the shape the rule was written for: vv.4-7 repeat one formula word for word, vv.10-12 repeat 'abomination' three times, and the bird, insect and creeping-thing lists are catalogues. Spans: 1-2, 3, 4-8, 9-12, 13-16, 17-19, 20-23, 24-28, 29-31, 32-35, 36-38, 39-40, 41-43, 44-45, 46-47; they tile the chapter exactly. No thin exemptions — every span is richly sourced. Verse 3 kept its own entry because the two marks of the clean beast draw distinct comment from six witnesses. The old prose carried all three audit defect shapes. The chapter's real spine is a running disagreement about WHY the law exists: Clarke argues hard for a hygienic purpose and Henry, Gill and Wesley allow it a place, while Calvin refuses it three separate times in the sharpest language in the chapter ('those who imagine that God here had regard to their health... pervert by their vain speculation the whole force and utility of this law'), and Wesley finally says there was no real uncleanness in the creatures at all. That division is recorded as a debate on vv.1-2 and again on vv.44-45."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "12",
+        "18",
+        "30"
+      ],
+      "note": "Every Jamieson, Fausset and Brown block in this chapter is foreign material: v.12 'Here are given special directions for the observance.' (a stray fragment), v.18 'All the preceding directions were communicated through the elders...' (belongs to a narrative passage, not to the cherubim), v.30 'literally, a great rabble...' (the mixed multitude of Exodus 12:38). All three omitted from the prose and declared as excluded_voices on entries 12, 18 and 30. JFB is named nowhere in the chapter."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "40"
+      ],
+      "note": "Ellicott's block under key 40 is almost entirely StudyLight page chrome — nav menus, CSS, JS, the book_data array. The only usable sentence is his one-line cross-reference back to v.9. Gill's block under key 40 also ends in site navigation residue. Both omitted; Ellicott is therefore not named in entry 40."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "12",
+        "19",
+        "26",
+        "32",
+        "34",
+        "37"
+      ],
+      "note": "Rewritten with six ranged entries (12-15, 19-20, 26-28, 32-33, 34-36, 37-38) plus one thin entry (25). The old chapter wrote all 40 verses to ~330-430 words each, which forced heavy padding on verses whose only witness is a one-line Gill gloss (v.13 45 words, v.14 39, v.28 31, v.35 95). Grouping them by what the witnesses actually treat as one unit — the ark's carrying gear, the cherubim's placement and posture, the table's rings and staves, the branches and their almond cups, the shaft and its junctions, the lamps and their tongs — gives each entry real material. Spans tile the chapter exactly."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "21",
+        "24",
+        "26"
+      ],
+      "note": "Three entries graded B. v.21: the closing paragraph gathers the sprinkled blood (Clarke on v.17), the voice from between the cherubim (Ellicott/K&D on v.22) and the title 'ark of the testimony' into one summary — every element is in the chapter's sources, but the synthesis of them is mine. v.24: the closing paragraph infers that ark and table were built to one specification so a worshipper outside the veil could know both were of one design; the witnesses state the parallel construction but draw no such inference. vv.26-28: the closing paragraph applies the ark's 'carried, never handled' rule to the table; Ellicott states that principle only of the ark (v.15)."
+    },
+    {
+      "at": "2026-08-16",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "10",
+        "17",
+        "29",
+        "40"
+      ],
+      "note": "Four ENTITIES flags judged false positives. 'Noah' at v.10 and v.17 glosses Genesis 6:14, which Ellicott and Keil and Delitzsch both cite by chapter and verse (tebah as against aron; kaphar as 'to pitch'). 'Englished' at v.29 is an ordinary English verb, not a proper noun. 'Ephesus' at v.40 names the city of the silver shrines for Diana that Clarke cites from Acts 19:24 — a geographic gloss on his own citation, not a view attributed to him."
     }
   ]
 }
