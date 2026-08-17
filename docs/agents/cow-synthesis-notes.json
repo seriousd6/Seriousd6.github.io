@@ -2825,6 +2825,23 @@
         "1"
       ],
       "note": "Prose-file shape, recorded because I got it wrong on first write and the validator crashed with a bare TypeError ('expected string or bytes-like object, got dict') that names neither the file nor the chapter. data/commentary/cow-synthesis/<book>/<ch>.json maps verse-key -> HTML STRING, nothing else; range and pericope_label live ONLY in the tags file, alongside voices (full names, e.g. 'John Gill', not 'Gill'). Writing {'range':..,'pericope_label':..,'prose':..} objects into the prose file passes a hand-rolled builder's own checks and then blows up inside validate-synthesis.py's visible() helper. Cheap guard for any new builder: assert every value in the prose dict is a str before writing."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "28",
+      "verses": [
+        "9"
+      ],
+      "note": "StudyLight site chrome (CSS, nav menus, inline JS) trails the Charles Ellicott block at psalms 28:9, the same pollution logged at psalms 20:9 and genesis 26:34. Ellicott's real content here is short and sits before the markup, so nothing was lost, but the genesis 26 case showed this pattern can bury whole voice blocks after the chrome — always isolate a voice's block between voice headers rather than trusting a truncated dump."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "28",
+      "note": "Taken from --queue generate rather than --queue auto, and flagged as such. The repair queue head this batch served judges 8 (21,246 words), joshua 8 (22,644), exodus 28 (33,449), 1corinthians 7 (75,582) and romans 8 (97,111) — judges 8 and joshua 8 are both finishable by a fresh worker and judges 8 remains the recommended next repair pick. psalms 28 at 8,764 words over 9 keys was the largest chapter this context could still finish honestly. Four entries tiling vv.1-9: 1, 2-5, 6-7, 8-9. Keil at v7 is a bare Scripture quotation of vv.7-9 with no commentary, correctly declared in excluded_voices for entry 6."
     }
   ]
 }
