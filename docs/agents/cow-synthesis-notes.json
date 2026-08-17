@@ -2324,6 +2324,13 @@
       "book": "judges",
       "chapter": "9",
       "note": "Declined by worker B for context capacity — nothing written. Judges 9 (Abimelech) is 57 keys / 27,249 usable source words, median 301 per key: only 24 verses at 350+, with 17 in the 200-349 tight band and 16 in the thin band, so 33 of 57 need special handling. Largest entry count offered to this worker apart from luke 22, and worse than both chapters already declined on capacity (judges 11 at 40 entries, genesis 31 at 55). Fourth entry for the ready-work queue, and the most expensive of the four despite the smallest word total after genesis 37 — another instance of the same gap: 27.2k words looks cheap, 57 mostly-thin entries is not. Rank it last of the four."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "genesis",
+      "chapter": "27",
+      "note": "Declined by worker B for context capacity — nothing written. Genesis 27 (Jacob takes the blessing) is 46 keys / 31,054 usable source words, median 428 per key: 25 verses at 350+, 8 in the 200-349 band, 13 thin. Proportionally one of the healthier chapters offered — a little over half its verses are comfortably writable — but 46 entries is above both chapters already declined on capacity this session (genesis 37 at 36, judges 11 at 40), so taking it would be inconsistent. Fifth entry for the ready-work queue; by ascending real cost the order is now genesis 37 (36 keys), judges 11 (40), genesis 27 (46), genesis 31 (55), judges 9 (57). Every one of the five sits under the 40k source-word line."
     }
   ]
 }
