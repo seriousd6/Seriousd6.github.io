@@ -2640,6 +2640,45 @@
       "book": "genesis",
       "chapter": "26",
       "note": "Sizing predictor confirmed again: the count of source keys over ~2,000 words predicts cost better than the median. genesis 26 (35 keys / 22,356 words / n>2k=1) drafts like genesis 37 (36 / 23,957 / n>2k=1), which landed in one window; genesis 30 (43 / 24,607 / n>2k=5) would be dearer despite a similar total, because each over-2k key forces an entry that the filing rule pins in place. Suggest 'synthesis-loop.py size' report n>2k alongside the word count."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "26",
+      "verses": [
+        "23",
+        "35"
+      ],
+      "note": "Two more Jamieson, Fausset and Brown blocks in this chapter are off-book scrape residue, on top of the one already logged at v11. v23 carries Genesis 24 material (Abraham too old to fetch a wife himself, entrusting the mission to Eliezer under oath); v35 carries the continuation of the same Genesis 24 passage (the servant fixing tokens to discern the future bride). Neither touches Genesis 26. All three declared in excluded_voices for entries 8, 23 and 35."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "26",
+      "verses": [
+        "34",
+        "35"
+      ],
+      "note": "Site chrome pollutes two blocks. A very large StudyLight dump (CSS, nav menus, inline JS, Cloudflare challenge script, a Stripe public key) sits INSIDE the v34 record between Ellicott and the John Calvin block that follows it; the Calvin and Wesley blocks at v34 are real commentary buried after roughly 6,000 characters of markup. Gill's v35 block ends with sacred-texts.com nav ('Next: Genesis Chapter 27 ... Index Next:'). The v34 case is the dangerous one: a reader who truncates the record loses two genuine voices, which is exactly what happened on the first pass here and was only caught by the ghost check."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "26",
+      "note": "Ghost check earned its keep: it flagged Calvin and Wesley as present-but-unused in entry 34, which turned out to be a real omission caused by site chrome burying their blocks, not scrape residue. Worth stating the procedure explicitly — when the check reports a missing voice, isolate that voice's block between voice headers and read it before declaring excluded_voices, because the checker cannot tell a bare-Scripture-quotation block (Keil at v7 and v27 here, legitimately excluded) from a real block the writer simply never reached."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "26",
+      "verses": [
+        "18"
+      ],
+      "note": "Calvin at genesis 26:18 says Abraham 'had armed four hundred servants'. Genesis 14:14 gives 318. The synthesis reports Calvin's figure as Calvin wrote it rather than silently correcting it to the biblical number; flagging so the discrepancy is not later mistaken for a transcription error in this entry."
     }
   ]
 }
