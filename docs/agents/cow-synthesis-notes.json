@@ -3155,6 +3155,25 @@
       "book": "genesis",
       "chapter": "43",
       "note": "Span-sized targets, third chapter running. genesis 43 spans of 3440/3482/3848/6573 source words produced entries of 647/612/643/638 words with one trim pass on the first, none on the rest. Zero defects in every lint category for the second chapter in a row. The compression ratio that works sits around 5.5:1 to 10:1; the 6573-word span compressed hardest and still came in clean, which matches joshua 22's 7895-word span."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "108",
+      "verses": [
+        "5",
+        "8",
+        "12"
+      ],
+      "note": "BLOCKED — psalms 108 cannot be synthesised under the current rules and needs an owner decision, like numbers 31. Its cow source is missing keys 5, 8 and 12 entirely, so the present keys fall into four contiguous runs: 1-4 (2,209 source words), 6-7 (1,503), 9-11 (75) and 13 (303). validate-synthesis.py rejects any pericope covering a verse absent from the source ('entries cover verses absent from the source: [5, 8, 12]'), so spans cannot bridge the gaps; but the 9-11 and 13 runs cannot honestly support the 350-word floor, 9-11 having only 75 usable source words across three verses. Every legal tiling therefore requires padding. Two possible fixes, both owner calls: re-scrape or repair the source so that 5, 8 and 12 are present, or relax the tiling rule to let a pericope span verses the source is silent on (which is arguably the right reading anyway, since a pericope is a unit of the text, not of the commentary). I drafted and measured both entries for a 1-5 / 6-13 tiling before hitting the validator, and reverted rather than pad or work around the gate. Worth a corpus-wide scan for other chapters whose cow source has interior key gaps — this is the first I have hit, but nothing suggests it is unique."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "45",
+      "note": "Taken from --queue generate, flagged as before. Clean chapter: contiguous source keys 1-5, no Jamieson Fausset and Brown block at all, no site chrome, no excluded voices, zero ghosts. Two entries, spans 1-3 and 4-5. Both first drafts landed inside the 350-650 window after a single trim pass, which has not happened for several chapters; the material is unusually well behaved because four of the five voices treat the chapter as a single connected rebuke of Baruch rather than as verse-by-verse notes."
     }
   ]
 }

@@ -1,0 +1,167 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "range": "1-3",
+  "pericope_label": "Baruch writes the roll, and cries woe is me",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains the whole book's arrangement — prophets fixed written summaries to the Temple doors, and scribes collected them into the volumes we now have — so that this is not Jeremiah's own ordering; he is the least indulgent to Baruch, condemning ingratitude in a man who complained of misery when the office of scribe to a prophet was itself a singular favour, like receiving words from an angel's mouth. Gill notes Baruch was the amanuensis and that Jeremiah spoke not of himself but in the Lord's name."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry offers a reason for the chapter's misplacement rather than a complaint — having reference to a private person it is thrown to the end of the book, as Philemon is put after Paul's other epistles — and reads Baruch's cry with sympathy: a young man setting out in the world, willing to serve God and his prophet, who stood fair for preferment and found himself driven into a corner instead."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the chapter an appendage to the thirty-sixth and the arrangement a shameless transposition, the discourse having been delivered years before Jerusalem fell; he observes that Jeremiah's enemies became Baruch's too. Wesley supplies the occasion, that on Baruch's reading the prophecies both men were advised to hide themselves."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch date the word to the fourth year of Jehoiakim and argue over a participle — the infinitive need not mean the word came while Baruch was still writing, since it may equally mean when he was ready with the writing, Hitzig being wrong to reject Movers's rendering — and report the inference that this small piece stood last in the roll originally prepared under Jehoiakim."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why does this chapter stand at the end of the book?",
+    "sides": [
+     {
+      "position": "a shameless transposition — it belongs with the thirty-sixth chapter, where it should have been inserted",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "placed last because it concerns a private person, as Philemon follows Paul’s other epistles",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "no disorder at all — the book is collected summaries, never ordered by Jeremiah himself",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the word spoken unto Baruch",
+   "the roll written in the fourth year",
+   "woe is me now",
+   "I find no rest"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "Adam Clarke",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "4-5",
+  "pericope_label": "Seekest thou great things for thyself?",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the comparison the whole point of the reproof: God sets Baruch in one scale and in the other the whole people with the temple and divine worship, asking whether his state shall be eminent while the temple is burnt and the land laid waste, and having made Baruch his own judge immediately restrains him, since men from self-love seek their own indulgence. Gill lists the great things as riches, honour, peace and prosperity, and guesses Baruch had expected the reading of the roll to prefer him at court, though the roll itself foretold the nation's ruin."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reduces the message to its certainty, that God will fulfil the threatenings contained in the very roll Baruch had written, divides the refusal between vain hopes for the nation and sufficient mercy to the man, and reads the closing promise as a proverb — a life given for a prey is kept like a spoil won from a beaten enemy, the proof and reward of a man's own valour. Wesley puts the rebuke as a question, whether Baruch expects what none who fears God is like to meet with."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What were the great things Baruch sought?",
+    "sides": [
+     {
+      "position": "preferment at court — wealth, applause, and a life of plenty",
+      "holders": [
+       "Gill",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the gift of prophecy, which the Jews say could not be enjoyed outside the land of Canaan",
+      "holders": [
+       "the Jews, reported by Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "that which I have built I will break down",
+   "seek them not",
+   "evil upon all flesh",
+   "thy life for a prey"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
+  }
+ }
+}
