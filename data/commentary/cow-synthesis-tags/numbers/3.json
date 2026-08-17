@@ -2,1854 +2,652 @@
  "1": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Aaron is named first as the eldest, his descendants the priests; Moses' posterity remained obscure, only Levites, swallowed up among the Kohathites."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the verse indicates at the outset the position the Levites were to occupy in relation to the priests."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the generations of Aaron and Moses",
-   "Aaron's line the priests, Moses' the Levites",
-   "the order of God's house fixed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill, with Jarchi: the sons of Aaron are called the generations of Moses because he taught them the law — whoever teaches his neighbour's son the law, the Scripture accounts of him as if he begat him."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the names of Aaron's sons, the anointed priests whose hand was filled, appointed to the priesthood (Lev. 8:12)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the names of the sons of Aaron; Nadab the firstborn, and Abihu, Eleazar, and Ithamar",
-   "reckoned to Moses their teacher",
-   "teaching the law a kind of fatherhood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were anointed with the holy anointing oil, with which Aaron and they only were anointed."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the sons of Aaron, the priests which were anointed, consecrated to minister in the priest's office."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests which were anointed... to minister in the priest's office",
-   "anointed with the holy oil",
-   "the priesthood a divine calling, not seized"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
    "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "1-4",
+  "pericope_label": "The generations of Aaron and Moses, and the sons who died",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they died by fire from the LORD for offering strange fire, and so were not alive when this account of the priests and Levites was taken."
+    "summary": "Gill takes the order of the two names for plain seniority and notes how obscure Moses' line is left, unnamed and swallowed up among the Amramites. Calvin observes that Moses only touches here on what he had already told at length, that of four sons two survived, Nadab and Abihu having paid the penalty of their negligence."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the recital of the two deaths as a preamble deliberately placed at the head of the law of the priesthood, a warning to all succeeding priests that the holy anointing oil was an honour to the obedient but no shelter to the disobedient, and takes their childlessness for part of the punishment. In the phrase that the survivors ministered in the sight of Aaron he hears that they kept under their father's eye, whereas the two who died had probably got out of it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is willing to doubt the text, reporting that some have thought the name of Moses was not originally in the heading and that others resolve the difficulty by rendering the word as acts or history rather than generations; he then turns the silence about Moses' family into an argument for the divine origin of the religion, since a man's invention would have gratified some passion and this one gratified none. Wesley explains the obscurity by the priesthood being given solely to Aaron's posterity, and fixes the chronology, that at Sinai the two sons were still alive though dead when the account was taken."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: to die childless was regarded as a reproach and a judgment, especially for Nadab and Abihu, who sinned in their office (Lev. 10:1-2)."
+    "summary": "Ellicott gives the structural reason for Aaron's precedence — his office was perpetuated in his descendants while Moses' ministry was restricted to his own person — and allows the alternative that both were heads of the whole tribe. Keil and Delitzsch read the heading as fixing the Levites' position relative to the priests before a name is counted, and take the note of time as no idle repetition."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why Aaron is named before Moses. Gill makes it seniority; Wesley makes it the priesthood being Aaron's alone; Ellicott makes it the perpetuation of the office in Aaron's descendants.",
+   "Whether the heading is sound. Clarke reports the suggestion that Moses' name did not stand there originally, and the alternative of reading the word as history rather than descent."
+  ],
+  "outliers": [
+   "Clarke turns Moses' failure to provide for his own family into an evidential argument, that a religion of human contrivance would have served lust, ambition or avarice, and this one served none though he had it constantly in his power."
+  ],
   "themes": [
-   "Nadab and Abihu died... when they offered strange fire",
-   "they had no children",
-   "those nearest the altar most severely judged"
+   "generations and history",
+   "the priesthood confirmed",
+   "strange fire remembered",
+   "Moses provides nothing for his own"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this follows the order for numbering and encamping Israel. Calvin: the passage has two heads — the Levites set apart for the ministry of the sanctuary, and bound to obey the chief priests of Aaron's family, doing nothing but by their authority; the tribe was divinely chosen, that none think himself worthy of so honourable a charge, but know it depends on the gratuitous calling of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses",
-   "the Levites set apart for the sanctuary under the priests",
-   "the ministry a gift of God's gratuitous calling"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: 'bring near' is to separate them for special service about the sanctuary, given a nearer place than the other tribes, and brought near to Aaron."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: 'stand before' marks the position of a servant standing before his master to receive his commands."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Bring the tribe of Levi near... present them before Aaron",
-   "that they may minister unto him",
-   "nearness a privilege, service a subordination"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the charge was to secure the sanctuary from being polluted or plundered, easing the priests and the people of what would otherwise be incumbent on them."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they kept the charge of Aaron and the whole congregation before the tabernacle, attending to its service."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they shall keep his charge, and the charge of the whole congregation",
-   "the service of the tabernacle",
-   "a trust borne for all Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they took care of the instruments and parts of the tabernacle, that none be lost or damaged, especially while it was moving and carried from place to place."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they kept all the instruments of the tabernacle and the charge of the children of Israel, to do its service."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they shall keep all the instruments of the tabernacle",
-   "none lost or damaged on the march",
-   "the holy things a sacred trust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "5-10",
+  "pericope_label": "The Levites given to Aaron, and the charge they keep",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the Levites were given to Aaron and his sons to be their ministers and servants."
+    "summary": "Calvin finds two heads here, that the Levites are set apart for the sanctuary and that they act only by the authority of Aaron's house, and presses that the choice was gratuitous lest anyone think himself worthy of it. He then extends the second head well past the text, taking the exalting of one priest as a figure of the one Mediator and turning on those who wrest it into a warrant for setting bishops over presbyters and so for the primacy of Rome; ministers stand under Christ's hand to usurp no dominion. Gill puts the Levites' duty defensively, as securing the sanctuary from being polluted or plundered."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the verb of presenting is properly a sacrificial word, so that the tribe was given up entirely and was no longer its own but the Lord's property, and describes the Levites as doing the common and laborious offices, taking down, putting up and carrying. Wesley spells out the substitution the charge involves — services due from all the people, which the people could not perform in their own persons, done by particular men in their stead, formerly the firstborn and now these — and defines the intruder as widely as the law does, any man not of Aaron's family though he be a Levite."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the emphatic repetition of nethunim ('given, given') marks their being wholly given; not to be confounded with the later Nethinim, the Gibeonites made hewers of wood (Ezra 2:43); they are given to the LORD in place of the firstborn (Num. 8:16) and by him to the priests."
+    "summary": "Ellicott sets out two senses for the charge and prefers the wider, since the same word is used in the next breath of the congregation. Keil and Delitzsch prefer the servant's posture for the verb, the ordinary expression for standing before a master to receive commands, and keep the duty concrete as the oversight of the furniture, to keep it safe and clean. Both stop at the doubled word given, reading it as emphatic of complete surrender, and both separate these given ones from the later temple servants of foreign descent assigned to the Levites for the lowest duties."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the Levites were to keep. Ellicott weighs the directions received from Aaron against the charge laid on Aaron and the congregation together, and prefers the second; Wesley and Gill take it the same way, Gill construing it as guard duty over the sanctuary."
+  ],
+  "outliers": [
+   "Calvin uses the subordination of the Levites to the priests as an occasion for a polemic against the papacy, arguing that the figure proves the opposite of what it is made to prove — that all ministers stand equally under Christ, who alone succeeds Aaron."
+  ],
   "themes": [
-   "thou shalt give the Levites unto Aaron... wholly given unto him",
-   "the emphatic 'given, given'",
-   "set apart twice over, to God and to his ministers"
+   "the tribe presented as an offering",
+   "keeping the charge",
+   "given, given are they",
+   "the stranger put to death"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the appointment of Aaron and his sons is renewed and repeated to confirm it and charge them to execute it carefully."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: no stranger, no one who was not a son of Aaron, could approach the sanctuary without being put to death (cf. Num. 1:51; Lev. 22:10)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt appoint Aaron and his sons... the stranger that cometh nigh shall be put to death",
-   "the office Aaron's alone",
-   "a solemn fence about the priesthood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the LORD continued to speak, giving the reason for appointing the Levites to minister to the priests and serve the tabernacle."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: God appointed the Levites because he had decided to adopt them as his own in place of all the firstborn, whom he sanctified to himself when he smote the firstborn of Egypt (Exod. 13:1-2)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses",
-   "the Levites taken in place of the firstborn",
-   "the calling resting on the redemption of the Exodus"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this was God's own act and deed, done of his sovereign will and pleasure, who may do whatsoever he pleases and whom none may contradict."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the Levites taken instead of all the firstborn that openeth the womb, therefore the Levites shall be the LORD's."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I, behold, I have taken the Levites... instead of all the firstborn",
-   "therefore the Levites shall be mine",
-   "the ministry of God's sovereign appointing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "11-13",
+  "pericope_label": "The Levites taken instead of the firstborn",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the firstborn are God's in a special way, his own, hallowed to him for the reason given."
+    "summary": "Calvin puts God's title in terms of purchase, since those whose lives were gratuitously spared in the slaughter of Egypt were bought for himself; having the option of claiming the firstborn of every tribe he was equally free to take a twelfth part from one, which cuts off all handle for complaint. Gill states the sovereignty barely, as an act done of God's own will and pleasure which none should contradict."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reviews the reasons given for choosing this tribe and finds them inconclusive, preferring the plain consideration that Levi was the smallest tribe and quite enough for the service, a more numerous one being inconvenient; following Ainsworth he carries the type forward to a congregation of the firstborn whose names are written in heaven. Wesley gathers three reasons without choosing — God's respect to Moses and Aaron, a recompence of the tribe's zeal, and its smallness — and explains why the office was concentrated in one tribe rather than left with some men in each, since scattered custodians might have occasioned idolatry, confusion and division."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the command sanctifying the firstborn, both of man and beast, is recorded just after the Exodus and the institution of the Passover (Exod. 13:1-2)."
+    "summary": "Keil and Delitzsch trace the chain from the slaying of Egypt's firstborn through the sanctifying of Israel's to this substitution, and note what is gained beyond the exchange itself, a more orderly service from one tribe undividedly devoted to it. Ellicott raises a difficulty in the older command, that its terms do not make clear whether sanctifying the firstborn applied to those then living, which he thinks far the more probable, or was simply prospective."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Why the tribe of Levi. Clarke rejects the zeal at the golden calf as sufficient and settles on the tribe's smallness; Wesley holds three reasons together, including that zeal; Calvin declines the question and rests the choice on sovereignty alone.",
+   "Why the firstborn lost the office. Wesley offers forfeiture at the calf or preoccupation with the coming inheritances, without deciding."
+  ],
   "outliers": [],
   "themes": [
-   "all the firstborn are mine... I hallowed unto me all the firstborn in Israel",
-   "the day that I smote... Egypt",
-   "the redeemed bought out of death to be God's (1 Pet. 2:9)"
+   "purchase by preservation",
+   "the smallest tribe",
+   "one tribe rather than many hands",
+   "Israel as the Lord’s firstborn"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.41
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "14-20",
+  "pericope_label": "Numbered from a month old, and the three sons of Levi",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the LORD spake at the same time and place as the foregoing declaration, the people then at Sinai."
+    "summary": "Calvin makes the counting of infants an act of fairness rather than of piety: had God taken only those past twenty it could not have been known how many firstborn there were and the compensation would have been uncertain, so the indulgence should have made the people readier to pay for the shortfall. On the three names he reflects that twelve men grew in so short a time into so many thousands, which shows how powerfully God works under the semblance of weakness, and refers Kohath's promotion to the same gratuitous good pleasure that called Moses. Gill notes only that the tribe was left out of the general muster and counted apart, for a different purpose."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the Levites were delivered to Aaron by tale, that he might know what he had; they were numbered by a different rule — every male from a month old, whereas the other tribes were numbered from twenty years and of those able for war."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses in the wilderness of Sinai",
-   "the Levites numbered from a month old",
-   "a tribe wholly God's, not soldiers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Levi was left out of the general muster but now numbered alone, in a different manner and for a different purpose, the LORD having special regard and service for them."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: number the children of Levi by their families, every male from a month old and upward."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every male from a month old and upward shalt thou number them",
-   "Levi counted apart",
-   "the tribe God's even from infancy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Moses took the account of all from a month old in the families of Levi, Aaron also concerned with him in it."
+    "prevalence": "single",
+    "summary": "Henry states the contrast with the other tribes — twenty years old and able to go to war against a month old and upward — and makes the surplus his point, since little more than a third of these were ever fit for the service and God would have them all numbered as retainers of his family, that none should think himself disowned for not being in a capacity to serve. He adds the descent rule, reckoning after the house of the fathers and not the mothers, and looks ahead to the three hundred by which the family figures overshoot the total, supposing those struck off were firstborn Levites already sanctified and so unable to enter the exchange."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: though Moses and Aaron together numbered the twelve tribes, Moses alone numbered the Levites, since the redemption money of the surplus firstborn was to be paid to Aaron and his sons."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses numbered them according to the word of the LORD",
-   "Moses, not Aaron, counted Levi",
-   "the count in strict obedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the immediate offspring of the patriarch Levi — Gershon, Kohath, and Merari. Calvin: the tribe made an astonishing progress from a small beginning, Levi begetting but three sons, yet grown into many thousands — God working powerfully under the semblance of weakness; and he promoted the family of Kohath above the others not by worth but by his free choice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Levi by their names; Gershon, and Kohath, and Merari",
-   "a small beginning grown to thousands",
-   "Kohath promoted by God's free choice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Clarke argues the month-old rule from arithmetic, since numbered from twenty they would not have come near the firstborn of the twelve tribes, and since those were of all ages their substitutes had to be. He also notices who did the counting and finds a delicacy in it: Moses numbered the Levites alone though he and Aaron together numbered the twelve tribes, because the redemption money was to be paid to Aaron and it was not decent that the man who profited by a surplus should take the number himself. Wesley gives the reason from the other end, that a month was when the firstborn were offered, and notes the different ages at which Levites are numbered for other purposes."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Gill: records Gershon, the first son of Levi, and the families that sprang from him, the tribe reckoned by the three heads Gershon, Kohath, and Merari."
+    "summary": "Ellicott notes that the same age governs the firstborn themselves and was afterwards fixed as the age of redemption."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the Levites were numbered from a month old. Clarke argues from the need to match firstborn of all ages; Calvin from the need to know the shortfall exactly; Wesley and Ellicott from the age at which the firstborn were offered and later redeemed; Henry from a principle about who belongs to God's household."
+  ],
+  "outliers": [
+   "Clarke's observation that Moses numbered this tribe alone, so that the party who stood to gain by an excess did not take the count, is a point of procedural propriety none of the others raise."
+  ],
   "themes": [
-   "the sons of Gershon, by their families",
-   "the three sons of Levi",
-   "the service ordered by fathers' houses"
+   "a month old and upward",
+   "infants counted",
+   "the house of the fathers",
+   "Moses seeks nothing for his own line"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: records Kohath, the second son of Levi, and the families that sprang from him, the tribe reckoned by the three heads Gershon, Kohath, and Merari."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Kohath, by their families",
-   "the three sons of Levi",
-   "the service ordered by fathers' houses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: records Merari, the third son of Levi, and the families that sprang from him, the tribe reckoned by the three heads Gershon, Kohath, and Merari."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sons of Merari, by their families",
-   "the three sons of Levi",
-   "the service ordered by fathers' houses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Charles Ellicott"
   ],
+  "range": "21-26",
+  "pericope_label": "Gershon: families, number, station, chief and charge",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the two families sprung from Gershon, the first son of Levi — the Libnites and the Shimites."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the family of the Libnites, and the family of the Shimites",
-   "the families of the Gershonites",
-   "the house of Levi set in array"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "summary": "Gill names the two families from the first son of Levi and glosses the chief as the man having authority over them and the direction of what they were to do."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill and Keil & Delitzsch: the Gershonites numbered seven thousand five hundred males from a month old, with their place and charge following."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "from a month old and upward... seven thousand and five hundred",
-   "the strength of the Gershonites known",
-   "the service carried on by number and order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the two families, the Libnites and Shimites, assigned their station behind the tabernacle westward."
+    "summary": "Clarke stops at the number and doubts it, suggesting the figure may originally have read two hundred rather than five hundred, two Hebrew letters being easily confounded — a conjecture he will need again when the totals fail to agree. Wesley divides the charge by simple exclusion, the tabernacle here meaning not the boards, which belonged to Merari, but the ten curtains; the tent meaning the curtains of goats' hair; the coverings the skins above them; and the cords those by which the whole was fastened to the pins and stretched out."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the position of the priests and Levites was fixed — Moses and Aaron on the east, the Kohathites on the south, the Gershonites on the west, the Merarites on the north."
+    "summary": "Keil and Delitzsch give the tally and place the house under Eliasaph on the western side. Ellicott lays out the whole encampment at once, priests east, Kohathites south, Gershonites west, Merarites north, and then works closely on the vocabulary: the tent and the tabernacle are not the same thing, the second being the wooden building with its curtains and the first the covering over it; the hanging at the entrance was of blue and purple and scarlet and fine twined linen; the word rendered door means an opening rather than a door, though at Shiloh the sanctuary later had doors. On the cords he corrects the natural reading, since the court's cords belonged to the Merarites."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether the Gershonite total is sound. Clarke proposes a scribal confusion of two Hebrew letters giving seven thousand two hundred for seven thousand five hundred, which would resolve the chapter's arithmetic."
+  ],
   "outliers": [],
   "themes": [
-   "The families of the Gershonites shall pitch behind the tabernacle westward",
-   "each Levite house its own quarter",
-   "the ministers stationed about God's dwelling"
+   "the five-slot register",
+   "tent against tabernacle",
+   "the fabric of the sanctuary",
+   "a suspected numeral"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: Eliasaph the son of Lael had the chief authority and direction over the Gershonites in what they were to do."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief of the house of the father of the Gershonites shall be Eliasaph",
-   "an appointed head over each Levite house",
-   "the service ordered under leaders"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Libnites and Shimites were charged with the tabernacle, tent, covering, and door-hanging."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: distinguishes the ohel (the tent, the outer covering) from the mishkan (the tabernacle, the building of boards and curtains within); the covering includes the outer coverings."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the charge of the sons of Gershon... the tabernacle, and the tent, the covering... and the hanging for the door",
-   "the cloth furnishings of the sanctuary",
-   "the service exactly parcelled out"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the hangings formed the great open court that encompassed the tabernacle, a hundred cubits long and fifty broad."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the cords belonged to the tabernacle itself and its furnishings, the suffix referring to each of the various things, for everything in their service."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the hangings of the court, and the curtain for the door of the court",
-   "the cords of it for all the service thereof",
-   "the smallest cords numbered in the holy service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
    "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The families of Kohath: 'and of Kohath was the family of the Amramites, and the family of the Izeharites, and the family of the Hebronites, and the family of the Uzzielites: these are the families of the Kohathites' — the four families descended from Kohath, the second son of Levi, named: Amramites, Izeharites, Hebronites, Uzzielites (the the families of the Kohathites, the four houses of Kohath, the figure, the families of Kohath recorded, the house from which Aaron and Moses came, Exodus 6:18, the most honored of the Levitical houses, charged with the holiest things, the ordered recording of the families, each house of Levi set down); the families of Kohath (the houses descended from him, Exodus 6:18) — the families (the houses of Kohath); 'these are the families of the Kohathites' (the four families of Kohath, the house of Aaron and Moses, Exodus 6:18, the figure, the honored house of Levi, the providence, the families recorded, their charge to follow, vv.28-32) — Wesley, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And of Kohath was the family of the Amramites, and the family of the Izeharites, and the family of the Hebronites, and the family of the Uzzielites: these are the families of the Kohathites",
-   "the families of Kohath",
-   "the four families of Kohath, the house from which Aaron and Moses came (Exodus 6:18)",
-   "the honored Levitical house, each set down in the record"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The number of the Kohathites and their charge of the sanctuary: 'in the number of all the males, from a month old and upward, were eight thousand and six hundred, keeping the charge of the sanctuary' — the males of Kohath from a month old were 8,600, charged with keeping the sanctuary (the from a month old and upward, the Levites numbered from infancy, not from twenty as the men of war, for they were the LORD's, vv.15, the eight thousand and six hundred, the number of the Kohathites, the keeping the charge of the sanctuary, their office, the care of the holy things, the figure, the Kohathites charged with the holiest things, the ark and the vessels, Numbers 4:4-15, the most honored charge, the care of the sanctuary's holy furniture, the Levites set to the keeping of the holy things, the service of God); the Kohathites numbered from a month old (the Levites counted from infancy, vv.15) — the count (the Kohathites numbered); 'keeping the charge of the sanctuary' (the care of the holy things, the Kohathites' office, Numbers 4:4-15, the figure, the keeping of the holy things, the honored charge, the providence, the Kohathites' charge, their place to follow, vv.29-31) — JFB, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "In the number of all the males, from a month old and upward, were eight thousand and six hundred, keeping the charge of the sanctuary",
-   "the number of the Kohathites and their charge of the sanctuary",
-   "the Kohathites numbered from a month old, charged with the holiest things (vv.15)",
-   "the keeping of the sanctuary's holy furniture (Numbers 4:4-15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott"
   ],
+  "range": "27-32",
+  "pericope_label": "Kohath: the favoured house, and Eleazar over all",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The place of the Kohathites on the south side: 'the families of the sons of Kohath shall pitch on the side of the tabernacle southward' — the Kohathites encamped on the south side of the tabernacle (the pitch on the side of the tabernacle southward, their assigned place in the camp, the figure, the ordered camp of the Levites around the tabernacle, each family in its place, the Kohathites on the south, the order of God's house, every family assigned its station, the Levites surrounding the tabernacle to guard it, the place each had in the service, the order that prevents confusion, 'let all things be done decently and in order,' 1 Corinthians 14:40); the Kohathite families (the houses of Kohath) — the families (the Kohathites); 'shall pitch on the side of the tabernacle southward' (the south side assigned, the ordered camp, 1 Corinthians 14:40, the figure, each family in its place, the order of God's house, the providence, the Kohathites' place, their chief to follow, vv.30) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The families of the sons of Kohath shall pitch on the side of the tabernacle southward",
-   "the place of the Kohathites on the south side",
-   "the Kohathites in their assigned station, each Levitical family ordered around the tabernacle",
-   "the order of God's house (1 Corinthians 14:40)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "The chief of the Kohathites: 'and the chief of the house of the father of the families of the Kohathites shall be Elizaphan the son of Uzziel' — the chief over the Kohathite families was Elizaphan the son of Uzziel (the the chief of the house of the father, the head of the Kohathite families, the Elizaphan the son of Uzziel, the named chief, the figure, the head of the Kohathites recorded by name, the leader of the honored house, the order that sets a chief over each family, the recognized head, Elizaphan named, of the family of Uzziel, the youngest of Kohath's sons, Exodus 6:18, 22); the head of the Kohathite families (the chief) — the chief (the leader of Kohath); 'shall be Elizaphan the son of Uzziel' (the named chief, Elizaphan, of Uzziel, Exodus 6:22, the figure, the head of the house recorded, the providence, the chief named, the charge to follow, vv.31) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the chief of the house of the father of the families of the Kohathites shall be Elizaphan the son of Uzziel",
-   "the chief of the Kohathites",
-   "the chief over the Kohathite families, the head of the honored house recorded by name (Exodus 6:22)",
-   "the order that sets a leader over each family"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Gill weighs the numbers before accepting the compliment: eight thousand six hundred was the largest of the three houses, but with twice as many families as either of the others the increase was not so large in proportion. He reads the encampment forward into what happens later in the book, since this house pitched between the tabernacle and the camp of Reuben, which is how Korah the Kohathite came to be intimately acquainted with Dathan and Abiram the Reubenites; and he finds a second motive in the chief named here, Elizaphan being of the youngest of the four families, so that some have thought Korah's dissatisfaction began at seeing a younger house preferred."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley lists the privileges of the house together — Moses and Aaron and all the priests out of it, the chief place, the care of the most holy things, and twenty-three cities in Canaan, almost as many as both their brethren received — and then repeats the point the chapter keeps making, that the posterity of Moses were not distinguished from other Levites at all. He fixes Eleazar's rank as next under the high priest, performing his work in his absence, and identifies the hanging in their charge as the one covering the most holy place."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The charge of the Kohathites, the holiest things: 'and their charge shall be the ark, and the table, and the candlestick, and the altars, and the vessels of the sanctuary wherewith they minister, and the hanging, and all the service thereof' — the Kohathites charged with the holiest furniture: the ark, the table, the candlestick, the altars, the vessels, and the veil (the the ark, the most holy, the throne of God, the the table... candlestick... altars... vessels... hanging, the holy furniture, the all the service thereof, their care of these things, the figure, the Kohathites charged with the holiest things, the ark and the furniture of the sanctuary, the most honored service, the care of the things that figured Christ — the ark, the mercy seat, the table, the bread, the candlestick, the light, the altars, the sacrifice and incense, the holy charge of bearing and tending the sacred things, the highest Levitical service); the Kohathites' charge of the holiest furniture (the ark and the rest) — the charge (the holy things); 'the vessels of the sanctuary wherewith they minister, and the hanging, and all the service thereof' (the vessels and the veil, the holy things tended, the figure, the things that figured Christ, the holy charge, the providence, the Kohathites' charge, the Merarites to follow, vv.33-37) — Wesley, Gill."
+    "summary": "Ellicott draws the consequence of the descent of Moses and Aaron from Kohath, that this house received the most honourable portion of the service and that Eleazar was set over the whole body of the Levites, and supplies the philology of the southern station, the Hebrew name for the south being taken from the word for the right hand. Keil and Delitzsch list the charge as the ark, the table, the candlestick, the altars and the vessels, and describe Eleazar's office by the word used for it, a superiority over the chiefs of the three families."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Gill alone uses the camp plan as historical explanation, deriving the alliance of Korah with Dathan and Abiram from the fact that the Kohathites pitched next to Reuben."
+  ],
   "themes": [
-   "And their charge shall be the ark, and the table, and the candlestick, and the altars, and the vessels of the sanctuary wherewith they minister, and the hanging, and all the service thereof",
-   "the charge of the Kohathites: the holiest things",
-   "the Kohathites charged with the holy furniture, the ark and the vessels that figured Christ",
-   "the highest Levitical service"
+   "the house of Moses and Aaron",
+   "the right hand of the camp",
+   "the furniture of the sanctuary",
+   "the seeds of Korah’s quarrel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eleazar as chief over the Levites: 'and Eleazar the son of Aaron the priest shall be chief over the chief of the Levites, and have the oversight of them that keep the charge of the sanctuary' — Eleazar, Aaron's son, set as chief over all the Levite chiefs, overseeing those who kept the sanctuary (the chief over the chief of the Levites, the head over all the Levitical heads, the highest under Aaron, the the oversight of them that keep the charge of the sanctuary, the supervision of the sanctuary's keepers, the figure, Eleazar the chief overseer, the priest set over the Levites, the order of authority, the priest over the Levites, the under-shepherds set over the service, Eleazar, who would succeed Aaron, the chief of the Levitical oversight, Numbers 20:28); Eleazar set as chief over the Levite heads (the highest oversight) — the chief (the head over all); 'have the oversight of them that keep the charge of the sanctuary' (the supervision of the sanctuary's keepers, Eleazar's office, Numbers 20:28, the figure, the priest over the Levites, the order of authority, the providence, Eleazar's oversight, the Merarites to follow, vv.33) — Ellicott, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Eleazar the son of Aaron the priest shall be chief over the chief of the Levites, and have the oversight of them that keep the charge of the sanctuary",
-   "Eleazar as chief over the Levites",
-   "Eleazar the priest set over all the Levite heads, the supervision of the sanctuary's keepers",
-   "the order of authority under Aaron (Numbers 20:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "33": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The families of Merari: 'of Merari was the family of the Mahlites, and the family of the Mushites: these are the families of Merari' — the two families descended from Merari, the third son of Levi, were the Mahlites and the Mushites (the the families of Merari, the two houses of Merari, Mahli and Mushi, Exodus 6:19, the figure, the families of Merari recorded, the third Levitical house, the ordered recording of all the houses of Levi, each family set down, Merari charged with the heavier parts of the tabernacle, the boards and bars, vv.36-37); the families of Merari (the houses descended from him, Exodus 6:19) — the families (the houses of Merari); 'the family of the Mushites: these are the families of Merari' (the two families of Merari, Mahli and Mushi, Exodus 6:19, the figure, the third house of Levi recorded, the providence, the families recorded, their number and charge to follow, vv.34-37) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Of Merari was the family of the Mahlites, and the family of the Mushites: these are the families of Merari",
-   "the families of Merari",
-   "the two families of Merari, the third house of Levi (Exodus 6:19)",
-   "each set down in the record"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The number of the Merarites: 'and those that were numbered of them, according to the number of all the males, from a month old and upward, were six thousand and two hundred' — the males of Merari from a month old were 6,200 (the from a month old and upward, the Levites numbered from infancy, vv.15, the six thousand and two hundred, the number of the Merarites, the figure, the Merarites numbered, the third Levitical house counted, the precise reckoning of each Levite family, the houses of Levi set down by number, the ordered count of the servants of God's house, each family numbered); the Merarites numbered from a month old (vv.15) — the count (the Merarites numbered); 'were six thousand and two hundred' (the number of the Merarites, 6,200, the figure, the family counted, the providence, the Merarites numbered, their place to follow, vv.35) — JFB, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And those that were numbered of them, according to the number of all the males, from a month old and upward, were six thousand and two hundred",
-   "the number of the Merarites",
-   "the Merarites numbered from a month old, the third Levitical house counted (vv.15)",
-   "the ordered reckoning of the servants of God's house"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The chief and the northward place of the Merarites: 'and the chief of the house of the father of the families of Merari was Zuriel the son of Abihail: these shall pitch on the side of the tabernacle northward' — the chief of Merari was Zuriel the son of Abihail, and the Merarites encamped on the north side (the the chief... was Zuriel the son of Abihail, the named head of Merari, the these shall pitch on the side of the tabernacle northward, their assigned place, the north, the figure, the head of Merari recorded and the family's place assigned, the ordered camp, each Levitical family in its station around the tabernacle, the Merarites on the north, the order of God's house, every family with its chief and its place); the head of Merari named (Zuriel) — the chief (the leader of Merari); 'these shall pitch on the side of the tabernacle northward' (the north side assigned, the ordered camp, the figure, each family in its place, the providence, the Merarites' place, their charge to follow, vv.36-37) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the chief of the house of the father of the families of Merari was Zuriel the son of Abihail: these shall pitch on the side of the tabernacle northward",
-   "the chief and the northward place of the Merarites",
-   "the head of Merari recorded by name and the family's place assigned on the north",
-   "each Levitical family with its chief and station"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The charge of the Merarites, the framework of the tabernacle: 'and under the custody and charge of the sons of Merari shall be the boards of the tabernacle, and the bars thereof, and the pillars thereof, and the sockets thereof, and all the vessels thereof, and all that serveth thereto' — the Merarites charged with the heavy framework: the boards, bars, pillars, sockets, and all that pertained (the the boards of the tabernacle, and the bars... pillars... sockets, the structural framework, the heavy parts, the all the vessels thereof, and all that serveth thereto, the fittings, the figure, the Merarites charged with the framework, the boards and bars that held the tabernacle up, the less honored but necessary service, the heavy burden-bearing, the figure that every part of God's house has its keepers, the structure as well as the holy things, each Levite with his service, the body fitly framed together, Ephesians 2:21); the Merarites' charge of the boards and bars (the heavy framework) — the charge (the structure); 'the pillars thereof, and the sockets thereof, and all the vessels thereof, and all that serveth thereto' (the pillars, sockets, and fittings, the structural parts, the figure, every part of God's house has its keepers, Ephesians 2:21, the providence, the Merarites' charge, the priests' place to follow, vv.38) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And under the custody and charge of the sons of Merari shall be the boards of the tabernacle, and the bars thereof, and the pillars thereof, and the sockets thereof, and all the vessels thereof, and all that serveth thereto",
-   "the charge of the Merarites: the framework of the tabernacle",
-   "the Merarites charged with the structure, the boards and bars and pillars, the necessary burden-bearing",
-   "every part of God's house with its keepers (Ephesians 2:21)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott"
   ],
+  "range": "33-37",
+  "pericope_label": "Merari: the frame of the sanctuary",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill names the two families from Merari's sons and explains why this house alone needed help: the boards were the walls of the holy and the most holy place, and because they and what went with them made a heavy carriage the Merarites were allowed waggons, and more of them than the Gershonites, while the Kohathites had none. One phrase he will not take as it stands, holding that the chief of the house of the father of the families should rather be rendered the chief of the house, the father to the families — the common father of them all — so that the title states an office rather than tracing a descent."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Merarites' charge of the court's pillars and cords: 'and the pillars of the court round about, and their sockets, and their pins, and their cords' — the Merarites also charged with the pillars of the surrounding court, their sockets, pins, and cords (the the pillars of the court round about, the posts of the outer court, the their sockets, and their pins, and their cords, the fittings that held the court, the figure, the Merarites charged even with the smallest parts, the pins and cords, the care of every part, even the least, the truth that nothing in God's house is too small to be tended, every pin and cord has its keeper, the humble but necessary service, the whole framework held together by the least parts); the Merarites' charge of the court's pillars (the outer court) — the charge (the court's structure); 'their pins, and their cords' (even the pins and cords charged, the smallest parts, the figure, nothing too small to be tended, the providence, the Merarites' full charge, the priests' place to follow, vv.38) — Ellicott, Gill."
+    "prevalence": "majority",
+    "summary": "Keil and Delitzsch set the tally under Zuriel on the northern side and describe the duty as a cycle rather than a custody: to take the boards, bars, pillars and sockets in charge when the dwelling was taken down, to carry them on the march, and to fix them again when it was set up. Ellicott adds a cross-reference to the description of the court and its pillars given in Exodus."
    }
   ],
-  "debates": [],
+  "debates": [
+   "How the chief's title should be rendered. Gill prefers to read it as naming the man father to the families rather than son of a father of them, which turns a genealogical note into a statement of office."
+  ],
   "outliers": [],
   "themes": [
-   "And the pillars of the court round about, and their sockets, and their pins, and their cords",
-   "the Merarites' charge of the court's pillars and cords",
-   "the Merarites charged even with the smallest parts, the pins and cords",
-   "nothing in God's house too small to be tended, every part with its keeper"
+   "the boards and the sockets",
+   "waggons for a heavy carriage",
+   "taking down and setting up",
+   "the third of three registers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.43
+   }
   }
  },
  "38": {
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Charles Ellicott"
   ],
+  "range": "38-39",
+  "pericope_label": "The priests on the east, and a total that will not add up",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "The priests' charge on the east and the stranger put to death: 'but those that encamp before the tabernacle toward the east, even before the tabernacle of the congregation eastward, shall be Moses, and Aaron and his sons, keeping the charge of the sanctuary for the charge of the children of Israel; and the stranger that cometh nigh shall be put to death' — the charge — 'Moses, and Aaron and his sons, keeping the charge of the sanctuary... and the stranger that cometh nigh shall be put to death': Moses and the priests encamped on the east, the place of honor before the entrance, keeping the charge of the sanctuary for the people, and any unauthorized person (stranger) who came near to die (the witnesses noting the significance — the priests in the place of honor, the east, before the entrance, the most honored station, keeping the charge of the sanctuary on behalf of all Israel, the lesson — the holiness that guards the sanctuary, the priests as the appointed keepers, and the solemn law that the stranger — any not of the priesthood — who came near the holy things should die, the holiness that none may approach but those God appoints, the warning against intrusion into the holy office, as Korah and his company would learn, Numbers 16:40, and Uzzah, 2 Samuel 6:7, and Uzziah the king, 2 Chronicles 26:18-21, the figure — the holiness of God that admits only the appointed near, the priesthood that guards the way, a figure of Christ the one Mediator through whom alone we draw near, 'no man cometh unto the Father, but by me,' John 14:6, the boldness to enter only by his blood, Hebrews 10:19-22, the holiness that both guards the sanctuary and points to the one appointed way of access); the priests on the east keeping the charge of the sanctuary for the people (the place of honor, the appointed keepers) — the charge (the priests as keepers); 'the stranger that cometh nigh shall be put to death' (the stranger, the unauthorized, put to death for coming near, the holiness guarded, Numbers 16:40, the figure, only the appointed may approach, John 14:6, the providence, the sanctuary guarded, the access through Christ) — Calvin, Ellicott, Wesley, Gill."
-   }
-  ],
-  "debates": [
+    "prevalence": "single",
+    "summary": "Gill notes simply that the entrance was on the east, so that Moses and Aaron and Aaron's sons lay across the way in."
+   },
    {
-    "question": "What does the priests' charge and the stranger's death teach?",
-    "sides": [
-     {
-      "position": "The appointed keepers in the place of honor, guarding the sanctuary, and the solemn law that none unauthorized may approach the holy things (Numbers 16:40; 2 Chronicles 26:18-21) - a figure of the holiness that admits only the appointed near and of Christ the one Mediator through whom alone we draw near (John 14:6; Hebrews 10:19-22)",
-      "holders": [
-       "Calvin",
-       "Ellicott",
-       "Wesley",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "But those that encamp before the tabernacle toward the east... shall be Moses, and Aaron and his sons, keeping the charge of the sanctuary... and the stranger that cometh nigh shall be put to death",
-   "the priests' charge on the east and the stranger put to death (the crux of the holiness that guards the sanctuary)",
-   "the holiness that guards the sanctuary, admitting only the appointed near (Numbers 16:40; 2 Chronicles 26:18-21)",
-   "a figure of Christ the one Mediator through whom alone we draw near (John 14:6; Hebrews 10:19-22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke's conjecture at the Gershonite figure, that two easily confounded Hebrew letters have turned two hundred into five hundred, is a solution of the same shape as Keil and Delitzsch's but applied at the other end of the list. Wesley offers two readings of the priests' charge and declines to choose, since they may have kept it in the people's stead or for the people's benefit and preservation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The total number of the Levites: 'all that were numbered of the Levites, which Moses and Aaron numbered at the commandment of the LORD, throughout their families, all the males from a month old and upward, were twenty and two thousand' — the total of the Levites, all males from a month old, was 22,000 (the all that were numbered of the Levites, the sum of the three families, Gershon, Kohath, Merari, the from a month old and upward, the Levites counted from infancy, vv.15, the twenty and two thousand, the total, the round number, though the three families summed slightly more, the difference noted by interpreters, the 300 firstborn Levites perhaps not counted, the figure, the Levites numbered as a whole, the tribe set apart to God, the count that would be matched against the firstborn of Israel, vv.40-43, the Levites the LORD's, taken instead of the firstborn); the total of the Levites numbered (the three families summed, vv.15) — the sum (the Levites' total); 'all the males from a month old and upward, were twenty and two thousand' (the total 22,000, the round number, the firstborn comparison to follow, vv.40-43, the figure, the Levites the LORD's, the providence, the Levite total, the firstborn numbered next, vv.40) — Keil and Delitzsch, Gill."
+    "summary": "Keil and Delitzsch state the discrepancy without softening it — the three houses come to twenty-two thousand three hundred and the muster is recorded as twenty-two thousand — and show that the smaller figure must be the true one, since the whole later transaction depends on the firstborn exceeding the Levites by exactly two hundred and seventy-three. They consider the rabbinic reconciliation and reject it as forced and unsatisfactory, on the ground that an account this circumstantial would not have omitted such a fact, and propose instead a copyist's error in the Kohathite number. Ellicott examines the word for sanctuary and finds it of wider compass than either the word for the wooden dwelling or the word for the tent, taking in the court as well."
    }
   ],
-  "debates": [],
+  "debates": [
+   "How twenty-two thousand three hundred becomes twenty-two thousand. Keil and Delitzsch weigh the traditional answer, that three hundred Levite firstborn were already sanctified and could not be exchanged, reject it as forced, and posit a copyist's error in the Kohathite figure; Clarke posits the same kind of error in the Gershonite figure instead. Both agree the recorded total is the sound number."
+  ],
   "outliers": [],
   "themes": [
-   "All that were numbered of the Levites... all the males from a month old and upward, were twenty and two thousand",
-   "the total number of the Levites",
-   "the Levites numbered as a whole, the tribe set apart to God (vv.15)",
-   "the count to be matched against the firstborn of Israel"
+   "the fourth side of the square",
+   "a discrepancy of three hundred",
+   "scribal conjecture",
+   "the smallest tribe"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.39
+   }
   }
  },
  "40": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command to number the firstborn of Israel: 'and the LORD said unto Moses, Number all the firstborn of the males of the children of Israel from a month old and upward, and take the number of their names' — God commanding Moses to number the firstborn males of Israel from a month old, to be matched against the Levites (the Number all the firstborn of the males, the firstborn counted, the count to match the Levites, the from a month old and upward, as the Levites were counted, vv.15, the take the number of their names, each firstborn named and counted, the figure, the firstborn numbered to be exchanged for the Levites, the basis of the substitution, the firstborn that belonged to God by the Passover, Exodus 13:2, 15, now to be redeemed by the setting apart of the Levites, the count that prepares the great exchange, vv.41-51); the firstborn counted from a month old (to match the Levites, Exodus 13:2) — the count (the firstborn numbered); 'take the number of their names' (each firstborn named and counted, the basis of the exchange, Exodus 13:15, the figure, the firstborn that belonged to God, to be redeemed, the providence, the firstborn numbered, the Levites taken instead, vv.41) — Henry, JFB, Keil, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Moses, Number all the firstborn of the males of the children of Israel from a month old and upward, and take the number of their names",
-   "the command to number the firstborn of Israel",
-   "the firstborn that belonged to God by the Passover numbered, to be matched against the Levites (Exodus 13:2, 15)",
-   "the count that prepares the great exchange"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "Charles Ellicott"
   ],
+  "range": "40-43",
+  "pericope_label": "The firstborn numbered, and twenty-two thousand two hundred and seventy-three",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports the rabbinic answer he finds in Jarchi and Abarbinel and in the Talmud, that the surplus was settled by lot — twenty-two thousand slips written for a Levite and two hundred and seventy-three written for five shekels, mixed and drawn — and mentions that some supposed the money was paid from a public stock instead, which was a ready way of doing it though whether reasonable is less clear, since the firstborn were the property of particular persons."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reports a stricter version of the counting rule from bishop Patrick, that none were numbered but those born since the coming out of Egypt, and then follows it somewhere unexpected: if all of them were born in that single year, there must have been an abundance of marriages in the last and bitterest year of the servitude, by people who were not discouraged by the present distress but married in faith. That the two numbers come out so near each other he takes for a mark of providence rather than coincidence."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The Levites taken instead of the firstborn: 'and thou shalt take the Levites for me (I am the LORD) instead of all the firstborn among the children of Israel; and the cattle of the Levites instead of all the firstlings among the cattle of the children of Israel' — the substitution — 'thou shalt take the Levites for me... instead of all the firstborn among the children of Israel': God took the Levites for himself in place of all the firstborn of Israel, and the Levites' cattle in place of the firstlings (the witnesses noting the significance — the substitution of the Levites for the firstborn, the firstborn belonged to God by right, having been spared in the Passover when the firstborn of Egypt died, Exodus 13:2, 15, now God took the whole tribe of Levi in their stead, that the firstborn might be redeemed and the Levites devoted to his service, the lesson — the principle of substitution and redemption, one taken in the place of another, the Levites standing in for the firstborn, the tribe given to God instead of the firstborn of every house, the figure — the great gospel principle of substitution, one standing in the place of others, fulfilled in Christ who is taken in our stead, 'the firstborn among many brethren,' Romans 8:29, who redeems his people, the firstborn of God by adoption, 'the church of the firstborn, which are written in heaven,' Hebrews 12:23, the Levites a figure of the redemption that takes one for another, and Christ the true substitute who stands for his people, the I am the LORD sealing the divine right and the divine claim, the figure of the substitute taken for the redeemed); the Levites taken instead of the firstborn (the substitution, the firstborn God's by the Passover, Exodus 13:15) — the exchange (one for another); 'the cattle of the Levites instead of all the firstlings among the cattle' (the Levites' cattle taken for the firstlings, the exchange extended to the beasts) — the figure (the full substitution, Romans 8:29, the providence, the Levites the LORD's, the surplus firstborn to be redeemed, vv.46-48) — Calvin, Keil, Wesley, Ellicott, Gill."
+    "summary": "Clarke works out the redemption in his own currency and then attacks the rabbinic lot outright, calling it a most stupid and silly tale that no intelligent people could have resorted to, and holding it much more likely the charge was met from a general fund. Wesley supposes instead that the exchange began with the eldest of the firstborn and worked downward, so that the two hundred and seventy-three redeemed with money were the youngest."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch set out the mechanics, twenty-two thousand exchanged for the Levites and the cattle set against the firstlings without being matched head for head. Ellicott treats the figure as a serious difficulty rather than a comfort, since against six hundred thousand males of twenty and upward it yields roughly one firstborn to forty-four, which has been urged as a ground for rejecting the narrative; he answers first that a writer producing so many complicated calculations would hardly insert one so improbable, and then offers two solutions, restricting the firstborn to those under twenty not already counted, or extending the term to the firstborn of every household including the children of concubines and slaves."
    }
   ],
   "debates": [
-   {
-    "question": "What does the taking of the Levites instead of the firstborn signify?",
-    "sides": [
-     {
-      "position": "The firstborn that belonged to God by the Passover redeemed by the setting apart of the Levites (Exodus 13:15), the principle of one taken in the place of another - a figure of the gospel substitution fulfilled in Christ, the firstborn among many brethren who stands in our stead and redeems his people (Romans 8:29; Hebrews 12:23)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Wesley",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "How the two hundred and seventy-three were identified. Gill reports the rabbinic lot without endorsing it; Clarke calls that tale silly and prefers a general fund; Henry and Wesley suppose the exchange ran from the eldest downward, leaving the youngest to be redeemed.",
+   "Whether the number of firstborn is credible. Ellicott states the objection at its strongest and answers it two ways; the other witnesses take the figure as given."
   ],
   "outliers": [],
   "themes": [
-   "And thou shalt take the Levites for me (I am the LORD) instead of all the firstborn among the children of Israel; and the cattle of the Levites instead of all the firstlings among the cattle of the children of Israel",
-   "the Levites taken instead of the firstborn (the crux of the substitution and redemption)",
-   "the firstborn redeemed by the Levites taken in their stead, the principle of one for another (Exodus 13:15)",
-   "a figure of the gospel substitution fulfilled in Christ the firstborn (Romans 8:29; Hebrews 12:23)"
+   "the count of the firstborn",
+   "marriages in the years of bondage",
+   "the lot and its critics",
+   "one firstborn to forty-four"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Moses numbering the firstborn as commanded: 'and Moses numbered, as the LORD commanded him, all the firstborn among the children of Israel' — Moses obeyed and numbered all the firstborn of Israel (the Moses numbered, the obedience, the count performed, the as the LORD commanded him, the exact obedience, vv.40, the all the firstborn among the children of Israel, the whole number of the firstborn, the figure, the obedience of Moses in numbering the firstborn, the count done as commanded, the firstborn numbered for the exchange with the Levites, the faithful doing of God's word, 'as the LORD commanded,' the refrain of Moses's obedience); Moses numbering as commanded (the exact obedience, vv.40) — the obedience (the count performed); 'all the firstborn among the children of Israel' (the whole number of the firstborn, counted for the exchange, the figure, the firstborn numbered, the providence, the count done, the number to follow, vv.43) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses numbered, as the LORD commanded him, all the firstborn among the children of Israel",
-   "Moses numbering the firstborn as commanded",
-   "the firstborn counted as God directed, the faithful doing of God's word",
-   "the count for the exchange with the Levites (vv.40)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The number of the firstborn, 22,273: 'and all the firstborn males by the number of names, from a month old and upward, of those that were numbered of them, were twenty and two thousand two hundred and threescore and thirteen' — the firstborn of Israel numbered 22,273, exceeding the Levites (22,000) by 273 (the all the firstborn males by the number of names, the firstborn counted by name, the twenty and two thousand two hundred and threescore and thirteen, 22,273, the number of the firstborn, the figure, the firstborn 273 more than the Levites, vv.39, the surplus that must be redeemed with money, vv.46-48, the exact count that reveals the excess, the 273 for whom no Levite could be exchanged, to be redeemed by the redemption price, the careful reckoning that leaves none unaccounted, every firstborn provided for); the firstborn numbered by name (the count) — the count (the firstborn numbered); 'twenty and two thousand two hundred and threescore and thirteen' (the 22,273, exceeding the Levites by 273, the surplus to be redeemed, vv.46-48, the figure, the excess provided for by the redemption price, the providence, the surplus firstborn, the redemption to follow, vv.44-48) — Clarke, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And all the firstborn males by the number of names, from a month old and upward... were twenty and two thousand two hundred and threescore and thirteen",
-   "the number of the firstborn: 22,273",
-   "the firstborn 273 more than the Levites, the surplus that must be redeemed (vv.39)",
-   "the careful reckoning that leaves none unaccounted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "44": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The LORD speaking concerning the redemption of the surplus firstborn: 'and the LORD spake unto Moses, saying' — the LORD spoke to Moses again, now to direct the redemption of the 273 firstborn beyond the number of the Levites (the speaking, God's command, the new direction, the occasion, after the count revealed the surplus of 273, vv.43, now the provision for their redemption, the figure, God ordering the redemption of the surplus, that none be unaccounted, the divine direction for the exact and just exchange, the surplus firstborn provided for by the redemption price, God directing even the redemption of the surplus, showing his care that all be justly settled, none left without redemption); the LORD speaking to Moses (the redemption of the surplus) — the new direction (the redemption price); the LORD spake unto Moses — the redemption of the surplus introduced (the providence, God ordering the just exchange, vv.45-48) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, saying",
-   "the LORD speaking concerning the redemption of the surplus firstborn",
-   "God ordering the redemption of the 273 beyond the Levites (vv.43)",
-   "the care that all be justly settled, none left without redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley",
+   "Charles Ellicott"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Levites taken and made the LORD's: 'take the Levites instead of all the firstborn among the children of Israel, and the cattle of the Levites instead of their cattle; and the Levites shall be mine: I am the LORD' — the command repeated: the Levites taken instead of the firstborn, their cattle for the firstlings, and the Levites made the LORD's own (the take the Levites instead of all the firstborn, the substitution confirmed, vv.41, the the Levites shall be mine, the Levites God's possession, devoted to him, the I am the LORD, the seal of the divine claim, the figure, the Levites made the LORD's by the exchange, the tribe wholly devoted to God, the truth of belonging to God, the redeemed made his own, 'ye are not your own... ye are bought with a price,' 1 Corinthians 6:19-20, the Levites a figure of those who are God's possession, taken for himself, the LORD's own people); the Levites and their cattle taken for the firstborn and firstlings (the substitution, vv.41) — the exchange (the Levites for the firstborn); 'the Levites shall be mine: I am the LORD' (the Levites God's own, devoted to him, 1 Corinthians 6:19-20, the figure, the redeemed made God's possession, the providence, the Levites the LORD's, the surplus to be redeemed, vv.46-48) — Calvin, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Take the Levites instead of all the firstborn among the children of Israel, and the cattle of the Levites instead of their cattle; and the Levites shall be mine: I am the LORD",
-   "the Levites taken and made the LORD's",
-   "the Levites taken instead of the firstborn and made the LORD's own, wholly devoted to God",
-   "a figure of the redeemed who are God's possession, bought with a price (1 Corinthians 6:19-20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 273 firstborn that are more than the Levites, to be redeemed: 'and for those that are to be redeemed of the two hundred and threescore and thirteen of the firstborn of the children of Israel, which are more than the Levites' — the 273 firstborn that exceeded the number of the Levites were to be redeemed (the those that are to be redeemed, the surplus needing redemption, the the two hundred and threescore and thirteen, the 273, the excess of firstborn over Levites, vv.43, the which are more than the Levites, the surplus for whom no Levite could be exchanged, the figure, the 273 for whom there was no Levite, to be redeemed by the redemption price, the surplus that the substitution could not cover, provided for by money, the careful justice that redeems every one, none left unredeemed, the redemption price for those beyond the exchange); the 273 to be redeemed (the excess, vv.43) — the surplus (the firstborn beyond the Levites); 'which are more than the Levites' (the firstborn exceeding the Levites, the surplus, vv.43, the figure, the redemption for those beyond the exchange, the providence, the surplus redeemed by the price, vv.47-48) — Wesley, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And for those that are to be redeemed of the two hundred and threescore and thirteen of the firstborn of the children of Israel, which are more than the Levites",
-   "the 273 firstborn that are more than the Levites, to be redeemed",
-   "the firstborn for whom no Levite could be exchanged, to be redeemed by the price (vv.43)",
-   "the justice that redeems every one, none left unredeemed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
+  "range": "44-51",
+  "pericope_label": "Five shekels a head, and the money given to Aaron",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The redemption price of five shekels: 'thou shalt even take five shekels apiece by the poll, after the shekel of the sanctuary shalt thou take them: (the shekel is twenty gerahs:)' — the price — 'thou shalt even take five shekels apiece by the poll, after the shekel of the sanctuary': each of the 273 surplus firstborn redeemed with five shekels of the sanctuary, twenty gerahs to the shekel (the witnesses noting the significance — the redemption price, five shekels a head, the fixed sum of redemption, by the standard weight of the sanctuary, the lesson — the principle of redemption by a price, the firstborn beyond the exchange could not be covered by a Levite, so were redeemed with money, the redemption price paid for each soul, the same five shekels as the redemption of the firstborn elsewhere, Numbers 18:16, the figure — the redemption of souls by a price, fulfilled in Christ who redeemed us not with silver but with his own blood, 'ye were not redeemed with corruptible things, as silver and gold... but with the precious blood of Christ,' 1 Peter 1:18-19, 'ye are bought with a price,' 1 Corinthians 6:20, 'in whom we have redemption through his blood,' Ephesians 1:7, the shekel of the sanctuary marking the divine standard, the exact and appointed price, the figure of the precious redemption, the price paid for each soul, a shadow of the infinite price of Christ's blood, the five shekels a token of the redemption that Christ would accomplish in full); the five shekels a head (the redemption sum, Numbers 18:16) — the price (the redemption money); the shekel of the sanctuary, twenty gerahs (the divine standard weight, Exodus 30:13) — the figure (the appointed, exact price, a shadow of Christ's redemption, 1 Peter 1:18-19, the providence, the redemption price, the money to Aaron, vv.48-51) — Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Calvin states the principle before the sum: since the complete portion of God was not found in the tribe, it had to be supplied from elsewhere, and he supplies what the reader needs to know what was paid, that the shekel of the sanctuary was the double shekel worth two of the ordinary kind. Gill converts the price into his own currency and notes it became the settled rate afterwards; he is candid that the text does not say of whom the money was exacted, children of a month old being unable to pay and their parents paying for them, and he ends on the man who handled it, observing that Moses converted none of it to his own use."
+   },
    {
-    "question": "What does the redemption price of five shekels signify?",
-    "sides": [
-     {
-      "position": "The fixed redemption sum for each firstborn beyond the exchange (Numbers 18:16), by the divine standard of the sanctuary shekel - a figure of the redemption of souls by a price, fulfilled in Christ who redeemed us with his own blood (1 Peter 1:18-19; 1 Corinthians 6:20; Ephesians 1:7), the five shekels a token of the infinite price of Christ's redemption",
-      "holders": [
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Thou shalt even take five shekels apiece by the poll, after the shekel of the sanctuary shalt thou take them: (the shekel is twenty gerahs:)",
-   "the redemption price of five shekels (the crux of redemption by a price)",
-   "the fixed price for each firstborn, redemption of souls by a price (Numbers 18:16)",
-   "fulfilled in Christ who redeemed us with his precious blood (1 Peter 1:18-19; 1 Corinthians 6:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley guards the clause about the cattle from a misreading: they were not taken from the Levites nor sacrificed, any more than the Levites themselves were, but presented before the Lord by way of acknowledgment, the beasts remaining with the men for their support in God's work."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The redemption money given to Aaron and his sons: 'and thou shalt give the money, wherewith the odd number of them is to be redeemed, unto Aaron and to his sons' — the redemption money for the surplus firstborn given to Aaron and his sons, the priests (the the money, wherewith the odd number of them is to be redeemed, the redemption price for the 273, the unto Aaron and to his sons, given to the priests, the figure, the redemption money given to the priesthood, the price paid into the hands of the priests, the redemption received by those who minister at the altar, the truth that the price of redemption belongs to God and his service, the money given to the priests as God's representatives, the redemption accomplished and the price received); the redemption money for the 273 (the price) — the money (the redemption price); 'unto Aaron and to his sons' (the money given to the priests, the redemption received, the figure, the price into the hands of the priesthood, the providence, the money given, the surplus redeemed, vv.49-51) — Ellicott, Gill."
+    "prevalence": "single",
+    "summary": "Ellicott points to where the standard shekel is first defined and observes that the law of redeeming the firstborn at five shekels came into operation from this moment; he is equally frank that the manner of determining the families is unrecorded, and offers the two guesses open to him, the most recently born or the lot. On the cattle he notices there appears to have been no numbering at all, and that the whole of the Levites' herd was given for all the firstlings of all the other tribes. He then denies what the arrangement is usually taken to prove, holding that a priesthood of the firstborn transferred to the Levites is altogether without foundation, since the patriarchal priesthood belonged to the head of every family, was exercised before the command to sanctify the firstborn was given, and was thenceforth confined to Aaron's family not as substitutes for the firstborn but in the place of the whole nation."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Ellicott's three-part denial that the Levites inherited a priesthood of the firstborn cuts against the reading the rest of the chapter's expositors assume, and is the sharpest dissent in the chapter."
+  ],
   "themes": [
-   "And thou shalt give the money, wherewith the odd number of them is to be redeemed, unto Aaron and to his sons",
-   "the redemption money given to Aaron and his sons",
-   "the redemption price for the surplus firstborn given to the priests",
-   "the price into the hands of the priesthood, the redemption accomplished"
+   "the shekel of the sanctuary",
+   "redemption money",
+   "cattle for cattle",
+   "what the substitution did not transfer"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses taking the redemption money for the surplus: 'and Moses took the redemption money of them that were over and above them that were redeemed by the Levites' — Moses took the redemption money for the 273 firstborn who exceeded the number redeemed by the Levites (the Moses took the redemption money, the obedience, the price collected, the of them that were over and above them that were redeemed by the Levites, the 273 surplus, redeemed by money, the rest covered by the Levites, the figure, the obedience of Moses in collecting the redemption price, the surplus redeemed by money, the just settlement, those covered by the Levites' substitution and those beyond redeemed by the price, the careful completion of the redemption, each firstborn accounted for, by Levite or by money); Moses taking the money (the obedience, the price collected) — the obedience (the price taken); 'of them that were over and above them that were redeemed by the Levites' (the 273 redeemed by money, the rest by the Levites, the just settlement, the figure, each firstborn accounted for, the providence, the money collected, the count to follow, vv.50) — Ellicott, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses took the redemption money of them that were over and above them that were redeemed by the Levites",
-   "Moses taking the redemption money for the surplus",
-   "the 273 surplus redeemed by money, the rest covered by the Levites",
-   "each firstborn accounted for, by Levite or by money"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sum of the redemption money, 1,365 shekels: 'of the firstborn of the children of Israel took he the money; a thousand three hundred and threescore and five shekels, after the shekel of the sanctuary' — the redemption money taken was 1,365 shekels (273 firstborn at five shekels each), by the sanctuary standard (the took he the money, the price collected, the a thousand three hundred and threescore and five shekels, 1,365, the exact sum, 273 times five, the after the shekel of the sanctuary, by the divine standard, vv.47, the figure, the exact sum of the redemption money, the precise reckoning, the careful exactness of the redemption, the price counted to the shekel, the redemption money exactly reckoned, none over or under, the just and precise price, the careful accounting of the redemption, every shekel counted); the redemption money taken (the price collected) — the money (the price); 'a thousand three hundred and threescore and five shekels, after the shekel of the sanctuary' (the 1,365 shekels, 273 at five, by the standard, vv.47, the figure, the exact reckoning of the redemption, the providence, the sum collected, the money given to Aaron, vv.51) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Of the firstborn of the children of Israel took he the money; a thousand three hundred and threescore and five shekels, after the shekel of the sanctuary",
-   "the sum of the redemption money: 1,365 shekels",
-   "the 273 firstborn at five shekels each, the price counted to the shekel by the divine standard (vv.47)",
-   "the careful accounting of the redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses giving the redemption money to Aaron as commanded: 'and Moses gave the money of them that were redeemed unto Aaron and to his sons, according to the word of the LORD, as the LORD commanded Moses' — Moses gave the redemption money to Aaron and his sons, exactly as the LORD had commanded (the Moses gave the money of them that were redeemed, the redemption price given to the priests, vv.48, the unto Aaron and to his sons, the priests, the according to the word of the LORD, as the LORD commanded Moses, the exact obedience, the chapter closing on the refrain of obedience, the figure, the redemption completed and the money given as commanded, the perfect obedience of Moses, the doing of all things according to God's word, 'as the LORD commanded Moses,' the refrain that seals the chapter, the redemption of the firstborn accomplished, the Levites set apart and the surplus redeemed, all done in obedience); Moses giving the money to the priests (the redemption price, vv.48) — the giving (the price to the priests); 'according to the word of the LORD, as the LORD commanded Moses' (the exact obedience, the chapter sealed on the refrain, the figure, the perfect obedience of Moses, the redemption completed, the providence, the redemption accomplished, the Levites set apart) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses gave the money of them that were redeemed unto Aaron and to his sons, according to the word of the LORD, as the LORD commanded Moses",
-   "Moses giving the redemption money to Aaron as commanded",
-   "the redemption of the firstborn accomplished and the Levites set apart, all done in exact obedience",
-   "the refrain of obedience that seals the chapter (vv.48)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
