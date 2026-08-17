@@ -2560,6 +2560,33 @@
       "book": "genesis",
       "chapter": "31",
       "note": "CORRECTION to the median-per-key hypothesis recorded one batch ago at romans 8. That note proposed median under ~400 predicts a tileable register chapter and over ~1,000 predicts per-verse comment, with the 400-1,000 band untested and flagged as needing a case. Genesis 31 is that case, and it lands badly for the median: at 411 it sits just above the proposed tiling line and does NOT tile at all. Numbers 3 tiled at median 230; genesis 31 does not tile at 411. Whatever boundary exists is therefore much lower and much narrower than proposed, and a median in the low hundreds is nowhere near sufficient evidence on its own. The measure that actually worked in both cases was the ADJACENCY CHECK — read three to five consecutive keys and ask whether they say the same procedural thing. On numbers 3 that showed a five-slot template repeated verbatim for three houses; on genesis 31 it showed five consecutive verses of one speech drawing 22, 103, 169, 411 and 782 words, which is the signature of distinct content. The check costs one tool call. Revised guidance: treat a low median as a reason to RUN the adjacency check, never as a substitute for it, and do not trust any threshold to classify a chapter unread."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "20",
+      "verses": [
+        "5"
+      ],
+      "note": "The Jamieson, Fausset and Brown block at v5 is scrape residue: it carries 2 Chronicles 29 material about the Levites and priests sanctifying themselves, nothing about Psalm 20. Declared in excluded_voices for entry 5. Same failure mode as the JFB residue logged for deuteronomy 28 and genesis 37 — worth a repo-wide sweep for JFB blocks that are off-book or repeat verbatim within a chapter."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "20",
+      "verses": [
+        "9"
+      ],
+      "note": "StudyLight site chrome (CSS and nav markup) trails the Ellicott block at v9. Stripped in reading; no synthesis content drawn from it."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "20",
+      "note": "Taken from --queue generate rather than --queue auto. The repair queue head was serving only 30k-49k-word chapters (deuteronomy 28, numbers 14, genesis 27, exodus 28, acts 27) that no single context can finish; psalms 20 at 9,528 source words over 9 keys was finishable. Six entries tiling vv.1-9: 1, 2-4, 5, 6, 7-8, 9. New voice-to-school mappings used and verified against existing psalms tags: C.H. Spurgeon -> puritan-evangelical, Augustine of Hippo -> latin-fathers."
     }
   ]
 }
