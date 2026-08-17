@@ -2693,6 +2693,42 @@
       "book": "1corinthians",
       "chapter": "7",
       "note": "Repair-queue head sizing, this batch: 1corinthians 7 = 75,582 words / 40 keys; romans 8 = 97,111 / 39 (offered twice); exodus 28 = 33,449 / 43. With deuteronomy 32 (55,421), acts 5 (68,739), acts 16 (69,844) and 1corinthians 15 (116,326) from earlier sweeps, at least seven repair chapters now sit far past the ~40,000-word one-batch line. These are not merely 'the whole batch' — none is finishable in a single context at all under the current one-entry-per-pericope prose rules. They need either an explicit multi-batch protocol (persisting drafts to docs/ so a rotation cannot lose them) or an owner decision, or --worst-first will keep serving them ahead of the feasible tail forever."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "13",
+      "verses": [
+        "8",
+        "20",
+        "26"
+      ],
+      "note": "All three Jamieson, Fausset and Brown blocks in this chapter are off-book scrape residue, carrying Exodus 31/35 material about the tabernacle collection: v8 on the people's spontaneous freewill offering, v20 on Bezalel and Aholiab being nominated by authority, v26 on weaving as men's work in Egypt and the women who spun. None touches leprosy. Declared in excluded_voices for entries 1, 18 and 24. This inverts the pattern noted at numbers 3 and genesis 41, where JFB's residue was Leviticus 13-14 leprosy material appearing in other books — the JFB scrape appears to be systematically offset rather than randomly corrupt, so a repo-wide sweep could probably be driven by matching each JFB block against its chapter's own subject."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "13",
+      "verses": [
+        "59"
+      ],
+      "note": "Both closing blocks are polluted by site chrome. Ellicott at key 59 ends with the entire StudyLight page dump — CSS, nav menus, the inline JS bundle, the Cloudflare challenge script, a Stripe public key and the full book_data array; usable text stops after 'declaration of its being clean or defiling'. Gill at key 59 ends with sacred-texts.com navigation ('Next: Leviticus Chapter 14 ... Index Next:'). This is the fourth chapter running with StudyLight furniture at the final key (romans 11:36, numbers 3:51, genesis 41:54, now leviticus 13:59) — the defect is positional, always the last key of the chapter, which makes it cheap to detect and strip corpus-wide."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "13",
+      "note": "CORRECTION to my own note of earlier today: the claim that 'keys already >=350 source words set a hard floor on entry count, since those verses cannot be grouped without manufacturing padding' is WRONG, and leviticus 13 falsifies it. This chapter has 20 keys at 350+ yet tiles cleanly into 10 pericope entries. The reasoning was backwards: a THIN key cannot reach 350 output words honestly and so MUST be grouped, but a fat key merely CAN stand alone — it does not have to, and grouping fat keys just means the writer selects from more material than one entry needs (numbers 3 collapsed spans of 900-3000 source words into single entries). So keys>=350 is not a floor on entries and should not be used as a batch-sizing trigger. The other worker's n>2k metric is a different and better-founded claim and is not affected by this correction. What actually predicts entry count remains the genre regime, established by the adjacency check: leviticus 13 is the textbook regime (b)/(c) case, a priestly diagnostic manual whose nine natural sections (the examination, old leprosy, the boil, the burn, the scall, the harmless spot, the bald head, the leper's conduct, garments) tile 1-59 exactly with every span over 800 source words."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "13",
+      "note": "Adopted the ghost check from the genesis 26 notes and it earned its keep immediately. My builder previously checked only one direction (voices NAMED in prose but having no block in the span); adding the reverse (voices with a block in the span that the prose never names) caught a real omission at entry 45-46, where a length trim had silently dropped Gill. Recommend both directions plus a declared residue set: the residue set is what keeps the ghost check from firing on genuinely excluded scrape material like the JFB blocks here, and it doubles as the source of excluded_voices in the tags. Also worth recording: writing to a ~500-word target still produced first drafts averaging 900 words across ten entries, and the trim back to the 350-650 window took more passes than the writing did. The target that actually lands in-window appears to be nearer 450."
     }
   ]
 }
