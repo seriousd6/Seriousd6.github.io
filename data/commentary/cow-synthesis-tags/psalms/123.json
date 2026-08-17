@@ -1,0 +1,176 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Augustine of Hippo",
+   "C.H. Spurgeon",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine hears one voice, and a homesick one: since all are one in Christ it is one man who speaks, saying not we but I. What makes a Christian's heart heavy is that he is a pilgrim longing for his country, so that even when the world smiles on every side he groans — and by longing he ascends, and while ascending sings the Song of Degrees, though looking for the ladder between heaven and earth he sees none."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin doubts David wrote it, since David's own laments usually carry some particular reference to himself, and takes it for a prayer composed for all the godly by some prophet in the Babylonian captivity or under Antiochus Epiphanes; he draws from that its breadth of use, and explains the heavenly title as meant to remind the faithful, when their case is as desperate as the grave, that the power of God remains in heaven unimpaired. Gill takes the lifted eyes for the eye of faith rather than of the body."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry hears in the title the lesson Christ taught in prayer, heaven being a place both of prospect and of power, and notes the alternative rendering that God sits there as Judge, to which throne injured innocence may appeal; Spurgeon makes the lifted eyes a confession of faith in a personal God, the psalmist looking so high he could look no higher — not to the hills but to the God of the hills."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the psalm probably a complaint of the captives in Babylon about the contempt they received, the author uncertain, and reduces the opening to a sentence: we have no hope but in thee, and expectation from thy mercy alone."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch join it to the psalm before by the shared name Jahve our God, quote Alsted's title for it — the hoping eye — and call it an upward glance of waiting faith under tyranny, explaining its unusually rhyming form as the inflexional rhymes that creep of themselves into the language of prayer; Ellicott renders the divine title in three words, O thou throned one."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who wrote the psalm, and when?",
+    "sides": [
+     {
+      "position": "not David — a prayer composed for all the godly by a later prophet, in the captivity or under Antiochus",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "probably the captives in Babylon; the author is uncertain",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "unto thee lift I up mine eyes",
+   "thou that dwellest in the heavens",
+   "the Song of Degrees as ascent",
+   "the eye of faith"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-4",
+  "pericope_label": "As the eyes of servants: the plea against contempt",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill lists four things the servant's eye may be watching for — direction given by a motion of the hand, help against enemies, food, or wages — canvassing Aben Ezra, Kimchi and Arama; on the plea he observes that merit is not pleaded, since though servants they know themselves unprofitable ones, and he describes the scorners by their ease rather than their nation, men at ease from their youth whose consciences are seared and past feeling."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke offers readiness and imitation as further senses of the watching, and a darker one besides — the chastisement of slaves, who keep their eyes on the hand that punishes them while entreating mercy; he hears a promise in the plea, chastise us no more, and names the scorners as the Babylonians, who having subdued their neighbours grew luxurious, indolent and insolent. Wesley reduces the waiting to supply of wants and defence against oppressors."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott keeps the picture Oriental, quoting Savary on slaves standing silent with eyes fixed on their master to anticipate his every wish, renders the measure of the contempt as sated more than enough, and prefers the Septuagint's reading of the last verse, which needs only one letter changed and removes an anomaly of construction; Keil and Delitzsch mark the second strophe taking up the plea for grace in echo, a cry for mercy confirmed in a crescendo after the form of steps."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is the servant watching the hand for?",
+    "sides": [
+     {
+      "position": "direction, protection, food or wages — the ordinary dependence of a servant",
+      "holders": [
+       "Gill",
+       "Wesley",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "possibly the hand that chastises, watched by a slave under punishment entreating mercy",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "as the eyes of servants",
+   "until he have mercy upon us",
+   "exceedingly filled with contempt",
+   "the scorning of those that are at ease"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  }
+ }
+}
