@@ -2842,6 +2842,53 @@
       "book": "psalms",
       "chapter": "28",
       "note": "Taken from --queue generate rather than --queue auto, and flagged as such. The repair queue head this batch served judges 8 (21,246 words), joshua 8 (22,644), exodus 28 (33,449), 1corinthians 7 (75,582) and romans 8 (97,111) — judges 8 and joshua 8 are both finishable by a fresh worker and judges 8 remains the recommended next repair pick. psalms 28 at 8,764 words over 9 keys was the largest chapter this context could still finish honestly. Four entries tiling vv.1-9: 1, 2-5, 6-7, 8-9. Keil at v7 is a bare Scripture quotation of vv.7-9 with no commentary, correctly declared in excluded_voices for entry 6."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "34",
+        "52"
+      ],
+      "note": "JFB scrape residue, seventh chapter and a seventh distinct off-book target: all six JFB blocks in numbers 1 carry Leviticus 11 clean-and-unclean-animals material (ruminants and the parted hoof, shellfish, birds of prey, locusts fried in olive oil, contact defilement, the line between animals used and not used for food). The pattern across numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9, judges 8 and now numbers 1 is that the drift target varies by book and is never a fixed offset — judges 8 drew Leviticus 26/Deuteronomy 28, this one draws Leviticus 11. Any sweep must match each block's subject against its own chapter. All six declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "1",
+      "verses": [
+        "53",
+        "54"
+      ],
+      "note": "Two DIFFERENT sites' page furniture in one chapter, both in a commentator's last block. Ellicott's v53 block ends at the kezeph note and is followed by the usual StudyLight footer, .sub-menu CSS, nav lists and var book_data array (eighth chapter with this). But Gill's v54 block ends with sacred-texts.com navigation instead: 'Next: Numbers Chapter 2 Sacred Texts | Bible << Previous: John Gill's Exposition of the Entire Bible...'. So the catena was assembled from at least two upstream scrapers, and a stripper keyed only to the StudyLight markers will miss the Gill tail. Add markers for 'Sacred Texts | Bible' and the 'Next:/Previous:' navigation pair."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "1",
+      "verses": [
+        "17"
+      ],
+      "note": "Block-keying drove the tiling here, confirming the judges 8 note. Henry's exposition of the twelve tallies sits entirely in the key for v17, so a natural 17-19 / 20-43 split would have left the whole tally pericope with no puritan-evangelical voice. Merging them into one 17-43 entry recovers Henry and still compresses cleanly (2,919 source words to 636). General rule forming: in register/list chapters, set span boundaries from where the DISCURSIVE commentators' blocks are keyed, not from the logical divisions of the list — the list stubs are Gill-only and will follow whatever boundary you choose, but the discursive block will not."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "1",
+      "verses": [
+        "17",
+        "47"
+      ],
+      "note": "Keil and Delitzsch excluded from entries 17-43 and 47-54. In both cases their block is the running verse text of the span (vv18-23 and vv49-54 respectively) with no comment attached; their actual exposition of the muster is in the vv1-4 block and is used there. The ghost check caught the first of these — I had written a K&D clause into the tags from the block's presence without having named them in the prose, which is exactly the failure the check exists for."
     }
   ]
 }
