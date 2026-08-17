@@ -1,0 +1,169 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Augustine of Hippo",
+   "C.H. Spurgeon",
+   "John Calvin",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine hears the voice of men troubled, and so of the Martyrs amid their sufferings, relying on their own Head: many members under one Head, bound in the bond of love and peace, are one man, and of that one man the voice is often heard in the Psalms, so that one cries as though it were all."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin calls the psalm merely a part of the fortieth, thinks the inscription may be meant to indicate it, and declines to expound what he has expounded already; Gill notes that make haste has to be supplied from the following clause, and rejects the Targum's plural reading."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry reads bringing to remembrance as putting God in mind of his mercy and promises — an honour he puts upon the prayer of faith rather than a need of the Eternal Mind — and settles from the repetition that a man may pray twice in the same words, since our Saviour in his agony prayed thrice saying the same words, God looking at the heart and not the words; Spurgeon hears urgency in the altered opening and says it is not forbidden, in dire distress, to ask for speed on God's part."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke finds little sense in the title, takes it for a memorial that David had been in sore affliction and was delivered, notes the psalm is almost word for word the last five verses of the fortieth, and keeps to the plain distress — haste to help me, or I am lost."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch place the psalm after the sixty-ninth for the kindred nature of its contents, describe it as a portion of the fortieth detached and converted into the Elohimic style, and see the fragment betrayed at the first word, where the omission of 'be pleased' throws the clause 'to deliver me' onto 'make haste'."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is David the author of the psalm in this form?",
+    "sides": [
+     {
+      "position": "not in this stunted form; the ascription holds only of the original psalm he composed",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "David himself took these five verses out of the fortieth and accommodated them to an occasion",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "make haste, O God, to deliver me",
+   "a fragment of the fortieth psalm",
+   "to bring to remembrance",
+   "praying twice in the same words"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch"
+  ],
+  "range": "2-5",
+  "pericope_label": "Let them be ashamed; let all that seek thee rejoice",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill tracks the losses from the older psalm — the word together dropped, and a phrase that fell on the enemy's land and houses there falling on their persons here — and marks the substitution in the last verse."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke asks of the enemy only that their advance be stopped, since they are coming in a body against him, calls the cry of Aha a note of supreme contempt, turns the blessing on those who seek God outward to the increase of his work in their souls, and renders the closing confession as that of an afflicted beggar whose sense of poverty causes him to beg."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott counts two omissions from the fortieth psalm and judges a third change probably a copyist's error; Keil and Delitzsch run through the remaining variants and note that where the older psalm said the Lord thinketh on me, this turns the hope into a petition, make haste unto me."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How did the closing line come to differ from the fortieth psalm?",
+    "sides": [
+     {
+      "position": "the hope was deliberately turned into a petition, an innovation caused by taking over the pronoun",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "at least one of the changes in these verses is probably a copyist’s error",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "let them be turned backward",
+   "that say, Aha, aha",
+   "let God be magnified",
+   "I am poor and needy"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
+  }
+ }
+}

@@ -2896,6 +2896,23 @@
       "book": "psalms",
       "chapter": "117",
       "note": "Taken from --queue generate, flagged. The repair queue head served only chapters too large for this context; a corpus-wide scan of the generate queue found a tail of very small chapters the --worst-first ordering will never reach: psalms 117 (2 keys / 2,625 words), psalms 70 (5 / 3,701), psalms 108 (10 / 4,090), psalms 134 (3 / 4,493), psalms 123 (4 / 5,073), psalms 131 (3 / 5,367), jeremiah 45 (5 / 5,396), psalms 43 (5 / 5,478), psalms 53 (6 / 5,511), psalms 93 (5 / 5,603). These are worth knowing about as filler work for a worker with little context left, or as a fast way to move the chapter meter. psalms 117 is the shortest chapter in the Bible and synthesises as two single-verse entries."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "70",
+      "verses": [
+        "5"
+      ],
+      "note": "StudyLight site chrome (CSS, nav, inline JS) trails the Charles Ellicott block at psalms 70:5 — the fourth instance logged, after psalms 20:9, genesis 26:34 and psalms 28:9. Ellicott's real content precedes the markup here so nothing was lost."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "70",
+      "note": "psalms 70 is almost entirely a repetition of psalms 40:13-17, and every voice says so: Calvin declines to expound it twice and refers the reader back, Clarke sends the reader to his notes on the fortieth, Keil and Delitzsch call it a detached portion converted to the Elohimic style, and Spurgeon notes it is the second such repeated psalm after psalms 53 (itself a rehearsal of psalms 14). Most of the surviving commentary is a variant list against the fortieth rather than fresh exposition, so the synthesis is necessarily thinner in doctrine and heavier in textual comparison than a normal chapter. Worth knowing that the same will be true of psalms 53 and psalms 14 when they come up."
     }
   ]
 }
