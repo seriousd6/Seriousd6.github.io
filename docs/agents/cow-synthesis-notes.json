@@ -2425,6 +2425,20 @@
       "book": "luke",
       "chapter": "22",
       "note": "Genre classification for luke 22, added after the regime model was worked out on leviticus 13 (batch 23). Verdict unchanged — still declined, 71 keys / 63,923 words unaltered — but luke 22 is the discriminating example that makes the model usable, so it is worth recording beside leviticus 13 rather than only under its own decline. The two look alike on the picker's numbers: 71 keys against 59, both with a majority of verses under 350 source words. They are opposite in cost. Leviticus 13 is regime (c), a diagnostic loop that MUST be tiled and collapses to maybe 10-14 entries. Luke 22 is the purest regime (a) in the queue: continuous narrative through the plot, the passover preparation, the supper, the strife about greatness, Gethsemane, the arrest, the denial and the council, where the witnesses say something distinct about nearly every verse — the sweat as blood, the cup, this is my body, Satan entering Judas, the two swords, the cock crowing — and grouping would be by convenience, which the loop doc forbids. It does not collapse. 71 keys means 71 entries, and it remains the most expensive chapter this worker has been offered. Rule of thumb the pair yields: a high key count with a low median is only cheap when the REPETITION IS IN THE TEXT, not merely when the commentary is short. Check whether consecutive keys say the same procedural thing before assuming a chapter tiles."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "31",
+      "note": "The picker still serves numbers 31 despite the owner-level block. It came up as the head pick this batch and was skipped under the standing instruction. Worth recording because the block lives only in the operator's prompt, not in any data the picker reads: synthesis-frontier.py has no knowledge of it, so numbers 31 will keep surfacing at the head of the repair queue for every worker, indefinitely, until either the source defect is fixed or the block is expressed somewhere the picker can see. Each time it does, it costs a pick. Cheapest fix if the owner decision is going to take a while: a skip-list the frontier reads — or reuse the notebook, since a chapter carrying an unresolved source-defect note is exactly the set that should not be offered. See the existing source-defect entry for the underlying problem (keys 36 and 42 carry only a duplicated JFB block on Numbers 7 and zero usable words, verse 42 is isolated so no range can absorb it, and declaring any range turns on chapter-wide coverage enforcement which then demands an entry for it)."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "numbers",
+      "chapter": "14",
+      "note": "Declined by worker B for context capacity — nothing written. Numbers 14 (the spies' report refused, Moses' intercession, the forty-year sentence) is 45 keys / 30,409 usable source words, median 393: 28 verses at 350+, 4 in the 200-349 band, 13 thin. Regime (a) under the genre model — narrative with distinct per-verse comment, so it does not collapse; Moses' intercession at 13-19 is the one genuinely continuous speech and the plausible pericope, and the sentence at 20-35 carries distinct items verse by verse. Call it 40-45 entries. That is above genesis 37 (36), judges 11 (40) and level with genesis 27 (46), all declined on capacity, so consistency forbids it. Seventh entry for the ready-work queue; ranks with genesis 27, below the two Leviticus chapters that tile."
     }
   ]
 }
