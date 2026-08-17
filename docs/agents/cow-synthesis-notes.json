@@ -2623,6 +2623,23 @@
       "at": "2026-08-17",
       "kind": "observation",
       "note": "Repair-queue head sizing sweep (2026-08-17). Four consecutive --worst-first offers, all regime (a) narrative, none groupable: numbers 14 (45 keys / 30,409 words / median 393 / 28 keys already >=350); genesis 30 (43 / 24,607 / 338 / 20); exodus 32 (35 / 42,738 / 793 / 31 — over the 40k whole-batch line); judges 11 (40 / 29,358 / 318 / 19). The count that predicts cost is KEYS ALREADY >=350 SOURCE WORDS, since those verses cannot be grouped without manufacturing padding: they set a hard floor on entry count. Floors here are 19-31 entries before any grouping of the thin remainder, i.e. realistically 26-33 entries per chapter. For comparison the last two landed chapters were numbers 3 (10 entries) and genesis 41 (12 entries), each a full batch. The head is now roughly 2.5x a full batch per chapter. Suggest either (a) treating >=20 keys at 350+ as a one-chapter-is-the-whole-batch trigger alongside the 40k word rule, or (b) having 'size' print the 350+ key count, which is a better cost predictor than either total words or median."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "26",
+      "verses": [
+        "11"
+      ],
+      "note": "The Jamieson, Fausset and Brown block at genesis 26:11 is scrape residue: it carries Genesis 23 material about Abraham buying the field and the cave of Machpelah ('while Abraham wanted only the cave, he joins the field and the cave'), nothing about Abimelech's edict. Belongs in excluded_voices. This is the third chapter running with off-book JFB residue (deuteronomy 28, psalms 20, genesis 26) — a repo-wide sweep for JFB blocks whose content does not match their chapter is overdue."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "26",
+      "note": "Sizing predictor confirmed again: the count of source keys over ~2,000 words predicts cost better than the median. genesis 26 (35 keys / 22,356 words / n>2k=1) drafts like genesis 37 (36 / 23,957 / n>2k=1), which landed in one window; genesis 30 (43 / 24,607 / n>2k=5) would be dearer despite a similar total, because each over-2k key forces an entry that the filing rule pins in place. Suggest 'synthesis-loop.py size' report n>2k alongside the word count."
     }
   ]
 }
