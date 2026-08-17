@@ -2618,6 +2618,11 @@
       "book": "genesis",
       "chapter": "41",
       "note": "Regime (c) confirmed a second time, and the adjacency check was again decisive. genesis 41: 57 keys, 26,780 usable source words, median 219 w/key. Reading keys 22-27 consecutively (47, 162, 15, 121, 24, 130 words; v24 is literally 'See Gill on ,') showed the commentators cross-referencing rather than commenting, because Pharaoh's dream is told three times (1-7 dreamed, 17-24 retold, 25-32 interpreted). It tiled: 57 verses into 12 pericope entries, every span over 580 source words, no thin exemptions needed. Note the correction from genesis 31 still holds — median w/key is only a reason to RUN the adjacency check, never a substitute for it."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "note": "Repair-queue head sizing sweep (2026-08-17). Four consecutive --worst-first offers, all regime (a) narrative, none groupable: numbers 14 (45 keys / 30,409 words / median 393 / 28 keys already >=350); genesis 30 (43 / 24,607 / 338 / 20); exodus 32 (35 / 42,738 / 793 / 31 — over the 40k whole-batch line); judges 11 (40 / 29,358 / 318 / 19). The count that predicts cost is KEYS ALREADY >=350 SOURCE WORDS, since those verses cannot be grouped without manufacturing padding: they set a hard floor on entry count. Floors here are 19-31 entries before any grouping of the thin remainder, i.e. realistically 26-33 entries per chapter. For comparison the last two landed chapters were numbers 3 (10 entries) and genesis 41 (12 entries), each a full batch. The head is now roughly 2.5x a full batch per chapter. Suggest either (a) treating >=20 keys at 350+ as a one-chapter-is-the-whole-batch trigger alongside the 40k word rule, or (b) having 'size' print the 350+ key count, which is a better cost predictor than either total words or median."
     }
   ]
 }
