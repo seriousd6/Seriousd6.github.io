@@ -2532,6 +2532,20 @@
       "book": "acts",
       "chapter": "2",
       "note": "Acts 2 and numbers 3 are the two poles of the regime model and make a useful calibration pair, measured one batch apart. Numbers 3: 51 keys, 19,463 words, MEDIAN 230 — regime (c), a five-slot register repeated three times, which tiled to 10 entries and landed with every entry inside the window on the first pass. Acts 2: 47 keys, 117,188 words, MEDIAN 1,940 — regime (a) at its richest, 45 of 47 verses over 350 source words, no repetition to group on. Nearly the same key count; a factor of six in source words and a factor of eight in median. The picker reports only keys and total words, and on keys alone these two chapters look interchangeable. MEDIAN WORDS PER KEY is the single number that separates them, and it points in a consistent direction: a low median means the text repeats and the chapter should be tiled and is cheap; a high median means every verse carries distinct comment and the chapter is expensive in proportion to its keys. If only one field is ever added to the size output, make it the median."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "romans",
+      "chapter": "8",
+      "note": "Declined by worker B — nothing written. Romans 8 is 39 keys / 97,111 usable source words, median 1,958 per key, with ALL 39 verses at 350+ and not one in the thin or tight bands. It is the purest regime-(a) chapter measured this session — Acts 2 at least had two verses in the 200-349 band; this has none — and the second richest after Acts 2 by median. The useful benchmark is romans 11, which this worker did land: 36 entries on 75,205 words, and it consumed most of a fresh context window. Romans 8 is 29% more source words for 8% more entries, so it exceeds the one large chapter that was actually completed, on a context far past fresh. It does not tile: no dead verses (the groaning creation, the Spirit's intercession with groanings unutterable, the golden chain at 29-30, the closing challenge from 31) and the witnesses comment distinctly throughout."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "8",
+      "note": "Third data point for the median-per-key measure, and it firms up the threshold. The three richest chapters measured this session cluster tightly: acts 2 at median 1,940 (47 keys, 117,188 words), romans 8 at 1,958 (39 keys, 97,111), and romans 11 — the one large chapter actually landed — at 36 keys on 75,205 words. Against these, numbers 3 sat at median 230 and tiled 51 keys down to 10 entries. There is no middle ground in the sample: chapters measured this session are either under about 500 words per key and tile, or over about 1,900 and do not. Provisional reading of the boundary, offered as a hypothesis rather than a finding since nothing between 500 and 1,900 has yet been sized: median under ~400 predicts a register or diagnostic chapter that must be tiled and is cheap; median over ~1,000 predicts distinct per-verse comment where entries equal keys and cost scales with them. Worth testing against a chapter that falls in the gap before the rule is trusted."
     }
   ]
 }
