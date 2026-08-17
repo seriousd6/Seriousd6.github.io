@@ -2404,6 +2404,20 @@
       "book": "leviticus",
       "chapter": "26",
       "note": "Shape note for leviticus 26 (the blessings and the curses), and the reason it may be cheaper than its 46 keys suggest. Unlike the narrative chapters in the ready-work queue, this one contains genuine structural repetition of exactly the kind the loop doc names as grounds for grouping: the curse section escalates in four matched cycles, each opening on the refrain about punishing seven times more for sins (18-20, 21-22, 23-26, 27-33), and the witnesses treat each cycle as one unit rather than commenting verse by verse. Written per-verse those four cycles would produce sixteen-odd near-identical write-ups, which is the templating defect the audit exists to catch. The blessings section (3-13) is similarly continuous. A defensible tiling is roughly: 1-2 the prohibition and the sabbaths; 3-13 the blessings; 14-17 the first threat; then the four escalation cycles; 34-39 the land enjoying its sabbaths and the terror of the survivors; 40-45 the confession and the remembered covenant; 46 the colophon. That is about twelve entries rather than forty-six. Whoever takes it should settle the tiling before writing the first entry, since declaring any range turns on chapter-wide coverage enforcement."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "leviticus",
+      "chapter": "13",
+      "note": "Declined by worker B for context capacity — nothing written. Leviticus 13 (the leprosy diagnostics) is 59 keys / 24,178 usable source words, median 278 per key: only 20 verses at 350+, with 15 in the 200-349 band and 24 thin. Second-largest key count offered to this worker after luke 22, and larger than judges 9 which was declined at 57. BUT see the accompanying shape note before ranking it: measured by keys it looks like the most expensive chapter in the queue, and measured by honest entries it is probably the cheapest."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "13",
+      "note": "REFINEMENT to the sizing model this worker has been building across batches 15-22: key count predicts cost only AFTER honest grouping, and how much grouping is honest depends on chapter genre. Three regimes. (a) Narrative and argument — romans 11, genesis 31, genesis 37, judges 9 and 11: the witnesses say something distinct about nearly every verse, so entries roughly equal keys and key count is the true cost. (b) Liturgical or legal repetition — leviticus 26, with its four matched seven-times-more cycles: real grouping available, maybe 46 keys down to 12. (c) Register or diagnostic manuals — leviticus 13 is the extreme case, and the loop doc's own example (Numbers 7's twelve identical tribal offerings) is the same shape. Leviticus 13 is a clinical loop: the priest shall look, shut up seven days, look again on the seventh day, pronounce clean or unclean, repeated through bright spot, scall, boil, burning, baldness and garment. Sampled keys 29-32 run 365, 624, 314 and 114 words and say the same procedural thing each time; the median of 278 across 59 keys is itself the signature. Written per-verse this produces dozens of near-identical write-ups, which is precisely the templating defect the audit exists to catch — so per-verse here is not merely expensive, it is WRONG. Under honest tiling by case-type it is probably 10-14 entries, cheaper than anything else in the queue. Practical upshot for the picker: a low median-words-per-key alongside a high key count is the fingerprint of regime (c), and is a signal that the chapter is cheap and should be tiled, not that it is thin and expensive."
     }
   ]
 }
