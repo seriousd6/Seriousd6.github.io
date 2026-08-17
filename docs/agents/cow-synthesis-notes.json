@@ -2546,6 +2546,20 @@
       "book": "romans",
       "chapter": "8",
       "note": "Third data point for the median-per-key measure, and it firms up the threshold. The three richest chapters measured this session cluster tightly: acts 2 at median 1,940 (47 keys, 117,188 words), romans 8 at 1,958 (39 keys, 97,111), and romans 11 — the one large chapter actually landed — at 36 keys on 75,205 words. Against these, numbers 3 sat at median 230 and tiled 51 keys down to 10 entries. There is no middle ground in the sample: chapters measured this session are either under about 500 words per key and tile, or over about 1,900 and do not. Provisional reading of the boundary, offered as a hypothesis rather than a finding since nothing between 500 and 1,900 has yet been sized: median under ~400 predicts a register or diagnostic chapter that must be tiled and is cheap; median over ~1,000 predicts distinct per-verse comment where entries equal keys and cost scales with them. Worth testing against a chapter that falls in the gap before the rule is trusted."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "genesis",
+      "chapter": "31",
+      "note": "Declined again by worker B (first declined batch 16), nothing written. Unchanged at 55 keys / 33,830 usable source words. Re-examined this time rather than taken on the earlier call, because its median of 411 falls inside the untested gap in the median-per-key hypothesis recorded at romans 8. The adjacency check settles it: keys 38-42, all within Jacob's speech, run 22, 103, 169, 411 and 782 words with no repeated procedural template — the variation itself shows the commentators responding to distinct content rather than cycling a formula, v42 drawing 782 words on the God of Abraham and the fear of Isaac. So it is regime (a) with two legitimate pericopes only, the recital at 4-13 and the speech at 36-42, giving roughly forty entries. Still beyond this worker. The earlier shape note stands."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "31",
+      "note": "CORRECTION to the median-per-key hypothesis recorded one batch ago at romans 8. That note proposed median under ~400 predicts a tileable register chapter and over ~1,000 predicts per-verse comment, with the 400-1,000 band untested and flagged as needing a case. Genesis 31 is that case, and it lands badly for the median: at 411 it sits just above the proposed tiling line and does NOT tile at all. Numbers 3 tiled at median 230; genesis 31 does not tile at 411. Whatever boundary exists is therefore much lower and much narrower than proposed, and a median in the low hundreds is nowhere near sufficient evidence on its own. The measure that actually worked in both cases was the ADJACENCY CHECK — read three to five consecutive keys and ask whether they say the same procedural thing. On numbers 3 that showed a five-slot template repeated verbatim for three houses; on genesis 31 it showed five consecutive verses of one speech drawing 22, 103, 169, 411 and 782 words, which is the signature of distinct content. The check costs one tool call. Revised guidance: treat a low median as a reason to RUN the adjacency check, never as a substitute for it, and do not trust any threshold to classify a chapter unread."
     }
   ]
 }
