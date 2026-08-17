@@ -2518,6 +2518,20 @@
       "book": "deuteronomy",
       "chapter": "28",
       "note": "Sizing: 40,204 usable source words over 68 verses became 31 entries, not the 25 first planned. The four unsplittable overview verses (1, 15, 45, 68) carry Henry's and Calvin's whole-section essays — v45 alone is 4,182 source words — and each had to be compressed rather than split. What forced the six extra entries was the same pattern as genesis 37: a commentator's block filed at a span's first verse that runs forward over the whole pericope, so the filing rule loads one entry past what 650 words can hold. The tactic that worked was splitting a span the moment a first draft came in over 800, instead of trimming a 900-word draft down."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "acts",
+      "chapter": "2",
+      "note": "Declined by worker B — nothing written. Acts 2 (Pentecost, Peter's sermon, the three thousand) is 47 keys / 117,188 usable source words, median 1,940 per key, with 45 of 47 verses at 350+ and none thin. This is the largest chapter this worker has measured all session and appears to be at or near the corpus maximum: 1.56x romans 11 (75,205), which consumed most of a FRESH context window at 36 entries. Regime (a) under the genre model — Peter's sermon at 14-36 is continuous discourse, but the witnesses comment richly and distinctly per verse on the sound and the tongues, the list of nations, the mockery, the Joel citation, the resurrection argument from Psalm 16, and the three thousand — so it does not tile. 47 rich entries on 117k words of reading is not a one-batch job for any worker, on any context, and it is well beyond this one. Recommend it be treated as a known two-batch chapter if the loop ever supports splitting, or given to a fresh worker with nothing else queued."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "2",
+      "note": "Acts 2 and numbers 3 are the two poles of the regime model and make a useful calibration pair, measured one batch apart. Numbers 3: 51 keys, 19,463 words, MEDIAN 230 — regime (c), a five-slot register repeated three times, which tiled to 10 entries and landed with every entry inside the window on the first pass. Acts 2: 47 keys, 117,188 words, MEDIAN 1,940 — regime (a) at its richest, 45 of 47 verses over 350 source words, no repetition to group on. Nearly the same key count; a factor of six in source words and a factor of eight in median. The picker reports only keys and total words, and on keys alone these two chapters look interchangeable. MEDIAN WORDS PER KEY is the single number that separates them, and it points in a consistent direction: a low median means the text repeats and the chapter should be tiled and is cheap; a high median means every verse carries distinct comment and the chapter is expensive in proportion to its keys. If only one field is ever added to the size output, make it the median."
     }
   ]
 }
