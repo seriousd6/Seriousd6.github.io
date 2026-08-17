@@ -2963,6 +2963,40 @@
       "book": "psalms",
       "chapter": "134",
       "note": "Taken from --queue generate; the repair-queue head remains too large for this context. Two entries following the structure the commentators themselves identify: Clarke and Keil both read the psalm as a greeting to the night-watch (vv.1-2) and its reply (v.3), so the spans are 1-2 and 3 rather than a single three-verse entry. Entry 3 lands at 378 QA words, above the 350 floor but the thinnest entry I have written; the source there is only about 440 usable words once the site chrome is stripped, so it is genuinely short rather than under-worked."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "13",
+        "19",
+        "37",
+        "43"
+      ],
+      "note": "JFB scrape residue, ninth chapter — and the FIRST partial repeat of a target. All five JFB blocks here carry Deuteronomy 28 curses material (pestilence, exile, the captive king, devastation, cannibalism in a siege). Judges 8 drew Leviticus 26 / Deuteronomy 28; this draws Deuteronomy 28 alone. Full list by chapter: numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9, judges 8 (Lev 26/Deut 28), numbers 1 (Lev 11), joshua 8 (Deut 4), judges 9 (Deut 28). The repeat is worth noting because it is the first evidence that the drift is not uniformly random across the corpus — the blessings-and-curses chapters may be over-represented as sources. Still no fixed offset. All five declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "9",
+      "verses": [
+        "42"
+      ],
+      "note": "Confirms the joshua 8 caveat on block-keying, in a chapter where the cost was unavoidable. Henry's blocks here are keyed at vv1, 7, 22, 30 and 50, and his v22 block expounds vv22-41 as one sweep. The natural six-part tiling (1-6, 7-21, 22-29, 30-41, 42-49, 50-57) puts a Henry head inside five of the six entries, but 42-49 — the destruction of Shechem and the burning of the tower — has none, because Henry treats that material inside his v50 block on Thebez. No boundary anywhere in the chapter recovers him for that pericope without merging two distinct movements. Declared rather than distorted, per the rule formed at joshua 8: entry 42-49 carries four voices and no puritan-evangelical school."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "rejected",
+      "book": "judges",
+      "chapter": "9",
+      "verses": [
+        "22"
+      ],
+      "note": "numbers 31 was offered by the picker again this round and skipped per the owner's standing instruction that it is blocked pending a decision on its source file. Recording it here so the frequency is visible: it has now surfaced in the offer sample twice across the last several batches while remaining unattemptable, so every worker that draws it pays the sizing cost and discards the pick. If the block is going to stand for a while, it may be worth teaching the picker to skip it rather than leaving each worker to recognise and drop it."
     }
   ]
 }
