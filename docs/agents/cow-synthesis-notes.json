@@ -2889,6 +2889,13 @@
         "47"
       ],
       "note": "Keil and Delitzsch excluded from entries 17-43 and 47-54. In both cases their block is the running verse text of the span (vv18-23 and vv49-54 respectively) with no comment attached; their actual exposition of the muster is in the vv1-4 block and is used there. The ghost check caught the first of these — I had written a K&D clause into the tags from the block's presence without having named them in the prose, which is exactly the failure the check exists for."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "117",
+      "note": "Taken from --queue generate, flagged. The repair queue head served only chapters too large for this context; a corpus-wide scan of the generate queue found a tail of very small chapters the --worst-first ordering will never reach: psalms 117 (2 keys / 2,625 words), psalms 70 (5 / 3,701), psalms 108 (10 / 4,090), psalms 134 (3 / 4,493), psalms 123 (4 / 5,073), psalms 131 (3 / 5,367), jeremiah 45 (5 / 5,396), psalms 43 (5 / 5,478), psalms 53 (6 / 5,511), psalms 93 (5 / 5,603). These are worth knowing about as filler work for a worker with little context left, or as a fast way to move the chapter meter. psalms 117 is the shortest chapter in the Bible and synthesises as two single-verse entries."
     }
   ]
 }

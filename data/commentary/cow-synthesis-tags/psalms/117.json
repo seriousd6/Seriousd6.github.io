@@ -1,0 +1,165 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Augustine of Hippo",
+   "C.H. Spurgeon",
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine takes the nations called here for the courts of the Lord's house and the true Jerusalem, and turns the verse against those who have refused to be children of that city, since in doing so they cut themselves off from the communion of all nations."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the call itself the argument for Paul's use of it: unbelievers insensible of God's mercy and ignorant of his truth cannot praise him, so it would serve no purpose to address the heathen unless they were to be gathered into the unity of the faith with Abraham's children — and he distinguishes the silent witness of mountains and rivers from the praise of rational creatures. Gill grounds the summons in election and redemption out of every kindred and tongue."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry says the apostle has furnished us with a key, quoting the psalm as proof that the gospel was to be preached to and entertained by the Gentiles, and measures the novelty of the call against an age when only Judah knew God; Spurgeon reads the same breadth as a rebuke of the narrow national bigotry of our Lord's day, and calls those already gathered the advance-guard of a number no man can number."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports the psalm's manuscript history — thirty-two of Kennicott's and De Rossi's copies join it to the psalm before, and three omit it — refers it to the redemption from Babylon as a type of the world's redemption, passes on the Syriac heading about Ananias and the furnace, and divides the two clauses between Gentiles and Jews."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Can the summons belong to Old Testament times at all?",
+    "sides": [
+     {
+      "position": "no — it was never given to a Gentile nation in a tongue they understood, and none could praise God with Israel uncircumcised",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "no — addressing the heathen would serve no purpose unless they were to be gathered into the faith of Abraham",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "Passes on a Jewish reading that makes the psalm's brevity itself doctrinal — two verses for the two peoples, Jews by the law of Moses and Gentiles by the precepts of the sons of Noah, making one church as the two verses make one psalm."
+   }
+  ],
+  "themes": [
+   "praise the Lord, all ye nations",
+   "the calling of the Gentiles",
+   "the shortest psalm",
+   "the apostle quotes it to the Romans"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "Adam Clarke",
+   "John Gill",
+   "Keil and Delitzsch"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill would render it that God's mercy prevailed over us, the verb being the one used of the flood prevailing over the earth, and finds in it the exuberance of grace — an inundation in the Gentile world where it has flowed and overflowed; he insists the 'us' takes in Gentiles as well as Israelites, or the reason for all nations praising would have no force."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the same word as strength rather than bulk — not only great in number but powerful, prevailing over sin, Satan, death and hell — and turns the truth of the Lord into a list of promises kept: to send his Son, that he should die for transgressors, to receive all who come through him, and that the Gospel should be preached in every nation."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch note the psalm's peculiarities of language, the word here for nations being otherwise alien to Old Testament Hebrew, and take the two terms for all peoples without distinction and all nations without exception; they read the loving-kindness as superabundantly covering human sin and infirmity, and call mercy and truth the two divine powers which, going forth from Israel, shall conquer the world."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Whom does the \"us\" of the second verse include?",
+    "sides": [
+     {
+      "position": "Gentiles as well as Israelites — otherwise the reason given for all nations praising has no force",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Israel, over whom the mercy proves itself mighty and from whom it goes forth to the world",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "his merciful kindness is great toward us",
+   "grace prevailing like a flood",
+   "the truth of the Lord endureth for ever",
+   "mercy and truth going forth from Israel"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.85
+   }
+  }
+ }
+}
