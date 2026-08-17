@@ -2679,6 +2679,20 @@
         "18"
       ],
       "note": "Calvin at genesis 26:18 says Abraham 'had armed four hundred servants'. Genesis 14:14 gives 318. The synthesis reports Calvin's figure as Calvin wrote it rather than silently correcting it to the biblical number; flagging so the discrepancy is not later mistaken for a transcription error in this entry."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "8",
+      "note": "Sizing sweep for the next worker: the repair queue head currently holds two chapters a fresh context can finish. judges 8 = 35 keys / 21,246 words / n>2k=1 (head 4:2266, 18:1904, 35:1682) — profiles almost exactly like genesis 26 (35 / 22,356 / n>2k=1), which landed in one batch as 13 entries. joshua 8 = 35 keys / 22,644 words / n>2k=3 (head 30:3835, 1:2748, 3:2389) — same key count and total but three forced entries instead of one, so dearer. Take judges 8 first. Declined this batch on context budget, not on chapter size; nothing is in flight and no work was lost."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "7",
+      "note": "Repair-queue head sizing, this batch: 1corinthians 7 = 75,582 words / 40 keys; romans 8 = 97,111 / 39 (offered twice); exodus 28 = 33,449 / 43. With deuteronomy 32 (55,421), acts 5 (68,739), acts 16 (69,844) and 1corinthians 15 (116,326) from earlier sweeps, at least seven repair chapters now sit far past the ~40,000-word one-batch line. These are not merely 'the whole batch' — none is finishable in a single context at all under the current one-entry-per-pericope prose rules. They need either an explicit multi-batch protocol (persisting drafts to docs/ so a rotation cannot lose them) or an owner decision, or --worst-first will keep serving them ahead of the feasible tail forever."
     }
   ]
 }
