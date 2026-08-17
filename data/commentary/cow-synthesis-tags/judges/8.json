@@ -2,1246 +2,586 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
+  "range": "1-3",
+  "pericope_label": "Ephraim chides Gideon, and is answered softly",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they took the opportunity to expostulate when they brought him the heads of Oreb and Zeeb."
+    "prevalence": "single",
+    "summary": "Gill fixes the occasion, that the Ephraimites took the bringing of the heads of Oreb and Zeeb for their opportunity to expostulate, and notes that Gideon replied in a mild and gentle manner, giving the soft words that turn away wrath."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: no sooner was the enemy subdued than they quarrelled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Why hast thou served us thus, that thou calledst us not... And they did chide with him sharply",
-   "pride and envy breeding strife among brethren in the hour of triumph",
-   "only by pride cometh contention (Prov. 13:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he answered in a very mild and gentle manner, giving soft words which turn away wrath."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Is not the gleaning of Ephraim better than the vintage of Abiezer?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What have I done now in comparison of you? Is not the gleaning of the grapes of Ephraim better than the vintage of Abiezer?",
-   "a humble, soft answer that seeks peace rather than honour",
-   "in lowliness of mind let each esteem other better than themselves (Phil. 2:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the high honour conferred on them, with which they might be well contented."
+    "prevalence": "single",
+    "summary": "Henry sees Israel quarrelling with itself the moment the common enemy was down, and answers the complaint on three counts — that Gideon acted under a divine call, so that the quarrel reflected on God's conduct; that the case itself called Ephraim without any invitation; and that by not calling them he had saved their credit, since many would have gone back with the faint-hearted. He adds that those most backward to difficult service are the readiest to censure an enterprising spirit, that Gideon magnified their achievement above his own without taking flowers from God's crown to adorn theirs, and that some resentment remained which he prudently let cool."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: a soft answer turneth away wrath, their anger abated."
+    "prevalence": "single",
+    "summary": "Clarke holds the paragraph displaced, since Gideon had not yet crossed Jordan and the heads were brought to him beyond it, judges the Ephraimites to have performed the greater service in taking the two generals at the passes of Jordan, and observes that Gideon might have reproached them with the twenty-two thousand who once left him through faint-heartedness but took a more excellent way."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott derives Ephraim's arrogance from the tribe's strength, Joseph's double portion, Jacob's preference of the younger son and Joshua's long influence, and reads the complaint as a demand that their hegemony be acknowledged by all the tribes; he renders chide sharply as striving with force, cites the Vulgate's almost offering him violence, thinks the self-control the more remarkable in a man not naturally placable, notes that Zebah and Zalmunna were still uncaptured so that civil discord was ruinous at that moment, and gives the Chaldee's rendering of the proverb."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the paragraph stands in its chronological place. Clarke argues it cannot, since verse 4 has Gideon still to cross Jordan while the heads had been brought to him on the far side.",
+   "How much credit Ephraim had actually earned. Clarke takes Gideon's word for plain fact; Ellicott sees a deliberate waiving of his own due, with the two captured princes weighed against the vintage of obscure thousands; Henry reads it as self-denial that still refuses to rob God of the glory."
+  ],
+  "outliers": [
+   "The Chaldee paraphrase, Are not the weak of the house of Ephraim better than the strong of the house of Abiezer?",
+   "Clarke's note that Gideon could have retorted with the twenty-two thousand who deserted him for fear, and did not."
+  ],
   "themes": [
-   "God hath delivered into your hands the princes of Midian... Then their anger was abated toward him",
-   "the power of meekness and a soft answer to quell strife",
-   "a soft answer turneth away wrath: but grievous words stir up anger (Prov. 15:1)"
+   "a quarrel over the post of honour",
+   "the soft answer",
+   "gleaning better than vintage",
+   "credit saved by not being called"
+  ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: neither in the battle nor in the pursuit had he lost one man; they were faint, yet pursuing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Gideon came to Jordan, and passed over, he, and the three hundred men that were with him, faint, yet pursuing them",
-   "the noble constancy that endures to the end despite weariness",
-   "let us not be weary in well doing... if we faint not (Gal. 6:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Succoth lay in his way, a city beyond Jordan in the tribe of Gad; he asked bread for the people who followed him, being faint."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Give, I pray you, loaves of bread unto the people that follow me; for they be faint",
-   "the people of God owing help to those who fight in the common cause",
-   "if thine enemy hunger, feed him (Rom. 12:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "4-9",
+  "pericope_label": "The crossing, and the churlishness of Succoth and Penuel",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the chief magistrates made answer, one in the name of the rest."
+    "prevalence": "single",
+    "summary": "Gill derives Succoth from the booths Jacob raised there and Penuel from his seeing God face to face, and remarks that there was nothing of God in Penuel now."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry admires Gideon for keeping to the three hundred alone, their trumpets and torches exchanged for swords and spears, on the strength of the promise that by these God would save Israel; he applies fainting yet pursuing to the Christian's ordinary case, judges that the princes of Succoth neither feared God nor regarded man and shut up their compassion against their brethren, and explains that Gideon deferred punishment so as not to lose time, not to seem to act in passion, and to shame them the more once he had done what they thought impossible, the warning meanwhile leaving them space to repent."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: they feared the Midianites might yet prevail and take vengeance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Are the hands of Zebah and Zalmunna now in thine hand, that we should give bread unto thine army?",
-   "the baseness of withholding help from God's cause in fear and unbelief",
-   "the fearful, and unbelieving... shall have their part in the lake (Rev. 21:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he answered the princes of Succoth."
+    "prevalence": "single",
+    "summary": "Clarke reports the Vulgate's paraphrase that fatigue left them unable to overtake the fugitives, holds that a man engaged in the common cause had a right to expect succour and that the request was just and reasonable, judges that Succoth dared not trust God, and supposes the men of Penuel had insultingly pointed to the tower in which their defence lay."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: when the LORD hath delivered them, I will tear your flesh with thorns."
+    "summary": "Ellicott treats the crossing as resuming a narrative interrupted by the Ephraim episode, stresses how modest the request was in asking neither forces nor intelligence from men who would be first to feel Midian's vengeance, finds Succoth guilty of inhumanity and of want of faith, courage and patriotism, notes their exaggeration in calling three hundred followers an army, prefers thresh to tear and thinks harrows were driven over the men after thorns were scattered, and states plainly that the verse mixes heroic faith with a barbarous severity belonging to the age, not to be imitated. Keil and Delitzsch make the conjunction in faint yet pursuing explanatory, dismiss the Greek reading as of no critical worth, find in the refusal both fear of Midianite reprisal and contempt for Gideon's small force, and reject the view that the rare word for briers means threshing sledges set with flints."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What faint yet pursuing means. Clarke and the Vulgate make the fatigue prevent the pursuit; Keil and Delitzsch read the conjunction as explanatory, exhausted with pursuing, and Ellicott follows them while doubting the phrase's popular use.",
+   "Whether Succoth's refusal was fear or scorn. Clarke and Keil and Delitzsch both find fear of Midianite reprisal in it, the latter adding contempt for so small a force; Ellicott says the tone cannot be determined and convicts them on either reading.",
+   "What the punishment was. Keil and Delitzsch take the verb figuratively for severe chastisement and deny that the rare word means flint-set sledges; Ellicott takes it literally enough to picture harrows driven over the men."
+  ],
+  "outliers": [
+   "Ellicott's frank concession that the severity belongs to the wild times Gideon lived in and is no more to be approved than his later degeneracy.",
+   "Gill's remark that Penuel, named from Jacob's seeing God face to face, had nothing of God in it now."
+  ],
   "themes": [
-   "when the LORD hath delivered Zebah and Zalmunna into mine hand, then I will tear your flesh with the thorns",
-   "the faith sure of victory set against the fear that will not venture",
-   "whoso... seeth his brother have need, and shutteth up his bowels of compassion (1 John 3:17)"
+   "faint, yet pursuing",
+   "bread refused to brethren",
+   "the fist not yet in the hand",
+   "a threat made good later"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Penuel, named by Jacob from the Lord's appearing to him there face to face, but here was nothing of God now."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they answered him as Succoth had."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he went up thence to Penuel... and the men of Penuel answered him as the men of Succoth had answered him",
-   "the place where Jacob saw God face to face now sunk in unbelief",
-   "the memory of past mercies not keeping men from present sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he spake in a threatening way, sure of having conquered all his enemies and restored peace, of which he had no doubt."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the threat against the tower."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When I come again in peace, I will break down this tower",
-   "the boldness of faith counting the promised victory as good as done",
-   "being fully persuaded that, what he had promised, he was able also to perform (Rom. 4:21)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "10-17",
+  "pericope_label": "Karkor taken, and the reckoning with Succoth and Penuel",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the place Karkor, where the kings were with their remaining host."
+    "prevalence": "single",
+    "summary": "Gill repeats without deciding the old identification of Karkor with a fortress near Petra, has Gideon leave the direct road for the country of the tent-dwelling Arabians so as to fall on the camp unawares, and notes that the tower the men of Penuel had trusted in was beaten down."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the lesson that the active servants of God meet more dangerous opposition from false professors than from open enemies and must disregard men who are Israelites in name and Midianites in heart, that the less help and the more hindrance they meet the more the Lord assists them, and that many are taught by the briers and thorns of affliction who would learn no other way."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the great number that had fallen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fifteen thousand men, all that were left... for there fell an hundred and twenty thousand men that drew sword",
-   "the staggering completeness of God's victory through few",
-   "there is no restraint to the LORD to save by many or by few (1 Sam. 14:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he went a roundabout way, by those who dwelt in tents, the Arabians; smote the host, for the host was secure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Gideon went up... and smote the host: for the host was secure",
-   "the false security of the wicked broken by sudden judgment",
-   "when they shall say, Peace and safety; then sudden destruction cometh (1 Thess. 5:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: their host was smitten and thrown into confusion by the sudden approach of Gideon's army; he took the two kings and discomfited all the host."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he... took the two kings of Midian, Zebah and Zalmunna, and discomfited all the host",
-   "the LORD's deliverance complete, the princes of the foe brought low",
-   "thou hast ascended on high, thou hast led captivity captive (Ps. 68:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he returned to Penuel and Succoth, to chastise them for their ill treatment."
+    "prevalence": "single",
+    "summary": "Clarke doubts that Karkor is a place at all, preferring the sense of rest which the Vulgate adopted and which suits the statement that the host was secure, denies that before the sun was up is a proper translation and would read from the ascent of Chares with the Greek, Syriac and Arabic, takes the seventy-seven for the men chiefly concerned in the refusal, and reports Houbigant's emendation of he taught to he tore, which agrees with the threat and is backed by the versions, the two Hebrew letters being easily confused."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: him returning victorious from the war."
+    "summary": "Ellicott glosses Karkor as a safe enclosure, rejects the Petra identification as too far south for the Nobah and Jogbehah of the next verse, reads the circuit through nomad country as a further use of surprise against still hopeless odds, denies that the preposition can mean before, allows that the verb may be a misreading for he threshed and reports Ewald's alternative, suspects a local council of seventy with presiding sheykhs and infers that Succoth was a place of consequence, and observes that only the elders suffered since in an Oriental city the people have no voice in such decisions. Keil and Delitzsch take the phrase for the ascent of an unknown place before Succoth, call the Chaldee's before sunset contrary to the rules of the language, explain the compressed idiom by which the boy wrote the names down, gloss the disputed verb as causing them to know and making them feel, and defend the punishment as a duty laid on a man called to be deliverer and judge."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Karkor is a place or a common noun. Clarke argues it is nowhere else mentioned and follows the Vulgate in reading it as rest; Ellicott keeps it a proper name and disputes only its site.",
+   "How to render the note on Gideon's return. Clarke, Keil and Delitzsch and Ellicott all reject before the sun was up in favour of the ascent of a place called Heres, and all three reject the Chaldee's before sunset, Keil and Delitzsch on the ground that the word for ascent cannot mean a setting and Ellicott on the ground that the preposition cannot mean before.",
+   "What Gideon did to the elders. Clarke follows Houbigant's he tore; Ellicott allows he threshed or, with Ewald, a lesson taught the townsmen through the elders; Keil and Delitzsch keep he taught and gloss it as making them feel."
+  ],
+  "outliers": [
+   "Ellicott's observation that only the elders were punished, since in an Oriental city the people have no voice in such a decision.",
+   "Keil and Delitzsch's argument that the insult was ultimately to the Lord, who had just shown the whole nation whose soldiers these were."
+  ],
   "themes": [
-   "And Gideon the son of Joash returned from battle before the sun was up",
-   "the threatened judgment on those who failed his cause surely to fall",
-   "be sure your sin will find you out (Num. 32:23)"
+   "a camp that thought itself safe",
+   "the ascent of Heres",
+   "seventy-seven names written down",
+   "taught with briers and thorns"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he spied a young man of the city, laid hold on him, and inquired about the chief magistrates; he described the princes and elders, seventy-seven men."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he described unto him the princes of Succoth, and the elders thereof, even threescore and seventeen men",
-   "God's judgments exact, falling on the guilty and not at random",
-   "the LORD knoweth them that are his (2 Tim. 2:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he entered the city and bespoke the inhabitants."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the addition 'that are weary' enhances the guilt of the elders."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold Zebah and Zalmunna, with whom ye did upbraid me, saying, Are the hands... now in thine hand?",
-   "the LORD vindicating his cause and shaming the unbelief of doubters",
-   "let God be true, but every man a liar (Rom. 3:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he took all of them, especially those most guilty, to be made public examples."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: him taking the elders and teaching them with thorns."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he took the elders of the city, and thorns of the wilderness and briers, and with them he taught the men of Succoth",
-   "God chastening the hard-hearted who refuse mercy to his people",
-   "he shall have judgment without mercy, that hath shewed no mercy (James 2:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he beat down the tower as he had threatened, and slew the men of the city."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he beat down the tower of Penuel, and slew the men of the city",
-   "no stronghold availing against the judgment of God",
-   "though thou exalt thyself as the eagle... thence will I bring thee down (Obad. 1:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "18-21",
+  "pericope_label": "The kings of Midian answer for Tabor, and are slain",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this was after he brought them into the land of Canaan, perhaps to his own city Ophrah."
+    "prevalence": "single",
+    "summary": "Gill holds Jether a proper avenger as near kinsman and the death by a youth's hand the greater mortification for kings, and reads their request to fall by Gideon's own hand as a matter of honour."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they answered, each one resembled the children of a king."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What manner of men were they whom ye slew at Tabor?... each one resembled the children of a king",
-   "the blood of the innocent crying for justice",
-   "the LORD... will avenge the blood of his servants (Deut. 32:43)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were his brethren by his mother's side."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: if ye had saved them alive, I would not slay you."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They were my brethren, even the sons of my mother... if ye had saved them alive, I would not slay you",
-   "the avenging of innocent blood righteous yet without malice",
-   "if it be possible... live peaceably with all men (Rom. 12:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Jether, as near kinsman, was a proper person to avenge the blood, and for the greater mortification of the kings; the youth feared."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he said unto Jether his firstborn, Up, and slay them. But the youth drew not his sword: for he feared",
-   "great and weighty tasks not for the untried and timid",
-   "I have written unto you, young men, because ye are strong (1 John 2:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they chose rather to die by the hand of so great and valiant a commander than by a youth."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry treats the exchange as a formal indictment, supposing the brothers had sheltered in the mountain dens Israel made for fear of Midian and been killed in cold blood, and holds that Gideon asked the question so that the murderers' own admission of the men's comeliness should aggravate the crime; he notes that Gideon might have executed them as Israel's judge but chose the character of avenger of blood as next of kin, that murder seldom goes unpunished even in this life, that courage does not always run in the blood, and that the crescents were badges of royalty or of idolatry which Gideon afterwards put to no good use."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that the question has no antecedent and must be conjectured, supposes Gideon had a confused report of a massacre of his family and had hoped to exchange the kings for living prisoners, compares his change of mind to Aeneas turning on Turnus at the sight of Pallas' belt, recalls Tacitus on Civilis handing prisoners to his small son as targets and asks whether anything of the kind could have been meant here, and traces the crescents to the moon-worship of the Ishmaelites, surviving on their ensigns and mosques after Mohammed had destroyed its idolatrous use."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: their words, as the man is, so is his strength."
+    "summary": "Ellicott holds the colloquy abridged and the question a taunt or an expression of grief, confesses complete ignorance of the battle at Tabor while allowing that the brothers may have fallen in Barak's fight or early in the invasion, notes that the kings had been kept alive to answer the taunt of Succoth and had been led in triumph until now, grounds the execution in the law of retaliation and Jether's inheritance of the avenger's duty while insisting Gideon be judged by his own day's standard, and identifies the ornaments as crescents still used to decorate animals. Keil and Delitzsch deny that the interrogative means where, rendering it in what form were the men, and take the reply as the evidence on which retaliation was applied."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What lies behind the question. Clarke reconstructs a massacre of Gideon's family during his absence, of which he had only a confused report; Ellicott says the details are wholly unrecoverable and offers two possible occasions.",
+   "How the question should be rendered. Keil and Delitzsch insist it asks in what form the men were, not where they are; Ellicott gives the literal where are the men and treats it as a taunt rather than an enquiry.",
+   "By what right Gideon killed them. Henry has him decline the judge's authority for the nearer character of avenger of blood; Ellicott grounds it in the law of retaliation and in Jether's inherited duty, while warning that the act belongs to its age."
+  ],
+  "outliers": [
+   "Clarke's parallel from Virgil, where Aeneas holds his hand over the suppliant Turnus until he catches sight of the dead Pallas' belt.",
+   "Clarke's report from Tacitus that Civilis gave captives to his little son to be shot at with boyish darts, and his question whether Gideon could have meant anything similar.",
+   "Ellicott's suggestion that the kings, still riding in their splendour, may have thought with Agag that the bitterness of death was past."
+  ],
   "themes": [
-   "Rise thou, and fall upon us... And Gideon... slew them, and took away the ornaments that were on their camels' necks",
-   "the proud oppressors brought down in their turn",
-   "they that take the sword shall perish with the sword (Matt. 26:52)"
+   "a question that is really a charge",
+   "the avenger of blood",
+   "a sword a boy would not draw",
+   "crescents off the camels' necks"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
   }
  },
  "22": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "22-23",
+  "pericope_label": "The crown offered and refused",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the chief men met and sent a deputation offering him the government."
+    "prevalence": "single",
+    "summary": "Gill has the chief men consult together and send a deputation with the offer, and distinguishes what Gideon refused from what he kept: not the judgeship to which God had raised him, but the kingship, for which he had neither authority nor call, the choice of a king belonging to God and not to the people."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the offer of a crown."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Rule thou over us, both thou, and thy son, and thy son's son also: for thou hast delivered us",
-   "gratitude tempting to exalt a man into the place that belongs to God",
-   "it is better to trust in the LORD than to put confidence in princes (Ps. 118:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry thinks the offer honestly meant, since the man who bore the toil of the deliverance might reasonably hold the honour afterwards, and applies it to Christ, who having delivered us from our worst enemies may fitly rule those he has freed to serve him without fear; in the refusal he finds both modesty, since Gideon meant to serve rather than rule and thought the honour of doing good recompense enough without entailing grandeur on his family, and piety, suspecting that Gideon had discerned a dislike of the theocracy and a wish for a king like the nations, and concluding that no good man can be pleased with an honour that belongs peculiarly to God."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he declined the kingship, for which he had no call from God, the choice of a king belonging to him; the LORD shall rule over you."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls them a weak, foolish and inconstant people, dazzled by an instrument into throwing off the divine yoke for an unlimited hereditary monarchy, and lays down the distinction that unlimited monarchy is a curse while a limited monarchy may be a blessing and even an appointment of God; he observes that few men with such power at command would have answered as Gideon did, that the speech recalls the nation to its first principles, and contrasts it with Cromwell's reply when offered the crown of England."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott makes this the opening of the third phase of Gideon's life, containing both his noblest act and his most questionable, explains that the people had learned the value of united leadership but forgotten the special call behind it and the kingship of God, observes that Gideon kept the judge's office while refusing a hereditary crown before the day anticipated in the law of the king had come, quotes Cassel's comparison with Washington accepting the presidency in obedience to the people's voice, and finds in Gideon so far something of Joshua's greatness and of David's grace. Keil and Delitzsch alone read a second temptation inside the offer — that having refused the crown from true fidelity, Gideon yielded to the wish to secure for the future the position the Lord had given him, recounting how that Lord had appeared in His angel, commanded the altar and the atoning sacrifice, and made His will known again and again."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What exactly Gideon declined. Gill and Ellicott both hold that he kept the judgeship and refused only the crown, Gill on the ground that the choice of a king is God's and Ellicott that the day of the law of the king had not yet come.",
+   "How the refusal should be scored. Henry, Clarke and Ellicott all treat it as Gideon's finest hour; Keil and Delitzsch find in the same moment the beginning of his fall, since the offer tempted him to secure his own position for the future."
+  ],
+  "outliers": [
+   "Clarke's political aside that unlimited monarchy is a curse while limited monarchy may be an appointment of God.",
+   "Clarke's contrast between Gideon's answer and Cromwell's when the commons offered him the crown of England.",
+   "Cassel's parallel, quoted by Ellicott, of Washington accepting the presidency while owning the invisible hand that conducts the affairs of men."
+  ],
   "themes": [
-   "I will not rule over you, neither shall my son rule over you: the LORD shall rule over you",
-   "the noble refusal of self-exaltation, owning God alone as King",
-   "the LORD is our king; he will save us (Isa. 33:22)"
+   "a crown offered on the field",
+   "the Lord shall rule over you",
+   "theocracy declined for monarchy",
+   "the temptation inside the refusal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
+   }
   }
  },
  "24": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "24-27",
+  "pericope_label": "The golden rings, and the ephod set up at Ophrah",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he thought they would scarcely deny this, since they had offered him a crown."
+    "prevalence": "single",
+    "summary": "Gill observes that men who had just offered a crown would scarcely refuse a smaller request, collects the divergent computations of what seventeen hundred shekels of gold came to in ounces, crowns and pounds, holds that so great a quantity cannot all have gone into a single garment, and rejects the Jewish view that the ephod was a memorial of the victory on the ground that a pillar would have served far better than a garment, concluding that it was made with a religious intention afterwards perverted to superstition."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the request for the earrings."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I would desire a request of you, that ye would give me every man the earrings of his prey",
-   "even the best of men may take a wrong step after a right one",
-   "let him that thinketh he standeth take heed lest he fall (1 Cor. 10:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they gave them with all their hearts, most freely and cheerfully."
+    "prevalence": "single",
+    "summary": "Clarke compares the request to Aaron's collection of earrings for the golden calf, leaves it open whether the ephod was meant for worship or for a trophy while thinking it likeliest that Gideon intended a place of worship at Ophrah and was providing its vestments, reckons the shekel at half an ounce to make seventy pounds ten ounces of gold, recalls the rings sent to Carthage after Cannae, objects that no man could wear a coat of nearly a hundred pounds and guesses at a miniature tabernacle service, and explains going a whoring as the idiom of a nation married to God for whom idolatry is adultery."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: them spreading a garment and casting in the earrings."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "We will willingly give them. And they spread a garment, and did cast therein every man the earrings of his prey",
-   "even cheerful giving must be directed to right uses",
-   "God loveth a cheerful giver (2 Cor. 9:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the weight, computed at some eight hundred ounces of gold; besides ornaments, collars, and purple raiment of the kings."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the weight of the golden earrings... was a thousand and seven hundred shekels of gold; beside ornaments, and collars, and purple raiment",
-   "riches, even given of God, carrying their peril",
-   "they that will be rich fall into temptation and a snare (1 Tim. 6:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he made an ephod of some of the gold, set up in his city Ophrah; all Israel went a whoring after it, and it became a snare."
+    "summary": "Ellicott makes the request the moral of the passage, that magnanimity which stands firm under a great trial often succumbs to a weaker one, and wishes Gideon had answered as Abraham did to the king of Sodom; he explains the rings as serving for currency where there was no coinage, suspects the text may say that Gideon himself spread the cloth, infers from the quantity of gold a slaughter of many leading Midianites, rejects both the identification of the ephod with an idol and the Rabbinic reading of it as a memorial, and finds Gideon's motive in Ophrah — a wish, like Jeroboam's later, to keep direct hold on the nation's worship as a secret of political power, securing by unworthy expedients what had come by divine appointment. Keil and Delitzsch describe the cloth spread for the collection, separate the rings Gideon asked for from the crescents, ear-drops, purple and camel-bands the people kept, deny against Gesenius that ephod means an image or an idol rather than the high priest's shoulder-dress with its breastplate, and note that the gold need not all have gone into the garment."
    }
   ],
   "debates": [
-   [
-    "Gideon's intent in the ephod",
-    "The witnesses leave his motive uncertain — perhaps a memorial of the victory, or a means of inquiring of God; whatever the intent, it was unwarranted, apart from the appointed tabernacle, and became idolatry."
-   ]
+   "What the ephod was. Keil and Delitzsch and Ellicott both insist it means the high priest's vestment and not an idol, against Gesenius and the Syriac and Arabic versions.",
+   "What it was for. Clarke leaves worship and trophy open but inclines to a sanctuary at Ophrah; Gill rejects the Rabbinic memorial theory as ill-suited to a garment; Ellicott rejects it too and reads the motive as political, a counter-attraction to Shiloh.",
+   "How much gold was involved. Gill reports several irreconcilable computations; Clarke and Ellicott agree on about seventy pounds; Keil and Delitzsch insist that whatever the quantity, it need not all have been used on the ephod itself."
   ],
-  "outliers": [],
+  "outliers": [
+   "The three bushels of Roman knights' rings emptied on the floor of the Carthaginian senate after Cannae, cited independently by Clarke and Ellicott.",
+   "Keil and Delitzsch's inventory of what Gideon did not ask for and the people kept — the ear-drops, the purple, and the bands from the camels' necks."
+  ],
   "themes": [
-   "Gideon made an ephod thereof... and all Israel went thither a whoring after it: which thing became a snare",
-   "the well-meant device of a good man turned to idolatry and ruin",
-   "in vain do they worship me, teaching for doctrines the commandments of men (Matt. 15:9)"
+   "a request made at the right moment",
+   "gold enough for a slaughter",
+   "an ephod that was not an idol",
+   "a counter-attraction to Shiloh"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.32
+   }
   }
  },
  "28": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "28-32",
+  "pericope_label": "Forty years of quiet, and the house of Gideon",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Midian was humbled and brought under, their power over Israel broken."
+    "prevalence": "single",
+    "summary": "Gill has Gideon disband his army and retire to Ophrah while still acting as judge, explains that the seventy sons were not all born after the victory since Jether was already of age, defines the concubine as a secondary wife who never entered Gideon's house but lived at Shechem where he met her while trying causes, and sums up his death after forty years with a large family, wealth and credit."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry admires Gideon's modesty in coveting no palace but returning to the house he had lived in before his elevation, like the Roman called from the plough who went back to it when the war was over, says outright that in taking many wives he transgressed the law, reads Abimelech's name as my father a king and notes that he proved the ruin of the family, and closes with an obituary of a man who died in honour and in a good old age, having lived as long as he was capable of serving God and his country."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that Midian could make head no more during the forty years of Gideon's government, defines the concubine as a lawful but secondary wife whose children could not inherit, holds that the mother gave the name Abimelech to stimulate her son to seek the supreme government in his father's right, and supplies a date for Gideon's death."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the country in quietness forty years."
+    "summary": "Ellicott closes the second epoch of Gideon's life here, thinks the reversion to the name Jerubbaal significant since Baal had failed to plead and Gideon was still not safe from idolatry, argues from the many wives that Gideon was a king in all but name in the most magnificent and least honourable period of his career, against the law of the king which forbade multiplying wives and gold; he takes the concubine for a Canaanite of Shechem and Gideon's conduct as against the law much as Solomon's was though the law was less known in this anarchical period, weighs whether the name Abimelech came from the father or from the Shechemites and the mother, likens it to the dynastic titles of eastern rulers, calls Abimelech a bad reproduction of Gideon with his courage and none of his virtues, and ends on the bitter fruit borne in the next generation. Keil and Delitzsch explain that these family notices prepare for the history of the sons, in which the sin of Gideon came to a head and judgment burst on his house, find the retirement pointedly told by the phrasing and the sudden name Jerubbaal, and mark that Gideon died a peaceful death, which his sons did not."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How Gideon's many wives should be judged. Henry says plainly that he transgressed the law; Ellicott makes them evidence that he was a king in all but name, in breach of the law of the king; Gill treats the number as a matter of arithmetic.",
+   "Who gave Abimelech his name and why. Clarke assigns it to the mother's ambition; Ellicott weighs a surname bestowed by the father against a title given by the Shechemites and the mother, and prefers the latter.",
+   "How to read Gideon's end. Henry and Gill both close in honour and prosperity; Ellicott grants the peace but points to the bitter fruit of the next generation, and Keil and Delitzsch contrast his peaceful death with the fate of his sons."
+  ],
+  "outliers": [
+   "Henry's parallel of the Roman general called from the plough who returned to it when the war was over.",
+   "Ellicott's observation that the sudden reappearance of the name Jerubbaal may itself carry a warning.",
+   "Gill's detail that the concubine was never brought into Gideon's house, but met at Shechem while he sat as judge."
+  ],
   "themes": [
-   "Thus was Midian subdued... they lifted up their heads no more. And the country was in quietness forty years",
-   "the complete and lasting peace God gives his people",
-   "he maketh wars to cease... he breaketh the bow (Ps. 46:9)"
+   "the land quiet forty years",
+   "a king in all but name",
+   "my father a king",
+   "an honourable death and a bitter seed"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the war being ended, he disbanded his army and retired to his own house at Ophrah."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jerubbaal the son of Joash went and dwelt in his own house",
-   "the great deliverer content with a private station, free from ambition",
-   "study to be quiet, and to do your own business (1 Thess. 4:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was the number of all his sons; he had children before, as Jether his firstborn; he had many wives."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Gideon had threescore and ten sons of his body begotten: for he had many wives",
-   "even the faithful may follow the world's ways to their hurt",
-   "neither shall he multiply wives to himself, that his heart turn not away (Deut. 17:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she was not a harlot, but a secondary wife, of the meaner sort; the son was named Abimelech."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his concubine that was in Shechem, she also bare him a son, whose name he called Abimelech",
-   "the seed of future trouble sown in an irregular union",
-   "they have sown the wind, and they shall reap the whirlwind (Hos. 8:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he lived some forty years after the war, blessed with a large family, wealth, esteem, and favour with God and men; buried in the sepulchre of his father."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Gideon the son of Joash died in a good old age, and was buried in the sepulchre of Joash his father",
-   "God honouring his faithful servant with a peaceful, honoured end",
-   "thou shalt come to thy grave in a full age, like as a shock of corn (Job 5:26)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "33": {
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "33-35",
+  "pericope_label": "The relapse to Baal-berith, and the ingratitude to Gideon",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they turned from God and the pure worship of him to idolatry."
+    "prevalence": "single",
+    "summary": "Gill records that Israel turned from the pure worship of God to idolatry as soon as Gideon was dead, follows the Targum in making it the worship of the Lord that they forgot and calls it base ingratitude, and supplies the sequel bluntly, that what they showed Gideon's house was not unkindness merely but the cruelty of slaughtering his seventy sons."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads Baal-berith as the lord of the covenant, the deity presiding over compacts and treaties like the Jupiter or Mercury of the Romans; he objects grammatically to the English separation of Jerubbaal from Gideon, and closes with a summing-up of the man — a mighty man of valour and a true patriot who nevertheless would not move without incontestable proof, disinterested in refusing a crown that would have altered a constitution acknowledging no ruler but God, wrong in the ephod whatever his motive since he had no authority for such an innovation, and not very exemplary in private life — refusing on that ground the parallel with Christ which Ambrose and Augustine drew after Origen, and laying down that where the Spirit calls a thing a type we must believe and examine, but where men produce their own types we may doubt and pass on."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: them making Baal-berith their god."
+    "summary": "Ellicott quotes the comment that they returned to their vomit, finds in the speed of the relapse a proof of how quickly unauthorised symbols become positive idolatry as the reign of Ahab showed again, holds that Jerubbaal himself could not have worshipped Baal though his small deflection from the ritual became a wide divergence from the faith, allows that the Hebrew could mean a covenant made with Baal while preferring the ordinary rendering, dismisses the attempt to make Baal-berith a goddess of Berytus, sees in the forgetting the standing tendency to syncretism illustrated from Zephaniah and the Samaritans, and would join the two names as allusive, the hewer of their enemies and the pleader against Baal being repaid with apostasy to Baal. Keil and Delitzsch insist that Baal-berith means not the god of covenants but a god in covenant, in imitation of Israel's own covenant God, describe the Shechem worship as a counterfeit of the worship of Jehovah, and read the doubled name as recalling what the Baal-fighter had deserved of Israel."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What Baal-berith means. Keil and Delitzsch argue for a god in covenant with Israel, a counterfeit of Israel's covenant with Jehovah; Clarke takes it for a god who presides over covenants, like the Roman Jupiter of treaties; Ellicott reports both the ordinary rendering and the versions' covenant-with-Baal, and prefers the former.",
+   "How the doubled name should be printed and read. Clarke objects to the English separation on grammatical grounds; Ellicott would join the names with the Vulgate and finds both allusive; Keil and Delitzsch read the pairing as pointing to what Gideon had deserved.",
+   "How Gideon's career should finally be judged. Clarke sets valour, patriotism and disinterestedness against hesitation, the unauthorised ephod and an unexemplary private life; Ellicott traces the nation's collapse to that same small deflection from the appointed ritual."
+  ],
+  "outliers": [
+   "Clarke's refusal of the parallel between Gideon and Christ drawn by Ambrose and Augustine after Origen, on the ground that it is no credit to either to be so compared.",
+   "Clarke's rule that where the Spirit of God names a type we must believe and examine, but where men produce their own we may doubt and pass on.",
+   "Ellicott's illustrations of syncretism, the men who swore both by the Lord and by Malcham and the Samaritans who feared the Lord and served their own gods."
+  ],
   "themes": [
-   "as soon as Gideon was dead, that the children of Israel turned again, and went a whoring after Baalim, and made Baalberith their god",
-   "reformation held only by the leader, failing when he is gone",
-   "there arose another generation... which knew not the LORD (Judg. 2:10)"
+   "a return to the vomit",
+   "a god in covenant",
+   "ingratitude to God and to a deliverer",
+   "the account rendered of Gideon"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they forgot and forsook him, which showed base ingratitude; he had delivered them from all their enemies on every side."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the children of Israel remembered not the LORD their God, who had delivered them out of the hands of all their enemies",
-   "to forget the LORD and his benefits the beginning of apostasy",
-   "bless the LORD, O my soul, and forget not all his benefits (Ps. 103:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they showed great unkindness and cruelty, slaying his seventy sons, as related in the next chapter."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: their failure to show kindness to his house."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither shewed they kindness to the house of Jerubbaal, namely, Gideon, according to all the goodness which he had shewed",
-   "forsaking God hardening the heart against all goodness",
-   "men shall be... unthankful, unholy, without natural affection (2 Tim. 3:2-3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
