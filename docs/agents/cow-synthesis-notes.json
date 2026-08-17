@@ -2587,6 +2587,37 @@
       "book": "psalms",
       "chapter": "20",
       "note": "Taken from --queue generate rather than --queue auto. The repair queue head was serving only 30k-49k-word chapters (deuteronomy 28, numbers 14, genesis 27, exodus 28, acts 27) that no single context can finish; psalms 20 at 9,528 source words over 9 keys was finishable. Six entries tiling vv.1-9: 1, 2-4, 5, 6, 7-8, 9. New voice-to-school mappings used and verified against existing psalms tags: C.H. Spurgeon -> puritan-evangelical, Augustine of Hippo -> latin-fathers."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "41",
+      "verses": [
+        "21",
+        "27",
+        "39",
+        "51",
+        "57"
+      ],
+      "note": "JFB is pure residue in this chapter: all five of its blocks carry Genesis 35 material (Jacob's return to Bethel, Rachel's death at Ephrath, Luz and the almond trees, Benjamin born in Canaan, Esau's red skin) with nothing whatever on Genesis 41. Excluded from the voice map entirely. Same pattern as JFB at numbers 3, where its seven blocks were Leviticus 13-14 leprosy."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "41",
+      "verses": [
+        "54"
+      ],
+      "note": "Ellicott's block at key 54 ends with the full StudyLight page furniture — navigation menus, CSS, the site's JS bundle and book_data array — appended after the genuine comment on the dearth. Usable text stops at the Cook/Amenemha III excursus; everything after is markup. Same trailing-furniture defect seen at romans 11:36 and numbers 3:51."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "41",
+      "note": "Regime (c) confirmed a second time, and the adjacency check was again decisive. genesis 41: 57 keys, 26,780 usable source words, median 219 w/key. Reading keys 22-27 consecutively (47, 162, 15, 121, 24, 130 words; v24 is literally 'See Gill on ,') showed the commentators cross-referencing rather than commenting, because Pharaoh's dream is told three times (1-7 dreamed, 17-24 retold, 25-32 interpreted). It tiled: 57 verses into 12 pericope entries, every span over 580 source words, no thin exemptions needed. Note the correction from genesis 31 still holds — median w/key is only a reason to RUN the adjacency check, never a substitute for it."
     }
   ]
 }
