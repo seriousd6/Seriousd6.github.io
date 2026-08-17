@@ -2913,6 +2913,38 @@
       "book": "psalms",
       "chapter": "70",
       "note": "psalms 70 is almost entirely a repetition of psalms 40:13-17, and every voice says so: Calvin declines to expound it twice and refers the reader back, Clarke sends the reader to his notes on the fortieth, Keil and Delitzsch call it a detached portion converted to the Elohimic style, and Spurgeon notes it is the second such repeated psalm after psalms 53 (itself a rehearsal of psalms 14). Most of the surviving commentary is a variant list against the fortieth rather than fresh exposition, so the synthesis is necessarily thinner in doctrine and heavier in textual comparison than a normal chapter. Worth knowing that the same will be true of psalms 53 and psalms 14 when they come up."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "8",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JFB scrape residue, eighth chapter and an eighth distinct off-book target: all three JFB blocks in joshua 8 carry Deuteronomy 4 material (God's nearness to hear and aid, the voice heard from the mount without any form seen, the prohibition of images and the catalogue of Egyptian and Canaanite idolatry). Running list of targets by chapter — numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9, judges 8 (Lev 26/Deut 28), numbers 1 (Lev 11), joshua 8 (Deut 4). No two share a target and none is an adjacent-chapter shift, which rules out any fixed-offset repair. All three declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "8",
+      "verses": [
+        "3"
+      ],
+      "note": "The named-but-not-sourced check caught a real misattribution I would otherwise have shipped. Writing entry 3-9 I reproduced Henry's survey of the competing reconstructions of the troop numbers, which includes the clause 'as Calvin thinks, he kept entire for that purpose'. That is Henry CITING Calvin; Calvin has no block of his own in vv3-9. Naming Calvin there would have credited him with a position in a span where the corpus carries nothing from him. Rephrased to 'on another reckoning Henry reports'. General rule: when a commentator names another commentator inside his own block, that is quotation, not a second voice — attribute it to the quoting author or leave it unnamed."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "8",
+      "verses": [
+        "10"
+      ],
+      "note": "Block-keying constrained the tiling again, and this time could not be fully worked around. Henry's blocks in joshua 8 are keyed at vv1, 3, 23 and 30, and his v3 block expounds vv1-24 as a single sweep — so every possible boundary after v3 costs the puritan-evangelical voice somewhere. I tiled 1-2 / 3-9 / 10-22 / 23-29 / 30-35, which leaves 10-22 without Henry; the only alternative that keeps him throughout is one 22-verse entry, which is worse. Refines the numbers 1 note: setting boundaries from the discursive blocks works when those blocks are short, but when a commentator runs one exposition across most of a chapter, some pericope will lose him no matter where the cuts fall. Accept it and declare it rather than distorting the tiling."
     }
   ]
 }
