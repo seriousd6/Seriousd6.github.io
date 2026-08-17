@@ -3089,6 +3089,44 @@
       "book": "psalms",
       "chapter": "43",
       "note": "Taken from --queue generate, flagged. Two entries, spans 1 and 2-5. The chapter's real interest is that every voice treats it as the second half of psalms 42: Calvin cites forty-six manuscripts printing them as one and passes on Williams's account of choristers dividing an over-long anthem, Clarke counts the same manuscripts and notes the Hebrew and Chaldee give this psalm no title at all, and the refrain shared with psalms 42:5 and 42:11 closes it. Anyone repairing psalms 42 later should read the two together; several of the notes filed under 43 explicitly refer back rather than expound."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "22",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "JFB scrape residue, twelfth chapter confirmed: all five JFB blocks in joshua 22 (keys 5, 11, 17, 23, 29) carry Deuteronomy 16:22-17:20 material - the prohibited pillar, the idolatry trial and stoning, the Sanhedrim appeal, the law of the king, and the king's copy of the law. None of it touches Joshua. Excluded via RESIDUE. Running target list: numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9, judges 8 (Lev 26/Deut 28), numbers 1 (Lev 11), joshua 8 (Deut 4), judges 9 (Deut 28), exodus 21 (Exod 8-9), genesis 44 (Gen 37), joshua 22 (Deut 16-17). Offsets differ every time; there is no arithmetic shortcut."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "22",
+      "verses": [
+        "34"
+      ],
+      "note": "StudyLight page furniture (.sub-menu{, Powered by Light speed Technology, var book_data =) appears here in ELLICOTT's last block at v34, not JFB's and not Gill's. Combined with the sacred-texts.com navigation found in Gill's tail at numbers 1, this makes three different commentators whose final block can carry scraper tailings. A stripper must run over every commentator's last block, not just a nominated one. Ellicott's real comment at v34 is a single clause before the furniture starts, so the block is still usable."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "22",
+      "note": "Span-sized targets worked a second time. Sizing each entry to its span (5280/7895/5681/4397 source words -> 649/647/641/621) instead of drafting toward the ceiling produced four entries needing at most one trim pass each, and the last two needed none. Quality gate came back with zero defects in every category - no UNSOURCED, NOISE, META, SLOT, PAD, THIN, FLOOR or TMPL. This rule and the over-writing guidance it replaces belong in docs/agents/cow-synthesis-loop.md."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "22",
+      "note": "Henry's block heads at vv1, 10, 21, 30 mapped exactly onto the chapter's four natural pericopes, so every entry carried a puritan-evangelical voice with no tiling distortion. When the most discursive commentator's block boundaries and the narrative's own joints coincide, the block-keying rule costs nothing; it is only when one exposition runs across most of a chapter that some pericope must lose him."
     }
   ]
 }
