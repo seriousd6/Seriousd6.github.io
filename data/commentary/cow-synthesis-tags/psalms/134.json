@@ -1,0 +1,196 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Augustine of Hippo",
+   "C.H. Spurgeon",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1-2",
+  "pericope_label": "The greeting to the night-watch",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine works on the courts, which mean the wider spaces of a house: he who stands there is not straitened but enlarged, and in that enlargement a man can love his enemy, since breadth lies in charity and straitness in hatred. On blessing by night he is blunter — it is easy to bless by day, that is in prosperity, and a man should not boast of blessing with his tongue if he curses with his life."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin grants that some of the more zealous of the people did remain overnight in the Temple, as Anna did, but argues from the close of the psalm that priests only are addressed, since the benediction prescribed there was theirs alone to give; Gill defines blessing God as ascribing greatness to him, and notes that though all men are of right his servants only good men are so in fact, and prefers Kimchi's reading of hands lifted in prayer to Aben Ezra's of hands lifted to bless the people."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry describes what the night-watch consisted of — guarding the holy things from profanation and the rich things from plunder, and seeing that neither the altar fire nor the lamps went out — and turns the call into husbandry, since those on watch keep themselves awake by keeping themselves employed, and the vacancies of time are best filled with praise; Spurgeon hears the opening word as the departing pilgrims' cry to the watch, and makes blessing the characteristic word of the psalm."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls it the last of the fifteen Songs of degrees, of uncertain authorship and ascribed to David only by the Syriac, divides it into an exhortation from the high priest and the watch's reply, and would read the opening word as take heed — you serve a jealous God, provoke him not; Wesley identifies the servants as priests and Levites and glosses standing as ministering."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch describe the psalm as a greeting and its reply, addressed to the priests and Levites on night-watch, and note that it closes the Songs of degrees as a final blessing; both they and Ellicott argue that ordinary worshippers cannot be meant, since the verb rendered stand is the customary word for priestly service and overnight attendance by others was exceptional."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who are the servants addressed?",
+    "sides": [
+     {
+      "position": "priests and Levites only, since the psalm ends by prescribing a benediction that was theirs alone to give",
+      "holders": [
+       "Calvin",
+       "Wesley",
+       "Keil and Delitzsch",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "devout Israelites kept the watch with them, as Anna did, and Kimchi makes them holy men who rose in the night to pray",
+      "holders": [
+       "some, reported by Calvin",
+       "Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Are the hands lifted toward the sanctuary, or lifted in holiness?",
+    "sides": [
+     {
+      "position": "in holiness — those addressed already stand in the sanctuary, so the usual direction is unreasonable",
+      "holders": [
+       "Ellicott",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "toward the holy place, the oracle and the ark, or to the holy name of God",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "bless ye the Lord, all ye servants",
+   "which by night stand in the house of the Lord",
+   "lift up your hands",
+   "in the sanctuary, or in holiness"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill canvasses three readings of the closing verse — the priests blessing the people, the servants wishing a blessing on whoever exhorted them, or, with Kimchi and to his own mind best, the psalmist promising a blessing to those who blessed the Lord — and weighs the words out of Zion, since it is in the church that God blesses his people with his word and ordinances, his presence, and communion with himself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke hears a leave-taking between the two parties of the psalm, as if the watch had said, we will attend to your orders, go in peace, and may God shower down his blessings upon you, and takes the blessing to be the priestly form of Numbers; Wesley leaves the recipient deliberately open — thee, whosoever thou art, who dost faithfully perform the duty commanded."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes only that the naming of God as maker of heaven and earth is a style frequent in this group of psalms."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Whose words are these?",
+    "sides": [
+     {
+      "position": "the psalmist promising a blessing to those who bless the Lord, so that it may be read the Lord shall bless thee",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "the watch answering the departing pilgrims, in the terms of the priestly benediction",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the Lord that made heaven and earth",
+   "bless thee out of Zion",
+   "the reply of the night-watch",
+   "the priestly benediction"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
+  }
+ }
+}
