@@ -3072,6 +3072,23 @@
         "14"
       ],
       "note": "Two entries here came in at 449 and 445 words against source spans of 1,921 and 1,004 words, and the audit gave them no PAD, THIN or FLOOR flag — mean TTR 0.656. This is worth recording because the loop's habit is to aim near the 650 ceiling regardless of how much source a span carries, which is exactly what drives the trim spiral. Sizing the TARGET to the span rather than to the window produced clean entries on the first pass and no trimming at all for three of this chapter's four entries. Suggested rule: pick a per-entry target of roughly source-words divided by four to eight depending on density, then check it against the 350-650 window, instead of defaulting to the ceiling. A thin span honestly written at 430 words scores better than the same span padded to 620."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "43",
+      "verses": [
+        "4"
+      ],
+      "note": "StudyLight site chrome trails the Charles Ellicott block at psalms 43:4 — the seventh instance logged in this run (psalms 20:9, genesis 26:34, psalms 28:9, psalms 70:5, psalms 134:3, psalms 123:4, now this). Ellicott's real note here is one sentence and precedes the markup, so nothing was lost. No Jamieson, Fausset and Brown residue in this chapter; JFB has no block here at all."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "43",
+      "note": "Taken from --queue generate, flagged. Two entries, spans 1 and 2-5. The chapter's real interest is that every voice treats it as the second half of psalms 42: Calvin cites forty-six manuscripts printing them as one and passes on Williams's account of choristers dividing an over-long anthem, Clarke counts the same manuscripts and notes the Hebrew and Chaldee give this psalm no title at all, and the refrain shared with psalms 42:5 and 42:11 closes it. Anyone repairing psalms 42 later should read the two together; several of the notes filed under 43 explicitly refer back rather than expound."
     }
   ]
 }
