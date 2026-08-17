@@ -3004,6 +3004,41 @@
       "book": "psalms",
       "chapter": "131",
       "note": "Taken from --queue generate, flagged as before. Clean chapter: no scrape residue, no site chrome, no excluded voices, zero ghosts — the first of this run's small psalms with an entirely undamaged source. Two entries, spans 1 and 2-3. Keil's block filed at v1 is almost entirely about psalms 132 and the chronicler's borrowings, not about this psalm; only his opening sentence bears on psalms 131, so that is all the synthesis draws from it. His real exegesis of v1 (the three denials as pride of soul, countenance and endeavour) is filed at v2 and therefore appears in entry 2, which is where the filing rule puts it."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "21",
+      "verses": [
+        "2",
+        "8",
+        "20",
+        "26"
+      ],
+      "note": "JFB scrape residue, tenth chapter — and the first time the drift stays INSIDE the same book. All four JFB blocks in exodus 21 carry Exodus 8-9 plagues material (the frogs and the Nile, the bargain to sacrifice within the land, the murrain announced to Pharaoh, the brick-kiln and the boils). Every previous case drifted to a different book: numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9, judges 8 (Lev 26/Deut 28), numbers 1 (Lev 11), joshua 8 (Deut 4), judges 9 (Deut 28), exodus 21 (Exod 8-9). Same-book drift matters for a repair tool: a sweep that assumes the wrong text always comes from elsewhere in the corpus will not catch this one by book-mismatch alone, and must compare chapter-level subject matter. Still no fixed offset (Ex 21 to Ex 8/9 is a jump of twelve or thirteen chapters). All four declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "21",
+      "verses": [
+        "7",
+        "28"
+      ],
+      "note": "Legal chapters tile more cheaply than narrative but cost the same to write. Exodus 21 is regime (b): 36 verses of case law falling into five clean pericopes (1-6, 7-11, 12-17, 18-27, 28-36) at 20,641 source words, so the tiling was obvious in a way judges 9 never was. But the per-entry writing cost was no lower — every entry still needed two trim passes from 740-900 words, because legal material multiplies SHORT independent claims (a rendering, a rabbinic gloss, a Roman parallel, a case distinction) rather than long ones, and short claims are exactly what resists compression: you cannot drop half a case distinction. Practical note for sizing: source words per chapter predicts reading cost well, but the number of distinct adjudicated points predicts writing cost better, and legal chapters run high on the second measure even when low on the first."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "21",
+      "verses": [
+        "12",
+        "20"
+      ],
+      "note": "Two commentators use racial language in this chapter that a modern reader will hit head-on: Clarke on the manstealing law (v16) names the contemporary slave trade in period terms, and Wesley on the beaten servant (v20) glosses the Gentile slave by direct comparison with enslaved people on colonial plantations. Both are making arguments the synthesis should carry — Clarke is CONDEMNING the trade and holding the purchaser as guilty as the thief, which is the substance worth preserving — so I rendered the substance and dropped the period vocabulary rather than quoting it. Recording the decision because it is a judgement call another worker will face: the rule I applied is that where the dated term is incidental to the argument, paraphrase it; where a commentator's own prejudice IS the claim, that would need flagging as a source-defect instead, not silent laundering. Neither case here was the latter."
     }
   ]
 }
