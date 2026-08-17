@@ -1,0 +1,174 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Augustine of Hippo",
+   "C.H. Spurgeon",
+   "John Calvin",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine takes the psalm for the voice not of one man singing but of the whole body of Christ, so that as it were one man speaks and he is one who also is many; and he reads the humility professed here as itself a sacrifice offered, a troubled spirit being the sacrifice of God, offered through the High Priest who entered within the veil."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the psalm David's proof that he sought the crown by no ambition of his own, and draws from it the lesson to be contented with the lot God has marked out, avoid rash undertakings and keep cheerfully within our own sphere — since it is pride that drives men to presumptuous flights and throws the world into confusion; Gill sets against David's protest the natural state of every heart, which civil life only makes haughtier."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry finds a piece of self-knowledge in three parts — no conceited opinion of himself, neither a scornful nor an aspiring look, and no employment in things above his station — noting that humble saints cannot think so well of themselves as others do; Spurgeon weighs what such an appeal costs, since a man should be slow to make it, and begins with the heart because pride there defiles everything, as mire in the spring muddies all the streams."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports two guesses at the occasion, a vindication against Saul's courtiers or a psalm of the captivity, and defines the great matters by the Hebrew as wonderful or sublime things, alien from a man in David's situation."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch note only that the psalm designedly precedes the next, having grown out of the memory of what David said when he brought home the Ark."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What occasioned the psalm?",
+    "sides": [
+     {
+      "position": "David's vindication of himself when accused of aiming at the crown",
+      "holders": [
+       "Calvin",
+       "Clarke",
+       "Henry"
+      ]
+     },
+     {
+      "position": "a psalm of the captivity, describing how the captives bore themselves under their oppressors",
+      "holders": [
+       "some, reported by Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "my heart is not haughty",
+   "nor mine eyes lofty",
+   "matters too high for me",
+   "humility as a sacrifice"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "2-3",
+  "pericope_label": "The weaned child, and Israel bidden to hope",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the opening particle as an oath or imprecation with Kimchi and Aben Ezra — if I have not so behaved, let it come to me so and so — while noting Noldius turns it into a question; he takes the behaviour outwardly, as quiet and peaceable even towards inferiors in Saul's court, and reads the closing exhortation as David commending to others what he had found good himself, with perhaps an eye to friends impatient to see him on the throne."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the submission a harder edge, having been under the rod of others and not complaining when chastised, and foregoing comforts once enjoyed without demurring; on the last verse he turns it outward to any sufferer, and calls this, short as it is, a most instructive psalm. Wesley compresses the figure to a line, weaned meaning wholly dependent on God's providence as a helpless infant on its mother."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott draws out the figure of a baby's first real sorrow, quieted at last by the love which can soothe even when it must deny, and quotes Herbert that if goodness lead a man not, weariness may toss him to God's breast; he is exact and dissatisfied about the rendering, since the verb means to make like, so that the idiom says 'I made my soul as quiet as'. Keil and Delitzsch sort the three denials into pride of soul, of countenance and of endeavour, and reject both the conditional and the adversative readings of the particle in favour of an asseveration drawn from the formula of an oath."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is the force of the particle opening the verse?",
+    "sides": [
+     {
+      "position": "an asseveration drawn from the oath formula — neither a conditional protasis nor an adversative",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "an imprecation: if I have not so behaved, let such and such come upon me",
+      "holders": [
+       "Gill",
+       "Kimchi and Aben Ezra, reported by Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "I have quieted my soul",
+   "as a weaned child",
+   "the force of \"if not\"",
+   "let Israel hope in the Lord"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-17",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
+  }
+ }
+}
