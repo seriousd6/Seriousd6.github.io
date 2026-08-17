@@ -3127,6 +3127,34 @@
       "book": "joshua",
       "chapter": "22",
       "note": "Henry's block heads at vv1, 10, 21, 30 mapped exactly onto the chapter's four natural pericopes, so every entry carried a puritan-evangelical voice with no tiling distortion. When the most discursive commentator's block boundaries and the narrative's own joints coincide, the block-keying rule costs nothing; it is only when one exposition runs across most of a chapter that some pericope must lose him."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "43",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "26",
+        "32"
+      ],
+      "note": "JFB scrape residue with TWO DIFFERENT off-book targets inside one chapter - this is new. Keys 2 and 8 carry Genesis 36 material (the royal power alongside the dukedoms; recapitulation of the dukes by residence); keys 14, 26 and 32 carry Genesis 37 (Joseph at seventeen as shepherd, the water of the vale of Shechem, the errand from Hebron to Shechem and on to Dothan). Every earlier chapter drifted to a single target. A repair sweep therefore cannot key on one displacement per chapter either - the offset can change partway through the file. Thirteenth chapter in the running list."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "43",
+      "note": "Ghost check earned its keep again. Entry 15-25 drew on seven commentators and still tripped the ghost rule for Keil and Delitzsch, whose blocks at vv15 and 17 are mostly narration but do carry a grammatical note on the older imperative form in the order for dinner. Rather than exclude them I used the note. The rule that keeps paying: a block that looks like bare paraphrase usually has one real observation buried in it, and finding it is cheaper than justifying an exclusion."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "43",
+      "note": "Span-sized targets, third chapter running. genesis 43 spans of 3440/3482/3848/6573 source words produced entries of 647/612/643/638 words with one trim pass on the first, none on the rest. Zero defects in every lint category for the second chapter in a row. The compression ratio that works sits around 5.5:1 to 10:1; the 6573-word span compressed hardest and still came in clean, which matches joshua 22's 7895-word span."
     }
   ]
 }
