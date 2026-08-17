@@ -3050,6 +3050,28 @@
         "4"
       ],
       "note": "Two defects, both of the now-familiar kinds. (1) The Jamieson, Fausset and Brown block at psalms 123:2 is scrape residue: '2-24. Instances of the wicked doing the worst deeds with seeming impunity (Job 24:2-24). the wicked. boundaries between different pastures' — Job 24 material, nothing to do with servants watching their master's hand. Declared in excluded_voices for entry 2. That is the sixth chapter with off-book JFB residue and the eighth individual block (deuteronomy 28, psalms 20, genesis 26 x3, psalms 134, now this). (2) StudyLight site chrome trails the Charles Ellicott block at v4, the sixth such instance. Both patterns are corpus-wide and would be cheaper to clear with one sweep than to keep finding a chapter at a time."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "44",
+      "verses": [
+        "9",
+        "15"
+      ],
+      "note": "JFB scrape residue, eleventh chapter, and the SECOND CONSECUTIVE same-book drift: both JFB blocks in genesis 44 carry Genesis 37 material (the merchants who bought Joseph, and the deception practised on Jacob). Exodus 21 drew Exodus 8-9; this draws Genesis 37. Full list by chapter: numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9, judges 8 (Lev 26/Deut 28), numbers 1 (Lev 11), joshua 8 (Deut 4), judges 9 (Deut 28), exodus 21 (Exod 8-9), genesis 44 (Gen 37). Two same-book cases in a row is enough to retire the working assumption that the intruding text usually comes from another book — a repair sweep cannot filter on book-mismatch at all and must compare chapter-level subject matter in every case. The offsets differ even within the same book (Ex 21 to Ex 8/9 is about twelve chapters; Gen 44 to Gen 37 is seven), so there is still no arithmetic shortcut. Both declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "44",
+      "verses": [
+        "7",
+        "14"
+      ],
+      "note": "Two entries here came in at 449 and 445 words against source spans of 1,921 and 1,004 words, and the audit gave them no PAD, THIN or FLOOR flag — mean TTR 0.656. This is worth recording because the loop's habit is to aim near the 650 ceiling regardless of how much source a span carries, which is exactly what drives the trim spiral. Sizing the TARGET to the span rather than to the window produced clean entries on the first pass and no trimming at all for three of this chapter's four entries. Suggested rule: pick a per-entry target of roughly source-words divided by four to eight depending on density, then check it against the 350-650 window, instead of defaulting to the ceiling. A thin span honestly written at 430 words scores better than the same span padded to 620."
     }
   ]
 }
