@@ -2729,6 +2729,49 @@
       "book": "leviticus",
       "chapter": "13",
       "note": "Adopted the ghost check from the genesis 26 notes and it earned its keep immediately. My builder previously checked only one direction (voices NAMED in prose but having no block in the span); adding the reverse (voices with a block in the span that the prose never names) caught a real omission at entry 45-46, where a length trim had silently dropped Gill. Recommend both directions plus a declared residue set: the residue set is what keeps the ghost check from firing on genuinely excluded scrape material like the JFB blocks here, and it doubles as the source of excluded_voices in the tags. Also worth recording: writing to a ~500-word target still produced first drafts averaging 900 words across ten entries, and the trim back to the 350-650 window took more passes than the writing did. The target that actually lands in-window appears to be nearer 450."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "13"
+      ],
+      "note": "Both Jamieson, Fausset and Brown blocks in this chapter are off-book scrape residue from Genesis: v1 carries Genesis 48 material (Jacob reverting to the Bethel vision to engage Joseph's interest and keep his posterity attached to the people of God rather than the Egyptians), v13 carries the note that Jacob's blessing showed him animated by the spirit of prophecy. Neither touches the plagues. Declared in excluded_voices for entries 1 and 13. Running tally of chapters where every JFB block was off-book residue: numbers 3, genesis 41, genesis 26, leviticus 13, exodus 9. The offset is not constant — leviticus 13 drew Exodus 31/35, exodus 9 draws Genesis 48 — so a sweep cannot key on a fixed delta and must compare each block's subject against its own chapter."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "9",
+      "verses": [
+        "34",
+        "35"
+      ],
+      "note": "StudyLight page furniture again, and the position has shifted slightly: the CSS/nav/JS/book_data dump sits at the end of Ellicott's block at key 34 rather than at the chapter's last key, while Gill at key 35 ends with sacred-texts.com navigation ('Next: Exodus Chapter 10 ... Index Next:'). Fifth consecutive chapter with this defect (romans 11:36, numbers 3:51, genesis 41:54, leviticus 13:59, now exodus 9:34-35). It is reliably in the LAST BLOCK OF A GIVEN COMMENTATOR in the chapter rather than strictly the last key, so a stripper should trigger on the marker text (the '.sub-menu{' CSS opener, 'Powered by Light speed Technology', 'var book_data =') rather than on key position."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "9",
+      "note": "Sizing: exodus 9 was picked because n>2k=0 (35 keys / 24,242 words / median 531), the cheapest of five offers by the other worker's metric, and it tiled into seven natural pericopes (the murrain, the boils, the seventh summons, the warning, the hail, the confession, the crops and relapse) covering 1-35 exactly with every span over 2,000 source words. The metric held up: n>2k=0 did predict a groupable chapter. But note the qualifier — a plague narrative groups because each plague is a self-contained unit, not because the verses are thin. Median 531 is high, and the entries still came out long. So n>2k predicts whether any single verse will force an entry; it does not predict how much prose each pericope will demand."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "9",
+      "note": "The over-writing problem is now measured rather than guessed, and it is the dominant cost of this loop. Targets and outcomes across four chapters: genesis 41 target 650, first draft ~1,330/entry; leviticus 13 target 500, first draft ~900; exodus 9 target 450, first draft ~900. The target has almost no effect on the draft — output has landed near 900-1,300 words per entry regardless, because the writing method is 'cover every voice's every point' and the spans carry 2,000-4,500 source words. Trimming back to 350-650 then costs more passes than the writing did (this chapter took roughly 30 edit rounds). Two things that did work and should be standard: (1) deleting a whole paragraph beats shortening sentences, since sentence-level trimming yields about 15% per pass and the gap is routinely 35%; (2) when a paragraph goes, its tag lines must go with it — several stale debates and outliers survived a deletion here and had to be pruned afterwards. The real fix is upstream: SELECT the three or four things an entry will argue before writing it, rather than writing everything and cutting. Suggest the loop guide say so explicitly."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "9",
+      "note": "Extended the ghost check with a per-entry exclusion table, and it immediately paid: it flagged Keil and Delitzsch as present-but-unused in entry 27-30, and reading their block showed it carries only the verse text plus comment that belongs to verses 31-32, which the next entry uses and credits. That is a third category, distinct from both scrape residue and a writer's omission: a block filed at one key whose substance belongs to the next pericope. Chapter-wide residue sets cannot express it, so the builder now takes EXCL_BY_ENTRY alongside RESIDUE, and both feed excluded_voices. Recommend any future builder carry all three: named-but-not-sourced, ghost, and a per-entry exclusion table."
     }
   ]
 }
