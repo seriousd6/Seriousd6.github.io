@@ -2331,6 +2331,65 @@
       "book": "genesis",
       "chapter": "27",
       "note": "Declined by worker B for context capacity — nothing written. Genesis 27 (Jacob takes the blessing) is 46 keys / 31,054 usable source words, median 428 per key: 25 verses at 350+, 8 in the 200-349 band, 13 thin. Proportionally one of the healthier chapters offered — a little over half its verses are comfortably writable — but 46 entries is above both chapters already declined on capacity this session (genesis 37 at 36, judges 11 at 40), so taking it would be inconsistent. Fifth entry for the ready-work queue; by ascending real cost the order is now genesis 37 (36 keys), judges 11 (40), genesis 27 (46), genesis 31 (55), judges 9 (57). Every one of the five sits under the 40k source-word line."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "37",
+      "verses": [
+        "6",
+        "13"
+      ],
+      "note": "Keil and Delitzsch's blocks at v6 and v13 are bare Scripture quotations of the verses that follow (v6's runs through v12, v13's through v20) with no comment attached. Declared as excluded_voices in entries 6 and 12."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "37",
+      "verses": [
+        "11",
+        "35"
+      ],
+      "note": "Jamieson, Fausset and Brown at v11 and v35 is scrape residue from elsewhere: 'Eastern people seldom kill the females for food except they are barren' at v11, and 'two hosts, or camps ... between mount Gilead and the Jabbok' at v35. Neither touches Genesis 37. Declared as excluded_voices in entries 10 and 35."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "37",
+      "verses": [
+        "22",
+        "30",
+        "36"
+      ],
+      "note": "Truncation and chrome. Keil and Delitzsch is cut off mid-sentence at v22 ('along the road which leads from Beisan past Jenin ... and through the') and at v30 ('sold by the Midianites to Potiphar, the chief of Pharaoh's'); Gill's typology at v36 breaks off at 'Christ the son of'. Verse 36 also carries roughly 30,000 characters of StudyLight site chrome (CSS and JavaScript) sitting between Ellicott's note and Calvin's, so Calvin is easy to miss on a first read of that verse."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "37",
+      "note": "Entry count, not source words, is what this chapter cost. The pre-computed span plan had 15 entries for 23,957 usable source words; the chapter finished at 21, because forward-running section overviews filed at a span's first verse put more material into one entry than 650 words can hold. Henry's blocks at v1, v5, v12, v23 and v31 each cover the whole following pericope; Calvin's v10 and v35 notes are essays; Ellicott's v22 note carries the entire Joseph-as-type-of-Christ tradition with Pascal's parallels. Six spans had to be split mid-work (5-8, 9-11, 21-22, 25-26, 27-30, 31-32, 33-35). This is the third chapter running where the 40k source-word batch budget has mispriced the work in the same direction."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "37",
+      "note": "Drafting at target still does not hold. Every entry over about 1,000 source words drafted 15-35% long and needed one to four trim passes; the corrective tried last batch (pre-sizing spans before writing) fixed span choice but not prose length. What did work: splitting a span the moment the first draft came in over 800, rather than trimming a 900-word draft down to 650."
+    },
+    {
+      "at": "2026-08-17",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "37",
+      "verses": [
+        "22",
+        "36"
+      ],
+      "note": "Pascal's parallels between Joseph and Christ appear twice in this chapter's sources, in Ellicott at v22 and in Clarke at v36, with different items in each list. Both were used in their own entries (22 and 36) and the overlap kept to the prison-and-two-thieves resemblance in Ellicott only; Clarke's version is carried as his caution against typology rather than as the list itself."
     }
   ]
 }
