@@ -3384,6 +3384,23 @@
       "book": "leviticus",
       "chapter": "16",
       "note": "Ellicott is unusually load-bearing here, supplying second-Temple practice that the text itself does not describe and sometimes contradicts: the goat is merely let go in the law but was decreed to be destroyed at a rock twelve miles out with ten booths along the road; the written order of vv23-24 was reversed in practice; the hereditary high priesthood was treated as conditional on the elders judging the heir fit; and only sins against God were reckoned covered, wrongs to a neighbour needing his pardon first. Where a chapter is heavy with ritual, Ellicott carries more of the entry than the four-school balance suggests, and the grammatical-historical summary runs long as a result."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "100",
+      "verses": [
+        "3"
+      ],
+      "note": "The Jamieson, Fausset and Brown block at psalms 100:3 is stride-6 residue of the kind now diagnosed corpus-wide: it carries Job 5:13 material (Paul quoting the clause in 1 Corinthians 3:19, Haman hanged on the gallows he prepared for Mordecai), nothing to do with knowing that the Lord is God. Declared in excluded_voices for entry 3, alongside Keil at v5 which is a bare Scripture quotation. StudyLight site chrome also trails Ellicott at v3."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "100",
+      "note": "THE OVERSHOOT IS FIXABLE, and the fix is sentence length rather than word budget. Prior workers logged a systematic ~30 percent overshoot on first drafts (see the genesis 27 note) and recommended drafting to a sentence budget; I tried that on psalms 133 last batch and still overshot, landing 710 and 720 against a 650 ceiling and needing five trim passes. This batch I changed something narrower: I wrote deliberately SHORTER SENTENCES — fewer subordinate clauses, one idea per sentence, semicolon chains broken into separate sentences — while keeping the same four-paragraph shape and the same amount of material. Both entries landed first time at 594 and 570 QA words, grade A, zero trim passes. The overshoot was never coming from paragraph count or from intending too much content; it came from clause accumulation inside sentences, which is invisible while drafting because each clause feels like a small addition. Recommendation for the loop doc: instruct the writer to cap sentences at roughly one subordinate clause and to break semicolon chains, rather than to target a word or sentence count."
     }
   ]
 }
