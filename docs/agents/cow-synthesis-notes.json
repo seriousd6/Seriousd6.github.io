@@ -3401,6 +3401,39 @@
       "book": "psalms",
       "chapter": "100",
       "note": "THE OVERSHOOT IS FIXABLE, and the fix is sentence length rather than word budget. Prior workers logged a systematic ~30 percent overshoot on first drafts (see the genesis 27 note) and recommended drafting to a sentence budget; I tried that on psalms 133 last batch and still overshot, landing 710 and 720 against a 650 ceiling and needing five trim passes. This batch I changed something narrower: I wrote deliberately SHORTER SENTENCES — fewer subordinate clauses, one idea per sentence, semicolon chains broken into separate sentences — while keeping the same four-paragraph shape and the same amount of material. Both entries landed first time at 594 and 570 QA words, grade A, zero trim passes. The overshoot was never coming from paragraph count or from intending too much content; it came from clause accumulation inside sentences, which is invisible while drafting because each clause feels like a small addition. Recommendation for the loop doc: instruct the writer to cap sentences at roughly one subordinate clause and to break semicolon chains, rather than to target a word or sentence count."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "18",
+      "verses": [
+        "11",
+        "23",
+        "29"
+      ],
+      "note": "JFB residue, seventeenth chapter: all three blocks are Genesis 15 material (the 'exceeding great reward' and the covenant rite with the lamp passing between the pieces). Keys 23 and 29 are byte-identical, the twofold duplication now seen in judges 1 and genesis 27 (where it was fourfold). Running donor list is now Gen 15, Gen 24, Gen 26, Gen 36, Gen 37, Lev 11, Lev 26, Deut 4, Deut 16-17, Deut 20-21, Deut 28, Exod 8-9 - overwhelmingly Pentateuch, and several of those donor chapters are themselves victims elsewhere. The displacement looks like a within-Pentateuch shuffle rather than a fixed offset."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "18",
+      "note": "SENTENCE BUDGET, SECOND TRIAL - holds, but only if sentence LENGTH is held too. Entries 9-15 (585) and 16-22 (615) landed in window first pass; entries 1-8 (766) and 23-33 (690) did not, and in both cases the cause was identifiable: I had let paragraphs run to five sentences AND let those sentences run long, several over 45 words. The rule that actually works is four paragraphs of four sentences with sentences kept near 35 words; adding a fifth sentence per paragraph adds roughly 150 words and blows the ceiling on its own. Trim passes this chapter: 3, against 6 last chapter and about 25 two chapters ago."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "18",
+      "note": "Two clean grammarian disagreements worth preserving as examples of the kind of debate the tags field exists for. (1) At v19 Ellicott concedes most versions favour the received rendering of 'for I know him', which makes Abraham's conduct earn the divine condescension, but argues the Hebrew means 'I have known him IN ORDER THAT he may command his sons' - shifting the ground from merit to purpose of calling. (2) At v21 Keil and Delitzsch take the disputed word as a NOUN on the evidence of Isaiah 10:23, which turns the clause into a sentence of utter destruction; Ellicott reports that reading, objects that its required ellipse is harsh, and keeps the adverb because inquiry rather than punishment is the prominent thought. Both are cases where two grammatical-historical voices divide against each other, which the single school summary cannot show - only the debates field can."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "18",
+      "note": "K&D block at v10 is bare verse quotation whose only comment ('After this conversation with Sarah, the heavenly guests rose up...') belongs to the NEXT span, so K&D had to be excluded from entry 9-15 even though the block sits inside it. This is the inverse of the genesis 27 case where a buried comment made an apparently bare block usable. Refined rule: read the tail of a quotation block before excluding, but check whether that tail comments on verses inside the span or merely transitions out of it - a transition sentence belongs to the following entry and cannot source the current one."
     }
   ]
 }
