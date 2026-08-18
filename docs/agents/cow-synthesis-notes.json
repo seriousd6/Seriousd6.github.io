@@ -4200,6 +4200,87 @@
         "24"
       ],
       "note": "Sizing check for joshua 13. 16,048 usable source words, 33 contiguous keys, median 243, only vv.1 and 7 over 2k -- one of the smallest chapters offered by the picker in this run, and it took FIVE entries (1 | 2-6 | 7-14 | 15-23 | 24-33) rather than the seven a naive words-per-entry estimate suggests. The reason is that most of the chapter is a gazetteer: vv.16-20 and 25-27 are strings of place-names with one- and two-line notes from Gill, Clarke and Wesley, which distil at a much higher ratio than argued exposition. Confirms the sizing corollary from note 384 in the other direction: density of distinct ARGUMENTS per source word, not source words alone, sets the entry count. Where a span is mostly toponymy, a long span is safe; where it is mostly argument (genesis 11:6-9), a short one is not."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "27",
+        "33",
+        "45"
+      ],
+      "note": "JFB scrape residue, twenty-sixth chapter affected. All six JFB blocks are Leviticus 8-9 material (the consecration of Aaron), in narrative order, keyed at 3, 9, 15, 27, 33, 45. This confirms all three predictions of the period-6 model formed at numbers 21 and exodus 23: the keys are arithmetic (period 6, offset 3 here — the offset varies between chapters, the period does not), the donor chapter is walked in order, and the scraper stalls and repeats (keys 9 and 15 are byte-identical, md5 8328d0b4). New refinement: the sequence has EMPTY SLOTS — 21 and 39 carry no JFB block at all — so a mechanical sweep must look for period-6 sequences that skip positions, not just unbroken runs. Excluded from all entries covering these keys."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "46"
+      ],
+      "note": "Scrape overrun at the LAST key of the chapter, fourth confirmation of this defect after joshua 24, numbers 11 and leviticus 22. Key 46 is 34,286 characters, of which the tail carries minified JavaScript (event binding for the study-desk ref links and a navigation accordion). New variant: the junk is NOT at the end of the block stream but sits MID-STREAM, between the Ellicott block and the Wesley block, so a fix that only truncates the tail of the last key will not catch this shape. The invariant remains position — always the chapter's final key — not content type. usable_source_words overstates key 46 accordingly."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "18",
+        "27"
+      ],
+      "note": "Block-keying loss declared for entries 18-26 and 27-39. Matthew Henry's exposition of the entire curse section (verses 14-39, including the escalating chastisements, the desolation, the scattering and the sabbaths of the land) is keyed at verse 14 as one block; there is no Henry block anywhere at 18 or 27. His material was used in entry 14-17, where it is keyed, and the two later entries therefore carry no puritan-evangelical voice. The loss is recorded in each entry's outliers rather than distorted into the tiling. The Henry block at 14 also concatenates his Complete exposition with his Concise commentary on the chapter."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "14",
+        "46"
+      ],
+      "note": "Wesley abridges Henry, third book of confirmation after exodus 23 and genesis 21. Two clean instances here. At 16 Henry writes that all chronical diseases are included in the consumption and all acute in the burning ague or fever; Wesley's whole note on the clause is that sentence. At 46 Henry ends on the law as the bond of communion — God manifesting not only his dominion but his favour by giving them his law, they manifesting not only holy fear but holy love by observing it, so that it is made between them rather as a covenant than a law, for he draws with the cords of a man — and Wesley's note is the same sentences with trivial variation. Consequence for the tally, as logged before: Wesley agreeing with Henry is one witness, not two, and counting puritan-evangelical and wesleyan-arminian separately overstates agreement."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "26"
+      ],
+      "note": "Ten women baking at one oven (v26). The usual view, held by Clarke, Wesley, Ellicott and Bush, is scarcity: one oven suffices for ten families where ordinarily it served one, and the bread is returned by stinted weight. Calvin argues the reverse — that Moses means there shall be abundance of bread and no fraud in the baking, the women coming together so that each may see whether due weight is given, the curse lying wholly in the broken staff, so that they eat and are not satisfied. Calvin also reports Kitto's third reading, that ten households clubbed their dough and divided the baked cakes by weight in proportion to what each contributed."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "21",
+        "34",
+        "41"
+      ],
+      "note": "Three lexical disputes worth flagging. (1) v21 qeri: the Chaldee takes it of hardness, as though purposing to contend with God, and Jerome renders in opposition to me; Calvin, because the root signifies an accidental occurrence, prefers to walk at adventures, that is, to ascribe adversity to fortune — and Gill applies the same ambiguity to God's side of the phrase. (2) v34 the land's sabbaths: Ellicott, Clarke and Calvin all treat the rest as repayment of a debt of withheld sabbaths, but Keil and Delitzsch deny the debt outright, holding that sabbath-keeping never bound the land and that ratsah means to enjoy rest, against Gesenius and Knobel who render it to pay what is owed. (3) v41 accepting the punishment of iniquity: Ellicott renders accept willingly, even rejoice in, since the verb is the same one rendered enjoy at v34; Wesley reads patient submission; Calvin rejects both and takes it of a desire to appease God, rendering let them atone for their iniquity."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "26",
+      "verses": [
+        "15",
+        "34",
+        "46"
+      ],
+      "note": "Three Clarke excursions in this chapter, all outside the exposition proper. At 15 he suspends the commentary for a twelve-part lexical study of the scriptural terms for the divine law, each traced to its Hebrew root (statutes, judgments, commandments, covenant, testimonies, ordinances, precepts, truth, righteousness, word of Jehovah, imrah, torah). At 34 he rests a chronological argument on Houbigant's computation — 490 years from Saul to the captivity contain seventy sabbaths of years, and the captivity lasted exactly seventy — and reasons backwards to conclude that the sabbatical law must have been observed down to Saul's reign. At 46 he explains the double conclusion of Leviticus by a physical accident, supposing a column of the parchment roll displaced so that chapter 27 fell out of its original place after chapter 25."
     }
   ]
 }
