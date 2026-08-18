@@ -5494,6 +5494,48 @@
         "36"
       ],
       "note": "1 Cor 7:36-38 carries a genuine three-way interpretive split that Clarke alone sets out: (1) a father disposing of a daughter he had vowed to celibacy, the common view held by Gill, Henry, Barnes, Ellicott, Robertson and Calvin; (2) young women vowed to God's service and called virgins in the primitive Church; (3) Locke and Whitby, that the word means the state of virginity and what is kept is the man's OWN purpose of celibacy, not a daughter - Whitby arguing that the stated conditions (his own heart, his own will, no necessity from himself) fit only that reading. Gill adds a fourth, a betrothed man delaying his own marriage."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "14",
+      "verses": [
+        "11",
+        "23",
+        "29"
+      ],
+      "note": "JFB stride-6 donor residue, tenth consecutive chapter. JFB occurs at exactly three keys in this chapter — 11, 23, 29 — and nowhere else, and every one of them is foreign matter from Exodus 3-4 (the burning bush at v11; Moses' reluctance and his objections at vv23 and 29, the latter two byte-identical to each other). Because JFB appears ONLY at the stride positions here, this is the cleanest confirmation yet that the residue is a property of the donor merge rather than of the chapter: the stride does not displace real JFB comment, it supplies the only JFB text there is. Excluded as note-425 Mode 2 at spans 10-14 and 22-29."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "14",
+      "verses": [
+        "21"
+      ],
+      "note": "Gill's v21 block is truncated by the harvest rather than filled with chrome — a defect mode distinct from note 425. He writes 'What the poet says of Bacchus is more true of Moses, whose rod had been lift up upon the rivers Egypt, and now upon the Red sea:' and the block ends there, on a dangling colon, the quotation itself never arriving. The surviving ~40 words still carry a real observation, so this is Mode 1: the voice was declared and the comparison used, with the missing quotation simply not represented. Worth noting that a truncated block can look like a stub while actually being usable prose."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "14",
+      "verses": [
+        "31"
+      ],
+      "note": "Ellicott's v31 block ends in roughly 1,200 words of StudyLight page furniture — navigation markup, a copyright notice, and a full inline CSS stylesheet — appended to about 250 words of genuine comment. This is the largest chrome tail seen in the run so far, and it matters for sizing as well as for writing: v31 measures 2,902 words by the raw counter, of which well under half is commentary, so the chapter's 25,783-word figure overstates the real drafting load. Size estimates taken before a chrome scan should be treated as upper bounds."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "14",
+      "verses": [
+        "21"
+      ],
+      "note": "Exodus 14's central crux is what the east wind did, and the four voices divide along method rather than along school. Clarke argues from physics that the wind cannot have divided fourteen fathoms of water and assigns it the drying of the bed afterwards; Ellicott builds a full natural reconstruction from the Bitter Lakes, a south-east wind and the ebb tide, and cites an Egyptian tradition of Moses waiting for the ebb; Calvin holds both ends, that God needed no wind at all and that no wind could have done it without the Spirit; Keil declines to fix even the quarter the wind blew from. Clarke and Ellicott are the direct opposition, and they are also the pair who oppose each other on the wall of waters at v22, Ellicott there naming and rejecting Kalisch's congealed-water reading."
     }
   ]
 }
