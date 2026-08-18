@@ -5281,6 +5281,73 @@
         "43"
       ],
       "note": "Two of the sharpest disagreements in the corpus so far stand in this chapter. At 22:21 the question is whether Judas received the Lord's Supper, and it turns entirely on where Luke places the exposure of the traitor: Lightfoot asks what more could be desired as a demonstration that he was present at the eucharist and dismisses the contrary argument from John 13 as making something out of nothing, Clarke reproduces that argument as his own, and Henry reaches the same conclusion from Luke placing the words after the institution where Matthew and Mark place them before; Wesley denies it flatly, since the sop belongs to a table already cleared before the bread and cup were brought, and Robertson records the difference of order without deciding. At 22:43 the question is what caused the agony: Wesley has Christ feeling the weight of the wrath of God surrounded by a host of devils, Gill a renewed and visible assault of Satan in a garden, while Lightfoot says outright that he dare not say or imagine that God was angry or conceived any indignation against him at all, and ascribes the bloody sweat to the bite of the old serpent, citing Diodorus on serpents whose bite brings an issue of sweat like blood."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "15",
+      "verses": [
+        "12",
+        "18",
+        "24",
+        "30",
+        "36",
+        "42"
+      ],
+      "note": "JFB donor residue here is the cleanest instance of the stride-6 pattern yet found: vv.12, 18, 24, 30, 36 and 42 — six hits, unbroken, exactly six apart — every one of them Mark 9 / Matthew 18 material (the epileptic boy and his father, the little child set in the midst, 'let these sayings sink down into your ears'), with nothing whatever on the trial, the crucifixion or the burial. Seventh consecutive chapter showing the pattern. On this evidence the stride is a property of how the JFB donor text was sliced into the corpus, not a per-chapter accident, and a JFB block landing on a multiple-of-6 verse should be read as residue until proven otherwise. Excluded at entries 6, 15, 22, 27, 33 and 42."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "33",
+        "34",
+        "40",
+        "41"
+      ],
+      "note": "Barnes and Wesley in this chapter are frequently not commentary at all but bare cross-reference stubs — Wesley 'Mt 27:1,2; Lu 22:66; Lu 23:1; John 18:28' at v1, Barnes '(l) \"And when\" Mt 27:45, Lk 23:44' at v33 and the same pattern at vv.34/36/37/40/41. Clarke's v1 block is the chapter argument (a verse-by-verse outline of all 47 verses) plus 'In the morning - See Mat 27:1'. All are note-425 Mode 2 and excluded where they are the voice's only content in a span: Clarke, Barnes and Wesley at entry 1, Barnes at entries 6, 33 and 38, Wesley at entry 27. Each of these voices is used normally elsewhere in the chapter, so the exclusions are local to the span, not to the chapter."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "15",
+        "22",
+        "33",
+        "42"
+      ],
+      "note": "First NT chapter in this run, and the source shape differs materially from the OT books: mark 15 carries 16 top-level voices, not 10, adding A.T. Robertson, Albert Barnes and John Lightfoot alongside a patristic catena (Bede, Theophylact, Augustine, Pseudo-Jerome, Cyril of Jerusalem, the Gloss). The tags vocabulary differs too — luke 23, repaired 2026-08-18 under cow-prose-rules-2026-08-09 and the right model for a passion narrative, uses seven school slugs including latin-fathers and eastern-antiochene, and writes debates and outliers as FLAT STRINGS rather than the {question, sides} and {voice, claim} dicts the OT chapters use. Followed luke 23 exactly. School assignments taken from corpus practice: Robertson/Barnes/Lightfoot/JFB grammatical-historical, Bede/Augustine/Pseudo-Jerome/Gloss latin-fathers, Theophylact/Cyril of Jerusalem eastern-antiochene."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "15",
+      "verses": [
+        "17",
+        "25"
+      ],
+      "note": "Two disagreements in this chapter are worth flagging as corpus-level, not local. (1) The crown of thorns: Clarke, following Bishop Pearce, argues the Greek word may derive from akanthos, the soft garden plant the French call branche ursine, cited as pliant by Virgil and Pliny and said to be common about Jerusalem — on which reading the crown was derision, not torture. Gill and Bede assume real thorns, Gill having them driven into the temples by the blow of the reed. Recorded as a debate at entry 15. (2) The third hour against John's sixth is the chapter's central crux and every hand tries it: Robertson and Henry read two clocks, Jewish and Roman; Barnes and Clarke both allow a copyist's slip between the letters for three and six, but in OPPOSITE directions (Clarke emends John, Barnes notes the manuscript evidence in Mark); Clarke's own answer names each quarter of the day from its first hour; Calvin takes that same principle to the other end and puts Mark's meaning at the CLOSE of the third hour, inferring that Christ hung no longer than three hours; and Augustine, filing at v20, measures the hour rather than the instant. Six positions from five voices — recorded as one debate at entry 22 with Augustine's carried at entry 20, since the filing rule puts it there."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "15",
+      "verses": [
+        "20",
+        "42"
+      ],
+      "note": "Henry's five overview filings (vv.1, 15, 22, 33, 42) map this chapter exactly onto its narrative seams — 1-14 trial, 15-21 sentence and mockery, 22-32 crucifixion, 33-41 death, 42-47 burial — but every one of the five sections exceeds the ~4,500-word span cap, so each had to split at its internal seam, giving ten entries rather than five. Note 449 applied five times over in one chapter. Two side effects worth recording: Augustine's long harmonisation of the hours is filed at v20 and so lands in the 20-21 entry rather than with the crucifixion it discusses, and Bede's, Theophylact's and Pseudo-Jerome's burial material is filed at v42 and so lands with the preparation rather than with the tomb. Both were used where they are filed, which reads naturally enough — the hour question belongs to the moment the procession starts, and the burial theology to the moment the body is begged — but on a chapter this heavily split, expect the filings to sit one entry earlier than the events they treat."
     }
   ]
 }

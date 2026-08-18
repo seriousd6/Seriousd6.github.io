@@ -1,1904 +1,842 @@
 {
  "1": {
   "voices": [
-   "Bede",
-   "Theophylact",
+   "A.T. Robertson",
    "Augustine",
+   "Bede",
+   "Charles Ellicott",
    "John Gill",
    "John Lightfoot",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
+   "Theophylact"
   ],
+  "range": "1-5",
+  "pericope_label": "Jesus bound, delivered to Pilate, and silent under accusation",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The dawn ratification of the illegal night trial (Luke 22:66); Jesus bound on arrest (John 18:12) and again now; the Sanhedrin's morning session (Lightfoot); full account in Matthew 27:1."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact says they gave Jesus up to the Romans and were themselves given up by God into Roman hands, that the word might be fulfilled which recompenses men after the work of their hands; and that Pilate wondered because a man able by a word to destroy the accusations chose instead to bear them courageously."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: they could not even find a false charge but 'King of the Jews'; Theophylact: they gave Jesus to Rome but were themselves given to Rome (Psalm 28:5)."
+    "summary": "Bede grants the custom of delivering the condemned bound to the judge but observes that they had already bound him in the garden by night, as John declares; he finds their impiety exposed by the narrowness of the charge, since they could not even find a false accusation to bring, reads the answer as framed to speak truth and yet give no handle for cavil, and explains the silence by saying that he would not clear himself lest the judge acquit him and the gain of the Cross be done away. Augustine gathers from Luke the fuller list of the charges, that he perverted the nation, forbade tribute to Caesar, and said that he himself was Christ a King."
    },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the unwearied industry of the wicked, who lost no time; the great sacrifice bound with cords (Psalm 118:27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "dawn consultation",
-   "bound and delivered to Pilate",
-   "the Lamb led to the Gentile judge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Pilate notices only the political charge; 'Thou sayest' an affirmation, the one question on which Christ's testimony was essential; the fuller interview in John 18:33-37 shows his kingdom not of this world."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Art thou the King of the Jews?'",
-   "'Thou sayest it'",
-   "kingship not of this world"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect of repeated accusations, venom let loose in court; many MSS omit 'but he answered nothing' (implied); the charges magic, blasphemy, kingship, forbidding tribute (Gill)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "many accusations",
-   "Christ's silence",
-   "the dumb Lamb (Isaiah 53:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: Pilate asked again before the accusing priests, the former question put alone in the hall, the Jews not entering for fear of defilement (John 18:28)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'answerest thou nothing?'",
-   "Pilate's appeal",
-   "silence under accusation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Gill lists what they heaped upon him — that he was a magician and a blasphemer, that he made himself a king, forbade tribute to Caesar and moved sedition through the land — and notes that Pilate's first question was put while the two were alone in the judgment hall, whither the Jews would not enter for fear of defilement."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears in the dawn meeting a reproach to us, since they lost no time lest there should be an uproar, and the unwearied industry of wicked men in doing evil should shame our backwardness in doing good. He reads the cords as vestments, since sacrifices must be bound and Christ was bound to make bonds easy to us; sees in the handing over the ruin of a church, by which they delivered up the kingdom of God along with its king and betrayed him that was Israel's crown to them that were Israel's yoke; and thinks the chief priests forgot the dignity of their place when they turned informers, wicked priests being generally the worst of men, since the better a thing is the worse it is when corrupted."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Pilate sure of his innocence, seeing through their envy (v.10), marvelled at his self-control; the silence fulfilling Isaiah 53:7 (John 19:9)."
+    "summary": "Robertson explains the second session as the ratification after dawn of an action illegal by night, the only session Luke reports; traces the binding through the night, at the arrest, on to Caiaphas, and again now, which implies he was loosed while before Annas and the council; observes that of all the Sanhedrin's charges Pilate takes up only the one he cannot pass over without becoming liable himself; and adds that Pilate had hoped for an answer to relieve him of the burden and marvelled at the self-command he met instead. Lightfoot supplies the hour from the rabbis, the great Sanhedrin sitting from the morning sacrifice to the afternoon one and on a feast day in the Court of the Gentiles, where three-and-twenty had to remain on the bench continually. Ellicott notes that many manuscripts omit the clause about his answering nothing, though the fact is implied in Pilate's question and in the statement that follows."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why Jesus answered Pilate but not the priests: Bede holds that he answered the unwilling judge and thought the priests unworthy of a reply, and that he would not clear himself lest acquittal undo the Cross; Robertson makes it simply the one charge Pilate was bound to notice",
+   "What 'Thou sayest' concedes: Bede takes it as framed to speak the truth without giving a handle for cavil, while Theophylact leaves it open, the words being able to mean that thou sayest it, but I do not"
+  ],
+  "outliers": [
+   "Theophylact turns the delivery into a judgment on the deliverers, who gave Jesus to Rome and were themselves given to Rome"
+  ],
   "themes": [
-   "Jesus answered nothing",
-   "Pilate marvelled",
-   "majestic silence"
+   "the dawn ratification",
+   "bound and delivered to Pilate",
+   "art thou the King of the Jews?",
+   "the silence under accusation"
+  ],
+  "excluded_voices": [
+   "Adam Clarke",
+   "Albert Barnes",
+   "John Wesley"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "6": {
   "voices": [
-   "Bede",
-   "Gloss",
+   "A.T. Robertson",
+   "Adam Clarke",
    "Augustine",
-   "Theophylact",
-   "Pseudo-Jerome",
+   "Bede",
+   "Charles Ellicott",
+   "Gloss",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
+   "John Wesley",
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
+  "range": "6-14",
+  "pericope_label": "Barabbas preferred, and the deceitful demand for crucifixion",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect 'used to release' marks a regular Passover custom (John 18:39); Lightfoot and Gill argue against 'every feast', the release fitting the feast of Israel's deliverance."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact sets the wickedness of the crowd against the moderation of Pilate, and condemns him too for not resisting them, since he wished to satisfy the people, that is to do their will and not what was agreeable to God."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: Pilate furnished opportunities to release Jesus; the Jews chose a murderer and lost their salvation; Pseudo-Jerome reads the two goats (Leviticus 16:7-10) — Barabbas loosed, the Lord slain."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Passover release",
-   "Barabbas or Jesus",
-   "the two goats typology"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barabbas a rebel leader and murderer, bound with the insurrectionists (Mark alone notes them); the very revolution the Jews wanted Jesus to lead (John 6:15); insurrection a crime Pilate punished."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Barabbas the murderer",
-   "the guilty for the guiltless",
-   "emblem of the gospel exchange"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect 'as he was wont to do' confirms the custom; Clarke: the word for 'crying aloud' marks the bellowing of the multitude, a loud and long cry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the multitude's clamour",
-   "the customary release",
-   "a fickle mob"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The question implies a half-hope of yes (John 18:39); 'the King of the Jews' sharpens the contrast with Barabbas; Pilate satisfied of his innocence."
+    "summary": "The Gloss gives the governor's motive, that he released a prisoner to win favour, above all at the feast when the whole province flocked to Jerusalem, and lists what made Barabbas the worse choice — murder, committed in raising a sedition and disturbing the city, and notorious besides, since he lay bound with fellow rioters. Bede reads Pilate's manoeuvres as so many openings for a release, the first being the setting of a robber against the Just One; finds their refusal to answer the judge a fulfilment of the prophet's word that his heritage was become to him as a lion in the forest, crying out against him; and reckons that in choosing a robber instead of Christ they lost the country and the kingdom they had preferred to him. Augustine harmonises the form of the offer, since Matthew has Pilate name Barabbas or Jesus which is called Christ and Mark only the King of the Jews, but kings were called Christs, and Mark passes over Barabbas because he wishes to mention only what belonged to the Lord. Pseudo-Jerome sees the two goats of the atonement, one loosed and sent away bearing the people's sin, the other slain for the sins of the forgiven."
    },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the poor coward sacrifices justice to popular clamour, enraging the rulers by repeating the offensive title."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pilate's offer",
-   "'the King of the Jews'",
-   "justice sacrificed to the mob"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect 'he perceived' marks Pilate's dawning apprehension; both Mark and Matthew give envy as the motive (Proverbs 27:4; Acts 13:45), Pilate having heard of Christ's popularity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "delivered for envy",
-   "Pilate's discernment",
-   "the root of the malice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The strong verb 'stirred up' (shook like an earthquake), where Matthew 27:20 has 'persuaded'; not the triumphal-entry crowd but a mob got together early; the rejection of the Holy One (Acts 3:14)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests stir up the people",
-   "Barabbas demanded",
-   "leaders corrupting the crowd"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Pilate 'rubs it in', the 'then' meaning 'since you chose Barabbas'; the same determination to fasten the reproach of their king on them as in the cross-title (John 19:21-22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns the epileptic boy, not this verse."
-   }
-  ],
-  "themes": [
-   "'whom ye call the King of the Jews'",
-   "Pilate needles the rulers",
-   "their king condemned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A chorus and hubbub of confused voices demanding crucifixion, some of whom had joined the triumphal-entry hallelujahs (Robertson); they had cried so before (Luke 23:21)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Crucify him'",
-   "the fickle multitude",
-   "the cruellest death"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the third time Pilate spoke in Christ's defence."
+    "summary": "Gill records that the Syriac, Arabic and Ethiopic read the custom as belonging to every feast, though it belonged to the passover alone, and thinks Pilate astonished that they should ask for so infamous a prisoner."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley adds that insurrection was the crime Roman governors, and Pilate in particular, were most careful to punish, and asks which the wretched man betrays most, want of justice, of courage, or of common sense, since the coward sacrifices justice to clamour and enrages the very men he seeks to appease by repeating a title he knew they found offensive. Clarke says the word for the crowd's cry marks the bellowing of a multitude, a long loud cry such as Christ himself uttered on the cross."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Barnes: Pilate's 'what evil?' testifies to the innocence of the suffering servant (Isaiah 53:9)."
+    "prevalence": "several",
+    "summary": "Ellicott and Robertson both note that the verbs for the releasing and the asking stand in the tense of habit; Ellicott observes that Luke also calls Barabbas a rebel as well as a robber but that Mark alone records the imprisonment of his companions, and hears in Mark's phrasing a determination to fasten on the Jews the reproach that it was their own king Pilate condemned, as afterwards in the title on the cross. Robertson calls Barabbas a desperate criminal and leader of the rising, and draws the irony out, that revolution against Rome was the very thing the crowd at Bethsaida Julias had once wanted Jesus to lead; he says Pilate rubs it in, the word then meaning since you have chosen Barabbas; and he explains the people's fickleness by observing that this was not yet the crowd of the triumphal entry, the plan being to finish the business before the Galilean sympathisers woke. Lightfoot argues against the wider reading of the custom, since Pilate says in so many words that he released one at the passover, a feast which carries in itself the memory of a people's release out of Egypt, and sets beside Barabbas a famous rogue of the Talmudists whom they took to calling the son of a murderer."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the release was a custom of every feast or of the passover only: the Syriac, Arabic and Ethiopic versions and Beza make it every feast, while Gill and Lightfoot hold it belonged to the passover alone, Lightfoot adding that the feast of a people's release is the fitting one",
+   "Whether Matthew and Mark report the same offer: Augustine reconciles them, since kings were called Christs, so that asking for the King of the Jews is asking for Christ, and Mark names no Barabbas because he tells only what belonged to the Lord"
+  ],
+  "outliers": [
+   "Pseudo-Jerome reads the pair as the two goats of the Day of Atonement, the one loosed into the wilderness bearing the people's sin and the other slain for the sins of the forgiven"
+  ],
   "themes": [
-   "'what evil hath he done?'",
-   "the mob's fury",
-   "Christ's innocence attested"
+   "the paschal release",
+   "Barabbas the murderer",
+   "crucify him",
+   "what evil hath he done?"
+  ],
+  "excluded_voices": [
+   "Albert Barnes",
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "15": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
+   "Adam Clarke",
+   "Albert Barnes",
+   "Augustine",
+   "Bede",
+   "Charles Ellicott",
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry",
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
+  "range": "15-19",
+  "pericope_label": "Pilate delivers him up, and the soldiers crown and mock him",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'To content the multitude' a Latin idiom; Pilate afraid of the crowd and of Caesar yielded; the scourging preceding crucifixion."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: he released Barabbas the nation's scandal and gave up Jesus its glory; chastising the innocent led by degrees to crucifying him."
-   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (on point): the smiting and spitting fulfil Isaiah 50:6 and 53:1."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pilate yields",
-   "the scourging",
-   "Barabbas freed, Jesus condemned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "Bede",
-   "Augustine",
-   "Pseudo-Jerome",
-   "Theophylact",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Praetorium' a Latin word for the governor's palace (Matthew 27:27); the 'band' the cohort gathered into the court."
+    "summary": "Theophylact turns the mockery on the reader: we are called Christians, that is anointed, as kings were anointed, so let us put on that purple and walk as kings, and take that crown by a strict life and purity. Cyril of Jerusalem hears the prophet speaking beforehand in the person of Christ — I gave my back to the scourges — and finds the word answered when Pilate, having scourged him, delivered him to be crucified; he also asks how they could spit on the face of him who by spittle had healed the blind."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: mocking his kingship they robe him in purple and thorns; Pseudo-Jerome: his shame took away our shame, the thorny crown winning us the crown of the kingdom; Theophylact bids us put on the royal robe and crown of a strict life."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Praetorium",
-   "mock coronation",
-   "shame winning the crown"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark/John 'purple', Matthew 'scarlet' (Matthew 27:28) — one near colour, a soldier's old coat; the crown a garland about the temples; Clarke (with Pearce) doubts the thorns were the torturing kind."
+    "summary": "Bede reads the dressing as a parody of royalty, the purple which ancient kings wore, a crown of thorns for the diadem and a reed for the sceptre, and takes the soldiers to have worshipped him as one who falsely called himself God; he then turns the properties into allegory, the purple being the flesh he gave up to suffering and the thorny crown his taking on of our sins, while they smite the head of Christ who deny that he is very God, and smite it with a reed who would confirm that error out of Holy Writ. Augustine offers two ways of reconciling the colours, that the scarlet was used in mockery for royal purple, there being a red purple very like it, or that the garment was scarlet with some purple about it, and settles the sequence by placing all this at Pilate's house before the leading out. Pseudo-Jerome answers the mockery with exchange: his shame took away our shame, his bonds made us free, and by his crown of thorns we obtained the crown of the kingdom."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: a mock purple robe, one of the soldiers' old coats, put on him in derision."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Was the 'crown of thorns' an instrument of torture or of mockery?",
-    "sides": [
-     {
-      "position": "Chiefly mockery; the plant perhaps acanthus, not the torturing kind",
-      "holders": [
-       "Clarke",
-       "Pearce"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "purple robe and crown of thorns",
-   "mock royalty",
-   "wearing our thorns"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: they saluted him in mockery, as a king just come to his throne on his coronation day."
-   }
-  ],
-  "debates": [],
-  "outliers": [
+    "summary": "Gill says Pilate gave way only after washing his hands to testify his innocence, divides the suitors' compliance between love and fear, and takes the robe for a garment near enough purple to be so called, very likely one of the soldiers' old coats; on the crown he assumes real thorns, driven into the temples by the blow of the reed."
+   },
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns the epileptic boy, not this verse."
-   }
-  ],
-  "themes": [
-   "'Hail, King of the Jews'",
-   "mock homage",
-   "true title in scorn"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the exchange as an accounting — Barabbas, the scandal of the nation, released, and Jesus, its glory, delivered up — and observes that since Pilate had already persuaded himself to chastise a man he knew innocent, no wonder he could by degrees persuade himself to crucify him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke doubts the thorns altogether. Following Bishop Pearce he argues that the Greek word may as well come from the plant the French call branche ursine, not of the thorny kind at all but soft and smooth, called by Virgil and Pliny a pliant herb grown in gardens and said to be common about Jerusalem, so that the crown meant derision rather than torture. Wesley judges with Ellicott that Matthew's word and Mark's indicate one colour, Tyrian purple not being far from scarlet."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The verbs smote, spat, worshipped in the tense of frequent repetition; the 'worship' mock homage, not adoration; the reed driving the thorns into his temples (Gill)."
+    "summary": "Robertson identifies the phrase for satisfying the crowd as a Latin idiom, to do what is enough to remove a man's ground of complaint, and reads Pilate plainly: he feared a crowd now wholly under the Sanhedrin's control and knew what they would tell Caesar about him; he makes the Praetorium the palace where the governor resided and notes that Mark alone mentions the court inside it. Ellicott observes that Praetorium is another Latin word, Matthew's common hall, and that the smiting, spitting and kneeling all stand in the tense of repeated action. Barnes glosses the Praetorium as where the governor sat to administer justice, describes the crown as a circlet set about the temples rather than a covering for the head, and denies that the kneeling carried any religious homage, since the word means only the honour done to princes and they thought him madly claiming to be a king and not to be divine."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether the crown was of thorns at all: Gill takes it for sharp thorns driven into the temples and Bede for a mock diadem, while Clarke, following Bishop Pearce, argues from the Greek word for a soft garden plant, the branche ursine, and makes the crown an instrument of derision rather than torture",
+   "What the soldiers' kneeling meant: Bede says they worshipped him as one who falsely called himself God, Barnes that the word carries no religious homage at all but only the honour paid to princes, since they thought him a pretended king and not a pretended God",
+   "Purple or scarlet: Ellicott and Wesley judge the two words to name one colour, while Augustine reconciles them either by the mock use of scarlet for royal purple or by supposing purple about a scarlet robe"
+  ],
   "outliers": [],
   "themes": [
-   "smiting and spitting",
-   "mock worship",
-   "Isaiah 50:6 fulfilled"
+   "the scourging",
+   "the purple robe",
+   "the crown of thorns",
+   "Hail, King of the Jews"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "20": {
   "voices": [
-   "Gloss",
-   "Pseudo-Jerome",
-   "Theophylact",
-   "Bede",
-   "Augustine",
-   "John Gill",
    "A.T. Robertson",
-   "John Wesley"
+   "Adam Clarke",
+   "Augustine",
+   "Bede",
+   "Charles Ellicott",
+   "Gloss",
+   "John Gill",
+   "John Lightfoot",
+   "John Wesley",
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
+  "range": "20-21",
+  "pericope_label": "Led out to be crucified, and Simon of Cyrene compelled",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The vivid present 'they lead him out' after the imperfects of mockery; his own clothes restored for the road (Matthew 27:31); Augustine harmonises the myrrh/gall."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact reconciles Mark with John, who has Jesus bearing his own cross: both are true, since he carried it until someone passed whom they could compel."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Pseudo-Jerome's types — Abel, Isaac with the wood, the serpent on the pole, the grape-cluster; Bede: Simon the Cyrenian (obedient, heir) the Gentiles bearing the cross; Theophylact: Christ bore his own cross (John 19:17) till Simon was compelled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "led out to crucify",
-   "the way of the cross",
-   "Old Testament types"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "The Gloss marks the turn of the narrative from the condemnation and the insults to the crucifixion itself. Bede makes Simon a figure of the Gentiles, since he is called no citizen of Jerusalem but a Cyrenian, of a city in Libya, once strangers to the covenants and now joint heirs with Christ; his name is interpreted obedient and his city an heir, and he comes from a country place, which the Greek calls pagos, whence we name those aliens from the city of God pagans, so that he carries the cross after Jesus when the nations leave their pagan rites. Augustine takes up the hardest question the procession raises, how Jesus can be crucified at the third hour when Pilate gave him up about the sixth, and answers by measuring the hour and not the instant, the fifth being over and part of the sixth begun, so that all which belongs to the crucifying falls between the end of the fifth and the completing of the sixth. Pseudo-Jerome sees every carried tree of Scripture walking out of the gate at once — Abel led into the field, Isaac with the wood, Joseph with his sheaf, Moses with the rod, the cluster of grapes on its staff, and Elisha's chip seeking the sunken axe, which is mankind, fallen by the forbidden tree and swimming up to paradise by the wood of the cross; and he draws the moral that as some men are known by their fathers' merits, this Simon is known by his sons'."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes only that the soldiers had had enough of that diversion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies Cyrene as a celebrated city in the Pentapolis of Libya and thinks Alexander likely the man of the Ephesian riot and Rufus the one Paul greets at Rome. Wesley says the two were afterwards eminent Christians, well known when Mark wrote."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Persian word for 'compel' (impress, Matthew 5:41); Simon coming from the country; the named sons Alexander and Rufus (peculiar to Mark) known to the readers, the Rufus of Romans 16:13 plausibly the same, linking Mark to Rome."
+    "summary": "Robertson notes that Mark drops into the vivid present to lead him out, agrees that Jesus bore his own cross till he was relieved of it and walked in front of it the rest of the way, and observes that Mark's word for compelling is the Persian term for impressed service; but he will not have the identification of Rufus, since Paul does mention one, but it was a common name and proves nothing. Ellicott holds the opposite, that the naming of the two sons, found in no other Gospel, is among the most striking marks of Mark's independence and plainly had a special interest for his readers, and that the Rufus chosen in the Lord who stands out among the Roman Christians, taken with the evidence tying this Gospel to that church, points to the identification — from which it follows, since Paul calls the mother of Rufus his own mother, that Simon's wife must have come within the inner circle of Paul's friends. Lightfoot guesses why the soldiers picked Simon out, since the rabbis allowed wood to be fetched from the field on a feast day if bound up beforehand, so that he may have come out already loaded, the sight of a strong bearer being itself the occasion."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Mark's Rufus is the Rufus Paul greets at Rome: Clarke, Wesley and Ellicott take the identification, Ellicott building on it the further inference that Simon's wife was within Paul's inner circle, while Robertson refuses it, the name being too common to prove anything",
+   "Who carried the cross, since John says Jesus bore it himself: Theophylact and Robertson agree that he bore it until Simon was compelled, Robertson adding that he then walked in front of it"
+  ],
+  "outliers": [
+   "Lightfoot conjectures that Simon was coming from the field already carrying bound wood, and that the soldiers laid the cross on him because they saw he was a strong bearer"
+  ],
   "themes": [
-   "Simon the Cyrenian",
-   "Alexander and Rufus",
-   "bearing the cross after Jesus"
+   "led out to crucify him",
+   "Simon a Cyrenian",
+   "the father of Alexander and Rufus",
+   "the third hour and the sixth"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "22": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
    "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The historical present 'they bring him'; Golgotha 'the place of a skull' (Matthew 27:33); an infamous place of execution."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the common place of execution, numbering him with transgressors; the old tradition (Tertullian, Origen, Chrysostom) of Adam's grave there — as in Adam all die, in Christ all live (1 Corinthians 15:22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Golgotha",
-   "the place of a skull",
-   "numbered with transgressors"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
    "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Matthew's 'vinegar/gall' (Matthew 27:34) and Mark's 'wine mingled with myrrh' the same bitter drugged drink; 'myrrhed wine'; Jesus tasted but refused it; given by the Jews to the dying to dull the senses (Gill)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wine mingled with myrrh",
-   "Christ refuses the draught",
-   "drinking the cup fully"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'What each should take' (double interrogative) only in Mark (Matthew 27:35-44); the parting of garments fulfilling Psalm 22:18; Mark seems to give the order nailing, parting, rearing (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here is misplaced, not bearing on the verse."
-   }
-  ],
-  "themes": [
-   "the crucifixion",
-   "parting the garments",
-   "Psalm 22:18 fulfilled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
+   "John Calvin",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "22-26",
+  "pericope_label": "Golgotha, the myrrhed wine, the parted garments and the title",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The third hour' Jewish time (9 A.M.); the trial 'sixth hour' Roman (John 19:14); the day in four three-hour parts each named from its first hour (Barnes, Clarke); the precise hour peculiar to Mark."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the day divided into four parts each named from its commencement; John reckoned by the larger division as noon approached."
-   }
-  ],
-  "debates": [
+    "summary": "Gill calls Golgotha an infamous place noted for its many executions, says wine mingled with frankincense was what the Jews commonly gave a man going out to die, and notes that the Syriac and Persic call the board above his head the cause of his death. Calvin takes the principle that each part of the day is named from its first hour and turns it to the other end of the interval: Mark means not the beginning but the close of the third hour, and it is highly probable that Christ did not hang upon the cross longer than three hours."
+   },
    {
-    "question": "How is Mark's 'third hour' reconciled with John's 'sixth hour' (John 19:14)?",
-    "sides": [
-     {
-      "position": "Mark uses Jewish time (9 A.M.), John Roman time (6 A.M.)",
-      "holders": [
-       "Robertson"
-      ]
-     },
-     {
-      "position": "The day in four quarters each named from its start; John reckons by the quarter",
-      "holders": [
-       "Barnes",
-       "Clarke",
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the third hour",
-   "reconciling with John's sixth",
-   "the hour of crucifixion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry compares Golgotha to Tyburn, so that in this too he was numbered with the transgressors, and takes the name from the skulls of malefactors cut off there. Of the two traditions attached to the place he cannot credit that Adam was buried there, though he lists Tertullian, Origen, Chrysostom and Epiphanius as reporting it and Cyprian as adding that many good people believe the blood trickled down upon Adam's skull; the other he finds more credible, that Calvary was the mountain in Moriah where Isaac was to have been offered and the ram offered instead, so that Abraham had an eye to this day when he named the place for the Lord who would provide."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke presses the textual solution that John's sixth hour should be read third, the character for three being mistakable for the character for six, and cites Bengel, Newcome and Macknight for it, though his own answer is that each of the four parts of the day takes the name of its first hour, so that the whole business of the crucifixion fell inside the division Mark calls the third. Wesley reads the order of the sentence as intimating that they nailed him first, parted the clothes next, and reared the cross afterwards."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'superscription' (epigraph) on the cross, 'accusation' in Matthew 27:37, 'title' in John 19:19; Mark gives the shortest form; the cause of his death (Gill)."
+    "summary": "Robertson cuts the knot of the hours by two clocks, Mark's third being Jewish reckoning and meaning nine in the morning while John's sixth is Roman and means six, which is when the trial was; he calls the draught myrrhed wine and marks the difference between the accounts, that Matthew says Jesus was unwilling to take it where Mark says he refused it; he notes a double interrogative found in Mark alone, who what each should take; and he collects the names for the inscription, Mark's and Luke's word being the one behind our epigraph where Matthew has accusation and John has title. Barnes observes that Matthew's vinegar fits if the wine was soured, the common drink of the Roman soldiers, sets out the fourfold division of the day, and points out that Mark professes to give the time exactly while John says only about the sixth hour, adding that a numeral was written not at length but as a letter, so a copyist's slip is easy. Ellicott takes Mark's myrrh as partly explaining Matthew's gall, and notes that the precise hour is peculiar to Mark and agrees with the darkness at the sixth which all three report, and that Mark gives the shortest form of the inscription. Lightfoot works instead on John's other phrase, the preparation of the passover, from which some have concluded that the eating of the lamb was put off that year to the fifteenth day, so that Christ ate his the day before while the Jews were still to eat theirs."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How Mark's third hour agrees with John's sixth: Robertson and Henry read the two evangelists on different clocks, Jewish and Roman; Barnes and Clarke both allow a copyist's slip between the letters for three and six, Clarke correcting John and Barnes noting the manuscript evidence; Clarke's own solution names each quarter of the day from its first hour, and Calvin, taking the same principle, puts Mark's meaning at the close of the third hour rather than its beginning"
+  ],
+  "outliers": [
+   "Henry reports, without crediting it, the tradition of Tertullian, Origen, Chrysostom and Epiphanius that Adam was buried at Golgotha, and Cyprian's addition that the blood of Christ ran down upon his skull"
+  ],
   "themes": [
-   "the superscription",
-   "'The King of the Jews'",
-   "an unwitting true confession"
+   "the place of a skull",
+   "wine mingled with myrrh",
+   "they parted his garments",
+   "the third hour",
+   "the King of the Jews"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "27": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Thieves' better 'robbers' (Matthew 27:38); the apocryphal names Zoathon and Chammatha (Clarke); crucified with him for greater reproach (Gill)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "two robbers crucified",
-   "numbered with transgressors",
-   "the cross between the guilty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
+   "Augustine",
+   "Bede",
    "Charles Ellicott",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "John Gill",
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
+  "range": "27-32",
+  "pericope_label": "The two robbers, and the reviling of the crucified",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The verse wanting in nearly all the better MSS, probably a marginal note from Luke 22:37; Isaiah 53:12 means not that he was a transgressor but that he had a place with them, dying the just for the unjust."
-   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (on point): the two robbers — one a transgressor to the end, the other finding in his cross the beginning of restoration."
+    "prevalence": "several",
+    "summary": "Cyril of Jerusalem builds a meditation on the pair: both had been transgressors before, but one was so no longer, the first staying stubborn against salvation and smiting with his tongue though his hands were fastened, while the other rebuked him, and for him it was at once the end of life and the beginning of restoration — I say not remember my works, for of these I am afraid; every man has a feeling for his fellow-traveller, and I am travelling with thee towards death. Theophylact offers the reading that saves the letter of the two accounts, that both reviled at first and then one, recognising his innocence, rebuked his fellow; and he finds the devil behind the demand that he come down, since he knew salvation was being won by the Cross and pressed him to undo it, though he did not, for had he needed to come down he would never have gone up at all."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine solves the discrepancy by grammar, that Mark and Matthew, touching only slightly on this place, put the plural for the singular. Bede turns the taunt round, since in saying he saved others they confess against their will that he saved many, so their own words condemn them. Pseudo-Jerome sees the foal tied to the vine and the garments dyed in the blood of the grape while the kids tear at the vine and wag their heads, and presses the unbelief home: afterwards they saw him risen from the grave who would not believe he could come down from the tree, though it is far more wonderful that a dead man should rise than that a living one should step down."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the priests' mockery as laughing at one another, as the Syriac has it, their revenge satisfied."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supplies from a copy of the Old Latin the names of the two robbers, Zoathon on the right hand and Chammatha on the left, and reports the verse about the fulfilled Scripture as wanting in many manuscripts, versions and fathers."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott corrects the English, the men being robbers rather than thieves, and says nearly all the better manuscripts omit the verse about the Scripture fulfilled, which probably began as a marginal note pointing to the prophecy our Lord had himself quoted — adding that, were it genuine, it would be remarkable as one of the few places where Mark dwells on prophecy at all; he also notes that the interjection Mark records is a sort of inarticulate scorn found in no other Gospel, that the clauses should be inverted to read come down and save thyself, and that the taunt names not Christ but the Christ. Barnes guards the words about being numbered with transgressors, which do not make him one nor mean that God accounted him a sinner, but that in the popular estimate and by the judge's sentence he was reckoned among them, dying the just for the unjust. Robertson observes that they turn his own language against him, using the very words he had used in calling men to see and believe, that the tense shows they did it again and again, and that neither Mark nor Matthew gives the story of the robber who turned to Christ."
    }
   ],
   "debates": [
-   {
-    "question": "Is verse 28 ('the scripture was fulfilled') part of the original Mark?",
-    "sides": [
-     {
-      "position": "No — wanting in the best MSS, likely a marginal note from Luke 22:37",
-      "holders": [
-       "Clarke",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
+   "Whether both robbers reviled him, since Luke has one rebuke the other: Augustine takes Mark and Matthew to have put the plural for the singular, while Theophylact holds that both reviled at first and one afterwards turned",
+   "Whether the verse about the Scripture being fulfilled belongs to Mark: Clarke reports it wanting in many manuscripts, versions and fathers, and Ellicott judges it a marginal note that crept into the text, since nearly all the better manuscripts omit it"
   ],
   "outliers": [],
   "themes": [
    "numbered with the transgressors",
-   "Isaiah 53:12",
-   "the just for the unjust"
+   "they that passed by railed on him",
+   "he saved others; himself he cannot save",
+   "let the Christ come down"
   ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "Pseudo-Jerome",
-   "Theophylact",
-   "Bede",
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The interjection 'Ah' (inarticulate scorn) peculiar to Mark; the head-wagging fulfilling Psalm 22:7; the taunt of the temple-saying."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Theophylact: the devil moved them to bid him come down, knowing salvation was won by the cross; Bede: they confess against their will he saved many; Pseudo-Jerome: more wonderful to rise from death than to come down living."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "railing and head-wagging",
-   "'thou that destroyest the temple'",
-   "Psalm 22:7"
-  ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the clauses should read 'come down from the cross, and save thyself'; Gill: the taunt that, if he were what he claimed, he could free himself."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
    }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns the second Passion prediction, not this verse."
-   }
-  ],
-  "themes": [
-   "'save thyself'",
-   "the taunt to descend",
-   "saving others, not himself"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the chief priests mocked, laughing at one another (Syriac), having gained their end and satiated their revenge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests mock",
-   "'he saved others'",
-   "unwitting testimony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Now come down'; they use Christ's own language of seeing and believing in mockery (imperfect 'reproached'); Mark and Matthew omit the penitent robber (Luke 23:39-43); 'the Christ' with emphatic article."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'that we may see and believe'",
-   "false condition for faith",
-   "resurrection the greater sign"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "33": {
   "voices": [
-   "Bede",
-   "Augustine",
-   "Theophylact",
-   "Pseudo-Jerome",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
    "A.T. Robertson",
-   "John Wesley"
+   "Adam Clarke",
+   "Augustine",
+   "Bede",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Lightfoot",
+   "John Wesley",
+   "Matthew Henry",
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
+  "range": "33-37",
+  "pericope_label": "The darkness, the cry of dereliction, and the death",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The sixth hour' noon (Jewish time), darkness till three (Matthew 27:45); no natural eclipse, the moon full at Passover (Theophylact); the sun down at noon (Amos 8:9)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact forestalls the natural explanation of the darkness, since had it fallen at the season for an eclipse someone might have called it a thing of course, but it was the fourteenth moon, when no eclipse can fall; he adds that the cry was uttered for us, who have been forsaken as he never was, since he could say he was not alone because the Father was with him, and hears in the loud voice the power of one who rules death and dies as its Lord, Luke telling us what the voice said."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: the light withdrew lest it see the Lord hanging; as Adam sinned after midday, the second Adam by dying destroyed death; Henry: a sign of darkness on the Jewish nation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the three hours' darkness",
-   "no natural eclipse",
-   "creation veils its face"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's Aramaic 'Eloi' a closer reproduction than Matthew's Hebrew 'Eli', both from Psalm 22:1 (Lamentations 1:12)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: claiming God as his God yet lamenting the Father's withdrawn tokens, treated as an enemy while bearing our sins."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cry of dereliction",
-   "'why hast thou forsaken me'",
-   "Psalm 22:1"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They misunderstood the 'Eloi' (my God) for Elijah (Robertson); some of those standing by the cross (Gill); the Jews looked for Elijah (Malachi 4:5)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'he calleth Elias'",
-   "misunderstanding the cry",
-   "blindness at the cross"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'To take him down' where Matthew 27:49 has 'to save him'; the vinegar fulfilling Psalm 69:21; Christ's 'I thirst' here (John 19:28)."
+    "summary": "Bede reads the darkness as a withdrawal of courtesy, the most glorious light taking back its rays lest it should see the Lord hanging and lest blasphemers should have the benefit of its shining, and finds the hour significant, since Adam heard God walking in paradise in the cool after midday, so that in the very hour when the first Adam brought death into the world the second destroyed it by dying. He answers those who stumble at the lowliness of the words: hunger and thirst and weariness were not proper to the Divinity but bodily afflictions, and so was this voice, since a body never wishes to be parted from the life joined to it, so that he spoke as man, carrying our feelings about with him; and he supposes the bystanders Roman soldiers who did not know the peculiarity of the Hebrew tongue. Pseudo-Jerome makes the properties speak, the sponge on a reed being weak, dry and fit for burning and filled with vinegar, that is with guile, while we who are of the earth die with a low voice or none at all and he who came down from heaven breathed his last with a loud one."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin harmonises: the jeer begun by one offering the vinegar, seized by others — no inconsistency with Matthew."
-   }
-  ],
-  "debates": [],
-  "outliers": [
+    "prevalence": "several",
+    "summary": "Gill fixes the sixth hour at noon, three hours after the nailing. Calvin reconciles John's account of the vinegar with Matthew's, since John gives the words to the soldier with the vinegar and Matthew to others, which is no inconsistency, the jeer being begun by one and eagerly caught up by the rest; and he holds that the phrase implied not restraint but ridicule, every man singing the same song to his neighbour, as men do who are agreed upon a course."
+   },
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here is misplaced, not bearing on the verse."
-   }
-  ],
-  "themes": [
-   "the sponge of vinegar",
-   "'whether Elias will come'",
-   "Psalm 69:21"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the darkness for the sign from heaven the Jews had so often demanded, granted at last but signifying the blinding of their own eyes, since they were labouring to put out the Sun of righteousness; what could follow, he asks, but a darkness worse than the Egyptian?"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reckons the darkness to have lasted some two hours and a half, ending when he expired at the ninth hour, about the time the paschal lamb was sacrificed. Wesley holds both halves of the cry together, that he claims God as his God even while lamenting that his Father withdrew the tokens of his love and treated him as an enemy while he bore our sins."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Gave up the ghost' = breathed out (Matthew 27:50), the verb used again at v.39; about the ninth hour, when the paschal lamb was sacrificed (Clarke)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Pseudo-Jerome: men of earth die with a low voice, but he who came from heaven breathed his last with a loud voice — a mark of unspent strength."
+    "summary": "Robertson makes the sixth hour noon by Jewish reckoning, notes a variant which reads reproached for forsaken and will not pretend to measure the desolation, only insisting that he did not thereby cease to be the Son of God, which were impossible; he says the bystanders took the word for God to be the name of Elijah, and that Mark's word for the death means literally that he breathed out. Lightfoot observes that Matthew keeps the very syllables of the psalm while Mark gives the word in the current Chaldee, and Ellicott says the same, Mark reproducing the Aramaic sound and Matthew the Hebrew as written."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the cry of dereliction is to be understood: Wesley holds both halves together, that he claims God as his God while lamenting the withdrawal of the tokens of love; Bede refers the lowliness to the bodily voice, since a body never wishes to be parted from its life; Theophylact takes it as spoken for us, who have been forsaken as he never was; and Robertson refuses to measure the desolation, insisting only that he did not cease to be the Son of God",
+   "Who spoke of Elias: Augustine gathers from the two accounts that both the man with the sponge and the bystanders said it, and Calvin agrees, supposing the jeer begun by one and taken up by the rest as ridicule rather than restraint"
+  ],
+  "outliers": [
+   "Theophylact rules out a natural eclipse on the ground that it was the fourteenth moon, when no eclipse can occur"
+  ],
   "themes": [
-   "the loud cry",
-   "gave up the ghost",
-   "the willing sacrifice"
+   "darkness over the whole land",
+   "Eloi, Eloi, lama sabachthani",
+   "behold, he calleth Elias",
+   "he gave up the ghost"
+  ],
+  "excluded_voices": [
+   "Albert Barnes",
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "38": {
   "voices": [
-   "Gloss",
-   "Pseudo-Jerome",
-   "Theophylact",
-   "Bede",
-   "Augustine",
-   "John Gill",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Pseudo-Jerome: the veil rent = heaven opened; Theophylact: the Spirit departing, the Holy of Holies laid open, a figure of Christ's flesh torn (Hebrews 10:20); Bede and Augustine join the centurion's confession."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Gill: the rending from top to bottom with the earthquake and opening graves (Matthew 27:51)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (on point): the garden and the finished mystery."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the veil rent in twain",
-   "the way to God opened",
-   "the veil of his flesh (Hebrews 10:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Centurion' a Latin word; the watching 'over against him' peculiar to Mark; the confession 'so' (with darkness and earthquake), perhaps 'a Son of God' (Matthew 27:54)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: he marvelled that the Lord sent forth his Spirit, which only the Creator of souls can do; Augustine: the immediate yielding showed no sin could cause the death of his flesh."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "The Cyril of Jerusalem note here is on the resurrection appearances, tangential."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A passage on the resurrection appearances, tangential to the verse."
-   }
-  ],
-  "themes": [
-   "the centurion's confession",
-   "'the Son of God'",
-   "first-fruit of the Gentiles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "Augustine",
+   "Bede",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The list matches Matthew 27:56, with 'James the little' and 'Salome' (only in Mark) for 'the mother of Zebedee's children'; they watched afar off."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the women looking on",
-   "Mary Magdalene and Salome",
-   "faithful devotion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
+   "Cyril of Jerusalem",
+   "Gloss",
    "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
+  "range": "38-41",
+  "pericope_label": "The veil rent, the centurion's confession, and the women",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact reads the torn veil two ways, that the grace of the Spirit is rent away from the temple so that the Holy of holies stands open to every eye, and that it figures the living temple, the body of Christ, whose garment, that is his flesh, is torn in the Passion, the rending reaching from Adam down to the latest man; and he hears the order of the world inverted here, since the Jew kills and the Gentile confesses, the disciples fly and the women remain. Cyril of Jerusalem sets the whole under the epistle's figure, that Christ being come a high priest of the good things to come entered once for all into the holy place, not by the blood of goats and calves but by his own."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "The Gloss marks the hinge, that the Evangelist having told the Passion now turns to what followed it. Bede finds the cause of the centurion's wonder plain, since seeing the Lord die in that manner, sending forth his own Spirit, he judged rightly, no one being able to send forth his own spirit but the Creator of souls; and he sorts out the James of the list as the son of Alphaeus, called the Lord's brother because his mother was sister to the Lord's mother, the Mary of Cleophas whom John names beside the cross. Of the women's ministering he observes that it was a Jewish custom, not thought blameable by that ancient people, for women to furnish teachers with food and clothing out of their substance, so that they gave him their carnal things whose spiritual things they had reaped and showed a pattern for all masters. Augustine sharpens the wonder to the instant, that immediately after the cry the Spirit was given up, for it left the flesh not unwillingly but as it willed, being joined to the Word of God in unity of person. Pseudo-Jerome puts the rending in one line, that heaven is opened, and that the last are now made first, since the Gentile confesses while the blinded Jew denies — and as through the Virgin the female sex is not shut out from salvation, so through Mary Magdalene and the others it is not thrust away from the knowledge of the mystery of the Cross."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill adds from Matthew what Mark omits, the earthquake at the same moment, the rocks rent and the graves opened, and says the women followed him wherever he went in Galilee and thence to Jerusalem."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke records that some manuscripts read Joset or Joseph for Joses, and Wesley glosses the women's service as providing him with necessaries."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The imperfects 'followed' and 'ministered' mark the long Galilean ministry of these women (Luke 8:1-3) who came up with him; last at the Cross; they provided his necessaries (Wesley)."
+    "summary": "Ellicott notes that Mark, after his manner, uses the actual Roman title for the centurion where Matthew uses the Greek equivalent, and finds the list of women the same as Matthew's but for two things, the epithet little applied to James and the name Salome where Matthew has the mother of Zebedee's children. Robertson observes that the word for centurion stands nowhere else in the New Testament but here and a few verses on, refers the opening so to the darkness and the earthquake, prefers to render the confession a Son of God, takes Salome and the mother of Zebedee's sons for one person, and marks the two imperfect tenses that stretch the following and the serving across the whole Galilean ministry, closing with the picture of these faithful women last at the Cross, standing afar off and watching the end of all their hopes."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What moved the centurion: Bede and Augustine both fix on the manner of the death, that he sent forth his own Spirit, which none but the Creator of souls can do; Robertson would render the confession a Son of God and refers the so that opens the verse to the darkness and the earthquake together"
+  ],
+  "outliers": [
+   "Theophylact reads the rending of the veil as reaching from Adam to the latest man, so that Adam's own flesh is loosed from the curse"
+  ],
   "themes": [
-   "following and ministering",
-   "faithful from Galilee",
-   "grateful service"
+   "the veil rent from top to bottom",
+   "truly this man was the Son of God",
+   "the women beholding afar off",
+   "they followed him and ministered"
+  ],
+  "excluded_voices": [
+   "Albert Barnes"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.39
+   }
   }
  },
  "42": {
   "voices": [
-   "Gloss",
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
    "Bede",
-   "Pseudo-Jerome",
-   "Theophylact",
+   "Charles Ellicott",
+   "Gloss",
    "John Gill",
    "John Lightfoot",
+   "John Wesley",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
+   "Pseudo-Jerome",
+   "Theophylact"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The preparation' explained by Mark for Gentiles as the day before the sabbath, our Friday (John 19:31); the rabbinic sense of preparing food (Exodus 16:23); haste before sunset, bodies not to hang overnight."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact praises the boldness as of the right kind, since Joseph did not stop to reckon that he would fall from his rich estate and be cast out by the Jews for begging the body of one condemned as a blasphemer; he accounts for Pilate's surprise by the usual slowness of the death, and turns the burial into a rule for the reader — take the body of Christ to yourself by unity and lay it in a sepulchre hewn from the rock, that is in a soul recollected and never forgetful of God, and wrap it in linen, that is receive it into a pure body."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: as man was made on the sixth day and God rested on the seventh, fitly the Saviour was crucified on the sixth and rested in the tomb on the sabbath, awaiting the eighth-day Resurrection."
+    "summary": "The Gloss marks the turn to the burial. Bede gives the philology, that the Greek parasceue is the Latin praeparatio, the name by which Jews living among Greeks called the sixth day, since on it they made ready what the coming rest required, and finds a whole week's theology in it: man was made on the sixth and the Creator rested on the seventh, so fitly was the Saviour crucified on the sixth and, resting in the tomb through the sabbath, waited for a resurrection on the eighth, and so must we be crucified to the world now, rest when the debt to death is paid, and in the eighth period receive our bodies back glorified. Pseudo-Jerome finds the name of Joseph apt, being interpreted taking down, and reads the sequel as gain, since by the burial of Christ we rise again and by his descent into hell we mount up into heaven — here is the honey found in the mouth of the dead lion; he reads the scene also as the history of a nation, Israel believing at the last, laying aside despair and going in to be baptized while the elect look on from afar."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the Syriac and Persic read it the night of the sixth day, Friday night."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that a malefactor's corpse lay at the disposal of the government, and that those who hurried him to the cross meant him to make his grave with the wicked, but God meant him to make it with the rich, and so he did."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke recalls that Moses had ordered no criminal to hang on a tree past sunset, and supposes Joseph feared the corpse might be flung into the common grave with the two robbers, and so entreated Pilate earnestly for it; Wesley says only that the bodies might not hang on the sabbath."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that Mark's explanation of the word is characteristic of an evangelist writing for Gentile readers and fixes its sense past doubt, and Robertson makes it our Friday, which began at sunset. Barnes puts the even after three in the afternoon and says the coming day was of peculiar solemnity, so more than ordinary provision was made beforehand. Lightfoot asks why the name should be given at all and answers that they made ready not so much themselves as their food, by the law that whatsoever ye will bake, bake today."
    }
   ],
   "debates": [],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns the discourse on offences, not this verse."
-   }
+   "Bede reads the days of the Passion as the week of creation and of our own history, the sixth day for the crucifying, the seventh for the rest of the body in the grave, and the eighth for the glorifying of our bodies with our souls"
   ],
   "themes": [
-   "the preparation",
-   "eve of the sabbath",
-   "Christ resting in the tomb"
+   "the preparation, the day before the sabbath",
+   "Joseph of Arimathaea",
+   "he went in boldly unto Pilate",
+   "craved the body of Jesus"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "43": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Cyril of Jerusalem",
+   "John Calvin",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley"
   ],
+  "range": "43-47",
+  "pericope_label": "Pilate grants the body, and Joseph buries him in the rock",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A councillor of honourable estate (Sanhedrin member, rich, Matthew 27:57), looking for the kingdom (verb of Simeon, Luke 2:25), a secret disciple (John 19:38) now bold; he acts more fearlessly than the disciples (Clarke)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem puts the questions a catechist would ask — is the tomb built with hands, raised like the tombs of kings? — and answers from the prophets, who bid us look into the solid rock that was hewn, and say that they cut off his life in a dungeon and cast a stone upon him, so that the chief corner stone lay a little while within a stone."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the highest praise is that he waited for the kingdom of God, the root of his righteousness; Theophylact marks his praiseworthy boldness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph of Arimathaea",
-   "waiting for the kingdom",
-   "boldness of a secret disciple"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The classical idiom 'wonder if'; crucifixion usually lingering; this item and the calling of the centurion only in Mark; the article points to the same centurion of v.39."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pilate marvelled",
-   "the reality of his death",
-   "official confirmation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Granted the corpse' (ptoma, only here of Jesus' body); Pilate glad to give it to Joseph rather than the potter's field; the centurion in charge gave correct information (John 19:34)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the body granted to Joseph",
-   "death confirmed",
-   "rescued for honourable burial"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rare verbs for winding the body in linen, with Nicodemus's spices (John 19:39-40), laid in Joseph's new rock-hewn tomb; the buying of linen before the sabbath peculiar to Mark; the stone rolled by servants (Wesley)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (on point): the rock-hewn tomb foretold by the prophets."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wrapped in linen",
-   "the rock-hewn tomb",
-   "the stone rolled to the door"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect 'beheld' — the two Marys sitting over against the tomb (Matthew 27:61), a party of observation seeing where he was laid; 'the other Mary' of Matthew."
+    "summary": "Gill takes Joseph for a priest of the bench that sat in what the rabbis call the chamber of the counsellors, and supposes the linen bought in the city. Calvin fixes on the waiting rather than the daring: that Joseph looked for the kingdom of God is his highest commendation and the root of the righteousness he is praised for, since no man dedicates himself to God unless he expects God to be his deliverer; and though the promise was made to all the Jews, the Spirit testifies this of very few."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a timid man and weak women acknowledge Jesus when the strong forsook him; Barnes: female love never forsook him, flourishing in adversity."
+    "prevalence": "several",
+    "summary": "Clarke marvels that the coward now acts a more open part than any disciple, since it took courage to declare for one condemned hours before as a blasphemer by the Jews and a seditious man by the Romans, and finds the reason where the apostle puts it, that we have boldness to enter the holiest through his blood, so that the death of Jesus is the grand cause of courage in a believing soul. Wesley describes Joseph as a man of character and reputation, a member of the sanhedrim who expected the kingdom set up on earth, and adds that he rolled the stone by his servants, it being far too large for one man."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson makes Joseph a senator of high standing and wealth, notes that the phrase for looking toward the kingdom of God uses the verb Luke applies to Simeon and Anna, calls Pilate's construction a classical idiom, our own I wonder if, and observes that Mark omits the request that the legs be broken, Pilate wanting an official report before releasing the body; of the burial he explains that the winding verb occurs nowhere else in the New Testament and that the participle for the hewing comes from the word for a stonecutter, and lets the imperfect tense hold the picture of the two Marys watching in silence as the shadows fell across all their hopes. Barnes insists the word rendered honourable is no mere name of office but a judgment on the man, and that his waiting meant more than the expectation every Jew shared, since it implies he already believed this was the Messiah; he and Clarke both dwell on the watchers, the strong and the mighty having fled while a timid man and a few weak women owned him in death. Ellicott would render that he waxed bold and went in, hearing an implied contrast with his former timidity, notes that the wonder and the summoning of the centurion are Mark's alone, and would read a fine linen sheet, only Mark saying it was bought as the sabbath came on. Lightfoot works the chamber of the counsellors over, the Vulgate making Joseph a noble officer and Beza an honourable senator, while the Talmud says the room was first the chamber of the counsellors and became the chamber of chief men once the high priesthood was bought and changed yearly."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What made Joseph honourable: Barnes and Wesley take the word as a judgment on his character rather than a title of office, while Robertson, Lightfoot and Gill read it of his rank, a senator of the council, Gill making him a priest of the bench that sat in the chamber of the counsellors"
+  ],
+  "outliers": [
+   "Lightfoot leaves unsettled the question his own evidence raises, that the Talmudic name for the counsellors' chamber is a Greek word, and asks whether Greek can have flourished so early at Jerusalem"
+  ],
   "themes": [
-   "beholding where he was laid",
-   "faithful women",
-   "link to the empty tomb"
+   "an honourable counsellor",
+   "waited for the kingdom of God",
+   "Pilate marvelled if he were already dead",
+   "a sepulchre hewn out of a rock",
+   "beheld where he was laid"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  }
 }
