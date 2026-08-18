@@ -3252,6 +3252,38 @@
       "book": "genesis",
       "chapter": "30",
       "note": "Fourth clean chapter running under the span-sized-target rule: genesis 30 spans of 6998/4901/7331/5377 source words gave entries of 650/649/644/648. Zero defects in every lint category for joshua 22, genesis 43, judges 1 and now genesis 30. But note the cost: every entry needed 2-4 trim passes this time, against one or none for genesis 43. The chapter is unusually voice-dense (seven commentators on nearly every key, four schools throughout), and dense spans push drafts well over the ceiling even when the target is set correctly. Suggest the rule be stated as source-words divided by 4-8 BY VOICE COUNT, tightening toward the low end when six or more voices are live."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "31",
+      "note": "The numbers 31 blocker is STRUCTURAL, not specific to that chapter, and 28 other chapters share it. Corpus scan: 61 chapters have interior gaps in their cow source keys. Of those, 29 contain at least one contiguous run of present keys too thin to support the 350-word prose floor (using <900 usable source words as the threshold). validate-synthesis.py rejects any pericope covering a verse absent from the source, so spans cannot bridge the gaps; a run like numbers 31's 42-42 (211 source words) or psalms 108's 9-11 (75 words across three verses) therefore has no legal, unpadded tiling under the new format. All 29 are currently DONE only because they hold LEGACY per-verse synthesis — one prose string per source key, no ranges — which satisfies the tiling rule trivially. numbers 31 has exactly 42 entries for its 42 source keys. Every one of these will hit the same wall the moment it is repaired into the pericope format. The 29: 1chronicles 1,2,6,8,9,16,25; 1corinthians 16; deuteronomy 14; exodus 35,36,37,38,39; ezra 2,8,10; galatians 2; luke 3; nehemiah 7,10,11,12; numbers 26,28,29,31,34; psalms 108 (the only one not yet synthesised at all). Two fixes, both owner calls, and one decision covers all 29: repair the sources so the missing keys are present, or relax the tiling rule to let a pericope span verses the commentary is silent on — the latter being arguably correct anyway, since a pericope is a unit of the text and not of the commentary. Note that some gaps are large and clearly scrape losses: exodus 36 is missing 10-13, 15-18, 21-25, 27-29, 33-34, 36; nehemiah 7 is missing more verses than it has."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "108",
+      "note": "See the numbers 31 note filed the same day: psalms 108 is one of 29 chapters blocked by interior source-key gaps, and the only one of the 29 with no synthesis at all yet. It is therefore the cheapest test case for whichever fix is chosen — two entries drafted and measured to a 1-5 / 6-13 tiling are all that is needed once the rule or the source changes."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "93",
+      "verses": [
+        "2",
+        "5"
+      ],
+      "note": "Two familiar defects. (1) The Jamieson, Fausset and Brown block at psalms 93:2 is scrape residue: 'appointed for the angels giving an account of their ministry to God... as Satan has now a special report to make as to Job' — Job 1:6 material, nothing to do with the throne established of old. Declared in excluded_voices for entry 1. Seventh chapter with off-book JFB residue, ninth individual block. (2) StudyLight site chrome trails Ellicott at v5, the eighth instance. Also note Keil at v4 is a bare Scripture quotation of vv.4-5 with no comment, correctly excluded from entry 3."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "93",
+      "note": "Filing-rule wrinkle worth recording: Keil and Delitzsch's substantial comment on the floods — the sea as emblem of the Gentile world at enmity with God, the rivers as emblems of worldly kingdoms, the Nile of Egypt and the Tigris and Euphrates of Assyria and Babylon — is filed at v2, not at vv.3-4 which it actually expounds. Under the filing rule it therefore belongs in entry 1 (span 1-2) rather than entry 3 (span 3-5), and entry 3 accordingly cites Keil not at all, his only block inside that span being a bare quotation. This is the second time in this run the best comment on a verse has had to appear in a neighbouring entry because of where the source filed it; see the psalms 131 note."
     }
   ]
 }
