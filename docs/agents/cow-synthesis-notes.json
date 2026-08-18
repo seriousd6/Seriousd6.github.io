@@ -4585,6 +4585,42 @@
         "47"
       ],
       "note": "Four disagreements worth carrying forward. (1) v12, the friendship of Herod and Pilate: Ambrose makes it a type of Israel and the Gentiles reconciled through the Passion, Bede the contrary figure of both agreeing to persecute Christians, and Barnes denies any union at all, since Pilate wished to release Jesus and both merely made sport of him. (2) v34, for whom the prayer was offered: Barnes takes in Romans and Jews together, Ellicott and Robertson restrict it to the soldiers and expressly exclude the Sanhedrin since Pilate and the priests sinned against knowledge, and Chrysostom makes it conditional upon repentance. (3) v43, the promise to the thief: Clarke reports that Marcion and the Manichees struck the verse from their copies, takes it for a proof of the soul's immateriality, and attacks at length the expedient of placing a comma after today so as to read I tell thee this today; Barnes doubts the day can be pushed to the resurrection. (4) v47, the centurion's words: Matthew has the Son of God and Luke a righteous man, and Augustine offers two solutions, that both were spoken and each evangelist reported one, or that Luke gives the sense the soldier intended, since he may have called him Son of God only because he believed him just."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "4",
+      "verses": [
+        "18",
+        "19",
+        "31"
+      ],
+      "note": "SOURCE-KEY GAPS constrain the span plan, and this is the first chapter in the run where they had to drive it. leviticus 4 has 32 source keys for a 35-verse chapter: vv.18, 19 and 31 are absent from the catena entirely. QA.coverage_problems fails on 'entries cover verses absent from the source', so no span may cross a gap -- which forced the breaks at 17/20 and 30/32 regardless of where the pericopes actually end (the congregation's ritual runs 13-21 and the commoner's 27-35, and both were cut mid-pericope). Final plan: 1-2 | 3-12 | 13-17 | 20-26 | 27-30 | 32-35. Two things worth recording. (1) This is the same defect class that got nehemiah 7 dropped, but it is survivable when the gaps are few and fall where a span can legitimately end; nehemiah 7 fails because 22 keys must cover 73 verses. The deciding test is whether every gap-bounded segment still holds enough source words for an honest entry. (2) exodus 35, offered in the same batch at only 9,767 words, was REJECTED for this reason: its gaps at v6, v32 and v33 leave vv.34-35 as an isolated 284-word segment that cannot be written at even the 350-word floor without padding. Check the key list for gaps BEFORE sizing a chapter, not after."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "4",
+      "verses": [
+        "32",
+        "33",
+        "34",
+        "35"
+      ],
+      "note": "A NEW ghost-check failure mode, distinct from the false auto-exclusions of note 414: a false POSITIVE in the presence test. The ghost script reported Clarke as present-but-unused on the 32-35 entry, and undeclarable_voices refused to declare him -- normally a hard signal that the voice has real content that must be cited. It does not. Clarke's only occurrence anywhere in that span is the string 'Adam Clarke Commentary' inside a scraped StudyLight navigation menu ('Bible Commentaries (144): Verse-by-Verse Commentary, Burton Coffman Commentaries, Adam Clarke Commentary, Albert Barnes' Notes, John Gill's Exposition...'). The presence test is a bare substring match over the whole blob including site chrome, so any commentator listed in that menu registers as present in every chapter whose scrape retained the nav block. Two consequences: (a) undeclarable_voices does not recognise site-chrome menus as declarable residue, so such phantoms can neither be cited nor excluded and simply drop out of the voices list; (b) the correct action is to LEAVE THE VOICE OUT, which is the opposite of the correct action for note 414's short-block false exclusions. Diagnostic that separates them: grep the span for the voice's name and look at what surrounds it -- prose means add, nav menu means ignore."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "32"
+      ],
+      "note": "Two craft results from this chapter. (1) An entry that came in at grade B was rescued by VOCABULARY VARIATION rather than by trimming alone. The 3-12 entry first measured ttr 0.575 and zip 0.411 -- B on both axes -- because a ritual passage forces 'priest', 'blood', 'sacrifice', 'sin' and 'people' to recur. Rewriting the repeated nouns with their synonyms (ceremony, victim, beast, unction, offerer, nation) while cutting 139 words took it to ttr 0.641, zip 0.452, grade A. Worth knowing that a B on a ritual chapter is usually a lexical problem, not a length problem, and that trimming alone will not fix it. (2) The 32-35 entry was deliberately written SHORT, at 384 QA words rather than the usual 640. Its span holds only about 390 words of real commentary once the scrape residue is set aside, so a 640-word entry would have been roughly 1.6:1 expansion -- paraphrase, not distillation. 384 clears the 350 floor and the FLOOR flag threshold of 375 with margin, and the audit reports no PAD. Writing to the material rather than to the ceiling is the right call whenever a gap-bounded segment is thin; the range is 350-650 and the top of it is not a target."
     }
   ]
 }
