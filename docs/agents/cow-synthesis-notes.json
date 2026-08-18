@@ -4396,6 +4396,73 @@
         "31"
       ],
       "note": "Two smaller conflicts worth carrying forward. (1) The size of the present at 13-15: Henry counts five hundred and eighty head, while Keil and Delitzsch and Ellicott both count five hundred and fifty; the difference appears to be whether the camels' colts are counted separately. (2) The sunrise at verse 31: Gill and Clarke read it as an emblem of the Sun of righteousness rising with healing in his wings, Clarke going so far as to suggest the thigh was healed with the dawn, whereas Ellicott argues from the same verse that Jacob discovered his lameness only when he tried to walk and his sinews cooled — that is, the injury declared itself at sunrise rather than being cured by it. Calvin takes a third position, that the halting was painless throughout so that the miracle might be plainer."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "8",
+      "note": "CORRECTION to the corpus-wide 200-word cap logged at genesis 32. That note said the cap applies to Keil and Delitzsch; the cap is real but its SCOPE was wrong. A 50-file random sample counting blocks by voice gives: Keil and Delitzsch 494 blocks, 455 exactly 200 words, NONE over 200; John Gill 1304 blocks, 104 exactly 200, NONE over 200; Cyril of Jerusalem 35 blocks, 22 exactly 200, NONE over 200. Every other voice sampled exceeds 200 freely — Ellicott 145 blocks over, Clarke 151, Calvin 328, Henry 188, Barnes 121, Robertson 28, JFB 23, Spurgeon 35, Wesley 10. So exactly three voices are hard-capped at 200 words and the rest are not. This matters far more than the earlier note implied: GILL IS THE HIGHEST-VOLUME VOICE IN THE CORPUS, so a silent 200-word truncation on Gill is a much larger loss than on Keil and Delitzsch. Capped Gill blocks end mid-sentence (verified at genesis 45:10, genesis 45:28, psalms 95:2, colossians 2:1). Recommend an owner decision on re-fetching these three voices."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "8",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35"
+      ],
+      "note": "JFB scrape residue, twenty-eighth chapter affected and the first in the New Testament. All six JFB blocks are Gospel of John material (John 10-11: the thieves before the shepherd, the psalm on judges quoted at John 10:34, Bethany beyond Jordan, Mary's anointing, Perea, and Our friend Lazarus), in narrative order, keyed at 5, 11, 17, 23, 29, 35 — period 6 at offset 5, an UNBROKEN run of six with no empty slots and no truncation. This is the cleanest instance of the model yet and the first confirmation that the defect is not confined to the Old Testament: the period is 6 in Acts exactly as in Genesis, Exodus, Leviticus and Numbers, and only the phase differs. Observed offsets to date: 3 (genesis 21, leviticus 26, genesis 32), 4 (numbers 21), 5 (exodus 23, acts 8). Excluded from every entry covering these keys."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "8",
+      "note": "First New Testament chapter in this repair loop, and the voice set is much larger than the Old Testament one. Alongside Gill, Calvin, Henry, Clarke, Wesley and Ellicott there appear Albert Barnes, A.T. Robertson, John Lightfoot, Cyril of Jerusalem and John Chrysostom. School assignments used here, derived from the established corpus by matching school summaries that name exactly one voice: Barnes, Robertson and Lightfoot all grammatical-historical; Cyril of Jerusalem and Chrysostom eastern-antiochene. Nine or ten voices per entry is normal in this chapter against six to eight in the Pentateuch, which makes the 350-650 word window materially harder: the floor imposed by naming every sourced voice once is roughly 400 words before any content, so entries here compress at 8:1 to 20:1 rather than the 4:1 to 8:1 the span-sized-target rule contemplates. Worth an owner decision on whether NT chapters should tile more finely."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "8",
+      "verses": [
+        "4",
+        "14",
+        "26"
+      ],
+      "note": "Block-keying losses declared for four entries. Matthew Henry has blocks only at keys 1, 4, 5, 14 and 26, each covering a whole section: the block at 4 runs through the Simon narrative to verse 13, the block at 14 covers the apostles' visit and the rebuke of Simon through verse 25, and the block at 26 covers the entire eunuch narrative through verse 40. His material was used in the entries where it is keyed (1-3, 4-8, 14-17, 26-28), so entries 9-13, 18-21, 22-25, 29-33, 34-38 and 39-40 carry no puritan-evangelical voice at all. Six of the ten entries in this chapter therefore lack that school. This is the most severe case of the block-keying problem recorded so far, and it is a structural feature of the Acts commentary rather than an accident: Henry writes section overviews for narrative, not verse notes."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "8",
+      "verses": [
+        "5",
+        "13",
+        "27",
+        "38"
+      ],
+      "note": "Four first-rate disagreements in this chapter. (1) v5, which city: Robertson takes Samaria for the city's own name by a genitive of apposition, while Barnes and Clarke deny that any city so named existed, Hyrcanus having razed it and Herod rebuilt it as Sebaste; Clarke adds Bishop Pearce's argument that Luke would have written Sebaste as he always writes Caesarea for Strato's Tower, and prefers Shechem; Lightfoot leaves it open; Ellicott identifies it with Sychar. (2) v13, Simon's faith: Barnes says flatly he was no real Christian, Ellicott calls it fides informis, Clarke takes the profession at face value, and Calvin expressly refuses to say he only feigned, since Luke says he believed, positing a mean between faith and dissimulation. (3) v27, the eunuch: Clarke, Calvin and Wesley all take the word for a court title only, instancing the married Potiphar, while Ellicott argues from Gospel usage for the strict sense and builds on it the whole point about Deuteronomy 23:1 relaxed by Isaiah 56:4 and the parallel canon of Nicaea. (4) v38, immersion: Ellicott defends it from the universal early practice and pictures the whole action, Barnes answers that neither eis nor ek proves entry and that entering does not prove immersion, Clarke supposes a self-plunging after the Jewish manner, and Calvin grants the ancient practice while defending the modern sprinkling and refusing to divide the Church over it."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "8",
+      "verses": [
+        "9",
+        "24",
+        "37",
+        "39"
+      ],
+      "note": "Four textual and legendary cruxes. (1) The Simon Magus legends: Clarke calls the whole body of them extravagancies that probably never existed, Ellicott sets them out at length as not in themselves incredible, and Robertson refutes the central one — Justin Martyr's Roman statue inscribed SIMONI DEO SANCTO — by the stone recovered from the Tiber in 1574, which is inscribed to a Sabine name for Hercules. Ellicott repeats Justin's claim without knowing the refutation, so the chapter contains the assertion and its answer side by side. (2) v24, Simon's fate: Clarke alone hopes well of him on the Codex Bezae and later Syriac margin, which add that he wept greatly and did not cease; Barnes concludes he died in the bond of iniquity and calls the testimony of antiquity decisive. (3) v37, the confession: absent from the best manuscripts including the Sinaitic though quoted by Irenaeus; Barnes and Ellicott both judge it inserted, Ellicott explaining the motive as the felt awkwardness of an unanswered question and a missing baptismal confession, while Gill and Clarke expound it as text. (4) v39: the Alexandrian variant that the Holy Spirit fell on the eunuch and an angel caught away Philip, reported by both Clarke and Ellicott, the latter judging it a conjectural emendation."
     }
   ]
 }

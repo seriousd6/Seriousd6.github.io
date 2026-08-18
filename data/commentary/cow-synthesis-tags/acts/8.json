@@ -2,1472 +2,810 @@
  "1": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'consenting' means consent with pleasure and delight (Saul well pleased, his heart rejoicing), recorded to magnify his later grace (the persecutor made the apostle); the great persecution scattering the church through Judea and Samaria, only the apostles remaining (courage, duty, or providence at the post of danger); the providence overruling persecution — the scattering spreading the gospel (Acts 1:8; Psalm 76:10), the seed of wider harvest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Saul consenting unto his death",
-   "a great persecution",
-   "scattered except the apostles",
-   "persecution spreading the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "John Lightfoot"
   ],
+  "range": "1-3",
+  "pericope_label": "The persecution after Stephen, his burial, and Saul's havoc",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill places the opening clause at the end of the preceding chapter on the authority of the versions and the Alexandrian copy, reads the verb as consent with pleasure, explains that the record of Saul's part is given because the persecutor became a preacher, and recalls the prophecy that Benjamin should ravin as a wolf; Calvin compares the wicked to beasts that thirst for blood once they have tasted it, warns that a martyr must not be blamed for whetting his enemies' cruelty, applies the lull in persecution to his own age, denies that the whole Church fled and explains the flight as necessity rather than panic, makes standing against wolves the pastor's duty, sees the middle wall falling as the fugitives reach Samaria, and defends the burial as belonging to the hope of the resurrection."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry supposes Paul had the notice of his own consent inserted for shame to himself and glory to free grace, observes that Stephen's dying prayers only exasperated his enemies further, distinguishes the scattered preachers from the whole body of believers, reads the dispersal as an intimation of Providence sending them to work elsewhere, takes the devout men either for proselytes or for the more zealous of the church, and gives three reasons for the burial, ending with the testimony it bore to the resurrection."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses the verb as gladly consenting, traces the persecution to the Jews' inability to bear the doctrine of the resurrection, insists the disciples fled in obedience and not from fear, reports Bishop Pearce's doubts of Eusebius on the apostles' early travels and denies Rome's precedence to the first church at Jerusalem, quotes a father's image of the fugitives as lamps lit at the Spirit's fire, argues from the public lamentation that Stephen was never condemned by the Sanhedrin, and explains the executions Paul owned by Roman authority or by the mob's judgment of zeal; Wesley denies that the whole Church was scattered and calls Saul a furious beast of prey."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the 'devout men' Christian men eminent in piety, with courage amid the persecution to honor the martyr's body (preparing and burying it, burying the dead an act of kindness and piety); the courage required (risking being marked as his fellow); 'great lamentation' the fitting mourning of the godly dead (not without hope, but the proper grief of love); the church honoring its first martyr, the love of the saints against the fury of the foes."
+    "summary": "Ellicott finds the word for consenting carefully chosen to show that Saul directed rather than threw, argues from Paul's later usage that he judged his own guilt the greater, explains the choice of Samaria and finds the old antipathy already breaking down, gives two reasons for the apostles' staying including the twelve-year tradition in Clement and Eusebius, refutes Renan's claim that the mourners were proselytes on lexical grounds, and reports Augustine's tradition about Gamaliel and Nicodemus; Barnes calls this the first of a series of persecutions and finds good brought out of evil; Robertson parses the participle, notes that Sadducees and Pharisees were now united, and leaves the sparing of the apostles an open puzzle; Lightfoot supplies the rabbinic rule forbidding lamentation over one the Sanhedrin condemned."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who the devout men were: Jews who were not Christians, as Barnes and Ellicott hold and Robertson allows; proselytes, as Renan argued and Ellicott refutes; or members of the church, as Henry and Calvin assume",
+   "Why the apostles alone remained: pastoral duty, obedience to the command to begin at Jerusalem, a twelve-year tradition, their popularity, or Gamaliel's earlier advice — Robertson leaves it undecided",
+   "Whether Stephen was condemned by the Sanhedrin at all, which Clarke denies on the ground that the public lamentation was forbidden in such cases"
+  ],
+  "outliers": [
+   "Clarke turns aside to deny the precedence of the Church of Rome on the ground that Jerusalem was the first Christian church, and to record the burial customs by which the instruments of execution were interred with the condemned",
+   "Ellicott records the later translation of Stephen's relics to Ancona, Minorca and Africa, and the legend that his name appeared on the tomb in Aramaic as Chaliel, a garland"
+  ],
   "themes": [
-   "devout men carried Stephen to his burial",
-   "made great lamentation",
-   "honoring the first martyr",
-   "mourning the godly dead"
+   "persecution",
+   "martyrdom",
+   "providence",
+   "the scattering",
+   "Saul",
+   "burial"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: 'made havock' (elymaineto) a word for wild beasts (lions, wolves) ravaging — Saul raged against the church like a wild beast, a strong expression of his fury; 'entering into every house' searching out Christians, 'haling' (dragging) men and women to prison without regard to sex; the depth of Saul's sin (the chief of sinners, 1 Timothy 1:15; Acts 22:4) the dark foil to the grace that would convert the persecutor into the apostle, the church suffering in its youth."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Saul made havock of the church",
-   "haling men and women to prison",
-   "ravaging like a wild beast",
-   "the depth of sin grace would conquer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Matthew Henry: 'out of the eater came forth meat' (Samson's riddle, Judges 14:14) — the persecution designed to destroy the church overruled by God to enlarge it; the enemies meant to put out the fire by scattering, but spread it; the scattered believers (not the apostles, who remained, but the ordinary disciples) went everywhere preaching, undeterred — the providence overruling persecution (Psalm 76:10; Acts 1:8), the gospel spread by the whole church, every believer a witness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "scattered abroad went every where",
-   "preaching the word",
-   "persecution spreading the gospel",
-   "every believer a witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "John Lightfoot"
   ],
+  "range": "4-8",
+  "pericope_label": "The scattered preach, and Philip in Samaria",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill treats the unclean spirits and the cures as specimens of a larger work; Calvin sees providence bringing light out of darkness so that the gospel once heard in one place sounds everywhere, warns that the first exercises of martyrdom must not make us dumb, identifies the city as the one Hyrcanus laid waste and Herod rebuilt as Sebaste, sums the gospel in Christ who reconciles and regenerates, and traces the order of hearing, miracle and attentiveness as the right approach to faith."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the scattering through Samson's riddle and finds the persecution overruled to enlarge the church, notes that the preachers now entered the Samaritan cities once forbidden them, allows either Sebaste or Sychem for the city, observes that Christ sent his gospel to slay the enmity between Jew and Samaritan, describes the preaching as the proclamation of a king at his accession, calls the miracles the broad seal of heaven annexed to the commission, and reads the loud cry of the spirits as the mark of a reluctant departure."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke denies that any city called Samaria then existed, cites Josephus on its destruction by Hyrcanus and rebuilding by Herod, adds Bishop Pearce's argument from Luke's consistent naming of Caesarea and prefers Shechem with Gerizim as the seat of Samaritan religion, explains why the Samaritans as a link between Jew and Gentile were evangelised first, and argues that the unclean spirits cannot be a species of disease since they are distinguished from the palsied and the lame; Wesley notes that the narrative is resumed verbatim in the eleventh chapter."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Lightfoot: this Philip the second of the seven deacons (Acts 6:5), not the apostle, one of the scattered now evangelizing; the gospel crossing the old barrier to the despised Samaritans ('the Jews have no dealings with the Samaritans,' John 4:9), breaking down the middle wall (Ephesians 2:14), advancing as Christ foretold (Acts 1:8); 'preached Christ' the substance (1 Corinthians 1:23), meeting the Samaritans' Messianic hope (John 4:25), reaping where Christ had sown (John 4)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Philip went down to Samaria",
-   "preached Christ unto them",
-   "the gospel crossing the barrier",
-   "Christ the substance of preaching"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: Philip fixed their attention by both the gravity of his preaching and the miracles; Robertson: the imperfect 'gave heed' — they kept holding their minds on his words, spell-bound; the people 'with one accord' eagerly heeding, drawn by both the word (to the ear) and the works (to the eye); the miracles confirming the message as divine (the signs the messenger's credentials), the eager attentive hearing preparing for faith — the good soil receiving the seed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "with one accord gave heed",
-   "hearing and seeing the miracles",
-   "the word joined to the works",
-   "eager attention preparing for faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke presses the reality of demonic possession — the unclean spirits here distinguished from the palsied and lame, so not a name for diseases but real demons (the NT writers meaning real diabolic possessions, denying it 'absolute trifling'); the separate mention proving the demons real; Christ's power over the demonic (the spirits coming out 'crying with loud voice' in rage and defeat) and over disease, the comprehensive deliverance from Satan's bondage and bodily affliction (1 John 3:8)."
+    "summary": "Ellicott takes the fugitives for Stephen's Hellenistic fellow-workers, renders the phrase a city and identifies it with Sychar, explains Philip's choice by the earlier sowing there, notes that the identity of name misled Polycrates as quoted by Eusebius, prefers signs to miracles and argues that they strengthened rather than founded the Samaritans' faith, and suggests Luke had the account from Philip at Caesarea; Barnes denies that a city of Samaria existed and refuses the inference that deacons are an order with a right to preach; Robertson makes Samaria the city's own name, distinguishes the verbs for evangelising and heralding, and notes an anacoluthon in the best text; Lightfoot weighs Sebaste against Sychem and observes that the later report suits a city rather than a province."
    }
   ],
   "debates": [
-   {
-    "question": "Are the 'unclean spirits' real demons or merely a name for diseases?",
-    "sides": [
-     {
-      "position": "Real demons — distinguished here from the palsied and lame; the NT means real possessions",
-      "holders": [
-       "Clarke",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
+   "Which city Philip preached in: the rebuilt capital Sebaste, as Robertson's grammar and Henry's first reading suggest, or Shechem and Sychar, as Clarke with Pearce and Ellicott prefer, Lightfoot leaving the question open",
+   "Whether the unclean spirits are a class of disease, which Clarke denies on the ground that the text distinguishes them from the palsied and the lame",
+   "Whether Philip's preaching establishes a right of deacons to preach, which Barnes denies"
   ],
-  "outliers": [],
+  "outliers": [
+   "Barnes turns aside from the narrative to argue a point of church order, that nothing here makes deacons an order of ministers under the New Testament economy",
+   "Ellicott and Robertson independently suggest that Luke's information for this chapter came from Philip himself during the stay at Caesarea"
+  ],
   "themes": [
-   "unclean spirits came out of many",
-   "palsies and lame were healed",
-   "real possession distinct from disease",
-   "Christ's power over demons"
+   "persecution",
+   "providence",
+   "preaching",
+   "Samaria",
+   "miracles",
+   "possession",
+   "joy"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the joy arose from the healing of the afflicted, the conversion of souls, and the mutual joy of families — the tendency of true religion (and of a revival) to produce great joy; Clarke: no wonder, hearing such glorious truths and subjects of such miracles; the gospel bringing gladness (the kingdom 'joy in the Holy Ghost,' Romans 14:17), the joy of salvation no deception can give; the contrast with Samaria's former bondage under Simon's sorcery, the whole city gladdened."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "great joy in that city",
-   "the fruit of the gospel",
-   "joy in healing and conversion",
-   "the gladdening power of the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "John Lightfoot"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Simon a Samaritan of Gitton, a wizard; Lightfoot discusses his hold on the people; Simon had long 'bewitched the people of Samaria' by sorcery (holding them in fascination) and 'gave out that himself was some great one' (self-exaltation) — the mark of the deceiver, pointing men to himself not God (the opposite of Philip preaching Christ, v.5); the great rival to the gospel in Samaria, the false miracle-worker to be overcome by the true power of the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simon used sorcery",
-   "bewitched the people of Samaria",
-   "giving out himself was some great one",
-   "the deceiver's self-exaltation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: a textual reading adds 'called,' so 'that power of God which is called the Great' — the people ascribing to Simon a divine power (not God himself, but endued with great supernatural power); 'they all gave heed, from the least to the greatest' — the deception universal, embracing the whole city; the depth of a people without the gospel, deceived by false signs (a warning, Matthew 24:24); the false power to be eclipsed by the true gospel (v.12), the deceiver's hold broken."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they all gave heed from the least to the greatest",
-   "this man is the great power of God",
-   "the depth of the deception",
-   "false power to be overcome by the true"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the long time during which the evil fascination had been exercised; Robertson: the same word 'had regard' as 'gave heed'; Simon's hold long-established (not recent), the people deeply and habitually deceived by his sorceries over a long period; the difficulty of overcoming settled error (rooted in habit and time), making the gospel's triumph the more remarkable (v.12) — the deeper the darkness, the brighter the light dispelling it; the warning that men may be long and deeply held by error."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to him they had regard",
-   "of long time he had bewitched them",
-   "the long deception",
-   "the gospel overcoming established error"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: though long attached to Simon, the people believed Philip when he preached Christ — such the power of his ministry and the efficacy of divine grace; Clarke: Philip's word came with greater power than Simon's; they believed 'the things concerning the kingdom of God, and the name of Jesus Christ' (the true object of faith) and were baptized, 'both men and women' (the gospel embracing all); the gospel breaking the long deception, the order — faith then baptism, the city turned from sorcery to Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they believed Philip preaching the kingdom",
-   "the name of Jesus Christ",
-   "baptized, both men and women",
-   "the gospel's triumph over deception"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "John Lightfoot",
-   "Charles Ellicott"
+   "Cyril of Jerusalem"
   ],
+  "range": "9-13",
+  "pericope_label": "Simon the sorcerer, and the baptism of the Samaritans",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill passes briefly over the sorcery and notes that Simon kept close to Philip; Calvin reads the title Great as designed to make all else divine grow vile, praises Philip for setting his hand to the work though he saw no way through, treats the bewitching of a city as the common punishment of unbelief, refuses the opinion that Simon merely feigned since Luke says he believed, proposes a mean between faith and dissimulation in men overcome by the Word who think they believe, and explains that God meant to triumph over a reputed demigod by making him own the true miracles."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the ecclesiastical legends about Simon and dismisses them as extravagancies, derives sorcerer from the Latin for casting lots and magic from the Persian priesthood, prefers the fuller reading of the title with a list of authorities while confessing he cannot say what the Samaritans meant by it, takes Simon's faith at face value as conviction produced by real miracles, and argues from the identity of the verbs that bewitched is an improper rendering in the earlier verses; Wesley notes only that magic was then a real thing and that it was Philip's preaching they believed."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Simon's faith historical and temporary (believing Jesus the Messiah, a notional assent, or pretended), not saving; Lightfoot: he believed Jesus the Messiah and so was capable of baptism, but no more; the marks against saving faith — later 'in the gall of bitterness' (v.23), no part in the matter; the difference between professed/notional and saving faith (2 Timothy 3:5), Simon the baptized hypocrite within the church; his 'wondering' the magician's amazement at a greater power, not the converted heart."
+    "summary": "Ellicott makes Simon the type of a class of Jewish pretenders and holds the legends about him not incredible, explains the title from the Samaritan use of powers for the angels of God, traces the people's credulity to the impression the Saviour had left among them, and calls Simon's faith a formless faith neither preceded by repentance nor perfected by love; Barnes denies outright that he was a real Christian, explains his profession by the pressure of the multitude, and observes that Philip could not know the heart; Robertson reviews and rejects the traditions, including Baur's identification with Paul and Justin Martyr's Roman statue, which an inscription found in the Tiber shows to name a Sabine Hercules; Lightfoot notes Simon's continuance with Philip."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem takes the baptisms as occasion for the doctrine itself, that man being of a twofold nature the purification is twofold, water cleansing the body while the Spirit seals the soul, and that neither the baptized who lack the Spirit nor the virtuous who lack the seal of water receive the grace in perfection."
    }
   ],
   "debates": [
-   {
-    "question": "Was Simon's faith saving?",
-    "sides": [
-     {
-      "position": "No — a historical, temporary, or feigned faith (notional assent), shown unconverted by vv.18-23",
-      "holders": [
-       "Gill",
-       "Lightfoot"
-      ]
-     }
-    ]
-   }
+   "Whether Simon truly believed: Barnes denies it outright and Ellicott calls the faith formless, while Calvin expressly refuses the charge of feigning and posits a temporary faith between belief and dissimulation, and Clarke takes the profession at face value",
+   "What weight the later legends about Simon carry: Clarke calls them extravagancies that never existed, Ellicott thinks them not incredible, and Robertson refutes the Roman statue from an inscription found in the Tiber",
+   "Whether bewitched is a proper rendering, which Clarke denies on the ground that the same verb describes Simon's own amazement at Philip"
   ],
-  "outliers": [],
+  "outliers": [
+   "Robertson records that the stone recovered from the Tiber in 1574, long cited as evidence for Justin Martyr's account of Simon worshipped at Rome, is inscribed to a Sabine name for Hercules"
+  ],
   "themes": [
-   "Simon himself believed also",
-   "when he was baptized",
-   "historical and temporary faith",
-   "the hypocrite within the church"
+   "sorcery",
+   "credulity",
+   "baptism",
+   "faith",
+   "hypocrisy",
+   "the Holy Spirit"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "John Lightfoot",
-   "Albert Barnes"
+   "Cyril of Jerusalem"
   ],
+  "range": "14-17",
+  "pericope_label": "Peter and John sent to Samaria, and the gift of the Holy Ghost",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill describes the laying on of hands plainly; Calvin states at length the difficulty that baptism must be empty if it can be separated from the Spirit, answers that Luke means not the common grace of regeneration but the singular gifts given at the beginning to beautify Christ's kingdom, holds that the Samaritans already had the Spirit of adoption, denies that anything here disparages baptism, and argues from the order of prayer before the laying on of hands that the grace is not shut up in the ceremony though the effect is annexed to it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains the mission by the limits of an evangelist's office and the powers reserved to apostles, observes that Peter submitted to an order of the house rather than sending others, adds that ministers in a higher station should help those in a lower, identifies what was lacking as the extraordinary Pentecostal powers and especially tongues, and draws the pastoral consequence that the sanctified have no reason to complain for want of gifts that would only make them bright."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the idiom of going down from Jerusalem as the usage proper to any imperial city and warns against inferring anything about its elevation, argues that the gift conferred cannot have been sanctification, which believers already had and no apostle dispensed, but the miraculous gifts needed for public work, and insists that a deacon full of the Spirit could not confer it while the apostles themselves were only instruments through whom the blessing came from God; he also holds with Barnes that the hands were not laid on all."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Lightfoot (with Epiphanius): Philip, a deacon, could preach and baptize but not confer the gift of the Holy Ghost (the extraordinary gifts) by laying on hands — the apostles' peculiar prerogative; so the Jerusalem apostles, hearing Samaria had received the word, sent Peter and John (the two leading apostles) to confer the Spirit; the apostolic confirmation authenticating the Samaritan mission, joining the new converts to the one church, maintaining its unity across the old Jewish-Samaritan barrier."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the apostles heard Samaria had received the word",
-   "they sent Peter and John",
-   "the apostolic confirmation",
-   "the unity of the church maintained"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Ellicott reads the mission as the formal end of the limit that had excluded Samaria, notes the irony that the apostle who once sought fire on a Samaritan village now brought the baptism of the Spirit, takes the phrase of outward and visible gifts, and traces the laying on of hands forward as the starting-point of Confirmation while admitting the question whether it was normal or exceptional and dating the modern explanation of the name no further back than the sixteenth century; Barnes and Robertson note the unusual expression that the Spirit had fallen on none of them, and Barnes with Clarke restricts the imposition of hands to a few prominent persons, since it was plainly not laid on Simon; Lightfoot and Robertson report the sending itself."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes presses the key distinction — the 'Holy Ghost' here not the saving, renewing grace (the Samaritans had this already, believing, vv.6,12) but the extraordinary gifts (tongues, prophecy, miraculous powers) conferred by the apostles' hands in that age; so not a pattern for a delayed saving Spirit or 'second blessing' but the special endowments; the apostles 'prayed for them' (not presuming to confer by their own power) — the gift God's to give, sought by prayer, the apostles his instruments, dependence on God."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem turns the promise of the Comforter against Manes, who claimed that title for himself although the promise had been fulfilled to the apostles who were told to tarry in Jerusalem until they were endued with power from on high."
    }
   ],
   "debates": [
-   {
-    "question": "What is the 'Holy Ghost' the Samaritans received here?",
-    "sides": [
-     {
-      "position": "The extraordinary gifts (tongues, prophecy, miracles), distinct from the saving grace they already had as believers",
-      "holders": [
-       "Barnes",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
+   "What the Samaritans lacked when they had been baptized but had not received the Spirit: Calvin says the singular gifts and not the common grace of regeneration, which they already had; Clarke says the miraculous gifts needed for public work and not sanctification; Henry says the Pentecostal powers and especially tongues",
+   "Whether the laying on of hands here is the origin of a standing rite: Ellicott traces Confirmation to it while admitting the practice may have been exceptional",
+   "On how many hands were laid, Barnes and Clarke both arguing from Simon's exclusion that it was only a few"
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott dates the explanation of Confirmation as adults confirming their baptismal promises no earlier than the sixteenth century, against its common assumption"
+  ],
   "themes": [
-   "prayed for them",
-   "that they might receive the Holy Ghost",
-   "the extraordinary gifts distinguished",
-   "the apostles' dependence in prayer"
+   "the Holy Spirit",
+   "apostolic authority",
+   "baptism",
+   "laying on of hands",
+   "spiritual gifts",
+   "Samaria"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the Samaritans had received the Spirit in his saving work (illumination, sanctification, conversion, faith — regenerated, enlightened, baptized believers), but not yet the extraordinary gift (ministry gifts, tongues, miracles); 'baptized in the name of the Lord Jesus' (valid baptism, real faith); the verse does not mean they were unconverted or the saving Spirit withheld — the gift not given was the extraordinary endowment; the providence ordering it at the apostles' hands to confirm the mission and unite the church."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as yet he was fallen upon none of them",
-   "baptized in the name of the Lord Jesus",
-   "truly converted but not yet endued",
-   "saving grace distinct from the gift"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the apostles laid hands not on all but on some directed by the Spirit, designed for the ministry, with ministerial and extraordinary gifts, for the supply and confirmation of the new church; the extraordinary gift conferred through the apostles' hands (their peculiar prerogative, v.14, the means in that age, God the giver in answer to prayer); the gifts for the establishment of the church; the careful reading — peculiar to the apostolic age, not a universal pattern for an ordinary 'confirmation' conferring the saving Spirit (already possessed)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "laid they their hands on them",
-   "they received the Holy Ghost",
-   "the apostolic means of the gift",
-   "for the new church's confirmation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
+   "Cyril of Jerusalem"
   ],
+  "range": "18-21",
+  "pericope_label": "Simon offers money, and Peter's answer",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the abhorrence with which Peter answered; Calvin argues that Simon's earlier profession was not feigned but unregenerate, calls the case a mixing of Christ with Satan where doctrine never reaches the hidden affections, enumerates four distinct offences in the offer, and holds that Peter's curse was the sentence of a judge on what the offence deserved rather than a wish for destruction, since he would rather have had Simon saved."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the curse conditionally, as importing that unless he repented he and his goods would perish together, and observes that Peter informs not Simon only but all who come after that the Spirit is God's gift and cannot be bought, since the silver and gold are already his; Wesley names the sin simony after this offer, distinguishes part from lot as purchase from free gift, and argues from Paul's leaving Trophimus sick and nearly losing Epaphroditus that no apostle had a universal power of discerning hearts."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Simon's seeing implies the gift was visible and external (the miraculous effects); Barnes: he saw the power of speaking miraculously and, valuing it for his influence and gain, 'offered them money' (as men of his craft, to make money); the offer revealing his unregenerate, covetous, ambitious heart (the hypocrite of v.13 exposed); the origin of 'simony' (buying/selling spiritual things), Simon the type; the gross error that God's gift could be bought, contrasting the apostles who prayed for it."
+    "summary": "Ellicott renders the curse literally as money going with its owner to perdition, notes the recurrence of the same word and of the gold that perishes in the epistles ascribed to Peter as bearing on their authorship, observes that Peter uses the very word for free receiving that the Lord had spoken to the Twelve, and takes part and lot of an inheritance in the Church's gifts and offices; Barnes reads the curse conditionally and explains the two words alike; Robertson parses the optative as a wish revealing Peter's indignation and holds that the natural sense puts Simon on the road to destruction though repentance remained open; Lightfoot argues that the apostles could impart the gifts but not the power of imparting them, which was purely apostolical and died with them."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem fastens on the exact terms of the request, that Simon asked not for the fellowship of the Holy Ghost but for the power, meaning to sell what cannot be sold and what he did not possess, and calls him a second Judas for offering money to men who had just trodden underfoot the prices laid at their feet."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far Peter's words are a curse: Calvin makes them a judicial sentence on the offence rather than a wish, Robertson an indignant optative putting Simon on the road to destruction, and Clarke and Barnes a conditional warning that assumes impenitence",
+   "Whether an apostle could discern any man's heart at will, which Wesley denies from Paul's inability to heal at will"
+  ],
+  "outliers": [
+   "Lightfoot observes that no apostle could confer the power of conferring the gifts, so that Simon's request was for something even the apostles could not grant",
+   "Ellicott turns a verbal coincidence in this verse into evidence bearing on the authorship of the Second Epistle of Peter"
+  ],
   "themes": [
-   "Simon saw the Holy Ghost was given",
-   "he offered them money",
-   "the covetous heart revealed",
-   "the sin of simony born"
+   "simony",
+   "hypocrisy",
+   "the gift of God",
+   "ambition",
+   "rebuke",
+   "repentance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Simon asked not to receive the gift but to have the power of conferring it on others; Lightfoot: a double error — that the gifts could be bought, and (more) that the power of conferring them could be so attained (even the apostles could not enable another to confer them); Simon's ambition (power and glory, to be again 'some great one,' v.9), not grace; the impious reduction of God's holy gifts to merchandise and tools of self-advancement, the presumptuous offer the occasion of Peter's rebuke (vv.20-23)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give me also this power",
-   "that on whomsoever I lay hands",
-   "the double presumption",
-   "seeking to buy the power of the Spirit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: 'thy money perish with thee' an expression of Peter's horror and indignation (not properly an imprecation) — 'let your money go to destruction, we abhor your impious offer'; yet also a warning that Simon himself was hastening to ruin; the rebuke of the impious thought that 'the gift of God' could be bought — the gift freely given by grace, not for sale (Isaiah 55:1), to think it purchasable profaning grace; the sternness fitting the sin, the warning of ruin a spur to repentance (v.22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thy money perish with thee",
-   "the gift of God purchased with money",
-   "Peter's stern rebuke",
-   "the freeness of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'this matter' the gift of the Holy Ghost and the gospel's blessings (forgiveness, righteousness, eternal life), Simon having no part or lot (a Jewish phrase for 'no part in the world to come'); Simon, though baptized and professing (v.13), excluded — his profession empty; the ground 'thy heart is not right in the sight of God' (the necessity of a renewed, sincere heart, 1 Samuel 16:7); the hypocrite unmasked by his offer, God's judgment penetrating to the heart, the call to self-examination."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "neither part nor lot in this matter",
-   "thy heart is not right with God",
-   "Simon excluded from the gospel",
-   "the necessity of a right heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
   ],
+  "range": "22-25",
+  "pericope_label": "Peter's call to repentance, Simon's answer, and the return to Jerusalem",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes Peter's perception as a judgement drawn from the act rather than a revelation, and notes the preaching on the way back; Calvin reads the call to repentance as proof that Peter sought Simon's recovery, observes that he reproves him sharply a second time, and infers from the request for others' prayers that Simon did not take the rebuke as he ought."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the gall of bitterness as a Hebraism and compares the roots of gall and wormwood in Deuteronomy and Hebrews, sees in the bond of iniquity the Roman practice of chaining a prisoner to his guard, alone hopes well of Simon's repentance on the strength of the reading in the Codex Bezae and the later Syriac margin that he wept greatly and did not cease, and dismisses the legends of the flight before Claudius and the rest as utterly unworthy of credit; Wesley notes the conditional form of the exhortation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: Simon an unconverted sinner, the command to repent given to him as such, required actually to repent (not merely wait or seek); Peter, even after the rebuke, calls Simon to repent of his wickedness and pray for forgiveness — the door of mercy held open even to so great a sinner; the 'if perhaps' marking the greatness of the sin and the doubt of his repentance (not God's reluctance to the penitent); the balance of conviction and invitation, repentance and prayer the way to pardon."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "repent of this thy wickedness",
-   "pray God for forgiveness",
-   "mercy offered to the great sinner",
-   "repentance and prayer the way to pardon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Ellicott insists the stern words were meant to heal and not to slay, weighs whether Peter feared the sin against the Holy Ghost and finds it suggestive that he neither forgives nor condemns but leaves judgment to the Judge, notes the only figurative use of gall in the New Testament and takes the bond of iniquity for an inveterate habit, reads Simon's reply as fear of penalty rather than of sin and as recourse to a human mediator, sets out the later legends in full including the Roman inscription reported by Justin, and follows Samaria forward to the destruction of Sychem and the founding of Flavia Neapolis; Barnes draws the rule that sinners ask others to pray while too much in love with sin to pray themselves and concludes that Simon died impenitent; Robertson traces the word for gall and marks the resumption of the narrative."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'in the gall of bitterness' = a state of nature and unregeneracy, under covetousness, ambition, hypocrisy, the bitter root of sin (Deuteronomy 29:18; Hebrews 12:15), not grace; 'the bond of iniquity' = bound and captive by sin; Barnes: one single sin may show the absence of true piety as certainly as many, Simon's offer revealing his whole state; Peter's discernment (by the Spirit and the act) reading the heart through the deed; the bondage of the unregenerate to sin (John 8:34), from which only grace frees."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the gall of bitterness",
-   "the bond of iniquity",
-   "Simon unregenerate",
-   "the bondage of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Simon directed to pray for himself (v.22) but had no disposition to (sinners often ask others' prayers when too proud or in love with sin to pray themselves); his concern only that the judgments 'come not upon me' — fear of consequences, not sorrow for sin; the difference between fear and repentance (true repentance sorrows for and turns from sin); the witnesses read Simon's response as no true repentance (his later history as a heresiarch confirming), the alarmed but unrepentant sinner."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem closes the episode with the exhortation to rejoice in the Lord."
    }
   ],
   "debates": [
-   {
-    "question": "Did Simon truly repent?",
-    "sides": [
-     {
-      "position": "No — he feared the judgment, not the sin; asked others to pray rather than praying himself; an unhumbled, unrepentant heart",
-      "holders": [
-       "Barnes",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
+   "Whether Simon repented: Clarke hopes well of him on the strength of a Western reading that he wept and did not cease, while Barnes and Ellicott both read the reply as fear of punishment rather than sorrow for sin and take the testimony of antiquity as decisive against him",
+   "What weight the Simon legends carry: Ellicott reports them at length, including the Roman altar inscribed to Simon as a holy god which Robertson elsewhere shows to name a Sabine deity, while Clarke pronounces the whole utterly unworthy of credit"
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke rests his one hopeful reading of Simon's fate on the Codex Bezae and the margin of the later Syriac, which add that he wept greatly and did not cease",
+   "Ellicott finds it terribly suggestive that Peter, holding the power of the keys, here neither forgives nor condemns but stands midway between hope and fear"
+  ],
   "themes": [
-   "pray ye to the Lord for me",
-   "that none of these things come upon me",
-   "fear of judgment not repentance",
-   "the alarmed but unrepentant heart"
+   "repentance",
+   "hypocrisy",
+   "forgiveness",
+   "judgement",
+   "Simon Magus",
+   "Samaria"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the apostles testified and confirmed the church, then on their return 'travelled more at leisure, and preached in the villages also' (a good example for ministers), returning to Jerusalem to bear witness to the resurrection where Christ was crucified; the Samaritan mission extended through many villages; the diligence of using every opportunity and journey to spread the gospel; the old Jewish-Samaritan enmity overcome (Peter and John, cf. Luke 9:54, now preaching to many Samaritans)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "testified and preached the word",
-   "returned to Jerusalem",
-   "preached in many villages of the Samaritans",
-   "diligence in spreading the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
+   "John Chrysostom"
   ],
+  "range": "26-28",
+  "pericope_label": "The angel sends Philip southward, and the Ethiopian in his chariot",
   "schools": [
    {
-    "school": "eastern-antiochene",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: the providence in the route ('from Samaria toward the south... desert,' safe from Jewish attack, the place for the appointed meeting), and Philip's prompt obedience ('he did not ask, Wherefore? but arose and went'); the angel sending Philip from the success in Samaria to a desert road without explanation; obedience without demanding the reason (the obedience of faith), the readiness to leave a fruitful field at God's call — God's leading, however strange, purposeful (toward the eunuch)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the angel said, go toward the south",
-   "the way that is desert",
-   "providence directing Philip",
-   "prompt obedience without question"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "John Lightfoot"
-  ],
-  "schools": [
+    "summary": "Gill notes that the eunuch was returning from worship; Calvin draws from Philip's obedience the rule that whoever commits the success to God finds all fall out well that is undertaken at his appointment, holds that eastern courtiers were called eunuchs promiscuously though they were men, explains Candace as a name of office borne by all the queens as Caesar was by the emperors, and finds in the reading itself a mind still seeking to profit."
+   },
    {
-    "school": "eastern-antiochene",
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that Philip stayed behind to break fresh ground, that he was sent to a common road through a wilderness where there was small likelihood of work, that God sometimes opens a door in unlikely places, and that Philip went without asking what business he had there; he heads the story with the psalm of Ethiopia stretching out her hands and distinguishes this Ethiopia from the Arabian."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Chrysostom's high praise: this man, in distant Ethiopia, burdened with business, in a superstitious land, came to Jerusalem to worship (not even at a festival), diligent in reading the Scriptures; Lightfoot on Candace (a title of the Ethiopian queens) and the eunuch's status; a great official (treasurer) yet a devout seeker (proselyte or God-fearer), his rank no hindrance to devotion; the providence preparing the seeking soul (drawing him to worship and the word) met by the sent evangelist, the gospel reaching toward the nations (Psalm 68:31)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "an eunuch of great authority under Candace",
-   "charge of all her treasure",
-   "came to Jerusalem to worship",
-   "the devout seeking soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Clarke holds that eunuch was a court title not requiring the literal sense, instancing the married Potiphar, and derives the name Gaza from a Persian word for riches on Servius's authority that Cambyses stored his treasure there, tracing the word through Arabic to the modern magazine; Wesley states the two roads from Jerusalem plainly and agrees that chief officers were anciently so called."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: remarkable that, though in Jerusalem where Jesus was crucified and the apostles preached, the eunuch was not converted there — his conversion ordered for another time, place, and instrument (God's sovereignty in the means and timing); Barnes: he read the Septuagint; the eunuch diligently reading Isaiah in his chariot (redeeming his travel-time, searching even what he could not yet understand, v.31); the providence ordering both the meeting and the very text (Isaiah 53) — the seeking soul searching the Scriptures, prepared for the gospel."
+    "summary": "Ellicott would read an angel rather than the angel, notes that the tenses set these events alongside the journey of Peter and John, leaves open whether the clause about the desert is the angel's or Luke's while inclining to the southern route through Hebron, traces the history of Gaza from the Canaanites to the Maccabees, explains the long working of Jewish influence in Ethiopia from Manasseh onward, and argues from the usage of the Gospels for the strict sense of eunuch, connecting the man's admission with Isaiah's relaxation of the law of Deuteronomy and with the rule framed at Nicaea; Lightfoot assigns the clause to the angel and explains it as distinguishing the Philistine Gaza from the Gaza of Ephraim; Robertson glosses the direction and the office; Barnes describes the treasury charge and the carriage."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom argues from the southward direction that this Philip must be one of the Seven, since from Jerusalem the road would run north, notes that a desert road meant no fear of Jewish attack, presses Philip's asking no reason but going, and praises the eunuch for coming from Ethiopia to worship when no festival was held and for studying as he rode."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the eunuch was one in the literal sense, which Ellicott maintains from the usage of the Gospels while Clarke, Calvin and Wesley take the word for a court title only",
+   "Who says that the way is desert and what is meant: Lightfoot assigns it to the angel and makes it distinguish two cities named Gaza, while Ellicott leaves the speaker open and refers it rather to the less frequented southern road"
+  ],
+  "outliers": [
+   "Clarke turns aside to derive the name Gaza from Persian, tracing it through Arabic and Spanish to the English word magazine",
+   "Chrysostom infers the identity of this Philip from the compass direction of the road he is sent along"
+  ],
   "themes": [
-   "sitting in his chariot read Esaias",
-   "the seeking soul searching the Scriptures",
-   "not converted in Jerusalem",
-   "providence preparing the meeting and the text"
+   "providence",
+   "obedience",
+   "Ethiopia",
+   "proselytes",
+   "Scripture reading",
+   "the angel of the Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.05
+   }
   }
  },
  "29": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Albert Barnes",
-   "Adam Clarke"
+   "A.T. Robertson",
+   "John Lightfoot",
+   "Cyril of Jerusalem"
   ],
+  "range": "29-33",
+  "pericope_label": "Philip joins the chariot, and the passage of Isaiah",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the change from an angel's word to the Spirit's and the passage read; Calvin praises the eunuch's modesty in letting a common man question him and confessing his ignorance, turns it against a generation in which scarcely one man in a hundred submits himself to learn, insists that to own a wisdom in Scripture surpassing us is the true reverence for it, allows either that the eunuch had the Greek volume or that Luke gave the version then in use, and reads the prophecy of a Christ exalted out of sorrow and judgment who comes up from the depth of death as conqueror."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the Spirit's speaking for a mark that this direction was internal where the former was by an angel, and on the great crux reports the Jewish custom of calling out at an execution whether any could speak to the criminal's manner of life, a benevolent inquiry never made in our Lord's case, and prefers that sense while recording the readings which refer the words to the eternal Sonship, the miraculous conception or the spiritual progeny; Wesley describes Philip's running and notes the portion read."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the Holy Spirit spoke to Philip by an articulate voice or a secret inward impulse; Barnes: the thought in Philip's mind traced to the Spirit's suggestion (all good thoughts and designs from the Spirit), 'join thyself' = go and sit with him; the divine guidance of the whole encounter (the angel to the road, v.26, the Spirit to the chariot) bringing the prepared soul and the directed evangelist together; the Spirit's leading essential to fruitful ministry, to be heeded and followed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit said, go near",
-   "join thyself to this chariot",
-   "the divine guidance",
-   "the Spirit the source of good impulses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Barnes shows from the variation that the eunuch was reading the Greek version, explains that the Hebrew word for prison covers any detention or oppression so that humiliation is not far from it, takes the sense to be that justice was denied him in his lowest estate, and reports Lowth's rendering of the disputed noun as manner of life; Ellicott sets out the competing constructions of both the Hebrew and the Greek and lists three senses of the harder question, preferring that which makes it the wickedness of the generation; Robertson glosses the verb for joining, the condition in the eunuch's reply and the tense of the disputed verb; Lightfoot argues from another passage that the word rendered prison means detention on a religious account, so that Christ was snatched from his devotion as well as from justice, and reads the question of the generation as the wickedness of the age."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: 'Philip ran' indicating his haste and eagerness to obey the Spirit (though difficulties might have been raised — the eunuch a stranger, of rank, reading — he obeyed without hesitation, following the first suggestions of the Spirit); Philip heard him read Isaiah aloud (his opening), and asked the wise, gentle question 'Understandest thou what thou readest?' (meeting the eunuch where he was, drawing out his need); the skillful, tactful approach of the soul-winner, the Spirit's leading and human wisdom together."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Philip ran thither to him",
-   "understandest thou what thou readest",
-   "prompt obedience to the Spirit",
-   "the wise approach to the soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill commends the eunuch's uncommon modesty — not haughty as great men are apt to be, but confessing his ignorance and the need of those appointed by God to open the Scriptures; a man of rank humbly owning he cannot understand without a guide (the teachable spirit, Psalm 25:9); the Scriptures needing to be opened and explained (the ministry necessary, Luke 24:45); he invited Philip to sit and teach (welcoming the word); the seeking soul's humility rewarded with the guide God sent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how can I, except some man guide me",
-   "come up and sit with him",
-   "the humility of the seeker",
-   "the need of a guide to the Scriptures"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the Scripture already divided into sections, the text given per the Septuagint (and whether the eunuch used it); Lightfoot raises the eunuch's status (Jew, proselyte, or Gentile) and the version; the eunuch reading Isaiah 53:7 (the 'gospel in the Old Testament'), the suffering Servant led 'as a sheep to the slaughter,' silent 'like a lamb dumb before his shearer' (fulfilled in Christ's trials, Matthew 27:12-14); the providence ordering the very text of the suffering Christ for the seeker's conversion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he was led as a sheep to the slaughter",
-   "like a lamb dumb before his shearer",
-   "Isaiah 53 the suffering Servant",
-   "providence preparing the text"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'his humiliation' = Christ's low estate (human nature, mean parentage, sorrows, apprehended, scourged, condemned, mocked, crucified), 'his judgment taken away' = justice denied him (condemned without cause, the innocent treated as guilty); 'who shall declare his generation?' variously read (the wickedness of his generation, his endless/eternal life, or his spiritual offspring); 'his life taken from the earth' = cut off in death (Daniel 9:26); the depth of Christ's humiliation as the suffering Servant, the door to the gospel for the eunuch."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem cites the Spirit's direction of Philip as evidence that the Spirit chooses and appoints rather than being a mere impersonal power."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'who shall declare his generation?' mean?",
-    "sides": [
-     {
-      "position": "The wickedness of the generation that condemned him (none can declare it)",
-      "holders": [
-       "some"
-      ]
-     },
-     {
-      "position": "His endless/eternal life or his spiritual offspring (who can declare/number them)",
-      "holders": [
-       "others"
-      ]
-     }
-    ]
-   }
+   "What in his humiliation his judgment was taken away means: Barnes takes it of justice denied him at his lowest estate, Ellicott sets out four constructions of the Hebrew and Greek together, Calvin makes it his exaltation out of sorrow and judgment, and Lightfoot has him snatched from the place of his devotion as well as from judgment",
+   "What who shall declare his generation means: Clarke prefers the failure of the customary inquiry into a condemned man's life, Lightfoot and Ellicott the wickedness of the age, Barnes reports Lowth's manner of life, and Clarke records readings that refer it to the eternal Sonship or the miraculous conception"
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin turns the eunuch's confession of ignorance into a rebuke of his own age, where men would rather nourish their ignorance than be seen as another man's scholar"
+  ],
   "themes": [
-   "in his humiliation his judgment was taken away",
-   "his life is taken from the earth",
-   "Christ's humiliation foretold",
-   "justice denied the Servant"
+   "the Holy Spirit",
+   "teaching",
+   "humility",
+   "Isaiah",
+   "the Passion",
+   "translation"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "34": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
   ],
+  "range": "34-38",
+  "pericope_label": "The eunuch's question, Philip's preaching, and the baptism",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill describes the freedom and boldness of Philip's discourse and expounds the confession as it stands; Calvin finds in the question the proof of an earnest desire to learn, explains the opening of the mouth as Scripture's mark of a weighty discourse, grants that the men of old put the whole body into the water where the use now is to sprinkle, and refuses to divide the Church over so small a difference of ceremony while holding that for baptism itself we ought to fight a hundred times to death."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains why the doubt was natural, the prophecy standing as of a man already dead, presses the force of beginning at the same scripture rather than leaving it for another, remarks that the eunuch was unwilling to lose the opportunity, and supposes he plunged himself as the Jews commonly did while the baptism was still attributed to the man who received his confession; Wesley notes the going down out of the chariot."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: a natural inquiry, for nothing in the text itself determined expressly to whom it referred; the eunuch's honest perplexity (of himself or another?) the genuine question of a seeking soul; the ancient Jews applied the passage to the Messiah (the Targum on Isaiah 52:13), though the eunuch may not have known; the teachable spirit (v.31) seeking the meaning, his honest question the very door for Philip to preach Jesus (v.35) — the seeking soul that asks honestly answered (Matthew 7:7)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "of whom speaketh the prophet this",
-   "of himself, or of some other man",
-   "the earnest seeking question",
-   "the open door for the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Ellicott reports that Jewish teachers had referred the passage to the nation or to Jeremiah, so that the doubt was real, calls the confession a striking illustration of the early tendency to improve the text for edification, notes that Irenaeus quotes it though the best manuscripts including the Sinaitic omit it, explains the motive of the interpolation, finds the confession's shortness a mark of very early liturgy, and defends immersion from the universal practice of the early Church, picturing the whole action and quoting the Fathers on the Ethiopian changing his skin; Barnes reports the same textual doubt and its rejection by the ablest critics while keeping the substance, takes the terms of the confession for the standing qualification of a profession, and answers the argument from the preposition with a string of parallels while denying that entering the water proves immersion; Robertson gives the bare force of the words and the participle of beginning."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'opened his mouth' a phrase (frequent in Jewish writings) for solemn, free, clear teaching of Scripture; Barnes: Philip, taking Isaiah 53 as his text, showed that Jesus of Nazareth exactly answered the prophet's description; he 'began at the same scripture' (meeting the seeker where he was) and 'preached unto him Jesus' — the suffering Servant identified as the crucified Christ (the prophecy fulfilled, Psalm 40:7); preaching Christ from the Scriptures, Jesus the substance of the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Philip opened his mouth",
-   "began at the same scripture",
-   "preached unto him Jesus",
-   "the suffering Servant the crucified Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: as they traveled (Philip preaching, the eunuch hearing and believing) they came to water, and the eunuch, instructed about Christ and baptism, requested it; Barnes: the text does not specify river, brook, or pool; the eunuch's eager request ('what doth hinder me?') the fruit of faith seeking the ordinance — the proper order (faith then baptism), the new believer eager to confess Christ openly and obey at once; Philip's preaching of Jesus including his ordinances."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "here is water",
-   "what doth hinder me to be baptized",
-   "the eager desire for baptism",
-   "faith seeking the ordinance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: faith in Christ and its profession necessary prerequisites to baptism — not a historical, temporary, or feigned faith (like Simon's, v.13) but believing with the heart unto righteousness (Romans 10:10); Philip required a heartfelt faith, the eunuch confessed 'Jesus Christ is the Son of God' (the good confession, 1 Timothy 6:12); the verse absent from many of the best/ancient MSS (likely an early addition, omitted by many editors), yet the principle (faith confessed before baptism) sound and scriptural."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem argues from the same principle that lies behind the confession, that no man can say Jesus Christ is Lord but by the Holy Ghost, and applies it to the witness of the martyrs."
    }
   ],
   "debates": [
-   {
-    "question": "Is Acts 8:37 part of the original text?",
-    "sides": [
-     {
-      "position": "Absent from many of the best/ancient MSS, likely an early addition (omitted by many editors), though the principle (faith before baptism) is sound",
-      "holders": [
-       "the witnesses"
-      ]
-     }
-    ]
-   }
+   "Whether the baptism was by immersion: Ellicott defends it from the universal practice of the early Church, Barnes denies that either the preposition or the entering into the water proves it, Clarke supposes a self-plunging after the Jewish manner, and Calvin grants the ancient practice while defending the modern",
+   "Whether the eunuch's confession of faith belongs to the text: Barnes and Ellicott both judge it an early insertion, though Barnes keeps its doctrine and Gill and Clarke expound it as it stands"
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin will not divide the Church over the mode of baptism yet says we should fight a hundred times to death rather than let the ceremony itself be taken away",
+   "Ellicott records the Fathers' half-playful application of the prophet's question about the Ethiopian's skin to this convert"
+  ],
   "themes": [
-   "if thou believest with all thine heart",
-   "I believe that Jesus Christ is the Son of God",
-   "faith confessed before baptism",
-   "the textual question"
+   "prophecy",
+   "preaching Jesus",
+   "confession",
+   "baptism",
+   "immersion",
+   "textual criticism"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill (a Baptist): 'they went down both into the water' (and 'came up out of,' v.39) evidence that baptism was by immersion; Barnes cautions the preposition 'into' (eis) need not mean entrance ('to/unto the water'), not deciding the mode; the long debate between immersionists and those allowing pouring/sprinkling, the prepositions cited both ways and not decisive; the certain point — the eunuch baptized upon his confession, received by the appointed ordinance — the mode debated, the ordinance and its meaning agreed."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [
-   {
-    "question": "Does Acts 8:38 prove baptism by immersion?",
-    "sides": [
-     {
-      "position": "Yes — 'went down into' and 'came up out of' the water indicate immersion",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "Not decisive — the preposition 'into' (eis) may mean 'to/unto the water,' not determining the mode",
-      "holders": [
-       "Barnes"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "they went down both into the water",
-   "he baptized him",
-   "baptism upon confession",
-   "the mode debated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "39": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'come up out of the water' again taken (with v.38) as evidence of immersion; Barnes: the preposition 'out of' (ek) opposed to 'into,' the Spirit who directed Philip (v.29) now catching him away; the miraculous removal (Philip's work done, borne to his next service, v.40, confirming the divine hand to the eunuch); 'he went on his way rejoicing' — the new convert's joy in his salvation (not in the departed teacher but in Christ, Romans 14:17), the firstfruits of Africa going home with the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit caught away Philip",
-   "the eunuch saw him no more",
-   "went on his way rejoicing",
-   "the joy of the new convert"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "John Lightfoot",
-   "Albert Barnes"
+   "Cyril of Jerusalem"
   ],
+  "range": "39-40",
+  "pericope_label": "The Spirit takes Philip away, and the preaching from Azotus to Caesarea",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the departure and the eunuch's joy; Calvin observes that Luke concludes the history by showing nothing was lacking to the eunuch's instruction, makes the rejoicing proof that he lost nothing by losing his teacher, and cites Josephus on the city of Caesarea."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke holds that the catching away means no more than a suggestion of the Spirit that Philip should withdraw abruptly, rejects the notion of a bodily transport like Habakkuk's in the Apocrypha, reports the Alexandrian variant, identifies Azotus with the Old Testament Ashdod and cites Herodotus on the twenty-nine years' siege by Psammetichus, infers that Philip must have preached through the Philistine cities and Samaria on his way, distinguishes Caesarea from Caesarea Philippi, and closes on Philip's household and prophesying daughters and the duty of bringing up a family that no man can discharge by substitute; Wesley states the disappearance in a line."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: Philip found at Azotus (the Ashdod of the Philistines), preaching through all the cities to Caesarea; Lightfoot calculates the distance (Gaza to Azotus ~34 miles) and traces the coastal route (Azotus, Ashkelon, Jamnia, to Caesarea); the Spirit bearing Philip to continue his work, the diligent evangelist preaching city after city (the gospel spreading along his path); Philip settling at Caesarea, where later found (Acts 21:8, 'Philip the evangelist, one of the seven') — tireless, faithful ministry."
+    "summary": "Barnes continues his argument from the prepositions, holding that out of the water proves no more than into it did, and traces the route; Ellicott takes the catching away literally as an irresistible impulse that snatched Philip from his companion, compares the Spirit's hindering of Paul, reports and weighs the more material reading with its parallels in Elijah, Ezekiel and Paul, settles on a suspension of ordinary consciousness illustrated by Bernard beside the Lake of Geneva, and judges the Alexandrian variant a conjectural emendation; Lightfoot computes the distance from Gaza to Azotus; Robertson marks the imperfect that makes the preaching continuous through every city."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem returns to the Spirit's personal action in directing Philip throughout the episode."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the catching away of Philip was: Clarke makes it only an inward suggestion to withdraw and denies any need of a bodily transport, while Ellicott takes it as a literal snatching away in a state of ecstasy and reports that many have understood a body caught up into the air",
+   "Whether the Alexandrian reading, that the Spirit fell on the eunuch and an angel caught away Philip, has any claim on the text, which Ellicott denies"
+  ],
+  "outliers": [
+   "Clarke ends the chapter on a domestic duty, that a man's bringing up of his family in the knowledge of God can be discharged by no substitute and cannot be neglected without endangering his own salvation"
+  ],
   "themes": [
-   "Philip was found at Azotus",
-   "preached in all the cities till Caesarea",
-   "the evangelist's continued ministry",
-   "the gospel spreading through the cities"
+   "the Holy Spirit",
+   "joy",
+   "evangelism",
+   "Azotus",
+   "Caesarea",
+   "providence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  }
 }
