@@ -3349,6 +3349,13 @@
       "book": "numbers",
       "chapter": "31",
       "note": "Re-scrape (owner chose option c) is BLOCKED in this environment: the egress proxy denies www.studylight.org (403 at CONNECT) and WebFetch returns EGRESS_BLOCKED, so no source can be re-fetched from a CCR container. Two findings from investigating offline instead. (1) The 12 'missing' verses are probably NOT a scrape gap. Gill's note on 31:32 opens 'And the booty, being the rest of the prey which the men of war had caught... from hence to the end of is only an account of the prey or booty taken', then gives the whole tally (675,000 sheep, 72,000 beeves, 61,000 asses, 32,000 persons) in that one block. He folds vv.33-47 into v.32 deliberately, and vv.33-47 are pure numeric tally that the other eight witnesses skip as a matter of course. Re-scraping would likely return the same 42 keys. (2) The JFB corruption IS provable and is SYSTEMIC, not local: all nine JFB blocks in numbers 31 are byte-identical (md5 fa9cd424a1, 1217 chars) at exactly v6,12,18,24,30,36,42,48,54. A corpus-wide scan finds the same stride-6 signature in 42 chapters across 149 verse slots, with 40 distinct duplicated blocks — so it is a scraper that repeated a neighbouring block at every sixth verse, not one bad page. 38 of the 42 chapters are ALREADY SYNTHESIZED, so existing prose may lean on residue; 4 are still pending (ezekiel 14, proverbs 5, psalms 71, psalms 78). numbers 31 is the worst case, the only one where the stride covers the whole chapter. Workers have been rediscovering these one chapter at a time and excluding them by hand (exodus 29, exodus 40, numbers 4, numbers 10, numbers 26, joshua 15 all in the last day)."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "133",
+      "note": "Clean chapter: contiguous keys 1-3, no Jamieson Fausset and Brown block at all, no site chrome, no exclusions, zero ghosts. Two entries, spans 1 and 2-3. Corroborating the owner's stride-6 finding from my own landed chapters: deuteronomy 28 carried identical JFB blocks at vv.3,9,15,21,27,33,39,51 and psalms 108 at vv.1,7,13 — both exact stride-6 — while genesis 26 had them at 11,23,35, which is stride 6 with alternate slots absent. Every one of these I had already declared in excluded_voices on a per-chapter basis, so the prose I have landed does not lean on residue; the concern in the owner's note about existing synthesis leaning on it applies to the legacy per-verse corpus, not to the pericope chapters landed in this run."
     }
   ]
 }

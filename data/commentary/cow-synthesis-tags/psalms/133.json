@@ -1,0 +1,172 @@
+{
+ "1": {
+  "voices": [
+   "Adam Clarke",
+   "Augustine of Hippo",
+   "C.H. Spurgeon",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
+  ],
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine hears the verse doing its work in history: so sweet is the sound that even those who do not know the Psalter sing it, and this honeyed melody, of the mind as much as of the hymn, begot the monasteries — a trumpet stirring up the brethren who longed to dwell together, sounding through the whole earth and gathering those who had been divided."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin takes the psalm for David's thanksgiving for the peace that succeeded a long confusion in the kingdom, when the larger part of the nation had counted him an enemy to the public good and the feud was so mortal that only the destruction of one party seemed to promise peace — the hand of God being wonderfully seen in the concord that followed. Gill adds that Aben Ezra would supply the word thing."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry defines what is commended before praising it — not merely that brethren do not quarrel but that they delight in each other and promote each other's welfare — and guesses David penned it for his many sons, since had they learned it much of the mischief that arose in his family would have been prevented; Spurgeon takes the opening Behold as several commands in one, and makes much of the doubled how, the combination of good and pleasant being more remarkable than the conjunction of two stars of the first magnitude."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads three psalms as one subject, this one pointing out the order and harmony of the temple service, and thinks it represents the priests and Levites returned from captivity; he notes that Hebrew, Syriac and Vulgate give it to David while the Septuagint and Arabic prefix no name."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott would render the phrase altogether rather than in unity, the Hebrew particle here needing to be taken with the adjective to intensify it exactly as our all does, the idiom for all two — like the French tous deux — deciding the matter; he allows that some find an emphasis on the gathering for the yearly feasts, though it is the psalm's purpose rather than its wording that suggests it."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What does the phrase rendered \"in unity\" mean?",
+    "sides": [
+     {
+      "position": "altogether — the particle intensifies the adjective, as our \"all\" does",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "dwelling together as one, having one heart, one soul, one interest",
+      "holders": [
+       "Henry",
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "behold how good and how pleasant",
+   "brethren dwelling together",
+   "in unity, or altogether",
+   "the psalm that begot the monasteries"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "2-3",
+  "pericope_label": "The precious ointment and the dew of Hermon",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill names the oil the holy composition Moses was ordered to make of the principal spices, poured on the heads of kings and priests at their anointing; and he answers the geographical difficulty of the dew by identifying the mountains, Hermon being called Sirion by the Sidonians and Shenir by the Amorites and appearing also as Sion, which he takes for the Zion meant here, since Hermon's dew could never reach the Zion by Jerusalem a hundred miles off."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the ingredients of the oil and thinks its odour served as a metaphor for the excellence of brotherly love, observes that it was poured on Aaron's head so profusely as to run down upon his garments, and takes the same line as Gill on the mountain, citing the verse that calls Mount Sion Hermon and Maundrell's report that the dew there soaked the tents as if it had rained all night; the commanded blessing he takes for everlasting life. Wesley settles the skirts against the obvious reading, as the garment's upper opening rather than its lower hem."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott objects that the Authorised Version's italics are wrongly inserted, since unity cannot flow down, and renders the verse literally; he then refuses the escape the others take on the dew, since the sentence is built exactly like the one before it, so that the dew on Zion must be the same dew as that on Hermon, and the closing clause shows Mount Zion itself is meant — quoting Delitzsch that a cold current from the north over Hermon could divert an abundant dew to Jerusalem. Keil and Delitzsch explain why a high priest figures at all, and note that Aaron alone was anointed by pouring where his sons were only sprinkled."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Which Zion receives the dew of Hermon?",
+    "sides": [
+     {
+      "position": "Sion, a part of Hermon itself — the dew could never carry a hundred miles to Jerusalem, and that Zion is one mountain where these are many",
+      "holders": [
+       "Gill",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Mount Zion itself, since the sentence is built like the one before it and the closing clause about the blessing requires it",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the precious ointment upon the head",
+   "Aaron’s beard and the skirts of his garments",
+   "the dew of Hermon",
+   "there the Lord commanded the blessing"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
+  }
+ }
+}
