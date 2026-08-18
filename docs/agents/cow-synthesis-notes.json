@@ -4621,6 +4621,71 @@
         "32"
       ],
       "note": "Two craft results from this chapter. (1) An entry that came in at grade B was rescued by VOCABULARY VARIATION rather than by trimming alone. The 3-12 entry first measured ttr 0.575 and zip 0.411 -- B on both axes -- because a ritual passage forces 'priest', 'blood', 'sacrifice', 'sin' and 'people' to recur. Rewriting the repeated nouns with their synonyms (ceremony, victim, beast, unction, offerer, nation) while cutting 139 words took it to ttr 0.641, zip 0.452, grade A. Worth knowing that a B on a ritual chapter is usually a lexical problem, not a length problem, and that trimming alone will not fix it. (2) The 32-35 entry was deliberately written SHORT, at 384 QA words rather than the usual 640. Its span holds only about 390 words of real commentary once the scrape residue is set aside, so a 640-word entry would have been roughly 1.6:1 expansion -- paraphrase, not distillation. 384 clears the 350 floor and the FLOOR flag threshold of 375 with margin, and the audit reports no PAD. Writing to the material rather than to the ceiling is the right call whenever a gap-bounded segment is thin; the range is 350-650 and the top of it is not a target."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "12",
+      "verses": [
+        "18",
+        "24",
+        "30"
+      ],
+      "note": "JFB scrape residue, thirtieth chapter observed. Period fixed at 6, phase 0 here, but the run starts LATE: positions 6 and 12 are empty and the blocks appear only at keys 18, 24 and 30. All three are Balaam material (Numbers 22-24, Joshua 13:22, and the Bosor of 2 Peter 2:15), so the donor is not Deuteronomy at all. Keys 24 and 30 are byte-identical, the fourth adjacent-duplicate pair recorded (cf. leviticus 26 keys 9/15, luke 23 keys 18/24 and 30/36), which continues to support the model that the scraper walks a donor chapter in narrative order and stalls, repeating the last block rather than advancing. All three excluded from the synthesis."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "12",
+      "verses": [
+        "5"
+      ],
+      "note": "The chapter's sharpest disagreement is over when the place was chosen. Calvin argues that no place was chosen until the ark was set in Zion, which is why the psalm could not till then speak of standing within thy gates, and reads out of all your tribes as marking the privilege reserved to Judah. Ellicott takes the same words in the opposite direction, arguing that the very unconsciousness of the removals from Shiloh to Nob to Gibeon to Jerusalem proves the passage's antiquity. Both are recorded in the debates array; neither is preferred."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "12",
+      "verses": [
+        "15",
+        "20",
+        "29"
+      ],
+      "note": "Block-keying loss: Matthew Henry keys his notes to verses 1 and 5 only, covering the chapter in two section overviews. Three of the five entries (15-19, 20-28, 29-32) therefore carry no Henry material at all and the puritan-evangelical school is absent from their tags. Declared as an outlier in each rather than distorting the tiling to chase his block boundaries: pulling 15-32 into a single entry to capture the second overview would have produced one 18-verse pericope covering more than half the chapter."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "12",
+      "verses": [
+        "15",
+        "20"
+      ],
+      "note": "Calvin's blood material is not keyed where the reader expects it. His long treatment of the blood law, including the Augustine exchange over whether the blood is the life means the sign of life, sits under 12:15 rather than 12:16 where the prohibition actually falls, and is cross-referenced by him to Leviticus 3:17, Genesis 9:4-6 and the Sixth Commandment. His note at 12:23 is a fragment of translation apparatus (Roberare / Be strong) that only becomes usable when read with Keil and Delitzsch's rendering of the same imperative."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "12",
+      "verses": [
+        "5",
+        "15",
+        "20",
+        "29"
+      ],
+      "note": "Length pressure: fourth consecutive chapter in which every entry required multiple trim passes to reach the 350-650 window. First drafts ran 875, 807, 751 and 856 words against a ceiling of 650, that is 15-32 percent over. This chapter carries only 6-7 voices, far fewer than the Catena chapters, so the pressure here is not the cost of naming voices but the density of the material itself, Calvin especially writing three long digressions (the blood law, the possess-them philology, the anti-Papal application of Isaiah 29) that each need a clause. Confirms that the window, not the source budget, is the binding constraint even on a mid-sized OT chapter of 18,025 source words."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "12",
+      "note": "Tiling: five entries over 32 verses, boundaries set by Henry's two section keys and by the chapter's own structure — 1-4 the monuments destroyed, 5-14 the one chosen place, 15-19 eating in the gates and the Levite, 20-28 the enlarged border and the blood repeated, 29-32 the closing warning against enquiry. The 5-14 entry is the heaviest at 7,799 source words of the chapter's 16,773 usable, carrying Calvin's and Ellicott's opposed accounts of the chosen place plus Henry's three reasons; splitting it at 12 would have cut Calvin's argument in half."
     }
   ]
 }
