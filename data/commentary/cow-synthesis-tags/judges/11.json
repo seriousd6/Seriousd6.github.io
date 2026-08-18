@@ -1,1388 +1,753 @@
 {
  "1": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1-3",
+  "pericope_label": "Jephthah's birth and exile",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he had his name of Gileadite from the city and country where he was born; a mighty man of valour, the son of a harlot."
+    "prevalence": "single",
+    "summary": "Gill has him leave home because a man of spirit could not bear contempt nor live in dependence on others, and notes that Gilead took a lawful wife only after Jephthah was born."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reports the guesses about the mother without settling them, Josephus making Jephthah a stranger on that side and the Jews an Ishmaelite, and insists that no man ought to be reproached with the infelicities of his parentage while he labours by his own merits to roll the reproach away; he sees rigour rather than legality in the expulsion, notes the double edge of a statute that shut out Ammonites and the base-born in the same breath, and defends the men who joined him as going out to hunt and to raid land Israel had a title to rather than to rob."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke would render the word for the mother hostess rather than harlot, citing the Targum, which calls her a keeper of a tavern, and thinks her a Canaanite, which he makes the real ground of the expulsion; he reads the followers as empty men wanting sense, though allowing the word may mean only men without property."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott holds harlot the only possible rendering, since all the versions give it and a word for an inferior wife was available and unused, notes that the expulsion agreed with the law and with old family practice, and calls Jephthah simply a sort of Syrian freebooter whose half-heathen origin worked on him as it had on Abimelech; Keil and Delitzsch insist that Gilead is a real man and not the country personified, the name of a famous ancestor being repeated in a descendant."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does the word used of Jephthah’s mother mean?",
+    "sides": [
+     {
+      "position": "harlot — every version gives it, and the word for an inferior wife was available and not used",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "a hostess or tavern-keeper, as the Targum has it, and very probably a Canaanite",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What were the men who gathered to him?",
+    "sides": [
+     {
+      "position": "freebooters on predatory expeditions, after the manner of Bedouins",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "ruined men who went out to hunt, and perhaps to raid land Israel had a title to, but not to rob",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Now Jephthah the Gileadite was a mighty man of valour, and he was the son of an harlot",
-   "God raising his servants from the despised and base, whatever their birth",
-   "God hath chosen the base things of the world, and things which are despised (1 Cor. 1:28)"
+   "the son of an harlot",
+   "thou shalt not inherit in our father’s house",
+   "the land of Tob",
+   "vain men gathered to him"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Gilead took a lawful wife after Jephthah's birth, who bore him sons; they said, Thou shalt not inherit, for thou art the son of a strange woman."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they thrust out Jephthah... Thou shalt not inherit in our father's house; for thou art the son of a strange woman",
-   "the chosen of God despised and cast out by his own",
-   "he came unto his own, and his own received him not (John 1:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he could not bear to be treated with contempt nor live in dependence, and so sought to make his own way; vain men gathered to him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jephthah fled from his brethren, and dwelt in the land of Tob: and there were gathered vain men to Jephthah",
-   "the rejected outcast become the rallying-point of the needy",
-   "every one that was in distress... gathered themselves unto him (1 Sam. 22:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was at the close of the eighteen years' oppression by Ammon; the children of Ammon made war against Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass in process of time, that the children of Ammon made war against Israel",
-   "God using the troubles of his people to bring them to repentance and the saviour",
-   "before I was afflicted I went astray: but now have I kept thy word (Ps. 119:67)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "4-8",
+  "pericope_label": "The elders fetch him back",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the war being begun and pressing upon them."
+    "prevalence": "single",
+    "summary": "Gill reads caution into the offer, since they did not propose to make him king, Abimelech having taught them what that came to, and said nothing of his being judge, a judge being raised up by God and not chosen by the people."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the elders going to fetch Jephthah from Tob."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the elders of Gilead went to fetch Jephthah out of the land of Tob",
-   "the proud humbled to seek in distress the help they once refused",
-   "they shall look upon me whom they have pierced (Zech. 12:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they proposed him as general, not as king, being warned by Abimelech's conduct; to fight with Ammon."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Come, and be our captain, that we may fight with the children of Ammon",
-   "the rejected outcast lifted to the place of command",
-   "the stone which the builders refused is become the head of the corner (Ps. 118:22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he was not backward to engage, but thought it proper to upbraid them with their former unkindness."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the reversal, that many days after Jephthah was thrust out in disgrace he was fetched back with honour, and that the elders came in person meaning to take no denial; he presses the principle that magistrates who can protect the injured and neglect to redress their grievances are really guilty of inflicting them, finds the whole case a resemblance of Israel's own with God, and draws two lessons — never to trample on a man because he is mean, and for men of worth who are slighted to leave it to God to bring their light out of obscurity."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: his reproach, why come ye now in your distress?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Did not ye hate me, and expel me out of my father's house? and why are ye come unto me now when ye are in distress?",
-   "the wronged justly remembering the wrong, yet ready to help",
-   "in their affliction they will seek me early (Hos. 5:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: their reply to his objection."
+    "prevalence": "single",
+    "summary": "Clarke recalls that the command had already been offered to anyone who would take it, and takes the elders' answer at face value as a confession of injustice."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: them offering him to be head over all the inhabitants of Gilead."
+    "summary": "Ellicott measures the interval by the man, from his expulsion in early youth to his mature manhood, and finds the repetition significant, since an invasion introduced as though it were news suggests the writer had turned to a new and probably Gileadite source; Keil and Delitzsch observe that Jephthah lays his expulsion at the door of the elders although only his brothers drove him out, which does not prove the act illegal but shows that he thought it so."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Therefore we turn again to thee now... and fight against the children of Ammon, and be our head over all the inhabitants of Gilead",
-   "God lifting the lowest and disinherited to the highest place",
-   "whosoever shall humble himself shall be exalted (Matt. 23:12)"
+   "come and be our captain",
+   "did not ye hate me and expel me",
+   "why are ye come unto me now",
+   "therefore we turn again to thee"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: considering their former usage and the fickleness of men, he was willing to make a sure bargain; if the LORD deliver them before me."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If ye bring me home again to fight... and the LORD deliver them before me, shall I be your head?",
-   "prudence joined with piety, resting the victory wholly on the LORD",
-   "except the LORD build the house, they labour in vain that build it (Ps. 127:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "range": "9-11",
+  "pericope_label": "The bargain and the oath at Mizpeh",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they assented, giving not only their word but their oath."
+    "prevalence": "single",
+    "summary": "Gill sees the reason for the bargain in Jephthah's history, since a man used as he had been, and knowing how fickle men are once their turn is served, would want the terms settled beforehand."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke follows the three stages by which the appointment was made complete: the elders chose him, the people confirmed the choice, and God was brought in as a party when Jephthah repeated his terms before the Lord."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: their words, The LORD be witness between us."
+    "summary": "Ellicott declines to defend the transaction as patriotism, Jephthah being only half an Israelite and long resident among heathens and outlaws, and quotes the judgment that where Gideon is the highest pitch this period reaches, Jephthah and Samson are the lowest points to which it descends; he answers the view that the oath was sworn before the ark by observing that the western Mizpeh would have been named had it been meant, and that the high priest was unlikely to carry the sacred lots into a threatened district. Keil and Delitzsch resist reading Jephthah's words as a question at all, since the reply according to thy words presupposes a statement, and deny flatly that the ark was present, the eastern tribes having none."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does “before the Lord” imply the ark was at Mizpeh?",
+    "sides": [
+     {
+      "position": "no — the eastern tribes had no ark, and the words imply only that Jephthah confirmed his terms by an oath",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "probably not — the western Mizpeh would have been specified, and the phrase means only some solemn religious act",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "The LORD be witness between us, if we do not so according to thy words",
-   "the sacredness of a promise made and witnessed in God's name",
-   "the LORD watch between me and thee, when we are absent one from another (Gen. 31:49)"
+   "shall I be your head",
+   "the Lord be witness between us",
+   "the people made him head and captain",
+   "before the Lord in Mizpeh"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he went from Tob into Gilead, his native country."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the people making him head, and he uttered his words before the LORD."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the people made him head and captain over them: and Jephthah uttered all his words before the LORD in Mizpeh",
-   "the godly leader undertaking his charge in dependence on God",
-   "commit thy works unto the LORD, and thy thoughts shall be established (Prov. 16:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "12-13",
+  "pericope_label": "The embassy and the Ammonite claim",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: being now chief governor, he acted in character and sent messengers to the king of Ammon."
+    "prevalence": "single",
+    "summary": "Gill thinks Jephthah acted in character in seeking an amicable settlement, and finds nothing in that inconsistent with a man of valour."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes most of the delay, since it shows Jephthah would not compel by the sword what he could gain by reason, war being the last remedy and the same rule holding for going to law; he doubts the claim was ever the real reason, thinking the Ammonites came for plunder and searched old musty records only when they could not for shame own what they had come for, and observes that even men who do the greatest wrong wish to seem in the right."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads a colder motive into the embassy, that by making the Ammonites state their own grounds Jephthah would let the justice of his cause appear the more forcibly to his people, and notes that Moab appears to have been confederate with Ammon in this war."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott compares the proceeding to the Roman practice of sending heralds ahead of a war, calls the Ammonite plea plausible but not in accordance with the facts, and says it was absurd to expect Israel to shed its blood for settlements only to hand them back to neighbours who hated it; he fixes the Arnon and the Jabbok as the bounds of Gad and Reuben. Keil and Delitzsch note that the ambassadors speak in the name of the nation, and allow the claim one feature with a certain colour of justice, since part of what Israel held had once been Moabite."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "What hast thou to do with me, that thou art come against me to fight in my land?",
-   "seeking a peaceable understanding before resorting to the sword",
-   "if it be possible... live peaceably with all men (Rom. 12:18)"
+   "what hast thou to do with me",
+   "Israel took away my land",
+   "from Arnon even unto Jabbok",
+   "restore those lands again peaceably"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the king returned this answer, that Israel had taken his land; he demanded the lands restored peaceably."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Because Israel took away my land, when they came up out of Egypt... now therefore restore those lands again peaceably",
-   "the unjust cloaking their greed with a false show of right",
-   "a false witness that speaketh lies (Prov. 6:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "14-22",
+  "pericope_label": "The march from Egypt and the war with Sihon",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he was willing to give all satisfaction, and if possible live peaceably and prevent bloodshed."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: him sending again."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jephthah sent messengers again unto the king of the children of Ammon",
-   "the godly slow to war and earnest for peace, sparing no pains",
-   "blessed are the peacemakers: for they shall be called the children of God (Matt. 5:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he answers by his messengers."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the denial, Israel took not the land of Moab nor of Ammon."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thus saith Jephthah, Israel took not away the land of Moab, nor the land of the children of Ammon",
-   "the truth set against the false claim, the best defence of a righteous cause",
-   "the lip of truth shall be established for ever (Prov. 12:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they came up from Egypt, which lay low, to go to Canaan, which was higher."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: compares the narrative with Numbers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when Israel came up from Egypt, and walked through the wilderness unto the Red sea, and came to Kadesh",
-   "grounding the plea in the true history of God's dealings",
-   "I will remember the works of the LORD: surely I will remember thy wonders of old (Ps. 77:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: refers to the history of the request to Edom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the king of Edom not hearkening, so Israel abode in Kadesh."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then Israel sent messengers unto the king of Edom... but the king of Edom would not hearken... so Israel abode in Kadesh",
-   "the people of God seeking leave courteously even from the unkind",
-   "let your moderation be known unto all men (Phil. 4:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the wilderness of Paran along the borders of Edom, going round on the south; they came not within the border of Moab."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "compassed the land of Edom, and the land of Moab... but came not within the border of Moab",
-   "the people of God respecting others' rights, rendering each his due",
-   "provide things honest in the sight of all men (Rom. 12:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Heshbon was his royal city, which he had taken from the Moabites; Israel asked leave to pass through his land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Israel sent messengers unto Sihon king of the Amorites... Let us pass, we pray thee, through thy land into my place",
-   "the consistent peaceableness of God's people, offering fair terms first",
-   "he... desireth conditions of peace (Luke 14:32)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Sihon feared they would seize his dominions, being one of the Canaanite nations doomed to destruction; he gathered his people and fought against Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Sihon gathered all his people together, and pitched in Jahaz, and fought against Israel",
-   "the guilt of conflict lying with him who refuses peace and attacks",
-   "they hated me without a cause (Ps. 69:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: through the victory God gave them over Sihon, Israel had a divine right to the land."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Israel possessing all the land of the Amorites."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD God of Israel delivered Sihon and all his people into the hand of Israel... so Israel possessed all the land of the Amorites",
-   "the land God's gift through victory, held by his grant not by wrong",
-   "the heaven... is the LORD's: but the earth hath he given to the children of men (Ps. 115:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they possessed it peaceably, none disputing their title or giving disturbance."
+    "prevalence": "single",
+    "summary": "Gill supplies the fear behind Sihon's refusal, that he knew his people were of the seven nations whose land Israel was going to take, makes Heshbon weigh in the dispute since Sihon had taken it from Moab, and draws the conclusion Jephthah is working towards, that Israel holds the land by a divine right because the victory was the Lord's."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke marks the bounds of what was won, from Arabia Deserta on the east to the Jordan on the west."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: the bounds from the wilderness to Jordan."
+    "summary": "Ellicott sees no difficulty in Jephthah's knowing the history, since even without documents the events were not so old as to have been forgotten, glosses the geography as he goes, and observes that the conquest east of Jordan was never part of Israel's plan but was forced on them by the hostility of Sihon and Og; Keil and Delitzsch note that the rehearsal agrees exactly with the Pentateuch, that these verses stand almost word for word as in Numbers, and that the embassy to Moab is nowhere recorded in the books of Moses, having had no bearing on the course Israel took."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "they possessed all the coasts of the Amorites, from Arnon even unto Jabbok, and from the wilderness even unto Jordan",
-   "the long undisturbed possession a strong title under God's hand",
-   "he hath... appointed the bounds of their habitation (Acts 17:26)"
+   "Israel took not away the land of Moab",
+   "the king of Edom would not hearken",
+   "let us pass through thy land",
+   "Sihon trusted not Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "23": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it is God's doing, not the work of Israel, that dispossessed the Amorites; shouldest thou possess it?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD God of Israel hath dispossessed the Amorites from before his people Israel, and shouldest thou possess it?",
-   "the title resting on God's own deed; none may take what he bestows",
-   "what therefore God hath joined together, let not man put asunder (Mark 10:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Chemosh was the idol of the Moabites, leading some to think this king ruled Moab also; whomsoever the LORD drives out, Israel will possess."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wilt not thou possess that which Chemosh thy god giveth thee... So whomsoever the LORD our God shall drive out... will we possess",
-   "the people of God holding their inheritance by the gift of the living God",
-   "the LORD killeth, and maketh alive... he bringeth low, and lifteth up (1 Sam. 2:6-7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this strengthens the conjecture that the king was king of Moab, Balak being his predecessor; Balak never strove or fought against Israel for the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "art thou any thing better than Balak the son of Zippor, king of Moab? did he ever strive against Israel?",
-   "a long-acknowledged right not overturned by a later challenger",
-   "remove not the ancient landmark, which thy fathers have set (Prov. 22:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Heshbon was the principal city, taken from Moab by Sihon, then by Israel; Israel dwelt there three hundred years."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "While Israel dwelt in Heshbon and her towns... three hundred years? why therefore did ye not recover them within that time?",
-   "right long enjoyed and never disputed stands firm against late claims",
-   "the truth of the LORD endureth for ever (Ps. 117:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Adam Clarke"
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "23-28",
+  "pericope_label": "Chemosh, Balak, and three hundred years",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he had done him no injury, nor taken any part of his country, speaking in the name of all Israel."
+    "prevalence": "single",
+    "summary": "Gill calls the appeal to Chemosh an argument put to the man on his own ground, and thinks the comparison with Balak strengthens the guess that the king Jephthah addressed ruled Moab as well as Ammon."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: he calls the LORD the Judge to judge between them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD the Judge be judge this day between the children of Israel and the children of Ammon",
-   "committing the cause to the LORD who judges justly",
-   "shall not the Judge of all the earth do right? (Gen. 18:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Clarke sets out the chain of title — the Ammonites lost the land to the Amorites, Israel conquered it from the Amorites, God granted it, and Ammon never reclaimed it because the title was good — and reads the appeal to Chemosh as an argument from a maxim both sides held, that what a nation's god has given it may keep; he takes the three hundred years at face value and makes undisturbed possession part of the case."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he attended not to the arguments, nor chose to seem convinced, nor regarded the appeal."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that Chemosh was distinctively the god of Moab and Moloch of Ammon, so the phrase shows how closely the two kindred nations were joined, and hears a possible echo of the old song of triumph over Heshbon; he doubts the three hundred years belong to the text at all, finding them irreconcilable with the preserved genealogies, needless to the argument, and in conflict with the rest of the sentence. Keil and Delitzsch see the appeal to Balak as a second proof designed to strip the claim of its last appearance of right, and close with Jephthah leaving the matter to Jehovah the Judge."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Are the three hundred years part of the original text?",
+    "sides": [
+     {
+      "position": "doubtful — probably a marginal gloss, since the number cannot be reconciled with the genealogies and is needless to the argument",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "genuine, and one of the strongest points in the case, undisturbed possession for that length of time",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the king of the children of Ammon hearkened not unto the words of Jephthah which he sent him",
-   "the obstinacy of the aggressor deaf to reason, truth, and right",
-   "they refused to hearken, and pulled away the shoulder, and stopped their ears (Zech. 7:11)"
+   "that which Chemosh thy god giveth thee",
+   "art thou any thing better than Balak",
+   "three hundred years",
+   "the Lord the Judge be judge this day"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  },
  "29": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "29-30",
+  "pericope_label": "The Spirit of the Lord, and the vow",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the spirit of strength, fortitude, valour, and zeal for God and Israel."
+    "prevalence": "single",
+    "summary": "Gill glosses the Spirit from the Targum as the spirit of strength, such as was given when God raised men up to deliver Israel, and sees in it a change of office, since Jephthah had been chosen general by the eastern tribes but was now qualified as judge of all Israel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry has the Spirit come only when the people's choice had shown a clear call and Ammon's deafness a just cause, and reads even the route as evidence of the discretion it gave; on the vow he finds remainders of distrust in the hearts of true and great believers, since Jephthah still hesitates when it comes to the settling, and suspects the snare was meant to correct that weakness and the conceit that victory must be bought with something considerable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the Spirit as a testimony rather than an equipment, God qualifying him for the work and so declaring his cause good."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott would render the verb went through rather than passed over, the object being to collect levies and rouse the tribes, and notes that vowing was a practice of all ancient nations and particularly of the Jews; Keil and Delitzsch quote the terms of the vow exactly and close off the softer reading, since the phrase about coming out of the doors of the house to meet a man will not describe a beast driven from the stall or one that happens to run out, being used everywhere else of people."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Then the Spirit of the LORD came upon Jephthah, and he passed over Gilead, and Manasseh... unto the children of Ammon",
-   "all true might for God's work coming from his Spirit",
-   "not by might, nor by power, but by my spirit, saith the LORD (Zech. 4:6)"
+   "the Spirit of the Lord came upon Jephthah",
+   "he passed over Mizpeh of Gilead",
+   "if thou shalt without fail deliver them",
+   "whatsoever cometh forth of the doors of my house"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he vowed before setting out, hoping such a religious disposition would be acceptable."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jephthah vowed a vow unto the LORD, and said, If thou shalt without fail deliver the children of Ammon into mine hands",
-   "vows to God to be made with care and wisdom, not in rashness",
-   "be not rash with thy mouth... when thou vowest a vow unto God, defer not to pay it (Eccl. 5:2-4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "31": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: if 'to meet me' is meant intentionally, no other than a human creature can be meant, a child or servant; he would offer it for a burnt offering."
+    "prevalence": "single",
+    "summary": "Gill states the fork plainly: if to meet me is meant of intention, none but a human creature can be intended, since nothing else could come out by design; if it means only what happened to meet him, any creature may be. He fixes the terms narrowly on whatever came out first, as the Latin has it, since at such a moment many might come out at once."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke holds that conditions must have been implied, since without them the vow would be that of a heathen or a madman, presses the character of a man who could not commit the crime he had just punished in others, offers a conjecture that a lost letter turned I will offer Him a burnt offering into I will offer it up for a burnt offering, and concludes from the end of the chapter that the daughter was consecrated to perpetual virginity rather than sacrificed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott answers every one of these arguments: the rendering is whosoever and not whatsoever, the marginal or comes of the same wish to soften the verse, the animal reading is a notion Augustine ridiculed and a strangely inadequate return besides, and human sacrifice was the special worship of the very nations Jephthah was marching against; to the objection from the Spirit he replies that the Spirit clothed Gideon who set up an illegal worship, came on Saul who was ready to kill his own son over a vow, and came on David who sank into adultery and murder, the phrase being a grant of strength for a particular end and not a certificate of attainment. Keil and Delitzsch, having shut off the reading that makes the victim a beast, pass straight from the vow to the battle."
    }
   ],
   "debates": [
-   [
-    "What Jephthah's vow intended",
-    "The witnesses note the ambiguity of 'whatsoever cometh forth to meet me': Gill holds that what comes 'to meet' him must be a human creature, making the vow rash and its issue dreadful; the full question of whether his daughter was slain or devoted to perpetual virginity is weighed at verses 39-40."
-   ]
+   {
+    "question": "Did Jephthah vow a human sacrifice?",
+    "sides": [
+     {
+      "position": "yes — the rendering is whosoever, a single beast would be an absurd return, and the practice was common among the nations he had lived and fought among",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "no — conditions must have been implied, the man was pious and knew the law, and the close of the chapter shows the daughter consecrated to virginity",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Meets the argument from the Spirit of the Lord head on, holding that the phrase marks divine strength granted for a particular end and proves nothing about the character of the man who receives it."
+   }
+  ],
   "themes": [
-   "whatsoever cometh forth of the doors of my house to meet me... shall surely be the LORD's, and I will offer it up for a burnt offering",
-   "the peril of binding oneself to God in haste, without weighing the cost",
-   "it is a snare to the man... and after vows to make enquiry (Prov. 20:25)"
+   "whatsoever cometh forth to meet me",
+   "shall surely be the Lord’s",
+   "I will offer it up for a burnt offering",
+   "whether a human sacrifice was meant"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "32": {
   "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he passed over after he had made the vow."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the clause records the result, the LORD delivering them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So Jephthah passed over unto the children of Ammon to fight against them; and the LORD delivered them into his hands",
-   "God making good his help and giving the victory to those who trust him",
-   "thou hast also given me the necks of mine enemies (Ps. 18:40)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "32-39",
+  "pericope_label": "The victory, the meeting, and the daughter's consent",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Aroer, near the river Arnon, on the borders of Moab."
+    "prevalence": "single",
+    "summary": "Gill notes that Jephthah returned to the Mizpeh where he had spoken his terms before the Lord and had settled the family he brought out of Tob, and observes that the daughter does not say if thou hast opened thy mouth, since her father had plainly told her what he had vowed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the twenty cities as either taken or destroyed, takes the father's grief to be for a family now extinct in Israel rather than for a death, calls the daughter at once obedient, pious and patriotic, and notes what her consent cost, since to have no offspring was the utmost degradation among the Hebrews; on her two months he supposes she went no further than a farewell visit to each of her companions."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: him smiting twenty cities with a great slaughter."
+    "summary": "Ellicott points out that the word opening the battle is simply and, not so, and does not connect the victory to the vow, explains that a vow was binding only when spoken and that the Hebrews knew a redeemable vow and an irredeemable ban, and holds that Jephthah treated his as a ban and never thought of escaping it; he will not defend the theology, quoting Josephus that the sacrifice was neither lawful nor acceptable to God, but praises the faithfulness that would not go back and the devotion of the daughter, and explains that what she went to bewail was not death but dying unwedded and childless. Keil and Delitzsch fix the ground of the battle from Aroer to Minnith and Abel of the vineyards."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "he smote them from Aroer... even twenty cities... with a very great slaughter. Thus the children of Ammon were subdued",
-   "the abundance of the deliverance God wrought, the oppressor laid low",
-   "he saved them from the hand of him that hated them (Ps. 106:10)"
+   "the Lord delivered them into his hands",
+   "his daughter came out with timbrels and dances",
+   "I have opened my mouth unto the Lord",
+   "bewail my virginity upon the mountains"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she was the first person to present to his view, at the head of the virgins with timbrels; she was his only child."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his daughter came out to meet him with timbrels and with dances: and she was his only child",
-   "the rash vow meeting its dreadful fulfilment in the dearest",
-   "it is a snare to the man... and after vows to make enquiry (Prov. 20:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she was the first to present to his view as she led the virgins."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: his cry, I have opened my mouth unto the LORD, and cannot go back."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Alas, my daughter!... for I have opened my mouth unto the LORD, and I cannot go back",
-   "vows to God binding, yet a rash vow binding the conscience to sorrow",
-   "better is it that thou shouldest not vow, than that thou shouldest vow and not pay (Eccl. 5:4-5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the conditional 'if' may be omitted; she said, do to me according to thy vow, since the LORD hath avenged thee."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "do to me according to that which hath proceeded out of thy mouth; forasmuch as the LORD hath taken vengeance for thee",
-   "faith setting God's honour above her own life, a noble submission",
-   "not my will, but thine, be done (Luke 22:42)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she had but one favour to ask, which might be granted without breach of the vow."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: her request to bewail her virginity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let me alone two months, that I may go up and down upon the mountains, and bewail my virginity, I and my fellows",
-   "her lamenting her virginity bearing on the meaning of the vow; meek acceptance",
-   "the cup which my Father hath given me, shall I not drink it? (John 18:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he granted her request at once; she bewailed her virginity upon the mountains with her companions."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said, Go... and she went with her companions, and bewailed her virginity upon the mountains",
-   "facing the hardest trial with seriousness and faith, not fleeing nor murmuring",
-   "in your patience possess ye your souls (Luke 21:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: her request was no pretence to escape, but she returned at the time fixed; her father did according to his vow, and she knew no man."
-   }
-  ],
-  "debates": [
-   [
-    "Was Jephthah's daughter slain or devoted to virginity?",
-    "The witnesses present both readings: the plain words of the vow ('offer it up for a burnt offering') suggest she was sacrificed, while the note that 'she knew no man,' the bewailing of her virginity, and the yearly commemoration (not mourning of death) lead many to hold that she was devoted to perpetual virginity and the LORD's service. Gill leaves the question open; both views are held among interpreters."
-   ]
-  ],
-  "outliers": [],
-  "themes": [
-   "her father... did with her according to his vow which he had vowed: and she knew no man",
-   "the seriousness of a bond made to God and the danger of a rash vow",
-   "when thou vowest a vow unto God... pay that which thou hast vowed (Eccl. 5:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "40": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill"
+  ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: either to lament her death, as some, or her virginity, as others; the word may signify to talk and discourse with her, a yearly confabulation."
+    "prevalence": "single",
+    "summary": "Gill lays out the choices without deciding: some take the verb of lamenting her death and some of her virginity, but it may mean to talk with her and hold conversation, as two of the rabbis understood it, the daughters bringing her news to cheer her in her solitude; he adds a third possibility from the Arabic, where the root means to praise, and notes that this book uses it so of rehearsing the righteous acts of the Lord."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke says flatly that to lament is not a correct translation, gives a rendering in which the virgins go to comfort her, and uses the verse as evidence that she was alive to be comforted; he then sets out at length the exposition that turns the vow into two by reading the conjunction disjunctively, supports it from the Levitical law of vows with its three subjects for three uses, and makes the daughter irredeemably devoted, but to perpetual virginity in the service of the tabernacle — a service he says was already customary, since a tribute of thirty-two captive virgins had gone to the Lord after the Midianite war."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reports the same sense of the verb from a rabbi, taking it as praise or celebration, and compares what the Romans felt for Claelia, or any nation for a heroine whose self-sacrifice bought it a victory."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What did the daughters of Israel go yearly to do?",
+    "sides": [
+     {
+      "position": "to comfort her, which shows she was living — to lament is not a correct translation",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "to praise or celebrate her, as the Arabic root and a rabbinic reading both allow",
+      "holders": [
+       "Ellicott",
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the daughters of Israel went yearly to lament the daughter of Jephthah the Gileadite four days in a year",
-   "the submission of God's people not forgotten but held in honour",
-   "the righteous shall be in everlasting remembrance (Ps. 112:6)"
+   "the daughters of Israel went yearly",
+   "four days in a year",
+   "to lament, or to praise",
+   "the custom in Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  }
 }
