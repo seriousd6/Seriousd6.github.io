@@ -3709,6 +3709,70 @@
         "29"
       ],
       "note": "Henry and Wesley read the same geography to opposite ends at vv.28-29, which made a clean debate for the tags. Wesley takes the list of nations as a catalogue of obstacles arranged by compass point — Amalek holding the southern entrance, the hill country in the south-east, the Canaanites guarding the east along the salt sea. Henry takes the identical dispersion as the spies' refutation: scattered as they were, the Canaanites could neither soon get together nor long keep together, so the report was cowardice and not intelligence. Henry adds the line the entry closes on, that the giants' overgrown stature would only make them the better mark, and the bulkiest men have not always the best mettle."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "11",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30"
+      ],
+      "note": "JFB scrape residue, twenty-first chapter found: all five Jamieson blocks in numbers 11 are Leviticus 21-22 material (priestly marriage restrictions, the high priest barred from mourning, physical defects disqualifying from service, purification by immersion). Two things are notable. First, keys 18 and 24 carry the IDENTICAL 105-word block, another instance of one residue block duplicated across keys (twofold in judges 1, genesis 18 and now here; fourfold in genesis 27). Second, numbers 11 is simultaneously DONOR and VICTIM: the six JFB blocks in numbers 35 were all Numbers 11-12 material, while numbers 11's own JFB blocks come from Leviticus 21-22. Running donor list: Gen 15, 24, 26, 36, 37; Lev 11, 21-22, 26; Deut 4, 16-17, 18-19, 20-21, 28; Exod 8-9; Num 11-12; 1 Chr 3-4."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "11",
+      "verses": [
+        "34"
+      ],
+      "note": "SCRAPE OVERRUN confirmed a second time, so it is not a one-off. As in joshua 24, the Ellicott block at the LAST key of the chapter (here key 34) ends with StudyLight page chrome: navigation, copyright notice, terms-of-use links and several hundred words of raw CSS. joshua 24 also had the Calvin block at key 32 running on into the entire translation of Calvin's Joshua. The shared shape is that the overrun attaches to a block near the END of a chapter, which is where a scraper would run past the article body into the page footer. Consequence unchanged: 'synthesis-loop.py size' overstates the usable words of late keys, so spans planned off the reported figures are mis-sized. usable_source_words should learn to cut at the StudyLight footer marker (the run of 'terms of use / privacy policy / rights and permissions' links, or the first CSS selector) and at 'END OF THE COMMENTARY'."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "4",
+        "10",
+        "16",
+        "24",
+        "31"
+      ],
+      "note": "Unusually clean block-keying: Henry files exactly six blocks in numbers 11, at keys 1, 4, 10, 16, 24 and 31, and those six anchors coincide exactly with the chapter's natural pericopes (Taberah; the mixed multitude and the manna; Moses' remonstrance; the seventy and the quails promised; the seventy prophesy with Eldad and Medad; the quails and the plague). Every entry therefore carries a puritan-evangelical voice, which has not happened in the last several chapters. One nuance: Henry's substantive treatment of Moses' remonstrance sits in the block at key 4, but he files a condensed version of the same material at key 10, so entry 10-15 is grounded independently. Calvin's block at key 30 is likewise mostly about the quails of vv31-32; that material was left unused rather than moved, since Calvin is independently present at keys 33 and 34."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "25",
+        "31",
+        "33"
+      ],
+      "note": "Four substantive disputes. (1) v1, what the people complained of: nobody knows, and the sources fill the silence differently -- Gill cites Jarchi for men seeking a pretext to break with God, Clarke reports Jerome's conjecture of the length of the way, Wesley the three days of howling wilderness, Keil and Delitzsch decline to name a cause. Calvin makes it a grammatical question, listing four renderings of the participle (murmuring, being sick, dealing treacherously, seeking occasion) and rejecting all in favour of FAINTING, that they failed as men broken down with weariness. (2) v25, whether the seventy kept the gift: Wesley holds the Spirit took up a settled abode with them because the use of the gift was perpetual, Calvin that it was strictly temporary and served only as credentials, as prophecy did for Saul -- and the two read the SAME closing clause in opposite senses, Wesley 'they did not cease', Calvin and Ellicott 'they did so no more'. (3) v31, the two cubits: Clarke says the Hebrew will not bear a carpet of quails two feet thick and has them flying within reach of a club, following the Vulgate; Ellicott lays out both readings and grants the heap is the more obvious sense while objecting that heaped birds would need miraculous preserving since Israel might not eat what died of itself; Wesley takes a middle course of scattered heaps often two cubits high. (4) v33, the cause of the plague: Keil and Delitzsch expressly reject the toxic-quail theory (Knobel citing Bochart) for an extraordinary judgment, where Ellicott holds that such a surfeit would naturally produce much sickness and that the natural and supernatural are here combined; Clarke refuses to specify what the writer left unspecified."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "11",
+      "verses": [
+        "27",
+        "28",
+        "29"
+      ],
+      "note": "Unusual source form: Clarke's blocks at keys 27, 28 and 29 are not prose commentary but three of Charles Wesley's hymns on this passage, quoted in full from 'Short Hymns on Select Passages of the Holy Scriptures' (Bristol, 1762), with Clarke's own closing remark that such sentiments are the more remarkable coming from a man otherwise sufficiently bigoted to ecclesiastical orders and regularity. Handled by reporting that Clarke answers the Eldad and Medad episode with poetry rather than comment, and attributing the hymns to Charles Wesley rather than to Clarke. Worth watching for elsewhere in Clarke: verse quoted as commentary is easy to mis-attribute to the commentator."
     }
   ]
 }
