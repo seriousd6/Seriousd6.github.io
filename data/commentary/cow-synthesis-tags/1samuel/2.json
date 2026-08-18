@@ -1,922 +1,440 @@
 {
  "1": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Matthew Henry",
-   "Charles Ellicott"
+   "Matthew Henry"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that Hannah had prayed before, but silently, and this is vocal; she had been answered and now gives thanks, thanksgiving being itself a kind of prayer, which is why the narrative calls a song a prayer. He cites the Targum for a spirit of prophecy and reports that the Jews reckon her one of the seven prophetesses, finding in the song not only her own experience of divine goodness but things to be done hereafter in Israel, and particularly the Messiah."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes most of the fact that a thanksgiving is called a prayer: thanksgiving is an essential part of prayer, and in every address to God we must express a grateful regard to him as our benefactor; what we win by prayer we may wear with comfort, and must wear with praise, and thanks for mercies received shall be accepted as a petition for further mercy. He observes that she does not commend Samuel for the prettiest child or the most toward for his age, as fond parents are apt to do, but overlooks the gift and praises the giver — there may be other Samuels, he says, but no other Jehovah. Four attributes are celebrated in the opening lines on his reckoning: unspotted purity, almighty power, unsearchable wisdom and unerring justice. On the horn he hears music rather than cattle, David's singers having been appointed to lift up the horn, so that the phrase means her praises are raised to an unusual strain; and the song stands on record, he adds, to encourage those of the weaker sex to attend the throne of grace."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the hymn an oracular declaration rather than a prayer, every part having respect to the future, and quotes Hales, who finds it excelling in simplicity and uniformity of sentiment, exalting the humble-minded and abasing the arrogant, and ranks Hannah a prophetess of the first class for describing the promised Saviour as a King before there was any king in Israel, and for first applying the epithet which is Messiah in Hebrew, Christ in Greek and Anointed in English. Kimchi, he adds, was so struck by the language that he ingenuously confessed the King of whom Hannah speaks is the Messiah. He notes that the best manuscripts write the hymn in poetic lines, and prints it so, judging from the connection that she delivered it at her son's dedication rather than at his birth; he agrees that horn means power and dominion and finds the sentiment among the heathen too, quoting Horace, who tells his wine-jar that it adds strength and horns to the poor man. Wesley adds that she shows her modesty by not naming Peninnah, only her enemies in general."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Hannah's song of exultation, rejoicing in the LORD and his salvation: 'and Hannah prayed, and said, My heart rejoiceth in the LORD, mine horn is exalted in the LORD: my mouth is enlarged over mine enemies; because I rejoice in thy salvation' — Hannah's prayer became a song of triumph in God (the and Hannah prayed, and said, My heart rejoiceth in the LORD, mine horn is exalted in the LORD, the rejoicing, the my mouth is enlarged over mine enemies; because I rejoice in thy salvation, the salvation, the figure, the soul exulting not in its gift but in the Giver and his salvation, the truth that Hannah rejoiced in the LORD himself and his salvation, Psalm 13:5, the figure of the believer who triumphs in God and his deliverance, the song of Hannah, the joy in salvation, vv.1:27); Hannah's heart rejoicing in the LORD (the joy, Psalm 13:5) — the exultation (rejoiceth in the LORD); 'I rejoice in thy salvation' (Hannah's joy in God's salvation, the deliverance, the figure, the believer who triumphs in God and his deliverance, the providence, the song, the holiness of God to follow, vv.2) — Keil and Delitzsch, Gill."
+    "summary": "Keil calls the psalm the mature fruit of the Spirit of God, and says the pious woman discerned in her own experience the general laws of the divine economy; what she had known of God's gracious government while bowed down was a pledge that the nation, then deeply oppressed, would likewise be lifted up. Ellicott makes the movement personal first: she had been an unhappy woman, her life as she thought a failure and her dearest hopes baffled, and had fled to the Rock of Israel and found rest, and then joy, the hymn afterwards becoming one of the loved songs of the people, handed down in the words that first fell from her. He also cautions against a misreading of her boast — mine horn is exalted does not mean I am proud but I am strong, mighty now in the gift received, the image coming from oxen and grown familiar to a shepherd-people."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does mine horn is exalted claim strength or boast of pride?",
+    "sides": [
+     {
+      "position": "strength and dominion — the figure is from oxen, and the heathen used it the same way",
+      "holders": [
+       "Ellicott",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "music — David’s singers lifted up the horn, so her praises are raised to an unusual strain",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And Hannah prayed, and said, My heart rejoiceth in the LORD, mine horn is exalted in the LORD: my mouth is enlarged over mine enemies; because I rejoice in thy salvation.",
-   "Hannah's song of exultation, rejoicing in the LORD and his salvation",
-   "Hannah's prayer becoming a song of triumph in God himself and his salvation",
-   "the believer who triumphs in God and his deliverance (Psalm 13:5)"
+   "my heart rejoiceth in the Lord",
+   "mine horn is exalted in the Lord",
+   "thanksgiving as an essential part of prayer",
+   "the song as prophecy of the Messiah"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "2": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-5",
+  "pericope_label": "The perfections of God and the reversals of providence",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill piles up adverbs on the holiness: God is essentially, originally, independently, perfectly and immutably holy, as others are not. Angels are holy, but not of themselves, and cover their faces while celebrating that perfection; nor is theirs naturally unchangeable, as the fall of some demonstrates. Among men some were holy only in a typical sense, some outwardly before others but not before God, and even in the truly sanctified there is a likeness only. He takes the warning against proud talk to address Peninnah and her allies, whose mouths would now be stopped."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the claim outward: holiness is peculiar to the God of Israel, and no false god ever pretended to it, nor any religion professed before the true revelation. On the rock he reports Rabbi Maimon's observation that the word, applied to Jehovah, means fountain or spring, and concludes that no source of continual help exists but our God. Of the closing verb he renders it that actions are directed, drawing from that how by his counsel alone can we begin, continue or end any work; and he reports the Targum's reading of the reversals as a series of prophecies, against the Philistines, Sennacherib, Nebuchadnezzar, the Greeks and Haman, while thinking for himself that these things frequently happen in the ordinary course, and that it is the particular providence of God which Hannah celebrates through this simple yet sublime ode. Wesley puts the holiness briefly — none is holy besides God, save by participation — reduces the rock to comfort, and takes seven for many, hearing the prophetic style in the past put for the future."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Hannah confessing the unique holiness and majesty of God: 'there is none holy as the LORD: for there is none beside thee: neither is there any rock like our God' — Hannah confessed God's unrivalled holiness and strength (the There is none holy as the LORD, the holiness, the for there is none beside thee: neither is there any rock like our God, none beside him, the figure, the incomparable holiness and steadfast strength of God, the unique majesty, the truth that none is holy or strong as the LORD, the only God and rock, Deuteronomy 32:4, the figure of the God who alone is holy and the rock of his people, the holiness of God, the rock unrivalled, vv.1); the unrivalled holiness of God (the majesty, Deuteronomy 32:4) — the holiness (none holy as the LORD); 'neither is there any rock like our God' (God the unrivalled rock of his people, the strength, the figure, the God who alone is holy and the rock of his people, the providence, the holiness, the rebuke of the proud to follow, vv.3) — Keil and Delitzsch, Gill."
+    "summary": "Keil explains why the reason given is that there is none beside him: holiness is simply the moral reflection of the glory of the one absolute God, so that the wicked should tremble before it rather than boast of lofty things. He glosses the barren bearing seven, that being the full number of the divine blessing, while the mother of many pines away, having lost her sons and with them her support in old age. Ellicott keeps the rock a stone and traces the image to the desert wandering, where the strange fantastic crags of Sinai, standing up amid shifting sands, supplied a picture of unchangeableness and security; the term is first found in the Song of Moses, where the juxtaposition of rock and salvation suggests Hannah knew that national hymn. On the closing verb he keeps weighed, notes the Hebrew order putting a God of knowledge first, and quotes Rabbi Ami in the Talmud, that knowledge is of great price because it stands between two divine names; he adds that this is one of fifteen places where the Masorites read a negative particle instead as the word meaning by him. Of the reversals he quotes Von Gerlach: every power that will be something in itself is destroyed by the Lord, and every weakness that despairs of itself is transformed into power."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does the closing verb of the third verse mean weighed or directed?",
+    "sides": [
+     {
+      "position": "directed — by God’s counsel alone can we begin, continue or end any work",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "weighed — and one of fifteen places where the Masorites correct the particle",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "There is none holy as the LORD: for there is none beside thee: neither is there any rock like our God.",
-   "Hannah confessing the unique holiness and majesty of God",
-   "Hannah confessing God's unrivalled holiness and strength",
-   "the God who alone is holy and the rock of his people (Deuteronomy 32:4)"
+   "there is none holy as the Lord",
+   "neither is there any rock like our God",
+   "by him actions are weighed",
+   "the bows of the mighty men are broken"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Hannah's rebuke of proud speech, for God weighs all actions: 'talk no more so exceeding proudly; let not arrogancy come out of your mouth: for the LORD is a God of knowledge, and by him actions are weighed' — Hannah warned the proud, since God knows and weighs all (the Talk no more so exceeding proudly; let not arrogancy come out of your mouth, the rebuke of pride, the for the LORD is a God of knowledge, and by him actions are weighed, God weighs actions, the figure, the warning against pride before the all-knowing God who weighs every deed, the truth that God knows and weighs all actions, so pride is folly, Proverbs 16:2, the figure of the omniscient God before whom pride is silenced, the rebuke of pride, actions weighed, vv.2); Hannah rebuking proud speech (the warning, Proverbs 16:2) — the rebuke (talk no more proudly); 'the LORD is a God of knowledge, and by him actions are weighed' (God knowing and weighing all deeds, the omniscience, the figure, the omniscient God before whom pride is silenced, the providence, the rebuke, the reversals God works to follow, vv.4-5) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Talk no more so exceeding proudly; let not arrogancy come out of your mouth: for the LORD is a God of knowledge, and by him actions are weighed.",
-   "Hannah's rebuke of proud speech, for God weighs all actions",
-   "Hannah warning the proud, since God knows and weighs all actions",
-   "the omniscient God before whom pride is silenced (Proverbs 16:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God breaking the mighty and strengthening the weak: 'the bows of the mighty men are broken, and they that stumbled are girded with strength' — God reverses the lot of the strong and the weak (the The bows of the mighty men are broken, the mighty broken, the and they that stumbled are girded with strength, the weak strengthened, the figure, the divine reversal that breaks the strong and girds the weak, the truth that God breaks the mighty and strengthens the feeble, Psalm 37:17, the figure of the God who reverses the conditions of men at his pleasure, the reversal of God, the mighty and the weak, vv.3); God breaking the mighty (the reversal, Psalm 37:17) — the breaking (bows broken); 'they that stumbled are girded with strength' (the weak girded by God, the reversal, the figure, the God who reverses the conditions of men at his pleasure, the providence, the reversal, the full and the hungry to follow, vv.5) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The bows of the mighty men are broken, and they that stumbled are girded with strength.",
-   "God breaking the mighty and strengthening the weak",
-   "God reversing the lot of the strong and the weak",
-   "the God who reverses the conditions of men at his pleasure (Psalm 37:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's reversals: the full made needy, the hungry filled, the barren made fruitful: 'they that were full have hired out themselves for bread; and they that were hungry ceased: so that the barren hath born seven; and she that hath many children is waxed feeble' — God reverses fullness and hunger, fruitfulness and barrenness (the They that were full have hired out themselves for bread; and they that were hungry ceased, the full and the hungry, the so that the barren hath born seven; and she that hath many children is waxed feeble, the barren and the fruitful, the figure, the divine reversal in fortune and family, the barren made fruitful as Hannah, the truth that God reverses fullness, hunger, and barrenness, Psalm 113:9, the figure of the God who lifts the low and humbles the high in every estate, the reversals of God, the barren made fruitful, vv.4); the full made needy and the hungry filled (the reversal, Psalm 113:9) — the reversal (the full and the hungry); 'the barren hath born seven; and she that hath many children is waxed feeble' (the barren made fruitful, the fruitful made feeble, Hannah's own case, the figure, the God who lifts the low and humbles the high, the providence, the reversals, God's power over life and death to follow, vv.6) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They that were full have hired out themselves for bread; and they that were hungry ceased: so that the barren hath born seven; and she that hath many children is waxed feeble.",
-   "God's reversals: the full made needy, the hungry filled, the barren made fruitful",
-   "God reversing fullness and hunger, fruitfulness and barrenness",
-   "the God who lifts the low and humbles the high in every estate (Psalm 113:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "6-10",
+  "pericope_label": "The Lord killeth, and maketh alive",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Hannah's confession that the LORD kills and makes alive, brings down to the grave and raises up: 'the LORD killeth, and maketh alive: he bringeth down to the grave, and bringeth up' — the sovereignty over life and death — 'the LORD killeth, and maketh alive: he bringeth down to the grave, and bringeth up': Hannah ascribes to God the absolute disposal of life and death, the depths and the heights (the witnesses noting the significance — the great confession of God's sovereign power over the whole estate of man, that he is Lord of life and death, who kills and makes alive, brings down even to the grave and brings up again, so that no condition is beyond his reach, neither the lowest depth of death nor the most hopeless ruin, but he can bring down the living to death and raise up the dead to life, the entire compass of man's being subject to his will, the Lord of life and death, the depths and the heights his, no estate beyond his power to change, the lesson — that God holds absolute sway over life and death, and the believer may trust him in the lowest extremity, 'see now that I, even I, am he... I kill, and I make alive,' Deuteronomy 32:39, the truth that God can raise even from death and the grave, so that no affliction is past his help, 'thou which hast shewed me great and sore troubles shalt quicken me again, and shalt bring me up again from the depths of the earth,' Psalm 71:20, the figure — the God who is Lord of death and resurrection, fulfilled in him who has the keys of death and the grave and raises the dead, 'I am he that liveth, and was dead... and have the keys of hell and of death,' Revelation 1:18, the truth that the power that kills and makes alive is the ground of hope in every extremity, even of resurrection, the figure of the absolute sovereignty of God over life and death, the lowest depths and the highest deliverances, the call to trust the God who is Lord of life and death, the assurance that no depth is beyond the reach of him who brings up from the grave); God killing and making alive, the absolute disposal of life in his hand, no estate beyond his power (the Lord of life and death, Deuteronomy 32:39) — the sovereignty (killeth and maketh alive); 'he bringeth down to the grave, and bringeth up' (God bringing down even to the grave and bringing up again, no depth of death or ruin beyond his reach, the ground of hope even of resurrection, fulfilled in him who has the keys of death, the God of death and resurrection, Psalm 71:20; Revelation 1:18) — the figure (the God who is Lord of death and resurrection, the providence, the sovereignty, the poor raised from the dust to follow, vv.7-8) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "prevalence": "single",
+    "summary": "Gill reads a double sense throughout: God removes some by death and preserves others, and of one man can do both, Kimchi and Ben Gersom referring the second clause to the resurrection, while spiritually he kills by the law and quickens by his Spirit. He takes poverty and wealth alike for gifts of providence, the difference between men being contrived so that they depend on one another, and doubles the sense again on the beggar lifted from the dunghill — the literal poor sitting in the dust, and the poor in spirit who alone are beggars, since those who do not feel their want never ask. With the keeping of the saints' feet, he says, the promises begin."
+   },
    {
-    "question": "What does 'the LORD killeth, and maketh alive' confess?",
-    "sides": [
-     {
-      "position": "The absolute sovereignty of God over life and death, the lowest depths and the highest deliverances - Lord of life and death who kills and makes alive, brings down to the grave and brings up, no condition beyond his reach, the believer trusting him in the lowest extremity (Deuteronomy 32:39), God able to raise from death so no affliction is past his help (Psalm 71:20), the God who has the keys of death (Revelation 1:18)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "The LORD killeth, and maketh alive: he bringeth down to the grave, and bringeth up.",
-   "Hannah's confession that the LORD kills and makes alive, brings down to the grave and raises up (the crux of the absolute sovereignty of God over life and death)",
-   "the great confession of God's sovereign power over the whole estate of man, Lord of life and death, who kills and makes alive, brings down even to the grave and brings up again, so that no condition is beyond his reach",
-   "the believer trusting him in the lowest extremity, God able to raise from death and the grave so no affliction is past his help, the God who has the keys of death (Deuteronomy 32:39; Psalm 71:20; Revelation 1:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke examines the word rendered grave, which covers the tomb, the state of the dead and the invisible place of spirits; we sometimes render it hell, but since that comes from the Saxon for to conceal it means only the covered place, and the Targum reads a resurrection here. On riches he turns providence into a question of trust: many cannot bear affluence, and if God kept entrusting them with it their ruin would follow, while some he trusts and makes stewards of his secular bounty. He prefers instances to argument, naming three men raised from a dungeon to a throne — Cincinnatus, Joseph and Roushen Akhter, exalted over Hindustan, on whom an elegant couplet was made playing on his name, which means a bright star. Wesley keeps the first clause personal, she who was almost consumed with grief having been revived, notes that death often names a calamity, and glosses the silence of the wicked as a stopping of mouths that once opened wide against heaven."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "God's making poor and rich, bringing low and lifting up: 'the LORD maketh poor, and maketh rich: he bringeth low, and lifteth up' — God disposes of riches and poverty, abasement and exaltation (the The LORD maketh poor, and maketh rich, poor and rich, the he bringeth low, and lifteth up, low and lifted up, the figure, the divine hand that disposes every estate, poverty and wealth, low and high, the truth that God makes poor and rich, abases and exalts, Psalm 75:7, the figure of the God who orders all the conditions of men, the disposal of God, the low and the lifted, vv.6); God making poor and rich (the disposal, Psalm 75:7) — the disposal (poor and rich); 'he bringeth low, and lifteth up' (God abasing and exalting, the disposal, the figure, the God who orders all the conditions of men, the providence, the disposal, the poor raised to princes to follow, vv.8) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott insists that nothing in human affairs is the sport of blind chance, and reports a Talmudic tradition that Hannah's words describe an intermediate class at the judgment, sealed at once neither for life nor for hell, who go down and cry awhile and then ascend. Of the pillars he finds the cosmogony fitted to the childhood of peoples, and adds a rueful question: whether after three or four thousand years, with modern science round us, we know much more of how the universe is made and governed; Jerome rendered the word hinges and Gesenius foundations, but he thinks pillars best. He calls the keeping of the saints' feet the comforting deduction Hannah drew from her own life, set down for the solace of true servants after her, and matches the closing line with the prophet's not by might, nor by power, but by my Spirit. On the last verse he makes the strongest claim: this is the first passage in the Old Testament to name his Anointed, Jewish expositors have generally read it of King Messiah, and A Lapide said all these things have regard to Christ. Keil, whose note runs into the next scene, observes that Elkanah then went back to Ramah, the silence about his wives being no warrant for Thenius to send him home alone."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "The LORD maketh poor, and maketh rich: he bringeth low, and lifteth up.",
-   "God's making poor and rich, bringing low and lifting up",
-   "God disposing of riches and poverty, abasement and exaltation",
-   "the God who orders all the conditions of men (Psalm 75:7)"
+   "the Lord killeth, and maketh alive",
+   "he raiseth up the poor out of the dust",
+   "he will keep the feet of his saints",
+   "he shall exalt the horn of his anointed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "That God raises the poor from the dust to set them among princes: 'he raiseth up the poor out of the dust, and lifteth up the beggar from the dunghill, to set them among princes, and to make them inherit the throne of glory: for the pillars of the earth are the LORD's, and he hath set the world upon them' — the lifting of the lowly to glory — 'he raiseth up the poor out of the dust, and lifteth up the beggar from the dunghill, to set them among princes, and to make them inherit the throne of glory: for the pillars of the earth are the LORD's': God lifts the lowest from the dust to the highest honour, for all the earth is his (the witnesses noting the significance — the wonderful condescension and sovereign grace of God, who stoops to the very dust and the dunghill, to the poorest and most abject, and raises them to sit among princes and inherit a throne of glory, the greatest exaltation from the lowest estate, and this not by chance but by his own purpose and power, founded on his sovereign right as the Maker and upholder of all, for the pillars of the earth are his and he set the world upon them, the lowest raised to the highest, the dunghill to the throne, the sovereign grace that founds all on his power as Creator, the lesson — that God delights to exalt the lowly and abase the proud, choosing the poor and despised to inherit glory, 'hath not God chosen the poor of this world rich in faith, and heirs of the kingdom?' James 2:5, the truth that the God who upholds the world can raise the meanest to glory, his power the ground of all his grace, 'he hath put down the mighty from their seats, and exalted them of low degree,' Luke 1:52, the figure — the sovereign grace that lifts the lowliest of men to the throne of glory, fulfilled in the gospel that raises beggars to be sons and heirs, 'the Spirit itself beareth witness... that we are the children of God... and joint-heirs with Christ,' Romans 8:16-17, the truth that the exaltation of the lowly rests on the almighty power of the Creator, the figure of the God who lifts the lowliest to glory, founding all on his sovereign power, the call to trust the God who exalts the humble, the assurance that the poorest he raises to a throne of glory); God raising the poorest from the dust and dunghill to sit among princes and inherit glory, the greatest exaltation from the lowest estate by his sovereign grace (the lowly lifted to glory, James 2:5) — the exaltation (raiseth the poor to princes); 'for the pillars of the earth are the LORD's, and he hath set the world upon them' (all this rests on God's sovereign right as Maker and upholder of the world, the pillars of the earth his, his power the ground of his grace, the Creator's power the ground of grace, Luke 1:52; Romans 8:16-17) — the figure (the sovereign grace that lifts the lowliest to the throne of glory, the providence, the exaltation, the keeping of the saints' feet to follow, vv.9) — Calvin, Keil, Ellicott, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [
-   {
-    "question": "What does God raising the poor from the dust to princes signify?",
-    "sides": [
-     {
-      "position": "The God who lifts the lowliest to glory, founding all on his sovereign power as Maker and upholder of the world - God stooping to the dust and dunghill and raising the abject to inherit a throne of glory, founded on his right as Maker, choosing the poor to inherit the kingdom (James 2:5), the God who upholds the world raising the meanest to glory (Luke 1:52), the grace that lifts beggars to be heirs with Christ (Romans 8:16-17)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "He raiseth up the poor out of the dust, and lifteth up the beggar from the dunghill, to set them among princes, and to make them inherit the throne of glory: for the pillars of the earth are the LORD's, and he hath set the world upon them.",
-   "That God raises the poor from the dust to set them among princes (the crux of the God who lifts the lowliest to glory, founding all on his sovereign power)",
-   "the wonderful condescension and sovereign grace of God, who stoops to the dust and the dunghill and raises the abject to sit among princes and inherit a throne of glory, founded on his sovereign right as Maker and upholder of all",
-   "God delighting to exalt the lowly and choosing the poor to inherit the kingdom, the God who upholds the world raising the meanest to glory, the grace that lifts beggars to be heirs with Christ (James 2:5; Luke 1:52; Romans 8:16-17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God keeping the feet of his saints while the wicked are silenced: 'he will keep the feet of his saints, and the wicked shall be silent in darkness; for by strength shall no man prevail' — God preserves the godly and silences the wicked, for no human strength prevails (the He will keep the feet of his saints, the saints kept, the and the wicked shall be silent in darkness; for by strength shall no man prevail, the wicked silenced, the figure, the God who guards his own and brings the wicked to nothing, the helplessness of mere strength, the truth that God keeps the saints and silences the wicked, no strength availing, Psalm 121:3, the figure of the God who preserves his people and confounds the proud, the keeping of the saints, the wicked silenced, vv.8); God keeping the feet of his saints (the preservation, Psalm 121:3) — the keeping (the saints' feet); 'the wicked shall be silent in darkness; for by strength shall no man prevail' (the wicked brought to nothing, no strength availing, the helplessness, the figure, the God who preserves his people and confounds the proud, the providence, the keeping, the breaking of God's adversaries to follow, vv.10) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He will keep the feet of his saints, and the wicked shall be silent in darkness; for by strength shall no man prevail.",
-   "God keeping the feet of his saints while the wicked are silenced",
-   "God preserving the godly and silencing the wicked, for no human strength prevails",
-   "the God who preserves his people and confounds the proud (Psalm 121:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Hannah's prophetic close, that the LORD will judge the earth and exalt the horn of his anointed: 'the adversaries of the LORD shall be broken to pieces; out of heaven shall he thunder upon them: the LORD shall judge the ends of the earth; and he shall give strength unto his king, and exalt the horn of his anointed' — the Messianic prophecy — 'the adversaries of the LORD shall be broken to pieces... the LORD shall judge the ends of the earth; and he shall give strength unto his king, and exalt the horn of his anointed': Hannah closes her song with the judgment of the earth and the exaltation of God's King and Anointed (the witnesses noting the significance — the remarkable prophetic reach of Hannah's song, that, lifting from her own deliverance to the whole purpose of God, she foresees the breaking of God's adversaries, his universal judgment of the earth, and the giving of strength to his King and the exaltation of the horn of his 'Anointed' (Messiah), the first time in Scripture that word is used of the coming King, so that Hannah, before there was a king in Israel, prophesies the kingdom of God's Anointed, which finds its true fulfilment not in Saul or David only but in the Messiah, the Christ, the King of God's appointing whose horn is exalted forever, the song rising to the Messianic kingdom, the first naming of the Anointed, the judgment of the earth and the triumph of God's King, the lesson — that the whole purpose of God moves toward the kingdom of his Anointed, who shall judge the earth and reign, 'yet have I set my king upon my holy hill of Zion... thou art my Son,' Psalm 2:6-7, the truth that God will exalt his Anointed and give him the kingdom and the judgment of the world, 'the LORD said unto my Lord, Sit thou at my right hand,' Psalm 110:1, the figure — the exaltation of the Messiah-King, fulfilled in Christ whom God has highly exalted and to whom he has given all judgment, 'God also hath highly exalted him, and given him a name which is above every name,' Philippians 2:9, the truth that Hannah's song, like Mary's, magnifies the God who exalts the lowly and crowns his Anointed, the figure of the King and the Anointed One, the Messiah-King whose kingdom Hannah foresees, the call to look to the exalted Anointed of God, the assurance that God will exalt the horn of his Christ forever); God breaking his adversaries and judging the ends of the earth, the universal sovereignty and judgment of God (the judgment of the earth, Psalm 2:6-7) — the judgment (judge the ends of the earth); 'and he shall give strength unto his king, and exalt the horn of his anointed' (God giving strength to his King and exalting the horn of his Anointed, Messiah, the first naming of the coming King, fulfilled not in Saul or David only but in the Messiah, the Christ highly exalted, the Messiah-King, Psalm 110:1; Philippians 2:9) — the figure (the exaltation of the Messiah-King, fulfilled in Christ, the providence, the prophecy, Samuel ministering and the kingdom to come to follow, vv.11) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does Hannah's 'exalt the horn of his anointed' foresee?",
-    "sides": [
-     {
-      "position": "The King and the Anointed One, the first mention of the Messiah-King whose kingdom Hannah foresees - Hannah before there was a king in Israel prophesying the kingdom of God's Anointed (Messiah), the first naming of the coming King, fulfilled not in Saul or David only but in the Messiah whose horn is exalted forever, the purpose of God moving toward the kingdom of his Anointed (Psalm 2:6-7), God exalting his Anointed (Psalm 110:1), Christ highly exalted (Philippians 2:9)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "The adversaries of the LORD shall be broken to pieces; out of heaven shall he thunder upon them: the LORD shall judge the ends of the earth; and he shall give strength unto his king, and exalt the horn of his anointed.",
-   "Hannah's prophetic close, that the LORD will judge the earth and exalt the horn of his anointed (the crux of the King and the Anointed One, the first mention of the Messiah-King)",
-   "the prophetic reach of Hannah's song, foreseeing the breaking of God's adversaries, his universal judgment, and the exaltation of the horn of his Anointed (Messiah), the first time that word is used of the coming King",
-   "Hannah prophesying the kingdom of God's Anointed before there was a king in Israel, fulfilled in the Messiah whose horn is exalted forever, the purpose of God moving toward the kingdom of his Anointed (Psalm 2:6-7; Psalm 110:1; Philippians 2:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Charles Ellicott"
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "11-17",
+  "pericope_label": "Samuel ministered, and the sons of Eli",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill stresses that the custom was no law of God but a practice the sons introduced, which the other priests followed until it had statutory force. Of the sons themselves he only remarks that they were wicked though they had so good a father."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out the design of the passage: two households are interwoven throughout, as if the historian meant to set one against the other, the devotion of Elkanah's family aggravating the iniquity of Eli's, and the sons' wickedness making Samuel's piety shine brighter. Eli's house sat at the tabernacle door, and he draws the moral that the nearer the church the further from God. Nothing appears against Eli himself, who no doubt taught his sons well and prayed for them, yet they grew up profane, which proves that parents cannot give grace to their children nor does it run in the blood; their birth only aggravated the offence, since they lived at the fountain-head of ministry. Of the boy's service he is charmingly concrete: Samuel could light a candle, hold a dish, run an errand or shut a door, and because he did it with a pious mind it is called ministering to the Lord. He notices too, to Israel's honour, that the people, tamely yielding their own rights, were still anxious that God should not be robbed, and begged that the fat be burnt first; it was a shame that priests needed admonishing by the laity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the sons devil's children, and makes an axiom of it: an impious priesthood is the grand cause of a nation's ruin. He sets the lawful shares against their practice — breast and shoulder to the priest, the fat on the altar, the rest to the offerer — and observes that under pretence of taking their own they took the best and as much as they chose, adding that in demanding raw flesh they would serve themselves before God was served, the priest preferring roast to boiled and lifting it from the pot if he found it there. He traces the effect further: seeing the priests had no piety and acted as though there were no God, the people despised his service. Wesley suggests singing or lighting the lamps as work fit for Samuel's years, and reads before Eli as under his inspection; he adds that the sons snatched their portion even before it was waved, but alone will not let the people off, since the efficacy of the sacraments does not depend on the goodness of those who administer them."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Elkanah returning home and the child Samuel ministering before the LORD: 'and Elkanah went to Ramah to his house. And the child did minister unto the LORD before Eli the priest' — Elkanah returned home, and young Samuel served the LORD under Eli (the and Elkanah went to Ramah to his house, Elkanah returned, the And the child did minister unto the LORD before Eli the priest, Samuel ministered, the figure, the child of prayer now serving God, the dedication bearing fruit, the truth that Samuel, given to the LORD, ministered before him from childhood, 1 Samuel 3:1, the figure of the dedicated child serving God from his youth, the ministry of Samuel, the child serving, vv.28); Elkanah returning home (the return) — the return (to Ramah); 'the child did minister unto the LORD before Eli the priest' (Samuel serving the LORD under Eli, the dedication fruitful, 1 Samuel 3:1, the figure, the dedicated child serving God from his youth, the providence, the ministry, the wickedness of Eli's sons to follow, vv.12) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott corrects a common impression about the name Belial: the English prints it as though it were a pagan deity, but it merely signifies worthlessness, and the capital probably comes from Paul's contrast between Christ and Belial. He quotes Dean Stanley to the effect that the three-pronged fork which fishes up the seething flesh is the earliest type of scrambling after preferment by base means, and the profligacy at the tabernacle door the type of many a later scandal; and he calls the demand for raw flesh a contemptuous insult, the fat being God's portion, so that seizing the flesh first amounted to robbing God. He has Samuel living under the shadow of the sanctuary, ministering with his child powers before the altar of the Invisible and trained by the old high priest. Keil glosses the second clause about the sons to mean they did not know the Lord as he should be known, that is, did not fear him; he says the word rendered custom means a right they had usurped, and quotes Von Gerlach that the robbery was a small sin beside the contempt of the sacrifices they spread among the people."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Were the people blameless in coming to abhor the offering?",
+    "sides": [
+     {
+      "position": "the priests bear it all — seeing them act as though there were no God, the people despised his service",
+      "holders": [
+       "Clarke",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "it was folly and sin in the people too, since the sacraments do not depend on those who administer them, though the greater sin lay with the priests",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And Elkanah went to Ramah to his house. And the child did minister unto the LORD before Eli the priest.",
-   "Elkanah returning home and the child Samuel ministering before the LORD",
-   "young Samuel serving the LORD under Eli",
-   "the dedicated child serving God from his youth (1 Samuel 3:1)"
+   "the sons of Eli were sons of Belial",
+   "the priest’s custom with the people",
+   "men abhorred the offering of the Lord",
+   "but Samuel ministered before the Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eli's sons were wicked men who knew not the LORD: 'now the sons of Eli were sons of Belial; they knew not the LORD' — Eli's sons, though priests, were wicked and godless (the Now the sons of Eli were sons of Belial, the sons of Belial, the they knew not the LORD, knew not the LORD, the figure, the priests who served the altar yet knew not God, the corruption in the sanctuary, the truth that Eli's sons were wicked, knowing not the LORD whose priests they were, Jeremiah 2:8, the figure of the ministers who serve in office yet are strangers to God, the wicked sons, the LORD unknown, vv.11); Eli's sons as sons of Belial (the corruption, Jeremiah 2:8) — the wickedness (sons of Belial); 'they knew not the LORD' (the priests strangers to the God they served, the godlessness, the figure, the ministers who serve in office yet are strangers to God, the providence, the wickedness, their greed at the sacrifices to follow, vv.13-17) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Now the sons of Eli were sons of Belial; they knew not the LORD.",
-   "Eli's sons were wicked men who knew not the LORD",
-   "Eli's sons, though priests, wicked and godless",
-   "the ministers who serve in office yet are strangers to God (Jeremiah 2:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The corrupt custom of Eli's sons in seizing the sacrifices: 'and the priests' custom with the people was, that, when any man offered sacrifice, the priest's servant came, while the flesh was in seething, with a fleshhook of three teeth in his hand' — Eli's sons had a greedy custom of taking the people's sacrifices (the and the priests' custom with the people was, that, when any man offered sacrifice, the custom, the the priest's servant came, while the flesh was in seething, with a fleshhook of three teeth in his hand, the fleshhook, the figure, the greedy abuse of the priestly office, the sacrifice seized, the truth that Eli's sons took the offerings by force and custom, against the law, Leviticus 7:34, the figure of the corruption that turns God's service to private gain, the priests' custom, the sacrifice seized, vv.12); the corrupt custom of the priests (the abuse, Leviticus 7:34) — the custom (when any man offered); 'the priest's servant came... with a fleshhook of three teeth in his hand' (the servant seizing the flesh, the greed, the figure, the corruption that turns God's service to private gain, the providence, the custom, the seizing of the raw flesh to follow, vv.14-16) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the priests' custom with the people was, that, when any man offered sacrifice, the priest's servant came, while the flesh was in seething, with a fleshhook of three teeth in his hand;",
-   "The corrupt custom of Eli's sons in seizing the sacrifices",
-   "Eli's sons taking the people's sacrifices by a greedy custom against the law",
-   "the corruption that turns God's service to private gain (Leviticus 7:34)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priest's servant seizing whatever the fleshhook brought up: 'and he struck it into the pan, or kettle, or caldron, or pot; all that the fleshhook brought up the priest took for himself. So they did in Shiloh unto all the Israelites that came thither' — the priest's servant took for himself whatever the hook brought up, robbing all the worshippers (the and he struck it into the pan, or kettle, or caldron, or pot; all that the fleshhook brought up the priest took for himself, the seizing, the So they did in Shiloh unto all the Israelites that came thither, to all who came, the figure, the greedy seizing of the people's offerings, the robbery of the worshippers, the truth that the priests robbed all who came to sacrifice, Micah 3:11, the figure of the corruption that preys on the worshippers of God, the seizing, the robbery of all, vv.13); the priest taking all the hook brought up (the robbery, Micah 3:11) — the seizing (took for himself); 'So they did in Shiloh unto all the Israelites that came thither' (the robbery practised on all the worshippers, the extent, the figure, the corruption that preys on the worshippers of God, the providence, the seizing, the demand for raw flesh to follow, vv.15-16) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he struck it into the pan, or kettle, or caldron, or pot; all that the fleshhook brought up the priest took for himself. So they did in Shiloh unto all the Israelites that came thither.",
-   "The priest's servant seizing whatever the fleshhook brought up",
-   "the priest taking for himself whatever the hook brought up, robbing all who came to sacrifice",
-   "the corruption that preys on the worshippers of God (Micah 3:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priests demanding raw flesh before the fat was burnt to God: 'also before they burnt the fat, the priest's servant came, and said to the man that sacrificed, Give flesh to roast for the priest; for he will not have sodden flesh of thee, but raw' — the priests demanded their portion before God's portion was offered (the Also before they burnt the fat, the priest's servant came, and said to the man that sacrificed, Give flesh to roast for the priest, the demand, the for he will not have sodden flesh of thee, but raw, raw flesh demanded, the figure, the greed that seized its portion before God's, the contempt of the offering, the truth that the priests took their part before the fat was burnt to God, against the law, Leviticus 3:16, the figure of the irreverence that puts self before God in his own service, the demand of the priests, the fat dishonoured, vv.13); the priests demanding flesh before the fat was burnt (the greed, Leviticus 3:16) — the demand (give flesh to roast); 'he will not have sodden flesh of thee, but raw' (the priest demanding raw flesh, his own way, the irreverence, the figure, the irreverence that puts self before God in his own service, the providence, the demand, the threat of force to follow, vv.16) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Also before they burnt the fat, the priest's servant came, and said to the man that sacrificed, Give flesh to roast for the priest; for he will not have sodden flesh of thee, but raw.",
-   "The priests demanding raw flesh before the fat was burnt to God",
-   "the priests demanding their part before the fat was burnt to God",
-   "the irreverence that puts self before God in his own service (Leviticus 3:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priests taking the sacrifice by force if refused: 'and if any man said unto him, Let them not fail to burn the fat presently, and then take as much as thy soul desireth; then he would answer him, Nay; but thou shalt give it me now: and if not, I will take it by force' — the priests would take the offering by force if the worshipper objected (the and if any man said unto him, Let them not fail to burn the fat presently, and then take as much as thy soul desireth, the worshipper's plea, the then he would answer him, Nay; but thou shalt give it me now: and if not, I will take it by force, the violence, the figure, the violent greed that would rob God and man, the threat of force, the truth that the priests would take the offering by force, despising God's portion, Micah 2:2, the figure of the violence that seizes by force what God forbids, the threat of the priests, the force used, vv.15); the worshipper's plea to burn the fat first (the reverence, Micah 2:2) — the plea (burn the fat first); 'I will take it by force' (the priest threatening violence, the robbery, the figure, the violence that seizes by force what God forbids, the providence, the violence, the great sin before the LORD to follow, vv.17) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And if any man said unto him, Let them not fail to burn the fat presently, and then take as much as thy soul desireth; then he would answer him, Nay; but thou shalt give it me now: and if not, I will take it by force.",
-   "The priests taking the sacrifice by force if refused",
-   "the priests taking the offering by force if the worshipper objected",
-   "the violence that seizes by force what God forbids (Micah 2:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priests' sin was great, for men abhorred the offering of the LORD: 'wherefore the sin of the young men was very great before the LORD: for men abhorred the offering of the LORD' — the priests' greed made the people loathe to bring offerings, a great sin (the wherefore the sin of the young men was very great before the LORD, the great sin, the for men abhorred the offering of the LORD, men abhorred the offering, the figure, the sin that turned men from God's worship, the corruption that ruins others' devotion, the truth that the priests' greed made men abhor the offering, the worst of sins, Malachi 2:8, the figure of the sin that drives the people from the worship of God, the great sin, the offering abhorred, vv.16); the priests' sin great before the LORD (the guilt, Malachi 2:8) — the great sin (very great); 'men abhorred the offering of the LORD' (the people turned from the worship by the priests' greed, the ruin, the figure, the sin that drives the people from the worship of God, the providence, the great sin, the contrast of Samuel ministering to follow, vv.18) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wherefore the sin of the young men was very great before the LORD: for men abhorred the offering of the LORD.",
-   "The priests' sin was great, for men abhorred the offering of the LORD",
-   "the priests' greed making the people loathe to bring offerings",
-   "the sin that drives the people from the worship of God (Malachi 2:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "18-21",
+  "pericope_label": "The linen ephod and the little coat",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill explains why the boy's ministry is mentioned both before and after the account of Eli's sons: partly to their shame, partly to Samuel's honour, that he was not corrupted by their practices. He marks a change of phrase too — earlier the child ministered before Eli, under his direction; here before the Lord, in higher services needing no such help — and takes this to belong to a later stage of growth, though related here, while noting that he is still called a child. On the coat he observes that the word is that used for the priest's robe, and that Hannah very likely spun, wove and made it herself, partly from love and partly to lessen the charge of keeping him; the Talmudists allow a priest to minister in a garment his mother made. He adds that Eli pronounced the blessing not only the first time but every year they came up, and that the visitation confirmed it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke leaves the garment for the word, reporting that the Targum renders it a cardit of byssus, a term apparently borrowed from the Greek for a sleeved tunic the Romans thought effeminate. He is practical about the coat, calling it a cloak or surtout to keep the boy from the cold and save his other clothes from being spoiled in his meaner services, and supposes a new one each year. Alone among them he thinks the passage disordered, the natural place of the blessing seeming to him before the eleventh verse, with the twenty-first following and perhaps the twenty-sixth after, the subjects of the chapter being much entangled by the wrong position of the verses. Wesley reads the verb as discharging his office faithfully and the place as the tabernacle, alone raises the difficulty of who might wear the ephod, and closes on the boy, who grew not only in age and stature but in wisdom and goodness, and grew so before the Lord, not merely before men, who may be deceived, but under an all-seeing eye."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The child Samuel ministering before the LORD in a linen ephod: 'but Samuel ministered before the LORD, being a child, girded with a linen ephod' — young Samuel served the LORD faithfully, the bright contrast to Eli's sons (the But Samuel ministered before the LORD, being a child, the child ministering, the girded with a linen ephod, the linen ephod, the figure, the faithful child serving God amid the corruption, the contrast to the wicked priests, the truth that Samuel, a child, ministered faithfully in the linen ephod, 1 Samuel 2:11, the figure of the godly servant who shines amid the surrounding corruption, the ministry of Samuel, the linen ephod, vv.11); Samuel ministering as a child (the faithfulness, 1 Samuel 2:11) — the ministry (being a child); 'girded with a linen ephod' (Samuel in the priestly linen, the service, the figure, the godly servant who shines amid the surrounding corruption, the providence, the ministry, Eli blessing Elkanah and Hannah to follow, vv.19-20) — Keil and Delitzsch, Gill."
+    "summary": "Keil calls the ephod a shoulder-dress resembling the high priest's in shape but made of plain white cloth; all the priests wore such then, and David wore one at a religious festival, Samuel receiving it as a boy because he was set apart to a lifelong service. He takes the coat for a smaller version of the high priest's robe, of simpler stuff and without the symbolical ornaments on the hem, paraphrases the blessing as asking that the Lord lend Elkanah seed of this woman in place of the one asked for, and explains its odd third person as indefinite, since Eli might fairly assume the father shared Hannah's desire. Against Clarke he insists that the particle joining the blessing to its fulfilment is neither a conditional nor a copyist's error, one need only supply the thought that Eli's word was no empty wish. Ellicott finds a deliberate contrast between the covetous ministrations of the worldly priests and the quiet service of the boy, describes the ephod as two pieces resting on the shoulders before and behind, joined at the top and fastened with a girdle, and looks past the cloth to the intention, taking the dress to have been arranged by Eli, who saw the child destined for some great work and, aware what his own sons were, hoped to train him as his successor in the chief office in Israel."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "claim": "holds the chapter’s verses to stand in the wrong order — the blessing belongs before the eleventh verse, with the twenty-first following and perhaps the twenty-sixth after that"
+   },
+   {
+    "voice": "Wesley",
+    "claim": "allows the ephod to Samuel not as a priest or Levite but as one of the eminent persons among the people, he being a Nazarite"
+   }
+  ],
   "themes": [
-   "But Samuel ministered before the LORD, being a child, girded with a linen ephod.",
-   "The child Samuel ministering before the LORD in a linen ephod",
-   "young Samuel serving the LORD faithfully, the bright contrast to Eli's sons",
-   "the godly servant who shines amid the surrounding corruption (1 Samuel 2:11)"
+   "girded with a linen ephod",
+   "his mother made him a little coat",
+   "Eli blessed Elkanah and his wife",
+   "the Lord visited Hannah"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Hannah making Samuel a little coat each year: 'moreover his mother made him a little coat, and brought it to him from year to year, when she came up with her husband to offer the yearly sacrifice' — Hannah lovingly clothed her dedicated son year by year (the moreover his mother made him a little coat, the coat, the and brought it to him from year to year, when she came up with her husband to offer the yearly sacrifice, year by year, the figure, the mother's continuing love for the son she had given to God, the truth that Hannah, having given Samuel to the LORD, still cared for him with a mother's love, Isaiah 49:15, the figure of the love that gives to God yet continues its tender care, the coat of Hannah, the yearly love, vv.11); Hannah making the coat (the love, Isaiah 49:15) — the coat (a little coat); 'brought it to him from year to year' (Hannah's yearly care for the dedicated son, the tenderness, the figure, the love that gives to God yet continues its tender care, the providence, the love, Eli's blessing on Hannah to follow, vv.20) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moreover his mother made him a little coat, and brought it to him from year to year, when she came up with her husband to offer the yearly sacrifice.",
-   "Hannah making Samuel a little coat each year",
-   "Hannah lovingly clothing her dedicated son year by year",
-   "the love that gives to God yet continues its tender care (Isaiah 49:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eli blessing Elkanah and Hannah for the child lent to the LORD: 'and Eli blessed Elkanah and his wife, and said, The LORD give thee seed of this woman for the loan which is lent to the LORD. And they went unto their own home' — Eli blessed the parents, asking God to recompense the loan of Samuel with more children (the and Eli blessed Elkanah and his wife, and said, The LORD give thee seed of this woman for the loan which is lent to the LORD, the blessing, the And they went unto their own home, they returned, the figure, the blessing on those who give to God, the promise of recompense, the truth that Eli blessed them for the loan of Samuel, that God would give more, Proverbs 19:17, the figure of the recompense God gives to those who lend to him, the blessing of Eli, the loan recompensed, vv.11); Eli blessing the parents for the loan (the recompense, Proverbs 19:17) — the blessing (give thee seed); 'they went unto their own home' (the parents returning home, the providence, the figure, the recompense God gives to those who lend to him, the providence, the blessing, the LORD visiting Hannah to follow, vv.21) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Eli blessed Elkanah and his wife, and said, The LORD give thee seed of this woman for the loan which is lent to the LORD. And they went unto their own home.",
-   "Eli blessing Elkanah and Hannah for the child lent to the LORD",
-   "Eli asking God to recompense the loan of Samuel with more children",
-   "the recompense God gives to those who lend to him (Proverbs 19:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD visiting Hannah with more children, and Samuel growing before the LORD: 'and the LORD visited Hannah, so that she conceived, and bare three sons and two daughters. And the child Samuel grew before the LORD' — God recompensed Hannah's gift with five more children, and Samuel grew before him (the and the LORD visited Hannah, so that she conceived, and bare three sons and two daughters, the recompense, the And the child Samuel grew before the LORD, Samuel grew, the figure, the bountiful recompense to her who gave her son to God, the child growing in his presence, the truth that God gave Hannah five children for the one she gave him, Luke 6:38, the figure of the God who gives back abundantly to those who give to him, the visiting of Hannah, Samuel growing, vv.20); God giving Hannah more children (the recompense, Luke 6:38) — the recompense (three sons and two daughters); 'the child Samuel grew before the LORD' (Samuel growing in God's presence, the favour, the figure, the God who gives back abundantly to those who give to him, the providence, the recompense, the wickedness of Eli's sons to follow, vv.22) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD visited Hannah, so that she conceived, and bare three sons and two daughters. And the child Samuel grew before the LORD.",
-   "The LORD visiting Hannah with more children, and Samuel growing before the LORD",
-   "God giving Hannah five children for the one she gave him",
-   "the God who gives back abundantly to those who give to him (Luke 6:38)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The aged Eli hearing of his sons' wickedness and immorality: 'now Eli was very old, and heard all that his sons did unto all Israel; and how they lay with the women that assembled at the door of the tabernacle of the congregation' — the aged Eli heard of his sons' greed and gross immorality (the Now Eli was very old, and heard all that his sons did unto all Israel, the report heard, the and how they lay with the women that assembled at the door of the tabernacle of the congregation, the immorality, the figure, the deepening corruption of the priests, sin added to sin in the holy place, the truth that Eli's sons added immorality to their greed, profaning the sanctuary, Ezekiel 22:26, the figure of the corruption that grows worse, defiling the very place of God, the report to Eli, the immorality of the sons, vv.12); Eli hearing of his sons' deeds (the report, Ezekiel 22:26) — the report (heard all they did); 'they lay with the women that assembled at the door of the tabernacle' (the gross immorality in the holy place, the defilement, the figure, the corruption that grows worse, defiling the very place of God, the providence, the report, Eli's weak rebuke to follow, vv.23-25) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Now Eli was very old, and heard all that his sons did unto all Israel; and how they lay with the women that assembled at the door of the tabernacle of the congregation.",
-   "The aged Eli hearing of his sons' wickedness and immorality",
-   "the aged Eli hearing of his sons' greed and gross immorality",
-   "the corruption that grows worse, defiling the very place of God (Ezekiel 22:26)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eli's mild remonstrance with his sons over their evil deeds: 'and he said unto them, Why do ye such things? for I hear of your evil dealings by all this people' — Eli remonstrated mildly, when he should have restrained them with authority (the and he said unto them, Why do ye such things?, the remonstrance, the for I hear of your evil dealings by all this people, the report from all, the figure, the father's feeble rebuke that should have been firm restraint, the weakness of indulgent authority, the truth that Eli only mildly reproved when he should have removed them, 1 Samuel 3:13, the figure of the weak discipline that reproves but does not restrain, the rebuke of Eli, the feeble remonstrance, vv.22); Eli's mild question to his sons (the rebuke, 1 Samuel 3:13) — the remonstrance (why do ye such things); 'I hear of your evil dealings by all this people' (the evil reported by all, the notoriety, the figure, the weak discipline that reproves but does not restrain, the providence, the rebuke, the warning of judgment to follow, vv.24-25) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto them, Why do ye such things? for I hear of your evil dealings by all this people.",
-   "Eli's mild remonstrance with his sons over their evil deeds",
-   "Eli remonstrating mildly when he should have restrained them with authority",
-   "the weak discipline that reproves but does not restrain (1 Samuel 3:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eli warning that his sons made the LORD's people transgress: 'nay, my sons; for it is no good report that I hear: ye make the LORD's people to transgress' — Eli warned that their sin spread to the people (the Nay, my sons; for it is no good report that I hear, the bad report, the ye make the LORD's people to transgress, the people made to transgress, the figure, the sin of leaders that draws the people into sin, the spreading corruption, the truth that the priests' sin made the people transgress, the worst of sins, Matthew 18:6, the figure of the leader whose sin causes others to stumble, the warning of Eli, the people made to sin, vv.22); Eli noting the bad report (the warning, Matthew 18:6) — the bad report (no good report); 'ye make the LORD's people to transgress' (the sin that draws the people into transgression, the offence, the figure, the leader whose sin causes others to stumble, the providence, the warning, the no-intercessor saying to follow, vv.25) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Nay, my sons; for it is no good report that I hear: ye make the LORD's people to transgress.",
-   "Eli warning that his sons made the LORD's people transgress",
-   "Eli warning that their sin spread to the people and made them transgress",
-   "the leader whose sin causes others to stumble (Matthew 18:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "22-26",
+  "pericope_label": "Eli reproves his sons",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reckons Eli about ninety, since he died at ninety-eight, and thinks the note shows his incapacity for office, which gave his sons their chance; it also accounts for the gentleness of the reproof, age having left him less spirit and his sons being grown. Yet he will not let that stand as a defence: Eli ought to have considered himself not a father only but high priest and judge. The sins deserved a sharper reprimand and worse than words, and Gill objects even to the address, my sons being too endearing for men who deserved the name of Belial. He notes at the close that Samuel grew better while Eli's sons grew worse, the contrast making one shine and the other look blacker."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Eli's warning that there is no intercessor for sin against the LORD, and that his sons heard not because the LORD would slay them: 'if one man sin against another, the judge shall judge him: but if a man sin against the LORD, who shall intreat for him? Notwithstanding they hearkened not unto the voice of their father, because the LORD would slay them' — the no-intercessor warning and the judicial hardening — 'if one man sin against another, the judge shall judge him: but if a man sin against the LORD, who shall intreat for him? Notwithstanding they hearkened not unto the voice of their father, because the LORD would slay them': Eli warns that sin against God leaves no human intercessor, and his sons' deafness is the sign of God's purpose to destroy them (the witnesses noting the significance — two solemn truths joined: first, that while a man's sin against his neighbour may be judged and atoned, a presumptuous sin against the LORD himself leaves no creature to intercede, none to plead the cause of the obstinate despiser, and second, the dread word that the sons hearkened not 'because the LORD would slay them,' that is, their hardness and deafness were the very mark and means of the judgment God had determined, the obstinate sinner judicially given up to the destruction he had earned, his refusal to hear the sentence of God upon him, the sin against God beyond human intercession, the deafness the sign of judgment, the LORD's purpose to slay working through their own hardness, the lesson — that there is a sin and a hardness which is the token of God's abandoning judgment, the sinner given over to his own deafness, 'he, that being often reproved hardeneth his neck, shall suddenly be destroyed, and that without remedy,' Proverbs 29:1, the truth that God may judicially harden the obstinate, their own refusal the instrument of their ruin, 'but they refused to hearken... that they might not hear... therefore came a great wrath,' Zechariah 7:11-12, the figure — the awful giving-up of the despiser to his sin and its doom, fulfilled in those whom God gives over to a reprobate mind, 'even as they did not like to retain God... God gave them over,' Romans 1:28, the truth that to despise the warnings of God is to be sealed in the judgment one will not flee, the figure of the judicial hardening by which God gives up the obstinate sinner to the destruction he has earned, the call to hear God's warnings while there is remedy, the warning that the deaf ear may be the seal of doom); Eli warning that sin against the LORD himself leaves no creature to intercede, none to plead for the obstinate despiser (the sin beyond intercession, Proverbs 29:1) — the warning (who shall intreat for him); 'Notwithstanding they hearkened not unto the voice of their father, because the LORD would slay them' (the sons' deafness being the mark and means of God's purpose to destroy them, the obstinate given up judicially to their own hardness, refusing to hear the sentence upon them, God giving over the despiser, the hardening unto judgment, Zechariah 7:11-12; Romans 1:28) — the figure (the awful giving-up of the despiser to his sin and its doom, the providence, the hardening, the man of God's prophecy against Eli's house to follow, vv.27-36) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Clarke supposes the women had some employment about the sanctuary, citing the same phrase in Exodus, and draws Eli's character: a fondly affectionate, easy father who wished his sons well but never brought them under discipline nor used his authority to restrain them, though as judge he could have cast them out at once. On the unanswerable question he turns to the gospel, since the law fixed which sins were capital and allowed no appeal, whereas John writes that if any man sin we have an Advocate with the Father. He then rejects the closing construction as a mistranslation: the particle rendered because should be rendered therefore, as Noldius takes it here, so that it was their not hearkening which induced the Lord to will their destruction. Wesley states the fault precisely — the sin was not only that he reproved too gently but that he rested in a rebuke and inflicted none of the punishments such crimes deserved — and says they had sinned away their day of grace and hardened their hearts, till God gave them up."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil observes that the crime is learned only from the reproof itself, so that beside robbing the offerings they profaned the sanctuary with whoredom, and that this whole people means everyone who came to Shiloh and saw. He notes a play in the Hebrew that cannot be carried over, the verb meaning to decide a case, then to arbitrate, then in another form to entreat, so that when a man sins against man God settles the dispute through the authorities, but when a man sins against God none can interpose. Ellicott hears something warmer in the note about Eli's age, holding that the compiler plainly wished to speak as kindly of him as he could, dwelling on his piety, his love for Samuel and his patriotism, so that here, where his sons' conduct is at its worst, an excuse is offered for the father. He thinks the women may have assisted in the liturgy, comparing the psalm about the great company of female singers, and adds that here, as so often, immorality follows on unbelief; the unanswerable question he says touches the mystery of sin, one transgression seeming to lie beyond forgiveness, of which the Redeemer warned as the sin against the Holy Ghost. Of the closing clause he takes the resolution to slay them as founded on the eternal foreknowledge of their persistence, a period coming in a sinner's life when the Spirit ceases to plead and he is left to himself."
    }
   ],
   "debates": [
    {
-    "question": "What does 'they hearkened not... because the LORD would slay them' reveal?",
+    "question": "Why would Eli’s sons not hear their father?",
     "sides": [
      {
-      "position": "The judicial hardening by which God gives up the obstinate sinner to the destruction he has earned - the sons' deafness the mark and means of the judgment God determined, the obstinate given up to destruction, a hardness that is the token of God's abandoning judgment (Proverbs 29:1), God hardening the obstinate so their own refusal is the instrument of their ruin (Zechariah 7:11-12), the giving-up of the despiser to a reprobate mind (Romans 1:28)",
+      "position": "God’s resolution to slay them rested on his eternal foreknowledge of their persistence in wrong-doing",
       "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "they had sinned away their day of grace and were at last given up",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "the particle is mistranslated — read therefore, not because: their not hearkening induced the Lord to will their destruction",
+      "holders": [
+       "Clarke"
       ]
      }
     ]
@@ -924,191 +442,89 @@
   ],
   "outliers": [],
   "themes": [
-   "If one man sin against another, the judge shall judge him: but if a man sin against the LORD, who shall intreat for him? Notwithstanding they hearkened not unto the voice of their father, because the LORD would slay them.",
-   "Eli's warning that there is no intercessor for sin against the LORD, and that his sons heard not because the LORD would slay them (the crux of the judicial hardening by which God gives up the obstinate sinner to destruction)",
-   "two solemn truths: that presumptuous sin against the LORD leaves no creature to intercede, and that the sons' deafness was the mark and means of the judgment God had determined, the obstinate given up to the destruction he had earned",
-   "a hardness that is the token of God's abandoning judgment, God hardening the obstinate so their own refusal is the instrument of their ruin, the giving-up of the despiser to a reprobate mind (Proverbs 29:1; Zechariah 7:11-12; Romans 1:28)"
+   "why do ye such things?",
+   "ye make the Lord’s people to transgress",
+   "if a man sin against the Lord, who shall intreat for him?",
+   "they hearkened not, because the Lord would slay them"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The child Samuel growing in favour with God and men: 'and the child Samuel grew on, and was in favour both with the LORD, and also with men' — Samuel grew in stature and in favour with God and man (the and the child Samuel grew on, the growth, the and was in favour both with the LORD, and also with men, the favour, the figure, the godly child growing in grace and favour, the bright contrast to the wicked sons, the truth that Samuel grew in favour with God and men, as the Lord Jesus would, Luke 2:52, the figure of the child of God who increases in grace and esteem, the growth of Samuel, the favour with God and men, vv.18); Samuel growing on (the increase, Luke 2:52) — the growth (grew on); 'was in favour both with the LORD, and also with men' (Samuel in favour with God and man, the esteem, the figure, the child of God who increases in grace and esteem, the providence, the growth, the man of God's prophecy to follow, vv.27) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the child Samuel grew on, and was in favour both with the LORD, and also with men.",
-   "The child Samuel growing in favour with God and men",
-   "Samuel growing in stature and in favour with God and man",
-   "the child of God who increases in grace and esteem (Luke 2:52)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A man of God coming to Eli with the LORD's word, recalling his choice of the priestly house: 'and there came a man of God unto Eli, and said unto him, Thus saith the LORD, Did I plainly appear unto the house of thy father, when they were in Egypt in Pharaoh's house?' — a prophet came to Eli recalling God's gracious choice of his house (the and there came a man of God unto Eli, and said unto him, Thus saith the LORD, the prophet's word, the Did I plainly appear unto the house of thy father, when they were in Egypt in Pharaoh's house?, the choice recalled, the figure, the prophet sent to recall God's grace before pronouncing judgment, the truth that God recalled his choice of Aaron's house before the sentence, Exodus 28:1, the figure of the God who reminds of his grace before he judges its abuse, the man of God, the choice recalled, vv.12); the man of God coming with the LORD's word (the prophecy, Exodus 28:1) — the prophet (a man of God); 'Did I plainly appear unto the house of thy father, when they were in Egypt' (God recalling his gracious choice of the priestly house, the grace, the figure, the God who reminds of his grace before he judges its abuse, the providence, the prophecy, the charge of dishonouring God to follow, vv.28-29) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And there came a man of God unto Eli, and said unto him, Thus saith the LORD, Did I plainly appear unto the house of thy father, when they were in Egypt in Pharaoh's house?",
-   "A man of God coming to Eli with the LORD's word, recalling his choice of the priestly house",
-   "a prophet recalling God's gracious choice of Aaron's house before the sentence",
-   "the God who reminds of his grace before he judges its abuse (Exodus 28:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God recalling the honour he had given the priestly house: 'and did I choose him out of all the tribes of Israel to be my priest, to offer upon mine altar, to burn incense, to wear an ephod before me? and did I give unto the house of thy father all the offerings made by fire of the children of Israel?' — God recalled the great honour and provision he had given the house of Aaron (the and did I choose him out of all the tribes of Israel to be my priest, to offer upon mine altar, to burn incense, to wear an ephod before me?, the priesthood given, the and did I give unto the house of thy father all the offerings made by fire of the children of Israel?, the offerings given, the figure, the great privilege and provision of the priestly office, the grace now abused, the truth that God chose and provided for the house of Aaron, Numbers 18:8, the figure of the honour and portion God gives, now despised, the choice recalled, the offerings given, vv.12); God choosing the house to the priesthood (the honour, Numbers 18:8) — the priesthood (chosen to be my priest); 'did I give unto the house of thy father all the offerings made by fire' (the offerings given for their portion, the provision, the figure, the honour and portion God gives, now despised, the providence, the honour, the charge of despising it to follow, vv.29) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And did I choose him out of all the tribes of Israel to be my priest, to offer upon mine altar, to burn incense, to wear an ephod before me? and did I give unto the house of thy father all the offerings made by fire of the children of Israel?",
-   "God recalling the honour he had given the priestly house",
-   "God recalling the great honour and provision he had given the house of Aaron",
-   "the honour and portion God gives, now despised (Numbers 18:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God charging Eli with honouring his sons above God: 'wherefore kick ye at my sacrifice and at mine offering, which I have commanded in my habitation; and honourest thy sons above me, to make yourselves fat with the chiefest of all the offerings of Israel my people?' — God charged Eli with honouring his sons above God by tolerating their greed (the Wherefore kick ye at my sacrifice and at mine offering, which I have commanded in my habitation, the offering despised, the and honourest thy sons above me, to make yourselves fat with the chiefest of all the offerings of Israel my people?, sons honoured above God, the figure, the sin of preferring family to God, the indulgence that dishonours him, the truth that Eli honoured his sons above God by not restraining them, Matthew 10:37, the figure of the heart that puts the love of family before the honour of God, the charge against Eli, the sons preferred, vv.12); the offering despised by their greed (the contempt, Matthew 10:37) — the despising (kick at my sacrifice); 'honourest thy sons above me' (Eli preferring his sons to God, the indulgence, the figure, the heart that puts the love of family before the honour of God, the providence, the charge, the sentence on Eli's house to follow, vv.30-36) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wherefore kick ye at my sacrifice and at mine offering, which I have commanded in my habitation; and honourest thy sons above me, to make yourselves fat with the chiefest of all the offerings of Israel my people?",
-   "God charging Eli with honouring his sons above God",
-   "God charging Eli with honouring his sons above God by tolerating their greed",
-   "the heart that puts the love of family before the honour of God (Matthew 10:37)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "27-30",
+  "pericope_label": "The man of God comes to Eli",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill canvasses the candidates for the unnamed prophet: Ben Gersom and Abarbinel propose Phinehas, impossible, since had he lived Eli would not have been high priest; the older Jews and Jarchi name Elkanah, whom the Targum makes a disciple of the prophets, though Scripture never calls him one; others suggest Samuel, concealing his name from modesty, but he was still a child. On the charge of kicking he hears a metaphor from cattle well fed and fat, which spurn even those who feed them, and reports the Targum's harder reading, that they took the holy offerings by force."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains why the message came, and why to the father rather than the sons: Eli had reproved too gently, so God sent a prophet to reprove him sharply, and sent it to Eli because he meant to save him, having already determined to destroy his sons. If good men fail in their duty and by their remissness contribute to the sin of sinners, they must expect both to hear of it and to smart for it. He sums the recital of past favours as an aggravation: what more could God have done to engage them, and such favours will be remembered against us if we profane our crown."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "God's great principle, that them that honour him he will honour, and they that despise him shall be lightly esteemed: 'wherefore the LORD God of Israel saith, I said indeed that thy house, and the house of thy father, should walk before me for ever: but now the LORD saith, Be it far from me; for them that honour me I will honour, and they that despise me shall be lightly esteemed' — the law of divine requital — 'I said indeed that thy house... should walk before me for ever: but now the LORD saith, Be it far from me; for them that honour me I will honour, and they that despise me shall be lightly esteemed': God revokes the standing promise to Eli's house and lays down the abiding principle of his dealings (the witnesses noting the significance — the great and unchanging rule of God's moral government, declared in the very act of judging Eli's house, that God will honour those who honour him and lightly esteem, despise, bring to contempt, those who despise him, so that the priestly promise, though it had seemed perpetual, is forfeited by contempt of God, for no privilege or office can stand where God is despised, and the law of requital is sure: honour for honour, contempt for contempt, the conditional nature of every privilege under this rule, God's honour the measure of his blessing, the despiser brought to shame, the lesson — that God deals with men according as they deal with him, exalting those who honour him and abasing those who despise him, 'the LORD taketh pleasure in them that fear him... but a froward heart shall depart from me,' Psalm 147:11, the truth that to honour God is the way to be honoured of him, and to despise him is to be brought to contempt, 'them that honour me,' fulfilled in him who said 'if any man serve me, him will my Father honour,' John 12:26, the figure — the sure law of God's requital, that the path of honouring God leads to honour and the way of despising him to shame, fulfilled in the final judgment when God shall say 'Well done' to the faithful and reject the despiser, 'whosoever shall confess me before men, him will I confess... but whosoever shall deny me... him will I also deny,' Matthew 10:32-33, the truth that the highest privilege cannot stand without the honouring of God, the figure of the unchanging law of God's government, that he requites honour with honour and contempt with contempt, the call to honour God that we may be honoured of him, the warning that to despise God is to be brought low); God revoking the standing promise to Eli's house, the perpetual priesthood forfeited by contempt of God, no privilege standing where God is despised (the privilege forfeited, Psalm 147:11) — the revoking (be it far from me); 'for them that honour me I will honour, and they that despise me shall be lightly esteemed' (the abiding principle that God honours those who honour him and brings to contempt those who despise him, the sure law of requital, honour for honour and contempt for contempt, fulfilled in him who honours his servants, the law of divine requital, John 12:26; Matthew 10:32-33) — the figure (the sure law of God's requital that leads to honour or shame, the providence, the principle, the sentence on Eli's house to follow, vv.31-36) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Clarke traces the office from Aaron to Eleazar and Phinehas, then into the younger branch, and back again because of the profligacy of Eli's sons. He holds the pledge of a perpetual priesthood, though it looks absolute, to be conditional like all such promises, the condition implied though not expressed, so that unworthy walking annuls it; but the rule which follows he calls a plan from which God never departs, underlying every promise — them that honour me I will honour, and they that despise me shall be lightly esteemed. Wesley reads the charge of honouring sons above God as connivance, Eli choosing rather to offend God by his silence than to displease them, and states flatly that God retracts what he promised."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott declines the guessing about the prophet's identity: this messenger appears suddenly at Shiloh, nameless and homeless, delivers his doom, and disappears; the title occurs some forty times in Judges, Samuel and Kings, and no prophet had been named in Israel's story since Deborah. The opening interrogations, he says, ask nothing but appeal to Eli's conscience, the old man answering each with a silent yes. He traces the image of kicking to the song of Moses, where Jeshurun waxed fat and kicked, a pampered beast growing unmanageable and refusing obedience to a kind master, and suspects a second motive in Eli besides foolish fondness: unwillingness to divert from his family the rich revenue flowing from the pilgrims' offerings. Keil sets out the three clauses defining the priesthood — to ascend the altar, to kindle incense, to wear the ephod — and observes that the reproof falls first on the priests generally, Eli included, since he had not resisted the abuses, and narrows to him only in the words about honouring his sons."
    }
   ],
   "debates": [
    {
-    "question": "What does 'them that honour me I will honour' establish?",
+    "question": "What did the promise that Eli’s house should walk before God for ever mean?",
     "sides": [
      {
-      "position": "The unchanging law of God's government, that he requites honour with honour and contempt with contempt - the great rule declared in judging Eli's house, that God honours those who honour him and brings to contempt those who despise him, the priestly promise forfeited by contempt, no privilege standing where God is despised (Psalm 147:11), to honour God the way to be honoured of him (John 12:26), the path of honouring God leading to honour and despising him to shame (Matthew 10:32-33)",
+      "position": "an apparently absolute promise that was conditional all along, annulled by unworthy walking",
       "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
+       "Clarke",
        "Ellicott",
-       "Gill",
-       "the reformed reading"
+       "Wesley"
+      ]
+     },
+     {
+      "position": "not a transfer of the high priesthood to Ithamar’s line at all — the promise ran to the whole priesthood, against C. a Lapide",
+      "holders": [
+       "Keil and Delitzsch"
       ]
      }
     ]
@@ -1116,250 +532,130 @@
   ],
   "outliers": [],
   "themes": [
-   "Wherefore the LORD God of Israel saith, I said indeed that thy house, and the house of thy father, should walk before me for ever: but now the LORD saith, Be it far from me; for them that honour me I will honour, and they that despise me shall be lightly esteemed.",
-   "God's great principle, that them that honour him he will honour, and they that despise him shall be lightly esteemed (the crux of the unchanging law of God's government, honour for honour and contempt for contempt)",
-   "the great and unchanging rule of God's moral government, declared in judging Eli's house, that God honours those who honour him and brings to contempt those who despise him, so that the priestly promise is forfeited by contempt of God",
-   "no privilege standing where God is despised, God dealing with men as they deal with him, to honour God the way to be honoured of him, the path of honouring God leading to honour and despising him to shame (Psalm 147:11; John 12:26; Matthew 10:32-33)"
+   "thus saith the Lord unto the house of thy father",
+   "wherefore kick ye at my sacrifice?",
+   "thou honourest thy sons above me",
+   "them that honour me I will honour"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "31": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's sentence cutting off the strength of Eli's house: 'behold, the days come, that I will cut off thine arm, and the arm of thy father's house, that there shall not be an old man in thine house' — God decreed to cut off the strength of Eli's house, none living to old age (the Behold, the days come, that I will cut off thine arm, and the arm of thy father's house, the strength cut off, the that there shall not be an old man in thine house, none to old age, the figure, the judgment that cuts off the power and the long life of the house, the truth that God would cut off Eli's house, none reaching old age, 1 Kings 2:27, the figure of the judgment that destroys the strength and continuance of the wicked house, the sentence on Eli, the strength cut off, vv.30); God cutting off the strength of the house (the judgment, 1 Kings 2:27) — the cutting off (thine arm); 'there shall not be an old man in thine house' (none of the house living to old age, the doom, the figure, the judgment that destroys the strength and continuance of the wicked house, the providence, the sentence, the affliction of the house and the death of the sons to follow, vv.32-34) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold, the days come, that I will cut off thine arm, and the arm of thy father's house, that there shall not be an old man in thine house.",
-   "God's sentence cutting off the strength of Eli's house",
-   "God decreeing to cut off the strength of Eli's house, none living to old age",
-   "the judgment that destroys the strength and continuance of the wicked house (1 Kings 2:27)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's word that Eli would see distress in the sanctuary while none of his house grew old: 'and thou shalt see an enemy in my habitation, in all the wealth which God shall give Israel: and there shall not be an old man in thine house for ever' — Eli would see distress in the sanctuary, his house cut short forever (the and thou shalt see an enemy in my habitation, in all the wealth which God shall give Israel, the distress seen, the and there shall not be an old man in thine house for ever, none old forever, the figure, the judgment that brings distress on the house and the sanctuary, the truth that Eli's house would see affliction while God blessed Israel, 1 Samuel 4:11, the figure of the judgment that cuts off the wicked house even amid the people's blessing, the affliction seen, the house cut short, vv.31); Eli seeing distress in the sanctuary (the affliction, 1 Samuel 4:11) — the distress (an enemy in my habitation); 'there shall not be an old man in thine house for ever' (the house cut short forever, the doom, the figure, the judgment that cuts off the wicked house even amid the people's blessing, the providence, the affliction, the death of the two sons in one day to follow, vv.33-34) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And thou shalt see an enemy in my habitation, in all the wealth which God shall give Israel: and there shall not be an old man in thine house for ever.",
-   "God's word that Eli would see distress in the sanctuary while none of his house grew old",
-   "Eli seeing distress in the sanctuary while God blessed Israel, his house cut short forever",
-   "the judgment that cuts off the wicked house even amid the people's blessing (1 Samuel 4:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's word that the survivor would grieve, and the house die young: 'and the man of thine, whom I shall not cut off from mine altar, shall be to consume thine eyes, and to grieve thine heart: and all the increase of thine house shall die in the flower of their age' — the one spared would be a grief, and the house die in youth (the and the man of thine, whom I shall not cut off from mine altar, shall be to consume thine eyes, and to grieve thine heart, the survivor a grief, the and all the increase of thine house shall die in the flower of their age, dying young, the figure, the judgment that turns even the survivor into a sorrow, the house cut down in youth, the truth that Eli's house would die young, the spared one a grief, 1 Samuel 22:18, the figure of the prolonged judgment that grieves and cuts down the wicked house, the grief of the survivor, the house dying young, vv.31); the spared one a grief to the house (the sorrow, 1 Samuel 22:18) — the grief (consume thine eyes); 'all the increase of thine house shall die in the flower of their age' (the house dying young, the doom, the figure, the prolonged judgment that grieves and cuts down the wicked house, the providence, the grief, the sign of the two sons' death to follow, vv.34) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the man of thine, whom I shall not cut off from mine altar, shall be to consume thine eyes, and to grieve thine heart: and all the increase of thine house shall die in the flower of their age.",
-   "God's word that the survivor would grieve, and the house die young",
-   "the one spared a grief and the house dying in youth",
-   "the prolonged judgment that grieves and cuts down the wicked house (1 Samuel 22:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sign, that Hophni and Phinehas would die in one day: 'and this shall be a sign unto thee, that shall come upon thy two sons, on Hophni and Phinehas; in one day they shall die both of them' — God gave the death of both sons in one day as the sign of the whole judgment (the and this shall be a sign unto thee, that shall come upon thy two sons, on Hophni and Phinehas, the sign, the in one day they shall die both of them, both dying in one day, the figure, the pledge and earnest of the judgment, the two sons dying together, the truth that the death of both sons in one day would confirm the prophecy, 1 Samuel 4:11, the figure of the sign that seals the certainty of God's word, the sign to Eli, the sons dying together, vv.31); the death of the sons as the sign (the pledge, 1 Samuel 4:11) — the sign (upon thy two sons); 'in one day they shall die both of them' (both dying in one day, the confirmation, the figure, the sign that seals the certainty of God's word, the providence, the sign, the raising of a faithful priest to follow, vv.35) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And this shall be a sign unto thee, that shall come upon thy two sons, on Hophni and Phinehas; in one day they shall die both of them.",
-   "The sign, that Hophni and Phinehas would die in one day",
-   "God giving the death of both sons in one day as the sign of the whole judgment",
-   "the sign that seals the certainty of God's word (1 Samuel 4:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "31-36",
+  "pericope_label": "The judgment on the house of Eli",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the threat took effect quickly, in the days of Eli's sons, and was complete in eighty years. Of the enemy in the habitation he prefers the rival reading, of Solomon's time, when Abiathar of Eli's family was thrust out and Zadok put in; and he names Zadok as the faithful priest, rejecting Samuel, who was not of the priestly race and had no sure house, his sons having declined from the ways of truth."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "God's promise to raise up a faithful priest who would do his will, with a sure house, walking before his anointed forever: 'and I will raise me up a faithful priest, that shall do according to that which is in mine heart and in my mind: and I will build him a sure house; and he shall walk before mine anointed for ever' — the faithful priest and his fulfilment in Christ — 'and I will raise me up a faithful priest, that shall do according to that which is in mine heart and in my mind: and I will build him a sure house; and he shall walk before mine anointed for ever': God promises, in place of the rejected house of Eli, a faithful priest with a sure and lasting house (the witnesses noting the significance — the gracious counterpart to the judgment, that God will not leave himself without a faithful priesthood, but will raise up a priest who does his will, build him a sure house, and set him to walk before God's Anointed forever, the witnesses seeing the promise fulfilled in stages: first in Zadok, who replaced the line of Eli, in Abiathar, and whose house held the priesthood, then more fully in the faithful priesthood God maintained, and at last and truly in Christ, the great High Priest who perfectly does the will of God, whose priesthood is everlasting and whose house is sure, walking before God's Anointed, or, being himself both Priest and the Anointed, forever, the faithful priest replacing the unfaithful, the sure house God builds, the everlasting priesthood fulfilled in Christ, the lesson — that God will always have a faithful ministry to himself, raising up those who do his will when others fail, 'I will give you pastors according to mine heart, which shall feed you with knowledge and understanding,' Jeremiah 3:15, the truth that the priesthood God establishes is sure and everlasting, resting on his own purpose, 'thou art a priest for ever after the order of Melchizedek,' Psalm 110:4, the figure — the faithful and everlasting High Priest, fulfilled in Christ who continues ever and has an unchangeable priesthood, 'this man, because he continueth ever, hath an unchangeable priesthood... able also to save them to the uttermost,' Hebrews 7:24-25, the truth that the faithful priest who does God's will and walks before his Anointed forever is Christ himself, the figure of the faithful priesthood God establishes in place of the unfaithful, fulfilled at last in Christ the great High Priest, the call to trust the faithful Priest God has raised up, the assurance that God's true priesthood stands forever in Christ); God raising up a faithful priest in place of Eli's house, one who does his will, fulfilled first in Zadok and the faithful priesthood (the faithful ministry, Jeremiah 3:15) — the promise (a faithful priest); 'and I will build him a sure house; and he shall walk before mine anointed for ever' (God building the faithful priest a sure house and setting him to walk before his Anointed forever, the everlasting priesthood fulfilled at last in Christ, the great High Priest of an unchangeable priesthood, the everlasting Priest, Psalm 110:4; Hebrews 7:24-25) — the figure (the faithful and everlasting High Priest, fulfilled in Christ, the providence, the promise, the begging of the fallen house for bread to follow, vv.36) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Clarke observes that almost every version and commentator takes the clause about the enemy differently. He reads the word as calamity rather than rival, finding it in the defeat of Israel, the capture of the ark and the death of his sons, all known to Eli before his own tragical end. He agrees with Gill on Zadok, and turns the last verse into a warning, since they who once fed to the full on the Lord's sacrifices now beg a morsel of bread. Wesley canvasses what the arm was — the ark, called God's strength in the psalm and Eli's too, since he could not bear the news of its loss; or his priestly dignity; or, likeliest, his children — reads the enemy as the affliction of the sanctuary, puts the flower of their age at about thirty, and finds Christ in the anointed before whom the priest walks, the high priest being a type who went before him as John afterwards did."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil explains that a family's strength lies in the vital energy of its members, showing itself in their reaching a good old age instead of pining away early; that would now fail. On the habitation he takes a third course: in all the benefits conferred on his people Eli would see only distress for the dwelling, the tabernacle falling further into decay; and since the high priest is addressed as custodian, the words bind his whole house. He pairs the next threat's clauses with the thoughts before: someone of Eli's family would always serve at the altar, precisely so that he might watch the decay and pine away. He reports Ephraem Syrus taking both candidates for the faithful priest, Samuel succeeding to the government and Zadok to the office, and glosses the coin as a small piece got by begging singly. Ellicott adds that sickness or the sword would consume the members young, weighs the rival readings of the enemy and prefers the ark, whose loss robbed the earthly habitation of the Eternal of its glory, and points to the last verse for the sense of the threat: those not cut off in youth would be worse off than those who were, since they must beg their bread."
    }
   ],
   "debates": [
    {
-    "question": "Who is the faithful priest God promises to raise up?",
+    "question": "Who is the faithful priest God will raise up?",
     "sides": [
      {
-      "position": "The faithful priesthood God establishes in place of the unfaithful, fulfilled by stages and at last in Christ the great High Priest - God raising a priest who does his will with a sure house walking before his Anointed forever, fulfilled first in Zadok who replaced Eli's line, then in the faithful priesthood, and truly in Christ who perfectly does God's will (Jeremiah 3:15), the everlasting priesthood (Psalm 110:4), Christ who has an unchangeable priesthood (Hebrews 7:24-25)",
+      "position": "Zadok, put into the office by Solomon in Abiathar’s room",
       "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
        "Gill",
-       "the reformed reading"
+       "Clarke",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Samuel, who succeeded Eli in his functions and walked before the anointed Saul — and Zadok is too obscure a man for such magnificent promises",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "both, Samuel succeeding to the government and Zadok to the priesthood",
+      "holders": [
+       "Keil and Delitzsch"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "And I will raise me up a faithful priest, that shall do according to that which is in mine heart and in my mind: and I will build him a sure house; and he shall walk before mine anointed for ever.",
-   "God's promise to raise up a faithful priest who would do his will, with a sure house, walking before his anointed forever (the crux of the faithful priesthood God establishes in place of the unfaithful, fulfilled in Christ)",
-   "the gracious counterpart to the judgment, that God will not leave himself without a faithful priesthood but will raise up a priest who does his will, build him a sure house, and set him before his Anointed forever",
-   "fulfilled by stages in Zadok and the faithful priesthood and at last in Christ, God always having a faithful ministry, the priesthood he establishes everlasting, fulfilled in Christ who has an unchangeable priesthood (Jeremiah 3:15; Psalm 110:4; Hebrews 7:24-25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fallen house of Eli reduced to begging for bread: 'and it shall come to pass, that every one that is left in thine house shall come and crouch to him for a piece of silver and a morsel of bread, and shall say, Put me, I pray thee, into one of the priests' offices, that I may eat a piece of bread' — Eli's house would be brought so low as to beg the faithful priest for bread (the and it shall come to pass, that every one that is left in thine house shall come and crouch to him for a piece of silver and a morsel of bread, the begging, the and shall say, Put me, I pray thee, into one of the priests' offices, that I may eat a piece of bread, the abasement, the figure, the proud and greedy house brought to beggary, the contempt requited, the truth that Eli's house, once fat with the offerings, would beg for bread, Proverbs 16:18, the figure of the despiser of God brought to shame and want, the abasement of the house, the begging for bread, vv.30); Eli's house begging for bread (the abasement, Proverbs 16:18) — the begging (crouch for bread); 'Put me, I pray thee, into one of the priests' offices, that I may eat a piece of bread' (the once-proud house begging a place for bread, the shame, the figure, the despiser of God brought to shame and want, the providence, the abasement, the call of Samuel and the fall of Eli's house to follow, ch.3-4) — Keil and Delitzsch, Gill."
+    "voice": "Ellicott",
+    "claim": "refuses those who find Christ in the faithful priest, since this priest is to walk before the Lord’s Anointed — where Wesley finds Christ exactly"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "And it shall come to pass, that every one that is left in thine house shall come and crouch to him for a piece of silver and a morsel of bread, and shall say, Put me, I pray thee, into one of the priests' offices, that I may eat a piece of bread.",
-   "The fallen house of Eli reduced to begging for bread",
-   "Eli's house, once fat with the offerings, brought so low as to beg the faithful priest for bread",
-   "the despiser of God brought to shame and want (Proverbs 16:18)"
+   "I will cut off thine arm",
+   "thou shalt see an enemy in my habitation",
+   "in one day they shall die both of them",
+   "I will raise me up a faithful priest"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  }
 }
