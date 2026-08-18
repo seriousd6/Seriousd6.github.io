@@ -3961,6 +3961,58 @@
       "book": "judges",
       "chapter": "11",
       "note": "Second chapter running with no Calvin and no Wesley in the source (judges 20 was the first), so reformed rests on Gill alone and wesleyan-arminian on Clarke alone throughout. Henry has four blocks, at vv.1, 4, 12 and 29, and the span plan was built around them so that each landed in a distinct entry — otherwise the last four entries would have carried no puritan-evangelical voice at all rather than the two they do. Planning the splits against the filing map before drafting, rather than by source-word count alone, is what kept the school coverage even; it is the same lesson as note 348 and is now worth treating as standard procedure for any chapter where one voice supplies a school by itself."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "23",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "JFB scrape residue, twenty-fourth chapter, and the stride hypothesis from numbers 21 is CONFIRMED IN A DIFFERENT BOOK and refined. The five Jamieson slots here sit at keys 5, 11, 17, 23, 29 -- a stride of exactly 6, as in numbers 21 (keys 4, 10, 16, 22, 28, 34). Two chapters in different books showing the same arithmetic spacing is no longer coincidence. The refinement is more diagnostic still: the blocks are Exodus 10-11 material laid down IN NARRATIVE ORDER -- key 5 the locusts (Ex 10:12ff), key 11 the same block repeated byte-for-byte, key 17 the darkness and Pharaoh's compromise (Ex 10:21ff), key 23 the seven-word fragment 'Moses said, Thou hast spoken well' (Ex 10:29), key 29 the announcement of the last plague (Ex 11:1ff). So the scraper is not drawing at random from a buffer: it walks the DONOR chapter sequentially while writing into every sixth key of the VICTIM, occasionally stalling and repeating the current block (keys 5 and 11 are md5-identical). This predicts that residue keys in other chapters will be arithmetic, that residue content will be in donor order, and that duplicates will be ADJACENT in the stride rather than scattered. Worth a sweep over the other 22 logged chapters to test all three. Within-book displacement again (Exodus 10-11 into Exodus 23)."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "2",
+        "13",
+        "25"
+      ],
+      "note": "METHODOLOGICAL WARNING, first time logged and it affects how the whole corpus should be read: in exodus 23 Wesley's notes are VERBATIM ABRIDGEMENTS OF HENRY, not independent comment. Compare v1 -- Henry: 'That which we translate, Thou shalt not raise, the margin reads, Thou shalt not receive a false report; for sometimes the receiver, in this case, is as bad as the thief; and a backbiting tongue would not do so much mischief as it does if it were not countenanced.' Wesley: 'Thou shalt not raise, the margin reads, Thou shalt not receive a false report, for sometimes the receiver in this case is as bad as the thief; and a backbiting tongue would not do so much mischief, if it were not countenanced.' The same holds at v2 (the 'too great a compliment, to be willing to go to hell for company' passage), at v13 (the paragraph on Christian schools and academies and the play-houses), and at v25 (bread and water against a feast of fat things). CONSEQUENCE: where Wesley and Henry agree, that is ONE witness and not two, and a school tally that counts puritan-evangelical and wesleyan-arminian separately overstates the breadth of agreement. Handled here by writing 'Henry, whom Wesley follows almost word for word' rather than presenting them as concurring independently. Worth checking how widely this holds; Wesley's Explanatory Notes are known to be heavily drawn from Henry and from Bengel, so the corpus may carry this throughout the Old Testament."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "23",
+      "verses": [
+        "5",
+        "19",
+        "20",
+        "28"
+      ],
+      "note": "Four substantive disputes. (1) v5, the fallen ass: the verb is disputed and Jerome departed widest; Calvin canvasses the interrogative reading and rejects it for the imperative, concluding the law was framed to put enemies to work side by side over a suffering animal and so give them occasion for reconciliation; ELLICOTT ADOPTS A CONJECTURAL EMENDATION, Geddes' 'azar for 'azab in all three places the verb occurs. (2) v19, the kid in its mother's milk, four ways: Clarke reports Cudworth's Karaite manuscript on a heathen magical rite and Wesley repeats it; ELLICOTT CALLS THAT FANCIFUL and refutes it from Deuteronomy 14:21, where the precept stands among unclean meats and so concerns a kid boiled to be eaten, preferring Bochart on the cruelty of making the milk meant to feed it the means of cooking it; CALVIN REJECTS THE DIETARY READING ALTOGETHER, arguing from the threefold repetition and the company each occurrence keeps that the precept belongs to the sacrifices. (3) v20, who the Angel is: Gill collects the rabbinic options (the book of the law, the ark, Michael, Metatron); Kalisch says Moses and the rabbis Joshua; Henry gives created-angel and Son-of-God without deciding; Clarke, Ellicott, Calvin and Wesley all take the pre-incarnate Son, Calvin refuting Joshua on the ground that Israel would then have had no leader in the desert, and Ellicott offering the neatest argument, that God is never said to set his Name in a man. (4) v28, the hornets: Gill and Clarke literal (Aelian on the Phaselites; Clarke's own forceps anecdote; Joshua 24:12); Aben Ezra and the Arabic version a wasting disease; Keil and Delitzsch and Ellicott not literal since Joshua records no such extermination, ELLICOTT PROPOSING THE EGYPTIANS, whose armies broke the Hittites while Israel was in the desert and whose hieroglyph for king was a bee."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "23",
+      "verses": [
+        "11",
+        "24",
+        "32"
+      ],
+      "note": "Three places where a commentator reasons past the text, worth tracking. (1) Clarke at v11 observes that the keeping of the sabbatical year is NOWHERE EXPRESSLY RECORDED in Scripture, and infers that the people could not trust God that far until the captivity gave the land the sabbaths their unbelief had denied it -- an argument from silence, but a disciplined one, and he flags it as his own inference. (2) Calvin at v24 separates the permanent from the temporary inside a single command, holding that the condemnation of superstition stands to the end of the world while the order to demolish was an enactment for that time, and draws the contemporary consequence without hesitation: Christians may retain buildings once polluted by idols and put them to better use. He then follows Augustine in denying private individuals any commission to destroy idols, the authority belonging to a people once they hold the country -- a live sixteenth-century application. (3) Ellicott at v32 explains the otherwise puzzling clause 'nor with their gods' from the diplomacy of the period, since treaties between nations regularly acknowledged each other's deities, citing the treaty between Rameses II and the Hittites in the Records of the Past. That is the kind of external evidence the older commentators had no access to, and it resolves the clause cleanly."
     }
   ]
 }
