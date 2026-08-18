@@ -1,1017 +1,344 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The heading and the divine image: 'this is the book of the generations of Adam. In the day that God created man, in the likeness of God made he him' — the formula 'this is the book of the generations (toledoth) of Adam' introducing the genealogy of Adam through Seth's line to Noah (ch. 5), 'the book' suggesting a written record or register of the generations, the godly line of promise traced; 'in the likeness of God made he him' recalling the dignity of man's creation in God's image (1:26-27), the genealogy opening by reminding the reader that man, despite the fall and the death that runs through the chapter, was made in God's likeness, the original dignity set against the mortality that follows; man made in God's likeness, yet (v.3) Adam begetting a son in his own fallen likeness, the chapter holding together the divine image in which man was made and the death which sin brought, the image of God marking man's worth, the refrain 'and he died' marking the wages of sin — Keil and Delitzsch, Ellicott, Calvin, Gill, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the book of the generations of Adam. In the day that God created man, in the likeness of God made he him",
-   "the heading of Adam's generations and man made in God's likeness",
-   "the line of promise traced from man made in God's image",
-   "the divine image set against the mortality of the chapter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mankind created and named: 'male and female created he them; and blessed them, and called their name Adam, in the day when they were created' — God creating mankind as male and female (1:27, both sexes God's creation, the recapitulation of the creation of man recalling the original constitution of the race in the two sexes); 'blessed them' (the blessing of fruitfulness and dominion given to mankind at creation, 1:28, God's favor resting on the race he made, the blessing recalling God's original purpose for man); 'called their name Adam (man)' (the name 'Adam' denoting both the first man and mankind, the race, the man and the woman together called 'Adam,' for the woman is of the man and one with him, the name marking the unity of the race in its head, the same name, Adam, for the individual and for mankind) — Keil and Delitzsch, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Male and female created he them; and blessed them, and called their name Adam",
-   "mankind created male and female, blessed, and named Adam",
-   "the race created in the two sexes and blessed by God",
-   "mankind united in the name of its head, Adam"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1-3",
+  "pericope_label": "The book of the generations of Adam",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the chapter for Adam's descent through Seth to Noah, ten generations only, with nothing of Cain's line or the collateral branches. Calvin reads the title as a catalogue and states its purpose: to show that in the prodigious multitude of men there was always a number, however small, who worshipped God, preserved by celestial guardianship lest his name be obliterated and the seed of the Church fail. On the single name given to the first pair he finds a commendation of marriage, posterity learning to cherish the bond the more sacredly on seeing their first parents called by one name, and dismisses as trifling the Jewish inference that married persons are therefore called Adam."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls the phrase the title of the whole chapter, a catalogue not of all Adam's posterity but of the holy seed, the names and ages and deaths of those who succeeded the first Adam in the custody of the promise and were ancestors of the second. From the rehearsal of the creation he draws four lessons: that God made man, who is therefore not his own master, the Author of his being being also the centre of his motions; that there was a day on which he was made, so he is the junior of the creation; that he was made righteous and holy, and therefore happy; and that they were made male and female for mutual comfort as well as increase."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the Hebrew rendered book means a register, any kind of writing, even a bill of divorce, and thinks the creation account is repeated here to keep man in mind of the glory from which he fell and to prove that the miseries and death of his present state came from his transgression and not his original condition; since the deaths of the patriarchs are now to be recited, it was necessary to preface them so, to justify the ways of God to man. Wesley follows Henry throughout and presses the fourth lesson further, that both were made immediately by God's hand and both in his likeness, so between the sexes there is not the inequality some imagine."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Adam begets Seth in his own image: 'and Adam lived an hundred and thirty years, and begat a son in his own likeness, after his image; and called his name Seth' — the genealogy beginning with Adam begetting Seth at 130 years (after the loss of Abel and the line of Cain), the godly line continuing through Seth (4:25), the chapter tracing this line to Noah; 'in his own likeness, after his image' in pointed contrast to Adam himself, made in the likeness of God (v.1; 1:26) — Adam, now fallen, begetting a son in his own (now corrupt, mortal) likeness, the natural likeness of father to son including the transmission of the fallen, sinful nature (original sin propagated), Seth, like all Adam's offspring, inheriting the Adamic, fallen image, not the unfallen divine image in its integrity; 'called his name Seth (appointed)' (the appointed seed, 4:25, in whose line the promise continues, the godly line traced from Adam through Seth, the head of the line of promise) — Ellicott, Gill, Clarke, Calvin."
+    "summary": "Ellicott takes the repetition to prove nearly the opposite of what Clarke draws from it: man is fallen, but the words recur to show the divine likeness was not lost, nor the blessing given at his creation revoked, since that likeness does not mainly consist in moral innocence and was untouched by sin except so far as sin corrupted the vessel holding the gift. Keil and Delitzsch note that the ages given here are withheld from the Cainite list, so this genealogy is at once a line of development and a chronology, the accursed family having no future history; and they mark the formula that now begins, ending each time in the words and he died, which by its constant recurrence shows that death reigned from Adam downward as an unchangeable law."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why is the creation account repeated here?",
+    "sides": [
+     {
+      "position": "to show what was lost — man was made free of natural and moral evil, so the death now to be recited came from his transgression",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "to show what was kept — the divine likeness was not lost by the fall, since it does not mainly consist in moral innocence",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Adam lived an hundred and thirty years, and begat a son in his own likeness, after his image; and called his name Seth",
-   "Adam begetting Seth in his own image",
-   "the transmission of the fallen Adamic likeness, in contrast to the divine image",
-   "the godly line of promise continuing through Seth"
+   "this is the book of the generations of Adam",
+   "in the likeness of God made he him",
+   "the holy seed distinguished from Cain’s line",
+   "begat in his own likeness, after his image"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam's long life after Seth: 'and the days of Adam after he had begotten Seth were eight hundred years: and he begat sons and daughters' — Adam living eight hundred years after Seth's birth (the great longevity of the antediluvians, Adam's long life allowing him to see many generations of his descendants, the patriarch living through the early history of the race); the long lifespans of the antediluvians (here, Adam's eight hundred years after Seth) taken as literal years (the great age of the patriarchs before the flood serving to people the earth rapidly and to preserve and transmit the knowledge of God and the promise through few generations, God's purpose in the long lives of the early fathers); 'he begat sons and daughters' (Adam having many other children besides Seth, and Cain and Abel, the race multiplying through his numerous offspring, the genealogy naming only the line of promise, Seth, but noting the many sons and daughters, the rapid increase of mankind) — Keil and Delitzsch, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the days of Adam after he had begotten Seth were eight hundred years: and he begat sons and daughters",
-   "Adam's long life and many children after Seth",
-   "the great longevity of the antediluvians, taken as literal years",
-   "the rapid multiplying of the race"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "4-5",
+  "pericope_label": "The death of Adam",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The death of Adam: 'and all the days that Adam lived were nine hundred and thirty years: and he died' — the full span of Adam's life, nine hundred and thirty years (the great age of the first man, Adam living nearly a thousand years, witnessing the early generations of the race he fathered); Adam's long life, though great, coming to an end (the longest life finite, even Adam, who lived nigh a thousand years, dying at last, the length of life unable to exempt him from the sentence of death); 'and he died' the solemn refrain that tolls through the chapter (vv.8, 11, 14, etc., the sentence of death, 2:17; 3:19, 'dust thou art, and unto dust shalt thou return,' taking effect, despite the long lives every patriarch dying, 'and he died' the seal of the curse on sin repeated over each name, death reigning from Adam, Romans 5:14, the long lives ending in the grave, save Enoch, v.24) — Ellicott, Gill, Calvin, Henry."
+    "summary": "Gill insists the years are solar, not lunar, against Varro, reckoning them at three hundred and sixty-five days and odd hours after the Egyptian usage of Moses's time, and argues from the absurdities of the alternative, that Enoch must else have begotten a son in his sixth year and the interval between creation and deluge shrink to two hundred years; he supports the long lives from heathen writers who say the ancients lived a thousand years, noting that Josephus appeals to Manetho and Berosus. Calvin dwells on what the overlapping lives allowed: through six successive ages the voice of Adam might daily resound among Seth's people, renewing the memory of the creation, the fall and the punishment, and testifying to the hope left after chastisement, since instruction from the mouth of the eyewitness was far more forcible than what his sons could hand on. On the closing words he denies that they are superfluous, since they warn us that death was not denounced in vain and that we lie under the curse unless deliverance is had elsewhere; it is useful in a picture of so many ages to see at one glance the continual course of divine vengeance, for otherwise we dream of an immortality on earth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley pushes the sentence back to its cause: in the day Adam ate the forbidden fruit he became mortal and began to die, so his whole life afterwards was a forfeited and condemned life, and more, a wasting and dying one; he was not merely like a criminal under sentence but like one already crucified, who dies slowly and by degrees."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott finds the numbers of the Bible involved in great difficulty, since Hebrew numeration attaches values to letters and the words so formed, being unmeaning, are easily corrupted; the three authorities differ widely on the interval from the expulsion out of Paradise to the flood, the Hebrew making it 1656 years, the Samaritan 1307 and the Greek 2262, while agreeing almost everywhere on the individual lives. He finds an appearance of untrustworthiness about the Greek calculations and ranks the Samaritan nearly equal with the Hebrew. Whatever the figures, he holds the Bible plainly represents life as vastly prolonged before the flood and rapidly shortening after, and teaches that in the Messianic age it shall be prolonged again, though he accepts the physiologists' verdict that man as he now is cannot pass a hundred and twenty to a hundred and fifty years."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "all the days that Adam lived were nine hundred and thirty years: and he died",
-   "the total of Adam's years and his death",
-   "the great life of the first man ending in the grave",
-   "the refrain 'and he died' the seal of the sentence on sin"
+   "all the days that Adam lived were nine hundred and thirty years",
+   "and he died",
+   "were the years solar or lunar?",
+   "the patriarchs living together"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
+   }
   }
  },
  "6": {
   "voices": [
+   "Charles Ellicott",
    "John Gill",
-   "Matthew Henry",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Seth begets Enos: 'and Seth lived an hundred and five years, and begat Enos' — Seth, the head of the godly line (4:25-26), begetting Enos at 105 years (the line of promise continuing from Adam through Seth to Enos, in Enos's day men beginning to call on the name of the LORD, 4:26); Seth, the appointed seed, living and begetting in the line of promise (the godly line carefully traced, generation by generation, the faithfulness of God in preserving the line through which the promised seed would come); 'begat Enos' (Enos, whose name means 'man,' frail, mortal, the son of Seth, in whose time the public worship of God began, 4:26, the line of Seth, marked by the worship of the LORD, in contrast to the line of Cain, the genealogy of the godly carrying the promise forward, the continuance of the line of faith) — Gill, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Seth lived an hundred and five years, and begat Enos",
-   "Seth begetting Enos, continuing the line",
-   "the godly line of promise carried from Seth to Enos",
-   "the line of faith marked by the worship of the LORD"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
+  "excluded_voices": [
    "Jamieson, Fausset and Brown"
   ],
+  "range": "6-20",
+  "pericope_label": "Seth to Jared",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill explains why only one son is ever named, since Enos was surely not Seth's firstborn and no doubt there were children before him, but he alone is named because the line ran through him from Adam to Noah, the father of the new world, from whom the Messiah was to spring, to give that descent being the principal view of the book. The rest of his notes are textual, marking where the Greek makes Enos a hundred and ninety at Cainan's birth and where the Samaritan reads only sixty-two for Jared, which Gill thinks can hardly have been the age at a first son."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the silence of the record his subject, asking why so little is said at such length and answering that it might have been delivered in fewer words, but there is not one idle word in God's books, whatever there is in men's. He gives two reasons for the fullness: condescension to the meanest capacity, since the total is set down for those who could not add it themselves; and the pleasure God takes in his people's names, Cain's line being numbered in haste while this account of the holy seed is enlarged and given in words at length, so we are told how long those lived who lived in God's fear and when those died who died in his favour, while as for the rest it is no matter. The memory of the just is blessed, he closes, but the name of the wicked shall rot."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley reproduces Henry's passage and adds a meditation on the length of the lives, that not one died before he had seen almost eight hundred years, which he calls a long while for an immortal soul to be imprisoned in a house of clay. Two inferences follow: the present life cannot have been the burden to them it commonly is now, or they would have grown weary of it, and the life to come was not revealed as clearly as under the gospel, or they would have been impatient to be gone. He will assign natural causes too, thinking it probable that before the flood the earth was more fruitful, the air more healthful and the influences of the heavenly bodies more benign."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Seth's long life after Enos: 'and Seth lived after he begat Enos eight hundred and seven years, and begat sons and daughters' — Seth, like the other antediluvian patriarchs, living to a great age (eight hundred and seven years after Enos) and begetting many children (the long life and numerous offspring of the patriarchs); Seth's long life, like Adam's (v.4), part of the pattern of the antediluvians' great longevity (the patriarchs living for centuries, seeing many generations, the long lives serving to people the earth and preserve the line); 'begat sons and daughters' (Seth having many other children besides Enos, the race multiplying through the numerous offspring of the patriarchs, the genealogy naming the line of promise, Enos, but recording the many sons and daughters, the increase of mankind through the long-lived fathers) — Gill, JFB."
+    "prevalence": "single",
+    "summary": "Ellicott finds in the short intervals a proof about the calendar, that the years cannot have been revolutions of the moon since Enos was ninety at his son's birth, Cainan seventy and Mahalaleel sixty-five, though the supposition would sit better on the Greek text, where no patriarch has a son before his hundred and sixty-second year. On the name Jared he is cautious, reporting the derivation from a word for descent and the attempts to identify him with an Indian water-god, which competent modern commentators regard as exploded, and Sayce's Assyrian sense of servant, which does not satisfy him either; until that dialect is thoroughly explored he thinks we can scarcely speak with certainty about these names. He does infer from Jared's age at Enoch's birth that Enoch was probably not the eldest son but came into the birthright by his own excellencies."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Seth lived after he begat Enos eight hundred and seven years, and begat sons and daughters",
-   "Seth's long life and many children after Enos",
-   "the great age of the patriarch and the multiplying of the race",
-   "the antediluvian pattern of longevity and numerous offspring"
+   "the formula repeated through five generations",
+   "why the record is so full",
+   "the length of the antediluvian lives",
+   "the name of Jared"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Seth: 'and all the days of Seth were nine hundred and twelve years: and he died' — Seth's full life, nine hundred and twelve years, a great age like the other antediluvians, and then the refrain, 'and he died,' the solemn toll that follows each patriarch (Seth, the godly head of the line of promise, dying like the rest); Seth living over nine centuries, among the longest-lived of the patriarchs, yet his long life, like all, coming to its end (the great age unable to avert death); 'and he died' the recurring seal of mortality (vv.5, 11, 14, etc., the sentence of death, 3:19, taking effect on Seth as on Adam, even the godly patriarch of the line of promise dying, the refrain tolling through the chapter, marking that death reigns over all the sons of Adam, Romans 5:12, 14, save Enoch, v.24, the long lives ending in the grave) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Seth were nine hundred and twelve years: and he died",
-   "the total of Seth's years and his death",
-   "the great life of the appointed seed ending in the grave",
-   "the refrain 'and he died' marking that death reigns over all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Enos begets Cainan: 'and Enos lived ninety years, and begat Cainan' — Enos, the son of Seth (in whose day men called on the LORD, 4:26), begetting Cainan at ninety years (the line of promise continuing from Seth through Enos to Cainan, the godly genealogy carried forward); Enos, the third from Adam in the godly line, living and begetting in the line of faith (the genealogy tracing the line carefully, God preserving the line of promise generation by generation); 'begat Cainan' (Cainan, a name distinct from Cain, the son of Enos, the next in the line of Seth, the line of the godly continuing toward Noah, the careful record of the generations marking God's faithfulness in preserving the seed through which the promise would come, the line of faith carried forward) — Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Enos lived ninety years, and begat Cainan",
-   "Enos begetting Cainan, continuing the line",
-   "the line of promise continuing from Seth through Enos to Cainan",
-   "God's faithfulness in preserving the line of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Enos's long life after Cainan: 'and Enos lived after he begat Cainan eight hundred and fifteen years, and begat sons and daughters' — Enos, like the other patriarchs, living to a great age (eight hundred and fifteen years after Cainan) and begetting many children (the long life and numerous offspring of the antediluvian fathers); Enos's long life, like those before him, part of the antediluvian pattern of great longevity (the patriarchs living for centuries, the long lives, taken as literal, serving God's purpose to people the earth and preserve the line of promise); 'begat sons and daughters' (Enos having many other children besides Cainan, the race multiplying through the patriarchs' numerous offspring, the genealogy naming only the line of promise, Cainan, but recording the many sons and daughters, the increase of mankind) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Enos lived after he begat Cainan eight hundred and fifteen years, and begat sons and daughters",
-   "Enos's long life and many children after Cainan",
-   "the great age of the patriarch and the multiplying of the race",
-   "the antediluvian pattern of longevity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Enos: 'and all the days of Enos were nine hundred and five years: and he died' — Enos's full life, nine hundred and five years, a great age, and then the refrain, 'and he died,' the recurring toll of mortality (Enos, the godly patriarch in whose day men called on the LORD, 4:26, dying like the rest); Enos living over nine centuries, like the patriarchs before him, yet his long life ending in death (the great age unable to exempt him from the sentence); 'and he died' the seal of mortality repeated over each name (vv.5, 8, 14, etc., the sentence of death, 3:19, taking effect, even the godly Enos who called on the LORD dying, the refrain marking that death reigns over all the sons of Adam, Romans 5:12, 14, save Enoch, v.24, the chapter a genealogy of death as well as of the line of promise) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Enos were nine hundred and five years: and he died",
-   "the total of Enos's years and his death",
-   "the great life of the patriarch ending in the grave",
-   "the refrain marking that death reigns over all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cainan begets Mahalaleel: 'and Cainan lived seventy years, and begat Mahalaleel' — Cainan, the son of Enos, begetting Mahalaleel at seventy years (the line of promise continuing from Enos through Cainan to Mahalaleel, the godly genealogy carried forward); Cainan, the fourth from Adam in the godly line, living and begetting in the line of faith (the genealogy tracing the line carefully, generation by generation, God preserving the line of promise); 'begat Mahalaleel' (Mahalaleel, whose name means 'praise of God' or 'God is praised,' the son of Cainan, the next in the line of Seth, the line of the godly continuing toward Noah, the name fitting the godly line that called on the LORD, the line of faith carried forward) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cainan lived seventy years, and begat Mahalaleel",
-   "Cainan begetting Mahalaleel, continuing the line",
-   "the line of promise continuing from Enos through Cainan to Mahalaleel",
-   "the godly genealogy carried forward, the name praising God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cainan's long life after Mahalaleel: 'and Cainan lived after he begat Mahalaleel eight hundred and forty years, and begat sons and daughters' — Cainan, like the other patriarchs, living to a great age (eight hundred and forty years after Mahalaleel) and begetting many children (the long life and numerous offspring of the antediluvian fathers); Cainan's long life part of the antediluvian pattern (the patriarchs living for centuries, the long lives serving to people the earth and to preserve and transmit the line and the knowledge of God through few generations); 'begat sons and daughters' (Cainan having many other children besides Mahalaleel, the race multiplying through the patriarchs' numerous offspring, the genealogy naming the line of promise but recording the many sons and daughters, the increase of mankind) — Gill, JFB."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cainan lived after he begat Mahalaleel eight hundred and forty years, and begat sons and daughters",
-   "Cainan's long life and many children after Mahalaleel",
-   "the great age of the patriarch and the multiplying of the race",
-   "the antediluvian pattern of longevity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Cainan: 'and all the days of Cainan were nine hundred and ten years: and he died' — Cainan's full life, nine hundred and ten years, a great age, and then the refrain, 'and he died,' the recurring seal of mortality (Cainan, the godly patriarch of the line of promise, dying like the rest); Cainan living over nine centuries, yet his long life, like all, ending in death (the great age unable to avert the sentence); 'and he died' the toll of mortality repeated over each name (vv.5, 8, 11, etc., the sentence of death, 3:19, taking effect, even the godly patriarch dying, death reigning from Adam over all his sons, Romans 5:14, save Enoch, v.24, the genealogy of the line of promise also a genealogy of death, the long lives ending in the grave, marking the curse on sin) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Cainan were nine hundred and ten years: and he died",
-   "the total of Cainan's years and his death",
-   "the great life ending in the grave",
-   "the refrain marking the curse on sin, death reigning from Adam"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mahalaleel begets Jared: 'and Mahalaleel lived sixty and five years, and begat Jared' — Mahalaleel, the son of Cainan, begetting Jared at sixty-five years (the line of promise continuing from Cainan through Mahalaleel to Jared, the godly genealogy carried forward toward Noah); Mahalaleel (whose name means 'praise of God'), the fifth from Adam in the godly line, living and begetting in the line of faith (the genealogy tracing the line carefully, God preserving the line of promise generation by generation); 'begat Jared' (Jared, whose name may mean 'descent,' the son of Mahalaleel, the next in the line of Seth, the line of the godly continuing, in Jared's line would come Enoch, who walked with God, vv.18-24, the line of faith carried forward toward the great patriarchs) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Mahalaleel lived sixty and five years, and begat Jared",
-   "Mahalaleel begetting Jared, continuing the line",
-   "the line of promise continuing from Cainan through Mahalaleel to Jared",
-   "the godly genealogy carried forward toward Enoch and Noah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mahalaleel's long life after Jared: 'and Mahalaleel lived after he begat Jared eight hundred and thirty years, and begat sons and daughters' — Mahalaleel, like the other patriarchs, living to a great age (eight hundred and thirty years after Jared) and begetting many children (the long life and numerous offspring of the antediluvian fathers); Mahalaleel's long life part of the antediluvian pattern (the patriarchs living for centuries, the long lives serving God's purpose to people the earth and preserve the line of promise through few generations); 'begat sons and daughters' (Mahalaleel having many other children besides Jared, the race multiplying through the patriarchs' offspring, the genealogy naming the line of promise but recording the many sons and daughters, the increase of mankind) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Mahalaleel lived after he begat Jared eight hundred and thirty years, and begat sons and daughters",
-   "Mahalaleel's long life and many children after Jared",
-   "the great age of the patriarch and the multiplying of the race",
-   "the antediluvian pattern of longevity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Mahalaleel: 'and all the days of Mahalaleel were eight hundred ninety and five years: and he died' — Mahalaleel's full life, eight hundred ninety-five years, a great age, and then the refrain, 'and he died,' the recurring toll of mortality (Mahalaleel, the godly patriarch whose name praises God, dying like the rest); Mahalaleel living nearly nine centuries, yet his long life, like all, coming to its end (the great age unable to exempt him from death); 'and he died' the seal of mortality repeated over each name (vv.5, 8, 11, 14, the sentence of death, 3:19, taking effect, even the godly patriarch who praised God dying, death reigning over all the sons of Adam, Romans 5:12, 14, save Enoch, v.24, the long lives ending in the grave, the refrain marking the universal reign of death from the fall) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Mahalaleel were eight hundred ninety and five years: and he died",
-   "the total of Mahalaleel's years and his death",
-   "the great life ending in the grave",
-   "the refrain marking the universal reign of death from the fall"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jared begets Enoch: 'and Jared lived an hundred sixty and two years, and he begat Enoch' — Jared, the son of Mahalaleel, begetting Enoch at one hundred sixty-two years (the line of promise continuing from Mahalaleel through Jared to Enoch, Enoch the notable patriarch who walked with God and was translated, vv.21-24); Jared, the sixth from Adam in the godly line, living and begetting in the line of faith (the genealogy tracing the line carefully, Jared's significance lying chiefly in his son Enoch, the seventh from Adam, Jude 14, the most eminent of the antediluvian patriarchs); 'he begat Enoch' (Enoch, a different Enoch from Cain's son, 4:17, the son of Jared, the seventh from Adam, the patriarch who walked with God and was taken without dying, vv.22-24, the genealogy, otherwise a record of death, coming to the one man who did not die, Jared's son Enoch the bright exception in the chapter) — Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jared lived an hundred sixty and two years, and he begat Enoch",
-   "Jared begetting Enoch, the godly patriarch who walked with God",
-   "the line of promise continuing to Enoch, the seventh from Adam",
-   "the genealogy of death coming to the one who did not die"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jared's long life after Enoch: 'and Jared lived after he begat Enoch eight hundred years, and begat sons and daughters' — Jared, like the other patriarchs, living to a great age (eight hundred years after Enoch) and begetting many children (the long life and numerous offspring of the antediluvian fathers); Jared's long life part of the antediluvian pattern (the patriarchs living for centuries, the long lives serving to people the earth and preserve the line, Jared living to see many generations of his descendants); 'begat sons and daughters' (Jared having many other children besides Enoch, the race multiplying through the patriarchs' offspring, the genealogy naming the line of promise but recording the many sons and daughters, the increase of mankind) — Gill, JFB."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jared lived after he begat Enoch eight hundred years, and begat sons and daughters",
-   "Jared's long life and many children after Enoch",
-   "the great age of the patriarch and the multiplying of the race",
-   "the antediluvian pattern of longevity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Jared: 'and all the days of Jared were nine hundred sixty and two years: and he died' — Jared's full life, nine hundred sixty-two years, among the longest of the patriarchs, and then the refrain, 'and he died,' the recurring toll of mortality (Jared, the father of the godly Enoch, dying like the rest); Jared living over nine and a half centuries, one of the longest-lived of the antediluvians (second to Methuselah), yet his long life, like all, ending in death (the great age unable to avert the sentence); 'and he died' the seal of mortality repeated over each name (the sentence of death, 3:19, taking effect, even Jared, the father of Enoch who did not die, dying himself, the contrast striking — Jared dies but his son Enoch is taken without death, v.24, death reigning over all the sons of Adam, Romans 5:14, save the one exception, the long lives ending in the grave) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Jared were nine hundred sixty and two years: and he died",
-   "the total of Jared's years and his death",
-   "the great life ending in the grave, in contrast to his son Enoch",
-   "the refrain marking the reign of death save the one exception"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Enoch begets Methuselah: 'and Enoch lived sixty and five years, and begat Methuselah' — Enoch, the seventh from Adam (Jude 14), begetting Methuselah at sixty-five years (the line of promise continuing from Jared through Enoch to Methuselah, Methuselah becoming the longest-lived of all men, v.27); Enoch, the godly patriarch who walked with God (vv.22, 24), beginning (as the text will show) to walk with God especially after the birth of Methuselah (the begetting of his son marking a turning in his godly walk, Enoch the most eminent of the antediluvians); 'begat Methuselah' (Methuselah, whose name is variously interpreted, some reading it 'when he dies, it shall be sent,' a possible reference to the flood, which came the year of Methuselah's death, the longest-lived man, 969 years, v.27, the line of promise continuing through Methuselah to Lamech and Noah, God's patience marked in the long life of Methuselah before the flood) — Gill, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Enoch lived sixty and five years, and begat Methuselah",
-   "Enoch begetting Methuselah, the longest-lived patriarch",
-   "the line of promise continuing through the godly Enoch",
-   "the birth of Methuselah marking the deepening of Enoch's walk with God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Enoch walked with God: 'and Enoch walked with God after he begat Methuselah three hundred years, and begat sons and daughters' — instead of the usual formula ('lived... years'), the text saying Enoch 'walked with God' (for three hundred years after Methuselah's birth, Enoch walking with God, the phrase marking a life of intimate fellowship with God, holiness, and obedience, Enoch's whole life a walk with God); to 'walk with God' is to live in close communion and agreement with him (Amos 3:3, 'can two walk together, except they be agreed?', a life of faith, holiness, and continual fellowship, Enoch pleasing God, Hebrews 11:5, believing and obeying him, his walk with God the pattern of the godly life amid an ungodly generation, Enoch also prophesying, Jude 14-15); 'begat sons and daughters' (Enoch, even in his close walk with God, living an ordinary family life, begetting children, the godly walk compatible with the duties and relations of life, holiness lived out in the family and the world) — Gill, Clarke, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Enoch walked with God after he begat Methuselah three hundred years, and begat sons and daughters",
-   "Enoch walking with God for three hundred years",
-   "the life of intimate fellowship, faith, and holiness, pleasing God",
-   "the godly walk lived out amid an ungodly age and in family life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The days of Enoch: 'and all the days of Enoch were three hundred sixty and five years' — Enoch's life three hundred sixty-five years, notably shorter than the other antediluvians (who lived eight or nine centuries, Enoch's days comparatively few, for he was taken early, v.24); Enoch's three hundred sixty-five years, while a full life by later reckoning, short among the long-lived antediluvians, yet his life not cut short by death but by translation (v.24, God taking him in the midst of his years, not as a punishment but as a reward); unlike every other patriarch in the chapter (vv.5, 8, 11, etc.), the refrain 'and he died' not said of Enoch (the omission preparing for v.24, 'and he was not; for God took him,' Enoch did not die but was translated, the breaking of the chapter's death-refrain marking Enoch as the great exception, the man who walked with God not seeing death) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Enoch were three hundred sixty and five years",
-   "the total of Enoch's years and the absence of the death-refrain",
-   "Enoch's comparatively short life, taken early by translation",
-   "the striking omission of 'and he died,' marking the great exception"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "21-24",
+  "pericope_label": "Enoch walked with God",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Enoch's translation: 'and Enoch walked with God: and he was not; for God took him' — 'Enoch walked with God' (repeated from v.22) the summary of Enoch's whole life (a walk of faith, holiness, and intimate fellowship with God, the LXX rendering it 'Enoch pleased God,' the basis of Hebrews 11:5, 'by faith Enoch was translated... he pleased God,' Enoch's godliness set as the reason for his translation); Ellicott, Calvin, and Wesley hold that Enoch was translated — taken bodily to heaven without dying, as Elijah later was (2 Kings 2:11), 'he was not (found among men); for God took him (to himself),' God removing Enoch from the earth without death, Hebrews 11:5 plainly teaching this: 'Enoch was translated that he should not see death,' the translation a reward of his faith and a pledge of immortality, the man who walked with God not dying but taken to God; Enoch's translation, in an age of death and impending judgment, a testimony to the immortality of the soul and the hope of life beyond death, the bright exception in the genealogy of death — Ellicott, Calvin, Wesley, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Gill reads Methuselah's name as a prophecy, since on Bochart's derivation it means that when he dies there shall be a sending forth of waters to destroy the earth, and supposes Enoch had walked with God before this point but now more closely, holding on despite the apostasy that began in his father's days. Calvin sharpens the singularity by an objection: Seth, Enos, Cainan, Mahalaleel and Jared were all living and their piety was celebrated a few verses earlier, so the age cannot have been barbarous with so many excellent teachers, from which he infers that the probity of the man whom the Spirit exempted from the common order was rare and almost singular. He draws the practical lesson that here is the way to escape the manners of those we live among, since public custom is a violent tempest and no contagion is worse than evil example; and on the ending he says a man must be shamelessly contentious who will not acknowledge something extraordinary, since all are taken out of the world by death while Moses declares that Enoch went by an unusual mode and was received miraculously, as Elijah afterwards was."
+   },
    {
-    "question": "What does 'God took him' mean — translation, or early death?",
-    "sides": [
-     {
-      "position": "Enoch was translated — taken bodily to heaven without dying, like Elijah; he did not see death (the dominant reading, Hebrews 11:5)",
-      "holders": [
-       "Ellicott",
-       "Calvin",
-       "Wesley",
-       "Gill"
-      ]
-     },
-     {
-      "position": "A euphemism for an early death — 'God took him' meaning Enoch died young",
-      "holders": [
-       "the rationalist reading (noted and rejected by Ellicott)"
-      ]
-     }
-    ]
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the change of pace, the accounts having run on for generations with nothing to distinguish them but names and numbers, and then one not to be passed over: Enoch, the seventh from Adam, who excelled them all and was the brightest star of the patriarchal age. On what walking with God means he is fullest: it denotes true religion, for what is godliness but walking with God, and it presupposes reconciliation, since two cannot walk together except they be agreed; it is to set him always before us and act as men under his eye, to live in communion with him, and to make his word our rule and his glory our end."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke goes to the words, finding that Enoch signifies to instruct or dedicate, from which he judges the man was early taught the things of God, and that the Hebrew verb stands in a form denoting what a man does upon himself, so Enoch set himself to walk, fixedly purposed not to receive the grace of God in vain. Wesley follows Henry almost word for word and adds that to walk with God is to comply with his will and be a worker together with him, taking it that Enoch grew eminent for piety only after Methuselah's birth."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott observes that the Greek renders the phrase Enoch pleased God, whence the testimony quoted in Hebrews, the Hebrew giving the cause of which the Greek names the effect. In place of the mournful refrain closing every other life here, there is an early removal into another world without pain or decay, suggesting that long life was not the highest blessing, so that one of Adam's posterity after the fall achieved what Adam in Paradise had failed to do; he adds that the removal fell about the middle of the antediluvian period and that Enoch's age was three hundred and sixty-five, the number of days in a year."
    }
   ],
+  "debates": [],
   "outliers": [],
   "themes": [
-   "Enoch walked with God: and he was not; for God took him",
-   "Enoch's walk with God and his translation (the crux of 'God took him')",
-   "translated to heaven without death, like Elijah (Hebrews 11:5), vs a euphemism for early death",
-   "the bright exception in the genealogy of death, the pledge of immortality"
+   "Enoch walked with God",
+   "the name Methuselah as prophecy",
+   "and he was not, for God took him",
+   "walking with God against the current of the age"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "25": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Methuselah begets Lamech: 'and Methuselah lived an hundred eighty and seven years, and begat Lamech' — Methuselah, the son of the translated Enoch, begetting Lamech at one hundred eighty-seven years (the line of promise continuing from Enoch through Methuselah to Lamech, the father of Noah, the godly genealogy carrying on toward the flood and Noah); Methuselah, the longest-lived of all men (969 years, v.27), the son of Enoch and the grandfather of Noah (his very long life spanning much of the antediluvian age, God's patience shown in the long life of Methuselah before the flood, which came in the year of his death); 'begat Lamech' (Lamech, a different Lamech from Cain's line, 4:18, the son of Methuselah, the father of Noah, the line of promise continuing, the godly Lamech, in contrast to the boastful Lamech of Cain's line, naming his son Noah in hope of comfort, v.29, the line of faith carried to Noah) — Gill, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Methuselah lived an hundred eighty and seven years, and begat Lamech",
-   "Methuselah begetting Lamech, continuing the line",
-   "the line of promise continuing from Enoch through Methuselah to Lamech",
-   "the godly line carried to Noah's father"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Methuselah's long life after Lamech: 'and Methuselah lived after he begat Lamech seven hundred eighty and two years, and begat sons and daughters' — Methuselah, the longest-lived of men, living seven hundred eighty-two years after Lamech and begetting many children (his very long life, totaling 969 years, v.27, the greatest of all the antediluvians); Methuselah's life, the longest in Scripture, spanning the whole age from near Adam's time to the flood (God's patience and forbearance marked in the long life of Methuselah, whose death, in his 969th year, coincided with the coming of the flood, the long life a testimony to God's longsuffering before judgment); 'begat sons and daughters' (Methuselah having many other children besides Lamech, the race multiplying through the patriarchs' offspring, the genealogy naming the line of promise but recording the many sons and daughters, the increase of mankind before the flood) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Methuselah lived after he begat Lamech seven hundred eighty and two years, and begat sons and daughters",
-   "Methuselah's long life and many children after Lamech",
-   "the longest life of all men, marking God's patience before the flood",
-   "the increase of mankind before the flood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Methuselah: 'and all the days of Methuselah were nine hundred sixty and nine years: and he died' — Methuselah living nine hundred sixty-nine years, the longest life recorded in Scripture, and then the refrain, 'and he died' (the longest-lived of all men dying at last, even the greatest age ending in death); Methuselah's nine hundred sixty-nine years the greatest age of any man (his long life a monument to God's patience, notably, by the chronology, Methuselah dying in the very year of the flood, his name, on one reading, 'when he dies, it shall be sent,' pointing to the flood, God's longsuffering waiting through Methuselah's whole long life before sending the judgment); 'and he died' (even Methuselah, the longest-lived, dying, the refrain sealing the chapter's theme — death reigns over all the sons of Adam, Romans 5:14, and the longest life is no escape, the great age only magnifying the certainty of death, the longest-lived patriarch, like all, ending in the grave, save Enoch, v.24) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Methuselah were nine hundred sixty and nine years: and he died",
-   "the total of Methuselah's years - the longest life - and his death",
-   "the longest life of any man, a monument to God's patience",
-   "even the longest-lived dying, in the very year of the flood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lamech begets Noah: 'and Lamech lived an hundred eighty and two years, and begat a son' — Lamech, the son of Methuselah, begetting a son (Noah, named in v.29) at one hundred eighty-two years (the line of promise continuing from Methuselah through Lamech to Noah, the godly genealogy reaching its goal in Noah, through whom the race and the line would be preserved through the flood); Lamech, of the godly line of Seth (a different Lamech from Cain's boastful descendant, 4:18-24), living and begetting in the line of faith (the genealogy carrying the line to the threshold of Noah, the godly Lamech's hope, v.29, contrasting with the violent boast of Cain's Lamech); 'begat a son' (the son, not yet named in this verse, Noah, v.29, the tenth from Adam, through Noah the line of promise surviving the flood, Noah the bridge from the antediluvian world to the new world after the flood, the line of faith reaching its preserver in Noah) — Gill, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Lamech lived an hundred eighty and two years, and begat a son",
-   "Lamech begetting a son, the future Noah",
-   "the line of promise continuing to Noah, the preserver of the line",
-   "the godly line reaching its goal in Noah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "25-31",
+  "pericope_label": "Methuselah, Lamech, and the naming of Noah",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Lamech names Noah in hope of comfort: 'and he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed' — Lamech naming his son Noah (rest/comfort, from nuach 'to rest' / nacham 'to comfort'), declaring a hope that this son would bring comfort (the name expressing Lamech's longing for relief); Lamech hoping for comfort 'concerning our work and toil... because of the ground which the LORD hath cursed' — relief from the wearisome toil of cultivating the cursed ground (3:17-19), the hope that Noah would bring some easing of the curse and labor, fulfilled on one reading in Noah's agricultural discoveries (the cultivation of the vine, 9:20), or in the renewal of the earth after the flood (when the curse was, in a measure, eased, 8:21-22); Lamech's words looking back to the curse on the ground (3:17, the toil under the curse weighing on the godly, the hope of comfort and rest expressing the longing of fallen man for relief and, ultimately, for the Redeemer) — Ellicott, Gill, Clarke, Calvin."
+    "summary": "Gill gives the Jewish reason why no man reached a thousand years, that a thousand years is God's day and none may arrive at it, observes that Seth's line repeats names from Cain's, and joins the two senses of Noah's name, that rest gives comfort and comfort flows from rest. Calvin settles the philology against the first of them: the verb meaning to comfort does not answer to the noun meaning rest unless a letter be called superfluous, and the name comes from the latter, so Lamech's words are either a transmutation of letters or a bare allusion. He asks besides how a father could hope so much from a son whose disposition he could not yet have discerned, and answers with the Jews that the saying was a prophecy, faulting them only for restricting to agriculture what belongs to all human misery."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes Methuselah's name for a warning, since the longest liver who ever was carried death about in his name, and presses the moral of the age, that the longest liver must die at last and neither youth nor age discharges from that war. He enters a scruple worth noting, that the common account of these men presumes every patriarch named here was holy and good, which he is loth to deny yet does not see can be inferred merely from their enrolment among the ancestors of Christ. In the naming of Noah he hears both a complaint of the calamitous state of human life, our days being spent in labour on a cursed ground, and an expectation that carries more than a parent's ordinary wish, some prophecy probably lying behind it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is cautious about the record of Methuselah's age, calling it the longest life mentioned in Scripture and probably the longest ever lived while denying we have authority to say so; yet he will not call life a misfortune, since uncertain and full of evils as it is, it is a blessing in all its periods if devoted to the glory of God and the interest of the soul. On the name Noah he separates the two roots and chooses rest over comfort, asking what is more comfortable than rest after toil, and reads the words prophetically of the man who built the ark, taking him for a typical person since after the waters dried God smelled a savour of rest. Wesley reproduces Henry on the name and on the death of the longest liver."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott adds the bleakest note in the chapter, that this is the first child since Eve's day recorded as named at birth, and that in both cases the name ended in disappointment, for Noah brought no rest and in his days came the flood."
    }
   ],
   "debates": [
    {
-    "question": "What comfort did Lamech hope for through Noah?",
+    "question": "What does the name Noah mean?",
     "sides": [
      {
-      "position": "Relief from the toil of the cursed ground — through Noah's agriculture (the vine, 9:20) or the post-flood renewal of the earth (the literal reading)",
+      "position": "rest rather than comfort — and what is more comfortable than rest after toil?",
       "holders": [
-       "Clarke",
-       "Calvin",
-       "Gill"
+       "Clarke"
       ]
      },
      {
-      "position": "A Messianic-tinged hope — a longing for the promised seed (3:15) who would bring true rest and comfort from the curse",
+      "position": "rest, on philological grounds: the verb for comfort does not answer to the noun for rest unless a letter be called superfluous",
       "holders": [
-       "the deeper/Messianic reading"
+       "Calvin"
+      ]
+     },
+     {
+      "position": "both together, since rest gives comfort and comfort flows from rest",
+      "holders": [
+       "Gill"
       ]
      }
     ]
@@ -1019,126 +346,94 @@
   ],
   "outliers": [],
   "themes": [
-   "he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed",
-   "Lamech naming Noah in hope of comfort",
-   "the hope of comfort and rest (relief from toil, or a Messianic-tinged longing)",
-   "the longing of fallen man for relief from the curse and the Redeemer"
+   "Methuselah carried death in his name",
+   "the longest liver must die at last",
+   "this same shall comfort us",
+   "does Noah mean rest or comfort?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lamech's long life after Noah: 'and Lamech lived after he begat Noah five hundred ninety and five years, and begat sons and daughters' — Lamech, like the other patriarchs, living to a great age (five hundred ninety-five years after Noah) and begetting many children (the long life and numerous offspring of the antediluvian fathers, though Lamech's total, 777 years, somewhat shorter than most); Lamech's long life part of the antediluvian pattern, though his total, v.31, less than the others (the patriarchs living for centuries, the long lives serving to people the earth and preserve the line of promise to Noah); 'begat sons and daughters' (Lamech having many other children besides Noah, the race multiplying through the patriarchs' offspring, the genealogy naming the line of promise, Noah, but recording the many sons and daughters, the increase of mankind before the flood) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Lamech lived after he begat Noah five hundred ninety and five years, and begat sons and daughters",
-   "Lamech's long life and many children after Noah",
-   "the great age of the patriarch and the multiplying of the race",
-   "the antediluvian pattern of longevity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of Lamech: 'and all the days of Lamech were seven hundred seventy and seven years: and he died' — Lamech's full life, seven hundred seventy-seven years (somewhat shorter than most of the patriarchs), and then the refrain, 'and he died,' the recurring toll of mortality (Lamech, the godly father of Noah, dying like the rest, before the flood); Lamech living seven hundred seventy-seven years, his life, though long, shorter than his father Methuselah's and others', yet, like all, ending in death (Lamech dying before the flood, which came after his death, in the year of Methuselah's death); 'and he died' the seal of mortality repeated over the last of the named patriarchs before Noah (the sentence of death, 3:19, taking effect, even the godly Lamech, who hoped for comfort through Noah, v.29, dying, the refrain closing the line of the patriarchs in death, death reigning over all the sons of Adam, Romans 5:14, save Enoch, the long lives ending in the grave, the chapter sealing the reign of death until the flood) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the days of Lamech were seven hundred seventy and seven years: and he died",
-   "the total of Lamech's years and his death",
-   "the godly father of Noah dying before the flood",
-   "the refrain sealing the reign of death until the flood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "32": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Noah and his three sons: 'and Noah was five hundred years old: and Noah begat Shem, Ham, and Japheth' — Noah, the tenth from Adam, the preserver of the line through the flood, begetting his sons at an advanced age (around five hundred years and after, Noah the goal of the genealogy, the bridge from the old world to the new, through him the race and the line of promise surviving the flood); 'Noah begat Shem, Ham, and Japheth' (Noah's three sons, from whom the whole post-flood race would descend, 9:18-19; 10:1, the three sons named together though born over a period, through these three the earth repeopled after the flood, the line of promise continuing especially through Shem, in whose line would come Abraham and Christ); Shem, Ham, and Japheth the heads of the post-flood nations (ch. 10, the whole human race after the flood springing from them, the genealogy of ch. 5, having traced the line from Adam to Noah, ending at the threshold of the flood and the new world, the line of promise, preserved through Noah, continuing through Shem to Abraham and to Christ) — Ellicott, Gill, Calvin, Clarke."
+    "summary": "Gill can hardly think Noah lived so long childless and supposes he may have had children who died, though he reports the view that Providence ordered it so, an earlier start giving him more than the ark could hold; he works the dates out to make Japheth probably the eldest, since Ham was the younger and Shem was a hundred two years after the flood. Calvin dismisses the pious reading outright, holding that those err who find Noah's chastity proclaimed here, since the text neither says he was unmarried till then nor tells when he first became a father; Moses is naming the time he was warned of the deluge and adds that about then he was father of three sons, not that he had them already but because they were born not long after. He declines to say whether the earlier men in the list were firstborn, since Moses meant only to follow the succession of the Church, and observes that God, to keep men from a vain confidence in the flesh, often chooses those who come later in nature's order."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the principle governing such lists, that where Scripture marks precedency the favoured son is put first though younger, as Jacob before Esau and Ephraim before Manasseh, and confesses he cannot account for Ham appearing out of his natural order at all. He closes the chapter by standing back from it, noting that of all these patriarchs the best was on earth the shortest time, Enoch's years being exactly the days of a solar revolution, and that Adam lived to see Lamech in the ninth generation, being the first who lived, the first who sinned and the first to taste death naturally, Abel's being violent. Wesley gives the reason for Shem's place, that the covenant was entailed on him and from him both Christ the head and the church the body descend, his very name meaning a name; and he explains why the old world's degeneracy is set down so fully before the story of its ruin, for the glory of God's justice and for warning to a wicked world."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott says flatly that no reason is given for Noah's late fatherhood, and that it does not follow he had no other sons, only that any such were unworthy to share the deliverance; he thinks it remarkable too that none of the three in the ark had children until after the flood. He glosses the three names as Shem, name or glory, the owner of the birthright and progenitor of our Lord; Ham, the dark-coloured, ancestor of the Egyptians and Cushites; and Japheth, the widener or on another account the fair, who though youngest fathered most of the races of Europe."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Noah was five hundred years old: and Noah begat Shem, Ham, and Japheth",
-   "Noah and the birth of his three sons",
-   "Noah the preserver of the line, the bridge from the old world to the new",
-   "the post-flood race springing from Shem, Ham, and Japheth"
+   "Noah begat Shem, Ham, and Japheth",
+   "why Noah was five hundred years old",
+   "the order of dignity, not of birth",
+   "the chapter looking forward to the flood"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  }
 }

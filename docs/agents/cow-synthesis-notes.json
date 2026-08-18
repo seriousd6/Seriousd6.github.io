@@ -4686,6 +4686,38 @@
       "book": "deuteronomy",
       "chapter": "12",
       "note": "Tiling: five entries over 32 verses, boundaries set by Henry's two section keys and by the chapter's own structure — 1-4 the monuments destroyed, 5-14 the one chosen place, 15-19 eating in the gates and the Levite, 20-28 the enlarged border and the blood repeated, 29-32 the closing warning against enquiry. The 5-14 entry is the heaviest at 7,799 source words of the chapter's 16,773 usable, carrying Calvin's and Ellicott's opposed accounts of the chosen place plus Henry's three reasons; splitting it at 12 would have cut Calvin's argument in half."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "5",
+      "verses": [
+        "29"
+      ],
+      "note": "Third distinct ghost-check failure mode in three chapters, and the most costly if missed. The 25-31 entry reported BOTH Calvin and Ellicott as present-but-unused, and undeclarable_voices auto-declared both. Both have substantial exposition at v29, the theological centre of the entry: Ellicott notes this is the first child since Eve recorded as named at birth and that in both cases the name ended in disappointment, since Noah brought no rest and in his days came the flood; Calvin settles the etymology that Gill and Clarke dispute, showing the verb for comfort does not answer to the noun for rest unless a letter be called superfluous, and answers the question how a father could hope so much from a son whose disposition he could not yet have discerned. Both were added and about seventy words trimmed elsewhere. What makes this case different from notes 414 and 425: the blocks are NOT short (Ellicott's runs ~200 words, Calvin's ~180) and they are NOT site chrome, so neither earlier diagnostic would have caught them. The only common factor with note 414 is that the verse carrying them, v29, sits at the END of a seven-verse span whose earlier verses are Gill-only formula. Working hypothesis: undeclarable_voices weighs a voice's share of the WHOLE span blob, so a substantial block can still read as negligible when diluted by many short formulaic keys. Practical rule now unconditional: read every auto-declared block before accepting the exclusion, regardless of its apparent size."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "29"
+      ],
+      "note": "Two clean disagreements in a chapter that looks like nothing but numbers. (1) Why the creation account is rehearsed at v1: Clarke says it is introduced to keep man in mind of the glory from which he fell and to prove that the death now to be recited came from his transgression and not his original state, since made in God's image he was made free of natural and moral evil -- i.e. the repetition measures what was LOST. Ellicott takes it to prove nearly the opposite, that the divine likeness was NOT lost by the fall nor the primeval blessing revoked, since that likeness does not mainly consist in moral innocence and was untouched by sin except so far as sin corrupted the vessel holding the gift. The same three words are made to carry opposite doctrines of the image. (2) What Noah's name means at v29: Clarke separates the roots and prefers rest over comfort, asking what is more comfortable than rest after toil; Calvin reaches the same conclusion on philological grounds, that the verb for comfort does not answer to the noun for rest unless a letter be called superfluous; Gill declines to separate them, holding that rest gives comfort and comfort flows from rest. Both recorded as debates."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "21"
+      ],
+      "note": "Sizing for a FORMULAIC chapter, a fourth shape to set beside notes 384 (argument), 390/401 (gazetteer and name-table) and 416 (narrative). genesis 5 is 18,614 usable source words over 32 contiguous keys, but the distribution is extremely uneven: the median key is 202 words while v1, v32, v21, v6, v22 and v24 carry 1,300-2,500 each. Sixteen of the thirty-two keys are bare Gill notes on a repeated formula. Six entries were the right count, at 3,102 source words apiece. The rule that fell out: in a formulaic chapter the entry count is set by the number of SUBSTANTIAL keys, not by total words, because the formulaic runs between them distil almost to nothing -- fifteen verses of Seth-to-Jared (2,978 words) yielded one entry, and most of that entry came from Henry's and Wesley's single blocks at v6 explaining why the formula is repeated at all. Corollary: identify the heavy keys first and let each anchor an entry, then sweep the formulaic runs into whichever neighbour they belong to."
     }
   ]
 }
