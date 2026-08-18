@@ -3572,6 +3572,19 @@
         "9"
       ],
       "note": "Calvin dissents from the plain sense of the avenger-of-blood licence (v19), calling private vengeance a savour of barbarism and a very bad precedent, and reads the text as denouncing a danger rather than opening a gate -- tolerated, not approved, conceded to hardness of heart. Gill reaches the same restraint by citing the Targum of Jonathan and Onkelos ('in judgment', i.e. once the court has condemned). Henry, by contrast, accepts the next-of-kin execution as the natural counterpart of the kinsman-redeemer, limited only by the requirement of notorious evidence."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "rejected",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "24",
+        "48",
+        "60"
+      ],
+      "note": "DROPPED, needs an owner decision (same class as numbers 31). nehemiah 7 is a repair pick whose existing entries are 50 percent UNSOURCED by the audit -- e.g. key 12 attributes detailed claims about the number of the children of Elam to Keil, Ellicott, Clarke, Gill, Wesley and Henry, when the only block at key 12 is JFB scrape residue (1 Chronicles 3, David's sons) and Ellicott has no block anywhere in this chapter's catena. The repair cannot be written under the current rules. The catena has only 22 keys for 73 verses (1-8, 12, 19, 24, 33-34, 48, 54, 60, 68-73), and coverage_problems forbids a declared range from covering a verse absent from the source, so pericopes cannot bridge the gaps: the tiling is forced to nine runs. Four of those runs (12, 24, 48, 60) are PURE JFB residue with zero usable source, and three more (19 at 24w, 33-34 at 65w, 54 at 30w) fall far below the 120-word thin floor. There is no cow-sources/ per-commentator file for nehemiah 7 to draw on. Options for the owner: (a) allow a declared range to bridge source-key gaps when the gap verses have no catena at all, which would permit 1-8 / 9-67 / 68-73 and make the chapter writable; (b) allow deletion of residue-only keys; (c) re-scrape. A drafted two-entry version (1-4 and 5-73, 486w and 596w, all five real voices, both passing lint and the fidelity audit at 0 percent unsourced) was discarded solely because of the tiling rule."
     }
   ]
 }
