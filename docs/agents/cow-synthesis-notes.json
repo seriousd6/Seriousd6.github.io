@@ -4463,6 +4463,55 @@
         "39"
       ],
       "note": "Four textual and legendary cruxes. (1) The Simon Magus legends: Clarke calls the whole body of them extravagancies that probably never existed, Ellicott sets them out at length as not in themselves incredible, and Robertson refutes the central one — Justin Martyr's Roman statue inscribed SIMONI DEO SANCTO — by the stone recovered from the Tiber in 1574, which is inscribed to a Sabine name for Hercules. Ellicott repeats Justin's claim without knowing the refutation, so the chapter contains the assertion and its answer side by side. (2) v24, Simon's fate: Clarke alone hopes well of him on the Codex Bezae and later Syriac margin, which add that he wept greatly and did not cease; Barnes concludes he died in the bond of iniquity and calls the testimony of antiquity decisive. (3) v37, the confession: absent from the best manuscripts including the Sinaitic though quoted by Irenaeus; Barnes and Ellicott both judge it inserted, Ellicott explaining the motive as the felt awkwardness of an unanswered question and a missing baptismal confession, while Gill and Clarke expound it as text. (4) v39: the Alexandrian variant that the Holy Spirit fell on the eunuch and an angel caught away Philip, reported by both Clarke and Ellicott, the latter judging it a conjectural emendation."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "19",
+      "verses": [
+        "11",
+        "14",
+        "22"
+      ],
+      "note": "undeclarable_voices produced three FALSE auto-exclusions in one chapter, the highest rate seen in this run, and all three were caught only by reading the flagged blocks. Wesley at v11 ('This was designed to put an end to their attempt, and to be an earnest of their utter ruin the next day'), Ellicott at v14 (the participle 'takers of his daughters', Ewald and Tuch rendering it of men still only betrothed, and the note that 'as one that mocked' is Hebrew for 'as one laughing'), and Wesley at v22 ('The very presence of good men in a place helps to keep off judgments') are all genuine exposition, not scrape residue and not bare Scripture quotation. The tool judged all three declarable. Common factor: each is a SHORT block (20-60 words) attached to a verse whose other voices are long, so whatever heuristic undeclarable_voices uses appears to be length-sensitive. All three were added to their entries and an equivalent number of words trimmed elsewhere; after the fix only Keil verse-text scrape and JFB donor residue remain excluded. Standing rule reaffirmed: never accept an auto-exclusion without reading the block, and treat short blocks under a long-block verse as the highest-risk case."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "19",
+      "verses": [
+        "8",
+        "24",
+        "26",
+        "33"
+      ],
+      "note": "genesis 19 carries FOUR distinct multi-way disagreements, more than any chapter in this run, and three of them are methodological rather than doctrinal. (1) Lot's offer of his daughters at v8: Clarke palliates it by the eastern law of hospitality while calling it unwarrantable haste; Calvin makes it a real defect mixed with real virtue, holding he should have died sooner; Wesley states the rule that of two evils we choose the less but of two sins neither; Ellicott refuses the lesser-of-two-sins plea outright, since fatherhood bound Lot as much as hospitality and the principle would excuse every wickedness. (2) 'The Lord rained from the Lord' at v24: Wesley reads the Son raining from the Father; Clarke reports the fathers so reading and concedes the circumstance is strange, but will not rest doctrine on 'proofs which require proofs to confirm them'; Calvin and Ellicott take the repetition as emphasis that the act was Jehovah's own. (3) The pillar of salt at v26: Clarke lists three mechanisms and endorses none; Keil has her killed by vapour and encrusted, 'without supposing a miracle'; Ellicott has the earthquake heap the rock salt over her; Calvin declines to explain the manner and defends only the fact. (4) Culpability at v33: Clarke excuses both parties, Gill refuses the ignorance-of-wine plea, Calvin says guilt diminished but not annulled, Ellicott calls it Lot's utter degradation. All four recorded as debates."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "4",
+        "30"
+      ],
+      "note": "Sizing outcome for a narrative chapter, completing the series with notes 384, 390 and 401. genesis 19 is 31,650 usable source words over 38 contiguous keys (median 594, three keys over 2k) and took TEN entries, a 3.2:1 distillation ratio. Set against joshua 13's gazetteer (3,210 words per entry) and genesis 10's name-table (3,036), narrative prose sits LOWER per entry than either, at 3,165 -- which looks similar until you notice what drives it. In a gazetteer the entry count is set by distinct identifications; in a name-table by rival identifications of the same name; in narrative it is set by PERICOPE BOUNDARIES, because a span that crosses a scene break produces an entry with two unrelated halves and no through-line. Every span here follows a scene: the arrival, the assault, the blindness, the warning, the lingering, Zoar, the destruction, Lot's wife, the cave, the daughters. Practical rule for narrative: cut on scene first, then check the word budget, and accept an oversized span rather than a span that straddles two scenes."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "19",
+      "verses": [
+        "7",
+        "25",
+        "31"
+      ],
+      "note": "JFB stride-6 residue, fifth data point. genesis 19 carries JFB at vv.7, 25 and 31 -- stride 6 with the v13 and v19 stops absent. Donor text is Genesis 8-9 again (Noah's sacrifice as fragrant incense, the rainbow 'set' as a pledge of peace, the ark's occupants going forth 'after their kinds'), the same donor as genesis 10 (note 400) and again the immediately preceding chapters. Two refinements to the pattern: (a) partial runs are now the norm rather than the exception -- joshua 13 had two of a possible five stops, genesis 10 four of six, genesis 19 three of six -- so absence at an expected stop is not evidence against the stride; (b) when the donor is the adjacent chapter the residue is topically plausible enough to slip past a casual read, which is why the stride, not the content, remains the detector. Running tally: leviticus 15, genesis 46, leviticus 19, numbers 13, judges 20, judges 11, exodus 34, joshua 13, genesis 10, genesis 19; the lone break is still genesis 11."
     }
   ]
 }

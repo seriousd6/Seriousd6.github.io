@@ -1,294 +1,137 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angels come to Sodom, Lot welcomes: 'and there came two angels to Sodom at even; and Lot sat in the gate of Sodom: and Lot seeing them rose up to meet them; and he bowed himself with his face toward the ground' — the two angels (of the three, 18:2, 22, the LORD remaining with Abraham) coming to Sodom in the evening (the messengers of judgment, and of Lot's rescue, vv.12-13, the angels arriving at the doomed city); 'Lot sat in the gate of Sodom' (Lot, who had pitched toward Sodom, 13:12, and now dwelt in it, sitting in the gate, the place of concourse and business, the righteous man dwelling among the wicked, 2 Peter 2:7-8, his soul vexed, the setting for his meeting the angels); Lot 'rose up to meet them, and bowed himself' (like Abraham, 18:2, Lot eagerly welcoming the strangers with courteous reverence, the hospitality of Lot, entertaining angels unawares, Hebrews 13:2, the godly man's care for the travelers in a wicked city, the welcome that marked Lot's righteousness amid Sodom) — Ellicott, Gill, Henry, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And there came two angels to Sodom at even; and Lot sat in the gate of Sodom: and Lot seeing them rose up to meet them; and he bowed himself with his face toward the ground",
-   "the two angels coming to Sodom and Lot's hospitable welcome",
-   "the righteous Lot dwelling among the wicked (2 Peter 2:7-8)",
-   "Lot's eager hospitality, entertaining angels unawares (Hebrews 13:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "1-3",
+  "pericope_label": "The two angels come to Sodom",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Lot presses the angels to lodge: 'and he said, Behold now, my lords, turn in, I pray you, into your servant's house, and tarry all night, and wash your feet, and ye shall rise up early, and go on your ways. And they said, Nay; but we will abide in the street all night' — Lot inviting the angels to lodge in his house, offering shelter, rest, and the washing of feet (the hospitality of the East, the godly man's eagerness to shelter the strangers, especially in a wicked city where they would be in danger, vv.4-5, the care of Lot for the guests); Lot offering them lodging for the night, that they might rise early and continue their journey (the considerate hospitality, the concern to shelter the guests overnight from the danger of the streets of Sodom); 'Nay; but we will abide in the street all night' (the angels at first declining, as the LORD seemed to pass by, Luke 24:28, to try Lot's hospitality and draw out his earnestness, the proving of Lot's care, the angels yielding to his pressing, v.3, the test that revealed Lot's righteous concern) — Keil and Delitzsch, Gill, Calvin."
+    "summary": "Gill takes the visitors for two of the three who had been with Abraham at Hebron the same day, and has Lot address them as persons of quality with majesty in their countenances, not knowing them for angels and so entertaining them unawares. Calvin asks why one of the three has disappeared, dismisses the Jewish answer that one came to destroy and the other to preserve since both assisted in the rescue, and explains that Abraham had the peculiar favour of God manifesting himself in his own Son, while to Lot Christ made himself known more obscurely, so that only the two came down. He will not affirm that Lot sat in the gate to receive guests, since Moses gives no cause, and thinks it as likely he had come out to see his sheep folded; he reads the angels' refusal as a test of the holy man's disposition, their pretending it safe to sleep on the highway concealing what they knew of the city and making its wickedness appear the greater."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that there was but one good man in Sodom and the messengers soon found him out, which he turns into a rule that wherever we are we should seek out those who live in the fear of God. Lot distinguished himself from his neighbours that night, and he that did not act like the rest must not fare like the rest: he sat in the gate at evening while the rest were tippling, and bowed to the ground before men whose bearing was sober though they came in no state, as if he discerned something divine in them."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that some manuscripts turn the negative into a word meaning to him, and explains the angels' refusal by their knowing the temper of the inhabitants while passing for mere travellers, until Lot's vehemence overcame them; he compares our Lord on the road to Emmaus, who made as though he would go further and then yielded. Wesley agrees that these were two of the three who had been with Abraham."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes that the verse continues the preceding narrative, and reads Lot's sitting in the gate as proof that he had become a citizen, probably after the deliverance from the Elamite invasion; that respect closed his eyes to the sinfulness of the people, and meanwhile intercourse with Abraham had ceased and he had lost his share in the covenant of circumcision. He explains the street as the broad open space of the town, where travellers had to lodge before caravanserais existed."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "And he said, Behold now, my lords, turn in, I pray you, into your servant's house, and tarry all night... And they said, Nay; but we will abide in the street all night",
-   "Lot's pressing the angels to lodge with him",
-   "the godly man's eager hospitality in a dangerous city",
-   "the angels declining to test and draw out Lot's earnestness"
+   "the two angels came to Sodom at even",
+   "Lot sat in the gate of Sodom",
+   "why only two came down",
+   "we will abide in the street all night"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot's prevailing hospitality: 'and he pressed upon them greatly; and they turned in unto him, and entered into his house; and he made them a feast, and did bake unleavened bread, and they did eat' — Lot urging the angels strongly, and they yielding, entering his house (the earnest, prevailing hospitality of Lot, the godly man not taking their first refusal but pressing until they consented, the care to shelter the guests); Lot 'made them a feast, and did bake unleavened bread' (he providing a meal, unleavened bread, baked quickly, the haste of hospitality, the generous entertainment, the righteous man serving his guests, though a lesser feast than Abraham's, 18:6-8, the warm hospitality of Lot); 'they did eat' (the angels partaking of Lot's feast, as at Abraham's, 18:8, truly or in appearance, the divine messengers accepting the hospitality of the righteous, the meal before the night's events, vv.4-11) — Gill, Wesley, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he pressed upon them greatly; and they turned in unto him, and entered into his house; and he made them a feast, and did bake unleavened bread, and they did eat",
-   "Lot's prevailing hospitality and the feast he made",
-   "the earnest hospitality of the righteous man amid Sodom",
-   "the angels partaking of the feast (truly or in appearance)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The men of Sodom surround the house: 'but before they lay down, the men of the city, even the men of Sodom, compassed the house round, both old and young, all the people from every quarter' — the men of Sodom, hearing of the strangers, surrounding Lot's house with vile intent (v.5, the wickedness of the city displayed in this open, shameless assault, the mob besetting the house of the righteous to commit abomination); 'both old and young, all the people from every quarter' (the whole city, young and old, from every part, joining in the wickedness, the universal, shameless corruption of Sodom, none righteous, not even ten, 18:32, the totality of the wickedness, justifying the judgment, the city wholly given over to sin); the gathering of the whole city, old and young, for so vile a purpose, showing the ripened, universal wickedness of Sodom (cf. 18:20, the cry great; 15:16, the iniquity full, the sin so open and general as to call down the judgment, the corruption that left no remnant to spare the city) — Ellicott, Gill, Henry, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "But before they lay down, the men of the city, even the men of Sodom, compassed the house round, both old and young, all the people from every quarter",
-   "the men of Sodom surrounding Lot's house",
-   "the universal, shameless wickedness of the city (none righteous, 18:32)",
-   "the ripened corruption that justified the judgment (18:20; 15:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The vile demand of Sodom: 'and they called unto Lot, and said unto him, Where are the men which came in to thee this night? bring them out unto us, that we may know them' — the men of Sodom demanding that Lot bring out his guests (the brazen, open demand of the mob, the shameless wickedness of the city, seeking to abuse the strangers); 'that we may know them' a euphemism for their vile purpose (the sin of Sodom, sodomy, the unnatural lust later named from the city, the sin of which the men of Sodom were guilty, Jude 7, 'going after strange flesh,' the gross, abominable wickedness, the open, unashamed demand to commit the abomination, the depth of Sodom's corruption); the open, public demand of the whole city (v.4) to commit so vile a sin showing the ripened, shameless wickedness of Sodom (the sin crying to heaven, 18:20, the abomination that brought the judgment, the corruption so total that the city must be destroyed) — Gill, Clarke, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they called unto Lot, and said unto him, Where are the men which came in to thee this night? bring them out unto us, that we may know them",
-   "the men of Sodom's vile demand",
-   "the euphemism for their abominable purpose (the sin of Sodom, Jude 7)",
-   "the ripened, shameless wickedness crying to heaven (18:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot goes out and shuts the door: 'and Lot went out at the door unto them, and shut the door after him' — Lot going out to the men of Sodom, shutting the door behind him to protect his guests (the righteous man exposing himself to danger to shield the strangers, the courage and care of Lot, going out alone to face the mob); Lot going out to the angry mob — a bold, dangerous act (the godly man interposing himself between the wicked and his guests, the care of Lot for those under his roof, v.8); 'shut the door after him' (Lot shutting the door to keep the mob from the guests, the careful protection of the strangers, the righteous man standing alone before the wicked city, to shield those he had taken under his roof, the courage and the danger of Lot's position) — Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Lot went out at the door unto them, and shut the door after him",
-   "Lot going out to the mob and shutting the door behind him",
-   "the righteous man exposing himself to shield his guests",
-   "the courage and danger of Lot's position before the wicked city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot pleads against the wickedness: 'and said, I pray you, brethren, do not so wickedly' — Lot entreating the men of Sodom not to commit the wickedness they intended (he calling them 'brethren,' in a friendly, conciliatory way, as fellow-townsmen, seeking to dissuade them, the righteous man pleading against the sin, the protest of Lot's conscience, 2 Peter 2:7-8, his righteous soul vexed, against the abomination); Lot calling them 'brethren' (a mild, conciliatory address, as neighbors, fellow-citizens, seeking to win them from their purpose by gentleness, the attempt to dissuade the wicked by kindness, Lot's prudence in dealing with the mob); 'do not so wickedly' (Lot plainly naming their intent wicked, the righteous man's testimony against the sin, the protest of conscience against the abomination, Lot, though dwelling in Sodom, not consenting to its sin but reproving it, the witness of the godly against the wickedness of the place) — Keil and Delitzsch, Gill, JFB."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And said, I pray you, brethren, do not so wickedly",
-   "Lot's plea to the men of Sodom not to do wickedly",
-   "the righteous man reproving the sin and pleading against the abomination",
-   "the witness of the godly against the wickedness of the place (2 Peter 2:7-8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Keil and Delitzsch"
+  ],
+  "range": "4-8",
+  "pericope_label": "The men of the city, and Lot's offer",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill and the dominant moral judgment (a grave fault): 'behold now, I have two daughters which have not known man; let me, I pray you, bring them out unto you, and do ye to them as is good in your eyes: only unto these men do nothing; for therefore came they under the shadow of my roof' — Lot, in his distress, offering his two virgin daughters to the lust of the mob, to save his guests (the proposal sinful — a man may not commit one sin, exposing his daughters to abomination, to prevent another, the offer, though springing from the pressure of the moment and the duty of hospitality, a great fault, the choosing of a lesser evil being no warrant, Lot's weakness and confusion in the strait); some (with Chrysostom and others) judging it the more grievously; the act not to be excused — a man may not do evil that good may come; Lot's motive to protect his guests ('only unto these men do nothing; for therefore came they under the shadow of my roof,' the sacred obligation of the host to shield those who had taken refuge under his roof, the motive explaining but not justifying the offer)."
+    "summary": "Gill explains that Lot called them brethren not by family, since the Sodomites came of Ham and he of Shem, nor by religion, but by community of nature and long neighbourhood, using soft language only to win them off their purpose. Calvin calls the single crime a lively picture of the place, their consent diabolical, their lust blind, their cruelty plain in besieging a house in a troop, and infers that they were given up to every audacity in crime; he reads their demand as a pretence, since men who meant what the Greek translators supposed would have spoken coarser language. On Lot going out and shutting the door he finds a rare virtue, but treats the offer of the daughters as a defect mixed with great virtue: destitute of advice Lot devised an unlawful remedy, and should rather have endured a thousand deaths than ward off one evil by another."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says the night's work filled the measure and proved the cry of Sodom no louder than there was cause for, marking first that the wickedness was universal, old and young from every quarter, the old not past it and the young already come up to it, so that either the city had no magistrates or they were themselves aiding and abetting."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke will not describe the crime, saying only that the account justifies the character given of the people in the preceding chapter and that the offence is too bad to describe; on the offer of the daughters he holds that nothing but the sacred light in which eastern nations held the rights of hospitality could palliate it, and even so calls the words not only anxious solicitude but unwarrantable haste. Wesley states the rule flatly, that of two evils we must choose the less, but of two sins neither, nor ever do evil that good may come."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The mitigating reading (Clarke, Ellicott): the rights of hospitality regarded among the ancients (and still in Arabia) as inviolable, the sacred, paramount duty of protecting guests in the customs of the East, under which Lot felt bound to shield the strangers at any cost, Lot acting under that overwhelming sense of duty, though still wrongly; the guests had come 'under the shadow of my roof' (the host's sacred duty to protect them, Lot's overwhelming sense of this obligation, the pressure that led him to the wrong proposal, the strait that confused the righteous man); the act gravely mitigated, but not justified, by the duty of hospitality, however understandable, remaining a fault."
+    "prevalence": "single",
+    "summary": "Ellicott renders the Hebrew from the end, meaning either to the last man or from the very end of the town, and observes that either way there were not ten righteous men in Sodom to save it. On the offer of the daughters he grants Ambrose's plea that a smaller sin was substituted for a greater and Chrysostom's that hospitality bound Lot to protect his guests, but answers that fatherhood bound him equally to protect his daughters, and that if men might substitute smaller sins for greater they would have an excuse for every wickedness."
    }
   ],
   "debates": [
    {
-    "question": "Was Lot's offering his daughters a grave sin, or mitigated by the duty of hospitality?",
+    "question": "Can Lot’s offer of his daughters be defended?",
     "sides": [
      {
-      "position": "A grave sin/fault, not to be excused - a man may not do evil (expose his daughters to abomination) that good may come (the dominant moral judgment)",
+      "position": "no defence, only a palliation from the eastern law of hospitality, and even then it was unwarrantable haste",
       "holders": [
-       "Gill",
-       "Chrysostom",
-       "the reformed reading"
+       "Clarke"
       ]
      },
      {
-      "position": "An act gravely mitigated by the sacred, paramount duty of protecting guests in the customs of the East, under which Lot felt bound (though still wrong)",
+      "position": "a real defect mixed with real virtue; he warded off evil with evil and should have died sooner",
       "holders": [
-       "Clarke",
-       "Ellicott",
-       "the mitigating reading"
+       "Calvin"
+      ]
+     },
+     {
+      "position": "of two evils choose the less, but of two sins neither",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "the lesser-of-two-sins plea must be refused outright, since it would excuse every wickedness; fatherhood bound him as much as hospitality",
+      "holders": [
+       "Ellicott"
       ]
      }
     ]
@@ -296,594 +139,84 @@
   ],
   "outliers": [],
   "themes": [
-   "Behold now, I have two daughters which have not known man; let me, I pray you, bring them out unto you... only unto these men do nothing; for therefore came they under the shadow of my roof",
-   "Lot offering his daughters to the mob (the crux of his act)",
-   "a grave sin not to be excused vs an act mitigated by the sacred duty of hospitality",
-   "the weakness of the righteous man in the strait"
+   "the men of Sodom compassed the house",
+   "do not so wickedly, my brethren",
+   "behold now, I have two daughters",
+   "may a smaller sin be chosen to avoid a greater?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The mob turns on Lot: 'and they said, Stand back. And they said again, This one fellow came in to sojourn, and he will needs be a judge: now will we deal worse with thee, than with them. And they pressed sore upon the man, even Lot, and came near to break the door' — the men of Sodom rejecting Lot's plea with scorn ('This one fellow came in to sojourn, and he will needs be a judge,' they resenting that he, a sojourner, a stranger, a newcomer, should reprove and judge them, the wicked despising the righteous reproof, the hatred of the ungodly for the testimony against their sin); the mob threatening to deal worse with Lot than with the guests (turning their fury on the righteous man for his reproof, the rage of the wicked against the one who withstood them, the danger now to Lot himself); 'they pressed sore upon the man, even Lot, and came near to break the door' (the mob violently assaulting Lot and about to break down the door, the fury of the wicked, the righteous man in great danger, the assault that the angels would interrupt, vv.10-11) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they said, Stand back... This one fellow came in to sojourn, and he will needs be a judge: now will we deal worse with thee, than with them. And they pressed sore upon the man, even Lot",
-   "the mob turning on Lot and threatening him",
-   "the wicked scorning the righteous reproof of the sojourner",
-   "the fury of the ungodly against the one who reproved their sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angels rescue Lot: 'but the men put forth their hand, and pulled Lot into the house to them, and shut to the door' — the angels (the 'men,' vv.1, 5) reaching out, pulling Lot back into the house out of the mob's hands, and shutting the door (the rescue of the righteous from the violence of the wicked, the angels delivering Lot in his danger, the protecting hand of God's messengers); the angels drawing Lot in from the mob (the deliverance of the righteous man at the moment of danger, the angels' intervention to save Lot); 'shut to the door' (the angels shutting the door against the mob, the barrier between the wicked and the righteous, the protection of Lot and the guests within, the prelude to the smiting of the mob with blindness, v.11, the angels guarding the house) — Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "But the men put forth their hand, and pulled Lot into the house to them, and shut to the door",
-   "the angels rescuing Lot and shutting the door",
-   "the deliverance of the righteous from the violence of the wicked",
-   "the angels' timely intervention to save Lot"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The men of Sodom smitten with blindness: 'and they smote the men that were at the door of the house with blindness, both small and great: so that they wearied themselves to find the door' — the angels striking the men of Sodom with a sudden blindness (a confusion or dazzling of sight, the judgment on the wicked, frustrating their evil, the divine power of the angels protecting Lot and the guests, the first stroke of judgment on Sodom); 'both small and great' (young and old, v.4, the whole mob, the universal judgment on the wicked, none spared in the blinding, the totality of the stroke); 'they wearied themselves to find the door' (the blinded men groping about, unable to find the door, wearying themselves, the wicked, smitten, persisting in their evil even when blinded, the obstinacy of hardened sin, the judgment frustrating and exposing the folly of their wickedness, the men of Sodom, ripe for destruction, blinded and groping, a picture of the spiritual blindness of the wicked, 2 Corinthians 4:4) — Ellicott, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they smote the men that were at the door of the house with blindness, both small and great: so that they wearied themselves to find the door",
-   "the smiting of the men of Sodom with blindness",
-   "the wicked struck and frustrated, yet persisting in their evil",
-   "a picture of the blindness of hardened sin (2 Corinthians 4:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angels bid Lot gather his family: 'and the men said unto Lot, Hast thou here any besides? son in law, and thy sons, and thy daughters, and whatsoever thou hast in the city, bring them out of this place' — the angels bidding Lot gather all his family (sons-in-law, sons, daughters, all he had in the city) and bring them out, to escape the coming destruction (the mercy of God extending the rescue to Lot's household for his sake, the warning to save his family); the angels would have Lot bring out 'whatsoever thou hast in the city' (all his family and connections, the mercy that would spare all who belonged to the righteous man, if they would heed the warning, the offer of deliverance to Lot's whole household); 'bring them out of this place' (the command to remove his family from the doomed city, the urgency of escape, the mercy of God in warning and delivering the righteous and his house, as the rescue of Lot, 2 Peter 2:7-9, the call to flee the coming judgment) — Gill, Henry, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the men said unto Lot, Hast thou here any besides? son in law, and thy sons, and thy daughters, and whatsoever thou hast in the city, bring them out of this place",
-   "the angels bidding Lot gather his family to escape",
-   "the mercy of God extending the rescue to Lot's whole household",
-   "the call to flee the coming judgment (2 Peter 2:7-9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angels declare the destruction: 'for we will destroy this place, because the cry of them is waxen great before the face of the LORD; and the LORD hath sent us to destroy it' — the angels declaring their errand: to destroy Sodom (the messengers of judgment, sent by the LORD, the doom of the city pronounced, the angels the executors of the divine judgment); the cause 'the cry of them is waxen great before the face of the LORD' (the cry of Sodom's sin, 18:20-21, great before God, the wickedness crying to heaven, the ripened iniquity, 15:16, that brought the judgment, the righteous ground of the destruction — the great cry of their sin); 'the LORD hath sent us to destroy it' (the angels acting by the LORD's commission, the destruction God's act, executed by his messengers, the divine authority behind the judgment, the angels as the instruments of God's justice, cf. Psalm 103:20, the doom of Sodom by God's command) — Keil and Delitzsch, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For we will destroy this place, because the cry of them is waxen great before the face of the LORD; and the LORD hath sent us to destroy it",
-   "the angels' declaration of the coming destruction of Sodom",
-   "the cry of Sodom's ripened sin the cause (18:20; 15:16)",
-   "the angels the executors of the divine judgment, by God's command"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot warns his sons-in-law, who scorn: 'and Lot went out, and spake unto his sons in law, which married his daughters, and said, Up, get you out of this place; for the LORD will destroy this city. But he seemed as one that mocked unto his sons in law' — Lot warning his sons-in-law (those betrothed to or married to his daughters) of the coming destruction, urging them to flee (the righteous man seeking to save his family, the urgent warning of the doom); Lot telling them plainly 'the LORD will destroy this city' (the faithful warning of the judgment, the godly man's concern to deliver his kindred, the message of the doom delivered); 'he seemed as one that mocked unto his sons in law' (the sons-in-law taking Lot's warning as a jest, not believing the threat of destruction, the unbelief and scorn of the worldly, who would not heed the warning, as in the days of Noah, Matthew 24:38-39, and as men scoff at the warning of judgment, 2 Peter 3:3-4, the sad consequence — those who mocked perished in the city, the warning despised, the warners lost) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Lot went out, and spake unto his sons in law... Up, get you out of this place; for the LORD will destroy this city. But he seemed as one that mocked unto his sons in law",
-   "Lot's warning to his sons-in-law, who scorned it",
-   "the unbelief of the worldly, taking the warning of judgment as a jest",
-   "those who mocked perishing in the city (Matthew 24:38-39; 2 Peter 3:3-4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angels hasten Lot: 'and when the morning arose, then the angels hastened Lot, saying, Arise, take thy wife, and thy two daughters, which are here; lest thou be consumed in the iniquity of the city' — at dawn, the angels urging Lot to make haste and flee (the urgency of the escape, the destruction being imminent, the angels pressing the lingering Lot, the mercy that would not let him perish); the angels bidding Lot take 'thy wife, and thy two daughters, which are here' (the family that remained, the sons-in-law having scorned the warning, v.14, and being left, the rescue limited now to Lot, his wife, and two daughters, the mercy delivering the few who would flee); 'lest thou be consumed in the iniquity (in the punishment of the iniquity) of the city' (the warning that Lot, if he lingered, would perish in the judgment on Sodom's sin, the urgency to escape the doom, the mercy that hastened the righteous out of the place of judgment, the danger of delay) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And when the morning arose, then the angels hastened Lot, saying, Arise, take thy wife, and thy two daughters, which are here; lest thou be consumed in the iniquity of the city",
-   "the angels hastening Lot to flee at dawn",
-   "the rescue limited to Lot, his wife, and two daughters (the sons-in-law lost)",
-   "the mercy that hastened the righteous out of the place of judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "9-11",
+  "pericope_label": "The assault repelled, and the men struck blind",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The angels seize Lot's hand, the LORD merciful: 'and while he lingered, the men laid hold upon his hand, and upon the hand of his wife, and upon the hand of his two daughters; the LORD being merciful unto him: and they brought him forth, and set him without the city' — Lot lingering (delaying, hesitating, perhaps from reluctance to leave his goods, or from a sad clinging to the place), and the angels seizing the hands of Lot and his family to draw them out (the mercy of God overcoming Lot's lingering, forcibly delivering him); this 'the LORD being merciful unto him' (the deliverance the fruit of God's mercy, not Lot's merit or readiness, the LORD, in mercy, not letting the lingering Lot perish, but having the angels drag him to safety, the free, sovereign mercy of God to the righteous, and even his weakness overruled by grace, the salvation of Lot the work of God's mercy); 'they brought him forth, and set him without the city' (the angels leading Lot and his family out and setting them outside Sodom, beyond the reach of the coming judgment, the rescue of the righteous from the doomed city, the deliverance accomplished by the merciful hand of God, the picture of grace pulling the lingering soul out of danger) — Keil and Delitzsch, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And while he lingered, the men laid hold upon his hand... the LORD being merciful unto him: and they brought him forth, and set him without the city",
-   "the angels seizing Lot's hand to bring him out (the mercy that dragged the lingering righteous to safety)",
-   "the deliverance the fruit of God's free mercy, not Lot's readiness",
-   "grace pulling the lingering soul out of danger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Gill takes the blindness for a peculiar stroke, of eye and heart together on Aben Ezra's reading, and observes that the Hebrew word occurs only twice and cannot mean blindness as to every object, since men wholly blind would have groped their way home rather than wearied themselves about Lot's house; had they not been given up to judicial blindness such a stroke might have convinced them, whereas they pressed on the harder. Calvin finds the indomitable haughtiness of the people in every word of their answer, notes that Moses still calls the rescuers men though they were not, and takes from the moment a rule about timing, that the Lord may seem regardless while the faithful are in conflict but stretches out his hand at the critical moment; he also sees an exchange in the door Lot had shut for his guests and through which they now receive him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke infers from their taunt that Lot's sitting in the gate may after all mark a magistrate's place, and sets out two readings of the blindness without preferring either, that the angels deprived them of the regular use of sight or brought on a darkness so deep the door could not be found. Wesley asks only what the stroke was for, and answers that it was to put an end to the attempt and to be an earnest of their utter ruin the next day."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command to escape, not looking back: 'and it came to pass, when they had brought them forth abroad, that he said, Escape for thy life; look not behind thee, neither stay thou in all the plain; escape to the mountain, lest thou be consumed' — the angel (the LORD speaking through him) commanding Lot to flee for his life ('Escape for thy life,' the urgent command to escape the coming judgment, the matter of life and death, the haste required to flee the doom); the commands 'look not behind thee, neither stay thou in all the plain' (Lot not to look back, in lingering affection or curiosity, the command Lot's wife would break, v.26, nor to stay anywhere in the plain, which would all be destroyed, the requirement of a complete, unhesitating flight, not to look back, not to halt, but to flee wholly from the doomed region, the test of obedience and faith); 'escape to the mountain, lest thou be consumed' (Lot to flee to the mountain, beyond the plain, for safety, the appointed refuge from the judgment, the warning that delay or disobedience would mean destruction, the urgent call to flee to safety, a figure of fleeing from the wrath to come, Matthew 3:7; Hebrews 6:18) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass, when they had brought them forth abroad, that he said, Escape for thy life; look not behind thee, neither stay thou in all the plain; escape to the mountain, lest thou be consumed",
-   "the command to escape, not looking back",
-   "the requirement of a complete, unhesitating flight from the doomed plain",
-   "a figure of fleeing from the wrath to come (Hebrews 6:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot's reluctance to flee to the mountain: 'and Lot said unto them, Oh, not so, my Lord' — Lot, bidden to flee to the mountain (v.17), demurring (he addressing the angel, or the LORD, recognized in him, as 'my Lord,' beginning a plea to be allowed a nearer refuge, vv.19-20, the weakness of Lot's faith, shrinking from the harder flight to the mountain); Lot's 'not so, my Lord' expressing his reluctance to obey the full command (to flee to the mountain, a measure of weakness or distrust, fearing the mountain, v.19, the righteous man, even in his deliverance, faltering in faith and asking an easier way, the plea for an indulgence); 'my Lord' (Lot's reverent address to the angel/the LORD, the suppliant tone, the beginning of his request for Zoar, vv.19-20, the plea of the weak but believing man, seeking a nearer place of safety) — Keil and Delitzsch, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Lot said unto them, Oh, not so, my Lord",
-   "Lot's reluctance to flee to the mountain",
-   "the weakness of Lot's faith, shrinking from the harder flight",
-   "the righteous man, even in his deliverance, faltering and asking an easier way"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot's plea, owning mercy yet fearing the mountain: 'behold now, thy servant hath found grace in thy sight, and thou hast magnified thy mercy, which thou hast shewed unto me in saving my life; and I cannot escape to the mountain, lest some evil take me, and I die' — Lot acknowledging the great mercy shown in his deliverance (he owning God's grace in saving him from the destruction, the grateful confession of the rescued man); Lot pleading 'I cannot escape to the mountain, lest some evil take me, and I die' (he fearing that he could not reach the mountain in time, or that some evil, the overtaking of the destruction, or peril in the mountain, would befall him there, the weakness of his faith, fearing the appointed refuge, the distrust that, even after deliverance, doubted God's power to save him to the mountain); Lot's plea, while owning God's mercy, betraying a want of faith (fearing the mountain, doubting his safety there, asking a nearer refuge, v.20, the righteous man's weakness, that God's grace bore with, the believer's faltering faith even amid deliverance, God's condescension to grant the indulgence, v.21) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold now, thy servant hath found grace in thy sight, and thou hast magnified thy mercy... in saving my life; and I cannot escape to the mountain, lest some evil take me, and I die",
-   "Lot's plea, acknowledging mercy yet fearing the mountain",
-   "the weakness of faith, fearing the appointed refuge",
-   "the believer's faltering faith even amid deliverance, that God's grace bore with"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot asks for Zoar: 'behold now, this city is near to flee unto, and it is a little one: Oh, let me escape thither, (is it not a little one?) and my soul shall live' — Lot asking to flee to a nearby small city (Bela, to be called Zoar, 'little,' v.22) instead of the mountain (he pleading its nearness and smallness — near enough to reach quickly, and little enough, he urged, to be spared without great loss, the request for an easier, nearer refuge); Lot pressing the smallness of the city — 'is it not a little one?' — as a reason it might be spared (the plea that so small a place might be excepted from the destruction, the suppliant urging his point); 'let me escape thither, and my soul shall live' (Lot asking that he might flee to the little city and so be preserved, the request for a nearer place of safety, the weak but earnest plea of the delivered man, the indulgence God would grant, v.21, sparing the little city for Lot's sake) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold now, this city is near to flee unto, and it is a little one: Oh, let me escape thither... and my soul shall live",
-   "Lot's request to escape to the little city of Zoar",
-   "the plea for an easier, nearer refuge than the mountain",
-   "the weak but earnest plea God would indulge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God spares Zoar for Lot: 'and he said unto him, See, I have accepted thee concerning this thing also, that I will not overthrow this city, for the which thou hast spoken' — the angel (the LORD) granting Lot's request ('See, I have accepted thee concerning this thing also,' God accepting his plea, as he had accepted, in mercy, his deliverance, the condescension of God to indulge the weak prayer of the righteous, the granting of the petition); God 'will not overthrow this city, for the which thou hast spoken' (for Lot's sake, the little city, Zoar, spared from the destruction, the mercy of God sparing the place for the sake of the righteous man's plea, as Abraham's intercession, ch. 18, would have spared Sodom for ten, the power of the prayer of the righteous, God's condescension to Lot); God's accepting Lot's plea and sparing Zoar showing the readiness of God's mercy, even to indulge the weak faith of his servant (the gracious answer to prayer, the sparing of the little city, a token of God's regard to the righteous, the mercy that bore with and answered Lot) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto him, See, I have accepted thee concerning this thing also, that I will not overthrow this city, for the which thou hast spoken",
-   "God granting Lot's request to spare Zoar",
-   "the little city spared for the sake of the righteous man's plea",
-   "the readiness of God's mercy to answer prayer, even weak faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Haste to Zoar, the judgment restrained: 'haste thee, escape thither; for I cannot do any thing till thou be come thither. Therefore the name of the city was called Zoar' — the angel urging Lot to hurry to the spared city ('Haste thee, escape thither,' the urgency of the escape, the judgment being imminent, the pressing of the lingering Lot to make haste); the remarkable word — 'I cannot do any thing till thou be come thither' (the LORD, as it were, restrained from executing the judgment until the righteous Lot was safe, God's care that the righteous be delivered before the judgment falls, cf. 2 Peter 2:9, 'the Lord knoweth how to deliver the godly'; Revelation 7:3, the sealing before the judgment, the divine purpose to spare the righteous, holding back the judgment for Lot's safety, the regard of God to his own); 'the name of the city was called Zoar' (the city, formerly Bela, 14:2, called Zoar, 'little,' from Lot's plea, v.20, 'is it not a little one?', the name commemorating the event, the spared little city, the memorial of Lot's deliverance) — Gill, Clarke, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Haste thee, escape thither; for I cannot do any thing till thou be come thither. Therefore the name of the city was called Zoar",
-   "the urgency of Lot's escape and the naming of Zoar",
-   "the judgment held back until the righteous Lot was safe (2 Peter 2:9)",
-   "God's care to deliver the godly before the judgment falls"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot enters Zoar at sunrise: 'the sun was risen upon the earth when Lot entered into Zoar' — by the time Lot reached the safety of Zoar, the sun having fully risen (the timing marked — the destruction would fall when Lot was safe, v.24, the dawn of the day of judgment for Sodom and of deliverance for Lot, the righteous safe before the doom); it being full daylight (the sun risen) when Lot entered Zoar (the clear morning in which the judgment would fall, the timing that marked Lot's deliverance just before the destruction); 'when Lot entered into Zoar' (Lot reaching the spared city and being safe, the righteous delivered before the judgment, v.24, the fulfillment of God's care, v.22, the judgment restrained till Lot was safe, the deliverance accomplished, the doom about to fall) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The sun was risen upon the earth when Lot entered into Zoar",
-   "the timing of Lot's entrance into Zoar",
-   "the righteous safe in the spared city as the day of judgment dawned",
-   "the deliverance accomplished, the doom about to fall on Sodom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD rains fire and brimstone: 'then the LORD rained upon Sodom and upon Gomorrah brimstone and fire from the LORD out of heaven' — God raining down brimstone (sulphur) and fire upon the cities, a fiery, sulphurous destruction from heaven (the supernatural judgment, whether by a miraculous storm of burning sulphur, or a divinely-directed natural catastrophe, the bitumen-rich region ignited, the overthrow of the cities by fire from God, the judgment of Sodom and Gomorrah, a standing example, 2 Peter 2:6; Jude 7); the dominant Christian reading taking 'the LORD... from the LORD' as marking two divine Persons (the LORD, the Son, on earth, who had been with Abraham, ch. 18, raining the fire from the LORD, the Father, out of heaven, God the Son from God the Father, the repetition a proof-text for the plurality of Persons in the Godhead, the Father and the Son both called Jehovah, the Son, the executor of judgment, raining the fire from the Father in heaven); a second reading taking 'from the LORD' as a Hebrew idiom — a repetition for emphasis (the LORD from himself, that is, from his own immediate power and presence, not necessarily denoting two Persons, the emphatic phrase marking that the judgment came directly from the LORD out of heaven, his own act); 'out of heaven' (the fire from heaven, from God, the divine origin of the judgment, not a mere natural disaster but the act of God, the fire marking the supernatural, divine character of the destruction) — Keil and Delitzsch, Gill, Henry, Calvin."
+    "prevalence": "single",
+    "summary": "Ellicott sharpens the taunt from the Hebrew, where the one came to sojourn implies a great concession in letting Lot live inside the walls, and he will needs be a judge stands as is ever acting as a judge, implying that Lot had reproved them before. On the blindness he argues that actual blindness is not meant in either place where the word occurs, since blinded men would have fled or groped until they found the door, and an army of blind men could not have been led from Dothan to Samaria; the word means a disturbance of vision in which the eye is not in proper connection with the brain, so the men seemed always about to reach the door and always failed, as they supposed through one another's fault."
    }
   ],
   "debates": [
    {
-    "question": "What does 'brimstone and fire from the LORD' (the LORD... from the LORD) signify?",
+    "question": "What kind of blindness fell on the men at the door?",
     "sides": [
      {
-      "position": "Two divine Persons - the LORD the Son raining the fire from the LORD the Father, a proof of the plurality of Persons in the Godhead (the dominant Christian reading)",
+      "position": "a peculiar stroke of eye and heart, blinding them only as to the thing they were intent upon",
       "holders": [
-       "Henry",
-       "the dominant Christian view",
        "Gill"
       ]
      },
      {
-      "position": "A Hebrew idiom of emphasis - the LORD from himself, his own immediate act, not necessarily two Persons",
+      "position": "either a loss of sight or an enveloping darkness — the sources allow both and neither is preferred",
       "holders": [
-       "the emphatic-idiom reading"
+       "Clarke"
+      ]
+     },
+     {
+      "position": "not blindness at all but a disturbance of vision, the men unaware anything had happened to them",
+      "holders": [
+       "Ellicott"
       ]
      }
     ]
@@ -891,90 +224,389 @@
   ],
   "outliers": [],
   "themes": [
-   "Then the LORD rained upon Sodom and upon Gomorrah brimstone and fire from the LORD out of heaven",
-   "the LORD raining fire and brimstone (the crux of 'the LORD... from the LORD')",
-   "two divine Persons (the Son from the Father, the plurality in the Godhead) vs a Hebrew idiom of emphasis",
-   "the supernatural judgment on Sodom (2 Peter 2:6; Jude 7)"
+   "this one fellow came in to sojourn",
+   "they pressed sore upon the man, even Lot",
+   "they smote them with blindness",
+   "what the blindness was"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
+   }
   }
  },
- "25": {
+ "12": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "12-14",
+  "pericope_label": "The warning, and the sons-in-law who mocked",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The total overthrow: 'and he overthrew those cities, and all the plain, and all the inhabitants of the cities, and that which grew upon the ground' — God overthrowing (overturning, destroying) Sodom, Gomorrah, and the other cities of the plain (Admah, Zeboiim, Deuteronomy 29:23, except Zoar, spared), and the whole fertile plain (the complete destruction of the region, the overthrow of the cities and their land); 'all the inhabitants of the cities' perishing (the whole population, given over to wickedness, vv.4-5; 18:20, none righteous to be spared, not ten, 18:32, the total destruction of the wicked inhabitants, the judgment on all the people of the cities); 'that which grew upon the ground' (the vegetation, the produce of the once-fertile plain, 13:10, 'as the garden of the LORD,' destroyed, the fruitful region made a desolation, the area of the Dead Sea, a barren waste, the smoke of the country, v.28, the total ruin of the place, a standing monument of the judgment on sin, 2 Peter 2:6, 'an example unto those that after should live ungodly') — Gill, JFB, Wesley."
+    "summary": "Gill marks that once Lot was drawn back inside the visitors began to make themselves known and to tell their errand. Calvin thinks the timing deliberate, and reads the cry of the city being waxen great as a statement about accumulation rather than a single offence, God being provoked not by one act but, after long forbearance, almost compelled by an immense mass of crimes; the more sins men heap together, the nearer their wickedness comes to God to cry for vengeance. He also defends at length the claim that angels are ministers of wrath as well as of grace, holding that God sets his elect angels over the judgments he carries out by means of the reprobate, since devils yield no voluntary obedience but are reluctantly compelled to serve as his executioners."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the question whether Lot has any besides in the city as both a command and a favour: the command that he do all he could for those about him, snatching them as brands out of the fire, and the favour in the terms, since the angels do not ask whether he knows any righteous men in Sodom, knowing there were none, but only what kindred he has, so that righteous or unrighteous they might be saved with him. He observes that bad people often fare better in this world for their good relations' sake, and that the holy angels are ministers of God's wrath as well as of his mercy, in which sense the good angels become evil angels."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works out from the grammar that there were two sons-in-law, the word being singular here and plural in the next verse, and that they were betrothed rather than married, since the daughters are called women who had not known man; reckoned part of the household they were entitled to the offer of protection, but treated the warning as a ridiculous tale and doubtless perished notwithstanding the grace sincerely offered them. Wesley follows Henry on the angels as ministers of wrath."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reads the participle as the takers of his daughters, which is why Ewald and Tuch render it of men still only to marry them, though he keeps the traditional sense and finds it confirmed by the next verse, where the two daughters are those found with Lot, implying that he had others besides; on the reception Lot met he notes that the Hebrew is as one laughing, that is, not in earnest."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "And he overthrew those cities, and all the plain, and all the inhabitants of the cities, and that which grew upon the ground",
-   "the total overthrow of the cities and the plain",
-   "the fertile region (13:10) made a desolation, the whole wicked population destroyed",
-   "a standing example of the judgment on sin (2 Peter 2:6)"
+   "hast thou here any besides?",
+   "the cry of them is waxen great",
+   "angels as ministers of wrath",
+   "he seemed as one that mocked"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
+  }
+ },
+ "15": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "15-17",
+  "pericope_label": "The lingering, and the hand laid on him",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill canvasses three reasons for the delay, that Lot was loath to leave his goods, or waiting for his sons-in-law, or praying the city might be spared, but prefers a fourth, that he was so filled with horror at the coming judgments that he stood stupefied with no power to stir. Calvin, having praised Lot's faith, says Moses shows something human still adhered to him: he saw himself going into exile and doubted what would become of a fugitive, failing to consider that he must act like men in a shipwreck who cast their cargo into the sea to come safe into port. Calvin finds the tardiness wonderful, since no words could move him until he was dragged out by the hand; where Christ said the spirit is willing but the flesh weak, here a worse fault appears, the flesh so repressing the spirit's alacrity that it can scarcely creep along."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supposes Lot still pressing useless entreaties on the family who would not come, and says the angels pulled them away by main force, the Lord being merciful, or they had perished in their lingering as the others perished in their gainsaying; he takes the charge word by word and finds every one emphatic, the danger imminent, a single look back possibly fatal, the plain to be destroyed as well as the city, and the mountain appointed as a refuge. Wesley draws the comfort out: Lot did not make a jest of the warning as his sons-in-law had, but he did not make the haste the case required, and if God had not been merciful to us, our lingering had been our ruin."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that Lot had the whole night to prepare and spent part of it on the errand to his sons-in-law, says flatly that he clung to his wealth and could not make up his mind to leave it, renders the clause in Jehovah's pity for him, and gives the word behind consumed as swept away. Keil and Delitzsch note that the plural gives way to a singular when the charge is spoken, which sits awkwardly with referring it to one of the two angels since Lot answers him by the name of God, and identify the mountain as the range afterwards called the mountains of Moab."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "lest thou be consumed in the iniquity of the city",
+   "while he lingered",
+   "the Lord being merciful unto him",
+   "escape for thy life, look not behind thee"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
+  }
+ },
+ "18": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "18-22",
+  "pericope_label": "The request for Zoar",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notices that Lot speaks as though three were present though he addresses only one, and explains the Hebrew behind I have accepted thee as I have lifted up thy face, an allusion to the eastern custom by which a man prostrated himself before his superior and was then bidden raise his face and stand, the token that his suit was granted; he identifies the town as Bela, afterwards Zoar, and weighs the distances from Sodom. Calvin infers from Lot addressing one that he did not rely on the angels at all, using their presence only as a mirror in which the face of God might be contemplated, and approves his rehearsing the mercy already shown as a way of gaining confidence to ask more. The request itself he will not excuse: God assigned a mountain and Lot chose a city, and those who treat the words as a model of prayer are mistaken, since our prayers are faulty so far as they are not founded on the word."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains I cannot escape to the mountain as a miscalculation made under pressure, Lot thinking there was not time enough and forgetting that God gives no command impossible to fulfil, though the hurry of his mind will at once account for and excuse so gross an oversight; on the plea that the town was a little one he offers two motives, that Lot wanted it for an inheritance and urged its smallness to get his request granted, or supposed that being little it was less depraved and not yet ripe for punishment, which Clarke thinks probably the case. Wesley draws the moral from the reason given for the delay, that the very presence of good men in a place helps to keep off judgments."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott renders the following clause literally, lest the evil overtake me, meaning the threatened calamity itself rather than any mishap on the road."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "oh, not so, my Lord",
+   "this city is near to flee unto, and it is a little one",
+   "is Lot’s prayer a model or a fault?",
+   "I cannot do any thing till thou be come thither"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  }
+ },
+ "23": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Keil and Delitzsch"
+  ],
+  "range": "23-25",
+  "pericope_label": "Fire and brimstone from the Lord",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill makes the sunrise fix both the hour of Lot's entering Zoar and of Sodom's burning, and takes the fine morning as evidence that what followed did not proceed from natural causes; he supposes an earthquake accompanied the fiery tempest, notes that Strabo attributes the lake to earthquakes and hot bituminous waters without mentioning fire from heaven, and observes that the bitumen pits would have made the shower burn the fiercer. Calvin explains the doubled name as emphasis: God did not cause it to rain in the ordinary course of nature but, as with a stretched-out hand, openly fulminated in a manner to which he was not accustomed, nor was it his will that the cities be simply swallowed by an earthquake. He remarks too that Moses relates the destruction succinctly, reciting a judgment no words would be vehement enough to describe and leaving it to the reader's meditation."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the arithmetic of the rescue, that though there were not ten righteous men in Sodom for whose sake it might be spared, the one righteous man among them delivered his own soul, and that the married daughters perished with their unbelieving husbands while those who stayed were preserved."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that many of the primitive fathers and several modern divines read the doubled name as the Son raining from the Father, concedes that two persons named Jehovah in one verse is strange and curious, and yet will not build on it, since the doctrine is established elsewhere and it is better not to use proofs which themselves require proof; on the lake he clears away the legends of the stone that will not sink, the wind that cannot ruffle it and the fruit that turns to ashes, calling them exaggerations or fictions of superstitious monks and of travellers who knew readers delight in the marvellous. Wesley takes the doubled name for God the Son raining from God the Father, since the Father has committed all judgment to the Son."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reckons that Lot, starting at dawn, had an hour for his flight, traces the Trinitarian reading of the doubled name to the Council of Sirmium and prefers Calvin's account that the repetition emphasises whose act it was, and grants that natural agencies were used while insisting this does not diminish the event, since a catastrophe of nature became miraculous by its circumstances, and we lose the benefit of Scripture's teaching if we suppose the events recorded there differed in kind from those that happen now."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does “the Lord rained … from the Lord” prove a distinction of Persons?",
+    "sides": [
+     {
+      "position": "yes; God the Son raining from God the Father, all judgment being committed to the Son",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "many so read it and the circumstance is strange, but it is not plainly indicated here and the doctrine should not rest on it",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "no; the repetition is emphatic, marking that the act was Jehovah’s own and no natural event",
+      "holders": [
+       "Calvin",
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the sun was risen when Lot entered Zoar",
+   "the Lord rained from the Lord",
+   "brimstone and fire out of heaven",
+   "the cities and all the plain overthrown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "26": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "26-29",
+  "pericope_label": "Lot's wife, and Abraham looking toward Sodom",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that she walked behind Lot, his back toward her, which was itself a temptation, and passes on the Targums' guesses that she wished to see the end of her father's house or whether married daughters followed. Calvin does not explain the manner of her change but defends the fact against those who ridicule it as no likelier than Ovid's metamorphoses: if God made men out of nothing, why may he not reduce them to nothing, and if that be granted, why not turn them into stones? The philosophers who deride it see miracles as great daily in nature. On Abraham he denies that he came because he doubted; persuaded already that the angel had not spoken in vain, he sought confirmation by sight, useful to himself and to posterity."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry breaks the act into five faults: she disobeyed an express command, sinning after the similitude of Adam's transgression; unbelief lay at the bottom, since she thought herself still safe in Sodom; she looked back on her neighbours with more concern than was fit; she hankered after her goods, the fault Christ fastens on; and the look showed an inclination to go back, which is why our Saviour makes it a warning against apostasy. He reads Abraham's return to the place as the sequel to prayer, since when we have prayed we must look after our prayers, directing prayer as a letter and then looking for an answer, and distinguishes the two backward looks, Abraham adoring the divine severity where Lot's wife tacitly reflected on it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets out three opinions on her change without endorsing any, that she was turned by miracle into rock salt keeping the human figure, that she was struck by lightning and enveloped in bituminous matter which afterwards resisted air and wet, or that she was consumed in the burning of the plain and the record itself is the memorial; he remarks that Scripture says little and commentators have made the account long by their glosses, and imagines Abraham's astonishment at finding God could not discover ten righteous persons in four cities. Wesley keeps Henry's last two heads."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Lot's wife looks back, becomes a pillar of salt: 'but his wife looked back from behind him, and she became a pillar of salt' — Lot's wife 'looked back from behind him' (she disobeying the express command, 'look not behind thee,' v.17, her looking back sinful — an act of disobedience, and, as Henry notes, unbelief at the bottom of it, a doubting of the judgment, or a hankering after what she left, she looking back upon her neighbors and her home, with lingering affection and regret for Sodom, a heart still cleaving to the world she should have fled, the looking back betraying a divided heart, loving the world under judgment); 'she became a pillar of salt' (Lot's wife, looking back, struck and becoming a pillar of salt, incrusted with salt, or turned to a saline mass, perhaps overtaken by the falling sulphur and salt, and so encrusted, or by a direct miracle, the literal, miraculous, or providential, judgment on her disobedience, the standing monument of her doom, a pillar visible, by tradition, near the Dead Sea, the swift judgment on the one who lingered and looked back); Lot's wife a perpetual warning — 'Remember Lot's wife' (Luke 17:32) — against looking back, lingering, and loving the world when called to flee from the wrath (the danger of a divided heart, of beginning to escape yet looking back, the example of one who, almost delivered, perished by disobedience and unbelief, the warning to flee wholly and not look back, Luke 9:62) — Henry, Ellicott, Gill, Clarke."
+    "summary": "Keil and Delitzsch hold she was not turned into anything but killed by the sulphureous vapour and afterwards encrusted with salt, noting that objects near the Dead Sea are still quickly crusted over, so that what Christ refers to may be understood without supposing a miracle. Ellicott prefers a third mechanism, that the earthquake heaped up the rock salt lying in strata about the sea and she was caught in the convulsion, leaving the salt hill as her memorial; he explains why Abraham's early start was needed, the place lying some miles off."
    }
   ],
   "debates": [
    {
-    "question": "What were the sin and the doom of Lot's wife?",
+    "question": "How did Lot’s wife become a pillar of salt?",
     "sides": [
      {
-      "position": "The looking back was disobedience and unbelief, a lingering affection for Sodom and the world (a divided heart); the pillar of salt the literal, miraculous/providential judgment, a perpetual warning - 'Remember Lot's wife' (Luke 17:32)",
+      "position": "three opinions are possible — a miraculous change, a lightning stroke with bituminous encrustation, or simple consumption in the fire — and none is preferred",
       "holders": [
-       "Henry",
-       "Gill",
-       "Clarke",
-       "Ellicott",
-       "the grammatical-historical reading"
+       "Clarke"
+      ]
+     },
+     {
+      "position": "killed by sulphureous vapour and afterwards encrusted with salt, so that no miracle need be supposed",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "entangled in an earthquake that heaped up the rock salt, leaving the salt hill as her monument",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the manner is not explained; the fact is to be defended against those who find it incredible",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -982,212 +614,161 @@
   ],
   "outliers": [],
   "themes": [
-   "But his wife looked back from behind him, and she became a pillar of salt",
-   "Lot's wife looking back and becoming a pillar of salt (the crux of her sin and doom)",
-   "the looking back the disobedience and unbelief of a heart still loving Sodom",
-   "the pillar of salt a swift, monumental judgment - 'Remember Lot's wife' (Luke 17:32)"
+   "she became a pillar of salt",
+   "remember Lot’s wife",
+   "Abraham gat up early to the place where he stood",
+   "the smoke of the country as the smoke of a furnace"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham returns to the place of his intercession: 'and Abraham gat up early in the morning to the place where he stood before the LORD' — Abraham, early in the morning, returning to the place where he had stood interceding before the LORD (18:22, the patriarch, concerned for the outcome, and for Lot, coming to the spot of his prayer, the return to look toward Sodom, v.28, the intercessor awaiting the issue); Abraham rising early (the diligence and concern of the patriarch, the eagerness to know the result of his intercession, the early rising of the praying man to see God's answer); 'the place where he stood before the LORD' (the very place of his intercession, 18:22-33, Abraham returning to it, perhaps to renew his prayer, or to behold the outcome, the connection between his prayer and his looking, the intercessor watching for the answer, the spot of the great dialogue) — Keil and Delitzsch, Gill, Henry."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Abraham gat up early in the morning to the place where he stood before the LORD",
-   "Abraham returning to the place of his intercession (18:22)",
-   "the diligence and concern of the praying man, awaiting God's answer",
-   "the intercessor watching for the issue, concerned for Lot"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham beholds the smoke: 'and he looked toward Sodom and Gomorrah, and toward all the land of the plain, and beheld, and, lo, the smoke of the country went up as the smoke of a furnace' — Abraham looking toward the cities and the plain and seeing the smoke of the destruction rising like the smoke of a furnace (the patriarch beholding the result of the judgment, the awful sight of the burning, ruined region); the vivid image — 'the smoke... as the smoke of a furnace' (the thick, billowing smoke of the burning cities and plain, the desolation of the once-fruitful region, 13:10, the visible token of the judgment, the smoke rising as from a great furnace, cf. Revelation 18:9, the smoke of Babylon's burning); the patriarch, who had interceded (ch. 18), beholding the judgment fall (the answer to his prayer, the cities not spared, there being not ten righteous, yet Lot delivered, v.29, the solemn sight of the destruction, the intercessor seeing the issue) — Ellicott, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he looked toward Sodom and Gomorrah, and toward all the land of the plain, and beheld, and, lo, the smoke of the country went up as the smoke of a furnace",
-   "Abraham beholding the smoke of the destruction",
-   "the thick smoke of the burning cities and plain, the desolation of the region",
-   "the intercessor seeing the issue of his prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God remembers Abraham, delivers Lot: 'and it came to pass, when God destroyed the cities of the plain, that God remembered Abraham, and sent Lot out of the midst of the overthrow, when he overthrew the cities in the which Lot dwelt' — in the midst of the judgment, God remembering Abraham (his intercession, ch. 18, and his regard for Lot, the deliverance of Lot for Abraham's sake, God's remembrance of his friend the ground of Lot's rescue, the connection between Abraham's prayer and Lot's deliverance); God 'sent Lot out of the midst of the overthrow' (God delivering Lot from the destruction, vv.16-22, the rescue of the righteous, accomplished by God for Abraham's sake, Lot, though weak and lingering, saved by God's mercy and Abraham's intercession, the deliverance of the godly from the judgment, 2 Peter 2:7-9); Lot's deliverance the fruit of Abraham's intercession (ch. 18 — though Abraham had pleaded for the city, and it fell, there being not ten righteous, his prayer answered in the saving of Lot, the power of the intercession of the righteous, God's regard to Abraham overruling for the rescue of his kinsman, the prayer that prevailed for Lot, though Sodom perished) — Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass, when God destroyed the cities of the plain, that God remembered Abraham, and sent Lot out of the midst of the overthrow",
-   "that God remembered Abraham and delivered Lot for his sake",
-   "the deliverance of Lot the answer to Abraham's intercession (ch. 18)",
-   "the power of the intercession of the righteous (2 Peter 2:7-9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "30-31",
+  "pericope_label": "The cave in the mountain",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill attends to which daughter speaks, the firstborn being the elder of these two, though daughters married in Sodom were probably older still, and reports Aben Ezra's suggestion that Lot had an earlier wife who died; the proposal comes from the elder as the bolder, with more authority and greater power to persuade. Calvin takes the episode as proof that what men contrive by rash counsels of carnal reason never prospers, since temerity often seems successful at first but the Lord at length curses whatever is undertaken without his approval, and Isaiah's woe is fulfilled against those who begin a work and not by the Spirit of the Lord: commanded to the mountain, Lot chose Zoar, and having been granted Zoar he repents and trembles at a destruction hastening on a place so near Sodom."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry offers three reasons why Lot durst not stay in Zoar, that he was conscious it was a refuge of his own choosing in which he had prescribed to God, or found it as wicked as Sodom, or watched the waters that after the conflagration began to overflow the plain and by degrees made the Dead Sea; from which he draws the rule that shelters of our own choosing, in which we do not follow God, commonly prove uneasy to us. He finds it strange that Lot did not return to Abraham, who had twice been the means of his safety, and answers that some good men are not wise enough to know what is best for themselves."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says foolish man ever prefers his own wisdom to his Maker's, it having been wrong at first not to go to the mountain and wrong next to leave the town after God had promised it should be spared, and adds what governs the rest of the chapter, that had Lot stayed at Zoar the shameful transaction afterwards recorded would probably never have happened; on the daughters' reasoning he explains that our father is old means he was not likely to marry again, and that they would have thought a marriage in Zoar dangerous and criminal, that town having been devoted to destruction and spared only at their father's asking. Wesley turns the cave into a warning of what men bring themselves to who forsake the communion of saints for secular advantage."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Lot dwells in the mountain cave: 'and Lot went up out of Zoar, and dwelt in the mountain, and his two daughters with him; for he feared to dwell in Zoar: and he dwelt in a cave, he and his two daughters' — Lot, who had begged for Zoar (v.20), now leaving it for the mountain (the very place the angel had bidden him flee to, v.17, he fearing to dwell in Zoar, perhaps fearing it too would be destroyed, or the wickedness of its people, the wandering of Lot, now dwelling in a cave, the sad reduced state of the man who had chosen the rich plain, 13:10-11); Lot's fear driving him from Zoar to the mountain (the unsettledness and fear of the delivered man, perhaps a tardy obedience, going at last to the mountain he had refused, v.18-19, the irony of his coming to the very place he had feared); 'he dwelt in a cave, he and his two daughters' (Lot, once rich, 13:5-6, and dwelling in a city, now dwelling in a cave in the mountain with his two daughters, the desolate, reduced condition, the sad end of his worldly choice, 13:10-11 — stripped of his wealth, his wife, his sons-in-law, dwelling in a cave, the setting for the shameful incident that follows, vv.31-38, the solitary, fearful state of Lot) — Keil and Delitzsch, Gill, Henry, Calvin."
+    "summary": "Keil and Delitzsch place the cave in the Moabitish mountains among caves in which the limestone rocks abound, and mark the limits of the daughters' ignorance, that they did not imagine the whole race had perished in the vale of Siddim but feared no man would link himself with them. Ellicott sets the contrast plainly, the patriarch whose wealth was once so great that he and Abraham could not dwell together being now content with a miserable home in a cavern."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "And Lot went up out of Zoar, and dwelt in the mountain, and his two daughters with him; for he feared to dwell in Zoar: and he dwelt in a cave",
-   "Lot leaving Zoar to dwell in the mountain cave",
-   "the once-rich man stripped and dwelling in a cave, fearful and solitary",
-   "the sad end of his worldly choice (13:10-11)"
+   "he feared to dwell in Zoar",
+   "he dwelt in a cave, he and his two daughters",
+   "there is not a man in the earth to come in unto us",
+   "shelters of our own choosing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
- "31": {
+ "32": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
+   "John Calvin",
+   "John Gill",
+   "Keil and Delitzsch"
   ],
+  "range": "32-38",
+  "pericope_label": "The daughters of Lot, and the birth of Moab and Ammon",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The design of Lot's daughters (a grave sin): 'and the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth' — Lot's elder daughter proposing to her sister a plan to obtain children by their father (her reasoning that their father was old, no marriage in prospect, and there was 'not a man in the earth,' no man left, as they supposed, to marry them, perhaps thinking the whole world, or at least their region and people, destroyed in the catastrophe); whatever the motive, the act a grave sin — incest, compounded by making their father drunk (vv.32-35, the daughters, brought up amid the corruption of Sodom, devising this wicked plan, the sin theirs, Lot, drunk, the unwitting and yet not blameless party, his drunkenness the occasion); the daughters' design issuing in the birth of Moab and Ammon (vv.37-38) — the ancestors of the Moabites and Ammonites, peoples of mixed relation to Israel (later both enemies and, through Ruth the Moabitess, ancestors of David and of Christ, the origin of these nations in this shameful incident, the sad fruit of Lot's worldly choice and the corruption of Sodom) — Keil and Delitzsch, Gill, Clarke, JFB."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin and Gill (the mitigating reading): the daughters' motive — 'that we may preserve seed of our father' (v.32) — the desire to perpetuate the family line, not mere lust; on the most favorable view, they thinking all mankind (or all their kindred) destroyed and themselves the only survivors who could continue the race; this motive, and their isolation in the cave, somewhat extenuating (but not excusing) the act; the act, though springing from a mistaken sense of necessity to preserve the seed, remaining a grave sin, the corruption of their upbringing in Sodom showing in the device; the moral judgment of the act divides between the grave-sin reading and the extenuating-motive reading."
+    "summary": "Gill supposes the wine was part of the provision carried out of Zoar, and refuses the plea that Lot did not know its strength, since he must have known it as well as his daughters, who plainly did, and though he may have drunk more freely to drown his grief this will not excuse drinking to excess; that the same thing happened a second night he takes for the aggravation of the whole business, since Lot ought to have been on his guard. On the names he reports the derivations offered for Moab, from a phrase meaning of the father, so that the elder daughter left the fact in her son's name for all time. Calvin holds that because his drunkenness was the cause of his sin, Lot's guilt is diminished but not annulled, and suspects God struck him with a spirit of stupor beyond what wine alone would do; he is severe on those who make Lot the protector of their own wickedness, and makes the second night a lesson about resisting first beginnings, noting that Lot lived chaste as an angel among the Sodomites and was besieged with new pitfalls as soon as he was safe on the mountain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke argues the most favourable construction the case will bear, on four grounds: that the daughters do not appear to have acted from any base or sensual desire, that they may have thought marriage into another family criminal, that they may have supposed no other way was left of preserving the family, and that they expected their father to refuse as profane what they judged necessary. He thinks Lot himself in many respects excusable, since he had no accurate knowledge of what happened on either night and might well have judged some servant from Zoar had been in his bed, and thinks him deceived in the wine as well, either not knowing its strength after a life among flocks or being given wine of more than usual power."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott concedes less than Clarke, allowing that the wish to preserve seed was a very strong feeling in ancient times and affords the sole excuse for the revolting conduct of these women, while calling the degradation of Lot and his family the most painful part of the story, which ends in his intense shame. Keil and Delitzsch note only what the text says, that the one son became father of the Moabites and the other of the children of Ammon, and remained so to the day the words were written."
    }
   ],
   "debates": [
    {
-    "question": "How is the act of Lot's daughters to be judged?",
+    "question": "How far are Lot and his daughters chargeable?",
     "sides": [
      {
-      "position": "A grave sin - incest compounded by drunkenness, the daughters' wicked design, the fruit of Sodom's corruption (the dominant moral judgment)",
+      "position": "both are largely excusable — the daughters acted from no sensual motive, and Lot knew nothing of either night and was deceived in the wine",
       "holders": [
-       "Clarke",
-       "Keil and Delitzsch",
-       "the grammatical-historical reading"
+       "Clarke"
       ]
      },
      {
-      "position": "Somewhat extenuated by their isolation and their motive of preserving the family seed, thinking all mankind destroyed (though not excused)",
+      "position": "the plea of ignorance fails, since Lot knew the strength of wine as well as his daughters did",
       "holders": [
-       "Calvin",
-       "Gill",
-       "the mitigating reading"
+       "Gill"
+      ]
+     },
+     {
+      "position": "his guilt is diminished but not annulled, drunkenness being the cause of the sin",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "the ancient desire for seed is the sole excuse for the women, and the episode is Lot’s utter degradation",
+      "holders": [
+       "Ellicott"
       ]
      }
     ]
@@ -1195,263 +776,35 @@
   ],
   "outliers": [],
   "themes": [
-   "And the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth",
-   "the design of Lot's daughters (the crux of the incest)",
-   "a grave sin (incest and drunkenness) vs an act extenuated by their isolation and motive",
-   "the origin of Moab and Ammon (vv.37-38)"
+   "let us make our father drink wine",
+   "that we may preserve seed of our father",
+   "he perceived not when she lay down",
+   "Moab and Ben-ammi"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plan to make Lot drunk: 'come, let us make our father drink wine, and we will lie with him, that we may preserve seed of our father' — the daughters planning to make their father drunk with wine, that they might lie with him without his knowledge (the device of intoxication, to accomplish the incest, the wicked plan, springing from their reasoning, v.31, and their professed motive, 'that we may preserve seed of our father'); the daughters resolving to make Lot drunk (knowing he would not consent if sober, the use of wine to overcome his reason and will, the compounding of the sin, incest by drunkenness, the device that exposed Lot's weakness, his liability to be made drunk); 'that we may preserve seed of our father' (the professed aim, to perpetuate the family line, thinking no man left, v.31, the motive that, on the favorable view, somewhat extenuates but does not excuse the act, the desire for seed driving the wicked device, the issue in Moab and Ammon, vv.37-38) — Gill, Ellicott, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Come, let us make our father drink wine, and we will lie with him, that we may preserve seed of our father",
-   "the daughters' plan to make Lot drunk",
-   "the device of intoxication to accomplish the incest",
-   "the professed motive of preserving the family seed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The firstborn lies with the drunken Lot: 'and they made their father drink wine that night: and the firstborn went in, and lay with her father; and he perceived not when she lay down, nor when she arose' — the daughters carrying out their plan, making Lot drunk, and the elder lying with him (the incest accomplished through his intoxication, the wicked design executed, the shameful deed); Lot 'perceived not when she lay down, nor when she arose' (being drunk, Lot unaware of what was done, he not consenting knowingly, being overcome with wine, yet his drunkenness a fault, the occasion of the sin, and he not wholly blameless, having been made drunk, and, perhaps, having drunk to excess, the sin chiefly the daughters', but Lot's drunkenness the door to it); Lot's drunkenness (as Noah's, 9:21) exposing him to shame and sin (the danger of intemperance, that overthrows reason and opens the door to evil, the righteous man, delivered from Sodom, now shamed in the cave through wine, the warning against drunkenness, Proverbs 23:31-33; Ephesians 5:18, the sad fall of Lot) — Gill, Clarke, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they made their father drink wine that night: and the firstborn went in, and lay with her father; and he perceived not when she lay down, nor when she arose",
-   "the firstborn lying with the drunken Lot",
-   "the incest accomplished through Lot's drunkenness, his intemperance the door to it",
-   "the warning against drunkenness (9:21; Ephesians 5:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The design repeated for the younger: 'and it came to pass on the morrow, that the firstborn said unto the younger, Behold, I lay yesternight with my father: let us make him drink wine this night also; and go thou in, and lie with him, that we may preserve seed of our father' — the elder daughter telling the younger of the first night's deed and proposing to repeat it for the younger (the design carried on a second night, the younger now to lie with the drunken Lot, the same wicked plan and motive, 'that we may preserve seed of our father'); the daughters resolving to make Lot drunk again, the second night (the persistence in the wicked device, the same means, intoxication, used, the deliberate continuation of the sin); 'that we may preserve seed of our father' (the same professed motive, v.32, the desire to perpetuate the line driving the repeated act, the issue in the birth of both Moab, the elder's son, and Ammon, the younger's, vv.37-38, the design carried out for both daughters) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass on the morrow, that the firstborn said unto the younger... let us make him drink wine this night also; and go thou in, and lie with him, that we may preserve seed of our father",
-   "the design repeated for the younger daughter",
-   "the persistence in the wicked device, the second night's deed",
-   "issuing in the birth of both Moab and Ammon (vv.37-38)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The younger lies with the drunken Lot: 'and they made their father drink wine that night also: and the younger arose, and lay with him; and he perceived not when she lay down, nor when she arose' — the second night, the daughters making Lot drunk again, and the younger lying with him (the incest repeated, Lot again unaware, being drunk, the wicked design fully carried out for both daughters); Lot again made drunk — the second time (the repeated intemperance, his fault, the occasion of the sin, the continuation of the shameful deed through wine); 'he perceived not when she lay down, nor when she arose' (as before, v.33, Lot unaware, being drunk, the sin chiefly the daughters', accomplished through his drunkenness, yet Lot's repeated drunkenness, not learning from the first, deepening his fault, the sad, shameful condition of the delivered man, the warning against intemperance, Ephesians 5:18) — Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they made their father drink wine that night also: and the younger arose, and lay with him; and he perceived not when she lay down, nor when she arose",
-   "the younger lying with the drunken Lot",
-   "the incest repeated through Lot's drunkenness, his fault deepened",
-   "the warning against intemperance (Ephesians 5:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Both daughters with child by Lot: 'thus were both the daughters of Lot with child by their father' — both daughters conceiving by their father (through the incest, vv.33-35, the result of the wicked design, the shameful fruit of the deed, both with child by Lot, the issue to be Moab and Ammon, vv.37-38); both daughters with child (the design fully accomplished, the incest of both nights bearing fruit, the shameful conception of both); 'with child by their father' (the incestuous conception, the children to be born, Moab, the elder's, Ben-ammi/Ammon, the younger's, vv.37-38, the ancestors of the Moabites and Ammonites, the origin of these nations in this shameful incident, the sad fruit of Lot's worldly choice, 13:10-11, and the corruption bred in Sodom, the issue of the design recorded plainly by Scripture) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thus were both the daughters of Lot with child by their father",
-   "both daughters conceiving by Lot",
-   "the shameful fruit of the incest, the design accomplished",
-   "the origin of the Moabites and Ammonites (vv.37-38)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The birth of Moab: 'and the firstborn bare a son, and called his name Moab: the same is the father of the Moabites unto this day' — the elder daughter bearing a son and naming him Moab (a name variously derived, some 'from the father,' marking his incestuous origin, the son of the elder daughter, the ancestor of the Moabites); Moab 'the father of the Moabites unto this day' (the ancestor of the Moabite nation, settled east of the Dead Sea, a people of mixed relation to Israel — sometimes enemies, Numbers 22-25; Judges 3, yet kin, Deuteronomy 2:9, the land of Moab not to be taken from them, and, through Ruth the Moabitess, Ruth 1:4; 4:13-22, an ancestress of David and of Christ, Matthew 1:5, the origin of the Moabites in this incident); the origin of Moab (and Ammon, v.38) in the shameful incident, yet the overruling providence of God (that even from this sad origin came peoples in the purposes of God, Moab giving Ruth, the line of Christ, the grace of God overruling the sin, the sad yet providentially-used origin of the nation) — Keil and Delitzsch, Gill, Clarke, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the firstborn bare a son, and called his name Moab: the same is the father of the Moabites unto this day",
-   "the birth of Moab, father of the Moabites",
-   "the Moabites, kin yet often enemies of Israel (Deuteronomy 2:9)",
-   "Moab's line giving Ruth, an ancestress of Christ (Matthew 1:5), God's providence overruling"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The birth of Ben-ammi: 'and the younger, she also bare a son, and called his name Benammi: the same is the father of the children of Ammon unto this day' — the younger daughter bearing a son, named Ben-ammi (son of my people/kindred, the ancestor of the Ammonites, the son of the younger daughter, the second of the two nations from this incident); Ben-ammi 'the father of the children of Ammon' (the ancestor of the Ammonite nation, settled east of Moab, a people, like Moab, of mixed relation to Israel — often enemies, Judges 11; 1 Samuel 11; 2 Samuel 10, yet kin, Deuteronomy 2:19, the land of Ammon not to be taken, the origin of the Ammonites in this incident); the Moabites and Ammonites, sprung from Lot's daughters, peoples on the borders of Israel, kin yet often hostile (the sad origin of both in the shameful incident, the providence of God in the rise of the nations, the close of the history of Lot, a sad end for the man who chose the plain, 13:10-11, the chapter ending with the origin of these peoples) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the younger, she also bare a son, and called his name Benammi: the same is the father of the children of Ammon unto this day",
-   "the birth of Ben-ammi, father of the Ammonites",
-   "the Ammonites, kin yet often enemies of Israel (Deuteronomy 2:19)",
-   "the sad close of the history of Lot, who chose the plain (13:10-11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
