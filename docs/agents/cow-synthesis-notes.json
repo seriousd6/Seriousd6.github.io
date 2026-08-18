@@ -3356,6 +3356,34 @@
       "book": "psalms",
       "chapter": "133",
       "note": "Clean chapter: contiguous keys 1-3, no Jamieson Fausset and Brown block at all, no site chrome, no exclusions, zero ghosts. Two entries, spans 1 and 2-3. Corroborating the owner's stride-6 finding from my own landed chapters: deuteronomy 28 carried identical JFB blocks at vv.3,9,15,21,27,33,39,51 and psalms 108 at vv.1,7,13 — both exact stride-6 — while genesis 26 had them at 11,23,35, which is stride 6 with alternate slots absent. Every one of these I had already declared in excluded_voices on a per-chapter basis, so the prose I have landed does not lean on residue; the concern in the owner's note about existing synthesis leaning on it applies to the legacy per-verse corpus, not to the pericope chapters landed in this run."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "16",
+      "note": "THE SENTENCE BUDGET FIXED THE OVERSHOOT. Last chapter I recorded a systematic 30 percent overshoot: five first drafts at 749-789 words against a 650 ceiling, after explicitly aiming at 570-600. This chapter I drafted to a hard STRUCTURAL budget instead - four paragraphs of four to five sentences - and four of the five entries landed inside the window on the FIRST pass (577, 626, 638, 622); only one needed trimming (732 to 650, and that one had run to five long sentences per paragraph). Total trim passes for the chapter: 6, against roughly 25 last time. Recommendation for docs/agents/cow-synthesis-loop.md: state the drafting target as a sentence count and paragraph count, not a word count. A word target does not control length; a sentence count does."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "16",
+      "note": "NO JFB BLOCKS AT ALL in leviticus 16 - the first chapter in this whole series with none, so no scrape residue to check or exclude. Worth knowing that the JFB gap is not uniform: where JFB is absent the residue problem simply does not arise, and a repair sweep can skip such chapters entirely. Someone should count how many chapters lack JFB blocks; if the absence correlates with book or section it may indicate which part of the scrape failed."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "16",
+      "note": "Two cross-span dependencies in this chapter that a per-span writer could easily miss. (1) The Sadducee dispute over where the incense was kindled (Gill, v13) and the oath sworn to the high priest on the eve (Ellicott, v17) are the same controversy reported by two commentators eleven verses apart; they belong together and I linked them across entries 5-14 and 15-19. (2) The meaning of Azazel is argued by Clarke at v10 (goat + dismiss, so simply the goat sent away) and settled flatly the other way by Gill at v26 ('the goat and Azazel are different, not the same, nor to be confounded as they are in our version'), sixteen verses later - so Gill lines up with Ellicott's proper-name reading against Clarke. A writer working strictly span by span would report the v10 debate as unresolved."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "16",
+      "note": "Ellicott is unusually load-bearing here, supplying second-Temple practice that the text itself does not describe and sometimes contradicts: the goat is merely let go in the law but was decreed to be destroyed at a rock twelve miles out with ten booths along the road; the written order of vv23-24 was reversed in practice; the hereditary high priesthood was treated as conditional on the elders judging the heir fit; and only sins against God were reckoned covered, wrongs to a neighbour needing his pardon first. Where a chapter is heavy with ritual, Ellicott carries more of the entry than the four-school balance suggests, and the grammatical-historical summary runs long as a result."
     }
   ]
 }
