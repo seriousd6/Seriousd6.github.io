@@ -3434,6 +3434,56 @@
       "book": "genesis",
       "chapter": "18",
       "note": "K&D block at v10 is bare verse quotation whose only comment ('After this conversation with Sarah, the heavenly guests rose up...') belongs to the NEXT span, so K&D had to be excluded from entry 9-15 even though the block sits inside it. This is the inverse of the genesis 27 case where a buried comment made an apparently bare block usable. Refined rule: read the tail of a quotation block before excluding, but check whether that tail comments on verses inside the span or merely transitions out of it - a transition sentence belongs to the following entry and cannot source the current one."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "15",
+      "verses": [
+        "4",
+        "22"
+      ],
+      "note": "JFB stride-6 scrape residue confirmed in a repair-queue chapter. The only two JFB blocks in leviticus 15 are at v4 (tabernacle hooks and pillars, hanging up the carcasses of the sacrificial beasts) and v22 (the half-shekel census arithmetic, 603,550 men at 2s.4d. each). Neither has anything to do with beds or with a woman's separation. Both declared in excluded_voices; the ghost check flagged them unprompted."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "15",
+      "verses": [
+        "33"
+      ],
+      "note": "Keil and Delitzsch at v33 is the bare verse text with no commentary attached, the tail of the concluding-formula block filed at v29. Declared in excluded_voices for the 31-33 entry rather than cited."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "15",
+      "note": "Sentence-length finding (note 320) holds on a chapter more than twice the size of psalms 100. Five entries, 12,383 usable source words: four landed in range on the first draft (637, 581, 482, 450) and only the 19-24 entry needed trimming, from 767. The one that overshot was the one whose material was a list — Ellicott's catalogue of ancient superstitions — where the short-sentence rule does not bite because each item is already its own clause. Where the material is argument rather than enumeration, one idea per sentence keeps the draft inside 650 without a trim pass."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "15",
+      "verses": [
+        "19"
+      ],
+      "note": "Filing: Henry's only two blocks in the chapter are at v1 and v19, and the v19 block is a whole-chapter overview running through vv.25-31. Filed at v19, so it had to be spent in the 19-24 entry; the 25-30 and 31-33 entries carry no puritan-evangelical school as a result. Keil's concluding-formula note on v32's wider phrase is likewise filed at v29 and was left unused rather than dragged into an entry that does not contain v32."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "18",
+        "19"
+      ],
+      "note": "Three live disputes recorded in the tags. v2: Ellicott takes 'flesh' as a euphemism for the private parts, Keil denies it from v13's 'bathe his flesh in water'. v18: Keil says the emission and not the act is unclean, Ellicott says the act pollutes both parties even in lawful marriage, Wesley refuses the reading outright as contrary to the whole current of scripture, the practice of the Jews, and the light of nature and reason. v19: Keil grounds the seven days in the significance of the number seven, Ellicott in the need to cover exceptional cases as after childbirth."
     }
   ]
 }
