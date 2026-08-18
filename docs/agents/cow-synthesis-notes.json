@@ -4013,6 +4013,50 @@
         "32"
       ],
       "note": "Three places where a commentator reasons past the text, worth tracking. (1) Clarke at v11 observes that the keeping of the sabbatical year is NOWHERE EXPRESSLY RECORDED in Scripture, and infers that the people could not trust God that far until the captivity gave the land the sabbaths their unbelief had denied it -- an argument from silence, but a disciplined one, and he flags it as his own inference. (2) Calvin at v24 separates the permanent from the temporary inside a single command, holding that the condemnation of superstition stands to the end of the world while the order to demolish was an enactment for that time, and draws the contemporary consequence without hesitation: Christians may retain buildings once polluted by idols and put them to better use. He then follows Augustine in denying private individuals any commission to destroy idols, the authority belonging to a people once they hold the country -- a live sixteenth-century application. (3) Ellicott at v32 explains the otherwise puzzling clause 'nor with their gods' from the diplomacy of the period, since treaties between nations regularly acknowledged each other's deities, citing the treaty between Rameses II and the Hittites in the Records of the Past. That is the kind of external evidence the older commentators had no access to, and it resolves the clause cleanly."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "34",
+      "verses": [
+        "28"
+      ],
+      "note": "New kind of excluded_voices case, and one the owner may want a ruling on. Clarke's entire block at exodus 34:28 is 'Forty days and forty nights - See Clarke's note on Exo 24:18' — a bare cross-reference with no exposition whatever. That is neither declared scrape residue nor a bare Scripture quotation, which are the two categories excluded_voices is documented for, yet synthesis_qa.undeclarable_voices judges it declarable and the ghost check auto-excluded it. I accepted the tool's judgement rather than cite a pointer as though it were commentary, but the rule as written in the loop doc does not cover contentless cross-references. Suggest either widening the documented categories to include them or leaving the case explicitly to worker judgement; either way it should be written down, since Clarke does this often."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "34",
+      "verses": [
+        "29"
+      ],
+      "note": "The filing rule bit twice in one chapter, and the ghost check caught the second instance only because Henry happens to be absent from the span. Matthew Henry's block at v28 runs through v35, so his exposition of the shining face — the credentials carried in the countenance, and the comparison with the transfiguration where our Lord laid his glory aside — is filed at v28 and cannot travel into the 29-30 entry where it reads most naturally. I had drafted it there; the ghost check flagged Henry as a cited voice absent from the span and I moved the transfiguration comparison back into the v28 entry and reattributed the rest to Wesley, who says nearly the same thing in his own block at v29. Same thing happened at v5, where Henry's and Calvin's exposition of the divine attributes is filed at the verse that only says the Lord descended, while the attributes themselves are in vv.6-7. Where a commentator's block runs several verses past its filing point, the ghost check is the only thing standing between the filing rule and a silent violation."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "34",
+      "verses": [
+        "1",
+        "33"
+      ],
+      "note": "Two clean disputes recorded in the tags. v1: who wrote the second tables. Ellicott says it is quite clear, though some have maintained the contrary, that they were inscribed by the finger of God as the first were, and Keil agrees the Hebrew idiom permits Jehovah as the subject of 'he wrote' at v28 and that Deuteronomy requires it; Clarke reaches the same result by a different route, distinguishing two documents — God engraving the tables laid up in the ark, Moses writing an authenticated copy for the congregation, which he says removes the apparent contradiction and lets both statements stand. v33: when the veil went on. Gill defends the Authorised rendering and explicitly rejects the Septuagint's 'when he had done', arguing that on that reading there would have been no occasion for a veil at all; Ellicott says the English exactly inverts the meaning and that the veil went on when the speaking was over, becoming part of Moses' ordinary dress and laid aside only before God and when delivering a message."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "34",
+      "verses": [
+        "2",
+        "8",
+        "26",
+        "32"
+      ],
+      "note": "JFB stride-6 residue, sixth consecutive chapter, and the donor is Deuteronomy again. Four blocks in exodus 34, at vv.2, 8, 26 and 32, six apart, all Deuteronomy 15-30 material (the Hebrew slave freed in the seventh year and the brand on the ear, the redemption of Hebrew girls, the law of retaliation as a civil rule mistaken by later Jews for a moral precept, the promise of restoration from dispersion). None touches the renewal of the covenant. All four declared in excluded_voices."
     }
   ]
 }
