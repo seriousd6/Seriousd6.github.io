@@ -3585,6 +3585,44 @@
         "60"
       ],
       "note": "DROPPED, needs an owner decision (same class as numbers 31). nehemiah 7 is a repair pick whose existing entries are 50 percent UNSOURCED by the audit -- e.g. key 12 attributes detailed claims about the number of the children of Elam to Keil, Ellicott, Clarke, Gill, Wesley and Henry, when the only block at key 12 is JFB scrape residue (1 Chronicles 3, David's sons) and Ellicott has no block anywhere in this chapter's catena. The repair cannot be written under the current rules. The catena has only 22 keys for 73 verses (1-8, 12, 19, 24, 33-34, 48, 54, 60, 68-73), and coverage_problems forbids a declared range from covering a verse absent from the source, so pericopes cannot bridge the gaps: the tiling is forced to nine runs. Four of those runs (12, 24, 48, 60) are PURE JFB residue with zero usable source, and three more (19 at 24w, 33-34 at 65w, 54 at 30w) fall far below the 120-word thin floor. There is no cow-sources/ per-commentator file for nehemiah 7 to draw on. Options for the owner: (a) allow a declared range to bridge source-key gaps when the gap verses have no catena at all, which would permit 1-8 / 9-67 / 68-73 and make the chapter writable; (b) allow deletion of residue-only keys; (c) re-scrape. A drafted two-entry version (1-4 and 5-73, 486w and 596w, all five real voices, both passing lint and the fidelity audit at 0 percent unsourced) was discarded solely because of the tiling rule."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "19",
+      "verses": [
+        "7",
+        "19",
+        "25",
+        "31",
+        "37"
+      ],
+      "note": "Cleanest stride-6 JFB case in the corpus so far. Leviticus 19 has exactly five JFB blocks and they sit at vv.7, 13 apart from nothing else — 7, 19, 25, 31, 37, six apart with no exceptions. Every one is Exodus 40 or Leviticus 1-2 material: the cloud filling the tabernacle at v7, the laying on of hands at v19, the inward purity of the offerer at v25, the turtledoves for the poor at v31, the meat offering at v37. None touches the holiness code. All five declared in excluded_voices; the ghost check flagged exactly those five and nothing else across eleven entries."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "19",
+      "note": "Span planning had to be revised three times mid-chapter, and the revisions were the reason the chapter landed. Leviticus 19 is 39,867 usable source words over 37 contiguous keys with a median of 901 — sixteen keys over 1,000 words. The first plan of 7 entries produced drafts at 885, 898 and 773 words against a 650 ceiling; no amount of trimming saves a draft that far over without gutting it. Splitting 15-18 into 15-16 and 17-18, 19-25 into 19-22 and 23-25, and 26-28 into 26-27 and 28 alone brought every entry into range, at 11 entries. The rule this suggests: when a span's source words exceed roughly 4,500, plan to split it before drafting rather than after, because the trim pass cannot recover a 200-word overshoot without dropping whole voices."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "19",
+      "verses": [
+        "3",
+        "14",
+        "16",
+        "18",
+        "23",
+        "26",
+        "29",
+        "35"
+      ],
+      "note": "Eight live disputes recorded in the tags, an unusually dense chapter for them. v3: whether the sabbath is joined to the fifth commandment to limit filial obedience (Ellicott, Wesley) or to charge parents with the honour of the day (Henry). v14: whether the stumbling-block before the blind is literal (Clarke, Calvin) or figurative of misleading the ignorant (Ellicott, Henry). v16: whether standing against a neighbour's blood is a duty of rescue (Ellicott) or a prohibition of false witness (Clarke, Wesley). v18: whether self-love is the rule measuring love of neighbour, which Calvin denies against the schools. v19: three accounts of the mingled kinds — a creation distinction, prudential husbandry, a barrier against the nations. v23: whether the uncircumcised fruit is husbandry (Clarke, Ellicott) or a symbol under the first commandment (Calvin). v26: three readings of eating with the blood. v35: how the promise attached to just weights is to be taken."
     }
   ]
 }
