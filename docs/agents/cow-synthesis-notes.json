@@ -3301,6 +3301,47 @@
       "book": "psalms",
       "chapter": "53",
       "note": "Third of the repeated psalms handled in this run, after psalms 70 (= psalms 40:13-17) and psalms 108 (= psalms 57 + 60). The pattern holds and is worth stating once for whoever repairs psalms 14: every voice declines to expound psalms 53 afresh and refers back — Calvin says a distinct commentary is unnecessary, Clarke sends the reader to his notes on the fourteenth and adds only short remarks, Henry says the psalm was opened before and confines himself to three observations on sin. What is left is largely a variant list, so the synthesis is heavier in textual comparison and lighter in doctrine than a normal chapter. Keil and Delitzsch supply the one substantive argument: the divine name occurs seven times in both recensions, mingled deliberately as Elohim and Jahve in psalms 14 but levelled to Elohim throughout here, more rigidly than the Elohimic character demands, from which they conclude David cannot himself have made the change. psalms 14 is the last of this family still unhandled."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "27",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35",
+        "41"
+      ],
+      "note": "JFB residue, sixteenth chapter: all seven blocks are Genesis 24 material (Rebekah unveiled at the well, the nose-ring and armlets, the servant declining food till he had told his errand). FOURFOLD DUPLICATION: keys 23, 29, 35 and 41 carry the SAME 29-word block, byte-identical. judges 1 gave the first exact duplicate at two keys; this is four. So the corruption is not a one-block-per-key displacement at all - a single intruding block can be stamped across many keys in one file. Any dedup pass must treat repetition within a chapter as expected, not anomalous."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "27",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "EDITORIAL DISSENT EMBEDDED IN CALVIN'S BLOCKS, twice in one chapter. At v5, inside Calvin's own block, an editor interrupts: 'This is a dangerous position, however it may be modified or explained. True faith never leads to sin... What Calvin calls zeal, he ought to have called rashness and something worse.' At v11 again: 'There is a great want of Calvin's accustomed caution and soundness in all this reasoning... It is much more probable that Jacob was influenced by a precipitate and ambitious desire...'. These are the translator/editor arguing WITH Calvin inside the block a synthesiser would naturally read as Calvin's. I attributed only Calvin's own claims. Anyone building an attribution checker needs to know the Calvin text in this corpus carries a second, contrary voice under the same heading."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "27",
+      "note": "K&D blocks that are bare verse quotation with no comment, twice in one chapter (v6 and the v31/v33 run), both excluded via EXCL_BY_ENTRY rather than forced into a mention. Meanwhile the v19/v25 K&D block DID carry one usable clause buried in the quotation. The working rule stands: check the quotation for a trailing comment before excluding, but do not manufacture a contribution where there is none."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "27",
+      "note": "Trim-pass cost is now the binding constraint, not draft quality. genesis 27 spans of 5330/3930/6923/7996/6875 gave entries of 646/649/648/647/649 - fifth clean chapter running, zero lint defects - but EVERY entry needed 3-6 trim passes, and the first drafts came in at 789/769/781/749/787 against a 650 ceiling. I set out to draft at 570-600 and consistently landed near 780. That is a systematic 30 percent overshoot, not noise. Recommendation for the loop doc: draft to a hard sentence budget rather than a word target - roughly 4 paragraphs of 4-5 sentences - since word-count intent alone does not control length."
     }
   ]
 }
