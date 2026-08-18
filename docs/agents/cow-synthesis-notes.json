@@ -5417,6 +5417,40 @@
         "35"
       ],
       "note": "The 34-35 entry is the thinnest this run has produced and worth recording as a shape problem. The trailing segment has 284 usable source words from ONE voice (Gill), which is above the THIN_SOURCE_MAX of 200, so the thin flag is not available and the entry must reach the 350-word floor — and above 375 to clear the FLOOR flag. It landed at 397 QA words, about 1.4x expansion on a single witness. Two hazards showed up in getting there and both are worth watching on any forced-expansion entry: (1) the sentence I first added to reach the floor asserted that the teaching gift was an overflow of the skill, which is the OPPOSITE of Gill's actual point that it is a distinct endowment not everyone with knowledge receives — caught on read-back and rewritten; (2) TTR fell to 0.580, exactly at the grade-A boundary, because a single voice on a single subject has no lexical variety to draw on, and it took deliberate vocabulary variation to lift it to 0.597. On a thin single-voice span, expect the floor to fight both fidelity and TTR at once."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "18",
+      "verses": [
+        "5",
+        "23",
+        "29"
+      ],
+      "note": "JFB donor residue on the stride-6 lattice, ninth consecutive chapter: vv.5, 23 and 29 carry Deuteronomy 33, Deuteronomy 34 and Joshua 1 material (the congratulatory address to Israel and the pillar of cloud, the eulogy of Moses, Joshua's commission) with nothing on Micah, the spies or Laish. Interval 5-23-29, i.e. the lattice with two positions empty. Excluded at entries 1, 21 and 27. Keil at v31 is a separate note-425 Mode 2 defect — the bare AV text of the verse and nothing more — and is excluded at entry 30, though he is used normally at the other five entries."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "18",
+      "verses": [
+        "14"
+      ],
+      "note": "The ghost check fired a FALSE POSITIVE this chapter and it is worth recording, because it is the first one in the run. Entry 14 was flagged ghost=['Augustine'] — not a fabricated attribution, but the phrase 'Abbot of St Augustine's' inside Ellicott's quotation of Dean Stanley's parallel about the bribe offered to the monk Roger of Canterbury in 1176. The check tests bare substring membership of a voice's short name in the visible prose, so any proper noun containing a commentator's name will trip it: Augustine, Gregory, Ambrose, Jerome and Bede are all also place, abbey and person names. I reworded to 'but an abbot' rather than suppress the warning, on the principle that the ghost check is the only automatic guard on fabricated attribution and must not be trained to cry wolf. A future worker meeting a ghost on a patristic name should check for this class before assuming a fidelity failure."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "18",
+      "verses": [
+        "6",
+        "24",
+        "30"
+      ],
+      "note": "Judges 18 carries three disagreements in which Clarke stands against the rest of the corpus, and all three are the same argument at different points. (1) On the oracle at v6 he holds it was a true answer from God — the Danites say Elohim, the priest answers 'before Jehovah', a name never given to any but the true God, and the venture succeeded exactly as promised — and he explicitly names and rejects the alternative, that the answer was a trick of the Levite or a suggestion of the devil and the success accidental, 'taking the thing by the worst handle to support an hypothesis, and to serve a system'. Gill, Henry and Ellicott all hold some form of what he rejects. (2) On 'my gods which I made' at v24 he denies that Micah, a worshipper of the true God, can mean idols by elohim, and reads the images as symbols of the divine presence; Ellicott takes the opposite line, that Micah calls them gods without scruple as Laban did and that the phrase is set down to shame him. (3) At v30 he refuses the charge of idolatry against the Danites altogether, calling them the first dissenters from the established worship who kept its forms as nearly as they could and served the true God according to their light. Ellicott meets him halfway, assuming the image was never dissociated from the worship of Jehovah. Recorded as three debates rather than one because the verses are in three different entries, but a reader following Clarke should know it is a single sustained position."
     }
   ]
 }
