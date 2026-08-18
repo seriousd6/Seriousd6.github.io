@@ -4861,6 +4861,41 @@
       "book": "1samuel",
       "chapter": "2",
       "note": "No Calvin in 1 Samuel, so the reformed school rests on Gill alone in every entry of this chapter. Worth knowing before sizing a 1 Samuel pick: one fewer substantial voice per span than the Genesis/Exodus norm, which makes spans of the same word count yield thinner entries."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "11"
+      ],
+      "note": "Corollary to note 446, learned the hard way here. Sizing a span to a whole-pericope filing's REACH only works while the reach stays under one entry's capacity. Henry files at v1 covering vv.1-10; the merged 1-10 entry first-drafted at 1028 QA words, so it was split back to 1-4 and 5-10, which yields two full entries (1300 words of output) at the cost of Henry's restitution paragraph going unused. Henry also files at v11 covering the whole jealousy law vv.11-31, far beyond any single entry. Rule: honour the filing by STARTING a span at the filing verse; extend the span to the filing's reach only if the reach fits, and otherwise accept that the tail of the block goes unused. More entries beat more preserved filing."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "28"
+      ],
+      "note": "JFB stride-6 residue again, four blocks at vv.4/10/16/28, none of them on Numbers: vv.4 and 10 carry the identical Leviticus 14 house-leprosy passage (stones, mural salt, replastering), v16 a Leviticus 15 note on discharges, v28 a Leviticus 15 note on porous unglazed pottery. Excluded at all four. Third chapter running where every JFB block is donor text; the stride, not the content, remains the reliable detector."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "5",
+      "verses": [
+        "31",
+        "36"
+      ],
+      "note": "Two long source blocks in this run are misfiled scrape overflow rather than commentary on their key. Clarke at numbers 5:31 runs 2909 words, most of it a treatise on trial by ordeal with Anglo-Saxon etymologies that belongs to a chapter-end appendix; and in 1samuel 2:36 his block carries a digression on atmospheric pressure that belongs to the pillars of the earth at v8. Both are usable in part but inflate the size estimate badly — worth discounting when a single key runs 3k+ words in an otherwise short chapter."
     }
   ]
 }
