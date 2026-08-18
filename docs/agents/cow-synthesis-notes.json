@@ -3773,6 +3773,42 @@
         "29"
       ],
       "note": "Unusual source form: Clarke's blocks at keys 27, 28 and 29 are not prose commentary but three of Charles Wesley's hymns on this passage, quoted in full from 'Short Hymns on Select Passages of the Holy Scriptures' (Bristol, 1762), with Clarke's own closing remark that such sentiments are the more remarkable coming from a man otherwise sufficiently bigoted to ecclesiastical orders and regularity. Handled by reporting that Clarke answers the Eldad and Medad episode with poetry rather than comment, and attributing the hymns to Charles Wesley rather than to Clarke. Worth watching for elsewhere in Clarke: verse quoted as commentary is easy to mis-attribute to the commentator."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "20",
+      "verses": [
+        "2",
+        "8",
+        "20",
+        "26",
+        "32",
+        "38",
+        "44"
+      ],
+      "note": "JFB stride-6 residue at its longest run yet: seven blocks in one chapter, at vv.2, 8, 20, 26, 32, 38 and 44 — six apart with no exceptions across a 48-verse chapter. Every one is Joshua 1-4 material (the pledge to Rahab, the caves of Quarantania, the instructions before crossing, the ark standing in Jordan, the twelve stones, the height of the river in harvest). Not one touches the war with Benjamin. All seven declared in excluded_voices; the ghost check flagged exactly those seven and nothing else across nine entries. Four consecutive chapters have now confirmed the stride."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "18",
+        "35",
+        "48"
+      ],
+      "note": "Four live disputes recorded in the tags, two of them methodological rather than exegetical. v1 and v18: whether the oracle was consulted at Mizpeh and Bethel or at Shiloh — Keil and Ellicott hold Bethel, the ark having been fetched because Shiloh lay too far from the war, while Clarke and Gill hold that a deputation went to Shiloh where Phinehas was; Ellicott notes the English rendering 'house of God' has hidden Bethel from readers throughout the chapter. v35: why the narrative gives the result before the details — Keil defends the text against critics who called the summary spurious or took the following verses for a rival account, holding they have missed a habit of Hebrew historical writing; Ellicott accepts the same order but explains it by compilation from sources, one of which he thinks was a poem, or by a style he says a Roman would have called inconditus. v48: whether the extermination can be defended, where Ellicott weighs a good side (horror of moral pollution) against an evil one (ruthless savagery) and Clarke allows no good side at all."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "20",
+      "note": "Chapter with no Calvin and no Wesley anywhere in its source — the voice set is Gill, Ellicott, Keil, Clarke, Henry and JFB residue only. That collapses the school coverage: reformed is carried by Gill alone in every entry, wesleyan-arminian by Clarke alone, and puritan-evangelical appears only in the four entries containing Henry's blocks (vv.1, 12, 18, 26). Worth noting for anyone auditing school balance across the corpus: a thin school here is a property of the source, not of the synthesis. Henry's four blocks each run far past the verse they are filed under — the v26 block covers the rest of the chapter — so his material had to be spent in those four entries and the last three entries carry no puritan-evangelical voice at all."
     }
   ]
 }
