@@ -4512,6 +4512,79 @@
         "31"
       ],
       "note": "JFB stride-6 residue, fifth data point. genesis 19 carries JFB at vv.7, 25 and 31 -- stride 6 with the v13 and v19 stops absent. Donor text is Genesis 8-9 again (Noah's sacrifice as fragrant incense, the rainbow 'set' as a pledge of peace, the ark's occupants going forth 'after their kinds'), the same donor as genesis 10 (note 400) and again the immediately preceding chapters. Two refinements to the pattern: (a) partial runs are now the norm rather than the exception -- joshua 13 had two of a possible five stops, genesis 10 four of six, genesis 19 three of six -- so absence at an expected stop is not evidence against the stride; (b) when the donor is the adjacent chapter the residue is topically plausible enough to slip past a casual read, which is why the stride, not the content, remains the detector. Running tally: leviticus 15, genesis 46, leviticus 19, numbers 13, judges 20, judges 11, exodus 34, joshua 13, genesis 10, genesis 19; the lone break is still genesis 11."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "23",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30",
+        "36",
+        "42",
+        "48"
+      ],
+      "note": "JFB scrape residue, twenty-ninth chapter affected and the cleanest instance of the model to date. All eight JFB blocks are Luke 12 material (the leaven of the Pharisees and covetousness, the rich fool, the lilies and Matthew 6:25-33, girding up the loins, unto us the Twelve, the baptism Christ came to bring), in narrative order, keyed at 6, 12, 18, 24, 30, 36, 42, 48 — period 6 at offset 6, an UNBROKEN run of eight with no empty slots and no truncation, and with TWO adjacent-duplicate pairs (keys 18 and 24 byte-identical, keys 30 and 36 byte-identical). This is the longest run yet observed and confirms every element of the model at once: fixed period 6, variable phase, donor walked in narrative order, and the scraper stalling to repeat a block. Observed offsets to date: 3 (genesis 21, leviticus 26, genesis 32), 4 (numbers 21), 5 (exodus 23, acts 8), 6 (luke 23). Notably the donor here is a chapter of the SAME book eleven chapters earlier, where previous donors have been other books or distant chapters. Excluded from every entry covering these keys."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "24",
+        "32",
+        "44"
+      ],
+      "note": "A DISTINCT defect, not the JFB residue: patristic homily blocks are filed one pericope behind the text. Cyril of Alexandria's block at key 1 is his homily on Luke 22:63-71 (the mocking and the Sanhedrin trial); at key 24 it is headed 23:1-5, 18, 19; at key 32 it is headed 23:24-31; at key 44 the second Cyril block is headed 23:32-43. In every case the sermon that covers the preceding pericope is keyed to the first verse of the next. The same lag appears in the Catena blocks at key 38, where Theophylact, Gregory, Ambrose, Chrysostom and Gregory of Nyssa are all keyed to the superscription but in fact expound the penitent thief of verses 39-43. Unlike the JFB residue this material is at least from the right book and adjacent context, so it is usable if the lag is allowed for, but a naive reader of the tags would mis-locate every patristic comment in the chapter by one pericope."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "23",
+      "note": "Catena speaker tags are lost into the block text. This chapter's source is a Catena-style compilation, and the internal attributions (AUG., BEDE;, THEOPHYL., CHRYS., ATHAN., DIONYS., GREEK EX.) survive only as inline capitals inside a block carried under ONE strong header. So the block headed Theophylact at key 13 in fact runs Theophylact, Bede, Theophylact, Ambrose, Bede, Theophylact; the block headed Gregory of Nyssa at key 33 contains Augustine and Chrysostom; the block headed Athanasius at key 33 contains Bede; the block headed Cyril at key 44 contains Augustine twice and a Dionysius eyewitness report. Consequence for this loop: the tags' voices list is built from headers, so a voice quoted inside another's block cannot be named without tripping the named-but-not-sourced check, and naming the header voice for material that is internally another's would be a fidelity error. I handled it by attributing to the header voice only what the internal tags leave to him, and by writing 'the catena adds' or 'his block preserves' for the rest. A parser that split blocks on the inline capitals would recover perhaps a third more distinct attributions in Catena chapters."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "23",
+      "note": "Voice set and tiling for a Catena chapter. Luke 23 carries 26 distinct header strings resolving to 25 canonical voices: the usual Gill, Calvin, Henry, Clarke, Wesley, Ellicott, Barnes, Robertson, Lightfoot and JFB, plus Augustine, Bede, Ambrose, Tertullian, Gregory, the Gloss, Leo and Greek Exposition (latin-fathers), Theophylact, Chrysostom and Cyril of Jerusalem (eastern-antiochene), and Cyril of Alexandria, Athanasius, Gregory of Nyssa and John Damascene (eastern-alexandrian). Two header strings, Cyril and Cyril of Alexandria, are the same man; Gregory and Gregory of Nyssa are not, so any surname matching needs a negative lookahead. Entries here carry 10 to 15 voices against 6 to 8 in the Pentateuch and 9 to 10 in Acts 8. The 1-5 entry at 15 voices needed six trim passes to reach 650 words and sits at the ceiling: naming fifteen sourced voices once costs roughly 500 words before any content, which leaves about 10 words of substance per voice. On the evidence of this chapter and Acts 8, the 350-650 window is the binding constraint for Catena and NT chapters, not the source budget, and tiling should be driven by VOICE COUNT rather than source words wherever the count exceeds about twelve."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "6",
+        "13",
+        "26",
+        "32",
+        "44",
+        "50"
+      ],
+      "note": "Block-keying losses declared for four entries. Matthew Henry has blocks only at keys 1, 6, 13, 26, 32, 44 and 50, each a section overview: the block at 32 covers the crucifixion through the penitent thief to verse 43, and the block at 44 covers the death, the centurion and the watchers through verse 49. His material was used in the entries where it is keyed, so entries 34, 35-38, 39-43 and 45-49 carry no puritan-evangelical voice. Four of eleven entries therefore lack that school. The same structural cause as in Acts 8: Henry writes section overviews for narrative rather than verse notes, and the catena's own pericope divisions do not align with his."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "23",
+      "verses": [
+        "12",
+        "34",
+        "43",
+        "47"
+      ],
+      "note": "Four disagreements worth carrying forward. (1) v12, the friendship of Herod and Pilate: Ambrose makes it a type of Israel and the Gentiles reconciled through the Passion, Bede the contrary figure of both agreeing to persecute Christians, and Barnes denies any union at all, since Pilate wished to release Jesus and both merely made sport of him. (2) v34, for whom the prayer was offered: Barnes takes in Romans and Jews together, Ellicott and Robertson restrict it to the soldiers and expressly exclude the Sanhedrin since Pilate and the priests sinned against knowledge, and Chrysostom makes it conditional upon repentance. (3) v43, the promise to the thief: Clarke reports that Marcion and the Manichees struck the verse from their copies, takes it for a proof of the soul's immateriality, and attacks at length the expedient of placing a comma after today so as to read I tell thee this today; Barnes doubts the day can be pushed to the resurrection. (4) v47, the centurion's words: Matthew has the Son of God and Luke a righteous man, and Augustine offers two solutions, that both were spoken and each evangelist reported one, or that Luke gives the sense the soldier intended, since he may have called him Son of God only because he believed him just."
     }
   ]
 }
