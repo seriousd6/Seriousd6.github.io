@@ -3484,6 +3484,49 @@
         "19"
       ],
       "note": "Three live disputes recorded in the tags. v2: Ellicott takes 'flesh' as a euphemism for the private parts, Keil denies it from v13's 'bathe his flesh in water'. v18: Keil says the emission and not the act is unclean, Ellicott says the act pollutes both parties even in lawful marriage, Wesley refuses the reading outright as contrary to the whole current of scripture, the practice of the Jews, and the light of nature and reason. v19: Keil grounds the seven days in the significance of the number seven, Ellicott in the need to cover exceptional cases as after childbirth."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "46",
+      "verses": [
+        "5",
+        "11",
+        "29"
+      ],
+      "note": "JFB stride-6 residue again, and this chapter shows the stride cleanly: the only three JFB blocks in genesis 46 sit at vv.5, 11 and 29, six apart, and all three are Genesis 39-40 material (Potiphar's wife's remonstrance, her accusation of Joseph, Joseph interpreting the butler's and baker's dreams). None has anything to do with the descent into Egypt. Declared in excluded_voices for the three entries that contain them."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "46",
+      "verses": [
+        "9",
+        "33"
+      ],
+      "note": "Keil and Delitzsch at v9 and v33 are bare verse text with no exposition attached — the tails of blocks whose commentary is filed at v6 and v32. Declared in excluded_voices for the 8-27 and 33-34 entries rather than cited."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "46",
+      "verses": [
+        "8"
+      ],
+      "note": "Calvin at v8 rejects a solution of the seventy/seventy-five discrepancy that he attributes to Augustine. The ghost check flags Augustine as a cited voice absent from the span, which is a false positive: he is named inside Calvin's own text, not as a commentary voice, and the corpus fidelity check grounds the attribution. He is correctly absent from the entry's voices list, so no badge is affected. Kept the name because dropping it would misreport whose argument Calvin was answering."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "46",
+      "verses": [
+        "8"
+      ],
+      "note": "Filing rule caught a live error during drafting. Keil's note on the closing formula, 'all the souls of the house of Jacob', is filed at v6 — inside the 1-7 span — and I had cited it in the 8-27 entry where it reads more naturally. Removed. Keil has no real commentary anywhere in 8-27 (v9 is bare verse text), so the correct outcome was excluded_voices, not a borrowed citation. Worth noting that the natural reading order and the filing order diverge most where a commentator's block runs past the verse it is filed under."
     }
   ]
 }
