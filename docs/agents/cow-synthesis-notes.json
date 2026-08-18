@@ -5382,6 +5382,41 @@
         "40"
       ],
       "note": "The chapter carries two disagreements worth keeping. At 10:12-13 the question is how far the long day may be explained: Clarke states his method before his explanation, taking the miracle as a fact recorded in the manner it happened, holding the received system of the universe to be also the system of the Mosaic writings, and grounding the possibility on God's freedom to suspend or annihilate the secondary causes he established; Calvin refuses the enquiry entirely, saying the question how the sun stood over Gibeon is as unseasonably raised by some as unskilfully explained by others, and that the rebuke falls with double force on those who explain the miracle away, naming rabbis who allowed only something very like a miracle; Ellicott settles one proposed reading on purely lexical grounds, since the verb cannot mean to rise and so excludes the theory of a night attack. At 10:40 the question is how the destruction is to be judged: Calvin says plainly that but for the express command it would be a detestable cruelty surpassing anything recorded of savages, and that what would otherwise horrify us must be embraced with reverence as proceeding from God; Wesley says the same and adds that God takes the act upon his own just indignation; Clarke narrows the fact instead, holding that only those found in arms and continuing to resist were destroyed, that those who submitted were spared, and that many escaped and afterwards reoccupied the land."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "35",
+      "verses": [
+        "6",
+        "32",
+        "33"
+      ],
+      "note": "exodus 35 is the first chapter in this run whose SOURCE has interior gaps: keys 6, 32 and 33 are absent from cow/exodus/35.json entirely (not null, missing). Since coverage_problems() rejects any entry covering a verse absent from the source, no span may bridge a gap, so the chapter is hard-partitioned into three segments — 1-5, 7-31 and 34-35 — before any editorial judgment is possible. The gaps cut across the natural units: the gap at 6 splits the list of materials, and the gaps at 32-33 split the Bezaleel passage in half. Spans landed as 1-5 | 7-24 | 25-31 | 34-35. Standing lesson: run the gap check BEFORE reading Henry's filings, because on a gapped chapter the filings cannot govern the spans."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "35",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "JFB donor residue on the stride-6 lattice again: vv.2, 8 and 14 carry Exodus 21-22 case law (the goring ox, the theft of cattle and the penalties for it, the burning of a field) with nothing on the sabbath or the tabernacle offering. Eighth consecutive chapter showing the pattern. Note the difference from mark 15, where the run was six terms unbroken: here it stops after three, v20 and v26 having no JFB at all. So the stride predicts WHERE residue falls when it falls, but not how long the run continues. Keil at v2 is a separate defect of the same class — a bare AV reprint of vv.2-11 with no exposition, note-425 Mode 2. Both excluded at entry 1, JFB also at entry 7."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "35",
+      "verses": [
+        "34",
+        "35"
+      ],
+      "note": "The 34-35 entry is the thinnest this run has produced and worth recording as a shape problem. The trailing segment has 284 usable source words from ONE voice (Gill), which is above the THIN_SOURCE_MAX of 200, so the thin flag is not available and the entry must reach the 350-word floor — and above 375 to clear the FLOOR flag. It landed at 397 QA words, about 1.4x expansion on a single witness. Two hazards showed up in getting there and both are worth watching on any forced-expansion entry: (1) the sentence I first added to reach the floor asserted that the teaching gift was an overflow of the skill, which is the OPPOSITE of Gill's actual point that it is a distinct endowment not everyone with knowledge receives — caught on read-back and rewritten; (2) TTR fell to 0.580, exactly at the grade-A boundary, because a single voice on a single subject has no lexical variety to draw on, and it took deliberate vocabulary variation to lift it to 0.597. On a thin single-voice span, expect the floor to fight both fidelity and TTR at once."
     }
   ]
 }
