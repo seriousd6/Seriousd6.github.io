@@ -3623,6 +3623,52 @@
         "35"
       ],
       "note": "Eight live disputes recorded in the tags, an unusually dense chapter for them. v3: whether the sabbath is joined to the fifth commandment to limit filial obedience (Ellicott, Wesley) or to charge parents with the honour of the day (Henry). v14: whether the stumbling-block before the blind is literal (Clarke, Calvin) or figurative of misleading the ignorant (Ellicott, Henry). v16: whether standing against a neighbour's blood is a duty of rescue (Ellicott) or a prohibition of false witness (Clarke, Wesley). v18: whether self-love is the rule measuring love of neighbour, which Calvin denies against the schools. v19: three accounts of the mingled kinds — a creation distinction, prudential husbandry, a barrier against the nations. v23: whether the uncircumcised fruit is husbandry (Clarke, Ellicott) or a symbol under the first commandment (Calvin). v26: three readings of eating with the blood. v35: how the promise attached to just weights is to be taken."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "24",
+      "verses": [
+        "32",
+        "33"
+      ],
+      "note": "SCRAPE OVERRUN, a defect distinct from the JFB residue and the first of its kind logged. The Calvin block at key 32 contains his genuine two-hundred-word comment on Joseph's bones and then runs on into the ENTIRE 'Translation of Calvin's Version of the Book of Joshua', chapters 1 through 7 and beyond -- roughly 4,600 words of unrelated text. The Ellicott block at key 33 ends with StudyLight page chrome: navigation, copyright notice, terms-of-use links and several hundred words of raw CSS. Consequence for budgeting: 'synthesis-loop.py size' reported joshua 24 at 28,838 usable source words and keys 32 and 33 at 5,155 and 3,971, but the real usable content of those two keys is about 3,650 combined. Spans planned off the reported figures will be mis-sized. This did NOT need excluded_voices, since Calvin's own comment at 32 is real and was used; the overrun is simply ignored. Suggests usable_source_words should learn to cut at the 'END OF THE COMMENTARY' marker and at the StudyLight footer."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "25",
+        "31"
+      ],
+      "note": "JFB scrape residue, twentieth chapter found: all three Jamieson blocks in joshua 24 are Deuteronomy 18-19 material (the prophet like unto Moses, the rule requiring more than a single witness, the punishment of perjury). Second non-Pentateuch victim after nehemiah 7, so the pattern is no longer confined to the Pentateuch on either side. Running donor list: Gen 15, 24, 26, 36, 37; Lev 11, 26; Deut 4, 16-17, 18-19, 20-21, 28; Exod 8-9; Num 11-12; 1 Chr 3-4."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "24",
+      "verses": [
+        "19",
+        "32"
+      ],
+      "note": "Block-keying: Henry files only three blocks in joshua 24, at keys 1, 15 and 29, and each is a running exposition covering the material well beyond its key -- the block at 1 covers vv1-14, the block at 15 covers vv14-24, the block at 29 covers vv29-33. Tiling was set from those three anchors, so entries 1-13, 14-18 and 29-31 carry Henry and entries 19-24, 25-28 and 32-33 have no puritan-evangelical voice. Also excluded Keil and Delitzsch from entry 32-33 under the bare-block rule: their block at key 32 is the verse text of 32 and 33 quoted with no comment attached."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "19",
+        "25"
+      ],
+      "note": "Three substantive disputes in this chapter. (1) Where the assembly stood 'before God': Clarke states the difficulty at its sharpest, since the tabernacle was at Shiloh, canvasses the Septuagint reading of Shiloh, Shuckford and Mede, and settles it by the ark's portability; Calvin and Henry independently agree the ark was brought to Shechem; but Keil and Delitzsch expressly refuse to let 'the sanctuary of the LORD' at v26 mean the ark brought over for the ceremony. (2) 'Ye cannot serve the LORD': Clarke reports and rejects an emendation reading 'ye shall not cease to serve', ingenious but unsupported by any Kennicott or De Rossi manuscript; Wesley calls it moral not absolute impossibility; Calvin calls it an obtestation aimed at their obstinacy; Ellicott alone grounds it in Israel's actual practice of serving Jehovah alongside other national gods. (3) The strange gods to be put away: Keil and Delitzsch and Calvin read them as idols of the heart, Wesley and Ellicott as real images still kept, Ellicott adding that no images are ever recorded as buried or burned in obedience."
     }
   ]
 }
