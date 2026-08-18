@@ -4896,6 +4896,98 @@
         "36"
       ],
       "note": "Two long source blocks in this run are misfiled scrape overflow rather than commentary on their key. Clarke at numbers 5:31 runs 2909 words, most of it a treatise on trial by ordeal with Anglo-Saxon etymologies that belongs to a chapter-end appendix; and in 1samuel 2:36 his block carries a digression on atmospheric pressure that belongs to the pillars of the earth at v8. Both are usable in part but inflate the size estimate badly — worth discounting when a single key runs 3k+ words in an otherwise short chapter."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34",
+        "40",
+        "46"
+      ],
+      "note": "JFB scrape residue, thirty-second chapter observed, and the LONGEST RUN YET: an unbroken run of eight at keys 4, 10, 16, 22, 28, 34, 40 and 46 — period 6 at offset 4, no empty slots. Donor is John 5-7 walked in narrative order: the two opposite classes, the shaking of the Sabbath controversy, the Passover of John 6:4, 'my time is not yet come', the impotent man and the murderous rage it kindled, 'he had not been at Jerusalem for a year and a half', and the citizens wondering the rulers let him teach openly. Two firsts: (1) donor and target are different books, where every previously identified donor lay in or near the target book; (2) fragment lengths are 29, 43, 62, 132, 19, 10, 113 and 24 words — far below the usual block size, so this run is of donor-block TAILS, not whole blocks. All eight excluded."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "15",
+        "16",
+        "17",
+        "18",
+        "21"
+      ],
+      "note": "Cyril of Jerusalem duplication, the worst instance recorded. The identical 200-word block (the third-hour argument, 'He who was crucified at the third hour now at the third hour sent down His grace') stands verbatim at FIVE adjacent keys: 15, 16, 17, 18 and 21. A second identical pair stands at keys 2 and 3 (the heavenly trumpet, 156 words each), and the block at key 4 is about Peter's sermon and the three thousand, belonging to verses 37-41 rather than to verse 4. Previous chapters showed adjacent-duplicate PAIRS in JFB; a five-key run in a patristic voice is new. Usable Cyril blocks in this chapter are at 1, 13, 20, 22, 33, 42; the rest are duplicates or misplaced."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "42"
+      ],
+      "note": "John Lightfoot is a FOURTH voice subject to the 200-word hard cap. Four of his eight blocks in this chapter (keys 1, 2, 3, 42) are exactly 200 words and end mid-sentence; the others (13, 38, 41, 44) run 70-182 and are complete. This adds Lightfoot to the confirmed capped list alongside Keil and Delitzsch, John Gill and Cyril of Jerusalem. Separately, Lightfoot's blocks carry heavy OCR corruption in the Greek and Hebrew: 'Διαμεριζύμει αι γλῶσσαι', 'ΒΞ WII? WPS AYN', 'YOOI58', 'ΩΣ WD)'. His argument survives in the English but the cited words are unusable as quoted."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "4"
+      ],
+      "note": "The chapter's central disagreement is whether the Pentecost miracle lay in the mouth of the speakers or the ear of the hearers. Calvin reports the second view at length — that one tongue was spoken and the same sound diversely distributed among the hearers, the conjecture resting on Peter afterwards preaching one sermon to many nations — without adopting it. Wesley rejects it outright as 'unaccountably supposed'. Barnes and Robertson both place the gift in the speakers, Robertson insisting each spoke a real language never learned and not jargon. Clarke, at 2:8, refuses to decide, holding that as much divine power is needed to make an Arab understand a Galilean as to make a Galilean speak Arabic. Four positions recorded; none preferred."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "27"
+      ],
+      "note": "Second major disagreement: whether Christ descended into hell. Wesley denies it flatly, holding that the soul passed at its separation to paradise and that the verse means only that it was not left in the separate state. Ellicott reads it with Peter's own words about the spirits in prison as the ground of the credal article. Clarke keeps Hades a neutral term covering Tartarus and Elysium alike; Robertson makes it the unseen world viewed as a rapacious destroyer and strictly parallel to death, denying it means the place of punishment; Calvin takes it of the grave under two Hebrew names."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "37"
+      ],
+      "note": "Voice-count pressure, the extreme case. Entry 1 carries TWELVE sourced voices in 648 words (Chrysostom, Gill, Lightfoot, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Cyril of Jerusalem, Leo) and entry 37-38 carries eleven; both are at the ceiling with roughly fifty words per voice. Verse 1 alone attracts twelve because Henry, Chrysostom and Leo all key their chapter overviews there, so no tiling can reduce it: any entry containing verse 1 carries twelve. I therefore made verse 1 an entry by itself, twelve entries in all. This is the concrete case for the tiling recommendation filed after acts 8, luke 23 and acts 26: on NT chapters the 350-650 window binds on VOICE COUNT, not source words, and the picker's source-word budget is the wrong metric for them."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "2",
+      "note": "Tiling: twelve entries over 47 verses and 117,188 usable source words, the largest chapter attempted. Boundaries follow Henry's six section keys (1, 5, 14, 22, 37, 42) and the chapter's own structure, with four of those sections split for weight: 1 / 2-4 / 5-13 / 14-16 / 17-21 / 22-24 / 25-28 / 29-36 / 37-38 / 39-41 / 42-45 / 46-47. Heaviest entry is 37-38 at 12,261 source words, lightest 39-41 at 6,062. Every entry needed multiple trim passes; first drafts ran 743, 817, 820, 767, 856, 818, 919, 856, 656, 648, 764 and 738 words against a ceiling of 650. Two entries (25-28 and 29-36) needed a full rewrite before trimming. Sixth consecutive chapter in which the window, not the source, was the binding constraint."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "2",
+      "verses": [
+        "22"
+      ],
+      "note": "Two smaller source notes. (1) Matthew Henry's block at 2:22 is 247 words in the manner of the CONCISE commentary, not the full Exposition used at his other five keys in this chapter (3,371 / 2,753 / 5,193 / 6,877 / 5,582 words). A mixed Henry text within one chapter is new. (2) Leo the Great appears exactly once in the whole chapter, at verse 1, and is the only latin-fathers voice in it; his block is 200 words and capped, so he too may belong on the capped list, though one instance is not enough to confirm."
     }
   ]
 }

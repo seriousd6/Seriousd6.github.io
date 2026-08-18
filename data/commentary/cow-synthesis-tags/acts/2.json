@@ -1,1981 +1,994 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
    "Cyril of Jerusalem",
+   "John Chrysostom",
    "Leo"
   ],
+  "range": "1",
+  "pericope_label": "The day of Pentecost fully come, and the company with one accord in one place",
   "schools": [
    {
-    "school": "eastern-antiochene",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: Pentecost the harvest feast, the Spirit the keen sickle of the word; Cyril of Jerusalem: the ascended Lord fulfils the promise of the Comforter; Leo: a chief feast."
+    "summary": "Gill insists that the day was only begun and not over, since it was the third hour when Peter preached, and that Pentecost was kept for one day alone, two being observed only in the captivity through uncertainty of the calendar. Calvin records their perseverance in standing all in one place until the appointed time, and reports Augustine's typological argument, that as the law was written on tables of stone fifty days after the Passover so the Spirit, whose office is to write it on the heart, came as many days after the resurrection of the true Passover; he declines to refute it and objects only that Augustine urges it as necessary."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the phrase to mean that the night preceding with part of the day was fully past, and traces the count to the offering of the firstfruits, which fell on the day Christ arose. He gives three reasons for the day: the concourse of people from all parts, which would spread the fame of it further; the feast's memorial of the law given on Sinai, so that the evangelical law is fitly promulgated at it in fire and tongues, not to one nation but to every creature; and the falling of the feast on the first day of the week, which he takes for a confirmation of the Christian sabbath as a standing memorial of the resurrection and the outpouring together. He adds that Jerusalem, which had done Christ the utmost dishonour imaginable, received this honour from him."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Fully come' (en to synplerousthai); the feast drew the largest crowds of distant pilgrims — the audience for the wonder."
+    "summary": "Barnes explains the reckoning from the sixteenth of Abib and the names feast of weeks and feast of harvest, and puts the providence in terms of delay, the Spirit being withheld until the greatest possible number of Jews should be gathered at Jerusalem, both to preach where the Lord was crucified and to send the gospel thence into distant parts. Ellicott observes that of all the feasts this drew the largest number of pilgrims from distant lands, since the dangers of travel thinned the Passover and Tabernacles, so that no other season was so likely to produce immediate results. Robertson notes Luke's favourite articular-infinitive idiom, reports Blass for the view that the present tense shows the day had not yet come and Hackett for the fifty-day interval, and observes that this Pentecost apparently fell on the Jewish Sabbath. Lightfoot alone unsettles the date, questioning whether the Spirit was poured out on the Jewish Pentecost at all, since no fitter reason can be invented for the one accord than a gathering to keep the Lord's day."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the Pentecost of Sinai (legal, terrible) and of Jerusalem (evangelical, merciful) set side by side."
+    "prevalence": "several",
+    "summary": "Wesley compresses the whole into a phrase, the Pentecost of Sinai and the Pentecost of Jerusalem, the legal manifestation and the evangelical, the one from the mountain and the other from heaven, the terrible and the merciful, and calls the scene a conjunction of company, minds and place with the whole hundred and twenty present. Clarke, whose note here is an analysis of the entire chapter, keeps to the plain sequence: the day arrived, the disciples assembled, and the Spirit descended as a mighty rushing wind."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom looks past the calendar to the type, Pentecost being the season when the sickle was put to the harvest and the ingathering made, so that now the time was come to put in the sickle of the word and the Spirit came down keen-edged as that sickle, Christ having first taken the firstfruits of this harvest and borne them on high. Cyril of Jerusalem claims the event for his own city, saying that he speaks not of good things which happened among others but of those vouchsafed among ourselves."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Leo counts the day from the other end, the tenth from the Ascension and the fiftieth from the Resurrection, and finds in it revelations of mysteries both new and old, by which it is most manifestly revealed that Grace was fore-announced through the Law and the Law fulfilled through Grace, as of old the Law was given on Sinai the fiftieth day after the sacrificing of the lamb."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the outpouring fell on the Jewish Pentecost at all: Lightfoot questions it and argues from the one accord that the company had gathered to keep the Lord's day, while Henry holds that the feast itself fell that year on the first day of the week",
+   "What the fully come means: Gill that the day was begun and not ended, Henry that the night and part of the day were past, Robertson reporting Blass that the day had not yet arrived and Hackett that the phrase covers the fifty-day interval"
+  ],
+  "outliers": [
+   "Henry cites Lightfoot for the interval of one thousand four hundred and forty-seven years between the giving of the law at Sinai and this day",
+   "Barnes reads the delay of the Spirit as deliberate, timed so that the gospel might be preached in the place of the crucifixion to the greatest possible concourse and carried from there to distant parts of the earth"
+  ],
   "themes": [
-   "the day of Pentecost",
-   "with one accord",
-   "harvest of the Spirit",
-   "Sinai and Jerusalem"
+   "Pentecost",
+   "the Spirit",
+   "law and grace",
+   "firstfruits",
+   "the Lord's day",
+   "Jerusalem"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
    "Cyril of Jerusalem"
   ],
+  "range": "2-4",
+  "pericope_label": "The rushing wind, the tongues as of fire, and the speaking with other tongues",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Suddenly' (aphno) a roar 'as of a rushing mighty wind,' recalling Sinai (1 Kgs 19:11) and the Spirit at creation; Cyril of Jerusalem: a heavenly trumpet signifying the Spirit's presence."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the gift made visible/audible as a condescension to human dullness, that God's power not pass away unknown."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the rushing mighty wind",
-   "a sound from heaven",
-   "sign of the Spirit",
-   "filled the house"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill hears in the suddenness the freeness of the gift, unasked and undeserved, and a symbol of the gospel about to go into all the earth, makes the tongues an emblem of the languages and this the baptism with fire that John foretold, and extends the gift past the twelve to the seventy and perhaps all the hundred and twenty, women as well as men. Calvin gives the fullest account of why signs were needed at all, since our slothfulness is such that unless God wakes every sense his power passes unknown, and the signs were given less for the disciples than for us; he weighs each, the violence of the wind being meant to make them afraid, since we are never rightly prepared for grace until the confidence of the flesh is tamed, and notes that the word Spirit is itself borrowed from breath because that person of the divine essence is incomprehensible. He also reports, without adopting it, the opinion that they spoke in one tongue only and the sound was diversely distributed among the hearers."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Better 'tongues as of fire, parted' (not 'cloven') — distributing, one resting on each; tongues the emblem of the languages, fire the Spirit's purifying, kindling power; each disciple received the gift personally."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "tongues like fire",
-   "parted, one on each",
-   "emblem of speech and Spirit",
-   "the personal gift"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "summary": "Ellicott and Robertson both note that the word rendered wind is a cognate of the word for Spirit and prefer a mighty breath borne onwards. Ellicott denies that the word rendered cloven can mean that at all, describing a shower of fiery tongues lighting a moment on each head and vanishing, and reads the whole passage through the Corinthian chapter, where the tongue edifies none but the speaker and is the antithesis of prophecy, insisting also that the gift was not confined to the apostles. Robertson takes the participle as middle, insists the point is that each tongue looked like fire and was not fire, holds that each disciple spoke a real language never learned and not jargon, and argues that Paul's rule requiring an interpreter disposes of the modern imitations. Barnes says the sound burst on them at once from the direction of the sky, notes that the phrase tongue of fire occurs once only in the Old Testament and that tongue is used of whatever resembles it in shape, and holds that no natural account of the speaking will serve. Lightfoot reads the shape of the tongues against the confusion of languages at Babel."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "They spoke real, intelligible languages not their own, as the Spirit gave utterance; Babel reversed — grace gathers the nations by giving all speech; the miracle in the speakers' mouths (Wesley), the outward sign of a greater inward fullness."
+    "summary": "Clarke takes the sound physically as thunder and explains the rushing by a great passage of electrical fluid and the air pouring into the vacuum behind it, comparing the wind, earthquake and fire that prepared Elijah; he has the flashes frequent at first and then a lambent flame settling stationary on each head as proof that the Spirit had made each man his temple, gathers parallels from the bush, from Sinai, from rabbinic pictures of teachers ringed with fire and from a Persian manuscript showing Abraham with his head wrapped in flame, and sets the gift against Babel, where the languages were confounded to scatter the nations and are here given to gather them. Wesley notes that so will the Son of man come to judgment, allows the tongues were small flames only yet thinks they may intimate God touching their tongues with divine fire, and rejects outright as unaccountably supposed the view that the miracle lay in the ear, adding that this family praising God in the tongues of all the world was an earnest that the whole world should praise him in its own."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem calls the sound a heavenly trumpet, sent lest men should be ignorant of the greatness of the gift coming down to them, and makes the house itself the vessel of the spiritual water, so that those sitting within were entirely baptized according to the promise and invested soul and body with a divine garment of salvation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the miracle lay in the mouth or the ear: Calvin reports the view that one tongue was spoken and diversely distributed among the hearers, resting on Peter afterwards preaching one sermon to many nations, while Wesley calls that unaccountable and Barnes and Robertson both place the gift in the speakers",
+   "Whether the tongues rested or vanished: Clarke has a lambent flame settling stationary on each head as proof of an abiding temple, Ellicott a shower lighting for a moment and vanishing, the verb being in the tense of momentary action",
+   "Whether the gift was confined to the apostles: Ellicott argues from the context that the women shared it, and Gill extends it to the seventy and perhaps the whole hundred and twenty"
+  ],
+  "outliers": [
+   "Clarke offers a physical account of the sound, thunder produced by the passage of electrical fluid and a rush of air into the vacuum behind it, which none of the others attempt",
+   "Robertson holds that the gift was neither general nor permanent, appearing at Caesarea, Ephesus and Corinth and perhaps Samaria, and that its purpose was adoration and wonder rather than instruction"
+  ],
   "themes": [
-   "filled with the Holy Ghost",
-   "other tongues",
-   "Babel reversed",
-   "the gospel for the nations"
+   "the Spirit",
+   "wind and fire",
+   "tongues",
+   "Babel",
+   "baptism",
+   "signs"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Devout Jews of the dispersion and proselytes from every nation, settled or come for the feast, each fluent in a land's tongue — the providential polyglot audience for the gift of tongues."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God in all ages gathered to Jerusalem some preserved seed of his people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "devout men of every nation",
-   "the dispersion gathered",
-   "the providential audience",
-   "the feast crowd"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'voice' (phone, an utterance, not rumour) drew the multitude, confounded because each heard his own language — undeniable and public."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the gathering into one place made the miracle the more famous and beyond dispute."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the multitude came together",
-   "confounded",
-   "each in his own language",
-   "the public wonder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "They 'stood out of themselves' (existanto) in amazement that Galilaeans — proverbial for rude dialect and no learning (Mark 14:70) — spoke the world's languages; the contrast proving the gift divine, a sign to unbelievers (1 Cor 14:22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all amazed",
-   "'are not all these Galilaeans?'",
-   "unlettered men, many tongues",
-   "the sign authenticated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Each heard 'his own tongue wherein he was born'; debate whether the wonder lay in speaking or hearing (the better view in the apostles' speaking) — the gospel meeting every man in his mother tongue."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'in our own tongue'",
-   "the speech of our birth",
-   "gospel for every people",
-   "the particular wonder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The catalogue (Parthians, Medes, Elamites, Mesopotamia, Judaea, Asia Minor) traces the dispersion from the east westward — Luke counting the languages to show the gift's reach; even Judaea's differing dialect included."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Parthians and Medes",
-   "the roll of nations",
-   "the dispersion's reach",
-   "the miracle's scope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The list widens to Africa (Egypt, Cyrenaic Libya) and to sojourning Romans; 'Jews and proselytes' marks that Gentile converts were present too — a quiet foreshadowing of the wider ingathering and the gospel's march to Rome."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Egypt, Libya, Rome",
-   "Jews and proselytes",
-   "the world in miniature",
-   "foreshadowing the Gentiles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cretes and Arabians close the list; 'the wonderful works of God' = his majesty/great deeds — words of praise, not yet teaching (which comes through Peter's sermon)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the double wonder — lowly Galileans treating of deep divine things, and in foreign tongues."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cretes and Arabians",
-   "'the wonderful works of God'",
-   "speech as praise",
-   "worship in every tongue"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Were perplexed' (dieporounto, wholly at a loss); 'what meaneth this?' = 'what does this wish to be?' — honest bewilderment that owns the wonder and seeks its meaning."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God's majesty could scarcely appear more plainly than in this miracle — to remain unmoved would be monstrous."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "amazed and in doubt",
-   "'what meaneth this?'",
-   "honest perplexity",
-   "the door for the sermon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
    "Cyril of Jerusalem"
   ],
+  "range": "5-13",
+  "pericope_label": "The devout men of every nation, the hearing in each tongue, and the mockery",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has the strangers come to Jerusalem to learn the Hebrew tongue or to increase in piety, leaves open whether the noise that gathered the city was the sound from heaven or the speaking rumoured abroad, and assigns the mockery to the natives of Jerusalem who understood none of these tongues. Calvin sees God gathering in every age some remaining seed into that city while the temple still served some use, explains why the crowd had to be brought together into one place, since a miracle heard piecemeal at different times would have been far less famous and the diversity of tongues appears only by present comparison, names the two things that caused the wonder, and calls it monstrous that men should scoff at what could scarcely be plainer if God descended visibly."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry divides the devout men into proselytes of righteousness who were circumcised and proselytes of the gate who forsook idolatry without taking on the ceremonial law, calls the phrase every nation under heaven hyperbolical, and observes that Jerusalem was then the rendezvous of religious people as Tyre once was of trading ones. He notes that the list of nations begins with the posterity of Shem and that Judea is named because, though the language there was the same, the Galileans spoke it with a north-country tone."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Mocking' (diachleuazontes) — the charge of 'new wine' (gleukous, sweet but intoxicating); Wesley traces the world's descent from mockery to slaughter."
+    "summary": "Robertson and Ellicott agree that the word for dwelling means settled residence rather than a pilgrim's sojourn, though Ellicott allows it wide enough to include worshippers come up for the feast. Barnes suggests that wealthy foreign Jews kept permanent houses near the temple, recalls that Galileans were proverbially ignorant and their dialect proverbially corrupt so that their native ignorance made the miracle the more striking, and notes that the list of nations begins at the east and runs westward. Ellicott insists that the noun rendered noised abroad is never used in the New Testament for rumour but always of an utterance, observes that the amazement answers exactly to what Paul says of the gift as a sign to unbelievers while conversion is left to prophecy, renders the Romans as sojourners and prefers the majesty of God to the wonderful works. Robertson takes it that the tongues themselves were loud enough to gather the city, reports Knowling's view that the Cretes and Arabians were an afterthought, and insists the point is not that each group had its own language but that wherever a local tongue existed men heard it spoken. Lightfoot matches the taunt about new wine to a rabbinic idiom in which men made mellow at Purim were said to be sweetened."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke divides the devout men into Jews born abroad and proselytes, both come up for the feast and for trade, observing that there was scarcely a commercial nation where the Jews had not settled; he calls the speakers wholly uneducated men who knew no dialect but their own, keeps to his thunder in having the whole city alarmed and flocking to the temple, and grants that some suppose the miracle wrought on the hearers rather than the speakers while holding that it is the same miracle either way, since as much divine power is needed to make an Arab understand a Galilean as to make a Galilean speak Arabic. Wesley says the strangers were gathered by a peculiar providence, takes the one island for all, refers the great things to the death, resurrection and ascension, and traces the world's progress from mocking to cavilling, threats, imprisonment, blows and at last slaughter."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: they spoke truer than they knew — the disciples were filled with new wine, the grace of the New Covenant from the true Vine."
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem turns the jeer round: they spoke truly though in mockery, for the wine was new indeed, the grace of the New Testament, and it came from a spiritual Vine which had often borne fruit in the prophets and now budded afresh, the same Spirit continuing what he is while manifesting a new and marvellous work."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the miracle was wrought on the speakers or the hearers: Clarke reports the second view and refuses to decide, holding that either way the same divine power is required",
+   "What gathered the multitude: Ellicott and Robertson take the noun for the utterance of the tongues themselves, Gill leaves open whether it was that or the sound from heaven, and Clarke has a peal of thunder alarming the city"
+  ],
+  "outliers": [
+   "Calvin argues that the crowd had to be gathered into one place for the miracle to be evident at all, since tongues heard separately would have proved nothing without present comparison",
+   "Wesley notes that there was no new wine so early in the year as Pentecost, and that natural men are wont to ascribe supernatural things to merely natural causes"
+  ],
   "themes": [
-   "others mocking",
-   "'full of new wine'",
-   "scorn vs wonder",
-   "the new wine of the Spirit"
+   "the dispersion",
+   "proselytes",
+   "tongues",
+   "Galilee",
+   "mockery",
+   "the majesty of God"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
+   }
   }
  },
  "14": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter rises with the eleven as spokesman — the timid denier now bold, with elaborate discourses (Ellicott); a formal, impressive beginning, with the utmost sobriety (Wesley)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: divinely ordered that some mocked, to give Peter a starting-point for his defence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter standing up",
-   "the first sermon",
-   "timidity become boldness",
-   "the Spirit's fruit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem",
+   "John Chrysostom"
   ],
+  "range": "14-16",
+  "pericope_label": "Peter stands up with the eleven: the answer to the mockers and the appeal to Joel",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has the eleven rise at once as abhorring the charge, with Peter standing in their midst as their mouth, notes that the denial of drunkenness covers not the eleven only but the whole hundred and twenty on whom the Spirit was poured, and observes that the Jews themselves allow Joel's prophecy to belong to the world to come, which in their usage means the times of the Messiah. Calvin observes that they rose because men rise when they address an assembly and wish to be better heard, and treats the answer about the hour as a probable argument, since men are not commonly drunk betimes in the morning."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the sermon in its place: it was preached not to the strangers in their own languages but to the Jews in the vulgar tongue and to the mockers in particular, the other disciples meanwhile speaking the wonderful works of God to those who understood them; the three thousand were converted by the preaching of most of the hundred and twenty, and only Peter's sermon is recorded as evidence that he who had denied his Lord so meanly now confessed him so courageously. He adds that the men of greatest authority stood up to confront those who contradicted while the seventy were left to the willing proselytes, so that among Christ's ministers some of greater gifts take hold of sword and spear and others of meaner abilities are vine-dressers."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A quick common-sense reply: only the third hour (9 a.m.), before any Jew would be drunk, especially on a feast; drunkenness belonged to the night (1 Thess 5:7) — the slander refutes itself."
+    "summary": "Ellicott marks the change in the man, timidity become boldness and a few hasty words become elaborate discourse, with a method in handling prophecy unlike anything seen in him before, so that a writer of fiction would be blamed for the inconsistency; on the hour he appeals to common feeling, that drunkenness belonged to the night and that rising early to follow strong drink was a mark of extremest baseness. Barnes finds the boldness characteristic of Peter's temperament, draws the rule that no ridicule should deter Christians from an honest avowal, reckons the third hour at nine by the Jewish division of the day, gives the reasons why drunkenness was then improbable, and observes that the citation of Joel follows neither the Hebrew nor the Greek exactly though it keeps the substance. Robertson notes that the taking of a stand is a formal and impressive beginning, that Luke alone uses the phrase for lifting up the voice, that the reply about the hour is quick common sense, and that this is the first interpretation of the life and work of Christ since the Ascension."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke corrects the address, holding that those who dwelt at Jerusalem were not inhabitants of Judea but the sojourners already listed, says the Jews scarcely ate or drank before the third hour and that even the intemperate did not transgress the custom, and takes the fulfilment of Joel as further proof that the Jesus they crucified is the Messiah. Wesley takes the men of Judea for those born there, notes that Peter spoke in Hebrew which they all understood, divides the discourse into three parts each opening with the same appellation and the last adding the more familiar word brethren, adds that on the solemn festivals the Jews rarely ate or drank till noon, and puts the appeal to prophecy most simply, that there is another and a better way of accounting for this."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: the hour significant — crucified at the third hour, he now sends grace at the third hour."
+    "prevalence": "several",
+    "summary": "Chrysostom observes that Peter turns from the strangers to the mockers, and that it was divinely ordered that some should mock, since the jeer gave him a starting-point for his defence and by means of the defence he could teach. Cyril of Jerusalem turns the hour into an argument of another kind: he who was crucified at the third hour now at the third hour sent down his grace, and the grace of the Spirit is not other than his own, so that he who gave the promise made it good."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who is addressed in the second clause: Clarke holds that those dwelling at Jerusalem were the sojourners of the list and not inhabitants of Judea, while Henry and Wesley take the men of Judea for those born there and read the second clause of the residents who were accessory to the death of Jesus",
+   "Why drunkenness was improbable at that hour: Barnes and Clarke argue from the settled custom of not eating or drinking before the hour of prayer, Ellicott from the common feeling that drunkenness belonged to the night, Calvin from ordinary probability"
+  ],
+  "outliers": [
+   "Henry holds that only Peter's sermon is recorded, though most of the hundred and twenty were preaching, and that it stands as evidence of his full restoration after the denial",
+   "Cyril of Jerusalem's blocks at the fifteenth and sixteenth verses are identical, the same two hundred words repeated at adjacent keys"
+  ],
   "themes": [
-   "'not drunken, as ye suppose'",
+   "preaching",
+   "boldness",
+   "sobriety",
    "the third hour",
-   "the slander refuted",
-   "preparing the true cause"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'This is that' — a positive interpretation by the Messianic prophecy of Joel 2:28, Peter's mind opened by the Spirit; the wonder a fulfilment, the hinge from sign to Scripture and the method of apostolic preaching."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'this is that... by Joel'",
    "prophecy fulfilled",
-   "sign interpreted by Scripture",
-   "the last days dawning"
+   "restoration"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
+   }
   }
  },
  "17": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "17-21",
+  "pericope_label": "The prophecy of Joel: the Spirit on all flesh, the wonders, and whosoever shall call",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill cites Kimchi that afterwards and the last days mean the same and that wherever the last days are named the days of the Messiah are intended, hears the naming of servants as describing religious character rather than civil condition, and supplies the comet that hung over Jerusalem in the form of a flaming sword. Calvin defends Peter's change of the phrase as exposition rather than addition, since a prophecy of the perfect restoring of the Church can belong to no age but the last, presses the restriction of the promise to the worshippers of God on the ground that God does not profane his Spirit by making it common to despisers, refuses both the narrower readings of the great day and takes it for the whole kingdom of Christ from the first preaching onward, and calls the closing promise an excellent place, since God pricks us forward like sluggish asses with terrors and then shows salvation shining amidst so many dungeons of death."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Joel's 'afterward' = 'the last days,' the days of the Messiah now begun; the Spirit poured on 'all flesh' — every age, sex, and rank; sons and daughters prophesy, the gift once confined to a few now spread on all."
+    "summary": "Barnes traces the last days through the Old Testament as meaning simply future times, notes that where the Hebrew has the servants both the Greek and Peter read my servants so that the sense is the servants of God rather than a rank of society, and treats the darkened sun as an emblem, its shining standing for prosperity and its withdrawing for calamity. Ellicott calls the promise to slaves the culminating point of the prediction and instances Amos the herdsman of Tekoa, draws the imagery of the terrors from a Palestinian thunderstorm, suspects that Peter may have looked for the great and notable day within his own lifetime, and notes that the phrase to call upon God never occurs in the Gospels though it is a favourite with Luke and Paul. Robertson observes that Joel does not have Peter's words but defines those days as the day of the Lord, and makes the sharpest point of the entry, that Peter treats the portents as already fulfilled although no darkening of the sun is recorded, so that he plainly does not read Joel's symbolism literally."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the prophecy belongs to the last age alone — the era of the outpoured Spirit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'in the last days'",
-   "Spirit on all flesh",
-   "sons and daughters prophesy",
-   "grace democratised"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The culmination — the Spirit poured even on bondservants, male and female, by a God no respecter of persons; the Jews had thought prophecy beyond the poor, a barrier now swept away."
+    "summary": "Clarke says the phrase the last days was so understood among the Jews, reports Rabbi Tanchum that in the time of the old text each prophet prophesied singly but in the times of the Messiah all Israel shall be prophets, observes that since the Jews held the spirit of prophecy never rested on a poor man the naming of menservants and maidservants shows that neither bond nor free nor male nor female is shut out, and refers the wonders to the calamities at the destruction of Jerusalem. Wesley takes all flesh for persons of every age, sex and rank, explains the division of visions to the young and dreams to the old by the vigour of the outward senses in the one and the inward in the other, spreads the fulfilment of the signs across four occasions, and finds in calling on the name the whole of religion and particularly prayer uttered in faith."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the promise restrained to God's worshippers, those made his servants by the Spirit — yet within that company none excluded by station."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem keeps the great day to the end, holding that the Lord comes from heaven with glory in the last day, this created world passing away that a fairer world may be made manifest, since corruption and theft and every sort of sin have been poured out over the earth."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the great and notable day is: Calvin refuses both the coming in the flesh and the last day alone and takes it for the whole kingdom of Christ from the first preaching, Clarke refers it to the destruction of Jerusalem, Ellicott suspects Peter looked for it in his own lifetime, Wesley spreads it over four occasions, and Cyril keeps it to the end of the world",
+   "Whether the promise is restricted: Calvin and Barnes both read my servants as the servants of God and not a rank of society, while Clarke and Ellicott press the opposite emphasis, that slaves and the poor are expressly included"
+  ],
+  "outliers": [
+   "Robertson notes that Peter treats the portents as fulfilled although Luke records no darkening of the sun or reddening of the moon, and takes this as evidence that Peter did not read prophetic symbolism literally",
+   "Cyril of Jerusalem's block is repeated verbatim at five keys in this chapter, the same two hundred words standing at the fifteenth, sixteenth, seventeenth, eighteenth and twenty-first verses"
+  ],
   "themes": [
-   "servants and handmaidens",
-   "Spirit on slaves",
-   "no respecter of persons",
-   "grace levels rank"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Wonders' (terata) and 'signs' (semeia); many refer the portents to the calamities before Jerusalem's fall (Matt 24:7); great grace attended with great judgment on those who reject it (Wesley)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the 'great day' comprehends the whole kingdom of Christ, not one coming alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wonders and signs",
-   "blood, fire, smoke",
-   "grace and judgment",
-   "the day of the Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The sun's darkening and moon's bloody hue (an eclipse's phenomena, Matt 24:29) — emblems of calamity heralding the day of the Lord; Peter binds these portents to the Messianic age Pentecost inaugurates."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sun into darkness",
+   "prophecy",
+   "the outpouring",
+   "all flesh",
+   "judgment",
    "the day of the Lord",
-   "cosmic portents",
-   "judgment heralded"
+   "calling on the Name"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Whosoever shall call on the name of the Lord shall be saved' — universal and free (cf Rom 10:12); to 'call upon' implies the whole of religion, faith in prayer (Wesley)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: after the terrors, God shows salvation near and attainable — only call upon him."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'whosoever shall call'",
-   "shall be saved",
-   "the gracious 'whosoever'",
-   "the gospel offer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "Cyril of Jerusalem",
-   "Matthew Henry"
+   "John Chrysostom"
   ],
+  "range": "22-24",
+  "pericope_label": "Jesus of Nazareth approved of God, delivered by counsel and foreknowledge, and raised",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the Arabic version prefaces the words as though a new oration began here, spreads the delivering across every agent from Christ himself to Pilate, and observes that the raising is generally ascribed to the Father without excluding the Son or the Spirit. Calvin says Peter comes to his point by little and little, holds that the right use of every gift we have by Christ is that it should bring us to Christ as to a fountain, explains that the death is mentioned chiefly so that the resurrection may be the more believed, the crucifixion being notorious and the rising therefore a great token of divine power, and takes the pains of death deeper than bodily feeling, since men who consider that death is the curse of God must conceive him angry in it, whence comes a horror worse than death itself."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the two sides of the death plainly: as God's act it was of wonderful grace and wisdom, by which justice was satisfied and God and man brought together again according to an eternal counsel that could not be altered; as the people's act it was awful sin and folly. He adds that the resurrection did away the reproach of the death, and that Christ's sufferings are to all his the entrance to a blessed life for evermore."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Jesus 'approved/accredited of God' (apodedeigmenon) by miracles done openly in their midst — God's own testimony, known to all; the boldness of naming him seven weeks after the cross (Ellicott)."
+    "summary": "Ellicott feels the boldness of the name, barely seven weeks after its bearer had died the death of a slave and a robber and been denied by this very speaker, takes approved in its older English sense of proved or pointed out, finds a mark of genuineness in the vocabulary since the adjective recurs in Peter's later speech and the noun for foreknowledge in his epistle and nowhere else, observes that it has become the habit of the apostle's mind to trace a divine purpose men cannot thwart, and presses the literal sense of travail-pangs. Barnes marks this as the third part of the argument, keeps the ordinary sense of delivering as surrender to enemies by those who should have protected him, and sets the word loosed against binding. Robertson observes that Peter calls the audience itself to witness, takes the verbal adjective to mean delivered up by Judas while noting that purpose and foreknowledge stand in the same clause, and cites Furneaux that at a time when the statement could still be tested and fraud exposed the apostle proclaimed the resurrection as a fact needing no evidence because known to his hearers."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses approved as celebrated or famous, a man made known by miracles in such profusion as the best of their prophets never wrought, reports Bishop Pearce's paraphrase that delivered means given forth or sent into the world and Kypke's contention that the word refers not to God but to Judas, and gives the common view that the bonds detaining the dead were dissolved. Wesley meets the objection the divine counsel raises, that God knew all those wicked men intended and could have blasted their designs in a moment but did not exert that power because he so loved the world, presses the literal sense of the pains as those of a woman in travail, and holds that it was not possible he should be held because the Scripture must be fulfilled."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: 'men of Israel' not flattery but tact, easing toward them before naming Jesus."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Jesus of Nazareth'",
-   "approved of God by miracles",
-   "public attestation",
-   "the turn to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Delivered up (ekdoton) by 'the determinate counsel and foreknowledge of God,' yet crucified by 'wicked hands' — the cross both God's ordained plan and man's guilty act; 'foreknowledge' Peter's word (1 Pet 1:2)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the death named to make the resurrection the more assuredly believed."
+    "summary": "Chrysostom watches the tactics of the address: the title men of Israel is not flattery but relief, Peter having borne hard on them and now reminding them of their great ancestor, and he begins afresh with an introduction so that they may not be stirred, since while the prophet was the subject there was nothing to excite them but the name of Jesus would have. Cyril of Jerusalem gathers the prophetic testimonies to the Spirit, from Micah and Joel and Haggai together."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who delivered Christ up: Robertson takes the word of Judas, Clarke reports Pearce for God sending him into the world and Kypke for Judas alone, Gill spreads it across Christ himself, the Father, Judas, the Jews and Pilate, and Henry sets God's act and the people's act side by side",
+   "What the pains of death are: Clarke and Barnes take them for bonds loosed, Ellicott and Wesley for travail-pangs in the literal sense of the word, and Calvin for the horror of God's anger, which Christ underwent in taking our guilt"
+  ],
+  "outliers": [
+   "Ellicott treats the shared vocabulary of this speech and the First Epistle of Peter as evidence bearing on the genuineness of both",
+   "Robertson notes that Codex Bezae reads Hades where the received text has death",
+   "Henry's note here is in the manner of the concise commentary rather than the full exposition used elsewhere in this chapter"
+  ],
   "themes": [
-   "determinate counsel and foreknowledge",
-   "'by wicked hands'",
-   "sovereignty and guilt",
-   "the cross ordained"
+   "preaching Christ",
+   "miracles",
+   "the divine counsel",
+   "the crucifixion",
+   "resurrection",
+   "witness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God raised him, loosing 'the pains/pangs of death,' for death could not hold him; the first public, testable proclamation of the resurrection (Robertson), made openly in Jerusalem."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'the sorrows of death' more than bodily — the horror of God's curse, which Christ bore and overcame."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God raised him up",
-   "loosed the pains of death",
-   "not possible to be held",
-   "the resurrection proclaimed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "25-28",
+  "pericope_label": "David speaking of him: the psalm of the Holy One who should not see corruption",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter reads Ps 16:8-11 as David's, written of the Messiah — David's confidence of preservation a type of Christ; the OT itself foretelling the resurrection, quoted carefully that hearers may weigh it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'David speaketh concerning him'",
-   "Psalm 16",
-   "the Messiah foreshadowed",
-   "resurrection foretold"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Heart, tongue (Hebrew 'glory'), and flesh rejoice and rest 'in hope' — not a mortal's dread but confident expectation of rising; the body reposing in hope of resurrection, fulfilled in Christ not David."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'my flesh shall rest in hope'",
-   "joy facing death",
-   "resurrection foreseen",
-   "confidence in God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Hell' = Hades, the unseen world of the dead (not punishment); God will not leave the Holy One's soul there nor let his body see corruption — fulfilled exactly in Christ; his soul in paradise (Luke 23:43)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'not leave my soul in hell'",
-   "'see no corruption'",
-   "the Holy One",
-   "the linchpin prophecy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill says the whole psalm belongs to the Messiah and everything in it agrees with him, grounds the gladness in Christ having the faithfulness and power of God always in view, and takes the last clause of God making the risen Christ know experimentally the way from death to life, shown first to him as the firstfruits of them that slept. Calvin explains why so much proof was needed, since the resurrection had to be pressed on the Jews as a new and strange thing though it was declared by evident testimonies, which is no marvel when the disciples themselves profited so little from Christ's repeated teaching; he makes the sequence of joy general, that gladness of soul and tongue and quietness of body follow upon sure hope, observes that two Hebrew words for the grave stand in the passage, one so named because death is insatiable, and holds that in Christ the promise was fulfilled without anything lacking while the members have it only by measure."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The ways of life' = resurrection (the way back from death); 'joy with thy countenance' = the gladness of the exalted Christ at God's right hand — words fitting the risen Lord, not David in the grave."
+    "summary": "Ellicott renders the phrase as in reference to him, that is in words which extended to him, and notes that read otherwise the psalm seems to speak only of the writer's own confidence, which some confine to a temporal deliverance and others extend to immortality; he explains the Hebrew my glory as a term for the mind and perhaps the faculty of speech, takes Peter's later words about the spirits in prison to give the sense afterwards embodied in the article of the descent into hell, and declines to interpret the last clause though he thinks Peter would have seen it fulfilled in Christ's humanity. Barnes notes that the citation follows the Greek version with one slight change, ascribes the exultation to the Messiah as one who for the joy set before him endured the cross, weighs the Hebrew word for soul as possibly meaning no more than myself, and gives the idiom of the ways of life as the road to life. Robertson holds that there is but one speaker in the psalm and that Peter makes him the Messiah, David giving his own experience as typical, notes the timeless verbs and the flesh tabernacling in hope, and defines Hades as the unseen world viewed here as a rapacious destroyer, denying that it means the place of punishment since both heaven and the place of torment lie within it."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: restored from death to life by the grace of God."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the psalm a most remarkable prophecy of which every word applies to Christ exclusively, observes that the Hebrew has my glory where the Greek has my tongue and takes it for the soul, insists that Hades is the state of separate spirits and a general term among the Greek writers covering Tartarus for the wicked and Elysium for the good, and reads the ways of life as the way back from the region of the dead, the same body resumed and the same kind of life lived as before he gave it up for the sin of the world. Wesley is the most emphatic on the descent, that it does not appear our Lord ever went into hell, his soul passing at its separation not thither but to paradise, the meaning being that God would not leave it in the separate state nor suffer the body to be corrupted, and he refers the filling with joy to the ascension to God's right hand."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem reads the same psalm through as a whole, adding to the words Peter quotes the line about the assemblies of blood which he will not join nor name between his lips, and applies it to those who refused their king and chose Caesar instead."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the psalm speaks of David or of Christ: Clarke and Gill apply every word of it to the Messiah exclusively, Ellicott allows that read by itself it speaks of the writer's own confidence and reports interpreters who confine that to a temporal deliverance, and Robertson takes David's own experience as typical of the Messiah",
+   "Whether Christ descended into hell: Wesley denies it outright, holding that the soul passed to paradise and that the verse means only that it was not left in the separate state, while Ellicott reads it with Peter's own words about the spirits in prison as the ground of the article in the Creed",
+   "What Hades means here: Clarke takes it for the state of separate spirits covering both Tartarus and Elysium, Robertson for the unseen world viewed as a rapacious destroyer and strictly parallel to death, Calvin for the grave under two Hebrew names"
+  ],
+  "outliers": [
+   "Calvin observes that one of the Hebrew words for the grave is so called because death is insatiable, citing the sayings that hell has enlarged her soul and that they open their mouth like the grave",
+   "Clarke notes that the evangelist follows the Septuagint in rendering my glory as my tongue, against all the other Greek interpreters in the Hexapla"
+  ],
   "themes": [
-   "'the ways of life'",
-   "joy in God's presence",
-   "resurrection and ascension",
-   "the psalm completed"
+   "prophecy",
+   "the psalms",
+   "Hades",
+   "corruption",
+   "resurrection",
+   "hope"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  },
  "29": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter speaks 'freely/boldly' (meta parresias): David is dead and buried, his tomb still among them — the psalm's 'no corruption' untrue of David (whose body decayed), so it must speak of another; addressing them as 'brethren.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David dead and buried",
-   "his sepulchre with us",
-   "the proof clinched",
-   "beyond David to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "David 'being a prophet' (2 Sam 23:2) knew God's sworn oath (Ps 132:11) that a descendant would sit on his throne — fulfilled in the eternal King, the Christ; the clause naming Christ doubtful in the best MSS but the argument stands."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David a prophet",
-   "God's sworn oath",
-   "the fruit of his loins",
-   "foreseeing the Messiah's throne"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "David, 'foreseeing' (proidon) as a prophet, spoke of the resurrection of the Christ — soul not left in Hades, flesh not corrupted (cf 1 Pet 1:11); the prophets testified beforehand of Christ's sufferings and glory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'spake of the resurrection of Christ'",
-   "David foreseeing",
-   "the proof completed",
-   "prophecy of the rising"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'This Jesus hath God raised up, whereof we all are witnesses' — prophecy joined to eyewitness fact; the apostles' primary office is to be witnesses of the resurrection, the united public testimony of the whole company."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'God hath raised up'",
-   "'we all are witnesses'",
-   "prophecy and testimony",
-   "the apostles' office"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "29-36",
+  "pericope_label": "David dead and buried, the throne promised by oath, and God hath made him Lord and Christ",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Exalted 'by/to the right hand of God,' the place of supreme power, the risen Jesus received the promised Spirit (John 14:16) and shed him forth — Pentecost the visible proof of Christ's exaltation and reign."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a wonderful work of God, exalting his Christ — thought destroyed by death — to so great glory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "exalted by the right hand",
-   "received the promise",
-   "'shed forth this'",
-   "Pentecost proves his reign"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill notes that Peter now calls them brethren, having styled them only men of Judea before, cites the Syriac title that calls the book the psalms of David, king and prophet, has the human nature exalted to an honour never conferred on any creature, and observes that David's body was still in its sepulchre though his spirit had returned to God. Calvin gives both reasons why David could speak of things long after his time, that he was a prophet and that things removed from the knowledge of men are revealed to prophets, so that it were wickedness to measure their speech by common capacity, and that he had God's oath about his seed; he insists the text will bear no other sense than that the apostles saw the risen Christ with their eyes, takes the right hand as standing everywhere in Scripture for power, and concludes that Israel confessed a Christ was to come without knowing who, so that the Jesus they handled so spitefully is the one they must acknowledge Lord."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "David did not ascend, yet calls another 'my Lord' (Ps 110:1, the most-cited Messianic text), the words by which Jesus confounded the scribes (Matt 22:44) — the psalm of the enthroned Lord points beyond David to Christ."
+    "summary": "Ellicott renders the opening as it is lawful for me to speak with freedom, observing that no hearer could pretend the psalm was literally fulfilled in David, notes that without the disputed clause the sentence runs simply that God had sworn one of his loins should sit on his throne, holds that what was conspicuously untrue of the historical David was found true of the Christ, observes that from the first the apostles take up the position their Lord assigned them as witnesses of the resurrection, prefers the dative of instrument for the right hand while seeing beneath the phrase the image of the Eternal King raising his Servant to a place beside him, and notes the rhetorical force of the order, that both Lord and Christ God made him. Barnes remarks that Peter opens respectfully though they had just charged him with drunkenness, draws the rule that Christians should keep the usual forms of courtesy whatever contempt they meet, argues that David's being dead and buried made the words impossible of himself, and notes that if the rising were a matter of prophecy the only question left was whether it had happened. Robertson glosses the adverb as telling it all with fulness and boldness, takes the participle as a plain statement that David knew he was describing the Messiah's resurrection, lays out three possible cases for the phrase about the right hand, and holds that the mediatorial dominion lasts until the plan of the kingdom is carried out."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies a rabbinic saying that neither worm nor insect had power over David and thinks Peter's appeal to the sepulchre the more pointed if such an opinion was current, reports that the clause about raising up Christ according to the flesh is wanting in several manuscripts and versions, rejected by Griesbach and pronounced by Professor White most certainly to be deleted, gives the same verdict on the words his soul, has the whole hundred and twenty for witnesses ready to attest the resurrection in the face of death, notes that conquerors used to set their feet on the necks of the vanquished, and sums the discourse as proving the resurrection, the ascension and the supreme government of Jews and Gentiles, angels and men. Wesley notes that patriarch is a more honourable title than king, presses the logic of the oath that a kingdom promised and not received before death implies a resurrection, and finds the closing quotation chosen with great address, warning the hearers in the words of their own prophetic monarch how certain their ruin must be if they go on opposing Christ."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: the Lord says it to the Lord — the Father to the Son, not to a servant."
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem gathers the other testimonies to the Son's sitting at the right hand of the Father, from the Gospel according to Matthew and from the writing of Peter himself."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the clause about raising up Christ according to the flesh belongs to the text: Clarke reports that Griesbach rejects it and that Professor White pronounces it most certainly to be deleted, and Ellicott that without it the sentence still runs, though incomplete",
+   "How the phrase about the right hand is to be construed: Robertson allows instrumental, locative and dative alike since the forms coincide, while Barnes, Calvin, Ellicott and Wesley all take it instrumentally, of the power by which Christ was raised"
+  ],
+  "outliers": [
+   "Clarke reports a rabbinic saying that neither worm nor insect had power over David, which if current in Peter's day would sharpen his appeal to the sepulchre",
+   "Wesley supplies the missing step in the argument from the oath, that the promise of a kingdom implies a resurrection because David never received it before he died and because the kingdom was to endure for ever"
+  ],
   "themes": [
-   "'David is not ascended'",
-   "'the Lord said unto my Lord'",
-   "Psalm 110:1",
-   "exaltation from prophecy"
+   "prophecy",
+   "the oath to David",
+   "witness",
+   "ascension",
+   "the right hand",
+   "lordship"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Thy foes thy footstool' — the conqueror's image of total subjection; the reign lasts till the kingdom's purpose is complete (1 Cor 15:25); a warning that the hearers' continued opposition courts certain ruin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'thy foes thy footstool'",
-   "total subjugation",
-   "the enthroned Christ",
-   "warning to opposers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The climax: God has made 'both Lord and Christ' the very Jesus 'whom ye crucified' — the deliberate sting in the word-order; all the proofs converge, pressing the hearers to a verdict."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the one they spitefully handled they must now acknowledge as their Lord."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'both Lord and Christ'",
-   "'whom ye crucified'",
-   "the sermon's climax",
-   "the crucified reigns"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "37": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
+   "Cyril of Jerusalem",
+   "John Chrysostom"
   ],
+  "range": "37-38",
+  "pericope_label": "Pricked in their heart: what shall we do, and the answer to repent and be baptized",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that Peter, as the mouth of the apostles, was ready with a word of comfort for distressed minds. Calvin marks the double fruit Luke records, that the hearers were touched with sorrow and that they obeyed the counsel given them, which is the very beginning of repentance, and makes the whole exchange an instance that none who ask at the mouth of the Lord go away empty, since the promise stands that to him who knocks it shall be opened, so that God will not suffer a godly desire to learn to be in vain."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the scene in its place, that Peter never in his life spoke with such fulness, perspicuity and power, that a divine power went along with the message from its first delivery, and that here we see the first-fruits of a vast harvest of souls gathered in by a word mighty through God, the exalted Redeemer riding forth in these chariots of salvation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Pricked' (katenygesan, pierced, stung sharply) in heart by cool, pungent reasoning under the Spirit; they cry 'what shall we do?' now calling the apostles 'brethren' — conviction, not despair only."
+    "summary": "Robertson and Ellicott agree that the verb for pricking is rare and occurs here only in the New Testament, Robertson noting that Homer used it of horses denting the earth with their hoofs, Ellicott that it expresses the emotion we call compunction and that a noun from the same root is rendered slumber elsewhere, perhaps for the unconsciousness that follows extreme pain. Barnes insists there was no fanaticism in the discourse but cool, close, pungent reasoning, and defines repentance as sorrow for sin as committed against God with a purpose to forsake it, not merely a fear of consequences or of wrath to come. Robertson puts the command shortest, change your mind and your life and do it now, and marks the change of number and person in the Greek, the plural command to repent being followed by a singular, let each one of you be baptized. Ellicott sets the apostolic work against the Baptist's as at once a continuation and a development, the same condition of repentance and the same outward symbol and promise, but a baptism now in the name of Jesus Christ. Lightfoot takes up Beza's claim that the phrase declares not the form of baptism but its scope and end and that the clause is wanting in the Syriac, answering that whatever copy Beza used the other copies have it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the argument, supported everywhere by prophecy and matching fact, left them without reply and without excuse, so that they saw no hope but in the mercy of him they had crucified, and renders repentance as humbling themselves before God, deploring the sins committed, praying earnestly for mercy and deprecating the displeasure of incensed justice. Wesley catches the smallest sign of the change, that they now call the apostles brethren, which they had not done before, and denies that the promised gift means the power of speaking with tongues, since the promise is made to all that are afar off in distant ages and nations, taking it rather for the constant fruit of faith."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: gentleness, more than vehemence, pricks the heart and inflicts the keener wound."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "pricked in their heart",
-   "'what shall we do?'",
-   "conviction of sin",
-   "the seeking heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Repent' (turn mind and life, now) and be baptized in Jesus' name for remission of sins, and receive the gift of the Spirit — the same indispensable repentance as John's baptism; the 'gift' the saving Spirit, not merely tongues (Wesley)."
+    "summary": "Chrysostom draws a lesson from the manner of the preaching: gentleness pricks the heart more than any vehemence, for as with bodies grown callous the blow does not tell until they are first made tender, so here the hearers had first to be softened. Cyril of Jerusalem takes the two commands as answering the two parts of man, since man is soul and body the purification is twofold, the water cleansing the body and the Spirit sealing the soul, so that we draw near with the heart sprinkled and the body washed; and he bids the hearer make ready the vessel of his soul to become a son and heir of God, putting off the old man of set purpose."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the gift of the Holy Ghost promised here is: Wesley denies that it means the power of speaking with tongues, since the promise reaches to all that are afar off in distant ages, and takes it for the constant fruit of faith",
+   "Whether the phrase in the name of Jesus Christ gives the form of baptism: Lightfoot reports Beza for the view that it gives only the scope and end, and that the clause is wanting in the Syriac, and answers that the other copies have it"
+  ],
+  "outliers": [
+   "Chrysostom makes gentleness rather than vehemence the instrument that pierces, on the ground that a callous body must first be made tender before a blow can tell",
+   "Wesley notes that the hearers now address the apostles as brethren, a title they had not given them before"
+  ],
   "themes": [
-   "'repent, and be baptized'",
-   "remission of sins",
+   "conviction",
+   "repentance",
+   "baptism",
+   "forgiveness",
    "the gift of the Spirit",
-   "mercy to the crucifiers"
+   "preaching"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.05
+   }
   }
  },
  "39": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The promise to 'you,' 'your children,' and 'all afar off' — the horizon widening to the Gentiles; all may claim it as fully as the apostles, against every sectarian narrowing; joined to 'as many as the Lord shall call.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: added that the Jews might be sure the grace of Christ belonged to them as to the apostles."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the promise is unto you'",
-   "to your children and afar off",
-   "the Gentiles foreshadowed",
-   "grace not confined"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
+  "range": "39-41",
+  "pericope_label": "The promise to you and to all afar off, the exhortation, and the three thousand added",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Luke gives only an outline ('many other words'); Peter 'continued to testify and exhort'; 'save yourselves' is passive 'be ye saved' — submit to God's salvation and flee the judgment on a perverse generation; gospel preaching as pressing entreaty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'many other words'",
-   "'save yourselves'",
-   "this untoward generation",
-   "urgent entreaty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill lists what the promise may mean, the Messiah and salvation by him, or the remission of sins as a branch of the covenant, or the pouring out of the Spirit, restricts the descendants to as many as belong to the election, says of the whole book that Luke gives a compendium and not the sermons at length, and supplies what the hearers received, the doctrine of repentance and baptism and remission and the promise of the Spirit. Calvin explains why the clause about the promise had to be added, so that the Jews might persuade themselves the grace of Christ belonged to them as much as to the apostles, insists that we cannot know the will of God except by his word, notes that Peter did not use doctrine only but added the pricks of exhortation and stood much upon it, and makes the adverb of glad reception the very definition of faith, which must begin with a readiness and willing desire to obey."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "They 'gladly' (freely, cheerfully, without compulsion) received the word and were baptized — about 3,000 added that day; Lightfoot hears the 'willing people in the day of thy power' (Ps 110:3)."
+    "summary": "Robertson says the horizon widens here to include the Gentiles, since those afar off were the heathen in the prophets and the rabbis alike, presses the two Greek words as meaning further words and more than these given so that Luke does not pretend to report the whole, and observes that only those who accepted the word were baptized. Ellicott makes the phrase wide enough to cover both Jews of the Dispersion and Gentiles, observes that the tendency of sects has always been to claim spiritual gifts as the exclusive privilege of a few whereas the essence of the appeal is that all may claim the promise as fully as the speaker, suggests that the report breaks off as though the informant had followed closely to this point and then lost the sequence, renders the last charge as a passive invitation to submit to God's way of salvation, and weighs the number of converts against the mode of baptism. Barnes takes the promise strictly of the influences of the Spirit, calls the discourse no more than an outline for all its length, and reads the adverb of glad reception as implying that religion is not compulsion. Lightfoot sets the three thousand of this day beside the five thousand of the next chapter and refers both to the psalm that the people shall be willing in the day of his power, which he takes for the day of the resurrection."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: one sermon gained 3,000, who with prompt and ready mind embraced his word — the mark of true faith."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the promise of the dispersed Jews and of all the Gentile nations while granting that Peter did not yet see how far his own words went, reads the last charge as separation, that they should part from that generation and so be delivered from its unbelief and from the punishment awaiting it when the Romans destroyed the city, and dwells on the adverb of glad reception as meaning that they approved the doctrine, were glad to hear of this way of salvation, and began at once to act on it. Wesley keeps the charge a passive and adds that in such an accepted time we should add line upon line and not leave off till the thing is done, many of the generation being probably mocking still."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether save yourselves is active or passive: Clarke reads it as separating from that generation and escaping the destruction of the city, while Ellicott and Wesley keep the passive, be ye saved, an invitation to submit to God's way of salvation",
+   "Whether three thousand could be immersed: Ellicott reports the argument that the number makes affusion more likely and the considerations urged against it"
+  ],
+  "outliers": [
+   "Robertson and Ellicott and Barnes all read the notice of many other words as an admission that Luke reports only an outline, Ellicott suggesting that the informant lost the sequence at this point",
+   "Lightfoot refers the three thousand of this day and the five thousand of the next chapter alike to the psalm of the willing people in the day of his power"
+  ],
   "themes": [
-   "gladly received the word",
-   "baptized",
-   "three thousand added",
-   "the great harvest"
+   "the promise",
+   "the Gentiles",
+   "exhortation",
+   "separation",
+   "baptism",
+   "the first converts"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "42": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Lightfoot",
    "Cyril of Jerusalem"
   ],
+  "range": "42-45",
+  "pericope_label": "The primitive fellowship: the apostles’ doctrine, the breaking of bread, and all things common",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "They 'continued steadfastly' (proskarterountes) in four marks — apostles' doctrine, fellowship (koinonia), breaking of bread, and prayers; perseverance, not passing enthusiasm; the abiding pattern of Christian community."
+    "summary": "Gill spreads the fear over the inhabitants of Jerusalem, at least the many who had heard the tongues and the preaching and seen thousands profess a name that a few weeks before was in the utmost contempt, and reads the phrase rendered together of their agreement rather than a common dwelling, since no house could have held so many. Calvin says Luke commends not the constancy of faith only but the exercises that confirm it, continual profiting under the apostles, much prayer and much use of fellowship and the breaking of bread; he turns the fear to providence, the sight of the church frightening those who did not consent to its doctrine and so preserving it, since novelty is odious and the Jews would not otherwise have suffered it to stand a single day; and he takes the phrase rendered together of their agreement, as when Luke says afterwards that they had one heart."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the truly primitive church kept close to holy ordinances and abounded in pious devotion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "apostles' doctrine and fellowship",
-   "breaking of bread",
-   "prayers",
-   "the primitive church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Fear' (reverential awe, not terror) came on every soul, silencing mockery; the apostles' signs and wonders 'kept on coming' (imperfect) — the more wonders, the more fear; the miracles authenticating the word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fear on every soul",
-   "wonders and signs",
-   "reverence not terror",
-   "the word authenticated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry calls these verses the history of the truly primitive church in its infancy and its greatest innocence, reads the first clause as diligence under preaching, since those discipled by baptism were discipled to be taught and were willing to be taught, and holds that those who have given up their names to Christ must make conscience of hearing his word, thereby giving him honour and building themselves up in their most holy faith."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Were together' (one in faith and purpose) and 'had all things common' — not enforced communism nor abolished property, but goods held loosely for the common good; a fulfilment of Luke 12:33, a society of sympathy and self-denial."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all that believed together",
-   "all things common",
-   "not communism",
-   "love of the brethren"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Ellicott counts four elements of the new society's life in the verse, finds a careful distinction of tenses in the fear that came at that season while the signs were wrought continually, says they had all things in common not by a compulsory abolition of property, dwells with manifest delight on what seemed the true ideal of a human society founded not on self-interest and competition but on sympathy and self-denial, and notes that the verbs throughout stand in the imperfect and so express a constantly recurring act. Barnes marks the record as inspired testimony that they persevered, no apostasy being recorded and none to be presumed, contrasts the fear with the derision of the morning and takes it for the ordinary effect of a great work of grace on a community, and reads the selling as of so much as was needed. Robertson glosses fellowship from the word for a partner and what is common to all, makes the two imperfects of fear and wonders run together so that the more wonders the more fear, and denies that the community of goods was actual communism, holding that they kept their property ready for use for the common good as need arose. Lightfoot explains the breaking of bread from Jewish custom, dinner beginning with blessing and breaking of bread, and adds that houses and beds in Jerusalem were never let for hire."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Sold' and 'parted' (imperfect — an ongoing practice, not one act) lands and goods, distributing 'as every man had need'; no law compelled it, love constrained them (Wesley); measured by need, a wise and generous love."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes fellowship for association in religious and spiritual things and denies that the community of goods can be meant, since that is mentioned separately two verses later, reports manuscripts that read great fear and trembling upon every soul in Jerusalem, and sets out the three possible senses of the phrase rendered together, in one time, in one place, or in one thing. Wesley numbers the four elements as the daily communion of the church, hearing the word, having all things common, receiving the Lord's Supper and prayer, closes with a challenge to the sects that all cry here is Christ to show him where the Christians live, observes that the fear fell on those who did not join and so prevented persecution until it was needed, and answers the objection that the practice lasted only until Jerusalem fell, since many did it long after and there was no positive command for it, love constraining them."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem keeps the three thousand in view, caught in the spiritual net of Peter's words and continuing steadfastly in the apostles' doctrine and in the prayers, and ascribes the grace that wrought so great a work to the Holy Ghost by the will of Father and Son."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the breaking of bread means the Lord’s Supper or a common meal: Clarke leaves the question open, Wesley lists the Supper among the four elements, Lightfoot explains the phrase from the Jewish custom of opening dinner with blessing and breaking bread",
+   "What the phrase rendered together means: Calvin and Gill prefer agreement of mind to a common dwelling, Robertson takes it of the same place, Clarke sets out three senses, in one time, in one place, or in one thing"
+  ],
+  "outliers": [
+   "Robertson denies that the community of goods was communism and notes that the arrangement appears nowhere else in the New Testament",
+   "Wesley answers the claim that the practice ceased at the fall of Jerusalem, observing that many continued it long after and that no command required it, love constraining them",
+   "Calvin reads the fear of the onlookers as a providential guard, without which a novelty so odious would not have been suffered to stand a single day"
+  ],
   "themes": [
-   "sold their possessions",
-   "parted to all as need",
-   "ongoing charity",
-   "love constrained"
+   "the primitive church",
+   "fellowship",
+   "breaking of bread",
+   "prayer",
+   "community of goods",
+   "reverence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
+   }
   }
  },
  "46": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Daily 'with one accord in the temple' (no breach yet with Judaism) and 'breaking bread from house to house' (the regular meal), eating with 'gladness and singleness of heart' — devotion and joy blended in everyday life."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: they frequented the temple for the opportunity to further the gospel, not from the holiness of the place."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "daily in the temple",
-   "breaking bread house to house",
-   "gladness and singleness",
-   "first love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "46-47",
+  "pericope_label": "Daily in the temple and breaking bread at home, with favour and daily increase",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that they went up to the temple every day at the time of prayer and were agreed in it, and lists what they praised God for, temporal mercies and spiritual alike, that he had called them and revealed Christ and pardoned such sinners and given them a place in his house. Calvin gives a colder reason for their frequenting the temple, that they were drawn neither by any holiness of the place, since they knew the shadows of the law had ceased, nor by a wish to teach others to reverence it, but by the concourse of people there which gave the best opportunity of furthering the gospel; and on the favour they enjoyed he says there is no doubt they were hated by many, Luke speaking only of the sound part of the people, the favour being the ordinary fruit of an innocent life, which finds acceptance even among strangers."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Praising God and 'having favour with all the people' (their devoted lives winsome, cf Luke 2:52); the Lord 'kept on adding' (imperfect) daily 'such as should be saved' — genuine conversions, the church's increase God's own work."
+    "summary": "Barnes says the temple was simply the public place of worship which they were not disposed to leave, and that they attended at the customary hours of nine and three, reports the marginal rendering at home against from house to house, and explains that the favour of the people does not mean they had become reconciled to Christianity but that humble and devoted lives silenced cavil, which he takes for evidence that God can quiet opposition. Ellicott feels the difficulty of their resorting to a sanctuary so desecrated, where their Master had nearly been stoned and all but seized, and answers from their memory that he had claimed it as his Father's house and that zeal for it had consumed him; he traces the people's good will in part to liberal almsgiving, thinks the Sadducean priests the only section that watched them with malignant fear, and reports that many of the better manuscripts omit the words to the church. Robertson observes that no breach had yet come between Christians and Jews, takes the breaking of bread at home for the regular meal while leaving open whether a love-feast or the Supper followed, agrees that the phrase to the church is not genuine and that Codex Bezae reads in the church, and notes that the verb is an imperfect, the Lord kept on adding."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the fruit of an innocent life is to find favour even among strangers."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke has them present at all the times of public worship, joining in prayer and praise, though it is not to be supposed they went on offering the sacrifices the law prescribed, offers a domestic reading of the breaking of bread, that companies living near one another ate together at their lodgings on returning from worship, and observes that any upright Jew would naturally esteem them for the simplicity and charity of their lives, the scandal of the cross not having yet begun. Wesley takes the breaking of bread for the Lord's Supper, as many churches continued to do for some ages, and draws the practical point that they carried one happy and holy temper through all their common actions, eating and working in the spirit in which they prayed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the breaking of bread here is the Lord’s Supper or the ordinary meal: Wesley takes it for the Supper and notes that many churches so continued for ages, while Clarke and Robertson read it of the common meal at home, Robertson leaving open whether a love-feast or the Supper followed",
+   "Whether the words to the church belong to the text: Ellicott reports that many of the better manuscripts omit them and join the following word to the next chapter, and Robertson holds the phrase not genuine, noting that Codex Bezae reads in the church"
+  ],
+  "outliers": [
+   "Ellicott and Calvin give opposite accounts of the resort to the temple, the one from reverence remembered for the Father's house and the other from the mere opportunity a crowd affords the preacher",
+   "Robertson notes that the verb of adding is an imperfect, the Lord continuing to add, and the same word used earlier of the three thousand"
+  ],
   "themes": [
-   "praising God",
-   "favour with the people",
-   "the Lord added daily",
-   "increase by grace"
+   "the temple",
+   "breaking of bread",
+   "gladness",
+   "favour",
+   "increase",
+   "the primitive church"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  }
 }
