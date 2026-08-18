@@ -4718,6 +4718,85 @@
         "21"
       ],
       "note": "Sizing for a FORMULAIC chapter, a fourth shape to set beside notes 384 (argument), 390/401 (gazetteer and name-table) and 416 (narrative). genesis 5 is 18,614 usable source words over 32 contiguous keys, but the distribution is extremely uneven: the median key is 202 words while v1, v32, v21, v6, v22 and v24 carry 1,300-2,500 each. Sixteen of the thirty-two keys are bare Gill notes on a repeated formula. Six entries were the right count, at 3,102 source words apiece. The rule that fell out: in a formulaic chapter the entry count is set by the number of SUBSTANTIAL keys, not by total words, because the formulaic runs between them distil almost to nothing -- fifteen verses of Seth-to-Jared (2,978 words) yielded one entry, and most of that entry came from Henry's and Wesley's single blocks at v6 explaining why the formula is repeated at all. Corollary: identify the heavy keys first and let each anchor an entry, then sweep the formulaic runs into whichever neighbour they belong to."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "26",
+      "verses": [
+        "6",
+        "12",
+        "24",
+        "30"
+      ],
+      "note": "JFB scrape residue, thirty-first chapter observed. Period 6 at offset 0, SLOTTED: blocks at keys 6, 12, 24 and 30 with position 18 empty (cf. leviticus 26). Donor is Acts 4-5 walked in narrative order: key 6 the two opposite classes, key 12 the shaking of Acts 4:31 and the community of goods, key 24 the rebuke of Ananias, key 30 Sapphira naming the sum. New variant of the defect: the fragments are tiny and truncated (3, 17, 40 and 99 words), so this is a run of donor-block TAILS rather than whole blocks. All four excluded."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "26",
+      "verses": [
+        "14",
+        "23",
+        "28",
+        "30"
+      ],
+      "note": "Cyril of Jerusalem's four blocks are catechetical-lecture excerpts matched by topic or by phrase, not keyed to the verse, and all four are exactly 200 words, confirming the hard cap already recorded for Gill, Keil and Delitzsch and Cyril. Two are usable: key 14 quotes the goad of 26:14 directly, key 28 names Felix, Festus and Agrippa. Two are not: key 23 is a discourse on Abraham's faith, and key 30 is on the word Ecclesia — matched, almost certainly, on the phrase 'And when he had thus spoken', which opens both Acts 26:30 and the Acts 19:41 quotation inside Cyril's paragraph. Lexical mis-keying of a patristic excerpt is a new defect class for this corpus."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "26",
+      "verses": [
+        "19",
+        "30"
+      ],
+      "note": "TOOLING GAP, wants an owner decision. scripts/synthesis_qa.py VOICE_LABELS contains the bare string 'Cyril', so _LABEL_RE matches only a literal 'Cyril:' and never the actual header 'Cyril of Jerusalem:'. His blocks are consequently invisible to split_voices, usable_source_words and undeclarable_voices: declaring him in excluded_voices fails the undeclarable-voices check (it did, on entries 19 and 30, before I removed the declaration). Two consequences: his 200-word blocks are silently counted as usable source words on every chapter that carries them, and off-topic Cyril material cannot be declared as residue at all. The fix is to add 'Cyril of Jerusalem' to VOICE_LABELS AHEAD of 'Cyril' (alternation order matters), but that changes usable_source_words corpus-wide, so I have not made it."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "26",
+      "verses": [
+        "27"
+      ],
+      "note": "The chapter's sharpest disagreement is over Agrippa's answer, and it divides six ways. Clarke reads it as the genuine effusion of a heart persuaded and says he cannot see how anyone could take it for irony; Barnes as a candid avowal and the crisis of the man's life; Wesley as halting between Festus the heathen and Paul the Christian; Gill allows either and inclines to the serious reading; Ellicott denies the Greek will bear 'almost' at all and makes it a cynical, evasive sneer, noting that only Geneva among the older English versions gives 'almost' against Wyclif, Tyndale and the Rhemish; Robertson likewise rejects the Authorized rendering but judges the tone ironical and not unpleasant, a shrug. Calvin reports Valla for 'almost', suggests the phrase may refer to time, does not dislike the received sense, and reads the words as a confession wrung from a man who could resist no longer. All six recorded in debates; none preferred."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "26",
+      "verses": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "note": "Cross-reference stubs. On a narrative told for the third time in Acts, several commentators decline to expound and simply point back to chapter 9: Barnes's blocks at 12, 13, 14 and 15 are literally 'Acts 9:5' or 'Acts 9:3' with nothing else, and Wesley's block at 12 is 'Acts 9:2.' Clarke's block at 12 is a one-line referral plus his chapter analysis. The head count at those keys therefore overstates the witness badly: seven named voices, of which three carry no comment. Handled by reporting the referral itself, which is groundable, rather than by exclusion. Worth watching on any chapter that repeats an earlier narrative."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "12",
+        "24"
+      ],
+      "note": "Block-keying: Matthew Henry keys his notes to verses 1, 12 and 24 only, three section overviews of 4,922, 5,193 and 5,215 words. Six of the nine entries therefore carry no Henry material and the puritan-evangelical school is absent from their tags; declared as an outlier in each rather than distorting the tiling. His three keys did set the entry boundaries at 1, 12 and 24, which coincide with the chapter's own structure (exordium, the Damascus road, the interruption), so the tiling is 1-3, 4-8, 9-11, 12-15, 16-18, 19-23, 24-26, 27-29, 30-32."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "26",
+      "note": "Length pressure, fifth consecutive chapter. Every one of the nine entries needed multiple trim passes; first drafts ran 784, 976, 871, 795, 902, 987, 961, 797 and 698 words against a ceiling of 650, that is 7 to 52 percent over, and the two worst (19-23 and 24-26) needed a full rewrite before trimming. Entries here carry 7 to 9 voices. Taken with acts 8 (9-10 voices) and luke 23 (10-15), this is now five chapters running in which the 350-650 word window, not the source budget, is the binding constraint. The corpus-level recommendation stands and wants an owner decision: for NT chapters, tile by voice count once it exceeds about seven, not by source words."
     }
   ]
 }
