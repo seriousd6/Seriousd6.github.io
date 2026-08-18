@@ -5204,6 +5204,83 @@
         "3"
       ],
       "note": "The sharpest disagreement in the chapter is over Dinah's own culpability, and it splits the corpus cleanly. Calvin holds that Moses in part casts the blame on her by recording that she went out; Henry and Wesley elaborate the same into a homily on gadding. Clarke flatly denies it, reading 'spake to the heart of the damsel' as evidence that there was no consent whatever, that the whole was violence, and that she was afterwards detained by force in Shechem's house until the sack. Recorded as a debate at entry 1 rather than resolved, since both readings are drawn from the same clause."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "22",
+      "verses": [
+        "6",
+        "18",
+        "30",
+        "36",
+        "42",
+        "54",
+        "66"
+      ],
+      "note": "The strongest Jamieson residue pattern recorded so far. All seven Jamieson blocks in Luke 22 are foreign, and all come from Luke 11-12: v6 is the 'ask and it shall be given' cross-reference, v18 the finger of God against the Spirit of God, v30 the sign of Jonah, v36 the light of the body, v42 an illustration from familiar objects, v54 'Behold I send' from the woes on the scribes, v66 'my friends, there their power ends'. Six of the seven keys run at a stride of exactly 12 from offset 6 (6, 18, 30, 42, 54, 66), with one extra member at 36. Donor verses ascend monotonically with the target but not at a constant offset, so this is a compressed remapping of one donor passage across a longer target chapter rather than a fixed shift. Excluded from all seven entries."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "22",
+      "verses": [
+        "7",
+        "17",
+        "24",
+        "31",
+        "35",
+        "47",
+        "54",
+        "63"
+      ],
+      "note": "Cyril of Alexandria's commentary is chunked exactly one pericope behind the verse key throughout this chapter, the cleanest systematic offset yet seen. Each block opens by quoting the text of the PREVIOUS section and then expounds it: the block at v7 covers 21:37-22:6, at v17 covers 22:7-16, at v24 covers 22:17-22, at v31 covers 22:24-30, at v35 covers 22:31-34, at v54 covers 22:47-53, at v63 covers 22:54-62. Seven instances with no exceptions. The practical effect for the loop is that his comment on a span is always found under the first key of the NEXT span, so an entry that cites him from its own key is usually citing him on the passage before. Handled here by using only what his block says that bears on the entry's own span, or by taking him from the Catena Aurea blocks labelled bare 'Cyril', which are correctly filed."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "22",
+      "note": "The catena blocks in this chapter are COMPOUND, which no previous chapter's tooling accounted for. The <strong>Name:</strong> header names only the FIRST father of a Catena Aurea run; every later father in the same block appears inline in capitals (GLOSS., BEDE;, CHRYS., THEOPHYL., TITUS BOST., AUG., AMBROSE;, GREG NYSS., DION. ALEX., EUSEBIUS., EPIPHAN.). Two consequences. First, the per-verse header list understates the voices actually present, so a ghost check run on headers alone is correct but a 'named but not sourced' check run on headers alone falsely rejects genuinely sourced fathers; the build script for this chapter therefore validates prose attributions against headers UNION inline labels while running the ghost pass on headers only, since requiring every inline father to be used is impossible at 650 words. Second, usable_source_words silently attributes every inline father's words to the header voice, so per-voice source measurement in catena books is wrong wherever these runs occur."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "22",
+      "note": "Pointer-only blocks are a defect class distinct from residue and should probably be named as such. Albert Barnes contributes nothing but bare cross-references on six of this chapter's fourteen spans ('Mt 26:17 Mt 26:18 Mk 14:12 ... Verse 7. (e) day of unleavened bread Ex 12:1 and following'), and John Wesley does the same on one. The block is genuinely about this passage, so it is not residue in the donor sense, but it carries no comment that can be cited, and a writer who names the voice anyway is inventing. Declared in excluded_voices here, which the validator accepts because the labels do occur in the blob; but the semantics recorded in synthesis_qa.py describe excluded_voices as residue, so either the documentation or the field wants widening."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "22",
+      "verses": [
+        "55",
+        "61",
+        "69"
+      ],
+      "note": "Cyril of Jerusalem is the third voice hit by the scripts/synthesis_qa.py VOICE_LABELS gap, after Cyril of Alexandria and Basil the Great. The list carries the bare strings 'Cyril' and 'Basil', so _LABEL_RE, which requires the label to be followed by a colon, never matches the headers 'Cyril of Jerusalem:', 'Cyril of Alexandria:' or 'Basil the Great:'. That matters here because his blocks are relevant at some keys and pure foreign residue at others: at v20 he is on the table of the psalm and at v48 on the testimonies of the Passion, both apt, but at v55 he is on the firmament of Genesis 1, at v61 on 'rejoice in the Lord alway' and the voice crying in the wilderness, and at v69 on the sign of Jonah. Those three cannot be declared in excluded_voices without tripping the 'names a block absent from this entry's source' check, so they were skipped by a per-entry SILENT set instead. Three distinct labels for Cyril appear in this one chapter (Cyril, Cyril of Alexandria, Cyril of Jerusalem), the first two being the same father from two different sources. The fix remains to place the long forms BEFORE the short ones in VOICE_LABELS, since alternation order decides the match."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "22",
+      "note": "luke 22 at 63,923 usable source words and 71 verses took fourteen entries: 1-6, 7-13, 14-18, 19-20, 21-23, 24-30, 31-34, 35-38, 39-42, 43-46, 47, 48-53, 54-62, 63-71. Twenty-five distinct voice labels appear in the chapter, and the binding constraint throughout was voice count, not source words: the 31-34 entry carries fifteen sourced voices in 650 words, about forty-three words each, and verse 47 alone carries eleven and had to be its own entry. This is the third chapter in a row to show that the picker's source-word budget mis-ranks NT against OT chapters. Genesis 1 at 63,543 words - within 400 words of this chapter - took eight entries with a maximum of eight voices on any verse; luke 22 at 63,923 took fourteen with a maximum of fifteen. The two chapters are indistinguishable to the picker and roughly twice apart in the work they require. A voice-count term in the budget would separate them."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "22",
+      "verses": [
+        "21",
+        "43"
+      ],
+      "note": "Two of the sharpest disagreements in the corpus so far stand in this chapter. At 22:21 the question is whether Judas received the Lord's Supper, and it turns entirely on where Luke places the exposure of the traitor: Lightfoot asks what more could be desired as a demonstration that he was present at the eucharist and dismisses the contrary argument from John 13 as making something out of nothing, Clarke reproduces that argument as his own, and Henry reaches the same conclusion from Luke placing the words after the institution where Matthew and Mark place them before; Wesley denies it flatly, since the sop belongs to a table already cleared before the bread and cup were brought, and Robertson records the difference of order without deciding. At 22:43 the question is what caused the agony: Wesley has Christ feeling the weight of the wrath of God surrounded by a host of devils, Gill a renewed and visible assault of Satan in a garden, while Lightfoot says outright that he dare not say or imagine that God was angry or conceived any indignation against him at all, and ascribes the bloody sweat to the bite of the old serpent, citing Diodorus on serpents whose bite brings an issue of sweat like blood."
     }
   ]
 }
