@@ -5069,6 +5069,60 @@
       "book": "exodus",
       "chapter": "8",
       "note": "Identification debates are the densest thing in this chapter and worth budgeting for. Both the kinnim of v16 and the 'arob of v21 draw four-way disagreement (Clarke surveying versions, Bochart, Harmer and his own tick proposal; Keil and Ellicott for gnats and dog-flies; Calvin for a mixture; the Jewish writers for wild beasts), and each survey eats 100+ output words before any theology is reached. On a chapter with two such cruxes, plan the spans so each crux gets its own entry rather than sharing one."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Front-matter contamination at Genesis 1:1, a new defect class. Three of the eight voices contribute prefatory matter rather than commentary at the very first verse: Calvin 7,277 words of the translator's preface and the Argument on Genesis, in which the phrase 'In the beginning' never appears at all; Clarke 4,470 words of his general introduction on the authorship of the Pentateuch and the contents of Genesis, where 'In the beginning' occurs only as the book's Hebrew title; and Keil and Delitzsch 200 words of 'Introduction: Contents, Design, and Plan of the Book of Genesis'. Key 1 is 15,659 words, the largest single verse key seen in 34 chapters, and much of it is not commentary on the verse. This inflates the picker's source-word budget directly. Handled by grounding Calvin, Clarke and Keil and Delitzsch on their v2 blocks, so the 1-2 entry carries all eight voices honestly without attributing v1 exposition to them."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "1",
+      "verses": [
+        "3"
+      ],
+      "note": "First one-verse-offset misfiling of Jamieson, Fausset and Brown in 34 chapters, and the first that is not foreign-chapter residue at all. JFB appears exactly once in the chapter, at key 3, and the block is genuine Genesis 1 material - 'without form and void', the Spirit continuing to brood over it as a fowl does when hatching eggs - which belongs at v2. Every prior instance was a periodic run of donor-block text from another chapter or book at a fixed stride; this is a single block of the right chapter filed one verse late. Excluded from the 3-5 entry as misplaced."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "1",
+      "verses": [
+        "15"
+      ],
+      "note": "Keil and Delitzsch chunking runs one entry ahead of the verse key throughout this chapter. Their block filed at a given verse consists of the running text of the next several verses followed by the opening of their section on the FOLLOWING day: v7 carries 'The Third Day', v10 'The Fourth Day', v15 'The Fifth Day', v21 'The Sixth Day'. The practical effect is that their comment on day N sits inside the entry covering day N-1. Usable at 9-13, where the fourth-day opening summarises the third day as a completed stage; excluded from 14-19, where the block carries no material on that span at all."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "1",
+      "note": "Basil the Great is the fifth confirmed voice under the 200-word hard cap (after Keil and Delitzsch, John Gill, Cyril of Jerusalem and John Lightfoot); every sampled block is exactly 200 words and several end mid-sentence. He is also the second voice hit by the scripts/synthesis_qa.py VOICE_LABELS gap: the list carries the bare string 'Basil', so _LABEL_RE never matches the header 'Basil the Great:', exactly as already recorded for 'Cyril' against 'Cyril of Jerusalem:'. Consequence is that a genuine Basil block cannot be named in excluded_voices without tripping the 'names a block absent from this entry's source' check, and his words are invisible to usable_source_words. Worked around here with a SILENT set that skips him in the ghost pass without ever emitting him into excluded_voices. The fix wants the long forms placed BEFORE the short ones in VOICE_LABELS, since alternation order decides the match, and it changes usable_source_words corpus-wide."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "1",
+      "note": "genesis 1 at 63,543 usable source words tiled into eight entries on Henry's own keying, which follows the days of creation: 1-2, 3-5, 6-8, 9-13, 14-19, 20-25, 26-28, 29-31. Nine distinct voices in the chapter (Gill 31 verses, Ellicott 22, Clarke 19, Calvin 19, Keil and Delitzsch 11, Wesley 11, Henry 10, Basil the Great 9, Jamieson 1) with a maximum of eight on any single verse, so the 350-650 word window never bound on voice count here the way it does on NT chapters. Compare acts 2, where twelve voices keyed at verse 1 forced a single-verse entry. Further evidence that the picker's source-word budget mis-ranks OT against NT chapters: an OT chapter of 63,543 words took eight entries while an NT chapter of 117,188 took twelve."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "1",
+      "verses": [
+        "26"
+      ],
+      "note": "The clearest statement of accommodation in the corpus so far stands at genesis 1:14-16, where Calvin defends the description of the moon as a great light: Moses does not descant as a philosopher on the secrets of nature but writes in a popular style what all persons of common sense can understand, while astronomers prove that Saturn is greater than the moon; the question is not how great the sun is but how much light comes to us; and astronomy itself is expressly not to be reprobated. Clarke reaches the same defence empirically, distinguishing bulk from light shed, while Gill goes the other way and supplies Derham's and Newton's measurements in the middle of a comment on the folly of worshipping the sun. At 1:26 the same three split again on the plural: Gill and Calvin take it of the Father addressing the Son and Spirit and reject the earth, the angels and the plural of majesty outright, while Ellicott records the Jewish readings and finds only the germ of the doctrine, expressly denying that it is a formal proof of the Trinity."
     }
   ]
 }
