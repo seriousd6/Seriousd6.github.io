@@ -2,1135 +2,458 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Matthew Henry: Jacob, having got clear of Laban, pursues his journey homeward toward Canaan; when God has helped us through difficulties we should go on our way heavenward with so much the more cheerfulness and resolution, and here is Jacob's convoy in his journey, the angels of God met him in a visible form; Gill: Jacob went on his way from Gilead toward the land of Canaan; the witnesses note Jacob going on his way, and the angels of God meeting him — the heavenly escort granted to Jacob as he sets his face toward Canaan (no sooner is Jacob free of Laban than God meets him with a fresh token of his presence: 'Jacob went on his way, and the angels of God met him'; the timeliness of the encounter, that just as Jacob, leaving one danger, Laban, behind, draws near to another, Esau before him, God grants him a vision of 'the angels of God' who 'met him,' a heavenly host to convoy and guard him on his way; the same God who had promised 'I will be with thee' now showing Jacob, in this angelic meeting, the unseen armies that attend his people, so Jacob, returning to the land of promise, is met and escorted by the angels of God)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jacob went on his way, and the angels of God met him",
-   "the heavenly escort granted to Jacob",
-   "the unseen armies that attend God's people",
-   "God's presence shown just as Esau looms ahead"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "1-2",
+  "pericope_label": "The angels of God meet Jacob at Mahanaim",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the appearance to have been human and soldierly, which is why they are called a host, and reports Aben Ezra's view that Jacob alone saw them; Calvin has Jacob proceeding as one going to the slaughter, assigns the vision the double use of removing terror and fixing the memory of past deliverance, prefers angels ranged on both sides to the Hebrew interpreters' reading of an enemy camp opposite God's, allows the dual to stand for a plural, and rebukes those who allow each believer only one guardian angel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the relief of being clear of Laban, observes that the comfort came in a calm interval because God would have us provide for trouble in peace, reports the rabbinic account of the angels of Mesopotamia handing Jacob to the angels of Canaan while preferring a guard before and behind against Esau and Laban, and presses the comfort that faith sees what Jacob saw and that a guard of angels settles the question of a guardian angel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke derives angel from the Greek and Hebrew words for messenger and sending, cites Augustine that it names an office and not a nature and Parkhurst on the angel of Jehovah as God's means of visibility, reads Mahanaim as the angels' camp with Jacob's own, notes the later priestly city there, and argues at length that angels may not be invoked since they are instruments without discretionary power; Wesley leaves the manner of the vision open and repeats Henry's comfort about the guard of angels almost word for word."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the angels appeared in a visible form, most probably human, in the habit and with the accoutrements of soldiers, and therefore afterwards called an host or army; Aben Ezra thinks that Jacob alone saw them, as Elisha first saw the host; the name 'Mahanaim' signifies two hosts or two camps; the witnesses note Jacob, seeing the angels, calling them God's host and naming the place Mahanaim — the recognition of the angelic army and the memorial name 'two camps' (Jacob reading the vision aright and marking the spot: 'when Jacob saw them, he said, This is God's host: and he called the name of that place Mahanaim'; the discernment of Jacob, that he knew the angels at once for what they were, 'God's host,' God's army sent to guard him, and was comforted to see that, going to meet Esau's company, he was attended by a heavenly company far greater; the name he gave the place, 'Mahanaim,' meaning 'two hosts' or 'two camps,' either his own camp and the angels' or the two companies of angels that met him; Jacob, setting up no altar here but a name, leaving a lasting memorial of the encouragement God gave him by this angelic escort, so the place is named for the two camps, the heavenly host meeting the earthly)."
+    "summary": "Ellicott places the parting from Laban on the frontier where he could find no allies, dates the vision about a week's journey southward, collects and rejects the rationalising conjectures that the messengers were prophets, a caravan or a company sent by Rebekah, and allows Mahanaim to mean either Jacob's camp with the angels' or two camps of angels flanking him, noting the town's later importance in Gad; Keil and Delitzsch move directly from the naming to the embassy sent to Esau."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the two camps of Mahanaim are: the angels and Jacob's own company, two companies of angels flanking him, the angels of Mesopotamia handing him to those of Canaan, or a dual standing simply for a plural",
+   "Whether each believer has one guardian angel, which Henry declines to dispute and Calvin calls a depreciation of God's kindness"
+  ],
+  "outliers": [
+   "Clarke suspends the exposition twice, once for a lexical and patristic note on the word angel closing with a passage of Hesiod on guardian spirits, and once for a polemic against the invocation of angels",
+   "Ellicott records that numberless conjectures have been hazarded to explain the angels away as prophets, traders or a rescue party sent by Rebekah"
+  ],
   "themes": [
-   "This is God's host",
-   "and he called the name of that place Mahanaim",
-   "Jacob naming the place 'two camps' for the angelic host",
-   "comforted by a heavenly company greater than Esau's"
+   "angels",
+   "providence",
+   "Mahanaim",
+   "fear",
+   "divine protection"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "3-8",
+  "pericope_label": "The embassy to Esau, the report of four hundred men, and the divided company",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill identifies the messengers as Jacob's own servants against Jarchi's reading of angels, and judges the alarm a plain failure of faith after so many promises and the appearance of the angelic guard; Calvin states and answers the objection that Jacob cedes the dominion he had fought for, denies that the wealth is named in boasting, reads Esau's removal to Seir as providence leaving the land vacant, cites Malachi to make the voluntary departure a banishment, conjectures that Rebekah sent the news, explains why God let a groundless fear stand, warns that faith is never exempt from fear, and notes that the word for the two bands is the word behind Mahanaim."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains why Jacob would not pass by an offended elder brother without civility, reads the titles as a disclaimer of the birthright's prerogatives, defends the fear as consistent with humble confidence since Christ in his agony was sorely amazed, observes that the troubles of the righteous succeed one another as clouds return after rain, and marks that the company was divided for flight and not, as Abraham's was, for fight."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that messengers and angels are the same word, dates the embassy before the Mahanaim vision, places Seir from the Dead Sea to the Arabian gulf and finds Esau's sword-prophecy fulfilled in his dispossessing the Horites, denies that the four hundred men were hostile at all, lays Jacob's terror to a guilty conscience with a tag from Horace on the brazen wall, and calls the dividing of the flocks prudence turned into a right channel; Wesley follows Henry on the titles and adds that Jacob came neither as fugitive nor beggar."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: these were messengers, not angels simply (as Jarchi thought), for the angels were not under Jacob's command to send, nor would they have needed instruction from him afterwards given, but these were his own servants; Esau now dwelt in the land of Seir, the country of Edom; the witnesses note Jacob sending messengers before him to his brother Esau in the land of Seir — the prudent overture of peace, Jacob seeking to be reconciled with the brother he had wronged (Jacob, drawing near to Canaan, taking the first step toward his estranged brother: 'Jacob sent messengers before him to Esau his brother unto the land of Seir, the country of Edom'; the prudence and humility of the act, that Jacob does not wait to be surprised by Esau, nor presume on the angelic escort, but sends his own 'messengers,' his servants not angels as Gill carefully notes, ahead to Esau who now dwelt 'in the land of Seir, the country of Edom'; Jacob, mindful of the old wrong of the birthright and blessing, seeking to disarm his brother's anger by a respectful overture, opening the way for reconciliation, the wisdom of seeking peace before the meeting, so Jacob sends ahead to Esau, taking the path of humility and peace)."
+    "summary": "Ellicott reconstructs Esau's Horite raid from Hebron and explains how it led him afterwards to settle in Seir, notes that Seir means rough and the term field marks an uncultivated region, measures the hundred miles from Mahanaim and traces Esau's approach through the later Moab and Ammon, reads the catalogue of wealth as a disclaimer of any claim on Isaac's property, and calls Jacob's faith feeble but real because it drove him to prayer; Keil and Delitzsch pass from the two bands directly to the prayer."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Esau's four hundred men were a hostile force, which Gill and Henry assume, or an honourable escort, as Clarke and Calvin both conclude",
+   "Whether Jacob's terror was a failure of faith, as Gill and Ellicott judge, or consistent with faith, as Henry argues and Calvin explains"
+  ],
+  "outliers": [
+   "Calvin raises against himself the objection that Jacob's submission surrenders everything he had risked his life to obtain, and answers by distinguishing the temporal dominion from the secret benediction"
+  ],
   "themes": [
-   "And Jacob sent messengers before him to Esau his brother",
-   "unto the land of Seir, the country of Edom",
-   "Jacob's prudent overture of peace to Esau",
-   "seeking reconciliation with the brother he had wronged"
+   "fear",
+   "prudence",
+   "reconciliation",
+   "providence",
+   "Esau",
+   "faith"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam Clarke: Jacob acknowledges the superiority of his brother, for the time was not yet come in which it could be said, 'The elder shall serve the younger'; Calvin notes Moses shows Jacob's humility and prudence; the witnesses note Jacob instructing the messengers to address Esau as 'my lord' and call himself 'thy servant,' reporting his long sojourn with Laban — the studied humility of Jacob's message, softening his brother by lowly words (Jacob framing his message with careful humility: 'Thus shall ye speak unto my lord Esau; Thy servant Jacob saith thus, I have sojourned with Laban, and stayed there until now'; the lowliness of the language, that Jacob bids his servants call Esau 'my lord' and himself 'thy servant,' bowing before the brother he had once supplanted; the question this raises, that Jacob seems to yield the very superiority the blessing had given him, 'the elder shall serve the younger,' as Clarke observes the time for that was not yet come, yet the commentators seeing in it not a denial of the blessing but Jacob's wise humility, seeking to disarm Esau's wrath by lowliness rather than provoke it by standing on his rights; Jacob also reporting plainly where he had been, 'sojourned with Laban... until now,' explaining his long absence, so Jacob's humble words seek peace with his brother)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thus shall ye speak unto my lord Esau",
-   "Thy servant Jacob saith thus, I have sojourned with Laban",
-   "Jacob's studied humility, calling Esau lord and himself servant",
-   "seeking to disarm his brother's wrath by lowliness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Jacob would have this said lest Esau should think he was come to ask anything of him, and put himself and his family upon him, or to be a burden, or lest he should treat him with contempt as a poor mean brother; the witnesses note Jacob telling Esau of his oxen, asses, flocks, and servants, that he might find grace in his sight — the report of his substance, to remove suspicion and win his brother's goodwill (Jacob bidding his messengers tell Esau of his possessions: 'I have oxen, and asses, flocks, and menservants, and womenservants: and I have sent to tell my lord, that I may find grace in thy sight'; the purpose of this report, that Jacob mentions his wealth not in pride but, as Gill notes, to assure Esau that he came not as a needy beggar to ask anything or to be a burden, nor as a poor brother to be despised, but as one able to provide for himself, seeking only peace; the closing plea, 'that I may find grace in thy sight,' the true aim of the whole message, that Jacob desires not Esau's goods but his goodwill, the favour and reconciliation of his brother, so Jacob's report of his substance is meant to clear the way for peace and win Esau's grace)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have oxen, and asses, flocks, and menservants, and womenservants",
-   "and I have sent to tell my lord, that I may find grace in thy sight",
-   "Jacob's report of his wealth to remove suspicion",
-   "seeking not Esau's goods but his goodwill"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam Clarke: Jacob, conscious that he had injured his brother, was now apprehensive that Esau was coming with hostile intent; Gill notes the messengers returned with their answer; the witnesses note the messengers returning to say Esau was coming to meet Jacob with four hundred men — the threatening news that turned Jacob's overture into alarm (the messengers bringing back word that fills Jacob with dread: 'We came to thy brother Esau, and also he cometh to meet thee, and four hundred men with him'; the ambiguous and alarming report, that Esau 'cometh to meet thee,' which might be friendly, but 'four hundred men with him,' an armed band, gave it the look of war; Jacob's conscience in the matter, as Clarke observes, that, knowing how he had wronged Esau, he could not but read the four hundred men as a force gathered for vengeance; the news, far from the peaceful answer Jacob hoped, seeming to confirm his worst fears, that Esau came not to embrace but to destroy, so the messengers' report turns Jacob's overture of peace into present alarm)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "We came to thy brother Esau, and also he cometh to meet thee",
-   "and four hundred men with him",
-   "the alarming report of Esau's armed approach",
-   "Jacob's guilty conscience reading it as vengeance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Jacob, knowing what he had done to his brother in getting the birthright and blessing from him, and what an enmity he had conceived against him on that account, and remembering what he had said he would do to him, was greatly afraid and distressed; the witnesses note Jacob, greatly afraid and distressed, dividing his people, flocks, herds, and camels into two bands — the mingling of real fear with prudent precaution as Jacob braces for Esau (the dread news throwing Jacob into great agitation, yet he acts wisely: 'Jacob was greatly afraid and distressed: and he divided the people that was with him, and the flocks, and herds, and the camels, into two bands'; the two things in the verse, first Jacob's 'fear and distress,' a real and deep alarm springing, as Gill notes, from his conscience over the old wrong and his memory of Esau's threat to kill him, and second his prudence, that even in his fear he does not give way to despair but takes thought, dividing his company 'into two bands'; that Jacob's fear, though it showed weakness of faith, was natural and led him to both prayer and prudent action, so Jacob, afraid yet thoughtful, prepares against the worst by dividing his people into two)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then Jacob was greatly afraid and distressed",
-   "and he divided the people that was with him... into two bands",
-   "Jacob's fear joined to prudent precaution",
-   "real alarm springing from conscience over the old wrong"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the thought was that if Esau should come in a hostile manner and fall upon the one company (which perhaps consisted of some servants with part of his cattle) and slay the servants and take the cattle, the other company which is left might escape; the witnesses note Jacob reasoning that if Esau smote the one company, the other left would escape — the prudent calculation by which Jacob sought to save at least half from Esau's assault (Jacob explaining the purpose of the two bands: 'If Esau come to the one company, and smite it, then the other company which is left shall escape'; the foresight in the plan, that Jacob, fearing a hostile attack, divides his people and goods so that, should Esau fall upon and destroy 'the one company,' 'the other company which is left shall escape,' and so at least half his household and substance be saved; the mingled wisdom and weakness in this, that it is prudent forethought, the act of a careful man planning for the worst, yet it also betrays how real and near Jacob's fear of slaughter was; that Jacob, while making such human provision, does not rest in it but turns at once to prayer, so Jacob's plan to save the one company by dividing shows both his prudence and his dread)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If Esau come to the one company, and smite it",
-   "then the other company which is left shall escape",
-   "Jacob's prudent calculation to save half",
-   "careful forethought, yet betraying his dread of slaughter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "9-12",
+  "pericope_label": "Jacob's prayer",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: in this distress Jacob does not consult the teraphim Rachel had taken from her father, nor call upon the host of angels that had just appeared to him to help and guard him, but betakes himself to God in prayer; the witnesses note Jacob praying to the God of Abraham and Isaac, the LORD who had bidden him return and promised to deal well with him — the model prayer of faith, pleading God's covenant relation and his own command (Jacob, in his fear, turning not to idols nor to angels but to God: 'O God of my father Abraham, and God of my father Isaac, the LORD which saidst unto me, Return unto thy country, and to thy kindred, and I will deal well with thee'; where Jacob's prayer begins, on the firmest ground, God's covenant relation, 'God of my father Abraham, and God of my father Isaac,' the God who had bound himself to his fathers, and God's own command and promise, 'which saidst unto me, Return... and I will deal well with thee'; the wisdom of the plea, that Jacob asks God to keep him in the very path of obedience into which God himself had sent him, holding God to his own word; that Jacob, in distress, sought neither the teraphim nor the angels but God alone, so Jacob's prayer rests on the covenant God and his promise)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "O God of my father Abraham, and God of my father Isaac",
-   "the LORD which saidst unto me, Return... and I will deal well with thee",
-   "Jacob's prayer grounded on covenant and command",
-   "turning in distress to God alone, not idols or angels"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
+    "summary": "Gill prefers the marginal rendering that Jacob is less than all the mercies, and takes the confession to disclaim any merit for temporal or spiritual favours alike; Calvin finds in the prayer the proof that fear had not overcome faith, explains the covenant titles as God's condescension and as a mark distinguishing him from idols, makes the command and the promise the two pillars of the petition, calls it holy boldness to ask for what God has bound himself to give, argues that Jacob's appeal proves he had not lied to his wives about the command to return, sets the plea of unworthiness against Satan's discouragement, and reads the mother with the children as a proverb drawn from hawking."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes times of fear times of prayer and notes that Jacob applied to God rather than to the angels he had just seen or to Laban's teraphim, explains why he called God the God of his fathers rather than his own, calls the plea of unworthiness surprising and compares those whom Christ commended, quotes Herbert's motto, turns the two bands into a measure of increase, and lays down that the best we can say to God is what he has said to us."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets out the prayer as a model in five constituents, prefers the marginal rendering and compares Paul's less than the least of all saints, follows the Chaldee in taking the staff to mean Jacob alone without attendants, infers from the mother with the children how fiercely Jacob feared his brother, and observes that he stopped when he reached the promise that ratified the covenant; Wesley follows Henry closely on the covenant titles, the plea of unworthiness and the staff."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Jacob, in a humble sense of things his mind was now impressed with, owns he was not worthy of the least mercy and favour that had been bestowed upon him, not even of any temporal mercy; the witnesses note Jacob confessing himself unworthy of the least of God's mercies and truth, recalling that he crossed Jordan with only his staff and was now become two bands — the lowly confession that magnifies God's mercy against Jacob's unworthiness (Jacob, before pressing his petition, abasing himself and exalting God's goodness: 'I am not worthy of the least of all the mercies, and of all the truth, which thou hast shewed unto thy servant'; the depth of the humility, that Jacob owns himself unworthy of even 'the least' of God's 'mercies,' his free favours, and 'truth,' his faithfulness in keeping promise, a true sense of his own unfitness for any of God's kindness, and he proves God's abundant goodness by the contrast of his own history: 'with my staff I passed over this Jordan,' twenty years before a lone, poor fugitive with nothing but a staff, 'and now I am become two bands,' so increased that his household and goods form two companies; this confession being a pattern of right praying, humbling self, magnifying grace, and owning all blessings as undeserved mercy, so Jacob exalts God's mercy against his own unworthiness)."
+    "summary": "Ellicott calls this the first recorded prayer in Scripture and traces its movement from the God of the fathers to the Jehovah who commanded the return, dwells on the picture of the mother slain upon her children as Hosea's image of the worst of war's miseries, and observes that with God, unlike with men, pleading a former favour is not ungenerous since each act of mercy pledges more; Keil and Delitzsch gloss the same phrase as proverbial for unsparing cruelty, drawn from the bird covering its young."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why God is addressed as the God of Abraham and Isaac: Henry and Wesley read it as self-denial declining to claim him as Jacob's own, Calvin as God's own condescension and as the mark distinguishing him from the idols"
+  ],
+  "outliers": [
+   "Clarke and Gill both set aside the Authorised Version's I am not worthy for the marginal I am less than all the mercies, and Calvin renders it the same way from the Latin"
+  ],
   "themes": [
-   "I am not worthy of the least of all the mercies, and of all the truth",
-   "with my staff I passed over this Jordan; and now I am become two bands",
-   "Jacob's humble confession magnifying God's mercy",
-   "a pattern of right praying: humbling self, exalting grace"
+   "prayer",
+   "unworthiness",
+   "covenant",
+   "promise",
+   "fear",
+   "providence"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: though his brother, it was his brother Esau that had formerly vowed revenge upon him and had determined to kill him, and Jacob knew not but that he was still of the same mind; the witnesses note Jacob praying for deliverance from the hand of his brother Esau, fearing he would come and smite the mother with the children — the earnest, specific petition for rescue from the dreaded brother (Jacob now coming to his plain request, naming his fear and his danger: 'Deliver me, I pray thee, from the hand of my brother, from the hand of Esau'; the directness and earnestness of the plea, that Jacob asks plainly to be delivered 'from the hand of my brother, from the hand of Esau,' naming him twice as the very source of his dread, and owns the reason, 'for I fear him, lest he will come and smite me, and the mother with the children'; the depth of the dread, that Jacob feared not for himself only but for 'the mother with the children,' a total destruction of his household; Jacob's prayer, though full of fear, being also full of faith, casting the very danger he dreaded upon God to remove, so Jacob lays his specific fear before God and begs deliverance)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Deliver me, I pray thee, from the hand of my brother, from the hand of Esau",
-   "for I fear him, lest he will come and smite me, and the mother with the children",
-   "Jacob's earnest, specific petition for deliverance",
-   "fear and faith together, casting his dread upon God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Jacob rightly interpreted the promise 'I will be with thee,' for the promise of God's presence includes and secures all needful good to his people, and from it Jacob argues; the witnesses note Jacob closing his prayer by pleading God's promise to do him good and multiply his seed as the sand of the sea — the prayer sealed by holding God to his own covenant word (Jacob ending his petition where strong faith ends, on the promise of God: 'thou saidst, I will surely do thee good, and make thy seed as the sand of the sea, which cannot be numbered for multitude'; the wisdom and boldness of this close, that Jacob holds God to his own word, the covenant promise to 'do thee good' and to 'make thy seed as the sand of the sea'; the force of the argument, that if Esau should destroy Jacob and 'the mother with the children,' God's own promise of a countless seed would fail, which cannot be, and so Jacob pleads the promise as the surest ground that God will deliver him; this being faith's highest plea, to turn God's promises into prayers, holding him to his covenant, so Jacob seals his prayer on the promise that cannot fail)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And thou saidst, I will surely do thee good",
-   "and make thy seed as the sand of the sea, which cannot be numbered for multitude",
-   "Jacob sealing his prayer on God's covenant promise",
-   "faith's highest plea: turning God's promises into prayers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "13-23",
+  "pericope_label": "The present sent before him, and the crossing of the Jabbok",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill explains why the drovers are made to repeat that Jacob follows, since the present would have counted for nothing without the visit and Esau would have thought himself slighted; Calvin warns against contriving subterfuges after prayer while insisting that security must not breed indolence, contrasts the diligence of the pious with the world's restless activity, measures the size of the gift against the value Jacob set on the promise and rebukes those who will not bear to be losers, explains the proleptic naming of the Jabbok, holds that Jacob stayed behind for solitude in prayer, and draws a threefold order of prayer, means and courage."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the present the complement of the prayer, observing that fear did not dispirit Jacob from using means nor prayer make him presume without them, counts the beasts at five hundred and eighty, finds in them proof of God's blessing and of Jacob's wisdom in parting with some to secure the rest, thinks tame cattle a shrewd gift for a hunter newly settled, and holds that a friendly confidence in men's goodness may prevent the mischief their badness designs."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the present princely and sufficient to compensate the loss of birthright and blessing, dwells on the value of milch camels among the Arabs with a citation from Pliny on their milk, prefers the received ten bulls to the twenty of the Syriac and Vulgate, treats the whole transaction as restitution for an injury, glosses what came to his hand as what providence had put in his power, and places the Jabbok's rise in Gilead; Wesley follows Henry on the humble message and the confidence it expressed."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: Jacob lodged there that same night and took of that which came to his hand a present for Esau his brother; Gill: he lodged at Mahanaim or some place near it; the witnesses note Jacob lodging the night and taking of what he had a present for his brother Esau — the prudent gift prepared, faith and works joined in seeking peace (Jacob, having prayed, now also acting, preparing a gift to soften Esau: 'he lodged there that same night; and took of that which came to his hand a present for Esau his brother'; the joining of prayer and prudence, that Jacob does not, having prayed, sit idle but uses lawful means as well, taking 'of that which came to his hand,' of the substance God had given him, 'a present for Esau his brother' to appease and win him; the balance of faith and works in Jacob, that he trusts God to deliver yet sends a gift, using the means God allows while leaning on the God who gives the means their effect; that to pray and then to use no means would be to tempt God, but Jacob both prays and provides, so Jacob, after prayer, prepares a present to seek peace with Esau)."
+    "summary": "Ellicott judges that faith had regained the ascendancy since Jacob put everything into Esau's power, renders the space between the droves a breathing place, takes I will appease him literally as covering the face with the offering and connects it with the legal term for atonement, reports and rejects the Jewish reading of precious stones, identifies the Jabbok as the Wady Zerka with Tristram's account of the ford, and argues from the width of the ravine and from Peniel's lying in Gad that Jacob remained on its southern side; Keil and Delitzsch make the herd five hundred and fifty, match the selection to nomad holdings as in Job, and find the proportion of males to females following Varro's rule."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "The size of the present: Henry counts five hundred and eighty head where Keil and Delitzsch and Ellicott both count five hundred and fifty",
+   "Where Jacob was left alone: Ellicott argues from the ravine's width and from Peniel's lying in Gad that he stayed on the south side, against the common assumption that he recrossed the stream"
+  ],
+  "outliers": [
+   "Clarke reads the whole present as restitution and adds that one who can make restitution for a wrong and will not has no claim even on the mercy of God"
+  ],
   "themes": [
-   "and he lodged there that same night",
-   "took of that which came to his hand a present for Esau his brother",
-   "Jacob joining prayer and prudent means",
-   "faith and works together, trusting God yet using lawful means"
+   "prudence",
+   "means",
+   "restitution",
+   "reconciliation",
+   "the Jabbok",
+   "solitude"
   ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam Clarke: this was a princely present, and such as was sufficient to have compensated Esau for any kind of temporal loss he might have sustained in being deprived of the birthright and the blessing; Gill notes the goats and ewes in their hundreds, with their males in due proportion; the witnesses note Jacob's gift beginning with two hundred she-goats and twenty he-goats, two hundred ewes and twenty rams — the lavish, carefully proportioned present that befitted a prince (Jacob's gift being no small token but a princely offering, here begun with the flocks: 'Two hundred she goats, and twenty he goats, two hundred ewes, and twenty rams'; the size and care of the gift, that Jacob sends 'two hundred she goats' and 'two hundred ewes,' with the males, 'twenty he goats... twenty rams,' in the proportion a skilled herdsman knew to be right for the flocks; Clarke's word that this was 'a princely present,' large enough to make up to Esau any worldly loss he felt from the lost birthright and blessing, a generous and conciliating gift; the wisdom of Jacob in choosing such a present, both rich and well-ordered, to win his brother's heart, so the gift opens with a large and careful provision of goats and sheep)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Two hundred she goats, and twenty he goats",
-   "two hundred ewes, and twenty rams",
-   "the princely present begun with the flocks",
-   "a generous, well-ordered gift to win Esau's heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: milch camels were in great esteem in the eastern countries, their milk being, as Aristotle and Pliny say, the sweetest of all milk; Keil and Delitzsch note the thirty milch camels with their colts, forty kine and ten bulls, twenty she asses and ten foals; the witnesses note the gift continuing with thirty milch camels and their colts, forty kine and ten bulls, twenty she-asses and ten foals — the full and varied present, every kind of beast in generous number (Jacob's gift completed with the larger and more valued cattle: 'Thirty milch camels with their colts, forty kine, and ten bulls, twenty she asses, and ten foals'; the richness and variety of the whole, that to the flocks of goats and sheep Jacob adds 'thirty milch camels with their colts,' the milch camels especially prized, their milk the sweetest as Gill notes from the ancients, 'forty kine, and ten bulls,' and 'twenty she asses, and ten foals,' every kind of useful beast in liberal number; the present, in all five hundred and fifty head, being a costly and generous gift fit to honour Esau and to testify Jacob's earnest desire for peace; the care with which Jacob chose each kind, sparing nothing to win his brother, so the gift is completed with camels, cattle, and asses in abundance)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thirty milch camels with their colts, forty kine, and ten bulls",
-   "twenty she asses, and ten foals",
-   "the present completed with camels, cattle, and asses",
-   "a costly gift of over five hundred head to win Esau"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Charles Ellicott: 'a space' is in Hebrew 'a breathing place'; the separation of the droves would be a matter of course, as each kind would travel peaceably onward only by itself; Gill: he delivered them into the hand of his servants to present them to Esau as from him; the witnesses note Jacob committing the droves to his servants, each by itself, bidding them pass over before him with a space between drove and drove — the wise arrangement of the gift in successive droves to work the more upon Esau (Jacob ordering the present to be sent in a particular way: 'he delivered them into the hand of his servants, every drove by themselves; and said unto his servants, Pass over before me, and put a space betwixt drove and drove'; the design of the spacing, that Jacob sends the gift not all at once but in separate 'droves,' each kind by itself, with 'a space betwixt drove and drove,' so that the present would come upon Esau in wave after wave; the wisdom of this, that each successive drove, met one after another, would the more impress Esau with the greatness of the gift and the earnestness of Jacob, softening his heart by degrees; Ellicott's note that the separation was also practical, each kind travelling peaceably only by itself, so the gift is sent in successive, well-spaced droves to win Esau the more)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he delivered them into the hand of his servants, every drove by themselves",
-   "Pass over before me, and put a space betwixt drove and drove",
-   "the gift sent in successive, well-spaced droves",
-   "coming wave after wave to soften Esau by degrees"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John Wesley: Jacob sent Esau a very humble message, which he ordered his servants to deliver in the best manner; they must call Esau their lord and Jacob his servant; Gill: he commanded the foremost, who had the care of the first drove (which consisted of goats, male and female); the witnesses note Jacob commanding the foremost servant how to answer when Esau should ask whose he was, whither he went, and whose were the beasts before him — the careful instruction of the servants to answer Esau with humility and consistency (Jacob, having sent the droves ahead, schooling the first servant in what to say: 'When Esau my brother meeteth thee, and asketh thee, saying, Whose art thou? and whither goest thou? and whose are these before thee?'; the foresight of Jacob, that he anticipates the very questions Esau will ask the servant, 'Whose art thou? and whither goest thou? and whose are these?' and prepares a fitting answer, so that the message of peace and submission may be delivered uniformly and well by each drover; Wesley's word that the whole was a 'very humble message,' ordered to be delivered 'in the best manner,' calling Esau lord and Jacob servant; the care Jacob took that nothing be left to chance in so weighty a matter, so Jacob instructs the foremost servant in the humble answer to give Esau)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When Esau my brother meeteth thee, and asketh thee, Whose art thou?",
-   "and whither goest thou? and whose are these before thee?",
-   "Jacob anticipating Esau's questions",
-   "schooling the servants in a humble, consistent answer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: both the goats before them and the servants themselves that had the care of them belonged to Jacob, who directed them to speak of him to Esau as his 'servant'; the witnesses note the servant directed to say the beasts were Jacob's, a present sent to lord Esau, who was himself behind — the appointed answer that named the gift, honoured Esau, and announced Jacob's coming (Jacob giving the very words the servant must speak: 'They be thy servant Jacob's; it is a present sent unto my lord Esau: and, behold, also he is behind us'; the three things the answer conveys, first ownership and submission, 'thy servant Jacob's,' the beasts being Jacob's and Jacob being Esau's 'servant,' second the purpose, 'a present sent unto my lord Esau,' a gift freely given to honour Esau as 'lord,' and third the announcement, 'also he is behind us,' Jacob himself following, not fleeing; the studied humility and openness of the message, every word chosen to disarm Esau's anger and prepare him for a peaceable meeting, the same lowly terms, 'thy servant,' 'my lord,' running through all, so the appointed answer offers the gift and honours Esau in Jacob's name)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They be thy servant Jacob's; it is a present sent unto my lord Esau",
-   "and, behold, also he is behind us",
-   "the appointed answer offering the gift to Esau",
-   "every word chosen to disarm Esau and prepare peace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: he ordered those who had the care of the second and third droves to say the same things, and in the same words, as he had the first; the witnesses note Jacob commanding the second, third, and all the drovers to speak to Esau in the same manner — the uniform message repeated by every drover to make one consistent impression (Jacob giving one and the same charge to all who followed the droves: 'On this manner shall ye speak unto Esau, when ye find him'; the wisdom of the repetition, that each drover, as he met Esau in turn, was to give 'on this manner' the very same humble answer, so that Esau would hear, again and again from drove after drove, the same words of submission and the same announcement of the gift and of Jacob's coming; the cumulative effect designed, that the one message, repeated by every servant, would press the more steadily upon Esau, building up the impression of Jacob's earnest humility and generosity; the thoroughness of Jacob's planning, leaving no drover unschooled, so every drover bears the same message to Esau, that the impression may be one and strong)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And so commanded he the second, and the third, and all that followed the droves",
-   "On this manner shall ye speak unto Esau, when ye find him",
-   "the uniform message charged to every drover",
-   "the repeated words pressing the more steadily upon Esau"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is repeated to impress it upon their minds, that they might be careful not to forget that Jacob was behind, it being a point of great importance, for the present would have signified nothing if Jacob were not behind; the witnesses note the drovers to add that Jacob was behind, for he hoped to appease Esau with the present and afterward see his face — the open declaration of Jacob's hope, to soften Esau by the gift before the meeting (Jacob revealing the very strategy of his heart: 'I will appease him with the present that goeth before me, and afterward I will see his face; peradventure he will accept of me'; the threefold thought, first that the drovers must say 'thy servant Jacob is behind us,' that Esau might know Jacob was coming and not flee, second the design, 'I will appease him with the present that goeth before me,' that the gift going first might soften Esau's anger before the brothers met, and third the humble hope, 'peradventure he will accept of me,' Jacob daring to hope but not presuming that Esau would receive him in peace; the wisdom of sending the gift before the face, that the heart be won before the meeting, so Jacob hopes to appease Esau by the present and then be accepted)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold, thy servant Jacob is behind us",
-   "I will appease him with the present... peradventure he will accept of me",
-   "Jacob's design to soften Esau by the gift sent before",
-   "winning the heart before the meeting of faces"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
+  "excluded_voices": [
    "Jamieson, Fausset and Brown"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jamieson, Fausset and Brown: Jacob's language and his conduct were alike that of a man whose mind was pervaded by sentiments of solemn awe, of fervent piety, and lively faith; Gill: the present went over the brook Jabbok the night before Jacob did; the witnesses note the present going over before Jacob while he himself lodged that night with his company — the gift sent ahead, Jacob remaining the night before the decisive day (all being ordered, the gift going on while Jacob waits: 'So went the present over before him: and himself lodged that night in the company'; the quiet pause before the storm, that the droves of the present 'went over before him,' crossed ahead toward Esau, while Jacob 'himself lodged that night in the company,' remaining with his household for the night before the great meeting; the spirit that filled Jacob through all this, as JFB note, not mere scheming but the bearing of a man 'pervaded by sentiments of solemn awe, of fervent piety, and lively faith,' who used means with all diligence yet leaned upon God; that this night of waiting was to become the night of wrestling, so the gift goes ahead and Jacob lodges, in awe and faith, before the day of meeting)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So went the present over before him",
-   "and himself lodged that night in the company",
-   "the gift sent ahead, Jacob lodging in awe before the day",
-   "a man of solemn awe, fervent piety, and lively faith"
-  ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam Clarke: the brook or rivulet Jabbok rises in the mountains of Gilead and falls into the Jordan at the south extremity of the lake of Gennesaret; Gill: he rose up in the middle of the night, for it was long before break of day; the witnesses note Jacob rising that night to take his two wives, two handmaids, and eleven sons over the ford Jabbok — the night-crossing of the family over the boundary stream before the dawn of meeting (Jacob, unable to rest, rising in the deep of night to send his household across: 'he rose up that night, and took his two wives, and his two womenservants, and his eleven sons, and passed over the ford Jabbok'; the time and the act, 'that night,' in the middle of it long before dawn as Gill notes, Jacob rousing his whole family, 'his two wives,' Leah and Rachel, 'his two womenservants,' Bilhah and Zilpah, and 'his eleven sons,' Dinah his daughter being included with the household, and bringing them over 'the ford Jabbok,' the brook that ran between him and Esau's country; that Jacob put the stream between his family and the danger and was then left alone on the farther side, so Jacob, in the night, brings his family safe over Jabbok before the decisive day)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he rose up that night, and took his two wives, and his two womenservants, and his eleven sons",
-   "and passed over the ford Jabbok",
-   "the night-crossing of the family over Jabbok",
-   "putting the boundary stream between his family and the danger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Charles Ellicott: 'the brook' is really the ravine or valley, the Arabic wady; Jacob, whose administrative powers were of a very high character, sees his wives, children, and goods safely over; Gill: he sent his wives and children over the brook under the care of some of his servants; the witnesses note Jacob taking his family and sending them and all he had over the brook — the careful sending of all across, leaving Jacob alone on the near side (Jacob seeing everything safely over before remaining behind: 'he took them, and sent them over the brook, and sent over that he had'; the thoroughness and order of it, that Jacob 'sent them over the brook,' his wives, children, and servants, 'and sent over that he had,' all his remaining goods and cattle, seeing the whole household and substance safely across to the farther side; Ellicott's note on the orderly, capable administration of Jacob, who managed even in his fear to bring all over in good order; the purpose of this, that, all being over, Jacob was left alone on the near bank where the great encounter of that night awaited him, so Jacob sends all over the brook and is left alone)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he took them, and sent them over the brook",
-   "and sent over that he had",
-   "Jacob sending his whole household and goods over the brook",
-   "leaving himself alone, where the night's encounter awaited"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "24-26",
+  "pericope_label": "The wrestling at the Jabbok and the dislocated thigh",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill calls the wrestler the Son of God in the form of man and explains that he prevailed not because he would not, Jacob's pleading of the promises leaving him no other course; Calvin insists that God himself and not Satan or a mortal was the antagonist, takes the vision as a picture of every believer's conflict, answers the objection that no one can contend with God by showing that he furnishes the weapons and defends with one hand while assailing with the other, explains why the trial came only now and why it came at the border of the promised land, notes that Moses speaks after the manner of men in making the angel retire, and makes the lasting wound the proof that victory comes only through injury."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry leaves the wrestler's identity open between a created angel and the eternal Word, describes the combat as hand to hand with God seeming to dispute the pass, draws from Hosea that the weapons were prayers and tears, explains that the angel's not prevailing means Jacob's faith was not shaken, thinks the pain was not felt since he did not halt till the struggle ended, and reads the request to be released as a condescension meant to honour a faith that would rather be dislocated than unblessed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the wrestler outright as the Lord Jesus Christ and argues at length that the body was appearance only, since bodies really assumed could not vanish instantly, doubts that the thigh was fully dislocated and suggests a disabling blow healed by sunrise, and denies that daybreak had anything to do with apparitions fleeing the light, most angelic appearances in Scripture having occurred in open day; Wesley follows Henry closely on the angel's not prevailing, the strength derived from heaven, and the painless wound."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: Jacob was left alone, and there wrestled a man with him until the breaking of the day; Gill: Jacob was left alone on the other side of Jabbok, his family and cattle having passed over, and chose this solitude in order to spend time in prayer to God for the safety of himself and his; the witnesses note Jacob, left alone, wrestling with a man until the breaking of the day — the mysterious night-long wrestling that begins, Jacob alone with the divine Adversary (all having crossed, Jacob remaining alone and met by a strange combatant: 'Jacob was left alone; and there wrestled a man with him until the breaking of the day'; the solitude Jacob sought, that he stayed behind 'alone,' as Gill notes, to spend the night in prayer for his safety, but the time of prayer became a time of mysterious conflict, for 'there wrestled a man with him until the breaking of the day'; the identity of 'a man,' that he appeared in human form, yet, as the chapter unfolds and as Hosea testifies, he is no mere man but the Angel of the LORD, God himself in the form of man, with whom Jacob strove; the strangeness of a wrestling that lasted all night, body and soul together, prayer and struggle joined, so Jacob, left alone, is engaged in a night-long wrestling with the divine Adversary)."
+    "summary": "Ellicott derives the rare verb from a word for dust and connects it with the name Jabbok, denies that the angel was an incarnation of Deity and calls the event a mediate manifestation prefiguring the incarnation, rejects the allegorical reading as contradicted by the new name and the lameness, takes the hollow for the hip socket and the injury for a sprain, renders the parting words as send me away and treats the request as an admission of defeat, and reports the Jewish notion that the wrestler was Esau's protecting angel; Keil and Delitzsch place Jacob on the northern side of the Jabbok and derive the verb from a root meaning to plant limb against limb."
    }
   ],
   "debates": [
-   {
-    "question": "Who is the 'man' that wrestled with Jacob?",
-    "sides": [
-     {
-      "position": "No mere man but the Angel of the LORD — God himself in the form of a man (so v.30 'I have seen God face to face' and Hosea 12:3-4); many take him to be the pre-incarnate Son of God",
-      "holders": [
-       "Gill",
-       "most"
-      ]
-     }
-    ]
-   }
+   "Who the wrestler was: Clarke says plainly the Lord Jesus Christ, Gill the Son of God in human form, Calvin God himself, Ellicott a mediate manifestation through a messenger and expressly not an incarnation, while Henry declines to decide",
+   "Whether the body was real or only apparent, Clarke arguing at length that angels never assume substance",
+   "Which side of the Jabbok Jacob was left on, Keil and Delitzsch saying the northern and Ellicott arguing for the southern",
+   "What the injury was: a dislocation, a disabling blow to the groin healed by morning, or a sprain of the hip socket"
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott records a Jewish tradition that the wrestler was the angel charged with defending Esau, overpowered by Jacob with the aid of his own guardian"
+  ],
   "themes": [
-   "And Jacob was left alone",
-   "and there wrestled a man with him until the breaking of the day",
-   "the night-long wrestling with the divine Adversary",
-   "'a man' in form, yet the Angel of the LORD, God himself"
+   "wrestling",
+   "temptation",
+   "weakness",
+   "blessing",
+   "the angel of the Lord",
+   "perseverance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: that he, the man, or the Son of God in the form of man, prevailed not against Jacob, by casting him to the ground or causing him to desist, not because he could not but because he would not, choosing to let Jacob prevail; the witnesses note that, seeing he prevailed not, the man touched the hollow of Jacob's thigh and put it out of joint — the divine Wrestler, prevailing not by choice, marking Jacob with a wound even as he yielded (the strange combat reaching a turning-point: 'when he saw that he prevailed not against him, he touched the hollow of his thigh; and the hollow of Jacob's thigh was out of joint, as he wrestled with him'; the great mystery here, that the divine Wrestler 'prevailed not against' Jacob, not for want of power, for he who made the world could have crushed him in a moment, but, as Gill notes, because he would not, choosing in condescension to let Jacob hold him and prevail; that, to show his real power and to humble Jacob even in his prevailing, 'he touched the hollow of his thigh' with a mere touch, and at once 'the hollow of Jacob's thigh was out of joint'; the lesson, that the strongest faith prevails with God only because God is pleased to be prevailed upon, and that he marks his wrestling people with a wound to keep them humble, so Jacob prevails yet is lamed by a touch of the divine hand)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when he saw that he prevailed not against him, he touched the hollow of his thigh",
-   "and the hollow of Jacob's thigh was out of joint",
-   "the divine Wrestler prevailing not by choice, not want of power",
-   "marking his prevailing servant with a wound to keep him humble"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'let me go, for the day breaketh' was said that he might seem a man desirous of going about his business early, as men do in the morning, though the true reason perhaps was that his form might not be more distinctly seen by Jacob, and to try and draw out Jacob's faith; the witnesses note the man asking to be let go at daybreak, and Jacob refusing to release him without a blessing — the holy importunity of Jacob, who will not let God go but by a blessing (the wrestling turning to entreaty, and Jacob's faith reaching its height: 'Let me go, for the day breaketh. And he said, I will not let thee go, except thou bless me'; the strange request of the Wrestler, 'Let me go, for the day breaketh,' said partly that his form might not be too plainly seen by daylight and partly to try and draw out Jacob's faith; the glorious answer of Jacob, 'I will not let thee go, except thou bless me,' that, now lamed and unable to wrestle, Jacob clings the harder, turning from the wrestling of the body to the wrestling of faith and prayer, holding fast and refusing to release the Angel but upon a blessing; this being the very heart of prevailing prayer, a holy violence and importunity that will not be denied, so Jacob, lamed yet clinging, will not let God go without a blessing)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let me go, for the day breaketh",
-   "I will not let thee go, except thou bless me",
-   "Jacob's holy importunity, clinging by faith",
-   "the heart of prevailing prayer that will not be denied"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "27-32",
+  "pericope_label": "The new name, Peniel, and the shrunken sinew",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill explains why Jacob was emboldened to ask the wrestler's name and what kind of name he hoped for, identifies Penuel and its later city, reads the rising sun as an emblem of the Sun of righteousness, and calls the abstinence from the sinew very superstitious, citing the Mishnah's rules; Calvin follows Jerome on the sense of the new name, insists that the old name is not abolished and that God gives with a name the thing it implies, explains the refusal of the divine name by the twilight in which the fathers walked, commends the monument at Peniel as public rather than private, argues that God's glory would destroy us unsustained, thinks the halting painless so that the miracle might be plainer, and expressly denies that the abstinence was superstition."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke offers two derivations of Israel and connects the second with the name Peniel, prefers a literal rendering of the clause about prevailing with God and men, suspects that Jacob sought a name by which to invoke the angel and that this might have bred idolatry, notes a Septuagint addition apparently borrowed from the story of Manoah, asks whether Malachi's Sun of righteousness looks back to this sunrise and suggests the thigh was healed with the dawn, and refuses to conjecture which sinew is meant; Wesley reports the exchange of names and the honour of being a prince with God, and holds that if Jacob limped to his grave the honour countervailed the damage."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: the question is asked not from ignorance but to draw out from Jacob the confession of his name and so prepare the change of it; Gill: the question is put, not as being ignorant of it, but in order to take occasion from it, and the change of it, to show that he had granted his request and had blessed him; the witnesses note the man asking Jacob's name, and Jacob answering 'Jacob' — the question that draws from Jacob the confession of his old name, in view of the new (the Wrestler, about to bless, first asking: 'What is thy name? And he said, Jacob'; that the question is not asked in ignorance, for the Angel knew well who Jacob was, but to draw from Jacob's own lips the confession of his name; the weight that lay in the name 'Jacob,' supplanter, heel-catcher, so that in confessing it Jacob owned what he had been, the supplanter who had gotten the blessing by craft; that this confession of the old name was the fitting prelude to the giving of the new, the owning of what he was before the granting of what he should become, so the Angel draws from Jacob the confession of his name in preparation for the change)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What is thy name? And he said, Jacob",
-   "the Angel drawing the confession of Jacob's name",
-   "in owning 'Jacob' he confessed what he had been",
-   "the confession of the old name, prelude to the new"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: he should be called not Jacob only but Israel also (as Ben Melech interprets), the one as well as the other, or the one more frequently and honourably than the other; the name Israel signifies a prince with God, or one who as a prince has power with God; the witnesses note the Angel giving Jacob the new name Israel, for as a prince he had power with God and men and had prevailed — the honour of the new name, marking Jacob as the prince who prevailed with God (the Angel granting the blessing and crowning it with a new name: 'Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power with God and with men, and hast prevailed'; the meaning and honour of 'Israel,' a prince with God, or one who strives and prevails with God, the new name marking the change from 'Jacob' the supplanter, who got the blessing by craft, to 'Israel' the prince, who now wins it by faith and prevailing prayer; the wonder of the commendation, 'thou hast power with God and with men, and hast prevailed,' that Jacob had power with God himself, prevailing not by force but by clinging faith, and would therefore surely prevail with men, with Esau and all his foes; the new name being a pledge of victory and a memorial of this night's prevailing, so Jacob is named Israel, the prince who prevailed with God)."
+    "summary": "Ellicott renders Israel a prince of God and matches the new name to a changed character, gives an alternative sense for the last clause, compares the refusal of a name to Manoah's case, would read Penuel here as in the next verse, argues that Jacob discovered his lameness only when he tried to walk and his sinews cooled, and identifies the sinew as the great tendon from the spinal cord while reporting the Jewish view that this was the second ordinance laid on Abraham's race; Keil and Delitzsch derive Israel from a verb meaning to fight, name the nerve nearest the hip as the one most easily injured in wrestling, and observe that the custom holds still."
    }
   ],
   "debates": [
-   {
-    "question": "What does the name 'Israel' signify?",
-    "sides": [
-     {
-      "position": "A prince with God — one who as a prince has power with God and prevails",
-      "holders": [
-       "Gill",
-       "many"
-      ]
-     },
-     {
-      "position": "One who strives (wrestles) with God and prevails — the striving emphasized",
-      "holders": [
-       "Keil and Delitzsch",
-       "others"
-      ]
-     }
-    ]
-   }
+   "Whether the sunrise marks a healing, as Clarke suggests from Malachi, or the moment when the cooling sinews first revealed the injury, as Ellicott argues",
+   "Whether the abstinence from the sinew is superstition, as Gill judges, or the lawful discipline of the Church in its infancy, as Calvin insists",
+   "Why Jacob asked the wrestler's name: to remember the occasion, as Gill supposes, to invoke him afterwards, as Clarke suspects, or from a pious desire for fuller knowledge of God, as Calvin argues"
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin reports that the Jews of his own time could no longer identify the forbidden sinew or even which thigh it lay in, and therefore abstained from both hind quarters and sold those parts to Christians",
+   "Clarke records that the Aldine Septuagint and several manuscripts add the words which is wonderful to the angel's refusal, apparently borrowed from the parallel in Judges",
+   "Henry has no block keyed within these verses; his exposition of the naming, the refused name and the blessing stands at verse twenty-four and is used in the entry there. Wesley's notes here reproduce that exposition almost word for word, so the puritan-evangelical substance survives without the voice."
+  ],
   "themes": [
-   "Thy name shall be called no more Jacob, but Israel",
-   "for as a prince hast thou power with God and with men, and hast prevailed",
-   "the new name marking the prince who prevailed with God",
-   "from Jacob the supplanter to Israel who prevails by faith"
+   "the name Israel",
+   "prayer",
+   "Peniel",
+   "lameness",
+   "ceremony",
+   "revelation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: being asked his own name and told it, and having another name given him more significative and expressive, Jacob is emboldened to ask the person that wrestled with him what was his name; the witnesses note Jacob asking the man's name, the man answering with a question and withholding his name, then blessing Jacob — the unrevealed name of the divine Wrestler, who blesses but will not be named (Jacob, having received a new name, daring to ask the Wrestler's: 'Tell me, I pray thee, thy name. And he said, Wherefore is it that thou dost ask after my name? And he blessed him there'; the boldness and reverence of Jacob's question, that, emboldened by the blessing, he longs to know who this glorious One is; the answer that is no answer, 'Wherefore is it that thou dost ask after my name?' a gentle refusal, the divine Wrestler withholding the full revelation of his name as too high and wonderful for Jacob then to receive, a name secret or wonderful as is said elsewhere of the Angel of the LORD; that, though he would not give his name, 'he blessed him there,' confirming the blessing Jacob had so wrestled for, so the divine Wrestler blesses Jacob but keeps his name unrevealed)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Tell me, I pray thee, thy name",
-   "Wherefore is it that thou dost ask after my name? And he blessed him there",
-   "the divine Wrestler withholding his name yet blessing",
-   "one who blesses but will not be named, the Angel of the LORD"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Jacob called the name of the place Peniel (or Penuel), which signifies 'the face of God,' or 'God hath looked upon me' or 'hath had respect to me'; a city was afterwards built here, said to be four miles from Mahanaim; the witnesses note Jacob naming the place Peniel, for he had seen God face to face and his life was preserved — the confession that the Wrestler was God himself, whom Jacob had seen and yet lived (Jacob, the wrestling over, naming the place by what had befallen him there: 'Peniel: for I have seen God face to face, and my life is preserved'; the great confession in the name, that Jacob owns plainly that the 'man' who wrestled with him was none other than 'God,' whom he had 'seen face to face,' which settles the identity of the Wrestler beyond doubt, that it was God himself, the Angel of the LORD, the pre-incarnate Son of God in the form of a man; the wonder of Jacob's survival, 'my life is preserved,' for it was held that no man could see God and live, yet Jacob, having seen God face to face, was spared; the place keeping the memory of this grace, that God appeared, was wrestled with, and yet Jacob lived, so Jacob names the place for the God he saw and survived)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who was the 'man,' confirmed by Jacob's naming the place Peniel?",
-    "sides": [
-     {
-      "position": "God himself, seen 'face to face' — the Angel of the LORD, taken by most as the pre-incarnate Son of God in the form of a man",
-      "holders": [
-       "Gill",
-       "most"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Jacob called the name of the place Peniel",
-   "for I have seen God face to face, and my life is preserved",
-   "Jacob's confession that the Wrestler was God himself",
-   "seeing God face to face, yet by grace preserved alive"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: it was break of day when the angel desired to be let go, and by the time the parley held between them ceased and they parted, the sun was rising, and as Jacob went on it shone upon him, as a token of the good will of God; the witnesses note the sun rising on Jacob as he passed Penuel, and his limping upon his thigh — the dawn of favour upon Jacob, who goes forth blessed yet lame (Jacob leaving the place of wrestling into the light of a new day, marked by both blessing and wound: 'as he passed over Penuel the sun rose upon him, and he halted upon his thigh'; the double token, first 'the sun rose upon him,' the dawn breaking as a fitting emblem of the favour and new day that had come to Jacob through the night's wrestling, the night of fear giving way to the morning of blessing, and second 'he halted upon his thigh,' limping on the leg the Angel had touched, bearing in his body the mark of the conflict; the union of glory and weakness in Jacob, who walks forth a prince with God yet lame, blessed but humbled, strong in faith yet marked by the wound; that he carried the limp as a lasting memorial of the night he prevailed, so Jacob goes forth into the sunrise, blessed and lamed)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "and as he passed over Penuel the sun rose upon him",
-   "and he halted upon his thigh",
-   "Jacob going forth into the sunrise, blessed yet lame",
-   "glory and weakness united, the limp the mark of the conflict"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the sinew which shrank was contracted by the touch of the angel, by which it was weakened and benumbed; it is the sinew or tendon that keeps the thigh-bone in the socket; the witnesses note that therefore the children of Israel eat not of the shrunken sinew on the hollow of the thigh, because the Angel touched Jacob's thigh there — the abiding memorial-custom that kept alive the memory of Peniel (the chapter closing with the origin of a lasting custom among Jacob's descendants: 'the children of Israel eat not of the sinew which shrank, which is upon the hollow of the thigh, unto this day: because he touched the hollow of Jacob's thigh'; the meaning of the custom, that out of reverence for what befell their father the children of Israel abstained, 'unto this day,' from eating 'the sinew which shrank,' the tendon on the hollow of the thigh, the very part the Angel had touched, a dietary custom that kept the memory of that great night perpetually before the nation; that this is the first such national observance recorded, springing not from the later law of Moses but from this event, a lasting reminder of the wrestling, the wound, and the blessing at Peniel; how God's dealings with one man became a memorial for his whole people, so Israel's abstaining from the sinew keeps the memory of Jacob's wound and victory)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the children of Israel eat not of the sinew which shrank... unto this day",
-   "because he touched the hollow of Jacob's thigh in the sinew that shrank",
-   "the abiding custom memorializing Peniel",
-   "God's dealing with one man a memorial for his whole people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

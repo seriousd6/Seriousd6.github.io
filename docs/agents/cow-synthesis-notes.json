@@ -4328,6 +4328,74 @@
         "26"
       ],
       "note": "Sizing note for a pure-gazetteer chapter, refining notes 384 and 390. genesis 10 is 21,249 usable source words over 32 contiguous keys and took SEVEN entries, a 4.7:1 distillation ratio -- higher than joshua 13's gazetteer sections but lower than an argued chapter would allow. The reason is that a table of nations is neither pure toponymy nor pure argument: each name carries a short, self-contained identification that cannot be compressed into a neighbour's (Gomer/Ashkenaz/Riphath/Togarmah are four separate scholarly disputes in four consecutive clauses), so the fact-per-word density is very high while the argument-per-word density is low. Practical rule: for name-list chapters, budget by DISTINCT IDENTIFICATIONS rather than by words -- roughly eight to twelve named identifications per entry is what fits under 650 words once each carries its rival proposals. Where Keil, Clarke and Ellicott each identify the same name differently, that name costs three identifications, not one."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "32",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JFB scrape residue, twenty-seventh chapter affected. All four JFB blocks are Genesis 27-28 material (Isaac's parting counsel against a Canaanite marriage, Esau seeking to please his parents, Jacob's forced march to Bethel, his awe there), in narrative order, keyed at 3, 9, 15, 21 — period 6 at offset 3, the same offset as leviticus 26. New variant: the run is TRUNCATED rather than slotted; it simply stops at 21 and the arithmetic positions 27 and 33 carry no JFB block at all, though 27 does carry a Keil and Delitzsch block. So the model now has three observed shapes for a period-6 run: unbroken (numbers 21, exodus 23), slotted with empty positions (leviticus 26), and truncated early (here). Excluded from the entries covering these keys."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "32",
+      "note": "CORPUS-WIDE FINDING, not local to this chapter: Keil and Delitzsch blocks are hard-capped at 200 words. Every K&D block in genesis 32 is exactly 200 words except the last key, which is 127. A sample of 60 randomly chosen chapter files across the cow catena gives 508 K&D blocks, of which 477 (93.9 per cent) are exactly 200 words and NONE exceed 200; the remainder are genuinely short blocks. The capped blocks end mid-sentence (this was logged locally at genesis 37 as sporadic truncation, and the same mid-sentence cut is visible at leviticus 26). The defect is therefore systematic, not sporadic: Keil and Delitzsch is under-represented throughout Commentary A by however much of each block falls past the two-hundredth word, and usable_source_words understates the grammatical-historical share accordingly. Worth an owner decision on whether the catena can be re-fetched for this voice."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "32",
+      "verses": [
+        "24",
+        "27"
+      ],
+      "note": "Block-keying loss declared for entry 27-32. Matthew Henry's exposition of the whole Peniel narrative — the wrestling, the naming as Israel, the refused name and the blessing — is keyed at verse 24 as one block, and there is no Henry block at 27 or after. His material was used in entry 24-26 where it is keyed, so 27-32 carries no puritan-evangelical voice; the loss is recorded in that entry's outliers. It is partly mitigated here in a way worth noting: Wesley's notes at 27, 29, 30 and 31 are verbatim abridgements of the very Henry paragraphs that fell in the other entry, so the substance survives under the wesleyan-arminian label."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "32",
+      "verses": [
+        "1",
+        "2",
+        "26",
+        "29",
+        "31"
+      ],
+      "note": "Wesley abridges Henry, fourth book of confirmation after exodus 23, genesis 21 and leviticus 26. Genesis 32 is the densest case yet: Wesley's notes at 1, 2, 25, 26, 27, 29 and 31 are all near-verbatim compressions of Henry's key-1 and key-24 blocks — the angels bidding Jacob welcome to Canaan, the guard of angels settling the guardian-angel question, the angel not prevailing meaning Jacob's faith was not shaken, the divine touch that wounded and healed at once, the prince with God, and the name reserved for the death-bed. Wesley's heading at verse 2 also prints 'This is God's house' where Henry and the text have 'God's host', which looks like a printer's error carried into the catena. The consequence for tallies stands as before: on this chapter, wesleyan-arminian agreement with puritan-evangelical is very largely one witness reported twice."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "32",
+      "verses": [
+        "23",
+        "24",
+        "32"
+      ],
+      "note": "Three sharp disagreements in this chapter. (1) Which bank Jacob was left on: Keil and Delitzsch say plainly the NORTHERN side of the Jabbok, while Ellicott argues at length for the SOUTHERN, on the grounds that the word rendered brook means the whole ravine (four to six miles wide), that Jacob saw his people up onto the high ground beyond, and that Peniel lay in Gad. (2) Who the wrestler was: Clarke says outright the Lord Jesus Christ and adds a long argument that the body was appearance only, since bodies really assumed could not vanish instantly; Ellicott denies any warrant for an incarnation of Deity, comparing Manoah, and calls it a mediate manifestation prefiguring the incarnation; Calvin says God himself; Gill the Son of God in the form of man; Henry declines to choose between a created angel and the eternal Word. (3) Whether Israel's abstinence from the sinew is superstition: Gill calls it very superstitious and cites the Mishnah's rules; Calvin denies the charge directly and calls it the lawful discipline of a Church still under a schoolmaster."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "32",
+      "verses": [
+        "13",
+        "31"
+      ],
+      "note": "Two smaller conflicts worth carrying forward. (1) The size of the present at 13-15: Henry counts five hundred and eighty head, while Keil and Delitzsch and Ellicott both count five hundred and fifty; the difference appears to be whether the camels' colts are counted separately. (2) The sunrise at verse 31: Gill and Clarke read it as an emblem of the Sun of righteousness rising with healing in his wings, Clarke going so far as to suggest the thigh was healed with the dawn, whereas Ellicott argues from the same verse that Jacob discovered his lameness only when he tried to walk and his sinews cooled — that is, the injury declared itself at sunrise rather than being cured by it. Calvin takes a third position, that the halting was painless throughout so that the miracle might be plainer."
     }
   ]
 }
