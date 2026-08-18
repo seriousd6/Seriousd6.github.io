@@ -1,533 +1,172 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The renewed demand before the plague of frogs: 'and the LORD spake unto Moses, Go unto Pharaoh, and say unto him, Thus saith the LORD, Let my people go, that they may serve me' — God sending Moses again to Pharaoh with the demand 'Let my people go' (Exodus 5:1; 7:16, the renewed summons, before the second plague, the frogs, the persistence of God's word to the hardened king, the demand pressed); 'Let my people go' — the demand of the whole contest (repeated before each plague, God claiming Israel as his own, the release pressed despite Pharaoh's refusal, Exodus 7:13-14); 'that they may serve me' (the worship of God the end of the deliverance, redeemed to serve, Exodus 4:23, the demand pressed before the plague, the providence, the plague to follow the refusal, vv.2-6) — Henry, Gill, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, Go unto Pharaoh, and say unto him, Thus saith the LORD, Let my people go, that they may serve me",
-   "the renewed demand before the plague of frogs",
-   "the demand of the whole contest, pressed before each plague (Exodus 5:1; 7:16)",
-   "the worship of God the end of the deliverance (Exodus 4:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke"
+   "Matthew Henry"
   ],
+  "range": "1-7",
+  "pericope_label": "The plague of frogs threatened and sent",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin finds a third motive beyond power and humiliation, that God chose not merely to punish the Egyptians but to expose them to mockery: their pain must have been embittered by seeing themselves evil-entreated not by a victorious army but by filthy reptiles, and by the calamity rising out of the Nile that had enriched them; if we are galled by ignominy, he says, it happens designedly, to mortify our pride. He draws a further lesson from the number of them. Egypt, with its marshes and sluggish river, was always full of frogs, so that when multitudes came forth at once and climbed into the royal palace it plainly appeared they had until then been restrained by God's hand, and that the God of the Hebrews was the guardian of that kingdom. On the execution he notes that Moses moved not a finger, transferring the work to his inferior minister so that Pharaoh might be treated the more contemptuously. Gill says the frogs were produced at once, spread over the nation in a day and gone the next."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that God could have plagued them with lions or bears or vultures, and chose frogs for two reasons: to magnify his power, since some have thought it as much shown in making an ant as an elephant; and to humble Pharaoh, for what a mortification to be brought to his knees by means every child can ordinarily deal with, yet which all his chariots and horsemen could make no head against. If God be our enemy, he adds, all the creatures are at war with us. On the warning he insists it was mercy, since God does not punish men for sin unless they persist in it, and the form of the threat intimates that if Pharaoh complied the controversy would be dropped. Of the magicians he takes their feat for a type, since the unclean spirits that come out of the mouth of the dragon are said to be like frogs, the dragon meaning by them to deceive while God meant by them to destroy those who would be deceived."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reasons from the other end: had crocodiles or lions been used, the effect would have seemed commensurate with the cause and the hand of God might have been forgotten, the people exasperated without being humbled; so God shows his power by making an animal devoid of every evil quality the means of a terrible affliction, the fly in his hands being a sufficient instrument of vengeance. He adds that nothing can be plainer than that Pharaoh still had it in his power to dismiss the people, his refusal being the mere effect of wilful obstinacy; that the Nile, an object of their adoration, was made an instrument of their punishment; and that the phrase for bringing forth abundantly suggests the spawn already in the water was brought miraculously to perfection. His most domestic note is on the ovens, which in the East are a hole in the ground holding an earthen pot to whose inside the cakes are stuck, so that to find one full of frogs on coming to heat it must have been distressing. Of the magicians he suggests a little juggling sufficed, frogs being already in abundance and some kept ready to be brought forward. Wesley takes the river to stand for all the waters of the land."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The threat of the plague of frogs: 'and if thou refuse to let them go, behold, I will smite all thy borders with frogs' — God threatening, if Pharaoh refused, to smite all Egypt with frogs (the second plague announced, the frogs swarming from the Nile, vv.3-6, the warning before the judgment, the plague conditioned on the refusal); the condition (the plague following the refusal) — the warning (the judgment hanging on Pharaoh's obstinacy); 'I will smite all thy borders with frogs' (the frogs, from the Nile, the river Egypt worshipped, now turned to a plague, the swarming creatures filling the land, vv.3-4, the judgment on Egypt, perhaps on the frog-deity, the Egyptians' false gods judged, Exodus 12:12, the plague announced) — Keil and Delitzsch, Gill, Clarke."
+    "summary": "Ellicott holds that the magicians worked by sleight-of-hand, and says all the writer means is that they seemed to Pharaoh and the court to do on a small scale what Moses had done on the largest; they would have shown their power and their gods' far better had they taken the frogs away. Keil puts the same as a bare contrast, that they could bring the plague but not remove it."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why frogs rather than lions or bears?",
+    "sides": [
+     {
+      "position": "to magnify God’s power and humble Pharaoh by means a child could deal with",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "because a formidable animal would have made the effect seem commensurate with the cause, and the hand of God might have been forgotten",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "to expose the Egyptians to mockery, it being sadder to be destroyed by filthy reptiles than by a warlike enemy",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And if thou refuse to let them go, behold, I will smite all thy borders with frogs",
-   "the threat of the plague of frogs",
-   "the second plague announced, conditioned on the refusal (vv.3-6)",
-   "the judgment on Egypt and its false gods (Exodus 12:12)"
+   "let my people go, that they may serve me",
+   "the river shall bring forth frogs abundantly",
+   "into thine ovens, and into thy kneadingtroughs",
+   "the magicians did so with their enchantments"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The frogs invading every place: 'and the river shall bring forth frogs abundantly, which shall go up and come into thine house, and into thy bedchamber, and upon thy bed, and into the house of thy servants, and upon thy people, and into thine ovens, and into thy kneadingtroughs' — the frogs swarming up from the Nile in abundance and invading every place: houses, bedchambers, beds, ovens, kneading-troughs (the all-pervading plague, no place free from the loathsome creatures, the judgment penetrating everywhere); the frogs in the most private and intimate places (the bedchamber, the bed) — the inescapable plague (the loathsome creatures everywhere, the judgment that reached even the king's chamber); 'into thine ovens, and into thy kneadingtroughs' (the frogs in the very places of food, ovens, kneading-troughs, the defilement of all, the judgment that spoiled even the bread, the all-pervading affliction) — Gill, Wesley, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the river shall bring forth frogs abundantly, which shall go up and come into thine house, and into thy bedchamber, and upon thy bed... and into thine ovens, and into thy kneadingtroughs",
-   "the frogs invading every place",
-   "the all-pervading, inescapable plague reaching even the king's chamber",
-   "the loathsome judgment defiling even the bread"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The frogs upon Pharaoh and all his people: 'and the frogs shall come up both on thee, and upon thy people, and upon all thy servants' — the frogs coming up upon Pharaoh himself, his people, and his servants (the plague upon all, none exempt, from the king to the meanest, the loathsome creatures crawling upon the persons of all, the judgment that spared none of the Egyptians); the frogs upon all (Pharaoh, people, servants) — the universal plague (the judgment reaching every Egyptian, the loathsome affliction on all persons); 'upon all thy servants' (the frogs upon the whole court and people, the all-pervading judgment, the loathsome creatures upon every person, the contrast with Israel, spared in Goshen, vv.22, the plague on all Egypt) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the frogs shall come up both on thee, and upon thy people, and upon all thy servants",
-   "the frogs upon Pharaoh and all his people",
-   "the universal plague sparing none, from the king to the least",
-   "the loathsome judgment on all Egypt (contrast Israel spared, vv.22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command to bring up the frogs: 'and the LORD spake unto Moses, Say unto Aaron, Stretch forth thine hand with thy rod over the streams, over the rivers, and over the ponds, and cause frogs to come up upon the land of Egypt' — God commanding Aaron to stretch his rod over the waters (streams, rivers, ponds) and bring up the frogs (the second plague executed, the frogs from all the waters, the rod the instrument, as the first plague, Exodus 7:19, the judgment brought); the rod stretched over the waters (the instrument of the plague, Exodus 7:19) — the sign of God's power (the bringing up of the frogs); 'cause frogs to come up upon the land of Egypt' (the frogs brought up from all the waters, the second plague executed, the judgment on Egypt, the Nile, its god, breeding the plague, the loathsome creatures covering the land, v.6) — Calvin, Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, Say unto Aaron, Stretch forth thine hand with thy rod over the streams... and cause frogs to come up upon the land of Egypt",
-   "the command to bring up the frogs",
-   "the rod the instrument of the plague (Exodus 7:19)",
-   "the second plague brought from all the waters of Egypt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The frogs covering the land: 'and Aaron stretched out his hand over the waters of Egypt; and the frogs came up, and covered the land of Egypt' — Aaron stretching out his rod, and the frogs coming up from the waters and covering all the land (the second plague executed, the frogs swarming everywhere, vv.3-4, the judgment fulfilled, the loathsome creatures covering Egypt); the frogs coming up (from all the waters, in vast numbers) — the swarming plague (the loathsome creatures emerging); 'covered the land of Egypt' (the frogs covering all Egypt, the all-pervading plague, vv.3-4, the judgment fulfilled, the land overrun, the providence, the plague that would bring Pharaoh's first relenting, v.8) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Aaron stretched out his hand over the waters of Egypt; and the frogs came up, and covered the land of Egypt",
-   "the frogs covering the land",
-   "the second plague executed, the loathsome judgment overrunning all Egypt (vv.3-4)",
-   "the plague that would bring Pharaoh's first relenting (v.8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The magicians imitating the plague of frogs: 'and the magicians did so with their enchantments, and brought up frogs upon the land of Egypt' — the Egyptian magicians (as with the rod-serpent and the blood, Exodus 7:11, 22) imitating the plague, bringing up frogs by their enchantments (the counterfeit, Satan's imitation of God's works, permitted to harden Pharaoh, the magicians able to add to the plague, but not to remove it, v.8, the limit of their power soon reached, v.18); the magicians' imitation (by enchantments, the deceiving arts, perhaps with demonic aid or sleight) — the counterfeit of God's miracle (the hardening of Pharaoh, encouraged by the imitation); 'brought up frogs upon the land of Egypt' (the magicians could add frogs, imitate the plague, but could not remove them, Pharaoh forced to beg Moses, v.8, the limit of the counterfeit, the magicians could do harm, not good, add to the plague, not relieve it, the providence, the imitation hardening Pharaoh, until the limit at the lice, v.18-19) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the magicians did so with their enchantments, and brought up frogs upon the land of Egypt",
-   "the magicians imitating the plague of frogs",
-   "the counterfeit of God's work, permitted to harden Pharaoh (Exodus 7:11)",
-   "able to add to the plague but not remove it (v.8), the limit soon reached (vv.18-19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Pharaoh's first relenting under the plague: 'then Pharaoh called for Moses and Aaron, and said, Intreat the LORD, that he may take away the frogs from me, and from my people; and I will let the people go, that they may do sacrifice unto the LORD' — Pharaoh, overwhelmed by the frogs (his magicians able to add but not remove them, v.7), calling for Moses and begging him to entreat the LORD to take away the plague (the first crack in the proud king, the judgment forcing him to appeal to the LORD he had defied, Exodus 5:2, the relenting under pressure); Pharaoh's appeal (begging Moses to pray to the LORD) — the proud king, who said 'Who is the LORD?' (Exodus 5:2), now forced to seek the LORD's mercy (the judgment bringing the defiant to beg, the appeal of necessity, not of repentance); 'I will let the people go, that they may do sacrifice unto the LORD' (Pharaoh's promise, the first, made under the pressure of the plague, the seeming yielding, which he would break when the plague was removed, v.15, the false repentance, the relenting of necessity, not of the heart, the providence, the plague forcing the promise, soon broken) — Keil and Delitzsch, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then Pharaoh called for Moses and Aaron, and said, Intreat the LORD, that he may take away the frogs... and I will let the people go, that they may do sacrifice unto the LORD",
-   "Pharaoh's first relenting under the plague",
-   "the proud king who defied the LORD (Exodus 5:2) now begging his mercy",
-   "the promise of necessity, not repentance, soon broken (v.15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses giving Pharaoh the choice of the time: 'and Moses said unto Pharaoh, Glory over me: when shall I intreat for thee, and for thy servants, and for thy people, to destroy the frogs from thee and thy houses, that they may remain in the river only?' — Moses giving Pharaoh the honor of naming the time when the frogs should be removed (the offer, that Pharaoh might choose the hour, to prove the deliverance was of God, not chance, the confidence of Moses, sure God would answer at the appointed time); 'Glory over me' (have this advantage, appoint the time) — Moses letting Pharaoh set the time, that the removal at the exact hour might prove it the LORD's doing (not natural, the demonstration of God's power, the sign that it was no chance); 'that they may remain in the river only' (the frogs to be removed from the land and people, left only in the river, their natural place, the complete removal, the deliverance to prove the LORD's hand, vv.10-13) — Ellicott, Gill, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses said unto Pharaoh, Glory over me: when shall I intreat for thee... to destroy the frogs... that they may remain in the river only?",
-   "Moses giving Pharaoh the choice of the time",
-   "the offer that Pharaoh appoint the hour, to prove it the LORD's doing",
-   "the demonstration of God's power, no chance (vv.10-13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The purpose of the sign - that there is none like the LORD: 'and he said, To morrow. And he said, Be it according to thy word: that thou mayest know that there is none like unto the LORD our God' — Pharaoh choosing the next day (tomorrow) for the removal of the frogs (perhaps hoping they might depart naturally, or simply delaying), Moses agreeing ('be it according to thy word') — the removal to come at the appointed time (the proof set); the great purpose — 'that thou mayest know that there is none like unto the LORD our God': the removal at the exact appointed time was to prove to Pharaoh that there is none like the LORD (the incomparable God, the true and living God, above all the gods of Egypt, Exodus 15:11, 'Who is like unto thee, O LORD, among the gods?', the purpose of the plagues, that Egypt and Pharaoh might know the LORD, Exodus 7:5; 8:22; 9:14, 16, the answer to Pharaoh's 'Who is the LORD?', Exodus 5:2 — that there is none like him, the demonstration of the LORD's incomparable power and sovereignty); 'that thou mayest know that there is none like unto the LORD our God' (the plagues teaching the knowledge of God, that the LORD is incomparable, the only true God, the purpose of the judgments, the glory of God, the knowledge of his name, the demonstration of the incomparable God) — JFB, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What was the purpose of removing the frogs at the appointed time?",
-    "sides": [
-     {
-      "position": "To prove there is none like the LORD - the incomparable God above all Egypt's gods (Exodus 15:11), the purpose of the plagues (that Egypt might know the LORD, Exodus 7:5; 9:16), the answer to Pharaoh's 'Who is the LORD?' (Exodus 5:2)",
-      "holders": [
-       "Calvin",
-       "Wesley",
-       "Gill",
-       "JFB",
-       "the dominant reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And he said, To morrow. And he said, Be it according to thy word: that thou mayest know that there is none like unto the LORD our God",
-   "the purpose of the sign - that there is none like the LORD",
-   "the incomparable God demonstrated above all Egypt's gods (Exodus 15:11)",
-   "the purpose of the plagues, the answer to 'Who is the LORD?' (Exodus 7:5; 5:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The promised removal of the frogs: 'and the frogs shall depart from thee, and from thy houses, and from thy servants, and from thy people; they shall remain in the river only' — Moses declaring the frogs would depart from Pharaoh, his houses, servants, and people, remaining only in the river (their natural place, the complete removal promised, the deliverance to come at the appointed time, v.10, the proof of God's hand); the frogs departing from all (the complete removal) — the deliverance promised (the plague to be lifted); 'they shall remain in the river only' (the frogs left only in the river, their natural habitat, the complete removal from the land and people, the deliverance, proving the LORD's power, the removal at the exact time, v.13) — Keil and Delitzsch, Gill."
-   }
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the frogs shall depart from thee, and from thy houses, and from thy servants, and from thy people; they shall remain in the river only",
-   "the promised removal of the frogs",
-   "the complete removal at the appointed time (v.10)",
-   "proving the LORD's hand (v.13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses crying to the LORD to remove the frogs: 'and Moses and Aaron went out from Pharaoh: and Moses cried unto the LORD because of the frogs which he had brought against Pharaoh' — Moses, having promised the removal (vv.10-11), going out and crying (praying earnestly) to the LORD to take away the frogs he had brought (as the instrument, the prayer of the intercessor, the earnest cry, that God would fulfill the promise and prove his hand); Moses' earnest prayer (crying to the LORD) — the intercession (the dependence on God, Moses, though the instrument, praying for the removal, not presuming); 'because of the frogs which he had brought against Pharaoh' (Moses praying for the removal of the plague he, by God, had brought, the intercessor seeking the deliverance, the providence, God answering the prayer at the appointed time, v.13) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses and Aaron went out from Pharaoh: and Moses cried unto the LORD because of the frogs which he had brought against Pharaoh",
-   "Moses crying to the LORD to remove the frogs",
-   "the intercessor's earnest prayer (vv.10-11)",
-   "the dependence on God, praying for the removal at the appointed time (v.13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD answering and the frogs dying: 'and the LORD did according to the word of Moses; and the frogs died out of the houses, out of the villages, and out of the fields' — God answering Moses' prayer (v.12) at the appointed time (v.10, tomorrow), and the frogs dying throughout the houses, villages, and fields (the deliverance fulfilled, the removal at the exact time, proving God's hand, the answer to prayer); God answering Moses' prayer (the removal at the appointed time) — the proof of God's hand (the exact fulfillment, the answer to the intercessor); 'the frogs died out of the houses, out of the villages, and out of the fields' (the frogs dying everywhere, the complete removal, the deliverance from the plague, the proof, the removal at the exact hour, v.10, none like the LORD) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD did according to the word of Moses; and the frogs died out of the houses, out of the villages, and out of the fields",
-   "the LORD answering and the frogs dying",
-   "the deliverance at the appointed time, the answer to prayer (v.10)",
-   "the removal at the exact hour, proving none like the LORD"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The frogs gathered in stinking heaps: 'and they gathered them together upon heaps: and the land stank' — the dead frogs gathered into great heaps, and the land stinking with the stench of their decay (the aftermath of the plague, the loathsome stench, the reminder of the judgment, even the removal leaving a stench, the lingering effect of the plague); the frogs gathered in heaps (the vast multitude, even dead) — the magnitude of the plague (the heaps of the dead creatures); 'the land stank' (the stench of the rotting frogs, the loathsome aftermath, the reminder that even the lifting of judgment left its mark, the providence, the stench a witness to the plague, yet Pharaoh would still harden, v.15) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they gathered them together upon heaps: and the land stank",
-   "the frogs gathered in stinking heaps",
-   "the loathsome aftermath, the stench a witness to the plague",
-   "yet Pharaoh would still harden (v.15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
+  "range": "8-15",
+  "pericope_label": "Pharaoh’s first concession and the frogs removed",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Pharaoh hardening when the respite came: 'but when Pharaoh saw that there was respite, he hardened his heart, and hearkened not unto them; as the LORD had said' — Pharaoh, finding relief (Hebrew, a breathing, a relief, the frogs gone, a breathing-space from the plague), hardening his heart and breaking his promise (v.8, the false repentance exposed, the relenting under the plague vanishing when the pressure lifted, the self-hardening of the king); Pharaoh 'hardened his heart' — here, notably, Pharaoh hardening his own heart (the active self-hardening, as in the earlier plagues, Exodus 7:13, 22; 8:32, the hardening that precedes the 'LORD hardened' language of the later plagues, Exodus 9:12, the willful obstinacy, the king, relieved, returning to his defiance, the lesson on false repentance — the relenting that is only of necessity, under pressure, vanishing the moment the pressure is removed, the heart unchanged, the promise broken when the fear is gone, the warning against the repentance of the afflicted that is not of the heart, Psalm 78:34-37, 'when he slew them, then they sought him... nevertheless they did flatter him with their mouth'; Hosea 6:4, the danger of the respite hardening rather than softening, mercy abused to further obstinacy, Romans 2:4-5); 'as the LORD had said' (Pharaoh's hardening exactly as God had foretold, Exodus 4:21; 7:4, the foreknown obstinacy, the providence, the self-hardening overruled by God to multiply the signs, Exodus 7:3-4, and show his power, Exodus 9:16; Romans 9:17-18, the foretold hardening) — Ellicott, Gill, Calvin, Wesley."
+    "summary": "Calvin allows that terror may really have driven Pharaoh to seek pardon, but says the lying is plain from his inconstancy: the moment a reprieve was granted he returned to his natural disposition. So it is with hypocrites: under God's afflicting hand they implore mercy, and when the evil is withdrawn a short truce puffs up their hearts as though they had won an eternal peace, which is the psalm's complaint of the Jews. He finds the double mind in the request itself, Pharaoh making a bargain of it, the frogs to go before the people did; yet that he names Jehovah at all shows the stoutness broken of a spirit that once asked in mockery who the Lord was. On the phrase Moses answers with, Calvin rejects both readings he knows — those who make it the honour of fixing a time are too speculative, those who make it the death of the frogs flat — and finds the contrast rather between Pharaoh's old boasting and the pious glorying he ought to seek: thus far you have exalted yourself wrongly, trusting your power and then bewitched by the enchanters; now glory instead in having an advocate with God. He denies too the whole construction of to-morrow, since those fall into an absurdity who suppose Pharaoh asked that the frogs be driven off on the morrow, as though he went quietly to sleep and postponed his own relief; he was asking a respite before letting the people go, suspending it for deceit's sake. The frogs, Calvin holds, went the same day, since what changed the tyrant's mind was that a night's interval carried his fear away. He also has him twisting like a serpent to crooked counsels, God having foreknown the perfidy and remitted the punishment to bring it to light. Gill gives the two usual answers about the delay: Pharaoh hoped the frogs might go off overnight and leave him beholden to nobody, or he supposed the work needed time for the ceremonies his magicians used."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that the Septuagint and Vulgate both render the disputed phrase appoint unto me when I shall pray, which countenances Le Clerc's conjecture that one letter has been altered; he thinks this the genuine import, since nothing could prove the plague supernatural more fully than Pharaoh being allowed to name the hour of its removal. He notes that killing the frogs mitigated the plague while leaving them to rot kept it in view, and thinks Calmet's conjecture rational, that the flies of the next plague bred from ova laid in the heaps, God never working a miracle where nature will serve. Wesley takes the first explanation of the delay, and says flatly of the hardening that Pharaoh did it himself, God no otherwise than by not hindering."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott marks this as the first sign of yielding. Pharaoh had borne the water turned to blood without flinching, probably because he suffered little from it himself, but the frogs reached him as much as anyone, and inconvenience drove him to concede; as far as words went the concession was complete, since he acknowledged the power of Jehovah and of righteous men's prayers, and promised to let the people go. He takes the disputed phrase for a courtesy rather than a puzzle, equivalent to saying I submit to thy will, probably an ordinary Egyptian civility, which is why it is no Hebrew idiom and occurs nowhere else. On the hardening he says Pharaoh's nature had until now not been impressed, his heart dull and callous, and that an impression having been made he must have yielded had he not called in his own will to efface it, which was his great guilt. Keil, with Ellicott, thinks the king named the following day because he hardly supposed so great a work could be done at once."
    }
   ],
   "debates": [
    {
-    "question": "What does Pharaoh's hardening when the respite came teach?",
+    "question": "What does Moses mean by glory over me?",
     "sides": [
      {
-      "position": "The lesson on false repentance - the relenting under the plague exposed as merely of necessity, vanishing the moment the pressure lifted (the heart unchanged, Psalm 78:34-37; Hosea 6:4); the self-hardening of the king (Exodus 7:13; 8:32), the respite abused to further obstinacy (mercy abused, Romans 2:4-5), the obstinacy foreknown and overruled by God (Exodus 4:21; Romans 9:17-18)",
+      "position": "appoint unto me when I shall pray — the versions and a one-letter emendation support it",
       "holders": [
-       "Calvin",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "an Egyptian courtesy meaning I submit to thy will, found nowhere else in Hebrew",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "a contrast between Pharaoh’s old boasting and the glorying he ought to seek in having an advocate with God",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why did Pharaoh say to-morrow rather than at once?",
+    "sides": [
+     {
+      "position": "he hoped the frogs might go overnight and leave him beholden to nobody",
+      "holders": [
        "Gill",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "he supposed so great a work could not be done at once",
+      "holders": [
        "Ellicott",
-       "Wesley",
-       "the reformed reading"
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "the delay attaches to releasing the people, not to the frogs — Pharaoh was buying a respite for deceit’s sake",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -535,161 +174,112 @@
   ],
   "outliers": [],
   "themes": [
-   "But when Pharaoh saw that there was respite, he hardened his heart, and hearkened not unto them; as the LORD had said",
-   "Pharaoh hardening when the respite came (the crux of the false repentance)",
-   "the relenting of necessity vanishing when the pressure lifted, the heart unchanged (Psalm 78:34-37; Hosea 6:4)",
-   "the self-hardening (Exodus 7:13; 8:32), the respite abused (Romans 2:4-5), foreknown and overruled by God (Exodus 4:21)"
+   "intreat the Lord, that he may take away the frogs",
+   "glory over me: when shall I intreat for thee?",
+   "and he said, To morrow",
+   "when Pharaoh saw that there was respite, he hardened his heart"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "16": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command for the plague of lice: 'and the LORD said unto Moses, Say unto Aaron, Stretch out thy rod, and smite the dust of the land, that it may become lice throughout all the land of Egypt' — God commanding Aaron to smite the dust, that it might become lice (gnats, or lice, small biting insects) throughout Egypt (the third plague, without warning, unlike the first two, the dust itself turned to the plague, the judgment from the very ground); the dust smitten (the very dust of Egypt turned to lice) — the judgment from the lowliest element (the power of God, turning dust to living creatures, beyond the magicians' power, v.18); 'that it may become lice throughout all the land of Egypt' (the lice, gnats, swarming everywhere from the dust, the third plague, the loathsome, tormenting insects, the judgment on Egypt, the dust of the land they boasted now their torment, the plague that the magicians could not imitate, v.18) — Henry, Gill, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Moses, Say unto Aaron, Stretch out thy rod, and smite the dust of the land, that it may become lice throughout all the land of Egypt",
-   "the command for the plague of lice",
-   "the third plague, without warning, the very dust turned to the tormenting insects",
-   "the judgment beyond the magicians' power (v.18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The dust becoming lice on man and beast: 'and they did so; for Aaron stretched out his hand with his rod, and smote the dust of the earth, and it became lice in man, and in beast; all the dust of the land became lice throughout all the land of Egypt' — Aaron smiting the dust, and it becoming lice upon man and beast throughout Egypt (the third plague executed, the lice tormenting all, men and animals, the dust turned to the swarming insects, the judgment fulfilled); the lice on man and beast (the biting, tormenting insects upon all living) — the loathsome affliction (the judgment on the persons of the Egyptians and their cattle); 'all the dust of the land became lice throughout all the land of Egypt' (the whole dust of Egypt turned to lice, the vast, all-pervading plague, the judgment from the very ground, the power of God, beyond the magicians, v.18) — Keil and Delitzsch, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they did so; for Aaron stretched out his hand with his rod, and smote the dust of the earth, and it became lice in man, and in beast; all the dust of the land became lice throughout all the land of Egypt",
-   "the dust becoming lice on man and beast",
-   "the third plague, the very ground turned to the tormenting insects",
-   "the all-pervading judgment, beyond the magicians' power (v.18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The magicians' failure at the lice: 'and the magicians did so with their enchantments to bring forth lice, but they could not: so there were lice upon man, and upon beast' — the Egyptian magicians, who had imitated the rod-serpent, the blood, and the frogs (Exodus 7:11, 22; 8:7), trying to bring forth lice by their enchantments, but could not (the limit of their power reached, the counterfeit failing, the first plague they could not imitate); the magicians' failure ('they could not') — the limit of Satan's imitation (the counterfeit reaching its bound, the magicians, permitted thus far to harden Pharaoh, now stopped, the lesson — the powers of darkness can imitate God only so far, and only by God's permission, and are at last confounded, the limit of the counterfeit, the impotence of the false against the true, the providence, God setting the bound of the imitation, that his power might be seen the greater, and the magicians forced to confess, v.19); 'so there were lice upon man, and upon beast' (the lice remaining, the plague the magicians could not remove or even imitate, the judgment standing, the limit of the counterfeit exposed, the magicians confounded, v.19) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the magicians did so with their enchantments to bring forth lice, but they could not: so there were lice upon man, and upon beast",
-   "the magicians' failure at the lice",
-   "the limit of Satan's imitation reached, the counterfeit confounded (Exodus 7:11)",
-   "the powers of darkness imitate God only so far, and by his permission, God's power seen the greater"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "Matthew Henry"
   ],
+  "range": "16-19",
+  "pericope_label": "The plague of lice and the finger of God",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The magicians' confession 'the finger of God' and Pharaoh's hardening: 'then the magicians said unto Pharaoh, This is the finger of God: and Pharaoh's heart was hardened, and he hearkened not unto them; as the LORD had said' — the magicians' words — 'This is the finger of God': the magicians, unable to imitate the plague (v.18), confessing to Pharaoh that this was 'the finger of God' — the work of a divine power, beyond their art and beyond nature (the forced confession of the enemies of God, the very magicians owning the LORD's hand, the 'finger of God,' the immediate power of God, an easy work of his finger, cf. Psalm 8:3; Luke 11:20, 'If I with the finger of God cast out devils,' the testimony wrung from the opponents, the counterfeiters confessing the true power they could not match, the witnesses noting both that the confession was true, it was indeed God's finger, and that it was the confession of necessity, the magicians owning the power, yet not converted, as Pharaoh hardened still); 'the finger of God' (the easy, immediate working of God's power, what to God is but a finger's work confounds all the wisdom and power of Egypt, the divine hand owned by the enemies, the limit of the creature against the Creator); 'Pharaoh's heart was hardened, and he hearkened not unto them; as the LORD had said' (Pharaoh, even with his own magicians confessing the finger of God, still hardening his heart, the obstinacy resisting even the testimony of his own counsellors, the hardening exactly as God foretold, Exodus 7:3-4, the providence, the obstinacy overruled to multiply the signs, Romans 9:17-18, the heart that would not yield to evidence) — Calvin, Wesley, Henry, Gill."
+    "summary": "Calvin hears the affront. God trampled on the pride of Egypt by a punishment full of disgrace, since it would have been painful to sink under a warlike enemy but far sadder to be basely destroyed by lice; no animal is so vile that it cannot injure when God employs it, and this is what the proud come to, yielding with infamy to worms. Of the creatures themselves he says the Hebrews do not agree, but grant they were small insects bringing shame as well as annoyance to the meanest men. He takes the verb used of the magicians to mean they tried and failed, and sees God taking away the last pretext of being deceived, since Pharaoh's obstinacy had colour of excuse while the magicians could rival Moses, but none once their art failed; when God has borne with Satan's ministers long enough to prove his people's faith, he compels them to proceed no further. Gill notices that they said Elohim and not Jehovah, whom on Lightfoot's account they reckoned a petty local deity, so the confession detracted at once from Moses and from the God of Israel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that no warning preceded this plague, and thinks Pharaoh's abuse of the respite was warning enough: if the removal of an affliction hardens us, it goes away meaning to return, or to make room for worse. He and Wesley both mark the change of material — the frogs came out of the water, these out of the dust — since out of any part of the creation God can fetch a scourge. Both take the magicians' confession at its face, drawing the moral that God has the devil in a chain and limits him as deceiver and destroyer alike, so the magicians' failure here shows whence their earlier power came; sooner or later God extorts from his enemies an acknowledgment of his sovereignty, as the dying apostate owned that the Galilean had overcome him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke canvasses the field: the Septuagint and Vulgate make them gnats; Harmer would have the stinging tarrentes of an old crusading chronicle, which Clarke calls far-fetched; Bochart argues for lice on four grounds: these sprang from dust not water, they were on men and cattle alike, the root of the name means to fix, which can never suit creatures always on the wing, and the Talmudists use the same word for the louse. Clarke's own verdict goes further: their being in man and in beast fits the tick so exactly, an insect that buries sucker and head in the flesh and will be pulled to pieces rather than let go, that he takes it for the creature meant. On the magicians' failure he reasons from the effect rather than the creature: insects were required that would stick and infix themselves in man and beast, which no trick could imitate; and if the magicians did act by spiritual agents, those agents plainly had assigned limits."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Keil read mosquitoes throughout. Ellicott has the magicians take moist earth, dry and pulverise it and try their charms on it, failing because mosquitoes are too delicate to be produced at a given moment by sleight-of-hand; he renders the confession the finger of a god and says they meant only that this lay beyond the power of man and some god must be helping Moses, with no profession of belief in one God. Keil makes the same point structurally: their seeing only some deity, possibly an Egyptian one, is why the later plagues began to distinguish Israel from Egypt, which proved whose hand it was. Ellicott ends with the plainest explanation of Pharaoh's unconcern: the insects did not impress him as the frogs had, and he needed no act of will to harden himself, having curtains and rooms above the height they rise to."
    }
   ],
   "debates": [
    {
-    "question": "What does the magicians' 'This is the finger of God' signify?",
+    "question": "What creatures were the kinnim?",
     "sides": [
      {
-      "position": "The forced confession of the enemies of God - the magicians owning the divine power they could not match (the immediate working of God, Luke 11:20), the testimony wrung from the opponents; true, yet of necessity, not conversion; and Pharaoh hardening even against his own magicians' witness (Exodus 7:3-4; Romans 9:17-18)",
+      "position": "lice, on Bochart’s four grounds — or rather the tick, the fixed insect that buries its head in the flesh",
       "holders": [
-       "Calvin",
-       "Wesley",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "gnats or mosquitoes",
+      "holders": [
+       "Ellicott",
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "undecided among the Hebrews, but small insects bringing shame as well as annoyance",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What did the magicians mean by the finger of God?",
+    "sides": [
+     {
+      "position": "the finger of a god — something beyond man, with no profession of belief in one God",
+      "holders": [
+       "Ellicott",
+       "Keil and Delitzsch",
+       "Gill"
+      ]
+     },
+     {
+      "position": "a genuine acknowledgment extorted from God’s enemies of his sovereignty",
+      "holders": [
        "Henry",
-       "Gill",
-       "the reformed reading"
+       "Wesley"
       ]
      }
     ]
@@ -697,126 +287,90 @@
   ],
   "outliers": [],
   "themes": [
-   "Then the magicians said unto Pharaoh, This is the finger of God: and Pharaoh's heart was hardened, and he hearkened not unto them; as the LORD had said",
-   "the magicians' confession 'the finger of God' and Pharaoh's hardening",
-   "the forced confession of the enemies owning the divine power they could not match (Luke 11:20)",
-   "Pharaoh hardening even against his own magicians' witness, foreknown and overruled (Exodus 7:3-4; Romans 9:17-18)"
+   "smite the dust of the land, that it may become lice",
+   "the magicians did so with their enchantments, but they could not",
+   "this is the finger of God",
+   "Pharaoh’s heart was hardened, and he hearkened not"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "20": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The renewed demand before the plague of flies: 'and the LORD said unto Moses, Rise up early in the morning, and stand before Pharaoh; lo, he cometh forth to the water; and say unto him, Thus saith the LORD, Let my people go, that they may serve me' — God sending Moses to meet Pharaoh early, as he came forth to the water (the Nile, perhaps for worship of the river, or his morning custom, the meeting at the water, the place of the first plague, Exodus 7:15, the renewed demand before the fourth plague, the flies, the persistence of God's word); the renewed demand ('Let my people go,' Exodus 5:1; 7:16; 8:1) — the keynote pressed again before the plague (God claiming Israel, the release demanded); 'that they may serve me' (the worship of God the end, Exodus 4:23, the demand before the plague, the providence, the plague of flies to follow the refusal, vv.21-24) — Keil and Delitzsch, Henry, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Moses, Rise up early in the morning, and stand before Pharaoh; lo, he cometh forth to the water... Let my people go, that they may serve me",
-   "the renewed demand before the plague of flies",
-   "the meeting at the water (Exodus 7:15), the keynote pressed again (Exodus 8:1)",
-   "the worship of God the end (Exodus 4:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The threat of the plague of flies: 'else, if thou wilt not let my people go, behold, I will send swarms of flies upon thee, and upon thy servants, and upon thy people, and into thy houses: and the houses of the Egyptians shall be full of swarms of flies, and also the ground whereon they are' — God threatening, if Pharaoh refused, to send swarms of flies (or beetles, gadflies, a mixture of noxious insects) upon Pharaoh, his people, and houses (the fourth plague announced, the swarms filling the land, the warning before the judgment); the 'swarms' (the Hebrew arob, a mixture, perhaps of various biting, noxious insects, or the dog-fly, or beetle) — the tormenting swarms (the loathsome, biting plague, the judgment filling the houses and ground); 'the houses of the Egyptians shall be full of swarms of flies, and also the ground whereon they are' (the swarms filling the houses and covering the ground, the all-pervading plague, the judgment on Egypt, with, now, the distinction of Goshen, v.22) — Keil and Delitzsch, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Else, if thou wilt not let my people go, behold, I will send swarms of flies upon thee... and the houses of the Egyptians shall be full of swarms of flies",
-   "the threat of the plague of flies",
-   "the fourth plague announced (the swarms of noxious insects)",
-   "the all-pervading judgment, with the distinction of Goshen to come (v.22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "20-24",
+  "pericope_label": "The swarms threatened, and Goshen severed",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "God severing Goshen from the plague: 'and I will sever in that day the land of Goshen, in which my people dwell, that no swarms of flies shall be there; to the end thou mayest know that I am the LORD in the midst of the earth' — the great word — 'I will sever (set apart, distinguish) in that day the land of Goshen... that no swarms of flies shall be there': from this fourth plague onward, God making a marked distinction between Egypt and Goshen, where Israel dwelt — the flies would fill Egypt but not come into Goshen (the severance, God putting a difference between his people and the Egyptians, the world, the distinction that displayed God's special care of his own, Israel exempt from the plague, the witnesses noting the lesson — God distinguishes between his people and the world, Exodus 9:4, 26; 11:7; Malachi 3:18, 'then shall ye... discern between the righteous and the wicked,' sheltering his own in the day of judgment, a type of the safety of God's people in the great judgment, the sealing, Revelation 7:3, the providence guarding his own); the purpose — 'that thou mayest know that I am the LORD in the midst of the earth': the distinction to prove that the LORD is in the midst of the earth (present, ruling, distinguishing, not a distant or local god, but the LORD governing all, sparing whom he will, the knowledge of God's particular providence, the LORD ruling in the earth, distinguishing his own, the answer to Pharaoh, the LORD present and sovereign); the severing of Goshen — God's special care of his people (a token of the covenant, the distinction of grace, the providence, the people sheltered, the world judged, the LORD in the midst of the earth, distinguishing his own) — Calvin, Wesley, Gill, Ellicott."
+    "summary": "Calvin thinks the riverside was chosen so nothing should be done secretly, Moses proclaiming the judgment in open day before the multitude. He traces the name of the creatures to a root meaning to mingle, from which evening takes its name because day and night are mingled in it, and which also names a mixed crowd; he allows many kinds and rejects only the beasts. On the severing he knows the alternative rendering, the root bearing both to divide and to be admirable, but prefers the usual one. He notes besides that the morrow was named rather than the moment so time for repentance might be given again, and the tyrant's wickedness proved."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the order to rise early as a rebuke: those who would bring great things to pass for God and their generation must redeem the morning, since Pharaoh was early up at his superstitious devotions to the river; shall we be for more sleep when service is to be done that would pass well in our account at the great day? He adds that a faithful servant must not fear the face of man, Moses being sent to challenge a proud king, if he kept his captives, to engage an army of flies, and says the distinction between Hebrew and Egyptian had not been so observable in any earlier plague. With Wesley he draws a demonstration from the flies' obedience: creatures that seem to fly at random are manifestly under an intelligent mind while above the direction of any man, so that when Moses says hither they shall go and thither they shall not come, and the event answers punctually, the two prove that he who said it and he who did it were one."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives Bochart's case for the dog-fly and grants its weight, since that insect would be peculiarly hateful to a people who venerated dogs and worshipped Anubis under a dog's form, and since the Septuagint's translators worked in the very country where the plagues happened. Yet he inclines to the literal sense of the root, which is to mingle, since the same word at the exodus describes the mixed multitude that went up with Israel, so a swarm of many kinds — flies, wasps, hornets — is likelier; Wesley reads it so, and thinks them more pernicious than common. On the severing Clarke reports that good critics render it I will miraculously separate, the Vulgate having I will do a marvellous thing and the Septuagint I will render illustrious; and of the second word he says God thereby showed he had redeemed Israel from plagues to which he abandoned the rest. Wesley keeps the plainer figure of a wall of partition."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil follows the Septuagint's dog-fly, noting that these are far more numerous and annoying than gnats and, when enraged, fasten on the body and especially the edges of the eyelids; he states flatly that the second word does not mean division, as the Septuagint and Vulgate have it, but redemption, exemption from the plague being a deliverance that marked the distinction conferred on Israel. Of what came he says the land was desolated, the flies not only torturing and devouring the people and disfiguring them with swellings, but killing the plants in which they laid their eggs. Ellicott is clearest on the fact of the severing: Goshen can only have been part of the eastern Delta, a tract in no way different from the rest of Egypt, low and flat and well watered; nature had put no severance between it and the Egyptians' country, so the severance now made would be a manifest miracle."
    }
   ],
   "debates": [
    {
-    "question": "What does God's severing of Goshen display?",
+    "question": "What is the ‘arob that was sent?",
     "sides": [
      {
-      "position": "God putting a difference between his people and the world (Exodus 9:4; 11:7; Malachi 3:18), sheltering his own in the day of judgment (a type of the sealing, Revelation 7:3); 'that thou mayest know I am the LORD in the midst of the earth' - the LORD present and sovereign, ruling and distinguishing, the particular providence guarding his own",
+      "position": "the dog-fly, on the Septuagint’s authority and Bochart’s case",
       "holders": [
-       "Calvin",
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "a mixture of many kinds — flies, wasps, hornets — the root meaning to mingle",
+      "holders": [
+       "Clarke",
        "Wesley",
-       "Gill",
-       "Ellicott",
-       "the reformed reading"
+       "Calvin"
       ]
      }
     ]
@@ -824,123 +378,84 @@
   ],
   "outliers": [],
   "themes": [
-   "And I will sever in that day the land of Goshen, in which my people dwell, that no swarms of flies shall be there; to the end thou mayest know that I am the LORD in the midst of the earth",
-   "God severing Goshen from the plague (the crux of the distinction)",
-   "God putting a difference between his people and the world, sheltering his own (Exodus 9:4; 11:7; Malachi 3:18; Revelation 7:3)",
-   "'the LORD in the midst of the earth' - present and sovereign, the particular providence guarding his own"
+   "rise up early in the morning, and stand before Pharaoh",
+   "swarms of flies upon thee, and upon thy people",
+   "I will sever in that day the land of Goshen",
+   "I will put a division between my people and thy people"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The division set between Israel and Egypt: 'and I will put a division between my people and thy people: to morrow shall this sign be' — God declaring he would put a division (a redemption, a setting apart, the Hebrew suggesting a ransom or deliverance) between his people (Israel) and Pharaoh's people (Egypt, the distinction set, Israel spared, Egypt plagued, v.22, the sign to come on the morrow, the appointed time, as the frogs, v.10); the 'division' (the marked difference, God's people set apart from the world) — the distinction of grace (the sheltering of God's own, the difference God makes, Malachi 3:18); 'to morrow shall this sign be' (the sign appointed for the next day, the distinction to be displayed at the set time, proving God's hand, the providence, the distinction a sign that the LORD is in the midst of the earth, v.22, the deliverance of his people marked) — Clarke, Gill, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And I will put a division between my people and thy people: to morrow shall this sign be",
-   "the division set between Israel and Egypt",
-   "the distinction of grace, God's people set apart from the world (Malachi 3:18)",
-   "the sign at the appointed time, proving God's hand (v.22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plague of flies fulfilled: 'and the LORD did so; and there came a grievous swarm of flies into the house of Pharaoh, and into his servants' houses, and into all the land of Egypt: the land was corrupted by reason of the swarm of flies' — God sending the swarms as threatened (v.21), the grievous (heavy, severe) swarm filling Pharaoh's house, his servants', and all Egypt (the fourth plague fulfilled, Egypt overrun, Goshen spared, v.22, the judgment come); the 'grievous swarm' (the heavy, tormenting plague of insects) — the severe affliction (the loathsome swarms filling all, the judgment heavy on Egypt); 'the land was corrupted by reason of the swarm of flies' (the land ruined, spoiled, by the swarms, the destruction, perhaps the insects devouring and corrupting, the land marred, the heavy judgment, the providence, the plague that would bring Pharaoh's next relenting and compromise, vv.25-28) — Keil and Delitzsch, Gill, Clarke, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD did so; and there came a grievous swarm of flies into the house of Pharaoh, and into his servants' houses, and into all the land of Egypt: the land was corrupted by reason of the swarm of flies",
-   "the plague of flies fulfilled",
-   "the grievous swarm filling all Egypt, the land corrupted (v.21)",
-   "the fourth plague come, Egypt overrun, Goshen spared (v.22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "25-28",
+  "pericope_label": "Sacrifice in the land refused",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Pharaoh's first compromise - sacrifice in the land: 'and Pharaoh called for Moses and for Aaron, and said, Go ye, sacrifice to your God in the land' — Pharaoh, under the plague of flies, calling Moses and Aaron and offering a concession (the relenting under pressure, as with the frogs, v.8, the proud king again forced to deal with the deliverers, the compromise offered); the first compromise — 'Go ye, sacrifice to your God in the land': Pharaoh offering a partial concession — let them sacrifice, but in the land of Egypt (not going the three days' journey into the wilderness, Exodus 5:3; 8:27, the half-yielding, the first of Pharaoh's compromises, by which he sought to keep the people, or hold them in his power, the witnesses noting the lesson — the world's, and Satan's, compromises with God's people: yield something, but not all, serve God, but stay in Egypt, keep your religion, but do not separate from the world, the partial obedience that is no obedience, God requiring the full release, the people wholly set apart, the snare of the half-concession, the attempt to keep God's people in bondage under the guise of allowing their worship); Moses would refuse this compromise (v.26-27) — God requiring the full obedience (the journey out of Egypt, the complete separation, the lesson against half-obedience, the world's offer to let us serve God if we will not separate from it) — Keil and Delitzsch, Gill, Calvin."
+    "summary": "Calvin makes Pharaoh's offer the type of a permanent fault. He imagines he is granting a great thing, yet renounces no idol, merely allowing God to be worshipped in one corner of his kingdom; and it is customary with the reprobate to think they have done their duty when they yield ever so little. While fortune is propitious they deprive God of all his glory, and when resistance fails they submit only so far as to defraud him of half his due; our own Pharaohs, having failed to extinguish that glory outright, maim his worship by a fictitious course which they call a reformation, whence came that mixture of light and darkness named the Interim. He also questions which way the phrase about the abomination runs. The Hebrews say of whatever they disapprove that it is not right, and almost all interpreters take Pharaoh to have demanded what was inequitable, exposing the Israelites to stoning; Calvin finds two clauses rather than one, and a twofold argument: the thing was not right, and it was not expedient. Set against the name of Jehovah, the abomination may mean the profanation with which Egyptian ceremonies were defiled, so the first reason is that a sacrifice polluted by them would please God no more than it was lawful, and only the second that the Egyptians would not tolerate the sight. He refuses too to restrict the word to the sacrificial animals, extending it to the whole act, and insists that Moses looked first to God's honour, not merely the people's safety. Of the demand for the wilderness Calvin praises the firmness that rejected the tyrant's pretended moderation, no change being permissible in a divine command. Gill notes that the king avoided naming the three days, though the journey he allowed could not be made in less."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke puts the offer plainly: they should not leave Egypt but have their worship tolerated there. He says the animals the Egyptians held sacred were precisely those the Hebrew rites required, few people having ever been more superstitious, almost every production of nature being an object of worship — sun and moon, the Nile, beasts from the monkey to the ibis, and even the onions and leeks in their gardens; others, he adds, trace the scruple to the transmigration of souls, the Egyptians fearing that in killing a beast they might kill a relative. He sees the later concession for what it was worth: Pharaoh relented because God's hand was heavy on him, but would not give up his gain, the Israelites being state slaves whose labour was productive; how ready is foolish man under pressure to compound with his Maker, giving up some sins if he may keep the rest. His request for intercession Clarke likens to Simon Magus begging an interest in Peter's prayers. With Wesley he agrees that neither Moses nor Aaron yet knew how God would be worshipped, expecting a revelation once they arrived."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott explains why the king gave way so quickly, without waiting for the magicians to remonstrate: the swarms were on him personally with their painful bites, in his palaces destroying rich furniture, and over his lands. But he says Pharaoh mars all by one little clause, a three days' journey having been demanded from the first and nothing less being acceptable. He makes the danger of sacrificing in Egypt concrete: sheep, goats and cattle, the whole Hebrew sacrificial list, were sacred either generally or in particular districts, so a Theban could not endure the killing of a sheep nor a Mendesian of a goat; any bull-calf might prove an Apis, which could not be known until the priests examined him. He shows what such a killing cost by two incidents: a Roman ambassador who killed a cat by accident was torn to pieces, and war broke out between two towns because one ate a fish the other held sacred. The fear of Moses, he concludes, was not groundless. Keil observes that the reasons commended themselves to the heathen king on his own religious ground, so he conceded the wilderness."
    }
   ],
   "debates": [
    {
-    "question": "What is the snare in Pharaoh's 'sacrifice to your God in the land'?",
+    "question": "What is the abomination of the Egyptians?",
     "sides": [
      {
-      "position": "The half-yielding (sacrifice, but stay in Egypt) - the first of Pharaoh's (and the world's) compromises with God's people: serve God, but do not separate from the world; the partial obedience that is no obedience, God requiring the full release and complete separation (Exodus 8:27)",
+      "position": "the animals the Egyptians abominated the killing of, which the Hebrew rites required",
       "holders": [
-       "Calvin",
-       "Gill",
-       "Keil and Delitzsch",
-       "the reformed reading"
+       "Clarke",
+       "Ellicott",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "possibly the profanation itself, so that Moses argues first that such a sacrifice would be unlawful and only second that it would be unsafe",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -948,290 +463,104 @@
   ],
   "outliers": [],
   "themes": [
-   "And Pharaoh called for Moses and for Aaron, and said, Go ye, sacrifice to your God in the land",
-   "Pharaoh's first compromise - sacrifice in the land (the crux)",
-   "the half-yielding - serve God, but stay in Egypt, do not separate from the world",
-   "the partial obedience that is no obedience; God requires the full separation (Exodus 8:27), the world's compromise to be refused"
+   "go ye, sacrifice to your God in the land",
+   "we shall sacrifice the abomination of the Egyptians",
+   "we will go three days’ journey into the wilderness",
+   "only ye shall not go very far away"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses refusing the compromise: 'and Moses said, It is not meet so to do; for we shall sacrifice the abomination of the Egyptians to the LORD our God: lo, shall we sacrifice the abomination of the Egyptians before their eyes, and will they not stone us?' — Moses refusing Pharaoh's compromise (v.25): they could not sacrifice in the land, for they would sacrifice 'the abomination of the Egyptians' (animals the Egyptians held sacred, or abhorred to see slain, e.g., the ox or sheep, which some Egyptians worshipped or would not have killed, to do so before the Egyptians would provoke them, the refusal grounded on the offence); the Israelites' sacrifices (of animals the Egyptians held sacred, or the manner of them) would be 'abomination' (offensive, detestable) to the Egyptians — provoking their rage (the reason for going out of the land, to worship without offence or danger); 'shall we sacrifice the abomination of the Egyptians before their eyes, and will they not stone us?' (the danger, the Egyptians, enraged at the slaughter of their sacred animals, would stone the Israelites, the necessity of going out of Egypt, to worship freely and safely, the refusal of the compromise, the full separation required) — Ellicott, Gill, Calvin, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses said, It is not meet so to do; for we shall sacrifice the abomination of the Egyptians to the LORD our God... will they not stone us?",
-   "Moses refusing the compromise",
-   "the sacrifices would be abomination to the Egyptians, provoking their rage",
-   "the worship requiring the full separation, the half-concession refused (v.25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses insisting on the three days' journey: 'we will go three days' journey into the wilderness, and sacrifice to the LORD our God, as he shall command us' — Moses insisting on the full demand: a three days' journey into the wilderness to sacrifice (Exodus 5:3; 3:18), as God commanded (the refusal of the compromise, no sacrificing in the land, but the full going out, the obedience to God's command, the worship as God appointed, not as Pharaoh allowed); the three days' journey (the going out of Egypt, the separation from the land of bondage) — the full demand (the worship away from Egypt, the separation required); 'as he shall command us' (the worship according to God's command, not man's compromise, the full obedience, the people serving God as he appoints, the refusal of the half-concession, God's command the rule) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "We will go three days' journey into the wilderness, and sacrifice to the LORD our God, as he shall command us",
-   "Moses insisting on the three days' journey",
-   "the full demand - the going out of Egypt, the separation from bondage (Exodus 5:3; 3:18)",
-   "the worship as God commands, not man's compromise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Pharaoh's second compromise - not go very far: 'and Pharaoh said, I will let you go, that ye may sacrifice to the LORD your God in the wilderness; only ye shall not go very far away: intreat for me' — Pharaoh, pressed further, now conceding that they might go into the wilderness to sacrifice (the second concession, a step beyond the first, v.25, the relenting under the plague, the seeming yielding); the snare — 'only ye shall not go very far away': Pharaoh's second compromise — go, but not far (the half-yielding, granting the journey, but limiting it, keeping the people within reach, that he might recall them, the witnesses noting the lesson — another of the world's, and Satan's, compromises: if you must serve God, do not go far from Egypt, do not separate decisively from the world, keep within reach of the bondage, the snare of the half-separation, the attempt to keep God's people near enough to be reclaimed, the partial obedience that God's people must refuse, the full separation required, not a worship that stays within the world's reach); 'intreat for me' (Pharaoh again begging Moses to pray for the removal of the plague, as with the frogs, v.8, the appeal of necessity, not repentance, the relenting that would vanish when the plague was removed, v.32) — JFB, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is the snare in Pharaoh's 'ye shall not go very far away'?",
-    "sides": [
-     {
-      "position": "The half-yielding (go, but not far) - another of the world's compromises: serve God, but do not separate decisively from the world; the snare of the half-separation (keeping God's people within reach of the bondage), the partial obedience God's people must refuse, the full separation required",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "JFB",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And Pharaoh said, I will let you go, that ye may sacrifice to the LORD your God in the wilderness; only ye shall not go very far away: intreat for me",
-   "Pharaoh's second compromise - not go very far (the crux)",
-   "the half-yielding - serve God, but do not separate decisively from the world",
-   "the snare of the half-separation, keeping God's people within reach; the full separation required"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "29": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses' promise to entreat and his warning against deceit: 'and Moses said, Behold, I go out from thee, and I will intreat the LORD that the swarms of flies may depart from Pharaoh, from his servants, and from his people, to morrow: but let not Pharaoh deal deceitfully any more in not letting the people go to sacrifice to the LORD' — Moses promising to entreat the LORD to remove the flies on the morrow (the appointed time, as the frogs, v.10, the intercession, the removal at the set time, proving God's hand); Moses' warning — 'let not Pharaoh deal deceitfully any more in not letting the people go': Moses warning Pharaoh not to deal deceitfully (as he had with the frogs, breaking his promise when the plague was removed, v.15, the caution against the false relenting, the rebuke of the king's previous treachery); Moses' warning against deceit (Pharaoh's habit of promising under the plague and breaking it after, vv.8, 15, 28) — the rebuke of the false repentance (the providence, Pharaoh would deal deceitfully again, v.32, as Moses foresaw, the warning to the treacherous king) — Keil and Delitzsch, Gill, Calvin, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses said... I will intreat the LORD that the swarms of flies may depart... to morrow: but let not Pharaoh deal deceitfully any more in not letting the people go",
-   "Moses' promise to entreat and his warning against deceit",
-   "the removal promised at the appointed time (v.10)",
-   "the warning against Pharaoh's habitual treachery (vv.8, 15), foreseen (v.32)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses interceding for the removal of the flies: 'and Moses went out from Pharaoh, and intreated the LORD' — Moses going out and praying (entreating) the LORD to remove the swarms of flies (as promised, v.29, the intercession, the earnest prayer of the deliverer, the dependence on God for the removal); Moses leaving Pharaoh to pray — the going out to entreat the LORD (the intercessor's resort to God); 'intreated the LORD' (Moses praying for the removal, as with the frogs, v.12, the intercessor seeking the deliverance, the providence, God answering, the flies removed, v.31) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses went out from Pharaoh, and intreated the LORD",
-   "Moses interceding for the removal of the flies",
-   "the earnest prayer of the intercessor (vv.12, 29)",
-   "the dependence on God for the removal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD removing the flies completely: 'and the LORD did according to the word of Moses; and he removed the swarms of flies from Pharaoh, from his servants, and from his people; there remained not one' — God answering Moses' prayer (v.30) and removing the flies completely from Pharaoh, his servants, and people (the deliverance fulfilled, the removal at the appointed time, v.29, the complete removal, 'there remained not one' — proving God's hand, the precise, total removal); God answering Moses (the removal at the set time) — the proof of God's hand (the answer to the intercessor); 'there remained not one' (the complete removal, not one fly left, the total deliverance, proving the LORD's hand, the precise removal at the appointed time, the providence, the mercy that should have softened Pharaoh, yet he would harden, v.32) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD did according to the word of Moses; and he removed the swarms of flies from Pharaoh, from his servants, and from his people; there remained not one",
-   "the LORD removing the flies completely",
-   "the complete removal at the appointed time, proving God's hand (v.29)",
-   "the mercy that Pharaoh would abuse (v.32)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
+   "John Calvin",
    "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "29-32",
+  "pericope_label": "The swarms removed and Pharaoh hardened again",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Pharaoh hardening again after the flies: 'and Pharaoh hardened his heart at this time also, neither would he let the people go' — Pharaoh, the flies removed (v.31), hardening his heart again (as with the frogs, v.15) and refusing to let the people go (the repeated self-hardening, the false relenting vanishing when the plague was lifted, the broken promise, the deceit Moses had warned against, v.29); 'at this time also' (as before, vv.15) — the repeated hardening (the pattern of the false repentance, relenting under the plague, hardening when relieved, the obstinacy growing with the mercies abused, Romans 2:4-5); 'neither would he let the people go' (the broken promise, Pharaoh's deceit, v.29, the hardened refusal, the providence, the obstinacy that would draw down the heavier plagues, ch. 9-11, and prove the more, by God's overruling, the LORD's power, Exodus 9:16; Romans 9:17) — Ellicott, Gill, Calvin, Wesley."
+    "summary": "Calvin looks at what Moses did not say. He gave no answer because he knew God's design was otherwise, God having justly left him ignorant of what he did not yet wish him to know; there is no ground for charging him with bad faith over a silence he was not ordered to break. Roused by the king's perfidy, he does not remove the plague at once but waits till the morrow, threatening punishment if the deceit continues — an extraordinary boldness, to reproach a tyrant to his face and menace him in the same breath, gathered from the miracles in which he had proved God's unconquerable power. Calvin adds a caution: Moses spoke from a special impulse, not from his own mind, the general promise that God grants his servants' prayers not applying to particular cases unless a man has peculiar testimony from the word or Spirit. On the fulfilment he notes that the word God performed may be either the answer or the prayer of Moses, and prefers the former, that by the result God ratified what he had said, having made him proclaimer of his judgment; and he finds the phrase at this time also an aggravation, since there was no bound to a rebellion holding out under such punishments, by which even an iron heart should have been corrected. Gill assigns the motive to pride and covetousness, the king being loath to lose so large a branch of his revenues."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke draws the plainer moral, that prayer is powerful when God lets his servant prescribe the manner and time of his working, and guesses that a strong wind swept the swarms into the sea. On the hardening he calls it the mere effect of self-determining obstinacy, Pharaoh preferring his gain to the will of Jehovah, and God making that obstinacy the means of showing his own power. He then closes the chapter with a summary of what these plagues proved. As every false religion argues a true one, being a marred copy of some original, so false miracles argue genuine. These were genuine: the water was not turned to blood in appearance only, since the people could not drink it and the fish died, and no human ingenuity could have produced such frogs. Only to superficial observers, he insists, do Moses and the magicians appear nearly matched: they could sometimes imitate a plague but never remove one, and though they produced serpents could bring none that would swallow Aaron's rod; their opposition served only as a foil to the power by which God's messengers acted. From all this, he concludes, learn that God works in the earth and can invert its general laws when he pleases, saving or destroying by the most contemptible instruments, and that he has not so bound himself to them as to exclude a particular providence — Egypt was ruined while in all Goshen there was no blood in the streams and neither frog nor fly. Wesley says the hardening is still Pharaoh's own act, not God's."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott explains why Moses let the qualifying clause pass. He had stated his demand plainly for a three days' journey, and it was for Pharaoh to settle whether that counted as very far; since the king raised no clear objection, Moses was bound to suppose he allowed it. The warning that followed Ellicott holds was owed: God's servants must rebuke even kings who openly break the moral law, and Pharaoh had promised unconditionally to release the people, then broken his word. He marks the completeness of the removal as itself miraculous, the entire clearing of such a plague at a word being almost as great a wonder as its coming, which is why it is carefully recorded, nothing of the sort being said of the frogs or the gnats; and he notes that here again it is after being impressed and partly relenting that the king hardens his own heart."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "claim": "holds that Moses was bound to read Pharaoh’s silence about the distance as consent, since the three days’ journey had been named plainly and the king raised no clear objection to it"
+   }
+  ],
   "themes": [
-   "And Pharaoh hardened his heart at this time also, neither would he let the people go",
-   "Pharaoh hardening again after the flies",
-   "the repeated self-hardening, the false relenting vanishing when the plague was lifted (v.15)",
-   "the deceit Moses foretold (v.29), the obstinacy drawing the heavier plagues (Romans 2:4-5)"
+   "let not Pharaoh deal deceitfully any more",
+   "the Lord did according to the word of Moses",
+   "there remained not one",
+   "Pharaoh hardened his heart at this time also"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  }
 }
