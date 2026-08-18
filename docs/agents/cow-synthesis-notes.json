@@ -3809,6 +3809,64 @@
       "book": "judges",
       "chapter": "20",
       "note": "Chapter with no Calvin and no Wesley anywhere in its source — the voice set is Gill, Ellicott, Keil, Clarke, Henry and JFB residue only. That collapses the school coverage: reformed is carried by Gill alone in every entry, wesleyan-arminian by Clarke alone, and puritan-evangelical appears only in the four entries containing Henry's blocks (vv.1, 12, 18, 26). Worth noting for anyone auditing school balance across the corpus: a thin school here is a property of the source, not of the synthesis. Henry's four blocks each run far past the verse they are filed under — the v26 block covers the rest of the chapter — so his material had to be spent in those four entries and the last three entries carry no puritan-evangelical voice at all."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "22",
+      "verses": [
+        "33"
+      ],
+      "note": "SCRAPE OVERRUN, third confirmation and a NEW form. In joshua 24 and numbers 11 the overrun was CSS; here the Ellicott block at key 33 is 1,030 words of which only about 40 are real commentary, the remainder being the StudyLight footer followed by minified JAVASCRIPT (an accordion-navigation routine). Gill's block at the same key also ends with StudyLight breadcrumbs ('Next: Leviticus Chapter 23 Sacred Texts | Bible << Previous: John Gill's Exposition...'). The invariant across all three chapters is POSITION, not content type: the overrun attaches to blocks at the LAST key of the chapter, which is where a scraper runs past the article body into the page footer, and the junk may be CSS, JS, nav breadcrumbs, or another work entirely. A robust fix cuts at the footer marker -- the run of 'terms of use / privacy policy / rights and permissions' links, or the first CSS selector, or the first '(function(' -- and at 'END OF THE COMMENTARY'. Effect on budgeting: 'size' reported entry 26-33 at 3,781 words where the real usable figure is about 2,770, a 27 percent overstatement concentrated in one key."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "22",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JFB scrape residue, twenty-second chapter found: all four Jamieson blocks in leviticus 22 are Leviticus 4 material (the sin offerings for the congregation, for a ruler, and for a common person). Keys 6 and 12 carry the IDENTICAL 172-word block, the third chapter running with a duplicated residue block. Two further points. This is a WITHIN-BOOK displacement, Leviticus 4 into Leviticus 22. And leviticus 22 is itself the DONOR for numbers 11, whose five JFB blocks were all Leviticus 21-22 material -- so the chapter is donor and victim at once, the same pattern numbers 11 showed. Running donor list: Gen 15, 24, 26, 36, 37; Lev 4, 11, 21-22, 26; Deut 4, 16-17, 18-19, 20-21, 28; Exod 8-9; Num 11-12; 1 Chr 3-4."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "22",
+      "verses": [
+        "26"
+      ],
+      "note": "Block-keying: Henry files three blocks in leviticus 22, at keys 1, 10 and 17, and the block at 17 is a running exposition of FOUR laws covering vv17-30 -- the unblemished victim, the eighth day, the dam and her young, and the thank-offering. Tiling was set from those three anchors, so entry 26-33 has no puritan-evangelical voice even though Henry discusses most of its material. Declared rather than distorting the tiling: folding 26-33 back into 17-25 would have made a 17-verse entry of roughly 9,000 source words, unwritable inside the 650-word ceiling."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "22",
+      "verses": [
+        "19",
+        "23",
+        "25",
+        "27"
+      ],
+      "note": "Four substantive disputes. (1) v19, 'at your own will': Calvin denies the rendering outright, holding the Hebrew can only point to God's good pleasure, then concedes the other sense may stand if taken of gratuitous favour; Ellicott and Gill reach Calvin's result by translation alone ('that it may be accepted for you'). (2) v23, the freewill concession: the plain sense allows a disproportioned animal for a freewill offering but not for a vow, and Henry, Calvin and Clarke all work within it. Ellicott alone refuses it, arguing the lawgiver cannot contradict vv18-20 within three verses, that the second Temple read the verse as consecration for repairs rather than sacrifice, and that THE TEXT IS PROBABLY DISARRANGED and originally forbade the freewill offering too -- a conjectural emendation, not a gloss. (3) v25, the stranger's hand: Jewish canonists take the verse to regulate Gentile offerings; Calvin and Ellicott independently reject this, Calvin because the closing words say the sacrifice would not be accepted from Jews themselves, Ellicott because of the contrast between 'in your land' and 'from the hand of a foreigner'. (4) v27, why the eighth day: Keil and Delitzsch give the week sanctified by creation; Calvin explicitly names and dismisses that reason as TOO SUBTLE, objecting that on that ground the seventh day would be fittest, and rests on maturity alone, as with circumcision."
+    },
+    {
+      "at": "2026-08-18",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "22",
+      "verses": [
+        "24",
+        "27",
+        "32"
+      ],
+      "note": "Three places where a commentator breaks frame, worth flagging as recurring Clarke and Ellicott habits. (1) Clarke at v27 attacks the Authorised Version itself -- 'a most unfortunate as well as absurd translation', since an ox is a bull castrated and so 'a bullock was never yet brought forth' -- and says only his rule of printing the common version with scrupulous exactness stops him from entering 'calf' into the text. He objects again at v32 to 'children of Israel', which he would render posterity. (2) Ellicott at v31 complains that rendering the conjunctions as 'therefore' and 'neither' mars the simple and dignified style of the original. (3) Ellicott at v24 notes the prohibition of gelding still binds orthodox Jews and that their teachers had lately been debating it because it bears hard on those of their community who farm -- a live nineteenth-century application, not an antiquarian note. Clarke does the same at v10, using the bought slave's standing in the priestly family to attack European Christians who cite the Mosaic law to justify slavery."
     }
   ]
 }
