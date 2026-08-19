@@ -5593,6 +5593,69 @@
         "20"
       ],
       "note": "Amram's marriage to Jochebed is filed twice over and splits cleanly between two entries, which is worth recording as a case where the filing rule produces complementary rather than duplicated treatment. Calvin files his discussion at v16, inside span 14-16, and it is entirely moral — nature itself forbade a man to take his aunt before ever the law did, and Moses in confessing it proclaims his parents' disgrace for God's glory. The philological quarrel is filed at v20, inside span 17-30: Gill holds for the aunt on the strength of Numbers, Clarke follows Parkhurst and the versions for a cousin-german, and Ellicott declines the whole difficulty because such marriages were lawful before the Law. Nothing had to be dropped from either entry, because the two blocks ask different questions of the same fact."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "11",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "27",
+        "33"
+      ],
+      "note": "All five Jamieson, Fausset and Brown blocks in this chapter are residue from 2 Corinthians 12-13: the thorn in the flesh and the messenger of Satan (Alford and Bengel cited), the signs of an apostle wrought in patience, Titus and his associates taking no advantage, 'examine yourselves whether ye be in the faith', and the preference for sharpness in letters rather than deeds. Keys 3, 9, 15, 27, 33 - stride 6 from offset 3, five members with a single gap where 21 would fall. Jamieson has now shown a stride-6 periodic residue run in three consecutive chapters: joshua 10 (offset 1, gap at 31), 1corinthians 7 (offset 5, no gaps), hebrews 11 (offset 3, gap at 21). Three independent chapters with the same stride is no longer a coincidence; it looks like a fixed property of how the Jamieson source was chunked. This wants an owner decision on whether the Jamieson tree can be re-fetched."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "11",
+      "verses": [
+        "5",
+        "6",
+        "11",
+        "18",
+        "19",
+        "24",
+        "26",
+        "27"
+      ],
+      "note": "Cyril of Jerusalem is MIXED in this chapter, a pattern no earlier chapter has shown. On topic and usable: v6 (without faith it is impossible to please him), v11/v18/v19 (one 200-word block on Abraham's faith, repeated VERBATIM three times), v26 (Moses forsook Egypt, the rock was Christ). Residue from the Catechetical Lectures: v5 (Elisabeth and the Holy Ghost), v24 (the Annunciation and Gabriel), v27 (David's repentance on the housetop). Until now a voice has been either wholly residue in a chapter or wholly on topic; here the same voice is both, at alternating keys. That means residue cannot be declared per-voice per-chapter, only per-entry. He also cannot be named in excluded_voices at all, because VOICE_LABELS carries the bare string 'Cyril' ahead of the long forms, so split_voices() never matches his header - the fourth chapter in which that bug has bitten."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "20",
+        "32",
+        "39"
+      ],
+      "note": "Matthew Henry's exposition in this chapter is chunked into only six keys - 1, 4, 8, 20, 32, 39 - and the blocks are wildly uneven: 1135 words at v1, 11089 at v4, 411 at v8, 574 at v20, 3636 at v32, 183 at v39. The 11089-word block at v4 is not about verse 4 at all; it is Henry's running exposition of most of the chapter, filed under the first verse of the section. This inflates usable_source_words for v4 to 15805, roughly a sixth of the whole chapter's 97186, and makes the picker's per-verse size figures meaningless wherever a commentator's blocks are section-length rather than verse-length. Two distinct Henry texts also appear in the same chapter: the full exposition (v1, v4, v32) and the concise commentary (v8, v20, v39), which explains the 411/574/183-word blocks sitting beside the 11089-word one."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "11",
+      "note": "hebrews 11 is the largest chapter attempted so far: 97186 usable source words over 40 verses, 11 distinct voice labels, maximum 9 voices on any single verse, tiled in 14 entries. Compare 1corinthians 7 (75582 words, 12 voices, max 9, 14 entries), luke 22 (63923 words, up to 15 voices in one entry, 14 entries) and genesis 1 (63543 words, 8 entries). Despite being 29 percent larger than 1corinthians 7 in source words, this chapter cost about the same per entry, because the voice count per span was the same. That is a fourth data point for the tiling metric already filed: entry COUNT tracks source words, but WORK per entry tracks voice count. Every entry here except two ran 8 voices; every one of the fourteen first drafts came in 5 to 45 percent over the 650-word ceiling and needed 2 to 5 trim passes, which is the signature of too many voices for the window rather than too much source text."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "11",
+      "verses": [
+        "27"
+      ],
+      "note": "Heb 11:27, 'by faith he forsook Egypt', splits the commentators evenly and cleanly between the flight to Midian and the Exodus. For the Exodus: Barnes (reports it as the majority view), Clarke and Wesley, all resting on the clause 'not fearing the wrath of the king', since Exodus expressly ascribes the flight to fear. For the flight to Midian: Ellicott (who reports it as the view of ALL ancient writers and most moderns, with three arguments - the Passover is mentioned only in the next verse, the second departure was made at Pharaoh's own urgent request, and the verb is too personal an expression for a national exodus), Gill and Calvin, both arguing from the order of the narrative. Robertson declines to decide and only notes that the writer omits the slaying of the Egyptian. This is the sharpest even split recorded in the corpus so far."
     }
   ]
 }
