@@ -1,250 +1,100 @@
 {
  "1": {
   "voices": [
-   "Theophylact",
-   "Chrysostom",
-   "Augustine",
-   "Bede",
-   "Cyril of Alexandria",
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
+   "Theophylact",
+   "Augustine",
+   "Bede",
    "Tertullian"
   ],
+  "range": "1-3",
+  "pericope_label": "The parable of the unjust judge: its drift, the judge, and the widow",
   "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact: constant prayer the remedy for the coming trials; Augustine: if perseverance prevailed with an unjust judge, how much more with God."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The meaning prefixed (a rare key); 'not to faint' (enkakein), a Luke/Paul word (Gal 6:9; 2 Cor 4:1) — not to lose heart."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: perseverance in prayer rare and difficult, but the evidence of faith; Henry: all God's people are praying people."
+    "prevalence": "several",
+    "summary": "Gill refers the parable to the sore times of trial coming on the Jews and describes the courts an Israelite city would have had, the great council of seventy-one at Jerusalem, a lesser of twenty-three where there were six score men, and three judges where there were fewer. Calvin calls perseverance in prayer a rare and difficult attainment, finds a mark of unbelief in abandoning hope and ardour when the first prayers fail, and explains that the importunity urged here does not win a victory over God or bend him slowly to compassion but answers to the fact that his listening is not at once evident."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry says the parable has its key hanging at the door, its drift and design being prefixed. Lightfoot keeps the thread from the previous chapter, where the coming of Christ to avenge himself on Jerusalem was in view, and reads 'not to faint' as a warning against letting hope and courage droop before the afflictions they were to meet."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke points to the desolations coming on the land as the reason for being instant in prayer, holds that no man is worthy of the office of judge who does not deeply fear God and tenderly respect his fellow creatures, cites a historian's verdict on an emperor as the heathen description of a man wholly abandoned, and corrects the English of the widow's plea to a demand for justice rather than revenge, adding that a woman seeking revenge would never have been given a place in the record. Wesley takes this parable and the next as warnings against two fatal extremes, faintness and self-confidence."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that this is one of the few parables introduced by a distinct statement of its drift and aim, reads the judge historically as testimony to the corruption of justice under the government then ruling Galilee and Peraea, observes that the case is deliberately extreme with conscience dead and no love of approbation to supply its place, and notices that the tense implies continual coming and that the law's delay was worse to the widow than the original wrong. Barnes divides 'always' into four duties, not neglecting stated seasons, seizing on remarkable providences, keeping a praying frame, and not wearying when prayer seems unanswered, and argues that one who has no regard for God may be expected to have none for man, so that the description teaches indirectly what a judge ought to be; he also corrects the widow's plea to a demand for justice. Robertson takes 'not to faint' literally as not giving in to evil, which is to turn coward and lose heart, and calls the judge one who acknowledged no superior."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine argues from the lesser to the greater, that if the suppliant's perseverance at last prevailed with the most unjust of judges, those who never cease asking of God, the fountain of justice and mercy, may pray with far more confidence. Tertullian uses the parable polemically, insisting that the judge to be importuned is God himself and arguing that because the one who judges is also the avenger of his own elect who cry day and night, the Creator is on that account the specially good God. Bede holds that the elect will be so scarce at the end that it is less the cries of the faithful than the torpor of the rest which hastens the world's fall, and explains that our Lord speaks as though in doubt not because he doubts but to reprove us."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact connects the parable to what precedes from the other end, that having spoken of the trials and dangers at hand our Lord adds their remedy at once, which is constant and earnest prayer."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How wide the parable's drift runs: Lightfoot, Clarke and Gill all tie it to the judgment coming on Jerusalem and read 'not to faint' against that background, while Barnes and Wesley take it as a general lesson on persevering prayer and its opposite extremes",
+   "What the widow asked: Clarke and Barnes both correct the English rendering to a demand for justice against her adversary rather than vengeance, Clarke holding that a suit for revenge would never have been given a place in the record"
+  ],
+  "outliers": [
+   "Henry describes the parable as having its key hanging at the door, since its drift and design are stated before it begins",
+   "Clarke cites a Roman historian's verdict on an emperor, that he regarded neither gods nor men, as the heathen description of a man wholly abandoned",
+   "Tertullian turns the parable against those who divide the just God from the good, since the judge who avenges his own elect is the Creator himself",
+   "Ellicott treats the judge as historical evidence for the state of justice under the government then ruling Galilee and Peraea"
+  ],
   "themes": [
-   "always to pray",
-   "not to faint",
+   "prayer",
    "perseverance",
-   "the importunate widow"
+   "justice",
+   "judgment",
+   "faith"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A 'hard-boiled' judge fearing neither God nor man — no higher authority restrained, no shame moved him; reflecting the corrupt justice of Galilee/Peraea; the parable argues by contrast, not likeness, to God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the unjust judge",
-   "feared not God",
-   "the parable's foil",
-   "less to greater"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The widow defenceless, the law's special care (Isa 1:17; Exod 22:22); 'avenge me' better 'do me justice' (not revenge but vindication); 'came oft' (imperfect) — her only resource is persistence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the widow",
-   "'do me justice'",
-   "defencelessness",
-   "image of the elect"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "His long refusal (imperfect, 'continued refusal') measures his indifference; he yields not from justice but self-interest; a deed outwardly right from a wholly selfish root (Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'he would not for a while'",
-   "the soliloquy",
-   "selfish motive",
-   "the foil to grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Weary me' (hypopiaze) a boxing metaphor — 'stun me,' leave a bruise (cf 1 Cor 9:27); he relents from relief not right; her persistence, not her cause, conquers him — importunity wins."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'lest she weary me'",
-   "importunity prevails",
-   "the boxing metaphor",
-   "persistence in prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'The unjust judge' = 'the judge of unrighteousness' (characterising genitive, as 'steward of unrighteousness' Luke 16:8); the Lord begins the application — if such a man yielded, how much more the merciful God (Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'hear what the unjust judge saith'",
-   "the application",
-   "from worse to better",
-   "God unlike the judge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
    "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
@@ -253,92 +103,77 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "4-8",
+  "pericope_label": "The judge yields, and the argument from the lesser to the greater",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill dates the vindication to the few years after the death of Christ, when the elect among the Jews were singled out and delivered while the Roman army made havoc of their enemies, extending it only afterwards to the end of the world. Calvin insists that in applying the parable Christ does not make God resemble a wicked judge but points to a different reason why believers are kept long in suspense, and describes the offence to be met, that we daily see treachery, cruelty and violence abounding, the poor groaning under oppressors and the innocent insulted, while God appears to be asleep in heaven, so that the flesh concludes the world is governed by a blind fortune."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Lightfoot takes the long-suffering here and the like phrase in an epistle to concern the same thing, the destruction of Jerusalem and the years before it, when the Lord bore with his elect in a slippery time in which apostasy prevailed and men were as hard to keep as to gain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke complains that many actions which look good have neither the love of God nor of our neighbour behind them but only self-love of the basest kind, renders the verb for wearying as 'stun me' and traces it to boxers who blacken the eyes, draws the comparison that a man of such infamous character yielding to a widow he despised shows how much more ready God must be, and refuses to read the closing question of the world at all, rendering it whether fidelity shall be found in this land, whether the soil has borne a harvest proportioned to its culture, and answering no, which is why that land was destroyed. Wesley dates the vindication as Gill does and reads the closing question of how few true believers will be found on earth whenever the Lord appears."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The a fortiori: if a wicked judge yields, much more will God avenge his elect who cry day and night; the delay is not indifference but longsuffering forbearance (cf 2 Pet 3:9)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the 'elect' God will surely vindicate; the bearing-long is part of his mercy."
+    "summary": "Barnes shows that the judge acted not from regard to justice but to avoid trouble while appearing upright, states the principle that the character of God is not represented by this judge and that many circumstances of a parable are mere appendages not to be interpreted closely, and locates the real danger not in God's faithfulness but in his afflicted people losing heart. Ellicott finds the judge past hypocrisy and seeing himself as God saw him, works out the boxing metaphor behind the verb for wearying and its passage from the arena into ordinary speech, admits that the choice of an unrighteous judge jars and finds only partial relief in the argument from the lesser to the greater, and takes the closing question of the Church's history and of every day of the Lord that preludes the final Advent. Robertson reports and sets aside the view that the judge feared literal assault, makes the delay patient forbearance rather than indifference, and declines to settle whether the closing sentence is a question, though he thinks on the whole it is."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What 'shall he find faith on the earth' asks: Clarke renders it of fidelity in the land of Judea and answers no, which is why that land was destroyed, while Ellicott applies it to the Church's history and every day of the Lord preluding the final Advent, and Wesley to how few true believers will be found on earth whenever he appears",
+   "Whether the judge feared physical violence: Robertson reports the view that he expected the widow to strike him under the eye and sets it aside on grounds of tense, while Clarke and Ellicott keep the boxing language as metaphor for her importunity"
+  ],
+  "outliers": [
+   "Barnes lays down that many circumstances of a parable are mere appendages to the narrative and are not to be interpreted closely, the character of God being in no way represented by this judge",
+   "Ellicott admits that the choice of an extreme instance of human unrighteousness as the parable of prayer jars on the reader, and finds the a fortiori argument only a partial explanation",
+   "Ellicott traces the verb for wearying from the boxer's bruising blow into colloquial speech, as we now speak of hitting hard or landing a knock-down blow in debate"
+  ],
   "themes": [
-   "'shall not God avenge his elect'",
-   "cry day and night",
-   "longsuffering not neglect",
-   "the certain answer"
+   "prayer",
+   "importunity",
+   "judgment",
+   "patience",
+   "faith"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Speedily' = suddenly, surely, when his hour strikes; the closing question expects a negative — faith will be rare, love cold (Jas 5:8); some tie the 'coming' to the vengeance on Jerusalem."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: men sink because they neglect the remedy of prayer; the question forearms against the offence of seeing all in confusion."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'avenge them speedily'",
-   "'shall he find faith?'",
-   "the danger of fainting",
-   "faith that perseveres"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
-   "Augustine",
-   "Theophylact",
-   "Chrysostom",
-   "Bede",
-   "Cyril of Alexandria",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -346,139 +181,89 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Chrysostom",
+   "Theophylact",
+   "Augustine",
+   "Bede"
   ],
+  "range": "9-10",
+  "pericope_label": "The Pharisee and the publican go up to pray",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill states the aim of the parable as the exposure of arrogance, and notes the Jewish conviction that prayer offered in the temple or a synagogue was more acceptable and sooner heard than prayer in private. Calvin calls arrogance the most dangerous of diseases and so deeply fixed in the marrow of the bones that it can scarcely be extirpated, and sets the two men side by side to mark how unlike they are for all their apparent common ardour, the one approaching with a commendation pronounced on his whole life as though entitled to offer the sacrifice of praise, the other as an outcast with trembling and humble confession."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry divides the fault in two, a great conceit of their own goodness which reckoned them holier than their neighbours, and a confidence before God which pleaded the merit of it, as though they had made him their debtor."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke translates the verb for despising as disdained, made nothing of, treated with sovereign contempt, and grants that these men did make the outside clean while asking what was lodged within. Wesley denies outright that the parable was spoken to hypocrites or that this Pharisee was one, since he sincerely trusted that he was righteous and told God so in a prayer that none but God heard."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes holds that they trusted to their own works rather than to God and counted everyone else a sinner, which he makes the standing character of self-righteousness. Ellicott doubts that the hearers were Pharisees at all, since they are not so named, and thinks disciples in whom the Pharisee temper was gaining the mastery were included and had to be taught by an argument carried to absurdity; he also observes that going up is strictly accurate for a temple standing high above the city, describes the broad fringe and the phylacteries on brow and shoulder against the publican's ordinary working dress, and allows that the parable may be relating actual facts. Robertson argues from the grammar that the man stood to be seen and prayed with himself, making the whole a soliloquy and a complacent recital of his own virtues rather than fellowship with God, and reports a rabbinic prayer of the same shape thanking God that the speaker was a Jew and not a Gentile, a Pharisee and not one of the common people."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: faith the gift of the humble, not the proud; Theophylact: pride disturbs the mind and is a contempt of God, ascribing to self what is God's."
+    "summary": "Augustine supplies the link with what precedes, that since faith is the gift not of the proud but of the humble, a parable about humility and against pride follows at once. Bede reads the pair typically, the Pharisee standing for the Jewish people who boast of the righteousness of the law and the publican for the Gentiles who, being at a distance from God, confess their sins, so that the one went home humbled for his pride and the other was counted worthy to draw near."
    },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Two faults: trusting their own works for righteousness and 'setting all others at naught' (exoutheneo); the Pharisee no hypocrite but sincerely self-trusting (Wesley)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: arrogance the most dangerous disease, fixed in the marrow; we must come to God with abasement."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "trusted in themselves",
-   "despised others",
-   "pride against prayer",
-   "self-righteousness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Went up' suited the Temple's height on Moriah; Pharisee and publican vividly suggestive — the pattern of repute and of reproach; same place and posture, opposite hearts."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the two seem to show the same ardour of piety, yet are exceedingly unlike."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "two men in the temple",
-   "Pharisee and publican",
-   "same prayer, opposite hearts",
-   "the staging of contrast"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Theophylact: he names first what he lacked, then what he had; Chrysostom: not enough to despise all men, he must attack the publican — true thanks does not reproach others."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: blamed not for boasting of free-will but for trusting his works for reconciliation; his thanksgiving was really self-praise."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Robertson: he struck an ostentatious attitude, a complacent soliloquy with his own soul."
+    "summary": "Theophylact notices the order of the prayer, that the man begins with what he had not and only then names what he had. Chrysostom presses the second half, that to despise the whole race was not enough for him but he must attack the publican too, and that he would have sinned far less had he spared him, since in one word he assails the absent and wounds the man present; giving thanks, he says, is not heaping reproaches on others, and when a man returns thanks let God be all in all to him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the Pharisee was a hypocrite: Wesley denies it expressly, holding that he sincerely trusted in his own righteousness and said so in a prayer none but God heard, while Robertson argues from the grammar that the prayer was a soliloquy and a complacent recital of his own virtues rather than fellowship with God, and Clarke asks what was lodged within men who made the outside clean",
+   "Whom the parable addressed: Gill, Henry and Barnes take the hearers for Pharisees, while Ellicott notes that they are not so named and thinks disciples in whom the Pharisee temper was gaining ground were included"
+  ],
+  "outliers": [
+   "Bede reads the two men typically, the Pharisee for the Jewish people and the publican for the Gentiles",
+   "Robertson reports a surviving rabbinic prayer of the same shape, giving thanks that the speaker was a Jew and not a Gentile, a Pharisee and not one of the common people",
+   "Ellicott reconstructs the two figures as the first hearers would have pictured them, the broad fringe and the phylacteries on brow and shoulder against ordinary working dress with no badge of the covenant"
+  ],
   "themes": [
-   "'I thank thee that I am not'",
-   "prayer turned to self",
-   "contempt of the publican",
-   "trusting his works"
+   "pride",
+   "humility",
+   "prayer",
+   "self-righteousness",
+   "contempt"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
- "12": {
+ "11": {
   "voices": [
    "John Gill",
    "John Lightfoot",
@@ -489,38 +274,70 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "11-12",
+  "pericope_label": "The Pharisee’s prayer: his posture, his fasts, and his tithes",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill holds that standing was a praying posture and nothing amiss in itself, leaving open whether the man sought a place of eminence, a solemn attitude or simply confidence, and disposes of a rendering that would put the fast on the sabbath, since that was a feasting day on which even the poorest man was bound to three meals and fasting before noon was forbidden. Calvin locates the fault not in a boast of free will, since the thanksgiving does acknowledge God as the giver, but in trusting that God was reconciled by the merit of works; he takes the claim to amount to performing more than the law required, and allows that thanking God for one's virtues is a holy exercise, the fault lying in swelling with confidence and preferring oneself to others."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Lightfoot supplies the background of Jewish fasting, that fasts were of two kinds, of the congregation and of the single person, both chiefly on account of afflictions, the public sort answering to siege, sword, pestilence, locust and drought, the private to a man's own trouble when someone belonging to him was sick, imprisoned or lost in the wilderness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the phrase to mean that the man stood by himself, thinking it disgraceful to appear connected with the penitent beside him, and joining him neither in person nor in petition; he renders the verb of the tithe as acquiring rather than possessing and draws the rule that a man who sets apart part of his earnings should never let it lie in his own hands lest possession breed covetousness, and recalls that a righteousness exceeding this was made the condition of entering the kingdom. Wesley puts the fasts on Monday and Thursday, reports that many gave a full tenth in tithes and a second tenth in alms, and reduces the plea to three clauses: I do no harm, I use all the means of grace, I do all the good I can."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The law required one fast a year (Lev 16:29); the Pharisees added two a week, made meritorious as voluntary; he tithed all his income — the prayer asks nothing, only displays."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he claims to do more than the law required, like monks boasting works of supererogation."
+    "summary": "Barnes reports the rendering 'stood by himself' as characteristic of a sect for ever telling men to stand by themselves but doubts the Greek will bear it, puts the fasts on the second and fifth days of the week, and notes that the surplus was made more meritorious because voluntary. Ellicott objects that a false stress has been laid on the posture, since the publican also stood and standing was the customary attitude; he puts the fasts on the third and fifth days, explains that tithe was a tax on produce so that the boast concerns the lesser tithes as well as the greater, and sets the Pharisee's self-analysis beside a Stoic emperor's thanksgivings, owning that the pagan's is framed on a higher ethical standard. Robertson supplies the measure of the excess, that the law required one fast a year while the Pharisees added two a week over two seasons, and insists that the tithe was of income and not of property."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether 'prayed thus with himself' should be rendered 'stood by himself': Clarke adopts it and builds on it, Barnes reports it as apt to the sect but doubts the Greek allows it, while Ellicott and Gill deny that the posture proves anything, the publican having stood as well",
+   "Which days the Pharisees fasted: Barnes says the second and fifth of every week and Wesley Monday and Thursday, while Ellicott makes them the third and fifth"
+  ],
+  "outliers": [
+   "Ellicott sets the Pharisee's self-analysis beside the thanksgivings of a Stoic emperor and owns that the pagan's, though less systematic, is framed on a higher ethical standard",
+   "Gill argues that the fast cannot have fallen on the sabbath, which was a feasting day requiring three meals even of a man maintained by alms",
+   "Clarke warns that a man who sets a portion of his earnings apart for God should never let it rest in his own hands, lest possession breed covetousness"
+  ],
   "themes": [
-   "'I fast twice... I give tithes'",
-   "recital of merits",
-   "resting on works",
-   "supererogation"
+   "prayer",
+   "fasting",
+   "tithing",
+   "self-righteousness",
+   "merit"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
   }
  },
  "13": {
@@ -534,887 +351,451 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "13-14",
+  "pericope_label": "The publican afar off, and the verdict on the two men",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Afar off' from the crowd, no ostentation; refused to lift his eyes; smote his breast — tokens of deep distress; owns himself 'a sinner' and casts himself on mercy."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: not a prescribed ritual but the tokens of humility — acknowledging sin, self-condemning, anticipating God's judgment."
+    "summary": "Calvin warns against turning the downcast eyes into a rule, since Christ was describing the tokens of humility rather than prescribing a posture, humility lying in not refusing to acknowledge our sins but condemning ourselves and so anticipating the judgment of God; on the verdict he insists that the comparison is not one of degree, the one man being accepted and the other totally rejected, and uses the verse to fix the strict sense of justification as standing before God as if we were righteous, obtained not by acquiring some new quality but by having guilt blotted out, so that justification consists in the forgiveness of sins. Gill marks the contrast that carries the whole, that the man who freely owned himself a sinner was the one treated with contempt."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Lightfoot supplies the topography, that Israelites at private prayer went past the outer court into the court of the women, as the thirteen alms chests placed there and the widow's two mites show, and doubts whether a private worshipper might come further in at all."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rules out the explanation that the man kept back as a heathen who dared not approach, since he was most likely a Jew, and puts it down to true penitence; he lists three things in the downcast posture, deep distress, a conscious confession of guilt, and the very attitude the rabbins required, and holds that the other man was simply not accepted. Wesley measures the distance from the holy of holies, calls the shame that touched him more ingenuous than fear, and reads the verdict as meaning the one and not the other."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes measures the distance from the sanctuary, placing the Pharisee at the side of the court nearest the temple and this man at the other side or in the court of the Gentiles, and puts the verdict as a reversal of judgment, since the Pharisees would have approved the first man and are here assured they judge wrongly. Ellicott makes the motive shame, which kept the man from the crowd pressing forward and above all from the respectable worshipper beside him, notes that he stood too since kneeling there would itself have been ostentatious, observes that the participle of justification is perfect and so implies a completed and abiding state, and fastens on the house as the test in both cases, home life trying whether worship was real. Robertson denies that the distance was from the sanctuary at all, holding it to be from the Pharisee, notes that worshippers commonly lifted their eyes and that the smiting is in a tense of continued beating, and quotes the question why it should be assumed that Jesus did not repeat his sayings."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the publican stood far from: Barnes and Wesley measure the distance from the sanctuary, Robertson denies this outright and makes it distance from the Pharisee, and Ellicott makes it distance from the crowd of worshippers and from the Pharisee in particular",
+   "Whether 'justified rather than the other' leaves the Pharisee partly justified: Calvin denies that the comparison is one of degree at all, and Clarke and Wesley agree that the other was simply not accepted"
+  ],
+  "outliers": [
+   "Ellicott compares the publican to a forlorn castaway crouching in the far corner of a cathedral nave, and notes that kneeling in such a place would itself have been ostentatious",
+   "Ellicott makes the house the test in both cases, home life being the trial of whether worship was real, the one man betraying an uneasy conscience by irritability and harshness and the other going home in a new gentleness",
+   "Robertson quotes the question why it should be assumed that Jesus did not repeat his sayings, since the closing maxim had been used earlier in the Gospel",
+   "Lightfoot infers the place of private prayer from the thirteen alms chests standing in the court of the women, where the widow cast her two mites"
+  ],
   "themes": [
-   "'God be merciful to me a sinner'",
-   "standing afar off",
-   "the smitten breast",
-   "the prayer that justifies"
+   "humility",
+   "repentance",
+   "justification",
+   "prayer",
+   "judgment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Justified' = accounted/treated righteous (perfect = abiding); the publican accepted, the Pharisee not; the 'house' the test of worship's reality; the maxim repeats Luke 14:11."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: to justify is to stand before God as righteous — the publican accepted, the Pharisee totally rejected."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'justified rather than the other'",
-   "the great reversal",
-   "justification by mercy",
-   "exalted/abased"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
-   "Theophylact",
-   "Ambrose",
-   "Cyril of Alexandria",
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Ambrose"
   ],
+  "range": "15-17",
+  "pericope_label": "The infants brought to Christ, and the child as the model",
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill argues from the grammar that the summons went to the children themselves, since no other antecedent is possible, and infers that they cannot have been new-born babes or children at the breast but were grown enough to be called and to come; he also takes the following verse as the occasion for teaching the disciples humility and guarding them against pride and vanity."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "Theophylact: a lesson of humility by his own example, receiving the children; Augustine: brought to the Saviour to be saved; Ambrose excuses the disciples — they acted from love of their Master."
+    "summary": "Henry fits the incident to the parable just told, as a confirmation that those are accepted who humble themselves, turns it into a duty that people blessed in Christ should want their children blessed in him, and describes the children as too young to walk. Lightfoot reports the rabbinic dispute over the age at which a child becomes capable of the world to come, dated variously from birth, from the time he can speak, from conception, from circumcision and from the time he can answer Amen, and thinks it likely the apostles had taken up some such opinion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes a living parallel, in which a disciple brings his child to a spiritual teacher, presses the child's head down to his feet and receives a blessing in the form of wishes for long life, learning and wealth. Wesley says flatly that those called were the people who had brought the children, and reads the saying as identifying the subjects of the Messiah's kingdom, to whom it properly belongs."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Luke's 'babes' (brephe, infants) stronger than Mark/Matthew's 'little children'; Henry: fitly follows the publican, confirming the humble are accepted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "infants brought to Christ",
-   "the disciples rebuke",
-   "humility illustrated",
-   "the helpless received"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Robertson has Christ call the children with their parents and then rebuke the disciples for their rebuke, notes that Luke's word is the old term for infants where the other Gospels have little children, marks the 'also' that the other accounts lack and the tense of the rebuking as either beginning or continuing rather than single, and insists that the child is made the model for those seeking entrance into the kingdom rather than the adult the model for the child, nothing here saying that the child is already in the kingdom without coming to Christ. Ellicott infers from the close agreement with the second Gospel through these verses that Luke had the passage from personal communication with its author. Barnes lets the passage rest on the parallels and the psalm about the weaned child."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Jesus calls the children to himself and rebukes the disciples' rebuke (as Mark 10:14); 'of such is the kingdom' — children and the childlike are its subjects (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'suffer little children'",
-   "'forbid them not'",
-   "'of such is the kingdom'",
-   "welcome of the lowly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact reads the incident as a lesson in humility taught by example, since our Lord does not turn the little ones away but receives them graciously."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The child is the model for seekers (not the adult for the child); to receive the kingdom 'as a little child' is to receive it with simple, dependent trust, without claim or merit (cf 1 Pet 1:14) — the gate to entrance."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Ambrose refuses to think ill of the disciples for the rebuke and offers two explanations, either a holy zeal that their Master should not be pressed by the crowds, or the mystery that they wished the Jewish people, whose kinsmen they were, to be saved first; and he states the principle behind the charitable reading, that our own interest must be given up where an injury is threatened to God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whom Christ called: Gill argues from the antecedent that it was the children themselves, Wesley says flatly it was those who had brought them, and Robertson takes both together",
+   "How old the children were: Gill infers from the calling that they were past the breast and able to come, while Robertson notes that Luke's word is the term for infants and Henry describes them as too young to walk"
+  ],
+  "outliers": [
+   "Ambrose lays down that our own interest must be given up where an injury is threatened to God",
+   "Lightfoot preserves the rabbinic dispute over when a child becomes capable of the world to come, answered variously from conception, from birth, from circumcision, from first speech and from the first Amen",
+   "Robertson insists that the child is made the model for the adult here and not the adult for the child, and that nothing in the saying places the child in the kingdom without coming to Christ",
+   "Ellicott takes the close agreement with the second Gospel in these verses as evidence that Luke had them from personal communication with its author"
+  ],
   "themes": [
-   "'as a little child'",
-   "the condition of entrance",
-   "childlike trust",
-   "against self-sufficiency"
+   "children",
+   "humility",
+   "the kingdom",
+   "blessing",
+   "discipleship"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
+   }
   }
  },
  "18": {
   "voices": [
-   "Bede",
-   "Chrysostom",
-   "Titus Bost",
-   "Theophylact",
-   "Athanasius",
-   "Cyril",
    "John Gill",
    "Matthew Henry",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: he asks openly by what works he may merit eternal life; Ambrose: he should have said 'Good God,' not merely 'Good Master.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'By doing what shall I inherit?' — the lawyer's question (Luke 10:25); he thought some one act could win eternal life; Henry: a hopeful sign that one of rank cared for his soul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the rich ruler",
-   "'what shall I do?'",
-   "'Good Master'",
-   "earning eternal life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Not a disclaimer of his goodness but a probe — why use a word belonging fully to God? Lightfoot: meant to lead the ruler from a careless compliment to a true confession of the Messiah (closer to Mark 10:18)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'why callest thou me good?'",
-   "none good but God",
-   "probing the heart",
-   "compliment vs confession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Titus of Bostra: know God first, then seek; Theophylact on the order; Ambrose: honouring parents includes giving bountifully, not mere respect."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The second-table commandments cited (Exod 20:12; Rom 13:9); Luke with Matthew omits Mark's 'defraud not' — the law as the mirror of his need."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'thou knowest the commandments'",
-   "the second table",
-   "the law as mirror",
-   "love of neighbour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'From my youth up' a detail shared with Mark 10:20; he claims, sincerely but blindly, to have kept the whole second table — measuring himself by the letter, finding nothing wanting."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'all these have I kept'",
-   "'from my youth'",
-   "self-righteous assurance",
-   "outward obedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Chrysostom",
+   "Theophylact",
+   "Titus Bost",
+   "Cyril",
+   "Athan",
+   "Bede"
   ],
+  "range": "18-23",
+  "pericope_label": "The rich ruler asks what he must do",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill fills in the man as young, a magistrate and very rich, who ran after Jesus and overtook him on the road towards Jericho; on the commandments he counts five only and not in their scriptural order, and takes the point to be that the law must be kept or satisfaction made for it before there can be any inheriting of life."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "'One thing still fails thee' — a searching diagnosis; sell all, give to the poor, follow me; the demand probes where his heart is bound (treasure in heaven, Matt 6:19-20)."
+    "summary": "Henry finds the sight a blessed one, since few of the rulers had any esteem for Christ and here was one who distinguished himself from others of his rank by a concern about his soul. Lightfoot holds that the ruler acknowledged Jesus as the Messiah, since others who were not yet disciples did so, and sees no reason to deny it of a man of such evident parts."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the one thing was to love God more than mammon; the command to sell all was his particular cure — not commanded to all, but to love God above the world."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'one thing thou lackest'",
-   "sell all and follow",
-   "the particular cure",
-   "love God above mammon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Luke's word for sorrow between Matthew's and Mark's vivid 'lowering' (Mark 10:22); 'very rich' = 'great possessions' — his wealth the measure of his grief, the test finding him out."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'very sorrowful'",
-   "'he was very rich'",
-   "the test's verdict",
-   "near the kingdom yet held back"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Theophylact",
-   "Cyril",
-   "Bede",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Theophylact: 'hardly,' not 'impossibly' — the rich may reap a heavenly reward, but with difficulty, for wealth grips the heart; Bede: he who despises earthly affections shall receive far greater."
+    "summary": "Clarke refers the reader to his fuller handling of the case in the first Gospel. Wesley holds that the command to sell all was meant to cure a love of the world which in this man could be cured no other way, our Saviour knowing his heart and putting him on a trial that laid it open to himself, and insists that we are not commanded to sell all but to use all to the glory of God."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The peril of riches (1 Tim 6:9); the difficulty is the heart's clinging, not wealth itself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'how hardly... the rich'",
-   "riches and the kingdom",
-   "'hardly' not 'impossibly'",
-   "the peril of wealth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A current proverb for the impossible; Luke's 'needle' (belone, a surgeon's needle) a classical word — a sign of his culture; the variant 'cable'/'camel' noted but the camel the stronger reading; the impossibility is the point."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "camel through a needle's eye",
-   "proverb of impossibility",
-   "Luke the physician",
-   "despair of self"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The hearers assumed wealth a mark of divine favour, so 'who then can be saved?' — the saying overturned their reckoning; Luke's phrasing may suggest others present besides the disciples."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'who then can be saved?'",
-   "the disciples' dismay",
-   "wealth as supposed favour",
-   "stripped of false confidence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The saving paradox: salvation impossible to man, possible with God (Jer 32:17; Luke 1:37); God can break the grip of gold — confirming the camel-saying meant the humanly impossible; salvation wholly God's work."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'impossible with men, possible with God'",
-   "grace not works",
-   "salvation God's work",
-   "hope from despair"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter not boasting but reacting from consternation, seeking reassurance; 'we have left all' — homes, trades, families ('our own,' ta idia) — set against the rich ruler who would not."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'we have left all'",
-   "Peter's response",
-   "contrast with the ruler",
-   "seeking reassurance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The catalogue of dearest ties (house, parents, brethren, wife, children); Luke omits 'lands'; the decisive phrase 'for the kingdom of God's sake' (cf Deut 33:9) — the sacrifice counts only when made for Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'no man that hath left'",
-   "forsaking all",
-   "'for the kingdom's sake'",
-   "sacrifice remembered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Manifold more' (pollaplasiona) now — chiefly spiritual: peace, joy, the family of faith (Gill) — and life everlasting hereafter (Rev 2:10); Luke keeps the promise simple, omitting the thrones, persecutions, first/last."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'manifold more'",
-   "present and eternal reward",
-   "nothing lost for Christ",
-   "life everlasting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Gregory",
-   "Chrysostom",
-   "Cyril",
-   "Isidore Peleus",
-   "Cyril of Alexandria",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Barnes contents himself with the texts of the decalogue and the parallels. Ellicott traces the account against the other two Gospels throughout, noting that the first answer agrees more closely with the second Gospel, that the omission of one clause from the commandments follows the first against the second, that keeping them from youth up and the dropping of the question what more is lacking are shared with the second, that the omission of taking up the cross follows the first again, and that the word for the man's sorrow stands half-way between merely sorrowing and lowering; he adds that the adjective for his wealth is the one used of the rich man in the earlier parable. Robertson notes that the title of ruler is peculiar to this Gospel, that the question asks by doing what he shall inherit exactly as an earlier questioner framed it, that the man seems to have supposed a single act would secure it, and reports the observation that no Jewish teacher was addressed as good; he calls the demand an amazing compliment to a man aiming at perfection and thinks the youth had real charm and was sincere."
+   },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory: he forewarns the troubled disciples of both Passion and Resurrection; the suffering fulfils the prophets (against heretics)."
+    "prevalence": "single",
+    "summary": "Bede supplies the link with what precedes, that a ruler who had just heard only the childlike would enter the kingdom asks to be told plainly, and not in parable, by what works he might merit eternal life."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: told apart that habituated by expectation they might bear it (Isa 53:5); Cyril of Jerusalem: he came willingly, lest the world perish in its sins."
+    "summary": "Titus of Bostra paraphrases the approach generously, as saying that the questioner is learned in the older Scriptures but sees something more excellent in one who makes no earthly promises but preaches the kingdom of heaven, and reads the reply as instruction in faith first, know God first and then it will be time to ask what you ask. Chrysostom will call the man covetous, because that is the reproach Christ brings, but refuses to call him a tempter. Theophylact explains the order of the commandments by what men are most prone to, adultery because the incitement is within us and of our nature, murder because rage is a great and savage monster, and the sin against parents last because, grave as it is, it very seldom happens."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Robertson: taking the Twelve apart (Matt 20:17), a special point of explaining his death."
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Athanasius makes renunciation cost nothing, since the whole earth beside heaven is but a span long, so that men who gave up the lordship of it all would have resigned nothing worth naming. Cyril describes the collapse in a figure, that the ruler could not contain the new word but burst with sorrow like an old bottle."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the command to sell all binds others: Athanasius treats renunciation as costing nothing worth naming beside the kingdom, while Wesley insists the command was a remedy for this man's particular disease and that we are not told to sell all but to use all to the glory of God",
+   "How the ruler came: Chrysostom will grant that he was covetous, since that is the reproach Christ brings, but refuses to call him a tempter, and Lightfoot holds that he acknowledged Jesus as the Messiah"
+  ],
+  "outliers": [
+   "Robertson reports the observation that no Jewish teacher was ever addressed as 'good'",
+   "Theophylact explains why the commandments are cited in this order, the most tempting sins first and the sin against parents last as the rarest",
+   "Ellicott finds it suggestive that the adjective for the ruler's wealth is the very one used of the rich man in the earlier parable",
+   "Cyril compares the ruler to an old bottle that could not contain the new word and burst with sorrow"
+  ],
   "themes": [
-   "the third passion prediction",
-   "'we go up to Jerusalem'",
-   "fulfilling the prophets",
-   "Christ goes willingly"
+   "riches",
+   "eternal life",
+   "commandments",
+   "renunciation",
+   "discipleship"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
- "32": {
+ "24": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Nearly as the other Gospels, but 'spitefully entreated' is peculiar to Luke; fulfilled when the chief priests delivered him to Pilate and the soldiers (Acts 3:13) — the foretold shame of the Passion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "delivered to the Gentiles",
-   "mocked and spat upon",
-   "the Passion's shame",
-   "exact foreknowledge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
-   "A.T. Robertson"
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "Theophylact",
+   "Cyril",
+   "Bede"
   ],
+  "range": "24-30",
+  "pericope_label": "How hardly the rich enter, and what is promised to those who leave all",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The third day' (Matt 20:19; Mark's 'after three days' the same sense); scourging fulfilled by Pilate before crucifixion — death and resurrection foretold in order, the Lord controlling his own narrative."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the occasion, that Christ saw by the man's looks that he was determined not to part with his possessions, and denies that the hundredfold in this present time means more houses or parents or brethren, putting in their place a comfort and peace and satisfaction not to be found in such enjoyments at all."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the resurrection foretold (Hos 6:2) — his rising the pledge, token, and cause of ours."
+    "prevalence": "single",
+    "summary": "Clarke records a textual curiosity, that a few manuscripts read a cable in place of the camel, and fills out Peter's claim as trades and houses and families."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that the word for needle here is not the one the other Gospels use but a more classical term, theirs being unknown to Attic writers, and counts the fact among the signs of this evangelist's culture; he adds that the way the astonished question is introduced suggests either that others were present besides the disciples named elsewhere or that only some of them heard, that the answer about the impossible takes rather more the shape of a general axiom, and that the omission of the lands named elsewhere may be characteristic of a companion of Paul and Barnabas to whom parting with a field was a small thing, whereas leaving a house meant breaking up a home. Robertson calls the figure a current proverb for the impossible and reports that the Talmud twice puts an elephant through a needle's eye to the same effect, explains that the question was astonishing because wealth was assumed to be a mark of divine favour, presses the answer as a paradox that holds since God can break the grip of gold on a man's life though even Christ did not break it here, renders Peter's words as our own things meaning home and business, and reports the judgment that Peter spoke out of consternation rather than boastfulness. Barnes adds the older texts that stand behind the promise."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact notices that the first saying stops short of impossibility, since it is hard and not impossible for the rich to enter and they might after all reap a heavenly reward through their riches, though riches are more tenacious than birdlime and a soul once seized by them is hardly plucked away; he then observes that the next words do speak of it as impossible."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril states the logic that makes Peter's question fair, that a rich man who has given up much will naturally look for a reward, but the man who had little and resigned what he had may reasonably ask what is in store for him."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede takes the promise of the present time as made to the man who in seeking the kingdom has despised all earthly affections and trampled on the riches and pleasures and smiles of the world, and reports that some build on this very declaration the fable of a thousand years after the resurrection of the just, when everything surrendered for God's sake is to be restored with manifold interest and eternal life granted besides."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the rich man's case is hard or impossible: Theophylact insists the first saying says only that it is hard and allows that riches may yet earn a heavenly reward, noting that the next words go further, while Robertson takes the figure as a current proverb for the impossible",
+   "What the hundredfold in this present time promises: Bede reports that some found a literal restoration with interest after the resurrection of the just, while Gill denies that houses or kindred are meant at all and substitutes a comfort and peace not found in such enjoyments"
+  ],
+  "outliers": [
+   "Robertson reports that the Talmud twice makes an elephant passing through a needle's eye the figure for the impossible",
+   "Robertson observes that God can break the grip of gold on a man's life, though it was not broken in this case",
+   "Ellicott counts the more classical word for 'needle' among the signs of this evangelist's culture",
+   "Ellicott explains the omission of 'lands' from the list by supposing that a companion of Paul and Barnabas thought parting with a field too small a thing to remember as a sacrifice",
+   "Clarke reports a minority reading of 'cable' for 'camel'"
+  ],
   "themes": [
-   "scourged and put to death",
-   "'the third day'",
-   "resurrection joined to the cross",
-   "the pledge of ours"
+   "riches",
+   "the kingdom",
+   "impossibility",
+   "reward",
+   "renunciation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  },
- "34": {
+ "31": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Chrysostom",
+   "Cyril",
+   "Isidore Peleus",
+   "Gregory"
   ],
+  "range": "31-34",
+  "pericope_label": "The passion foretold, and the disciples’ failure to understand",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Luke says it three times — they kept not perceiving, it was 'hid from them' (cf Luke 9:45); the cause their fixed hope of a temporal conqueror; the physician dwells on the psychological cause."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill says not one of them could take the prediction in, because they could not reconcile it with their notions of the Messiah's temporal grandeur, which shows how little they knew of the prophecies. Calvin calls it stupidity not to understand a plain saying on a matter they had themselves suspected, traces it to the expectation of a joyful and prosperous advancement which made a shameful death seem absurd, and infers how madly a false imagination can seize the mind."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a strange stupidity, but the time of understanding was not yet — the truth would open after the events and the Spirit."
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry marks what is peculiar to this account, that the sufferings are set out as the fulfilling of the scriptures, a consideration by which Christ reconciled himself to them and would reconcile the disciples. Lightfoot reconstructs the journey, joining this to the summons to go into Judea again where the disciples had objected that their Master had lately been in danger, describing them following him wondering and afraid, noting that only the visit to the sick friend had been named at the outset while the progress to Jerusalem was foretold on the way, and placing the party at the ford beyond Jordan when the message about the sickness arrived."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke goes back to a prophet's words which he would render that on the third day God will raise him up and we shall live before him, so that the resurrection is at once the pledge and the cause of ours, and holds that the disciples could not conceive how a Master whose power they knew to be unlimited would let himself be tormented and slain. Wesley refers the reader to the parallels."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes holds that the disciples looked for a temporal prince and could not see how the prediction consisted with prophecy. Ellicott notices that one word in the list of indignities is peculiar to this Gospel, and takes the verse about their incomprehension as peculiar to it also and as a piece of the analysis a physician would make, dwelling on the psychology that would later explain the disciples' bewilderment and their slowness to believe the rising. Robertson notes that the phrase may attach either to what was written or to what shall be accomplished and prefers the latter, records the variation between 'the third day' and 'after three days' as being of one sense, and counts three separate statements of the failure to understand in a single sentence, an imperfect, a summary aorist and a past perfect for a settled state."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Gregory says the Saviour foresaw that his disciples' hearts would be troubled at the Passion and so told them long beforehand both the suffering and the glory of the rising."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom gives the reason for the privacy, that it was not fitting to publish the word to the crowds lest they be troubled, while the disciples, made familiar with it by expectation, might bear it the better."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Cyril states a second purpose, to convince them that he foreknew what was coming and went to it of his own accord, so that they might never say that one who promised them salvation had fallen into enemy hands, and grants that the disciples did not yet know exactly what the prophets had foretold, since it was after the rising that their understanding was opened. Isidore of Pelusium marvels at the folly of those who ask how Christ rose before the three days were out, answers that rising later than promised would have been a mark of weakness while rising sooner is a token of the highest power, compares a debtor who pays before his term and is admired rather than blamed, and insists that the promise was to rise on the third day and not after three days."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the three days are to be counted: Isidore of Pelusium argues at length that the promise was to rise on the third day and not after three days, and that rising sooner than promised is a token of power rather than a difficulty, while Robertson records the variation between the Gospels as being of one sense",
+   "Why the disciples failed to understand: Gill, Barnes, Clarke and Calvin all trace it to their expectation of a temporal and prosperous Messiah, Calvin calling it stupidity, while Ellicott treats it as a psychological phenomenon this evangelist dwells on and Cyril says simply that they did not yet know what the prophets had foretold"
+  ],
+  "outliers": [
+   "Isidore of Pelusium compares Christ to a debtor who promised payment after three days and paid on the day itself, whom no one calls deceitful and everyone admires",
+   "Ellicott finds in the verse about their incomprehension the analysis a physician would make, and connects it with the disciples' later slowness to believe the resurrection",
+   "Robertson counts three separate statements of the same failure to understand within one sentence, and remarks that it is no wonder the writer tries three times",
+   "Clarke renders a prophet's words so that the resurrection of Christ is at once the pledge and the cause of ours"
+  ],
   "themes": [
-   "'they understood none of these things'",
-   "hidden from them",
-   "fixed false hope",
-   "blindness to the cross"
+   "the passion",
+   "prophecy",
+   "resurrection",
+   "incomprehension",
+   "foreknowledge"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
+   }
   }
  },
  "35": {
   "voices": [
-   "Gregory",
-   "Theophylact",
-   "Pseudo-Chrysostom",
-   "Cyril",
-   "Ambrose",
-   "Augustine",
-   "Cyril of Alexandria",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -1422,342 +803,92 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Pseudo-Chrysostom",
+   "Theophylact",
+   "Cyril",
+   "Augustine",
+   "Ambrose",
+   "Gregory"
   ],
+  "range": "35-43",
+  "pericope_label": "The blind man at Jericho",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill holds that the man believed at once that Jesus was the Messiah, since son of David was a title of the Messiah well known among the Jews."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reports the divergence among the accounts, one evangelist naming a single man cured on the way out of Jericho and another giving two as they departed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke names the beggar and refers the reader to his fuller treatment in the other accounts, and ends on the crowd's praise, that they saw the finger of God in what was done while the Pharisees would not acknowledge it, remarking that common people are often better judges of the work of God than the learned, being simpler and less warped by prejudice or self-interest. Wesley refers the reader to the parallels."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott states the harmonising difficulty exactly, that this Gospel agrees with the second and not the first in giving one blind man rather than two and in placing the cure on the approach to Jericho rather than the departure, and that it passes over the request of the two brothers; he notes that the crowd is heard without an article, which better renders the vague impression left on a blind man by many footsteps and voices, that those who told him to be quiet were in advance of the company and probably not the disciples, that the healing word is better rendered made whole than saved while carrying behind it the soundness of spiritual sight. Robertson offers a topographical solution in the two Jerichos, the old and the new Roman town, with the beggar sitting by the road between them, notes that the name is supplied by the second Gospel and the second man by the first, agrees that the address shows a recognition of the Messiah, and marks that the stopping is expressed by a different form here and that the following at the end may be either a beginning or a continuing. Barnes refers the reader to the parallels."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Gregory: the carnal disciples brought to a miracle to strengthen faith; Ambrose: the blind man a type of the Gentiles receiving the lost light; the Lord did not walk without doing good (Theophylact)."
+    "summary": "Gregory says the disciples, being yet carnal, could not receive the words of mystery and so are brought to a work they can see, a blind man given sight before their eyes that a divine act might strengthen their faith. Augustine harmonises the accounts allegorically, taking the town to signify the moon and so death, so that our Lord approaching his death commands the light of the Gospel to be preached to the Jews only, signified by the one blind man here, and after rising and ascending to Jews and Gentiles both, signified by the two in the other Gospel. Ambrose reads the man as a figure of the Gentile people receiving back through the sacrament of our Lord the brightness of the light they had lost, and finds it no difficulty that one Gospel has two, since the Gentiles descending from two sons of Noah put forward two authors of their race."
    },
    {
-    "school": "grammatical-historical",
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "The harmony addressed — two Jerichos (old/new Roman); Mark names Bartimaeus (10:46), Matthew mentions two (20:30); selective focus, not contradiction."
+    "summary": "Theophylact draws a lesson from the placing of the miracle, that our Lord did not so much as walk without doing good and left his disciples the example that we should be profitable in everything and nothing in us be in vain. Pseudo-Chrysostom describes the moment, that the man did not know him but felt a drawing towards him and grasped with his heart what his sight could not embrace, so that when those who could see told him only that Jesus of Nazareth was passing, according to their own opinion, he was told one thing and proclaimed another."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril observes that a man brought up a Jew would know that God was to be born of the seed of David according to the flesh, and that he therefore addresses him as God while calling him son of David; he wishes those who divide Christ in two would imitate him, and notes that his ardour was not damped by the checks put upon his confession."
    }
   ],
   "debates": [
-   {
-    "question": "One blind man or two, entering or leaving Jericho?",
-    "sides": [
-     {
-      "position": "reconciled by the two Jerichos and the Evangelists' selective focus",
-      "holders": [
-       "Robertson",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
+   "How the account is to be squared with the others: Ellicott states the divergence plainly and Henry reports it, Robertson resolves it topographically by the old and the new Jericho, while Augustine resolves it allegorically, the one blind man standing for the Jews and the two of the other Gospel for Jews and Gentiles after the resurrection, and Ambrose takes the two as the two authors of the Gentile race"
   ],
-  "outliers": [],
+  "outliers": [
+   "Pseudo-Chrysostom observes that the man was told one thing and proclaimed another, having grasped with his heart what his sight could not embrace",
+   "Cyril turns the blind man's confession against those who divide Christ in two, since he calls him God and son of David in the same breath",
+   "Clarke remarks that common people are often better judges of the work of God than the learned, being simpler and less warped by prejudice or self-interest",
+   "Robertson notes that there were two Jerichos, the old town and the new Roman one, with the beggar probably sitting on the road between them"
+  ],
   "themes": [
-   "the blind man at Jericho",
-   "Bartimaeus",
-   "type of the Gentiles",
-   "faith vs the disciples' blindness"
+   "blindness",
+   "faith",
+   "healing",
+   "messiahship",
+   "praise"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'A multitude' (no article) conveys the vague impression of many footsteps; the imperfect 'inquired' — he repeatedly asked what it meant, the soul in darkness pressing toward the light."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hearing the multitude",
-   "'what it meant'",
-   "the first stirring",
-   "faith's beginning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "They tell him 'Jesus of Nazareth passeth by' (present tense retained) — the lowly title of his reproach; the report meets his seeking and kindles faith into action."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the prophet of Nazareth, famed for doctrines and miracles, said to be the Messiah, was just then passing by."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Jesus of Nazareth passeth by'",
-   "the answer to seeking",
-   "the lowly title",
-   "the moment of opportunity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Son of David' (huie Daueid) confesses Jesus as Messiah (Matt 9:27); 'he cried' (eboesen) shouted aloud — bold yet humble, pleading only for mercy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Son of David, have mercy'",
-   "confession of the Messiah",
-   "sight in the blind",
-   "the cry for mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'They which went before' (a part of the crowd, not the disciples) tried to silence him; he 'cried so much the more' (Mark 10:48) — the rebuke redoubled his cry, faith that obstacles cannot quench (cf Ps 141:1)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the crowd rebukes him",
-   "'cried so much the more'",
-   "importunity tested",
-   "faith unquenched"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Stood' — Jesus stopped (Mark 10:49); on his way to the cross he halts the procession and commands the beggar brought near, overruling the crowd's rebuke with his welcome."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus stood still",
-   "commanded him brought",
-   "attentive to the cry",
-   "importunity honoured"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ draws out the request he already knew; Luke's 'Lord' (kyrie) for Mark's 'Rabboni,' a higher reverence matching 'Son of David'; the man seeks not alms now but his sight."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'what wilt thou?'",
-   "'that I may receive my sight'",
-   "faith into definite request",
-   "'Lord'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Thy faith hath saved thee' — better 'made thee whole' (as Mark), the bodily healing carrying a deeper sense of salvation (cf Luke 7:50; 17:19); cured by a bare word, without means, his faith honoured."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'receive thy sight'",
-   "'thy faith hath saved thee'",
-   "healing by a word",
-   "faith rewarded"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Instant cure by the word; 'followed' (imperfect, began to follow, Mark 10:52); the effect on man and crowd peculiar to Luke, who loved such glorifying of God (Luke 5:26; Acts 3:8); the common people discern what the doctors would not (Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "received his sight immediately",
-   "followed glorifying God",
-   "the people praise God",
-   "conversion's pattern"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

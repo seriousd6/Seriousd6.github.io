@@ -8143,6 +8143,97 @@
         "1"
       ],
       "note": "Entry-count predictor 10 for 10. leviticus 18: 30 keys, 23,286 usable source words, no gaps, median 436.5 -- a low-median chapter, unlike the recent NT picks. One key over 2000 (v6=3849) and 19,437 words across the other 29, giving 1 + round(7.77) = 9. Tiling to the ~4500 ceiling produced exactly 9. The formula holds on a chapter whose profile is the opposite of the ones it was derived on: many short keys rather than a few very long ones."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "18",
+      "verses": [
+        "8",
+        "10",
+        "17",
+        "18",
+        "20",
+        "22",
+        "24",
+        "25",
+        "29",
+        "30",
+        "31",
+        "35",
+        "38",
+        "39"
+      ],
+      "note": "Cyril of Jerusalem is ENTIRELY residue in this chapter, and this is the largest instance of the defect found anywhere in the run: FOURTEEN blocks, every one a numbered section of the Catechetical Lectures with no bearing on Luke 18 at all. Samples: key 8 is section 4 on the passing away of things seen and the times and seasons; key 10 is section 21 on Peter at Pentecost capturing three thousand souls; key 17 is section 30 on the proofs of eternal life; key 20 is section 15 on honouring the fathers of our flesh; key 24 is section 4 on the twofold purification of soul and body in baptism; key 30 is section 11 on being born of water and of the Spirit; key 38 is section 23 on the family of the Virgin. A sequential scrape of the Lectures laid straight over this chapter's keys. Sixth consecutive batch touching this voice. As in every previous case, the label cannot be declared through excluded_voices, because scripts/synthesis_qa.py VOICE_LABELS holds the bare 'Cyril' and _LABEL_RE demands a colon immediately after the label, so 'Cyril of Jerusalem:' matches nothing; SILENT was the only mechanism. Owner item, now six batches old: widen the VOICE_LABELS patterns to admit the qualifying phrase. Note that the BARE 'Cyril' blocks in this chapter (keys 18, 24, 31, 35) are a different voice, correctly placed and on topic, and were used."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "9",
+        "15",
+        "18",
+        "31",
+        "35"
+      ],
+      "note": "CYRIL OF ALEXANDRIA IS OFF BY EXACTLY ONE PERICOPE, and this is the cleanest, most precisely diagnosable scrape defect found in the entire run — better than the Lightfoot off-by-one-chapter at acts 13, because these blocks CARRY THEIR OWN VERSE HEADERS and every header names the PREVIOUS pericope. Six blocks, six confirmations: key 1 is headed '17:31-37', key 9 is headed '18:1-8', key 15 is headed '18:9-14', key 18 is headed '18:15-17', key 31 is headed '18:28-30', key 35 is headed '18:31-34'. The lag even crosses the chapter boundary at key 1, so the previous chapter's last pericope leaks in. The fix is a one-index correction in whatever loop assigns this commentator's blocks to keys, and it is verifiable automatically: parse the leading 'NN:NN-NN' from each Cyril of Alexandria block and compare it to the key it was filed under. All six excluded here. Same undeclarable-label problem as Cyril of Jerusalem, so SILENT again. Worth checking every other chapter where this voice appears, since a fixed offset of this kind will not be confined to Luke 18."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "18",
+      "verses": [
+        "6",
+        "43"
+      ],
+      "note": "Two smaller source defects. (1) Jamieson, Fausset and Brown residue, TWENTY-FOURTH chapter: a single 33-word block at key 6 which is Luke 8 material — the ship 'getting filled' in the storm, with cross-references to the Gadarene demoniac and to Jairus. Declarable, so it went through excluded_voices. (2) StudyLight chrome, ELEVENTH confirmation and EIGHTH consecutive chapter with Charles Ellicott as the carrier (romans 3:31, acts 5:42, hebrews 9:28, acts 13:52, hebrews 10:39, joshua 9:23, galatians 3:29, luke 18:43). Payload exactly 992 words again, beginning at the marker 'Luke Luk 17 Luke Luk'. Ellicott's genuine payload at 18:43 is 46 words. This instance CONFIRMS the refinement recorded at joshua 9: the tail attaches to the carrier's last block, which here happens also to be the chapter's last key, but at joshua 9 it was not. Real usable source for luke 18 is about 45,851 words, not the 46,843 the sizer reports."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "18",
+      "note": "THE CATENA AUREA BLOCKS RUN SEVERAL FATHERS TOGETHER UNDER ONE HEAD, and this is a systematic attribution hazard not previously recorded. In luke 18 the patristic material comes from a catena, and the scrape keeps only the FIRST father's name as the block head while the catena's own internal attributions survive inside the text as bare capitals: Theophylact's block at 18:1 contains 'CHRYS.' and 'BEDE;' passages; Augustine's block at 18:1 contains a 'THEOPHYL.' passage; Bede's block at 18:1 contains an 'AUG.' passage; Chrysostom's at 18:9 contains 'BASIL;'; the bare Cyril block at 18:18 contains 'BASIL;'; Athanasius's at 18:18 contains 'BEDE;' and 'THEOPHYL.'; Ambrose's at 18:35 contains 'GREG.'. Anything past the first paragraph of such a block is therefore NOT reliably the head voice, and a writer who attributes it to the head will misattribute. In this chapter every attribution was confined to head-level material for that reason, and the sub-quoted matter was either dropped or described without naming a father. Two consequences for the tooling: the head labels understate the number of voices present, and any automated attribution audit built on the heads would license misattribution rather than catch it. Owner item: either split these blocks on the internal capitals at scrape time, or record that only the opening of each patristic block is safely attributable. Related: several voice labels in this chapter are truncated or non-standard — 'Athan' for Athanasius, 'Titus Bost' for Titus of Bostra, 'Isidore Peleus' for Isidore of Pelusium, and 'Pseudo-Chrysostom', which the VOICE_LABELS regex would match as plain 'Chrysostom'."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "18",
+      "verses": [
+        "8",
+        "11",
+        "14",
+        "15",
+        "16",
+        "25"
+      ],
+      "note": "Six live splits in this chapter. (1) 'Shall he find faith on the earth' (18:8): Clarke refuses to read it of the world at all, rendering it whether fidelity shall be found IN THIS LAND, whether the soil has borne a harvest proportioned to its culture, and answering no, which is why that land was destroyed; Ellicott takes it of the Church's history and every day of the Lord preluding the final Advent; Wesley of how few true believers will be found on earth whenever he appears; Robertson will not even settle whether the sentence is a question. (2) Whether the Pharisee was a hypocrite (18:11): Wesley DENIES it expressly, holding that he sincerely trusted in his own righteousness and told God so in a prayer none but God heard, while Robertson argues from the grammar that the prayer was a soliloquy and a complacent recital of his own virtues rather than fellowship with God. (3) Whether 'prayed thus with himself' should be 'stood by himself' (18:11): Clarke adopts it and builds on it, Barnes reports it as apt to the sect but doubts the Greek allows it, Ellicott and Gill deny that the posture proves anything since the publican also stood. (4) Which days the Pharisees fasted (18:12): Barnes says the second and fifth of every week and Wesley Monday and Thursday, which agree, while Ellicott makes them the third and fifth. (5) What the publican stood far from (18:13): Barnes and Wesley measure from the sanctuary, Robertson denies this outright and makes it distance from the Pharisee. (6) Whom Christ called and how old the children were (18:15-16): Gill argues from the antecedent that the summons went to the children themselves and infers they were past the breast, Wesley says flatly it was those who had brought them, Robertson takes both and notes that Luke's word is the term for infants, Henry describing them as too young to walk."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "18",
+      "verses": [
+        "25",
+        "30",
+        "33",
+        "35"
+      ],
+      "note": "Four remarks worth keeping. (a) Robertson at 18:25 reports that the Talmud twice makes an elephant passing through a needle's eye the figure for the impossible, and adds at 18:27 that God can break the grip of gold on a man's life though it was not broken in this case. (b) Bede at 18:30 reports that some build on the promise of manifold more IN THIS PRESENT TIME the fable of a thousand years after the resurrection of the just, when everything surrendered for God's sake is restored with interest; Gill answers the same expectation without naming it, denying that houses or kindred are meant and substituting a comfort and peace not found in such enjoyments. (c) Isidore of Pelusium at 18:33 argues that the promise was to rise ON THE THIRD DAY and not after three days, and that rising sooner than promised is a token of the highest power rather than a difficulty, comparing a debtor who pays before his term and is admired rather than blamed; Robertson records the same variation between the Gospels as being of one sense. (d) On the blind man at 18:35 the harmonising problem is met four ways: Ellicott states the divergence plainly (one man not two, on the approach not the departure), Robertson resolves it topographically by the old and the new Jericho with the beggar between them, Augustine resolves it allegorically with the one man standing for the Jews and the two of the other Gospel for Jews and Gentiles after the resurrection, and Ambrose takes the two as the two authors of the Gentile race descended from two sons of Noah. Also: Ellicott twice reads the text as evidence about the evangelist himself, counting the more classical word for 'needle' among the signs of his culture and treating the recorded psychology of the disciples' incomprehension as the analysis a physician would make."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "18",
+      "note": "Fidelity self-grade, luke 18, 10 entries, 43 verses, 24 head labels of which 21 were used, ~45,851 usable source words after 992 of chrome. Source keys 1-43 with no gaps, so the spans follow the pericopes. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-3 650 · 4-8 650 · 9-10 638 · 11-12 585 · 13-14 633 · 15-17 615 · 18-23 631 · 24-30 601 · 31-34 648 · 35-43 630. Exclusions: Jamieson at its single key 6 (Luke 8 material), declared through excluded_voices; Cyril of Jerusalem at all fourteen keys and Cyril of Alexandria at all six, both silenced because the VOICE_LABELS defect makes them undeclarable. Three specific cares taken. First, the catena blocks run several fathers together under one head, so every attribution was confined to head-level material and no sub-quoted passage was attributed to the head voice. Second, 'Pseudo-Chrysostom' at key 35 would be matched by a plain search for 'Chrysostom', whose own blocks are at keys 9, 18 and 31 and not in that span, so the build tool was given a negative-lookbehind pattern to keep the two apart and the entry names only Pseudo-Chrysostom. Third, the bare 'Cyril' blocks were checked individually against their verses before use and found correctly placed, unlike both qualified Cyril labels. School keys in the tags were reconciled against the voices actually named in each entry; entries 31-34 and 35-43 carry seven schools each."
     }
   ]
 }
