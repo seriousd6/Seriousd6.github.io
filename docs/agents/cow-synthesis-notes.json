@@ -6061,6 +6061,34 @@
       "book": "acts",
       "chapter": "27",
       "note": "First NT chapter of this run, and the corpus behaves differently. Ten voices instead of the OT ten, with Barnes and Robertson replacing Keil and Spurgeon, and the schools map reformed/puritan-evangelical/wesleyan-arminian/grammatical-historical with no latin-fathers slot; grammatical-historical carries three voices (Ellicott, Barnes, Robertson) and so is 'several' or 'majority' in almost every entry. Robertson is a lexical commentator rather than an expositor, which changes the drafting: he supplies word-notes and manuscript readings that pair naturally with Ellicott's, so the two tend to be reported together, and he is the only voice who regularly names modern authorities (Ramsay, Page, Smith, Alford, Blass). Acts 27 also yields an unusual density of real disagreements — sixteen recorded across twelve entries — because the nautical vocabulary is genuinely contested (Clarke himself admits at the chapter's end that he cannot be sure of having hit the sense everywhere)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "16",
+      "note": "Jamieson stride-6 confirmed for an EIGHTH consecutive chapter and a fifth book. judges 16 Jamieson keys: 9, 15, 21, 27 - offset 3 mod 6, four members, no gaps. Running table: joshua 10 (offset 1, 7 members, gap at 31), 1corinthians 7 (offset 5, 6, none), hebrews 11 (offset 3, 5, gap 21), romans 8 (offset 2, 7, none), romans 9 (offset 4, 3, gaps 10/16), 1corinthians 15 (offset 0, 7, gap 30), leviticus 27 (offset 4, 6, none), judges 16 (offset 3, 4, none). Every residue class mod 6 is now attested, and offsets 3 and 4 have each appeared twice. The judges 16 residue is again foreign to the chapter: the 341 words under those four keys carry Numbers/Deuteronomy/Psalms material (the Song of Moses, the Sinai theophany, the tribe of Judah) with nothing about Samson, Delilah, or Gaza. Combined with the leviticus 27 and romans 9 observation that offset-4 residue lags roughly 17-19 chapters earlier in the same book, this is consistent with an ingest that walked a paginated index at a fixed row stride and stamped whatever row the pointer sat on. Eight chapters is more than enough evidence to justify re-fetching the whole Jamieson tree rather than excluding voice-by-voice."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "16",
+      "verses": [
+        "13"
+      ],
+      "note": "Three-way independent convergence on a textual defect at v13. Clarke, following Houbigant, says the Hebrew ends abruptly and the sense is incomplete, and supplies the missing clause from the Septuagint; Gill likewise notes that the words of Delilah and Samson's answer are shortened in the Hebrew and fuller in the Greek version; Ellicott states plainly that something has dropped out of the Hebrew text and that the Greek preserves the fuller reading. Three commentators of three different schools (wesleyan-arminian, reformed, grammatical-historical), working independently and without citing one another, reach the same verdict on the same clause. This is the cleanest case yet in this corpus of cross-school convergence functioning as textual evidence rather than as agreement of opinion, and it is worth flagging as a positive pattern: where three unrelated voices independently report a lacuna, the catena is doing real critical work and the synthesis should say so rather than flattening it into a single attribution."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "16",
+      "verses": [
+        "28",
+        "31"
+      ],
+      "note": "Ellicott is internally at odds with himself about Milton within a single chapter. At v28 he criticises the poet, judging that Milton read into Samson an austere grandeur the character did not possess, so that the Samson of the poem is rather Milton himself - a stern classic poem being the reverberation of a mighty spirit struck by the plectrum of disappointment. At v31, closing the chapter, he quotes Milton approvingly, ending on the line that Samson has quit himself like Samson. The tension is not a contradiction so much as a shift of register: the historical judgement at v28 concerns Samson's spiritual level (Ellicott counts three divine names in the prayer and infers a comparatively low level of enlightenment and moral purity), while the closing quotation is elegiac. Both were preserved in the synthesis prose deliberately, since collapsing them would misrepresent a commentator who is visibly of two minds."
     }
   ]
 }
