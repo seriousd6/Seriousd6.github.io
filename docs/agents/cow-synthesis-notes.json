@@ -6215,6 +6215,55 @@
       "book": "judges",
       "chapter": "19",
       "note": "Ellicott reaches for Milton in Judges, twice in two chapters. At judges 16:28 he faults Milton for reading an austere grandeur into Samson ('rather Milton himself than the Jewish hero') and at 16:31 quotes him approvingly; here at judges 19:22 he quotes Paradise Lost on 'the sons Of Belial, flown with insolence and wine... Witness the streets of Sodom, and that night In Gibeah, when the hospitable door Exposed a matron to avoid worse rape.' In both chapters the poet is doing evidential work for him, supplying the reception history of the episode alongside Hosea. This is a stable habit of the Ellicott tree in Judges and is worth expecting: where a Judges narrative had a strong afterlife in English letters, Ellicott is likely to cite it, and the synthesis should preserve the citation rather than compress it into 'later writers', since it is one of the few places in this corpus where a commentator treats literary reception as evidence about a text's effect. Also from this chapter: Ellicott twice steps outside the narrative to comment on historiography itself — at 19:28 he observes that the writer 'in his horror, will not say that she was dead', and that the omission of every detail and of any word about the characters' feelings 'is a striking example of the difference of the historic method of ancient and modern times'. That is a methodological remark of a kind almost absent elsewhere in the corpus."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "7",
+      "note": "BLOCKED PICK — nehemiah 7 cannot be written under the current rules, and should be taken out of the repair queue or have its source rebuilt. Three compounding problems. (1) Coverage: only 22 of 73 verses have any source at all, and the 51 absent verses fall in blocks, so the present keys form nine isolated runs — 1-8, 12, 19, 24, 33-34, 48, 54, 60, 68-73. Since coverage_problems() rejects any entry covering a verse absent from the source, spans cannot bridge the gaps, and the entry structure is forced to those nine. (2) Size: six of those nine runs stand on 16 to 97 usable source words. An entry keyed at 34 would have to make the 350-word floor out of Clarke's sixteen words, 'The other Elam — to distinguish him from the Elam mentioned Neh 7:12'. That is not compression, it is invention, and no honest entry can be written from it. (3) Content: much of what is present is not commentary on this chapter at all. JFB at vv.12, 24, 48 and 60 is 1 Chronicles 3 genealogy — David's sons born at Jerusalem, the line through Zerubbabel, Caleb the Kenezite — and Clarke's block at v8 is an explicit refusal to comment, saying the chapter is almost the same as Ezra 2 and that nothing need be added. Recommend the same treatment as numbers 31: block it pending an owner decision on the source file. Picked again rather than forcing it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "38",
+      "verses": [
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB donor residue at stride 6, the eighteenth consecutive chapter to carry it and the fourth in this run. The Jamieson, Fausset and Brown blocks at verses 10, 16 and 22 are all Genesis 32 matter: verse 10 carries the exposition of Jacob's prayer at Peniel (this is the first recorded example of prayer in the Bible), and verses 16 and 22 carry one and the same block on Jacob's present to Esau, the five hundred and fifty head of cattle and the milch camels. Nothing in any of the three touches Judah or Tamar. The stride is exactly six from verse 10, matching the pattern recorded for genesis 31, exodus 6, exodus 22, leviticus 6, numbers 14 and acts 27; and as in numbers 14 and exodus 22 the same block is repeated at two positions only six verses apart, which is now the third such adjacent duplication and makes a harvest-side stride fault, rather than any per-verse mismatch, the only remaining explanation. All three verses were excluded from their entries and are recorded in excluded_voices at entries 6, 12 and 20."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "38",
+      "verses": [
+        "30"
+      ],
+      "note": "StudyLight chrome tail on the chapter's last verse, now seven for seven across seven books and both testaments (exodus 14:31, genesis 31:54, leviticus 6:30, numbers 14:45, acts 27:44, exodus 22:31, and here). The Ellicott block at verse 30 is truncated to a one-line fragment on the name Zarah and then runs into the site's footer, stylesheet and navigation menus; Gill's block at the same verse ends with 'Next: Genesis Chapter 39 Sacred Texts' and the index links. The usable Ellicott sentence was kept and the chrome discarded. Seven for seven on the terminal verse is a harvest-side boundary fault and should be fixed there rather than stripped per chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "38",
+      "verses": [
+        "30"
+      ],
+      "note": "Clarke's block at verse 30 carries a long excursus filed six hundred words away from the verse it belongs to. After a short note on the name Zarah and a paragraph on the impartiality of the sacred writer, he devotes the bulk of the block to what is 'generally reputed to be the sin of Onan' — a warning against self-pollution running to some four hundred words of physiological and moral detail, ending with his own admission that 'whether this may have been the sin of Onan or not, is a matter at present of small moment'. The material belongs to verse 9 and was already treated in the 6-11 entry, where Clarke's actual verse-9 comment says the common opinion is a mistake and the crime was the refusal to raise up seed. The entry for 27-30 therefore uses only the two on-topic items from the block, the etymology and the impartiality argument, and the excursus is left out as displaced rather than as disagreeable; the substance of Clarke's position on Onan is carried in the entry where it is filed."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "38",
+      "verses": [
+        "12"
+      ],
+      "note": "Second near-miss of the same kind as note 556, caught earlier and by a different check. The first draft of the 12-19 entry contained no Gill at all, though Gill has prose at every one of those eight verses; the omission was not the result of trimming this time but of drafting from the four voices that carry the disputes and never returning for the plain expositor. It was caught by the voice profile run before sizing, not by the ghost script, which would have flagged it later as a missing voice and an exclusion. The fix restored Gill at three points — the widow's weed at verse 14, Tamar sitting some little distance from the road at verse 16, and Judah sending his friend on ahead — and paid for them by dropping whole items elsewhere. The lesson to add to note 556: the ghost script is the last check, not the first. Run the voice profile against the span before drafting and keep the list of present voices beside the draft, because a voice never written is as invisible as a voice trimmed away."
     }
   ]
 }
