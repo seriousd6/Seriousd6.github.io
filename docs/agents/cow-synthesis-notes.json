@@ -7158,6 +7158,69 @@
       "book": "romans",
       "chapter": "3",
       "note": "Ten entries, all self-graded verse by verse against the catena: 1-2 638w, 3-4 646w, 5-8 648w, 9-12 649w, 13-18 650w, 19-20 650w, 21-23 643w, 24-25 640w, 26-28 650w, 29-31 637w. No claim in the prose is unsourced; every named voice has a head in its own span. Entry 1-2 landed in window on the first draft at 638w despite carrying nine voices - the first 9-voice entry in the corpus to do so - because it was written to a deliberate 620 target. Every other entry needed one to three trim passes, and the two heaviest spans (19-20 at 8,730 source words and 24-25 at 8,168) each had to be rewritten from five paragraphs to four before they would come down. Confirms again that overshoot tracks voice count and source density, not chapter length."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JFB stride residue again — five keys at vv.4, 10, 16, 22, 28, a perfect stride of six, exactly as in judges 5. The donor content here is the sharpest evidence yet for a fixed-offset walk: vv.4, 10 and 16 all carry Leviticus 27 material and ADVANCE through it in order (the vowed field reverting at jubilee, 27:16-21; the solemn vow with self-imprecation, 27:2; the tithe of the land, 27:30-32), and then at v22 and v28 the donor JUMPS BOOKS and picks up Numbers 1 (the thirteen months since the exodus and the census; the hereditary tribal chiefs and the twelve princes appointed to help take it). A donor that walks forward through its own text and then crosses a book boundary in step is not a cached block and not a mis-keyed file — it is one cursor advancing at a fixed rate against another. Running donor list: numbers 33 (deuteronomy 31), deuteronomy 24 (judges 5), leviticus 27 into numbers 1 (numbers 20). All five keys excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "20",
+      "verses": [
+        "28"
+      ],
+      "note": "StudyLight chrome tail — and this instance BREAKS the fifteen-chapter 'always the last verse' pattern in an instructive way. The chapter's last verse is 29, but the tail sits on v28, inside Ellicott's block. Ellicott has no note at all on v29. So the chrome does not attach to the chapter's final verse as such: it attaches to the final verse of the COMMENTATOR'S OWN run, which in every previous case happened to coincide with the chapter's last verse because that commentator carried the chapter to its end. This is a better-specified version of the same defect and should make the harvest-side fix easier to write — strip the tail from whatever the last response in each commentator's sequence is, rather than from the chapter's last key."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "20",
+      "verses": [
+        "19"
+      ],
+      "note": "Wesley at v19 is a bare restatement with no comment: the whole block is 'Said - that is, their messengers replied what here follows.' There is nothing to distil, so he is excluded from the vv.19-22 entry, but undeclarable_voices() does not recognise this class and the exclusion has to be carried explicitly in the tags. This is the third distinct no-content class now on record — the Keil raw-verse-text block (deuteronomy 31), the Barnes/Gill bare cross-reference (acts 22), and now the Wesley one-clause paraphrase that merely repeats the verse's own subject and verb. All three produce a voice that is PRESENT in the blob and unusable in the entry. Worth extending undeclarable_voices() to catch a block whose stripped text is under ~15 words and contains no proper noun or scripture reference."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "20",
+      "note": "Entry-count predictor: sixth data point, and the refined formula from note 649 held exactly. numbers 20 has 21,325 usable source words across 29 keys, median 379, no gaps. Three keys exceed 2,000 words (v1 at 4,802, v14 at 2,499, v28 at 2,122) and the remaining 26 keys hold 11,902 words. The formula keys-over-2000 + round(remaining/2500) gives 3 + 5 = 8, and the chapter tiled to exactly 8 entries. The median alone would have predicted far more, since at 379 it is the lowest median in the whole running series. That is now three consecutive chapters where the two-term formula was exact (deuteronomy 31: 0 + 9 = 9; judges 5: 3 + 8 = 11; numbers 20: 3 + 5 = 8) and the median-only rule missed twice. Recommend the two-term formula replace the median guidance, and that 'synthesis-loop.py size' print keys-over-2000 alongside the word total. Note also that v1 at 4,802 words exceeds the 4,500 span ceiling but is a SINGLE key, so it cannot be split; a single over-ceiling key simply becomes its own entry, which is worth stating in the loop doc since the span rule as written implies a split is always possible."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "20",
+      "verses": [
+        "2",
+        "8",
+        "12"
+      ],
+      "note": "Three real disagreements, all recorded in the tags. (1) v2-3, whom the murmurers mean by 'our brethren who died before the Lord': Ellicott argues for the plague after Korah's insurrection, on the strength of the parallel language and a verb that occurs in that history and in only one other place in the last four books; Keil denies Korah's company outright, since the verb for dying would be wholly inapplicable to being swallowed up or burned, and refers it to those who died one by one over the thirty-seven years. The answer bears on whether the chapter belongs to the third year or the fortieth. (2) v8, which rod was taken 'from before the Lord': Keil, Gill and Ellicott all argue for the rod of Moses (Ellicott decisively, from Aaron's name not appearing until after the rod and from Moses smiting with 'his rod'), while Wesley leaves it open on the ground that the wonder-working rod was probably also laid up in the tabernacle. (3) v12, in what the sin consisted: Clarke enumerates four particulars, Wesley the same two with the qualification that they doubted God's will and not his power, Calvin locates the origin in unbelief and calls the double blow an aggravation rather than a cause, and Keil insists the want of confidence was not actual distrust in God's omnipotence. Four positions on one question is unusual and the tags carry three of them."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "rejected",
+      "book": "numbers",
+      "chapter": "20",
+      "verses": [
+        "22"
+      ],
+      "note": "Material deliberately not used. Henry's block at v22 is a whole-pericope overview running to the end of the chapter, and he has no key anywhere in vv.23-29, so under the filing rule everything in it had to be used in the vv.19-22 entry or lost. Three of his items were carried there (the double funeral, the displeasure-and-mercy of the summons, the Levitical-priesthood type), but the finest passage was dropped for want of room: Moses stripping Aaron of the garments his own hands had first put on, with the reflection that death will strip us, that naked we came into the world and naked we must go out, and that we shall see little reason to be proud of our clothes or marks of honour; together with the note that installing Eleazar before Aaron died forestalled any rival claim on the priesthood, and Aaron's nunc dimittis on seeing his son preferred and his office secured. Wesley says the naked-we-came part almost word for word at v28, so that thought is not lost to the chapter — it is carried in the vv.28-29 entry under his name instead. The Eleazar-installation and nunc dimittis material is genuinely gone. Second chapter running where a Henry or Clarke whole-pericope block filed at one verse could not fit the entry that owns it; the pattern is now frequent enough to be worth a rule of its own."
     }
   ]
 }

@@ -1,1059 +1,605 @@
 {
  "1": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "Israel comes to Kadesh in the desert of Zin, and Miriam dies there",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was thirty-eight years after the foregoing events, not the congregation that came out of Egypt, whose carcasses had fallen in the wilderness; Miriam, the prophetess, died and was buried at Kadesh."
+    "prevalence": "several",
+    "summary": "Gill measures the silence the verse passes. What is related here followed the sending of the spies and the business of Korah not immediately but thirty-eight years after, and this was not the congregation that came out of Egypt, whose carcasses had by then fallen in the wilderness as had been threatened, but a new generation; of the interval we have very little account excepting their journeyings, by which it appears there were eighteen stations between the camp from which the spies were sent and the place they now came to. Calvin explains the omission differently: many intermediate stations are named elsewhere and not here, perhaps because from the time God compelled them to draw back they had made no advance for thirty whole years but wandered by circuitous paths, whereas at this point they began to direct their journey straight towards Canaan. On Miriam he infers that she must have been a girl of ten or twelve when Moses was born, since she was able to provide so adroitly for his safety, and so reached about a hundred and thirty — an unusual length of life, and especially for a woman."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets her service beside her fault. After thirty-eight years of tedious marches, or rather tedious rests, the armies of Israel had at last set their faces towards Canaan again; and Miriam, a prophetess and an instrument of much good, who when Moses and Aaron went before the people with their rod went before them with her timbrel in praising God for his wondrous works, and therein did them real service, had once been a murmurer, and so must not enter Canaan."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley proves the date from what follows — the next station was Mount Hor, where Aaron died in the fifth month of that year — and adds that Moses gives no exact journal of all that happened in the wilderness, but only of what was most remarkable, and especially of the first, second and fortieth years. Clarke notes a smaller question of names: Calmet contends this desert of Zin is not the wilderness of Sin where Israel had its eighth encampment, the two being spelt differently in the original, though Clarke replies that this is no positive proof, since letters of the same organ are frequently interchanged in all languages, and particularly in Hebrew. On Miriam he adds what later writers made of her: they represent her as a type of the Virgin Mary, as having preserved a perpetual virginity, as legislatrix over the Israelitish women as Moses was over the men, and as having a large portion of the spirit of prophecy; Eusebius reports that her tomb was still to be seen at Kadesh, near Petra, in his own time. She died about four months before Aaron and eleven before Moses, so that these three, the most eminent of human beings, died within the space of a single year."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil frames the verse as the opening of the last stage: in the first month of the fortieth year the whole congregation assembled again at Kadesh, in the desert of Zin, to begin the march to Canaan. Ellicott is less certain, and would render the opening words Now the children of Israel came, since the interval between the preceding chapters and this one is unknown; for though it has commonly been supposed that the fortieth year is meant, some hold the journey to be the same as one mentioned earlier in this book and in Deuteronomy, so that the arrival at Kadesh fell in the first month of the third year, after the departure from Sinai. He warns besides that no conclusion about the length of the stay can be drawn from the word rendered abode, which elsewhere covers a short sojourn as easily as a long one."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "To what year does the arrival at Kadesh belong?",
+    "positions": [
+     {
+      "position": "the first month of the fortieth year, proved by Aaron’s death at Mount Hor in the fifth month of the same year",
+      "holders": [
+       "John Wesley",
+       "Keil and Delitzsch",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "possibly the third year instead; the interval is unknown and the word rendered abode settles nothing",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the people abode in Kadesh; and Miriam died there, and was buried there",
-   "a new generation, the old being dead",
-   "the leaders mortal, God's work going on"
+   "the children of Israel came into the desert of Zin in the first month",
+   "the people abode in Kadesh",
+   "Miriam died there, and was buried there"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "2": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "2-3",
+  "pericope_label": "No water for the congregation, and the people chide with Moses",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this was ordered for the trial of the new generation, to see whether they would behave better than their fathers in a like case the first year out of Egypt."
+    "summary": "Gill reads the want of water as deliberate: it was so ordered for the trial of this new generation, to see whether they would behave better than their fathers had in a like circumstance the first year they came out of Egypt. He notices too what the timing of the quarrel says about the people, who contended with Moses in a wrangling and litigious manner, showing no reverence to his person on account of the dignity of his office and the many favours they had received, and did it at a moment when, instead of quarrelling, they should have condoled with him on the loss of his sister, and bewailed their own loss of a prophetess and a leader. Calvin judges the second rebellion far worse than the first. When they had already experienced that it was in God's power to extract plenty of water from the barren rock, why do they not implore His aid, and why does that marvellous interference not recur to their minds? They rebel in words against Moses and Aaron but direct their complaints like darts against God Himself, deeming it a very great injustice that they had been brought into the desert — as if they had not in their own impious obstinacy preferred the desert to Canaan, and so deserved to pine there in want of everything."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the outcome in a sentence: the same occurrence befell them at Kadesh as had formerly befallen their fathers at Rephidim, and as the fathers murmured, so also did the children. Wesley prefers a reason of another kind for the shortage, that the water which had followed them through all their former journeys began to fail here because they were now near countries where water might be had by ordinary means, and God would not use extraordinary means lest he should seem to prostitute the honour of miracles; and he puts the aggravation shortly — their sin was much greater than their parents', because they should have taken warning by their miscarriages and by the terrible effects of them, which their own eyes had seen."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: in the arid desert the congregation was in want of water and gathered themselves against Moses and Aaron."
+    "summary": "Ellicott offers three ways the shortage may have arisen: Kadesh may have comprised a considerable portion of the wilderness of Zin, with water in some parts of the district and scarcity in others; or the supply may have proved insufficient for so great a multitude; or the miraculous supply given at Rephidim may have continued, with intermissions, up to this time and been suddenly withdrawn to try the faith of the Israelites. On the brethren who died before the Lord he argues that the reference is to the plague that broke out after the insurrection of Korah, the language being very similar to what is recorded there, and the verb twice used in this verse occurring in that history and in only one other place in the last four books of the Pentateuch; he reports the inference some draw from it, that the plague must have been recent rather than forty years past, but judges these considerations not entitled to much weight, since the older portion of the congregation would call those who perished under Korah their brethren whether the event was recent or not. Keil denies that Korah's company can be meant at all, since the verb used for dying would be wholly inapplicable to their destruction, and refers the words to those who had died one by one during the thirty-seven years."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Who are the brethren who died before the Lord?",
+    "positions": [
+     {
+      "position": "those who perished in the plague after Korah’s insurrection — the language and the rare verb both point there",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "those who died one by one during the thirty-seven years; the verb is wholly inapplicable to Korah’s destruction",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "there was no water for the congregation: and they gathered themselves together against Moses",
-   "the want of water a trial",
-   "the fathers' sin of murmuring repeated"
+   "there was no water for the congregation",
+   "would God that we had died when our brethren died before the Lord!",
+   "it is no place of seed, or of figs, or of vines"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they contended in a wrangling, litigious manner, showing no reverence for his office or the favours received — and this at a time when they should have condoled him on the loss of Miriam."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the people chode with Moses, wishing they had died when their brethren died before the LORD."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the people chode with Moses... Would God that we had died when our brethren died before the LORD",
-   "reproaching their leader in his grief",
-   "ingratitude forgetting all past mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they were now come by various marches and stations into the wilderness of Zin, and accused their leaders of bringing 'the congregation of the LORD' to die there."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "why have ye brought up the congregation of the LORD into this wilderness... should die there?",
-   "blaming the instrument, not seeing God's hand",
-   "forgetting it was the cloud that led them"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they represented the matter as if forced out of Egypt against their wills, forgetting the bondage and bitter slavery they had cried out under, and reviled the place as barren — no seed, figs, vines, or pomegranates, nor water."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wherefore have ye made us to come up out of Egypt, to bring us in unto this evil place?",
-   "the heart still hankering after Egypt",
-   "despising the redemption past and the land to come"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they went like fugitives, fleeing through fear lest the people stone them, to the door of the tabernacle where the Lord had promised to meet Moses. Calvin: they fled in fear, yet to seek the LORD."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses and Aaron went... unto the door of the tabernacle... and the glory of the LORD appeared",
-   "prayer their refuge in danger",
-   "the glory the pledge God had not forsaken them"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "4-9",
+  "pericope_label": "Moses and Aaron fall on their faces, and are told to take the rod and speak to the rock",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: God spake out of the token of his glory, perhaps the cloud with an uncommon brightness."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD now relieved the want of water, directing Moses what to do."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses",
-   "mercy for murmuring",
-   "the patience of God answering sin with kindness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the rod of miracles, the rod of Moses with which he had done wonders in Egypt and at Horeb, where he had smitten the rock the first year."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: take the rod, gather the assembly, and speak to the rock before their eyes, and it shall give forth water."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "speak ye unto the rock before their eyes; and it shall give forth his water",
-   "the word, not the blow, commanded",
-   "God's power shown at his bare word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the rod was laid up somewhere in the sanctuary, as was Aaron's rod."
+    "summary": "Gill hears in the complaint a forgetting of what Egypt had been. They represent the matter as if they had been forced out of Egypt against their wills, or at least overpersuaded to do what they had no inclination to — though they had been in the utmost bondage, their lives made bitter by it, so that they cried by reason of their oppression; and all this was forgot. Calvin explains the withdrawal as flight: probably Moses and Aaron fled in fear, the tabernacle being a kind of refuge from the violence of the people; still, when they throw themselves upon their faces, he understands them to have prayed not only for protection from the wrath of their enemies but that God would calm these madmen by some appropriate remedy. From the support given them he draws the chapter's lesson in advance — the example shows how earnestly God should be entreated constantly to support us with new supplies of His grace, since otherwise the boldest would fail at every moment: the invincible resolution of Moses had so often overcome every obstacle that there seemed no fear of his falling, yet the conqueror in so many struggles at length stumbles in a single act. On the command itself he hears a rebuke, for the order to speak to the rock is not unattended with a severe reproach, as if God had said that in the lifeless elements there was more reason and intelligence than in men themselves."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley leaves the question open, allowing it may have been either Aaron's rod or that of Moses, since it is likely the wonder-working rod was laid up in some part of the tabernacle, though not in or near the ark where Aaron's blossoming rod was put."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Wesley: 'from before the LORD' is out of the tabernacle."
+    "summary": "Keil states flatly that the rod taken from before the Lord was the one with which Moses performed the miracles in Egypt, laid up in the sanctuary, not Aaron's which blossomed. Ellicott lays out both sides: some suppose from the rod's being taken from before the Lord that Aaron's is meant, since that was the one kept before the testimony; but the natural presumption that it was the rod with which the miracles in Egypt, at the Red Sea and at Rephidim were wrought is confirmed by two things — Aaron's name is not mentioned in the command until after the rod, and Moses is afterwards said to have smitten the rock with his own rod."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Which rod was taken from before the Lord?",
+    "positions": [
+     {
+      "position": "the rod of Moses, with which the miracles in Egypt and at Horeb were wrought",
+      "holders": [
+       "Keil and Delitzsch",
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "undecided — it may have been either, since the wonder-working rod was probably also laid up in the tabernacle",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Moses took the rod from before the LORD, as he commanded him",
-   "beginning in obedience",
-   "long faithfulness no guard against one fall"
+   "they fell upon their faces: and the glory of the Lord appeared",
+   "take the rod, and speak ye unto the rock before their eyes",
+   "Moses took the rod from before the Lord, as he commanded him"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
   }
  },
  "10": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "10-13",
+  "pericope_label": "Hear now, ye rebels: the rock smitten twice, and the sentence on Moses and Aaron",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they gathered not the elders only but as many of the congregation as could be assembled, before the rock to which they were directed."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Moses said, 'Hear now, ye rebels; must we fetch you water out of this rock?'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hear now, ye rebels; must we fetch you water out of this rock?",
-   "spoken in passion and self-assertion",
-   "the meek man unadvised in his lips (Ps. 106:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: at first it brought but a few drops, so he smote again and it flowed plentifully; he relays the Targum's tradition of blood at the first stroke and water at the second, answering the blood and water from Christ's pierced side (John 19:34); the rock was Christ (1 Cor. 10:4)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "with his rod he smote the rock twice: and the water came out abundantly",
-   "that Rock was Christ, the smitten Saviour (1 Cor. 10:4)",
-   "the double stroke marring the type (John 19:34)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the LORD spake out of the cloud where his glory still appeared."
+    "summary": "Calvin approaches the question from the other end, by first defending Moses. He was perplexed between hope and doubt, yet would never have obeyed so promptly in a matter so arduous if he had been without faith; he and Aaron had recently hidden themselves in alarm, so that it was no slight task to call back the people from whom they had fled and voluntarily encounter their madness. We scarcely perceive anything reprehensible in the matter, Calvin admits, yet since God declares that the fall of Moses displeased Him we must abide by His decision rather than our own — whence we learn that our works, on whose surface nothing but virtue appears, often abound in secret defects that escape the eyes of men but are manifest to God alone. The fault he traces to unbelief, that species of sin being expressly named in God's answer, and finds it chiefly in the question about fetching water, by which Moses seems to reject as impossible what God had promised: he weighed what the people had deserved rather than estimating God's power by His word. Gill records what tradition made of the double blow: at the first stroke the rock brought out only some drops, as Jarchi conjectures, and the Targum of Jonathan says that the first time it dropped blood and the second came much water — which, could it be credited, would make the agreement between this rock and Christ manifest, since from his pierced side came blood and water."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: God bade Moses speak to the rock, but he smote it, and twice, and said 'must we fetch water,' arrogating to himself and Aaron what was God's, and in anger — the offence of unbelief."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Because ye believed me not, to sanctify me... ye shall not bring this congregation into the land",
-   "the root of the sin unbelief and self-assertion",
-   "God hallowed in them that come near"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Meribah means 'strife,' sometimes called Meribah-Kadesh to distinguish it from the earlier strife at Horeb."
+    "summary": "Clarke answers the chapter's hardest question by enumeration. God had commanded Moses to take the rod and speak to the rock, but he did not think speaking sufficient and smote it without any command to do so; he smote it twice, which indicated a great perturbation of spirit and want of attention to the presence of God; he let his spirit be carried away by the people's disobedience and spoke unadvisedly with his lips, calling them rebels; and he did not acknowledge God in the miracle about to be wrought, but took the honour to himself and Aaron in asking whether they should fetch the people water out of the rock. So they did not properly believe in God nor honour him before the people, since in their presence they seem to doubt whether the thing could possibly be done; and as Aaron was consenting, he is excluded with him. Wesley finds the infidelity in the same two places — the smiting, and that twice, when he was not commanded to smite once, and the doubtfulness of the question — but qualifies it: they did not doubt the power of God, only his will, whether he would gratify these rebels with a further miracle."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the name from the children of Israel striving with the LORD, and he was sanctified in them."
+    "summary": "Keil guards the sentence: the want of firm confidence through which both sinned was not actual distrust in the omnipotence and grace of God. He reads the closing formula strictly — it does not imply that the place received the name of strife-water, but that the water God brought out of the rock received it — and finds God sanctifying Himself in two ways at once, shaming their unbelief by the miraculous gift and punishing Moses and Aaron for the weakness of their faith. Ellicott notes a difference of vocabulary between the two miracles: at Rephidim the rock is spoken of under one Hebrew word only, in the present narrative invariably under another, and in the psalm which refers to both, both are used."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "In what did the sin of Moses consist?",
+    "positions": [
+     {
+      "position": "four particulars — smiting instead of speaking, smiting twice, calling them rebels, and taking the honour to himself and Aaron",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "unbelief, expressly named in God’s answer; the double blow was an aggravation, not the origin, of the fault",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "not actual distrust in God’s omnipotence and grace, but a want of firm confidence",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "This is the water of Meribah; because the children of Israel strove with the LORD",
-   "strife against God himself",
-   "he was sanctified, in mercy and in holiness"
+   "must we fetch you water out of this rock?",
+   "because ye believed me not, to sanctify me in the eyes of the children of Israel",
+   "this is the water of Meribah"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "14": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Edom was sometimes governed by kings, sometimes by dukes; the king here, thirty-nine years after the Exodus, Usher takes to be Hadar; Moses styled Israel 'thy brother,' Edom being descended from Esau."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses sent messengers... unto the king of Edom, Thus saith thy brother Israel",
-   "a peaceable embassy appealing to kinship",
-   "seeking passage by entreaty, not the sword"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Jacob and his twelve sons with their children went down into Egypt."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they dwelt in Egypt a long time, and the Egyptians vexed them and their fathers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How our fathers went down into Egypt... and the Egyptians vexed us",
-   "the recital of bondage",
-   "a courteous appeal grounded in shared history"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they cried to the LORD by reason of their bondage and to be delivered from it."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the 'angel' is the Angel of the LORD who went before them (Exod. 14:19); 'hath brought us forth' is better 'brought us forth.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when we cried unto the LORD, he heard... and sent an angel, and... brought us forth",
-   "confessing God's deliverance before the heathen",
-   "standing at the border, asking leave"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this was the nearest and shortest way to Canaan from where they were."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the first mention of 'the king's highway,' a public road made by the king's authority at the expense of the state."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let us pass... we will not pass through the fields... we will go by the king's high way",
-   "a studiously inoffensive request",
-   "leaving Edom no honest ground for refusal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "14-18",
+  "pericope_label": "Thus saith thy brother Israel: the embassy to the king of Edom, and its refusal",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the king of Edom replied to Israel by the messengers — 'thou shalt not pass.'"
+    "summary": "Gill notices that the title has changed since Israel last dealt with that country: Edom was sometimes governed by kings and sometimes by dukes, and at the Red Sea we read of the dukes of Edom, whereas here, thirty-nine years later, of a king — though who he was is not certain, Bishop Usher taking him for Hadar, the last of the race of kings named in Genesis. Calvin explains why God restrained a people who could easily have taken what lay nearest. It would seem hard to leave a country close at hand untouched and seek a more distant abode, but there were two reasons: it was unjust and by no means humane to assail their kindred, both nations descending from Isaac, circumcision being common to them as a mark of the same origin; and, weightier still, it was unlawful to cast the children of Esau out of a possession obtained by the same right by which Canaan was promised to Jacob's posterity, so that it would have been sacrilegious audacity to overthrow the prophecy of Isaac by which Esau was declared possessor of a rich and fertile soil."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out the embassy in four parts. They claim kindred, since both nations descended from Abraham and Isaac and their fathers were twin brothers, so that for relation's sake they might reasonably expect this kindness. They give the history: Israel had been abused by the Egyptians and so ought to be pitied by their relations, and wonderfully saved by the Lord, so it was the Edomites' interest to ingratiate themselves with a people so much heaven's favourites. They beg a passport — and here Henry pauses, for though God himself in the pillar of cloud was Israel's guide, and they might on that ground have justified passing through any man's land, God would have this respect paid to the Edomites, to show that no man's property ought to be invaded under colour of religion: dominion is founded in providence, not in grace. So when Christ was to pass through a Samaritan village, to whom his coming was likely to be offensive, he sent messengers before his face to ask leave; those who would receive kindness must not disdain to request it. Lastly they give security for good behaviour. The refusal Henry lays to two causes: the Edomites' jealousy of so numerous an army, and the old enmity of Esau, who hated Jacob because of the blessing — a hatred revived now that the blessing was ready to be inherited."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: an act of policy, to secure themselves from so numerous a host, refusing passage through their country."
+    "summary": "Wesley identifies the angel of the message as the Angel of the Covenant, who appeared to Moses in the bush and afterward in the cloudy pillar, and not Moses himself — partly because Moses was sending the message, and partly because another angel above Moses conducted them, whose mention was likely to give the embassy more authority. He glosses the wells as the pits digged for private use, not common rivers, free to all passengers. Clarke notes that the king's high way occurs here for the first time and appears to have been a public road made by the king's authority at the expense of the state."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil explains why the embassy was needed: Israel wished to enter Canaan from the east across the Jordan, not from the south, where the steep mountain ranges presented obstacles difficult if not insuperable, so Moses sent from Kadesh to ask of the kindred nation a friendly and unimpeded passage — reminding the king of the relationship, the descent into Egypt, the oppression endured there and the deliverance out of it, and promising to keep to the king's way, without turning to the right hand or the left. Ellicott supposes the king's high way led through the broad Wady el Ghuweir, celebrated for its pasture and springs."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Thou shalt not pass by me, lest I come out against thee with the sword",
-   "meeting entreaty with threat",
-   "the unbrotherliness arraigned by the prophets (Obad. 10)"
+   "thus saith thy brother Israel",
+   "he sent an angel, and hath brought us forth out of Egypt",
+   "we will go by the king’s high way"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "19": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the messengers made answer to the king of Edom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they offered to go by the highway, pay for any water, and only pass through on foot, doing nothing else."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "We will go by the high way: and if... we drink of thy water, then I will pay for it",
-   "meekness answering churlishness",
-   "restraint under God's command"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this was an absolute and peremptory denial."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: to give emphasis to his refusal, Edom came out against Israel with much people and a strong hand."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he said, Thou shalt not go through. And Edom came out against him with much people",
-   "the refusal backed by an army",
-   "ready to fight a kinsman over a harmless passage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the refusal stood notwithstanding their near relation and Israel's fair promises."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Israel turned away from him and journeyed on."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Edom refused to give Israel passage... wherefore Israel turned away from him",
-   "declining to force the passage",
-   "obedient yielding, suffering wrong rather than break God's command"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
+   "Keil and Delitzsch",
    "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "John Wesley"
+  ],
+  "range": "19-22",
+  "pericope_label": "Edom comes out with a strong hand, and Israel turns away to Mount Hor",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the 'whole congregation' went from Kadesh complete, not one lost by Edom's coming out against them."
+    "summary": "Calvin is uncertain whether a second embassy was sent, or whether we have here the relation of one and the same expedition; the sum either way is that the Israelites tried every means to obtain a free passage, so that their repulse might appear the harsher — and that God by this test would prove the obedience of His people. As for the Edomites, though by rashly taking up arms they drew on themselves a just destruction, God spared them for a time, not freely pardoning but deferring their punishment, as He is wont, until its due season. Gill counts the departure a mercy: they journeyed from Kadesh not directly but after some time there, buying provisions of the Edomites; and the whole congregation is said to have journeyed thence, not one lost by the king of Edom's coming out against them — they went out complete and perfect, safe and sound."
    },
    {
     "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears the chapter close as it opened. It began with the funeral of Miriam and ends with that of her brother Aaron, for when death comes into a family it often strikes double: Israel had not improved the former affliction, and therefore soon after God took away their priest, to try whether they would lay that to heart. In the summons he finds displeasure and mercy together. Aaron must not enter Canaan, having failed at the waters of strife, and the mention of it must have gone to the heart of Moses, who knew himself perhaps the guiltier of the two; yet Aaron, though he dies for his transgression, is not put to death as a malefactor by a plague or by fire from heaven, but dies with ease and in honour — not cut off from his people, as the expression usually runs of those who die by the hand of divine justice, but gathered to his people, as one who died in the arms of divine grace. He finds a type in it: Aaron must not enter Canaan, to show that the Levitical priesthood could make nothing perfect, that being reserved for a better hope, since those priests could not continue by reason of sin and death, whereas the priesthood of Christ, being undefiled, is unchangeable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke measures the refusal against custom. Every king has a right to refuse passage through his territories to strangers, but at a time when emigrations were frequent and universally allowed, it was both cruelty and oppression to refuse a comparatively unarmed and inoffensive multitude who were their own near kinsmen — though it appears only the Edomites of Kadesh were unfriendly, since Deuteronomy shows that those who dwelt in Mount Seir treated Israel hospitably, and this cruelty is strongly reprehended by Obadiah."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Henry: the chapter began with the funeral of Miriam and ends with that of Aaron."
+    "summary": "Keil observes that the narrative runs ahead of itself: the statement that Edom came out with much people and a strong hand anticipates the historical order, since the Edomites cannot have come at once with an army on the track of the messengers to block the road along their border. He locates Mount Hor on the border of Edom, where Josephus, Eusebius and Jerome place it near Petra, and which modern travellers identify with Mount Harun on the north-western side of Wady Musa — a cone irregularly truncated, with three ragged peaks, of which the north-eastern is the highest and carries the Muhammedan tomb of Aaron, from which the mountain takes its name. Ellicott would reorder the clauses — they journeyed from Kadesh, and the children of Israel, even the whole congregation, came unto Mount Hor — and takes the insertion of the whole congregation, as in the chapter's first verse, to denote that the people were dispersed through much of their wilderness life and gathered only on particular occasions."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the children of Israel, even the whole congregation, journeyed from Kadesh, and came unto mount Hor",
-   "the chapter framed by two funerals",
-   "the guides falling while the people go on"
+   "Edom came out against him with much people, and with a strong hand",
+   "Israel turned away from him",
+   "the whole congregation journeyed from Kadesh, and came unto mount Hor"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "23": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "23-27",
+  "pericope_label": "Aaron stripped of his garments on the mount, and Eleazar clothed with them",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they were at the foot of the mountain, in the valley adjoining."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD spake at Mount Hor, by the coast of the land of Edom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses and Aaron in mount Hor",
-   "announcing Aaron's death beforehand",
-   "God ordering the passing of his servant"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: 'gathered unto his people' is a periphrasis for death, used of good and bad alike."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the phrase does not refer to the place of burial (Gen. 25:8)."
+    "summary": "Calvin reads Aaron's death as the execution of a sentence. God wished to show that He had not threatened him and Moses in vain, as children are threatened; for had Aaron died without such a prediction, since from his extreme age he might have seemed merely to discharge the debt of nature, the people would have taken it as nothing. But when in the death of one man the condemnation of their common guilt is manifested, such severity against the high priest — who had before propitiated God towards them all by his intercession — must have been a sharp spur, since it must needs have suggested that God was no longer to be trifled with. Why the successor was named while Aaron still lived he explains by two dangers: the perpetuity of the priesthood was secured, and the people were kept from taking upon themselves, with their usual temerity, an election depending on the will of God alone — for unless Eleazar had been appointed while his father lived, the office might have fallen into disesteem, since the high dignity of any individual is often odious. Calvin then turns to what the scene cost Aaron, and finds his faith there. He cedes not only his office but his life; had he not been persuaded that an inheritance was laid up for him in heaven he would not have migrated so calmly from the world, and since he composes himself to die as if lying down on his bed, his mind was beyond doubt lifted to the hope of a blessed resurrection. His faith was probably elevated further when he saw the testimony of God's grace, on which the safety of the people depended, made to rest on the person of his son — for it was exactly as if the image of the Mediator were set visibly before his eyes. Gill observes that being gathered to one's people is a periphrasis of death, used in common of good men and bad, without regard to the persons or the places men go to."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: the rebellion at Meribah was one reason, though not the only one, that God would not have Aaron enter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Aaron shall be gathered unto his people... because ye rebelled... at the water of Meribah",
-   "justice and mercy joined",
-   "received home though shut out of earthly Canaan (Gen. 25:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Eleazar was Aaron's eldest son, who was to succeed him in the priesthood, and did. Calvin: the successor was designated while Aaron lived, that the perpetuity of the priesthood be secured and the people not take the election on themselves, the office depending on the will of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Take Aaron and Eleazar his son, and bring them up unto mount Hor",
-   "the successor designated while the father lived",
-   "God providing for the unbroken ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the priestly garments, as the Targum says."
+    "summary": "The transfer Clarke explains as a form of law. Stripping Aaron was in effect depriving him of his office, and putting the clothes on his son implied a transfer of it; such a transfer was called investing, or clothing, as removing a person from office was termed divesting — and among the Catholics, and in the Church of England, the same method is used in degrading ecclesiastics, whence such a degradation is called by the common people stripping a man of his gown. Wesley hears the human note: so these two dear brothers must part, and Aaron must die first, though Moses is not likely to be long after him — only for a while, a little while, are they separated."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: the stripping was in effect depriving Aaron of his office, and the clothing of Eleazar a transfer of it — an investiture, as removing one was a divestiture."
+    "summary": "Ellicott marks the symmetry: the same hands that had invested Aaron with the sacred garments were employed in divesting him of them, in both cases by the express command of God. He takes the removal of the robes as typical of the future disannulling of that priesthood when a priest after the order of Melchizedek should arise, and quotes Dean Stanley that the succession was made through that singular usage, preserved to the latest days of the Jewish hierarchy, by the transference of the vestments of the dead high priest to the living successor; he adds that the expression about being gathered to his people does not refer to the place of sepulture. Keil records simply that Moses executed the command, and Aaron died upon the top of the mountain."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
+   "Aaron shall be gathered unto his people",
    "strip Aaron of his garments, and put them upon Eleazar his son",
-   "the visible passing of the priesthood",
-   "the mortal office handed on (Heb. 7:23)"
+   "they went up into mount Hor in the sight of all the congregation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: how cutting and afflicting it must have been to Moses to part with a brother so dear, yet being the Lord's will he submitted and faithfully obeyed."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: they went up into Mount Hor in the sight of all the congregation, some rendering 'to the summit.'"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses did as the LORD commanded... in the sight of all the congregation",
-   "leading his own brother up to die",
-   "a triumph of submission to God's will"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "28": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "28-29",
+  "pericope_label": "Aaron dies on the top of the mount, and all the house of Israel mourns thirty days",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the same hands that clothed Aaron at first now stripped him, both at God's command; the stripping a figure of the disannulling of his priesthood when the Messiah, a priest after another order, should come; Aaron died on the top of the mount (Heb. 7:24)."
+    "prevalence": "several",
+    "summary": "Gill explains how the people learned of the death, since they did not see the body: by the relation of Moses, and by such circumstances as not seeing Aaron come down whom they had seen go up, and seeing Eleazar wearing his garments. The mourning lasted the month out, the length of public mourning among the Jews, as Josephus relates. Calvin finds in that mourning a fault the nation shared with almost all others. It has been an error common to nearly every people and age, but reigning peculiarly among the Israelites, to pay honour to God's holy servants rather after their deaths than in their lives: they had frequently wished to stone Aaron and raised great tumults to cast him down from the dignity in which God had placed him, and now, forgetting their malignity, they lament for him dead. Whether a month's mourning was praiseworthy he doubts, since it could not but aggravate grief, men being naturally too much inclined to excessive sorrow, and the hope of a better life availing to mitigate it — whence he infers that those who give way to immoderate grief have scarcely any taste of eternal salvation. Yet believers have another cause for mourning, to exercise themselves both in the fear of God and in the hope of the future resurrection, and on that ground the custom has not unreasonably been received: since death is a mirror of God's curse upon the whole human race, it is profitable, whenever any of our own dies, to mourn our common lot and humble ourselves beneath God's hand; and mourning directed to its proper end in a manner unites the living with the dead, so that in death itself the communion of the new and immortal life shines forth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley turns the stripping into a memento mori. Death will strip us: naked we came into the world and naked we must go out, and we shall see little reason to be proud of our clothes or marks of honour if we consider how soon death will strip us of all our glory and take the crown off from our head. He notes how immediately it followed — presently after Aaron was stripped of his priestly garments he laid him down and died — and draws a wish from it: a good man would desire, if it were God's will, not to outlive his usefulness. Clarke draws two conclusions from Lightfoot. The first is an indisputable proof that the earthly Canaan was not the utmost felicity at which God's promises aimed, since the best men among them were excluded from it — to which he adds the fathers' remark that neither Moses the representative of the law, nor Miriam the representative of the prophets, nor Aaron the representative of the priesthood could bring Israel into the promised land, that being reserved for Joshua, who was in name and in conduct the lively type of our Lord and Saviour. The second is a piece of arithmetic: they wandered by many stations from Kadesh-Barnea until they came to Kadesh-Barnea again, seven or eight and thirty years after they had first left it, and though it was only eleven days' journey from Horeb by the way of Mount Seir, they made it above thrice eleven years' journey."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil records the bare facts: Aaron died at a hundred and twenty-three, mourned by all Israel thirty days. Ellicott sets the scene beside the other death that closes the Pentateuch: both brothers were excluded from the land of promise by transgression and both died upon a mountain top, but whereas Moses died in solitary grandeur and the place of his burial was unknown, Aaron ascended in the sight of all the people and died in the presence of Moses and Eleazar."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Moses stripped Aaron of his garments... and Aaron died there in the top of the mount",
-   "the supersession of the Aaronic order",
-   "the need of the one Priest who dies no more (Heb. 7:24)"
+   "Aaron died there in the top of the mount",
+   "Moses and Eleazar came down from the mount",
+   "they mourned for Aaron thirty days, even all the house of Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they did not see his body but perceived it by Moses' report and the circumstances — Eleazar coming down with Aaron's garments on, and the tokens of mourning; the Targums add they saw Moses and Eleazar come down with garments rent and ashes on their heads; the whole house of Israel mourned thirty days."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when all the congregation saw that Aaron was dead, they mourned for Aaron thirty days",
-   "the long and general grief honouring the high priest",
-   "the death of a faithful minister a public sorrow"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
