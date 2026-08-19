@@ -1,1066 +1,653 @@
 {
  "1": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1-2",
+  "pericope_label": "The nations left to prove Israel, and to teach war to those who had not known it",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: these nations are afterward mentioned."
+    "prevalence": "single",
+    "summary": "Gill argues the same contrast from the Jewish commentators, observing with Jarchi and Kimchi that the fathers in Joshua's time had no need to learn the art of war, since God fought for them and they did not get the land by their own arm and sword but by His power in a miraculous way; that was no longer to be expected, and the Canaanites were left so that Israel might be trained in warlike affairs and made capable of teaching their children the military art, which they were to use in obeying God's command by driving out the remains of the Canaanites, and not give themselves up to sloth."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the permission from an act of justice into an act of wisdom. In the previous chapter God's leaving the nations was set down as justice, for Israel's correction; here another construction is put on it, and it appears to have been for Israel's real advantage. Their country was exceedingly rich and fruitful and abounded with dainties, which, if they were never made to know hardship, would sink them into the utmost degree of luxury and effeminacy: they must sometimes wade in blood, and not always in milk and honey, lest even their men of war, by the long disuse of arms, should become as soft and as nice as the tender and delicate woman who would not set so much as the sole of her foot to the ground. Their country lay besides in the midst of enemies, God's heritage being a speckled bird with the birds round about against her, so they needed discipline to defend their coasts and hereafter enlarge them; and the art of war is best learnt by experience, which not only acquaints men with martial discipline but inspires them with a martial disposition. It was for Israel's interest to breed soldiers as it is an island's to breed seamen, so that by the lesser difficulties they might be prepared for greater, and by running with the footmen learn to contend with horses. A different reading of the clause Henry reports from Bishop Patrick: that they might know to teach them war means they should know what it is to be left to themselves — their fathers had fought by a divine power, God teaching their hands to war and their fingers to fight, but now that they have forfeited his favour, let them learn what it is to fight like other men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke states the loss most bluntly: had they been faithful to God they would have had no need of learning the art of war at all, but now arms became a sort of necessary substitute for the spiritual strength which had departed from them — thus God in his judgments leaves one iniquitous nation to harass and torment another, whereas were all to turn to God, men need learn war no more."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD leaving them to prove Israel, even as many as had not known the wars of Canaan."
+    "summary": "Keil fixes who is meant by those who had not known all the wars of Canaan: the phrase means from their own observation and experience, so the generation that rose up after Joshua's death is intended, the wars of Canaan being those Joshua carried on with the almighty help of the Lord for the conquest of the land. Ellicott adds a nuance in the verb: it is the same word used just before for proving Israel, but, as Rabbi Tanchum observes, in a slightly different sense, meaning rather to train them, which is how Symmachus renders it. On the following clause he reports that the translations vary widely, the Vulgate being a mere paraphrase, while the sense seems to be that Jehovah might know the generations of the children of Israel, to teach them war — and the teaching of war doubtless implies the lesson that they could only learn it successfully by the help of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "these are the nations which the LORD left, to prove Israel by them",
-   "God overruling his people's failure to a purpose of testing",
-   "that the trial of your faith... might be found unto praise (1 Pet. 1:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the nations were left that the young generations might by their wars learn the art of war and be inured to martial discipline."
+    "question": "Why were the nations left in the land?",
+    "positions": [
+     {
+      "position": "for Israel’s real advantage — to keep a rich and fruitful people from luxury and to train soldiers for a land ringed with enemies",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "so that they should learn what it is to be left to themselves, and fight like other men now that they have forfeited the favour by which their fathers fought",
+      "holders": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "that the generations of the children of Israel might know, to teach them war",
-   "God keeping his people in the school of spiritual warfare",
-   "fight the good fight of faith (1 Tim. 6:12); put on the whole armour of God (Eph. 6:11)"
+   "these are the nations which the Lord left, to prove Israel by them",
+   "as many of Israel as had not known all the wars of Canaan",
+   "only that the generations of the children of Israel might know, to teach them war"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  },
  "3": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the five Philistine lordships of Gaza, Ashdod, Ashkelon, Gath, and Ekron; the Sidonians and Hivites of Lebanon among them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "five lords of the Philistines, and all the Canaanites, and the Sidonians, and the Hivites that dwelt in mount Lebanon",
-   "the foes that should have been driven out left as a standing trial",
-   "they shall be thorns in your sides (Judg. 2:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "3-7",
+  "pericope_label": "The nations named, the marriages made with them, and the first servitude",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: left to inure Israel to war, try their courage, and prove their faithfulness to God."
+    "prevalence": "single",
+    "summary": "Gill supplies the recent history of the five cities: three of them, Gaza, Ashkelon and Ekron, had been taken from the Philistines by Judah since Joshua's death, but they soon recovered them, perhaps by the help of the other two; and the Philistines were a people originally of Egypt who came thence and settled in these parts, being there as early as the times of Abraham. He draws out what the dwelling among them implies — they lived as if they had been only sojourners and not conquerors, holding by sufferance and not as owners, such were their sloth and indolence, and such the advantage the inhabitants gained by it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that no groves were ever worshipped, but only the deities supposed resident in them; temples and altars were often built in groves, and the superstition of consecrating woods to the honour of the deities was very usual with the ancients — Pliny assures us that trees in old times served for the temples of the gods, Tacitus reports the custom of the old Germans, Quintus Curtius of the Indians, and Caesar and our own old writers of the Druids in Britain. But he thinks it very probable that the word we translate groves is a corruption of the name of Ashtaroth, the moon or Venus, from which it differs by only two letters, and which is the reading of the Chaldee Targum, the Syriac, the Arabic and the Vulgate."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: them proving whether Israel would hearken to the commandments."
+    "summary": "Ellicott takes the word rendered lords for a technical title, Seranim, which the Septuagint turns into satrapies and the Vulgate into satraps, and which has been variously derived from a root meaning a hinge — as cardinal comes from cardo — from the ordinary word for a prince, with which it is elsewhere interchanged, and from some Phoenician root. On the Hivites of Lebanon he collects the derivations of the name, which has been traced to a word for a circular encampment, since they lived, as they do to this day in northern Syria, in circular villages with enclosures for cattle in the centre; Ewald makes it midlanders and Gesenius villagers. He finds in the beginning of intermarriages a mark of date, since it shows we are a generation removed from the days of Joshua; such marriages had been forbidden in Deuteronomy, yet are not among the sins denounced by the angel-messenger at Bochim. He also marks this as the point where the second great section of the book begins, which Professor Cassel summarises as a history of sin repeating itself, and of divine grace constantly devising new remedies. Keil states the outcome in a sentence: the Israelites did not stand the test, for dwelling among the Canaanites, of whom six tribes are enumerated, they contracted marriages with them and served their gods, against the express prohibition of the Lord. Of the oppressor he says that all we know of Chushan-rishathaim is what is recorded here, and that his name is probably only a title the Israelites gave him, since Rishathaim signifies double wickedness and was rendered as an appellative with that meaning in the Targums and the Syriac and Arabic versions, while Chushan is formed as an adjective from Cush."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What were the groves that Israel served?",
+    "positions": [
+     {
+      "position": "probably a corruption of Ashtaroth, the moon or Venus — the reading of the Chaldee, Syriac, Arabic and Vulgate",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the Asheroth, wooden images of the nature-goddess Asherah; the grove rendering came from the Septuagint and the old supposition of tree-worship is erroneous",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "they were to prove Israel by them, to know whether they would hearken unto the commandments of the LORD",
-   "God proving his people to make manifest the heart",
-   "the LORD your God proveth you, to know whether ye love the LORD (Deut. 13:3)"
+   "five lords of the Philistines, and all the Canaanites",
+   "they took their daughters to be their wives",
+   "served Baalim and the groves"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they dwelt among them as if only sojourners, not conquerors, by sufferance and not as owners, through their sloth and indolence."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the children of Israel dwelt among the Canaanites, Hittites, and Amorites, and Perizzites, and Hivites, and Jebusites",
-   "the peril of God's people making their home among the ungodly",
-   "come out from among them, and be ye separate (2 Cor. 6:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they intermarried contrary to God's express command, confounding their families, debasing their blood, and being ensnared into idolatry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they took their daughters to be their wives, and gave their daughters to their sons, and served their gods",
-   "the forbidden union leading straight to idolatry",
-   "be ye not unequally yoked together with unbelievers (2 Cor. 6:14-15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they did evil both by marrying with heathens and worshipping their gods."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: this the first apostasy bringing chastisement."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the children of Israel did evil in the sight of the LORD, and forgat the LORD their God, and served Baalim and the groves",
-   "the forgetting of God the root of all apostasy",
-   "they soon forgat his works... and served their idols: which were a snare (Ps. 106:13, 36)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "8-11",
+  "pericope_label": "Othniel raised up: the Spirit of the Lord upon him, and forty years of rest",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Lord's anger was hot because of their idolatry."
+    "prevalence": "single",
+    "summary": "Gill notes that the forty years of rest are reckoned differently, Ben Gersom and Abarbinel including the eight years of servitude and Bishop Usher counting from the rest first settled by Joshua, though Gill dates them from the deliverance itself."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the servitude as an exact reversal. God, justly displeased with them for plucking up the hedge of their peculiarity and laying themselves in common with the nations, plucked up the hedge of their protection and laid them open to the nations, setting them to sale as goods he would part with; and the first that laid hands on them was Chushan-rishathaim, king of that Syria which lay between the two great rivers, thence called Mesopotamia, which signifies in the midst of rivers. Laban, who oppressed Jacob with hard service, was of that country; but it lay at such a distance that one could not have thought Israel's trouble would come from so far off, which shows the more of the hand of God in it. He marks too the change the eight years made in the people. At first they made light of the trouble, thinking they could easily shake off the yoke of a prince at such a distance; but when it continued eight years they began to feel the smart of it, and then those cried under it who before had laughed at it. Those who in the day of their mirth had cried to Baalim and Ashtaroth now cry to the Lord from whom they had revolted, whose justice had brought them into the trouble and whose power alone could bring them out — affliction makes those cry to God with importunity who before would scarcely speak to him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke fills in the geography: the title is king of Aram-naharaim, Syria of the two rivers, which the Septuagint and Vulgate render Mesopotamia — the district between Tigris and Euphrates, called by the Arabian geographers Maverannaher, the country beyond the river, and now Diarbek. He overran their country and forced them to pay a heavy tribute. Clarke also weighs the narrower readings of the Spirit's coming: the Chaldee understands the spirit of prophecy, others the spirit of fortitude and extraordinary courage as opposed to a spirit of fear; but since Othniel was judge and had many offices to fulfil besides that of a general, he had need of the Spirit of God in the proper sense, to enable him to guide and govern this most refractory and fickle people — and his receiving it for such purposes shows that the political state of the Jews was still a theocracy, in which no man attempted anything without the immediate inspiration of God."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD selling them into the hand of the king of Mesopotamia."
+    "summary": "The oppressor's name Ellicott takes for a term of hatred rather than a name at all, since it means Cushan of the double wickedness; Josephus shortens it and Clement of Alexandria alters it differently again. It is quite possible, he suggests, that Rishathaim is the distorted form of some town's name, for it is always the tendency of a people to re-stamp a word they receive into current phraseology, because no nation likes to use a term it does not understand — thus in our London streets Hangman's Gains is a corruption of Hammes et Guynes, and Blind Chapel Court of Blanch Appleton. The Jews were not only accustomed to re-stamp the names of foreign kings, peoples and idols in this way, but especially rejoiced in using terms of hatred: the Romans in the Talmud are called Idumeans, Beelzebul was changed into Beelzebub, and Bethel into Bethaven. The Targum and Syriac render it simply the criminal Cushan. On the Spirit that came upon Othniel Keil offers a general definition: the Spirit of God is the principle of life in the world of nature and of man, and in man the principle both of the natural life received through birth and of the spiritual life received through regeneration."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the anger of the LORD was hot against Israel, and he sold them into the hand of Chushanrishathaim... eight years",
-   "apostasy provoking God's anger and bringing servitude",
-   "he delivered them into the hands of spoilers that spoiled them (Judg. 2:14)"
+   "the Lord sold them into the hand of Chushanrishathaim",
+   "the Lord raised up a deliverer, even Othniel the son of Kenaz",
+   "and the land had rest forty years"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they cried toward the close of the eight years' bondage, groaning under their oppression."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the LORD raising up a deliverer, Othniel."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the children of Israel cried unto the LORD, the LORD raised up a deliverer... even Othniel",
-   "God hearing the cry of his chastened people and sending salvation",
-   "they cried unto the LORD in their trouble, and he saved them (Ps. 107:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Spirit moved him to the work, inspired him with courage, and filled him with every needful gift."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit of the LORD came upon him, and he judged Israel... and the LORD delivered Chushanrishathaim... into his hand",
-   "all true deliverance flowing from the Spirit's enabling",
-   "the Spirit of the LORD shall rest upon him (Isa. 11:2); to preach deliverance to the captives (Luke 4:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the forty years' rest from the time of this deliverance, by some reckoned to include the eight years' servitude; Othniel died."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the land had rest forty years. And Othniel the son of Kenaz died",
-   "the peace of restoration, yet bound to the mortal deliverer's life",
-   "he ever liveth to make intercession for them (Heb. 7:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Matthew Henry"
   ],
+  "range": "12",
+  "pericope_label": "The Lord strengthens Eglon king of Moab, and Israel serves him eighteen years",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they fell into idolatry again, a great evil and what they were prone to."
+    "prevalence": "single",
+    "summary": "Gill notes only that they fell into idolatry again, a great evil in the sight of God and one they were prone to."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: introduces Ehud, the next of the judges."
+    "prevalence": "single",
+    "summary": "Henry counts up what made the relapse worse than the first fall. It was an aggravation of their wickedness that they did evil again after they had smarted so long for their former iniquities, promised so fair when Othniel judged them, and received so much mercy in their deliverance. What, after all this, again to break his commandments! Was the disease obstinate to all the methods of cure, both corrosives and lenitives? It seems it was. He would not suffer the Israelites, when they were the stronger, to distress the Moabites or give them any disturbance, though they were idolaters; yet now he suffered the Moabites to distress Israel, and strengthened them on purpose that they might — thy judgments, O God, are a great deep. The choice of this particular scourge Henry finds pointed. The new oppressor lay nearer to them than the former, and would be the more mischievous, God's judgments approaching gradually to bring them to repentance. When Israel dwelt in tents but kept their integrity, Balak king of Moab, who would have strengthened himself against them, was baffled; but now that they had forsaken God and worshipped the gods of the nations round about them, here was another king of Moab whom God strengthened against them, putting power into his hands, though a wicked man, that he might be a scourge to Israel. The staff in his hand, with which he beat Israel, was God's indignation; howbeit he meant not so, neither did his heart think so. Henry follows the campaign through to its result: the confederates made themselves masters of the city of palm-trees, into which the Moabites put a garrison, to be a bridle upon Israel and to secure the passes of Jordan — see how quickly the Israelites lost by their own sin what they had gained by miracles of divine mercy. Then the Moabites made them serve, exacting tribute of them; for they had neglected the service of God and had not paid him his tribute, and thus did God recover from them that wine and oil, that silver and gold, which they had prepared for Baal. The former servitude lasted eight years and this eighteen, for if lesser troubles do not do the work, God will send greater."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke states the same causation flatly: the success Eglon had against the Israelites was by the especial appointment and energy of God, who not only abandoned the Israelites but strengthened the Moabites against them. He observes that some great men have borne names which, reduced to their grammatical meaning, appear very ridiculous, and that Eglon signifies a little calf."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott, having argued that Rishathaim was probably a term of scorn, asks whether Eglon may be due to the same tendency, since it means a fat bullock; and he gives the idiom behind the opening phrase — literally, they added to do evil, a Hebraism found even in the New Testament, where a master added to send his servants. Both he and Clarke take Eglon for a successor of Balak."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the children of Israel did evil again... and the LORD strengthened Eglon the king of Moab against Israel",
-   "God using even the oppressor as his rod against his sinning people",
-   "O Assyrian, the rod of mine anger (Isa. 10:5)"
+   "the Lord strengthened Eglon the king of Moab against Israel",
+   "he gathered unto him the children of Ammon and Amalek",
+   "possessed the city of palm trees"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Lord inclined them, or the king of Moab got them to join, being his neighbours, in the war against Israel; he possessed the city of palm trees."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he gathered unto him the children of Ammon and Amalek, and went and smote Israel, and possessed the city of palm trees",
-   "the foes of God's people combining when his hand is withdrawn",
-   "the LORD sold them into the hands of their enemies round about (Judg. 2:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Charles Ellicott"
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "13-16",
+  "pericope_label": "Ehud the left-handed Benjamite, and the two-edged dagger on his right thigh",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: ten years longer than they served the king of Mesopotamia, a severer correction for their relapse."
+    "prevalence": "single",
+    "summary": "Gill measures the second servitude against the first: eighteen years is ten longer than they served the king of Mesopotamia, a severer correction for their relapse."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Which city the palm trees belonged to Clarke will not settle by the Targum alone. That version renders it Jericho, but Jericho had been destroyed by Joshua and was not rebuilt until the reign of Ahab; since, however, Jericho is expressly called the city of palm trees in Deuteronomy, the city in question must have been in the plain of Jericho, seized by the king of Moab as a frontier town contiguous to his own estates — though Calmet supposes En-gaddi is meant. On Ehud he takes the phrase for a man lame in his right hand and therefore obliged to use his left, but reports that the Septuagint render it ambidexter and the Vulgate a man who could use either hand as a right hand, which is how most interpreters understand it. He observes that to be ambidextrous was in high repute among the ancients: Hector boasts of shifting his shield from right to left, Homer represents Asteropaeus hurling two spears at once, and Aristotle records that Plato made a law that soldiers should acquire an equal facility with both hands, since it is not fit that one hand be useful and the other useless. He adds the seven hundred Benjamites lame of the right hand who yet slung stones to a hair's breadth. On the weapon he holds the word we translate cubit to be of very doubtful signification, and since its root seems to signify contracted, thinks it an instrument made shorter than usual, something like the Italian stiletto; and he explains the right thigh by the left-handedness, since ordinarily the sword hangs on the left that it may be readily drawn by the right hand."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: an instance of their bondage."
+    "summary": "Ellicott has no such difficulty about the city, taking it for Jericho, since the verb rendered possessed by no means implies that the city was rebuilt, still less fortified, and Eglon's palace was probably a wooden structure. On Ehud he denies Clarke's whole construction: the Hebrew word is correctly rendered shut in the margin of our version and cannot possibly mean ambidextrous; and there seems an intentional play upon words, since the tribal name may also mean a son of the right hand, of whom the writer immediately adds that he was helpless with his right hand. Ehud might well have been trained, like other Benjamites, to sling with the left, but it does not follow that he had not suffered some accident which maimed the right — and if so, it would avert all suspicion from him in his dreadful purpose, making him a Hebrew Scaevola. He suspects that, as in other servitudes, Israel had been disarmed, which is why the dagger had to be made; the two edges show it was not a mere knife, and Jerome's addition in the Vulgate, that it had a handle in the midst, seems meaningless and has no equivalent in the Hebrew. He reconstructs the concealment: the war-cloak was doubtless flung in folds over the left shoulder, so that Eglon, unaware that the bearer of the tribute was left-handed, would see the side where arms were usually worn covered by a flowing robe and would not suspect the dagger at the right — much as Amasa fell by a similar treachery, when Joab clasped his beard with his right hand and with his unsuspected left gave the deadly thrust. Keil takes the disputed measure for a cubit on the authority of the Syriac and Arabic, noting that the term is found nowhere else and signified primarily a staff, and rejects the Septuagint's span."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So the children of Israel served Eglon the king of Moab eighteen years",
-   "a severer chastisement for relapse after mercy",
-   "if any man draw back, my soul shall have no pleasure in him (Heb. 10:38)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they cried after long oppression, brought to a sense of their sins and humiliation; Ehud was a left-handed man of Benjamin."
+    "question": "Was Ehud ambidextrous or maimed in the right hand?",
+    "positions": [
+     {
+      "position": "ambidextrous, as the Septuagint and Vulgate render it and most interpreters understand it — a skill in high repute among the ancients",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "maimed; the Hebrew means shut, cannot mean ambidextrous, and a crippled right hand would itself avert suspicion",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "the LORD raised them up a deliverer, Ehud the son of Gera, a Benjamite, a man lefthanded",
-   "God using the unlikely, the weak made strong for his work",
-   "God hath chosen the weak things of the world to confound the... mighty (1 Cor. 1:27)"
+   "the Lord raised them up a deliverer, Ehud the son of Gera, a Benjamite, a man lefthanded",
+   "Ehud made him a dagger which had two edges, of a cubit length",
+   "he did gird it under his raiment upon his right thigh"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: a little sword with two edges, about half a yard long, which he could conceal, being left-handed; girt on his right thigh."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ehud made him a dagger which had two edges, of a cubit length; and he did gird it under his raiment upon his right thigh",
-   "the deliverer prepared and resolute, the two-edged blade",
-   "the word of God is... sharper than any twoedged sword (Heb. 4:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he was accompanied by servants who bore the presents, as became a judge of Israel; Eglon was a very fat man."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he brought the present unto Eglon king of Moab: and Eglon was a very fat man",
-   "the prosperity of the wicked no security, ripe for judgment",
-   "pull them out like sheep for the slaughter, and prepare them for the day of slaughter (Jer. 12:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "17-19",
+  "pericope_label": "The present brought to Eglon, and the turning back from the quarries at Gilgal",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he had delivered the things and very probably made a speech to the king in the name of Israel."
+    "prevalence": "single",
+    "summary": "Gill reports that the Targum and most Jewish writers make the pesilim places where stones were dug and hewn, that some render the word engravings and understand inscriptions on pillars surviving from the times of Seth, and that the Vulgate and other versions take them for graven images which the king of Moab had set up there — whether in contempt of the Israelites, the place being one where the ark had rested, or to draw them into idolatry, or in honour of his own gods; and some think it was this that stirred up Ehud and made him turn back."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "The note that Eglon was a very fat man the versions read differently, as Clarke reports: the Septuagint turns the Hebrew into a very beautiful or polite man, the Syriac into a very rude one, though it probably means what we call lusty or corpulent. On the delivery Clarke explains the ceremony: presents in the East were offered with great parade, several persons, ordinarily slaves and sumptuously dressed, being employed to carry what would not be a burden to one."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: him sending away the people that bore the present."
+    "summary": "Ellicott takes the plain sense of the fatness as undoubted, the notice being inserted with reference to what follows, while the Greek word the Septuagint chose may mean either graceful or, as more probably here, ridiculous. He notes too that Josephus evidently means to insinuate a parallel between the deed of Ehud and that of Harmodius and Aristogiton, since he calls Ehud a young man who lived in familiarity with Eglon and had won his favour by frequent presents; and he says the same as Clarke of the tribute-bearers from a traveller's report: the fashion of the East always aims at making a present seem as large as possible, so that fifty persons often bear what one man could easily carry. He finds the plan deeply laid. Ehud wished to secure his end, far more difficult amid the soldiers who guarded the king during the presentation of the tribute; to avoid endangering his comrades; and to provide, if possible, for his own escape — and by first going away with the deputation he would lull suspicion still more thoroughly asleep. How Ehud secured his interview he illustrates from profane history: something in his position let him reckon on the king's credulity, for Eglon, aware of discontent among the Israelites, may well have supposed he had a secret to betray; and in just the same way Darius obtained an interview with the Pseudo-Smerdis for the purpose of assassinating him, by pretending to have a secret message — and, in explaining the stratagem to his comrade, laid down the maxim that when lying is necessary, one should lie. In the version Josephus gives, Ehud pretends instead that he has a dream to narrate. The king's answer he would render not keep silence but simply Hush; the narrative is very graphic here, though it does not appear whether the word was addressed to Ehud, to prevent him saying more before the attendants, or was an intimation to the attendants to withdraw — at all events they at once understood that the king wished to be left alone, courtiers always standing in the presence of Eastern kings. Keil argues that the pesilim cannot be idols: the word does signify idols elsewhere, but if we retain that meaning here, as the Septuagint and Vulgate do, we must assume that near Gilgal there were stone idols set up in the open air, which is very improbable, so the rendering stone quarries, from the verb to hew out stones, adopted in the Chaldee and by Rashi, is more likely correct."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when he had made an end to offer the present, he sent away the people that bare the present",
-   "wisdom in ordering his approach to accomplish the work",
-   "a prudent man foreseeth the evil, and hideth himself (Prov. 22:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the quarries by Gilgal were places where stones were dug and hewn; the king said, Keep silence, and all went out."
+    "question": "What were the pesilim by Gilgal?",
+    "positions": [
+     {
+      "position": "stone quarries — idols set up in the open air near Gilgal are very improbable",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "graven images, most likely those of Moab; the quarry rendering rests only on the Chaldee and Jarchi",
+      "holders": [
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "I have a secret errand unto thee, O king: who said, Keep silence. And all that stood by him went out from him",
-   "God turning the wishes of the wicked to serve his purpose",
-   "he taketh the wise in their own craftiness (Job 5:13)"
+   "Eglon was a very fat man",
+   "he turned again from the quarries that were by Gilgal",
+   "I have a secret errand unto thee, O king"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
   }
  },
  "20": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Eglon had retired into his summer parlour, smaller and more private, where he used to be alone; Ehud said, I have a message from God unto thee."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have a message from God unto thee. And he arose out of his seat",
-   "the word of God commanding reverence even from the ungodly",
-   "the word of God... is a discerner of the thoughts and intents of the heart (Heb. 4:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: being left-handed, he could the better do this without the king suspecting, who would have no fear at the moving of his left hand; he thrust it into his belly."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ehud put forth his left hand, and took the dagger from his right thigh, and thrust it into his belly",
-   "God bringing down the proud oppressor by an unlikely instrument",
-   "he shall bring upon them their own iniquity (Ps. 94:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "range": "20-24",
+  "pericope_label": "I have a message from God unto thee: Eglon slain in his summer parlour",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the handle as well as the blade went in, so strong and violent was the thrust, he determining to do his business effectually."
+    "prevalence": "single",
+    "summary": "Gill follows Ehud out through the guard room with admiration: he passed through with all the serenity imaginable, without the least show of distress in his countenance, being fully satisfied that what he had done was right and according to the will of God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "What room Eglon had retired to Clarke explains from Shaw. Besides the flat platforms on the roofs, most great houses had a smaller house annexed, seldom more than one or two rooms and a terrace, often built above the porch, with a door into the gallery of the main house and another opening on a privy stair down into the street, so that one might come and go without disturbing the household; in these back houses strangers are lodged, and men retire to them from the noise of their families. The Arabs call such a place by a name which exactly answers to the Hebrew word here, and without doubt such was the apartment in which Eglon received Ehud, and by whose privy stairs he escaped. The message from God Clarke takes in a sense that explains the king's behaviour: the Hebrew is a word of the gods to me, unto thee, and the plural very likely signifies idols — the pesilim by which Ehud had turned back. Having gone as far as that place of idolatry, he might feign that he had been worshipping there and that the idols had inspired him with a message for the king; which is why the king commanded silence, why every man went out, and why he rose from his seat to receive it the more respectfully, since being an idolater he would not have done so much for any message from the God of Israel. Clarke then turns on the preachers. I have a message from God unto thee, he observes, is a popular text, and many are fond of preaching from it; but since no man should ever depart from the literal meaning of Scripture in his preaching, we may see the absurdity of taking such a text — for such preachers, to be consistent, should carry a two-edged dagger of a cubit length upon the right thigh, and be ready to thrust it into the bowels of all those they address. He adds the detail behind the servants' mistake: the king had lain down on his sofa to sleep, and when this was done they dropped their slippers, lifted their feet and covered them with their long loose garments — though the versions generally understand the phrase of a certain natural act."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the haft going in after the blade."
+    "summary": "Ellicott renders the phrase literally as a parlour of cooling, the coolest part of an Eastern house, and observes that it places the scene in the Ghor, the Jordan valley, nearly a thousand feet below the Mediterranean and probably the hottest district in the world; Eglon had withdrawn there after the public reception, and Ehud had anticipated as much. He finds the assassination exactly paralleled in the killing of Henri III of France by the Dominican Jacques Clement, and quotes L'Estoile: the monk entered with a knife unsheathed in his sleeve, made a profound reverence to the king, who had just risen and had nothing on but a dressing-gown, presented despatches and said he had further orders to tell the king privately something of importance; then, when the king had ordered those present to retire and begun reading, the monk drew the knife from his sleeve and drove it home so hard that he left it in the wound. Keil will not have the act commended: Ehud's conduct must be judged by the spirit of those times, when it was thought allowable to use any means of destroying a national enemy, and the treacherous assassination of a hostile king is not to be regarded as an act of the Spirit of God, nor set before us as an example."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the haft also went in after the blade; and the fat closed upon the blade",
-   "God's judgment complete and sure, done effectually",
-   "the prosperity of fools shall destroy them (Prov. 1:32)"
+   "he was sitting in a summer parlour, which he had for himself alone",
+   "Ehud put forth his left hand, and took the dagger from his right thigh",
+   "surely he covereth his feet in his summer chamber"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the porch, a place with many seats where people waited or the guards sat; he shut and locked the doors of the parlour."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then Ehud went forth through the porch, and shut the doors of the parlour upon him, and locked them",
-   "calm presence of mind and wisdom in the hour of danger",
-   "God hath given us the spirit of... a sound mind (2 Tim. 1:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the servants came to the parlour door to reassume their place and finish their business with the king; they supposed he covered his feet."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the doors of the parlour were locked, they said, Surely he covereth his feet in his summer chamber",
-   "God ordering even men's small delays to further his purpose",
-   "the king's heart is in the hand of the LORD... he turneth it whithersoever he will (Prov. 21:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "25-30",
+  "pericope_label": "Ehud escapes to Seirath, the fords are taken, and Moab is subdued",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they tarried, not knowing what to think, or the meaning of the doors kept locked so long."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: them finding their lord fallen dead."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they took a key, and opened them: and, behold, their lord was fallen down dead on the earth",
-   "the proud oppressor brought low in a moment by God's hand",
-   "how are they brought into desolation, as in a moment! (Ps. 73:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the tarrying of the servants gave Ehud time to make his escape, out of reach of pursuers; he passed beyond the quarries and escaped to Seirath."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Ehud escaped while they tarried, and passed beyond the quarries, and escaped unto Seirath",
-   "God preserving those who do his will, covering their flight",
-   "the LORD shall preserve thy going out and thy coming in (Ps. 121:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he was come to Seirath in the tribe of Ephraim."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: him blowing a trumpet, and Israel going down with him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he blew a trumpet in the mountain of Ephraim, and the children of Israel went down with him... and he before them",
-   "God's deliverance stirring his people to rise and follow",
-   "blow ye the trumpet in Zion... gather the people (Joel 2:15-16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he said this to encourage them, putting himself at their head, ready to expose his own life."
+    "prevalence": "single",
+    "summary": "Gill explains how the murderer got clear. The servants' long waiting gave him room to get out of reach of pursuers; or else, even after they had opened the doors and found the king dead, they were in confusion and had no suspicion that Ehud had killed him — the dagger being enclosed in the wound and little or no blood issuing, since it was closed up with fat — so that they supposed an accidental fall from his seat, and may have called the physicians in to use their skill if there were hope of recovery, all which prolonged the time and facilitated the escape."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "The seizure of the fords Clarke reconstructs as a race. The Moabites on the western side of Jordan, hearing of Eglon's death, were very likely panic-struck and tried to escape over the river at the fords near Jericho when Ehud's trumpet sounded, meaning to reach their own country on the east; but Ehud and his men seized the only pass by which they could get away, and slew ten thousand of them in the attempt — and the fords were doubtless the place where Israel had crossed Jordan under Joshua."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: they took the fords of Jordan."
+    "summary": "Ellicott adds that it is dangerous to intrude on an Oriental king's privacy, and describes the lock they had at last to open: the ancient key was a bar of wood, hooked at the end, which passed through a hole in the door and caught the bolt inside. On the taking of the fords he makes the point strategically: they were few and far apart, the ravine through which the river flows forms a natural barrier to Western Palestine, and by securing them Israel cut the Moabites off from all succour, the rapidity of Ehud's movements having rendered escape impossible. What followed he calls a massacre of vengeance, like the Sicilian Vespers, or that of the Danes on St. Brice's day; and he notes that the word used of the slain is the word used of Eglon's fatness, so that the narrative ends, as it began, with a half-humorous allusion to the well-fed carcases of those who lay dead along the shore of the river. On the morality of the deed Ellicott will not stop where the narrative does. Ehud's courage, capacity and readiness to sacrifice himself for his country were thoroughly noble, but the act by which he achieved his end was unjustifiable, and to quote his example in defence of assassination is a gross abuse of Scripture. Those who defend the murder assume that the divine call to Ehud sanctioned, and possibly even suggested, the means by which it was accomplished; but such inferential exegesis undermines the very bases of morals, and it is not surprising that when adopted it is liable to the grossest abuse and made to cover the most horrible crimes. He gives two instances from the same century: when Jacques Clement asked whether a priest might kill a tyrant he was told it was not a mortal sin but only an irregularity, and when Pope Paul the Fifth heard of the murder of Henri IV he said that the God of nations did this, because he was given over to a reprobate mind. If it has always been true that the devil can quote Scripture for his purpose, he has done so not rarely by the lips of those who professed to teach it — worse than the dagger, says Professor Cassel, is such doctrine. Keil places the refuge as nearly as he can: Seirah is never mentioned again, and by its etymology was a wooded region, of whose situation all that can be decided is that it must be sought not near Jericho but upon the mountains of Ephraim."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "Follow after me: for the LORD hath delivered your enemies the Moabites into your hand... and took the fords of Jordan",
-   "the leader going before in faith, the victory claimed beforehand",
-   "if God be for us, who can be against us? (Rom. 8:31)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: these were sent into Israel to keep it in subjection, or had settled there for their convenience and profit; there escaped not a man."
+    "voice": "Charles Ellicott",
+    "observation": "Ellicott holds that Ehud's deed, however noble his courage and self-sacrifice, was unjustifiable, and that the defence of it by inference from his divine call undermines the very bases of morals — a form of reasoning which has in fact been used to excuse assassination in later ages."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "they slew of Moab at that time about ten thousand men, all lusty, and all men of valour; and there escaped not a man",
-   "the complete victory God gives over the mightiest foe",
-   "the strength and valour of the foe availing nothing against his hand"
+   "Ehud escaped while they tarried, and passed beyond the quarries",
+   "he blew a trumpet in the mountain of Ephraim",
+   "they took the fords of Jordan toward Moab"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Moabites in the land of Israel were broken, so weakened they could not bring Israel into subjection again for a long time; the land had rest eighty years."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So Moab was subdued that day under the hand of Israel. And the land had rest fourscore years",
-   "the abundance of God's mercy, a long and rich peace",
-   "great peace have they which love thy law (Ps. 119:165)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "31": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "31",
+  "pericope_label": "Shamgar slays six hundred Philistines with an ox goad",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: after the death of Ehud, when Israel was in distress again, Shamgar was raised up of God to be a judge and deliverer; he slew six hundred Philistines with an ox goad."
+    "prevalence": "single",
+    "summary": "Of Shamgar almost nothing is known, and Gill says so plainly: after the death of Ehud, when Israel was in distress again from another quarter, this man was raised up of God to be a judge and deliverer, but who he was, and who his father, and of what tribe, we nowhere else read."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the deliverance against the distress it relieved, which Deborah afterwards described by saying that in the days of Shamgar the highways were unoccupied: the country next the Philistines was so infested with plunderers that people could not travel the roads in safety but were in danger of being robbed, nor durst they dwell in the unguarded villages, but took shelter in the fortified cities. It is probable that Shamgar was following the plough when the Philistines made an inroad upon the country, and God put it into his heart to oppose them; the impulse being sudden and strong, and having neither sword nor spear to do execution with, he took the instrument next at hand and with it killed so many hundred men and came off unhurt. God can make those eminently serviceable to his glory and his church's good whose extraction, education and employment are very mean and obscure, for he that has the residue of the Spirit could, when he pleased, make ploughmen judges and generals, and fishermen apostles. And it is no matter how weak the weapon is if God direct and strengthen the arm: an ox-goad, when God pleases, shall do more than Goliath's sword, and sometimes he chooses to work by such unlikely means that the excellency of the power may appear to be of God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "What an ox-goad was Clarke describes from Maundrell, who measured several in Palestine and Syria. In ploughing they used goads of an extraordinary size, about eight feet long and at the bigger end six inches in circumference, armed at the lesser end with a sharp prickle for driving the oxen and at the other with a small spade of iron, strong and massy, for cleansing the plough of clay; and in the hands of a strong and skilful man such an instrument must be more fatal than any sword. Clarke adds that Homer shows the ox-goad used the same way before this time: in the address of Diomed to Glaucus, Lycurgus drives the nurses of the frantic god from Nyssa's heights, smiting them with his murderous goad — the fable meaning that Lycurgus, king of Thrace, finding his subjects addicted to drunkenness, proscribed the vine and instituted agriculture in its stead, so that the thyrsi were expelled by the ox-goad; and the siege of Troy, by the best chronologers, fell within the time of the judges."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott gathers what little there is. He is mentioned here alone and alluded to once in Deborah's song; there was a Beth-anath in Naphtali, but he could hardly have belonged to northern Israel; and since neither his name nor his father's is Jewish, it has been conjectured he may have been a Kenite, a conjecture confirmed somewhat by his standing next to Jael in the song. Shamgar means the name of a stranger. He notes the Thracian story of Lycurgus chasing the Bacchanals with an ox-goad, and adds that the Athenians, in their painting of Marathon, represented the gigantic rustic Echetlus, supposed to have slain so many Persians, with his ploughshare. Being disarmed, he observes, the Israelites could find no more effective weapon, disarmament having been the universal policy of ancient days; and the same want later left Samson with nothing better than the jawbone of an ass. Keil confirms the sense of the term, which occurs nowhere else, from the Rabbins and the ancient versions, as an instrument with which oxen were trained and driven, the etymology agreeing, since the same verb is used of the training of a young ox."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Shamgar the son of Anath, which slew of the Philistines six hundred men with an ox goad: and he also delivered Israel",
-   "God working great deliverance by the humblest of means",
-   "there is no restraint to the LORD to save by many or by few (1 Sam. 14:6)"
+   "after him was Shamgar the son of Anath",
+   "which slew of the Philistines six hundred men with an ox goad",
+   "and he also delivered Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  }
 }
