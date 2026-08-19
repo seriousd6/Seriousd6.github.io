@@ -1,468 +1,443 @@
 {
  "1": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "I commend unto you Phebe our sister, a servant of the church at Cenchrea",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes 'our sister' as a relation not natural but spiritual, and reports from the subscription that Phebe carried the letter. Calvin dissents from the whole technical reading of her title: the word does not necessarily prove an office, being used often of anyone who does service and contributes help to others; he grants that Origen and Chrysostom read it of an office, and that an order of the kind did arise, but insists that this belongs to the times after the apostles, so that there is no reason to believe Phebe belonged to it. What she was, on his account, was a woman of wealth and influence carrying on business that took her to Rome, and a great helper of the cause and of Paul himself. He ends by tracing the later degeneration of the office into the idle order of nuns, so fallen away from its beginning that between some sanctuaries of chastity and a common brothel there is no difference at all."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the relation as spiritual, adding that Christ and his apostles had some of their best friends among devout women, and guesses that the church met at Phebe's house. On the office he is firm about its limit: the service was one of charity and hospitality, and such women were not suffered to preach to congregations."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the deaconesses attending female converts at baptism, instructing the catechumens, visiting the sick and those in prison, and performing whatever offices for the female part of the church could not with propriety be performed by men; they were chosen from the most experienced, ordinarily widows who had borne children, and were ordained by imposition of the bishop's hands. He traces the order's extinction in the Latin Church by the eleventh century and its survival among the Greeks until the twelfth. Wesley states the office flatly, that in the apostolic age grave and pious women were appointed deaconesses in every church."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this chapter consists chiefly of commendations and salutations, beginning with the former; it was usual to give letters of commendation for a member of one church to another, and Phebe (by the subscription of the epistle) was the bearer of this letter; Paul commending Phebe, a sister and a 'servant' (diakonos) of the church at Cenchrea (the port of Corinth) — the question whether this denotes a formal office (a deaconess, ministering to the women, the sick, the poor) or generally a faithful servant; the honour given to a faithful woman who served the church, the prominence of women in the labour of the early church (Phebe, Priscilla, Mary, and others)."
+    "summary": "Robertson notes that the verb Paul uses is the regular word for letters of commendation, that this verse and the next constitute the whole recommendation, and that her name means bright or radiant; he rests the technical sense of deaconess chiefly on the addition of the words 'of the church', which turns a general description into a designation. Ellicott would keep the technical term and translate deaconess, calling this the first mention of women-deacons, whose necessity would make itself felt wherever women were kept in the stricter seclusion usual in Greece and parts of the East. Barnes infers from the earnestness of the commendation that Phebe carried the letter, which fixes the place of writing at Corinth, and presses one absence hard: the name of Peter does not occur in the catalogue, which he calls conclusive evidence against the Papists that Peter was not then known by Paul to be in Rome. He cites the Apostolical Constitutions for the direction to ordain a deaconess faithful and holy for the ministries toward the women, and Pliny's letter to Trajan for the two maid-servants called ministrae whom he put to the torture, but insists that they were never regarded as an order of ministers."
    }
   ],
   "debates": [
    {
-    "question": "Is Phebe 'a servant (diakonos) of the church' a formal deaconess or a general servant?",
-    "sides": [
+    "question": "Is the word rendered 'servant' here a title of office, so that Phebe was a deaconess?",
+    "positions": [
      {
-      "position": "A formal office (deaconess), ministering to the women, sick, and poor",
+      "position": "yes, and the technical term should be kept in translation; this is the first mention of women-deacons",
       "holders": [
-       "many"
+       "Charles Ellicott",
+       "A.T. Robertson",
+       "John Wesley",
+       "Adam Clarke",
+       "Albert Barnes"
       ]
      },
      {
-      "position": "Generally a faithful servant who ministered to the church",
+      "position": "no; the word need mean no more than one who does service, and the order arose only after the apostolic times",
       "holders": [
-       "others"
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Barnes",
+    "note": "reads the absence of Peter's name from the whole catalogue as conclusive evidence against the Papists that Peter was not then known by Paul to be at Rome"
+   }
+  ],
   "themes": [
    "I commend unto you Phebe our sister",
-   "a servant of the church which is at Cenchrea",
-   "the honour given to a faithful woman",
-   "letters of commendation"
+   "whether the title servant here names an office",
+   "the deaconess and the limits of her work",
+   "the absence of Peter from the catalogue"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "2": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-4",
+  "pericope_label": "Receive her in the Lord; greet Priscilla and Aquila, who laid down their own necks",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the request as asking that they receive her into their houses and their hearts, and admit her to church fellowship as one belonging to the Lord. On the precedence of the wife he will have none of the explanations offered: her being named first is without design, and he appeals to the rabbinic rule that there is neither first nor last in the Scriptures, strict order being often inverted with nothing depending on it, so that the reasons commonly assigned, that she was converted first or had more zeal, are uncertain and impertinent. Calvin reads the precedence the other way, as honour done deliberately, and turns it back on the apostle: the modesty of the holy man shines out here, for he disdained not to have a woman as his associate in the work of the Lord, nor was he ashamed to confess it. On the couple's danger he thinks the occasion was the insurrection at Corinth, and lingers over the house that follows, since Paul could not have more splendidly adorned their household than by giving it the title of a church &mdash; rejecting the reading of some of the Fathers, that the family being all religious was itself the church, as inconsistent with the state of things at the time, when believers had no temples and private houses were their churches."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supposes Phebe was known for entertaining the preachers who came to Cenchrea, prefers the reading Prisca to the diminutive Priscilla, and confesses that on the occasion of the risked necks he can do no more than guess. Wesley presses why the Gentile churches join in the thanks: they owed their founder to the couple's courage."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul recommends that they receive Phebe in a kind and friendly manner — into their houses, their hearts' affections, their meetings and fellowship — as one in the Lord and for his sake; receive her in the Lord, as becometh saints, and assist her in whatsoever business she has need, for she hath been a succourer (helper, patroness) of many and of Paul himself — the hospitable reception and practical help due a fellow-saint (the welcome befitting holy people, with love and honour), grounded in her own faithful succour of others (the kindness returned to the kind, the mutual care of the body), Phebe a patroness/benefactor of the church."
+    "summary": "Barnes explains that the word rendered succourer properly means a patron or protector, applied by the Greeks to one who took up the cause of others, and especially to one who managed the cause of strangers before the courts; an honourable appellation, which applied to Phebe will mean that she had received Christians into her house and ministered to the sick. He takes the laying down of the neck from the block and the axe and treats it as figurative for hazarding life, the occasion being unknown. Robertson notes that the feminine form of 'succourer' is old and rare, occurring only here in the New Testament and not at all in the papyri, that Paul's word for assisting her is the very one he uses of the help the Lord gave him at his trial, and that the verb for laying down the neck is used in this sense only here; he observes that Prisca is named first everywhere save in two places, which shows her the more prominent, and suggests she may have been a noble Roman lady married to a Jew of Pontus who worked at tents. Ellicott makes the succour an exercise of her office as deaconess, guesses that Paul's own share in it came during an illness, calls the wife's precedence remarkable and infers that she was the more active and conspicuous, and inclines to the tumult at Ephesus as the occasion of the danger."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret draws a lesson from the place: Cenchrea being only a large village of Corinth, we may admire a gospel which in so short a time had filled not the towns only but the villages, and raised there a church great enough to have a woman serving as deaconess; she received Paul into one house for a short time, and he has opened the whole world to her."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why is Prisca named before her husband?",
+    "positions": [
+     {
+      "position": "because she was the more active and conspicuous of the two, and perhaps a noble Roman lady",
+      "holders": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "deliberately, as honour &mdash; and as a mark of Paul's modesty in owning a woman for his associate",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "without design at all; strict order is often inverted in Scripture and nothing depends on it",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "receive her in the Lord, as becometh saints",
-   "assist her in whatsoever business",
-   "she hath been a succourer of many",
-   "the care due a fellow-saint"
+   "receive her in the Lord as becometh saints",
+   "a succourer of many, and of myself also",
+   "why the wife is named before her husband",
+   "they laid down their own necks for my life"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Priscilla (the wife) is sometimes named before her husband Aquila (as here), sometimes after — for, as the Jews say, there is neither first nor last in Scripture, strict order not always observed; Paul greeting Priscilla and Aquila, his helpers (fellow-workers) in Christ Jesus — the honoured couple who laboured with Paul (tentmakers with whom he lodged at Corinth, Acts 18:2-3, who instructed Apollos more perfectly at Ephesus, Acts 18:26); the partnership of husband and wife in the service of Christ, the wife often named first (perhaps for her prominence, zeal, or gifts), the honour to the fellow-labourers."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Greet Priscilla and Aquila",
-   "my helpers in Christ Jesus",
-   "the fellow-labourers honoured",
-   "the partnership of husband and wife in service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'laid down their necks' means they exposed themselves to great danger to save the apostle's life (the allusion to execution by beheading, one offering his neck for another) — not literally done but they risked their own lives for him; Priscilla and Aquila risking their lives for Paul's, and not only he but all the Gentile churches giving them thanks — the costly devotion of the couple (who hazarded their own lives), and the gratitude of the whole Gentile church (for in saving Paul they served all the churches he laboured for, the service multiplied), the example of devotion that ventures all for the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who have for my life laid down their own necks",
-   "not only I give thanks, but all the churches",
-   "the costly devotion",
-   "gratitude of the whole church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Chrysostom",
-   "John Gill"
+   "John Gill",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "5-7",
+  "pericope_label": "The church in their house; Epenetus the firstfruits; of note among the apostles",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill holds that Junia should be read Junias and thinks Andronicus and Junia both men, against Grotius's guess that they were husband and wife; he notes that many copies read that Mary laboured on you rather than us, and thinks the saints at Rome the likelier objects. Calvin agrees that the copies favour Asia over Achaia, suggests with Clarke that if Achaia stands Epenetus may have belonged to the household of Stephanas, and observes that whoever is first called in time has a prerogative of honour &mdash; but keeps it only when the end answers to the beginning. On the last question he disagrees flatly with the English commentators: the words can hardly admit any other meaning than that Andronicus and Junia were apostles, not of the first order established in the twelve, but in the wider use by which Barnabas is so called, of those who planted churches by carrying the doctrine of salvation from place to place."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke insists on the plain sense of the phrase about the church in their house: in these primitive times no such places existed as those we now call churches, the word signifying the congregation and not the building. He reports that Asia is the reading of the chief manuscripts and that Griesbach admitted it, thinks Junia probably a woman and would render the next word relatives rather than kinsmen, and lets the obscurity about Mary stand as its own commendation, since her works, hidden from men, are with God. Wesley draws a sharper conclusion from the domestic church: as yet the Christians at Rome had neither bishops nor deacons, so far were they from any shadow of papal power, and there seems to have been in the whole city but this one domestic church."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott says we ought certainly to read Asia, the parallel in the Corinthian letter having corrupted this one, and takes the shorter way with Mary's labour, that the readers knew what Paul meant and it is useless to conjecture. On the disputed phrase he holds the balance: judged by itself it would more naturally mean distinguished as apostles, and the title was not confined to the twelve, since James the Lord's brother and Barnabas both bear it &mdash; yet on the whole he thinks it best to render, highly esteemed by the apostolic circle. Barnes argues at length that Andronicus and Junia were not apostles, urging that there is no account of their appointment, that Paul would have written 'distinguished apostles' had he meant it, and that the office existed to bear witness to the resurrection, which they are nowhere said to have done; all the phrase implies is that they were known to the apostles and honoured by them, and he alone takes 'kinsmen' of actual relatives. Robertson notes that the early Christians had no church buildings and that the Roman Christians probably had several such houses."
+   },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom rebukes those who hasten over this part as superfluous (as they do the genealogy in the Gospel), thinking a catalogue of names yields no good — but the gold-founders are careful even of the little fragments, and there is gold here too, in the honour to these saints; Paul greeting the church in Priscilla and Aquila's house (the household congregation meeting in a believer's home, the early house-churches before church buildings) and Epaenetus, the firstfruits of Achaia to Christ (the first convert of the region, the earnest and pledge of the harvest, dear to the apostle) — the honour to the saints in the list, the value of these names."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the church that is in their house",
-   "Epaenetus... the firstfruits of Achaia",
-   "the household church",
-   "the honour to the first convert and the saints"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: some copies read 'on you,' and it seems likely the persons on whom this good woman bestowed so much labour, and to whom she was serviceable, were the saints at Rome where she lived, rather than the apostle and his companions; Paul greeting Mary, who bestowed much labour on the church — the honour to a woman who laboured much in the service of the saints (the diligent, abundant labour of a faithful sister, recorded and honoured by the apostle), the prominence of women's labour in the early church (Mary, like Phebe and Priscilla)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Greet Mary",
-   "who bestowed much labour on us",
-   "the honour to a faithful sister",
-   "the prominence of women's labour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Andronicus and Junia were Paul's kinsmen according to the flesh (perhaps of the same tribe and family), fellow-prisoners (having suffered imprisonment for the gospel), of note among the apostles, and in Christ before him; the honoured pair distinguished in the apostolic circle and early in the faith — the debates noted: whether 'Junia' was a woman (the more natural reading of the name, favoured by the early church) or a man ('Junias,' a contracted form), and whether 'of note among the apostles' means they were themselves apostles (in the wider sense) or were well-known to and esteemed by the apostles."
+    "summary": "Chrysostom defends the passage against its readers: many who seem extremely good men hasten over this part of the epistle as superfluous, because it is a catalogue of names &mdash; yet goldsmiths are careful even of the little fragments, while these pass over great cakes of gold, and it is possible even from bare names to find a great treasure. Theodoret takes the household church as evidence of their piety, that they instructed their household in virtue and performed the sacred rites within their walls, and is the most emphatic on the disputed phrase: they are of note not among the disciples but among the teachers, and not among ordinary teachers but among the Apostles. He ends by admiring the humble-mindedness of the apostle in owning that they were in Christ before him."
    }
   ],
   "debates": [
    {
-    "question": "Was Junia a woman, and were they apostles?",
-    "sides": [
+    "question": "Does 'of note among the apostles' mean that Andronicus and Junia were themselves apostles?",
+    "positions": [
      {
-      "position": "Junia a woman (the natural form of the name, favoured by the early church), and 'of note among the apostles' meaning notable apostles in the wider sense",
+      "position": "yes, in the wider use of the title by which Barnabas is also called an apostle",
       "holders": [
-       "many, the early church"
+       "John Calvin",
+       "Theodoret of Cyrrhus",
+       "A.T. Robertson"
       ]
      },
      {
-      "position": "Junias a man (contracted form), and/or 'of note among the apostles' meaning well-known to and esteemed by the apostles",
+      "position": "no; the phrase implies only that they were well known to the apostles and honoured by them",
       "holders": [
-       "others"
+       "Albert Barnes",
+       "Adam Clarke",
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Wesley",
+    "note": "reads the single house-church at Rome as proof that the city then had neither bishops nor deacons, and so no shadow of papal power"
+   }
+  ],
   "themes": [
-   "Andronicus and Junia, my kinsmen, and my fellow-prisoners",
-   "of note among the apostles",
-   "in Christ before me",
-   "the early, suffering saints honoured"
+   "the church that is in their house",
+   "the firstfruits of Achaia or of Asia",
+   "of note among the apostles"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "8": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "8-11",
+  "pericope_label": "Amplias, Urbanus, Stachys, Apelles, and the households of Aristobulus and Narcissus",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill observes that Paul loved Amplias not for kindred or riches but for the Lord's sake, and that Urbanus has since been taken by many popes &mdash; few of whom, he remarks, have deserved the character given here of a helper in Christ. He reports that Origen doubted whether Apelles was not Apollos, and answers that had it been so Paul would surely have said more of so eminent a preacher, besides that Apollos did not live at Rome; on the name's nationality he parts from Ellicott, insisting that Horace means not a circumcised Jew in general but a particular person of that name. Calvin takes the identification of Narcissus and makes it preach: he was notorious for many crimes, and the more wonderful was the goodness of God which penetrated that impure house &mdash; not that Narcissus himself was converted, but that a house which was like hell should be visited by the grace of Christ, so that servants need not wait for their masters, but every one ought to follow Christ for himself. He closes with two observations: that no splendid titles appear here, all whom Paul names being the obscure and ignoble at Rome, and that it would have been unbecoming to pass Peter by in so long a catalogue."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses the commendation of Apelles as a man who had given the highest proofs of the depth of his religion, agrees that Aristobulus and Narcissus were probably dead, which is why only their households are greeted, and that Aristobulus may have been an unconverted Roman of distinction with Christians among his slaves; but on Narcissus he demurs, seeing no reason to suppose the freedman named by Suetonius and Tacitus is the person Paul designed. Wesley reads the added clause, those who are in the Lord, as showing the families divided and the faithful only a few."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: a Roman name (Ampliatus in some copies); the apostle had a singular affection for him, and that not on any external account (natural relation, riches, or honour) but in the Lord; Paul greeting Amplias, his beloved in the Lord — the spiritual affection of the apostle grounded not in worldly ties but in their common union with Christ ('in the Lord' both the sphere and the reason of the love, the union the bond, the love because of Christ), the affection for perhaps an obscure believer (the name common among slaves/freedmen) — the love that regards worth in Christ regardless of station."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Greet Amplias",
-   "my beloved in the Lord",
-   "the spiritual love of the saints",
-   "grounded in union with Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Ellicott and Robertson note that Amplias is a contracted form of Ampliatus, which the oldest manuscripts read, and that the name recurs in connection with the imperial household; so does Urbanus, a common slave name meaning city-bred, and Stachys, a Greek word for an ear of grain which Ellicott finds in the inscriptions as a court physician's name. Ellicott takes Horace's well-known phrase as using a typical Jewish name, identifies Aristobulus as a grandson of Herod the Great whose household may have passed to the emperor by bequest and Narcissus as the famous freedman of Claudius whose household would have passed by confiscation, and concedes the identification falls short of certain. Barnes glosses the commendation of Apelles as one approved and beloved by Christ, and Robertson as the tried and true, reporting Lightfoot to the same effect on Aristobulus."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Urbane a Roman name, called 'our helper in Christ' (a fellow-labourer, some conjecturing a pastor of the church at Rome); Paul greeting Urbane, his (and the church's) helper in Christ ('our helper' the common fellow-worker, not Paul's only), and Stachys, his beloved (the dear fellow-believer) — the honour to those who help in the labour of the gospel and the affection for the beloved saints (the labour, Urbane the helper, and the love, Stachys the beloved, of the body, the service and the affection)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret makes the point compactly, that to be called beloved in the Lord is no slight praise but a demonstration of a man's excellences, and that Urbanus is honoured higher still, as a helper in the preaching and in the sufferings for Christ's sake; on Apelles he calls the commendation a testimony of the highest virtue, since to have no alloy of dross is the summit of excellences. He too reads the clause about those who are in the Lord as showing the families divided."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "Salute Urbane, our helper in Christ",
-   "Stachys my beloved",
-   "the honour to the fellow-helper",
-   "the affection for the beloved saint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Origen wondered whether Apelles was the same as Apollos, but had he been intended Paul would have said more (Apollos so eminent); the character 'approved in Christ' very considerable; Paul greeting Apelles, approved in Christ (tried, tested, and found genuine in the faith, perhaps through persecution or temptation, 1 Peter 1:7, 'the trial of your faith'), and the believers of Aristobulus' household (his servants or family members who believed) — the honour to a tried and approved believer (the proved, genuine faith) and the notice of the saints in a household (the gospel reaching the family/servants)."
+    "voice": "Calvin",
+    "note": "turns the identification of Narcissus into a doctrine of grace: a house which was like hell was visited by the grace of Christ, so that servants need not wait for their masters but every one must follow Christ for himself"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
+   "names from the imperial household",
    "Apelles approved in Christ",
-   "them which are of Aristobulus' household",
-   "the honour to a tried believer",
-   "the household saints"
+   "the households of Aristobulus and Narcissus"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Herodion was Paul's kinsman (of the same nation, tribe, or family); Clarke: probably another relative of the apostle; Paul greeting Herodion, his kinsman (both a relative by blood and a fellow-believer, the natural kinship crowned by the spiritual), and those of Narcissus' household 'which are in the Lord' — the careful qualification (only those of the household who were believers, not the whole household, some of whom may not have believed) — the gospel reaching households in part (some members believing, some perhaps not), the honour to the kindred and household saints."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Salute Herodion my kinsman",
-   "the household of Narcissus, which are in the Lord",
-   "the kinsman in the faith",
-   "the gospel among households"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "12-14",
+  "pericope_label": "Tryphena and Tryphosa, Persis, Rufus and his mother, and the brethren with them",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill denies flatly that the labour of Tryphena and Tryphosa can mean labouring in the word or in the public ministry of it, since the apostle forbade that and would not then commend them for it; he makes it their usefulness with their purses, in relieving the poor and supplying the ministers. On Rufus he arrives with Ellicott at the sense of an eminent Christian of the highest form, and recalls that Mark's Gospel describes Simon of Cyrene as the father of Alexander and Rufus. He reports the contrary tradition, that Hermas was brother of Pope Pius the First and author of the Shepherd, but grants that all of it is uncertain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke will not have the women's labour restricted: we learn from the verse, he says, that Christian women as well as men laboured in the ministry of the word, and many have spent much useless labour in endeavouring to prove that these women did not preach &mdash; a woman might prophesy if her head were covered, and whoever prophesied spoke to edification, exhortation and comfort, than which no preacher can do more; if women thus prophesied, then women preached. He adds a limit, that there is much more implied in the Christian ministry, of which men only, and men called of God, are capable. On Rufus he argues from usage that the word often means choice or excellent, and on the mother denies she was Paul's own, explaining that among the ancients whoever acted a kind and instructing part to another was styled father or mother of that person, and quoting Terence: thou art his father by nature, I by instruction. He lays down the sounder rule about the last names, that it is in vain to look for identity of persons in similarity of names. Wesley takes Tryphena and Tryphosa for sisters and draws the pastoral point, that it could not but encourage the poor to be saluted by name, who perhaps did not know the apostle had heard of them, and that while he forgets none who are worthy, he adjusts his salutation to the degrees of worth."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Tryphena and Tryphosa were women (said to be noble women of Iconium whom the apostle converted), their names Greek; Paul greeting Tryphena and Tryphosa, who labour in the Lord, and the beloved Persis, who laboured much in the Lord — the honour to faithful women who laboured in the Lord's work (the present labour of two and the abundant past labour of another, the labour 'in the Lord' for his cause and service), the degrees of labour (the present labour and the 'much' labour), the prominence of women's labour in the early church (like Phebe, Priscilla, and Mary)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Tryphena and Tryphosa, who labour in the Lord",
-   "the beloved Persis, which laboured much in the Lord",
-   "the labouring women honoured",
-   "labour in the Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
+    "summary": "Barnes takes a middle course on the women's labour, that they performed the office of deaconesses or ministered to the sick, and by example and perhaps instruction laboured to spread Christianity in their proper sphere; on Rufus he reads election, rendering elect in the Lord, and calls the mention of the mother an instance of Paul's delicacy. Robertson answers as briefly, not the elect but the select; he takes Tryphena and Tryphosa for sisters, possibly twins, both names coming from the verb to live luxuriously, and notes that Persis is not called Paul's beloved but the beloved of the whole church. He says of Hermas simply that he is not the author of the Shepherd, and takes the brethren who are with them for another company of the faithful. Ellicott observes that Hermas, Patrobas, Hermes and the names following all occur in inscriptions relating to the imperial household, and that without identifying individuals, which would be precarious, one may note the coincidence with the mention of Caesar's household in the letter to Philippi."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Rufus a Roman name; some have thought this the same Rufus who was a son of Simon of Cyrene (who carried Christ's cross, Mark 15:21), which is not unlikely; Paul greeting Rufus, 'chosen in the Lord' (either chosen/elect generally, or choice, eminent, distinguished in the Lord, a select believer), and his mother whom Paul calls 'mine' also — the honour to a choice believer and the tender notice of the motherly woman who had been a mother to Paul (in kindness, care, and love, the spiritual motherhood), the possible touching link to Simon of Cyrene's family becoming believers."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret keeps to the general, that the labour of these women was one of hospitality or fasting or some such virtue, and that Persis has the ampler praise for the ampler zeal. On Rufus he keeps both senses of 'chosen' at once, calling it a most enviable encomium because many are called but few chosen, and puts the matter of the mother best of all: nature made her the mother of Rufus, but respect for her virtue made her the mother of Paul."
    }
   ],
   "debates": [
    {
-    "question": "Does 'chosen in the Lord' mean elect or choice/eminent?",
-    "sides": [
+    "question": "What was the labour for which Tryphena, Tryphosa and Persis are commended?",
+    "positions": [
      {
-      "position": "Either chosen/elect in the Lord, or choice, eminent, distinguished in the Lord (a select, excellent believer)",
+      "position": "labour in the ministry of the word; if women prophesied, then women preached",
       "holders": [
-       "the witnesses"
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the work of deaconesses &mdash; ministering to the sick, and spreading the faith by example and private instruction",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "not the public ministry, which the apostle forbade, but usefulness with their purses in relieving the poor and supplying the ministers",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does 'chosen in the Lord' mean elect, or excellent?",
+    "positions": [
+     {
+      "position": "elect in the Lord",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "not the elect but the select &mdash; a choice or eminent Christian",
+      "holders": [
+       "A.T. Robertson",
+       "Adam Clarke",
+       "John Gill",
+       "Charles Ellicott"
       ]
      }
     ]
@@ -470,499 +445,749 @@
   ],
   "outliers": [],
   "themes": [
-   "Salute Rufus chosen in the Lord",
-   "his mother and mine",
-   "the choice believer",
-   "the motherly woman who cared for Paul"
+   "women who laboured in the Lord",
+   "Rufus chosen in the Lord",
+   "his mother and mine"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the first two names are Greek; these persons, with Herodion before, are noticed in the Roman martyrology as disciples of the apostle (Asyncritus said to be bishop of Hyrcania, Phlegon of Marathon, Hermas of Philippi, of the seventy disciples); Paul greeting Asyncritus, Phlegon, Hermas, Patrobas, Hermes, and the brethren with them — the salutation of a group of believers (perhaps a household or a congregation that met together) and the brethren associated with them — the honour to the saints (named and grouped), the notice even of the unnamed brethren, the fellowship of the saints gathered together."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Asyncritus, Phlegon, Hermas, Patrobas, Hermes",
-   "the brethren which are with them",
-   "the honour to the saints named and grouped",
-   "the fellowship of the company"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "15-16",
+  "pericope_label": "Salute all the saints; salute one another with an holy kiss",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin gathers the history of the rite and then draws the sting. He cites a homily of Chrysostom showing that Christians kissed before partaking of the Supper and then bestowed their alms, and Grotius for the point of it: among the orientals men kissed the mouth only of their equals and gave their hands to inferiors, so that the kiss declared all in the church equal. But it arose from local habit, and binds all nations no more than the washing of feet; Paul's object was not to enjoin a ceremony but to regulate a practice already in use. From the ancient rite, he adds, has come the practice of the Papists in kissing the paten and bestowing an offering &mdash; the first mere superstition, the second serving no purpose but to satisfy the avarice of the priests, if that can be satisfied. On the closing greeting he prefers the narrower view that Corinth is meant, thinking it improbable Paul should send greetings on the mere assumption that every church he had planted wished Rome well. Gill doubts that any outward action is meant at all, treating the phrase as an allusion only and holding that Paul intends sincere goodwill rather than a rite; the word holy distinguishes it both from an unchaste kiss and from a hypocritical one, such as Joab gave Amasa while stabbing him, or Judas when he cried hail master."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says of the last group of names that nothing certain is known, some being so ambiguous that we cannot tell whether they belonged to men or women, and presses at more length than anything else here who is not saluted: Peter, on the Roman reckoning, must have been at Rome; but had he been, Paul would have greeted him first, and would not have named Andronicus and Junia as of note among the apostles while passing the head of the church over in silence. It is a loss of time, he concludes, to refute such groundless pretensions, and very likely Peter never saw the city. On the kiss he adds the reason it ended, which was not abuse but numbers &mdash; the church growing so large the thing became impossible, and the shaking of hands now substituted. Wesley makes the argument about Peter in a sentence: no one in this catalogue was of an eminence comparable to his, so his absence means the whole Roman tradition of episcopal succession fails in its most fundamental article; on the kiss he says the ancient Christians closed all their solemn offices with it, men saluting men and women women."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Philologus a Greek name (a man's, meaning a lover of learning), Julia a woman's name, Roman, probably his wife; Paul greeting Philologus, Julia, Nereus and his sister, Olympas, and all the saints with them — the salutation of another group of believers (perhaps families, with husband and wife, brother and sister) and all the saints associated with them — the honour to the named saints and the comprehensive greeting to all the saints gathered with them (the named and the unnamed, the whole company, the comprehensiveness of Paul's love embracing all the saints)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Philologus, and Julia, Nereus, and his sister, and Olympas",
-   "all the saints which are with them",
-   "the honour to the named saints",
-   "the comprehensive greeting to all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Robertson finds the last names as servile as the rest: Philologus another common slave name, Julia the commonest name for female slaves in the imperial household. He notices what is missing &mdash; the sister of Nereus is greeted but not named &mdash; and makes the unnamed saints who are with them a point of their own: these, the 'and others', constitute the great majority in all our churches; the kiss he calls the near-eastern equivalent of the western handshake. Barnes calls it a salutation practised at all times and particularly in the East, and takes the word holy as guarding against improper familiarity. Ellicott catches a point the others pass over: Paul does not send this greeting himself but tells those assembled at the reading to greet each other, so that it is their own act; he agrees with Clarke that the word 'all' belongs in the closing text, Griesbach having received it on the best manuscripts, and takes Paul to speak for the churches of his founding through Greece and Asia."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Christian salutation a wishing all temporal, spiritual, and eternal happiness to one another, hearty and sincere; the 'holy kiss' alludes to the custom of friends kissing at meeting or parting, in token of love and affection; Paul exhorting the saints to salute one another with a holy kiss (pure, reverent, chaste, the kiss of charity, 1 Peter 5:14, the token of holy, sincere love within the congregation) and conveying the greeting of the churches of Christ — the love among the saints and the mutual communion of the churches (the fellowship between congregations, the one body of Christ)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret says the same as Ellicott, that being absent the apostle salutes them through one another, and is content with the grandeur of the close: from the whole world, so to speak, he salutes the Empress of the world."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the holy kiss a rite enjoined, or a custom regulated?",
+    "positions": [
+     {
+      "position": "a real custom of the churches, which ended not through abuse but through the growth of their numbers",
+      "holders": [
+       "Adam Clarke",
+       "Albert Barnes",
+       "John Wesley",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "a practice arising from local habit, binding all nations no more than the washing of feet; Paul regulates rather than enjoins it",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "not an outward action at all, but an allusion; what is enjoined is sincere Christian goodwill",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Robertson",
+    "note": "makes the unnamed saints greeted with the rest a point of their own &mdash; these, the 'and others', constitute the great majority in all our churches"
+   }
+  ],
   "themes": [
    "salute one another with an holy kiss",
-   "the churches of Christ salute you",
-   "the token of holy love",
-   "the communion of the churches"
+   "whether the kiss binds all nations",
+   "the absence of Peter from the salutations"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "17": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Chrysostom",
-   "John Gill"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "17",
+  "pericope_label": "Mark them which cause divisions and offences contrary to the doctrine ye have learned",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supposes Paul placed the caution here on purpose, amidst the salutations, that it might be the more noticed. Calvin, sternest of them on the men themselves, is the most careful about the principle. He orders the two evils the opposite way from Barnes: Paul names first the effect, divisions, then the cause, offences, for the Gentile Christians by their eating gave offence to the believing Jews, and that offence led to the separation &mdash; the quarrel over meats and days handled earlier in the letter. It is impious, he grants, to divide those who agree in the truth of Christ; but it is shameful sophistry to defend, under pretext of peace and unity, a union in lies and impious doctrines. The Papists have no ground to seek countenance here against the Reformers, for what they impugn is not the gospel of Christ but the falsehoods by which it has been obscured; Paul condemns not all discords but those which destroy agreement in the orthodox faith. The proof lies in the clause about the doctrine they had learned &mdash; for it was the duty of the Romans themselves, before they were taught, to depart from the habits of their fathers."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sees a logic in the order, that having laboured to unite them by endearing salutations, it was not improper to subjoin a caution against those whose principles were destructive of Christian love. He presses hardest on the marking, because the pretences are plausible when the projects are pernicious: do not look only at the divisions and offences, but run up those streams to the fountain; a danger discovered, he says, is half prevented. He names the judaizing teachers who under the Christian name kept up the Mosaic ceremonies, and is nearly as strict as Clarke on the avoiding, bidding them shun all communion, since such men's word will eat as does a canker."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports manuscripts reading 'look sharply after them', and takes the avoiding strictly &mdash; give such men no countenance and no fellowship, and let them have neither kiss of charity nor of peace. Wesley infers plainly that there were such men at Rome also, and reduces the command to avoiding all unnecessary intercourse."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson glosses the verb as keeping an eye on something so as to avoid it, and gives the first of the two evils its literal force, standings apart; Ellicott glosses the second as setting traps for the unwary. Barnes makes the warning the letter's whole burden returning &mdash; peace between Jewish and Gentile converts pressed so upon him that even after the epistle is apparently finished he takes it up again &mdash; and separates the two evils sharply: the one means parties and factions, the other such a course of life as leads others into sin, the Jew forming a party on the pretence of superior holiness, the bold Gentile convert deriding the Jew's scruples and so leading him to sin against conscience. He narrows the avoiding: they were to be avoided as teachers, and the command means no harsh treatment, but that the faithful disregard whatever they said that tended to alienation."
+   },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: how gently Paul exhorts — not in the character of a counsellor but that of a servant, with much respect, calling them brethren and supplicating them ('I beseech you, brethren'); Paul beseeching the brethren to mark (note, observe, be on guard against) those who cause divisions (factions) and offences (stumbling-blocks) contrary to the doctrine they had learned, and to avoid (shun, turn from) them — the warning against false teachers and troublers who divide the church contrary to the apostolic doctrine (identified by their contrary teaching and dividing effect), the protection of the church from the dividers."
+    "summary": "Chrysostom is struck by the manner: Paul exhorts not as a counsellor but as a servant, calling them brethren and supplicating them, and bidding them search such men out thoroughly. He traces the sequence furthest back: division is the devil's weapon and the subversion of the church, for while the body is joined in one he has no power to enter; division comes of opinions contrary to the apostles, and such opinions of slavery to the belly. Theodoret notes that the phrase 'contrary to the doctrine which you have learned' is that of a man who admires the teaching they already had."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How do divisions and offences stand to each other?",
+    "positions": [
+     {
+      "position": "they are two distinct evils &mdash; parties on the one hand, and conduct that leads others into sin on the other",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Paul names the effect first and the cause second: the offence given over meats produced the separation",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "refuses to let the verse forbid all separation: Paul condemns not all discords but those which destroy agreement in the orthodox faith, so the Papists have no ground to plead it against the Reformers"
+   }
+  ],
   "themes": [
    "mark them which cause divisions and offences",
-   "contrary to the doctrine which ye have learned",
-   "avoid them",
-   "the protection of the church from dividers"
+   "which is cause and which effect",
+   "how far the avoiding is to go"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "18": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Cyril of Jerusalem",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "18-19",
+  "pericope_label": "They serve their own belly, and by good words deceive the hearts of the simple",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill says such men preach themselves and not Christ, seeking worldly honour and wealth, and bringing meats and drinks into a kingdom that does not consist of them; he notes that the Romans' known readiness to believe may itself have invited the false teachers, and that having been famous for obedience they would be as notorious for disobedience if they now deserted the doctrine. Calvin marks the difference from honest ministry: the preachers of the gospel have their courtesy too, but joined with honesty, so that they neither soothe men with vain praises nor flatter their vices, whereas impostors indulge men's vices to keep them attached. He turns the following clause against an abuse: we see here what the simplicity commended in Christians is, so that they have no claim to it who count their stupid ignorance of the word of God a high virtue; Paul approves the Romans as teachable, yet would have them exercise wisdom, lest their readiness to believe expose them to imposition."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is fiercest on the men: they intrude into the church to get a secular support, and feed themselves and not the flock &mdash; and when asked whom he means, he answers that he means no soul and no party but such as the description suits, and that whoever is angry has found the cap fits. Wesley divides the two phrases neatly: the good words concern themselves, in great promises, the fair speeches concern you, in praise and flattery; with Clarke he reduces the following verse to a rule &mdash; as knowing as possible in what is good, as ignorant as possible in what is evil."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: such serve not Christ — they preach not him but themselves, seek not his honour but their own things (worldly honour, riches, grandeur), and seek to please men; the dividers serve not Christ but their own belly (their appetites, gain, self-interest, under the guise of religion, the belly the master), and by good words and fair speeches (plausible, smooth, flattering, eloquent) deceive the hearts of the simple (the unwary, undiscerning) — the self-serving motive and the deceptive method of the false teachers (the marks of the deceiver: the self-interest and the smooth words)."
+    "summary": "Barnes generalises the motive, that the authors of parties in church and state alike act for the indulgence of some earthly appetite, to obtain office or property or dominion, and traces the procedure as an art drawn with a master's hand &mdash; first smooth pretences of a love of truth, then an artful mingling of attentions and flatteries; it would have been happy, he remarks, had it been confined to Paul's own times. He says the obedient disposition for which the Romans were famous was just the temper to be imposed upon. Ellicott alone hesitates over the identification: the phrase recalls those who made a god of their belly in the letter to Philippi, but it is not quite clear the same class is meant, selfish indulgence being a common goal to which many diverse errors lead. He then catches what the others miss, that the word rendered simple in the second verse is not the word so rendered in the first &mdash; the first being the freedom from dishonest motives that makes a man an easy prey, the second the settled condition of one who has met evil and remained uncontaminated, the word meaning unmixed and pure, a sense Robertson confirms from its derivation."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theodoret alone names the party, holding it plain from the belly that Paul speaks of the Jews, whose gluttony he perpetually condemns. Cyril widens the matter into a rule, that godliness consists of pious doctrines and virtuous practice, neither acceptable without the other &mdash; for what profit is it to know the doctrines and be a vile fornicator, or to be nobly temperate and an impious blasphemer? He then sorts the deceivers: the Greeks draw men away by a smooth tongue, since honey drops from a harlot's lips; those of the circumcision by misinterpreting the Scriptures; and the heretics disguise the poisoned arrows of their doctrines with the name of Christ, as though with honey."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Theodoret",
+    "note": "alone identifies the party outright, holding it plain from the mention of the belly that Paul is speaking of the Jews"
+   },
+   {
+    "voice": "Clarke",
+    "note": "answers the question whom he means by the description with a challenge: no soul and no party but such as it suits, and whoever is angry at it has found the cap fits"
+   }
+  ],
   "themes": [
-   "serve not our Lord Jesus Christ, but their own belly",
-   "by good words and fair speeches deceive the simple",
-   "the self-serving motive",
-   "the deceptive method"
+   "they serve not our Lord but their own belly",
+   "good words and fair speeches",
+   "wise unto good, simple concerning evil"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the fame of their obedience to the gospel was spread everywhere, commended among all the churches; Paul mentions this as a reason to beware of false teachers, lest they reproach their reputation; Paul rejoicing in the Romans' renowned obedience, yet desiring them to be wise unto that which is good (discerning, skilled in the good) and simple concerning evil (innocent, harmless, unskilled in it, kept pure, Matthew 10:16, 'wise as serpents, harmless as doves') — the wise and innocent saint, the call to wisdom connecting to the warning against the dividers (the wise saint discerns the false teacher, the innocent is not beguiled)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "your obedience is come abroad unto all men",
-   "wise unto that which is good",
-   "simple concerning evil",
-   "the wise and innocent saint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
   "voices": [
-   "John Gill",
-   "Albert Barnes"
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "John Gill"
+  ],
+  "range": "20",
+  "pericope_label": "The God of peace shall bruise Satan under your feet shortly",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin is explicit that the sentence is a promise rather than a prayer &mdash; Paul exhorts them to fight manfully and undertakes that they shall shortly be victorious &mdash; though he reports that most take it the other way, as a petition, the future standing after the Hebrew manner for an optative, and that the verb is found in that mood in some copies. On 'shortly' he insists it is not only the last day that is meant, but that since Satan was then raging as with broken reins the Lord would soon subdue him; he was once conquered by Christ, yet not so as to keep him from renewing the war, and his final defeat does not appear in the middle of the contest. The closing grace he makes a prayer that they might enjoy all the blessings procured by Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the God of peace to be one who neither sends nor favours such disturbers of his church's tranquillity, and the sentence as an undertaking that they shall be given dominion over the great adversary; he reports that several critics take the name Satan as a collective term for all opposers, especially the false teachers just described. He notes that several ancient copies omit the benediction and supposes the scribes thought the words borrowed from the later verse, but refuses the inference, since the apostle may have added a postscript, or two &mdash; and reads this verse as where Paul appears to have meant to conclude the epistle, all after it being appendix. Wesley calls God the author and lover of peace, blessing the discretion just enjoined, and names Satan that sower of tares."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: 'the God of peace' (who promotes peace) shall 'bruise' (subdue, gain the victory over) Satan; the language refers to Genesis 3:15; it denotes Paul's confidence that they would overcome the arts of those sowing discord; Paul promising that the God of peace will shortly bruise Satan under their feet (the assured victory over Satan, the author of the divisions, v.17-18, echoing the first promise/protevangelium of Genesis 3:15, the serpent's head crushed by the seed of the woman, fulfilled in the saints), and pronouncing the grace of the Lord Jesus (the benediction closing the warning, the comfort and the blessing)."
+    "summary": "Barnes, Ellicott and Robertson agree the verb looks back to the first promise in Genesis, Robertson glossing it as to crush or trample underfoot and calling the sentence a blessed promise of final victory; Barnes hovers between promise and prayer, saying it denotes Paul's confidence that they would gain the victory over the arts of those sowing contention, and makes Satan the author of every attempt to promote discord in the church, which is why those who produce divisions are called his ministers. Ellicott hears a man writing amid fightings without and fears within: the Romans have not yet felt the bitterness of divisions, he foresees that they will, and beyond that a time when all shall be hushed and the Great Adversary for ever overthrown; he judges the more correct reading of the benediction to be simply that the grace of our Lord Jesus be with you, and notes that the four principal Graeco-Latin codices omit it here and place it later. Robertson answers the difficulty of 'shortly' in a phrase &mdash; as God counts time, and meanwhile patient loyalty from us."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret states it flatly as petition: having bidden them be on their guard, most opportunely does the apostle beseech God to confound the teacher of all snares and cast him beneath the feet of believers. He gives the sequence its shape: having pointed out the enemy, the apostle points out the Helper, for they who have obtained the divine grace possess what is invincible."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is 'shall bruise Satan under your feet' a promise or a prayer?",
+    "positions": [
+     {
+      "position": "a promise, given to confirm them &mdash; a blessed undertaking of final victory",
+      "holders": [
+       "John Calvin",
+       "A.T. Robertson",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "a petition, the future standing for an optative after the Hebrew manner",
+      "holders": [
+       "Theodoret of Cyrrhus"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "reads this verse as the place where Paul appears to have meant to conclude the epistle, everything after it being a postscript, or two"
+   }
+  ],
   "themes": [
-   "the God of peace shall bruise Satan under your feet shortly",
-   "the grace of our Lord Jesus Christ be with you",
-   "victory over Satan (echoing Genesis 3:15)",
-   "the benediction of grace"
+   "the God of peace shall bruise Satan",
+   "whether the sentence promises or prays",
+   "the grace of our Lord Jesus Christ be with you"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
   }
  },
  "21": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Matthew Henry",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "21",
+  "pericope_label": "Timotheus my workfellow, and Lucius and Jason and Sosipater, my kinsmen, salute you",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill imagines the scene &mdash; the letter just concluding, his friends about him, one saying send my salutation to our friends at Rome, and then a second and a third, Timothy beginning &mdash; and fills in the history: met with at Derbe, his father a Greek and his mother a believing Jewess, circumcised because of the Jews, afterwards the recipient of two letters in which Paul calls him his well-beloved son. Calvin puts the purpose of the salutations that they served partly to foster union between those who were far asunder, and partly to let the Romans know that their brethren subscribed to the epistle &mdash; not that Paul had any need of the testimony of others, but because the consent of the godly is not a thing of small importance."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that Paul elsewhere calls Timothy his son, as an inferior, but here styles him work-fellow, as one equal with him. He takes 'kinsmen' both ways: they are so called not only more largely, as Jews, but as nearly allied to him in blood or affinity &mdash; and he infers from the number of them that Paul must have been of a good family, meeting so many of his kindred in several places. To this he adds the reflection that gives the verse its warmth, that it is a very great comfort to see the holiness and usefulness of our kindred; and he thinks Paul added the salutations to promote fellowship among distant saints, and because the subscribing of worthy names already known at Rome would the more recommend the letter."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke breaks ranks on Lucius and proposes Luke the evangelist, writer of the Acts; on Jason he looks with the rest to the man at Thessalonica who received the apostles into his house at the risk of both property and life, and adds that Sosipater was a Jew by birth who accompanied Paul from Greece into Asia and probably into Judea. Wesley gives without hesitating the reason Ellicott could not find: Timothy had never been at Rome, and so is not named at the beginning, though here he stands before Paul's kinsmen."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: now follow the salutations of the apostle's friends and companions; Timotheus (Timothy) named first — the disciple Paul met at Derbe (Acts 16:1), whose mother was a Jewess and father a Greek; Paul conveying the greetings of his companions — Timothy his fellow-worker (beloved son in the faith, constant companion), and Lucius, Jason, and Sosipater his kinsmen (relatives or fellow-Jews) — the salutations of the faithful companions who were with Paul as he wrote, sending their love to the Roman saints (the fellowship of the workers, the picture of the apostle surrounded by his company)."
+    "summary": "Robertson treats the closing verses as a postscript carrying greetings from Paul's companions at Corinth, takes Sosipater for the longer form of Sopater, and reads 'kinsmen' in the wide sense, that they are all Paul's fellow-countrymen. Ellicott raises a question the others do not and cannot answer it: in the other epistles written while Timothy was present he is joined with Paul in the salutation at the outset, and why his name is absent from the heading of this one we can hardly say &mdash; perhaps he was away when it was begun, or Paul thought a church wholly strange to him should be addressed in his own name alone. On Lucius he is more cautious than the rest, holding the name too common for anything to be asserted positively, and he ties the identification of Jason to the next word, since it would be some slight argument for it if kinsmen were taken in the narrower sense. Barnes notes the prophet and teacher of Cyrene named among the leaders at Antioch and says nothing more is known of him."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret makes the comparison across the four names, that the first has the glory of a share in the work and the others of relationship, but the fellow-worker is far more honourable than the relation."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does 'kinsmen' here mean relatives, or simply fellow-Jews?",
+    "positions": [
+     {
+      "position": "fellow-countrymen, in the wide sense the word bears through this chapter",
+      "holders": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "both &mdash; not only Jews, but men nearly allied to Paul in blood or affinity, which argues he was of a good family",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
    "Timotheus my workfellow",
-   "Lucius, and Jason, and Sosipater, my kinsmen",
-   "the fellowship of the workers",
-   "the companions sending their love"
+   "why Timothy is not named in the letter&rsquo;s heading",
+   "whether kinsmen means countrymen or relatives"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "22": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "22-23",
+  "pericope_label": "I Tertius, who wrote this epistle; Gaius mine host; Erastus the chamberlain",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports the guess that Tertius was Silas, the Hebrew name meaning the same thing, and notes that whoever he was he was the apostle's amanuensis, writing either from Paul's notes or from his mouth. On Gaius he first canvasses the Macedonian at Ephesus and the man of Derbe before inclining to the Corinthian whom Paul baptized, and thinks it likely he is the man to whom John wrote his third epistle, the characters of hospitality and generosity there agreeing well with what is said here."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke objects that if Tertius were Silas it is strange the name he is usually given in Scripture should not have been used here, and disposes of a bolder theory, that Paul wrote in Syriac and Tertius turned it into Greek &mdash; the man says he wrote the epistle, not that he translated it; he adds a doubt the others do not raise, that it is not clear whether the two following verses are the words of Tertius or of Paul. He goes his own way on Gaius and suggests the Macedonian exposed to violence at Ephesus, but says of the host of the whole church that he lodged the apostles and the messengers of the churches besides, so that he must have had property and much love to Christ's cause. On Erastus he describes the work &mdash; he received the tolls and customs and out of them paid the public expenses &mdash; and concludes that if the treasurer is the Erastus who travelled with Paul he cannot have held the office at this time, reporting that several suppose he had formerly held it and still kept the title, though Chrysostom thought he kept the employment too. Of Quartus he does not know whether he was brother to Erastus or to Tertius, and thinks nothing more is meant than that he was a Christian, one of the heavenly family."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Tertius a Latin name; he was certainly an amanuensis (a scribe), who wrote the epistle as Paul dictated it; Tertius, who wrote (penned) the epistle, sending his own greeting in the Lord — the notice of the scribe who took down the apostle's words, allowed to add his own salutation; the honour to the faithful amanuensis (the humble helper included, named in the inspired record), and the glimpse of how the epistle was written (Paul dictating, Tertius writing, as Paul often used an amanuensis, adding the closing in his own hand), the greeting grounded 'in the Lord.'"
+    "summary": "Barnes says Paul employed an amanuensis, then signed his own name and added a salutation in his own hand, as he tells the Thessalonians was his practice in every epistle; he identifies Gaius with the man Paul baptized at Corinth, so esteemed that John afterwards wrote him an epistle, and a wealthy citizen who opened his house for hospitality and worship, and explains that the English word chamberlain suggests the officer with charge of the king's lodgings and wardrobe, whereas the Greek is elsewhere rendered steward and here means the man who presided over the city's pecuniary affairs, and should have been rendered treasurer. Ellicott gives the reason for the autograph twice over, as a mark of personal interest and as a precaution against forgery, and draws the consequence for the letter: the involved and broken style is often to be accounted for by this habit of dictation, followed by revision that was not very punctilious, so that we have the apostle's words as they came warm from his mind. He counts three men named Gaius and thinks the Corinthian likeliest, leaves room for something less literal in the phrase host of the whole church, and observes that the treasurership of such a city would involve a fixed residence, which makes the identification of Erastus difficult. Robertson says the Greek for host means a guest friend and so, as here, a host of strangers, and calls Erastus one of the outstanding men of Corinth."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theodoret makes Tertius one thought worthy of the apostle's instruction, who received through that tongue the outpourings of the Spirit and was bidden write them down; of Gaius he says it is the greatest praise, to have opened one's house to the nurselings of the faith and ministered even to the teachers of the whole world, and of Erastus that Paul calls him treasurer not of the church but of the city."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "draws from the habit of dictation an account of the letter's style: the involved and broken construction reflects dictation followed by revision that was not very punctilious"
+   }
+  ],
   "themes": [
    "I Tertius, who wrote this epistle",
-   "salute you in the Lord",
-   "the honour to the faithful scribe",
-   "the glimpse of how the epistle was written"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Gaius (likely the one Paul baptized at Corinth, 1 Corinthians 1:14) was the apostle's host and of the whole church (his hospitality and generosity well attested, some thinking him the Gaius to whom John wrote his third epistle); Paul conveying the greetings of Gaius his host (and of the whole church, his home open to the apostle and congregation), Erastus the chamberlain/treasurer of the city (a man of civil office among the believers), and Quartus 'a brother' (no office, just a brother in Christ) — the company of saints of various stations (host, official, humble brother), all one in Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
    "Gaius mine host, and of the whole church",
-   "Erastus the chamberlain of the city",
-   "Quartus a brother",
-   "saints of various stations, all one in Christ"
+   "Erastus the treasurer of the city"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this verse placed by the Syriac at the end of the chapter, and wanting in some copies, being (except 'all') the same as v.20; the reason for the repetition may be that the former was written by his amanuensis and this with his own hand, as was Paul's custom in all his epistles (the closing benediction in his own hand as a token of genuineness, 2 Thessalonians 3:17); Paul repeating the benediction — the grace of the Lord Jesus Christ be with all the saints (the apostolic blessing of grace, the sum of all blessing, upon all without exception), the Amen sealing it."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the grace of our Lord Jesus Christ be with you all",
-   "the apostolic benediction",
-   "perhaps in Paul's own hand",
-   "the grace upon all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Gill",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "25-26",
+  "pericope_label": "Now to him that is of power to stablish you, according to the revelation of the mystery",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the instance of the power to be the establishing of God's people in the gospel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says the apostle breathes out his soul in praise, making that the end of his epistle which he made the end of his life. He takes the mystery broadly, as our redemption by Jesus Christ, no vulgar thing hammered out by human wit but the product of the eternal counsel of God &mdash; a mystery the angels desire to look into and cannot fathom, yet of which so much is made plain as will bring us to heaven. On the words rendered since the world began he offers two constructions, either that the mystery was wrapped in silence from eternity, or that through the Old Testament it lay hid in the types of the ceremonial law; and he answers the paradox of a secret made manifest by the prophets by saying that the event has given the best exposition to the prophecies, which being accomplished are explained &mdash; the prophets' preaching was dark in the ages when they lived, but what they left in writing reads otherwise now. Paul calls the gospel his own, he adds, not as its author but because he gloried in it, having his head so full of it that he could scarcely mention it without a digression to set out its excellency."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the doxology is placed by the most reputable manuscripts at the end of the fourteenth chapter, which most critics suppose its proper place. Following Locke and Taylor he narrows the mystery and denies Wesley's account of it: the calling of the Gentiles was declared in general terms by the prophets, and the point on which they gave no information was that they should be admitted without passing under the yoke of the Mosaic law &mdash; a thing he thinks peculiarly revealed to Paul. On the closing phrase he takes the obedience of faith to mean that they might receive circumcision of the heart in place of all Jewish rites. Wesley makes the mystery the calling of the Gentiles, which, plainly as the prophets had foretold it, was still hidden from many even of the believing Jews; on the title everlasting he says a more proper epithet could not be, since a new dispensation infers no change in God, to whom all his works and every variation of them are known from eternity, and adds that it was not barely that the nations might know the gospel, but enjoy it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: God described by his power, the particular instance the establishing of his people (in the gospel and the profession of it, with grace in their hearts and in its exercise); Matthew Henry: Paul solemnly closes his epistle with a magnificent ascription of glory to God; to him who is able to establish the saints according to the gospel and the preaching of Christ, according to the revelation of the mystery kept secret since the world began — the establishing power of God by the gospel (the saints confirmed and settled in the word), and the gospel as the revelation of the mystery (the hidden plan of salvation, especially the inclusion of the Gentiles, long hidden but now made known)."
+    "summary": "Barnes reports that the doxology stands in many manuscripts at the close of the fourteenth chapter but holds its proper place is here; he takes the mystery as the principal doctrines of the gospel, concealed especially from the Gentile world, renders the Greek behind 'since the world began' literally as in eternal times, meaning all past time, and takes the title everlasting of the God who is eternal and therefore unchanged, who concealed this truth but always intended it should be revealed. Robertson calls these closing verses the finest of Paul's doxologies, adds that 'my gospel' means not a book but Paul's message, and observes that Paul conceives God to be in charge of the redemptive work and to give the orders. Ellicott resolves the paradox of the prophets by the syntax: this mystery, through the corroboration it derives from them, has by God's command been made known &mdash; a command he instances in the separating of Paul and Barnabas by the Holy Ghost; he ends by noting that the closing phrase repeats the letter's opening, and that the preposition carries more stress than the English shows, made known so as to reach all nations."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is the mystery that was kept secret?",
+    "positions": [
+     {
+      "position": "our redemption and salvation by Jesus Christ, in the foundation, method and fruits of it",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the calling of the Gentiles, foretold by the prophets but still hidden from many believing Jews",
+      "holders": [
+       "John Wesley",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "not their calling, which the prophets declared, but their admission without passing under the yoke of the Mosaic law",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does this doxology properly belong?",
+    "positions": [
+     {
+      "position": "here, at the end of the letter",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "at the close of the fourteenth chapter, where the most reputable manuscripts place it",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
    "him that is of power to stablish you",
-   "according to my gospel",
-   "the revelation of the mystery, which was kept secret",
-   "the establishing power of God by the gospel"
+   "the mystery kept secret since the world began",
+   "made manifest by the scriptures of the prophets"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the mystery now made manifest in these last days, in which God has spoken by his Son, by whom the doctrines of grace are most clearly revealed; Barnes: now revealed, made known to all nations by the writings of the prophets and the gospel; the mystery, once hidden, now made manifest — by the scriptures of the prophets (intimated and foretold in the Old Testament, now fully revealed), according to the commandment of the everlasting God (by his order and authority, the eternal God whose hidden plan is now revealed in time), made known to all nations (the Gentiles included, the universal proclamation) for the obedience of faith (that all might believe and submit to the gospel)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "now is made manifest",
-   "by the scriptures of the prophets",
-   "made known to all nations",
-   "for the obedience of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "27",
+  "pericope_label": "To God only wise, be glory through Jesus Christ for ever. Amen",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill refers the title to the Father, the only wise God originally and essentially, though not excluding the Son and Spirit, the glory of the whole being ascribed to him through Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke presses the point from the side of the mystery: he alone who is the fountain of wisdom had all this in himself, and glory is due for the wisdom that devised the plan and the goodness that sent Christ to execute it. On the subscription he finds a positive error, since the Greek makes Phebe the writer of the epistle, which the verse about Tertius contradicts; the words are wanting in almost all the ancient manuscripts, the oldest having simply, To the Romans. The closing Amen he observes was seldom added by the inspired writers and is wanting here in almost all the ancient copies, but he defends it in use rather than in text: pious readers would say it on finishing such a letter, expressing their conviction of its truth and their desire that its promises be fulfilled, so that the word is not merely harmless but useful. He ends with the prayer he thinks the epistle has been about &mdash; that the fulness of the Gentiles may be brought in and all Israel saved &mdash; and bids every pious reader say Amen to it. Wesley joins him who is able and the wise God, as Paul elsewhere styles Christ the wisdom and the power of God, and closes on the same word with the same wish."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this may be understood of God the Father, the only wise God — originally, essentially, and infinitely wise (not excluding the Son and Spirit), whose wisdom appears in creation, providence, redemption, and the whole scheme of the gospel; the glory of all to be given to him through Christ as Mediator; Paul closing the epistle with the ascription of glory to God only wise, through Jesus Christ, for ever — the doxology crowning the epistle (the glory ascribed to the all-wise God whose manifold wisdom, Ephesians 3:10, the whole epistle has displayed in the plan of salvation), the glory rendered through Christ the Mediator (all access and praise through him), world without end, the Amen sealing it."
+    "summary": "Barnes explains why wisdom is the attribute singled out: the doxology, interrupted by the parenthesis, resumes here, and wisdom is named because it had been displayed in the plan just described &mdash; in devising it, in adapting it to the renewing of the heart, and in the manner by which all the divine attributes were seen to harmonise; the subscription he calls the addition of another hand, arguing from sense as much as from manuscripts that Paul would not write to inform the Romans his letter was sent by Phebe, whom he had just commended to their kindness. Ellicott gives his longest note to a grammatical difficulty the English version conceals by omitting two words: the Greek runs literally, to the only wise God, through Jesus Christ, to whom be glory for ever, and the relative, if it refers to God, is ungrammatical, while if retained it leaves the opening words without government &mdash; the difficulty being heightened by 'through Jesus Christ', which, cut off from the ascription of glory, yields no satisfactory sense. His conclusion before the evidence is that the relative crept in without warrant, and he then finds one uncial omits it, precisely the oldest and best of all, the Codex Vaticanus, with two cursives; weighing the objection that the words may have been dropped for their difficulty against the tendency of copyists to fall into the familiar phrase, he judges it likeliest that the relative slipped in early and the English version is substantially right &mdash; adding that there are exceptions to the rule that the more difficult reading is to be preferred, and this is perhaps one. He dates the subscription: in its present form it hardly goes back beyond the ninth century, the earliest form, down to the sixth, being simply To the Romans. Robertson settles the textual point briefly: some manuscripts omit it."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "concedes against his own critical instinct that there are exceptions to the rule that the more difficult reading is to be preferred, and that this verse is perhaps one of them"
+   }
+  ],
   "themes": [
-   "to God only wise, be glory",
-   "through Jesus Christ for ever",
-   "the wisdom of God in salvation",
-   "the doxology crowning the epistle"
+   "to God only wise be glory through Jesus Christ",
+   "the relative that may have crept into the text",
+   "the subscription and the closing Amen"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  }
 }

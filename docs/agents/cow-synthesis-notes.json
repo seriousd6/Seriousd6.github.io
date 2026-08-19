@@ -8670,6 +8670,101 @@
       "book": "acts",
       "chapter": "16",
       "note": "Self-graded every entry against the catena. Eleven entries tiling 1-40 exactly: 1-2 650w/7 voices, 3-5 650w/7, 6-8 650w/8, 9-12 650w/7, 13-15 650w/8, 16-18 650w/8, 19-24 648w/7, 25-27 647w/9, 28-31 648w/7, 32-35 650w/8, 36-40 648w/7. Every proposition traced to a named block; no attribution asserted that the source does not carry. Jamieson excluded from entries 1, 6, 13, 19, 25, 32 and 36 as declared residue (John 17-18 material); Cyril of Jerusalem declared SILENT throughout (Catechetical Lectures at keys 18 and 32). Chrysostom is genuine here, homilies on this chapter, and carries the eastern-antiochene school in entries 13-15 and 25-27. School lists in the tags match the voices named in the prose for all eleven entries."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "JFB stride bug, fifteenth confirmation and the first total one. All four JFB blocks in romans 16 are Acts commentary: v2 a six-word fragment on Mark ('his nephew, Col 4:10'), v14 the heading PAUL'S SECOND MISSIONARY JOURNEY Ac 15:41-18:22 with the visitation of the churches and Timothy joining, v20 the Macedonian vision (Acts 16:9), v26 Lydia the seller of purple (Acts 16:14). The donor is a continuous run, Acts 15:41-16:14 — a PRECEDING BOOK, not an early chapter of the same book, which confirms the revised rule that the donor is an earlier position in the commentary VOLUME rather than the same book. Because the material treats Acts and not any verse of Romans 16, note 607's working rule permits no move: JFB is unusable at every key here and is declared in excluded_voices at entries 2, 12, 25."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "27"
+      ],
+      "note": "StudyLight boilerplate tail, nine for nine on both voice and position: Ellicott, at v27, the chapter's last commented key. Ellicott's usable text ends at 'The earliest form of subscription up to the sixth century was simply To the Romans'; after it the harvest carries the navigation strip, copyright statement, BibleSupport credit, StudyLight footer and several kilobytes of CSS. Same signature as 1corinthians 12:31, acts 28:31, leviticus 18:30, leviticus 20:27, acts 23:35, genesis 50 (v26 region), revelation 21:27 and genesis 4:26."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "20"
+      ],
+      "note": "Two Gill defects in one chapter. At v1 his block is truncated mid-sentence in the harvest, ending '...for as it was usual to call ' after only about 180 words, so his comment on Phebe as a member in full communion is cut off; what survives was usable and was used. At v20 his block is a bare cross-reference stub, 'And the God of peace,.... See Gill on ;' with the target reference itself missing — no content at all, so Gill is declared in excluded_voices for that entry. The v20 stub is the more serious kind: it is not a truncation but a dangling pointer, and it leaves the entry with Calvin as its only reformed voice."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "18",
+        "19",
+        "20"
+      ],
+      "note": "Theodoret of Cyrrhus and Cyril of Jerusalem cannot be declared in excluded_voices, even though both names appear in VOICE_LABELS in scripts/synthesis_qa.py. split_voices does not in fact segment their blocks in this harvest: the labels it returns for romans 16:1 are Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, with no Theodoret, and likewise at v20 with no Cyril. undeclarable_voices therefore rejects both 'Theodoret'/'Theodoret of Cyrrhus' and 'Cyril'/'Cyril of Jerusalem' as absent, so a declaration would fail the validator's excluded_voices check. Consequence: their text is silently absorbed into the preceding declared voice's segment for usable_source_words. Where their material is unusable — Theodoret's bare verse-echo at v1, Cyril's displaced blocks at v19 and v20 — the only available course is to leave the voice undeclared and simply not use it. Both remain usable and used as tag voices elsewhere in the chapter, per the corpus convention that maps them to eastern-antiochene."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "21"
+      ],
+      "note": "Note 607's fallback clause exercised twice in one key, and this time the fallback was 'keep it where filed' rather than 'move it'. At v21 both Henry and Calvin write past the verse: Henry's block runs on through vv22-23, treating Tertius the amanuensis, Gaius the host, Erastus the chamberlain and Quartus; Calvin's block is almost entirely the doxology of vv25-27, on the glory ascribed to God alone and the mystery hid for many ages. Neither may move, because the rule requires the source to have a key inside the target span and neither has one: Henry's keys are 1, 17, 21, 25 (none at 22 or 23) and Calvin's are 1, 3-7, 11, 16-21 (none at 25, 26 or 27). Each voice's v21-proper material was used and the displaced remainder left where filed. The practical cost is that the vv25-26 and v27 entries have Gill as their only reformed voice, Calvin being absent from those keys entirely."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "3",
+        "19",
+        "20"
+      ],
+      "note": "Three displacements of the eastern voices, of two different kinds. Theodoret lags by one key: his v1 and v2 blocks are bare verse-echoes and his actual comment on Phebe and Cenchrea — the fine remark that the gospel had filled not the towns only but the villages, and raised there a church great enough to have a woman serving as deaconess — sits under v3, where the quoted lemma is Priscilla and Aquila. That one is recoverable, because Theodoret has keys at v1 and v2 and the entry covering vv2-4 contains v2, so the material was used there. Cyril of Jerusalem is displaced outright twice: his v19 block is catechetical matter on Philippians 4 and Isaiah ('rejoice in the Lord alway... shine, shine, O thou new Jerusalem'), and his v20 block discusses 2 Corinthians 4:4 and whether the god of this world blinded the minds of them that believe not. Neither treats any verse of Romans 16, so neither can move anywhere and both are lost. Only his v18 block is apposite, and it is excellent — godliness consists of pious doctrines and virtuous practice, neither acceptable without the other."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "15",
+        "22"
+      ],
+      "note": "Three reported-voice mentions that a naive ghost check flags as ghosts but that are properly grounded. Chrysostom is named in the prose at entries 1, 15 and 22 although he is not a source voice at those keys — but in each case the naming is a report by a voice that IS a source there, and the report is in that voice's own text: at v1 Calvin grants that Origen and Chrysostom considered Phebe a deaconess; at v16 Calvin cites a homily of Chrysostom showing that Christians kissed before partaking of the Supper and then bestowed alms; at v23 Clarke reports that Chrysostom thought Erastus retained the employment as well as the title. The prose attributes each to the reporting voice, and audit-synthesis-quality reports 0 verses with attributions not groundable in any source corpus. Working rule: a scratch ghost-checker that tests only for the presence of a name should not be trusted to distinguish a false attribution from a reported one."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "16",
+      "note": "Entry-count predictor holds at 16/16. romans 16 has 26 source keys and 41,436 usable source words, with five keys over 2000 (v1 5573, v17 4441, v21 4992, v25 3379, v27 2465) and 20,586 words in the remainder: 5 + round(20586/2500) = 5 + 8 = 13, and 13 entries is what the chapter took. Two keys over 4500 (v1 and v21) each became its own entry as the tiling rule requires. The chapter also carries a genuine gap at v24, the disputed grace-benediction, which is absent from the source; no span crosses it, so v23 closes one entry and v25 opens the next."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "16",
+      "note": "Drafting overshoot, thirteen entries measured. First drafts ran 645 to 981 words against the 650 ceiling: mean 838, median 849, i.e. about 29 percent over — the worst of any chapter in this run, and worse than genesis 4's 3-30 percent. Every entry needed between two and ten trim rounds. The pattern is clearest where a key carries many short glosses on proper names AND one long connected argument: entries 12 (vv15-16, first draft 922) and 22 (vv22-23, 922) and 27 (981) all had that shape. The three-paragraphs-of-three-voices rule did not hold here because a salutation chapter gives eight or nine voices a sentence each on the same name, so a paragraph that fairly represents the field runs to five or six voices rather than three. Revised working rule for a name-list chapter: cap each paragraph at FIVE voices and give only two of them more than a clause; where a textual or grammatical dispute occupies a paragraph (Ellicott at v27, the apostles question at vv5-7), count it as three voices' worth and admit no others."
     }
   ]
 }
