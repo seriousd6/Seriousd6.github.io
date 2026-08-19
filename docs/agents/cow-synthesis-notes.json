@@ -6573,6 +6573,98 @@
       "book": "leviticus",
       "chapter": "25",
       "note": "Drafting arithmetic, confirmed again over ten entries. A grounded item written as a full attributed sentence costs ~90-110 words, so seven items is the number that fits under the 650-word QA ceiling; five items lands near 670 and six near 740, both of which still need trimming. Measured trim passes on this chapter: the eight-item entry took 14 passes, the six-item entries took 4, the five-item entries took 2. The cheapest correction remains dropping a whole item rather than shaving clauses — clause-shaving costs three or four passes to recover the same words and flattens the prose while doing it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson stride-6 residue, THIRTEENTH consecutive chapter and tenth book: keys 3, 9, 15, 21, 27 — offset 3, five members, no gaps. This instance is the strongest evidence yet for the row-pointer theory, because all five blocks are ONE CONTIGUOUS PASSAGE walked in narrative order: they are Jamieson on Acts 16, the Philippi jail episode — v3 the charge before the magistrates, v9 the midnight singing of praises, v15 the graphic detail about the jailer, v21 the magistrates relenting, v27 their coming in person to bring the prisoners out. Not random misfiling: a single pointer sampling one source region at fixed stride. Running table now: joshua 10, 1corinthians 7, hebrews 11, romans 8, romans 9, 1corinthians 15, leviticus 27, judges 16, exodus 28, judges 19, exodus 12, galatians 4, 1corinthians 1. The Jamieson tree needs a re-fetch."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "1",
+      "verses": [
+        "6",
+        "8",
+        "13"
+      ],
+      "note": "John Lightfoot (new voice this batch, assigned school 'puritan-evangelical' as a Westminster Assembly divine) has three blocks in this chapter that belong to OTHER CHAPTERS of the same epistle, filed by verse number with the chapter component lost: 1:6 holds his note on 2:6 ('Yet the wisdom not of this world'), 1:8 holds his note on 4:8 ('Now ye are full'), 1:13 holds his note on 3:13 ('For the day shall declare it'). The eight other Lightfoot blocks here (1, 2, 5, 12, 14, 17, 20, 21) are correctly filed. Chapters 2 and 4 of 1corinthians carry NO Lightfoot blocks at all, and chapter 3 has only verses 1 and 5 — consistent with displacement into chapter 1 rather than duplication. A related out-of-range symptom: 1corinthians 16.json has a Lightfoot key '55', but that chapter has only 24 verses, so it is 15:55 material. Worth a corpus-wide sweep for Lightfoot keys exceeding a chapter's verse count."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "1",
+      "verses": [
+        "2",
+        "7",
+        "8",
+        "10",
+        "13",
+        "18",
+        "23"
+      ],
+      "note": "Cyril of Jerusalem's blocks in this chapter are FOUR distinct texts spread over EIGHT verse keys — the repeated-block defect previously seen at 1corinthians 15. Block A (twofold purification, water and Spirit) sits at v2 and v13; block B (on 'he blinded the thoughts of them that believe not', which is 2 Cor 4:4, not this chapter) sits at v7, v8 and v10; block C (glory in the Cross) at v18 and v23; block D (transfer from Catechumens to the Faithful, quoting 1:9 exactly) at v9 alone. Blocks A, C and D land on apt verses; block B is misfiled from another epistle and triplicated. Used A at 13-16, C at 18-19, D at 7-9; dropped B at 10-12 and the duplicate of C at 22-25."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "1",
+      "note": "The VOICE_LABELS defect is worse than last batch's instance and now has TWO failure modes, both hit here. (1) The list carries short forms, so an exclusion written with the catena's own head fails: 'John Lightfoot' must be declared as 'Lightfoot', 'John Chrysostom' as 'Chrysostom'. (2) Far worse — 'Cyril of Jerusalem' can NEVER be declared at all. _LABEL_RE is built as '(label)\\s*:' and the list holds only the bare 'Cyril', so the head 'Cyril of Jerusalem:' matches nothing; split_voices() does not report Cyril as present in any blob, and undeclarable_voices() therefore rejects EVERY spelling of the exclusion. The only way to drop a Cyril block is to omit it silently, which loses the audit trail the excluded_voices field exists to provide. Two Cyril blocks in this chapter had to be dropped that way. Fix: spell the fathers in full in VOICE_LABELS (or match the longest label first), which would also fix the prose-spelling nuisance in one go."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2",
+        "31"
+      ],
+      "note": "Two further filing observations. (a) Albert Barnes' block at 1:1 is the epistle's whole front matter (situation of Corinth, establishment of the church, time and place of writing, occasion) and ends with a printed pointer, 'Remainder of Introductory Notes and Information on Verse 1 located in 1 Corinthians 1:2'; his v2 block continues that introduction and only then carries his actual verse notes for BOTH v1 and v2. So a per-verse entry at 1:1 would find no Barnes comment on the verse at all. The pericope tiling absorbed it, since the entry's source is the union of vv1-3, but a one-verse tiling here would have silently lost him. (b) Page chrome: 926 junk words (StudyLight boilerplate) begin at word 182 of the Charles Ellicott block at 1:31, which is both the chapter's last verse and Ellicott's last block — consistent with the attachment model recorded at galatians 4:30."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "1",
+      "verses": [
+        "14",
+        "21"
+      ],
+      "note": "Adam Clarke reproduces John Lightfoot's notes verbatim and under his name THREE times in this chapter — on Gaius and the Johannine epistles at v14, on the four titles at v20, and on 'the wisdom of God' meaning wisdom ABOUT God rather than wisdom FROM God at v21. Where both voices are in the same entry this makes them a single witness rather than two, and the prose says so rather than counting the agreement twice. Lightfoot's own chain at v14 is the boldest reasoning in the chapter: if the Gaius of 3 John is the Corinthian Gaius, then 1 John was written to the Corinthians."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "1",
+      "verses": [
+        "13",
+        "20",
+        "25",
+        "26"
+      ],
+      "note": "Four disputes worth flagging from this chapter. (1) At v13, whether 'Is Christ divided?' is a question at all: Ellicott reads it as a statement, Gill reports both punctuations and answers no, Robertson thinks it probably interrogative and records that Hofmann called the assertory form a rhetorical impossibility. (2) At v20, whether the triple question quotes Isaiah: Calvin denies it outright and says Paul speaks in his own person, since the passage usually cited has nothing to do with the subject, while Gill and Barnes allow familiar prophetic language used without intent to quote. (3) At v25, a precise clash: Ellicott insists the sense is 'wiser than men themselves' and NOT 'wiser than the wisdom of men', naming the latter as the view of some — and Robertson supplies exactly that rejected reading, calling it a condensed comparison and a common Greek idiom. (4) At v26, the mood of the opening verb: Ellicott and Clarke read an imperative, Robertson notes the form is identical for both, and Calvin expressly leaves the choice to the reader because nothing in the sense turns on it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "1",
+      "note": "1corinthians 1: all 11 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. 31 verses, ~77,650 real usable source words after subtracting 926 words of chrome, tiled in 11 entries — exactly the count the density guide predicts. 13 distinct voices, including John Lightfoot for the first time in this loop; entry 1-3 carries 12 of them in 646 words, the densest single entry written so far. The overshoot pattern held again and was worst where the voice count was highest: entry 1-3 drafted at 1,051 words against the 650 ceiling and needed three passes; 26-29 drafted at 810, 13-16 at 880, 30-31 at 802. Every one of the eleven first drafts was over. The only reliable countermeasure remains drafting deliberately spare, and at twelve voices in one entry even that fails."
     }
   ]
 }
