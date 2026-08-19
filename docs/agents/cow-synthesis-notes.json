@@ -5656,6 +5656,57 @@
         "27"
       ],
       "note": "Heb 11:27, 'by faith he forsook Egypt', splits the commentators evenly and cleanly between the flight to Midian and the Exodus. For the Exodus: Barnes (reports it as the majority view), Clarke and Wesley, all resting on the clause 'not fearing the wrath of the king', since Exodus expressly ascribes the flight to fear. For the flight to Midian: Ellicott (who reports it as the view of ALL ancient writers and most moderns, with three arguments - the Passover is mentioned only in the next verse, the second departure was made at Pharaoh's own urgent request, and the verb is too personal an expression for a national exodus), Gill and Calvin, both arguing from the order of the narrative. Robertson declines to decide and only notes that the writer omits the slaying of the Egyptian. This is the sharpest even split recorded in the corpus so far."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "31",
+      "verses": [
+        "11",
+        "17",
+        "23",
+        "29",
+        "35",
+        "41",
+        "53"
+      ],
+      "note": "JFB stride-6 donor residue, twelfth consecutive chapter, and the longest unbroken run recorded so far: vv.11, 17, 23, 29, 35, 41, 53 — six consecutive stride positions with only v47 skipped. As in exodus 6 and exodus 14, JFB occurs at residue positions ONLY and contributes no comment on this chapter at all; every block is foreign matter from Genesis 27 (Rebekah urging the deception, the kid's flesh and goat-skins, the disguise before Isaac, Isaac's dismay when the fraud was discovered) plus one from Genesis 46 on the seventy souls. The run is long enough to make the mechanism plain: the donor text is being tiled in at a fixed interval regardless of chapter boundaries, so the residue at v53 is the same Genesis 27 material as at v11 forty-two verses earlier. Excluded as note-425 Mode 2 in six of the ten spans."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "31",
+      "verses": [
+        "7"
+      ],
+      "note": "Second instance of the ghost-check false-positive class first recorded at note 500, and a different mechanism from the judges 18 case. Entry 4 flagged ghost=['Augustine'] not because of a place-name collision but because Clarke's v7 block cites Augustine by name as one of the authorities on the meaning of 'ten times', and my summary reproduced the citation. The check matches bare substrings against the ten-name voice map, so any COW voice named at second hand inside another voice's block trips it. The corpus cites Jarchi, Aben Ezra, Kennicott, Parkhurst, Theodoret, Warburton, Lightfoot and Shuckford constantly without incident, purely because those names are not in the map; Augustine, Henry, Calvin and Gill are all both COW voices and commonly cited authorities, so the collision will recur. I resolved it as at judges 18, by rewording rather than suppressing — 'one authority he cites takes the ten lambs for five years' wages' — on the principle that the check is the only automatic guard on fabricated attribution and must not be trained to cry wolf. The cost is the loss of a real name; the alternative is a standing unexplained ghost, which is worse."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "31",
+      "verses": [
+        "15",
+        "17",
+        "19",
+        "20"
+      ],
+      "note": "Genesis 31 is the clearest case yet of the filing rule splitting one subject across adjacent entries, and the split was productive rather than lossy. The teraphim are treated twice: Henry files his account at v17 and Keil his at v15, both inside span 14-18, so the definition of the images and Rachel's motive as Henry and bishop Patrick read it belong to entry 14 even though the theft is narrated at v19; while Clarke, Ellicott and Calvin file at v19 itself, so the survey of what the teraphim were, their trail through the later Old Testament, and Calvin's indictment of Rachel belong to entry 19. Nothing had to be dropped, because the two sets ask different questions — entry 14 asks what she meant by it, entry 19 asks what the things were and whether the theft can be excused. The same pattern holds for 'stealing the heart', glossed by Keil at v18 in one entry and by Gill, Ellicott and Calvin at v20 in the next."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "31",
+      "verses": [
+        "2",
+        "54",
+        "55"
+      ],
+      "note": "Three displacement and chrome defects in one chapter. (1) Calvin's v2 block does not comment on v2 at all: it is his commentary on the pursuit at vv.22-24 — the three days' journey, Laban restrained like a savage wild beast — filed under the wrong key. Since Calvin has genuine comment at v1 and v3 he was declarable in span 1-3 without it, so the displaced block simply went unused; had it been his only text there the filing rule would have forced pursuit material into an entry about the command to return. (2) Ellicott's v54 block ends in the same StudyLight page furniture recorded at exodus 14 v31 (note 504) — navigation markup, copyright, and a full inline stylesheet — appended to about 60 words of real comment. (3) Gill's v55 block ends in sacred-texts navigation chrome. The chrome inflates v54 and v55 in the size estimate: this chapter measured 33,830 usable source words, and the true drafting load was appreciably lower."
     }
   ]
 }
