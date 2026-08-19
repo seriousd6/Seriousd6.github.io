@@ -6089,6 +6089,47 @@
         "31"
       ],
       "note": "Ellicott is internally at odds with himself about Milton within a single chapter. At v28 he criticises the poet, judging that Milton read into Samson an austere grandeur the character did not possess, so that the Samson of the poem is rather Milton himself - a stern classic poem being the reverberation of a mighty spirit struck by the plectrum of disappointment. At v31, closing the chapter, he quotes Milton approvingly, ending on the line that Samson has quit himself like Samson. The tension is not a contradiction so much as a shift of register: the historical judgement at v28 concerns Samson's spiritual level (Ellicott counts three divine names in the prayer and infers a comparatively low level of enlightenment and moral purity), while the closing quotation is elegiac. Both were preserved in the synthesis prose deliberately, since collapsing them would misrepresent a commentator who is visibly of two minds."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "22",
+      "verses": [
+        "1",
+        "13",
+        "19",
+        "25",
+        "31"
+      ],
+      "note": "JFB donor residue, seventeenth consecutive chapter, and the clearest instance yet of a duplicated donor block. Five off-topic blocks at vv.1/13/19/25/31 — stride 6 from v13, with v1 off-stride exactly as in exodus 6. All are Exodus 9-10 plague matter with no bearing on the Book of the Covenant: v1 is the hail warning and the cattle in the fields, vv.13 and 19 are the SAME block verbatim on Pharaoh's transient repentance after the hail, v25 is the locust threat, v31 is the courtiers' remonstrance before the locusts. The v13/v19 duplication is the third recorded case of one donor block landing at two stride positions in a single chapter (after genesis 31 vv.11/53 and numbers 14 vv.21/27), and here the gap is only six verses. All five excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "22",
+      "verses": [
+        "31"
+      ],
+      "note": "StudyLight chrome tail on v31, the LAST verse of the chapter — SIXTH consecutive chapter across six books and both testaments (exodus 14 v31, genesis 31 v54, leviticus 6 v30, numbers 14 v45, acts 27 v44, exodus 22 v31). Appended to Ellicott and running to a full inline stylesheet plus the site's commentary index. Six for six removes any doubt: this is a harvest-time artefact at every chapter boundary, not an occasional accident, and a harvest-side fix would save the strip on every chapter from here on."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "22",
+      "verses": [
+        "5"
+      ],
+      "note": "The exclusion check caught a real loss, for the second time (after note 525). Entry 5-8 came back with excl=['John Gill'] although Gill has plain usable prose at vv.5, 6, 7 and 8. No ghost was raised and nothing else flagged it: the cause was my own trimming, which had cut his only sentence out of the entry while bringing it down from 965 to 644 words. Restored him — his reading of the first clause by the second, Jarchi on the fire breaking out of itself, and the Targum on a deposit kept without reward — and trimmed elsewhere to compensate. The rule stands and should be stated more strongly than in note 525: run the ghost script AFTER the final trim pass, not before, because heavy trimming can silently drop a present voice, and the exclusion list is the only thing that reports it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "22",
+      "note": "Trim cost has risen sharply and is now the dominant cost of the work. Across exodus 22's seven entries the first drafts came in at 834-1086 QA words against a 650 ceiling — a mean overshoot of about 33 per cent — and each entry took between eight and twelve trim rounds to bring into range, where earlier chapters in this run took three or four. The three-paragraph rule of note 536 is still right, but it is no longer sufficient by itself. Two things would help a fresh worker: draft to a 700-word target rather than letting the material dictate length, and cut whole items early rather than shaving clauses, since shaving loses roughly five words a pass while dropping one source's contribution loses thirty. The second lesson is the one that matters most for quality, because prolonged shaving is what produced the accidental dropping of Gill recorded in the preceding note."
     }
   ]
 }
