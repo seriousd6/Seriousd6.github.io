@@ -5765,6 +5765,62 @@
       "book": "romans",
       "chapter": "8",
       "note": "Tiling metric, fifth filing: romans 8 has 97,111 usable source words over 39 verses with 13 distinct voice labels and a maximum of ELEVEN voices on a single verse, tiled in 14 entries. It is within 75 words of hebrews 11 (97,186) in source size, but ran materially harder because of voice density: hebrews 11 peaked at 9 voices per verse and averaged 8 per entry, while romans 8 peaked at 11 and averaged 9.2. Every one of the fourteen first drafts overshot the 650-word ceiling by 20 to 40 percent and needed 2 to 5 trim passes, with the 10- and 11-voice entries the worst. Two chapters of identical source size differing by roughly 15 percent in effort, entirely on voice count, is now the clearest evidence yet for the proposal already filed four times: the picker's budget should carry a voice-count term alongside source words. Data points to date - joshua 10: 34,825 words, 8 voices, 10 entries, easy. genesis 1: 63,543, 8 voices, 8 entries. luke 22: 63,923, up to 15 voices, 14 entries, very hard. 1corinthians 7: 75,582, max 9, 14 entries. hebrews 11: 97,186, max 9, 14 entries. romans 8: 97,111, max 11, 14 entries, hard."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "6",
+      "verses": [
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "JFB stride-6 donor residue, thirteenth consecutive chapter. JFB occurs at exactly three keys — 14, 20, 26 — a clean stride-6 run, and as in exodus 6, exodus 14 and genesis 31 it appears at residue positions ONLY and contributes nothing to this chapter. The donor matter is Exodus 30: the altar of incense with its dimensions and golden crown at v14, and the half-shekel ransom of the numbered people at v20 and v26. Note that the v26 block is appended inside Ellicott's block rather than carrying its own name header, so a dump that greps by voice name can miss it; the ghost script caught it because it matches the source blob, not the rendered dump. Excluded as note-425 Mode 2 at spans 14-18, 19-23 and 24-27."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "Two whole-voice exclusions in the first two spans, of the two kinds already catalogued. Clarke's v1 block is nothing but the chapter argument — a bare running summary of vv.1-30 with no comment attached — so span 1 has no declarable Clarke at all; this is the chrome pattern of note 425 in its pure form, with not even a tail of real exposition after the argument, unlike exodus 14 v1 where the argument was followed by a genuine note on the strong hand. Keil's v2 block is a bare AV reprint of vv.2-7 with no comment, the same defect recorded at exodus 6 v29 (note 511). Both are legitimate Mode 2 exclusions, but together they mean the chapter's opening two entries each run a voice short, which is worth knowing before sizing an entry: the raw voice-presence map overstates what is actually declarable."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "6",
+      "verses": [
+        "25",
+        "28"
+      ],
+      "note": "A filing error I made and caught at the ghost stage, worth recording because the ghost check does NOT detect this class. Keil's note on breaking the earthen vessel and scouring the brazen one is filed at v25, inside span 24-27, but its subject is v28, and I first wrote it into the 28-30 entry where the vessels are actually prescribed. No ghost was raised, because Keil is independently present at v29 and v30, so the check saw a declared voice with sources in the span and passed it. What exposed the mistake was the exclusion list: entry 24 was reporting Keil excluded, and Keil plainly had usable prose there. The lesson is that an unexpected EXCLUSION is as much a signal as a ghost — a voice with real content in a span should not be showing up as excluded, and when it does, the material has usually been carried off into a neighbouring entry. Fixed by moving the note into entry 24 and giving entry 28 Wesley's own reason for the brass being spared."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "8"
+      ],
+      "note": "The chapter's own division is disputed inside the corpus, and the two sides are filed in different spans. At v1 Ellicott attacks as erroneous the claim, which he says is repeated in some of our best commentaries, that vv.1-7 belong to chapter 5 in the Hebrew and that the English translators wrongly followed the Septuagint — his ground being that Hebrew manuscripts have no chapter divisions at all, only sections (669 in the Pentateuch, 98 in Leviticus against 27 chapters in the AV), the printed chapter divisions having been borrowed from Christians in the fourteenth century. At v8 Clarke asserts the opposite in almost so many words, that the Jews begin the twenty-fifth section here, that the sixth chapter undoubtedly should commence at this verse, and that the best edited Hebrew Bibles do begin it here; Gill agrees that a new section begins at v8. Because the two positions sit in different entries I did not stage them as one debate, recording Clarke and Gill's claim in the 8-9 entry and Ellicott's correction in the 1 entry. Flagging it because a reader of either entry alone will not see that the corpus contradicts itself on the point."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "6",
+      "verses": [
+        "30",
+        "54"
+      ],
+      "note": "Chrome tails again, in the now-familiar StudyLight and sacred-texts forms: Ellicott's v30 block runs out into navigation markup, a copyright notice and a full inline stylesheet, and Gill's v30 block ends in sacred-texts navigation. Same defect as exodus 14 v31 (note 504) and genesis 31 v54 (note 517), and the effect on sizing is the same — leviticus 6 measured 21,696 usable source words, and the real drafting load was lower. Three chapters running now, in three different books, have carried the identical StudyLight tail on the LAST verse of the chapter, which suggests the harvest appends it at chapter boundaries rather than at random; a size estimate could be improved cheaply by discounting the final key."
     }
   ]
 }

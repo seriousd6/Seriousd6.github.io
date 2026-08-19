@@ -1,68 +1,170 @@
 {
  "1": {
   "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
    "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Adam Clarke"
+  ],
+  "range": "1",
+  "pericope_label": "The trespass offering for fraud against a neighbour",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill treats the words as a continuation, the same law of the trespass offering being still in hand and only the persons concerned changing. Calvin marks what is new here, that Moses has left the expiation of oversights and now prescribes reconciliation for sin committed wilfully and by design. That must not be turned into licence, since it is a blasphemous insult to God to take occasion for sin from his readiness to pardon; but neither may we make him inexorable to voluntary sin, which would overthrow the hope of salvation in the holiest men. Novatus troubled the ancient Church with that severity, and its rigid censors, Calvin thinks, are the grossest hypocrites — which of them on honest examination would find himself free of concupiscence? God is not changed, nor is our condition worse than the fathers', who had sacrifices appointed for voluntary offences."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notices first what the offences have in common. Every instance concerns a neighbour, yet the whole is called a trespass against the Lord, because an injury done to a man is an affront offered to his Maker — he that speaks evil of his brother speaks evil of the law, and so of the Law-maker; and however mean the person wronged, the wrong reflects upon the God who made the command of loving our neighbour second only to that of loving himself. He counts five kinds: denying a trust, when a man claims as his own what was only lent him or left in his keeping; defrauding a partner, by claiming sole interest where the interest is joint; disowning a manifest wrong, when a man has the front to lie about a thing taken by violence; deceiving in commerce, by withholding what is due or extorting what is not; and detaining what is found, when a man must not call it his own at once but seek out the owner, and if he backs his denial with a false oath affronts the God who witnesses all speech and in an oath is himself appealed to. On the remedy he puts the order plainly: satisfaction to the brother comes first, and till restitution is made to the utmost of our power we cannot have the comfort of forgiveness, for keeping what was unjustly got avows the taking, and the two together make one continued act of unrighteousness — to repent is to undo what we have done amiss, which we cannot be said to do till we restore, as Zaccheus did. The offering itself could make no satisfaction, but signified the atonement Christ was to make when he made his soul a trespass offering."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The LORD speaking concerning the trespass against a neighbour: 'and the LORD spake unto Moses, saying' — the LORD speaking to Moses, now to give the law of the trespass offering for wrongs done to a neighbour (vv.2-7, the speaking, God's command, the new section on the trespass against a neighbour, the occasion, after the trespass in the holy things, ch. 5, now the trespass against one's neighbour, which is also against the LORD); the LORD speaking (the trespass against a neighbour, the wrongs of fraud, robbery, deceit) — the new law (the trespass offering for sins against one's neighbour, with restitution); the LORD spake unto Moses — the law of the trespass against a neighbour introduced (the providence, God giving the law for wrongs against the neighbour, the link of the second table with the first) — Henry, Gill, Calvin, Ellicott."
+    "summary": "Ellicott uses the opening to correct a claim repeated in good commentaries, that these verses belong to the previous chapter in the Hebrew and that the English translators unfortunately took the division from the Septuagint. Nothing, he says, could be more erroneous. The Hebrew manuscripts have no division into chapters at all; the text is cut instead into sections, of which the Pentateuch has six hundred and sixty-nine and Leviticus alone ninety-eight against the twenty-seven chapters of our version. The chapter divisions now printed in Hebrew Bibles were taken from the Christians in the fourteenth century for controversial purposes, and the verse figures are later still. Keil looks ahead: what follows was addressed to Aaron and his sons, the priests, and sets out the duties that fell to them and the rights that pertained to them in the sacrifices, much of it repeated from the general regulations, but most of it new and of real importance to the institution of sacrifice."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Do these verses belong to the previous chapter, as the Hebrew is said to divide them?",
+    "sides": [
+     {
+      "position": "the question is misconceived: Hebrew manuscripts have no chapters at all, only sections, and the chapter divisions in printed Hebrew Bibles were borrowed from Christians in the fourteenth century",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the claim as repeated in good commentaries, that the English translators wrongly followed the Septuagint division",
+      "holders": [
+       "commentators cited and rejected by Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "May a wilful sin be expiated at all?",
+    "sides": [
+     {
+      "position": "yes, and the passage proves it; to deny pardon to voluntary sin, as Novatus did, would overthrow the hope of salvation in the holiest men",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "yes, but only where restitution accompanies repentance, since keeping what was unjustly got avows the taking",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And the LORD spake unto Moses, saying",
-   "the LORD speaking concerning the trespass against a neighbour",
-   "God giving the law of the trespass offering for wrongs done to a neighbour (vv.2-7)",
-   "the wrongs of fraud and deceit, which are also against the LORD"
+   "if a soul sin, and commit a trespass against the LORD",
+   "and lie unto his neighbour in that which was delivered him to keep",
+   "he shall restore it in the principal, and shall add the fifth part more thereto",
+   "the priest shall make an atonement for him before the LORD"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "2-7",
+  "pericope_label": "The five frauds, the false oath, and the restitution required",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Sin against a neighbour is a trespass against the LORD: 'if a soul sin, and commit a trespass against the LORD, and lie unto his neighbour in that which was delivered him to keep, or in fellowship, or in a thing taken away by violence, or hath deceived his neighbour' — the great link — 'if a soul sin, and commit a trespass against the LORD, and lie unto his neighbour': the wrongs here against a neighbour (deceit over a deposit, fraud in partnership or fellowship, robbery by violence, oppression), yet called a 'trespass against the LORD' (the witnesses noting the significance — sin against a neighbour is sin against God, the wrong done to man is a trespass against the LORD, the second table bound to the first, the offence against the neighbour an offence against God who commands love of neighbour, the lesson — the unity of the two tables, he who wrongs his neighbour sins against God, 'inasmuch as ye have done it unto one of the least of these... ye have done it unto me,' Matthew 25:40, 45, the love of God and neighbour joined, Matthew 22:37-40; 1 John 4:20, 'he that loveth not his brother whom he hath seen, how can he love God whom he hath not seen?', the kinds of wrong, lying over a deposit, fraud in fellowship, robbery, deceit, oppression — the sins against the neighbour's goods and trust, the figure — all wrong against man a trespass against God, needing atonement and restitution); the kinds of wrong (the deposit denied, the partnership defrauded, the violent robbery, the deceit) — the sins against the neighbour's property and trust (the figure, the breach of trust and honesty, the wrong against the neighbour); sin against the neighbour a trespass against the LORD — the two tables joined (the providence, the wrong against man also against God, needing atonement and restitution, vv.4-7) — Wesley, Keil, Gill."
+    "summary": "Gill grants that all sin is against the Lord, but marks these as more apparently so, being contrary not only to his will but to the good of society — and worst where he is sworn by and appealed to as a witness in a case at once injurious and false. On the lost property he has the finder call it his own at once and never inquire after the owner, and reports the reason Maimonides gives for restoring it, that besides being a virtue in itself the practice has a reciprocal usefulness, since a man who will not restore another's losings will not have his own restored. Calvin takes the priest's part for the whole point: the victim was never itself the price of redemption, expiation being founded on the priesthood, so the offering is passive rather than active as regards the man, who brings nothing of his own but receives."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke draws his conclusion from the state of the evidence: property was often delivered without witnesses, so the holder might deny receiving it and the depositor prove nothing, while a man might equally accuse his neighbour of keeping what was never entrusted — and because the truth was often past finding out without a revelation, the penalties are kept moderate. On the lost property he is harder, and cites the Roman lawyers, who counted a finder who converted goods to his own use a thief whether he knew the owner or not, ignorance doing nothing to lessen the theft; he adds that the Dyrbaeans between Bactria and India would not touch lost property even on the public road, that in Alfred's England golden bracelets hung untouched on the highways, and that one of Solon's laws was, take not up what you laid not down — though when due inquiry has been made and no owner appears, the finder may keep it. Wesley gives three reasons why the offence is reckoned against the Lord: it violates a society of which God is author, president and defender; it is a secret sin, of which he alone is witness and judge; and his name is abused in it by perjury. He reads the second clause as trade rather than trust, one man putting something into another's hand not to keep but to improve for the common benefit, and thinks the phrase comes from the joining of hands that confirmed such bargains; the violence of the third clause he takes as done secretly, since the whole passage concerns sins that no witness could prove."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott puts it that the trespass against God is strictly a violation of a neighbour's property, and that since fraud and plunder are the most subversive of social life, such a crime is described as an insult to the founder and sovereign ruler of the people. He explains the custom the first case rests on: to leave valuables with a neighbour was, and still is, common in the East, where there are no establishments for keeping private treasure; a man going a journey would otherwise hide his things underground and risk forgetting the spot — which is why the Hebrew word for treasure means what is hidden, and why Scripture speaks of hidden riches of secret places and of searching as for hid treasure. From that practice, he adds, the apostle takes his confidence that God is able to keep what has been committed to him. He refers the false swearing to all five cases, and explains why the fine is lighter here than the fourfold restitution of Exodus: that law deals with a man convicted in court by witnesses, this with one whom nothing could have convicted, confessing of his own compunction — which is what makes it a case for a trespass offering."
    }
   ],
   "debates": [
    {
-    "question": "Why is a wrong against a neighbour called a trespass against the LORD?",
+    "question": "Why is the penalty here lighter than the fourfold restitution of Exodus?",
     "sides": [
      {
-      "position": "Sin against a neighbour is sin against God - the wrong to man a trespass against the LORD, the second table bound to the first (Matthew 25:40, 45; 1 John 4:20), the love of God and neighbour inseparable (Matthew 22:37-40), all wrong against man needing atonement and restitution",
+      "position": "because that law deals with a man convicted in court by witnesses, and this with one whom nothing could have convicted, who confesses of his own compunction",
       "holders": [
-       "Wesley",
-       "Keil and Delitzsch",
-       "Gill",
-       "the reformed reading"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "because in many of these cases the truth could not be reached without a direct revelation, so the penalties are kept moderate",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "because the guilt is manifested by voluntary confession, whereby the offender reaps this benefit",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How should a man treat property he has found?",
+    "sides": [
+     {
+      "position": "restore it — a virtue in itself, and of reciprocal use, since a man who will not restore another’s losings will not have his own restored",
+      "holders": [
+       "Maimonides, as reported by Gill"
+      ]
+     },
+     {
+      "position": "a finder who converts goods to his own use is a thief whether he knew the owner or not, though after due inquiry with no owner found he may keep them",
+      "holders": [
+       "the Roman lawyers, as reported by Clarke"
       ]
      }
     ]
@@ -70,425 +172,85 @@
   ],
   "outliers": [],
   "themes": [
-   "If a soul sin, and commit a trespass against the LORD, and lie unto his neighbour in that which was delivered him to keep, or in fellowship, or in a thing taken away by violence, or hath deceived his neighbour",
-   "sin against a neighbour is a trespass against the LORD (the crux of the two tables joined)",
-   "the wrong to man a trespass against God, the second table bound to the first (Matthew 25:40, 45; 1 John 4:20)",
-   "the love of God and neighbour inseparable (Matthew 22:37-40)"
+   "in that which was delivered him to keep, or in fellowship, or in a thing taken away by violence",
+   "or have found that which was lost, and lieth concerning it, and sweareth falsely",
+   "he shall restore it in the principal, and shall add the fifth part more thereto",
+   "he shall bring his trespass offering unto the LORD, a ram without blemish"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wrong of keeping the lost and swearing falsely: 'or have found that which was lost, and lieth concerning it, and sweareth falsely; in any of all these that a man doeth, sinning therein' — among the wrongs: finding what was lost and keeping it (lying about it, denying it), and swearing falsely (perjury added to the fraud, the lost found and kept, the wrong of retaining another's lost property, the lying and false swearing, the deceit compounded by perjury, the figure, the dishonesty and the false oath, the sin against the neighbour and against God's name); the keeping of the lost and the lie (the dishonesty, the retaining of another's property, Deuteronomy 22:1-3) — the wrong (the failure to restore what was found); 'sweareth falsely; in any of all these that a man doeth, sinning therein' (the false swearing, the perjury, the lie sworn, the profaning of God's name added to the fraud, Leviticus 19:12, the figure, the dishonesty and perjury, the wrong against neighbour and against God's name, the providence, the wrongs needing restitution and atonement, vv.4-7) — Clarke, Gill, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Or have found that which was lost, and lieth concerning it, and sweareth falsely; in any of all these that a man doeth, sinning therein",
-   "the wrong of keeping the lost and swearing falsely",
-   "the retaining of another's property and the failure to restore it (Deuteronomy 22:1-3)",
-   "the false oath, the sin against the neighbour and against God's name (Leviticus 19:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The restoring of what was wrongfully taken: 'then it shall be, because he hath sinned, and is guilty, that he shall restore that which he took violently away, or the thing which he hath deceitfully gotten, or that which was delivered him to keep, or the lost thing which he found' — being guilty, the man to restore what he had wrongfully taken (by violence, deceit, the denied deposit, the kept lost thing, the restoring, the restitution of the wrong, the returning of what was taken, the kinds, the robbery, the fraud, the deposit, the lost thing, the figure, the restitution of the wrong, the fruit of repentance, the wrong made good, vv.5); the restoring of what was taken (the wrong made good, the property returned) — the restitution (the returning of the wrongfully gotten); 'or that which was delivered him to keep, or the lost thing which he found' (the various wrongs restored, the deposit, the lost thing, the figure, the restitution of every wrong, the wrong made good, the providence, the restoring of the wrong, the fruit of repentance, vv.5) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then it shall be, because he hath sinned, and is guilty, that he shall restore that which he took violently away, or the thing which he hath deceitfully gotten, or that which was delivered him to keep, or the lost thing which he found",
-   "the restoring of what was wrongfully taken",
-   "the returning of what was wrongfully gotten, the wrong made good",
-   "the restitution of every wrong, the fruit of repentance (vv.5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The full restitution with the fifth part to the wronged neighbour: 'or all that about which he hath sworn falsely; he shall even restore it in the principal, and shall add the fifth part more thereto, and give it unto him to whom it appertaineth, in the day of his trespass offering' — the man restoring the principal (the full amount) and adding a fifth part (twenty per cent), giving it to the wronged neighbour, on the day he brought his trespass offering (the principal restored, the full wrong made good, the fifth part added, the restitution with increase, more than the bare wrong, the to whom it appertaineth, restored to the very person wronged, not merely to God, the day of his trespass offering, the restitution joined with the atonement, both made together); the full amends — the principal with the added fifth (the witnesses noting the lesson — restitution to the wronged neighbour as part of repentance, the wrong against man made good to man, restored with increase, before or with the offering to God, the restitution and the atonement joined, Matthew 5:23-24, 'first be reconciled to thy brother, and then come and offer thy gift'; Luke 19:8, Zacchaeus' restitution, the necessity of making the wrong good, no true repentance or acceptable offering while the wrong to the neighbour stands unrestored); the restitution to the very person wronged, on the day of the offering (the restitution and atonement together) — the providence (the wrong made good to the neighbour, joined with the atonement to God) — Clarke, Wesley, Ellicott, Gill."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does the restitution to the neighbour with the offering teach?",
-    "sides": [
-     {
-      "position": "Restitution to the wronged neighbour as part of true repentance - the wrong made good to man with increase (the principal plus a fifth), joined with the atonement to God on the day of the offering (Matthew 5:23-24; Luke 19:8); no acceptable offering while the wrong to the neighbour stands unrestored",
-      "holders": [
-       "Clarke",
-       "Wesley",
-       "Ellicott",
-       "Gill",
-       "the dominant reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "He shall even restore it in the principal, and shall add the fifth part more thereto, and give it unto him to whom it appertaineth, in the day of his trespass offering",
-   "the full restitution with the fifth part to the wronged neighbour",
-   "the wrong made good to the very neighbour, restored with increase, the fruit of repentance",
-   "joined with the atonement to God, no acceptable offering while the wrong stands (Matthew 5:23-24; Luke 19:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ram brought for the trespass against a neighbour: 'and he shall bring his trespass offering unto the LORD, a ram without blemish out of the flock, with thy estimation, for a trespass offering, unto the priest' — after restitution to the neighbour, the man bringing a ram (with the valuation) for a trespass offering to the LORD (the ram, the costly victim, as for the holy things, Leviticus 5:15, the to the LORD, the offering to God, after the restitution to man, the order, first the restitution to the neighbour, then the atonement to God, the figure, the unblemished ram, Christ, the atonement to God after the wrong made good to man); the trespass offering to the LORD (the atonement to God after the restitution, vv.5) — the order (restitution first, then atonement); 'a ram without blemish out of the flock, with thy estimation' (the unblemished ram with the valuation, the costly victim, Leviticus 5:15, the figure, the unblemished ram, Christ, the satisfaction to God, the providence, the ram brought, the atonement to God after the wrong made good) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he shall bring his trespass offering unto the LORD, a ram without blemish out of the flock, with thy estimation, for a trespass offering, unto the priest",
-   "the ram brought for the trespass against a neighbour",
-   "the costly ram, the atonement to God after the wrong made good to man (Leviticus 5:15)",
-   "first the restitution to the neighbour, then the atonement to God, the figure of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The atonement and forgiveness for the trespass against a neighbour: 'and the priest shall make an atonement for him before the LORD: and it shall be forgiven him for any thing of all that he hath done in trespassing therein' — the priest making atonement, and the sin being forgiven, for all the wrongs the man had done (the atonement, the covering of sin by the blood, after the restitution, the forgiveness, the sin forgiven, the wrong against neighbour and God pardoned, the for any thing of all, the full forgiveness for all the trespasses, the figure, the atonement and forgiveness through Christ, the wrong against man and God pardoned, Ephesians 1:7; Colossians 2:13); the atonement before the LORD (the covering of sin, after the restitution) — the figure (the atonement of Christ, the one sacrifice, Hebrews 9:22); 'it shall be forgiven him for any thing of all that he hath done in trespassing therein' (the full forgiveness for all the wrongs, the sin pardoned, the wrong against neighbour and God forgiven, the figure, the full forgiveness through Christ, Ephesians 1:7, the providence, the atonement and forgiveness for the trespass against the neighbour) — Calvin, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the priest shall make an atonement for him before the LORD: and it shall be forgiven him for any thing of all that he hath done in trespassing therein",
-   "the atonement and forgiveness for the trespass against a neighbour",
-   "the atonement by the blood and the full forgiveness for all the wrongs",
-   "the wrong against neighbour and God pardoned through Christ (Hebrews 9:22; Ephesians 1:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD speaking concerning the law of the burnt offering for the priests: 'and the LORD spake unto Moses, saying' — the LORD speaking to Moses, now to give the priests' instructions (the law) for the offerings — the burnt offering (vv.9-13), the meal offering (vv.14-23), the sin offering (vv.24-30, the speaking, God's command, the new section, the priests' duties in the offerings, the occasion, after the laws of the offerings for the people, chs. 1-6, now the priests' charge in handling them); the LORD speaking (the priests' law of the offerings, the charge to Aaron and his sons) — the new section (the priests' duties, the law of each offering for those who minister); the LORD spake unto Moses — the priests' law of the offerings introduced (the providence, God giving the priests their charge in the offerings, the orderly service of God's house) — Henry, Gill, Keil, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, saying",
-   "the LORD speaking concerning the law of the burnt offering for the priests",
-   "God giving the priests their charge in the offerings (vv.9-13)",
-   "the orderly service of God's house"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The law of the burnt offering burning all night: 'command Aaron and his sons, saying, This is the law of the burnt offering: It is the burnt offering, because of the burning upon the altar all night unto the morning, and the fire of the altar shall be burning in it' — the law of the burnt offering: it to burn on the altar all night until morning, the fire kept burning (the burnt offering, the whole offering, wholly consumed, the continual offering, the evening offering burning through the night, the all night, the offering burning continually, the worship ceaseless, the fire kept burning, the altar fire never allowed to die, vv.13); the burnt offering burning all night (the continual offering, the daily evening sacrifice burning through the night, Exodus 29:38-42) — the figure (the continual offering, the perpetual devotion, Christ's offering of perpetual efficacy, Hebrews 10:14, the ceaseless worship); 'the fire of the altar shall be burning in it' (the fire kept burning, the altar fire never out, the offering kept burning, vv.13, the figure, the perpetual fire, the continual devotion, the unceasing worship, the providence, the burnt offering and the fire continual, the figure of perpetual offering and devotion) — Keil and Delitzsch, Gill, Ellicott, Wesley, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the law of the burnt offering: It is the burnt offering, because of the burning upon the altar all night unto the morning, and the fire of the altar shall be burning in it",
-   "the law of the burnt offering burning all night",
-   "the whole offering burning continually, the daily evening sacrifice (Exodus 29:38-42)",
-   "a figure of perpetual offering and ceaseless devotion (Hebrews 10:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priest in linen taking up the ashes: 'and the priest shall put on his linen garment, and his linen breeches shall he put upon his flesh, and take up the ashes which the fire hath consumed with the burnt offering on the altar, and he shall put them beside the altar' — the priest, clothed in his linen garments, taking up the ashes of the burnt offering and putting them beside the altar (the linen garments, the holy vestments, the purity of the priest, the linen of righteousness, the ashes, the remains of the consumed offering, the proof of the accepted sacrifice, the taking up, the daily clearing of the ashes, the figure, the priest in linen, the purity, the ashes, the evidence of the finished offering); the linen garments (the holy vestments, the purity of the ministering priest, Exodus 28:42) — the figure (the white linen, the righteousness, Revelation 19:8); 'take up the ashes which the fire hath consumed with the burnt offering... and he shall put them beside the altar' (the ashes taken up, the remains of the offering, the proof of the accepted sacrifice, the figure, the ashes, the evidence of the finished and accepted offering, the sacrifice consumed, the providence, the daily care of the altar, the ashes removed) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the priest shall put on his linen garment, and his linen breeches shall he put upon his flesh, and take up the ashes which the fire hath consumed with the burnt offering on the altar, and he shall put them beside the altar",
-   "the priest in linen taking up the ashes",
-   "the priest in his holy linen, the purity of the ministering priest (Exodus 28:42; Revelation 19:8)",
-   "the ashes the evidence of the accepted, finished sacrifice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
+   "Matthew Henry"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The carrying out of the ashes to a clean place: 'and he shall put off his garments, and put on other garments, and carry forth the ashes without the camp unto a clean place' — the priest changing his garments (out of the holy linen, into other clothes) and carrying the ashes outside the camp to a clean place (the changing of garments, the holy garments not worn outside the sanctuary, the distinction of the holy from the common, the carrying out, the ashes removed to a clean place outside the camp, the clean place, the ashes, though removed, kept in a clean place, honored even in their removal, the figure, the distinction of holy and common, the reverent care even of the ashes of the offering); the changing of garments (the holy linen not worn in the common task, the distinction of the sacred, Ezekiel 44:19) — the reverence (the holy garments kept holy); 'carry forth the ashes without the camp unto a clean place' (the ashes carried out to a clean place, the reverent disposal, the figure, the remains of the offering honored, kept clean, the providence, the orderly, reverent care of the altar and its ashes) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he shall put off his garments, and put on other garments, and carry forth the ashes without the camp unto a clean place",
-   "the carrying out of the ashes to a clean place",
-   "the holy garments kept distinct from the common (Ezekiel 44:19)",
-   "the ashes of the offering reverently removed to a clean place"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fire kept burning and fed every morning: 'and the fire upon the altar shall be burning in it; it shall not be put out: and the priest shall burn wood on it every morning, and lay the burnt offering in order upon it; and he shall burn thereon the fat of the peace offerings' — the fire on the altar to be kept always burning, never put out, the priest feeding it with wood every morning and laying the burnt offering on it (the fire kept burning, never extinguished, vv.13, the wood every morning, the daily feeding of the fire, the burnt offering laid in order, the daily morning offering, Exodus 29:38-39, the fat of the peace offerings, the fat burned, the best given to God); the fire never put out (the perpetual fire, vv.13) — the figure (the continual worship, the unceasing devotion, the fire of the Spirit, never to be quenched, 1 Thessalonians 5:19); 'the priest shall burn wood on it every morning, and lay the burnt offering in order upon it' (the daily care, the fire fed, the morning offering, Exodus 29:38-39, the figure, the daily renewal of devotion, the continual offering and feeding of the fire, the providence, the perpetual fire kept and fed, the continual worship) — Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the fire upon the altar shall be burning in it; it shall not be put out: and the priest shall burn wood on it every morning, and lay the burnt offering in order upon it",
-   "the fire kept burning and fed every morning",
-   "the perpetual fire kept and daily fed, the morning offering (Exodus 29:38-39)",
-   "the figure of continual worship and the unquenched fire of devotion (1 Thessalonians 5:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
+  "range": "8-9",
+  "pericope_label": "The law of the burnt offering, the ashes, and the fire that never goes out",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The perpetual fire that shall never go out: 'the fire shall ever be burning upon the altar; it shall never go out' — the command — 'the fire shall ever be burning upon the altar; it shall never go out': the fire on the altar to burn perpetually, never to be allowed to go out, day and night, continually (the witnesses noting the significance — the perpetual fire, the unceasing fire, kept always burning, never extinguished, the lesson — the figure of continual worship and devotion, the fire that never goes out, the ceaseless offering, the perpetual devotion of God's people, the worship that never ceases, and the fire originally kindled from heaven, Leviticus 9:24, the fire that came out from the LORD and consumed the offering, kept burning ever after, the divine origin of the altar fire, not to be replaced by strange fire, Leviticus 10:1, the figure — the continual offering of Christ's perpetual efficacy, Hebrews 10:12-14, the unceasing intercession, Hebrews 7:25, and the fire of the Spirit and of devotion never to be quenched in the believer's heart, 'quench not the Spirit,' 1 Thessalonians 5:19, the fervent spirit, Romans 12:11, the fire on the altar of the heart, the love of God never to grow cold, Revelation 2:4); the fire never to go out (the perpetual, ceaseless fire, kept day and night) — the figure (the continual devotion, the unceasing worship, the fire of love never to be quenched, the lesson, the warning against letting the fire of devotion die, the continual feeding of the flame); the ever-burning fire — the unceasing worship (the providence, the perpetual fire, the figure of continual offering, intercession, and devotion) — Wesley, Keil, Gill."
+    "summary": "Gill supposes a pause here, and notes that a new section begins at this point in the Hebrew copies. Calvin explains why the details are pressed so far: God prefers obedience to sacrifice and would leave nothing doubtful in the rites, the purity of holy things being corrupted by the smallest human invention. The perpetuity had the same end, that the offerings should always burn with heavenly fire, God having kindled it miraculously at Aaron's consecration, at Solomon's temple and at Elijah's sacrifice, and thereafter using men's hands while the origin remained his. He knows that Persia had a perpetual fire and Rome its Vestal guardians, and suspects a foolish mimicry — the devil imitating God as an ape imitates a man — but holds the ban on strange fire to be simply a ban on men adding anything of their own to the doctrine of the Law."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws a lesson from the turn to the priests: they were rulers in the house of God, but these rulers must themselves be ruled, and those who had the command of others must themselves be commanded — let ministers remember that not commissions only but commands were given to Aaron and his sons. On the ashes he has the priest clear the altar each morning in his linen, lay them on the east side furthest from the sanctuary, then change and carry them outside the camp to a clean place. God would have even the ashes preserved for the honour of the altar, and some think the care of them typified the burial of our Saviour, whose body was laid in a garden in a new sepulchre; God would also have the priests do it themselves, to teach that his servants must think nothing beneath them but sin. Of the fire he says that those who keep good houses never let the kitchen fire go out, and that the first came down from heaven, so that while it was kept up every later sacrifice might be reckoned consumed by that fire in token of acceptance — let it once go out and they could not expect it kindled so again, and the Jews say it never did until the captivity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke holds that the Jews open the twenty-fifth section of the law here and that the sixth chapter undoubtedly should commence with it, what precedes belonging to the fifth — the best Hebrew Bibles, he says, begin the chapter here. On the night burning he argues from the practical difficulty: if the whole offering were laid on at once it could not burn all night, so the priests must have sat up by turns and fed the fire until morning, the morning offering being likewise consumed piecemeal through the day; and he thinks the fat was burnt chiefly at night for the light and the convenience of tending the fire. Wesley explains why only the night needed a law: the daytime had such a succession of sacrifices that the fire could not fail."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott counts it the fourth use of the formula and marks the turn: hitherto the law had told the people how to bring their oblations, and now the priests are told how to conduct the service. He would render the clause that the burnt offering shall lie upon the fire and the fire be fed by it, and notes that in the second Temple the fat began to burn at midnight, keeping the fire alive till day. Keil observes that the verb is wanting in the first clause and supplied only in the second though it governs both, and that the opening pronoun cannot stand for an imperative, the passages Knobel cites being of a wholly different kind; the instructions apply first to the evening burnt offering, the basis of all the rest."
    }
   ],
   "debates": [
    {
-    "question": "What does the perpetual fire signify?",
+    "question": "Where does the sixth chapter properly begin?",
     "sides": [
      {
-      "position": "The perpetual fire, kept always burning (originally kindled from heaven, Leviticus 9:24) - a figure of continual worship and devotion, of Christ's offering of perpetual efficacy and unceasing intercession (Hebrews 10:12-14; 7:25), and of the fire of the Spirit and love never to be quenched in the believer's heart (1 Thessalonians 5:19; Romans 12:11)",
+      "position": "here, where the Jews open the twenty-fifth section of the law and the writer takes up a new subject; the best Hebrew Bibles begin it at this verse",
       "holders": [
-       "Wesley",
-       "Keil and Delitzsch",
-       "Gill",
-       "the reformed reading"
+       "Clarke"
+      ]
+     },
+     {
+      "position": "a new section does begin here in the Hebrew copies, and some accordingly begin a chapter",
+      "holders": [
+       "Gill"
       ]
      }
     ]
@@ -496,195 +258,191 @@
   ],
   "outliers": [],
   "themes": [
-   "The fire shall ever be burning upon the altar; it shall never go out",
-   "the perpetual fire that shall never go out (the crux of the unceasing fire)",
-   "the perpetual fire, originally kindled from heaven (Leviticus 9:24)",
-   "a figure of continual worship, Christ's perpetual efficacy, and the fire of the Spirit never to be quenched (Hebrews 10:12-14; 1 Thessalonians 5:19)"
+   "this is the law of the burnt offering: it shall be burning upon the altar all night unto the morning",
+   "the priest shall put on his linen garment, and take up the ashes",
+   "the fire of the altar shall be burning in it",
+   "the fire shall ever be burning upon the altar; it shall never go out"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
+  }
+ },
+ "10": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "10-13",
+  "pericope_label": "The linen garment, the carrying out of the ashes, and the three fires",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill explains the name of the linen garment, that the word means his measure, a robe cut exactly to the body and reaching to the feet — an emblem, he adds, of the purity of Christ our high priest, who being without sin could take away the sin of others by offering himself without spot. He sets out three fires kept on the altar: a large pile for the daily sacrifice, a smaller called the pile of the incense, from which fire was carried in a censer for the morning and evening incense, and a third kept only to preserve the flame, which on Maimonides' judgment is the one meant here; R. Joses places the great pile eastward, the second south-west nearer the ascent, and the third wherever seemed fit."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke has the priests approach the altar in their holiest garments and put on others to carry out the ashes, the holy dress serving only in the holy place, and defines the clean place as one where no carcass or filth was laid, the ashes being holy as remains of offerings made by fire. He instances the Persian Magi and the Parsees after them, who keep a perpetual fire still by command of the Zend Avesta, and the Sagnika Brahmin, who preserves the fire kindled at his investiture, uses it at his wedding and every burnt offering, and is burnt with it at the last. Wesley puts the change of dress simply, that the second garments served because this was no sacred but a common work, and gives the reason from the Israelite side: a fire once come down from heaven was preserved partly to leave no temptation to offer strange fire, partly to teach them whence the acceptance of every sacrifice came."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott counts the sacerdotal dress at four pieces: the tunic, a close robe of fine linen reaching to the feet; the drawers, which in the second Temple reached the knee; a girdle three fingers wide and thirty-two cubits long; and a turban fastened with ribbons. Only two are named here, but he thinks all four meant, the rest passed over for brevity or covered by the first word, which is why some versions put it in the plural. He guards the second set of garments as well: though less holy they were not common either, since removing the ashes was still a priestly act, the sacred robes being laid up meanwhile in cells within the precincts; and he adds what care was taken at the far end — the place sheltered against the wind, the ashes laid down gently rather than flung, and no stranger allowed to gather them or make profit of them. Of the three piles he traces the history: the fire burned unquenched until Nebuchadnezzar destroyed the house, and the priests carried captive into Persia are said to have hid it in a pit, whence it was restored in Nehemiah's time — though the authorities of our Lord's day reckon it among the five things wanting in the second Temple. Keil states the purpose exactly: the fire was kept up not to preserve the heavenly flame but so that the burnt offering itself should never cease, being the appointed sign of an uninterrupted worship the covenant nation could not suspend without unfaithfulness — and for the same reason, he notes, other nations kept fire always burning on the altars of their chief gods."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What was the perpetual fire for?",
+    "sides": [
+     {
+      "position": "not to keep the heavenly flame itself alive, but so that the burnt offering should never cease, being the sign of an uninterrupted worship",
+      "holders": [
+       "Keil"
+      ]
+     },
+     {
+      "position": "to leave no temptation to offer strange fire, and to teach them whence the acceptance of every sacrifice came",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did the perpetual fire survive?",
+    "sides": [
+     {
+      "position": "it burned unquenched till Nebuchadnezzar, was hidden in a pit by the captive priests and restored under Nehemiah — though later authorities count it among the five things wanting in the second Temple",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "it never went out until the captivity in Babylon",
+      "holders": [
+       "the Jews, as reported by Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "he shall put off his garments, and put on other garments",
+   "and carry forth the ashes without the camp unto a clean place",
+   "the priest shall burn wood on it every morning",
+   "the fire shall ever be burning upon the altar"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "14": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The law of the meal offering: 'and this is the law of the meat offering: the sons of Aaron shall offer it before the LORD, before the altar' — the law of the meal (meat) offering: the priests offering it before the LORD, before the altar (the meal offering, the offering of fine flour, oil, and frankincense, Leviticus 2:1, the priests offering it, the sons of Aaron presenting it before the LORD, the before the altar, the place of presentation, the figure, the meal offering, the figure of Christ's perfect humanity and the believer's devotion and thanksgiving, the fruit of the ground offered to God); the meal offering (the offering of fine flour and oil, Leviticus 2:1) — the figure (the perfect humanity of Christ, fine flour without leaven, the believer's devotion and thanksgiving); 'the sons of Aaron shall offer it before the LORD, before the altar' (the priests offering it before the LORD, the presentation before God, the providence, the meal offering presented, the figure of devotion offered to God, the figure, the offering of the fruit of the ground, the thankful devotion) — Henry, Gill, Calvin, Ellicott, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And this is the law of the meat offering: the sons of Aaron shall offer it before the LORD, before the altar",
-   "the law of the meal offering",
-   "the meal offering of fine flour and oil presented before God (Leviticus 2:1)",
-   "the figure of Christ's perfect humanity and the believer's thankful devotion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "14-18",
+  "pericope_label": "The law of the meat offering and the priests' portion of it",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the rules were given before and are repeated with additions, observes that no quantity of fine flour is prescribed, which he takes as leaving it to the offerer since the gift was freewill, and reads the ban on leaven typically, of Christ's sincerity and the uprightness required in the offerer. Calvin adds that to leaven meal already dedicated would turn it into common food, a profanation, and that God admits the priests to his own table in a way that raises their office while his presence restrains intemperance and teaches the sobriety due from his servants. On the closing clause he prefers the personal reading: elsewhere the altar and its vessels sanctify what is laid on them, but here laymen are forbidden to touch what is sacred, and the future stands for an imperative."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry weighs their portion against their labour. The burnt offerings laid much work on them for little profit, the flesh being wholly burnt and only the skin left; here they are made amends, a handful going to the altar and the rest being their own. It is God's will that his ministers be provided for, and what is given them he accepts as offered to himself; and since all Christians are spiritual priests, they too share in the sacrifices they offer, for it is not God who gains by them. Let God have the frankincense, he says, and the priests the flour and oil: what we give him the glory of we may take to ourselves the comfort of. Three conditions govern the eating. It must be unleavened — thus must we keep the feast with the unleavened bread of sincerity and truth; it must be eaten in the court, and he counts it a crime to carry any out, the eating being itself a sacred rite to be done with reverence; and the males only must eat it, since of the less holy things, the firstfruits and tithes and the breast and shoulder of the peace offerings, the daughters might eat, those being carriageable out of the court, but this was of the most holy. On the closing clause he reports two readings: that every one who touches them shall be holy — holy things for holy persons — or that every thing touching them becomes holy, so that the vessels used must never afterwards serve common uses."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the measures — an omer of flour, a tenth of an ephah, was the least even the poorest might bring, commonly with a log of oil, something over half a pint; more might be offered, but no less. Wesley distinguishes the case in hand from the priest's own offering, this being brought alone and by any of the people, since a priest's must have been wholly burnt."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The handful and frankincense burned as a memorial: 'and he shall take of it his handful, of the flour of the meat offering, and of the oil thereof, and all the frankincense which is upon the meat offering, and shall burn it upon the altar for a sweet savour, even the memorial of it, unto the LORD' — the priest taking a handful of the flour and oil, with all the frankincense, and burning it on the altar for a sweet savour, as the memorial (the handful, the memorial portion, Leviticus 2:2, the all the frankincense, all the frankincense burned, the whole fragrance to God, the sweet savour, the pleasing offering, the acceptance, the memorial, the portion presented to God, bringing the offering to remembrance, the figure, the sweet savour of Christ's offering, Ephesians 5:2, the memorial of devotion); the handful and all the frankincense (the memorial portion, Leviticus 2:2) — the figure (the memorial, the sweet savour, the acceptance); 'shall burn it upon the altar for a sweet savour, even the memorial of it, unto the LORD' (the memorial burned for a sweet savour, the pleasing offering, the acceptance before God, the figure, the sweet savour of Christ, Ephesians 5:2, the devotion accepted, the providence, the memorial burned, the rest to the priests, vv.16) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he shall take of it his handful, of the flour of the meat offering, and of the oil thereof, and all the frankincense which is upon the meat offering, and shall burn it upon the altar for a sweet savour, even the memorial of it, unto the LORD",
-   "the handful and frankincense burned as a memorial",
-   "the memorial portion burned for a sweet savour, the offering accepted (Leviticus 2:2)",
-   "the figure of the sweet savour of Christ (Ephesians 5:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priests eating the remainder of the meal offering: 'and the remainder thereof shall Aaron and his sons eat: with unleavened bread shall it be eaten in the holy place; in the court of the tabernacle of the congregation they shall eat it' — the rest of the meal offering (after the memorial was burned) eaten by the priests, unleavened, in the holy place (the priests' portion, the remainder, the priests fed from the offering, the altar their living, 1 Corinthians 9:13, the unleavened, no leaven, the purity, the sincerity, 1 Corinthians 5:8, the holy place, eaten in the sacred precinct, the holiness of the food); the priests fed from the offering (the altar their portion, the maintenance of the ministry, 1 Corinthians 9:13-14, 'they which minister about holy things live of the things of the temple') — the provision (the priests living of the altar, the figure of the ministry sustained by the gospel); 'with unleavened bread shall it be eaten in the holy place' (the unleavened bread, eaten in the holy place, the purity, the holiness of the food, the sacredness of the priests' portion, the figure, the unleavened sincerity, 1 Corinthians 5:8, the holy food in the holy place, the providence, the priests' portion, holy, eaten in the holy place) — Calvin, Wesley, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the remainder thereof shall Aaron and his sons eat: with unleavened bread shall it be eaten in the holy place; in the court of the tabernacle of the congregation they shall eat it",
-   "the priests eating the remainder of the meal offering",
-   "the priests fed from the offering, the ministry sustained (1 Corinthians 9:13-14)",
-   "the holy food in the holy place, the unleavened sincerity (1 Corinthians 5:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The offering unleavened and most holy: 'it shall not be baken with leaven. I have given it unto them for their portion of my offerings made by fire; it is most holy, as is the sin offering, and as the trespass offering' — the meal offering not to be baked with leaven, given to the priests as their portion, and it being most holy (like the sin and trespass offerings, the no leaven, the purity, no corruption, 1 Corinthians 5:8, the portion, the priests' share of the offerings, the most holy, the highest degree of holiness, like the sin and trespass offerings, to be eaten only by the priests in the holy place); the priests' portion (their share of the offerings, the ministry's living, vv.16) — the provision (the priests fed from God's offerings); 'it is most holy, as is the sin offering, and as the trespass offering' (the most holy, the highest holiness, the offering sacred, like the sin and trespass offerings, the figure, the holiness of God's things, the sacredness of the offering, the providence, the offering most holy, the priests' portion, the holiness guarded) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "It shall not be baken with leaven. I have given it unto them for their portion of my offerings made by fire; it is most holy, as is the sin offering, and as the trespass offering",
-   "the offering unleavened and most holy",
-   "the meal offering unleavened, the priests' sacred portion (1 Corinthians 5:8)",
-   "most holy, like the sin and trespass offerings"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The holiness communicated by the offering: 'all the males among the children of Aaron shall eat of it. It shall be a statute for ever in your generations concerning the offerings of the LORD made by fire: every one that toucheth them shall be holy' — the communicated holiness — 'every one that toucheth them shall be holy': the offerings so holy that whatever (or whoever) touched them became holy (consecrated, set apart, required to be holy, the witnesses noting the significance — the holiness of the offerings communicated by contact, the most holy things imparting their holiness, requiring holiness in whoever touched them, only the consecrated priests permitted to touch and eat, the lesson — the contagious holiness of the sacred, the holy things consecrating what touches them, the sacredness not to be profaned, the holiness imparted, Exodus 29:37; 30:29, the debate — whether 'shall be holy' means the thing becomes holy, consecrated, withdrawn from common use, or that only the holy may touch it, the witnesses generally holding the holiness is imparted, the touch consecrating, the most holy things communicating holiness, the figure — the holiness of God's things, and ultimately the holiness of Christ and his offering that sanctifies all who touch him by faith, the woman touching his garment, Mark 5:27-30, the holiness that flows from him, Hebrews 10:10, 'we are sanctified through the offering of the body of Jesus Christ'); the priests (the males of Aaron's line) eating the offering (the consecrated alone partaking) — the holiness (only the consecrated permitted, the sacred food); the holiness communicated, a statute for ever — the perpetual sacredness (the providence, the holiness of the offerings, the consecration imparted, the figure of sanctification through Christ) — Wesley, Ellicott, Gill."
+    "summary": "Ellicott adds two points: the sons of Aaron, though the words are literal, take in the lineal descendants who succeeded to the office, they and no layman being allowed to offer; and before the altar means its fore part, the south-easterly corner. He states the principle behind the priests' portion, that those who minister at the altar should live of the altar, which is why they had no inheritance in the land; and he corrects the rendering: it should be unleavened shall it be eaten, the remainder being made into cakes, whereas the inserted with of our version makes the priests eat the offering alongside unleavened bread. Keil says which is which: the first two verses repeat the earlier chapter, the new matter beginning with what was left unburnt — the priests were to bake it without leaven and eat it in the court of the tabernacle, as their share of the firings of Jehovah, most holy like the sin and trespass offerings, and eaten only by the males of their families, a statute for ever."
    }
   ],
   "debates": [
    {
-    "question": "What does 'every one that toucheth them shall be holy' mean?",
+    "question": "Does the closing clause speak of persons or of things?",
     "sides": [
      {
-      "position": "The most holy offerings imparting their holiness by contact (Exodus 29:37; 30:29) - the contagious holiness of the sacred (whatever touches becomes consecrated, only the holy permitted), a figure of the holiness of Christ and his offering that sanctifies all who touch him by faith (Mark 5:27-30; Hebrews 10:10)",
+      "position": "of persons — every one that toucheth them shall be holy, holy things being for holy persons",
       "holders": [
-       "Wesley",
-       "Ellicott",
-       "Gill",
-       "the dominant reading"
+       "Henry",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "it may be read in the neuter, so that whatever touches them becomes holy and the vessels can never afterwards serve common uses",
+      "holders": [
+       "a reading reported by Henry"
+      ]
+     },
+     {
+      "position": "the personal reading is right, and the clause forbids laymen to touch what is sacred, the future standing for an imperative",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -692,262 +450,200 @@
   ],
   "outliers": [],
   "themes": [
-   "All the males among the children of Aaron shall eat of it... every one that toucheth them shall be holy",
-   "the holiness communicated by the offering",
-   "the most holy offerings imparting holiness by contact (Exodus 29:37; 30:29)",
-   "a figure of Christ whose holiness sanctifies all who touch him by faith (Mark 5:27-30; Hebrews 10:10)"
+   "the sons of Aaron shall offer it before the LORD, before the altar",
+   "he shall take of it his handful of the flour of the meat offering",
+   "with unleavened bread shall it be eaten in the holy place",
+   "every one that toucheth them shall be holy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD speaking concerning the high priest's offering: 'and the LORD spake unto Moses, saying' — the LORD speaking to Moses, now to give the law of the high priest's daily meal offering (vv.20-23, the speaking, God's command, the high priest's offering, the occasion, after the law of the meal offering for the people, now the high priest's own continual offering); the LORD speaking (the high priest's offering, the daily offering of the anointed priest) — the new law (the high priest's continual meal offering); the LORD spake unto Moses — the high priest's offering introduced (the providence, God giving the law of the high priest's daily offering, the continual devotion of the priest) — Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, saying",
-   "the LORD speaking concerning the high priest's offering",
-   "God giving the law of the high priest's daily meal offering (vv.20-23)",
-   "the continual devotion of the priest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
    "Jamieson, Fausset and Brown",
-   "John Wesley"
+   "Keil and Delitzsch"
   ],
+  "range": "19-23",
+  "pericope_label": "The high priest's daily meat offering, wholly burnt",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill refers the words to such of Aaron's sons as succeeded him, citing Aben Ezra for him or one of his sons in his room, but reports that some make the common priests bring it too at their initiation, though neither anointed nor bound to continue it daily. He describes the vessel, a plane and extended plate without covering or hollow or lip, the dough on it made stiff enough not to run off, and mentions the temple chamber where these cakes were prepared; and he draws the consequence for whoever assisted: he got nothing by it and served the high priest gratis."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The high priest's perpetual daily offering: 'this is the offering of Aaron and of his sons, which they shall offer unto the LORD in the day when he is anointed; the tenth part of an ephah of fine flour for a meat offering perpetual, half of it in the morning, and half thereof at night' — the high priest offering a tenth of an ephah of fine flour as a perpetual (daily) meal offering, half in the morning and half at night, from the day of his anointing (the perpetual offering, the daily, continual offering of the high priest, the morning and night, the offering divided, the continual devotion morning and evening, the figure, the high priest's continual offering, the perpetual devotion, Christ the High Priest's perpetual offering and intercession, Hebrews 7:25, 27); the perpetual daily offering (the high priest's continual offering, from his anointing) — the figure (the continual devotion, Christ's perpetual offering, Hebrews 7:27, 'who needeth not daily... for this he did once'); 'half of it in the morning, and half thereof at night' (the offering morning and evening, the continual devotion, the daily worship, the figure, the morning and evening sacrifice, the perpetual devotion, Psalm 55:17, the providence, the high priest's continual offering, the figure of perpetual devotion and Christ's offering) — Keil and Delitzsch, Gill, Ellicott, Wesley."
+    "summary": "Clarke reads the day of anointing as a beginning, the statute running from it for ever. On the burning he states the principle broadly, that whatever a priest gave was wholly the Lord's and so entirely consumed, since the people's sacrifices fed those who ministered at the altar, whereas had they lived on their own it would have been as if they gave nothing, taking back what they seemed to render. He reports Theodoret's reason, that the rule marked the perfection God required in the ministers of his sanctuary; but prefers Ainsworth's, that the people's gift was eaten by those who made atonement for them, and since no priest, being himself a sinner, could atone for himself, his own might not be eaten but must be wholly burnt — to teach him to look for salvation not by legal service but by Christ, the eating of a sin offering figuring the bearing of the sinner's iniquity. Wesley narrows the offering to the high priest, the only one anointed in later ages, and notes that the law of his consecration was given before and is repeated for the additions made to it; he adds that the second person addresses the man so anointed and consecrated."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott takes the new formula as introducing the oblation of initiation, and holds that both orders brought it, on the practice of the second Temple: an ordinary priest brought it once, at his consecration, while the pontiff repeated it daily after the regular holocaust and before the drink offering — and it is to that daily burden, he says, that the apostle alludes in describing a high priest who need not offer first for his own sins. He glosses the day of anointing as when the ceremony was complete and he entered on his charge, which was the eighth day, and corrects three renderings: the measure is a tenth of an ephah, an omer, halved between morning and evening; the pan is better a flat plate; and bringing it baken is rather bringing it well soaked, saturated with oil. The baken pieces mean small roasted cakes, the flour soaked in the pan then divided and baked, apparently to answer the limbs into which a burnt sacrifice was parted. He describes the later practice: the pontiff brought the whole tenth of flour each morning, sanctified it, halved it by the measure kept in the sanctuary, mingled three logs of oil with it, kneaded six cakes from each half, baked them a little and fried them with some of the oil, taking care they stood between baked and raw; then he parted the six into twelve, the number of the shewbread, and brought six at dawn and six at dusk. On the burning he makes it decency: unlike the laity's mincha, of which all but a handful fell to the minister, this the pontiff presented himself, and it would be unseemly to give a thing to God and eat it too — nor might a lesser priest touch it, being of lower rank than the man who offered; and the rule was not peculiar to the high priest but covered every meat offering a priest brought."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Who brought this offering?",
+    "sides": [
+     {
+      "position": "the high priest and every common priest, but differently — the one daily, the other once at his consecration",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the high priest only, since he alone of all the priests was anointed in later ages",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "those of Aaron’s sons who succeeded him, though some make the common priests offer it at their initiation too",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why might none of it be eaten?",
+    "sides": [
+     {
+      "position": "because it would be unseemly for the same man to present a thing to God and eat it, and no lesser priest could eat what a superior offered",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "because the rule marked the high perfection God required in the ministers of his sanctuary",
+      "holders": [
+       "Theodoret, as reported by Clarke"
+      ]
+     },
+     {
+      "position": "because no priest, being himself a sinner, could make atonement for himself, so his offering must teach him to look for salvation by Christ and not by his own service",
+      "holders": [
+       "Ainsworth, as preferred by Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "This is the offering of Aaron and of his sons... the tenth part of an ephah of fine flour for a meat offering perpetual, half of it in the morning, and half thereof at night",
-   "the high priest's perpetual daily offering",
-   "the high priest's continual daily offering, morning and evening (Psalm 55:17)",
-   "the figure of perpetual devotion and Christ the High Priest's offering (Hebrews 7:25, 27)"
+   "this is the offering of Aaron and of his sons, in the day when he is anointed",
+   "a meat offering perpetual, half of it in the morning, and half thereof at night",
+   "in a pan it shall be made with oil",
+   "every meat offering for the priest shall be wholly burnt: it shall not be eaten"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The high priest's offering baked with oil for a sweet savour: 'in a pan it shall be made with oil; and when it is baken, thou shalt bring it in: and the baken pieces of the meat offering shalt thou offer for a sweet savour unto the LORD' — the high priest's meal offering made in a pan with oil, baked, and offered in pieces for a sweet savour (the pan and oil, the preparation, the oil of the Spirit mingled with the offering, the baked, the offering prepared by fire, the sweet savour, the pleasing offering, the acceptance, Ephesians 5:2, the figure, the offering mingled with oil, the Spirit, the sweet savour of devotion and of Christ); the offering made with oil (the oil mingled, the figure of the Spirit, Leviticus 2:5) — the figure (the offering anointed with the Spirit); 'the baken pieces of the meat offering shalt thou offer for a sweet savour unto the LORD' (the offering for a sweet savour, the pleasing devotion, the acceptance, the figure, the sweet savour of Christ, Ephesians 5:2, the devotion accepted, the providence, the high priest's offering, the sweet savour of perpetual devotion) — Gill, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "In a pan it shall be made with oil; and when it is baken, thou shalt bring it in: and the baken pieces of the meat offering shalt thou offer for a sweet savour unto the LORD",
-   "the high priest's offering baked with oil for a sweet savour",
-   "the offering mingled with oil, the figure of the Spirit (Leviticus 2:5)",
-   "offered for a sweet savour, the figure of Christ (Ephesians 5:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The high priest's offering wholly burnt: 'and the priest of his sons that is anointed in his stead shall offer it: it is a statute for ever unto the LORD; it shall be wholly burnt' — the succeeding high priest (anointed in his stead) offering it, a perpetual statute, and it being wholly burnt (not eaten, unlike the people's meal offering, the succession, each high priest in turn offering it, the perpetual office, the wholly burnt, the high priest's offering wholly consumed, none eaten, the whole given to God, the difference, the priest could not eat his own offering, the whole burnt, the figure, the whole devotion of the high priest given to God, Christ wholly given); the succeeding high priest offering it (the perpetual office, each in turn) — the succession (the continual office of the high priest, until Christ the abiding High Priest, Hebrews 7:23-24); 'it shall be wholly burnt' (the whole burnt, none eaten, the whole given to God, the reason, the priest not eating his own offering, the whole devotion to God, the figure, the whole devotion, Christ wholly given, Ephesians 5:2, the providence, the high priest's offering wholly burnt, the whole given to God) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the priest of his sons that is anointed in his stead shall offer it: it is a statute for ever unto the LORD; it shall be wholly burnt",
-   "the high priest's offering wholly burnt",
-   "the high priest's offering wholly given to God, none eaten",
-   "the figure of the whole devotion and of Christ wholly given (Ephesians 5:2; Hebrews 7:23-24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That the priest's own offering is wholly burnt: 'for every meat offering for the priest shall be wholly burnt: it shall not be eaten' — every meal offering made for (by) the priest himself wholly burnt, not eaten (the rule, the priest's own offering wholly given to God, none eaten, the reason, the priest could not eat his own offering, as he ate the people's, lest he profit from his own sin offering, the whole given to God, the figure, the priest's whole devotion, none kept back, the contrast with the people's offering, eaten by the priests); the priest's offering wholly burnt (none eaten, the whole to God) — the reason (the priest not benefiting from his own offering); 'it shall not be eaten' (none eaten, the whole given to God, the priest's whole devotion, the figure, the whole devotion, none kept back, the providence, the priest's offering wholly burnt, the whole to God) — Clarke, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For every meat offering for the priest shall be wholly burnt: it shall not be eaten",
-   "that the priest's own offering is wholly burnt",
-   "the priest's own offering wholly given to God, none eaten",
-   "the figure of the whole devotion, none kept back"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD speaking concerning the law of the sin offering: 'and the LORD spake unto Moses, saying' — the LORD speaking to Moses, now to give the priests' law of the sin offering (vv.25-30, the speaking, God's command, the law of the sin offering for the priests, the occasion, after the burnt and meal offerings, now the priests' charge in the sin offering); the LORD speaking (the law of the sin offering, the priests' duties) — the new section (the priests' charge in the sin offering, its holiness and disposal); the LORD spake unto Moses — the law of the sin offering introduced (the providence, God giving the priests their charge in the sin offering, the holiness of the offering) — Henry, Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, saying",
-   "the LORD speaking concerning the law of the sin offering",
-   "God giving the priests their charge in the sin offering (vv.25-30)",
-   "the holiness of the offering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "24-27",
+  "pericope_label": "The law of the sin offering: where it was killed and who ate it",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill says rules are added to what went before, allows none but sacred persons to touch or eat the flesh, and holds the very dishes and knives reserved from common service, to keep up veneration for the sacrifice and for the one it typified; he reads the priest's eating as the sign that he bore the sin of the man who brought the offering, a type of Christ bearing his people's sins on the tree. Calvin is struck that the two offerings share a place at all. God took care that his people be left in no doubt, true religion being marked off from human imagining by this, that he himself prescribes what is to be done; and since the two differ, it would have been natural to kill them apart, had the mistake not been forestalled by assigning both one place — from which we learn that a single law suffices for worship, if men will not be wise in their own conceits. Yet he will not pretend to more than he has: Moses begins here to distinguish two Hebrew words he had used indifferently, and what the difference was Calvin says plainly he does not know, having seen the guesses of others and nothing certain."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sees a figure in the ground itself, some thinking the north side typified the crucifying of Christ on Calvary, north of Jerusalem. He has the priest eat with his sons or other priests, after blood and fat had gone to God, and so bear the iniquity of the congregation. The rule about the blood he reads devotionally: such care teaches the regard we owe the blood of Christ, not to be counted common, and to be sprinkled on the conscience rather than the raiment. The broken vessel he takes for an admission of weakness — an earthen pot must be shattered and a brazen one scoured, the defilement clinging to the offering rather than being carried off, whereas the blood of Christ cleanses thoroughly, and after it no cleansing is needed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke agrees on the north side of the altar, and notes how the priests' provision was abused, improper persons pressing into the office to secure a secular living, which he calls a horrible profanity. He ends with Ainsworth: since the offering figured him made sin for us, the washing and breaking teach a holy use of that mystery. Wesley draws the boundary: the rule covers offerings for the sins of rulers or people but not of priests, whose blood went into the tabernacle and whose flesh therefore might not be eaten."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The sin offering killed in the place of the burnt offering, most holy: 'speak unto Aaron and to his sons, saying, This is the law of the sin offering: In the place where the burnt offering is killed shall the sin offering be killed before the LORD: it is most holy' — the sin offering killed in the same place as the burnt offering (the north side of the altar, Leviticus 1:11), and it being most holy (the place, the same as the burnt offering, the appointed place of sacrifice, the killing before the LORD, the death of the victim, the atonement, the most holy, the sin offering of the highest holiness); the sin offering killed in the place of the burnt offering (the same holy place, Leviticus 1:11; 4:24) — the figure (the death of the victim, the atonement, Christ slain); 'it is most holy' (the sin offering most holy, the highest holiness, the offering for sin sacred, the witnesses noting the paradox — the offering that bears sin is itself most holy, the sin-bearer not defiled but most holy, the figure of Christ made sin yet holy, harmless, undefiled, Hebrews 7:26; 2 Corinthians 5:21, the providence, the sin offering most holy, the figure of the holy sin-bearer) — Calvin, Keil, Gill."
+    "summary": "Ellicott marks the formula as opening not a new law so much as a fuller one, giving closer directions about the laity's sin offering, and adds that most holy assigns it to a class of sacrifices. He would render the clause the priest that expiateth sin by it, and explains that the flesh was food and part of their livelihood, the officiating priest being free to invite other priests and their sons as well as his household, though covetous priests are reproached for abusing the gift. He prefers the personal rendering, every one that toucheth the flesh, as earlier in the chapter, and describes what followed a splash of blood: a stain on the garment of priest or offerer was washed in the room appointed within the court, where a well supplied the sanctuary, so the blood should not be profaned outside the holy place — and the washing was the priest's office, not the layman's. Keil, whose note on the vessels stands here rather than at the verse prescribing them, gives the reason for both breaking and scouring: no part of the most holy flesh must be left clinging to a pot and desecrated when it is next used."
    }
   ],
   "debates": [
    {
-    "question": "How is the sin offering 'most holy' though it bears sin?",
+    "question": "What did the eating of the sin offering signify?",
     "sides": [
      {
-      "position": "The paradox of the sin-bearer itself most holy - the offering that bears sin not defiled but most holy, a figure of Christ made sin for us yet holy, harmless, undefiled (Hebrews 7:26; 2 Corinthians 5:21)",
+      "position": "that the priest bore the sin of the man who brought it, a type of Christ bearing his people’s sins on the tree",
       "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Gill",
-       "the dominant reading"
+       "Gill"
+      ]
+     },
+     {
+      "position": "that the priests bore the iniquity of the congregation, the flesh being given them as food for that end and as part of their livelihood",
+      "holders": [
+       "Henry",
+       "Ellicott"
       ]
      }
     ]
@@ -955,218 +651,121 @@
   ],
   "outliers": [],
   "themes": [
-   "This is the law of the sin offering: In the place where the burnt offering is killed shall the sin offering be killed before the LORD: it is most holy",
-   "the sin offering killed in the place of the burnt offering, most holy",
-   "slain in the appointed place of sacrifice (Leviticus 1:11; 4:24)",
-   "most holy though bearing sin, the figure of Christ made sin yet holy and undefiled (Hebrews 7:26; 2 Corinthians 5:21)"
+   "in the place where the burnt offering is killed shall the sin offering be killed",
+   "the priest that offereth it for sin shall eat it",
+   "whatsoever shall touch the flesh thereof shall be holy",
+   "thou shalt wash that whereon it was sprinkled in the holy place"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priest eating the sin offering in the holy place: 'the priest that offereth it for sin shall eat it: in the holy place shall it be eaten, in the court of the tabernacle of the congregation' — the priest who offered the sin offering eating it (those whose blood was not brought into the holy place, vv.30), in the holy place (the eating, the priest partaking of the sin offering, bearing the sin of the people, sharing in the atonement, the holy place, eaten in the sacred court, the figure, the priest bearing the iniquity of the people, eating the sin offering, Leviticus 10:17, 'God hath given it you to bear the iniquity of the congregation,' the priest's participation in the atonement, a figure of Christ who bore our sins); the priest eating the sin offering (bearing the people's sin, Leviticus 10:17) — the figure (the priest bearing the iniquity, sharing in the atonement, Christ bearing our sins); 'in the holy place shall it be eaten, in the court of the tabernacle of the congregation' (the sin offering eaten in the holy place, the holiness of the food, the sacred eating, the figure, the holy participation in the atonement, the providence, the priest eating the sin offering in the holy place, bearing the iniquity) — Clarke, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The priest that offereth it for sin shall eat it: in the holy place shall it be eaten, in the court of the tabernacle of the congregation",
-   "the priest eating the sin offering in the holy place",
-   "the priest bearing the iniquity of the people, sharing in the atonement (Leviticus 10:17)",
-   "a figure of Christ who bore our sins"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The holiness communicated by the sin offering's flesh and blood: 'whatsoever shall touch the flesh thereof shall be holy: and when there is sprinkled of the blood thereof upon any garment, thou shalt wash that whereon it was sprinkled in the holy place' — the communicated holiness — 'whatsoever shall touch the flesh thereof shall be holy': whatever touched the flesh of the most holy sin offering became holy (consecrated, set apart, the witnesses noting the significance — the holiness communicated by the sin offering, the most holy flesh imparting holiness to whatever touched it, as the meal offering, vv.18, the lesson — the contagious holiness of the sin offering, the holiness imparted by contact, the sacredness not to be profaned, and the sprinkled blood, the garment sprinkled with the blood to be washed in the holy place, the blood so holy it consecrated and required washing in the sacred place, the figure — the holiness of the sin offering, and of Christ the true sin offering, whose holiness sanctifies and whose blood cleanses, the blood of Christ that sanctifies and cleanses, Hebrews 9:13-14; 13:12; 1 John 1:7, the holiness that flows from him to all who touch him by faith); the blood-sprinkled garment washed in the holy place (the holiness of the blood, the sacred care, the blood not to be treated commonly) — the figure (the holiness and cleansing power of the blood, the blood of Christ honored and cleansing); the flesh consecrating, the blood cleansing — the holiness imparted (the providence, the holiness of the sin offering, the figure of Christ's sanctifying holiness and cleansing blood) — Wesley, Clarke, Gill."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does the holiness of the sin offering's flesh and blood signify?",
-    "sides": [
-     {
-      "position": "The most holy flesh imparting holiness by contact (as vv.18), the blood so holy it required washing in the sacred place - a figure of the holiness and cleansing of Christ the true sin offering, whose holiness sanctifies and whose blood cleanses (Hebrews 9:13-14; 13:12; 1 John 1:7)",
-      "holders": [
-       "Wesley",
-       "Clarke",
-       "Gill",
-       "the dominant reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Whatsoever shall touch the flesh thereof shall be holy: and when there is sprinkled of the blood thereof upon any garment, thou shalt wash that whereon it was sprinkled in the holy place",
-   "the holiness communicated by the sin offering's flesh and blood",
-   "the most holy flesh consecrating and the blood requiring sacred washing",
-   "a figure of Christ whose holiness sanctifies and whose blood cleanses (Hebrews 9:13-14; 13:12; 1 John 1:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "28": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The cleansing of the vessels of the sin offering: 'but the earthen vessel wherein it is sodden shall be broken: and if it be sodden in a brasen pot, it shall be both scoured, and rinsed in water' — the earthen vessel in which the sin offering was boiled to be broken, and a brazen pot scoured and rinsed (the earthen vessel broken, the porous earthen, absorbing the holy, broken, not used again, the brazen pot scoured, the harder brass cleansed and rinsed, the reason, the holiness absorbed by the vessel, the sacredness not to be carried into common use, the figure, the holiness of the sin offering, the care that the sacred not be profaned, the earthen vessel, frail, broken, the figure of the body, 2 Corinthians 4:7); the earthen vessel broken (the porous earthen absorbing the holy, not reused) — the holiness (the sacred not to be carried into common use); 'if it be sodden in a brasen pot, it shall be both scoured, and rinsed in water' (the brazen pot scoured and rinsed, the harder metal cleansed, not absorbing as the earthen, the figure, the cleansing of the vessel, the care for holiness, the providence, the vessels cleansed or broken, the holiness guarded) — Clarke, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "But the earthen vessel wherein it is sodden shall be broken: and if it be sodden in a brasen pot, it shall be both scoured, and rinsed in water",
-   "the cleansing of the vessels of the sin offering",
-   "the vessels broken or cleansed, the holiness of the sin offering guarded",
-   "the sacred not carried into common use"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "28-30",
+  "pericope_label": "The broken vessel, who might eat, and the offering that must be burnt",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has the earthen pot porous, so the liquor in which the offering was boiled might soak in and the smell be retained; and since such vessels cost little they were ordered broken. Where the pieces went the Jewish writers could not settle, thinking it indecent that vessels once put to holy uses should lie exposed, and unseemly that heaps of them should gather in the sanctuary — so, Gill says, they framed a miracle, and supposed the ground swallowed them. He says the meal was shared not by the single priest who offered but by his male children and those of other priests then on duty; and he traces where the excepted flesh was burnt, Ben Gersom putting it in a prepared place east of the court, though a later chapter makes clear it was carried out without the camp. Calvin sets the exception in its reason: private men atoned at less expense, only the greater altar in the court being sprinkled, but when the priest reconciled God to the whole people or to himself, that the intercession might be more effectual, he carried blood within the veil — from which the apostle infers, in an apt allusion, that the distinction of meats is abolished, the lesser altar hidden under the Law being now laid open, so that we eat no longer of the legal sacrifices, and since our one Priest has borne his blood into the sanctuary it remains only to go forth with him without the camp."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the three perpetuals of the chapter together — the meat offering, the fire and the burnt offering — and finds them reflected in the promise that Christ is able to save to the uttermost those who come to God by him, seeing he ever liveth to make intercession. As the meat offering was perpetual, our gratitude for innumerable mercies should be; as the burnt offering was perpetual, the sacrifice of our Lord is to be reckoned a perpetual offering, that men of every age may come to God through one ever living in his sacrificial character, shown even in heaven as the Lamb just slain before the throne; and as the altar fire was never to go out, so the influences of the Spirit in every member of the Church, and the flame of pure devotion in believing hearts, should be permanent and never slack. He also passes on Calmet's restriction, that the rule about vessels concerns those brought to the court by private men rather than those the priests kept for ordinary service. Wesley reasons from value as well as substance, that the metal pot was rinsed and not broken because God would not have a thing of worth needlessly wasted, and because a solid substance was less apt to drink in the moisture."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The priests eating the most holy sin offering: 'all the males among the priests shall eat thereof: it is most holy' — all the male priests eating of the sin offering (those whose blood was not brought into the holy place, vv.30), for it was most holy (the priests eating, the male priests partaking, bearing the iniquity, vv.26, the most holy, the highest holiness, eaten only by the consecrated priests, in the holy place, the figure, the priests bearing the iniquity, sharing in the atonement, the most holy offering for the consecrated); the male priests eating (the consecrated alone, bearing the sin, vv.26) — the figure (the priests bearing the iniquity of the people); 'it is most holy' (the sin offering most holy, the highest holiness, for the consecrated priests only, the figure, the holiness of the offering, the sacred food, the providence, the sin offering most holy, the priests' sacred portion) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott confirms the physical reason: Hebrew earthenware was unglazed, as common ware in the East still is, and would drink up the fat juices, which could not afterwards be washed out; in the second Temple the fragments were buried when they grew many. Brass took no juices, being solid, and adhering flesh came off by washing, the scouring with hot water and the rinsing with cold. He adds that the officiating priest could invite any other priests and their sons to the meal, and takes this for the practice behind the apostle's saying that we have an altar whereof they have no right to eat which serve the tabernacle; and he would render the last verse but rather than and, and corrects reconciling to making atonement for. Keil marks the limit: the flesh was boiled and eaten by the males among the priests alone, and only in the laity's offerings, since those for the high priest and the whole congregation, whose blood went into the tabernacle to complete the expiation, were not eaten but burnt."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why must the earthen vessel be broken and the brazen only scoured?",
+    "sides": [
+     {
+      "position": "earthenware is porous and absorbs the juices, which cannot be washed out, while solid metal absorbs nothing and can be cleansed",
+      "holders": [
+       "Gill",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the metal was spared because God would not have a thing of value needlessly wasted",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "claim": "gathers the chapter’s three perpetuals — the perpetual meat offering, the perpetual fire and the perpetual burnt offering — into a single reading of the promise that Christ saves to the uttermost, seeing he ever liveth to make intercession"
+   }
+  ],
   "themes": [
-   "All the males among the priests shall eat thereof: it is most holy",
-   "the priests eating the most holy sin offering",
-   "the consecrated priests eating the most holy sin offering, bearing the iniquity (vv.26)",
-   "sharing in the atonement, the sacred portion"
+   "the earthen vessel wherein it is sodden shall be broken",
+   "if it be sodden in a brasen pot, it shall be both scoured, and rinsed in water",
+   "all the males among the priests shall eat thereof: it is most holy",
+   "no sin offering, whereof any of the blood is brought into the tabernacle, shall be eaten"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sin offering whose blood was brought in being wholly burnt: 'and no sin offering, whereof any of the blood is brought into the tabernacle of the congregation to reconcile withal in the holy place, shall be eaten: it shall be burnt in the fire' — the sin offerings whose blood was brought into the holy place (for the priest and the congregation, ch. 4) not eaten but wholly burnt (without the camp, the distinction, the sin offerings whose blood went within were burnt, not eaten, those whose blood stayed without were eaten by the priests, the reconciliation, the blood brought in to reconcile, to make atonement in the holy place, the burning, the body wholly burnt, as Leviticus 4:12); the blood brought in to reconcile (the atonement made in the holy place, the higher offerings) — the figure (the blood of reconciliation, Christ's blood brought into the true holy place, Hebrews 9:12, the reconciliation by the blood, 2 Corinthians 5:18-19; Colossians 1:20); 'it shall be burnt in the fire' (the body wholly burnt, not eaten, the higher sin offerings burnt without the camp, Leviticus 4:12, the figure, the figure of Christ suffering without the gate, Hebrews 13:11-13, the providence, the distinction of the sin offerings, the highest burnt, the reconciliation by the blood) — Keil and Delitzsch, Calvin, Gill, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And no sin offering, whereof any of the blood is brought into the tabernacle of the congregation to reconcile withal in the holy place, shall be eaten: it shall be burnt in the fire",
-   "the sin offering whose blood was brought in being wholly burnt",
-   "the higher offerings whose blood entered the holy place wholly burnt, not eaten (Leviticus 4:12)",
-   "a figure of the blood of reconciliation brought in by Christ and his suffering without the gate (Hebrews 9:12; 13:11-13; Colossians 1:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
