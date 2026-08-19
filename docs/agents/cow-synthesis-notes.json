@@ -7033,6 +7033,67 @@
         "23"
       ],
       "note": "Genuine interpretive crux at v23 worth flagging for anyone reworking this chapter: who speaks 'be strong and of a good courage, for thou shalt bring the children of Israel into the land which I sware unto them'? The nearer antecedent of 'he' is Moses, and the Septuagint translators read it so — but were then forced to emend two clauses, 'the Lord sware' for 'I sware' and 'he shall be with thee' for 'I will be with thee'. Aben Ezra keeps the received text by having Moses speak in God's name and authority. Gill judges for the Lord himself as speaker, and Ellicott independently glosses the subject as Jehovah, calling this the first record of God's direct communion with Joshua. Recorded as an outlier rather than a debate, since no used voice actually HOLDS the Moses reading — it is reported by Gill, not defended by anyone in the catena."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JFB stride residue with a NEW donor chapter, and the cleanest evidence yet for the mechanism. Five keys — vv.4, 10, 16, 22, 28 — a perfect stride of six with no gap, and every one of them carries Deuteronomy 24 material: v4 = the certificate of divorce (24:1-4), v10 = the millstone taken to pledge (24:6), v16 = the poor man's cloak restored before night (24:10-13), v22 = none responsible for the crimes of others (24:16), v28 = the forgotten sheaf and the olive not beaten twice, left for the stranger, fatherless and widow (24:19-21). So the residue is not a single stuck block repeated, as in deuteronomy 31 (where all four keys carried the identical Numbers 33 itinerary): here the donor ADVANCES through its own chapter in step with the stride. That rules out a caching bug and points squarely at a harvest-side index offset — the JFB fetch is walking one source at a fixed step while the verse index walks another. All five excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "5",
+      "verses": [
+        "31"
+      ],
+      "note": "StudyLight chrome tail on the chapter's LAST verse — v31 carries Ellicott's real note, then the footer, the CSS block and the site menus. Fifteenth chapter in a row where the tail lands on the final verse, and the second in this batch (deuteronomy 31:30 was the fourteenth). Same second-order effect as there: the menu text contains 'Adam Clarke Commentary', so the ghost checker reported Clarke as present in the vv.29-31 blob though he has no comment on those verses; undeclarable_voices() caught it and left the exclusion list empty. The pattern now has enough instances to be treated as deterministic rather than incidental — the harvester is capturing the page tail on whatever request ends the chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "5",
+      "note": "Median-based entry-count predictor, fifth data point and the first miss in the sub-800 band. judges 5: 28,618 usable source words, 31 keys, median key 654, no gaps, nothing over the 4,500 span limit — but it tiled to ELEVEN entries, keys/2.8, where deuteronomy 31 (30 keys, median 648, almost identical profile) tiled to nine, keys/3.3. The difference is not the median but the DISTRIBUTION: judges 5 has three heavy keys (v12 at 3,999, v24 at 2,475, v28 at 2,061) sitting among a long tail of 300-800 word keys, so the heavy keys must take spans of their own or near enough, and the light keys cannot be merged far enough to compensate without crossing the 4,500 ceiling. Refinement: the median predicts the count well only when the spread is narrow. A better single number would be the count of keys over ~2,000 words, added to (remaining words / 2,500). For judges 5 that gives 3 + (20,000/2,500) = 11, exactly right; for deuteronomy 31 it gives 0 + (22,982/2,500) = 9, also exactly right. Recommend 'synthesis-loop.py size' print keys-over-2000 and that projection."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "5",
+      "note": "Voice profile worth flagging for anyone reworking Judges: this chapter has NO Calvin, NO Wesley, NO Spurgeon and NO Augustine anywhere in its 31 keys. The whole song rests on Gill, Clarke, Ellicott, Keil, and a Henry who has only four keys (vv.1, 6, 12, 24). Consequences for the tags: 'reformed' is Gill alone in every entry and 'wesleyan-arminian' is Clarke alone, so both schools are permanently 'single' prevalence; 'puritan-evangelical' appears in only four of the eleven entries; and 'grammatical-historical' carries Ellicott and Keil together and is the load-bearing school throughout. Ellicott in particular is doing work he does not do elsewhere — he supplies the lexical arguments (perazon, peraoth, the scribe's staff, the dyed robes), the literary parallels (Sir Patrick Spens, Claudian, Gibbon, Aeschylus) and the whole moral discussion of Jael. A chapter this dependent on one commentator is worth re-checking if the Ellicott source is ever refetched."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "4",
+        "24",
+        "26"
+      ],
+      "note": "Four substantive disagreements in this chapter, all recorded in the tags but worth listing together since they are unusually sharp for a single chapter. (1) v2, the word peraoth: Keil argues from the one other occurrence that it means the hairy ones, those who possessed strength, and denies that the sense of leading can be established in Hebrew; Ellicott holds the Septuagint right with 'in the leading of the leaders of Israel' and says the received 'avenging of Israel' is impossible. (2) v4, the march out of Seir: Clarke and Keil take it for Sinai and the giving of the law; Ellicott argues that the mention of Seir and Edom, and the different imagery, require the march from Kadesh Barnea to the first conquest east of Jordan. (3) v24, whether the blessing on Jael approves the deed: Clarke narrows 'bless' to 'praise, celebrate' and denies divine approbation; Ellicott concedes the deed is indefensible but explains Deborah as the creature of her age, and objects strongly to comparing the words with the angel's salutation to the Virgin; Gill and Henry simply justify her as choosing God's side. (4) v26, whether the piled-up verbs betray a thirst for revenge: Ellicott reports the charge and answers it from ancient moral sensibility, Keil denies it outright and says the repetition only means Sisera was struck dead at a blow. Three of the four are direct Ellicott-versus-Keil exchanges."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "rejected",
+      "book": "judges",
+      "chapter": "5",
+      "verses": [
+        "28"
+      ],
+      "note": "Material deliberately not used, recorded so the next worker does not re-decide it. Clarke's block at v28 carries a long quotation from Bishop Lowth's thirteenth Prelection on the mother of Sisera — 'a striking image of maternal solicitude, and of a mind divided between hope and fear' — with Lowth's observation that she dwells not on the slaughter of the enemies or the valour of the victor but, burning with the female love of spoils, on damsels, gold and garments, and that the disappointment of her hope is expressed more strongly by the poem's sudden silence than any colouring of words could paint it; followed by Dodd's quotation of Pelicanus challenging Homer or Virgil to match the song. It is the best single piece of literary criticism in the chapter's whole catena. It was left out because it is filed at v28, inside the vv.26-28 entry, which was already at the 650-word ceiling with Clarke present twice, while Ellicott's own citation of Lowth on the same verses falls in the NEXT entry (vv.29-31) and using both would have templated across the two. If this chapter is ever reworked at a higher word budget, Lowth belongs in it."
     }
   ]
 }

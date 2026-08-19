@@ -1,1030 +1,794 @@
 {
  "1": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "1-2",
+  "pericope_label": "Then sang Deborah and Barak: the summons to praise for leaders and willing people",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Deborah is named first, being the root of the work, chief both in directing the war and composing the song."
+    "prevalence": "single",
+    "summary": "Gill explains why Deborah is named first: as Kimchi puts it she was the root or foundation of the work, chief both in the direction of the war and in the composition of the song, and Ben Gersom observes that she alone composed it, the verb being singular — after which, and in her words, Barak sang also, joining not in making the song but in singing it, as the people likewise joined, as they had with Moses at the Red Sea. On the disputed word of the second verse he keeps the received rendering, referring the vengeance to the injuries done Israel by Jabin these twenty years past."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds her authorship confirmed by the later line, till I Deborah arose, and would render the opening words, Then she sang, even Deborah. She used her power as a princess as well as her gifts as a prophetess, obliging the conquering army to learn and sing it — not that they should celebrate her praises, but join with her in magnifying God: she had been the first wheel in the action, and is now the first in the thanksgiving."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke warns the reader before he begins: there are many difficulties in this very sublime song, and several gross mistakes in our version will be instantly acknowledged by all who can critically examine the original. Kennicott distributed it into parts assigned to Deborah and Barak alternately, but that division is by far too artificial; Hales's version perhaps comes nearer the simplicity of the original, though it too leaves several difficulties behind."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that Deborah was a prophetess, and that the word for prophet, like the Latin vates, involved gifts closely allied to the poet's, so that though she was doubtless sole author, as the singular verb implies, Barak joined in antiphon when it was sung, as Moses at the head of the warriors and Miriam at the head of the women sang the song of Exodus. Keil has no hesitation about the poem itself: it is so direct and lively an utterance of the enthusiasm awakened by the exaltation of Israel and its victory over Sisera that its genuineness is now generally admitted; and he lays out its plan — a general summons to praise, then a first section on the significance of the victory, and after a fresh summons a second on the conflict itself."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does the disputed word in the second verse mean?",
+    "positions": [
+     {
+      "position": "the hairy ones, those who possessed strength — the champions who went before the nation; the sense of leading cannot be established in Hebrew",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "in the leading of the leaders of Israel, with the Septuagint; whatever the image behind the word, leadership is the notion involved",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Then sang Deborah and Barak the son of Abinoam on that day",
-   "the deliverance answered with a song of praise to the LORD",
-   "I will sing unto the LORD, for he hath triumphed gloriously (Exod. 15:1)"
+   "praise ye the Lord for the avenging of Israel",
+   "when the people willingly offered themselves",
+   "then sang Deborah and Barak the son of Abinoam"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the avenging of the injuries done to Israel by their enemies, particularly Jabin for twenty years; the people willingly offered themselves."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Praise ye the LORD for the avenging of Israel, when the people willingly offered themselves",
-   "God praised both for his salvation and for the willing hearts he gives",
-   "thy people shall be willing in the day of thy power (Ps. 110:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she desires that all potentates, far and near, might hear of the wonderful works of God for his people; she would sing unto the LORD God of Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hear, O ye kings; give ear, O ye princes; I, even I, will sing unto the LORD",
-   "the glory of God published before the highest of the earth",
-   "I will speak of thy testimonies also before kings, and will not be ashamed (Ps. 119:46)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: here properly begins the song, with an apostrophe to the Lord, recalling ancient appearances of God for his people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "LORD, when thou wentest out of Seir... the earth trembled, and the heavens dropped, the clouds also dropped water",
-   "the LORD coming in majesty to deliver his people",
-   "the mountains quake at him... the earth is burned at his presence (Nah. 1:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "3-6",
+  "pericope_label": "Hear, O ye kings: the march out of Seir and the desolation under Jabin",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the inhabitants of the mountains melted through fear, the Lord going before Israel in a pillar of cloud and fire."
+    "prevalence": "single",
+    "summary": "Gill widens the summons as far as it will go: not the neighbouring potentates only but all the kings of the earth, in succeeding ages too, that they might learn there is one higher than they and be cautious how they oppress the people of God — the Targum restricting it to the kings who came with Sisera, Kimchi noting that some refer it to Israel, who were all the sons of kings. On the march out of Seir he reports both readings: the Targum and Jarchi refer it to Sinai, Aben Ezra and Kimchi to the Lord's going before Israel after they had encompassed Edom and marched toward Canaan, when they fought Sihon and Og and struck terror into the nations round about."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry itemises the ruin under Jabin. There was no trade, for want of soldiers to protect men of business and magistrates to restrain robbers, so that commerce ceased; no travelling, since robbers insulted on the open roads while honest travellers skulked through byways in continual frights; no tillage, the farmers quitting houses that were continually plundered for the shelter of walled cities; no justice, there being war in the gates where the courts were kept; and neither arms nor spirit, not a shield or spear seen among forty thousand. The cause he puts in one word — they chose new gods: the Lord their God was one Lord, but that would not content them, and their God was the Ancient of days, still the same, so they grew weary of him and must have gods of their own choosing, being as fond of them as children of new clothes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes the passage for the giving of the law and the manifestation of God's power and glory at that time, the most signal display of his majesty and mercy toward their forefathers, with which Deborah very properly begins."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the mountains melting before the LORD."
+    "summary": "The kings and princes summoned to listen are not Israel's, which had no kings at that time, but those of the heathen nations, as in the second psalm; Keil says they were to discern the mighty acts of Jehovah and learn to fear Him as almighty God, and notes that the verb Deborah uses is the technical term for singing with instrumental accompaniment, while Ellicott adds that the Septuagint render princes by satraps, the Chaldee referring the summons to the kings allied with Jabin. On the march out of Seir Keil keeps the older view, hearing an unmistakable allusion to Moses' blessing and making the manifestation at Sinai the starting-point of Deborah's praise; Ellicott argues that the mention of Seir and Edom shows the law is not meant, the imagery being different and the context requiring a more pertinent allusion — the march from Kadesh Barnea to their first great conquest east of Jordan, signalised by the same majestic phenomena which had helped them defeat Sisera. He renders the desolate roads literally as keeping holiday, the grass growing on them for want of anyone to occupy them, and quotes a traveller in America reminded of the verse by the neutral ground in 1780: houses plundered, enclosures broken down, cattle carried away, fields waste, the roads grass-grown, the country mournful, solitary, silent."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The mountains melted from before the LORD, even that Sinai from before the LORD God of Israel",
-   "nothing standing before the glory of God",
-   "the mountains flowed down at thy presence (Isa. 64:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: during the twenty years of Jabin's oppression, robbers made the highways dangerous, so men travelled by crooked paths; the highways were unoccupied."
+    "question": "Does the march out of Seir refer to Sinai or to a later march?",
+    "positions": [
+     {
+      "position": "to the giving of the law at Sinai, the most signal display of God’s majesty toward their forefathers",
+      "holders": [
+       "Adam Clarke",
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "to the march from Kadesh Barnea to the first conquest east of Jordan; the mention of Seir and Edom, and the imagery, forbid the other",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "the highways were unoccupied, and the travellers walked through byways",
-   "the desolation that sin and bondage bring upon the land",
-   "the ways of Zion do mourn... her gates are desolate (Lam. 1:4)"
+   "in the days of Shamgar, the highways were unoccupied",
+   "they chose new gods; then was war in the gates",
+   "the mountains melted from before the Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "7": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch"
   ],
+  "range": "7-9",
+  "pericope_label": "The villages ceased until Deborah arose: no shield or spear among forty thousand",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Canaanite robbers entered the villages and unwalled towns, plundering houses, so the villages ceased; Deborah arose a mother in Israel."
+    "prevalence": "single",
+    "summary": "Gill takes the received sense and fills in the picture: the Canaanite robbers did not only go upon the highway but entered the villages and unwalled towns and plundered the houses, so that the inhabitants quit their dwellings for the fortified cities, and the villages were left empty and in time fell to ruin. On the governors whom Deborah's heart goes out to, he reports that most of the Jewish commentators, and the Targum, understand the wise men and scribes who were willing to teach the people the law even in times of trouble, while Kimchi and Ben Melech understand the great men of the nation, the nobles and rulers who enacted good laws or saw the good laws they had executed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "The Vulgate reads the opening clause of the eighth verse quite differently — the Lord chose a new species of war, and himself subverted the gates of the enemy — and Clarke, instead of dismissing it, asks what such a war would look like and finds the answer in the narrative. A woman signifies her orders to Barak; he takes ten thousand men, wholly unarmed, and retires to Mount Tabor, where they are besieged by a powerful and well-appointed army; on a sudden Barak and his men rush upon them, terror spreads through the whole Canaanite host, and the rout is instantaneous; the Israelites arm themselves with their enemies' arms, Sisera flies away on foot, and the whole army is destroyed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott doubts the received rendering of the word for the inhabitants of the villages: it is supported by the Chaldee and by analogous words, but cannot be the sense four verses later, and the Septuagint's princes, or the Vulgate's strong ones, is more probable — warlike chiefs being probably the sense, while Luther makes them peasants. He weighs the Vulgate's variant in the eighth verse as a textual question and decides against it, since the Chaldee and Septuagint support our version, which the song of Moses strongly confirms, whereas the Syriac and Vulgate give a poorer sense and are open to the objection that Jehovah, not Elohim, is used throughout the rest of the song. Whether Israel had been disarmed he also disputes: the clause is usually explained of a general disarmament, but there is no indication, and rather the reverse, that Barak's army was unarmed — and it numbered ten thousand, not forty thousand — so the context rather favours the meaning that not a warrior in all Israel dared put on his armour. Keil supplies what war at the gates means: the enemy pressed up to the very gates of the Israelite towns and besieged them, and the question about shield and spear assumes a negative answer."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "observation": "Clarke reduces the desolation to a sentence: the people had to live together in fortified places, or in great numbers, to protect each other against bands of spoilers."
+   }
+  ],
   "themes": [
-   "The inhabitants of the villages ceased... until that I Deborah arose, that I arose a mother in Israel",
-   "God raising up a deliverer, a mother to his people, in the darkest time",
-   "as one whom his mother comforteth, so will I comfort you (Isa. 66:13)"
+   "until that I Deborah arose, that I arose a mother in Israel",
+   "was there a shield or spear seen among forty thousand in Israel?",
+   "my heart is toward the governors of Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Israel chose new gods, and this refers to their idolatry, after which war came; there was not a shield or spear among forty thousand."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.39
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They chose new gods; then was war in the gates: was there a shield or spear seen among forty thousand in Israel?",
-   "apostasy bringing war and helplessness on God's people",
-   "they provoked him... therefore he gave his people over to the sword (Ps. 78:58-62)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: most Jewish commentators interpret this of the wise men and scribes willing to teach the people the law even in trouble."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "My heart is toward the governors of Israel, that offered themselves willingly among the people. Bless ye the LORD",
-   "the willing servants of God honoured, their readiness his gift",
-   "all things come of thee, and of thine own have we given thee (1 Chr. 29:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "10-11",
+  "pericope_label": "Ye that ride on white asses: the archers silenced at the watering places",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: in Judea it was honourable to ride on asses, especially white ones, used by persons of distinction; those who sit in judgment and walk by the way are called."
+    "prevalence": "single",
+    "summary": "Gill answers the objection an English reader feels. In some countries riding an ass is disgraceful, and Leo Africanus mentions an African preacher called the ass rider because he was continually sitting on one; but in Judea, where horses were few, it was accounted honourable, as in our Lord's day, and we read of the numerous sons of two judges who rode on asses' colts. He adds that the Hebrew name of the animal comes from redness, the usual colour in those parts, for which reason asses were hateful to the Egyptians, their Typhon being of that colour. On the archers he offers the alternatives — the army delivered from Sisera's archers at the Kishon, the maidens frightened at the wells, the shepherds repulsed as they watered their flocks — and a rendering that makes it the voice of those who number sheep and cattle at the watering places, which they could now do again in peace."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke would render the asses sleek or well-fed, as the Vulgate has shining asses, and takes those who walk by the way for persons going from place to place for traffic. Why the wells should be places of terror he explains from the geography: wells being scarce in every part of the East, and travellers in such hot countries needing water, robbers took their stations near tanks, pools and springs, to fall suddenly on those who came to drink, and where a country was badly governed such annoyances were frequent — Dr. Shaw describing a beautiful rill running into a basin of Roman workmanship called drink and be off, from the danger of meeting assassins there. Instead of that insecurity, Deborah intimates that they may now sit down at the watering place and there rehearse the righteous acts of the Lord."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott would render the opening imperative Think of it, or Meditate the song, noting that in the original it stands at the end of the line, far more forcibly placed. On the white asses he is emphatic that the colour word is wrong, since there are no white asses; it means rather bright-coloured, glossy-skinned or dappled, and these were the more valuable sort, used by the rich and great — and because that was not understood among the Greeks and Romans, who despised the ass, the Septuagint and Josephus often disguise the word for Gentile readers, no incident being more derided among the Gentiles than the riding to Zion of her king, meek and sitting upon an ass. He prefers ye that sit on rich divans to ye that sit in judgment, recording that some Jews read the Hebrew as at Middin, the town in Judah, that others make it saddle-cloths, and that the Alexandrine manuscript has sedans or covered chariots. Keil reads the verse as a summons to the whole nation by classes — the riders on white asses being the upper classes, those who sit upon coverings the rich and prosperous, and those who walk on the way the middle and lower classes — granting that the division is not exact, the first two terms forming no true antithesis."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "observation": "Ellicott admits the meaning of the eleventh verse is highly uncertain: they that are delivered is a conjectural addition of our version, the Hebrew having only from the noise; the Vulgate renders it where the chariots clashed together and the army of the enemy was strangled; the Chaldee is utterly vague; and Ewald has from the shoutings of the spoil-dividers between the water-troughs. Amid these uncertainties, he says, we have nothing better to offer than the conjecture of our translators."
+   }
+  ],
   "themes": [
-   "Speak, ye that ride on white asses, ye that sit in judgment, and walk by the way",
-   "every rank of God's people called to publish his deliverance",
-   "let every thing that hath breath praise the LORD (Ps. 150:6)"
+   "ye that ride on white asses, ye that sit in judgment",
+   "they that are delivered from the noise of archers",
+   "there shall they rehearse the righteous acts of the Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the army delivered from the archers of Sisera at the river Kishon, or maidens delivered at the wells; there they would rehearse the righteous acts of the LORD."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there shall they rehearse the righteous acts of the LORD, even the righteous acts toward the inhabitants of his villages",
-   "deliverance turning daily life into a theatre of praise",
-   "we have heard with our ears... what work thou didst in their days (Ps. 44:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "12",
+  "pericope_label": "Awake, awake, Deborah: lead thy captivity captive, thou son of Abinoam",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she arouses herself to attend the service with more ardour, or finding herself more impelled by the Spirit; Barak is called to lead his captivity captive."
+    "prevalence": "single",
+    "summary": "Gill puts the alternatives plainly: either she perceived some languor in her spirits while delivering the song, and rouses herself to attend the service with more ardour, or rather, finding herself the more impressed with the great and good things the Lord had done for Israel, she calls upon her soul to exert all its powers, and for that reason repeats the word so often."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears in the fourfold call both the sense Deborah had of the excellency and difficulty of the work, which well deserved the utmost liveliness and vigour of soul, and the sense of her own infirmity and aptness to flag in her zeal — praising God being work that we should awake to, and awake ourselves to. He takes the charge to Barak as a triumph in the Roman sense and explains where the prisoners came from: though Sisera's army was cut off in the field and no quarter given, we may suppose that in the prosecution of the victory many not found in arms were seized and made prisoners, and these she would have led in chains after Barak when he made his public entry into his own city — not that it should be any pleasure to him to trample upon his fellow creatures, but that he must in this way give glory to God, and serve that great purpose of His government which is to look upon the proud and abase them. From the next verse he draws two improbabilities: that a remnant so reduced should be given dominion over nobles, since as long as any of God's Israel remain there is hope, be it ever so small a remnant; and that Deborah, of the weaker sex, should be authorised to rule over the mighty men of Israel and enabled to triumph over the mighty men of Canaan, so wonderfully advancing the low estate of His handmaid."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke states the charge as a reversal — make those captives who have formerly captivated us."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Ellicott agree that the verse is a hinge, forming the introduction to the second part of the song, the description of the conflict and the victory, in which Deborah throws herself into the great event she is about to commemorate; Keil adds a point of accent, that the imperative bears the tone on the last syllable the first two times, answering to the rapid summoning burst of the opening address. Over the charge to Barak the two divide, Ellicott rendering it lead in triumph thy long train of captives, and Keil insisting that the words mean to lead away captives as the fruit of the victory, and not merely to lead in triumph."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Awake, awake, Deborah: awake, awake, utter a song: arise, Barak, and lead thy captivity captive",
-   "the soul roused to praise; Barak's triumph foreshadowing Christ's",
-   "when he ascended up on high, he led captivity captive (Eph. 4:8)"
+   "awake, awake, utter a song",
+   "arise, Barak, and lead thy captivity captive",
+   "the Lord made me have dominion over the mighty"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch"
   ],
+  "range": "13-15",
+  "pericope_label": "The tribes that came down: Ephraim, Benjamin, Machir, Zebulun and Issachar",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the few mean and miserable that remained under Jabin's yoke were raised to a high estate and dominion over the mighty."
+    "prevalence": "single",
+    "summary": "Gill keeps the received rendering of the thirteenth verse and reads a reversal of fortune — the people who had been under Jabin's yoke, many of whom very probably died there, the few that remained being now raised to a high estate. On Ephraim he reports the same division as the others: the tribe where Deborah dwelt was the root and source of the expedition and sent a detachment to prevent the Amalekites joining the Canaanites, though the Jewish commentators generally refer the words to a past action and understand by the root Joshua."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the passage backwards, taking Deborah to mean that out of Ephraim and Benjamin had come eminent warriors — Joshua of Ephraim, who routed the Amalekites soon after Israel left Egypt, and Ehud of Benjamin, who slew Eglon — while Machir produced warriors, and Zebulun statesmen and men of literature. He judges that Deborah speaks of past wars, not of anything done on this occasion, since no persons from Gilead were present in the war with Jabin; and he would sooner drop the vowel points and render the clause about Barak with his footmen or infantry, as the Alexandrian Septuagint understood it and as Luther, he thinks, perfectly hit it."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott names the absentees: a remnant only, because at least six tribes — Judah and Simeon, Dan and Asher, Reuben and Gad — held aloof; and he warns that the translation, reading and punctuation of the verse are all uncertain, so that Ewald's Then descended a remnant of the nobles of the people may be nearer, with Jehovah descended to me among the heroes for the second clause. On Ephraim's root in Amalek he sets aside the Septuagint and Vulgate rendering, that Ephraim uprooted them in Amalek, for the sense that out of Ephraim came down those whose root is in Amalek — the tribe having rooted itself in the country which had been the stronghold of the Amalekites — and takes what follows for a sudden change of person: after thee, O Ephraim, came down Benjamin, mingled with thy people, the forces of little Benjamin almost lost in the crowded ranks of its powerful neighbour. The pen of the writer he will not allow: the words are literally they who draw with the staff of the scribe, but the staff can hardly mean a pen, and there can be little doubt the sense is they who lead with the staff of the marshal, since the officer named musters, and therefore counts and enrols, the host. Keil sees the brave men of the nation streaming down from the mountains to fight in the valley of Jezreel, though the nation did not rise as one man — only a remnant of the noble and brave, with whom Jehovah went into the battle; and he rejects the pointing that gives my princes in the fifteenth verse, since neither Deborah nor Barak was of Issachar."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "observation": "Of Reuben's divisions Ellicott observes that the word might mean families, as the Septuagint has it, or factions, as the Vulgate understood it, but almost certainly means streams, the allusion being to the Jabbok and its affluents; and he hears a contemptuous play of words between Reuben's magnanimous decisions and his evanescent projects — he debated and stayed at home on frivolous pretences, as Sparta did in the days of Marathon."
+   }
+  ],
   "themes": [
-   "Then he made him that remaineth have dominion over the nobles... the LORD made me have dominion over the mighty",
-   "God exalting the abased above the mighty",
-   "he raiseth up the poor out of the dust... to set them among princes (1 Sam. 2:8)"
+   "out of Ephraim was there a root of them against Amalek",
+   "out of Machir came down governors",
+   "for the divisions of Reuben there were great thoughts of heart"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Deborah mentions the tribes that sided and assisted, beginning with Ephraim; out of Zebulun came they that handle the pen of the writer."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Out of Ephraim was there a root... after thee, Benjamin... out of Machir came down governors, and out of Zebulun they that handle the pen",
-   "God honouring every willing contribution to his cause",
-   "having then gifts differing according to the grace... let us wait on our ministering (Rom. 12:6-7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the princes of Issachar came to Mount Tabor to offer themselves; for the divisions of Reuben there were great thoughts of heart."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the princes of Issachar were with Deborah... For the divisions of Reuben there were great thoughts of heart",
-   "the decisive set against the divided, indecision keeping men from God's cause",
-   "a double minded man is unstable in all his ways (James 1:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this tribe abounded with flocks, and at this critical juncture judged it wisest to attend to their own concerns."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Why abodest thou among the sheepfolds, to hear the bleatings of the flocks?",
-   "the love of ease keeping God's people from his service",
-   "no man that warreth entangleth himself with the affairs of this life (2 Tim. 2:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Gilead abode beyond Jordan; Dan remained in ships and Asher on the sea shore, distinguished from those who came."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Gilead abode beyond Jordan: and why did Dan remain in ships? Asher continued on the sea shore",
-   "God's people putting private interest before his cause",
-   "look not every man on his own things, but... on the things of others (Phil. 2:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: these two tribes were chiefly concerned in the war, the 10,000 that followed Barak, who willingly offered themselves and jeoparded their lives."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zebulun and Naphtali were a people that jeoparded their lives unto the death in the high places of the field",
-   "the noblest service to hazard all for God's cause",
-   "they loved not their lives unto the death (Rev. 12:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "16-19",
+  "pericope_label": "The tribes that stayed away, and the kings who took no gain of money",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the kings that came with Sisera, fighting near the same place where Joshua had fought."
+    "prevalence": "single",
+    "summary": "Gill explains Reuben's absence by what the tribe owned: it abounded with flocks and herds, and had chosen the country beyond Jordan as suitable for them, so that at this critical juncture they judged it their best policy to abide by them, lest, should Jabin prevail, he might be provoked to fall upon them and take them away — and thus the bleatings of their flocks and the whistlings of the shepherds sounded louder in their ears than the groans of Israel under oppression or the sounding of the trumpet."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke divides the blame by circumstance — the Gadites of Gilead could not well come at a short summons, but the words imply a criminal neglect in the Danites, who were intent on their traffic and trusted in their ships, while Asher, whose lot ran along the Mediterranean next to Zebulun and Naphtali, might easily have succoured them, pleading instead that his own posts were unguarded. On the courage of the two faithful tribes he finds the Hebrew more emphatic than our word for it: they desolated their lives to death, being determined to conquer or die, and therefore plunged into the thickest of the battle — whereas jeoparded, he complains, is a silly French term, taken from the exclamation of a disappointed gamester, jeu perdu, the game is lost."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the kings of Canaan in Taanach by the waters of Megiddo."
+    "summary": "Ellicott sharpens the picture by two corrections: the sheepfolds are literally hurdles, whence the Vulgate renders it between two boundaries, and what Reuben stayed to hear was not the bleating of flocks but the sound of shepherds' flutes — a contrast between those peaceful pipings and the battle-horns they ought to have heard. Reuben sent magnanimous debates and promises which only ended in sloth and vacillation: they decided to go, and stayed at home. The reproach of Dan he finds very picturesque, rejecting as untenable the rendering that asks why Dan feared the enemy's ships; the possession of Joppa naturally influenced the pursuits of the tribe, though whether they are reproached for absorption in commerce or for cowardice is uncertain, and he draws a chronological inference besides — if the Danite migration northward had by then occurred, it is almost impossible they should not have helped the northern revolt, so that the silence shows the extremely early date of the narrative. Keil sets against all this the two tribes that came: Zebulun showed itself a people that despised its life even to death, and Naphtali did the same in its mountain home, the two raising the ten thousand who formed the kernel of the army. He is troubled that Judah and Simeon are named neither among those who fought nor among those who stayed away, and can only explain it by supposing Barak never summoned them, either because they were too involved with the Philistines or because of some inward disagreement."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "observation": "Of the enemy Ellicott notes only that they took not so much as a fragment of silver, though they had doubtless hoped, if not for much actual spoil, at least for ransom from the captives they expected to win, or for the gain of selling them into slavery."
+   }
+  ],
   "themes": [
-   "The kings came and fought, then fought the kings of Canaan in Taanach... they took no gain of money",
-   "God frustrating the greedy expectations of the wicked",
-   "the expectation of the wicked shall perish (Prov. 10:28)"
+   "why abodest thou among the sheepfolds?",
+   "why did Dan remain in ships?",
+   "Zebulun and Naphtali jeoparded their lives unto the death"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  },
  "20": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "20-23",
+  "pericope_label": "The stars fought from their courses, the Kishon swept them away, and Meroz was cursed",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: either the angels of heaven, or the heavens and elements, fought against Sisera, a violent storm of rain and hail discomfiting his army."
+    "prevalence": "single",
+    "summary": "Gill gathers the evidence. Many of the routed army, in their confusion, very probably tried to ford or swim the river and were swept away and drowned, the waters swelling either in a miraculous manner, as Ben Gersom thinks, or through the large showers of rain that fell; and he cites Maundrell, who found the Kishon low and inconsiderable, but who, passing along the plain, discovered the track of many lesser torrents falling into it from the mountains, which must needs make it swell exceedingly upon sudden rains. On the cursing of Meroz he holds that Deborah spoke under a spirit of prophecy, not from her own spirit in any revengeful way, and reports the guesses at what Meroz was — a star, Sisera's star; the name of a mighty man, as Jarchi has it; or, more likely, a town near the battlefield, which some identify with Merom."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke thinks a thunderstorm or inundation of the Kishon was attributed to the stars in poetic language, as an English poet made winds and waves conspire to aid old England against the Spanish armada. The broken hoofs he explains from the state of ancient horses: they were not shod then, nor are they to this day in several parts of the East, and Sisera's, strongly urged on by those who drove them, had their hoofs broken by the roughness of the roads, so that they went lame and could not carry off their riders — marked here as one cause of the disaster."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil says the words about the stars explain the earlier statement that the Lord discomfited Sisera, though not clearly enough to let us define the phenomenon by which God threw the enemy into confusion; in all probability it was a terrible storm, with thunder and hail, or the sudden bursting of a cloud, poetically described as though the stars of heaven had left their courses to fight for the Lord's kingdom upon earth. Ellicott makes the subject impersonal — the powers above — and warns that to take the stars for angels is a mistaken inference from Job, finding a striking parallel in Claudian, where the sky serves as a soldier for the emperor and the winds come sworn together at the trumpet call. Keil adds the direction of the rout: the battle being fought south of the brook and the smitten fleeing north, many met their death in waves then flowing over the banks; and he takes the brook's name to mean the stream of the olden world, flowing from time immemorial, rather than, as the Chaldee has it, the stream celebrated of old for the mighty acts performed there. Ellicott notes that from this slaughter, or that of the priests of Baal, the Kishon is now called the river of slaughter, and that it must always have played its part in the battles of the plain of Jezreel — as when the Turks drowned in its swollen waves in 1799; he prefers stampings to pransings, notes that the word is repeated by the figure called anadiplosis, and reports that crossing the Kishon after moderate rains he saw how easily a horse might be hopelessly disabled in the morass the river forms."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "observation": "Ellicott judges the guilt of Meroz worse than that of the tribes who held aloof, since it lay in the heart of the country and might at least have cut off the enemy's retreat: its crime was the refusal of military service, which the ancients regarded with special indignation, and he conjectures from the ban that it was destroyed like Succoth."
+   }
+  ],
   "themes": [
-   "They fought from heaven; the stars in their courses fought against Sisera",
-   "the LORD commanding all creation to fight for his people",
-   "the LORD thundered with a great thunder... and discomfited them (1 Sam. 7:10)"
+   "the stars in their courses fought against Sisera",
+   "the river of Kishon swept them away, that ancient river",
+   "curse ye Meroz, said the angel of the Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Sisera's army was drawn to Kishon, and many in their confusion were swept away and drowned; Deborah says, O my soul, thou hast trodden down strength."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The river of Kishon swept them away, that ancient river, the river Kishon. O my soul, thou hast trodden down strength",
-   "God using the waters to sweep away the proud foe",
-   "the LORD on high is mightier than the noise of many waters (Ps. 93:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the hoofs were broken through the force of the waters, or through the swift haste they made to run away."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then were the horsehoofs broken by the means of the pransings, the pransings of their mighty ones",
-   "the strength of the wicked failing in the day of judgment",
-   "an horse is a vain thing for safety: neither shall he deliver any by his great strength (Ps. 33:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Deborah said this under a spirit of prophecy, from the Spirit of God, or suggested by an angel; they came not to the help of the LORD against the mighty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Curse ye Meroz... because they came not to the help of the LORD, to the help of the LORD against the mighty",
-   "no neutral ground in God's cause; the failure to help condemned",
-   "he that is not with me is against me (Matt. 12:30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Jael is blessed under the same prophetic influence that Meroz was cursed, the one for not helping Israel, the other for doing it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Blessed above women shall Jael the wife of Heber the Kenite be, blessed shall she be above women in the tent",
-   "God owning those who serve his cause where others stand aloof",
-   "blessed are they which do hunger and thirst after righteousness (Matt. 5:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "24-25",
+  "pericope_label": "Blessed above women shall Jael be: the milk in a lordly dish",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Sisera asked it of her when he turned into her tent."
+    "prevalence": "single",
+    "summary": "Gill sets the blessing against the curse just pronounced: under the same influence Meroz is cursed and Jael blessed, the one for not helping Israel publicly, the other for doing it in private — and the blessing is pronounced either as a prayer that it might be so or as a prophecy that it should be, and indeed both."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws out what her choice cost her: she preferred peace with the God of Israel before peace with the king of Canaan, and though no native of Israel espoused their cause at the critical conjuncture, jeoparding her life as truly as if she had been in the high places of the field. From the closing phrase he takes a lesson for obscure service — those whose lot is cast in the tent, in a narrow sphere of activity, if they serve God there according to their capacity shall in no wise lose their reward, for Jael in the tent wins as rich a blessing as Barak in the field. He reads the milk as the kindness of a friend, which perhaps at the time she intended for nothing else, until God by an immediate impulse upon her mind directed her otherwise."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke resolves the difficulty by narrowing the word: Jael shall be highly celebrated as a heroic woman, and the Israelitish women shall glory in her, but he does not take the words for the divine approbation, since to bless, in Hebrew and Greek alike, often signifies to praise, to speak well of, to celebrate, which is most probably its sense here. He observes that the Hebrew word signifies agitated, so buttermilk may be meant, which the Arabs make by agitating milk in a leathern bag and prize for its cooling quality; but he prefers cream, Sisera being not only thirsty but exhausted with fatigue. Deborah's point, he adds, is that Jael was more liberal than Sisera had asked: he requested water and she brought cream, not in an ordinary pitcher but in the most superb bowl she possessed."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: her bringing butter in a lordly dish."
+    "summary": "Keil marks how far outside Israel she stood, a woman of the Kenites, a tribe only allied with Israel; for her heroic deed she was to be blessed before women, the Hebrew meaning literally removed away from women, those in the tent being shepherdesses; and he calls the vessel she used a fine costly bowl such as they handed to noble guests. Ellicott grants that Jael would be regarded as a patriotic heroine whose daring secured Israel the fruits of victory, but holds that the morals of that early age were not enlightened enough to understand that treachery and assassination are never justifiable, however good the end; and since serious moralists even in the nineteenth century have held up to admiration the murder of Marat by Charlotte Corday, and given her the title of the Angel of Assassination, we can hardly be surprised that Deborah should exult in Jael's heroism and her choice of the right side without any reprobation of the means. To compare this outburst of patriotic approval with the angel's salutation to the blessed Virgin, as some commentators do, seems to him a most dangerous way of handling the mere words of Scripture apart from their context. He says plainly that the refreshment was all meant to lull Sisera's suspicions into a false security."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does the blessing pronounced on Jael approve the deed itself?",
+    "positions": [
+     {
+      "position": "no — to bless often means only to praise or celebrate, and the words are not an expression of divine approbation",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the deed is not defensible, but Deborah exults in it without moral reprobation, as the creature of her age; comparing the words to the angel’s salutation to the Virgin is a dangerous handling of Scripture",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "she is blessed for doing in private what Meroz would not do in public, and for preferring peace with the God of Israel to peace with the king of Canaan",
+      "holders": [
+       "John Gill",
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "He asked water, and she gave him milk; she brought forth butter in a lordly dish",
-   "the providence of God using even courtesy to bring his purpose to pass",
-   "when they shall say, Peace and safety; then sudden destruction cometh (1 Thess. 5:3)"
+   "blessed above women shall Jael the wife of Heber the Kenite be",
+   "he asked water, and she gave him milk",
+   "she brought forth butter in a lordly dish"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "26": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she took up a pin from her tent, with which it was fastened to the ground, and clapped it to the temples of Sisera."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "with the hammer she smote Sisera... when she had pierced and stricken through his temples",
-   "God bringing down the mighty by the meanest means",
-   "God hath chosen the weak things of the world to confound the... mighty (1 Cor. 1:27)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "26-28",
+  "pericope_label": "She smote Sisera: the hammer, the nail, and the mother watching at the window",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: at her first stroke she had done the business so effectually that he dropped at once."
+    "prevalence": "single",
+    "summary": "Gill fills in the details: it was her left hand that took the nail, as the Septuagint, Arabic and Vulgate all express it, and the nail was a pin of her own tent, that fastened it to the ground; and perhaps at her first approach Sisera rose up, but she had done the business so effectually at the first stroke that he dropped at once and laid his head down again. Of Sisera's mother he will not have so much foreboding, and makes her watch not through fear of any ill but through impatience to see her son return in triumph, wreathed with laurels."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "How it was done Clarke reconstructs in two stages. Observing Sisera in a profound sleep, Jael took a workman's hammer, probably a joiner's mallet, and with one blow on the head deprived him of all sense; then she took a tent nail and drove it through his temples, pinning him to the earth — which she could not have done unless she had first stunned him. He rejects the rendering that has her smite off his head, since the original does not warrant it: she smote his head, and transfixed him through the temples."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the threefold falling, marking his death."
+    "summary": "Keil describes the weapon as the hammer of the hard workers, a large heavy mallet, and observes that the words crowd together in the second half of the verse — to hammer, to smite in pieces, to dash in pieces, to pierce through — to depict the boldness of the deed. Ellicott adds that the Hebrew is onomatopoetic, the sound echoing the sense, and that the repetition of these terrible alliterative verbs, with the signs that the prophetess revels in the description, have been ascribed to the delight of a satisfied thirst for revenge — which he holds is hardly a right view of her character, since in ancient days no close moral analysis was applied to acts whose general tendency was approved as beneficial, Caesar recording without a shudder the massacre of multitudes at Alesia. Keil denies the charge outright: the heaping up of words simply brings out the thought that Sisera, for years the terror of Israel, was struck dead with a single blow. Ellicott then describes the falling word by word, taking at her feet as between her feet, as though the dauntless woman had stridden over him where he lay; he bowed means that he suddenly curled his knees up in one contortion of agony, he fell that he rolled perhaps off the divan, he lay down that he was motionless after that one convulsive movement — and the last word is rather slaughtered, with which one terrific word the scene ends, as with a blow. Of the mother at the window he notes that her cry is rather a wail, the Latin rendering an onomatopoeia like the Hebrew, while Keil hears in her question a foreboding of the disastrous result of the war."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "At her feet he bowed, he fell, he lay down... where he bowed, there he fell down dead",
-   "the LORD laying the mightiest oppressor utterly in the dust",
-   "they are brought down and fallen: but we are risen, and stand upright (Ps. 20:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she looked toward the high road, expecting Sisera to return in his chariot with his victorious army; she cried, Why is his chariot so long in coming?"
+    "question": "Does the piling up of verbs betray a thirst for revenge?",
+    "positions": [
+     {
+      "position": "the charge is reported and rejected on other grounds — Deborah is the creature of an age that applied no close moral analysis to approved acts",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "no; the heaping up of words simply says that Sisera, for years the terror of Israel, was struck dead with a single blow",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "The mother of Sisera looked out at a window... Why is his chariot so long in coming?",
-   "the emptiness of the wicked's expectations, mocked by the event",
-   "the triumphing of the wicked is short (Job 20:5)"
+   "she put her hand to the nail, and her right hand to the workmen’s hammer",
+   "at her feet he bowed, he fell, he lay down",
+   "the mother of Sisera looked out at a window, and cried through the lattice"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "29": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: her ladies, or maids of honour, each in turn endeavoured to comfort her and make her easy; she returned answer to herself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Her wise ladies answered her, yea, she returned answer to herself",
-   "the self-deceiving of the anxious heart with false comfort",
-   "Peace, peace; when there is no peace (Jer. 6:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
+   "Charles Ellicott",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "range": "29-31",
+  "pericope_label": "Her wise ladies answered her: the spoil that never came, and the rising of the sun",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she supposed they had found the enemy and the spoil, and were dividing it."
+    "prevalence": "single",
+    "summary": "Gill is gentler with the attendant women: each in turn endeavoured to comfort her, and they seem to be her maids of honour, or ladies of her acquaintance come to share in the pleasing sight they expected. He takes the last line as both a wish and a prediction — a prayer that God's enemies might so perish, and a prophecy that so they would."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the imagined prey, a damsel or two to every man."
+    "prevalence": "majority",
+    "summary": "Ellicott gives the phrase literally as the wise of her princesses and finds unconcealed scorn in it, since the wisest proved the most mistaken, their wisdom being the seductive flattery of delusive hopes; the verb is singular, implying that one spoke after another, and the Vulgate renders it one of his wives, wiser than the rest. What follows he leaves undecided: it may mean that she repeats their answer to herself, accepting their flattering surmises, or on the contrary that she repeats her own words, entirely unconsoled. A damsel or two is literally a maiden, two maidens, save that the word is strongly contemptuous, as though a captive Hebrew girl could only be described by a term of scorn; in these internecine wars the men were killed and the women reserved as slaves, and commentators quote Gibbon, who records that two or three Gothic female captives fell to the share of each of the soldiers of Claudius the Second. Nothing, he says, can exceed the power and skill with which in a few words the vanity, levity and arrogance of these wise princesses are set out, as they idly talk of colours and embroidery — only we must bear in mind that they too, like Deborah and Jael, though in an ignobler way, are the creatures of their age and circumstances. Keil takes the same tone, that Sisera's mother would not be quieted by the words of her wise princesses but kept repeating the anxious question, and finds the irony obvious, since the reality put all their wise conjectures to shame; of the last verse he says the so refers to the whole song, meaning just in the same manner as Sisera and his warriors, and that the rising of the sun in its strength is a striking image of the exaltation of Israel to a more and more glorious unfolding of its destiny."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "observation": "The close comes abruptly, and Ellicott thinks the abruptness grand: the total frustration of the princesses' hopes is all the more forcibly implied by the scorn with which it is left unexpressed, and the single word so sums up the story in all its striking phases. That passionate exclamation shows that Deborah regards the battle as part of one great religious crusade, and he presses the comparison — when the warriors of the first crusade were riding deep in the blood of the murdered Saracens after the capture of Jerusalem, they were fully convinced that they were doing God service, the general dissemination of pity even for our worst enemies being a very modern feeling."
+   }
+  ],
   "themes": [
-   "have they not divided the prey; to every man a damsel or two; to Sisera a prey of divers colours",
-   "the vain dreams of the proud and covetous, mocked by reality",
-   "thou fool, this night thy soul shall be required of thee (Luke 12:20)"
+   "her wise ladies answered her, yea, she returned answer to herself",
+   "have they not sped? have they not divided the prey?",
+   "so let all thine enemies perish, O Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: not only a wish but a prophecy: the enemies perish, the lovers of God shine."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the closing prayer and the rest of the land."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let all thine enemies perish, O LORD: but let them that love him be as the sun when he goeth forth in his might. And the land had rest forty years",
-   "the certain end of God's enemies and the shining destiny of his friends",
-   "then shall the righteous shine forth as the sun in the kingdom of their Father (Matt. 13:43)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
