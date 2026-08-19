@@ -8113,6 +8113,36 @@
         "31"
       ],
       "note": "Absorbed voices in acts 28, confirming notes 694 and 709. John Lightfoot is swallowed into Gill at vv.1, 2, 4, 5, 10, 11 and 13 -- at v1 he truncates Gill's comment after a single clause and replaces it with Strabo-and-Pliny geography of Melita, and at v10 he cuts Gill off mid-sentence ('they make this paraphrase ,') before a rabbinic note on gifts. Cyril of Jerusalem is swallowed at vv.8, 17, 25, 29 and 31, and at vv.8 and 17 the absorbed text is the SAME passage about Barnabas at Antioch, duplicated. Neither is a declared voice, so both were skipped entirely rather than attributed to the host block. The repo-side fix remains one line in the harvest splitter's name list; the scratchpad dump splitter now carries both names plus Theodoret."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "18",
+      "verses": [
+        "30"
+      ],
+      "note": "The StudyLight trailing-boilerplate defect is now confirmed in the OT and the position prediction from note 723 holds. Ellicott's block at leviticus 18 v30 ends with the same copyright notice plus full CSS stylesheet seen at 1corinthians 12:31 and acts 28:31. All three instances are Ellicott, and all three are at the LAST COMMENTED VERSE OF THE CHAPTER, which was the prediction made in note 723 from only two data points. It is therefore a per-page footer capture, not random, and a strip keyed to the final key of each chapter would catch the bulk of it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "18",
+      "verses": [
+        "30"
+      ],
+      "note": "NEW HAZARD, and it bites the ghost checker. The StudyLight boilerplate tail is not only CSS: it includes the site's commentary-navigation list, which names commentators in plain text -- 'Bible Commentaries (144) ... Adam Clarke Commentary, Albert Barnes' Notes, John Gill's Exposition ...'. A naive name scan therefore reports voices that have no block on the verse at all. In this batch 'Albert Barnes' showed up at leviticus 18:30 and leviticus 20:27 -- both chapter-final verses -- purely from that menu; Barnes is not a voice in either chapter. The consequence is worse than an inflated word count: the standard ghost script computes the present-voice set by searching the span's source blob for names, so a boilerplate-injected name makes a genuine ghost attribution invisible to the check. Any chapter-final span is affected. Until the harvest strips the tail, treat a voice whose ONLY hit is on the chapter's last key as unverified and dump the block to confirm it exists."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "18",
+      "verses": [
+        "1"
+      ],
+      "note": "Entry-count predictor 10 for 10. leviticus 18: 30 keys, 23,286 usable source words, no gaps, median 436.5 -- a low-median chapter, unlike the recent NT picks. One key over 2000 (v6=3849) and 19,437 words across the other 29, giving 1 + round(7.77) = 9. Tiling to the ~4500 ceiling produced exactly 9. The formula holds on a chapter whose profile is the opposite of the ones it was derived on: many short keys rather than a few very long ones."
     }
   ]
 }
