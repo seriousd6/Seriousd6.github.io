@@ -6910,6 +6910,60 @@
       "book": "acts",
       "chapter": "22",
       "note": "Entry-count sizing, third measurement and the first that came out right. acts 22 is 36,246 usable source words across 30 keys, median 696 — under the 40,000 whole-batch threshold — and only one key (v3, 8,091 words) exceeds the 4,500-word span limit, so it tiled to ELEVEN entries. Compare genesis 49 at 47,985 words in fifteen entries and philippians 2, declined last batch at 62,574 words in a projected fifteen to seventeen. The predictor that would have worked here is keys divided by median band: a chapter whose median key is under about 800 words tiles at roughly keys/3, while one with a median near 1,000 tiles at roughly keys/2, and one with a median near 2,000 tiles at nearly one entry per key. Recommendation, now made three times: have 'synthesis-loop.py size' print the median key length and a projected entry count beside the word total. Word count alone has now mis-signalled the workload in both directions."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "27"
+      ],
+      "note": "Jamieson stride-6 defect, SIXTEENTH consecutive chapter. Keys 3, 9, 15, 27 - stride 6 from offset 3, four members, ONE GAP at 21. All four blocks are headless mid-sentence fragments (79, 26, 27 and 6 words) and all four are on Acts 2 (Pentecost): v3 on the disciples' expectant prayer and the five hundred brethren; v9 on the fiftieth day from the morrow after the Passover sabbath; v15 on the Parthians and Medes not permanently settled there; v27 the six-word fragment 'in advance, perhaps, of the rest'. This is the FOURTH chapter showing the contiguous-region signature - one pointer sampling a single contiguous source region at fixed stride (cf. 1corinthians 1 on Acts 16, deuteronomy 22 on Numbers 27-28, hebrews 12 on Galatians 1-2). Diagnosis is settled as far as it can be without a re-fetch of the Jamieson tree."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "John Lightfoot chapter-component loss: his only block in this chapter, filed at 22:1, is on the Sadducees and their canon, which belongs to Acts 23:6-8. Acts 22 never mentions the Sadducees. Same defect class as 1corinthians 1 (1:6=2:6, 1:8=4:8, 1:13=3:13) and 1corinthians 16 (key 55 in a 24-verse chapter). Excluded by entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "6",
+        "10",
+        "12",
+        "16",
+        "17"
+      ],
+      "note": "Cyril of Jerusalem: four blocks in this chapter, ALL off-topic, and v17 duplicates v6 verbatim. v6/v17 are on Barnabas sent to Antioch and the disciples first called Christians there (Acts 11); v10 is catechesis on God the Father; v16 is on Moses and the divine name. All dropped silently rather than declared, because Cyril is UNDECLARABLE: scripts/synthesis_qa.py has VOICE_LABELS entry 'Cyril' with _LABEL_RE requiring a colon straight after the label, so the catena head 'Cyril of Jerusalem:' matches nothing, split_voices() never reports him, and undeclarable_voices() rejects every spelling. Second chapter in a row where this forced SILENT_BY_ENTRY instead of excluded_voices (cf. 1corinthians 1). The VOICE_LABELS list wants an owner decision."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "30"
+      ],
+      "note": "Scraped StudyLight page chrome, 926 words, attached to the Ellicott block at 22:30 - his last block in the chapter, consistent with the attachment model established at galatians 4:30 (chrome attaches to the voice's last block, not the chapter's last verse). Reported usable source was 36,246 words; real usable is ~35,320. Robertson's block follows the chrome intact and was used."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "22",
+      "note": "Seven entries, all self-graded verse by verse against the catena: 1-5 648w, 6-11 603w, 12-16 645w, 17-21 650w, 22-24 646w, 25-29 644w, 30 499w. No claim in the prose is unsourced; every named voice has a head in its own span. Entry 6-11 landed in window on the first draft (7 voices, thin source); the four 8-voice entries each needed two to three trim passes, confirming again that overshoot scales with voice count and source density rather than chapter length. Romans 1:32 in entry 17-21 linked as a .ref per the validator."
     }
   ]
 }
