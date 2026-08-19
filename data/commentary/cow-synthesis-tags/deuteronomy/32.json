@@ -2,1891 +2,922 @@
  "1": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "1-3",
+  "pericope_label": "The exordium of the Song: heaven and earth summoned, and the doctrine like rain",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the words of the Song."
+    "summary": "Gill reports the reading that makes the second verse a prayer and prefers to take it as a prophecy of what would be, sets the doctrine here against the law as cooling against fiery and gentle rain against storm, and holds with Keil that the verb of the third verse is to proclaim the name rather than to call upon it. Calvin explains the magnificent opening as a guard against the people's pride, since the world will endure no strain that does not tickle the ear with praise while this one stigmatises their perverse nature and incorrigible contumacy and was meant to echo daily from their own tongues; he rejects those who resolve the future tense into the optative, holding that the speaker celebrates the fruitfulness the Spirit imparts rather than asking for it, and notes that the clause about publishing the name stands last though it gives the reason for what precedes."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the appeal to heaven and earth as a solemn appeal to the truth of what follows and the justice of God's proceedings, and argues that these would sooner hear than a perverse people, since they have never revolted from obedience to their Creator and will rise up in judgment; he also observes that this is the first place in Scripture where God is called a Rock, a figure for power and faithfulness that cannot be moved and for the shelter those countries found in their rocks against sun and tempest."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke derives the word for doctrine from a root meaning to gain over the heart by persuasive speech, notes that the Greek version renders it by a term for a weighty sententious saying, and reads the figure of the rain progressively, beginning slowly and increasing until the whole canon of revelation is complete. Wesley makes the lifeless creatures both an accusation of a people duller of hearing than they and a body of witnesses, and finds the point of the rain in the softening of hearts."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the Song embraces the whole future history of Israel, a prophetic testimony from the mouth of Moses."
+    "summary": "Keil sets the scale of the song, which covers the whole future history of Israel and carries the marks of prophetic testimony, and quotes a description of it as soaring to the loftiest heights, concise and pictorial, rough and penetrating yet full of the holiest solemnity, a witness against a disobedient nation and a miniature of its author's whole life; he finds the point of comparison in the refreshing and fertilising power of dew and rain, and holds that the verb means to proclaim the name rather than to call upon it. Ellicott notes that the opening is almost identical with a prophet's except that the two words for hearing change places, and renders 'doctrine' rather as learning, that which is received, building on it a chain in which everything from the Father of lights is handed from one heavenly messenger to another until it reaches a man in the form he can best receive."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the second verse is a wish or a promise: Gill reports the reading that makes it a prayer and prefers a prophecy, and Calvin names those who resolve the future tense into the optative and rejects them, holding that the fruitfulness is celebrated rather than requested",
+   "What the verb of the third verse means: Gill and Keil both reject 'call upon the name' in favour of 'proclaim the name'"
+  ],
+  "outliers": [
+   "Keil quotes a description of the song as rough, penetrating and sharp yet full of the holiest solemnity, and as a miniature of the whole life of the man who spoke it",
+   "Clarke reads the rain falling drop by drop and increasing as a figure of revelation completed by degrees down to the closing of the canon",
+   "Ellicott makes the word for doctrine mean what is received, and traces a chain of transmission from the Father of lights through heavenly messengers to the heart of man",
+   "Henry observes that this is the first place in Scripture where God is called a Rock"
+  ],
   "themes": [
-   "Give ear, O ye heavens, and I will speak; and hear, O earth",
-   "heaven and earth summoned to witness",
-   "hear, O heavens; for the LORD hath spoken (Isa. 1:2)"
+   "prophecy",
+   "doctrine",
+   "witness",
+   "the Rock",
+   "ingratitude"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: some take it as a wish that the doctrine might fall like rain and dew on men, penetrate their hearts, and produce good effects."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "My doctrine shall drop as the rain, my speech shall distil as the dew",
-   "God's word a gracious, fruitful refreshment",
-   "so shall my word be that goeth forth (Isa. 55:10-11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Moses proposed to proclaim the name of the LORD, the same proclaimed before him (Exod. 34:6), understood of Jehovah the Son, the Rock; greatness to be ascribed to our God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Because I will publish the name of the LORD: ascribe ye greatness unto our God",
-   "the chief end the glory of his name",
-   "give the LORD the glory due unto his name (Ps. 29:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "4-6",
+  "pericope_label": "The Rock whose work is perfect, and the foolish people who requite him",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Jehovah is the Rock, our God, even Christ the rock of salvation; the first word so emphatic that one letter is larger than usual; his work perfect, his ways judgment, a God of truth and without iniquity."
+    "prevalence": "several",
+    "summary": "Gill notes that the word for the Rock stands first for emphasis and is written with an enlarged letter to mark the greatness of the person meant, identifies it with the rock struck in the wilderness. Calvin warns against taking the attributes generally and without reference to this passage, since the perfection of God's works stands deliberately against the rebellion of the people and any defect in them would have furnished an excuse; he says the recital of benefits begins in order to expose the ingratitude to greater infamy, and doubts not that the hearers would have raged had they not known the speaker was already called to die."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that eminent critics and a great Jewish authority render the word as Creator, origin or first cause, so that the line would run that he is the first principle and his work is perfect, while allowing that the usual rendering gives a very good sense since rocks were the ordinary places of defence; on the following verse he sets out two conjectural renderings, one following the Samaritan text, and denounces as a bad doctrine without foundation in the text the common interpretation that God's children have their spots but that sin in them is not as sin in others. Wesley takes the Rock for stability of nature and invincible power and for fixedness in counsel and promise, so that any sad change proceeds from the man and not from God; he treats the stain as proof that these are not God's children at all and adds that the text does not affirm that God's children have any spot whatever; and he presses the three verbs of the reproach, bought as redeemed from bondage, made as formed into a peculiar people, established as favour renewed and not withdrawn."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott makes the name of the Rock a characteristic of the whole song, traces it to the smiting of the rock at Horeb and observes that the confession was carried in the very names of Israel's leaders; he says no such combination of all the words for uprightness, sincerity, equity and reliability occurs elsewhere in Scripture, reports that many interpreters give the next two lines up as hopeless because of the number of possible interpretations and offers his own after consulting a learned Hebrew, and notes that the reproach opens with an exclamatory question, that question and exclamation bear one name among the rabbinical writers, and that the verb rendered 'bought' is the word used at the birth of Cain. Keil explains the difficult clause as parenthetical apposition, takes the word in the moral sense of a stain, observes that no difficulty would have arisen had it stood after the subject, and treats the reproach as the expansion of the theme, the perversity showing itself in repaying with apostasy the God to whom the nation owed its existence."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the title at the head of the song means: Clarke reports eminent critics, an ancient version and a great Jewish authority for Creator or first cause and would render the line accordingly, while Gill, Ellicott and Wesley all build on the rendering 'Rock', which Clarke himself allows gives a very good sense",
+   "How to construe the clause about the spot: Ellicott reports that many give it up as hopeless and offers a rendering reached with help, Clarke gives two conjectural versions and attacks the common devotional reading as a bad doctrine unfounded in the text, Wesley denies that the text affirms any spot in God's children at all, and Keil resolves it as a parenthetical apposition"
+  ],
+  "outliers": [
+   "Gill observes that the first word of the song is written with an enlarged letter to mark the greatness of the person meant",
+   "Ellicott points out that the confession of God as a Rock was carried in the personal names of Israel's leaders, one meaning that God is a rock, another that the Almighty is a rock, a third that the bearer was redeemed by the rock",
+   "Clarke denounces as unfounded the doctrine that God does not see the sins of his children as he sees the sins of his enemies",
+   "Ellicott notes that the verb rendered 'bought' is the word used by Eve at the birth of Cain"
+  ],
   "themes": [
-   "He is the Rock, his work is perfect... a God of truth and without iniquity, just and right is he",
-   "the perfection and faithfulness of God",
-   "that Rock was Christ (1 Cor. 10:4)"
+   "the Rock",
+   "ingratitude",
+   "corruption",
+   "providence",
+   "redemption"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the characters of the enemies of Christ, set in contrast with him — corrupt not by nature only but in their tenets and principles, a perverse and crooked generation."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They have corrupted themselves... they are a perverse and crooked generation",
-   "corruption self-wrought, set against the Rock",
-   "a crooked and perverse nation (Phil. 2:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: a proper character of the Jews in the times of Christ, often called 'fools,' ignorant of the Scriptures, setting their traditions above the word; he is their father that bought and made them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "is not he thy father that hath bought thee? hath he not made thee",
-   "the baseness of requiting redeeming love",
-   "if I be a father, where is mine honour? (Mal. 1:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "7-9",
+  "pericope_label": "Remember the days of old: the nations divided and Israel taken as the Lord’s portion",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the remembering of the days of old and the instances of divine goodness, the fathers and elders telling them."
+    "prevalence": "several",
+    "summary": "Gill reads the summons prospectively, listing deliverances still future when the words were spoken, from the judges and the days of David down through the captivity to the age of the Maccabees, since he takes the whole song as addressed to a much later generation; on the division of the earth he names the generation in whose days it was divided and whose name records it, and presses that men did not seize what they pleased but each had his parcel allotted by the Lord himself, and he extends the title of the Lord's portion to a spiritual Israel chosen and taken into covenant. Calvin makes the verse an explanation of the one before, given so that a people inflated by their present standing should consider not what they are but from what they were taken, since men who forget that all they have proceeded from God are blinded by their dignity; and he insists that nothing moved God but his own good pleasure, the words assigning not any superiority in the people but a dignity depending wholly on gratuitous election."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the summons as an appeal to the records, bidding them keep in remembrance the history of those days and the providences concerning the old world and the patriarchs, in which a constant series of mercies may be traced and the working of things towards what had now come to pass."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports on another's authority that these verses give express warrant for believing the earth was divided very early by divine command and probably by lot, assigns a continent to each of Noah's sons with Palestine held in reserve as the Lord's portion, and calls the whole movement the general migration commanded to Noah and passed on to his sons; on the next verse he alone turns the saying round and finds the astonishment in the exchange, since as holy souls take God for their portion so God takes them for his, representing himself as happy in his followers, while a man seeking an earthly portion has little commerce with the Most High. Wesley holds that the lands were disposed so as to reserve room for the numbers Israel would become, and that the hearts of several peoples were so guided that the posterity of Canaan, already accursed, settled in the very country intended for Israel so that when their iniquities were ripe they might be rooted out; he reduces the choice to one sentence, that it is no wonder God had so great a regard to a people chosen out of all mankind for his peculiar portion."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil takes the summons as a call to reflect on what the Lord had done and identifies the years of generation after generation with the deliverance out of Egypt, reaching back before Moses and a little past him; he takes the boundaries to be fixed with reference to the number of the sons of Israel, so that from the forming of nations God had cared for this people, says the choice was made before the nation existed, and explains the figure of the last clause as a measuring cord, then a piece of land measured off, and so applied to the people. Ellicott notes only that the first verse falls plainly into four parts."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What 'the days of old' covers: Keil identifies them with the deliverance out of Egypt and the times just before and after Moses, Henry with the history of the old world and the patriarchs, while Gill reads the song as addressed to a much later generation and lists deliverances still future when it was spoken, down to the age of the Maccabees",
+   "How the division of the nations bears on Israel: Clarke reports a scheme assigning a continent to each of Noah's sons with Palestine reserved, Wesley holds that the Canaanites were deliberately settled there so that they might be rooted out when ripe, and Keil and Gill keep to the reserving of room and the allotting of each people's parcel"
+  ],
+  "outliers": [
+   "Clarke calls the early dispersion the general migration and holds it to have been commanded to Noah and passed on by him to his sons",
+   "Gill names the generation in whose days the earth was divided and whose very name records the division",
+   "Clarke finds the astonishment of the verse in the exchange, that as holy souls take God for their portion, so God takes them for his",
+   "Keil explains the word for 'lot' as a measuring cord, then a piece of land measured off, and so applied figuratively to the nation"
+  ],
   "themes": [
-   "Remember the days of old... ask thy father, and he will shew thee",
-   "the memory of God's mercies a teacher",
-   "our fathers have told us thy work (Ps. 44:1)"
+   "election",
+   "providence",
+   "remembrance",
+   "the nations",
+   "inheritance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the dividing of the earth in the days of Peleg, the Most High giving every nation its part, setting the bounds according to the children of Israel."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When the Most High divided to the nations their inheritance... he set the bounds... according to the children of Israel",
-   "God ordering the nations with his people in view",
-   "the bounds of their habitation set by him (Acts 17:26)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: why the Lord so early provided a portion for Israel — because they were his part, his inheritance, which he chose by lot for himself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For the LORD's portion is his people; Jacob is the lot of his inheritance",
-   "God's electing love the ground of his care",
-   "the LORD hath chosen Jacob for his peculiar treasure (Ps. 135:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: instances of God's goodness in the wilderness, where Israel was in a most forlorn condition, and the Lord found and kept them as the apple of his eye."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he led him about, he instructed him, he kept him as the apple of his eye",
-   "the surpassing tenderness of God's care",
-   "he that toucheth you toucheth the apple of his eye (Zech. 2:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill, with Jarchi: the eagle is merciful to its young, rousing them with a noise and her wings, that they be fitter to receive her, and bearing them on her wings."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "As an eagle stirreth up her nest, fluttereth over her young... beareth them on her wings",
-   "God's care uniting tenderness and discipline",
-   "I bare you on eagles' wings (Exod. 19:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Lord alone led them out of Egypt, through the wilderness, to Canaan, going before them in the pillar of cloud and fire; no strange god with him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So the LORD alone did lead him, and there was no strange god with him",
-   "the whole glory of their leading God's alone",
-   "beside me there is no saviour (Isa. 43:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the high places of Canaan, the strongholds delivered into their hands, and the increase of the fields; honey out of the rock and oil out of the flinty rock."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He made him ride on the high places of the earth... and he made him to suck honey out of the rock",
-   "the lavishness of God's provision",
-   "honey out of the rock should I have satisfied thee (Ps. 81:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "10-14",
+  "pericope_label": "Found in the wilderness, borne on eagles’ wings, and fed with the fat of the land",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the butter of kine, the cream gathered on the milk, the butter of the ancients."
+    "summary": "Gill reports a rabbinic account of the eagle as merciful to her young, not entering the nest suddenly but first making a noise and shaking it so that they may be fitter to receive her reads the high places as towers and fortified cities and cites a paraphrase to that effect. Calvin observes that had the intention been to record every instance of God's kindness the recital must have begun from Abraham; he says the exclusive clause is spoken by anticipation to take away every pretext from a people whose standing plea when they imported foreign gods was that God was not thereby robbed of his honour; and he dismisses as frivolous the notion that the land was called high for being the navel of the earth, weighing the usage by which men go down into Egypt and up into Judea and inclining to take the term of its excellency."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke on the eagle offers two accounts and takes the harsher, that she disturbs the nest to oblige the young to leave it, as God by his plagues obliged a reluctant people to leave a place marked for destruction; he states that help came from no other quarter and that the Egyptian gods could not save their own worshippers; and he claims that all the verbs describing the land stand in the future, so that the passage is prophecy of a prosperity still to come in which even the rocky country would be made fertile. Wesley denies that chance is meant by the finding, distinguishes the manifestation in Egypt from the eminent finding in the wilderness, presses that the young are carried as on the wings and not in the claws and reports the belief that the eagle does usually so carry them, draws the inference that the hearers were the more unworthy for giving idols a share in worship owed to God alone, says that to ride upon is in Scripture to subdue, explains the honey by bees in the rock holes and the oil by olives bearing best in rocky ground."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the milk of sheep, fat of lambs, and rams of the breed of Bashan."
+    "summary": "Ellicott points out that the first verse stands in the pictorial present in Hebrew and that finding is a word common to both Testaments for God's first revealing of himself to a man, and notes that the metaphor of the kidney fat is carried over literally from the Hebrew and that this was the fat the law reserved for the altar. Keil keeps the eagle figure whole, a bird teaching its young to fly and shielding them with watchful affection, and takes the driving over the high places as a figure for the victorious subjugation of a land."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the eagle is doing: Clarke offers both that she excites the young to fly and that she disturbs the nest to force them out, and takes the second, applying it to the plagues driving out a reluctant people, whereas the rabbinic account Gill reports makes the disturbance a mercy that prepares the young to receive her",
+   "Whether the description of the land is past or future: Clarke insists that all its verbs stand in the future and reads the passage as prophecy of a prosperity still to come, while Keil, Gill and Wesley take it of the conquest and possession already in view"
+  ],
+  "outliers": [
+   "Wesley reports the belief that the eagle usually carries her young upon her wings rather than in her claws",
+   "Ellicott notes that the fat of the kidneys, used here as a figure for the finest wheat, was the fat strictly reserved for God's altar by the Levitical law",
+   "Calvin rejects the notion that Judea was called high as being the navel of the earth, and weighs instead the idiom of going down into Egypt and up into Judea",
+   "Gill cites a paraphrase that reads the high places as the towers of the land of Israel"
+  ],
   "themes": [
-   "Butter of kine, and milk of sheep, with fat of lambs... and thou didst drink the pure blood of the grape",
-   "God's abundant goodness to his people",
-   "thy paths drop fatness (Ps. 65:11)"
+   "providence",
+   "the wilderness",
+   "nurture",
+   "conquest",
+   "abundance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "15": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "15-18",
+  "pericope_label": "Jeshurun waxed fat and kicked, and forsook the Rock",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Jeshurun is a name of Israel, from a word meaning upright, such as they ought to have been; he forsook God and lightly esteemed the Rock of his salvation."
+    "prevalence": "several",
+    "summary": "Gill derives the name from a word for upright and observes that the people ought to have been such and professed to be; he dissents from the whole reading of the next verse, taking the word rendered strange gods to mean simply others, pointing out that the people were not guilty of idolatry after the return from Babylon, and referring it to the other saviours and messiahs set up after the rejection of Christ, none having been attempted before his coming; he reports a version making the Rock the rock of thy kindred, a near kinsman and a brother by incarnation. Calvin quotes the proverb that satiety breeds violence but lays the blame on men's own depravity, cautions that jealousy is ascribed to God only figuratively since he is free from all passions while insisting that the grossness of the sin requires such terms, and fixes the aggravation of the closing reproach, that they did not fall through ignorance but wilfully stifled a knowledge of God which ought to have shone in every heart."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sorts the apostasy into two counts, the first being security and sensuality, pride and insolence and the other common abuses of plenty and prosperity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke derives the name from a root for uprightness and reads it as showing that a people once really walking in righteousness would in the time foretold not merely revolt but fight against God, like a full-fed horse that will not bear the harness but breaks away and kicks at his master; he surveys the word rendered devils across the versions, the Syriac, Chaldee, Targums and Samaritan keeping the original term while the Latin, Greek, Arabic, Persic, Coptic and Anglo-Saxon give devils or demons, the Arabic using the plural of the name of Satan; and he keeps to his earlier rendering of the title as the first cause and fountain of being. Wesley takes the name as reminding the people what they professed and shaming them for degenerating from it, glosses the jealousy as the rage of a man whose ground is their falseness to a God accepted as husband, explains that the idols were brought into the world by devils who manifested themselves in them while the Gentiles were deluded with the pretence that they were lower gods, and refers the Rock either to God or to the Christ whom the Israelites tempted."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the name as a diminutive and a term of endearment, either the child of the upright or the beloved Israel, since the letters of the diminutive of Israel slightly abbreviated would yield it, and notes that it belongs to this book and one prophet only, that two Targums render it simply Israel while a third keeps the word, and that the Greek translates it the beloved one; he observes that an apostle repeats the phrase about sacrificing to devils, renders the clause about new gods literally as those that came from close at hand and compares the idol made out of firewood, and on the closing reproach offers as another possible rendering that the Rock has begotten thee forgetful, noting that the word he so renders is usually taken as a verb although no such verb is found elsewhere and has been invented for this passage. Keil says only that these verses expand the one before them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the name Jeshurun means: Gill, Clarke and Wesley all derive it from a word for upright and draw a reproach from the derivation, while Ellicott makes it a diminutive of endearment, the beloved little Israel, supported by the Targums and the Greek",
+   "Whether the strange gods are literal idols: Calvin, Wesley, Clarke and Keil all take the verses of idolatry, while Gill renders the word simply as others and refers it to false messiahs set up after the rejection of Christ, since the people were no longer idolaters after the return from Babylon"
+  ],
+  "outliers": [
+   "Clarke likens the apostasy to a full-fed horse that will not bear the harness but breaks away and kicks at his master",
+   "Calvin cautions that jealousy is ascribed to God only figuratively, since he is free from all passions, while insisting that the grossness of the sin requires the language",
+   "Ellicott observes that the word he would render 'forgetful' is usually taken as a verb although no such verb occurs anywhere else, so that it has been invented for this passage",
+   "Wesley explains that the Gentiles professed to worship God in their idols and were deluded with the pretence that these were a sort of lower gods"
+  ],
   "themes": [
-   "Jeshurun waxed fat, and kicked... then he forsook God which made him, and lightly esteemed the Rock of his salvation",
-   "the deadly fruit of prosperity abused",
-   "lest when full thou forget the LORD (Deut. 8:12-14)"
+   "apostasy",
+   "prosperity",
+   "idolatry",
+   "jealousy",
+   "ingratitude"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the word may be read 'with others'; the Jews after the Babylonish captivity were not guilty of worshipping idols; Cocceius takes it of another worship."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They provoked him to jealousy with strange gods, with abominations provoked they him to anger",
-   "idolatry the spiritual adultery rousing God's jealousy",
-   "moved him to jealousy with their graven images (Ps. 78:58)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: their sacrifices, continued when God willed them to cease, were reckoned not as offered to him but to demons, under the instigation of Satan."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They sacrificed unto devils, not to God; to gods whom they knew not",
-   "idolatry the service of demons",
-   "the Gentiles sacrifice to devils (1 Cor. 10:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the same as the rock of salvation, repeated that their ingratitude be observed; begetting ascribed to this Rock, as regeneration is to Christ; they forgot the God that formed them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Of the Rock that begat thee thou art unmindful, and hast forgotten God that formed thee",
-   "the heinous ingratitude of forgetting their Maker",
-   "they forgat God their saviour (Ps. 106:21)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the disregard and rejection of Christ, their forgetfulness and contempt of him; he abhorred them for the provoking of his sons and daughters."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the LORD saw it, he abhorred them, because of the provoking of his sons, and of his daughters",
-   "God most provoked by the sins of his own",
-   "I nourished children, and they rebelled (Isa. 1:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Lord proceeds to pass sentence for their ill treatment of his Son; they were a froward generation, children in whom is no faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will hide my face from them... for they are a very froward generation, children in whom is no faith",
-   "the withdrawal of God's favour the heaviest stroke",
-   "thou didst hide thy face, and I was troubled (Ps. 30:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: provoking with a false messiah, and God moving them to jealousy with the calling of the Gentiles, who were not a people, a foolish nation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they have moved me to jealousy with that which is not God... I will move them to jealousy with those which are not a people",
-   "a fitting retribution in kind",
-   "the Gentiles called to provoke them to jealousy (Rom. 10:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "19-23",
+  "pericope_label": "The Lord rejects his sons, hides his face, and kindles the fire of his anger",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: here begins the account of temporal judgments on the Jews for rejecting the Messiah, the destruction of Judea and burning of Jerusalem."
+    "summary": "Gill refers the seeing to a later rejection keeps the first clause of the retaliation on home ground by referring the no-god to the false Christs that arose after the true one and applies the fire to the burning of the city and temple. Calvin makes the seeing a statement about forbearance in judgment, that God does not act hastily or become alienated without weighing the case, as elsewhere he goes down to see whether a city's cry is what it is reported to be, while adding that God can need no such examination; he describes the retaliation as God becoming the open enemy after withdrawing for a time and repaying in kind, exalting barbarous nations against those who had set empty phantoms in antagonism with him, and he keeps the fire as metaphor while insisting that more is expressed here than in the many other places where the figure occurs."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the passage in its place, since the song follows the order of the predictions in the chapter before, so that the resolves of divine justice come immediately after the revolt; and he warns that we deceive ourselves if we think God will be mocked by a faithless people who play fast and loose with him, having delighted in them and now rejecting them with detestation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the first line more literally, that the Lord saw and through indignation reprobated his sons and daughters, corrects the clause about faith to mean that there is no steadfastness in them and they can never be depended on, being fickle because faithless, calls the retaliation a very pointed promise of the calling of the Gentiles applied by an apostle to that event, and takes the fire for the deepest destruction and total extermination, reading the foundations of the mountains as the strongest fortresses and finding the whole fulfilled in the last Roman destruction of the city. Wesley marks that they were sons and daughters by calling and profession, says they are perfidious and have broken a covenant solemnly made defines the no-people as nations without the knowledge and fear of God which he calls the foundation of all true policy and government, and extends the fire past this world, the misery it brings here being only a faint resemblance of a misery without end."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the fire burns to the lowest hell and consumes the earth with her increase."
+    "summary": "Keil takes the seeing as no more than the causal link between apostasy and punishment and renders the description as a generation full of perversities. Ellicott makes the point about faith exactly, that the word is not used in the sense of belief or confidence but as when we speak of keeping or breaking faith, so that these are children with whom no faith will be kept; he reports that an apostle uses the retaliation to prove that Israel had been informed of the calling of the Gentiles beforehand and pairs it with a prophet's words about being found of them that sought him not, and on the fire he notes that a prophet quotes the line and reports a rabbinic gloss making the foundations of the mountains the city founded upon them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What 'the Lord saw' implies: Calvin makes it forbearance in judgment and a due weighing of the case, while noting that God needs no examination, Keil takes it as no more than the causal link between the apostasy and the punishment, and Clarke as the moment of being justly incensed",
+   "How far the fire reaches: Clarke and Gill find it fulfilled in the Roman destruction of Jerusalem and its fortifications, Calvin keeps it as an intensified metaphor, and Wesley extends it past this world, the misery here being a faint resemblance of a misery without end"
+  ],
+  "outliers": [
+   "Ellicott insists that 'faith' here does not mean belief or confidence but the keeping of faith, so that these are children with whom no faith will be kept",
+   "Wesley defines the no-people as nations lacking the knowledge and fear of God, which he calls the foundation of all true policy and government",
+   "Ellicott reports a rabbinic gloss making 'the foundations of the mountains' the city that is founded upon them",
+   "Clarke observes that of the fortifications of the city not one stone was left"
+  ],
   "themes": [
-   "a fire is kindled in mine anger, and shall burn unto the lowest hell",
-   "the terrible intensity of God's wrath",
-   "our God is a consuming fire (Heb. 12:29)"
+   "judgment",
+   "rejection",
+   "the Gentiles",
+   "faithlessness",
+   "wrath"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: one calamity upon another, particularly mentioned in the verses following."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the heaping of evils and the spending of his arrows upon them."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will heap mischiefs upon them; I will spend mine arrows upon them",
-   "an accumulation of judgments, each finding its mark",
-   "the arrows of the Almighty (Job 6:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the arrow of famine, whose force makes the skin black as if burnt; Onkelos reads 'swelled with famine,' as Josephus describes the siege of Jerusalem; the teeth of beasts and poison of serpents."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They shall be burnt with hunger... I will also send the teeth of beasts upon them, with the poison of serpents",
-   "the manifold means of God's judgment",
-   "wild beasts and the sword upon the rebellious (Lev. 26:22-25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the sword without, of the Roman army besieging, or of the seditious within the streets, destroying multitudes among themselves."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the sword without and terror within."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The sword without, and terror within, shall destroy both the young man and the virgin",
-   "a destruction complete and inescapable",
-   "the sword without, at home as death (Lam. 1:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: God could have said, or might have determined, what was in his power and in right and justice to do."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the threat to scatter them and make their remembrance cease."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I said, I would scatter them into corners, I would make the remembrance of them to cease",
-   "the extremity of deserved judgment, withheld by mercy",
-   "except the LORD had left a remnant (Isa. 1:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "24-27",
+  "pericope_label": "The arrows spent, and the judgment stayed for the sake of God’s name",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supplies the local colour of the famine, a paraphrase rendering the first stroke as being swollen with famine, a word a historian used of the siege of the city, and a rabbinic reading that would make it the hairs of hunger; he localises the two swords as the besieging army outside and the weapons of the factions within, presses the opening verb of the turn as meaning that God could have said or might have said, since it was in his power and justice to do it, and alone identifies the enemy otherwise, as the adversary of mankind and of God himself who stirs up wrath and blasphemy in the hearts of men. Calvin reduces the scourges to the standing triad of pestilence, famine and the sword and explains that specimens are adduced because generalities would not have affected the hearers; on the turn he describes God as representing himself under the character of a man, meditating opposite determinations and restraining his vehemence, so that the final judgment was suspended for no other reason than regard to his own glory, which would otherwise have been exposed to the taunts of the nations."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the turn as surprising intimations of mercy after so many terrible threatenings, mercy wholly undeserved, which rejoices against judgment and shows that God has no pleasure in the death of sinners, and states the ground, that in jealousy for his own honour God will not make a full end."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke numbers the scourges as arrows shot in succession, famine, burning heat taken either of a rainless sky or of boils and pestilential fevers, the plague, the multiplying of wild beasts and the poisonous serpents; on the fear of wrath he reports that some would refer the word not to the enemy but to God and gives their rendering, that indignation for the adversary deters him lest the enemies be alienated and claim the strength of their own hands had done this, his own point being that unless the punishment proved whose hand it was the heathen would have drawn the wrong conclusion. Wesley describes the famine as burning and parching the inward parts and blackening the face, takes the heat of fevers or carbuncles, and keeps the common reading of the fear as the enemy's rage and furious reproaches against God's name, adding that the fear of it is ascribed to God after the manner of men."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "That God restrained his judgment lest the enemy boast: 'were it not that I feared the wrath of the enemy, lest their adversaries should behave themselves strangely, and lest they should say, Our hand is high, and the LORD hath not done all this' — God would have utterly cut Israel off but for the danger that the enemy would boast it was their own doing (the were it not that I feared the wrath of the enemy, God's regard for the enemy's pride, the lest their adversaries should behave themselves strangely, the enemy misreading the judgment, the lest they should say, Our hand is high, and the LORD hath not done all this, the enemy's boast, the figure, God restraining his judgment on Israel lest the heathen ascribe it to their own power, the truth that God spares his people partly for his own glory, lest the enemy blaspheme, the figure of the divine concern for his own honour among the nations, the enemy's boast forestalled, 'I wrought for my name's sake, that it should not be polluted before the heathen,' Ezekiel 20:9, the restraint that guards God's glory, the judgment tempered for his name's sake); God restraining judgment lest the enemy misjudge (the honour of God, Ezekiel 20:9) — the restraint (lest the enemy boast); 'lest they should say, Our hand is high, and the LORD hath not done all this' (the enemy's boast that their own hand had done it, the blasphemy forestalled, the figure, God's concern for his own honour, the providence, the restraint, the people's lack of understanding to follow, vv.28-29) — Keil and Delitzsch, Gill."
+    "summary": "Keil divides the field of the slaughter exactly, the sword sweeping away the men outside while the defenceless perish in the chambers from alarm, and names a scholar who applied the second word to hunger and plague and says he is wrong, since it means a sudden mortal terror; he holds that the people had deserved to be utterly destroyed and were spared for another reason than their own. Ellicott offers alternatives for the verb about the adversaries, either that they should misunderstand the matter or that they should take note of it as a strange thing."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whose anger is feared: Clarke reports a rendering that refers the word to God's own indignation for the adversary rather than to the enemy's wrath, while Wesley, Keil and Gill keep the common reading of the enemy's rage and misconstruction",
+   "Who the enemy is: Gill alone identifies him as the adversary of mankind and of God himself, where the others take the heathen nations who would claim the victory as their own"
+  ],
+  "outliers": [
+   "Gill reports a paraphrase rendering the famine as a swelling, and notes that a historian used the same word of the siege of the city",
+   "Gill also reports a rabbinic reading that would make the phrase 'the hairs of hunger', since a famishing man's hair grows",
+   "Keil names a scholar who applied the word for terror to hunger and plague and rejects the application, the word meaning a sudden mortal terror",
+   "Calvin describes God as representing himself under the character of a man, meditating opposite determinations and restraining his own vehemence at the obstacles he meets"
+  ],
   "themes": [
-   "Were it not that I feared the wrath of the enemy, lest their adversaries should behave themselves strangely, and lest they should say, Our hand is high, and the LORD hath not done all this",
-   "that God restrained his judgment lest the enemy boast",
-   "God restraining his judgment on Israel lest the heathen ascribe it to their own power",
-   "sparing his people for his own name's sake (Ezekiel 20:9)"
+   "judgment",
+   "famine",
+   "the sword",
+   "mercy",
+   "the honour of God"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "28": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That the nation was void of counsel and understanding: 'for they are a nation void of counsel, neither is there any understanding in them' — Israel (or the enemy) is described as without wisdom or understanding (the for they are a nation void of counsel, without wisdom, the neither is there any understanding in them, without understanding, the figure, the folly of the people who cannot discern God's hand, void of counsel, the truth that the lack of understanding is the root of their ruin, the people unwise, the figure of the spiritual blindness that cannot perceive God's ways, 'O that they were wise, that they understood this,' Deuteronomy 32:29, the want of wisdom that fails to see the cause of their calamity, the folly that does not consider the latter end, vv.29); the people without wisdom (the folly) — the folly (void of counsel); 'neither is there any understanding in them' (the people without understanding, the spiritual blindness, the figure, the want of wisdom to perceive God's hand, the providence, the folly, the wish that they would consider their latter end to follow, vv.29) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For they are a nation void of counsel, neither is there any understanding in them",
-   "that the nation was void of counsel and understanding",
-   "the people without wisdom or understanding, unable to discern God's hand in their calamity",
-   "the folly that is the root of their ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wish that they were wise to consider their latter end: 'O that they were wise, that they understood this, that they would consider their latter end!' — a wish that the people had wisdom to understand and consider what their course would bring (the O that they were wise, that they understood this, the wish for wisdom, the that they would consider their latter end!, that they weigh the end, the figure, the longing that the people would be wise and consider where their sin would lead, the truth that true wisdom considers the latter end, the consequences of one's ways, the figure of the wisdom that weighs the end, 'so teach us to number our days, that we may apply our hearts unto wisdom,' Psalm 90:12, the want of consideration that ruins, the wise weighing the end, the call to consider the outcome of sin, vv.28); the wish that they had wisdom to understand (the longing, Psalm 90:12) — the wish (for wisdom); 'that they would consider their latter end!' (the weighing of the end the mark of wisdom, the consideration, the figure, the wisdom that weighs the consequences, the providence, the wish, the enemy's superiority but for God to follow, vv.30) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "O that they were wise, that they understood this, that they would consider their latter end!",
-   "the wish that they were wise to consider their latter end",
-   "the longing that the people had wisdom to understand and weigh where their sin would lead",
-   "true wisdom considering the latter end (Psalm 90:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That their defeat could only be because God had given them up: 'how should one chase a thousand, and two put ten thousand to flight, except their Rock had sold them, and the LORD had shut them up?' — such a rout of Israel could only happen because God had abandoned them (the how should one chase a thousand, and two put ten thousand to flight, the impossible rout, the except their Rock had sold them, and the LORD had shut them up?, unless God had given them up, the figure, the defeat of the many by the few only possible because God had forsaken his people, the truth that Israel's strength was God, and only his withdrawal could explain their rout, the figure of the people's helplessness without God, the Rock who sold them, the reversal of the promise that one should chase a thousand, now turned against them, 'five of you shall chase an hundred,' Leviticus 26:8, the defeat that proved God had given them up, the Rock forsaken, the people shut up); the impossible rout of the many by the few (the defeat, Leviticus 26:8) — the rout (one chasing a thousand); 'except their Rock had sold them, and the LORD had shut them up?' (the defeat only because God gave them up, the Rock forsaken, the figure, the people's helplessness without God, the providence, the defeat, the contrast of the rocks to follow, vv.31) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How should one chase a thousand, and two put ten thousand to flight, except their Rock had sold them, and the LORD had shut them up?",
-   "that their defeat could only be because God had given them up",
-   "such a rout of Israel possible only because God had abandoned them",
-   "the Rock who was their strength having given them up (Leviticus 26:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
+  "range": "28-33",
+  "pericope_label": "A nation void of counsel, the rout, and the vine of Sodom",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The confession that the false rocks of the nations are nothing compared to the Rock of Israel: 'for their rock is not as our Rock, even our enemies themselves being judges' — the incomparable Rock — 'for their rock is not as our Rock, even our enemies themselves being judges': the gods (the 'rock') in which the heathen trusted are no match for the LORD, the true Rock of Israel, as even the enemies must own (the witnesses noting the significance — the surpassing greatness of the true God above all false gods, the Rock of Israel beyond compare, the idols the nations called their rock are vanity beside the living God, even the enemies being judges of the difference, the lesson — that God alone is the true Rock, the strength and refuge of his people, immeasurably above the false rocks of the nations, the contrast between the dead idols and the living God, the one a delusion, the other the everlasting strength, the truth that the LORD is the Rock, sure and immovable, 'he only is my rock and my salvation,' Psalm 62:2, 'the LORD is my rock, and my fortress,' Psalm 18:2, the figure — Christ the Rock, the sure foundation of his people, 'that Rock was Christ,' 1 Corinthians 10:4, the truth that the believer's confidence rests on the unfailing Rock, not the broken reeds of the world, the figure of the incomparable God, the Rock above all rocks, the false gods owning their inferiority, the warning against trusting in any rock but the true, the supremacy of the God of Israel that even the heathen cannot deny, the figure of the incomparable God as the true Rock of his people, above all false rocks); the false rocks of the nations as nothing beside the LORD, the true Rock of Israel (the incomparable God, Psalm 62:2) — the contrast (their rock vs our Rock); 'even our enemies themselves being judges' (even the enemies must own the difference, the supremacy of the true Rock undeniable, Christ the Rock of his people, the sure foundation, Psalm 18:2; 1 Corinthians 10:4) — the figure (Christ the Rock, the sure foundation, the providence, the contrast, the corruption of the false rocks to follow, vv.32-33) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Gill holds that the prophecy against the one people has been discharged and that their enemies are now in view, and carries that through the passage, applying the vine at the end to corrupt professors within the empire that destroyed the city; he guards the wish that follows against being made the words of God, since it would then furnish an instance of an unsuccessful wish in him and an argument that a man may make himself wise if he will, whereas they are the words of Moses under a spirit of prophecy. Calvin reads the opening the other way, assigning the cause why the memory of the people had almost been blotted out, that their folly was incurable and not one drop of sagacity existed in them; he says the token of the rout is chosen as peculiarly striking, since a people who once routed mighty armies are now conquered by a few; and he denies that the vine refers, as some make it, to the punishment the people deserved, taking it for an invective against their corrupted morals."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the phrase about the latter end of their latter times and makes it the days of the Messiah who was to spring from them, takes the enemies as witnesses who concede the point since they often acknowledged the irresistible power of the God who fought for Israel and adds a parallel from a Latin poet, and reads the vine of Israel, taking the grapes for their actions and the clusters for their united as well as their several deeds. Wesley calls the enemies a foolish people who therefore judge falsely of things, makes the latter end what their end will be and that judgment will overtake them at last though God spare them long, fills out the two verbs of the rout as sold for bondslaves and shut up as in a net, and says that dear-bought experience forced the enemies to own that this God was stronger than they and their gods together."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott renders the opening phrase literally as perishing in counsels, or perhaps as spoiling the plans of the Lord, and sets beside it the resolution of men who devised devices against a prophet in the confidence that counsel would never fail from the wise; he renders the next clause as discernment about their hereafter and what they will miss if they fail to fulfil it, notes that the verb rendered 'sold' is here used of the Lord for the first time and becomes common later, proposes on a rabbinic authority that the clause about judges means that our enemies are lords over us and that the verse stands as a parenthesis, and states expressly that the vine is Israel's and not the enemies'. Keil states the rout conditionally, that a wise Israel could easily have conquered all its foes in the power of its God and was given up only because it had forsaken its rock."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'their rock is not as our Rock' establish?",
-    "sides": [
-     {
-      "position": "The incomparable God as the true Rock of his people - the false gods of the nations vanity beside the living God, the LORD the sure and immovable Rock and refuge (Psalm 62:2; Psalm 18:2), a figure of Christ the Rock, the sure foundation (1 Corinthians 10:4), the supremacy of the God of Israel that even the enemies must own",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "Whom the passage describes: Gill holds that the prophecy against Israel is discharged and that the enemies are now in view, carrying that through to the vine at the end, and Wesley agrees at the opening, whereas Ellicott states expressly that the vine is Israel's and not the enemies', and Clarke and Calvin read the whole of Israel",
+   "What 'our enemies themselves being judges' means: Clarke and Wesley take the enemies as witnesses forced to concede the point, while Ellicott proposes on a rabbinic authority that they are lords over us and reads the verse as a parenthesis"
   ],
-  "outliers": [],
+  "outliers": [
+   "Gill guards the wish of the passage against being taken for the words of God, which would furnish an instance of an unsuccessful wish in him and an argument that a man may make himself wise if he will",
+   "Clarke reads 'their latter end' as their latter times, meaning the days of the Messiah who was to spring from them",
+   "Ellicott notes that the verb rendered 'sold' is here applied to the Lord for the first time and becomes common in the later history",
+   "Calvin denies that the vine of Sodom refers, as some make it, to the punishment the people deserved, taking it for an invective against their morals"
+  ],
   "themes": [
-   "For their rock is not as our Rock, even our enemies themselves being judges",
-   "the confession that the false rocks of the nations are nothing compared to the Rock of Israel (the crux of the incomparable God as the true Rock of his people)",
-   "the surpassing greatness of the true God above all false gods, the idols the nations call their rock vanity beside the living God, the LORD the sure and immovable Rock and refuge",
-   "a figure of Christ the Rock, the sure foundation, the supremacy even the enemies must own (Psalm 62:2; Psalm 18:2; 1 Corinthians 10:4)"
+   "folly",
+   "defeat",
+   "providence",
+   "corruption",
+   "judgment"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The corruption of the false rocks, the vine of Sodom: 'for their vine is of the vine of Sodom, and of the fields of Gomorrah: their grapes are grapes of gall, their clusters are bitter' — the nations (or the corrupt people) are likened to the vine of Sodom, producing bitter and poisonous fruit (the for their vine is of the vine of Sodom, and of the fields of Gomorrah, the vine of Sodom, the their grapes are grapes of gall, their clusters are bitter, the bitter fruit, the figure, the corruption of the wicked likened to the cursed vine of Sodom, bringing forth poison, the truth that the fruit of the ungodly is bitter and deadly, as the vine of the doomed cities, the figure of the evil that produces nothing but gall and bitterness, 'do men gather grapes of thorns?' Matthew 7:16, the wickedness that yields poisonous fruit, the vine of Sodom, the corruption that ends in bitterness, vv.33); the corruption likened to the vine of Sodom (the wickedness, Matthew 7:16) — the vine (of Sodom); 'their grapes are grapes of gall, their clusters are bitter' (the bitter and poisonous fruit, the deadly produce, the figure, the evil that yields gall, the providence, the corruption, the poison of dragons to follow, vv.33) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For their vine is of the vine of Sodom, and of the fields of Gomorrah: their grapes are grapes of gall, their clusters are bitter",
-   "the corruption of the false rocks, the vine of Sodom",
-   "the corruption of the ungodly likened to the cursed vine of Sodom",
-   "bringing forth nothing but gall and bitterness (Matthew 7:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Their wine as the poison of dragons: 'their wine is the poison of dragons, and the cruel venom of asps' — the fruit of their corruption is likened to deadly poison (the their wine is the poison of dragons, the poison of dragons, the and the cruel venom of asps, the venom of asps, the figure, the corruption of the wicked likened to deadly venom, their wine poison, the truth that the produce of the ungodly is not refreshment but poison, deadly to the soul, the figure of the deadly fruit of sin, the wine of wickedness venom, 'the poison of asps is under their lips,' Romans 3:13, the corruption that poisons, the venom of the wicked, the deadly end of the false vine, vv.32); their wine likened to deadly poison (the venom, Romans 3:13) — the poison (of dragons); 'and the cruel venom of asps' (the cruel venom of the wicked, the deadly produce, the figure, the deadly fruit of sin, the providence, the poison, God's judgment laid up to follow, vv.34-35) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Their wine is the poison of dragons, and the cruel venom of asps",
-   "their wine as the poison of dragons",
-   "the fruit of the wicked's corruption likened to deadly venom, not refreshment but poison",
-   "the deadly end of the false vine (Romans 3:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "34": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That God's judgment is laid up and sealed with him: 'is not this laid up in store with me, and sealed up among my treasures?' — the sin of the wicked, and the vengeance for it, are stored and sealed with God for the appointed day (the is not this laid up in store with me, laid up with God, the and sealed up among my treasures?, sealed for the day, the figure, the sin and the vengeance laid up and sealed, kept till the day of recompence, the truth that God remembers and stores up the wickedness of the wicked, the judgment reserved, the figure of the treasured-up wrath against the day of judgment, 'treasurest up unto thyself wrath against the day of wrath,' Romans 2:5, the vengeance kept in store, sealed and sure, the judgment laid up with God, vv.35); the sin and vengeance laid up with God (the reserved judgment, Romans 2:5) — the store (laid up); 'and sealed up among my treasures?' (the vengeance sealed for the appointed day, the judgment reserved, the figure, the treasured-up wrath against the day of judgment, the providence, the store, the day of vengeance to follow, vv.35) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Is not this laid up in store with me, and sealed up among my treasures?",
-   "that God's judgment is laid up and sealed with him",
-   "the sin of the wicked and the vengeance for it stored and sealed with God for the appointed day",
-   "the judgment reserved and sure (Romans 2:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "34-38",
+  "pericope_label": "Vengeance laid up in store, and the Lord judging his people",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "God's declaration that vengeance and recompence belong to him: 'to me belongeth vengeance, and recompence; their foot shall slide in due time: for the day of their calamity is at hand, and the things that shall come upon them make haste' — the divine prerogative — 'to me belongeth vengeance, and recompence; their foot shall slide in due time: for the day of their calamity is at hand': vengeance and recompence are God's alone, his to render in his appointed time (the witnesses noting the significance — the sole right of God to avenge and repay, the judgment his prerogative, not man's, vengeance belongs to God, who will surely repay the wicked in his due time, their foot sliding when the day comes, the lesson — that men are not to take vengeance into their own hands, but to leave it to God who judges righteously, the certainty that God will repay, the day of calamity at hand, the slow but sure judgment, the truth that this is the ground of the Christian's forbearance, 'avenge not yourselves... for it is written, Vengeance is mine; I will repay, saith the Lord,' Romans 12:19, 'Vengeance belongeth unto me, I will recompense, saith the Lord,' Hebrews 10:30, the figure — the righteous judgment of God reserved to himself, the wicked's foot sliding in due time, 'thou castedst them down into destruction... in a moment,' Psalm 73:18-19, the truth that God's judgment, though it tarry, is certain and at hand, the day hastening, the figure of the divine vengeance that men must leave to God, committing their cause to him, the call to patience under wrong, knowing that God will repay, the warning that the wicked, secure now, shall surely fall, the figure of the prerogative of God to judge and repay, vengeance his alone); vengeance and recompence are God's alone, his right to render, taken up by Paul and Hebrews against private revenge (the divine prerogative, Romans 12:19; Hebrews 10:30) — the prerogative (vengeance is God's); 'their foot shall slide in due time: for the day of their calamity is at hand, and the things that shall come upon them make haste' (the wicked's foot will slide in God's due time, the judgment slow but sure and hastening, the certain recompence, Psalm 73:18-19) — the figure (the righteous judgment reserved to God, the providence, the vengeance, God's judging and repenting for his servants to follow, vv.36) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Gill takes what is laid up in store of principles and practices kept in the divine memory to be produced at the proper time; on the vengeance he draws a fence, that it belongs to a divine person only and not to any heathen deity of that name, nor to Satan and his angels, nor to any of the sons of men in a private capacity, and notes that the ancient versions and the Targums render the clause as a promise to repay; and on the last verse he denies that the Lord is upbraiding Israel and, on the authority of the Targums, puts the taunt in the mouth of the enemy, adding that the words may be rendered impersonally and in the singular. Calvin reports and rejects the view that the store is of punishments rather than crimes, since the ungodly treat God's forbearance as connivance; on the judging of the people he states both the threatening and the consoling sense and resolves them by a distinction, that an apostle may accommodate to another purpose what was set down for the consolation of the godly; and on the last verse he sets out the two options and argues against the enemy's taunt from the plural form of the word for gods."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the legal figure behind the sealing, that deeds binding men to fulfil conditions at a stated time were sealed and laid up in places of safety, so that justice stands pledged while the time and manner remain sealed; he reports a commentator who refers the verse about vengeance not to Israel at all but to the Canaanites, holds both that God has right to punish them as their Sovereign and that he will change his manner of conduct when their power is wholly gone and not one strong place is left untaken, and makes the closing question God's own expostulation, suggesting that it may look forward to the preaching of the Gospel in the latter days. Wesley takes the store to be their sins, remembered punctually and sealed up as in a bag though the long-suffering may make them think them forgotten; he presses that those who think they stand unmoveable shall fall, that the due time is not so soon as some expect but when the measure of their sins is full, and that Scripture often calls near what is many hundred years off; and he reads the judging of the people as pleading their cause and delivering them, the discourse turning into a more comfortable strain."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott doubts the usual reference of the pronoun to what follows and suggests it may point back to the vine that yielded wild grapes; he points out that the sentence about vengeance is quoted in two epistles, once together with the opening of the next verse, corrects the following clause to read of the time when their foot shall slide, holds on the strength of the apostolic use that to judge here means to punish and not to defend, and offers a rendering by which God will be comforted over his servants. Keil takes the turn as the moment when the people are convinced of the worthlessness of idols."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'to me belongeth vengeance' establish?",
-    "sides": [
-     {
-      "position": "The prerogative of God to judge and repay, vengeance his alone - men not to take vengeance into their own hands but leave it to God who judges righteously, the ground of the Christian's forbearance (Romans 12:19; Hebrews 10:30), the certain and hastening judgment that casts down the wicked in due time (Psalm 73:18-19)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "What is laid up in store: Calvin reports the view that it is the punishments and prefers the crimes, Wesley and Gill agree that the sins are meant, and Ellicott doubts the usual reference and suggests the failure of the vine",
+   "Whether 'the Lord shall judge his people' threatens or consoles: Ellicott follows the apostolic use and says it means to punish and not to defend, Wesley reads it as pleading their cause and delivering them, and Calvin states both and allows that an apostle may accommodate to another purpose what was written for consolation",
+   "Who asks where their gods are: Gill puts the taunt in the enemy's mouth on the authority of the Targums, Calvin argues against that from the plural form and prefers a pious exultation of the faithful, and Clarke makes it God expostulating to awaken them"
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke explains the sealing from the practice of sealing up deeds and laying them in places of safety until the appointed time",
+   "Gill denies that vengeance belongs to any heathen deity of that name, or to Satan and his angels, or to private men",
+   "Clarke reports a commentator who refers the verse about vengeance to the Canaanites rather than to Israel",
+   "Wesley observes that Scripture calls near what is many hundred years distant, because distance in our measures of time is nothing in God's"
+  ],
   "themes": [
-   "To me belongeth vengeance, and recompence; their foot shall slide in due time: for the day of their calamity is at hand, and the things that shall come upon them make haste",
-   "God's declaration that vengeance and recompence belong to him (the crux of the prerogative of God to judge and repay)",
-   "the sole right of God to avenge and repay, the judgment his and not man's, the ground of the Christian's forbearance and patience under wrong",
-   "the certain and hastening judgment that casts down the wicked in due time (Romans 12:19; Hebrews 10:30; Psalm 73:18-19)"
+   "vengeance",
+   "judgment",
+   "mercy",
+   "idols",
+   "the day of calamity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That God would judge his people and have compassion when their strength was gone: 'for the LORD shall judge his people, and repent himself for his servants, when he seeth that their power is gone, and there is none shut up, or left' — God would judge but also relent toward his people when their strength was utterly gone (the for the LORD shall judge his people, God judging his people, the and repent himself for his servants, his compassion turning, the when he seeth that their power is gone, and there is none shut up, or left, when they are helpless, the figure, God's judgment turning to compassion when his people are brought low and helpless, the truth that God chastens but does not utterly forsake, his mercy moved when their strength fails, the figure of the compassion of God that pities his people in their extremity, 'he remembered that they were but flesh,' Psalm 78:39, the mercy that relents when the people are helpless, the judgment tempered, the turning of God toward his afflicted servants, vv.35); God judging yet relenting toward his servants (the mercy, Psalm 78:39) — the compassion (repenting for his servants); 'when he seeth that their power is gone, and there is none shut up, or left' (God's mercy moved when their strength is utterly gone, the compassion in extremity, the figure, the compassion that pities the helpless, the providence, the compassion, the mockery of their idols to follow, vv.37-38) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For the LORD shall judge his people, and repent himself for his servants, when he seeth that their power is gone, and there is none shut up, or left",
-   "that God would judge his people and have compassion when their strength was gone",
-   "God judging but also relenting toward his people when their strength was utterly gone",
-   "his compassion moved when they were helpless (Psalm 78:39)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The mockery of the idols in whom they trusted: 'and he shall say, Where are their gods, their rock in whom they trusted' — God taunts the idols, asking where the gods are that could not save (the and he shall say, Where are their gods, the taunt, the their rock in whom they trusted, the false rock, the figure, the mockery of the helpless idols, the false rock that could not save, the truth that the idols in whom they trusted are shown impotent in the day of need, the figure of the exposure of false gods, 'where are now thy gods?' Jeremiah 2:28, the taunt that unmasks the vanity of idols, the false rock that fails its worshippers, vv.31); God taunting the helpless idols (the mockery, Jeremiah 2:28) — the taunt (where are their gods); 'their rock in whom they trusted' (the false rock that could not save, the vanity of idols, the figure, the exposure of false gods, the providence, the taunt, the idols that ate the sacrifices unable to help to follow, vv.38) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he shall say, Where are their gods, their rock in whom they trusted",
-   "the mockery of the idols in whom they trusted",
-   "God taunting the helpless idols, asking where the gods are that could not save",
-   "the false rock that fails its worshippers (Jeremiah 2:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The idols challenged to rise and help: 'which did eat the fat of their sacrifices, and drank the wine of their drink offerings? let them rise up and help you, and be your protection' — the idols that received the offerings are challenged to rise and help, exposing their impotence (the which did eat the fat of their sacrifices, and drank the wine of their drink offerings?, the idols that received the offerings, the let them rise up and help you, and be your protection, the challenge to help, the figure, the idols challenged to do what they cannot, the mockery of their impotence, the truth that the gods who took the offerings can give no help, the vanity exposed, the figure of the helplessness of idols, called to save and unable, 'let them deliver thee in the time of thy trouble,' Jeremiah 2:28, the challenge that unmasks the dead gods, the idols that take but cannot give, vv.37); the idols that received the offerings (the false gods, Jeremiah 2:28) — the idols (that took the offerings); 'let them rise up and help you, and be your protection' (the idols challenged to help, unable, the impotence exposed, the figure, the helplessness of idols, the providence, the challenge, God's declaration that he alone is God to follow, vv.39) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Which did eat the fat of their sacrifices, and drank the wine of their drink offerings? let them rise up and help you, and be your protection",
-   "the idols challenged to rise and help",
-   "the idols that received the offerings challenged to do what they cannot",
-   "the mockery of the dead gods that take but cannot give (Jeremiah 2:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "39": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "39-43",
+  "pericope_label": "See now that I am he: the oath, the whetted sword, and the arrows drunk with blood",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "God's great declaration that he alone is God, who kills and makes alive: 'see now that I, even I, am he, and there is no god with me: I kill, and I make alive; I wound, and I heal: neither is there any that can deliver out of my hand' — the sole sovereignty — 'see now that I, even I, am he, and there is no god with me: I kill, and I make alive; I wound, and I heal: neither is there any that can deliver out of my hand': God declares himself the one and only God, sovereign over death and life, wounding and healing, from whose hand none can deliver (the witnesses noting the significance — the absolute and sole deity of the LORD, who alone holds the power of life and death, there is no god beside him, he kills and makes alive, wounds and heals, the giver and taker of life, the sovereign over all, the lesson — that God is supreme over all things, life and death in his hand, none able to resist or deliver from him, the great 'I, even I, am he,' the assertion of the sole deity against all idols, the power over life and death his alone, the truth that the LORD alone is God, who brings down to the grave and raises up, 'the LORD killeth, and maketh alive: he bringeth down to the grave, and bringeth up,' 1 Samuel 2:6, the figure — the sovereignty of God over life and death, fulfilled in Christ who has the keys of death, 'I am he that liveth, and was dead... and have the keys of hell and of death,' Revelation 1:18, the truth that none can deliver out of God's hand, his power irresistible, 'I will work, and who shall let it?' Isaiah 43:13, the figure of the absolute sovereignty of the one true God, the source of life and the appointer of death, the call to know and own that he alone is God, the warning that there is no escape from his hand, no rival to his power, the figure of the sole and sovereign deity of the LORD over life, death, and all things); the great assertion of the one and only God, no god beside him, against all idols (the sole deity, 1 Samuel 2:6) — the declaration (I am he, no god with me); 'I kill, and I make alive; I wound, and I heal: neither is there any that can deliver out of my hand' (God's sovereign power over death and life, wounding and healing, none able to deliver from his hand, fulfilled in Christ who has the keys of death, the irresistible sovereignty, Revelation 1:18; Isaiah 43:13) — the figure (the sovereignty over life and death, fulfilled in Christ, the providence, the declaration, God lifting his hand to swear to follow, vv.40) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Gill directs the opening words both to a people in their low estate and to the enemies who insult them, notes that the lifted hand is the gesture used in swearing and is ascribed to a divine person while reporting that the same action is sometimes used merely to excite attention, takes the conditional clause as the suppressed half of an oath whose consequence is left to be concluded by the hearer, describes the sword drawn and polished and whetted so that when brandished it glitters like lightning. Calvin notes that those who gave the preceding verses to the unbelievers must now bring God in abruptly, whereas he takes the words as a confirmation of the holy boasting just put into the mouths of the faithful; he reports a rendering that would join the lifted hand to the verse before and prefers to begin a new sentence, resolves the conditional particle into an adverb of time so that the destruction of the enemies is certain as soon as God takes up arms while adding that God wants no weapons, and describes the massacre intended as leaving no end to the vengeance until the earth is full of blood and corpses."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry treats the passage as the conclusion of the song and hears in it a demand for the glory of self-existence, the name by which the speaker had first been made to know God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states that God alone can save and God alone destroy while the idols can neither hurt nor help, and adds that the mercy is as great as the justice since he is as ready to save the penitent as he was to punish the rebellious; on the last verse he holds that the word rendered 'revenges' never bears that sense, which has made the place perplexed and obscure, and sets out another scholar's version ending with the hairy head of the enemy. Wesley reduces the opening to a lesson learned by sad experience, what vain and impotent things idols are, makes the oath two clauses, reads the conditional plainly as a condition of beginning and glosses the second noun as the instruments of judgment, a metaphor from warriors taking their weapons in hand, distinguishes the captives as sorely wounded though not utterly killed, and takes the last clause to mean that once the vengeance begins it will make a full end."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott observes that many passages in one prophet run very close to the opening sentence without exactly reproducing it, and that the following clause was taken up afterwards in a woman's song of thanksgiving; on the last verse he keeps the received sense and renders literally from the blood of the slain and of the captivity, from the beginning of revenges upon the enemy, adding that judgment must begin at the house of God as it did in a prophet's vision where it began at the sanctuary. Keil marks the lifted hand as the close of the ode and calls the promise it ends with one full of comfort for all the servants of the Lord."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'I, even I, am he... I kill, and I make alive' establish?",
-    "sides": [
-     {
-      "position": "The sole and sovereign deity of the LORD over life, death, and all things - no god beside him, sovereign over life and death, wounding and healing, the giver and taker of life (1 Samuel 2:6), a figure of Christ who has the keys of death (Revelation 1:18), his power irresistible and none able to deliver out of his hand (Isaiah 43:13)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "What the conditional clause about whetting the sword does: Gill takes it as the suppressed half of an oath whose consequence is left unstated, Calvin resolves the particle into an adverb of time so that nothing is left in suspense, and Wesley reads it plainly as a condition of beginning",
+   "How the closing verse is to be rendered: Clarke holds that the word translated 'revenges' never bears that sense and reports a version ending with the hairy head of the enemy, while Ellicott keeps the received sense and renders from the beginning of revenges upon the enemy"
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke sets the mercy beside the justice, God being as ready to save the penitent as he was to punish the rebellious",
+   "Ellicott notes that the clause about killing and making alive was taken up afterwards in a woman's song of thanksgiving",
+   "Gill reports that the lifting of the hand is sometimes used merely to excite the attention of hearers, though here it means an oath",
+   "Ellicott observes that judgment must begin at the house of God, as in the vision where it began at the sanctuary"
+  ],
   "themes": [
-   "See now that I, even I, am he, and there is no god with me: I kill, and I make alive; I wound, and I heal: neither is there any that can deliver out of my hand",
-   "God's great declaration that he alone is God, who kills and makes alive (the crux of the sole and sovereign deity of the LORD over life, death, and all things)",
-   "the absolute and sole deity of the LORD, no god beside him, sovereign over life and death, wounding and healing, the giver and taker of life",
-   "a figure of Christ who has the keys of death, his power irresistible and none able to deliver out of his hand (1 Samuel 2:6; Revelation 1:18; Isaiah 43:13)"
+   "the sole God",
+   "oath",
+   "vengeance",
+   "judgment",
+   "deliverance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God lifting his hand to swear that he lives for ever: 'for I lift up my hand to heaven, and say, I live for ever' — God swears by himself, lifting his hand, that he lives for ever (the for I lift up my hand to heaven, the gesture of the oath, the and say, I live for ever, the swearing by his eternal life, the figure, God swearing by his own eternal being, the most solemn oath, the truth that God, having none greater, swears by himself, his eternal life the surety, the figure of the divine oath, 'because he could swear by no greater, he sware by himself,' Hebrews 6:13, the everlasting life of God the ground of the certainty of his word, the solemn oath that confirms the judgment, vv.41); God lifting his hand in the gesture of an oath (the swearing, Hebrews 6:13) — the gesture (lift up my hand); 'I live for ever' (God swearing by his eternal life, the surest oath, the figure, the divine oath by himself, the providence, the oath, the whetting of the sword of judgment to follow, vv.41-42) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For I lift up my hand to heaven, and say, I live for ever",
-   "God lifting his hand to swear that he lives for ever",
-   "God swearing by himself, having none greater, his eternal life the surety of his word",
-   "the most solemn oath that confirms the judgment (Hebrews 6:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God whetting his sword to render vengeance on his enemies: 'if I whet my glittering sword, and mine hand take hold on judgment; I will render vengeance to mine enemies, and will reward them that hate me' — God prepares his sword of judgment to avenge himself on his enemies (the if I whet my glittering sword, the sword sharpened, the and mine hand take hold on judgment, the hand grasping judgment, the I will render vengeance to mine enemies, and will reward them that hate me, the vengeance on his foes, the figure, God arming for judgment, the sword whetted against his enemies, the truth that God will surely render vengeance on those who hate him, the judgment prepared, the figure of the wrath of God against his enemies, 'his sword... bathed in heaven,' Isaiah 34:5, the certain recompence on the haters of God, the judgment that falls on his foes, vv.35); God whetting his sword for judgment (the wrath, Isaiah 34:5) — the sword (whetted); 'I will render vengeance to mine enemies, and will reward them that hate me' (the vengeance on his foes, the recompence on the haters of God, the figure, the wrath against his enemies, the providence, the vengeance, the sword drunk with blood to follow, vv.42) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If I whet my glittering sword, and mine hand take hold on judgment; I will render vengeance to mine enemies, and will reward them that hate me",
-   "God whetting his sword to render vengeance on his enemies",
-   "God arming his sword of judgment to avenge himself on his enemies",
-   "the certain recompence on those who hate him (Isaiah 34:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's arrows drunk with blood in judgment on the enemy: 'I will make mine arrows drunk with blood, and my sword shall devour flesh; and that with the blood of the slain and of the captives, from the beginning of revenges upon the enemy' — God's arrows and sword would be sated with the blood of his enemies (the I will make mine arrows drunk with blood, the arrows drunk with blood, the and my sword shall devour flesh, the sword devouring, the and that with the blood of the slain and of the captives, from the beginning of revenges upon the enemy, the blood of the foe, the figure, the terrible judgment of God on his enemies, the arrows and sword sated with blood, the truth that God's vengeance on his foes would be complete and dreadful, the figure of the day of God's wrath, 'the sword of the LORD is filled with blood,' Isaiah 34:6, the judgment that devours the enemy, the dreadful recompence on the foes of God, vv.41); the arrows and sword sated with the blood of the foe (the wrath, Isaiah 34:6) — the judgment (arrows drunk with blood); 'with the blood of the slain and of the captives, from the beginning of revenges upon the enemy' (the blood of the enemy in the day of vengeance, the dreadful judgment, the figure, the day of God's wrath, the providence, the judgment, the call to the nations to rejoice to follow, vv.43) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will make mine arrows drunk with blood, and my sword shall devour flesh; and that with the blood of the slain and of the captives, from the beginning of revenges upon the enemy",
-   "God's arrows drunk with blood in judgment on the enemy",
-   "God's arrows and sword sated with the blood of his enemies",
-   "the complete and dreadful vengeance on his foes (Isaiah 34:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The call to the nations to rejoice with God's people: 'rejoice, O ye nations, with his people: for he will avenge the blood of his servants, and will render vengeance to his adversaries, and will be merciful unto his land, and to his people' — the calling of the Gentiles — 'rejoice, O ye nations, with his people: for he will avenge the blood of his servants, and will render vengeance to his adversaries, and will be merciful unto his land, and to his people': the nations are called to rejoice together with God's people, for God avenges his servants and shows mercy to his land (the witnesses noting the significance — the gathering of the Gentiles into the joy and salvation of God's people, the song closing not in judgment alone but in the rejoicing of the nations with Israel, the call to the nations to share in the joy, the avenging of the servants and the mercy on the land, the lesson — that the salvation of God reaches beyond Israel to the nations, who are bidden to rejoice with his people, the closing note of grace, the Gentiles included in the joy, the truth that this is a prophecy of the calling of the Gentiles, quoted by Paul as such, 'Rejoice, ye Gentiles, with his people,' Romans 15:10, the figure — the ingathering of the nations into the church, the song of Moses ending in the joy of Jew and Gentile together, 'that the Gentiles might glorify God for his mercy,' Romans 15:9, the truth that the mercy of God to his land and people overflows to the nations, the joy shared, the figure of the universal praise of the redeemed, the nations and Israel rejoicing as one, the avenging of the martyrs' blood and the mercy on the land the ground of the joy, the warning to the adversaries set against the joy of the gathered nations, the figure of the gathering of the Gentiles to share in the joy and salvation of God's people); the nations called to rejoice together with God's people, a prophecy of the calling of the Gentiles (the ingathering, Romans 15:10) — the call (rejoice, ye nations); 'for he will avenge the blood of his servants, and will render vengeance to his adversaries, and will be merciful unto his land, and to his people' (the avenging of the servants' blood and the mercy on the land the ground of the joy, the mercy overflowing to the nations, the Gentiles glorifying God for his mercy, Romans 15:9) — the figure (the ingathering of the nations into the church, the providence, the call, the close of the song and the charge to the people to follow, vv.44-47) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does 'rejoice, O ye nations, with his people' signify?",
-    "sides": [
-     {
-      "position": "The gathering of the Gentiles to share in the joy and salvation of Israel - the song closing in the rejoicing of the nations with God's people, a prophecy of the calling of the Gentiles quoted by Paul (Romans 15:10), the mercy of God overflowing to the nations that they might glorify him for his mercy (Romans 15:9)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Rejoice, O ye nations, with his people: for he will avenge the blood of his servants, and will render vengeance to his adversaries, and will be merciful unto his land, and to his people",
-   "the call to the nations to rejoice with God's people (the crux of the gathering of the Gentiles to share in the joy and salvation of Israel)",
-   "the gathering of the Gentiles into the joy and salvation of God's people, the song closing in the rejoicing of the nations with Israel",
-   "a prophecy of the calling of the Gentiles quoted by Paul, the mercy of God overflowing to the nations (Romans 15:10; 15:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "44": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses and Joshua speaking the song in the people's ears: 'and Moses came and spake all the words of this song in the ears of the people, he, and Hoshea the son of Nun' — Moses and Joshua recited the whole song before the people (the and Moses came and spake all the words of this song in the ears of the people, the song recited, the he, and Hoshea the son of Nun, with Joshua, the figure, the song spoken to all the people, Moses and his successor together, the truth that the song was delivered before all, the witness proclaimed, the figure of the joint witness of Moses and Joshua, the leader and his successor, the song recited entire, Joshua (Hoshea) by his side, the public delivery of the song, vv.30); Moses reciting the song to the people (the proclamation) — the recital (in their ears); 'he, and Hoshea the son of Nun' (Joshua joined in the recital, the joint witness, the figure, the leader and his successor together, the providence, the recital, the charge to set their hearts on the words to follow, vv.45-46) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses came and spake all the words of this song in the ears of the people, he, and Hoshea the son of Nun",
-   "Moses and Joshua speaking the song in the people's ears",
-   "Moses and Joshua reciting the whole song before the people",
-   "the joint witness of the leader and his successor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses ending his speaking of all the words to Israel: 'and Moses made an end of speaking all these words to all Israel' — Moses finished delivering the song and all his words to the people (the and Moses made an end of speaking all these words to all Israel, the close of his speaking, the figure, the close of Moses's words, the song and the charge ended, the truth that Moses, having spoken all, made an end, his ministry of the word nearly closed, the figure of the faithful servant who delivers the whole counsel and then ends, 'I have not shunned to declare unto you all the counsel of God,' Acts 20:27, the conclusion of the song, the charge to follow, the end of Moses's speaking, vv.44); Moses finishing his speaking (the conclusion, Acts 20:27) — the close (made an end); 'all these words to all Israel' (all the words delivered to the people, the whole counsel, the figure, the faithful servant who declares all, the providence, the close, the charge to set their hearts on the words to follow, vv.46) — Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses made an end of speaking all these words to all Israel",
-   "Moses ending his speaking of all the words to Israel",
-   "Moses finishing the delivery of the song and all his words to the people",
-   "the close of his ministry of the word (Acts 20:27)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The charge to set their hearts on the words and teach them to their children: 'and he said unto them, Set your hearts unto all the words which I testify among you this day, which ye shall command your children to observe to do, all the words of this law' — Moses charges them to lay the words to heart and teach their children to keep them (the and he said unto them, Set your hearts unto all the words which I testify among you this day, laying the words to heart, the which ye shall command your children to observe to do, all the words of this law, teaching the children, the figure, the charge to lay the word to heart and hand it down, the word to be loved and obeyed, the truth that the word is not to be heard only but laid to heart and taught to the children, the figure of the word taken to heart and handed down, 'these words... shall be in thine heart: and thou shalt teach them diligently unto thy children,' Deuteronomy 6:6-7, the heart set on the word, the children taught, the transmission of the word to the next generation, vv.45); the charge to set the heart on the words (the heart, Deuteronomy 6:6) — the charge (set your hearts); 'ye shall command your children to observe to do' (the children taught to keep the word, the transmission, the figure, the word handed down, the providence, the charge, the word as their very life to follow, vv.47) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto them, Set your hearts unto all the words which I testify among you this day, which ye shall command your children to observe to do, all the words of this law",
-   "the charge to set their hearts on the words and teach them to their children",
-   "Moses charging them to lay the words to heart and teach their children to keep them",
-   "the word loved, obeyed, and transmitted (Deuteronomy 6:6-7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "44-47",
+  "pericope_label": "The song delivered, and the charge to set the heart upon it",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "That the word of God is not a vain thing but their very life: 'for it is not a vain thing for you; because it is your life: and through this thing ye shall prolong your days in the land, whither ye go over Jordan to possess it' — the word as life — 'for it is not a vain thing for you; because it is your life: and through this thing ye shall prolong your days in the land': the law is no empty word but the very life of the people, the means of their long abiding in the land (the witnesses noting the significance — the word of God as the source of life and well-being, not a vain or empty thing but the people's very life, the law not to be slighted as trivial, but prized as life itself, the keeping of it the way of long life in the land, the lesson — that the word of God is the means of life, to be valued above all, not despised as vain, the obedience to the word the way of life and length of days, the word the spring of well-being, the truth that man lives by the word of God, 'man doth not live by bread only, but by every word that proceedeth out of the mouth of the LORD,' Deuteronomy 8:3; Matthew 4:4, the figure — the word of God as the source of spiritual and eternal life, 'the words that I speak unto you, they are spirit, and they are life,' John 6:63, 'thou hast the words of eternal life,' John 6:68, the truth that the Scripture is no idle tale but the very life of the soul, to be received and obeyed, the figure of the life-giving word, by which the people live and prolong their days, the call to prize the word as life, not to count it vain, the warning that to slight the word is to forfeit life, the figure of the word of God as the very life of his people); the law is no empty word but the very life of the people, not to be slighted as trivial (the word the source of life, Deuteronomy 8:3) — the declaration (not vain, but your life); 'and through this thing ye shall prolong your days in the land, whither ye go over Jordan to possess it' (the keeping of the word the way of long abiding in the land, the obedience the spring of well-being, the word life to the soul, the life-giving word, John 6:63, 68) — the figure (the word as the source of spiritual and eternal life, the providence, the word, the command to go up Nebo to follow, vv.48-49) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Gill supposes that Moses came from the tabernacle, on the authority of a Targum which calls it the house of instruction, and says of the closing charge that it was no light or trifling matter but one of great consequence, obedience being attended with rewards and disobedience with punishment. Calvin draws a lesson from the mere fact of the repetition, that it shows how far Moses was from all ambition, since at the very close of his life he did not fear to irritate every mind against him and make the memory of his own name hateful, while his authority is confirmed from the other side by the silence and submissiveness of hearers who let themselves be dealt with so severely."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry supposes that Moses spoke the song to as many as could hear him while Joshua at the same time delivered it in another assembly to as many as his own voice would reach, and draws the point that, coming from the mouth of both governors, the one laying down the office and the other taking it up, the people could see that the two were of one mind."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supposes that Moses came from the tabernacle because the ode had been given him there, takes the closing charge as another proof that all the denunciations of divine wrath, delivered though they are in an absolute form, were only declaratory of what God would do if the people rebelled, and says of the promise attached that instead of being cut off they would be preserved and made prosperous in the land. Wesley gives the same reconstruction of the two assemblies as Henry and adds that Joshua as well as Moses would thus be a witness against them if ever they forsook God."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil states that the two spoke the song together and that the closing exhortation impressed the importance of the commandments once more, and observes that this account comes from the hand that supplied the appendix to the books of Moses. Ellicott alone stops at the name, asking why Joshua should be called Hoshea here when the name had apparently been changed when he went with the eleven others to search out the land, and answering that now, when the man is about to lead the people to the conquest, the reader is reminded of the change and of what it meant, that the salvation of the Lord was to be shown forth through him; he corrects the charge to read that they may command their children, observes that for a long time to come the knowledge of the law must have depended largely on personal instruction, cites a rabbinic parallel for setting the heart on all the words, renders the last verse as meaning that the thing is not too light for them, and marks it as the last time in the book that the people are told the very end of their existence in the land was the keeping of this law."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'it is not a vain thing... because it is your life' establish?",
-    "sides": [
-     {
-      "position": "The word of God as the very life of his people - not a vain or empty thing but the source of life and well-being, the keeping of it the way of long life (Deuteronomy 8:3; Matthew 4:4), a figure of the word as the source of spiritual and eternal life, the words of Christ that are spirit and life (John 6:63, 68), the Scripture no idle tale but the life of the soul",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "Whether the threats of the song are absolute: Clarke takes the closing charge as proof that all the denunciations, delivered though they are in an absolute form, were only declaratory of what God would do if the people rebelled"
   ],
-  "outliers": [],
+  "outliers": [
+   "Keil observes that this closing account comes from the hand that supplied the appendix to the books of Moses",
+   "Ellicott asks why Joshua is called by his older name here, and answers that the change is recalled at the moment he is about to lead the conquest, since the salvation of the Lord was to be shown forth through him",
+   "Calvin finds in the repetition of the song a proof of how far its author was from ambition, since he did not fear at the close of his life to make the memory of his own name hateful",
+   "Ellicott notes that for a long time to come the knowledge of the law must have depended very largely on personal instruction"
+  ],
   "themes": [
-   "For it is not a vain thing for you; because it is your life: and through this thing ye shall prolong your days in the land, whither ye go over Jordan to possess it",
-   "that the word of God is not a vain thing but their very life (the crux of the word of God as the life of his people)",
-   "the word of God as the source of life and well-being, not a vain or empty thing but the people's very life, the keeping of it the way of long life",
-   "a figure of the life-giving word of Christ that is spirit and life (Deuteronomy 8:3; Matthew 4:4; John 6:63)"
+   "testimony",
+   "succession",
+   "obedience",
+   "instruction",
+   "life"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
   }
  },
  "48": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "God speaking to Moses that same day concerning his death: 'and the LORD spake unto Moses that selfsame day, saying' — on the very day he finished the song, God spoke to Moses of his approaching death (the and the LORD spake unto Moses that selfsame day, saying, God's word that day, the figure, God speaking to Moses on the very day, the command of his death following the song, the truth that immediately after the song, God called Moses to his end, the figure of the servant called to his rest the moment his work is done, the same day the song was given, the command to die, the word that opens the close of Moses's life, vv.49); God speaking to Moses (the command) — the word (God spake); 'that selfsame day, saying' (on the very day of the song, the command of his death following, the figure, the servant called to rest his work done, the providence, the word, the command to go up Nebo to follow, vv.49) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses that selfsame day, saying",
-   "God speaking to Moses that same day concerning his death",
-   "on the very day he finished the song, God spoke to Moses of his approaching death",
-   "the servant called to his rest the moment his work was done"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command to go up Nebo and behold the land: 'get thee up into this mountain Abarim, unto mount Nebo, which is in the land of Moab, that is over against Jericho; and behold the land of Canaan, which I give unto the children of Israel for a possession' — Moses was to climb Nebo and view the land he might not enter (the get thee up into this mountain Abarim, unto mount Nebo, the ascent of Nebo, the which is in the land of Moab, that is over against Jericho, the place, the and behold the land of Canaan, which I give unto the children of Israel for a possession, the land to be viewed, the figure, Moses to behold the land from afar but not enter it, the servant who sees the promise but enters not, the truth that Moses was granted the sight of the land though barred from it, the figure of the believer who sees the promise afar off, 'having seen them afar off,' Hebrews 11:13, the land viewed but not possessed by Moses, the law not bringing in, the command to ascend and behold, vv.50); the command to climb Nebo (the place) — the ascent (mount Nebo); 'behold the land of Canaan, which I give unto the children of Israel' (the land to be viewed but not entered, the promise seen afar, Hebrews 11:13, the figure, the believer who sees the promise afar off, the providence, the command, Moses to die in the mount to follow, vv.50) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Get thee up into this mountain Abarim, unto mount Nebo, which is in the land of Moab, that is over against Jericho; and behold the land of Canaan, which I give unto the children of Israel for a possession",
-   "the command to go up Nebo and behold the land",
-   "Moses to climb Nebo and view the land he might not enter",
-   "the servant granted the sight of the promise though barred from it (Hebrews 11:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott"
+   "John Calvin",
+   "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command that Moses die in the mount and be gathered to his people: 'and die in the mount whither thou goest up, and be gathered unto thy people; as Aaron thy brother died in mount Hor, and was gathered unto his people' — Moses was to die on Nebo and be gathered to his people, as Aaron died on Hor (the and die in the mount whither thou goest up, the death on the mount, the and be gathered unto thy people, gathered to his people, the as Aaron thy brother died in mount Hor, and was gathered unto his people, as Aaron, the figure, the death of Moses on the mount, gathered to his people as Aaron was, the truth that Moses, like Aaron, would die outside the land, gathered to his fathers, the figure of the saint gathered to his people, death a gathering not an ending, 'gathered unto his people,' the death on the mount, the soul gathered home, the parallel with Aaron's death, vv.49); Moses to die on the mount and be gathered to his people (the gathering) — the death (in the mount); 'as Aaron thy brother died in mount Hor, and was gathered unto his people' (the death like Aaron's, gathered to his people, the saint gathered home, the figure, death a gathering, not an ending, the providence, the death, the reason of the bar to follow, vv.51-52) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And die in the mount whither thou goest up, and be gathered unto thy people; as Aaron thy brother died in mount Hor, and was gathered unto his people",
-   "the command that Moses die in the mount and be gathered to his people",
-   "Moses to die on Nebo and be gathered to his people as Aaron died on Hor",
-   "death a gathering to his fathers, not an ending"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
+  "range": "48-52",
+  "pericope_label": "Moses is called up to Nebo to see the land and to die",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The reason Moses was barred from the land, the trespass at Meribah: 'because ye trespassed against me among the children of Israel at the waters of Meribah-Kadesh, in the wilderness of Zin; because ye sanctified me not in the midst of the children of Israel' — the failure to sanctify God — 'because ye trespassed against me among the children of Israel at the waters of Meribah-Kadesh, in the wilderness of Zin; because ye sanctified me not in the midst of the children of Israel': Moses (and Aaron) were barred from the land because at Meribah they failed to hallow God before the people (the witnesses noting the significance — the holiness of God that must be honoured even by his greatest servants, the sin of not sanctifying God in the eyes of the people, Moses's rash word and act at the rock dishonoured God's holiness before Israel, and even he must bear the consequence, the lesson — that God will be sanctified in all who come near him, his holiness not to be slighted, even by the meekest and most faithful, the severity that spared not Moses, that all might fear, the holiness of God upheld even at the cost of his servant's entrance, the truth that God is jealous for his holiness among his people, 'I will be sanctified in them that come nigh me,' Leviticus 10:3; Numbers 20:12, the figure — the strictness of God's holiness, that even one failure to hallow him before the people was visited, the truth that the greater the servant, the more is required, the more conspicuous the dishonour, the figure of the holiness of God that brooks no slighting, the warning to all who minister before him, the call to sanctify God in the eyes of the people, to give him the glory of his holiness, the sober reminder that God's grace to Moses did not exempt him from the consequence of dishonouring God's holiness, the figure of the holiness of God that even his greatest servant must honour); Moses's trespass at Meribah, the rash word and act at the rock, the occasion of the bar (the sin at the waters, Numbers 20:12) — the trespass (at Meribah); 'because ye sanctified me not in the midst of the children of Israel' (the failure to sanctify God before the people, the holiness of God not honoured, the cause of the exclusion, God sanctified in all who come near him, the holiness upheld, Leviticus 10:3) — the figure (the strictness of God's holiness, brooking no slighting, the providence, the reason, Moses to see the land but not enter to follow, vv.52) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Gill fixes the day as that on which the reading of the law and the song was finished, gives the month and day, reports a Targum which makes it the day of his death and another calendar that places it later in the same month, adds that the peak named is a summit of the range, takes the command plainly as meaning that after the view of the land he was to expect death and submit to it willingly, and names two faults in the reason given for the sentence, an unbelief that doubted whether God would give water to so rebellious a people and a giving way to passion and wrathful words. Calvin denies that these verses stand in their proper order, since Moses was warned of his death before the song was composed and the place had been pointed out before Joshua was substituted for him, adding that an inverted order of narration is not unusual; and he weighs what the sentence cost, since death in itself would not have been so bitter but the cause wounded the holy man grievously, in that he saw himself shut out by God's just vengeance from the common inheritance on account of his own guilt, which to the pious is more afflictive than many deaths."
+   },
    {
-    "question": "Why was Moses barred from the land?",
-    "sides": [
-     {
-      "position": "Because at Meribah he failed to sanctify God before the people - the holiness of God that must be honoured even by his greatest servants, Moses's failure to hallow God at the rock visited even on him, God jealous to be sanctified in all who come near him (Leviticus 10:3; Numbers 20:12), the strictness that spared not even the meekest servant that all might fear",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Because ye trespassed against me among the children of Israel at the waters of Meribah-Kadesh, in the wilderness of Zin; because ye sanctified me not in the midst of the children of Israel",
-   "the reason Moses was barred from the land, the trespass at Meribah (the crux of the holiness of God that even his greatest servant must honour)",
-   "the holiness of God that must be honoured even by his greatest servants, Moses's failure to hallow God at the rock visited even on him",
-   "God jealous to be sanctified in all who come near him, the strictness that spared not Moses that all might fear (Leviticus 10:3; Numbers 20:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "52": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry asks why, having finished his work, Moses should wish to live a day longer, and turns to the reminder of the old sin for which he was kept out of the land, drawing the lesson that it is good for the best of men to die repenting the infirmities they are conscious of, while adding that those who have a believing prospect may die with comfort whenever God calls, notwithstanding the sins they remember against themselves."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the meaning of the mountain range as the mount of the passages, that is, of the people when they entered the promised land, and answers those who have supposed that Moses was translated rather than that he died, since if so his brother was translated too, what is said of the death of the one being said of the death of the other. Wesley asks why, his work being finished, he should wish to live longer, observes that though he had formerly prayed to go over Jordan he is now entirely satisfied and says no more of it, adds that the peak named is a ridge of the range, and marks the timing of the reminder, that God recalls a sin committed long before, repeating that it is good for the holiest of men to die repenting even of their early faults."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "That Moses should see the land but not enter it: 'yet thou shalt see the land before thee; but thou shalt not go thither unto the land which I give the children of Israel' — Moses was granted to see the land but not to enter it (the yet thou shalt see the land before thee, the sight granted, the but thou shalt not go thither unto the land which I give the children of Israel, the entrance barred, the figure, Moses granted the sight but denied the entrance, the servant who sees but enters not, the truth that Moses, the law-giver, brought the people to the border but might not enter, the law not bringing in, the figure of the believer who sees the promise but is gathered before its earthly fulfilment, 'these all died in faith, not having received the promises, but having seen them afar off,' Hebrews 11:13, the sight without the entrance, the meekness that submits, the close of Moses's life, the land seen, the rest in Christ, the law that brings to the border but Joshua that brings in); Moses granted the sight of the land (the view, Hebrews 11:13) — the sight (granted); 'thou shalt not go thither unto the land which I give the children of Israel' (the entrance denied, the servant who sees but enters not, the law not bringing in, the figure, the believer who sees the promise afar off, the providence, the bar, the blessing of the tribes to follow, ch.33) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott says the day meant is that on which the song was spoken in the ears of all Israel, and supplies the history of the command to go up, that it had been given once before and was answered then by the prayer for a successor which was granted, so that everything narrated between that passage and this may be counted preliminary to the departure; he points out that the particular peak on which the death was to happen had not been named until now. Keil states the charge itself, to go up, to see the land given for a possession, and to die there and be gathered to his people as his brother had been on another mountain."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the narrative stands in order: Calvin argues that it does not, since Moses was warned of his approaching death before the song was composed and the place of it had been pointed out before Joshua was appointed, while Gill, Ellicott and Wesley take the day at face value as the day the song was delivered",
+   "Whether Moses died or was translated: Clarke reports the supposition that he was translated and answers that it would prove his brother translated too, since what is said of the death of the one is said of the death of the other"
+  ],
+  "outliers": [
+   "Gill reports a Targum making the day of the song's delivery the very day of Moses' death, and another calendar that places it later in the same month",
+   "Clarke explains the name of the mountain range as the mount of the passages, of the people entering the promised land",
+   "Ellicott notes that the particular peak on which Moses was to die had not been named in the earlier form of the command",
+   "Calvin holds that exclusion from the common inheritance on account of his own guilt is more afflictive to a pious man than many deaths"
+  ],
   "themes": [
-   "Yet thou shalt see the land before thee; but thou shalt not go thither unto the land which I give the children of Israel",
-   "that Moses should see the land but not enter it",
-   "Moses granted the sight but denied the entrance, the law-giver who brings the people to the border but enters not",
-   "the entrance reserved for Joshua, the type of Jesus who brings the people in (Hebrews 11:13)"
+   "death",
+   "repentance",
+   "the promised land",
+   "succession",
+   "judgment"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
   }
  }
 }

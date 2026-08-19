@@ -8325,6 +8325,68 @@
       "book": "acts",
       "chapter": "23",
       "note": "Drafting-overshoot correction held. Drafting to ~8-10 attributed items per entry rather than by feel: of 14 entries, 4 landed in range on the first measurement (vv7-9 at 596, vv23-24 at 604, vv28-30 at 581, vv31-34 at 599) and the rest needed a single trim batch, against thirteen trim rounds for one entry in leviticus 18. The overshoot that remains is concentrated in the long-source entries (v1 at 4838 words came in at 669, v6 at 8974 came in at 695), where the item budget is hardest to hold because the material is abundant rather than scarce."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "32",
+      "verses": [
+        "14",
+        "20",
+        "26",
+        "32",
+        "38",
+        "44",
+        "50"
+      ],
+      "note": "Jamieson, Fausset and Brown residue, TWENTY-FIFTH chapter, with the stride-6 signature again: keys 14, 20, 26, 32, 38, 44, 50 — offset 2, SEVEN members, no gap. Every block is NUMBERS 34 material: the allotment of each tribe's locality by lot with a line used to measure the proportion; the general boundary of the inheritance west of Jordan and the note that Israel never actually possessed all the territory within those boundaries; the reading of 'mount Hor' as Hor-ha-Hor, 'the mountain of the mountain', identified with Amana in the Lebanon range; Shepham and Riblah in the valley of Lebanon with Ain as the source of the Jordan; and the appointment of the men who were to divide the land, ten princes for the nine and a half tribes. NEW SUB-DEFECT, not previously recorded anywhere in this run: the SAME 98-word block appears VERBATIM at keys 38, 44 and 50 — verified by string equality. The run exhausts its supply of source segments part way through and then repeats the last one to fill the remaining stride slots. This is diagnostic of how the mis-indexed scrape terminates, and it means the count of distinct foreign blocks in a stride run can be smaller than the number of keys it occupies. Worth checking the other twenty-four chapters for the same tail-repetition, since it would show where each run ran dry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "32",
+      "note": "The Keil and Delitzsch 200-word truncation cap again, and at close to full saturation: 33 of the 35 blocks in this chapter are exactly 200 words, each cut mid-sentence; only key 49 (134 words) and one other escape. At joshua 9 it was 13 of 14. Together with John Gill, John Lightfoot and Cyril of Jerusalem in earlier batches, the cap is confirmed as a per-block scrape artifact independent of commentator. Keil is again the heaviest loss in this chapter, since he is the one voice supplying continuous philological exposition, and his renderings of the Hebrew are cut off mid-clause at almost every verse. NO StudyLight chrome anywhere in this chapter — all 52 keys checked for the marker and for the copyright string, none found — so the sizer's 55,421 usable source words is accurate as reported. That is the second chapter in three (with 1corinthians 10) where the chrome is simply absent, which is worth recording alongside the eleven positive confirmations: the tail is not universal."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "32",
+      "verses": [
+        "4",
+        "5",
+        "15",
+        "28",
+        "36",
+        "37"
+      ],
+      "note": "Six substantial splits in the Song of Moses. (1) The title at 32:4: Clarke reports eminent critics, an ancient version and a great Jewish authority for rendering the word Creator, origin or first cause, so that the line would run 'He is the first principle, his work is perfect', while Gill, Ellicott and Wesley all build on 'Rock' — which Clarke himself allows gives a very good sense. (2) The clause about the spot at 32:5: Ellicott reports that many interpreters give the first two lines up as hopeless, not from difficulty of translation but from the number of possible interpretations, and offers a rendering reached with help; Clarke gives two conjectural versions, one following the Samaritan, and denounces as a bad doctrine without foundation in the text the common reading that God's children have their spots but that sin in them is not as sin in others; Wesley denies the text affirms any spot in God's children at all; Keil resolves it as parenthetical apposition. (3) The name Jeshurun at 32:15: Gill, Clarke and Wesley derive it from a word for upright and draw a reproach from the derivation, while Ellicott makes it a DIMINUTIVE and a term of endearment, the beloved little Israel, supported by the Targums and the Greek. (4) Whom 32:28-33 describes: Gill holds that the prophecy against Israel is discharged and that the enemies are now in view, carrying that through to the vine of Sodom, which he applies to corrupt professors within the empire; Wesley agrees at the opening; but Ellicott states expressly that the vine is Israel's and not the enemies', and Clarke and Calvin read the whole of Israel. (5) Whether 32:36 threatens or consoles: Ellicott follows the apostolic use and says 'shall judge' means shall punish and NOT shall defend; Wesley reads it as pleading their cause and delivering them; Calvin states both and resolves it by allowing that an apostle may accommodate to another purpose what was written for the consolation of the godly. (6) Who asks 'where are their gods' at 32:37: Gill puts the taunt in the enemy's mouth on the authority of the Targums, Calvin argues against that from the plural form of the word and prefers a pious exultation of the faithful, and Clarke makes it God expostulating to awaken them."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "32",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "29",
+        "35",
+        "44",
+        "48",
+        "50"
+      ],
+      "note": "Eight remarks worth keeping. (a) Keil at 32:1 quotes a description of the Song as soaring to the loftiest heights, concise and pictorial, rough and penetrating yet full of the holiest solemnity, a witness against a disobedient nation and a miniature of the whole life of the man who spoke it. (b) Henry at 32:4 observes that this is the FIRST place in Scripture where God is called a Rock; Ellicott adds that the confession was carried in the personal names of Israel's leaders, one meaning that God is a rock, another that the bearer was redeemed by the rock. (c) Clarke at 32:8 reports on another's authority a scheme in which the earth was divided very early by divine command and probably by lot, a continent falling to each of Noah's sons with Palestine reserved as the Lord's portion, the whole movement being called the general migration; Wesley goes further and holds that the Canaanites were deliberately settled in the country intended for Israel so that they might be rooted out when their iniquities were ripe. (d) Gill at 32:29 guards the wish 'O that they were wise' against being taken for the words of God, which would furnish an instance of an unsuccessful wish in him and an argument that a man may make himself wise if he will; he assigns it to Moses under a spirit of prophecy. (e) Calvin at 32:35 distinguishes the use made of the passage BY PAUL from that made by 'the author of the Epistle to the Hebrews' — and the block carries an editorial note observing that Calvin followed the Western Church of the third and fourth centuries in not admitting Paul to be that author. (f) Clarke at 32:46 takes the closing charge as proof that all the denunciations of divine wrath in the Song, delivered though they are in an absolute form, were only declaratory of what God would do IF the people rebelled. (g) Ellicott at 32:44 asks why Joshua is called by his older name here and answers that the change is recalled at the moment he is about to lead the conquest, since the salvation of the Lord was to be shown forth through him; Keil observes that this closing account comes from the hand that supplied the appendix to the books of Moses. (h) Clarke at 32:50 answers those who supposed Moses was translated rather than that he died, since it would prove Aaron translated too, what is said of the death of the one being said of the death of the other."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "32",
+      "note": "Fidelity self-grade, deuteronomy 32, 12 entries, 52 verses, 8 voices, 55,421 usable source words with no chrome tail. Source keys 1-52 with no gaps, so the spans follow the sections of the Song. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-3 629 · 4-6 640 · 7-9 633 · 10-14 627 · 15-18 650 · 19-23 648 · 24-27 626 · 28-33 647 · 34-38 644 · 39-43 641 · 44-47 561 · 48-52 611. Exclusions: Jamieson, Fausset and Brown at all seven of its stride-6 keys (Numbers 34 material), declared through excluded_voices. Three cares taken. First, Keil's 33 capped blocks were used only for what survives above the 200-word cut and no sentence was completed on his behalf. Second, Matthew Henry's block at key 3 comments on verse 4 rather than verse 3; because key 3 falls in the span 1-3 and Henry has no block at 4-6, his note that this is the first place God is called a Rock was attributed in the earlier entry, out of verse order but correctly sourced. Third, Calvin's blocks in this chapter carry editorial notes in the same run of text as his own words (most conspicuously at 32:35 on the authorship of Hebrews); every attribution to Calvin was confined to his own argument and no editorial gloss was attributed to him. School keys in the tags were reconciled against the voices actually named in each entry."
     }
   ]
 }
