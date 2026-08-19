@@ -6357,6 +6357,44 @@
         "40"
       ],
       "note": "Four-to-one split on the length of the Egyptian sojourn at v40, with Ellicott alone defending the Hebrew. Clarke calls the statement 'extremely difficult' on all hands, reports Kennicott's rejection of two harmonisations — extending Egypt to include Canaan, and stretching 'the children of Israel' to cover Israel, Isaac and part of Abraham's life, of which Kennicott says 'by this method of reckoning we might arrive at anything but truth, which we may presume was never thus conveyed by an inspired writer' — and adopts the Samaritan Pentateuch's longer reading ('and of their fathers... in the land of Canaan and in the land of Egypt'), supported by the Alexandrian Greek and by Paul, giving 215 years in Canaan plus 215 in Egypt. Gill reports the same expansions from the Greek, the Samaritan, both Talmuds and Aben Ezra and states flatly that Israel was not in Egypt much above 200 years. Calvin independently puts the maximum at 230. Against all three, Ellicott renders the plain Hebrew 'which they sojourned in Egypt' and defends 430 years in Egypt with two supports that do not depend on each other: the prophecy to Abraham that his seed should be a stranger in a land not theirs and serve them 400 years, which he takes of Egypt and not Canaan, and the genealogy of Joshua placing him in the eleventh generation from Jacob, noting that the other genealogies are more or less abbreviated. This is the cleanest textual-versus-internal-evidence disagreement encountered in this corpus so far: three voices resolve it by preferring a variant reading, one by defending the received text from independent data. Carried as an explicit debate."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "JFB donor residue at a single position, breaking the stride pattern recorded for the last nineteen chapters. The Jamieson, Fausset and Brown block at verse 1 is an exposition of Shiloh in Genesis 49:10 — the sent, the seed, the peaceable one, the Messiah, and the observation that the Jews have been eighteen centuries without a ruler since Shiloh came. Nothing in it touches Exodus at all, and unlike the residue in genesis 31, genesis 35, genesis 38, exodus 6, exodus 22, leviticus 6, numbers 14 and acts 27, there is no second or third position six verses later: JFB appears nowhere else in this chapter's twenty-nine keys. That makes this the first single-instance case in the run and the first where the donor material comes from a different book rather than a neighbouring chapter. It is worth checking whether the single-instance form and the stride form share a cause, since a stride of six through a chapter with only one JFB key would present exactly this way."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "10",
+      "verses": [
+        "29"
+      ],
+      "note": "StudyLight chrome tail on the chapter's last verse, now nine for nine across nine books and both testaments (exodus 14:31, genesis 31:54, leviticus 6:30, numbers 14:45, acts 27:44, exodus 22:31, genesis 38:30, genesis 35:29, and here). The Ellicott block at verse 29 gives two usable sentences on the chapter division being unfortunate and the interview running on into the next chapter, then breaks into the site footer, stylesheet and navigation menus. Nine consecutive terminal verses is past the point where per-chapter stripping is the right remedy; the fetcher is not detecting the end of the commentary body on the last key of a chapter, and that is where it should be fixed."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "10",
+      "verses": [
+        "22",
+        "28"
+      ],
+      "note": "Second instance of the empty Keil block recorded for genesis 35 in note 576, and it confirms the diagnosis. At verse 22 the harvested Keil block is the bare text of verses 22 to 27 followed by a single sentence of comment that belongs to verse 28; at verse 28 the block is nothing but the text of verses 28 and 29, with no comment whatever. The result is that Keil could be given a place in the 21-23 entry only by using the one displaced sentence about Pharaoh's wrath, and that the 24-29 entry had to exclude him outright — the only exclusion in this chapter besides the JFB residue. Clarke's block at verse 1 has the mirror-image fault, opening with the whole chapter argument as a table of contents before any comment begins. Both are paragraph-boundary faults in the harvest rather than defects in the sources themselves, and both are now attested in two books."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "10",
+      "note": "The discipline proposed at the end of note 577 was tried on this chapter and it works, though it does not solve the problem. For every one of the seven entries the items were listed from the dump and struck to about twelve before a sentence was written. First drafts came in at 918, 927, 935, 938, 953, 954 and 979 QA words against a 650 ceiling — an average overshoot of 45 per cent, which is no better than genesis 35, but the shape of the trimming changed. Where the earlier chapters needed eight to eleven passes each and lost five to nine words a pass, these needed four to seven, and the first pass in each case removed 90 to 180 words by dropping whole items that had already been identified as the weakest. The residual overshoot is not a selection failure but a length-estimation failure: twelve items of grounded prose from five or six voices simply runs to about 900 words, so the real target is nine items, not twelve. That is the number to try next."
     }
   ]
 }
