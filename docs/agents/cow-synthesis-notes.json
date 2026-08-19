@@ -6509,6 +6509,70 @@
       "book": "galatians",
       "chapter": "4",
       "note": "galatians 4: all 13 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. Every first draft again came in over the 650-word ceiling — drafts ran 564 to 1,000 words against the cap and needed one to five trim passes each; entry 24-25 drafted at 905 and 28-31 at 867. The two entries written deliberately spare (6 at 622w, 7 at 564w) landed in a single pass, which is the only reliable countermeasure found so far. Two structural notes on the cross-school citation in this chapter: Ellicott quotes Calvin by name and in full as his warrant for allegorical treatment, and Cyril of Jerusalem and Calvin deploy the identical phrase 'the mother of us all' on opposite sides of the visible-church question."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "25",
+      "verses": [
+        "5",
+        "17",
+        "23",
+        "29",
+        "41",
+        "47",
+        "53"
+      ],
+      "note": "JFB stride-6 donor residue, twenty-first consecutive chapter. Seven JFB keys at vv.5/17/23/29/41/47/53 — every sixth verse — and every one of them carries matter belonging to Leviticus 7, 8, 15 and 16, none of it to chapter 25. Read with exodus 10 (a SINGLE JFB key at v1 carrying Genesis 49:10 matter) and deuteronomy 3 (five keys at vv.4/10/16/22/28, all Numbers 14 matter), the diagnosis is settled: the JFB harvest is offset by a fixed step against the verse index and lands wherever that step falls, which accounts for both the stride form and the single-instance form. JFB is therefore excluded from nine of this chapter's ten entries as undeclarable, and that exclusion is correct, not a drafting gap."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "25",
+      "verses": [
+        "55"
+      ],
+      "note": "StudyLight chrome tail on the chapter's LAST verse — eleven for eleven now (exodus 14:31, genesis 31:54, leviticus 6:30, numbers 14:45, acts 27:44, exodus 22:31, genesis 38:30, genesis 35:29, exodus 10:29, deuteronomy 3:29, leviticus 25:55). The fetcher is not detecting the end of the commentary body on a chapter's final key. This is a harvest-side fix and has now been recommended eleven times; it is cheap to make and would clean every chapter at once."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "25",
+      "verses": [
+        "21",
+        "45",
+        "48"
+      ],
+      "note": "Displaced Keil blocks, now attested in a fourth book. Keil's v21 block opens with the raw verse text of vv.21-23 before any comment, and the comment when it comes is on v23; his v45 block runs the verse text of vv.45-47 before commenting on v47; his v48 block runs the text of vv.48-52 and then comments on v51. In each case the exposition is real and usable but is filed one to four verses ahead of the material it treats. This is the same paragraph-boundary fault recorded for genesis 35 and exodus 10 (notes 576, 580) — the harvest breaks the block at the wrong place, not the source. Consequence for drafting: Keil looked absent from the vv.20-23 and vv.44-50 entries on a first read and was only recovered by opening the raw blocks after the ghost script flagged him."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "25",
+      "verses": [
+        "8",
+        "20",
+        "44"
+      ],
+      "note": "Three voice omissions in one chapter, all caught by the ghost script rather than by the pre-draft voice profile: Ellicott from the vv.8-10 entry (he has substantial material at all three verses — the count-seven-weeks-of-years gloss, the rams'-horn cornets, and the forgiven-debts moral of the atonement day), and Keil from the vv.20-23 and vv.44-50 entries (both displaced blocks, see the companion note). Note 569 set the rule that the voice profile should be run BEFORE drafting and the list of present voices kept beside the draft; on a ten-entry chapter that rule was followed for the chapter but not re-checked per entry, which is where all three slipped. The refinement: on chapters of eight or more entries the present-voice list must be checked per ENTRY at the end of each draft, not once for the chapter. All three were restored and paid for by dropping whole items elsewhere; the chapter landed at 634-650 QA words with no ghosts."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "25",
+      "note": "The batch rule budgets by SOURCE WORDS, but entry count is what actually drives the work. Leviticus 25 passed the word budget comfortably (33,347 usable source words, well under the ~40,000 whole-batch threshold) and yet took ten entries, because it has 55 source keys with a median of 457 words each. Compare exodus 10: 24,384 words but only 29 keys and seven entries. At a similar word budget leviticus 25 was roughly 1.4x the drafting work and, because every entry needs its own trim-to-650 loop and its own voice check, closer to 2x the elapsed effort. Recommendation: 'synthesis-loop.py size' should also report a projected entry count (source words / ~3,300, or keys / ~5) alongside the word total, since entry count is the better predictor of whether a chapter can be finished in one sitting — and an abandoned pick costs the run everything."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "25",
+      "note": "Drafting arithmetic, confirmed again over ten entries. A grounded item written as a full attributed sentence costs ~90-110 words, so seven items is the number that fits under the 650-word QA ceiling; five items lands near 670 and six near 740, both of which still need trimming. Measured trim passes on this chapter: the eight-item entry took 14 passes, the six-item entries took 4, the five-item entries took 2. The cheapest correction remains dropping a whole item rather than shaving clauses — clause-shaving costs three or four passes to recover the same words and flattens the prose while doing it."
     }
   ]
 }
