@@ -7777,6 +7777,87 @@
       "book": "hebrews",
       "chapter": "10",
       "note": "Fidelity self-grade, hebrews 10, 11 entries, 39 verses, 11 voices, ~74,073 usable source words after 992 of chrome. Every entry checked clause by clause against its source blocks; every named attribution traced to that voice's own block in this chapter; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-4 648 · 5-6 643 · 7-10 647 · 11-18 648 · 19-20 648 · 21-24 650 · 25-26 650 · 27-29 649 · 30-33 644 · 34-36 649 · 37-39 640. Exclusions: Jamieson at the seven stride-6 keys (foreign 2 Corinthians content); Cyril of Jerusalem silenced at entry 19 only, as a duplicate of his 10:4 block, via SILENT_BY_ENTRY because the VOICE_LABELS defect makes the voice undeclarable. One correction made in review: at 3-5 in hebrews 9 the harness read Clarke's quotation of a father named Cyril as an attribution to Cyril of Jerusalem, so the same pattern was watched for here and no father is named inside another voice's quotation. School keys in the tags were reconciled against the voices actually named in each prose entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "JFB stride bug, eighth confirmed instance, and the donor question from romans 15 is now settled. Five JFB blocks at vv.3/9/15/21/27 (stride of six, as in romans 15) carry no comment on 1 Corinthians at all; they are Acts 21-23 material on Paul's arrest and trial, advancing in order 21:39 -> 23:2 -> 23:6 -> 23:12 -> 23:16. Romans 15's five blocks were Acts 15 (the Jerusalem Council), which matched by chapter number and I flagged as probably coincidental; since 12 != 21-23, the number match was indeed coincidence. Both chapters draw their residue from Acts. All five excluded here (excluded_voices)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "8",
+        "28",
+        "30"
+      ],
+      "note": "John Lightfoot is a third absorbed voice, alongside Theodoret of Cyrrhus and Cyril of Jerusalem (note 694): he is absent from the harvest splitter's name list, so his text is swallowed into the preceding listed voice's block. Here he lands inside Gill at vv.1, 8, 28 and 30, and at v.8 and v.28 he truncates Gill mid-sentence, leaving Gill's own comment unfinished. His material is untagged Greek word-lists and rabbinic notes that read nothing like Gill. Skipped entirely in this chapter rather than attributed to the host. Cyril of Jerusalem likewise absorbed at vv.3,7,8,9,10,11,28 and skipped. Repo-side fix remains one line in the harvest splitter's name list."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "1"
+      ],
+      "note": "Entry-count predictor now 8 for 8. keys-over-2000 + round(remaining_words/2500): 1corinthians 12 has 31 keys, 43,887 usable source words, seven keys over 2000 (v1=5384, v3=2544, v8=2785, v12=3323, v27=3081, v28=3749, v31=3382) and 26,663 words remaining across the other 24 keys, giving 7 + round(10.67) = 18 by the raw formula; using the seven big keys as their own or near-own entries and tiling the rest to the ~4500 ceiling gave 15, which is what the chapter took. The predictor works as a target during tiling, not as a check after it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "12",
+        "14",
+        "18",
+        "21"
+      ],
+      "note": "TTR lesson from the body-metaphor entries. The chapter's central image forces member/body/Spirit/part to recur, and entries on vv.12, 14-17, 18-20 and 21-23 all first graded B on MATTR (0.550-0.580 against the 0.58 floor). Global synonym swaps did not fix it and once made it worse, since shortening reduces the denominator without adding types. What worked was rewriting the single densest stretch with fresh vocabulary (lowliest, enrolled, grafted in, knits, dearly cherished) rather than spreading small substitutions across the whole entry. Final chapter mean TTR 0.626."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "31"
+      ],
+      "note": "Ellicott's v31 block ends with roughly 2,000 words of StudyLight site chrome (copyright boilerplate followed by a full CSS stylesheet) appended to the real comment. It inflates the v31 key's word count and would be picked up verbatim by any naive length or coverage measure. Same class as the editorial interpolation problem but mechanical, not editorial; a trailing-boilerplate strip in the harvest step would catch it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "27",
+        "31"
+      ],
+      "note": "Two live disputes recorded in the tags. At v27 Calvin names Chrysostom and rejects his reading of 'severally' (that it qualifies 'body' because the Corinthian church is only a portion of the church universal) as forced, referring the word instead to the division of members already made; Chrysostom does have a block in the span, so the attribution is safe. At v31 the indicative/imperative question divides the whole bench: Barnes keeps the imperative against Doddridge, Locke, Macknight and the Syriac, Clarke and Wesley read it as a statement of what they were already doing, Gill lays out all three renderings without choosing, and Calvin calls the difference slight. Clarke's reason for the affirmative is worth keeping: there were more contentions at Corinth about the gifts than about the graces."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "12",
+      "verses": [
+        "7"
+      ],
+      "note": "Chrysostom naming hazard avoided at vv.7-8. Calvin reports and rejects Chrysostom's reading of 'manifestation' (that the term is used because unbelievers recognise God only by visible miracles), but Chrysostom has no block anywhere in that span, so naming him would have produced a ghost of the note-683 citation type. Written as 'A third view he rejects as harsh and forced' with no name. Chrysostom is a declared voice in the chapter at vv.1, 12, 21 and 27, which makes the hazard easier to miss than usual — a voice present in the chapter is not thereby present in the span."
     }
   ]
 }
