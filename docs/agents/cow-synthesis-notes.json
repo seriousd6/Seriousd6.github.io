@@ -6130,6 +6130,53 @@
       "book": "exodus",
       "chapter": "22",
       "note": "Trim cost has risen sharply and is now the dominant cost of the work. Across exodus 22's seven entries the first drafts came in at 834-1086 QA words against a 650 ceiling — a mean overshoot of about 33 per cent — and each entry took between eight and twelve trim rounds to bring into range, where earlier chapters in this run took three or four. The three-paragraph rule of note 536 is still right, but it is no longer sufficient by itself. Two things would help a fresh worker: draft to a 700-word target rather than letting the material dictate length, and cut whole items early rather than shaving clauses, since shaving loses roughly five words a pass while dropping one source's contribution loses thirty. The second lesson is the one that matters most for quality, because prolonged shaving is what produced the accidental dropping of Gill recorded in the preceding note."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "28",
+      "verses": [
+        "43"
+      ],
+      "note": "SCRAPED PAGE CHROME INGESTED AS COMMENTARY. Ellicott's block at exodus 28:43 contains roughly 120 words of genuine commentary followed by about 950 words of StudyLight.org website furniture: a navigation strip (Exodus Exo 27 / Exodus Exo 29), a Copyright Statement and terms-of-use footer, and then a large block of raw CSS (.sub-menu{font-size:12px...}, .int-search-div, .lex-search-div and so on). This is a new defect class for this corpus, distinct from the editorial-apparatus problem seen at romans 9 and the repeated-block problem at 1corinthians 15: here the scraper captured the HTML page's own template rather than any commentary text at all. It is trivially detectable and should be swept for corpus-wide: flag any voice block containing CSS selector syntax ({...;...} with property:value pairs), the strings 'Copyright Statement', 'terms of use', 'privacy policy', 'BibleSupport.com', 'StudyLight.org', or a run of navigation links matching the pattern 'Book Abbrev Number'. Unlike the Jamieson stride-6 problem this needs no re-fetch, only truncation at the first marker; but it does mean the reported usable-source-word counts for affected chapters are inflated. exodus 28 was sized at 33,449 usable source words, of which roughly 950 were this junk."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "37"
+      ],
+      "note": "Jamieson stride-6 confirmed for a NINTH consecutive chapter and a sixth book. exodus 28 Jamieson keys: 1, 7, 13, 37 - offset 1 mod 6, four members, gaps at 19, 25 and 31. Running table: joshua 10 (offset 1, 7 members, gap 31), 1corinthians 7 (5, 6, none), hebrews 11 (3, 5, gap 21), romans 8 (2, 7, none), romans 9 (4, 3, gaps 10/16), 1corinthians 15 (0, 7, gap 30), leviticus 27 (4, 6, none), judges 16 (3, 4, none), exodus 28 (1, 4, gaps 19/25/31). Offset 1 has now appeared twice (joshua 10, exodus 28) and both of those runs also have gaps, which is consistent with the gaps being ordinary missing rows rather than a second mechanism. The exodus 28 residue is once again foreign to the chapter and, as at leviticus 27 and romans 9, it lags EARLIER IN THE SAME BOOK: all four blocks are Exodus 14-15 material (the Egyptians driving onto the bared bed of the sea, the destruction of Pharaoh, the Song of Moses sung at Ayoun Musa, Moses leading the men and Miriam the women). That is a lag of roughly 13-14 chapters, comparable to the 17-19 chapter lag observed at leviticus 27 and romans 9. Nine chapters across six books, every residue class mod 6 attested, and the same-book backward lag now seen three times: the Jamieson tree should be re-fetched wholesale rather than excluded voice-by-voice."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "2",
+        "6",
+        "15",
+        "31"
+      ],
+      "note": "WESLEY IS HENRY ABRIDGED, near-verbatim, in five of this chapter's thirteen Wesley blocks. At v1 Wesley reads 'Hitherto every master of a family was priest to his own family... it was requisite there should be a publick priesthood instituted. Moses, who had hitherto officiated, and is therefore reckoned among the priests of the Lord, Psa 99:6, had enough to do as their prophet' against Henry's 'Hitherto every master of a family was priest to his own family... it was requisite there should be a public priesthood instituted. Moses, who had hitherto officiated, and is therefore reckoned among the priests of the Lord (Ps. xcix. 6), had enough to do as their prophet'. The same holds at v2, v6, v15 and v31. This is expected of Wesley's Explanatory Notes, which openly abridge Henry and Poole, but it has two consequences for this corpus that are worth stating. (1) School counting is inflated: naming both voices makes puritan-evangelical and wesleyan-arminian look like independent agreement when there is one source. In this chapter I attributed the shared material to Henry and reserved Wesley for where he differs or stands alone (v11 ouches, v32 habergeon, v33 pomegranates, v39 mitre, v43 statute for ever), and where the wording is identical I named both in one clause rather than as two witnesses. (2) A near-duplicate detector across the Henry/Wesley pair would be cheap and would let the loop flag this automatically. Compare the repeated-block defect filed at 1corinthians 15: that was one voice's block duplicated across verses, this is two voices carrying one text."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "28",
+      "verses": [
+        "40"
+      ],
+      "note": "Content-free cross-reference block. Clarke's entry at exodus 28:40 consists solely of the words 'For glory and for beauty - See Clarke's note on Exo 28:2.' There is no commentary to summarise, so Clarke was excluded from the 39-41 entry via EXCL_BY_ENTRY and appears in excluded_voices rather than being named in prose with nothing behind him. This is a small but recurring shape in the Clarke tree (compare his v9 'Two onyx stones - See Clarke on Exo 25:7' and his v4 entries, which are partly cross-references). Worth adding to the picker's or the linter's awareness: a voice block whose whole body is a 'See Clarke's note on' or 'See Clarke on' pointer carries no content, and counting it toward a verse's voice total overstates how well covered that verse actually is. A one-line heuristic would catch it: block under about 25 words and matching /See (Clarke'?s? )?note on/."
     }
   ]
 }
