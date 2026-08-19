@@ -1,335 +1,199 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Charles Ellicott",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses speaking his final words to all Israel: 'and Moses went and spake these words unto all Israel' — Moses came before the whole assembly to deliver his closing charge (the and Moses went, Moses coming forth, the and spake these words unto all Israel, the final address to the people, the figure, the aged leader's last words to the people he had led, the solemn close of his ministry, the truth that Moses, knowing his end near, gathered the people for his final charge, the figure of the faithful servant finishing his course, the last words to the flock, the parting address of the man of God, the people gathered, the solemn farewell that opens the closing scenes, vv.2); Moses coming before the people (the address) — the coming (Moses went); 'spake these words unto all Israel' (the final charge to the whole people, the parting words, the figure, the faithful servant's last address, the providence, the address, Moses's age and the LORD going over to follow, vv.2-3) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses went and spake these words unto all Israel",
-   "Moses speaking his final words to all Israel",
-   "Moses coming before the whole assembly to deliver his closing charge, the last words to the flock",
-   "the solemn farewell that opens the closing scenes"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1-3",
+  "pericope_label": "Moses at a hundred and twenty takes his leave and names the Lord as Israel's leader",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Moses's great age and that he might not cross Jordan: 'and he said unto them, I am an hundred and twenty years old this day; I can no more go out and come in: also the LORD hath said unto me, Thou shalt not go over this Jordan' — Moses, aged 120, told them he could lead them no longer and might not cross Jordan (the I am an hundred and twenty years old this day, the great age, the I can no more go out and come in, no longer able to lead, the also the LORD hath said unto me, Thou shalt not go over this Jordan, barred from the land, the figure, the aged Moses owning his limits and his exclusion, the leadership passing, the truth that Moses, full of years, must give place, barred from the land, the figure of the servant who brings the people to the border but enters not, the law not bringing in, the meekness that owns the bar and the passing of leadership, the close of Moses's leading, the LORD going over instead, vv.3); Moses aged 120, no longer able to lead (the limit) — the age (a hundred and twenty); 'the LORD hath said unto me, Thou shalt not go over this Jordan' (Moses barred from the land, the law not entering, the figure, the servant who enters not the rest, the providence, the exclusion, the LORD going over before them to follow, vv.3) — Keil and Delitzsch, Gill."
+    "summary": "Gill reconstructs the movement behind the opening verb: after making the covenant he was directed to make, Moses dismissed the people to their tents and went to his own, and now returns, having ordered them to meet him again, probably at the tabernacle, with which the Targum of Jonathan agrees in saying he went to the tabernacle of the house of doctrine, while Aben Ezra reads it of his going to each tribe as they lay encamped, to tell them he was about to die and strengthen their hearts. Calvin asks why addresses so far from gratifying, full of threats and reproofs, had to be heard from Moses' own mouth, and answers that had they been delivered after his death the people would have exclaimed that they were devised by someone else and his name falsely attached to them; the moment added weight of another kind, for we know with what attention the last words of the dying are received. He also draws the general lesson from the naming of a successor: whenever God raises up men endowed with excellent gifts He so uses their labours for a time as still to retain others in His hand, so that His power is not tied to the illustrious qualities of men, as though their death were His destruction."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears reluctance in the repeated farewells: Moses was loth to part, not because he was loth to go to God but because he was loth to leave them, fearing that when he had left them they would leave God. Though Joshua was continued to fight for them in the valley, they would want Moses to intercede on the hill as at Rephidim; and the sentence that he should not go over Jordan put a full stop to his usefulness — hitherto he must serve, but no further. Henry knows no reason why any of us should desire to live longer than while God has work for us to do."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the lawgiver's life was exactly the length of time Noah employed in preaching righteousness to the antediluvian world, and divides it into three periods of forty: forty years in Egypt in Pharaoh's court, acquiring the learning and wisdom of the Egyptians; forty in Midian in preparation for his mission; and forty guiding Israel under the express authority of God. Wesley glosses the inability to go out and come in more narrowly, as the loss of ability to perform the office of a leader or governor."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil guards the first of Moses' two reasons against the later statement that his eye was not dim nor his natural force abated: that is merely an affirmation that he retained the ability to see and to work to the last moment of his life, which by no means precludes his noticing the decline of his strength and feeling death approach. On the promise itself he is plain: the Lord would go before Israel and destroy the Canaanites as He had the two kings of the Amorites, Israel's part being to do to them as commanded."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why does Moses say he can no more go out and come in, when his sight and strength were unabated to the end?",
+    "positions": [
+     {
+      "position": "the words affirm only that he could see and work to the last moment, and do not preclude his feeling the decline of his strength",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "not that his eyes were dim or his members tremulous, but that his age no longer allowed the usual duties; having reached the end of his course he must suddenly sink",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And he said unto them, I am an hundred and twenty years old this day; I can no more go out and come in: also the LORD hath said unto me, Thou shalt not go over this Jordan",
-   "Moses's great age and that he might not cross Jordan",
-   "Moses, full of years, owning that he could lead no longer and was barred from the land",
-   "the servant who brings the people to the border but enters not"
+   "I am an hundred and twenty years old this day",
+   "I can no more go out and come in",
+   "the Lord thy God, he will go over before thee"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That God would go over before them, with Joshua as leader: 'the LORD thy God, he will go over before thee, and he will destroy these nations from before thee, and thou shalt possess them: and Joshua, he shall go over before thee, as the LORD hath said' — God himself would go before them to conquer, with Joshua as the appointed leader (the the LORD thy God, he will go over before thee, God going before, the and he will destroy these nations from before thee, and thou shalt possess them, the conquest his work, the and Joshua, he shall go over before thee, as the LORD hath said, Joshua the leader, the figure, God himself the leader of the conquest, Joshua his appointed servant, the truth that the victory would be God's, Joshua leading under him, the figure of the divine leadership that does not fail when the human leader passes, 'Joshua' (the same name as Jesus) leading the people in, the assurance that God goes before, the conquest secured, the leadership passing to Joshua under God, vv.7); God going before to destroy the nations (the assurance) — the assurance (God before them); 'Joshua, he shall go over before thee, as the LORD hath said' (Joshua the appointed leader under God, the leadership passing, the figure, the divine leadership that does not fail, the providence, Joshua, the encouragement not to fear to follow, vv.4-6) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The LORD thy God, he will go over before thee, and he will destroy these nations from before thee, and thou shalt possess them: and Joshua, he shall go over before thee, as the LORD hath said",
-   "that God would go over before them, with Joshua as leader",
-   "God himself going before to conquer the nations, with Joshua his appointed servant leading the people in",
-   "the divine leadership that does not fail when Moses passes"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That God would do to the nations as to Sihon and Og: 'and the LORD shall do unto them as he did to Sihon and to Og, kings of the Amorites, and unto the land of them, whom he destroyed' — God would destroy the nations of Canaan as he had destroyed Sihon and Og (the and the LORD shall do unto them as he did to Sihon and to Og, the like judgment, the kings of the Amorites, and unto the land of them, whom he destroyed, the conquered kings, the figure, the recent victory over Sihon and Og the pledge of victory over Canaan, the truth that God who destroyed the two kings would destroy the nations, the past a token of the future, the figure of the encouragement drawn from past deliverances, the pledge of new victories, the conquered kings the proof of God's power, the same to come, the assurance grounded on what God had already done, Numbers 21:24, 34); God doing to the nations as to Sihon and Og (the pledge, Numbers 21:24) — the example (Sihon and Og); 'and unto the land of them, whom he destroyed' (the kings destroyed, the pledge of victory, the past a token, the figure, the encouragement from past deliverances, the providence, the example, the charge to be strong to follow, vv.5-6) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD shall do unto them as he did to Sihon and to Og, kings of the Amorites, and unto the land of them, whom he destroyed",
-   "that God would do to the nations as to Sihon and Og",
-   "God who destroyed the two kings would destroy the nations of Canaan",
-   "the recent victory the pledge of victories to come (Numbers 21:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That God would give the nations up to be dealt with as commanded: 'and the LORD shall give them up before your face, that ye may do unto them according unto all the commandments which I have commanded you' — God would deliver the nations into their hand, to be dealt with as he had commanded (the and the LORD shall give them up before your face, the nations delivered, the that ye may do unto them according unto all the commandments which I have commanded you, dealt with as commanded, the figure, the nations given up by God, to be dealt with by his command, not their own will, the truth that the conquest was God's gift, and the dealing with the nations was to follow his command, the figure of the obedience that executes God's judgment, the nations given up, the conquest by God's gift and command, the people his instrument, the deliverance that calls for obedience, vv.6); the nations delivered into their hand (the gift) — the deliverance (given up); 'that ye may do unto them according unto all the commandments which I have commanded you' (the nations dealt with by God's command, the obedience, the figure, the people God's instrument, the providence, the deliverance, the charge to be strong to follow, vv.6) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD shall give them up before your face, that ye may do unto them according unto all the commandments which I have commanded you",
-   "that God would give the nations up to be dealt with as commanded",
-   "God delivering the nations into their hand, to be dealt with as he had commanded",
-   "the people his instrument in executing his judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "Keil and Delitzsch"
   ],
+  "range": "4-8",
+  "pericope_label": "Be strong and of a good courage: the charge to Israel and to Joshua",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The charge to be strong and not to fear, for God will never fail nor forsake them: 'be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee' — the unfailing presence — 'be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee': the people charged to be strong and unafraid, because God goes with them and will never abandon them (the witnesses noting the significance — the courage of faith grounded on God's abiding and unfailing presence, the charge 'be strong, fear not' resting on the promise 'he will not fail thee, nor forsake thee,' the ground of all courage, the lesson — that the believer's strength is not in himself but in the unfailing presence of God, the fear of the foe overcome by the certainty that God goes with his people and never forsakes them, the truth that this promise is the believer's stay in every trial, taken up in the New Testament as the ground of contentment and courage, 'he hath said, I will never leave thee, nor forsake thee. So that we may boldly say, The Lord is my helper,' Hebrews 13:5-6, the figure — the presence of God that is the strength and stay of his people, 'fear thou not; for I am with thee,' Isaiah 41:10, 'lo, I am with you alway, even unto the end of the world,' Matthew 28:20, the truth that God never forsakes his own, the same promise made to Joshua and to every believer, the figure of the courage of faith that rests on the faithfulness of God, the call to be strong because God is faithful, the fear of man swallowed up in the presence of God, the warning against the fear that forgets God's presence, the figure of the courage of faith grounded on God's unfailing presence); the charge to be strong and unafraid before the foe, the courage commanded (the strength of faith, Isaiah 41:10) — the charge (be strong, fear not); 'for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee' (the ground of courage, God's abiding presence that will never fail nor forsake, the believer's stay in every trial, the unfailing God, Hebrews 13:5-6; Matthew 28:20) — the figure (the presence of God the strength of his people, the providence, the charge, Joshua charged before all Israel to follow, vv.7-8) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Calvin reads the appeal to Sihon and Og as an argument from experience: as God had delivered the two Amorite kings into their hands, so He would give the same success against the rest, for though the world is subject to many revolutions God remains like Himself, His counsel never changed and His power never diminished. In appearance, he grants, the command was fierce and cruel, to leave not one alive; but since God had justly devoted them to extinction it was not lawful for Israel to inquire what was to be done, but to abandon all discussion and obey. On the promise attached to the charge he presses further: the people were animated to perseverance of hope by God's declaring that He would be their helper even to the end, and by that the hallucination is refuted whereby theologians deny that believers can be certain of God's grace except as to their present state. Gill notes that where the Lord is said to give them up before Israel's face, the Targum of Jonathan reads the Word of the Lord shall deliver them up, and turns the Septuagint's play the man into being strong in the Lord and in the power of his might."
+   },
    {
-    "question": "What grounds the charge 'be strong and of a good courage, fear not'?",
-    "sides": [
-     {
-      "position": "God's abiding and unfailing presence - 'he will not fail thee, nor forsake thee'; the believer's strength is not in himself but in the certainty that God goes with his people and never abandons them (Isaiah 41:10), the very promise taken up as the believer's stay against fear and covetousness (Hebrews 13:5-6) and as Christ's parting word, 'lo, I am with you alway' (Matthew 28:20)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Be strong and of a good courage, fear not, nor be afraid of them: for the LORD thy God, he it is that doth go with thee; he will not fail thee, nor forsake thee",
-   "the charge to be strong and not to fear, for God will never fail nor forsake them (the crux of the courage of faith grounded on God's unfailing presence)",
-   "the courage grounded not on human strength but on God's abiding and unfailing presence, the fear of the foe overcome by the certainty that God never abandons his own",
-   "the promise taken up as the believer's stay against fear (Isaiah 41:10; Hebrews 13:5-6; Matthew 28:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that the verb rendered be strong is the one used in Exodus for the hardening of Pharaoh's heart, and that the Septuagint renders both this verse and the next play the man and be strong — whence St. Paul seems to have borrowed his words to the Corinthians: stand firm in the faith, play the man, be vigorous. He takes the four clauses of the last verse one by one: He will go before thee, to prepare thy way; be with thee in all thy journeys and enterprises; not fail thee, for thy expectation cannot be too large; not forsake thee, since without Him thou canst do nothing, and He will continue with thee in such a manner that the excellence of the power shall appear to be of Him and not of man."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses charging Joshua before all Israel to be strong: 'and Moses called unto Joshua, and said unto him in the sight of all Israel, Be strong and of a good courage: for thou must go with this people unto the land which the LORD hath sworn unto their fathers to give them; and thou shalt cause them to inherit it' — Moses publicly charged Joshua to be strong and lead the people into the land (the and Moses called unto Joshua, and said unto him in the sight of all Israel, the public charge, the Be strong and of a good courage, the courage commanded, the for thou must go with this people unto the land which the LORD hath sworn unto their fathers, the task of leading them in, the and thou shalt cause them to inherit it, the inheritance secured, the figure, the public commissioning of Joshua, the charge to courage and the task of leading the people in, the truth that Joshua was openly charged before all, that the people own his leadership, the figure of the appointed successor strengthened for his task, the leader commissioned, the courage commanded for the work of bringing the people into the inheritance, the passing of leadership confirmed before all, vv.8); Joshua charged before all to be strong (the commissioning) — the charge (be strong); 'thou must go with this people unto the land... and thou shalt cause them to inherit it' (Joshua to lead the people into the inheritance, the task, the figure, the appointed successor commissioned, the providence, the charge, the LORD going before Joshua to follow, vv.8) — Keil and Delitzsch, Gill."
+    "prevalence": "single",
+    "summary": "Keil defends the received reading of the promise to Joshua, thou wilt come with this people into the land: the emendation that would make it thou wilt bring, after a later verse, is an unnecessary conjecture, since Joshua is not appointed leader here but simply promised an entrance with all the people."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses called unto Joshua, and said unto him in the sight of all Israel, Be strong and of a good courage: for thou must go with this people unto the land which the LORD hath sworn unto their fathers to give them; and thou shalt cause them to inherit it",
-   "Moses charging Joshua before all Israel to be strong",
-   "Moses publicly charging Joshua to be strong and lead the people into the land",
-   "the appointed successor commissioned for his task before all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The assurance to Joshua that God would go before him and not fail him: 'and the LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed' — Joshua was assured that God would go before him, be with him, and never fail him (the and the LORD, he it is that doth go before thee, God going before, the he will be with thee, he will not fail thee, neither forsake thee, the unfailing presence, the fear not, neither be dismayed, the charge against fear, the figure, the same promise of God's unfailing presence given to Joshua, the ground of his courage, the truth that Joshua, like the people, was to be strong because God went before and would not forsake him, the figure of the divine presence that strengthens the leader, the same promise repeated, 'I will be with thee,' Joshua 1:5, the assurance that God never fails his servants, the leader upheld, the courage grounded on God's presence, vv.6); God going before Joshua and never failing him (the unfailing presence, Joshua 1:5) — the presence (God before him); 'fear not, neither be dismayed' (the charge against fear, the courage grounded on God's presence, the figure, the divine presence that strengthens, the providence, the assurance, the writing of the law to follow, vv.9) — Keil and Delitzsch, Gill."
+    "voice": "John Calvin",
+    "observation": "That Moses turns from the nation to one man shows that a public charge needs a twofold confirmation, since it is harder to lead all the rest than to follow a leader; and the fear forbidden is not feeling but its mastery — Calvin will not have them so deprived of sense as to be hardened into indifference to danger, or suppose with certain madmen that there is no bravery without stupidity."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "And the LORD, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed",
-   "the assurance to Joshua that God would go before him and not fail him",
-   "Joshua assured that God would go before him, be with him, and never fail him",
-   "the same promise of unfailing presence that grounded the people's courage (Joshua 1:5)"
+   "he will not fail thee, nor forsake thee",
+   "fear not, nor be afraid of them",
+   "thou shalt cause them to inherit it"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "9": {
   "voices": [
+   "Adam Clarke",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "9",
+  "pericope_label": "Moses writes the law and commits it to the priests and the elders",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "That Moses wrote the law and delivered it to the priests and elders: 'and Moses wrote this law, and delivered it unto the priests the sons of Levi, which bare the ark of the covenant of the LORD, and unto all the elders of Israel' — the written law — 'and Moses wrote this law, and delivered it unto the priests the sons of Levi, which bare the ark of the covenant of the LORD, and unto all the elders of Israel': Moses committed the law to writing and entrusted it to the priests and elders (the witnesses noting the significance — the inscripturation of God's word and its committal to the keeping of his appointed ministers, the law written down by Moses, no longer only spoken, and delivered to the priests and elders to keep and teach, the lesson — that God's word is given in writing, a permanent and public deposit, entrusted to the church to guard and transmit, the written law the abiding rule, committed to those who bore the ark and led the people, the truth that the oracles of God were committed to his people to keep, 'unto them were committed the oracles of God,' Romans 3:2, the figure — the written word of God, the Scripture that abides, 'the scripture cannot be broken,' John 10:35, the truth that the law was written that it might be kept whole, read, and taught to the generations, the deposit of truth guarded by the church, the figure of the committal of the sacred writings to the ministry, 'keep that which is committed to thy trust,' 1 Timothy 6:20, the truth that the written word is the foundation of the public reading and teaching that follows, vv.11, the figure of the church as the keeper and witness of the written word, the dignity and permanence of the inscripturated law, the foundation of all that follows, the figure of the written word of God committed to the keeping of his church); Moses committing the law to writing, the word now inscripturated and permanent (the written law, John 10:35) — the writing (Moses wrote); 'delivered it unto the priests the sons of Levi, which bare the ark of the covenant of the LORD, and unto all the elders of Israel' (the law entrusted to the priests and elders to keep and teach, the oracles committed to the church, the deposit guarded, Romans 3:2; 1 Timothy 6:20) — the figure (the church the keeper of the written word, the providence, the law, the command to read it every seven years to follow, vv.10-13) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Gill takes this law for the book of Deuteronomy, or else the whole Pentateuch, the five books which taken together are sometimes so called. Calvin infers a standing duty from the mere fact of the deposit: though it is only related that the Levites were commanded to recite the book every seventh year, it would have been absurd that the Law should lie buried seven whole years together and not a word of its instruction be heard, so that they were appointed rather as guardians of the Law, of whom the people might daily inquire the right way of serving God. In this he sees represented as in a mirror what Paul calls the Church, the pillar and ground of the truth, since purity of doctrine is preserved and propagated by the ministry of pastors and piety would soon decay if the living preaching of doctrine should cease. The naming of the elders beside the priests is not superfluous: Calvin makes them coadjutors rather than teachers, given to uphold the doctrine of the Law and not suffer it to be scorned, since we know how great is the insolence of the people in rejecting pious teachers unless those in authority restrain them."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reports that Bishop Patrick understood all five books, supposing that though Moses had written most of them before, he did not finish till now and here put his last hand to that sacred volume, while many take it of Deuteronomy alone, this grand abridgment of the law. He gives two reasons for the writing: that those who had heard it might often review it themselves, and that it might be the more safely handed down to posterity — the church has received abundance of advantage from the writing as well as the preaching of divine things, for faith comes not only by hearing but by reading, and the same care taken of the law was taken of the gospel, which soon after it was preached was written. From the elders' inclusion he infers that magistrates by their power, as well as ministers by their doctrine, are to maintain religion and take care that the law be neither broken nor lost."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rejects one rabbinic tradition and accepts another. That Moses wrote thirteen copies, one for each of the twelve tribes and a thirteenth to be laid up by the ark, deserves little credit; that he wrote two is likely, since the law was properly a covenant or contract between God and the people, and it is natural to suppose each contracting party had one — the copy laid beside the ark being the Lord's, kept as a standard for reference and a witness against the people should they become idolatrous, and the copy given to the priests and Levites being the people's, for general use. Wesley reads the charge to the priests as the practical half of the same thing: they were to keep it carefully and religiously, bring it forth upon occasion, read it, and instruct the people out of it."
    }
   ],
   "debates": [
    {
-    "question": "What does Moses writing the law and delivering it to the priests and elders establish?",
-    "sides": [
+    "question": "What is the law that Moses wrote?",
+    "positions": [
      {
-      "position": "The written word of God committed to the keeping of his church - the inscripturation of God's word as a permanent and public deposit, entrusted to the priests and elders to guard, read, and transmit, the oracles of God committed to his people (Romans 3:2), the Scripture that abides and cannot be broken (John 10:35), the sacred trust to be kept (1 Timothy 6:20)",
+      "position": "the whole Pentateuch, finished and put into final shape at this point",
       "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the discourses of this book alone, which is a grand abridgment of the law",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
@@ -337,838 +201,439 @@
   ],
   "outliers": [],
   "themes": [
-   "And Moses wrote this law, and delivered it unto the priests the sons of Levi, which bare the ark of the covenant of the LORD, and unto all the elders of Israel",
-   "that Moses wrote the law and delivered it to the priests and elders (the crux of the written word of God committed to the keeping of his church)",
-   "the inscripturation of God's word as a permanent and public deposit, committed to the priests and elders, the church entrusted to guard and transmit the oracles of God",
-   "the Scripture that abides and cannot be broken (Romans 3:2; John 10:35; 1 Timothy 6:20)"
+   "Moses wrote this law, and delivered it unto the priests",
+   "the sons of Levi, which bare the ark of the covenant",
+   "and unto all the elders of Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "10": {
   "voices": [
+   "Adam Clarke",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The command to read the law at the year of release: 'and Moses commanded them, saying, At the end of every seven years, in the solemnity of the year of release, in the feast of tabernacles' — the law was to be read publicly every seventh year, at the feast of tabernacles (the and Moses commanded them, saying, At the end of every seven years, every seventh year, the in the solemnity of the year of release, the sabbatical year, the in the feast of tabernacles, at the feast, the figure, the appointed time for the public reading of the law, the year of release and the feast, the truth that the law was to be read at the great gathering, that all might hear, the figure of the regular public reading of God's word, the appointed times, the year of release and the feast the fitting occasion, the people assembled, the public reading commanded, vv.11); the seventh year appointed for the reading (the time) — the time (every seven years); 'in the solemnity of the year of release, in the feast of tabernacles' (the sabbatical year and the feast the occasion, the great gathering, the figure, the regular public reading, the providence, the time, the gathering of all the people to follow, vv.11-12) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses commanded them, saying, At the end of every seven years, in the solemnity of the year of release, in the feast of tabernacles",
-   "the command to read the law at the year of release",
-   "the law to be read publicly every seventh year at the feast of tabernacles",
-   "the great gathering the fitting occasion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The law read before all Israel at the chosen place: 'when all Israel is come to appear before the LORD thy God in the place which he shall choose, thou shalt read this law before all Israel in their hearing' — when the people gathered at the chosen place, the law was to be read in their hearing (the when all Israel is come to appear before the LORD thy God in the place which he shall choose, the gathering at the sanctuary, the thou shalt read this law before all Israel in their hearing, the public reading, the figure, the law read aloud to the assembled people, that all might hear, the truth that the word of God was to be read publicly, the whole nation hearing, the figure of the public reading of Scripture in the congregation, the word heard by all, 'till I come, give attendance to reading,' 1 Timothy 4:13, the people gathered to hear the law, the word proclaimed, the reading that instructs the whole nation, vv.12); the people gathered at the chosen place (the assembly) — the gathering (before the LORD); 'thou shalt read this law before all Israel in their hearing' (the law read in the hearing of all, the public reading, 1 Timothy 4:13, the figure, the public reading of Scripture in the congregation, the providence, the reading, the gathering of men, women, and children to follow, vv.12) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When all Israel is come to appear before the LORD thy God in the place which he shall choose, thou shalt read this law before all Israel in their hearing",
-   "the law read before all Israel at the chosen place",
-   "the law read aloud to the assembled people at the sanctuary, the whole nation hearing the word of God",
-   "the public reading that instructs all (1 Timothy 4:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
+  "range": "10-13",
+  "pericope_label": "The septennial reading at the feast of tabernacles, to men, women, children and strangers",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The command to gather all the people to hear the law, that they may learn and fear God: 'gather the people together, men, and women, and children, and thy stranger that is within thy gates, that they may hear, and that they may learn, and fear the LORD your God, and observe to do all the words of this law' — the universal instruction — 'gather the people together, men, and women, and children, and thy stranger that is within thy gates, that they may hear, and that they may learn, and fear the LORD your God, and observe to do all the words of this law': all the people, even women, children, and strangers, were to be gathered to hear the law (the witnesses noting the significance — the public reading of the word for the instruction of the whole people, none excluded, men, women, children, and strangers all gathered, that all might hear and learn, the lesson — that God's word is for all his people, the youngest and the stranger included, that they learn to fear God and obey, the end of the hearing is to learn, to fear, and to do, not mere hearing but instruction unto obedience, the truth that all are to hear and learn the word of God, 'from a child thou hast known the holy scriptures,' 2 Timothy 3:15, the figure — the universal call to hear and learn God's word, 'faith cometh by hearing, and hearing by the word of God,' Romans 10:17, the truth that the public reading and teaching of Scripture is the means by which the people, young and old, learn to fear God and obey, the figure of the church gathered to hear the word, the children and strangers not excluded from the means of grace, the truth that the end of hearing is learning, fearing, and doing, the word bearing fruit in reverence and obedience, the call to bring all, even the little ones, under the teaching of God's word, the figure of the public reading of God's word for the instruction of the whole people unto fear and obedience); all the people gathered, men, women, children, and strangers, none excluded from hearing (the universal instruction, 2 Timothy 3:15) — the gathering (all the people); 'that they may hear, and that they may learn, and fear the LORD your God, and observe to do all the words of this law' (the end of the hearing, that they learn, fear God, and obey, the word unto reverence and obedience, the instruction unto obedience, Romans 10:17) — the figure (the church gathered to hear the word, the providence, the command, the children to hear that they may learn to follow, vv.13) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Calvin traces the writing itself to the fear of forgetting: before this the doctrines of religion had only been expressed by word of mouth, so that faith in Egypt rested only on ancient revelations and their fathers' traditions, but since nothing is easier than for men's minds to forget true doctrine and involve themselves in manifold errors, God consigned the rule of piety to public records, that there might be no pretence of ignorance if their posterity declined from it. The deposit with one tribe he explains by the same knowledge of men: had Moses exhorted all indifferently to read it, scarcely any would have applied themselves. That such precautions still failed appals him — nothing is too sacred or too well fortified to escape man's wickedness, since with the recitation thus precisely enjoined it was astonishing that the Law should be, as it were, discovered in the time of Josiah. He will not let the mention of women and children pass as a formality: they are named lest age or sex be pleaded as an excuse, and the strangers are not those come into Canaan on business but those who had settled and by long residence coalesced into one body with Israel. Gill notes the difference from the other festivals, that at the three grand feasts only the males were obliged to appear, whereas here all of every age and sex were assembled."
+   },
    {
-    "question": "What does the command to gather all to hear the law establish?",
-    "sides": [
-     {
-      "position": "The public reading of God's word for the instruction of the whole people unto fear and obedience - all gathered, men, women, children, and strangers, none excluded, that they hear, learn, fear God, and obey, the youngest and the stranger included in the means of grace (2 Timothy 3:15), faith and reverence coming by the hearing of the word (Romans 10:17), the end of hearing being learning, fearing, and doing",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Gather the people together, men, and women, and children, and thy stranger that is within thy gates, that they may hear, and that they may learn, and fear the LORD your God, and observe to do all the words of this law",
-   "the command to gather all the people to hear the law, that they may learn and fear God (the crux of the public reading of God's word for the instruction of the whole people)",
-   "the word for the instruction of the whole people, none excluded, that all might hear, learn, fear God, and obey, the youngest and the stranger included",
-   "faith and reverence coming by the hearing of the word, the end of hearing being learning, fearing, and doing (2 Timothy 3:15; Romans 10:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the choice of the sabbatical year by the temper it produced: in the year of release the people's minds, under a peculiar degree of solemnity, were better disposed to hear and profit by the words of God — and on that ground he takes the whole book of Deuteronomy to be meant, since it alone contains an epitome of the Pentateuch. He then observes that the commandment was rarely attended to: from the first public reading under Joshua to the reign of Jehoshaphat he finds none recorded, a period of five hundred and thirty years; the next was not till the eighteenth year of Josiah, two hundred and eighty-two years later; none other is mentioned till the return from the Babylonish captivity under Nehemiah, and none from then to the destruction of Jerusalem. Wesley adds that in that year they were freed from debts and worldly cares, and thereby fitter to attend on God's service, and takes both reading and gathering distributively: thou shalt read means thou shalt cause it to be read by the priests or Levites, and the people were gathered not into one place but into divers assemblies."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That the children too should hear and learn to fear God: 'and that their children, which have not known any thing, may hear, and learn to fear the LORD your God, as long as ye live in the land whither ye go over Jordan to possess it' — even the children who knew nothing were to hear and learn the fear of God (the and that their children, which have not known any thing, the ignorant children, the may hear, and learn to fear the LORD your God, that they learn the fear of God, the as long as ye live in the land whither ye go over Jordan to possess it, all their days in the land, the figure, the children, ignorant as yet, to be brought under the word that they learn to fear God, the truth that the rising generation was to be instructed in the fear of God from the word, the figure of the teaching of the children, the word handed down to those who knew nothing, 'train up a child in the way he should go,' Proverbs 22:6, the fear of God learned by the children through the public reading, the instruction of the next generation, vv.12); the ignorant children brought to hear and learn the fear of God (the instruction, Proverbs 22:6) — the children (taught); 'as long as ye live in the land' (the instruction continuing all their days, the perpetual teaching, the figure, the word handed down to the children, the providence, the children, the LORD calling Moses and Joshua to the tabernacle to follow, vv.14) — Keil and Delitzsch, Gill."
+    "prevalence": "single",
+    "summary": "Keil fixes the occasion: the reading was to fall at the end of every seven years, in the festal season of the year of release, at the feast of tabernacles, when they appeared before the Lord."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "observation": "The stated fruit is that by hearing they might learn to fear God, whence Calvin infers that true religion has its origin in knowledge, and that whatever piety men not instructed by God's word appear to have is mere pretence."
+   }
+  ],
   "themes": [
-   "And that their children, which have not known any thing, may hear, and learn to fear the LORD your God, as long as ye live in the land whither ye go over Jordan to possess it",
-   "that the children too should hear and learn to fear God",
-   "even the children who knew nothing brought under the word that they learn the fear of God",
-   "the rising generation instructed all their days in the land (Proverbs 22:6)"
+   "at the end of every seven years, in the solemnity of the year of release",
+   "gather the people together, men, and women, and children",
+   "that they may hear, and that they may learn, and fear the Lord your God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
   }
  },
  "14": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God calling Moses and Joshua to the tabernacle to charge Joshua: 'and the LORD said unto Moses, Behold, thy days approach that thou must die: call Joshua, and present yourselves in the tabernacle of the congregation, that I may give him a charge. And Moses and Joshua went, and presented themselves in the tabernacle of the congregation' — God told Moses his death was near and called him and Joshua to the tabernacle for Joshua's charge (the and the LORD said unto Moses, Behold, thy days approach that thou must die, Moses's death near, the call Joshua, and present yourselves in the tabernacle of the congregation, that I may give him a charge, Joshua to be charged, the and Moses and Joshua went, and presented themselves in the tabernacle, their coming, the figure, God himself charging Joshua at the tabernacle, the leadership confirmed by God, the truth that Joshua's commission was sealed by God's own charge at the sanctuary, the figure of the divine confirmation of the leader, the charge from God, the passing of leadership confirmed at the tabernacle, vv.7, the solemn commissioning of Joshua by God); God calling Moses and Joshua to charge Joshua (the commissioning) — the call (to the tabernacle); 'Moses and Joshua went, and presented themselves in the tabernacle of the congregation' (their coming to the sanctuary, the charge from God, the figure, the divine confirmation of the leader, the providence, the call, the LORD appearing in the cloud to follow, vv.15) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Moses, Behold, thy days approach that thou must die: call Joshua, and present yourselves in the tabernacle of the congregation, that I may give him a charge. And Moses and Joshua went, and presented themselves in the tabernacle of the congregation",
-   "God calling Moses and Joshua to the tabernacle to charge Joshua",
-   "God telling Moses his death was near and calling him and Joshua to the tabernacle",
-   "Joshua's commission sealed by God's own charge at the sanctuary"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Keil and Delitzsch"
+  ],
+  "range": "14-15",
+  "pericope_label": "The Lord appears in the pillar of cloud and calls Moses and Joshua to the tabernacle",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The LORD appearing in the pillar of cloud at the tabernacle: 'and the LORD appeared in the tabernacle in a pillar of a cloud: and the pillar of the cloud stood over the door of the tabernacle' — God appeared in the pillar of cloud, the token of his presence, at the door of the tabernacle (the and the LORD appeared in the tabernacle in a pillar of a cloud, God's appearance in the cloud, the and the pillar of the cloud stood over the door of the tabernacle, the cloud at the door, the figure, the visible token of God's presence, the pillar of cloud, at the solemn charging of Joshua, the truth that God manifested his presence to seal Joshua's commission, the figure of the glory of God present to confirm his servant, the cloud the sign of his presence, the divine presence at the commissioning, the cloud over the door, the token of God's presence, vv.14); God appearing in the pillar of cloud (the presence) — the appearance (in the cloud); 'the pillar of the cloud stood over the door of the tabernacle' (the cloud at the door, the token of God's presence, the manifestation, the figure, the glory present to confirm the servant, the providence, the appearance, God foretelling the apostasy to follow, vv.16) — Keil and Delitzsch, Gill."
+    "summary": "Calvin reads the appearance at the door as an act of consecration: Joshua is substituted in the place of Moses by a solemn ceremony, not only that he may be held in greater reverence by men, but that he may be presented before God and so acknowledge himself dedicated to His service. The cloud served both the man and the nation, since the appearance of the glory of God was not less effectual for encouraging Joshua personally than for giving public distinction to his office — he would never have been recognised as Moses' successor unless this visible approbation had fastened the yoke upon the people. Gill notes only what the sign contained: the Lord appeared as he was wont to do, and in the cloud there was a lustre, a brightness, a glory visible, which showed that he was there."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears in the summons a second warning to a man already prepared: Moses is told again that he must shortly die, for even those most ready to die have need to be often reminded of death's approach, and in consideration of it he must come himself to meet God, since whatever improves our communion with God furthers our preparation for death. He obeys readily, being not one of those who look with an evil eye upon their successors but rejoicing in him. From the rarity of the theophany Henry draws a conclusion: this is the only time in all this book that we read of the glory of God appearing, whereas we often read of it in the three foregoing books, which perhaps signifies that in the latter days, under the evangelical law, such visible appearances are not to be expected, but that we must take heed to the more sure word of prophecy. On the coming breach he notes where the blame must lie — if the covenant between God and man be broken, it is man that breaks it, for God never leaves any till they first leave him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley takes the charge as issuing directly from God for Joshua's greater encouragement, and to gain him more authority with the people."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott states what the meeting accomplishes, that what Moses had already done before Israel is now ratified by Jehovah to Joshua and to Moses himself, and sets the scene beside two others of the same kind: Aaron and Eleazar going up Mount Hor together, that the priesthood might be transferred from the one to the other, and Elijah and Elisha crossing Jordan together when Elijah was about to depart. He also marks what closes here — for the last time it is recorded that Jehovah met Moses face to face in the tabernacle, the next meeting being on Mount Nebo, and the next within the veil."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "observation": "Their apostasy is foretold as the effect of their prosperity, since they shall have eaten and filled themselves and waxed fat, security taking off their dread of God's judgments and sensuality inclining them to the idolatries of the heathen; and justly does He cast off those who had so unjustly cast Him off, His providence forsaking them so that they become a prey to their neighbours, and His grace forsaking them so that they grow more hardened."
+   }
+  ],
   "themes": [
-   "And the LORD appeared in the tabernacle in a pillar of a cloud: and the pillar of the cloud stood over the door of the tabernacle",
-   "the LORD appearing in the pillar of cloud at the tabernacle",
-   "God appearing in the pillar of cloud, the token of his presence, at the door of the tabernacle",
-   "to seal Joshua's commission"
+   "thy days approach that thou must die",
+   "present yourselves in the tabernacle of the congregation",
+   "the pillar of the cloud stood over the door of the tabernacle"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "16": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
    "Adam Clarke",
-   "John Calvin"
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
   ],
+  "range": "16-18",
+  "pericope_label": "Thou shalt sleep with thy fathers, and this people will go a whoring after strange gods",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "That God foretold the people would forsake him and break his covenant: 'and the LORD said unto Moses, Behold, thou shalt sleep with thy fathers; and this people will rise up, and go a whoring after the gods of the strangers of the land, whither they go to be among them, and will forsake me, and break my covenant which I have made with them' — the foreknown apostasy — 'behold, thou shalt sleep with thy fathers; and this people will rise up, and go a whoring after the gods of the strangers of the land... and will forsake me, and break my covenant which I have made with them': God foretold that after Moses's death the people would turn to idolatry and forsake him (the witnesses noting the significance — the divine foreknowledge of Israel's apostasy, declared even as the covenant was being confirmed, God knowing beforehand that the people would forsake him and break his covenant, the whoring after other gods foreseen, the lesson — that the heart of man is prone to unfaithfulness, and God knows it from the first, the covenant broken even as it is given, the solemn foretelling of the apostasy, the proneness of the people to idolatry laid bare, the truth that God knows the end from the beginning, the apostasy foreseen and foretold, 'I knew that thou wouldest deal very treacherously,' Isaiah 48:8, the figure — the spiritual adultery of forsaking God for idols, the covenant likened to marriage and idolatry to whoredom, 'they like men have transgressed the covenant,' Hosea 6:7, the truth that the unfaithfulness of God's people is no surprise to him, foreknown and yet not the less their sin, the figure of the broken covenant, the people's treachery foreseen, the faithfulness of God set against the faithlessness of man, the warning that the heart that seems most committed may yet turn away, the certainty that drives the giving of the song as a witness, vv.19, the figure of the divine foreknowledge of human apostasy and the broken covenant); God foretelling, even at Moses's death, that the people would turn to idolatry, the spiritual whoredom foreseen (the foreknown apostasy, Hosea 6:7) — the prophecy (whoring after other gods); 'whither they go to be among them, and will forsake me, and break my covenant which I have made with them' (the forsaking of God and the breaking of his covenant, the unfaithfulness foreknown yet not less their sin, the broken covenant, Isaiah 48:8) — the figure (the spiritual adultery of forsaking God for idols, the providence, the prophecy, God's wrath and hiding of his face to follow, vv.17-18) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Calvin takes the same words for consolation on both counts: first the condition of the human race is stated, that Moses may not think it hard to depart from the world like all others, but the difference between the death of men and of the brute animals is indicated at the same time, for if our death were total annihilation we should not be said to sleep with our fathers. He also hears an antithesis between the lying down and the rising up — as soon as Moses has gone to rest, the people's insubordination shall break forth, as though they were released from all laws — and counts the aggravations of the crime foretold: they would be led away not only into the superstitions learnt in Egypt but into the defilements of Canaan, which God had willed should be purged by their own hand. Whoever turn aside to superstitious worship are covenant breakers, and vain are the pretences of all who profess to worship the supreme God together with idols. Gill measures the kindled anger by the nearest human likeness, the anger of a man against a wife who has treacherously departed from him."
+   },
    {
-    "question": "What does God's foretelling of the apostasy establish?",
-    "sides": [
-     {
-      "position": "The divine foreknowledge of human apostasy and unfaithfulness - God knowing beforehand, even as the covenant was confirmed, that the people would forsake him and break it (Isaiah 48:8), a figure of the spiritual adultery of forsaking God for idols, the covenant likened to marriage and idolatry to whoredom (Hosea 6:7), the unfaithfulness foreknown yet not the less their sin",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Moses, Behold, thou shalt sleep with thy fathers; and this people will rise up, and go a whoring after the gods of the strangers of the land, whither they go to be among them, and will forsake me, and break my covenant which I have made with them",
-   "that God foretold the people would forsake him and break his covenant (the crux of the divine foreknowledge of human apostasy)",
-   "the divine foreknowledge of Israel's unfaithfulness, declared even as the covenant was confirmed, the whoring after idols and the breaking of the covenant foreseen from the first",
-   "a figure of the spiritual adultery of forsaking God for idols, foreknown yet not the less their sin (Isaiah 48:8; Hosea 6:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the Hebrew verb means to lie down, to rest, to take rest in sleep, and metaphorically to die; and he warns that much stress cannot safely be laid on it to prove the immortality of the soul, or that the people in Moses' time had a distinct notion of its separate existence. It was, however, so understood by Jonathan ben Uzziel, whose Targum paraphrases it: thou shalt lie down in the dust with thy fathers, and thy soul shall be laid up in the treasury of the life to come with thy fathers. Wesley finds a further folly in the object of the worship, since the strangers of the land are the Canaanites, turned out of their possessions and become strangers in their own land, so that Israel would serve gods which could neither preserve their friends nor annoy their enemies; and with Clarke he reads the hidden face as the withdrawal of favour, help, approbation and protection."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's anger kindled and his face hidden in the day of apostasy: 'then my anger shall be kindled against them in that day, and I will forsake them, and I will hide my face from them, and they shall be devoured, and many evils and troubles shall befall them; so that they will say in that day, Are not these evils come upon us, because our God is not among us?' — God's anger would be kindled and his face hidden, and the people would own the cause (the then my anger shall be kindled against them in that day, the anger kindled, the and I will forsake them, and I will hide my face from them, God hiding his face, the and they shall be devoured, and many evils and troubles shall befall them, the evils befalling, the so that they will say... because our God is not among us?, the people owning the cause, the figure, the hiding of God's face the worst of judgments, the people devoured by evils, the truth that forsaking God brings his forsaking, his face hidden and evils multiplied, the figure of the withdrawal of God's presence as judgment, 'I hid me, and was wroth,' Isaiah 57:17, the people owning that their troubles came of God's absence, the cause confessed, the judgment of the hidden face, vv.18); God's anger and the hiding of his face, the evils befalling (the judgment, Isaiah 57:17) — the judgment (face hidden); 'Are not these evils come upon us, because our God is not among us?' (the people owning the cause, God's absence, the confession, the figure, the withdrawal of God's presence as judgment, the providence, the judgment, the deeper hiding of God's face to follow, vv.18) — Keil and Delitzsch, Gill."
+    "prevalence": "single",
+    "summary": "Against the broken covenant Ellicott sets a promise in identical Hebrew, the angel's word at Bochim, I said, I will never break my covenant with you, and beside it the apostle's rule that if we believe not, yet He abideth faithful, for He cannot deny Himself. On the hidden face he cites Rashi: as though I did not see them in their distress."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then my anger shall be kindled against them in that day, and I will forsake them, and I will hide my face from them, and they shall be devoured, and many evils and troubles shall befall them; so that they will say in that day, Are not these evils come upon us, because our God is not among us?",
-   "God's anger kindled and his face hidden in the day of apostasy",
-   "God's anger kindled and his face hidden for the apostasy, the people devoured by evils",
-   "the people owning that their troubles came of God's absence (Isaiah 57:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That God would surely hide his face for their turning to other gods: 'and I will surely hide my face in that day for all the evils which they shall have wrought, in that they are turned unto other gods' — God would certainly hide his face because of their idolatry (the and I will surely hide my face in that day, the certain hiding of his face, the for all the evils which they shall have wrought, for their evils, the in that they are turned unto other gods, their idolatry the cause, the figure, the certain withdrawal of God's presence as the just judgment on idolatry, the truth that the hiding of God's face was the sure consequence of turning to other gods, the figure of the lost presence of God, the worst of all judgments, 'thou hidest thy face, they are troubled,' Psalm 104:29, the certain judgment of the hidden face for idolatry, the withdrawal of God for their apostasy, vv.17); God surely hiding his face for their evils (the judgment, Psalm 104:29) — the hiding (of his face); 'in that they are turned unto other gods' (their idolatry the cause of the hidden face, the apostasy, the figure, the lost presence of God for idolatry, the providence, the judgment, the song to be written as a witness to follow, vv.19) — Keil and Delitzsch, Gill."
+    "voice": "John Calvin",
+    "observation": "Calvin finds a use even in punishment that fails to reform: the first step of prudence is voluntarily to choose what is right, the second to make a stand against evil once admonition has been heard, but if reproofs profit nothing there is still a third, that those careless in prosperity should at length perceive they are smitten by God's hand — scarcely one in ten of the godly anticipates judgment while God postpones punishment."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "And I will surely hide my face in that day for all the evils which they shall have wrought, in that they are turned unto other gods",
-   "that God would surely hide his face for their turning to other gods",
-   "God certainly hiding his face because of their idolatry",
-   "the lost presence of God the sure consequence of turning to other gods (Psalm 104:29)"
+   "this people will rise up, and go a whoring after the gods of the strangers",
+   "my anger shall be kindled against them in that day",
+   "are not these evils come upon us, because our God is not among us?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Keil and Delitzsch"
+  ],
+  "range": "19-22",
+  "pericope_label": "Write ye this song and teach it the children of Israel, that it may be a witness",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The command to write and teach the song that it might be a witness against the people: 'now therefore write ye this song for you, and teach it the children of Israel: put it in their mouths, that this song may be a witness for me against the children of Israel' — the witness — 'now therefore write ye this song for you, and teach it the children of Israel: put it in their mouths, that this song may be a witness for me against the children of Israel': the song was to be written, taught, and kept in their mouths, to stand as a witness against them when they fell away (the witnesses noting the significance — the word of God set as a permanent witness against the people's foreknown unfaithfulness, the song written, taught, and learned by heart, to testify against them in the day of their apostasy, the lesson — that God's word, when men forsake it, becomes a witness against them, condemning their sin out of their own mouths, the song put in their mouths, so that even in apostasy they would carry the testimony against themselves, the word a witness that leaves them without excuse, the truth that the word preached and known is a savour of life or of death, a witness for or against, 'the word that I have spoken, the same shall judge him in the last day,' John 12:48, the figure — the law and the gospel as a witness against those who reject them, 'this gospel of the kingdom shall be preached... for a witness,' Matthew 24:14, the truth that God so deals with men that his word convicts them, the testimony stored up against the day of judgment, the figure of the song of Moses, taught to the generations, a standing witness to God's faithfulness and the people's treachery, the truth that the means of grace, despised, become the ground of condemnation, the call to write and teach the word, that it abide as a witness, the figure of the word of God set as a standing witness against human unfaithfulness); the song written, taught, and learned by heart, kept in their mouths to be remembered (the word taught and stored, Matthew 24:14) — the command (write and teach); 'that this song may be a witness for me against the children of Israel' (the song standing as a witness against the people in their apostasy, condemning them out of their own mouths, the word that judges, the testimony against them, John 12:48) — the figure (the word a witness against those who reject it, the providence, the witness, God's foreknowledge of their proneness to follow, vv.20-21) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Calvin faces the harder question the command raises. It seems absurd that a useless remedy should be applied to an incurable disease: why not rather correct their wickedness and by His Spirit mould their hearts, than pour words in vain into deaf ears? But the preaching of the word, though a savour of death to them that perish, is a sacrifice of sweet savour to God, and is not thrown away when it convicts the ungodly and renders them altogether inexcusable. On the promise of the good land he marks the aggravation, that God will perform to them, unworthy as they are, what He has sworn, and commends the land's fertility because that pledge of His indulgence should have drawn them to love so beneficent a Father — whence their perverseness appears, that when full they would kick against Him, like horses grown intractable from high feeding. Gill records what Josephus reports of the writing: that Moses set it down in hexameter verse and left it in the sacred book, a prophecy of things future according to which all things have been done and are done, in nothing erring from the truth."
+   },
    {
-    "question": "What does the song written as a witness establish?",
-    "sides": [
-     {
-      "position": "The word of God set as a standing witness against human unfaithfulness - written, taught, and kept in their mouths to convict them out of their own mouths in the day of apostasy (John 12:48), the word that, despised, becomes a witness against those who reject it (Matthew 24:14), the testimony stored up against the day of judgment",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Now therefore write ye this song for you, and teach it the children of Israel: put it in their mouths, that this song may be a witness for me against the children of Israel",
-   "the command to write and teach the song that it might be a witness against the people (the crux of the word of God set as a standing witness against human unfaithfulness)",
-   "the word of God set as a permanent testimony against the people's foreknown unfaithfulness, written and learned by heart that it might convict them out of their own mouths",
-   "the word that, despised, becomes a witness against those who reject it (John 12:48; Matthew 24:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes the order of publication: he wrote it first, as the Spirit of God indited it, then spoke it in the ears of all the congregation and taught it, that is, gave out copies and ordered the people to learn it by heart."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains why the warning takes the form of a song: things of great importance were among the ancients put into verse, as the best method of keeping them in remembrance when writing was little practised, and even prose was sometimes sung — the history of Herodotus being divided into nine books each inscribed with a Muse's name because they were anciently sung, Homer reported to have sung his poems through the Greek cities, Aristotle observing that the people anciently sung their laws, and Cicero that the Romans sang their heroes' praises at the public festivals. He also explains how a song can testify: their general defection is predicted in it, but so as to show how the evil might be avoided, so that if the punishment did come the song would prove they had been sufficiently warned and might have lived to God and escaped. Wesley glosses the imagination as inclinations to idolatry which they do not check, some not only cherishing it in their hearts but, so far as they dared, secretly practising it."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That prosperity in the land would lead them to apostasy: 'for when I shall have brought them into the land which I sware unto their fathers, that floweth with milk and honey; and they shall have eaten and filled themselves, and waxen fat; then will they turn unto other gods, and serve them, and provoke me, and break my covenant' — God foretold that fullness and ease in the good land would lead them to forsake him (the for when I shall have brought them into the land which I sware unto their fathers, that floweth with milk and honey, the good land given, the and they shall have eaten and filled themselves, and waxen fat, the fullness and ease, the then will they turn unto other gods, and serve them, and provoke me, and break my covenant, the apostasy, the figure, the danger of prosperity, the full and fat heart turning from God, the truth that ease and plenty would tempt them to forsake God, the fat heart proud, the figure of the peril of abundance, 'Jeshurun waxed fat, and kicked... then he forsook God,' Deuteronomy 32:15, the prosperity that breeds forgetfulness of God, the covenant broken, the warning that the good land's blessings would be the occasion of sin, vv.16); the fullness and ease of the land (the danger, Deuteronomy 32:15) — the fullness (waxen fat); 'then will they turn unto other gods... and break my covenant' (the apostasy bred of prosperity, the covenant broken, the figure, the peril of abundance, the providence, the foretelling, God's knowledge of their imagination to follow, vv.21) — Keil and Delitzsch, Gill."
+    "prevalence": "single",
+    "summary": "Ellicott adds that the method suited the people better than a written law, since copies could not be multiplied to any great extent, whereas the rhythmical form was easy to retain in memory; and he believes Samuel, the first known to have effected anything toward a system of religious education in Israel, used the same means, the earliest companies of prophets being evidently singers and minstrels — whence their influence over Saul — so that in teaching the people historical psalms such as the seventy-eighth and the hundred and sixth, a very efficacious means of spreading the knowledge of God lay in their hands. He takes up the word rendered imagination, used of the thoughts of man's heart before the flood: it is the term commonly used in rabbinical literature for the evil or the good nature in a man, and the nature which they are forming this day would be a literal rendering here."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "For when I shall have brought them into the land which I sware unto their fathers, that floweth with milk and honey; and they shall have eaten and filled themselves, and waxen fat; then will they turn unto other gods, and serve them, and provoke me, and break my covenant",
-   "that prosperity in the land would lead them to apostasy",
-   "God foretelling that fullness and ease in the good land would lead them to forsake him",
-   "the prosperity that breeds forgetfulness of God and the breaking of the covenant (Deuteronomy 32:15)"
+   "put it in their mouths, that this song may be a witness",
+   "they shall have eaten and filled themselves, and waxen fat",
+   "I know their imagination which they go about, even now"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "That the song would testify against them, for God knew their imagination: 'and it shall come to pass, when many evils and troubles are befallen them, that this song shall testify against them as a witness; for it shall not be forgotten out of the mouths of their seed: for I know their imagination which they go about, even now, before I have brought them into the land which I sware' — the song would witness against them in their troubles, for God already knew their bent to evil (the and it shall come to pass, when many evils and troubles are befallen them, that this song shall testify against them as a witness, the song testifying, the for it shall not be forgotten out of the mouths of their seed, the song remembered, the for I know their imagination which they go about, even now, before I have brought them into the land, God knowing their bent, the figure, the song an enduring witness, not forgotten, for God knew their proneness to evil, the truth that God knew their imagination even before they entered, the apostasy foreknown, the figure of the searcher of hearts who knows man's bent, 'the LORD knoweth the thoughts of man,' Psalm 94:11, the song that would not be forgotten, the witness abiding, the foreknowledge of God that grounds the witness, vv.19); the song testifying against them, not forgotten (the abiding witness) — the witness (the song testifies); 'I know their imagination which they go about, even now' (God knowing their bent to evil beforehand, the searcher of hearts, Psalm 94:11, the figure, the foreknowledge that grounds the witness, the providence, the foreknowledge, Moses writing the song to follow, vv.22) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it shall come to pass, when many evils and troubles are befallen them, that this song shall testify against them as a witness; for it shall not be forgotten out of the mouths of their seed: for I know their imagination which they go about, even now, before I have brought them into the land which I sware",
-   "that the song would testify against them, for God knew their imagination",
-   "the song an enduring witness not forgotten, for God already knew their bent to evil before they entered the land",
-   "the searcher of hearts who knows man's imagination (Psalm 94:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses writing the song and teaching it to Israel: 'Moses therefore wrote this song the same day, and taught it the children of Israel' — Moses obeyed at once, writing the song and teaching it to the people (the Moses therefore wrote this song the same day, the song written at once, the and taught it the children of Israel, taught to the people, the figure, Moses's prompt obedience, the song written and taught the same day, the truth that Moses obeyed God's command without delay, the song committed and taught, the figure of the faithful servant who delays not to do God's bidding, the word recorded and taught, the song written and learned, the witness prepared, the prompt obedience of Moses, vv.19); Moses writing the song at once (the obedience) — the writing (the same day); 'and taught it the children of Israel' (the song taught to the people, the witness prepared, the figure, the faithful servant who delays not, the providence, the obedience, the charge to Joshua to follow, vv.23) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses therefore wrote this song the same day, and taught it the children of Israel",
-   "Moses writing the song and teaching it to Israel",
-   "Moses obeying at once, writing the song and teaching it to the people",
-   "the witness prepared without delay"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God charging Joshua to be strong, for he would bring them in: 'and he gave Joshua the son of Nun a charge, and said, Be strong and of a good courage: for thou shalt bring the children of Israel into the land which I sware unto them: and I will be with thee' — God himself charged Joshua to be strong, with the promise of his presence (the and he gave Joshua the son of Nun a charge, God's charge to Joshua, the and said, Be strong and of a good courage, the courage commanded, the for thou shalt bring the children of Israel into the land which I sware unto them, the task, leading them in, the and I will be with thee, the promise of presence, the figure, God's own charge to Joshua, the courage commanded and the presence promised, the truth that the leader was strengthened by God's charge and the promise 'I will be with thee,' the figure of the divine commissioning, the same promise of presence that grounds all courage, 'I will be with thee,' Joshua 1:5, the task and the promise, Joshua to bring them in, the leadership sealed by God's charge, vv.6-8); God charging Joshua to be strong (the commissioning) — the charge (be strong); 'thou shalt bring the children of Israel into the land... and I will be with thee' (the task and the promise of presence, the leader strengthened, Joshua 1:5, the figure, the divine commissioning with the promise of presence, the providence, the charge, the law put beside the ark to follow, vv.24-26) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he gave Joshua the son of Nun a charge, and said, Be strong and of a good courage: for thou shalt bring the children of Israel into the land which I sware unto them: and I will be with thee",
-   "God charging Joshua to be strong, for he would bring them in",
-   "God himself charging Joshua to be strong, with the task of bringing the people in and the promise 'I will be with thee'",
-   "the leadership sealed by God's charge (Joshua 1:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses finishing the writing of the law in a book: 'and it came to pass, when Moses had made an end of writing the words of this law in a book, until they were finished' — Moses completed the writing of the whole law in a book (the and it came to pass, when Moses had made an end of writing the words of this law in a book, the writing finished, the until they were finished, wholly completed, the figure, the completion of the written law, the whole committed to the book, the truth that the law was wholly written down, the record complete, the figure of the finished Scripture, the word committed entire to writing, the law fully recorded, the deposit complete, the writing of the word finished, vv.9); Moses finishing the writing of the law (the completion) — the writing (finished); 'until they were finished' (the law wholly written, the record complete, the figure, the finished Scripture, the providence, the completion, the law put beside the ark to follow, vv.25-26) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass, when Moses had made an end of writing the words of this law in a book, until they were finished",
-   "Moses finishing the writing of the law in a book",
-   "Moses completing the writing of the whole law in a book, the word committed entire to writing",
-   "the record complete"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses commanding the Levites who bore the ark: 'that Moses commanded the Levites, which bare the ark of the covenant of the LORD, saying' — Moses charged the Levites who carried the ark concerning the book of the law (the that Moses commanded the Levites, the command to the Levites, the which bare the ark of the covenant of the LORD, saying, the bearers of the ark, the figure, the Levites, keepers of the ark, charged with the book of the law, the truth that the written law was committed to those who bore the ark, the keepers of holy things, the figure of the sacred deposit entrusted to the appointed ministers, the law to the Levites, the command that places the law beside the ark, the keeping of the word by the Levites, vv.26); Moses charging the Levites (the command) — the command (to the Levites); 'which bare the ark of the covenant of the LORD, saying' (the Levites who bore the ark, keepers of holy things, the appointed ministers, the figure, the sacred deposit entrusted to the ministers, the providence, the command, the book put beside the ark to follow, vv.26) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "That Moses commanded the Levites, which bare the ark of the covenant of the LORD, saying",
-   "Moses commanding the Levites who bore the ark",
-   "Moses charging the Levites who carried the ark concerning the book of the law",
-   "the sacred deposit entrusted to the keepers of holy things"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
    "Adam Clarke",
-   "John Calvin"
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "23-27",
+  "pericope_label": "The charge to Joshua, the book laid beside the ark, and I know thy rebellion",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The command to put the book of the law beside the ark as a witness: 'take this book of the law, and put it in the side of the ark of the covenant of the LORD your God, that it may be there for a witness against thee' — the witness — 'take this book of the law, and put it in the side of the ark of the covenant of the LORD your God, that it may be there for a witness against thee': the book of the law was to be laid beside the ark, in the most holy place, as a standing witness against the people (the witnesses noting the significance — the written law deposited in the holiest place, beside the ark of the covenant, as a permanent and sacred testimony, the book kept by the ark, the abiding record of the covenant, ready to witness against transgression, the lesson — that the word of God, kept in the sanctuary, stands as a perpetual witness, both to God's covenant and against the people's sin, the law beside the ark, the mercy-seat above and the broken law within, the testimony abiding, the truth that the word is a witness that will rise against the disobedient, 'the word that I have spoken, the same shall judge him,' John 12:48, the figure — the law laid up before God as a testimony, the written word the abiding standard against which the people are judged, 'the testimony of the LORD is sure,' Psalm 19:7, the truth that the Scripture, kept in the church, is both the charter of the covenant and the witness against those who break it, the figure of the word stored in the holiest place, the standing testimony of God, the truth that the same word that is a covenant of life to the obedient is a witness against the disobedient, the call to keep the word in honour as the abiding testimony of God, the figure of the written law set in the holiest place as a standing witness); the book laid beside the ark, in the most holy place, the written law kept in the sanctuary (the sacred deposit, Psalm 19:7) — the command (beside the ark); 'that it may be there for a witness against thee' (the law a standing witness against the people, the abiding testimony of the covenant and against transgression, the word that judges, the testimony, John 12:48) — the figure (the written word the abiding standard against which they are judged, the providence, the witness, Moses calling the elders to hear the song to follow, vv.27-28) — Calvin, Keil, Ellicott, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Gill works through a real question, who speaks the charge to Joshua: the connection favours Moses, the nearer antecedent of the pronoun, and the Septuagint translators so understood it, but they were then obliged to alter what follows, reading the Lord sware for I sware; Aben Ezra reaches the same sense without departing from the genuine reading by supposing Moses gave the charge in the name and by the authority of the Lord, though Gill judges it best to understand the Lord himself as the speaker, since it was He who ordered the two to present themselves before Him for this very purpose. By the words of this law Calvin understands not only this book but the other three, and finds an implied antithesis between the two tables written by God's hand and the exposition afterwards added, lest there should be obscurity about God's will from the brevity with which it was delivered — since the mind of man is inclined to vanity and led away by its levity, religion would have been corrupted a thousand ways had not its rule been written down for posterity. He also explains why the law is cited here only as a witness, when it was given rather as the rule of a pious life: Moses had found the people stiffnecked, and argues from the less to the greater, since if they were rebellious while such a leader lived they would assume greater audacity when he was dead."
+   },
    {
-    "question": "What does the book of the law set beside the ark establish?",
-    "sides": [
-     {
-      "position": "The written law set in the holiest place as a standing witness - the abiding record of the covenant and the perpetual testimony against transgression, the word that will judge the disobedient (John 12:48), the sure testimony of the LORD kept before him (Psalm 19:7), both the charter of the covenant and the witness against those who break it",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Take this book of the law, and put it in the side of the ark of the covenant of the LORD your God, that it may be there for a witness against thee",
-   "the command to put the book of the law beside the ark as a witness (the crux of the written law set in the holiest place as a standing testimony)",
-   "the written law deposited in the holiest place as a permanent and sacred testimony, the abiding record of the covenant and the witness against transgression",
-   "the word that will judge the disobedient, the sure testimony of the LORD (John 12:48; Psalm 19:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry ends where Moses does, with the plain word that after his death they would utterly corrupt themselves: many a sad thought it cost him, but his comfort was that he had done his duty and that God would be glorified in their dispersion if not in their settlement, for the foundation of God stands sure."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley explains the deposit: the book lay outside, in a little chest fixed to the ark, since nothing but the tables of stone were contained within, and kept there for greater security and reverence; and he guesses it was the very copy which, after being some way misplaced, was found in the house of the Lord in the days of Josiah and read publicly by the king himself, against a people then almost ripe for ruin. Clarke turns the rebellion foretold toward the reader: never was a people more fully warned, and from that we may see they were under no fatal constraining necessity to sin, since they might have avoided it but would not — and those who abuse God's grace shall not only have it taken from them but be punished for the abuse as well as the transgression, since every sin is double, grace resisted and transgression committed, and God will visit for both."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Moses's knowledge of their rebellion and stiff neck: 'for I know thy rebellion, and thy stiff neck: behold, while I am yet alive with you this day, ye have been rebellious against the LORD; and how much more after my death?' — Moses knew their rebellious and stubborn nature, rebellious even in his lifetime and more so after (the for I know thy rebellion, and thy stiff neck, their rebellion known, the behold, while I am yet alive with you this day, ye have been rebellious against the LORD, rebellious even now, the and how much more after my death?, how much more later, the figure, Moses's knowledge of the people's stubborn rebellion, the ground of the witness, the truth that the people were rebellious even under Moses, and would be worse without him, the figure of the proneness of the heart to rebellion, the stiff neck that resists God, the rebellion that justified the witness against them, 'ye stiffnecked... ye do always resist,' Acts 7:51, the stubbornness foreseen and known, vv.26); the people rebellious even in Moses's lifetime (the stubbornness, Acts 7:51) — the rebellion (known); 'and how much more after my death?' (the rebellion that would grow worse after Moses, the stiff neck, the figure, the proneness of the heart to rebellion, the providence, the rebellion, the gathering of the elders to hear the song to follow, vv.28) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott says what is new in the moment: this is the first record of God's direct communion with Joshua, who had been with Moses on the mount during the first forty days and departed not out of the tabernacle when they came down, yet of whom no divine communication apart from Moses is noted before this. Keil reads the next summons as following directly on the handing over: the call to gather was addressed to the very persons to whom Moses had given the book, the elders of all the tribes with the officers, who as the civil authorities of the congregation were collected round him to hear the ode rehearsed."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "observation": "Gill leaves the question of the speaker argued rather than settled: he judges it best to understand the Lord himself, but records that the Septuagint translators took it of Moses and were then obliged to alter what follows, and that Aben Ezra kept the genuine reading by supposing Moses spoke in the name and by the authority of the Lord."
+   }
+  ],
   "themes": [
-   "For I know thy rebellion, and thy stiff neck: behold, while I am yet alive with you this day, ye have been rebellious against the LORD; and how much more after my death?",
-   "Moses's knowledge of their rebellion and stiff neck",
-   "Moses knowing the people's rebellious and stubborn nature, rebellious even in his lifetime and worse to come",
-   "the ground of the witness against them (Acts 7:51)"
+   "be strong and of a good courage: for thou shalt bring the children of Israel",
+   "put it in the side of the ark of the covenant",
+   "I know thy rebellion, and thy stiff neck"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "28": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses gathering the elders to hear the song, with heaven and earth as witnesses: 'gather unto me all the elders of your tribes, and your officers, that I may speak these words in their ears, and call heaven and earth to record against them' — Moses gathered the leaders to hear the song, calling heaven and earth as witnesses (the gather unto me all the elders of your tribes, and your officers, the leaders gathered, the that I may speak these words in their ears, the song spoken to them, the and call heaven and earth to record against them, heaven and earth as witnesses, the figure, the solemn calling of heaven and earth to witness the song against the people, the truth that the song was delivered with the most solemn witnesses, heaven and earth, the figure of the abiding witnesses to the covenant, heaven and earth invoked, 'give ear, O ye heavens... hear, O earth,' Deuteronomy 32:1, the leaders gathered to hear and the witnesses called, the solemn delivery of the song, vv.30); the leaders gathered to hear the song (the assembly) — the gathering (the elders); 'call heaven and earth to record against them' (heaven and earth invoked as witnesses, the solemn testimony, Deuteronomy 32:1, the figure, the abiding witnesses to the covenant, the providence, the witnesses, the song spoken in the ears of all to follow, vv.30) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Gather unto me all the elders of your tribes, and your officers, that I may speak these words in their ears, and call heaven and earth to record against them",
-   "Moses gathering the elders to hear the song, with heaven and earth as witnesses",
-   "Moses gathering the leaders to hear the song and calling heaven and earth as the most solemn and abiding witnesses",
-   "against the people (Deuteronomy 32:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "Keil and Delitzsch"
   ],
+  "range": "28-30",
+  "pericope_label": "The elders gathered, heaven and earth called to record, and the song spoken in their ears",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Moses seems to contradict himself, Calvin observes, when he commands only the elders and the officers to be called to listen, and then records that he recited the song to the whole congregation; the two are reconciled from the order he was accustomed to observe in gathering the multitude, for they were not called together promiscuously, but the heads of tribes and the princes each led their own band, so that the assembling of the elders rather indicates that the whole people were gathered by their tribes and classes — and he assuredly did not call heaven and earth to record against the officers only. On the tone of the address Calvin is candid about what it cost: it was the perverse nature of the people which extorted from Moses that unmixed bitterness, since he would have desired to leave a pleasing recollection of himself and to exhort them with blandness, but their stubbornness compelled him to testify his indignation. Nor does he judge from conjecture what they would do, but expressly declares that he knew it for certain, because the Spirit in dictating the song had also informed him of it. Gill reaches the same place from the other side: the words were spoken not in the hearing of every individual of that vast body, since no man could be heard by so numerous a congregation, but in the hearing of their heads and representatives."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Moses's foreboding that they would corrupt themselves and provoke God after his death: 'for I know that after my death ye will utterly corrupt yourselves, and turn aside from the way which I have commanded you; and evil will befall you in the latter days; because ye will do evil in the sight of the LORD, to provoke him to anger through the work of your hands' — Moses foresaw that after his death they would corrupt themselves, turn aside, and bring evil upon themselves (the for I know that after my death ye will utterly corrupt yourselves, the corruption foreseen, the and turn aside from the way which I have commanded you, the turning aside, the and evil will befall you in the latter days; because ye will do evil in the sight of the LORD, the evil that would follow, the to provoke him to anger through the work of your hands, the idolatry, the figure, Moses's clear foresight of the apostasy, the corruption and the evil to follow, the truth that the people would corrupt themselves and provoke God by idolatry, the evil foreseen, the figure of the prophetic foreknowledge of the apostasy, the latter-day evils foretold, the corruption and turning aside that would bring judgment, vv.16-18, the warning that grounds the song); the corruption and turning aside foreseen (the apostasy) — the corruption (foreseen); 'evil will befall you in the latter days; because ye will do evil... to provoke him to anger' (the evil and provocation that would follow the idolatry, the judgment, the figure, the prophetic foreknowledge of the apostasy, the providence, the foreboding, Moses speaking the song in the ears of all to follow, vv.30) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott examines the phrase in the latter days, a not uncommon prophetical expression used with considerable latitude, which occurs for the first time in Jacob's blessing and again in Balaam's oracle and earlier in this book; some would refer it to the days of the Messiah and make it almost a technical term, but a comparison of these few passages shows that it cannot be tied strictly to any one period. He closes the chapter with a symmetry — the exodus of Israel begins and ends with a song of Moses, for though the song at the Red Sea is the one usually so called and commonly thought to be the song named in the Revelation, there is a remarkable resemblance between that passage and the opening lines of the song about to follow here. Keil marks the last verse as the introduction to the rehearsal of the ode."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "observation": "Calvin reads the manner of the corruption out of the words themselves: they would depart from the way which they had learned, and since their perfect soundness lay in obeying God and following the way He showed them, it was by forsaking the law that they were corrupted — in which Moses indirectly reproves their ingratitude, as one who had thrown away his labour upon such despisers of pious instruction."
+   }
+  ],
   "themes": [
-   "For I know that after my death ye will utterly corrupt yourselves, and turn aside from the way which I have commanded you; and evil will befall you in the latter days; because ye will do evil in the sight of the LORD, to provoke him to anger through the work of your hands",
-   "Moses's foreboding that they would corrupt themselves and provoke God after his death",
-   "Moses foreseeing that after his death they would corrupt themselves, turn aside, and bring evil upon themselves by idolatry",
-   "the warning that grounds the song"
+   "gather unto me all the elders of your tribes, and your officers",
+   "call heaven and earth to record against them",
+   "Moses spake in the ears of all the congregation the words of this song"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses speaking the song in the ears of all Israel: 'and Moses spake in the ears of all the congregation of Israel the words of this song, until they were ended' — Moses recited the whole song to the assembled people (the and Moses spake in the ears of all the congregation of Israel, spoken to all, the the words of this song, until they were ended, the whole song, the figure, the public delivery of the song to all Israel, the witness proclaimed, the truth that the song was spoken in the hearing of the whole congregation, the testimony given, the figure of the word proclaimed to all the people, the song of Moses that follows in ch.32, the song delivered entire, the witness set before them, the close of the chapter, the song to be sung, ch.32); the song spoken to all the congregation (the proclamation) — the delivery (in their ears); 'the words of this song, until they were ended' (the whole song delivered, the witness proclaimed, the figure, the word proclaimed to all, the providence, the delivery, the song of Moses to follow, ch.32) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses spake in the ears of all the congregation of Israel the words of this song, until they were ended",
-   "Moses speaking the song in the ears of all Israel",
-   "Moses reciting the whole song to the assembled people, the witness proclaimed to all",
-   "the close of the chapter, before the song of Moses itself (ch.32)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

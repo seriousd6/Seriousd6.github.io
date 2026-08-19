@@ -6964,6 +6964,75 @@
       "book": "acts",
       "chapter": "22",
       "note": "Seven entries, all self-graded verse by verse against the catena: 1-5 648w, 6-11 603w, 12-16 645w, 17-21 650w, 22-24 646w, 25-29 644w, 30 499w. No claim in the prose is unsourced; every named voice has a head in its own span. Entry 6-11 landed in window on the first draft (7 voices, thin source); the four 8-voice entries each needed two to three trim passes, confirming again that overshoot scales with voice count and source density rather than chapter length. Romans 1:32 in entry 17-21 linked as a .ref per the validator."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JFB stride residue, unbroken again: the SAME Numbers 33 itinerary block (Wady Sheikh, Jebel-et-Tih, Hazeroth/Ain-Hadera, the eighteen stations between Hazeroth and Kadesh, Ezion-geber to Kadesh) is filed verbatim at vv.3, 9, 15 and 21 — a perfect stride of six with no gap, the cleanest instance of the pattern seen so far. Nothing in the four blocks touches Deuteronomy 31. All four excluded. The harvest is offset by a fixed step against the verse index and lands wherever that step falls; a harvest-side fix would be to reject a donor block whose scripture references all fall outside the working chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "verses": [
+        "30"
+      ],
+      "note": "StudyLight chrome tail on the chapter's LAST verse again — v30 carries Ellicott's real note, then the site footer, the CSS block, and the commentary/concordance/dictionary menus. Fourteenth chapter in a row where the tail lands on the final verse. Second-order effect worth naming: the menu text contains the string 'Adam Clarke Commentary', so the ghost checker reported Clarke as PRESENT in the vv.28-30 blob when he has no comment there at all. undeclarable_voices() correctly caught it and left the exclusion list empty, but a chapter where a chrome-only name was NOT auto-detected would produce a spurious exclusion in the tags. Stripping the chrome at harvest fixes both problems at once."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "verses": [
+        "15",
+        "20"
+      ],
+      "note": "Keil paragraph-boundary defect, twice: his blocks at v15 and v20 are raw quoted verse text (vv.15-19 and vv.20-24 respectively) with no exposition attached. His actual comment on the septennial reading sits at v8, and on the summons of the elders at v25 — one to two verses before the material it treats, the familiar displacement. Both keys excluded. Unlike a Barnes or Gill bare cross-reference, this class IS recoverable by refetching, since the exposition exists and is merely split off at the wrong paragraph boundary."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "note": "Median-based entry-count predictor, fourth data point and the sub-800 band confirmed. deuteronomy 31: 22,982 usable source words, 30 keys, median key 647.5, no gaps, nothing over the 4,500 span limit — tiled to NINE entries, i.e. keys divided by 3.3. Running series: leviticus 25 (55 keys, median 457) -> 10 entries, keys/5.5; acts 22 (30 keys, median 696) -> 11, keys/2.7; deuteronomy 31 (30 keys, median 648) -> 9, keys/3.3; genesis 49 (33 keys, median 963) -> 15, keys/2.2; philippians 2 (30 keys, median 1,981) -> projected 15-17, keys/1.9. Word total alone has now mis-signalled workload in both directions five times; the median key is the predictor that tracks. Fourth request that 'synthesis-loop.py size' print the median and a projected entry count beside the word total."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "verses": [
+        "1",
+        "14"
+      ],
+      "note": "Two filing-rule cases resolved in opposite directions in the same chapter. (1) Clarke's v1 block is the whole-chapter argument — a table of contents running 'Moses, being 120 years old, calls the people together, Deu 31:1-6 ... repeats the song to them, Deu 31:30'. The known displaced-excursus pattern; left unused, and his v2 material on the three forty-year periods carried entry 1 instead. (2) Henry's v14 block is a whole-pericope overview covering vv.14-19, and he has NO key at 16-18. Note 607's rule (use displaced material where the source has a key in the target span) therefore does NOT license moving it; the material was kept in entry 5 where it is filed, which is also what the base filing rule requires. Result: nothing lost, and entry 6 (vv.16-18) legitimately carries no Henry because he is absent from that blob. Worth stating plainly: note 607 is an EXCEPTION for the case where the source has keys on both sides, not a general licence to relocate."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "note": "Note 609 (budget items per VOICE before drafting, rather than trimming to the word count afterwards) tested properly for the first time across a whole chapter. Result is mixed but measurable. Two of nine entries landed in range on the FIRST draft with no trim pass at all — v9 at 615 and vv.14-15 at 540, both budgeted item-by-item before a word was written. The other seven still overshot, but by 5-23% rather than the 30-40% that had been usual, and needed 2-6 trim passes instead of 10-19. Where the method failed it failed the same way each time: a paragraph with four or more items from ONE voice (Calvin, always) blew its budget, because the per-item estimate of 90-110 words holds for a single attributed sentence but not for a multi-clause argument with an objection and an answer. Refinement for the next worker: budget a Calvin argument-with-objection at 120-140, not 100, and cap any single voice at three items per entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "31",
+      "verses": [
+        "23"
+      ],
+      "note": "Genuine interpretive crux at v23 worth flagging for anyone reworking this chapter: who speaks 'be strong and of a good courage, for thou shalt bring the children of Israel into the land which I sware unto them'? The nearer antecedent of 'he' is Moses, and the Septuagint translators read it so — but were then forced to emend two clauses, 'the Lord sware' for 'I sware' and 'he shall be with thee' for 'I will be with thee'. Aben Ezra keeps the received text by having Moses speak in God's name and authority. Gill judges for the Lord himself as speaker, and Ellicott independently glosses the subject as Jehovah, calling this the first record of God's direct communion with Joshua. Recorded as an outlier rather than a debate, since no used voice actually HOLDS the Moses reading — it is reported by Gill, not defended by anyone in the catena."
     }
   ]
 }
