@@ -6665,6 +6665,48 @@
       "book": "1corinthians",
       "chapter": "1",
       "note": "1corinthians 1: all 11 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. 31 verses, ~77,650 real usable source words after subtracting 926 words of chrome, tiled in 11 entries — exactly the count the density guide predicts. 13 distinct voices, including John Lightfoot for the first time in this loop; entry 1-3 carries 12 of them in 646 words, the densest single entry written so far. The overshoot pattern held again and was worst where the voice count was highest: entry 1-3 drafted at 1,051 words against the 650 ceiling and needed three passes; 26-29 drafted at 810, 13-16 at 880, 30-31 at 802. Every one of the eleven first drafts was over. The only reliable countermeasure remains drafting deliberately spare, and at twelve voices in one entry even that fails."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "22",
+      "verses": [
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "Jamieson stride-6 residue, FOURTEENTH consecutive chapter and eleventh book: keys 12, 18, 24 — offset 0, three members, no gaps. Same signature as 1corinthians 1: all three blocks come from ONE contiguous source region rather than being scattered. Here it is Numbers 27-28 — v12 is on Moses asking God for a successor ('the Author of all the intellectual gifts... who can raise up qualified persons for the most arduous duties'), v18 on Joshua honoured and qualified through the high priest asking counsel by Urim (Num 27:15-21), v24 on the repetition of formerly enacted laws and the appointed offerings (Num 28). Running table: joshua 10, 1corinthians 7, hebrews 11, romans 8, romans 9, 1corinthians 15, leviticus 27, judges 16, exodus 28, judges 19, exodus 12, galatians 4, 1corinthians 1, deuteronomy 22. Two independent chapters now show the contiguous-region signature; the row-pointer diagnosis is as well evidenced as it can get without a re-fetch."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "22",
+      "verses": [
+        "30"
+      ],
+      "note": "Third host confirmed for the scraped page-chrome defect, and it is the sacred-texts one rather than a new one: 27 junk words ('Sacred Texts | Bible' nav) at the tail of the John Gill block on deuteronomy 22:30 — the chapter's last verse and Gill's last block, matching the attachment model recorded at galatians 4:30 and 1corinthians 1:31. Only 27 words here, so this chapter's size figure is barely inflated, but it confirms the sacred-texts/Gill defect reaches the Pentateuch and is not confined to the 110 chapters previously counted. The corpus scan for that marker should be re-run: the earlier count may have used a stricter marker set."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "22",
+      "verses": [
+        "5",
+        "12",
+        "17",
+        "29"
+      ],
+      "note": "Four disputes worth flagging. (1) At v5, what the forbidden thing is: Clarke narrows it to armour, arguing that a mere change of dress could not have disguised anyone where both sexes wore long garments; Keil widens it to every kind of domestic utensil, neither clothing merely nor arms only; Gill takes it of a man's working instruments and reads the law as a rebuke of Egyptian practice reported by Herodotus. (2) At v12, what the fringes were for: Ellicott makes them a memorial of the man executed for sabbath-breaking and Wesley adds a national profession, while CALVIN REFUSES the memorial entirely and makes the fringe a device of decency, holding the open gown closed — a reading none of the others entertains. (3) At v17, whether the evidence in the slander case is intelligible: Henry and Wesley agree almost verbatim that the learned are not agreed and it is unnecessary to enquire, while Clarke refuses to leave it there and dismisses the metaphorical readings as failing so completely that setting them out would waste the reader's time. (4) At v30, how far the single incest prohibition reaches: Clarke restricts it to a stepmother, Gill treats it as a 'short memorandum' standing for the whole Levitical law, and Calvin reasons from the same silence that the fuller law is being recalled under one head."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "22",
+      "note": "deuteronomy 22: all 7 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. 30 verses, ~14,700 usable source words, tiled in 7 entries — matching the density guide. 8 voices, the largest single blocks being Henry at v5 (1,423w) and v13 (1,486w). NOTABLE CONTRAST with the last four batches: on a thin-source chapter the overshoot problem largely disappears. Three of the seven entries (1-4 at 487w, 22-27 at 583w, 28-30 at 516w) landed in window on the FIRST draft with no trim pass at all — the first time that has happened in this loop. The other four needed one to three passes. The pattern across recent chapters is now clear: overshoot scales with source density and voice count, not with chapter length. Where the source gives 1,500-1,800 words per entry the draft lands naturally; where it gives 7,000+ and ten or more voices, every draft runs 20-60 percent over."
     }
   ]
 }

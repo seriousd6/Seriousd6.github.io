@@ -1,1030 +1,520 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the ox and sheep stand for every creature a man has, and a 'brother' means not only kindred but any neighbour, even an enemy; the beast was in any case to be brought back."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not see thy brother's ox or his sheep go astray, and hide thyself... thou shalt... bring them again",
-   "active neighbourly love, not looking away",
-   "loving thy neighbour as thyself (Lev. 19:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "1-4",
+  "pericope_label": "Thou shalt not see thy brother’s ox or his sheep go astray, and hide thyself from them: thou shalt in any case bring them again unto thy brother. And if thy brother be not nigh unto thee, or if thou know him not, then thou shalt bring it unto thine own house, and it shall be with thee until thy brother seek after it, and thou shalt restore it to him again. In like manner shalt thou do with his ass; and so shalt thou do with his raiment; and with all lost thing of thy brother’s, which he hath lost, and thou hast found, shalt thou do likewise: thou mayest not hide thyself. Thou shalt not see thy brother’s ass or his ox fall down by the way, and hide thyself from them: thou shalt surely help him to lift them up again",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: if the brother lived at a distance, so the cattle could not be soon sent to him."
+    "prevalence": "single",
+    "summary": "Gill glosses the verb of straying as being driven away, frightened and starved away from the herd or the flock by a wolf or a dog, and takes the ox and the sheep as put for every other creature a man has, such as camels and asses, the last of which is mentioned afterwards. On the word brother he argues that it means not one in the natural relation of kindred only, since it is supposed in the next verse that the man might not only be at a distance but unknown; nor one of the commonwealth or church of the Jews by religion only, since what is enjoined is a piece of humanity that the law of nature requires and directs. Of the keeping he says the finder is to hold the beast until it is owned and then restore it, and of the last case that the animal has fallen under its burden and is unable to rise with it either of itself or with the help of those about it, so that further help is needed."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the keeping of it until the brother sought after it, then restoring it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt bring it unto thine own house... until thy brother seek after it, and thou shalt restore it",
-   "faithful keeping and return of the lost",
-   "honest stewardship of a neighbour's goods (Exod. 23:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the same was to be done with the ass, and with any lost thing, kept until owned and then restored."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reasons from the lesser case to the greater: the kindness commanded in Exodus to be shown in reference to an enemy is here required much more to be done for a neighbour, though he were not an Israelite, for the law is consonant to natural equity. Strayed cattle, he says, should be brought back either to the owner or to the pasture out of which they had gone astray, and he gives three grounds for the duty — that it must be done in pity to the very cattle, which while they wandered were exposed; in civility and respect to the owner; and indeed in justice to him, for it is doing as we would be done by, which is one of the fundamental laws of equity."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: 'thou mayest not hide thyself' — not keep out of the way of affording help nor pretend not to see."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "with all lost thing of thy brother's... thou mayest not hide thyself",
-   "no feigned ignorance to escape the duty",
-   "withhold not good that is due (Prov. 3:27)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Clarke summarises the chapter’s ordinances in order before commenting, and on the prohibition takes it to mean that one shall not keep out of the way of affording help, nor pretend that he did not see occasion to render his neighbour any service; the standing example of the breach he finds in the priest and the Levite who, when they saw the wounded man, passed by on the other side of the way, which he calls a notorious breach of this merciful law. Wesley glosses the word brother as meaning any man’s, and offers two senses of hiding oneself: to dissemble, or pretend that one does not see them, or to pass them by as if one had not seen them — or else to hide the thing, that is, to conceal what was lost."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the beast fallen by the way under its burden, unable to rise of itself; one was surely to help lift it up again."
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch treat the passage as a still further expansion of the earlier law in Exodus, showing how the property of a neighbour was to be regarded and preserved, and render the word brother as fellow-countryman. The procedure they set out in order: if a man saw an ox or a sheep of his brother’s going astray he was not to draw back from it but to bring it back to him; and if the owner lived at a distance, or was unknown, he was to take it into his own house or farm until the owner came to seek it, the same rule holding for the ass, for raiment, and for every lost thing."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the word brother reaches: Gill argues from the next verse, which supposes the owner may be unknown, that it cannot mean kinsman, and refuses to limit it to the commonwealth of Israel because the duty is one the law of nature itself requires; Henry extends it explicitly to a neighbour who is not an Israelite and Wesley to any man; Keil alone keeps the narrower sense and renders it fellow-countryman.",
+   "What hiding oneself forbids: Clarke and Wesley’s first gloss make it a hiding of the person from the duty, pretending not to have seen; Wesley allows a second sense in which the thing rather than the person is hidden, that is, the lost property concealed."
+  ],
+  "outliers": [
+   "Henry gives three distinct grounds for a single small duty — pity toward the animals themselves, which were exposed while they wandered; civility toward the owner; and justice, on the rule of doing as we would be done by.",
+   "Clarke reaches for the priest and the Levite of the parable as the classic offenders against this law, treating their passing by on the other side as the very hiding it forbids.",
+   "Gill reads the last case physically rather than morally, of a beast down under its load and unable to rise even with bystanders helping, so that what is commanded is to put one’s hands to the burden."
+  ],
   "themes": [
-   "Thou shalt not see thy brother's ass or his ox fall down... thou shalt surely help him to lift them up",
-   "neighbourly love in active toil",
-   "bear one another's burdens (Gal. 6:2)"
+   "lost property",
+   "neighbour",
+   "natural equity",
+   "hiding oneself",
+   "kindness to animals"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.31
+   }
   }
  },
  "5": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "5",
+  "pericope_label": "The woman shall not wear that which pertaineth unto a man, neither shall a man put on a woman’s garment: for all that do so are abomination unto the LORD thy God",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it is unseemly and contrary to the modesty of her sex, or any instrument of a man's which she would use as if employed in his work; all who do so are an abomination unto the LORD."
+    "prevalence": "several",
+    "summary": "Gill calls the thing forbidden very unseemly and impudent and contrary to the modesty of her sex, and renders the first term as any instrument of a man, any utensil he makes use of in his trade and business, as if she were employed in it when her business was not to do the work of men but to take care of her house and family; the law he thinks may be opposed to the customs of the Egyptians, from whom the Israelites were lately come, whose women, as Herodotus relates, used to trade and merchandise abroad while the men kept at home. He notes that the word also signifies armour, as the Aramaic version renders it, and that on that reading the law forbids women taking up arms. Calvin says the decree commends modesty in general, God anticipating the danger lest women should harden themselves into forgetfulness of modesty or men degenerate into an effeminacy unworthy of their nature; garments, he grants, are not in themselves of so much importance, but since it is disgraceful for men to become effeminate and for women to affect manliness in dress and gesture, propriety and modesty are prescribed, not only for decency’s sake but lest one kind of liberty should at length lead to something worse. He supports the point from Juvenal, whose line asks what modesty a helmeted woman can show, who has fled from her own sex."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry begins by defending the smallness of these laws: they seem to stoop very low and to take cognizance of things mean and minute, which men’s laws commonly do not, since the law takes no cognizance of little things; but because God’s providence extends itself to the smallest affairs his precepts do so too, that even in these we may be in the fear of the Lord as under his eye and care, and being found among the things of God’s law which he has written to us they are to be accounted great things notwithstanding their minuteness. The distinction of the sexes by apparel he holds is to be kept up for the preservation of our own and our neighbour’s chastity, since nature itself teaches that a difference be made between them in their hair and by the same rule in their clothes, which ought not to be confounded either in ordinary wear or occasionally; to befriend a lawful escape or concealment it may be done, but whether for sport or in the acting of plays he calls justly questionable. He reports as the opinion of some that the law refers to the idolatrous custom of the Gentiles, in the worship of Venus women appearing in armour and men in women’s clothes, which like other such superstitious usages is here called an abomination; and he adds a second sense, that it forbids the confounding of the dispositions and affairs of the sexes as well as their garments, men not being effeminate nor doing the women’s work in the house."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the first term as the instruments or arms of a man, and since the noun used properly signifies a strong man or a man of war he thinks it very probable that armour is intended, especially as in the worship of Venus — to which that of Astarte or Ashtaroth among the Canaanites bore a striking resemblance — the women were accustomed to appear in armour before her. He denies that the verse can mean a simple change in dress whereby the men might pass for women and the reverse, holding this would have been impossible in those countries where the dress of the sexes had but little to distinguish it and where every man wore a long garment. Wesley limits the prohibition to what is done ordinarily or unnecessarily, since in some cases it may be lawful, as to make an escape for one’s life, and gives the reasons together: for decency’s sake, that men might not confound those sexes which God has distinguished; that all appearance of evil might be avoided, such change of garments carrying a manifest sign of effeminacy in the man, of arrogance in the woman, and of lightness and petulancy in both; and to cut off all suspicions and occasions of evil, to which the practice opens a wide door."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch set the law beside the one preceding it: as the property of a neighbour was to be sacred in the estimation of an Israelite, so the divine distinction of the sexes, kept sacred in civil life by the clothing peculiar to each, was to be observed not less but even more sacredly. The Hebrew noun, they insist, does not signify clothing merely, nor arms only, but includes every kind of domestic and other utensil, and they render the first clause as there shall not be man’s things upon a woman. Ellicott comments in a single sentence, that this is one of the things of which we may well say with St Paul, doth not nature itself teach you?"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the forbidden thing is: Clarke narrows it to armour, on the ground that the noun means a man of war and that a mere change of dress could not have disguised anyone in a culture where both sexes wore long garments; Keil widens it to every kind of domestic and other utensil, neither clothing merely nor arms only; Gill takes it of a man’s working instruments and the trades that go with them, while allowing the armour rendering from the Aramaic.",
+   "What the law is for: Clarke grounds it in the armed women of a pagan cult and Henry reports that reading as one opinion, though he puts chastity first and adds the confounding of the sexes’ occupations; Calvin refuses the cultic explanation altogether and makes the statute a general guard of modesty, on the principle that one kind of liberty leads at length to something worse.",
+   "Whether the prohibition admits exceptions: Henry allows the thing for a lawful escape or concealment while calling sport and stage acting justly questionable, and Wesley builds the same limit into the verb, forbidding what is done ordinarily or unnecessarily and allowing an escape made for one’s life."
+  ],
+  "outliers": [
+   "Henry defends the law against the charge of triviality by turning the legal maxim round: men’s law takes no cognizance of little things, but God’s providence reaches the smallest affairs, so precepts that look minute are to be accounted great things for the company they keep.",
+   "Gill explains the law from Egyptian practice reported by Herodotus, where the women traded abroad while the men kept house, making the statute a rebuke of the country Israel had just left.",
+   "Calvin quotes a pagan satirist against a pagan practice, citing Juvenal’s question what modesty a helmeted woman can show who has fled from her sex."
+  ],
   "themes": [
-   "The woman shall not wear that which pertaineth unto a man, neither shall a man put on a woman's garment",
-   "guarding the distinction of the sexes",
-   "male and female, the order of creation (Gen. 1:27)"
+   "distinction of the sexes",
+   "dress",
+   "modesty",
+   "idolatrous custom",
+   "small precepts"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
+   }
   }
  },
  "6": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this excepts nests purposely made for fowls kept at home; the canon speaks of letting go the dam from a wild nest; the dam was not to be taken with the young."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt not take the dam with the young",
-   "a tender mercy toward the creatures",
-   "the righteous regardeth the life of his beast (Prov. 12:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Jewish canon — 'in letting go, let go' — willingly, certainly, always, even if she return; the promise was that it might be well and his days prolonged."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt in any wise let the dam go... that it may be well with thee, and that thou mayest prolong thy days",
-   "a great promise on a small mercy",
-   "blessed are the merciful (Matt. 5:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "6-8",
+  "pericope_label": "If a bird’s nest chance to be before thee in the way in any tree, or on the ground, whether they be young ones, or eggs, and the dam sitting upon the young, or upon the eggs, thou shalt not take the dam with the young: but thou shalt in any wise let the dam go, and take the young to thee; that it may be well with thee, and that thou mayest prolong thy days. When thou buildest a new house, then thou shalt make a battlement for thy roof, that thou bring not blood upon thine house, if any man fall from thence",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is of a house to dwell in, not a barn or stable."
+    "summary": "Gill limits the law by the rabbinic distinction between nests that are prepared and those that are not: the letting go of the dam is not used except of a fowl, and not except of what is not prepared, so that geese and hens whose nest is in an orchard come under the rule while those whose nest is in the house, and doves kept at home, do not. He renders the doubled verb as in letting go, let go, that is willingly, certainly, entirely, frequently, always, and cites the canon that if a man lets her go and she returns, even four or five times, he is obliged to let her go again, one authority saying even a thousand times; further rules he reports about a man who proposes to keep the dam and release the young, or who returns the young to the nest and then the dam to them. On the parapet he restricts the law to a house to dwell in, not a granary, barn or stable, and, following Maimonides, excludes every house that is not four cubits square. Calvin makes the precept about the nest a supplement to the Sixth Commandment, since by it God instructed his people in the law of kindness; regard was had to the preservation of the breed, and besides, sitting birds being very lean, it is certain they are not wholesome food, but there is no question that God’s intention was to accustom his people to study humanity — for if there be one drop of compassion in us it will never enter into our minds to kill an unhappy little bird which so burns either with the desire of offspring or with love towards its little ones as to be heedless of itself. The parapet he refers to the preservation of human life, noting that the roofs of the Jewish houses were flat so that men might freely walk upon them and that without railings a fall would have been fatal, so that every house would often have been a house of mourning; God therefore commands the edge to be fortified with battlements or railings and accompanies the injunction with a severe denunciation, declaring that the houses would be defiled with blood if anyone should fall from an uninclosed roof."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: houses in the East had flat roofs on which men walked, so a battlement was needed for safety."
+    "summary": "Clarke allows that the precept about the nest may be understood literally, since if they destroyed both young and old the breed must soon fail and it would in the end be ill with them, their days being shortened on the land by cutting off the means of their continual support; but he looks for a humane precept in the law as well, and finds it in the difference between the two — the young never knew the sweets of liberty, the dam did, so that the young might be taken and used for any lawful purpose while the dam must not be brought into a state of captivity. On the parapet he explains that houses in the East are in general built with flat roofs, on which men walk to enjoy the fresh air, converse together and sleep, so that a sort of battlement or balustrade was necessary to prevent persons from falling off; and he holds that if a man neglected to make a sufficient defence against such accidents and the death of another was occasioned by it, the owner of the house must be considered in the light of a murderer. Wesley divides the reason for releasing the dam between the creature and the man: partly for the bird’s sake, which suffered enough by the loss of its young, since God would not have cruelty exercised towards the brute creatures, and partly for men’s sake, to refrain their greediness, that they should not monopolize all to themselves but leave the hopes of a future seed for others. The battlement he glosses as a fence or breastwork, made necessary by the flat roofs, and the blood as the guilt of blood incurred by a man’s fall through neglect of this necessary provision; he adds that the Jews say they are obliged by the equity of this law, and so are we, to fence or remove everything whereby life may be endangered, such as wells or bridges, lest if any perish through our omission their blood be required at our hand."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch take the law of the nest to guard the affectionate relation of parents to their young, which God had established even in the animal world and which was to be kept just as sacred as a neighbour’s property: a man finding a nest by the road, in a tree or on the ground, with young ones or eggs and the mother sitting upon them, was not to take the mother with the young but to let her fly and take only the young. The following law they place under the same principle, that still less were the Israelites to expose human life to danger through carelessness, and they render the required structure as a rim or balustrade to the roof, so that no blood-guiltiness should be brought upon the house. Ellicott notes that the law about roofs obviously refers to houses with flat roofs, upon which it was customary to walk, and on the law of the nest quotes a remarkable comment from the Talmud in which Rabbi Akiba argues that no duty prescribed in the Law with a promise of reward attached to it lacks the resurrection of the dead hanging thereby, since both the command to honour father and mother and the liberty of the nest carry the promise of prolonged days — the case being put of a son bidden by his father to climb for the nest, who keeps both commandments and yet dies."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the mother bird must be released: Keil grounds it in the parental relation God established among the animals, Calvin in compassion and the study of humanity, Clarke in the difference between a creature that has known liberty and one that has not, and Wesley in both the bird’s own loss and a restraint upon human greed; Clarke and Wesley add the conservation argument that the breed and the hopes of a future seed must be left standing.",
+   "How far the law of the parapet reaches: Gill narrows it by rabbinic definition to dwelling-houses, excluding granaries, barns and stables and any building under four cubits square, while Wesley reports and adopts the rabbinic extension by equity to every danger of the kind, naming wells and bridges and applying the obligation to Christians."
+  ],
+  "outliers": [
+   "Calvin notes that a sitting bird is very lean and so not wholesome food in any case, which makes the law cost the obedient nothing and leaves compassion as its whole point.",
+   "Ellicott reproduces a Talmudic argument that derives the resurrection of the dead from the reward promised to this very law, on the ground that a son might keep both this commandment and the fifth and still die in the act.",
+   "Gill records a rabbinic ruling that the dam must be let go however often she returns — four or five times, or by one authority a thousand."
+  ],
   "themes": [
-   "thou shalt make a battlement for thy roof, that thou bring not blood upon thine house",
-   "a positive care for human life",
-   "guarding the neighbour from harm by neglect (Exod. 21:33-34)"
+   "bird’s nest",
+   "kindness to animals",
+   "parapet",
+   "blood-guilt",
+   "rabbinic tradition"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.34
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this is of divers sorts of corn or herbs sown with design between the vines, not what is casual or of trees; the mingled fruit would be defiled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not sow thy vineyard with divers seeds",
-   "a lesson of separation, things kept distinct",
-   "be not unequally yoked with unbelievers (2 Cor. 6:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they might be used separately but not together; in some countries asses were used in ploughing as well as oxen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not plow with an ox and an ass together",
-   "mercy joined to the lesson of separation",
-   "the unequal yoke, a figure of mismatched union (2 Cor. 6:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Jews say nothing is forbidden under 'sorts' but what is carded, spun, and woven together — 'linsey-woolsey,' wool and linen; such a mixed garment was not to be worn."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not wear a garment of divers sorts, as of woollen and linen together",
-   "the lesson of separation worn on the body",
-   "a peculiar people set apart and unmixed (1 Pet. 1:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the same is meant as the fringes commanded before (Num. 15:38), to bring the commandments to mind, that the wearer remember and do them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt make thee fringes upon the four quarters of thy vesture",
-   "a worn reminder of God's commandments",
-   "the law kept ever in mind and obeyed (Num. 15:38-39)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the man marries and cohabits, then dislikes her and desires to part with her, taking a wicked method to do so; this concerns a virgin taken to wife."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If any man take a wife, and go in unto her, and hate her",
-   "a husband's cruel scheme against his wife",
-   "God defending the wronged (Mal. 2:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "9-12",
+  "pericope_label": "Thou shalt not sow thy vineyard with divers seeds: lest the fruit of thy seed which thou hast sown, and the fruit of thy vineyard, be defiled. Thou shalt not plow with an ox and an ass together. Thou shalt not wear a garment of divers sorts, as of woollen and linen together. Thou shalt make thee fringes upon the four quarters of thy vesture, wherewith thou coverest thyself",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: he gives occasion of speech against her among her neighbours, leading them to traduce her character as a bad woman."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the bringing up of an evil name against her."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bring up an evil name upon her, and say... I found her not a maid",
-   "the deadly sin of slander against the innocent",
-   "a good name robbed, better than riches (Prov. 22:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the parents, given leave by the court, would concern themselves for the credit of their child and their own honour, bringing the tokens to the elders in the gate."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the father of the damsel, and her mother... bring forth the tokens of the damsel's virginity unto the elders",
-   "the wronged given a public defence",
-   "the innocent heard, not condemned unheard (Prov. 31:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the father, not the mother, speaks; Jarchi infers a woman was not allowed to speak in public, so the father appears in court to defend her, declaring the husband hates her."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the damsel's father shall say unto the elders, I gave my daughter unto this man to wife, and he hateth her",
-   "the duty of defending the helpless",
-   "a voice for the wronged (Prov. 31:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the husband had caused persons to speak reproachfully of her as one of ill fame."
+    "summary": "Gill limits the law of the vineyard to divers sorts of corn and of herbs and not to trees, which is why a fig tree may be spoken of as standing in a vineyard, and confines it to what is sown with design rather than what is casual, citing the Jewish rule that if a man passes through a vineyard and seeds fall from him, or they are carried out along with dung or with water, or a storm of wind carries his seed behind him, it is lawful. On the ploughing he notes the two beasts might be used separately but not together, and that it was not uncommon in some countries for asses to be employed in ploughing as well as oxen, Pliny mentioning fruitful land in Africa which in dry weather could not be ploughed by oxen but after showers of rain might be ploughed by a mean little ass, and Leo Africanus saying the Africans use only horses and asses; the reason for the prohibition he gives as the fear that the law forbidding the gendering of cattle of diverse kinds should be broken. On the mixed garment he reports the rabbinic rule that nothing is forbidden under that name but what is spun and woven, and takes up the claim that such stuff was granted to the priests only to wear, observing that Bochart affirms it to be false but that the great man is mistaken, since the blue, purple and scarlet in the priests’ garments were no other than dyed wool. Of the fringes he says that though a different word is used here from the one in Numbers the same things are intended, the Aramaic translating both alike, and records that some, whom Aben Ezra takes notice of, supposed this to be a law by itself to be observed in the night while the other was for the day — whom Aben Ezra warmly opposes and calls liars. Calvin has no doubt that these four precepts, which all condemn strange medleys, are supplements of the First Commandment, and finds the reason subjoined in Deuteronomy directing us to this, where God declares that the produce of the seed and of the vineyard is polluted if there be divers mixtures, whence it appears that nothing else is demanded but that they should cultivate purity; he notes that the word Moses uses properly means to sanctify but is here taken in the contrary sense. The ploughing rule he brings under the same head, the diversity being forbidden for no other reason. The fringe he treats quite otherwise than as a memorial, making it a part of or accessory to chastity and a matter of regard to modesty in dress: since the thighs were then without covering, a door was opened to many improprieties if the upper garments were not closed, and many would have abused the liberty as an incentive to licentiousness, some rushing into such excesses of lasciviousness as to glory in their shame; God therefore would have the flaps of their gowns drawn together by ties or latchets, so that not even by chance could those parts be uncovered which cannot decently be seen."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the spreading of the cloth, a usage of rough manners, ill comporting with later refinement."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "these are the tokens of my daughter's virginity. And they shall spread the cloth before the elders",
-   "the proof exposing the slander",
-   "righteousness brought forth as the light (Ps. 37:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'chastise' means not with words but blows; Jarchi and the Talmud interpret it of beating, and the Targums render it 'shall beat him.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the elders of that city shall take that man and chastise him",
-   "the false accuser punished",
-   "slander a real crime, judged as he thought to do (Deut. 19:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the hundred shekels were double the dowry; he must keep her as his wife and might not put her away all his days, for bringing up an evil name on a virgin of Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they shall amerce him in an hundred shekels... and she shall be his wife; he may not put her away",
-   "the wronged vindicated and protected",
-   "the LORD executeth judgment for the oppressed (Ps. 103:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: if the husband's charge be true, that she was no virgin, having committed whoredom, of which there was plain proof. Calvin: no fraud is more intolerable than this against the sanctity of marriage."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "But if this thing be true, and the tokens of virginity be not found for the damsel",
-   "the law even-handed on either side",
-   "marriage guarded from slander and deceit (Heb. 13:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she was brought to her father's house door for greater disgrace, and as a punishment for his neglect of her education."
+    "summary": "Clarke refers the law of divers seeds back to its parallel in Leviticus, and on the ploughing reports that it is generally supposed mixtures of different sorts in seed and breed were employed for superstitious purposes and therefore prohibited, but holds it more likely that there was a physical reason: two beasts of a different species cannot associate comfortably together, and on this ground never pull pleasantly either in cart or plough, every farmer knowing that it is of considerable consequence to the comfort of the cattle to put those together that have an affection for each other. Wesley offers two constructions of the first law, either divers kinds of seed mixed and sown together between the rows of vines, which was forbidden in the field and here in the vineyard, or any kind of seed differing from that of the vine which would produce herbs, corn or fruit-bearing trees whose fruit might be mingled with the fruit of the vines; and he grants that these precepts, though in themselves small and trivial, are given according to that time and state of the church for instructions in greater matters, and particularly to commend simplicity. The ploughing rule he explains by cleanness, the one beast clean and the other unclean, whereby God would teach men to avoid polluting themselves by the touch of unclean persons or things. The fringes he takes to serve partly to bring the commands of God to their remembrance and partly as a public profession of their nation and religion, whereby they might be distinguished from strangers, so that they might be the more circumspect to behave as became the people of God and should own their religion before all the world; the closing words he takes as restricting the requirement to the upper garment with which the rest were covered."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: so shalt thou put evil away from among you."
+    "summary": "Keil and Delitzsch group the four precepts together and then draw a line after them, heading what follows as the laws of chastity and marriage and calling that order higher and still holier than the one preceding. Ellicott glosses the word rendered defiled as meaning rather sanctified, that is, forfeit rather than common, and explains from the calendar that different crops become common at different times, the year’s corn being freed by the wave-sheaf and the wave-loaves and the trees not for five years. The rule about the ox and the ass he says may rest partly on the ground of humanity, the step and the pull of the two creatures being so very unlike, and partly on cleanness, since the ox was a clean animal and fit for sacrifice while the ass was unclean and had to be redeemed with a lamb, so that the clean and the unclean must not till the holy land of Jehovah together; he adds that St Paul gives the precept a spiritual sense in warning against being unequally yoked with unbelievers. On the mixed garment he observes that in Ezekiel the priests are altogether forbidden the use of woollen garments during their ministry, since they shall not gird themselves with anything that causes sweat, that which comes out of the man defiling him, and that in God’s dwelling-place the interior was of fine linen while the outer tent and coverings were of hair and skin and wool. The fringe on the four sides of the square shawl or mantle he calls a mourning for the one man who was executed for sabbath-breaking in the wilderness as well as a reminder to Israel to do all the commandments and be holy, and notes that it was of this fringe, worn by our Lord on earth, that the sick laid hold and were healed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the ox and the ass may not be yoked together: Clarke reports and rejects the theory that such mixtures were superstitious, preferring a physical reason, that beasts of different species cannot associate comfortably and so never pull pleasantly; Wesley makes it purely a lesson in clean and unclean; Ellicott combines humanity, cleanness and the apostle’s spiritual application; Calvin subsumes it under the general condemnation of diversity.",
+   "What the fringes were for: Ellicott makes them a memorial of the man executed for sabbath-breaking and a reminder of the commandments, and Wesley adds a public profession of nation and religion, while Calvin refuses the memorial altogether and makes the fringe a device of decency, holding the open gown closed over parts that could not otherwise be covered.",
+   "What the word rendered defiled means: Calvin notes it properly signifies to sanctify and holds it is here used for the contrary, so that the produce is polluted, while Ellicott keeps the proper sense and takes the crop to become forfeit rather than common."
+  ],
+  "outliers": [
+   "Gill preserves a rabbinic exemption that turns on intention, so that seed reaching a vineyard by a man’s accident, by wind, or mixed in with dung or water breaks no law at all.",
+   "Gill corrects Bochart by name over whether the mixed stuff was permitted to the priests, arguing from the dyed wool in their blue, purple and scarlet that the great man is mistaken.",
+   "Ellicott observes that the fringe commanded here is the one worn on our Lord’s garment which the sick took hold of to be healed.",
+   "Gill reports that Aben Ezra, meeting the suggestion that this was a separate law binding at night, called its proponents liars."
+  ],
   "themes": [
-   "they shall bring out the damsel to the door of her father's house, and... stone her... so shalt thou put evil away",
-   "the gravity of the sin and the holiness required",
-   "let fornication not be named among you (Eph. 5:3)"
+   "mixtures",
+   "purity",
+   "ox and ass",
+   "wool and linen",
+   "fringes"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
+   }
+  }
+ },
+ "13": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "13-21",
+  "pericope_label": "If any man take a wife, and go in unto her, and hate her, and give occasions of speech against her, and bring up an evil name upon her, and say, I took this woman, and when I came to her, I found her not a maid: then shall the father of the damsel, and her mother, take and bring forth the tokens of the damsel’s virginity unto the elders of the city in the gate … and the elders of that city shall take that man and chastise him; and they shall amerce him in an hundred shekels of silver … But if this thing be true, and the tokens of virginity be not found for the damsel: then they shall bring out the damsel to the door of her father’s house",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the case of a man who marries a wife and cohabits with her as man and wife, then after some time dislikes her and desires to part with her, and so takes this wicked method to obtain it, the woman being a virgin when taken to wife. The parents, he says, would concern themselves in such an affair partly for the credit and reputation of their child and partly for their own honour, since they were in danger of coming into contempt for their ill education of her; and he observes that it is the father and not the mother who speaks, from which the rabbis learn that a woman is not allowed to speak before men in public, so that it was most proper for a father to appear in court and defend her — and if her parents were not living, those who had brought her up and had the charge of her education and marriage were to undertake her cause. The chastisement he says is not with words but blows, the Talmud and both Aramaic versions rendering it that they shall beat him. The fine of a hundred shekels he reckons at about twelve pounds, and notes that this was double the dowry the man would have been obliged to give had he simply put her away, which he might have done with less trouble and with more certainty of being rid of her; being willing to save that expense he took this wicked method of accusing her falsely, and is therefore fined double the sum. In the other case he takes the place appointed — the door of her father’s house — to be chosen for the father’s greater disgrace and as a sort of punishment for his neglect of her education. Calvin says the passage tends to the exaltation of chastity, God providing against both cases: lest a husband should unjustly bring reproach upon a chaste and innocent young woman, and lest a young woman who had been defiled should escape punishment by pretending to be a virgin; and he marks a third object, that parents were thus admonished to be more careful in watching over their children. Calumny here receives a threefold punishment — that the inventor of the false accusation be beaten with stripes, that he pay a hundred pieces of silver to the father of the girl, and that he never be allowed to put her away — and the reason given, that he has brought up an evil name upon a virgin of Israel, shows God to be the protector of virgins. Against the objection that the punishment in the other case is too severe, he answers that no kind of fraud is more intolerable: a false sale of a field or a house is accounted a crime, as is the utterance of false money, and therefore she who abuses the sacred name of marriage for deception, offering an unchaste body instead of a chaste one, much less deserves to be pardoned."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets these laws under the seventh commandment, as laying a restraint by laying a penalty upon those fleshly lusts which war against the soul, and supplies the motive: a man lusting after another woman, to get rid of his wife, slanders her and falsely accuses her of not having the virginity she pretended to when he married her. Of the evidence by which the accusation was to be disproved he says the learned are not agreed on its meaning, that it is not at all necessary to enquire, and that those for whom the law was intended no doubt understood it; it is sufficient for us to know that such a husband was to be scourged, fined, and barred from ever divorcing the wife he had abused. On his dislike of her he might have divorced her by the permission of the law, but then he must have given her her dowry; if therefore to save that, and to do her the greater mischief, he would destroy her good name, it was fit that he should be severely punished and forfeit the permission to divorce her for ever. He draws the general observation that the nearer any are in relation to us, the greater the sin of belying them and blemishing their reputation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes of the evidence that a usage of this kind argues a roughness of manners which would ill comport with the refinement of European ideas on so delicate a subject, reports that attempts have been made to show the law is to be understood metaphorically, and holds that they so perfectly fail to establish anything like probability that it would waste his own and his reader’s time to detail them; he notes that a similar custom is observed among other peoples. He adds that the case supposed was a perfectly possible one in all places where girls were married at ten, twelve or fourteen years of age, as is frequent in the East. Wesley says of the evidence what Henry says, that the learned are not agreed on its meaning, that it is not necessary for us to know, and that they for whom this law was intended undoubtedly understood it; and he explains the payment of the fine to the father on the ground that the matter was a reproach to his family and to himself, since such a miscarriage of his daughter would have been ascribed to his evil education of her."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch set out the procedure: on such an accusation the parents of the young woman were to take the tokens of her virginity and bring them before the elders of the city in the gate, the father stating that he gave his daughter to this man to wife and that the man hates her, and producing the evidence; the elders were then to chastise the man and amerce him in a hundred shekels of silver, to be given to the father, because he had brought up an evil name upon a virgin of Israel, and she was to remain his wife whom he might not put away all his days. In the other case, they note, if the man’s words were true and the tokens were not found, the sentence follows in its own terms, the offence being described as folly wrought in Israel and the purpose as putting evil away from among them."
+   }
+  ],
+  "debates": [
+   "Whether the evidence in the case can be understood at all: Henry and Wesley agree, almost in the same words, that the learned are not agreed, that it is unnecessary to enquire, and that those for whom the law was intended understood it; Clarke refuses to leave the question there, reports the attempts to read the passage metaphorically, and dismisses them as failing so completely that setting them out would be a waste of time.",
+   "Why the fine is fixed where it is: Gill makes it arithmetic, exactly double the dowry the husband was trying to avoid paying by slandering her instead of divorcing her, so that the penalty is measured against the motive; Calvin simply counts it as the second of three punishments for calumny, and Henry treats the bar on future divorce as the point of the sentence.",
+   "How much of the disgrace falls on the parents: Gill has them acting for their own honour as much as their daughter’s, reads the door of the father’s house in the second case as a punishment of his neglect, and reports the inference that the mother’s silence proves a woman may not speak before men; Wesley gives the same reason for the money going to the father; Calvin makes parental watchfulness a distinct third object of the whole law."
+  ],
+  "outliers": [
+   "Clarke declines to soften the passage, granting that the usage argues a roughness of manners unlike European refinement and refusing to detail the metaphorical readings offered as an escape from it.",
+   "Calvin defends the severity of the second case by commercial analogy, setting the fraud beside a false sale of land and the uttering of counterfeit money.",
+   "Gill passes on a rabbinic inference drawn from the father rather than the mother being the speaker, that a woman is not permitted to speak before men in public.",
+   "Henry converts the case into a general rule about slander, that the nearer the relation, the greater the sin of blemishing a reputation."
+  ],
+  "themes": [
+   "slander of a wife",
+   "seventh commandment",
+   "evidence",
+   "penalty",
+   "parental responsibility"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "22": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "22-27",
+  "pericope_label": "If a man be found lying with a woman married to an husband, then they shall both of them die … If a damsel that is a virgin be betrothed unto an husband, and a man find her in the city, and lie with her; then ye shall bring them both out unto the gate of that city … But if a man find a betrothed damsel in the field, and the man force her, and lie with her: then the man only that lay with her shall die: but unto the damsel thou shalt do nothing; there is in the damsel no sin worthy of death",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this respects adultery, the same law as elsewhere. Calvin: a political supplement to the seventh commandment."
+    "summary": "Gill notes that the first law respects adultery and is the same as an earlier statute, and on the second distinguishes betrothal from marriage as the Jews did — the woman being espoused but not yet brought home to her husband’s house and the marriage not consummated — with some time generally passing between the two; a wife, he explains, was obtained in three ways: by money, which was the most usual; by writing, which was to be done before witnesses and with her consent; and by cohabitation. The place of judgment he takes to be the gate of the city where the fact was committed, one Aramaic version rendering it the gate of the court of judicature in that city. The field he treats as a circumstance in the woman’s favour, from which it might be presumed that she was forced and did not consent, since had the sin been committed by agreement they would doubtless have betaken themselves to another place, and her crying might be concluded from that same circumstance as well as from her own declaration, which the man could not gainsay or in any case disprove; to her, accordingly, nothing at all is to be done, neither fine nor beating and much less death. Calvin calls the first law a political supplement, showing how greatly God abominates adultery since he denounces capital punishment against it: marriage being a covenant consecrated by God, its profanation is in no wise tolerable, and conjugal faith should be held too sacred to be violated with impunity, since it is an act of horrible perfidiousness to snatch from a man’s bosom the wife who is as his very life, or at any rate half of himself. The extension of the severity to a betrothed woman he justifies on the ground that she has plighted her troth, so that it is a token of abandoned incontinency for the mind of a woman to be so alienated from the man to whom she is betrothed as to give her virginity to another; but since one who has been ravished is not criminal, a woman is absolved if she be forced in a field, because it is probable that she yielded unwillingly."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: in the most ancient laws adultery was punished with death in both parties."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If a man be found lying with a woman married to an husband, then they shall both of them die",
-   "the utmost severity against adultery",
-   "the sanctity of marriage; adulterers God will judge (Heb. 13:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Jews distinguished betrothal from marriage; a wife was obtained by betrothal, with time before the marriage was consummated; the damsel was betrothed but not yet married."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If a damsel that is a virgin be betrothed unto an husband, and a man find her in the city",
-   "the plighted troth held sacred",
-   "the church espoused as a chaste virgin to Christ (2 Cor. 11:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were brought to the gate of the city, or the gate of the court of judicature."
+    "summary": "Clarke observes of the first law that in the most ancient of all laws adultery was punished with death in both the parties, and of the case in the field that a rape also was punished with death by these ancient institutions, because a woman’s honour was considered equally as precious as her life, so that the same punishment was inflicted on the ravisher as upon the murderer; he adds that the offence is considered in the same point of view in the British laws and by them also punished with death. Wesley glosses the city case by the silence, that she cried not and is therefore justly presumed to have consented, and the comparison with murder by the nature of the act, that it was not an act of choice but of force and constraint; of the cry in the field he says that it is in that case to be presumed, charity obliging us to believe the best till the contrary be manifest."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: both stoned, that evil be put away from among you."
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch set out the structure of the section, distinguishing two, or really three, cases in the seduction of a marriageable girl: whether she was betrothed or was not betrothed, and, if she was betrothed, whether the thing happened in the town or in the field. In the first the two are brought out to the gate of the city and stoned, the woman because she did not cry, being in the city, and the man because he humbled his neighbour’s wife; in the second, where a man met a betrothed girl in the open country and forced her, the man only was to die, since there was in the woman no sin worthy of death, the case being expressly compared to a man rising against his neighbour and slaying him — for he found her in the field, and she cried, and there was none to save her."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why a betrothed woman is counted as a wife: Calvin grounds it in the troth she has already plighted, so that unfaithfulness in that state is a token of abandoned incontinency; Gill grounds it instead in the legal forms by which betrothal itself was contracted, money, writing before witnesses, or cohabitation; Keil simply schematises the cases without justifying the equivalence.",
+   "How consent or force is established: Wesley takes the silence in the city as a just presumption of consent and the cry in the field as presumed by charity, which obliges us to believe the best until the contrary is manifest; Gill argues it circumstantially, that parties acting by agreement would have gone elsewhere than a field; Calvin rests it simply on probability."
+  ],
+  "outliers": [
+   "Clarke measures the ancient penalty against the law of his own day, noting that the British law took the same view of the offence and likewise punished it with death, and explains the severity by the principle that a woman’s honour was reckoned as precious as her life.",
+   "Calvin describes adultery as snatching from a man’s bosom the wife who is as his very life, or at any rate half of himself, making the offence a kind of theft of the person.",
+   "Wesley turns a rule of charity into a rule of evidence, holding that where the law presumes a cry the presumption stands until the contrary is made manifest."
+  ],
   "themes": [
-   "ye shall bring them both out unto the gate... and stone them... so thou shalt put away evil",
-   "both guilty, her silence arguing consent",
-   "the community kept holy (1 Thess. 4:3)"
+   "adultery",
+   "betrothal",
+   "presumption of consent",
+   "capital penalty",
+   "city and field"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she was found alone in the field, where she might cry and none hear or help."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: a rape was punished with death, a woman's honour reckoned as precious as her life."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if a man find a betrothed damsel in the field, and the man force her... then the man only... shall die",
-   "force distinguished from consent",
-   "the innocent shielded, her honour precious as life (Ps. 72:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she was not to be fined, beaten, or punished with death."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: as when a man riseth against his neighbour and slays him, even so is this matter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unto the damsel thou shalt do nothing; there is in the damsel no sin worthy of death... even so is this matter",
-   "the victim of force held blameless",
-   "guilt charged wholly on the assailant (Ezek. 18:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the field was a circumstance in her favour, from which it is presumed she was forced and did not consent; and she cried, as may be concluded, there being none to save her."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For he found her in the field, and the betrothed damsel cried, and there was none to save her",
-   "the circumstances proving her forced",
-   "judged righteously in favour of the helpless (Deut. 1:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "28": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the man is supposed unmarried, the damsel not espoused to any man; the two were found out."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If a man find a damsel that is a virgin, which is not betrothed... and they be found",
-   "no prior bond broken",
-   "justice proportioned to the offence (Exod. 22:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "28-30",
+  "pericope_label": "If a man find a damsel that is a virgin, which is not betrothed, and lay hold on her, and lie with her, and they be found; then the man that lay with her shall give unto the damsel’s father fifty shekels of silver, and she shall be his wife; because he hath humbled her, he may not put her away all his days. A man shall not take his father’s wife, nor discover his father’s skirt",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: he gave fifty shekels for the abuse, and besides was obliged to give her dowry, and might not put her away."
+    "summary": "Gill takes the case of a man meeting in a field a woman who is not espoused, the man being supposed unmarried as appears from what follows, and explains the fifty shekels as paid to the father for the abuse of his daughter; besides this, he says, the man was obliged to give her her dowry also, as Philo reports, which is commonly said to be fifty more. On the last verse he collects the readings: not to marry her, whether his own mother or a stepmother, or even, as Aben Ezra thinks, anyone who had been deflowered by his father, while Jarchi interprets it of his father’s brother’s wife. The second clause he explains as lying with a woman over whom his father had thrown his skirt, that is, whom he had married; and being the first of the prohibitions, it is mentioned here as a sample of all the rest forbidden in Leviticus, or, as Bishop Patrick expresses it, as a short memorandum to make them careful to observe all the other laws respecting incest. Calvin notes that Moses here refers to no other kinds of incest but speaks only of that with a stepmother, from which he judges it probable that what had been more fully set forth before is here briefly recalled to the minds of the Israelites under a single head; at any rate, he adds, the prohibition of one offence does not open the gate to other abominations. The added expression about the father’s skirt he takes to mean that the father is exposed to shame when the stepson has no regard to decency and goes in to his stepmother, and he wonders whether there is an allusion to the sin of Ham, who betrayed his ungodliness in uncovering his father."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke understands the last verse as referring to the case of a stepmother: a man in his old age may have married a young wife, and on his dying his son by a former wife may desire to espouse her, which the law prohibits. He suggests that it was probably on pretence of having broken this law that Solomon put his brother Adonijah to death, because he had desired to have his father’s concubine to wife. Wesley notes that the fifty shekels are besides the dowry, as Philo the learned Jew observes, the dowry being omitted here because it was customary, it being sufficient in this place to mention what was peculiar to the case; he adds that she becomes his wife if her father consented to it. On the last verse he distinguishes the two clauses, the first respecting the state of marriage and the next branch speaking of the act only."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the man giving to the father, the woman becoming his wife."
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch state the sentence in the case of the unbetrothed woman — the man is to give her father fifty shekels of silver, she is to be his wife because he has humbled her, and he may not put her away all his days — and then raise a question about the arrangement of the text rather than its sense: the verse renewing the prohibition of incest, by a repetition of the first provision in the earlier law of Leviticus, is no doubt much better adapted to form the close of the laws of chastity and marriage than to serve as the introduction to the laws which follow, though the division of chapters places it at the head of the next."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the single prohibition of incest reaches: Clarke restricts it plainly to the case of a stepmother; Gill collects wider readings — a mother, a stepmother, any woman the father had known, or a father’s brother’s wife — and treats the clause as a sample or short memorandum standing for the whole law of incest; Calvin reasons from the same silence in the opposite direction, that the fuller law is here being recalled under a single head, while warning that forbidding one offence does not license the rest.",
+   "Whether the two halves of the last verse say the same thing: Gill takes the skirt as the token of marriage, so that both clauses forbid marrying; Wesley separates them, the first respecting the married state and the second the act alone; Calvin reads the second as the shame brought upon the father rather than as a form of marriage."
+  ],
+  "outliers": [
+   "Gill and Wesley both import a dowry the text never mentions, on the authority of Philo, Wesley explaining the omission by its being so customary that only what was peculiar to the case needed stating.",
+   "Wesley silently adds a condition the statute does not contain, that the marriage follows if the woman’s father consented to it.",
+   "Keil argues that the last verse is misplaced by the chapter division, belonging to the close of these laws rather than to the opening of the next set.",
+   "Clarke reads a later execution as an application of this law, suggesting Adonijah was put to death on the pretence of having sought his father’s concubine."
+  ],
   "themes": [
-   "the man... shall give... fifty shekels... and she shall be his wife... he may not put her away",
-   "the wrong turned to lifelong provision",
-   "the offender bearing the lasting cost (Exod. 22:16-17)"
+   "seduction",
+   "dowry",
+   "incest",
+   "stepmother",
+   "arrangement of the laws"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: not to marry her, whether his own mother or a stepmother, or even any his father had known; nor discover his father's skirt."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.78
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "A man shall not take his father's wife, nor discover his father's skirt",
-   "guarding the family from incest",
-   "a sin not named among the heathen (1 Cor. 5:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
