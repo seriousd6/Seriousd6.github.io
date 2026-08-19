@@ -1,7 +1,6 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -10,84 +9,80 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Tertullian"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul illustrates from the law of inheritance: an 'heir,' 'as long as he is a child' (a minor, nepios, in his nonage), 'differeth nothing from a servant' — though destined to own all, in his minority he is under restraint like a slave; 'though he be lord of all' (the rightful owner of the whole estate), he has not yet entered on his inheritance (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin, Tertullian): this pictures the church under the old covenant — heirs of the promise, yet held in the bondage of the law as a tutor and schoolmaster until the time of fulfilment, nourished in hope of the liberty to come."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the heir, as long as he is a child, differeth nothing from a servant",
-   "though he be lord of all",
-   "the heir in minority no different from a servant",
-   "the church under the law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
    "Martin Luther"
   ],
+  "range": "1-2",
+  "pericope_label": "Now I say, That the heir, as long as he is a child, differeth nothing from a servant, though he be lord of all; but is under tutors and governors until the time appointed of the father",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The minor heir 'is under tutors (epitropous — guardians of his person) and governors (oikonomous — stewards of his estate)' — placed under the control and care of others during his nonage, not free to act for himself; and this subjection lasts only 'until the time appointed of the father' (prothesmia — a fixed term, set by the father, at which the heir comes of age and enters his freedom and inheritance) — Barnes, Robertson."
+    "summary": "Calvin objects that whoever divided the chapters improperly separated this paragraph from the preceding, since it is nothing else than the concluding section in which Paul explains the difference between us and the ancient people by a third comparison, drawn from the relation a person under age bears to his tutor; quoting Chandler he makes the first of the two officials the preceptor or tutor and the second the guardian who takes care of the heir’s person and estate. Gill adds the rabbinic practice, that no guardian was appointed for an adult but one was for an infant, and that guardians were chosen not from women, servants or common people but from men of substance, integrity and wisdom."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry supplies the point of the figure, that the Old Testament church was like a child under age, a dispensation of grace and yet comparatively one of darkness and bondage."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the two words nearly similar and glosses the first as executor and the second as the one who superintends the concerns of the family and estate, such as we call trustee. Wesley divides them in six words, the one as to his person and the other as to his substance."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther: Moses, as tutor and governor, held the church under the law's discipline until the appointed time — the coming of Christ, who ends the time of law and begins the time of grace."
+    "prevalence": "single",
+    "summary": "Luther remarks on the vehement affection with which Paul goes about to call the Galatians back, gathering similitudes from experience, from Abraham, from the Scriptures and from time, so that he often seems to renew the whole matter again; ignorant people, he adds, are sooner persuaded with similitudes and examples than with deep and subtle disputations, and will rather behold an image well painted than a book well written, so that Paul lies in wait with a certain holy subtlety to take them unawares. He closes on the purpose of the restraint, that the subjection is very profitable for the heir, since otherwise through folly he would soon waste all his goods."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott makes the distinction one between guardians of the person and stewards of the property, and would translate the pair as guardians and stewards; on the time appointed he denies that the father fixed the minority in either Greek or Roman law, dismisses the suggestion of larger paternal powers in Galatia as a subtlety in which learning overreaches itself, since the Apostle’s short sojourn is unlikely to have acquainted him with the local code, and concludes that the application of the analogy has modified the statement of it, the minority of the human race being fixed by the heavenly Father though an earthly father must conform to a law other than his own will. Barnes warns that tutor with us means instructor, which is not the sense, the Greek properly meaning steward or manager — one, usually a slave or freedman, who trained the boys and accompanied them to school — while the second word is a house-manager with authority over the servants and the accounts, commonly a slave rewarded with the office, having charge of the sons in pecuniary matters; he then withdraws the precision, saying it is not necessary to mark the difference with great accuracy, and takes the time appointed as fixed by the father if living or by his will if dead, so that the son cannot claim the property merely on coming of age. Robertson reports the papyri, where the first word is frequent as guardian of an orphan minor and the second appears as estate manager and treasurer, and states a gap in the evidence, that no example is known of the second used of one in charge of a minor and no other where both occur together; he passes on Burton’s argument that no legal distinction is meant, the terms designating two functions of one person, and notes that under Roman law the guardian had charge until fourteen and the curator until twenty-five, with Ramsay reporting the same law in the Graeco-Phrygian cities except that a father in Syria appointed both officers where a Roman father appointed only the first."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the two officials divide: Ellicott gives guardian of the person and steward of the property, Calvin with Chandler reverses it, Clarke makes them executor and trustee, and Robertson reports Burton’s view that no legal distinction is meant at all.",
+   "Whether the father fixed the term of minority: Barnes says he did and that the son cannot claim on coming of age, while Ellicott denies it held in Greek or Roman law and treats the clause as the analogy bending to its application."
+  ],
+  "outliers": [
+   "Barnes and Robertson each build a careful lexical distinction and then decline to rest anything on it.",
+   "Calvin treats the chapter division itself as an editorial error that obscures the argument."
+  ],
   "themes": [
-   "under tutors and governors until the time appointed of the father",
-   "the heir under tutors until the appointed time",
-   "the law's temporary discipline",
-   "the father's fixed term"
+   "heir",
+   "minority",
+   "guardianship",
+   "Roman law",
+   "analogy"
+  ],
+  "excluded_voices": [
+   "Chrysostom",
+   "Tertullian"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "3": {
@@ -101,65 +96,68 @@
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "3",
+  "pericope_label": "Even so we, when we were children, were in bondage under the elements of the world",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill restricts the we to the Jews, since of such the apostle is only speaking, having addressed the Gentiles separately just before. Calvin sets out the alternative for the disputed phrase briefly, that the word may mean literally outward and bodily things or metaphorically rudiments, and prefers the latter; his answer to why things of spiritual signification should be called worldly is that the truth was not enjoyed in a simple form but involved in earthly figures, so that what was outward must have been of the world, though a heavenly mystery lay concealed under it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the we of the whole Jewish people, calls the disputed phrase a mere Jewish expression for the principles of this world, meaning the rudiments of the Jewish religion, and builds it into an argument: the law was not the science of salvation but only its alphabet, which in the Gospel is composed into a most glorious system of divine knowledge, so that as the alphabet is nothing of itself unless compounded into syllables, words and discourses, the law taken by itself gives no salvation — it contains the outlines of the Gospel, but the Gospel alone fills them up. Wesley glosses the we as the church of God and puts the same figure in a phrase, that the typical observances were like the first elements of grammar, the A B C of children, and of so gross a nature as hardly to carry our thoughts beyond this world."
+   },
+   {
+    "school": "lutheran",
+    "prevalence": "single",
+    "summary": "Luther reads the verse as custody with hope in it: when we were little children we were heirs, having the promise of the inheritance to come, but because the fulness of time was not yet come, Moses our tutor and schoolmaster held us in captivity with our hands bound, so that we could bear no rule nor possess our inheritance; yet as an heir is nourished and maintained in hope of the liberty to come, so Moses nourished us with the hope of the promise to be revealed at the time appointed. He distinguishes two ways in which the time of the law ends, once by the coming of Christ in the flesh at the time appointed of his Father, and again in that the same Christ comes to us daily and hourly in spirit, since though he redeemed and sanctified all at once with his own blood, we are not yet perfectly pure."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul applies the figure: 'we' (chiefly the Jews, but including all before Christ), 'when we were children' (in religious nonage), 'were in bondage' under the old dispensation; 'the elements (stoicheia, rudiments) of the world' meaning the elementary, rudimentary teaching of religion — the ceremonial law, the ABCs or first principles, called 'of the world' because outward, material, mundane, transient and of little value, including no clear recognition of spiritual things (the same phrase as Colossians 2:8, 20; Barnes, Ellicott, Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the 'elements' are rudiments — under the old covenant we did not enjoy the truth in a simple form, but involved in earthly figures; what was outward was 'of the world,' though a heavenly mystery was concealed under it."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Some older commentators (noted by Ellicott and Robertson) took 'the elements of the world' in the sense of the physical elements of nature or the heavenly bodies — either as objects of Gentile worship or as marking the times of the Jewish festivals; but the rudimentary-teaching sense is generally preferred."
+    "summary": "Barnes limits the we to Jews and argues it against Bloomfield on two grounds, that the heathen in no sense sustained such a relation to the law and the promises, and that the wider reading would not be pertinent to Paul’s design; he traces the disputed word to a row or series, then a little step, then a pin or peg such as the gnomon of a dial, then anything elementary like a sound or a letter, noting that the New Testament applies it both to the first principles of religion and to the component parts of the physical world. Ellicott admits the Jews in the first instance but includes the Gentiles, since the Apostle speaks from the Christian point of view, meaning all who are now Christians whatever their antecedents, both having been subject to law before Christ, with what is said of the law of Moses applying more faintly to the law of conscience and of nature; he alone records that the older commentators mostly took the word in the special sense of the elements of nature or the heavenly bodies, either as objects of Gentile worship or as marking the Jewish festivals, and judges the other sense best, the rudiments of religious teaching, called worldly because mundane and material and including no clear recognition of spiritual things. Robertson lists the same range of meanings, notes that the papyri illustrate every one of them and that some argue here for the heavenly bodies, points to Burton’s excursus, and follows Lightfoot in taking Paul to mean the rudimentary character of the law as it applies to Jews and Gentiles alike."
    }
   ],
   "debates": [
-   {
-    "question": "What are 'the elements (stoicheia) of the world'?",
-    "sides": [
-     {
-      "position": "The rudiments / first principles of religion — the ceremonial law, outward and elementary",
-      "holders": [
-       "Calvin",
-       "Barnes",
-       "Clarke",
-       "Wesley",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "The physical elements of nature or the heavenly bodies (older view, noted but not preferred)",
-      "holders": [
-       "older commentators (noted by Ellicott, Robertson)"
-      ]
-     }
-    ]
-   }
+   "Whom the we includes: Gill, Barnes and Clarke restrict it to Jews, Barnes arguing the point explicitly against Bloomfield, while Ellicott, Robertson and Wesley extend it to Gentiles as well.",
+   "What the elements of the world are: Ellicott reports that the older commentators took them for the heavenly bodies and rejects that for rudiments of religious teaching; Robertson notes some still argue for the heavenly bodies; Calvin and Clarke both prefer rudiments."
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke turns the alphabet metaphor into a complete account of the law’s insufficiency, holding that it supplies the outlines of the Gospel which only the Gospel can fill up."
+  ],
   "themes": [
-   "when we were children, were in bondage under the elements of the world",
-   "the church in its nonage in bondage",
-   "the elements of the world",
-   "rudiments or physical elements"
+   "minority",
+   "elements of the world",
+   "rudiments",
+   "bondage",
+   "Jews and Gentiles"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
   }
  },
  "4": {
@@ -171,114 +169,81 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem",
-   "Martin Luther"
+   "Martin Luther",
+   "Cyril of Jerusalem"
   ],
+  "range": "4-5",
+  "pericope_label": "But when the fulness of the time was come, God sent forth his Son, made of a woman, made under the law, to redeem them that were under the law, that we might receive the adoption of sons",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The fulness of the time' was the complete, predetermined season ordained by God — when prophecy converged, the world lay at peace under Rome, the Greek tongue was widespread, and all was ripe for the Redeemer; 'God sent forth his Son' implies the Son's pre-existence and deity (he was with God before he was sent, John 1:1; Philippians 2:6); 'made under the law,' subject to its precept and curse, to redeem those under it. On 'made (born) of a woman,' Ellicott and Robertson hold it a common idiom (Matthew 11:11) denoting simply Christ's true humanity, with no direct reference to the miraculous conception (though his deity is affirmed by 'his Son')."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin (with Gill, Clarke, Wesley): 'made of a woman' denotes the virgin birth — Christ formed of the substance of his mother, not by ordinary generation; he, the eternal Son, having two natures, became subject to the law in our room, that exemption from it might be obtained for us; the redemption is from the law with all its appendages, not from the obedience owed to its moral rule."
+    "summary": "Gill dates the fulness of time from the covenant between God and his Son, fixed before the civil government ceased from Judah and before the second temple fell, particularly in the seventy weeks, and notes that the Jews own the time to be fixed and hold the Messiah shall come at it whether they are worthy or not; he narrows the redemption sharply, holding that Christ was not sent to redeem all that were under the law, since though all mankind were included in it as a covenant of works with Adam, only some out of every kindred, tongue, people and nation are redeemed, even all the elect. Calvin forbids the question of the delay, since the time belonged to God alone to judge and the consideration ought to restrain all curiosity; he turns adoption into a polemic, holding that the fathers were certain of their adoption but did not so fully enjoy it, that receive is put for actual possession, and that those who now burden the church with an excess of ceremonies defraud her of the just right of adoption."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: against the heretics who make Christ's birth a phantom, or the child of Joseph and Mary — Mary was a virgin betrothed, called Joseph's 'wife' only by betrothal; the Son was truly born of the Virgin."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'made of a woman' refer to the virgin birth or simply to Christ's true humanity?",
-    "sides": [
-     {
-      "position": "The virgin birth / miraculous conception — formed of his mother's substance, not by ordinary generation",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Clarke",
-       "Wesley",
-       "Cyril"
-      ]
-     },
-     {
-      "position": "A common idiom for true humanity; no direct reference to the miraculous conception (though it agrees with it)",
-      "holders": [
-       "Ellicott",
-       "Robertson"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "when the fulness of the time was come, God sent forth his Son",
-   "made of a woman, made under the law",
-   "the incarnation in the fulness of time",
-   "the pre-existent Son made man"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The first purpose of the incarnation: 'to redeem (exagorazo — buy back, ransom) them that were under the law' — to free those held in bondage under the law's precept and curse; the second, 'that we might receive the adoption of sons (huiothesia)' — being redeemed from slavery, believers are taken into God's family as sons, with the full rights of sonship (Barnes, Robertson)."
+    "summary": "Clarke reads the miraculous conception straight out of the clause, saying the Son was produced by the power of God in the womb of the Virgin without any intervention of man, and glosses the verb of redemption as paying down a price and so buying them off from the necessity of circumcision, sacrifices and ablutions. Wesley says the same of the conception, that he was miraculously made of the substance of a woman, a virgin, without the concurrence of a man."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): Christ entered the holy place by his own blood and obtained eternal redemption, so that those once slaves under the law become free sons and heirs; redemption issues in adoption."
+    "prevalence": "single",
+    "summary": "Luther meets the objection that Paul seems almost in reproach to call the Virgin only a woman, which was not well taken even by some of the ancient doctors who would have had him say virgin rather than woman, defending him on the ground that he is treating the highest and principal matter of all. He finds the whole of Christology in the verse, the person in God sent his Son born of a woman, comprehending the divine and human natures, and the office in made under the law to redeem them that were under the law; and he asks by what merit the blessing was received, answering by none at all, freely and being utterly unworthy, yet not without merit, since the merit is Christ’s and not ours."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem attacks two errors at once, refusing to endure the heretics who teach Christ’s coming as a phantom and abhorring equally those who say the Saviour’s birth was of husband and wife and have dared to call him the child of Joseph and Mary because it is written that he took unto him his wife; his answer is from usage, that as Rachel was called the wife of Jacob before the wedded state merely because there was a promise, so Mary was called the wife of Joseph because she had been betrothed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes puts the question of the delay and admits defeat, asking why four thousand dark and gloomy years were allowed to roll on and granting that perhaps no entirely satisfactory answer can be given, though God undoubtedly saw reasons we cannot see and shall approve if they are disclosed. Ellicott finds in the phrase a very clear expression of the conception of religion as progressive, divided into periods and culminating in Christianity; he denies flatly that there is any allusion here to the miraculous conception, preferring born of a woman as a phrase of common use intended to bring out not the divinity but the true humanity of Christ, says the pre-existence of the Son is distinctly recognised here, and states that redemption is followed by adoption, admission to the kingdom implying admission to the family. Robertson agrees that there is no direct reference to the Virgin Birth, the words meaning simply coming from a woman as all men do, but adds that the deity had just been affirmed by the words his Son so that both natures stand together, that the fact of the Virgin Birth agrees perfectly with the language though the language does not assert it, and and that the deity had just been affirmed by the words his Son, so that both natures stand together."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether made of a woman refers to the virgin birth: Clarke and Wesley read the miraculous conception directly out of it, while Ellicott and Robertson both deny any allusion, Robertson adding that the doctrine is nonetheless compatible with the language.",
+   "Whether the delay of the incarnation may be asked about: Barnes raises the question and confesses that no entirely satisfactory answer can be given, where Calvin rules the enquiry out as presumption.",
+   "How far the redemption extends: Gill confines it to the elect out of every nation, while Ellicott takes it of both Jew and Gentile under the condemnation of the law they were severally subject to."
+  ],
+  "outliers": [
+   "Cyril of Jerusalem defends the virgin birth against two opposite errors at once, phantom-Christology on one side and a natural conception on the other, arguing from the way betrothal made Rachel Jacob’s wife before the marriage.",
+   "Luther records that some of the ancient doctors were unhappy with Paul’s own choice of the word woman here."
+  ],
   "themes": [
-   "To redeem them that were under the law, that we might receive the adoption of sons",
-   "the twofold purpose: redemption and adoption",
-   "freed from the law, taken into God's family",
-   "redemption issuing in sonship"
+   "fulness of time",
+   "incarnation",
+   "virgin birth",
+   "pre-existence",
+   "adoption"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "6": {
@@ -290,41 +255,77 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem",
-   "Martin Luther"
+   "Martin Luther",
+   "Cyril of Jerusalem"
   ],
+  "range": "6",
+  "pericope_label": "And because ye are sons, God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "'Because ye are sons' (already adopted), God sends 'the Spirit of his Son' — the Holy Spirit, the Spirit of Christ — 'into your hearts'; the Spirit is the seal and evidence of sonship, called 'the Spirit of his Son' because he proceeds from and belongs to the Son as to the Father (Romans 8:9); and the Spirit makes the believer cry 'Abba, Father' — the Aramaic and Greek words together expressing the intimate, confident address of a child to his father, both Jew and Gentile crying to God as Father (Barnes, Robertson)."
+    "summary": "Gill defines the sonship by exclusion, that it is not in so high a sense as Christ is Son, nor so low as all men are God’s offspring, nor as magistrates are called children of the most High, nor merely by profession, but by virtue of adoption owing to free and sovereign grace. Calvin makes the opening conjunction strictly evidential: the adoption must have preceded the testimony given by the Holy Spirit, but the effect is the sign of the cause, so that in venturing to call God your Father you have the direction of the Spirit of Christ and it is therefore certain that you are sons, the Spirit being the earnest and pledge of adoption."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the verse as trinitarian and numbers the persons in an order of his own, calling God the Father the first person of the glorious Trinity, the Spirit sent forth the second person, and the Son whose Spirit it is the third; the cry of Abba he treats as the fullest and most satisfactory evidence that Father, Son and Spirit had become their portion. Wesley makes the doubled address national rather than affectionate, holding that the Hebrew and Greek words are joined to express the joint cry of the Jews and the Gentiles."
+   },
+   {
+    "school": "lutheran",
+    "prevalence": "single",
+    "summary": "Luther takes the sending of the Spirit as two distinct things and cuts one off. In the primitive church the Holy Ghost was sent in a manifest and visible appearance, coming on Christ at Jordan in the likeness of a dove and on the Apostles in the likeness of fire, which was necessary then since it was expedient that the church be established by many miracles because of the unbelievers, strange tongues being a sign not to them that believe but to them that believe not. But after the church was gathered and confirmed with those miracles, he concludes, it was not necessary that this visible sending continue any longer; the second sending, by the word into the hearts, remains."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin, Luther): the Spirit is the personal, living Spirit who is God, an incidental witness to the Trinity; he it is who works in the heart the filial cry, assuring the believer of his adoption."
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem argues at length from the titles that one and the same is meant under different names: the Holy Spirit and the Comforter are the same, the Comforter is the same as the Spirit of Truth, and he is called both the Spirit of God and the Spirit of the Father."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes stands alone in denying that the spirit here referred to means the Holy Spirit as such, or the miraculous endowments of the Holy Spirit, taking it instead for the spirit which made them like the Lord Jesus and by which they were enabled to approach God as his children, the exalted Son having the spirit appropriate to that relation and the adopted having the same. Ellicott keeps the causal sense of the conjunction on balance while noting it may possibly mean in proof that, puts the substance as filial emotion since it is not you that speak but the Spirit of Christ who prompts your prayers, and calls the doubled address a reduplication of loving entreaty, collecting parallels for a Greek word repeated in Aramaic or the reverse — Abaddon and Apollyon, the old serpent called the Devil and Satan. Robertson settles the conjunction as causal, adds that we were sons in God’s elective purpose and love, identifies the Spirit plainly as the Holy Spirit proceeding from the Father and the Son, and attends to the verb, noting that the participle agrees with the neuter noun by grammatical gender rather than in fact and that the word is an old, here rare, onomatopoetic term meaning to croak as a raven, covering any inarticulate cry like the unuttered groanings elsewhere which God understands."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What Spirit is meant: Barnes denies it is the Holy Spirit as such, taking it for a disposition conformed to Christ, while Robertson, Cyril of Jerusalem and Clarke all identify it directly with the Holy Spirit.",
+   "What the doubled address means: Ellicott makes it a reduplication of loving entreaty, Wesley the joint cry of Jew and Gentile, Robertson an inarticulate cry named from the croaking of a raven."
+  ],
+  "outliers": [
+   "Clarke numbers the persons of the Trinity as Father, Spirit and Son, making the Holy Ghost the second person and Christ the third.",
+   "Luther argues that the visible sending of the Spirit was necessary only while the church was being established by miracles and ceased when it was confirmed."
+  ],
   "themes": [
-   "God hath sent forth the Spirit of his Son into your hearts, crying, Abba, Father",
-   "the Spirit of the Son sent into the heart",
-   "the filial cry Abba, Father",
-   "the Spirit the seal of adoption"
+   "adoption",
+   "Spirit of the Son",
+   "Abba",
+   "assurance",
+   "Trinity"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
+   }
   }
  },
  "7": {
@@ -338,38 +339,68 @@
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "7",
+  "pericope_label": "Wherefore thou art no more a servant, but a son; and if a son, then an heir of God through Christ",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul draws the conclusion ('wherefore'): 'thou art no more a servant (slave, in bondage under the law) but a son' — the believer's status is changed from slave to son; and 'if a son, then an heir' — sonship carries heirship — 'an heir of God' (heir to the inheritance God gives) 'through Christ' (by virtue of union with Christ, the great Heir; Barnes, Robertson)."
+    "summary": "Gill catalogues what is left behind, that in a natural state they were the servants of sin, the vassals of Satan, slaves to the world and its lusts and in bondage to the law, and are now freed from all of these, particularly from the law and the spirit of bondage it brought, being delivered by the spirit of adoption. Calvin qualifies the contrast he has been drawing throughout: in the Christian Church slavery no longer exists but the condition of the children is free, yet the fathers under the law were slaves only in the sense that their freedom was not yet revealed but lay hidden under the coverings and yoke of the law; the ancients were also sons of God and heirs through Christ, and we hold the same character in a different manner, since we have Christ present with us and so enjoy his blessings."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls this heirship the most extraordinary of all, since it is not an heirship of any tangible possession either in heaven or earth, nor to possess a part or even the whole of either, but to possess Him who made all things — not God’s works, but God himself; he also glosses the servitude left behind as dominion of sin on one side and obligation to the Mosaic ritual on the other. Wesley says the same more briefly, heir of all the promises and of the all-sufficient God himself."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): the believer, once a slave under the law, is now a free son and heir of all God's blessings; the whole argument of the epistle — freedom in Christ — is sealed here."
+    "prevalence": "single",
+    "summary": "Luther turns the verse into a scene: the decree is pronounced in heaven that there is no bondage any more but mere liberty and adoption, and when he asks who brings this liberty his answer is the groaning itself. The Father offers by his promise his grace and fatherly favour, and all that remains is that it be received, which is done when I again with this groaning cry and with a childly heart assent to the name of Father; there the Father and the Son meet, and the marriage is made up without all pomp and solemnity, nothing at all coming between, no law nor work being required — for what, he asks, should a man do in these terrors and horrible darkness of temptations?"
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott says the singular is used to individualise the expression and bring it home pointedly to each reader; he grounds the inference from sonship to heirship in law rather than in rapture, noting that the Roman law, which the Apostle seems to be following, treated all the sons as heirs and provided for an equal division of the property between them, and records a textual point, that the true reading here appears to be through God rather than through Christ, which he grants is a somewhat unusual expression. Robertson agrees that Paul changes to the singular to drive the point home to each one, since the spiritual experience has set each one free. Barnes glosses the servitude as that of sin, or of being bound under the oppressive rites and ceremonies of the law, and holds the son entitled to all the privileges of a son and so an heir through the Redeemer and with him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the ancients were in a different condition or only under a different administration: Calvin insists they were also sons and heirs through Christ, differing from us only in that we have Christ present, where Barnes and Clarke describe the earlier state simply as servitude."
+  ],
+  "outliers": [
+   "Clarke defines the inheritance as God himself rather than anything God has made, refusing to let it mean any possession in heaven or on earth.",
+   "Ellicott reports that the better attested reading is through God, not the through Christ of the received text."
+  ],
   "themes": [
-   "thou art no more a servant, but a son; and if a son, then an heir of God through Christ",
-   "the believer no longer a servant but a son and heir",
-   "sonship carrying heirship",
-   "liberty in Christ"
+   "sonship",
+   "heirship",
+   "liberty",
+   "Roman law",
+   "textual reading"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.63
+   }
   }
  },
  "8": {
@@ -380,205 +411,80 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul recalls the Galatians' former state: 'when ye knew not God' (in their heathen ignorance), 'ye did service (edouleusate — were in bondage, served as slaves) unto them which by nature are no gods' — the idols they once worshipped, which had no real divinity, being only the work of men's hands or the creatures of imagination; the Galatians had served what was nothing (Barnes, Robertson)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Paul reminds them of their former slavery to false gods in order to expose the folly of returning, now that they know the true God, to any form of bondage."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when ye knew not God, ye did service unto them which by nature are no gods",
-   "the Galatians' former bondage to false gods",
-   "idols that are no gods",
-   "slavery to nothing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "8-9",
+  "pericope_label": "Howbeit then, when ye knew not God, ye did service unto them which by nature are no gods. But now, after that ye have known God, or rather are known of God, how turn ye again to the weak and beggarly elements, whereunto ye desire again to be in bondage?",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul says they now 'know God,' but corrects himself — 'or rather are known of God' — for their knowing him springs from his first knowing (choosing, owning) them; grace is the source. The astonished rebuke: 'how turn ye again to the weak and beggarly elements (the same stoicheia, the rudiments)' — the ceremonial observances, called 'weak' (powerless to justify or save) and 'beggarly' (poor, bringing no spiritual riches) — 'whereunto ye desire again to be in bondage' (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): to take up the law's ceremonies as necessary to righteousness is to return to slavery — exchanging the liberty of Christ for the very yoke they had escaped."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "after that ye have known God, or rather are known of God",
-   "how turn ye again to the weak and beggarly elements",
-   "the rebuke for turning back",
-   "weak and beggarly elements"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul instances their Judaizing: 'ye observe (paratereisthe — scrupulously watch) days (sabbaths and fast-days), and months (new moons), and times (the seasonal feasts — Passover, Pentecost, Tabernacles), and years (the sabbatical year and jubilee)' — taking on the whole Jewish ceremonial calendar, an exhaustive list of Mosaic observances. Barnes extends the warning beyond the Jewish feasts to all days not commanded in Scripture — including saints' days and even Protestant festivals — as equally inconsistent with gospel freedom; Ellicott (citing Origen's spiritual reading) holds Christian seasons are not necessarily condemned, but belong to the 'elements,' and it is safest to follow church order intelligently."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin (with Wesley, Robertson, Luther): no condemnation is given to the civil reckoning of days (the order of nature, Genesis 8:22), nor to free and orderly Christian observance void of superstition; what Paul reproves is the observance that binds the conscience by religious considerations — treating days as holy in themselves, one day more holy than another, calendar-keeping as necessary to the worship of God and to righteousness (the Judaizers' demand). Robertson notes Paul kept these feasts as a Jew but objected to Gentiles taking them as a means of salvation; Luther: the false apostles taught these as necessary to righteousness, and consciences are not to be so bound."
-   }
-  ],
-  "debates": [
+    "summary": "Gill allows that by the light of nature and the works of creation the heathen might know there was a God, but holds they did not know who he was, calling by that name mortal men, or creatures, or stocks and stones and images of men’s device. Calvin says the comparison is not an additional argument, the point being already proved beyond doubt, but is meant to make their fall appear more criminal: it is not wonderful that they went astray formerly, since wherever ignorance of God exists there must be dreadful blindness, but it is disgraceful that in the midst of light they should fall into such gross errors, so that the Galatians were less excusable for corrupting the gospel than they had been for idolatry. He adds the rule that until we are enlightened in the true knowledge of one God we always serve idols whatever pretext we throw over the false religion, supplies parallels from the Greek writers for the corrective particles, and says no language can express the base ingratitude of departing from God once he has been known, which is to forsake of our own accord the light, the life and the fountain of all benefits."
+   },
    {
-    "question": "Does this verse condemn all observance of holy days, or only Judaizing/meritorious observance?",
-    "sides": [
-     {
-      "position": "Only the observance that binds conscience and is made necessary to righteousness; not civil order or free Christian observance",
-      "holders": [
-       "Calvin",
-       "Wesley",
-       "Robertson",
-       "Luther"
-      ]
-     },
-     {
-      "position": "Extends to all days not commanded in Scripture — saints' days and even Protestant festivals are as inconsistent with gospel freedom",
-      "holders": [
-       "Barnes"
-      ]
-     },
-     {
-      "position": "Christian seasons are not necessarily condemned, but belong to the 'elements'; follow church order intelligently (citing Origen)",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Ye observe days, and months, and times, and years",
-   "the Galatians' observance of the Jewish calendar",
-   "which observance is condemned",
-   "righteousness by calendar a bondage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry adds that they were then under the worst of slaveries, doing service to those who, though accounted gods, were really no gods but mere creatures."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Paul's tender fear: 'I am afraid of (for) you, lest I have bestowed upon you labour in vain' — he dreads that all his toil in planting the gospel among them may prove fruitless if they fall back into bondage; if they abandon the gospel of grace for the law, his ministry among them would have come to nothing, their relapse frustrating his labour (Barnes, Robertson)."
+    "summary": "Clarke grants that the great body of these churches were converts from among the Jews or proselytes to Judaism, but says this verse shows some had been converted from heathenism, unless the Apostle is addressing those who had passed from heathenism into Judaism and thence into Christianity, which he thinks the more likely reading and the only one that makes the two verses consistent. He glosses the rudiments as rites too weak to counteract sinful habits and too poor to purchase pardon and eternal life. Wesley reads the same two adjectives as a pair, weak because utterly unable to purge the conscience from guilt or give filial confidence, and poor because incapable of enriching the soul with the holiness and happiness they are heirs to."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): the danger is real, for to seek righteousness by the law is to fall from grace; Paul's fear shows how serious their drift was."
+    "prevalence": "single",
+    "summary": "Luther reads the correction first as anxiety, fearing they had lost God utterly, as if the Apostle were saying, alas, are ye come to this point, that now ye know not God but return again from grace to the law, yet notwithstanding God knoweth you; and then as doctrine, that our knowledge is rather passive than active, consisting in this, that we are rather known of God than that we know him, so that all our endeavour to know and apprehend God is to suffer God to work in us."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes takes the address in these verses to be evidently to those Galatians who had been heathen, marking the transition by the adversative particle, since the previous verses had the Jewish converts more particularly in view and the Gentiles are now added as a condition of worse servitude still; on the correction he says its object is to avoid the impression that their acquaintance with God was owing to themselves. Ellicott notes that Paul elsewhere calls the gods of the heathen devils, explains that the verb for knowing here differs from the one just used and brings out the process of coming to knowledge from previous ignorance, and holds the correction offered because speaking of them as coming to know God might lay too much stress on the human side, any true and saving knowledge of God having for its converse the being known of God, that is, recognition and acceptance by him. Robertson gives the same reference for the false gods, adding that Paul terms them the so-called gods and the worship one of images made by hands; he notes the two participles as ingressive and passive forms of one verb, says Paul quickly turns it round to the standpoint of God’s elective grace, and calls the question that follows, in Bengel’s phrase, a question full of wonder."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whom these verses address: Barnes takes them as evidently spoken to former heathen, marked off by the adversative particle, while Clarke thinks it more likely they address converts who had passed from heathenism into Judaism and thence into Christianity."
+  ],
+  "outliers": [
+   "Luther converts a corrective clause into an epistemology, holding that all human endeavour to know God consists in suffering God to work in us.",
+   "Calvin measures the Galatians’ present fault against their former idolatry and finds the present one less excusable."
+  ],
   "themes": [
-   "I am afraid of you, lest I have bestowed upon you labour in vain",
-   "Paul's fear that his labour was in vain",
-   "dread of their relapse",
-   "pastoral solicitude"
+   "idolatry",
+   "knowledge of God",
+   "divine initiative",
+   "weak and beggarly elements",
+   "relapse"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
   }
  },
- "12": {
+ "10": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -590,83 +496,78 @@
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "10-13",
+  "pericope_label": "Ye observe days, and months, and times, and years. I am afraid of you, lest I have bestowed upon you labour in vain. Brethren, I beseech you, be as I am; for I am as ye are: ye have not injured me at all. Ye know how through infirmity of the flesh I preached the gospel unto you at the first",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul turns from argument to tender appeal: 'brethren, I beseech you, be as I am' — be free from the law, as I am — 'for I am as ye are' (I became as a Gentile, free from the law, for your sake, 1 Corinthians 9:21); he asks them to follow his example of liberty, and adds 'ye have not injured me at all' — he bears them no personal grievance, his appeal springing not from any wrong done to him but from love and concern for them (Barnes, Robertson, Henry)."
+    "summary": "Gill takes the days to be the seventh-day sabbaths, distinguishing a religious observation of times from the civil division of them, which is not only lawful but necessary. Calvin guards the same distinction, that no condemnation is given here to the observance of dates in civil society, since the order of nature out of which this arises is fixed and constant, months and years being computed by the revolution of the sun and moon,. He calls the expression of fear harsh and says it must have filled the Galatians with alarm; on the turn to entreaty he says it is the part of a wise pastor to consider not what wanderers may justly deserve but what is likeliest to bring them back, and he takes the infirmity generally, of whatever had a tendency to make Paul appear mean and despised."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the address itself as the point, that Paul styles them brethren though he knew their hearts were in great measure alienated from him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says they superstitiously regard the sabbaths and particular days of their own appointment, and offers both readings of be as I am, the doctrinal one that Paul was once as zealously addicted to Jewish rites as they now are, and the affectionate one that they should be as loving to him as he is to them. On the infirmity he resists the whole construction others build, allowing that the apostle was much afflicted when he first preached but insisting this might have been only an occasional affliction and not a continual and incurable infirmity, as some have too hastily conjectured. Wesley gives the days as Jewish sabbaths but draws a limit at the other end of the list, that the years cannot mean sabbatic years since these were not to be observed outside the land of Canaan."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): after sharp rebuke, Paul softens, calling them 'brethren' and pleading with affection; the pastor mixes severity with love."
+    "prevalence": "single",
+    "summary": "Luther counts the Galatians’ reception of him the first and greatest benefit he had of them, since his cross did not offend them at all."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes denies outright that the Sabbath properly so called is meant, since it was part of the Decalogue and was observed by the Saviour himself and by the apostles, taking the days instead for the numerous Jewish festivals including many the Jews had added to those of the Old Testament. On be as I am he reports the interpretive disorder frankly, that there is great brevity in the passage and no little obscurity and a great many different interpretations, listing Locke’s that you and I should be as if we were all one, Koppe’s imitate my example for I though a Jew by birth care no more for Jewish rites than you,. Ellicott gives the days as especially the Jewish sabbaths, notices that the list mounts in an ascending scale from days to months to seasons to years, corrects the second term to the new moon, chooses Koppe’s sense of be as I am and expands it — Paul lays no stress on his pure Jewish descent, claims no privilege from circumcision on the eighth day, but stripped himself of all this and became a Gentile among Gentiles — and concludes that Paul was detained in Galatia accidentally by illness and that this led to his preaching there. Robertson glosses the verb as standing beside and watching carefully, often with scrupulous care, and adds that Paul knew the meticulous observance of the Pharisees to a nicety and that it hurt him to the quick to see these Gentile Christians drawn into the spider-web of Judaizing Christians; he notes that the construction after the verb of fearing concerns what has actually happened, so that Paul fears the worst has already come, and refuses a diagnosis of the illness, since all we can get is that the preaching was due to sickness of some kind."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the Sabbath is among the days observed: Gill, Clarke, Ellicott and Wesley all include it, while Barnes rules it out on the ground that it belongs to the Decalogue and was kept by Christ and the apostles.",
+   "What be as I am means: Barnes reports several incompatible readings without choosing, Ellicott adopts the one about renouncing Jewish privilege, and Clarke offers both that and an affectionate sense.",
+   "What the infirmity was: Ellicott and Robertson infer an illness that detained Paul and occasioned his preaching, while Clarke holds it may have been merely occasional and warns against conjecturing a permanent affliction."
+  ],
+  "outliers": [
+   "Robertson dates Paul’s fear grammatically, arguing from the indicative that he fears the worst has already happened rather than that it may.",
+   "Wesley excludes sabbatic years from the list on the ground that they were never binding outside Canaan."
+  ],
   "themes": [
-   "Brethren, I beseech you, be as I am; for I am as ye are",
-   "ye have not injured me at all",
-   "Paul's affectionate appeal to be as he is",
-   "pleading from love"
+   "observance of days",
+   "sabbath",
+   "pastoral fear",
+   "imitation",
+   "infirmity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul recalls that 'through infirmity (weakness, sickness) of the flesh I preached the gospel unto you at the first' — it was some bodily ailment that was the occasion of, or attended, his first preaching among the Galatians; he labored among them under a real physical weakness or illness (perhaps the same 'thorn in the flesh,' 2 Corinthians 12:7), his outward condition unimpressive, even repellent (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): despite Paul's weak and afflicted appearance, the Galatians had received his gospel gladly; their first love stands in sharp contrast to their present coldness."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "through infirmity of the flesh I preached the gospel unto you at the first",
-   "Paul first preaching amid bodily infirmity",
-   "the thorn in the flesh",
-   "their warm first reception"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
@@ -677,129 +578,72 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's 'temptation (trial) which was in my flesh' (his bodily affliction, a trial to him and a test to them) they 'despised not, nor rejected (loathed, spurned)' — his infirmity did not make them turn from him; rather they received Paul 'as an angel (messenger) of God' — even 'as Christ Jesus' himself — with the highest reverence and love, as though Christ spoke in him (Barnes, Robertson)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): such was their first devotion that they honoured the afflicted apostle as if he were Christ — which makes their present readiness to forsake him the more grievous."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "my temptation which was in my flesh ye despised not, nor rejected",
-   "received me as an angel of God, even as Christ Jesus",
-   "receiving Paul as an angel of God",
-   "their warm first devotion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "14-16",
+  "pericope_label": "And my temptation which was in my flesh ye despised not, nor rejected; but received me as an angel of God, even as Christ Jesus. Where is then the blessedness ye spake of? for I bear you record, that, if it had been possible, ye would have plucked out your own eyes, and have given them to me. Am I therefore become your enemy, because I tell you the truth?",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul asks 'where is then the blessedness (the happiness, the self-felicitation) ye spake of?' — the joy and congratulation they once felt at having received the gospel; where had it gone? And the proverbial expression of their love: 'if it had been possible, ye would have plucked out your own eyes (your most precious members) and given them to me' — they would have parted with anything, even their eyes, for Paul's sake (Barnes, Robertson; some find here a hint of Paul's eye-affliction)."
+    "summary": "Gill notes that the Alexandrian copy and some others, with the Latin, read your temptation in my flesh rather than my temptation, meaning that which was a trial to them, whether they would receive him. Calvin reads the same clause as candour, that Paul used no disguise to impose on the Galatians but frankly told them what he was, unlike ambitious men who are ashamed of anything that may lower them in public estimation and who often receive applause before their true character is discovered; on the last verse he observes that though it is commonly said truth begets hatred, truth is never hateful except through the malice of those who cannot endure to hear it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke lists the manuscript witnesses for the variant and observes that the Greek word covers trial of any kind, so the verse may be read either as ye despised not the trial which was in my flesh or as ye despised not your trial, which was in my flesh, meaning what his flesh suffered on their account. On the next verse he says perhaps there is not a sentence in the New Testament more variously translated, offers three renderings, and notes that many manuscripts and versions read where for what and that the verb is omitted altogether in several. Wesley reads the first clause the other way round, that they did not slight him for his temptation, which he identifies with the thorn in the flesh, and glosses the blessedness as that on which they once congratulated one another."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): Paul recalls their once-boundless love to expose, by contrast, the coldness into which the false teachers had drawn them."
+    "prevalence": "single",
+    "summary": "Luther reads the offer of their eyes as praise beyond measure, that they would not only have plucked out their own eyes and given them to him but would have bestowed their lives; and he says they did in fact bestow their lives, since by receiving and maintaining a man the world accounted most execrable they turned on their own heads the hatred of Jews and Gentiles alike. On the last verse he makes Paul’s defence for him: set apart these rebukes and separate them from the doctrine, applying the sharpness and the bitter potion not to your persons but to your disease."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes records the manuscript variety, that many read your for my, that Mill maintains this the true reading and Griesbach hesitates, but judges it unimportant since on either reading the sense is much the same. He denies that the next verse is a question at all, taking it as an exclamation about the happiness of that moment — what blessedness you had then, what tenderness of affection, what overflowing joy — and turns the closing question on the reader: how apt we are to feel that the man who tells us of our faults is our enemy, to treat him coldly and cut his acquaintance, since he gives us pain, and we cannot have pain given us even by the stone we stumble against without momentary indignation. Ellicott states flatly that the true reading is your temptation in my flesh, identifies the affliction with the thorn or rather stake in the flesh described elsewhere, notes that its effects appeared in a personal presence his enemies called mean and that he felt it as a corrective against spiritual pride, and concludes that an attack came on during the visit so that he first preached with health shattered by it. He agrees that where has the strongest attestation, renders the disputed noun as your felicitation of yourselves or your boasted blessedness, strikes the word own from the offer of the eyes, and suggests that your enemy may be a quotation from the Judaising teachers, noting that the enemy was the name by which Paul was commonly called by the party hostile to him in the next century. Robertson translates the variant without argument, says only that if the word means trial here it was a severe one, and is more interested in the verb for not rejecting, an old word meaning to spit out found nowhere else in the New Testament, reporting Clemen’s view that it should be taken literally since people spat out as a prophylactic at the sight of invalids and especially epileptics, while noting that Plutarch uses it of mere rejection. He calls the felicitation a rare word, notes that the offer of the eyes is a second-class condition with the particle unexpressed and is saved from hyperbole by the qualification if possible, raises without settling whether Paul then had eye trouble, and puts the last question in one line, that it is always a risky business to speak the truth, the whole truth, since it may hit and hurt."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the text reads my temptation or your temptation: Ellicott and Robertson take your as certain, Clarke and Gill report both, and Barnes records that Mill preferred your while Griesbach hesitated, judging the question unimportant since the sense is much the same.",
+   "Whether the question about blessedness is a question: Barnes takes it as an exclamation over past happiness, while Ellicott and Clarke read it as asking where that blessedness has gone."
+  ],
+  "outliers": [
+   "Robertson reports a suggestion that the verb for rejecting be taken literally, of the ancient custom of spitting at the sight of invalids and epileptics, and answers it from Plutarch’s figurative usage.",
+   "Ellicott proposes that your enemy is not Paul’s own phrase but a quotation of what his opponents called him."
+  ],
   "themes": [
-   "Where is then the blessedness ye spake of",
-   "ye would have plucked out your own eyes, and have given them to me",
-   "their former blessedness and self-giving love",
-   "the lost first love"
+   "textual variant",
+   "infirmity",
+   "reception of the apostle",
+   "plain speaking",
+   "estrangement"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul asks, with grief, 'am I therefore become your enemy, because I tell you the truth?' — has his faithful telling of the truth (in this very letter, and before) turned their love into hostility? The painful irony being that those who once loved him as Christ now regard him as an enemy, and for no other cause than that he speaks the truth to them; faithfulness has been requited with coldness (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): it is the perpetual experience of faithful ministers that telling unwelcome truth makes them seem enemies; flatterers are loved, truth-tellers resented."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Am I therefore become your enemy, because I tell you the truth",
-   "Paul asking if truth made him their enemy",
-   "love turned to hostility",
-   "the lot of faithful ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
@@ -809,179 +653,82 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "17-20",
+  "pericope_label": "They zealously affect you, but not well; yea, they would exclude you, that ye might affect them. But it is good to be zealously affected always in a good thing, and not only when I am present with you. My little children, of whom I travail in birth again until Christ be formed in you, I desire to be present with you now, and to change my voice; for I stand in doubt of you",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul exposes the Judaizers: 'they zealously affect you (court you, make much of you, pay you eager attention) but not well (not honourably, with no good motive)' — their zeal is a flattering courtship with a selfish end; their real aim being 'they would exclude you (shut you out — from Paul, from gospel liberty, from the wider church)' so 'that ye might affect (court, be devoted to) them' — to make the Galatians dependent on themselves alone (Barnes, Robertson)."
+    "summary": "Gill notes that Paul omits the names of the false apostles, who were unworthy to have them transmitted to posterity, and reads their jealousy as fear that the Galatians should love the apostle more than themselves. Calvin says Paul does more by silence to make them odious than if he had named them, since we usually abstain from naming those whose very names produce dislike; he finds it hard to say whether the concession about zeal refers to Paul or to the Galatians, canvasses both and inclines to the latter; he calls the diminutive for children softer and more affectionate than brethren, expressing not contempt but endearment while suggesting the tender years of those who ought by now to have reached full age, and notes that the style is abrupt, as usually happens in highly pathetic passages, since strong feeling breaks off our words half uttered. The closing wish he calls a most serious expostulation, the complaint of a father so perplexed by his sons’ misconduct that he looks around for advice and knows not to what hand to turn."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry (with Calvin): the false teachers sought to monopolize the Galatians' devotion for their own glory, whereas Paul sought their good; selfish ambition is the mark of the false."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They zealously affect you, but not well",
-   "they would exclude you, that ye might affect them",
-   "the false teachers' self-serving zeal",
-   "selfish ambition masked as zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul grants that zeal itself is not bad: 'it is good to be zealously affected (to be the object of earnest attention, or to be earnest) always in a good thing' — zeal is commendable when its object is good; and his wish is that their zeal for the good be constant, 'not only when I am present with you' but always, steady and not dependent on his presence — unlike the false teachers' selfish and fitful courtship (Barnes, Robertson)."
+    "prevalence": "single",
+    "summary": "Henry contrasts Paul with the false teachers, that he was not one thing among them and another when absent, his affection remaining the same though their disaffection to him had grown."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: true zeal is directed to a good end and endures whether the apostle is present or absent; Paul would have their devotion to the truth steady and constant."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is good to be zealously affected always in a good thing",
-   "not only when I am present with you",
-   "zeal good when in a good cause and constant",
-   "the mark of right zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Paul's deeply affectionate address: 'my little children (teknia)' — a term of the tenderest love, as a parent to little ones, he being their spiritual father; the striking figure that he is 'in travail (the pangs of childbirth) again' for them, as if their relapse had undone his earlier labour, so that he must endure the pains of bringing them to spiritual birth a second time; 'until Christ be formed in you' — until Christ's image, his life and likeness, is fully shaped within them, the aim of all his travail (Barnes, Robertson, Henry)."
+    "summary": "Clarke, finding the English hard for common readers, would translate the verb as meaning that these false teachers endeavour to conciliate your esteem but not on honest principles, working themselves into your good graces; he takes the exclusion to be from the affection of their apostle, so that they might love and hear the newcomers alone, and reads the closing wish as a desire to accommodate his doctrine to their state, not knowing whether they need stronger reprehension or gentler dealing. Wesley glosses the zeal as an extraordinary regard not according to knowledge, the exclusion as from Paul and from the blessings of the gospel, and the end of the travail as there being in them all the mind that was in Christ."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): the goal is that Christ be formed in them — their full conformity to Christ; Paul labours not for outward conformity to the law but for the inward shaping of Christ's life in the soul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "My little children, of whom I travail in birth again",
-   "until Christ be formed in you",
-   "Paul travailing in birth again",
-   "Christ formed in them the goal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Luther calls the travail an allegory, the Apostles standing in the place of parents, for as parents beget the bodily form so they beget the form of the mind, and the form of a Christian mind is faith. He reads the closing verses as a lively description of the true affection of an apostle, who omits nothing, chiding, entreating, speaking them fair and commending their faith, in words proceeding from a heart inflamed with a hot burning zeal."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's wish: 'I desire to be present with you now, and to change my voice' — he longs to be with them in person, so as to vary his tone (to speak more tenderly, or to adapt his words to their state, as a letter cannot); for he 'stands in doubt (aporoumai — is perplexed, at a loss) of (about) you' — uncertain how to deal with them, what to think of their state, torn between hope and fear, not knowing whether to be severe or gentle (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): a faithful minister, perplexed by a wavering people, longs to be present that he may read their hearts and suit his words; the cold medium of a letter cannot do what a living voice can."
+    "summary": "Barnes notes that the verb means to be zealous towards, whether for or against, usually in a good sense, and takes it here of a mere show of zeal to gain followers, as demagogues do who seek proselytes; he paraphrases the concession as a disclaimer, that Paul does not speak against zeal and would approve theirs in a good cause, and suspects they relied on it, as deceivers are apt to do, maintaining that zeal is itself sufficient evidence of a cause’s goodness. Ellicott gives a run of renderings for the verb — to court, to curry favour with, to canvass eagerly so as to win over — and takes the exclusion politically, that the Judaising party wished to separate Galatia from the other Gentile churches, which had accepted the freer teaching, and make it an isolated centre of Judaism in which they might bear rule; he declines to fix the concession about zeal to either side, notes that the diminutive for children is not found elsewhere in Paul though common in John and that some of the best manuscripts read the simple form, and explains the closing perplexity as not knowing how to deal with them so as to win them back, since presence would have shown him what line to take. Robertson calls the verb an old and a good word, remarking that one can pay court with good motives or evil and that against Paul’s plain speech the Judaizers bring their fawning flattery; he makes the exclusion one from Christ, calls the word for travail an old one for a powerful picture of pain, observes that Paul boldly represents himself as again the mother with birth pangs over them and that the following verb gives the figure of an embryo developing into the child, and renders the last verse as I was just wishing, noting that Paul could put his heart into his voice but that the pen now stands between them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the false teachers would exclude the Galatians from: Clarke and Wesley say from Paul himself, Robertson from Christ, and Ellicott from the other Gentile churches, so as to make Galatia an isolated centre of Judaism.",
+   "Whose zeal the concession commends: Calvin canvasses both Paul and the Galatians and inclines to the Galatians, while Ellicott holds the proposition deliberately general so as to cover both."
+  ],
+  "outliers": [
+   "Barnes suspects the false teachers of arguing from their own zeal to the goodness of their cause, and treats that inference as a standing mark of deceivers.",
+   "Calvin reads the broken syntax of the passage as evidence of feeling, holding that strong emotion chokes the utterance and breaks off words half spoken."
+  ],
   "themes": [
-   "I desire to be present with you now, and to change my voice",
-   "for I stand in doubt of you",
-   "Paul's wish to be present and change his tone",
-   "perplexed over their state"
+   "flattery",
+   "zeal",
+   "spiritual parenthood",
+   "travail",
+   "perplexity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  },
  "21": {
@@ -992,130 +739,81 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul turns to argue from Scripture: 'tell me, ye that desire to be under the law' (who wish to be subject to the Mosaic law) 'do ye not hear (heed, understand) the law?' — do they not listen to what the law itself teaches? 'The law' here means the Pentateuch, the books of Moses — the very Scriptures the legalists revere; Paul will draw from them (the history of Abraham's sons) an argument against the legalists' own position (Barnes, Robertson, Henry)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Paul meets the Judaizers on their own ground, appealing to the law they prize to show that it testifies for grace and freedom, not bondage."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye that desire to be under the law, do ye not hear the law",
-   "Paul challenging the legalists from the law itself",
-   "the law meaning the Pentateuch",
-   "meeting them on their own ground"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "21-23",
+  "pericope_label": "Tell me, ye that desire to be under the law, do ye not hear the law? For it is written, that Abraham had two sons, the one by a bondmaid, the other by a freewoman. But he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul cites the record (Genesis): 'Abraham had two sons' — Ishmael, 'by a bondmaid (Hagar, the slave),' and Isaac, 'by a freewoman (Sarah, the free wife)' — the historical fact on which the allegory will rest; the foundational distinction being that one son was born of a slave, the other of the free wife, a difference of mothers that Paul will use to picture the difference between the two covenants (Barnes, Robertson)."
+    "summary": "Gill distinguishes two ways of being under the law: all believers desire to be under it as holy, just and good, from a principle of love and in gratitude to God, but these men sought justification by their obedience and so wanted it as a covenant of works, which was the way to come under its curse and to take up a yoke of bondage the Jewish fathers could not bear. Calvin defines the phrase as coming under the yoke on the condition that God act toward you according to the covenant of the law while you bind yourself to keep it, and observes that in any other sense all believers are under the law. On the allegory he holds that Paul does not mean Moses wrote the history in order that it might be allegorised, but points out how it answers the present subject; because the house of Abraham was then a true Church, its most memorable events are types to us, as circumcision and the Levitical priesthood were allegories without ceasing to be literal. He protests at length that Origen and others seized this word to torture Scripture, preferring ingenious speculation to solid doctrine until no man was accounted ingenious who could not change the sacred word into curious shapes, and calls this a contrivance of Satan to undermine the authority of Scripture; the true meaning is the natural and obvious one. On the sons he places the difference in election — nothing besides nature in Ishmael, the choice of God in Isaac, signified in part by the miraculous manner of his birth — and finds an indirect reference to the calling of the Gentiles and the rejection of the Jews."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes it for granted that the Galatians did hear the law, since among the Jews it was read in their public assemblies every sabbath day, and wishes them to consider duly what is written in it, since doing so would show how little reason they had to trust in it. He allows that besides the literal and historical sense of the words the Spirit of God might design to signify something further, the two women being intended to typify and prefigure the two dispensations of the covenant."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke points out that the word law is used in two senses in a single verse — first the Mosaic institutions, to which the Galatians were bringing themselves into bondage along with a great variety of oppressive rites, and second the Pentateuch, where the history is recorded. He explains that born after the flesh answers to a Hebrew phrase meaning according to the manner of the flesh, that is, naturally, and that since both Abraham and Sarah had passed the age at which the procreation of children was naturally possible, the birth of Isaac was supernatural and was credible or possible only on the ground of the promise. Wesley glosses the same pair briefly, after the flesh as in a natural way and by promise as through that supernatural strength which was given Abraham in consequence of the promise."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): Abraham, with his two sons by two women, pictures God with two kinds of people — the children of bondage and the children of freedom; the history is the seed of the allegory."
+    "prevalence": "single",
+    "summary": "Luther insists that both were the true sons of Abraham, come of one father, one flesh and one seed, and that the dividing thing is not that one mother was free and the other bond, though that pertains to the allegory, but that Ishmael was born without the promise and the word of God: Sarah, out of hope after long waiting, gave her maid at her own suggestion, and no word of God commanded it or promised a son, so that Ishmael was born at adventure and unlooked for, as another child is, whereas Isaac was expressly named beforehand. He holds that allegories do not strongly persuade in divinity but as certain pictures beautify and set out the matter, and that as painting is an ornament to a house already built, so an allegory is the light of a matter already otherwise proved — Paul adds his only at the end of his disputation, after invincible arguments."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes agrees that the second use of the word law refers not to the commands uttered at Sinai but to the book, since the Jews classed all five books of Moses under that general name, and reads the appeal as one of affectionate remonstrance. He denies that the narrative was designed to represent the different conditions of those under law and under gospel, holding that Paul uses it simply as anyone may use a striking historical fact to illustrate a principle. He notes that Abraham had further sons by Keturah after Sarah’s death, but that these two were the most prominent, and reads the contrast as one of social condition rather than of miracle: the son of the slave was in a humble and inferior condition from his very birth, with no special promise attending him, and servitude followed him through his whole life, so that bondage is attended with evils from the birth to the grave. Ellicott takes the verb for hearing in the sense of giving heed and listening with attention, while mentioning that some have thought it merely refers to the practice of reading a lesson from the Old Testament, adopted into the Christian Church from the synagogue; he notes that Hagar was an Egyptian and that the word rendered bondmaid was not confined to that sense in earlier Greek but was used for any young girl, and makes the promise itself possess a creative power, the birth of Isaac being due to its direct agency and the result of a miraculous intervention. Robertson observes that the phrase carries no article and means a legalistic system, sees the Galatians as on the point of surrender to it, calls Paul’s turn to an allegorical use of Scripture surprising but legitimate for legalists, notes that the word for handmaid is a feminine diminutive of the word for boy or slave which came to be used of a female servant or doorkeeper and is so found in the papyri, and remarks that the perfect tense of the verb for the birth means it stands on record so."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the allegory lies in the history or only in Paul’s use of it: Henry allows that the Spirit of God may have designed a further signification in the text itself, Barnes denies any such design and treats the story as illustration only, and Calvin holds that Moses did not write it to be allegorised yet that the events of a true Church are types.",
+   "Where the difference between the two sons lies: Luther makes it the absence of any preceding word of God, so that Ishmael was born at adventure; Clarke and Wesley make it the ordinary course of nature against supernatural strength; Ellicott makes the promise itself creative; Calvin makes it election."
+  ],
+  "outliers": [
+   "Calvin turns the single word for allegory into a long protest against allegorical exegesis, calling the licentious system a contrivance of Satan and God’s permitting the plain sense to be buried a just judgment on the profanation.",
+   "Barnes reads the whole comparison as being about the evils of servitude, attending a slave from the birth to the grave, rather than about two covenants."
+  ],
   "themes": [
-   "Abraham had two sons, the one by a bondmaid, the other by a freewoman",
-   "the two sons of Abraham",
-   "the bondmaid and the freewoman",
-   "the historical ground of the allegory"
+   "allegory",
+   "law",
+   "bondwoman",
+   "promise",
+   "two covenants"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The key difference: Ishmael, 'of the bondwoman, was born after the flesh' — by ordinary, natural generation, the result of Abraham and Hagar's own contrivance; while Isaac, 'of the freewoman, was by promise' — born through God's special promise, beyond nature (Sarah being past age); the contrast 'after the flesh' (the way of nature and human effort) against 'by promise' (the way of grace and divine power), Ishmael representing what man produces, Isaac what God gives (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): Isaac, the child of promise, pictures believers born not by the works of the law (the flesh) but by the promise of grace; the manner of birth is the heart of the allegory."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he who was of the bondwoman was born after the flesh; but he of the freewoman was by promise",
-   "the son after the flesh and the son of promise",
-   "nature and human effort vs grace and promise",
-   "the heart of the allegory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
@@ -1129,105 +827,70 @@
    "John Wesley",
    "Martin Luther"
   ],
+  "range": "24-25",
+  "pericope_label": "Which things are an allegory: for these are the two covenants; the one from the mount Sinai, which gendereth to bondage, which is Agar. For this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is, and is in bondage with her children",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul does not deny the historical truth of the narrative, nor make it mere fable: he uses the real history of Abraham's sons as a type or illustration of a spiritual truth (as 'types or figures,' 1 Corinthians 10:11), putting a secondary, deeper sense on the narrative — distinct from the fanciful, mystery-finding allegorizing of Origen and the Alexandrian school, which Barnes, Clarke, and Ellicott reject as a corruption that made the Bible a book of enigmas. Hagar and Sarah 'are (represent, stand for) the two covenants' — the one 'from mount Sinai, which gendereth to bondage' (the legal covenant, bearing children unto slavery), 'which is Agar' (Barnes, Robertson, Ellicott)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: as the house of Abraham was then the true Church, the chief events in it are so many types for us; the argumentative force rests on the apostolic assertion of Christian liberty, not on the logical cogency of the inference from type to thing typified. Doctrine is the mother of whom we are born — the legal covenant (Hagar/Sinai) gendering to bondage, the evangelical to freedom."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is Paul's 'allegory' the same as Origenist allegorizing, or the typological use of real history?",
-    "sides": [
-     {
-      "position": "The typological/illustrative use of a true historical narrative — a secondary spiritual sense applied to real events",
-      "holders": [
-       "Barnes",
-       "Robertson",
-       "Ellicott",
-       "Calvin",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "The fanciful, mystery-finding allegorizing of Origen and the Alexandrians — explicitly rejected as a corruption of Scripture",
-      "holders": [
-       "Origen's school (rejected by Barnes, Clarke, Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Which things are an allegory: for these are the two covenants",
-   "the one from the mount Sinai, which gendereth to bondage, which is Agar",
-   "the allegory of the two covenants",
-   "allegory versus type"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's correspondence: 'this Agar (Hagar) is mount Sinai in Arabia' — Hagar represents the Sinai covenant (Luther and others note 'Hagar' was even an Arabian name for the mountain, perhaps suggesting the connection) — 'and answereth to (sustoichei — corresponds with, stands in the same rank/column as) Jerusalem which now is'; the 'present Jerusalem' (the centre of Judaism, the law, and the temple worship) 'is in bondage with her children' — she and her people (the unbelieving Jews and the Judaizers) are slaves under the law, like Hagar and her son (Barnes, Robertson)."
+    "summary": "Gill defines allegory as a way of speaking in which one thing is expressed by another, a continued metaphor, the things spoken pointing at some other things and carrying a mystical and spiritual meaning besides the literal; he observes that Philo the Jew had allegorised Sarah and Hagar before the apostle, making Sarah signify virtue and Hagar the whole circle of arts and sciences which should be handmaid to virtue, and judges the apostle’s use much the better. On the name he reports that the word may be pronounced so as to signify in Arabic a stone or rock, that one part of the country is called Arabia Petraea from its rockiness, and that Hagar was the name of the chief city of a province. Calvin explains that he adopted covenant rather than testament so as not to lose the beauty of the comparison, since Paul compares the two to two mothers and a neuter noun sounds harsh for a mother; doctrine is the mother of whom we are born, and is twofold, legal and evangelical, the one gendering slaves and the other freemen. Against the objection that none of God’s children are born to slavery he answers that the law brought forth its disciples, the prophets and other believers among them, to a slavery that was not permanent, their freedom concealed under the veil of ceremonies so that to the outward eye nothing but slavery appeared, while the children of Sinai here in question are hypocrites who make a wicked abuse of the law by finding in it nothing but what tends to slavery. He dismisses Jerome’s conjecture of two names for the mountain as trifling and the ancient disquisitions about the agreement of the names as unworthy of notice, holds that Sinai is called Hagar because it is a type as the Passover was Christ, notes that the situation is mentioned by way of contempt since it lies beyond the limits of the holy land, and explains the word for answering as denoting not nearness or relative position but resemblance, as Aristotle called rhetoric the counterpart of logic, a metaphor from lyric compositions arranged in two parts to be sung in harmony."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke traces the word to its parts and gathers parallels — Juno taken for the air and Jupiter for the ether, the Greeks allegorising Cronos into Chronos — observes how fond the Jews were of allegorising and that Philo abounds in it, and thinks it likely Paul had borrowed this allegory from the Jewish writings in order to convict the Judaising Galatians on their own principles; he then warns that neither he nor we have anything further to do with it than as it applies to the subject quoted, and that it gives no licence to men of vain and superficial minds who find allegories in every portion of Scripture, whose spiritualizing is more properly carnalizing and has brought the testimonies of God into disgrace. He takes the two covenants as two different systems of religion, one by Moses and one by the Messiah, and presses that as a bondmaid could bring forth her children only into slavery, so those born and living under the Mosaic institutions live in bondage to various rites, obliged to keep the whole law yet from its severity and their frailness living in habitual breach of it and exposed to its curse; on the name he reports that respectable manuscripts, versions and fathers omit it, that Professor White judged it probably to be expunged and that Griesbach left it with a note of doubtfulness, and glosses the answering as a similitude to Jerusalem in her present subjection, in bondage to the Romans and in a worse bondage to the law. Wesley states the figure plainly, that an allegory is a speech wherein one thing is expressed and another intended, that the two sons are types of the two covenants, that all under the Jewish covenant are in bondage, and that the present Jerusalem resembles Hagar in being in bondage both to the law and to the Romans."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): the legal Jerusalem, for all her boasted privilege, is the slave-mother bearing slave-children — those who seek righteousness by the law remain in bondage."
+    "prevalence": "single",
+    "summary": "Luther makes Abraham a figure of God with two sons, that is two sorts of people, born to him by the two women who signify the two Testaments. He reports that the Arabians call by the name Hagar the same mountain the Jews call Sinai, that in the Arabian language the name signifies a handmaid, and thinks the likeness of the name gave Paul light and occasion to seek out this allegory; as Hagar bore Abraham a son who was a servant and not an heir, so Sinai bore God a carnal people, having the true God for their father and his law, oracles and temple, but no promise, since the promises of the law are conditional and leave the conscience in doubt while those of the New Testament require nothing of us. On the second verse he confesses that he would gladly have made Jerusalem into Sarah, since the preaching of the gospel began there, the Holy Ghost was there given and the people of the New Testament were there born, and would have thought he had found a very fit allegory; but Paul joins the earthly city to Sinai, for in it is the law begetting unto bondage, the temple, the kingdom and the priesthood, and reserves the name of Sarah for the heavenly city. From this he draws the warning that it is not for every man to use allegories at his pleasure, since a goodly outward show may soon deceive a man and cause him to err."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes allows that the accounts may be regarded allegorically as illustrating the condition of slaves and freemen, but denies that Moses meant an allegory or intended any such application, holding that no such design is apparent in the narrative and that Paul uses the history as anyone may use a fact to illustrate a principle, making no more use of it than the Saviour did of real or fictitious narratives in his parables. He rejects the Arabic philology outright, saying he cannot find in Castell or Gesenius that the word signifies a rock in Arabic, still less that the name was ever given to Sinai by the Arabs or that such a signification was known to Paul, and falls back on the rule that the plainest and most obvious sense of a passage is generally the true sense; he reports that Bentley proposed to cancel the clause as an interpolation and that Griesbach placed the variant readings in the margin as worthy of attention though not satisfactory, and prefers the marginal rendering that the two stand in the same rank. Ellicott holds that the allegorical sense does not exclude the literal but is added to it, notes the distinction by which a type implies a true narrative and an allegory a fictitious one while denying that Paul uses the word in that strict sense, and quotes Calvin for the justification that the events of Abraham’s house are types for us, adding that the argumentative force of the passage rests upon the apostolic assertion of Christian liberty rather than upon the logical cogency of the inference. He glosses the verb as standing for or typically representing, as in the interpretation of the tares and in the words of institution at the supper, where he says the meaning is really as little doubtful as here; he devotes an excursus to the disputed clause and concludes there is sufficient evidence to show that Hagar may be regarded as the Arabic name for Sinai; and he explains the word for answering as a technical term in philosophy for the parallel columns containing antithetical pairs, so that Hagar, Sinai, the old covenant and the earthly Jerusalem all stand upon the same side of the antithesis. Robertson calls the verb late and found only here in the New Testament, names Philo the past-master in the use of allegory, insists that Paul does not deny the actual historical narrative but puts a secondary meaning upon it and openly says he is using allegory rather than ordinary interpretation, remarks that Christian preachers in Alexandria early fell victims to Philo’s method and carried it to excess without regard to the plain sense, a style of preaching that survives yet to the discredit of sound preaching, and explains the word for answering as a late military term for keeping step in line, citing Lightfoot on the Pythagorean table of opposing principles."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Hagar is genuinely an Arabic name for Sinai: Luther and Gill report the philology as fact and Ellicott concludes for it after an excursus, while Barnes cannot find the word in the lexicons and denies any evidence that Paul knew such a sense; Clarke and Barnes both report a manuscript tradition that drops the name from the verse altogether.",
+   "Who the children of the bondwoman are: Calvin restricts them to hypocrites who abuse the law, holding that the holy fathers under the old covenant had the heavenly Jerusalem for their mother in spirit, while Clarke and Wesley take them as all who live under the Mosaic institutions."
+  ],
+  "outliers": [
+   "Clarke closes his note on allegory with an imprecation, praying that the spirit of silence be poured out upon those who allegorise every portion of Scripture, and calling their spiritualizing more properly a carnalizing that has brought the testimonies of God into disgrace.",
+   "Luther admits his own instinct would have gone the other way and made the earthly Jerusalem into Sarah, and treats Paul’s refusal to do so as proof that allegory is not a tool every man may take up at pleasure.",
+   "Ellicott, expounding the licence for allegorical treatment, quotes Calvin by name and in full as his warrant."
+  ],
   "themes": [
-   "this Agar is mount Sinai in Arabia, and answereth to Jerusalem which now is",
-   "is in bondage with her children",
-   "Hagar and Sinai answering to the present Jerusalem",
-   "legal Jerusalem in bondage"
+   "allegory",
+   "two covenants",
+   "Sinai",
+   "Jerusalem",
+   "bondage"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
+   }
   }
  },
  "26": {
@@ -1239,86 +902,78 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem",
-   "Martin Luther"
+   "Martin Luther",
+   "Cyril of Jerusalem"
   ],
+  "range": "26-27",
+  "pericope_label": "But Jerusalem which is above is free, which is the mother of us all. For it is written, Rejoice, thou barren that bearest not; break forth and cry, thou that travailest not: for the desolate hath many more children than she which hath an husband",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The antithesis to the earthly Jerusalem: 'Jerusalem which is above (the heavenly Jerusalem, the spiritual city of God, the church and commonwealth of the redeemed) is free' — not in bondage to the law, but the home of gospel liberty; and she 'is the mother of us all' — of all believers, Jew and Gentile; corresponding to Sarah the freewoman, she bears free children by the gospel of promise (Barnes, Robertson)."
+    "summary": "Gill takes the city above not of the church triumphant in heaven but of the gospel church state under the administration of the new covenant, and not as in the latter-day glory when the new Jerusalem shall descend out of heaven, but as it then was in the apostle’s time and has been since, with particular respect to the first gospel church at Jerusalem, which consisted of persons born from above and out of which the gospel went into all the world; the prophecy he takes as proof that this church state has brought forth and will bring forth many more souls to Christ than were brought forth under the legal dispensation, though the Lord was a husband to that one. Calvin denies that the heavenly Jerusalem is contained in heaven or to be sought outside this world, since the Church is spread over the whole earth and is a stranger and pilgrim upon it; it is called heavenly because it originates in heavenly grace, its sons being born not of blood nor of the will of man but by the power of the Holy Spirit. To the Church under God, he says, we owe it that we are born again of incorruptible seed and receive the milk and food by which we are nourished, so that he who refuses to be a son of the Church in vain desires to have God for his Father; but he denies that the Papists may take comfort in the title, calling them fools and twice children and their mother an adulteress who brings forth to death the children of the devil, and observing that the synagogue at Jerusalem might have assumed such pretensions with far higher plausibility, yet Paul strips her of every honourable distinction and consigns her to the lot of Hagar. On the prophecy he holds the design to be the depriving of the Jews of all claim to that spiritual Jerusalem, whose children are gathered out of all the nations of the earth by the free grace and blessing of God and not by any preparation of hers, all the promises being founded on the Messiah and therefore of free grace."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Luther, Calvin): the heavenly Jerusalem, the church of the new covenant, is the true mother of the faithful, who are born free by grace, not slaves under the law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jerusalem which is above is free, which is the mother of us all",
-   "the heavenly Jerusalem, free",
-   "the mother of believers",
-   "born free by grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Paul quotes Isaiah 54:1: 'Rejoice, thou barren that bearest not... for the desolate hath many more children than she which hath an husband' — a prophecy of the abundant offspring of the once-barren; applied to Sarah and the heavenly Jerusalem, the 'barren' and 'desolate' (Sarah, long childless; the church of the Gentiles, once without the promises) is to rejoice, for she shall have 'many more children' than the married woman (the synagogue, the legal Jerusalem) — the free mother's offspring exceeding the bond (Barnes, Robertson)."
+    "summary": "Clarke supplies the rabbinic background, the maxim that whatsoever was in the earth was found also in heaven, since there is no matter however small in this world that has not something similar to it in the spiritual world, and cites a rabbinic gloss on Melchizedek for the phrase itself; he takes the heavenly city as the kingdom of the Messiah or the state of liberty into which believers are brought, and declares the word rendered all to be undoubtedly spurious, omitted by almost every manuscript and version of antiquity and importance and by the most eminent fathers who quote the place, so that the text should read simply that she is our mother. On the prophecy he takes it certainly to relate to the conversion of the Gentiles, the desolate being the Gentile world and the woman with a husband the Jewish state, so long in covenant with God and in possession of spiritual advantages which she has rejected and the Gentiles accepted. Wesley reads the promise as belonging in its primary sense to a flourishing state for Judea after its desolation by the Chaldeans, and in its application to the heathen nations who like a barren woman were destitute for many ages of a seed to serve the Lord and shall at length bear more children than the Jewish church which was of old espoused to God; the free city he glosses as free from all inward and outward bondage, its children all who believe in Christ."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): the church of grace, once seemingly barren and forsaken, becomes fruitful beyond the legal synagogue, filling the world with free children of promise."
+    "prevalence": "single",
+    "summary": "Luther finds the same reversal in the song of Hannah, out of which he says Isaiah took his prophecy — the bow and the mighty men broken and the weak girded with strength, the full hired forth for bread and the barren bearing seven — and calls it a marvellous matter that she who was fruitful is made barren and the barren fruitful, the strong and righteous becoming feeble and ignominious sinners and the hungry being satisfied. He applies the figure to the difference between the synagogue and the church, the law being the husband of the fruitful woman and begetting very many children, since all mankind except the children of the free-woman know no other righteousness than that of the law and think themselves righteous if they outwardly perform its works; such have many disciples and shine in glorious works, yet are bond-servants and children of the bondwoman, and being servants cannot be partakers of the inheritance but are cast out of the house."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes glosses the adverb as meaning up above and hence heavenly or celestial, and takes the city to denote the church as being of heavenly origin, its freedom being freedom from sin and from the bondage of rites and customs; the mother of us all he restricts to all who are true Christians, whether by birth Jews or Gentiles. On the prophecy he says the object is to prove that Gentiles as well as Jews would partake of the privileges of the heavenly city, notes that the mention of Jerusalem as a mother seems to have suggested the text, observes that Paul has not quoted literally from the Hebrew but has used the Septuagint version and retained the sense, and holds that the accession from the Gentile world would be far more numerous than the Jewish people had ever been, a prophecy already fulfilled. Ellicott calls it the ideal or heavenly Jerusalem, the seat or centre of the glorified Messianic kingdom as the old city had been the centre of the earthly theocracy, and reports that the conception among the Jews took a materialistic form, a real but gorgeous city suspended in mid-air some three parasangs above the earthly one, sometimes an exact copy of its counterpart and sometimes a perfect square, insisting that no such notions attach to the idea in Paul, for whom it is a spiritual city of which the Christian is a member here and now; he agrees that the true reading undoubtedly omits the word all. On the prophecy he gives the primary reference to the restoration of the exiled Jews and the coming greatness of the newly settled city, takes the revived theocracy under Zerubbabel as a type of the final Messianic reign, and distinguishes three applications — the post-exilic city against Jerusalem under David and Solomon, Sarah against Hagar, and Christianity with its small beginnings against the old dispensation with its material possessions and privileges. Robertson says Paul uses the rabbinical idea that the heavenly Jerusalem corresponds to the earthly one to illustrate his point without endorsing their ideas, and takes the city to represent the whole Jewish race; the quotation he calls a song of triumph looking for deliverance from a foreign yoke, glosses the second imperative as meaning to rend or burst asunder with the word for joy to be supplied, and remarks that the apostle’s thought has moved rapidly but that he does not lose his line."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem takes the title of the one Holy Catholic Church, noting that the word for church is applied to different things — even to the multitude in the theatre at Ephesus, and one might properly say there is a church of evil doers, meaning the meetings of the heretics — and therefore instructing the catechumen that when sojourning in strange cities he must not inquire simply where the Lord’s House is, since the other sects also attempt to call their own dens houses of the Lord, nor merely where the Church is, but where the Catholic Church is, that being the peculiar name of this holy Church, the mother of us all and the spouse of the Only-begotten Son of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Where the Jerusalem above is: Barnes and Ellicott take it celestially, as the heavenly city and seat of the Messianic kingdom; Calvin denies it is contained in heaven or to be sought outside this world, calling it heavenly only by origin; Gill makes it the gospel church state of the apostle’s own day, with particular respect to the first church at Jerusalem.",
+   "What the title mother of us all underwrites: Calvin makes it the Church against Rome, whose mother he calls an adulteress, while Cyril of Jerusalem uses the same phrase to send the catechumen looking for the Catholic Church by that name, since the sects also call their meeting-places houses of the Lord."
+  ],
+  "outliers": [
+   "Ellicott reports the rabbinic heavenly Jerusalem as a real but gorgeous city suspended some eleven miles above the earthly one, sometimes an exact copy and sometimes a perfect square, and denies any such materialism to Paul.",
+   "Clarke declares the word all in the closing clause undoubtedly spurious and reprints the verse without it, Ellicott agreeing.",
+   "Luther traces Isaiah’s oracle back to the song of Hannah as the place from which the prophet took it."
+  ],
   "themes": [
-   "Rejoice, thou barren that bearest not",
-   "the desolate hath many more children than she which hath an husband",
-   "the prophecy of the barren woman's many children",
-   "the fruitfulness of the free mother"
+   "heavenly Jerusalem",
+   "motherhood of the Church",
+   "barren woman",
+   "Gentile ingathering",
+   "freedom"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "28": {
@@ -1329,175 +984,82 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Calvin",
+   "John Wesley",
+   "Martin Luther"
   ],
+  "range": "28-31",
+  "pericope_label": "Now we, brethren, as Isaac was, are the children of promise. But as then he that was born after the flesh persecuted him that was born after the Spirit, even so it is now. Nevertheless what saith the scripture? Cast out the bondwoman and her son: for the son of the bondwoman shall not be heir with the son of the freewoman. So then, brethren, we are not children of the bondwoman, but of the free",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul applies the allegory directly: 'now we, brethren, as Isaac was, are the children of promise' — believers correspond to Isaac, born not by the flesh but by God's promise; they are the free, promised offspring, born by the power of God's promise and grace (like Isaac, born beyond nature), not by works of the law — their sonship rests on grace (Barnes, Robertson, Henry)."
+    "summary": "Gill reports that a version and one Greek copy read the second person rather than the first, holds that as the two women were allegorised so were their offspring, Isaac being a type and figure of Abraham’s spiritual seed whether Jews or Gentiles under the gospel dispensation, and notes that the formula introducing the quotation is a Talmudic manner of citing Scripture; the words being Sarah’s, he explains that because she spoke them under divine inspiration and they were approved and confirmed by God they are ascribed to God speaking in the Scripture. Calvin denounces the cruelty of the false apostles who wantonly insult those that place all their confidence in Christ, and finds it unsurprising that the children of the law should now do what their father did when, trusting to his being the first-born, he persecuted the true heir, molesting the lawful sons of God on account of outward ceremonies with the same proud disdain. He is careful about the text: persecution is nowhere mentioned, Moses saying only that Ishmael ridiculed his brother; the explanation offered by some Jews that this was a simple smile is entirely inadmissible, since it would have argued no cruelty that a harmless smile should be so fearfully revenged, so that he must have maliciously endeavoured to provoke the child by reproachful language — though he asks how widely distant even this is from persecution. On the casting out he finds consolation greater than the sharing of Isaac’s lot: hypocrites with all their boasting can gain nothing, and the inheritance will certainly be ours; the tyranny of the Ishmaelites will not last for ever, and those who appear to have reached the highest pre-eminence will one day be declared the descendants of Hagar and unworthy of the inheritance. He takes the lesson to be that we should not fret ourselves because of evil-doers who hold a temporary habitation and rank in the Church but patiently look for the end awaiting them, and concedes that if we simply call our opponents Ishmaelites and Hagarites they will smile at us, though a fair comparison of the two would leave the most ignorant person at no loss to decide."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says the history thus explained is applied, and asks how absurd it would be for Gentile converts to place themselves under a law which could not deliver the unbelieving Jews from bondage or condemnation. He grants that we should not have found out this allegory in the history of Sarah and Hagar if it had not been shown to us, yet cannot doubt it was intended by the Holy Spirit, and insists that it is an explanation of the subject and not an argument in proof of it. He draws out the two covenants as two spirits, the first of bondage unto sin and death and of persecution, the second of liberty and of love — liberty not to sin but in and unto duty — and warns those professors who have a violent, harsh, imposing spirit towards the people of God; he adds that as Abraham turned aside to Hagar, a believer may turn aside in some things to the covenant of works when through unbelief he acts in his own strength or in a way of violence rather than love, yet it is not his way nor his spirit, and he is never at rest till he returns to his dependence on Christ."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: as Isaac, the son of promise, was the true heir, so believers, the children of promise, are the true heirs of the inheritance — free, not slaves."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we, brethren, as Isaac was, are the children of promise",
-   "believers as children of promise like Isaac",
-   "born by grace, not works",
-   "the true heirs"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul observes that 'then' (in Abraham's house) 'he that was born after the flesh (Ishmael) persecuted (mocked, harassed, Genesis 21:9) him that was born after the Spirit (Isaac)' — the elder, fleshly son persecuting the younger, promised son; 'even so it is now' — the children of the flesh (the unbelieving Jews and Judaizers, who trust the law) persecute the children of the Spirit (the believers, born of promise); the pattern repeats (Barnes, Robertson)."
+    "summary": "Clarke takes the children of promise to be the spiritual offspring of the Messiah, the seed of Abraham in whom all the nations of the earth were to be blessed, and describes Ishmael’s birth as having nothing supernatural in it while Isaac’s was according to the promise and through the efficacy of the Holy Spirit; the persecution he identifies with the mocking recorded in Genesis and extends to the Jews who in every place persecute the Christians and thereby show themselves rather of the posterity of Hagar than of Sarah. The casting out he applies to the present Jerusalem and her children, who shall be cast out of the favour of God and not inherit the blessings promised to Abraham because they believe not in the promised seed, and he warns that God will shortly deliver them into a long and grievous captivity; the conclusion he takes as proof from their own Scripture, explained by their own allegory, that redemption is only by Jesus Christ, and sets the temporal as well as the eternal consequences before the Galatians. Wesley glosses the children of promise as born not in a natural way but by the supernatural power of God and therefore heirs of the promise made to believing Abraham, extends the persecution to all ages and nations to the end of the world, and reads the casting out as God casting out all who seek to be justified by the law, especially if they persecute those who are his children by faith; the conclusion he sums as freedom from the curse and bond of that law and from the power of sin and Satan."
    },
    {
     "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): it has ever been the lot of the children of promise to be persecuted by the children of the law; the believer should not be dismayed but expect such opposition."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that was born after the flesh persecuted him that was born after the Spirit, even so it is now",
-   "the child of the flesh persecuting the child of the Spirit",
-   "the recurring pattern of opposition",
-   "the lot of the children of promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Luther calls the persecution a singular consolation, since whoever are born and live in Christ have Ishmael for their enemy, and applies it to his own day, when the world is full of tumults, persecutions, sects and offences; he states the objection at its strongest, that all things were in peace before the gospel came abroad and since its preaching the whole world is in an uproar, so that a man not endued with the Spirit judges seditions, wars, plagues and famine to proceed from the doctrine of the gospel, and answers that the faithful must bear this name and title in the world, that they are seditious and schismatics and the authors of innumerable evils. On the casting out he alone pauses over Abraham, to whom the word of Sarah was very grievous and whose fatherly bowels were moved with compassion toward the son born of his flesh, until God confirmed the sentence and bade him hear her voice; that sentence he turns against the Papists and as many as trust in their own works, who boast themselves to be the people of God and judge those who rest on the promise to be barren, forsaken and heretics cast out of the church. He concludes that although the sons of the bondwoman persecute us for a time they shall be compelled to leave the inheritance to us, and that Paul takes hold of the word freewoman and urges it into the doctrine of Christian liberty, which is a most strong fort against tyranny over the conscience."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul appeals to Scripture's decisive word (Genesis 21:10, Sarah's demand, ratified by God): 'cast out (expel, send away) the bondwoman (Hagar) and her son (Ishmael)' — the slave and her child are to be put out of the house; the ground being that the slave's son 'shall not be heir with' the free son — the two cannot share the inheritance, the child of bondage excluded from the inheritance reserved for the child of promise (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): the covenant of law and its children (the Judaizers, those who seek righteousness by works) must be cast out; they cannot inherit with the children of grace — law and gospel cannot be mingled as the ground of righteousness."
+    "summary": "Barnes takes the resemblance to Isaac to lie in the great and precious promises made to Christians, contrasting Ishmael to whom no promise was made, and identifies the persecution with the mocking recorded in Genesis, which occasioned the expulsion at Sarah’s request. He supports the present application with Paley, observing that the apostle appears never to have been set upon by Gentiles unless the Jews first stirred them up, save at Philippi after the cure of the Pythoness and at Ephesus at the instance of Demetrius, so that the persecutions of Christians arose mainly from those in bondage to the law, which makes the allusion exceedingly pertinent and happy. On the casting out he denies that Paul means the Galatians should expel the Judaising teachers, taking it rather of rejecting everything like servitude, and insists that Paul cannot mean the passage originally referred to the gospel, since nothing was farther from Sarah’s mind, nor is he vindicating her conduct, but finds a passage applicable to his purpose as we all use language wherever we find it. The conclusion he draws not from the allegory regarded as an argument, since Paul does not use it so, but from the whole subject: it is the birthright of Christians to think and feel and act like freemen and not to become the slaves of customs, rites and ceremonies. Ellicott prefers the reading ye to we and glosses the phrase as children born in accomplishment of the promise; on the persecution he doubts whether the Hebrew word can really mean more than playing, though rendered mocking, reports the Jewish tradition that Ishmael took out the child Isaac and shot at him with arrows under pretence of sport, and observes that the Arab tribes had always been a thorn in the side of their Israelite neighbours, while referring the present application especially to the behaviour of the Judaising party in Galatia. He notes that the words of the expulsion are put into the mouth of Sarah but afterwards endorsed by the divine command, and calls the declaration a bold assertion of the incompatibility of Judaism with Christianity by which the apostle clinches his argument, followed by an emphatic assertion that the essential character of the Christian Church is freedom. Robertson notes the manuscript variation between we and ye without letting it affect the sense, that Christians of both stocks are children of the promise after the manner of Isaac; he observes that the Hebrew of the Genesis passage has laughing where the Greek has mocking and repeats the tradition of the arrows, takes the quotation as confirmed by God’s command to Abraham, and quotes Lightfoot that the law and the gospel cannot co-exist, the law must disappear before the gospel."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether what Ishmael did amounts to persecution: Calvin insists nothing but ridicule is recorded and asks how far that stands from persecution, while rejecting the reading that makes it a harmless smile; Ellicott doubts the Hebrew means more than playing; both Ellicott and Robertson report the Jewish tradition that he shot arrows at the child under pretence of sport.",
+   "Who is to be cast out: Barnes denies the command has anything to do with expelling the Judaising teachers and makes it the rejection of servitude itself, while Clarke applies it to the present Jerusalem, Wesley to all who seek justification by the law, and Luther to those who trust in their own works."
+  ],
+  "outliers": [
+   "Henry grants that no reader would have discovered this allegory in the history of Sarah and Hagar unless it had been shown him, and holds that it is an explanation of the subject rather than an argument in proof of it — the point at which Barnes independently rests his own conclusion.",
+   "Barnes imports Paley’s survey of Acts to show that the apostle was never set upon by Gentiles unless the Jews stirred them up first, with two named exceptions, and uses it as evidence that the persecution described is still the same one.",
+   "Luther states the objection that the world was quiet before the gospel was preached and answers not by denying it but by accepting the name, that the faithful must be called seditious and schismatic in the world."
+  ],
   "themes": [
-   "Cast out the bondwoman and her son",
-   "the son of the bondwoman shall not be heir with the son of the freewoman",
-   "the Scripture's verdict to cast out the bondwoman",
-   "the disinheriting of the law's children"
+   "children of promise",
+   "persecution",
+   "casting out",
+   "inheritance",
+   "Christian liberty"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Martin Luther"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul draws the conclusion ('so then') of the whole allegory: 'we are not children of the bondwoman (Hagar, the law, bondage) but of the free (Sarah, the gospel, liberty)' — believers belong to the free mother; the triumphant result being that believers are free children, heirs of the promise and of gospel freedom, not slaves under the law; their standing is that of Isaac, the free son and heir (Barnes, Robertson)."
-   },
-   {
-    "school": "lutheran",
-    "prevalence": "minority",
-    "summary": "Luther (with Calvin): this is the heart of the epistle — the believer is free from the law as a means of righteousness, a child of the free covenant of grace, and must not return to bondage."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we are not children of the bondwoman, but of the free",
-   "believers are children of the free",
-   "gospel freedom, not bondage",
-   "heirs of the promise like Isaac"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

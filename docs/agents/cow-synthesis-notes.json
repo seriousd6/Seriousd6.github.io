@@ -6426,6 +6426,89 @@
       "book": "deuteronomy",
       "chapter": "3",
       "note": "The nine-item target proposed at the end of note 581 was tried here and is close to right. Four entries were drafted from item lists cut to roughly ten before writing, and the first drafts came in at 923, 940, 966 and 1036 QA words — still 45 to 60 per cent over the 650 ceiling, so ten grounded items from five or six voices continues to run near 950 words. The useful finding is the arithmetic behind it: a grounded item, written as a full sentence with its attribution, costs about ninety words. Nine items is therefore about 810, and seven is about 630. Seven is the number that actually fits, and the entries that trimmed fastest here were the ones where three items were struck outright in the first pass rather than shaved. The counting rule to carry forward is that an entry holds seven items, not nine and not twelve, and that anything past the seventh should be selected only if it is short enough to run as a clause rather than a sentence."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "Jamieson stride-6 residue, TWELFTH consecutive chapter and ninth book: keys 5, 11, 17, 23, 29 — offset 5, five members, no gaps. Content is unrelated to Galatians (the v23 block argues Jacob and Esau from Romans 9; the v29 block is on Philippians 2:12-13). Running table: joshua 10 (1,7,13,19,25,37,43), 1corinthians 7 (5,11,17,23,29,35), hebrews 11 (3,9,15,27,33), romans 8 (2,8,14,20,26,32,38), romans 9 (4,22,28), 1corinthians 15 (12,18,24,36,42,48,54), leviticus 27 (4,10,16,22,28,34), judges 16 (9,15,21,27), exodus 28 (1,7,13,37), judges 19 (3,9,15,21,27), exodus 12 (8,14,20,32,38), galatians 4 (5,11,17,23,29). Consistent with a single row pointer walking a canonical index at fixed stride and lagging its target. The Jamieson tree wants a re-fetch."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Patristic verse-misalignment, a defect class not previously recorded. Both patristic blocks filed at galatians 4:1 are commentary on something else: the John Chrysostom block opens 'Ver. 4, 5' and is his note on vv4-5, and the Tertullian block is his anti-Marcion argument on Romans 1:16-18 from Against Marcion — wrong book entirely. Both excluded via EXCL_BY_ENTRY. Consequence: genuine Chrysostom commentary on Gal 4:4-5 is present in the tree but unusable, because the entry that covers vv4-5 has no Chrysostom head of its own. Unlike the Jamieson stride this is not a fixed-offset pattern (one block is off by three verses within the book, the other is from another epistle), so it needs its own sweep."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "30"
+      ],
+      "note": "Third instance of scraped page chrome, and it confirms the attachment model. 926 junk words (StudyLight nav/copyright boilerplate) begin at word 182 of the Charles Ellicott block at galatians 4:30. It sits on v30, NOT on the chapter's last verse v31 — because Ellicott has no block on v31 at all. So the chrome attaches to the VOICE'S last block, not the chapter's last verse, which is why 870 of the 1,100 known StudyLight cases land on the final verse: that is simply where Ellicott usually stops. Corpus totals unchanged: StudyLight/Ellicott 1,100 chapters and ~1.44M junk words; sacred-texts/Gill 110 chapters and ~110k. 'synthesis-loop.py size' does not strip either, so reported usable-source-word figures run 1,000-2,300 high. A third host should still be checked before any cleanup is called complete."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Tooling defect hit while landing this chapter: synthesis_qa.VOICE_LABELS carries SHORT forms for the fathers and for Robertson ('Chrysostom', 'Robertson', 'Cyril', 'Augustine'), and undeclarable_voices() matches the tags' excluded_voices strings against those short labels. So an exclusion written with the catena's own head — 'John Chrysostom', which is literally what the <strong> head says — fails validate-synthesis.py with 'excluded_voices names a block absent from this entry's source'. Worked around here by emitting the short label. This is the standing VOICE_LABELS item and it now has a concrete failure mode, not just a prose-spelling nuisance: the label list and the catena heads disagree, and the validator sides with the label list."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "6",
+        "10"
+      ],
+      "note": "Three positions worth flagging. (a) Virgin birth at v4: Clarke and Wesley read the miraculous conception out of 'made of a woman', while Ellicott and Robertson both explicitly deny any allusion to it there, Robertson adding that the doctrine is nonetheless compatible with the phrase. (b) Clarke at v6 numbers the Trinity as Father, Spirit, Son, making the Holy Ghost the second person and Christ the third. (c) Barnes stands alone twice: at v6 in denying the Spirit named there is the Holy Spirit, and at v10 in denying the Sabbath is among the days observed."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "4",
+      "note": "First use of the 'lutheran' school slug in this loop, and first appearance of Martin Luther and Albert Barnes as voices. Galatians 4 is the densest chapter attempted: 13 distinct voices, ~73,700 real usable source words after subtracting 926 words of chrome, 31 verses, tiled in 13 entries. Luther's Galatians commentary is by a wide margin the largest single block in the chapter (3,188 words at v27 alone) and is polemical throughout, so the lutheran school summaries run long; the tag-side school text is where his argument is carried, with the prose taking only the load-bearing claims."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "4",
+      "verses": [
+        "21",
+        "24",
+        "26",
+        "29"
+      ],
+      "note": "Four disputes recorded in the tags for this chapter. (1) Whether the allegory is in Moses' text or only in Paul's use of it — Henry allows a further design by the Spirit, Barnes denies any design and treats it as illustration, Calvin threads between. (2) Whether 'Hagar' is genuinely an Arabic name for Sinai — Luther and Gill report the philology as fact and Ellicott concludes for it after an excursus, while Barnes cannot find the word in Castell or Gesenius and denies Paul knew such a sense; Clarke and Barnes both report a manuscript tradition dropping the name from the verse. (3) Where the Jerusalem above is — Barnes and Ellicott celestially, Calvin denying it is contained in heaven at all, Gill making it the gospel church state of the apostle's own day. (4) Whether Ishmael's act amounts to persecution — Calvin insists only ridicule is recorded and asks how far that stands from persecution, while rejecting the reading that makes it a harmless smile; Ellicott doubts the Hebrew means more than playing."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "galatians",
+      "chapter": "4",
+      "note": "galatians 4: all 13 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. Every first draft again came in over the 650-word ceiling — drafts ran 564 to 1,000 words against the cap and needed one to five trim passes each; entry 24-25 drafted at 905 and 28-31 at 867. The two entries written deliberately spare (6 at 622w, 7 at 564w) landed in a single pass, which is the only reliable countermeasure found so far. Two structural notes on the cross-school citation in this chapter: Ellicott quotes Calvin by name and in full as his warrant for allegorical treatment, and Cyril of Jerusalem and Calvin deploy the identical phrase 'the mother of us all' on opposite sides of the visible-church question."
     }
   ]
 }
