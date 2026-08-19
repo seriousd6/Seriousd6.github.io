@@ -8234,6 +8234,38 @@
       "book": "luke",
       "chapter": "18",
       "note": "Fidelity self-grade, luke 18, 10 entries, 43 verses, 24 head labels of which 21 were used, ~45,851 usable source words after 992 of chrome. Source keys 1-43 with no gaps, so the spans follow the pericopes. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-3 650 · 4-8 650 · 9-10 638 · 11-12 585 · 13-14 633 · 15-17 615 · 18-23 631 · 24-30 601 · 31-34 648 · 35-43 630. Exclusions: Jamieson at its single key 6 (Luke 8 material), declared through excluded_voices; Cyril of Jerusalem at all fourteen keys and Cyril of Alexandria at all six, both silenced because the VOICE_LABELS defect makes them undeclarable. Three specific cares taken. First, the catena blocks run several fathers together under one head, so every attribution was confined to head-level material and no sub-quoted passage was attributed to the head voice. Second, 'Pseudo-Chrysostom' at key 35 would be matched by a plain search for 'Chrysostom', whose own blocks are at keys 9, 18 and 31 and not in that span, so the build tool was given a negative-lookbehind pattern to keep the two apart and the entry names only Pseudo-Chrysostom. Third, the bare 'Cyril' blocks were checked individually against their verses before use and found correctly placed, unlike both qualified Cyril labels. School keys in the tags were reconciled against the voices actually named in each entry; entries 31-34 and 35-43 carry seven schools each."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "20",
+      "verses": [
+        "5",
+        "11",
+        "23"
+      ],
+      "note": "JFB stride bug, tenth confirmed instance, and the donor pattern from note 722 now holds in the OT. The three JFB blocks in leviticus 20 (vv.5, 11, 23) carry no comment on this chapter at all: v5 is on pouring oil on bread in the meat offering, v11 on leaven and honey, v23 on the fat tail of the broad-tailed Eastern sheep -- all of it residue from LEVITICUS 2-3, the offerings. Stride is 6 then 12, consistent with the stride-of-six family. This confirms the donor rule inferred at acts 28: where the residue's donor can be identified, it comes from an EARLY CHAPTER OF THE SAME BOOK (acts 28 <- Acts 7; leviticus 20 <- Leviticus 2-3), while the two epistle cases drew from Acts. Running tally of donors: romans 15 <- Acts 15, 1corinthians 12 <- Acts 21-23, acts 28 <- Acts 7, leviticus 20 <- Leviticus 2-3. All three excluded here."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "Entry-count predictor 11 for 11. leviticus 20: 27 keys, 13,845 usable source words, no gaps, median 391 -- the smallest chapter the formula has been tried on. One key over 2000 (v1=2236) and 11,609 words across the other 26, giving 1 + round(4.64) = 6. Tiling produced exactly 6. The formula has now held across a 97k-word range (leviticus 20 at 13.8k up to acts 28 at 60.2k) and across both testaments, and on chapters whose key-length profiles are opposite (many short keys versus a few very long ones)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "18",
+      "verses": [
+        "7"
+      ],
+      "note": "Compression risk in the legal chapters, a new instance of the note-711 problem. Leviticus 18 and 20 repeat a small fixed vocabulary by design -- nakedness, uncover, father's wife, half-sister, put to death, their blood shall be upon them -- because the text itself is a list of near-identical formulae. Entry 3 of leviticus 18 (vv.7-11) first graded B on zlib at 0.413 against the 0.42 floor, not on TTR, which is the reverse of the 1corinthians 12 body-metaphor failure where MATTR was the binding constraint. The fix is also the reverse: rather than reaching for fresh vocabulary, drop the repeated formula itself and let the commentators' own distinguishing language carry the entry (Keil's dishonour-and-shame, Ellicott's textual argument, Gill's history). Final chapter means: leviticus 18 zip 0.447, leviticus 20 zip 0.451. Watch zlib rather than TTR when synthesising legal lists."
     }
   ]
 }
