@@ -5707,6 +5707,64 @@
         "55"
       ],
       "note": "Three displacement and chrome defects in one chapter. (1) Calvin's v2 block does not comment on v2 at all: it is his commentary on the pursuit at vv.22-24 — the three days' journey, Laban restrained like a savage wild beast — filed under the wrong key. Since Calvin has genuine comment at v1 and v3 he was declarable in span 1-3 without it, so the displaced block simply went unused; had it been his only text there the filing rule would have forced pursuit material into an entry about the command to return. (2) Ellicott's v54 block ends in the same StudyLight page furniture recorded at exodus 14 v31 (note 504) — navigation markup, copyright, and a full inline stylesheet — appended to about 60 words of real comment. (3) Gill's v55 block ends in sacred-texts navigation chrome. The chrome inflates v54 and v55 in the size estimate: this chapter measured 33,830 usable source words, and the true drafting load was appreciably lower."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "8",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26",
+        "32",
+        "38"
+      ],
+      "note": "All SEVEN Jamieson, Fausset and Brown blocks are residue from Acts 10-11, the Peter and Cornelius narrative: 'I have it now demonstrated before mine eyes', the witnesses to the historical facts on which the Gospel is founded, 'slew by hanging', 'by visible and audible manifestation', 'throughout Judea', and the charge 'Thou wentest in to men uncircumcised'. Keys 2, 8, 14, 20, 26, 32, 38 - stride 6 from offset 2, SEVEN members, no gaps. This is the FOURTH consecutive chapter with a Jamieson stride-6 residue run: joshua 10 (offset 1, gap at 31), 1corinthians 7 (offset 5, no gaps), hebrews 11 (offset 3, gap at 21), romans 8 (offset 2, no gaps). Four chapters, four different offsets, one invariant stride. The three-word block \"rather, 'throughout Judea.'\" is duplicated verbatim at keys 20, 26 and 32. Stride 6 is now established beyond reasonable doubt as a property of the Jamieson chunker rather than a coincidence of any one chapter, and the offsets appear to be arbitrary per chapter. This wants an owner decision on re-fetching the Jamieson tree; every chapter processed since joshua 10 has had to exclude him wholesale."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "8",
+      "note": "romans 8 introduces THEODORET OF CYRRHUS as a substantial new voice: 4,162 words spread across nearly every verse of the chapter, a genuine running commentary and entirely on topic. He is the first Antiochene father in this corpus to appear as a continuous commentator rather than in scattered blocks, and mapping him to eastern-antiochene gave that school real coverage in 14 of 14 entries. Worth checking whether the Theodoret tree covers other Pauline chapters at the same density; if so it materially improves eastern-antiochene representation across the epistles, which has until now depended on Chrysostom's homilies and on Cyril of Jerusalem's catechetical lectures, the latter usually residue."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "8",
+      "verses": [
+        "8",
+        "11",
+        "15",
+        "26",
+        "29",
+        "34",
+        "39"
+      ],
+      "note": "Cyril of Jerusalem is MIXED again, the second chapter running: on topic at v11 (Christ raised from the dead), v15 (the Spirit of adoption among the titles of the Holy Ghost), v26 (the Comforter who helpeth our infirmities), v29 (conformed to the image through baptism), v34 (testimonies to the session at the right hand) and v35 (the believer facing the last adversary, which actually quotes and applies this very verse); residue from the Catechetical Lectures at v8 (going down to the grave) and v39 (flee to the mountains, from the lecture on Antichrist). Combined with hebrews 11, where the same voice was on topic at five keys and residue at three, this confirms that residue cannot be declared per-voice-per-chapter but only per-entry. He also remains undeclarable in excluded_voices because VOICE_LABELS carries the bare string 'Cyril' ahead of the long forms, so split_voices() never matches his header - the fifth chapter in which that bug has bitten."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "8",
+      "verses": [
+        "19",
+        "20",
+        "22"
+      ],
+      "note": "Rom 8:19-22, 'the earnest expectation of the creature', carries a genuine THREE-WAY split on what the creature is, unusual in this corpus, which normally produces two-way disagreements. (1) The GENTILE WORLD: Gill, Lightfoot and Clarke, who distinguish a vanity of mind entered willingly from a subjection to vanity suffered unwillingly, and trace it to the confusion of tongues at Babel; Clarke presses the reading by challenging the material-creation party to say how the fabric of the world 'groans and travails', arguing they must own the phrase borrowed and allusive while his own admits the literal construction. (2) The RENEWED CHRISTIAN MIND: Barnes - who then abandons his own reading at v22 and takes 'the whole creation' in the natural sense. (3) The MATERIAL CREATION: Ellicott, Robertson, Calvin, Wesley and Theodoret, though Theodoret expressly denies the creation was really gifted with feeling. Clarke also lists six candidate readings he found in the literature: brute creation, Jewish people, the godly, the Gentiles, good angels, fallen spirits."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "8",
+      "note": "Tiling metric, fifth filing: romans 8 has 97,111 usable source words over 39 verses with 13 distinct voice labels and a maximum of ELEVEN voices on a single verse, tiled in 14 entries. It is within 75 words of hebrews 11 (97,186) in source size, but ran materially harder because of voice density: hebrews 11 peaked at 9 voices per verse and averaged 8 per entry, while romans 8 peaked at 11 and averaged 9.2. Every one of the fourteen first drafts overshot the 650-word ceiling by 20 to 40 percent and needed 2 to 5 trim passes, with the 10- and 11-voice entries the worst. Two chapters of identical source size differing by roughly 15 percent in effort, entirely on voice count, is now the clearest evidence yet for the proposal already filed four times: the picker's budget should carry a voice-count term alongside source words. Data points to date - joshua 10: 34,825 words, 8 voices, 10 entries, easy. genesis 1: 63,543, 8 voices, 8 entries. luke 22: 63,923, up to 15 voices, 14 entries, very hard. 1corinthians 7: 75,582, max 9, 14 entries. hebrews 11: 97,186, max 9, 14 entries. romans 8: 97,111, max 11, 14 entries, hard."
     }
   ]
 }
