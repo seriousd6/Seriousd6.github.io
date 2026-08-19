@@ -1,44 +1,58 @@
 {
  "1": {
   "voices": [
-   "Victorinus of Pettau",
-   "Bede",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "I saw a new heaven and a new earth, and there was no more sea",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill refuses the reading which places this vision in the apostles' own time, when the old Jewish order gave way to a new dispensation; death did not then cease, having reigned ever since, and instead of sorrow and sighing fleeing away there was for three hundred years scarce anything else."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry thinks it safest to understand the heavenly state, and reads the new earth as a condition for the bodies of men as the new heaven is for their souls; this world is not newly created but newly opened, and the very earth of the saints, their glorified bodies, will be spiritual and heavenly, suited to those bright mansions."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the rabbinic expectation that God would renew the heavens and the earth at the end of seven thousand years, then refuses to speculate, quoting Calmet that to pretend to say what this new heaven and new earth are, and what their ornaments and qualities, is the greatest of all presumptions; on the sea he supposes it was made new with the rest and probably differently placed. Wesley puts the vision after the resurrection and the general judgment, insists that John is not describing a flourishing state of the church but a new and eternal state of all things, and notices that the verb here is milder than the one used three verses later, since death and mourning and sorrow go away altogether while the former heaven and earth only pass away."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The new heaven and new earth: 'and I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea' — Barnes holds the 'first heaven and first earth passed away' not by annihilation but by renovation (the present world purified and changed for the better by the conflagration, 2 Peter 3:10-13, not that the heaven and earth were annihilated but that they are made new); 'a new heaven and a new earth' (Isaiah 65:17; 66:22; 2 Peter 3:13) the renewed, glorified creation, the final abode of the righteous (the new order succeeding the old, fitted for the redeemed); 'there was no more sea' (the sea, the symbol of instability, separation, and the restless nations, gone, whether literal or symbolic, its absence marking the perfect peace and unity of the new creation, no more division or unrest) — Barnes, Robertson, Ellicott."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Victorinus: the first world passes away 'by the conflagration of the supernal fire,' the heaven and earth changed for the better (the incorruption and immortality given them), not annihilated — the renovation and glorification of the present creation rather than its destruction and replacement; the saints, their hearts purified, dwell in the renewed creation. Bede reads the new heaven and earth as the glorified state of the redeemed succeeding the old. The mode of the renewal (purification vs new creation) is the crux."
+    "summary": "Ellicott takes the governing word apart, since Greek has two words for new, one relating to time and the other to quality, and it is the second which is used throughout this book; the newness pictured is therefore the newness of freshness, so that all things may be new and yet not strange, there being some correspondency between the old and the new. On the sea he finds it strange that so many commentators treat the ornaments of the city as symbolical while taking its annihilation as literal, and recalls how the sea has served the symbolism of the book. Robertson agrees on the method but differs on the scope, since this is not a picture of the renovation of this earth but of the disappearance of this earth and sky, though not of the heaven where God dwells. Barnes sets the whole chapter out as one picture, the redeemed after the judgment drawn under the image of a beautiful city with no temple, for it is all a temple, and needing no light, for God is its light."
    }
   ],
   "debates": [
    {
-    "question": "Are the new heaven and new earth the renovation of the present cosmos or a wholly new creation?",
-    "sides": [
+    "question": "How literally should the vanishing of the sea be taken?",
+    "positions": [
      {
-      "position": "Renovation/purification — the present heaven and earth changed for the better by fire, not annihilated",
+      "position": "the spiritual teaching is what matters; the sea has been the symbol of restless evil throughout the book",
       "holders": [
-       "Victorinus",
-       "Barnes",
-       "the patristic tradition"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "The destruction of the old creation and the making of a wholly new one",
+      "position": "a stern and glorious reality lies behind the symbol, but this earth and sky do disappear",
       "holders": [
-       "the annihilation-and-new-creation reading"
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "the sea was made new with the rest, and probably differently placed and distributed",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
@@ -46,1009 +60,782 @@
   ],
   "outliers": [],
   "themes": [
-   "I saw a new heaven and a new earth: for the first heaven and the first earth were passed away; and there was no more sea",
-   "the new heaven and new earth",
-   "the crux of renewal or new creation",
-   "the final, glorious abode of the righteous"
+   "the first heaven and the first earth are passed away",
+   "the newness of freshness rather than of recent making",
+   "and there was no more sea"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "2-4",
+  "pericope_label": "The holy city coming down from God: the tabernacle of God is with men",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the city for the whole body of the elect rather than the militant church, the general assembly and church of the firstborn, and calls them holy in a sense not yet true, since they will be perfectly holy in themselves, without the being of sin in them or any spot of it upon them."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the rabbinic form of the same expectation, that tabernacle and temple and Jerusalem came down from heaven, the Jewish opinion being that these subsist in spiritual representatives and so cannot be destroyed; on the promise about death he argues that death cannot be destroyed merely by there being no further dying, but only by a general resurrection, so this promise both assures the resurrection and proves that after it death will not return. Wesley adds that the city belongs neither to this world nor to the millennium but to eternity, and is caught in the very act of descending, and takes the clause about death as full proof that the description belongs not to time but to eternity."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The New Jerusalem as bride: 'and I John saw the holy city, new Jerusalem, coming down from God out of heaven, prepared as a bride adorned for her husband' — John seeing the holy city, the new Jerusalem, descending from God out of heaven (the city the dwelling of God with the redeemed, v.3, the glorified church/community of the saved, coming down from God, of heavenly origin and gift); 'the holy city, new Jerusalem' (3:12; Galatians 4:26; Hebrews 12:22) the figure of the redeemed people of God, the glorified church, in their final, blessed state (the new Jerusalem in contrast to fallen Babylon, ch. 17-18, the holy city of God's dwelling); 'prepared as a bride adorned for her husband' (the new Jerusalem the bride of the Lamb, v.9; 19:7, adorned and ready for her husband, Christ, the church as the holy city and the bride one, the figure of the redeemed prepared in beauty for union with Christ) — Barnes, Robertson, Ellicott."
+    "summary": "Robertson quotes Swete that the new earth must have a new metropolis, not another Babylon but a greater Jerusalem, notes that the title wife is proleptic since the marriage is not yet a reality, and traces the tabernacle metaphor back to the Shekinah glory of the old tent. Barnes insists the descent cannot be pressed, since a city three hundred and seventy miles high with single pearls for gates cannot literally settle on the earth, and measures the promise about tears against a world where no one rises in the morning certain he may not end the day in grief. Ellicott makes the direction of movement the point, since she is seen not rising out of earth or sea like the foes of righteousness but coming down from heaven, the world never evolving a golden age of itself; he marks the change of preposition, God having tabernacled over his people in an earlier chapter and with them here, and counts the negatives that follow as heralds of positive peace."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the holy city, new Jerusalem, coming down from God out of heaven",
    "prepared as a bride adorned for her husband",
-   "the New Jerusalem descending as a bride",
-   "the glorified church, the dwelling of God, as the Lamb's bride"
+   "behold, the tabernacle of God is with men",
+   "no sea, no tears, no death, no mourning, no crying, no pain"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God dwelling with his people: 'and I heard a great voice out of heaven saying, Behold, the tabernacle of God is with men, and he will dwell with them, and they shall be his people, and God himself shall be with them, and be their God' — a great voice announcing that God's tabernacle (dwelling) is now with men, God himself dwelling among the redeemed (the consummation of the covenant promise — God with his people — the fulfillment of the tabernacle and temple, John 1:14; Ezekiel 37:27); 'they shall be his people, and God himself shall be with them, and be their God' the covenant formula (Leviticus 26:11-12; Jeremiah 31:33) consummated (God dwelling with his people, they his, he their God, the perfect, eternal communion of God and the redeemed); the essence of the new creation's joy God's immediate presence (the tabernacle of God with men the heart of the blessed state, the redeemed enjoying unbroken fellowship with God) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold, the tabernacle of God is with men, and he will dwell with them",
-   "they shall be his people, and God himself shall be with them, and be their God",
-   "God dwelling with his people in the new creation",
-   "the consummated covenant, the perfect communion of God and the redeemed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The end of death and sorrow: 'and God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain: for the former things are passed away' — God himself wiping away every tear from the eyes of the redeemed (7:17; Isaiah 25:8, the figure of perfect comfort and the end of all sorrow, God's own hand removing their grief); 'no more death, neither sorrow, nor crying, neither... any more pain' (death, sorrow, crying, and pain — all the evils and miseries of the old order — abolished in the new creation, the redeemed forever free from suffering and death); 'for the former things are passed away' (the old order, with all its evils, having passed, the former things — the world of sin, death, and sorrow — gone, the new creation wholly free of them, the basis of the abolition of suffering the passing of the old world) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying, neither shall there be any more pain",
-   "for the former things are passed away",
-   "the end of death, sorrow, and pain in the new creation",
-   "the perfect, eternal freedom from all suffering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "5-7",
+  "pericope_label": "Behold, I make all things new: I am Alpha and Omega, the beginning and the end",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill weighs the Father against Christ as the speaker and leans to Christ, since the speaker calls himself Alpha and Omega as Christ does elsewhere, and it is he who gives thirsty souls the water of life; on the declaration that all is done he fills out the list, since the whole election of grace is completed and every vessel of mercy called, and what was finished on the cross by way of impetration is now done as to application."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke shows the same expectation among the rabbins, who counted the fountain of the world to come among the blessings of a future state, and imagined the lost crying, Wo to us, what good have we lost. Wesley agrees that an angel gives the order to write, thinks the apostle had ceased writing, overcome with ecstasy at the voice of him that spake, takes the second half of the title as explaining the first, and observes that to overcome is more than to thirst; on the verbs he adds a grammarian's caution, that shall and will are one word in both Hebrew and Greek."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "God makes all things new: 'and he that sat upon the throne said, Behold, I make all things new. And he said unto me, Write: for these words are true and faithful' — God himself, from the throne, declaring that he makes all things new (the renewal of all creation, cf. 2 Corinthians 5:17; Isaiah 43:19, the comprehensive renovation/recreation of all things in the new order, God the author of the new creation); 'I make all things new' (the whole order renewed, not merely new things but all things made new, the transformation of the entire creation into the glorified state, God's renewing work embracing all); 'Write: for these words are true and faithful' (God bidding John write, affirming that these words are true and faithful — trustworthy, genuine — the promises of the new creation sure and certain, God's word guaranteeing their fulfillment, the reader assured of the truth of these things) — Barnes, Robertson, Ellicott."
+    "summary": "Barnes treats the title as decisive, making it morally certain that the speaker is the Lord Jesus and proving him divine, and hears an echo of the cross in the declaration that it is done. Robertson reads it as the first time since the opening chapter that God speaks directly, notes that the message is addressed to the entire world of the blessed rather than to John, suspects a change of speakers in the command to write, and divides the title so that the beginning is the First Cause and the end the Finality. Ellicott would render the promise as a present, I am making all things new, hears the assurance of the Throned One who has presided over all the changing scenes of earth's history, counts the assurance trebly sure with Bengel's note that the book says it is done twice, and finds in the title the ground of the offer to the thirsty, since he who begins the good work will perform it."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that sat upon the throne said, Behold, I make all things new",
-   "Write: for these words are true and faithful",
-   "God's declaration that he makes all things new",
-   "the comprehensive renovation of all creation, the promise sure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Alpha and Omega and the water of life: 'and he said unto me, It is done. I am Alpha and Omega, the beginning and the end. I will give unto him that is athirst of the fountain of the water of life freely' — God declaring 'It is done' (the work of the new creation completed, as 16:17) and proclaiming himself 'Alpha and Omega, the beginning and the end' (1:8; 22:13, the first and last letters of the Greek alphabet, affirming God's eternity and his sovereignty over all history, the origin and goal of all, the One who completes what he began); 'I will give unto him that is athirst of the fountain of the water of life freely' (to the thirsty, God giving freely of the fountain of the water of life, 22:17; John 4:14; Isaiah 55:1, the free gift of eternal life and the satisfaction of the soul's thirst, the gracious invitation amid the consummation) — Barnes, Robertson, Ellicott, Gill."
+    "question": "Who is speaking from the throne?",
+    "positions": [
+     {
+      "position": "Christ, since the speaker takes the title Alpha and Omega and gives the water of life",
+      "holders": [
+       "John Gill",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "God, who here speaks directly for the first time since the opening chapter, though an angel gives the command to write",
+      "holders": [
+       "A.T. Robertson",
+       "John Wesley"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "It is done. I am Alpha and Omega, the beginning and the end",
+   "behold, I make all things new; write, for these words are faithful and true",
    "I will give unto him that is athirst of the fountain of the water of life freely",
-   "God as Alpha and Omega and the water of life",
-   "the eternal God who completes all and gives eternal life freely"
+   "he that overcometh shall inherit these things"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The overcomer's inheritance: 'he that overcometh shall inherit all things; and I will be his God, and he shall be my son' — the one who overcomes (the victorious believer, as in the seven letters) shall inherit all things, and God will be his God and he God's son (the consummate reward — the inheritance of all the blessings of the new creation, and the relation of sonship to God); 'shall inherit all things' (heir of all the blessings of the new creation, the holy city, and the presence of God, the comprehensive inheritance of the redeemed, cf. Romans 8:17; Matthew 5:5); 'I will be his God, and he shall be my son' (the covenant relation, 2 Samuel 7:14; cf. the covenant formula, v.3, applied to the overcomer, God his God and he God's son, the intimate, filial relation of the redeemed to God, the adoption consummated) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He that overcometh shall inherit all things; and I will be his God, and he shall be my son",
-   "the overcomer's inheritance and sonship",
-   "the consummate inheritance of the new creation",
-   "the filial relation of the redeemed to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "8",
+  "pericope_label": "But the fearful, and unbelieving, and all liars, shall have their part in the lake",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill will not let the first name touch the timorous sheep and lambs of Christ, who are often of a fearful heart on account of sin and temptation, but only those of cowardly spirits who are not valiant for the truth, and who through fear of men either make no profession or drop the one they made lest they be exposed to persecution."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the same men historically, as those who for fear of losing life or property refused a religion they were convinced was true, or fell away when it grew dangerous; he defines the sorcerers as persons who by drugs, philtres and fumigations pretend to produce supernatural effects, and the idolaters as those who offer any kind of worship to anything but God, and is strictest on the liars, taking in every one who speaks contrary to the truth while knowing it and even the man who speaks truth meaning to deceive. He adds that about thirty excellent manuscripts insert sinners into the list, on which evidence Griesbach admitted the word. Wesley disposes of three together, since fornication, sorcery and idolatry generally went in company."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The catalogue of the lost: 'but the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone: which is the second death' — over against the overcomer who inherits all (v.7), this catalogue of sinners (the cowardly/fearful, unbelieving, abominable, murderers, fornicators, sorcerers, idolaters, liars) excluded (the list of the unredeemed who have no part in the new creation); 'the fearful (cowardly), and unbelieving' heading the list (those who, through cowardice or unbelief, fall away or refuse Christ, their fear of man and lack of faith condemning them, the catalogue then naming the grosser sins); 'shall have their part in the lake which burneth with fire and brimstone: which is the second death' (the lost assigned to the lake of fire, the second death, 20:14, their portion eternal perdition, the solemn contrast to the overcomer's inheritance, exclusion from the new creation and consignment to the second death) — Barnes, Robertson, Ellicott."
+    "summary": "Barnes sets the fearful expressly against the overcomer of the verse before, derives the word for the abominable from a verb meaning to excite disgust, and takes the last term to cover all who are false in their statements, promises and contracts. Robertson makes the second epithet mean untrustworthy rather than merely unbelieving, set against Christ who is called the faithful, adds that disloyalty is close kin to cowardice, refers the pollution to those defiled by the impurities of emperor-worship, and counts eight epithets in all. Ellicott divides the word for fear, since there is a high and holy fear in which the Christian passes his sojourn here and a base and selfish fear of man which brings a snare, and finds the characters arranged in four pairs."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "Notes that among those admitted to the city are men who have sinned through fear and faithlessness, so that it is sin unrepented of, not sin committed, which shuts a man out."
+   }
+  ],
   "themes": [
-   "the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and sorcerers, and idolaters, and all liars",
-   "shall have their part in the lake which burneth with fire and brimstone: which is the second death",
-   "the catalogue of the lost in the second death",
-   "the unredeemed excluded from the new creation"
+   "the cowardly and the faithless heading the list",
+   "their part in the lake that burneth with fire and brimstone, which is the second death",
+   "sin loved and unrepented of is what closes the gate"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "9-10",
+  "pericope_label": "Come, I will show thee the bride, the Lamb's wife; and he carried me away in the spirit",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says John was in an ecstasy, so that it only seemed to him as if he were taken from place to place, none of these visions being corporeal sights but things represented to his spirit, as with Paul caught up to the third heaven, who could not tell whether he was in the body or out of it; he notes that the Ethiopic version makes the Spirit the agent, not the evil spirit who once carried our Lord bodily to an exceeding high mountain."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry generalises from the choice of messenger, that God has a variety of work for his holy angels: sometimes to sound the trumpet of divine providence and give fair warning to a careless world, sometimes to pour out the vials of his anger upon impenitent sinners, and sometimes to discover things of a heavenly nature to the heirs of salvation. He reads the subject as the church in her perfect state, comely through the comeliness put upon her by her husband, and draws a rule from the vantage point, that those who would have clear views of heaven must get as near heaven as they can, into the mount of vision, whence, as from the top of Pisgah, they may behold the goodly land."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke keeps to the practical use of the height, since being above the city he might see every street and lane of it. Wesley notes that the same angel had before showed him Babylon, which is directly opposed to the new Jerusalem, compares Ezekiel's holy city, which agrees in many particulars but differs in more since the prophet describes a temple and John saw none, observes that the old city is now so forgotten that this one is called simply Jerusalem, and adds how St John longed to enter in, though the time was not yet come."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The angel shows the bride: 'and there came unto me one of the seven angels which had the seven vials full of the seven last plagues, and talked with me, saying, Come hither, I will shew thee the bride, the Lamb's wife' — one of the vial-angels (as the one who showed the harlot, 17:1) now inviting John to see 'the bride, the Lamb's wife' (the deliberate contrast — the same kind of angel shows the harlot Babylon and the bride the New Jerusalem); 'the bride, the Lamb's wife' the New Jerusalem (v.2, 10), the glorified church, the bride of the Lamb (19:7), the holy city and the bride one — the redeemed people of God in their final, glorious union with Christ; the angel who showed the judgment of the great whore (17:1) now showing the bride (the New Jerusalem, the faithful bride, set over against Babylon, the unfaithful harlot, the deliberate contrast crowning the book — the doom of the harlot and the glory of the bride) — Barnes, Robertson, Henry."
+    "summary": "Ellicott notes that one of the angels which had the vials of wrath had shown the seer the guilty Babylon and that one of the same company now shows him the pure Bride, and will not stop at the view-ground, since the glimpse of God's coming glories is best gained from the consecrated heights of self-surrender and prayer; he sets the scene beside the temptation, where the tempter showed our Lord the kingdoms of the world while the comforting angel shows the prophet the city which hath the foundations. Robertson makes the same point of the introduction, which repeats the announcement about the harlot city word for word, and thinks the mountain cannot be Zion since the new Jerusalem is seen descending from it. Barnes cannot say why one of these angels was employed, but suggests it was fitting that those who had brought destruction on the enemies of the church should announce her triumph."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Come hither, I will shew thee the bride, the Lamb's wife",
-   "the angel offering to show the bride, the Lamb's wife",
-   "the New Jerusalem, the glorified church, set over against Babylon",
-   "the bride and the harlot contrasted"
+   "the bride, the Lamb&rsquo;s wife, set against the harlot city",
+   "he carried me away in the spirit to a mountain great and high",
+   "the descriptions of Ezekiel and of John compared"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The holy city shown: 'and he carried me away in the spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of heaven from God' — John carried in the Spirit to a great, high mountain (the vantage for viewing the city, as Ezekiel 40:2) and shown the holy Jerusalem descending from God (the glorified city/church displayed in its descent); 'a great and high mountain' the elevated vantage from which the whole city may be seen (the parallel to Ezekiel's vision of the city, Ezekiel 40:2, the place of revelation); 'that great city, the holy Jerusalem, descending out of heaven from God' (the holy city, v.2, of heavenly origin, coming down from God, the glorified church, the bride, displayed in her descent, the New Jerusalem God's gift, from heaven, not of earthly making) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he carried me away in the spirit to a great and high mountain, and shewed me that great city, the holy Jerusalem, descending out of heaven from God",
-   "John shown the holy city from a high mountain",
-   "the glorified city of heavenly origin displayed in her descent",
-   "the New Jerusalem God's gift from heaven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The city's glory: 'having the glory of God: and her light was like unto a stone most precious, even like a jasper stone, clear as crystal' — the holy city having the glory of God (the divine presence, his shekinah, illumining her), her light (radiance) like a most precious stone, a jasper, clear as crystal (the city shining with the very glory of God); 'having the glory of God' (God's own glory her light and splendor, the presence of God illumining the city, v.23, her radiance not her own but God's glory shining in her); 'her light was like unto a stone most precious... like a jasper stone, clear as crystal' (a brilliant, translucent, precious radiance, the figure of pure, dazzling, glorious light, the city transparent with the glory of God, radiant as a flawless jewel) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "having the glory of God: and her light was like unto a stone most precious, even like a jasper stone, clear as crystal",
-   "the city radiant with the glory of God",
-   "the divine presence illumining the holy city",
-   "radiant as a flawless jewel, transparent with God's glory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "11-13",
+  "pericope_label": "Having the glory of God: a wall great and high, and twelve gates",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the glory two ways at once, as resting on the saints themselves, whose bodies will be made like Christ's glorious body, and as meaning the presence of God, the Shechinah that filled tabernacle and temple; if the faces of Moses and Stephen shone so brightly at that presence, how much more shall the saints shine. On the wall he canvasses the interpretations, rejecting the Spirit of God and the eternal decree, allowing that many take it for the doctrine of the gospel, and settling on the almighty power of God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the stone by its optics, since among precious stones some of the same species are far more valuable, their worth being in proportion as they are free from flaws and of a good water, and the stone here is a jasper perfectly transparent; the light of the city is intense and splendid but tinged with green to make it agreeable to the sight, nothing being so friendly to the eye as blue or green. He reports a rabbinic parallel from the Sohar, that in the palace of the world to come there are twelve gates inscribed with the names of the tribes, and that he who is of the tribe of Reuben is received at none but his own. Wesley presses the figure of the window and makes it a single one running round the city, so that the light does not come in from without but shines out from within to a great distance."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The wall and twelve gates: 'and had a wall great and high, and had twelve gates, and at the gates twelve angels, and names written thereon, which are the names of the twelve tribes of the children of Israel' — the city having a great, high wall (security and separation) with twelve gates, twelve angels at the gates, and the names of the twelve tribes of Israel written on the gates (the city secure, accessible by twelve gates, bearing the names of God's covenant people); 'a wall great and high' marking the city's security and the exclusion of all evil (v.27), and the 'twelve gates' marking its full accessibility (three on each side, v.13, the city both safe and open); 'twelve angels' (guardians) and 'the names of the twelve tribes of the children of Israel' (the gates bearing the tribes' names, as Ezekiel 48:31, the city connected with the covenant people of the Old Testament, the twelve tribes, with the twelve apostles, v.14, marking the unity of the redeemed of both covenants) — Barnes, Robertson, JFB."
+    "summary": "Robertson calls the brightness a luminary, a word found in the New Testament only here and where Paul bids Christians shine as lights, quotes Swete that the luminary of the Holy City is her witness to Christ, and notes that the word for gate is used through this book for the gate tower rather than the door. Barnes traces the same word to its ordinary use, where it means a light-giver and in profane writers commonly a window, adds that the jasper is essentially a quartz so that the word crystal shows which sort is meant, and gives the angels at the gates the duty of watching that the great enemy should not make an insidious approach as he did to the earthly Paradise. Ellicott agrees that the glory is the true Shechinah, and finds the city lustrous as the diamond but shot with the green tint of the emerald bow which swept the throne."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "a wall great and high, and had twelve gates, and at the gates twelve angels",
-   "names written thereon, which are the names of the twelve tribes of the children of Israel",
-   "the city's wall and twelve gates of the tribes",
-   "the secure city bearing the names of the covenant people"
+   "her light like a stone most precious, clear as crystal",
+   "a wall great and high, with twelve gates and twelve angels",
+   "three gates on each of the four sides"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The gates on the four sides: 'on the east three gates; on the north three gates; on the south three gates; and on the west three gates' — the twelve gates arranged three on each of the four sides (the symmetrical, complete arrangement, drawn from Ezekiel 48:31-34, the city open on every side, accessible from all directions); three gates on each side marking the perfect, symmetrical order of the city and its full accessibility from every quarter (the redeemed coming from all directions, Matthew 8:11; Luke 13:29, into the city); the gates on east, north, south, and west marking the city's openness to all the redeemed from every part of the earth (the comprehensive, universal access to the holy city, none of the saved shut out by distance or direction) — Barnes, Robertson, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "on the east three gates; on the north three gates; on the south three gates; and on the west three gates",
-   "the twelve gates on the four sides",
-   "the city accessible on every side, open to the redeemed from all directions",
-   "the symmetrical openness of the holy city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "14-16",
+  "pericope_label": "Twelve foundations bearing the apostles' names; the city lieth foursquare",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill keeps the doctrine straight before counting stones, since Christ is the one and only foundation and the twelve are named only because he was ministerially laid by the twelve apostles; the plural also marks the firm state of a church which is a city that has foundations."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supposes twelve stones, one serving as threshold to each gate, to intimate that souls enter the Church by the doctrine of the apostles, notes that several excellent manuscripts make the reed explicitly a measuring rod, and finds the quadrangular form a token of perfection and stability, the square being among the Greeks a figure of perfection so that the square man was one of unsullied integrity. Wesley reads the foundations as showing that the inhabitants built only on the faith once delivered to the saints, measures the city against Jerusalem and Babylon and asks what inconsiderable villages these were by comparison, and warns that a deep reverence is necessary in treating such things, that we may neither understand them too literally and grossly nor go too far from the natural force of the words."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The twelve foundations: 'and the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb' — the city's wall having twelve foundations, bearing the names of the twelve apostles of the Lamb (the church built on the foundation of the apostles, Ephesians 2:20, their names honored in the foundations of the holy city); 'twelve foundations' marking the apostolic foundation of the church (built on the apostles' teaching and testimony, Ephesians 2:20; Matthew 16:18, the foundations bearing their names honoring the apostles' place in the city of God); 'the names of the twelve apostles of the Lamb' named in the foundations, as the twelve tribes are on the gates (v.12) — the redeemed of both covenants (Israel's tribes and Christ's apostles) united in the one city, the New Jerusalem honoring both the old covenant people (gates) and the apostolic church (foundations) — Barnes, Robertson, Ellicott, Gill."
+    "summary": "Ellicott sees the whole Church of both Testaments in the city with the apostles' work specially recognised, in complete harmony with what Paul writes to the Ephesians, and turns aside to the objection that John could not have written a book which reckons the apostles among the foundations, since the same argument would tell against Paul's authorship of Ephesians. He contrasts the golden reed with the reed of an earlier chapter, whose measuring symbolised preservation amid danger, whereas this exhibits the beauty and proportion of a city dwelling at peace, and is brisk with those who are nervously anxious about the monstrous appearance of such a city. Robertson observes that all twelve names are written and not Peter's only, wonders whether the name on the twelfth stone is Judas or Matthias, and notes that the city is a perfect cube like the holy of holies in Solomon's temple. Barnes prefers twelve courses laid one above another to twelve stones set at intervals, and explains that the height of three hundred and seventy-five miles precludes any literal city in Palestine."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What are the twelve foundations?",
+    "positions": [
+     {
+      "position": "twelve courses of stone laid one above another beneath the wall",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "twelve stones, one serving as the threshold of each gate",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the wall of the city had twelve foundations, and in them the names of the twelve apostles of the Lamb",
-   "the twelve foundations of the apostles",
-   "the city built on the apostolic foundation",
-   "the redeemed of both covenants united in the one city"
+   "the names of the twelve apostles of the Lamb in the foundations",
+   "a golden reed to measure the city, and the gates, and the wall",
+   "the length and the breadth and the height of it are equal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The golden measuring-reed: 'and he that talked with me had a golden reed to measure the city, and the gates thereof, and the wall thereof' — the angel having a golden measuring-reed to measure the city, its gates, and its wall (as Ezekiel 40:3; Zechariah 2:1, the measuring marking the perfect proportions and the completeness of the city); 'a golden reed to measure the city' (the measuring-rod, golden for its preciousness, used to measure the city, gates, and wall, to display its exact, perfect dimensions, the measuring revealing the city's symmetry and completeness); the measuring of the city (vv.16-17) showing its perfect, complete, and ordered form (nothing wanting or amiss, the golden reed revealing the divine perfection of the holy city's proportions) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that talked with me had a golden reed to measure the city, and the gates thereof, and the wall thereof",
-   "the angel with a golden reed to measure the city",
-   "the measuring revealing the city's perfect proportions",
-   "the divine completeness of the holy city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The city foursquare and cubic: 'and the city lieth foursquare, and the length is as large as the breadth: and he measured the city with the reed, twelve thousand furlongs. The length and the breadth and the height of it are equal' — the city a perfect square (foursquare), its length and breadth equal (the figure of perfect symmetry and order, as the Holy of Holies was a cube, the city's regular, perfect form); 'twelve thousand furlongs (stadia, about 1,400-1,500 miles)' an immense, symbolic dimension (the vast size, twelve thousand, the number of the tribes multiplied, marking the greatness and capacity of the city, large enough for all the redeemed); 'the length and the breadth and the height of it are equal' (the city a perfect cube — length, breadth, height equal — like the Holy of Holies, 1 Kings 6:20, the figure of perfect, complete holiness and symmetry, the whole city a sanctuary, a perfect cube of glory) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the city lieth foursquare, and the length is as large as the breadth: and he measured the city with the reed, twelve thousand furlongs",
-   "The length and the breadth and the height of it are equal",
-   "the city foursquare, vast, and equal in dimensions",
-   "a perfect cube of glory, like the Holy of Holies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wall's measure: 'and he measured the wall thereof, an hundred and forty and four cubits, according to the measure of a man, that is, of the angel' — the wall measuring 144 cubits (twelve times twelve, the symbolic number of the tribes/apostles); the measuring 'according to the measure of a man, that is, of the angel' (the human standard of measure used by the angel); '144 cubits' (12 × 12) the symbolic number associated with the people of God (the twelve tribes and twelve apostles, the 144,000, 7:4; 14:1, the wall's measure echoing the number of the redeemed, whether the wall's height or thickness, the number significant); 'according to the measure of a man, that is, of the angel' (the angel measuring by the ordinary human standard, the cubit, the measure intelligible to men, the angel using the human unit of measurement) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he measured the wall thereof, an hundred and forty and four cubits, according to the measure of a man, that is, of the angel",
-   "the measure of the city's wall",
-   "144 cubits, the symbolic number of the people of God",
-   "the wall's measure echoing the redeemed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "17-18",
+  "pericope_label": "The wall an hundred and forty and four cubits, of jasper, and the city pure gold",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the number back to its root, since twelve times twelve is a hundred and forty-four, a number mystical and apostolical and suited to the perfect state of this church, whence the twelve gates and their angels and the twelve foundations; and he makes the jasper expressive of the impregnableness and duration and brightness of salvation by Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the unit, the cubit being named from the elbow and reaching to the tip of the middle finger, generally reckoned at a foot and a half though the pyramids suggest twenty-one inches, and offers an arithmetical conceit, that twenty-four, the number of tribes and apostles together, multiplied by a six-foot rod gives precisely a hundred and forty-four. He confirms that the oriental jasper is almost indestructible, then turns on the popular use of the passage, which has been most injudiciously applied to heaven so that we hear of golden walls and pavements without considering that nothing of this was intended literally, and that gold and jewels can have no place in a spiritual world; in symbols they are proper, but construed into realities they are very improper. Wesley states the arrangement plainly, that the wall was built of jasper and the houses were of pure gold."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The wall and city of precious materials: 'and the building of the wall of it was of jasper: and the city was pure gold, like unto clear glass' — the wall built of jasper (the precious, brilliant stone, v.11), and the city itself pure gold, transparent like clear glass (the figure of the city's surpassing preciousness, purity, and brilliance); 'the wall of it was of jasper' (the jasper being the stone of the city's glory, v.11, marking the wall's brilliant, precious beauty, the city enclosed in a wall of dazzling jewel); 'the city was pure gold, like unto clear glass' (the city pure gold yet transparent as clear glass, the figure of perfect purity and brilliance, gold so refined it is translucent, the surpassing, glorious purity of the holy city, beyond any earthly gold) — Barnes, Robertson, Ellicott, Gill."
+    "summary": "Robertson notes another multiple of twelve and is not sure whether height or breadth is meant, reckons two hundred and sixteen feet against the fifteen hundred miles of the city, puts the qualifying clause in Bengel's phrase as man's measure which is angel's, and adds that the city shone like a mass of gold against the jasper lustre of the wall. Barnes compares the walls of Babylon, which Herodotus put at three hundred and fifty feet, so that this height gives every proper idea of security while the city towers immensely above it, and says the human standard is named to prevent mistake, since an angel is measuring. Ellicott presses the doubleness of that clause, since the measure is true for men and true for angels, and while it may mean only that the angel used the ordinary standard it may imply that the vision is true for all; it is figurative, he says, but not mere figure."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "Takes the gold from Lange as referring to the sun and so to the manifestation of God's love, and reads the wealth of heaven as love: no motive of self-interest dims its lustre, so the gold is clear as glass."
+   }
+  ],
   "themes": [
-   "the building of the wall of it was of jasper: and the city was pure gold, like unto clear glass",
-   "the wall of jasper and the city of pure gold",
-   "the city's surpassing preciousness, purity, and brilliance",
-   "transparent gold of perfect purity"
+   "the measure of a man, that is, of the angel",
+   "the building of the wall was of jasper, and the city was pure gold",
+   "whether such descriptions may be preached as literal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The jeweled foundations: 'and the foundations of the wall of the city were garnished with all manner of precious stones. The first foundation was jasper; the second, sapphire; the third, a chalcedony; the fourth, an emerald' — the twelve foundations (v.14, the apostles) adorned with twelve kinds of precious stones (the first four jasper, sapphire, chalcedony, and emerald, the figure of the surpassing beauty and preciousness of the city's foundations); 'garnished with all manner of precious stones' (adorned with every kind of jewel, recalling the high priest's breastplate, Exodus 28:17-20, the apostolic foundations gleaming with precious stones, the figure of glory and worth); the named stones (jasper, sapphire, chalcedony, emerald, and the rest, v.20) marking each foundation with a distinct, precious jewel (the variety and brilliance of the gems displaying the manifold glory of the city's foundations, each apostolic foundation a precious stone) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the foundations of the wall of the city were garnished with all manner of precious stones",
-   "The first foundation was jasper; the second, sapphire; the third, a chalcedony; the fourth, an emerald",
-   "the jeweled foundations of the city",
-   "the apostolic foundations gleaming with the manifold glory of jewels"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "19-20",
+  "pericope_label": "The foundations garnished with all manner of precious stones",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill rules out several readings: the sense is not that every foundation held all manner of stones but that each had its own; the stones are not to be applied to the persons of the apostles, who were not the foundations but only had their names written on them; and still less will he allow Brightman's fancy that they mean ministers of the latter day who shall convert the Jews in the countries where these stones are found."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the foundations for the thresholds of the gates and reads the arrangement as a scheme of the two dispensations, the gates being the twelve tribes and the thresholds the twelve apostles, so that there is no entrance but through those gates and none but over these thresholds; the Mosaic dispensation was the preparation for the gospel, which without it would have no original. He and Wesley give the shades of the stones, the sardonyx red streaked with white, the sardius a deep blood red, the chrysolite dusky green with a cast of yellow, the topaz pale yellow and the amethyst violet; and Wesley recalls that the same stones on the high priest's breastplate were an emblem of the happiness of God's church in his presence, adding that here each stone is not the ornament of a foundation but the foundation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The remaining foundation-stones: 'the fifth, sardonyx; the sixth, sardius; the seventh, chrysolite; the eighth, beryl; the ninth, a topaz; the tenth, a chrysoprasus; the eleventh, a jacinth; the twelfth, an amethyst' — the list of the twelve foundation-stones completed (each of the twelve apostolic foundations a distinct precious stone, the twelve gems together displaying the full, manifold glory of the city's foundations); the twelve stones (jasper through amethyst, vv.19-20) varied precious gems, many corresponding to the stones of the high priest's breastplate (Exodus 28, the variety marking the rich, manifold beauty of the foundations, the apostolic church's glory displayed in twelve jewels); the twelve stones, one for each apostolic foundation, completing the adornment (the city's foundations a comprehensive display of precious beauty, the full glory of the apostolic foundation of the church set forth in the twelve gems) — Barnes, Robertson, Ellicott."
+    "summary": "Barnes traces several names to their origins, the chalcedony from a town opposite Byzantium, the topaz from an island in the Arabian Gulf, the chrysoprasus from the words for gold and a leek, and the amethyst from a word meaning not to be intoxicated, the gem having been thought an antidote against drunkenness. Robertson denies that the list carries any necessary mystical meaning, quoting Moffatt that the writer is simply trying to convey the impression of a radiant and superb structure, calls Charles's identification of the stones with the signs of the zodiac a needless performance, sorts the whole list by Swete into four families of colour, and will entertain Clement of Alexandria's suggestion that the variety illustrates the variety of gifts in the twelve apostles. Ellicott sets the adorned Bride against the harlot whose robe was decked with gold and pearls, hears in the diversity the doctrine of gifts differing while the Lord is the same, and sees the stones, ranged by shades of colour rather than by the order of the breastplate, encircling the city as with a rainbow belt."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "The fifth, sardonyx; the sixth, sardius... the twelfth, an amethyst",
-   "the remaining jeweled foundations",
-   "the twelve precious stones completing the city's foundations",
-   "the apostolic foundations in the full glory of twelve jewels"
+   "every precious stone in the foundations of the wall",
+   "harmony, not monotony; variety, not sameness; unity, not uniformity",
+   "whether the twelve stones carry a mystical meaning"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  },
  "21": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The pearl gates and golden street: 'and the twelve gates were twelve pearls; every several gate was of one pearl: and the street of the city was pure gold, as it were transparent glass' — each of the twelve gates a single pearl, and the city's street pure gold, transparent as glass (the figure of the surpassing, costly beauty of the city — gates of pearl, streets of transparent gold); 'every several gate was of one pearl' (a single, immense pearl, the pearl a costly, beautiful gem, Matthew 13:46, the gates of the city of surpassing preciousness, the entrance to the holy city through gates of pearl); 'the street of the city was pure gold, as it were transparent glass' (the city's street/broad way pure, transparent gold, v.18, the figure of the perfect purity and brilliance underfoot, the very streets of translucent gold, the surpassing glory of the city in every part) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the twelve gates were twelve pearls; every several gate was of one pearl: and the street of the city was pure gold, as it were transparent glass",
-   "the pearl gates and the golden street",
-   "the surpassing, costly beauty of the city in every part",
-   "gates of pearl, streets of transparent gold"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley",
    "Matthew Henry"
   ],
+  "range": "21-22",
+  "pericope_label": "The twelve gates were twelve pearls; and I saw no temple therein",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the pearls as a double emblem, of the preciousness of Christ by whom the saints enter and of the saints who enter by him, and lists what the city lacks: no material temple as in the old Jerusalem, none such as Ezekiel described, and no place of public worship as under the gospel, since there will be no preaching or administering of ordinances in that state; the Jews expect a third temple, he adds, but in vain."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says that perfect and direct communion with God will more than supply the place of gospel institutions, and asks what words could more fully express the union and co-equality of the Son with the Father."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says plainly that it is out of the order of nature to produce a pearl large enough for a gate to such a city, and tells the rabbinic story of the disciple who laughed at his master for teaching that God would provide gems thirty cubits every way for those gates, and who afterwards, at sea, saw the ministering angels cutting gems and was told they were for the gates of Jerusalem; on the temple he gives the reason in a line, that there was no need of one where God and the Lamb were manifestly present. Wesley states the presence rather than the loss, that God fills the new heaven and the new earth, surrounds the city and sanctifies all that are in it, and is all in all."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "God and the Lamb the temple: 'and I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it' — no temple in the holy city (in pointed contrast to the earthly Jerusalem, whose glory was its temple, the New Jerusalem having none, for God and the Lamb are themselves its temple); 'no temple therein' marking the perfect, immediate presence of God (in the old order the temple the place of God's special presence and the means of approach, in the new God immediately present everywhere, no special structure needed, for all is holy); 'the Lord God Almighty and the Lamb are the temple of it' (God and the Lamb themselves the temple, the redeemed worshiping and communing with God directly without mediating structure, the immediate, unhindered presence of God and Christ the city's sanctuary, the consummation of all that the temple foreshadowed) — Barnes, Robertson, Henry, Ellicott."
+    "summary": "Ellicott finds a doctrine in the contrast, since the foundations are diverse and the gates alike, so that there is one way though many roads; the pearl was reckoned the most valuable of stones among the ancients and is a fit emblem of the highest truth, and it is the only precious stone the art of man cannot improve, since the artificer may give fresh lustre to emerald and sapphire but must lift no tool upon the pearl. On the missing temple he draws out what it implies, since the age of the Church triumphing succeeds the age of the Church toiling and the external helps required for edifying the body of Christ are no longer needed: tongues and prophecies and knowledge may pass away, churches disappear into the one glorious Church, and every merely local aspect of worship is at an end. Barnes turns the absence into a positive, since the city was all temple and nothing but a temple, with worship ascending from every part. Robertson makes the same point as a reversal, since where the apostle elsewhere calls us the sanctuary of God, here God is our sanctuary, and so is the Lamb."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "I saw no temple therein: for the Lord God Almighty and the Lamb are the temple of it",
-   "God and the Lamb are the temple of the city",
-   "the immediate, unhindered presence of God the sanctuary of the redeemed",
-   "the consummation of all that the temple foreshadowed"
+   "every several gate was of one pearl",
+   "the street of the city was pure gold, as it were transparent glass",
+   "the Lord God Almighty and the Lamb are the temple of it"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
   }
  },
  "23": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "23-25",
+  "pericope_label": "The city had no need of the sun; the nations shall walk in the light of it",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill allows the clause a literal sense, since the luminaries every earthly city needs may still be in being without having the use they now have, and cites the Jewish saying that the orb of the sun belongs to this world and not to the future state; on the nations he will not have all the nations of the world meant, since all will not be saved, nor the Gentiles only, but all the elect called out of every nation. He takes the open gates for the safety of the inhabitants rather than free traffic between the risen and the living, since they will have no enemy to fear."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the Jewish tradition that in the world to come the Israelites shall have no need of the sun by day nor the moon by night, and adds that God's light shines in this city and is concentrated in the Lamb, from whom it is everywhere diffused; the open gates he reads of the present Church, which stands ever open to receive sinners of all sorts and degrees and nations. Wesley says the glory is infinitely brighter than the sun, and qualifies the glory the kings bring, since it is not their old glory, which is now abolished, but such as becomes the new earth and receives an immense addition by their entrance."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "God and the Lamb the light: 'and the city had no need of the sun, neither of the moon, to shine in it: for the glory of God did lighten it, and the Lamb is the light thereof' — the holy city needing no sun or moon (the created lights superseded, in the new order no natural luminaries required, the city having a greater light); 'the glory of God did lighten it' (God's own glory, his shekinah, v.11, illumining the city, Isaiah 60:19-20, the divine glory the city's light, God's presence its sun); 'the Lamb is the light (lamp) thereof' (the Lamb, Christ, the lamp of the city, God's glory shining and the Lamb the light-bearer through whom it shines, Christ, the light of the world, John 8:12, the everlasting light of the New Jerusalem, the redeemed walking in the light of God and the Lamb) — Barnes, Robertson, Ellicott."
+    "summary": "Robertson puts it as a comparison of brightness, since if sun and moon did shine they would add no light in the presence of the Shekinah Glory, and prefers Swete's view of Christ as the one lamp over against the many lampstands of the churches on earth; on the nations he reports Swete's uncertainty whether this is a picture of heaven itself or of some purpose of God towards humanity not yet revealed. Ellicott notices that the emblem of the Lamb recurs here, so that the memory of Christ's work on earth is never obliterated and gives depth to the city's joy, follows the best manuscripts in dropping the qualifying words about the saved, and sets the vision against the writer's circumstances, since the prophet looks out from the loneliness of churches then persecuted and sees her enlarged and honoured. Barnes takes the glory brought in to mean whatever the kings reckon their glory, and reads the open gates as meaning that the dwellers there are not prisoners, the universe being open to them."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "the city had no need of the sun, neither of the moon, to shine in it",
-   "for the glory of God did lighten it, and the Lamb is the light thereof",
-   "the glory of God and the Lamb are the city's light",
-   "the redeemed walking forever in the light of God and Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The saved nations and kings: 'and the nations of them which are saved shall walk in the light of it: and the kings of the earth do bring their glory and honour into it' — the saved nations walking in the light of the city (Isaiah 60:3, the redeemed of all nations living and walking in the light of God and the Lamb, the universal scope of the city's blessing, embracing the saved from all peoples); 'the nations of them which are saved' (or simply 'the nations,' the redeemed from all nations, walking in the city's light, the holy city the home of the saved from every people, the universal gathering of the redeemed); 'the kings of the earth do bring their glory and honour into it' (the kings bringing their glory and honor into the city, Isaiah 60:3-11, the figure of all earthly glory laid at the feet of God in the holy city, the redeemed kings, in contrast to the kings who served Babylon, bringing their honor to the New Jerusalem, all glory rendered to God) — Barnes, Robertson, Ellicott."
+    "voice": "Barnes",
+    "note": "Takes the absence of night as more than physical, meaning nothing of which night is the emblem: no calamity, no bereavement, no windows darkened for the loss of friends."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "the nations of them which are saved shall walk in the light of it",
+   "the glory of God did lighten it, and the Lamb is the light thereof",
    "the kings of the earth do bring their glory and honour into it",
-   "the nations and kings bringing their glory into the city",
-   "the redeemed of all peoples gathered, all earthly glory rendered to God"
+   "the gates shall not be shut at all by day, for there shall be no night there"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The gates never shut: 'and the gates of it shall not be shut at all by day: for there shall be no night there' — the city's gates never shut, for there is no night (the gates, never closed, marking the perfect security and the constant, free access to the city, in a world without enemies no gate need ever be shut); 'the gates of it shall not be shut at all' (unlike earthly cities, which shut their gates at night against danger, the holy city's gates standing always open, perfect safety and welcome, free, perpetual access to the city of God); 'for there shall be no night there' (no night in the holy city, v.23; 22:5, the perpetual day of God's light, no darkness, no time of closing, the figure of unending light, security, and joy, the gates needing never to close because the day never ends) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the gates of it shall not be shut at all by day: for there shall be no night there",
-   "the gates never shut and the absence of night",
-   "perfect safety, free access, and the unending day of God's light",
-   "the city ever open in endless day"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "26-27",
+  "pericope_label": "There shall in no wise enter into it anything that defileth",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the glory of the nations as the people of God themselves, who though reckoned the filth of the world are the excellent in the earth, and who will be presented to the King by rulers who had been their fathers and protectors; he adds a second sense, that whatever is great among the nations will count as nothing beside this state. On the exclusion he takes the defilement to be evil thoughts and words and actions, notes the variant readings of the versions, and finds an allusion to the temple into which no unclean person might come, so that neither the profane sinner nor the self-righteous man whose righteousness is filthy rags may enter, but only those washed in the blood of Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke keeps the prophetic background in view, the promise being that the Gentiles should contribute their gifts to the riches and glory of the temple, and turns the exclusion on the reader: he defines the impure man as one who turns the grace of God into lasciviousness and the liar as one who holds and propagates false doctrines, reminds every Christian that his baptism bound him to renounce the devil and all his works, and asks whether the reader is of that number or is expecting an eternal glory while living in sin, since presuming on the mercy of God is as ruinous as despairing of his grace. Wesley supposes a select part of each nation is meant, so that everything which can make the city honourable shall be found in it, and closes on the register, since the blessedness belongs to true and holy and persevering believers."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The glory of the nations brought in: 'and they shall bring the glory and honour of the nations into it' — the glory and honor of the nations brought into the holy city (resuming v.24; Isaiah 60:5, 11, all that is excellent and honorable among the nations gathered into the city of God, the redeemed nations rendering their glory to God); 'the glory and honour of the nations' (the best, the noblest, the most excellent of the nations brought in, whatever is truly glorious and honorable consecrated to God in the holy city, the nations' glory finding its home and end in the New Jerusalem); the nations' glory 'brought into it' (laid up in the city of God, all true glory rendered to God and gathered into his city, the redeemed peoples consecrating their honor to God, the universal homage of the nations to the holy city) — Barnes, Robertson, Ellicott."
+    "summary": "Robertson makes the comparison with the city already fallen, since Rome gathered the merchandise of the world whereas the City of God will have the best of all the nations, and leaves standing the question these recurrent glimpses raise, whether John runs parallel pictures of heaven and hell after the judgment or whether, as Charles puts it, the unclean are still on earth and cannot enter though the gates stand open; in apocalyptic writing, he adds, literalism and chronology cannot be insisted on. Barnes states the sum in a sentence, that the blessed world will be made up of all that was truly valuable and pure on the earth, and points out that the word is literally anything common, the negative being of the strongest kind. Ellicott sets the exclusion beside the open gates, which stand open always and yet admit no evil thing, and traces the allusion to the care of the Jews in keeping every unclean thing from the sanctuary."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
    "they shall bring the glory and honour of the nations into it",
-   "the glory of the nations brought into the city",
-   "all that is excellent among the nations consecrated to God",
-   "the universal homage to the New Jerusalem"
+   "nothing common, nor he that worketh abomination and a lie",
+   "but they which are written in the Lamb&rsquo;s book of life"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Nothing unclean enters: 'and there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie: but they which are written in the Lamb's book of life' — nothing unclean, no one who works abomination or falsehood, able to enter the holy city (the perfect purity of the New Jerusalem, all defilement, abomination, and lying wholly excluded); 'any thing that defileth, neither whatsoever worketh abomination, or maketh a lie' (every defiling, abominable, and false thing shut out, the city admitting nothing unholy, the contrast with Babylon, full of abomination, 17:4-5, the holy city wholly clean); 'but they which are written in the Lamb's book of life' (only the redeemed, whose names are in the book of life, 20:12, 15; 13:8, entering, the book of life the test of entrance, only the saved, the citizens of the city, may enter, the redeemed alone inhabiting the holy city) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there shall in no wise enter into it any thing that defileth, neither whatsoever worketh abomination, or maketh a lie",
-   "but they which are written in the Lamb's book of life",
-   "nothing unclean enters, only those in the Lamb's book of life",
-   "the holy city wholly clean, inhabited by the redeemed alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

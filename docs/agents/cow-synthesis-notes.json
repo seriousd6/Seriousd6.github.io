@@ -8443,6 +8443,55 @@
       "book": "numbers",
       "chapter": "31",
       "note": "Picker offered numbers 31 first in this batch's sampling; skipped per standing owner instruction (blocked pending an owner decision on its source file), re-picked and took genesis 50."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "21",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JFB stride bug, THIRTEENTH instance, and it BREAKS the same-book rule. All four JFB blocks in revelation 21 are 1 TIMOTHY 5 residue — the widows on the church roll ('contrasted with her who has children or grandchildren to support her', 'she must be not one that liveth in pleasure'), the good report in honourable works, the widows already turned aside after Satan, and the public rebuke of elders. The donor is a different book entirely, not an early chapter of the same one, which matches the two epistle cases (romans 15 <- Acts 15, 1corinthians 12 <- Acts 21-23) and not the OT/Acts cases (acts 28 <- Acts 7, leviticus 20 <- Leviticus 2-3, acts 23 <- Acts 2, genesis 50 <- Genesis 42). Revised rule: the donor is an EARLIER POSITION IN THE COMMENTARY VOLUME, which for a long book is an early chapter of the same book and for a short one is a preceding book. All four fragments begin mid-sentence with the lemma stripped. Excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "21",
+      "verses": [
+        "27"
+      ],
+      "note": "StudyLight trailing-boilerplate tail, SEVENTH instance: Ellicott, chapter-final key (v27). Seven for seven on both the voice and the position, now across three testaments' worth of books (1corinthians, acts x2, leviticus x2, genesis, revelation). Revelation 21 is NOT a book-final chapter, and it carries only the CSS/menu footer, not the scripture-index dump seen at genesis 50:25 — which supports the note-769 reading that these are two distinct artifacts, the footer being per-page and the index being end-of-volume."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "21",
+      "note": "Entry-count predictor 14/14: keys-over-2000 + round(remaining_words/2500). revelation 21 = 2 keys over 2000 (v1 5738, v9 2822) + round(25284/2500)=10 -> 12, and the tiling settled independently at 12: 1 | 2-4 | 5-7 | 8 | 9-10 | 11-13 | 14-16 | 17-18 | 19-20 | 21-22 | 23-25 | 26-27. One key over 4500 (v1) became its own entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "11",
+        "24"
+      ],
+      "note": "First appearance in this run of LATIN and GREEK PATRISTIC commentators as absorbed, undeclared voices: Victorinus of Pettau and Bede both sit inside the v1 blob, and Cyril of Jerusalem inside v11 and v24. All three are real, substantial blocks (Victorinus allegorises the squared city, Bede discusses whether the sea is dried up or changed for the better), not fragments — but none is a declared voice, so all were skipped per note 694. Worth flagging because dumpnt.py's name list does not contain Victorinus or Bede: without a Revelation-specific splitter their text silently concatenates onto whichever declared voice precedes them, which would have produced a fidelity error attributing Bede's opinion to a declared commentator. A dedicated dumprev.py was written for this chapter; the same hazard will recur in Revelation, Song of Solomon and the Gospels wherever the harvest carries patristic sources."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "21",
+      "note": "Sentence-budget-per-voice (note 772) tested and partially confirmed. Applied to revelation 21, first drafts overshot the 650 ceiling by 3-16 per cent (median ~9), against 3-20 per cent (median ~14) in genesis 50 and 0-8 per cent in acts 23. Two of twelve landed in range first try. The rule holds where one voice supplies a long connected argument — Clarke's Harmer extracts, Ellicott's excursus on the Apostles' authorship — but does not help on entries where six or seven voices each contribute two or three short glosses, which is the normal shape of the Revelation catena. For those the binding constraint is the number of VOICES admitted per paragraph, not sentences per voice: three paragraphs times three voices is the shape that lands in range."
     }
   ]
 }
