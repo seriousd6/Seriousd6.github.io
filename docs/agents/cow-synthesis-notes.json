@@ -5974,6 +5974,39 @@
       "book": "1corinthians",
       "chapter": "15",
       "note": "TILING METRIC, sixth filing, and the new high-water mark for the corpus. 1corinthians 15 is 116,326 usable source words over 58 verses -- 20% larger than anything previously landed (romans 8 at 97,111, hebrews 11 at 97,186) and it took SEVENTEEN entries, against fourteen for each of those. Voice density: 13 distinct labels, maximum 11 voices on a verse, average 8.2 named voices per entry, which sits between romans 8 (max 11, avg 9.2, hard) and hebrews 11 (max 9, avg 8). But the source words are the dominant term here in a way they were not before: at 116k the chapter needed roughly one entry per 6,800 source words, close to the ratio of romans 8 (one per 6,900) and hebrews 11 (one per 6,940), which is the tightest agreement across chapters yet seen. Running data: joshua 10 (34,825 / 8 voices / 10 entries, easy) - genesis 1 (63,543 / 8 / 8) - luke 22 (63,923 / up to 15 / 14, very hard) - 1corinthians 7 (75,582 / max 9 / 14) - romans 9 (74,457 / max 9 / 13) - hebrews 11 (97,186 / max 9 / 14) - romans 8 (97,111 / max 11 / 14, hard) - 1corinthians 15 (116,326 / max 11 / 17). The practical rule that falls out: entries needed is close to usable_source_words / 7,000, and voice density predicts the effort per entry rather than the number of them. That is a better batch-planning number than chapter count and could be surfaced by 'synthesis-loop.py size' directly."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "27",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34"
+      ],
+      "note": "Jamieson stride-6, SEVENTH consecutive chapter: keys 4, 10, 16, 22, 28, 34 -- offset 4, stride 6, six members, NO gaps at all. This is the first perfectly unbroken run. Every block is foreign matter from earlier Leviticus: v4 on Moses accompanying Aaron and his sons to initiate them (Lev 8-9), v10 and v28 on the deaths of Nadab and Abihu and Aaron's silence (Lev 10), v16 on the conjecture that the two priests were intoxicated (Lev 10:8-11), v22 on the rehearsal of the priests' laws amid their bereavement, v34 on the distinction among meats (Lev 11). Running tally, now seven chapters across five books: joshua 10 offset 1; 1corinthians 7 offset 5; hebrews 11 offset 3; romans 8 offset 2; romans 9 offset 4; 1corinthians 15 offset 0; leviticus 27 offset 4. Two chapters now share offset 4 (romans 9 and leviticus 27), and the residue material in each case comes from a passage roughly 17-19 chapters BEFORE the target in the same book -- Acts 10-12 for romans, Leviticus 8-11 for leviticus 27. That is a new observation and worth testing: the offset may be arbitrary but the SOURCE of the residue may be systematically a fixed displacement earlier in the same book, which would point at an index built from a paginated table whose row pointer lags. This wants an owner decision on re-fetching the Jamieson tree; seven chapters of hand-declared residue is enough."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "27",
+      "note": "TILING METRIC, seventh filing, and a correction to the rule proposed after 1corinthians 15. That note derived entries = usable_source_words / 7,000 from the three largest chapters. It does NOT hold at the small end. leviticus 27 is 24,457 usable source words over 34 verses and took EIGHT entries, one per 3,057 words; leviticus 6 is 21,696 words and took eight, one per 2,712. The big chapters ran one entry per ~6,900-7,000. The reason is that entry count is driven by the tiling of pericopes and by how many voices must be named per entry, not by source volume alone: in a short legal chapter almost every verse carries its own distinct rule, so the pericopes are small and numerous, while in a long argumentative chapter a single pericope can absorb five or six verses of dense commentary. A better two-term rule for batch planning: entries is roughly max(verses / 4.5, usable_source_words / 7,000). For leviticus 27 that gives max(7.6, 3.5) = 8, which is exactly right; for 1corinthians 15 it gives max(12.9, 16.6) = 17, also exact; for romans 8 max(8.7, 13.9) = 14, exact. Voice density still predicts effort per entry rather than their number: this chapter averaged 6 named voices, and the drafts came in 5-15% over the ceiling rather than the 20-35% seen in the dense New Testament chapters."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "27",
+      "verses": [
+        "14",
+        "29"
+      ],
+      "note": "Two substantive splits in this chapter worth recording. (1) At v14, on what the sanctuary actually received from a vowed house, Gill, Henry, Ellicott and Keil all take it that the house was SOLD and the price went to the sanctuary, Ellicott allowing that it might instead be kept as a dwelling for the priests; Clarke alone says it was the YEARLY RENT of the consecrated house that went to the repairs of the tabernacle. Clarke's reading has no support from the others and none from the text, but it is stated flatly and without hedging, so it is a real minority position rather than a slip. Keil in the same place names and rejects Knobel's view that a man who did not redeem had nonetheless to pay the valuation price, calling it quite groundless -- one of the few places in this tree where a commentator names a contemporary and refutes him. (2) At v29 the chapter's hardest verse divides them along a line that is not the usual school line: Gill and Wesley both argue from the Hebrew that the phrase reads devoted OF men and not BY men, so that the persons are the devoted and not the devoters, and Wesley adds an explicit warning that no man could by this text devote his own child; Clarke reports that the verse has been used by the enemies of divine revelation to prove that human sacrifice was offered under Moses and refuses the inference on the ground that so grave a law would not have been left in a few obscure words; Ellicott accepts the plain sense of putting to death but denies that it is sacrificial, holding that the man is removed out of God's sight rather than offered to him. Four different defences of the same conclusion, from a reformed, two Arminian and a grammatical-historical hand."
     }
   ]
 }
