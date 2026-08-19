@@ -8266,6 +8266,65 @@
         "7"
       ],
       "note": "Compression risk in the legal chapters, a new instance of the note-711 problem. Leviticus 18 and 20 repeat a small fixed vocabulary by design -- nakedness, uncover, father's wife, half-sister, put to death, their blood shall be upon them -- because the text itself is a list of near-identical formulae. Entry 3 of leviticus 18 (vv.7-11) first graded B on zlib at 0.413 against the 0.42 floor, not on TTR, which is the reverse of the 1corinthians 12 body-metaphor failure where MATTR was the binding constraint. The fix is also the reverse: rather than reaching for fresh vocabulary, drop the repeated formula itself and let the commentators' own distinguishing language carry the entry (Keil's dishonour-and-shame, Ellicott's textual argument, Gill's history). Final chapter means: leviticus 18 zip 0.447, leviticus 20 zip 0.451. Watch zlib rather than TTR when synthesising legal lists."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "23",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "JFB stride bug, eleventh instance, and the first that identifies the mechanism as CHAIN DISPLACEMENT rather than duplication. All five JFB blocks in acts 23 are Acts 2 residue (Peter's Pentecost sermon): 'demonstrated to be from God' at v2, the sixteenth Psalm at v14, Zechariah 12:10 at v20, the three thousand baptized at v26; v2 and v8 are byte-identical duplicates of each other. Acts 23 is simultaneously DONOR and VICTIM — its own genuine JFB commentary is what surfaced in the 1corinthians 12 slots (note 708), while its own slots hold Acts 2. Donors so far: romans 15 <- Acts 15; 1corinthians 12 <- Acts 21-23; acts 28 <- Acts 7; leviticus 20 <- Leviticus 2-3; acts 23 <- Acts 2. Where the donor is identifiable in an OT/Acts chapter it is an early chapter of the SAME book. All five excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "23",
+      "note": "Entry-count predictor now 12/12: keys-over-2000 + round(remaining_words/2500). acts 23 = 6 keys over 2000 (v1 4838, v2 2378, v5 2755, v6 8974, v12 6802, v35 2201) + round(20042/2500)=8 -> 14, and the tiling settled at 14 independently: 1 | 2-3 | 4-5 | 6 | 7-9 | 10-11 | 12 | 13-17 | 18-22 | 23-24 | 25-27 | 28-30 | 31-34 | 35. Three keys over 4500 (v1, v6, v12) could not be split and became their own entries."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "23",
+      "verses": [
+        "35"
+      ],
+      "note": "StudyLight trailing-boilerplate tail confirmed a FIFTH time, again in Ellicott and again at the chapter's last commented key (v35). Prior instances: 1corinthians 12:31, acts 28:31, leviticus 18:30, leviticus 20:27. The prediction of note 723 — that the capture is a per-page footer landing on the chapter-final verse — now holds across two testaments and five chapters. Hazard of note 745 restated: the tail names commentators in plain text ('Bible Commentaries (144) ... Adam Clarke Commentary, Albert Barnes' Notes'), so any name-scan ghost checker is blind on the chapter-final span. Handled here by dumping v35 and confirming each voice against a real block."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "31",
+      "note": "Picker offered numbers 31 during batch selection; skipped per standing owner instruction (blocked pending an owner decision on its source file), re-picked and took acts 23 instead."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "6",
+        "12",
+        "25",
+        "31"
+      ],
+      "note": "Section-sweep stranding (note 725) confirmed again in Acts. Henry has keys only at 1, 6, 12 and 25, Chrysostom only at 6 and 31, and each block expounds a whole passage rather than its verse: Chrysostom's v31 block runs on through chapter 24 (Tertullus, the plea before Felix), and his v6 block covers vv6-22. Since neither has a key inside the spans that material actually treats, note 607 forbids moving it and per-verse tiling necessarily strands some. Structural, not a defect. Also: John Lightfoot (keys 1,2,5,8,11,12) and Cyril of Jerusalem (key 23, itself Acts 2 material on the third hour) are absorbed into host blocks and are not declared voices — skipped entirely, per note 694."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "23",
+      "note": "Drafting-overshoot correction held. Drafting to ~8-10 attributed items per entry rather than by feel: of 14 entries, 4 landed in range on the first measurement (vv7-9 at 596, vv23-24 at 604, vv28-30 at 581, vv31-34 at 599) and the rest needed a single trim batch, against thirteen trim rounds for one entry in leviticus 18. The overshoot that remains is concentrated in the long-source entries (v1 at 4838 words came in at 669, v6 at 8974 came in at 695), where the item budget is hardest to hold because the material is abundant rather than scarce."
     }
   ]
 }

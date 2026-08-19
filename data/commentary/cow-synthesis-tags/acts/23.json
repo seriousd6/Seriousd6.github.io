@@ -1,248 +1,271 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "Paul, earnestly beholding the council, said, I have lived in all good conscience",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul, gazing steadily at the council (with composed boldness, conscious of no guilt, Gill), claimed to have lived in all good conscience before God — asserting his sincerity, even in his former zeal as a persecutor when he acted wrongly but conscientiously (1 Timothy 1:13)."
+    "summary": "Gill reads the look outward: fastening his eyes on them and looking wistly and intently, Paul discovered a modest cheerfulness and a becoming boldness, as one not conscious of any guilt and well assured of the goodness of his cause. Calvin takes the opening claim as a deliberate first move, meant to mollify their nettled minds so that he might the better be heard; and he notes that Paul calls them brethren not because they deserve the title but to testify that he is not the cause of the breach of friendship."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Paul's confidence before the Sanhedrin — protesting his integrity, conscious of no guilt, the boldness of a clear conscience before his judges."
+    "prevalence": "single",
+    "summary": "Henry sets the scene against Stephen's trial. When Stephen was brought they thought to face him down and could not; now Paul thought to face them down and could not, such was their wicked impudence. He hears in the claim an answer to the charge of desertion &mdash; all the time in which you have looked upon me as an apostate and an enemy to your church, I have lived in all good conscience before God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the claim to cover the whole course of Paul's religious life: he was a Jew from principle and became a Christian because God persuaded his conscience that it was right, so that there was no part of that life in which he acted as a dishonest or hypocritical man. Wesley narrows it, holding that Paul speaks chiefly of the time since he became a Christian, since none questioned him concerning what he had been before, though even in his unconverted state and in an error he had acted from conscience."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson reads the fixed gaze as a search for faces from the body that had tried Stephen, to which Paul apparently once belonged, and keeps the political colour of the verb, quoting Rackham that he had lived as God's citizen, a member of God's commonwealth; on the noun he notes that it is literally joint-knowledge, and that conscience is not an infallible guide but acts according to the light that it has. Ellicott puts the interval at a quarter of a century since Paul stood there among Stephen's accusers, describes the Hall of Meeting with its circular benches, renders the verb as I have used my citizenship, and insists that conscience requires illumination yet must never be acted against. Barnes finds a second motive in the gaze, since Paul was gauging the proportion of Pharisees and Sadducees he would appeal to five verses later, and states the corollary of the whole claim: being conscientious does not prove a man right, or innocent."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How much of Paul's life does the claim of a good conscience cover?",
+    "positions": [
+     {
+      "position": "the whole course of it, Jewish and Christian alike, since he was equally sincere in persecuting and in believing",
+      "holders": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "chiefly the years since his conversion, the time in which the council had counted him an apostate",
+      "holders": [
+       "John Wesley",
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Robertson",
+    "note": "Grants that the claim seems to lack tact and sits uneasily beside Paul calling himself the chief of sinners, but reads it as a pointed disclaimer against the charge that he is a renegade Jew."
+   }
+  ],
   "themes": [
-   "earnestly beholding the council",
-   "I have lived in all good conscience before God",
-   "the bold gaze and clear conscience",
-   "the nature of conscience"
+   "I have lived in all good conscience before God until this day",
+   "the authority and the limits of conscience",
+   "the council Paul had last faced as one of Stephen&rsquo;s accusers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ananias the high priest (a man of bad character, cruel and unjust, Robertson, Barnes) commanded Paul struck on the mouth — an illegal, provocative act (offensive at a Jew's hands, Robertson), to silence him, as Jesus had been struck (John 18:22)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the high priest's rage unmasked — pouring out fury like a beast, the Lord stripping off his pretended gravity; the disorder of a council estranged from God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the high priest Ananias commanded them to smite him",
-   "the illegal blow on the mouth",
-   "Ananias's bad character",
-   "the disorder of the council"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-3",
+  "pericope_label": "Ananias commanded them to smite him; God shall smite thee, thou whited wall",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows the words to be read either as a prophecy of judgment or as an imprecation, since may God smite thee is a recognised form of cursing and the future often stands for the imperative, but adds that the instance is not to be drawn into example. Calvin, unable to reconcile the succession of high priests in Josephus, conjectures that Ananias, excepting the title of honour almost chief in the order, held the room during an interval the historian leaves void; and he defends the retort as neither curse nor outburst but a reprehension joined with the denouncing of a punishment, meeting the objection from the other cheek by distinguishing patience from a silence whereby the frowardness of the wicked may be nourished."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports Krebs proving that Ananias was found innocent at Rome and restored to the high priesthood. Wesley dates the fulfilment about five years later, when the house was reduced to ashes in a tumult begun by his own son and Ananias, besieged in the royal palace, was dragged from an aqueduct and slain; he adds that the man had cruelly defrauded the priests of their legal subsistence, so that some of them perished for want."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul rebuked the high priest — 'God shall smite thee, thou whited wall' — for judging by the law yet violating it; 'God shall smite thee' a prediction not an imprecation (Barnes), fulfilled in Ananias's death; 'whited wall' the proverbial term for a hypocrite (Robertson); but Robertson sees an indignant outburst more self-control might have avoided."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin defends it: not a curse but a sharp reprehension joined with denouncing punishment — a lawful accusation from a quiet mind, not railing, not passing Christ's bounds; Wesley: a prophetic impulse."
+    "summary": "Barnes identifies the president as Ananias son of Nebedinus, sent bound to Rome by Quadratus and released through the younger Agrippa but never restored, and places this hearing in the vacancy after Jonathan's murder, when the last man to have held the office discharged its duties by common consent &mdash; which makes Paul's word two verses later strictly true. He denies that the retort was an imprecation, calling it a prediction, and glosses whited wall as proverbial for a hypocrite, citing Seneca on men sordid, base, and adorned only externally. Robertson dates the appointment from Herod king of Chalcis, notes the charge of rapine and cruelty brought by the Samaritans and the honourable acquittal, and observes that Paul threw the verb back with strong emphasis. Ellicott finds the motive for the blow in the contrast between the life asserted and the high priest's own, likens his brutality to Jeffreys' treatment of Baxter, and takes the whole utterance as a hasty indignation recalled after a moment's reflection, yet actually a prophecy."
    }
   ],
   "debates": [
    {
-    "question": "Was Paul's 'whited wall' rebuke a sinful lapse or a justified prophetic denunciation?",
-    "sides": [
+    "question": "Were the words a curse, a prophecy, or a rebuke?",
+    "positions": [
      {
-      "position": "A lawful, just rebuke (or prophetic prediction) from a quiet mind, not railing",
+      "position": "a prediction rather than an imprecation, since a man so unjust could not escape the vengeance of God",
       "holders": [
-       "Calvin",
-       "Wesley",
-       "Barnes"
+       "Albert Barnes"
       ]
      },
      {
-      "position": "An indignant outburst; more self-control would have served Paul better (he confesses it, v.5)",
+      "position": "a reprehension joined with the denouncing of punishment, which stays within the bounds Christ set",
       "holders": [
-       "Robertson"
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "a hasty indignation, recalled on reflection, which was nevertheless fulfilled as prophecy",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "possibly an imprecation, since the form is a recognised Jewish curse, though not to be drawn into example",
+      "holders": [
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Robertson",
+    "note": "Quotes Knowling that the blow was illegal and peculiarly offensive to a Jew at the hands of a Jew, but adds that more self-control might have served Paul better."
+   }
+  ],
   "themes": [
+   "the high priest commanded them that stood by to smite him on the mouth",
    "God shall smite thee, thou whited wall",
-   "sittest thou to judge me after the law",
-   "prediction vs imprecation",
-   "just rebuke or sinful outburst"
+   "the death of Ananias at the hands of the sicarii"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The bystanders rebuked Paul — 'revilest thou God's high priest?' — charging irreverence toward the office (which called for respect, Robertson, Deuteronomy 17); Barnes notes the irony that they appealed to the office's dignity though Ananias was not properly the high priest."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the hypocrisy — scrutinizing Paul's sharp word yet winking at Ananias's illegal violence; looking narrowly into others' faults, excusing their own."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Revilest thou God's high priest",
-   "the charge of irreverence",
-   "the office calling for respect",
-   "the bystanders' partiality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "4-5",
+  "pericope_label": "Revilest thou God's high priest? I wist not, brethren, that he was the high priest",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes those that stood by for either the councillors nearest Paul or the high priest's servants, leaning to the servants, since these stand whereas the court sat. Calvin, subscribing to Augustine, reads the reply as a taunting excuse, and defends the irony by dividing the figure in two, one sort covered with subtilty and meaning to deceive, another which so notes the thing in hand that it pricks the sorer; the sense is then that Paul acknowledges nothing in this man which belongs to the priest. He turns the protest back on the protesters, since hypocrites look narrowly into other men's faults and wink at their own."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the plainest sense, that the priesthood was no longer in succession but bought and sold, the Romans putting down one and raising another as policy dictated, so that a man long absent might well not know the president from the sagan or a deputy. He denies that any concession follows: Paul states two facts, that he did not know the man and that a ruler should be reverenced, but neither recalled his words nor made apology, having committed no trespass and acknowledging none. Wesley hears instead a man coming out of a prophetic transport, who does not say the transport came from the Spirit because they could not bear it, and who softens the bystanders with brethren while justifying their reproof out of Moses."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul replied 'I wist not that he was the high priest,' citing Exodus 22:28; most take it as literal ignorance — Paul long absent, the office vacant, Ananias not in robes or seat, genuinely not recognizing him (Barnes, Clarke, Robertson, Ellicott), according with the historical vacancy."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Augustine) and Lightfoot favor irony — a taunting excuse: 'I acknowledge nothing in this man which belongeth to the priest'; Paul knowing the office but denying Ananias deserved its honor."
+    "summary": "Ellicott sets out three readings &mdash; literal ignorance from defective sight or because the high priest was not presiding, an ironical protest against an improper appointment, or an apologetic recantation of words uttered in full knowledge &mdash; and judges the first by far the most probable, the sneer being at variance with Paul's character and the third straining the words. Barnes rejects both irony and apology, the latter because Paul evidently did not intend to retract, and thinks simple ignorance improbable too; his solution is the vacancy, since Paul did not acknowledge as high priest a man who was not truly such. Robertson allows either that Paul did not know who gave the order or that he spoke without considering, but holds that he at once recognised the justice of the point and confessed his fault, the rebuke being deserved; he notes that Jesus, smitten on the cheek, did not threaten but did protest. Ellicott adds that the text quoted is one of those where Elohim is used of earthly rulers, and that the principle behind it governed the apostle throughout."
    }
   ],
   "debates": [
    {
-    "question": "What does Paul's 'I wist not that he was the high priest' mean?",
-    "sides": [
+    "question": "What does I wist not mean?",
+    "positions": [
      {
-      "position": "Literal ignorance — the office vacant, Ananias not recognizable, Paul long absent",
+      "position": "that Paul literally did not know who had given the order, the high priest not presiding or not being known to him after long absence",
       "holders": [
-       "Barnes",
-       "Clarke",
-       "Robertson",
-       "Ellicott"
+       "Charles Ellicott",
+       "Adam Clarke"
       ]
      },
      {
-      "position": "Irony — Paul denying Ananias deserved the honor of the office",
+      "position": "that he did not acknowledge as high priest a man who, the office being vacant, was not truly such",
       "holders": [
-       "Calvin",
-       "Lightfoot"
+       "Albert Barnes"
       ]
      },
      {
-      "position": "'I did not consider' — an apologetic recantation",
+      "position": "that the words are a taunting irony, disclaiming anything priestly in the man",
       "holders": [
-       "Grotius",
-       "Doddridge"
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "that he did not advert to it, being still in a prophetic transport",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did Paul retract?",
+    "positions": [
+     {
+      "position": "yes &mdash; he confesses his fault and the rebuke was deserved",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "no &mdash; he neither recalled his words nor apologised, having committed no trespass",
+      "holders": [
+       "Adam Clarke",
+       "Albert Barnes"
       ]
      }
     ]
@@ -250,887 +273,99 @@
   ],
   "outliers": [],
   "themes": [
-   "I wist not that he was the high priest",
-   "Thou shalt not speak evil of the ruler",
-   "literal ignorance, irony, or apology",
-   "honoring the ruler (Exodus 22:28)"
+   "thou shalt not speak evil of the ruler of thy people",
+   "reverence due to the office rather than the man",
+   "Christianity was a great revolution, but its people were not revolutionists"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "6": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Chrysostom",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul, perceiving the council part Pharisee and part Sadducee, cried that he was a Pharisee called in question for the resurrection — a stratagem to divide the council (Clarke), preventing a hasty unanimous condemnation as had doomed Stephen (Ellicott); the resurrection the true heart of the matter."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom defends it: Paul wished to divide the multitude's evil unanimity, and spoke no falsehood — he was a Pharisee by descent and genuinely contended for the resurrection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I am a Pharisee, the son of a Pharisee",
-   "of the hope and resurrection am I called in question",
-   "the stratagem dividing the council",
-   "the resurrection the heart of the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's words split the council — the Pharisees taking his side against the Sadducees (Barnes) — preventing the hasty unanimous condemnation (Ellicott); the dissension was strife, not mere disagreement (Robertson); the providence in the division breaking the council's evil unanimity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there arose a dissension between Pharisees and Sadducees",
-   "the multitude was divided",
-   "the success of the stratagem",
-   "the council turning on itself"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Sadducees denied the resurrection, angels, and spirits — materialists holding the soul died with the body (Barnes) — while the Pharisees confessed both (resurrection and angels/spirits, grouped as 'both' because of their like nature, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the gravity of the Sadducees' error, a 'detestable monster' to be fled; affirming against all materialism the immortality of human and angelic spirits and the reality of the spiritual world."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Sadducees say there is no resurrection, neither angel, nor spirit",
-   "the Pharisees confess both",
-   "the Sadducees' materialism",
-   "the doctrinal fault-line"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Pharisees defended Paul — 'we find no evil' (a verdict of innocence like Pilate's on Jesus, Barnes) — suggesting a spirit or angel spoke to him (perverting his vision-statement, Barnes), their motive hatred of the Sadducees; 'let us not fight against God' echoing Gamaliel (5:39) but textually doubtful (Clarke, Ellicott), the Pharisees still halting between two opinions (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the scribes of the Pharisees' part defended Paul",
-   "we find no evil in this man",
-   "if a spirit or angel hath spoken to him",
-   "party-spirit serving Paul's deliverance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "As the strife grew violent (threatening to tear Paul apart, Robertson), the chief captain, fearing for the Roman citizen (Ellicott), commanded the soldiers to seize Paul and bring him to the castle — the second rescue from the murderous council."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the providence — the captain, minister of God's providence, delivering Paul a second time, the Lord directing his blind hands to save his servant."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief captain, fearing Paul should be pulled in pieces",
-   "take him by force into the castle",
-   "the second rescue",
-   "God's providence through the Roman power"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Lord Jesus stood by Paul (appearing in his crisis, Robertson) and said 'be of good cheer' — answering his anxious questions (Ellicott) — promising 'so must thou bear witness also at Rome,' the divine commission making the journey certain (Barnes, fulfilled 28:30-31)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the comfort was not immediate deliverance but the assurance his trials would issue in witness at Rome — teaching us to rest on God's word even when help is delayed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Lord stood by him, Be of good cheer",
-   "so must thou bear witness also at Rome",
-   "the divine commission to Rome",
-   "comfort in the crisis"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Certain Jews bound themselves under a curse to kill Paul, vowing not to eat or drink until they had — a desperate, murderous conspiracy (Henry); Lightfoot notes the rabbis could absolve such vows, so the conspirators risked little."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the vehement, revengeful malice — fasting the mother of murder, the vow binding them to bloodshed under pretext of piety."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bound themselves under a curse",
-   "neither eat nor drink till they had killed Paul",
-   "the murderous conspiracy",
-   "vows perverted to murder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "More than forty men joined the conspiracy — a large, determined band of assassins (Robertson), displaying the perverse unanimity in evil (Chrysostom); a formidable threat requiring the large escort that followed (v.23), underscoring the providence that delivered Paul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "more than forty which had made this conspiracy",
-   "the size of the threat",
-   "the determination of Paul's enemies",
-   "the magnitude of the deliverance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The conspirators came to the chief priests and elders, disclosing their vow to kill Paul and seeking their cooperation; Chrysostom marks the corruption — the leaders, who should have sought justice, joining a plot fit for banditti, not rulers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they came to the chief priests and elders",
-   "we have bound ourselves under a great curse",
-   "the leaders' collusion in the plot",
-   "the corruption of the priesthood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The conspirators planned for the council to request Paul's appearance, under pretext of further inquiry, so they could kill him on the way — a treacherous scheme abusing legal forms to mask murder; the pretended inquiry cloaking the ambush."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "signify to the chief captain that he bring him down",
-   "as though ye would enquire something more perfectly",
-   "we are ready to kill him",
-   "the treacherous scheme"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's sister's son (the only mention of his family) heard of the plot and came to the castle to warn Paul — a providential discovery (Chrysostom: again saved by man's forethought); the nephew's access to the castle suggesting Paul's confinement was not close."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the divine care — though the Lord had promised Paul's safety (v.11), he used the nephew's warning as the means, God working through human forethought."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul's sister's son heard of their lying in wait",
-   "entered into the castle, and told Paul",
-   "the providential warning",
-   "the only mention of Paul's family"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul called a centurion and sent his nephew to the captain with the warning — acting prudently despite the Lord's promise (v.11); Chrysostom marks the balance: even after the vision, Paul was saved by human means, believing yet not sleeping, using the wisdom in his power."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: faith did not make Paul careless but diligent in using means — the harmony of trusting the promise and employing the means of preservation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul called a centurion, Bring this young man",
-   "the prudent use of means",
-   "faith and prudence joined",
-   "not presuming on the promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The centurion took the young man to the captain, relaying Paul's request — Paul, though 'the prisoner,' treated with respect, his request honored (his Roman citizenship securing courteous treatment); the orderly relay of the warning, a link in the providential chain."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul the prisoner called me, prayed me to bring this young man",
-   "the centurion conducting the nephew",
-   "respect shown Paul as a prisoner",
-   "the providential chain of means"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The captain took the young man by the hand and led him aside privately, asking what he had to tell — a courteous, considerate manner, and a prudent privacy to learn the matter without alerting others."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the providence in the captain's kindness — God governing his courteous care to preserve Paul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief captain took him by the hand, aside privately",
-   "What is that thou hast to tell me",
-   "the courteous, prudent inquiry",
-   "providence in the captain's care"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The nephew reported the plot — the Jews' plan to request Paul's appearance under pretext of inquiry (the scheme of v.15) — faithfully conveying the conspiracy to the captain; the providence in the secret plot laid bare through a single witness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Jews have agreed to desire thee to bring down Paul",
-   "as though they would enquire more perfectly",
-   "the exposure of the plot",
-   "the faithful disclosure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The nephew warned the captain not to yield — more than forty men in ambush, bound by oath, ready and awaiting only his consent — an earnest plea joined to the full disclosure; the warning coming just in time, the conspirators ready to strike."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "do not thou yield unto them",
-   "more than forty men lie in wait, bound by oath",
-   "now are they ready",
-   "the timely warning and urgent plea"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The captain dismissed the young man, charging him to secrecy, that the conspirators not learn their plot was discovered (Ellicott, Robertson) — a prudent handling (Chrysostom), planning to act before they could adapt; the providence working through the captain's wise discretion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he let the young man depart, charged him to secrecy",
-   "tell no man",
-   "the captain's prudent discretion",
-   "foiling the plot quietly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The captain ordered a large escort — two hundred soldiers, seventy horsemen, two hundred spearmen, nearly five hundred men — to take Paul to Caesarea by night (the third hour, secretly and swiftly), taking the threat of forty assassins seriously; Chrysostom notes the irony, Paul escorted like a king."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "two hundred soldiers, seventy horsemen, two hundred spearmen",
-   "at the third hour of the night",
-   "the great military escort",
-   "the Roman power protecting Paul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The captain provided mounts for Paul and ordered him brought safely to Felix the governor at Caesarea — careful provision for the transfer to the proper authority, beyond the reach of the plot, toward the appeals that would carry Paul to Rome."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "provide them beasts to set Paul on",
-   "bring him safe unto Felix the governor",
-   "the transfer to Caesarea",
-   "careful provision for Paul's safety"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "range": "6",
+  "pericope_label": "I am a Pharisee, the son of a Pharisee: of the hope and resurrection of the dead",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The captain wrote an official letter (an elogium accompanying the prisoner) to Felix, explaining Paul's case — a communication that would serve, providentially, as a testimony to Paul's innocence (Henry); introducing Lysias's letter (vv.26-30)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he wrote a letter after this manner",
-   "the official report to Felix",
-   "the elogium accompanying the prisoner",
-   "providence in the letter testifying to innocence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The letter opens with the formal greeting — Claudius Lysias (the captain, who had purchased citizenship and taken the name Claudius, 22:28) to the most excellent Felix (the procurator of Judea) — following official epistolary form (as 15:23)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Claudius Lysias unto the most excellent governor Felix",
-   "the formal opening",
-   "the named captain and titled governor",
-   "the official communication"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lysias's account was self-serving and reversed the facts — claiming he rescued Paul 'having understood that he was a Roman,' though he learned of the citizenship only after, when about to scourge him (Ellicott, Robertson), omitting that illegal order to put himself in a good light with Felix."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom holds that Paul here discourses simply as man, not on all occasions alike enjoying supernatural aid, and that he speaks no falsehood, being a Pharisee by descent from his ancestors; since his accusers would not say why they arraigned him, he was compelled to declare the ground of the charge himself."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the providence even so — the captain, to gain favor for Paul, presents him as a wronged Roman, God governing the infidel's tongue for his servant's good."
+    "prevalence": "several",
+    "summary": "Gill notes that the proportions of the council varied, the high priest himself sometimes being a Sadducee, as Ananias probably was, and sometimes the greater part or even the whole body, though this one was only in part. Calvin feels the difficulty as sharply as any critic, granting that the subtilty was inwrapped in dissimulation not far from a lie, since the strife had really arisen over the ceremonies and the admission of the Gentiles; his answer is that Paul nowhere denied being accused of other things and said truly that the Sadducees were offended with him for holding the resurrection, and that the way being stopped he used the last remedy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out what divided the two parties. The Pharisees were bigots for ceremony, zealous not only for what God had appointed but for the tradition of the elders, yet orthodox with their church on the world of spirits, the resurrection and the life to come; the Sadducees he calls deists, who took the books of Moses for good history and good law but had little regard to the rest, denied any state of rewards or punishments beyond death, allowed no being but matter, thought God himself corporeal, and made the soul the temperament of the humours of the body."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the phrase as one thing rather than two, the hope of the resurrection, the conjunction being redundant, and traces the quarrel to its root: the apostles had been imprisoned for preaching the resurrection through Jesus, because if he rose the wickedness of those who killed him was incontrovertibly established. Wesley adds that this was Paul's case in effect, though not formally or explicitly."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes supposes Paul read the room from old acquaintance, calls the stroke a master-stroke of policy evincing a profound knowledge of human nature, and reports the charges it has drawn, Orobio thinking it an artful manner of declining persecution and Chubb calling it gross dissimulation. Robertson thinks Paul saw at once that his unwitting attack on the high priest had ruined his cause, quotes Vincent on bringing the two parties into collision and Alford's motto of divide and conquer, notes that Farrar condemns him outright, and holds the claim strictly true, the resurrection being both the point dividing the sects and the cardinal doctrine of Paul's ministry. Ellicott presses the harder question, whether a follower of Christ was not the sworn foe of Pharisaism, and answers that all parties have their good and bad sides, the true leaders of the Pharisees having given the resurrection a prominence it never had before and taught an ethical rather than a sacrificial religion."
    }
   ],
   "debates": [
    {
-    "question": "Is Lysias's account of rescuing Paul accurate?",
-    "sides": [
+    "question": "Was the appeal to the resurrection an honest defence?",
+    "positions": [
      {
-      "position": "It reverses the facts — he learned of Paul's citizenship only after the rescue, and omits the illegal scourging order, to flatter himself; yet God overruled it for Paul's good",
+      "position": "yes &mdash; it was strictly true, the resurrection being the real ground of the persecution and the centre of his preaching",
       "holders": [
-       "Ellicott",
-       "Robertson",
-       "Calvin"
+       "A.T. Robertson",
+       "Albert Barnes",
+       "John Chrysostom"
+      ]
+     },
+     {
+      "position": "yes, and no suppression of the truth, since he claimed only what was truest in their creed",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the subtilty was not far from a lie, yet the statement was true and was the last remedy of a man denied a hearing",
+      "holders": [
+       "John Calvin"
       ]
      }
     ]
@@ -1138,333 +373,813 @@
   ],
   "outliers": [],
   "themes": [
-   "I came with an army and rescued him",
-   "having understood that he was a Roman",
-   "the reversed, self-serving account",
-   "providence overruling the colored letter"
+   "touching the hope and resurrection of the dead I am called in question",
+   "the doctrinal cleavage between Pharisee and Sadducee",
+   "whether the appeal was policy, and whether policy was lawful"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
+  }
+ },
+ "7": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "7-9",
+  "pericope_label": "A dissension arose; the scribes of the Pharisees' part strove, saying, We find no evil in this man",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill hears the noise of it, a loud clamour, the members beginning to talk loud and in high spirits one against another. Calvin explains why Luke's three points reduce to two, since spirits and angels stand in one order, the souls of men and of angels being of one nature and substance; he refuses to make the Sadducees simple Epicureans, because they confessed that the world is governed by God's providence and every man rewarded for his works, their error being to shut those rewards up in this life, which experience refutes. He reads the scene as a warning about contention, since those who detested Paul begin of a sudden to defend him, which had been well done if done with judgment, but being inflamed with hatred of their rivals they are blind in his matter."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke puts the mechanics bluntly, that the Pharisees espoused Paul's side of the question because it stood in opposition to the Sadducees, whom they abhorred as irreligious men, and notes what made the concession possible: without granting the resurrection of Christ they could allow that his soul had appeared to Paul. Wesley says the same of their reasoning more briefly, that they add nothing but construe it in their own way, putting an angel or spirit for Jesus."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson dates the outbreak to mid-sentence by a genitive absolute, notes that the word for the division is used elsewhere of insurrection but here means strife, and observes a grammatical oddity in the summary, that both is used though three items of belief have been named. Barnes makes the Sadducees materialists who traced all the operations we ascribe to mind to some modification of matter, cites Josephus twice to that effect, and denies that the Pharisees had become friends of Paul or of Christianity, since inflamed against their rivals they were willing to use any argument and perverted his statement to do it. Ellicott judges the stroke immediately successful, since it prevented the hasty unanimous vote which had united the two parties in the case of Stephen, finds the Sadducean position incoherent, since men who acknowledged the Pentateuch and its angelophanies could hardly explain the Temple ritual on their own principles, and notes that the closing appeal not to fight against God is wanting in many of the best manuscripts."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "Finds the Pharisees' line altogether that of Gamaliel, and says that after twenty-five years they have got no further than the cautious policy of those who halt between two opinions."
+   }
+  ],
+  "themes": [
+   "the Pharisees confess both, and the Sadducees deny all three",
+   "what if a spirit or an angel hath spoken to him?",
+   "a defence offered out of party hatred rather than conviction"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
+  }
+ },
+ "10": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "10-11",
+  "pericope_label": "The chief captain took him by force; and the night following the Lord stood by him",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has the quarrel come to the height where hot words were spoken and they were ready to come to blows. Calvin draws the moral from the riot, that contention once hot has such violent motions that even most wise men are not well in their wits, and no fire is so swift, so that it must be prevented at the first beginning; yet the officer who acts only to stop an uproar is the minister of God's providence, and the Lord directs his blind hands. On the vision he presses what the promise withholds, since the Lord does not undertake to free Paul, nor even say that he shall have a joyful end, but only that the troubles already oppressing him will continue long &mdash; a cold comfort until one sees that it teaches how the Lord has respect unto us in our miseries even when he does not stretch forth his hand at once."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains where the rescue came from, the chief captain having been present through these transactions with a body of soldiers held ready in the castle, and notes that Paul had no direct intimation how the trial would end, though he had long desired to see Rome; the vision settled every fear and scruple by telling him he would be sent there by God himself. Wesley draws the opposite lesson from Calvin's, that particular promises are usually given when all things appear desperate, and that a promise of what is afar off implies all that necessarily lies between: Paul shall testify at Rome, therefore he shall escape the Jews, the sea, the viper."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson glosses the verb behind the tribune's fear as to draw in two or tear in pieces, a word used elsewhere of tearing chains apart, pictures the soldiers seizing Paul out of the midst of the rabbis, and adds that Lysias found his prisoner more of a puzzle than ever; on the vision he observes that Paul had no such grip on the church as Peter, for whom the whole congregation once prayed, so that it looked dark until Jesus spoke, and that the weight of the promise falls on the word must. Ellicott supplies the political reading, since the priest rebuked as a whited wall would not forgo his revenge and the Sadducees could now pose as the more devoted defenders of the Law, while the chiliarch knew he was answerable for the life of a Roman citizen; he reconstructs the wakeful night, in which the fear was not of suffering but of a work cut short, and finds the vision the manifest answer to the prayers it provoked. Barnes takes the appearance itself as approval of the course Paul had just taken before the council, and notes that the promise, though not directly one of deliverance, implied it and made it certain."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What comfort does the promise actually give?",
+    "positions": [
+     {
+      "position": "it implies deliverance and makes it certain, and settled every fear about the outcome",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "a promise of what is afar off implies all that lies between, so escape from Jews, sea and viper is included in it",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "it promises no deliverance and no joyful end, only that the trouble will be long &mdash; and teaches thereby that God regards us before he acts",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "lest Paul should have been pulled in pieces of them",
+   "be of good cheer: so must thou bear witness also at Rome",
+   "a promise that grants the end without shortening the road"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
+  }
+ },
+ "12": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "range": "12",
+  "pericope_label": "Certain of the Jews bound themselves under a curse to neither eat nor drink till they had killed Paul",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the hour, as soon as it was light, very early in the morning. Calvin explains why so express a form of cursing was chosen, since there is always a secret curse in an oath but men sometimes bind themselves harder, the cause here being that it might not be lawful for them to change their purpose or call back what they had promised; and he puts the usurpation in a sentence, that they swear to eat nothing till Paul is slain as if his life were in their hands, taking to themselves what God so often says is his alone. If Satan can drive forty men headlong together, he adds, our own sluggishness in God's service is the more shameful."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the plot as the third attempt on the same man, since they had gained nothing by tumult or by legal process and so had recourse to assassination; when one design fails they will turn another stone. He marks the timing, that in the night Christ appeared to protect him and by day forty men appeared to destroy him, but they were not up so soon that Christ was not up before them. And he will not let the form excuse the act: to bind oneself to evil is entering into covenant with the devil and leaves no room for repentance, nay bids defiance to it, and they fixed a term as short as a fast without any reserve for the disposal of an overruling Providence."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the rabbinic ruling that released them: he that has vowed not to eat sins against his vow if he eats and against his life if he does not, so let him go to the wise men and they will loose him, since the tongue of the wise is health; when vows were so easily dispensed with, he observes, they might be readily multiplied. Wesley says only that such vows were not uncommon and absolution an easy matter."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes leaves the party unnamed, noting that the sacred writer does not say whether they were Sadducees and that Michaelis conjectures they were of the Sicarii, adds that they might have vowed off wine or meat alone and made the oath more binding by renouncing all food and drink, and reports that the Rabbins could absolve them if they proved unable to execute it. Robertson takes the word for their banding as a secret combination, a binding together like twisted cords, and pursues the verb for the curse, which Cremer and Thayer called wholly Biblical or ecclesiastical though Deissmann quotes it from an Attic cursing tablet of Megara; he declines the past tense of the older rendering, since the sense is simply till they should kill him. Ellicott supplies the casuistry that made such men possible, by which a blasphemer or apostate was an outlaw whom private persons might execute, citing Mattathias at Modin and the ten Zealots who conspired against Herod, and identifies the form of the oath as the Jewish kherem."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "Adds that it is melancholy but instructive how often Christian casuistry has run in the same groove as the Zealots'."
+   }
+  ],
+  "themes": [
+   "they bound themselves under a curse, saying that they would neither eat nor drink",
+   "a vow the rabbis could loose as easily as it was made",
+   "private zeal usurping the sentence of God"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
+  }
+ },
+ "13": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "13-17",
+  "pericope_label": "More than forty conspired; but Paul's sister's son heard of their lying in wait",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill thinks the number was the point, enough banded together to have strength sufficient to take Paul out of the soldiers' hands as he was conducted from the castle to the temple, and defends the boldness of the nephew's advice, which is not to be imputed to pride or vanity in a young man directing the chief captain but to his great affection for his uncle, which moved him to entreat rather than direct. Calvin says the priests thereby proved that there was in them neither fear of God nor humanity, since they did not merely allow the ambush but stood ready to be partners in it; and what was it to take a man out of the judge's hands and slay him, but to rage like murderers in the very place of judgment? He takes the boy's discovery as a lesson in providence, since who would have thought a boy would disclose the lying in wait the conspirators believed known to none but themselves?"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that Paul, though assured of preservation by divine authority, knew that providence acts by reasonable and prudent means, and that he who will not help himself according to the power he has can look to neither reason nor revelation for assistance. Wesley adds that the conspirators never scrupled at their plan, not doubting but they were doing God service."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson notes that the number is given without the usual particle and that the word for the conspiracy comes from swearing together, that the youth repeats the conspirators' own words as though he had overheard them, and that he speaks of the inquiry in the singular out of deference to the tribune's authority, so that Page is wrong to call the phrase absurd; the last clause he thinks the shrewdest thing in the speech, since the promise from Lysias is the one item needed to put the plot through. Barnes agrees that so large a body of desperate men bound by so solemn an oath would be likely to succeed, and measures the request to the council by what it assumes, since public justice must have been deeply fallen when such an iniquitous petition could be made with certain prospect of success; he remarks that Paul always understood the divine promises as consistent with his own efforts. Ellicott gives three reasons why the murder had to be contrived rather than sentenced, and doubts that the nephew lived in Jerusalem, wondering whether he was one of the kinsmen later greeted at Rome, come up for the feast and hearing the plot talked of in the caravanserai &mdash; for it is difficult to keep a secret in which forty men are sharers."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why did the conspirators need the council's help?",
+    "positions": [
+     {
+      "position": "because the Sanhedrin had lost the power of capital punishment, or could not have used it on a Roman citizen, or could not command a majority for it",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "because they had no prospect of success against the castle, and needed a pretext to bring Paul into the open",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "ye with the council signify to the chief captain that he bring him down",
+   "the only glimpse of Paul&rsquo;s family in the book",
+   "the promises of God and the use of means"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  }
+ },
+ "18": {
+  "voices": [
+   "A.T. Robertson",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "18-22",
+  "pericope_label": "The centurion brought the young man to the chief captain, who charged him to tell no man",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notices the officer's manner, that he took the young man and brought him at once without curiously inquiring into the thing or examining him about it, which showed a man of good disposition, ready to do a kind office even to a prisoner; and he reports and rejects the suspicion that Lysias took the young man by the hand because he expected a present from Paul, since that represents him as a sordid and mercenary man without sufficient proof. Calvin will not leave the courtesy at the natural level, since a man trained up in the wars might as easily have repulsed a stranger, so that it must be ascribed to the grace of God, who promised to give his people favour in the sight of the Egyptians and who mollifies hard hearts when he means to use men as helps to his own; those in authority may learn from it what a great virtue courtesy is, since magistrates often fall into great offences through pride, because they will not admit those who would give them good counsel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley thinks the whole affair was conducted by Lysias with great integrity, humanity and prudence, and reads the gesture of taking the young man by the hand as a mild and condescending one."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott lingers on the centurion's phrase, that Paul little thought how long the name prisoner would be used of him, first by others and afterwards by himself, until it became a title of honour in which he seemed to glory almost more than in that of Apostle; and he finds Lysias plainly glad of the intelligence, his sympathies with Paul against the high priest, welcoming a chance to show zeal for the safe-keeping of a Roman citizen and to state the whole transaction from his own point of view, while with true official caution treating what he had heard as confidential. Robertson describes what the custody covered, Paul being bound to a soldier but not with the two chains of his arrest and with liberty enough to see his friends, quotes Bengel on the kindly touch in Lysias, notes that the word for the youth is the one used of Paul himself at Stephen's death, and observes that the young man ran the risk of death if discovered. Barnes adds the practical motive for drawing him aside, that the message might be given privately, and can only conjecture how he came by it, though he observes that the forty were not careful about concealment, having told the whole oath to the chief priests."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Robertson",
+    "note": "Reports Vincent's guess that some Pharisee, Paul being of that guild, told the nephew of the plot, but declines to decide."
+   }
+  ],
+  "themes": [
+   "Paul the prisoner called me unto him and prayed me to bring this young man",
+   "the tribune&rsquo;s courtesy to an unknown boy",
+   "see thou tell no man that thou hast signified these things to me"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
+  }
+ },
+ "23": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "23-24",
+  "pericope_label": "Make ready two hundred soldiers, and provide beasts, to bring him safe unto Felix",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the Syriac reads a beast in the singular, one being sufficient for Paul, while the Arabic and Ethiopic leave the clause out, and counts the four hundred on foot turning back at Antipatris and leaving the seventy horsemen to finish, all danger from the Jews being over once that town was reached."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the third hour of the night was chosen for the greater secrecy, to elude the cunning and active malice of the Jews, notes that the Alexandrian manuscript reads the second form of the disputed word for the light troops, and thinks the two forms come to nearly the same thing. Wesley remarks only that this is the one occasion on which we read of Paul riding, and not by choice."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson counts three arms in the order, the heavy-armed legionaries, the horsemen belonging to every legion, and a light-armed force whose name means those who take with the right hand, reads the two centurions as some two, which Page took to mean they were not specially chosen, and explains the need of beasts, since Paul was chained to a soldier and the baggage wanted another animal while seventy miles might require a change of horses; he adds that some Latin manuscripts trace the extreme precaution of Lysias to a fear of being charged with bribery before Felix, and thinks Luke travelled with Paul. Barnes says the disputed word is found nowhere else in the New Testament and in no classical writer, reports the conjectural emendation followed by the Vulgate, Syriac and Arabic, reckons the whole detail at nearly five hundred men and justifies it by the number and desperation of the conspirators, and distinguishes the foot, meant only to see Paul out of Jerusalem, from the horse who went the whole way. Ellicott treats the word as a strictly technical term for troops carrying a javelin in one hand, coupled by Byzantine military writers with archers and light shield-bearers, and says the tumults of the previous days gave the chiliarch good reason to apprehend a formidable attack; on the governor he sets Felix and Pallas in the household of Antonia, first slaves and then freedmen, and counts from Suetonius the three queens Felix married in succession."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "Notes that the second of Felix's three queens, Drusilla, had left Azizus king of Emesa to marry him, and that their son died in the eruption of Vesuvius."
+   }
+  ],
+  "themes": [
+   "at the third hour of the night, and all of them mounted",
+   "an escort of near five hundred for a single prisoner",
+   "Felix the governor: the power of a king in the temper of a slave"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
+  }
+ },
+ "25": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "25-27",
+  "pericope_label": "Claudius Lysias unto the most excellent governor Felix, greeting",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the writer's name apart, the first being Roman and perhaps assumed from the Emperor Claudius, since the man was not born a Roman, while the second is Greek and was his proper name, so that he was likely a Greek who had bought his freedom with money. Calvin fills in who the recipient was, brother to Pallas, a freedman of Caesar who came to equal the chief men of the city in wealth and power and on whom the senate bestowed the ornaments of the praetor with titles of filthy and shameful flattery; since the servants of Claudius abused his folly and ruled the empire at their pleasure, it is no marvel that Pallas made his brother governor of Judaea. He reads the letter's aim as helping Paul by the tribune's own prior verdict and discrediting his adversaries, and looks past the writer to ask how a soldier came to be so courteous, freely, to an obscure man whom all men hated, unless the Lord had appointed him to be his servant's patron."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says God has instruments for every work, and that the natural abilities and moral virtues of the heathen have often been employed to protect his persecuted servants."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes this to be not merely the substance but the letter itself, the whole being so perfectly formal, in just the manner of all ancient letters, that he counts it another proof of Luke's accuracy."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson explains that Roman law required a subordinate officer reporting a case to his superior to send a written statement of it, sees no reason to doubt that Luke gives a genuine copy, since the letter may have been read out in open court and a copy may have reached Paul after his appeal, and thinks it was probably written in Latin; he is blunt about its falsification, since Wendt, Zoeckler and Furneaux try to defend the reversal of the two facts from being an actual lie, which Bengel rightly says it is, and Greek has no aorist participle of subsequent action, so that Lysias reversed the order and dropped the order to scourge in order to pose as the protector of a fellow citizen. Ellicott allows either that the letter was sent unsealed or that a copy reached Paul or Luke, notes that the epithet rendered most excellent is the one Luke uses of Theophilus and that the bare greeting matches the letter of the Council at Jerusalem, and says the chief captain ingeniously colours his statement to claim credit for rescuing a Roman citizen. Barnes calls the address a mere title of office and recalls that Paul's life had already been twice endangered in the way described."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the letter a genuine copy?",
+    "positions": [
+     {
+      "position": "yes &mdash; it may have been read in open court, and a copy may have reached Paul or Luke afterwards",
+      "holders": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "yes, and not merely its substance, since the form is exactly that of ancient letters",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Robertson",
+    "note": "Quotes Furneaux's verdict that the letter is a dexterous mixture of truth and falsehood, and thinks that very quality carries the stamp of genuineness."
+   }
+  ],
+  "themes": [
+   "a subordinate officer&rsquo;s written report to his superior",
+   "the tribune&rsquo;s account of a rescue he did not make in that order",
+   "God guiding the tongues and hands of the infidels"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
+   }
   }
  },
  "28": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lysias reports that, seeking to learn the charge against Paul (Robertson: to know fully), he brought him before the Sanhedrin — the inquiry of 22:30-23:10, which ended in violent division; the captain's reasonable procedure to discover the accusation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I would have known the cause wherefore they accused him",
-   "I brought him forth into their council",
-   "the account of the inquiry",
-   "the captain's reasonable procedure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lysias perceived Paul was accused of Jewish religious questions, not a crime worthy of death or bonds — the distinction Gallio drew (18:14, Robertson) — declaring him innocent of any Roman crime; every Roman magistrate so judged Paul (Gallio, Lysias, Felix, Festus, Agrippa)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the captain, a profane man, counted religious questions trivial, yet his verdict refuted the Jews' charges and vindicated Paul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "accused of questions of their law",
-   "nothing worthy of death or of bonds",
-   "the Roman acquittal",
-   "every magistrate finds Paul innocent"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Gill"
   ],
+  "range": "28-30",
+  "pericope_label": "Accused of questions of their law, but nothing worthy of death or of bonds",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill guesses how the charges sounded to a Roman ear, since questions about the resurrection of the dead and a future state, which some in the council denied and others asserted, must have seemed idle and foolish to a heathen, while the popular outcry about defiling the temple and speaking contemptibly of the law concerned things the captain knew little of. Calvin accepts the acquittal so far as the man's judgment could reach, but will not let it stand as a principle, because it is a profane man who speaks: among the people of God, corrupting the doctrine of godliness with false opinions deserves no less punishment than wronging men, and it was only because the Romans made no account of the law of God that troubling the Church with false opinions counted as no fault. Nothing is more absurd, he adds, than that theft should be punished while those who rob God of his honour escape. He reads the last paragraph of the letter as turning the accusers' hatred back on themselves, since had they persecuted Paul lawfully they would have trusted the goodness of their cause."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes Felix to be the proper person before whom the business should ultimately come and be decided, and glosses the closing word of the letter as a wish for good health."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Lysias closes the letter, reporting the plot (the reason for the transfer) and directing the accusers to bring their charges before Felix; the formal 'farewell' closing the letter (as 15:29, Ellicott); the conspirators' fate unknown, likely considering themselves absolved when Paul was gone."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the captain brings the adversaries into contempt — exposing their treacherous plot, which shows their cause unjust, for if it were lawful they would have trusted the law, not sought murder."
+    "summary": "Robertson hears the tribune's frustration in the tenses, since the verb for learning the charge means to know fully and the imperfect says the accusers were accusing him, repeating their charges; he observes that the distinction drawn is the very one Gallio had drawn at Corinth, that Lysias is expressing the opinion that Paul ought to be set free, and that the lenient treatment Paul afterwards received probably owes something to this report, since every Roman magistrate before whom he appears declares him innocent. Barnes states the finding plainly, that Paul had done nothing worthy of death or of bonds by the Roman law, having committed no crime against the Roman people. Ellicott reconstructs what the chiliarch had gathered as three points: that the prisoner was accused of transgressing the rules of the Temple, that the issue seemed to turn on whether he had seen a teacher named Jesus risen from the dead, and whether that teacher was entitled to the name of Christ; he suspects that the order sending the accusers down to Caesarea answered the high priest's request for another inquiry."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What became of the forty conspirators?",
+    "positions": [
+     {
+      "position": "they doubtless held themselves absolved once the prisoner was gone, so the fast lasted perhaps eighteen or twenty hours",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "we have no way of knowing; neither they nor the Jews from Asia are heard of again in the five years that followed",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the Jews laid wait for the man",
-   "I sent straightway to thee, and commanded his accusers",
-   "the close of the letter",
-   "exposing the Jews' malice"
+   "questions of their law, and nothing worthy of death or of bonds",
+   "every Roman magistrate before whom Paul appears declares him innocent",
+   "what became of the forty and their vow"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
+   }
   }
  },
  "31": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "31-34",
+  "pericope_label": "They brought him by night to Antipatris, and delivered the letter to the governor",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The soldiers took Paul by night to Antipatris (about forty miles, a hard night's ride, Robertson) — a swift march under cover of darkness, beyond the danger zone; Chrysostom: the large escort conveying Paul like a king, by night, for fear of the people's wrath."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the soldiers brought him by night to Antipatris",
-   "the swift night march",
-   "the royal escort",
-   "the safe removal beyond the danger zone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "At Antipatris, beyond the danger, the foot soldiers returned to Jerusalem, leaving the seventy horsemen to escort Paul to Caesarea (Barnes, Clarke) — the horsemen sufficing for the safer remaining journey."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom sees the escort as an unintended honour, since like some king whom his body-guards escort, so did these convey Paul, in such numbers too, and by night, for fear of the wrath of the people; he draws the tribune's own opinion out of the arrangements, since Lysias would not have sent him off with such care for his safety but that, having found nothing amiss in him, he knew the murderous disposition of his adversaries. He notes what the adjournment costs, since Lysias has already spoken for Paul's exculpation and now the accusers will have the chance to gain the hearer beforehand."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the captain's prudence — not sending the whole garrison far away, but only as far as needed for safety."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they left the horsemen to go with him",
-   "returned to the castle",
-   "beyond the danger of the conspirators",
-   "the orderly handling of the escort"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill credits the governor with care and diligence for reading the letter at once, not knowing what important business it might contain. Calvin supplies the tribune's reasoning for halving the escort, that once some part of the journey was finished the adversaries could have no hope of overtaking them, and that it was no point of wisdom to send part of the garrison far away."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke presses the chronology grammatically, since we need not suppose the whole troop reached the town on the night they left, the sentence being readable as the soldiers taking Paul by night and bringing him to Antipatris; he identifies the place with the ancient Capharsaba, connects the older name with the Capharsalama of the Maccabees, and notes that Herod the Great rebuilt it and named it for his father. Wesley doubts they did the stage in one night, putting Antipatris some thirty-eight of our miles north-west of Jerusalem and Caesarea nearly seventy from the city."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The horsemen reached Caesarea, delivered Lysias's letter, and presented Paul to Felix — the orderly transfer to the proper authority, fulfilling Agabus's prophecy (21:11, Robertson: Paul delivered to the Gentiles); the safe arrival, the plot foiled."
+    "summary": "Robertson calls the stage a hard night's ride of forty miles through the dark, and marks the arrival with an irony, since one wonders what Paul's friends in Caesarea, Philip and his daughters, thought of the prophecy of Agabus now so quickly come true; on the governor's question he notes that the word means of what kind of province, whether senatorial or imperial, and that Cilicia like Judaea lay under the propraetor of Syria, so that the arrest having been made in Jerusalem the case was Felix's unless it proved a matter of insurrection. Barnes describes Antipatris as standing in a fine plain watered with many springs and fountains, and takes the question about the province as an attempt to ascertain whether the prisoner belonged to his jurisdiction, which appears to have included Cilicia. Ellicott identifies the town with the modern Kefr-Saba, puts it forty-two miles from Jerusalem and twenty-six from Caesarea, reports traces of a Roman road running more directly than the route through the pass of Beth-horon, and finds the readiness to hear the case more puzzling than the question, since by Pilate's precedent it belonged elsewhere."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they came to Caesarea, delivered the epistle",
-   "presented Paul before the governor",
-   "the safe arrival and presentation",
-   "the fulfillment of Agabus's prophecy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Felix, having read the letter, asked Paul's province to determine jurisdiction (Barnes), learning he was of Cilicia (Paul's native province, Tarsus, 21:39) — a natural question (as Pilate's of Jesus, Luke 23:6, Ellicott), though Felix chose to take the case despite Paul belonging to another province."
+    "question": "Why did Felix take cognisance of a Cilician's case?",
+    "positions": [
+     {
+      "position": "because the arrest was made in Jerusalem, and so fell to him unless it were a matter of insurrection",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "because the jurisdiction of Judaea appears to have included Cilicia",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "unclear &mdash; perhaps he had no motive for conciliating the governor of Cilicia, or judged the accusation to over-rule the nationality",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "the governor read the letter, asked of what province",
-   "he understood that he was of Cilicia",
-   "establishing jurisdiction",
-   "the orderly legal process"
+   "the foot returned to the tower, and the horsemen went on with him",
+   "Antipatris, built by Herod and named for his father",
+   "he asked of what province he was"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "35": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "35",
+  "pericope_label": "I will hear thee when thine accusers are come: kept in Herod's judgment hall",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill catches a courtly note in the Arabic and Ethiopic, which read we will hear."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke expands the promise into a fair, full and attentive hearing in the presence of the accusers, where the prisoner shall be permitted to defend himself, and closes the chapter with a series of reflections: that conscience cannot be a right rule unless it be well informed, and while unenlightened may guide its professor to perdition, so that an ill-informed conscience may burn even the saints for God's sake; that no circumstance excuses a man from reverencing the authorities providence has instituted, since a good may be abused without losing its essential qualities; that God frequently raises up defenders of the principles of truth even among those who in practice are its decided enemies; that God makes use of the prudence with which he has endowed man as an agent in that very providence by which he supports him, so that prudence is well associated even with an apostolical spirit; and that the design of Lysias was to keep his own conduct free from exception while the design of God was to bring Paul safely to Rome, that he might attack idolatry in its strongest fort. Felix he credits with one piece of wisdom, in refusing to hear the case until the accusers stood face to face with the accused, since to hear one side separately makes the evil seem very great. Wesley supposes some tower belonging to the palace served as a kind of state prison."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Felix deferred the hearing until Paul's accusers arrived (ensuring both sides present, as Roman law required) and kept Paul in Herod's praetorium (the palace at Caesarea, now the governor's residence) — Paul again in custody (Chrysostom), awaiting trial; the orderly procedure and safe custody."
+    "summary": "Robertson renders the verb as I will hear thee fully and reads what follows as an indefinite clause, whenever thine accusers come, and traces the word for the building from the general's camp to the governor's palace and finally to the praetorian guard. Barnes explains that the word once meant the tent of the Roman praetor and, because justice was administered there, came to be applied to halls or courts of justice, this one having probably been reared by Herod the Great with places of security attached as such buildings usually had. Ellicott thinks judgment hall hardly gives the sense, the term ranging from a palace to a barrack, and holds that the building was meant by Herod for a royal residence and was now used by the procurator for himself and his troops, so that the Apostle had here a second experience of the life of a praetorium; at Rome, he adds, Paul does not appear to have been lodged in the praetorium, though the circumstances of that imprisonment brought him into contact with the soldiers quartered there."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "Closes the chapter with a set of general reflections, including the warning that an ill-informed conscience may burn even the saints for God's sake."
+   }
+  ],
   "themes": [
-   "I will hear thee when thine accusers are come",
-   "kept in Herod's judgment hall",
-   "the deferred hearing",
-   "Paul in safe Roman custody"
+   "I will hear thee fully when thine accusers are also come",
+   "the praetorium: from a general&rsquo;s tent to a governor&rsquo;s palace",
+   "why Paul did not sit still on the strength of a promise"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  }
 }
