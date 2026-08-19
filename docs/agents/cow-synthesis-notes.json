@@ -7516,6 +7516,81 @@
       "book": "genesis",
       "chapter": "17",
       "note": "Wesley-abridges-Henry: the split-by-topic discipline worked, and here is the working record for the next Genesis chapter. Wesley on Genesis is largely Henry verbatim, and in genesis 17 they collide at four points. Resolution used: (1) vv.1 and 2-3, Henry keeps the deferral reasons and Wesley takes the prostration; (2) vv.4-6, Henry takes the two senses of father-of-many-nations and Wesley the rabbinic 'gathered under the wings of the divine Majesty'; (3) v7, Henry takes the covenant-token material (sign and seal, bloody ordinance, oath of allegiance) and Wesley the God-would-be-their-God material, which Henry's block also carries; (4) vv.14-15 and 16-18, Henry takes the name-change and Wesley the laughter and the prayer for Ishmael, which Henry's v15 overview also covers. The principle that made it work: decide the split BEFORE drafting either entry, and give each voice the half the other does not do better. Henry's v15 block is a whole-pericope overview reaching to v20, and Henry has no key in vv.16-18 or 19-22, so by the note 607 rule that material could not be moved forward — leaving it to Wesley was the only way to use it at all."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "13",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30",
+        "48"
+      ],
+      "note": "Jamieson stride-6 misalignment, TWENTIETH consecutive chapter. Keys 6, 12, 18, 24, 30, 48 - stride 6 from offset 0, six members, with gaps at the expected 36 and 42. Eighth chapter showing the contiguous-region signature: all six blocks come from the Farewell Discourse, John 14 running into John 15, in order - 14:4-5, 14:6 'I am the Way', 14:12 greater works, 14:13-14 asking in his name, 14:18 'I will not leave you orphans', and the 15:1-8 header on the vine. The two gaps are notable: this is the first chapter where the stride skips interior keys rather than simply stopping, which may indicate the misplaced source region ran out before the chapter did. Twenty consecutive chapters is now overwhelming evidence for a systematic offset in the Jamieson scrape rather than per-chapter noise; the re-fetch decision is long overdue."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "13",
+      "verses": [
+        "6",
+        "11"
+      ],
+      "note": "John Lightfoot chapter-component substitution, PRECISELY DIAGNOSED. Two of his fourteen blocks in this chapter are from Acts 14, and both sit at the MATCHING VERSE NUMBER: the block at 13:6 is his note on Acts 14:6 ('To Lystra and Derbe, cities of Lycaonia'), and the block at 13:11 is his note on Acts 14:11 ('In the speech of Lycaonia'). His other twelve blocks (1, 2, 3, 4, 8, 9, 14, 15, 18, 33, 34, 42) are all correctly placed and on-passage. This is sharper than the previous diagnosis of 'intermittent loss' recorded at romans 3 and acts 22: the failure is not random displacement but substitution of the NEXT CHAPTER's note at the same verse key, which suggests an off-by-one chapter index in the Lightfoot scrape that fires only where his Acts 13 note is missing. Both misplaced blocks were left unused; Lightfoot is cited from his correct blocks in the same entries, so no excluded_voices declaration was needed."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "13",
+      "verses": [
+        "52"
+      ],
+      "note": "Scraped StudyLight chrome: 984 words of navigation and boilerplate at the tail of Ellicott's LAST block in the chapter (13:52), beginning at 'Acts Act 12 Acts Act Acts Act 14 Footnotes: Copyright Statement'. Seventh confirmation of the attachment model, and the FOURTH CONSECUTIVE chapter in which Ellicott is the carrier (romans 3:31, acts 5:42, hebrews 9:28, acts 13:52). The payload is the same 984-word block seen at acts 5:42. Usable source words are ~100,100, not the 101,084 reported by the sizer."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "13",
+      "verses": [
+        "48",
+        "49"
+      ],
+      "note": "Cyril of Jerusalem duplication, third instance in three consecutive batches (cf. acts 5 vv12-16, hebrews 9 vv11-13). The same 200-word block on rejoicing in the Lord appears verbatim at 13:48 and 13:49. Here both keys fall inside one entry (48-52), so the block could simply be cited once with no ghost and no declaration needed - unlike hebrews 9, where the repeats straddled entries and had to be dropped through SILENT_BY_ENTRY because the VOICE_LABELS defect makes 'Cyril of Jerusalem' undeclarable. That the handling was easy this time is luck of the tiling, not a change in the underlying defect."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "13",
+      "verses": [
+        "48"
+      ],
+      "note": "The 'ordained to eternal life' crux at 13:48 produced three independent lines of attack on the predestinarian reading, each on different grounds, and they are worth recording together. Clarke argues LEXICALLY: the participle is tetagmenoi, neither protetagmenoi nor prooriosmenoi, and so carries no idea of pre-ordination; he calls the verse 'most pitifully misunderstood'. Wesley argues TEMPORALLY: Luke does not say fore-ordained, and describes an ordination made at the very hour of hearing, those believing to whom God then gave power to believe. Ellicott argues from TRANSLATION HISTORY: he renders 'as many as were disposed for eternal life' and suspects the English word 'ordained' was itself chosen under the influence of the theology current in the English Church when the version was made. Barnes reports the ancient versions (Syriac 'destined', Vulgate 'foreordained') without adjudicating. Calvin, notably, does NOT argue the decree here at all but takes the Gentiles' joy for his subject."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "13",
+      "verses": [
+        "15",
+        "42"
+      ],
+      "note": "Two datings of the same sabbath sit awkwardly together in this chapter and neither commentator notices the other. At 13:15 Ellicott fixes the sermon to a precise sabbath by two coincidences - Paul's opening echoes Deuteronomy 1:31, the lesson for the forty-fourth sabbath of the year, and the paired prophetic lesson is the chapter of Isaiah he also quotes - placing it in high summer. At 13:42 Wesley identifies the day appointed with the sabbath the Jews call the one falling between the first of Tisri and the day of expiation on the tenth, which falls in the autumn. Both are internally reasoned and they cannot both be right. Recorded because a reader following the tags across the two entries will meet the tension without either voice acknowledging it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "13",
+      "note": "Fidelity self-grade, all 14 entries, every verse covered and every claim traced to a named block. Word counts: 1-3 649, 4-5 649, 6-8 649, 9-12 650, 13-14 649, 15-16 650, 17-22 650, 23-27 650, 28-33 650, 34-37 647, 38-41 650, 42-43 649, 44-47 650, 48-52 649. Tiling 1-52 exact, no gaps or overlaps. 52 verses, 12 voices, 14 entries, ~100,100 usable source words after 984 words of chrome - the largest chapter attempted in this corpus by a wide margin. One GHOST repair (John Gill in entry 28-33, fixed by naming his 13:28 note on the suborned witnesses and Pilate's repeated declarations of innocence, with equivalent words cut elsewhere). No other build errors."
     }
   ]
 }
