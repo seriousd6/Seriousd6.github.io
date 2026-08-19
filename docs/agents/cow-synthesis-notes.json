@@ -7094,6 +7094,70 @@
         "28"
       ],
       "note": "Material deliberately not used, recorded so the next worker does not re-decide it. Clarke's block at v28 carries a long quotation from Bishop Lowth's thirteenth Prelection on the mother of Sisera — 'a striking image of maternal solicitude, and of a mind divided between hope and fear' — with Lowth's observation that she dwells not on the slaughter of the enemies or the valour of the victor but, burning with the female love of spoils, on damsels, gold and garments, and that the disappointment of her hope is expressed more strongly by the poem's sudden silence than any colouring of words could paint it; followed by Dodd's quotation of Pelicanus challenging Homer or Virgil to match the song. It is the best single piece of literary criticism in the chapter's whole catena. It was left out because it is filed at v28, inside the vv.26-28 entry, which was already at the 650-word ceiling with Clarke present twice, while Ellicott's own citation of Lowth on the same verses falls in the NEXT entry (vv.29-31) and using both would have templated across the two. If this chapter is ever reworked at a higher word budget, Lowth belongs in it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "3",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30"
+      ],
+      "note": "Jamieson stride-6 defect, SEVENTEENTH consecutive chapter, and the cleanest instance yet: keys 6, 12, 18, 24, 30 - stride 6 from offset 0, FIVE members, NO gap. All five are headless mid-sentence fragments (12, 17, 88, 32 and 32 words) and all five are on ACTS 8, in narrative order: v6 'showing that they regarded Peter as no more than their own equal'; v12 on the term simony; v18 on Peter and John sent to Samaria, quoting Acts 1:8 and Olshausen on the Ethiopian chamberlain; v24 on the voice within directing Philip (Acts 8:29); v30 on the eunuch's deference to Philip (Acts 8:31). FIFTH chapter with the contiguous-region signature (cf. 1corinthians 1 on Acts 16, deuteronomy 22 on Numbers 27-28, hebrews 12 on Galatians 1-2, acts 22 on Acts 2). A perfect stride with no gap and a single contiguous source region in order is as strong as the evidence can get without a re-fetch of the Jamieson tree."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "19"
+      ],
+      "note": "John Lightfoot chapter-component loss, BOTH of his blocks in this chapter unusable, and in two different ways. (a) 3:1 carries his essay on the catena of vv10-19 - the quotations Jewish interpreters applied to the Gentiles - and it names 'ver.19' explicitly; in-chapter but filed at the wrong verse, and it also carries OCR garbage ('CHA Pay PE'). (b) 3:19 carries his note on ROMANS 8:19-22, opening on 'the earnest expectation of the creature' and working through the phrase 'every creature' in Mark 16:15 and Colossians 1:23 - wrong chapter entirely. Both excluded by entry. Same defect class as 1corinthians 1 (1:6=2:6, 1:8=4:8, 1:13=3:13), 1corinthians 16 (key 55 in a 24-verse chapter) and acts 22:1 (= Acts 23)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "3",
+      "verses": [
+        "9",
+        "12",
+        "13"
+      ],
+      "note": "Theodoret of Cyrrhus: EMPTY BLOCKS. His entries at 3:9, 3:12 and 3:13 carry the verse lemma alone with no commentary attached - 23, 22 and 21 words, each exactly the KJV text of the verse and nothing more. He has real comment at all 25 of his other keys in this chapter. Dropped silently rather than declared, because he is UNDECLARABLE for the same reason as Cyril of Jerusalem: scripts/synthesis_qa.py VOICE_LABELS holds the bare 'Theodoret', and _LABEL_RE requires a colon straight after the label, so the catena head 'Theodoret of Cyrrhus:' matches nothing and split_voices() never reports him. This is the THIRD voice found to be undeclarable by that regex (Cyril of Jerusalem, Theodoret of Cyrrhus, and any other multi-word head whose first token is in the list). The VOICE_LABELS defect now has three confirmed instances and wants an owner decision."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "3",
+      "verses": [
+        "25"
+      ],
+      "note": "Cyril of Jerusalem's single block in this chapter, filed at 3:25, is a catechetical lecture on the eucharistic table expounding Psalm 23 ('Thou hast prepared a table before me') - nothing to do with the propitiation. Off-topic, dropped silently (undeclarable). His other block, at 3:12, IS apt: it quotes Romans 3:12 verbatim at the end of a survey of human wickedness from Cain through the flood and Sodom to the golden calf, and was used. So the Cyril defect remains per-block rather than global."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "3",
+      "verses": [
+        "31"
+      ],
+      "note": "Scraped StudyLight page chrome, 984 words, attached to the Ellicott block at 3:31 - his last block in the chapter, consistent with the attachment model established at galatians 4:30 and confirmed at acts 22:30 (chrome attaches to the voice's last block, not the chapter's last verse). Robertson's block follows the chrome intact and was used. Reported usable source was 61,415 words; real usable is ~60,431."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "3",
+      "note": "Ten entries, all self-graded verse by verse against the catena: 1-2 638w, 3-4 646w, 5-8 648w, 9-12 649w, 13-18 650w, 19-20 650w, 21-23 643w, 24-25 640w, 26-28 650w, 29-31 637w. No claim in the prose is unsourced; every named voice has a head in its own span. Entry 1-2 landed in window on the first draft at 638w despite carrying nine voices - the first 9-voice entry in the corpus to do so - because it was written to a deliberate 620 target. Every other entry needed one to three trim passes, and the two heaviest spans (19-20 at 8,730 source words and 24-25 at 8,168) each had to be rewritten from five paragraphs to four before they would come down. Confirms again that overshoot tracks voice count and source density, not chapter length."
     }
   ]
 }
