@@ -6707,6 +6707,80 @@
       "book": "deuteronomy",
       "chapter": "22",
       "note": "deuteronomy 22: all 7 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. 30 verses, ~14,700 usable source words, tiled in 7 entries — matching the density guide. 8 voices, the largest single blocks being Henry at v5 (1,423w) and v13 (1,486w). NOTABLE CONTRAST with the last four batches: on a thin-source chapter the overshoot problem largely disappears. Three of the seven entries (1-4 at 487w, 22-27 at 583w, 28-30 at 516w) landed in window on the FIRST draft with no trim pass at all — the first time that has happened in this loop. The other four needed one to three passes. The pattern across recent chapters is now clear: overshoot scales with source density and voice count, not with chapter length. Where the source gives 1,500-1,800 words per entry the draft lands naturally; where it gives 7,000+ and ten or more voices, every draft runs 20-60 percent over."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "49",
+      "verses": [
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "JFB stride-6 donor residue, twenty-second consecutive chapter. Four JFB keys at vv.11/17/23/29 — every sixth verse — and every one carries matter from Genesis 41 (Joseph's investiture with the signet-ring, khelaat and gold necklace; the naming of his children; the seventeen years and the storehouses), none of it touching chapter 49 at any point. JFB is therefore excluded as undeclarable from the four entries whose spans contain those keys, and that exclusion is correct rather than a drafting gap. The fixed-step diagnosis recorded at leviticus 25 holds exactly here."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "49",
+      "verses": [
+        "33"
+      ],
+      "note": "StudyLight chrome tail on the chapter's LAST verse — twelve for twelve now (exodus 14:31, genesis 31:54, leviticus 6:30, numbers 14:45, acts 27:44, exodus 22:31, genesis 38:30, genesis 35:29, exodus 10:29, deuteronomy 3:29, leviticus 25:55, genesis 49:33). Here it is Ellicott's v33 block, which runs several kilobytes of site navigation, CSS and a commentary index after two sentences of exposition. Twelve recommendations for the same harvest-side fix; it is cheap to make and would clean every chapter at once."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "49",
+      "verses": [
+        "2",
+        "4",
+        "6",
+        "10",
+        "12",
+        "26"
+      ],
+      "note": "Keil's blocks are displaced through the WHOLE of this chapter, not at isolated points. Every one opens with the raw verse text of two or three verses and then comments on the LAST of them, so his exposition sits one to two verses before the material it treats: the v2 block comments on the last days (v1); the v4 block on Simeon and Levi (vv.5-6); the v6 block on Judah (v8); the v10 block on the vine (vv.11-12); the v12 block on Zebulun (v13); the v26 block on Benjamin (v27). This is the paragraph-boundary fault recorded for genesis 35, exodus 10 and leviticus 25 (notes 576, 580, 592), but sustained across an entire chapter for the first time. Practical cost here: Keil's geographical note on Zebulun — that the tribe's territory neither reached the Mediterranean nor touched Zidon, which bears directly on Ellicott's argument in the vv.1-2 entry — is filed at v12 while Keil has no key at v13, so it could not be used in any entry without crediting him in a span where he has no key. That material is simply lost to the harvest defect."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "49",
+      "verses": [
+        "5",
+        "11",
+        "24"
+      ],
+      "note": "Working rule adopted for systematically displaced blocks, and worth ratifying or overruling. Where a source's block is shifted by the harvest, the material is used in the entry whose verses it actually TREATS, provided that source has a key inside that span; where it has no key there, the voice is excluded and the material dropped. Applied here: Keil's Simeon-and-Levi exposition (filed v4) went into the vv.5-6 entry, where he has a key at v6; his vine exposition (filed v10) into the vv.11-12 entry, where he has a key at v12. Keil is therefore legitimately excluded from the vv.3-4 and v10 entries, whose keys hold only verse text. This keeps every attribution grounded in a key inside its own span while keeping the prose topically honest — the plain filing rule of note 449 would have put Simeon and Levi inside the Reuben entry. Henry and Clarke were handled by the plain rule instead, because their whole-pericope overviews at a span's first verse are the case that rule was written for and they have no keys further on."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "49",
+      "note": "The entry-count problem, stated with the worst case yet. Genesis 49 is 47,985 usable source words across 33 keys — over the 40,000-word whole-batch threshold, so it was correctly taken as the entire batch — but the number that governed the work was FIFTEEN entries, not the word count. Verse 10 alone runs 5,638 source words, v1 4,139 and v8 4,063, so three keys had to stand almost alone under the 4,500-word span rule; the median key is 963 words, five times the median of an ordinary chapter. Compare exodus 10 at 24,384 words in seven entries, or leviticus 25 at 33,347 in ten. Recommendation, now made twice: 'synthesis-loop.py size' should report a projected entry count alongside the word total — keys divided by about two for a chapter with this median, or source words divided by about 3,200 — because entry count, not word count, is what determines whether a chapter can be carried to landing in one sitting, and an abandoned pick costs the run everything."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "49",
+      "note": "Trim-pass measurement over fifteen entries, the largest sample yet in one chapter. First drafts came in at 780-990 QA words against a 650 ceiling, needing 4 to 19 trim passes each; the two heaviest (the vv.24-26 and vv.29-33 entries, 17 and 19 passes) were both cases where five source voices each had two substantial items. The arithmetic of note 589 held again — roughly 90-100 words per grounded attributed item, so seven items is the ceiling — but the finding this chapter adds is that with SIX voices present the seven-item budget forces one voice to a single clause, and that voice is then the one the ghost script flags. Three exclusions had to be repaired after assembly for exactly that reason (Ellicott, Keil, Wesley in earlier chapters; Wesley and Keil here). The cheaper order is: fix the item budget per VOICE before drafting — one substantial item each for six voices, one extra for the two carrying the chapter's dispute — rather than drafting to the word count and rescuing voices afterwards."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "49",
+      "verses": [
+        "33"
+      ],
+      "note": "Clarke's v33 block carries a displaced excursus of the kind recorded at genesis 38:30 (note 568): some nine hundred words mapping the twelve sons onto the signs of the Zodiac, after Vallancy and Hales — Reuben to Aquarius, Simeon and Levi to Gemini, Judah to Leo, Asher to Virgo, Issachar to Taurus, Dan to Scorpio, Joseph to Sagittarius, Naphtali to Aries, Zebulun to Cancer, Gad to Pisces, Benjamin to Capricorn — followed by Clarke's own disclaimer, 'What likelihood the reader may see in all this, I cannot pretend to say.' It is filed at the death of Jacob, has nothing to do with vv.29-33, and the author disowns it in the same breath; left unused, and recorded here so the next worker on this chapter does not spend time deciding about it twice."
     }
   ]
 }

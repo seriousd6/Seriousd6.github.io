@@ -1,128 +1,158 @@
 {
  "1": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "1-2",
+  "pericope_label": "The sons summoned to hear what shall befall them in the last days",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the summons literally: the sons were either within call when Joseph came to visit, or, if at a distance, Jacob sent messengers, the repetition serving to hasten them and to suggest that he had something of importance to make known. Calvin says the same more strongly of the speech that follows: as if carried above the heavens, Jacob announces, not in the character of a man but as from the mouth of God, what the condition of them all shall be for a long time to come; and since he then had thirteen sons, he sets before his view in each of their persons the same number of nations, in which the admirable lustre of his faith is conspicuous."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes much of the calling twice. It was a comfort to Jacob, now dying, to see all his children about him and none missing, though he had sometimes thought himself bereaved; and it was of use to them to attend his last moments, that they might learn how to die as well as how to live — what he said to each he said in the hearing of all, for we may profit by counsels principally intended for others. The repeated call intimated both a precept and a prediction: a precept to unite in love and keep together, not mingling with the Egyptians; and a prediction that they should not be separated as Abraham's sons and Isaac's were, but should be incorporated and all make one people."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rejects a common account of how such a speech comes about. Some have laboured to show that the ancients held the soul endued with prophetic foresight shortly before it left the body, and that this was Jacob's case; but it would be derogatory to the dignity of these prophecies to suppose they came by any means other than direct inspiration, though certain circumstances appear left to the patriarch, in which he might express his own feelings as father and as judge. Wesley puts the demand for attention in a clause — hearken to Israel your father, let Israel, that has prevailed with God, prevail with you — and with Henry limits the promise carefully: not their persons but their posterity is meant."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Jacob called his sons, who were near at hand or whom he sent for, to tell them what should befall them in the latter days; the witnesses note Jacob calling his sons together to tell them what should befall them in the last days — the solemn opening of the patriarch's prophetic blessing, the dying father gathering his sons to declare their future (Jacob, near death, summoning his sons for a prophetic word: 'Gather yourselves together, that I may tell you that which shall befall you in the last days'; the gathering, that Jacob 'called unto his sons' and bade them 'gather... together,' that all the twelve might hear at once the words he was about to speak; the prophetic character of what follows, 'that I may tell you that which shall befall you in the last days,' that Jacob, by the Spirit of God, would foretell the future of each son and his tribe, even to 'the last days,' reaching down through the generations and, in Judah's portion, to the days of Messiah; that this was no mere fatherly counsel but a prophecy, the aged patriarch made a prophet in his dying hour; the solemnity of a deathbed blessing, the last and weightiest words of the father of the tribes)."
+    "summary": "Ellicott gives the phrase in the last days as, in the after part of days, often opposed to the beginning of days and constantly used of the times of the Messiah; here they apparently commence with the conquest of Canaan but look onward to the advent of Christ. He then defends the hymn's antiquity against the moderns who place it in David's time and even ascribe it to Nathan, partly because it is too spirited for one in the last decrepitude of old age, chiefly because of the description of Judah: if it were written by a member of David's court we should expect exact knowledge of the state of things then, whereas there is no word of Levi's priestly functions, his dispersion being described as a punishment on exactly the same level as Simeon's, and Zebulun is said to dwell at the haven of the sea when the northern coast fell by lot to Asher. Keil sets the same horizon from the patriarch's side: for one obliged in the very evening of his days to leave the promised land and seek refuge in Egypt, the final future commenced as soon as that land was in the possession of the twelve tribes descended from his sons."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "When was this blessing composed?",
+    "positions": [
+     {
+      "position": "by Jacob himself — the late-date case rests only on Judah’s position, and everything else in it contradicts David’s time",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "by direct inspiration, not by any natural prophetic foresight of the dying",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And Jacob called unto his sons, and said, Gather yourselves together",
-   "that I may tell you that which shall befall you in the last days",
-   "the solemn opening of the patriarch's prophetic blessing",
-   "the dying patriarch made a prophet, reaching to the days of Messiah"
+   "gather yourselves together, ye sons of Jacob",
+   "that which shall befall you in the last days",
+   "hearken unto Israel your father"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: the repeated summons, Gather yourselves together and hear, ye sons of Jacob, and hearken unto Israel your father; Gill: this is repeated to hasten them and to suggest he had something of importance to make known, which he chose to do when they were together; the witnesses note Jacob repeating the call to gather and hear, as sons of Jacob, and to hearken to Israel their father — the urgent and twofold summons to attend, marking the weight of the coming words (Jacob doubling his call to fix their attention: 'Gather yourselves together, and hear, ye sons of Jacob; and hearken unto Israel your father'; the repetition, that Jacob says 'gather yourselves together' again, to hasten them and to mark that he had a weighty thing to declare, fit to be heard by all at once; the double word for attention, 'hear... and hearken,' pressing them to give earnest heed to what their dying father should say; the two names the commentators mark, 'ye sons of Jacob' and 'Israel your father,' the natural name and the covenant name, that they should hear both as the children of Jacob and as the heirs of the Israel of God, to whom the promises belonged; the solemnity of the charge, fitting words that were prophecy and last testament both)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Gather yourselves together, and hear, ye sons of Jacob",
-   "and hearken unto Israel your father",
-   "Jacob's urgent twofold summons to earnest attention",
-   "naming them both sons of Jacob and heirs of Israel, the covenant name"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "excluded_voices": [
    "Keil and Delitzsch"
   ],
+  "range": "3-4",
+  "pericope_label": "Reuben the firstborn degraded, unstable as water",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: Jacob addressed Reuben first, owned him as his firstborn, did not cashier him from his family nor disinherit him, but acknowledged his natural pre-eminence, the beginning of his strength, to whom belonged the dignity and power of the firstborn; the witnesses note Jacob owning Reuben as his firstborn, his might and the beginning of his strength, the excellency of dignity and of power — the acknowledgment of Reuben's natural birthright dignity before the sentence that follows (Jacob first setting out what Reuben was by birth: 'Reuben, thou art my firstborn, my might, and the beginning of my strength, the excellency of dignity, and the excellency of power'; the honour owned, that Reuben was Jacob's 'firstborn,' 'the beginning of my strength,' the first fruit of his manhood, to whom by birth belonged 'the excellency of dignity, and the excellency of power,' the firstborn's threefold prerogative of the double portion, the priesthood, and the rule in the family; that Jacob does not deny Reuben his natural place as eldest, owning him fully and tenderly; that this acknowledgment makes the coming sentence the more solemn, that one born to such dignity should forfeit it; the setting-up of the height from which Reuben fell)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Reuben, thou art my firstborn, my might, and the beginning of my strength",
-   "the excellency of dignity, and the excellency of power",
-   "Jacob owning Reuben's natural birthright dignity",
-   "the firstborn's threefold prerogative, the height from which he fell"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "summary": "Gill notes what the sentence does not do: Jacob addressed Reuben first, before his brethren, and owned him as his firstborn, neither cashiering him from his family nor disinheriting him, though he had greatly disobliged him. Calvin explains why the order begins here — not for the sake of honour, to confirm him in his rank, but that he may the more completely cover him with shame and humble him by just reproaches, placing his former honour before his eyes because it was for his profit to be made conscious whence he had fallen; and the judgment is not to be ascribed to anger, as if the father desired private vengeance, but proceeded from the Spirit of God. On the two excellencies Calvin thinks the others too subtle: the simpler meaning is that if Reuben had stood firmly in his own rank, the chief place of all excellency would have belonged to him. Gill adds that in Arabic the word rendered unstable signifies to be proud and haughty, to swell and rise like turgent waters."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the moral from the outcome — men do not thrive because they do not fix, and Reuben's sin left a lasting infamy upon his family."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the eminence for the priesthood and the power for the regal government, as all the ancient Targumists understood it — Onkelos paraphrasing, thou shouldst have received three portions, the birthright, the priesthood and the kingdom, to which Jonathan ben Uzziel and the Jerusalem Targum add, but because thou hast sinned, the birthright is given to Joseph, the kingdom to Judah and the priesthood to Levi. He observes besides that the word rendered unstable has a bad meaning wherever else it occurs, being applied to dissolute and licentious conduct, and that the sentence is left unfinished, passing over covertly a transaction which delicacy forbade Jacob to enlarge upon. Wesley describes the form the degrading takes: Jacob first puts upon him the ornaments of the birthright, that he and all his brethren might see what he had forfeited, and in that the evil of his sin; a being he should have as a tribe but not an excellency, no judge, prophet or prince being found of it, nor any person of renown except Dathan and Abiram, and the tribe, as not aiming to excel, choosing a settlement beyond Jordan — and it was forty years since the sin, yet now it is remembered against him."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is not to be understood of mere levity of mind but of the impetuous force of his lust breaking forth like water, carrying him into sin; Reuben should not excel, his tribe never rising to greatness; the witnesses note Jacob declaring Reuben unstable as water and that he should not excel, because he defiled his father's bed — the solemn sentence of forfeited pre-eminence for Reuben's grievous sin (Jacob pronouncing the loss of the birthright: 'Unstable as water, thou shalt not excel; because thou wentest up to thy father's bed; then defiledst thou it'; the figure, 'Unstable as water,' that Reuben was like water, which boils up and overflows but has no firmness, his passions ungoverned, breaking forth in the impetuous lust that carried him into sin; the sentence, 'thou shalt not excel,' that, for all his birthright dignity, Reuben should not have the pre-eminence, his tribe never rising to greatness or rule in Israel; the cause, 'because thou wentest up to thy father's bed; then defiledst thou it,' the grievous sin of Reuben with Bilhah, by which he dishonoured his father and forfeited his place; the justice of God, that sin loses what nature gave, the firstborn's honour passing from Reuben, the rule to Judah, the priesthood to Levi, the double portion to Joseph)."
+    "prevalence": "single",
+    "summary": "Ellicott reads the excellencies as Clarke does, and adds that as a matter of history no king, judge or prophet is recorded as having sprung from the tribe of Reuben. On the phrase before it he decides a rendering: the word oni means my sorrow in the naming of Benjamin, and is so translated here by the Vulgate, Aquila and Symmachus, but in this verse Jacob is magnifying the prerogatives of the firstborn, and our version is right in deriving it from a different and not uncommon word signifying strength. He defends unstable from the use of the word elsewhere, where it is rendered light, and says that out of this sense of lightness arose the meaning it has in Syriac of wantonness and in Arabic of boastful, another side of feebleness; with which the comparison with water well agrees, for it is water's nature to seek a dull level, and while yielding to every impression to retain none."
    }
   ],
   "debates": [
    {
-    "question": "Why does Reuben forfeit the birthright?",
-    "sides": [
+    "question": "What were the excellency of dignity and the excellency of power?",
+    "positions": [
      {
-      "position": "For his grievous sin in defiling his father's bed with Bilhah (Genesis 35:22) — his ungoverned passion, 'unstable as water,' losing the firstborn's pre-eminence; the honour passing to Judah (rule), Levi (priesthood), and Joseph (double portion)",
+      "position": "the priesthood and the kingly office, as all the ancient Targumists understood them",
       "holders": [
-       "Gill",
-       "Keil and Delitzsch",
-       "the witnesses"
+       "Clarke",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "too subtle a reading — simply that the chief place of all excellency would have been his",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does unstable as water mean weakness or violence?",
+    "positions": [
+     {
+      "position": "lightness and frivolity — water seeks a dull level and, yielding to every impression, retains none",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "boiling over like water, a description of the unrestrained violence of Reuben’s passions",
+      "holders": [
+       "Ellicott",
+       "Gill"
       ]
      }
     ]
@@ -130,114 +160,185 @@
   ],
   "outliers": [],
   "themes": [
-   "Unstable as water, thou shalt not excel",
-   "because thou wentest up to thy father's bed; then defiledst thou it",
-   "the sentence on Reuben, his ungoverned passion forfeiting the birthright",
-   "the justice of God, that sin loses what nature gave"
+   "thou art my firstborn, my might, and the beginning of my strength",
+   "unstable as water, thou shalt not excel",
+   "thou wentest up to thy father’s bed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "5": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "5-6",
+  "pericope_label": "Simeon and Levi, brethren in cruelty, and Jacob's protest",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill says they are called brethren not because they were so in a natural sense, for there were others so besides them, but because they were of like tempers and manners — bold, wrathful, cruel, revengeful and deceitful, joined together in their evil counsels and evil actions. Calvin asks why the crime is punished so long after pardon, and answers that it was both privately useful to the two men and necessary as an example that the slaughter should not remain unpunished, for when their father admonished them they were far from that sorrow which is the commencement of true repentance; and God did not retain the punishment while remitting the guilt, as the Papists dream, since he exacts not punishments that compensate for offences but such as purge hearts from hypocrisy — fulfilling the office of a physician rather than of a judge."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns from the pair to the household: it is no new thing for the temper of children to differ from that of their parents, and it is not in the power of parents, no, not by education, to form their children's dispositions — Jacob bred his sons to everything mild and quiet, and yet they proved thus furious; and when two in a family are mischievous they make one another worse, so that it were wisdom to part them. With Wesley he reads the protestation as a plea as well as an abhorrence: Jacob professes not only his detestation of such practices in general but his innocence in that particular matter, for perhaps he had been suspected of under-hand aiding and abetting, and he would not die under that suspicion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the road the others reject on the disputed noun, reading with the Septuagint and the Samaritan, they have accomplished the iniquity of their purpose, and deriving the word from a root meaning to devise stratagems or practise deceit. On the last clause of the couplet he changes one letter and reads prince outright, since there is no evidence that they either dug down a wall or houghed oxen — the narrative proving rather that they took the sheep, oxen and asses for their own use."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: they are called brethren not merely as being so by father and mother, for so were others, but because they were of like tempers, dispositions, and conduct, alike in their fierce and cruel disposition; the witnesses note Jacob calling Simeon and Levi brethren, with instruments of cruelty in their habitations — the joining of the two for their shared fierce and cruel temper, shown at Shechem (Jacob marking them as one in their violence: 'Simeon and Levi are brethren; instruments of cruelty are in their habitations'; the sense of 'brethren' here, not the natural tie only, for all twelve were brethren, but that Simeon and Levi were 'brethren' in temper, alike in their fierce, cruel, and revengeful disposition, confederate in evil; the charge, 'instruments of cruelty are in their habitations,' that their swords, or their counsels and devices, were instruments of cruelty, pointing back to the bloody deed at Shechem, where they slew all the males in revenge for their sister Dinah; that Jacob, even on his deathbed, would not pass over so great a sin but marks it for the warning of their tribes; the difference of this from a blessing, that for these two the father's word was reproof and sentence)."
+    "summary": "Ellicott calls our rendering, their habitations, universally abandoned, and prefers Jerome's and Rashi's, that it means swords — apparently the Greek machaira, a knife, since neither the Hebrews nor the Canaanites were metallurgists and such articles were imported by merchants from Ionia. Keil derives the same rendering from a Hebrew verb meaning to dig through or pierce and denies the connection with machaira; the other proposal, plans, drawn from the Arabic and Aethiopic versions, he rejects because instruments of wickedness does not accord with it. Ellicott recovers the figure in the word for secret — literally the little carpet upon which an Oriental sits, so that for two to sit on the same carpet marks a high degree of familiarity, better translated alliance or intimacy — and reads the last clause of an ox houghed: the Vulgate and Syriac took it of a breach made in the walls of Shechem, but they had a different reading, and the Hebrew word is ox, so rendered by the Septuagint; the ox being the symbol of majesty, the sense is that in their anger they slew Hamor prince of Shechem, and from wanton cruelty hamstrung the noblest of their brethren, not killing Joseph outright but disabling him by selling him into slavery."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is the disputed noun in the first couplet?",
+    "positions": [
+     {
+      "position": "swords or knives — the Greek machaira, imported by traders from Ionia",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "swords, but from a Hebrew verb to dig through or pierce, not from machaira",
+      "holders": [
+       "Keil"
+      ]
+     },
+     {
+      "position": "plans or fraudulent purposes, with the Septuagint and Samaritan",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did they dig down a wall, hough an ox, or slay a prince?",
+    "positions": [
+     {
+      "position": "they houghed an ox — the Hebrew word is ox, and the ox stands for a prince",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "read prince outright, since there is no evidence of a wall dug down or oxen houghed",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Simeon and Levi are brethren",
    "instruments of cruelty are in their habitations",
-   "Jacob joining Simeon and Levi as brethren in fierce, cruel temper",
-   "their swords instruments of cruelty, pointing to the bloody deed at Shechem"
+   "O my soul, come not thou into their secret",
+   "in their selfwill they digged down a wall"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Jacob said this as abhorring the wicked counsel they had taken of slaying the Shechemites, and lest any should think he had a hand in it; the witnesses note Jacob praying that his soul come not into their secret nor his honour be joined to their assembly, for in their anger they slew a man and in their selfwill digged down a wall — the patriarch's solemn disavowal of their bloody deed, clearing himself of all share in it (Jacob abhorring and renouncing their counsel: 'O my soul, come not thou into their secret... for in their anger they slew a man, and in their selfwill they digged down a wall'; the earnest disclaiming, 'O my soul, come not thou into their secret; unto their assembly, mine honour, be not thou united,' that Jacob, abhorring their 'secret,' their cruel counsel and conspiracy at Shechem, prays that he had no part in it, neither his 'soul' nor his 'honour' joined to so bloody a deed; the charge stated plainly, 'in their anger they slew a man,' the men of Shechem, 'and in their selfwill they digged down a wall,' or houghed oxen, broke down the city, a deed of fierce anger and stubborn self-will; that Jacob, far from owning the deed, here solemnly clears himself before God and his sons of any share in their cruelty; the abhorrence of a godly man for bloody violence done even in a kinsman's cause)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "O my soul, come not thou into their secret; unto their assembly, mine honour, be not thou united",
-   "for in their anger they slew a man, and in their selfwill they digged down a wall",
-   "Jacob's solemn disavowal of the bloody deed at Shechem",
-   "the abhorrence of a godly man for fierce violence in a kinsman's cause"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley"
   ],
+  "range": "7",
+  "pericope_label": "Cursed be their anger: Simeon and Levi divided in Jacob",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: their anger was sinful in its nature, criminal and detestable, strong, fierce, and furious in its operation, and so justly cursed, not the persons but the sin; the witnesses note Jacob cursing their fierce anger and cruel wrath, and declaring he would divide them in Jacob and scatter them in Israel — the sentence on their sin and its strange fulfilment in the scattering of the two tribes (Jacob cursing the sin and foretelling the punishment: 'Cursed be their anger, for it was fierce; and their wrath, for it was cruel: I will divide them in Jacob, and scatter them in Israel'; the careful aim of the curse, 'Cursed be their anger... and their wrath,' that Jacob curses not the persons of his sons but their 'anger' and 'wrath,' the sinful passion itself, 'fierce' and 'cruel,' justly accursed; the sentence, 'I will divide them in Jacob, and scatter them in Israel,' that the two tribes should be scattered and not have a settled, undivided inheritance of their own; the remarkable fulfilment the commentators trace, that Simeon's portion lay scattered within Judah's border and the tribe dwindled, while Levi received no land at all but was dispersed in cities throughout Israel, yet Levi's scattering, by God's grace, was turned to honour in the priesthood; the truth that God can make even a curse the means of mercy, as in Levi)."
+    "summary": "Gill says the anger was sinful in its nature, and so criminal and detestable, fierce and furious in its effects, and justly cursed — not their persons but their passions. Calvin asks what such a sentence is doing here at all: it may seem strange that Jacob, while designating his sons patriarchs of the Church and heirs of the divine covenant, should pronounce a malediction upon them instead of a blessing; nevertheless it was necessary to begin with the chastisement, which should prepare the way for the manifestation of God's grace, and God mitigates the punishment by giving them an honourable name in the Church and leaving their right unimpaired. He explains how the change was wrought for Levi: the dispersion of that tribe had its origin in the crime of their father, but God, who in the beginning produced light out of darkness, found another reason for scattering them — not only free from disgrace but highly honourable — that no corner of the land might be destitute of competent instructors."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke fills out what the hardness of their wrath meant: the first motions of their violence were savage and their overflowing wrath inflexible, for neither the supplications of the males nor the tears and shrieks of the helpless females could deter them from their murderous purpose. He renders the sentence, I will make them into lots, giving a portion of them to one tribe and a portion to another, but they shall never attain to any political consequence, and finds this literally fulfilled — Levi having no inheritance except forty-eight cities scattered through Canaan, while Simeon, as the Jews generally believe, became schoolmasters to the other tribes, entered Canaan with only a small portion in the worst part of Judah's lot, and afterwards formed colonies in districts conquered from the Idumeans and Amalekites. Wesley draws the rule from the curse, that we ought always in the expressions of our zeal to distinguish between the sinner and the sin, so as not to bless the sin for the sake of the person, nor to curse the person for the sake of the sin, and states the contrast in a clause: the curse was afterwards turned into a blessing to the Levites, but the Simeonites, for Zimri's sin, had it bound on."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott makes the same distinction from the other side: Jacob condemns Simeon and Levi not because they were angry but because they vented their anger in a perfidious and violent manner, and the second line runs literally, and their rage, for it was hard. He adds the numbers of the fulfilment — in the wilderness the Simeonites dwindled from fifty-nine thousand three hundred to twenty-two thousand two hundred, and after the conquest were so feeble as to have only fifteen towns assigned them in the territory of Judah, where they melted away, being either absorbed into the tribe among whom they dwelt or withdrawing to wander as nomads in the wilderness of Paran — and from the divergence between the two tribes draws a doctrine: in Levi's case the curse was changed into a blessing by the faithfulness of the tribe upon a very trying occasion, and we learn from it the great lesson that the divine rewards and punishments, even when specified in prophecy, are nevertheless conditional upon human conduct."
    }
   ],
   "debates": [
    {
-    "question": "How was the scattering of Simeon and Levi fulfilled?",
-    "sides": [
+    "question": "Why did the same sentence fall out so differently for Levi and Simeon?",
+    "positions": [
      {
-      "position": "Simeon's portion lay scattered within Judah's border and the tribe dwindled; Levi received no land but was dispersed in cities throughout Israel — yet Levi's scattering, by God's grace, was turned to honour in the priesthood",
+      "position": "the divine rewards and punishments, even when specified in prophecy, are conditional upon human conduct",
       "holders": [
-       "Gill",
-       "the witnesses"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "God found another and honourable reason to scatter Levi, that no corner of the land might lack instructors",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -245,142 +346,146 @@
   ],
   "outliers": [],
   "themes": [
-   "Cursed be their anger, for it was fierce; and their wrath, for it was cruel",
-   "I will divide them in Jacob, and scatter them in Israel",
-   "Jacob cursing the sin, not the persons, and foretelling the scattering",
-   "fulfilled in Simeon's dwindling and Levi's dispersal, yet Levi's turned to honour"
+   "cursed be their anger, for it was fierce",
+   "I will divide them in Jacob, and scatter them in Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
   }
  },
  "8": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "8-9",
+  "pericope_label": "Judah praised by his brethren, the lion's whelp",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that Judah signifies praise and was given him by his mother, her heart being filled with praises to God, and that his father confirms it here on another account, because his brethren should praise him for many excellent virtues. Calvin says the father adduces a new etymology: the name shall be so celebrated among his brethren that he should be honoured by them all equally with the firstborn. What was transferred with it he sets out plainly — the birthright taken from Reuben was divided between Joseph and Judah, Joseph receiving the double portion of the eldest son and Judah the regal distinction; and Joseph's honour was temporary, whereas here a stable and durable kingdom is treated of. Calvin also hears in the couching lion a later season: Jacob seems to allude to the diminution which came when the greater part of the people revolted to Jeroboam, for then the king of Judah began to be like a sleeping lion, who did not shake his mane to diffuse his terror far and wide but laid himself down in his den — and yet a secret power of God lay hidden under that torpor, so that they who most desired his destruction did not dare disturb him."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry, with Wesley, reads the transfer from the text: the prerogatives Reuben had forfeited, the excellency of dignity and power, were conferred on Judah, who was the lawgiver, and whose tribe led the van through the wilderness and in the conquest of Canaan."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives Dr. Hales on the hand in the neck of the enemies, who traces the warlike character of the tribe to which the first lot of the promised land was assigned. It was conquered by the pious and heroic Caleb, the first who laid hands on the necks of his enemies, and who led the way for their total subjugation under David — who, in allusion to this prediction, praises God and says, thou hast given me the necks of mine enemies. Hence, Hales observes, a lion was the standard of Judah; the city of David, where he reposed after his conquests secure in the terror of his name, was called Ariel, the lion of God; and our Lord himself is the Lion of the tribe of Judah. Wesley draws the practical sense of the figure: Judah should not only obtain great victories but peaceably enjoy what was got by them, being compared not to a lion rampant, always raging, but to a lion couchant, enjoying the satisfaction of his success without creating vexation to others."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Judah's name signifies praise, given by his mother whose heart was filled with praises to God; he should be praised by his brethren for his virtues, his tribe famous for heroes such as David, and especially his famous seed the Messiah, of whom he was a type; the witnesses note Judah being praised by his brethren, his hand on the neck of his enemies, and his brethren bowing before him — the turn from sentence to blessing, the pre-eminence given to Judah and pointing to Christ (Jacob exalting Judah above his brethren: 'Judah, thou art he whom thy brethren shall praise: thy hand shall be in the neck of thine enemies; thy father's children shall bow down before thee'; the play on the name, 'Judah' meaning 'praise,' that he should be 'he whom thy brethren shall praise,' honoured and esteemed for his virtues; the victory promised, 'thy hand shall be in the neck of thine enemies,' that Judah should subdue his foes in conquest; the rule given, 'thy father's children shall bow down before thee,' that the other tribes should yield him pre-eminence and homage; the great type the commentators mark, that all this points beyond the tribe to Christ, the Lion of Judah, whom his brethren praise, who subdues his enemies and before whom every knee shall bow)."
+    "summary": "Keil sharpens the word itself — it means he for whom Jehovah is praised, not merely the praised one — and says the patriarch seized the name as an omen and expounded it as a presage. He describes the ascent as a change of vision: Jacob compares Judah to a young lion ripening into full strength, the ancestor of the lion-tribe, but quickly rises to a view of the tribe in the glory of its perfect strength, a lion which after seizing prey ascends to the mountain forests and lies in majestic quiet, no one daring to disturb it — the perfects being prophetic, and the verb relating not to the tribe's gradual rise but to the lion's ascent to its lair. Ellicott recalls that Judah's signet was so large that he wore it on a cord about his neck, and supposes its emblem was a lion; the stooping down, he explains, is the bending of the limbs before the lion couches, and our old lion is in Hebrew a lioness, the female being reckoned the fiercer and resenting more angrily any disturbance of its rest."
    }
   ],
-  "debates": [
-   {
-    "question": "Whom does the exaltation of Judah ultimately point to?",
-    "sides": [
-     {
-      "position": "Christ, the Lion of the tribe of Judah — whom his brethren praise, who subdues his enemies, and before whom every knee shall bow; Judah and his pre-eminence are a type of the Messiah who springs from his line",
-      "holders": [
-       "Gill",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
-  ],
+  "debates": [],
   "outliers": [],
   "themes": [
-   "Judah, thou art he whom thy brethren shall praise; thy hand shall be in the neck of thine enemies",
-   "thy father's children shall bow down before thee",
-   "Judah exalted above his brethren, praised, victorious, given rule",
-   "a type of Christ, the Lion of Judah, before whom every knee shall bow"
+   "thy hand shall be in the neck of thine enemies",
+   "thy father’s children shall bow down before thee",
+   "Judah is a lion’s whelp; who shall rouse him up?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: Jacob compares Judah to a young lion, gone up from the prey, lying down like a lion, like a lioness whom none can rouse; Gill: he was comparable to a young lion for his strength, courage, and generosity; the witnesses note Judah likened to a lion's whelp, gone up from the prey, couched as a lion whom none dare rouse — the figure of the lion that marks Judah's strength and dominion, and points to Christ the Lion of Judah (Jacob setting forth Judah's lion-like majesty: 'Judah is a lion's whelp: from the prey, my son, thou art gone up: he stooped down, he couched as a lion... who shall rouse him up?'; the threefold image, the 'lion's whelp,' the young lion growing in strength, the lion 'gone up from the prey,' returned victorious from the hunt, and the lion that has 'couched' or 'lain down' in such majesty and might that none dare 'rouse him up'; that this figures Judah's growth from a young tribe to a strong and ruling one, courageous, victorious, and secure in his strength; the great Messianic reference the commentators draw, that the 'Lion of the tribe of Judah' is Christ himself, strong to conquer, who, having gone up from the prey of his finished work, reigns in unassailable majesty; the dignity of the figure, fit for both the tribe and its great Son)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [
-   {
-    "question": "What does the lion figure of Judah point to?",
-    "sides": [
-     {
-      "position": "Christ, the Lion of the tribe of Judah (Revelation 5:5) — strong to conquer, victorious from the prey of his finished work, reigning in unassailable majesty; the lion figures both the tribe's strength and dominion and its great Son",
-      "holders": [
-       "Gill",
-       "Keil and Delitzsch",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Judah is a lion's whelp: from the prey, my son, thou art gone up",
-   "he couched as a lion, and as an old lion; who shall rouse him up?",
-   "Judah the lion, figuring strength and dominion",
-   "pointing to the Lion of the tribe of Judah, Christ reigning in majesty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
    "Keil and Delitzsch"
   ],
+  "range": "10",
+  "pericope_label": "The sceptre not to depart from Judah until Shiloh come",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill settles what the sceptre stands for by elimination. Some understand it of the tribe, that Judah should not cease from being one until the Messiah came; but this was not peculiar to Judah, since Benjamin and Levi continued as long, and to say a tribe shall not depart from the tribe is not only a tautology but scarcely sense. It rather signifies dominion and authority, as the sceptre always does — either the government in the heads and princes of the tribe, or the kingly power which commenced in David and continued to the Babylonish captivity. Calvin, who takes the passage for Messianic as the ancient Jewish writers themselves did, warns both sides: though obscure, the passage would not have been difficult to read had the Jews not endeavoured to envelop it in clouds; but Christians also, in their diligence to set forth the glory of Christ, have betrayed some excess of fervour, for while they lay too much stress on certain words they only give the Jews an occasion of ridicule — let us therefore seek, without contention, the true meaning. He dismisses the reading that makes Shiloh the place as destitute of reason: Jacob is not predicting when David was to be appointed king but declaring that the kingdom should be established in his family; and besides, until Shiloh come, taken to mean until Shiloh come to an end, would be a harsh and constrained form of speech."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke meets the rabbinical use of the word. The Jews quibble that shebet means a staff or rod, so that afflictions shall not depart from them till the Messiah comes, and since they are still under affliction the Messiah is not come — a miserable shift, Clarke says, to save a lost cause, since their own Onkelos translated the word nearly as we do, as did the Jerusalem Targum and all the ancient versions but the Arabic; and a very ancient manuscript in his own possession reads a word signifying tribe, so that Judah should continue distinct till Messiah came, as it did. With Ellicott he agrees against the letter of the next clause: from between his feet should never be so translated, since it and out of the thigh simply mean progeny. Wesley closes on the dates. Till the captivity, from David's time, the sceptre was in Judah, and afterwards the governors of Judea were of that tribe or of the Levites that adhered to it, until Judea became a Roman province just at the time of our Saviour's birth; and at his death the Jews owned, we have no king but Caesar. Hence it is undeniably inferred against them that our Lord Jesus is he that should come, for he came exactly at the time appointed."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Gill: the sceptre signifies dominion, power, and authority, not the bare continuance of the tribe, for Benjamin and Levi also continued; it should not depart from Judah until Shiloh come, that is, the Messiah, to whom the gathering of the people should be; the witnesses note Jacob foretelling that the sceptre and lawgiver should not depart from Judah until Shiloh come, and unto him the gathering of the people — the supreme Messianic prophecy of the chapter, the rule abiding in Judah until Christ (Jacob speaking the great word of promise: 'The sceptre shall not depart from Judah, nor a lawgiver from between his feet, until Shiloh come; and unto him shall the gathering of the people be'; the meaning of 'the sceptre' and 'lawgiver,' not the bare continuance of the tribe but 'dominion, power, and authority,' that rule and government should belong to Judah and not depart until a set time; the great term 'Shiloh,' which the commentators take for the Messiah, whether read as 'he whose right it is,' 'the peaceable one,' or 'the sent,' that the sceptre should abide in Judah 'until Shiloh come,' until the coming of Christ who sprang from Judah; the fulfilment, that Judah held a distinct tribal and ruling standing until the time of Christ, and that with his coming the old polity passed; the gathering, 'unto him shall the gathering of the people be,' that to Shiloh the nations should be gathered, the Gentiles brought in)."
+    "prevalence": "single",
+    "summary": "Ellicott renders the disputed clause, from among his descendants, and rejects the modern translation, until he come to Shiloh, first as contrary to all the ancient versions and secondly as turning sense into nonsense, since the town of Shiloh was in Ephraim and we know of no way in which Judah ever went thither — the ark was there for a time, but the place sank into obscurity after the Philistines destroyed it, long before Judah took the leading part. On the word itself he lays out the evidence: Jerome in the Vulgate translates, he who shall be sent, reading a form that omits one letter of the present text; the Hebrew as it stands gives Shiloh, Peaceful or Peace-maker, agreeing with Isaiah's title for the Messiah; but every version except the Vulgate reads Sheloh — the Septuagint, he for whom it is laid up; Onkelos boldly, until Messiah come, whose is the kingdom; the Syriac, until he come, whose it is. Sheloh literally means whose it is, an Aramaic form quite in place in the mouth of Jacob, who had lived so long where an Aramaic dialect was spoken."
    }
   ],
   "debates": [
    {
-    "question": "Who is 'Shiloh,' and what is the meaning of the prophecy?",
-    "sides": [
+    "question": "Should the word be read Shiloh or Sheloh?",
+    "positions": [
      {
-      "position": "The Messiah, Christ, who sprang from Judah — the commentators read 'Shiloh' as 'he whose right it is,' 'the peaceable one,' or 'the sent'; dominion abides in Judah until his coming, and to him ('the gathering of the people') the nations and Gentiles are gathered",
+      "position": "Sheloh, whose it is — read so by every ancient version but the Vulgate, and an Aramaic form suited to Jacob’s mouth",
       "holders": [
-       "Gill",
-       "Keil and Delitzsch",
-       "the witnesses (majority)"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "not the place Shiloh in any case, since until Shiloh come to an end would be harsh and constrained",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -388,284 +493,305 @@
   ],
   "outliers": [],
   "themes": [
-   "The sceptre shall not depart from Judah, nor a lawgiver from between his feet, until Shiloh come",
-   "and unto him shall the gathering of the people be",
-   "the supreme Messianic prophecy, rule abiding in Judah until Shiloh the Messiah",
-   "to him the gathering of the people, the Gentiles brought in"
+   "the sceptre shall not depart from Judah",
+   "nor a lawgiver from between his feet",
+   "until Shiloh come; and unto him shall the gathering of the people be"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "11": {
   "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "11-12",
+  "pericope_label": "The vine and the wine: Judah's abundance",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes it that vines should grow in such abundance, and so large and strong, that a man might fasten his ass to one, and if the beast destroyed it, it would give no great concern, since the country abounded with them; or else that they would be so full of clusters that a man might load an ass from a single vine — some parts of the tribe being famous for vines, especially Engedi. He guards the last verse from a misreading, saying it signifies not the intemperance of this tribe but the goodness and generosity of the wine itself, and reads the ass's colt bound to the vine figuratively of Christ, of whom Judah was the type, causing the Gentiles — comparable to such a colt for their impurity and their sluggishness in spiritual things — to cleave to him, the true vine, in the exercise of faith, hope and love. Calvin puts the figure at its sharpest: so great would the abundance of vines be that they would present themselves as readily as brambles or unfruitful shrubs do elsewhere, and since asses are wont to be bound to the hedges, Jacob reduces vines to that contemptible use. He then raises the difficulty the picture creates — it seems by no means proper that a profuse intemperance should be accounted a blessing — and answers that although fertility and affluence are described, their abuse is not sanctioned: here Jacob, omitting what is lawful, extols an abundance which would suffice for luxury and even for vicious excess, unless the sons of Judah should voluntarily use self-government. He refuses the allegorical road out of the difficulty, saying he does not choose to sport with such great mysteries of God, and marvels rather that Moses, who had never seen Canaan, should treat of its separate parts as correctly as of a few acres cultivated by his own hand."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this may signify that vines should grow in such plenty in Judah's land that a man might bind his ass to a vine, Judah's land as Engedi being famous for vines, or it may be applied to Shiloh the Messiah; the witnesses note the binding of the foal to the vine and the washing of garments in wine and the blood of grapes — the figures of the rich plenty of Judah's land, applied also to Christ and his blood (Jacob painting abundance under the vine and the wine: 'Binding his foal unto the vine, and his ass's colt unto the choice vine; he washed his garments in wine, and his clothes in the blood of grapes'; the first figure, 'binding his foal unto the vine... unto the choice vine,' that Judah's land should so abound in vines, large and strong, that one might tie an ass to a vine as to a post and not grieve if it ate of so plentiful a growth, a picture of great fruitfulness; the second figure, 'he washed his garments in wine, and his clothes in the blood of grapes,' the grapes so plentiful that wine should be as common as water for washing, a hyperbole of abundance; the Messianic application the commentators draw, that 'the blood of grapes' points to the blood of Christ, the true Vine, who treads the winepress and washes his garments in blood; the richness fit for both the fruitful tribe and its great Son)."
+    "summary": "Ellicott says the traveller would tie his ass to the vine as the tree abundant everywhere, and adds the botany: the choice vine is the vine of Sorek, much valued as bearing a purple berry, small but luscious, and destitute of stones; and blood of grapes refers to the juice of the red kinds, more valued in the East than the white. On the closing couplet he notes that the word translated red occurs only here and is given in the Versions as bright or sparkling, in the Vulgate as beautiful; the following particle they take comparatively, which seems right, so that the line runs, his eyes shall be brighter than wine and his teeth whiter than milk — words describing not Judah's person but the prosperity of his descendants. Keil settles the grammar the same way: the subject is not Shiloh but Judah, to whom the whole blessing applies, and the other construction would be possible only if the fathers and Luther were right in taking the whole for an allegorical description of Christ."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Binding his foal unto the vine, and his ass's colt unto the choice vine",
-   "he washed his garments in wine, and his clothes in the blood of grapes",
-   "the figures of Judah's rich plenty, vines and wine in abundance",
-   "the Messianic glance, the blood of grapes pointing to the blood of Christ, the true Vine"
+   "binding his foal unto the vine",
+   "he washed his garments in wine",
+   "his eyes shall be red with wine, and his teeth white with milk"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this signifies not the intemperance of the tribe but the goodness and generosity of their wine, that Judah's land should abound in wine and milk, and (applied to Messiah) may denote the joy that sparkled in his eyes or his comeliness; the witnesses note the eyes red with wine and the teeth white with milk — the closing figure of Judah's abundance of wine and milk, with a Messianic glance (Jacob completing the picture of plenty: 'His eyes shall be red with wine, and his teeth white with milk'; the meaning, not the 'intemperance of this tribe' but 'the goodness and generosity of their wine,' that Judah's land should so abound in wine and milk that the people should be ruddy and well-favoured, the eyes bright with the richness of wine and the teeth white with milk, a picture of health, plenty, and prosperity; that wine and milk together figure the fulness of the land, the vineyards and the pastures both yielding abundantly; the Messianic application the commentators offer, that as applied to Christ, the antitype of Judah, the figures may denote his comeliness, or the joy and the saving fulness found in him, who gives the wine and milk of the gospel freely; the richness of blessing that closes Judah's portion)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.52
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "His eyes shall be red with wine",
-   "and his teeth white with milk",
-   "the closing figure of Judah's abundance of wine and milk",
-   "a Messianic glance at the saving fulness in Christ, freely given"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "13",
+  "pericope_label": "Zebulun to dwell at the haven of the sea",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: Zebulun should dwell at the haven of the sea, of the sea of Galilee and of the Mediterranean, his border toward the sea, fulfilled when settled in Canaan; the witnesses note Jacob foretelling that Zebulun should dwell at the haven of the sea, be a haven for ships, and his border reach to Zidon — the prophecy of Zebulun's sea-coast portion and his trade by ships (Jacob marking Zebulun's place by the sea: 'Zebulun shall dwell at the haven of the sea; and he shall be for an haven of ships; and his border shall be unto Zidon'; the foretelling of the lot, that Zebulun should 'dwell at the haven of the sea,' his inheritance lying toward the sea of Galilee and the Mediterranean both, so placed for harbours and traffic; the calling, 'he shall be for an haven of ships,' that his coast should be a refuge and station for shipping, the tribe given to trade and commerce by sea; the bound, 'his border shall be unto Zidon,' that his territory should reach toward the famous trading city of Zidon, sharing in its merchandise; the exactness of the prophecy, given long before Joshua divided the land yet fulfilled in Zebulun's allotted portion, a proof of the prophetic Spirit in Jacob's words)."
+    "summary": "Gill notes that the border of this tribe, when Israel was settled in Canaan, was toward the sea, and that this was done not at Joshua's discretion nor at the tribe's choice but by lot — which shows Jacob said it under a spirit of prophecy, and that it had its fulfilment two hundred years after, a full proof of the providence of God, who as he sets the bounds of the nations sets also the bounds of particular habitations. He takes the sea for both the sea of Galilee and the Mediterranean, and reads the second clause of good ports commodious for ships to station in. Calvin values the promise for the whole nation rather than the one tribe: although this blessing contains nothing rare or precious, it is worthy of notice that it was just as if God were stretching out his hand from heaven to distribute to each his own dwelling-place; and by it not one tribe only but the whole people ought to have been encouraged to lay hold with alacrity of the offered blessing."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry presses the argument from the lot further: had they chosen their lot themselves, or had Joshua appointed it, we might have supposed it done with design to make Jacob's words good, but being done by lot it appears divinely disposed and Jacob divinely inspired — the lot of God's providence exactly agreeing with the plan of God's counsel, like a true copy with the original. He draws the use of it too: God appoints the bounds of our habitation, and it is our wisdom and duty to accommodate ourselves to our lot and improve it — if Zebulun dwell at the haven of the sea, let him be for a haven of ships."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the territory the widest bounds, from the Mediterranean on the west to the lake of Gennesaret on the east, and cites the Targum of Jonathan ben Uzziel, which paraphrases boldly — Zebulun shall be on the coasts of the sea and shall rule over the havens; he shall subdue the provinces of the sea with his ships, and his border shall extend unto Sidon. Wesley notes the same fulfilment when the land was divided by lot two or three hundred years afterwards."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott denies the geography outright. Sea is plural in the Hebrew, and rightly so rendered in the Syriac; the territory lay upon the inland sea of Gennesaret but did not extend to the shore of the Mediterranean, and we know of no literal fulfilment of the prediction. Moses too speaks of Zebulun and Issachar as tribes that would suck of the abundance of the seas, and it is possible that, living near the Phoenicians, they took part in maritime pursuits; so the general meaning may be that Zebulun would be a tribe not of agriculturists but of traders."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Did Zebulun's territory reach the Mediterranean?",
+    "positions": [
+     {
+      "position": "yes — from the Mediterranean on the west to the lake of Gennesaret on the east",
+      "holders": [
+       "Clarke",
+       "Gill"
+      ]
+     },
+     {
+      "position": "no — it lay on the inland sea only, and no literal fulfilment is known; the sense may be that Zebulun would be a tribe of traders",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Zebulun shall dwell at the haven of the sea; and he shall be for an haven of ships",
-   "and his border shall be unto Zidon",
-   "the prophecy of Zebulun's sea-coast portion and trade by ships",
-   "the exactness of the prophecy, fulfilled long after, a proof of the prophetic Spirit"
+   "Zebulun shall dwell at the haven of the sea",
+   "he shall be for an haven of ships",
+   "his border shall be unto Zidon"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  },
  "14": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "14-15",
+  "pericope_label": "Issachar the strong ass, couching between two burdens",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the figure honourably: the word signifies a bony one, not a lean beast that is nothing but skin and bones, but one strong and robust; and the tribe is compared to an ass not for stupidity but for its strength and its use in husbandry — the Targums of Jonathan and Jarchi taking it figuratively of his being strong to bear the yoke of the law. He takes the rest Issachar saw to be neither the house of the sanctuary, as the Jerusalem Targum has it, nor the world to come, as Jonathan, but, with Onkelos, the portion of good land allotted him: quiet industry in cultivating his own ground was preferable to the hurry of a court or the dangers of the seas. Calvin holds both senses of the figure together: though called a bony ass for the strength that would let him endure rustic labours, his sloth is at the same time indicated, since it is added that he should be of servile disposition — the sons of Issachar, though strong, being quiet rather than courageous, and as ready to bear servitude as mules to submit their backs to the packsaddle."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the two burdens are the two sacks or panniers, one on each side of the beast, and that couching between them refers to the ass's propensity, whenever overloaded, to lie down even with its burden on its back. He will not have the tribe read down at all: the Chaldee paraphrase gives the passage a widely different turn from that of most commentators — he saw his portion that it was good and the land that it was fruitful, and he shall subdue the provinces of the people and drive out their inhabitants, and those left shall be his servants and tributaries — and Grotius understands it nearly so. The pusillanimity generally attributed to this tribe does not agree with the view in which Scripture exhibits them: in the song of Deborah they are praised for the powerful assistance they afforded, and in Chronicles are said to have been valiant men of might in all their generations; and when Tola of this tribe judged Israel, the land had rest twenty-three years. Wesley states the burden plainly: the men of that tribe should be strong and industrious, fit for and inclined to labour, particularly the toil of husbandry — Issachar submitting to two burdens, tillage and tribute."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Issachar is compared to an ass, not for stupidity but a strong and robust one, able to carry burdens, a 'bony' ass, strong to labour; the witnesses note Jacob likening Issachar to a strong ass couching down between two burdens — the figure of a tribe strong but content to bear burdens for the sake of ease (Jacob marking Issachar's strength and his servile contentment: 'Issachar is a strong ass couching down between two burdens'; the figure, 'a strong ass,' not a reproach for stupidity but for strength, 'a bony one,' robust and able, strong to labour and to bear; the posture, 'couching down between two burdens,' that the strong ass lies down between the burdens or the sheepfolds, content to crouch under its load rather than fight for freedom; what this foretold of the tribe, that Issachar should be a strong and industrious people, given to husbandry and labour, but so loving ease and their pleasant land that they would rather bear burdens and pay tribute than rouse themselves to war for liberty; the mingled praise and reproof in the figure, strength joined to a love of ease)."
+    "summary": "Ellicott reads the figure against the man. The ass was Issachar's own chosen cognizance, a noble, active, spirited animal in the East, but his real character was slothful and commonplace; Jacob therefore likens him to an ass of bone, one coarsely bred, since animals of high parentage have small bones, and he is fit only to be a drudge. He finds a different picture in the next word: it occurs again in the song of Deborah and is there more correctly rendered sheepfolds — the pens in which cattle were folded on summer nights, standing in the dual form because divided into two parts for the larger and smaller cattle; so that Issachar, stretched at ease between his cattle-pens, gives the idea of a tribe occupied with pastoral pursuits and destitute of higher aspirations. Keil grounds the award in the name, interpreting it with an allusion to the words for hire and for hireling, and sums the character up in a sentence of Delitzsch: ease at the cost of liberty will be the characteristic of the tribe of Issachar."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is Issachar praised or censured here?",
+    "positions": [
+     {
+      "position": "censured — a coarsely bred drudge, occupied with pastoral pursuits and destitute of higher aspirations",
+      "holders": [
+       "Ellicott",
+       "Keil"
+      ]
+     },
+     {
+      "position": "praised for strength and industry; the pusillanimity attributed to the tribe does not agree with Scripture",
+      "holders": [
+       "Clarke",
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Issachar is a strong ass",
-   "couching down between two burdens",
-   "Issachar the strong but burden-bearing ass",
-   "a strong tribe that loved ease so well it would bear burdens rather than fight for liberty"
+   "Issachar is a strong ass couching down between two burdens",
+   "he saw that rest was good, and the land that it was pleasant",
+   "he bowed his shoulder to bear, and became a servant unto tribute"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: he saw his part and portion of the good land allotted him, that it was pleasant, and chose rather to bear burdens and pay tribute than disturb his ease; the witnesses note Issachar seeing that rest was good and the land pleasant, and bowing his shoulder to bear and becoming a servant to tribute — the explanation of the figure, the tribe choosing ease and tribute above the cost of liberty (Jacob showing why Issachar bore the burden: 'he saw that rest was good, and the land that it was pleasant; and bowed his shoulder to bear, and became a servant unto tribute'; the reasoning, 'he saw that rest was good, and the land that it was pleasant,' that Issachar, finding his portion a fertile and pleasant land and loving his ease, judged quiet and rest better than the toil and danger of war; the choice, 'bowed his shoulder to bear, and became a servant unto tribute,' that, rather than rouse himself to defend his liberty, he submitted to bear the burden and pay tribute to keep his ease, choosing servitude with quiet over freedom with strife; the lesson the commentators draw, the danger of so loving ease and earthly comfort that one will purchase quiet even at the price of bondage; the mingled character of the tribe, strong yet servile by choice)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.41
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he saw that rest was good, and the land that it was pleasant; and bowed his shoulder to bear",
-   "and became a servant unto tribute",
-   "Issachar choosing ease and tribute over the cost of liberty",
-   "the danger of loving ease so well one purchases quiet at the price of bondage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "16-18",
+  "pericope_label": "Dan shall judge his people, and Jacob waits for salvation",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the elegant paronomasia, Dan signifying to judge, and takes the sense to be that the tribe should have rulers and judges of its own as the others had — said of him particularly because he is the first of the concubines' children to be noticed, and true of the rest too. He denies the narrower reading: the meaning is not that a judge should arise out of him to judge all Israel, restricted to Samson as the Targums and Jarchi would have it. He takes the serpent for the kind called cerastes, which lies among sand and, being of the same colour, is not easily discerned, so that it is trampled on unawares and bites at once — Diodorus Siculus reporting their bites deadly and few able to discern them, and Onkelos paraphrasing, that lies in wait by the way. Calvin agrees and puts it sharply: the Jews foolishly restrict the words to Samson, because he alone presided over the whole people, whereas the language applies rather to the perpetual condition of the tribe. He compares this people to serpents that rise out of their lurking-places by stealth against the unwary — Dan shall not be courageous enough to engage boldly, but will fight with cunning and snares, and yet will be superior to enemies whom he dares not approach with collected forces, as serpents by their secret bite cast down the horse and his rider; no judgment is passed whether such subtlety deserves praise or censure, but conjecture rather inclines us to place it among his faults. On the prayer that follows Calvin thinks that when Jacob perceived, as from a lofty watchtower, his offspring exposed to change and tossed by storms that would almost overwhelm them, he was moved with fear, and that he might rise against temptation with victorious constancy he commits himself to the Lord who had promised to be the guardian of his people."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke adds that Dan, the eldest of Jacob's sons by Bilhah, is promised an equal rule with the tribes sprung from the legal wives, and says Dan should gain the chief part of his conquests more by cunning than by valour, as appears in the taking of Laish and in some of Samson's transactions, the burning of the Philistines' corn and the pulling down of their temple. Wesley says the same, that though one of the concubines' sons he should be a tribe governed by judges of his own, and takes the ejaculation for a dying man's last breath: if Jacob must break off here, his breath not serving him to finish, with these words he pours out his soul into the bosom of his God; and the pious ejaculations of a lively devotion, though sometimes incoherent, are not impertinent, for that may be uttered affectionately which comes in unmethodically."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: there is an elegant allusion to the name of Dan, which signifies to judge; the sense is there should be rulers and judges of it, as the other tribes had, and this is mentioned of him because he was a son of the handmaid; the witnesses note Jacob foretelling that Dan should judge his people as one of the tribes of Israel — the promise that Dan, though a son of the handmaid, should have his own rule and place among the tribes (Jacob honouring Dan with a word that plays on his name: 'Dan shall judge his people, as one of the tribes of Israel'; the play on the name, that 'Dan' means 'to judge,' so that 'Dan shall judge his people' fitly answers to his name; the sense, that Dan should have his own rulers and judges and a standing 'as one of the tribes of Israel,' full and equal with the rest, though he was the son of a handmaid, Bilhah; that this was a word of honour, that the lowlier-born son should yet be a true tribe with its own government; that the commentators see here a special pointing to Samson, the judge who arose from Dan and judged Israel, delivering them from the Philistines; the equal place of Dan among the brethren, none cast off)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Dan shall judge his people",
-   "as one of the tribes of Israel",
-   "Dan given his own rule and place, full and equal though son of the handmaid",
-   "the commentators seeing a pointing to Samson, the judge who arose from Dan"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Dan should be like the adder or cerastes, which lies among the sand, of the same colour, not easily discerned, and bites at once, unexpected; the witnesses note Jacob likening Dan to a serpent by the way, an adder in the path, biting the horse's heels so the rider falls — the figure of Dan's subtle and sudden craft, overcoming the stronger by stratagem (Jacob marking Dan's way of warfare: 'Dan shall be a serpent by the way, an adder in the path, that biteth the horse heels, so that his rider shall fall backward'; the figure of the serpent, 'a serpent by the way, an adder in the path,' likely the cerastes, which lies hidden in the sand of like colour, unseen, and strikes suddenly; the manner of conquest, 'that biteth the horse heels, so that his rider shall fall backward,' that Dan, though a smaller tribe, should overcome stronger foes not by open force but by subtlety and ambush, as the small serpent fells the great horse and rider by a sudden bite; the commentators' application to Samson, the Danite, who by craft and sudden surprise destroyed many of the Philistines, the strong overthrown by the cunning of the weak; the mingled character, that subtlety may be a weapon for good against the enemy, yet the serpent figure also hints at Dan's later snares)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Dan shall be a serpent by the way, an adder in the path",
-   "that biteth the horse heels, so that his rider shall fall backward",
-   "Dan overcoming stronger foes by subtlety and ambush",
-   "applied to Samson, the strong overthrown by the cunning of the weak"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Jacob, finding his spirits faint and flag, stops and breathes awhile, and as a dying man expresses what he had been thoughtful of, waiting for God's salvation; the witnesses note Jacob, amid the prophecies, breaking out, 'I have waited for thy salvation, O LORD' — the dying patriarch's sudden ejaculation of faith, looking beyond all the tribes to God's salvation (Jacob lifting his heart to the LORD: 'I have waited for thy salvation, O LORD'; the occasion, that Jacob, his spirits flagging in the long prophecy and feeling himself a dying man, pauses to breathe and to lift up his soul to God; the substance of the cry, 'I have waited for thy salvation,' that, looking back over his life and forward beyond death, Jacob professes that all his hope had been and still was in 'thy salvation, O LORD,' the deliverance God should send; the deeper reach the commentators find, that Jacob waited not merely for temporal deliverances but for the great salvation of God, the coming of the promised Saviour, the Shiloh of whom he had just spoken; the beauty of a dying saint's faith, resting not on his sons' fortunes but on the LORD's salvation; the LORD named here, the covenant God in whom Jacob trusted)."
+    "summary": "Keil sets the words of the prayer against the conflicts to come: this manifestation of strength presupposed that severe conflicts awaited the Israelites, and for them Jacob furnished his sons with shield and sword in the prayer, which was not a petition for his own soul but an expression of confidence that his descendants would receive the help of his God. Ellicott traces it to the figure just used: of the many explanations hazarded, the most probable is that the serpent wounding its prey in the heel carried the patriarch's mind back to the fall of man and the promise made to Eve, so that this is a profession of faith in the advent of the promised Deliverer."
    }
   ],
   "debates": [
    {
-    "question": "What salvation does Jacob wait for?",
-    "sides": [
+    "question": "Why does the prayer break in at this point?",
+    "positions": [
      {
-      "position": "Not temporal deliverance only, but the great salvation of God — the coming of the promised Saviour, the Shiloh of whom he had just spoken (v.10); the dying patriarch's faith resting on the LORD's salvation",
+      "position": "the serpent biting the heel carried Jacob’s mind back to the fall and the promise made to Eve",
       "holders": [
-       "Gill",
-       "the witnesses"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "foreseeing the storms awaiting his offspring, Jacob committed himself to the Lord who had promised to guard his people",
+      "holders": [
+       "Calvin",
+       "Keil"
       ]
      }
     ]
@@ -673,182 +799,180 @@
   ],
   "outliers": [],
   "themes": [
-   "I have waited for thy salvation",
-   "O LORD",
-   "the dying patriarch's sudden cry of faith amid the prophecies",
-   "waiting not for temporal deliverance only but for the promised Saviour, the Shiloh"
+   "Dan shall judge his people, as one of the tribes of Israel",
+   "Dan shall be a serpent by the way, an adder in the path",
+   "I have waited for thy salvation, O LORD"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "19": {
   "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "19-21",
+  "pericope_label": "Gad, Asher and Naphtali",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the paronomasia in almost every word of the verse, Gad signifying a troop, and takes the whole for a prediction that this would be a warlike tribe with the fate of war, sometimes conquered and sometimes conquering, but victorious at last; the Targums refer it to the crossing of Jordan at the head of Israel's armies, but Gill rather to their own borders, which, lying beyond Jordan, lay open to the Moabites and Ammonites. On Asher he takes it that the tribe would have food enough out of its own land without being obliged to others, and of the best sort, citing Andrichomius for a tract reaching from great Zidon to Carmel of the sea, fruitful in wine and oil and containing the valley of Asher, called the fat valley; and on Naphtali he follows Onkelos, who applies it to the tribe and its land, Jarchi observing that the vale of Gennesaret is as quick to bear fruit as a hind is swift to run. Calvin anticipates a shrug at Asher's blessing: should any object that it is no great thing to be fed with nutritious and pleasant bread, I answer that we must consider the end designed, that they might know they were fed by the paternal care of God. Of Naphtali he will have none of the fleetness, approving rather the meaning that the tribe will defend itself by eloquence and suavity of words rather than by force of arms; for it is no despicable virtue to soothe ferocious minds and appease excited anger by bland and gentle discourse."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry widens Gad's oracle to the Christian's conflict, where grace is often foiled and troops of corruption overcome it, but the cause is God's and grace comes off at last more than conqueror."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley draws the double lesson from Gad: that they might not be proud he foretells that their enemies should in many skirmishes overcome them, and that they might not be discouraged he assures them they should overcome at last — fulfilled when in Saul's time and David's the Moabites and Ammonites were subdued."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: there is a paronomasia, an allusion to the name of Gad almost in every word, which signifies a troop; the prediction is that this tribe would be warlike, sometimes conquered but conquering at last; the witnesses note Jacob foretelling that a troop should overcome Gad but he should overcome at the last — the prophecy of a warlike tribe, conquered for a time yet victorious in the end (Jacob marking Gad's wars with a play on his name: 'Gad, a troop shall overcome him: but he shall overcome at the last'; the play on the name, that 'Gad' means 'a troop,' and the verse rings with the word; the meaning, that Gad's tribe, lying exposed beyond Jordan, should be a warlike people, much beset and sometimes overcome by raiding troops of enemies, the Ammonites and others; the comfort in the close, 'but he shall overcome at the last,' that, though pressed and beaten for a season, Gad should rally and conquer in the end, the final victory his; the lesson the commentators draw for the believer, that the people of God may be overcome for a time yet shall overcome at the last, the final triumph sure)."
+    "summary": "Ellicott notes that Gad means good fortune, though Jacob connects it with the root to gather in troops: settling east of Jordan he lies open to sudden incursions of plunderers, but, though ever unready, gathers his forces, repels them, and follows with avenging energy upon their rear. Keil derives the name from a verb to press, and takes the last clause otherwise: Gad will withstand such hosts and press their heel, that is, put them to flight and pursue them, not smite their rear-guard, since the word means not the rear-guard but only the reserves. Keil places Asher's inheritance in the lowlands of Carmel as far as Tyre, with whose wheat and oil Solomon supplied the household of king Hiram; and Ellicott adds that Zebulun, the trading tribe, could reach the sea only through Asher's possessions. Of Naphtali Keil takes the hind for a warrior skilful and swift in his movements, and settles the participle — it means neither hunted nor grown slim, but let loose, running freely about — while Ellicott sets Naphtali against Gad: where Gad moved slowly and let himself be surprised, Naphtali is light and active, moving like a hind let loose, or literally sent forth, like the scouts or van of an army, and so brings back goodly words, that is, trustworthy intelligence for the army. Ellicott records the rival rendering, supported by the Septuagint — Naphtali is a spreading terebinth, shooting forth goodly branches — which keeps the consonants of the Hebrew but gives them different vowels."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does Naphtali's blessing describe?",
+    "positions": [
+     {
+      "position": "swiftness — a scout or the van of an army, bringing back trustworthy intelligence",
+      "holders": [
+       "Ellicott",
+       "Keil"
+      ]
+     },
+     {
+      "position": "eloquence — the tribe defends itself by suavity of words rather than by force of arms",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "a spreading terebinth shooting forth goodly branches, with the Septuagint",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Gad, a troop shall overcome him",
-   "but he shall overcome at the last",
-   "Gad a warlike tribe, conquered for a time yet victorious in the end",
-   "a lesson that the people of God may be overcome for a season yet triumph at last"
+   "a troop shall overcome him: but he shall overcome at the last",
+   "out of Asher his bread shall be fat",
+   "Naphtali is a hind let loose: he giveth goodly words"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this signifies that this tribe would have a sufficiency of food out of their own land, of the best sort, occupying a rich tract reaching from Zidon to Carmel; the witnesses note Jacob foretelling that Asher's bread should be fat and he should yield royal dainties — the prophecy of a rich and fertile portion, fit to furnish the tables of kings (Jacob marking Asher's fatness and plenty: 'Out of Asher his bread shall be fat, and he shall yield royal dainties'; the figure of plenty, 'his bread shall be fat,' that Asher should have abundance of food out of his own land, and that of the best and richest sort, the soil so fertile that the tribe should want nothing; the excellence of the produce, 'he shall yield royal dainties,' that Asher's land should bring forth such choice fruits, oil, and provisions as were fit for a king, dainties to furnish royal tables; that Asher's portion, the rich coastland from Zidon toward Carmel, was indeed famous for its fat soil, its oil and corn; the exact answering of the prophecy to the inheritance)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Out of Asher his bread shall be fat",
-   "and he shall yield royal dainties",
-   "Asher's rich and fertile portion, fat bread and royal dainties",
-   "abundance of the best, fit for kings, answering to the rich coastland"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Onkelos applies it to the tribe and the goodness of its land, his lot falling in a good and fruit-bearing land, the fruitful country of Gennesaret; the witnesses note Jacob likening Naphtali to a hind let loose, that giveth goodly words — the figure of a free and swift tribe, fruitful in eloquence and good tidings (Jacob marking Naphtali's freedom and his goodly speech: 'Naphtali is a hind let loose: he giveth goodly words'; the figure of the 'hind let loose,' a deer set free, swift, graceful, and at liberty, that bounds over the hills, some applying it to the tribe's freedom and agility, others, with Onkelos, to the goodness of its land, the fruitful country of Gennesaret where Naphtali's lot fell; the second clause, 'he giveth goodly words,' that Naphtali should be a people fruitful in fair and pleasant speech, eloquent, bearing good tidings, or yielding the goodly fruits of a fertile land; the commentators' note that from the borders of Naphtali, by the sea of Galilee, came much of the preaching of Christ and his apostles, the goodly words of the gospel; the gracious character of the tribe, free and fruitful in good words)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Naphtali is a hind let loose",
-   "he giveth goodly words",
-   "Naphtali the free and swift hind, fruitful in fair speech",
-   "the commentators noting that from his borders by Galilee came the gospel preaching of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "22-23",
+  "pericope_label": "Joseph the fruitful bough, and the archers who shot at him",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill applies the fruitfulness to the children — Joseph named one son Ephraim from it, and both became numerous and heads of tribes in Israel — and names the archers all: his brethren, who shot bitter words at him, hated him for his dreams and because his father loved him, stripped him, cast him into a pit and sold him; his mistress, whose solicitations were as fiery darts and who, being resisted, turned her impure love into hatred and shot her calumnies at him; and, by the Targum of Jonathan, the magicians of Egypt, who envied his knowledge. Calvin agrees that the daughters of the figure are the tender and smaller branches, said to run over the wall when they spread far and wide, and sums it so: Joseph is born to grow like a tree near a fountain, drawing from the watered earth the sap by which it grows the faster, so that by its lofty stature it may surmount the obstacles around it. He rejects the reading that makes the daughters women: I do not interpret the words of an assemblage upon the walls whom the sight of the tree had attracted. He adds that in making Joseph himself the archer, Jacob predicts an invincible fortitude which stood not by his own arm but as strengthened by the hand of God."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the answering line as a record of what carried Joseph through. His bow abode in strength, that is, his faith did not fail but he kept his ground and came off a conqueror; the arms of his hands were made strong, that is, his other graces did their part — his wisdom, courage and patience, which are better than weapons of war. In short he maintained both his integrity and his comfort through all his trials, bearing his burdens with an invincible resolution."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke refers the verse to Jacob himself, whose posterity in two hundred and fifteen years amounted to upwards of six hundred thousand effective men; and he reports that some have understood the daughters literally of the Egyptian women, so struck with Joseph's beauty as to get upon walls and housetops to see him pass, a view agreeable to the Koran. He keeps the literal sense of the archers open, taking the masters of arrows for Joseph's brethren, who used such weapons while feeding their flocks and probably excelled in archery — though it may refer only to the bitter speeches with which they were incessantly finding fault. Wesley notes that though Joseph now lived in honour, Jacob minds him of the difficulties he had formerly waded through."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Joseph is like a bough or branch laden with fruit, as he was with children, both his sons becoming numerous and heads of tribes, and with other blessings; the witnesses note Jacob likening Joseph to a fruitful bough by a well, whose branches run over the wall — the figure of Joseph's fruitfulness, spreading and abundant, watered by God (Jacob beginning Joseph's rich blessing with the image of fruitfulness: 'Joseph is a fruitful bough, even a fruitful bough by a well; whose branches run over the wall'; the figure of the 'fruitful bough,' a branch laden with fruit, fitly figuring Joseph, fruitful in children, Ephraim named for fruitfulness and Manasseh, both heads of tribes, and in every blessing; the source of the fruitfulness, 'by a well,' that the bough is planted by a spring of water, ever supplied and never failing, drawing from the unfailing well of God's grace; the spreading, 'whose branches run over the wall,' that Joseph's fruitfulness should not be confined but overflow, his descendants multiplying and spreading abroad beyond all bounds; the type the commentators draw, of Christ and his church, fruitful by the well of living water and spreading over every wall to the Gentiles)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph is a fruitful bough, even a fruitful bough by a well",
-   "whose branches run over the wall",
-   "Joseph the fruitful bough, watered by the unfailing well of God's grace",
-   "spreading beyond all bounds, a type of Christ and his church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: his brethren grieved him with their ill usage, shot out bitter words against him, hated him for his dreams and because his father loved him, and could not speak peaceably to him; the witnesses note Jacob recalling how the archers sorely grieved Joseph, shot at him, and hated him — the looking back on Joseph's sufferings at the hands of his enemies, chiefly his own brethren (Jacob remembering the affliction Joseph bore: 'The archers have sorely grieved him, and shot at him, and hated him'; who the 'archers' were, chiefly his brethren, who 'grieved him with their ill usage,' 'shot out bitter words against him' like arrows, and 'hated him' for his dreams and for his father's love, and could not speak peaceably to him; the further enemies, Potiphar's wife and the like, who also shot at his integrity; the sharpness of the trial, that Joseph was the mark of envy, slander, and hatred, sorely wounded by those nearest him; the type of Christ the commentators draw, that Joseph, hated and assailed by his own brethren without cause, foreshadows the Saviour, hated and shot at by his own; that the recital of the sufferings sets off the deliverance that follows)."
+    "summary": "Ellicott gives the words literally — son of a fruitful tree is Joseph, son of a fruitful tree by a fountain, the daughters spread over the wall — the branches or suckers springing from the tree overtopping the wall built round the spring for its protection; and he marks the delicacy of the language that follows, Jacob describing the sorrows of Joseph's youth in poetical terms, so as not to wound his brethren nor rouse thoughts of vengeance in Joseph's own mind, comparing him to a warrior too mighty for his enemies to close with but whom they harass from a distance — and hated him, he adds, would be better rendered, laid snares for him. Keil takes the tree for a vine planted by a well, sending its shoots over the wall, the daughters being its twigs and young branches, and denies the whole personal application: from the simile of the fruit-tree Jacob passed to a warlike figure, describing the victorious unfolding of the tribe of Joseph as though the future were already come; the words are not to be referred to Joseph's personal history, to persecutions from his brethren or to his sufferings in Egypt, but point merely to the conflicts awaiting his descendants."
    }
   ],
   "debates": [
    {
-    "question": "Whom does the hated and assailed Joseph foreshadow?",
-    "sides": [
+    "question": "Do the archers stand for Joseph's own enemies or for the tribe's later foes?",
+    "positions": [
      {
-      "position": "Christ — Joseph, grieved, shot at, and hated by his own brethren without cause, foreshadows the Saviour hated and assailed by his own (cf. John 1:11)",
+      "position": "for his own — his brethren, his mistress, and the Egyptian magicians who envied him",
       "holders": [
        "Gill",
-       "the witnesses"
+       "Clarke",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "for the conflicts awaiting his descendants only, the future being described as already come",
+      "holders": [
+       "Keil"
       ]
      }
     ]
@@ -856,355 +980,78 @@
   ],
   "outliers": [],
   "themes": [
-   "The archers have sorely grieved him, and shot at him",
-   "and hated him",
-   "Joseph grieved and hated by the archers, chiefly his brethren",
-   "a type of Christ, hated and assailed by his own without cause"
+   "Joseph is a fruitful bough by a well",
+   "the archers have sorely grieved him, and shot at him",
+   "his bow abode in strength"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "24": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "24-26",
+  "pericope_label": "The Shepherd, the Stone of Israel, and the blessings upon Joseph's head",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill turns the weapons round: as his enemies were archers, so was he, but with arms of a different sort — the graces he possessed, integrity, chastity, fortitude, wisdom and patience, faith and hope, which remained unmoved notwithstanding the attacks made upon them. Calvin makes the comparison with the fathers turn on nearness: although God had from the beginning been true to his promises, he frequently postponed their effect, as if feeding Abraham, Isaac and Jacob with nothing but words; not without reason, then, does Jacob declare that the full time had arrived in which the result of his benediction, long concealed, should emerge as from the deep — and the comparison ought to inspire us with greater alacrity now, since the riches of grace that have flowed to us in Christ exceed a hundredfold any blessings Joseph received. On the last word Calvin allows either sense, that Joseph was the crown of his brethren, from the glory redounding from him to them all, or that by his excelling dignity he was separated from them — though this excellency, he warns, was temporal, since Joseph had to take his proper place and submit to the sceptre of Judah."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the fullest account of the blessings. Those of heaven above are a pure, serene sky, frequently dropping fertilizing showers and dews; those of the deep beneath are whatever riches could be gained from sea or rivers, from mines and minerals in the earth, and from abundant springs; and those of the breasts and womb a numerous offspring and abundance of cattle — the progeny of Joseph by Ephraim and Manasseh amounting at the first enumeration to seventy-five thousand nine hundred men, exceeding any one tribe, Judah, the greatest, coming to no more than seventy-four thousand six hundred. Wesley reads the clause about the source the other way from Ellicott, that from this strange method of providence Joseph became the shepherd and stone, the feeder and supporter of Israel, a type herein of Christ, who was shot at and hated, borne up under his sufferings, and afterwards raised."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: his bow abode in strength; as his enemies were archers so had he a bow, but of a different sort, the virtues and graces he possessed, his strength being from God; the arms of his hands were made strong by the mighty God of Jacob; the witnesses note Joseph's bow abiding in strength, his arms made strong by the hands of the mighty God of Jacob, from whom is the shepherd, the stone of Israel — the divine upholding of Joseph against his foes, and the great titles of God (Jacob showing whence Joseph's strength came: 'his bow abode in strength, and the arms of his hands were made strong by the hands of the mighty God of Jacob; from thence is the shepherd, the stone of Israel'; the victory, 'his bow abode in strength,' that, assailed by the archers, Joseph yet stood firm, his strength holding, repelling their force not by their kind of weapons but by his innocence, integrity, and faith; the true source, 'the arms of his hands were made strong by the hands of the mighty God of Jacob,' that it was God, the mighty God of Jacob, who upheld and strengthened him through all his trials; the great titles, 'the shepherd, the stone of Israel,' that from this same God come the Shepherd who feeds and the Stone who upholds his people, titles the commentators apply to Christ; that Joseph's whole preservation and rise were of God's strengthening)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   "the shepherd, the stone of Israel — titles applied by the commentators to Christ, the Shepherd and the Stone"
-  ],
-  "themes": [
-   "his bow abode in strength, and the arms of his hands were made strong by the hands of the mighty God of Jacob",
-   "from thence is the shepherd, the stone of Israel",
-   "God's upholding of Joseph against his foes by his own strength",
-   "the titles 'the shepherd, the stone of Israel' applied to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is the mighty God of Jacob, who had made his hands strong and would still help, protect, and defend him, and by whom Christ the antitype was helped; the witnesses note Jacob blessing Joseph by the God of his father and the Almighty, with blessings of heaven, of the deep, of the breasts and the womb — the heaping up of every kind of blessing upon Joseph from the all-sufficient God (Jacob pouring out a full and many-sided blessing: 'by the God of thy father, who shall help thee; and by the Almighty, who shall bless thee with blessings of heaven above, blessings of the deep that lieth under, blessings of the breasts, and of the womb'; the source, 'the God of thy father, who shall help thee... the Almighty, who shall bless thee,' that all Joseph's blessing flows from the covenant God of Jacob, the 'Almighty,' El-Shaddai, all-sufficient to help and to bless; the fulness, 'blessings of heaven above,' the rain, sun, and dew, 'blessings of the deep that lieth under,' the springs and waters beneath, and 'blessings of the breasts, and of the womb,' fruitfulness of family and flock, every kind of good from heaven, earth, and the increase of living things; that the all-sufficient God would supply Joseph from every quarter, above and below; the bounty of grace, that God blesses his own with fulness)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by the God of thy father, who shall help thee; and by the Almighty, who shall bless thee",
-   "blessings of heaven above, blessings of the deep that lieth under, blessings of the breasts, and of the womb",
-   "every kind of blessing heaped on Joseph from the all-sufficient God",
-   "blessings of heaven, deep, and increase, the bounty of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Jacob's blessings were greater and more numerous than those Abraham and Isaac had, and should be on the head of Joseph, who was separate from his brethren; the witnesses note Jacob declaring his blessings on Joseph prevailed above those of his progenitors, to the utmost bound of the everlasting hills, to be on the head of Joseph, separate from his brethren — the crowning of the blessing, the abundance set on Joseph's head (Jacob capping the blessing with its surpassing greatness: 'the blessings of thy father have prevailed above the blessings of my progenitors unto the utmost bound of the everlasting hills: they shall be on the head of Joseph'; the greatness, 'have prevailed above the blessings of my progenitors,' that the blessings Jacob bestowed, by the Spirit, exceeded those Abraham and Isaac had given, more full and numerous; the reach, 'unto the utmost bound of the everlasting hills,' that the blessings should extend as far and last as long as the perpetual hills, abundant and enduring; the resting-place, 'on the head of Joseph, and on the crown of the head of him that was separate from his brethren,' that all this blessing should crown Joseph, who 'was separate from his brethren,' set apart by his sufferings and his exaltation, a fit type of Christ, the Nazarite separated from sinners; the honour put on the once-rejected son)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the blessings of thy father have prevailed above the blessings of my progenitors unto the utmost bound of the everlasting hills",
-   "on the crown of the head of him that was separate from his brethren",
-   "Jacob's blessings on Joseph surpassing those of his fathers, abundant and enduring",
-   "crowning the head of Joseph, separated from his brethren, a type of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the Targums apply this to the priests offering the daily sacrifice in the temple, which stood in Benjamin's lot, but it chiefly respects the warlike and victorious character of the tribe; the witnesses note Jacob likening Benjamin to a wolf that ravins, devouring the prey in the morning and dividing the spoil at night — the figure of a fierce and warlike tribe, victorious in battle (Jacob closing the sons' blessings with Benjamin the wolf: 'Benjamin shall ravin as a wolf: in the morning he shall devour the prey, and at night he shall divide the spoil'; the figure of the 'wolf,' fierce, swift, and ravening, fitly figuring Benjamin's warlike spirit, the tribe famous for valiant and skilful warriors, the slingers and the men of Gibeah, and Saul and Jonathan; the picture of constant victory, 'in the morning he shall devour the prey, and at night he shall divide the spoil,' that the tribe should be successful in war from morning to night, seizing the prey and sharing out the spoil, a conqueror all the day; the further application some draw, to Saul the Benjamite, the first king, and to Paul the Benjamite, who as a wolf first ravined against the church and then, transformed, divided the spoil of the gospel; the fierce and victorious character that closes the tribal blessings)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Benjamin shall ravin as a wolf: in the morning he shall devour the prey",
-   "and at night he shall divide the spoil",
-   "Benjamin the ravening, victorious wolf, a fierce and warlike tribe",
-   "some applying it to Saul the first king and to Paul, who divided the spoil of the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the twelve sons were heads of twelve tribes, afterwards seated in Canaan, though there were thirteen tribes, two springing from Joseph; the witnesses note the summary that all these are the twelve tribes of Israel, and that their father blessed every one according to his own blessing — the gathering-up of the whole prophecy, each son blessed with his fitting word (the narrator summing the blessing: 'All these are the twelve tribes of Israel... and blessed them; every one according to his blessing he blessed them'; the summing, 'All these are the twelve tribes of Israel,' that the twelve sons just addressed were the heads of the twelve tribes, the foundations of the nation, afterward seated in Canaan; the manner of the blessing, 'every one according to his blessing he blessed them,' that Jacob gave to each son the word that fitted him, suited to his character and his future, whether of honour or of reproof, of plenty or of war; that even the words of sentence, to Reuben, Simeon, and Levi, are reckoned within 'blessed them,' for the prophecy as a whole was a blessing to the house, ordering each in his place; the wisdom and impartiality of the dying father, dealing with each according to truth)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "All these are the twelve tribes of Israel",
-   "every one according to his blessing he blessed them",
-   "the summing-up, each of the twelve blessed with his fitting word",
-   "even the words of sentence reckoned within the blessing to the house"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: Jacob charged them, saying, I am to be gathered unto my people, bury me with my fathers in the cave in the field of Ephron the Hittite; Gill: the same charge he had given to Joseph he here renews and lays upon all his sons, who were to go along with Joseph to bury him in Canaan; the witnesses note Jacob charging his sons that, being gathered to his people, they should bury him with his fathers in the cave of Ephron the Hittite — the dying patriarch's solemn charge to be buried in the land of promise (Jacob, the blessing ended, giving his last command: 'I am to be gathered unto my people: bury me with my fathers in the cave that is in the field of Ephron the Hittite'; the phrase 'I am to be gathered unto my people,' the language of faith, that death was to him a gathering to his fathers and to the people of God, not a perishing; the charge, 'bury me with my fathers... in the field of Ephron the Hittite,' that he renews to all his sons the charge given to Joseph, that he be carried out of Egypt and buried in the ancestral tomb in Canaan; the faith in the charge, that Jacob would lie not in Egypt but in the land of promise, professing his hope in the covenant and the inheritance God had sworn; that the burial in Canaan was a testimony that Egypt was not their home but the promised land)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I am to be gathered unto my people",
-   "bury me with my fathers in the cave that is in the field of Ephron the Hittite",
-   "Jacob's dying charge to be buried with his fathers in Canaan",
-   "the language of faith, his burial in the land of promise a testimony of his covenant hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is so exactly described that there might be no mistake about the place, the cave in the field of Machpelah before Mamre, in the land of Canaan, which Abraham bought for a possession of a burying-place; the witnesses note Jacob exactly naming the cave of Machpelah before Mamre, which Abraham bought for a burying-place — the careful pointing to the ancestral tomb, the bought possession in the land of promise (Jacob marking the very place with care: 'the cave that is in the field of Machpelah, which is before Mamre, in the land of Canaan, which Abraham bought... for a possession of a buryingplace'; the exactness, that Jacob describes the place so fully that there might be no mistake about the place, his sons knowing exactly where to carry him; the title to it, 'which Abraham bought with the field of Ephron the Hittite for a possession of a buryingplace,' that this was the lawful, purchased possession of the family, the one piece of the promised land they then held, bought by Abraham; the faith in choosing this tomb, that Jacob would lie in the bought ground of Canaan, a pledge of the whole land promised to his seed; the continuity of the covenant family, laid together in one tomb)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cave that is in the field of Machpelah, which is before Mamre, in the land of Canaan",
-   "which Abraham bought with the field of Ephron the Hittite for a possession of a buryingplace",
-   "Jacob exactly naming the ancestral tomb, Abraham's bought possession",
-   "a pledge of the whole land promised to his seed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Abraham buried Sarah there himself, and his sons Isaac and Ishmael buried him there, and Jacob there buried Leah; the witnesses note Jacob recounting that there were buried Abraham and Sarah, Isaac and Rebekah, and Leah — the roll of the fathers laid in the one tomb, into whose company Jacob would be gathered (Jacob naming the patriarchs and matriarchs of the family tomb: 'There they buried Abraham and Sarah his wife; there they buried Isaac and Rebekah his wife; and there I buried Leah'; the three couples named, 'Abraham and Sarah,' 'Isaac and Rebekah,' and Leah, Jacob's wife buried by him there, the patriarchs and their wives, the covenant fathers and mothers, all laid together in Machpelah; the honour Jacob does to Leah, 'there I buried Leah,' owning her in death as his wife and laying her among the patriarchs, though Rachel had been the beloved; the desire of Jacob to be gathered into this honoured company, to lie with the fathers of the covenant in the bought ground of promise; the unity of the covenant family in life and death)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "There they buried Abraham and Sarah his wife; there they buried Isaac and Rebekah his wife",
-   "and there I buried Leah",
-   "Jacob naming the covenant fathers and mothers laid in Machpelah",
-   "his desire to be gathered into their honoured company in the land of promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is repeated for the certainty of it, that both field and cave were bought by Abraham of Ephron the Hittite, that it might be taken notice of; the witnesses note Jacob noting again that the field and cave were purchased from the children of Heth — the careful repeating of the lawful title, that the burial ground was a sure and bought possession (Jacob sealing the matter of the title: 'The purchase of the field and of the cave that is therein was from the children of Heth'; the repetition, that this is said again 'for the certainty of it,' that there might be no doubt that 'both the field and cave were bought by Abraham of Ephron the Hittite,' lawfully and fully purchased; the importance the commentators mark, that the family had a clear and undisputed title to this one piece of Canaan, a sure possession 'from the children of Heth,' the men of the land; the faith and foresight in this, that Abraham had secured, and Jacob now confirmed, a holding in the promised land, an earnest of the whole inheritance to come; the care of the patriarchs to keep a sure footing in the land of promise)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The purchase of the field and of the cave that is therein",
-   "was from the children of Heth",
-   "the repeated confirming of the lawful, bought title to the tomb",
-   "the family's one clear holding in Canaan, an earnest of the whole inheritance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: when Jacob had given all the proper directions concerning his interment, he gathered up his feet into the bed on which he sat while he blessed his sons; the witnesses note Jacob, having ended commanding his sons, gathering up his feet into the bed, yielding up the ghost, and being gathered to his people — the calm and faithful death of the patriarch, his work finished and his spirit going home (Jacob dying in peace, his task complete: 'when Jacob had made an end of commanding his sons, he gathered up his feet into the bed, and yielded up the ghost, and was gathered unto his people'; the order, 'when Jacob had made an end of commanding his sons,' that he died with his work done, his blessing given and his charge laid, nothing left undone; the calm, 'he gathered up his feet into the bed,' that, having sat up to bless his sons, he composedly drew up his feet and lay down, as one ready and willing to die; the gentle passing, 'and yielded up the ghost,' that he gave up his spirit peacefully into the hand of God, no struggle, the death of the righteous; the comfort, 'and was gathered unto his people,' that, as his soul departed, he was gathered to the company of the faithful gone before, the language of immortality and of faith; the blessed end of a long pilgrimage, the patriarch entering into rest)."
+    "summary": "Ellicott finds the poetry in the word for strength, which means that which goes on for ever, like the flowing streams or the eternal hills, so that for all his enemies' machinations Joseph's bow remained constant; and the difficult verb that follows more probably means were pliant, supple, such as an archer's arms ought to be. The Jewish commentators, he reports, understand from thence of Joseph, who had become Israel's ruler and protector; but it answers in the parallelism to from the hands of, so the sense is, from thence where the Shepherd dwells — Joseph's triumph came from God, who is the Shepherd and Rock of Israel. He doubts the received reading of the comparison itself: as it stands it makes Jacob's blessings on Joseph greater than those he had received from his ancestors, which was scarcely the case, since the chief spiritual blessing was bestowed on Judah while for Joseph there was only earthly prosperity; most modern commentators therefore adopt the Samaritan Pentateuch, with the Samaritan Targum and the Septuagint — the blessings of thy father are mightier than the blessings of the ancient mountains, than the desire of the everlasting hills. On the last word he recovers the sense of consecration: it means set apart, whence the Vulgate renders Nazarite, the Syriac and Samaritan Targum, him that is the crown of his brethren, and the Septuagint, him who was their leader. Keil marks a change in the grammar here, the blessing passing from description into desire, the from of the previous clause still retained, and the words may he help thee and may he bless thee standing as parentheses."
    }
   ],
   "debates": [
    {
-    "question": "What does 'gathered unto his people' signify?",
-    "sides": [
+    "question": "What does from thence refer to?",
+    "positions": [
      {
-      "position": "The language of immortality and faith — that as his soul departed, Jacob was gathered to the company of the faithful gone before; not mere burial but the going home of the spirit, the death of the righteous entering into rest",
+      "position": "to God — it answers in the parallelism to from the hands of, so the sense is, from thence where the Shepherd dwells",
       "holders": [
-       "Gill",
-       "Matthew Henry",
-       "the witnesses"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "to Joseph, who from this strange method of providence became the shepherd and stone of Israel",
+      "holders": [
+       "Wesley"
       ]
      }
     ]
@@ -1212,23 +1059,184 @@
   ],
   "outliers": [],
   "themes": [
-   "he gathered up his feet into the bed, and yielded up the ghost",
-   "and was gathered unto his people",
-   "Jacob's calm and faithful death, his work done",
-   "the death of the righteous, the language of immortality and faith, entering into rest"
+   "from thence is the shepherd, the stone of Israel",
+   "blessings of heaven above, blessings of the deep that lieth under",
+   "they shall be on the head of Joseph"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  }
+ },
+ "27": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "range": "27-28",
+  "pericope_label": "Benjamin the ravening wolf, and the twelve tribes blessed",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reports that all three Targums apply the wolf to the priests offering the daily sacrifice in the temple, which stood in Benjamin's lot; but he takes it of the tribe itself, compared to a wolf for its fortitude and valour as well as its rapaciousness — wolves, devoted to Mars, being called martial wolves by Virgil and Horace. His instance is the war this tribe waged with all the others, in which with twenty-six thousand men it beat four hundred thousand; and the rapaciousness by the remnant, after a third battle, carrying away the daughters of Shiloh. He observes on the summing up that there were indeed thirteen tribes, two springing from Joseph, but that Levi had no part in Canaan, which was divided into twelve parts — which shows that the predictions respect not the patriarchs' persons but their tribes. Calvin runs through the readings of the wolf and rejects most: some Jews think the Benjamites condemned here, having been almost destroyed for defiling the Levite's wife; others make it an encomium adorning Saul or Mordecai; and the interpreters of our own age most inaptly apply it to the apostle Paul, changed from a wolf into a preacher of the Gospel. Nothing seems to Calvin more probable than that the habits of the whole tribe are delineated, namely that they would live by plunder. He owns the difficulty of calling the harder oracles blessings — in deposing Reuben Jacob pronounced nothing joyous respecting him, and declared his abhorrence of Simeon and Levi — and reconciles it so: the temporal punishments with which he paternally corrected his sons would not subvert the covenant of grace on which the benediction was founded, but rather, by obliterating their stains, restore them to the honour from which they had fallen. Hence diseases, poverty, famine and even death itself, so far as they promote our salvation, may deservedly be reckoned blessings, as if their very nature were changed."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says that though Reuben, Simeon and Levi were put under the marks of their father's displeasure, yet he is said to bless them every one according to his blessing, for none was rejected as Esau was; and whatever rebukes we are under, as long as we have an interest in God's covenant, a name among his people, and good hopes of a share in the heavenly Canaan, we must account ourselves blessed. He closes on the words with which the charge opens: see how Jacob speaks of death now that he is dying — I am to be gathered unto my people; it is good to represent death under the most desirable images, that its terror may be taken off, for though it separates us from our children in this world, it gathers us to our fathers in the other."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley marks what the figure proves: Jacob was plainly guided by a spirit of prophecy and not by natural affection, else he would have spoken with more tenderness of his beloved Benjamin, of whom he only foretells that his posterity should be a warlike tribe, strong and daring, enriching themselves with the spoil of their enemies. Clarke sums the chapter in a sentence: guided by the unerring Spirit of prophecy, Jacob foretold to each son the important events of their successive generations and the predominant characteristic of each tribe, while making some obscure references to the advent of the Messiah."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott says the character of the race agrees with the description of their ancestor, Benjamin being the most spirited and warlike of the tribes. Keil finds the same thought in the concluding words, that in his twelve sons Jacob blessed the future tribes, each with his appropriate blessing, since even Reuben, Simeon and Levi, put down through their own fault, received a share in it."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the wolf meant of particular Benjamites or of the tribe?",
+    "positions": [
+     {
+      "position": "of the whole tribe and its habits, namely that they would live by plunder",
+      "holders": [
+       "Calvin",
+       "Gill"
+      ]
+     },
+     {
+      "position": "of Saul or Mordecai, or even of the apostle Paul — readings Calvin calls most inapt",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "Benjamin shall ravin as a wolf",
+   "in the morning he shall devour the prey",
+   "every one according to his blessing he blessed them"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
+  }
+ },
+ "29": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "29-33",
+  "pericope_label": "The charge to bury him at Machpelah, and the death of Jacob",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the charge given to Joseph is here renewed and laid on all his sons, who were every one to go with him to bury Jacob in Canaan, and describes the dying: he gathered up his feet into the bed on which he had sat while blessing his sons and composed himself in a posture to die — though what authority the Targums had for calling the bed one of gold he does not know — and expired without pain, in the hundred and forty-seventh year of his age. Calvin says Moses repeats the charge so that they might go with one consent and assist each other in the office, and states carefully why Jacob made such a point of his sepulture, lest the example be drawn into a precedent for superstition. He did not wish to be carried into Canaan as if he would be the nearer heaven for being buried there, but that, being dead, he might claim a land he had held in life only by a precarious tenure — not that any advantage would accrue to him privately, having already fulfilled his course, but that the promise might be kept in memory among his surviving sons. Meanwhile we gather that his mind did not cleave to the earth, since unless he had been an heir of heaven he would never have hoped that God, for a dead man's sake, would prove so bountiful to his children. Calvin makes the death itself a portrait of a placid one: Moses wished to show how the aged saint gave directions about the disposal of his body as easily as healthy men compose themselves to sleep; and a wonderful presence of mind was necessary when, death being in his countenance, he courageously fulfilled the prophetic office enjoined upon him. It is the effect of a good conscience, he adds, to depart the world without terror; and that it may lead us quietly to the grave we must rely on the resurrection of Christ, since we go willingly to God only when we have confidence respecting a better life."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the cave at Machpelah was a burying-place for Hebrews of distinction, indeed the first public burying-place mentioned in history, Abraham, Sarah, Isaac, Rebekah and Leah lying there already; and he presses the closing phrase into an argument. The testimony this place bears to the immortality of the soul, and to its existence apart from the body, should not be lightly regarded: in the moment Jacob gathered up his feet and expired, it is added that he was gathered unto his people; yet his body was not gathered to them till seven weeks after, and a circumstance so distant would not likely be anticipated among the facts of that moment. He thinks it very probable that while delivering these blessings Jacob sat on the side of his bed leaning upon his staff, and having finished lifted up his feet into it, stretched himself, and expired. Wesley draws the comfort out of the same words: though death separate us from our children here, it gathers us to our fathers in the other world; and perhaps Jacob uses it as a reason why his sons should bury him in Canaan."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the detail of the feet for a mark of time, indicating that the events of the two chapters took place together, since Jacob had strengthened himself for the final effort by seating himself on the bed with his feet on the ground; and now that all was over, wearied with what must have sorely exercised both his feelings and his powers, he gathered himself upon it. Keil finds the manner of it in the verb, used instead of the ordinary word for dying, which shows the patriarch departed this earthly life without a struggle."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "bury me with my fathers in the cave that is in the field of Ephron",
+   "there they buried Abraham and Sarah his wife",
+   "he gathered up his feet into the bed, and yielded up the ghost"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  }
 }
