@@ -6264,6 +6264,47 @@
         "12"
       ],
       "note": "Second near-miss of the same kind as note 556, caught earlier and by a different check. The first draft of the 12-19 entry contained no Gill at all, though Gill has prose at every one of those eight verses; the omission was not the result of trimming this time but of drafting from the four voices that carry the disputes and never returning for the plain expositor. It was caught by the voice profile run before sizing, not by the ghost script, which would have flagged it later as a missing voice and an exclusion. The fix restored Gill at three points — the widow's weed at verse 14, Tamar sitting some little distance from the road at verse 16, and Judah sending his friend on ahead — and paid for them by dropping whole items elsewhere. The lesson to add to note 556: the ghost script is the last check, not the first. Run the voice profile against the span before drafting and keep the list of present voices beside the draft, because a voice never written is as invisible as a voice trimmed away."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "35",
+      "verses": [
+        "19",
+        "25"
+      ],
+      "note": "JFB donor residue at stride 6, the nineteenth consecutive chapter to carry it and the fifth in this run. The Jamieson, Fausset and Brown blocks at verses 19 and 25 are both Genesis 30-31 matter, and belong to the story of Jacob's wages: verse 19 carries the exposition of Laban's reluctance to let Jacob go, and verse 25 the arrangement about the speckled and spotted cattle and Jacob's skill in breeding. Neither touches Rachel's burial or the sons of Bilhah. The two positions are exactly six apart, the same stride recorded for genesis 31, genesis 38, exodus 6, exodus 22, leviticus 6, numbers 14 and acts 27; and the donor material is again drawn from a neighbouring chapter of the same book rather than at random, which is now the settled shape of the fault. Both verses were excluded and appear in excluded_voices at entries 16 and 23."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "35",
+      "verses": [
+        "29"
+      ],
+      "note": "StudyLight chrome tail on the chapter's last verse, now eight for eight across eight books and both testaments (exodus 14:31, genesis 31:54, leviticus 6:30, numbers 14:45, acts 27:44, exodus 22:31, genesis 38:30, and here). The Ellicott block at verse 29 gives two usable sentences on Esau's precedence and his migration to Seir and then runs straight into the site's footer, stylesheet and navigation menus; Gill's block at the same verse ends with a bare 'Next:'. Eight for eight on the terminal verse of a chapter is not a coincidence of harvesting but a boundary condition in the fetcher, and should be fixed there rather than stripped chapter by chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "35",
+      "verses": [
+        "2",
+        "10",
+        "17",
+        "23"
+      ],
+      "note": "Keil and Delitzsch appears in four blocks of this chapter that contain no commentary at all. At verses 2, 10, 17 and 23 the harvested block is the bare text of the verses that follow, sometimes running six or eight verses ahead and breaking off in mid-sentence, with the actual exposition attaching to a later key. The effect is that Keil is present by name in the source at verse 2 but has nothing whatever to say there, so the 1-2 entry had to exclude him — the only exclusion in this chapter not caused by donor residue. Where his exposition does exist it is filed one or two verses after the matter it treats (the Migdal Eder note under verse 17, the arrival at Mamre under verse 23), which forces material across span boundaries. This looks like a paragraph-splitting fault in the Keil harvest rather than a fault in the source text, and it is worth checking whether other Keil chapters carry the same empty leading blocks."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "35",
+      "note": "The trim burden recorded in note 557 did not improve and is now the dominant cost of a chapter. Across the thirteen entries of genesis 38 and genesis 35 the first draft averaged about 40 per cent over the 650-word ceiling, the worst single case being 1282 words for an entry that had to land at 635, and every entry needed between six and eleven trimming passes. The cause is visible in the source profile rather than in the writing: both chapters run five to seven voices at nearly every verse, and a span of three or four such verses offers twenty to thirty distinct items where the entry has room for ten or twelve. Drafting to a 700-word target does not help when the selection is made while writing rather than before it. What did work, in the later entries, was listing the items first and striking two-thirds of them before a sentence was written; what did not work was shaving clauses, which reliably returned five to nine words a pass. The discipline to carry forward is to fix the item list before drafting, and to treat any first draft over 800 words as a selection failure to be re-selected rather than trimmed."
     }
   ]
 }
