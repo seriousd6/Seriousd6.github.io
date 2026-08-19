@@ -5821,6 +5821,41 @@
         "54"
       ],
       "note": "Chrome tails again, in the now-familiar StudyLight and sacred-texts forms: Ellicott's v30 block runs out into navigation markup, a copyright notice and a full inline stylesheet, and Gill's v30 block ends in sacred-texts navigation. Same defect as exodus 14 v31 (note 504) and genesis 31 v54 (note 517), and the effect on sizing is the same — leviticus 6 measured 21,696 usable source words, and the real drafting load was lower. Three chapters running now, in three different books, have carried the identical StudyLight tail on the LAST verse of the chapter, which suggests the harvest appends it at chapter boundaries rather than at random; a size estimate could be improved cheaply by discounting the final key."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "9",
+      "verses": [
+        "13",
+        "17",
+        "24"
+      ],
+      "note": "NEW DEFECT CLASS: editorial apparatus scraped in under a commentator's name. Three of Theodoret of Cyrrhus's six blocks in this chapter are not his text at all but the modern editor's footnotes. v13 is a quotation from Chrysostom's homily on Romans 5 about death entering by one man's sin, with the attribution 'Chrysostom. Hom. in loco' printed inside it. v17 is a string of Greek cross-references to Eusebius, a psalm and a sermon, signed at the end '-E. B.'. v24 is an editorial gloss beginning 'Our author of course is, with St. Paul, reprobating works as a meritorious cause', which speaks OF Theodoret in the third person. Genuine Theodoret commentary appears at v1-v5 only. This is distinct from every defect recorded so far: it is not residue from a neighbouring passage, not a truncation, and not a mis-keyed block, but the critical apparatus of the printed edition ingested as if it were commentary. Handled here with SILENT_BY_ENTRY at keys 10, 17 and 22. Worth checking the whole Theodoret tree for footnote text: the '-E. B.' signature and third-person references to 'our author' are cheap greps."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "9",
+      "verses": [
+        "4",
+        "22",
+        "28"
+      ],
+      "note": "Jamieson stride-6, FIFTH consecutive chapter. Keys here are 4, 22, 28: offset 4, stride 6, with gaps where members 10 and 16 would have fallen. Every block is foreign matter from Acts 10-12 (v4 on Cornelius and the first Gentile admissions, v22 on the earnest prayer of the church in Mary's house, v28 on the angel and the tunic). Running tally of the pattern: joshua 10 keys 1,7,13,19,25,37,43 (offset 1, gap at 31); 1corinthians 7 keys 5,11,17,23,29,35 (offset 5, no gaps); hebrews 11 keys 3,9,15,27,33 (offset 3, gap at 21); romans 8 keys 2,8,14,20,26,32,38 (offset 2, no gaps); romans 9 keys 4,22,28 (offset 4, gaps at 10 and 16). The offset is arbitrary per chapter and the stride never varies. romans 8 and romans 9 are ADJACENT chapters with different offsets and the same stride, which rules out any explanation tied to book or run position and points squarely at a per-chapter off-by-N in whatever paginated the Jamieson fetch. Five chapters is enough evidence; this wants an owner decision on re-fetching the Jamieson tree rather than continuing to declare him residue chapter by chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "9",
+      "verses": [
+        "7",
+        "26"
+      ],
+      "note": "Cyril of Jerusalem mixed on-topic and residue for the THIRD consecutive chapter (hebrews 11, romans 8, romans 9). Here he has two blocks, both capped at the 200-word ceiling. v7 is usable and was named: the catechetical passage on Abraham justified by faith, his body already dead in regard to offspring and Sarah old, heeding not the weakness of his body but the power of him who promised. This is word for word the same 200 words already seen in hebrews 11 -- the same catechesis is being served to more than one verse key, so an apparently new voice at a key may be a block already used elsewhere. v26 is pure residue: the Pentecost lecture on the third hour and the pouring out of the Spirit from Joel, keyed presumably by the words 'it shall come to pass'. Confirms again that Cyril's residue must be declared per entry rather than per voice per chapter. Note also that this chapter could not have named him in excluded_voices even if wanted: the VOICE_LABELS bug means split_voices() never matches 'Cyril of Jerusalem:' because the bare string 'Cyril' precedes the long form, so SILENT_BY_ENTRY was used instead. Sixth chapter bitten by that bug."
     }
   ]
 }
