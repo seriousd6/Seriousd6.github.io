@@ -7962,6 +7962,81 @@
       "book": "1corinthians",
       "chapter": "10",
       "note": "Fidelity self-grade, 1corinthians 10, 10 entries, 33 verses, 12 voices, 59,774 usable source words with no chrome tail. Source keys 1-33 with no gaps, so the spans follow the pericopes rather than the source. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-2 640 · 3-4 650 · 5-7 650 · 8-10 649 · 11-13 634 · 14-16 648 · 17-20 649 · 21-24 650 · 25-28 649 · 29-33 649. Exclusions: Jamieson at the five stride-6 keys (foreign Acts 21 content); Lightfoot at key 11 only, as his note on 10:16 misfiled (his six other blocks were used); Cyril of Jerusalem at keys 21 and 27 only, as misplaced material, his on-topic block at 10:4 being used — both Cyril drops forced through SILENT_BY_ENTRY by the VOICE_LABELS defect. One care taken throughout: Clarke quotes Lightfoot by name at 10:11 on the ends of the ages, and because Lightfoot is himself a catena voice excluded at that key, the parallel was attributed to Clarke reporting another writer rather than to Lightfoot, so no attribution is claimed from a block the entry does not use. School keys in the tags were reconciled against the voices actually named in each entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "9",
+      "verses": [
+        "11",
+        "17"
+      ],
+      "note": "Jamieson, Fausset and Brown residue, TWENTY-THIRD chapter and the second in Joshua after joshua 24. Only two blocks here and both foreign: key 11 is a bare cross-reference to Joshua 20:7 with no content at all (five words), and key 17 reads 'This is a preface to the rehearsal of the law, which, with the addition of various explanatory circumstances, the following chapters contain' — a note on Deuteronomy 1, not on Joshua 9:17. This matches the joshua 24 finding, where all three Jamieson blocks were Deuteronomy 18-19 material, and adds Deuteronomy 1 to the running donor list (Gen 15, 24, 26, 36, 37; Lev 11, 26; Deut 1, 4, 16-17, 18-19, 20-21, 28; Exod 8-9; Num 11-12; 1 Chr 3-4; Acts 21; John 8-9, 14-15; 2 Cor 10-12). Both excluded. Note that the stride-6 signature does NOT appear here — with only two blocks in the chapter there is nothing for it to show — so this is the low-density form of the same defect."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "9",
+      "verses": [
+        "23"
+      ],
+      "note": "StudyLight chrome, NINTH confirmation and SIXTH consecutive chapter with Charles Ellicott as carrier (romans 3:31, acts 5:42, hebrews 9:28, acts 13:52, hebrews 10:39, joshua 9:23). Payload exactly 992 words, identical in size to hebrews 10:39, beginning at the marker 'Joshua Jos 8 Joshua Jos'. IMPORTANT REFINEMENT: this is the first instance where the chrome does NOT land on the last verse of the chapter. Ellicott's last block in joshua 9 is at v23, and he has no blocks at 24-27; the chrome attaches there. So the rule is that the tail attaches to the LAST BLOCK OF THE CARRIER COMMENTATOR, not to the last key of the chapter. Any de-chroming pass must therefore scan every commentator's final block, not just the chapter's final key. Real usable source for this chapter is about 18,799 words, not the 19,791 the sizer reports; Ellicott's genuine payload at v23 is 144 words."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "9",
+      "note": "The 200-word truncation cap appears on a FOURTH commentator. Keil and Delitzsch has 14 blocks in joshua 9 and THIRTEEN of them are exactly 200 words, each cut mid-sentence (keys 1, 2, 4, 7, 9, 12, 15, 16, 17, 19, 22, 23, 25; only the final block at key 27, which is 36 words, escapes). Together with John Gill (hebrews 9, 1corinthians 10), John Lightfoot (1corinthians 10) and the earlier instances, this settles the question recorded at 1corinthians 10: the cap is applied per block by the scrape and is not a property of any one commentator. Keil is the worst-hit case seen so far, at 13 of 14. Because Keil is the only commentator supplying continuous exegetical narrative in this chapter, the loss is material — his notes on the four towns, on the terms of the league and on the dating of the account are all cut off at the cap. Owner item: a re-fetch would recover substantial text across the whole corpus."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "14",
+        "16",
+        "19"
+      ],
+      "note": "The binding force of an oath obtained by fraud is the spine of this chapter and the commentators divide sharply. Calvin argues twice over that the compact was NULL IN STRICT LAW: Joshua bargained with masks and contracted no obligation except according to the words used, and since the terms only covered a people from a remote region, and Israel had expressly excluded the inhabitants of the land, nothing could be gained by the fraud. Yet at v16 he poses two formal questions — whether men who never meant to pledge faith to impostors contracted any obligation, and whether the people might rescind what their leaders foolishly promised — and answers that the obligation of an oath must be held in the greatest sacredness, so that we may not resile on the plea of error even from pacts in which we were deceived, God's name being more precious than the wealth of a whole world. The block carries an EDITORIAL NOTE marking the appearance of inconsistency between these two positions and quoting both in Latin and French. Against this, Clarke concedes the engagement was 'vitiated and rendered null and void' on the part of the deceived and still holds the swearing by the divine name binding as to life, arguing from Joshua never being reprehended and from Saul's later punishment; Ellicott says flatly that a covenant made in the name of the Lord is his and cannot be broken however obtained, and remarks pointedly that the law raised the tone of morality here above that of many Christians, who would not hesitate to repudiate an agreement concluded under false pretences; Keil denies any express command was broken since the law forbade treaties with Canaanites, which these were not supposed to be; and Wesley gives three independent reasons for the league's validity, the third being that God is said to have hardened the other cities against seeking peace, which implies their destruction followed their own obstinacy rather than a peremptory command."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "9",
+      "verses": [
+        "3",
+        "14",
+        "23",
+        "27"
+      ],
+      "note": "Three further splits. (1) Whether Gibeon was a royal city (9:3): Keil counts it among them, while Gill and Henry both observe that no king of Gibeon is ever named and infer a government of elders, Henry adding that a single ruler's heart would have been too high to yield; Gill nevertheless reports an Arabic writer according to whom the king of Gibeon wrote to Joshua with large gifts and was set again on his throne. (2) What the princes did with the victuals (9:14) is read FOUR ways: Gill has them handle and inspect the bread and cites rabbinic authorities for whom its dryness was the convincing evidence; Clarke supposes a meal of friendship, eating together being in those countries a token of unalterable friendship so that men who have shared even salt reckon themselves in perpetual covenant; Ellicott changes the subject of the clause, following the margin and the Aramaic, so that the princes accepted THE MEN on the strength of their provisions; and Calvin dismisses both tasting and covenant feast as 'insipid fictions' in favour of an indirect censure of credulity. Clarke, though preferring the meal, says the marginal reading should not be hastily rejected. (3) Whether the Gibeonites are the Nethinim (9:23, 9:27): Wesley identifies them outright and derives the name from their being given to the sanctuary, Gill reports the same derivation and Ellicott supports it from the lists of returned captives, where the Nethinim follow the Levites, singers and porters and the children of Solomon's servants are coupled with them; but Clarke denies any decisive proof, holds the Nethinim were probably slaves of a different race, and thinks the Gibeonites were nearly annihilated by Saul's persecution."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "9",
+      "verses": [
+        "3",
+        "14",
+        "20",
+        "22",
+        "23"
+      ],
+      "note": "Five remarks worth keeping from this chapter. (a) Ellicott at 9:3 sees the deception as a curious compensation for Shechem: there a stratagem destroyed a single Hivite city at Israel's hands, here a stratagem saves four Hivite cities from Israel's sword. (b) Calvin at 9:14 supplies the geography that makes the credulity indefensible, the Gibeonite capital standing some fourteen miles from Jericho and half that from Ai, where Israel had lately been fighting; Clarke independently gives eight leagues from the camp. (c) Calvin at 9:20 holds that the covenant was ratified only in part, since men entitled to perfect security were instead deprived of a liberty dearer than life, and calls the arrangement a middle course devised in perplexity chiefly to appease the multitude. (d) Henry at 9:22 draws from the mildness of Joshua's reproof the rule that under the greatest provocation it is our wisdom and duty to keep our temper, since a just cause needs no anger to defend it and a bad one is never the better for it. (e) Two large historical claims stand side by side at 9:23: Clarke supposes God's purpose towards all the Canaanite nations was extirpation for those who kept their idolatry and tributary slavery for those who renounced it, and Ellicott infers from the survival of so large a body of Canaanites under Solomon that the sentence on the seven nations was clearly not executed on the mass of the non-resisting population. Against both, Gill alone turns the curse into a blessing, since the mean office gave the Gibeonites a place in the sanctuary and the chance of learning the true worship of God, making them an emblem and pledge of the reception of the Gentiles into the church."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "9",
+      "note": "Fidelity self-grade, joshua 9, 6 entries, 27 verses, 8 voices, ~18,799 usable source words after 992 of chrome. Source keys 1-27 with no gaps, so the spans follow the pericopes. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-3 648 · 4-9 649 · 10-15 642 · 16-19 648 · 20-22 620 · 23-27 648. Exclusions: Jamieson, Fausset and Brown at both its keys (11 and 17), as a contentless cross-reference and a Deuteronomy 1 note respectively. Two cares taken. First, Keil's 13 capped blocks were used only for what survives above the 200-word cut, and no sentence was completed on his behalf. Second, Matthew Henry's block at key 22 runs on into his exposition of the Gibeonites' excuse at v24; because key 22 falls in the span 20-22, that material was attributed to Henry there rather than in the 23-27 entry, where he has no block at all — so the excuse appears in the earlier entry, out of verse order but correctly sourced. School keys in the tags were reconciled against the voices actually named in each entry."
     }
   ]
 }
