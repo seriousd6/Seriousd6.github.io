@@ -7261,6 +7261,61 @@
         "4"
       ],
       "note": "Editorial interpolation inside Calvin's blocks — a class not previously recorded, and a real fidelity hazard. At v1 Calvin's sentence 'The ark is said to have been stationed at Shiloh,' is interrupted mid-clause by a long gazetteer note in a different voice ('This place, which afterwards became so celebrated ... corresponds with a place now called Seilun, which is situated about twenty miles N.N.E. from Jerusalem ...'), after which Calvin's own sentence resumes at 'not only that the consultation might be graver'. At v4 the same thing happens: after Calvin's argument about the surveyors' danger comes a paragraph beginning 'These observations are made on the understanding that the survey made on this occasion was very minute ... It may be suggested, however, that the object of the surveyors was only to obtain such a general measurement', which argues AGAINST Calvin and is plainly the translator's or editor's footnote pulled inline. Both were left unused. Anyone drafting from a Calvin block should watch for a passage that comments on Calvin in the third person or that supplies modern topographical identifications — attributing either to Calvin would be a fidelity error that the audit's groundability check would not catch, since the text is genuinely present in the source file."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35",
+        "41"
+      ],
+      "note": "Jamieson stride-6 misalignment, EIGHTEENTH consecutive chapter. Keys 5, 11, 17, 23, 29, 35, 41 - stride 6 from offset 5, SEVEN members, NO gap. Longest clean run yet. Sixth chapter showing the contiguous-region signature and by far the strongest instance: all seven blocks come from John 8 running into the opening of John 9 (through 9:8), in narrative order. Combined with the seventeen prior chapters this is as far as diagnosis can go without a re-fetch of the Jamieson tree; the pattern is a systematic offset in the scrape, not per-chapter noise. All seven blocks declared excluded_voices=['Jamieson']."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "5",
+      "verses": [
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "40"
+      ],
+      "note": "Cyril of Jerusalem: two separate defects. (a) vv12-16 carry the SAME 139-word block verbatim at all five keys - a fivefold duplication. The block is apt to the passage, so it is used once (at 12-16) and not repeated. (b) His block at 5:40 is a catechetical lecture on baptism as a twofold purification of body and soul, with nothing to do with the beating or the release; it had to be dropped. Because scripts/synthesis_qa.py VOICE_LABELS holds the bare token 'Cyril' and _LABEL_RE demands a colon immediately after the label, the catena head 'Cyril of Jerusalem:' matches nothing, so this voice is UNDECLARABLE via excluded_voices and can only be silenced through SILENT_BY_ENTRY. Third confirmed undeclarable voice (with Theodoret of Cyrrhus and any multi-word head whose first token is in the list). Owner decision on the VOICE_LABELS regex is now well overdue."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "5",
+      "note": "John Lightfoot is CLEAN throughout acts 5 - all nine of his blocks are properly placed and on-passage. This is a useful negative control against romans 3 (5:1 block = vv10-19 plus OCR garbage; 3:19 block = Romans 8:19-22, wrong chapter) and acts 22. Lightfoot chapter-component loss is therefore intermittent rather than systematic, unlike the Jamieson stride-6 offset."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "5",
+      "verses": [
+        "42"
+      ],
+      "note": "Scraped StudyLight chrome: 984 words of site navigation/boilerplate at the tail of Ellicott's LAST block in the chapter (5:42). Identical 984-word payload to the one at romans 3:31, also Ellicott's last block. Fifth confirmation of the attachment model: chrome attaches to the voice's last block, not to the chapter's last verse. Usable source words for this chapter are ~67,755, not the 68,739 reported by the sizer."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "5",
+      "note": "Fidelity self-grade, all 10 entries, every verse covered and every claim traced to a named block. Word counts: 1-2 650, 3-6 650, 7-11 646, 12-16 649, 17-21 631, 22-26 616, 27-32 638, 33-35 637, 36-39 647, 40-42 649. Tiling 1-42 exact, no gaps or overlaps. 42 verses, 12 voices, 10 entries. Three GHOST repairs during the build (Wesley at 17-21, Henry and Wesley at 33-35, Wesley at 40-42) - each fixed by naming the voice in the prose from its actual block and cutting equivalent words elsewhere, not by removing the school summary."
     }
   ]
 }
