@@ -6,154 +6,82 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The law had 'a shadow of good things to come' (skian, a faint outline foreshadowing Christ's blessings) 'and not the very image' (eikon, the solid substance; Christ the image of God, Col 2:17); so its sacrifices 'offered year by year' could never 'make the comers perfect' (cleanse the conscience); the shadow cannot do the work of the substance, its repetition betraying its weakness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a shadow of good things to come",
-   "not the very image",
-   "cannot make perfect",
-   "shadow vs substance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The argument from repetition — had the sacrifices truly perfected, 'would they not have ceased to be offered?' (a final cleansing ending the need); the test 'the worshippers once purged should have had no more conscience of sins' (no lingering guilt); their endless repeating the very confession of failure, a standing testimony to imperfection (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "would they not have ceased?",
-   "no more conscience of sins",
-   "repetition proves insufficiency",
-   "the cleansed conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The yearly sacrifice (the day of atonement) made 'a remembrance' (anamnesis, a reminder) of sins year by year — far from removing sin, a renewed confession that it stood unremoved (the high priest's threefold acknowledgment, Ellicott); the opposite of true atonement, which puts sin out of remembrance (v17); a clear proof guilt was not purged (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a remembrance of sins",
-   "every year",
-   "the annual reminder",
-   "guilt not removed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "1-4",
+  "pericope_label": "The law a shadow, and the yearly sacrifices that could not take away sins",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill restricts the shadow to the ceremonial law and notes the versions that drop the negative in the second verse. Calvin distinguishes this shadow from the one in Colossians, making it the painter's outline before the colours rather than a mere absence of substance; he defines the remembrance as the kind that requires a sacrifice, turns the argument from repetition against the daily offering of the mass, and supplies the unspoken contrast by which Christ's offering is not to be measured against the blood of beasts."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry asks who would dote upon a shadow, however good the things it shadows, once the substance has come."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that no Jew pretended the yearly atonement cancelled sin before God, yet kept offering because the law required it and the sacrifices pointed forward, and holds that common sense must have taught them the blood of beasts could not satisfy. Wesley calls the yearly rite a commemoration of all past sins and draws the sharpest inference in the passage, that no one may take David's attainments for the measure of gospel holiness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The decisive reason — 'it is not possible' (utterly, not merely insufficient) that the blood of bulls and goats 'take away sins' (aphairein); common sense itself showing animal blood could not satisfy justice or cleanse the conscience (Clarke); yet the offerings divinely appointed and necessary in their season, pointing beyond themselves — a symbol and pledge of the real cleansing in Christ (Calvin)."
+    "summary": "Robertson contrasts a shade cast by interrupted light with a painted likeness and reads the verse alongside Colossians. Ellicott finds the antithesis surprising and explains why the law could not have the things themselves, corrects 'conscience' to 'consciousness', and supplies the high priest's threefold confession of sin. Barnes compares the repeated offerings to a medicine that must be insufficient if the disease remains, and denies that an animal's blood could repair the law or purify the heart."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril quotes the passage about the greater tabernacle and the eternal redemption obtained by Christ's own blood, using it to seal the cry that it is finished and sins are forgiven."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the shadow is contrasted with: the body or substance, as in Colossians (Robertson), or the finished picture whose outline it is, a figure drawn from painting and expressly distinguished from Colossians (Calvin)",
+   "Why the contrast is with 'the very image' rather than with the things themselves, Ellicott arguing that the law could not have possessed the good things at all, though a perfect image might have carried equal efficacy"
+  ],
+  "outliers": [
+   "Calvin turns the writer's own argument from repetition against the daily sacrifice of the mass, since a sacrifice needing daily repetition to apply its virtue would be weak by the same reasoning",
+   "Wesley infers that the holiness attainable under the shadow cannot be the measure of Christian experience, and denies that gospel attainment is to rise no higher than David's"
+  ],
   "themes": [
-   "it is not possible",
-   "blood of bulls and goats",
-   "cannot take away sins",
-   "the hinge of the argument"
+   "shadow and image",
+   "ceremonial law",
+   "repetition",
+   "consciousness of sin",
+   "blood of beasts"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "5": {
@@ -166,83 +94,64 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "5-6",
+  "pericope_label": "A body hast thou prepared me: the psalm that sets sacrifice aside",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill denies that the psalm can be David's words about himself, since sacrifice was still required in his day, he could not fulfil the law and never engaged as surety, and clears away three wrong senses of the coming into the world. Calvin takes the contrary ground that the psalm accords with David throughout and is transferred to Christ because David was a type, meeting the objection from the confession of iniquity by Christ's bearing of his members' sins."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets the Greek and Hebrew side by side and renders the Hebrew 'my ears hast thou bored', the mark of a servant made his master's for ever, and ties the prepared body to the conception and the promise about the seed of the woman; he refuses Barnes's concession, holding that God could never be pleased with the legal victims at all. Wesley observes that the coming is into the world and not into the tabernacle, because the whole world has an interest in the sacrifice."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ at his Incarnation ('when he cometh into the world') quoting Ps 40:6-8 — 'Sacrifice and offering thou wouldest not' (God never willed the legal sacrifices to atone) 'but a body hast thou prepared me' (a human body to be offered); the Hebrew reads 'ears hast thou digged,' the LXX (followed here) 'a body' — the opened ear of obedience and the prepared body both pointing to Christ's willing self-offering."
+    "summary": "Barnes reports the question whether the words belong to the birth or the ministry and leaves it open, and reads the want of pleasure comparatively, allowing that offerings made with a pure heart pleased God. Robertson defends the Greek reading as leaving the psalm's sense intact, the ears being the point of contact with God's will. Ellicott judges the version faithful but for one clause, dates the psalm to David, and corrects the rendering to whole burnt offerings."
    }
   ],
   "debates": [
-   {
-    "question": "Why does the text read 'a body' where the Hebrew Psalm has 'ears'?",
-    "sides": [
-     {
-      "position": "the writer follows the LXX; the sense is consonant — the opened ear of obedience and the prepared body of the obedient Servant both point to Christ's willing self-offering",
-      "holders": [
-       "Robertson",
-       "most"
-      ]
-     }
-    ]
-   }
+   "Whether the psalm speaks of David at all: Gill denies it on four grounds and refers it wholly to the coming Messiah, while Calvin and Ellicott keep it David's and transfer it to Christ by type",
+   "Whether God ever took pleasure in the legal offerings: Barnes allows that he did when they were made with a pure heart, the denial being comparative; Clarke denies it absolutely",
+   "Whether the Greek 'body' for the Hebrew 'ears' alters the sense, Robertson holding that it does not since the ears were the point of contact with God's will"
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke reads the Hebrew as 'my ears hast thou bored', the rite of the servant who refuses release and stays in his master's house for ever"
+  ],
   "themes": [
-   "when he cometh into the world",
-   "sacrifice thou wouldest not",
-   "a body hast thou prepared me",
-   "the incarnate offering"
+   "incarnation",
+   "Psalm 40",
+   "Septuagint",
+   "sacrifice",
+   "obedience"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The divine verdict on the whole range of sacrifices — the slain offering, meal-offering, 'whole burnt offerings' (the symbol of entire consecration), 'sacrifices for sin' — 'thou hast had no pleasure'; God finding no satisfaction in any as the ground of atonement (they could not satisfy his justice, Clarke), not valueless in their typical place but inadequate to remove sin; his pleasure lay in the obedience of his Son."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "burnt offerings and sacrifices for sin",
-   "thou hast had no pleasure",
-   "every legal offering",
-   "God's displeasure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
@@ -252,541 +161,252 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "7-10",
+  "pericope_label": "Lo, I come to do thy will: the first taken away, the second established",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill distinguishes three senses in which the offering was God's will, of purpose, of command and of good pleasure. Calvin reads the roll of the book as the catalogue of those called to obey, states positively that the removal of the sacrifices leaves God's will standing as a perfect rule, is careful that neither hypocrisy nor superstition is what the passage condemns, and extends the readiness to obey to all Christ's members while reserving the cross as a supereminent instance."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry grounds the argument in the purpose and promise of God recorded throughout the volume of the book, from the bruising of the serpent's head onward."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the roll with the Pentateuch, since nothing else had yet been written, and explains the word from the practice of writing on skins wound between rollers; he lists the alternatives for what is taken away and established, and draws the will of God out in order, from the incarnation to the believing of all who will. Wesley narrows the roll to the psalm in hand and states the result of the sanctifying in five words."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The climax — when the sacrifices could not please God, the Son says 'Lo, I come'; 'in the volume of the book' (the scroll/roll of Scripture) 'it is written of me' (his coming fulfilling the written word); 'to do thy will, O God' (genitive of purpose) — his obedient self-offering replacing the legal offerings; he comes to do God's will by the sacrifice of himself (Wesley)."
+    "summary": "Barnes insists that the sanctifying rests on the offering of the body rather than on obedience at large. Robertson explains the Greek for 'roll' and calls the verse the writer's own exposition of the psalm. Ellicott gives two renderings of the Hebrew, detects a deliberate change from 'the law' to 'law', and asks how the removal of sacrifice worked for the psalmist himself as well as for Christ."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom alone states the objection being answered, that types ought to have ceased once the truth came though the sacrifices went on, and shows the writer meeting it out of the prophets rather than out of the newer books."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What 'the volume of the book' denotes: the Pentateuch (Clarke), this psalm itself (Wesley), the older Scriptures as a whole (Robertson), or the roll in which the obedient are enrolled (Calvin)",
+   "What 'the first' and 'the second' are: animal sacrifice and the doing of God's will (Barnes, Robertson), or the two covenants and dispensations (the alternatives Clarke lists, preferring the plainer)"
+  ],
+  "outliers": [
+   "Ellicott insists that the removal of sacrifice must be explained for the psalmist as well as for Christ, and denies that David gave up offering, since his own confession of iniquity implied recourse to the appointed means",
+   "Calvin specifies what the passage does not condemn: neither hypocrisy nor a superstitious worship, but only the claim that the legal sacrifices are still required"
+  ],
   "themes": [
-   "'Lo, I come'",
-   "in the volume of the book",
-   "to do thy will",
-   "obedient self-offering"
+   "obedience",
+   "volume of the book",
+   "abrogation",
+   "offering of the body",
+   "sanctification"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The writer's exposition, first stage — recalling the Psalm's opening, 'Sacrifice and offering thou wouldest not,' with the pointed 'which are offered by the law' (Israel's own Scripture declaring God's dissatisfaction with the law's offerings); answering the objection why the types continued after the truth came (Chrysostom) — the Psalm foretold their setting aside; the negative side establishing that the old is removed."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sacrifice thou wouldest not",
-   "offered by the law",
-   "the old set aside",
-   "the Psalm's own witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The great conclusion — the Son's coming 'to do thy will' means 'he taketh away the first' (anairei, abolishes the legal sacrifices that could not please God) 'that he may establish the second' (the doing of God's will by the offering of Christ's body, once for all, Clarke); the Jews' own Scripture foretelling the abolition of their sacrificial system and its replacement by Christ's obedience (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Lo, I come to do thy will'",
-   "taketh away the first",
-   "establish the second",
-   "old abolished, new set up"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The saving result — 'by the which will' (God's will fulfilled in Christ's self-offering) 'we are sanctified' (hegiasmenoi, perfect, a settled state — cleansed from guilt and consecrated to God) 'through the offering of the body of Jesus Christ once for all' (the prepared body offered in obedient sacrifice, Phil 2:8, not repeated); the one effectual offering against the law's many ineffectual ones, the perfecting the law could not give."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by the which will we are sanctified",
-   "the offering of the body of Jesus",
-   "once for all",
-   "cleansed and consecrated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The standing priest vs the seated Christ — 'every priest standeth daily' (hesteken, the posture of a servant whose work is never done) 'offering oftentimes the same sacrifices' (endless sameness betraying nothing accomplished) 'which can never take away sins'; the perpetual standing and fruitless offering throwing into relief Christ's once-for-all completed offering; daily sacrificing wholly foreign to Christ's priesthood (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every priest standeth daily",
-   "the same sacrifices",
-   "can never take away sins",
-   "standing vs seated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "11-18",
+  "pericope_label": "The seated priest, the one offering, and the covenant that needs no more",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill draws from the bare preface to the citation a chain of doctrine about the Spirit's existence, deity, personality and authorship of Scripture. Calvin makes the daily sacrifice wholly foreign to Christ's priesthood, so that the Levitical priests fell when he was set up, and explains why the prophecy is quoted a second time to a different purpose than the first."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the gain of the new covenant in a sentence, that the old required repeated sacrifices and secured pardon only as to this world, while one sacrifice now procures for all nations and ages freedom from punishment in the world to come."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke opposes the standing servant to the seated Son and makes the whole argument turn on it, hears an oblique reference to the fall of Jerusalem, and reports the argument turned against the mass. Wesley calls the standing a servant's humble posture, joins 'for ever' to the offering, and treats the passage as the winding-up of the argument with the covenant now ratified."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The contrast crowned — 'but this man,' against the many standing priests, offered 'one sacrifice for sins' (mian, a single offering doing what the many could not) 'for ever' (avails perpetually), then 'sat down on the right hand of God' (the posture of completion and royal majesty, his atoning work done, as a Son not a labouring servant, Wesley); the seated Christ declaring the atonement finished and accepted."
+    "summary": "Barnes guards the detail that the priests served by courses, notes that the word 'man' is absent from the Greek, and compares a second sacrifice to paying a debt twice. Ellicott renders 'but He', shows the editions divided over the punctuation of 'for ever', catches the reversal by which the waiting is now Christ's, and says plainly that the Authorised version leaves the sense of the citation imperfect. Robertson marks the perfect tense of 'perfected' against the present of 'being sanctified'."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril gathers the testimonies to the Son's sitting at the right hand out of Matthew, Peter and Paul."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether 'for ever' belongs to the offering or to the sitting down, a punctuation on which Ellicott finds the English editions themselves divided and which Robertson leaves open",
+   "How far the writer means to quote Jeremiah exactly, Ellicott and Robertson agreeing that the substance and not the wording is intended, and Ellicott judging the Authorised rendering incomplete in consequence"
+  ],
+  "outliers": [
+   "Robertson marks the difference of tense between a perfecting already accomplished and a sanctifying still in progress, and offers two reasons for it",
+   "Ellicott notes that the marginal note supplying the missing words of the citation was added to the English Bible at a later date than the translation itself"
+  ],
   "themes": [
-   "one sacrifice for sins for ever",
-   "sat down",
-   "the right hand of God",
-   "the finished work"
+   "one sacrifice",
+   "session at the right hand",
+   "perfection",
+   "new covenant",
+   "remission"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The seated Christ 'henceforth expecting' (to loipon ekdechomenos, waiting in the calm assurance of certain victory, 1 Cor 15:25), his redemptive work complete; 'till his enemies be made his footstool' (Ps 110:1, the Messianic promise of reign until every foe is subdued, including all who oppose his priesthood, Clarke); the posture of expectation befitting the finished atonement."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "henceforth expecting",
-   "his enemies his footstool",
-   "Psalm 110:1",
-   "the assured victory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The crowning result — against the law that 'can never make perfect' (v1), Christ 'hath perfected' (teteleioken, perfect, a completed abiding achievement) 'by one offering' (the single self-sacrifice, doing what the many could not) 'for ever' (full and lasting, needing no repetition) 'them that are sanctified'; 'perfected' meaning complete remission of sins and consecration to holiness, the perfection the law could not give."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by one offering",
-   "perfected for ever",
-   "them that are sanctified",
-   "the finished perfecting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Spirit summoned as witness — 'the Holy Ghost also is a witness to us' (the Spirit who spoke through the prophets attesting the finished sacrifice); a high view of Scripture implied — Jeremiah's words (Jer 31:33, quoted again from Heb 8:8) the very witness of the Spirit; the writer winding up his whole argument, the new covenant now fully ratified (Wesley); divine authority for the conclusion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Holy Ghost is a witness",
-   "the Spirit in Scripture",
-   "Jeremiah's prophecy",
-   "divine confirmation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The new covenant recited (Jer 31:33, as in Heb 8:10) — 'I will put my laws into their hearts, and in their minds will I write them'; God writing his law not on tablets of stone (external, condemning) but within, so obedience flows from an inward principle of grace; the fruit of the sanctification by Christ's offering, the law inscribed by the Spirit; 'after those days,' the new age replacing the old."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this is the covenant",
-   "laws into their hearts",
-   "written in their minds",
-   "the inward law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The crowning promise — 'their sins and iniquities will I remember no more' (not merely to overlook but to remember no more, blotting sin from his reckoning); God's non-remembrance of sin precisely its remission (Gill); the sharp contrast with the yearly 'remembrance of sins' (v3) — full pardon replacing perpetual recall; both 'sins' and 'iniquities,' the whole guilt, put away forever."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sins and iniquities",
-   "will I remember no more",
-   "full forgiveness",
-   "remission of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The triumphant conclusion — 'where remission of these is' (the sins forgiven, remembered no more) 'there is no more offering for sin'; if sin is truly and finally pardoned, no further sacrifice can be needed or possible (a debt fully paid cannot be paid again); overthrowing the rationale of the repeated Levitical sacrifices, Christ's one offering securing full remission; the doctrinal section's triumphant close (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "where remission is",
-   "no more offering for sin",
-   "forgiveness ends sacrifice",
-   "the triumphant close"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom"
   ],
+  "range": "19-20",
+  "pericope_label": "Boldness to enter by a new and living way",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill denies that the way is new in contrivance, revelation or use, since it was planned before the world and shown to the first parents, and takes 'living' against the dead carcasses of beasts and the dead letter of the law. Calvin defends the use of allegory when the ancient figures are transferred to Christ, and reads the veil as the flesh that hides the divinity while giving entrance, drawing from it that Christ's glory is not measured by his outward appearance nor his flesh despised."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry unfolds what the privilege of boldness contains: access to God, light to direct, liberty of spirit and speech, a right to the privilege and a readiness for it, help to use it and assurance of acceptance."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke contrasts the boldness with the high priest's fear and trembling under a law whose least neglect meant death, and presses the sacrificial sense of 'new' from the practice of using only warm and fluid blood. Wesley calls the opening a recapitulation and reads the veil as revealing rather than concealing, the wounded body manifesting God as the rent temple veil disclosed the holiest."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The turn from doctrine to exhortation — 'therefore' (on the ground of the finished sacrifice), 'boldness to enter into the holiest' (the inmost sanctuary, entered under the law only by the high priest once a year, now open to every believer with free confident entrance) 'by the blood of Jesus' (the access resting wholly on his finished work); resuming the whole argument (cf 4:14-16), all ceremonial barriers removed (Calvin)."
+    "summary": "Barnes marks the beginning of the hortatory part and explains that the word for 'new' means freshly killed and so recent rather than unprecedented. Robertson counts this a second summary of the argument, calls boldness the dominant note and the need of the hour for readers tempted to quit, and reports both readings of the veil while settling for the humanity through which God is revealed. Ellicott corrects the preposition to 'in the blood' and denies that any comparison is drawn between Christ's people and the Jewish high priest."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom recapitulates the established differences of priest, sacrifice, tabernacle, covenant and promise, and states the contrast in four pairs: temporal and eternal, vanishing and permanent, powerless and perfect, figure and reality."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the veil which is Christ's flesh chiefly conceals or reveals: Calvin makes it a covering that hides the divinity while giving entrance, Wesley makes the wounding of the body a manifestation, and Robertson reports both views before settling for revelation",
+   "In what sense the way is 'new': freshly slain and therefore recent (Barnes, Clarke, Robertson), or new only as against the covenant of works, having been contrived before the world (Gill)"
+  ],
+  "outliers": [
+   "Ellicott denies that the passage compares Christian worshippers with the Jewish high priest at all, since we do not enter carrying blood but enter with our High Priest as the people symbolically entered with him",
+   "Calvin concedes that allegories often obscure rather than illustrate, and defends this one as an exception because the ancient figures are transferred to Christ"
+  ],
   "themes": [
-   "boldness to enter the holiest",
-   "by the blood of Jesus",
-   "doctrine into exhortation",
-   "access to God"
+   "boldness",
+   "access to God",
+   "the veil",
+   "incarnation",
+   "exhortation"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Two figures — 'a new and living way' ('new,' prosphaton, freshly opened, none having entered the heavenly sanctuary before Christ; 'living,' giving and sustaining life, Christ himself the way), 'consecrated/dedicated for us' (opened by his work); 'through the veil, that is to say, his flesh' (as the temple veil shut off the Holy of Holies, Christ's flesh veiled the glory and, rent in death, opened the way); the Godhead hidden in his flesh leading us into heaven (Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a new and living way",
-   "consecrated for us",
-   "through the veil, his flesh",
-   "the incarnate path"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
@@ -796,327 +416,155 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second ground of confidence — 'an high priest' (hierea megan, a 'great priest,' surpassing the Levitical, having offered the one perfect sacrifice and entered the heavenly sanctuary, Heb 4:14-7:28) 'over the house of God' (set over the church not as a servant like Moses but as a Son, Heb 3:6, offering his blood and presenting his people's prayers, Clarke); a faithful interceding High Priest completing the assurance of access."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a great high priest",
-   "over the house of God",
-   "Christ's priestly rule",
-   "the interceding Priest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "21-24",
+  "pericope_label": "A great priest over the house, and three exhortations",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the Greek reads 'a great priest', and takes the drawing near as a sacerdotal act belonging to all saints made priests. Calvin gives the purpose of Christ's appointment over the house, requires that what we bring correspond to a sacrifice wholly spiritual, explains why hope rather than faith is named and why confession must be public, and thinks the exhortation to mutual regard aimed at a Jewish arrogance the apostles laboured to correct."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke presses the parallel between the high priest's ordering of the house and Christ's government of the Church, which he never put into other hands, contrasts the sprinkled heart with the sprinkled body of the old rite, and supports the favourable sense of 'provoke' from Xenophon's account of Cyrus. Wesley reads the washing as a spotless conversation and identifies the hope as the one professed at baptism."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The first 'let us' — 'let us draw near' (proserchometha, the first of three exhortations, Heb 4:16; the access used in worship and communion) 'with a true heart' (sincerity) 'in full assurance of faith' (confident trust resting on Christ); a twofold cleansing — 'hearts sprinkled from an evil conscience' (the inner man cleansed by Christ's blood, the conscience no longer condemning) and 'bodies washed with pure water' (the outer life purified, perhaps baptism)."
+    "summary": "Ellicott explains the change to 'great priest' from the prophecy of Zechariah about the crowning of Joshua, states that 'profession of our faith' is a translators' oversight for 'the hope', and suspects that provocations of the wrong kind had existed among the readers. Robertson sets out the three exhortations, calls it a confession of hope and not of despair, and traces 'provoke' to the word that gives us paroxysm. Barnes defines the fulness of faith as leaving no room for doubt, and notes how the English word 'provoke' has shifted."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the exhortation concerns faith or hope, Ellicott and Clarke reporting that the true reading is 'the confession of the hope' and the familiar English rendering an oversight, with Calvin explaining why hope is the fitter word here",
+   "What 'consider one another' requires: stimulating others to love and good works (Robertson, Clarke, Barnes), or a mutual regard whose converse is that we should be stimulated ourselves (Ellicott)"
+  ],
+  "outliers": [
+   "Clarke draws from the priest's charge over the house the corollary that Christ never committed the government of the Church to other hands",
+   "Calvin reads the whole exhortation to mutual consideration as aimed at the arrogance of a nation that claimed to be the Church by itself"
+  ],
   "themes": [
-   "let us draw near",
-   "a true heart, full assurance",
-   "hearts sprinkled",
-   "bodies washed"
+   "great priest",
+   "drawing near",
+   "confession of hope",
+   "mutual exhortation",
+   "good works"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second 'let us' — 'hold fast' (katechomen) 'the profession' (the open confession) of 'our faith,' better 'our hope' (the hope born of and sustained by faith, confessed at baptism, Calvin/Wesley) 'without wavering' (akline, unbending against persecution's pressures); the ground 'he is faithful that promised' (God's covenant fidelity, the confession resting on a God who cannot fail) — perseverance grounded in divine faithfulness."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hold fast the profession",
-   "without wavering",
-   "he is faithful that promised",
-   "steadfast confession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The third 'let us,' from personal to communal — 'consider one another' (katanoomen, give attentive regard to fellow-Christians' needs and trials) 'to provoke' (eis paroxysmon, our 'paroxysm,' to stimulate/spur, here turned to a good end) 'unto love and to good works'; the redemption of a usually negative word — stirring each other up to love and active goodness, not to anger; the Christian life not solitary, believers responsible for one another's growth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "consider one another",
-   "provoke unto love",
-   "and good works",
-   "mutual care"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mutual care made concrete — 'not forsaking the assembling' (me egkataleipontes, not abandoning the gathered worship, the setting for stirring one another up); 'as the manner of some is' (already some staying away, through fear of persecution, a vain sense of being above ordinances, or drifting toward the synagogue); 'but exhorting one another'; 'so much the more as ye see the day approaching' (judgment or crisis near); forsaking the assembly a step toward apostasy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not forsaking the assembling",
-   "as the manner of some",
-   "exhorting one another",
-   "as the day approaching"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Matthew Henry"
+   "John Chrysostom"
   ],
+  "range": "25-26",
+  "pericope_label": "Not forsaking the assembly, and the sin for which no sacrifice remains",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the compound word as marking the coalition of Jews and Gentiles in one church state, and defines the wilful sin as corrupt principles resolutely acted on rather than any single act or infirmity. Calvin reads the desertion as Jewish resentment at the Gentile addition which the word itself denotes, and supplies the history by which an early sect used this verse to deny pardon after baptism, driving others to deny the Epistle's authority rather than accept the conclusion."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry describes the sin as a total and final falling away in which the only Saviour, the only Sanctifier and the only gospel are alike rejected, asks what could be sorer than dying without mercy and answers that dying by the mercy despised is sorer, while insisting that no soul sorrowing for sin is shut out."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke prefers private meetings under persecution, ascribes the absence to fear, refers the coming day to the judgment on the Jewish nation, and insists the passage has nothing to do with backsliders in the ordinary sense but describes a deliberate apostate. Wesley allows either kind of meeting, adds the motive of thinking oneself above external ordinances, and keeps the great day in view."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom sets the threat in the figure of trees planted, tended and watered which yield nothing and are pulled up by the roots for the fire, and observes that the writer, having urged his readers from the kindlier considerations, now urges them from the gloomier."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The sin defined precisely — 'if we sin wilfully after the knowledge of the truth' means not ordinary sins of infirmity nor recoverable falls but deliberate, total, final apostasy (renouncing Christ after knowing and professing him, the 'drawing back' of v38, Wesley/Henry); 'there remaineth no more sacrifice' — the apostate, rejecting the one sacrifice of Christ, has cast away the sole remedy; not a denial of pardon to the penitent but a warning that apostasy abandons the only ground of forgiveness."
+    "summary": "Barnes rejects the view that the church as a society is meant and defends the apostasy reading with numbered arguments, chiefly that it is the sense any reader would take if no theory needed protecting. Ellicott notes that the Greek avoids the technical name of the synagogue, calls the neglect the first step toward apostasy, and distinguishes falling under temptation from a continued state of wilful sin. Robertson observes that the habit of absence was already formed, and refers the approaching day to the Second Coming."
    }
   ],
   "debates": [
-   {
-    "question": "What is the 'wilful sin' for which no sacrifice remains?",
-    "sides": [
-     {
-      "position": "deliberate, total, final apostasy — renouncing Christ and the gospel after knowing the truth, not ordinary sin or a recoverable fall",
-      "holders": [
-       "Wesley",
-       "Henry",
-       "Barnes",
-       "most"
-      ]
-     }
-    ]
-   }
+   "What 'the day' is: the judgment about to fall on the Jewish nation (Clarke, Ellicott) or the Second Coming drawing continually nearer (Robertson)",
+   "What kind of assembling is forsaken: public worship (Barnes), private meetings held under persecution (Clarke), or either (Wesley)"
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin, Gill and Ellicott all read the desertion as a Jewish-Christian separation, finding in the very word for the assembly a reference to the Gentiles newly added to it",
+   "Calvin records that the misuse of this verse to deny pardon after baptism led some to reject the authority of the Epistle rather than accept the conclusion drawn from it"
+  ],
   "themes": [
-   "if we sin wilfully",
-   "after the knowledge of the truth",
-   "no more sacrifice for sins",
-   "wilful apostasy"
+   "public worship",
+   "apostasy",
+   "the day",
+   "wilful sin",
+   "perseverance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "What remains for the apostate — not a sacrifice but 'a fearful looking for of judgment' (ekdoche, a terrified expectation, the conscience anticipating its doom; where Christ's servants look for salvation, v13) and 'fiery indignation which shall devour the adversaries' (the consuming fire of wrath); the present torment of an evil conscience that has tasted and lost grace (Calvin); the apostate become an 'adversary,' falling under the fire reserved for God's enemies."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a fearful looking for of judgment",
-   "fiery indignation",
-   "devour the adversaries",
-   "the apostate's doom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The lesser case — 'he that despised Moses' law' (athetesas, set it at naught; esp. apostasy/idolatry, Deut 17:2-7) 'died without mercy' (death with no mitigation or pardon) 'under two or three witnesses' (legal justice, not arbitrary, Num 15:30); an argument from the less to the greater (Calvin, a rabbinic rule) — if violating Moses' law brought death without mercy, how much heavier for rejecting the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "despised Moses' law",
-   "died without mercy",
-   "two or three witnesses",
-   "the lesser penalty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -1127,190 +575,154 @@
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "27-29",
+  "pericope_label": "A fearful expectation of judgment, and the sorer punishment",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill keeps the comparison narrow, the sorer punishment being sorer than the bodily death the law inflicted. Calvin locates the terror in a conscience that knows it has tasted grace and lost it, counts three distinct charges in the description of apostasy and weighs their gravity, observes that the argument was peculiarly fitted to Jewish readers who could not call the old penalty unjust, and corrects the version from 'despised' to 'rejected'."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses the fire from the judgment on Korah, defines the despising as rejection by presumptuous sin, reads 'unholy' as common and so as expecting nothing atoning from the blood, and applies it to those who reject the atonement today. Wesley calls Christ a lawgiver far more honourable than Moses and infers from the clause about sanctifying blood that Christ died for the apostate also and that he was at least justified once."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The greater guilt — 'how much sorer punishment' (less to greater; not bodily death only but eternal perdition, Calvin) for threefold sin: 'trodden under foot the Son of God' (trampled the Lord of glory with contempt), 'counted the blood of the covenant... an unholy thing' (reckoned the atoning blood common/profane), 'done despite unto the Spirit of grace' (outraged the Spirit who brings grace); describing only the wilful, total apostate (Wesley); the deepest of impieties."
+    "summary": "Barnes removes the misleading force of the English word 'certain', guards the statement about the Mosaic penalty to capital cases, and argues that the punishment must be future since the older law could inflict nothing worse than death. Ellicott renders the clause afresh, traces it to Isaiah, draws the antithesis between servants who await salvation and sinners who await judgment, identifies the Deuteronomic law of apostasy, and denies any middle ground between reverence and contumely. Robertson notes that the writer seems to have coined this use of the noun and names the argument as the first of Hillel's rules."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril, expounding the dignity here trampled, asks by what sign the promised King may be known, since purple and spearmen and a golden chariot have all been anticipated, and demands a mark belonging to this King alone."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the punishment is: a future and eternal perdition, since the old law could inflict nothing worse than death (Barnes, Calvin), or a temporal judgment on the unbelieving nation and its city (Clarke)",
+   "Whether the apostate had truly been sanctified, Wesley inferring from the clause that Christ died for him and that he was at least justified once, while Ellicott speaks only of the sanctification the law could not give"
+  ],
+  "outliers": [
+   "Robertson identifies the form of the argument as the first of Hillel's seven rules of exegesis",
+   "Ellicott sets the sin of forsaking Christ silently beside the idolatry which once cost Israel the name of God's people"
+  ],
   "themes": [
-   "how much sorer punishment",
-   "trodden under foot the Son of God",
-   "the blood of the covenant unholy",
-   "despite unto the Spirit of grace"
+   "judgment",
+   "apostasy",
+   "blood of the covenant",
+   "Spirit of grace",
+   "a fortiori"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "30": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The warning grounded in God's word — 'we know him that hath said' (the living, true God who keeps his word); 'Vengeance belongeth unto me, I will recompense' (Deut 32:35; Rom 12:19, God claiming the right of retribution) and 'The Lord shall judge his people' (Deut 32:36, judging his own professing people the more rigorously for rebelling against him, Calvin/Wesley); both from the song of Moses, confirming the warning to Jewish believers; no idle threat."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "vengeance belongeth unto me",
-   "I will recompense",
-   "the Lord shall judge his people",
-   "God's sure vengeance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The dread conclusion — 'a fearful thing' (phoberon, terrifying, not to be explained away — the wrath of God truly faces the wrongdoer, Robertson) 'to fall into the hands of the living God' (under the avenging power, not for mercy but judgment); 'the living God' not a dead idol but the eternal, almighty God who lives forever and so can punish forever (Clarke); the most fearful of fates, designed to strike awe and keep the wavering from apostasy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a fearful thing",
-   "to fall into the hands",
-   "the living God",
-   "the dread conclusion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Matthew Henry"
+   "John Chrysostom"
   ],
+  "range": "30-33",
+  "pericope_label": "Vengeance and the living God, and the memory of former days",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill distinguishes the senses in which men are said to be in God's hands, and denies that the good sense is the one meant here. Calvin marks the difficulty of applying to apostates a promise made about wrongs done to God's people, explains why remembered warfare must spur rather than excuse, and warns that even men proved by uncommon trials still need urging, so none should flatter himself he has arrived."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry generalises the sharing of others' sufferings into a rule, that the Christian spirit is not selfish but puts us on pitying, visiting, helping and pleading for others."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the second clause as judgment executed on their behalf, presses that one who lives for ever can punish for ever, takes the exposure literally as an exhibition at the theatres, and admires those who owned the faith of the marked victim. Wesley reads the same clause as judgment upon God's people, more rigorous than upon the heathen."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "From warning to encouragement (the wise physician soothing after the incision, Chrysostom) — 'call to remembrance the former days' (recalling their fresh early zeal); 'after ye were illuminated' (enlightened with the knowledge of God, brought from darkness to light); 'ye endured a great fight of afflictions' (a hard, prolonged conflict of persecutions soon after believing); their past steadfastness held up to rouse present endurance — shameful to begin well and faint midway (Calvin)."
+    "summary": "Ellicott shows that the citation keeps the sense but not the form of the Hebrew, finds it remarkable that Romans gives it identically, and suggests a current rendering preserved in a Targum; he also notes that the Greek says 'a living God' and finds the reason in the same chapter of Deuteronomy, marks the turn from warning to encouragement, and thinks the theatre figurative. Barnes compares the two uses of the quotation and leaves the theatre undetermined. Robertson refuses to soften the warning, God being neither dead nor absent."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the change of tone by the practice of the best physicians, who after a deep incision do not cut again but soothe the wound they have made with gentle remedies."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether 'the Lord shall judge his people' means that he will execute judgment on their behalf (Clarke, from the sense of the passage quoted) or that he will judge them, and more rigorously than the heathen (Wesley)",
+   "Whether the exposure in the theatre is literal or figurative: Clarke takes it of actual exhibition like wild beasts, Ellicott judges it probably figurative, and Barnes leaves it undetermined"
+  ],
+  "outliers": [
+   "Ellicott suggests that the identical form of the quotation here and in Romans may be explained by a rendering already current in Jewish tradition, one clause of it surviving in the Targum of Onkelos",
+   "Ellicott quotes the observation that the readers are bidden to imitate not other men but themselves"
+  ],
   "themes": [
-   "call to remembrance the former days",
-   "after ye were illuminated",
-   "a great fight of afflictions",
-   "past steadfastness"
+   "vengeance",
+   "the living God",
+   "persecution",
+   "remembrance",
+   "endurance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Two forms of suffering — 'made a gazingstock' (theatrizomenoi, exposed on a stage to derision, 1 Cor 4:9) 'by reproaches and afflictions' (insults and ill-treatment for the faith); and 'companions of them that were so used' (voluntarily sharing others' reproach, standing by the persecuted); the Christian spirit not selfish but pitying and helping the suffering (Henry); to befriend the persecuted, when dangerous, itself a brave confession."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "made a gazingstock",
-   "reproaches and afflictions",
-   "companions of the persecuted",
-   "double suffering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "34": {
@@ -1323,110 +735,65 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "34-36",
+  "pericope_label": "The spoiling of goods, the shield not to be cast away, and the patience required",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reports the variant reading 'them that were bound' from the Alexandrian copy and the Vulgate and Syriac, and takes the boldness of verse 35 three ways, as freedom in prayer, as open profession, or as assurance of interest in God. Calvin judges the manuscript authority for the variant nearly equal and the context undecisive, notices that the verse inverts the order of the preceding one, insists that the joy did not cancel real grief at the loss, and argues that patience alone carries a Christian two paces forward."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the variant from two uncials and several versions, notes that Griesbach admitted it into the text, and infers an existing body of prisoners whom the Judean church openly owned; he grades patient, unmurmuring and joyful suffering, finds the ground of the joy in the Spirit's witness of sonship, hears in 'cast not away' the figure of the cowardly soldier and the Spartan formula, and divides the work of patience between God's gift and man's exercise. Wesley compresses the whole verse into sympathy with suffering brethren and joyful acceptance of loss."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Their joyful sacrifice — 'ye had compassion on' (synepathesate; the better text 'them that were in bonds,' the prisoners for the faith, helped at risk to themselves); 'took joyfully the spoiling of your goods' (accepting the plunder of their property not with grief but joy); the ground 'knowing ye have in heaven a better and an enduring substance' (a heavenly inheritance outweighing perishable goods); heavenly hope the secret of cheerful suffering."
+    "summary": "Ellicott adopts 'them that were in bonds' as the true reading and calls the change important for the question of authorship; he also deletes 'in heaven' from the last clause and reads it as perceiving that ye have your own selves for a better and abiding possession, and compares the beatitude on persecution. Barnes keeps the first-person reading and places the imprisonment at Caesarea, observes that men can be brought to part with property joyfully, values the heavenly treasure above the wealth of Croesus, and documents the shame of the cast-away shield from Greek law and Tacitus. Robertson renders the noun 'with the prisoners' and warns that the readers were in peril of a panic and a stampede away from Christ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the text speaks of compassion shown to the writer in his own bonds or of sympathy with imprisoned believers generally: Clarke, Ellicott and Robertson adopt the latter, Gill reports it as a variant, Barnes keeps the first person and builds a biographical inference on it, and Calvin finds the evidence evenly balanced and refuses to decide",
+   "Whether the promised better substance is a heavenly inheritance (Gill, Barnes, Clarke, Wesley) or the believers' own selves, Ellicott deleting 'in heaven' as an intruded gloss and reading the clause as possessing oneself"
+  ],
+  "outliers": [
+   "Ellicott holds that the reading 'them that were in bonds' bears very importantly on the question who wrote the Epistle",
+   "Clarke quotes the Spartan mothers' words on delivering the shield, either bring this back or be brought back upon it, and applies them to the confession of faith",
+   "Barnes cites Tacitus that among the Germans the loss of a shield in battle barred a man from the sacrifices and the assembly, and that many so disgraced ended their lives with the halter"
+  ],
   "themes": [
-   "compassion on the prisoners",
-   "took joyfully the spoiling of goods",
-   "a better and enduring substance",
-   "heavenly hope"
+   "persecution",
+   "endurance",
+   "assurance",
+   "reward",
+   "apostasy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Cast not away' (me apobalete, throw off as worthless) 'your confidence' (parresia, the bold free trust toward God and open profession shown so bravely at first; their liberty of access and birthright as sons, Clarke), 'which hath great recompence of reward' (perseverance richly repaid); confidence the foundation of a godly life, to lose it is to lose the reward (Calvin); having endured much, they must not now surrender the boldness endurance proved."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cast not away your confidence",
-   "great recompence of reward",
-   "keep your boldness",
-   "perseverance repaid"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The present need — 'ye have need of patience' (hypomone, brave endurance, Heb 6:12; not lacking the grace but needing its full exercise in trial); 'that after ye have done the will of God ye might receive the promise' (endurance the bridge between obedience and reward); God furnishing the grace, the believer exercising it (Clarke); patience needed because Satan harasses with countless arts (Calvin); the promise received not at once but after patient continuance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye have need of patience",
-   "done the will of God",
-   "receive the promise",
-   "endurance bridges"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "37": {
@@ -1435,116 +802,71 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "37-39",
+  "pericope_label": "The composite quotation, the just living by faith, and the drawing back",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill excludes the coming in the flesh and takes the promised coming of the destruction of Jerusalem; he limits the life promised to a present life of justification, communion and holiness rather than eternal life, and distinguishes a recoverable drawing back, instanced in David and Peter, from the total and final sort, which he holds cannot befall true believers. Calvin notes that the writer follows the Greek version and so departs from the prophet's words, compares the reminder of a short time to a general promising his soldiers a speedy end of the war, derives patience from faith, and reads the future tense as marking the perpetuity of that life."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke expects a judgment on the rebellious nation within a very short time and says the apostle accommodates the prophet's words to his purpose; he insists that the one who may draw back is the justified man himself, denounces the inserted words 'any man' as a wicked perversion serving the doctrine of final and unconditional perseverance, and renders the last verse as a contrast between cowards and the courageous. Wesley refers the coming to the reward of every man according to his works, and reads the drawing back as shipwreck of faith met with rejection."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Encouragement by the Lord's nearness — 'yet a little while' (mikron hoson hoson, doubled, from Isa 26:20, stressing how brief the waiting); 'he that shall come will come, and will not tarry' (Hab 2:3, the coming One given a Messianic application, surely coming, not delaying beyond the appointed time); referring to Christ's coming in judgment on Jerusalem and his final advent; nothing so sustains the fainting as the hope of a near end (Calvin)."
+    "summary": "Robertson identifies the opening words as taken from Isaiah and prefixed to the Habakkuk quotation, notes the added article that gives the participle a Messianic application, and glosses the noun for drawing back from its use in Plutarch and Josephus. Ellicott makes the same identification and stresses that the borrowed passage concerns the Lord coming in judgment; on the next clause he argues from the manuscripts that 'my' should probably be added, and observes that the Hebrew and the Greek copies differ both in wording and in the order of the halves. Barnes weighs an allusion to the Lord's own saying against the prophet, settles on the overthrow of the Jewish power, urges calm trust rather than trembling apprehension, and treats the apostasy as a supposable case stated to prevent it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What coming is promised: Gill, Clarke and Barnes refer it to the judgment on Jerusalem and the overthrow of the Jewish power, while Wesley refers it to a coming to reward every man according to his works",
+   "Whether the one who may draw back is the justified man of the preceding clause: Clarke argues that the relative has no other antecedent and attacks the words 'any man' as inserted to protect unconditional perseverance, Wesley agrees, Gill answers that the final sort of drawing back cannot befall a true believer, and Barnes treats the case as supposable only"
+  ],
+  "outliers": [
+   "Ellicott argues from the manuscripts that the quotation should read 'my righteous one shall live by faith', and notes that the Hebrew opens instead with the haughty invader",
+   "Robertson notes that the noun for shrinking back occurs nowhere else in the New Testament, and cites its use for stealthy retreat in Plutarch and for dissimulation in Josephus"
+  ],
   "themes": [
-   "yet a little while",
-   "he that shall come will come",
-   "will not tarry",
-   "the Lord's nearness"
+   "the second coming",
+   "faith",
+   "apostasy",
+   "perseverance",
+   "judgment"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The great principle and its opposite — 'the just shall live by faith' (Hab 2:4, as in Rom 1:17; the righteous/justified living by faith, the principle and sustenance by which he perseveres; probably 'my righteous one'); 'but if any man draw back' (hypisteiletai, shrink back, apostatize) 'my soul shall have no pleasure in him' (God's abhorrence, the favour forfeited); the alternatives set before the wavering — live by faith and endure, or draw back and be rejected; leading into the faith chapter."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the just shall live by faith",
-   "if any man draw back",
-   "no pleasure in him",
-   "faith vs apostasy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The confident conclusion — emphatic 'we' (against the apostates), the two destinies: 'them who draw back unto perdition' (withdrawing to ruin) vs 'them that believe to the saving of the soul' (holding fast in faith to salvation); 'we are not the cowards, but the courageous' (Clarke); the writer's confident hope that none would apostatize (Barnes), numbering the wavering with the believing; leading into the faith chapter (Heb 11)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not of them who draw back",
-   "unto perdition",
-   "believe to the saving of the soul",
-   "confident hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

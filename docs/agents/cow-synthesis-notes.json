@@ -7699,6 +7699,84 @@
       "book": "romans",
       "chapter": "15",
       "note": "Working note on drafting long NT chapters, from 22 entries in one sitting. The persistent failure mode is that first drafts overshoot by 100-215 QA words, and phrase-level trimming cannot recover that — it takes six or seven passes and still lands high. What works is dropping WHOLE ITEMS and rewriting the file, which recovers 200 words in one pass. Two heuristics earned their place here. (1) My on-page word estimate runs about 30 percent low against the QA counter, so a draft that feels like 500 words measures near 650; budgeting to the felt number rather than the target is what caused every overshoot. (2) When an entry comes back grade B, the cause in this chapter was never padding but vocabulary repetition forced by the verse's own subject — v29 repeated blessing, gospel and Rome until ttr fell to 0.559. Trimming alone did not fix it; substituting synonyms for duplicate tokens raised ttr from 0.574 to 0.584 and flipped the grade with no further cuts. Worth remembering that ttr and zip respond to VARIETY, not only to length."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25",
+        "31",
+        "37"
+      ],
+      "note": "Jamieson, Fausset and Brown residue, twenty-first consecutive chapter, and the decisive instance. Keys 1, 7, 13, 19, 25, 31, 37: stride 6 from offset 1, SEVEN members, no gap. The content is 2 Corinthians 11:6, 11:11, 11:16, 11:21, 11:23, 11:31, 12:2 in order. hebrews 9 carried the same signature with 2 Corinthians 10:5, 10:10, 10:15, 11:1, and hebrews 10 CONTINUES IT DIRECTLY (11:1 -> 11:6). Two adjacent Hebrews chapters therefore hold one unbroken sequential run of 2 Corinthians at a fixed stride. This is a single mis-indexed scrape pass, not per-chapter noise, and it should be fixable by re-fetching the Jamieson tree with a corrected book/chapter index rather than by per-chapter exclusion. All seven blocks excluded from the synthesis."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "10",
+      "verses": [
+        "4",
+        "12",
+        "13",
+        "19",
+        "20"
+      ],
+      "note": "Cyril of Jerusalem duplication, fourth consecutive batch showing it, and the first with TWO separate duplicated blocks in one chapter. The block attached to 10:4 reappears verbatim at 10:19 and 10:20; the block attached to 10:12 reappears at 10:13. Each was cited once, at its first occurrence. The repeat at 10:19 fell in a different entry and had to be suppressed, but scripts/synthesis_qa.py VOICE_LABELS holds the bare string 'Cyril' and _LABEL_RE requires a colon immediately after the label, so the catena head 'Cyril of Jerusalem:' matches nothing and the voice cannot be declared through excluded_voices. SILENT_BY_ENTRY was the only mechanism available. Same defect blocks 'Theodoret of Cyrrhus'. Owner item: widen the VOICE_LABELS patterns to allow the qualifying phrase."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "10",
+      "verses": [
+        "39"
+      ],
+      "note": "StudyLight site chrome, eighth confirmation and the fifth consecutive chapter with Ellicott as the carrier (romans 3:31, acts 5:42, hebrews 9:28, acts 13:52, hebrews 10:39). 992 words of navigation payload appended to the last Ellicott block of the chapter, beginning at the marker 'Hebrews Heb 9 Hebrews Heb'. Stripped before drafting; the chapter's real usable source total is about 74,073 words, not the 75,065 the sizer reports. The sizer over-reports every chapter whose last commentator block carries this tail."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "10",
+      "verses": [
+        "23"
+      ],
+      "note": "Ellicott at 10:23 holds that the Authorised Version's 'profession of our faith' is a translators' oversight: the Greek word is hope, not faith, and he reports that no earlier English version renders it faith. The clause should read 'the confession of the hope'. The point matters for the chapter's argument, since the same hope is what verse 35 tells them not to cast away."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "10",
+      "verses": [
+        "26"
+      ],
+      "note": "Calvin at 10:26 records a reception history that cuts both ways: an early sect pressed this verse to deny pardon to anyone who sinned after baptism, and the reaction against that abuse drove others to deny the authority of the Epistle to the Hebrews altogether rather than concede the inference. A rare case in this corpus of a commentator noting that a canonical dispute was generated by an exegetical one."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "10",
+      "verses": [
+        "37",
+        "38"
+      ],
+      "note": "Two live splits close the chapter. (1) Which coming is promised at 10:37: Gill, Clarke and Barnes all read the destruction of Jerusalem and the overthrow of the Jewish power, while Wesley glosses 'he that cometh' as coming to reward every man according to his works, putting it at the last judgment. Neither side registers the other. (2) Whether the man who may draw back at 10:38 is the justified man of the preceding clause: Clarke argues the relative has no other antecedent and calls the Authorised Version's inserted 'any man' a wicked perversion of the words of God undertaken to protect final and unconditional perseverance; Wesley agrees; Gill answers by distinguishing a recoverable drawing back (David, Peter) from the total and final sort, which he denies can befall a true believer; Barnes takes a third line, that the apostasy is a supposable case only, stated as a general principle in order to prevent it."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "10",
+      "note": "Fidelity self-grade, hebrews 10, 11 entries, 39 verses, 11 voices, ~74,073 usable source words after 992 of chrome. Every entry checked clause by clause against its source blocks; every named attribution traced to that voice's own block in this chapter; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-4 648 · 5-6 643 · 7-10 647 · 11-18 648 · 19-20 648 · 21-24 650 · 25-26 650 · 27-29 649 · 30-33 644 · 34-36 649 · 37-39 640. Exclusions: Jamieson at the seven stride-6 keys (foreign 2 Corinthians content); Cyril of Jerusalem silenced at entry 19 only, as a duplicate of his 10:4 block, via SILENT_BY_ENTRY because the VOICE_LABELS defect makes the voice undeclarable. One correction made in review: at 3-5 in hebrews 9 the harness read Clarke's quotation of a father named Cyril as an attribution to Cyril of Jerusalem, so the same pattern was watched for here and no father is named inside another voice's quotation. School keys in the tags were reconciled against the voices actually named in each prose entry."
     }
   ]
 }
