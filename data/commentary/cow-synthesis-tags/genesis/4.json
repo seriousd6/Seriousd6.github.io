@@ -1,160 +1,284 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "Eve bare Cain, and said, I have gotten a man from the LORD",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The birth of Cain: 'and Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD' — the first human birth, the firstborn of mankind (the propagation of the race beginning, Eve, the mother of all living, 3:20, bearing her first son, Cain, whose name relates to 'gotten' or 'acquired'); Eve's exclamation 'I have gotten a man from the LORD' expressing her sense of God's gift and perhaps her hope in the promise (3:15, some reading it as a hope, mistaken, that Cain was the promised seed who would bruise the serpent, the words rendered by some 'I have gotten a man, the LORD,' or 'a man from the LORD,' whether or not she thought Cain the Messiah, she acknowledging the child as God's gift and laying hold of the promise); the believing recognition of God's hand in the gift of children (her words mingling gratitude with hope, in the birth of her son seeing God's faithfulness and the continuance of the race through which the promised seed would come) — Ellicott, Gill, Calvin, Henry."
+    "summary": "Gill treats the opening verb as a modest expression and reports the rabbinic view that Adam had known his wife before he sinned, objecting that children begotten in innocence would have been free from the corruption afterwards contracted, and preferring the opinion that some considerable time passed. Calvin makes the same point doctrinally: the benediction to increase and multiply was not abolished by sin, and Adam's heart was divinely confirmed so that he did not shrink from the production of offspring; yet as he recognised at the very commencement the truly paternal moderation of God's anger, so he was afterwards compelled to taste the bitter fruits of his own sin when Cain slew Abel. On Eve's exclamation Calvin lists three renderings which all tend to the same point, that she gives thanks for a posterity she deserved never to have, rejects the subtler reading which makes her claim the promised conqueror already in her arms, and takes her rather to offer the child to God as the first-fruits of his race."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry thinks the brothers were twins, the pair recalling Esau and Jacob, the elder hated and the younger loved. On the names he warns that if Eve did think this son the promised seed she was wretchedly mistaken, as Samuel was when he said, Surely the Lord's anointed is before me: when children are born, who can foresee what they will prove, since he that was thought to be a man from the Lord became an enemy to the Lord, and the less we expect from creatures the more tolerable will disappointments be. Abel he takes for vanity, given by a mother so taken up with her first possession that another son was as nothing to her, and presses the name on the whole race, since every man at his best estate is vanity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls it extremely difficult to ascertain what Eve meant, and rejects the common view that she took Cain for the promised seed as too refined for that period; more likely she meant no more than to acknowledge that it was through God's peculiar blessing that she conceived. Unless she had been under divine inspiration, he adds, she could not have called her son Jehovah, and that she was not so inspired her mistake sufficiently proves. Wesley reads the name Cain as possession, spoken with joy and thankfulness and great expectation."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott alone presses the harder rendering, who is Jehovah, on the ground that the particle cannot mean one thing here and another in the first verse of the book; the objection that this implies too advanced a knowledge he calls unfounded, since we read backward and put our own ideas into the narrative, whereas these words were only the germ, the filament in the acorn which contains the oak. In Eve's mouth the title probably meant no more than the coming One. He looks ahead to what the chapter will show, the founding of a family godless and wanton which nevertheless far outstripped the sons of Seth in the arts of civilisation."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What did Eve mean by the words rendered from the LORD?",
+    "positions": [
+     {
+      "position": "that she gives thanks for a posterity she had deserved never to have, offering the child to God as the first-fruits of his race",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "only that she conceived through God&rsquo;s peculiar blessing; the messianic reading is too refined for that period",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "a man, even Jehovah &mdash; not a developed messianic idea, but the germ of one, meaning the coming One",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD",
-   "the birth of Cain and Eve's words",
-   "the first human birth, the child acknowledged as God's gift",
-   "Eve's hope perhaps laid on the promised seed"
+   "I have gotten a man from the LORD",
+   "whether Eve took her firstborn for the promised seed",
+   "Cain possession and Abel vanity"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "2",
+  "pericope_label": "She bare his brother Abel; Abel was a keeper of sheep, Cain a tiller of the ground",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows that the second birth may have followed the next year, though some have thought from the silence about a second conception that the two were born together, and passes on the Jewish opinion that a twin sister was born with Abel; on the name he notes that it means not mourning, as Josephus said, but vanity, either because Eve made no such account of this son as of her first, or because by a spirit of prophecy she foresaw his violent death. Calvin will not have the name spoken in contempt, which he calls perfectly absurd; rather Eve, having celebrated in her firstborn the joy that suddenly burst upon her, turned in her second to the recollection of the miseries of the human race, holding up a common mirror to admonish her whole progeny. He insists that both callings were in themselves holy and laudable, whence he infers that the brothers had been well instructed by their father, and notes that Cain's life was in appearance very well regulated."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks the wording settles the matter for twins, since where successive births are recorded Scripture usually mentions conceiving and bringing forth for each child, whereas here it is simply that she added to bring forth Abel his brother; he counts three primitive employments, Adam a gardener, Abel a shepherd, Cain a farmer, and calls them the most rational and the best calculated to prevent strife and an immoderate love of the world. Wesley finds an advantage in the pastoral calling, which most befriends contemplation and devotion, Moses and David having kept sheep and in their solitudes conversed with God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The birth of Abel and the callings: 'and she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground' — Eve bearing a second son, Abel (whose name means 'vapor' or 'breath,' perhaps foreshadowing his brief life), the two brothers Cain and Abel the first of the race born of woman; 'Abel was a keeper of sheep (a shepherd), but Cain was a tiller of the ground (a farmer)' (the brothers following different occupations, Abel a herdsman, Cain a cultivator, both honest callings, the two basic forms of early human labor — pastoral and agricultural — the division of labor in the first family); the brothers' different occupations both lawful and honorable (God providing for human life through such labors, the difference in calling not the ground of God's later regard, vv.4-5, which rested on faith and the heart not the occupation, both shepherd and farmer able to serve God) — Keil and Delitzsch, Ellicott, Gill, Calvin."
+    "summary": "Ellicott looks at the interval before Seth, which leaves a long period for the family to increase and for the characters of these two to develop, and sees in the one a rough strong nature that took the hard work as it found it, in the other a nature more refined and thoughtful. He dismisses Oppert's Assyrian etymology of the name, since the Hebrew means a thing unstable and not abiding, like a breath or vapour, and doubts that a mother named her child from a presentiment at all, the title more probably being given after his death. Keil hears in it that her joy was soon overcome by the discovery of the vanity of this earthly life, observes that the occupations are noticed on account of what follows, and adds that God himself had pointed out each to Adam, tillage in the employment assigned in Eden and the keeping of cattle in the clothing he gave."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why was the second son called Abel?",
+    "positions": [
+     {
+      "position": "from Eve&rsquo;s lower account of him, or from a prophetic foresight of his violent death",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "as a monument of her sorrow, holding up a mirror of human vanity to her whole progeny",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "probably as a title given after his death, when his relatives called him the breath that had passed away",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground",
-   "the birth of Abel and the brothers' callings",
-   "the two brothers in their honest, different callings",
-   "both lawful, the difference not the ground of God's regard"
+   "she added to bear his brother Abel",
+   "whether Cain and Abel were twins",
+   "two callings both holy and laudable"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "3": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
    "Adam Clarke",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "3",
+  "pericope_label": "In process of time Cain brought of the fruit of the ground an offering unto the LORD",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports the view that at the end of days means the end of a week, on the seventh day, but objects that this proceeds on a hypothesis not sufficiently established, that a sabbath was already appointed to be kept religiously; he prefers Aben Ezra's reading, at the end of the year, which would fall after harvest when gratitude was in season, and adds that the Targum of Jonathan fixes the day to the fourteenth of Nisan, as though it were the passover, a feast instituted two thousand years later."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry has the brothers bring their offerings to Adam as the priest of the family, and thinks there was a divine appointment given to Adam for it, as a token of God's favour notwithstanding their apostasy, by which God would try Adam's faith and settle a correspondence again between heaven and earth. He draws four lessons: that the religious worship of God is no novel invention but the good old way, truth having got the start of error and piety of profaneness; that it is good for children to be trained up betimes in religious services; that we should honour God with what we have, according as he has prospered us; and that hypocrites may be found going as far as the best of God's people in the external services of religion, since Cain's offering is even mentioned first, as if he were the more forward of the two."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Cain's offering: 'and in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD' — at some appointed or customary time ('in process of time,' at the end of days), the brothers bringing offerings to God (the bringing of offerings showing that the worship of God by sacrifice was already practiced, man approaching God with gifts); 'Cain brought of the fruit of the ground an offering' (Cain, the farmer, bringing of his produce, the fruit of the ground, the offering of the kind suited to his calling, whether the kind of offering or the heart behind it was at fault considered in vv.4-5, Cain's offering a bloodless gift of the ground's produce); 'an offering (minchah, a gift) unto the LORD' (the bringing of an offering showing that sacrifice and the worship of God were established, men acknowledging God and bringing him offerings, the practice of offering pointing to the recognition of God's claim and, in the right offering, of man's need, the question of acceptance, vv.4-5, turning on the offerer and the offering) — Keil and Delitzsch, Gill, Henry, Clarke."
+    "summary": "Clarke inclines to the sabbath, since divine worship was certainly instituted in that family, and describes the worship as very simple in its original institution and consisting of two parts, thanksgiving to God as the author of all the bounties of nature and piacular sacrifices to his justice and holiness, implying conviction of sinfulness, confession, and faith in the promised Deliverer; of Cain's own offering he notes that the word is the one explained in Leviticus as an offering of fine flour with oil and frankincense. Wesley leaves the season open and settles for some set time."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD",
-   "Cain bringing an offering of the fruit of the ground",
-   "the worship of God by sacrifice already practiced",
-   "Cain's bloodless gift of the ground's produce"
+   "at the end of days, whether of the week or of the year",
+   "a divine appointment of sacrifice given to Adam",
+   "hypocrites going as far as the best in outward service"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
+   "Charles Ellicott",
    "Jamieson, Fausset and Brown",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "4-5",
+  "pericope_label": "Abel brought of the firstlings of his flock; the LORD had respect unto Abel and his offering",
   "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke (with Gill): Abel brought of the firstlings of his flock and the fat — an animal sacrifice, the firstborn lambs, frequently used in sacrifice and a fitting type of Christ, the slain Lamb, Abel's offering involving the death of an animal and the shedding of blood; the LORD had respect to Abel because, by faith, he offered 'a more excellent (pleiona, fuller) sacrifice' (Hebrews 11:4), professing faith in the promised Messiah, feeling his need of atonement, offering a vicarious, bloody sacrifice prefiguring Christ; the kind of offering (a blood-sacrifice owning sin and atonement) marking his faith, in contrast to Cain's bloodless fruit of the ground which acknowledged God as Creator but not the need of atonement."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: God 'had respect unto Abel' FIRST, and then to his offering — the offerer's faith and heart accepted before the gift, God looking first to the man and then to his sacrifice, the difference between the brothers lying in faith and the heart, not merely in the matter offered; Gill and JFB join faith and the fitting sacrifice (Abel's faith, expressed in the right, atoning blood-sacrifice, accepted, perhaps God showing his acceptance by fire from heaven consuming it); the person must be accepted before the offering, and Abel's faith made his sacrifice acceptable, while Cain, lacking faith, was rejected with his offering."
+    "summary": "Gill takes the firstlings as a type of Christ, Jehovah's firstborn, the Lamb of God without spot or blemish, fitly signified by a lamb for his innocence, harmlessness and meekness, and denies that the matter of Cain's offering was the difficulty, putting it down rather to its being brought in a formal and hypocritical manner. Calvin notes the order Moses observes, since he does not say the oblation pleased God but begins with the person, signifying that God regards no works whose doer is not already accepted; man sees what is apparent, but God looks into the heart. He will not have the Hebrews' account that the sacrifice was consumed by celestial fire, since we ought not to invent miracles for which we have no testimony of Scripture, and thinks Cain judged rather from what followed. In him Calvin sees the likeness of every wicked man who wishes to be esteemed just, labouring at external works while presenting God with a mask."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports Kennicott's reading, that Abel brought a gratitude offering like his brother's and besides it a victim from the first-born of his flock, by which alone he acknowledged himself a sinner, though he notes that Magee has criticised the distinction and thinks little is gained by the counter-criticism; on Cain's anger he observes that the displeasure which should have been turned against his own unhumbled heart was turned against an innocent brother. Wesley sets out three differences, in the persons, in the offerings, since Cain's was only a sacrifice of acknowledgment while Abel's was one of atonement, and greatest of all that Abel offered in faith; in the fallen countenance he finds not so much grief as malice and rage."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Jamieson, Fausset and Brown look at the verb of acceptance, which signifies to look at a thing with a keen earnest glance and has been rendered to kindle into a fire, so that the divine approval of Abel's offering was shown in its being consumed. Ellicott renders the Hebrew of the anger as it burned to Cain exceedingly, his heart being full of hot indignant feelings at the preference shown to a younger brother."
    }
   ],
   "debates": [
    {
-    "question": "Why was Abel's offering accepted and Cain's rejected?",
-    "sides": [
+    "question": "How did Cain know that his brother's offering was preferred?",
+    "positions": [
      {
-      "position": "Abel's faith and heart — the person (the offerer) accepted before the gift; the difference lay in faith, not the matter (Hebrews 11:4)",
+      "position": "by fire from heaven, the verb of acceptance itself meaning to kindle into a fire",
       "holders": [
-       "Calvin",
-       "Gill",
-       "JFB"
+       "Jamieson, Fausset and Brown",
+       "John Wesley"
       ]
      },
      {
-      "position": "The kind of offering — Abel's atoning blood-sacrifice (the firstling, prefiguring Christ) vs Cain's bloodless fruit, which owned no need of atonement",
+      "position": "not by any miracle, for which Scripture gives no testimony, but from the events that followed",
       "holders": [
-       "Clarke",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "Both joined — Abel's faith expressed in the fitting, atoning sacrifice",
-      "holders": [
-       "the combined reading (most)"
+       "John Calvin"
       ]
      }
     ]
@@ -162,134 +286,155 @@
   ],
   "outliers": [],
   "themes": [
-   "Abel... brought of the firstlings of his flock and of the fat thereof. And the LORD had respect unto Abel and to his offering",
-   "Abel's accepted offering",
-   "the crux of the ground of acceptance (faith and heart, or the atoning sacrifice)",
-   "the firstling a type of Christ, the slain Lamb"
+   "the LORD had respect unto Abel and to his offering",
+   "the person accepted before the work",
+   "Cain was very wroth, and his countenance fell"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rejection and Cain's wrath: 'but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell' — God not accepting Cain or his offering (the rejection of the person and his gift, Cain, lacking faith, Hebrews 11:4, and bringing a bloodless offering without the sense of sin and atonement, not accepted, the contrast with Abel, v.4, pointed); 'Cain was very wroth (greatly angry)' (instead of repenting and amending, Cain filled with wrath, his anger directed against God, who rejected him, and against Abel, who was accepted, the sin of envy and rage rising in his heart, the rejection, which should have led to repentance, kindling wrath); 'his countenance fell' (Cain's face falling, betraying his inward anger, envy, and dejection, the outward sign of the sullen, wrathful heart, the fallen countenance marking the beginning of the path that leads to murder, God's question, v.6, addressing this very anger and dejection) — Ellicott, Gill, Calvin, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell",
-   "the rejection of Cain's offering and his wrath",
-   "the rejection met with envy and rage instead of repentance",
-   "the fallen face betraying the sullen, wrathful heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
-   "John Calvin"
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
   ],
+  "range": "6",
+  "pericope_label": "The LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "God questions Cain: 'and the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?' — God, in mercy, questioning Cain about his anger and dejection (the question a gracious expostulation, meant to bring Cain to reflect on the unreasonableness of his wrath and to turn him from the path of sin, God reasoning with the angry man before he sins further); 'Why art thou wroth?' both a rebuke of Cain's groundless anger and a call to self-examination (Cain's wrath unjust — against God for a just rejection, and against his innocent brother — the question inviting Cain to consider and amend, God dealing patiently with the sinner); 'why is thy countenance fallen?' (God noting Cain's fallen countenance, the sign of his sullen, envious heart, the question pressing him to examine the cause of his dejection — not God's injustice but his own fault — the remedy, v.7, lying in doing well, God's gracious question seeking to forestall the coming sin) — Gill, Henry, Calvin, Clarke."
+    "summary": "Gill says the question was not asked in ignorance of Cain's wrath but to bring him to a conviction of the sins which had caused his sacrifice to be rejected, and so to repentance and amendment, and to show him that he had no cause to be displeased with God or with his brother, the fault lying in himself. Calvin takes the address as a citation to God's tribunal, that the wretched man might understand his rage could profit him nothing; and on the manner of the speaking he rejects the suggestion that Adam spoke as the prophet and interpreter of God, calling it constrained and even frigid. He understands what good men intend by such a fancy, namely to honour the external ministry of the word and to cut off the occasion Satan takes to insinuate illusions under colour of revelation, and grants that nothing is more useful than that pious minds be kept under the order of preaching; yet the word was delivered from the beginning by oracles, and they who think God spoke only through his ministers too violently restrict the words of Moses."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes it an instance of God's patience and condescending goodness that he should deal thus tenderly with so bad a man in so bad an affair, and sets the scene beside the father of the prodigal arguing with his elder son. From the form of the question he takes a lesson in self-examination, that God notices all our sinful passions, since there is not an angry look, an envious look, nor a fretful look that escapes his observing eye, and that most of our sinful heats would vanish before a strict enquiry into their cause: why am I wroth, is there a real cause, a just cause, a proportionable cause for it? He adds that Cain had no reason to be angry with God, who proceeded by the settled rules of a government suited to a state of probation, setting before men life and death and rendering to them according to their works."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the question a gracious warning and a preventive of the meditated crime."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?",
-   "God questioning Cain's anger",
-   "the gracious expostulation rebuking groundless wrath",
-   "God reasoning with the sinner to forestall the coming sin"
+   "why is thy countenance fallen?",
+   "God reasoning with a murderer before the murder",
+   "whether the voice was God&rsquo;s own or Adam&rsquo;s"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  },
  "7": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "7",
+  "pericope_label": "If thou doest well, shalt thou not be accepted? and if not, sin lieth at the door",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The way of acceptance and the warning: 'if thou doest well, shalt thou not be accepted (lifted up)? and if thou doest not well, sin lieth at the door' — God setting before Cain the way of acceptance (if he does well, with faith and a right heart, he will be accepted, his fallen countenance lifted up, the rejection not arbitrary, the remedy in Cain's own doing well). Keil and Delitzsch read 'sin (chattath) lieth (rovets — croucheth, as a beast of prey) at the door' — sin pictured as a wild beast crouching at the door, ready to spring on Cain if he does not well; and 'unto thee shall be his desire, and thou shalt rule over him' of SIN — sin's desire toward Cain to master him, but he ought to rule over it (the same words as 3:16, applied to sin, the call to master the sin lying in wait)."
+    "summary": "Gill allows a general and a particular sense, either doing good works in a right manner, whence the saying that not nouns but adverbs make good works, or offering rightly, in the faith of the promised seed. Calvin surveys the older attempts and rejects most: the Greek translators, working before the vowel points, struck into an extraneous sense, while among those who keep the Hebrew some refer the word to Cain's countenance, some to the remission of sins, and some to honour. His own reading is that it means acceptance, opposed to rejection, and refers to the sacrifices, God being ready to receive them with outstretched hands if they ceased to be faulty; and he presses that the blame of the whole evil lay with Cain, who did what wicked men do when convicted, trying vainly to transfer the cause of the evil to others."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a second reading takes chattath as 'a sin-offering' — 'a sin-offering lieth (coucheth) at the door': even now a sin-offering is available to Cain at hand, if he will use it, the way of atonement open; and 'unto thee shall be his desire, and thou shalt rule over him' Clarke refers not to sin but to ABEL — Abel's desire (deference) shall be to Cain as the elder, and Cain shall rule over him as the firstborn, so Cain need not envy, his birthright standing. The phrases turn on whether chattath is 'sin' (a crouching beast) or 'sin-offering' (at hand), and whether the desire/rule is sin's (to be mastered) or Abel's (the deferring younger brother)."
+    "prevalence": "several",
+    "summary": "Clarke takes the noun in a sense he says he has traced through more than a hundred places of the Old Testament, a sin-offering, so that an animal proper for atonement is now couching at the door of Cain's fold; his fault had been to bring none when his brother brought one, and God graciously tells him his case is not yet desperate, since how many sinners perish, not because there is no Saviour able and willing, but because they will not use what is within their power. On the last clause he says expressly that the words are not spoken of sin, as many have understood, but of Abel's submission to Cain as his superior, to remove Cain's envy. Wesley keeps the shortest sense: sin only hinders his acceptance; and he draws out two readings of the first clause, either that Cain would have been accepted had he done well, since there is not a damned sinner in hell but, had he done well, had been a glorified saint in heaven, or that he might yet be accepted if he would repent, which shows how early the gospel was preached."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott calls this the most difficult verse of the chapter, capable of a satisfactory sense if we refuse to read the ideas of a later age into so ancient a narrative; literally it asks, if thou doest well, is there not lifting up, the promise being that instead of a downcast look Cain shall lift up his head and have peace beaming in his eyes from a quiet conscience. He gives two constructions of the second half and prefers the second, since though sin may be pictured crouching like a beast of prey at the door, sin is feminine while the verb and pronouns are masculine, an objection most Jewish interpreters override with what he calls a feeble explanation; on the second construction the desire and the rule belong to the brother. He fills in the circumstances of the jealousy and reads the remonstrance as evidence of a struggle in Cain's conscience, since Jehovah would not have reasoned thus kindly with a man altogether reprobate."
    }
   ],
   "debates": [
    {
-    "question": "What does 'sin lieth at the door... unto thee shall be his desire' mean?",
-    "sides": [
+    "question": "What lies at the door?",
+    "positions": [
      {
-      "position": "'Sin' crouches at the door like a beast; its desire is toward Cain to master him, but he must rule over it",
+      "position": "a sin-offering, an animal proper for atonement couching at the door of the fold",
       "holders": [
-       "Keil and Delitzsch",
-       "the crouching-sin reading"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "'A sin-offering' lies at the door, available to Cain; and the desire/rule refers to Abel (the deferring younger brother, as the firstborn's right)",
+      "position": "sin itself, crouching like a beast of prey, though the grammar tells against making it the subject of what follows",
       "holders": [
-       "Clarke",
-       "the sin-offering reading"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "sin as the one hindrance to acceptance",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Whose is the desire in the last clause?",
+    "positions": [
+     {
+      "position": "Abel&rsquo;s, submitting to his elder brother; the words are not spoken of sin at all",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley",
+       "Charles Ellicott"
       ]
      }
     ]
@@ -297,726 +442,84 @@
   ],
   "outliers": [],
   "themes": [
-   "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him",
-   "God's warning to Cain (the crux of 'sin lieth at the door')",
-   "sin as a crouching beast, or a sin-offering at hand",
-   "the desire and rule referring to sin (to be mastered) or to Abel"
+   "if thou doest well, is there not lifting up?",
+   "sin, or a sin-offering, lieth at the door",
+   "unto thee shall be his desire, and thou shalt rule over him"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The first murder: 'and Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him' — Cain, harboring envy and wrath (vv.5-7), drawing his brother into the field (away from witnesses) and there killing him (the first murder, premeditated and treacherous, the wrath God warned against, v.7, issuing in fratricide); 'Cain rose up against Abel his brother, and slew him' (the murder of a brother, the righteous by the wicked, 1 John 3:12, 'Cain... slew his brother. And wherefore? Because his own works were evil, and his brother's righteous,' the first death a murder and a fratricide, the fruit of envy, unbelief, and unmastered sin, the enmity of the serpent's seed against the woman's, 3:15, breaking out in blood); Cain not mastering the sin crouching at the door (v.7) but letting it master him (the unrepented wrath growing into murder, the dreadful example of sin unchecked, Abel, the first martyr, falling by his brother's hand) — Keil and Delitzsch, Gill, Henry, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cain... when they were in the field, that Cain rose up against Abel his brother, and slew him",
-   "the first murder - Cain slaying Abel",
-   "the righteous slain by the wicked (1 John 3:12), the fruit of unmastered sin",
-   "the enmity of the serpent's seed breaking out in blood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "8",
+  "pericope_label": "Cain rose up against Abel his brother, and slew him",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's question and Cain's denial: 'and the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?' — God questioning Cain, as he questioned Adam (3:9), not of ignorance but to bring Cain to confession and conviction (the question pressing the murderer to account for his brother, God giving Cain opportunity to confess); 'I know not' a brazen lie added to the murder (Cain denying knowledge of his brother's whereabouts, hardening himself in his sin, the murderer adding falsehood to bloodshed, the impenitence and hardness of Cain who will not confess); 'Am I my brother's keeper?' a rude, insolent rejection of responsibility (denying any duty toward his brother, the callous, defiant words of the hardened sinner, instead of repenting Cain disowning all concern for Abel, the cold-heartedness of the murderer who casts off both truth and brotherly duty, the contrast with God's care for the slain) — Keil and Delitzsch, Henry, Calvin, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?",
-   "God's question and Cain's hardened denial",
-   "the brazen lie and insolent denial of responsibility",
-   "the impenitence and hardness of the murderer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abel's blood crying out: 'and he said, What hast thou done? the voice of thy brother's blood crieth unto me from the ground' — God now charging Cain directly, 'What hast thou done?' (an exclamation of horror and a charge of the dreadful deed, God, who knows all, confronting Cain with the enormity of his sin, the murder unable to be hidden from God); 'the voice of thy brother's blood (bloods, in the plural) crieth unto me from the ground' (Abel's shed blood crying out to God for vengeance, the blood, soaked into the ground, crying from the earth, the figure of the murdered innocent crying to God for justice, Hebrews 12:24, the blood of Abel; Revelation 6:10, the souls under the altar, God hearing the cry of the oppressed and avenging blood); the crying blood the witness against the murderer (though Cain denied and lied, v.9, the blood itself testifying, God the avenger of blood, the innocent blood crying out and God answering with judgment, vv.11-12, no murder hidden from God) — Keil and Delitzsch, Gill, Calvin, JFB, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What hast thou done? the voice of thy brother's blood crieth unto me from the ground",
-   "Abel's blood crying out from the ground",
-   "the murdered innocent's blood crying to God for vengeance",
-   "the witness against Cain that no lie could silence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The curse on Cain: 'and now art thou cursed from the earth, which hath opened her mouth to receive thy brother's blood from thy hand' — Cain cursed, the curse coming 'from the earth,' which had received Abel's blood (the very ground that drank the innocent blood becoming the instrument or sphere of Cain's curse, the murderer cursed in relation to the earth); whereas the ground was cursed for Adam's sin (3:17), now Cain himself cursed (a heavier curse on the person of the murderer, Cain cursed from/by the earth, which will no longer yield to him, v.12, the curse falling personally on Cain for his crime); 'which hath opened her mouth to receive thy brother's blood from thy hand' (the ground, as it were, drinking the blood Cain shed, the blood from Cain's hand soaking into the earth, the figure marking both the enormity of the crime — the earth defiled with innocent blood — and the ground of the curse — the earth, defiled by Cain, turning against him) — Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "now art thou cursed from the earth, which hath opened her mouth to receive thy brother's blood from thy hand",
-   "the curse on Cain from the earth",
-   "the murderer personally cursed, a heavier curse than Adam's",
-   "the earth defiled by innocent blood turning against him"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cain's sentence: 'when thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth' — the curse striking Cain's calling (he was a tiller of the ground, v.2): the ground no longer yielding its strength (its full produce) to him (his labor frustrated, the earth barren to him, the murderer's toil cursed, his farming, already under the general curse, 3:17-19, now made fruitless, the earth not rewarding his toil, the murderer punished in the very calling he followed); 'a fugitive and a vagabond shalt thou be in the earth' (Cain condemned to a restless, wandering, unsettled life, driven from place to place, without rest or settled home, the figure of the guilty conscience and the outcast life of the murderer, Cain becoming a homeless wanderer, marked by his crime) — Keil and Delitzsch, Gill, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth",
-   "Cain's sentence - the barren ground and the wandering life",
-   "the curse striking his calling, the earth fruitless to him",
-   "Cain condemned to a restless, homeless wandering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cain's despairing complaint: 'and Cain said unto the LORD, My punishment is greater than I can bear' — the words rendered 'My punishment is greater than I can bear' (the common reading) or 'My iniquity is greater than can be forgiven' (an alternative rendering, the Hebrew avon meaning both 'iniquity' and 'punishment'); on the first reading, Cain complaining of the severity of his sentence (despair, not repentance, expressing not penitence but despairing complaint, feeling the weight of his punishment but not truly repenting, the sorrow of the world not godly sorrow, lamenting his misery not his sin, the despair of the hardened who feel the punishment but not the guilt); on the second reading, Cain despairing of forgiveness (his guilt too great to be forgiven); whether read as complaint of punishment or despair of pardon, Cain's words lacking true repentance (he not seeking mercy but bemoaning his lot, the contrast with the penitent who casts himself on God's mercy) — Henry, Calvin, Clarke, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "My punishment is greater than I can bear",
-   "Cain's despairing complaint (the rendering 'punishment' or 'iniquity... greater than can be forgiven')",
-   "the sorrow of the world, not godly sorrow",
-   "Cain bemoaning his misery without true repentance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cain's lament and fear: 'behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me' — Cain lamenting that he is driven out from his settled place and (more grievously) from God's presence and favor (the exile from the face of the earth, his land, and from God's face, his fellowship and the place of worship, the alienation of the murderer from God and home); Cain owning his sentence (v.12), a restless, wandering, homeless life (feeling the misery of the outcast lot, the punishment weighing on him); 'every one that findeth me shall slay me' (Cain fearing that, as a wandering outcast, he will be killed by any who find him — avengers of Abel's blood, or others — the guilty conscience dreading retribution, the murderer fearing the very violence he committed, the terror of the guilty, haunted by the fear of death) — Gill, Clarke, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou hast driven me out this day from the face of the earth; and from thy face shall I be hid... every one that findeth me shall slay me",
-   "Cain's lament over his fate and fear of being slain",
-   "the exile from his land and from God's presence",
-   "the terror of the guilty conscience dreading retribution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sevenfold vengeance and the mark: 'and the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him' — God, in answer to Cain's fear (v.14), declaring that whoever kills Cain will be punished sevenfold (God protecting the life even of the murderer from private vengeance, the threat restraining any from killing Cain, the divine prerogative over life and vengeance asserted); God's sevenfold threat an act of restraint and, in a sense, mercy (Cain spared immediate death and protected from being slain, God reserving vengeance to himself, the murderer preserved alive to live out his cursed, wandering life as a warning, God's forbearance even toward the guilty); 'the LORD set a mark (a sign) upon Cain' (God setting a mark or sign for Cain's protection, whether a visible mark on his person or a sign given to him for assurance, the mark not primarily a brand of shame but a protective token, lest any finding him should kill him, the divine guarantee of Cain's preservation, God's mark shielding the murderer's life) — Gill, Ellicott, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him",
-   "the sevenfold vengeance threatened and the mark of Cain",
-   "God protecting the murderer's life, reserving vengeance to himself",
-   "the mark a protective token, sparing Cain to live out his cursed wandering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cain departs to Nod: 'and Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden' — Cain departing from the place of God's special presence (the place of worship, perhaps near Eden, where God manifested himself, the murderer leaving the presence and fellowship of God, whether a willful departure or the consequence of his sentence, Cain becoming an outcast from God, the alienation of the sinner from God sealed); Cain's going out from God's presence marking his estrangement (he leaving the worship and fellowship of God, the wicked, unrepentant, withdrawing from God, Cain's departure the sad picture of the apostate, cut off from God's presence); 'dwelt in the land of Nod (which means 'wandering'), on the east of Eden' (Cain settling in the land of Nod, east of Eden, the name 'Nod' fitting his sentence as a fugitive and vagabond, further east from Eden, the direction of increasing distance from God's garden, Cain's dwelling-place marking his outcast, wandering estate) — Keil and Delitzsch, Henry, Calvin, JFB, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cain went out from the presence of the LORD, and dwelt in the land of Nod, on the east of Eden",
-   "Cain departing from God's presence to the land of Nod",
-   "the alienation of the unrepentant sinner from God",
-   "the land of 'wandering' fitting his fugitive sentence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Cain's son and city: 'and Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch' — Cain having a son, Enoch (a different Enoch from the godly Enoch of Seth's line, 5:18), Cain's wife one of Adam's daughters (his sister or near kin, the race propagating from the first pair, the line of Cain beginning); 'he builded a city' (the first city, built by Cain, whether a fortified settlement, Cain, the restless wanderer, seeking security and a settled place against his fear, v.14, or the beginning of urban civilization in Cain's line, the city marking the development of human society but founded by the murderer and his line); 'called the name of the city, after the name of his son, Enoch' (naming the city after his son, whether to perpetuate his name and dynasty, or to establish a settled, secure life in defiance of his wandering sentence, Cain's line developing the arts of civilization, vv.20-22, yet apart from God, the city of Cain standing over against the people who call on the LORD, v.26) — Keil and Delitzsch, Gill, Ellicott, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch",
-   "Cain's son Enoch and the building of the first city",
-   "the line of Cain beginning, the first city built",
-   "the development of civilization by the murderer's line apart from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The genealogy of Cain's line: 'and unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael begat Methusael: and Methusael begat Lamech' — the genealogy tracing Cain's line through five generations to Lamech (the descent from Cain through Enoch, Irad, Mehujael, Methusael, to Lamech, the line of the murderer's posterity recorded); the names marking the generations of Cain's line (the genealogy brief, listing only the succession to Lamech, in whom the line's character, vv.19-24, is displayed, the descendants of Cain multiplying and developing but apart from God); the line of Cain set over against the line of Seth (ch. 5), the two genealogies tracing the two seeds (3:15) — the line of Cain (the city-builders, the inventors, but godless) and the line of Seth (who call on the LORD, v.26), the genealogy of Cain leading to Lamech, the boastful avenger, vv.23-24, marking the line's moral decline — Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael begat Methusael: and Methusael begat Lamech",
-   "the genealogy of Cain's line to Lamech",
-   "the line of the murderer's posterity, developing apart from God",
-   "the line of Cain set over against the line of Seth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lamech's two wives: 'and Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah' — Lamech, of Cain's line, taking two wives (the first recorded instance of polygamy, Lamech breaking the original ordinance of marriage — one man and one woman, one flesh, 2:24 — the corruption of marriage in Cain's godless line); Lamech's taking of two wives a departure from God's institution of marriage (2:24, where the two are one flesh, polygamy, contrary to the creation ordinance, beginning in Cain's line, the corruption of the marriage bond marking the moral decline of the ungodly seed, what God joined as one fallen man multiplying); the polygamy of Lamech, with his boastful violence (vv.23-24), marking the character of Cain's line (departing from God's order in marriage and in conduct, the ungodly line developing the arts, vv.20-22, but corrupting God's institutions, the contrast with the godly line of Seth) — Gill, Henry, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah",
-   "Lamech taking two wives - the first polygamy",
-   "the corruption of marriage, contrary to God's institution (2:24)",
-   "the moral decline of Cain's godless line"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jabal the herdsman: 'and Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle' — Jabal, son of Lamech, the founder (father, originator) of the nomadic, pastoral way of life (dwelling in tents and keeping cattle, developing the art of herding and the tent-dwelling, migratory life, the first of the herdsmen-nomads); Jabal 'the father' the originator or pattern of the pastoral life (the arts of human society — herding here, music and metalwork, vv.21-22 — developing in Cain's line, the cultural advances of mankind arising even in the godless line, God's gifts of skill and invention spread though the line is apart from God); the arts and civilization advancing in Cain's line (Jabal the herdsman, Jubal the musician, Tubal-cain the metalworker, the development of human culture, yet this progress, in the line of Cain, apart from God and accompanied by moral decline — Lamech's polygamy and violence — the gifts of civilization and the absence of godliness coexisting in the seed of Cain) — Gill, Clarke, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle",
-   "Jabal, father of tent-dwelling herdsmen",
-   "the rise of the pastoral art in Cain's line",
-   "the arts of civilization developing apart from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jubal the musician: 'and his brother's name was Jubal: he was the father of all such as handle the harp and organ' — Jubal, brother of Jabal, the founder (father, originator) of music (the inventor or first master of the harp, a stringed instrument, and the organ, a wind/pipe instrument, developing the art of music, the first of the musicians); Jubal 'the father' the originator of instrumental music (the harp and organ, representing stringed and wind instruments, marking the development of music as an art, the cultural gift of music arising in Cain's line, the arts of civilization — herding, music, metalwork — developing together); music, like the pastoral and metalworking arts (vv.20, 22), a gift and skill developed in Cain's line (the arts advancing, yet apart from God, the use of music for God's glory or, in the godless line, for pleasure and worldliness, the development of culture in the seed of Cain, marked by both skill and ungodliness) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his brother's name was Jubal: he was the father of all such as handle the harp and organ",
-   "Jubal, father of music",
-   "the rise of the musical art in Cain's line",
-   "the arts of civilization developing apart from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Tubal-cain the metalworker: 'and Zillah, she also bare Tubalcain, an instructer of every artificer in brass and iron: and the sister of Tubalcain was Naamah' — Tubal-cain, son of Lamech, the founder of metalworking (the teacher and master of all who work in brass — copper/bronze — and iron, developing the art of forging metals, making tools, weapons, and implements, the first of the smiths); 'an instructer (sharpener, forger) of every artificer in brass and iron' the originator of metalworking (the working of metals marking a major advance in human civilization — tools, weapons, agriculture, war — the arts of metallurgy arising in Cain's line, the cultural gifts developing though apart from God); 'the sister of Tubalcain was Naamah' (Naamah, 'pleasant' or 'lovely,' named, perhaps as a notable woman of the line, the naming of a woman unusual in the genealogy, whether for her beauty, her notoriety, or some tradition, she recorded, the line of Cain, with its arts and its women, set down) — Gill, Clarke, JFB."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zillah... bare Tubalcain, an instructer of every artificer in brass and iron: and the sister of Tubalcain was Naamah",
-   "Tubal-cain, father of metalworking",
-   "the rise of metallurgy in Cain's line",
-   "the arts of civilization developed apart from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lamech's boastful song: 'and Lamech said unto his wives, Adah and Zillah, Hear my voice; ye wives of Lamech, hearken unto my speech: for I have slain a man to my wounding, and a young man to my hurt' — Lamech addressing his wives in a poetic, boastful speech (the first recorded poetry, a song of violence, summoning their attention to his vaunting words, the arrogant, self-glorying tone of the ungodly Lamech); 'I have slain a man to my wounding (for wounding me), and a young man to my hurt (for hurting me)' (Lamech boasting of having killed a man, and a young man, in revenge for a wound, whether he killed in self-defense or boasts of his readiness to kill any who cross him, the violence and vengefulness of Lamech, glorying in bloodshed, the moral decline of Cain's line now boasting of murder); Lamech's song revealing the spirit of Cain's line — violent, vengeful, and boastful (in contrast to Cain, who feared retribution, 4:14, Lamech glorying in his power to avenge himself many times over, v.24, the swaggering pride of the godless seed) — Gill, Henry, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Lamech said unto his wives, Adah and Zillah, Hear my voice... for I have slain a man to my wounding, and a young man to my hurt",
-   "Lamech's boastful song of violence",
-   "the violent, vengeful spirit of Cain's line",
-   "the godless line glorying in bloodshed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lamech's boast of vengeance: 'if Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold' — Lamech, completing his boast (v.23), claiming that if Cain's death would be avenged sevenfold (4:15), his own would be avenged seventy-sevenfold (vaunting a far greater vengeance for himself, the swaggering self-assertion of the violent man); Lamech presumptuously applying God's word about Cain (the sevenfold vengeance, 4:15, which was God's protection of Cain) to his own case, magnifying it tenfold (boasting that he is more terrible than Cain, more to be avenged, the arrogant abuse of God's word, turning divine forbearance into a boast of self-vengeance); Lamech's 'seventy and sevenfold' of vengeance standing in striking contrast to Christ's 'seventy times seven' of forgiveness (Matthew 18:22, the line of Cain boasting of unlimited vengeance while the gospel calls for unlimited forgiveness, the spirit of Lamech and the spirit of Christ opposed, the moral character of Cain's line sealed in this boast) — Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold",
-   "Lamech's boast of greater vengeance than Cain",
-   "the presumptuous abuse of God's word, boasting of unlimited self-vengeance",
-   "the contrast with Christ's unlimited forgiveness (Matthew 18:22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The birth of Seth: 'and Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew' — after the loss of Abel (slain) and the departure of Cain (cursed), Adam and Eve having another son, Seth (whose name relates to 'appointed' or 'set'), the birth of Seth beginning a new, godly line (ch. 5), through which the promised seed would come; Eve naming her son Seth, saying 'God hath appointed me another seed instead of Abel, whom Cain slew' (acknowledging God's gift of another seed to replace the murdered Abel, her words expressing faith and hope: God has not let the godly seed fail but has appointed another in Abel's place, the promise, 3:15, continuing through Seth, Eve's faith laying hold of God's provision); Seth replacing Abel as the head of the godly line (the seed of the woman, in contrast to the line of Cain, through Seth and his descendants, ch. 5, the line of promise continuing to Noah and ultimately to Christ, God preserving a godly seed despite the murder of Abel and the apostasy of Cain) — Ellicott, Gill, Calvin, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Adam knew his wife again; and she bare a son, and called his name Seth: For God, said she, hath appointed me another seed instead of Abel, whom Cain slew",
-   "the birth of Seth and the renewal of the godly line",
-   "God appointing another seed in Abel's place",
-   "the line of promise renewed in Seth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The beginning of calling on the LORD: 'and to Seth, to him also there was born a son; and he called his name Enos: then began men to call upon the name of the LORD' — Seth having a son, Enos (whose name means 'man,' especially man as frail, mortal), the godly line continuing through Seth to Enos. Keil and Calvin (and Gill) read 'then began men to call upon the name of the LORD' as the beginning of public worship and the invocation of God: men, in Seth's line, beginning to call upon (invoke, worship, pray to) the name of the LORD — the public, corporate worship of God beginning, the godly distinguishing themselves by their worship, the rise of religious assembly and prayer, in contrast to the godless line of Cain."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Alternative readings noted: a second (the margin) takes it as 'then began men to be called by the name of the LORD' — the godly beginning to be called the sons of God, distinguished by his name as his people; a third (the Jewish/Targumic) renders it negatively, 'then began profanation' / 'then men began to profane,' the beginning of idolatry, men beginning to profane the name or to make idols and worship the stars. The dominant Christian tradition (with Clarke) reads it of the beginning of public worship — the godly line of Seth beginning the open, public invocation and worship of the LORD, the rise of true religion in Enos's day."
+    "prevalence": "several",
+    "summary": "Gill passes on the Jerusalem Targum's report of the brothers' talk, Cain arguing that there is no judgment and no Judge and no mercy in the world's creation or government, and Abel answering point by point. Calvin weighs two accounts of the talking: either Cain dissembled and spoke familiarly to keep up an appearance of fraternal concord until the opportunity came, whence the rule that hypocrites are most to be dreaded when they converse under the pretext of friendship, or, as he rather inclines to think, he broke out in open accusation against his brother."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets down the aggravations. It was his own brother, whom he ought to have loved, and a younger brother, whom he ought to have protected; a good brother, who had never provoked him in word or deed; he had fair warning and persisted; he covered the design with a show of friendship, as Joab kissed Abner and Absalom feasted Amnon; and in killing him he struck directly at God, since God's accepting Abel was the provocation pretended, and he hated Abel for the very reason that God loved him. The murder was the more inhuman because there were then so few men in the world. He traces the root as well: Adam's eating of forbidden fruit seemed but a little sin and opened the door to the greatest, and as Abel leads the van in the noble army of martyrs, so Cain stands in front of the ignoble army of persecutors."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the Hebrew says only that Cain said to his brother, the best editions leaving a space with a mark referring to a note that something is wanting; the deficiency is supplied by the Samaritan text, the Syriac, the Vulgate, the Septuagint, the Targums and the Coptic, all reading, let us go out into the field, and since the words are lost from every known manuscript and yet stood in copies used before the Christian era, he thinks they may safely be counted part of the sacred text. He supposes the first murder was the fruit of a religious dispute, and remarks that millions have since been sacrificed to bigotry and intolerance, here having originated the many-headed monster of religious persecution. He marks what was new: this is Satan's first triumph, not merely a death but a violent one, not of an ordinary person but of the most holy man then living, and by a brother's hand. Wesley turns to the other side: the first who dies is a saint, and the first to the grave went to heaven."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott is more cautious about the addition: no Hebrew authority but the Jerusalem Targum supports it, though the versions carry great weight, the Hebrew manuscripts being all comparatively modern and representing only the Masoretic recension. He rules out our version's rendering, which would imply that Cain had triumphed for a time over his anger and resumed friendly intercourse, and concludes that either we accept the versions or must regard the passage as beyond our powers. He will not have the murder premeditated, since Cain did not know what a human death was, and offers Philippson's suggestion of the perpetual struggle between husbandmen holding fixed plots and shepherds whose flocks stray on tilled ground."
    }
   ],
   "debates": [
    {
-    "question": "What does 'then began men to call upon the name of the LORD' mean?",
-    "sides": [
+    "question": "Was the murder premeditated?",
+    "positions": [
      {
-      "position": "The beginning of public worship and the invocation of God — the godly line of Seth beginning corporate worship and prayer (the common Christian reading)",
+      "position": "yes &mdash; the friendly talk was a dissembling that covered the design until opportunity served",
       "holders": [
-       "Keil and Delitzsch",
-       "Calvin",
-       "Gill",
-       "Clarke"
+       "John Calvin",
+       "Matthew Henry"
       ]
      },
      {
-      "position": "Began to be called by the name of the LORD — the godly distinguished as the sons of God, his people",
+      "position": "no &mdash; Cain did not yet know what a human death was; a quarrel over trespassing flocks turned to blows",
       "holders": [
-       "the marginal/alternative reading"
-      ]
-     },
-     {
-      "position": "Then profanation/idolatry began — men began to profane the name (the Jewish/Targumic reading)",
-      "holders": [
-       "the Jewish/Targumic reading"
+       "Charles Ellicott"
       ]
      }
     ]
@@ -1024,23 +527,757 @@
   ],
   "outliers": [],
   "themes": [
-   "to Seth... there was born a son; and he called his name Enos: then began men to call upon the name of the LORD",
-   "the birth of Enos and the beginning of calling on the LORD",
-   "the crux of the phrase (public worship vs called by God's name vs profanation)",
-   "the godly line of Seth marked by the worship of God"
+   "the words wanting in the Hebrew: let us go out into the field",
+   "the first murder as the fruit of a religious quarrel",
+   "the first that dies is a saint"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  }
+ },
+ "9": {
+  "voices": [
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "range": "9",
+  "pericope_label": "Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supposes the question came when Cain next appeared to offer without his brother, asked not from ignorance but to bring him to conviction and confession, the mention of the relation being itself an aggravation. Calvin holds that those who suppose the father made the inquiry enervate the whole instruction, since God cited the murderer to his tribunal as if he had thundered from heaven; and though he may have been interrogated by the silent examinations of conscience, it was by a divine voice and not by the voice of a man. From this he draws his chief lesson, that as often as the secret compunctions of conscience invite us to reflect upon our sins we should remember that God himself is speaking with us, that interior sense being his peculiar judgement-seat. He notes the cavil exactly: Cain thinks to escape by pleading he had no express command to take care of his brother."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets it as a trial, since civil courts were not yet erected and God himself sits Judge; some think Cain was examined on the next sabbath, when the sons of God came to present themselves before the Lord and Abel was missing, whose place did not use to be empty, for the God of heaven takes notice who is present at and who is absent from public ordinances. He finds Cain covering a deliberate murder with a deliberate lie, so that in him the devil was both murderer and liar from the beginning; those are strangely blind who think it possible to conceal their sins from a God who sees all, and strangely hard who think it desirable to conceal them from a God who pardons only those that confess. He ends on the duty the retort denies: a charitable concern for our brethren as their keepers is strictly required and generally neglected."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley gives the impudence plainly, that surely he is old enough to take care of himself, and adds the reflection some have heard in it upon providence, Art not thou his keeper?"
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil states the rule shortly: defiance grows with sin and punishment keeps pace with guilt, since Adam and Eve feared before God and acknowledged their sin while Cain boldly denies his. Ellicott reconstructs the state of mind, since Cain went away at first scarcely conscious of the greatness of his crime, having asserted his rights against a younger son's usurpation of his privileges, but could not quiet his conscience, and when Abel came not to the household and the question was asked, the voice of God repeated it in his own heart."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "I know not: am I my brother&rsquo;s keeper?",
+   "conscience as the judgement-seat of God",
+   "a charitable concern for our brethren as their keepers"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  }
+ },
+ "10": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "10-11",
+  "pericope_label": "The voice of thy brother's blood crieth unto me from the ground: now art thou cursed",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the curse to mean that Cain is cut off from the benefit of the earth and from any settled dwelling in it. Calvin reads the sentence as a court scene brought to its end, since God no longer asks whether the thing was done but pronounces in a single word that Cain was the doer; advocates place their first defence in denying the fact and where it cannot be denied have recourse to qualifying circumstances, and Cain is driven from both. Three things he finds shown: that God is cognizant of men's deeds though none accuse them; that he holds the life of man too dear to let innocent blood be shed with impunity; and that he cares for the pious after death as well as before, since Abel was speechless when his throat was being cut, yet after death the voice of his blood was more vehement than any eloquence of an orator. On the ground he rejects the notion that cruelty is ascribed to the earth, as though it were a wild beast that had drunk the blood; rather clemency is imputed to it, there being more humanity in the earth than in the man."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supposes Cain had buried the body to prevent the murder from being known, which is what the opening of the ground implies, and mentions the opinion that the cry is that of Abel's widow and children, his occupation and sacrifices making it probable he was a father of a family. Wesley describes the figure: the words speak as if the blood were both witness and prosecutor, while the earth did as it were blush to see her face stained with such blood and opened her mouth to hide what she could not hinder; and on the choice of avenger he says God could have taken vengeance by a stroke from heaven but chose to continue him upon the earth and make even that his curse."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil quotes Delitzsch, that innocent blood has no voice discernible by human ears but has one that reaches God, murder being one of the sins that cry to heaven; he weighs two constructions of the preposition, either away from the earth, so that it afford him no quiet resting-place, or out of the earth, by its withdrawing its strength, and inclines to the second, rejecting as unsupported the notion that the soil became an accomplice by drinking the blood. Ellicott follows the thought forward: with the first shedding of human blood there sprang up the ominous conviction that the earth will grant no peace to the wretch who has stained her fair face with the life stream of man; but the blood of Jesus speaks better things than Abel's, the one voice crying for justice and retribution, the other for reconciliation and peace."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "the voice of thy brother&rsquo;s blood crieth unto me from the ground",
+   "cursed from the earth, which hath opened her mouth",
+   "the blood of Jesus speaketh better things than that of Abel"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  }
+ },
+ "12": {
+  "voices": [
+   "Adam Clarke",
+   "John Calvin",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "range": "12-13",
+  "pericope_label": "A fugitive and a vagabond shalt thou be; my punishment is greater than I can bear",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that tillage was the business Cain had been brought up in. Calvin treats the first clause as expounding the curse just pronounced, since it says more clearly that the ground defrauds its cultivator of the fruit of his toil, and answers the objection that this was already laid on all men in Adam by saying that something of the blessing hitherto remaining was now further withdrawn from the murderer. On the wandering he sets aside the distinction some draw between the two Hebrew words and says the sense is that wherever Cain came he should be as robbers are, who have no quiet resting-place; he meets the objection that to be a stranger on the earth is rather the condition of the sons of God by observing that the faithful carry a sedate mind wherever necessity drives them, whereas even the first builder of a city was always restless in his own nest. On the cry he takes the words in their proper signification, that a greater punishment is imposed than Cain can bear, so that he complains of the severity of his judgment as devils do who feel themselves justly tormented and still charge God with cruelty."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry weighs both readings of the cry. If the words are those of despair they affront the mercy of God, since there is forgiveness with the God of pardons for the greatest sinners, though those forfeit it who despair of it; just now Cain made nothing of his sin and now he is in the other extreme, Satan driving his vassals from presumption to despair. But he judges the language rather that of indignation, complaining not of the greatness of the sin but of the extremity of the punishment. He follows the complaint into parts: Cain sees himself excluded from the favour of his God, expelled from the comforts of this life, and exposed to the ill-will of all mankind, so that like a man in debt he thinks every one he meets a bailiff; and he adds Lightfoot's suggestion that the last words are a wish, that any who find him may kill him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke prefers the margin, that the words may be rendered, Is my crime too great to be forgiven, since the noun signifies the crime rather than the punishment and the verb means to remit; they were uttered, he thinks, on the verge of black despair."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil observes the answer: though Cain expressed no penitence but only fear of punishment, God displayed his long-suffering and gave a promise."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is Cain's cry despair, indignation, or a question?",
+    "positions": [
+     {
+      "position": "indignation rather than despair &mdash; a complaint of the punishment, not of the sin",
+      "holders": [
+       "Matthew Henry",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "a question uttered on the verge of black despair: is my crime too great to be forgiven?",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "when thou tillest the ground it shall not yield unto thee her strength",
+   "my punishment, or my iniquity, greater than I can bear",
+   "unpardoned guilt filling men with continual terrors"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  }
+ },
+ "14": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "14-15",
+  "pericope_label": "Every one that findeth me shall slay me; and the LORD set a mark upon Cain",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill explains the banishment as exclusion not from the earth but from a quiet settlement in it, from society and converse with its inhabitants, and especially from the ground he had manured and the place where his parents dwelt. On the particle that opens the answer he reports the rendering as two words meaning not so, denying both Cain's fear and his wish to be killed by the first man he met, and prefers verily or surely, God's will being that Cain should not die at once but live a long miserable life, for a terror to others. Calvin allows that Cain reasons justly, since the hand of God alone preserves us amid so many dangers; yet he notes what the fear reveals, that since man is a social animal it is a portentous thing that the meeting of any man should be formidable to the murderer. He rejects the Jewish reading which breaks the sentence in two and refers the sevenfold punishment to Cain himself, and holds that God grants nothing to the murderer for his own sake but consults for posterity; the mark, he says, was set to strike terror into all, who might see in it as in a mirror the tremendous judgment of God against bloody men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke counts the parts of the punishment and finds Cain adding to them: God had named the cursed ground and the vagabond life, to which the man adds being hidden from God's face, the apprehension of being slain, and the terrors of a guilty conscience. On the mark he gathers from Shuckford the conjectures made and calls them frivolously curious: that Cain was made paralytic, from the Septuagint's groaning and trembling; that it was a letter of the divine name; that it was Abel's dog, which constantly accompanied him; and, from one rabbi wiser than all the rest, a long horn growing out of his forehead. With Shuckford he would translate that the Lord appointed to Cain a token, since to have marked him would have been the likeliest way to bring on him all the evils he dreaded. Wesley puts the reason for the sevenfold vengeance shortly: God having said vengeance is his, it had been a daring usurpation for any man to take the sword out of his hand; and he dismisses the question of the mark in a line, since God has not told us what it was and therefore the conjectures of men are vain."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes that most versions have not so, which requires only a slight change of the text, and explains the sentence given instead: the punishment was severe because the crime sprang from violent passions, but the life was not taken because the act was not premeditated, while anyone killing him would be a murderer indeed, so the vengeance would be sevenfold, that is complete. In this, he adds, is the germ of the law that set apart cities of refuge for the involuntary manslayer. On the mark he says the common rendering suggests an utterly false idea, since Cain was not branded in any way; the Hebrew says Jehovah appointed unto him a sign that no one finding him should slay him, probably some natural phenomenon whose regular recurrence would assure him of his security."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "Collects the rabbinic conjectures about the mark &mdash; paralysis, a letter of the divine name, Abel's dog, a horn in the forehead &mdash; and calls the whole class of them frivolously curious."
+   }
+  ],
+  "themes": [
+   "whosoever slayeth Cain, vengeance shall be taken on him sevenfold",
+   "a sign appointed, not a brand set",
+   "the germ of the cities of refuge"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  }
+ },
+ "16": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "16",
+  "pericope_label": "Cain went out from the presence of the LORD, and dwelt in the land of Nod",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill offers two senses of the departure, either from the place where the Lord had been speaking with him or from where the divine Majesty usually resided at the east of Eden, Cain being now forbidden to appear among God's worshippers; and he notes a place near Tripoli in Syria, mentioned by Polybius and Strabo as the face of God, which may have been so named from a tradition that there God's presence was enjoyed after the expulsion from Eden. Calvin allows two accounts, either that Cain, having lived in the earth as in an abode belonging to God, now wanders like an exile beyond the limits of his protection, or that he had stood at the bar until condemned and, the speaking over, hastened elsewhere to escape the eyes of God; he thinks the region was named from its inhabitant, and infers from its lying east of Paradise that the garden must have been a limited place."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the going out as a willing surrender of that part of the sentence: Cain renounced religion and was content to forego its privileges so that he might not be under its precepts, forsaking Adam's family and altar and never coming among good people again; hypocritical professors who have trifled with God are justly left to themselves, and hell itself is destruction from the presence of the Lord. He finds defiance in the choice of ground, since it was on the east of Eden that the cherubim stood with the flaming sword, and there Cain chose his lot as if to defy the terrors of the Lord."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that since the word is the same as that for a vagabond, some would render the clause as saying that Cain went out from the presence of the Lord, from the east of Eden, and dwelt a vagabond on the earth, so that the curse was thereby accomplished. Wesley takes the name as descriptive of the man rather than the ground, since the land he dwelt in was to him a land of shaking or trembling, because of the continual restlessness of his own spirit; those who depart from God cannot find rest anywhere else."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil says the situation cannot be determined, and that Nod denotes a land of flight and banishment set against Eden, the land of delight, where Jehovah walked with men; he is concerned rather with the wife, since the text assumes as self-evident that she went with him into exile and was a daughter of Adam, the marriage of brothers and sisters being inevitable among the children of the first men. Ellicott supposes Adam's family worshipped with their faces towards Paradise, so that Cain reckoned himself beyond the range of the vision of God, and records that Knobel supposed the land to be China, which he thinks too remote, while read without vowels the word becomes India; since none of Noah's descendants are described as travelling eastward, many regard the Mongol race as Cain's offspring."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "he went out from the presence of the LORD",
+   "the land of Nod, that is, of wandering",
+   "those who depart from God can find rest nowhere else"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "17-18",
+  "pericope_label": "Cain knew his wife; and he builded a city, and called it after his son Enoch",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill will not decide whether the wife was his sister or a niece by another son of Adam, this being about the hundred and thirtieth year, though at first Cain could marry none but a sister; he passes on two rival traditions, the Jewish one that Cain's own twin sister was not beautiful, so that he said he would kill his brother and take his wife, and the Arabic one that Adam would have had each brother marry the other's twin sister. Of Irad he notes that nothing further is recorded in sacred or profane history. Calvin infers from the silence that Cain had married before the murder, since it would have been worth recording that a sister could be found who would not shrink from a man defiled with a brother's blood, and calls it a prodigy that a man who imagined he had as many enemies as there were men should raise children instead of hiding in some remote solitude. The city he finds at first sight contrary to the sentence, and concludes that the man, oppressed by conscience, contrived a new kind of defence, the others living dispersed through the fields only because they were less afraid; yet pride was mixed with the fear, since he called the city after his son, when his memory could pass on only to be held in execration."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the son's name signifies instructed or dedicated, especially in sacred things, and takes it for some proof of Cain's repentance that he dedicated this son to God, to minister in his father's stead in the office from which Cain was excluded. Wesley takes the building as a token of settled separation from the church of God, and says the names that follow are but just mentioned, as not valued in comparison with God's children."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reasons from the promise that Eve's conception should be greatly multiplied, so that a numerous offspring had grown up before Seth, one of Adam's daughters apparently cleaving to her brother in spite of the sentence of banishment and following him as his wife. He gives the son's name two senses, to train and to dedicate, allied in old times because teaching generally took the form of initiation into sacred rites, so that the name purposed a trained and consecrated man and prepares us for the Cainites' rapid advance in the arts of civilisation. He reads the verb as an imperfect, that Cain began to build, there being not yet population enough for a city, and sees in the design a wise ruler rather than a religious man, whose purpose was much what the builders of Babel had."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "he builded a city, and called it after the name of his son",
+   "whether the name Enoch marks a change in Cain",
+   "the Cainite and the Sethite genealogies compared"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
+  }
+ },
+ "19": {
+  "voices": [
+   "Adam Clarke",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "19-22",
+  "pericope_label": "Lamech took two wives; Jabal, Jubal and Tubal-cain and the beginnings of the arts",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill calls Lamech the first we read of who introduced polygamy, against the institution by which one man and one woman were to become one flesh, and notes that the practice, begun in the race of wicked Cain, was afterwards followed by some among the people of God and connived at for the hardness of their hearts; he reports and rejects Jarchi's account that before the flood men kept one wife for children and another for pleasure, since both of Lamech's wives bore sons. Of the youngest son he notes that many identify him with Vulcan, the names and the trade agreeing. Calvin thinks it of little consequence whether Lamech was impelled by desire of enlarging his family or by mere lust, since either way he corrupted nature's laws with brutal contempt of God, and finds a providence in the choice of the first offender, the Lord willing that the corruption of marriage should proceed from the house of Cain, that polygamists might be ashamed of the example. On the arts he makes his chief point: with the evils that proceeded from that family some good had been blended, since the invention of arts serving the common use of life is a gift of God not to be despised, and it is wonderful that the race which fell most deeply should have excelled the rest of Adam's posterity in rare endowments. The sons of Cain, though deprived of the Spirit of regeneration, were endued with gifts of no despicable kind, and the liberal arts have descended to us from the heathen; God enriched them so that their impiety might have less excuse."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws two warnings from the polygamy: that those who desert God's ordinances lay themselves open to all manner of temptation, and that when a bad custom is begun by bad men, better men are sometimes drawn in unwarily, as Jacob and David were afterwards ensnared in this very sin. On the sons he counts three, a famous shepherd whom the shepherds of that age and after called father, a musician who first gave rules for that noble art, and a smith who improved the working of brass and iron for war and husbandry, matching them against the heathen gods as their Pan, their Apollo and their Vulcan; when Jabal had set them in a way to be rich, Jubal put them in a way to be merry. Yet he turns the account: common gifts are given to bad men while God chooses the foolish things of the world, and here was a father of shepherds and of musicians but not a father of the faithful, one to teach in brass and iron but none to teach the knowledge of the Lord."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says Lamech was the first who dared to reverse the order of God, and that from him polygamy has been retained and defended to the present day; he fills in the inventions, tent-making and the management of cattle in the first son, stringed and wind instruments in the second, both words being generic, and in the third the first smith on record, adding that some of these arts were useless while man was upright but became necessary after the fall, and that as the power to get wealth is from God so is the invention of useful arts. Wesley thinks the heathen Vulcan came from Tubal-cain, and confesses that why the sister is named he cannot say."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "Defends music in particular, since though the harp ministers to pleasure rather than necessity it can serve the offices of religion, if free from vicious attractions and from the foolish delight that seduces men from better employments."
+   }
+  ],
+  "themes": [
+   "the first transgression of the law of marriage",
+   "the father of such as dwell in tents, and of such as handle the harp",
+   "gifts of God scattered among a reprobate race"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
+  }
+ },
+ "23": {
+  "voices": [
+   "Adam Clarke",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "range": "23-24",
+  "pericope_label": "Lamech said unto his wives: I have slain a man to my wounding, and a young man to my hurt",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows a penitent and a boastful sense, either that Lamech is confessing what he has done and reckoning how much sorer a punishment he deserves than Cain, or that he is quieting his wives with an argument that none may safely touch him. Calvin traces the obscurity to the abruptness of Moses, and clears away the Jewish fable that Lamech was a blind hunter whose boy misdirected his arrow so that it killed Cain in the woods, after which the master killed the boy. He prefers to resolve the past tense into a future and take it indefinitely, so that Lamech is boasting he has strength enough to strike down any enemy whatever, the repetition of man and young man being Hebrew amplification and not two persons. On the wives he observes that the soothing arts of wives often mitigate cruel men, whereas Lamech cast the venom of his cruelty into their bosom and broke out in threats of indiscriminate slaughter like a furious wild beast; and on the closing boast he says Lamech perverts the divine declaration and mocks its severity, taking greater licence to sin as though God had granted murderers a singular privilege, as Dionysius boasted that the gods favour the sacrilegious."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks how haughtily and imperiously he addresses his wives, and observes that it is no marvel that a man who had broken one law of marriage by taking two wives should break another which bound him to be kind and tender to them; those are not always the most careful to do their own duty who are highest in their demands of respect from others. He notes too that it is a common thing for fierce and bloody men to glory in their shame, caring not how many lives are sacrificed to their resentments so long as they are feared; and he says Lamech presumes impiously on God's protection, arguing that if God secured the life of Cain, who slew his brother upon no provocation, much more would he avenge one who killed only in a quarrel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the speech stands in hemistichs in the original, and since nothing of the kind occurs earlier thinks it very probably the oldest piece of poetry in the world; he supposes Lamech had slain a man in self-defence and that his wives feared the dead man's kindred would seek his life, and notes that the words may also be read interrogatively, Have I slain a man that I should be wounded. He declines to trouble his readers with the Jewish tale that Lamech killed Cain, though Jerome followed it, and leaves the passage among those he calls inscrutable. Wesley confesses at once that the passage is extremely obscure, since we know neither whom Lamech slew, nor on what occasion, nor what ground he had to be so confident of the divine protection."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is Lamech claiming to have done?",
+    "positions": [
+     {
+      "position": "to have killed a man in self-defence, and to be therefore safer than Cain was",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "nothing yet &mdash; the tense should be future, and he is boasting that he can strike down any enemy whatever",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "either confessing a murder or quieting his wives; the passage admits both",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "we cannot tell; the passage is extremely obscure",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the oldest piece of poetry in the world",
+   "if Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold",
+   "a divine forbearance turned into a licence to sin"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
+  }
+ },
+ "25": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "range": "25",
+  "pericope_label": "Adam knew his wife again, and she bare a son, and called his name Seth",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the Targum puts a hundred and thirty years between the murder and this birth, but Ussher, more probably, places Seth in the same year. Calvin denies the inference that the first parents were left wholly childless, since it is incredible that while the benediction to increase and multiply was in its greatest force they should have been unfruitful through so many years; the house of Adam was already populous before Abel was slain, and Moses means only that the parents, horror-struck at the slaughter, abstained for a while from the conjugal bed. He says Eve means some peculiar seed, since others had been born before Abel's death, but the race being prone to evil nearly her whole family had corrupted itself, so that she reckoned herself bereaved, in Abel, not of one son only but of her whole offspring."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notices that this is the first mention of Adam in the chapter, and that the murder of Abel and the apostasy of Cain were a very great grief to him and Eve, the more because their own wickedness now corrected them; when parents are grieved by their children's wickedness they should take occasion from it to lament that corruption of nature which was derived from them. He finds in the birth a rule of God's dealing, that when he takes away one comfort he gives another instead, and presses the point about the church, that the succession of confessors is the revival of the martyrs and as it were the resurrection of God's slain witnesses; those who slay God's servants hope thereby to wear out the saints of the Most High, but God can out of stones raise up children and make the blood of the martyrs the seed of the church. The name he gives as set, settled or placed, and draws the contrast that while Cain, the head of the apostasy, is made a wanderer, Seth, from whom the true church was to come, is fixed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues that Eve must have received some divine communication, since otherwise she could not have known that this son was appointed in Abel's place to continue the holy line by which the Messiah was to come, whence he concludes the line was determined from the beginning and not first fixed in Abraham's days; he traces it forward, since Seth's posterity alone continued after the flood, and observes that wherever there were two or more sons the chosen one was pointed out by especial providence. Wesley joins Henry in the account of the parents' grief and of the relief given them in another seed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott renders the name appointed or substituted, the son being designated head of Adam's family, and makes the point of the succession, since instead of the third son simply taking the firstborn's place it is given to one specially marked out, probably by prophecy, as Solomon took the rights of primogeniture over Adonijah."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "God hath appointed me another seed instead of Abel",
+   "the succession of confessors as the resurrection of slain witnesses",
+   "Cain a wanderer, Seth one fixed"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
+  }
+ },
+ "26": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "26",
+  "pericope_label": "To Seth was born Enos: then began men to call upon the name of the LORD",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill gives the usual interpretation of the son's name, a weak, frail, mortal and miserable man, given by a father who observed the sorrows of life and the growing corruptions of the age, but notes that it may also come from an Arabic word meaning to be sociable; on the clause that follows he is careful that it does not mean the first calling upon God, since Adam and Abel and all good men had called on his name before. Calvin finds a synecdoche in the verb, calling upon God standing for his whole worship and named from its principal part, since God prefers this service of piety and faith to all sacrifices, and warns that Satan contrives nothing with greater care than to adulterate the pure invocation of God. He takes the clause historically too, that the deluge of impiety was then so great that religion survived only with a few, until Seth begat a son like himself and had a rightly constituted family, whereupon the face of the Church began to appear; and he rejects as a foolish figment the construction which makes the verse date the beginning of idolatry, since Moses is not censuring superstitions here but commending the piety of one family."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that many eminent men would render the verb as began profanely, so that the words date idolatry's origin, most of the Jewish doctors being of that opinion, and sets out Maimonides, whose account runs that in the days of Enos the sons of Adam erred greatly, reasoning that since God had set the stars on high to govern the world it was meet that men should glorify what he honoured, whereupon they built temples to the stars and sacrificed to them, until the practice spread through all the world and the glorious and fearful name was forgotten out of the mouth of all living, save with a few, until Abraham was born. He draws the chapter's lesson from the other end: no uprightness of intention can atone for neglect of the positive commands of revelation, and he who brings a eucharistic offering while a sin-offering lies at the door copies Cain, whose envy begot hatred, and hatred malice, and malice murder. Wesley gives two senses of the beginning, either that the worshippers of God began to stir themselves up to do more in religion than of late, worshipping now not only in closets and families but in public assemblies, or that they began to be called by the name of the Lord and so to distinguish themselves, since Cain and those who had deserted religion called themselves the sons of men while those who adhered to God called themselves the sons of God."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil takes the name from a verb meaning to be weak, so that it expresses the knowledge of human frailty, the opposite of the pride displayed in the Cainite family, and observes that this feeling led to God and to the invocation which began under Enos. Ellicott doubts the derivation from mortality, for which there is no proof, and takes the word as the generic name for man, used so in Aramaic, where our Lord is styled the son of Enosh; he makes the beginning belong to the name rather than the worship, the notion of divinity being now first attached to Jehovah, which Eve had used without any such thought."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What began in the days of Enos?",
+    "positions": [
+     {
+      "position": "a revival and a public profession of true worship, the godly now distinguishing themselves by God&rsquo;s name",
+      "holders": [
+       "John Wesley",
+       "John Calvin",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "profanation &mdash; the verb may be read began profanely, and the verse dates the origin of star-worship",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the attaching of divinity to the name Jehovah, which had carried no such sacredness before",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "then began men to call upon the name of the LORD",
+   "whether the verse dates the beginning of true worship or of idolatry",
+   "the sons of God and the sons of men distinguished"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  }
 }

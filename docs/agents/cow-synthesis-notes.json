@@ -8578,6 +8578,50 @@
       "book": "joshua",
       "chapter": "6",
       "note": "Self-graded every entry against the catena. Six entries tiling 1-27 exactly: 1-3 647w/7 voices, 4-7 649w/6, 8-15 618w/6, 16-17 648w/6, 18-23 650w/6, 24-27 650w/6. Every proposition traced to a named block; no attribution asserted that the source does not carry. Jamieson excluded from entries 4, 8, 18 and 24 as declared residue (Deuteronomy 2-3 material); Keil declared silent for entry 16, where his block is pure verse quotation under the 200-word cap. School lists in the tags match the voices named in the prose for all six entries."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB stride bug, FOURTEENTH instance, and the first RECOVERABLE one. The four blocks march forward through the source at a slower rate than the key index: v4 holds Genesis 3:14-15 (the doom on the serpent), v10 holds Genesis 3:17-19 (tilling the ground after the fall), v16 holds Genesis 3:24 (the cherubim at the east of Eden), and v22 holds GENESIS 4:4 ITSELF ('the words had respect to signify in Hebrew to look at any thing with a keen earnest glance, which has been translated kindle into a fire'). That last block is genuine commentary on this chapter, merely attached to the wrong key — the first time in fourteen instances that displaced JFB material has been salvageable rather than simply excluded. Under the note-607 working rule it was moved to the entry containing v4, which is legitimate because JFB also has a key at v4; the Genesis 3 residue at keys 4, 10 and 16 is excluded. Donor is again an earlier position in the same volume, consistent with note 774."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "4",
+      "verses": [
+        "26"
+      ],
+      "note": "StudyLight trailing-boilerplate tail, EIGHTH instance: Ellicott, chapter-final key (v26). Eight for eight on both voice and position. Genesis 4 is not a book-final chapter and carries only the CSS/menu footer, not the scripture-index dump seen at genesis 50:25 — the second confirmation that the two artifacts are distinct (note 775)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "4",
+      "note": "Entry-count predictor 15/15: keys-over-2000 + round(remaining_words/2500). genesis 4 = 9 keys over 2000 (v1 3278, v2 2223, v3 2238, v7 3326, v8 3173, v9 2875, v16 2008, v23 2592, v26 3456) + round(19026/2500)=8 -> 17, and the tiling settled independently at 17: 1 | 2 | 3 | 4-5 | 6 | 7 | 8 | 9 | 10-11 | 12-13 | 14-15 | 16 | 17-18 | 19-22 | 23-24 | 25 | 26. No key exceeded 4500, so no key was forced into its own entry by size; the nine single-verse entries are all natural pericope units."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "4",
+      "note": "TOOL DEFECT found and fixed in my own ghost checker (scratchpad, not the repo). It computed the used-voice set by testing only the SHORT ALIAS against the entry's visible text ('JFB' in vis), so an entry that names a source by its full declared form — 'Jamieson, Fausset and Brown' — was scored as not having used that voice, and the voice was written into excluded_voices instead of voices. This first bit here because genesis 4 is the first chapter in the run where a JFB block was usable rather than excluded. Patched to accept either the alias or the full name. Any tags file produced before this fix that names a voice only in full form would carry a wrong excluded_voices list; worth a sweep if the pattern recurs. It does not affect any landed chapter, since in every prior chapter JFB was genuinely excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "4",
+      "note": "Worst drafting overshoot of the run so far, and the cause is now clear. Across 17 entries the first drafts ran 3-30 per cent over the 650 ceiling (vv14-15 came in at 837, v7 at 776, vv12-13 at 807), and only four landed in range first try. The controlling variable is not the source-word count of the span but the number of DISTINCT ARGUMENTS the voices are making. Genesis 4 is unusually dense in disputed readings — the meaning of eth in v1, the disputed word in v7, the hiatus at v8, the mark at v15, the sense of the verb at v26 — and each dispute costs a full sentence per position plus one for the adjudication. The working rule that fits all three recent chapters: budget three paragraphs of three voices, and where a paragraph must carry a DISPUTE rather than a set of glosses, count it as two voices' worth of space and drop a voice from that paragraph."
     }
   ]
 }
