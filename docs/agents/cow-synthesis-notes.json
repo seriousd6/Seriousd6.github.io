@@ -8387,6 +8387,62 @@
       "book": "deuteronomy",
       "chapter": "32",
       "note": "Fidelity self-grade, deuteronomy 32, 12 entries, 52 verses, 8 voices, 55,421 usable source words with no chrome tail. Source keys 1-52 with no gaps, so the spans follow the sections of the Song. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-3 629 · 4-6 640 · 7-9 633 · 10-14 627 · 15-18 650 · 19-23 648 · 24-27 626 · 28-33 647 · 34-38 644 · 39-43 641 · 44-47 561 · 48-52 611. Exclusions: Jamieson, Fausset and Brown at all seven of its stride-6 keys (Numbers 34 material), declared through excluded_voices. Three cares taken. First, Keil's 33 capped blocks were used only for what survives above the 200-word cut and no sentence was completed on his behalf. Second, Matthew Henry's block at key 3 comments on verse 4 rather than verse 3; because key 3 falls in the span 1-3 and Henry has no block at 4-6, his note that this is the first place God is called a Rock was attributed in the earlier entry, out of verse order but correctly sourced. Third, Calvin's blocks in this chapter carry editorial notes in the same run of text as his own words (most conspicuously at 32:35 on the authorship of Hebrews); every attribution to Calvin was confined to his own argument and no editorial gloss was attributed to him. School keys in the tags were reconciled against the voices actually named in each entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "50",
+      "verses": [
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "JFB stride bug, TWELFTH instance, and the OT rule holds again. All four JFB blocks in genesis 50 are Genesis 42 residue (the brethren before Joseph in Egypt: 'they were full-grown men, he was but a lad at parting'; the spies accusation; 'the drift of their conversation is one of the most striking instances on record of the power of conscience [Ge 42:21,22]'). The v19 and v25 blocks are byte-identical to each other, the third chapter in which within-chapter duplication has appeared. Donor is again an EARLY CHAPTER OF THE SAME BOOK, matching acts 28 <- Acts 7, leviticus 20 <- Leviticus 2-3, acts 23 <- Acts 2. All four excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "50",
+      "verses": [
+        "26"
+      ],
+      "note": "StudyLight trailing-boilerplate tail, SIXTH instance, again in Ellicott and again on the chapter's last commented key (v26). Prior: 1corinthians 12:31, acts 28:31, leviticus 18:30, leviticus 20:27, acts 23:35. Six for six on the position and six for six on the voice. SEPARATE NEW ARTIFACT in the same chapter: Calvin's v25 block ends 'End of the Commentaries on the first book of Moses called Genesis' and is then followed by the commentary's entire scripture cross-reference INDEX dumped as plain text (hundreds of bare references, 'Genesis 9:21 11:1 11:31 15:13 ... 2 Peter 1:15'). This is a different capture failure from the CSS/menu footer: it is end-of-volume matter, not per-page furniture, and it lands on the last chapter of the BOOK rather than the last verse of the chapter. Watch for it at malachi, revelation, deuteronomy 34 and the other book-final chapters."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "50",
+      "note": "Entry-count predictor 13/13: keys-over-2000 + round(remaining_words/2500). genesis 50 = 3 keys over 2000 (v2 3445, v15 2563, v26 6963) + round(15045/2500)=6 -> 9, and the tiling settled independently at 9: 1 | 2-3 | 4-7 | 8-14 | 15-17 | 18-21 | 22-23 | 24-25 | 26. One key over 4500 (v26) became its own entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "50",
+      "verses": [
+        "2",
+        "23",
+        "25"
+      ],
+      "note": "Note 607 displacement handled twice, in the same direction. Keil and Delitzsch comments in running paragraphs that quote several verses ahead of the key they are filed under: his key-2 block comments on vv4-5 (the 'to dig, not to buy' correction), and his key-23 block runs on through v26 (the sycamore coffin, the room, the 360 years). In both cases Keil has another key inside the span the material actually TREATS (5 and 7 for the first, 25 for the second), so the working rule permits the move and it was made. Result: Keil is a recorded exclusion on entries 2-3 and 22-23, and appears in 4-7 and 24-25 instead. This is the first chapter where the same voice was moved twice in one chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "50",
+      "note": "Drafting overshoot is markedly WORSE in OT narrative than in Acts, and the cause is identifiable. In acts 23 first drafts ran 0-8% over the 650 ceiling and four of fourteen landed in range first try; in genesis 50 the first drafts ran 3-20% over (vv4-7 at 778, vv8-14 at 760, vv24-25 at 745, vv15-17 at 742) and only two of nine landed first try, both of them short spans. The item-count discipline holds for spans with many voices saying short things; it fails where two or three voices each supply a long connected argument (Calvin on providence, Clarke's Harmer extracts on Egyptian burial), because a single 'item' is then a paragraph rather than a sentence. For such voices the budget should be counted in SENTENCES ALLOWED PER VOICE, not items per entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "31",
+      "note": "Picker offered numbers 31 first in this batch's sampling; skipped per standing owner instruction (blocked pending an owner decision on its source file), re-picked and took genesis 50."
     }
   ]
 }
