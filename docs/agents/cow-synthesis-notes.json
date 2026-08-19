@@ -8622,6 +8622,54 @@
       "book": "genesis",
       "chapter": "4",
       "note": "Worst drafting overshoot of the run so far, and the cause is now clear. Across 17 entries the first drafts ran 3-30 per cent over the 650 ceiling (vv14-15 came in at 837, v7 at 776, vv12-13 at 807), and only four landed in range first try. The controlling variable is not the source-word count of the span but the number of DISTINCT ARGUMENTS the voices are making. Genesis 4 is unusually dense in disputed readings — the meaning of eth in v1, the disputed word in v7, the hiatus at v8, the mark at v15, the sense of the verb at v26 — and each dispute costs a full sentence per position plus one for the adjudication. The working rule that fits all three recent chapters: budget three paragraphs of three voices, and where a paragraph must carry a DISPUTE rather than a set of glosses, count it as two voices' worth of space and drop a voice from that paragraph."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "16",
+      "note": "Jamieson stride-6, TWENTY-EIGHTH consecutive chapter, and the LONGEST CLEAN RUN SO FAR: keys 2, 8, 14, 20, 26, 32, 38 - offset 2, SEVEN members, no gap, in a 40-key chapter. Every block is JOHN 17-18 material and the run is PROGRESSIVE, not scattered: it walks the High Priestly Prayer in order (I glorified thee / I finished the work; given me out of the world; not that thou shouldest take them out of the world; this very important explanation of the whole prayer; the glory I had with thee and the beatific vision) and then runs straight on into John 18 (the Kidron ravine and Gethsemane at key 32, the arrest and the sublime preparedness to meet his captors at key 38). No duplication here - all seven blocks distinct, unlike joshua 6 (head repeat) and deuteronomy 32 (tail repeat). Blocks are short, 24-90 words. All seven excluded via RESIDUE."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "16",
+      "verses": [
+        "40"
+      ],
+      "note": "StudyLight chrome, FOURTEENTH confirmation and ELEVENTH CONSECUTIVE Ellicott carrier: romans 3:31, acts 5:42, hebrews 9:28, acts 13:52, hebrews 10:39, joshua 9:23, galatians 3:29, luke 18:43, exodus 15:27, joshua 6:26, acts 16:40. Exactly 992 words every time. Here the carrier's last block and the chapter's last key coincide (Ellicott at key 40), so this instance does not discriminate between the two rules - joshua 6:26 remains the decisive case for 'last block of the carrier commentator'. Ellicott's block at 40 is 1,173 words of which 181 are genuine payload. Real usable source for this chapter is 68,852 words, not the 69,844 the sizer reports."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "16",
+      "verses": [
+        "18"
+      ],
+      "note": "Cyril of Jerusalem entirely residue again: keys 18 and 32, both exactly 200 words under the truncation cap, both numbered sections of the Catechetical Lectures with their section numbers intact ('4. For since man is of twofold nature...' on the twofold purification of water and Spirit; '34. Finally, my brethren, rejoice in the Lord alway...'). Neither has any bearing on Acts 16. This is the fourth chapter where Cyril of Jerusalem appears as pure residue (after 1corinthians 10, luke 18 and acts 13's genuine use). STILL undeclarable via excluded_voices because of the VOICE_LABELS defect in scripts/synthesis_qa.py: _LABEL_RE requires a colon immediately after a bare label from the list, and the list has 'Cyril' but the head here reads 'Cyril of Jerusalem:', so the regex matches nothing. Dropped via SILENT instead. This is the SEVENTH batch in which the fix has been flagged."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "16",
+      "note": "Live disagreements tiled into the eleven entries. (1) Whether Timothy's father was a proselyte: Ellicott probable from the child's training, Clarke a mere heathen or at most a proselyte of the gate, Robertson and Barnes arguing backwards from the son's uncircumcision. (2) How circumcising Timothy squares with refusing to circumcise Titus: Clarke the object of those pressing it, Robertson the stakes (Gentile liberty vs efficient service), Ellicott three reasons including descent from the nobler side, Barnes bare expediency, Calvin the standing of the rite itself with his three degrees and the line that Paul might circumcise Timothy but might not have offered a sacrifice for sin. (3) WHETHER THE JERUSALEM DECREES WERE PERMANENT - a flat contradiction: Robertson reads the perfect participle and present infinitive as 'a charter of liberty for continual living, not a temporary compromise', where Calvin says they continued only for a time and that Paul afterwards made free what the apostles had forbidden. (4) Why the Spirit forbade Asia and Bithynia: Henry a new work among Romans, Barnes the extension into Greece, Clarke unreadiness of hearers, Calvin refusing all accounts that ground the difference in men. (5) The North vs South Galatian question, which Robertson rests entirely on the aorist participle's inability to express subsequent action. (6) Whether the vision was a dream: Barnes and Clarke cannot tell, Wesley denies it flatly (only two dreams in the NT), Calvin rests on 'in the night'. (7) Who the man of Macedonia was: guardian angel (rejected by Barnes), an angel in Macedonian habit (Wesley), or Luke himself (Ramsay/Renan via Robertson, who insists the narrative must not be robbed of its supernatural aspect). (8) Whether Philippi could be called a chief city - four different rescues of Luke's accuracy. (9) WHETHER THE HOUSEHOLD BAPTISM PROVES INFANT BAPTISM - the sharpest exchange in the chapter: Barnes 'a strong presumptive proof', Wesley 'who can believe that in so many families there was no infant?', Ellicott 'this is to read a great deal between the lines' and the practice 'rests on firmer grounds than a precarious induction from a few ambiguous passages', Robertson 'one sees infants or not according to his predilections or preferences'. (10) What 'the Lord opened her heart' means: Calvin denies any preparation of her own, Clarke holds she was already prepared and given more grace for faithfulness to what she had. (11) Whether the possession was real: Clarke argues from Luke's medical training, Robertson from the term's use for ventriloquists, Calvin that Luke follows common speech and exhibits the error of the common people. (12) Whether the girl was converted: Clarke says flatly she continued a heathen and makes that an argument for a real possession, where Ellicott refuses to think she drifted back and later says the witness of the possessed girl 'was thus not altogether fruitless'. (13) Whether the earthquake and the loosed bands were miraculous or natural. (14) Whether the baptism of the jailer was by immersion: Clarke says the hour and haste disprove it, Ellicott says no certain answer but a prison bath would serve, Robertson canvasses three basins and quotes Meyer for immersion as essential to the symbolism. (15) Why the magistrates changed their minds. (16) Why Paul pleaded his citizenship only at the end."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "16",
+      "note": "Two threads run the length of this chapter and were deliberately preserved across entries. FIRST, the battle of Philippi: Calvin invokes it at v10 in his own way, setting the wicked spirit that appeared to Brutus, inviting him to that unhappy battle 'even in the very same place whereunto Paul was afterwards called', against the true vision given Paul; then at v27 Barnes and Ellicott independently trace the jailer's reach for his sword to the same battle, Barnes noting that Brutus and Cassius and many of their friends fell on their own swords there and Ellicott that the act 'had been looked on as heroic' and was 'naturally enough contagious'. SECOND, the possessed girl's cry: Clarke closes the door on her at v19 ('she continued a heathen still, for we do not hear a word of her conversion'), while Ellicott hears in her cry a divided consciousness and a mind longing for deliverance, refuses to think she drifted back into unbelief, and at v30 turns her testimony into the seed of the jailer's question, since the circumstances that brought Paul to prison 'had pointed him out as proclaiming the way of salvation' - so that 'the witness of the demoniac girl was thus not altogether fruitless'. Also notable: Robertson quotes Furneaux that 'the two most important social revolutions worked by Christianity have been the elevation of woman and the abolition of slavery', both illustrated in this one chapter by Lydia and the slave girl; Ellicott observes that men could tolerate varieties of worship or the speculations of philosophers but 'were roused to madness by that which threatened their business'; Robertson quotes Ramsay that 'the most sensitive part of civilized man is the pocket'; Chrysostom asks 'Do you mark what a blessing tribulation is? But we, in our soft beds, with none to be afraid of, pass the whole night in sleep'; Barnes that 'a Christian may find more true joy in a prison, than the monarch on his throne'; and Ellicott quotes Tertullian to the martyrs, 'the leg feels not the stocks when the mind is in heaven'."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "16",
+      "note": "Self-graded every entry against the catena. Eleven entries tiling 1-40 exactly: 1-2 650w/7 voices, 3-5 650w/7, 6-8 650w/8, 9-12 650w/7, 13-15 650w/8, 16-18 650w/8, 19-24 648w/7, 25-27 647w/9, 28-31 648w/7, 32-35 650w/8, 36-40 648w/7. Every proposition traced to a named block; no attribution asserted that the source does not carry. Jamieson excluded from entries 1, 6, 13, 19, 25, 32 and 36 as declared residue (John 17-18 material); Cyril of Jerusalem declared SILENT throughout (Catechetical Lectures at keys 18 and 32). Chrysostom is genuine here, homilies on this chapter, and carries the eastern-antiochene school in entries 13-15 and 25-27. School lists in the tags match the voices named in the prose for all eleven entries."
     }
   ]
 }
