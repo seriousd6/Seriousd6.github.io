@@ -8044,6 +8044,75 @@
       "book": "galatians",
       "chapter": "3",
       "note": "NOT ATTEMPTED THIS BATCH, deliberately, and flagged as a whole-batch chapter for the next worker. galatians 3 sizes at 108,108 usable source words; minus 992 of StudyLight chrome on Ellicott's block at 3:29 (payload there is only 28 words), the real figure is about 107,116. That is the LARGEST chapter encountered in this corpus, ahead of acts 13 at ~100,100, and it needs roughly 16 entries at max(29/4.5, 107116/7000). The standing batch rule is that anything over ~40,000 usable source words is the WHOLE batch; this batch had already landed joshua 9, so starting galatians 3 here would have risked an abandoned pick, which costs the run everything and the queue nothing. It should be picked FIRST on a fresh batch. Useful facts gathered while sizing, so the next worker does not have to repeat them: 29 source keys for 29 verses, NO GAPS. Thirteen voices. Martin Luther is the dominant contributor and is enormous — 7,013 words at 3:13, 6,982 at 3:19, 5,089 at 3:18, 4,208 at 3:23, 2,335 at 3:12, 2,315 at 3:17 — and Luther plus Barnes alone account for most of the chapter's bulk. Barnes is also very large (2,640 at 3:13; 2,248 at 3:19; 2,068 at 3:28; 2,031 at 3:16; 2,005 at 3:20). Two verses are extreme on their own: 3:19 at 15,306 words and 3:13 at 11,804, so each may need an entry to itself. Sparse voices to watch: Matthew Henry at 6 keys (1, 6, 15, 19, 23, 26), Jamieson at 5 (5, 11, 17, 23, 29 — stride 6 from offset 5, CHECK FOR RESIDUE), Cyril of Jerusalem at 3 (10, 23, 24 — check for the duplication or misplacement seen in the last five batches), Chrysostom at 1 (3:1) and Tertullian at 1 (3:1). The Gill 200-word cap is present at keys 1, 6, 8, 10 (approx), 13, 16, 22, 23, 24, 27."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "28",
+      "verses": [
+        "6",
+        "18",
+        "24",
+        "30"
+      ],
+      "note": "JFB stride bug, ninth confirmed instance, with a new wrinkle: duplication. Four JFB blocks (vv.6, 18, 24, 30) carry no comment on Acts 28 at all; all four are Acts 7 residue from Stephen's speech -- the disappearance of the Mosaic system with a cross-reference to Ac 7:56,59,60 at v6; Stephen's chronology (Gen 15:13,16 with Ga 3:17) at v18; and at BOTH v24 and v30 the byte-identical sentence 'Here Stephen gives his first example of Israel's opposition to God's purposes, in spite of which and by means of which those purposes were accomplished.' Every previous instance advanced in order without repeating; this is the first where the donor text is duplicated across two keys. Stride here is 12/6/6 rather than a clean 6 throughout. Donor identification now three for three from Acts: romans 15 <- Acts 15, 1corinthians 12 <- Acts 21-23, acts 28 <- Acts 7 (note 708). All four excluded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "31"
+      ],
+      "note": "The StudyLight trailing-boilerplate defect (note 712) recurs, and the position is not random. Ellicott's block at acts 28 v31 ends with roughly 2,000 words of site chrome -- copyright notice followed by a full CSS stylesheet -- exactly as his block at 1corinthians 12 v31 did. Both instances are at the LAST VERSE OF THE CHAPTER, which suggests the harvest captures the page footer whenever it reaches the final commented verse rather than at random. Calvin's block at acts 28 v30 carries a different tail of the same class: a bare scripture index of several hundred references (Genesis 1:27 5:24 8:21 ... Colossians 2:11) appended to the real comment. A trailing-boilerplate strip in the harvest step would catch both shapes; keying it to the chapter's last key would catch most of the volume."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "28",
+      "verses": [
+        "1"
+      ],
+      "note": "Entry-count predictor now 9 for 9. acts 28: 31 keys, 60,237 usable source words, no gaps, median 1211. Eight keys over 2000 (v1=7386, v4=2421, v11=4592, v15=2723, v17=4262, v23=4614, v30=4434, v31=8438) and 21,367 words across the other 23 keys, giving 8 + round(8.55) = 17. Tiling to the ~4500 ceiling produced exactly 17 entries. Four keys are over 4500 and so could not be split at all (v1, v11, v23, v31), which is the highest count of unsplittable keys seen so far; v31 at 8,438 is the largest single key on record, though about 2,000 of that is the StudyLight boilerplate tail."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "11",
+        "17",
+        "23",
+        "30"
+      ],
+      "note": "Section-style commentators strand material under the note-607 filing rule, and Acts is where it bites hardest. Henry has keys only at vv.1, 11, 17, 23 and 30 in this chapter, but each block expounds a whole section: his v11 block covers vv.11-15 (Syracuse, Rhegium, Puteoli, including a fine debunking of the Romish legend that Paul preached at Rhegium, set a stone pillar alight with a candle, and ordained a bishop, all in a day when it does not appear they even went ashore). Chrysostom likewise has keys only at vv.1 and 17, and his v17 block sweeps vv.17-31. Because neither has a key inside the spans that material actually treats, note 607 forbids moving it, so it can only be used in the entry containing the verse it is filed under, or lost. I used what fitted the filed verse and let the rest go. The pattern is structural, not a defect: Henry and Chrysostom comment in sections while the rest comment per verse, so any per-verse tiling will strand them. Worth knowing before tiling an Acts or Gospels chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "8",
+        "10",
+        "11",
+        "13",
+        "17",
+        "25",
+        "29",
+        "31"
+      ],
+      "note": "Absorbed voices in acts 28, confirming notes 694 and 709. John Lightfoot is swallowed into Gill at vv.1, 2, 4, 5, 10, 11 and 13 -- at v1 he truncates Gill's comment after a single clause and replaces it with Strabo-and-Pliny geography of Melita, and at v10 he cuts Gill off mid-sentence ('they make this paraphrase ,') before a rabbinic note on gifts. Cyril of Jerusalem is swallowed at vv.8, 17, 25, 29 and 31, and at vv.8 and 17 the absorbed text is the SAME passage about Barnabas at Antioch, duplicated. Neither is a declared voice, so both were skipped entirely rather than attributed to the host block. The repo-side fix remains one line in the harvest splitter's name list; the scratchpad dump splitter now carries both names plus Theodoret."
     }
   ]
 }

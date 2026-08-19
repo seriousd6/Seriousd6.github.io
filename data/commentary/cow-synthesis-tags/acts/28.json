@@ -1,160 +1,226 @@
 {
  "1": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "Escaped to land, they knew that the island was called Melita",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The shipwrecked company, having escaped the sea, came ashore and learned the island was Melita (Malta), learning its name only after landing — the fulfillment of God's promise (27:24) that all 276 would be saved, not one lost."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the providence — the company cast upon Malta, where they would be kindly received and where Paul's ministry would be displayed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when they were escaped",
-   "the island was called Melita",
-   "the safe landing on Malta",
-   "the fulfillment of God's promise of preservation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'barbarous people' (simply non-Greek-speaking foreigners, not savages, Barnes, Ellicott, Robertson; speaking a Punic dialect) showed no little kindness — kindling a fire and receiving the whole drenched, cold company with remarkable hospitality, all 276 welcomed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the barbarous people shewed us no little kindness",
-   "they kindled a fire, and received us every one",
-   "the kindness of the Maltese",
-   "humanity among the heathen"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul, gathering a bundle of sticks (his humility and diligence, sharing the common labor), laid them on the fire, and a viper, roused by the heat, came out and fastened on his hand (Robertson) — the venomous serpent's deadly bite, the occasion for a display of God's power."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul had gathered a bundle of sticks",
-   "there came a viper out of the heat, and fastened on his hand",
-   "Paul's humility",
-   "the sudden peril of the viper"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The natives, seeing the viper hang on Paul (a prisoner), judged him a murderer pursued by divine Vengeance (Dike, the pagan goddess of Justice, Barnes, Clarke, Robertson) — punished though he escaped the sea, struck in the hand, the instrument of murder; reasoning from a true principle (God punishes sin) but applying it falsely."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom reads the whole sojourn as ordered for Paul's sake, that the prisoners and the soldiers and the centurion might believe; for if they were very stone, he says, what they had heard him counsel and predict must have given them a high notion of him."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the conviction that calamity signals God's wrath is implanted in all (even barbarians) and not wholly false; but the error is to judge every sufferer guilty (as Job's friends did), forgetting God afflicts the godly too — we must suspend judgment and wait for the end."
+    "prevalence": "several",
+    "summary": "Gill notes in passing that the clause about their escape is wanting in the Syriac version. Calvin describes what came ashore &mdash; men wet, berayed with the foam and filth of the sea and stiff with cold, crawling to land with much ado, as though the sea had cast them up to die some other death."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry looks past the geography to the providence. What a variety of places do we find Paul in, he says; he was a planet, and not a fixed star. In all probability he had never come here had he not been thrown upon it by a storm, and yet God has work for him: even stormy winds fulfil God's counsel, and it is an ill wind indeed that blows nobody any good."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues that tradition has unvaryingly asserted Malta, and that the rival island in the Adriatic lies wholly outside the track along which the euroclydon must have driven them. On the name he offers an account beside the usual one from honey: the Phoenicians who colonised the island made it a place of refuge when they extended their traffic to the ocean, it being furnished with excellent harbours, and named it in their own tongue for escape. He carries the succession of its masters on through Goths and Saracens to the knights, the French and the British. Wesley allows three feet of earth above the solid rock and notes the island is fruitful notwithstanding, yielding cotton and fruit, and takes the name from its honey."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson marks the tense as an ingressive aorist, so that the sense is that then they recognised it, and follows Page in listing what settles the identification &mdash; the name, the location, the Alexandrian ship bound for Rome that wintered there, and the mention of Syracuse as the next stop. Ellicott finds no ground for questioning that this was the modern Malta, the only island known as Melita by Greeks and Romans; the gale that had blown a fortnight since the ship left Crete would drive her in exactly that direction, and the bay still bears Paul's name. He traces the rival opinion to Constantine Porphyrogenitus, revived last century by Padre Georgi, and says there is not a shadow of evidence for it beyond the similarity &mdash; not the identity &mdash; of the name. Barnes reaches the same conclusion from the route, since from the wreck the company went directly to Syracuse, Rhegium and Puteoli, a straight course for Rome, whereas from the rival island Syracuse would have been far out of the way."
    }
   ],
   "debates": [
    {
-    "question": "What does the natives' inference reveal — and where does it err?",
-    "sides": [
+    "question": "Which island was Melita?",
+    "positions": [
      {
-      "position": "A true, implanted sense that God punishes sin, but corrupted by judging every sufferer guilty from outward calamity (the error of Job's friends)",
+      "position": "the modern Malta &mdash; the only island so known to Greeks and Romans, agreeing with the gale, the local features, and the tradition",
       "holders": [
-       "Calvin",
-       "Barnes",
-       "Wesley"
+       "Charles Ellicott",
+       "A.T. Robertson",
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the rival Meleda in the Adriatic has been urged, but it would have taken a miracle to work the ship there against a north-east gale, and no vessel would winter on that coast bound from Alexandria to Puteoli",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the name Melita come from?",
+    "positions": [
+     {
+      "position": "from its honey, the Greek word for which is meli",
+      "holders": [
+       "Albert Barnes",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "possibly rather from the Phoenician word for escape or refuge, the island having excellent harbours for traders venturing to the ocean",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "and when they were escaped, then they knew that the island was called Melita",
+   "the identification of Melita with Malta",
+   "even stormy winds fulfil God’s counsel"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "2-3",
+  "pericope_label": "The barbarous people showed us no little kindness, and kindled a fire",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill is careful that nothing be inferred against their manners: they were called barbarians neither from the nearness of Barbary nor for their behaviour, being a civil and cultivated people under Roman government, but purely for their tongue. He notes too that the apostle did not think the gathering of sticks below him, being a man of great humility and condescension."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gathers the parallels for the word &mdash; Herodotus, that the Egyptians call all those barbarians who have not their own language, and Ovid among the Getes, that here I am a barbarian, for no person understands me &mdash; and prefers Bishop Pearce's account: the Greeks trading with the Phoenicians observed that they were commonly named after a parent with bar prefixed, as Bar-Jesus and Bar-Timeus, and so called them the men who are called Bar Bar. The word is therefore no term of reproach in itself, however fashionable it may be to use it so now. On the kindness he makes a sharp comparison: in some parts of Christianised Europe the inhabitants would have waited on the beach and knocked the survivors on the head, that they might convert the wreck to their own use, whereas this barbarous people joined hands with God to make these sufferers live. Wesley draws the moral, that the generosity of these uncultivated islanders was far more valuable than all the varnish the politest education could give, where it taught not humanity and compassion."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson explains that the Greeks so called every man who did not speak Greek, meaning not rude or uncivilised but simply foreign folk, the term originating in an uncouth repetition of sound others could not follow. He presses the tense of the kindness, an imperfect, so that they kept on showing it, and notes that the word for love of mankind occurs only here and in the epistle to Titus, the idiom meaning not the kindness that happens every day &mdash; they were not wreckers, he adds, to take advantage of a calamity. Barnes traces the peopling of the island, first Phaeacians, then Phoenicians, then a colony from Carthage, so that the speech of the Maltese was African and unintelligible to Greek and Latin alike. Ellicott renders the phrase literally as no common philanthropy, notes that the verb for receiving implies both shelter and hospitality, and observes that the rain followed naturally on the ceasing of the gale, the mention of cold showing the wind was not the Sirocco. He also meets an objection from the sticks: the absence of wood in Malta now has been urged against the identification, but the word applies to the dry stalks of herbaceous plants and describes exactly the thorny heather still growing near the bay."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "Contrasts the islanders with wreckers in Christianised Europe, who he says would have knocked the survivors on the head to convert the wreck to their own use."
+   }
+  ],
+  "themes": [
+   "the barbarous people showed us no little kindness",
+   "they kindled a fire, and received us every one",
+   "there came a viper out of the heat, and fastened on his hand"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "4-5",
+  "pericope_label": "No doubt this man is a murderer, whom vengeance suffereth not to live",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill adds that the viper is reckoned of all serpents the most venomous, and sees Paul afterwards holding it a while as its master, though that was the ready way to provoke a second stroke. Calvin will not let the truth in the islanders' error be lost. The judgment has been common in all ages that those grievously punished had grievously offended, and it was not conceived of nothing, God having rooted deeply in all minds that notable destruction testifies to his wrath, so that the world might be without excuse. The error crept in when they condemned everyone they saw roughly handled; for God does not punish every man in this life according to his deserts, and the sufferings of the godly are often not punishments at all but trials of faith. This, Calvin says, was the controversy between Job and his friends. Two cautions follow: not to judge unknown persons by the event alone, but to begin with their life and deeds; and to wait for the end, since when God first strikes we cannot see his purpose. Calvin also finds in the shaking off a token of a quiet mind &mdash; not that faith makes us blockish or takes away the feeling of evils, but that it tempers them, so that Paul, knowing the beast noisome, trusted the promise and was ready to die if need were."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke has no doubt the islanders meant the goddess Justice herself, and quotes Hesiod on Justice, the unspotted maid derived from Jove, who when judges hear the bribe and not the cause stands close by her parent god and urges the punishment their sins demand. He sets beside it a rabbinic passage: though the Sanhedrin is ceased, the four deaths are not, for he that deserves stoning either falls from his house or a wild beast devours him, and he that deserves burning either falls into the fire or a serpent bites him. Clarke takes the outcome as presumptive evidence that the viper never bit Paul at all, having fastened on the hand but having no power to injure. Wesley says with pleasure that among these islanders we trace the force of conscience and the belief of a particular providence, which some of more learning have stupidly thought it philosophy to despise; but they erred in reading calamity as judgment, and we must guard against it, lest we condemn the excellent of the earth."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott notes that the adjective venomous is not in the Greek and can scarcely be called necessary, and supposes the islanders knew Paul for a prisoner but not his charge, so that with their rough notions of divine government they concluded they watched God's vengeance against murder. Robertson explains that the noun is a diminutive, a little beast, which the medical writers apply to venomous serpents and the viper in particular, and follows Vincent into the curious history of our word treacle, which comes from the name of an antidote made of viper's flesh; he observes that Justice here is an abstraction personified, and that though the natives speak of her as a goddess we know nothing of such worship in Malta. Calamity taken for proof of guilt, he says, is poor philosophy and worse theology. Barnes explains why they leapt to murder rather than another crime: either because they inferred some most atrocious guilt, murder being the highest a man could commit, or, more probably, because they held that vengeance punishes a man in the very part of the body that was the instrument of his sin, and murder is done with the hand. He grants that they reasoned from great original principles written on the hearts of all men, erring only in supposing every calamity a judgment for some particular sin, and hears the Saviour's promise fulfilled, that they shall take up serpents."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did the viper actually bite him?",
+    "positions": [
+     {
+      "position": "the outcome is presumptive evidence that it never bit him at all &mdash; it fastened on the hand but had no power to injure",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "he held it a while as its master, though that was the ready way to provoke a second stroke",
+      "holders": [
+       "John Gill"
       ]
      }
     ]
@@ -163,1086 +229,837 @@
   "outliers": [],
   "themes": [
    "no doubt this man is a murderer",
-   "vengeance suffereth not to live",
-   "the natives' superstition",
-   "the implanted sense of divine justice, falsely applied"
+   "whom, though he hath escaped the sea, yet vengeance suffereth not to live",
+   "he shook off the beast into the fire, and felt no harm"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul calmly shook the viper into the fire (apotinasso, Robertson) and felt no harm — the remarkable fulfillment of Christ's promise (Mark 16:18; Luke 10:19), the venom powerless over him (Barnes, Lightfoot noting it among the signs)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the token of a quiet mind — faith does not remove the feeling of danger but tempers it, so Paul, trusting God's promise, was untroubled, ready to die if need be."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he shook off the beast into the fire",
-   "felt no harm",
-   "the fulfillment of Mark 16:18",
-   "Paul's calm faith and preservation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "6-7",
+  "pericope_label": "They changed their minds, and said that he was a god",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill sets out what follows a viper's stroke &mdash; acute pain at the wound, a swelling first red and afterwards livid, great faintness, an interrupted pulse, cold sweats, and death itself, unless the patient's strength or the slightness of the bite overcome it &mdash; and traces the island's masters from Carthage down to the Romans, who held it when the apostle came. Calvin says the sudden change ought to have moved them to give the glory to God's mercy as they had given it to his vengeance, but that man's reason is always carried amiss unto extremities. Paul, he adds, would rather have been condemned of every crime than take to himself the glory of God; and this history shows where superstition rises from, that men are unthankful to God and give his glory to another. On the hospitality that follows Calvin suspects from the Roman name that Publius was a citizen of Rome rather than an islander, but dwells on what came of the welcome: it was not unrewarded, for shortly after the Lord restored the man's father by Paul's hand, and so testified how greatly courtesy shown to strangers in misery pleases him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke ventures a guess at which god they took him for: Hercules was among the gods of the Phoenicians, was worshipped in Malta as the dispeller of evil, and was famous for destroying in his youth two serpents that attacked him in his cradle. On the title given to Publius he calls it another proof of Luke's accuracy, since Luke uses the very epithet by which the Roman governor of that island was distinguished, and cites an inscription found in Malta naming a Roman knight chief of the Melitese. Wesley is caustic on the reversal: such is the stability of human reason, that a little before he was a murderer and presently he is a god; but there is a medium, and he is neither murderer nor god but a man of God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The natives, expecting Paul to swell up or drop dead from the venom (Barnes, Clarke, Robertson), saw no harm and swung to the opposite extreme — from murderer to god; the parallel with Lystra (14:11), 'so fickle is popular favour' (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the human bent to superstition — robbing God of his glory by deifying creatures; Wesley: the medium they missed, neither murderer nor god, but a man of God."
+    "summary": "Robertson notes the imperfect, that they kept on expecting, and that both things expected are medical terms such as Luke uses: the verb for swelling means to blow, to burn, to inflame, our own word inflammation likewise carrying both a burning and a swelling. He observes that at Lystra Paul was first received as a god and then stoned, so fickle is popular favour, and that the kindness of Publius was the more marked because of the original suspicion of Paul as a criminal. Barnes says they saw he was uninjured and miraculously preserved, and supposed none but a god could be so kept from death; that the Maltese were idolaters there is no doubt, but what gods they worshipped is unknown, and conjecture useless. Ellicott adds that one of the great serpents of Africa took its name, the inflamer, from this very verb, thinks their minds may rather have gone to deities like Apollo or Aesculapius, figured as subduing serpents, and notes an inverted parallel to Lystra. On Publius he confirms the title from inscriptions of the time of Augustus, taking it for the prefect or governor as distinct from the procurator, and doubts the hospitality reached all two hundred and seventy-six, since the word for all that stood in the earlier verse is here omitted."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "they looked when he should have swollen",
-   "changed their minds, and said that he was a god",
-   "the fickle reversal from murderer to god",
-   "the parallel with Lystra"
+   "they looked when he should have swollen, or fallen down dead suddenly",
+   "they changed their minds, and said that he was a god",
+   "the chief man of the island, whose name was Publius, lodged us three days courteously"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Publius, 'the chief man of the island' (protos, an actual title of the Maltese governor attested by inscriptions, a mark of Luke's accuracy, Clarke, Ellicott, Robertson), received and lodged the company courteously for three days."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the providence and reward — Publius, perhaps moved by the miracle, honored Paul, and his hospitality would be richly repaid by the healing of his father (v.8); God rewarding kindness to strangers."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief man of the island, whose name was Publius",
-   "lodged us three days courteously",
-   "the hospitality of Publius",
-   "Luke's accurate official title"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "John Gill"
   ],
+  "range": "8-10",
+  "pericope_label": "Paul entered in, and prayed, and laid his hands on him, and healed him",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Publius's father, sick of fevers and dysentery (Luke's medical precision, the plural indicating recurrent attacks, a critical case, Robertson, Ellicott, Clarke), was healed by Paul, who prayed and laid hands on him — the union reminding of James 5:14-15 and the juxtaposition with Mark 16:18."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul, by prayer, gave God the glory — humbly craving the man's life of God, professing himself only the minister, not the author of the miracle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the father of Publius lay sick of a fever and of a bloody flux",
-   "prayed, and laid his hands on him, and healed him",
-   "the gift of healing through prayer",
-   "Paul the minister, not the author"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "After the healing of Publius's father, a continuing stream of the island's sick came and were healed (the imperfect tense, the article, Robertson, Ellicott) — a wider ministry of healing; the possible distinction between iaomai (Paul's miracles) and therapeuo (the cures)."
+    "summary": "Gill infers that Publius was therefore not an old man, for all his dignity and wealth, and notes that the Arabic reads the son of Publius, against all copies and every other version; on the honours at the end he insists they were not divine honours, which would neither have been received nor recorded, but civil ones, gifts large and valuable. Calvin makes the prayer the point. By it Paul declares himself not the author of the miracle but only the minister, lest God be defrauded of his glory, and confirms the same by the outward sign; for the laying on of hands was a solemn rite of offering and presenting, so that in offering the man to God with his own hands Paul professed that he humbly craved his life of him. From this Calvin warns those who have excellent gifts, lest by extolling themselves they darken the glory of God, and rules the rest, that we must so thank the ministers of grace that the glory remains with him alone. He will not let the cures be the whole of it either: Luke does not say all in the island were healed, only that God's power was proved by many testimonies, that Paul's apostleship might be ratified; and we need not doubt he sought to cure their souls as well as their bodies."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: Luke the physician was not even consulted — Paul entered, prayed, laid on hands, and healed; miraculous power, not medical art."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "others also, which had diseases, came, and were healed",
-   "the wider ministry of healing on Malta",
-   "the power of God confirming the gospel",
-   "Luke the physician not consulted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Clarke guesses at a cholera morbus, and presses how desperate the case was: where the bowels were inflamed and a general fever aided the dysentery in its work of death, nothing less than a miracle could have made an instantaneous cure &mdash; and even the heathens saw it was the hand of God. He finds it striking that Luke was a physician and yet is nowhere found engaging in these cures, since he might have been of use to the father of Publius but is not even consulted. On the honours he follows Bishop Pearce in collecting the places where the word plainly means a pecuniary recompense, including the double honour due to elders that rule well."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The grateful Maltese honored the company with many honors (timais, often used for an honorarium, Robertson) and, at their departure, supplied them with all needful things for the voyage — gratitude and provision repaying the healings, the company furnished for the rest of the journey."
+    "summary": "Ellicott renders the illness literally as fevers and dysentery, both used by Luke with professional precision, and takes the plural for a recurrent fever, whose combination with dysentery would, on Hippocrates' authority, make the case more than usually critical; he observes that prayer joined with the laying on of hands recalls the rule laid down by James, and that the healing following so closely on the escape from the serpent recalls how those two promises stand side by side at the end of Mark. He presses the article in the next verse, which states the fact of something like a rush, continuing for some length of time, of all the sick in the island coming to profit by the apostle's power. Robertson agrees that the plural is the medical term for intermittent attacks and that Hippocrates often mentions the two diseases together; he notes that Ramsay distinguishes the two verbs used here and in the next verse, one of miraculous healing by Paul, the other of cures by Luke, and says a regular stream of patients came during those months, Luke, included in the us, having his share in the honours and no doubt in the cures. The word for those honours, he adds, was often applied to payment for professional services, much as we speak of an honorarium; Ellicott says it was specially used of the fee paid to a physician, so that its appearance here is characteristic of Luke's calling. Barnes sees the miracle as a suitable return for the hospitality of Publius, conciliating the people and preparing the way for Paul's usefulness."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Did Luke the physician take part in these cures?",
+    "positions": [
+     {
+      "position": "yes &mdash; he is included in the us that received the honours, and no doubt had his share in the cures; Ramsay even distinguishes the two verbs, one for Paul’s miracles and one for Luke’s treatment",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "no &mdash; it is striking that a physician is nowhere found engaging in them, and he is not even consulted about the father of Publius",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "honoured us with many honours",
-   "laded us with such things as were necessary",
-   "the gratitude of the Maltese",
-   "the providence furnishing the company"
+   "Paul entered in, and prayed, and laid his hands on him, and healed him",
+   "others also, which had diseases in the island, came, and were healed",
+   "who also honoured us with many honours"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
   }
  },
  "11": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "11",
+  "pericope_label": "After three months we departed in a ship of Alexandria, whose sign was Castor and Pollux",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "After three months wintering on Malta (navigation suspended in the stormy season), the company departed in an Alexandrian grain ship that had wintered there, bearing the figurehead of Castor and Pollux (the Twin Brothers, the Dioscuri, sons of Zeus, patrons of sailors, Barnes, Ellicott, Robertson)."
+    "summary": "Gill notes that the three winter months were unseasonable for navigation. Calvin takes the mention of a second ship as evidence that the first was drowned, or so rent that it served for no use afterwards, by which the greatness of the shipwreck the better appears. On the badge he faces the harder question: Paul was not at liberty to sail with men like himself, but was forced aboard a ship dedicated to two idols. Yet Calvin will not have him defiled by it. Since an idol is nothing it cannot infect the creatures of God, and he was no more polluted by entering this ship than by looking at the altars in Athens; nor could anyone suppose he consented, since had he been required to worship Castor and Pollux, even for fashion's sake, he would sooner have died a thousand deaths."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the irony — the ship bore the sign of the pagan twin gods, yet it was the true God who protected Paul."
+    "prevalence": "single",
+    "summary": "Henry approves the delay: better lie by, though at charges, than go forward while the season was dangerous. Paul had warned them against venturing in winter and they would not take the warning; now that they had learned it by the dangers they had passed, he need not warn them again. Their learning did them good when they had paid dearly for it &mdash; and experience, Henry says, is called the mistress of fools, because those are fools who will not learn till it has taught them. He sets two ships side by side: both of Alexandria, both bound for Italy, both thrown upon the same island, and one wrecked while the other rode it out safely. Providence sometimes favours those that deal in the world, he says, that people may set their hands to worldly business, and at other times crosses them, that they may not set their hearts upon it; events are varied so that we may learn both how to want and how to abound. He thinks Luke mentions the badge to hint at the crew's superstition, hoping for better sailing under it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke brings the departure to late January, and thinks the depth of winter not the worst time to sail there, the wind being steadier and the passage safer. On the figure-head he turns the matter on his own countrymen: we who profess to be a Christian people follow the same heathen custom, having ships named the Castor, the Jupiter, the Minerva, the Leda, so that were ancient Greeks or Romans to visit our navy they would suppose that after two thousand years their old religion continued unaltered. Wesley notes that the ancients named their ships from such images, and that Castor and Pollux were two heathen gods thought favourable to mariners."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott fixes the date as nearly as it can be fixed. The Fast, falling on the tenth of Tisri and reckoned that year to the twenty-fourth of September, was past when the ship left Fair Havens; the fourteen days of the storm bring us to the end of October, and three months more to the beginning of February &mdash; earlier than the season commonly held open, but the officers of an Alexandrian ship would seize the first chance of pressing on. He adds that the wintering of this ship tells again for Malta, which lay on the usual line from Alexandria to Italy. Robertson says navigation usually opened in February and always by March, explains that the Greek word for the sign may be substantive or adjective, marked by the sign, and that the Twin Brothers were sons of Zeus and Leda, tutelary deities of sailors whose figures were painted one on each side of the prow. Barnes calls them semi-deities, fabled after death to have been translated to heaven as the constellation of the twins, and thereafter to protect seafaring men; Ellicott brings in Horace, who calls them the brothers of Helen and beaming stars, and adds that Poseidon gave them power over wind and wave to help the shipwrecked."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "Holds that Paul was in no way defiled by sailing under the badge of two idols, since an idol is nothing and cannot infect the creatures of God &mdash; no more polluted than by looking at the altars in Athens."
+   }
+  ],
   "themes": [
-   "after three months we departed in a ship of Alexandria",
+   "after three months we departed in a ship of Alexandria, which had wintered in the isle",
    "whose sign was Castor and Pollux",
-   "the resumption of the voyage",
-   "the pagan figurehead, the true God protecting"
+   "two ships of Alexandria, one wrecked and one preserved"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "12": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The company landed at Syracuse (the chief city of Sicily, a notable seaport about 80 miles from Malta) and tarried three days — perhaps for trade or favorable winds, the natural route of the Alexandrian ship toward Italy; the steady, providential progress toward Rome."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "landing at Syracuse, we tarried three days",
-   "the first leg of the resumed voyage",
-   "the chief city of Sicily",
-   "the steady advance toward Rome"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ship made a circuit (tacked, Robertson) to Rhegium (on the toe of Italy, opposite Sicily), then, with a favorable south wind, reached Puteoli (Pozzuoli, near Naples, the chief port of southern Italy where the Alexandrian grain ships landed) the next day — the arrival in Italy, the effective end of the sea voyage."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we fetched a compass, and came to Rhegium",
-   "the south wind blew, and we came to Puteoli",
-   "the arrival in Italy",
-   "the favorable wind speeding the company"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Calvin",
+   "John Gill"
   ],
+  "range": "12-14",
+  "pericope_label": "Landing at Syracuse, we came to Rhegium, and to Puteoli, where we found brethren",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill borrows Cicero's praise of Syracuse as the greatest and most beautiful of all the cities of Greece, so large that it might be said to consist of four cities in one, and reports Jews of Puteoli deceived by a false Alexander who claimed to be Herod's son. Calvin gathers from the seven days how gently the centurion handled his prisoner, and does not doubt Paul had promised to return in due time, the centurion being persuaded of his uprightness. And he draws the larger inference, that the seed of the gospel was already sown abroad, since there was some body of the Church even at Puteoli."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke remembers Syracuse as the birthplace of Archimedes, who when the Romans besieged it defended the walls with his engines, beating their galleys to pieces with huge stones and weighing the ships out of the water with hooks and levers; and who, when the city fell at last by treachery, was found intent on a problem, and cried to the soldier who set a dagger at his throat, Stop, soldier, or thou wilt spoil my diagram. The brute was unmoved, Clarke says, and murdered him on the spot. He derives the port's name either from its wells, on account of its celebrated warm baths, or from a word for a stench, because of their sulphureous exhalations."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "At Puteoli the company found brethren (an established church, the gospel already spread to this Italian port) who invited them to stay seven days — the centurion Julius (favorably disposed) allowing the week's stay (Robertson), giving Paul fellowship before the final overland stage to Rome."
+    "summary": "Barnes places Syracuse as the capital of Sicily, directly in the course from Malta to Rome. Robertson recalls that here Alcibiades wrecked the power and glory of Athens, and confesses that why the ship spent three days we do not know; Ellicott supposes they waited for a favourable wind, since what follows implies it was against them. Ellicott lingers on the old phrase for their next movement, once common for a circuitous route and now obsolete, and gives the fact behind it: the wind being probably westerly, they had to stand out from the coast to catch it. Both take Rhegium from the verb to break off, the place where the land breaks off at the southern entrance of the straits. Ellicott notes that the Greek implies a change of wind rather than one already blowing, that with the south behind them they ran safely between Scylla and Charybdis, and that Puteoli was then the chief port of Rome and the emporium for the Alexandrian corn ships on which the city depended for bread. On finding brethren there he builds a conjecture: the salutation from those of Italy in the epistle to the Hebrews is no natural way of speaking of the Christians of Rome, and Puteoli is the only other Italian church named in the New Testament, so that if the epistle came from Apollos the Alexandrian, the link between Alexandria and this port would explain the phenomena at once. Robertson cites Blass, that it is no stranger to find brethren at Puteoli than at Rome, and marks the last clause as the climax of the whole book &mdash; Luke exultant that Paul reached Rome at last, though not as he had hoped to come."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "where we found brethren",
-   "desired to tarry with them seven days",
-   "the fellowship at Puteoli",
-   "the approach to Rome"
+   "landing at Syracuse, we tarried there three days",
+   "we came the next day to Puteoli, where we found brethren",
+   "and so we went toward Rome"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "15": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "15",
+  "pericope_label": "The brethren came to meet us as far as Appii forum and The Three Taverns",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the opening phrase of Rome rather than of Puteoli, as Barnes does. Calvin weighs what the welcome cost those who gave it. To profess the Christian faith was then not merely odious but might hazard a man's life, and the danger was not private, since the envy redounded upon the whole church; yet nothing was dearer to them than their duty, and it would have been cruel to neglect so great an apostle. Their dutifulness testified their godliness toward Christ, and Paul's desire was the more inflamed because he saw fruit prepared for his constancy. Though endued with invincible strength and not dependent on man's help, Calvin adds, he was given new strength by God, who uses to strengthen his people by means of people; and though afterwards forsaken in prison, as he complains, he did not despair, but fought as valiantly under Christ's banner as if guarded by a great army."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that no apostle appears to have been employed in planting the gospel at Rome, and thinks it was carried there by some converted at Pentecost, strangers of Rome being among the crowd that day; he notes that the Latin word for the taverns covers a booth of any kind, the place being named from three notable ones set up before other houses gathered round. Wesley says the same of the founding, that inhabitants of the city then at Jerusalem probably carried the gospel home, and puts the last clause in a line: he saw that Christ was at Rome also, and forgot all the troubles of his journey."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Roman Christians, hearing of Paul's arrival, came out on the Appian Way to meet him — some to Appii Forum (40 miles from Rome), some to the Three Taverns (30 miles, Barnes, Clarke, Robertson); and Paul, long desiring to see the Roman church (Romans 1:9-11), thanked God and took fresh courage (cf. 23:11) at their love."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the value of fellowship — God comforted Paul through the brethren, that he might more joyfully defend the gospel; the godly are strengthened by means of one another."
+    "summary": "Robertson puts the Market of Appius at forty miles from Rome on the great Appian Way, made by the censor Appius Claudius three centuries before Christ, and notes its reputation as a haunt of thieves, wondering what that crowd made of Paul chained to a soldier; he grants that Paul had passed through enough to cause depression, whether he was depressed or not, and deeply appreciated this sympathy, recalling that Jesus himself had once bidden him be of good courage. Ellicott guesses at faces rather than founders, supposing that among the brethren were many whom Paul had known at Corinth and greeted by name at the close of his epistle &mdash; Aquila, Andronicus, Herodion, those of the household of Narcissus &mdash; mostly Jews by birth and of the freedman class, whose presence shows the decree of Claudius banishing the Jews had lapsed. He quotes Horace, who condemned Appii Forum to perpetual infamy as stuffed with rank boatmen and vintners base, and sets the contrast: on the evening the two parties met, this wretched little town became the scene of a prayer meeting, with thanksgivings pouring from rejoicing hearts. He explains why the first party halted there &mdash; they could not tell whether the apostle would come by canal or road &mdash; and says the closing words imply a previous tendency to anxiety, since there had been no communication with Rome since Paul left Caesarea. Barnes measures their regard by the distance they walked, and by their walking it for a prisoner in chains."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the brethren came to meet us as far as Appii forum, and the three taverns",
-   "he thanked God, and took courage",
-   "the Roman brethren's love",
-   "the comfort of fellowship"
+   "when the brethren heard of us, they came to meet us",
+   "as far as Appii forum, and The Three Taverns",
+   "whom when Paul saw, he thanked God, and took courage"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "16": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill"
   ],
+  "range": "16",
+  "pericope_label": "When we came to Rome, Paul was suffered to dwell by himself with a soldier that kept him",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the arrival at the city itself. Calvin observes that Paul's condition was peculiar, for he was suffered to dwell in a house by himself with one keeper, while the rest were shut in the common prison; the prefect knew from Festus's report that he was guiltless, and the centurion, as is likely, rehearsed faithfully whatever might bring him into favour. But God governed his servant's bonds from heaven, Calvin says, and not only to ease him of his trouble: he would not have the treasure of his faith shut up in prison, but laid open, that it might enrich many far and wide. And yet Paul was not so at liberty but that he always carried a chain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke shows from Tacitus why the title given to the officer fits, the guard having been gathered out of their quarters in the city into a fortified camp near it, so that their commander is with peculiar propriety called the commander of the camp. He adds what is known of the man: a principal instrument in raising Nero to the throne, praised for moderation and love of justice, useful in repressing many of that bad prince's inclinations, and at last put to death by him &mdash; his treatment of Paul being no mean proof of the character."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "At Rome the prisoners were delivered to the captain of the Praetorian Guard (perhaps Burrus, a note of time, Barnes, Clarke, Ellicott), but Paul was allowed to dwell by himself (a custodia libera, in his own lodging, chained to a single soldier, Robertson, Ellicott) — the favor due to Julius's good report and Festus's testimony of his innocence."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the providence — God governed Paul's bonds, granting him liberty not merely to ease his trouble but that the faithful might have free access and the treasure of the gospel not be shut up in prison."
+    "summary": "Ellicott walks the last stage of the road, describing how the Appian Way as they neared the city would show its tall milestones and stately tombs, lining either side until the road had the look of one long cemetery; how Paul's companions would point out the grove and sacred spring in the valley of Egeria, then let out to squatters of his own race whom Juvenal had mocked; and how he might even have seen the beginning of the catacombs, where the Christians, who would not burn their dead like the heathen and were shut out of the Jewish burying-ground, laid them to sleep. He reads the phrase about dwelling by himself as implying that Paul went at once into a hired lodging rather than accept a friend's hospitality. Barnes takes the officer named for the prefect of the praetorian guard, into whose custody men sent up from the provinces were regularly delivered, and traces the indulgence to the centurion whose favour Paul had conciliated on the voyage; both he and Ellicott name him Afranius Burrus, who held the office alone where before and after him there were two, which Ellicott takes as a note of time fixing the date of the arrival. Robertson is not so sure, noting that the clause naming this officer is absent from the older documents, doubting whether Julius turned his prisoners over to the praetorian prefect at all, and thinking he likelier reported to the captain of the Peregrini. He stresses what the liberty amounted to: comparative freedom, a lodging of his own and later a hired house, but a soldier chained to his right hand day and night."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "To whom were the prisoners delivered at Rome?",
+    "positions": [
+     {
+      "position": "to the prefect of the praetorian guard, the regular custodian of men sent up from the provinces &mdash; Afranius Burrus, who held that office alone",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "doubtful &mdash; the clause naming that officer is absent from the older documents, and Julius more likely reported to the captain of the Peregrini",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "when we came to Rome",
-   "Paul was suffered to dwell by himself with a soldier",
-   "the goal reached, Christ's promise kept (23:11)",
-   "the providential liberty for the gospel"
+   "when we came to Rome, the centurion delivered the prisoners to the captain of the guard",
+   "Paul was suffered to dwell by himself with a soldier that kept him",
+   "the chain that remained upon him"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "17": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Chrysostom",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Matthew Henry"
   ],
+  "range": "17",
+  "pericope_label": "Paul called the chief of the Jews together: I have committed nothing against the people",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom sees the restraint as deliberate. Paul wished to exculpate both himself and them &mdash; himself, that they might not accuse him and so hurt themselves, and them, that it might not seem the whole business was of their doing, a report being likely abroad that he had been given up by the Jews. Observe how he extenuates their charges, Chrysostom says; had he wished to aggravate matters he might have made them bear far harder. And when he adds that he had nothing to accuse his nation of, he shows how far he is from hostile feeling, his whole speech being of a forgiving nature."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill dates the three days from Paul's first coming to Rome, when he had hired his lodging and rested from the fatigue of the voyage. Calvin calls the meekness wonderful. Though he had suffered such cruel injuries from his own people, Paul still studied to appease the Jews at Rome; he might well have been excused had he turned to the Gentiles instead, since all would have pardoned him for letting alone those he had so often found of desperate obstinacy. But he knew his Master was given to be a minister of the Jews, to fulfil the promises by which God adopted the seed of Abraham; so he looks to the calling of God and is never weary. Two things moved him, Calvin thinks: having liberty to teach at Rome, he would not have them lose the fruit of his labour; and he would not have them stirred by hatred of his cause to trouble the Church, since a small occasion might have made them torches to kindle a bad fire. He adds that in cleaving so holily to Christ, the soul and perfection of the law, Paul was so far from impairing those ordinances that none observed them better."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears courtesy in the salutation: calling them men and brethren, Paul intimates that he expects to be treated as a brother, and engages to treat them so. On the disclaimer itself Henry is careful. Paul did not impose the customs of the fathers upon the Gentiles, for they were never intended for them; but neither did he oppose them in the Jews, and he conformed to them himself when among them, his quarrel being not with their religion but with their enmity to the Gentiles. He also notes how much the next clause leaves out: had Paul told the whole truth it would have looked worse for the Jews, who would have murdered him without colour of law had the Romans not protected him. And he adds that many Jews had returned to Rome for trade after the death of Claudius, though it does not appear they had any place of public worship."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke recalls that Claudius had commanded all Jews out of the city, but that they were evidently allowed back, since this verse shows chiefs, probably of synagogues, living there. Wesley accounts for the three days as given to rest and prayer, and explains the summons: Paul always sought the Jews first, but being bound he could not go round to them."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul, within three days of arriving at Rome, called the chief Jews together (his unwearied love for Israel, ever beginning with his own nation) and declared his innocence — nothing committed against the Jewish people or the customs of the fathers, yet delivered a prisoner to the Romans, stating his case without bitterness."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (with Henry): Paul's meekness and wisdom — conciliating the Jews, addressing them as brethren, stating his case mildly to gain a hearing for the gospel."
+    "summary": "Robertson adds that he invited the leading men to his lodging to hear why he was in Rome a prisoner under appeal to Caesar, and notes that the statement about being delivered prisoner does not explain how, since the Jews were trying to kill him when Lysias rescued him from the mob, so they were responsible for his being in Roman hands, but only after hoping to kill him first. Ellicott notes the tact of the opening: Paul addresses his hearers by the title they loved, calling them the people, speaks respectfully of their customs, and disclaims any thought of slighting either. Barnes gives Paul two objects: to clear himself, supposing unfavourable reports had come from Judea, and, as was his custom, to make the gospel known to his countrymen."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
    "Paul called the chief of the Jews together",
-   "I have committed nothing against the people, or customs",
-   "Paul's prompt outreach to the Jews",
-   "the temperate defense"
+   "I have committed nothing against the people, or customs of our fathers",
+   "yet was I delivered prisoner from Jerusalem into the hands of the Romans"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "18": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Adam Clarke",
    "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul appealed to the Roman examination — the authorities (Felix, Festus, and the hearing before Agrippa, 26:31-32) had found no capital charge against him and would have released him, there being no cause of death (Barnes, Robertson); to show the Jews his bonds were not for any crime."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when they had examined me, would have let me go",
-   "no cause of death in me",
-   "the Roman verdict of innocence",
-   "Paul's vindication"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "18-20",
+  "pericope_label": "For the hope of Israel I am bound with this chain",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "When the Jews opposed his release (seeking his death), Paul was constrained to appeal to Caesar to save his life (25:11, Barnes, Robertson) — yet not to accuse his nation, his love for Israel undimmed, no charge brought against them."
+    "summary": "Gill fills in the demand behind the objection, that Paul be sent back to Jerusalem for trial, to which Festus seemed inclined. Calvin explains why the point needed making. The appeal would have looked to the Jews like an act of hatred, since by it the authority and liberty of their nation seemed sorely oppressed; and his defence would have seemed bound up with the infamy of the whole people. Paul therefore answers that objection too, showing that he was driven to this fortress by the stubbornness of his enemies and excused by necessity, having had no other way to escape death; and having excused what was done, he promises so to plead hereafter that he will not labour against the Jews. Calvin says far more must be understood than Luke sets down, as the answer about the sect shows, and supplies the substance &mdash; that Paul pleaded Christ, so that it might appear neither the law nor the temple profited the Jews anything without him. From this he draws his rule: no man hopes aright but he who looks to Christ and his spiritual kingdom, for in placing the hope of the godly there the apostle shuts out every other hope."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): Paul's meekness — even in appealing to Caesar, he bore no grudge against his people, seeking not their harm but his own safety."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Jews spake against it, I was constrained to appeal unto Caesar",
-   "not that I had ought to accuse my nation",
-   "the appeal forced by the Jews",
-   "Paul's tender care for Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Clarke reads the clause as Paul's whole answer: this, and this alone, is the cause of my being delivered into Roman hands &mdash; that I have proclaimed Jesus as the Messiah, maintained that though the Jews crucified him he rose again, and preached through him the general resurrection of mankind. Both the Messiah and the resurrection might be called the hope of Israel, Clarke says, and it is hard to tell which is meant; but though the Jews did believe a general resurrection, they did not believe it as Paul preached it, who laid its whole foundation on the rising of Christ. Wesley says Paul speaks tenderly of them, not so much as mentioning their repeated attempts to murder him, having no design to accuse others but merely to defend himself."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul declared the true ground of his bonds — 'the hope of Israel,' the two-fold hope of the Messiah and of the resurrection of the dead (both grounded in Christ, the resurrection of Jesus proving him the Messiah, Romans 1:3-4, Barnes, Clarke, Ellicott, Robertson); bound with a single chain (the custodia libera), a touch of pathos."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul is bound for the hope of Israel because the whole hope of the godly rests in Christ — no man hopes aright but he who looks to Christ and his spiritual kingdom."
+    "summary": "Ellicott suspects we have here only the summary of a fuller narrative; but what stands is warranted by the facts. No Roman magistrate had ever condemned him, Agrippa and Festus having decided he might have been released, and he was constrained to appeal in self-defence, to escape a prejudiced tribunal or the plots of assassins. Yet he did not come, as appellants so often came, with counter-accusations; on all such matters his lips were sealed. Ellicott makes the hope expressly twofold, the expectation of a Messiah bringing in a kingdom of heaven, which every Israelite cherished, and the hope of a resurrection, which Paul proclaimed as attested by the rising that proved Jesus to be the Son of God; and he adds that the chain is singular because Paul was entrusted to a single soldier, finding a touch of pathos in this appeal to his sufferings. Robertson notes that the verb for examining is that used of the hearings before Felix and Festus, and that the imperfect rendered desired pictures what those governors really wanted; the word for the Jews speaking against it is mild for so bitter an enmity, and the word for being constrained is the very verb used of Paul's own attempts, once, to compel Christians to blaspheme. He finds the grammar striking at the close, since the construction reverses the picture: Paul does not lie around the chain, but the chain around Paul. Barnes says the appeal was made for his own preservation, not from revenge, and that though unjustly accused and injured he shows here, in the true spirit of the Christian religion, that he cherished no unkind feelings toward his countrymen."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "for the hope of Israel I am bound with this chain",
-   "the Messiah and the resurrection",
-   "the true ground of Paul's bonds",
-   "Christ the hope of Israel"
+   "they would have let me go, because there was no cause of death in me",
+   "I was constrained to appeal unto Caesar, not that I had ought to accuse my nation of",
+   "for the hope of Israel I am bound with this chain"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.41
+   }
   }
  },
  "21": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "21-22",
+  "pericope_label": "We neither received letters out of Judaea concerning thee: but we desire to hear of thee",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Roman Jews replied that no letters from Judaea and no traveler had brought any charge against Paul — perhaps because the Jerusalem Jews saw their cause as hopeless (the winter suspending travel, or their abandoning the prosecution, Barnes, Ellicott, Robertson); Wesley notes the peculiar providence, the bridle in the enemies' mouths."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: their contempt or despair — not gentleness toward Paul, but because they could not oppress him so far off, his removal to Rome seeming to them as good as a grave."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we neither received letters out of Judaea concerning thee",
-   "neither spake any harm of thee",
-   "the absence of accusation",
-   "the providence restraining Paul's enemies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Roman Jews requested to hear Paul's views, thinking it fair to hear his side (Robertson), identifying him with 'this sect' — Christianity, everywhere spoken against (maligned and slandered, as Tacitus and Suetonius attest, Barnes, Clarke, Ellicott)."
+    "summary": "Gill allows the answer to be taken either as dissembling or as plain fact, and prefers the latter. Calvin puts a harder construction on the silence. The priests and scribes held their peace not from any new gentleness toward Paul, but out of contempt or despair, since they knew no way to crush him at that distance, his carrying into Italy seeming to them as good as a grave; and they lorded it as carelessly as proudly, so long as nobody troubled them at home. On the request that follows Calvin allows the questioners some credit: though not rightly prepared to hear, they show some desire to learn, in not refusing the defence of a doctrine spoken against everywhere &mdash; for many stop the way before themselves with that prejudice, unable to abide what common judgment has refused, and condemning on other men's word a doctrine they do not know. Yet he will not clear them, since they raise the general gainsaying to stir hatred, as if Isaiah had not said long before that God should be a stone of offence to all the people."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the irony — 'this is no proof at all of a bad cause, but a very probable mark of a good one'; the world's hostility no condemnation of the truth."
+    "prevalence": "several",
+    "summary": "Clarke rejects the excuse that the accusers lacked time, since they might have written long before Paul sailed, or sent a letter by the very vessel the prisoners embarked in; they had wanted a chance to kill him, and when his appeal frustrated that, they let the business drop. He adds a report from Justin Martyr that the Jews not only cursed the Christians in their synagogues but sent men out from Jerusalem to tell the world that they were an atheistical sect, to be detested by all. Wesley sees a particular providence in the silence, and hears in the distinction between what the brethren had related in set discourse and what they had spoken in passing how completely the bridle had been in their mouths."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes cannot say why the accusers had not forwarded their case to the emperor, and supposes they had come to think it hopeless: Paul had been acquitted in turn by Lysias, Felix, Festus and Agrippa, and having failed before all of them saw no prospect of succeeding here. Ellicott is not so sure, and thinks there had hardly been time for letters, Paul having sailed late in the autumn immediately after his appeal, with all sea communication suspended through the winter. He notes too what the Jews do not say: not that they had heard nothing of him, but that none who came had spoken evil of him, which agrees well enough with the report that he walked orderly and kept the law. On the request he notices that the word for sect is the term Tertullus had used of the Nazarenes, and that though the speakers had heard enough to identify Paul with it they treat him with respect, wanting his views at first hand; the darker calumnies that circulated later &mdash; the stories of cannibal banquets and licentious orgies &mdash; may already have been whispered, and the Christians would in any case be known for abandoning circumcision and worshipping one crucified as a malefactor. Robertson takes the letters for official documents from the Sanhedrin, doubts they had heard of the appeal at all, since the news could hardly have reached Rome before Paul, and reads their language as implying that the Christians in Rome were still few and mainly Gentile. Barnes observes that it has been the common lot of Christ's followers to be spoken of with contempt, then and since; and Wesley turns the objection round, that being everywhere spoken against is no proof of a bad cause, but a very probable mark of a good one."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Wesley",
+    "note": "Turns the complaint into a commendation: that the sect is everywhere spoken against is no proof at all of a bad cause, but a very probable mark of a good one."
+   }
+  ],
   "themes": [
+   "we neither received letters out of Judaea concerning thee",
    "we desire to hear of thee what thou thinkest",
-   "this sect every where spoken against",
-   "the maligned reputation of the gospel",
-   "opposition no mark against the truth"
+   "as concerning this sect, we know that every where it is spoken against"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "23": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
    "John Wesley",
-   "John Calvin"
+   "Matthew Henry"
   ],
+  "range": "23",
+  "pericope_label": "He expounded and testified the kingdom of God, persuading them concerning Jesus",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes the use of a set day, when both sides might be better prepared and a fuller assembly might hear."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the difference between these hearers and others: though prejudiced against the way because it was everywhere spoken against, they gave it a hearing, which is more than the Jews at Jerusalem would do; being men of larger acquaintance with the world, they would not answer the matter before they heard it. And though Paul was a prisoner and could not go out to them, they came to him. His confinement, Henry says, ought to have confirmed his doctrine rather than prejudiced them, since it was a sign not only that he believed it but that he thought it worth suffering for. He made room for them in his lodging, not fearing to offend the government, so that he might do them good. On the three verbs he takes the first as explaining the nature of the kingdom of God, that it is heavenly and spiritual, seated in the minds of men, shining not in outward pomp but in purity of heart and life &mdash; for what kept the Jews in unbelief was a misunderstanding of it, as though it came with observation; the second for a plain declaration that the kingdom was already set up in the world; the third for the warm and lively application which follows doctrine and presses it on the conscience, this being the most profitable method of preaching. He guesses at a continued discourse of eight or ten hours, excusing it because the subject was of vast importance and Paul knew not when he should have such another opportunity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks it easy enough for anyone who will consult the books of Moses to see how Jesus and his spiritual kingdom might be proved from them, and is emphatic about the prophets: their predictions are so clear, and so obviously fulfilled in the person, preaching, miracles, passion and death of Jesus Christ, that it is impossible, with any show of reason, to apply them to another. Wesley reduces the whole to two grand topics: that the Messiah's kingdom was of a spiritual and not a temporal nature, and that Jesus of Nazareth was the very person foretold as its Lord. On the second, he adds, Paul had as much need to persuade as to convince, their will making as strong a resistance as their understanding."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "On the appointed day, many came to Paul's lodging, and he expounded and testified the kingdom of God and persuaded concerning Jesus — from the Law and the Prophets, the Scriptures the Jews accepted, from morning till evening (Robertson), a full day's labor; Henry notes the Jews' willingness, more than at Jerusalem."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul defined the kingdom rightly against carnal Jewish notions — spiritual, beginning in newness of life, ending in heavenly glory; and persuaded them to receive Christ, the suffering Redeemer foretold by the prophets, all from the pure fountain of the word."
+    "summary": "Robertson calls the appointment a formal arrangement, the verb being that used when Jesus appointed the mountain in Galilee, and presses with Ellicott the word for their number, a comparative meaning more than a few, implying a larger attendance than might have been looked for. He finds Wesley's distinction in the grammar, the participle for persuading being conative &mdash; he was trying to persuade them &mdash; and observes that it was only about Jesus that Paul could make good his claim about the hope of Israel; he says too that Paul did it with detail and care and spent the whole day at it. Barnes says Paul set out to show that Jesus answered both the predictions in the books of Moses and the types Moses instituted to prefigure the Messiah, and then that he answered the prophets, calling the phrase an instance of Paul's indefatigable toil in endeavouring to win his own countrymen. Ellicott grants that what we have can only be an outline, but points out that the address at Antioch in Pisidia, and the arguments of the epistles to the Galatians and the Romans, let us estimate what its contents are likely to have been."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
+   "when they had appointed him a day, there came many to him into his lodging",
    "he expounded and testified the kingdom of God",
-   "persuading them concerning Jesus, out of the law and the prophets",
-   "the full day's exposition",
-   "the spiritual kingdom and the Christ"
+   "persuading them concerning Jesus, both out of the law of Moses and out of the prophets"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "24": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "24-26",
+  "pericope_label": "Some believed, and some believed not: well spake the Holy Ghost by Esaias the prophet",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill will not have the believing taken for a bare assent, but a believing in Christ with the heart. Calvin draws the plainer lesson, that an apostle endued with such grace that he ought to have moved stones could not, after a whole day of disputing, win all men to Christ; and if hearers who came of their own accord were so stubborn, we need not marvel when the plain doctrine of the gospel is resisted still. He explains why the division came at all. Christ, who is our peace and the only bond of holy unity, becomes an occasion of dissension and sets former friends at odds; for when these Jews came together they thought and spoke all one thing, professing to embrace the law of Moses, and no sooner did they hear the doctrine of reconciliation than they were divided. Yet the preaching is not the cause of the discord. The private displeasure that lurked in their minds beforehand simply breaks out, as the brightness of the sun does not colour things otherwise than they were, but shows plainly a difference which was none so long as it was dark. Calvin observes that Paul uses the prophecy as with a mallet, to beat in pieces the hardness of the wicked and to steady the faithful, lest the unbelief of others trouble them, and sets both halves side by side without softening either: the prophet is commanded to stop his hearers' eyes, and Paul charges the unbelieving with shutting their own."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the division on the reader. The message was treated then as the gospel is now, some believing and converted, others continuing in obstinate unbelief and perishing. Could the Jews have credited the spiritual nature of the Messiah's kingdom, he says, they would have found little difficulty in receiving Jesus as the Messiah; whereas multitudes now called Christians can more easily credit Jesus as Messiah than believe the spiritual nature of his kingdom. The cross is the great stumbling block: millions expect Jesus and his kingdom who cannot be persuaded that the cross is the way to the crown. Wesley says the believing was with the heart as well as the understanding, and states what the prophecy describes: a judicial blindness following a wilful and obstinate resistance of the truth, so that first they would not, and afterward they could not, believe."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Some believed, some believed not — 'some began to be persuaded, some continued to disbelieve' (the imperfect tense, Robertson), the usual divided result of gospel preaching; the cross and the spiritual kingdom the stumbling-block (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: even Paul's grace-filled preaching could not win all — the unbelief of many resists the plainest doctrine, for faith is not common to all; those return blind who came willingly."
+    "summary": "Ellicott and Robertson note that the verb rendered believed is the passive of the one rendered persuade in the verse before, so the sense is that some were being persuaded &mdash; began to be persuaded, Robertson makes it &mdash; while the other half is an imperfect meaning they went on disbelieving. It is usually so, he adds. Robertson colours the parting scene: the word for their not agreeing is a double compound meaning without symphony, discordant, found nowhere else in the New Testament; the verb for departing is middle, so that they loosed themselves from Paul &mdash; a graphic close. Yet it was a triumph, he says, to gain any adherents at all in such an audience. The one word Paul spoke as they went was a last word after the all-day exposition; and the Well with which it opens carries strong indignation in its very position. Ellicott hears in that tone a patience almost exhausted by long contest with prejudice, and points out that our Lord had cited these very words of the Jews of Palestine, in the first three Gospels and again in John, so that Paul follows in his Master's track, and what was true at Jerusalem was true at Rome. Robertson notes that in naming the Holy Spirit Paul shows them that what they are resisting is God, and Barnes calls it the last solemn warning we know Paul to have delivered to his countrymen."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "some believed, and some believed not",
-   "the divided response to the gospel",
-   "belief and unbelief",
-   "the sovereignty of grace"
+   "some believed the things which were spoken, and some believed not",
+   "when they agreed not among themselves, they departed",
+   "well spake the Holy Ghost by Esaias the prophet unto our fathers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Jews, divided and discordant, departed; and Paul spoke one last solemn word — 'Well spake the Holy Ghost by Esaias' — ascribing the prophecy to the Holy Ghost speaking through Isaiah (a strong testimony to inspiration, Barnes, Robertson), showing the Jews they resist God himself (cf. 7:51)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul, seeing their obstinacy, inveighs sharply, citing the Holy Ghost to give the oracle authority — the stubborn must be cited to God's judgment-seat; by naming the Spirit, Paul shows the word proceeds from God, not man's brain."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "well spake the Holy Ghost by Esaias the prophet",
-   "the Jews agreed not, and departed",
-   "the inspiration of Scripture",
-   "resisting the Spirit of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul quotes Isaiah 6:9 — 'hearing ye shall hear, and shall not understand' — the prophecy of judicial blindness, cited six times in the New Testament (Robertson, Calvin), applied by Christ to his parables and by John and Paul to the Jews' rejection of the Messiah; a wilful blindness consequent on resisting the truth (Wesley)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the prophet attributes the blindness to God's secret judgment, yet the people shut their own eyes — both are true; God blinds the reprobate, yet they become blind of their own accord, the word's clarity leaving them inexcusable."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the blindness God's judgment or the people's own self-hardening?",
-    "sides": [
-     {
-      "position": "Both — God's secret judgment and the people's wilful shutting of their own eyes, leaving them inexcusable",
-      "holders": [
-       "Calvin",
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "hearing ye shall hear, and shall not understand",
-   "seeing ye shall see, and not perceive",
-   "the prophecy of judicial blindness",
-   "God's judgment and man's self-hardening"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "27-29",
+  "pericope_label": "Be it known unto you, that the salvation of God is sent unto the Gentiles",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The heart of the people waxed gross (stupefied, hardened against spiritual truth, Gill), their ears dull, their eyes closed — a wilful refusal, lest they should see, hear, understand, be converted, and healed; the people, by their own hardening, cut off from the conversion and healing God would give."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the heart of this people is waxed gross",
-   "their eyes have they closed, lest they should be converted",
-   "the hardened heart and its tragic consequence",
-   "mercy forfeited by self-hardening"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul, the Jews having rejected the gospel, solemnly declares (as at Antioch, 13:46, and Corinth, 18:6) that the salvation of God is sent to the Gentiles, and they will hear it — the emphatic 'they' contrasting the receptive Gentiles with the rejecting Jews (Robertson); Paul's unwavering faith offering the gospel where it would be received (Barnes); the climax of Acts."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: salvation sent to the Gentiles in the second place, after the Jews rejected it, not indiscriminately but to provoke Israel to jealousy (Romans 11:11; Deuteronomy 32:21); the doctrine others refuse profiting the nations."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the salvation of God is sent unto the Gentiles",
-   "they will hear it",
-   "the climactic turning to the Gentiles",
-   "the great theme of Acts consummated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill glosses the first clause: the heart of this people is waxed gross, or fat, stupefied with carnal and temporal notions, and hardened against divine and spiritual ones; and he takes the occasion of the disputing that followed plainly, that the citation from Isaiah and the announcement of a mission to the Gentiles must have greatly disturbed the unbelieving part of the audience. Calvin says the announcement was made lest the Jews afterwards accuse Paul of revolting from the stock of Abraham; he only declares what the prophets had so often testified, that the salvation of which they were the primary heirs should be carried over to strangers. And it is in the second place, he insists &mdash; after the Jews had rejected it &mdash; so that they have no cause to complain if the Gentiles are admitted into a possession they themselves forsook. Nor does Calvin let the promise that they will hear be made one about all Gentiles alike, since many of them resisted God wickedly enough; he sets the believing Gentiles against the unbelieving Jews to provoke them to jealousy, as the song of Moses had done. He agrees that the citation nettled them, the wicked being so far from growing meek under reproof that they are the more inflamed; but he draws the encouraging inference too. That there was disputing at all shows some had so embraced what Paul said that they did not hesitate to defend it and stoutly avouch what they believed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that Paul had spoken so twice before, but here uses a firmer tone, being now out of the Jewish territories and under the emperor's protection; he presses the closing verb, the Greek meaning not only to hear but to obey. He makes the point more sharply than the rest: God could have sent this salvation to the Gentiles without waiting on Jewish disobedience, but he waited until they had rejected it, and so the elect became reprobate and the reprobate elect. Clarke sees in the reasoning that followed the believers contending with the unbelievers, and supposes truth gained ground by it, since contentions about the truth of Christ's religion end infallibly in its triumph. Wesley dates the change from that hour, no apostle having been at Rome before."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Jews departed and reasoned warmly among themselves — the believing party contending with the unbelieving (Barnes, Clarke) — though the whole verse is textually doubtful, wanting in many early manuscripts and likely a later insertion to ease the transition from v.28 to v.30 (Barnes, Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the wicked, nettled by the prophecy, disputed; yet some embraced Paul's words and defended them stoutly — for if we will have peace with God, we must war with those who contemn him."
+    "summary": "Robertson notes that the word for the salvation sent is not the usual abstract noun but a neuter adjective used as a substantive, and that the pronoun in the closing clause stands emphatically against the Jews' rejection &mdash; they, at least, will hear. Ellicott finds the same demonstrative force in the phrase, the apostle pointing to that definite deliverance he had just proclaimed, and hears behind the words the pain at Israel's rejection that fills the eleventh chapter of Romans. Barnes turns it into a portrait: if the gospel was rejected by one people he was ready to offer it to another, never supposing Christ had died in vain, and never discouraged &mdash; how happy would it be, he adds, if all Christians had the same unwavering faith and zeal. On the verse that follows, Barnes reports it wanting in the Syriac and some Greek manuscripts, and reckoned spurious by Mill and Griesbach; Ellicott says the same of many of the earliest manuscripts, and suggests it may have been inserted by a transcriber, or by the historian himself in a revised copy, to soften the abruptness of the transition &mdash; adding that so far as it goes it confirms what was said of some believing and some not."
    }
   ],
   "debates": [
    {
-    "question": "Is verse 29 part of the original text?",
-    "sides": [
+    "question": "Is the verse about their reasoning among themselves genuine?",
+    "positions": [
      {
-      "position": "Textually doubtful — wanting in many early manuscripts and versions, likely a later insertion or revised reading",
+      "position": "wanting in the Syriac and some Greek manuscripts, and reckoned spurious by Mill and Griesbach",
       "holders": [
-       "Barnes",
-       "Ellicott"
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "wanting in many of the earliest manuscripts, and perhaps inserted by a transcriber or by the historian himself in a revised copy, to soften the abruptness of the transition",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
@@ -1250,107 +1067,165 @@
   ],
   "outliers": [],
   "themes": [
-   "the Jews departed, and had great reasoning among themselves",
-   "the divided dispute",
-   "the textual question",
-   "contention advancing the truth"
+   "the heart of this people is waxed gross",
+   "be it known therefore unto you, that the salvation of God is sent unto the Gentiles",
+   "and that they will hear it"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.48
+   }
   }
  },
  "30": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "30",
+  "pericope_label": "Paul dwelt two whole years in his own hired house, and received all that came in unto him",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul dwelt two whole years in his own hired lodging (with companions, guarded by a soldier, Barnes) and received all who came — Jews and Gentiles alike — a settled, open, fruitful ministry; during which he wrote several epistles (Ephesians, Philippians, Colossians, Philemon) and converted many, even in Caesar's household (Philippians 1)."
+    "summary": "Gill says the house was hired with his own money, Luke and Aristarchus dwelling there with him, and will not decide whether he was then released or suffered. Calvin admires the constancy above all. Paul knew what hatred he was purchasing, and that his safest course was to hold his peace; but remembering that he was no less Christ's servant in prison than at liberty, he thought it unlawful to withdraw from anyone ready to learn, and regarded the calling of God more than his own life. The liberty he was allowed, Calvin adds, came not from the winking of those who could have hindered it, since they detested religion, but because the Lord shut their eyes; so Paul could boast that the word of God was not bound with him."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the providence — even a prisoner, Paul had a wide and open door, receiving all who came."
+    "prevalence": "single",
+    "summary": "Henry cannot leave him without protest. It is a trouble that we must part from him in bonds, with no prospect of release; two whole years of that good man's life are spent in confinement, and for aught that appears he was never so much as enquired after by those whose prisoner he was. So little reason have we to trust in men, Henry says, and despised prisoners in great ones. It would grieve one that so useful a man should be so long restrained: how many churches might Paul have planted, how many nations brought to Christ, in five years of liberty. But God is wise, Henry concludes, and will show that he is not debtor to the most useful instruments he employs, carrying on his own interest both without their services and by their sufferings."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that as a state prisoner Paul might have been given an apartment in the common prison, but peculiar favour was shown him, so that finding an opening for the gospel he hired a place and paid for it out of his own labour; his bonds became the means of spreading the truth, so that there were saints by then in Caesar's household. He closes with a curiosity, the tradition that Paul corresponded with Seneca &mdash; fourteen such letters survive, and Clarke owns an ancient manuscript of them, but grants that learned men agreed long ago they are worthy of neither. Wesley reads the passage as fixing the date of the book, which was written after these two years and published by Luke, who stayed with him to the last."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott corrects the English: the word rendered hired house means rather a lodging or apartment, and does not imply that Paul occupied a whole one. He describes what the position allowed and forbade &mdash; a prisoner could not go out to preach in the synagogues or the house-churches or the open places, but his friends had free access, and so there was probably a wider opening for his influence than if he had spoken publicly and exposed himself to organised antagonism; what seemed at first a hindrance was so ordered, as Paul afterwards acknowledged, that it fell out rather to the furtherance of the gospel. Barnes cannot explain the delay: the Jews were plainly not disposed to carry the case before Nero, having never favoured the appeal; and when Paul was arraigned, what was decided, and why he was at last set free are all wrapped, he says, in impenetrable obscurity. Robertson names four epistles written in these years &mdash; Philippians, Philemon, Colossians, Ephesians &mdash; any one of which would immortalise a man, and reads the two closing participles as what always concerned Paul most, preaching and teaching, done both as if his right hand were not in chains. He notes that the last adverb, none forbidding him, occurs nowhere else in the New Testament, and holds with Harnack that Luke wrote in this very period, carrying events no further because they had gone no further."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
    "Paul dwelt two whole years in his own hired house",
-   "received all that came in unto him",
-   "the settled, fruitful ministry at Rome",
-   "the open door of the prisoner-apostle"
+   "and received all that came in unto him",
+   "his bonds fell out to the furtherance of the gospel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "31": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Gill",
+   "John Wesley"
   ],
+  "range": "31",
+  "pericope_label": "Preaching the kingdom of God with all confidence, no man forbidding him",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the kingdom of God for the gospel itself. Paul preached up Jesus as the King Messiah and opened the nature of his kingdom &mdash; that it consists not in meats and drinks but in righteousness and peace and joy in the Holy Ghost, being the kingdom of grace, which is within a man, where grace reigns unto eternal life; and he gave some account of the kingdom of glory, and showed that without regeneration none can be meet for it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the same more shortly, that Paul showed the spiritual nature of the true Church under the Messiah's reign, and then unfolds the second phrase by its three titles. The Redeemer was to be set forth as the Lord, the sole potentate, upholding all things by the word of his power; as Jesus, the Saviour, who saves his people from their sins; and as Christ, the Anointed, who had the Spirit without measure and communicates its gifts to all true believers. These, Clarke says, contain the sum and substance of all that is called the gospel of Christ, the phrase taking in the whole account of the incarnation, the miracles, the passion, the resurrection, and the sending down of the Spirit. He renders the next words as liberty of speech, perfect freedom to say all he pleased and when he pleased, since he had the fullest toleration from the government and the unbelieving Jews had no power to prevent him. What came afterwards Clarke reports only at second hand: that in Nero's persecution both Paul and Peter sealed the truth with their blood, the one crucified head downward, the other beheaded and buried on the Ostian Way. Yet he will not have us rely on any account of how this apostle died. Wesley says it in a sentence: such was the victory of the word of God, and while Paul preached at Rome the gospel shone with its highest lustre; and he will not count the ending a defect, since here the Acts of the Apostles end, and end with great advantage, otherwise Luke could easily have carried the narrative on to the apostle's death."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul preached the kingdom of God and taught the things concerning the Lord Jesus Christ (the sum of the gospel, Clarke, Barnes), with all confidence (parresia, full boldness and liberty of speech) and no man forbidding him — the Roman empire as yet tolerant (Ellicott), the gospel proclaimed unhindered at the capital of the world; the abrupt close perhaps because Luke wrote at the end of the two years or Theophilus knew the sequel (Ellicott)."
+    "summary": "Ellicott finds the last clause interesting for what it shows of the empire's attitude: so far, even under Nero, it was tolerant, and though the sect was everywhere spoken against, a leading teacher of it had free room to propagate his views. The rulers were not yet alarmed at a widespread secret society, and the influence of Seneca and Burrus may have had a share in that policy. He calls the close somewhat abrupt and thinks the writer may have meant to continue, the natural inference being that when he laid down his pen the two years had expired. Barnes points to the fruit: Paul was not unsuccessful even as a prisoner, several being converted in the very court of the emperor; his bonds were manifested throughout the palace, and many brethren, waxing confident by them, grew bolder to speak the word without fear. He feels the loss of the rest more than the others, and asks who can help sighing that so interesting a historian did not follow Paul to the end, so that everything now falls at once into obscurity. But he answers himself: rather than pour out unavailing regret we should speak the language of praise, that we have a history of the church for thirty years after the ascension, that we are shown the earliest missionary zeal, and that we are conducted from land to land until we are brought to the seat of Roman power and see the apostle of the Gentiles proclaiming, in that mighty capital, the name of Jesus as the Saviour of men. There could be no more appropriate close, Barnes says, than to leave the chief agent of the Christian religion at that seat of intelligence and power."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "preaching the kingdom of God, teaching the things concerning the Lord Jesus Christ",
+   "preaching the kingdom of God, and teaching those things which concern the Lord Jesus Christ",
    "with all confidence, no man forbidding him",
-   "the triumphant, unhindered close of Acts",
-   "the gospel proclaimed at the capital of the world"
+   "the close of the history"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  }
 }
