@@ -7368,6 +7368,77 @@
         "24"
       ],
       "note": "Four disagreements, all carried in the tags. (1) v7, what the groves were: Clarke argues the word is a corruption of Ashtaroth, differing by only two letters and so read by the Chaldee, Syriac, Arabic and Vulgate, and fills out the background with Pliny on trees serving as the temples of the gods, Tacitus on the old Germans, Quintus Curtius on the Indians and Caesar on the Druids; Ellicott answers that the word is Asheroth, the wooden images of the nature-goddess Asherah, that the grove rendering came from the Septuagint, and that Movers has shown Asherah and Astarte to be different though allied deities. (2) v15, whether Ehud was ambidextrous or maimed: Clarke reports the Septuagint and Vulgate for ambidextrous and adds Hector, Asteropaeus and Plato's law for soldiers; Ellicott insists the Hebrew means shut, cannot mean ambidextrous, and that a crippled right hand would itself avert suspicion, making Ehud a Hebrew Scaevola. (3) v19, what the pesilim were: Keil argues for stone quarries on the ground that open-air stone idols near Gilgal are very improbable; Ellicott and Clarke both hold for images, Ellicott noting the quarry reading rests only on the Chaldee and Jarchi. (4) The morality of the assassination, which is the chapter's real crux: Gill admires Ehud's serenity as proof he knew the deed was according to the will of God; Keil says flatly that the treacherous assassination of a hostile king is not to be regarded as an act of the Spirit of God nor set before us as an example; Ellicott goes furthest, calling the act unjustifiable and the inference from Ehud's divine call to the means he used a form of exegesis that undermines the very bases of morals, with Jacques Clement and Pope Paul V quoted as evidence of where it leads. The three positions are irreconcilable and all three are recorded."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "Jamieson stride-6 misalignment, NINETEENTH consecutive chapter. Keys 6, 12, 18, 24 - stride 6 from offset 0, four members, NO gap. Seventh chapter with the contiguous-region signature: all four blocks come from 2 Corinthians 10 running into 11, in order - 10:5 'reasonings' against the knowledge of God, 10:10 'says one', 10:15 'other men's labours', and the 11:1-33 chapter header with the opening verses. Notable that the misplaced region is 2corinthians 11, itself a chapter still queued for synthesis and flagged as needing a batch of its own (54,887 words) - when it is done the Jamieson blocks there should be checked against these four to see whether the offset is a duplication or a displacement. All four declared excluded_voices=['Jamieson']."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "9",
+      "verses": [
+        "11",
+        "12",
+        "13"
+      ],
+      "note": "Cyril of Jerusalem duplication, second instance in two batches (cf. acts 5 vv12-16). The SAME 176-word block, a Catechetical Lecture passage on the garden of the crucifixion that quotes Hebrews 9:11-13 entire, appears verbatim at 9:11, 9:12 and 9:13 - a threefold duplication. It is apt to the passage and is cited once, at entry 11 (span 9-11); the repeats at 12 and 13 are dropped. Because scripts/synthesis_qa.py VOICE_LABELS holds the bare token 'Cyril' and _LABEL_RE demands a colon immediately after the label, the head 'Cyril of Jerusalem:' matches nothing, so the repeats CANNOT be declared in excluded_voices and had to be handled through SILENT_BY_ENTRY. His other two blocks in this chapter (9:19 on grace given by water, 9:26 on the eternal generation) are distinct and both usable. This is now the second chapter running where the VOICE_LABELS defect forced a silent drop; the owner decision on the regex is overdue."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "9",
+      "verses": [
+        "28"
+      ],
+      "note": "Scraped StudyLight chrome: 992 words of site navigation and boilerplate at the tail of Ellicott's LAST block in the chapter (9:28), beginning at 'Hebrews Heb 8 Hebrews Heb Hebrews Heb 10 Footnotes: Copyright Statement'. Sixth confirmation of the attachment model - chrome attaches to the voice's last block, not to the chapter's last verse - and the third consecutive chapter where the carrier is Ellicott (romans 3:31, acts 5:42, hebrews 9:28). Usable source words are ~69,152, not the 70,144 reported by the sizer."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "4",
+        "5",
+        "7",
+        "11",
+        "16",
+        "27",
+        "28"
+      ],
+      "note": "John Gill 200-word truncation: 8 of his 28 blocks in this chapter stop at exactly 200 words, mid-sentence (1, 4, 5, 7, 11, 16, 27, 28) - the known corpus-wide cap. Cyril is likewise cut at exactly 200 at 9:19 and 9:26, and at 176 at 11/12/13. Chrysostom is cut at 300 (9:15) and 280 (9:24). The cap costs real argument here: Gill's 9:16 block breaks off in the middle of enumerating the legacies of the covenant, and his 9:28 block mid-clause. This chapter is a good candidate for the re-fetch decision the 200-word cap has been waiting on, since eight truncations fall in one chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "9",
+      "verses": [
+        "15",
+        "16",
+        "17"
+      ],
+      "note": "The covenant/testament crux at 9:15-17 produced the cleanest school split yet recorded in this corpus, and it does NOT follow confessional lines. For 'covenant' throughout: Clarke (wesleyan), Ellicott and Barnes and Robertson (grammatical-historical), Calvin (reformed), Wesley (wesleyan) - Wesley refusing the pun as 'beneath the dignity of the apostle' and admitting the passage is 'very perplexed'. For 'testament': Chrysostom (antiochene) and Henry (puritan), both building whole readings on the testator's death. Gill (reformed) takes the will without misgiving. Barnes's decisive argument is that a will needs no mediator, and that 9:18 would be a non sequitur on the testament reading. Recorded here because the tags for the two entries split the same voices across two different debate lines and a reader may want the whole picture in one place."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "9",
+      "note": "Fidelity self-grade, all 10 entries, every verse covered and every claim traced to a named block. Word counts: 1-2 649, 3-5 649, 6-8 649, 9-11 650, 12-14 649, 15 648, 16-17 650, 18-21 649, 22-24 650, 25-28 648. Tiling 1-28 exact, no gaps or overlaps. 28 verses, 11 voices, 10 entries, ~69,152 usable source words after 992 words of chrome. Entry 15 is a single verse because 9:16 alone carries 7,316 source words and had to be split off from it. No GHOST repairs were needed this chapter; the one build error was a false positive, Clarke quoting 'St. Cyril' (of Alexandria) inside his own 9:5 block, which the harness read as a Cyril of Jerusalem attribution - fixed by attributing the quotation to 'a father' rather than by name."
     }
   ]
 }

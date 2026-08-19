@@ -1,7 +1,6 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -9,74 +8,76 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "1-2",
+  "pericope_label": "The worldly sanctuary and its outer room",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom takes the fashion of the tabernacle as the fourth proof that the old dispensation must end, reading the holy place as the former period and the Holy of Holies as Heaven, entered through the veil of Christ's flesh, and pressing the past tense to show the covenant was already obsolete while it still stood."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill states the chapter's design, that Christ's pre-eminence is proved from the tabernacle as it was from priesthood and covenant, and glosses ordinances as righteousnesses appointed by a righteous God. Calvin argues at length that tabernacle is a copyist's insertion, and holds the sanctuary earthly in itself yet heavenly in what it signified, declining any refined explanation of its parts."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the sanctuary as wholly of this world in its materials and destined to be taken down, and allegorises its furniture without restraint, the windowless room proving the darkness of that dispensation and the table set opposite the candlestick teaching that communion comes only by light from Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke defends the omission of tabernacle from the text on manuscript evidence, but stands alone in taking worldly as a term of praise meaning adorned and splendid, and supplies the practical detail of the lamps, incense and loaves. Wesley reads candlestick and bread as types of the light and life dispensed by Christ."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The writer turning to describe the old covenant's worship: 'then verily the first covenant had also ordinances (dikaiomata — regulations, prescribed rites) of divine service (latreias — worship)' — the old covenant coming with its appointed rules and ceremonies of worship, an elaborate, God-given system carefully regulated by divine ordinance; 'and a worldly (kosmikon — of this world, earthly, material) sanctuary' — a material, earthly sanctuary (the tabernacle) belonging to this world, to be described (vv.2-5) so as to draw out its typical meaning over against the heavenly (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott and Robertson agree that covenant is the understood noun and that worldly marks the sanctuary as belonging to this world in contrast with the heavenly things, Robertson adding that the adjective is predicate rather than attributive. Barnes describes the two rooms but pointedly declines to assign a typical meaning to any article of furniture."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether 'worldly' disparages the sanctuary as earthly and carnal (Ellicott, Calvin, Robertson, Henry) or praises it as adorned and splendid (Clarke)",
+   "How far the furniture of the holy place may be allegorised: freely (Henry, Wesley) or not at all, since the writer himself declines to (Barnes, Calvin)"
+  ],
+  "outliers": [
+   "Clarke alone reads the adjective rendered 'worldly' as meaning beautiful and elegant rather than earthly, appealing to Pliny's account of why the Greeks called the universe by that name"
+  ],
   "themes": [
-   "the first covenant had also ordinances of divine service, and a worldly sanctuary",
-   "the first covenant's ordinances and earthly sanctuary",
-   "the old covenant's regulated worship",
-   "the material earthly tabernacle"
+   "tabernacle",
+   "old covenant",
+   "typology",
+   "textual criticism",
+   "worship"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The description of the outer compartment: 'for there was a tabernacle made; the first (the first compartment, the outer room), wherein was the candlestick (the golden lampstand, giving light), and the table, and the shewbread (the bread of the Presence, the twelve loaves set before the Lord); which is called the sanctuary (hagia — the holy place)' — the first room of the tabernacle, with its sacred furniture each of symbolic meaning, the outer compartment distinguished from the inner Holy of Holies (v.3), which the priests entered daily (Barnes, Robertson, Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there was a tabernacle made; the first, wherein was the candlestick, and the table, and the shewbread",
-   "which is called the sanctuary",
-   "the first part of the tabernacle and its furniture",
-   "the holy place entered daily"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
@@ -85,195 +86,71 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The description of the second room: 'and after the second veil (the inner curtain separating the two compartments, the first being the entrance screen), the tabernacle which is called the Holiest of all (hagia hagion — the Holy of Holies)' — beyond the inner veil lay the most sacred inner room, where God's presence dwelt above the mercy seat; the veil shutting off the Holy of Holies from the holy place, marking the boundary none but the high priest might cross (entered only once a year, v.7), the type of heaven itself (Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "after the second veil, the tabernacle which is called the Holiest of all",
-   "the inner tabernacle, the Holiest of all",
-   "the Holy of Holies beyond the veil",
-   "the type of heaven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The items: 'which had the golden censer (or the golden altar of incense, with a textual/interpretive question whether kept within the Holy of Holies or the incense altar belonging to the inner service on the Day of Atonement), and the ark of the covenant overlaid round about with gold' — the inner sanctuary's most sacred objects; 'wherein was the golden pot that had manna (the memorial of God's provision), and Aaron's rod that budded (the token of God's choice of the priesthood, Numbers 17), and the tables of the covenant (the two stone tablets of the law)' — three sacred relics within or associated with the ark, commemorating God's dealings with Israel (Barnes, Robertson, Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the golden censer, and the ark of the covenant overlaid round about with gold",
-   "the golden pot that had manna, and Aaron's rod that budded, and the tables of the covenant",
-   "the sacred contents of the Holy of Holies",
-   "relics of God's dealings with Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-5",
+  "pericope_label": "Behind the veil: censer, ark and cherubim",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill argues from the second temple that there were indeed two veils in the apostle's day, identifies the censer as the golden one reserved for the day of atonement, and collects the Jewish opinions about the cherubim. Calvin commends the writer for cutting short such refinements, warning that to philosophise past the limits of revelation is useless and dangerous."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke distinguishes the veils by court and sanctuary, and follows Calmet in holding that the description belongs to the Mosaic tabernacle alone, so that discrepancies with Solomon's temple need no reconciling; he closes with a patristic catena of figures for Christ. Wesley takes the censer as the high priest's day-of-atonement vessel and passes on the four-faced reading of the cherubim."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The description above the ark: 'and over it the cherubims of glory (the glorious winged figures) shadowing (overshadowing, with outspread wings) the mercyseat (hilasterion — the propitiatory, the golden lid of the ark)' — the two cherubim standing over the ark, their wings spread over the mercy seat, associated with the visible glory of God (the Shekinah) that dwelt above it, symbolizing his presence and majesty; the mercy seat being where the blood was sprinkled on the Day of Atonement, the place of propitiation; 'of which we cannot now speak particularly (in detail)' — the writer forbearing to expound each item, hastening to his main point about the two compartments and their meaning (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott and Robertson treat the golden censer as an open question, weighing the Septuagint usage against Philo and Josephus and declining to decide, Robertson noting a manuscript that moves the clause. Barnes defends the censer reading with considerations drawn from custom and safe-keeping, and refuses any speculation about the cherubim as fancy where Scripture is silent."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the golden object is a censer (Gill, Barnes, Wesley) or the altar of incense (the usage of Philo and Josephus, weighed by Ellicott and Robertson, who decline to decide)",
+   "What the first veil was: the hanging for the door of the tent (Barnes, Ellicott) or the curtain shutting the holy place off from the court (Clarke), against Gill's appeal to the two veils of the second temple",
+   "How far the cherubim may be interpreted: freely (Gill, Wesley, Clarke) or not at all, since Scripture does not explain them (Barnes, Calvin)"
+  ],
+  "outliers": [
+   "Clarke, following Calmet, denies that the tabernacle and temple accounts need to be harmonised at all, since they describe different buildings"
+  ],
   "themes": [
-   "over it the cherubims of glory shadowing the mercyseat",
-   "of which we cannot now speak particularly",
-   "the cherubim overshadowing the mercy seat",
-   "the place of propitiation"
+   "tabernacle",
+   "day of atonement",
+   "cherubim",
+   "mercy seat",
+   "interpretive restraint"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The routine of the holy place: 'now when these things were thus ordained (arranged, prepared), the priests went always (continually, daily) into the first tabernacle (the holy place), accomplishing the service of God (latreias — performing, carrying out the prescribed ritual worship)' — the ordinary priests entering the first compartment daily to perform the regular acts of worship (trimming the lamps, burning incense, setting out the showbread), the constant, repeated round of the old covenant's worship in the outer room (Barnes, Robertson, Calvin, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests went always into the first tabernacle, accomplishing the service of God",
-   "the priests' daily service in the first tabernacle",
-   "the constant round of worship",
-   "the regular ministry of the holy place"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The contrast with the daily service: 'but into the second (the Holy of Holies) went the high priest alone once every year' — only the high priest, and he only once a year (on the Day of Atonement), entering the inner sanctuary, the access rare and restricted; 'not without blood (always with blood)' — he could not enter the Holy of Holies without bringing the blood of sacrifice, blood being indispensable for approaching God's presence; 'which he offered for himself (the high priest being a sinner, having to atone for his own sins first), and for the errors (agnoematon — ignorances, sins of inadvertence) of the people' — atoning both for his own sins and the people's, the imperfection of a priest who must offer for himself (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "into the second went the high priest alone once every year, not without blood",
-   "which he offered for himself, and for the errors of the people",
-   "the high priest's yearly entrance with blood",
-   "atoning for himself and the people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -281,158 +158,156 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "6-8",
+  "pericope_label": "The daily service, the yearly entry, and what the Spirit signified by them",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill counts four entries on the day of atonement and corrects Philo on the penalty, then draws from the naming of the Holy Ghost a chain of doctrine about his personality, deity and authorship of the Levitical types. Calvin makes the closed sanctuary the point of the paragraph, and flatly denies that 'errors' restricts the atonement to sins of ignorance, since every sin involves a blinded judgement."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the verse into an obligation on Christian readers, who must not stop at the institutes of the law but learn what the Spirit signified by them, and contrasts the obstructed access of that age with the wider door now opened."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke details the daily ministrations and reads 'errors' strictly as offences committed unawares, made likely by the sheer number of ritual niceties, and notes that the priest's own infirmity required him to share in the sacrifice. Wesley states the same restriction in a sentence and lists the daily offices."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The very arrangement of the tabernacle had a teaching purpose: 'the Holy Ghost this signifying (showing, making plain)' — the Spirit, who designed the tabernacle and its rites, intending by them to teach a spiritual lesson, the structure itself a divine sign; 'that the way into the holiest of all (the access to God's immediate presence) was not yet made manifest (opened, revealed), while as the first tabernacle was yet standing' — under the old covenant the way of full access to God not yet open (the people could not enter, and even the high priest only once a year), the very restriction showing the way was not yet free; and as long as the old order stood, the way remained closed, to be opened only in Christ (Barnes, Robertson, Henry)."
+    "summary": "Ellicott explains the present tense as tracing the ordinance of Scripture rather than a still-standing temple, reconciles the Levitical two entries with the Talmud's four, and observes that this Epistle scarcely ever contrasts priests with people. Barnes declines to fix the number of entries and takes 'errors' as widening to fault in general; Robertson notes the lexical distinction between errors and crimes but insists both needed atonement."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether 'errors' restricts the day of atonement to sins of ignorance (Clarke, Wesley) or covers sin as such, every sin involving a blinded judgement (Calvin, Barnes, with Robertson allowing the lexical distinction but not the restriction)",
+   "How many times the high priest entered the Holy of Holies on the day: two by Leviticus, four by Talmudic tradition (Ellicott, Gill), three or four and immaterial (Barnes, Calvin)"
+  ],
+  "outliers": [
+   "Ellicott observes that the contrast between the body of priests and the people, central to the Levitical system, is almost absent from this Epistle, which sets one High Priest over against all who approach God through him"
+  ],
   "themes": [
-   "The Holy Ghost this signifying, that the way into the holiest of all was not yet made manifest",
-   "while as the first tabernacle was yet standing",
-   "the Spirit teaching that the way into the holiest was not yet open",
-   "the restriction itself the sign"
+   "day of atonement",
+   "sins of ignorance",
+   "access to God",
+   "inspiration",
+   "typology"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "9": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The old tabernacle and its service were 'a figure (parabole — a parable, symbol) for the time then present (the present age, the time of the old covenant, until the reformation)' — the whole system symbolic, pointing beyond itself to a coming reality; 'in which were offered both gifts and sacrifices' — the various offerings continually presented; 'that could not make him that did the service (the worshipper) perfect (teleiosai — complete, fully cleanse), as pertaining to the conscience' — the crucial deficiency, that they could not cleanse the conscience or give inward peace, dealing with ceremonial, outward purity (the flesh) but not with the guilt that troubles the soul (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "which was a figure for the time then present",
-   "gifts and sacrifices, that could not make him that did the service perfect, as pertaining to the conscience",
-   "the old offerings unable to perfect the conscience",
-   "outward purity but not inward cleansing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The nature of the old ordinances: 'which stood only in (consisted only of) meats and drinks (regulations about food and drink, clean and unclean), and divers washings (baptismois — various ceremonial cleansings), and carnal ordinances (dikaiomata sarkos — fleshly, external regulations)' — the old system dealing only with outward, physical, ceremonial matters, rules about the body and outward purity not reaching the heart, able to regulate the flesh but not renew the soul; 'imposed (laid on as a burden) on them until the time of reformation (diorthosis — the setting right, the new order, the time of the gospel)' — temporary, binding only until the coming of Christ who would set all things right (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "which stood only in meats and drinks, and divers washings, and carnal ordinances",
-   "imposed on them until the time of reformation",
-   "the old ordinances imposed until the reformation",
-   "temporary, external rites"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
+   "Cyril of Jerusalem"
   ],
+  "range": "9-11",
+  "pericope_label": "A parable of the present time, and the coming of the true High Priest",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads 'figure' as a dark saying and argues the phrase means a figure lasting until Christ came, then lists the historical proofs that he has come. Calvin glosses the word by a portrait that recalls the man himself, marks the contrast of flesh and conscience, hears Jeremiah's new covenant behind the time of reformation, and holds that Christ entered heaven through the temple of his own body."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry rests all good things past, present and to come on the priestly office of Christ, from which they come to us."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the tabernacle a dark enigmatical representation, insists that even the best worshipper was left with a guilty conscience, protests against the degrading sense commonly given to the word 'carnal', and expounds the time of reformation as the setting straight of everything. Wesley reduces that clause to 'till Christ came' and identifies the greater tabernacle with Christ's own body."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The great turn: 'but Christ being come (having appeared) an high priest of good things to come (the blessings of the new covenant, the good things now realized or yet to come)' — Christ appearing as high priest, bringing the good things the old system only foreshadowed; 'by (through) a greater and more perfect tabernacle, not made with hands (acheiropoieton — not constructed by human hands), that is to say, not of this building (not of this creation, not belonging to this material world)' — Christ ministering through the heavenly sanctuary, greater and more perfect than the earthly, not built by men (interpreters differing whether it means heaven itself or Christ's own body/humanity, but the point its heavenly not earthly nature) — Barnes, Robertson, Calvin."
+    "summary": "Barnes distinguishes parable from type and warns that safety in interpretation lies in following the inspired writers rather than spiritualising every arrangement. Ellicott and Robertson agree that the better text makes 'carnal ordinances' describe the sacrifices themselves; Robertson calls the failure to cleanse the conscience the real defect of animal sacrifice, notes the medical sense of 'reformation', and identifies the greater tabernacle with heaven."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Henry): the 'greater and more perfect tabernacle not made with hands' is the heavenly sanctuary (some take it of Christ's own humanity, the true tent through which he ministers); not of this material creation, it surpasses the earthly tabernacle as the reality surpasses the shadow."
+    "prevalence": "single",
+    "summary": "Cyril cites the passage entire in a catechetical lecture on the garden of the crucifixion, using it to seal the cry 'It is finished': the mystery is fulfilled, what was written is accomplished, and sins are forgiven."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the greater and more perfect tabernacle is: the body of Christ (Wesley), heaven itself (Robertson), or heaven entered through the temple of his body (Calvin)",
+   "Whether the clause means a figure for the time then present or a figure lasting until the present time (Gill), and whether the following relative refers to the parable or to the time (Ellicott, Robertson, Clarke on the variant)"
+  ],
+  "outliers": [
+   "Clarke protests that 'carnal' here means only what pertains to the body, and is scarcely ever used in the New Testament in the degrading sense that preachers commonly give it",
+   "Barnes limits typological interpretation to what the inspired writers themselves explain, comparing the interpreter who leaves those pilots to a ship driven on the open sea"
+  ],
   "themes": [
-   "Christ being come an high priest of good things to come",
-   "by a greater and more perfect tabernacle, not made with hands, that is to say, not of this building",
-   "Christ come as high priest through the greater heavenly tabernacle",
-   "the heavenly, not earthly, sanctuary"
+   "parable",
+   "conscience",
+   "ceremonial law",
+   "new covenant",
+   "high priesthood of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "12": {
@@ -440,174 +315,75 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The great contrast: 'neither by (with) the blood of goats and calves (the animal sacrifices of the old covenant), but by his own blood he entered in once (hapax — once for all, not yearly) into the holy place (the heavenly Holy of Holies)' — Christ entering the heavenly sanctuary not with the blood of animals but with his own blood, the infinitely superior sacrifice, and entering once for all (unlike the high priest's yearly entrance), his single entrance sufficient and final; 'having obtained (secured, found) eternal redemption (lytrosis — ransoming, deliverance) for us' — by his one entrance with his own blood securing an everlasting, complete redemption, not a yearly repeated atonement (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: Christ, entering once with his own blood, obtained an eternal redemption — a deliverance complete and everlasting, needing no repetition, far surpassing the temporary, yearly atonement of the old covenant's animal blood."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "neither by the blood of goats and calves, but by his own blood he entered in once into the holy place",
-   "having obtained eternal redemption for us",
-   "Christ entering once by his own blood",
-   "obtaining eternal redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The premise of the argument from lesser to greater: 'for if the blood of bulls and of goats, and the ashes of an heifer (the red heifer, Numbers 19) sprinkling the unclean, sanctifieth (sets apart, cleanses ceremonially) to the purifying of the flesh' — the old sacrifices and the water of purification (the ashes of the red heifer mixed with water, sprinkled on those defiled by contact with death) did have a real effect, removing ceremonial uncleanness so the person could rejoin worship; but they cleansed only outwardly, reaching the flesh, not the conscience, their efficacy real but external and limited (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the blood of animals and the ashes of the heifer purified only the flesh — an outward, typical cleansing that restored ceremonial purity but could not touch the conscience or take away sin, pointing forward to the inward cleansing of Christ's blood."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the blood of bulls and of goats, and the ashes of an heifer sprinkling the unclean",
-   "sanctifieth to the purifying of the flesh",
-   "the old sacrifices cleansing only the flesh",
-   "outward, ceremonial purification"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12-14",
+  "pericope_label": "His own blood: eternal redemption and a purged conscience",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The a fortiori reasoning: 'how much more (by how much the superior) shall the blood of Christ' — if animal blood cleansed the flesh, how much more shall Christ's infinitely precious blood (the blood of the Son of God) cleanse the soul; he 'offered himself without spot (amomon — without blemish, the spotless victim) to God,' the sinless self-offering, voluntary and perfect; and his blood will 'purge (cleanse) your conscience from dead works (sinful, lifeless deeds) to serve the living God' — what the old sacrifices could not do, Christ's blood does, cleansing the conscience itself, removing the guilt that troubles the soul, freeing the believer to serve God. On 'the eternal Spirit': Barnes (preferring it) and Calvin take it as the Holy Spirit, under whose influences Christ offered himself (the technical sense of 'the Spirit,' the reading of most plain readers, supported by Christ's anointing, John 3:34)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Robertson and Ellicott take 'an eternal Spirit' as Christ's own divine nature, not the Holy Spirit — 'Christ's own spirit which is eternal as he is,' the higher principle of his spiritual life (a spirit of holiness, of indissoluble life, 7:16) that made his self-offering possible and gave it infinite worth; through this eternal spirit he of himself laid down his life. Grotius (noted by Calvin) takes it as 'endless life,' the eternal spirit contrasted with the perishable victims."
+    "summary": "Gill denies Christ any place in Aaron's order and holds those sacrifices no longer acceptable. Calvin forces the alternative that Christ's blood is either better than beasts' blood or worthless, protests that reading 'purifying of the flesh' as a merely civil benefit is heathenish, since the sacraments truly cleansed in a sacramental manner, and refers the eternal Spirit to the Holy Spirit, whose power makes a human death an eternal expiation."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'through the eternal Spirit' — the work of redemption being the work of the whole Trinity; Christ offered himself, infinitely more precious than any created victim, without spot to God, to purge the conscience from all the inward and outward works of the devil, that we may serve the living God in faith, love, and holiness."
+    "prevalence": "several",
+    "summary": "Clarke stresses the once-for-all against the annual entry and defines eternal redemption as a ransom price permanently valid; on the eternal Spirit he declines to choose between the Holy Ghost and the indwelling Deity, holding the two inseparable. Wesley takes the heifer's ashes as restoring men to temple and congregation, refers the eternal Spirit to the work of the whole Trinity, and reads dead works as the works of the devil springing from spiritual death."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson makes Christ both victim and priest and insists the eternal Spirit is Christ's own, giving his blood a moral quality no other sacrifice had. Barnes ranks the differences between the two offerings and catalogues the four opinions on the disputed phrase. Ellicott describes the rite of the red heifer in detail and argues from usage that the Holy Spirit cannot be meant."
    }
   ],
   "debates": [
-   {
-    "question": "What is 'the eternal Spirit' through whom Christ offered himself?",
-    "sides": [
-     {
-      "position": "The Holy Spirit, under whose influences Christ offered himself",
-      "holders": [
-       "Barnes",
-       "Wesley",
-       "Calvin",
-       "Owen",
-       "Doddridge"
-      ]
-     },
-     {
-      "position": "Christ's own divine nature / eternal spirit, the higher principle of his being",
-      "holders": [
-       "Robertson",
-       "Ellicott",
-       "Beza",
-       "Junius"
-      ]
-     },
-     {
-      "position": "Endless / immortal life (as in 7:16)",
-      "holders": [
-       "Grotius",
-       "Schleusner (noted by Calvin)"
-      ]
-     }
-    ]
-   }
+   "What 'the eternal Spirit' denotes: the Holy Spirit (Calvin, Wesley, and the older divines listed by Barnes), Christ's own divine nature or spirit (Ellicott, Robertson), or endless life as opposed to perishable victims (the view Barnes reports from Grotius)",
+   "Whether the 'purifying of the flesh' was a merely legal and civil benefit removing disabilities (Clarke, Wesley) or a genuinely sacramental cleansing that pointed to and conveyed a spiritual promise (Calvin)"
   ],
-  "outliers": [],
+  "outliers": [
+   "Barnes reads the ashes of the heifer as a standing sacrifice kept ready for use, a provision of convenience that spared the expense and delay of a fresh offering at every defilement"
+  ],
   "themes": [
-   "how much more shall the blood of Christ, who through the eternal Spirit offered himself without spot to God",
-   "purge your conscience from dead works to serve the living God",
-   "the blood of Christ cleansing the conscience",
-   "the crux of the eternal Spirit"
+   "blood of Christ",
+   "once for all",
+   "red heifer",
+   "conscience",
+   "eternal redemption"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "15": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -615,35 +391,77 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "15",
+  "pericope_label": "Mediator of a new covenant, and the death that redeems past transgressions",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom takes the word as testament and makes the death itself the ground of confidence, since a testament takes force only when its maker has died; he then works the analogy out through heirs and disinherited, obligations laid on the legatees, and the witnesses Christ names for himself."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill refers the clause both backward to the purged conscience and forward to the inheritance. Calvin denies that the title of Mediator can be shared, since Christ alone entered the office through death, and presses the retrospective effect of that death against a law whose own remedies left the worshipper in perpetual anxiety."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry defines a covenant as an agreement between parties about things in their power and a testament as the deed of one person taking effect at his death, and so reads the gospel as Christ's last will; he names the two ends of the mediation, redemption from transgression and qualification of the called for the inheritance."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues that the translators should have kept covenant here as almost everywhere else, explains the mediator's part from the old rite of witnessing and sprinkling, and holds that the death had respect to all time before as well as after it. Wesley renders covenant and makes the article of Christ's death the divide between the old and the new."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ's cleansing blood (v.14) qualifies him: 'and for this cause he is the mediator (mesites — go-between, reconciler) of the new testament (diatheke — covenant)' — Christ standing between God and man as mediator of the new covenant, securing its blessings; 'that by means of death (his own death), for the redemption (apolytrosis — ransoming, deliverance) of the transgressions that were under the first testament' — his death redeeming even the sins committed under the old covenant, his atonement reaching back to cover the transgressions the old sacrifices could not truly take away; 'they which are called (the elect, those summoned by the gospel) might receive the promise of eternal inheritance' — the end of his mediation being that the called obtain the promised everlasting inheritance (Barnes, Robertson, Calvin)."
+    "summary": "Barnes settles the rendering with the observation that a will needs no mediator, and explains how earlier worshippers were saved by offering insufficient blood in faith. Ellicott insists on covenant from the argument of the preceding chapter and distinguishes ransom from sin offering within the single death. Robertson finds here a definite statement that the types drew their worth from the cross."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the word should be rendered covenant (Clarke, Ellicott, Barnes, Robertson, Wesley) or testament (Chrysostom, Henry), Barnes pressing that a will needs no mediator while Chrysostom builds his whole reading on the testator's death",
+   "Whether the Mediator's office is unique by nature or only pre-eminent, Calvin denying that any other may remain a mediator alongside Christ"
+  ],
+  "outliers": [
+   "Clarke identifies 'they which are called' with the Gentiles, given by the new covenant an equal right with the Jews to an inheritance not of land but eternal",
+   "Ellicott separates two aspects of the one death, ransom where the debt is penalty and sin offering where debt and payment become sin and punishment"
+  ],
   "themes": [
-   "he is the mediator of the new testament, that by means of death, for the redemption of the transgressions that were under the first testament",
-   "they which are called might receive the promise of eternal inheritance",
-   "Christ the mediator of the new covenant by means of death",
-   "his death redeeming past transgressions"
+   "new covenant",
+   "mediator",
+   "redemption",
+   "inheritance",
+   "retrospective efficacy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "16": {
@@ -656,97 +474,63 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "16-17",
+  "pericope_label": "Testament or covenant: the death that puts the disposition in force",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill accepts the will without hesitation and expounds the covenant of grace as a testament with legacies, witnesses and seals. Calvin argues that the verse proves the Epistle was written in Greek and not Hebrew, allows the allusion to the secondary sense, but insists the argument rests on the thing itself, the old covenant having been ratified by blood and so bearing a likeness to a will."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke prints a friend's rendering in which the disputed participle denotes the appointed victim rather than a testator, and urges that testament and testator be forgotten as totally changing the sense. Wesley refuses the wordplay as beneath the apostle's dignity and frankly calls the second verse a very perplexed passage that no current rendering translates literally."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes, Ellicott (with Clarke and Calvin) hold diatheke should be rendered 'covenant' throughout (consistent with vv.15, 18, the OT berith, and the overwhelming NT usage): 'for where a covenant is, there must of necessity be brought in the death of the covenanter (or of the appointed victim).' A covenant with God was ratified by the death of a sacrificial victim (Genesis 15; Exodus 24; Jeremiah 34:18 'cut the calf in twain'); the 'death of the testator (diathemenos)' being the death of the victim slain to confirm the covenant. Barnes argues at length that diatheke never means 'will' elsewhere in Scripture or the LXX, that Christ made no will and had no property, and that the argument concerns covenant-ratification by sacrifice (vv.18-22), not a legal will. Clarke: 'we should endeavour to forget that testament and testator were ever introduced, as they totally change the apostle's meaning.' Ellicott: the difficulties of the 'will' reading are 'beyond comparison more serious.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the Greek diatheke includes both 'covenant' and 'testament,' and the apostle, alluding to its secondary meaning, dwells chiefly on the thing itself — that God's covenant, like a testament, was ratified by blood and death; the heathen ratified covenants by sacrifice (a corruption derived from God's institution), and the covenant of God made with blood may fitly be compared to a testament, being of the same kind. Gill follows the 'testament/will' reading (the covenant of grace a will bequeathing grace and glory); Robertson notes the word plays on both senses ('we say today The New Testament'), both terms pertinent; Wesley thinks it 'beneath the dignity of the apostle to play upon the ambiguity.'"
+    "summary": "Ellicott sets out both cases fully and decides for covenant, since the alternative makes these two verses the one exception in the New Testament. Barnes supports him by counting the occurrences in the New Testament and the Septuagint, and answers the objection that the word for dead can only mean dead men. Robertson holds the double sense deliberate and both renderings pertinent."
    }
   ],
   "debates": [
-   {
-    "question": "Does diatheke here mean 'testament/will' or 'covenant'?",
-    "sides": [
-     {
-      "position": "'Testament/will' — a will takes effect at the maker's death (the AV reading); so Christ's death made his testament effective",
-      "holders": [
-       "the Authorized Version",
-       "Gill",
-       "Robertson (notes the double sense)",
-       "Stuart"
-      ]
-     },
-     {
-      "position": "'Covenant' — ratified by the death of the sacrificial victim/covenanter, consistent with vv.15, 18 and the OT berith",
-      "holders": [
-       "Barnes",
-       "Clarke",
-       "Ellicott",
-       "Calvin"
-      ]
-     }
-    ]
-   }
+   "Whether the word here shifts to 'will' (Gill, and the majority Ellicott reports) or keeps the sense 'covenant' throughout, the death being that of the appointed victim (Clarke, Barnes, Ellicott, Calvin), with Robertson taking the ambiguity as intended",
+   "Whether the phrase 'over the dead' can be used of slain animals at all, urged as decisive for 'will' and answered by Barnes from the Epistle's own use of the word for dead works"
   ],
-  "outliers": [],
+  "outliers": [
+   "Wesley declines to let the argument turn on a pun, saying it seems beneath the dignity of the apostle, and admits outright that the passage is perplexed and no current rendering literal"
+  ],
   "themes": [
-   "For where a testament is, there must also of necessity be the death of the testator",
-   "the principle that a testament requires the death",
-   "the crux of covenant or testament",
-   "death necessary to ratify the covenant"
+   "covenant",
+   "testament",
+   "ratification by blood",
+   "inheritance",
+   "translation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The explanation of v.16: 'for a testament is of force (valid, ratified) after men are dead (epi nekrois — over the dead): otherwise it is of no strength at all while the testator liveth' — whether of a will (valid only at the maker's death) or a covenant (ratified over the dead sacrificial victim), it has no force until death intervenes. Barnes (with Clarke) holds 'over the dead' refers to the slain sacrificial victims that ratify the covenant (the covenant confirmed over dead sacrifices, not valid while the victim lives), noting that 'dead' (nekrois) need not mean only dead men but can include dead animals (cf. 'dead works,' 6:1; 9:14; a dead lion, Ecclesiastes 9:4); the AV/Gill reading takes it of a human will valid only after the maker dies. Either way, death is indispensable to validity, confirming Christ's death was necessary to ratify the new covenant."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For a testament is of force after men are dead: otherwise it is of no strength at all while the testator liveth",
-   "the testament takes force only by death",
-   "death indispensable to validity",
-   "confirming Christ's death was necessary"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
@@ -755,201 +539,79 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The application: 'whereupon (for which reason, in keeping with the principle that death ratifies) neither the first testament (covenant) was dedicated (inaugurated, ratified) without blood' — even the old covenant (the Sinai covenant) was not established without blood, confirmed with blood at its inauguration (Exodus 24); this historical fact (detailed in vv.19-21) proving that the principle of vv.16-17 (death ratifies a covenant) held even for the old covenant, and so applies to the new, confirming that Christ's death ratifies the new covenant (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Whereupon neither the first testament was dedicated without blood",
-   "the first covenant too was dedicated with blood",
-   "even the Sinai covenant ratified by blood",
-   "proving the principle that death ratifies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "18-21",
+  "pericope_label": "The first covenant dedicated with blood: book, people, tabernacle and vessels",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin holds that the argument turns on the fact and not on the word, illustrating from the way God's covenant might be called a testimony without impropriety, and makes the recital of the precepts essential, since a sign is an appendage to the word and sacraments are perverted where the commandment goes unexplained. Gill insists the law Moses spoke was the written law and not the rabbis' oral law, and appeals with the others to Josephus for the sprinkling of the tabernacle."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke construes the syntax so that the book was carried and not sprinkled, describes the rite in detail down to the basins and the scarlet thread, finds our Lord's words at the supper deliberately echoing Moses, and draws the lesson that nothing a sinner handles is acceptable without the sprinkling of atoning blood. Wesley refers the missing details to other parts of Moses and suggests the water may typify the blood and water from the pierced side."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The historical account (Exodus 24): 'for when Moses had spoken every precept (commandment) to all the people according to the law, he took the blood of calves and of goats, with water, and scarlet wool, and hyssop, and sprinkled both the book (the book of the covenant), and all the people' — after declaring the law, Moses ratifying the covenant by taking the blood (the means of ratification), mixed and applied with the prescribed materials (the writer adding details — water, wool, hyssop, goats — drawn from the fuller priestly tradition), and sprinkling both the covenant document and the people, so consecrating both by blood and sealing the agreement (Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when Moses had spoken every precept to all the people according to the law",
-   "he took the blood of calves and of goats... and sprinkled both the book, and all the people",
-   "Moses ratifying the old covenant by sprinkling blood",
-   "sealing the covenant with blood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses' solemn declaration (Exodus 24:8): 'saying, This is the blood of the testament (covenant) which God hath enjoined (commanded, ordained) unto you' — Moses, sprinkling the blood, pronouncing it the blood that ratified the covenant God had commanded, the blood by which the covenant was sealed and made binding, the people bound to God by it; the words strikingly echoed by Christ at the Last Supper ('This is my blood of the new testament,' Matthew 26:28), the old covenant's blood-ratification foreshadowing the new covenant sealed in Christ's blood (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the blood of the testament which God hath enjoined unto you",
-   "Moses' words declaring the blood of the covenant",
-   "the blood sealing the covenant",
-   "echoed by Christ over the cup"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Beyond the book and people (v.19), 'moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry' — Moses (or Aaron) consecrating the sacred tent and all the implements of worship by blood, everything connected with the covenant worship sanctified by sprinkling; the tabernacle itself (the place of worship) purified and dedicated, and 'all the vessels of the ministry' (the altar, basins, and furniture) likewise sprinkled — the pervasiveness of blood in the old worship, everything cleansed and consecrated by it, proving its necessity (Barnes, Robertson, Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moreover he sprinkled with blood both the tabernacle, and all the vessels of the ministry",
-   "the tabernacle and vessels also sprinkled with blood",
-   "everything consecrated by blood",
-   "the pervasiveness of blood in the old worship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The summary principle: 'and almost (schedon — nearly, with few exceptions) all things are by the law purged (cleansed, purified) with blood' — under the law nearly everything cleansed by blood, the great means of purification (the 'almost' allowing for exceptions, e.g., cleansing by water or fire, Numbers 31:23, or the poor's offering of flour, Leviticus 5:11); 'and without shedding of blood (haimatekchysia) is no remission (aphesis — forgiveness, putting away of sin)' — the great maxim that there is no forgiveness of sin without the shedding of blood, blood (representing life given up in death) being the necessary price of pardon, the foundational principle of the whole sacrificial system, pointing to the necessity of Christ's death for true remission (Barnes, Robertson, Calvin)."
+    "summary": "Barnes takes this verse as decisive against the reading 'will', since a testator's death is no reason why a covenant should be ratified in blood, and argues that the writer drew the extra details from tradition rather than fresh revelation, which would have spoiled an argument resting on admitted facts; he also presses the verb 'enjoined' as excluding a compact between equals. Ellicott supplies the particulars from elsewhere in the Pentateuch and explains their purpose; Robertson notes the free use made of the old narrative."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: if even the old covenant required blood for forgiveness, the true remission of sins required the shedding of Christ's blood; the principle 'no remission without bloodshed' finds its fulfilment in the cross, where the precious blood of Christ obtained the pardon the animal sacrifices could only foreshadow."
+    "prevalence": "single",
+    "summary": "Cyril uses the verse in a catechetical argument that grace is given through water, tracing water through creation, the flood, the sea and Sinai, and finding in the water, scarlet wool and hyssop of this passage a proof that where a covenant is made with anyone there is water also."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the book of the covenant was itself sprinkled: Clarke construes the Greek so that it was only carried, while Robertson allows that Exodus is silent but the thing may well have been done",
+   "How the writer knew details absent from Exodus: by tradition, since fresh revelation would have undermined an argument resting on what the Hebrews already granted (Barnes), or simply from other passages of Moses (Wesley, Ellicott)"
+  ],
+  "outliers": [
+   "Barnes argues from the word 'enjoined' that the transaction is not a compact at all, since one party to an agreement does not command the other, and God never gives up his right to enjoin"
+  ],
   "themes": [
-   "almost all things are by the law purged with blood; and without shedding of blood is no remission",
-   "the law's rule: almost all purged by blood",
-   "no remission without bloodshed",
-   "the necessity pointing to Christ's death"
+   "ratification by blood",
+   "sprinkling",
+   "tradition",
+   "word and sign",
+   "tabernacle"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
- "23": {
+ "22": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -958,81 +620,80 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "22-24",
+  "pericope_label": "No remission without blood, and a sanctuary not made with hands",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reports and rejects a construction that would weaken 'purged' rather than 'all things'. Calvin refuses to allow the exceptions any independence, since water drew its cleansing power from the sacrifices and the purgation reached all though few were sprinkled; he denies that the heavenly things are things in the sky, making the tabernacle a figure of Christ's whole kingdom on earth and above, and rejects Chrysostom's account of the word 'almost'."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry identifies the heavenly things with the privileges of the gospel state, begun in grace and perfected in glory, and observes that the earthly sanctuary is itself a pattern of heaven, communion with God there being a heaven upon earth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke shows the maxim about blood was already rabbinic and explains substitution by the forfeited life, sets out three opinions about what the heavenly things are, and holds that Christ in his crucified body before the throne continues in the constant act of being offered. Wesley reads the heavenly things as our heaven-born spirits while frankly admitting how little is yet known, and explains the plural 'sacrifices' as gathering up all the legal offerings into one."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The argument from lesser to greater: 'it was therefore necessary that the patterns (hypodeigmata — copies, the earthly tabernacle and its furniture, copies of heavenly realities) of things in the heavens should be purified with these (the animal blood); but the heavenly things themselves with better sacrifices than these' — the earthly copies cleansed with animal sacrifices, but the heavenly realities requiring a better sacrifice (the blood of Christ); the question how 'heavenly things' could need 'purifying' answered (Barnes, Henry) not by supposing heaven defiled, but that the heavenly sanctuary is inaugurated and the way into it consecrated by Christ's blood, or that the people who enter heaven are purified — the 'purifying' being the consecration or opening of the heavenly things by a better sacrifice (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the patterns of things in the heavens should be purified with these",
-   "the heavenly things themselves with better sacrifices than these",
-   "the heavenly things purified with better sacrifices",
-   "the heavenly sanctuary consecrated by Christ's blood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The contrast: 'for Christ is not entered into the holy places made with hands (the earthly tabernacle, built by men), which are the figures (antitypa — copies) of the true (the real, heavenly sanctuary); but into heaven itself' — Christ entering not the earthly Holy of Holies (a mere copy) but heaven itself, the true sanctuary, the very presence of God; 'now to appear (emphanisthenai — be manifested, present himself) in the presence of God (before God's face) for us (on our behalf)' — Christ now appearing before God for his people, presenting himself and his finished sacrifice, ever interceding, his entrance into heaven being for our sake (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott construes the qualifying adverb as governing the whole rule, notes the poor man's flour offering as an exception, and argues that the heavenly things are undefiled but must be brought into association with the one sacrifice before man can enter; he also contrasts the high priest's fearful haste with the manifestation before God's face. Barnes extends the maxim about blood beyond the Levitical system and notes that Jesus never entered the temple proper. Robertson admits the dedication of heaven seems strained and the picture mystical."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: Christ entered heaven itself, not a copy, to appear before God's face for us — presenting his sacrifice and interceding on our behalf; his heavenly ministry is the reality the earthly high priest's yearly entrance only foreshadowed."
+    "prevalence": "single",
+    "summary": "Chrysostom explains why the point had to be made at all, describing the pride the Jews took in the temple for its costliness, its beauty and its uniqueness, drawing pilgrims from Babylon to Ethiopia, so that the writer sets the whole heaven against it as he had set Christ's death against the sacrifices."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the 'heavenly things' are that needed cleansing: heaven itself made accessible (Barnes, Ellicott), the body of Christ or the Church (opinions reported by Clarke), the kingdom of Christ on earth and above (Calvin), or our heaven-born spirits (Wesley), with Robertson admitting the whole conception is strained",
+   "Whether the exceptions to cleansing by blood are real, Calvin holding that water and fire drew their efficacy from the sacrifices while Gill, Barnes, Ellicott and Wesley allow them as genuine exceptions"
+  ],
+  "outliers": [
+   "Calvin names Chrysostom and rejects his account of the word 'almost', which took it to mark the unfitness of merely figurative rites, as inconsistent with the apostle's design",
+   "Barnes observes that Jesus, of the tribe of Judah, never entered the temple proper in his life, having no more access than any other Jew"
+  ],
   "themes": [
-   "Christ is not entered into the holy places made with hands, which are the figures of the true; but into heaven itself",
-   "now to appear in the presence of God for us",
-   "Christ entered heaven itself to appear before God for us",
-   "presenting his sacrifice, interceding"
+   "blood",
+   "remission",
+   "heavenly sanctuary",
+   "antitype",
+   "intercession"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "25": {
@@ -1042,163 +703,74 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The difference: 'nor yet that he should offer himself often (repeatedly), as the high priest entereth into the holy place every year with blood of others (allotrio — of another, the blood of animals, not his own)' — Christ not, like the Levitical high priest, offering repeatedly year by year; the high priest entering the Holy of Holies every year with fresh animal blood, a repeated, never-finished offering whose very repetition proved its insufficiency; whereas Christ offered his own blood, once — the double contrast (repeated vs once, others' blood vs his own) setting Christ's offering infinitely above the Levitical (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "nor yet that he should offer himself often, as the high priest entereth into the holy place every year with blood of others",
-   "Christ did not offer himself repeatedly like the high priest",
-   "once, not yearly; his own blood, not others'",
-   "the finality of his sacrifice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "25-28",
+  "pericope_label": "Once offered, once to die, and the second appearing apart from sin",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the single offering as proof of a finished satisfaction and names both those who make Christ offer himself in heaven now and those who offer his body daily; he grounds death in God's decree rather than nature, and denies that Christ bore the sins of all, since all are not justified. Calvin defends a priesthood that need not keep sacrificing, refuses to press 'the foundation of the world' literally, restricts the law of dying once to the ordinary lot, and reads 'many' as set over against 'one' rather than as a measure of extent."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke holds that the crucified body remains a meritorious sacrifice before the throne, takes the putting away of sin as the abolition of the sin offerings and the Mosaic economy, and closes with a prayer for the Lord's coming. Wesley makes the sacrifice the midpoint dividing the world's whole duration, takes 'many' as all who are born, and carefully denies that Scripture teaches a particular judgment immediately after death."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The reasoning against repetition: 'for then (if he had to offer repeatedly) must he often have suffered since the foundation of the world' — since Christ's offering was the offering of himself in death, repeated offering would require repeated suffering and dying, an absurdity since his death cannot be repeated; 'but now once (hapax — once for all) in the end of the world (the consummation of the ages, the close of the old order) hath he appeared (been manifested) to put away (athetesis — abolish, annul, do away with) sin by the sacrifice of himself' — Christ appearing a single time, at the climax of history, to abolish the guilt and power of sin by offering himself, his single self-sacrifice accomplishing the final putting-away of sin the repeated animal offerings never could (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott identifies the offering with the presentation of blood within the veil and displays the point-by-point parallel between the last two verses. Barnes grounds the single sacrifice in the oneness of death, judgement and probation, and insists that death comes by appointment rather than as a debt of nature. Robertson explains the unreal condition, distinguishes sin as a principle from particular transgressions, and notes that the second appearing is apart from sin and offers no second chance."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: once, at the end of the ages, Christ appeared to put away sin by the sacrifice of himself — a single, final abolition of sin, not to be repeated; his one self-offering accomplished what no repetition of animal blood could, the definitive removal of sin's guilt."
+    "prevalence": "single",
+    "summary": "Cyril, expounding the manifestation, insists that appearing at the end of the ages is no beginning of being, since the goings forth of the one manifested are from the days of eternity."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "For whom Christ bore sins: not for all, since all are not justified (Gill); for as many as are born into the world (Wesley); or a question the text does not raise, 'many' being opposed to 'one' rather than to 'all' (Calvin)",
+   "What 'to put away sin' means: to abolish the sin offerings and end the Mosaic economy (Clarke) or to deal with sin itself, in its punishment and its stain (Barnes, Robertson)",
+   "Whether anything of the offering continues now: Gill condemns the notion that Christ offers himself in heaven, while Clarke holds the crucified body still a meritorious sacrifice before the throne"
+  ],
+  "outliers": [
+   "Wesley denies that Scripture anywhere teaches a particular judgment immediately after death, while holding that every man's final state is fixed at the moment of dying",
+   "Calvin calls the phrase 'since the foundation of the world' a popular way of speaking, intelligible to common readers though not suitable to over-nice and hair-splitting critics, since sin entered a world already founded"
+  ],
   "themes": [
-   "then must he often have suffered since the foundation of the world",
-   "now once in the end of the world hath he appeared to put away sin by the sacrifice of himself",
-   "Christ appearing once to put away sin",
-   "the final self-sacrifice"
+   "finished sacrifice",
+   "death",
+   "judgment",
+   "second coming",
+   "extent of the atonement"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The universal appointment: 'and as it is appointed (apokeitai — set, ordained by God) unto men once to die' — death coming to every man once, the fixed, divine appointment and universal lot of mankind, the emphasis on 'once' (a single death, not repeated, against any notion of reincarnation) forming the parallel with Christ's single death (v.28); 'but after this the judgment' — death followed by judgment, the soul having died once coming to account before God, the certainty of judgment after death (against any idea of a second probation or escape) — Barnes, Robertson, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is appointed unto men once to die, but after this the judgment",
-   "men die once and then face judgment",
-   "the universal appointment of death",
-   "death followed by judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The correspondence with v.27: 'so (in like manner) Christ was once (once for all, answering to man's once dying) offered to bear (anenenkein — to carry, take up and away) the sins of many (the multitude of the redeemed, cf. Isaiah 53:12)' — as men die once, so Christ offered once, bearing the sins of many substitutionarily, taking on himself and carrying away his people's sins; 'and unto them that look for him (eagerly await him, the watching believers) shall he appear the second time without sin (choris hamartias — apart from sin, no longer bearing it) unto salvation' — as the high priest, having offered, came out to bless the waiting people, so Christ will appear a second time, not now to deal with sin (that finished) but to bring the full, final salvation (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: Christ, having once borne the sins of many, will appear the second time 'without sin' — no longer as the sin-bearer but in glory, to bring salvation to those who look for him; his second coming is the believer's hope, the completion of the redemption his one offering secured."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Christ was once offered to bear the sins of many",
-   "unto them that look for him shall he appear the second time without sin unto salvation",
-   "Christ once offered, appearing a second time for salvation",
-   "the one offering and the second coming"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
