@@ -1,1607 +1,866 @@
 {
  "1": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
    "Matthew Henry"
   ],
+  "range": "1-4",
+  "pericope_label": "The congregation weeps, wishes itself dead, and moves to elect a captain back to Egypt",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the outcry began with the princes and elders with Moses but quickly spread through the body of the people, very loud and clamorous, with shrieks, tears, and lamentations."
+    "summary": "Gill limits the first outcry to the princes and elders standing by when the report came in, though he expects word to spread and raise a general clamour; on the proposed election he notes that they already had captains over the tribes and wanted one commander over all, and that Nehemiah speaks as though the appointment were actually made, their will being taken for the deed. Calvin sees how easily a few incentives raise sedition in a multitude, which left to itself is like a sea open to every tempest. He grants a pretext — ten chosen men dissuading and only two advising — but will not excuse the credulity, since it grew out of incredulity: if the standing of ten men weighed so much, how much more the word of God, who had promised that land four centuries before. He argues the wish to have died against the old interpreter, who took the optative particle for a negative and made them say their death in the wilderness would be bitterer than in Egypt, whereas their complaint is of the death they expect ahead. On the charge itself he is harshest of all: they accuse God of deception and cruelty, as if he were betraying them to the Canaanites, and of weakness besides, repaying his kindnesses by calling him their betrayer."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the people wept that night, giving way to despair at the report of the spies."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the congregation lifted up their voice, and cried; and the people wept that night",
-   "a night of useless tears",
-   "grieving for fear, not for sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry lays the mischief at the door of the ten, supposing the twelve had talked the matter over before reporting and that Caleb and Joshua did their utmost to bring the rest round — had the others but let Caleb speak for them all, nothing would have come of it; instead the ten seem to have designed the mutiny deliberately, against Moses and Aaron, though they could propose no gain unless they hoped to command the retreat. The wish to have died he treats as causeless discontent: never had months been spent so pleasantly as those since Egypt, loaded with honours and favours, yet they would rather have perished with the firstborn or with those lately struck down for lusting, choosing to die criminals under God's justice than live conquerors in his favour. It is unbridled passion, he says, that makes men prodigal of the one thing nature holds dearest; they wish to die for fear of dying, without the sense of the lepers who reasoned that if their enemies killed them they should but die. He notes also that some render the words as a present wish."
+   },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: they murmured against Moses and Aaron as the instruments of bringing them out of Egypt and conducting them hither."
+    "summary": "Clarke draws a character of the people: with scarcely any firmness of mind and almost no religion they bore no reverse and were forever at their wit's end, headstrong and pusillanimous by turns — and because they were such, the power and wisdom of God stand out the more in their story. The proposal to choose a captain he calls a formal renunciation of Moses and flat rebellion, and marvels that men whose lives had been embittered by Egyptian rigour should be eager to return, past evils weighing less than present ones far smaller. Wesley adds the grim sequel to their wish, that they had it before long and did die in that wilderness; observes that from the instruments they rise higher and strike at God, the author of the journey, which shows how fast sin grows unresisted; and presses the folly of the plan — who would cover them with a cloud, feed them with manna, bring them over the sea, or answer for their welcome among the Egyptians they had ruined?"
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the whole congregation said, 'Would God that we had died in the land of Egypt, or in this wilderness.'"
+    "summary": "Ellicott marks the revolt as now open against Jehovah himself, to whom they impute the exodus by way of reproach; he would render the question as a present one, wherefore doth the Lord bring us into this land, and identifies the danger they feared as the sword of the Amorite and the Anakim rather than famine. Keil calls it a murmuring that grows into open revolt."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the children of Israel murmured... Would God that we had died in... Egypt... or... this wilderness",
-   "preferring the grave to the inheritance",
-   "their wish to die there granted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: their murmuring did not stop at Moses and Aaron but proceeded against God himself, who had done such wonderful things for them, complaining of his favours as if they were injuries, as if God had brought them out of Egypt only to destroy them."
+    "question": "Is the wish \"would God we had died\" a lament over the past or a present prayer?",
+    "sides": [
+     {
+      "position": "the complaint looks forward, to the death they expect ahead; the old interpreter who took the optative particle for a negative was wrong",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "the words are a wish over the past, though some render them as a present wish",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "wherefore hath the LORD brought us unto this land, to fall by the sword... were it not better... to return into Egypt?",
-   "construing God's mercies as malice",
-   "preferring bondage to trusting him"
+   "all the congregation lifted up their voice and wept",
+   "would God we had died in this wilderness",
+   "let us make a captain and return into Egypt",
+   "murmuring against Moses that becomes revolt against God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they would make a head over them instead of Moses, who would never take them back and to whom they were now disaffected; Nehemiah says they did appoint a captain (Neh. 9:17), to return into Egypt."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let us make a captain, and let us return into Egypt",
-   "casting off Moses and God's leading",
-   "returning to bondage rather than follow God into rest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: done through shame and confusion at so shocking a proposal and such ingratitude, and to beg the people to lay aside such thoughts and to supplicate God to convince them of their sin and give them repentance and forgiveness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses and Aaron fell on their faces before all the assembly",
-   "grieved and praying mediators",
-   "interceding while the congregation raged"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they rose up and interposed, looking on themselves as specially obliged, being able to confront the other spies and contradict what they had said."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Joshua and Caleb, of them that searched the land, rent their clothes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joshua the son of Nun, and Caleb the son of Jephunneh... rent their clothes",
-   "the faithful minority standing alone",
-   "bold witness against a rebellious crowd"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they spake to all the company, to as many as could hear them, to the heads of the people, declaring the land an exceeding good land, against the evil report of the ten."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The land, which we passed through to search it, is an exceeding good land",
-   "holding fast the true report",
-   "weighing the promise rather than the peril"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the appeal to God's continued delight in them, as shown by all he had done in Egypt, at the Red sea, and in the wilderness."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: 'delight in us' — if by our rebellion and ingratitude we do not provoke God to leave and forsake us."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If the LORD delight in us, then he will bring us into this land",
-   "the favour of God the ground of victory",
-   "the one danger their own unbelief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: nothing could hinder their possessing the land but their own rebellion, which alone might provoke God to cut them off or deliver them to their enemies."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: 'their defence' is tsillam, 'their shadow,' a metaphor for protection; the shadow of God's defence over the Canaanites is departed, while the LORD is with Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Only rebel not ye against the LORD... their defence is departed from them, and the LORD is with us",
-   "the enemy stripped of their defence",
-   "unbelief the only real foe"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "5-10",
+  "pericope_label": "Moses and Aaron fall on their faces, Caleb and Joshua plead, and the congregation calls for stones",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the princes and heads bade stone Joshua and Caleb, who had made the faithful report and given the encouraging speech, the people being stirred up against them."
+    "summary": "Gill offers three readings of the prostration — shame at so shocking a proposal, an appeal to the people to lay the thought aside, or a supplication that God would convince them of their folly. Calvin doubts whether they humbled themselves before the people or fell in prayer, and prefers the second, as a rebuke of their stupidity by turning to God: in such obduracy nothing was left but to call on him, yet openly, since a retired place would have served had prayer alone been the point. The rending of garments he explains as an eastern usage, solemn in extreme grief or in abhorrence of a crime, which hypocrites afterwards imitated to feign sorrow or deceive the simple, though here it was genuine; and he observes that Joshua's courage is now named where before only Caleb was praised. On the plea he fastens on the conditional particle: some take it as causal, that because God loves us he will bring us in, which he rejects as foreign to the sense — the doubt is put in not to weaken hope but to bring them to repent, and the words only rebel not show that nothing shuts up God's way but their own refusal to obey. He is unsurprised at the stoning, since men who have censured God will rage against his servants, reproof of iniquity ending at last in fury; and notes that God does not argue or threaten but displays his power, rescuing them as from wild beasts. Gill holds with Ellicott that the congregation ordered to stone them must mean the princes and chief men, there being otherwise nobody to address the order to."
    },
    {
     "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the prostration as all three of Gill's readings at once, and adds a practical reason: the noise was such that they could not be heard, and calling for silence would have made the crowd louder, so they gained a hearing by falling down in sight of the assembly — praying God to still the noise of that sea, showing the trouble of their own spirits as men astonished to see a people fling away their mercies. The rending of garments he refers to the spies' share in the commission, which made the tumult theirs, their colleagues having raised the storm. On the plea he admires the reasoning: they commend the land as very, very good, so the word runs, giving no ground to despise so pleasant a place — men convinced of the gains of religion would not stick at its services. He makes light of the walled cities: though the Canaanites are fortified they are naked, that common providence which guards the rights of nations having abandoned them, and no people can be safe when they have provoked God to leave them, while Israel, though in tents, is fortified, the Lord being there and his name a strong tower."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Henry: the glory of the LORD appeared in the tabernacle, interposing for his servants and against the rebels."
+    "summary": "Wesley reads the prostration as the refuge Moses always took in such straits, done before all the assembly that the sight might awaken them, and refers the rent garments to grief at the blasphemy and sedition and the judgment they foresaw. The figure of eating them as bread he turns practically — we shall destroy them as easily as we eat bread — and warns that nothing can ruin sinners but their own rebellion, since if God leaves them it is because they drive him away. Clarke notes with Ellicott that the defence departed is literally a shadow, a figure of force in hot countries where shelter from the sun is worth much, and adds that Arabs and Persians use the same word; from the rescue he draws the moral that a man is immortal till his work is done."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott gives the same literal sense of the departed shadow, and holds that the iniquity of the Canaanites is now full and themselves ripe for destruction. He agrees with Gill that the congregation bidden to stone them must be the princes and chief men, adds that Moses had feared the same violence before, and places the appearing of the glory in the court rather than the tent, since the people could not otherwise have seen it."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What did the prostration of Moses and Aaron signify?",
+    "sides": [
+     {
+      "position": "one of three things — shame, an appeal to the people, or supplication that God would convince them",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "all three at once, and besides that a way of gaining a hearing over the noise of the crowd",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "prayer, not a humbling before the people, though offered openly to rebuke their stupidity",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "the refuge Moses always took in such straits, done publicly that the sight might awaken them",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "all the congregation bade stone them... And the glory of the LORD appeared",
-   "a rescue of the faithful and rebuke to the rebels",
-   "to touch God's faithful is to face God"
+   "Moses and Aaron fell on their faces before the assembly",
+   "the land is an exceeding good land",
+   "their defence is departed from them",
+   "the congregation bade stone them with stones"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "11": {
   "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "11-12",
+  "pericope_label": "How long will this people provoke me: the threat of pestilence and the prayer that turns it",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the LORD spake out of the cloud upon the tabernacle."
+    "summary": "Calvin fixes on the obstinacy, that they had rejected God with atrocious insults in the face of the clearest proofs of his power. He is unsure of the verb, doubting the rendering provoke and thinking Jerome nearer with how long will they detract me, but rests on the plain drift, which the next clause confirms: God complains of being disparaged, since they will not weigh the miracles that testified his power and kindness, refusing credit to a heap of signs that ought to have broken their stubbornness; and the words how long, he adds, measure both the length of the crime and the patience of God. On whether the threat was absolute he meets the difficulty head on: it may offend that God should pronounce the people cast off when their pardon was already decreed, but he is not speaking of his secret counsel, only of what they deserved and of the vengeance hanging over them, his design being never to keep Moses from praying but to prove the fervour of his zeal. Yet he will not let the comfort run far, adding that though God is placable by nature, the hope of pardon is justly cut off from men so obdurate that neither his hand nor his word makes any impression. Gill observes that the pestilence did fall, but on the spies who brought the evil report, and holds that as to the body of the people the words are partly a proposal to draw Moses out, partly a threatening to bring the nation to a sense of its sin."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: here is the righteous sentence God gave against Israel for their murmuring and unbelief, showing what their sin deserved and what would have been done had Moses not interposed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How long will this people provoke me? and how long will it be ere they believe me",
-   "the sin laid bare as unbelief",
-   "refusing trust against all the signs (Heb. 3:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry reads the summons as a vindication: while the people were busy disgracing Moses, God called him to the tabernacle and put public honour on him as the man of his counsel. He gives the verb its range — they provoke, or reject, reproach and despise, because they will not believe — and makes unbelief the bitter root, distrust of God's power being itself a great provocation and lying at the bottom of many others; heaven keeps account of how long men hold out, and the longer they hold the greater the offence. He finds two aggravations, that they were a peculiar and professing people, the nearer to God in name the more provoking their sins, and that they had seen every sign shown among them. The sentence he states without softening: what remains but to make a full end, smite them with pestilence, blot out name and race — they wished to die, and they may die; and if it is asked what becomes of the covenant with Abraham, the answer stands in the same breath, that it will be kept in the family of Moses. This he takes for a trial, whether Moses still preferred Israel's interest to the advancement of his own house; and it appears he was of the same public spirit and could not bear to raise his name upon the ruin of theirs. The sin had made a fatal breach in their defence, through which destruction would have entered had Moses not stepped in — here a type of Christ, who prayed for his persecutors — and since the pardon of a national sin consists in turning away the national punishment, that is what the one word Pardon is earnest for."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: as to the body of the people, this is not a peremptory decree but spoken partly by way of proposal to draw out what Moses would say, and partly as a threatening to bring the people to a sense of their sin and repentance."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley calls the threat not a determination but a commination, of the same kind as the sentence on Nineveh, with a condition implied — unless there be speedy repentance or powerful intercession."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes that the same promise of a greater nation was made at the rebellion at Sinai, and that Moses interceded then in the same way."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Was the threat to disinherit Israel absolute?",
+    "sides": [
+     {
+      "position": "partly a proposal to draw Moses out and partly a threatening to bring the nation to a sense of its sin; the pestilence itself fell only on the spies",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "a commination like the sentence on Nineveh, with a condition implied — unless there be repentance or intercession",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "not a declaration of God’s secret counsel but of what they deserved, spoken to prove the fervour of Moses’ zeal",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the verb rendered \"provoke\" mean?",
+    "sides": [
+     {
+      "position": "its range covers provoke, reject, reproach and despise, all springing from unbelief",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "\"provoke\" is doubtful; Jerome’s \"how long will they detract me\" is nearer, the complaint being of disparagement",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "I will smite them with the pestilence, and disinherit them... make of thee a greater nation",
-   "a just sentence yet a proving of Moses",
-   "the offer of greatness testing his heart"
+   "how long will this people provoke me",
+   "I will smite them with the pestilence and disinherit them",
+   "I will make of thee a greater nation and mightier",
+   "unbelief as the root of provocation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Moses spake in an abrupt manner, his mind greatly disturbed and distressed by the threatening. Calvin: Moses, after his custom, stands 'in the breach' of the wall (Ps. 106:23) to avert the anger of God, supporting his request by argument."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then the Egyptians shall hear it... thou broughtest up this people in thy might",
-   "standing in the breach (Ps. 106:23)",
-   "pleading God's honour, not the people's worth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Canaanites would hear of it, the nations being neighbours, and would tell it — with pleasure, as the Targum adds, that the Israelites were killed in the wilderness; the LORD was known to be among them in the cloud, seen face to face."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they will tell it to the inhabitants... that thou LORD art among this people... seen face to face",
-   "the visible presence that honoured Israel",
-   "Moses' plea that God guard his name"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'kill all this people as one man' means suddenly and at once, as by a pestilence; the fame of the LORD had gone out among the nations, who would speak of so sudden a destruction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if thou shalt kill all this people as one man, then the nations... will speak",
-   "the fame of the LORD gone abroad",
-   "his glory turned to reproach if they perish"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the heathen would conclude God, though he brought them out of Egypt, was not able to bring them through the wilderness into Canaan, his power having failed."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: 'not able' — his power was quite spent in bringing them out of Egypt, and could not finish the work, as the heathen would blasphemously say."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD was not able to bring this people into the land... therefore he hath slain them",
-   "the heathen ascribing it to impotence",
-   "God's power traduced, its honour Moses' plea"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the power of God is already great, almighty, knowing no bounds; Moses' request is that it appear greater still in bringing the people into the land, magnified according to God's own word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let the power of my Lord be great, according as thou hast spoken",
-   "power magnified in pardoning, not destroying",
-   "the strength of mercy that bears with the sinful"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
+   "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "13-19",
+  "pericope_label": "Then the Egyptians shall hear it: the appeal to the name, and the plea for great power",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the LORD is longsuffering toward all, and especially toward his own people; Calvin and Clarke refer to the fuller exposition at Exod. 34:6-7."
+    "summary": "Gill notes that the plea begins abruptly, Moses being greatly disturbed by the threatening; on the petition for great power he offers two senses, either that the power shown in the exodus and the wilderness might appear greater still in bringing them into the promised land, or else that there might be a great display of pardoning grace — for as God's power appears in his forbearance towards the wicked, much more in forgiving them, there being more virtue in grace to pardon than in sin to damn; and he takes the longsuffering of the recited titles as reaching all men and especially God's own. Calvin has Moses stand in the breach of the wall, as the psalm says, resting his whole request on one thing, that God's holy name would become the sport of the wicked if the nation perished: Egypt will hear, since it is notorious that this people was rescued from them by his might; the report will pass to the Canaanites, who already know him for their protector; and if they perish now, every nation that has heard his fame will conclude that his power broke down in mid course, unable to finish what it began. From this he draws a caution, that the tie serves us only if we plead it sincerely, since many boldly urge God's name on their own behalf who care nothing for it, and the more signal his past power the more insolent the blasphemy if it seems to fail. He looks past the phrase about great power to its source, that Moses draws his confidence from the vision in which God had declared his own nature, and makes it a general rule that nothing in prayer is more effectual than to set God's word before him and build the request on his promises, as though he had dictated what we should ask. On the closing petition he is full: Moses sets before himself the greatness of God's mercy and then the past proofs that he is inclined to forgive, for though iniquities heaped on iniquities might justly frighten us, the abundance of grace should swallow up all dread of wrath; and because a bare acknowledgment of that goodness is often not enough, he adds the stay of experience — pardon, as thou hast so often pardoned already — which Calvin makes the most effective importunity of all."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: even 'visiting the iniquity' / 'by no means clearing the guilty' is brought within the plea — Moses asks not that sin go unpunished but that the people be forgiven and chastened rather than destroyed."
+    "summary": "Clarke thinks the passage needs no explanation, and calls the arguments pointed, cogent and respectful, showing a heart full of humanity and the deepest concern for the divine glory. Wesley allows only one sense for the petition for great power, the words that follow restraining it: pardon is the single instance described in the divine titles, asked by Moses, and granted in the answer — nor is it strange that pardon should be called an act of power, being an act of omnipotent goodness. He also raises a difficulty of his own, why Moses should quote the clause about visiting iniquity on the children, which looks like an argument for destroying rather than sparing; one answer is that he would not sever what God had joined, but the truer answer, he thinks, is that the words should be rendered otherwise — that in destroying he will not utterly destroy, though he visit the iniquity of the fathers on the children."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does \"let the power of my Lord be great\" ask for?",
+    "sides": [
+     {
+      "position": "either a greater display of the power already shown, in bringing them in, or a great display of pardoning grace",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "the pardoning power only, since what follows restrains it to that",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "the question is less what the phrase asks than where the confidence comes from — the vision in which God declared his own nature",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Wesley",
+    "claim": "the clause about visiting iniquity on the children should be rendered so that in destroying he will not utterly destroy, which removes the difficulty of Moses quoting it in a plea for mercy"
+   }
+  ],
   "themes": [
-   "The LORD is longsuffering, and of great mercy, forgiving iniquity... by no means clearing the guilty",
-   "pleading God's name proclaimed at Sinai (Exod. 34:6-7)",
-   "the ground of pardon God's own character"
+   "the Egyptians shall hear it and tell it to the inhabitants of this land",
+   "the Lord was not able to bring this people into the land",
+   "let the power of my Lord be great",
+   "pardon, as thou hast forgiven this people from Egypt until now"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the plain petition — pardon the iniquity of this people according to the greatness of thy mercy."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: Moses' intercession (vv.13-19) is full of simplicity and energy; his arguments are pointed, cogent, and respectful, showing a heart full of humanity and the deepest concern for the glory of God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pardon, I beseech thee, the iniquity of this people according unto the greatness of thy mercy",
-   "the climax of a noble prayer",
-   "pleading God's long habit of forgiving"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'I have pardoned' means so as not to kill them utterly as one man — an instance of God's being plenteous in mercy and ready to forgive, and of the efficacy of the fervent prayer of a righteous man; the Jerusalem Targum's 'the Word of the LORD' Gill applies to Christ the essential Word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said, I have pardoned according to thy word",
-   "the triumph of intercession",
-   "the plenteous mercy of God prevailed on by prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "20-21",
+  "pericope_label": "I have pardoned according to thy word: the oath, the glory, and the ten temptings",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is the form of an oath, the LORD swearing by his life, by himself, because he could swear by no greater."
+    "summary": "Gill takes the plain sense with Clarke and Wesley, that the nation was not utterly cut off, and reports the Jerusalem Targum's reading that the Word of the Lord remitted and forgave, which he refers to Christ, since none but God can forgive sin; he notes too that God swears by his own life, having no greater. Calvin asks how God can spare men whom he determined to punish to the utmost and did shut out of their inheritance, and answers that the pardon was granted not to the individuals but to their race and name, rejecting as unnatural the opinion that the men themselves were released from eternal death because God was satisfied with a temporal penalty: Moses was heard so far and no further, that Abraham's seed should not perish and the covenant not fail. On the glory filling the earth he notes that some render the clause in the past tense, of a glory already displayed in many miracles, which chimes with the next words about men who have seen that glory, but prefers the future, God calling to witness the glory he is about to assert — Moses having feared that the nation's ruin would become a reproach, and God now swearing to vindicate his name so that the guilty shall not go unpunished. Of the ten temptings he will have no counting: the number is not fixed, and God means only that they provoked him without measure or end. He also defines the offence, that to tempt God is to subject his power to the narrow rule of our senses and prescribe how he shall act to suit our desires, the root being a refusal to listen to his voice, since nothing but obedience restrains our insolence."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the answer a testimony to prayer: God had designed a pardon, but Moses is to have the praise of obtaining it, a whole nation rescued by one man's importunity — Pardon, says Moses; I have pardoned, says God. In the glory filling the earth he hears an answer to the very thing Moses had pleaded for, that all the world shall see how God hates sin even in his own people and how gracious he is, as when our Saviour prayed, Father glorify thy name, and was answered that it had been glorified and should be again; those who sincerely seek God's glory may be sure of what they seek. The ten temptings he counts, reckoning this exactly the tenth occasion on which the congregation had provoked God — the Red Sea, Marah, the wilderness of Sin, Rephidim, the calf, Taberah and Kibroth-hattaavah — and remarks that heaven keeps a tally."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley agree with Gill on the plain sense of the pardon, that the nation was not utterly cut off. Clarke narrows the glory filling the earth to the land: all this land, that is Canaan, fulfilled to the letter only when the preaching of Christ and his apostles was heard through all the cities of Judea, the globe not seeming to be meant wherever the expression occurs. Wesley narrows it differently, to the report of God's righteous acts in punishing this people."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the oath 'as truly as I live, all the earth shall be filled with the glory of the LORD' is the ground of the sentence that follows on the rebels."
+    "summary": "Ellicott balances both sides of the pardon: justice required the transgressors to be overtaken, yet the prayer was heard and the people not exterminated. He reports a reckoning of the ten temptings like Henry's, made up by adding two transgressions over the manna to the eight recorded murmurings, but thinks it likelier that ten stands, as elsewhere, for a full measure; and he identifies who fell under the sentence — those numbered in the first census, Joshua and Caleb and all under twenty excepted, and any others belonging to Levi, neither numbered then nor represented among the spies. Keil explains Caleb's exemption: another spirit was in him, not the unbelieving yet proud temper of the mass but obedience and trust, so that he fulfilled to walk behind Jehovah with unwavering fidelity, and for that the land he had walked over was promised to him and his seed."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How far did the pardon reach?",
+    "sides": [
+     {
+      "position": "to the race and name only; the men themselves were not released from eternal death, and Moses was heard no further than that Abraham’s seed should not perish",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "the plain sense is that the nation was not utterly cut off",
+      "holders": [
+       "Gill",
+       "Clarke",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "both hold: justice required the transgressors to be overtaken, yet the prayer was heard and the people not exterminated",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is meant by all the earth being filled with the glory of the Lord?",
+    "sides": [
+     {
+      "position": "all the world shall see how God hates sin in his own people and how gracious he is — an answer to the very thing Moses pleaded",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "all this land, that is Canaan, fulfilled when Christ and his apostles were preached through the cities of Judea",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the report of God’s righteous acts in punishing this people",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "future, not past: God calls to witness the glory he is about to assert in punishing the guilty",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Are the ten temptings to be counted literally?",
+    "sides": [
+     {
+      "position": "yes, and this is exactly the tenth, the occasions being enumerable",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "a like reckoning exists, but ten more likely stands for a full measure",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the number is not fixed; it means only that they provoked him without measure or end",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "as truly as I live, all the earth shall be filled with the glory of the LORD",
-   "God's purpose unfailing despite their unbelief",
-   "glory shining in judgment as in pardon (Hab. 2:14)"
+   "I have pardoned according to thy word",
+   "all the earth shall be filled with the glory of the Lord",
+   "they have tempted me now these ten times",
+   "my servant Caleb had another spirit with him"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "22": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they had seen his glorious Majesty in the cloud and the glorious things he did from Egypt to the borders of Canaan; read 'that,' the matter of the oath; they tempted him ten times and hearkened not to his voice."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: all those men who had seen God's glory and miracles in Egypt and the wilderness had tempted him now these ten times."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all those men which have seen my glory... have tempted me now these ten times",
-   "the full measure of their trying",
-   "sin aggravated by repetition against clear light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they should not possess the land the LORD had sworn to Abraham, Isaac, and Jacob to give their seed; now he swears these men, who had tempted and disobeyed him, should not inherit it; the Targums take it for an oath."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they shall not see the land which I sware unto their fathers... that provoked me",
-   "pardon joined with chastening",
-   "unbelief shutting them out of the rest (Heb. 3:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Caleb was one of the spies who brought a good and true report and stilled the people, approving himself a faithful servant; Joshua is not named here because, some say, he then had no children of whom it could be said the seed should possess the land; Caleb had 'another spirit' and followed the LORD fully."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "my servant Caleb, because he had another spirit with him, and hath followed me fully",
-   "the bright exception amid unbelief",
-   "whole-hearted following never in vain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Canaanites (the Amorites) had come down from the mountain and sat in the valley, in ambush; Israel was now ordered to turn back into the wilderness by the way of the Red sea."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "To morrow turn you, and get you into the wilderness by the way of the Red sea",
-   "the door to Canaan shut",
-   "unbelief turning the road to rest into a wandering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: before he had spoken to Moses alone, who interceded and obtained pardon; now he repeats to Moses and Aaron together that they should not possess the land."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: this is the sentence upon the murmuring congregation, after the Lord had pardoned the nation from utter destruction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses and unto Aaron",
-   "pardon and sentence now joined",
-   "grace sparing their being, justice on their sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the LORD speaks as one weary of forbearing, their murmurings being so frequent and aggravated, asking how long sparing mercy must be extended; he had heard all their murmurings against him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How long shall I bear with this evil congregation, which murmur against me?",
-   "God weary of forbearing",
-   "long-tried mercy giving way to judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the form of an oath, 'as truly as I live.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Jehovah swore that it should happen to the murmurers as they had spoken in his ears."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "As truly as I live... as ye have spoken in mine ears, so will I do to you",
-   "their own words become their sentence",
-   "sin punished out of its own mouth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they had wished they had died in the wilderness, and the LORD now declares they should, their bodies falling there."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the sentence fell on all numbered from twenty years old and upward who had murmured."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Your carcases shall fall in this wilderness... from twenty years old and upward",
-   "the army that refused the land condemned",
-   "whose carcasses fell in the wilderness (Heb. 3:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: read as an oath, 'I swear ye shall not'; save Caleb and Joshua."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'concerning which I sware' is literally 'I lifted up my hand,' the attitude of swearing, referring to the covenant with Abraham, Isaac, and Jacob (Gen. 14:22; Deut. 32:40)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye shall not come into the land... save Caleb... and Joshua",
-   "the oath of entry turned to exclusion",
-   "the promise kept to the believing, forfeited by the rest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: these were the little ones the people had said should be a prey to the Canaanites; God would bring them in to know the land which their fathers had despised."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "your little ones, which ye said should be a prey, them will I bring in",
-   "the children's false fear answered in mercy",
-   "the promise standing for the next generation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "22-32",
+  "pericope_label": "Turn you into the wilderness: Caleb's portion, the ambush in the valley, and the sentence on the numbered",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the way of speaking distinguishes them from their children — 'as for you, your carcases.'"
+    "summary": "Gill offers two guesses why Caleb alone is named — that Joshua had no children, so nothing could be said of his seed possessing the land, or that as commander he needed no separate mention. On the Amalekites he takes it that their settled home was the mountain and they had come down to sit in the valley in wait, and finds goodness in the warning of a people who had provoked him. He reports the rabbinic reading that the evil congregation means the ten spies, whence ten make a congregation, and that the murmuring is causative, but judges the whole people meant. Calvin grants that Joshua shared the grace but holds Caleb specially distinguished, as the man who lifted the banner first and encouraged his colleague; and though he allows that the word for another spirit is sometimes used of a mere disposition, he has no doubt divine inspiration is meant, praising a man who not only exhorted others but went forward undeterred while the world was convulsed about him. On the parenthesis he canvasses three constructions and prefers a fourth, that the words are a reproach: Israel had come to the border of the inhabited land, where the enemy might have been routed, and God now turns them out of ground they had reached. The repetition of the sentence to Aaron as well as Moses he marks as no new matter but a driving home, hears the opening as an angry interrogation and what follows as bitter irony — nothing was further from their wish than to wander in the desert, yet God will gratify them in a sense they never meant — takes the lifting of the hand for a form of swearing, as though God were called from heaven to witness and judge, and finds the sharpest reproof in this, that their self-will should annul, so far as they were concerned, a promise he had ratified by oath. Yet he notes the mercy folded into the threat, that the children they had lamented over as a prey are the very ones to be given the land."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: see with what contempt they are spoken of, now they had by their sin made themselves vile."
+    "summary": "Wesley reckons Joshua not among the people at all, an attendant on Moses and no more to be counted with them than Moses and Aaron; and on the other spirit he makes it another temper, faithful and courageous, moved not by the cowardice ruling his brethren but by the Spirit of God. Clarke will not have it a natural boldness but the influence of heaven lifting Caleb above earthly fears, and renders the next phrase literally, that he filled up after God."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'in this wilderness' — the very words the Israelites themselves had used (v.2)."
+    "summary": "Ellicott sets out the difficulty of the parenthesis: the words may join to what precedes, so that Caleb's seed should possess the land those nations occupy, but he objects to that and to taking the clause as plain geography, which suits the hill better. Since the verb often means a temporary sojourn, as of Joshua's ambuscade, he would render it that they are abiding in the valley — lying in ambush, which is Ibn Ezra's reading and gives the command its force: do not walk into the snare, but turn away. He notes with Keil that the sentence in the later verse has no verb, and would supply pardon or forgive from the earlier prayer. Keil reads the parenthesis instead as a plain reason for the order, identifies the valley with the broad Wady Murreh running into the Negeb, where the Amalekites were nomads while the Canaanites held the hills, takes Canaanite as the general name for the Amorites, calls the verbless sentence an aposiopesis and supplies the same words as Ellicott; and he sets out the terms of the sentence — every man numbered from twenty upward should fall there, Caleb and Joshua excepted, while the little ones would be brought in to know the land their fathers despised."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why is Caleb alone named for the promise, when Joshua stood with him?",
+    "sides": [
+     {
+      "position": "either Joshua had no children, so nothing could be said of his seed, or as commander he needed no separate mention",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Joshua was not reckoned among the people at all, being an attendant on Moses",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Joshua shared the grace, but Caleb is specially distinguished as the man who lifted the banner first",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the force of the parenthesis about the Amalekites in the valley?",
+    "sides": [
+     {
+      "position": "they are lying in ambush there, so the command to turn away is a warning against the snare",
+      "holders": [
+       "Ellicott",
+       "Ibn Ezra, as reported by Ellicott",
+       "Gill"
+      ]
+     },
+     {
+      "position": "a plain geographical reason for the order — the Amalekites were nomads in the Wady Murreh while the Canaanites held the hills",
+      "holders": [
+       "Keil"
+      ]
+     },
+     {
+      "position": "the words are spoken in reproach: they had reached the border where the enemy might have been routed, and are now turned out of it",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "But as for you, your carcases, they shall fall in this wilderness",
-   "the contemptuous word of judgment",
-   "their own murmur returned as their sentence (v.2)"
+   "him will I bring into the land whereinto he went",
+   "the Amalekites and the Canaanites dwell in the valley",
+   "how long shall I bear with this evil congregation",
+   "your carcases shall fall in this wilderness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "33": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'wander' is 'feed,' like shepherds moving from place to place, the children grazing like sheep in the wilderness; the forty years reckoned from the coming out of Egypt; they must bear their fathers' whoredoms, their unfaithfulness to God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "your children shall wander in the wilderness forty years, and bear your whoredoms",
-   "the innocent burdened by the fathers' sin",
-   "sin's consequences outlasting the sinners"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Adam Clarke"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "33-38",
+  "pericope_label": "Forty years for forty days: the wandering, the breach of promise, and the death of the ten",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the reckoning is a day for a year, forty days for forty years."
+    "summary": "Gill renders the word for wandering as feed, as shepherds who never rest but move on for fresh pasture, and holds with Ellicott and Wesley that the forty years run from the exodus and not from the spies' return, a year and a half having already passed. Calvin makes the shepherd a figure for a sojourner with no settled residence, quoting Hezekiah's complaint that his lodging is departed like a shepherd's tent, and explains the whoredoms metaphorically: God having espoused this people, by rejecting his worship they broke the vow like gadding harlots. He faces what the sentence does to the innocent — God visits the fathers' sins on the children and yet chastises nobody undeservedly, since the sons who bore another's fault were not themselves guiltless — and finds mercy even in the delay, God waiting till the children had the strength of manhood. On the disputed clause he finds the versions various, some making it, ye shall know whether I am false, and takes it for an ironical concession by which God reproves a pride whose aim had been to charge him with falsehood. He will not allow that the death of the ten is recorded out of order by anticipation: Moses has finished the general sentence and now sets down the spies' particular punishment, so that God begins with them and their unnatural death becomes a presage to the rest. He presses two words — the plague, implying they did not die in the course of nature, and before the Lord, which means more than in his presence, God executing judgment as though he had ascended the tribunal."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry places the death of the ten before the sentence was published and draws two lessons from it. God marked his displeasure against men who both sinned and made Israel sin: they had slandered the land of promise, and those greatly provoke him who misrepresent religion, painting his service as mean or unprofitable; and as ring-leaders they might expect a particular mark of wrath. The survival of the other two he thinks the most striking part — all twelve probably stood together, and when ten fell dead of an infectious distemper the two among them were untouched, which confirmed their testimony and confounded the men who had talked of stoning them."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the spies were forty days searching, and the people who rebelled on their evil report are condemned to forty years' wandering; God so hedged them that they could neither go back to Egypt nor forward to the promised land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forty days, each day for a year, shall ye bear your iniquities, even forty years",
-   "the punishment fitted to the sin",
-   "hedged in, neither back to Egypt nor forward"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the decree is absolute and peremptory and will never be revoked, the LORD having determined and resolved it."
+    "summary": "Clarke sets the two forties together, the spies searching forty days and the people wandering forty years, and would have them make a captain and go back to Egypt if they can, God having hedged them so that they could neither return nor advance. The clause about knowing God's breach of promise he calls most harsh, and reports that learned men would render it my vengeance, with the Septuagint and Vulgate behind them — the sense being that God, having promised on condition of obedience, was no longer held by a covenant they had broken. Wesley keeps the covenant language but turns it back on the people: as they first broke the compact by breaking its terms, God makes it void on his side by withholding what was promised, so that the charge of breach of promise they had brought against him is seen to lie at their own door; and he reads the whoredoms as the punishment of that apostasy from a Lord who was their husband."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: as surely as Jehovah had spoken it, would he do it to that evil congregation, who should be consumed and die in the wilderness."
+    "summary": "Ellicott would render the word for wandering as that they shall be shepherds, and confirms the reckoning of the forty years from the later numbering, after Aaron's death. On the disputed clause he looks to the word itself, which occurs elsewhere only in Job, though the cognate verb is common in this book for refusing or disallowing, and settles on rejection or alienation. Keil renders it God's turning away, and sees in the sudden death of the ten a practical proof of the threat, a stroke from before Jehovah falling visibly on the men who raised the revolt while their two colleagues were left alive."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I the LORD have said, I will surely do it unto all this evil congregation",
-   "the decree absolute and irreversible",
-   "abused patience passing into settled judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: these were the ten spies, and only they at this time."
+    "question": "What does \"ye shall know my breach of promise\" mean?",
+    "sides": [
+     {
+      "position": "render it \"my vengeance\", with the Septuagint and Vulgate: God was no longer held by a covenant they had broken",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the covenant is made void on God’s part because they broke its terms, so the charge lies at their own door",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "the word means rejection or alienation, occurring elsewhere only in Job",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "God’s turning away",
+      "holders": [
+       "Keil"
+      ]
+     },
+     {
+      "position": "an ironical concession reproving a pride whose aim was to charge God with falsehood",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the spies who had induced the congregation to revolt by their evil report were made a practical proof of the solemnity of the divine threatening."
+    "question": "Is the death of the ten spies recorded here by anticipation?",
+    "sides": [
+     {
+      "position": "no — Moses finishes the general sentence and then sets down their particular punishment in order",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "it happened while the sentence was passing, before it was published to the people",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "the men... who... made all the congregation to murmur... by bringing up a slander upon the land",
-   "the ringleaders marked for judgment",
-   "those who corrupt the many punished first"
+   "your children shall wander in the wilderness forty years",
+   "after the number of the days in which ye searched the land",
+   "ye shall know my breach of promise",
+   "the men that brought up the evil report died by the plague"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: it was they, and they only at this time, who died."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: those men that brought up the evil report died by the plague before the LORD."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "those men that did bring up the evil report upon the land, died by the plague before the LORD",
-   "the ringleaders smitten at once",
-   "the earnest of the whole sentence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Joshua is here set first, as Caleb is elsewhere, showing they were equal in dignity."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: death never misses his mark, nor takes any by oversight who are designed for life, though in the midst of those that are to die."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joshua... and Caleb... which were of the men that went to search the land, lived still",
-   "the faithful spared amid the death of the ten",
-   "death taking none appointed to life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "39": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Charles Ellicott"
+   "John Wesley",
+   "Matthew Henry"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Moses told them all that murmured, of twenty years and upward, should die in the wilderness and never see Canaan."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: their sorrow was for the punishment which their sin had entailed, not godly sorrow for the sin itself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses told these sayings... and the people mourned greatly",
-   "sorrow for the punishment, not the sin",
-   "worldly sorrow working no repentance (2 Cor. 7:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
    "Keil and Delitzsch"
   ],
+  "range": "39-45",
+  "pericope_label": "The people mourn, presume, and are discomfited unto Hormah",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they could not sleep for the bad news, and were now in as great haste to go up and possess Canaan as they had been before to return to Egypt."
+    "summary": "Calvin allows it a just cause for weeping to hear that a longsuffering they had wantonly abused would hereafter be inexorable, but sets it down as the sorrow of the world that worketh death, where the wicked weep and yet never cease to murmur, gnawing the bit with more obstinacy and rushing like untamable beasts into blind despair; no tears could redeem a temporal punishment, the one remedy being to submit and calmly undergo it, whereas they struggle proudly to shake it off and under a pretence of submission prepare to advance, wanting their confession accepted as satisfaction. In the reply of Moses he hears a rejection of feigned penitence, the sinner trying every shift rather than submit; and to the objection that the people had no other remedy he answers that banishment from Canaan was no disinheritance from the hope of eternal life, and that by this misdirected activity they doubled the evil. He denies that they meant to array themselves against God, holding rather that they hoped to appease him by offering their lives up, the zeal of the wicked being fervent when it ought to be still and dead when he commands; their senselessness appears in leaving the ark and Moses behind and running forward like doomed men. Gill has them up early, in as great a haste to possess Canaan as they had lately been to return to Egypt, names the order they broke — to turn back toward the Red sea — cites the Targum that the ark, the tabernacle and the cloud of glory did not move, and reports the Vulgate rendering that being darkened they went up, referred by some to understandings given over to blindness and by others to a march before daylight, with an old exposition making them go obscurely because they went without leave. On the name he follows Jarchi, that Hormah is called from this slaughter, or from the later destruction of the Canaanites and so given by anticipation, or from both; the Targum makes it no name but a word, even unto destruction."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the sudden eagerness as duty mistimed turned into sin, and wishes men were as earnest for heaven while the day of grace lasts as they will be after it; they had distrusted God's strength and now presume upon their own without it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley grants the grief but says it came too late, there being now no place for repentance, and adds that such mourning there is in hell, though the tears will not quench the flames; on the last verse he says only that the Canaanites here are strictly the Amorites, and that the place was so called afterwards from this slaughter. Clarke marks the contradiction: lately they thought that with Omnipotence on their side the land could not be conquered, and now imagine that without God they can drive out its inhabitants — fallen nature runs to extremes, by turns presumptuous and desperate."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: they rose up early and gat them up into the top of the mountain, saying, 'Lo, we be here, and will go up.'"
+    "prevalence": "single",
+    "summary": "Ellicott finds from what follows that the sorrow was for the punishment the sin entailed, not godly sorrow for the sin; renders the phrase as towards the top of the mountain, takes the route for the one the spies had used, and observes that the closing verses imply they never reached the summit. He adds that Moses already had the word of the earlier verse and knew the visible token would not go, puzzles with Gill over the enemy's position — whether they had left the valley, posted a party to hold the pass, or are different portions of the same nations — thinks the enemy met them before ever they gained the summit, and points to the article, the Hormah, the place of the ban, judging a common name likelier to mark three different places than one to be meant proleptically."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is Hormah named here proleptically?",
+    "sides": [
+     {
+      "position": "either from this slaughter, or by anticipation from the later destruction of the Canaanites, or from both",
+      "holders": [
+       "Jarchi, as reported by Gill",
+       "Gill"
+      ]
+     },
+     {
+      "position": "more likely a common name — the place of the ban — marking three different places than one place named proleptically",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the place was so called afterwards from the slaughter of Israel at this time",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "they rose up early... and will go up unto the place which the LORD hath promised: for we have sinned",
-   "presumptuous haste, not repentance",
-   "the same disobedience in the dress of zeal"
+   "the people mourned greatly",
+   "lo, we be here, and will go up unto the place",
+   "go not up, for the Lord is not among you",
+   "they presumed to go up unto the hill top",
+   "discomfited them, even unto Hormah"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the command now was to turn back into the wilderness toward the Red sea, which they transgressed by going forward. Calvin: he rejects this feigned penitence, by which sinners 'twist round the pot,' trying all shifts rather than truly submit to God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wherefore now do ye transgress the commandment of the LORD? but it shall not prosper",
-   "obedience out of season failing",
-   "feigned penitence, self-will dressed as devotion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: victory is of the Lord; the Targum adds that the ark, tabernacle, and cloud of glory did not move — a plain sign God would not go with them, and they could not hope to prevail."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: go not up, for the LORD is not among you."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Go not up, for the LORD is not among you; that ye be not smitten",
-   "the symbols of his presence unmoved",
-   "presence and victory standing or falling together"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Amalekites and Canaanites were there before them, having removed or detached a party to hold the pass on the top of the mountain."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'are there before you' — they had left their tents and were waiting; because Israel turned from the LORD, he would not be with them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Amalekites and the Canaanites are there before you, and ye shall fall... because ye are turned away from the LORD",
-   "the true cause of defeat the absence of God",
-   "forsaking God is to fall before the least foe"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they went up in a bold, audacious, presumptuous manner, withdrawing from God and his minister, lifted up in themselves and confident of their own strength; the Vulgate reads 'being darkened they went up'; the ark of the covenant and Moses departed not out of the camp."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they presumed to go up unto the hill top... the ark... and Moses, departed not out of the camp",
-   "venturing in their own strength against the warning",
-   "the picture of presumption marching to ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the enemies, having the advantage of the higher ground, came down upon the Israelites and smote them, discomfiting them even unto Hormah, the place so named from this destruction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Amalekites came down, and the Canaanites... smote them, and discomfited them, even unto Hormah",
-   "the presumed victory turned to rout",
-   "presumption ending in defeat, the place of pride become ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
