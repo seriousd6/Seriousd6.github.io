@@ -6795,6 +6795,53 @@
       "book": "numbers",
       "chapter": "31",
       "note": "Offered again by the picker this batch (19,991 source words across 42 keys — by far the smallest unfinished repair left in the queue) and passed over per the standing instruction that it is blocked pending an owner decision on its source file. Noting the recurrence because it is now the only pick under the 40,000-word threshold that the picker produces: while it stays blocked, every batch is forced onto a 60,000-word-plus chapter."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "12",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "Jamieson stride-6 residue, FIFTEENTH consecutive chapter and twelfth book: keys 4, 10, 16, 22, 28 — offset 4, five members, no gaps. THIRD chapter to show the contiguous-region signature, after 1corinthians 1 (Acts 16) and deuteronomy 22 (Numbers 27-28). Here the source region is GALATIANS 1-2, walked in order: v4 is on Gal 2:20 ('gave himself for me'), v10 on Gal 1:9 ('if any man preach any other gospel'), v16 on Gal 1:14 ('I profited beyond those of mine own age among my countrymen'), v22 on Gal 1:19 and Acts 9:27-28, v28 on Gal 1:23-24 ('the former wolf is now acting the shepherd's part'). Three independent chapters now show one pointer sampling a single contiguous region at fixed stride; the diagnosis is settled as far as it can be without a re-fetch. Running table: joshua 10, 1corinthians 7, hebrews 11, romans 8, romans 9, 1corinthians 15, leviticus 27, judges 16, exodus 28, judges 19, exodus 12, galatians 4, 1corinthians 1, deuteronomy 22, hebrews 12."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "12",
+      "verses": [
+        "2",
+        "16",
+        "21",
+        "22"
+      ],
+      "note": "Cyril of Jerusalem appears at four keys in this chapter (2, 16, 21, 22) with FOUR DISTINCT blocks and no duplicates — the first chapter in this loop where his blocks are all unique and all apt to their verses: the Son's session at the right hand for 12:2, the doctrine of chastity for the Esau warning at 12:16, the Jews who read but do not hear for the Sinai passage at 12:21, and the congregations of Israel giving way to a Church built from the Gentiles for 12:22. John Chrysostom likewise has five distinct and on-topic blocks (4, 11, 14, 18, 28). This is worth recording because it shows the patristic duplication defect seen at 1corinthians 1 and 1corinthians 15 is not universal, so a corpus sweep for it should be by-chapter rather than assumed global."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "12",
+      "verses": [
+        "6",
+        "18",
+        "25",
+        "27"
+      ],
+      "note": "Four disputes worth flagging. (1) At v6, whether 'whom the Lord loveth he chasteneth' states a universal rule: Barnes takes it as one and guards it twice, while CALVIN RAISES THE OBJECTION AGAINST HIS OWN TEXT — 'this seems not to be a well-founded reason', since God visits elect and reprobate indiscriminately and his scourges manifest wrath oftener than love, as Scripture speaks and experience confirms — answering only that when the godly are addressed the effect they feel is alone in view. (2) At v18, what they could not endure: Barnes says the commands were not intolerable and locates the terror in the manner of communication, while Gill locates it in the law itself, as a yoke of bondage and a covenant of works giving no strength to perform. (3) At v25-26, whose voice shook the earth at Sinai: Gill and Clarke both say Christ's, Clarke recording that others refer it simply to the Father. (4) At v27, what the removal means: Clarke reads it historically of the Jewish polity, already shaking under Roman power, and denies God ever designed that religion to become general; Ellicott insists the words 'must of necessity' point to the final change; Wesley makes it heaven and earth replaced by the new. Also at v21 a source problem: Barnes states plainly that the words attributed to Moses are not in the Exodus narrative and that the apostle's authority for them has been questioned, while Ellicott finds part of them in the Greek of Deuteronomy but on a later occasion."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "12",
+      "note": "hebrews 12: all 9 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. 29 verses, ~62,765 real usable source words after subtracting 926 words of StudyLight chrome in the Ellicott block at v29, tiled in 9 entries — matching the density guide exactly. 11 voices; the largest blocks are Henry at v4 (3,148w) and v18 (2,746w) and Barnes at v1 (2,121w). Overshoot confirmed the rule recorded at deuteronomy 22: it scales with voice count, not chapter length. The two 8-voice-or-fewer entries drafted closest to window (12-13 at 675 first-draft, and it alone needed just one pass to reach 578), while the 9- and 10-voice entries drafted at 842, 850, 876, 919 and 925 words against the 650 ceiling and needed two to four passes each. Entry 25-29 drafted at 925, the worst first draft of the batch."
     }
   ]
 }
