@@ -1,956 +1,473 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the king and inhabitants shut it up within, with iron doors and bars of brass, blocked up without by Israel; none went out or in."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Now Jericho was straitly shut up... none went out, and none came in",
-   "the seeming impossibility setting off God's power",
-   "not by might, nor by power, but by my Spirit (Zech. 4:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "1-3",
+  "pericope_label": "The shut city, the promise already given, and the strange order of the siege",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the same divine Person called the Captain of the Lord's host now gives Joshua these orders and assurances."
+    "summary": "Gill reports the Targum's iron doors and bars of brass and distinguishes the shutting within by the king and inhabitants from the blocking without by Israel; he identifies the speaker as the same divine Person called the Captain of the Lord's host, notes that this was not the form of a siege but a procession, and takes all the men of war to mean all above twenty. Calvin reads the sealing as ordinary wartime vigilance, the inhabitants watching so as not to be taken by surprise, so that stratagem was excluded and open force the only hope; on the siege he says the thing looked like nothing else than child's play, yet was no improper test of faith, since God often conceals his might under weakness and they gained more by trifling than they could have done with the most powerful engines, needing only to play the fool for a short time, not to inquire too subtly about the event, and to cast on providence the danger that the city might sally out against their straggling lines. He adds that the instruments given the priests were not the silver trumpets of the sanctuary but rams' horns, and that contentment with these was the better proof of obedience."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the closing of the city a moral act: it shut up itself, fortified by art and by nature and by the obstinacy of inhabitants who agreed never to surrender nor so much as sound a parley, and who were infatuated and hardened to their own destruction, which he takes for the character of all who strengthen themselves against the Almighty. He presses the tense of the promise, not I will do it but I have done it, it is all thy own as sure as if already in thy possession, and meets the difficulty that the city was devoted so that neither Joshua nor Israel should be one mite the richer for it and yet it is said to be given into their hand, since we must reckon that most our own which we have an opportunity of honouring God with. On the siege he observes that no trenches were opened, no batteries erected, no rams drawn up nor any military preparations made, and finds two reasons, to magnify God's own power so that he might be exalted in his own strength and not in the strength of instruments, and to put honour on the ark."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes the shutting a specific precaution, that the king, finding the spies had escaped, kept the city shut by day as well as by night, having laid in provisions enough to stand a siege; he agrees that the speaker is the prince of the Lord's host and complains that the discourse begun at the end of the preceding chapter is here unnaturally divided, adds from a later chapter that there may have been people of all seven Canaanitish nations gathered in the city, and alone admits that the text does not settle the order of march, some thinking they kept the order of the desert, others that the soldiers went first, then the trumpeting priests, then the ark, then the people. Wesley sets the circuit at a convenient distance out of the reach of their arrows and holds the whole course prescribed so that they might learn to take new measures of things and not judge any of God's institutions by carnal reason."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: I have given Jericho into thine hand."
+    "summary": "Keil holds that the participles express the permanence of the situation and that the combination of active and passive in the emphatic Hebrew form strengthens the idea, given further emphasis by the clause that no one was going out or in, so firmly shut that no one could get out or in, citing the Greek and Latin versions for the doubling; he takes the second verse as the sequel to the close of the preceding chapter and the first as a mere parenthesis, identifies the speaker as the prince of the army, that is the angel of Jehovah who is frequently identified with Jehovah himself, and notes that the giving refers to the purpose of God already resolved on though the fulfilment was still future, the mighty men of valour standing in apposition to the city regarded as a community and to its king. Ellicott says the first verse should be read parenthetically and the four that follow taken as the orders given to Joshua by the captain of the Lord's host."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the city was shut: Henry ascribes it to the obstinacy of inhabitants who would not so much as sound a parley, Clarke to the king's precaution after the spies escaped, and Calvin to ordinary wartime vigilance against surprise",
+   "Where the chapter division should fall: Ellicott and Keil make the first verse a parenthesis and the second the sequel to the close of the preceding chapter, and Clarke calls the division unnatural",
+   "The order of the procession: Clarke reports two views, the marching order of the desert and a column of soldiers, priests, ark and people, and says the text does not decide between them"
+  ],
+  "outliers": [
+   "Calvin observes that the instruments were not the silver trumpets deposited in the sanctuary but merely rams' horns, and makes contentment with them the better proof of obedience",
+   "Henry's rule that we must reckon that most our own which we have an opportunity of honouring God with, drawn from a city devoted to destruction being nonetheless said to be given into their hand",
+   "Keil cites the Greek and Latin versions for the doubled participle, and notes the emphatic Hebrew form combining active and passive",
+   "Clarke infers from a later chapter that people of all seven Canaanitish nations may have gathered in the city"
+  ],
   "themes": [
-   "See, I have given into thine hand Jericho, and the king thereof",
-   "the victory granted by God's word before the battle",
-   "God giveth us the victory through Christ (1 Cor. 15:57)"
+   "faith",
+   "obedience",
+   "divine power",
+   "the ark",
+   "judgment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: all able for war were to compass the city, not in a siege but by a procession around it."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: compass the city once, six days."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye shall compass the city... once. Thus shalt thou do six days",
-   "the strange means a test of obedience and faith",
-   "the foolishness of God is wiser than men (1 Cor. 1:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
+  "range": "4-7",
+  "pericope_label": "The jubilee trumpets, the seven days of silence, and the order of the march",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the original word is jubilee rather than rams' horns and that some hold it means only such trumpets as were used in the year of jubilee, naming three authorities, adding a derivation of the name from the first inventor of musical instruments, and reporting the objection that rams' horns are solid and not hollow, as if they could not be bored and made fit for the purpose. On the ark he reports the opinion that it was carried to direct the Israelites to keep all that was written in the law contained in it, but prefers his own, that the design was to show the taking of the city owed everything to the power and presence of God, of which the ark was a symbol. He accounts for the seventh day by the blast, the long protracted sound being unlike the short blasts of the other days and so serving the people as a token, and takes the people addressed at the march for the women, children and men under twenty, the unarmed part of the camp."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry colours the procession: the armed men went before to clear the way and thought it no disparagement, though men of war, to be pioneers to the ark, and the rearward was either a second body of armed men, or the squadron that marched last through the wilderness, or the unarmed multitude following to grace the solemnity and be witnesses of what was done."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill, with Ben Gersom: the ark, carried by priests, directed Israel to keep all written in the law contained in it."
+    "summary": "Clarke denies the sense of rams' horns outright: the Hebrew word does not signify it, no ancient version but the Chaldee gives it that meaning, the instruments were evidently those used at the jubilee, probably of horn or of silver, and he would render the clause the seven jubilee trumpets; he says the time was lengthened over seven days so that besiegers and besieged alike might be the more deeply impressed with the supernatural power by which the walls fell; and on the fall itself he reports that several commentators, Jews and Christians, supposed the ground opened and the wall sank into a chasm, answers that the text says nothing of this, and reads the Hebrew, literally that the wall shall fall down under itself, to mean no more than that it fell from its very foundations, large breaches in different places amply sufficing to admit the armed men first and the host after them. Wesley requires the opposite of Clarke on the trumpets, that they were of the basest matter and the dullest sound, so that the excellency of the power might be of God; he denies that all the wall fell, which was unnecessary and might have given the people better opportunity of escaping, since a considerable part fell where Israel might fitly enter and Rahab's house was not overthrown, and reads under it to mean that it was not battered down with engines, which would have made part of it fall out of its place, but fell of its own accord and therefore where it had formerly stood, God choosing this way to try whether they would observe a precept which to human policy seemed foolish and believe a promise which seemed impossible; he concludes that by faith, not by force, the walls of Jericho fell down, and says the armed went for the defence of themselves and of the ark, should the enemy sally, and for the execution of the Lord's vengeance."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the seventh day they were to compass seven times."
+    "summary": "Ellicott glosses the instruments simply as trumpets of jubilee, that is of loud or joyful sound, and builds the whole scene on the written law as its centre, reading it as a legal execution in which the ark is the vessel that holds the law, the armed men who precede it are its executioners, and the priests who blow are its heralds; he makes the long silence a lesson in the forbearance of God, who for several generations had waited while the iniquity of the land was not yet full, had brought the sword to their borders in the first year of the exodus and then drawn back his hand for forty years more, so that the shout which burst from Israel was the signal that he would wait no longer, and he takes it as no inapt figure of the shout, with the voice of the archangel and the trump of God, that shall notify the Lord's second coming. Keil observes that the text says the priests passed on before Jehovah rather than before the ark, since the ark's significance derived entirely from its being the medium through which he communicated his gracious presence; he explains the plural they said by Joshua proclaiming through the officers appointed to issue his commands, and finds here the detail omitted earlier, that the equipped man marched in front of the ark, denying against a modern that this means all the fighting men, since the description divides the men of war into the armed and the rearward, so that the equipped can only be one division of the army."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the seven trumpets were: Gill reports the jubilee reading with three authorities and the objection that rams' horns are solid, Clarke denies the Hebrew means rams' horns at all and would render jubilee trumpets of horn or silver, Ellicott glosses them as of loud or joyful sound, and Wesley's point requires the basest matter and the dullest sound",
+   "How the wall fell: Clarke rejects as unsupported by the text the theory that the ground opened and the wall sank into a chasm, reading it as falling from its foundations in large breaches, while Wesley holds that only a considerable part fell, since Rahab's house stood, and that it fell of its own accord in its own place rather than being battered out of it",
+   "What the procession centred on: Gill reports and sets aside the view that the ark was carried to direct Israel to keep the law contained in it, preferring it as a symbol of God's power and presence, while Ellicott makes the written law itself the centre with armed men as executioners and priests as heralds",
+   "Who marched where: Keil denies against a modern commentator that the equipped man means all the fighting men, since the men of war are divided into the armed and the rearward, and Gill takes the people addressed for the unarmed part of the camp"
+  ],
+  "outliers": [
+   "Ellicott reads the seven days of silence as the forbearance of God and the final shout as a figure of the shout at the Lord's second coming",
+   "Wesley's summary that by faith, not by force, the walls of Jericho fell down",
+   "Keil explains the plural verb by Joshua proclaiming through the officers appointed to issue his commands rather than in person",
+   "Gill derives the name of the trumpet from the first inventor of musical instruments",
+   "Henry observes that it was no disparagement to men of war to serve as pioneers to the ark"
+  ],
   "themes": [
-   "seven priests shall bear before the ark seven trumpets of rams' horns... the seventh day ye shall compass the city seven times",
-   "God's presence and word at the centre of the conquest",
-   "let God arise, let his enemies be scattered (Ps. 68:1)"
+   "faith",
+   "obedience",
+   "the ark",
+   "judgment",
+   "forbearance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the long blast, drawn out, was made only on the seventh day, different from the short blasts; the wall should fall down flat and the people go up."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the people shall shout with a great shout; and the wall of the city shall fall down flat",
-   "the wall falling before faith, not force",
-   "by faith the walls of Jericho fell down (Heb. 11:30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: not the Levites and Kohathites whose work it commonly was, but the priests on this occasion, as many as sufficient."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the communicating of the command."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Take up the ark of the covenant, and let seven priests bear seven trumpets of rams' horns",
-   "prompt and exact obedience to the command",
-   "done according to all the LORD commanded (Exod. 39:42)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the people here are the women, children, and unarmed, distinguished from the armed men."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the people passing on to compass the city."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pass on, and compass the city, and let him that is armed pass on before the ark of the LORD",
-   "the whole congregation in the procession of faith",
-   "compassed about seven days (Heb. 11:30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Joshua had finished the orders and directions given the people; the priests blew and the ark of the covenant followed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the seven priests... passed on before the LORD, and blew with the trumpets: and the ark of the covenant... followed",
-   "the procession a sacred act before the LORD",
-   "the LORD with the sound of a trumpet (Ps. 47:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the armed men, some interpret of Reuben, Gad, and half Manasseh, others of all the armed men; the rereward after the ark, the trumpets blowing continually."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the armed men went before the priests... and the rereward came after the ark",
-   "God's presence at the heart of the host",
-   "the angel of the LORD encampeth round about them (Ps. 34:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "8-15",
+  "pericope_label": "The armed and the rearward, the silence of six days, and whether the sabbath was broken",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this was given when he ordered them to compass the city."
+    "summary": "Gill reports that three Jewish commentators take the armed men for Reuben, Gad and the half tribe of Manasseh, as many as Joshua brought over the river, but prefers all the armed men in the camp, at least the standards of Judah and Ephraim going with those named; he takes Joshua's rising early on the second morning as a mark of diligence to do the will and work of God exactly and punctually; against Keil he says the clause may as well be rendered and interpreted as Kimchi does, that Joshua caused the ark to compass the city; and on the seventh day he reports that one Jewish authority makes it the sabbath and that this is a common notion among them, adds that whether or not it was, one of the seven days must have been, and quotes as remarkable the rabbinic saying that though they slew and burnt on the sabbath, he who commanded the sabbath commanded it to be profaned in the subduing of the city. Calvin presses the trial hardest: God seemed, by leading them so often round, not only to keep the matter in suspense but purposely to sport with their miseries, since they fatigued themselves to no purpose; the happy fruit of the endurance teaches that there is nothing better than to leave the decisive moments at his disposal and not by our haste anticipate his providence, in which, if we acquiesce not, we obstruct the course of his agency; God matched the shout to the priests' sounding to prove that he is not pleased with impetuosity which men manifest at their own hands but requires a regulated zeal, whose only rule is not to move tongue or feet or hands till he order, and the horns undoubtedly represented his authority."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: shouting before the time would be ineffectual, discouraging themselves and giving the enemy matter of insult."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ye shall not shout... until the day I bid you shout; then shall ye shout",
-   "the discipline of patient, exact obedience",
-   "he that believeth shall not make haste (Isa. 28:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the ark, borne by the priests, was carried round the city, or, as Kimchi, Joshua caused the ark to compass it; they came into the camp and lodged."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So the ark of the LORD compassed the city, going about it once... and lodged in the camp",
-   "faith continuing though no result yet appears",
-   "need of patience to receive the promise (Heb. 10:36)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he rose early to direct and prepare everything for another procession; so active and diligent was he to do the will and work of God."
+    "summary": "Clarke offers four senses of the word for the rearward: the rearward as the English has it; the men who carried the baggage, necessary on the seventh day when much fighting was expected and a supply of arms and darts would be wanted, with conveniences for the wounded; those who carried the sacred articles belonging to the ark; or simply people following without observing any particular order, adding that the Jews think the division that always brought up the rear is meant. On the sabbath he grants that one must have fallen within the week and that the host encompassed the city on it as on the other days, and quotes the same rabbinic saying as Gill, but denies that any breach occurred, since the people simply went round with the ark and the priests sounding, a mere religious procession performed at God's command in which no servile work was done; on that ground he answers the old objection that the God of the Hebrews showed a changeableness of disposition in commanding the sabbath kept sacred at one time and broken at another, and holds that no breach took place unless it could be shown that the day the city fell was itself the sabbath, which is unlikely and which none can prove. He also argues from the seven circuits that the city was small, since the fighting men alone were near six hundred thousand and the people some millions, so that only a select number can have marched, and a hundredth part of the force would have sufficed to reduce it. Wesley, setting the word for the rearward against the armed men, makes it the unarmed people, who were desirous to be spectators of this wonderful work, and says shouting before the appointed time would have been ineffectual, and so might have given the people discouragement and their enemies matter of insulting."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: Joshua rose early in the morning."
+    "summary": "Keil insists that the text says the ark compassed the city and not that Joshua caused it to compass, the Hiphil having here only an active and not a causative meaning; he defends the received form of the verb on the second day against an unnecessary emendation, and notes that the seventh day began at the dawning because seven circuits were to be made, in the manner prescribed and practised before, which had become a right through precept and practice. Ellicott renders the participle literally, with a going and a blowing with the trumpets, and observes that the word priests is inserted by the Targum."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who compassed the city: Keil insists the Hiphil is active here, so that the ark compassed the city, while Gill allows Kimchi's causative rendering, that Joshua caused the ark to compass it",
+   "Whether the sabbath was broken: Gill quotes without demur the rabbinic saying that he who commanded the sabbath commanded it profaned for Jericho, while Clarke grants that a sabbath fell within the week but denies any breach, the procession being no servile work, and on that ground answers the charge that God showed a changeableness of disposition",
+   "Who the rearward were: Clarke lists four possibilities and reports the Jewish view that one particular division is meant, while Wesley makes them the unarmed spectators",
+   "Who the armed men were: Gill reports three Jewish commentators restricting them to the two and a half tribes brought over the river and prefers all the armed men in the camp"
+  ],
+  "outliers": [
+   "Clarke argues from the seven circuits and the time left to sack the city that it must have been small, the fighting men alone being near six hundred thousand and the people some millions",
+   "Calvin says God seemed purposely to sport with their miseries, and makes the horns a representation of his authority",
+   "Calvin's rule of regulated zeal, not to move tongue or feet or hands till he order",
+   "Keil observes that the manner of the earlier days had become a right through precept and practice",
+   "Ellicott notes that the word priests is inserted by the Targum"
+  ],
   "themes": [
-   "And Joshua rose early in the morning, and the priests took up the ark of the LORD",
-   "the leader's diligence and zeal in God's work",
-   "earnest, punctual obedience to the command"
+   "obedience",
+   "patience",
+   "providence",
+   "the sabbath",
+   "silence"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: refers to the order already given."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the priests going on continually and blowing the trumpets, the armed men before."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.31
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seven priests... before the ark of the LORD went on continually, and blew with the trumpets",
-   "the patient constancy of faith, day after day",
-   "let us not be weary in well doing (Gal. 6:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they went round once only, as on the first."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: doubts the whole host went each day, the fighting men alone being a vast number."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the second day they compassed the city once... so they did six days",
-   "the steady walk of faith through delay",
-   "though it tarry, wait for it (Hab. 2:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: some Jews say it was the sabbath; whether or not, one of the seven days must have been a sabbath; they compassed it seven times that day."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "on the seventh day... they rose early... and compassed the city after the same manner seven times",
-   "the climax of patient obedience",
-   "reaping in due season if we faint not (Gal. 6:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "16-17",
+  "pericope_label": "The shout, the ban on the city, and the treasure claimed for the sanctuary",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the seventh time of going round on the seventh day."
+    "summary": "Calvin finds a peculiarity in the first city: God had determined to enrich his people with spoil and settle them in cities they had not built, but this one was to be consecrated as a kind of first fruits, so that he claims the buildings and the moveable property as his own; it may have been irksome to pull down houses they might have dwelt in commodiously and destroy articles that might have been of use, but as they had not been required to fight they should refrain without grudging and willingly yield the rewards of victory to him, since it was solely by his nod that the walls fell and the courage of the citizens fell with them, and with equal right all the other cities might have been doomed had he not granted them to his people for habitations. He distinguishes two senses of the word in successive verses, of sacred oblations that the thing devoted is renounced as completely as if annihilated, the Greek equivalent being anathema, and in the caution about the camp simply excision, perdition or death; he notes that God destined the metal vessels for the sanctuary and ordered all else consumed by fire, and makes the claim on the treasure a pledge of gratitude, God being content with it provided the people quickly learned that everything they called their own was the gift of his free liberality. Gill renders the word simply devoted to the Lord."
    },
    {
     "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the inference from the gift: God gives the city, and therefore may direct it to what uses he thinks fit and clog it with what provisos he pleases; it must be burnt and the lives in it sacrificed to the justice of God, no life to be ransomed on any terms, since he appoints from whom as creatures they had received their lives and to whom as sinners they had forfeited them, and who may dispute his sentence? There was more of God seen in the taking of this city than of any other, and therefore it must be more devoted to him, and the severity would strike terror on the rest and melt their hearts yet more before Israel; Rahab alone is excepted, having distinguished herself from her neighbours by the kindness she showed and so distinguished from them by the speedy return of it. On the treasure he reports the Jewish reason for its consecration, that the city was taken on the sabbath day, and offers his own: God would be honoured by the enriching of his tabernacle, provision was made for the extraordinary expenses of his service, and Israel was taught not to set their hearts on worldly wealth nor heap up abundance for themselves, since God had promised a land flowing with milk and honey and not a land abounding with silver and gold, that they might live comfortably and serve cheerfully without coveting trade with distant countries or hoarding for after times, reckoning what was laid up in God's house as truly their honour and wealth as if it had been laid up in their own. On the caution against the forbidden spoil he has Joshua tell them they will find themselves inclined to reach towards it and must check and frighten themselves from having anything to do with it, and remarks that he speaks as if he foresaw the sin recorded in the next chapter."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Henry: the people had religiously observed the orders, and now Joshua told them the LORD had given them the city."
+    "summary": "Wesley gives the shout four purposes, to testify their faith in God's promise and their thankfulness for the mercy, to encourage themselves and their brethren, and to strike terror into their enemies, and takes the gift of the city to mean that it was given to be devoted to God as the first and perhaps the worst of all the cities of Canaan; beside the appropriation of firstfruits he adds two practical reasons for the ban, lest the soldiers, glutted with the spoil of a rich city, should grow sluggish in their work, and to strike the greater terror into the rest of their enemies. Clarke alone supposes that peace was offered to the city first and that the extermination of the inhabitants followed the rejection of that offer, and holds that though the word may bear a milder sense elsewhere, here it seems to imply the total destruction of the inhabitants."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott renders the word a devoted or accursed thing and shows the two ideas of devotion to God and utter destruction combined in the sin offering, which is called most holy and yet, when offered for the priest or the congregation, must be utterly consumed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the ban fell on this city: Calvin makes it a first-fruits consecration peculiar to the first city taken, Henry the justice of God on forfeited lives together with the terror it would strike, Wesley adds that soldiers glutted with spoil would grow sluggish, and Clarke alone supposes peace was offered first and the extermination followed its rejection",
+   "What the word rendered accursed means: Ellicott finds devotion to God and utter destruction combined and illustrates from the sin offering, Calvin distinguishes two senses in successive verses, and Clarke allows a milder sense elsewhere but total destruction here",
+   "Why the treasure went to the sanctuary: Henry reports the Jewish reason that the city was taken on the sabbath and gives his own, that Israel should not set their hearts on worldly wealth, while Calvin makes it a pledge of gratitude teaching that all they called their own was God's free liberality"
+  ],
+  "outliers": [
+   "Clarke's supposition that peace was offered to the city and the extermination followed the rejection of the offer",
+   "Henry's contrast of a land flowing with milk and honey against a land abounding with silver and gold",
+   "Henry's remark that Joshua speaks as if he foresaw the sin recorded in the next chapter",
+   "Ellicott's illustration from the sin offering, called most holy and yet utterly consumed",
+   "Calvin's observation that all the other cities might with equal right have been doomed, had God not granted them for habitations"
+  ],
   "themes": [
-   "Joshua said unto the people, Shout; for the LORD hath given you the city",
-   "the shout of faith claiming the victory on God's word",
-   "always caused to triumph (2 Cor. 2:14)"
+   "the ban",
+   "justice",
+   "first-fruits",
+   "covetousness",
+   "mercy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: 'accursed' is a 'cherem,' devoted to the Lord."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the people had observed the orders, and now were told the LORD had given the city."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the city shall be accursed... to the LORD: only Rahab the harlot shall live... because she hid the messengers",
-   "judgment exact yet mercy rescuing the believing",
-   "the harlot perished not with the unbelieving (Heb. 11:31)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they were to keep from laying hold on, secreting, or enjoying as their own what was devoted to another use; taking it would make themselves and the camp accursed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "keep yourselves from the accursed thing... and make the camp of Israel a curse, and trouble it",
-   "what is devoted to God never turned to selfish use",
-   "one man's hidden sin troubling all the camp (Josh. 7:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "18-23",
+  "pericope_label": "The forbidden spoil, the fall of the wall, the slaughter, and the rescue of Rahab",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the silver, gold, and vessels of brass and iron."
+    "summary": "Gill defines the offence over the devoted thing as laying hold on, secreting and enjoying as one's own what was devoted to another use, and grounds the slaughter on capital crimes deserving death; he raises the difficulty how the spies could go into a house built on a wall that had fallen flat, and reports two answers, that they had marked the place by the scarlet thread while circling and went to it afterwards, though then they did not properly go in, and that only the wall facing the camp fell, Rahab's house standing on the other side. Calvin praises the people for two things: they testified their fidelity by shouting, persuaded that what God commanded would not be in vain, and he, in not allowing them to lose their labour, vindicated the truth of what he had said; and they despised unlawful gain and cheerfully suffered the loss of all the plunder, though many minds must have asked to what end God pleased to destroy all the wealth, why he envied them what he had given into their hand, and why he did not rather gladden them by furnishing the materials of thanksgiving, so that to cast the spoils away voluntarily was a proof of rare and excellent self-denial. He grants that killing without distinction of age or sex might seem an inhuman massacre had it not been executed by the command of God, but holds that God's just dooming of those nations puts an end to all discussion, the more so since they had been borne with four hundred years until their iniquity was complete. On Rahab he asks how one family could be excepted when no mortal was at liberty to change the decision of God, answers that she had bargained for impunity only by the suggestion of the Spirit and that the messengers were under no contrary obligation since the complete destruction had not been declared, and then offers a far easier solution, that Israel by divine command exhorted all whom they attacked to surrender and held out the hope of pardon while the blinded nations obstinately refused, so that Rahab alone was exempted by special privilege; and he denies that the family was placed outside the camp for safety, since they would have been received with the greatest favour and in a solitary place could have been attacked more easily, making it instead a discipline of shame, lest by immediate mixing the thought of their impurity should never occur to them."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: they were to come into the treasury of the LORD."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the silver, and gold, and vessels of brass and iron, are consecrated unto the LORD",
-   "the firstfruits of conquest wholly God's",
-   "honour the LORD with the firstfruits (Prov. 3:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the people shouted as Joshua had charged them."
+    "summary": "Wesley explains how the whole camp could be involved in the offence, either by God being provoked to punish them for a sin in which they may one way or other share, or by the camp having sins of its own for which he takes what occasion he sees fit; he is the most exact about the metals, that images were excepted and utterly destroyed, that the rest was first made to pass through the fire, and that it was to be employed wholly for the uses of the tabernacle and not applied to any private person or priest; on the slaughter he pleads that the infants were guilty of original sin and otherwise at the disposal of their creator, and that even had they been wholly innocent it was a great favour to take them away in infancy rather than reserve them to the dreadful calamities their survivors were liable to; and he says Rahab's house and the wall it leaned on were left standing by a special favour of God, her family being kept outside the camp until cleansed from the impurities of their Gentile state and solemnly admitted. Clarke reports that much learned labour has been spent to prove the shouting might be the natural cause of the wall's falling, declines to detail or refute it as lost time, and holds that the whole relation evidently supposes a supernatural interference, the trumpets and shouting being too contemptible to be used even as instruments with any expectation of accomplishing the thing naturally; he defends the slaughter in one line, that the Judge of all the earth cannot do wrong, notes that nothing which breathed was spared so that the oxen, sheep and asses died too, agrees that Rahab's family were counted unclean until they had abjured heathenism, been purified and circumcised, and supplies a comparative note from a modern traveller, that the Brahmins will receive gold and silver from any caste however degraded while to receive food or garments from the lowest would be counted a great degradation."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: much labour spent to prove the shout might naturally cause the fall, but the text ascribes it to God."
+    "summary": "Ellicott points to the parallel treatment of the Midianite spoil, gives a wholly different reason for the destruction of the animals, that Israel might not seem to be slaughtering the Canaanites for the sake of plunder, everything being ordered to mark the vengeance of God, and renders the phrase for the family's removal literally, caused them to rest. Keil observes by contrast that at the other towns of Canaan only the inhabitants were put to death, the cattle and the rest of the booty falling to the conquerors."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the fall of the wall admits a natural explanation: Clarke reports the learned labour spent on making the shout its cause and dismisses the means as too contemptible for any such account",
+   "How the spies entered a house built on a wall that had fallen flat: Gill reports one answer that they had marked the spot beforehand and another that only the wall facing the camp fell, while Wesley says the house and its wall were left standing by special favour",
+   "How Rahab's exemption squares with the ban: Calvin offers the suggestion of the Spirit, the messengers' freedom before the ban was declared, and finally an offer of peace refused by all the rest, so that she alone was exempted by special privilege",
+   "Why the rescued family was kept outside the camp: Clarke and Wesley take it for ceremonial uncleanness pending purification and admission, while Calvin denies it was for their safety and makes it a discipline of shame urging serious conversion",
+   "Why nothing was spared: Calvin rests on the command of God after four hundred years of forbearance, Clarke on the Judge of all the earth doing no wrong, Wesley on original sin and the mercy of early death, and Ellicott on the appearance of the thing, that Israel might not seem to kill for plunder"
+  ],
+  "outliers": [
+   "Clarke's comparative note from a modern traveller that the Brahmins will receive gold and silver from any caste however degraded but not food or garments from the lowest",
+   "Calvin's list of the thoughts that must have risen in many minds, including why God envied them what he had given into their hand",
+   "Keil's contrast with the later conquests, where only the inhabitants were put to death and the cattle and booty fell to the conquerors",
+   "Wesley's precision that images were excepted from the treasury and utterly destroyed, and that the rest passed first through the fire",
+   "Ellicott's literal rendering of the removal, caused them to rest"
+  ],
   "themes": [
-   "the people shouted... that the wall fell down flat... and they took the city",
-   "the stronghold falling by God's power at the shout of faith",
-   "by faith the walls of Jericho fell down (Heb. 11:30)"
+   "the ban",
+   "obedience",
+   "mercy",
+   "judgment",
+   "purification"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: all the inhabitants destroyed by Joshua's direction and God's order, being guilty of capital crimes — idolatry, incest, and the like."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they utterly destroyed all that was in the city... with the edge of the sword",
-   "the cherem of God's righteous judgment",
-   "the iniquity of the Amorite now full (Gen. 15:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Joshua had said this to the spies before the people entered, perhaps before the walls fell; to bring her out as they sware unto her."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Go into the harlot's house, and bring out thence the woman... as ye sware unto her",
-   "the oath faithfully kept amid the destruction",
-   "the LORD is faithful, who shall stablish you (2 Thess. 3:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the spies knew her house again by the scarlet thread hung at the window; they left them without the camp of Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "brought out Rahab, and her father, and her mother, and her brethren, and all that she had",
-   "faith saving a household, marked by the scarlet thread",
-   "when I see the blood, I will pass over you (Exod. 12:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "24-27",
+  "pericope_label": "The spoils, the rescue and identity of Rahab, and the curse on the rebuilder",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the city burnt with fire, as Babylon the great, of which it was an emblem, will be burnt."
+    "summary": "Gill looks past the burning to what the city was an emblem of, the great city that will likewise be burnt with fire; on Rahab he reports that some interpret her being saved alive of giving her food and an inheritance to live on, that Josephus says Joshua gave her fields and held her in great honour, and that some Jewish writers make it mean he took her to wife, which one of them rejects as foreign and which Gill answers besides from the fact that it was not Joshua but a prince of Israel who married her; he notes that the adjuration was general and not man by man, and ends with the Targum's reading that the Word of the Lord was Joshua's help, which he takes for Christ the Son of God, the Captain of the Lord's host. Calvin says the adjuration was not for a day but to warn posterity through all ages that the city had been taken only by divine power, the ruins standing for ever as a kind of trophy since rebuilding would have been an erasure effacing the miracle, from which we gather that the natural torpidity of men requires stimulants to keep them from burying divine favours in oblivion, the spectacle being an indirect censure of their ingratitude; he renders the imprecation as a picture, to lay the foundation in the firstborn being to cast forth a son to perish crushed beneath the mass of stones and to set up the gates in the younger to plan a building that cannot be raised without the death of a son; he reckons the interval from the curse to its fulfilment at five hundred and twenty years, and supposes a second Jericho built at no great distance but not on the former site, which while the memory of the curse remained was probably avoided."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: only the silver and gold they put into the treasury."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they burnt the city with fire... only the silver, and the gold... they put into the treasury of the house of the LORD",
-   "the doomed city given to the fire, what is God's preserved",
-   "Babylon utterly burned with fire (Rev. 18:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Joshua saved her from the sword; Josephus says he gave her fields and held her in great honour; she dwelt in Israel for hiding the messengers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joshua saved Rahab the harlot alive... and she dwelleth in Israel even unto this day",
-   "the Canaanite harlot by faith made a daughter of the covenant",
-   "Rahab in the line of Christ (Matt. 1:5; James 2:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Joshua adjured them when the city was burnt and spoiled, in a general way."
+    "summary": "Clarke turns the disposal of the spoils into an argument, that the people were to have no share because they had no hand in the conquest, God alone overthrew the city, and into his treasury only the spoils were brought, which he takes for one proof that the agitation of the air by the sound of the people's voice was not the cause of the walls falling; he adds that the Alexandrian Greek appears to have read all the brass and iron where the Hebrew has vessels, though the reading is found in none of the collated manuscripts. He takes the note that she dwelt in Israel unto this day as evidence for the early date of the book, allowing that marginal notes may since have crept into the text; calls the curse a strange execration better considered as a prediction; offers two accounts of its fulfilment, that the builder's children died one by one during the work or that the history relates merely to its slow progress over the years between the eldest son's birth and the youngest's, preferring the first; reckons the interval at five hundred and fifty years; identifies the city of palm trees with Jericho and infers from a string of later notices that the site was inhabited long before the rebuilding; closes with a sheaf of classical parallels for cursing the rebuilders of a destroyed city; and rests the whole miracle on the apostolic word that by faith the walls fell down. Wesley finds in Rahab's case an exception to the general command of rooting out the Canaanites, in favour of any who had sincerely and seasonably cast off their wickedness and submitted; says Joshua made the people, or some in the name of all, swear for themselves and their successors, not out of a particular dislike of the place but by divine inspiration; restricts the curse to the builder, no way touching those who should afterwards inhabit the city; and ends with the Targum's Word of the Lord, which he takes for Christ himself, the same that was with Moses, adding that nothing makes a man appear more truly great than the evidences of God's presence with him."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the curse on the man who should build Jericho."
+    "summary": "Keil identifies Rahab with the woman named in the genealogy of Christ, who bore a prince of Judah a son, traces the doubts about the identification to the same scruple over her dishonourable calling that led the Chaldee translator to make her an innkeeper, prefers Jerome's answer, and takes the phrase that she dwelt in Israel unto this day as evidence that the account was written not long after the event; on the curse he makes it the completion of the ban by oath, a memorial to posterity of the justice of God sanctifying itself on the ungodly, and notes the unmistakeable rhythmical parallelism and the preposition denoting the price of a thing. Ellicott gathers the New Testament witnesses to Rahab's faith and her works, observes that the Greek form of her name in the genealogy is not the usual one, a difference in the original and not merely in the English spelling, makes the identification of the city of palm trees with Jericho only somewhat doubtful, and adds that the curse appears to have been finally removed at the inhabitants' request by a later prophet's intercession."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What saving Rahab alive means: Gill reports the readings of maintenance, of an inheritance and of marriage to Joshua, rejects the last from the genealogy, and Keil identifies her with the woman of the genealogy while tracing the doubts to offence at her calling",
+   "How the curse was fulfilled: Clarke offers both the death of the children one by one and the mere slow progress of the work over many years, preferring the first, while Wesley and Keil read it as the loss of all the sons from first to last and Calvin renders it as a picture of a son crushed beneath the stones",
+   "Whether the site stood empty in the interim: Clarke identifies the city of palm trees with Jericho and infers continuous occupation, Ellicott makes that identification only somewhat doubtful, and Calvin supposes a second city built near but not on the cursed ground",
+   "Whether the fall admits a natural cause: Clarke argues from the spoils going wholly to the treasury that the sound of the people's voice cannot have been the cause, and rests finally on the apostolic word"
+  ],
+  "outliers": [
+   "Clarke's sheaf of classical parallels for execrating the rebuilders of a destroyed city",
+   "Clarke's note that the Alexandrian Greek appears to read all the brass and iron for vessels, a reading found in none of the collated manuscripts",
+   "Ellicott's observation that the Greek form of Rahab's name in the genealogy is not the usual one, a difference in the original and not in the English spelling",
+   "Ellicott's note that the curse appears to have been finally removed at the inhabitants' request by a later prophet's intercession",
+   "Calvin's principle that the natural torpidity of men requires stimulants to keep them from burying divine favours in oblivion",
+   "Keil's inference from the phrase unto this day that the account was written not long after the event"
+  ],
   "themes": [
-   "Cursed be the man before the LORD, that riseth up and buildeth this city Jericho",
-   "the doomed city to lie a monument of judgment",
-   "the curse fulfilled in Hiel the Bethelite (1 Kings 16:34)"
+   "memorial",
+   "faith",
+   "judgment",
+   "mercy",
+   "the curse"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Lord counselled, directed, prospered, and succeeded him; the Targum, 'the Word of the Lord was for the help of Joshua' — the essential Word, Christ, the Captain of the host."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So the LORD was with Joshua; and his fame was noised throughout all the country",
-   "the success of God's servant from his presence",
-   "I will be with thee (Josh. 1:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

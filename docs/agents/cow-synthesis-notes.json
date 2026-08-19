@@ -8530,6 +8530,54 @@
       "book": "exodus",
       "chapter": "15",
       "note": "Self-graded every entry against the catena. Six entries tiling 1-27 exactly: 1-3 650w/7 voices, 4-10 650w/6, 11-16 647w/6, 17-21 649w/6, 22-24 613w/7, 25-27 650w/6. Every proposition traced to a named block; no attribution asserted that the source does not carry. Jamieson excluded from entries 1, 4 and 11 as declared residue (Exodus 4 material). School lists in the tags match the voices named in the prose for all six entries."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "6",
+      "note": "Jamieson stride-6, TWENTY-SEVENTH consecutive chapter. Keys 6, 12, 18, 24 - offset 0, four members, no gap, then the run stops (keys 1, 8, 16 carry no Jamieson). Every block is DEUTERONOMY 2-3 material: the Ammonites kindred to the Moabites and the Zamzummim and Avim; Og's gigantic appearance and his doomed race; the upland downs from the Arnon to the Jabbok becoming Israel's possession. THE REPETITION SIGNATURE IS PRESENT AGAIN, and at the HEAD of the run rather than the tail: keys 6 and 12 carry the SAME 172-word block, byte-identical once markup whitespace is normalised (raw lengths 1048 vs 1045 chars). At deuteronomy 32 the repeat was at the tail (the block at key 38 repeating verbatim at 44 and 50). So the duplication is not specifically a tail phenomenon - a stride run can repeat a block anywhere it has fewer distinct source segments than keys to fill. Keys 18 and 24 are distinct from each other and from 6/12, and are progressive within Deuteronomy 3. All four excluded via RESIDUE."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "6",
+      "verses": [
+        "26"
+      ],
+      "note": "StudyLight chrome, THIRTEENTH confirmation and TENTH CONSECUTIVE Ellicott carrier: romans 3:31, acts 5:42, hebrews 9:28, acts 13:52, hebrews 10:39, joshua 9:23, galatians 3:29, luke 18:43, exodus 15:27, joshua 6:26. Same 992-word boilerplate, exactly the same length as every previous instance. This is the CLEANEST confirmation yet of the joshua 9 refinement that it attaches to the LAST BLOCK OF THE CARRIER COMMENTATOR rather than to the chapter's last key: here it lands at key 26, not key 27, because Ellicott's last block in the chapter is at 26 (key 27 carries Gill, Keil, Clarke and Wesley but no Ellicott). Ellicott's block at 26 is 1,103 words of which 111 are genuine payload. Real usable source for this chapter is 18,573 words, not the 19,565 the sizer reports."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "6",
+      "verses": [
+        "16"
+      ],
+      "note": "Keil and Delitzsch under the 200-word truncation cap again, and here the cap does visible damage rather than merely trimming: the block at key 16 is consumed ENTIRELY by verse quotation (it prints the text of vv16-21 and stops at the cap before any comment begins), so Keil contributes nothing at all to the span 16-17 and had to be declared SILENT_BY_ENTRY. Most of his other blocks in this chapter are 200w and similarly front-loaded with quoted verse text; only key 27 (41w) is short enough to be complete. Fifth commentator-chapter confirming the cap after Gill, Lightfoot, Cyril of Jerusalem, and Keil at joshua 9 (13/14) and deuteronomy 32 (33/35)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "6",
+      "note": "Live disagreements tiled into the six entries. (1) Why the city was shut: Henry the obstinacy of inhabitants who would not sound a parley, Clarke the king's precaution after the spies escaped, Calvin ordinary wartime vigilance. (2) Where the chapter division falls: Ellicott and Keil make v1 a parenthesis and v2 the sequel to 5:15; Clarke calls the division unnatural. (3) What the trumpets were: Clarke denies the Hebrew means rams' horns at all and would render jubilee trumpets of horn or silver; Gill reports the jubilee reading and the objection that rams' horns are solid not hollow; Ellicott glosses loud or joyful sound; WESLEY'S EXEGESIS REQUIRES THE OPPOSITE - the basest matter and the dullest sound, that the excellency of the power might be of God. (4) How the wall fell: Clarke rejects the chasm theory as unsupported and reads 'under itself' as from its very foundations in large breaches; Wesley holds only a considerable part fell, since Rahab's house stood, and that it fell of its own accord in its own place rather than being battered out of it. (5) Whether the sabbath was broken: Gill quotes without demur the rabbinic saying that he who commanded the sabbath commanded it profaned for Jericho; Clarke grants a sabbath fell within the week but denies any breach, the procession being no servile work, and on that ground answers the charge that God showed a changeableness of disposition. (6) Who compassed the city: Keil insists the Hiphil is active here, so the ARK compassed it; Gill allows Kimchi's causative, that JOSHUA caused the ark to compass it. (7) Why the ban fell: Calvin a first-fruits consecration peculiar to the first city, Henry justice on forfeited lives plus terror, Wesley that soldiers glutted with spoil grow sluggish, and CLARKE ALONE that peace was offered first and the extermination followed its rejection - which converges independently with Calvin's own 'far easier solution' at v22, that Israel exhorted all whom they attacked to surrender and the blinded nations refused. (8) Why the rescued family was kept outside the camp: Clarke and Wesley ceremonial uncleanness pending purification; Calvin denies it was for safety and makes it a discipline of shame urging serious conversion. (9) How the curse was fulfilled: Clarke offers both the death of the children one by one and the mere slow progress of the work, preferring the first; Calvin renders it as a picture of a son crushed beneath the stones. (10) Whether the site stood empty: Clarke identifies the city of palm trees with Jericho and infers continuous occupation, Ellicott only doubtfully, Calvin supposes a second city built near but not on the cursed ground. (11) The interval to the rebuilding: Clarke 550 years, Calvin 520."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "6",
+      "note": "Notable single-voice material preserved as outliers. Ellicott reads the whole procession as a legal execution with the written law at its centre, the ark its vessel, the armed men its executioners and the priests its heralds, makes the six days of silence a lesson in the forbearance of God, and takes the final shout as no inapt figure of the shout at the Lord's second coming; he also gives a distinct reason for killing the animals, that Israel might not seem to be slaughtering for plunder, and notes that the curse appears to have been finally removed by Elisha's intercession at the inhabitants' request. Clarke argues from the seven circuits and the time left to sack the city that Jericho must have been small, the fighting men alone being near 600,000 and the people some millions, so only a select number marched; he supplies a comparative note from Ward that the Brahmins will receive gold and silver from any caste however degraded but not food or garments; and he closes the chapter with classical parallels for execrating rebuilders - Agamemnon on Troy, Croesus on Sidena, the Romans on Carthage, the Ionians on the Persian-ruined temples. Calvin's rule of regulated zeal, not to move tongue or feet or hands till God order, and his principle that the natural torpidity of men requires stimulants to keep them from burying divine favours in oblivion. Henry's contrast of a land flowing with milk and honey against a land abounding with silver and gold, and his remark that Joshua speaks as if he foresaw Achan's sin. Keil's inference from 'unto this day' that the account was written soon after the event."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "6",
+      "note": "Self-graded every entry against the catena. Six entries tiling 1-27 exactly: 1-3 647w/7 voices, 4-7 649w/6, 8-15 618w/6, 16-17 648w/6, 18-23 650w/6, 24-27 650w/6. Every proposition traced to a named block; no attribution asserted that the source does not carry. Jamieson excluded from entries 4, 8, 18 and 24 as declared residue (Deuteronomy 2-3 material); Keil declared silent for entry 16, where his block is pure verse quotation under the 200-word cap. School lists in the tags match the voices named in the prose for all six entries."
     }
   ]
 }
