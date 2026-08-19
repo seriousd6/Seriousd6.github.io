@@ -1,109 +1,188 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1",
+  "pericope_label": "God's answer to Moses: now shalt thou see what I will do",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "God's answer to Moses' complaint: 'then the LORD said unto Moses, Now shalt thou see what I will do to Pharaoh: for with a strong hand shall he let them go, and with a strong hand shall he drive them out of his land' — God answering Moses' complaint (Exodus 5:22-23) with the assurance that he would now act (the promise of the deliverance about to begin, the comfort to the perplexed servant, the deliverance delayed, not denied, God's answer to the trial of faith); 'with a strong hand' — by God's mighty power (the plagues, the strong hand of God on Pharaoh, Exodus 3:19-20, the deliverance to be wrought by God's almighty hand, Pharaoh forced to let them go); 'with a strong hand shall he drive them out of his land' (Pharaoh, so far from refusing, would be made to drive Israel out, the issue of the plagues, Exodus 12:31-33, the complete reversal, the king who would not let them go now thrusting them out, the providence, God's strong hand overruling the proud king) — Henry, Gill, Calvin, JFB."
+    "summary": "Calvin thinks Moses unworthy of so kind a reply, and reads the Father of all goodness as pardoning the sins of leader and people alike that he might effect the deliverance he had determined; in the phrase now shalt thou see he hears a tacit reproof of an impatience that would not wait for the result of the promise. He explains why God refused a voluntary release: the work of liberation was to be conspicuous, and the words drive them out are to be pressed, since the king who today refuses will not merely consent but expel Israel from his kingdom and count their speed a blessing. Gill notes only that the word answered the questions and expostulations Moses had put."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry fixes the moment: Moses was at his wit's end, wishing he had stayed in Midian rather than come to Egypt to make bad worse, and now that the affair had reached a crisis, Pharaoh at the height of pride and Israel in the depth of misery, it was God's time to appear — man's extremity being God's opportunity, and the church's deliverance accomplished when God takes the work into his own hands. He turns the strong hand to use, that as some are brought to their duty by the strong hand of grace, made willing in the day of God's power, so others by the strong hand of justice, which breaks those that will not bend. Because his account of the whole message is filed at this verse, he sets out five grounds of comfort in it: the name, which is one with I am that I am, the fountain of being and infinite perfection, a God who performs what he has promised and perfects what he has begun, and who in the creation history is never called Jehovah until the heavens and the earth are finished, his people meanwhile finding him El-shaddai; the covenant, which God not only makes but establishes, as firm as his power and truth can make it; his compassion, since he notices the increase of his people's calamities; the resolutions themselves, line upon line, where man may take the shame of an unbelief needing such repetition and God the glory of the grace that grants it; and the intention behind them, double, their happiness in being taken for a peculiar people and his own glory in being known for the Lord. That such words did not revive them he accounts for three ways: they were too taken up with their troubles to heed Moses, too cast down by the late disappointment to believe him, and too afraid of Pharaoh's wrath to stir towards their own deliverance."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that the Hebrew here uses the verb elsewhere translated to harden, and takes the strong hand for sovereign power suddenly and forcibly applied: God would display his power before the Egyptians, and Pharaoh in consequence would display his own by thrusting the people out."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott states the complaint the verse answers — Moses had charged God with delay, with being slack concerning his promise, and with not delivering his people at all — and reads now shalt thou see as an assurance that there will be no more delay, the work being about to begin, so that Moses will behold it and cease to doubt. He would render the phrase through a strong hand rather than with it, meaning the compulsion God exerts."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does the answer reprove Moses, or only reassure him?",
+    "sides": [
+     {
+      "position": "it carries a tacit reproof of an immoderate impatience that would not wait for the result of the promise",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "it is an assurance that there will be no more delay; the work is about to begin, and seeing it he will cease to doubt",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "it was spoken for the quieting of his mind, at the moment when he was at his wit’s end",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Then the LORD said unto Moses, Now shalt thou see what I will do to Pharaoh: for with a strong hand shall he let them go, and with a strong hand shall he drive them out of his land",
-   "God's answer to Moses' complaint",
-   "the deliverance about to begin by God's mighty hand (Exodus 3:19-20)",
-   "Pharaoh forced to drive Israel out (Exodus 12:31-33), the answer to the trial of faith"
+   "now shalt thou see what I will do to Pharaoh",
+   "with a strong hand shall he let them go",
+   "he shall drive them out of his land",
+   "I am Jehovah: I will bring out, rid, redeem, take, and give"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "2-5",
+  "pericope_label": "I am Jehovah: the name, the older name, and the covenant recalled",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "God's self-revelation as the LORD: 'and God spake unto Moses, and said unto him, I am the LORD' — God prefacing his renewed promise with the great declaration 'I am the LORD' (Jehovah, the covenant Name, the self-existent, eternal, covenant-keeping God, the ground of all that follows, the Name that answers Pharaoh's 'Who is the LORD?', Exodus 5:2, the foundation of the covenant assurance); 'I am the LORD' (Jehovah, Exodus 3:14-15, 'I AM THAT I AM') — the Name of God's self-existence, eternity, and covenant faithfulness (the ground of the promises, vv.6-8, each sealed with 'I am the LORD,' the assurance that the unchanging God would keep his covenant); 'I am the LORD' — the foundation of the whole renewed promise (the faithful, covenant God speaking, the answer to Moses' perplexity, the LORD himself the surety of the deliverance, the Name on which the redemption rests, the eternal, covenant-keeping God) — Keil and Delitzsch, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And God spake unto Moses, and said unto him, I am the LORD",
-   "God's self-revelation as the LORD",
-   "'I am the LORD' (Jehovah) - the self-existent, covenant-keeping God (Exodus 3:14-15)",
-   "the Name that answers Pharaoh's 'Who is the LORD?' (Exodus 5:2), the ground of the redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "summary": "Gill takes the declaration for a summary of the divine nature — the self-existent Being, the everlasting I am, unchangeable and constant to his promises — makes El-shaddai God all-sufficient, having a sufficiency of happiness in himself and enough for his creatures' wants, and holds the covenant sure and never to be made null. Calvin reads the speech as a rebuke of distrust by way of the covenant: God advances nothing new, since the people had almost imbibed the doctrine of their adoption with their mother's milk, so their complaint against Moses, as though he had invented what he promised in God's name, is less pardonable; and the comparison stings, since Abraham, Isaac and Jacob embraced the promise and trusted it perseveringly while their descendants disdained it because fulfilment did not appear at once. On the older name he canvasses the etymologies without settling them, holding that where God engages himself to Abraham under it he promises to be merciful and bounteous, the respect being to loving-kindness rather than might in judgment. He makes the patriarchs' tolerated wandering their praise — exemplary virtue to live all their lives with no corner to set a foot on but what neighbours allowed for a tent, in a land the covenant had made their inheritance — which condemns the posterity that would not go up to it; and he explains the long delay, that God would have them sorely troubled to succour them more openly and unjustly oppressed to rescue them more justly, since had the laws of hospitality been kept there had been no cause to shake off the yoke. God's remembering, he adds, means the showing of it by what he does."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke insists on the rendering I am Jehovah, since without the proper name the next verse's reason is not obvious, and calls El-shaddai the dispenser or pourer-out of gifts. The denial that the fathers knew the name he treats as a crux, since it occurs from Genesis onward and God had used it of himself to Abraham, and he canvasses four solutions before giving his own: that the name was known from the first but what it implied was not, a man being able to bear the title of an office long before he does any of its work. On the covenant he has God now fully purposed to give effect to all his engagements. Wesley glosses the name as a God who gives being to his own promises, and refers the groaning to the late hardships."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Name not known to the patriarchs: 'and I appeared unto Abraham, unto Isaac, and unto Jacob, by the name of God Almighty, but by my name JEHOVAH was I not known to them' — God having revealed himself to the patriarchs chiefly as 'God Almighty' (El Shaddai, the God able to fulfill his promises, Genesis 17:1; 28:3; 35:11, the name of the covenant-making God of promise, the God who pledged the promises to the fathers); the difficulty — for the name Jehovah was certainly in use long before (Genesis 4:26; 15:7; 22:14, the patriarchs used it), so 'was I not known' cannot mean they had never heard or used the name (the readings: (a) the dominant — God was not 'known' to the patriarchs by the name Jehovah in its full meaning and experience: that is, they knew the name, but did not know, experience, God as Jehovah in the sense now to be displayed — the covenant-keeping God actually fulfilling his promises, the patriarchs received the promises by faith, but did not see them performed, now God would make himself 'known' as Jehovah, the faithful performer of the covenant, in the redemption from Egypt, the name 'known' by the experience of its fulfillment, vv.6-8; (b) some taking it that the full revelation of the name's import, the self-existent, covenant-fulfilling God, was now first given; (c) a minority reading it as a question, 'by my name Jehovah was I not known to them?', the witnesses agreeing the substance: the patriarchs knew God as El Shaddai, the God of promise, now Israel would know him as Jehovah, the God who performs the promise, the covenant-keeper made known in the act of redemption); 'by my name JEHOVAH was I not known to them' (the name Jehovah, the faithful, covenant-performing God, now to be 'known' by the experience of the deliverance, the promises to the fathers now fulfilled, the patriarchs had the promise, the children would have the performance, the name made known in the act) — Ellicott, Gill, Clarke."
+    "prevalence": "single",
+    "summary": "Ellicott traces El-shaddai from Abraham through Isaac to Jacob, finding its primary idea in overpowering strength, against which the idea of Jehovah is absolute, eternal, unconditional existence. He renders the disputed clause was I not made manifest to them, and defends the name's antiquity from a derivation out of a form already obsolete in Moses' day, from its presence in the oldest documents taken up into Genesis, and from Abraham's use of it in a place-name; why the stress shifted he explains historically, the patriarchs needing assurance that God could perform, whereas Israel stood in closest contact with polytheism and had partly fallen into it, the Existent meaning the Self-Existent and so the Only Existent, a standing protest against every other god. The next phrase he renders the land of their sojournings wherein they sojourned, Canaan having been occupied by sufferance, the ownership reckoned the Canaanites'."
    }
   ],
   "debates": [
    {
-    "question": "How was God 'not known' by the name Jehovah to the patriarchs, when the name was already in use (Genesis 4:26; 15:7)?",
+    "question": "In what sense was the name Jehovah not known to the fathers?",
     "sides": [
      {
-      "position": "Not that they never heard the name, but that they did not 'know' (experience) God as Jehovah - the covenant-keeping God actually fulfilling his promises; the patriarchs had the promise, Israel would have the performance, the name made known by the experience of the redemption (vv.6-8)",
+      "position": "the sentence should be read as a question, the negative particle often bearing that force",
       "holders": [
-       "Gill",
-       "Clarke",
-       "Ellicott",
-       "the dominant reading"
+       "a solution reported by Clarke"
       ]
      },
      {
-      "position": "The full revelation of the name's import (the self-existent, covenant-fulfilling God) was now first given",
+      "position": "the name was first revealed here, and its earlier occurrences in Genesis are anticipations",
       "holders": [
-       "a secondary reading"
+       "a solution reported by Clarke"
+      ]
+     },
+     {
+      "position": "since the name signifies existence, God is now giving existence to the promises",
+      "holders": [
+       "a solution reported by Clarke"
+      ]
+     },
+     {
+      "position": "the name was known from the first but its import was not, as a man may bear the title of an office long before he does any of its work",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "render was I not made manifest to them; the name was ancient and known, but its full meaning was not, so God was not manifested by it",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does El Shaddai mean?",
+    "sides": [
+     {
+      "position": "God all-sufficient, having a sufficiency in himself and enough for his creatures’ wants",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "the dispenser or pourer-out of gifts",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "overpowering strength",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the etymology cannot be settled; what the name conveys where God engages himself to Abraham is loving-kindness, not might in judgment",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -111,1024 +190,502 @@
   ],
   "outliers": [],
   "themes": [
-   "And I appeared unto Abraham, unto Isaac, and unto Jacob, by the name of God Almighty, but by my name JEHOVAH was I not known to them",
-   "the Name not known to the patriarchs (the crux of the divine Name)",
-   "the patriarchs knew God as El Shaddai, the God of promise (Genesis 17:1)",
-   "not that they never heard 'Jehovah' (Genesis 4:26; 15:7), but did not know him as the God who performs the promise - made known by the redemption (vv.6-8)"
+   "I am the LORD: and I appeared unto Abraham by the name of God Almighty",
+   "but by my name JEHOVAH was I not known to them",
+   "I have established my covenant with them, to give them the land of Canaan",
+   "I have heard the groaning of the children of Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God's covenant to give Canaan to the fathers: 'and I have also established my covenant with them, to give them the land of Canaan, the land of their pilgrimage, wherein they were strangers' — God recalling the covenant he had established with the patriarchs (Genesis 15:18; 17:8; 26:3; 28:13), to give them the land of Canaan (the covenant of the land, the ground of the deliverance, God bringing Israel to the promised land, in keeping with the oath to the fathers); the land of Canaan (the promised inheritance, Genesis 17:8) — the covenant land (the goal of the deliverance, the oath to the fathers to be fulfilled); 'the land of their pilgrimage, wherein they were strangers' (the patriarchs sojourning in Canaan as strangers, Genesis 23:4; Hebrews 11:9, 13, holding only a burial-place, looking for the inheritance, now God would give the land to their seed, the covenant fulfilled, the pilgrim fathers' hope to be realized in their children) — Ellicott, Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And I have also established my covenant with them, to give them the land of Canaan, the land of their pilgrimage, wherein they were strangers",
-   "God's covenant to give Canaan to the fathers",
-   "the covenant of the land, the oath to the patriarchs (Genesis 15:18; 17:8)",
-   "the pilgrim fathers' hope (Hebrews 11:9, 13), the inheritance to be given their seed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God hearing the groaning and remembering his covenant: 'and I have also heard the groaning of the children of Israel, whom the Egyptians keep in bondage; and I have remembered my covenant' — God having heard Israel's groaning under the Egyptian bondage (Exodus 2:23-24, the cry of the oppressed reaching God, the compassion of God toward his afflicted people, the ground of the deliverance, God moved by their groaning and his covenant); the bondage (the cruel servitude, Exodus 5) — the affliction God regarded (the oppression that moved his compassion and faithfulness); 'I have remembered my covenant' (God remembering his covenant with the fathers, Exodus 2:24; Genesis 15:13-18, not that he had forgotten, but now acting on it, the covenant the ground of the deliverance, God redeeming for his oath, not Israel's worth, the faithfulness moving to redeem) — Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And I have also heard the groaning of the children of Israel, whom the Egyptians keep in bondage; and I have remembered my covenant",
-   "God hearing the groaning and remembering his covenant",
-   "God moved by their affliction (Exodus 2:23-24)",
-   "the covenant the ground of the deliverance (Genesis 15:13-18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sevenfold 'I will' of redemption begun: 'wherefore say unto the children of Israel, I am the LORD, and I will bring you out from under the burdens of the Egyptians, and I will rid you out of their bondage, and I will redeem you with a stretched out arm, and with great judgments' — God, sealing each promise with 'I am the LORD,' making the great series of 'I will' promises of redemption (the sevenfold 'I will' of vv.6-8): I will bring you out, I will rid (deliver), I will redeem, I will take you for a people, I will be your God, I will bring you in, I will give you the land (the covenant promises of the full redemption, the certainty, grounded on 'I am the LORD'); 'I will redeem you with a stretched out arm, and with great judgments': God promising to redeem (the word of buying back, ransoming) Israel by his outstretched arm (his almighty power) and great judgments (the plagues on Egypt, Exodus 7-12; the judgment on the Red Sea, the redemption by power and judgment, a type of the great redemption by Christ, the people bought out of bondage, the three acts of v.6, bring out, rid, redeem, the deliverance from Egypt's bondage by God's mighty hand); the 'I will' promises (each sure, grounded on 'I am the LORD') — the answer to Moses' complaint and the people's despair (the certain pledge of the redemption, the covenant of grace foreshadowed, God redeeming his people, taking them for his own, the sevenfold assurance) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is the weight of the 'I will' promises of vv.6-8?",
-    "sides": [
-     {
-      "position": "The sevenfold 'I will' (bring out, rid, redeem, take for a people, be their God, bring in, give the land) - the great series of redemption promises, each grounded on 'I am the LORD,' the certain pledge of the full deliverance; the redemption by God's power and judgments a type of the redemption by Christ",
-      "holders": [
-       "Ellicott",
-       "Calvin",
-       "Wesley",
-       "Gill",
-       "the dominant reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Wherefore say unto the children of Israel, I am the LORD, and I will bring you out... I will rid you... I will redeem you with a stretched out arm, and with great judgments",
-   "the sevenfold 'I will' of redemption begun (the crux of the covenant promises)",
-   "the great series of redemption promises (bring out, rid, redeem, take, be, bring in, give), each grounded on 'I am the LORD'",
-   "the redemption by God's outstretched arm and great judgments (Exodus 7-12), a type of the redemption by Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "6-9",
+  "pericope_label": "The seven promises, and why Israel would not hear them",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The covenant relation - 'I will be to you a God': 'and I will take you to me for a people, and I will be to you a God: and ye shall know that I am the LORD your God, which bringeth you out from under the burdens of the Egyptians' — the great promise — 'I will take you to me for a people, and I will be to you a God': God promising to take Israel as his own people and to be their God (the covenant formula, the heart of the covenant, repeated through Scripture, Genesis 17:7; Leviticus 26:12; Jeremiah 31:33; 2 Corinthians 6:16; Revelation 21:3, 'they shall be his people, and God himself shall be with them, and be their God,' the gracious relation, God taking a poor, enslaved, unworthy people to be his own — the witnesses marveling: God taking the worst of bondmen to be his peculiar people, of his free grace, not their worth, the covenant of grace, the redeemed taken to be God's people, and God their God — the very essence of the covenant, fulfilled in Christ and the church); 'I will be to you a God' (God giving himself to be Israel's God, the highest blessing, God himself their portion, Psalm 144:15, the covenant relation, all that 'God' means pledged to them, the grace of the covenant, God their God, they his people); 'ye shall know that I am the LORD your God, which bringeth you out from under the burdens of the Egyptians' (Israel would know, by the experience of the deliverance, that the LORD is their God, the name Jehovah known by the redemption, v.3, the knowledge grounded in the act, the deliverance proving God their covenant God, the covenant sealed by the experience of redemption) — Calvin, Wesley, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Gill grounds the promises in the name that heads them — eternal in being, immutable in counsel, faithful to his covenant and able to fulfil it — and explains the taking of a people two ways, politically, that out of Egyptian hands they should be his kingdom and subjects, and religiously, that they should be a holy people to fear and serve him by rules given from himself, both effected by the setting up of a civil and an ecclesiastical polity. Calvin presses the promise past the departure: it would have been little that the people should once be redeemed unless they then lived under God's guardianship, and having long since set the holy seed apart by circumcision he sets it apart again, so that both their election and its perpetuity are asserted, to be accounted God's people being to be received by special privilege into his favour and called by adoption to the hope of eternal salvation. Canaan he treats as the earnest of that adoption, the fathers' faith not being tied to earthly blessings; and on the lifting up of the hand he adds that the gesture cannot properly be said of God, who swears by himself because there is none greater, there being more than enough steadfastness in his simple word, so that the oath is a concession to human weakness. That the people would not hear he finds marvellous rather than natural: no wonder men intoxicated with prosperity reject God's mercy, but sorrow ought to awaken longing, and instead the afflicted harden against the promises — so we should struggle to get our minds clear enough of grief to receive grace."
+   },
    {
-    "question": "What does 'I will take you to me for a people, and I will be to you a God' establish?",
-    "sides": [
-     {
-      "position": "The heart of the covenant (repeated through Scripture, Genesis 17:7; Jeremiah 31:33; Revelation 21:3) - God of his free grace taking a poor, enslaved, unworthy people to be his own and giving himself to be their God; the covenant of grace, fulfilled in Christ and the church, known by the experience of the redemption",
-      "holders": [
-       "Calvin",
-       "Wesley",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And I will take you to me for a people, and I will be to you a God: and ye shall know that I am the LORD your God, which bringeth you out from under the burdens of the Egyptians",
-   "the covenant relation - 'I will be to you a God' (the crux of the covenant formula)",
-   "the heart of the covenant (Genesis 17:7; Jeremiah 31:33; Revelation 21:3) - God taking the enslaved people for his own by free grace",
-   "the covenant of grace fulfilled in Christ and the church, known by the redemption (v.3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the promise as the covenant made with Abraham, then asks why God should take so refractory and worthless a people for his own, and answers three ways: because he had promised their ancestors, in general friends of God; because, as Warburton observes, the providence protecting them was the more visible for their want of shining qualities, which might otherwise have let the effects be ascribed to their own wisdom; and because God would show that he delights to save the lost, choosing the worst people in the universe to prove that he wills not the death of a sinner. He agrees with Calvin that the lifting up of the hand is the gesture of an oath. On the failure of the message he says their labour was so continual and their bondage so cruel they had scarcely time to breathe, and notes that the Samaritan adds a sentence here, let us alone that we may serve the Egyptians, borrowed from a later chapter. Wesley reads the stretched-out arm as almighty power, a metaphor from a man stretching his arm out to put forth all his strength."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The promise of the land sealed with 'I am the LORD': 'and I will bring you in unto the land, concerning the which I did swear to give it to Abraham, to Isaac, and to Jacob; and I will give it you for an heritage: I am the LORD' — God completing the sevenfold 'I will' with the promise to bring Israel into the land sworn to the fathers (Genesis 15:18; 17:8; 26:3; 28:13), and to give it for an inheritance (the goal of the redemption, the promised land, the oath to the fathers fulfilled); the land given 'for an heritage' (a permanent possession, the inheritance of the covenant people) — the goal of the deliverance (the promised inheritance, the covenant fulfilled, the pilgrim fathers' hope, v.4, realized in their seed); 'I am the LORD' (the sevenfold promise sealed, as begun, v.6, with 'I am the LORD,' the covenant Name the surety of all, the certainty, the faithful, covenant God the guarantee of every promise, the assurance grounded on the Name, the redemption pledged by the LORD himself) — Keil and Delitzsch, Gill, Ellicott, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And I will bring you in unto the land, concerning the which I did swear to give it to Abraham, to Isaac, and to Jacob; and I will give it you for an heritage: I am the LORD",
-   "the promise of the land sealed with 'I am the LORD'",
-   "the inheritance the goal of the redemption, the oath to the fathers (Genesis 15:18; 17:8)",
-   "the whole sevenfold pledge sealed by the covenant Name (v.6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The people not hearkening for anguish and bondage: 'and Moses spake so unto the children of Israel: but they hearkened not unto Moses for anguish of spirit, and for cruel bondage' — Moses delivering God's glorious promises (vv.6-8) to the people, but they not hearkening (would not, or could not, receive them, the sad failure of faith, the people, lately believing, Exodus 4:31, now unable to believe, the contrast, the rich promises met with unbelief); the cause — 'for anguish of spirit (Hebrew, shortness of spirit, impatience), and for cruel bondage': the people not hearkening because of their anguish of spirit (their crushed, impatient, despairing state) and their cruel bondage (the harder servitude, Exodus 5, the witnesses noting the cause with sympathy: not mere willful unbelief, but the crushing of their spirit under the affliction, the soul so broken by suffering that it could not rise to faith and hope, the deadening effect of long, cruel oppression, despair choking the promise, yet also a measure of unbelief and impatience, the weakness of faith under trial, the people not laying hold of God's word, the lesson — affliction may so crush the spirit that even God's promises are not received, the danger of despair under prolonged suffering, and the need of grace to believe when the heart is broken); 'and for cruel bondage' (the hard servitude, Exodus 5:6-19, that crushed their spirit, the affliction that choked their faith, the providence, the people too broken to believe, that the deliverance might be wholly of God, not of their faith or works, the trial that prepared them to be saved by grace alone) — Ellicott, Gill, Calvin, Wesley."
+    "summary": "Ellicott notices that the idea of God redeeming Israel appears here first, and that the redemption was accomplished twice over — by the wonders culminating in the tenth plague, whereby they ceased to be Pharaoh's slaves and became God's servants, and by the passage of the Red Sea, which delivered them from death and so purchased them anew. He guards the other side of the election: the choice of a peculiar people did not mean abandoning the rest, since God continued to govern all nations and in every nation accepted those who feared him, a principle the centurion and Cornelius carry into the Gospel. On the failure of the message he contrasts the two announcements, the first having elated them with a hope they had long been strangers to, while by now they had been chilled by disappointment, their leader's interference having only increased their misery. Keil fixes the Hebrew closely: it is shortness of breath, meaning not impatience but anguish, an inward pressure that stops a man breathing properly, so that the early belief changed into the despondency of unbelief as the oppression grew, and it spread to Moses, who declined his commission again."
    }
   ],
   "debates": [
    {
-    "question": "Why did the people not hearken to the glorious promises?",
+    "question": "What is the anguish of spirit that stopped their ears?",
     "sides": [
      {
-      "position": "Not mere willful unbelief, but the crushing of their spirit under the cruel affliction - despair choking the promise, the soul too broken by suffering to rise to faith; yet a measure of the weakness of faith under trial; the lesson that affliction may so crush the spirit that even God's promises are not received",
+      "position": "literally shortness of breath, and not impatience but anguish — an inward pressure that prevents a man breathing properly",
       "holders": [
-       "Calvin",
-       "Gill",
-       "Ellicott",
-       "Wesley",
-       "the reformed reading"
+       "Keil"
+      ]
+     },
+     {
+      "position": "their labour was so continual and their bondage so cruel that they had scarcely time to breathe",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the words point to extreme lassitude and depression, the spirit chilled by disappointment after the first announcement had elated it",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the fault is moral, not physical: sorrow ought to awaken longing, and instead the afflicted harden themselves against the promises",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "claim": "answers the question why God should choose so worthless a people partly from Warburton, that a people without shining qualities made the providence protecting them the more visible, since otherwise the effects might have been ascribed to their own wisdom"
+   }
+  ],
   "themes": [
-   "And Moses spake so unto the children of Israel: but they hearkened not unto Moses for anguish of spirit, and for cruel bondage",
-   "the people not hearkening for anguish and bondage (the crux of the crushed spirit)",
-   "not mere willful unbelief, but the spirit crushed under cruel affliction (despair choking the promise)",
-   "the lesson - affliction may so crush the spirit that even God's promises are not received; the deliverance wholly of God"
+   "I will bring you out, and rid you, and redeem you with a stretched out arm",
+   "I will take you to me for a people, and I will be to you a God",
+   "concerning the which I did swear to give it to Abraham, to Isaac, and to Jacob",
+   "they hearkened not unto Moses for anguish of spirit, and for cruel bondage"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "10": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD renewing his charge to Moses: 'and the LORD spake unto Moses, saying' — the LORD, the people having not hearkened (v.9), renewing his charge to Moses (to go again to Pharaoh, v.11, the persistence of God's purpose, not deterred by the people's despair, the renewed commission, the providence pressing on toward the deliverance); the LORD speaking again (renewing the charge after the people's failure) — God's purpose unmoved (the persistence of the divine commission); the LORD renewing the charge (despite the people's unbelief and the coming objections) — God's deliverance not hindered by man's weakness (the renewed commission to go to Pharaoh, v.11, the providence pressing on) — Keil and Delitzsch, Henry, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses, saying",
-   "the LORD renewing his charge to Moses",
-   "God's purpose unmoved by the people's despair (v.9)",
-   "the renewed commission, the deliverance pressing on (v.11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The renewed charge to demand Israel's release: 'go in, speak unto Pharaoh king of Egypt, that he let the children of Israel go out of his land' — the LORD charging Moses to go again to Pharaoh and demand Israel's release (the renewed demand, as Exodus 5:1, the persistence of God's purpose, the demand pressed despite Pharaoh's refusal and the people's despair, the commission renewed); the renewed embassy to Pharaoh (the demand pressed again) — the persistence (the word of God to the king); 'that he let the children of Israel go out of his land' (the renewed demand for Israel's release, Exodus 5:1, the deliverance pressed, the providence, the demand that would lead, through the plagues, to the Exodus) — Ellicott, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Go in, speak unto Pharaoh king of Egypt, that he let the children of Israel go out of his land",
-   "the renewed charge to demand Israel's release",
-   "the demand pressed again despite refusal and despair (Exodus 5:1)",
-   "the deliverance pressed toward the Exodus"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses' objection of his uncircumcised lips: 'and Moses spake before the LORD, saying, Behold, the children of Israel have not hearkened unto me; how then shall Pharaoh hear me, who am of uncircumcised lips?' — Moses objecting: if his own people, with the glorious promises, would not hearken (v.9), how should Pharaoh, the proud enemy, hear him? (the argument from the lesser to the greater, the discouragement of Moses, his faith weak after the failure, the objection raised); 'uncircumcised lips' (a Hebrew idiom for faltering, ineloquent, or impure speech, Moses' sense of his unfitness to speak, as Exodus 4:10, 'slow of speech') — Moses' diffidence (pleading his lack of eloquence, the weakness of faith, the objection from his own inadequacy, the discouraged servant); Moses' objection (from the people's unbelief and his own poor speech) — the weakness of faith under discouragement (the servant overwhelmed by the difficulty, yet God would answer, giving Aaron as his mouth, Exodus 4:14-16; 7:1-2, the human frailty overruled by God's power, the deliverance not hindered by Moses' weakness) — Ellicott, Gill, Wesley, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses spake before the LORD, saying, Behold, the children of Israel have not hearkened unto me; how then shall Pharaoh hear me, who am of uncircumcised lips?",
-   "Moses' objection of his uncircumcised lips",
-   "the discouragement of Moses, the weakness of faith after the failure (v.9)",
-   "'uncircumcised lips' - his sense of unfitness (Exodus 4:10), overruled by God (Exodus 7:1-2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "10-13",
+  "pericope_label": "The second sending, the uncircumcised lips, and the charge",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has the orders renewed at another time, remarks that access to Pharaoh seems not to have been difficult, and observes that the objection is passed over, having been sufficiently answered before, with Aaron joined in the charge. Calvin measures the forbearance in the renewal: the just reward of so malevolent a repulse would have been to let the people rot in their miseries, and it is of God's extraordinary loving-kindness that he does not cease helping those willing to perish. The new command was needed to strengthen Moses, shaken by the people's despair and concluding he was to go no further; his objection Calvin sets out as an argument from the less to the greater, since it would be harder to move Pharaoh against his will than to persuade the afflicted to accept help offered from heaven, and if the people's hearts were a closed door, why try to shift the exceeding great rock? Moses did not design to throw off his calling, but so the heartiest of God's servants faint midway, where the path proves worse than they expected. The summarising verse he renders the Lord had spoken, referring it back to the calling's commencement, to show that the brothers had not acted rashly but on command, and that however often the work was interrupted God's purpose held. The uncircumcised lips he refers to the stammering already pleaded."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry, whom Wesley abridges here, draws the rule that God repeats his precepts before he begins his punishments: those called in vain to leave their sins must be called again and again, whether they will hear or forbear, God being said to hew sinners by his prophets, which denotes the repetition of the strokes. He finds two pleas in the objection. The first is the unlikelihood of Pharaoh's hearing: if the anguish of their spirit makes Israel deaf to what would comfort them, much more will pride make him deaf to what can only exasperate him — and if God's professing people will not hear his messengers, how shall his professed enemy? The second is the infirmity of speech, already sufficiently answered, so Moses ought not to have pressed it, the sufficiency of grace supplying nature's defects. The charge he reads as God ending the dispute by interposing his own authority: when Moses repeats his baffled arguments he is argued with no longer but charged upon his allegiance, God's authority sufficing to answer all objections and binding men to obey without murmuring or disputing."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the word rendered uncircumcised to signify anything exuberant or superfluous, and would have rendered it protuberant lips had Moses not been remarkable for his beauty; as it is he refers it to a want of ready utterance, from a defect in the organs of speech or a knowledge of Egyptian impaired by forty years away."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The LORD's renewed charge to Moses and Aaron: 'and the LORD spake unto Moses and unto Aaron, and gave them a charge unto the children of Israel, and unto Pharaoh king of Egypt, to bring the children of Israel out of the land of Egypt' — the LORD, despite Moses' objection (v.12), renewing and confirming the charge to both Moses and Aaron, commissioning them to the people and to Pharaoh (the persistence of God's purpose, the commission renewed, to bring Israel out, the deliverance pressed); the charge (to both the people and Pharaoh) — the renewed commission (overruling Moses' objection, the embassy to Israel and to Egypt, the deliverance pressed by God's authority); 'to bring the children of Israel out of the land of Egypt' (the purpose of the charge, the deliverance, the Exodus, the providence, God's unmoved purpose to redeem, despite the people's despair and Moses' weakness, the commission to the great work) — JFB, Gill, Calvin, Wesley."
+    "summary": "Ellicott notices that the second message advances on the first: the first asked only leave to go into the wilderness, much of which lay within Egypt's limits, the second that Israel be let go out of the land — such, he says, being the way of Providence, since refuse a light cross and a heavier is laid on, and decline the Sibyl's first offer and she brings a worse bargain the second time. On the lips he reports Rosenmüller's argument that Moses was tongue-tied, but doubts more is meant than the slowness of speech alleged earlier, uncircumcised standing by Hebrew idiom for any imperfection interfering with efficiency, an uncircumcised ear being one that cannot hearken, an uncircumcised heart one that fails to understand. The summarising verse he makes a seam: the details stand at the opening of the next chapter, which he thinks originally followed the objection directly, this verse being added to summarise them when the genealogy was inserted. Keil takes it instead for a concluding summary preparing for the genealogy headed in the next verse, and cites Ranke as having proved its organic connection with the narrative so conclusively that even Knobel gave up the fragmentary hypothesis."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What are uncircumcised lips?",
+    "sides": [
+     {
+      "position": "a want of ready utterance, from a defect in the organs of speech or from a knowledge of Egyptian impaired by forty years away",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Rosenmüller argues Moses was tongue-tied, but probably no more is meant than the slowness of speech alleged earlier; the idiom covers any imperfection that interferes with efficiency",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "the stammering he had already pleaded",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the summarising verse doing at this point in the book?",
+    "sides": [
+     {
+      "position": "it is a concluding summary that prepares the way for the genealogy headed in the next verse",
+      "holders": [
+       "Keil"
+      ]
+     },
+     {
+      "position": "it is an editorial seam; the opening of the next chapter originally followed the objection directly, and this verse was added when the genealogy was inserted",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "it looks backward, not forward — render the Lord had spoken, referring to the commencement of the calling",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And the LORD spake unto Moses and unto Aaron, and gave them a charge unto the children of Israel, and unto Pharaoh king of Egypt, to bring the children of Israel out of the land of Egypt",
-   "the LORD's renewed charge to Moses and Aaron",
-   "the commission renewed despite Moses' objection (v.12)",
-   "God's unmoved purpose to bring Israel out of Egypt"
+   "go in, speak unto Pharaoh king of Egypt",
+   "behold, the children of Israel have not hearkened unto me",
+   "how then shall Pharaoh hear me, who am of uncircumcised lips?",
+   "the LORD gave them a charge unto the children of Israel, and unto Pharaoh"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "14": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "Matthew Henry"
   ],
+  "range": "14-16",
+  "pericope_label": "The genealogy: why it stands here, and how far it can be trusted",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin puts the purpose sharply: the leader's origin is testified to all ages so none may doubt the promise to Abraham was fulfilled in the departure, since under any other leader it might have been questioned who the chief author was; and because Satan has obscured this history through profane writers, labouring to bury the race of Abraham, Moses anticipates him by naming the heads of families. The fewness of sons he takes for proof of a miracle: that three men so long-lived begat so few did not happen without design, so that in the fecundity which followed the miracle of grace might appear the clearer, God seeming first to mock their contemptible beginnings and then showing his power in their multiplication. He notes too what Amram's marriage cost the narrator, since nature itself, before ever the law forbade it, dictated that a man should not take his aunt, who stands to him in a mother's degree, and Moses in confessing it proclaims his parents' disgrace for the glory of God — from which we learn that imitating the patriarchs indiscriminately is not safe. Gill reports the opinion that the three tribes are noticed to show they were not rejected though rather cursed than blessed by Jacob, but prefers the plainer account, that the first two are named for the third's sake."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls it no endless genealogy of the kind the apostle condemns, since it ends in Moses and Aaron and shows them Israelites, bone of the bone of those they were sent to deliver, raised up of their brethren as Christ also should be. He reports Lightfoot's view that Reuben, Simeon and Levi are dignified here because their dying father had left them under marks of infamy, Reuben for his incest and the other two for the murder of the Shechemites, so that Moses would magnify God's mercy in their repentance; but he too prefers the plainer account, that order might be kept and the deliverers of Israel plainly appear Israelites. On the ages he and Wesley agree that Moses came far short of the fathers and fixed seventy or eighty for the ordinary stretch of life, since now that Israel was a great nation and revelation was written rather than trusted to tradition, the two great reasons for the patriarchs' long lives had ceased."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes the genealogy a proof that the two came in a direct line from Abraham, and calls the whole passage a parenthesis that does not belong to the narration. He adds from Dodd that Levi is thought to have outlived all Jacob's sons, surviving Joseph by twenty-seven years though much the elder, and finds the promise of deliverance in the fourth generation verified exactly, Moses being son of Amram, son of Kohath, son of Levi, son of Jacob."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The genealogy of the tribes beginning with Reuben: 'these be the heads of their fathers' houses: The sons of Reuben the firstborn of Israel; Hanoch, and Pallu, Hezron, and Carmi: these be the families of Reuben' — the inspired record inserting a genealogy (vv.14-27), beginning with Reuben (the firstborn), Simeon, and Levi, to establish the descent of Moses and Aaron (the deliverers, v.26-27, the genealogy of the tribes, the heads of the fathers' houses); the genealogy beginning with Reuben (the firstborn, Genesis 46:8-9) — the order of the tribes (the line leading to Levi, vv.16, and Moses and Aaron, v.20, the descent established); the genealogy (vv.14-27) — inserted to establish the lineage of Moses and Aaron (the deliverers, that their authority and descent, of the tribe of Levi, might be sure, the providence, the deliverers' line recorded, the record of the covenant family) — Keil and Delitzsch, Ellicott, Calvin, Henry."
+    "summary": "Ellicott sets the pedigree in its culture, genealogies holding as prominent a place among Arabians as among Jews, a would-be leader's descent being matter of curiosity to all who submitted to him. He denies that the list can be complete: ten generations at least stand between Jacob and Joshua, so three between Jacob and Moses are scarcely possible, and the Israelites habitually built genealogies by dropping links, as the pedigrees of Ezra and of our Lord show. He reckons four or five names omitted between Kohath's son Amram and Moses' father Amram, and presses the numbers — Gershon had but two sons, Kohath four and Merari two, yet the Levites numbered twenty-two thousand three hundred males the year after the Exodus, an increase requiring some ten or eleven generations. Keil explains the form: a father's-house is a technical term for a body of families called by a common ancestor, and the list begins at Reuben to fix Levi's place, naming only such sons of the first two as founded families."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why are Reuben and Simeon included at all?",
+    "sides": [
+     {
+      "position": "because their dying father had left the three under marks of infamy, so that recording them magnifies God’s mercy in their repentance",
+      "holders": [
+       "Lightfoot, as reported by Henry",
+       "an opinion reported by Gill"
+      ]
+     },
+     {
+      "position": "for the sake of the third, that order might be kept and the deliverers of Israel plainly appear Israelites",
+      "holders": [
+       "Henry",
+       "Gill",
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the genealogy complete as it stands?",
+    "sides": [
+     {
+      "position": "yes; the promise of deliverance in the fourth generation is verified exactly — Moses son of Amram, son of Kohath, son of Levi, son of Jacob",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "no; four or five names are omitted, since ten generations stand between Jacob and Joshua and 22,300 Levites require ten or eleven generations of increase",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does it prove that Levi, Kohath and Amram had so few sons?",
+    "sides": [
+     {
+      "position": "that links are missing from the list, the recorded numbers being far too small for the later census",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "that the later increase was miraculous, God first seeming to mock their contemptible beginnings and then showing his power",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "These be the heads of their fathers' houses: The sons of Reuben the firstborn of Israel; Hanoch, and Pallu, Hezron, and Carmi: these be the families of Reuben",
-   "the genealogy of the tribes beginning with Reuben",
-   "the record (vv.14-27) to establish the descent of Moses and Aaron (Genesis 46:8-9)",
-   "the deliverers' line traced to the tribe of Levi (vv.20, 26-27)"
+   "these be the heads of their fathers’ houses",
+   "the sons of Reuben, of Simeon, and of Levi",
+   "the years of the life of Levi were an hundred thirty and seven years",
+   "Amram took him Jochebed his father’s sister to wife"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Simeon in the genealogy: 'and the sons of Simeon; Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Shaul the son of a Canaanitish woman: these are the families of Simeon' — the six sons of Simeon named (as Genesis 46:10), with the note of Shaul, son of a Canaanite woman (the second tribe in the genealogy, vv.14-27, the line leading toward Levi, v.16, and the deliverers, the record continuing); Simeon's sons (Genesis 46:10) — the families of the tribe (the genealogy); 'Shaul the son of a Canaanitish woman' (the note, as Genesis 46:10, of Shaul's Canaanite mother, the faithful genealogy, recording even this, the second tribe enumerated, before Levi, v.16, the line of the deliverers) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the sons of Simeon; Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Shaul the son of a Canaanitish woman: these are the families of Simeon",
-   "the sons of Simeon in the genealogy",
-   "the six sons, with Shaul the Canaanite's son (Genesis 46:10)",
-   "the second tribe, before Levi (v.16) and the deliverers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Levi, the deliverers' tribe: 'and these are the names of the sons of Levi according to their generations; Gershon, and Kohath, and Merari: and the years of the life of Levi were an hundred thirty and seven years' — the genealogy coming to Levi (the tribe of Moses and Aaron, v.20), naming his three sons (Gershon, Kohath, Merari, the heads of the Levitical families, Numbers 3:17, the priestly tribe, the line of the deliverers traced, Kohath the line of Amram, Moses, and Aaron, vv.18-20); the Levitical line (Levi, Kohath, Amram, Moses and Aaron) — the descent of the deliverers (the priestly tribe, the genealogy focused on Levi); 'the years of the life of Levi were an hundred thirty and seven years' (the age of Levi recorded, 137 years, as Kohath, v.18, and Amram, v.20, the chronology, marking the generations from Levi to Moses, the record of the deliverers' line) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And these are the names of the sons of Levi according to their generations; Gershon, and Kohath, and Merari: and the years of the life of Levi were an hundred thirty and seven years",
-   "the sons of Levi, the deliverers' tribe",
-   "the priestly tribe, the three Levitical families (Numbers 3:17)",
-   "the line of Moses and Aaron traced through Kohath (vv.18-20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Gershon: 'the sons of Gershon; Libni, and Shimi, according to their families' — the two sons of Gershon (Levi's eldest son): Libni and Shimi (the heads of the Gershonite families, Numbers 3:18, the Levitical genealogy continuing, the line of the priestly tribe); the two sons of Gershon (the Gershonite families, Numbers 3:18) — the line of Gershon (the genealogy of Levi's eldest); the sons of Gershon (Libni and Shimi) — the Gershonite Levites (Numbers 3:21, the genealogy continuing toward Kohath, v.18, the deliverers' line, the record of the priestly tribe) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The sons of Gershon; Libni, and Shimi, according to their families",
-   "the sons of Gershon",
-   "the Gershonite Levitical families (Numbers 3:18, 21)",
-   "the genealogy continuing toward the deliverers' line (v.18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Kohath, the deliverers' line: 'and the sons of Kohath; Amram, and Izhar, and Hebron, and Uzziel: and the years of the life of Kohath were an hundred thirty and three years' — the four sons of Kohath (Levi's second son): Amram (the father of Moses and Aaron, v.20), Izhar, Hebron, Uzziel (the Kohathite Levites, Numbers 3:19, the line of the deliverers, through Amram, Kohath's age, 133 years, recorded); the four sons of Kohath (the Kohathite families, Numbers 3:27) — Amram the line of Moses and Aaron (v.20, the deliverers' descent); 'the years of the life of Kohath were an hundred thirty and three years' (Kohath's age, 133, the chronology, Levi 137, Kohath 133, Amram 137, vv.16, 20, the record of the deliverers' line) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the sons of Kohath; Amram, and Izhar, and Hebron, and Uzziel: and the years of the life of Kohath were an hundred thirty and three years",
-   "the sons of Kohath, the deliverers' line",
-   "Amram the father of Moses and Aaron (Numbers 3:19; v.20)",
-   "the chronology of the deliverers' descent (Levi 137, Kohath 133, Amram 137)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Merari, completing Levi's line: 'and the sons of Merari; Mahali and Mushi: these are the families of Levi according to their generations' — the two sons of Merari (Levi's third son): Mahali and Mushi (the Merarite Levites, Numbers 3:20, the completing of the three Levitical lines, Gershon, Kohath, Merari, the genealogy of Levi finished); the two sons of Merari (the Merarite families, Numbers 3:33) — the line of Merari (the third Levitical division); 'these are the families of Levi' (the three lines, Gershon, Kohath, Merari, completing the Levitical genealogy, the record of the priestly tribe, the deliverers' tribe, the genealogy now narrowing to Amram and Moses and Aaron, v.20) — JFB, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the sons of Merari; Mahali and Mushi: these are the families of Levi according to their generations",
-   "the sons of Merari, completing Levi's line",
-   "the Merarite families, the third Levitical division (Numbers 3:20, 33)",
-   "the three Levitical lines complete, narrowing to Amram (v.20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The parentage and birth of Moses and Aaron: 'and Amram took him Jochebed his father's sister to wife; and she bare him Aaron and Moses: and the years of the life of Amram were an hundred and thirty and seven years' — Amram (of the Kohathite Levites, v.18) marrying Jochebed (his father's sister, i.e., his aunt, a kinswoman of the same Levitical stock, Exodus 2:1, the marriage before the later Mosaic prohibition, Leviticus 18:12), Jochebed bearing Aaron and Moses (and Miriam, Numbers 26:59, the parentage of the deliverers, the godly Levite parents, Hebrews 11:23); Aaron and Moses (the deliverers, Aaron the elder, the priest, Moses the lawgiver and leader) — the sons of Amram and Jochebed (the genealogy establishing their descent, of Levi, through Kohath and Amram); 'the years of the life of Amram were an hundred and thirty and seven years' (Amram's age, 137, as Levi, v.16, the chronology of the deliverers' line, the record establishing Moses and Aaron's Levitical descent, the purpose of the genealogy, vv.14-27) — Ellicott, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Amram took him Jochebed his father's sister to wife; and she bare him Aaron and Moses: and the years of the life of Amram were an hundred and thirty and seven years",
-   "the parentage and birth of Moses and Aaron",
-   "Amram and Jochebed, the godly Levite parents (Exodus 2:1; Numbers 26:59; Hebrews 11:23)",
-   "the descent of the deliverers established (of Levi, through Kohath and Amram)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Izhar, including Korah: 'and the sons of Izhar; Korah, and Nepheg, and Zichri' — the three sons of Izhar (Amram's brother, v.18): Korah, Nepheg, Zichri (the Kohathite line, Izhar a son of Kohath, the note of Korah, the leader of the later rebellion, Numbers 16, the genealogy continuing); Korah (Izhar's son, the cousin of Moses and Aaron) — the leader of the rebellion against Moses and Aaron (Numbers 16:1-3, the note of the kinsman who would rebel, the genealogy recording him); the sons of Izhar (Korah, Nepheg, Zichri) — the Izharite Levites (the genealogy, recording the line, including the future rebel Korah, the record of the Kohathite families) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the sons of Izhar; Korah, and Nepheg, and Zichri",
-   "the sons of Izhar, including Korah",
-   "the Izharite Levites (a son of Kohath)",
-   "Korah, the future rebel against Moses and Aaron (Numbers 16:1-3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Uzziel: 'and the sons of Uzziel; Mishael, and Elzaphan, and Zithri' — the three sons of Uzziel (Amram's brother, v.18): Mishael, Elzaphan, Zithri (the Kohathite line, Uzziel a son of Kohath, the cousins of Moses and Aaron, Mishael and Elzaphan carried out the bodies of Nadab and Abihu, Leviticus 10:4, the genealogy continuing); Mishael and Elzaphan (the Levites who would bear out Nadab and Abihu, Leviticus 10:4) — the cousins of Moses and Aaron (the Kohathite line); the sons of Uzziel (Mishael, Elzaphan, Zithri) — the Uzzielite Levites (the genealogy, completing the Kohathite families, the record of the deliverers' kindred) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the sons of Uzziel; Mishael, and Elzaphan, and Zithri",
-   "the sons of Uzziel",
-   "the Uzzielite Levites (a son of Kohath)",
-   "the cousins of Moses and Aaron (Mishael and Elzaphan, Leviticus 10:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Aaron's marriage and the birth of his sons, the priestly line: 'and Aaron took him Elisheba, daughter of Amminadab, sister of Naashon, to wife; and she bare him Nadab, and Abihu, Eleazar, and Ithamar' — Aaron marrying Elisheba, of the tribe of Judah (daughter of Amminadab, sister of Nahshon, the prince of Judah, Numbers 1:7; 2:3, the marriage uniting the priestly tribe, Levi, with the royal tribe, Judah, the establishing of the priestly line); Aaron's four sons (Nadab, Abihu, Eleazar, Ithamar) — the priestly line (Nadab and Abihu would be slain for offering strange fire, Leviticus 10:1-2; Eleazar and Ithamar continued the priesthood, Numbers 3:4, the sons of the high priest, the establishing of the Aaronic priesthood); Aaron's sons (the priestly line) — the genealogy establishing the Aaronic priesthood (Eleazar the line of the high priests, v.25, the providence, the priesthood through Aaron's sons, the record of the priestly descent) — Ellicott, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Aaron took him Elisheba, daughter of Amminadab, sister of Naashon, to wife; and she bare him Nadab, and Abihu, Eleazar, and Ithamar",
-   "Aaron's marriage and the priestly line",
-   "the marriage uniting Levi (priestly) with Judah (royal) (Numbers 1:7; 2:3)",
-   "the Aaronic priesthood established (Nadab and Abihu, Leviticus 10:1-2; Eleazar the high-priestly line, v.25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of Korah, the Korhites: 'and the sons of Korah; Assir, and Elkanah, and Abiasaph: these are the families of the Korhites' — the three sons of Korah (the rebel, v.21): Assir, Elkanah, Abiasaph (the Korhite families, the note, the providence, that Korah's sons did not perish in the rebellion, Numbers 26:11, 'the children of Korah died not,' but continued, the Korhite singers and doorkeepers, the sons of Korah of the Psalm titles, Psalm 42; 44-49; 84-88); the Korhites (the line of Korah's sons, spared, Numbers 26:11) — the families that continued (the providence, mercy to the rebel's sons, who became singers in the house of God); 'these are the families of the Korhites' (the Korhites, the line that survived the rebellion, the providence, God's mercy sparing the sons, who served in the temple, the sons of Korah of the Psalms, the record of the spared line) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the sons of Korah; Assir, and Elkanah, and Abiasaph: these are the families of the Korhites",
-   "the sons of Korah, the Korhites",
-   "the mercy sparing the rebel's line - 'the children of Korah died not' (Numbers 26:11)",
-   "the sons of Korah who served and sang in God's house (Psalm 42; 84-88 titles)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eleazar's line and the birth of Phinehas: 'and Eleazar Aaron's son took him one of the daughters of Putiel to wife; and she bare him Phinehas: these are the heads of the fathers of the Levites according to their families' — Eleazar (Aaron's son, v.23) marrying a daughter of Putiel and begetting Phinehas (the high-priestly line, Eleazar succeeding Aaron, Numbers 20:28; Phinehas the zealous priest, Numbers 25:7-13, given the covenant of an everlasting priesthood, the establishing of the line of the high priests); Phinehas (Eleazar's son, the zealous priest, Numbers 25:7-13) — the line of the high priesthood (Aaron, Eleazar, Phinehas, the providence, the priestly succession established); 'these are the heads of the fathers of the Levites' (the conclusion of the genealogy, vv.14-25, the heads of the Levitical families recorded, the descent of Moses, Aaron, and the priesthood established, the purpose of the genealogy fulfilled, vv.26-27, identifying the deliverers) — Ellicott, Gill, JFB."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Eleazar Aaron's son took him one of the daughters of Putiel to wife; and she bare him Phinehas: these are the heads of the fathers of the Levites according to their families",
-   "Eleazar's line and the birth of Phinehas",
-   "the high-priestly line (Aaron, Eleazar, Phinehas, the zealous priest, Numbers 25:7-13)",
-   "the conclusion of the genealogy, the priestly descent established"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Keil and Delitzsch"
+  ],
+  "range": "17-30",
+  "pericope_label": "The Levite line, and the return to the charge",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The genealogy identifying Aaron and Moses, the deliverers: 'these are that Aaron and Moses, to whom the LORD said, Bring out the children of Israel from the land of Egypt according to their armies' — the genealogy (vv.14-25) concluding by identifying 'that Aaron and Moses' — the very men to whom God gave the charge (v.13) to bring Israel out (the establishing of the deliverers' descent and authority, the purpose of the genealogy, to mark the lineage of the commissioned deliverers); the charge — to bring Israel out 'according to their armies' (by their hosts, in ordered ranks, as the armies of the LORD, Exodus 12:41, 'all the hosts of the LORD went out,' the deliverance of the ordered nation, the commission to the deliverers); 'according to their armies' (Israel brought out as ordered hosts, the armies of the LORD, the marshalled nation, Exodus 12:41; 13:18, the deliverance of the people in their tribes and ranks, the providence, the seventy grown into an army) — Ellicott, Gill, Calvin, Wesley."
+    "summary": "Gill holds Jochebed to have been Amram's aunt, since Numbers says expressly she was a daughter of Levi born in Egypt, though the Vulgate, Septuagint, Samaritan and Syriac all make her his uncle's daughter, as does Polyhistor after Demetrius. He thinks Izhar's sons named for Korah's sake, a remarkable history following in the next book, and canvasses three views of Putiel — Lightfoot's, an Egyptian convert, perhaps of the stock of Potipherah among whom Joseph had sown true religion; the Targum of Jonathan and Jarchi, who make him Jethro; and Aben Ezra, whom he prefers, an Israelite whose name cannot now be explained. On the emphatic naming he reports the puzzle that Aaron stands first here and Moses first in the next verse, with Aben Ezra accounting for it by Aaron's seniority and his prophesying in Egypt first, Jarchi taking the reversal to show them equal, and Gill himself allowing that the historian may simply not have cared. The last verse he treats as a bare repetition. Calvin seizes the word armies for a contrast between the armies of a nation and two abject men who could never have borne so weighty a burden had God not worked through their hands beyond every hope: what was less probable than that a multitude enough to make many nations should obey two men and migrate against a powerful king's will? What no earthly king could effect with all his terror, God did by two unwarlike men, one of whom kept deprecating the commission. He notes an ambiguity in the closing verses, which might mean that God spoke in Midian and then in Egypt after some time elapsed, though he prefers to take the three together."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke goes with the versions against Gill on Jochebed: the word is of uncertain force, Parkhurst showing it serves for an uncle and also for an uncle's son, and the Vulgate elsewhere rendering it my paternal cousin, so that the best critics suppose her a cousin-german and not an aunt. He observes that though Korah became a rebel, Moses in his impartiality set the name among his own progenitors; construes Elisheba as the oath of the Lord and makes her sister to Nahshon; takes the armies for regularly arranged troops in battalions, whence God has the name Lord of hosts; and would begin the seventh chapter at the resumption, the sixth ending completely at the naming of the two. Wesley draws the rule that Levites might marry into any tribe, no confusion or loss of inheritance following, and answers the renewed objection from the charge itself — speak all that I say unto thee, as a faithful ambassador, for those who go on God's errand must not shun to declare his whole counsel."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott needs no softening on the marriage: unions with aunts and nieces were not unlawful before the Law, and were common throughout the East and at Sparta. He adds that Korah's sons did not share his sin and so did not die with him but headed important families, that Amminadab and Naashon stand among David's ancestors and so appear in the genealogies of our Lord, Naashon being prince of Judah at the Exodus, and that the term armies is used of Israel here first, referring it to the quasi-military organisation given during the struggle with Pharaoh, which let them leave Egypt not a disorderly mob but in array."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Was Jochebed Amram’s aunt or his cousin?",
+    "sides": [
+     {
+      "position": "his aunt; Numbers says expressly that she was a daughter of Levi born to him in Egypt",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "his cousin-german; the word serves for an uncle’s son as well as an uncle, and the versions render it so",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the aunt, and no difficulty in it — such marriages were not unlawful before the Law and were common in the East and at Sparta",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why does Aaron stand before Moses here and after him in the next verse?",
+    "sides": [
+     {
+      "position": "Aaron was the elder and prophesied in Egypt first, so the order may be the writer’s modesty",
+      "holders": [
+       "Aben Ezra, as reported by Gill"
+      ]
+     },
+     {
+      "position": "the reversal is deliberate, to show the two equal",
+      "holders": [
+       "Jarchi, as reported by Gill"
+      ]
+     },
+     {
+      "position": "the historian may simply not have cared; the point of the words is to mark the persons out to future ages",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where should the chapter end?",
+    "sides": [
+     {
+      "position": "the seventh chapter should begin at the resumption, the sixth ending completely at the naming of the two",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "the three closing verses should be read together, not separated",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "These are that Aaron and Moses, to whom the LORD said, Bring out the children of Israel from the land of Egypt according to their armies",
-   "the genealogy identifying Aaron and Moses, the deliverers",
-   "the deliverers' descent and authority established (v.13)",
-   "Israel brought out as the ordered armies of the LORD (Exodus 12:41; 13:18)"
+   "Amram took him Jochebed his father’s sister to wife",
+   "Aaron took him Elisheba, daughter of Amminadab",
+   "these are that Aaron and Moses, to whom the LORD said, bring out the children of Israel according to their armies",
+   "behold, I am of uncircumcised lips, and how shall Pharaoh hearken unto me?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses and Aaron the ones who spoke to Pharaoh: 'these are they which spake to Pharaoh king of Egypt, to bring out the children of Israel from Egypt: these are that Moses and Aaron' — the verse confirming that the Moses and Aaron of the genealogy (vv.14-26) are the very men who spoke to Pharaoh (Exodus 5:1) to demand Israel's release (the establishing of their identity and authority, the conclusion of the genealogy, the deliverers identified, ready to resume the narrative, vv.28-30); the confirmation (Moses and Aaron the ones who spoke to Pharaoh, Exodus 5:1) — the deliverers' identity established (the genealogy's purpose fulfilled); 'these are that Moses and Aaron' (the order, Moses named first here, Aaron first in v.26, the two deliverers, the leader and the priest, the conclusion of the genealogy, the resuming of the narrative, vv.28-30, the renewed charge) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "These are they which spake to Pharaoh king of Egypt, to bring out the children of Israel from Egypt: these are that Moses and Aaron",
-   "Moses and Aaron the ones who spoke to Pharaoh",
-   "the deliverers' identity and authority established (Exodus 5:1)",
-   "the conclusion of the genealogy, the narrative resumed (vv.28-30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The resuming of the narrative of God's charge: 'and it came to pass on the day when the LORD spake unto Moses in the land of Egypt' — after the genealogy (vv.14-27), the narrative resuming (taking up from v.13), recalling the day the LORD spoke to Moses in Egypt (the resuming of the account, the renewed charge, vv.29-30, the bridge back to the commission); the LORD's speaking (the renewed charge, vv.10-13) — the resuming of the narrative (the word of God to Moses); 'in the land of Egypt' (the place of the commission, Egypt, where the deliverance would be wrought, the resuming of the account, the renewed charge to go to Pharaoh, vv.29-30, the narrative continued) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass on the day when the LORD spake unto Moses in the land of Egypt",
-   "the resuming of the narrative of God's charge",
-   "the account taken up again after the genealogy (v.13)",
-   "the bridge back to the commission (vv.29-30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The renewed charge sealed with 'I am the LORD': 'that the LORD spake unto Moses, saying, I am the LORD: speak thou unto Pharaoh king of Egypt all that I say unto thee' — the LORD renewing the charge, again declaring 'I am the LORD' (the covenant Name, the ground of the commission, vv.2, 6, 8) and bidding Moses speak to Pharaoh all that God commanded (the renewed commission, the authority of the Name, the deliverance pressed); 'I am the LORD' (the covenant Name again, the ground of the charge) — the authority of the commission (the LORD himself the sender, the assurance grounded on the Name); 'speak thou unto Pharaoh king of Egypt all that I say unto thee' (Moses to deliver God's full message to Pharaoh, the faithful embassy, speaking all God commanded, the renewed commission, the deliverance pressed, despite Moses' objection, v.30) — Keil and Delitzsch, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "That the LORD spake unto Moses, saying, I am the LORD: speak thou unto Pharaoh king of Egypt all that I say unto thee",
-   "the renewed charge sealed with 'I am the LORD'",
-   "the authority of the commission grounded on the covenant Name (vv.2, 6, 8)",
-   "Moses to speak all God commanded to Pharaoh (v.30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses' renewed objection of his uncircumcised lips: 'and Moses said before the LORD, Behold, I am of uncircumcised lips, and how shall Pharaoh hearken unto me?' — Moses repeating his objection (v.12): his 'uncircumcised lips' (his faltering, ineloquent speech, Exodus 4:10, the renewed diffidence, the weakness of faith, the servant still pleading his unfitness, the objection that God would answer, Exodus 7:1-2, giving Aaron as his mouth); Moses' renewed plea (his poor speech, v.12) — the diffidence (the weakness of faith under the great task, the objection repeated); 'how shall Pharaoh hearken unto me?' (Moses' discouragement, the proud Pharaoh unlikely to hear the faltering messenger, the weakness overruled by God, the deliverance not hindered by Moses' frailty, the objection that God would answer, ch. 7, making Moses 'a god to Pharaoh,' Aaron his prophet) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses said before the LORD, Behold, I am of uncircumcised lips, and how shall Pharaoh hearken unto me?",
-   "Moses' renewed objection of his uncircumcised lips",
-   "the renewed diffidence and weakness of faith (v.12; Exodus 4:10)",
-   "overruled by God's power, soon answered (Exodus 7:1-2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
