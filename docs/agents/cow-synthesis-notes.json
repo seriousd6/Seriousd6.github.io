@@ -6305,6 +6305,58 @@
       "book": "genesis",
       "chapter": "35",
       "note": "The trim burden recorded in note 557 did not improve and is now the dominant cost of a chapter. Across the thirteen entries of genesis 38 and genesis 35 the first draft averaged about 40 per cent over the 650-word ceiling, the worst single case being 1282 words for an entry that had to land at 635, and every entry needed between six and eleven trimming passes. The cause is visible in the source profile rather than in the writing: both chapters run five to seven voices at nearly every verse, and a span of three or four such verses offers twenty to thirty distinct items where the entry has room for ten or twelve. Drafting to a 700-word target does not help when the selection is made while writing rather than before it. What did work, in the later entries, was listing the items first and striking two-thirds of them before a sentence was written; what did not work was shaving clauses, which reliably returned five to nine words a pass. The discipline to carry forward is to fix the item list before drafting, and to treat any first draft over 800 words as a selection failure to be re-selected rather than trimmed."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "12",
+      "verses": [
+        "8",
+        "14",
+        "20",
+        "32",
+        "38"
+      ],
+      "note": "Jamieson stride-6 confirmed for an ELEVENTH consecutive chapter. exodus 12 Jamieson keys: 8, 14, 20, 32, 38 - offset 2 mod 6, five members, gap at 26. Running table: joshua 10 (offset 1, 7 members, gap 31), 1corinthians 7 (5, 6, none), hebrews 11 (3, 5, gap 21), romans 8 (2, 7, none), romans 9 (4, 3, gaps 10/16), 1corinthians 15 (0, 7, gap 30), leviticus 27 (4, 6, none), judges 16 (3, 4, none), exodus 28 (1, 4, gaps 19/25/31), judges 19 (3, 5, none), exodus 12 (2, 5, gap 26). Offset 2 has now appeared twice (romans 8, exodus 12). The residue here is drawn from GENESIS, the preceding book: v8, v14 and v32 carry Joseph material (his mourning for Jacob, his forgiveness of his brothers, the embalming and Egyptian funeral), v20 is the Shoterim, and v38 is Egyptian brickmaking under Thothmes III. This is the second chapter after judges 19 where the residue crosses backward into the previous book, and it fits the same model: a single row pointer walking a canonical-order index at a fixed stride and lagging its target, so that an early chapter in a book draws residue from the end of the book before. Exodus 12 is early in Exodus and the residue sits at the end of Genesis, roughly a dozen chapters behind. Eleven chapters, seven books, every residue class mod 6 attested, both same-book and cross-book lag, and duplicate rows within the residue (documented at judges 19). The Jamieson tree should be re-fetched wholesale."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "12",
+      "verses": [
+        "51"
+      ],
+      "note": "Scraped page chrome present at exodus 12:51, as predicted. The sweep filed at judges 19 found 1,100 of 1,189 chapters carrying StudyLight.org page furniture inside a Charles Ellicott block, 870 of them on the chapter's last verse. exodus 12 conforms exactly: 983 junk words at v51, the chapter's final verse, inside Ellicott's block. CONSEQUENCE, MEASURED ON THIS CHAPTER: synthesis-loop.py size reported 46,529 usable source words; the real figure is about 45,546. This is the first chapter in the loop where the inflation could have changed a scheduling decision under the owner's 40,000-word rule — it did not here, since both figures are over the line, but a chapter reporting 40,800 would be under it in reality. NOTE ALSO a second, unrelated tail defect visible in this chapter: Gill's block at v51 ends with sacred-texts.com navigation ('Next: Exodus Chapter 13 Sacred Texts | Bible - Previous: John Gill's Exposition of the Entire Bible... Index Next: ...'). That is a different host and a different marker set from the Ellicott/StudyLight problem, and it will NOT be caught by the detector proposed at judges 19. A corpus sweep for 'Sacred Texts | Bible', 'sacred-texts', and the 'Next: ... Index Next:' navigation pattern in Gill blocks should be run alongside the StudyLight sweep before either is used to clean the tree."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "12",
+      "note": "SECOND SCRAPED-CHROME DEFECT, MEASURED. Following the exodus 12:51 observation I swept the cow tree for the markers 'Sacred Texts | Bible', 'sacred-texts' and the navigation pattern 'Index Next:'. RESULT: 110 chapters affected, 109,956 junk words, an average of about 1,000 per affected chapter, and every single occurrence falls inside a JOHN GILL block — 110 of 110, no other voice. 105 of the 110 sit on the chapter's last verse. This is a second, independent instance of the same failure mode already documented for Ellicott/StudyLight (1,100 chapters, 1.44M words): the scraper captured the host page's own navigation furniture along with the commentary, and it lands at the end of the last block the voice has in the chapter. The two defects are DISJOINT IN VOICE AND HOST — Ellicott from StudyLight.org, Gill from sacred-texts.com — which means the corpus was assembled from at least two different scrapes with the same bug, and that any cleanup must sweep for both marker sets rather than one. Combined totals across both defects: about 1,210 chapter-verses carrying roughly 1.55 million junk words, inflating every reported usable-source-word figure by 1,000 to 2,300 words per chapter depending on whether one or both voices are hit. Fix for both is identical and needs no re-fetch: truncate the voice block at the first marker, since genuine commentary always precedes it. Worth also sweeping for a third host before concluding the list is complete — two independent instances found in two consecutive batches is not strong evidence that there are only two."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "12",
+      "verses": [
+        "4",
+        "46"
+      ],
+      "note": "Calvin twice refuses a typological reading available to him in the same chapter, and says so explicitly. At v4-6, on why the flesh was roasted and not boiled: 'I prefer to be ignorant as to why He required the flesh to be roasted and not boiled, rather than to invent such unfounded subtleties, as that Christ was, in a manner, roasted on the Cross.' At v46, on the unbroken bone: 'I am not certain why God desired no bone to be broken... For I fear there is too much subtlety in the explanation which some give, that the virtue of Christ, which is represented by the bones, is not diminished whilst we feed on His flesh' — offering instead the plain suggestion that it was a further sign of haste. This is notable because Calvin is elsewhere in this same chapter the most freely typological voice in the catena (the lamb's perfection showing forth the celestial purity of Christ at v5, the passover answering to the Holy Supper at v24, the paschal lamb instructing the ancients about redemption to come at v46). So the refusals are not a general reticence about typology but a discrimination within it: he accepts the figure where the New Testament itself draws it and refuses it where the correspondence rests only on a physical detail of the rite. That distinction was preserved in both entries rather than flattened, since it is one of the few places in this corpus where a commentator states a criterion for when a type may be pressed. Compare Clarke at judges 19:42, who suppressed part of his own commentary and refused to apologise, and Clarke at exodus 28:42, who allowed only four general senses and warned against being wise above what is written — three separate instances now of commentators drawing an explicit line around allegory."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "12",
+      "verses": [
+        "40"
+      ],
+      "note": "Four-to-one split on the length of the Egyptian sojourn at v40, with Ellicott alone defending the Hebrew. Clarke calls the statement 'extremely difficult' on all hands, reports Kennicott's rejection of two harmonisations — extending Egypt to include Canaan, and stretching 'the children of Israel' to cover Israel, Isaac and part of Abraham's life, of which Kennicott says 'by this method of reckoning we might arrive at anything but truth, which we may presume was never thus conveyed by an inspired writer' — and adopts the Samaritan Pentateuch's longer reading ('and of their fathers... in the land of Canaan and in the land of Egypt'), supported by the Alexandrian Greek and by Paul, giving 215 years in Canaan plus 215 in Egypt. Gill reports the same expansions from the Greek, the Samaritan, both Talmuds and Aben Ezra and states flatly that Israel was not in Egypt much above 200 years. Calvin independently puts the maximum at 230. Against all three, Ellicott renders the plain Hebrew 'which they sojourned in Egypt' and defends 430 years in Egypt with two supports that do not depend on each other: the prophecy to Abraham that his seed should be a stranger in a land not theirs and serve them 400 years, which he takes of Egypt and not Canaan, and the genealogy of Joshua placing him in the eleventh generation from Jacob, noting that the other genealogies are more or less abbreviated. This is the cleanest textual-versus-internal-evidence disagreement encountered in this corpus so far: three voices resolve it by preferring a variant reading, one by defending the received text from independent data. Carried as an explicit debate."
     }
   ]
 }
