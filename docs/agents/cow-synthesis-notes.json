@@ -6395,6 +6395,37 @@
       "book": "exodus",
       "chapter": "10",
       "note": "The discipline proposed at the end of note 577 was tried on this chapter and it works, though it does not solve the problem. For every one of the seven entries the items were listed from the dump and struck to about twelve before a sentence was written. First drafts came in at 918, 927, 935, 938, 953, 954 and 979 QA words against a 650 ceiling — an average overshoot of 45 per cent, which is no better than genesis 35, but the shape of the trimming changed. Where the earlier chapters needed eight to eleven passes each and lost five to nine words a pass, these needed four to seven, and the first pass in each case removed 90 to 180 words by dropping whole items that had already been identified as the weakest. The residual overshoot is not a selection failure but a length-estimation failure: twelve items of grounded prose from five or six voices simply runs to about 900 words, so the real target is nine items, not twelve. That is the number to try next."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "3",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JFB donor residue at stride 6, five positions, the cleanest instance of the pattern recorded so far. The Jamieson, Fausset and Brown blocks fall at verses 4, 10, 16, 22 and 28 — every sixth verse from 4 to the end of a twenty-nine-verse chapter, with no other JFB key anywhere in it. None of the five touches Deuteronomy. Verses 4 and 10 carry one and the same block on Israel presuming to go up the hill after the report of the spies (Numbers 14); verse 16 carries a note on the omer as the tenth part of an ephah; verse 22 a note on the proportions of the meat offering; verse 28 a note on the proselyte's share in Israel's privileges. This is the twentieth consecutive chapter with the fault, and the first where the stride is visible across five positions with nothing else present to obscure it. Taken with the single-instance case at exodus 10:1, where the chapter had only one JFB key, the natural reading is that the JFB harvest is offset by a fixed step against the verse index and simply lands wherever that step falls."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "3",
+      "verses": [
+        "29"
+      ],
+      "note": "StudyLight chrome tail on the chapter's last verse, ten for ten across ten books and both testaments. The Ellicott block at verse 29 gives three usable sentences on Beth-peor as Moses' burial-place and on this verse concluding the recapitulation from Horeb, then runs into the site footer, stylesheet and navigation menus; Gill's block at the same verse ends with the chapter index links. Ten consecutive terminal verses, in books as far apart as Genesis and Acts, settles the diagnosis: the fetcher is not detecting the end of the commentary body on a chapter's final key. Every one of these chapters has had to be worked around by hand at the last span."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "3",
+      "note": "The nine-item target proposed at the end of note 581 was tried here and is close to right. Four entries were drafted from item lists cut to roughly ten before writing, and the first drafts came in at 923, 940, 966 and 1036 QA words — still 45 to 60 per cent over the 650 ceiling, so ten grounded items from five or six voices continues to run near 950 words. The useful finding is the arithmetic behind it: a grounded item, written as a full sentence with its attribution, costs about ninety words. Nine items is therefore about 810, and seven is about 630. Seven is the number that actually fits, and the entries that trimmed fastest here were the ones where three items were struck outright in the first pass rather than shaved. The counting rule to carry forward is that an entry holds seven items, not nine and not twelve, and that anything past the seventh should be selected only if it is short enough to run as a clause rather than a sentence."
     }
   ]
 }
