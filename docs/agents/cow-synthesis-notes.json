@@ -6177,6 +6177,44 @@
         "40"
       ],
       "note": "Content-free cross-reference block. Clarke's entry at exodus 28:40 consists solely of the words 'For glory and for beauty - See Clarke's note on Exo 28:2.' There is no commentary to summarise, so Clarke was excluded from the 39-41 entry via EXCL_BY_ENTRY and appears in excluded_voices rather than being named in prose with nothing behind him. This is a small but recurring shape in the Clarke tree (compare his v9 'Two onyx stones - See Clarke on Exo 25:7' and his v4 entries, which are partly cross-references). Worth adding to the picker's or the linter's awareness: a voice block whose whole body is a 'See Clarke's note on' or 'See Clarke on' pointer carries no content, and counting it toward a verse's voice total overstates how well covered that verse actually is. A one-line heuristic would catch it: block under about 25 words and matching /See (Clarke'?s? )?note on/."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "19",
+      "note": "CORPUS-WIDE SCRAPED PAGE CHROME — measured. Following the defect first filed at exodus 28:43 this batch, I swept the whole cow tree for the markers 'StudyLight', 'Copyright Statement' and the CSS selector '.sub-menu{'. RESULT: 1,100 of 1,189 chapters are affected (92.5 percent), carrying 1,437,343 junk words in total, an average of about 1,307 per affected chapter. Every single occurrence falls inside a Charles Ellicott voice block — 1,100 of 1,100, no other voice touched. 870 of the 1,100 sit on the chapter's LAST verse; the remaining 230 sit on an earlier verse, which is consistent with Ellicott simply having no block on the true last verse of those chapters, so the footer attaches to his final block instead. The junk is the StudyLight.org page furniture: a chapter navigation strip, a copyright and terms-of-use footer, the site's raw CSS, and its full resource menu (Bible Commentaries (144), Bible Dictionaries (26), and so on). CONSEQUENCE FOR THE LOOP: scripts/synthesis-loop.py size does not strip it, so every reported usable-source-word figure is inflated by roughly 1,300 words. judges 19 was sized at 15,180 and exodus 28 at 33,449; both are about 1,300 too high. That is only 4 percent at exodus 28's scale but nearly 9 percent at judges 19's, and it will matter most for the small chapters where the two-chapter budgeting decision is closest. FIX: truncate each Ellicott block at the first occurrence of 'Copyright Statement', '.sub-menu{' or 'StudyLight' — no re-fetch needed, the genuine commentary always precedes the marker. This should be done in the sizer at minimum, and ideally as a one-time clean of the tree."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "19",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson stride-6 confirmed for a TENTH consecutive chapter. judges 19 Jamieson keys: 3, 9, 15, 21, 27 - offset 3 mod 6, five members, NO gaps. Running table: joshua 10 (offset 1, 7 members, gap 31), 1corinthians 7 (5, 6, none), hebrews 11 (3, 5, gap 21), romans 8 (2, 7, none), romans 9 (4, 3, gaps 10/16), 1corinthians 15 (0, 7, gap 30), leviticus 27 (4, 6, none), judges 16 (3, 4, none), exodus 28 (1, 4, gaps 19/25/31), judges 19 (3, 5, none). Offset 3 has now appeared three times, all three in Judges or Hebrews. TWO NEW OBSERVATIONS. (1) The residue here is drawn from JOSHUA, not from Judges: v3 is Joshua's commission as military leader with the promise repeated from Deuteronomy, v9 and v15 are both the Shoterim note on Exodus 5 and Deuteronomy 20, v21 and v27 are both Rahab and the spies from Joshua 2. So for the first time the residue comes from the PRECEDING BOOK rather than from earlier in the same book. Taken with the same-book backward lag seen at romans 9, leviticus 27 and exodus 28, this is consistent with a single continuous row pointer walking a canonical-order index and simply lagging the target, crossing the book boundary when the lag exceeds the distance to the start of the book. Judges 19 is early in Judges, so a lag of roughly a dozen chapters lands in Joshua. (2) REPEATED BLOCKS WITHIN THE RESIDUE: v9 and v15 carry the identical block, and v21 and v27 carry closely related Rahab material. This is the repeated-block defect first filed at 1corinthians 15 (where one Cyril block served seven verses) now appearing inside the Jamieson stride-6 residue, which suggests the two defects share a mechanism: a pointer that fails to advance stamps the same row more than once. Ten chapters, six books, every residue class mod 6, same-book and cross-book lag, and now duplicate rows: the Jamieson tree needs a wholesale re-fetch."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "19",
+      "verses": [
+        "22"
+      ],
+      "note": "Direct lexical collision on 'sons of Belial' at v22. Ellicott: 'It is only by a deeply-rooted misconception that Belial is written with a capital. The word is not the name (as is supposed) of an evil spirit, but an ordinary noun, sons of worthlessness, i.e. worthless fellows... Later it became a kind of proper name.' Henry, on the same verse: 'The sinners are here called sons of Belial, that is, ungovernable men, men that would endure no yoke, children of the devil (for he is Belial), resembling him, and joining with him in rebellion against God and his government.' Henry asserts precisely the identification Ellicott calls a misconception, and does so parenthetically as though it were common ground. Keil sits between them, settling only that the construct state treats the phrase as a single idea, 'people of worthless fellows', which supports Ellicott's grammar without engaging Henry's theology. This was carried into the synthesis as an explicit debate rather than harmonised, since flattening it would erase a genuine two-century shift in how the word was understood. Worth watching for at other Belial verses in the corpus (Deuteronomy 13:13, 1 Samuel 2:12, 2 Corinthians 6:15) to see whether the same split recurs."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "19",
+      "note": "Ellicott reaches for Milton in Judges, twice in two chapters. At judges 16:28 he faults Milton for reading an austere grandeur into Samson ('rather Milton himself than the Jewish hero') and at 16:31 quotes him approvingly; here at judges 19:22 he quotes Paradise Lost on 'the sons Of Belial, flown with insolence and wine... Witness the streets of Sodom, and that night In Gibeah, when the hospitable door Exposed a matron to avoid worse rape.' In both chapters the poet is doing evidential work for him, supplying the reception history of the episode alongside Hosea. This is a stable habit of the Ellicott tree in Judges and is worth expecting: where a Judges narrative had a strong afterlife in English letters, Ellicott is likely to cite it, and the synthesis should preserve the citation rather than compress it into 'later writers', since it is one of the few places in this corpus where a commentator treats literary reception as evidence about a text's effect. Also from this chapter: Ellicott twice steps outside the narrative to comment on historiography itself — at 19:28 he observes that the writer 'in his horror, will not say that she was dead', and that the omission of every detail and of any word about the characters' feelings 'is a striking example of the difference of the historic method of ancient and modern times'. That is a methodological remark of a kind almost absent elsewhere in the corpus."
     }
   ]
 }

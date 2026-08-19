@@ -1,1086 +1,498 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the same is observed before, referring to the times before the judges; a Levite took a concubine out of Bethlehem-judah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in those days, when there was no king in Israel, that there was a certain Levite... who took to him a concubine",
-   "the want of godly rule breeding corruption through every order",
-   "every man did that which was right in his own eyes (Judg. 21:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she was unfaithful, breaking the covenant; or she was angry and left him; was there four whole months."
-   }
-  ],
-  "debates": [
-   [
-    "Did the concubine play the harlot or merely leave in anger?",
-    "The witnesses note the Hebrew is read two ways: that she 'played the whore against him' (the AV, infidelity), or that she was angry and left him (so the LXX and some), the verb being capable of meaning to be offended. Gill notes both readings; either way the union was broken."
-   ]
-  ],
-  "outliers": [],
-  "themes": [
-   "his concubine played the whore against him, and went away from him unto her father's house",
-   "the fruit of an alliance not according to God's order, prone to breach",
-   "they have dealt treacherously against the LORD (Hos. 5:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "1-3",
+  "pericope_label": "And it came to pass in those days, when there was no king in Israel, that there was a certain Levite sojourning on the side of mount Ephraim, who took to him a concubine out of Bethlehemjudah. And his concubine played the whore against him, and went away from him unto her father’s house",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he arose from the place where he lived to go after her."
+    "prevalence": "single",
+    "summary": "Gill takes the note that there was no king in Israel as marking the period between Joshua’s death and the judges, set down to account for wickedness committed with impunity. On the disputed clause he reports the alternatives — the Targum’s despised him, Kimchi and Ben Gersom’s turning aside and returning to her father’s house — and supplies the argument that decides it for him, that had she been guilty of such a crime her husband would never have sought to reconcile her, since by the law of God she deserved not merely to be put away but to be put to death."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the harder reading, treating the elopement as adultery while noting that the Chaldee reads only insolence and contempt, and infers from her going unprosecuted that there was indeed no judge in Israel. His complaint falls on the father, who ought not to have countenanced his daughter’s sin, and who may well have made it possible, since children’s ruin is often owing very much to parents’ indulgence. He quotes Bishop Hall that there is no complaint of a disordered state but a Levite stands at one end of it, active in Micah’s idolatry and passive in the wickedness of Gibeah. On the errand he notes the point of law, that a husband who had put his wife away could not lawfully return to her, but that forgiveness was a virtue where she had gone of herself, and compares the promise to bring adulterous Israel into the wilderness and speak comfortably to her."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke assembles the ancient witnesses against the English rendering and finds them unanimous: neither the Latin, the Greek, the Targum nor Josephus takes the word to imply conjugal infidelity, giving instead that she left him, was angry with him, despised him, or was alienated from him; he adds Houbigant’s version to the same effect and concludes that they had contentions, that she ceased to love him, and that she went home to her father, reasoning further that a man would hardly follow an adulteress to speak to her heart. He reads the father’s gladness as hope of a complete reconciliation."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: he rejoiced, hoping to reconcile his daughter and her husband."
+    "summary": "Keil dates the account to the years immediately after Joshua’s death from the independent detail that Phinehas was then high priest, and sets out the three-chapter structure of crime, war and preservation of Benjamin; he notes that the Levite’s sojourning means he lived outside a Levitical town, renders the disputed clause without comment, and reads the following verb as bringing back her heart, rejecting the alternative pointing as a needless conjecture. Ellicott observes that four whole months is literally days, four months, which some make a year and four months, though he thinks it bears little on the story, and glosses speaking to her heart as bringing about a kindly reconciliation, taking the couple of asses to mean one was for the wife’s return."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the concubine did: Clarke marshals the Latin, Greek, Targum, Josephus and Houbigant to deny any infidelity, and Gill agrees on the ground that a guilty woman would have faced death rather than reconciliation, while Henry reads it as adultery and treats the absence of prosecution as evidence of lawlessness."
+  ],
+  "outliers": [
+   "Keil fixes the chapter’s date from a detail three chapters later, the high priesthood of Phinehas, rather than from anything in the narrative itself.",
+   "Henry directs the blame of the opening episode at the girl’s father rather than at either party to the marriage."
+  ],
   "themes": [
-   "her husband arose, and went after her, to speak friendly unto her, and to bring her again",
-   "the way of grace that pursues the wanderer to restore",
-   "the Son of man is come to seek and to save that which was lost (Luke 19:10)"
+   "no king in Israel",
+   "lawlessness",
+   "concubine",
+   "reconciliation",
+   "textual dispute"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
+   }
   }
  },
  "4": {
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "4-9",
+  "pericope_label": "And his father in law, the damsel’s father, retained him; and he abode with him three days: and it came to pass on the fourth day, when they arose early in the morning, that he rose up to depart: and the damsel’s father said unto his son in law, Comfort thine heart with a morsel of bread, and afterward go your way",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he prevailed upon him to stay some time with him."
+    "prevalence": "single",
+    "summary": "Gill keeps to the surface of the episode, that the father-in-law prevailed upon the Levite to stay some time, that on the fourth day the agreed period was up, that the sitting down was at table and not merely a return to their seats, and that the party finally rose from table having comfortably refreshed themselves."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supplies a practical reason for the delay rather than a grammatical one, that they tarried merely to avoid the heat of the day, which would have been very inconvenient in travelling; and he translates the phrase rendered the day groweth to an end as the day is about to pitch its tent, that is, it was near the hour when travellers ordinarily pitched their tents to take up their lodging for the night."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: him abiding three days, eating, drinking, and lodging."
+    "summary": "Ellicott gives the father two motives, the sacred Eastern rights of hospitality and a wish to win back the Levite’s heart to his erring daughter, then adds a third at the last detention: given the remorselessly savage revenge still permitted an Eastern husband for unfaithfulness, the father might well want assurance that the Levite meant no sanguinary retribution once he had her away. He renders the repeated formula literally as prop up thy heart, compares the Latin idiom, takes the next as an imperative to linger till the day turns on the authority of the Greek, Chaldee and Latin, rejects the marginal pitching time of the day for the bending or declining of the day, notes that home is literally to thy tent, and reads the Levite as self-indulgent and vacillating, first delaying unnecessarily and then hurrying in excess. Keil notes the unusual imperative form, translates tarry till the day turns, derives the disputed word from a root meaning to bend, defends the received form of the verb for turning back against the Greek and one Hebrew codex, explains the interchange of plural and singular from the party being plural while the decision rested with the man alone, and records that the Levite came to before Jebus, which is only two hours from Bethlehem."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the phrase rendered the day groweth to an end means: Clarke makes it the day pitching its tent, the hour of encampment, while Ellicott explicitly rejects that marginal rendering for the bending or declining of the day, with Keil’s etymology supporting him."
+  ],
+  "outliers": [
+   "Ellicott reads the father’s hospitality as partly defensive, a delaying tactic against the possibility that the Levite meant to kill his daughter once they were alone.",
+   "Ellicott alone assigns fault for the fatal lateness to the Levite’s own self-indulgence rather than to the father’s pressing."
+  ],
   "themes": [
-   "his father in law... retained him; and he abode with him three days: so they did eat and drink, and lodged there",
-   "the grace of hospitality, receiving and refreshing one another",
-   "distributing to the necessity of saints; given to hospitality (Rom. 12:13)"
+   "hospitality",
+   "delay",
+   "Hebrew idiom",
+   "travel customs",
+   "character"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the time the Levite had agreed to stay being up."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: most journeys were performed in the early morning."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.39
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Comfort thine heart with a morsel of bread, and afterward go your way",
-   "using even lawful comforts with discretion, lest delay lead into trouble",
-   "redeeming the time, because the days are evil (Eph. 5:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they sat down at table, the Levite having risen to go."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the father said, tarry all night, and let thine heart be merry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Be content, I pray thee, and tarry all night, and let thine heart be merry",
-   "excess of hospitality and mirth keeping a man from his duty and way",
-   "as the crackling of thorns under a pot, so is the laughter of the fool (Eccl. 7:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he rose up from table to depart and proceed on his journey."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: his father-in-law urged him to stay."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the man rose up to depart, his father in law urged him: therefore he lodged there again",
-   "holding to right resolutions, not lightly moved from one's course",
-   "be ye stedfast, unmoveable, always abounding in the work of the Lord (1 Cor. 15:58)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he rose with a full intention to take his leave and be gone."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: them tarrying until afternoon."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he arose early in the morning on the fifth day to depart... And they tarried until afternoon, and they did eat both of them",
-   "a course of small yieldings and lost time opening the door to trouble",
-   "walk while ye have the light, lest darkness come upon you (John 12:35)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they rose up, having refreshed themselves comfortably."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the father urging them to tarry, the day declining."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the day draweth toward evening, I pray you tarry all night",
-   "the accumulated delays of ease forcing travel at a perilous hour",
-   "the prudent man looketh well to his going (Prov. 14:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he was determined on his journey, seeing no end to the solicitations; came over against Jebus, which is Jerusalem."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man would not tarry that night, but he rose up and departed, and came over against Jebus, which is Jerusalem",
-   "the consequences of delay pressing upon a man; the wise order their goings in season",
-   "to every thing there is a season, and a time to every purpose (Eccl. 3:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "10-15",
+  "pericope_label": "But the man would not tarry that night, but he rose up and departed, and came over against Jebus, which is Jerusalem; and his master said unto him, We will not turn aside hither into the city of a stranger, that is not of the children of Israel; we will pass over to Gibeah. And they turned aside thither, to go in and to lodge in Gibeah: and when he went in, he sat him down in a street of the city: for there was no man that took them into his house to lodging",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the sun was going down apace and near setting."
+    "prevalence": "single",
+    "summary": "Gill follows the Targum in glossing the city of a stranger as a city of the children of the Gentiles, and reads the refusal as a testimonial to the Levite, a good man and conscientious, shunning all appearance of evil and the company of wicked men as became his profession. He raises a difficulty of his own, that one would think he would not have called it so had it been inhabited even in part by the children of Judah and Benjamin, and notes that at Gibeah they turned out of their road instead of passing by."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: Jebus was Jerusalem, then held by the Jebusites."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when they were by Jebus, the day was far spent; and the servant said... let us turn in into this city of the Jebusites",
-   "the strait of a lost day, pressed for shelter as night falls",
-   "the night cometh, when no man can work (John 9:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he would not turn into a city of the Gentiles, the Jebusites being of the seven nations; chose to pass over to Gibeah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "We will not turn aside hither into the city of a stranger, that is not of the children of Israel; we will pass over to Gibeah",
-   "the corruption of a professing people sinking below the heathen",
-   "such fornication as is not so much as named among the Gentiles (1 Cor. 5:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he urged them to get on as fast as they could."
+    "prevalence": "single",
+    "summary": "Clarke supplies the history of Jebus, partly conquered by Judah after Joshua’s death while the Jebusites kept the stronghold of Zion until David finally expelled them. On the failure of hospitality he grants that there was probably no inn or house of public entertainment at Gibeah, so that lodging could come only by hospitality, but denies the general claim that there were no inns in those primitive times, citing the inn where Joseph’s brethren loosed their sacks, the house of Rahab, and the hostess at Gaza whose house Samson frequented."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: Ramah was only two miles beyond Gibeah."
+    "summary": "Ellicott argues from the Jebusites’ complete and undisturbed possession that the narrative falls early, times the journey — Jerusalem two hours from Bethlehem, so about five o’clock on arrival — and blames the father, whose unwise neglect to speed the parting guest greatly added to the perils of travelling a half-conquered country in such wild times. He identifies Gibeah as the Gibeah of Saul, one of the fourteen cities of Benjamin and the modern Tuleil el Ful, four miles further on Josephus’ reckoning, with Ramah two miles beyond; notes the brief Palestinian twilight and the danger of travelling after dark; suggests the Levite may have known Gibeah did not bear a good character, since where there are no public inns each town gets its character from travellers’ reports; corrects street to the open place or market-place, often outside the walls; and holds that the neglect of the first duty of the East proved at once the base condition into which Gibeah had fallen, the angels at Sodom having faced the same but for Lot. Keil records the servant’s proposal and the master’s refusal to enter a city of foreigners where there were none of the sons of Israel, and that the Levite remained in the market-place because no one received them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether inns existed in the period: Ellicott argues from their absence that towns acquired reputations by travellers’ report, while Clarke insists inns did exist and names three.",
+   "Why the Levite passed Jebus: Gill reads conscientious separation from the heathen, Ellicott a calculation about Gibeah’s reputation and a wish to press homewards."
+  ],
+  "outliers": [
+   "Ellicott lays the responsibility for the night at Gibeah on the father-in-law’s hospitality rather than on the Levite’s route.",
+   "Gill notes an inconsistency he cannot resolve, that the city is called a stranger’s though Judah and Benjamin are elsewhere said to have held part of it."
+  ],
   "themes": [
-   "let us draw near to one of these places to lodge all night, in Gibeah, or in Ramah",
-   "man purposes his way, but providence leads even prudent choices into trial",
-   "a man's heart deviseth his way: but the LORD directeth his steps (Prov. 16:9)"
+   "Jebus",
+   "Gibeah",
+   "hospitality",
+   "geography",
+   "foreboding"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they proceeded on their journey from near Jerusalem."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: they were evidently reluctant, the sun going down upon them."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.41
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sun went down upon them when they were by Gibeah, which belongeth to Benjamin",
-   "the consequences of lost time gathering, providence bringing men to their appointed trial",
-   "ye know not what shall be on the morrow (James 4:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they turned out of their road into the city to seek a lodging; no man took them into his house."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he sat him down in a street of the city: for there was no man that took them into his house to lodging",
-   "the want of hospitality marking a people fallen from love and the fear of God",
-   "I was a stranger, and ye took me not in (Matt. 25:43)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he came from his labour at even; he was of mount Ephraim, sojourning in Gibeah, but the men of the place were Benjamites."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there came an old man from his work out of the field at even... of mount Ephraim... but the men of the place were Benjamites",
-   "grace dwelling in the stranger while the natives are corrupt; righteousness not bound to birth",
-   "a faithful man who can find? (Prov. 20:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "16-21",
+  "pericope_label": "And, behold, there came an old man from his work out of the field at even, which was also of mount Ephraim; and he sojourned in Gibeah: but the men of the place were Benjamites. And the old man said, Peace be with thee; howsoever let all thy wants lie upon me; only lodge not in the street. So he brought him into his house, and gave provender unto the asses",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: coming into the city he looked up and saw the man."
+    "prevalence": "single",
+    "summary": "Gill notes only that the old man, though advanced in years and of some substance, still attended the business of his calling, which was very commendable, that he came in at the hour when men leave their labour, and that he showed the travellers the way to his house and bade them welcome in a kind and friendly manner."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry builds four points on the introduction: the rescuer was himself a sojourner and so knew the heart of a stranger; the Benjamites of all tribes had most reason to be kind to travellers, their ancestor having been born on the road nearby, yet were hard-hearted where an Ephraimite had compassion; he was old, retaining some of the expiring virtue of an Israelite when the rising generation was entirely corrupted; and he was the only labourer that evening brought home to Gibeah, the rest given up to sloth, so that abundance of uncleanness followed abundance of idleness as in Sodom. He wonders that the wicked men did not feign kindness to get a fairer opportunity, and concludes either they lacked the wit to be so designing or the wickedness to be so deceiving, or else none thought of it separately until they got together in the dark, bad people in confederacy making one another worse than any would be alone. He praises the host for anticipating the request rather than waiting to be asked, and for crediting the Levite’s account, since charity is not apt to distrust but hopeth all things. He also takes the Levite to have been bound for the sanctuary with an offering, and supposes the men of Gibeah might have been the less willing to receive him for it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke explains the provender, that in countries chiefly given to pasturage there was no hay, so they took great care of their straw, chopped it small, mixed it with barley, beans or pounded date kernels, made it into balls and fed their cattle with it, as straw cut into chaff is used in England. He paraphrases the old man’s reply as a refusal of the guest’s offer: keep your bread and wine and your straw, since you may need them before your journey ends, and I will supply all your wants."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: him asking, Whither goest thou? whence comest thou?"
+    "summary": "Keil notes that the old man was of the mountains of Ephraim and dwelt as a stranger in Gibeah, whose inhabitants were Benjaminites, a fact set down as a preliminary introduction to what follows; he renders the Levite’s words I walk at the house of Jehovah rather than I am going to the house of Jehovah, arguing that the verb with this preposition never means going to a place, for which the simple accusative serves, but going through or going with; and he glosses the host’s reply as an offer to provide for every want, recording that he mixed the fodder himself. Ellicott observes that the Levite asked only shelter and would provide for himself, that thy servants is the ordinary language of Eastern obsequiousness, that the greeting of peace is here an assurance of help rather than a salutation, and draws attention to the humane Eastern custom of attending first to the animals and to foot-washing as a first necessity after travel in hot countries where only sandals are worn."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the Levite says he is going to the house of the Lord or walking at it: Keil rejects the usual rendering on grammatical grounds, while Henry treats it as settled and builds an account of the Levite’s errand and of Gibeah’s hostility upon it."
+  ],
+  "outliers": [
+   "Henry treats the townsmen’s failure to feign hospitality as evidence about their character, arguing that the crime was improvised collectively after dark rather than planned by any of them alone."
+  ],
   "themes": [
-   "the old man said, Whither goest thou? and whence comest thou?",
-   "having an eye for the stranger and the needy whom others pass by",
-   "look not every man on his own things, but every man also on the things of others (Phil. 2:4)"
+   "hospitality",
+   "sojourner",
+   "Sodom parallel",
+   "Gibeah",
+   "Eastern custom"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he answers the last question first; said, I am going to the house of the LORD, and no man receiveth me."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I am now going to the house of the LORD; and there is no man that receiveth me to house",
-   "a people cold to God growing cold to his servants and the stranger",
-   "no man cared for my soul (Ps. 142:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he had straw to litter the asses and provender to feed them, brought with him."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: there was bread and provender, lacking nothing but lodging."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there is both straw and provender for our asses; and there is bread and wine also for me... there is no want of any thing",
-   "considerate in one's need, content with little, unwilling to burden others",
-   "having food and raiment let us be therewith content (1 Tim. 6:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he wished him peace and tranquillity of mind, let nothing distress him."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: all thy wants lie upon me, the old man taking the charge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peace be with thee; howsoever let all thy wants lie upon me; only lodge not in the street",
-   "the grace and duty of hospitality, freely receiving and providing for the stranger",
-   "be not forgetful to entertain strangers: for thereby some have entertained angels unawares (Heb. 13:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he showed him the way and in a kind and friendly manner bid him welcome."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: them washing their feet, eating, and drinking."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So he brought him into his house... and they washed their feet, and did eat and drink",
-   "the duty of hospitality done heartily, refreshing the weary stranger",
-   "use hospitality one to another without grudging (1 Pet. 4:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "22-24",
+  "pericope_label": "Now as they were making their hearts merry, behold, the men of the city, certain sons of Belial, beset the house round about, and beat at the door, and spake to the master of the house, the old man, saying, Bring forth the man that came into thine house, that we may know him",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were making their hearts merry with a glass after supper."
+    "prevalence": "single",
+    "summary": "Gill reports the scene without comment, that they were making their hearts merry with a glass of wine after supper and conversing about their country and friends when the door was beaten, that the master of the house opened and went out to reason with them, and that what he offered was his own daughter, a virgin, together with the concubine of his guest."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry glosses sons of Belial as ungovernable men who would endure no yoke, children of the devil, for he is Belial. He presses the Sodom parallel with a geographical aggravation, that the Dead Sea, the standing monument of God’s vengeance on Sodom, bounded Canaan not many miles from Gibeah, so that the men had seen it often and still did worse than Sodom; and he quotes Bishop Hall asking who would have expected such abomination from the loins of Jacob, when even the worst pagans were saints to them, and what it availed them to have the ark of God in Shiloh with Sodom in their streets, God’s law in their fringes but the devil in their hearts. He asks why fire did not fall as at Sodom and answers that God left the punishment to Israel’s sword and reserved his own for the future state. On the host’s offer he grants that he had no power to prostitute his daughter and ought not to have done evil that good might come, but pleads the surprise and terror, his concern for his guests, his too close regard for Lot’s example since the angels did not reprove Lot, and a possible hope of diverting them to their common harlots."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the men profligate fellows and genuine sodomites in practice, worse than brutes, a compound of beast and devil inseparably blended. On the host’s offer he refuses all mitigation: Lot made the same proposal and nothing can excuse either, and though the rights of hospitality were sacred in the East and a man would defend his guest at the cost of his life, how a father could make such a proposal about his virgin daughter must remain among the things that are incomprehensible."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the sons of Belial besetting the house."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the men of the city, certain sons of Belial, beset the house round about, and beat at the door",
-   "a professing people sunk to the very sin of Sodom where God is forsaken",
-   "the shew of their countenance doth witness against them; they declare their sin as Sodom (Isa. 3:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he went out to converse with them and reason with them."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: his plea, do not so wickedly."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Nay, my brethren, nay, I pray you, do not so wickedly... do not this folly",
-   "the duty to withstand and reprove open sin even against a multitude",
-   "have no fellowship with the unfruitful works of darkness, but rather reprove them (Eph. 5:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he offered his own daughter, a virgin, and the concubine of the Levite."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the offer to spare the man."
+    "summary": "Ellicott states that it is only by a deeply-rooted misconception that Belial is capitalised, the word being no name of an evil spirit but an ordinary noun meaning worthlessness, so that the phrase is worthless fellows, and only later becoming a kind of proper name. He notes the continuous, increasing knocking, the close resemblance to the Sodom narrative, and the horror the scene excited for centuries after, citing the prophet twice on the days of Gibeah and quoting Milton on the sons of Belial flown with insolence and wine; and he charges Josephus with dishonestly suppressing all the darkest features of the story. On the word folly he argues that so mild a term is chosen from no deficiency of moral indignation, since a crime too dark for ordinary reproach is more deeply expressed by a word the hearer corrects for himself, as Virgil calls a cannibal tyrant merely unpraised. Keil explains the construct state as treating the phrase as a single idea, observes that the demand was the very same made of Lot, notes the verb of gradual increase, glosses folly as shameful licentiousness, and says the old man sought as Lot had done to defend his guests by the sacred rights of hospitality."
    }
   ],
   "debates": [
-   [
-    "Was the old man's offer right or a sin?",
-    "The witnesses are clear the narrative records but does not approve it: like Lot at Sodom (Gen. 19:8), the old man proposed a real evil to prevent a worse, a grievous fault springing from fear and the lawless confusion of the times. Scripture sets it down as history, not as a pattern; we may never do evil that good may come (Rom. 3:8)."
-   ]
+   "Whether Belial is a proper name: Ellicott calls the capitalised form a deeply-rooted misconception and gives an ordinary noun, while Henry identifies Belial with the devil himself.",
+   "Whether the host’s offer of his daughter admits any excuse: Clarke says nothing can excuse it and calls it incomprehensible, while Henry pleads terror, concern for his guests, and the precedent of Lot."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott accuses Josephus of dishonesty in his retelling, a charge of bad faith rather than error.",
+   "Ellicott treats the mildness of the word folly as a deliberate rhetorical figure and supports it with a parallel from Virgil."
+  ],
   "themes": [
-   "here is my daughter a maiden, and his concubine; them I will bring out... but unto this man do not so vile a thing",
-   "a sinful doing of evil to prevent evil, recorded but not approved by Scripture",
-   "let us do evil, that good may come? whose damnation is just (Rom. 3:8)"
+   "sons of Belial",
+   "Sodom",
+   "hospitality violated",
+   "moral outrage",
+   "rhetoric"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  },
  "25": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "25-28",
+  "pericope_label": "But the men would not hearken to him: so the man took his concubine, and brought her forth unto them; and when the day began to spring, they let her go. Then came the woman in the dawning of the day, and fell down at the door of the man’s house where her lord was, till it was light. And he said unto her, Up, and let us be going. But none answered",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the men would not hearken to him."
+    "prevalence": "single",
+    "summary": "Gill offers a bleak guess about why the daughter was refused, that the men knew her very well and had no affection for her, perhaps because she was not handsome enough for them; he assumes the husband had not slept, thinking it scarcely reasonable that he should sleep quietly after such a riot, and takes his morning words to her as spoken on the supposition that she was asleep and that they should hurry away before worse befell."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke fixes responsibility by way of a verb, arguing that the word rendered simply took means rather to seize by violence, that the woman would not go out and her husband forced her out to save his own body, and that this shows how little he loved her and explains their earlier separation. He condemns all three men together — the men of Gibeah, the Levite who saved his body at the expense of his wife’s modesty, reputation and life, and the old man who would have saved his guest at the expense of his daughter — as characters humanity and modesty wish buried in everlasting oblivion. He notes that the English rendering of the night is too gentle for a Hebrew intensive that designates the frequency of the act, giving the fuller sense only in Latin; that the attackers’ turpitude could not bear the full light of day; and that the woman had strength to reach the door but not to knock, and fell down dead when she reached it."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: the abuse continuing all the night until the morning."
+    "summary": "Keil records that she fell before the door at first dawn and lay till sunrise, that her husband found her when he opened the door to go his way having given up all thought of recovering her, that her hands on the threshold means with outstretched arms, that she gave no answer having died of the night’s ill-treatment, and that he took the corpse upon the ass to carry it home. Ellicott comments instead on the telling: it would be scarcely possible to enhance the pathos and horror the sacred writer throws into these simple words; the writer in his horror will not say that she was dead; the clause reads not an ass but the ass, the one that had borne her living; and the omission of every detail, with no word at all about the Levite’s or the old man’s feelings, marks the difference between the ancient and modern historic method. He also takes the hands on the threshold as stretched toward her husband in one last agony of appeal, and reckons the Levite punished both for condoning what could not be condoned and for the cowardice or self-absorption that let him buy safety at such a price."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the text says the woman died: Keil and Clarke state it outright, while Ellicott observes that the writer deliberately refuses to say it.",
+   "How much blame attaches to the Levite: Clarke calls him graceless and groups him with the attackers and the host, Ellicott reckons him punished for cowardice and condonation, while Gill assumes he lay awake in distress and spoke in the morning thinking her asleep."
+  ],
+  "outliers": [
+   "Ellicott turns from the events to the historiography, treating the narrator’s refusal of detail and of comment as a deliberate feature of ancient historical method rather than as reticence or omission."
+  ],
   "themes": [
-   "the men would not hearken to him... and they knew her, and abused her all the night until the morning",
-   "the savagery to which unbridled sin descends, the weak devoured without mercy",
-   "their feet are swift to shed blood... and the way of peace have they not known (Rom. 3:15-17)"
+   "violence",
+   "complicity",
+   "narrative restraint",
+   "dawn",
+   "death"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the wicked who abused her had left her at dawn, at some distance; she fell down at the door where her lord was, till it was light."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.44
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the woman... fell down at the door of the man's house where her lord was, till it was light",
-   "the bitterness of suffering wrought by men's sin upon the innocent",
-   "the LORD heareth the poor, and despiseth not his prisoners (Ps. 69:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it is scarcely reasonable to think he slept quietly after such a riot; he found her fallen at the door, her hands upon the threshold."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the woman his concubine was fallen down at the door of the house, and her hands were upon the threshold",
-   "the fearful fruit of a nation's sin brought home to one household in grief",
-   "behold, and see if there be any sorrow like unto my sorrow (Lam. 1:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he spoke to her as supposing her asleep, to awake her; none answered, and he took her up upon the ass."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Up, and let us be going. But none answered. Then the man took her up upon an ass... and gat him unto his place",
-   "the wages of sin death; the cruelty of the wicked crying to heaven for justice",
-   "the voice of thy brother's blood crieth unto me from the ground (Gen. 4:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "29": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "29-30",
+  "pericope_label": "And when he was come into his house, he took a knife, and laid hold on his concubine, and divided her, together with her bones, into twelve pieces, and sent her into all the coasts of Israel. And it was so, that all that saw it said, There was no such deed done nor seen from the day that the children of Israel came up out of the land of Egypt unto this day: consider of it, take advice, and speak your minds",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he took the dead body, laid it in order, and divided it."
+    "prevalence": "single",
+    "summary": "Gill adds from Josephus that the messengers were commanded to declare what the cause of the woman’s death had been, so that those who saw the dismembered pieces were also made acquainted with the reason for them, and describes the husband taking the body from the ass and laying it in order before the act."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: he divided her and sent the pieces into all the coasts of Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he took a knife... and divided her... into twelve pieces, and sent her into all the coasts of Israel",
-   "great sin among God's people not to be hidden but brought to light to be judged",
-   "put away from among yourselves that wicked person (1 Cor. 5:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Clarke has no doubt a circumstantial account of the barbarity went with each piece, and thinks the pieces were themselves understood as an execration, that if the tribes would not avenge his wrongs they might be hewn in pieces like the murdered woman. He compares the ancient Highland custom of dipping a wooden cross in blood and sending it by a special messenger through all the clans, called the fire cross because at sight of it each clan lighted a beacon signalling a general rising. He reports that all were struck with the enormity of the crime and held it a sovereign disgrace to all the tribes, renders the summons literally as put it to yourselves, take counsel upon it, and speak, and marks it as the prelude to the council of the next chapter. He closes by saying he has passed over the chapter’s abominable transactions as lightly as he could and will make no apology for leaving some things untranslated, then draws his lesson: these people had no form of government and every one did what was right in his own eyes, their corrupt inclination being the measure of their conduct, so that the reader should bless God for wholesome laws and a vigorous magistracy."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: all that saw the pieces were made acquainted with the cause; they said, consider of it, take advice, and speak."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil renders the act as cutting the body up according to its bones, as slaughtered animals are cut in pieces, sent to all twelve tribes in the expectation that every viewer would say no such thing had happened since Israel came up out of Egypt; he glosses the closing imperative as make up your minds and say on, deciding how the wickedness is to be punished, and calls the sending a symbolical act. Ellicott gives the literal according to her bone, assigns one piece to each tribe with Benjamin probably included and no need to suppose one went to eastern Manasseh or Levi, observes that the narrative takes us back to wild times when men’s passions expressed themselves in wild and fierce expedients, and cites Saul’s pieces of an ox, the same practice among the ancient Scythians on Lucian’s report, and analogous Highland and modern Arab customs. He reads the response as vindicating the Levite’s judgement of his countrymen, the story thrilling through all Palestine and awaking a determined desire for retribution, the whole nation feeling the stain and the shame."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether all twelve pieces went to twelve distinct tribes: Ellicott includes Benjamin and rules out sending to eastern Manasseh or Levi, where Keil says only that they went to the whole territory."
+  ],
+  "outliers": [
+   "Clarke and Ellicott independently reach for the same Highland clan custom of the blood-dipped cross to explain the summons, Ellicott adding Scythian and modern Arab parallels.",
+   "Clarke ends by stating openly that he has suppressed part of his own commentary on the chapter and refuses to apologise for it."
+  ],
   "themes": [
-   "There was no such deed done nor seen from the day that the children of Israel came up out of... Egypt... consider of it, take advice, and speak",
-   "sin crying out so that none can be silent; the call to weigh evil and judge it",
-   "consider your ways (Hag. 1:7)"
+   "summons to war",
+   "symbolic act",
+   "twelve tribes",
+   "moral outrage",
+   "lawlessness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.37
+   }
   }
  }
 }
