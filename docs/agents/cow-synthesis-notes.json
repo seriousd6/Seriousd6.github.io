@@ -7858,6 +7858,110 @@
         "7"
       ],
       "note": "Chrysostom naming hazard avoided at vv.7-8. Calvin reports and rejects Chrysostom's reading of 'manifestation' (that the term is used because unbelievers recognise God only by visible miracles), but Chrysostom has no block anywhere in that span, so naming him would have produced a ghost of the note-683 citation type. Written as 'A third view he rejects as harsh and forced' with no name. Chrysostom is a declared voice in the chapter at vv.1, 12, 21 and 27, which makes the hazard easier to miss than usual — a voice present in the chapter is not thereby present in the span."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30"
+      ],
+      "note": "Jamieson, Fausset and Brown residue, TWENTY-SECOND consecutive chapter, and the eleventh with the contiguous-region signature. Keys 6, 12, 18, 24, 30: stride 6 from offset 0, five members, no gap. Content is Acts 21 in order — 21:33 with 28:17, then the reception at 21:18, then Paul constrained to justify his course against the Jewish complexion of Jerusalem Christianity, then the Ephesian Jews of 21:29, then the barracks in the fortress of Antonia at 21:34ff. A single sequential run of one chapter of Acts landing on a stride-6 key set in 1 Corinthians. This is the same signature proved at hebrews 9/10, where two adjacent chapters carried one unbroken run of 2 Corinthians. All five excluded. The fix remains a re-fetch of the Jamieson tree with a corrected book/chapter index, not per-chapter exclusion."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "11"
+      ],
+      "note": "John Lightfoot MISPLACED BY FIVE KEYS, a NEW defect pattern distinct from the Jamieson stride and from the Lightfoot off-by-one-chapter index diagnosed at acts 13. His block at key 11 is his note on 10:16, not on 10:11: it opens 'The cup of blessing' and carries the printed running head 'Ch.x.17.' from the folio edition. His other six blocks in this chapter (2, 4, 8, 10, 21, 25) are correctly placed and on topic, so the fault is a single displaced block, not a systematic offset here. Key 11 excluded. Also worth recording: the OCR of the Lightfoot blocks in this chapter is badly degraded — Greek and Hebrew are mangled throughout ('Moscs' for Moses, 'MDA OD' for the cup of blessing, 'aban saxon angels' at v10) — which limits how much of his material can be used at all."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "4",
+        "21",
+        "27"
+      ],
+      "note": "Cyril of Jerusalem MISPLACED, fifth consecutive batch touching this voice but a different fault from the duplication seen at acts 5, hebrews 9, acts 13 and hebrews 10. Here there is no duplication: three distinct blocks, but only the one at 10:4 belongs. It quotes 'the rock was Christ' and argues from it, and was used. The block at 10:21 is the NEXT SECTION of the same catechetical lecture (Moses and the Lord passing by with his glory) and has nothing to do with the cup of the Lord and the cup of devils. The block at 10:27 is from a different work entirely — the Archelaus and Manes disputation on 2 Corinthians 4:3-4, whether the God of this world blinds the minds of them that believe not — and has no bearing on eating what is set before you. Both dropped. As in the last four batches, scripts/synthesis_qa.py VOICE_LABELS holds the bare 'Cyril' and its regex requires a colon immediately after the label, so the catena head 'Cyril of Jerusalem:' matches nothing and the voice cannot be named in excluded_voices; SILENT_BY_ENTRY was again the only mechanism. Owner item, now five batches old: widen the VOICE_LABELS patterns to admit the qualifying phrase (also blocks 'Theodoret of Cyrrhus')."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "3",
+        "4",
+        "13",
+        "31"
+      ],
+      "note": "The John Gill 200-word truncation cap appears again: five of his thirty-three blocks in this chapter (10:1, 10:3, 10:4, 10:13, 10:31) end at exactly 200 words, each cut mid-sentence. Same defect recorded at hebrews 9, where 8 of 28 Gill blocks were capped. The Lightfoot blocks in this chapter show the same 200-word ceiling (10:2, 10:8, 10:10, 10:11, 10:25). It is therefore a scrape-side cap applied per block, not a property of any one commentator, and a re-fetch would recover real material. No StudyLight chrome tail in this chapter, so the sizer's 59,774 usable source words is accurate as reported."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "4",
+        "8",
+        "9",
+        "38"
+      ],
+      "note": "Three substantial splits in the first half of the chapter. (1) The rock that followed (10:4): Lightfoot, Clarke and Calvin all take the word as metonymy for the stream of water that accompanied the camp, Clarke conceding there is no direct proof, while Ellicott holds that Paul deliberately ADOPTS the Jewish tradition of a fragment of rock that travelled with them, in preference to the narrative in Numbers, because it better illustrated God's abiding presence; Robertson reports that view from Baur and others and finds it hard to believe, allowing at most an allusion given a spiritual turn. (2) The twenty-three thousand against Moses's twenty-four thousand (10:8): Clarke and Wesley add the executed heads of the people to those who fell by the plague, Barnes reports both that solution (from Grotius, with the thousand assigned to Phinehas) and Macknight's round-numbers alternative, Calvin holds that no reconciliation is needed at all, and Ellicott declines every harmonisation, judging the point historically unessential and suggesting the apostle quoted a small fact from memory or followed a Greek copy with these figures. (3) 'Tempt Christ' or 'tempt the Lord' (10:9): Clarke defends 'Christ' as best attested and builds on it the identity of the Old Testament Jehovah with Christ, while Robertson holds the best manuscripts read 'the Lord' and Ellicott agrees on internal grounds, explaining the third reading 'God' as a marginal note intended to relieve the difficulty of saying Israel tempted Christ."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "14",
+        "27",
+        "28",
+        "32",
+        "33"
+      ],
+      "note": "Two further splits in the second half. (1) How grave the temptation is (10:14): Barnes and Ellicott treat the idol feasts as the peril the whole chapter has been building towards, Ellicott reducing the command to a rule — not how near one may get to idolatry but how far from it — while Clarke, unusually for him, calls it a trial of no great magnitude requiring only a moderate portion of grace and circumspection to escape. (2) Accepting a heathen's invitation (10:27): Barnes is expansive, insisting the going is plainly allowed since the Saviour accepted such invitations and Christianity does not abolish the courtesies of social life or make men misanthropes and hermits, and Robertson says the guest should behave like a gentleman; but Calvin reads the wording 'if ye be disposed to go' as an indirect signal that the writer does not altogether approve and would rather they declined, refusing to forbid it outright only because the thing is indifferent. Related: at 10:28 Barnes argues the man who raises the scruple must be a fellow guest, since a host would hardly point out food on his own table whose lawfulness he doubted, while Gill leaves open that it is the unbeliever testing his guest to draw him into a snare. And the closing commands are qualified almost as soon as stated: Wesley adds 'if, and as far as, it is possible', Gill excepts an incumbent duty such as the pure preaching of the Gospel, and Calvin excepts unlawful things and whatever is opposed to men's salvation."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "10",
+      "verses": [
+        "16",
+        "28",
+        "31",
+        "29"
+      ],
+      "note": "Four remarks in this chapter worth keeping. (a) Ellicott at 10:16 infers from the plural 'the cup which WE bless' that the one presiding at a communion consecrates as representative of the whole company present, not as a man individually possessed of some miraculous gift; he also alone notices that the cup is named before the bread here and after it elsewhere, and reports two explanations, from the heathen libation preceding the food and from the writer's intention to dwell longer on the bread. (b) Ellicott at 10:28 observes that the term used for the offered meat in the informant's mouth is not the condemnatory word used elsewhere in the chapter, and explains the change as courtesy: a Christian at a heathen's table would choose an epithet that did not offend his host. (c) Ellicott at 10:31 denies that the modern division of acts into religious and secular is recognised anywhere in Paul — no act is in itself either, the quality depending on the spirit and motive, so that a religious act done in a secular spirit is secular and a secular act done in a religious spirit is religious. (d) Robertson at 10:29 describes the case as an eternal collision between the forces of progress and reaction, resolvable only by love that builds up. Also recorded: Barnes and Clarke independently document the pagan sacrificial meal from the same passage of Virgil, and Barnes derives the modern custom of drinking toasts from the libation poured out at such feasts."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "rejected",
+      "book": "1corinthians",
+      "chapter": "10",
+      "note": "nehemiah 7 was offered by the picker at the head of this batch and was NOT attempted. It was dropped in an earlier run pending an owner decision and remains in the same structural class as numbers 31: its catena has 22 source keys for 73 verses, four of the nine forced runs are pure Jamieson residue with zero usable source, and validate-synthesis.py forbids a declared range from covering a verse absent from the source, so no legal unpadded tiling exists. The picker offers it again on every run because the repair queue derives from data quality, not from the drop record. Owner item: either mark it blocked in the queue the way numbers 31 is, or take one of the three options already recorded (allow a range to bridge gaps where the gap verses have no catena at all, allow deletion of residue-only keys, or re-scrape)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "10",
+      "note": "Fidelity self-grade, 1corinthians 10, 10 entries, 33 verses, 12 voices, 59,774 usable source words with no chrome tail. Source keys 1-33 with no gaps, so the spans follow the pericopes rather than the source. Every entry checked clause by clause against its own span's blocks; every named attribution traced to that voice's block within the span; no claim carried that is not in the catena. Word counts, all inside the 350-650 window: 1-2 640 · 3-4 650 · 5-7 650 · 8-10 649 · 11-13 634 · 14-16 648 · 17-20 649 · 21-24 650 · 25-28 649 · 29-33 649. Exclusions: Jamieson at the five stride-6 keys (foreign Acts 21 content); Lightfoot at key 11 only, as his note on 10:16 misfiled (his six other blocks were used); Cyril of Jerusalem at keys 21 and 27 only, as misplaced material, his on-topic block at 10:4 being used — both Cyril drops forced through SILENT_BY_ENTRY by the VOICE_LABELS defect. One care taken throughout: Clarke quotes Lightfoot by name at 10:11 on the ends of the ages, and because Lightfoot is himself a catena voice excluded at that key, the parallel was attributed to Clarke reporting another writer rather than to Lightfoot, so no attribution is claimed from a block the entry does not use. School keys in the tags were reconciled against the voices actually named in each entry."
     }
   ]
 }

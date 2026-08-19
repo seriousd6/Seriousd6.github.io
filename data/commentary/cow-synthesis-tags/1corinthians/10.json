@@ -8,84 +8,72 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "1-2",
+  "pericope_label": "Israel under the cloud and through the sea, and the baptism unto Moses",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul reminds the Corinthians that all the Israelites ('our fathers') enjoyed great privileges — all were under the cloud (the pillar of cloud, the symbol of God's guiding presence, Exodus 13:21) and all passed through the Red Sea on dry ground, signal tokens of divine protection and favour shared by the whole nation (Barnes, Robertson)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): Paul recounts these high privileges to warn the Corinthians — for though all Israel shared them, most perished; great privileges are no guarantee of safety."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all our fathers were under the cloud",
-   "all passed through the sea",
-   "the privileges of the fathers",
-   "great privileges no guarantee of safety"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul represents the Israelites as 'baptized unto Moses' — by passing under the cloud and through the sea they were initiated into the covenant under Moses's leadership, the cloud above and the sea around them the media of this symbolic baptism, a figure analogous to Christian baptism into Christ (Barnes, Robertson)."
+    "summary": "Calvin denies any difference of condition between Israel and the Corinthians that would weaken the comparison, since a Church of God existed among them, and describes the Corinthians as taking their ease at the outset of the course as though already discharged from service. Gill lists the sins that undid Israel and observes that the passage through the sea carried a resemblance of baptism."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry calls Judaism Christianity under a veil, wrapped in types and dark hints, and describes the double service of the cloud as guide and as shelter. Lightfoot argues that circumcision had lapsed during the sojourn in Egypt and was restored by a special precept at the Passover, that baptism in cloud and sea was added to it without cancelling it, and that the change of preposition is decisive, since they were not circumcised into Moses but baptized into Moses."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: as the Israelites were baptized unto Moses, so Christians are baptized unto Christ; the privilege corresponds, and so does the warning that follows."
+    "prevalence": "several",
+    "summary": "Clarke reads the baptism as entry into the covenant of which Moses was mediator, on the pattern of Christian baptism into Christ, and treats the wilderness history as typical of the greatest mysteries of the Gospel. Wesley presses that Israel were God's elect and peculiar people and were nevertheless rejected, and suggests they may have been sprinkled with drops from the sea or the cloud so that baptism might be the more evidently signified."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes surveys the disputed connection of the chapter, rejecting both the link to the preceding self-discipline and Macknight's independent-questions scheme in favour of a close tie to the eighth chapter, and argues that 'baptized' here means dedicated and brought under obligation rather than washed. Ellicott traces the thread back to the offer to forgo a right and prefers the middle voice, so that Israel voluntarily had themselves baptised to Moses. Robertson corrects the connecting particle to 'for', notes the manuscript division between the causative middle and the passive, and holds that with the cloud above and the sea on either side the immersion was complete."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Where the chapter connects: Barnes reports that the Greek expositors and Grotius joined it to Paul's self-discipline in the preceding chapter and that Macknight made it an independent answer to three submitted questions, while Barnes and Ellicott both tie it back to the discussion of meat offered to idols",
+   "What mode of baptism the figure implies: Robertson holds that the cloud above and the sea on either side made the immersion complete, while Wesley suggests they were perhaps sprinkled here and there with drops from the sea or the cloud"
+  ],
+  "outliers": [
+   "Lightfoot holds that Israel neglected circumcision in Egypt and conformed to Egyptian rites, which is why a special precept required it before the first Passover",
+   "Ellicott and Robertson both favour the middle voice of the verb, that Israel had themselves baptised, against the passive reading of the other manuscripts"
+  ],
   "themes": [
-   "were all baptized unto Moses in the cloud and in the sea",
-   "the fathers baptized unto Moses",
-   "Israel's initiation under Moses",
-   "the parallel with Christian baptism"
+   "baptism",
+   "typology",
+   "covenant",
+   "privilege",
+   "warning"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  },
  "3": {
@@ -96,586 +84,322 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Cyril of Jerusalem",
+   "John Lightfoot"
   ],
+  "range": "3-4",
+  "pericope_label": "The spiritual meat and drink, the rock that followed, and the rock that was Christ",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin raises and answers the difficulty that the Lord treats the manna as corruptible food of the belly, laying down that Scripture sometimes speaks of sacraments according to the hearers' capacity and mistaken ideas rather than the nature of the thing; he dismisses as frivolous the objection that a fixed rock could not follow, insists that the rock here is a visible sign and not merely a name for Christ, and presses the past tense as marking something peculiar to the fathers. Gill denies the manna was spiritual in its own nature and finds in the striking of the rock the striking of Christ by the rod of the law."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Lightfoot denies that the rock itself moved and argues that the streams from it followed, gathering into pools at each encampment, supporting this from the prophetic figure of pools in the wilderness and from a Targum on the well of Mattanah becoming overflowing brooks that climbed the mountains and descended into the valleys."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke shows that 'spiritual meat' and 'spiritual drink' are borrowed from Jewish usage and cites the source, explains the following rock as a metonymy for the water of the rock while admitting there is no direct proof, and reports the older Jewish account of streams that followed over hills and valleys and formed cisterns at each camp. Wesley makes the drink typical both of Christ and of the cup at his table, and calls him the Rock of Eternity whose streams follow his people through the wilderness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'spiritual meat' is the manna (Exodus 16) — called 'spiritual' not because of any peculiar nature but because it was supernaturally given, a token of divine favour, and a type pointing to Christ; all the Israelites alike ate this miraculous food, a common privilege of the whole nation (Barnes, Robertson)."
+    "summary": "Barnes takes 'spiritual' to mean immediately given by God and not produced in the ordinary way, citing the Psalm's 'angels' food' and Josephus's 'divine and extraordinary food'. Ellicott contrasts bread from earth with bread from heaven, judges that Paul adopts the tradition of a travelling fragment of the rock in preference to the narrative in Numbers because it better illustrated God's abiding presence, and matches God manifest in the Rock with God manifest in the flesh. Robertson reports that Baur and others think Paul took over the rabbinic legend but finds that hard to believe, allowing at most an allusion given a spiritual turn, and finds the pre-existence of Christ stated symbolically while rejecting any notion of a pre-incarnate Christ travelling as a lump of rock."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): the manna was a figure of Christ, the true bread from heaven (John 6:31-33); the fathers fed, in their measure, on the same Christ believers now feed on."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril uses the clause to prove that the one seen by Moses was Christ, joining it to Moses's request to be shown God's face and arguing that since no man could see the face of the Godhead and live, he took the face of human nature; even that, shining only to the measure of the disciples' capacity, threw them down affrighted."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the rock is said to follow: Lightfoot, Clarke and Calvin all take the word for the stream of water that accompanied the camp, while Ellicott holds that Paul deliberately adopts the Jewish tradition of a fragment of rock that travelled with them, and Robertson reports that view from Baur and others but finds it hard to believe, allowing at most an allusion",
+   "Whether calling the manna spiritual conflicts with the Lord's treatment of it as corruptible bread: Calvin alone raises the problem and resolves it by an accommodation principle, that Scripture sometimes speaks to the hearers' mistaken idea rather than to the nature of the thing"
+  ],
+  "outliers": [
+   "Barnes cites Josephus calling the manna divine and extraordinary food",
+   "Clarke traces the very phrases 'spiritual bread' and 'spiritual waters' to Jewish writers and names his source, holding that the apostle refers to their usage",
+   "Robertson quotes the protest that we must not disgrace Paul by making him say the pre-incarnate Christ followed Israel's march in the shape of a lump of rock"
+  ],
   "themes": [
-   "did all eat the same spiritual meat",
-   "the fathers eating spiritual meat",
-   "the manna typifying Christ",
-   "the typical feeding of Israel"
+   "typology",
+   "sacraments",
+   "christology",
+   "providence",
+   "pre-existence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
- "4": {
+ "5": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "5-7",
+  "pericope_label": "Most of them overthrown, the wilderness as our warning, and the golden calf",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill refuses to settle how many 'many' were, and denies that the saved may be reduced to Joshua and Caleb, since Moses, Aaron and Miriam also died in the wilderness without falling from grace; he sees the Corinthians' inclination to idolatry in their sitting in temples. Calvin draws humility rather than a doctrine of falling, raises the question whether unbelievers receive the reality in the sacraments and answers that God truly offers it to worthy and unworthy while not all can receive it, defends his rendering of 'types' against the Vulgate and Erasmus, and holds that most interpreters wrongly treat the calf-feast as ordinary intemperance rather than a sacred meal kept in the idol's honour."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains why the warning against carnal desire is placed first, since indulged appetites are the root and source of much sin and gather strength by indulgence, and must therefore be checked at their first rise."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the wilderness generation as decisive proof that those who have every outward ordinance and share the grace of Christ may yet abuse their privileges, grieve the Spirit, fall from grace and perish everlastingly, and warns the confident that their security may make them the proof; he explains the communion sought in idolatrous feasts, and holds that 'rose up to play' covers impurity as well as dancing, against the Jewish interpreters who confine it to idolatrous acts. Wesley observes that the sins are listed in a different order from the benefits with evil desire first as the foundation of all, and notes the change to the second person where Paul was himself in no danger."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes corrects the rendering to 'with most of them' and holds that God was pleased with but few; he insists the events were not designed as types of us but are held up as admonition, and notes how apt the golden calf was as an instance, its feast being made of the sacrifice itself. Ellicott reduces the pleasing to all except two, and reads 'types of us' as contrasting a physical Israel that died physically with a spiritual Israel that will die spiritually if privileges are abused. Robertson calls the phrase a mournful understatement, expounds the verb for overthrow as laying a generation low like a couch spread down, traces 'type' from the mark of a blow to its doctrinal sense, and reads the imperative as 'stop becoming idolaters', implying some had begun."
+   }
+  ],
+  "debates": [
+   "How much of the generation is covered by 'many of them': Barnes reads 'most', Ellicott reduces the exceptions to two, and Robertson calls the phrase an understatement, while Gill declines to fix the proportion and denies that all but Joshua and Caleb were outside God's favour, instancing Moses, Aaron and Miriam",
+   "Whether the unworthy receive the reality along with the sign in the sacraments: Calvin reports the view, held from fear that human unbelief would detract from God's truth, and rejects it while insisting that God genuinely offers the thing to all",
+   "What 'rose up to play' includes: Clarke argues for impurity and idolatrous dancing together, against Jewish interpreters who limit it to idolatrous acts, while Calvin rejects the common reading that makes the feast a case of intemperance leading to wantonness"
+  ],
+  "outliers": [
+   "Clarke closes his warning by recalling who it was that first told men they should not surely die",
+   "Robertson derives the word for 'type' from the verb to strike, so that it means first the mark of a blow, as of the print of the nails",
+   "Wesley observes that the person changes from first to second at the warnings against idolatry and murmuring, because Paul was himself in no danger of those sins"
+  ],
+  "themes": [
+   "idolatry",
+   "warning",
+   "typology",
+   "sacraments",
+   "apostasy"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Lightfoot"
   ],
+  "range": "8-10",
+  "pericope_label": "Fornication and the numbers, tempting the Lord, and the murmuring punished by the destroyer",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin holds that no reconciliation of the two figures is needed, since a number close to the true one is normally given where heads are not being counted exactly; he traces the tempting to impatience, the people refusing to wait for God's appointed time and wishing to bind him to their own inclination; and he argues at length that the murmuring meant cannot be the disheartening report of the spies, which was punished only by exclusion from the land, but must be what followed the punishment of Korah. Gill describes the tempting as presuming on Christ's power to keep while needlessly sitting down to meat in an idol's temple."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Lightfoot reports that the Talmudists also give the larger figure, allows that Scripture varies its reckonings when a story is told twice and cites parallels in Kings and Chronicles; on the destroyer he distinguishes the Jewish classes of destroying and ministering angels, asks where Israel was ever slain by an evil angel, and concludes that the allusion is to the angel of death."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reconciles the two numbers by adding the hanged heads of the people to those who fell by the plague, and rejects the manuscript reading of twenty-four thousand as too slenderly attested; he defends 'Christ' as the best-supported reading in the next verse and infers that the Jehovah of the Old Testament is the Christ of the New. Wesley refers the murmuring to the same chapter as Barnes, and notes the symmetry of five benefits and five sins with Christ named in the fifth benefit and offended in the fourth sin."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'spiritual drink' is the water miraculously given from the rock (Exodus 17:6; Numbers 20:11); 'the Rock that followed them' means the stream of water that accompanied Israel, not literally the rock moving (though Paul may adapt a rabbinic legend of the following rock). Robertson takes 'the Rock was Christ' as stating in symbolic form the pre-existence of Christ — the source of the water; Barnes reads 'was' as 'represented,' the rock a vivid emblem of Christ, not the pre-incarnate Christ literally following."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the rock was a sacramental sign, Christ connected with it not locally or substantially but sacramentally; the fathers truly partook of Christ's flesh and blood by the secret work of the Spirit, though his flesh did not yet exist — Christ now presented more fully according to the measure of revelation."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Clarke, Ellicott): the Rock was the pre-existent Christ himself, whom Moses saw — God manifest in the Rock under the old dispensation as he was manifest in the flesh under the new; the abiding presence that sustained Israel."
+    "summary": "Barnes sets out two solutions to the numbers, one assigning a thousand to Phinehas and his companions and one making the true figure lie between the two, and concludes only that Paul has not exceeded the truth; he distinguishes the two senses of tempting, refers the murmuring to the disappointed people who proposed returning to Egypt. Ellicott declines to harmonise the numbers at all, suggesting that the apostle quoted from memory or used a copy of the Greek version with these figures; he prefers 'the Lord' and explains 'God' as an intruded marginal note, refers the murmuring to the rebellion against divinely given leaders, and observes that the death is ascribed to a messenger where the older narrative says plague. Robertson holds that the best manuscripts read 'the Lord', notes that the compound verb is used only of Christ, and identifies the destroyer with the destroying angel of the Passover."
    }
   ],
   "debates": [
-   {
-    "question": "Does 'that Rock was Christ' assert the pre-existent Christ himself present with Israel, or that the rock represented/typified Christ?",
-    "sides": [
-     {
-      "position": "The pre-existent Christ himself — the spiritual Rock, source of the water and Israel's abiding presence (his pre-existence and deity)",
-      "holders": [
-       "Robertson",
-       "Calvin",
-       "Clarke",
-       "Cyril",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "'Was' means 'represented' — the rock a vivid emblem of Christ, not the pre-incarnate Christ literally following",
-      "holders": [
-       "Barnes"
-      ]
-     }
-    ]
-   }
+   "How the twenty-three thousand is to be squared with the twenty-four thousand of Numbers: Clarke and Wesley add the executed heads of the people to those who fell by the plague, Barnes reports that solution and Macknight's round-numbers alternative, Calvin holds that no reconciliation is needed, and Ellicott declines all of them, suggesting the apostle quoted a minor fact from memory or followed a Greek copy",
+   "Whether the text reads 'Christ', 'the Lord' or 'God': Clarke defends 'Christ' as best attested and builds on it the identity of the Old Testament Jehovah with Christ, while Robertson and Ellicott both prefer 'the Lord', Ellicott explaining 'God' as a marginal note intended to relieve the difficulty",
+   "Which murmuring is referred to: Barnes and Wesley take the complaint of the disappointed people who proposed returning to Egypt, while Calvin argues that this was punished only by exclusion from the land and must therefore be the murmuring that followed Korah's punishment, as Ellicott and Robertson also hold"
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott holds the numerical discrepancy to be historically unessential and is willing to say the apostle quoted from memory",
+   "Clarke reports two manuscripts with the later Syriac and Armenian that read twenty-four thousand here, and rejects them as too slenderly attested to alter the text",
+   "Robertson notes that the word for 'destroyer' occurs nowhere else so far as is known"
+  ],
   "themes": [
-   "they drank of that spiritual Rock that followed them",
-   "that Rock was Christ",
-   "the spiritual drink from the Rock",
-   "the pre-existence of Christ crux"
+   "fornication",
+   "textual criticism",
+   "providence",
+   "murmuring",
+   "judgment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sharp contrast ('but'): notwithstanding all their privileges (vv.1-4), God was not pleased with the greater part of them, their sin provoking his displeasure; 'overthrown' (strewn down, scattered as corpses) — the vast majority fell in the wilderness and never entered Canaan (Numbers 14; Hebrews 3:17, Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): privileges and sacraments did not save the unfaithful; the Corinthians, trusting their own privileges, must take warning from Israel's overthrow."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "with many of them God was not well pleased",
-   "they were overthrown in the wilderness",
-   "most of the fathers perished",
-   "privileges did not preserve the unfaithful"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Examples' (typoi, types, patterns) — Israel's history was written as a warning pattern for Christians; their experiences typify the dangers and judgments believers must avoid; the first lesson being not to lust (crave evil things) as the Israelites did, who craved the fleshpots of Egypt and despised God's provision (Numbers 11, Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): God recorded Israel's sins and judgments precisely to admonish later generations; the Corinthians, and we, are to read them as warnings against the same evil desires."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "these things were our examples",
-   "we should not lust after evil things, as they also lusted",
-   "Israel's fall a warning example",
-   "the typical function of the wilderness narrative"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second sin to be shunned: idolatry — as some of the Israelites became idolaters, worshipping the golden calf (Exodus 32); Paul quotes Exodus 32:6, 'the people sat down to eat and drink, and rose up to play,' the feasting and licentious revelry that accompanied the calf-worship, a warning bearing directly on the Corinthian danger of idol-feasts (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): the idol-feasts at Corinth, with their eating and revelry, were of a piece with Israel's idolatry; Paul warns the Corinthians not to repeat it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither be ye idolaters, as were some of them",
-   "The people sat down to eat and drink, and rose up to play",
-   "the warning against idolatry",
-   "the chief peril at Corinth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The third sin: fornication — as some Israelites did at Baal-peor, joining idolatry to immorality with the daughters of Moab (Numbers 25); 'fell in one day three and twenty thousand' — Numbers 25:9 gives twenty-four thousand, reconciled by taking Paul's figure as those who fell in the single day of the plague (the rest dying by the judges or on following days), or as a rounding (Barnes, Lightfoot)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the swift and terrible judgment on Israel's fornication warns the Corinthians against the immorality bound up with their idolatry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither let us commit fornication, as some of them committed",
-   "fell in one day three and twenty thousand",
-   "the warning against fornication",
-   "the link of idolatry and immorality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fourth sin: tempting Christ (provoking, putting to the test) — as the Israelites tempted God in the wilderness (Numbers 21:5-6); the reading 'Christ' (in many manuscripts) implies that Christ was present with Israel and was the one they tempted, a testimony to his pre-existence (cf. v.4); and they were destroyed by the fiery serpents (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): to tempt Christ is to presume upon his patience and provoke his judgment; the Corinthians, by their license, were in danger of doing the same."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither let us tempt Christ, as some of them also tempted",
-   "were destroyed of serpents",
-   "the warning against tempting Christ",
-   "Christ present with Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fifth and last sin: murmuring (complaining, discontent against God and his appointed leaders) — as the Israelites murmured (Numbers 14; 16) against Moses and against God's dealings; 'the destroyer' being the destroying angel or agent of God's judgment who smote the murmurers (Numbers 16:41-49, Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): murmuring against God's providence and his ministers brought destruction on Israel; the Corinthians, murmuring against Paul and chafing at restraint, are warned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither murmur ye, as some of them also murmured",
-   "were destroyed of the destroyer",
-   "the warning against murmuring",
-   "discontent against God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "11-13",
+  "pericope_label": "The ends of the ages, the danger of thinking one stands, and the way of escape",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "These events befell Israel 'for ensamples' (typoi, types) — designed as patterns and warnings, not mere history — recorded in Scripture for our admonition (instruction, warning); and Christians live in 'the ends of the ages,' the last dispensation, the gospel age toward which all former ages pointed, so the warnings press with peculiar force (Barnes, Robertson)."
-   },
-   {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: they were written for our admonition, Christians being the intended beneficiaries of these recorded judgments — the wilderness history a standing warning to the church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all these things happened unto them for ensamples",
-   "written for our admonition, upon whom the ends of the world are come",
-   "Israel's history written for us",
-   "the warnings of the last age"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The practical conclusion: the one who supposes himself secure (firm in faith, beyond danger) is precisely the one in peril; confidence in one's own security is no evidence that we are safe, and may be one of the strongest evidences that we are in danger; all professed Christians are to take heed (Barnes, Robertson, with Clarke noting 'thinketh' strengthens rather than weakens the sense — he who most confidently stands)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: this reproves not the assurance of faith (which rests on God's promises and is inseparable from faith) but the false carnal security of the flesh — the puffed-up self-confidence by which men give themselves no concern; against the Papists, Paul does not teach that faith must doubt, nor that the elect finally fall; the elect are humbled and so kept."
+    "summary": "Calvin takes the events as lively pictures of God's anger against such sins and values that reading for excluding those who would make the whole history mere figure; he warns against glorying in one's beginnings or progress, but denies that the verse supports the doctrine that faith always carries doubt, distinguishing two kinds of assurance; and he weighs the reproachful reading of the next verse before choosing consolation, so that men overwhelmed by such instances of wrath should not despair of repentance. Gill names the self-trust warned against, whether in a man's own strength or in his gifts and privileges, and reports the reproachful reading as one option, since they had not yet resisted unto blood."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: let him who most confidently stands take heed lest he fall — not only partially but finally; in a state of probation everything may change, and the highest saint can stand no longer than he depends on God and continues in the obedience of faith."
+    "prevalence": "several",
+    "summary": "Clarke limits 'the ends of the ages' to the times bounded by the Mosaic economy and reports a parallel between its beginning and its end, both of forty years, both of temptation and unbelief, both closing in the destruction of unbelievers; he argues that the verb rendered 'thinketh' strengthens rather than weakens the sense, adopts Chrysostom's gloss on the temptation as small and moderate and judges the Corinthians' trials trifling beside Israel's, and describes providence as breaching an otherwise impregnable fortification so that Satan can never block the way. Wesley makes the same lexical point about 'thinketh' independently, presses the force of the ends of the ages as the crisis of all benefits and dangers under the last dispensation, and renders the disputed adjective as proportioned to human strength."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes denies that the events occurred solely to serve as examples, holding that they illustrated standing principles of human weakness and divine government, and turns the warning into a rule that confidence in one's security is no evidence of safety and may be evidence of danger. Ellicott makes the same denial and notes that the verb for what happened is plural while the verb for what was written is singular; he identifies the symptoms at Corinth, and treats the way of escape as the counterpart of God's permission, calling the verse the clearest exposition of free will in relation to God's overruling power. Robertson reads the plural 'ages' as marking how one stage succeeds another in human history, and notes that the rare noun for the way out places the exit alongside the temptation from the first, so that yielding is cowardice and distrust."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom reads the verse as a check on pride: having terrified his readers with the ancient examples and anticipating the answer that they were no strangers to persecution, the apostle tells them the temptation is only such as man can bear, which Chrysostom glosses as small, brief and moderate."
    }
   ],
   "debates": [
-   {
-    "question": "Does 'take heed lest he fall' teach that a true believer may finally fall away?",
-    "sides": [
-     {
-      "position": "A real possibility of final apostasy — the highest saint may fall, not only partially but finally, in a state of probation",
-      "holders": [
-       "Clarke",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "A warning against carnal self-confidence, not the assurance of faith; the elect are humbled and so kept, not finally falling",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
+   "Whether the wilderness judgments were purposed as examples for later generations: Barnes and Ellicott both deny that this was their sole design, treating them instead as illustrations of standing principles whose record serves as warning",
+   "Whether the assurance that no temptation has overtaken them beyond man's measure is consolation or reproof: Chrysostom and Clarke take it as a check on pride, their trials being small beside Israel's, Gill reports the reproachful reading as one option, and Calvin states both and chooses consolation, so that the reader may not despair"
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin uses his reading of the verse to exclude those who would treat the whole history of Israel as nothing but figure",
+   "Calvin also refuses the inference, drawn from this verse in his own day, that faith must always carry doubt with it",
+   "Ellicott calls this passage perhaps the clearest exposition to be found of free will in relation to God's overruling power"
+  ],
   "themes": [
-   "let him that thinketh he standeth take heed lest he fall",
-   "the warning against self-confidence",
-   "self-distrust",
-   "the perseverance crux"
+   "typology",
+   "assurance",
+   "temptation",
+   "providence",
+   "perseverance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul reassures: the temptations (trials, tests) they face are only 'common to man' — such as all men experience, not beyond human endurance; the ground of confidence being God's faithfulness, who will not permit them to be tempted beyond their strength, but with every temptation provides a 'way of escape' (a way out), that they may be able to bear it — not always removal, but strength and a path through (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Chrysostom): God measures the trial to the strength he gives and faithfully makes a way of escape; the believer's confidence rests not on his own strength but on God's fidelity."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no temptation taken you but such as is common to man",
-   "God is faithful, who will not suffer you to be tempted above that ye are able",
-   "God's faithfulness in temptation",
-   "the way of escape"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul draws the practical conclusion from all the foregoing (the wilderness warnings, the faithfulness of God): 'flee from idolatry' — not merely avoid it, but flee (run from, shun utterly) every form of it, including the idol-feasts; the affectionate address ('my dearly beloved') showing the warning flows from love (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: idolatry is so deadly that the only safe course is flight; one is not to dally with it or test how near one may come, but to flee."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "my dearly beloved, flee from idolatry",
-   "the command to flee idolatry",
-   "idolatry to be fled, not flirted with",
-   "the warning flowing from love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -683,102 +407,73 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul addresses the Corinthians as 'wise men' — those able to weigh an argument — and invites them to 'judge' (discern, evaluate) for themselves what he is about to say about the Lord's Supper and idol-feasts; appealing to their own reason and sense, confident that if they weigh the matter fairly they will see the truth (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): the argument he is about to make (vv.16-22) is so clear that their own wisdom, fairly exercised, will confirm it; he does not dictate but reasons."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I speak as to wise men; judge ye what I say",
-   "Paul appealing to their judgment",
-   "reasoning with their discernment",
-   "the respectful, persuasive method"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "14-16",
+  "pericope_label": "Flee from idolatry, the appeal to wise men, and the cup of blessing",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin defines the idolatry charged as frequenting the assemblies of the wicked and joining in their rites, not as worshipping idols in the heart; he finds a tacit reproof in the address to wise men, since men well instructed were allowing themselves an obvious vice; and on the cup he refuses to reduce 'bless' to 'give thanks', rejecting as forced the proposal to supply a preposition, and defines blessing as setting the cup apart to be an emblem of the blood of Christ. Gill traces the title of the cup to the Jewish cup of blessing at common meals and the passover."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws a principle from the appeal to their judgment, that it is no dishonour to an inspired teacher and no disadvantage to his argument to refer its truth to the reason and consciences of his hearers, since it then comes upon them with the greater force."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke alone treats the temptation as slight, a trial of no great magnitude needing only a moderate portion of grace and circumspection; he reads the address to wise men as turning the Corinthians' own boast against them, derives the cup of blessing from the cup at the close of the passover, and holds that partakers have fellowship with Christ exactly as those at an idol feast participate with the idol. Wesley compresses the command to fleeing idolatry and all approaches to it, and describes the cup and bread as the means of partaking of the benefits purchased by the blood and body of Christ."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The cup of blessing' is the eucharistic cup, so called because over it God is blessed and praised for redemption (the Jewish 'cup of blessing'); 'which we bless' means set apart by thanksgiving to a sacred use, no physical change implied. The 'communion' (koinonia) is the participation by which believers share alike in the benefits of Christ's blood and body and express their union with him and one another — the cup and bread emblems exhibiting this; Robertson: a spiritual participation in the blood of Christ symbolized by the cup (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the cup is figuratively the communion of the blood, but the figure is not empty — the reality is present, and the soul truly partakes of Christ's blood as the mouth drinks the wine; believers are united to Christ so as to be flesh of his flesh, a real spiritual participation against both an empty memorial and the Papist transubstantiation and withholding of the cup."
+    "summary": "Barnes joins the command to the promise of faithfulness, since God was not expected to keep them without effort of their own, and sets out the chain of argument for the rest of the chapter. Ellicott hears the warning as addressed to the beloved rather than to enemies and reduces it to a rule, not how near one may get to idolatry but how far from it; he insists the appeal to wise men is neither hypothetical nor ironic, observes that the cup is named before the bread here and reports two explanations of the order, and infers from the plural that the president consecrates as representing the whole company and not by any personal gift. Robertson denies any sarcasm in the address, and derives the word for communion from the term for a partner, settling it as spiritual participation in the blood symbolised by the cup."
    }
   ],
   "debates": [
-   {
-    "question": "Is the 'communion of the blood of Christ' a real spiritual participation in Christ or an emblem of shared benefit and union?",
-    "sides": [
-     {
-      "position": "A real spiritual participation — the soul truly partakes of Christ's blood as the mouth drinks the wine (spiritual real presence)",
-      "holders": [
-       "Calvin"
-      ]
-     },
-     {
-      "position": "The participation by which believers share alike in the benefits of Christ's blood and express union with him and each other, the cup and bread emblems",
-      "holders": [
-       "Barnes"
-      ]
-     }
-    ]
-   }
+   "How grave the temptation is: Barnes and Ellicott treat the danger of the idol feasts as the peril the whole chapter has been building towards, while Clarke calls it a trial of no great magnitude requiring only a moderate portion of grace to escape",
+   "Whether the address to wise men is straightforward or edged: Robertson denies any sarcasm and Ellicott any hypothesis, while Clarke takes it as using the Corinthians' boasted wisdom against them and Calvin finds a tacit reproof in it",
+   "What 'bless' means over the cup: Gill and Clarke explain it from the Jewish practice of blessing God over the cup, while Calvin denies that the verb can mean giving thanks in this construction and defines it as setting the cup apart"
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone remarks that the cup is named before the bread here and elsewhere after it, and reports the explanation from heathen feasts in which the libation preceded the food",
+   "Ellicott infers from the plural 'we bless' that the one presiding at a communion acts as representative of the whole company rather than by virtue of any personal gift"
+  ],
   "themes": [
-   "The cup of blessing which we bless, is it not the communion of the blood of Christ",
-   "The bread which we break, is it not the communion of the body of Christ",
-   "the communion in the Supper",
-   "the eucharistic crux"
+   "idolatry",
+   "the Lord’s Supper",
+   "communion",
+   "wisdom",
+   "consecration"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "17": {
@@ -791,259 +486,71 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "17-20",
+  "pericope_label": "One loaf and one body, Israel after the flesh, and sacrifice to demons",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill uses the figure of many grains ground into one loaf, sets 'Israel after the flesh' against the spiritual Israel of God. Calvin denies that exhortation to love is his design here, warns that Scripture names one part of the Supper for the whole so that the mention of bread alone is no argument for withholding the cup, notes that the law admitted only the duly prepared to eat of a sacrifice and that eaters shared in the sanctification of the Temple, argues from the ancient figures to a higher estimate of the Christian Supper, and answers the objection about idols by pointing to the intention of the sacrificer rather than to the idol itself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reverses the word order to read 'because there is one loaf, we who are many are one body', supports it from the single loaf of the passover, identifies Israel after the flesh as the unconverted Jews and Christians as Israel after the Spirit, and takes 'What say I then?' as a Jewish idiom for 'I conclude', concluding that no professing Christian can have fellowship with Christ and the devil at once. Wesley makes the communion itself the bond of unity."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul draws from the Supper the unity of the church: though believers are many, they are 'one bread' (one loaf) and 'one body,' united into a single body by their common partaking; the shared participation in the one loaf both the sign and seal of their union, all eating of the one bread and so made one body in Christ (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): the Supper binds believers into one body in Christ; therefore to partake also at the table of idols would be to rend that union and join oneself to idolaters."
+    "summary": "Barnes denies that 'the many' is a remark about numbers, finds the point in a loaf made of separate grains and in the common human token of eating together, hears the question as a self-interrogation raised because the Corinthians had themselves said an idol is nothing, notes the omitted but understood negative as a classical ellipsis, and documents the heathen use of 'demon' for inferior and attending spirits, instancing the genius Socrates supposed to attend him. Ellicott presses that the one bread is broken and each receives a fragment, corrects the rendering so that the eater is a partaker in common with the altar rather than of it, states the objection the apostle's question anticipates, and takes the demons plainly as evil spirits. Robertson identifies the one body as the mystical body of Christ, distinguishes the literal from the spiritual Israel, traces the phrase to the Greek of Deuteronomy, suggests 'not to God' means to a no-god, and reads the argument as a reply to the heathen claim that the god and not the image was worshipped."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What 'What say I then?' is doing: Clarke treats it as a Jewish idiom meaning 'I conclude' and proceeds straight to the conclusion, while Barnes takes it as a self-interrogation in the present tense and Ellicott as anticipating the objection that the previous verse granted idols too much reality",
+   "What is meant by the demons sacrificed to: Ellicott and Clarke take them straightforwardly as evil spirits, while Barnes documents the heathen usage for inferior and attending deities both good and evil, and Robertson reports the heathen defence that the god behind the image, not the image, was worshipped"
+  ],
+  "outliers": [
+   "Calvin warns that the mention of the bread alone must not be used to argue that the people should be deprived of the cup, since Scripture names one part of the Supper for the whole",
+   "Ellicott corrects the English rendering so that the eater of a sacrifice is a partaker in common with the altar rather than of it",
+   "Barnes cites the attendant genius that Socrates believed suggested good thoughts to him as evidence that 'demon' was not always a term of evil"
+  ],
   "themes": [
-   "we being many are one bread, and one body",
-   "we are all partakers of that one bread",
-   "the church's unity in the one bread",
-   "the union effected in the Supper"
+   "the Lord’s Supper",
+   "unity",
+   "idolatry",
+   "sacrifice",
+   "demons"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul points to 'Israel after the flesh' (the natural Israel, the Jewish nation in their temple worship) as a parallel: those who ate of the Jewish sacrifices were thereby 'partakers of the altar' — joined in fellowship with the altar and the God worshipped there; eating the sacrifice signified communion in the worship (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: as eating the temple sacrifice united the Israelite to the altar and its God, so eating the idol-sacrifice would unite the Corinthian to the idol's altar — the very thing to be shunned."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Behold Israel after the flesh",
-   "are not they which eat of the sacrifices partakers of the altar",
-   "the argument from Israel's altar",
-   "eating the sacrifice as communion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul anticipates an objection: does he mean to say that the idol is really something (a true god), or that the meat offered to it is changed or has any real power? He had already taught (8:4) that an idol is nothing; not retracting that, he raises the question to prevent the inference that, by warning against idol-feasts, he attributes reality to idols (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the idol in itself is nothing, yet (as the next verse shows) there is a real spiritual danger behind it; Paul holds both truths together."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that the idol is any thing, or that which is offered in sacrifice to idols is any thing",
-   "guarding against misunderstanding about the idol",
-   "the idol nothing in itself",
-   "yet a real danger behind it"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Though the idol is nothing, the pagan sacrifices are in fact offered 'to devils' (daimonia, demons) — behind the lifeless idol stand real evil spirits, who are the true objects and beneficiaries of idol-worship; these sacrifices, whatever the worshippers suppose, are not offered to the true God but to demons, a real and dark spiritual transaction (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: to partake of the idol-feast is to enter into fellowship (communion) with demons; this is the real peril behind the seemingly indifferent meat, which Paul would have them utterly shun."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the things which the Gentiles sacrifice, they sacrifice to devils, and not to God",
-   "I would not that ye should have fellowship with devils",
-   "pagan sacrifices offered to devils",
-   "the demonic reality behind idolatry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul declares the two utterly incompatible: one cannot partake of the cup of the Lord (in the Supper, communion with Christ) and the cup of devils (in the idol-feast, fellowship with demons); the Lord's table signifies communion with Christ and the table of devils communion with demons, so to share both is impossible — one cannot belong to Christ and to demons at once (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Wesley): the believer must choose — partaking of the Lord's table binds him to Christ alone, forbidding any communion with the table of devils."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ye cannot drink the cup of the Lord, and the cup of devils",
-   "ye cannot be partakers of the Lord's table, and of the table of devils",
-   "the incompatibility of the two tables",
-   "exclusive allegiance to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul presses the point with two pointed questions: by sharing the idol-feast, 'do we provoke the Lord to jealousy?' — stirring up his righteous jealousy, as Israel did (Deuteronomy 32:21), by giving to idols the devotion due to him alone; and 'are we stronger than he?' — exposing the folly of provoking God while utterly unable to resist his judgment (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God is a jealous God who will not share his worship with idols; to provoke him is to court certain ruin, for none can stand against him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Do we provoke the Lord to jealousy? are we stronger than he",
-   "the warning against provoking the Lord's jealousy",
-   "God's righteous jealousy",
-   "the folly of resisting God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -1052,261 +559,158 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "21-24",
+  "pericope_label": "The Lord’s table and the table of demons, and the limits of liberty",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill treats the impossibility as one of truth rather than permission, since no one can really drink the one cup in the faith of Christ's sacrifice while drinking the other to a heathen deity; he secures that no creature is common or unclean in itself before adding the three limits on eating, and holds that a man may lawfully seek his own good, temporal, spiritual and eternal. Calvin explains the sharpened tone by the Corinthians' wish to have their liberty reckoned excusable and their search for one subterfuge after another, which he calls waging war against God; he does not dispute the lawfulness of the eating but requires regard to edification, and denies that the rule forbids consulting one's own advantage, requiring only a readiness to give up part of one's right for a brother."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry states the caution as a rule of Christian conduct, that a man must not barely consider what is lawful but what is expedient and will edify, and that this holds even in his private conduct. Lightfoot confirms the phrase 'the table of the Lord' from Jewish usage, the table of the Most High being a usual expression among the Talmudists for the altar."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the impossibility on the professors themselves, that it is vain to profess Christ while frequenting these festivals, and documents the pagan practice from Virgil; he explains the jealousy by treating all idolatry as spiritual adultery in which the heart covenanted to God is given to Satan, reads the second question as an appeal to omnipotence, judges that eating all kinds would not become him because it would grieve weak minds, and states the rule of self-denial without reserve, that a man live not for himself but for the whole human family around him. Wesley compresses each point to a clause, that a man cannot have communion with both, that the provocation is a caressing of God's rivals."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul takes up the Corinthian maxim 'all things are lawful' (perhaps their slogan) and qualifies it: even of things truly indifferent and lawful, not all are 'expedient' (profitable, helpful), and not all 'edify' (build up the church, benefit others); the believer's liberty must be governed by what builds up, not merely by what is permitted (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): Christian liberty is real but not absolute; it is to be limited by the good of others and the edification of the church, not used selfishly."
+    "summary": "Barnes calls this a striking instance of 'cannot' used for moral rather than natural inability, cites the same Virgil passage as Clarke, connects the jealousy with the declaration that God is jealous, holds that the reasons making a lawful thing inexpedient ought to have the binding force of law, and restricts the rule against seeking one's own to the matter in hand. Ellicott places the passage as the close of the question of meat offered to idols and limits Christian liberty by its effect on oneself and on the Church, and notes that the English word 'wealth' once meant good and especially moral welfare. Robertson agrees that the impossibility is moral, observes that 'table' means what is on it and that the altar bears that name in the prophets, identifies the verb for provoking as the one used of the old Israelites' insolence, and makes the rule about the neighbour's good Paul's standing rule for social relations."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the rule against seeking one's own extends: Clarke states it without reserve, that a man live not for himself but for the whole human family, while Barnes confines it to the matter under discussion, Calvin denies that it forbids consulting one's own advantage at all, and Gill affirms that a man may lawfully seek his own good"
+  ],
+  "outliers": [
+   "Barnes and Clarke independently document the pagan sacrificial meal from the same passage of Virgil",
+   "Lightfoot reports that the Talmudists commonly call the altar the table of the Most High",
+   "Ellicott notes that 'wealth' in the older English of the verse meant good and especially moral welfare, and cites the Prayer Book collect that preserves the older sense"
+  ],
   "themes": [
-   "All things are lawful for me, but all things are not expedient",
-   "all things edify not",
-   "liberty limited by expediency and edification",
-   "the qualification of Christian liberty"
+   "idolatry",
+   "liberty",
+   "edification",
+   "jealousy",
+   "self-denial"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The governing rule of Christian liberty: let no one seek merely his own (his own interest, advantage, gratification), but each seek 'another's wealth' (the other's good, welfare, benefit) — the law of unselfish love; 'wealth' here meaning well-being and profit, not riches (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): this is the heart of the whole matter of liberty and idol-meats — self is to yield to the good of the brother; love seeks the neighbour's edification above its own rights."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let no man seek his own, but every man another's wealth",
-   "the rule of seeking another's good",
-   "unselfish love",
-   "liberty governed by the neighbour's good"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
    "John Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "25-28",
+  "pericope_label": "The shambles, the earth as the Lord’s, and the scruple raised at a heathen’s table",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul grants real liberty: whatever meat is sold in the 'shambles' (the public meat-market, where much had been offered to idols) may be eaten freely, the believer eating 'asking no question' — not making anxious inquiry whether it had been offered to an idol; to do so would needlessly burden the conscience, since the meat itself is indifferent (Barnes, Robertson)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Chrysostom): in itself the meat is clean, and the believer's liberty is real; the scruple arises only when conscience is involved (v.28)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Whatsoever is sold in the shambles, that eat",
-   "asking no question for conscience sake",
-   "freedom to eat market meat",
-   "liberty without scruple"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul grounds the freedom to eat in Psalm 24:1: 'the earth is the Lord's, and the fulness thereof' — all the produce of the earth belongs to God, who gives it for human use; so the meat is clean and good in itself, an idol's claim unable to defile what belongs to the Lord and is received with thanksgiving (Barnes, Robertson)."
+    "summary": "Calvin asks what the Psalm has to do with the argument and answers that the possession of the whole earth remains in God's hands, so that what he holds he preserves and sanctifies; on the invitation he declines to go as far as the others, reading the wording as an indirect signal that the writer does not altogether approve and that it would be better to decline, while refusing to forbid an indifferent thing outright. Gill grounds the liberty in Christ's breaking down the middle wall of partition, and leaves open whether the man who raises the scruple is a weak believer or the unbeliever testing his guest."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God's ownership sanctifies the use of his creatures; the believer may freely enjoy what God has made and given, the idol having no real power to pollute it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the earth is the Lord's, and the fulness thereof",
-   "liberty grounded in God's ownership",
-   "God's gift making all clean",
-   "the divine ownership freeing the conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul addresses the social case: if an unbeliever invites a Christian to a meal, and he is willing to go (Paul does not forbid such friendly social intercourse), he may attend and eat whatever is served without anxious inquiry about its origin — the same rule as for the market (v.25), the meat being indifferent (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Cyril): the liberty holds so long as no question of conscience is raised; the next verse provides the exception when someone points out the meat as idol-offered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If any of them that believe not bid you to a feast",
-   "whatsoever is set before you, eat, asking no question for conscience sake",
-   "liberty at an unbeliever's table",
-   "freedom in social life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The exception to the liberty: if someone present (perhaps a weak brother, or a scrupulous heathen) expressly points out that the meat had been offered to an idol, the believer is to abstain — not because the meat is in itself defiling, but 'for his sake' (the one who pointed it out) and for conscience' sake, lest he wound the weak conscience or seem to countenance idolatry (Barnes, Robertson)."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Lightfoot reports a closely parallel rabbinic debate about buying meat from a heathen in the shambles when it might be torn, preserving the retort that one man's indecent conduct was no reason to forbid every market, and notes the innumerable scruples that vexed Jewish meals as to what was eaten, with whom, and how."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: love yields its liberty when its exercise would harm another's conscience; the abstention is not from any defilement in the meat but out of regard for the other."
+    "prevalence": "several",
+    "summary": "Clarke divides the victim three ways, the part burnt on the altar, the part eaten by the sacrificer which he forbids absolutely, and the priest's portion often sold in the market; he holds that nothing God made can be impure, and records that the repeated clause about the earth being the Lord's is absent from a long list of manuscripts, versions and fathers and has been dropped by an editor. Wesley reads the Psalm as giving the produce of the earth to men to be used without scruple, and grounds the abstaining on the weak conscience that would be wounded."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the placing of the permission: having led the Corinthians away from the idol tables by every argument and filled them with fear, the writer must keep that fear from driving them to the opposite extreme of scrupulosity about what might reach them unawares from the market, and adds that one who eats in ignorance is not liable, the matter being one of ignorance and not of greed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes holds that having been offered cannot change the quality of the meat, that the food never belonged to the idol, that the invitation is to a private house and plainly allowed since the Saviour accepted such invitations and Christianity does not make men misanthropes or hermits, and that the informant must be a fellow guest rather than the host. Ellicott argues that once in the public market the meat is simply meat, bought as meat and not as sacrifice, limits 'devils' meat to what is regarded as an actual sacrifice, and observes that the term used for the offered meat here is not the condemnatory word used elsewhere but a courteous one chosen so as not to offend the host, while stating precisely how the weak brother's conscience would be defiled. Robertson notes that the word for market is transliterated Latin occurring only here, quotes the picture of poor Christians buying a modest pound of meat in the Corinthian market, and observes that the Psalm was a common grace before meat."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How freely a heathen's invitation may be accepted: Barnes treats it as plainly allowed and warns against misanthropy, Robertson says the guest should behave like a gentleman, while Calvin reads the wording as hinting that the writer does not altogether approve and would rather they declined",
+   "Who raises the scruple at the table: Barnes argues it must be a fellow guest and rules out the host, while Gill allows either a weak believer or the unbelieving host testing his guest"
+  ],
+  "outliers": [
+   "Robertson quotes the suggestion that the market at Corinth can be pictured as vividly as the excavated one at Pompeii, with poor Christians buying their modest pound of meat",
+   "Ellicott explains the unusual word for sacrificial meat here as a courtesy, a Christian at a heathen's table avoiding the term that would offend his host",
+   "Clarke reports that the repeated clause about the earth being the Lord's is absent from a long list of manuscripts, versions and fathers and has been removed from the text by an editor"
+  ],
   "themes": [
-   "if any man say, This is offered in sacrifice unto idols, eat not",
-   "for his sake that shewed it, and for conscience sake",
-   "abstain when the meat is pointed out",
-   "liberty yielded for another's conscience"
+   "conscience",
+   "liberty",
+   "offence",
+   "food",
+   "hospitality"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "29": {
@@ -1319,213 +723,68 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "29-33",
+  "pericope_label": "Liberty judged by another conscience, all to the glory of God, and giving no offence",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin distinguishes the outward restraint from the conscience itself, so that bearing with a weak brother never entangles one's own freedom; he confines the blame to those who volunteer occasions of offence where neither necessity nor expediency requires it; he holds that no part of life and no action so minute is exempt from being directed to God's glory; he says we are debtors to all, even to strangers; and he warns that the example of pleasing all men is stretched by some to unlawful things, whereas the accommodation was only in matters indifferent and nothing against men's salvation may be conceded. Gill takes the grace either as Christian liberty or as the creatures God has given, applies the rule of glory to ordinary meals where every mercy is owned as from God, and excepts from the command about offence what is an incumbent duty, such as the pure preaching of the Gospel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke denies that the Gospel lays any man under a general burden of doing nothing at which a weak brother might be hurt, since gospel liberty must not take the scrupulosity of any conscience for its rule, and finds in the rule of glory a sufficient guide for every indifferent thing on which there is no express command. Wesley states that another's conscience is not the standard of mine extends the rule of glory by enumeration to civil as well as religious actions with the advancement of the knowledge and love of God as their end, and adds to the command about offence the condition, if and as far as it is possible."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul clarifies which conscience he means: not the eating believer's own conscience (which is free, knowing the meat indifferent) but the conscience of 'the other' (the weak brother or observer) — it is his scruple, not the eater's, that calls for abstention; Paul anticipating the objection, 'why should my real liberty be judged by another's conscience?' (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the believer's own conscience remains free; he yields his liberty voluntarily for love's sake, not because the other's scruple binds him in truth — the answer to the objection being the law of love and the glory of God."
+    "summary": "Barnes reports that the question about liberty seems to contradict what precedes and that Macknight and others read it as an objection, glosses the next verse as partaking by grace and asks why a man should court censure over eating, and explains why Jew and Gentile each need their own care. Ellicott treats the question as a querulous objector's, answered not narrowly but by the principles that follow, denies that the division of acts into religious and secular is recognised by Paul since the quality of an act depends on the spirit and motive behind it, makes giving no offence the practical test of the rule of glory, notes that its sphere now reaches beyond the Church, and corrects the last clause so that the profit sought is that of the whole mass of men rather than of a great number. Robertson has the writer step into the place of the strong brother whose conscience is asked to yield, calls it an eternal collision between progress and reaction resolved only by love, asks whether the risk of being evil spoken of is worth maintaining one's liberty, treats the glory of God as the ruling motive rather than having one's own way."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the question about liberty being judged is doing: Barnes reports that it seems to contradict the preceding argument and that Macknight and others take it as an objection, Ellicott reads it as a querulous objector's complaint, and Robertson has the writer speaking in the strong brother's person, while Clarke and Calvin take it straight, as leaving one's own conscience free even where the outward act is given up",
+   "How far the command to give no offence and to please all men extends: Wesley limits it by 'if and as far as it is possible', Gill excepts what is an incumbent duty such as preaching the Gospel, and Calvin excepts unlawful things and anything opposed to men's salvation"
+  ],
+  "outliers": [
+   "Robertson describes the case as an eternal collision between the forces of progress and reaction, resolvable only by love that builds up",
+   "Ellicott denies that the modern division between religious and secular acts is recognised by Paul, holding that a religious act done in a secular spirit is secular and a secular act done in a religious spirit is religious",
+   "Robertson remarks that saying grace over food one ought not to eat looks inconsistent"
+  ],
   "themes": [
-   "Conscience, I say, not thine own, but of the other",
-   "why is my liberty judged of another man's conscience",
-   "the other's conscience limiting liberty",
-   "liberty yielded, not bound"
+   "conscience",
+   "liberty",
+   "the glory of God",
+   "offence",
+   "example"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "If Paul partakes of food 'by grace' (with thankfulness, as God's gift, or by God's favour), why should he be evil spoken of (blamed, reproached) for eating that for which he gives thanks? The food received with thanksgiving is sanctified to the believer (1 Timothy 4:4-5); his thankful enjoyment of God's gift should not expose him to reproach (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: this confirms the believer's real liberty — yet, in harmony with vv.28-29, he will still forgo it where its use would give offence; thankfulness sanctifies the gift, but love governs its use."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if I by grace be a partaker, why am I evil spoken of for that for which I give thanks",
-   "the thankful enjoyment of God's gifts",
-   "the gift sanctified by thanksgiving",
-   "liberty real yet governed by love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul gathers the whole discussion of meats and liberty into one grand principle: even in the most ordinary acts — eating and drinking — and indeed in 'whatsoever ye do,' the believer is to act with a view to God's glory; this the supreme and universal standard of the Christian life, every act to be done so as to honour God, the single aim that resolves all questions of liberty and conscience (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): nothing is too small to be consecrated to God's glory; this principle, rightly applied, governs the use of all liberty and sanctifies the whole of life."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God",
-   "the great principle of God's glory",
-   "God's glory the aim of every act",
-   "the comprehensive standard of life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul applies the glory of God to conduct toward others: give 'none offence' (no occasion of stumbling or scandal) to anyone — naming three classes: the Jews, the Gentiles (Greeks), and the church of God; 'offence' meaning a stumbling-block, anything that would needlessly hinder another's salvation or wound the church (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): the believer's regard for others extends to all — unbelieving Jew and Gentile (lest they be repelled from the gospel) and fellow Christians (lest they stumble); love consults the good of all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Give none offence, neither to the Jews, nor to the Gentiles, nor to the church of God",
-   "the rule of giving no offence",
-   "no stumbling-block to any",
-   "universal regard for others"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul offers himself as the pattern: he seeks to please (accommodate, conciliate) all men in all things — not from man-pleasing flattery, but adapting himself for their good, as he had described (9:19-22); not seeking his own profit but the profit (benefit) of the many, subordinating his own interest and liberty to others' welfare, with the supreme aim that they may be saved (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the great end of all this self-accommodation is the salvation of others — love bends every liberty toward this highest good, that they may be saved."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "even as I please all men in all things, not seeking mine own profit",
-   "but the profit of many, that they may be saved",
-   "Paul's example of self-denying love",
-   "liberty bent toward others' salvation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
