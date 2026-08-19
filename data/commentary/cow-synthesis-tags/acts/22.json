@@ -1,302 +1,268 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill marks the remarkableness — Paul addresses the very men who had dragged him from the temple and beaten him (scarcely deserving the name 'men') as 'brethren' (his countrymen) and 'fathers' (the elders), showing how ready he was to put up with affronts and forgive injuries; the meekness that returns courtesy for cruelty (the spirit of Christ, Matthew 5:44), joined to wisdom (conciliating to gain a hearing); the defence an opportunity to preach Christ to his people (the heart longing for their salvation, Romans 9:1-3)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Men, brethren, and fathers",
-   "hear ye my defence",
-   "Paul's meekness toward his persecutors",
-   "conciliating to gain a hearing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
   ],
+  "range": "1-2",
+  "pericope_label": "Paul begins his defence, and the crowd falls silent at the Hebrew",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the address for what it cost: men, brethren and fathers is a common form among the Jews, but that the apostle should so open his speech after they had dragged him from the temple and beaten him unmercifully is remarkable, when they scarcely deserved the name of men; yet he calls them brethren, being his countrymen according to the flesh, and fathers, some among them being men in years and even elders of the people. Calvin finds the courtesy harder to account for — it is a wonder that Paul gives so great honour to the desperate enemies of the gospel, who had broken all bond of brotherly fellowship — but answers that, their casting off not being yet made known, it was meet that he should acknowledge in them the grace of God's adoption, regarding not what they deserved but into what degree of honour God had exalted them; and let us learn so to reverence men that we impair not God's right. Calvin leaves the language itself open between Hebrew and Syrian, inclining to the common speech because Paul spoke to the common sort as well as the elders, and says the Jews had imagined that Paul so hated his kindred that he hated their tongue, so that hearing their own language they began to have better hope."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry watches the manner rather than the words. Never was poor man set upon in a more tumultuous way, nor with more fury, and yet there appears no fright — his mind is sedate, and he makes his own words good, none of these things move me. Neither does any passion appear: though it would have vexed any man alive to be charged with profaning the temple just when he designed to show his respect to it, he breaks out into no angry expression, but is led as a lamb to the slaughter. Though rescued out of their hands, he does not fall foul upon them with, Hear now, you rebels, but compliments them with, Men, brethren and fathers; nor does he recriminate, but asks only, Hear you my defence — an accused man having a right to answer for himself. Henry takes the Hebrew tongue for the vulgar language of the Jews, not pure Old-Testament Hebrew but the Syriac, a dialect of it, or rather a corruption, as the Italian of the Latin."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke recovers the old sense of the word rendered defence: it is his apology, in the sense the word was anciently understood — hence the Apologies of the primitive fathers, their defences of the Christian religion; that is its proper meaning, and the modern use for an excuse is an abuse of it. Wesley puts the demand for attention in a clause: hearken to Israel your father — let Israel, that has prevailed with God, prevail with you; and with Henry he limits the promise carefully, that not their persons but their posterity is meant."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the opening words did their work — one speaking in Hebrew not likely to blaspheme the sacred Hebrew books, the conciliation continued; Clarke: Paul had probably been traduced as a mere Gentile enemy of the Jewish religion, his speaking Hebrew refuting this (showing him a Jew conversant with the sacred tongue); the mob, lately raging, kept the more silence — the wisdom of conciliation (meeting men on their own ground, removing prejudice, becoming all things to all men, 1 Corinthians 9:20), the providence giving Paul a hearing."
+    "summary": "Ellicott notes that the apparently triple division is really twofold, brethren and fathers, and that Paul begins with the self-same formula as Stephen, perhaps the received one for addressing an assembly that included the scribes and elders; and he explains the hush shortly — one who spoke in Hebrew was not likely to blaspheme the sacred Hebrew books. Barnes says the same of Stephen's opening, and Robertson presses the parallel: these are the very words Stephen used when arraigned before the Sanhedrin with Paul then present, and now Paul faces a mob on the same charges. They are words of courtesy and dignity, and his purpose is conciliatory: he employs his ready tact. Robertson derives the word for defence from a verb meaning to talk oneself off a charge, and makes the language the turning point — a vivid picture of the sudden hush that swept over the mob under the spell of the Aramaic, for they would have understood Paul's Greek but much preferred this. A masterstroke."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "he spake in the Hebrew tongue",
-   "they kept the more silence",
-   "the wisdom of conciliation",
-   "the mob quieted"
+   "Men, brethren, and fathers, hear ye my defence",
+   "he spake in the Hebrew tongue to them",
+   "they kept the more silence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "3": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "3",
+  "pericope_label": "Born in Tarsus, brought up at the feet of Gamaliel, zealous toward God",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the opening claim at full weight: a Jew by birth, a thorough genuine one, an Hebrew of the Hebrews on both his father's and his mother's side, a true descendant from Abraham, Isaac and Jacob. Calvin explains why the birth needed saying at all: at that day all things were out of order among the Jews, and many rogues falsely boasted that they were Jews to have some shroud for their wickedness, so Paul begins where he does to acquit himself of that suspicion. On the perfect manner Calvin reads a distinction between kinds of teaching — Paul marks off the purer form of knowledge in which he had been trained from the common instruction, which disagreed more with the true meaning of the law; and though the law was then corrupted by many additions even among the best doctors, he may boast that he was diligently instructed, lest any think he had got only some small smattering. He allows the claim of zeal only so far, this zeal of his being altogether rash."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry works through the pedigree: he was one of their own nation, not of any obscure family nor a renegado of some other; born a freeman of Tarsus, not in servitude as some Jews of the dispersion were — a small matter to boast of, yet needful to mention to men who trampled on him as if he were to be ranked with the children of base men. And he was not only a Jew and a gentleman but a scholar, brought up in Jerusalem, the principal seat of Jewish learning."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke denies the custom usually inferred from the phrase at the feet: it has been generally supposed to refer to that practice, but we rather learn from Jewish authority that the disciples of the rabbins stood before their teachers, as Vitringa has proved, and Kypke contends that at the feet means the same as near or before, no infrequent mode of speech among sacred and profane writers — when the disciples laid their money at the apostles' feet it means only that they brought it to them. Clarke names the school besides: it is Pharisaism the apostle has in view, that strict interpretation of the law, and especially the traditions of the elders, for which that sect was remarkable. Wesley turns the whole forward: the learned education Paul had received was once the matter of his boasting, and unsanctified learning furnished him with arguments against the Gospel, yet when the grace of God changed his heart and turned his accomplishments into another channel, he was the fitter instrument to serve God's merciful purposes."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Matthew Henry: Paul gives such an account as might satisfy the captain he was not the Egyptian and the Jews he was not the enemy to their law and temple they supposed — one of their own nation, of the stock of Israel; Gill: a Jew by birth, a true Hebrew; born in Tarsus, reared in Jerusalem, educated at the feet of Gamaliel (Acts 5:34) in the strict law of the fathers, zealous toward God 'as ye all are this day' (the appeal to common ground, his former zeal matching theirs) — establishing his credentials as a true, learned, zealous Jew, refuting the slander."
+    "summary": "Ellicott takes the phrase literally, the Rabbis sitting in a high chair and their scholars on the ground, so that they were at their master's feet indeed, and Barnes reads it as an idiom for a disciple's condition, arising from the learner's lower seat. Ellicott notes that the two English words of the perfect manner render a single Greek noun meaning accuracy, and Robertson calls it mathematical accuracy, minute exactness, while Barnes glosses it as strict diligence, in the utmost rigour of that instruction, no pains being spared. Robertson adds what the participles imply, that Paul was a Hellenistic Jew, not an Aramaean, sent to Jerusalem while young — possibly thirteen or fourteen — and apparently had not seen Jesus in the flesh; and on the zeal he says that in his conciliation Paul went to the limit and put himself beside the mob in their zeal for the law, generous enough to interpret their fanatical frenzy as zeal for God. Ellicott finds the apostle claiming their sympathy as having once shared their dearest convictions, with a touch of higher enthusiasm in his language: he was a zealot for God, they were zealots for the Law."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does at the feet describe the posture of a disciple?",
+    "positions": [
+     {
+      "position": "yes, literally — the rabbi sat high and the scholars on the ground",
+      "holders": [
+       "Ellicott",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "no — Jewish authority has the disciples standing, and the phrase means only near or before",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "a Jew, born in Tarsus",
+   "I am verily a man which am a Jew, born in Tarsus",
    "brought up at the feet of Gamaliel",
-   "zealous toward God",
-   "Paul's Jewish credentials"
+   "zealous toward God, as ye all are this day"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "4": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley"
   ],
+  "range": "4-6",
+  "pericope_label": "The persecutor's letters, and the light at noon on the Damascus road",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill states the persecution at its worst: Paul breathed out threatenings and slaughter, haled them from their houses, consented to their death as he did to Stephen's, and whenever it was put to the vote gave his voice against them — which shows how averse he was to this way, so that only divine power could reconcile him to it. Of the high priest he appeals to, Gill takes it of Annas or Caiaphas, high priest at the time, and thinks it should seem he was still living, or else that Paul had preserved the letter and could produce it at any time. Calvin takes the brethren of the letters to mean his countrymen, whom he meant to appease with a more honourable title; and on the hour he makes the argument at length: in the night season there often appear lightnings that come of the hot exhalations of the earth, but this was stranger, that about noon a sudden light did not only appear but compassed him about, so that through fear he fell to the ground — and Paul reckons up these circumstances to prove he was converted by God, lest any suspect his change proceeded of rashness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses this way as the way of worshipping God and arriving at blessedness, and calls the zeal itself ample proof of Paul's sincerity as a Pharisee. Wesley turns both clauses of the fourth verse on the hearers: he persecuted this way with the same zeal you do now — and how much better his condition, now that he was bound himself; and he says the brethren here are Jews, so the title was not peculiar to Christians."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul persecuted the Christian religion and its professors (breathing out threatenings and slaughter, haling them from their houses, imprisoning them, consenting to their death), a most bitter, implacable persecutor — showing how great a work of divine power his conversion was (only God could reconcile such a persecutor, 1 Timothy 1:13); the confession establishing the depth of his former enmity (the foil to the grace that converted him, the change the proof of divine power), the appeal to his hearers' shared former zeal, the honesty that owns the past and magnifies grace."
+    "summary": "Ellicott says the speaker uses the current colloquial term this way, used by the disciples as indicating that they had found in Christ the way of eternal life, and by others, it may be, with a tone of scorn, as of people who had chosen their own way and must be left to take it; Robertson adds that in using this Jewish terminology Paul avoids any irritating name for the Christian body. Robertson lets the shame of the persecution stand — actual death of many followed, and Paul felt ashamed of it, as was in his mind when he pictured his former state as a blasphemer and a persecutor, the first of sinners — yet it showed the lengths of his zeal for Judaism. Ellicott separates the dates of the high-priesthood: Annas is named as high priest at the conversion, acting probably with Caiaphas as coadjutor, whereas at the point now reached the office was filled by Ananias son of Nebedaeus — a predecessor's acts being known to the high priest for the time being, so that Paul may appeal to his knowledge as confirming his own account. Barnes says the body that joined in the letters is the whole council of the nation, and Robertson thinks Paul a member then; and on the hour Barnes notes that the circumstance is omitted in the earlier narrative and that Paul mentions it as the more remarkable for occurring at mid-day, to show he was not deluded by meteoric or natural appearances, which usually occur at night, while Ellicott takes the note of the hour as characteristic of a personal recollection."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
    "I persecuted this way unto the death",
-   "binding... both men and women",
-   "the depth of former enmity",
-   "the foil to grace"
+   "as also the high priest doth bear me witness",
+   "about noon, suddenly there shone from heaven a great light"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the high priest (Annas or Caiaphas) could bear witness, Paul perhaps keeping the letter as a testimony; Barnes: 'all the estate of the elders' the whole sanhedrim, Paul receiving letters to the Jewish brethren at Damascus; Paul appeals to the very authorities who commissioned him to persecute (credible witnesses who could not deny his former enmity, corroborating his account); the commission to Damascus (the letters, the journey to bring Christians bound to Jerusalem) the proof of his former zeal — the dramatic contrast (the persecutor on his errand met by Christ), the foil to grace."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the high priest doth bear me witness",
-   "letters... to Damascus",
-   "the appeal to witnesses",
-   "the foil to grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: 'about noon' omitted in Acts 9, mentioned here as remarkable — occurring at midday, showing Paul was not deluded by any meteoric or natural appearance (which occur at night), the light brighter than the noonday sun (Acts 26:13), the supernatural character attested by the time; Ellicott marks the special note of the time; a great light from heaven at noon arresting the persecutor on his errand (the glory of the risen Christ) — the supernatural intervention (no delusion), the sovereign grace that arrested Paul in the midst of his sin, the providence in the timing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a great light round about me",
-   "about noon",
-   "the supernatural appearance",
-   "the sovereign grace that arrested Paul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the second aorist 'I fell,' the voice in the genitive (as Acts 9:7), Saul's name repeated each time the account is given (Acts 9:4; 22:7; 26:14) with the same question; Paul falling to the ground (the persecutor prostrate), the voice of the risen Christ 'Saul, Saul, why persecutest thou me?' — the searching question identifying the persecution of the church with Christ himself (the Head feeling his members' sufferings, the mystical union, Matthew 25:40); the personal, convicting question (the name repeated), the grace that arrests and convicts to save."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I fell unto the ground",
-   "Saul, Saul, why persecutest thou me?",
-   "the persecution of the church is of Christ",
-   "the searching question"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: 'of Nazareth' (the Nazarene) added here (not in Acts 9:5) because Jesus is named for the first time in the address; Paul's question 'Who art thou, Lord?' (the awakened conscience), Christ's answer 'I am Jesus of Nazareth, whom thou persecutest' — the risen Christ revealing himself as the very Jesus Saul persecuted (the persecutor confronted with the living, risen Lord, his unbelief shattered, the resurrection proved, 1 Corinthians 15:8); 'whom thou persecutest' again identifying Christ with his church; the grace in the revelation that converts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Who art thou, Lord?",
-   "I am Jesus of Nazareth, whom thou persecutest",
-   "Christ's self-revelation",
-   "the persecutor confronted with the risen Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
   ],
+  "excluded_voices": [
+   "Albert Barnes",
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "7-11",
+  "pericope_label": "The voice on the road, the companions who saw but did not understand",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill adds the plain reason the companions saw anything at all — the light shone about them as well as about Saul — and explains the blindness that followed: the light was above the brightness of the sun and so dazzled his eyes that he could not see his way into the city, so that some of his company took him by the hand and led him. Calvin reaches the same place as the grammarians by exegesis. There is no such disagreement in Luke's words as there seems to be, for it is no absurd thing to say that they heard some obscure voice, yet so that they did not discern it as Paul himself did, whom alone Christ meant to stay and tame with the reprehension. They hear a voice, because a sound enters into their ears, so that they know some one speaks from heaven; they hear not the voice of him that spake to Paul, because they understand not what Christ says; and they see Paul compassed about with the light, but they see none who speaks from heaven. Calvin hears the surrender in the question that follows: this is the voice of a tamed man, and the true turning unto the Lord, when, laying away all fierceness and fury, we bow down our necks willingly to bear his yoke — and this is the beginning of well-doing, to ask the mouth of God, for their labour is lost who think upon repentance without his word. That Christ then appoints Ananias to be Paul's master he takes for no reproach, but as a way of setting forth and beautifying the outward ministry of the Church, teaching us that we must not grudge to hear God speak with the tongue of men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley says the companions heard it not distinctly, but only a confused noise."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'they heard not the voice' = they did not hear it as a voice uttering articulate words, for them as though it thundered (John 12:29), reconciling with Acts 9:7 (they heard 'a voice/sound'); Robertson: the accusative here vs the genitive in Acts 9:7 indicating they did not understand what they heard; the companions saw the light and feared but did not hear the articulate words — the harmonization (hearing the sound but not the message, no contradiction), the appearance real (the companions witnesses) but the call personal (the revelation Paul's own)."
+    "summary": "Robertson works through the wording: the word for ground is an old one occurring here alone in the New Testament; the participle after heard stands in the genitive, though in the later report the accusative is used, either being allowable; and he marks what is constant across the three accounts — Saul's name repeated each time, and the same question put in each, why persecutest thou me. These piercing words, he says, stuck in Paul's mind. Ellicott notes that the name is again given in its Hebrew form, and that the companions did not hear the voice as uttering articulate words — it was for them as though it thundered. Robertson finds the distinction in the grammar, the accusative standing here rather than the genitive to indicate that those with Paul did not understand what they heard, just as they beheld the light but did not see Jesus, the verb being used in the sense of understand; and he draws an argument from the roughness itself, that it is one of the evidences of the genuineness of this report that Luke did not try to smooth out apparent discrepancies in detail between the words of Paul and his own record in the earlier chapter."
    }
   ],
   "debates": [
    {
-    "question": "Does Acts 22:9 contradict Acts 9:7 on whether the companions heard the voice?",
-    "sides": [
+    "question": "How can Luke say here that they did not hear the voice?",
+    "positions": [
      {
-      "position": "No — in Acts 9:7 they heard the sound; here they did not hear the articulate words (the distinction of hearing the sound and understanding the message)",
+      "position": "the case of the noun distinguishes hearing a sound from understanding words",
       "holders": [
-       "Ellicott",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "they heard an obscure voice but did not discern it as Paul did; and the roughness is itself evidence of genuineness",
+      "holders": [
+       "Calvin",
        "Robertson"
       ]
      }
@@ -305,255 +271,163 @@
   ],
   "outliers": [],
   "themes": [
-   "they saw the light... but heard not the voice",
-   "the harmonization with Acts 9:7",
-   "the sound but not the words",
-   "the personal call"
+   "Saul, Saul, why persecutest thou me?",
+   "they heard not the voice of him that spake to me",
+   "what shall I do, Lord?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: 'What shall I do, Lord?' the voice of a tamed man, the true turning unto the Lord — when, laying away all fierceness and fury, we bow our necks willingly to be ruled (the mark of genuine conversion, the surrender of the will); Robertson: 'are appointed for thee' (perfect passive of tassō); Paul, lately breathing threatenings, now ready to obey (the submission the fruit of conversion, Acts 9:6); Christ directing him to Damascus to learn what was appointed (the use of human means, Ananias, v.12, the Lord directing through his servants)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What shall I do, Lord?",
-   "go into Damascus",
-   "the true turning of the tamed persecutor",
-   "direction through appointed means"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the light, above the brightness of the sun, so dazzled his eyes he could not see his way, led by the hand into the city; Ellicott marks the personal recollection (Paul connecting the blindness with its cause, the glory of the light, where Acts 9:8 states only the fact); Paul, who set out armed to ravage the church (v.5), entered blinded, helpless, led by the hand like a child — the humbling of the proud persecutor (the pride brought low, Proverbs 15:33), the contrast between his intent and his arrival, the physical blindness a figure of his spiritual state (the prelude to the inward light)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "could not see for the glory of that light",
-   "led by the hand into Damascus",
-   "the proud persecutor humbled",
-   "blinded and led helpless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul describes Ananias as 'a devout man according to the law' (a strict observer of the law of Moses, moral and ceremonial, of holy life and conversation), this part of his character chosen to commend him to the Jews addressed (showing the man who instructed and baptized Paul was no enemy of the law but a devout, well-reported Jew); the conciliatory description (the gospel not contrary to the law, its agents not enemies of Moses), the wisdom of meeting men where they are (1 Corinthians 9:20); many believing Jews still observed the law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ananias, a devout man according to the law",
-   "good report of all the Jews",
-   "the conciliatory description",
-   "commending the gospel by its agents"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Adam Clarke",
    "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Ananias came to Paul at the house of Judas in the street called Straight, stood by him, and addressed him; Robertson: the same word for 'looked up' and 'receive thy sight' (anablepō); Ananias greeting the former persecutor tenderly as 'Brother Saul' (the grace that embraces the converted persecutor, the love receiving the former enemy, overcoming his earlier fear, Acts 9:13-14) and restoring his sight (the physical sight a figure of the spiritual enlightening, the blindness removed, the conversion completed); the Lord working through his servant (the means appointed, v.10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Brother Saul, receive thy sight",
-   "I looked up upon him",
-   "the tender reception of the persecutor",
-   "restored sight a figure of enlightenment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "12-15",
+  "pericope_label": "Ananias the devout, and the commission to be a witness",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: 'the God of our fathers hath chosen thee' = from eternity in his purposes, or 'taken thee into his hand' to qualify thee, designing both his call by grace and to apostleship; Paul represents Ananias speaking of 'the God of our fathers' to show the gospel not contrary to the faith of Israel (no new God); Barnes: the ends — to know his will (the plan of salvation), see the Just One (the Messiah, Christ, Acts 3:14, whom he saw on the road), and hear his voice; the divine election and calling of Paul (qualified to be his witness, v.15, the seeing of the risen Christ the ground of his apostleship, 1 Corinthians 15:8)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the God of our fathers hath chosen thee",
-   "know his will... see that Just One... hear his voice",
-   "Paul's divine calling",
-   "grounded in the God of the fathers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "summary": "Gill takes the phrase of a man whose walk was agreeable to the law, a strict observer of it both moral and ceremonial, and says the apostle chose that part of his character as what would recommend him to the Jews he addressed — for though a believer in Christ, Ananias kept the rituals of the law, as many believing Jews did. Gill reads the verb rendered hath chosen of eternity, of God's everlasting purpose, or else, he hath taken thee into his hand, to fit and qualify him for his service; and in the title God of our fathers he hears assurance that Christian doctrine was not contrary to the faith of the one God of Israel. Calvin takes the title of godliness as a guard against prejudice: as the Jews loathed the Gentiles they would never have allowed a teacher from among them, and one who had revolted from the law would have been most detestable — so Ananias is witnessed to have worshipped God according to the law and been well reported of among the Jews. Calvin makes the doctrine of the calling explicit: nothing is fitter to provoke us joyfully toward God than to know that he prevents us with his free goodness, calling us back from destruction to life; and Paul is taught that God had respect unto him at the very time he went astray and was an enemy to his own salvation, so that predestination abolishes those preparations sophisters imagine, as if man prevented God's grace by his free will. He adds that Paul's new calling is joined to the old promises, so that those who pass over unto Christ do not fall away from the law."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the title of the Just One to use — he is called so because he is Jesus Christ the righteous, and those chosen to know God's will must look to Jesus, since by him God has made his good-will known to us."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the Lord Jesus is called the Just One in opposition to the Jews, who crucified him as a malefactor, and finds in the clause proof that Jesus Christ did actually appear unto Saul of Tarsus. Wesley describes Ananias in a clause, a truly religious person yet a strict observer of the law of Moses."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: Paul to be a witness testifying to all men that the Messiah has come, died, risen, and is the Saviour of the world, of what he had seen and heard (the proof of Christ's divine mission); Ellicott: this mission, identical with the Twelve's (Acts 1:8), virtually placed Paul among the apostles; 'unto all men' the universal commission (Jews and Gentiles, the apostle to the Gentiles, v.21); the witness grounded in his own eyewitness experience (the risen Christ seen and heard, 1 Corinthians 15:8) — the apostolic commission to bear universal witness to Christ."
+    "summary": "Ellicott presses the contrast with the earlier account, where Ananias is simply a disciple: the description here was given to conciliate the listeners, since such a man would not have received the converted persecutor except on evidence that the change had come from God. On the verb rendered hath chosen Ellicott says the Greek is not the word commonly so rendered, and is better given as fore-appointed; Robertson calls it an old verb meaning to take into one's hands beforehand, to plan or determine, and notes the three infinitives hanging on it — to know his will, to see the Righteous One, to hear a voice from his mouth. Robertson puts the purpose of the description plainly, that Paul adds according to the law to show he was brought to Christianity by a devout Jew and no law-breaker. Barnes gives the office behind the vision: since it was the peculiar work of an apostle to bear witness to the person and deeds of the Lord Jesus, Paul had to see him, to be a competent witness of the resurrection. On the commission Ellicott observes that this mission, identical with that of the Twelve, virtually placed the persecutor on a level with them and was equivalent to his appointment as an Apostle; and Robertson finds the same claim hidden in the tenses, the change between the perfect hast seen and the aorist heard being lost in English, while Blass cites the perfect used elsewhere by Paul as proof of his enduring qualification for the apostleship."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "thou shalt be his witness unto all men",
-   "of what thou hast seen and heard",
-   "the apostolic commission",
-   "witness to all, Jews and Gentiles"
+   "one Ananias, a devout man according to the law",
+   "the God of our fathers hath chosen thee",
+   "thou shalt be his witness unto all men"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "16": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Chrysostom",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley"
   ],
+  "range": "16-17",
+  "pericope_label": "Arise and be baptized, and the trance in the temple",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom finds the proof in the outcome. This is without witness, he says, but the witness follows from the result — he was told, they will not receive thy testimony, and they did not, though from all calculation of reason they assuredly should have, since he was the very man who had made war upon the Christians. Two things are established by it: that they are without excuse, having persecuted him contrary to all likelihood; and that Christ was God, prophesying things contrary to expectation, not looking to past things but foreknowing things to come."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill presses against delay — many procrastinate obedience to baptism, but no delay ought to be made, it being Christ's command to be complied with at once (the duty of prompt obedience); on 'wash away thy sins,' the careful reading — baptism does not itself wash away sins (against baptismal regeneration), for sins are washed by the blood of Christ (1 John 1:7) received by faith; baptism the sign and seal of the washing, 'calling on the name of the Lord' (faith, the invoking of Christ) the means — the outward sign of the inward washing, not the efficient cause of pardon."
+    "summary": "Gill turns the question into a general reproof: though it might not be the apostle's case, many do procrastinate obedience to the ordinance of baptism — from the strength of their corruptions and the weakness of their graces, fears of falling away, the reproaches of men, or a waiting for more comfortable frames — but no such delay ought to be, since it is a command of Christ and should be obeyed as soon as a man believes. Calvin will not read a rebuke into it at all: Ananias does not chide Paul nor accuse him of slackness, but rather amplifies the grace of God by adding baptism. On what the washing does Calvin holds the balance: the blood of Christ is the only means whereby our sins are washed away, and this honour cannot be translated unto the sign of water without open injury to Christ and the Holy Ghost; yet many godly men, lest they put confidence in the outward sign, overmuch extenuate the force of baptism, and they must keep a measure, that the sacraments be kept within their bounds and yet not want their force and use. Of the whole passage Calvin gives the argument it is making: Paul shows he did not depart from the Jews of his own accord, as if he withdrew of malice, but was drawn unto the Gentiles contrary to his own expectation, having come purposely to Jerusalem to impart to his nation the grace committed to him; only when the Lord cut off that hope did he drive him thence."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke puts the washing as a figure, let this washing of thy body represent to thee the washing away of thy sins, which can be received only by invoking the name of the Lord. Wesley leaves more in the rite — baptism administered to real penitents is both a means and a seal of pardon, nor did God ordinarily in the primitive Church bestow it otherwise — and says of the temple that Paul still paid it its honour as the house of prayer. Clarke adds that the trance is mentioned nowhere else, unless in the Corinthian letter."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes says it cannot be meant that the external rite was sufficient to make the soul pure, but that baptism was an ordinance divinely appointed as expressive of the washing away of sins; Robertson states the objection sharply, that it is possible to take these words as teaching baptismal remission, but to do so is a complete subversion of Paul's picturesque language, since as elsewhere baptism is the picture of death, burial and resurrection, so here it pictures the change already made when Paul surrendered on the road. Ellicott holds that for the Apostle baptism was no ceremonial act, but was joined with repentance and, faith presupposed, brought the assurance of a real forgiveness. Gill and Barnes place the return to Jerusalem three years after the conversion, Gill noting that Paul went first into Arabia, and Barnes that he would naturally continue, like other Jewish converts, to offer his devotions in the temple; and Ellicott presses the apologetic use of the detail — his praying in the temple is brought forward to show that then, as now, he had been no blasphemer of the Temple but a devout worshipper in it."
    }
   ],
   "debates": [
    {
-    "question": "Does baptism wash away sins?",
-    "sides": [
+    "question": "Does baptism itself wash away sins?",
+    "positions": [
      {
-      "position": "Baptism is the sign and seal of the washing away of sins by Christ's blood, received by faith ('calling on the name of the Lord') — not the efficient cause of pardon (against baptismal regeneration)",
+      "position": "no — the rite is expressive of a washing already made, and to read remission into it subverts Paul’s language",
       "holders": [
-       "Gill",
-       "the witnesses"
+       "Robertson",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "the blood of Christ alone washes, yet the force of baptism must not be overmuch extenuated",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "to real penitents it is both a means and a seal of pardon",
+      "holders": [
+       "Wesley"
       ]
      }
     ]
@@ -561,504 +435,388 @@
   ],
   "outliers": [],
   "themes": [
-   "arise, and be baptized",
-   "wash away thy sins, calling on the name of the Lord",
-   "baptism the sign of the washing",
-   "received by faith, not baptismal regeneration"
+   "arise, and be baptized, and wash away thy sins",
+   "calling on the name of the Lord",
+   "while I prayed in the temple, I was in a trance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: Paul thrusts himself into danger (coming to Jerusalem after the vision), the witness following from the result — Christ said 'they will not receive thy testimony' (v.18) and they did not, establishing both that the Jews were without excuse (persecuting him contrary to all reason, the former persecutor's testimony the more credible) and that Christ was God (prophesying things contrary to expectation, foreknowing the future); Paul receiving the vision in the temple (the place he was charged with profaning, Acts 21:28) while praying — the revelation given in prayer, the occasion of his Gentile commission (v.21)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "while I prayed in the temple, I was in a trance",
-   "the vision in the temple",
-   "revelation given in prayer",
-   "the occasion of the Gentile commission"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
   "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Paul 'saw him' (the Lord Jesus); 'they will not receive' — the inhabitants of Jerusalem, both Jews (hating him as an apostate) and Christians (remembering his persecutions, suspicious of him); Christ directing him to leave at once because his testimony would be rejected; the foreknowledge of Christ (prophesying, contrary to expectation, that they would not receive the former persecutor's testimony, and so it proved — the foreknowledge proving his deity, Chrysostom); the redirection of the mission from the unreceptive Jerusalem to the Gentiles (v.21), the providence ordering the field."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "get thee quickly out of Jerusalem",
-   "they will not receive thy testimony",
-   "the foreknowledge of Christ",
-   "the mission redirected"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: 'they know' — the Christians know, unlikely to receive their former enemy; beating often done in the synagogue (Matthew 10:17), the converts still meeting with the Jews; Paul protests his former persecution as a reason his testimony should be received (the change in so great a persecutor a striking proof of the truth, the persecutor's witness the more credible by human calculation); yet Christ foreknew they would not receive him (the contrast of human reasoning and divine foreknowledge, the Jews persecuting contrary to all likelihood, without excuse); Paul's longing for his people (Romans 9:1-3), the desire yielding to the command (v.21)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they know that I imprisoned and beat the believers",
-   "the plea of his former persecution",
-   "the change in the persecutor a proof",
-   "longing for his people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Stephen the proto-martyr, the first to suffer for Christ, stoned to death; Barnes: Paul standing by, consenting to his death, keeping the raiment of those who slew him (Acts 7:58; 8:1) — though not stoning Stephen, with them in spirit (the guilt of the consenting, a partaker in the murder); the depth of Paul's former enmity (his part in the first martyrdom, consenting to the murder of a saint, 'the chief of sinners,' 1 Timothy 1:15), pleaded as proof his conversion should convince (the change in one who consented to the saints' murder a striking proof); 'thy martyr' the penitent's tender recollection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the blood of thy martyr Stephen",
-   "consenting unto his death, kept the raiment",
-   "the depth of former enmity",
-   "pleaded as proof of his conversion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Adam Clarke",
    "Albert Barnes",
-   "Adam Clarke"
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
   ],
+  "range": "18-21",
+  "pericope_label": "Depart from Jerusalem: the plea, and the sending to the Gentiles",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that Stephen was the proto-martyr, as some copies read here. Calvin measures what the command cost: not long before, the preaching of the gospel had been enjoined him, that his voice might sound throughout the world; now at the very entrance he is inhibited, his testimony rejected because his person is hated. Yet it was meet that the Lord's servant should be thus humbled, that preachers might learn to give themselves wholly to obey Christ — so that when shut out of one place they may go at once to another, and not cease from their duty though undeservedly loathed. That Paul answers back Calvin finds worth defending: the objection proves he was not beside himself but believed the oracle, since he knew the Christ whom he calls Lord; and God gives his saints leave familiarly to utter their affections before him, especially when they seek nothing but the confirmation of their faith — he who stands in his own conceit shall be worthily condemned, but God vouchsafes his faithful servants the privilege of modestly objecting what might call them back from obeying, and Paul, once taught that it pleased the Lord it should be so, gainsays no longer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the persecution Paul recalls shows what an active instrument Saul of Tarsus was in that priesthood's hands, and how difficult it then was to profess Christianity; and on the last word he sets out the appointment it made, this being the particular calling of St. Paul as apostle of the Gentiles, whence we find him travelling through Judea, Syria, Galatia, Macedonia, Greece, Asia and Italy — none of the apostles labouring as this man did. Wesley gives the double reason for the departure in a clause, because of the snares laid for him, and to preach where they will hear; and he draws the disappointment out: it is not easy for a servant of Christ, deeply impressed with divine truths himself, to imagine how far men can harden their hearts — he is ready to think with Paul that such evidence cannot be resisted, but experience shows that wilful unbelief is proof against all truth and reason."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: Christ directed Paul to depart (the Christians at Jerusalem would not receive him), 'far hence' — Paul travelling far in the heathen nations, much of his ministry in distant regions; Clarke: this the particular appointment of Paul, the apostle of the Gentiles (Romans 11:13); the commission to the Gentiles defining his apostleship (the gospel to the nations the great theme), the mission Christ's command not his choosing; the redirection from the Jews (his longing, vv.19-20, yielding to the command); the word 'Gentiles' that would provoke the riot (v.22), the Jewish exclusivism inflamed."
+    "summary": "Ellicott takes the order to leave as fitting the first hurried visit after the conversion better than the later one, and Robertson agrees, placing it at the visit when they tried to kill him. Barnes explains who would not receive him — the inhabitants of Jerusalem, both Jews and Christians: the Jews would not listen, because he had become in their view an apostate, and the Christians would hardly receive him, remembering his persecutions and suspicious that he had been so long in Arabia without joining them. Ellicott hears in Paul's plea an extenuation of the people's unbelief: they were, as he had once been, sinning in ignorance, which, though unconquered, was not invincible. On Stephen, Ellicott would render witness rather than martyr, the English being too technical to recall that the same word had been used just before of the office to which Paul himself was called; and Robertson hears the protest for what it is, Paul recalling the very words he used to Jesus, not liking to run away and save his own life on the spot where he had helped to slay Stephen — and he is getting on dangerous ground. Ellicott notes that the closing words convey the promise of a mission rather than the mission, and marks its effect: the crowd had listened impatiently to this point, as the speaker had once listened to Stephen, but that Christ should be represented as sending his messenger to the Gentiles and not to Jews was more than they could bear. Robertson says it shortest — Paul had until now avoided the word Gentiles, but at last it had to come, the fatal word."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "Depart: I will send thee far hence unto the Gentiles",
-   "the Gentile commission",
-   "the apostle to the Gentiles",
-   "the word that would provoke the riot"
+   "they will not receive thy testimony concerning me",
+   "when the blood of thy martyr Stephen was shed",
+   "I will send thee far hence unto the Gentiles"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "22": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "22",
+  "pericope_label": "Away with such a fellow: the mob will hear no more",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the Jews heard him quietly and did not molest him until he mentioned his mission to the Gentiles — the rest they either did not understand or took for an idle tale, the effect of madness; but a divine mission to the Gentiles they could not bear, nothing being more provoking than their calling, whom they were for depriving of all blessings and engrossing all to themselves. Calvin traces the fury to its root: the Jews conceived so great a liking of themselves that they not only despised the world in comparison, but stood more stoutly in defence of their own dignity than of the law itself, as if all religion consisted in this, that Abraham's stock might excel all other mortal men; so they rage against Paul for saying he was sent to the Gentiles."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that Paul had shown his commission to preach among the Gentiles without peevish reflections upon the Jews, and designed next to show how careful he was to give them the precedency everywhere; but whatever he designed, they resolved he should say no more. The manner of the silencing he takes for a mark of the case: they lifted up their voice to put him into confusion, that nobody might hear a word — galled consciences kick at the least touch, and those resolved not to be ruled by reason resolve not to hear it if they can help it; and the spirit of enmity against the gospel shows itself in silencing the ministers of Christ, as the Jews did Paul here. Their fathers had said to the best of seers, See not; and so they to the best of speakers, Speak not. On the sentence Henry sets two judgments side by side: without weighing his arguments they cried out with a confused noise, and thus the men who have been the greatest blessings of their age have been represented as the plague of their generation, he that was worthy of the greatest honours of life condemned as not worthy of life itself. See what different sentiments God and men have of good men — and yet both agree that such men are not likely to live long in this world."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the offence as a substitution: they understood the apostle to say that God had rejected them and called the Gentiles to be his peculiar people in their place. Wesley adds that it was said in a manner implying that the Jews were in danger of being cast off."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the Jews heard Paul patiently until he mentioned his mission to the Gentiles (the rest they bore or thought an idle tale, but a divine mission to the Gentiles they could not bear); at the word 'Gentiles' they erupted, crying 'Away with such a fellow... not fit that he should live' (the fury unleashed, the demand for his death); the Jewish exclusivism inflamed (unable to bear the Gentiles admitted to equal privilege, the pride hating the breaking down of the middle wall, 1 Thessalonians 2:16); the zeal without knowledge (Romans 10:2); the providence overruling the rage for Paul's preservation."
+    "summary": "Robertson makes the same point in the tense — the imperfect says they kept on listening, with respectful attention — and then the figure: this word was like a spark in a powder magazine, and the explosion of pent-up indignation broke out instantly, worse than at first. Barnes is careful about the reason: their indignation was not that the Gentiles could not be brought into covenant with God, for they would themselves compass sea and land to make one proselyte, but that Paul seemed to teach men might be saved without conforming to the law of Moses, and that his speech implied the Jews were the more hardened of the two. Barnes renders the cry, take such a man from the earth, that is, put him to death, language of strong indignation and abhorrence; Robertson notes that they renew the very words used in the previous chapter, but with from the earth for vehemence, and that the imperfect following is a neat Greek idiom for impatience about an obligation — it was not fitting, he ought to have died long ago. Ellicott hears the older scene in it — ominously like that in which Stephen's speech ended: immediate execution without the formality of a trial, an eager craving for the blood of the blasphemer."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "gave him audience unto this word",
+   "they gave him audience unto this word",
    "away with such a fellow from the earth",
-   "the riot at the word Gentiles",
-   "the Jewish exclusivism inflamed"
+   "it is not fit that he should live"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "23": {
   "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley"
   ],
+  "range": "23-25",
+  "pericope_label": "The scourging ordered, and the Roman citizen's protest",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that Paul was till now upon the top of the stairs, and that the captain had him taken inside partly to save him from the people's rage and partly to examine him privately, though by a very unjustifiable method; and of the binding he takes it of a pillar, after the Roman manner. Calvin divides the captain's conduct in two. It was well done to withdraw Paul from the sight of the people, whose rage his presence provoked; but in commanding him to be scourged, to whose charge he had heard no certain crime laid, he deals unjustly — though the injustice was not without colour, since it was likely that all the people had not conspired without cause to put one man to death. Calvin observes that Paul alleges first the privilege of the city and then the common law, and that although there was more weight in the second, he would have prevailed nothing had the centurion not been moved by the honour of the Roman empire — the privilege being held so sacred that for a citizen of Rome to be beaten was thought an offence past purging. Paul escaped rather by the privilege than by common equity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports Bishop Pearce's view that shaking the upper garments is all that is meant, an old custom when men were greatly irritated, though he thinks some were throwing off their clothes to prepare for stoning; the dust, he adds, showed their vexation that they could not get the apostle into their power. He gives the captain's reasoning too, that not understanding Hebrew he was ignorant of both charge and defence, and supposed Paul must have given the highest provocation; the rack, he adds, has to the disgrace of human nature existed in all countries. Wesley reads the rending as horror at a pretended blasphemy, and the dust as vehemence of rage they knew not how to vent; and on the protest he states the law precisely: a freeman of Rome might be bound with a chain and beaten with a staff, but not bound with thongs, nor scourged, nor beaten with rods."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: they cast off their outer garments (probably intending to stone Paul, as Acts 7:58) and threw dust into the air (expressive of abhorrence and indignation) — a striking exhibition of rage and vindictive malice; Paul guarded by Roman soldiers, so their only way of expressing wrath was by these tokens (as Shimei against David, 2 Samuel 16:13); the frenzied, impotent fury of the inflamed multitude (unable to reach Paul, the rage spent in gestures), the providence restraining their violence (protecting him through the Romans), the picture of rage without reason."
+    "summary": "Barnes takes the casting off of the outer garments for a preparation to stone him, and the dust for abhorrence and indignation — Paul being guarded by Roman soldiers, their only way of expressing wrath was by such tokens; and he explains the word for the examination, commonly applied to metals whose nature is tested by fire, and then meaning to torture in order to extort a confession, a practice which has been one of the foulest blots on human nature. Ellicott comes down the other way on the gestures: the dust would seem a natural relief, as with other Oriental nations, to uncontrolled passion, though the handfuls may have been aimed at the Apostle as a sign of loathing; and while the casting off of garments looks like preparing to stone, the verb may mean only that they shook them, so that the two gestures are parts of one act — the latter view, he says, seems the more probable. Robertson finds in the three genitive absolutes a lively picture of the mob's excitement in their spasm of wild rage, and notes that beginning an inquiry by torture was itself contrary to Roman law, Lysias being as much in the dark as ever. Ellicott allows that the words of the binding have been rendered, they stretched him forward for the straps, and that the Greek admits it, but keeps our version, since the word for thong is always used in the New Testament of tying: Paul was stripped to the waist and tied with leathern thongs, as our Lord had been, to the whipping-post within the fortress; and he marks that stress is laid on both points of the protest, since it was unlawful to scourge a Roman citizen at all, and worse to torture him, as slaves were tortured, merely as a means of inquiry."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "cast off their clothes, and threw dust",
-   "the frenzied rage",
-   "the impotent fury",
-   "restrained by providence"
+   "they cast off their clothes, and threw dust into the air",
+   "that he should be examined by scourging",
+   "is it lawful for you to scourge a man that is a Roman, and uncondemned?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the captain brought Paul into the castle to save him from the people's rage and examine him privately, though by a wrong and unjustifiable method; Barnes: 'the castle' the tower of Antonia, 'examined' (the word for testing metals by fire) meaning to torture to extract the truth; the captain, ignorant of the case (the speech in Hebrew), ordering Paul scourged to learn why the mob raged — the unjust method (the cruelty of extracting truth by torture, contrary even to Roman law, v.25); the providence overruling (the order the occasion of Paul's asserting his citizenship, v.25, for his protection)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "brought into the castle",
-   "examined by scourging",
-   "the unjust method of torture",
-   "the providence overruling for protection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: they bound Paul with thongs to a pillar to be scourged after the Roman manner, and he, before the scourging, asks the centurion whether it was lawful to scourge a Roman, uncondemned; to scourge a Roman citizen was forbidden by law, and to scourge one uncondemned (without trial) a further violation (the double illegality); Paul asserting his citizenship to stay the unjust scourging (the lawful use of his rights, not from cowardice but to prevent an illegal act and protect himself for service, as Acts 16:37); the prudence using the lawful means at the right time, the balance of patient endurance and wise assertion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "is it lawful to scourge a Roman, and uncondemned?",
-   "bound him with thongs",
-   "Paul's assertion of citizenship",
-   "the lawful use of civil rights"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
-   "John Gill",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the better reading 'What art thou about to do?' a sharp warning; Calvin: some marvel the centurion so credulously affirmed it, but their manner was that one claiming Roman citizenship was taken seriously (and if he could not prove it, punished), the claim not lightly made or received; the centurion, alarmed at Paul's claim, hastening to warn the captain ('this man is a Roman') — the gravity of the violation feared (scourging a Roman citizen a grave crime, severely punished, the centurion and captain in danger), the providence using the alarm to stay the scourging and protect Paul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "take heed what thou doest",
-   "this man is a Roman",
-   "the centurion's alarm",
-   "the gravity of the violation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the pronoun emphatic — 'Thou, the Jew speaking both Greek and Hebrew, art thou a citizen of Rome?' (the combination of so many discordant elements almost incredible); Robertson: 'Thou (emphatic) a Roman? It was unbelievable'; the captain coming himself to ask Paul directly, surprised that a Jew, lately mobbed, seemingly a common man, should be a Roman citizen (the apostle of higher standing than supposed); Paul simply, plainly affirming it ('Yea,' no boasting, the calm dignified claim) — the confirmation leading the captain to fear and release him (v.29)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "art thou a Roman? He said, Yea",
-   "the captain's incredulous question",
-   "Paul's plain confirmation",
-   "the surprise at the apostle's standing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
+   "John Calvin",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "26-29",
+  "pericope_label": "Art thou a Roman? The citizenship bought and the citizenship born",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the captain for no Roman born but likely a Grecian or Syrian by his name Lysias, and notes that as all things were then venal at Rome the city's freedom was to be bought with money. Calvin anticipates surprise at how readily the claim was taken: some may marvel that the officer appointed to examine Paul should affirm it as if he knew it, since, if a man's own word sufficed, every malefactor might by that shift escape punishment; but this was their manner of dealing, for he who claimed to be a citizen of Rome, unless he could bring in some who knew him, was punished, it being death to pretend the city's freedom falsely. Though Luke does not say by what testimonies Paul proved himself a citizen, the captain undoubtedly knew the truth before he loosed him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley adds a second reason for the centurion's caution — this man is a Roman, but there was a stronger reason still, for he was a servant of God — and agrees that Paul's title was not barely by birth at Tarsus, drawing a use from the whole: Christians are under no obligation to give up their civil privileges, which are to be prized as God's gift, to every insolent invader. Clarke sets beside the Roman law Cicero's saying that the exclamation I am a Roman citizen has often brought safety even among barbarians in the remotest parts of the earth, and Plutarch's account of the pirates, who, when a captive cried that he was a Roman, pretended to be in a fright and fell down beseeching his pardon."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the captain not a Roman born but likely a Grecian or Syrian (by his name Lysias), and as all was venal at Rome the freedom was bought with money, he wondering that so mean a person as Paul should have such a privilege; Barnes: citizenship might be purchased; the captain says he bought his freedom at a great sum, Paul replying 'I was free born' (a citizen by birth, inherited not bought, the higher standing) — the contrast (the freeborn higher than the purchased), the apostle of no mean position; the providence giving Paul the citizenship (born at Tarsus) that would protect him and serve the gospel (his appeals, Acts 25:11)."
+    "summary": "Ellicott notes that the better manuscripts give the centurion's words simply as a question, what art thou about to do, and Robertson calls it a sharp warning; Ellicott hears the incredulity in the emphatic pronoun — thou, the Jew speaking both Greek and Hebrew, art thou a citizen of Rome? — the combination of so many discordant elements being almost incredible, and Robertson puts it in three words, it was unbelievable. Ellicott would render the word citizenship rather than freedom, since it expresses not the passage from bondage to liberty but from an alien's position to a citizen's, and supposes the chiliarch had paid his bribe to Narcissus or another of Claudius's favourite freedmen, who carried on such a traffic; Robertson says the emperors sold citizenship to fill the exchequer, and cites Dio Cassius on Messalina selling it. Barnes rejects the notion that Tarsus was a Roman colony, for which there is not sufficient proof, and rests on Pliny's word that it was a free city, endowed with those privileges by Augustus — free cities keeping their own laws and magistrates, and required only to acknowledge Rome's supremacy — so that Paul, born there, was entitled to them. Robertson holds flatly that citizenship of Tarsus did not make Paul a Roman citizen, and supposes some ancestor obtained it as a reward for distinguished service; Ellicott makes the Greek more emphatic, I am one even from birth, and notes that many Jews carried to Rome as slaves first obtained their freedom and were afterwards admitted as citizens. Barnes says the soldiers saw that by scourging him they would have violated the law, since to bind a Roman citizen with that intent, untried, was unlawful — as appears from Cicero: it is a heinous sin to bind a Roman citizen, wickedness to beat him, and next to parricide to kill him. Ellicott is careful which binding is meant: the words seem to refer to the second act rather than the first, since chains at the arms were afterwards thought not incompatible with the respect due a Roman citizen, whereas being bound with leathern thongs, as slaves were, was quite another matter."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How did Paul come by the Roman citizenship?",
+    "positions": [
+     {
+      "position": "by birth in Tarsus, a free city endowed with those privileges by Augustus",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "not by Tarsus at all — some ancestor obtained it as a reward for distinguished service",
+      "holders": [
+       "Robertson",
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
+   "take heed what thou doest: for this man is a Roman",
    "with a great sum obtained I this freedom",
-   "but I was free born",
-   "Paul's citizenship by birth",
-   "the providence in his standing"
+   "but I was free born"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: they immediately departed, seeing that by scourging him they would have violated the Roman law and exposed themselves to its penalty; the captain also afraid, having bound a Roman citizen (even the binding a violation); the scourging stayed, the soldiers withdrawing, the captain in danger for his act — the injustice prevented by Paul's citizenship (the lawful claim effectual, the high regard for the citizen's rights, the fear of the penalty); the providence using the citizenship to preserve the apostle (the deliverance for further service); the reversal (the captain afraid for having bound the apostle)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they departed from him which should have examined him",
-   "the captain afraid... because he had bound him",
-   "the injustice stayed",
-   "Paul protected by his citizenship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
   "voices": [
-   "John Gill",
-   "Albert Barnes"
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill"
   ],
+  "range": "30",
+  "pericope_label": "The captain summons the council to learn the charge",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill marks what the delay cost: it was the next day, so that Paul was kept in the castle all night, and the captain still wanted the certainty of why he was accused, which as yet he could not come at, some saying one thing and some another — and which, Gill adds, he ought to have known before he bound him and ordered him to be scourged."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports a variant in the summons itself: instead of the word we translate to appear, the reading to assemble is given by many manuscripts and by the Ethiopic, Arabic and Vulgate, which Griesbach has received into the text and which is most probably the true one. Why the captain turned to that court Clarke explains from his position: the law would not let him proceed against a Roman in any judicial way but upon the clearest evidence, and as he understood the cause of the enmity to be something in their religion, he considered the Sanhedrin the most proper judge — though there is no doubt he and a sufficient number of soldiers attended, since Paul could not be safe in the hands of men so prejudiced and enraged. Clarke adds that this chapter should end with the twenty-ninth verse and the next begin with the thirtieth, the most natural division and one followed by some of the most correct editions of the original. He closes on what the whole defence has shown: Paul had asserted that he was a Jew born among Jews, with a regular Jewish education, and had taken care to observe that he early imbibed all his countrymen's prejudices, giving the fullest proof of them in his persecution of the Christians; so that his assertions about the unprofitableness of the legal ceremonies could be attributed neither to ignorance nor to indifference. Had a Gentile, however learned, taught the same things, his whole teaching would have been ascribed to ignorance, prejudice and envy; God therefore made use of a most eminent, learned and bigoted Jew to demonstrate the nullity of the whole Jewish system. And with Dr. Dodd he draws one rule from the day's events: it is a prudence worthy the imitation of the bravest of men not to throw themselves into unnecessary difficulties, true courage widely differing from rash and heedless temerity."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul kept in the castle all night, the captain wishing to know the certainty of the accusation which he could not yet learn (some saying one thing, some another, the mob, v.24); Barnes: he summoned the sanhedrim, being prevented from scourging Paul, to learn from the Jews the nature of the charge; the captain loosing Paul (the unlawful binding undone), summoning the council, and setting Paul before them — the search for the charge (the lawful inquiry), the providence ordering Paul's appearance before the Sanhedrin (the occasion of the defence, Acts 23, the apostle preserved and brought toward Rome, Acts 23:11)."
+    "prevalence": "majority",
+    "summary": "Ellicott would render the phrase, wishing to know the certain fact, and reads the verse as a second attempt after a failure: having got nothing by torturing the prisoner, the chiliarch has recourse to the other alternative of obtaining a formal declaration from the Sanhedrin, as the chief representative body of the Jews — who, it will be remembered, had as yet taken no official action, the chief captain having heard only the clamours of the crowd. Robertson reads the officer's state of mind out of the Greek: Lysias is determined to find out the truth about Paul, and is more puzzled than ever by the discovery that he has a Roman citizen on his hands in this strange prisoner. Barnes sets out both the necessity and the reproach: Paul was still a prisoner, and if suffered to go at liberty among the Jews his life would have been in danger; the captain, being prevented from scourging him, summoned the great council of the nation in order to learn from the Jews themselves the nature of the charge — a course necessary both for the safety of Paul and for the ends of justice, and one which should have been taken without any attempt to torture him for a confession. Where the meeting was held they differ: Barnes says the council commonly assembled in the house of the high priest, while Robertson holds that the Sanhedrin had to come to the Tower of Antonia, since the captain brought Paul down to them rather than sending him out."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Where did the council meet?",
+    "positions": [
+     {
+      "position": "in the house of the high priest, where it commonly assembled",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "in the Tower of Antonia, since Paul was brought down to them rather than sent out",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "he would have known the certainty of the accusation",
-   "brought Paul before the council",
-   "the search for the charge",
-   "the providence ordering his appearance"
+   "he would have known the certainty wherefore he was accused",
+   "he commanded the chief priests and all their council to appear",
+   "and brought Paul down, and set him before them"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  }
 }

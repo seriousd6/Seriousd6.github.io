@@ -6842,6 +6842,74 @@
       "book": "hebrews",
       "chapter": "12",
       "note": "hebrews 12: all 9 entries self-graded A, 0 UNSOURCED, 0 fidelity failures. 29 verses, ~62,765 real usable source words after subtracting 926 words of StudyLight chrome in the Ellicott block at v29, tiled in 9 entries — matching the density guide exactly. 11 voices; the largest blocks are Henry at v4 (3,148w) and v18 (2,746w) and Barnes at v1 (2,121w). Overshoot confirmed the rule recorded at deuteronomy 22: it scales with voice count, not chapter length. The two 8-voice-or-fewer entries drafted closest to window (12-13 at 675 first-draft, and it alone needed just one pass to reach 578), while the 9- and 10-voice entries drafted at 842, 850, 876, 919 and 925 words against the 650 ceiling and needed two to four passes each. Entry 25-29 drafted at 925, the worst first draft of the batch."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "27"
+      ],
+      "note": "JFB stride donor residue, twenty-third consecutive chapter, and the first NT instance measured in this run. Four JFB keys at vv.3/9/15/27 — a stride of six from 3 to 9 to 15, then a gap at 21 and a resumption at 27 — and every one carries matter from a different chapter of Acts: v3 the upper room and the five hundred brethren of Acts 1, vv.9 and 15 the Pentecost reckoning of Acts 2, v27 a bare fragment of the same. None of it touches chapter 22 at any point. The gap at v21 is new: the stride skips one position rather than running unbroken, which fits the fixed-step diagnosis if the donor chapter simply has no key at the corresponding offset. JFB is excluded as undeclarable from the four entries whose spans hold those keys."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "30"
+      ],
+      "note": "StudyLight chrome tail on the chapter's LAST verse — thirteen for thirteen (exodus 14:31, genesis 31:54, leviticus 6:30, numbers 14:45, acts 27:44, exodus 22:31, genesis 38:30, genesis 35:29, exodus 10:29, deuteronomy 3:29, leviticus 25:55, genesis 49:33, acts 22:30). Here it is Ellicott's v30 block, which breaks off after two sentences of exposition into several kilobytes of site navigation, CSS and a commentary index. Thirteen recommendations now for the same harvest-side fix."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "6",
+        "10",
+        "16",
+        "17"
+      ],
+      "note": "Cyril of Jerusalem is donor residue throughout this chapter, and the ghost script does NOT catch it. Four Cyril keys, none touching Acts 22: v6 and v17 both carry the same Antioch passage from the Catechetical Lectures (Barnabas sent to Antioch, Paul brought from Tarsus, the disciples first called Christians there — Acts 11 and 13 matter); v10 carries a lecture against the Jews on the Father and the Son; v16 carries the proclamation of the divine name to Moses in Exodus 34. All four are excluded, but because synthesis_qa.undeclarable_voices() does not recognise them as undeclarable, the ghost report lists Cyril under missing with an empty excl list, so the exclusion is never recorded in the tags. Two consequences worth acting on: the drafter must open every Cyril block by hand rather than trusting the excl column, and undeclarable_voices() would be worth extending to catch a block whose scripture references all fall outside the chapter being worked."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "13"
+      ],
+      "note": "Barnes and Gill both degrade to bare cross-references across the vision dialogue. Barnes at vv.7, 8, 9, 10, 13 carries nothing but a pointer — 'Acts 9:3 and Acts 9:4-7' — with no comment at all, and Gill at vv.7, 8, 10 gives only a truncated 'See Gill on' whose target is missing from the harvest. The effect is that in the vv.7-11 entry Barnes has five consecutive keys and no usable prose, so he is correctly excluded, and Gill survives only on the strength of two short remarks at vv.9 and 11. This is the same empty-block class recorded for Keil in the Pentateuch (notes 576, 580, 592, 606), but with a different cause: here the commentator genuinely wrote a cross-reference rather than the harvest breaking a paragraph. It still costs the entry a voice, and it is worth distinguishing the two cases when the harvest is next revised — a real cross-reference cannot be recovered by refetching, whereas a broken paragraph can."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "22",
+      "verses": [
+        "17"
+      ],
+      "note": "Chrysostom's only key in the chapter is at v17, and his comment runs from v17 through v25 — eight verses ahead of where it is filed. Under the working rule proposed at genesis 49 (note 607), his vv.17-21 matter was used in the vv.16-17 entry, where he has a key and where the content belongs; his vv.22-25 matter could not be used at all, since he has no key in either the v22 or the vv.23-25 span. That is a real loss: his reading of the tribune's conduct — that he ought to have learnt from the clamourers and asked whether they laid hold on anything spoken, but instead indulged his arbitrary pleasure, looking not to what was righteous but to how he might stop their unrighteous rage — is the sharpest comment any voice makes on that scene, and no other source says it. Recording it as the first measured cost of the rule in the NT corpus, and as a second argument for repairing the harvest's paragraph boundaries rather than working around them."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "22",
+      "note": "Entry-count sizing, third measurement and the first that came out right. acts 22 is 36,246 usable source words across 30 keys, median 696 — under the 40,000 whole-batch threshold — and only one key (v3, 8,091 words) exceeds the 4,500-word span limit, so it tiled to ELEVEN entries. Compare genesis 49 at 47,985 words in fifteen entries and philippians 2, declined last batch at 62,574 words in a projected fifteen to seventeen. The predictor that would have worked here is keys divided by median band: a chapter whose median key is under about 800 words tiles at roughly keys/3, while one with a median near 1,000 tiles at roughly keys/2, and one with a median near 2,000 tiles at nearly one entry per key. Recommendation, now made three times: have 'synthesis-loop.py size' print the median key length and a projected entry count beside the word total. Word count alone has now mis-signalled the workload in both directions."
     }
   ]
 }
