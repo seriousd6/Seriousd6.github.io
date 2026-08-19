@@ -7439,6 +7439,83 @@
       "book": "hebrews",
       "chapter": "9",
       "note": "Fidelity self-grade, all 10 entries, every verse covered and every claim traced to a named block. Word counts: 1-2 649, 3-5 649, 6-8 649, 9-11 650, 12-14 649, 15 648, 16-17 650, 18-21 649, 22-24 650, 25-28 648. Tiling 1-28 exact, no gaps or overlaps. 28 verses, 11 voices, 10 entries, ~69,152 usable source words after 992 words of chrome. Entry 15 is a single verse because 9:16 alone carries 7,316 source words and had to be split off from it. No GHOST repairs were needed this chapter; the one build error was a false positive, Clarke quoting 'St. Cyril' (of Alexandria) inside his own 9:5 block, which the harness read as a Cyril of Jerusalem attribution - fixed by attributing the quotation to 'a father' rather than by name."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "17",
+      "verses": [
+        "21"
+      ],
+      "note": "JFB donor residue, SIXTH consecutive chapter and the first outside Deut/Judg/Num/Josh. JFB has exactly ONE key in genesis 17, at v21, and it is residue: 'How would the conscience of that young man now upbraid him for his selfish folly and ingratitude in withdrawing from his kind and pious relative! Whenever we go out of the path of duty, we put ourselves away from God's protection' — that is JFB on Genesis 13, Lot choosing the plain of Jordan, displaced backward within the same book. This kills the hypothesis I was about to record, that a chapter where JFB has a single key shows no stride and is therefore a negative data point for the harvest-offset theory. It is not a negative data point: the single key IS residue. A cursor stepping at a fixed rate lands wherever it lands; with one key in the chapter it lands once, and once was enough. Excluded from the vv.19-22 entry; undeclarable_voices() does not catch it, since the prose is real prose, so the exclusion had to be carried explicitly in the tags."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "17",
+      "verses": [
+        "26",
+        "27"
+      ],
+      "note": "Chrome-tail rule: SECOND discriminating case, and it agrees with numbers 20. The StudyLight footer/CSS/menu tail sits on v26, attached to the end of Ellicott's block — not on v27, the chapter's last verse, where only Gill appears. Ellicott's own run in this chapter ends at v26. So the tail attaches to the last verse of the COMMENTATOR'S run, not to the chapter's last verse; the two coincided in the fifteen chapters that suggested the older rule. Numbers 20 (tail at v28 because Ellicott has no v29 note) and genesis 17 now both favour the commentator's-run version, and nothing yet contradicts it. Second-order cost recurs: the chrome menu names 'Adam Clarke Commentary' and 'John Gill's Exposition', so both read as present in the v26 blob; harmless here since both are genuinely used in that entry."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "17",
+      "verses": [
+        "10",
+        "16",
+        "23"
+      ],
+      "note": "Keil raw-verse-text blocks, THREE in one chapter — the heaviest concentration of this class yet seen. At v10 Keil's block is the KJV text of 17:10-15 plus one truncated clause; at v16 it is the text of 17:16-22 ending 'and God went up'; at v23 it is the text of 17:23-27 with nothing appended at all. undeclarable_voices() recognises none of them, so all three entries (vv.8-10, 16-18, 23-27) needed an explicit excluded_voices declaration. Worth considering a detector: a block whose content is >90% verbatim verse text of its own span is by construction undeclarable, and that test is cheap."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "17",
+      "note": "Entry-count predictor, sixth consecutive confirmation. keys-over-2000 + round(remaining_words/2500). genesis 17: 27 keys, 27150 usable words, three keys over 2000 (v1=3791, v7=3217, v23=2369), remaining 17773 -> round(7.1)=7, plus 3 = 10. Tiled to exactly 10. Now 6/6 (deut 31 9/9, judges 5 11/11, numbers 20 8/8, joshua 18 5/5, judges 3 9/9, genesis 17 10/10). The heavy-key-at-a-boundary corollary held again: v1 and v7 each became their own entry, as did v23's span head. This belongs in docs/agents/cow-synthesis-loop.md, not in the note stream."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "17",
+      "verses": [
+        "12"
+      ],
+      "note": "A second, distinct cause of false ghosts, companion to note 671 but not the same mechanism. Note 671 was a SUBSTRING collision (Ellicott's 'Henry the Third of France' matching the alias 'Henry'). This one is CITATION: Calvin, canvassing why the eighth day was chosen, reports that 'Augustine also thinks that it had reference to the resurrection of Christ'. I wrote the name through, and the ghost checker correctly flagged Augustine as a voice named but not present — Augustine has no block anywhere in this chapter. The material is genuine and Calvin's, but naming a commentator whom a source merely CITES reads as a voice attribution and must not be done. Fixed by writing 'while others referred it to the resurrection of Christ'. The exposed set is every commentator name in the alias table that a source might cite: Augustine, Calvin, Henry, Clarke, Wesley, Gill are all cited by one another somewhere. Rule: a name that appears in the alias table may be written into an entry ONLY when that voice has its own block in the span."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "17",
+      "verses": [
+        "7"
+      ],
+      "note": "Editorial interpolation inside Calvin's v7 block — a fresh instance of note 668's hazard, in a new form. Calvin's sentence 'Paul calls them saints by nature, because God was willing that his grace should descend' is interrupted mid-clause by a translator's footnote pulled inline: the Latin 'Quia continua serie prosequi nolebat Deus, gratiem suam ergo totum semen', then a discussion of whether the Amsterdam edition and Hengstenberg's read nolebat or vouloit, then '— by a continual succession, to the whole seed'. So the apparatus does not merely sit beside Calvin's argument (joshua 18) but splits a single sentence, and the two halves read as continuous prose. A distiller reading quickly would attribute the editor's textual argument to Calvin. The audit's groundability check cannot catch this, since the words ARE in the source file. Left unused."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "17",
+      "verses": [
+        "11"
+      ],
+      "note": "Gill's v11 block is truncated by the harvest, ending mid-sentence: 'The persons who might perform it, according to their rules, are these; all are fit to circumcise (says Maimonides), even'. The preceding material (the dish of sand, the permitted instruments) is complete and usable, so this is a partial loss rather than a dead block, and no exclusion was needed. Recording it because it is a THIRD failure mode distinct from the raw-verse-text block and the bare cross-reference: a block that starts well and stops mid-clause. Anything after the cut point is simply gone, so a distiller who trusts the block to be whole will silently under-report Gill."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "17",
+      "note": "Wesley-abridges-Henry: the split-by-topic discipline worked, and here is the working record for the next Genesis chapter. Wesley on Genesis is largely Henry verbatim, and in genesis 17 they collide at four points. Resolution used: (1) vv.1 and 2-3, Henry keeps the deferral reasons and Wesley takes the prostration; (2) vv.4-6, Henry takes the two senses of father-of-many-nations and Wesley the rabbinic 'gathered under the wings of the divine Majesty'; (3) v7, Henry takes the covenant-token material (sign and seal, bloody ordinance, oath of allegiance) and Wesley the God-would-be-their-God material, which Henry's block also carries; (4) vv.14-15 and 16-18, Henry takes the name-change and Wesley the laughter and the prayer for Ishmael, which Henry's v15 overview also covers. The principle that made it work: decide the split BEFORE drafting either entry, and give each voice the half the other does not do better. Henry's v15 block is a whole-pericope overview reaching to v20, and Henry has no key in vv.16-18 or 19-22, so by the note 607 rule that material could not be moved forward — leaving it to Wesley was the only way to use it at all."
     }
   ]
 }
