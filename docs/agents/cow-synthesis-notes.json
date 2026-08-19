@@ -5905,6 +5905,75 @@
       "book": "numbers",
       "chapter": "14",
       "note": "Exclusion-list discipline (per the leviticus 6 filing error) paid off again, this time negatively: every exclusion in this chapter was read and traced to a real source defect before the chapter was landed — JFB at 13/20/22/39 to donor residue, Keil at 5/11 to bare AV reprints. Zero ghosts across all eight entries. The check costs one dump per excluded voice and is the only guard on both fabricated attribution and misfiled material."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "15",
+      "verses": [
+        "5",
+        "6",
+        "7",
+        "9",
+        "10",
+        "14",
+        "15",
+        "16",
+        "17",
+        "20",
+        "29",
+        "32",
+        "35",
+        "49",
+        "50"
+      ],
+      "note": "REPEATED-BLOCK DEFECT: the SAME Cyril of Jerusalem block served to many different verse keys in one chapter. Cyril has 24 keys here (4,076 words), but they are not 24 distinct blocks. One 200-word block -- the chain of Pauline quotations beginning 'thine heart, who shall ascend into heaven' -- is served IDENTICALLY at v5, v6, v7, v14, v15, v17 and v20: seven keys, one block. A second 148-word block ('as you have been already wearied both by the superposed fast of the Preparation') is served at v16, v29, v32 and v35: four keys, one block. A third (the v53 exposition, 'as iron blending with fire becomes fire') repeats at v54. So of 24 keys, at least 12 are duplicates of 3 blocks. The practical consequence for the loop: a voice's apparent per-chapter word count OVERSTATES how much distinct commentary he actually supplies, and a block that looks new at a later key may already have been used. Handled here by silencing Cyril at entries 1, 5, 12, 15, 20, 29 and 35 and naming him only where the block is genuinely on the verse (3-4, 9-11, 23-26, 50-53, 54-58). Cheap detection: hash each voice's block text per chapter and flag exact-duplicate hashes across keys. This is distinct from the residue defect (foreign matter correctly attributed) and from the apparatus defect (editor's footnotes under an author's name)."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "15",
+      "verses": [
+        "12",
+        "18",
+        "24",
+        "36",
+        "42",
+        "48",
+        "54"
+      ],
+      "note": "Jamieson stride-6, SIXTH consecutive chapter, and the cleanest run yet: keys 12, 18, 24, 36, 42, 48, 54 -- offset 0 mod 6, seven members, a single gap where 30 would fall. Every block is foreign matter from Acts (v12 on Herod Agrippa the great-grandson of Herod the Great; v18 on 'deliver up'; v24 and v42 on Paul before Agrippa and on his education at Jerusalem; v36 the same; v48 the conversion narrative; v54 an aside on the elevated strain of the apostle). Running tally: joshua 10 offset 1 (7 members, gap at 31); 1corinthians 7 offset 5 (6, no gaps); hebrews 11 offset 3 (5, gap at 21); romans 8 offset 2 (7, no gaps); romans 9 offset 4 (3, gaps at 10 and 16); 1corinthians 15 offset 0 (7, gap at 30). Six chapters across four books, offsets 0,1,2,3,4,5 -- every residue class mod 6 now attested, which is as strong as this evidence can get. The stride never varies and the offset is arbitrary per chapter. Note also that 1corinthians 7 (offset 5) and 1corinthians 15 (offset 0) are the same book with different offsets, matching the romans 8 / romans 9 observation. This wants an owner decision on re-fetching the Jamieson tree; declaring him residue chapter by chapter has now cost six chapters of hand-work."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "8",
+        "47"
+      ],
+      "note": "TWO NEW VOICES entered the corpus here, and one of them is a one-block voice. Tertullian appears for the first time, with a single 348-word block at v1 only; school assigned latin-fathers, the first use of that slug in this loop. His block opens on the resurrection generally ('to the defence of which against heretics of all sorts we have given sufficient attention in another work of ours') but its substance is the baptism-for-the-dead argument of v29, so it is keyed 28 verses early; it was named at entry 1-2 for the opening sentence only, since naming him at 29-32 would fail the NAMED-BUT-NOT-SOURCED check. John Lightfoot also appears, at nine keys, and is genuinely valuable where his block is whole: the sheaf-offering calendar at v20, the philology of the untimely birth at v8 through the Greek of Job, the Chaldee and the Talmudists, the Talmudic 'fool' answering the Boethusians at v36, and the literal reading of the fight with beasts at v32. But two of his blocks are TRUNCATED FRAGMENTS with no commentary in them: v1 is fifteen words ('See the story of one James, a disciple, as he is styled, of Jesus 8,') and v47 is thirty-two words breaking off mid-citation. Both were silenced. A one-block voice like Tertullian is worth flagging for the tiling: whichever entry holds his single key must name him or lose him from the chapter entirely."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "15",
+      "verses": [
+        "49"
+      ],
+      "note": "A commentator misreported inside another commentator's block. At v49 the text is divided between the future 'we shall also bear the image of the heavenly' and the volitive subjunctive 'let us also bear'. Robertson's note reads: 'Old MSS. (so Westcott and Hort) read phoresomen kai. Volitive aorist active subjunctive, Let us also bear. Ellicott strongly opposes the subjunctive.' But the Ellicott block AT THE SAME VERSE in this very tree reads: 'We shall also bear the image of the heavenly. -- Better, let us bear also the image of the heavenly. Such is the reading of the best MSS.' So Ellicott here ADOPTS the reading Robertson reports him as strongly opposing. Either Robertson means a different work of Ellicott's (he wrote separately on the Greek text as well as this commentary), or the report is simply wrong. The prose was written to state each man's own note without repeating Robertson's attribution, so the entry is safe either way; but this is the first case in the loop of one sourced voice mis-attributing a position to another sourced voice present in the same chapter, and it is worth knowing that cross-references inside a block cannot be trusted against the other blocks in the tree. Calvin's block at the same verse independently records the hortative reading and rejects it as unsuited to the argument, which is a third position."
+    },
+    {
+      "at": "2026-08-19",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "15",
+      "note": "TILING METRIC, sixth filing, and the new high-water mark for the corpus. 1corinthians 15 is 116,326 usable source words over 58 verses -- 20% larger than anything previously landed (romans 8 at 97,111, hebrews 11 at 97,186) and it took SEVENTEEN entries, against fourteen for each of those. Voice density: 13 distinct labels, maximum 11 voices on a verse, average 8.2 named voices per entry, which sits between romans 8 (max 11, avg 9.2, hard) and hebrews 11 (max 9, avg 8). But the source words are the dominant term here in a way they were not before: at 116k the chapter needed roughly one entry per 6,800 source words, close to the ratio of romans 8 (one per 6,900) and hebrews 11 (one per 6,940), which is the tightest agreement across chapters yet seen. Running data: joshua 10 (34,825 / 8 voices / 10 entries, easy) - genesis 1 (63,543 / 8 / 8) - luke 22 (63,923 / up to 15 / 14, very hard) - 1corinthians 7 (75,582 / max 9 / 14) - romans 9 (74,457 / max 9 / 13) - hebrews 11 (97,186 / max 9 / 14) - romans 8 (97,111 / max 11 / 14, hard) - 1corinthians 15 (116,326 / max 11 / 17). The practical rule that falls out: entries needed is close to usable_source_words / 7,000, and voice density predicts the effort per entry rather than the number of them. That is a better batch-planning number than chapter count and could be surfaced by 'synthesis-loop.py size' directly."
     }
   ]
 }
