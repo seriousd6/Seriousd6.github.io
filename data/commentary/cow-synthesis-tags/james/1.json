@@ -2,1082 +2,1752 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1",
+  "pericope_label": "The address and greeting",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill explains the title of servant as an office rather than the general service every creature owes or every regenerate man renders: the writer served God in the gospel of his Son and was an apostle, other apostles styling themselves the same way. Calvin gives the history behind the address, that the ten tribes were placed by the Assyrian king in various parts and afterwards moved in all directions as kingdoms revolved, so that James wrote to exhort those he could not address in person; and he distinguishes the earlier dispersion under the Assyrian captivity from the later one under the Greek power, thinking a letter written in Greek was meant especially for the second."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry fastens on what the writer does not claim. Though a prime minister in Christ's kingdom he styles himself only a servant, from which Henry draws the rule that those highest in office in the church are but servants and should act as ministers and not masters; and though the evangelist calls him the Lord's brother, it was his glory to serve Christ in the spirit rather than boast of kinship according to the flesh. He reads the greeting as respect shown to men in hard circumstances, since true Christians should not be the less valued for their hardships."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that there have been more doubts and more diversity of opinion about the author and date of this epistle than about most other parts of the canon, names the son of Zebedee and the son of Alpheus as the candidates, and lists four senses in which the latter could be called a brother of the Lord — a child of Joseph by an earlier marriage, a child of Joseph and Mary born after the Lord's birth, which he thinks extremely probable, a son raised up to a childless brother of Joseph, which he thinks unlikely since four brothers are named, or a cousin. Wesley takes the address to mean those of the tribes that believe, ten having been scattered since the reign of Hoshea and much of the rest now dispersed through the Roman empire."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The writer (commonly identified as James the Just, the Lord's brother and head of the Jerusalem church) calls himself 'a servant (doulos — bondservant) of God and of the Lord Jesus Christ' — a title of humble devotion, not asserting his apostleship or kinship to Jesus but his servanthood, the coupling of God and the Lord Jesus marking Christ's dignity; 'to the twelve tribes which are scattered abroad (in the dispersion, the diaspora)' — the Jewish people scattered among the nations, specifically those of Jewish origin who had embraced the Christian faith (Jewish believers of the dispersion); 'greeting (chairein — the common Greek epistolary greeting),' the same form James used in the Jerusalem council letter (Acts 15:23), a small mark of authenticity (Barnes, Robertson, Henry, Clarke, Ellicott)."
+    "summary": "Ellicott renders the address the twelve tribes in the dispersion and grants the number is in part figurative, since Judah and Benjamin had largely returned while the ten had lost their tribal distinctions, and notes that long before the fall of Jerusalem Jewish colonists were settled through Europe as well as Asia. Robertson presses the self-designation harder than Henry does: the writer calls himself not brother but bondservant, and sets God and the Lord Jesus Christ on a level, so that James is no Ebionite but accepts the deity of his own brother. He adds that the infinitive of greeting is the ordinary idiom of the papyrus letters and occurs in no other New Testament epistle, and that the Jews of the period fell roughly into Palestinian agriculturists speaking Aramaic and city-dwelling traders of the Dispersion speaking Greek. Barnes surveys what follows and divides it in two, temptation and trial, complete within this chapter, and the nature of true religion, begun here and carried into the next."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Which James wrote the letter, and in what sense was he the Lord's brother?",
+    "positions": [
+     {
+      "position": "the question is genuinely unsettled; of the four possible senses of brother, a child of Joseph and Mary born after the Lord's birth is extremely probable",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "whichever he was, the point is that he waived the kinship — it was his glory to serve Christ in the spirit rather than boast of kinship according to the flesh",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the self-designation is doctrinally weighted: bondservant rather than brother, with God and the Lord Jesus Christ set on a level",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "infers the intended readership from the language, taking the Greek of the letter as evidence that the later dispersion under the Greek power, not the earlier Assyrian one, is chiefly in view"
+   }
+  ],
   "themes": [
-   "James, a servant of God and of the Lord Jesus Christ",
-   "to the twelve tribes which are scattered abroad, greeting",
-   "the writer, James, addressing the scattered twelve tribes",
-   "the dispersed Jewish Christians"
+   "who wrote the letter",
+   "the twelve tribes in the dispersion",
+   "servant rather than brother"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "2": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "2",
+  "pericope_label": "Count it all joy when ye fall into divers temptations",
   "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril resolves the tension between this command and the petition of the Lord's prayer by pressing the words: since a man untempted is unproved, and James bids us count it joy, entering into temptation must mean being overwhelmed by it. Temptation is like a winter torrent hard to cross, and those not swept away pass through as good swimmers; Judas entered the temptation of the love of money and drowned, Peter entered the temptation of the denial and swam through."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains why so bold a demand was needed here: the very name of the nation was so infamous that these readers were hated wherever they went, and their Christian profession made them more miserable still, setting their own countrymen against them as their bitterest enemies. He takes the word to cover all adverse things, so called because they test our obedience, and finds a reason for their variety — trials mortify the flesh, whose vices continually shoot up and cannot be cured by one medicine. To count it joy is to reckon trials gain; yet he will not pretend the grief away, since all our senses are so formed that every trial produces sorrow and no man can divest himself of his nature. Gill notes that the men addressed are brethren not merely as fellow Jews but as men born again of the same grace, of one household of faith."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the demand against the schools: philosophy may instruct men to be calm under their troubles, but Christianity teaches them to be joyful, since these exercises proceed from love and not fury in God. He observes that the afflictions meant are such as a good man does not create for himself but falls into, and that the gold is put in the furnace to be purified."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says shortly that the word signifies affliction, persecution or trial of any kind and does not here intend diabolical suggestion. Wesley adds that the joy commanded is the highest degree of patience, containing all the rest."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The striking exhortation: 'my brethren, count it (reckon, regard it) all joy (pure, complete joy) when ye fall into (peripesete — encounter, are surrounded by) divers (poikilois — various, manifold) temptations' — believers regarding their trials, of every kind, as occasion for the fullest joy; 'temptations (peirasmois)' meaning here not solicitations to sin but trials, afflictions, testings (the various outward troubles and persecutions that prove faith, the word shifting to mean solicitation to evil later, v.13); the joy grounded not in the pain itself but in its fruit, the testing of faith working patience (v.3) — Barnes, Robertson, Calvin."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the believer counts trial joy not for the suffering but for what it produces — the proving of faith and the working of patience; knowing the good that trials bring forth, the Christian can rejoice even in hardship, as the athlete welcomes the contest."
+    "summary": "Barnes rescues the word before reading the sentence: it now commonly means placing an allurement before a man to induce him to sin, and is so used later in the chapter, but here it means trials — persecution, poverty, calamity of any kind — which are not inducements to sin but test faith, coinciding with temptation properly so called only in putting religion to the proof. Robertson traces the same drift in English, the Latin word having originally covered trials whether good or bad before the evil sense monopolised it, and adds that trials rightly faced are harmless while trials wrongly met become temptations to evil; he glosses the adjective, as old as Homer, to mean variegated or many-coloured. Ellicott answers the objection from the Lord's prayer out of the nature of grace, which grows by use as the powers of body and mind do and decays when unemployed, so that a veteran who has proved his armour is worth more than a raw recruit and innocence stands below the purity won by long conflict; temptation is not sin, and the petition asks help in the trial rather than escape from it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How can men who pray not to be led into temptation rejoice when they fall into it?",
+    "positions": [
+     {
+      "position": "the petition asks help in the trial rather than escape from it, since grace grows by use and decays when unemployed",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "entering into temptation means being overwhelmed by it, not merely meeting it — the untempted man is unproved",
+      "holders": [
+       "Cyril of Jerusalem"
+      ]
+     },
+     {
+      "position": "the two senses of the word are simply different: what is commanded here is joy in trial, not in solicitation to sin",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "refuses to let the command abolish the grief, holding that every trial produces sorrow because our senses are so formed, and that the children of God rise above it by the Spirit rather than cease to feel it"
+   }
+  ],
   "themes": [
-   "My brethren, count it all joy when ye fall into divers temptations",
-   "the call to count trials all joy",
-   "trials, not solicitations to sin",
-   "joy grounded in the fruit of testing"
+   "temptation as trial rather than solicitation",
+   "why trials are to be counted joy",
+   "the petition of the Lord’s prayer"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The reason trials are joy: 'knowing this, that the trying (dokimion — the testing, proving, as metal is assayed) of your faith worketh (produces, brings about) patience (hypomonen — steadfast endurance)' — the believer knowing that the testing of faith yields endurance, this knowledge being the ground of the joy commanded in v.2; 'the trying' the process by which faith is proved genuine (as gold is tested by fire, assaying faith, showing it real and purifying it), which 'worketh patience' — produces steadfast endurance, the habit of patiently bearing up under trial, the very fruit that makes trials valuable (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the trying of your faith worketh patience",
-   "the trying of faith works patience",
-   "faith assayed as gold by fire",
-   "endurance the fruit of testing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "3-4",
+  "pericope_label": "The trying of your faith worketh patience",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin takes up the objection the command invites, how it comes that we judge that sweet which to the sense is bitter, and answers from the effect: we dread disease and want and exile and death because we regard them as evils, but when we learn that God's kindness turns them into helps toward our salvation it is ingratitude to murmur. He then sets James beside Paul and finds an apparent contradiction, since Paul makes probation the third thing, produced by patience, where James puts it first as the cause; the solution is that the same word bears an active sense in one and a passive in the other. He adds a caution against reading either as natural law, since affliction of itself does not breed patience — the ungodly are provoked by it to madness, as Pharaoh proves. Gill notes that this is known by experience, as everyone trained in the school of affliction knows."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the process from the man's side: trials put religion and all its graces to proof, and one who stands in them gives evidence that his religion is sound, the evidence to his own mind inducing him to take courage and persevere. He explains the noun rendered work as any effect produced by a cause, like interest from money or fruit from tillage, so that the perfect work is the full reward, and takes the two adjectives that follow as full instruction in every part of the doctrine of God and as having all one's parts and members; some derive both from the Grecian games, but he prefers to find them in the sacrifices, where a victim was perfect if sound and entire if it had all its members. Wesley gives the whole in three strokes — give patience full scope under whatever trials befall you, be adorned with every Christian grace, and want nothing that God requires in you."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The exhortation: 'but let patience have her perfect work (let endurance complete its operation, carry its work to full maturity), that ye may be perfect (teleioi — mature, complete) and entire (holokleroi — whole, sound in every part), wanting (lacking) nothing' — patience to be allowed to finish its work so that the believer becomes fully mature and complete; the twofold aim of 'perfect (mature, fully developed) and entire (whole, lacking no part)' being complete Christian character, sound and entire, deficient in nothing — the full-grown, well-rounded believer, the perfecting work of patience leaving him lacking in no grace (Barnes, Robertson, Calvin)."
+    "summary": "Robertson reports what the papyri have settled about the noun rendered trying: it is known as an adjective meaning standard or approved, as of gold, so the phrase means the genuine element in your faith rather than the crucible or the process, faith standing the test of fire and being passed as sterling; the patience it produces he glosses as staying power, the old word for remaining under a load. Barnes adds that patience is worth whatever the trial costs to procure it, notices that this is one of the passages showing James knew Paul's writings, and reads the imperative as a warning against interference — let patience be fairly developed and not obstructed by murmuring, since a man may have sound principles never carried out far enough to show what they are. Ellicott takes the verse as confirming what went before, the habit of patience being the blessed result of all the weary effort under God's probation, which the writer had himself learned long and painfully."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does testing produce patience, or patience produce testing?",
+    "positions": [
+     {
+      "position": "the same word is active in one apostle and passive in the other — the act of testing produces patience, while the experience gained by enduring produces hope",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "no contradiction is at issue; the sentiment is shared, Paul simply carrying the chain further than James, who asks only that patience have its perfect work",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "prefers to derive the two adjectives from the requirements for a sacrificial victim, sound and with all its members, rather than from the Grecian games as others do"
+   }
+  ],
   "themes": [
-   "let patience have her perfect work, that ye may be perfect and entire, wanting nothing",
-   "the call to let patience complete its work",
-   "perfect and entire, complete character",
-   "the fullness of Christian maturity"
+   "the genuine element in faith",
+   "patience as staying power",
+   "what the perfect work amounts to"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "5",
+  "pericope_label": "If any of you lack wisdom, let him ask of God",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill draws an inference from the supposition itself: the perfection spoken of just before cannot be meant of this life, since the writer immediately assumes his readers lack wisdom — and the wisdom wanted is to see God as the author of affliction rather than charge it to chance or second causes, as Job did not ascribe his calamities to the Chaldeans or the wind or Satan, but to God. Calvin explains why the command comes here, since our reason and all our feelings are averse to the thought that we can be happy in the midst of evils, and draws a rule from it, that whenever God commands anything we should ask from him the power to perform it. On the two words describing the Giver he takes the first for promptitude — God rejects none and puts none haughtily off, unlike the niggardly who give sparingly as with a closed hand or debate long whether to give at all — and thinks the second added lest anyone fear to come too often, since the most open-handed of men recite their former kindnesses by way of excuse, whereas God is ready always to add new blessings to the old."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke distinguishes the ordinary sense of wisdom from the biblical: it generally means knowing the best end and the best means of reaching it, but in Scripture it stands for true religion, the practical knowledge of God, of oneself and of a Saviour; and he adds the Greek maxim that looks strange and is literally true, that the knowledge of ignorance is the beginning of knowledge. Wesley states both halves of the promise in a line: God gives to all who ask aright, and upbraids them neither with past wickedness nor present unworthiness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The remedy for deficiency: 'if any of you lack (is deficient in) wisdom (the practical wisdom to bear trials rightly, to understand God's dealings), let him ask of God, that giveth to all (who ask) liberally (haplos — simply, generously, freely, without grudging), and upbraideth not (does not reproach, scold for asking or for past faults); and it shall be given him' — the believer who lacks wisdom (especially to profit from trials) to ask it from God in prayer; God giving freely and without rebuke (unlike grudging human givers), and the promise sure that the wisdom asked will be granted, so the believer may pray with confidence (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: God gives generously and without reproach to all who ask; the wisdom needed to bear trials is granted freely to the prayerful, and the promise 'it shall be given' assures the believer that his asking will not be in vain."
+    "summary": "Barnes takes the wisdom to be chiefly that needed in trials — to understand their design, to do the duties that grow out of them, and to find out the sins for which the affliction came — though the language is general enough to cover every want. He urges that the particular case be brought before God rather than only the general wisdom needed for life, and observes that the word men in the next clause was supplied by the translators, the promise being restricted to those who ask: in Scripture the promise of divine aid is always limited to the desire, and no blessing is promised to a man who does not value it enough to pray. Robertson finds a banking figure in the verb, to be short of wisdom — not of knowledge but of wisdom, the practical use of knowledge — and reads the imperative as let him keep on asking. Ellicott would change liberally to simply, the point being that God gives fully and directly without reproaching the man who asks, and sets the contrast with human generosity by quoting Dante in exile, who learned how salt is another man's bread, and the son of Sirach, who says the fool gives little and upbraids much."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why say if any lack wisdom, as though some do not?",
+    "positions": [
+     {
+      "position": "all are by nature without it, but some have been given the spirit of wisdom and others not — and asking an increase is a different thing from asking for it at first",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the supposition itself proves the perfection just commanded is not of this life",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "reads the adverb as simply rather than liberally, making the promise about the directness of God's giving rather than its abundance"
+   }
+  ],
   "themes": [
-   "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not",
-   "the promise of wisdom to those who ask God",
-   "God giving freely and without reproach",
-   "prayed with confidence"
+   "what wisdom is wanted in trial",
+   "the manner of God’s giving",
+   "the promise limited to those who ask"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "6": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The condition of the promise: 'but let him ask in faith (believing, trusting God's power and willingness to give), nothing wavering (diakrinomenos — not doubting, not divided, not hesitating). For he that wavereth is like a wave (klydon — a surge, billow) of the sea driven with the wind and tossed (blown about)' — the prayer for wisdom to be offered in faith without doubt, wavering (the divided, doubting mind that hesitates between believing and disbelieving) disqualifying the asker; true prayer requiring settled confidence in God, not a hesitating spirit; the doubter, like a restless wave, driven and tossed by every gust, unstable and never settled — the vivid picture of the doubting mind (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let him ask in faith, nothing wavering",
-   "he that wavereth is like a wave of the sea driven with the wind and tossed",
-   "asking in faith, not wavering",
-   "the doubter unstable as a tossed wave"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "Albert Barnes",
    "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "6-7",
+  "pericope_label": "Let him ask in faith, nothing wavering",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin sets out what faith means in prayer: we cannot pray without the word leading the way, so we must believe before we pray, since by praying we testify that we hope to obtain the grace God has promised, and a man with no faith in the promises prays dissemblingly. Faith is therefore what relies on those promises and makes us sure of obtaining, bound up with confidence and certainty about God's love toward us; and he turns the verse against a settled teaching, that the dogma held as an oracle throughout the Papacy — that we ought to pray doubtingly and uncertain of success — is disproved here, since prayers are not heard except where there is confidence of obtaining. He allows that through the infirmity of the flesh nobody escapes being shaken, but temptations of that kind are overcome by faith at last, as a tree with firm roots shakes in the wind without being rooted up. Gill gives the same content in list form: faith not only that God is, but in the promises he has made, in his power and faithfulness to perform them, and that whatever is asked according to his will shall be given."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the requirement into an encouragement with a single sentence, that no man can believe too much good of God. Wesley divides the two verbs of the simile neatly, that the man is driven with the wind from without and tossed from within by his own unstableness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The consequence of doubt: 'for let not that man (the waverer of v.6) think (suppose, expect) that he shall receive any thing of the Lord' — the doubting, divided man not to expect to obtain anything from God, his unbelief forfeiting the answer; he receives nothing (not the wisdom asked, nor any blessing), doubt cutting off the supply, God answering the prayer of faith not of the divided heart; no arbitrary refusal but the nature of the case, for the doubter, not truly trusting God, is in no condition to receive (faith being the hand that takes God's gift, which the waverer lacks) — Barnes, Robertson, JFB."
+    "summary": "Ellicott observes that this verse alone would clear the writer of the charge of slighting faith, since he puts it in the very forefront of necessity, without which all prayer is useless; he defines the opposite state as a halting between belief and unbelief with the inclination toward the latter, and answers how an unhesitating faith is to be got — faith is the direct gift of God, but it must be tended and used or its faculties are soon gone, and the shield quenches the fiery darts only when it is lifted up in an act of faith. He adds a distinction worth keeping, that intellectual doubt is not moral doubt and the unorthodox are not as the adulterous, though intellectual doubt may itself spring from a habit of carping criticism for which a man is answerable. Robertson explains the participle from a verb meaning to separate between, to discriminate, and notes that no example of it in the sense of being divided against oneself has been found earlier than the New Testament; on the simile he identifies the noun as a dashing or surging wave rather than the successive rollers, notes that the participle for driven by the wind is the earliest known instance and was probably coined by the writer, and derives the last word from a bellows or fire-fan. Barnes draws the moral from the same image, that a wave has no stability and lies at the mercy of every wind, so a man who comes to God with unsettled convictions is driven about by each new feeling; and he gives the plain reason for the warning that follows, that God sees the heart, and where there is no real trust in him it cannot be fitting that he should answer."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is doubt in prayer a moral fault or an intellectual condition?",
+    "positions": [
+     {
+      "position": "a moral one: prayers are not heard except where there is confidence of obtaining, and to pray doubtingly is a taught error",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the two must be distinguished — intellectual doubt is not moral doubt, though it may itself spring from a habit of carping criticism for which a man is answerable",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "argues from vocabulary that the writer coined the participle for wind-driven, one of several such verbs he is fond of, so that the simile is his own construction rather than a borrowed figure"
+   }
+  ],
   "themes": [
-   "let not that man think that he shall receive any thing of the Lord",
-   "the wavering man receives nothing from the Lord",
-   "doubt forfeiting the answer",
-   "faith the hand that receives"
+   "faith as confidence of obtaining",
+   "the divided mind",
+   "the wave driven and tossed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "8",
+  "pericope_label": "A double minded man, unstable in all his ways",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill fills out the picture of the divided man: he halts between two opinions and cannot settle what to ask for, or else is not sincere in his requests but asks one thing while meaning another, drawing near with his mouth and honouring God with his lips while his heart is far from him. Calvin hears an implied contrast with what has gone before, between the simplicity of God, who gives with a stretched-out hand, and the double-mindedness of man, who ought in his turn to open the bosom of his heart; the unbelieving, having tortuous recesses in them, are never fixed, swelling one hour with the confidence of the flesh and sinking the next into despair. He notes that the word here means hesitation between faith and unbelief, faith being the subject, whereas in the fourth chapter it will mean hesitation between God and the world."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the man of two souls as having one for earth and one for heaven, wishing to secure both worlds, unwilling to give up the earth and loath to let heaven go; and he reports Rabbi Tanchum's comment that Scripture exhorts the Israelites when they pray not to have two hearts, one for the holy blessed God and one for something else. He suspects a particular target, the Jews who were trying to incorporate the law with the gospel, unwilling to surrender the Levitical rites and unwilling to renounce the gospel, and says such men could make no progress in divine things. Wesley puts it in a line, that such a man has as it were two souls and his heart is not simply given up to God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The description of the waverer: 'a double minded man (dipsychos — two-souled, of two minds, divided in loyalty between God and the world or between faith and doubt) is unstable (akatastatos — restless, inconstant, wavering) in all his ways' — the man of divided mind unsteady in his whole conduct, not just in prayer; 'double minded' describing one whose heart is divided, wavering between trusting God and trusting self or the world, a soul not wholly given to God but torn between two allegiances; 'unstable in all his ways' — the divided heart producing an inconstant, unsettled character in everything he does, throughout his life (Barnes, Robertson, Calvin)."
+    "summary": "Robertson makes something of the fact that the adjective is a coinage, occurring here and once more in this letter and nowhere else known before it, after which the early Christian writers copied it freely — one argument for an early date; the sense is double-souled, or as Bunyan named the man, Facing-both-ways, and he glosses the second adjective as unsteady, fickle, staggering, remarking that to this writer such doubt is plainly no mark of intellectuality. Barnes gives the same derivation and applies it to a man with no settled principles, controlled by passion and swayed by popular feeling; he points out that the instability is not confined to prayer but extends to everything, so that from the wavering shown in one thing the writer infers that firmness could be looked for in no other — and turns the observation round to make it useful, since a man who takes hold of the promises firmly will be found steady in his integrity and steadfast in his plans of life, as Luther eminently was. Ellicott would repunctuate, joining this verse to the last so that it reads as the reason why the doubter obtains nothing, and takes the words for a proverb matching the warning of Sirach not to come to God with a double heart."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What are the two things the double-minded man is divided between?",
+    "positions": [
+     {
+      "position": "faith and unbelief here, where faith is the subject; the division between God and the world comes later in the letter",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "earth and heaven — and behind that, in the writer's own setting, the law and the gospel",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "uses the coinage as a dating argument, since the word appears nowhere before this letter and was copied freely by later Christian writers"
+   }
+  ],
   "themes": [
-   "A double minded man is unstable in all his ways",
-   "the double-minded man unstable in all his ways",
-   "the divided heart torn between God and the world",
-   "pervasive instability"
+   "the coined word for the divided man",
+   "two souls, for earth and for heaven",
+   "instability extending beyond prayer"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.59
+   }
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "9-10",
+  "pericope_label": "Let the brother of low degree rejoice in that he is exalted",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that brother means one of the household of faith, and that the epithet describes not the temper of the man's mind but his outward state. Calvin sets the case beside Paul's word to servants, who were told to bear their lot as the freemen of God: the lowly are bidden to glory in having been adopted as God's children, and since it is beyond comparison the greatest dignity to be made the associate of Christ, a man who values that favour rightly will count everything else worthless. On the rich man's being made low he refuses the reading that makes it loss of property, taking the particular for the general so that the words touch everyone who excels in honour, and finding the lowness in the Christian state itself as the world estimates it; against those who refer it to the stripping of the rich by persecution he objects from the context, since what follows speaks of the shortness of man's life rather than the fading of riches."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says in a sentence that the destitute Christian may glory in the cross and the hope laid up for him, being an heir of God and a joint heir with Christ. Wesley notices that the title of brother is not given to the rich, and calls this rejoicing the most effectual remedy against double-mindedness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The exhortation to the poor believer: 'let the brother of low degree (the poor, humble, lowly in worldly station or rank) rejoice (boast, glory) in that he is exalted (in his high spiritual station, his exaltation in Christ)' — the lowly believer to rejoice in the spiritual dignity that is his in Christ, however poor his earthly lot; many early Christians being poor, James addressing their condition with comfort; the poor brother 'exalted' — raised to high dignity as a child of God and an heir of the kingdom, glorying not in wealth but in his exaltation in grace (Barnes, Robertson, Calvin)."
+    "summary": "Barnes names the new kind of trial: not affliction in general but the trial that comes with a change of circumstances, whether a man is raised from poverty to affluence or brought down from affluence to want. There is hardly a more decisive trial, since much religion that will bear poverty, and much that will bear prosperity, cannot bear the passage from one to the other — as many a frame can be seasoned to the heat of the equator or the cold of the north and yet cannot bear a rapid change between them; and he takes the rich man's being made low plainly of losing his property, having seen some of the loveliest exhibitions of piety in such a descent. Robertson takes the lowly brother to be lowly in outward condition rather than in spirit, observes that rich and poor in these churches already had their occasions of jealousy, and calls the command a paradox and true, since in his low estate the man stands at his height, the Cross being the great leveller. Ellicott guards the doctrine from a false humility — there is no praise here for the pride that apes lowliness or the affectation that loves to be despised — and sets the two states in antithesis, the rich man's humiliation against the poor man's humility, hearing a spiritual sense beneath it that teaches the poorest he may be rich toward God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the rich man's being made low a loss of property or a change of estimate?",
+    "positions": [
+     {
+      "position": "loss of property, a transition more Christians could bear than the reverse",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "neither property nor persecution, but the lowness of the Christian state itself as the world estimates it — the context speaks of the shortness of life, not the fading of riches",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "writes kindly for the finer spirits who shrink from any exaltation, that they may not fear the greater dangers a higher call must bring"
+   }
+  ],
   "themes": [
-   "Let the brother of low degree rejoice in that he is exalted",
-   "the lowly brother rejoicing in his exaltation",
-   "the poor raised to dignity in Christ",
-   "glorying in grace, not wealth"
+   "the trial of changed circumstances",
+   "what the lowly brother’s exaltation is",
+   "in what sense the rich is made low"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The parallel exhortation: 'but the rich (the wealthy believer), in that he is made low (in his humiliation, the lowering of his earthly pride, or his learning to count earthly riches as nothing): because as the flower of the grass (the wild flower) he shall pass away (perish, fade)' — the rich believer to glory not in his wealth but in being humbled, in the abasement that teaches him the vanity of riches (whether his being brought low by trial or his Christian lowliness of mind that no longer trusts in riches, glorying in what the world counts loss); for the rich man and his riches are as fleeting as a flower, his wealth and even his life quickly fading (Barnes, Robertson, Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "But the rich, in that he is made low",
-   "because as the flower of the grass he shall pass away",
-   "the rich brother glorying in being made low",
-   "the vanity of fleeting riches"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "11",
+  "pericope_label": "The sun is no sooner risen with a burning heat",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill keeps to the plain sense, taking the burning heat of the sun at midday, when it shines in full strength and its heat is scorching, especially in summer and in hot climates. Calvin is occupied with the text of the last clause rather than its sense, preferring with Erasmus the reading without the diphthong, so that the phrase means in or with his riches rather than in his goings, though he grants the received reading stands in far more copies."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke draws the physical cause out of the figure: the sun by its genial heat nourishes all plants, yet when it rises with a burning heat and the air holds too little moisture the juices are drawn out and the plant withers, so that the very cause of growth becomes the cause of decay. He takes the practical lesson to be that God gives and resumes these things at his pleasure, showing them uncertain so that they may never become an object of confidence, and that a man who suffers loss for righteousness' sake has gained what is of infinite worth and lost what he must soon have parted with. Wesley remarks on the manner as much as the matter, finding an unspeakable beauty and elegance both in the comparison and in the way of expressing it, which intimates at once the certainty and the suddenness of the event."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The vivid picture: 'for the sun is no sooner risen with a burning heat (the scorching east wind, the kauson), but it withereth the grass, and the flower thereof falleth, and the grace (beauty, comeliness) of the fashion (appearance, form) of it perisheth: so also shall the rich man fade away (wither, perish) in his ways (in his pursuits, his goings, his very course of life)' — the rising sun with its burning heat quickly withering the grass, dropping its flower, and destroying all its beauty (the swift destruction of fragile loveliness); so the rich man, busy in his affairs, will wither like the flower, his wealth and life fading even as he pursues them — the warning against trusting in riches (Barnes, Robertson, Calvin)."
+    "summary": "Barnes points out that Isaiah, whom the writer plainly has in mind, names not the sun but a burning wind that dries up the flowers, and thinks the reference here is likewise to the fiery simoom which often rises with the sun; he finds a further fitness once the stalk is brought in, since the hot wind withers the stalk that supports the flower and the flower falls when its support is gone. He takes the phrase about the rich man's ways from Rosenmüller to mean his counsels and plans, so that the man vanishes with everything by which he was known, and concludes that he may rejoice in the providence that strips him and so tests his religion. Robertson allows either reading of the noun, since it is the word the Greek Old Testament gives to the sirocco, the dry east wind out of the desert, while elsewhere it means the burning heat of the sun; he notes that the verbs state what always happens rather than what once happened, and that the flower is pictured as having a face, so that the grace which perishes is the beauty of its countenance. Ellicott renders the whole in the past tense and supposes the writer had often watched the eastern sun scorching the verdure of the wilderness, with the cry of Isaiah in his ear that all flesh is grass; he is careful about who is threatened — not the rich brother, though his wealth will pass away, but those that trust in riches — and finds a special sharpness in words that mean the rich shall perish in their journeyings after gain, a rebuke that could apply to no people more closely than to the Jews."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the withering agent the sun or a scorching wind?",
+    "positions": [
+     {
+      "position": "the fiery simoom, since Isaiah, whom the writer has in mind, names a burning wind and not the sun",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "either will do — the noun renders the sirocco in the Greek Old Testament but elsewhere means the sun's burning heat, and both make sense here",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "the sun, taken plainly, at midday and in a hot climate",
+      "holders": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "leaves the imagery aside altogether to argue a textual point, preferring with Erasmus a reading that makes the last phrase mean in his riches rather than in his goings, while conceding the received reading has far more manuscript support"
+   }
+  ],
   "themes": [
-   "the sun is no sooner risen with a burning heat, but it withereth the grass",
-   "so also shall the rich man fade away in his ways",
-   "the rich man fading like the scorched flower",
-   "the warning against trusting riches"
+   "the sun or the burning wind",
+   "the grace of the fashion of it",
+   "who is threatened by the fading"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
+   }
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
-   "Matthew Henry"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "12",
+  "pericope_label": "Blessed is the man that endureth temptation",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the temptation to be affliction and the endurance a manner of bearing it: the man who so bears up as not to be offended at it, not to stumble in the ways of Christ and fall away as temporary believers do, but stands manfully and does not sink, does not murmur or repine but is quiet and still and endures to the end. Such a man is happy under his afflictions and even on account of them, since they are tokens of God's love and evidences of sonship. Calvin presses the paradox that they are not happy to whom all things come according to their wishes but such as are not overcome with evils, and argues from the end: the crown follows the contest, so the contests by which the Lord tries us are aids to our happiness. But they reason absurdly who infer that we merit the crown by fighting, for God has gratuitously appointed it and our fighting only renders us fit to receive it; and love is no more meritorious than the fighting, since God anticipates us by his own gratuitous love, the words only marking out the elect as those he approves."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the point negatively: it is not every man who suffers that is blessed, but he who with patience and constancy goes through all difficulties in the way of duty, so that afflictions cannot make us miserable if it be not our own fault, and the tried Christian shall be a crowned one."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the saying a mere Jewish sentiment and quotes the rabbinical parallel at length — blessed is the man who stands in his temptation, for there is no man whom God does not try; he tries the rich to see whether they will open their hands to the poor, and the poor to see whether they will receive affliction and not murmur, and to each who stands there is a double portion hereafter. He thinks the language borrowed from the Grecian contests, where he is crowned who conquers and none else. Wesley makes the connection in a line: his enduring proves his love, for it is love only that endureth all things."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The beatitude returning to the theme of trials: 'blessed (happy, to be congratulated) is the man that endureth (hypomenei — patiently bears up under) temptation (trial, peirasmon): for when he is tried (dokimos — approved, having stood the test), he shall receive the crown (stephanos — the victor's wreath) of life, which the Lord hath promised to them that love him' — the one who steadfastly endures testing being blessed, and having passed the trial receiving the crown which is life (eternal life), the reward of the proved and faithful; the crown promised to those who love God, love for God being the mark of the genuine believer who endures (Barnes, Robertson, Calvin, Henry)."
+    "summary": "Barnes takes the word in its widest sense, as anything that tries the reality of religion, and answers why the chapter uses it two ways by observing that affliction is itself a solicitation, since under it the question comes whether we will hold to the religion for which we suffer or apostatise to escape it; on the closing phrase he observes how sufficiently the description distinguishes, since the great mass of men do not love God at all. Ellicott hears the nine beatitudes of the mount behind the blessing, the words for endurance and trial being those rendered patience and trials in the opening verses, and means steadfastness and tenacity of purpose. Robertson reads the participle as having become approved, pointing back to the testing named earlier, and takes the crown of life as a genitive of apposition — life itself being the crown, an honourable ornament rather than the victor's garland of leaves. He and Ellicott both note that the word Lord is missing from the oldest manuscripts, Ellicott supposing a marginal gloss taken unwittingly into the text by a later copyist."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the crown a victor's garland won in a contest?",
+    "positions": [
+     {
+      "position": "yes — the language is borrowed from the Grecian contests, where he is crowned who conquers and none else",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "no — the crown is life itself, an honourable ornament, with probably no reference to the victor's garland",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "the contest is real but the crown is not earned by it: God has gratuitously appointed it, and our fighting only renders us fit to receive it",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "note": "holds that the tried man is happy not merely after his afflictions but under them and on account of them, taking the trials themselves as tokens of love and evidences of sonship"
+   }
+  ],
   "themes": [
-   "Blessed is the man that endureth temptation",
-   "he shall receive the crown of life, which the Lord hath promised to them that love him",
-   "the blessing and crown promised to the endurer of trial",
-   "love for God the mark of the endurer"
+   "what enduring temptation means",
+   "the crown of life",
+   "whether the crown is merited"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "13": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "13",
+  "pericope_label": "Let no man say when he is tempted, I am tempted of God",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the turn in the word plainly: up to this point temptations were matter of joy and boasting, the means of trying and exercising grace and of purging away the dross of corruption, temptations in which God was concerned; from here they are criminal, issuing in shame and death, to be deprecated and watched against, and are removed and denied of God as unworthy of him. Calvin distinguishes the two kinds carefully — external temptations are plainly sent by God, who tempted Abraham and daily tempts us by laying before us an occasion by which our hearts are made known, but to draw out what is hidden in a heart is a far different thing from inwardly alluring it by wicked lusts. He then raises the objection he knows is coming, that Scripture says men are blinded by God and given over to a reprobate mind, and answers that when it ascribes hardness of heart to God it assigns him neither the beginning of that blindness nor the blame of it: hearts are subjected to depraved lusts because they are already corrupt, and in giving them up God punishes sin rather than authors it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds the ground of the denial in the divine nature, since all moral evil is owing to some want of wisdom or power or purity of will, and who can impeach the holy God with the want of what is his very essence? He adds that the evasion is hereditary, our first father having told God that the woman thou gavest me tempted me, and so in effect blamed God for giving him the tempter."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the same as Gill more briefly, that lest the former sentiment should be misapplied the writer takes up the word in the sense of solicitation to sin after having used it of trial from providential circumstances, and so has explained and guarded his own meaning. Wesley leaves it at the bare denial, that God thus tempteth no man."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The shift in the word 'tempted': 'let no man say when he is tempted (peirazomenos — now solicited to sin, enticement to evil, not mere trial), I am tempted of (from) God: for God cannot be tempted with (by) evil (apeirastos — incapable of being solicited by evil, untemptable), neither tempteth he (solicits to evil) any man' — no one, when drawn toward sin, may blame God as the author of the solicitation; God himself wholly removed from evil (neither susceptible to it nor having any part in it), so he cannot be the source of solicitation to sin; the key distinction (reconciling with God's 'tempting' Abraham, Genesis 22, and 'lead us not into temptation') being that God tests and tries men (trials, providential testing, are from him) but never entices anyone to sin — the trial that proves faith is from God, the solicitation to evil never his (Barnes, Robertson, Calvin)."
+    "summary": "Barnes reads the danger as real and pastoral rather than merely verbal: there was much in any trial that might induce a man to sin, whether by complaining, by murmuring, by apostasy or by yielding, and the perverse tendency of the heart would gladly charge that inducement on the God who arranged the trial; whatever allurement a trial contains is incidental to it and no part of the divine purpose. He also asks what could possibly move God — no evil passion to gratify, no want of power, no want of wealth, no want of happiness. Robertson makes the point turn on a preposition, the construction expressing origin and not agency, so that temptation does not spring from God at all, and adds drily that contemptible as the excuse is he has heard wicked and weak men blame God for their sins; the adjective that follows is a rare compound, the earliest example of its form, and though Hort notes the phrase as a proverb meaning free from evils, the context calls for untemptable rather than untempted. Ellicott praises the old Geneva Bible as the first of the versions to seize the exact meaning where Wiclif, Tyndale and Cranmer had all missed it, and reads the sense as absolute: no possibility of temptation remains with God, and it were blasphemy near to that of the Pharisees to think his kingdom so divided against itself that he should seduce his own subjects into revolt."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the rare adjective mean God is free from evils or incapable of being tempted?",
+    "positions": [
+     {
+      "position": "untemptable — Hort's proverbial sense is possible, but the clause that follows rests on the stronger meaning",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "incapable absolutely: into the splendour of God's fulness no thought of wrong can enter",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "meets head-on the objection that Scripture elsewhere makes God blind and harden, distinguishing the beginning of blindness from its judicial infliction — God punishes sin in giving men up rather than authoring it"
+   }
+  ],
   "themes": [
-   "Let no man say when he is tempted, I am tempted of God",
-   "for God cannot be tempted with evil, neither tempteth he any man",
-   "God tempts no man to evil",
-   "trial from God, but not solicitation to sin"
+   "the word changes sense",
+   "untempted or untemptable",
+   "the Scriptures that say God blinds and hardens"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "14-15",
+  "pericope_label": "Drawn away of his own lust, and enticed",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill traces the conceiving with some psychological patience: a proposal of pleasure or profit is made, agreeable to the principle of corrupt nature, and instead of resisting and rejecting the motion the man admits it, cherishes it, dallies with it, dwells upon it in his thoughts, hides it under his tongue as a sweet morsel, and contrives means to bring it about. Calvin puts the first half shortly — since the inclination and excitement to sin are inward, in vain does the sinner seek a cause from an external impulse — and warns against pressing the sequence into a doctrine, since it does not show when sin begins to be sin before God but only when it breaks forth; those who conclude that filthy lusts are no sins provided there is no assent have laid hold on the passage ignorantly."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the two metaphors as dragging a fish out of the water by a hook concealed in a bait, and the enticements of an impure woman who draws the unwary into her snares; he thinks such connections are clearly in view, and quotes the rabbinical saying that evil concupiscence is at the beginning like the thread of a spider's web and afterwards like a cart rope. Wesley marks the two stages against the two verbs: drawn away belongs to the beginning of the temptation and means drawn out of God, our strong refuge, while enticed belongs to its progress, catching at the bait. His conclusion is that we are to look for the cause of every sin in ourselves and not out of ourselves, since even the injections of the devil cannot hurt before we make them our own."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The real origin of solicitation to sin: 'but every man is tempted, when he is drawn away (exelkomenos — dragged off, lured away, as by a baited hook) of his own lust (epithymias — desire, craving), and enticed (deleazomenos — baited, allured, as a fish to bait)' — temptation arising from within, from a man's own corrupt desire, which lures and baits him toward sin; the source being 'his own lust' (not God, not merely the devil or the world, but the man's own appetite, the inward craving that draws him); the language drawn from hunting and fishing, lust acting like a hunter luring prey or a baited hook drawing a fish, the sinner caught by his own desire (Barnes, Robertson, Calvin)."
+    "summary": "Barnes is careful that the word for desire not be narrowed to libidinousness: it means desire in general and seems to cover the original propensities implanted in us as a stimulus to employment, so that if there were no capacity for receiving food no object appealing to the appetite could tempt, and if nothing in the soul loved acquisition gold would furnish no temptation. The propensity itself may be perfectly harmless; the fault is in not restraining the indulgence where we are commanded to. Robertson finds the same double figure in the two participles, the first picturing a fish drawn out from his retreat and the second, from the noun for bait, meaning to catch fish by bait or to hunt with snares; on the second verse he takes each term of the birth vocabulary in turn, noting that the participle rendered full-grown means completeness of parts rather than maturity — the winged insect as against the grub — so that sin at birth is fully equipped for its career, and that the last verb is a medical word giving a powerful figure of abortion in which the child is dead at birth. Ellicott sets a limit to the tempter's power: from without come the whispers of Satan, but the subtlest fiend can only guess what is passing in its victim's mind, since God alone is the discerner of hearts, so that only by treason of the man himself can the enemy enter and reign; and he lets the image of the birth stand as repellent, a hideous progeny tenfold more cursed than its begetter."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the passage teach that lust is not sin until it acts?",
+    "positions": [
+     {
+      "position": "no — it shows only when sin breaks forth, not when it begins to be sin before God, and those who infer otherwise lay hold on it ignorantly",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the sequence is a picture of process rather than a verdict: the will yields, conception takes place, and the child is dead at birth",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "draws a boundary around satanic power from the fact that God alone reads hearts, so that the tempter works by general knowledge and particular guesses and cannot force the barriers around a faithful soul"
+   }
+  ],
   "themes": [
-   "every man is tempted, when he is drawn away of his own lust, and enticed",
-   "temptation springs from a man's own lust",
-   "the inward craving the source of sin",
-   "lured as a fish to bait"
+   "the hook and the bait",
+   "desire in general, not libidinousness",
+   "the genealogy of sin and death"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The figure of conception and birth: 'then when lust (desire) hath conceived (sullabousa — become pregnant), it bringeth forth (gives birth to) sin: and sin, when it is finished (apotelestheisa — full-grown, completed, brought to maturity), bringeth forth death' — desire, when yielded to, conceiving and giving birth to actual sin (the inward craving, embraced, becoming the outward act); and sin, when it has run its full course and matured, producing death (spiritual and eternal death the offspring of completed sin); the deadly genealogy tracing the course from inward desire, through its conception into act, to its final issue in death, each step begetting the next, showing the fatal end of yielding to lust (Barnes, Robertson, Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when lust hath conceived, it bringeth forth sin",
-   "sin, when it is finished, bringeth forth death",
-   "the deadly genealogy: lust conceives sin, sin brings forth death",
-   "the fatal course of yielding to desire"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The transition: 'do not err (me planasthe — be not deceived, do not be led astray), my beloved brethren' — a tender warning against the error just refuted (that God is the author of temptation, vv.13-15) and an introduction to the truth that follows (that God is the giver of all good, v.17); the warning guarding against a fundamental error about God's character (supposing that evil comes from him), the affectionate address 'my beloved brethren' softening the correction with love, James earnest that they not be misled on this vital point (Barnes, Robertson, Calvin, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Do not err, my beloved brethren",
-   "the warning not to be deceived",
-   "guarding against error about God's character",
-   "the affectionate hinge of the argument"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "16-17",
+  "pericope_label": "Every good gift is from above, from the Father of lights",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The truth answering the error: 'every good gift (dosis — the act of giving, every good giving) and every perfect gift (dorema — the gift bestowed) is from above (from heaven), and cometh down from the Father of lights (the Creator and source of all lights — the heavenly luminaries, and so of all light, material and spiritual), with whom is no variableness (parallage — change, variation), neither shadow of turning (trope — no shadow cast by turning, no eclipse or alteration)' — all good of every kind coming down from above (God the author of good, not evil); God, who made and governs the lights of heaven, the Father and fountain of all illumination and good; and unlike the heavenly bodies that rise, set, and cast shifting shadows, God utterly unchanging in his goodness, never varying (Barnes, Robertson, Calvin)."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril is drawn to the title itself, using the verse to insist that God did not attain in course of time to being a Father but is ever the Father of the Only-begotten, not by passion or union or effluence or alteration, since with him can be no variation nor shadow of turning."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the 'Father of lights' is unchanging, unlike the created luminaries that wax, wane, and are eclipsed; with God there is no variation nor shadow of turning, his goodness constant and his gifts ever good — the source of every good and perfect gift, from whom no evil can come."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill treats the error warned against as fundamental: to make God the author of sin, or to charge him with being concerned in temptation to sin, strikes at his very being and at the perfection of his holiness, and is a denying of him, to be abhorred by all who profess any regard to his name. Calvin calls the verse an argument from what is opposite — to do good is what properly belongs to God and accords with his nature, so whatever evil is done is not agreeable to it — and enters the caution that governs the whole figure, that we may not measure the brightness of God by the irradiation of the sun which appears to us."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke adds eclipse and cloud to the astronomical figure, with the sun declining to the tropic of Capricorn and our days shortening in consequence, and draws the moral that men may hide from God's light by the works of darkness as owls and bats hide in caves while the sun shines. Wesley finds the appellation of Father used with peculiar propriety just here, since it follows that he begat us."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes agrees the danger was real, since experience shows men are always prone to that opinion, and observes how the writer meets it — not by argument but by the opposite assertion, that so far from being the source of evil God is the author of all good; on the last clause he draws the contrast out, since the sun does not shine on all parts of the earth at once nor in the same manner all the year but rises and sets and crosses the line, whereas God is as if the sun stood in the meridian at noonday and never cast a shadow. Ellicott marks the hinge, that thus far the letter has declared what God is not and now turns to the positive, calls the sentence more musical still in the Greek and suspects the fragment of a Christian hymn, credits the Genevan version with observing the difference between the two words for gift, and refuses to choose among the readings of the lights on offer — figurative, or the Urim on Aaron's breast, or spiritual, or the material lights of the firmament — quoting Bishop Wordsworth's catalogue of all of them together. Robertson takes the first noun as properly the act of giving and the second as the thing given, notes that the clause forms a perfect hexameter line and that Ropes infers a quotation from an unknown source, though he does not find that conclusive, and takes the two rare nouns of the last clause in turn — the first an old word for making things alternate, the second a late word for a shade cast by one object on another — admitting the metaphor is unclear and the text itself uncertain."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What are the lights of which God is called Father?",
+    "positions": [
+     {
+      "position": "all of them at once — the heavenly bodies, the light of reason and conscience, of the Law, of prophecy, of the gospel and of the heavenly city",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the heavenly bodies, since the next clause compares God to the sun, which does have periodic variations",
+      "holders": [
+       "A.T. Robertson",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "reads the verse not for the doctrine of providence but for the doctrine of God, taking the absence of variation as proof that the Father's fatherhood is eternal and not acquired"
+   }
+  ],
   "themes": [
-   "Every good gift and every perfect gift is from above, and cometh down from the Father of lights",
-   "with whom is no variableness, neither shadow of turning",
-   "every good gift comes from the unchanging Father of lights",
-   "God constant in goodness, unlike the shifting heavenly lights"
+   "the turn from what God is not to what he is",
+   "the two words for gift",
+   "variation and the shadow of turning"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "18",
+  "pericope_label": "Of his own will begat he us with the word of truth",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill thinks the instance well chosen: regeneration is the first gift of grace God bestows on his people openly and in their own persons, it involves the other gifts and prepares them for eternal life, and it is perfect because it is done at once — there are no degrees in it as in sanctification, a man being born again at once and born a perfect new man in all his parts. Calvin notes that the qualifying word before firstfruits means in a manner or after a sort, and refuses to restrict the title to a few of the faithful, since as man excels among all creatures so the Lord elects some out of the whole mass and separates them as a holy offering; the firstfruits being a pledge of the coming harvest, creatures must include all the saved in future ages, and he too prefers the reading that makes the first converts, who were Jews, the firstfruits."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke arranges the verse as a set of deliberate opposites to what has gone before: God's will against the lust of man, his truth as the means of salvation against the sinful means named above, and the new creature against the sin conceived and brought forth. Since the will of God is essentially good all its productions must be good, and since it is infinitely pure they must be holy; he identifies the instrument as the doctrine of truth, what Paul calls the word of the truth of the gospel, and adds a remarkable saying of Philo that God begat Isaac, sowing seed in souls and begetting happiness. He takes creatures to mean the Gentiles and firstfruits the Jews, to whom the gospel was first sent. Wesley enters one qualification, that the phrase is a kind of firstfruits because Christ alone is absolutely the firstfruits, Christians being the chief of God's visible creatures and sanctifying the rest."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The chief instance of God's good gift: 'of his own will (bouletheis — having willed it, by his own free purpose and choice) begat he us (apekyesen — gave us birth, regenerated us) with (by means of) the word of truth (the gospel, the message of truth), that we should be a kind of firstfruits (aparche — the first and choicest portion, consecrated to God) of his creatures (his creation)' — God, of his own free will and sovereign good pleasure, giving us spiritual birth (the new birth the supreme example of his good giving), wrought through the instrumentality of the gospel; believers, regenerated, being as the firstfruits of God's new creation, the first and consecrated portion, a pledge of the larger harvest to come (Barnes, Robertson, Calvin)."
+    "summary": "Barnes fastens on the participle, that our being begotten to be his children is to be traced solely to his will, which purposed it and it was done; but he is careful not to let sovereign be read as arbitrary, since it is not to be inferred that there was no reason why it should be done, only that his will determined the matter, the reasons being seldom stated to us and perhaps beyond our comprehension. Robertson notes that the verb is the same one used a few lines earlier of lust bringing forth death, the metaphor of birth deliberately repeated in a good sense, and that it stands here of the father rather than the mother, which is very rare; he takes the following phrase as an instrumental case referring to the gospel message of salvation. Ellicott hears a maternal phrase in the verb and lets it carry the tenderness, since as the old creation was by the Word so is the new, and though a woman may forget the son of her womb he will never leave nor forsake; on the firstfruits he reaches furthest of any, taking the words with Paul's groaning creation, so that every struggle animals make against pain and death shows these are a bondage imposed from without and every groan is an unconscious prophecy of liberation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are the creatures of whom believers are the firstfruits?",
+    "positions": [
+     {
+      "position": "the Gentiles, the Jewish converts being the firstfruits of the harvest since reaped over the whole Gentile world",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "all the saved in future ages, since the firstfruits are a pledge of the coming harvest",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the whole groaning creation, animate and inanimate, which waits for the manifestation of the sons of God",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "qualifies the title rather than widening it, holding that believers are only a kind of firstfruits because Christ alone is absolutely the firstfruits"
+   }
+  ],
   "themes": [
-   "Of his own will begat he us with the word of truth",
-   "that we should be a kind of firstfruits of his creatures",
-   "the new birth by God's will through the word of truth",
-   "believers the firstfruits of the new creation"
+   "begotten of his own will",
+   "the word of truth as instrument",
+   "how wide the harvest is"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "19",
+  "pericope_label": "Swift to hear, slow to speak, slow to wrath",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the inference back to the verse before, since the gospel, the word of truth, is the instrument God uses in regeneration and in forming a people for himself. Calvin agrees the exhortation is fitted to the subject in hand rather than a general sentence, and adds a reason for its urgency: spiritual generation is not the work of one moment, and since remnants of the old man abide in us we must be renewed through life, our own perverseness or arrogance or sloth being a great impediment to God in perfecting his work. He takes the anger to be condemned specifically with regard to the hearing God demands, since making a tumult it disturbs and impedes him, and God cannot be heard except when the mind is calm and sedate."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the practical connection: if men would govern their tongues they must govern their passions, for when Moses' spirit was provoked he spoke unadvisedly with his lips. He applies the counsel first to disputes among Christians, where each side should be willing to hear the other, people being often stiff in their opinions because they are unwilling to hear what can be offered against them; and he quotes Manton's report that when a Manichee contested with Augustine and cried importunately hear me, hear me, the father replied that neither should hear the other, but let both hear the apostle."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke piles up the older sayings that anticipate the maxim — the rabbinical adage that the righteous speak little and do much while the wicked speak much and do nothing, the son of Sirach's charge to be swift to hear and with deep consideration give answer, and the fourfold classification of tempers, of which the best is the man difficult to incense and easily appeased. Wesley reads the three clauses as a table of contents, the first treated from the next verse through the following chapter, the second in the third chapter, and the third through the fourth and fifth."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The practical wisdom flowing from the word of truth (v.18): 'wherefore, my beloved brethren, let every man be swift to hear (quick, ready to listen — especially to the word of God and to instruction), slow to speak (not hasty, not rash with the tongue, not quick to talk, teach, or assert oneself — the curbing of the tongue, a major theme of the epistle), slow to wrath (slow to anger, not easily provoked, restraint of temper, especially in receiving the word or in dispute)' — the reason following (v.20) that human wrath does not work God's righteousness; the threefold counsel of eager listening, restrained speech, and slow anger (Barnes, Robertson, Calvin, Henry)."
+    "summary": "Barnes spells the inference out: since God is the only source of good, since he tempts no man, and since by his sovereign goodness we have been made the firstfruits of his creatures, we ought to be ready to hear his voice and to bring our souls to entire practical obedience. He adds the classical parallels — that men have two ears and but one tongue that they should hear more than they speak, that the ears are always open while the tongue is hedged in by a double row of teeth, and the reply of Xenocrates when asked why he alone kept silence, that he had sometimes had occasion to regret speaking and never that he was silent — and observes that a man whose mind is excited and enraged is in no condition to see the value of truth or to weigh the evidence for it. Robertson notes that the opening form can be either indicative or imperative and the context alone can decide, that the picture points to listening to the word of truth just mentioned and is aimed against violent and disputatious speech, that the tense of the second clause means slow to begin speaking rather than slow while speaking, and that the third probably means slowness to speak when angry will tend to curb the anger. Ellicott divides the chapter here into its third part, notes a manuscript variation that would make the opening a statement rather than an address, and puts the warning in a phrase — the quick speaker is the quick kindler."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the wrath particularly opposed to here?",
+    "positions": [
+     {
+      "position": "to hearing God, since anger makes a tumult that impedes him and God cannot be heard except when the mind is calm",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "to any inquiry after truth, since an enraged mind cannot weigh evidence",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "to disputes among Christians, where each side ought to be willing to hear the other",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "reads the three clauses as a structural table of contents for the rest of the letter rather than as three parallel counsels"
+   }
+  ],
   "themes": [
-   "let every man be swift to hear, slow to speak, slow to wrath",
-   "the threefold counsel: swift to hear, slow to speak, slow to wrath",
-   "eager listening, restrained speech, slow anger",
-   "practical wisdom from the word"
+   "what the wherefore looks back to",
+   "the ancient parallels to the maxim",
+   "why wrath spoils hearing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of v.19's counsel: 'for the wrath (anger, the angry temper) of man worketh not (does not produce, does not accomplish) the righteousness of God (the righteousness God requires and approves)' — human anger not bringing about the righteous conduct or character that God desires, passion not serving God's holy ends; 'the wrath of man' being the angry, passionate spirit native to fallen men (restless and destructive, not productive of holiness, hindering rather than advancing God's cause); it neither produces personal righteousness nor furthers God's righteous purposes but breeds strife and sin, hence the believer is to be slow to wrath (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For the wrath of man worketh not the righteousness of God",
-   "human wrath does not work God's righteousness",
-   "passion breeding strife, not holiness",
-   "the reason to be slow to anger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "20-21",
+  "pericope_label": "Receive with meekness the engrafted word",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill records the Alexandrian reading of the first clause, which makes it an imperative — with the wrath of men do not work the righteousness of God — the practical point being that we should not attend on the word and ordinances with a wrathful spirit; and he hears in the next verse a boiling pot throwing up scum that must be taken off, the spirit of a wrathful man throwing up the filth of haughtiness and pride and anger. Calvin reaches the sense of the last figure from the requirement rather than the etymology: the word cannot be rightly received unless it strikes roots in us, for seed sown on hard ground soon withers. He takes the meekness to be humility and a mind ready to learn, and thinks so few profit in God's school because hardly one in a hundred renounces the stubbornness of his own spirit; and when the word is called able to save he adds the necessary guard, that the power of saving is not ascribed to the external sound, nor is the office of saving taken from God and transferred elsewhere."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke will not leave the first clause in the abstract: a furious zeal in religion is detestable in God's sight, who will have no sacrifice not consumed by fire from his own altar, and the zeal that made the Papists persecute and burn the Protestants was kindled in hell. On the last figure he applies the image historically, since the Jews had been planted by God as a right vine, and when they received the gospel it was engrafted on that good stock, the pure knowledge of the true God and his moral law. Wesley reads the participle as a change of clothes and explains why the second noun calls wickedness superfluous: however necessary it may appear to worldly wisdom, every reasonable end may be answered without any degree of it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The negative and positive commands: 'wherefore lay apart (put off, strip away, as filthy garments) all filthiness (rhyparian — moral defilement, uncleanness) and superfluity of naughtiness (the overflow, excess, of malice or wickedness), and receive (welcome) with meekness (gentleness, a teachable, submissive spirit, not the wrath just condemned, v.20) the engrafted (emphyton — implanted, ingrafted) word, which is able to save your souls' — the believer casting off all moral filth and the abundance of wickedness (as one strips off dirty clothing), and meekly welcoming the implanted word of the gospel, which, received and obeyed, has saving power and brings the salvation of the soul (Barnes, Robertson, Calvin)."
+    "summary": "Robertson notices that the word for man here is the one opposed to woman rather than the inclusive term used a line earlier, and that the word for wrath means settled indignation rather than fury, so the saying does not deny that righteous indignation exists, only that a man is not necessarily promoting God's cause by his own personal anger; he reads the participle of the next verse as the ordinary verb for putting off a garment, with the first noun a late word meaning dirty, and objects that the closing adjective is not the word for engrafted at all but a verbal from the verb to grow in, meaning properly ingrown or inborn — the rooted word, sown in the heart as the soil or garden of God. Barnes puts the same limit on the first clause, that it does not mean our wrath makes God more or less righteous but that its tendency is not to produce the upright life he requires, and a man is never sure of doing right under excited feelings; on the last figure he takes it as engrafting, an art everywhere known, and draws comfort from it — however crabbed our nature, or however bitter the fruit it would bear of itself, through the implanted word it may produce the fruits of righteousness. Ellicott observes that the word rendering the second noun, nothingness in its derivation, was substituted in 1611 for the older and more correct malice, so that the badness implied in the original is much more positive than our version suggests, and compares the overgrowth of evil to the thorns of the parable."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the word described as engrafted or as innate?",
+    "positions": [
+     {
+      "position": "engrafted, an art everywhere known, so that a crabbed nature may yet bear the fruits of righteousness",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "not engrafted at all — the adjective is a verbal meaning ingrown or inborn, the rooted word sown in the heart as God's garden",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "the requirement decides it either way: the word is not rightly received unless it strikes roots, since seed on hard ground withers",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "note": "prefers a variant reading that turns the statement about man's wrath into a command about how the word is to be heard"
+   }
+  ],
   "themes": [
-   "lay apart all filthiness and superfluity of naughtiness",
-   "receive with meekness the engrafted word, which is able to save your souls",
-   "the call to put away evil and receive the engrafted word",
-   "the implanted word with saving power"
+   "what the wrath of man cannot work",
+   "the filthiness laid aside as a garment",
+   "engrafted or ingrown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "22": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The heart of the matter: 'but be ye doers (poietai — practicers, those who carry out) of the word, and not hearers only (akroatai — mere listeners, as at a lecture), deceiving (paralogizomenoi — deluding by false reasoning) your own selves' — the believer not merely listening to the word but practicing it, obedience (not mere hearing) being required; to be a 'hearer only' is to listen to the word without obeying it (a fatal mistake, mere hearing profiting nothing, the word needing to be acted upon); and such a hearer deceives himself, imagining that hearing alone makes him right with God — a dangerous self-delusion, mistaking acquaintance with the truth for obedience to it (Barnes, Robertson, Calvin, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be ye doers of the word, and not hearers only, deceiving your own selves",
-   "the call to be doers, not hearers only",
-   "obedience required, not mere hearing",
-   "the self-deception of empty hearing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The figure: 'for if any be a hearer of the word, and not a doer, he is like unto a man beholding (katanoounti — observing, looking at) his natural face (the face he was born with) in a glass (esoptron — a mirror)' — the hearer who does not obey like a man who looks at his own face in a mirror, seeing himself as he is (perhaps his flaws and need) but only momentarily; the word being like a mirror that reveals a man to himself, showing his spiritual face and faults, which the hearer-only glances in but does not act on (the comparison developed in v.24) — Barnes, Robertson, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if any be a hearer of the word, and not a doer, he is like unto a man beholding his natural face in a glass",
-   "the hearer-only likened to a man glancing in a mirror",
-   "the word a mirror revealing the self",
-   "seen but not acted on"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "22-24",
+  "pericope_label": "Be ye doers of the word, and not hearers only",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin heads off the obvious objection first: the doer meant here is not the doer who satisfies the law in every part, but the man who from the heart embraces God's word and testifies by his life that he really believes it; the fruits show what the implanting was, and faith is not excluded but included especially, as the chief work God requires. Of the mirror he says heavenly doctrine is one in which God presents himself to our view, but what is spoken of here is the external glance of the eye and not the meditation that penetrates the heart, so that a doctrine merely heard avails nothing because it soon vanishes. Gill fills the description of the doers out likewise, as those who spiritually understand the word, gladly receive it, obey it from the heart, submit to the ordinances it directs them to, and walk becoming their profession."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the danger as sharply as anyone: if we heard a sermon every day, and an angel from heaven were the preacher, resting in the hearing only would never bring us to heaven. Mere hearers are self-deceivers, and self-deceit will be found the worst deceit at last; if we flatter ourselves it is our own fault, for the truth flatters no man."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke names the disease instead of describing the cure. They had heard the doctrine and believed it and put it to no practical use; they were downright Antinomians who put a stupid, inactive faith in the place of all moral righteousness, and had reasoned themselves into carnal security. He works the mirror comparison out at greater length than any of the others: a man looks in, sees deformities that might be remedied, is affected by the sight and forms purposes of improvement, then goes away, the mirror is removed, his face is no longer reflected to him, and he forgets both how disagreeable he appeared and what he resolved — the doctrines of God faithfully preached being such a mirror, taken away when the preaching is over. Wesley marvels how exactly the scripture glass shows a man the face of his soul, and warns that such forgetting does not excuse."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The completion of the figure: 'for he beholdeth himself (looks at his reflection), and goeth his way (departs), and straightway (immediately, at once) forgetteth what manner of man he was' — the man glancing in the mirror, walking off, and instantly forgetting what he saw of himself (the fleeting, ineffective look); the impression made by the mirror momentary, lost as soon as he turns away, changing nothing; so the hearer-only, having heard the word and seen his condition, goes away and forgets — the word making no lasting impression, producing no change, leaving him none the better for having heard (Barnes, Robertson, Calvin)."
+    "summary": "Barnes puts his finger on what the deception consists in: the imagination that hearing is all that is required, so that a man who supposes his punctual attendance on preaching has done all that is demanded of him is under a gross self-deception. Robertson takes the verb as continuous — keep on becoming doers — translates the participle from its parts, to reckon aside and so wrongly, so that such a man deludes nobody but himself, and insists the tenses of the mirror be read as they stand rather than as timeless: he glanced at himself, and off he has gone, and straightway forgot what sort of man he was. He also notes that ancient mirrors were polished metal, of silver or usually of copper and tin. Ellicott finds a play in the Greek our language cannot supply, the word for deceiving being the contrary of the word for the message and meaning its corruption, and warns that the danger is subtler than hypocrisy, since a man may be blind and nevertheless exclaim that he sees; he adds that such mirrors are still used in the East, that the face seen in one is literally the face of a man's birth, and takes the scene as an actual occurrence the writer had seen."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the mirror comparison turn on how the man looked or on what he did afterwards?",
+    "positions": [
+     {
+      "position": "on the forgetting: the tenses picture a glance, a departure and an immediate loss of the impression",
+      "holders": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "on the whole cycle of conviction and resolution followed by removal of the glass, which is what preaching does to a hearer",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "guards the command against a reading that would set it at odds with Paul, distinguishing the doer who fulfils the law in every part from the doer who embraces the word from the heart"
+   }
+  ],
   "themes": [
-   "he beholdeth himself, and goeth his way, and straightway forgetteth what manner of man he was",
-   "the man forgetting at once what he saw",
-   "the fleeting look that changes nothing",
-   "the futility of mere hearing"
+   "what a doer of the word is",
+   "the deception of hearing only",
+   "the mirror of polished metal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  },
  "25": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "25",
+  "pericope_label": "The perfect law of liberty",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill argues at some length that the law meant is not the moral law but the gospel, since that is what the context has been speaking of — the word of truth by which God begets men, the implanted word able to save, the thing men are to be doers of; and he thinks it called a law not strictly, as a code of precepts enforced by penalties, but in the Jewish sense of teaching or instruction. Calvin complains that interpreters have not understood why it is called perfect and of liberty for want of noticing a contrast: as long as the law is preached by the external voice of man and not inscribed by the Spirit on the heart it is a dead letter, and so imperfect and a law of bondage, but the Spirit of regeneration who writes it inwardly brings the grace of adoption with it, and freedom from fear follows inseparably. He adds that blessedness is to be found in doing, not in cold hearing."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the opening verb very emphatic, signifying the deep and attentive consideration given to something a man cannot bring up to his eyes, so that he must bend his back and neck and stoop down to see it to advantage, and takes the metaphor from women who spend much time at the glass that not one hair may be left out of place. He hears behind the warning about forgetting the charge in Deuteronomy to keep the soul diligently, adds the rabbinical saying that he who studies and forgets is like a woman who brings forth children and immediately buries them, and gives the fourfold classification of those who visit the synagogue — he who enters but does not work, he who works but does not enter, he who does both, and he who does neither. Wesley reads the verb the same way, not with a transient glance but bending down, fixing his eyes, and searching all to the bottom."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The contrast with the glancing hearer: 'but whoso looketh into (parakypsas — stoops down to gaze intently, peers carefully) the perfect law of liberty (the gospel, the law that is perfect and that brings freedom from sin's bondage), and continueth therein (remains, abides in it — not a passing glance but an abiding attention, keeping looking and obeying), he being not a forgetful hearer (who forgets, v.24), but a doer of the work (one who acts on it), this man shall be blessed in his deed (in his doing)' — the true believer gazing intently into the gospel and abiding in it, the blessing being in the doing itself, so that the obedient doer, not the mere hearer, is blessed (Barnes, Robertson, Calvin, Henry)."
+    "summary": "Robertson is more cautious about the verb, since the notion of stooping is not strong here and Hort shows the word can mean only a cursory glance, though the contrast with the previous verse seems to preclude that sense; he takes the liberty to rest on the work of Christ, whose truth sets us free. Barnes goes further and denies the contrast lies in the manner of looking at all, since the word used of the careless man also implies intense observation, so that the emphasis falls on persevering in the observance rather than on how closely a man peers; and he takes the closing promise as made to the act itself, a man being blessed in the very keeping, which produces peace of conscience and imparts happiness of a high order. Ellicott quotes Alford to the effect that the phrase is not set against a former law of bondage but describes the law of the new life and birth, with its spontaneous and free development of obedience; he renders the balanced phrase literally, not a hearer of forgetfulness but a doer of work, and hears in the closing blessing a return to the beatitudes and the end of the sermon on the mount, this humbly active Christian being the wise man who built his house upon a rock."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the emphatic verb mark a closer kind of looking?",
+    "positions": [
+     {
+      "position": "yes — it signifies stooping down to examine what cannot be brought up to the eyes, like a woman at her glass",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "no — the word used of the careless man implies intense observation too, so the emphasis is on continuing, not on the manner of looking",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "the word can mean a merely cursory glance, but the contrast with the previous verse rules that out here",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "locates the perfection and the liberty not in the law's content but in the mode of its delivery, the same law being a dead letter when preached externally and a law of liberty when written on the heart"
+   }
+  ],
   "themes": [
-   "whoso looketh into the perfect law of liberty, and continueth therein",
-   "not a forgetful hearer, but a doer of the work, this man shall be blessed in his deed",
-   "the blessed doer who looks into the perfect law of liberty",
-   "blessed in the doing itself"
+   "how closely the man looks",
+   "why the law is called perfect and of liberty",
+   "blessed in his doing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "26": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
-   "Matthew Henry"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "26",
+  "pericope_label": "If any man seem to be religious and bridleth not his tongue",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the appearance to rest on preaching or praying or hearing and the other external duties a man is constant in, and notes that several versions render the clause as thinking himself religious. Calvin identifies the particular sin more narrowly as detraction and explains why it belongs just here: those who have put off the grosser vices are especially subject to it, since a man who is neither adulterer nor thief nor drunkard, but seems brilliant with some outward show of sanctity, will set himself off by defaming others under pretence of zeal. He traces the slander to its root in self-flattery, quoting Aesop's fable that the wallet hanging behind is not seen — men blinded by immoderate love of themselves believe themselves far better than they are, and would forgive readily if they in turn acknowledged their own need of forgiveness."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the connection flatly: the man who has a slandering tongue cannot have a truly humble, gracious heart, and readiness to speak of the faults of others, or to lessen their wisdom and piety, is a sign of vain religion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the guess of Suidas about the word's origin, that Orpheus the Thracian instituted the religious rites of the Greeks and the verb for worship was named as a Thracian invention. He turns the verse on teachers in particular: no matter where a man has studied, if he has not learned religion he can never teach it, since religion is learned only by experience, and his advice to such a one is blunt — if he is old let him retire to the desert and pray for light, if in the prime of life let him turn to some honest calling, and if he is young let him tarry at Jericho till his beard grows. Wesley specifies what the tongue is to be bridled from — backbiting, talebearing, evilspeaking — and says the man who does not bridle it only deceives his own heart if he fancies he has any true religion at all."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The searching test: 'if any man among you seem (thinks himself, or appears) to be religious (threskos — outwardly devout, observant of religious worship), and bridleth not (does not curb, rein in) his tongue, but deceiveth (deludes) his own heart, this man's religion (threskeia — religious observance) is vain (empty, worthless, futile)' — one may appear devout yet fail to control his speech, the unbridled tongue exposing the hollowness of mere outward religion; such a man deceiving himself, imagining his outward devotion is true religion while his ungoverned tongue betrays him; his religion, however outwardly observant, being worthless, for an uncontrolled tongue empties profession of all value (true religion governing the tongue) — Barnes, Robertson, Calvin, Henry."
+    "summary": "Ellicott reads the turn structurally, since having dilated on the first part of the earlier advice the writer now enforces the second, and presses the verb rendered seem, which the English obscures: it means seem to himself, so the warning is aimed not at the hypocrite but at the self-deceived. He makes gentleness of tongue the first mark of true religion, as blasphemy is the most damning fault, but warns that the text is a guide for self-examination rather than a stone to cast at a neighbour, and sends the reader to Bishop Butler's sermon on the government of the tongue. Barnes makes the argument turn on a principle: religion is designed to bring the whole man under control, so if there is any one propensity it does not govern, that single exception proves the seat of the evil has never been reached — a man may have zeal, outward benevolence, an uncommon gift in prayer, much self-denial as with those who withdraw into monasteries, even deep conviction of sin, and one unrestrained sin will neutralise all of it. Robertson takes the sense of the adjective from Hatch, who shows it refers to the external observances of public worship, the Pharisaic element in Christian worship, and observes that the compound verb for bridling is the earliest known example of its form, the picture being of a man putting the bridle in his own mouth and not in another's."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why is the tongue singled out from all the marks of religion?",
+    "positions": [
+     {
+      "position": "as a specimen of the general principle, since any one ungoverned propensity proves the seat of the evil untouched",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "because detraction is the characteristic sin of those who have already put off the grosser vices",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "because gentleness of tongue is the first mark of true religion, as blasphemy is the most damning fault",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "applies the verse to unconverted teachers of religion rather than to hearers, holding that a man who has not learned religion by experience can never teach it whatever else he has studied"
+   }
+  ],
   "themes": [
-   "If any man among you seem to be religious, and bridleth not his tongue, but deceiveth his own heart",
-   "this man's religion is vain",
-   "unbridled speech makes religion vain",
-   "the ungoverned tongue exposing empty religion"
+   "seeming religious to oneself",
+   "the unbridled tongue as the decisive exception",
+   "detraction among the outwardly sanctified"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  },
  "27": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "27",
+  "pericope_label": "Pure religion and undefiled before God and the Father",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes pure and undefiled to mean simply sincere and genuine, free from adulteration and hypocrisy. Calvin makes the same reservation as the grammarians with an illustration of his own: when a man given to wine and gluttony boasts that he is temperate, and another objects that the temperate man is he who does not indulge in excess, the object is not to express the whole of temperance but to name one thing suitable to the subject in hand. What is being said is that religion without these things is nothing, and that it is not to be estimated by the pomp of ceremonies; he reads the orphans and widows as a part standing for the whole, so that under one particular the writer recommends every act of love."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke digresses into the etymology of our own word religion, giving Cicero's derivation from re and lego, of those not satisfied with what was commonly said of the gods but reading the matter through again, and Lactantius's rejoinder that it comes rather from the bond of piety which binds us to God — a bond Lucretius laboured to dissolve when he undertook to loose men from religion's chains. On the visiting itself he is at his most insistent: the verb means to take oversight of, so true religion does not merely give something for the relief of the distressed but visits them, takes them under its care, goes to their houses and speaks to their hearts, relieves their wants, instructs them in divine things and recommends them to God; and he turns on the reader to ask whether his religion has ever led him to cellars and garrets to find out the distressed. Wesley makes the same threefold division of the visit — counsel, comfort and relief — to those who need it most, in their most helpless and hopeless state, but adds that neither this nor the keeping unspotted can be done till we have given our hearts to God and love our neighbour as ourselves."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The definition: 'pure (katara — clean) religion and undefiled (amiantos — unstained) before God and the Father (in God's sight, by his judgment) is this, To visit (episkeptesthai — care for, look after, relieve) the fatherless (orphans) and widows in their affliction (distress), and to keep himself unspotted (aspilon — unstained) from the world (its corruption, defilement, sinful ways)' — James defining the religion genuine and acceptable to God (not the whole of religion but its characteristic marks, over against vain religion, v.26): active compassion to the helpless and needy (practical love to those who cannot repay, the fruit of true religion in deeds of mercy) joined to personal purity (keeping oneself unstained from the world's pollution) — true religion uniting compassion to the needy with separation from sin (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: true worship before God is shown in mercy to the orphan and widow and in keeping oneself unspotted from the world — the religion God approves being not outward observance but active love to the helpless joined with purity of life, the inward devotion that bears fruit in compassion and holiness."
+    "summary": "Ellicott presses a point that matters for the whole verse, that what is meant is religious service and no single English word will carry that sense, so religion in its ordinary meaning misleads; he takes the two requirements as a double proof of one life, observes how often the help afforded to the helpless will itself bring about the unworldliness, and ends with a caution against cold reliance upon ritual, remembering the scrupulous contemporaries who would not enter the judgment hall lest they be defiled while they sought to slay the one who had told them that what comes out of a man is what defiles him. Robertson cites examples in the papyri and inscriptions of the word used for ritual and reverential worship under the empire, and quotes Hort's caution that this is not a definition of religious worship at all but a pertinent illustration of the spirit that leads to such acts; he notes that the second adjective puts negatively what the first says positively. Barnes states the limit plainly — the writer does not say this is the whole of religion, or that nothing else is essential — and reduces the two specimens to their principles, that religion will lead to a life of practical benevolence and will keep us unspotted from the world; and both he and Clarke report the suggestion, which Barnes credits to Rosenmüller, that the two adjectives are borrowed from gems whose perfection lies in being free from flaws."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is this a definition of religion?",
+    "positions": [
+     {
+      "position": "no — Hort's caution stands, that it is a pertinent illustration of the spirit of religion and not a definition of it",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "no, and the writer knows it: he names one thing suitable to the subject in hand, as one might define temperance by abstinence from wine",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "not the whole of it, but the two things named do in fact constitute religion, since benevolence images God and purity resembles him",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "presses the verb for visiting into a whole pastoral programme — oversight, house calls, instruction and intercession — rather than relief given at a distance"
+   }
+  ],
   "themes": [
-   "Pure religion and undefiled before God and the Father is this",
-   "To visit the fatherless and widows in their affliction, and to keep himself unspotted from the world",
-   "the description of pure religion: mercy and purity",
-   "compassion joined to personal holiness"
+   "religion as religious service",
+   "whether this is a definition",
+   "what visiting the fatherless means"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  }
 }
