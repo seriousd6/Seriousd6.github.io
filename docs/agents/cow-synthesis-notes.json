@@ -11158,6 +11158,125 @@
         "10"
       ],
       "note": "Length control recovered sharply from exodus 19 in the same batch: five of six entries landed in range on the first draft (593, 590, 629, 417 and one at 644 after a single light pass), and only the last entry needed real trimming, by 61 words in two passes. The difference from exodus 19 is the one note 998 predicts — joshua 4 is a chapter of many short competing notes with two long voices rather than three or four long ones, so there is redundancy for note 969 to work on. The note-1018 rule also held: in the one entry that overshot, cutting two whole clauses moved 28 words where the preceding sentence-level pass had moved 4."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "DECISIVE on the Jamieson misalignment: stride 6 confirmed, and the pointer stall caught in the act. Numbers 24 carries Jamieson, Fausset and Brown at keys 3, 9, 15 and 21 — stride 6, offset 3, four members, the cleanest arithmetic yet seen. The content settles the mechanism. Key 3 carries Jamieson on NUMBERS 3 (the consecration of Levi as substitutes for the first-born, Num 3:12-13). Keys 9, 15 and 21 then carry the SAME block repeated BYTE-IDENTICALLY three times (Num 3:15, the Levite census counted from a month old). So the index advanced exactly once and then stalled, re-emitting its last block at every subsequent stride position. This is the same stall observed at the tail of acts 21 (Acts 1:14 repeated once), but here it is sustained across three consecutive members, which rules out coincidence. Combined with the two monotonic walks already logged (1peter 1: Gal 6:8 to Eph 1:8 across five members; acts 21: Luke 24 to Acts 1:14 across six), the picture is now: a single index walking a wrong region of the Jamieson tree at a fixed stride of 6, sometimes advancing and sometimes stalling. Chapter 44 of the misalignment. The re-fetch is worth doing and the mechanism is now specific enough to test against."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "25"
+      ],
+      "note": "Chrome measurement seven, and a CORRECTION to the character figures in the six earlier chrome notes. Measured consistently — from the nav strip that begins the block to the next <strong> voice head — the chrome in numbers 24 (key 25, inside the Charles Ellicott block) is 992 words, 30,341 characters, 126 newlines. Re-measuring exodus 2 the same way gives 992 words, 30,341 characters, 126 newlines: BYTE-IDENTICAL. The '24,9xx chars' figures recorded for 1peter 1, genesis 9, numbers 6, romans 1, acts 21 and exodus 2 were measured from a later offset and understate the block; the earlier claim of a 'character spread of 7' across measurements should be read as an artefact of inconsistent slicing, not as real variation. The correct statement is that the chrome is a fixed, invariant 30,341-character payload. Also: this is the SECOND consecutive chapter in which the chrome is NON-TERMINAL — it lands mid-key on Ellicott, and John Wesley follows it cleanly at the same key 25, so Ellicott's comment on 24:25 survives but anything he wrote after it in that block is lost. A smaller nav tail ('Next: Numbers Chapter 25 Sacred Texts | Bible ...') also trails Gill's block at the same key, as it did in exodus 2; that one is only about twenty words and does not distort the budget."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "25"
+      ],
+      "note": "Clarke's seventeen-point rehabilitation of Balaam, against the whole rest of the catena. At 24:25 Adam Clarke closes the Balaam cycle with seventeen numbered propositions arguing that 'the badness of this man's character has been very far overrated' and that 'it does not appear that he was either a hypocrite, false prophet, or a sorcerer in the common acceptation of the term, and that he risked even life itself in following and fulfilling the will of the Lord.' His grounds: Balaam knew and worshipped the true God; was a true prophet in the habit of receiving oracles; used no spells, necromancy or evocation of spirits even in view of the camp; sought God's will by the means God himself prescribed (supplication, prayer, sacrifice of clean beasts); told Balak everything God said although he knew it would enrage him; and refused rewards 'even of the most extensive kind'. He allows only covetousness, and even that with the parenthesis '(and who thinks this a sin?)'. On the fatal counsel of Numbers 31:16 and Revelation 2:14 he proposes that it may have been no more than advice 'to form alliances with this people, especially through the medium of matrimonial connections; and seeing they could not conquer them, to endeavor to make them their friends' — a bad doctrine, he grants, but not the deliberate snare tradition assumes; and he lays the ultimate blame on Israel, since it was the Moabitish women and not Balaam who called the people to sacrifice, so that to fall at so slight an invitation 'argued great degeneracy'. This runs against Calvin at every point in the chapter (the coaxing of God by delusive means, the servile self-excuse, the man forcibly drawn where he was unwilling to go) and against Henry, who reads the preface as vain-glory and the parting advice as soliciting hell. Notable as the sharpest single-voice revisionism met in this catena so far, and it is argued rather than asserted."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "3",
+        "15"
+      ],
+      "note": "The word shethum ('whose eyes are open') divides the catena five ways, and Clarke presses the point twice. (1) Clarke argues flatly for SHUT, since the following verse uses a different verb (galah) for opening, and reads it as Balaam's own confession that he had once been unable to see even the angel in his path, 'once I was blind, but now I see'; at 24:15 he returns to it, calling it strange that our version renders the word open 'when the very sound of the word expresses the sense', praising the Vulgate's cujus obturatus est oculus, and blaming the Targum for a false paraphrase that most versions then followed. (2) Wesley glosses 'who had his eyes shut, but now open'. (3) Keil renders 'the man with closed eye' without argument. (4) Henry reports both readings and turns the ambiguity homiletically: many have their eyes open who have not their hearts open. (5) Ellicott declines to decide, noting the form occurs nowhere else in Scripture and that if the root is identified with satham it means to close, but that the next verse settles the sense either way, Balaam being in an ecstasy with the outer eye shut and the inner preternaturally opened. (6) Calvin rejects BOTH standard options — the pluperfect 'had his eyes closed' as too poor (it merely recalls that his ass saw more clearly than he did) and 'whose eye was open' as unnatural — and proposes a third sense, that the eyes were HIDDEN, 'because in their secret vision they have more than human power', citing the same root at Psalm 51:6 for hidden wisdom. Calvin also passes on from Jarchi the report that some Hebrews inferred from this verse that Balaam was blind in one eye."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "20"
+      ],
+      "note": "Calvin and Keil take exactly opposite sides of the same two options on 'Amalek was the first of the nations', and each dismisses the other's view by name or in substance. Keil rejects priority in age, power and celebrity — naming Knobel as holding it — on the ground that 'this Bedouin tribe, which descended from a grandson of Esau, was surpassed by many other nations' in all three respects, and refers the title instead to Amalek as the first heathen nation to open the conflict of the nations against Israel. Calvin calls that very reading 'poor and unsatisfactory' and finds instead an indirect rebuke of Amalekite pride: they claimed precedence over other nations on the score of antiquity, 'as if they had been created together with the sun and moon', so that the phrase is ironical and makes a pointed comparison between the boasted origin and the slaughter awaiting them at the end. Clarke sides with the antiquity reading ('the most ancient and most powerful of all the nations or states then within the view of Balaam'). Ellicott alone weighs the philology: reshith more often denotes priority in time and its counterpart aharith (latter end) supports that, while the earlier reference to Amalekite kings favours rank, and he allows that both may be intended. Wesley reports both without deciding and adds that the defeat of Amalek was 'an earnest and firstfruit of the large harvest of victories' to come."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "21",
+        "22"
+      ],
+      "note": "Four voices identify the Kenites with Midian and Keil refutes all four from Old Testament usage. Wesley: the kindred of Jethro, but specifically the part 'mingled with the Amalekites and Midianites', not those dwelling with Israel, to whom the words do not apply. Gill: expressly NOT the family of Jethro (against Aben Ezra, Jarchi and Abendana), since those were not a people by themselves but encamped with Israel and went into Canaan, later remaining with Judah as Rechabites; he allows only a distinct people of the same original stock settled near and afterwards among the Amalekites. Clarke, following Dr Dodd: Kenites and Midianites are the same, or at least confederate tribes, since Jethro is called a priest of Midian in Exodus and a Kenite in Judges; but Clarke also notes the difficulty that the Midianites here lived close to the Dead Sea, far from Jethro's Midian near Horeb, and suggests a migrated colony. Calvin: 'By the Kenites I understand the Midianites', and it is 'altogether unreasonable' to refer the name to Jethro's descendants, since barely forty years had passed since Jethro left his son with Moses and his was one small family, whereas a people already celebrated is in view; Calvin assigns the breaking of their power to Gideon's three hundred. Against all of them, Keil argues that the Old Testament knows no Kenites whatever except those who went to Canaan with Hobab, so that the distinction between Canaanitish and Midianitish Kenites (Michaelis, Hengstenberg) has no sufficient ground, and 'the hypothesis that by the Kenites we are to understand the Midianites is as unfounded as' the rest. A rare case of the grammatical-historical school arguing from exhaustive lexical survey against a consensus of the other three schools."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "17",
+        "19"
+      ],
+      "note": "Clarke denies at 24:19 the very connections Ellicott and Henry build at 24:17, and his argument against Bar-cochba is a good one. On 24:17 Ellicott collects the external evidence for a messianic reading — both Targums, Ibn Ezra's report that many interpret of the Messiah, the pretender under Adrian taking the name Bar-cochab ('son of a star'), and the Magi's 'we have seen his star in the East' — and Henry supplies a transmission mechanism for the last, that Balaam was one of the children of the east and a tradition preserved in that country may have set the wise men looking. Two verses later Clarke denies all of it: 'I cannot think that the meteoric star which guided the wise men of the east to Bethlehem can be intended here; nor do I think that Peter refers to this prophecy when he calls Christ the day star; nor that Revelation 2:28... nor Revelation 22:16... refers at all to this prophecy of Balaam. Nor do I think that the false Christ who rose in the time of Adrian, and who called himself Barcochab... did refer to this prophecy.' His ground against Bar-cochba is logical rather than assertive: 'the Son of the star is not The Star that should arise, but at the utmost a descendant; and then, to vindicate his right to the Jewish throne, he must show that the person who was called the star... had actually reigned before him' — that is, the title as chosen would defeat the claim it was meant to support. In place of the messianic-star chain Clarke offers only that stars were general titles of royalty among the Asiatics, illustrating with Roxana (Persian Roushen, splendour) and Esther (Persian Sitareh, whence our word star)."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "24"
+      ],
+      "note": "Calvin and Gill independently reach the same obscure historical anchor for 'ships from the coast of Chittim'. Both note that Chittim is used generally of Greece but transferred by Scripture to Italy, and both settle the ambiguity by the same event: the Roman embassy that stopped Antiochus. Calvin, on Daniel 11:30, says the ships of Chittim there 'must be taken for those of Italy or Rome... because the angel there predicts that the ships of Chittim would come, which should overcome, and render frustrate the efforts of Antiochus; which was plainly brought to pass by the mission of Popilius' — the famous circle drawn in the sand at Eleusis in 168 BC. Gill reaches it from the other end, through the Targums (Jonathan reads Italy, the Jerusalem Targum reads the Roman legions), and puts it memorably: 'ships from Cittim design Romans in Grecian ships; for in such were the Roman ambassadors carried, who distressed Antiochus, king of Syria'. Both then conclude that Greeks and Romans are together intended here. Ellicott independently notes that the Vulgate renders the verse Venient in trieribus de Italia and identifies the Kittim with the Romans at Daniel 11:30; Wesley says the name means Macedonia sometimes, Italy sometimes, 'and sometimes both, as in this place'; Clarke reports Calmet contending strongly for Macedonia alone but follows Ainsworth in allowing both. A four-way convergence on a single second-century BC diplomatic incident is unusual enough to record."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "24",
+        "25"
+      ],
+      "note": "Two source-critical remarks worth keeping. (1) Ellicott, at 24:24, raises a question no other voice in the catena asks: 'There is no evidence as to the manner in which Balaam's prophecies came into the hands of the Israelites. It is possible that he may have communicated them to Moses, in the expectation of receiving from him the reward which he had failed to obtain from Balak, or, if captured, in the hope of thereby saving his life.' A rare instance of a nineteenth-century commentator in this set asking how a text got where it is rather than only what it means. (2) Keil, at 24:25, makes a small grammatical point with large consequences: the Hebrew says only that Balaam 'turned towards his place', not that he returned to it (the construction differs from the one that would mean return), 'so that the question, whether he did so, must be determined from other circumstances'. Ellicott independently reaches the same caution — Balaam probably set out intending to go home, but the sequel shows he stayed among the Midianites and perished with them — and Gill allows that he may have reached Mesopotamia and come back again, citing Chaskuni. Clarke and Wesley say he intended Mesopotamia and settled among the Midianites instead. So the whole set treats the chapter's last clause as leaving the question open, which is unusual restraint."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "10",
+        "15"
+      ],
+      "note": "Matthew Henry Concise spliced onto Exposition, now in a fourth book. Numbers 24 carries Henry at only three keys (1, 10 and 15), and at keys 1 and 10 the block contains the full Exposition followed with no break or marker by the corresponding Concise paragraph, restating the same material in compressed form. Previously logged at 1peter 1 key 17, acts 21 key 19, and exodus 2 keys 16 and 23. The pattern now spans four books and both testaments, and in this chapter as in exodus 2 it occurs twice within one chapter. Cost here is only double-counted weight in the word budget, since the two agree in substance; but in acts 21 the Concise passed a materially harsher verdict than the Exposition, so the splice is not always harmless. Belongs in the fetcher, not in per-chapter handling."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "24",
+      "verses": [
+        "1-25"
+      ],
+      "note": "Fidelity self-grade A for all six entries of numbers 24. Tiling covers 1-25 exactly, no gaps or overlaps: 1-3 (648w), 4-9 (650w), 10-14 (650w), 15-17 (648w), 18-21 (650w), 22-25 (650w) — all inside the 350-650 window. Voice coverage: entries 1, 10 and 15 name all seven live OT voices (Gill, Henry, Clarke, Ellicott, Calvin, Wesley, Keil and Delitzsch); entries 4-9, 18-21 and 22-25 name the six that actually appear in those ranges, Henry having blocks only at keys 1, 10 and 15. Jamieson excluded as residue at entries 1-3, 4-9, 15-17 and 18-21 (keys 3, 9, 15, 21). Every proposition in the prose is traceable to a named block in data/commentary/cow/numbers/24.json; where a voice is reported as standing alone or against the rest (Keil on the Kenites, Calvin against Keil on Amalek, Clarke on the star chain and on Balaam's character) the claim was checked against every other block in the range before being written. Real usable source words after deducting the 992-word chrome at key 25 and the Jamieson residue: 22,300 across six entries, from a gross size of 24,532."
     }
   ]
 }
