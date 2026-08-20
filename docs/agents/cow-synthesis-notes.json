@@ -11613,6 +11613,161 @@
       "book": "judges",
       "chapter": "4",
       "note": "Length control, eight entries: 645, 644, 639, 558, 641, 646, 647, 644. Five needed a trim pass and all five cuts were structural (note 1018), never lexical: the Delphi-Bees etymology, the Marathon comparison, Henry's broken-reed and idol reflection, the Maccabee-Martel etymology, and a three-voice pile-up on one Hebrew idiom compressed to one voice. The one entry that came in without a trim (vv10-11, 558) was the one where I cut at the outline stage — note 1051 — dropping Ellicott's nine-poles tent description, the Sigar em-Messiah tree, the LXX oak-of-the-covetous and Ewald's swamp before writing a word. The pattern holds across three chapters now: pre-cutting produces a first draft under 600, post-cutting produces a first draft at 670-750 and costs two passes. A new wrinkle appeared at vv4-5: the voices list is derived from source presence, so an entry can pass every validator while listing a voice the prose never names. Keil was listed at key 5 and unused, because his key-5 block's only substantive sentence treats v6. I added a Keil clause grounded in his own transition (her seat securing rights at home, the summons securing them abroad) rather than leaving the badge unsupported. Worth a standing check: after assembling, confirm every name in tags.voices actually appears in that entry's prose."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JAMIESON MISALIGNMENT, FIFTH STRIDE-6 CONFIRMATION AND FOURTH MONOTONIC WALK. Jamieson appears at keys 3, 9, 15, 21 -- stride 6, offset 3, four members, exactly the numbers 24 pattern. Unlike numbers 24 (which advanced once then stalled on byte-identical blocks), this one WALKS monotonically through 2 CORINTHIANS 2-3: key 3 = 2 Cor 2:10, key 9 = 2 Cor 2:15, key 15 = 2 Cor 3:1-2 (letters of recommendation, 'Christians lives are the only religious books the world reads'), key 21 = 2 Cor 3:6-7 (the ministration of death engraven on stones). Running tally of confirmed stride-6 Jamieson residue: 1peter 1 (offset 1, walks Gal 6 to Eph 1), acts 21 (offset 2, walks Luke 24 to Acts 1), numbers 24 (offset 3, Numbers 3, stalled), 1corinthians 11 (offset 2, walks Acts 22), philemon 1 (offset 3, walks 2 Cor 2-3). The wrong region DIFFERS PER CHAPTER, so the pointer is not parked at a fixed global offset. All four Jamieson blocks excluded and declared as residue."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "25"
+      ],
+      "note": "CYRIL OF JERUSALEM RESIDUE AT KEY 25, AND IT POINTS INTO THE SAME WRONG REGION AS THE JAMIESON WALK. The single Cyril block in this chapter is Catechetical Lectures material on 2 Cor 4:4, the god of this world blinding the minds of them that believe not -- nothing to do with Philemon 25. Note the coincidence: the Jamieson walk in this same file runs 2 Cor 2:10 -> 3:7, and the Cyril misfile lands at 2 Cor 4:4, just past the end of that walk. Two INDEPENDENT residue voices in one chapter pointing into the same wrong book and adjacent regions. Dropped SILENTLY rather than declared, because the VOICE_LABELS defect (see separate note) makes 'Cyril of Jerusalem' undeclarable."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philemon",
+      "chapter": "1",
+      "note": "VOICE_LABELS SHORT-FORM DEFECT, STILL OPEN, NOW BLOCKING FOR THE SECOND CHAPTER. scripts/synthesis_qa.py builds _LABEL_RE from the VOICE_LABELS short forms joined and followed by \\s*:. 'Chrysostom', 'Lightfoot' and 'Robertson' work only by accident, being SUFFIXES of the heads 'John Chrysostom:', 'John Lightfoot:', 'A.T. Robertson:'. 'Cyril' cannot work, because it is a PREFIX of 'Cyril of Jerusalem:' and is followed by ' of Jerusalem', never a colon. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril', or allow an intervening qualifier before the colon. Until then any chapter with a Cyril of Jerusalem block cannot declare it and must drop it silently. Twenty-two batches open."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "note": "NO CHROME AT ALL -- FIRST IN NINE MEASUREMENTS. Every previously measured chapter carried an invariant StudyLight chrome block of 992-995 words / 30,341-30,497 chars / 126 newlines (char count varying only with book-name length in the nav strip). philemon 1 has none anywhere in the file. Since the chrome has appeared in three consecutive non-terminal chapters (exodus 2, numbers 24, 1corinthians 11) and is absent here, its presence is not a function of position in the corpus."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "24"
+      ],
+      "note": "CALVIN RUNS OFF THE END OF THE EPISTLE AT KEY 24. The Calvin block at verse 24 ends his Philemon commentary correctly (the warning drawn from Demas), then prints 'END OF THE COMMENTARIES ON THE EPISTLE TO PHILEMON' and continues straight into a translation of Calvin's version of 1 TIMOTHY, running through 1 Tim 1 and into 1 Tim 2:6 before the block is cut. Roughly 500 of the 656 words at that key are 1 Timothy text, not Philemon commentary. Only the opening on Demas was used."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "8",
+        "15",
+        "23"
+      ],
+      "note": "MATTHEW HENRY IS CONCISE THROUGHOUT AND IS SPLICED ACROSS THE WHOLE LETTER. Henry appears at only four keys (1, 8, 15, 23) and every block is Henry's Concise, not the Exposition; the block at key 15 in fact summarises the entire epistle rather than verses 15-16. This is the fifth book in which Matthew Henry Concise has been found spliced in where the Exposition is expected."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "4",
+        "17"
+      ],
+      "note": "CHRYSOSTOM IS GENUINE HERE. Unlike the Cyril block, the three Chrysostom blocks (keys 1, 4, 17) are real Homilies on Philemon and align with their verses. Key 17 is the best of them: he observes that no procedure is so apt to gain a hearing as not to ask everything at once, and that the mention of the injury is held back to the very last, using 'if he hath wronged thee' rather than 'if he hath stolen', so confessing the offence as the wrong of a friend against a friend rather than of a servant."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "16",
+        "17",
+        "21",
+        "25"
+      ],
+      "note": "THE CENTRAL DISPUTE OF THE CHAPTER: WHETHER ONESIMUS WAS A SLAVE AT ALL, AND WHETHER THE LETTER SANCTIONS SLAVERY. Barnes argues at length (a 1,800-word note at v16 and a 3,300-word closing essay at v25) that the word rendered servant means a servant of any kind, that all the evidence Onesimus was a slave lies in that one word, that the mention of owing suggests a man able to hold property, and that in any case Paul neither forced nor advised the return and never asked that he be received as a slave; he adds the Hebrew law of Deut 23:15 forbidding the return of an escaped servant. Robertson answers flatly, 'So it has to be here. So it should be always', and elsewhere calls 'receive him as myself' the death-knell of human slavery. Clarke and Calvin simply assume the slave status -- Clarke stating that the Christian religion never cancels any civil relations, Calvin that the authority of masters is not taken away and Philemon is only asked to forgive and restore. Ellicott takes a third path, granting the status but locating in v16 the principle he calls absolutely destructive of the condition of slavery."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "17",
+        "25"
+      ],
+      "note": "TWO COMMENTATORS INDEPENDENTLY REACH FOR THE SAME PAIR OF CLASSICAL PARALLELS, AND CLARKE FOLLOWS ONE TO ITS OUTCOME. Barnes at v17 points to Horace, Epistles i.9, the recommendation of Septimius to Claudius Nero, as a plea strongly resembling this one; Clarke prints that letter in full with a translation, judges it written with much art but greatly exceeded by Paul, and then points beyond it to Pliny's letter to Sabinianus on behalf of a freedman. Barnes prints that Pliny letter in full at v25. Clarke goes one step further than Barnes and prints the SECOND Pliny letter (Epistles ix.24), in which Sabinianus is thanked for having actually forgiven the man -- so the parallel case is carried through to its result, which the Philemon record does not give us."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "22"
+      ],
+      "note": "CALVIN ON PRAYER AND FREE GRACE, DRAWN FROM AN INCIDENTAL PHRASE. On 'through your prayers I shall be given unto you' (v22) Calvin notes that what believers obtain through their prayers is said to be GIVEN to them, and infers that our prayers, though not unsuccessful, have no power through their own merit, since what is yielded to them is of free grace. He also concedes squarely that we do not know whether Paul was ever released, and that there is no absurdity even if he was disappointed of a hope about God's temporal kindness, since he kept his mind in suspense until the result declared the will of God."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "18",
+        "19"
+      ],
+      "note": "CALVIN RAISES THE OBVIOUS OBJECTION TO PAUL'S BOND. On 'put that on mine account, I will repay it' (vv18-19) Calvin asks how a man who without the aid of the churches had not the means of living sparingly and frugally could promise to pay money, and calls the promise amidst such poverty ridiculous if taken literally; he concludes that without irony, by an indirect figure, Paul is asking Philemon to blot out and cancel the account, since he who claims the whole man as his property need not trouble about paying money. Ellicott and Robertson take the opposite line -- Ellicott calls it a regular bond couched in legal form and infers that Paul had money he could rightly call his own, most likely the Philippian offerings, and Robertson calls it a collectable promissory note and notes how many of the papyri concern debts."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "18"
+      ],
+      "note": "BARNES USES PHILEMON 18 AGAINST THE IMPUTATION OF ADAM'S SIN. The verb rendered 'put that on mine account' occurs elsewhere in the New Testament only at Rom 5:13, where it is rendered 'imputed', and Barnes builds a numbered argument on the coincidence: Onesimus and not Paul did the wrong; Paul was never blameworthy for it and no possible supposition could make it right to charge it on him; he VOLUNTARILY assumed it, and only that consent made him answerable. He then applies the principle directly -- God 'reckons things as they are', does not hold men blameworthy for the sin of Adam, and this case must not be adduced to prove that Adam's sin is charged on his posterity; it demonstrates one point only, that a man who voluntarily takes a wrong upon himself may be held responsible for it."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "17"
+      ],
+      "note": "ELLICOTT ON THE RARITY OF THE WORD 'PARTNER'. In the singular and in absolute use, unconnected with explanatory words, the title is found nowhere else in the New Testament except at 2 Cor 8:23, where Titus is called Paul's partner and fellow helper, and even there the context ties it to the collection of alms. Ellicott therefore refuses to read it as general Christian fellowship -- which he says would require some such addition as 'in Christ' and would not justify the strength of the personal appeal -- and argues for a particular bond, noting that Philemon, though Paul's own convert, is addressed not as a son but as a brother."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philemon",
+      "chapter": "1",
+      "verses": [
+        "11",
+        "20"
+      ],
+      "note": "THE PLAY ON THE NAME ONESIMUS RUNS THREE TIMES AND ITS HISTORY IS DISPUTED. It appears at v11 (useless / useful), at v20 (let me have profit of thee), and by implication in the whole appeal. Ellicott says the name means useful or profitable though formed from a different root than the words used at v11, that it is hardly possible not to see a play, and adds -- curiously enough -- that the OLD GREEK COMMENTATORS DO NOT NOTICE IT. That is testable against this very file: Chrysostom is present at keys 1, 4 and 17 and indeed never remarks on the pun. At v20 Ellicott paraphrases, 'May I find thee, as I have found him, a true Onesimus', and Clarke calls it an evident paronomasia."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "philemon",
+      "chapter": "1",
+      "note": "FIDELITY SELF-GRADE, philemon 1, seven entries, all in window. 1-3 = 644w, 8 voices. 4-7 = 650w, 7 voices. 8-9 = 649w, 6 voices. 10-14 = 648w, 6 voices. 15-16 = 641w, 7 voices. 17-19 = 645w, 7 voices. 20-25 = 650w, 7 voices. Every claim traced to a named block in data/commentary/cow/philemon/1.json before writing. Exclusions: all four Jamieson blocks (keys 3, 9, 15, 21) declared as residue; the single Cyril of Jerusalem block (key 25) dropped silently for the VOICE_LABELS defect; roughly 500 words of 1 Timothy text at key 24 ignored as spillover. Real usable source after exclusions 45,451 words against a gross 46,763. No Wesley, no Keil, no Barnes-free entries. Chrysostom used only where genuine."
     }
   ]
 }
