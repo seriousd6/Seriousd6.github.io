@@ -9282,6 +9282,56 @@
       "book": "deuteronomy",
       "chapter": "7",
       "note": "No StudyLight boilerplate tail in this chapter: the last commented key (v26) ends with Keil's bare verse text and Gill's note, and Ellicott has no block there at all. That is consistent with the fifteen confirmed instances rather than against them — the tail attaches to Ellicott's block, so where Ellicott does not comment on the chapter's last key there is nothing for it to attach to. Worth recording as the first negative case observed."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "JFB stride bug, 20th confirmed instance and the second in Exodus. Both JFB blocks in this chapter are displaced Genesis 46 material: key 6 carries the count of the seventy who went down to Egypt and Stephen's seventy-five, key 12 carries Joseph's chariot going up to meet Jacob and the contrast between chariots and wagons. Neither touches Exodus 7. Both declared in excluded_voices; split_voices segments them, so both are declarable."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "7",
+      "verses": [
+        "25"
+      ],
+      "note": "StudyLight boilerplate tail, 16th positive instance. Attached to the Ellicott block at v25, the chapter's last commented key, exactly as at romans 16 and james 2 — site chrome, menu CSS and commentary-list text run on after the comment. Deuteronomy 7 supplied the first negative case (no Ellicott block at the last key, no tail); this chapter is the rule again."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "7",
+      "verses": [
+        "8",
+        "14"
+      ],
+      "note": "Note 607 fallback fired twice. Henry has only keys 1, 8 and 14 in this chapter. His key-8 block treats the magicians of vv10-12, but he has no key inside the 10-13 span, so that material stayed in the vv6-9 entry where it is filed. His key-14 block treats the whole first plague through v21, and again there is no Henry key in 15-18 or 19-21, so the three heads (dreadful, righteous, significant) and the water-into-wine comparison stayed in the v14 entry. Wesley's v10 and v20 blocks are near-verbatim Henry; the shared material was written once, under Henry at v14, and Wesley's distinctive lines (every creature is to us what he makes it; it is sin that turns our waters into blood) carried the vv19-21 entry."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "7",
+      "verses": [
+        "15",
+        "23"
+      ],
+      "note": "Keil declared excluded at two entries for a different reason from the stride bug. His blocks at keys 15 and 23 are pure verse-text dumps (the AV text of the following verses with no comment attached); the actual exposition sits in his blocks at keys 8, 9 and 14. split_voices segments both, so both are declarable, and both were declared rather than mined for content that is not there."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "7",
+      "note": "Drafting overshoot again, cause five. All eight drafts came in 670-840 against the 650 ceiling. Here the driver was neither many short glosses nor voices arguing at length but SOURCE ENUMERATIONS that resist compression: Clarke's ten-plague chronology, his transcribed traveller's encomium on Nile water, Ellicott's catalogue of the Egyptian water system, Clarke's four reasons for permitting the contest. Each is a list whose items are individually cheap and collectively expensive, and trimming prose around them does not help. Working rule: when a block is a list, decide up front how many items the entry can afford and drop the rest at draft time rather than trimming them one word at a time afterwards."
     }
   ]
 }
