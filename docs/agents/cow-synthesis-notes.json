@@ -11092,6 +11092,72 @@
         "11"
       ],
       "note": "Length control regressed sharply here: four of nine entries needed three or more trim passes, and entry 1 took four passes to come down from 717. The diagnosis from note 998 fits exactly — this chapter's bulk is Calvin and Henry each developing long arguments alone, with Ellicott adding a third independent long note, and note 969 has nothing to compress where three voices are each saying something different at length. The passes that actually worked were structural, not lexical: dropping whole subordinate ideas (Clarke's Jupiter medals, the Sinai place-names, Ellicott's veil analogy) moved 20 to 45 words each, where sentence-level tightening moved two or three. Recording the working rule: when an entry overshoots by more than about forty words, stop shaving and cut a whole idea instead."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "17",
+        "23"
+      ],
+      "note": "JFB stride bug, 36th confirmation. Three blocks at keys 5, 17 and 23, all displaced, all from Deuteronomy 1-2: the presumptuous attempt to go up after the spies and the repulse by the Amorites and Amalekites, the passage along Edom's border and buying meat and water for money, and Elath and Ezion-geber with the Emims and Horims. Donor advances monotonically and Deuteronomy precedes Joshua canonically — twelfth confirmation of the lag model. The spacing is 12 then 6, IRREGULAR. That matters for the stride question: within this batch, exodus 19 gave a perfect six and joshua 4 gives an irregular gap, exactly as deuteronomy 29 and numbers 15 did in the previous batch. Four recent chapters, two regular and two irregular. My deuteronomy 29 note treated the perfect stride plus byte-identical emissions as evidence for a fixed step; that reading cannot be sustained across all four, and the honest position remains that the spacing is unexplained."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "17",
+        "23"
+      ],
+      "note": "Bearing on the outstanding joshua 7 caveat. I have been carrying an unresolved note from before compaction that joshua 7 was seen to have a Joshua 13 donor, which would break the lag model by putting the donor AFTER the target. Joshua 4's donor is Deuteronomy 1-2, the immediately preceding book, which is consistent with the model but does not settle joshua 7 either way. Recording explicitly that the joshua 7 case still needs an actual re-read of its JFB blocks rather than inference from neighbouring chapters, and that it remains the only reported counter-example to the lag model in thirty-six confirmations."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-argument header standing alone again, exactly as at numbers 15 key 1: his key-1 block here is nothing but the running summary of the whole chapter, verse ranges and all, with no comment on verse 1 itself. Since entry 1 is the single key 1, he has no substantive block in the span and is excluded. Taken with the exodus 19 case, where the same header was followed by real comment on the third month and the name of the mountain, the pattern is now clear: Clarke opens a chapter with his argument, and whether that block is empty depends entirely on whether he then goes on to the verse. The test must be applied to what follows the header, never to the header itself — and where the first key stands alone as its own entry, the exclusion is common enough to expect."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "4",
+      "verses": [
+        "9",
+        "20"
+      ],
+      "note": "A cross-entry duplication hazard caught in drafting, worth recording as a rule. Gill at key 9 and Henry at key 20 independently make the same striking connection — that the stones John the Baptist pointed at when he said God could raise up children of these stones may be these very stones, Bethabara being the house of passage. Those keys fall in different entries (2-9 and 19-24), so nothing in the tiling or the validators would have caught the repetition; only noticing it while writing prevented the same conceit appearing twice in one chapter under two attributions. Same hazard as the Henry-Wesley pairs at exodus 19, but harder to see, since here the two voices arrive at the point independently rather than one abridging the other. Worth a habit: when a striking image appears in one entry, check whether any other voice in the chapter reaches it too."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "4",
+      "verses": [
+        "13"
+      ],
+      "note": "Two commentators give incompatible totals for the eastern tribes without either acknowledging the other. Ellicott works from the last census and reaches a hundred and ten thousand five hundred and eighty for the two and a half tribes (Reuben 43,730; Gad 40,500; half Manasseh 26,350), concluding that more than half stayed behind. Gill states flatly that a hundred and thirty thousand were liable. Clarke, on a third basis, puts those who stayed at seventy thousand five hundred and eighty. Calvin says only that the forty thousand were a third or thereabouts. Presented in the entry as the disagreement it is rather than harmonised, since no source in the catena resolves it."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "10"
+      ],
+      "note": "Length control recovered sharply from exodus 19 in the same batch: five of six entries landed in range on the first draft (593, 590, 629, 417 and one at 644 after a single light pass), and only the last entry needed real trimming, by 61 words in two passes. The difference from exodus 19 is the one note 998 predicts — joshua 4 is a chapter of many short competing notes with two long voices rather than three or four long ones, so there is redundancy for note 969 to work on. The note-1018 rule also held: in the one entry that overshot, cutting two whole clauses moved 28 words where the preceding sentence-level pass had moved 4."
     }
   ]
 }
