@@ -1,846 +1,967 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "Hold not the faith of the Lord of glory with respect of persons",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin admits the reproof seems at first sight hard, since it is a duty of courtesy to honour those elevated in the world, and if respect of persons were simply vicious servants would have to be freed from all subjection. The difficulty vanishes if what James writes is not separated: he does not disapprove of honour paid to the rich, but of its being paid in a way that despises the poor. Ambitious and full of vanity is that honour which is shown to the rich in contempt of the poor, and ambition reigns whenever the masks of this world are alone in high esteem. Read as saying that he sins who respects the rich, the sentence would be absurd; read as saying that he sins who honours the rich alone and treats the poor with contempt, it is true doctrine. Calvin adds that respect of persons cannot be united with the faith of Christ, since we are by faith made one body in which Christ holds the primacy. Gill grounds the same on the address: the saints are children of one Father."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the apostle to be reproving a very corrupt practice, one that seemed a growing evil in the churches even in those early ages and has since sadly divided Christian societies. The character of Christians is implied in the caution: they are such as have the faith of our Lord Jesus Christ, embracing it, governing themselves by it, holding it as a trust and a treasure. James speaks honourably of Christ in calling him the Lord of glory, and that title should teach us not to respect Christians for anything so much as their conformity to him: those who profess to believe a glory which the poorest Christian shall share equally with the rich should not make men's outward advantages the measure of their respect. However lightly any may think of it, Henry insists, this is a heinous sin. Wesley grounds the admonition on the name brethren itself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke would have the whole verse read interrogatively — do ye not make profession of the religion of our glorious Lord Jesus Christ with acceptance of persons? — preferring the rich merely for their riches, and not for any moral excellence; faith here, he notes, stands for religion, and though the manuscripts vary the meaning is clear enough."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The prohibition: 'my brethren, have not (do not hold) the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons (prosopolempsiais — partiality, favouritism, judging by outward appearance)' — the profession of faith in Christ not to be joined with partiality toward persons (favouring the rich over the poor); 'the Lord of glory' (the glorious Lord, or the Lord who is the glory) a title of Christ's divine majesty, before whom earthly distinctions of wealth and rank are nothing, making partiality unfitting (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: partiality based on outward rank contradicts the faith of Christ, who came for all and esteemed not the outward; to honour the rich and slight the poor in the assembly betrays the gospel's spirit, which judges not by appearance."
+    "summary": "Robertson makes the faith of our Lord Jesus Christ an objective genitive — faith in him, as in the command to have faith in God — and notes that the imperative with the negative exhorts them to stop holding it in the fashion condemned. Of the Lord of glory he observes that there is no word for Lord in the Greek at all, the phrase being simply the Glory and standing in apposition, so that James terms Christ the Shekinah Glory of God; the word for respect of persons he calls a Christian coinage, unknown in any previous Greek, made from the Hebrew idiom of lifting up the face on a person. Ellicott hears in the severity of the rebuke the apostle's consciousness of its need: what were endurable in a heathen ceased to be so in a follower of the lowly Jesus, who being rich became poor for our sakes; true reverence is not condemned, but its gross extreme — the preference for vulgar wealth, the adulation of success, the worship of some new golden calf. Barnes, opening the chapter, sets out its three parts: impartiality, obedience to the whole law, and the necessity of works to justification."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is honour shown to the rich condemned as such?",
+    "positions": [
+     {
+      "position": "no; only that honour which despises the poor, since courtesy to rank is itself a duty",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the verse is a rebuke in question form, aimed at preference given for riches and not for moral excellence",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Robertson",
+    "note": "finds no word for Lord in the Greek, reading the phrase as simply the Glory in apposition, so that James calls Christ the Shekinah Glory of God"
+   }
+  ],
   "themes": [
-   "have not the faith of our Lord Jesus Christ, the Lord of glory, with respect of persons",
-   "the warning against holding the faith with partiality",
-   "favouritism incompatible with the gospel",
-   "the Lord of glory making earthly rank nothing"
+   "the faith of the Lord of glory",
+   "respect of persons as a sin against that faith",
+   "what honour to the rich is lawful"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Gill"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-3",
+  "pericope_label": "The gold ring and the vile raiment",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes the division of opinion over the meeting — the place of religious worship, or, as the context seems to incline, a civil court of judicature — and calls the whole an instance of the respect of persons condemned."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the word strictly, supposing the apostle addresses Jews who continued to frequent the synagogues to hear the law and the prophets read; our word assembly does not express the original. He inclines rather to proceedings in a court of justice, since petty courts were held in the synagogues, and thinks the case a judicial one in which the ruler deferred to the rich man and neglected the poor, though at law they were equal. In the seating he sees a judge prejudging the cause, giving the poor man to understand that he was to expect no impartial justice."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The supposed case: 'for if there come unto your assembly (synagogen — gathering, meeting) a man with a gold ring (chrysodaktylios — gold-ringed, a mark of wealth), in goodly apparel (splendid clothing), and there come in also a poor man in vile (shabby, dirty, mean) raiment' — James picturing two men entering the Christian assembly, one richly dressed (the gold ring and splendid clothing signalling a wealthy, distinguished visitor, the outward tokens of rank and means), one poor and shabby (outwardly unimpressive, lowly); the two set side by side to test how the assembly will treat them (Barnes, Robertson, Clarke)."
+    "prevalence": "majority",
+    "summary": "Barnes observes that this is the only place in the New Testament where synagogue is applied to a Christian congregation, and supposes it used because the apostle was writing to former Jews, among whom it would naturally serve until superseded by a word the Gentile converts preferred: the one term refers to a congregation simply as assembled, the other to an assembly called out. On the seating he is careful to say what is not forbidden — religion does not forbid proper respect to rank, office, age, or distinguished talents, nor a man's procuring himself an eligible pew if he has the means; but it requires that men be regarded according to their moral worth and not their external adorning. Robertson adds the later evidence that the Ebionites called their church a synagogue and a fourth-century inscription uses the word of a Christian meeting-house, and calls the first description a gold-fingered man, a word occurring nowhere else in Greek. Ellicott renders the phrases a man golden-ringed in bright apparel, observing that the Roman satirists had much to say of the fops of their time with all their fingers laden with rings, and presses the application: the elder in charge finds a stall for the person of substantial presence, while the poor one may stand or sit on the floor — and what excuse can be urged for special pews hired and appropriated, furnished luxuriously and secured by bolt and lock, while the poorly clad are crowded into side benches?"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What sort of assembly is meant?",
+    "positions": [
+     {
+      "position": "a Christian congregation met for worship, the Jewish word being retained by Jewish converts",
+      "holders": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "rather a court of justice, petty courts being held in the synagogues, so that the case is judicial",
+      "holders": [
+       "Adam Clarke",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "turns the rebuke on modern practice, asking what excuse there is for hired and appropriated pews while the poorly clad are crowded into side benches"
+   }
+  ],
   "themes": [
-   "if there come unto your assembly a man with a gold ring, in goodly apparel",
-   "a poor man in vile raiment",
-   "the illustration of the rich and poor entering the assembly",
-   "the test of partiality"
+   "the synagogue of the Christians",
+   "the two men and their clothing",
+   "sit thou here, stand thou there"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The partial treatment: 'and ye have respect to (look upon with favour, give special attention to) him that weareth the gay (splendid, fine) clothing, and say unto him, Sit thou here in a good place (an honourable seat); and say to the poor, Stand thou there, or sit here under my footstool (on the floor, at one's feet)' — the rich visitor shown deference and given the place of honour on account of his fine clothes, while the poor man is assigned a place of dishonour, made to stand or to sit on the ground; the contrast between the honour given the rich and the contempt shown the poor exposing the partiality, the assembly judging by outward appearance (Barnes, Robertson, JFB)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye have respect to him that weareth the gay clothing, and say... Sit thou here in a good place",
-   "say to the poor, Stand thou there, or sit here under my footstool",
-   "the partial welcome given to rich and poor",
-   "favouritism judging by appearance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "4-5",
+  "pericope_label": "Judges of evil thoughts; the poor rich in faith",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin allows the clause to be read as question or statement with the same sense: whether their own conscience does not hold them convicted, needing no other judge; or that they do not think they sin at all. On the choice that follows he finds two arguments against preferring the rich. The first is that it is disgraceful to cast down those whom God exalts, so that everyone who repudiates the poor reverses the order of God; the second is from experience, that the rich are for the most part vexatious to the good and innocent, so that it is unreasonable to reward their wrongs by approving them above the poor. God pours out his grace on rich and poor in common, yet his will is to prefer these to those — as Paul says that God has chosen not many noble, not many mighty, but the weak, to shame the strong. The rich in faith, Calvin adds, are not those who abound in the greatness of faith, but those whom God has enriched with the gifts of his Spirit, which we receive by faith. Gill adds that the partiality was such as their own consciences must accuse them of."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke paraphrases the charge as making a distinction before the case has been heard, by judges who say in their hearts, we will espouse the cause of the rich because they can befriend us, and neglect the poor. He refers the choice of the poor to our Lord's own sign, that the poor have the gospel preached to them: these believed while the rich persecuted him, and so were prized of God even while despised of men. Wesley puts it shortest — fine apparel is no proof of worth in him that wears it — and asks whether those whom God so highly honours ought not we to honour likewise."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The accusing question: 'are ye not then partial in yourselves (diekrithete — made distinctions among yourselves, wavered, were divided), and are become judges of evil thoughts (judges with evil reasonings, or judges who reason wickedly)?' — by such favouritism they have made unjust distinctions and become judges governed by evil motives; 'partial in yourselves' meaning they made a distinction, wavered, or were divided in their own minds, judging by the wrong standard (wealth) rather than by faith and worth; 'judges of evil thoughts' — in honouring the rich and slighting the poor they judge from corrupt motives, partiality corrupting judgment (Barnes, Robertson, Calvin)."
+    "summary": "Barnes finds two ideas in the charge: that they took it upon themselves to be judges, pronouncing on strangers and their claims to respect, and that in doing so they were guided by no just rule but by that improper feeling which honours men for their appearance rather than their real worth. On the choice of the poor he says the meaning is not that God is less willing to save the rich, for he has no partiality, but that circumstances in their condition make it likelier they will embrace the gospel, and that the great mass of believers is in fact taken from those in humble life. Robertson renders the question, were ye not divided in yourselves? — guilty of a divided mind as between the two strangers — and observes that by the article James does not affirm God chose all the poor, but only that he chose poor people, rich because of their faith. Ellicott grants that there is an election here and that it were folly to deny it, but observes that the passage gives the reason for the choice: the poor are His chosen not merely for their poverty, though poverty may have been the air in which the virtues that endeared them flourished best; and in a worship that demands costly gifts of its votaries, as every religion tends downward to do, the rich man has a golden pavement to his future bliss."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "reads rich in faith not of those who abound in faith but of those whom God has enriched with the gifts of his Spirit, received by faith"
+   }
+  ],
   "themes": [
-   "Are ye not then partial in yourselves, and are become judges of evil thoughts",
-   "the charge of being partial judges with evil thoughts",
-   "unjust distinctions from corrupt motives",
-   "partiality corrupting judgment"
+   "partiality makes them judges with evil thoughts",
+   "God has chosen the poor of this world",
+   "rich in faith and heirs of the kingdom"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rebuke of partiality by God's own pattern: 'hearken, my beloved brethren, Hath not God chosen the poor of this world (the poor in worldly goods) rich in faith (made spiritually rich though poor in goods), and heirs of the kingdom which he hath promised to them that love him?' — God himself having chosen many of the poor (the gospel received chiefly by the lowly), so that to despise the poor is to despise those God has chosen; though destitute in this world, they are rich in faith and heirs of God's kingdom (their true wealth spiritual), the kingdom promised to those who love God, love for God (not worldly wealth) marking the heirs (Barnes, Robertson, Calvin, Henry)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hath not God chosen the poor of this world rich in faith, and heirs of the kingdom",
-   "which he hath promised to them that love him",
-   "God has chosen the poor to be rich in faith and heirs",
-   "despising the poor dishonours those God has honoured"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "6-7",
+  "pericope_label": "Do not rich men oppress you, and blaspheme that worthy name?",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin meets an objection before it is raised: James seems to instigate them to vengeance by bringing forward the unjust rule of the rich, whereas we are bid to do good to those who injure us. But his object was to show that they were without reason who through ambition honoured their executioners and meanwhile injured their own friends, from whom they had never suffered wrong. Their vanity appeared the more in this, that they admired the rich merely because they were rich, and flattered those whom they found, to their own loss, unjust and cruel. There are indeed some rich men who are just, but few; James mentions what daily experience proves, that as men commonly exercise power in doing wrong, the more power one has the worse he is towards his neighbours. Of the name he says it is the name of God and of Christ, called on them not in prayer but by profession. Gill puts the dishonour sharply: to reproach the poor is in effect to say that God did a weak or a wrong thing in choosing them to be heirs of a kingdom."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the administration of justice among the Jews was then in a miserable state of corruption, so that a Christian might expect none anywhere but from his God; and he thinks the blasphemers plainly Jews, since no Christians of that early time could have acted the part described. Wesley distinguishes the two charges neatly — the rich oppress by open violence, and drag under colour of law — and thinks rather of rich heathens, but asks whether Christians, so called, are a whit behind them."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The direct rebuke: 'but ye have despised (dishonoured, treated with contempt) the poor. Do not rich men oppress (exploit, tyrannize over, katadynasteuousin) you, and draw you before the judgment seats (drag you to court, to the tribunals)?' — in their partiality they had dishonoured the very people God had honoured (v.5), contradicting his choice; the pointed irony being that the very rich they flattered were often the ones who oppressed them and hauled the believers before courts (persecuting and prosecuting them), so it was foolish as well as wrong to honour the persecuting class who abused them (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott observes that the rich lord it over the poor as a class, which is not to say it of each wealthy man; it is the rich man of the earth earthy, trusting in his riches, who makes them a power for evil. He would render the second charge, do they not drag you into courts of justice — hale you, as the old English word has it — and sets against it the maxim that the extreme of right is the extreme of wrong, the purse-proud litigious man being the readiest to grind the faces of the poor; no body of laws could be more equitable than the Roman, but their administration in the provinces was often in venal hands, and the fees of the learned in the law barred the way of poorer suitors. On the last charge he notes that to blaspheme is to hurt with the tongue and takes in all manner of evil speech, and that the name invoked over them was invoked at baptism. Barnes turns that charge into a mirror: many who profess to be Christians have been more disposed to treat such persons with respect than their own poorer brethren, and there is many a professing Christian who would rather be at a party given by them than at a prayer-meeting where his poorer brethren are assembled. Robertson notes that the word for oppression is used of the devil in Acts, and that for dragging is an old and vigorous term for violence, used of Paul himself."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Barnes",
+    "note": "turns the charge of blasphemy into a mirror for professing Christians who prefer the society of scoffers to the company of their poorer brethren"
+   }
+  ],
   "themes": [
-   "ye have despised the poor",
-   "Do not rich men oppress you, and draw you before the judgment seats",
-   "despising the poor while the rich oppress",
-   "flattering the persecuting class"
+   "the rich oppress and drag to the judgment seats",
+   "they blaspheme the name called upon you",
+   "the folly of honouring one’s own persecutors"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The climax of the indictment of the rich: 'do not they blaspheme (revile, speak evil of) that worthy (honourable, excellent) name by the which ye are called (the name of Christ, named upon you, perhaps at baptism, the name that marks them as Christ's)?' — the rich oppressors not only persecuting the believers but blaspheming the very name of Christ by which they were called; so to flatter such blasphemers, while despising the poor who honour Christ, was doubly perverse (Barnes, Robertson, Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Do not they blaspheme that worthy name by the which ye are called",
-   "the rich oppressors blaspheme Christ's worthy name",
-   "the name of Christ named upon the believers",
-   "flattering blasphemers doubly perverse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "8",
+  "pericope_label": "If ye fulfil the royal law",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin reads the verse as an anticipation, meeting an excuse before it is offered. They might have objected that no one ought to be blamed who humbly submits to the unworthy; James concedes this in itself, but shows the plea falsely made, since they showed this homage not from love but from respect of persons. The hinge turns on the words neighbour and respect of persons: God bids us love our neighbours and not show respect of persons, and neighbour includes all mankind — so that he who says a very few, according to his own fancy, ought to be honoured and the rest passed by does not keep the law of God. Of the epithet royal Calvin thinks it means the royal road, plain and level, set against sinuous by-paths; and he sees an allusion to the servile obedience they rendered the rich, when by serving their neighbours in sincerity they might be not merely free men but live as kings. Gill calls love to God the king of laws and love to the neighbour its queen, and notes that the same Hebrew word signifies princes and to be willing, so that this law is obeyed royally by such as are made kings and priests to God."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that a gospel ministry must not only reprove but teach, and that James now shows how the matter may be mended. Lest any think he had pleaded for the poor so as to throw contempt on the rich, he lets them know they must not be rude to the rich any more than despise the poor. The rule for Christians to walk by is settled in the scriptures — not great men, nor worldly wealth, nor the corrupt practices of professors, but the scriptures of truth must guide us. The law is royal because it comes from the King of kings, and because the state in which Christians now are is one of liberty and not of bondage. And a pretence of observing it, interpreted with partiality, will not excuse unjust proceedings: some would plead that respect to those whom providence had distinguished was but doing right. They did well, Henry allows, in giving honour to whom honour was due; but that fair pretence would not cover the sin charged."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that of all the New Testament writers only James uses the epithet, though it is frequent among the Greeks for anything of general concern, suitable and necessary to all, as brotherly love is. It is royal not only as proceeding from God's kingly authority, but because it is so necessary to the present state of man; and since it was given by Christ himself, who is our King as well as Prophet and Priest, it should put us in mind of his authority over us. Wesley calls it the supreme law of the great King, which is love to every man, poor as well as rich."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The supreme standard: 'if ye fulfil the royal law (basilikon — kingly, sovereign, supreme, the chief or king of laws) according to the scripture (as written, Leviticus 19:18), Thou shalt love thy neighbour as thyself, ye do well' — the law of love called 'royal' as supreme over all duties to others, the great commandment summing up duty to the neighbour; impartial love to all (rich and poor alike) fulfilling this royal law, partiality violating it; if they truly keep this law of impartial love they act rightly ('ye do well'), the test of their conduct toward rich and poor being whether it springs from genuine love to the neighbour, which knows no partiality (Barnes, Robertson, Calvin, Henry)."
+    "summary": "Barnes takes it as kingly for its nobleness, having such prominence among laws as a king among men, and fit to govern all our intercourse as a king rules his subjects. Robertson recalls the Roman phrase for a law coming from the king, and allows the sense to be a law fit to guide a king, or such as a king would choose, or even the king of laws; since Jesus said that on the law of love hang all the law and the prophets, this is probably the royal law violated by partiality. Ellicott hears a touch of irony in the defence James puts into his hearers' mouths, the conduct described being a sweet proof of neighbourly affection indeed; yet the sovereign law of love is so plain that the simplest mind may be its interpreter."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why is the law called royal?",
+    "positions": [
+     {
+      "position": "because it comes from the King of kings and belongs to a state of liberty",
+      "holders": [
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "because it is of general concern, suitable and necessary to all, as the Greeks used the word",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "because it is the royal road, plain and level, against the sinuous by-paths of servile respect",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "a law fit to guide a king, or the king of laws, on which hang all the law and the prophets",
+      "holders": [
+       "A.T. Robertson",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "If ye fulfil the royal law according to the scripture, Thou shalt love thy neighbour as thyself, ye do well",
-   "the royal law of love to the neighbour",
-   "impartial love the supreme rule",
-   "love fulfilling the kingly law"
+   "thou shalt love thy neighbour as thyself",
+   "why the law is called royal",
+   "partiality cannot shelter under the law of love"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "9-11",
+  "pericope_label": "Guilty of all: the unity of the law",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin takes the law here in its proper meaning: since we are bidden to embrace all mortals, everyone who keeps a few exceptions and rejects the rest breaks the bond of God and inverts his order. On the harder saying that follows he says what it does not mean. At first view it seems hard, as though the apostle countenanced the Stoic paradox that makes all sins equal, and held that he who offends in one thing should be punished as one whose whole life has been wicked; but the context shows no such thing entered his mind. What he means is that God will not be honoured with exceptions, nor allow us to cut from his law what is less pleasing. He denies that our neighbours are loved when a part only is chosen through ambition and the rest neglected, since obedience is no obedience when not rendered equally. Were a judge to punish ten thefts and leave one man unpunished, he would betray the obliquity of his mind, being indignant against men rather than crimes. God has prescribed a rule of life which it is not lawful to mutilate, and promises a reward only to universal obedience; foolish, then, are the schoolmen who deem partial righteousness meritorious. On the two commandments he adds that the Lawgiver is to be considered rather than each precept apart, God's righteousness being contained in the law as an indivisible body. Gill says only that this is no doing well but a transgression, as every sin is."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says they are convicted by this royal law, having refused justice to the poor and upheld the rich, and traces the form of speech to the rabbins: in one tract Rabbi Yochanan says that if a man do the whole with the omission of one, he is guilty of the whole and of every one; elsewhere an adulteress is shown by that one crime to break all ten commandments. But he also finds them teaching the reverse — that he who observed any principal command was equal to him who kept the whole law — and it is this false doctrine, he thinks, that James corrects here. Wesley notes that one authority establishes every commandment."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The conclusion: 'but if ye have respect to persons (show partiality), ye commit sin (it is sin, a positive transgression), and are convinced (convicted, exposed) of (by) the law as transgressors' — partiality not a small fault but actual sin (a breach of the royal law of love, v.8, not to be excused as a trifle); the law that commands impartial love pronouncing them guilty, so that in showing partiality they break the law and stand condemned by it as transgressors (Barnes, Robertson, Calvin)."
+    "summary": "Barnes warns that convinced is not used here in its modern sense, of the impression made on a man's mind by showing him a truth he had doubted; here it refers not to the effect on the mind but to the fact that the law holds such a one guilty. He draws the principle out at law: a man who has stolen a horse is a violator of the law however many other respects he has kept it in, and cannot urge his good citizenship to escape punishment. Robertson calls the charge serious for what was thought a trifling fault, recalling our Lord's words to those that work iniquity, and says more shortly that to be a lawbreaker one need not violate all the laws, but to be law-abiding one must keep them all; he adds that people free from fleshly sins have often made their condemnation of them an excuse for indulgence towards spiritual ones. Ellicott renders it that they are convicted at the bar of conscience — the first principle has been broken, not a mere detail — and puts the principle in an image: as a chain is snapped by the weakest link, so the whole law, in its completeness as beheld by God, is broken by one offence of one man."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "finds the rabbins teaching both that one omission makes a man guilty of all and that one principal command kept is as good as the whole, and takes James to be correcting the second"
+   }
+  ],
   "themes": [
-   "if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors",
-   "partiality is sin, convicting them as transgressors",
-   "respect of persons a breach of the royal law",
-   "the law pronouncing them guilty"
+   "convicted by the law as transgressors",
+   "he that offends in one point is guilty of all",
+   "the one Lawgiver behind every commandment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The principle: 'for whosoever shall keep the whole law, and yet offend (ptaise — stumble, fail) in one point (a single command), he is guilty of all' — the law a unity, so that to break one part is to become a transgressor of the law as a whole, guilty before it; 'guilty of all' meaning not that one who breaks one command is as guilty as if he had broken every command, but that he has become a transgressor of the law itself (he has broken the law, which is one, and so stands guilty before it); the law being the expression of one will of one Lawgiver (v.11), so that to violate any part is to set oneself against that will and break the whole — hence partiality, though 'one point,' makes one a transgressor (Barnes, Robertson, Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whosoever shall keep the whole law, and yet offend in one point, he is guilty of all",
-   "one offence makes one guilty of all",
-   "the law a unity, one breach making a transgressor",
-   "the seriousness of partiality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of v.10: 'for he that said (the one Lawgiver, God), Do not commit adultery, said also, Do not kill. Now if thou commit no adultery, yet if thou kill, thou art become a transgressor of the law' — the same God having given every command, the authority behind each being one and the same; a man may keep one command (no adultery) yet break another (kill), but since the same God forbade both, breaking either defies that one authority, so that by breaking one command he has transgressed the law (as the expression of God's one will); the unity of the Lawgiver making any single breach a transgression of the whole (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that said, Do not commit adultery, said also, Do not kill",
-   "if thou kill, thou art become a transgressor of the law",
-   "the one Lawgiver makes any breach a transgression of the whole",
-   "the unity of the Lawgiver"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "12-13",
+  "pericope_label": "So speak and so do, as under the law of liberty",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The exhortation: 'so speak ye, and so do (let both word and deed be governed), as they that shall be judged by the law of liberty (the gospel law, the perfect law that frees, 1:25)' — living, in word and deed, as those who will be judged by the gospel's law of liberty; both speech and action to be regulated by the consciousness of coming judgment, the believer governing his whole conduct knowing he must answer for it; 'the law of liberty' being not the bondage of the old law but the gospel, which frees yet also judges, the rule by which the Christian's life is measured (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So speak ye, and so do, as they that shall be judged by the law of liberty",
-   "the call to speak and act as those judged by the law of liberty",
-   "word and deed governed by coming judgment",
-   "the gospel the standard of judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The solemn rule: 'for he shall have judgment without mercy, that hath shewed no mercy' — the one who has shown no mercy to others (as in despising the poor) will himself be judged without mercy, God dealing with men as they deal with others (Matthew 5:7; 18:35); the unmerciful (those who show no compassion to the poor and needy) finding no mercy in their own judgment, mercilessness being a mark of an unrenewed heart that brings a merciless verdict; 'and mercy rejoiceth against (triumphs over, glories against) judgment' — for the merciful, mercy prevailing over judgment, the one who has shown mercy finding that mercy exults over the sentence (Barnes, Robertson, Calvin)."
+    "summary": "Calvin reports one explanation but prefers another. Some say that men who flattered themselves are summoned here to the right tribunal, since they absolve themselves by their own notions when they withdraw from the divine law's judgment; and lest that smite them with terror, James adds the word liberty, meaning that we are freed from the law's rigour, whose judgment in itself is condemnation. That is not unsuitable, but a closer look at what follows shows he meant another thing. The sense is rather: except ye wish to undergo the rigour of the law, ye must be less rigid towards your neighbours, the law of liberty being the same as the mercy of God. So read with the verse after it the passage runs well — since none of us can stand before God unless delivered from the law's strict rigour, we ought so to act that we may not by severity shut out that indulgence of God which we all need to the last. God promises to be merciful to us if we are merciful to our brethren, not because our mercy merits his, but because he would have those he has adopted bear his image on earth. On the closing sentence Calvin takes it that mercy itself in a manner triumphs and alone reigns when the severity of judgment gives way, and calls forced the explanation that puts mercy for the merciful man, since men cannot glory against the judgment of God. Gill says only that strict justice and no mercy await the unmerciful."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: mercy triumphs over judgment — for those who have shown compassion, God's mercy exults over the sentence and prevails; mercilessness brings a merciless judgment, but the merciful are met with the mercy they showed, mercy glorying against the strict verdict of the law."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the law of liberty with the gospel and lists the readings of the last clause without settling among them: that the merciful man exults over judgment, not being afraid of it; that we shall be exalted by mercy above judgment; and that in the great day God will cause mercy to triumph in bringing into glory those who fed the hungry. Wesley says the same of both halves: strict justice for the unmerciful, but for believers a mercy answering to what they have shown."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes explains the rule we are to be judged by: in all our conduct we are to act under the constant impression that we shall soon be judged, and by a law under which it was contemplated that we should be set free from the dominion of sin. We shall not be able to plead that we were under a necessity of sinning; and if we could have led holy lives, it is proper we be condemned if we are not righteous. He describes the triumph of mercy as a conflict of attributes: justice demands the sinner's condemnation, mercy pleads that he be saved, and mercy prevails — as with Major André, where Washington's justice was shown in the warrant he signed and his compassion in the tears he shed over it. Ellicott notes that the term occurs only here and in the first chapter: it means neither the ceremonial law nor the moral, but the spiritual law of One greater than Moses; and he hears the clearest echoes of our Saviour's words and of the parable of the unmerciful servant, whose sin was the unforgiving temper apart from all outward wrong. Robertson warns that it is law after all, not the caprice of personal liberty, and puts the last clause in a line: only mercy can triumph over justice, with God and men alike."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the law of liberty here?",
+    "positions": [
+     {
+      "position": "the gospel, the law of universal love, which alone is perfect freedom",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "the mercy of God which delivers us from the curse of the law, read with the verse that follows",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the spiritual law of One greater than Moses, neither ceremonial nor merely moral",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Barnes",
+    "note": "illustrates the conflict of justice and mercy from the case of Major André, where Washington signed the death-warrant and wept over it"
+   }
+  ],
   "themes": [
-   "he shall have judgment without mercy, that hath shewed no mercy",
-   "mercy rejoiceth against judgment",
-   "the merciless face judgment without mercy, but mercy triumphs",
-   "God dealing as men deal"
+   "the law of liberty as the rule of judgment",
+   "judgment without mercy to him that showed none",
+   "mercy rejoiceth against judgment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "14": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "14",
+  "pericope_label": "Can that faith save him?",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin fixes on the word say. A question arises whether faith can be severed from love, and this passage has produced the Sophists' distinction between unformed and formed faith; but of such a thing James knew nothing, for he does not begin, if any one has faith, but, if any says that he has it, intimating that hypocrites boast of an empty name which does not belong to them. That he calls it faith at all is a concession, as the rhetoricians say — in a dispute it does no harm, and is sometimes expedient, to grant an adversary what he demands, since once the thing itself is understood the grant may easily be withdrawn. We are not saved by a frigid and bare knowledge of God; salvation comes by faith because faith joins us to God, and that only by our being united to the body of Christ. There is nothing of this in the dead image: his meaning is, can the faith he says he has save him? Gill notes the easy transition from partiality to this new subject."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry raises the great question at once — how to reconcile Paul and James — and answers it in three steps. First, when Paul says a man is justified by faith without the deeds of the law, he means another sort of work, though not another sort of faith: Paul, deeds wrought in obedience to Moses before men embraced the gospel; James, deeds done in obedience to the gospel as the necessary fruits of believing. Second, the two address opposite errors: one had to do with men who leaned on their own merit, the other with men who cried up believing and disallowed obedience even as evidence. As we must not break one table of the decalogue against the other, so we must not shatter law and gospel by making them clash. Third, the justification differs — Paul speaks of our persons being acquitted before God, James of our faith being approved before men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley states the same case in his own way, and Clarke adopts his words entire. Since the exhortation to be doers of the word the apostle has been enforcing practice, and now turns on those who neglect it. Some had begun to wrest the doctrine of gratuitous justification to their own destruction; wherefore James, purposely repeating the same phrases and examples the apostle to the Gentiles had used, refutes not his teaching but the error of those who abused it. Both delivered the truth of God, but to different kinds of men. The point turns on a single word, for it is not though he have faith, but though he say he have it; nor does he oppose believing to obedience, but the empty name of the one to a living trust working by love. Clarke adds the history of the quarrel: Luther, supposing the doctrine here really to be salvation by merit, condemned the epistle outright as a chaffy thing, an epistle of straw fit only to be burnt; and he holds that what is meant is a creed taking in no more than the being and unity of God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The test case: 'what doth it profit (what good is it, what advantage), my brethren, though a man say (claims, professes) he hath faith, and have not works? can faith save him?' — the case being a mere profession of faith without the works that genuine faith produces (the emphasis on 'say,' a faith only claimed); such a workless, professed faith profiting nothing, unable to benefit the man who has only a faith of words. The precise sense of 'can faith (he pistis — THAT faith, the workless professed faith just described, with the article) save him?' is not whether faith saves, but whether this kind of faith (a barren profession) can save; the expected answer no — James not denying that true faith saves but denying that a faith without works (which is no true faith) can save (Barnes, Robertson, Calvin)."
+    "summary": "Barnes marks the standpoint — not before a man is converted, inquiring on what ground his sins may be forgiven, but after, showing that a trust not followed by good living is not real. Robertson notes that the article is almost demonstrative, pointing back to the claim just made: it is the spurious pretension James condemns. Ellicott hears an allusion to the Shema, the devout Israelite's daily protest among idolaters, and thinks the stern question a prophecy of woe on a man who fancied himself saved by covenant."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How are Paul and James to be reconciled?",
+    "positions": [
+     {
+      "position": "they speak of different works and of different justifications — before God, and before men",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "James refutes not Paul but the error of those who abused him, repeating his very phrases",
+      "holders": [
+       "John Wesley",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the standpoint differs: not the ground of acceptance but the evidence of it after conversion",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "records Luther's judgment that the epistle was a chaffy thing, an epistle of straw fit only to be burnt"
+   }
+  ],
   "themes": [
-   "though a man say he hath faith, and have not works",
-   "can faith save him",
-   "the question whether a workless faith can save",
-   "a barren profession that is no saving faith"
+   "faith that a man says he has",
+   "the reconciliation of Paul and James",
+   "can such faith save him?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "15": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The example introduced to expose empty faith: 'if a brother or sister (a fellow-Christian, man or woman) be naked (gymnoi — poorly clad, ill-clothed, not wholly unclothed but lacking sufficient or proper clothing), and destitute (lacking) of daily food (the day's necessary sustenance)' — the case of a needy fellow-believer in genuine, pressing want of the basic necessities of life (clothing and food), the figure of real poverty and need (Barnes, Robertson, JFB)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If a brother or sister be naked, and destitute of daily food",
-   "the case of a brother or sister in need",
-   "a fellow-believer in real want",
-   "ill-clad and lacking daily food"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The empty response: 'and one of you say unto them, Depart in peace (a friendly dismissal), be ye warmed (clothed) and filled (fed); notwithstanding ye give them not those things which are needful (necessary) to the body; what doth it profit?' — fine words of good wishes, sending the needy away with a blessing but nothing more (warm words without warm help), the words belied by the empty hand that supplies nothing of what the body actually needs; such empty words profiting the needy nothing, and just so a faith of mere words without the works of love profiting nothing — the parallel exact: as words without deeds are useless to the poor, so faith without works is useless for salvation (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Depart in peace, be ye warmed and filled; notwithstanding ye give them not those things which are needful to the body",
-   "what doth it profit",
-   "the empty words that give no help",
-   "words without deeds, like faith without works"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "15-17",
+  "pericope_label": "Depart in peace, be ye warmed and filled",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin is exact about the verdict. James says faith is dead when by itself, that is, destitute of good works, whence we conclude that it is no faith at all, since when dead it does not properly retain the name. The Sophists plead the expression and say that some sort of faith is found by itself; but the caviling is easily refuted, for the apostle reasons from what is impossible, as Paul calls an angel anathema if he should subvert the gospel. Gill likens such a faith to a lifeless carcass, a body without a soul, and adds from Dr Ames that good works are second acts, necessarily flowing from the life of faith, by which it appears to be living and active."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that naked here means ill-clothed, as elsewhere in the Gospels, and says such a saying will profit them just as much as a professed faith without works will profit the man who has it at the judgment. Wesley calls it a mere empty notion, of no more profit to him that has it than bidding the naked be clothed is to them."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The application of the parable: 'even so faith, if it hath not works, is dead (nekra — lifeless, devoid of vitality), being alone (kath heauten — by itself, in itself)' — just as kind words without deeds are useless, so faith that produces no works is dead in itself, a lifeless thing; not merely weak but lifeless like a corpse, a faith bearing no fruit of works having no spiritual life (dead faith, not the living faith that saves); 'being alone' — faith standing by itself without works proving itself lifeless, works being the necessary expression of living faith (Barnes, Robertson, Calvin)."
+    "summary": "Barnes finds the comparison obvious and striking: faith without the acts it would prompt is as cold and useless as it would be to say to one destitute of the necessaries of life, depart in peace. If we really have not the means of relieving the poor, a kind wish may itself alleviate their sorrow; but if we have the means, such expressions are mere mockery, and make deeper the sorrows we ought to heal. That which is alive bodies itself forth; that which is dead is as if it were not. Ellicott suspects the scene drawn from life — perhaps from the apostle's own experience during the famine foretold by Agabus — and finds a worse sense possible in the words, which begin so softly with the Eastern benediction: they may mean, ye are warming and filling yourselves, the rebuke of cool prosperity to importunate adversity. The one of you at the beginning stood for the whole body addressed, and by the change to the plural we see that no individual was singled out: the offence was wider. He renders the closing phrase dead in its own self, and observes that if to be childless among women was a curse in Israel, so to be barren among God's graces is the condemnation of faith in Christendom; there had been no lack of charity under the earlier Jewish teaching, righteousness being often explained in the Targums as almsgiving, but rabbinism seems to have destroyed the spiritual life of its scholars. Robertson notes that go in peace is the common Jewish farewell, used by our Lord himself, and that the two imperatives are probably middle — warm yourselves, feed yourselves — so that instead of clothes and food they get only empty words: cold deeds with warm words."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is the force of be ye warmed and filled?",
+    "positions": [
+     {
+      "position": "a hollow benediction, warm words in place of cold deeds",
+      "holders": [
+       "A.T. Robertson",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "possibly worse — ye are warming and filling yourselves, the rebuke of prosperity to adversity",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Even so faith, if it hath not works, is dead, being alone",
-   "faith without works is dead",
-   "dead faith, not the living faith that saves",
-   "works the necessary expression of living faith"
+   "the naked and the destitute of daily food",
+   "words without the things needful to the body",
+   "faith by itself is dead"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "18": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill"
   ],
+  "range": "18",
+  "pericope_label": "Shew me thy faith apart from thy works",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin rejects the reading of Erasmus, who introduced two speakers, one boasting of faith without works and the other of works without faith; that seems too forced, its mistake being not to acknowledge an irony in the words. He would take the particle as nay rather, and read the whole as one speech: thou hast faith only, I have works besides; now prove that thou hast true faith without works, and I will prove mine by its fruits. The design was to expose those who imagined they had faith while their life showed them unbelievers. James bids the boaster show faith without works, and so reasons from what is impossible, to prove what does not exist; if any prefer the other reading it comes to the same thing, the meaning either way being, unless thy faith brings forth fruits, I deny that thou hast any. This verse is for Calvin the key to the epistle. When James says a man is justified by works he means that a man is proved by his works to be justified, his faith being shown to be living and not dead; and it is a wonder that anyone surveying the whole passage should think there is any contrariety here to Paul, whose doctrine of justification by a living faith which works by love is perfectly consistent with it. He raises one further question, whether outward uprightness is a sure evidence of faith, and answers that the unbelieving sometimes excel in specious virtues and lead a life free from every crime, so that excellent works may exist apart from faith; James does not maintain that everyone who seems good possesses it, but only that faith without works is vainly pretended, since fruit ever comes from the living root of a good tree. Gill makes the speaker a true believer calling on a vain boaster to give evidence of what he claims."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke says the same in a sentence: faith cannot be discerned but by its effects, so that he who has no good works has presumptively none, while works of charity show a living tree whose root is love to God and man."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The imagined dialogue (a difficult verse): 'yea, a man may say, Thou hast faith, and I have works: shew me thy faith without thy works, and I will shew thee my faith by my works' — the sense being that one may distinguish the two (you claim faith, I point to works), the challenge testing whether faith can be shown apart from works; 'shew me thy faith without (apart from) thy works' the impossible demand (faith being invisible and only able to be evidenced by its fruits, so one cannot exhibit a workless faith); 'I will shew thee my faith by (ek — out of) my works' — works being the visible evidence of faith, the genuine believer proving his faith by his deeds, works making faith manifest (Barnes, Robertson, Calvin)."
+    "summary": "Robertson takes the opening particle as adversative and supposes James introduces an imaginary objector who speaks a single sentence, after which the apostle answers him; the objector may even be asking a short question, to which James replies that he has works too. Barnes reads it as an objection worth answering: it might be urged that religion is not always manifested in the same way, and that we should not suppose it absent because it does not take the same form — one man may be distinguished for zeal, another for meekness, another for benevolence, and all be religious men. To this the apostle replies that the two are not independent qualities which can exist separately, but that the one is the germ of the other, and its existence is known only by its developing into the other. Barnes reports the textual variation: many manuscripts read by thy works in the first clause as in the second, while without is found in others and in the Vulgate, and is now commonly received, being demanded by the later words about faith without works being dead. Ellicott thinks the bearing of the verse commonly misunderstood: the words are those of scorn, uttered probably by some enemy of the faith, and the whole speech runs on to the argument about Abraham; yet whether the speaker be Christian or not, he lays claim to faith in God as the efficient cause of his good deeds."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Whose words are these, and in what tone?",
+    "positions": [
+     {
+      "position": "an imaginary objector introduced by James and then answered",
+      "holders": [
+       "A.T. Robertson",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "words of scorn from an enemy of the faith, Jewish or pagan, running on through the argument",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "one speech, spoken ironically, not two speakers as Erasmus supposed",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "shew me thy faith without thy works, and I will shew thee my faith by my works",
-   "the challenge to show faith by works",
-   "faith invisible, evidenced only by its fruits",
-   "works the visible evidence of faith"
+   "the imaginary objector and his speech",
+   "faith apart from works cannot be shown",
+   "the reading of the first clause"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "19-20",
+  "pericope_label": "The devils also believe, and tremble",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The example of a merely intellectual faith: 'thou believest that there is one God (the fundamental creed, the unity of God); thou doest well (so far, good): the devils (demons) also believe (this same truth), and tremble (phrissousin — shudder, bristle with dread)' — to believe in one God right and good as far as it goes (orthodox belief commended), but the demons holding the same orthodox belief, so a bare assent to truth is something even demons possess (mere creedal faith no proof of saving faith); the demons' faith going beyond cold assent to terror, yet not saving or sanctifying them (producing dread, not love or obedience) — so a faith that is mere belief, even with feeling, without works, is no better than the demons' and cannot save (Barnes, Robertson, Calvin)."
+    "summary": "Calvin draws a sharper conclusion. From this one sentence it is evident that the whole dispute is not about faith at all, but about the common knowledge of God, which can no more connect a man with God than the sight of the sun can carry him to heaven, whereas by faith we come nigh to God; and it would be ridiculous to say that the devils have faith. James even prefers them to hypocrites, for the devil trembles at the mention of God's name, acknowledging his judge, so that he who despises an acknowledged God is much worse — the words being added by way of extenuation, as though it were a great thing, forsooth, to sink below the devils. Of the reproach that follows, Calvin insists we must understand the state of the question: the dispute is not about the cause of justification but about what a profession of faith without works avails; absurdly then do they act who prove from this passage that man is justified by works. Gill thinks the epithet levelled at the Gnostics, empty vessels making the greatest sound."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the devils believe and shudder — their faith is real assent, even with dread, yet it does not save them, for it produces only terror, not love or obedience; so the bare belief of which a man boasts, if it bears no fruit of works, is no better than the faith of demons."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou believest that there is one God; thou doest well: the devils also believe, and tremble",
-   "even the devils believe and tremble",
-   "bare creedal faith no proof of saving faith",
-   "the demons' faith producing dread, not obedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says belief in the being and unity of God distinguished these men from all the nations, and having been circumcised they thought themselves secure; but the same truth, far from saving the devils, leaves them damned, every act of believing it only increasing their torment, since they can neither love nor obey. Wesley allows the creed and denies the inference: this proves only that thou hast the same faith with the devils, who not only believe but tremble; and such a faith, he adds, is not faith at all, as a dead carcase is not a man."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The pointed challenge: 'but wilt thou know (are you willing to learn, will you be convinced), O vain (kene — empty, foolish, senseless, empty-headed) man, that faith without works is dead (nekra — lifeless; some texts arge — barren, idle, useless)?' — James addressing the one who clings to a workless faith as 'vain' (a sharp but just rebuke of the empty, foolish, deceived man who imagines a workless faith can save) and pressing the central thesis (now to be proved by the examples of Abraham and Rahab) that faith divorced from works is lifeless and fruitless (Barnes, Robertson, Calvin)."
+    "summary": "Barnes explains why this doctrine is chosen. The apostle selects a cardinal truth, the belief of which would save the soul if belief in any doctrine could, and shows that even this may be held by those whom no one would call Christians. These spirits, he observes, are never represented as denying God's existence — atheism is a sin of this world only. If such spirits may hold that faith and remain in perdition, men may hold it and go there too. On the word for their trembling he notes that it occurs nowhere else in the New Testament and means to be rough with bristling hair, to stand on end as the hair does in a fright — showing that there was much more here than a speculative faith. He takes the epithet that follows as empty, void of understanding, and a mild way of calling a man foolish. Robertson calls it an onomatopoetic verb, like the Latin horror, and adds that the demons do more than believe a fact: they shudder at it; he notes too that some copies read barren, or rather inactive, like land with no crops. Ellicott renders the first clause thou believest that God is One, and grants the man his correctness — he is theologically right and may even confess it outwardly — but adds that assent, opinion and knowledge are shared by the demons of the pit, and that we should not call our joint possession with them by the holier name of faith. He quotes Beveridge, that as the fruit tells what the tree is, so a man's life tells how he believes."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "holds that the devils are here preferred to hypocrites, since they at least tremble at the God they acknowledge"
+   }
+  ],
   "themes": [
-   "wilt thou know, O vain man, that faith without works is dead",
-   "the appeal to the vain man that faith without works is dead",
-   "a sharp rebuke of the empty-headed",
-   "the thesis to be proved by example"
+   "the creed of the demons",
+   "they believe and shudder",
+   "O vain man: faith without works is dead"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "21": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "21-22",
+  "pericope_label": "Was not Abraham justified by works?",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin and Gill: James does not speak of the cause or ground of justification (the manner in which men obtain righteousness) but of the proof or manifestation of righteousness by conduct, and that before men. 'Justified' here means shown, declared, demonstrated righteous: Abraham, justified before God by faith (Genesis 15:6), proved the reality of that faith by offering Isaac (Genesis 22), thirty years later. Calvin distinguishes the twofold meaning of 'justify' — Paul means the gratuitous imputation of righteousness before God's tribunal, James the manifestation of righteousness by works (as a chest of hidden riches is 'made known'). Gill: works are 'not as the causes of his justification... but as effects declaring it.' Calvin sharply rejects 'the Sophists' (the Roman Catholic reading) who from this verse 'cry out as being victorious, that justification is partly by works' — works conferring or meriting righteousness before God."
+    "summary": "Calvin says the Sophists lay hold on the one word and cry out as victors that justification is partly by merit, but we ought to seek a right interpretation from the drift of the whole passage. James does not speak of the cause of justification, nor of how men obtain righteousness, but only shows that good deeds always accompany believing; and in calling Abraham justified he speaks of the proof the patriarch gave of it. When the Sophists set James against Paul they go astray through the ambiguity of a term: Paul means the gratuitous imputation of righteousness before the tribunal of God, James its manifestation by conduct before men. In this latter sense we fully allow that a man is justified by works — as one may say a man is enriched by the purchase of a large and valuable chest, because his riches, before shut up in it, were thus made known. On the co-operation of the two Calvin reports the difficulty of rendering the verb, which properly means to work together and so to aid: some read that faith aided Abraham in his obedience, others that it combined with it in justification. He prefers the first: faith is perfected by obedience not because it takes its perfection thence, but because it is thus proved true. The Sophists' distinction between formed and unformed faith needs no refutation, since Abraham's was perfected before he sacrificed his son. Gill notes that a true faith will engage a man to do good, as it did Abraham."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke asks whether the patriarch's conduct did not sufficiently prove what led him to so extraordinary an act, and says that even a true faith will soon die if its possessor do not live in the spirit of obedience. Wesley fixes the distinction by dates — the one apostle speaks of an acquittal received many years before Isaac was born, the other of one not received till the boy was laid on the altar; so that the second justification is the fruit of the first — and adds that believing begets deeds and is then perfected by them, as the natural heat of the body begets motion, whereby itself is increased."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes, Robertson, and Ellicott: James means 'justified' in the sense that a man's faith is shown to be genuine by works (the evidence, not the ground). Barnes: James does not affirm that good works are the ground of acceptance or make atonement, nor deny justification by faith (the very passage he quotes, Genesis 15:6, declares Abraham's faith was imputed for righteousness, an act long prior); he teaches that the faith which justifies is only that which leads to good works, the works proving it genuine. Robertson: James and Paul 'use the same words, but they are talking of different acts' — Paul of Abraham's faith as the basis of justification (Romans 4:1-5), James of the offering of Isaac as the fruit of faith Abraham already had; 'there is no contradiction at all between James and Paul. Neither is answering the other.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley and Clarke reconcile by the two justifications and two works: Paul speaks of justification by faith antecedent to works (the faith Abraham had at Genesis 15:6, many years before Isaac was born); James of justification 'made righteous' by works consequent to faith (the offering of Isaac). Wesley: 'St. James's justification by works is the fruit of St. Paul's justification by faith'; Abraham was justified in Paul's sense (accounted righteous) by faith, and in James's sense (made righteous, his faith perfected and proved) by works. Clarke: Abraham's works justified — proved the genuineness of — his faith; obedience to God is essential to maintain faith."
+    "summary": "Robertson concedes that this is the phrase often held flatly opposed to Paul, who says pointedly that it was the patriarch's believing and not his doing that was reckoned to him for righteousness; but Paul speaks of what Abraham had before his circumcision. The two use the same words of different acts: James points to the offering of Isaac as the fruit of a trust already held, Paul discusses that trust as the ground of acquittal, so that neither answers the other. Barnes adds that the apostle cannot mean justification in the ordinary sense, since the very passage he quotes makes Abraham's acceptance consequent on his believing, whereas this act came long afterwards and confirmed it; and on the co-operation he explains the word as contributing to a result which two agents jointly produce. Ellicott notes that Isaac was a type of God's dear Son, who bore, like his meek ancestor, the sacrificial wood up the road of death, and would take the opening clause of the next verse simply, not as a question."
    }
   ],
   "debates": [
    {
-    "question": "How is James's 'justified by works' reconciled with Paul's 'justified by faith'?",
-    "sides": [
+    "question": "In what sense was Abraham justified by works?",
+    "positions": [
      {
-      "position": "'Justified' = shown/demonstrated/proved righteous; works are the evidence of a living faith, not the ground; no contradiction with Paul (the Protestant consensus)",
+      "position": "his righteousness was manifested before men, not caused; justification itself is by imputation",
       "holders": [
-       "Calvin",
-       "Gill",
-       "Barnes",
-       "Robertson",
-       "Ellicott",
-       "Wesley",
-       "Clarke"
+       "John Calvin"
       ]
      },
      {
-      "position": "Man is justified partly by works, works conferring or meriting righteousness before God (the Roman Catholic / 'Sophist' reading)",
+      "position": "a second and later justification, the fruit of the first received long before Isaac was born",
       "holders": [
-       "the Roman Catholic interpreters Calvin names and rejects as 'the Sophists'"
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "the same words used of different acts by the two apostles, so that neither answers the other",
+      "holders": [
+       "A.T. Robertson",
+       "Albert Barnes"
       ]
      }
     ]
@@ -848,263 +969,252 @@
   ],
   "outliers": [],
   "themes": [
-   "Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar",
-   "Abraham justified by works in offering Isaac",
-   "the great faith-and-works crux",
-   "works the evidence, not the ground, of justification"
+   "Abraham justified by works",
+   "faith wrought with his works",
+   "by works was faith made perfect"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The relation of faith and works in Abraham: 'seest thou how faith wrought with (synergei — co-operated with, worked together with) his works, and by works was faith made perfect (eteleiothe — completed, brought to its full development)?' — Abraham's faith and works acting together, the faith the living principle that produced the obedient act of offering Isaac (faith the active root, not idle, working with the fruit, the energy behind the deed); 'made perfect' meaning not that faith was defective and remedied by works, but that it was carried out to its fair and full result, fully developed and expressed (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: faith was 'perfected by works' not because it received its perfection from them, but because it was thereby proved to be true and not idle; Abraham's faith was already formed and perfect before he sacrificed his son (Genesis 15:6), so the offering was not the perfecting of his faith in itself but the demonstration of its integrity — faith said to be perfected by works because it brought forth that remarkable fruit of obedience."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: faith and works have each their own energy; faith does not get its being from works (for it is before them) but its perfection — that vigour of faith which begets works is excited and increased by them, as the body's natural heat begets motion whereby itself is increased; works do not give life to faith, but faith begets works and is then perfected by them."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Seest thou how faith wrought with his works, and by works was faith made perfect",
-   "faith wrought with works and was perfected by them",
-   "faith the living principle producing the deed",
-   "faith proved genuine and brought to full expression"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
    "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "23-24",
+  "pericope_label": "The friend of God, and justified not by faith only",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin will not let the quotation be turned round. Those who prove from it that Abraham's obedience was imputed for righteousness must confess that Scripture is perverted by them, for however they twist they can never make the effect its own cause. The imputation Moses mentions preceded by more than thirty years the deed by which they would have the patriarch justified — it was reckoned to him fifteen years before Isaac was born, so that it can hardly have been done through the sacrificing of a son who did not yet exist. All are bound fast by an indissoluble knot who imagine righteousness imputed because he offered Isaac, when the Spirit had declared him justified before the boy's birth. Why then speak of fulfilment? Because he intended to show what sort of faith justified Abraham — not idle or evanescent, but such as rendered him obedient to God. The conclusion that follows depends on this: a man is not justified by faith alone, that is, by a bare knowledge of God, but by works, that is, his righteousness is known and proved by its fruits. Gill adds that good works do not precede justification as causes, but follow as fruits."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke puts it shortest: he believed God, and this faith was never inactive; his obedience showed that he had not received the grace of God in vain. He calls the title given him the highest character ever given to man, and reasons from the nature of friendship: as among friends everything is in common, so, God never being in want, his friend could never be destitute. Wesley says the word was twice fulfilled, when Abraham first believed and when he offered Isaac, Paul speaking of the former and James of the latter, and distinguishes both terms — one apostle speaks of a living faith and the other of a dead one, one of works antecedent and the other of works subsequent."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The key text (Genesis 15:6): 'and the scripture was fulfilled (epleer othe — confirmed, carried out to its full expression) which saith, Abraham believed God, and it was imputed (counted, reckoned) unto him for righteousness: and he was called the Friend of God (2 Chronicles 20:7; Isaiah 41:8)' — the declaration that Abraham believed and was counted righteous (made long before Isaac's offering) confirmed and fulfilled by his obedient act, the offering proving the reality of the faith the Scripture records (the very passage Paul quotes in Romans 4:3 to show faith preceded and was the basis of justification); 'the Friend of God' a title of highest honour, the fruit of his faith and obedience (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin presses the chronology: the imputation of righteousness (Genesis 15:6) preceded the offering of Isaac by more than thirty years (faith was imputed fifteen years before Isaac was even born), so the imputation cannot be grounded on that work; James says the Scripture was 'fulfilled' (confirmed) by the later act, not that righteousness was then first imputed — proving that 'justified by works' means the manifestation, not the cause, of righteousness, 'something posterior' being pointed out. They who make the work the cause pervert Scripture, making the effect its own cause."
+    "summary": "Barnes sets out the same chronology from the other side. What Abraham believed was the promise that his heir should be one out of his own bowels and his seed as the stars for number; the act of confiding in it was what was counted to him for righteousness. The offering on the altar came twenty years later and confirmed it — for what could confirm it more than a readiness to give up his own son at God's command? It cannot be supposed that James meant Abraham was justified without respect to faith, since the very passage he quotes shows faith first. Barnes calls the title a most honourable appellation, granted for strong faith and obedience, and states the doctrine plainly: the ground of justification is faith and that only, the evidence is good works, and so James contradicts not Paul but a false explanation of him. Robertson observes that James quotes the same verse Paul does to prove that Abraham's believing preceded his circumcision, and that both are right, each illustrating a different point; a live faith is what we must all have, only it must show itself in deeds as Abraham's did. Ellicott corrects a common mistake about the phrase — it means beloved of God, not the friend to God — and adds that it is no exact quotation from the Hebrew, and that the term was traditional throughout the East, used by the Arabs of the patriarch to this day; on the conclusion he observes that the adverb stands last and most emphatic, since James never denies justification by faith, but only that fancied one by an idle faith with no corresponding acts of love."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "reads the friend of God as beloved of God rather than lover of him, and notes the title as traditional throughout the East"
+   }
+  ],
   "themes": [
-   "the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness",
-   "he was called the Friend of God",
-   "the Scripture fulfilled: Abraham believed and was the Friend of God",
-   "the imputation preceding the work by thirty years"
+   "the scripture fulfilled in the offering of Isaac",
+   "Abraham called the friend of God",
+   "not by faith only"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
- "24": {
+ "25": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "25",
+  "pericope_label": "Rahab the harlot justified by works",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Barnes and Robertson (with Ellicott): 'ye see then how that by works a man is justified, and not by faith only' — 'justified' meaning shown, declared, proved righteous, not justified before God by the merit of works; works being the evidence by which a man's faith is shown genuine and he is seen to be justified. Barnes: justification takes place in God's sight by faith, but it is only the faith that produces good works that justifies, so good works (as the expression of faith) are necessary, and James contradicts a false explanation of Paul, not Paul himself. Robertson: 'is justified' here is 'not made righteous, but shown to be righteous.' Ellicott: James puts 'only' emphatically last — he never denies justification by faith, but that fancied justification by an idle, speculative faith with no acts of love."
+    "summary": "Calvin thinks the pairing strange, and finds the reason in it. Why did the apostle not choose one from the large number of illustrious fathers to set beside Abraham, and why prefer a harlot to all others? He designedly put together two persons so different in character in order to show that no one, whatever his condition, nation or class in society, has ever been counted righteous without good works. Having named the patriarch, the most eminent of all, he now includes under the person of a harlot all those aliens who were joined to the Church; so that whoever seeks to be counted righteous, though among the lowest, must show it by his living. Calvin grants that James declares Rahab justified by works, and that the Sophists conclude we obtain righteousness by merit; but he denies that the dispute is about the mode of obtaining righteousness at all. We allow that good works are required for righteousness; we only take from them the power of conferring it, since they cannot stand before the tribunal of God. Glancing ahead to the closing simile he warns against pressing it too far: the meaning is not that works are to faith what the spirit is to the body, which would make works the life of faith — the reverse of the fact — but that a faith having no works is like a dead carcass. Gill draws the general rule: wherever there is true faith, in Jew or Gentile, man or woman, greater or lesser sinners, there will be good works."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: Paul ('a man is justified by faith,' not by works, Romans 3:28) and James do not contradict, because they do not speak of the same faith (Paul of living faith, James of dead faith) nor of the same works (Paul of works antecedent to faith, James of works subsequent to it); so 'not by faith only' condemns the dead, workless faith, not the living faith that justifies and necessarily produces works."
+    "prevalence": "several",
+    "summary": "Clarke observes that justification signifies not only pardon but the receiving of divine approbation, and that James seems to use it in this latter sense, since God approved these two for their obedience, and approves no man who is not obedient. Wesley reads the pairing the same way: after Abraham, father of the Jews, the apostle cites a woman and a sinner of the Gentiles, to show that in every nation and sex a true faith produces works."
    },
    {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes marks the limits of the commendation. She is justified in the same sense Abraham was, showing by her act that her faith was genuine and no cold assent; had the act not been performed, that would have shown her faith unreal, but God saw it as it was and accepted her. We are not to suppose, however, that everything in her life and character is commended: she is commended for her faith and the fair expression of it — a faith which, as it led her to receive the messengers of the true God and to join herself to his people, we may suppose also induced her to abandon her former course. Ellicott refuses to soften the contrast: the second example stands in complete contrast to the father of many nations, and the evil name of the poor woman's unhappy trade cannot truthfully be softened to innkeeper, nor even to idolater. The verb rendered sent them out means literally thrust them forth, showing her haste and fear; and he notes that Clement of Rome sees in the scarlet thread she bound in her window a type of our Redeemer's blood, and that this outcast was not only brought into the fold of Israel but became a direct ancestress of her Saviour by marriage with Salmon. Robertson observes that her vicious life she left behind, but the name clung to her always; the word for the men she received means messengers, where the Epistle to the Hebrews calls them spies, and the other way she sent them was through a window instead of a door."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "refuses to soften the harlot's trade to innkeeper or idolater, and traces her descent to the Saviour through Salmon"
+   }
+  ],
+  "themes": [
+   "Rahab set beside Abraham",
+   "the messengers received and sent another way",
+   "how far the commendation extends"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
+  }
+ },
+ "26": {
+  "voices": [
+   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill"
+  ],
+  "range": "26",
+  "pericope_label": "As the body without the spirit is dead",
+  "schools": [
+   {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: 'not as causes procuring justification, but as effects declaring it' — the best works are imperfect and cannot be a righteousness justifying before God; justification in that sense would frustrate grace, make void Christ's death, and encourage boasting; good works do not go before justification as causes or conditions but follow it as fruits and effects. The same confessional edge as v.21 stands: the Protestant consensus holds works the evidence, the Roman Catholic reading (rejected) takes the verse to teach justification partly by the merit of works."
+    "prevalence": "single",
+    "summary": "Gill notes that the Jews say the same, calling a body without breath a carcass."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke draws the moral out at length: there can no more be a genuine faith without good works than a living body without a soul, and we shall never find disinterested godly living without true faith, nor true faith without such a life. We may see works of apparent benevolence without faith, but their principle is ostentation, and they last only while they have the reward of human applause. Where true faith is, there is God: his Spirit gives life and his love affords motives to righteous actions, and the use of any divine principle leads to its increase — the more a man exercises faith the more he is enabled to believe, and the more able to work for God. He quotes Michaelis, that some persons known to James must have taught that men are justified by merely believing in one true God, or he would not have taken such pains to confute it; and in denying that faith any avail unaccompanied by good works he has said nothing more than Paul says elsewhere against the same error, that not the hearers but the doers of the law will be justified."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Barnes takes the word for spirit in its common sense of the soul: the body is kept alive by its presence and has no life apart from it, so there is as much necessity that faith and works be united to make true religion as that body and soul be united to make a living man. This shows, he adds, that James was not arguing against real faith nor against its importance in justification, but against the supposition that mere faith was all that was necessary. He appends a formal reconciliation of the two apostles, observing first what the difficulty is: James seems to contradict Paul in express terms, and both use the same case to illustrate opposite sentiments. He recalls that infidels, and Voltaire in particular, seized on what they supposed they had found here to pronounce the Scriptures contradictory; and that Luther felt the difficulty so great that early in his career he denied the inspiration of the epistle, though he afterwards changed his opinion, while one of his followers was so displeased as to charge the writer with wilful falsehood. His own answer is that Paul speaks of the ground of justification and James of its evidence, so that both require a faith which produces a holy life. Ellicott thinks the terms of the comparison are not what we should expect — of our own human wisdom we had been rather inclined to say that works were likest the body and faith the breath of it — and quotes Alford, that faith is the body, the sum and substance of the Christian life, and works the quickening of that body; he notes too that the preposition rendered without should rather be apart from. Robertson observes that the word means apart from breath, and that the absence of any breath on a glass held before the mouth is proof of death — a startling picture of church members with only a name to live."
    }
   ],
   "debates": [
    {
-    "question": "Does 'not by faith only' teach that works share in justifying before God, or that the justifying faith is one that works?",
-    "sides": [
+    "question": "Which side of the simile answers to faith?",
+    "positions": [
      {
-      "position": "The justifying faith is a working faith; works are the evidence (not the meritorious ground) by which a man is shown righteous; no contradiction with Paul (the Protestant consensus)",
+      "position": "faith answers to the body and works to the quickening spirit, following Alford",
       "holders": [
-       "Barnes",
-       "Robertson",
-       "Ellicott",
-       "Gill",
-       "Wesley",
-       "Clarke"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "Man is justified partly by works, works meriting/contributing to righteousness before God (the Roman Catholic reading, rejected by the Reformers)",
+      "position": "the plain reading, that the body is faith’s counterpart only in being lifeless without its companion",
       "holders": [
-       "the Roman Catholic interpreters the Reformers oppose"
+       "Albert Barnes",
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Ye see then how that by works a man is justified, and not by faith only",
-   "justified by works, and not by faith only",
-   "the faith-and-works crux restated",
-   "the justifying faith is a working faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second example (in deliberate contrast with Abraham): 'likewise also was not Rahab the harlot justified by works, when she had received (welcomed, sheltered) the messengers (the Israelite spies, Joshua 2), and had sent them out another way (helped them escape)?' — Rahab, as different from Abraham as possible (a Gentile, a woman, a harlot), the second proof, also 'justified by works' in the same sense (shown to be righteous, her faith proved genuine by her act of receiving the spies and aiding their escape); James joining the most eminent patriarch and a harlot alien to show that no one of any condition is counted righteous without good works, whosoever would be counted righteous (even the lowest) must show it by works (Barnes, Robertson, Calvin)."
+    "voice": "Barnes",
+    "note": "appends a formal reconciliation of the two apostles, recalling Voltaire's sneer and Luther's early denial of the epistle's inspiration"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "was not Rahab the harlot justified by works, when she had received the messengers, and had sent them out another way",
-   "Rahab also justified by works, proving faith genuine",
-   "patriarch and harlot, none justified without works",
-   "her deed demonstrating faith"
+   "the body without the spirit",
+   "faith without works is dead",
+   "the reconciliation of Paul and James"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The apt closing figure: 'for as the body without the spirit (pneuma — breath, the animating principle, the life) is dead (a lifeless corpse), so faith without works is dead also' — the body, when the spirit (life-breath) has departed, a dead carcass, the comparison drawing on the most obvious mark of death; faith without works as lifeless as a corpse, works being to faith what the breath/life is to the body (the evidence and accompaniment of life). Calvin cautions the figure does not make works the life of faith (that would reverse the truth, for faith is the root) but means that faith having no works is like a dead carcass without life — the whole argument summed up: living faith works, dead faith does not (Barnes, Robertson, Calvin)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as the body without the spirit is dead, so faith without works is dead also",
-   "faith without works is dead as a body without the spirit",
-   "works the evidence of life, as breath to the body",
-   "living faith works, dead faith does not"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

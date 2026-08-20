@@ -9099,6 +9099,68 @@
       "book": "romans",
       "chapter": "2",
       "note": "Fidelity self-grade, all eight entries. Every claim is traceable to a named block in data/commentary/cow/romans/2.json; no voice is named outside its span; no school appears in prose that is absent from its tags dict. Word counts: 1 = 650; 2-5 = 649; 6-9 = 648; 10-13 = 649; 14-16 = 649; 17-20 = 649; 21-24 = 648; 25-29 = 647. All within the 350-650 window; the tiling covers 1-29 exactly. Jamieson is declared residue chapter-wide and excluded from entries 3, 4 and 7. One lint catch worth recording: entry 5 originally named Chrysostom in reporting Calvin's list of fathers on the connection of 2:16, but Chrysostom's block sits at key 17, outside that span, so the build flagged NAMED BUT NOT SOURCED HERE and the prose was reworded to 'Jerome, Theophylact and other fathers'. The full list is retained in the entry's debate text. The sharpest disagreements - the 'Behold/But if' variant, the Isaiah/Ezekiel attribution, who the 'foolish' are, and whether the law-keeping Gentile is real - are stated as unresolved rather than harmonised."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JFB stride bug, eighteenth confirmed chapter, and the second total case after romans 16. All four JFB blocks in this chapter are displaced from Galatians: v3 and the rest carry Galatians 3:27 and 4:1-16 material (baptism as the toga virilis, the heir under age, Paul's 'be as I am'). None comments on James. All four declared in excluded_voices; JFB is unusable in this chapter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "Cyril of Jerusalem's single block in this chapter, filed at v1, is his catechetical exposition of 2 Corinthians 4:4 on the blinding of unbelievers' thoughts — wholly unrelated to James 2:1. It is NOT declarable in excluded_voices: undeclarable_voices rejects the name, exactly as at romans 16 with Theodoret and Cyril (note 798), because split_voices does not segment his block in this harvest. Left undeclared and unused."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "2",
+      "verses": [
+        "26"
+      ],
+      "note": "StudyLight boilerplate tail, fifteenth confirmed instance, again attached to Ellicott and again at the chapter's last commented key. Ellicott's genuine note ends with the Alford quotation; the site chrome, CSS and commentary menu follow, inflating usable_source_words for v26 by roughly a thousand words."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "james",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "8",
+        "14"
+      ],
+      "note": "Note 607 fallback fired three times. Henry has only three keys in the chapter (1, 8, 14) and writes one block per section: the v1 block runs through v7, the v8 block through v13, and the v14 block through the Paul-James reconciliation. He has no key inside any of those spans, so all three stay in the entries they are filed under. Wesley's blocks at vv15, 16 and 19 are again near-verbatim Henry, and Clarke at v14 reproduces Wesley's note entire and says so — the one place in this run where a commentator's own attribution had to be preserved in the prose to avoid reading as duplication."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "james",
+      "chapter": "2",
+      "note": "Drafting overshoot, fourth distinct cause. First drafts here ran 640-1050 against the 650 ceiling, mean about 870, roughly 35 percent over. The cause is neither romans 16's many-short-glosses nor exodus 20's three-long-arguments nor exodus 18's parallel-speech pattern: james 2 carries SEVEN voices at every key (Gill, Clarke, Ellicott, Robertson, Barnes, Calvin, Wesley all appear at 20+ of the 26 keys), so even a one-clause mention of each fills a paragraph before any argument is stated. Working rule for a full-bench chapter: name at most FOUR voices per paragraph and let the other three appear elsewhere in the entry, rather than closing each paragraph with a roll-call."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "james",
+      "chapter": "2",
+      "verses": [
+        "12"
+      ],
+      "note": "Caught a live ghost in the pre-flight: Ellicott quotes 'the Greek, John the Golden Mouthed' on mercy, and I attributed the passage to Chrysostom by name. Chrysostom has no block in this chapter, so the ghost detector flagged it. Rewritten as 'a Greek father'. General rule: when one commentator quotes a second by an epithet rather than a name, resolving the epithet manufactures a voice the span does not contain."
     }
   ]
 }
