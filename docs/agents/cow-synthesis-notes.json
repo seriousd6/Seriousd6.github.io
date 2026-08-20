@@ -12789,6 +12789,72 @@
       "book": "acts",
       "chapter": "11",
       "note": "FIDELITY SELF-GRADE, acts 11, eight entries, all in window. 1-3 = 646w, 7 voices. 4-15 = 642w, 6. 16-18 = 648w, 7. 19-21 = 649w, 9. 22-24 = 648w, 6. 25-26 = 624w, 9. 27-28 = 634w, 8. 29-30 = 630w, 7. Eight rather than the seven the entry-count guide suggests, because verses 25-26 carry the naming of the Christians, which could not be compressed into a joint entry with 22-24 without losing the four-way disagreement over who gave the name. Every claim traced to a named block in data/commentary/cow/acts/11.json before writing. Exclusions: six John Lightfoot blocks (keys 1, 15, 19, 23, 24, 27) and five Jamieson blocks (keys 3, 9, 15, 21, 27) declared as residue; seven Cyril of Jerusalem blocks dropped silently, the eighth (key 26) used as genuine; about 984 words of chrome inside the Ellicott block at key 30 ignored. Gross usable 42,946; after all exclusions 38,987 by the build's own count."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "24",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "JFB displacement: FIRST NT HOST, and the ratio law holds when positions are reckoned WITHIN THE NT rather than across the whole canon. Five JFB blocks here, at keys 2, 8, 14, 20, 26 -- stride 6, the same stride seen at numbers 9 -- and all five are Acts 3 material marching forward: keys 2 and 8 carry the same block on Acts 3:1-4 (Peter and John going up at the hour of prayer), key 14 is Acts 3:12 (the might and merit of the cure not due to us), key 20 is Acts 3:17 (will not break the bruised reed, ye did it through ignorance), key 26 is Acts 3:22-23 (that Prophet, on pain of being cut off). A continuous donor sweep, not a repeat. Whole-canon positions give donor 1021 / host 1042 = 0.980, far outside the band; NT-internal positions (Matthew 28 + Mark 16 + Luke 24 + John 21 = 89 preceding chapters) give Acts 3 = 92 and Acts 24 = 113, ratio 0.814, inside the 0.806-0.864 band derived from ten OT cases. The implication is that the defect is an offset in the source's own file ordering and that OT and NT are indexed separately, which is why the fraction rather than the lag is constant. Fifth out-of-sample test; record now four hits (exodus 39, exodus 33, leviticus 24, acts 24) and one miss (numbers 9)."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "24",
+      "verses": [
+        "21",
+        "22"
+      ],
+      "note": "Two displacement kinds met in one chapter, and they need different handling. (a) JFB's five blocks are the familiar cross-book defect and were excluded. (b) Calvin's key-21 block is displaced WITHIN the chapter: it is filed under verse 21 but discusses Drusilla's parentage, her betrothal to Epiphanis, Felix's use of Simon the Cyprian to entice her away, and Paul's later refusal to be silent about Christ -- all of which treats vv24-25. Under the filing rule this material could move, because Calvin holds key 23, inside the 23-24 span; so it was used there rather than dropped, and Calvin still carries entry 19-21 through his substantive key-19 comment on the absent accusers. Chrysostom is the mirror case: he holds ONE key in the chapter, 22, and his block runs on through vv23-27 and into chapter 25. Having no key anywhere else, his run-ahead cannot move, so his verse-22 and verse-23 material was used in the entry where it is filed and the rest left unused. Worth stating as a rule: a run-ahead is rescuable only if the voice holds a key inside the target span, which is why single-key patristic voices lose most of their material."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "24",
+      "verses": [
+        "22",
+        "27"
+      ],
+      "note": "Chapter shape and tiling. 27 keys contiguous, 45,976 usable source words -- 1.55x the entry-count predictor's usual load and over the batch threshold, so this chapter was the whole batch. Ten voices, an unusually deep NT bench: Gill, Barnes and Robertson at all 27 keys, Clarke 23, Ellicott 22, Calvin 18, Wesley 15, JFB 5 (all displaced), Henry 3, Chrysostom 1. Henry's three keys (1, 10, 22) are section headers running 4,433 words at the longest, so nearly all his material for vv2-9 and vv11-21 is stranded: Wesley, his abridger, holds keys 2 and 4 but nothing in 5-9, so only part could be rescued. Three keys individually exceed the 4,500-word split threshold (1 at 5,333, 10 at 5,949, 22 at 6,613) and had to stand as single-verse entries, which no tiling can avoid. Final tiling 1 | 2-4 | 5-9 | 10 | 11-13 | 14-15 | 16-18 | 19-21 | 22 | 23-24 | 25 | 26 | 27 = 13 entries, exactly matching the keys-over-2000 + round(remaining/2500) predictor."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "24",
+      "verses": [
+        "8",
+        "22",
+        "25"
+      ],
+      "note": "Three live disagreements recorded rather than harmonised. (1) At verse 8 Ellicott suspects the invitation to examine is a technical term and that Tertullus was proposing the prisoner be put to the question by scourging or other torture, keeping back the fact of his citizenship; Robertson answers flatly that torture was out of the question for a Roman citizen and the word means only hearing what Paul had to say. (2) At verse 22 the commentators split on the grammar with a real consequence: Barnes (with Beza, Grotius and Doddridge), Clarke (with Wakefield and Calmet) and Wesley read the knowledge as still to be acquired -- after I have been more accurately informed -- while Henry, Ellicott and Robertson take Felix to have known the Way already and to have deferred anyway, which makes the adjournment cynical rather than cautious. (3) At verse 25 Clarke reports Bishop Pearce's view that Felix trembled for his domestic peace, fearing Drusilla would be moved, and rejects it; Barnes and Calvin take the fear as ordinary conviction of sin. Note also a smaller one at verse 17, where Ellicott dates the absence at four years, Robertson at several, and Gill at five and twenty since the conversion -- which bears directly on what many years meant in Paul's compliment at verse 10."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "24",
+      "verses": [
+        "22",
+        "27"
+      ],
+      "note": "Two source-shape facts worth recording for NT chapters. (1) The 200-word truncation cap that dominates the OT catena is essentially ABSENT here: Gill is capped at exactly 200 in only 2 of his 27 blocks and no other voice is capped at all, with Barnes running to 1,703 words, Chrysostom to 1,506, Ellicott to 1,339 and Henry to 4,433. Whatever produces the cap in the OT sources is not operating on this NT set, which is why an NT chapter of the same verse count carries three times the words. (2) The StudyLight tail sits at the end of Ellicott's final block as always, but here that block is key 27, which is also the chapter's last key, so acts 24 is NOT a discriminating case for the tail rule. Gill's separate sacred-texts tail does not appear in this chapter at all."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "24",
+      "note": "Length control on a thirteen-entry chapter, and the discipline got worse rather than better. Every one of the thirteen entries overshot on first draft, by 20 to 269 words against the 650 ceiling, and the mean number of trim passes was five; entry 5-9 took six and entries 22 and 25 took seven each. Structural cuts again moved 20 to 95 words apiece while lexical shaving moved 2 to 12, exactly as note 1018 has said for seventeen chapters. Two new failure modes surfaced here that are worth naming. First, on a chapter with ten voices the four-voices-per-paragraph rule silently drops a voice: entry 16-18 was drafted without Gill and entry 2-4 without him too, both caught only by the two-way voice check, and both had to be repaired by adding a sentence and trimming forty words to pay for it. On a deep bench the check must be run before trimming, not after. Second, chasing the last ten words produced one genuinely damaged sentence -- a cut left Barnes credited with a remark whose referent had been deleted -- which was caught on re-read and rewritten. Landing thirteen entries between 640 and 650 words is not a virtue; it means every entry was drafted a hundred words too long."
     }
   ]
 }
