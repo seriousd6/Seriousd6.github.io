@@ -10897,6 +10897,133 @@
         "32"
       ],
       "note": "Length control, second chapter of the batch: five of seven entries landed in range on the first draft (593, 626, 464, 627, 606, 640 — six of seven, in fact), and only the last needed trimming, by 64 words. That is a marked improvement on deuteronomy 29 earlier in the same run, where five of eight overshot. The difference is what note 998 predicted: numbers 15 is a chapter of many short competing notes rather than a few long single-voice arguments, so the note-969 compression has something to work on in nearly every paragraph. The one entry that overshot, the tassels, is the one where Calvin, Clarke and Henry each develop a separate long argument that does not overlap with the others."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "Chrome measurement six, and the first non-terminal instance. The StudyLight nav/CSS chrome falls at key 23 on Charles Ellicott, after 177 genuine words, and runs 992 words / 24,949 characters, ending mid-token in the same JS fragment as every previous case (...('data-vf-open')==='1';}for(var i=0;i). The six measurements now stand at 1peter 1 key 25 (994w/24,951), genesis 9 key 29 (992/24,953), numbers 6 key 23 (992/24,952), romans 1 key 32 (992/24,949), acts 21 key 40 (992/24,947) and exodus 2 key 23 (992/24,949): a character spread of 7, the word variation being entirely nav-strip tokenisation. What is new here is the position. In all five earlier chapters the chrome fell on the last block of the last key and so truncated nothing. In exodus 2 it falls mid-chapter, and Calvin and Wesley follow it cleanly at the same key, so the fetcher is not simply appending page furniture at the end of a chapter fetch but can splice it into the middle of a key. Ellicott's genuine comment on 2:23 survives (the regnal-length argument for Thothmes III or Rameses II) but anything he wrote on 2:24-25 is gone."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "10"
+      ],
+      "note": "Jamieson, Fausset and Brown residue, chapter 43 of the misalignment. Exodus 2 carries exactly ONE Jamieson block, at key 10, and its content is Genesis 43 (Jacob committing his sons to God as they go down to Egypt) — nothing to do with Pharaoh's daughter naming Moses. Excluded from entry 5-10. A single member gives no stride to test, so this chapter neither confirms nor breaks the stride-6 pattern established in the two preceding chapters (1peter 1: keys 1,7,13,19,25, five members walking monotonically Gal 6:8 to Eph 1:8; acts 21: keys 2,8,20,26,32,38, six members walking Luke 24 to Acts 1:14 with the last block repeated verbatim). Worth recording anyway as a data point that the residue can be a single stranded block rather than a series."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "7",
+        "10",
+        "11",
+        "12",
+        "17",
+        "22",
+        "24",
+        "25"
+      ],
+      "note": "The 200-word fetch cap truncates Keil and Delitzsch throughout exodus 2. Keil is the OT-set replacement for Barnes/Robertson and appears at twelve keys here; every one of his blocks is cut at exactly 200 words, and because Keil's format prefixes the full verse text before the comment, several blocks are almost entirely verse quotation with one or two sentences of exposition surviving. Key 17 spends its whole allowance printing 2:17-21 and yields only the note that hô'îl means voluit and that the Midian life was still a banishment; key 22 prints 2:22-23 and is cut mid-sentence in the middle of the Baumgarten argument about which Pharaoh died. Same defect flagged in genesis 9 and numbers 6. A re-fetch at a higher cap would materially improve every OT chapter's grammatical-historical school coverage."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "2",
+        "3",
+        "10"
+      ],
+      "note": "Calvin alone censures Moses's parents, twice, against a unanimous chorus of praise. On the ark (2:3) Ellicott, Gill, Henry, Clarke and Wesley all read the bulrush chest as careful and even ingenious contrivance, and Henry and Wesley make it an act of faith on the strength of Hebrews 11:23; Calvin says their timidity 'cannot advisedly be excused', and presses the comparison that the dams of brute beasts do better by their young than these parents did by theirs. On the child's beauty (2:2) the same five take the goodliness of the child as the ground and warrant of their faith; Calvin says that if they were moved to preserve him because he was beautiful, this 'deservedly detracts from the praise' of that faith, since faith should not depend on the appearance of its object. This is the sharpest single-voice minority in the chapter and it runs across two verses, so it is not a passing remark."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "10"
+      ],
+      "note": "Two disagreements at once on the name Moses, and Calvin's unintended-witness reading. (a) Philology: Ellicott and Keil derive the name from the Egyptian (mesu, 'child' or 'born of', as in Thothmes, Ahmes), Ellicott adding that the princess would naturally have named him in her own tongue and that the Hebrew explanation is an accommodation; Clarke argues for the Hebrew mashah, 'to draw out', on the ground that the princess had been long enough among the Hebrews to know the language, and Gill and Henry follow the Hebrew without argument. (b) Calvin ignores the etymology entirely and reads the naming as testimony extorted from an unwilling witness: in giving the child a name that records his rescue from the water, the princess 'bear[s] loud and public testimony to the very thing which she would have preferred to conceal', so that God moved her tongue as he afterwards moved the tongue of Balaam's ass. The three readings do not conflict on the facts; they conflict on what the verse is FOR."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "12",
+        "14"
+      ],
+      "note": "The killing of the Egyptian: Ellicott alone condemns it, and the two who defend it hardest also fence the defence. Ellicott says the Jewish commentators gloss the act over or eulogise it as heroical, but it was clearly the deed of a hasty and undisciplined spirit — the offence did not deserve death, and had it done so Moses had neither legal office nor divine call to make himself an executioner — so that by this one wrong act he put it out of his power to help his brethren for forty years, and he collects the bill at 2:14, where the sting of the rejoinder lies not in the day's interposition but in the previous day's blow. Against him: Calvin holds on Stephen's authority that Moses knew himself divinely appointed avenger and was armed by God's command; Clarke supplies a ground nobody else has, that the Egyptian had probably killed the Hebrew, so that the Noahide precept justified him; Wesley and Henry say shortly that he acted by special warrant from heaven. But Calvin at once forbids the inference (private persons are by no means countenanced by this example, the sword of vengeance belonging to the judges, and if these fail the innocent 'all we can do is to murmur') and refuses to call the act perfect (the looking about and the secret blow show his faith was weak, so the Apostle's praise must not be read as praise of something perfect); Wesley makes the same reservation in a parenthesis, that the warrant 'makes not a precedent in ordinary cases'. Gill reads the same glance the opposite way, as arguing no consciousness of evil but only care for his own preservation."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "12",
+        "19"
+      ],
+      "note": "Ellicott builds four arguments for Mosaic authorship out of incidental detail in this one chapter, all of the same form — the narrative says something an outsider would not have thought to say. (1) At 2:1 the father's name is omitted where any later writer would have supplied Amram from the genealogy. (2) At 2:12 Moses hid the body 'in the sand', not 'in the ground', which fits the sand creeping up to the cultivated land east of the Delta and is what a man who dug the grave would remember. (3) At 2:19 Reuel's daughters say 'an Egyptian delivered us', where any other author would have written 'a man' or 'a stranger' — the mistake is one Moses would remember being made about him. (4) Also at 2:19, 'and also drew water enough for us' presupposes that the shepherds had already consumed some of the maidens' water, an unexplained detail that only makes sense from inside the scene. No other voice in the catena argues authorship from incidental detail at all; Clarke's only contribution in that direction is the report that some suppose Moses wrote Job, and Genesis, during the Midian years."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "16",
+        "23"
+      ],
+      "note": "Matthew Henry Concise spliced onto Exposition, now in a third book and twice in one chapter. Keys 16 and 23 both carry the full Exposition and then, with no break or marker, the corresponding Concise paragraph, which restates the same material in compressed form and adds matter the Exposition does not have — at key 23 the Concise closes with an evangelistic appeal ('Take courage then, ye who, conscious of guilt and thraldom, are looking to Him for deliverance... Come unto me, all ye that labour') that has no counterpart in the Exposition. Previously logged at 1peter 1 key 17 and acts 21 key 19, where it mattered exegetically because the Concise passed a harsher verdict on Paul's compliance than the Exposition anywhere did. Here the two agree in substance, so the only cost is double-counting Henry's weight in the word budget, but the pattern is now established across three books and both testaments and should be handled in the fetcher rather than per chapter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "23"
+      ],
+      "note": "Four independent chronologies for the death of the king, reached by four different methods. Ellicott argues from regnal length: Moses was eighty at the Exodus and forty at the flight, so the Pharaoh he fled must have reigned above forty years, and only Thothmes III and Rameses II did so between the start of the eighteenth dynasty and the close of the nineteenth. Clarke names candidates on authority — Usher for Ramesses Miamun (whose son Amenophis drowned in the Red Sea), Abul Farajius for Amenophis himself as the author of the edict — and dates the death about forty years after the flight from Stephen. Gill sets Eusebius (Orus, then Acenchres and Achoris) against Usher (the same king throughout, dead in the sixty-seventh year of his reign, Moses then sixty), and adds the general caution that Scripture often puts close together what was done at a considerable distance. Calvin argues from probability alone, with no king-lists: the tyrant of chapter 1 cannot have lived to this point, since he would have reigned above eighty years, 'which is not usual', so one or more kings intervened — which is also Wesley's bare supposition. Four methods, four answers, and none of the four engages the others' evidence."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "16"
+      ],
+      "note": "Calvin grades the Midianite religion instead of sorting it, and in doing so contradicts Ellicott flatly. Ellicott says without qualification that the Midianites, as descendants of Abraham by Keturah, worshipped the true God and seem at this time to have been a religious people, citing Reuel's name ('friend of God'), Jethro's sacrifices 'for God', and the elders eating bread with him 'before God'. Calvin reaches the opposite starting point — Melchizedek was the only priest of the living God in Abraham's day, Abraham himself was drawn out of a family sunk in idolatry, and it is plain from other passages that the Midianites were joined to idols — and yet cannot make Jethro an idolater, since Moses would not have married into a house 'defiled by foul unrighteousness'. His resolution is a graded verdict rather than a binary one: 'there is some difference between idolatry and the impure worship of God, corrupted in some respects', so the Midianites 'had not entirely departed from the principles of His religion, although they had contracted some defilement from the stinking puddles of error which had gradually crept in'. Worth flagging as a rare case where a commentator explicitly refuses the true-worship/false-worship binary the rest of the catena assumes."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "2",
+      "verses": [
+        "1-25"
+      ],
+      "note": "Fidelity self-grade A for all six entries of exodus 2. Tiling covers 1-25 exactly with no gaps or overlaps: 1-4 (649w), 5-10 (647w), 11-12 (648w), 13-15 (647w), 16-22 (649w), 23-25 (650w) — all inside the 350-650 window. Voice coverage: entries 1, 11, 16 and 23 name all seven live OT voices (Gill, Henry, Clarke, Ellicott, Calvin, Wesley, Keil and Delitzsch); entry 5 names seven with Jamieson excluded as Genesis 43 residue; entry 13 names the five that actually appear at 13-15 (Gill, Clarke, Ellicott, Calvin, Wesley — no Henry and no Keil block falls in that range). Every proposition in the prose is traceable to a named block in data/commentary/cow/exodus/2.json; where a voice is reported as alone in a view (Ellicott on the killing, Calvin on the parents, Calvin on the graded Midianite religion) the claim was checked against every other block in the range before being written. Real usable source words after deducting the 992-word chrome at key 23: 27,990 across six entries. No entry names a voice not present in its own verse range, and no block present in a range goes unused except the excluded Jamieson residue."
     }
   ]
 }
