@@ -11830,6 +11830,76 @@
       "book": "1samuel",
       "chapter": "1",
       "note": "Length control across two chapters this batch, sixteen entries. 1samuel 1 came in at 641, 637, 636, 647, 633, 619, 648, 649 and judges 4 at 645, 644, 639, 558, 641, 646, 647, 644. Thirteen of the sixteen needed a trim pass; every cut was structural (note 1018), none lexical. The overshoot on 1samuel was worse than on judges — first drafts at 800, 747, 740, 726, 725, 707, 706 — and the reason is identifiable: this chapter has six voices where judges 4 had four effectively, and six voices on a short verse means six positions to place rather than four, so the outline-stage cutting that note 1051 recommends has to be much more aggressive than it feels safe to be while drafting. The rule I would state now is that the pre-cut should scale with the VOICE COUNT, not the source-word count: at six voices, plan to drop roughly one idea per voice before writing, not one or two from the entry as a whole. The standing check added at judges 4 — that every name in tags.voices actually appears in the entry's prose — caught nothing this time, having been applied during drafting rather than after; it is worth keeping as a drafting habit rather than a post-hoc check."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "40",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JFB displacement, 42nd confirmation, and the first case where the DONOR ADVANCES IN LOCKSTEP with the host key. All four JFB blocks are displaced and all four sit at a perfect stride of six: key 3, key 9, key 15, key 21. Their donors advance monotonically through the source text as the host key advances. Key 3 is a 13-word fragment glossing kesitah — literally lambs, probably a coin with the figure of a lamb on it — which belongs to Genesis 33:19. Key 9 is Genesis 34:1-4, Dinah going out and Shechem's attachment to her. Key 15 is Genesis 34 further on, Hamor and Shechem seeming to act honestly but neither expressing regret nor restoring Dinah. Key 21 is Genesis 34 further still, the circumcision demanded of the Shechemites as a cloak to cover a diabolical design, and it is truncated mid-sentence. So the reading head is at Gen 33:19 when the host is at 40:3 and has moved steadily into and through Genesis 34 by the time the host reaches 40:21. Every previous case established only that displaced blocks appear at intervals; this one shows the donor position is a monotonic function of the host position within a single chapter. Fourth same-book case. All four blocks excluded; every one of those keys carries other voices, so the exclusions cost nothing."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "40",
+      "note": "The 200-word truncation cap is NOT confined to 1samuel 1 — it recurs here, which makes it a corpus-wide scraper defect rather than a one-chapter accident. In genesis 40, Keil is capped at exactly 200 words in six of his seven blocks (keys 2, 6, 9, 10, 13, 17; only key 21, at 51 words, falls under the cap and is complete), and Gill is capped at exactly 200 in two of twenty-three (keys 1 and 5, his two longest; every other Gill block runs between 17 and 200). Henry (up to 1141), Clarke (up to 314), Ellicott (up to 1046), Calvin (up to 733) and Wesley (up to 162) are all untouched. That is the same signature as 1samuel 1: Keil almost entirely capped, Gill capped only where he ran long, everyone else free. Two chapters from different books and different testaments show it, so the cap should be assumed present wherever Keil appears. Practical consequence for picking: the size command counts capped words as usable, so it overstates any chapter whose bulk is Keil, and a chapter that looks writable on its word count may not be."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "40",
+      "verses": [
+        "16"
+      ],
+      "note": "An editor's footnote is spliced into the body of Calvin's key-16 block, ahead of Calvin's own words. The block opens with a quotation attributed to 'Egypt and the Books of Moses, p. 27' about wicker baskets on the Egyptian monuments and the perfection of the baking art, then breaks off with a stray em-dash and begins Calvin's actual comment mid-sentence ('He does not care respecting the skill and fidelity of Joseph...'). The same pattern appears in Calvin's key-12 block, where a long editorial note about the white tablet and the nail is embedded in the middle of his comment on lifting up the head. Anything drawn from those passages would be attributed to Calvin by the fidelity check, since it is inside his blob, while in fact belonging to his editor. I left both untouched. Worth watching in other Calvin chapters: his blocks in this edition carry editorial apparatus inline, and the fidelity gate cannot tell it apart from the commentator's own voice."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "40",
+      "verses": [
+        "20"
+      ],
+      "note": "StudyLight boilerplate tail, 33rd instance, and the THIRD DISCRIMINATING CASE — it confirms the numbers 28 rule again. Ellicott's keys in this chapter are 1, 8, 11, 15, 19 and 20, so his final block is at key 20 while the chapter runs to key 23; the tail attaches to the end of that key-20 block, not to the chapter's last key. That matches numbers 15 and exodus 19, the only two previous cases where the two could be told apart, and the rule can now be stated with reasonable confidence: the StudyLight tail attaches to the end of Ellicott's final block, wherever in the chapter that falls. Separately, Gill's own sacred-texts navigation tail (Next: Genesis Chapter 41 Sacred Texts | Bible - Previous: John Gill's Exposition...) appears at key 23. Gill's last block IS the chapter's last key here, so this instance is non-discriminating and his tail's attachment rule remains untested — it still needs a chapter where Gill stops before the last key."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "40",
+      "verses": [
+        "20"
+      ],
+      "note": "The sharpest named collision between two voices met so far, and it sits inside a single entry. On Genesis 40:23 Henry reports with approval the parallel between Joseph and Christ — Joseph's two fellow-prisoners answering to the two thieves, one saved and one condemned, and the butler forgetting the man who said remember me where the thief who said remember me was not forgotten — attributing it to Lightfoot from Broughton. Clarke, commenting on the same verse, attacks precisely that reading by name of its type: many commentators have seen in every circumstance of Joseph's history a parallel to our blessed Lord; he believes God never designed such parallels, is astonished to find comparatively grave and judicious men trifling in this way and forcing the features of truth into the most distorted anamorphosis, warns that we should beware how we attribute designs to God that he never had, and calls the mischief done by this system really incalculable, since it furnishes infidels with pretexts to scoff at all spirituality. Unlike the leviticus 21 and joshua 4 cases, where the two halves of a disagreement fell in different entries and could not be set against each other, both blocks are filed at keys inside the same span, so the prose could stage the quarrel directly and the tags carry it as a debate with both holders named. This is the shape a tiling should aim for: check before fixing boundaries whether a chapter's live disagreement can be kept in one entry."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "40",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "14"
+      ],
+      "note": "The Henry-Wesley abridgement pattern is total in this chapter, and for once it costs nothing. Wesley has six keys (1, 4, 6, 8, 14, 20) and Henry three (1, 5, 20); at every one of Wesley's keys his comment is a compression of Henry's, sometimes word for word — the opening (we should not have had this story of Pharaoh's butler and baker recorded in scripture if it had not been serviceable to Joseph's preferment; the world stands for the sake of the church) is byte-for-byte identical apart from punctuation, and the sadness comment at key 6 and the modesty comment at key 14 are near-verbatim. What makes this chapter different from exodus 19 and genesis 22, where the pair straddled entry boundaries, is that here the duplication is USEFUL. Henry's key-1 block runs ahead over vv1-8 and carries his remark about Joseph not reflecting on his brothers who sold him, which belongs to v15 and therefore could not be used in the vv1-4 entry that holds it. Wesley's key-14 block reproduces exactly that remark, and key 14 sits inside the vv9-15 span, so the material reached its proper entry through the abridging voice after the original voice could not carry it there. Working rule to add: when a section-header voice's run-ahead is stranded by the filing rule, check whether an abridging voice repeats it at a key inside the target span — the abridgement can rescue the material legitimately."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "40",
+      "note": "Length control, five entries: 640, 644, 647, 644, 635, all grade A, none over 650 on either tokenizer. Every one needed trimming and the first drafts were the worst of the run — 818, 804, 785, 702, 662 — which is consistent with the voice-count rule recorded at 1samuel 1 (note 1080) and sharpens it. This chapter carries SEVEN voices in three of its five entries, the most yet, and the overshoot scaled with that almost exactly: the seven-voice entries drafted at 785-818, the six-voice entry at 702, the five-voice entry at 662. Since the entries are all capped at 650 regardless, the practical rule is that the per-voice budget is what shrinks: at four voices each voice can have three ideas, at seven each can have one and a half. I drafted as though each voice deserved a full hearing and then cut back, which cost two to four trim passes per entry. The correction for next time is to allocate before drafting — divide 600 words by the voice count, and write to that quota per voice rather than per paragraph. Note also that all five cuts that actually moved the needle were whole ideas dropped (Clarke's Smithfield polemic, Ellicott's Egyptian palm idiom nearly, Calvin's birthday passage, Henry's Nebuchadnezzar caution, Gill's catalogue custom), while lexical tightening across three passes on entry 5 moved only 16 words in total. Note 1018 continues to hold without exception."
     }
   ]
 }
