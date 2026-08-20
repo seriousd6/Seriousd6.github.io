@@ -10570,6 +10570,111 @@
         "24"
       ],
       "note": "First chapter in which the note-969 rule - where two voices say the same thing at length, name both and quote one - was applied from the first draft rather than in trimming. Entries 4 and 5 came in at 639 and 637 words with zero trim passes, against six passes for entry 1 and a 706-word overshoot on entry 3 in the same chapter. Entry 5 did need one pass, but for lexical variety rather than length: MATTR came in at 0.577 against the 0.58 threshold, and swapping four repetitions of 'sacrifice' and 'fire' for 'victim', 'oblation', 'flame' and 'token' moved it to 0.590 and grade A while dropping only seven words."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "1",
+      "note": "Chrome measured on the Ellicott block at key 25: 994 words / 24,951 characters of navigation strip plus CSS and JavaScript source appended after 98 words of genuine comment, nav strip reading 'James Jas 5 1 Peter 1Pe 1 Peter 1Pe 2'. Usable source for the chapter is therefore 91,763 words, not the 92,757 the sizer reports. IMPORTANT CORRECTION to the note filed on romans 1: that note recorded the chrome as 989 words and offered a 'book boundary costs three words' explanation. Both are wrong. The 989 was an artifact of starting the count three tokens late. Measured with a consistent anchor (the first navigation token after the genuine text) across four instances the payload is a fixed CHARACTER window, not a word count: 1peter 1 key 25 = 994w / 24,951 chars; genesis 9 key 29 = 992w / 24,953; numbers 6 key 23 = 992w / 24,952; romans 1 key 32 = 992w / 24,949. Character spread is 4. All four end at the identical character, mid-token, in '...(\"data-vf-open\")===\"1\";}for(var i=0;i'. The word variation is entirely explained by how many tokens the nav strip spends ('1 Peter' is two words, 'Genesis Gen' is two). There is no book-boundary rule. The capture is a fixed-length grab of whatever follows the article, and since numbers 6 and genesis 9 the payload has been CSS and JS source rather than navigation text."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "Jamieson stride-6 residue, FORTY-FIRST chapter attested. Keys 1, 7, 13, 19, 25 -- offset 1, five members, no gaps. What makes this instance different from the previous forty is that the five blocks form a MONOTONIC WALK through a continuous text: Galatians 6:8 (key 1), Galatians 6:13 (key 7), Galatians 6:18 (key 13), Ephesians 1:3 (key 19), Ephesians 1:8 (key 25). Consecutive, forward-moving, crossing the Galatians/Ephesians boundary in step. This is the first chapter in which the residue is not a scatter but a continuous read-through of the wrong book at a fixed stride. It strongly suggests the misalignment is a single pointer walking one commentary while the harvester walks another, rather than random substitution. Offsets 0 through 5 are now all attested across the 41 chapters, so offset carries no information; only the stride of 6 is diagnostic. All five blocks excluded from the synthesis."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "11",
+        "12",
+        "17",
+        "20",
+        "25"
+      ],
+      "note": "Cyril of Jerusalem residue at six keys (3, 11, 12, 17, 20, 25), Catechetical Lectures material with no bearing on 1 Peter -- the block at key 3 is a passage on 2 Corinthians 4:4 and the blinding of unbelievers' thoughts. Dropped SILENTLY rather than declared in excluded_voices, because scripts/synthesis_qa.py VOICE_LABELS carries only the short form 'Cyril' and split_voices() returns the matched short form, so the head 'Cyril of Jerusalem:' matches nothing and any declaration would fail the lint. This is the same VOICE_LABELS defect reported for the last sixteen batches (short forms for Cyril, Chrysostom, Robertson, Theodoret, Lightfoot). Still blocking clean declaration of residue voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "7",
+        "17"
+      ],
+      "note": "200-word cap and block truncation in this chapter. Gill is cut at exactly 200 words at eleven keys (1, 3, 5, 6, 8, 9, 13, 15, 19, 20, 22) and Cyril at four. Separately, three blocks end well short of the cap in mid-sentence, which is truncation of a different kind: Gill at key 4 stops at 131 words on 'and here it is said to be'; Gill at key 7 stops at 36 words; Gill at key 25 at 60. Also worth recording for the source tree generally: the Matthew Henry block at key 17 is drawn from the CONCISE commentary ('The fearless professor is defenceless, and Satan takes him captive at his will'), while every other Henry block in this chapter is from the full Exposition. The two works are being mixed under one voice name without any marker."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "2",
+        "9",
+        "10",
+        "12"
+      ],
+      "note": "Intra-catena citation, four instances in one chapter -- commentators quoting each other while the quoted man's own block stands in the same catena. (1) Key 2: Clarke transcribes Wesley's note on predestination IN FULL, saying 'the Rev. J. Wesley has an excellent note here which I will copy out for the benefit of those of my readers who may not have his works at hand' -- and Wesley's block stands a few inches down the same page. (2) Key 10: Ellicott quotes Calvin BY NAME and with approval ('Calvin rightly says: when he states that the prophets inquired and examined, this refers not to their writings or teaching, but to the private longing with which each was fired') -- and Calvin's block in this catena says precisely that. (3) Key 8: Ellicott quotes the hymn 'A charge to keep I have' -- Charles Wesley -- while John Wesley's block stands in the same entry. (4) Key 12: Ellicott quotes two more Charles Wesley stanzas on angels searching the mystery in vain. Compare the genesis 9 finding, where Wesley attacked Henry by name while abridging him elsewhere in the same chapter. The pattern is now firm: these commentators are in conversation with each other, and the catena silently reassembles that conversation."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "2"
+      ],
+      "note": "Five-position election controversy at 1:2, the densest single-verse disagreement in the chapter. Gill: eternal election of these persons both to grace and to glory, known to the apostle not by revelation but by a judgment of charity. Barnes: the election is real, but a man has evidence of it only so far as he is renewed by the Spirit and has holiness of heart and life, AND NO FARTHER -- no one can go up to heaven and inspect the book of life. Ellicott: refuses both escapes -- it is 'an evasion of the difficulty' to say they were elect only in the mass, since the election was individual and personal, and YET for all their election they are not certain of salvation, the title implying no more than that God has put them into the visible Church. Clarke: corporate only, arguing with Lardner and Macknight that if the letter had been directed to persons elected to eternal life no one could have received it, since none could be sure of his election till he arrived in heaven. Wesley: a full set-piece against predestination -- denies foreknowledge in the strict sense (there is no more foreknowledge than afterknowledge with God), reduces true predestination to three propositions, and lays four numbered charges against any other, that it is cruel respect of persons and mere creature partiality, that it contradicts the universal offers of grace, that it makes probation meaningless, and that it is of fatal consequence since all men are ready on slight grounds to fancy themselves of the elect number."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "14",
+        "18",
+        "23",
+        "24"
+      ],
+      "note": "The Jew-or-Gentile question about the readers runs as a single argument across five widely separated keys, and one commentator carries it. At 1:1 Barnes catalogues the parties (native Jews on Eusebius, Jerome, Grotius, Beza, Mill and Cave; Gentiles on Procopius, Cassiodorus and Wetstein) and does not decide; Ellicott decides for dispersed Jews and holds Palestine, not heaven, is the home contrasted, while Robertson holds the reverse, that heaven is our native country. At 1:14 Ellicott states the strongest case AGAINST his own view -- that the letter assumes its readers lived in ignorance and vice, which is 'contended, with much plausibility' to make them Gentiles -- and answers it in four steps. At 1:18 he settles it from the word 'tradition', which in the New Testament means something sedulously taught and handed down as an heirloom and so cannot describe a sensual life learned by example, whereas among the Jews it governed how a cup was washed: 'the readers of this Letter were certainly Jews by birth.' He then asks whether the Apostle of the Circumcision would dare call Judaism a vain conversation and an Egyptian bondage, and answers from Acts 15:10. At 1:23 'not of corruptible seed' becomes 'not of the seed of Abraham, but of the seed of God', an argument against Jewish arrogance toward Gentile converts. At 1:24 the whole Isaiah quotation is read as proclaiming the equality of Jew and Gentile, with the omitted words 'surely the people is grass' carrying the point. Robertson meanwhile says at 1:18 that 'the reference here seems mainly to Gentiles' and Clarke holds both nations wedded to inherited vanities. Calvin faces the same difficulty at 1:14 and answers by another road entirely: the Jews were blind in the midst of light, having a veil over the eyes so that they did not see Christ in the Law."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1peter",
+      "chapter": "1",
+      "verses": [
+        "7",
+        "11",
+        "12",
+        "25"
+      ],
+      "note": "Outliers of unusual character in this chapter. (1) Key 25: Clarke appends to his comment an ~1,100-word treatise on the chemistry and physics of GOLD -- specific gravity 19.3, a cubic foot weighing 1,348 lbs, one grain divisible into two million visible parts, one pound sufficient to gild a wire 25,000 miles long -- and turns it into an apologetic: gold survives any culinary fire but is volatilised in the focus of a powerful burning glass, 'this is but a late discovery, and previously to it a philosopher would have ridiculed St. Peter for saying, gold that perisheth.' An early-nineteenth-century laboratory report offered as vindication of a scriptural adjective, attached to a verse eighteen verses away from the phrase it defends. (2) Key 11: Ellicott makes the verse the most striking in the New Testament on prophetic inspiration and sets it between Montanism, which he illustrates from Montanus himself ('Lo, man is as a lyre, and I am as that which strikes the chords: the man is unconscious, and I alone wake'), and the opposite error that Isaiah saw Mary and Jesus as plainly as we do; he then quotes Keble on the Greek poets. In the same block he forbids the verse to be used for the pre-existence of Christ or the procession of the Spirit from the Son, on the ground that 'Christ' always marks the office and not the person -- while Barnes says in his block on the same verse that 'it is clear from this passage that Christ must have had an existence before his incarnation.' (3) Key 12: Barnes leaves exegesis for astronomy, describing Saturn's diameter, its 22,000 mph motion and its rings, as fields of eternal study for holy minds. (4) Key 12 and key 25: Ellicott twice invokes the Tubingen school, first that Peter's concurrence with Paul refutes their theory of divergence 'only the Tubingen school reject the Epistle on the ground that it makes the Apostles too harmonious', and then as the chapter's closing line, 'Well may the Tubingen school wish to disprove the genuineness of this Epistle!'"
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "1peter",
+      "chapter": "1",
+      "note": "Fidelity self-grade A for all thirteen entries of 1peter 1. Every proposition in every prose block is traceable to a named commentator's block at a verse inside that entry's range; no voice is named who is not sourced in that entry; no scripture reference appears unlinked; the two residue voices (Jamieson at keys 1/7/13/19/25, Cyril at keys 3/11/12/17/20/25) are excluded or silently dropped and contribute nothing. Word counts, all inside the 350-650 window: key 1 = 649; key 2 = 649; key 3 = 640; keys 4-5 = 645; keys 6-7 = 636; keys 8-9 = 642; keys 10-11 = 647; key 12 = 645; key 13 = 614; keys 14-16 = 643; keys 17-18 = 649; keys 19-21 = 650; keys 22-25 = 647. Total 8,356 words of synthesis over 91,763 words of real usable source (92,757 reported, less 994 of chrome), a compression of about 11 to 1. Thirteen entries tile verses 1-25 exactly. Every first draft ran over the ceiling and required between two and five trim passes; key 12 needed four, from 787 down to 645."
     }
   ]
 }
