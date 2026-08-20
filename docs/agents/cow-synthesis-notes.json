@@ -11336,6 +11336,81 @@
         "15"
       ],
       "note": "Length control on the largest chapter of the batch: four of nine entries needed trimming, but only one needed more than a single pass, and every successful cut was structural rather than lexical, per note 1018. The cuts that moved the needle were whole discarded ideas — Calvin's James guard at entry 1 (43 words), Clarke's Jupiter-medals digression's genesis-22 analogue in entry 4, Henry's thousands-and-millions moral at entry 15 (35 words). Sentence-level tightening again moved two or three words at a time and was not worth the passes. Also worth recording: on a chapter this dense I cut ideas at the OUTLINE stage for entries 4, 15 and 19 before drafting, and those three came in at 633, 611 and 573 with no trim passes at all. Pre-emptive selection beats post-hoc trimming, which is what note 998 was reaching for."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "12",
+        "24",
+        "48",
+        "54",
+        "60",
+        "72"
+      ],
+      "note": "JFB stride bug, 38th confirmation, and the largest single-chapter cluster yet: SEVEN displaced blocks, at keys 6, 12, 24, 48, 54, 60 and 72, all from 1 Chronicles 3-4. Key 6 is the sons of David and Amnon's expectations; key 12 the eleven sons born at Jerusalem; key 24 the dislocated text after Jeconiah with Davidson's proposed rearrangement; key 48 Caleb's grandfather the Kenezite; key 54 Bithiah the daughter of Pharaoh; key 60 the potters of Netaim and Gedera; key 72 the Simeonite cities David assigned to Judah. Donor position advances monotonically through 1 Chronicles 3:1 to 4:31, and 1 Chronicles precedes Nehemiah canonically — fourteenth confirmation of the lag model. Spacing is 6, 12, 24, 6, 6, 12, which is irregular, but note that this chapter's scrape keys are themselves sparse, so the gaps may be an artefact of where JFB has any block at all."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "rejected",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "8",
+        "12",
+        "19",
+        "24",
+        "33",
+        "34",
+        "48",
+        "54",
+        "60"
+      ],
+      "note": "NOT ATTEMPTED — blocked, and I am recording why rather than starting it. Nehemiah 7 is the register of returning exiles: 22 scrape keys across 73 verses, 5,367 usable source words, and no contiguity, so under the tiling rule it must be written as single-key entries with no ranges (the convention already used at ezra 2 and 1chronicles 1, which have one entry per source key and declare no pericopes). Sixteen of the 22 keys fall under 200 source words and would need the thin-verse exemption. That much is merely laborious. The blocker is what the JFB exclusions leave behind. Keys 12, 24, 48 and 60 contain NOTHING BUT a displaced JFB block, so once it is excluded they have zero usable source words and no entry can honestly be written for them at all. Key 54 is left with twelve words after exclusion — a note that some of Kennicott's and De Rossi's manuscripts read Mehira for Mehida — against a thin floor of 120 prose words. Keys 34 (16 words, distinguishing one Elam from another), 19 (24 words, a variant reading of a number) and 33 (49 words, on the word 'other' before Nebo) are in the same position. Key 8 is itself a bare cross-reference of the Clarke kind, saying that since the chapter is almost identical to Ezra 2 nothing need be added and the reader is referred there. Nine of 22 entries therefore cannot be written without manufacturing filler, which is precisely what the thin exemption exists to prevent (see the note above THIN_SOURCE_MAX in validate-synthesis.py and docs/plans/cow-synthesis-quality-audit.md). This needs an owner decision of the same kind numbers 31 is waiting on: either the chapter is dropped from the repair queue, or its four JFB-only keys are allowed to be omitted outright, or a lower floor is defined for register chapters. Nothing was written to the data tree; the pick is released."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "JFB stride bug, 39th confirmation, and the THIRD same-book case after exodus 19 and genesis 22. A single block at key 1, on the broad-tailed Eastern sheep whose tail weighs fifteen pounds and upwards and which usually bled on the Jewish altars — that is Leviticus 3:9, the fat tail of the peace offering, displaced into Leviticus 21. Donor precedes target within the same book; fifteenth confirmation of the lag model. With only one block, no stride can be inferred, the same limitation recorded at deuteronomy 6 and genesis 22. Excluded."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-argument header at key 1, followed by substantive comment on the priests not assisting at a laying-out. Running tally across five chapters: substantive at exodus 19, genesis 22 and leviticus 21; empty at numbers 15 and joshua 4. Three to two, close to even, which is what note 1049 predicted and confirms that the header carries no information about whether the block is usable — the test has to be applied every time to what follows it."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "21",
+      "verses": [
+        "16",
+        "20"
+      ],
+      "note": "A live disagreement between two commentators about whether the chapter's own rule still binds, worth flagging because it is unusually direct. Clarke on the blemishes says 'Let no man say this is a part of the Mosaic law, and we are not bound by it. It is an eternal law, founded on reason, propriety, common sense, and absolute necessity,' and at verse 20 turns it on his own communion — formerly the Church of England was cautious about admitting men with gross personal defects, 'but now we find the hump-backed, the jolt-headed, bandy-legged, club-footed, one-eyed, etc., priests even of her high places. Why do our prelates ordain such?' Henry, at the same verses, says the reverse in as many words: under the gospel the blemished may thank God they are not thereby excluded from the ministry, since 'there is many a healthful beautiful soul lodged in a crazy deformed body,' and the disqualifying blemish now is a reigning vice. Carried as a debate rather than harmonised. Also recorded because the two positions sit in different entries under the tiling (16-19 and 20-24) — Henry has no key past 16, so his side had to be stated in the earlier entry and Clarke's outburst in the later one, and a reader of only one entry sees only one side. Third instance of the hazard noted at joshua 4 and genesis 22."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "21",
+      "verses": [
+        "20"
+      ],
+      "note": "Three commentators give three different totals for the disqualifying blemishes, none acknowledging the others: Clarke a hundred and twenty on Ainsworth's authority, itemised by body part; Gill a hundred and forty; Ellicott a hundred and forty-two, from the second-Temple registers. Presented as the disagreement it is. Ellicott also preserves the procedure behind his figure — a chamber in the Temple court where the Sanhedrin examined every priest, the rejected putting on black and going away in silence while the accepted put on white and feasted, and the rejected then being employed to select wood sound enough for the altar. That last detail is the kind of thing the catena carries and nothing else in the corpus does."
     }
   ]
 }

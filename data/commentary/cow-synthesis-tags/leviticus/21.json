@@ -1,849 +1,584 @@
 {
  "1": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1",
+  "pericope_label": "The priests not to defile themselves for the dead",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: as care was taken for the holiness of all Israel, the priests who served God especially must keep from all defilement; the section follows the law on familiar spirits, teaching men to seek the priest in doubt, not the diviner."
+    "prevalence": "several",
+    "summary": "Gill passes on the Jewish observation that this section follows the law about those with familiar spirits, to teach that in matters of doubt and difficulty men should resort not to such persons but to the priests of the Lord. Calvin explains why so much weight rests on small things: the priests were to differ from the rest of the people by notable marks, since special purity became those who represented the person of Christ, and the legal rites were steps by which Israel might ascend to the study of true holiness — though bodily exercise profiteth little, the use of the ancient shadows must be estimated by their end. On the prohibition of mourning he concedes how hard it is: a rare virtue, so to repress our feelings when deprived of brothers or friends that the bitterness of grief does not overcome our composure. He gives the restraint a positive meaning, that abstinence from mourning manifests the hope of the blessed resurrection, the priests being forbidden to mourn precisely so that the people might seek consolation from them; and he finds the figure fulfilled in Christ, who bore not grief only but the extreme horror of death, yet was free from every stain and gloriously triumphed, so that the very recollection of his cross wipes away our tears."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives the tradition in English measure, that it made a man unclean to come within six feet of a corpse, and draws the consequence: since all who entered the tent where a body lay were unclean seven days, every mourner at a funeral defiled himself for a week. He finds the law generous before it is severe, since God put an honour upon natural affection by dispensing with his servants' attendance for seven days while they indulged their sorrow for a near relation — but beyond that, weeping must not hinder sowing. He turns it into a charge to ministers: they must be examples of patience under affliction, and particularly under the affliction that touches in the tenderest part, since they know better than most why we must not sorrow as those who have no hope, and ought to be eminently calm and composed, that they may comfort others with the same comforts wherewith they are themselves comforted of God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the prohibition plainest: no priest was to assist in laying out a dead body or preparing it for interment, contact with the dead being held defiling probably because putrefaction had by then set in. Wesley gives the practical reason, that such pollution excluded a priest from converse with men, to whom by his function he was to be serviceable on all occasions, and from the handling of holy things — God teaching them, and all successive ministers, that they ought entirely to give themselves to his service."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil sets out the chapter's three heads before anything else: the priests were not to defile themselves by touching the dead or by signs of mourning, they were to contract and maintain a spotless marriage, and those with bodily failings were to keep away from the duties of the office. Ellicott stops on the way they are addressed, since the phrase the priests the sons of Aaron occurs only here, every other place in the Pentateuch having it the other way about — an inversion he takes to be deliberate, since they are priests by virtue of being Aaron's sons and not from any merit of their own. He notes that what constitutes defilement is not specified but was left to the administrators of the Law, who enacted that not only touching a dead body but coming within four cubits of it, entering the house where it lay, entering a burial place, following to the grave, or showing mourning at all, pollutes the priest. His best note is on the exception: where the corpse is among people whose business it is to bury it the priest is forbidden to take part, but where a priest, or even the high priest, finds a body on the road and can call no one to bury it, he is obliged to perform that last office himself — and knowing how much the ancient Hebrews thought of burial, one appreciates the humanity of the provision."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "finds the one case in which the rule reverses itself — a priest who comes upon an unburied body with no one to bury it is obliged to do the very thing the law otherwise forbids him"
+   }
+  ],
   "themes": [
-   "Speak unto the priests the sons of Aaron",
-   "none be defiled for the dead",
-   "the priest's stricter holiness (Heb. 7:26)"
+   "holiness required of those who teach it",
+   "what contact with the dead defiles",
+   "mourning restrained, and why"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: lists the near kin for whom the priest might be defiled and mourn; the opening clause ('his flesh') is taken to include his wife, his own flesh, the nearest of all, though not elsewhere expressed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for his kin, that is near unto him",
-   "his mother, and his father, and his son",
-   "natural affection ordered, not extinguished"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
    "John Gill",
-   "Charles Ellicott"
+   "Keil and Delitzsch",
+   "Charles Ellicott",
+   "John Wesley",
+   "Adam Clarke"
   ],
+  "range": "2-6",
+  "pericope_label": "The kin he may mourn for, and the mourning forbidden",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill argues from the Hebrew that the unnamed first exception is the priest's wife, since the words mean the other part of himself, one flesh with him, and adds Jarchi's dictum that there is no flesh of his but his wife — if she is not intended here she is nowhere expressed, and Ezekiel being specially forbidden to mourn for his wife shows that the permission was ordinary. On the maiden sister he canvasses whether she is a sister by both parents or by one, and suspects the qualifying phrase marks nearness of place, since being unmarried she remained in her father's house until she died. He reads the disputed fourth verse of a priest as a person of eminence rather than of a husband, and traces the forbidden mourning customs to the Chaldeans and the Greeks, noting that when Hephestion died Alexander shaved his soldiers and himself in imitation of Achilles, and that the priests of Isis were called by Minutius Felix her bald priests."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: takes the nearness as of place as well as kin, the unmarried sister remaining in her father's house till death, for whom the priest might be defiled."
+    "summary": "Clarke notes that the word rendered chief man may equally mean master or husband, and lists the two readings — that as a chief it would be improper to see him in the humiliation mourning implies, or that though a husband he must not defile himself even for a wife because the anointing of his God is upon him — preferring the first. On the shaving he reports from Herodotus that the Egyptian priests shaved the whole body every third day lest any uncleanness be about them when they ministered, and finds the same picture in Baruch, where the priests of Babylon sit with their clothes rent and their heads and beards shaven; from which he turns on his own century, since everyone knows the tonsure of the Catholic priests, and asks whether that should not be avoided as an approach to a heathenish custom. Wesley reads the exceptions as God's condescension to human infirmity, because in such cases it was very hard to restrain the affections, and observes that the allowance concerns the inferior priest and not the high priest; he takes the sister's nearness to be of habitation, one not yet cut off from the family, and gives the reason for binding the priests more strictly than the people, that they are by word and example to teach the people their duty."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the maiden sister still in sole relationship with him, who when married would go to her husband's house, is included among those for whom he may mourn."
+    "summary": "Ellicott reports that the administrators of the Law took the phrase his flesh that is near unto him to mean the priest's wife, the Chaldee of Jonathan rendering it so outright, and that the exceptions number seven. He notices that this is one of only three places in the Bible where the mother is named before the father, which the Jewish canonists explain by saying that a son's fitness for the priesthood depends more on his having a good mother — the rules about whom a priest might marry being so stringent that the slightest infringement disqualified the son, and when a city was besieged and taken all the priests' wives had to be divorced for fear they had suffered violence. He explains what changes when the sister marries, since she goes to her husband, ceases to be near her brother, and it devolves on the husband to attend the funeral rites; and he adds the point that reverses the tenor of the whole law, that for these seven relations the priest was not merely permitted to contract defilement but obliged to. On the fourth verse he reads the clause as restricting the permission to a lawfully married wife, so that a priest who had contracted a profaning marriage could not attend her funeral at all — the reading, he says, that does least violence to a manifestly disordered text. Keil sets out the same three prohibited mourning customs and their place in the chapter's argument."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who is meant by 'a chief man among his people' in the fourth verse?",
+    "positions": [
+     {
+      "position": "the priest as a person of eminence, for whom such humiliation would be unbecoming",
+      "holders": [
+       "Adam Clarke",
+       "John Gill",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "a husband — and the verse restricts the permission to a lawful wife, barring a priest from the funeral of one he had married unlawfully",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "reads the naming of the mother before the father as a comment on the priesthood's dependence on the mother's standing, and cites the wartime rule requiring priests' wives to be divorced after a city fell"
+   }
+  ],
   "themes": [
-   "for his sister a virgin, that is nigh unto him",
-   "which hath had no husband",
-   "mercy to the sister left in his care"
+   "the wife the law does not name",
+   "a chief man, or a husband",
+   "heathen mourning forbidden to Israel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: rejects the readings of a noble or a husband and interprets it of a priest, who was not to defile himself for kin more remote (such as those related by marriage), being a chief man among his people, lest he profane himself."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he shall not defile himself, being a chief man",
-   "to profane himself",
-   "holiness fixing a limit on grief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: baldness, shaving the beard, and cuttings were superstitious heathen mourning customs (Chaldeans, Greeks, Egyptians); forbidden to all Israel (Lev. 19:27-28), the more forbidden the priests."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They shall not make baldness upon their head",
-   "nor make any cuttings in their flesh",
-   "the priest free of heathen despair"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the priests, wholly given to God's service, should be clean and pure who bear the vessels of the Lord and set an example of holiness to others."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: this is the reason they may not disfigure themselves — being sacred to the Lord, they are not to indulge in heathen manifestations of grief."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They shall be holy unto their God",
-   "the bread of their God, they do offer",
-   "holy servants for the holy service (2 Tim. 2:21)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: distinguishes the 'whore' who prostitutes herself from the 'profane' whose chastity was violated (forced or enticed); the divorced woman also forbidden the priest, that his marriage match his holiness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They shall not take a wife that is a whore, or profane",
-   "nor a woman put away from her husband",
-   "the priest's household to be without reproach"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'sanctify him' means to think and speak well of him, esteem him holy, and (for the magistrate) to use authority to keep the priesthood from unlawful marriages; grounded in the LORD who sanctifies them and is himself holy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt sanctify him... he offereth the bread of thy God",
-   "he shall be holy unto thee",
-   "the LORD which sanctify you, am holy (Lev. 20:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "7-9",
+  "pericope_label": "The priest's marriage, and his daughter",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the law applies whether she were betrothed or married; the burning was a more terrible death than the stoning of others guilty of the like, because she profaned her father."
+    "summary": "Gill takes a whore for a common prostitute and profane for a woman whose chastity has been violated, willingly or unwillingly, but who has not made a practice of it, while noting that the Jewish writers read both terms of descent rather than conduct. On the command to sanctify him he makes the magistrate the enforcer, quoting Jarchi's blunt gloss that the priest is to be sanctified whether he will or no, and beaten until he puts such a wife away. On the daughter he takes up the rabbis' question whether the law means one betrothed or married — the Targum restricting it to the betrothed, Jarchi and Aben Ezra allowing either — and finds no such exception in the text, offering a reason why the verse would otherwise be redundant: any man's betrothed daughter guilty of this was already to die, so a separate law for the priest's daughter would be needless unless made solely for the sake of the different death, burning being the more terrible. Calvin explains why so much is asked, since Paul directs that pastors be chosen who rule well their own houses, lest those appointed to govern the Church be despised for their domestic vices; but God had regard most especially to the priesthood of Christ, that it should not be exposed to contempt. He is careful about what is forbidden: no law kept a private Israelite from marrying a divorced or a deflowered woman, and what was permitted to the multitude God condemned in the priests, to withdraw them from every mark of infamy — for if the people had not reverenced them, all religion would have been contemptible."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke defines the three classes morally and adds the reason for the third: a prostitute, though even reclaimed; a heathen, or one not a cordial believer in the true God; and a divorced woman, because that very circumstance might raise the suspicion that the priest and she had been improperly connected before. Wesley extends the second word to a woman deflowered secretly or by force, on the principle that the priest must keep every member of his family free not only from gross wickedness but from all suspicion of evil, and reads the charge to sanctify him as addressed to Moses and to whoever succeeds in his place, whose business it is to see God's laws observed."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the daughter's whoredom profaned her father, whose holy office her sin disgraced."
+    "summary": "Ellicott marks the turn the chapter takes here, since from defilement contracted through the dead the lawgiver passes to the priest's alliances with the living, which might carry still more serious consequences for his office, so that in choosing a wife he must be careful of both her chastity and her descent. On the charge to sanctify him he draws out both halves of the arrangement: the priest is placed under the supervision of the people, who according to the second-Temple authorities were to compel him by the prescribed number of stripes if he refused to conform; but where he keeps the law they must reverence him, which is why he takes precedence at public assemblies, opens the meeting by invoking God's blessing, reads first from the Law in the synagogue, and says the benedictions at table — an honour the Jews assign to the priests to this day. Keil takes the command as more than respecting his dignity, which is Knobel's reading, and as charging the nation, in the persons of its chiefs, to see that he did not desecrate his office by a polluted marriage; on the daughter he states the sentence plainly, that in profaning herself she profaned her father, and was to be stoned and then burned."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What do 'a whore' and 'profane' describe?",
+    "positions": [
+     {
+      "position": "conduct — a common prostitute, and a woman whose chastity was violated without her making a practice of it",
+      "holders": [
+       "John Gill",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "on the Jewish reading, descent — one not born of an Israelite, and one born of a forbidden marriage",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "a prostitute even if reclaimed, and a heathen or one not a cordial believer in the true God",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "points out that nothing forbidden to the priest here was forbidden to an ordinary Israelite, so that the rule is about reputation and office rather than about the acts themselves"
+   }
+  ],
   "themes": [
-   "the daughter of any priest, if she profane herself",
-   "she profaneth her father: she shall be burnt with fire",
-   "the closest watch over those nearest the altar"
+   "whom a priest may not marry",
+   "the people charged with their priest",
+   "the priest’s daughter and her sentence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
   ],
+  "range": "10-12",
+  "pericope_label": "The high priest: neither uncovered head nor rent clothes",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill passes on what the Jews required of the high priest's greatness: he was to exceed his brethren in beauty, in strength, in wisdom and in riches, and if his money fell short the other priests were to give him of theirs, each according to his wealth, until he was the richest of them all. He notices that the heathen afterwards imitated the rule about the dead, the Flamen Dialis at Rome being forbidden to go where a body was burnt or buried, and a branch of cypress being set at the door of a house of death so that a high priest should not enter unawares."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears the phrase about the crown of the anointing oil as more than description, since the anointing of the Spirit is, to all that have it, a crown of glory and a diadem of beauty. He presses the prohibition hard: the high priest must show himself perfectly unconcerned in all the crosses and comforts of this life, his natural affection swallowed up in compassion for the ignorant and concern for the household of God he was made ruler of, so that the holy one entrusted with the thummim and urim must not know father or mother. He gives a practical reason for the stricter rule, that an ordinary priest defiled could be replaced by another whereas a defiled high priest left a greater want, and that forbidding him any house of mourning would indicate to the people the greatness of his dignity. On the prohibition against leaving the sanctuary he notes that while his presence was requisite there he might not go out on any occasion whatsoever, not even to pay last respects to a dying relation, since to leave would prefer some other business before the service of God — as our Lord would not break off preaching to speak with his mother and brethren. And he turns the whole rule round at the end: our Lord, the great high priest of our profession, touched the dead body of Jairus's daughter, the bier of the widow's son and the grave of Lazarus, to show that he came to alter the property of death and take off the terror of it, for now that it cannot destroy, it does not defile."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: the high priest is greater than his brethren, set above them in office, the anointing oil poured on his head; he was to be greatest in dignity."
+    "summary": "Clarke marks the title as new, since this is the first place the phrase occurs and it is emphatic in the Hebrew — that priest, the great one — so that as a representative of our Lord he was required to be especially holy, and stands as God's king among the people. Wesley notes that uncovering the head was then the posture of mourners, though the custom later changed and mourners covered them instead, and observes that divers of these rites were afterwards translated by the heathen into their own use."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: consecrated by the anointing oil and the holy garments, he was bound to a holiness above the rest, not to uncover his head nor rend his clothes."
+    "summary": "Ellicott identifies the two marks of the high priest's consecration, the profuse pouring of oil that distinguished it from the ordinary priest's, and the robing, which he would render consecrated by putting on the garments rather than to put them on, since the vesting was itself part of the ceremony. He would render the next clause that he shall not let his head be dishevelled, adding from the Chaldee that the rending of clothes is forbidden in the time of distress, and gives the best reason offered for the prohibition: sustaining that position and standing as intercessor between God and man, such outward expressions of sorrow might lead the people for whom he ministers to believe that he was impugning the justice of the divine judgment. On the dead body he records how far the later authorities extended the rule, since any portion of a corpse counted, so that entering a place where a certain quantity of its blood lay defiled him, the literal phrase being any dead soul and the soul being in the blood; and he states the contrast that defines the office, that where the ordinary priest was obliged to attend the funerals of seven relations, the high priest was not permitted to join even his parents'. Keil adds the limit that keeps the rule from becoming absurd: he was not to leave the sanctuary to give way to grief or attend a funeral, but we are not to understand from this, as Bähr and Baumgarten maintain, that the sanctuary was to be his constant abode."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the prohibition on leaving the sanctuary require?",
+    "positions": [
+     {
+      "position": "that while his presence is requisite there he may not go out on any occasion, not even to a dying relation",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "that he not leave to give way to grief or attend a funeral — but not, as Bähr and Baumgarten hold, that the sanctuary was his constant abode",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "explains the ban on mourning by what the congregation would infer from it — an intercessor seen grieving might be taken to be impugning the justice of the judgment he stands under"
+   }
+  ],
   "themes": [
-   "he that is the high priest... upon whose head the anointing oil was poured",
-   "shall not uncover his head, nor rend his clothes",
-   "the High Priest whose holiness no sorrow stains (Heb. 7:26)"
+   "grief forbidden to the intercessor",
+   "not even for father or mother",
+   "whether the sanctuary was his dwelling"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he was not to enter a house where a dead body lay, lest he be unclean seven days and hindered from his office; the heathen later aped this in the priest of Jupiter."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the high priest's separation was set above even the deepest natural ties, not defiling himself for father or mother."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither shall he go in to any dead body",
-   "nor defile himself for his father, or for his mother",
-   "consecration overruling the closest claims of nature"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the high priest was not to go out of the sanctuary in the time of service to follow the dead; the law respects him in the case of his dead; the crown of the anointing oil marks him set wholly apart, his honour to remain in the sanctuary."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither shall he go out of the sanctuary",
-   "the crown of the anointing oil of his God is upon him",
-   "Christ's abiding ministry in the sanctuary (Heb. 7:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the high priest might take but one wife ('a wife,' one and not two), though polygamy was practised by others and even by common priests; she was to be a virgin, never known nor betrothed to another, answering the charge that the minister be the husband of one wife (1 Tim. 3:2)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he shall take a wife in her virginity",
-   "one wife only, a virgin",
-   "the type of the Mediator unstained (1 Tim. 3:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the high priest might not marry even a widow, whether of a priest or an Israelite, nor one betrothed and left a widow; the rule was stricter than for the common priest, who might marry a widow — the high priest to take only a virgin of his own people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "A widow, or a divorced woman, or profane, or an harlot... shall he not take",
-   "he shall take a virgin of his own people",
-   "the high priest's domestic purity, strictest of all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
    "John Gill",
-   "Charles Ellicott"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "13-15",
+  "pericope_label": "He shall take a wife in her virginity",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: by such marriages his children would lie under disgrace, unfit to succeed him in the priesthood, or a disparagement to it."
+    "summary": "Gill takes a wife to mean one and not two, citing Ben Gersom and Maimonides for the view that though polygamy was practised by Israelites and even by ordinary priests, the high priest might never have two women together — and notes the parallel that the Egyptians, who took as many wives as they pleased, allowed their priests but one, as a minister of the New Testament is to be the husband of one wife. On the age he reports that the Talmudists required one whose puberty was not fully completed, so that there could be no doubt at all of her virginity; and on the widow he explains that the ban reaches even a virgin betrothed to a man who died before marrying her, since betrothal made her his widow, while allowing the exception that a man who had betrothed a widow before being raised to the pontificate might marry her afterwards, naming Joshua the son of Gamla as the instance. He adds the one duty the office cancelled, that where another man was bound to marry his brother's childless widow, the high priest was to have his shoe plucked off instead. Calvin raises an objection nobody else does and answers it with unexpected humanity. Someone may object that the marriage of an old priest to a young girl is ridiculous and indecorous and liable to many inconveniences, to which he replies that special regulations must be so expounded as not to interfere with general principles: if a decrepit old man falls in love with a young girl it is a base and shameful lust, he will defraud her if he marries her, jealousy and wretched anxiety will follow, or else, by dotingly seeking to keep his wife's love, he will throw away all regard for gravity. God, in forbidding the high priest any but a virgin, did not mean to violate a rule dictated by nature and reason: allowance being made for age, an elderly priest should marry a virgin not too far from his own years, and where a man was failing and little fitted for marriage at all, the law amounted rather to an exhortation to celibacy."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rests the question on the noun, which he takes as full proof that bethulah is the proper Hebrew word for a virgin, from a root meaning to separate, since such a person stood in her separate state and had never in any way been united to a man. Wesley gives the other reason for requiring a virgin, that as the high priest was a type of Christ, so his wife was a type of the church, which is compared to a virgin — adding that most of these things are forbidden to all the priests, and are repeated of the high priest to show that he especially is bound by them."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: he is not to contract any forbidden marriage, lest the children of such an issue, like their mother, be debarred the privileges of the priesthood and its portions."
+    "summary": "Ellicott sets out the four conclusions the second-Temple authorities drew from the verse: that the high priest must have one wife where ordinary priests might have several, that she must be a virgin under thirteen, that she must not even have been betrothed to another, and that she must be of Jewish parentage by race, where the ordinary priest might marry a proselyte's daughter — the first of which Paul enjoins on Christian bishops, and the last of which the Greek version actually spells out at the end of the verse. On the widow he agrees that the ban covers the widow of a priest and of any Israelite alike, records the same exception for a betrothal contracted before election to the pontificate, and notes that the high priest was exempt from the obligation to marry the widow of a brother who died without issue. Keil closes the section on the reason given for all of it, that a marriage out of keeping with the holiness of his rank would profane not only himself but his posterity among his people."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "refuses to let a ceremonial rule override a moral one, arguing that where a man is too old for marriage the requirement of a virgin bride should be read as counselling celibacy rather than an unequal match"
+   }
+  ],
   "themes": [
-   "Neither shall he profane his seed among his people",
-   "for I the LORD do sanctify him",
-   "the holiness of the priesthood transmitted unbroken"
+   "one wife, and a virgin",
+   "why a widow is excluded",
+   "the old priest and the young girl"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
+   }
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "16-19",
+  "pericope_label": "No man that hath a blemish shall approach",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: after the holiness of the priests as to defilement and marriage, God adds laws concerning blemishes in their bodies that rendered them unfit for service."
+    "summary": "Gill notes the turn the chapter takes, from the holiness of the priests in defilement and marriage to blemishes in their bodies which rendered them unfit for the service, and observes that it fell to Aaron as high priest to examine carefully who was and who was not to be admitted to serve. Calvin takes the rule where he takes most of the ceremonial law: it is the same requirement laid on the sacrifices, of which none but perfect ones might be offered, so that Israel should know no victim could expiate sin but one possessing complete perfection, and the same is justly required of a priest, who cannot mediate between God and men unless he is free from every spot. From which it follows that a man of angelic purity was to be expected, and that the bodily imperfections enumerated here must be transferred to the soul — for if Christ's perfect cleanness did not wash away our impurity, no offering could come from us but what was foul and unsavoury. He adds the corollary he thinks worth observing, that the sanctuary of God is polluted by any defect or imperfection, so that whatever of their own men obtrude upon God is condemned as profane."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: as the spiritual nature is reflected in the bodily form, only a faultless body could answer to the holiness of the priest, as even the Greeks and Romans required their priests to be whole and unmaimed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses",
-   "the law of bodily blemishes",
-   "outward soundness a parable of inward perfection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Aaron, as high priest, was to see the rules observed and examine who might serve; the blemished were not to approach to offer."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the general law of vv.17-23 — whoever of Aaron's seed had any blemish was not to approach to offer the bread of his God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Whosoever... that hath any blemish, let him not approach",
-   "to offer the bread of his God",
-   "the one perfect Priest without blemish (Heb. 9:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the bar held whether the blemish were fixed from birth or transient, while it remained on him."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives the reason the Law itself had, that great men choose sightly servants, and that comely men were especially required for the people's sake, who judge by outward appearance and would think meanly of a service performed by someone despicable to look at — the provision being made to keep the altar from falling into contempt. But he is careful about what was not withdrawn: the blemished priest still ate of the sacrifices, even the most holy things, since the blemishes were such as he could not help, and though he might not work he must not starve. None must be abused for their natural infirmities, and even the deformed child in the family must have its child's part. Under the gospel he reverses the rule outright: those who labour under such blemishes have reason to thank God that they are not thereby shut out from offering spiritual sacrifices, nor, if otherwise qualified, from the ministry itself, for there is many a healthful beautiful soul lodged in a crazy deformed body. What he does infer is a different disqualification — those whose minds are blemished by a reigning vice are unfit, being spiritually blind and lame and crooked, and the deformities of Hophni and Phinehas were worse than any named here."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the 'blind' is blind in one eye, for the wholly blind could not be employed in the service at all; the flat nose and the rest likewise unfitted for the altar."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a blind man, or a lame, or... a flat nose, or any thing superfluous",
-   "the blemished not to approach",
-   "the priest's wholeness a sign of soundness in God's service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: any bone or joint of hand or foot broken or distorted — clubfooted or crook-fingered — unfit to ascend the altar and lay the sacrifice in order; an emblem of those disorderly in walk and unfit for every good work."
+    "summary": "Clarke could hardly be more emphatic in the other direction: never was a wiser, a more rational, and a more expedient law enacted relative to sacred matters, since a man who ministers in holy things should have nothing in his person or manner that cannot render him respectable to those he serves, and any personal defect that makes him contemptible will greatly injure his usefulness if it does not prevent it entirely. Let no man say this is part of the Mosaic law and we are not bound by it — it is an eternal law, founded on reason, propriety, common sense and absolute necessity. He allows one exception, that scars received in the work of God, by persecution or otherwise, are honourable and add to a man's respectability; and while granting that some eminent divines have been deformed and some blemished men useful in the Christian ministry, he holds that the rule admits of few exceptions. Wesley adds only that any notorious blemish disfiguring a man falls under the law, though it be not named here."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke and Ellicott: a badly cured fracture or dislocation of foot or hand barred the priest from service."
+    "summary": "Keil states the principle behind the list, that as the spiritual nature of a man is reflected in his bodily form, only a faultless condition of body could correspond to the holiness of the priest — and notes that the Greeks and Romans required the same of their priests for the very same reason, citing Plato and Seneca and Plutarch. He works through the terms, most of them obscure: one mutilated, particularly about the face; one with any member beyond the normal size; the hunchback; one whose limb is unnaturally thin or withered rather than merely wasted; one spotted in the eye, which he takes for a white speck rather than the blear-eyed of the Greek; and two skin conditions he identifies from the versions as the itch and the ringworm. Ellicott marks the transition, that having forbidden the priests to disfigure themselves or to disqualify their descendants by illegal marriages, the legislator turns to blemishes not voluntarily contracted at all, which disqualify as surely."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does this law bind the Christian ministry?",
+    "positions": [
+     {
+      "position": "yes — an eternal law founded on reason, propriety and necessity, since a defect that makes a minister contemptible destroys his usefulness",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "no — the blemished may thank God they are not shut out from the ministry; the disqualifying blemish under the gospel is a reigning vice",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "reads the whole list allegorically rather than practically, holding that the bodily imperfections must be transferred to the soul, and that the perfection demanded was never found until Christ"
+   }
+  ],
   "themes": [
-   "a man that is brokenfooted, or brokenhanded",
-   "unfit to ascend the altar",
-   "whole in conduct as in body"
+   "a faultless body for a holy office",
+   "whether the rule still binds",
+   "blemishes transferred to the soul"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
+   "John Calvin"
   ],
+  "range": "20-24",
+  "pericope_label": "The blemished priest may eat but not offer",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: 'crookbackt' is one with a hunch; notes the Jewish glosses reading the eye and brow defects among the blemishes."
+    "summary": "Gill reports the rival reading of one disputed term, since the Targums of Jonathan and Jerusalem paraphrase it as one whose eyebrows lying cover his eyes, Jarchi understands it so, and other Jewish writers refer it to some deformity about the eyes, one authority defining the gibben as a man who has no eyebrows or only one; he counts the disqualifying defects at a hundred and forty. On what the blemished priest kept, he notes that such men were not impure in either a moral or a ceremonial sense, and so might eat of the sacrifices, which the impure might not — blemished persons, whether their blemishes were fixed or transient, might divide and eat but not offer — and that since they were priests, with no inheritance and no other way of getting a livelihood, provision was made so that they should not perish through defects laid on them by the providence of God. Calvin finds in the same arrangement an admission against the system it belongs to. They were permitted the sacred meals and forbidden only to appear before God as mediators, and here the imperfection of the legal service betrays itself, since nothing could be found among men that could fully represent the truth; the defects of men made it necessary to separate two things that belong together, the honour and the burden, and by that separation Israel was admonished that another priest was promised them, in whom nothing would be wanting. He ends on the last verse, that Moses delivered these commands not to Aaron and his sons only but to all the people, so that the humblest of them might be a censor of the priests if in anything they fell short."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the disputed word for hunch-backed or gibbous, glosses the rest of the list in plain terms, and counts a hundred and twenty defects on Ainsworth's authority, itemised from eight in the head to seven in the strength and the breath. He fills in the pagan parallels — among the heathen the best-looking men were appointed to the priesthood, Metellus was refused it after losing an eye trying to save the Palladium from the burning temple of Vesta, since a priest defective in any member was held to be ominous, and at Elis the handsomest man was chosen to carry the sacred vessels — and then loses patience with his own church, since formerly the Church of England was cautious about admitting men with gross personal defects and now we find them in her high places: why, he asks, do our prelates ordain such? Wesley draws the distinction that governs the whole arrangement: God would show the great difference between natural infirmities sent upon a man by God and moral defilements which a man brings upon himself."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: gathers the list of bodily imperfections — crookbackt, dwarf, blemish in the eye, scurvy, scabbed, maimed — that unfitted a priest for the altar."
+    "summary": "Ellicott prefers the eyebrow reading outright, the hair of the brows so thick and heavy and long that they meet and cover the eyes, interfering with sight and making the man unsightly, and glosses the neighbouring terms from the second-Temple authorities as a cataract, a fusion of the white and black of the eye, and two kinds of ulcer distinguished by whether the scab is dry or moist within. He takes the general clause that follows the list as showing the twelve instances to be merely typical, so that it was left to the administrators to decide what other infirmities were included — whence the hundred and forty-two defects they registered. He then describes the machinery that number implies: a chamber stood in the Temple court where the Sanhedrin examined every priest before admitting him to the officiating staff, and at the end of each examination those pronounced disqualified put on black garments, wrapped themselves in black cloaks and went away in silence, while those declared fit put on white and joined their brethren, marking the day with a feast that opened with a benediction blessing God that no blemish had been found in the seed of Aaron. The rejected were not simply dismissed but set to work in the wood chamber, choosing timber sound enough for the altar, since a worm-eaten piece could not be burnt on it. Keil states what the blemished might eat, the most holy and the holy alike, and what they might not do, which was to perform any priestly duty, lest they desecrate the sanctuary."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the defect named by the word rendered 'crookbackt'?",
+    "positions": [
+     {
+      "position": "a hunchback, or one gibbous",
+      "holders": [
+       "Keil and Delitzsch",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "one whose eyebrows are so thick and long that they cover his eyes — the sense given during the second Temple",
+      "holders": [
+       "Charles Ellicott",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "preserves what became of the priests the examination rejected — dismissed in black and in silence, but given the work of selecting sound wood for the altar rather than turned away entirely"
+   }
+  ],
   "themes": [
-   "crookbackt, or a dwarf, or... a blemish in his eye",
-   "scurvy, or scabbed",
-   "the spotless Christ answering the law's whole demand"
+   "a hunchback, or overhanging eyebrows",
+   "how the disqualified were examined and employed",
+   "infirmity distinguished from defilement"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Jewish writers reckon the blemishes to one hundred and forty, any one of which barred a priest from offering."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: no man with a blemish of the seed of Aaron, high or common, was to come nigh to offer the offerings of the LORD made by fire."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "No man that hath a blemish... shall come nigh to offer",
-   "he hath a blemish; he shall not come nigh",
-   "the altar belonging to the unblemished"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: their natural infirmities did not make them impure, morally or ceremonially, so they might eat of the sacrifices that impure persons might not; being priests with no inheritance, provision was made that they not perish for defects not of their own making."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He shall eat the bread of his God",
-   "both of the most holy, and of the holy",
-   "the weak still owned and provided for by God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he might not enter the holy place before the veil to set the shewbread, light the lamps, or offer incense, nor come nigh the altar, though he might eat the bread."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: he was barred from the veil and the altar because of his blemish, that he profane not the sanctuaries, for the LORD sanctifies them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he shall not go in unto the vail, nor come nigh unto the altar",
-   "that he profane not my sanctuaries",
-   "holiness and mercy meeting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Moses told Aaron, his sons, and all Israel concerning defilement for the dead, marriages, and blemishes, that the priests be careful and the people know who was fit to put their sacrifices into the hands of."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses told it unto Aaron, and to his sons, and unto all the children of Israel",
-   "priests and people alike charged",
-   "the holiness of the altar the whole nation's concern"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
