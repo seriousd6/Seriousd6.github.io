@@ -10830,6 +10830,73 @@
         "29"
       ],
       "note": "Length control across eight entries: three landed in range on the first draft (637, 552, 633 after one pass) and the rest overshot by 20 to 85 words. The overshoots cluster exactly where the chapter offers a long single-voice argument that resists the note-969 treatment — Calvin on the heart not given, Calvin on the root and the drunkard, Calvin on the secret things — because there is no second voice saying the same thing at length to compress against. Note 969 works on redundancy; it does nothing for a chapter whose bulk is one commentator being thorough alone. Where that is the shape, the discipline has to be selection at the outline stage: choose the two or three moves of the argument to carry and drop the rest before drafting, not after."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "15",
+      "verses": [
+        "39"
+      ],
+      "note": "StudyLight boilerplate tail, instance 29 — and the FIRST DISCRIMINATING CASE in seven chapters. The tail attaches to Ellicott's key-39 block. Ellicott has no block at keys 40 or 41, so 39 is his final block, but it is NOT the chapter's last key: the chapter runs on to 41. The tail followed Ellicott, not the chapter. This confirms the refined rule proposed at numbers 28 — the tail attaches to the end of Ellicott's final block — and falsifies the competing rule that it attaches to the chapter's last key. Every case since deuteronomy 23 had the two coinciding; this one separates them cleanly."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "15",
+      "verses": [
+        "41"
+      ],
+      "note": "A SECOND and distinct boilerplate tail, from a different source, found in the same chapter. Gill's key-41 block ends with sacred-texts navigation furniture: 'Next: Numbers Chapter 16 Sacred Texts | Bible << Previous: John Gill's Exposition of the Entire Bible: Numbers: Numb... Index Next: ...'. This is not the StudyLight tail and does not look like it — it is short, it names the scrape source, and it attaches to Gill rather than Ellicott. Worth checking whether it appears at the end of Gill's final block in other chapters; if so there are two independent tail defects in the corpus, keyed to two different commentators, and only one of them has been tracked so far."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "15",
+      "verses": [
+        "11",
+        "29",
+        "41"
+      ],
+      "note": "JFB stride bug, 34th confirmation. Three blocks at keys 11, 29 and 41, all displaced, all from Leviticus 24-25: key 11 is the note on offences of a social nature punished through the judges, keys 29 and 41 are the Jubilee and the sabbatic year with the sixth year's triple yield. Donor advances monotonically and precedes the target canonically — tenth confirmation of the lag model. But the spacing is 18 then 12, which is IRREGULAR, and that matters: deuteronomy 29 in this same batch had a perfect stride of six with three byte-identical emissions, and I recorded it there as evidence for a fixed stride. This chapter cuts the other way in the same run. Two chapters, opposite evidence, no resolution — the honest position is that the stride is not yet explained, and neither the fixed-stride nor the sparse-coverage account fits both cases."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "20"
+      ],
+      "note": "A new sub-kind of empty block, and a rule change it forces. Clarke's key-1 block is nothing but his chapter argument — the running table of contents for the whole chapter, verse ranges and summaries, with no comment on verse 1 itself. I have been treating that header as a drafting hazard (it reads as a ready-made outline and drives overshoot, per notes 917 and 930); it is also an EMPTY BLOCK by the established test, since it contains no comment of the commentator's own on the verse it is filed under. Because entry 1 here is the single key 1, Clarke has no substantive block in the span, so he is excluded outright. His key-20 block is the familiar bare cross-reference and is the only Clarke block in the 17-21 span, so he is excluded there too. Two exclusions of the same commentator in one chapter, on two different empty-block kinds."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "22",
+        "30"
+      ],
+      "note": "Second chapter in this batch showing the running-commentary spill described for deuteronomy 29, and it behaves identically. Henry writes exposition by pericope rather than by verse, so his key-1 block covers vv1-21, his key-30 block covers vv30-36, and in both cases he has no key inside the span the material actually treats, so it stays where filed. Keil's key-31 block likewise runs into v32, but Keil DOES have a key at 33, so that material could move and did. The rule is working, but the effect is worth stating plainly: for commentators of Henry's type the entry at the head of a run carries the argument for the whole run, and entries later in the run lose him entirely."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "17",
+        "32"
+      ],
+      "note": "Length control, second chapter of the batch: five of seven entries landed in range on the first draft (593, 626, 464, 627, 606, 640 — six of seven, in fact), and only the last needed trimming, by 64 words. That is a marked improvement on deuteronomy 29 earlier in the same run, where five of eight overshot. The difference is what note 998 predicted: numbers 15 is a chapter of many short competing notes rather than a few long single-voice arguments, so the note-969 compression has something to work on in nearly every paragraph. The one entry that overshot, the tassels, is the one where Calvin, Clarke and Henry each develop a separate long argument that does not overlap with the others."
     }
   ]
 }

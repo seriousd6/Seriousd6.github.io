@@ -4,36 +4,66 @@
    "John Gill",
    "Keil and Delitzsch",
    "Matthew Henry",
-   "Adam Clarke",
    "John Calvin"
   ],
+  "excluded_voices": [
+   "Adam Clarke"
+  ],
+  "range": "1",
+  "pericope_label": "The law resumed after the sentence in the wilderness",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The gracious laws given after the rebellion of the spies — 'the LORD spake unto Moses' coming immediately after the murmuring over the spies' report (Num 14:1), the oath that the rebels should fall in the wilderness, and the defeat at Hormah, God giving laws for the worship of the land in the very shadow of judgment (Gill, Keil); the law beginning encouragingly 'when ye come into the land,' a word full of grace, assuring their children they would surely enter though the present generation die (Henry); the chapter partly repeating and partly gathering into one place precepts of sacrifice already given in Leviticus (Calvin); God not casting off his people utterly for their rebellion but renewing the covenant promise by these very laws, mercy rejoicing over judgment."
+    "summary": "Gill fixes the moment. This comes after the murmuring over the spies' report, after the sentence that the generation should be consumed in the wilderness, and after the defeat at Hormah, and is spoken lest their posterity should be discouraged and despair of ever enjoying the good land. Calvin explains both what the accessory offerings are and why they are measured. In these oblations God consulted the rude condition of the people and took, as it were, the character of a man, as if he feasted familiarly with them, which is why he elsewhere calls the sacrifices his meat — not because he who is the life in himself and inspires the life of all requires the supports of life, but because unless he descends to men he cannot lift up their minds to things above. As to the measures, Moses partly adverts here to precepts handled more fully in Leviticus and partly gathers into one place what he had said in various places and more obscurely; but the real reason is the danger on the other side, lest the people should introduce many inane and superfluous pomps, as the Gentiles were foolishly and immoderately luxurious in their sacred feasts, as if their delicacies gave pleasure to God. The measure of each particular thing is therefore prescribed, that they may not dare to invent anything arbitrarily; for though the ceremonies might be of trifling importance in themselves, the lawful had to be carefully distinguished from the unauthorized, to forestall the licentiousness of men, who would otherwise not have failed to mingle their own leaven."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears in the law's opening words an answer to the sentence just passed. When you come into the land of your habitation which I give unto you is a plain intimation not only that God was reconciled to them notwithstanding what he had decreed, but that he would secure the promised land to their seed notwithstanding their proneness to rebel; the statute takes it for granted that some of them should in due time come into Canaan. On the offerings themselves he reasons domestically: since the sacrifices of acknowledgment were meant as the food of God's table, there had to be a constant provision of bread and oil and wine whatever the flesh-meat was, for it was fit that God should keep a good house, that his table should be furnished with bread as well as flesh, and that his cup should run over. From the tables of quantities he draws the plain moral, that our religious services should be governed, as by other rules, so by the rule of proportion."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil measures the silence the chapter interrupts. After the attempt to force an entry into Canaan against the will of God and the advice of Moses, the Israelites remained many days in Kadesh, then turned into the wilderness toward the Red Sea as they had been commanded, and did not come again to the desert of Zin until the first month of the fortieth year. All that is known of that interval is a list of encampment names, and since the situation of most of them is unknown, or at any rate undetermined, no connected account of Israel's movements through those thirty-seven years can be given."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Keil",
+    "note": "marks the thirty-seven-year gap the chapter sits inside, and states plainly that the itinerary is too obscure to reconstruct — the narrative simply cannot be followed through this stretch"
+   }
+  ],
   "themes": [
-   "the LORD spake unto Moses",
-   "laws after the spies' rebellion",
-   "grace follows judgment",
-   "the land still to be given"
+   "a law that presupposes the land",
+   "God feasting with his people",
+   "the measure that forestalls invention"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "2": {
@@ -41,687 +71,159 @@
    "John Gill",
    "Keil and Delitzsch",
    "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The promise of the land renewed — 'when ye be come into the land of your habitations, which I give unto you'; 'I give' meaning 'I will certainly give,' notwithstanding the great provocation of the spies' rebellion, the laws of sacrifice repeated as a pledge that through the appointed offerings God would be reconciled and bring them in (Wesley); addressed chiefly to the younger sort, those under twenty, who alone would live to enter, the older sworn to die in the wilderness (Num 14:29, Gill); several offerings here prescribed not meant for the wilderness, lacking settled agriculture, but for the promised land (Clarke); God in the act of judging the rebels comforting the faithful remnant with the renewed promise, the gift sure, the covenant unbroken."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when ye be come into the land",
-   "which I give unto you",
-   "the promise renewed to the young",
-   "God's faithfulness outlasts sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The occasions of the offerings — 'a burnt offering, or a sacrifice in performing a vow... or in your solemn feasts'; the burnt offering wholly consumed upon the altar, distinguished from the other offerings (peace or thank offerings) of which part was eaten, 'a sacrifice' here the peace offering (Gill, Wesley); the occasions — in fulfilment of a vow, as a free and voluntary gift, or at the appointed festivals, the law covering the whole range of the people's sacrifices, occasional and stated, vowed and free; the end — 'to make a sweet savour unto the LORD,' that the offering be acceptable; the fuller laws referred to Leviticus (Lev 1:2, Clarke); the typology — the sweet savour pointing to Christ, whose offering was a sweet-smelling savour (Eph 5:2)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "an offering by fire",
-   "in performing a vow",
-   "a freewill offering, or in your feasts",
-   "a sweet savour unto the LORD"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "John Wesley",
    "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The meat offering with a lamb — 'a meat offering of a tenth deal of flour mingled with the fourth part of an hin of oil'; with a lamb, the meat offering a tenth of an ephah of fine flour (about five pints, Wesley) mixed with a quarter-hin of oil, and a like measure of wine for a drink offering; the animal sacrifice not offered alone but with its accompanying meat and drink offerings of flour, oil, and wine, the fruits of the field joined to the beast, the whole produce of the land brought to God together; these ordered for the lamb offered in a vow, freewill offering, or feast (Ellicott); the meat offering owning God as the giver of bread, the drink offering as the giver of gladness; the typology — flour, oil, and wine pointing to Christ the bread and true vine, and the gladness of the Spirit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a meat offering of a tenth deal of flour",
-   "mingled with oil",
-   "with a lamb",
-   "the fruits of the field with the sacrifice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The drink offering with a lamb — 'the fourth part of an hin of wine for a drink offering... for one lamb' (with a lamb, the wine poured out a quarter-hin, the same measure as the oil); wine of the grapes, as the Targum, no other sort or substitute used for the sacred libation but the true fruit of the vine (Gill); the principle — the quantity of flour, oil, and wine augmented in proportion to the size of the animal, least with a lamb, more with a ram, most with a bullock, the accessory offering growing with the principal sacrifice (Clarke); the drink offering owning God as the giver of the gladness of life, figuring the pouring out of the soul in devotion and the blood of Christ poured out, as Paul speaks of being poured out as a drink offering (Phil 2:17)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the fourth part of an hin of wine",
-   "a drink offering",
-   "for one lamb",
-   "wine of the grapes poured out"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The larger meat offering for a ram — 'for a ram... two tenth deals of flour mingled with the third part of an hin of oil' (with a ram, the meat offering doubled in flour, two tenths instead of one, and increased in oil, a third-hin instead of a fourth, with a like increase of wine); the measure greater because the ram was a better and larger sacrifice than the lamb, and for the still greater bullock greater yet (three tenth deals) — 'the accessory sacrifice grows proportionably with the principal' (Wesley); God appointing the accompanying offering to match the dignity and size of the victim, the meat and drink offering always proportioned to the sacrifice, all measured by rule; the gradation lamb, ram, bullock running in due proportion through flour, oil, and wine; God's worship ordered with exactness and fitness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "or for a ram",
-   "two tenth deals of flour",
-   "the accessory grows with the principal",
-   "worship ordered by proportion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The drink offering for a ram — 'the third part of an hin of wine for a drink offering, for a sweet savour unto the LORD' (the wine the same quantity as the oil of the meat offering, a third-hin for the ram as a fourth-hin for the lamb, the wine keeping pace with the oil and both with the size of the sacrifice, Gill); 'for a sweet savour unto the LORD' — the whole offering, flesh, flour, oil, and wine, ascending as a fragrance well-pleasing to God, the appointed order kept making the offering a sweet savour; the drink offering, like the meat offering, growing in proportion to the principal sacrifice, the ram's exceeding the lamb's and falling short of the bullock's; the poured-out wine owning God as the giver of gladness, figuring devotion poured out and the blood of Christ shed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the third part of an hin of wine",
-   "a drink offering",
-   "for a sweet savour unto the LORD",
-   "the libation matched to the sacrifice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The bullock and its occasions — 'a bullock for a burnt offering, or for a sacrifice in performing a vow, or peace offerings' (the bullock offered wholly as a burnt offering, or in fulfilment of a vow — 'a special vow' such as the Nazarite's, Num 6:2, Ellicott — or as a peace offering); peace offerings offered freely or by command, called peace or thank offerings by eminence because brought purely by way of gratitude to God with single respect to his goodness (Wesley); the bullock, being the largest offering, requiring the largest meat and drink offering, the accessory growing with the principal, the greatest sacrifice having the fullest accompaniment (Gill); the costliest victim honoured with the most abundant offering of flour, oil, and wine; the typology — the bullock wholly offered pointing to Christ, the great sacrifice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a bullock for a burnt offering",
-   "in performing a vow",
-   "or peace offerings",
-   "the greatest victim, the fullest offering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The great meat offering for a bullock — 'three tenth deals of flour mingled with half an hin of oil' (with a bullock, three tenths of an ephah of flour and half a hin of oil, and half a hin of wine, the largest of the three measures as the bullock was the largest of the three victims); much larger than for a lamb (one tenth) or ram (two tenths), the scale rising by even steps — one, two, three tenths of flour, a fourth, a third, a half of a hin of oil and wine — in fit proportion (Gill, Keil); God ordaining the accompanying offering to grow with the principal, the worship of God framed with exact and beautiful proportion; the lesson — our gifts to God answering to the greatness of his mercies; the typology — the abundant flour, oil, and wine pointing to the fulness of grace in Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "three tenth deals of flour",
-   "half an hin of oil",
-   "with a bullock",
-   "the fullest offering crowns the scale"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "The great drink offering for a bullock — 'half an hin of wine, for an offering made by fire, of a sweet savour unto the LORD' (the wine the same quantity as the oil of the meat offering, half a hin for the bullock, the largest of the three measures, the wine keeping pace with the oil and both with the sacrifice, Gill); 'of a sweet savour unto the LORD' — the whole, flesh, flour, oil, and wine, ascending as a fragrance well-pleasing to God, the fullest offering brought in God's appointed order a sweet savour; the gradation complete — lamb, ram, bullock, each with its proportioned meat and drink offering, the wine rising from a fourth to a third to a half of a hin; the poured-out wine owning God as the giver of gladness, figuring the blood of Christ shed in fullest measure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "half an hin of wine",
-   "a drink offering",
-   "of a sweet savour unto the LORD",
-   "the fullest offering complete"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "The rule summed for every victim — 'thus shall it be done for one bullock, or for one ram, or for a lamb, or a kid' (the measures already given observed for each sort of animal sacrifice, the bullock with three tenths, the ram with two, the lamb or kid with one, each with its proportioned oil and wine); no difference made on account of the age of the beast, whether young or old, the rule going by the kind of victim not its years (Gill); God leaving nothing to the offerer's guess but fixing for every sacrifice its exact meat and drink offering, that all be done decently and in order, the worshipper knowing always what to bring; the kid named with the lamb, the lesser cattle sharing the smallest measure; the law providing for every case."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thus shall it be done",
-   "for bullock, ram, lamb, or kid",
-   "no difference of age",
-   "every sacrifice its set accompaniment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The offerings reckoned by the number of victims — 'according to the number that ye shall prepare, so shall ye do to every one according to their number' (the meat and drink offerings multiplied according to the number of the animals sacrificed, as many beasts as offered, so many meal and drink offerings, each victim having its own full accompaniment of flour, oil, and wine, Gill/Wesley); the rule not only for a single sacrifice but for many, at the great feasts each of many bullocks, rams, and lambs attended by its proper meat and drink offering, reckoned by its kind and counted by the number; God having his worship furnished in full, no victim offered without its appointed gift however great the multitude; the abundance of God's mercies calling for abundance in devotion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "according to the number",
-   "so shall ye do to every one",
-   "each victim its own offering",
-   "the rule scales to the occasion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rule binding on the native Israelite — 'all that are born of the country shall do these things after this manner, in offering an offering made by fire, of a sweet savour unto the LORD' (the indigenous Israelites, the home-born, as distinguished from the stranger of v14, Ellicott; all Israelites in offering their sacrifices to bring the meat and drink offerings in the quantity directed, Gill); the rule a binding statute for the whole people, none of the native-born exempt, whoever offered a sacrifice to offer it in this appointed manner with its proper accompaniment; 'of a sweet savour unto the LORD,' the offering so brought acceptable and well-pleasing; a uniform manner of worship for all Israel, the service of God one and the same, none offering after his own fashion but all after God's; God's worship admitting no private innovation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all that are born of the country",
-   "shall do these things after this manner",
-   "binding on every native",
-   "one uniform worship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
    "John Calvin"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-16",
+  "pericope_label": "The meal and drink offerings, and one law for the stranger",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill identifies the audience narrowly: those of twenty years old and upward had been sworn to die in the wilderness, so the people Moses is told to address are the younger sort, who should actually possess the land. He notes that the wine had to be wine of the grapes, on the Targum's authority, no other sort being permissible; and on the stranger he agrees with Calvin that the proselyte of righteousness is meant, not the stranger of the gate. Calvin reads the single form of worship as a guard for uniformity, and gives two reasons for it: that proselytes lately incorporated might devote themselves the more cheerfully to piety when they saw themselves placed in the same position as the children of Abraham, and that if any distinction were made, corrupt mixtures would immediately creep in — so that lest the purity of God's worship should be gradually corrupted by absurd imitation, the gate was shut against the variety which usually draws men aside in different directions."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the opinion of some learned men that several offerings prescribed by the law were never intended to be made in the wilderness at all, which did not afford the conveniences the worship required, but only in the promised land. On the one law for the stranger he draws a conclusion opposite to Calvin's: one form of worship was a necessity in that land, surrounded as it was by idolatrous nations, and it was right that those who conformed should have equal rights and privileges, as indeed they did; but under the Christian dispensation no particular form is prescribed and the types are fulfilled, so unlimited toleration should be allowed, and while the sacred writings are made the basis of the worship offered to God, every man should be permitted to worship according to his own conscience. Wesley hears a promise inside the preamble — I give you means I will certainly give you, notwithstanding this great provocation — and states the principle behind the tables of quantities in a sentence: two tenth deals for the ram because it belonged to a better sacrifice than the lamb, and three for the bullock, so that the accessory sacrifice grows proportionably with the principal. He converts the measures as well, a tenth deal being the tenth part of an ephah, about five pints, and a hin about five quarts; and he limits the equality granted to the stranger to religion rather than civil standing, a presage of the future calling of the Gentiles, but no warrant for partaking of Israel's civil privileges."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The stranger's offering like the native's — 'if a stranger sojourn with you... as ye do, so he shall do' (the foreigner dwelling among Israel who would offer a sacrifice to bring it in the very same manner, with the same meat and drink offerings, as the native-born, no lesser rule for him); the careful definition — not every foreigner but the proselyte of righteousness, one sprung from the heathen nations who had turned from idols to the true God and been received by circumcision into the covenant people, the uncircumcised stranger remaining in heathenism excluded (Gill, Calvin); the kindred laws of the stranger's welcome (Lev 19:33, Clarke); the convert admitted to the same worship and acceptance as the native, a presage of the future calling of the Gentiles into the one Church (Eph 2:13); God's house open to all who came in his appointed way."
+    "summary": "Ellicott places the rule among its neighbours: the meal and drink offerings ordered here for a lamb are the same as those appointed to accompany the morning and evening lamb, and offerings of this kind had already been prescribed in connection with the three great feasts. He prefers a special vow to the received rendering at the eighth verse, and gives the literal sense of the clause about the congregation, noting that some render it as a vocative instead. Keil draws the arithmetic out, the number of appointed quantities being required to correspond to the number of sacrificial animals, and pauses over a grammatical oddity, a third-person verb standing between two second-person forms, which he calls certainly striking and unusual, but not so offensive as to make it necessary to alter the text."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What follows from there being one law for Israelite and stranger?",
+    "positions": [
+     {
+      "position": "uniformity — one prescribed form, lest variety and corrupt mixtures creep into the worship of God",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "under the gospel, toleration — no particular form being prescribed, every man should worship according to his own conscience",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "religious equality only, and a presage of the calling of the Gentiles; strangers were not thereby given Israel's civil privileges",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "turns a ceremonial equality into an argument for religious liberty under the gospel, which is the reverse of the use Calvin makes of the same verse"
+   }
+  ],
   "themes": [
-   "if a stranger sojourn with you",
-   "as ye do, so he shall do",
-   "the proselyte of righteousness",
-   "the calling of the Gentiles foreshadowed"
+   "the accessory that grows with the principal",
+   "one law for the home-born and the stranger",
+   "uniformity of worship, and what follows from it"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "One ordinance for native and stranger — 'one ordinance shall be both for you of the congregation, and also for the stranger... as ye are, so shall the stranger be before the LORD' (not one rule for the home-born and another for the convert, but one and the same ordinance for both, the stranger who had joined the covenant people worshipping on the same terms and accepted on the same footing); 'before the LORD' — as to worship, the proselyte's sacrifices offered in the same manner and accepted on the same terms as the native's, a presage of the future calling of the Gentiles, when the partition wall should be broken down and Jew and Gentile made one in Christ (Gal 3:28, Wesley); even under the law the door open to the stranger who turned to God, made equal in worship; God no respecter of persons or nations."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one ordinance for you and the stranger",
-   "as ye are, so shall the stranger be",
-   "accepted on the same terms",
-   "a presage of the Gentiles' calling"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "One law and one manner for all — 'one law and one manner shall be for you, and for the stranger that sojourneth with you'; the double term distinguished — one and the same precept respecting these sacrifices, and one and the same way of offering them, both rule and rite identical for the home-born and the convert, and one and the same punishment for the breach in either (Gill); the law saying three times over (vv14-16) that the stranger who joined Israel should worship exactly as the native, driving it home that none think the convert of lesser standing or bound by a lighter rule; perfect equality in worship and acceptance between Israelite and proselyte; the gospel foreshadowed — one law and one manner for Jew and Gentile prefiguring the one body, one faith, one baptism (Eph 4:5)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one law and one manner",
-   "for you and for the stranger",
-   "equality sealed by repetition",
-   "one body of many nations"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "The new word introducing the cake of the first dough — 'the LORD spake unto Moses' (God continuing to speak, the following law given at the same time as the laws of the meat and drink offerings, the new preface marking a distinct precept yet of the same occasion and gracious purpose, Gill); the law, like the foregoing, looking forward to the land, concerning the bread made from the corn of Canaan, belonging to the time of their settled possession not the wilderness; the fitness of its placing — having ordained the offerings of flour, oil, and wine, God now adds the offering of the first of the dough, that the very bread of the people's table own him as its giver; God giving his statutes one by one, each with its own word, an ordered series; God claiming the first of all his gifts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses",
-   "a new precept",
-   "the law of the first dough",
-   "God claims the first of his gifts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "The law bound to the land — 'when ye come into the land whither I bring you' (the offering of the cake belonging to the settled life of Canaan, when Israel should sow, reap, grind, and bake the corn of their own fields, not to be kept in the wilderness where they ate the manna, Gill); the renewed assurance 'whither I bring you,' God speaking of the land as certainly to be possessed, the promise standing firm to the rising generation despite the fathers' rebellion; the law binding the children of Israel only, the covenant people, to offer the cake, the dough of a Gentile free from it, the law of firstfruits belonging to those who held the land as God's gift; the people who would eat the bread of Canaan first owning him as the giver; God's claim following his gift."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when ye come into the land",
-   "whither I bring you",
-   "the law bound to the land",
-   "God's claim follows his gift"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
    "John Gill",
-   "John Wesley"
+   "John Wesley",
+   "Charles Ellicott",
+   "John Calvin"
   ],
+  "excluded_voices": [
+   "Adam Clarke"
+  ],
+  "range": "17-21",
+  "pericope_label": "The heave offering of the first of the dough",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The offering before eating the bread of the land — 'when ye eat of the bread of the land, ye shall offer up an heave offering unto the LORD'; 'when ye eat' meaning 'when ye are about to eat,' before they actually partook, when the corn of Canaan had been ground into flour and mixed into dough, the first of it offered before any was eaten (Gill, Wesley); a 'heave offering,' lifted up and set apart for God and his priests, a token that the whole was his and from him; God's portion coming first, before the people took their own use, to eat first being to forget the giver; 'the bread' meaning the bread-corn, the produce of the harvest (Wesley); all enjoyment of God's gifts beginning with the acknowledgment of him, the firstfruits hallowing the whole, the believer eating his bread with thanksgiving."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when ye eat of the bread of the land",
-   "an heave offering unto the LORD",
-   "God's portion first",
-   "the firstfruits hallow the whole"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Gill supplies almost everything the passage does not say. The law binds Israelites only, so that the dough of a Gentile is free from the cake even though an Israelite kneads it; by bread is meant bread corn, and specifically the old corn of the land which they first ate on entering it, the Targum excluding rice and millet and pulse, and the Jewish authorities naming five grains only from which the cake was required. The obligation covers dough made for men's bread and no other. On the quantity he observes that the text does not express it at all, leaving it to the people's generosity with no stinted measure fixed by law; tradition rather than statute supplies the figure, the elders making it the twenty-fourth part of the first dough kneaded — not the forty-fourth, as Buxtorf through mistake says — with the Targum agreeing at one part in twenty-four and the Mishnah lowering the share to a forty-eighth for dough made to be sold publicly. He records one further attempt at the number resting on the spelling, since the word begins and ends with the letter standing numerically for forty, which some have taken as an instruction to the bountiful man to give a fortieth. He reads the heaving itself as an acknowledgment that God is the sovereign Lord and possessor of heaven and earth and the owner and proprietor of the land of Canaan. Calvin asks why the offering is made of dough rather than grain, and answers best of any: first-fruits were already offered of their fruits and their ears of corn, but the representation was more lively in the bread itself, so God would have them present tokens of their gratitude not only from the barn but from the mill and the oven, that while they were eating their bread also they might have him before their eyes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley fixes the timing, that the offering falls not after the eating but before it, when they are about to eat, and glosses the bread of the land as bread corn."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The cake of the first dough — 'a cake of the first of your dough for an heave offering' (of the first dough, made from the first corn threshed, winnowed, and ground, a cake made and offered as a heave offering, the offering of the bread itself not merely the grain, Gill); the word arisoth, 'dough' or 'mixed meal,' a rare term found elsewhere only in Neh 10:37 and Ezekiel of this offering (Ellicott); why the offering was of the dough and not only the ears — another kind of firstfruits, the acknowledgment of God more lively in the bread itself, the food of daily life, than in raw grain (Calvin); 'if the firstfruit be holy, the lump is also holy' (Rom 11:16), the first cake sanctifying the whole baking and the whole people; the typology — the firstfruits pointing to Christ, the firstfruits of his people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a cake of the first of your dough",
-   "an heave offering",
-   "the first of the bread to God",
-   "the firstfruit sanctifies the lump"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
     "prevalence": "single",
-    "summary": "The perpetual offering of the first dough — 'of the first of your dough ye shall give unto the LORD an heave offering in your generations' (the offering of the first cake not for one time only but rendered throughout their generations, as often as they baked the bread of the land); the reasons — an acknowledgment that the LORD was the sovereign Lord and possessor of heaven and earth and the true owner of the land of Canaan, and a thankful confession that their daily bread came from his hand (Gill); the fitness of so homely and constant an offering, as bread was the staple of daily life, the offering of its first a continual confession of dependence woven into the household round; the gift going as a heave offering to the priests (Neh 10:37); God owned and thanked not only at the feasts but in the daily bread."
+    "summary": "Ellicott confines himself to the word, which may be rendered mixed meal, is used only in the plural, and outside these two verses occurs only twice in the whole Old Testament."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Gill",
+    "note": "shows the whole weight of the rule resting on tradition rather than text — the law names no quantity, and the twenty-fourth part, the forty-eighth, and the fortieth all come from elsewhere"
+   }
+  ],
   "themes": [
-   "of the first of your dough",
-   "an heave offering in your generations",
-   "a continual acknowledgment",
-   "the first and best is God's"
+   "first-fruits from the oven, not only the barn",
+   "a quantity the law leaves unfixed",
+   "who is bound by the law of the cake"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.66
+   }
   }
  },
  "22": {
@@ -730,275 +232,98 @@
    "Matthew Henry",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The case of sins of ignorance — 'if ye have erred, and not observed all these commandments' (rather 'if ye shall err and not observe,' Ellicott; every sin in truth an error, a missing of the mark, a wandering from God's commandments, Gill); the Jewish writers and Henry taking it chiefly of false worship or idolatry fallen into through the error of their teachers, a national failing; Wesley taking the commandments as those concerning the outward service and ceremonies, wherein this law differs from Lev 4:13; Moses enumerating only two of the four classes of sin offering of Leviticus — the congregation's and the individual's (Calvin); the gracious assumption that God's people will sometimes err in ignorance not defiant rebellion, and that he has made atonement even for such; sins of weakness not cutting off from God but met by the appointed sacrifice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if ye have erred",
-   "not observed all these commandments",
-   "sins of ignorance",
-   "atonement provided for error"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The whole body of the law in view — 'all that the LORD hath commanded you by the hand of Moses... and henceforward among your generations' (the whole compass of the laws given to Israel through Moses, whether moral, ceremonial, or judicial, the provision for sins of ignorance reaching to error in any of them, Gill); 'henceforward' rather 'and onward,' or thenceforward, nothing in the word determining whether later legislation is included, the law looking from the day of its giving forward through all the generations (Ellicott); God's mercy in providing atonement for ignorance not limited to a few commandments but covering the whole law, whatever the people transgressed unwittingly met by a sacrifice; the law acknowledging the people's frailty and making constant provision, the same Moses delivering the commands and the remedy for their unwitting breach."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all that the LORD hath commanded",
-   "by the hand of Moses",
-   "throughout your generations",
-   "the whole law under mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The offering for the congregation's error — 'if ought be committed by ignorance without the knowledge of the congregation... a young bullock for a burnt offering... and one kid of the goats for a sin offering' (a transgression fallen into by the people as a body, unwittingly, ignorance of the law's precepts, Gill); the contrast in the Hebrew shegagah — a transgression committed unwittingly, by error and inadvertence, as opposed to the presumptuous high-handed sin of v30, the passage turning on this distinction between the sin of weakness and the sin of defiance (Ellicott); a bullock offered whole in consecration and a kid as a sin offering for atonement, with their meat and drink offerings; this case the whole congregation, where Leviticus dealt also with the individual (Lev 4:2, Clarke); the typology — the sin offering pointing to Christ, the propitiation for the whole body of his people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "committed by ignorance",
-   "without the knowledge of the congregation",
-   "a bullock and a kid",
-   "the people's error atoned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The atonement and forgiveness of the congregation — 'the priest shall make an atonement for all the congregation... and it shall be forgiven them; for it is ignorance'; the priest making atonement on behalf of the whole people by the sin offering, a type of Christ, the propitiation not only for Israel but for his people throughout the world (1 Jn 2:2, Gill); 'it shall be forgiven them' — upon the atonement made, the guilt of their unwitting sin remitted, the sacrifice availing, God putting away the offence; 'for it is ignorance,' rather 'a sin of ignorance, or an error' (Ellicott), because not of defiance but inadvertence, capable of atonement; even sins through ignorance requiring an atonement — ignorance not making them no sins — yet God in mercy providing it (Clarke); the unwitting sinner neither excused without sacrifice nor left without remedy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priest shall make an atonement",
-   "it shall be forgiven them",
-   "for it is ignorance",
-   "mercy meets the unwitting sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The forgiveness extended to the stranger — 'it shall be forgiven all the congregation... and the stranger that sojourneth among them; seeing all the people were in ignorance'; the grant of pardon said again for the certainty of it, that the people be assured the atonement availed, God doubling his word of mercy that faith may rest on it (Gill); the proselyte who dwelt with Israel sharing in the atonement and forgiveness as in the worship and the law, the mercy one for native and convert alike; 'seeing all the people were in ignorance' rather 'for in regard to all the people, it was done unwittingly' (Ellicott), because the whole body sinned not in defiance but ignorance, the atonement reaching all; the same forgiveness covering the stranger who joined himself to God's people, foreshadowing the one atonement of Christ for all nations."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forgiven all the congregation",
-   "and the stranger that sojourneth",
-   "all the people were in ignorance",
-   "mercy covers native and stranger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The offering for the individual's error — 'if any soul sin through ignorance, then he shall bring a she goat of the first year for a sin offering' (any private person who breaks a command, not rightly understanding it or not adverting to the circumstances of obeying, Gill); here, unlike Lev 4:27, no restriction to sins of commission, the provision covering sins of omission as well, the failure to do what was commanded as much as the doing of what was forbidden, when through ignorance (Ellicott); a she goat of the first year, a smaller and humbler victim than the congregation's bullock and kid, fitting the single offerer, yet a true sin offering availing for atonement; one law for native and stranger in these sins of ignorance; God's provision not only for great public sins but for the private unwitting failings of the single soul; the typology — Christ atoning for the secret faults of each."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if any soul sin through ignorance",
-   "a she goat for a sin offering",
-   "the individual's error atoned",
-   "none left without remedy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The atonement and forgiveness of the individual — 'the priest shall make an atonement for the soul that sinneth ignorantly... and it shall be forgiven him'; the priest making atonement by offering the appointed sin offering for him, the same priestly mediation that availed for the whole people availing for the individual (Gill); 'when he sinneth by ignorance before the LORD' — the sin, though hidden from the man himself in his ignorance, before the LORD who saw it, yet being of ignorance not defiance covered by the atonement (Keil and Delitzsch); God dealing with the single soul as carefully as with the congregation, the humblest individual's unwitting sin met by the same mercy as the nation's; the typology — the priest's atonement pointing to Christ, the great High Priest, who atones for the secret and unwitting sins of each believer."
-   }
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "atonement for the soul that sinneth ignorantly",
-   "it shall be forgiven him",
-   "before the LORD",
-   "mercy reaches the single sinner"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "22-29",
+  "pericope_label": "Sins of ignorance, and the offerings that cover them",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill widens the word before anything else: every sin is an error, a missing of the mark, a wandering from the way of God's commandments; and though Jarchi and the Jewish writers generally take the passage of idolatry, it rather respects any deviation from the law, moral or ceremonial, and especially the latter. Calvin sharpens it toward something more culpable than accident, since the word extends to incogitancy, which partakes of contempt of God and arises from too great security, when men inconsiderately fall into the sins their lusts invite them to — which is why deliberate impiety is set against it afterwards. He finds no new law here at all, only a relaxation of an old one: two bullocks were commanded before, one for a burnt offering and one for a sin offering, and permission is given here to substitute a goat if the second were not easily obtained, so that Leviticus delivers the regular and perfect rite while this passage adds the permissive alteration. And he states what the whole provision is for — since nothing is easier than for men to err, the remedy was most necessary lest those who had sinned should fall into despair, so that when the people or private persons saw their guilt, and might have despaired of pardon and thrown away the pursuit of holiness, God anticipates them and shews by what means he is to be propitiated, that the sins which had occurred should not interrupt his service."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "One law of atonement for native and stranger — 'ye shall have one law for him that sinneth through ignorance, both for him that is born among the children of Israel, and for the stranger that sojourneth among them' (one and the same law, enjoining the she-goat for a sin offering, for both the home-born and the proselyte who sinned unwittingly, no different rule of atonement for the convert, Gill); as there was one ordinance for native and stranger in the offerings (vv15-16), so one law of forgiveness in their sins of ignorance, the convert equal not only in worship but in mercy; the stranger who joined himself to the LORD met, when he sinned in weakness, by the same atonement and pardon as the native, God's mercy knowing no national bound within his people; foreshadowing the one sacrifice of Christ availing alike for Jew and Gentile (Rom 3:30)."
+    "summary": "Henry keeps both halves of the balance. Sins committed ignorantly still need atoning for, since ignorance will in a degree excuse but will not justify those who might have known their Lord's will and did it not, which is why David prayed to be cleansed from his secret faults, the errors he did not himself understand. And they are forgiven, through the great sacrifice, who when he offered himself once for all upon the cross seemed to explain the intention of that offering in the prayer, Father, forgive them, for they know not what they do; Paul alludes to this same law when he says he obtained mercy because he did it ignorantly and in unbelief. Henry reads the congregational case as a national sin become customary through a vulgar error — the ceremonial observances being so numerous that some might by degrees be forgotten, as particularly the heave offering of the dough just prescribed — and notes what looked favourably on the Gentiles, that this atonement for ignorance is expressly extended to those who were strangers to the commonwealth of Israel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley distinguishes this law from the earlier one by the kind of fault it covers: the Leviticus statute speaks of a positive miscarriage, of doing about the holy things of God what ought not to have been done, whereas this speaks only of an omission of something that ought to have been done about holy ceremonies. Clarke divides the material differently, taking the case here to refer to the whole congregation and the cases just before to the sin of an individual, and observes that even sins committed through ignorance required an atonement, which God in his mercy has provided."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott fixes the technical sense, that shegagah denotes transgressions committed unwittingly, standing in contrast to the sin done presumptuously later in the chapter, and reaches Wesley's distinction from the other side: provision had been made for sins of commission unwittingly committed by the whole congregation, but none appears to have been made for the guilt contracted by sins of omission. He adds two supports — the offerings differ, a young bullock being the sin offering there while here the bullock is a burnt offering and a kid the sin offering, and the commandments of this chapter have express reference to the land of Canaan, whereas many delivered earlier were already binding — and notes that the individual case here carries no restriction to sins of commission. Keil confirms the reach of the law, that the rule laid down for Israelites is here raised into general validity for foreigners as well."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why repeat a law for sins of ignorance that Leviticus has already given?",
+    "positions": [
+     {
+      "position": "the earlier law covered doing what ought not to be done; this covers omitting what ought to be done",
+      "holders": [
+       "John Wesley",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the earlier cases were of individuals, this of the whole congregation",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "it is not a new law but a relaxation of the old — permission to substitute a goat where the second bullock could not easily be had",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "reads the congregational case as a ceremony quietly forgotten over generations rather than a sin committed, and points to the dough offering of the preceding paragraph as exactly the kind of thing that would lapse"
+   }
+  ],
   "themes": [
-   "one law for him that sinneth through ignorance",
-   "native and stranger alike",
-   "mercy is one for all",
-   "the unity of the people of God"
+   "error, incogitancy, and what ignorance excuses",
+   "omission against commission",
+   "a remedy given lest the sinner despair"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "30": {
@@ -1008,86 +333,88 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "30-31",
+  "pericope_label": "The soul that doeth ought with a high hand",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill fills in the manner from the Targum's through pride — haughty, insolent, bold and daring, obstinate and self-willed, done with purpose and design, openly and publicly, neither fearing God nor regarding man — and marks what the reason clause does not mean, since the presumptuous man has broken the commandment through contempt of it, despising it as a command of God, whereas those who sin ignorantly break it too. Calvin agrees about the posture and then narrows the offence sharply. To deal with a high hand is nothing more than to attempt or undertake proudly what is not lawful, since our hands ought to be guided and as it were restrained by God's word; but although men's hands are used in many acts of audacity, what is meant here in particular is the profanation of God's true and legitimate worship, when anything is invented inconsistent with its purity, for the punishment is not decreed against thefts or murders or other such crimes, but against the perverse imaginations which tend to the corruption of religion. All self-invented services betray an impious contempt of God, as if men designedly despised him and spurned at his commands, whence he infers that nothing is more opposed to perfect and sincere religion than the temerity which induces men to follow whatever course they please. The closing clause he allows two senses, either confirming the justice of the punishment or warning that the impiety should be corrected betimes, before it has advanced too far."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry defines the sin by intent rather than by degree. Presumptuous sinners are those who avowedly confront God's authority and set up their own lust in competition with it, who sin for sinning's sake in contradiction to the precept and in defiance of the penalty, who fight against God and dare him to do his worst; it is not only to sin against knowledge but to sin designedly against God's will and glory. He then puts the speech into the sinner's mouth: the language of presumptuous sin is that eternal truth is not fit to be believed, the Lord of all not fit to be obeyed, and almighty power not fit to be either feared or trusted, so that it imputes folly to Infinite Wisdom and iniquity to the righteous Judge of heaven and earth. Many come short of fulfilling the word and yet value it and count the law honourable; the presumptuous despise it, thinking themselves too great and too good and too wise to be ruled by it — and whatever the sin itself is, it is the contumacy that incurs the anathema. There remains no sacrifice for such sins, since the law provided none; and Henry passes on the Jewish doctors' reading of the last clause, that the iniquity cleaves to the soul after it is cut off, to be accounted for at the great day."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the ground of the sentence: bold daring acts of transgression against the fullest evidence and in despite of the divine authority admitted of no atonement, and the presumption probably implied an utter contempt of the word and authority of God springing from an idolatrous or atheistical mind, in which case all repentance was precluded by the very denial of God's word and being. Wesley reduces the offence to the insult it contains — the man sets God at defiance and exposes him to contempt, as if he were unable to punish transgressors."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The presumptuous sin and its doom — 'the soul that doeth ought presumptuously... the same reproacheth the LORD; and that soul shall be cut off'; 'presumptuously' literally 'with a high hand,' through pride, the Targum 'with an uncovered head,' openly and insolently, such avowedly confronting God's authority and setting their own will against his, sinning not in weakness or ignorance but in deliberate daring defiance (Ellicott, Gill, Henry); 'reproacheth the LORD' rather 'blasphemeth' (2 Kgs 19:22), setting God at defiance as if he were unable to punish (Wesley); for such sin no atonement appointed, bold transgression against the fullest light admitting no sacrifice, the sinner cut off (Clarke); the New Testament echo, 'if we sin wilfully... there remaineth no more sacrifice for sins' (Heb 10:26)."
+    "summary": "Ellicott gives the phrase literally, with a high hand, and corrects the verb that follows, which is not reproacheth but blasphemeth."
    }
   ],
   "debates": [
    {
-    "question": "What distinguishes the presumptuous sin from the sin of ignorance, and why is there no atonement for it?",
-    "sides": [
+    "question": "What kind of sin does 'with a high hand' cover?",
+    "positions": [
      {
-      "position": "the difference lies not in the outward act but in the heart — the sin of ignorance a stumbling of weakness, capable of atonement; the presumptuous sin a deliberate, defiant 'high hand' against God, a reproach or blasphemy that despises his authority, and so admits of no sacrifice but cutting off (cf. Heb 10:26)",
+      "position": "any sin done in open defiance of God's authority, in contradiction to the precept and in defiance of the penalty",
       "holders": [
-       "Henry",
-       "Clarke",
-       "Ellicott",
-       "Gill",
-       "Calvin",
-       "Wesley"
+       "Matthew Henry",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "specifically the corruption of God's worship by invention — the penalty is not decreed against thefts or murders but against perverse imaginations in religion",
+      "holders": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "doeth ought presumptuously",
-   "with a high hand",
-   "reproacheth the LORD",
-   "cut off — no atonement for defiance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of the presumptuous sinner's doom — 'because he hath despised the word of the LORD, and hath broken his commandment, that soul shall utterly be cut off; his iniquity shall be upon him'; such a one breaking the commandment not in ignorance or weakness but through contempt of it, despising it as a command of God and paying no regard to it, the very thing distinguishing him from the sinner of ignorance who reveres the command even while unwittingly breaking it (Gill); the doubled 'utterly be cut off' marking the certainty and severity of the excision; 'his iniquity shall be upon him' — the guilt resting on himself alone, not covered by any atonement nor borne away by any sacrifice; what shut him out of mercy not the greatness of the act but the contempt of the heart; the gospel parallel (Heb 10:29)."
+    "voice": "Calvin",
+    "note": "restricts the death penalty of this verse to offences against worship, explicitly excluding theft and murder from its scope — a narrower reading than any of the others give it"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "despised the word of the LORD",
-   "broken his commandment",
-   "utterly be cut off",
-   "his iniquity upon him"
+   "sinning with a high hand",
+   "contumacy rather than the act",
+   "a sin the law provides no sacrifice for"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "32": {
@@ -1096,348 +423,164 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Sabbath-breaker as an instance of presumptuous sin — 'they found a man that gathered sticks upon the sabbath day'; the incident placed here to illustrate the foregoing law of the high-handed sinner, the man despising the word of the LORD and breaking his commandment (v31) in open defiance (Clarke, Ellicott); the law of the Sabbath plain and positive, well known, so the gathering of sticks no sin of ignorance but a known and wilful transgression in the face of a clear command (Ex 31:14, Wesley); the Jewish opinion that the incident, though recorded here, may have happened earlier in the first year, Calvin judging it best to follow the order of Moses' narrative; the broken Sabbath, the sign of the covenant and weekly confession of God as Creator and Redeemer, a fit instance of the presumptuous sin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a man that gathered sticks",
-   "upon the sabbath day",
-   "an instance of presumptuous sin",
-   "a known and wilful transgression"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The offender brought to judgment — 'they that found him gathering sticks brought him unto Moses and Aaron, and unto all the congregation'; those who discovered him not letting it pass but bringing him before the appointed authorities, the Targum and Jarchi's tradition that they first admonished him to desist but he would not, persisting in his defiance, deepening the presumption (Gill); 'all the congregation' meaning the rulers of the congregation, the elders who judged, before whom with Moses and Aaron the case was laid (Wesley); the offence not punished by private hands or in haste but brought before the lawful authority, that judgment be done in due order and by warrant; the bringing of him in showing the people's sense of the gravity of an open profanation of the Sabbath, the sign of the covenant."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "brought him unto Moses and Aaron",
-   "unto all the congregation",
-   "brought to judgment",
-   "order kept in dealing with sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
+  "range": "32-36",
+  "pericope_label": "The man who gathered sticks on the sabbath",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The offender held until God should direct — 'they put him in ward, because it was not declared what should be done to him'; placed in a prison in the camp, perhaps the same in which the blasphemer had been kept (Lev 24:12), the 'they' being Moses, Aaron, and the seventy rulers (Gill, Wesley); not the death penalty itself in doubt, for the law had already declared the Sabbath-breaker should be put to death (Ex 31:14), but the manner of his death — by what kind of execution he should be cut off — not yet determined, which God now appointed (Wesley); the leaders not presuming to invent a punishment nor to act before they had God's word, but holding him in custody until the LORD should direct, doing nothing in so grave a matter without express warrant; the care of Moses and the rulers to follow God exactly."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they put him in ward",
-   "it was not declared what should be done",
-   "waiting on God's word",
-   "the manner of death not yet known"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Gill reports the common Jewish view, from Aben Ezra, that though the incident is recorded here it belongs to the first year, soon after the sabbath law was given, which produces Jarchi's remark that Scripture tells it to Israel's reproach, since they kept only the first sabbath and on the second this man came and profaned it. Gill himself puts it later, in the wilderness of Paran, after the spies and the discomfiture, where it stands in its proper place as an instance of the presumptuous sinner just described. He adds from the Targum that the man was admonished first and would not desist, places the ward in a certain prison in the camp — perhaps the very one in which the blasphemer had been kept, and for much the same reason — and notes that Moses consulted the Lord in the tabernacle, from above the mercy seat, where he had promised to meet him. Calvin declines to date the episode, since we know neither the year nor the month, and reflects on it in two directions at once. The Israelites were not always affected by the same degree of madness, and here their moderation is as manifest as the fervency of their zeal: they bring the transgressor to authority rather than dealing with him themselves, they quietly wait for the decision of God, and they execute the sentence promptly once it is given. Yet since the most trifling occasion led them astray soon afterwards, their hypocrisy was betrayed by that levity — one swallow does not make a spring, and we judge a whole life wrongly from a single noble action. It may well be that the men who brought him were careless in other matters and, as hypocrites usually are, excessively rigid about an outward ceremony. From the punishment Calvin infers that the offender had not erred through inadvertence but in gross contempt, since God would not have commanded stoning otherwise; and he draws two conclusions, that the sabbath was the mark by which God separated his people from the heathen, though its object was never mere idleness but that they should renounce their own works and live to God, and that the magistrate is appointed to maintain the first table no less than the second, since the man was not stoned by an unreflecting impulse but by the direct command of God, no political law having yet been given on the point."
+   },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "God's sentence on the Sabbath-breaker — 'the LORD said unto Moses, The man shall be surely put to death: all the congregation shall stone him with stones without the camp'; Moses consulting the LORD in the tabernacle, at the most holy place, from above the mercy seat where God promised to commune with him (Ex 25:22), the judgment coming not from Moses but from God (Gill); the death penalty already threatened in the law confirmed and ordered to be executed, the wilful profanation of the Sabbath a capital crime; the manner — stoned by the whole congregation, outside the camp, the public execution marking the public guilt and the casting of the offender from the holy community; not the gathering of sticks in itself but the open contempt of God's plain command drawing so heavy a doom; the typology — Christ suffering without the gate (Heb 13:12)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man shall be surely put to death",
-   "stone him with stones",
-   "without the camp",
-   "God's holiness not to be despised"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the case as an illustration of the verses before it — the man despised the word of the Lord and therefore broke his commandment, and on that ground was punished with the utmost rigour of the law. Wesley agrees that the law of the sabbath was plain and positive, so that this transgression must needs be a known and wilful sin, and clears up two details of the procedure: those who brought him brought him to the rulers of the congregation, and what was uncertain was not the crime but the manner in which he should be cut off, since it was known in general that sabbath-breakers were to be put to death."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The sentence executed in obedience — 'all the congregation brought him without the camp, and stoned him with stones, and he died; as the LORD commanded Moses'; the people doing precisely what God appointed, in the manner and place he named, the repeated 'as the LORD commanded' marking exact compliance; 'all the congregation' — what was done by order of Moses and the elders ascribed to the whole congregation, though the man was brought out and stoned by a few acting on behalf of all, the act the people's, done in their name and authority (Gill); the execution 'without the camp,' putting the offender from the community he defiled; the law of the high-handed sinner (vv30-31) shown in act, the despiser cut off, his iniquity upon him, no atonement intervening; the typology — Christ suffering without the gate (Heb 13:12)."
+    "summary": "Ellicott prefers to begin the sentence afresh — now the children of Israel were in the wilderness, and they found — and takes the incident to be recorded in order to illustrate the presumptuous sins just made capital. All that is certain is that it happened in the wilderness, according to Ibn Ezra at Sinai but more probably during the wanderings after Kadesh, and no inference can be drawn from the verse about when the account was written down. He confirms Wesley's reading of the difficulty from the wording: death had already been denounced against those who profaned the day, but the manner of inflicting it does not appear to have been declared before, and the very verb used here recurs in the parallel case of the blasphemer, whom they also put in ward that the mind of the Lord might be shewed them. Keil reads the placement itself as the argument, the history being inserted as a practical illustration of sinning with a high hand, and takes the congregation before whom the man was brought to be the college of elders acting as the judicial authority."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "When did the sabbath-breaking happen?",
+    "positions": [
+     {
+      "position": "in the first year, soon after the sabbath law was given — on the second sabbath Israel ever kept",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "later, during the wanderings after Kadesh, where the narrative places it as an instance of presumptuous sin",
+      "holders": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "unknowable; nothing is better than to follow the order Moses gives",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "praises the people's conduct here in every particular and then withdraws the praise, on the ground that men who lapse at the next trifle were being rigid about an outward ceremony rather than obedient"
+   }
+  ],
   "themes": [
-   "all the congregation stoned him",
-   "without the camp",
-   "as the LORD commanded",
-   "the law of presumptuous sin enacted"
+   "when and where the episode belongs",
+   "the crime known, the sentence not",
+   "zeal that does not prove the heart"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.41
+   }
   }
  },
  "37": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The new word introducing the fringes — 'the LORD spake unto Moses'; coming after the foregoing laws and the order for stoning the Sabbath-breaker, what follows aptly joined, designed to put the people in mind of God's commandments that they might not forget and transgress (Gill); provision having just been made in the sin offerings for the pardon of sins of ignorance, God now providing an expedient for the preventing of such sins — the fringes, a constant reminder, that the people not fall into the very errors for which atonement had been appointed (Henry); God first providing the remedy for sin (the atonement), then the means to keep from sin (the reminder), his care reaching to both the pardon of past failings and the prevention of future ones; the new word introducing not a burden but a help."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses",
-   "the law of the fringes",
-   "a means to prevent sin",
-   "God prevents as well as pardons"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fringes and the blue ribband — 'fringes in the borders of their garments... a ribband of blue'; tassels or threads standing out on the corners of the outer garment, on the four borders (Deut 22:12), each marked with a cord of blue (Wesley, Ellicott); all Israelites — priests, Levites, common Israelites, proselytes, freed servants — bound to wear them, but not the Gentiles, the token belonging to the covenant people (Gill); the fringes emblematical of the commandments of God, no natural likeness between a tassel and a precept yet, divinely appointed for this use, serving as a constant sign to call the commandments to mind (Clarke); the blue the colour of the heavens, marking the commandments from above and drawing the thoughts upward; the abuse the Pharisees enlarging their borders for show (Mt 23:5), the fringe meant for remembrance not display."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fringes in the borders of their garments",
-   "a ribband of blue",
-   "a visible token",
-   "for remembrance, not display"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
    "John Calvin",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The purpose of the fringes — 'that ye may look upon it, and remember all the commandments of the LORD, and do them... and that ye seek not after your own heart and your own eyes'; the fringe a thing to be seen, the sight calling to mind the commandments, the remembrance leading to the doing, the eye teaching the heart and the heart moving the hand; God's only object to exercise the Jews in constant meditation upon the law, that it never slip from their thoughts (Calvin); the warning 'that ye seek not after your own heart and your own eyes, after which ye use to go a whoring' (rather 'go not about after your own heart,' Ellicott), the fringe checking the people from following the wandering desires of their hearts and the lusts of their eyes, which led them into idolatry; the heart left to itself straying, needing the constant reminder of God's word; the blue thread making the fringe the more visible (Wesley)."
-   }
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "look upon it, and remember",
-   "all the commandments of the LORD",
-   "seek not after your own heart and eyes",
-   "the token guards against wandering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The end of the fringes in holiness — 'that ye may remember, and do all my commandments, and be holy unto your God'; the chain — the looking leading to remembering, the remembering to doing, the doing to holiness, the fringe no end in itself but a means to the keeping of the commandments and the sanctifying of the people; the purpose repeated, that the end and use of the fringes be particularly noted, lest the people rest in the outward ceremony and neglect the obedience it was meant to serve, the sign nothing without the substance (Gill); 'be holy unto your God' — purged from sin and sincerely devoted to God (Wesley); holiness reached through obedience, obedience through remembrance, remembrance helped by the appointed token; the mere wearing without the remembering and doing profiting nothing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that ye may remember, and do",
-   "all my commandments",
-   "be holy unto your God",
-   "the token aims at holiness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "John Calvin",
-   "John Wesley"
-  ],
+  "range": "37-41",
+  "pericope_label": "The tassels on the corners of the garment",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The redemption from Egypt as the ground of obedience — 'I am the LORD your God, which brought you out of the land of Egypt, to be your God: I am the LORD your God'; their Creator, Preserver, and Benefactor, their Lord and covenant God and Father, who had redeemed them from bondage (Gill); 'to be your God' — God confirming the command to be holy (v40) by this reason, that he redeemed them for this very purpose, that he might be their God and be honoured by them, the deliverance laying them under the obligation of obedience and holiness (Calvin); though justly displeased and keeping them forty years in the wilderness, God will not utterly cast them off but continues their God, the covenant holding (Wesley); grace the spring of duty, redemption the foundation of all the law; the doubled 'I am the LORD your God' pressing the truth home."
+    "summary": "Gill sets out who was bound — Israelites, priests, Levites, proselytes and freed servants, but not Gentiles, who might not make them at all — and passes on Jarchi's judgment that this precept is equivalent to all the commandments, which he makes the reason for its being placed here. Calvin guards the institution from both sides. There was no religion in the fringes themselves and no value in the material texture, but since men are lazy and forgetful in the cultivation of piety, God made provision for their infirmity; in telling them to look upon it and remember, he hints that they need coarse rudiments which strike the outward senses, nothing being likelier than that forgetfulness should steal upon them. Yet God has no satisfaction in empty knowledge, and demands serious affections and practical performance. On the prohibition Calvin presses hardest of any: by contrasting men's hearts and eyes with his Law, God shews that he would have his people contented with the one rule he prescribes, without the admixture of their own imaginations, and denounces the vanity of whatever men invent for themselves, however pleasing. The last word of the verse makes it plain, that men go a whoring whenever they are governed by their own counsels — for those who worship God by their own will account their zeal very good, and do nothing but pollute themselves with spiritual adultery, since what the world considers the holiest devotion, God with his own mouth pronounces to be fornication."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the law as the counterpart of the one before it: provision had just been made for the pardon of sins of ignorance, and here is an expedient for preventing them, a memorandum against sinning through forgetfulness. He notes that the Jews were distinguished from their neighbours in dress as in diet, taught by such little instances of singularity not to be conformed to the way of the heathen in greater things, and that they proclaimed themselves Jews wherever they went, as not ashamed of God and his law. The tassels were not appointed for the trimming and adorning of clothes but to stir up their pure minds by way of remembrance — many look upon their ornaments to feed their pride, but these were to awaken the conscience. He insists that the phylacteries were a different thing altogether, of the Pharisees' own invention, whereas the fringes were a divine institution, and records that the Jews wear them still, saying as they put them on, blessed be he who has sanctified us unto himself and commanded us to wear fringes. The prohibition he takes as a preservative from idolatry in particular, though extending to the whole conversation, since nothing is more contrary to God's honour and our own interest than to walk in the way of our heart and the sight of our eyes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke asks how a tassel can carry a commandment and answers with an argument about signs. It would be bold to assert any analogy between a fringe and a precept; but when one thing is appointed to represent another, however unlike, the first becomes the regular sign of the second. There is no analogy between the word bread and the substance it stands for, yet because the word represents the thing, everyone understands it, and the sight of it conveys not its letters but the thing signified; so with the tassels, appointed by God to bring the commandments to mind, they conveyed the intelligence intended. Wesley describes the object itself, threads standing out further than the rest at the four borders of the upper garment, with the riband added to make it more obvious to the sight, its colour blue or purple; and he gives the two forbidden errors names — enquire not for other ways of serving me than I have prescribed, neither after the devices of your own hearts, as Nadab and Abihu did when they offered strange fire, nor after the examples your eyes see, as you did when you worshipped a calf after the manner of Egypt."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott corrects the picture: these are tassels rather than fringes, set on the corners of the garment, and the garment itself was a four-cornered cloth which the poor also used as a counterpane, commonly worn with a hole in the centre for the head. The Pharisees enlarged them to exhibit their punctilious fulfilment of the Law, and great sanctity was attached to them, which is why the woman with the issue of blood desired to touch one of our Saviour's. Keil supplies the occasion, taking the command to have been prompted by the incident just recorded, and reads the tassel with its dark blue thread as a memorial sign, that seeing it the Israelites might remember the commandments and not stray after their own hearts and eyes."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "defends the arbitrariness of the sign as the ordinary condition of all signs, arguing from the word 'bread' that representation needs no resemblance to work"
+   }
+  ],
   "themes": [
-   "I am the LORD your God",
-   "brought you out of Egypt",
-   "to be your God",
-   "redemption the ground of obedience"
+   "a sign appointed to carry a commandment",
+   "preventing the sins the last law pardoned",
+   "seeking after one’s own heart and eyes"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  }
 }
