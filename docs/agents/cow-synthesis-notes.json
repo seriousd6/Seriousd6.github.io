@@ -12299,6 +12299,183 @@
       "book": "exodus",
       "chapter": "33",
       "note": "Length control, nine entries: 650, 649, 639, 648, 644, 622, 648, 650, 650, all grade A. One entry came off the first draft at grade B rather than over length — the vv7-11 entry on the tent outside the camp, at ttr 0.578 against the 0.580 floor — and the cause was obvious once measured: the entry is about a tent, and tent and tabernacle between them carried most of the nouns. A lexical-variety pass fixed it at a cost of four words, swapping in sacred tent, shrine, sanctuary and it, which moved ttr from 0.578 to 0.590. This is the second time a B has come from subject-matter vocabulary rather than from filler (leviticus 9 entry 5 was the first, on sacrifice and fire), and both times the repair was the same and cheap. Worth stating as a rule: when a chapter's subject supplies one dominant noun, budget two or three synonyms for it before drafting rather than discovering the problem at the meter. On length, the overshoot pattern held exactly as note 1133 describes — the five-voice entries drafted at 622 to 729 and the seven-voice entry at 723, and every effective cut was again a whole idea (Calvin on access to kings, Clarke's Jupiter and Semele, Ellicott's conjecture about the goodness flashed into the soul, Henry's object-lesson on the forfeited structure, Calvin's fishes-on-a-hook). Note 1018 now holds across fifteen chapters."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JAMIESON MISALIGNMENT: SEVENTH CONFIRMATION, SIXTH WALK, NEW OFFSET 4 -- AND THE SOURCE STRIDE IS NOW MEASURABLE AT EXACTLY 5. Jamieson appears at keys 4, 10, 16, 22 -- stride 6, offset 4, four members -- walking monotonically through ROMANS 16: key 4 = Rom 16:8 (Amplias, 'a contracted form of Ampliatus'), key 10 = Rom 16:13 (Rufus the chosen, with Simon of Cyrene as his father), key 16 = Rom 16:18 (serve not our Lord Christ, deceiving the hearts of the simple), key 22 = Rom 16:23 (Gaius the host, Erastus the treasurer, Quartus). The source verses are 8, 13, 18, 23: AN EXACT ARITHMETIC STRIDE OF 5, against a stride of 6 in the target keys. Re-checking the earlier walks against this: 1thessalonians 5 ran 1 Cor 9:24 -> 10:1 -> 10:6 -> 10:11, which is +5 at each step once chapter boundaries are crossed; philemon 1 ran 2 Cor 2:10 -> 2:15 -> 3:1 -> 3:6, again +5 with the boundary crossing. The rule appears to be SIX KEYS FORWARD IN THE TARGET, FIVE VERSES FORWARD IN THE SOURCE. Running offsets observed: 0 (1thess 5), 1 (1peter 1), 2 (acts 21, 1cor 11), 3 (numbers 24, philemon 1), 4 (philippians 1). All four offsets 0-4 now seen. This is the first quantitative handle on the mechanism and should let the owner locate the fault in the fetcher rather than patching chapter by chapter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "30"
+      ],
+      "note": "CHROME INSIDE THE ELLICOTT BLOCK AT THE TERMINAL KEY, SECOND CONSECUTIVE CHAPTER. The Charles Ellicott block at key 30 measures 1,134 words, of which only 150 are real commentary; the rest, from the 'Footnotes:' marker on, is the StudyLight footer plus CSS plus raw JavaScript, measuring 984 words / 30,437 characters / 126 NEWLINES -- on the established invariant (992-995 words, 30,341-30,497 chars, 126 newlines). This is exactly what was found at 1thessalonians 5 key 28 last batch: terminal key, swallowed inside Ellicott's last block, so the words are silently credited to him. Two consecutive chapters with the same shape makes it a pattern rather than an accident, and it means the naive usable-source figure for any chapter whose last key carries an Ellicott block is roughly 984 words too high. Eleventh chrome measurement overall."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "19"
+      ],
+      "note": "CYRIL RESIDUE, A THIRD MECHANISM: TOPICAL ATTACHMENT. The single Cyril of Jerusalem block, at key 19, is Catechetical Lecture material enumerating the TITLES OF THE HOLY SPIRIT -- Comforter, Spirit of Truth, Spirit of God, Spirit of the Father -- and is cut by the 200-word cap before reaching 'Spirit of Christ', which is plainly the title it was fetched for. Phil 1:19 reads 'the supply of the Spirit of Jesus Christ'. So this is neither the stuck 2 Cor 4:4 fragment (philemon 1 key 25; 1thessalonians 5 keys 23 and 28) nor a stride walk, but a keyword attachment on the phrase, landing a lecture that never comments on the verse. Dropped SILENTLY, since the VOICE_LABELS defect makes 'Cyril of Jerusalem' undeclarable."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "1",
+      "note": "VOICE_LABELS DEFECT, TWENTY-FOUR BATCHES OPEN. scripts/synthesis_qa.py line 145 builds _LABEL_RE from the VOICE_LABELS short forms with a trailing \\s*:. 'Cyril' is a PREFIX of the head 'Cyril of Jerusalem:' and so never matches, while 'Chrysostom' and 'Robertson' match only by accident, being SUFFIXES of 'John Chrysostom:' and 'A.T. Robertson:'. Consequence here, as in the last two chapters: the Cyril block could not be declared as residue and had to be dropped silently, and its words are silently attributed to whichever voice precedes it in the blob. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril'."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "8",
+        "18",
+        "22"
+      ],
+      "note": "CHRYSOSTOM IS GENUINE AT ALL FOUR KEYS, AND KEY 22 IS THE BEST PASSAGE IN THE CHAPTER. The Chrysostom blocks at keys 1, 8, 18 and 22 are all real Homilies on Philippians. At key 22 he refuses to accept the apostle's hesitation between life and death and presses him with a series of comparisons: what trader whose vessel is full of untold wealth, when he may run into port, would prefer to be still at sea? what wrestler, when he might be crowned, would choose to contend? what general, who might be quit of war with trophies and refresh himself in the palace, would choose still to stand in battle array? He prefaces it with an unusual confession -- 'We all shudder at death, I am wont to say, some by reason of our many sins, of whom I too am one, others from love of life, and cowardice, of whom may I never be one.'"
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "13"
+      ],
+      "note": "THE PRAETORIUM AT 1:13 -- A FIVE-WAY DISAGREEMENT. Barnes argues at length for the emperor's palace, on three grounds (provincial usage for the chief magistrate's residence, an ancient report that the Roman palace was so called, and the greetings from Caesar's household at 4:22), while noting that Bloomfield and Rosenmuller prefer the praetorian camp. Clarke takes the palace. Calvin names it the hall and palace of Nero and supports it with a long antiquarian excursus deriving praetorium from the general's tent. Ellicott lays out palace, attached barrack, and camp outside the walls, observes that all the ancient commentators take the first but that it agrees badly with Acts 28:16-30 (Paul in his own hired house), and follows Lightfoot in taking the word for a BODY OF MEN, the praetorian guard, noting that 'in all other places' is really 'to all the rest'. Robertson agrees with the guard (ten thousand picked soldiers) but reports Mommsen and Ramsay for the judicial authorities of the imperial court."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "21"
+      ],
+      "note": "CALVIN BREAKS WITH ALL PRECEDING INTERPRETERS AT 1:21. On 'to me to live is Christ, and to die is gain' he writes: 'Interpreters have hitherto, in my opinion, given a wrong rendering and exposition to this passage; for they make this distinction, that Christ was life to Paul, and death was gain. I, on the other hand, make Christ the subject of discourse in BOTH clauses' -- supplying the preposition, which he says the Greeks leave to be understood, so that Christ is gain to him in life and in death alike. He argues the sense is fuller, since Christ alone makes us happy in death and in life. Clarke independently reads it the same way ('Whether I live or die, Christ is gain to me') and Henry reports 'To me, living and dying, Christ is gain' as an alternative. Against them, Barnes takes it of a single purpose of life, Ellicott of the whole concrete state of life lived in Christ, and Robertson says living is coextensive with Christ."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "19"
+      ],
+      "note": "WHAT SALVATION MEANS AT 1:19, WITH BARNES NAMING CLARKE AS AN OPPONENT. Clarke takes it of temporal safety and release, arguing the Romans would see that a man proclaiming a prince whose kingdom was not of this world could be no enemy to Caesar. Barnes rejects that view and names Clarke, with Koppe and Rosenmuller, as holding it, on the ground that Paul was not certain of release and could not have expected release from 'the supply of the Spirit of Jesus Christ'. Ellicott takes the word as safety, shown either in life by release or in death by coming home to Christ. Calvin says flatly that what follows shows he is not speaking of the safety of the body. Wesley reads a higher degree of glory. Robertson takes it of release, reports that Lightfoot takes it of eternal salvation because verse 20 suits that better, and asks whether Paul carried both conceptions in the word. Direct in-text naming of one commentator by another is rare in this corpus."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "25"
+      ],
+      "note": "WHETHER PAUL'S CONFIDENCE AT 1:25 WAS FULFILLED, AND WHAT KIND OF KNOWLEDGE IT WAS -- SIX POSITIONS, ONE OF THEM LIMITING APOSTOLIC INSPIRATION. Clarke states as fact that after two years in bonds at Rome he was released. Wesley calls it 'a prophetic notice given him while he was writing this' and says 'doubtless he did see them after this confinement'. Gill denies both: not a certain knowledge from revelation but a conjectural knowledge from the present state of things, and 'of this there is no sufficient proof'. Barnes agrees the ground was neither revelation nor intelligence from the palace but his belief that his life was needful, and warns that 'know' is not to be pressed as absolute since 1:27 and 2:17 admit a doubt. ELLICOTT GOES FURTHEST: the same word is used at Acts 20:25 of a conviction which 'so far as we can follow out the history, was not verified', and he concludes that 'the apostolic inspiration, like the apostolic power of miracle, was a gift relative to the apostolic work, not necessarily extending beyond it.' Calvin answers the objection by a rule -- the saints hold a sure persuasion only where they have a sure token from God, and expect everything else conditionally."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "BISHOPS AND DEACONS AT 1:1 -- FIVE COMMENTATORS, ONE CONCLUSION, ONE RESERVATION. Henry says the apostle acknowledges but two orders and that the same titles, qualifications and acts of office are everywhere ascribed to bishops and presbyters alike (citing Dr Hammond). Clarke calls the question how one city could have several bishops a waste of paper, dismisses the answer that Philippi was a metropolitan see as 'the extravagance of trifling', and says 'I believe no such officer is meant as we now term bishop'. Robertson notes that in the second century the word came to mean one superior to elders (Ignatius) 'but not so in the N.T.'. Wesley says the names were used promiscuously in the first ages. Calvin concedes that order requires one presiding -- but 'of particular bodies, not of whole provinces, much less of the whole world' -- and says the later restriction of the name 'originated in a human custom, and rests on no Scripture authority', from which corruption one man 'under the pretext of a new appellation, usurped dominion over the others'. Ellicott alone adds a reservation: granting the indifferent use of the titles, he holds it 'in no way weakens' the historical development of the Episcopate early in the second century, probably under the sanction of St John."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "BARNES'S CHAPTER INTRODUCTION IS 4,485 WORDS AND IS THE LARGEST SINGLE BLOCK MET IN THE CORPUS SO FAR. It gives the topography and history of Philippi (named from Philip, formerly Crenides from its springs, the Thasian gold and silver mines, the road from Asia to Europe), the battle in which Cassius killed himself and Brutus wept over him as 'the last of the Romans', and then refuses to let that be the reason the town is remembered: 'Philippi was the first place in Europe where the gospel was preached; and this fact invests the place with more interest and importance than it derives from the battle fought there.' He adds a contemporary note, that two American missionaries visited the ruins in May 1834, saw what might have been the forum where Paul and Silas were beaten, and found the road from Neapolis still paved throughout."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "7",
+        "18"
+      ],
+      "note": "CALVIN QUOTES HIS OWN VERSE, AND NAMES A CONTEMPORARY HE DESPISES. At 1:7 he cites Tertullian's saying that the blood of the martyrs is the seed of the Church and adds that he imitated it himself in a Latin poem, quoting two lines of his own composition. At 1:18 he says that when he heard 'that impure dog Carolus was scattering the seeds of pure doctrine at Avignon and elsewhere, we gave thanks to God because he had made use of that most profligate and worthless villain for his glory' -- but sets a limit at once: 'though Paul rejoiced in the advancement of the gospel, yet, had the matter been in his hand, he would never have ordained such persons as ministers.' Both are unusually personal for a commentary and worth flagging for any future reader of the synthesis."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "3",
+        "7",
+        "8",
+        "9",
+        "12",
+        "21",
+        "27"
+      ],
+      "note": "MATTHEW HENRY IS EXPOSITION PLUS CONCISE AT EVERY KEY, SEVENTH BOOK. Henry appears at eight keys (1, 3, 7, 8, 9, 12, 21, 27) with blocks running to 2,011 words, and each carries the full Exposition followed by the Concise restating the same material. The block at key 12 covers verses 12-20 and the block at key 21 covers 21-26, so Henry's coverage is by paragraph rather than by verse, which leaves several keys (2, 4, 5, 6, 10, 11, 13-20, 22-26, 28-30) with no Henry at all."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "5",
+        "7",
+        "9",
+        "10",
+        "11",
+        "15",
+        "17",
+        "19",
+        "27"
+      ],
+      "note": "THE 200-WORD CAP BITES ON GILL AT NINE KEYS. Gill is truncated at exactly 200 words at keys 1, 5, 7, 9, 10, 11, 15, 17, 19, 27, always mid-clause. Combined with the same finding at 1thessalonians 5 (eight keys), Gill is now clearly the voice most often lost to the cap in the NT files. The standing re-fetch item for Keil and Lightfoot should be widened to include him."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "1",
+      "verses": [
+        "22"
+      ],
+      "note": "TWO INDEPENDENT NOTES ON THE LIMITS OF WHAT THE TEXT WILL BEAR AT 1:22. Ellicott calls the Authorised rendering of 'if I live in the flesh, this is the fruit of my labour' inaccurate and 'perhaps a gloss to soften the difficulty of the original', and says the construction 'is clearly broken by emotion or absorption in thought' and can only be supplied by conjecture. Robertson notes there is no word for 'if' in the Greek at all, and that the verb rendered 'I wot not' elsewhere means to make known, so that 'I do not declare what I shall choose' makes perfectly good sense. Barnes reports the renderings of Coverdale, Luther, Koppe, Rosenmuller and Calvin, grants the thought is valuable, and doubts it can be got out of the Greek."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "philippians",
+      "chapter": "1",
+      "note": "FIDELITY SELF-GRADE, philippians 1, nine entries, all in window. 1-2 = 650w, 9 voices. 3-6 = 650w, 8. 7-8 = 649w, 9. 9-11 = 649w, 8. 12-14 = 643w, 8. 15-18 = 648w, 8. 19-21 = 649w, 8. 22-26 = 649w, 8. 27-30 = 643w, 8. Every claim traced to a named block in data/commentary/cow/philippians/1.json before writing. Exclusions: all four Jamieson blocks (keys 4, 10, 16, 22) declared as residue; the single Cyril of Jerusalem block (key 19) dropped silently for the VOICE_LABELS defect; about 984 words of StudyLight footer, CSS and JavaScript inside the Ellicott block at key 30 ignored as chrome. Gross usable 61,018; after voice exclusions and chrome about 58,944 by the build's own count, of which the chrome removal accounts for 984. No entry rests on a single school; the largest single source block in the chapter, Barnes's 4,485-word introduction, was used only for entry 1-2."
     }
   ]
 }
