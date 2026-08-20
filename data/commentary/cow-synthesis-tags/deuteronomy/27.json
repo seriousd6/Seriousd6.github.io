@@ -1,894 +1,487 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
+   "Adam Clarke",
+   "John Calvin",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "John Gill"
+  ],
+  "range": "1",
+  "pericope_label": "Keep all the commandments which I command you this day",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Moses, with the elders of Israel, commanded the people."
+    "prevalence": "single",
+    "summary": "Calvin puts the command in a class with those he has treated before. God would have his precepts written on the door-posts and the borders of their garments, so they might constantly meet the eye; here a monument at the very entrance of the land, from which the people might learn on what terms they dwelt in it. The purpose is that knowledge of the law should not be obscured or obliterated by carelessness, and so its sum is inscribed in a conspicuous place. From this he draws the likeness he has already noted between private houses and the whole country: as the precepts on doors admonished each man that his house was sacred to God, so the writing at the border told whoever entered that the land itself was the sanctuary of heavenly doctrine, and might stir their zeal for pure worship. The direction that the writing be plain he takes to have one object — to take away the excuse of ignorance."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry fastens on who gives the charge. It is pressed with all authority, by Moses with the elders, the rulers of each tribe, and again by Moses and the priests, so it comes from the man who was king in Jeshurun and from their lords both spiritual and temporal. Lest the people think it was only Moses, an old and dying man, who made such ado about religion, or only priests whose trade it was and whose maintenance came out of it, the elders are joined in — men of business, likely to remain so long after Moses was gone. Moses, having put some of his honour on them, joins them in commission with himself, as Paul sometimes joins Silvanus and Timothy in his letters. All who have power over others should use it for the support of religion; for though the supreme power provide the best of laws, if magistrates, ministers and masters of families do not execute their offices, it will come to little. On the monument two things strike him. It was to be very mean — rough unhewn stone plastered over, not polished marble, nor tables of brass, but common plaster upon stone; and the writing not fine, to be admired by the curious, but plain, so that he who runs may read. The word of God needs not be set off by the art of man, nor embellished with the enticing words of man's wisdom. Yet the inscription was to be great, being all the words of this law, and what that covered is disputed: some understand only the covenant lately made; some the curses of this chapter, the rather because the stones stood on Ebal; some the whole book. Henry thinks the heap might be large enough to carry so copious an inscription — unless only the ten commandments were written there, as a copy of the rolls laid up in the ark."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke's summary runs to the same order: the law written on stones at the entry, an altar of unhewn stones with burnt and peace offerings, six tribes for blessing on Gerizim and six for cursing on Ebal."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: part of the conclusion and renewal of the covenant in the land of Moab."
+    "prevalence": "single",
+    "summary": "Keil sets the chapter in place: what begins here is the conclusion of the covenant in Moab, the renewal of what was concluded at Horeb — first instructions to set up the law solemnly in Canaan after crossing Jordan, then an exposition of blessing and curse as they would fall according to the people's attitude to it, and last a solemn address setting the choice of blessing and life before the nation. The opening command to keep the whole law uses the infinitive absolute for the imperative, and standing at the head it governs what follows."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What was written on the plastered stones?",
+    "positions": [
+     {
+      "position": "disputed — the covenant lately made, the curses of this chapter, the whole book, or only the ten commandments as a copy of the rolls in the ark",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the sum of the law, inscribed conspicuously so that ignorance could not be pleaded",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "extends the law of the door-post to the whole country, so that whoever crossed the border knew he had entered the sanctuary of heavenly doctrine"
+   }
+  ],
   "themes": [
-   "Keep all the commandments which I command you this day",
-   "a united charge to obedience",
-   "the covenant renewed, the people bound (Heb. 13:17)"
+   "the charge given with all authority",
+   "a mean monument with a great inscription",
+   "the land as a sanctuary of doctrine"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'on the day' means about that time, soon after they passed, though not executed until after Ai was destroyed; the great stones were to be plastered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt set thee up great stones, and plaister them with plaister",
-   "the law set up among the first acts in the land",
-   "God's word given the first place (Josh. 8:30)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: not the whole book of Deuteronomy but the laws of God, perhaps a summary or the ten commandments; Josephus thought the blessings and curses; written when they passed into the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt write upon them all the words of this law",
-   "the law made a public, abiding witness",
-   "the word set plainly, that he may run that readeth (Hab. 2:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "2-8",
+  "pericope_label": "Set thee up great stones, and plaister them with plaister",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: some time after they had passed Jordan."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the stones raised on Mount Ebal and plastered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye shall set up these stones... in mount Ebal",
-   "the law set on the mount of cursing",
-   "the law condemns; blessing sought beyond it (Gal. 3:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the altar was on the same mountain, though not of the same stones; Joshua so built it; no iron tool was to be lifted upon the stones."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt build an altar... of stones: thou shalt not lift up any iron tool upon them",
-   "the unhewn altar of grace beside the condemning law",
-   "approach not by man's work but appointed sacrifice (Exod. 20:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the altar was built of whole stones, as Joshua did."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the idea of the burnt offering is the dedication of man's life to God."
+    "summary": "Gill agrees the order was not executed until after Ai was destroyed, denies that the whole book was written on the stones, and suspects a summary, perhaps the ten commandments, noting that Josephus thought the blessings and curses were meant; he adds that some made the altar itself the inscribed stone. Calvin reads the altar as thanksgiving required at their first entrance; Joshua built one of whole stones over which no iron was lifted. The prohibition of tooled work he explains by its danger: a permanent altar would have occasioned superstition, and the exception come to be more regarded than the perpetual law. That is why the nine tribes and a half were so wroth over the altar built by Jordan that they were ready to destroy their brethren, until the builders pleaded it a memorial and not for sacrifice — good expounders of the law, Calvin says, who counted it inexpiable to leave an altar that might withdraw posterity from the one sanctuary."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: the whole, unhewn stones, the law written on them and the altar joined."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt build the altar... of whole stones; and thou shalt offer burnt offerings thereon",
-   "the burnt offering man's entire dedication to God",
-   "Christ offered wholly, that we be accepted (Rom. 12:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the peace offering — part to God, part to the priest, and the rest to the owner, eaten with his friends."
+    "summary": "Clarke observes that no number of stones is given — possibly twelve, possibly only enough for the writing — and suggests that plaster them with plaster might as well be cement them with cement, this being a durable monument; the usual practice of a rude heap without mortar made particular directions necessary where that method was not followed. He reports too the suggestion that the letters stood in relief with the cement filling the spaces, eastern inscriptions being often cut so. On the site he notes that the Samaritan reads Gerizim where the Hebrew reads Ebal, Kennicott defending the Samaritan and Parry and Verschuir the Hebrew, many thinking Kennicott unanswerable and suspecting a corruption made out of enmity to the Samaritans; and after all the ingenuity spent on the question he holds the word means the blessings and curses of this chapter and the next, themselves a good epitome of the whole law. Wesley presses the theology of the site: the law was written on the mount of cursing to signify that a curse is due to its violators, and that none can expect justification from a law by whose sentence all are accused; the sacrifices show there is no deliverance from it but by the blood of Christ, who was made a curse for us. He draws the halves together: by the law on the stones God spoke to them, and by the altar they spoke to God, so communion was kept up."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: these were offerings for health and peace."
+    "summary": "Keil takes the day named as a term of latitude, meaning the time when Israel had entered and taken possession, and takes the plainer view of the writing: it was not cut into the stone and afterwards covered, but painted on the coat of lime, as in Egypt, where walls and monuments were coated before the figures were laid on it. He will have none of the Samaritan reading, calling it an arbitrary alteration. Ellicott dismisses the theory that the stones came from Jordan, and defines the offerings: the burnt offering is the dedication of a man's life to God, the peace offering for deliverance already granted, and being the only kind the worshipper and his family might eat, it naturally accompanied rejoicing. On the inscription he says flatly the ten commandments, all else being the application of the Decalogue to a particular people; and on the direction to write very plainly he passes on the rabbinic gloss, in seventy languages, with the notion that at Sinai the law was heard in all tongues at once — a strange refraction of Pentecost, the founding of Jerusalem having effects exactly opposite to the founding of Babel."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt offer peace offerings, and shalt eat there, and rejoice before the LORD",
-   "reconciliation and joyful communion the end of sacrifice",
-   "Christ our peace, the feast after atonement (Eph. 2:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: written on the first stones set up before, on which the words were inscribed before the altar was erected, and to be written 'very plainly.'"
+    "question": "Do the stones belong on Ebal or on Gerizim?",
+    "positions": [
+     {
+      "position": "Ebal, the Samaritan reading being an arbitrary alteration",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "the case for Gerizim is strong; many think Kennicott unanswerable and suspect the Hebrew was corrupted out of enmity to the Samaritans",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are 'all the words of this law'?",
+    "positions": [
+     {
+      "position": "the blessings and curses of this chapter and the next, a good epitome of the whole law",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the ten commandments, all else being their application to a particular people",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "a summary, perhaps the ten commandments — certainly not the whole book",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "reads the ban on tooled stone as a guard against superstition, citing the near-war over the altar built by Jordan"
+   }
+  ],
   "themes": [
-   "thou shalt write upon the stones all the words of this law very plainly",
-   "God's word made clear and accessible",
-   "the word not hidden, none excused (Deut. 30:11)"
+   "the plastered stones",
+   "Ebal or Gerizim?",
+   "the altar of unhewn stone"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the priests who were Levites joined with Moses in the exhortation; this day they were become the people of the LORD."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this day thou art become the people of the LORD thy God",
-   "the covenant renewed and owned anew",
-   "a fresh consecration to the Lord (2 Cor. 8:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "9-11",
+  "pericope_label": "This day thou art become the people of the LORD thy God",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: obeying whatever he directs in his word, by his prophets, and especially by his Son, eminently called the Word of the Lord."
+    "summary": "Calvin grounds the exhortation on the favour of adoption: nothing should have stirred them to obedience more than a love more than paternal; hence the inference that being received as God's own they were bound to keep his statutes — as Paul teaches that we are redeemed from all iniquity, that Christ might purify to himself a peculiar people zealous of good works. Since the priests were now appointed, from whose lips the doctrine of the law was to be sought, they come forward in God's name, engaging Israel not only to answer his calls but to obey his ministers. On the division of the tribes Calvin confesses he does not know why those six were chosen, and finds no force in the opinion that descent from free mothers gave the higher place, since Reuben the firstborn was ranked with the handmaids' sons — unless so degraded for ignominy. He is not curious about it, since both were offered in the nation's name, witnessing their common consent. Gill notes that these were the lawful priests, whose business was to teach the statutes and see them kept."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the scene. In the part of Canaan that afterwards fell to Ephraim two mountains lay near together with a valley between, and on the facing slopes the tribes drew up, six on each, near enough at the foot that the priests standing between could be heard. When silence was proclaimed, one of them pronounced a malediction aloud, and all on the Ebal side said Amen, those further off taking the signal from those within hearing; then the contrary sentence came, and Gerizim answered it. Henry takes the free-women reading, and notes that Levi stands among them to teach ministers to apply to themselves what they preach to others, and that the Levites utter the maledictions too, since they must separate the precious from the vile: a minister must press the terrors of the law as well as the comforts of the gospel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley says only that they became the Lord's people by this solemn renewing of the covenant."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the charge to obey and do his commandments and statutes."
+    "summary": "Ellicott notes that where the opening verse had Moses with the elders, this has him with the priests. The word rendered take heed occurs nowhere else in the Old Testament, and the declaration that this day thou art become the people of the Lord he glosses from the maxim that God's commandments should stand before a man's eyes daily, as though he had that day entered into covenant. What is chiefly in view is the passage of Jordan, which he thinks pledged Israel to the law more completely than Sinai itself had, God having gone further with them and given them a more distinct position. On the ceremony he holds the usual phrasing misleading, since it was not that six tribes blessed and six cursed their brethren: the rule is explicit that all the people say Amen, so the sense must be that these stood on Gerizim to receive the benediction for the whole and these on Ebal the doom, the twelve divided equally because all lay equally open to either. He observes that strictly seven stood on Gerizim, Joseph including Ephraim and Manasseh, and that the arrangement was an amphitheatre, the speakers in the centre below; and he notes that Ebal carried both the law which inflicts the sentence and the altar representing him who bore it, so those receiving the doom stand on the same slope as the Redeemer. Keil describes the act as a transfer to the land itself of the sanctions of the law, the favourable side falling to the tribes sprung from Jacob's two wives and the other to Reuben with Zilpah's sons, and Zebulun with Dan and Naphtali."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt therefore obey the voice of the LORD thy God, and do his commandments",
-   "obedience flowing from belonging to him",
-   "hearing him supremely in his Son (Matt. 17:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Moses gave the orders to set up stones, write the law, build the altar, and offer sacrifices."
+    "question": "Did six tribes bless and six curse their brethren?",
+    "positions": [
+     {
+      "position": "no — all the people answered Amen, so each side stood to receive the blessing or the curse on behalf of the whole",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the six on Gerizim answered Amen to the blessing and the six on Ebal to the curse, as the priests pronounced each in turn",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: when the law was written to be seen and read by all, the people were to be solemnly called to it."
+    "question": "Why were those particular six tribes chosen to bless?",
+    "positions": [
+     {
+      "position": "because they were the children of the free women, to whom the promise belongs",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "unknown; the free-mother explanation fails, since Reuben the firstborn stands with the handmaids’ sons",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "observes that Ebal bore both the law that curses and the altar that represents the one who bore the curse"
+   }
+  ],
   "themes": [
-   "And Moses charged the people the same day",
-   "the law pressed home, not merely displayed",
-   "the word brought home to the conscience (Neh. 8:8)"
+   "this day thou art become the people of the LORD",
+   "the tribes on the two mountains",
+   "to bless and to curse — or to receive blessing and curse"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "12": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "12-18",
+  "pericope_label": "The Levites shall speak, and say unto all the men of Israel",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: these tribes were to stand on Gerizim to bless."
+    "summary": "Gill takes the silence about the blessings for design: they were not to be had from the law, and it is meant to put men on seeking them elsewhere, in Christ, though he supposes they were spoken in the same form as the curses and simply reversed. He also points out, with Wesley, that the whole tribe of Levi stood on Gerizim, so those who pronounced the words must be its priests, stationed in the valley and turning toward one hill or the other as they spoke. Calvin thinks the Spirit may be indirectly rebuking the people, since when they ought to have embraced the promised reward their ungodliness deprived them of that honour; yet the forms of cursing teach what course was to be observed in blessing, for when God condemns transgressors we may infer that blessedness is laid up for his true servants. He presses harder by noting who is missing: no separate curse falls on blasphemers, perjurers, Sabbath-breakers or adulterers, so certain crimes were selected to teach that no transgression would go unpunished; by naming the graven image God defends his worship from every pollution, and the curse reaches every breach of the first table. What holds it together, Calvin thinks, is secrecy. The image is put in a hidden place, the theft escapes men's knowledge, the acts of uncleanness are concealed the more for their filthiness, and the murderer cursed is the one who sheds innocent blood for hire, a compact not easily brought to light. No concealment will profit, since shame will be discovered at his tribunal; the people are summoned there to be held to duty not by fear of penalty only but for conscience' sake — which shows he delivered no merely political law, but one requiring sincerity of heart."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke queries the preposition. The particle rendered upon is sometimes translated by or beside, and he thinks it must be so here, since when the direction was executed the people stood not on the mountains but over against them on the plain; Wesley renders it the same way, and notes that Joseph stands here for both Manasseh and Ephraim, reckoned as one because Levi is numbered, whereas where the land is divided and Levi omitted they count as two. Wesley puts the silence about the blessings evangelically: as many as were under the law were under the curse, and it was an honour reserved for Christ to bless us and do what the law could not, so that in his sermon on the mount, the true Gerizim, there are blessings only. He asks how the people could say Amen to a curse, and answers that it was a profession of faith in its truth and an acknowledgment of its equity — not that it shall be so only, but that it is just. Clarke adds that these things were forbidden already, with penalties understood, but here God declares more openly that the breaker is cursed."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: name the six tribes for blessing on Gerizim."
+    "summary": "Keil defines the term likewise: the Levites here are not all the tribe but those in whom the character of Levi was most manifest, the levitical priests; and the people's Amen takes the sentence on themselves, as in every oath. Ellicott finds the first curse pointing to the opening commandments of the first table and the second to the first of the second, then arranges the rest: duty to parents, the rights of neighbours, of the blind and of the unprotected; four precepts on purity; two at the end on slander and treachery. The offences are examples of whole classes, and the twelve may answer to the number of the tribes, as Keil also counts them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why are the curses written out and the blessings not?",
+    "positions": [
+     {
+      "position": "by design, to send men elsewhere for them — they were never to be had from the law",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "as an indirect rebuke: their ungodliness had forfeited the promised reward, so nothing remained but the sentence",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "because all under the law were under the curse; blessing was an honour reserved for Christ, whose sermon on the mount is the true Gerizim",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "finds secrecy the thread running through the chosen curses, and infers that the law bound the conscience and was never merely political"
+   }
+  ],
   "themes": [
-   "These shall stand upon mount Gerizim to bless the people",
-   "the whole nation engaged in the covenant",
-   "the two ways set before them (Deut. 30:19)"
+   "who pronounced the words",
+   "why the blessings are not recorded",
+   "the twelve curses and their secrecy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Ebal was dry and rocky, barren, like the earth that bears thorns and is nigh unto cursing — a fit place to curse and emblem of those to be cursed."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: these tribes appointed for the curse."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And these shall stand upon mount Ebal to curse",
-   "the barren mount an emblem of the cursed",
-   "the law's curse for the transgressor (Heb. 6:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: not the whole tribe but the priests placed in the valley between the mounts, who pronounced both blessings and curses with a loud voice, in the hearing of all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levites shall speak, and say unto all the men of Israel with a loud voice",
-   "the covenant openly proclaimed",
-   "the priests ministering the word (Mal. 2:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the blessings and their form are not recorded, to put men upon seeking them elsewhere, only to be had in Christ; the curse falls on secret idolatry; all the people answered, Amen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be the man that maketh any graven or molten image... in a secret place. And all the people shall... say, Amen",
-   "God judging secret idolatry",
-   "the blessings sought only in Christ (Gal. 3:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: of one who secretly despises them in his heart, mocking by looks and gestures unseen; open cursing was punishable by the magistrate with death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that setteth light by his father or his mother",
-   "the secret dishonouring of parents cursed",
-   "the heart searched, beyond man's reach (Prov. 30:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill, with Jarchi: the removing of the landmark backward to steal ground, commonly done secretly."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: refers to the earlier law (Deut. 19:14)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that removeth his neighbour's landmark",
-   "the secret fraud of stealing land cursed",
-   "unseen by men but open before God (Prov. 22:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the misdirecting of the blind knowingly, or laying a stumbling block; the Targum extends it to misleading a traveller who, like a blind man, knows not his way; Jarchi takes it of blinding any in a matter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that maketh the blind to wander out of the way",
-   "the cruel betrayal of trust cursed",
-   "no stumblingblock before the blind (Lev. 19:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
-   "John Gill"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
   ],
+  "range": "19-26",
+  "pericope_label": "Cursed be he that confirmeth not all the words of this law to do them",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the perverting of the judgment of the stranger, fatherless, and widow; all the people said, Amen."
+    "prevalence": "several",
+    "summary": "Gill runs through the closing offences with one thread in view: these incestuous and brutal couplings may be supposed done in secret, and he who smites his neighbour privately kills without the murder being known, though God's curse overtakes him at last. He notes an alternative reading, taken by some of smiting with the tongue, secret backbiting and slander — the Targum has it of the third tongue — and on the last particular curse he reports a like division: some understand a hired assassin, some a judge bribed to condemn the innocent, another a false witness who swears away a man's life for reward. Calvin observes that although God had threatened secret sins designedly, so men should not fear human judgments only, the conclusion extends the same sentence to iniquities of every kind, declaring that whoever does not perform what the law requires is accursed. From this Paul rightly infers that as many as are of the works of the law are under the curse; for let the most perfect man come forward, and however diligently he has striven he will have offended somewhere — and whoever keeps the whole law yet offends in one point is guilty of all. Paul does not quote the words exactly, but the sense is the same, since all are condemned who have not fulfilled what the law contains; and to this the Israelites were commanded to assent, acknowledging themselves lost. So too, he adds, we must be struck with the same despair, that embracing the grace of Christ we may be delivered, since he was made accursed for us. Gill adds that the obedience required is perfect."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the term rendered all is missing from the common Hebrew, but stands in the Samaritan, in six manuscripts collated by Kennicott and De Rossi, in the Chaldee paraphrase, in the Greek, and in Paul's quotation; and he passes on Jerome's charge that the Jews suppressed it lest it appear they were bound to fulfil every precept. He also reproduces Kennicott's table setting the twelve curses against the ten commandments, the graven image answering to the first four and so on to the summary curse and the tenth — adding his own verdict, that many will think the arrangement fanciful. On the standing of the tribes Clarke adds a remark: blessing was the more honourable office and fell to the children of the two wives, cursing to the handmaids' sons; and since six were needed on each side, two of the honourable had to join the four. Zebulun was chosen as Leah's youngest, and Reuben because, though the eldest, he had forfeited the birthright — so that his posterity stood degraded, and were obliged to pronounce the very curse that fell upon their father's own sin. Wesley keeps the plain sense of killing in the earlier curse but widens it: it includes murder under colour of law, of all affronts to God the greatest, so cursed is he who any way helps to condemn an innocent person; and on the last he says we must all say Amen, owning ourselves under the curse, and that we must have perished had Christ not been made a curse for us."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott passes on the gloss that the secret smiting is spoken of a backbiting tongue, and on the closing sentence quotes the comment that here the whole law is summed up and taken on them with a curse and an oath, drawing the same conclusion: the blessing of Gerizim cannot be had except through him who bore the curse of Ebal. He adds a point of grammar worth having: in all these sentences the verb is wanting, so cursed is he would be the more correct English — they are not imprecations so much as declarations of fact."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does it mean to smite a neighbour secretly?",
+    "positions": [
+     {
+      "position": "to kill him privately, the murder going unknown — though some take it of the tongue, of backbiting and false accusation",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "to kill, including murder under colour of law, so that any who help condemn the innocent fall under it",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "spoken of a backbiting tongue",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "reports that the word 'all' has dropped from the printed Hebrew but stands in the Samaritan, the versions and Paul's quotation, with Jerome's charge that it was suppressed deliberately"
+   }
+  ],
   "themes": [
-   "Cursed be he that perverteth the judgment of the stranger, fatherless, and widow",
-   "injustice to the helpless cursed",
-   "God a father of the fatherless (Ps. 68:5)"
+   "the secret sins",
+   "the missing word \"all\"",
+   "cursed is every one — declarations, not imprecations"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: as Reuben did, forbidden in the law (Lev. 18:8); all the people said, Amen."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that lieth with his father's wife",
-   "the secret defilement of the family cursed",
-   "no uncleanness escapes God's judgment (Heb. 13:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: refers to the law forbidding it (Lev. 18:23); all the people said, Amen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that lieth with any manner of beast",
-   "the unnatural confusion cursed",
-   "accursed before God who sees the darkest deeds (Lev. 18:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: forbidden in the law (Lev. 18:9); all the people said, Amen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that lieth with his sister",
-   "the secret breach of kinship cursed",
-   "the hidden violation judged by God (Ezek. 22:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this completes the list; all these incestuous or brutal copulations may well be supposed to be done in secret; all the people said, Amen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that lieth with his mother in law",
-   "the secret sins of the flesh cursed",
-   "God brings every secret thing into judgment (Eccl. 12:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the smiting and killing of a neighbour secretly, the murder unknown; some take it of smiting with the tongue, secret backbiting and slander, 'the third tongue' of the Targum."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that smiteth his neighbour secretly",
-   "the hidden blow or secret slander cursed",
-   "privy slander cut off by God (Ps. 101:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the assassin who murders privately for hire, or the judge who takes a bribe to condemn the innocent, or, as he thinks, a false witness who swears away a man's life."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that taketh reward to slay an innocent person",
-   "the trafficking in innocent blood cursed",
-   "the LORD the defence of the innocent (Ps. 94:21-22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: whoever does not perfectly and constantly perform all the law requires; the law requires perfect and constant obedience, and curses upon failure — the apostle so producing this passage (Gal. 3:10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cursed be he that confirmeth not all the words of this law to do them",
-   "the universal curse on imperfect obedience",
-   "Christ made a curse for us (Gal. 3:10, 13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

@@ -9502,6 +9502,37 @@
         "25"
       ],
       "note": "A genuine three-way disagreement worth preserving in the tags: were Achan's children executed? Clarke argues at length from the Hebrew (stoned HIM singular, burned THEM plural), from the versions (only the Arabic names the children; the Latin, Greek and Syriac refer the burning to his goods), from two De Rossi MSS reading the singular, and from Deuteronomy 24:16, that the man alone died and the children were brought out only to see and fear. Ellicott holds all were destroyed together on the herem logic and Joshua 22:20. Wesley defends the execution as just, arguing the children were probably grown and privy. Calvin assumes it and refuses to explain it away. Both entries carry the debate; the Clarke position is filed at v25 where his textual argument sits, and the Ellicott/Wesley positions at v24."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "27",
+      "verses": [
+        "12",
+        "18"
+      ],
+      "note": "JFB stride bug, 22nd confirmed instance. Both JFB blocks in this chapter are displaced Numbers 31 material — key 12 carries the Midianite war and the seduction at Baal-peor, key 18 the partial destruction of Midian and the tribes absent on their pastoral wanderings. Neither touches Deuteronomy 27. Single donor here, unlike joshua 7 where the two blocks came from different donors. Declared in excluded_voices at the vv12-18 entry."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "27",
+      "verses": [
+        "26"
+      ],
+      "note": "StudyLight boilerplate tail, 18th instance, on Ellicott at key 26 — which is both the chapter's last commented key and Ellicott's last block, so it fits the refined rule recorded at joshua 7 without discriminating between the two forms."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "27",
+      "verses": [
+        "1"
+      ],
+      "note": "Gill declared excluded at the v1 entry, and the reason is worth recording because it is a new one. His key-1 block is not displaced and not boilerplate: it is the bare lemma ('And Moses, with the elders of Israel, commanded the people,') with no comment attached at all. Naming him would have meant inventing an attribution, so he was declared excluded instead. undeclarable_voices accepts it, since split_voices does segment the empty block. Distinguish this case in future from the stride bug (wrong content) and from the Keil verse-dump case at exodus 7 (AV text of following verses with no comment): here there is no text at all beyond the catchword."
     }
   ]
 }
