@@ -11411,6 +11411,137 @@
         "20"
       ],
       "note": "Three commentators give three different totals for the disqualifying blemishes, none acknowledging the others: Clarke a hundred and twenty on Ainsworth's authority, itemised by body part; Gill a hundred and forty; Ellicott a hundred and forty-two, from the second-Temple registers. Presented as the disagreement it is. Ellicott also preserves the procedure behind his figure — a chamber in the Temple court where the Sanhedrin examined every priest, the rejected putting on black and going away in silence while the accepted put on white and feasted, and the rejected then being employed to select wood sound enough for the altar. That last detail is the kind of thing the catena carries and nothing else in the corpus does."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26",
+        "32"
+      ],
+      "note": "Jamieson stride-6 confirmed a FOURTH time, and a THIRD monotonic walk — this one in the New Testament. 1 Corinthians 11 carries Jamieson, Fausset and Brown at keys 2, 8, 14, 20, 26 and 32: stride 6, offset 2, six members. The content is a monotonic walk through ACTS 22, Paul's defence on the stairs, in canonical order: key 8 = Acts 22:3 (brought up at the feet of Gamaliel, 'the strictest form of traditional Judaism', 'a zealot'); key 14 = Acts 22:8 ('the Nazarene'); key 20 = the covenant clause; key 26 = Acts 22:17-18 (the temple vision, 'after his conversion he kept up his connection with the temple as before'); key 32 = Acts 22:22 (the fury at the mention of a mission to the Gentiles, and the protection of the Roman officer). Key 2 is a 26-word fragment. The tally is now: 1peter 1 (five members, Gal 6:8 to Eph 1:8), acts 21 (six members, Luke 24 to Acts 1:14 with the last block repeated), numbers 24 (four members, Numbers 3 with the block repeated byte-identically three times), and now 1corinthians 11 (six members, Acts 22 throughout). Four chapters, one stride, three walks and one stall. Note that acts 21's residue walked ACTS 1 while this chapter's walks ACTS 22 — the wrong region differs per chapter, so the pointer is not parked at a fixed global offset. Chapter 45 of the misalignment."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "3",
+        "24",
+        "34"
+      ],
+      "note": "Three DIFFERENT residue mechanisms in one chapter, plus the eighth chrome measurement. (1) TERTULLIAN at key 1 is Against Marcion book 5 on 1 CORINTHIANS 15, the resurrection of the body — right epistle, wrong chapter. A chapter misfile, not a stride walk. Declarable, since VOICE_LABELS carries 'Tertullian' as an exact full name; declared in excluded_voices on entry 1-3. (2) CYRIL OF JERUSALEM at key 3 is Catechetical Lecture 13, on the Cross and Golgotha — nothing to do with 'the head of every man is Christ'. This one CANNOT be declared, because VOICE_LABELS carries the short form 'Cyril' and the regex requires 'Cyril' immediately followed by a colon, which never matches the head 'Cyril of Jerusalem:'. Dropped SILENTLY, as the defect requires. (3) Cyril at keys 23 AND 24 is genuine (Mystagogical Catechesis 4, on the Eucharist, quoting 1 Cor 11:23 directly) but key 24 repeats key 23 BYTE-IDENTICALLY — a duplicate, not a misfile. It was left in place since Cyril is used in that entry and the only cost is a small inflation of the measured source. (4) CHROME: key 34, inside the Charles Ellicott block, 995 words / 30,497 chars / 126 newlines, cutting Ellicott off immediately after 'They are quite general, whenever I come'. The newline count is identical to the exodus 2 and numbers 24 measurements (126); the character count differs by 156 because the nav strip carries the book name, and '1 Corinthians  1Co  10 ...' is longer than 'Numbers  Num  23 ...'. So the CSS/JS payload is invariant and only the nav strip varies with book-name length. THIRD consecutive non-terminal chrome: A.T. Robertson follows it cleanly at the same key."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "2",
+        "17",
+        "28"
+      ],
+      "note": "THE VOICE_LABELS DEFECT IS NOW MEASURABLE, and this chapter is the strongest case yet for fixing it. 1 Corinthians 11 carries four voices outside the standard eight: Tertullian (key 1), Cyril of Jerusalem (3, 23, 24), John Chrysostom (2, 17, 28) and John Lightfoot (thirteen keys). Against the VOICE_LABELS regex in scripts/synthesis_qa.py these behave in three different ways. 'Tertullian' is listed as an exact full name and the head is exactly 'Tertullian:', so it matches and can be declared. 'Chrysostom', 'Lightfoot' and 'Robertson' are listed as SHORT forms, but because the regex looks for the label followed by a colon, and the heads are 'John Chrysostom:', 'John Lightfoot:' and 'A.T. Robertson:', the short form still matches the tail of the full head — so these three work by accident. 'Cyril' is the one that breaks: the head is 'Cyril of Jerusalem:', where the label is followed by ' of Jerusalem' and not by a colon, so the regex never matches and the voice can never be declared in excluded_voices. That is the whole defect, stated precisely: it is not that short forms are used, but that ONE short form happens to be a prefix of a longer name rather than a suffix. The fix is one line — replace 'Cyril' with 'Cyril of Jerusalem' in VOICE_LABELS, or make the regex tolerate an intervening qualifier. Until then every Cyril residue block must be dropped silently and cannot be audited. Twenty-one batches old and now blocking real work: this chapter had a genuine Cyril at two keys and a residue Cyril at a third, and only the silent drop could distinguish them."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "17",
+        "20",
+        "27",
+        "29",
+        "33"
+      ],
+      "note": "Four voices independently reconstruct the Corinthian abuse, and they split two against two on its cause. CHRYSOSTOM, nearest in time, describes an institution decaying from within: as the first three thousand had all things common, an outflowing of that communion descended to later believers, who opened their tables on stated days so that after the communion of the Mysteries all went to a common entertainment, the rich bringing provisions and inviting the destitute; the corruption came from the party spirit, which is why Paul had put his own name at the head of the I-am-of-Paul list, to tear the custom up by the root. CALVIN follows him on the origin but adds external evidence — Tertullian for the antiquity of the agape, and Pliny's letter to Trajan reporting that the Bithynian Christians said they used to depart and reassemble to take an innocent repast in common — and adds his own conjecture that the agape derived from the sacrificial feasts of Jews and Gentiles alike, Christians correcting the faults while keeping a resemblance. Against this, CLARKE and LIGHTFOOT independently reconstruct a DOCTRINAL corruption: false teachers made the Corinthians keep the Supper exactly as the Jews kept the passover, so the sacrament became an appendix to an ordinary meal. Lightfoot presses it furthest, arguing at 11:26 that the Passover haggadah was a set declaration of the deliverance from Egypt and that the Judaizers kept that declaration in the Eucharist 'as if the Eucharist were instituted and superadded only for that commemoration', and again at 11:29 that they 'would see nothing of the body of Christ in the Eucharist, or of his death, their eyes being too intent upon the commemoration of the Passover', so that 'they retained the old leaven of Judaism in this new Passover'; at 11:33 he denies that 'tarry one for another' sanctions those paschal ante-suppers. Clarke reaches the same picture and calls them 'mongrel Christians'. Two independent English commentators, a century apart, converging on a Judaizing reconstruction that neither Greek father nor Genevan reformer entertained."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "10"
+      ],
+      "note": "The chapter's central crux divides the catena on BOTH of its clauses, and Ellicott calls them perhaps the two most difficult passages in the New Testament. On POWER ON HER HEAD: Ellicott and Lightfoot agree, independently and against everyone else, that the Greek word always denotes a power one holds oneself and never a power exercised over one — Lightfoot saying it is so in Matthew, John and 'elsewhere a thousand times', Ellicott calling this the fatal objection to the received view and citing Paul's own repeated use in this epistle. Ellicott then identifies the power with the woman's long hair, her glory, noting that Callistratus twice uses the word of an abundance of hair and that Samson would give it force for Jewish readers, and finding it eminently Pauline to call the badge of subordination a power. Against them Calvin, Clarke and Robertson take the word as metonymy for the token of ANOTHER'S authority, Calvin citing the figure directly, Clarke citing Theophylact and Photius, Robertson conceding that as we see it the veil is more a sign of subjection than of authority. On BECAUSE OF THE ANGELS there are five answers: Wesley, Robertson and Clarke (following Pearce) take them for holy angels present in worship, Robertson adding that the angels themselves veil their faces before Jehovah and Clarke supporting the Jewish notion from Ecclesiastes, from the charge before the elect angels, and from Agrippa's oration in Josephus; Calvin knows and rejects as 'too forced' the view that ministers are meant, since Malachi calls priests angels; LIGHTFOOT says that if the power is a veil then the angels are DEVILS, so called in this same epistle; and ELLICOTT refers the phrase to the fall of the angels in Genesis 6, where the Greek has angeloi, arguing that Paul uses the legend as an argument with those who believed it without endorsing it, and against Meyer keeps them good angels, since the point is that they should not be tempted. Clarke reports a sixth view, Lightfoot's own, that the angels are the paranymphs who sought out spouses — which the truncated Lightfoot block in this catena does not reach."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "29"
+      ],
+      "note": "Ellicott argues in four numbered steps that the body not discerned is THE CHURCH, and no one else in the catena reaches that reading. Dropping the words 'the Lord's' as unsupported by manuscript evidence, he argues: (1) the verb means to arrive at a right estimate of the character or quality of a thing; (2) the fault Paul condemns is that the Corinthians treated these gatherings as opportunities for individual indulgence and not as Church assemblies, failing to estimate the meetings as corporate and themselves as members rather than isolated individuals; (3) referring the words to a physical presence 'is to divorce them violently from their surroundings', and would make the practical remedy given at 11:33-34 no remedy at all, besides which, if the physical body were meant, both 'the Lord's' and 'and the blood' would surely have been added, since non-recognition of the blood would be as great an offence; (4) Paul never uses 'body' of Christ's physical body without clear indication, whereas 'the Body' for the Church is frequent and occurs a few verses earlier on this very subject. Against this: LIGHTFOOT makes it an act of the understanding, a true judgment of the nature and signification of the sacrament, and identifies the offenders as the Judaizers; CLARKE agrees with Lightfoot; ROBERTSON keeps to the verb (our 'discriminate') and says the eating probes the heart; GILL, BARNES and WESLEY take it as putting a right difference between this bread and common food; and CYRIL, at 11:23, stands at the far end — since Christ himself said 'this is my Body', 'who shall dare to doubt any longer?' Set against Ellicott's gloss on the same words, that to those who first heard them they implied 'not that a physical presence was about to be perpetuated, but rather that there was now something for them which would in after ages console them for a physical absence', this is the sharpest cross-school opposition in the chapter, and it runs between a fourth-century catechist and a nineteenth-century Anglican on the same clause."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "23",
+        "25",
+        "27"
+      ],
+      "note": "Three textual observations in this chapter carry confessional freight, and two of the commentators say so outright. (1) At 11:24 Ellicott and Robertson agree that 'broken' is no part of the text — Ellicott saying the insertion of 'take, eat' was probably made to produce verbal identity with Matthew and 'broken' added as explanatory, Robertson that the received reading is clearly not genuine, that Luke's 'given' carries the real idea, and making the theological point that 'the body of Jesus was not broken. The bread was broken, but not the body of Jesus.' (2) At 11:27 Ellicott states that the entire weight of manuscript evidence favours 'or' rather than 'and', and adds the charge that the conjunction 'was probably retained in the English version lest the disjunctive or might seem to favour the practice of receiving in one kind only' — an accusation of confessional motive against the translators, and one that lands directly on Calvin's argument two verses earlier that to distribute the bread without the cup is to mutilate Christ's institution, that obeying half a command is to make sport of it, and that the plea that Christ spoke only to the Apostles is 'exceedingly childish' since Paul here addresses men and women indiscriminately. (3) At 11:29 Ellicott removes both 'unworthily' and 'the Lord's', Robertson agreeing on the former. The three readings together shift the verse away from every use that later controversy made of it, and the two who press them hardest are the two grammarians."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "4",
+        "16",
+        "23"
+      ],
+      "note": "Ellicott is doing something in this chapter that the rest of the catena does not attempt, and it is worth recording as a whole. (a) At 11:4 he observes that Paul's ruling reverses the practice he was raised in, since the Jewish man prayed veiled in the Tallith to confess his unworthiness to look on God, and credits him with 'a profound insight into human nature... how an external symbol would infallibly tend to modify doctrine', so that keeping the custom might have hindered the recognition of every soul's direct communication with the Father. (b) At 11:16 he draws two general morals: that as with slavery, Christianity did not efface recognised social arrangements by sudden revolution but leavened the world gradually, coming 'not to unsex woman, but to raise, dignify, and ennoble her as woman — to abolish for ever her real wrongs, but not to yield to a revolutionary clamour for imaginary rights'; and that the temporary application of the rule has been universally kept while the eternal principle behind it has been forgotten, which he takes as evidence of the wisdom that withheld the apostolic writers from laying down minute directions for worship, 'for men would, in a servile obedience to rules, have soon and completely forgotten the living principles on which they were based.' (c) At 11:18 he turns an exegetical difficulty into method: 'this is not a treatise, but a letter, and not only a letter, but an answer to a letter,' so that if we had the letter it replies to, much that puzzles us would be plain. (d) At 11:23 he mounts an evidential argument nobody else makes — if the Betrayal and Crucifixion are not historical, how is the existence of the Eucharistic feast to be accounted for, in an epistle whose authenticity has never been disputed, among Jews who spoke of the wine they drank as blood; a conspiracy like Catiline's might have chosen such a symbol, but 'such a band of men as the early Christians certainly could not of their own thought have made such a choice'; and 'Christendom was not an afterthought of the Apostles, but the forethought of the Lord.' Four distinct kinds of argument — psychological, sociological, methodological and evidential — in one chapter from one voice."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "6",
+        "10",
+        "15",
+        "21",
+        "23",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "33"
+      ],
+      "note": "Lightfoot is a NEW voice for this loop, genuine, and capped at 200 words throughout — with OCR damage on top. John Lightfoot's Horae Hebraicae et Talmudicae appears at thirteen keys in 1 Corinthians 11 and is genuine at twelve of them (key 3 is residue, commenting on 1 Cor 12:3 on calling Jesus accursed). School mapping follows the established convention found in existing NT tags files: puritan-evangelical, five prior hits against one stray. Two defects: (1) EVERY substantial Lightfoot block is cut at exactly 200 words, the same fetch cap that truncates Keil throughout the Old Testament chapters. Because Lightfoot's method is to quote a rabbinic source at length before drawing his conclusion, the cap frequently removes the conclusion — most damagingly at key 10, where the block breaks off just as he begins 'if I were of opinion that the apostle treated here of public assemblies only, I would render his words to this sense', so that his actual proposal is lost, and Clarke's report elsewhere in the same catena of Lightfoot's paranymph reading has nothing in the Lightfoot block to check it against. (2) OCR DAMAGE: the Hebrew and Greek in these blocks is badly mangled (key 25 opens 'MIND NT VN What* is giving? Behold, all my goods are given to N.', which is a garbled Hebrew citation), and ligatures and quotation marks are corrupted throughout ('ὦ veil' for 'a veil', 'Hwercitations' for 'Exercitations'). Same class of damage as the Bede OCR item already on the owner list. A re-fetch at a higher cap would recover a great deal here: Lightfoot is the only voice in this catena supplying rabbinic parallels, and his reconstruction of the Corinthian fault as Judaizing is one of the chapter's substantive contributions."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "11",
+      "verses": [
+        "1-34"
+      ],
+      "note": "Fidelity self-grade A for all ten entries of 1corinthians 11. Tiling covers 1-34 exactly, no gaps or overlaps: 1-3 (647w), 4-6 (650w), 7-10 (645w), 11-16 (650w), 17-19 (650w), 20-22 (603w), 23-24 (646w), 25-26 (641w), 27-29 (650w), 30-34 (645w) — all inside the 350-650 window. Voice coverage: entries 1-3 and 23-24 name all ten voices present in range (Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Lightfoot and, respectively, Chrysostom and Cyril); entries 17-19 and 27-29 name nine including Chrysostom; the remaining six name the eight that actually appear. Five schools are represented across the chapter: reformed, puritan-evangelical, wesleyan-arminian, grammatical-historical and eastern-antiochene. Exclusions: Jamieson declared on entries 1-3, 7-10, 11-16, 20-22, 25-26 and 30-34; Tertullian declared on entry 1-3; Cyril at key 3 dropped SILENTLY because the VOICE_LABELS regex cannot match the head 'Cyril of Jerusalem:'. Every proposition in the prose is traceable to a named block in data/commentary/cow/1corinthians/11.json; where a voice is reported as standing alone or against the rest (Ellicott and Lightfoot on exousia, Ellicott on the body as the Church, Lightfoot on the angels as devils, Cyril against Ellicott on presence, Robertson against Ellicott on Luke's dependence) the claim was checked against every other block in the range before being written. Gross size 70,342 usable source words; real usable after deducting the 995-word chrome at key 34 and the Jamieson residue is 67,924, the largest chapter attempted in this loop."
     }
   ]
 }
