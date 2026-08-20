@@ -11947,6 +11947,230 @@
       "book": "genesis",
       "chapter": "39",
       "note": "Length control, five entries: 646, 646, 649, 589, 642, all grade A. First drafts came in at 795, 743, 742, 589, 719 — the same seven-and-six-voice overshoot as genesis 40, and the vv16-19 entry, which has only THREE voices (Gill, Henry, Calvin), landed at 589 on the first attempt with no trim pass at all. That is now a clean natural experiment across two chapters and eleven entries: three voices drafts in range, five drafts about 70 over, six about 90 over, seven about 150 over. The relationship is close enough to linear that the per-voice quota rule from note 1102 can be stated as a number — roughly 600 divided by the voice count is the budget each voice actually gets, and drafting at more than that guarantees a trim pass per extra voice. Every effective cut this chapter was again a whole idea dropped (Clarke's forty court ladies and the oranges, Calvin's vain-pretexts passage on reputation, Calvin's rare-virtue clause, Wesley's prisoners sentence, Henry's detestable-wickedness line); across five entries the lexical passes moved single-digit word counts while the structural cuts moved 45-105 each. Note 1018 holds at eleven chapters without a counterexample."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JAMIESON MISALIGNMENT, SIXTH STRIDE-6 CONFIRMATION, FIFTH MONOTONIC WALK, AND A NEW OFFSET. Jamieson appears at keys 6, 12, 18, 24 -- stride 6, and for the first time OFFSET 0 (the keys are the exact multiples of six). Four members, and a monotonic walk through 1 CORINTHIANS 9-10: key 6 = 1 Cor 9:24 (the Isthmian games and the foot race), key 12 = 1 Cor 10:1 (the chapter heading and the fathers under the cloud), key 18 = 1 Cor 10:6 (the lusting after flesh in the wilderness), key 24 = 1 Cor 10:11 (the ends of the ages). Running tally of confirmed stride-6 Jamieson residue with offsets: 1peter 1 (offset 1, Gal 6 to Eph 1), acts 21 (offset 2, Luke 24 to Acts 1), numbers 24 (offset 3, Numbers 3, stalled), 1corinthians 11 (offset 2, Acts 22), philemon 1 (offset 3, 2 Cor 2-3), 1thessalonians 5 (offset 0, 1 Cor 9-10). Offsets 0, 1, 2, 3 have now all been observed, and the wrong region still differs per chapter. All four blocks excluded and declared."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "23",
+        "28"
+      ],
+      "note": "THE CYRIL RESIDUE IS A SINGLE STUCK FRAGMENT DEPOSITED ACROSS BOOKS -- BYTE-IDENTICAL PROOF. The Cyril of Jerusalem blocks at 1thessalonians 5 keys 23 AND 28 are byte-identical to each other (1,075 characters) and byte-identical to the Cyril block found at philemon 1 key 25 in the previous batch: the Catechetical Lecture on 2 Cor 4:4, 'He blinded the thoughts of them that believe not.' The same fragment therefore lands twice in one chapter and again in a different book. This kills the hypothesis that the Cyril misfiling is per-chapter noise; it is one fragment being re-deposited. Key 5 is a separate misfile, Cyril on 1 John 3:10 and John 1:12 (sonship by choice and not by nature, with Judas and Paul as the proofs) -- a topical near-miss on 'children of light', not commentary on 1 Thess 5:5. All three dropped SILENTLY."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "21",
+        "23",
+        "28"
+      ],
+      "note": "VOICE_LABELS DEFECT NOW SUPPRESSES A GENUINE BLOCK AS WELL AS RESIDUE. Confirmed again by reading scripts/synthesis_qa.py lines 138-145: _LABEL_RE joins the VOICE_LABELS short forms with a trailing \\s*: -- so 'Chrysostom', 'Lightfoot' and 'Robertson' match only because they are SUFFIXES of the heads 'John Chrysostom:', 'John Lightfoot:' and 'A.T. Robertson:', while 'Cyril' can never match because it is a PREFIX of 'Cyril of Jerusalem:' and is followed by ' of Jerusalem', never a colon. Two consequences seen in this chapter. (1) The three residue blocks cannot be declared and had to be dropped silently. (2) A GENUINE Cyril block at key 21 is equally invisible to split_voices, so its words are silently attributed to whichever voice precedes it and no exclusion accounting can ever see it. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril', or permit an intervening qualifier before the colon. Twenty-three batches open."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "12",
+        "19",
+        "21"
+      ],
+      "note": "CYRIL AT KEY 21 IS GENUINE AND QUOTES THE VERSE. Unlike the three misfiled blocks, the Cyril of Jerusalem block at key 21 quotes 1 Thess 5:21-22 verbatim inside a catechetical exhortation: 'Be an approved banker, holding fast that which is good, abstaining from every form of evil,' set among 'Make thou thy fold with the sheep: flee from the wolves: depart not from the Church... learn to distinguish the pastures of doctrine.' Used in the synthesis for entry 20-22. Chrysostom at keys 1, 12 and 19 is likewise genuine, from the Homilies on 1 Thessalonians."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "28"
+      ],
+      "note": "CHROME FOUND AGAIN, AND FOR THE FIRST TIME SWALLOWED INSIDE A VOICE BLOCK. The Charles Ellicott block at key 28 measures 1,008 words, of which only about fifteen are real commentary ('The grace. -- St Paul's autograph to conclude the letter'). Everything after that is the StudyLight footer, a CSS blob, and 221 words of raw JavaScript (the verse-popup script, beginning '(function('). Measured from the 'Footnotes:' marker the chrome is 984 words / 30,366 raw characters / 126 NEWLINES -- squarely on the invariant established over the previous measurements (992-995 words, 30,341-30,497 chars, 126 newlines). Two things are new: the chrome is TERMINAL here (last key of the chapter) where the previous three instances were non-terminal, and it is INSIDE a voice block rather than standing free, so it is silently credited to Ellicott. Tenth measurement overall; philemon 1, measured last batch, had none at all. Real usable source for this chapter is therefore about 44,324 words, not the 45,308 that a naive count after voice exclusions gives."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "27"
+      ],
+      "note": "CALVIN RUNS PAST THE END OF THE BOOK AGAIN -- SECOND CONSECUTIVE CHAPTER, SAME SHAPE. The Calvin block at key 27 (832 words) closes his 1 Thessalonians commentary correctly, then prints 'END OF THE COMMENTARY ON THE FIRST EPISTLE TO THE THESSALONIANS' and continues into his DEDICATORY EPISTLE to the physician Benedict Textor (Geneva, 1st July 1550, mentioning the death of his wife) and then into THE ARGUMENT ON THE SECOND EPISTLE TO THE THESSALONIANS. Roughly 600 of the 832 words are not commentary on 1 Thess 5:27. This is the same defect found last batch at philemon 1 key 24, where Calvin ran on into 1 Timothy. In BOTH cases the run-on sits at the LAST key where Calvin appears in the book (he is absent from philemon 25 and from 1 Thess 5:28), which suggests the scrape takes Calvin's text to the end of the file rather than to the end of the chapter. Worth checking every book-final Calvin block in the tree."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "23"
+      ],
+      "note": "TRICHOTOMY AT 5:23 -- A FIVE-WAY DISAGREEMENT, THE SHARPEST IN THE CHAPTER. Ellicott calls the verse Paul's fullest and most scientific psychology, not a rhetorical piling up of words: spirit apprehends intuitively and survives death; soul is intellect, affection and will and belongs to the lower nature, so that in the twofold division the soul is reckoned with the body. Clarke sets out three parts flatly, with the spirit as the immortal principle and source of life to body and soul. Calvin accepts three terms but redistributes them, spirit being reason and soul being will and the affections, and rejects as making the prayer absurd the reading that takes spirit for vital motion and soul for the renewed part. Robertson denies that the verse settles anything: 'Not necessarily trichotomy as opposed to dichotomy,' and reads a prayer for the man as an undivided whole. WESLEY DENIES TRICHOTOMY OUTRIGHT on a dilemma -- only soul and body are natural constituents, the spirit being adventitious and given to Christians only, for the soul 'is either matter or not matter: there is no medium. But if it is matter, it is part of the body: if not matter, it coincides with the Spirit.' Barnes treats the division as popular language and declines to say whether Paul sanctions it."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "23"
+      ],
+      "note": "WHETHER ENTIRE SANCTIFICATION IS ATTAINABLE IN THIS LIFE, AT 5:23. Clarke states the Wesleyan position directly: the whole man may be so sanctified as to be preserved blameless till the coming of Christ, 'and thus we learn that the sanctification is not to take place in, at, or after death,' adding that he who can believe will find this thing also possible to him. Barnes rebuts it in a sentence at the same verse: 'A prayer for perfect sanctification, however, should not be adduced as a proof that it is in fact attained in the present life.' Henry stands with Barnes, that the best are sanctified but in part while in this world, though we should press towards complete sanctification. Ellicott sidesteps by rendering 'sanctify you WHOLE' rather than wholly -- the idea being that no part is left unsanctified, not that the work is finished."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "9"
+      ],
+      "note": "WHO IS APPOINTED TO WRATH, AT 5:9. Gill reads the verse as it stands and infers vessels of wrath fitted for destruction, of old ordained to condemnation, so that our exemption is distinguishing grace. Clarke answers at length that the appointed are the JEWS AS A NATION, appointed not from eternity nor from any remote time but from the moment they finally rejected the gospel -- which is why the apostles were commanded to begin at Jerusalem -- and insists that 'even this appointment to wrath does not signify eternal damnation', since many may have turned to the Lord who smote them during the siege. Wesley glosses it in one line, of the obstinately impenitent. Ellicott refers it to a mysterious moment of God's eternal counsels and then says something neither party would: 'we ourselves are the only persons that can defeat God's predestinations.'"
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "9"
+      ],
+      "note": "WHETHER SALVATION IS EARNED OR RECEIVED, AT 5:9. On the word rendered 'obtaining', Ellicott presses it to mean acquire by one's own efforts, and concludes that 'God does not predestinate men to salvation without laborious acquisition on their part', though the price can be paid only through union with Christ. Calvin takes the same word the opposite way: 'Paul, undoubtedly, does not mean that God has called us, that we may procure salvation for ourselves, but that we may obtain it, as it has been acquired for us by Christ.' Robertson notes only that the noun may be passive (God's possession) or active (obtaining) and prefers the active."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "9"
+      ],
+      "note": "THE FALL OF JERUSALEM READING AT 5:1-3. Clarke stands alone in referring the times and seasons chiefly to the destruction of the Jewish commonwealth, appealing to his own note on the same two words in Acts 1:7, and reads 'peace and safety' as the state of the Jewish people when the Romans came against them, refusing every overture, with the sudden destruction as the storming of the city, the burning of the temple, the massacre of hundreds of thousands and the dispersion of the rest. Gill, Henry, Barnes, Ellicott, Robertson and Calvin all take the day of the Lord as the return to judgment. Clarke reads the whole chapter through that lens, which also drives his reading of 5:9."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "22"
+      ],
+      "note": "WHAT IS FORBIDDEN AT 5:22 -- FOUR POSITIONS ON 'ALL APPEARANCE OF EVIL'. Gill, Barnes and Clarke read it of the APPEARANCE of evil, Barnes building a long rule for doubtful practices (dress, amusements, the opera, the ball-room, games of hazard) and Clarke warning against driving morality so near the bounds of evil that weak persons believe we touch it. Ellicott says flatly that 'this translation cannot stand' and renders it 'hold yourselves aloof from every evil kind' -- of whatever you may be testing. Robertson supports 'class or kind' from the papyri, granting that the word naturally means look or appearance but denying that it would mean semblance as opposed to reality. Calvin rejects BOTH the universal reading and the subdivision reading (calling the latter 'an exceedingly gross blunder') and applies it to doctrine in which falsity has not been proved but a suspicion of lurking poison remains: from such we suspend our step rather than reject outright."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "23"
+      ],
+      "note": "AN INTERNAL DISSENT INSIDE THE ELLICOTT COMMENTARY. At 5:23 the note on where the soul is reckoned in the twofold division adds, in parenthesis, 'not, probably, as Bishop Ellicott says on our present passage, as part of the spirit, but as part of the body'. The contributor is therefore contradicting Charles Ellicott, the bishop whose name the commentary bears, on the very verse. First instance of a signed-commentary contributor dissenting from the editor found in this corpus."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "27",
+        "28"
+      ],
+      "note": "BOTH BARNES AND CLARKE END THE BOOK ON AN ANTI-PAPAL READING OF 5:27. Barnes suggests the Holy Spirit foresaw that the withholding of Scripture 'would be defended by cardinals, and popes, and councils' and made this injunction to counteract it, noting that Paul dwells more on the great apostasy in the Thessalonian letters than anywhere else. Clarke's closing essay is longer and hotter, identifying the prohibition of Scripture to the people with 'the mystery of iniquity which then began to work', and ending with a striking concession -- that a genuine Protestant will wish Rome 'not her destruction, but her reformation', and that she has in her own hands the means of her own regeneration. Calvin at the same verse says those who forbid the people to read the writings of Paul are 'more refractory than even devils themselves', since they are unmoved by so strict an adjuration. Ellicott adds the critical history: Baur read the adjuration as the mark of a forger seeking authority, while Wordsworth answered that the constant public recitation is a guarantee of the Epistle's integrity."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "28"
+      ],
+      "note": "CLARKE'S EDITION-CORRECTING DATELINES NOW SEEN IN TWO BOOKS ONE BATCH APART. His note at 1 Thess 5:28 ends 'Finished correcting for a new edition, on the shortest day of 1831. - A. C.'; the Philemon note landed last batch ended 'Finished correcting for a new edition, Dec. 23, 1831.' The two datelines are two days apart and place the Thessalonians revision immediately before the Philemon one, so the scrape preserves the order in which Clarke worked through the epistles in that revision."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "21"
+      ],
+      "note": "BARNES ON FREE INQUIRY AT 5:21, THE LARGEST CLAIM HE MAKES IN THE CHAPTER. Taking the verb from the assayer, whose trial was made by fire, he argues that Christianity does not require men to disregard their reason, does not make it a duty to receive all that synods and councils have decreed, and is 'more than any other form of religion, the friend of free inquiry'; we are to examine every opinion 'no matter by whom held; by what councils ordained; by what venerableness of antiquity sustained', to be subjected to no pains or penalties for not believing what we do not perceive to be true, and then to hold what we have found true though it cost a martyr's death. Calvin reaches the same practical end from the opposite direction, inferring that the spirit of discrimination must be conferred on believers, since otherwise 'prove all things' would have been said in vain, and declaring that heaven and earth may be commingled rather than that prophecy should cease."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "12",
+        "19"
+      ],
+      "note": "CHRYSOSTOM'S TWO BEST PASSAGES. At 5:12 he explains why the ruler's office is harder than the physician's or the father's: both may give pain and keep their standing, the one because the patient's friends are on his side and the other by nature and by law, whereas whoever the priest reproves 'is sure to cease from being thankful, and to become an enemy'; and a man cut off from the public prayers grieves not at the loss of the blessing but at the public disgrace, 'we do not shudder at, do not dread, the thing itself.' At 5:19 he works the lamp of the Spirit into a rule for the tongue: the eye and ear are the lamp's opening and the mouth is its door, so that when a man reviles you, opening your mouth 'adds force to the wind', whereas if two doors stand opposite and you shut one there is no draught and the blast is spent."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "11",
+        "12",
+        "16",
+        "23"
+      ],
+      "note": "MATTHEW HENRY IS EXPOSITION PLUS CONCISE, SPLICED END TO END, AT EVERY KEY. Henry appears at only six keys (1, 6, 11, 12, 16, 23) with blocks of 1,000-1,565 words, and each one carries the full Exposition followed by the Concise restating the same material in shorter form -- at key 1 the Concise paragraph begins 'It is needless or useless to ask about the particular time of Christ's coming' after the Exposition has already said it. This differs from the splice seen in earlier books, where Concise REPLACED the Exposition; here both are present and the block is close to double length. Sixth book in which the Henry text is found spliced."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "11",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "23"
+      ],
+      "note": "THE 200-WORD CAP BITES HARD ON GILL IN THIS CHAPTER. Gill's block is truncated at exactly 200 words at eight of the twenty-eight keys (5, 11, 16, 17, 18, 19, 20, 23), and Wesley is cut at 201 and 207 at keys 16 and 23. In every case the sentence stops mid-clause. Gill is the voice most often truncated in the NT files, as Keil is in the OT ones; the re-fetch item already standing for Keil and Lightfoot should include him."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "1thessalonians",
+      "chapter": "5",
+      "note": "FIDELITY SELF-GRADE, 1thessalonians 5, seven entries, all in window. 1-3 = 648w, 8 voices. 4-7 = 641w, 8 voices. 8-11 = 629w, 8 voices. 12-15 = 650w, 9 voices. 16-19 = 649w, 9 voices. 20-22 = 650w, 8 voices. 23-28 = 649w, 8 voices. Every claim traced to a named block in data/commentary/cow/1thessalonians/5.json before writing. Exclusions: all four Jamieson blocks (keys 6, 12, 18, 24) declared as residue; three Cyril of Jerusalem blocks (keys 5, 23, 28) dropped silently for the VOICE_LABELS defect, while the genuine Cyril block at key 21 was used; about 600 words of 2 Thessalonians front matter at key 27 ignored as Calvin spillover; about 984 words of StudyLight footer, CSS and JavaScript inside the Ellicott block at key 28 ignored as chrome. Gross usable 47,050; after voice exclusions 45,308; after chrome and spillover about 44,324. No entry rests on a single school."
     }
   ]
 }
