@@ -9251,6 +9251,37 @@
       "book": "acts",
       "chapter": "15",
       "note": "Fidelity self-grade, all eleven entries. Every claim is traceable to a named block in data/commentary/cow/acts/15.json; no voice is named outside its span; no school appears in prose that is absent from its tags dict. Word counts: 1 = 646; 2-5 = 650; 6-7 = 647; 8-10 = 650; 11-14 = 645; 15-19 = 649; 20-21 = 649; 22-24 = 647; 25-30 = 647; 31-36 = 645; 37-41 = 649. All within the 350-650 window; the tiling covers 1-41 exactly. Jamieson is declared residue chapter-wide and excluded from the six entries where he appears. Cyril of Jerusalem is residue too but had to be dropped silently rather than declared, because the validator cannot match the head 'Cyril of Jerusalem:' against its short label 'Cyril' - recorded separately as a source-defect. The chapter's sharpest disagreements - who sat in the council, whether Peter had primacy, what the Moses clause is for, whether Silas's staying is text, and whose the sharpness was in the quarrel - are all stated as unresolved rather than harmonised."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "7",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "26"
+      ],
+      "note": "JFB stride bug, nineteenth confirmed chapter. All four JFB blocks here are displaced from Numbers 18 and are the same material repeated: the division of the sacred office between priests and Levites, the Levites given as gifts, the stranger who intrudes put to death, and the priests' perquisites out of the votive offerings. The v2 and v8 blocks are byte-identical, as at exodus 20. None comments on Deuteronomy 7; all four declared in excluded_voices, so JFB is unusable in this chapter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "Note 607 fallback twice. Henry has only two keys in the chapter (1 and 12) and writes one block per section: the v1 block covers vv1-5 and the v12 block runs to the end, taking in vv16 and 25-26. He has no key inside 2-5 or 17-26, so both stay where filed — which means the entry at vv12-16 carries his comment on the graven images of vv25-26. This is now the standard shape for Henry in an OT chapter and no longer worth a separate note unless the recovery clause fires."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "7",
+      "note": "No StudyLight boilerplate tail in this chapter: the last commented key (v26) ends with Keil's bare verse text and Gill's note, and Ellicott has no block there at all. That is consistent with the fifteen confirmed instances rather than against them — the tail attaches to Ellicott's block, so where Ellicott does not comment on the chapter's last key there is nothing for it to attach to. Worth recording as the first negative case observed."
     }
   ]
 }
