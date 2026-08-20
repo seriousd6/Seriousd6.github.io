@@ -9601,6 +9601,50 @@
       "book": "2timothy",
       "chapter": "2",
       "note": "Fidelity self-grade, 2timothy 2, six entries, every verse checked against the catena. Word counts 650/650/650/634/650/650, all inside the 350-650 window. Tiling 1-2 / 3-7 / 8-13 / 14-18 / 19-21 / 22-26 tiles vv1-26 exactly. Ten voices appear in the chapter (Chrysostom, Cyril of Jerusalem, Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Jamieson); every claim traces to a block inside its own entry's span. Two sectional-block traps were checked explicitly: Henry's key-1 block covers vv1-7, so he is named in the 1-2 entry only for v1-2 material and NOT in the 3-7 entry, where his block is not sourced; Calvin appears only at key 1 and so is named only in the first entry. Jamieson declared in excluded_voices on entries 1, 8, 14, 19 and 22 (keys 2/8/14/20/26), all 1 Corinthians 15 residue. Cyril of Jerusalem dropped silently at keys 2 and 8, since the VOICE_LABELS short form makes a correct declaration impossible. Ellicott's 995-word chrome tail at key 26 was excluded before drafting; Clarke's coincidentally 992-word block at the same key is genuine and was used."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "7",
+      "verses": [
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JFB stride bug, 23rd confirmed instance. All three JFB blocks in this chapter are displaced Deuteronomy 27 / Joshua 8 material — key 9 on whether the stones carried the Decalogue or the blessings and curses, key 15 on the unhewn stones and the peace offerings, key 21 on the tribes ranged on Gerizim and Ebal with the ceremony of Amen. None touches Judges 7. Single donor, like deuteronomy 27 and unlike joshua 7. Worth noting for whoever tracks this: the donor here is the very chapter landed in the previous batch, so the same displaced text has now been seen from both ends — as the target in deuteronomy 27 and as the intruder here. Declared in excluded_voices at the vv9-15 and vv20-22 entries."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "7",
+      "verses": [
+        "25"
+      ],
+      "note": "StudyLight boilerplate tail, 19th instance, on Ellicott at key 25 — the chapter's last key and also Ellicott's last block, so it fits the refined rule from joshua 7 without discriminating between its two forms."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "18"
+      ],
+      "note": "Two disagreements worth preserving in the tags. (1) The water test: were the 300 lappers the brave or the timid? Josephus and Theodoret make the kneelers brave and the lappers cowards, Theodoret finding the divine aid precisely in God's choosing the most fearful; Ben Gersom and Ellicott read the lappers as the self-controlled; Keil states flatly they were not the cowardly or indolent; Gill sets both readings side by side and declines to decide. (2) The war-cry at v18: the word for 'sword' is absent from the Hebrew here though present at v20. Clarke holds it genuine, citing the Chaldee, Syriac, Arabic and eight collated MSS; Ellicott holds it better omitted, the phrase being literally 'for Jehovah and for Gideon'; Henry independently reads it without the word."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "judges",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "Note 607 fallback fired once, and one near-duplication was avoided. Henry has keys 1, 9, 16 and 23; his key-1 block runs on into the reduction of the army at vv2-3, and since he has no key inside the 2-8 span that material stayed in the v1 entry, which is why entry 1 carries the whole winnowing. Separately, Wesley is not a voice in this chapter at all, so the usual Henry/Wesley near-verbatim overlap did not arise; but Henry's key-16 block and Ellicott's key-16 note both describe the men being shown what to do at the signal, and these were deliberately given different emphases (Henry christological, Ellicott mechanical) rather than merged."
     }
   ]
 }
