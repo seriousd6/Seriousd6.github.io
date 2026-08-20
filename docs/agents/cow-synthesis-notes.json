@@ -10675,6 +10675,103 @@
       "book": "1peter",
       "chapter": "1",
       "note": "Fidelity self-grade A for all thirteen entries of 1peter 1. Every proposition in every prose block is traceable to a named commentator's block at a verse inside that entry's range; no voice is named who is not sourced in that entry; no scripture reference appears unlinked; the two residue voices (Jamieson at keys 1/7/13/19/25, Cyril at keys 3/11/12/17/20/25) are excluded or silently dropped and contribute nothing. Word counts, all inside the 350-650 window: key 1 = 649; key 2 = 649; key 3 = 640; keys 4-5 = 645; keys 6-7 = 636; keys 8-9 = 642; keys 10-11 = 647; key 12 = 645; key 13 = 614; keys 14-16 = 643; keys 17-18 = 649; keys 19-21 = 650; keys 22-25 = 647. Total 8,356 words of synthesis over 91,763 words of real usable source (92,757 reported, less 994 of chrome), a compression of about 11 to 1. Thirteen entries tile verses 1-25 exactly. Every first draft ran over the ceiling and required between two and five trim passes; key 12 needed four, from 787 down to 645."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "21",
+      "note": "Chrome measured on the Ellicott block at key 40: 992 words / 24,947 characters appended after 153 words of genuine comment, nav strip 'Acts Act 20 Acts Act Acts Act 22'. Usable source is therefore 58,970 words, not the 59,962 the sizer reports. FIFTH measurement, and it confirms the character-window finding filed on 1peter 1 (which corrected the earlier, wrong romans 1 note): 1peter 1 = 24,951 chars; genesis 9 = 24,953; numbers 6 = 24,952; romans 1 = 24,949; acts 21 = 24,947. Spread across five instances is now 7 characters, against a word spread of 992-994 explained entirely by nav-strip tokenisation. All five terminate at the identical character, mid-token, inside '...(\"data-vf-open\")===\"1\";}for(var i=0;i'. The capture is a fixed-length character grab of whatever follows the article; the payload has been CSS and JavaScript source in every instance since numbers 6."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "21",
+      "verses": [
+        "2",
+        "8",
+        "20",
+        "26",
+        "32",
+        "38"
+      ],
+      "note": "Jamieson stride-6 residue, FORTY-SECOND chapter. Keys 2, 8, 20, 26, 32, 38 -- offset 2, SIX members, no gaps. This is the SECOND CONSECUTIVE chapter in which the residue is a MONOTONIC WALK rather than a scatter, and here the walk runs in canonical order right up to the book being commented on: key 2 = Luke 24 (the meal after the resurrection), key 8 = John 21:23 (John alone surviving the destruction of Jerusalem), key 20 = Acts 1:3 (the primary evidence of the resurrection), key 26 = Acts 1:9 (Lu 24:50-53, taken up while they looked), key 32 = Acts 1:14 (the days of expectant prayer), key 38 = Acts 1:14 AGAIN, the identical 79-word block repeated verbatim. The duplication at the tail is new and diagnostic: the pointer appears to walk forward through a neighbouring commentary at a fixed stride and then STALL, re-emitting the last block it reached. Taken with the Gal 6:8 -> 6:13 -> 6:18 -> Eph 1:3 -> Eph 1:8 walk in 1peter 1, this is strong evidence that the misalignment is a single index advancing through the wrong text, not random substitution. All six blocks excluded."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "13",
+        "18",
+        "19",
+        "25",
+        "27",
+        "39",
+        "40"
+      ],
+      "note": "Voice inventory anomalies in this chapter. (1) John Chrysostom is GENUINE here, not residue: two large blocks (keys 18 and 39, 1,277 and 1,192 words) from the Homilies on Acts, expounding this very chapter. This is the first genuine patristic voice I have met in the COW catena, and it carries the eastern-antiochene school into entries 18-19 and 35-40. It exposes the VOICE_LABELS defect from the other side: the short form 'Chrysostom' in scripts/synthesis_qa.py works fine for USING him in prose, but would fail if he ever needed declaring in excluded_voices. (2) Cyril of Jerusalem is residue as usual (keys 1, 13, 25, 40 -- Catechetical Lectures on Barnabas at Antioch, on Moses, on the Spirit and the New Covenant, and on the Mysteries), dropped SILENTLY because 'Cyril of Jerusalem:' matches nothing in VOICE_LABELS. Seventeen batches now. (3) Matthew Henry is again MIXED: his block at key 19 is from the CONCISE commentary ('How watchful should we be against prejudices!', 'it would be hard to defend Paul from the charge of giving way too much'), while his blocks at keys 1, 8, 15 and 27 are from the full Exposition. This is the second book in which I have found the two works merged under one voice name without a marker -- the first was 1peter 1 key 17. It matters exegetically here, because the Concise Henry passes a much harsher verdict on Paul's compliance than the Exposition anywhere does."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "21",
+      "verses": [
+        "19",
+        "23",
+        "24",
+        "26"
+      ],
+      "note": "The chapter's spine: whether Paul was right to take the vow at James's suggestion. Eight positions, and the two Wesleyan voices are flatly opposed to each other. WESLEY condemns it outright -- could Paul follow such advice 'in godly sincerity'? was it not 'too great a deference to be paid to any mere men'? He should have answered plainly 'I do not keep the Mosaic law; neither need any of you', since Peter did not and God had commanded him not to; and the compliance 'seemed to flow not out of spiritual but carnal wisdom; seeming to be what he really was not: making as if he believed the law still in force.' CLARKE, same school, confesses 'it is exceedingly difficult to account for the conduct of James and the elders, and of Paul... There seems to have been something in this transaction which we do not fully understand', reports the charge that it was 'the greatest error of his life' and 'a virtual denial of Christ' with his subsequent imprisonment read as 'a judgment of God upon him', and answers that no sacred writer ever censured it and Paul himself reflects on it with comfort. HENRY (Concise) says it would be hard to defend Paul from giving way too much, and that 'integrity and uprightness will be more likely to preserve us than insincere compliances.' CHRYSOSTOM defends without reserve: Paul 'complied, and did all: for in fact thus was it expedient', and bearing the expenses made it 'a step open to no suspicion.' BARNES vindicates in four steps against the infidel charge of double-dealing, concluding 'He violated none of the dictates of honesty and truth.' CALVIN denies dissimulation but grants the charge of being 'too easily entreated' has 'more colour', refuses the reading that the ensuing trouble was punishment, and turns the passage against the 'false Nicodemites' who plead Paul's example to cover conformity to Popery. ELLICOTT calls it 'so wisely planned in the interests of peace.' ROBERTSON answers Furneaux, who 'calls it a compromise and a failure. I do not so see it', arguing the aim was not to conciliate the Judaizers but to break their hold on the deluded thousands, and that it worked, since the explosion came from a different set of enemies entirely."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "21",
+      "verses": [
+        "4",
+        "12",
+        "21"
+      ],
+      "note": "Two further within-school splits, both between Wesley and Clarke, on top of the vow. (1) At 21:4 and 21:12, whether the Spirit's warning bound Paul: WESLEY says 'St. Paul knew that this prediction had the force of a command. They did not know this'; CLARKE says the exact reverse, that 'they all understood the prophecy to be conditional and contingent; and that it was in Paul's power to turn the scale', and at 21:14 that 'every one saw that he had power to go, or not to go.' Clarke drives it home with a comparison no one else makes: 'This was a similar case to that of David in Keilah. David prevented the threatened evil by leaving Keilah: Paul fell into it by going to Jerusalem' -- which implies the outcome was avoidable. (2) At 21:21, whether the charge against Paul was true: WESLEY says it was -- 'And so undoubtedly he did. And so he wrote to all the Churches in Galatia' -- and breaks out, 'Amazing! that they did not know this! Or, that if they did, they did not openly testify it at all hazards, to every Jewish convert in Jerusalem!' CLARKE says the information 'was incorrect', that Paul 'had not yet said to any Jew, forsake Moses'; BARNES calls it 'incorrect and slanderous'; ROBERTSON says the elders 'do not believe this false charge.' ELLICOTT takes a middle position worth recording on its own: false as a personal accusation, but 'fanaticism is sometimes clear-sighted in its bitterness', since once circumcision was declared nothing 'it ceased to have a raison d'etre', and 'If a Jew had asked, Why then should I circumcise my child? it would not have been easy to return a satisfying answer.'"
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "21",
+      "verses": [
+        "8",
+        "15",
+        "28",
+        "38"
+      ],
+      "note": "Four findings of method rather than doctrine. (1) ARCHAEOLOGY OVERTAKES THE COMMENTARY. At 21:28 Clarke, writing before the discovery, knows the temple barrier inscription only from Josephus. Ellicott and Robertson can both quote the STONE, each citing the slab found and deciphered by Clermont-Ganneau and published in 1871, Robertson adding that it had been built into the wall of a mosque on the Via Dolorosa; Ellicott gives the full text. Two commentators independently reaching for the same excavation report, sixty years after the third had to argue from a literary source alone. (2) FOUR SOLUTIONS TO A NUMERICAL CRUX at 21:38, Luke's four thousand against Josephus's thirty thousand -- and GILL alone supplies the cause by noting that JOSEPHUS GIVES BOTH FIGURES HIMSELF in different places. Ellicott rejects Josephus ('his statistics, in such cases, are never to be relied on'); Robertson takes Lysias to mean the armed core of the larger mob; Clarke offers a harmony (26,000 melted away before Olivet) AND reports Dean Aldridge's palaeographic conjecture that a copyist mistook Greek delta (four) for lambda (thirty), supported by the argument that 600 casualties is no proportion to 30,000 but a fair one to 4,000. Calvin adds a fourth line, refuting the identification of the man with Theudas. (3) FOUR SOURCE-CRITICAL CONJECTURES ABOUT LUKE in one chapter: Ellicott at 21:8 imagines Luke learning from Philip 'all, or nearly all, that we find in the first eleven chapters of this book'; Robertson at the same verse supposes Luke 'did, take notes from Philip and his daughters'; Ellicott at 21:16 makes Mnason one of the eye-witnesses 'from the beginning' whom Luke names as his informants; Robertson at 21:18 argues from the fullness of the report that Luke was present and gathering first-hand material. (4) A UNANIMOUS TEXTUAL VERDICT IGNORED: at 21:8 Ellicott, Barnes, Clarke and Robertson all report that 'we that were of Paul's company' is no part of the text -- yet Gill expounds it as genuine and names the seven men, and Henry builds a homiletical reflection on it, that 'those that travel together through this world will separate at death, and then it will appear who are of Paul's company and who are not.' A commonplace resting on an interpolation."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "21",
+      "verses": [
+        "9",
+        "23",
+        "29",
+        "40"
+      ],
+      "note": "Outliers worth keeping from acts 21. (1) At 21:9 the four prophesying daughters draw FIVE distinct positions on women speaking: Ellicott makes them a recognised order answering to the widows, cites the catacomb inscriptions and Pliny's letter to Trajan, and argues that Paul 'was therefore open to the teachings of experience' and modified his judgment later, adding that 'the very prohibition proves that the practice was common'; Robertson finds the prohibitions hard to reconcile with the permission and 'wonders if there was not something known to Paul about special conditions in Corinth and Ephesus that he has not told', concluding that 'the whole problem is difficult and calls for restraint and reverence' and noting that 'today in our Sunday schools the women do most of the actual teaching'; Calvin, holding women bear no public office, has them prophesying 'at home, or in some private place, without the common assembly'; Clarke asks 'If Philip's daughters might be prophetesses, why not teachers?'; Gill takes from the verse only that Philip was married, 'which may be observed against the Papists.' (2) At 21:23 Ellicott alone observes from Hegesippus that JAMES HIMSELF lived under the Nazarite rule -- 'No razor came upon his head, and he drank neither wine nor strong drink' -- so the advice came from a man bound by the same vow. (3) At 21:29 Barnes and Robertson independently turn the mob's bad inference into a moral: Barnes, 'If men would state facts as they are, no small part of the slanderous accusations against others would cease'; Robertson, 'This is the way of the mob-mind in all ages. Many an innocent man has been rushed to his death by the fury of a lynching party.' (4) The chapter closes on two fine strokes: Chrysostom asking 'What spectacle could be equal to this, to see Paul, bound with two chains, and haranguing the people!', and Ellicott noting that many in that crowd had not seen Paul act in public since the day, twenty-five years before, when 'he had kept the garments of those who were stoning Stephen' -- and that he now stood accused of the self-same crimes before a mob as frenzied as the one he had then led. Set beside Gill's aside at 21:28 that Paul was 'little of stature, and weak in body', Robertson's verdict that 'Paul's stature and words reach heroic proportions on this occasion' lands hard."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "21",
+      "note": "Fidelity self-grade A for all ten entries of acts 21. Every proposition in every prose block is traceable to a named commentator's block at a verse inside that entry's range; no voice is named who is not sourced in that entry; no scripture reference appears unlinked; the residue voices (Jamieson at keys 2/8/20/26/32/38, Cyril at keys 1/13/25/40) are excluded or silently dropped and contribute nothing, while Chrysostom at keys 18 and 39 is genuine and used. Word counts, all inside the 350-650 window: verses 1-6 = 642; 7-9 = 636; 10-14 = 621; 15-17 = 637; 18-19 = 649; 20-22 = 636; 23-26 = 649; 27-28 = 650; 29-34 = 648; 35-40 = 647. Total 6,415 words of synthesis over 58,970 words of real usable source (59,962 reported, less 992 of chrome), a compression of about 9 to 1. Ten entries tile verses 1-40 exactly. Entry 18-19 carries all five schools at once, the first time the eastern-antiochene school has been genuinely represented rather than dropped as residue. Every first draft ran over the ceiling; entries 23-26 and 27-28 each needed a full prose rewrite rather than incremental trimming, 23-26 coming down from 863 words."
     }
   ]
 }
