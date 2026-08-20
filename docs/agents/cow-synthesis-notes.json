@@ -13412,6 +13412,134 @@
       "book": "1john",
       "chapter": "3",
       "note": "LENGTH CONTROL held but cost more here than in james 1: mean 2.6 trim passes across the 16 entries against 1.4 in james 1, with three entries needing four or more passes (9, 14, 23-24) and one (15-16) rewritten from scratch after a 916-word first draft. The regression tracks bench depth — where seven or eight voices must be named in 650 words there is simply less room, and the three-voices-per-paragraph rule cannot absorb an eighth. Working refinement: on an eight-voice span, give two voices a single clause each rather than a sentence. One entry (19) first came in at grade B on type-token ratio (0.576 against the 0.58 floor) — the first B first-draft of this loop; it was fixed by varying repeated abstractions (love/faith/conscience/assurance) rather than by trimming, and landed at 0.644."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27",
+        "33"
+      ],
+      "note": "Jamieson stride-6 residue, TWELFTH confirmation and the LARGEST SET YET: SIX members at keys 3/9/15/21/27/33, offset 3. Content is the passion narrative around John 18 and its synoptic parallels: the arrest and the words to the multitudes (k3), Peter and the other disciple entering the palace of the high priest (k9), the reply to the high priest with the note that Matthew 5:39 is not to be taken to the letter (k15), the hall of judgment and the praetorium (k21), and the charge before Pilate of perverting the nation and forbidding tribute (k27 and k33). TWO NEW FACTS. (1) Keys 27 and 33 are BYTE-IDENTICAL 35-word blocks — a STUCK BLOCK INSIDE a stride-6 residue set, which has not been seen before; previously stuck blocks (the Cyril 2 Corinthians 4:4 fragment) and stride-6 residue have been independent phenomena. (2) The set is six long, against a previous maximum of five, and holds its offset across the whole 34-key chapter. Excluded from all six entries and declared."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "34"
+      ],
+      "note": "Terminal scrape chrome inside the Ellicott block, SEVENTH consecutive chapter (1thessalonians 5 k28, philippians 1 k30, acts 11 k30, 1corinthians 16 k24, judges 2 k22, romans 14 k23, acts 17 k34). Ellicott's block at key 34 is 1,287 words of which roughly 984 are StudyLight navigation, CSS and JS; real content about 303 words. Here the terminal key and Ellicott's last block coincide, so this chapter does not discriminate between the two candidate rules — judges 2 remains the only chapter that separates them, and it favoured last-Ellicott-block over last-key. Removed before drafting."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "10",
+        "16",
+        "22",
+        "32"
+      ],
+      "note": "Matthew Henry appears at five keys only — 1, 10, 16, 22, 32 — with blocks of 3,683 / 2,300 / 2,670 / 5,910 / 893 words, totalling 15,456 words, or 18 percent of the chapter's 84,311 gross. These are SECTION expositions, not per-verse comment: each covers the whole run of verses down to the next Henry key. This is the same misfile family as the whole-chapter Henry block at romans 14 key 1 (9,820 words) and Clarke's chapter argument at acts 11 key 1, but here the granularity is intermediate — sections rather than the whole chapter. Handled by drawing on each block only where it treats the verses of the entry in hand. Consequence for the sizer: usable_source_words for this chapter is inflated by roughly 15,000 words of section-level material, so the 84,788 figure overstates the per-verse density."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "34"
+      ],
+      "note": "Adam Clarke key 34 is 3,753 words — his end-of-chapter excursus rather than comment on the verse, running through Dionysius the Areopagite, the pseudo-Dionysian corpus, and closing with a long art-critical description of Raphael's cartoon of Paul preaching at Athens. Notable because ROBERTSON, at key 19 of the same chapter, uses that same cartoon as the thing to be debunked: he says Raphael's cartoon with Paul standing on Mars Hill has made us all familiar with the common view, but it is quite uncertain if it is true, there being no room on the summit for a large gathering. So within one chapter one voice closes with the painting as an ornament and another cites it as the source of a popular error. Recorded because it is the clearest instance yet of two voices in the same chapter engaging the same extra-biblical artefact from opposite directions."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "6",
+        "19"
+      ],
+      "note": "The politarch inscription, and a datable disagreement between two commentators. At verse 6 both Ellicott and Robertson defend Luke's title for the Thessalonian magistrates from the same inscription. Ellicott says it stands on an arch that STILL SPANS, or did so till quite lately, one of the streets of the modern city; Robertson says it is PRESERVED IN THE BRITISH MUSEUM, and adds that the word used to be cited as an example of Luke's blunders but is now found in seventeen inscriptions, five of them from Thessalonica. Both are correct for their own date — the arch was demolished and the inscription removed to London between them — so the pair of notes brackets that event and is a small internal clock on the commentary set. Ellicott adds that the inscription carries names identical with converts in the apostolic history and that there were seven magistrates, as with the Archons of Athens."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "19",
+        "22",
+        "23"
+      ],
+      "note": "Was Paul on trial at the Areopagus? Five voices say no and two qualify. Gill holds he was invited in a friendly manner and not seized; Barnes finds no accusations, no witnesses and none of the forms of trial; Wesley says plainly he was not carried there as a criminal; Calvin argues he was brought where the great assembly was so that the disputation might have a famous audience, and adds the fine historical point that anywhere else it would have been a capital offence to gather a crowd and speak in a public place, but that at Athens the appetite for news secured a hearing even for triflers. ELLICOTT alone presses the other way: there would be no reason to take him to the Areopagus rather than to the Pnyx unless some trial were intended, and since a member of the Court was among the converts the Court was probably sitting, so what happened was a preliminary inquiry without formal indictment and the speech an apologia answering no distinct charge. Robertson takes a middle position — an examination whether the new teaching was legal, but not a criminal trial, since the day for that had passed in Athens. Clarke complicates it by saying at verse 20 that he was called before the Areopagus on the authority of the laws forbidding new deities."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "22",
+        "30"
+      ],
+      "note": "Two words carry most of the theological weight of this chapter, and the voices split on both. (1) DEISIDAIMONESTEROUS at v22: Barnes calls the received too superstitious a most unhappy translation, the word properly denoting reverence toward the gods and used in a good sense by the classic writers; Clarke renders it that they are greatly addicted to religious practices and makes it the ground of an appeal for a fair hearing; Robertson calls it neutral, reports Thayer's kindly ambiguity, thinks it unlikely Paul would open with a slap in the face, and observes that how one takes the adjective COLOURS THE WHOLE SPEECH; Ellicott grades it finely, holding that Paul deliberately withholds the flattering word the Athenians used of themselves and chooses one neutral with a slight touch of disparagement. CALVIN alone reads it as the charge itself, the word signifying the immoderate fear with which superstitious men torment themselves. (2) HUPERIDON at v30: Gill takes the overlooking as contempt and indignation, God despising them and in evidence of it leaving them without revelation or prophets; Ellicott and Barnes take it as forbearance in which the apostle found comfort, ignorance mitigating guilt and therefore punishment; Robertson denies both any warmth, holding the verb merely negative and insisting God had objected all along, and rejects the received winked at as implying condoning — a rendering Ellicott also calls too familiar, though BARNES himself uses the word connived."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "17",
+      "note": "Ellicott at acts 17:26 makes an explicit accommodation of evolutionary theory, which is worth flagging because it dates the commentary's stance precisely. On of one blood he writes that the apostle naturally accepted the truth as it was presented to him in the Mosaic history of the Creation, BUT THAT THE TRUTH ITSELF, STATED IN ITS FULLEST FORM, WOULD REMAIN EVEN IF WE WERE TO ACCEPT OTHER THEORIES OF THE ORIGIN OF SPECIES AND THE HISTORY OF MAN — the unity of physical structure and possible development forbidding any race to claim itself the flower of humanity. In the same verse BARNES draws an abolitionist conclusion, that no part of the race has any right to enslave or oppress another on account of a difference of complexion, and quotes verse to that effect. Two nineteenth-century controversies, one scientific and one political, surfacing in adjacent notes on the same clause."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "23",
+        "28"
+      ],
+      "note": "Smaller cruxes worth keeping. (1) At v23 CLARKE and CALVIN independently reject Jerome's charge that Paul found the altar's inscription in the plural and quoted it in the singular to avoid seeming to acknowledge many gods — Clarke calling it a most foolish saying since such a begging of the question would have wrecked the defence before intelligent judges, Calvin answering on quite different ground that the inscription was in every man's mouth and left no room for craft. Robertson notes independently that Pausanias does speak of altars at Athens to gods unknown, in the plural. (2) At v23 BARNES and CLARKE produce the same two ancient quotations about swearing by the unknown God at Athens under DIFFERENT AUTHORS' NAMES — Barnes assigning them to Minutius Felix, Clarke to Lucian's Philopatris. (3) At v28 WESLEY says Aratus was an Athenian; ROBERTSON names him a man of Soli in Cilicia; CLARKE says expressly that your own poets means Grecian poets rather than men born at Athens. Wesley is simply wrong and the other two correct him without knowing it. (4) At v28 ROBERTSON reads the three verbs as an ascending scale climaxing in existence, while CALVIN ranks life highest, motion next and bare being least and says the apostle put the highest first — a flat opposition about the rhetorical order of one clause."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "31"
+      ],
+      "note": "Cyril of Jerusalem appears once, at key 31, with a 200-word Catechetical Lecture gathering testimonies to the Son's sitting at the right hand of the Father from Matthew, from 1 Peter, and from Romans, Ephesians and Colossians. As at romans 14 key 9, this is NOT the stuck 2 Corinthians 4:4 fragment logged four times across philemon 1, 1thessalonians 5 and 1corinthians 16; it is different material, topically adjacent to the verse (the man ordained to judge, raised from the dead) without being comment on it. Two chapters running now where Cyril's single appearance is a topically-placed lecture rather than the stuck fragment, which suggests the stuck fragment is a distinct defect rather than the normal mode of Cyril's presence in the tree."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "17",
+      "verses": [
+        "13"
+      ],
+      "note": "Adam Clarke's block at acts 17:13 closes with a hostile generalisation about the Jews as a people, asserting that they continue in the same spirit to the present day and that this is the sole cause of their wretchedness. It is not comment on the verse, which concerns the specific men who came from Thessalonica, and it is the kind of nineteenth-century supersessionist aside that would read as a slur on a live study page. The verse-level substance of Clarke's note (that the pursuit was implacable) was used; the generalisation was NOT carried into the prose or the outliers. Filed here so the decision is on the record rather than invisible, and so that a reviewer can overrule it if the project would rather report such material explicitly."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "17",
+      "note": "Fidelity self-grade, acts 17, twelve entries, all in window: 1-2 602w, 3-5 626w, 6-9 644w, 10-11 593w, 12-15 641w, 16-17 622w, 18-19 612w, 20-22 626w, 23-24 625w, 25-27 592w, 28-30 641w, 31-34 617w. Every claim traced to a named block in data/commentary/cow/acts/17.json before writing. No voice is named in prose without a head in that entry's verses; no voice with a head goes unnamed — the build lint enforces both and passed clean on all twelve, at 6 to 10 named voices per entry. Jamieson excluded at keys 3/9/15/21/27/33 as stride-6 residue and declared in each of the six affected entries. Chrome stripped from Ellicott at key 34 before drafting. Henry's five section blocks and Clarke's end-of-chapter excursus at key 34 used only where they treat the verses of the entry in hand. Eleven distinct voices across all five schools; four of the twelve entries carry all five schools. Real usable after removing residue and chrome: 82,817 words against a gross of 84,311, of which about 15,456 is Henry's section-level material and 3,753 Clarke's chapter excursus, leaving roughly 63,600 verse-level. Entry count 12 set by max(34/4.5, 82817/7000) = 11.8, tiled 1-2, 3-5, 6-9, 10-11, 12-15, 16-17, 18-19, 20-22, 23-24, 25-27, 28-30, 31-34 to cover 1..34 exactly. This is the largest chapter yet handled in this loop, at 84,788 by the sizer against a previous maximum of 61,018."
     }
   ]
 }
