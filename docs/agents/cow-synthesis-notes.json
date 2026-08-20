@@ -9882,6 +9882,74 @@
       "book": "deuteronomy",
       "chapter": "33",
       "note": "Fidelity self-grade, deuteronomy 33, seven entries, every verse checked against the catena. Word counts 648/648/650/650/633/649/648, all inside the 350-650 window. Tiling 1-3 / 4-7 / 8-11 / 12-17 / 18-21 / 22-25 / 26-29 tiles vv1-29 exactly and follows the tribal divisions (preamble, Reuben and Judah, Levi, Benjamin and Joseph, Zebulun-Issachar-Gad, Dan-Naphtali-Asher, closing doxology). Eight voices appear; every claim traces to a block inside its own entry's span. Sectional-block trap checked: Henry's blocks sit at keys 1, 6, 8, 12, 18, 22, 24 and 26, and each is used only in the entry that sources it -- in particular his key-1 block, which surveys the whole opening, is drawn on only in the 1-3 entry. Jamieson declared in excluded_voices on entries 1-3, 18-21 and 26-29 (keys 3, 21, 27), all Numbers 35 residue on the Levitical cities and the avenger of blood. Ellicott's 992-word chrome tail at key 29 was excluded before drafting; his genuine 69 words there were used. Where Keil and Gill blocks are truncated by the 200-word cap, no claim was built on the missing remainder -- the cut-off sentences at key 5 and key 25 are reported in the notes rather than completed by inference."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "JFB stride bug, 26th instance — the SECOND consecutive perfectly regular stride of 6 (deuteronomy 23 was keys 5/11/17/23; this is keys 1/7/13/19/25), and the largest number of displaced blocks yet seen in one chapter: five, i.e. EVERY JFB block in the chapter. The decisive new observation is that the donor text ADVANCES MONOTONICALLY with the key index. Donor is Joshua 3-5 read in order: key 1 = the ark last to leave Jordan (Jos 4:11ff), key 7 = Joshua magnified, the priests not moving but at his command (Jos 4:14), key 13 = the pile of stones raised on earth or turf to impress the heathen and teach later generations (Jos 4:20ff), key 19 = the kings of the mountains and the seacoast, their heart melted, when the swollen river failed them (Jos 5:1), key 25 = the omission to circumcise the wilderness-born and the suspended covenant (Jos 5:4-7). Earlier cases were all-identical repeats (most), or unordered distinct portions (joshua 7), or a partial-repeat mix (numbers 28). None advanced in order. This looks like a reading head walking a DIFFERENT chapter's block list in parallel with the correct one, sampled every sixth key — which would also explain the stride. Worth testing against the other 25 recorded instances: if the donor offsets there also increase with key order, the model is settled."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "21",
+      "verses": [
+        "11",
+        "21",
+        "22"
+      ],
+      "note": "A SECOND, DIFFERENT displacement in the same chapter, and the first intra-chapter one on record. Ellicott's block filed at key 11 does not comment on v11 (the ban on Jabesh) at all: it comments on 'To dance in dances' and 'Catch you every man his wife', i.e. vv21-23 — the vintage-festival dances, the fountain in a narrow dale near Shiloh, the daughters of Shiloh as tabernacle attendants, and the Sabine and Aristomenes parallels. This is NOT the JFB stride bug: the donor is the same chapter, and no stride is involved. Handled under note 607: the material treats vv21-23, Ellicott has keys inside the 21-25 span (19, 20, 22), so it moved to the closing entry, and Ellicott stays in the 9-15 voices on the strength of his genuine blocks at 9, 10, 12, 14 and 15. Flagging it because a chapter carrying two independent displacement mechanisms at once has not been seen before, and an intra-chapter mis-file will not be caught by any check that looks for foreign book names."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "21",
+      "verses": [
+        "25"
+      ],
+      "note": "StudyLight boilerplate tail, 22nd instance, on Ellicott's block at key 25. This is the COINCIDING case: key 25 is both Ellicott's final block and the chapter's last commented key, and it is also the last chapter of the book. Consistent with the refined rule settled at numbers 28 (the tail attaches to the end of Ellicott's final block, which only usually coincides with the chapter's last key) — this instance cannot discriminate between the two formulations, unlike deuteronomy 23 and joshua 7, which could."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "21",
+      "verses": [
+        "2",
+        "3",
+        "19"
+      ],
+      "note": "Three clean two-way splits, two of them about the text rather than the theology. (1) v2, where the people wept: Gill alone insists on Shiloh, where tabernacle and ark then stood, expressly rejecting the Targum and Septuagint; Clarke, Ellicott and Keil all read the Hebrew as Bethel. (2) v3, whether 'why is this come to pass' is a real question: Clarke calls it impertinent, since they knew perfectly well how; Ellicott answers that it is no inquiry into a cause too patent to need one but a wail of regret carrying a prayer for a remedy. (3) v19, why Shiloh's site is described so minutely in the middle of the elders' speech: Ellicott judges it a later scribe's marginal gloss, needless to men standing at Shiloh but necessary once the place lay desolate — and observes it is this addition alone that identifies the modern Seilun; Clarke instead supposes the feast was that year held somewhere unusual and the Benjaminites, shut up in Rimmon, needed exact directions to succeed undiscovered."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "21",
+      "verses": [
+        "16"
+      ],
+      "note": "A chapter whose commentators are more interesting on ethics than on text, and the entry design followed that. Ellicott's block at key 16 is the strongest piece of moral criticism encountered in the corpus so far: he charges Israel with keeping the ban in the letter while breaking it in the spirit, parallels Themison in Herodotus throwing Phronima into the sea and drawing her out again, and compresses the whole casuistry into 'the guilt of breaking a guilty vow is only the original guilt of ever having made it'. He goes on to arraign Phinehas — high zeal, low spiritual insight — asking why the grandson of Aaron should stand higher than his semi-idolatrous cousin the grandson of Moses. I used the vow argument in full and left the Phinehas passage out, since it is a judgment on a person absent from the chapter's own narrative and would have needed more context than the entry could carry; recording it here so the omission is deliberate and recoverable rather than lost."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "21",
+      "verses": [
+        "25"
+      ],
+      "note": "Overshoot control, continuing notes 866 and 917. Five of five entries drafted over the 650 ceiling; worst was v16 at 769, needing eight trim passes. Two distinct causes this chapter, both matching note 866's enumeration pattern rather than the argument-shape pattern of note 917. (1) v21-25: Clarke's block at key 25 carries the entire Livy account of the rape of the Sabine women, several hundred words of narrative that compresses badly because dropping any step breaks the story; the fix was to cut it to a single clause at draft time — Romulus, the feast of Neptune, the refused intermarriage, the wars the stolen women mediated — rather than shaving it afterwards. (2) v21-25 also carries Clarke's three competing versions of the obscure pacifying verse (Vulgate, Houbigant, Authorised). A three-way textual comparison is an enumeration too: I kept all three because the disagreement IS the content, and paid for it by cutting elsewhere. Rule to carry forward: when a block is a narrative rather than a list, decide at draft time which single sentence of it survives."
     }
   ]
 }
