@@ -13039,6 +13039,81 @@
         "55"
       ],
       "note": "AMENDMENT to the blocker note above: one word was lost to shell substitution. The sentence should read that QA.coverage_problems builds its wanted-verse set (the variable named want) directly from source_keys, so every key present in the source file is treated as a verse the pericopes must cover."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "Jamieson stride-6 residue, TENTH confirmation. Keys 1/7/13 carry Jamieson blocks whose content is Deuteronomy 21 (21:10-14 the captive woman at key 1; 21:15 the two wives and the firstborn at key 7; 21:22-23 the hanged man not left overnight at key 13). Offset 1, stride 6 in the target, exactly as at 1peter 1 and 1corinthians 16. The source gaps here are 5 and 7 verses, not a constant. This CONFIRMS the correction I filed at acts 11: the TARGET stride of 6 is exact and repeatable across eleven chapters, but the source stride is irregular, because JFB comments on ranges and pinning a block to a single source verse is imprecise. Excluded from all three entries; declared as excl in the build."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "2",
+      "verses": [
+        "22"
+      ],
+      "note": "Terminal scrape chrome inside the Ellicott block, FIFTH consecutive chapter (1thessalonians 5 k28, philippians 1 k30, acts 11 k30, 1corinthians 16 k24, judges 2 k22). Same fingerprint: 984 words, 30,292 chars, 126 newlines - the newline count has been invariant in all five. First chapter where it is NOT the chapter's terminal key: judges 2 runs to key 23, but key 22 is Ellicott's LAST block (he is absent from 23). So the chrome attaches to the last Ellicott block in the scrape, not to the last verse of the chapter. Ellicott's real content at key 22 is 228 usable words; the remaining 990 are StudyLight navigation, CSS and JS. Removed before drafting."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "2",
+      "note": "Keil and Delitzsch truncated at exactly 200 words at ALL ELEVEN keys where he appears in this chapter. Every block stops mid-sentence. Adds to the standing 200-word cap re-fetch item: the cap is per-block and total, so a K&D block that opens by quoting two full verses (as at keys 17 and 21 here) can spend most of its budget on the text before any comment survives. Judges is a K&D-heavy book; the cap costs proportionally more here than in the NT chapters where Gill is the truncated voice."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "Four-way agreement against the Jewish tradition on the messenger of verse 1. Gill, Henry, Keil and Ellicott all take the angel who came up from Gilgal to Bochim to be the uncreated Angel of the covenant, the same who went before Israel in the pillar, and NOT a created angel or a prophet. The Targum and the Jewish expositors Gill reports identify him with Phinehas the priest; Gill answers that no prophet or priest could say I brought you up out of Egypt and I said I will never break my covenant with you. Recorded because the unanimity across reformed, puritan-evangelical and grammatical-historical voices on a christological identification is itself notable, and because the dissent named in the sources is a Jewish tradition rather than a Christian school."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "2",
+      "verses": [
+        "9"
+      ],
+      "note": "Timnath-heres. Ellicott holds that the form here, with the letters of the word for sun transposed against the Timnath-serah of Joshua, is most probably a slip of the pen or a copyist's transposition. Henry reports and rejects the rabbinic story that the name preserves an image of the sun set up over Joshua's tomb, and rejects it on the ground that such a memorial would be unworthy of Joshua rather than on textual grounds. The two rejections are therefore for different reasons, and neither voice endorses the other's argument."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "2",
+      "verses": [
+        "11",
+        "12",
+        "13"
+      ],
+      "note": "Ellicott's dissent on what the apostasy actually was. Gill, Clarke and Keil all read verses 11-13 plainly, that Israel forsook the Lord and served other gods. Ellicott argues instead that the sin was a breach of the SECOND commandment rather than the first: a syncretistic worship of Jehovah under false symbols, comparable to the calf-worship of the northern tribes, rather than a simple exchange of one deity for another. Carried into the entry as a live disagreement because it changes the character of the whole book's cycle: on Ellicott's reading Israel never formally renounced the Lord."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "judges",
+      "chapter": "2",
+      "note": "Fidelity self-grade, judges 2, five entries, all in window: 1-5 644w, 6-10 636w, 11-15 629w, 16-19 637w, 20-23 643w. Every claim traced to a named block in data/commentary/cow/judges/2.json before writing. No voice is named in prose without a head in that entry's verses; no voice with a head in an entry's verses goes unnamed. Jamieson excluded at keys 1/7/13 as foreign residue (see the stride-6 note) and declared. Chrome stripped from Ellicott at key 22 before drafting. Real usable source after both removals: 13,893 words against a gross of 15,515. Keil is used only where his 200-word block delivers actual comment rather than a verse quotation. Entry count 5 set by max(23/4.5, 13893/7000) = 5.1 rounded down to a tiling that covers 1..23 exactly."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "2",
+      "note": "The Ellicott block at verse 16 is the chapter's single richest patch of non-devotional material: he derives the title Shophetim, distinguishes it from the ordinary Hebrew verb for judging, cites Artemidorus for the ancient sense of judging as governing, and identifies the office with the Phoenician Suffetes who succeeded the kings of Tyre, citing Livy for the consular power of the Carthaginian Suffetes and noting that Spanish governors of the middle ages and the chief officer of Sardinia bore the same title. He also observes that the disorder of the age shows in the judges themselves - one the son of a stranger, another a woman, none of priestly or splendid birth. Most of this went to the outliers list rather than the prose, for length."
     }
   ]
 }
