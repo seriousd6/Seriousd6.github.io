@@ -11900,6 +11900,53 @@
       "book": "genesis",
       "chapter": "40",
       "note": "Length control, five entries: 640, 644, 647, 644, 635, all grade A, none over 650 on either tokenizer. Every one needed trimming and the first drafts were the worst of the run — 818, 804, 785, 702, 662 — which is consistent with the voice-count rule recorded at 1samuel 1 (note 1080) and sharpens it. This chapter carries SEVEN voices in three of its five entries, the most yet, and the overshoot scaled with that almost exactly: the seven-voice entries drafted at 785-818, the six-voice entry at 702, the five-voice entry at 662. Since the entries are all capped at 650 regardless, the practical rule is that the per-voice budget is what shrinks: at four voices each voice can have three ideas, at seven each can have one and a half. I drafted as though each voice deserved a full hearing and then cut back, which cost two to four trim passes per entry. The correction for next time is to allocate before drafting — divide 600 words by the voice count, and write to that quota per voice rather than per paragraph. Note also that all five cuts that actually moved the needle were whole ideas dropped (Clarke's Smithfield polemic, Ellicott's Egyptian palm idiom nearly, Calvin's birthday passage, Henry's Nebuchadnezzar caution, Gill's catalogue custom), while lexical tightening across three passes on entry 5 moved only 16 words in total. Note 1018 continues to hold without exception."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "39",
+      "verses": [
+        "3",
+        "9",
+        "21"
+      ],
+      "note": "JFB displacement, 43rd confirmation, and the strongest single piece of evidence yet for the reading-head model: the donor stream is CONTINUOUS ACROSS CHAPTER BOUNDARIES. In genesis 39 the three JFB blocks sit at keys 3, 9 and 21 — strides of 6 and 12, both multiples of six — and their donors advance monotonically: key 3 is Genesis 32:32 (the sinew that shrank and the Jewish custom of extracting it), key 9 is Genesis 33:4 (Esau's sudden embrace, the enmity of twenty years vanishing), key 21 is Genesis 33:16-17 (Jacob's intended route round the Dead Sea to Seir). Now set that beside genesis 40, landed earlier in this same batch, whose four JFB blocks at keys 3, 9, 15 and 21 draw on Genesis 33:19, 34:1-4, 34:8-12 and 34:14-24. Laid end to end the donor positions run 32:32, 33:4, 33:16, then 33:19, 34:1, 34:8, 34:14 — a single monotonic sweep that does not reset when the host chapter changes. Whatever process produces these blocks is reading forward through Genesis at its own pace while the host text advances independently, and the two are sampled together at a fixed stride. This also predicts something checkable: a chapter picked between these two in canonical order should show donors between 33:16 and 33:19, and chapters after genesis 40 should show donors past Genesis 34. Fifth same-book case. All three blocks excluded here; every affected key carries other voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "39",
+      "note": "Third chapter confirming the 200-word truncation cap, with the same signature as 1samuel 1 and genesis 40: Keil capped at exactly 200 in five of six blocks (keys 2, 7, 11, 14, 20; only key 22, at 111 words, is under the cap and complete), Gill capped at exactly 200 in two of twenty-three (keys 1 and 6, his longest), and Henry (up to 1771), Clarke (542), Calvin (953) and Wesley (88) untouched. Three chapters across two books now show it. Treat the cap as a fixed property of the scrape wherever Keil appears, and discount his contribution when sizing a chapter. Separately, the editor's-footnote defect first recorded at genesis 40 (note 1098) recurs in this chapter three times, all in Calvin: his key-7 block opens with a long quotation from Egypt and the Books of Moses p. 25 on Egyptian marital morals before Calvin's own words begin mid-sentence; his key-11 block carries an embedded Greek gloss on the word epitasis and a French translator's note; his key-19 block ends with another p. 26 quotation on Egyptian women's freedom. Anything drawn from those passages would pass the fidelity check as Calvin's, since it sits inside his blob. I used none of them. The pattern is now clearly editorial apparatus inlined throughout this edition of Calvin, not a one-off."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "39",
+      "verses": [
+        "13",
+        "19"
+      ],
+      "note": "Henry's blocks in this corpus splice two different works together, and the seam is visible. His key-13 block runs the Exposition through to the end and then, without any marker, restates the same material in the compressed sentences of the Concise commentary — Joseph's mistress, having tried in vain to make him a guilty man, endeavoured to be avenged on him; those that have broken the bonds of modesty will never be held by the bonds of truth — which had already appeared verbatim a few lines earlier. His key-19 block does the same, closing with a Concise-style paragraph that repeats the prison material and then adds a Christological application absent from the Exposition. The same doubling appeared at 1samuel 1 key 1. The practical hazard is that a block which looks like sustained argument is partly a summary of itself, so a writer drawing on the tail may unknowingly restate what he has already used from the head, and the corpus templating check would see the repetition as the synthesis writer's fault rather than the source's. Read Henry's long blocks to the end before drafting, and treat the final paragraph as a possible duplicate rather than new material."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "39",
+      "verses": [
+        "20"
+      ],
+      "note": "Second confirmation, in consecutive chapters, that an abridging voice can rescue material the filing rule strands. Henry has only four keys here (1, 7, 13, 19), all of them section headers with long run-aheads, so five of the chapter's verses lie in entries he cannot reach. His key-19 block carries the best material on the imprisonment — that Potiphar likely chose that prison because it was the worst, where the irons entered into the soul, but God designed it to pave the way to Joseph's enlargement, and that God despises not his prisoners and can raise up friends where they are least expected. All of that treats vv20-23, and Henry has no key there. Wesley's key-20 and key-21 blocks reproduce it almost word for word, and both keys sit inside the 20-23 span, so the material reached its proper entry through the abridgement while the original stayed where it was filed. The same thing happened at genesis 40, where Wesley's key-14 block rescued Henry's stranded remark about Joseph not reflecting on the brothers who sold him. Two consecutive chapters make this a reliable technique rather than a lucky accident: when a section-header voice's run-ahead is stranded, search the abridging voice's keys inside the target span before giving the material up. Note also the corollary hazard — if the material is used in BOTH entries, once from the original and once from the abridgement, the corpus templating check will see the near-duplicate and blame the writer."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "39",
+      "note": "Length control, five entries: 646, 646, 649, 589, 642, all grade A. First drafts came in at 795, 743, 742, 589, 719 — the same seven-and-six-voice overshoot as genesis 40, and the vv16-19 entry, which has only THREE voices (Gill, Henry, Calvin), landed at 589 on the first attempt with no trim pass at all. That is now a clean natural experiment across two chapters and eleven entries: three voices drafts in range, five drafts about 70 over, six about 90 over, seven about 150 over. The relationship is close enough to linear that the per-voice quota rule from note 1102 can be stated as a number — roughly 600 divided by the voice count is the budget each voice actually gets, and drafting at more than that guarantees a trim pass per extra voice. Every effective cut this chapter was again a whole idea dropped (Clarke's forty court ladies and the oranges, Calvin's vain-pretexts passage on reputation, Calvin's rare-virtue clause, Wesley's prisoners sentence, Henry's detestable-wickedness line); across five entries the lexical passes moved single-digit word counts while the structural cuts moved 45-105 each. Note 1018 holds at eleven chapters without a counterexample."
     }
   ]
 }
