@@ -9031,6 +9031,74 @@
       "book": "genesis",
       "chapter": "45",
       "note": "No JFB in this chapter at all, so the stride bug had nothing to displace; Keil's blocks here are genuine commentary rather than reproduced verse text, unlike exodus 18. The one ghost caught by the pre-flight was mine: I had written 'Wesley, following Henry' in the vv5-8 entry, where Henry has no key and the Wesley block stands alone. Naming a second voice as the source of a borrowed formulation is a live ghost risk wherever Wesley abridges Henry — attribute to the block actually present in the span."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12",
+        "24"
+      ],
+      "note": "Jamieson stride-6 residue, THIRTY-FIRST consecutive chapter, and the FIRST GAPPED RUN recorded. Keys 6, 12, 24 - offset 0, stride 6, but key 18 is MISSING, so the run is 6/12/[gap]/24 rather than the unbroken 6/12/18/24 every previous chapter has shown. All three blocks are ACTS material and progressive: key 6 on Stephen's speech being cut short by symptoms of impatience in the audience (Acts 7); key 12, a fifteen-word fragment on the silencing of the rulers, 'If they could have answered him, how different would have been their temper of mind' (Acts 4); key 24 on the deputation sent to Antioch, arguing that the James in view is not the apostle of that name as some of the Fathers supposed (Acts 11). All three distinct - no repetition signature. Declared via the chapter-wide RESIDUE set; entries 3, 4 and 7 carry excl=['Jamieson']."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "2",
+      "verses": [
+        "27"
+      ],
+      "note": "Chrome, SEVENTEENTH confirmation and FOURTEENTH consecutive Ellicott carrier - and the first time in the run that it lands on a key that is NOT the chapter's last verse. Ellicott's block at key 27 measures 1068 words, of which 992 are the site nav/footer chrome; the marker is the previous-chapter nav string 'Romans Rom 1 Romans Rom'. Genuine Ellicott payload is 76 words. The chrome attaches to Ellicott's LAST block in the chapter, not to the chapter's last key: Ellicott is absent from keys 28 and 29, so his final block is at 27 while the chapter runs to 29. This is decisive confirmation of the rule inferred at joshua 6 - the carrier is the voice's last block, and the coincidence with the chapter's last verse in earlier chapters was incidental. Real usable source for romans 2 is 52,995 words, not the 53,987 the sizer reports."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "2",
+      "note": "Romans 2 is the widest-voiced chapter of the run so far: TWELVE distinct voices and all FIVE schools, with three patristic voices all GENUINE and on-passage. Theodoret of Cyrrhus appears at 28 of 29 keys (his commentary on the Pauline epistles), quoting the verse and then commenting - several of his blocks are pure verse quotation with no comment (keys 15, 23, 28). John Chrysostom appears once, at key 17, from Homily V on Romans, exactly on 'thou art called a Jew'. Cyril of Jerusalem appears once, at key 16, from Catechetical Lecture 15 on the judgment of secrets - genuinely apposite to Rom 2:16. This is the FIRST chapter in which Cyril of Jerusalem is genuine at his only key; he has previously been wholly residue (1co 10, luke 18, acts 16) or mixed (colossians 1). Matthew Henry appears at only two keys, 17 and 25, and Albert Barnes and A.T. Robertson appear at nearly every key."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "2",
+      "verses": [
+        "17",
+        "24"
+      ],
+      "note": "Two textual disagreements that span centuries and are visible inside the sources themselves. (1) v17 'Behold' vs 'But if': Ellicott calls the Authorised reading a corrupt one, a decisive consensus of the best MSS having ei de, and finds the answering clause in the question of v21 with the 'therefore' there merely resumptive. Calvin had seen the same variant and DECLINED it - it would meet his approbation were it generally received, but the greater part of the MSS was then opposed, the whole difference being one letter, and the difficulty with the conditional is that no corresponding clause can be found. Calvin's own block then carries an EDITORIAL SEQUEL correcting him: 'Griesbach has since found a majority of MSS in favor of this reading, and has adopted it.' Wesley prints the conditional. (2) v24, the source of the quotation: Calvin argues for EZEKIEL 36:20 against Isaiah 52:5, on the ground that Isaiah contains no reproofs of the people whereas that chapter of Ezekiel is full of them; Ellicott and Robertson both refer it to the LXX of Isaiah 52:5, Ellicott noting that the original sense concerns the dishonouring of God's name by the enslavement of his people; Wesley's block is the bare Isaiah reference."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12",
+        "16",
+        "20",
+        "26"
+      ],
+      "note": "Four further live disagreements in romans 2. (1) v6, judgment by works against justification by faith: Ellicott raises the problem explicitly and answers it by distinguishing two elements in Pauline theology and two points of view - the classification of mankind by its fruits, and the individual before his Judge who can claim nothing; Calvin answers it only by denying that reward proves merit, 'an absurd inference'. (2) v12, whether any heathen may be saved: Barnes refuses to soften it, insisting Paul gives no intimation of their salvation and that the apostles evidently believed the great mass would be destroyed; Clarke appeals to the true light that lighteth every man and denies the Gentiles come under the same rule. (3) v16, what the verse connects to: Calvin's block records that Jerome, Chrysostom and Theophylact joined it to v15 while almost all modern critics join it to v12; Barnes and Ellicott take the modern side, Wesley alone keeps the patristic connection. (4) v20, who the 'foolish' and 'babes' are: Wesley and Clarke say they are the GENTILES, these being the titles the Jews commonly gave them; Gill says they are the COMMON PEOPLE AMONG THE JEWS who did not know the law, 'instructor' being the usual title of their own doctors. (5) v26, whether the law-keeping Gentile is real: Gill and Robertson say the case is hypothetical, Clarke takes it as real."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "2",
+      "note": "Cross-citation between voices inside the catena, and editorial layers inside single blocks. (a) Barnes at romans 2:2 cites CALVIN BY NAME - 'The design of the apostle here, says Calvin, is to take away the subterfuges of the hypocrite' - the first instance recorded in this run of one catena voice quoting another. (b) Calvin's blocks at 2:8, 2:16, 2:17 and 2:19 each carry a LATER EDITOR'S NOTE embedded in the same block and indistinguishable from Calvin's own text: at 2:8 the editor answers Calvin's complaint of irregularity by invoking Bishop Lowth on Hebrew parallelism and says 'All the anomalies, noticed by Calvin instantly vanish' when the passage is set out in lines; at 2:16 the editor reports the patristic-versus-modern division on what the verse connects to; at 2:17 the editor supplies Griesbach's later manuscript count against Calvin's textual judgement; at 2:19 the editor notes what 'Calvin has pas[sed]' over. Any synthesis of a Calvin block in Romans must treat the block as a composite of Calvin plus a nineteenth-century editor."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "2",
+      "note": "Fidelity self-grade, all eight entries. Every claim is traceable to a named block in data/commentary/cow/romans/2.json; no voice is named outside its span; no school appears in prose that is absent from its tags dict. Word counts: 1 = 650; 2-5 = 649; 6-9 = 648; 10-13 = 649; 14-16 = 649; 17-20 = 649; 21-24 = 648; 25-29 = 647. All within the 350-650 window; the tiling covers 1-29 exactly. Jamieson is declared residue chapter-wide and excluded from entries 3, 4 and 7. One lint catch worth recording: entry 5 originally named Chrysostom in reporting Calvin's list of fathers on the connection of 2:16, but Chrysostom's block sits at key 17, outside that span, so the build flagged NAMED BUT NOT SOURCED HERE and the prose was reworded to 'Jerome, Theophylact and other fathers'. The full list is retained in the entry's debate text. The sharpest disagreements - the 'Behold/But if' variant, the Isaiah/Ezekiel attribution, who the 'foolish' are, and whether the law-keeping Gentile is real - are stated as unresolved rather than harmonised."
     }
   ]
 }
