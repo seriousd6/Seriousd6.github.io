@@ -3,1149 +3,1389 @@
   "voices": [
    "John Chrysostom",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
-   "Theodoret of Cyrrhus"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "1",
+  "pericope_label": "What shall we say then that Abraham our father hath found?",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains why the argument turns to Abraham at just this point: having shown the world guilty, all men sinners, and boasting excluded, the apostle is intent on proving that a salvation received by faith is so far from being matter of shame that it is the cause of a brighter glory than any through works; and since the Jews kept turning over the fact that the patriarch was the first to receive circumcision, he means to show that Abraham too was justified by faith. He notes the method as well as the matter, that the discourse is carried forward by question, as this writer always does for clearness' sake."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill says the apostle instances in the greatest person of their nation, for whom they had the greatest esteem. Calvin calls it a confirmation by example and a very strong one, since all things are alike in the subject and the person: Abraham was the father of the faithful, and in him was exhibited a mirror and pattern of righteousness belonging to the whole Church, so that his posterity, claiming a righteousness of their own by the law, ought to have been silenced through shame. On the disputed phrase he settles differently from the rest, taking the words as expressed of a thing peculiar to the Jews, since it was a greater honour to be children of Abraham by descent than by mere adoption, provided there was also faith; he concedes them that closer bond only to press that they ought not to depart from their father's example."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the verb rather than the phrase, and observes that all the world is seeking, but that while most weary themselves for very vanity none can be reckoned to have found except those justified before God — so Abraham, like a wise merchant seeking goodly pearls, found this one pearl of great price."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is in no doubt that the phrase refers to the sign in Abraham's flesh, his circumcision, on which the Jew would found his right to peculiar blessings; and he arranges the whole chapter as a dialogue in which the Jew asks one question, contained in this verse and part of the next, while the apostle's answer takes up all the rest. Wesley reads the phrase as by works, quoting Theodoret that it means what is of works, inasmuch as it is by our fleshly bodies that works are done."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul turns to Abraham — the father of the nation, the supreme example of piety — to prove justification is by faith not works (Robertson, Barnes), asking what Abraham found 'as pertaining to the flesh' (by his own works), the answer being nothing to glory in before God (v.2)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom and Theodoret: Paul confirms his doctrine from the patriarch the Jews revered, that the Jew cannot object."
+    "summary": "Ellicott takes the construction to be settled by position, since in the best manuscripts the words are separated from the verb and joined to the noun, so that they mean simply our father by natural descent; Robertson notes that the manuscripts differ in exactly that placing, and that the word for forefather occurs only here in the New Testament. Barnes comes down the other way, calling the expression much controverted and holding the connexion with the verb to be doubtless the proper one, so that the question is what Abraham found in respect to the flesh; of what flesh means he reports that some refer it to external privileges, some to Abraham's own strength, some to circumcision, and takes the last for correct. He also hears the opening words as a Jewish objection rather than the apostle's own, and sets out the plan of what follows — the argument drawn first from Abraham and then from David, meeting the further question about circumcision by showing that the justification came first and the rite was its public seal."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Do the words \"according to the flesh\" go with the verb or with \"our father\"?",
+    "positions": [
+     {
+      "position": "with the noun, since the best manuscripts separate them from the verb; the sense is simply our father by natural descent",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "with the verb, the connexion being doubtless the proper one, so that the question is what Abraham found in respect to the flesh — that is, to circumcision",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "a thing expressed as peculiar to the Jews, whose descent from Abraham was a greater honour than adoption, provided faith went with it",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "reads the verb rather than the disputed phrase, making the verse about seeking and finding, and casts Abraham as the merchant who found the one pearl of great price"
+   }
+  ],
   "themes": [
-   "what shall we say that Abraham our father hath found",
-   "as pertaining to the flesh",
-   "the turn to Abraham",
-   "the decisive test of justification"
+   "why Abraham is the test case",
+   "what \"according to the flesh\" attaches to",
+   "the chapter read as a dialogue"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Theodoret of Cyrrhus"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "2",
+  "pericope_label": "If Abraham were justified by works, he hath whereof to glory",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin names the form: it is an incomplete argument, an attempted but unfinished process of reasoning, since it is not the character of Scripture, or of any other writing, to discuss matters in the form of a syllogism; the clause is the minor proposition and the conclusion must be supplied. He dwells on the noun, which is not the word used a chapter earlier but one meaning the reason or ground or cause of glorying, rendered by Grotius as that whereby a man may hope for praise; and he reports the reading of Vatablus that before God means with regard to what God has said in his word, a view confirmed by the question about Scripture that follows at once. Glorying, he says, is when we pretend to have anything of our own to which a reward is due at God's tribunal — and since it is taken from Abraham, who of us can claim the least particle of merit? Gill states the negative flatly, that Abraham was not and could not be justified by works."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley supplies the missing conclusion — if Abraham had been justified by works he would have had room to glory, but he had not room to glory, therefore he was not justified by works — and quotes Theodoret on what the exchange gains: the full performance of good works crowns the doers with the prize but does not exhibit the loving-kindness of God, whereas faith sets forth both the disposition of the believer and the kindness of God, who by accepting such faith proclaims the man who has it victorious. Clarke keeps up the dialogue he began in the previous verse, giving the first clause to the Jew, who concludes that Abraham was justified by obedience to the law of circumcision and has something to exult in, and the second to the apostle: allowing that Abraham might glory in being called out of heathenish darkness into such marvellous light, that glorying was still not before God as a reason why the privileges should be granted, being itself a consequence of them."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "If Abraham were justified by works, he would have ground for boasting (a claim to merit, Barnes, Robertson) — but not before God, where all boasting is silenced, justification by works being excluded (3:27)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: if Abraham was justified by embracing God's mercy by faith, he had nothing to glory in, bringing only a confession of his misery, a solicitation for mercy."
+    "summary": "Barnes gives the same three steps as Wesley and credits Calvin with the wording, and reaches the conclusion by the shorter road that the apostle appeals at once to the Scriptures, where no such ground of boasting is recorded; since God judges right in all cases, it follows that Abraham had none. Ellicott calls the abruptness an instance of the writer's rapid and eager dialectic — had the whole train of thought been given it would have run much longer, but the greater part is suppressed and he strikes straight at the one point he means to bring into relief, that whatever there may be before men there is no boasting before God. Robertson adds that the condition is of the first class, assumed as true for the sake of argument though untrue in fact, and recalls the rabbinic doctrine of the merits of Abraham, who was held to have a superfluity of credits to pass on to his descendants; Abraham deserved all the respect from men that came to him, he allows, but his relation to God was a different matter."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "supplies the background the argument is aimed at, the rabbinic doctrine of a treasury of Abraham's merits available to his descendants"
+   }
+  ],
   "themes": [
-   "if Abraham were justified by works, he hath whereof to glory",
-   "but not before God",
-   "the argument from boasting",
-   "no self-glory before God"
+   "an argument with its conclusion left unstated",
+   "what glorying means",
+   "the merits of Abraham in the rabbinic schools"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.57
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Theodoret of Cyrrhus"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "3",
+  "pericope_label": "Abraham believed God, and it was counted unto him for righteousness",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The key text (Genesis 15:6): Abraham believed God (strong confidence in the promise, including the covenant of grace and Christ), and it was counted (elogisthe, reckoned, set on the credit side, Robertson) for righteousness; Barnes holds the act of believing was reckoned, faith the instrument not a transfer."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin (with Ellicott): a forensic imputation — faith counted as righteousness because it lays hold on Christ, whose righteousness is the ground; not faith as a meritorious act but as the means of attaining the righteousness of God, which is therefore rightly called imputative."
+    "summary": "Gill notes that the opening question is a Jewish formula, used when anything is proposed which seems contrary to Scripture, as justification by works does here. Calvin widens the object of the faith rather than narrowing it: the word in Genesis is not to be confined to any particular expression but refers to the whole covenant of salvation and the grace of adoption, and those who think Moses' testimony has been drawn aside from its obvious meaning have begun in the wrong place, since God gave it to make Abraham more assured of his adoption. On the disputed verb he holds that if there were any righteousness by works it would have to be in men themselves, whereas by faith they derive from another what is wanting in themselves, so that the righteousness of faith is rightly called imputative; Moses does not tell us what men thought of Abraham, but how he was accounted before the tribunal of God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the account in Genesis decisive. Wesley finds a second object behind the first, since besides the promise about his seed there was especially the promise concerning Christ, through whom all nations should be blessed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes agrees the inspired record was final, and adds what the faith was about — that Abraham's posterity should be as the stars of heaven, promised when he had no child and no prospect of any, so that what was reckoned was a strong and unwavering act of confidence. He is anxious to keep faith from being made into a thing: it is always an act of the mind, not a created essence placed within the mind, nor a substance put there by almighty power, nor a principle, the expression a principle of faith being as unmeaning as a principle of joy, or of sorrow, or of remorse. On the verb he goes furthest of any, having examined every occurrence of the underlying Hebrew word and some forty in the New Testament, and concludes there is not one place where it is used of reckoning to a man what does not strictly belong to him, so that no doctrine of transferring, whether of sin or of holiness, can be derived from it, and what is declared to be reckoned is the act of believing. Ellicott takes the opposite view plainly, that the sense of imputation is not to be got rid of, being distinctly a forensic act, and that the righteousness attributed to Abraham is not actual but something else treated as if it were equivalent, by God acting as the judge of men; he observes that our version renders the same words five different ways across the places where they occur, that the verse was elaborately commented on by Philo and seems to have been a common topic in the Jewish schools, and that the word faith is not used in the same sense in the original and in the application, being trust in the fulfilment of a promise in Abraham's case and an enthusiastic adhesion to a person in this writer's usage. Robertson keeps to the ledger, the verb being an old and common word for setting down accounts, so that the believing was set down on the credit side."
    }
   ],
   "debates": [
    {
-    "question": "What was 'counted for righteousness' — the act of faith itself or Christ's righteousness laid hold of by faith?",
-    "sides": [
+    "question": "Does the word rendered counted support a doctrine of imputation?",
+    "positions": [
      {
-      "position": "The act of believing was reckoned for righteousness — faith the instrument, not a transfer of another's righteousness",
+      "position": "no — every occurrence in both Testaments reckons to a man what strictly belongs to him, so no transfer of sin or holiness can be derived from it, and what was reckoned was the act of believing",
       "holders": [
-       "Barnes"
+       "Albert Barnes"
       ]
      },
      {
-      "position": "A forensic imputation — faith counted as righteousness because it lays hold on Christ, whose righteousness is the ground",
+      "position": "yes — the sense of imputation is not to be got rid of, being distinctly a forensic act, the righteousness attributed being not actual but treated as equivalent",
       "holders": [
-       "Calvin",
-       "Ellicott",
-       "Gill"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "yes — by faith men derive from another what is wanting in themselves, so the righteousness of faith is rightly called imputative",
+      "holders": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "holds that the word faith does not bear the same sense in Genesis and in Paul, being trust in a promise there and adhesion to a person here, with Hebrews stricter and James thinner still"
+   }
+  ],
   "themes": [
-   "Abraham believed God, and it was counted unto him for righteousness",
-   "the key text on imputation",
-   "Genesis 15:6",
-   "faith reckoned for righteousness"
+   "what Abraham believed",
+   "whether the verb will bear a doctrine of transfer",
+   "faith as an act of the mind, not a substance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Theodoret of Cyrrhus"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "4-5",
+  "pericope_label": "To him that worketh not, but believeth on him that justifieth the ungodly",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "To the worker (one who seeks to merit by works, claiming wages as his due) the reward (misthos, wages) is reckoned not of grace but of debt — earned and owed, claimable by right (Barnes, Robertson, Theodoret)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: if one merits by works, the reward is his due not grace; but faith receives righteousness as a free gift — the worker here is not one given to good works but one who seeks to merit something from God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to him that worketh is the reward reckoned of debt",
-   "not of grace, but of debt",
-   "the principle of works",
-   "grace and debt opposed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "To him who works not but believes on him who justifies the ungodly, his faith is counted for righteousness — God justifying not the righteous but the impious, pardoning the sinner who believes; 'the whole Pauline gospel summed up in one word — God who justifies the ungodly' (Denney, Robertson, Barnes)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): none seeks the righteousness of faith but he who feels himself ungodly; God justifies by freely forgiving sinners — holiness does not precede justification, for to be made holy first would entirely set justification aside."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to him that worketh not, but believeth on him that justifieth the ungodly",
-   "his faith is counted for righteousness",
-   "God justifies the ungodly",
-   "the heart of the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul adds David (the most eminent king) as a second witness (Barnes, Robertson), citing Psalm 32 to show the blessedness of the man to whom God imputes righteousness without works — treating him as righteous by grace, not deeds."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: justification with Paul is the remission of sins; David describes blessedness as forgiveness, the works excluded entirely (not merely ceremonies) — righteousness is gratuitous, imputed without works."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David describeth the blessedness of the man",
-   "unto whom God imputeth righteousness without works",
-   "David's confirming witness",
-   "righteousness imputed apart from works"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "David pronounces blessed (happy, highly favoured) those whose iniquities are forgiven (the debt remitted) and whose sins are covered (hidden from God's view, no more remembered, Barnes, Robertson) — the two-fold mercy of pardon, the same blessedness as imputed righteousness (v.6)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Blessed are they whose iniquities are forgiven",
-   "whose sins are covered",
-   "the blessedness of forgiveness",
-   "pardon is justification"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Blessed is the man to whom the Lord will not impute (reckon, charge) sin — the negative side of imputed righteousness, God not charging sin to his account (Barnes, Robertson), corresponding to the imputation of righteousness (v.6); the two sides of justification."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: David's subject is justification not sanctification (stopping short of 'in whose spirit is no guile'); the blessedness is the gratuitous non-imputation of sin, the debt wholly removed and no more remembered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Blessed is the man to whom the Lord will not impute sin",
-   "the non-imputation of sin",
-   "the negative side of imputed righteousness",
-   "gratuitous mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul asks whether the blessedness of imputed righteousness belongs to the circumcised (Jews) only or also to the uncircumcised (Gentiles), pressing the universality of justification by faith (Barnes, Robertson), and restates the key fact (v.3) — faith reckoned to Abraham — to set up the decisive argument (v.10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cometh this blessedness upon the circumcision only, or upon the uncircumcision also",
-   "faith was reckoned to Abraham for righteousness",
-   "the question of circumcision",
-   "the universality of justification by faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul asks when Abraham's faith was reckoned and answers: not when circumcised but while still uncircumcised (Genesis 15 preceding Genesis 17 by years, Barnes, Robertson); Abraham justified by faith while still a Gentile, so justification does not depend on circumcision and is open to the uncircumcised."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how was it reckoned? in circumcision or uncircumcision",
-   "Not in circumcision, but in uncircumcision",
-   "the decisive proof from timing",
-   "justification before circumcision"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Circumcision was a sign and seal of the righteousness of faith Abraham already had while uncircumcised (not the cause but a confirming seal authenticating the prior gift, Barnes, Robertson), that he might be the father of all who believe, circumcised or not — the believing Gentiles his true children, righteousness imputed to them also."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Theodoret): circumcision sealed, did not produce, righteousness; Abraham's fatherhood extends to all who walk in the steps of his faith — the sign subordinate to the substance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a seal of the righteousness of the faith",
-   "father of all them that believe, though not circumcised",
-   "circumcision the seal of faith's righteousness",
-   "Abraham father of all believers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham is the father of the circumcised — but not merely by the rite or physical descent; only of those who also walk in the steps of his faith (Barnes, Robertson), faith and not the flesh making the true child of Abraham even among the Jews."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Theodoret): circumcision alone does not make one Abraham's child; only faith does — the true children are those who imitate his faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the father of circumcision to them who walk in the steps of that faith",
-   "not of the circumcision only",
-   "Abraham father of the believing circumcised",
-   "faith makes the true child"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Theodoret of Cyrrhus",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The promise that Abraham and his seed should be heir of the world (fulfilled in the universal blessing through Christ and the worldwide family of faith) came not through the law (not yet given) but through the righteousness of faith — by grace, received by believing (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): the inheritance rests on the promise and faith, not the law, which came centuries after the promise — grounding the blessing in grace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the promise that he should be the heir of the world",
-   "not through the law, but through the righteousness of faith",
-   "the promise grounded in faith",
-   "the inheritance by grace not law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "If the inheritance were by the law (law-keeping), faith would be emptied (made void) and the promise nullified (Barnes, Robertson) — law and promise mutually exclusive as grounds: if heirship is by law, faith is useless and the free promise destroyed."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the law and faith cannot coexist as grounds of justification — to introduce law is to abolish the promise and faith; the inheritance must be by one or the other, not both."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if they which are of the law be heirs, faith is made void",
-   "the promise made of none effect",
-   "the incompatibility of law and promise",
-   "law and grace mutually exclusive"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The law, being violated by all, works wrath (condemnation and punishment, Barnes, Robertson) — it cannot give the inheritance but exposes guilt and brings the curse; and where no law is, there is no transgression (the law turning sin into formal violation of a known command)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): the law brings wrath because none keep it, so the promise must rest on grace not law — the law's office is to convict, not to confer the inheritance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the law worketh wrath",
-   "where no law is, there is no transgression",
-   "the law works wrath, not inheritance",
-   "the promise must rest on grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The inheritance is of faith that it might be by grace (faith and grace going together, as law and debt do; the free promise requiring faith, Barnes, Robertson, Calvin), to the end the promise might be sure to all the seed — firm and certain to both Jews and Gentiles, Abraham the father of us all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is of faith, that it might be by grace",
-   "the promise might be sure to all the seed",
-   "of faith by grace sure to all",
-   "Abraham the father of us all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham was made the father of many nations (Genesis 17:5, fulfilled in the worldwide family of faith), believing God who quickens the dead (raising up seed from his own and Sarah's dead bodies, the God of resurrection, Barnes, Robertson) and calls things that be not as though they were (the Creator's power)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): God calls into being what does not exist — the Creator's omnipotence; Abraham's faith rested on God's power to fulfill the promise against all natural impossibility."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have made thee a father of many nations",
-   "God, who quickeneth the dead, and calleth things which be not as though they were",
-   "Abraham's faith in the life-giving, creating God",
-   "God's omnipotence the ground of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham, against all natural hope (his and Sarah's age making offspring impossible), believed in hope (resting on God's promise) — faith triumphing over natural impossibility (Barnes, Robertson) — that he might become the father of many nations, trusting 'so shall thy seed be' against the evidence of nature."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Theodoret): Abraham's faith rose above natural reason, resting wholly on the promise — believing in hope where there was no natural hope."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who against hope believed in hope",
-   "that he might become the father of many nations",
-   "Abraham's faith against hope",
-   "faith triumphing over natural impossibility"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham was not weak in faith — his confidence not shaken (Barnes, Robertson) — though he considered his own body now dead (about a hundred) and the deadness of Sarah's womb; these impossibilities did not weaken his faith, weighing them honestly yet not overcome."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: faith does not ignore difficulties but rises above them, resting on God's power — Abraham not blind to the obstacles but undefeated by them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "being not weak in faith",
-   "considered not his own body now dead, neither the deadness of Sarah's womb",
-   "Abraham's faith unweakened by impossibilities",
-   "faith rising above natural obstacles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham staggered not at the promise through unbelief — not wavering or doubting (Barnes, Robertson) — but was strong (strengthened) in faith, giving glory to God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Theodoret): faith glorifies God by honoring his power and truth — trusting his promise gives him the glory due his omnipotence and faithfulness, the deepest worship."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he staggered not at the promise of God through unbelief",
-   "was strong in faith, giving glory to God",
-   "Abraham strong in faith",
-   "faith glorifies God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham was fully persuaded (completely convinced, a settled entire conviction, not a wavering hope, Barnes, Robertson) that what God had promised he was able also to perform — resting on God's omnipotence."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Theodoret): the essence of faith — trusting not the visible probability but God's power and faithfulness to fulfill his word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "being fully persuaded",
-   "what he had promised, he was able also to perform",
-   "Abraham's full persuasion of God's power",
-   "the settled assurance of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Because of this strong, God-glorifying faith (vv.18-21), it was imputed (reckoned) to Abraham for righteousness (Barnes, Gill) — restating the key text (v.3, Genesis 15:6), the conclusion of the description of his faith."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: it was this faith — trusting God's mercy and power — that was counted for righteousness, not as a work but as laying hold on God's promise."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "therefore it was imputed to him for righteousness",
-   "Abraham's faith imputed",
-   "the conclusion of the description",
-   "faith reckoned for righteousness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The record of Abraham's justification was written not for his sake alone (not merely history about him, Barnes, Robertson) but for the instruction of all believers — a pattern and assurance for all who would believe, a universal lesson."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (with Henry): God's dealings with Abraham are written for our learning and comfort, that we might know justification by faith is for us too."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it was not written for his sake alone",
-   "that it was imputed to him",
-   "written for us also",
-   "Abraham's justification a universal lesson"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Righteousness shall be imputed to us also, on the same terms as Abraham — if we believe on him who raised up Jesus our Lord from the dead (Barnes, Robertson), paralleling Abraham's faith in the God who quickens the dead (v.17); our faith and Abraham's have the same object, the life-giving God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Cyril): as Abraham believed God's power to give life, so we believe in the God who raised Christ — the resurrection the ground of our justifying faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for us also, to whom it shall be imputed",
-   "if we believe on him that raised up Jesus our Lord from the dead",
-   "the application to believers in the risen Christ",
-   "Abraham's faith and ours the same"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Theodoret of Cyrrhus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ was delivered for our offences (to make atonement, satisfaction for our sins, Isaiah 53) and raised again for our justification — the death the proper cause of atonement, the resurrection its proof and seal (1 Corinthians 15:17, proving the atonement accepted and grounding our hope, Barnes, Ellicott)."
+    "summary": "Gill distinguishes the man who works from principles of grace — regenerate, disposed to work for God, working freely and to a right end — from the worker meant here, who works on nature's principles and with selfish views, trusting to and glorying in what he does and seeking righteousness by his work. Calvin draws the line in the same place: the worker is not the man given to good works, to which all God's children ought to attend, but the man who seeks to merit something by them, and the non-worker is not the idle man but the one who does not depend on the merit of what he does. Paul forbids the faithful to be mercenaries, demanding anything from God as justly their due; and Calvin adds that the argument hangs not on a single expression but on the whole passage, finding the same reasoning where the law promises reward to works while the just live by faith."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: it is by Christ's death, not his obedience to the moral law, that we are saved — denying imputed active obedience; faith in his sacrificial death is reckoned for righteousness, the redemption through his blood."
+    "prevalence": "several",
+    "summary": "Wesley makes the principle flat — to him that works all the law requires, the reward is no favour but an absolute debt. Clarke tracks the vocabulary, observing that the translators render one Greek verb variously through this chapter as counted, reckoned, and imputed, and that reckoned is probably the best sense throughout; and he takes the case as Abraham's own, since he was called when he was ungodly, an idolater, and on believing was freely justified, so that justification, all having sinned, must take place on behalf of the ungodly if it takes place at all."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill (with Calvin): Christ's righteousness, including his obedience and death, imputed to believers — delivered for our offences and raised for our justification, the whole work the ground of our acceptance."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes cautions that the verse does not affirm that anyone has actually worked out salvation by conformity to the law but states a general principle: where a man fulfils a contract, paying him is not a matter of favour, so if a man were justified by works he would have a claim on God and it would be wrong not to justify him — which Barnes takes as a further reason the doctrine cannot be true. He notes that the word for reward is the ordinary word for the pay of soldiers and day-labourers, and that reckoned here carries its strict sense of reckoning to a man what is already due to him. On the second verse he works hardest to keep the language honest: God does not first esteem such men pure, contrary to fact, but knowing they are defiled resolves to treat them as friends; the righteousness of Christ is not transferred to them, for moral character cannot be transferred, nor infused into them, for then they could not be spoken of as ungodly, but the results of Christ's death are so reckoned to believers as to make it proper for God to treat them as righteous. Ellicott presses the same wage-relation, claimable if need be in a court of law, with no element of grace or favour or concession in it, and notes that the word for the ungodly is stronger than merely unrighteous and belongs to the general form of the proposition rather than to Abraham. Robertson glosses the contrast simply as not according to grace but according to what is owed."
    }
   ],
   "debates": [
    {
-    "question": "Is Christ's active obedience to the moral law imputed, or only the benefit of his death?",
-    "sides": [
+    "question": "In what sense are the ungodly treated as righteous?",
+    "positions": [
      {
-      "position": "Only the benefit of his sacrificial death is reckoned — we are saved by his death, not his obedience to the moral law",
+      "position": "not by transfer, since moral character cannot be transferred, nor by infusion, since then they could not be called ungodly; the results of Christ's death are reckoned to them",
       "holders": [
-       "Clarke"
+       "Albert Barnes"
       ]
      },
      {
-      "position": "Christ's whole righteousness, obedience and death together, imputed to believers",
+      "position": "the case is Abraham's own, who was called while an idolater and freely justified on believing",
       "holders": [
-       "Gill",
-       "Calvin"
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the description belongs to the general form of the proposition and is not meant to apply to Abraham, faith and positive impiety hardly being found together",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "draws the order of salvation from the phrase, holding it groundless that holiness precedes justification, since a man could not be justified were he not at that moment ungodly"
+   }
+  ],
   "themes": [
-   "who was delivered for our offences",
-   "raised again for our justification",
-   "the two pillars of death and resurrection",
-   "the ground of justification in Christ"
+   "wages as debt against reward as gift",
+   "which kind of worker is meant",
+   "what justifying the ungodly does and does not transfer"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  }
+ },
+ "6": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "6-8",
+  "pericope_label": "David describeth the blessedness of the man unto whom God imputeth righteousness",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the choice of a second witness is deliberate, David being a person of great note and esteem among the Jews who describes the happiness of justified persons in a very lively manner; and on the third verse he fills in what became of the sins — they were imputed to the Son as surety, who bore them and took them away, so that those he justifies now appear before the throne without fault and will never be charged with them again. Calvin uses the citation as a lever against two positions at once. Against those who limit the works of the law to ceremonies he answers that Paul here says works with nothing added, and a simple unrestricted expression must be understood of every work without difference. Against those who would have satisfaction made for sin he answers that righteousness is here nothing else than the remission of sins, gratuitous by the very name of it, since the creditor who is paid does not remit, but he who spontaneously cancels the debt through mere kindness. He notices too that Paul stops short of finishing the verse, leaving out the words about the man in whose spirit there is no guile, evidently because his subject is justification and not sanctification; and he rejects the schoolmen's half remission, where the fault is pardoned while the punishment is retained, asking how God should punish sins which he does not impute."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley says David is fitly introduced after Abraham because he also received and delivered down the promise, and that without works means without regard to any former good works supposed to have been done by him. Clarke sorts the psalm's terms, distinguishing the iniquities, which are transgressions of the law that exposed the man to the most grievous punishment, from the sins, his innumerable deviations from the strict rule of truth and righteousness — the one forgiven, the other entirely removed out of sight and thrown into oblivion."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes reads the move as an argument from precedent: the doctrine being defended is not new and not contrary to the Old Testament, and David is shown to have understood the same justification without works. He takes the whole scope of the psalm to be the blessedness of the man who is forgiven, whose sins are not charged on him, so that being pardoned he is treated henceforward as a righteous man and a friend of God; and he is careful that covered has no reference to the atonement but simply to hiding or concealing, quoting Calvin's summary that justification with Paul is nothing else but pardon of sin. Robertson observes that the verb is not simply to describe but to pronounce blessing, a rare word for felicitation or congratulation, and Ellicott would render it speaks the felicitation, putting the stress on the first term of the psalm — the sins are not abolished but forgiven, not annihilated but covered up, removed from sight, hidden by the absolving grace of God."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Are the works excluded here only ceremonial ones?",
+    "positions": [
+     {
+      "position": "no — Paul says works with nothing added, and an unrestricted expression must be understood of every work without difference",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the point is rather that no former good works of David's were regarded at all",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "notes that Paul breaks off the quotation before the words about the man in whose spirit is no guile, and takes the omission as deliberate, marking the line between justification and sanctification"
+   }
+  ],
+  "themes": [
+   "a second witness from the Psalms",
+   "whether the works excluded are only ceremonies",
+   "forgiven, covered, not imputed"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  }
+ },
+ "9": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "9-10",
+  "pericope_label": "Cometh this blessedness upon the circumcision only?",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill defends the supplied word only, noting that it stands in the Claromontane exemplar used by Beza and in the Vulgate and Ethiopic versions and that the sense requires it. Calvin will not let the argument be narrowed to a rite: some conclude unwisely that because circumcision and uncircumcision alone are named the question is only about ceremonies, but we ought to consider what sort of men Paul was reasoning with. The Jews gloried in circumcision not as the symbol of God's favour but as a meritorious observance of the law, and on that account reckoned themselves better than others; it is mentioned here as the initial work, the basis of the righteousness of the law, so that under one thing is included every work to which reward can be due. His reasoning rests on the order of causes and effects, the cause being always before its effect: if Abraham's righteousness was the remission of sins, and he attained it before circumcision, remission is not given for preceding merits."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry allows the wider estimate of the interval, fourteen years or by some accounts twenty-five, and draws out what it is for: Abraham was pardoned and accepted in uncircumcision, a circumstance which might at once silence the fears of the poor uncircumcised Gentiles and lower the pride and conceitedness of the Jews, who gloried in their circumcision as if they had the monopoly of all happiness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the question a nervous one — if this pardon is essential to happiness, and David says it is, is it then the exclusive privilege of the Jews? It cannot be, since it comes by the mere mercy of God through faith, so that the circumcision cannot so much as claim it, and if God offers it to them of mercy rather than for obedience, the same blessedness may be offered to the Gentiles who believe. He then counts the dates out: faith was reckoned to Abraham at least a year before Ishmael was born; he was eighty-six at that birth and ninety-nine when circumcision was instituted, with Ishmael then thirteen. Wesley states it in one line, not after he was circumcised, for he was justified before Ishmael was born."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes sets out the remaining inquiry with precision: Abraham's justification by faith is granted, and the only question left is whether it fell after his circumcision or before. If after, a Jew might still plead that even the faith was acceptable because the man was circumcised; if before, the plea collapses, and the father of the nation stands as a man reckoned God's friend while in the very condition the heathen world was then in — from which it follows that the Gentiles may be justified in the same way now. Ellicott makes the shape plainer by taking the sentence out of its interrogative form, so that the blessedness belongs to the uncircumcised as well as the circumcised, and adds the chronology from Genesis, the institution of the rite falling when Abraham was ninety-nine while the vision and promise apparently came before Ishmael's birth. Robertson notes there is no verb in the Greek, and that this was a pertinent point the average Jew had not noticed."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "refuses to read the question as being about ceremonies at all, treating circumcision as the initial work of the righteousness of the law and so a stand-in for every work to which reward can be due"
+   }
+  ],
+  "themes": [
+   "the chronology of promise and rite",
+   "whether one rite stands for every work of the law",
+   "what the interval was for"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
+  }
+ },
+ "11": {
+  "voices": [
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "11-12",
+  "pericope_label": "He received the sign of circumcision, a seal of the righteousness of the faith",
+  "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril, preaching to catechumens, keeps to the pattern rather than the rite: Abraham did many things well, but was never called the friend of God except when he believed, and through faith he left parents, country, and home."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill ties the rite narrowly to the peculiar covenant God made with Abraham and his natural seed concerning Canaan, a distinctive badge marking that posterity off from other peoples, and denies at length that it was a type of baptism, since circumcision was confined to males and to Abraham's natural seed, bears no resemblance to the supposed antitype, and plainly did not cease when baptism came in but continued in force until the death of Christ. Calvin uses the verse for sacraments in general: they are seals by which the promises of God are in a manner imprinted on our hearts, dead and unprofitable symbols to the reprobate yet never losing their import, for our unbelief cannot weaken or extinguish the truth of God. He then turns the argument on the schoolmen, who deny justifying power to the older sacraments and assign it to the newer: if Paul reasons correctly that circumcision does not justify because Abraham was justified by faith, the same reason holds against baptism; and he notes that the carnal descendants who had nothing but the outward rite neglected the chief matter, the faith of Abraham, which alone he obtained salvation by."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gathers the constant Jewish usage of the words for mark and seal for the cutting in the flesh, and holds with Taylor that the covenant sealed no new grant but the justification and promise Abraham had already received. He observes further that the covenant was made with Abraham while he was still a Gentile, so that the Gentiles were primarily included in it and the Jews brought in consequentially — an unanswerable conclusion, he thinks, and one that must confound the Jews on this point for ever. Wesley reads the seal simply as an assurance on God's part that he accounted the man righteous upon his believing, before he was circumcised."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes takes the two words apart: a sign is that by which something is shown or represented, and a seal is the mark of wax attached to a deed to confirm it, or the device stamped from a signet often worn as a ring, so that to affix it was to ratify an engagement already made — circumcision being a public attestation that God had previously approved of Abraham and made him promises. He adds that though all believers are Abraham's children, the Jews had a special proprietorship in him as their ancestor. Robertson notes the grammar is a genitive of apposition, circumcision being the sign, and presses the consequence that the rite did not convey the righteousness but only gave outward confirmation to a faith already held. Ellicott says the same against the contemporary view: circumcision was not the cause or condition of Israel's privileges so much as the ratification of a state of things already existing, so that for those who inherited that state the want of the rite was no bar — while the mere performance of it was no guarantee of justification unless attended by a faith like Abraham's, faith alone being essential and the sign useless without it."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does circumcision stand as a type of baptism?",
+    "positions": [
+     {
+      "position": "no — it was confined to males and to Abraham's natural seed, bears no resemblance to the supposed antitype, and did not cease when baptism came in",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the parallel holds, and argues for faith before baptism, baptism being the sign and seal of a faith already had",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "whatever the parallel, it tells against baptism justifying, by the same reason that circumcision did not",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "argues from the order of covenant and rite that the Gentiles were primarily included and the Jews consequentially, since the covenant was made with Abraham while he was himself a Gentile"
+   }
+  ],
+  "themes": [
+   "sign and seal distinguished",
+   "whether circumcision prefigures baptism",
+   "fatherhood of the uncircumcised and the circumcised"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ },
+ "13": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "13",
+  "pericope_label": "The promise, that he should be the heir of the world",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill canvasses the narrower readings and rejects them: it cannot simply mean the Gentiles, since the promise is made to Abraham's seed as well as to himself and believers cannot be both the heirs and the inheritance; nor can it be the land of Canaan by a figure of the part for the whole, since that land is never so called and the promise of it belonged to those under the law. Calvin says law and faith are now set squarely against each other, and that this ought to be carefully observed, since if faith borrows nothing from the law in order to justify then it has respect to nothing whatever except the mercy of God; he disposes of the reading that limits this to ceremonies with a grammarian's point, that had works contributed anything the text should have said through the law of nature rather than through the written law. He takes the inheritance itself to be eternal life, the country above, of which Canaan was a type and a pledge, and since the fallen state of the whole world was also to be repaired through Christ, the dominion of the world was rightly promised, some taste of which the godly have even now, partaking with a peaceable conscience of what God has made; and he adds that consciences enjoy solid peace only when they know that what is not justly due to them is freely given."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that the promise was made long before the law and that it points at Christ, being the word that in Abraham all families of the earth should be blessed. What the law does is work wrath, by showing that every transgressor is exposed to the divine displeasure; so God appointed the title to the promised blessings to run by faith, that it might be wholly of grace and made sure to all who are of the like precious faith with Abraham, Jew or Gentile, in every age."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the title as an office: Abraham is the medium through whom the mercy of God is communicated to the world, and the manner of his justification is the rule according to which all men may expect the same blessing, so that every person may now claim justification through faith in virtue of that original grant. Wesley makes the heirship shared — Christ is heir of the world and of all things, and so are all Abraham's seed."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes says plainly that the expression heir of the world is not found in the promises made to Abraham, and that Paul is summing up in one comprehensive title everything that was promised him: a great nation, a blessing on all the families of the earth, a posterity numbering as the stars, a father of many nations. He stresses too that the covenant preceded both the law of circumcision and the law of Moses and was independent of both. Robertson agrees the promise is not one text but the whole chain, and observes that in these verses Paul takes the keywords of his gospel — faith, promise, grace — and arrays them against the current Jewish theology of law, works, and merit. Ellicott notes the Jews themselves explained the promise of the universal sovereignty of the Messiah, and marks the three stages the verse assumes: faith, then imputed righteousness, then access to the Messianic kingdom with all its privileges."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is the world Abraham is heir of?",
+    "positions": [
+     {
+      "position": "not the Gentiles and not Canaan, since believers cannot be both heirs and inheritance and the land is never so called",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "a comprehensive title summing up every promise made to him, so that his spiritual descendants shall possess all lands",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "eternal life, of which Canaan was type and pledge, together with the restoration of the fallen world through Christ",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "reports the Jewish reading of the promise as the universal sovereignty of the Messiah, and sets out the three stages of faith, imputed righteousness, and access to the kingdom"
+   }
+  ],
+  "themes": [
+   "which promise is meant",
+   "the promise older than the law",
+   "how wide the inheritance runs"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
+  }
+ },
+ "14": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "14-15",
+  "pericope_label": "The law worketh wrath; where no law is, there is no transgression",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin argues the case as an impossibility, and the impossibility is pastoral: had God attached the condition that he would favour with adoption only those who deserved it, no one could ever have dared to feel confident that the inheritance belonged to him, for who is so conscious of perfection as to feel assured it is his due? Such a condition would not merely hold men's minds in suspense and anxiety but fill them with fear and trembling, and the promises, which avail nothing except as they are received with full assurance, would be voided in the receiving; consciences would have no certainty, would be harassed with perpetual inquietude, and at length sink in despair. From this he draws his account of what faith is — not a naked knowledge of God or of his truth, nor a simple persuasion that God is and that his word is true, but a sure knowledge of God's mercy received from the gospel, which brings peace of conscience toward God and rest to the mind. On the second verse he allows that the law can show the good and the perfect the way of life, but as it prescribes to the sinful what they ought to do and supplies no power for doing it, it only exhibits them as guilty before the tribunal of God; and he rejects as ingenious but unsuitable the reading that makes the wrath the sinner's own, kindled against a Lawgiver opposed to his lusts. Gill insists on the same, that the wrath meant is not man's but God's, the law being so far from justifying sinners that it curses and condemns them, and when let into the conscience fills a man with terrible apprehensions and a fearful looking for of judgment."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls faith on the objector's supposition entirely useless, and on the second verse presses the argument home: no law makes provision for the exercise of mercy, and the Jews have a law which they have broken, so that if the promises of pardon without the works of the law do not extend to them they must be finally miserable — a home stroke, he says, and an unanswerable argument. Wesley notes the condition the whole argument assumes, of those who have kept the whole law, and adds that the law considered apart from the grace mingled with it is so difficult, and we so weak and sinful, that instead of bringing a blessing it becomes an occasion of wrath."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes spells the consequence out: if those who seek acceptance by the law are the heirs, then faith has no place in the scheme at all, and the strong commendation bestowed on Abraham's faith was bestowed without any just cause. A promise looks to the future and its whole design is to excite trust, so men justified by conformity to Moses cannot be depending on any promise made to Abraham but have cut themselves off from it — as is true now of men who seek to be justified by their morality or their forms of religion, standing on a scheme of their own devising that would render the atonement of Christ and the work of the Spirit of no value. On the second verse he takes the maxim as common justice and common sense, that a law expresses what may and may not be done and where no such rule is given there can be no crime, and turns it against the objector: the more just and reasonable the law, the less hope of being justified by it. Robertson notes the two perfect passives, faith emptied of all meaning and the promise made permanently idle, and puts the second verse in a line — there is no responsibility for the violation of a non-existent law. Ellicott renders the first the same way, emptied of its meaning, become an empty name, and observes there is nothing left for either faith or promise to do if the votaries of law as such are to inherit."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "turns the argument from absurdity into a definition of faith, as a sure knowledge of God's mercy bringing peace of conscience, over against the mere persuasion that God's word is true"
+   }
+  ],
+  "themes": [
+   "the reductio: faith and promise both emptied",
+   "why an impossible condition destroys assurance",
+   "the law as an instrument of wrath"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
+  }
+ },
+ "16": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "16",
+  "pericope_label": "Therefore it is of faith, that it might be by grace",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill guards the correspondence from the receiving end: faith is not the cause or condition of the blessing but the appointed means of receiving it, and since faith is itself a gift of God's grace and consists purely in taking favours at his hand and giving him all the glory of them, everything received by faith is manifestly by grace. Calvin treats the verse as the winding up of the whole argument and states it as a syllogism — if the heirship of salvation comes to us by works, faith in it vanishes and the promise is abolished, but both must be sure and certain, hence it comes by faith, so that its stability, being based on the goodness of God alone, is secured. He notes what this implies about faith itself, that the Apostle regards it as firm and certain and so counts hesitancy and doubt as unbelief, whereas the schoolmen dignify that same doubting as a moral conjecture and put it in faith's place; and he denies that grace here can mean the gift of regeneration, since regeneration is never perfect in this life and could never suffice to pacify a soul or make a promise certain. On the last clause he takes those of the law to mean simply the Jewish nation to whom the law was delivered, and argues that the Gentiles were made Abraham's seed by the very oracle that conferred the heirship, the past tense marking the certainty of the divine counsel; and he adds that the fatherhood in view is spiritual, held not from Abraham's flesh but from the promise of God, lest the Jews glory too much in carnal descent."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke quotes Taylor on the mutual inference of the two terms — if a blessing is God's gift we must be persuaded of the goodness that bestows it, and if faith in that goodness is the principle of our hope then the blessing is not due in strict justice; grace, being the mere good will of the donor, is free and open to all whom he chooses, and the divine wisdom appointed faith to be the condition because it is the simplest principle on our part and reaches as far as grace can extend. He reasons in both directions about the seed: of the Gentiles there can be no doubt, since the promise was given while Abraham was himself a Gentile, and the Jews may be inferred, since they sprang from him after he became heir of the righteousness which is received by faith. Wesley makes the condition explicit, that the Gentiles are included if they follow his faith."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes puts the correspondence simply, that the plan is by faith so that it may be a matter of mere undeserved mercy, since if men were justified by law it would be by their own merits; and he observes that had the promise depended on entire conformity to the law it would never have been established at all, since none would ever have yielded such obedience. Ellicott draws the consequence for scope: faith on man's part is correlative with grace on God's, and salvation, being dependent on grace, is as wide and universal as grace itself and knows no restriction of law, reaching beyond that part of the race which belongs to the dispensation of the Law to those descended from Abraham in a spiritual sense by imitating his faith. Robertson glosses the adjective for sure as stable, fast, firm, and notes that the word only again seems to stand in the wrong place in the Greek."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "refuses to let grace here mean the gift of regeneration, on the ground that regeneration is never perfect in this life and so could never make a promise certain"
+   }
+  ],
+  "themes": [
+   "faith and grace as correlatives",
+   "what makes a promise sure",
+   "the seed reckoned spiritually"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "17",
+  "pericope_label": "God, who quickeneth the dead, and calleth those things which be not",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the plural as decisive against a merely national reading, since the Jews cannot be called many nations, and concludes the fatherhood must be understood in a spiritual sense. Calvin makes the first title the pivot of the whole chapter: a seed was promised to Abraham as though he were in vigour and strength, and he was as it were dead, so he had to raise his thoughts to the power by which the dead are quickened — and it is therefore not strange that the Gentiles, barren and dead, should be brought into the same society, so that whoever denies them capable of grace does wrong to Abraham. He turns it into a pattern of every calling: when we are called by the Lord we emerge from nothing, and to be in a suitable state to hear that call we must be altogether dead in ourselves; and on the second title he holds the plain sense best, that God calls things not existing as existing, the reference being to the declaration about many nations, which then had no real existence."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that faith fastens on God himself, other foundation being what no man can lay, and that it is the holy wisdom and policy of faith to fasten particularly on that in God which is accommodated to the difficulties it has to wrestle with — so Abraham, promised a son when he and Sarah were as good as dead, looks on God as one who could breathe life into dry bones. On the disputed phrase he allows both readings and finds each true: Abraham became the father of many nations before him whom he believed, that is in the eye and account of God, or else like him whom he believed, for as God was a common Father so was Abraham."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets the quotation in its covenant frame, the words coming with the change from Abram to Abraham and constituting him head of many nations, the Gentile world, by virtue of the covenant then made; and he takes the titles as grounds of trust, since God being almighty, eternal, and unchangeable can raise the dead and can as infallibly assure the existence of things which are not as if they were already in being. Wesley points out how much rests on the presence of God, since before men nothing of this appeared, those nations being then unborn, and illustrates the second title by the difference between two commands — a man says to a servant already existing, Do this, and he does it, but God says to the light while it does not exist, Go forth, and it goes."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes notices what Paul is leaning on: the Hebrew verb means to give or grant and also to set or constitute, and the tense is past, so that God speaks of a thing as already done which he had only purposed, the fulfilment being so certain that it could be spoken of as accomplished. He reads the first title as answering the strong natural improbability arising from the age of Abraham and Sarah. Ellicott would render the disputed phrase in the presence of rather than before, connecting it closely with the clause the parenthesis interrupts, so that Abraham stands as the father of us all in the presence of that God in whom he believed, confronting the Almighty as he had done when the promise was first given; he hears in the titles an undercurrent of reference to the calling of the Gentiles as well. Robertson notes the preposition means right in front of, that Paul has drawn the antecedent into the relative clause, and that the second title summons the non-existing as existing."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How should the phrase rendered \"before him whom he believed\" be taken?",
+    "positions": [
+     {
+      "position": "in the presence of, connecting closely with the fatherhood clause — Abraham confronting the Almighty as when the promise was given",
+      "holders": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "either in the eye and account of God, or like him whom he believed, since as God was a common Father so was Abraham",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "makes the quickening of the dead the warrant for the Gentile mission, holding that whoever denies the Gentiles capable of grace does wrong to Abraham, whose own faith rested on the same power"
+   }
+  ],
+  "themes": [
+   "the past tense of the promise",
+   "before God or like God",
+   "the two titles and what they answer"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
+  }
+ },
+ "18": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "18-19",
+  "pericope_label": "Who against hope believed in hope",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains how one word can stand on both sides of the clause: in the first instance it means a probable evidence for hoping, such as may be derived from nature and carnal reason, and in the second the hope given by God. He notes an alternative rendering, above hope, and half prefers it, since unless faith flies upward on celestial wings so as to look down on all the perceptions of the flesh as on things far below, it will stick fast in the mud of the world; nothing, he adds, is more injurious to faith than to fasten our minds to our eyes, seeking from what we see a reason for our hope. On the next verse he keeps the negative and reads it as a deliberate withdrawal — Abraham turned his mind from what met his own eyes and as it were forgot himself, though we are not to think he had no regard whatever to his body, since Scripture records him asking whether a child should be born to a man of a hundred years; it was the greater effort, Calvin thinks, to lay the consideration aside than never to have entertained it. He will not follow Augustine, who put the impediment in Sarah alone, since the man who was before like a dry and barren tree was afterwards so invigorated by the blessing that he begot other children still, which makes the divine power more visible rather than less; and he distinguishes two weaknesses of faith, the one that succumbs to adversity and falls away, the other that arises from imperfection and does not extinguish faith at all, so that the faithful may be said to be strong even in their weakness. Gill observes that neither the length of time since the promise was made nor the seemingly insuperable difficulties of nature weakened it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets the improbabilities in a row, since the strength of the faith is measured by them: Abraham had as yet no child by Sarah, he was a hundred years old and she ninety, and beyond the unlikelihood of her bearing at that age she had been barren all her life — every one of these a reason not to credit a promise which was itself large, that in his posterity all the nations of the earth should be blessed. He reduces the whole to two clauses: God cannot lie, Abraham can believe. Wesley distinguishes the two organs on the same object, the promise being apprehended by faith as a thing which God has spoken and by hope as a good thing which God has promised to us."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson calls the opening phrase a graphic picture, past hope upon hope he trusted, and notices that the qualifying word about softens the exactness of the numeral, the first promise of a son having come when Abraham was eighty-six and the second when he was ninety-nine, calling himself a hundred. Barnes makes the rule general, that faith looks to the strength of God and not to second causes or to the difficulties that appear formidable to men. Ellicott points out a shift easily missed, that the relative here refers to Abraham where in the previous verse it referred to God, and that the force of the preposition is that he grounded his faith upon hope, an internal hope strong within him though there were no objective grounds for hoping at all; on the next verse he holds that on the evidence of the best manuscripts the negative should be dropped, so that the sense runs that because he was not weak in faith he considered indeed, took full account of, the natural impediments to the promise, and yet did not doubt."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did Abraham consider his own body, or refuse to consider it?",
+    "positions": [
+     {
+      "position": "the negative should be dropped on the best manuscripts: not being weak in faith, he took full account of the natural impediments and yet did not doubt",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the negative stands, and marks a deliberate withdrawal of the mind from what met his eyes — a greater effort than never entertaining the thought",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "disputes Augustine's opinion that the impediment lay in Sarah alone, arguing that Abraham's later children by Keturah make the divine power more visible rather than less"
+   }
+  ],
+  "themes": [
+   "two senses of hope in one clause",
+   "whether Abraham looked at the difficulty or away from it",
+   "two kinds of weakness in faith"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
+  }
+ },
+ "20": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "20-21",
+  "pericope_label": "He staggered not at the promise of God through unbelief",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin renders the verb as an inquiry rather than a hesitation and defends the choice: Abraham did not try to find out, by weighing the matter in the balance of unbelief, whether the Lord was able to perform what he had promised, since to search a thing out is properly to examine it through mistrust. He grants that Abraham did ask how it could come to pass, but says that was the asking of a man astonished, as with the virgin Mary; saints who hear of works exceeding their comprehension burst out in wonder but pass quickly on to lay hold of the power of God, whereas the wicked examine the message and scoff at it as a fable — so Abraham was not reproved for laughing, while Sarah's like laughter was, because she did not regard the promise as valid. He puts the clause about glory at the root, that no greater honour can be given to God than by faith to seal his truth, and true religion begins there. On the next verse he thinks the statement looks slight and is not, for all men acknowledge God's power in the abstract while nothing is more uncommon than to ascribe to it the honour it deserves: when there is no contest nobody denies that God can do all things, but as soon as an obstacle impedes a promise we cast his power down from its eminence and excuse ourselves by saying the defect we feel is in us and not in him — whereas we do not sufficiently exalt that power unless we think it greater than our own weakness, and faith does not merely grant that God can do all things while leaving him sitting still, but regards his power as in continual exercise. Gill turns the negative into a general rule: there is no reason to stagger at any promise of God, since the promises are made by one who cannot lie, his faithfulness is engaged to perform them, every promise is in Christ yea and amen, and never yet did one of them fail."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke says the man's soul was full of confidence that the truth of God bound him to fulfil his promise and his power enabled him to do it."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson takes the verb apart — it means to separate, to distinguish between, to decide between, and in this passive sense to be divided in one's own mind, so that Abraham was not divided in his mind by unbelief — while the answering verb means to have power put into one; on the next verse he glosses the participle as bearing full measure or settling fully, a late word common in the papyri for finishing off or paying off a debt. Barnes reads the clause about glory as honour paid by firmness, since those who believe God's promises bear testimony that he is worthy of confidence, becoming so many witnesses that God has a claim upon the trust of mankind; and he observes that this was not the only occasion, the same implicit confidence appearing when Abraham was commanded to sacrifice the promised son. Ellicott would translate the second clause through faith rather than in faith, to answer the through unbelief before it, since unbelief did not make him doubt but faith made him confident and strong; and he notes that the phrase about glory need not mean any verbal ascription of praise but covers whatever tends to God's glory in thought, word, or deed, here the frank recognition of his omnipotence."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "explains the difference between Abraham's laughter and Sarah's, taking his as the wonder of a man who still admitted the power of God's word and hers as a failure to hold the promise valid"
+   }
+  ],
+  "themes": [
+   "wavering, or searching out through mistrust",
+   "why Abraham laughed and was not reproved",
+   "giving glory by believing"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
+  }
+ },
+ "22": {
+  "voices": [
+   "John Chrysostom",
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "22-23",
+  "pericope_label": "Now it was not written for his sake alone",
+  "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom anticipates the reader who asks what this is to us, since it was Abraham who was justified, and answers that Paul places us close to the Patriarch again: a Gentile lately come near, who has done no work, is in nothing inferior to the believing Jew, nor even to the Patriarch, but rather greater, for Abraham's faith is but the type of ours. And Paul does not argue that if it was reckoned to him it will probably be reckoned to us, lest he make the matter a syllogism; he speaks in the authentic words of Scripture."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill asks what in Abraham's faith earned the reckoning and answers that nothing did: it was imputed not because his faith was strong or because he had a full assurance of it, but because it was right, resting on the promise of God and relying on his power and faithfulness to perform it — from which he draws the consequence that the righteousness of faith is imputed to all who have true faith though it be weak, since faith is the same in all true believers as to nature, kind, and object, and differs only in degree. Calvin ties the reckoning to the word, since faith can bring us nothing more than what it receives from the word and a man is not made just by being imbued with a general and confused idea that God is true, unless he reposes on the promise of his favour. On the next verse he knows the logical weakness of arguing from an example and says so — a proof from example is not always valid, which is why Paul expressly affirms that what was exhibited in Abraham was a common righteousness belonging equally to all. He grants the heathen maxim that history is the teacher of what life ought to be but denies that anyone can draw sound instruction from history as they hand it down; Scripture alone justly claims that office, prescribing the rules by which every other history may be tested, and its own uses he numbers three: to frame our life by the patience of the saints, to confirm faith by the help God gave them in adversity, and to stir us up by his judgments on the wicked."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry denies that the sentence was meant for an historical commendation of Abraham or a report of something peculiar to him: the accounts of the Old Testament saints were never intended as histories merely, to inform and divert us, but as precedents to direct us — written for us that are mean and vile, who come so far short of Abraham in privileges and performances, and for Gentiles as well as Jews, since the grace of God is the same yesterday, today, and for ever."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke follows Taylor's paraphrase, that God was graciously pleased to place the man's faith to his account and to allow his reliance upon the divine goodness and power to stand as a title to a blessing which, having been an idolater, he otherwise had no right to; and he insists on the pronoun, since the text does not say that any righteousness, his own or another's, was reckoned to him, but that it — his faith — was. He adds that the fact was not recorded as a mere circumstance in the patriarch's life, and Wesley that it was not set down to do personal honour to him."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes reads the verse as a verdict: the faith was so implicit that it demonstrated Abraham was the firm friend of God, and he was treated accordingly. On the next verse he states the principle in a sentence — God has but one mode of justifying men, so if Abraham was regarded and treated as righteous, then on that same principle all others may be. Robertson notes that the conjunction introducing the quotation may be recitative or declarative, and makes sense either way."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What exactly was placed to Abraham's account?",
+    "positions": [
+     {
+      "position": "his faith itself, since the text does not say that any righteousness, his own or another's, was reckoned to him",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "not the strength of his faith but its rightness, resting on the promise — so that the same righteousness is imputed to weak believers too",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "concedes that a proof from example is not always valid, and treats Paul's explicit statement here as the safeguard that makes the Abraham argument more than an analogy"
+   }
+  ],
+  "themes": [
+   "why the faith was reckoned",
+   "the record as precedent rather than commendation",
+   "how Scripture histories are to be used"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
+  }
+ },
+ "24": {
+  "voices": [
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "24",
+  "pericope_label": "If we believe on him that raised up Jesus our Lord from the dead",
+  "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril, preaching on the same article, turns it into an exhortation and a warning: since we have the prophecies, let faith abide with us, and let those fall who fall through unbelief, for you have taken your stand on the rock of the faith in the Resurrection. He names the danger of his own day, the Manichees who still say the Saviour's rising was phantom-wise and not real, and who do not heed the Apostle's own words about the resurrection of Jesus Christ our Lord from the dead."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill holds that what was reckoned to Abraham was not his faith but the righteousness which his faith looked to and laid hold on, and argues from the transfer itself: Abraham's faith could never be reckoned for righteousness to another, nor indeed was it so reckoned to him, yet those who believe as he did have the very same righteousness imputed to them that he had; and he closes the circle where Paul opened it, that the faith is truly of the same kind, since Abraham too believed in God who quickens the dead. Calvin explains why the periphrasis is worth the space: had Paul said only that we believe in God, it could not so readily have been learnt how believing serves to obtain righteousness, but when Christ comes forth and presents in his own resurrection a sure pledge of life, it appears plainly from what fountain the imputation of righteousness flows, the resurrection being no small part of faith and the ground of our hope as to eternal life."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke keeps the case as he stated it, that faith was accepted in the place of an obedience the man could not bring, and reads the record as the model according to which God will save both Jews and Gentiles — there being no other way, since all have sinned; and if God wills our salvation it must be by faith, for faith contemplates his promise, and his promise comprehends the Son of his love. Wesley draws the consequence for the object of trust, that God the Father is therefore the proper object of justifying faith, and observes that Paul, describing both our faith and Abraham's, puts a part for the whole, choosing in Abraham's case the part that would most affect Jewish readers; he also uses the verse against those who reduce the terms to labels, making justification by works mean by Judaism and justification by faith mean by embracing Christianity, since on that reading Abraham could be justified in neither way and David would have been justified by works and not by faith."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes settles the continuity on a different footing: faith is belief in God just so far as he has revealed his will to us, and so is the same in principle though its objects differ — Abraham's leading truth was a numerous posterity, ours is that God gave his Son to die and raised him up and is ready through him to pardon, so that the faith of Abraham and of all believers is substantially one thing, varied only by what has been made known. Ellicott thinks an association of ideas has led Paul here, since the birth of Isaac resembles the resurrection of Christ in that both involved the exercise of omnipotence, and adds that the Apostle is drawn to mention it because of the place the Resurrection held in his gospel; Robertson simply notes that the fact of it is central for Paul."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is it faith itself that is reckoned for righteousness?",
+    "positions": [
+     {
+      "position": "no — what is imputed is the righteousness which faith looked to and laid hold on, since Abraham's faith could not be reckoned to another",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "yes — his faith was accepted in the place of an obedience he could not bring",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the faith is the same in principle in both cases and differs only in the truths revealed to it",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "uses the verse against a reading that reduces works and faith to labels for Judaism and Christianity, showing it would leave Abraham justified by neither and David justified by works"
+   }
+  ],
+  "themes": [
+   "whether faith or its object is imputed",
+   "Isaac and the resurrection as one exercise of omnipotence",
+   "the Father as the object of justifying faith"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
+  }
+ },
+ "25": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "25",
+  "pericope_label": "Delivered for our offences, and raised again for our justification",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill traces the handing over through every set of hands — by Judas to the chief priests, by them to Pilate, by Pilate to the Jews and the Roman soldiers, and by his Father into the hands of justice and death according to his determinate counsel, yet not without his own free consent, who voluntarily laid down his life and gave himself a ransom. He then narrows the beneficiaries as deliberately as he widened the agents: Christ was delivered for no offences of his own, since he committed none, nor for those of angels, for these were not spared, nor for those of all men, since all will not be saved, but for the offences of God's elect. Calvin holds that the two prepositions in the verse, spelled the same, do not mean the same, the first giving the why and the second the end for which; he knows the first is sometimes emptied out by those who render it merely on account of in order to evade the idea of a propitiation, and answers from the rest of Scripture — the ransom sayings, the declaration that Christ was once offered to bear the sins of many, and John's word for expiation — so that it cannot mean anything but that God delivered his Son as a sacrifice for our offences. He divides the ground that follows: our sins were expiated by the death, and by the resurrection our righteousness was obtained, the beginning of righteousness being reconciliation with God and its completion the attaining of life by the abolishing of death; and he notes that Paul says delivered rather than died, because the expiation depended on the eternal goodwill of God, who purposed to be in this way pacified."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley states the first clause in three words, as an atonement for them, and the second as empowering us to receive that atonement by faith. Clarke agrees about the atonement and heaps up the texts on redemption through his blood, but dissents on what is imputed: the doctrine of the imputed righteousness of Christ as held by many, he says, will not readily be found in this chapter where it has been supposed to stand in all its proofs, since it is repeatedly said that faith is imputed for righteousness and nowhere here that Christ's obedience to the moral law is imputed to any man. The law once broken no longer required obedience but death, so redemption comes by the merit of his passion and not by his law-keeping in our stead, our salvation having been obtained at a much higher price; and since the law can claim only the death of a transgressor, Clarke thinks it the greatest miracle of all that Christ could die at all, whose life was never forfeited."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott answers the question of how the rising bears on justification by rank: the death is the proper cause and the resurrection only the mediate or secondary cause, for the atoning efficacy lay in the death while the proof of that efficacy was the Resurrection, which gave the greatest impulse to faith in the cross and in that way helped bring justification about. Barnes gives three reasons rather than a ranking — the rising completed the work, since a sacrifice that did not conquer death would have left it imperfect; it proved the work accepted by the Father; and it is the mainspring of all our hope, there being no satisfactory evidence that man can be raised at all except that Christ was. Robertson enters the caution the whole bench would accept, that Paul does not mean to separate the resurrection from the death in the work of atonement but to show that the two stand at one in proof of Christ's claims."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is Christ's obedience to the law imputed to believers?",
+    "positions": [
+     {
+      "position": "no — it is repeatedly said that faith is imputed for righteousness, and nowhere here that his law-keeping is; redemption comes by the merit of his passion",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "righteousness was obtained by the obedience Christ exhibited in his death, our sins expiated by the cross and our righteousness by the rising",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How does the resurrection bear on justification?",
+    "positions": [
+     {
+      "position": "as the mediate or secondary cause only, the atoning efficacy lying in the death and the resurrection proving it",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "it completed the work, proved it accepted, and is the mainspring of hope, there being no other evidence that man can be raised",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "note": "restricts the offences to those of God's elect, ruling out the offences of angels and of all men on the ground that the unspared and the unsaved are excluded"
+   }
+  ],
+  "themes": [
+   "who delivered him, and for whom",
+   "the two prepositions and their two senses",
+   "what the resurrection contributes to justification"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  }
 }

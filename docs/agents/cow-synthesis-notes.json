@@ -13713,6 +13713,84 @@
       "book": "philippians",
       "chapter": "2",
       "note": "Fidelity self-grade, philippians 2, nine entries, all in window: 1-2 642w, 3-5 646w, 6-7 636w, 8-11 590w, 12-13 617w, 14-16 613w, 17-19 598w, 20-24 606w, 25-30 581w. Every claim traced to a named block in data/commentary/cow/philippians/2.json before writing. No voice is named in prose without a head in that entry's verses; no voice with a head goes unnamed — the build lint enforces both and passed clean on all nine, at 7 to 9 named voices per entry. One GHOST error was raised and fixed during drafting: Chrysostom was misspelt in the prose of the 3-5 entry, so the lint could not see him; corrected and rebuilt. Jamieson excluded at keys 3/9/15/21/27 as stride-6 residue and declared in each of the five affected entries. Chrome stripped from Ellicott at key 30 before drafting. Henry's five section blocks and Barnes's end-of-chapter remarks at key 30 used only where they treat the verses of the entry in hand. Eleven distinct voices across all five schools; four of the nine entries carry all five schools. Real usable after removing residue and chrome: 60,707 words against a gross of 62,140, of which about 6,586 is Henry's section-level material, leaving roughly 54,100 verse-level. Entry count 9 set by max(30/4.5, 60707/7000) = 8.7, tiled 1-2, 3-5, 6-7, 8-11, 12-13, 14-16, 17-19, 20-24, 25-30 on the natural sense units of the chapter, covering 1..30 exactly."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB displacement, SIXTH consecutive stride-6 confirmation. Phase 4 again (4/10/16/22), identical to acts 3 and ephesians 1; the stride has never varied across acts 24 (2/8/14/20/26), acts 3, james 1 (1/7/13/19/25), 1john 3 (6/12/18/24), ephesians 1 and now romans 4. Donor book here is Acts 8-9, a continuous forward march: key 4 carries Acts 8:39 on Philip's disappearance, key 10 Acts 22/26 on the Damascus road question, key 16 Acts 9 on Saul's three days without food, key 22 a two-line stub pointing at Acts 22:12. All four declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "4",
+      "verses": [
+        "11",
+        "13",
+        "18"
+      ],
+      "note": "Cyril NEAR-duplication, a softer form of the byte-identical duplication seen in ephesians 1. Keys 11, 13 and 18 all open with the same 203-word preamble from the Catechetical Lectures ('There is much to tell of faith...Abraham...body already dead in regard to offspring'), diverging only in the closing quotation. Used at key 11 (first occurrence, and the only one where the surrounding verse actually matches the content), dropped at 13 and 18. Keys 7 and 16 carry unrelated Cyril material entirely — a catechetical prologue to the newly enrolled at 7, and a passage on clouds, rain and ice at 16 — neither of which touches the verse. None of the four could be declared in excluded_voices: synthesis_qa.VOICE_LABELS still lists bare 'Cyril' while the corpus writes 'Cyril of Jerusalem:', so split_voices never matches and a declaration produces a validator FAILURE. One-line fix still outstanding."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "4",
+      "note": "Chapter shape: 25 contiguous keys, 46,367 usable source words, tiled into 16 entries (1|2|3|4-5|6-8|9-10|11-12|13|14-15|16|17|18-19|20-21|22-23|24|25) — the keys-over-2000 plus remaining/2500 predictor called 16 exactly, a fourth consecutive exact hit. Bench is unusually flat: Gill 25, Barnes 25, Clarke 24, Robertson 24, Calvin 22, Ellicott 20, Wesley 20, with Cyril 6, Henry 5, JFB 4, Chrysostom 2. Calvin carries over half the words at several keys, so those entries are effectively Calvin plus a grammatical bench. Up-front stub-and-duplicate profiling before tiling (the ephesians 1 lesson) held: no mid-course re-tile was needed, and only three of sixteen entries required a trim pass."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "22",
+        "24",
+        "25"
+      ],
+      "note": "The chapter's live dispute is what the verb 'counted' will bear, and it runs the whole length. Barnes, having surveyed every Old Testament occurrence of the Hebrew and some forty in the New, concludes there is not one place where it reckons to a man what does not strictly belong to him, so no doctrine of transfer — of sin or of holiness — can be derived from it, and what was reckoned is the act of believing; at v5 he adds that the righteousness of Christ is neither transferred (moral character cannot be) nor infused (then they could not be called ungodly), only its results reckoned. Ellicott flatly opposes: the sense of imputation is not to be got rid of, being distinctly a forensic act. Calvin sides with Ellicott but reasons differently, that by faith men derive from another what is wanting in themselves. Clarke crosses the bench twice: at v22 he insists on the pronoun (it, i.e. his faith, was reckoned — not any righteousness his own or another's), and at v25 he says outright that the doctrine of the imputed righteousness of Christ 'as held by many' will not be found in this chapter where it has been supposed to stand in all its proofs. Gill takes the fourth position at v24, that what is imputed is not Abraham's faith but the righteousness his faith laid hold on, since a man's faith cannot be reckoned to another."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "4",
+      "verses": [
+        "25"
+      ],
+      "note": "New StudyLight defect class, worse than the apparatus-preserved-as-commentary problem seen in ephesians 1: Ellicott's block at key 25 ends with the page footer and then several hundred words of RAW CSS ('.sub-menu{font-size:12px;padding:10px 0;...'). The usable Ellicott material is real and complete before it, but the counted source words for key 25 (4,569) are inflated by the stylesheet. Nothing in the exclusion mechanism can express this — excluded_voices names voices, not residue inside a voice's block — so a chapter whose size is dominated by such a key will read as richer than it is. Worth a scrape-side filter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "4",
+        "6",
+        "9",
+        "10",
+        "13",
+        "14",
+        "15",
+        "18",
+        "20",
+        "21",
+        "22",
+        "24",
+        "25"
+      ],
+      "note": "Wesley's blocks in this chapter almost all terminate in an appended 'Theodoret of Cyrrhus:' quotation of the verse plus a short gloss — fourteen of them. Theodoret is not one of the corpus's declared voices and carries no VOICE_LABELS entry, so the material is neither attributable nor declarable; it is also largely a bare restatement of the verse. Treated throughout as residue inside Wesley's block and not used. Same structural shape as the Cyril problem: a real patristic voice riding inside another voice's block with no way to name it."
     }
   ]
 }
