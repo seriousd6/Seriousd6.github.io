@@ -9161,6 +9161,96 @@
         "12"
       ],
       "note": "Caught a live ghost in the pre-flight: Ellicott quotes 'the Greek, John the Golden Mouthed' on mercy, and I attributed the passage to Chrysostom by name. Chrysostom has no block in this chapter, so the ghost detector flagged it. Rewritten as 'a Greek father'. General rule: when one commentator quotes a second by an epithet rather than a name, resolving the epithet manufactures a voice the span does not contain."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26",
+        "32"
+      ],
+      "note": "Jamieson stride-6 residue, THIRTY-SECOND consecutive chapter, and the LONGEST CLEAN RUN yet recorded: keys 2, 8, 14, 20, 26, 32 - offset 2, SIX members, no gap. The previous record was five clean members (acts 16 had seven but with the run reaching the chapter end; colossians 1 had five; romans 2 had three with a gap). Every block is JOHN 14-16 material, the Farewell Discourse, and the run is progressive: the warnings and encouragements just given; unbelief as the root of sin; the Spirit speaking not from himself but what he hears; the joy of the world at not seeing him; the dispensation of the Spirit; and the promise of plainness yet to come. All six distinct - no repetition signature. Declared via the chapter-wide RESIDUE set; six of the eleven entries carry excl=['Jamieson']."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "15",
+      "verses": [
+        "11",
+        "18",
+        "20",
+        "26",
+        "28",
+        "29",
+        "35",
+        "36"
+      ],
+      "note": "Cyril of Jerusalem residue in acts 15, with the repetition signature, AND a validator collision worth recording. Eight keys - 11, 18, 20, 26, 28, 29, 35, 36 - all Catechetical Lectures 16-17 on the Holy Spirit, none of them commenting on Acts 15. Keys 20, 28 and 29 carry the SAME block (Lect. 16.29, 'This Holy Spirit, who in unison with Father and Son has established the New Covenant'); keys 35 and 36 carry the same block as each other (17.34). Key 28 is the trap: 'it seemed good to the Holy Ghost and to us' looks apposite to a lecture on the Spirit, but the block there is the recycled 16.29, identical to 20 and 29, so the fit is accidental. VALIDATOR COLLISION: declaring him via excluded_voices FAILS validate-synthesis.py five times over, because synthesis_qa.VOICE_LABELS carries the SHORT form 'Cyril' and _LABEL_RE requires a colon immediately after it, so the actual head 'Cyril of Jerusalem:' matches nothing and the validator reports the declared block as absent. He had to be dropped silently instead. This is the SAME VOICE_LABELS defect first recorded nine batches ago; it now blocks a legitimate declaration rather than merely permitting a silent drop."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "15",
+      "verses": [
+        "41"
+      ],
+      "note": "Chrome, EIGHTEENTH confirmation and FIFTEENTH consecutive Ellicott carrier. Ellicott's block at key 41 measures 1099 words, of which 992 are the site nav/footer chrome; the marker is the previous-chapter nav string 'Acts Act 14 Acts Act'. Genuine Ellicott payload is 107 words. Here the carrier key IS the chapter's last verse, unlike romans 2 where Ellicott's last block fell at 27 while the chapter ran to 29 - which confirms again that the rule is the voice's LAST BLOCK, with coincidence at the chapter end when the voice happens to run that far. Real usable source for acts 15 is 77,559 words, not the 78,551 the sizer reports."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "15",
+      "note": "JOHN LIGHTFOOT IS GENUINE AND EXACTLY ON PASSAGE in acts 15 - the first time in this run. Four keys, 7, 16, 17 and 20, each commenting on that very verse: 15:7 'a good while ago' (aph hemeron archaion), read as an allusion to the promise of the keys; 15:16 'I will build again the tabernacle of David', with the rabbinic exchange between Rab Nachman and R. Isaac on when 'Bar Naphli', the son of the fallen, will come; 15:17 'that the residue of men might seek', with the argument that James must have spoken in Hebrew, that is Syriac; 15:20 'that they abstain from pollutions of idols', with the four-fold analysis of the decree and the attack on the Nicolaitans. This directly answers the standing owner item 'Lightfoot off-by-one-chapter and off-by-five-keys': his misalignment is NOT systematic across the corpus. Chapters should be checked individually rather than assumed defective."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "15",
+      "verses": [
+        "13",
+        "19",
+        "22",
+        "23"
+      ],
+      "note": "The Petrine-primacy thread runs through four entries of acts 15 and is the chapter's dominant polemic, argued from four different facts. (1) v13, the ORDER OF SPEECHES: Chrysostom infers that James was bishop and therefore speaks last; Clarke that he was president of the council and alone pronounced the definitive sentence, which he would not have done had Peter been head; Ellicott that James's position is one of pre-eminence, no one speaking after him; Barnes that the transaction shows Peter had no such authority as the Papists pretend, since otherwise his opinion would have been followed without debate. (2) v14, the TITLE: Clarke notes that James does not give Peter even the title he received from our Lord. (3) v19, the FORMULA 'my sentence is': Clarke and Robertson find real authority in it (Robertson calls James President of the Conference), while Gill and Barnes deny that James assumed any authority to settle the case and Ellicott stands between, allowing the tone while denying a decree. (4) v23, the DRAFTING: Wesley argues that the decree is drawn up according to James's proposal and not Peter's, so the Church of that day had no conception of Peter's primacy. Also live at v13: WHICH JAMES - Barnes says James the Less son of Alpheus, Ellicott says the brother of the Lord, Calvin reports the old writers who make him the disciple surnamed Justus and Oblias."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "15",
+      "verses": [
+        "6",
+        "21",
+        "28",
+        "34",
+        "39"
+      ],
+      "note": "Five further live disagreements in acts 15. (1) v6, WHO SAT: Clarke and Calvin confine the council to apostles and elders as the lawful judges, Barnes, Gill and Robertson hold the whole church was convened, and Ellicott goes furthest, saying the laity were present and gave their vote and that the right to approve involves the power to reject. (2) v21, WHAT THE MOSES CLAUSE IS FOR: Ellicott, Clarke, Wesley, Barnes and Gill all take it as the reason for writing to Gentiles and not to Jews, who hear the law weekly; Robertson turns it into the reason the four things are named at all; and Calvin says flatly the place 'hath been badly expounded, and drawn into a contrary sense', his own reading being that ceremonies cannot be abolished at the first dash and concord must be redeemed for a time - 'it was meet that the old ceremonies should be buried with some honor'. (3) v28, WHETHER THE DECREE STANDS: Wesley says all four were necessary for that time but the first was repealed by the same Spirit, as 1 Corinthians shows; Clarke says failure to keep them would be sin against the Spirit who commanded them. (4) v34, WHETHER SILAS'S STAYING IS TEXT: Barnes, Clarke, Robertson and Ellicott all reject the verse on manuscript evidence, Ellicott adding that a copyist supplied it to explain v40; Gill alone treats it as text and explains Silas's change of mind. (5) v39, WHOSE THE SHARPNESS WAS: Wesley denies anything in the text implies it was on both sides and says Paul maintained the right with love; Robertson says the son of consolation lost his temper."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "15",
+      "note": "Coverage shape of acts 15, the widest chapter of the run by voice count. TWELVE voices, all FIVE schools. Matthew Henry appears at only five keys (1, 6, 7, 22, 36) but with enormous blocks - 2,597, 4,951, 306, 3,892 and 2,893 words - each covering a large stretch of the chapter, so puritan-evangelical is carried by Henry in entries 1, 3, 8 and 10 and by Lightfoot in entries 3, 6 and 7. Chrysostom is genuine at three keys (1, 13, 35), from the Homilies on Acts and exactly on passage. Cyril of Jerusalem is residue at eight. A.T. Robertson and Albert Barnes appear at nearly every key and carry the grammatical-historical school throughout. Notably ABSENT from the whole chapter: Keil, Theodoret, Jamieson as a genuine voice. The chapter also carries the run's densest concentration of named modern scholars inside the blocks - Ramsay, Lightfoot (cited BY Robertson, distinct from the Lightfoot voice), Mill, Griesbach, Westcott and Hort, Hackett, Knobel's successor Milligan - which makes several entries as much a report of nineteenth-century criticism as of the text."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "15",
+      "note": "Fidelity self-grade, all eleven entries. Every claim is traceable to a named block in data/commentary/cow/acts/15.json; no voice is named outside its span; no school appears in prose that is absent from its tags dict. Word counts: 1 = 646; 2-5 = 650; 6-7 = 647; 8-10 = 650; 11-14 = 645; 15-19 = 649; 20-21 = 649; 22-24 = 647; 25-30 = 647; 31-36 = 645; 37-41 = 649. All within the 350-650 window; the tiling covers 1-41 exactly. Jamieson is declared residue chapter-wide and excluded from the six entries where he appears. Cyril of Jerusalem is residue too but had to be dropped silently rather than declared, because the validator cannot match the head 'Cyril of Jerusalem:' against its short label 'Cyril' - recorded separately as a source-defect. The chapter's sharpest disagreements - who sat in the council, whether Peter had primacy, what the Moses clause is for, whether Silas's staying is text, and whose the sharpness was in the quarrel - are all stated as unresolved rather than harmonised."
     }
   ]
 }
