@@ -8879,6 +8879,66 @@
       "book": "numbers",
       "chapter": "8",
       "note": "Fidelity self-grade, all six entries. Every claim in every entry is traceable to a named block in data/commentary/cow/numbers/8.json; no voice is named who is not present in that entry's span; no school appears in prose that is absent from its tags dict. Word counts: 1-4 = 645; 5-7 = 646; 8-11 = 650; 12-16 = 646; 17-21 = 645; 22-26 = 649. All within the 350-650 window. Jamieson is declared residue chapter-wide and excluded from entries 3, 4 and 6 (his only appearances). Keil is named in entries 1, 2, 3, 4 and 5 with an explicit flag where his block is chiefly verse quotation, so no GHOST. The two sharpest disagreements - who officiated at the cleansing, and what the water of purifying was - are stated as unresolved rather than harmonised, which is what the sources warrant."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "20",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JFB stride bug, sixteenth confirmation, and the first with an internal duplicate. All three JFB blocks in exodus 20 are commentary on Exodus 8, the plague of frogs: v5 describes the frogs alighting on every vessel of food and the wicker bowls used in Egypt, while v11 and v17 are BYTE-IDENTICAL to each other, both giving the god Ptha represented with a frog's head, Pharaoh's promise to let Israel go if Moses would intercede, and his hardening when he saw there was a respite (Ex 8:15). The donor is Exodus 8 — an EARLIER CHAPTER OF THE SAME BOOK, which fits the revised rule that the donor is an earlier position in the commentary volume (Exodus being long enough that the donor stays inside it, as with acts 23, genesis 50 and genesis 4). None of it treats any verse of Exodus 20, so JFB is unusable at all three keys and is declared in excluded_voices at entries 4, 9 and 17. New sub-observation worth watching: the duplication of one donor block across two different keys means the stride is not always a clean one-to-one displacement."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "20",
+      "verses": [
+        "26"
+      ],
+      "note": "StudyLight boilerplate tail, ten for ten on voice and position — Ellicott, at v26, the chapter's last commented key — but in a NEW FORM that the earlier nine did not take. Here the boilerplate does not terminate the blob: it is sandwiched inside Ellicott's segment, which runs to 1043 words of which only about fifty are genuine ('Neither shalt thou go up by steps... Thus it would seem that Solomon's altar had steps'). After that comes the full StudyLight site chrome — devotional titles, Site Tools, Manage My Preferences, the copyright block — and then inline JavaScript, a nav-accordion script with vfAccInit and a DOMContentLoaded handler. Genuine Calvin and Wesley text follows AFTER the junk, because Ellicott is not the last voice in this key's segment order. Refinement of the rule: the tail attaches to ELLICOTT's block at the chapter's last commented key, and whether it terminates the blob depends only on whether Ellicott happens to sit last in that key's segment order. Practical consequence: usable_source_words overcounts v26 by roughly a thousand words."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "20",
+      "verses": [
+        "3",
+        "8",
+        "9",
+        "14",
+        "22"
+      ],
+      "note": "Note 607's fallback clause fired five times in one chapter, the heaviest concentration yet, and the pattern is now clear enough to state as a rule of the harvest. In a chapter whose sections are commandments, the expository voices write one long block per SECTION and file it under the section's first verse, so the block routinely overruns the key it is filed under. Henry does it three times: his v3 block runs through vv4-11 (second, third and fourth commandments), his v12 block through vv13-14, his v22 block through vv24-26. Wesley does it at v3 (running through vv4-6) and at v8 (through vv9-11). Keil does it at v9 (his block is almost entirely the Fifth Word, i.e. v12) and at v14 (running through vv15-18). Of these seven overruns only ONE was recoverable: Keil's altar material, filed at v23 but treating vv24-25, could move because Keil has a key at 25 inside that span — and moving it both improved the entry and removed an exclusion. The other six could not move, because Henry's keys are only 1, 3, 12, 18, 22 and Wesley has none at 4-6 or 9-11, so each voice's section-material stays filed where it is and the overrun is lost. Henry has 5 keys in a 26-key chapter and loses most of his substance this way."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "20",
+      "verses": [
+        "11"
+      ],
+      "note": "A third Gill defect of the kind noted at romans 16. Gill's v11 block is a bare truncated verse fragment — 'For in six days the Lord made heaven and earth, the sea,' and nothing more, cut off mid-clause with no comment attached. Unlike the romans 16:20 stub this is not a dangling cross-reference but a plain truncation of the lemma itself. Gill's other 25 keys in the chapter are intact and substantial, so this is isolated damage rather than a systematic thinning; the entry covering vv9-11 drew its reformed voice from Gill's v9 and v10 blocks instead."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "20",
+      "note": "Entry-count predictor holds at 17/17. exodus 20 has 26 source keys and 45,323 usable source words, with six keys over 2000 (v1 6017, v3 2933, v4 2336, v8 3574, v12 5967, v26 2892) and 21,604 words in the remainder: 6 + round(21604/2500) = 6 + 9 = 15, and 15 entries is what the chapter took. Two keys over 4500 — v1 and v12 — each became its own entry as the tiling rule requires. The chapter has no gaps: all 26 keys are present and consecutive. Worth recording that the predictor survived a chapter where the natural sense-units (the ten commandments) cut across the word budget: the fourth commandment spans vv8-11 but v8 alone is 3574 words, so it had to be split into v8 and vv9-11, and the second spans vv4-6 but had to be split at v5. The predictor is indifferent to sense-units and was right anyway."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "20",
+      "note": "Drafting overshoot, fifteen entries measured, and the picture is unchanged from romans 16. First drafts ran 623 to 1053 words against the 650 ceiling: mean 889, median 897, about 37 percent over — worse than romans 16's 29 percent and the worst of the run so far. Only one entry (v2, on a thin 844-word key) came in under the ceiling first time. The five-voices-per-paragraph rule recorded after romans 16 did not help here, because exodus 20 has only eight voices and the problem is different: each commandment attracts a long principled argument from Calvin, a long list of particulars from Clarke, and a long comparative note from Ellicott, so a paragraph with three voices in it is already 300 words. Revised working rule for a law chapter: allow ONE voice per paragraph to run at length and hold the other two to a single clause each; where two voices both argue at length on the same question — Calvin and Clarke on the sabbath's continuing obligation, Ellicott and Calvin on images — give them a paragraph to themselves and admit no third."
     }
   ]
 }

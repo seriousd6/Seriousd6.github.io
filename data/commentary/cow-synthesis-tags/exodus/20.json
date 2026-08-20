@@ -1,968 +1,1222 @@
 {
  "1": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "range": "1",
+  "pericope_label": "And God spake all these words",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: these words which follow are commonly called the decalogue, or ten commands, a system or body of laws selected and adapted to the case of the people of Israel; the witnesses note that God spake all these words, the great law about to be given — the solemn opening of the giving of the Ten Commandments, spoken by God himself (the law coming from the mouth of God: 'And God spake all these words, saying'; the author, 'God spake,' that these laws were uttered by God himself, with his own voice, from the midst of the fire and the cloud at Sinai, not delivered by Moses only nor by an angel, the dignity of the giver marking the weight of the law; the fulness, 'all these words,' the whole Decalogue, the ten commands, a complete body of laws, the sum of the moral law; the abiding character of this law the commentators draw, that it is the eternal rule of righteousness, binding on all men, summed up by Christ in love to God and neighbour; the awful solemnity of God's own voice proclaiming his law to the assembled people; that the law's coming from God himself binds the conscience to obey)."
+    "summary": "Gill calls the ten the best and shortest compendium of morality ever delivered out, except our Lord's own abridgment, and holds that whatever in them is of a moral nature binds all mankind, however plainly the selection suited Israel's case; he passes on the old Jewish notion, which Jarchi delivers as his own, that these words were spoken by God in one word — not grammatically, but as meaning the laws are so compacted as to be inseparable, whence the rule that whoever offends in one point is guilty of all. Calvin will not have the opening counted among the commandments at all. Many read this verse and the next together as the first, and others take the affirmation for one entire commandment; but since God here neither forbids nor commands anything, and only comes forth in his dignity to claim the authority he deserves, Calvin makes no doubt it is a general preface preparing their minds for obedience — the right of the legislator had first to be established, lest what he commanded should be contemptuously received."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes two points which Wesley repeats almost word for word: that this is a law of God's making, and a law of his own speaking. God has many ways of speaking to men, by his Spirit, by conscience, by providences, by his voice, but he never spoke at any time upon any occasion as he spoke the ten commandments, which therefore we ought to hear with the more earnest heed. They were uttered not only audibly but with dreadful pomp; and God had given this law to man before, written in his heart by nature, until sin so defaced the writing that it needed reviving."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke alone doubts the verse belongs where it stands, reporting Houbigant's conjecture that the words rendered all these words belong to the close of the preceding chapter, so that it was Moses who went down and spake them, and that this chapter properly opens with the bare clause, And God spake, saying — which gives a dignity to the commencement that the longer reading takes away, the Anglo-Saxon version having no more than God spoke thus. He then gathers the names the laws have borne — the Ten Words, my Covenant, the moral law, and the Decalogue, which is only the Greek of the first — and follows the common reckoning of the two tables, the first four comprehending the whole system of theology and the last six a system of ethics. Wesley repeats Henry's two points on the manner of the giving."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott supplies the circumstances from Deuteronomy, that the words were spoken to all the assembly out of the midst of the fire and the cloud and the thick darkness, and that the people did not entreat to be spared further communications until it was over; on the manner of it he declines to go further, since how the sounds were produced is a mystery unrevealed and one on which it is idle to speculate. Jehovah alone appears as the speaker in the Old Testament, while in the New we hear of the instrumentality of angels. On the rank of the Decalogue among moralities he presses hard: these commandments alone were uttered publicly in the ears of the people, alone inscribed on stone by the finger of God, alone deposited in the innermost place of worship; they formed the very pith and kernel of the covenant, and there is no compendium of morality in Confucianism, in Buddhism, in the religion of Zoroaster, or of Egypt, or of Greece or Rome, which can be put in competition with it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Do these opening words belong to the first commandment, or stand apart as a preface?",
+    "positions": [
+     {
+      "position": "a general preface, since God here neither forbids nor commands but establishes the right of the legislator",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the clause belongs to the close of the preceding chapter, and the chapter opens simply, And God spake, saying",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "ranks the Decalogue against the moral compendia of Confucianism, Buddhism, Zoroastrianism, Egypt, Greece and Rome, and finds none that can be put in competition with it"
+   }
+  ],
   "themes": [
-   "And God spake all these words",
-   "saying",
-   "God himself speaking all the words of the Decalogue with his own voice",
-   "the eternal moral law, summed by Christ in love to God and neighbour, binding all to obey"
+   "God spake all these words",
+   "whether the opening is a commandment or a preface",
+   "the Decalogue among the moralities of the nations"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "2": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "2",
+  "pericope_label": "I am the LORD thy God, which brought thee out of the land of Egypt",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill agrees that the words do not contain the first of the commands but are a preface, showing that God had a right to enact laws for Israel and that they were bound to receive them with reverence — since he is the Lord, the eternal and immutable Jehovah, the Being of beings who gives being to all creatures, and since he was moreover their covenant God in a special and peculiar manner, their King as well as their God, the nation being a theocracy and so more immediately under his government, and having on that account laws preferable to what any other people had. He takes the verse for a preface and no part of the first command."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notices a feature of the grammar that the others pass over — that each individual is addressed here, and not the people collectively, though all are necessarily included, so that each might feel himself bound for himself to hear and do all these words; and he recalls how Moses laboured to impress that personal interest when he said that the Lord made this covenant with us, even us, who are all of us here alive this day. Having called the words the preface, he immediately denies the inference, holding that they should not be separated from the commandment which follows. Wesley sets out the grounds of obligation as three and binds them into one cord: because God is the Lord, Jehovah, self-existent, independent, eternal, and the fountain of all being and power, he has an incontestable right to command us; because he was their God by their own consent, the claim was one they had acknowledged; and because he had brought them out of Egypt they were bound in gratitude, having been brought out of a grievous slavery into a glorious liberty — so that Christ, having rescued us out of the bondage of sin, is entitled to the best service we can do him. He explains too why the first four commandments stand first: man had a Maker to love before he had a neighbour to love, and justice and charity are acceptable to God only when they flow from the principles of piety."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this verse does not contain the first of the commands but is a preface to them, showing that God had a right to enact and enjoin the people of Israel laws; the witnesses note God prefacing the law with his name, the LORD their God, who had brought them out of Egypt and the house of bondage — the foundation laid for the law, God's authority and his redeeming love (God first declaring who he is before he commands: 'I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage'; that this is a preface to the commands, not itself the first, showing that God had a right to enact and enjoin laws on Israel; the ground of his authority, 'I am the LORD thy God,' that as Jehovah, the self-existent and almighty God, and their covenant God, he had the right to command and they the duty to obey; the ground of his claim on their love and obedience, 'which have brought thee out of the land of Egypt, out of the house of bondage,' that he had redeemed them from cruel slavery, and so by the right of redemption they were his, bound to serve him; the gospel order the commentators mark, that redemption goes before the law, mercy before duty, the redeemed obeying out of gratitude; that God's people obey not to be saved but because they are saved)."
+    "summary": "Ellicott states the office of the verse most compactly: the binding nature of commands upon the conscience depends on the authority of the person who issues them, and that there might be no dispute what that authority was, God prefaced the commands with this distinct statement; the second clause exhibits at once Almighty power and the tenderest compassion and care, since God desires the obedience which springs from love and not from fear. Keil takes up the question how the words reached the people and answers it flatly: God spake them directly, and not through the medium of his finite spirits, as Hoffmann and Kurtz and others suppose, for there is not a word in the Old Testament about any such mediation. It was Elohim who spoke and who called himself Jehovah, and Deuteronomy says that Jehovah spake to Israel face to face, in the mount, out of the midst of the fire; on the authority of Buxtorf he adds that the Jewish commentators almost unanimously affirm that God himself spoke the words of the decalogue, the sounds being formed in the air by the power of God and not by the intervention or ministry of angels."
    }
   ],
   "debates": [
    {
-    "question": "What is the significance of the preface to the Ten Commandments?",
-    "sides": [
+    "question": "Is the preface separable from the first commandment?",
+    "positions": [
      {
-      "position": "It grounds the law in God's authority (Jehovah, their covenant God) and his redeeming love (having brought them out of bondage) — redemption going before the law, mercy before duty; the redeemed obey out of gratitude, not to be saved but because they are saved",
+      "position": "yes; it is a preface and no part of the command itself",
       "holders": [
-       "Gill",
-       "Matthew Henry",
-       "the witnesses"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "no; it is the introduction but should not be separated from the commandment which follows",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Keil",
+    "note": "denies flatly that the words were mediated by angels, against Hoffmann and Kurtz, since there is not a word in the Old Testament about any such mediation"
+   }
+  ],
   "themes": [
    "I am the LORD thy God",
-   "which have brought thee out of the land of Egypt, out of the house of bondage",
-   "the preface grounding the law in God's authority and redeeming love",
-   "redemption going before the law, the redeemed obeying out of gratitude"
+   "the threefold ground of obligation",
+   "whether God spoke directly or through angels"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.74
+   }
   }
  },
  "3": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
    "Matthew Henry"
   ],
+  "range": "3",
+  "pericope_label": "Thou shalt have no other gods before me",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill puts the ground simply, that there is but one only living and true God, and all others have only the name and are not by nature gods, being strange even to their own worshippers, who cry to them and get no answer. Calvin canvasses the possible constructions of the closing words and rejects the comparative sense, gods whom thou mayest prefer to me, as too frigid: it would make God demand no more than that other gods should not obtain the higher place, whereas he suffers them neither to be likened to him nor joined with him — for religion is corrupted as soon as God's glory is diminished in the least degree. When the Israelites worshipped their Baalim they did not so substitute them for God as to put him aside, yet it was an intolerable profanation to choose patrons in whom some part of the Deity should be lodged. He also fixes the commandment's scope against the one that follows: this precept comprehends the inward worship of God, the next condemning external idolatry, so that men may offend here without statues at all — if any should adore the angels instead of God, none will deny he transgresses."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the standard highest of any, holding that whatever comes short of perfect love, gratitude, reverence and worship breaks this commandment."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the phrase against the background of the exodus: no strange gods, none that thou art not acquainted with, none who has not given thee such proofs of his power as I have — so that the sense is, in the place of those manifestations which I have made of myself. He holds that it prohibits every species of mental idolatry and all inordinate attachment to earthly things: since God is the fountain of happiness and no creature can be happy but through him, whoever seeks happiness in the creature is necessarily an idolater; and the very first commandment is calculated to prevent man's misery and promote his happiness by taking him off from all false dependence. Wesley reaches the same breadth by naming the gods men actually keep: pride makes a god of ourselves, covetousness makes a god of money, sensuality makes a god of the belly — whatever is loved, feared, or depended on more than God, that we make a god of."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this is the first command, opposed to the polytheism of the Gentiles, the Egyptians from whom Israel was just come, requiring that God alone be acknowledged and worshipped; the witnesses note the first commandment forbidding any other gods before the LORD — the foundation of all true religion, that God alone is to be owned and worshipped (the first command claiming God's sole right to be God: 'Thou shalt have no other gods before me'; the matter of the command, that it forbids all other gods, all the false deities of the heathen, especially the gods of Egypt just left and of Canaan, and requires that the LORD alone be acknowledged as God; the force of 'before me,' or before my face, that to set up any other god is done in God's very sight and presence, an affront to him who sees all; the breadth of the command the commentators draw, that it forbids not only gross idolatry but all that puts anything in God's place in the heart, whether self, the world, riches, or pleasure, every idol of the soul; that this first command is the foundation of all the rest, for he who truly has the LORD for his God will keep all his commandments; that God will share his glory and worship with no other)."
+    "summary": "Keil renders the closing words literally beyond me, or in addition to me, giving the Septuagint's apart from me and Luther's by the side of me, and rejects two familiar versions: before me, as the Vulgate has it, is incorrect, and so is against me. He closes by observing that the prohibition carries a command inside it: it not only forbids polytheism and the worship of idols in thought, word and deed, but requires the fear, love and worship of God — nearly all the commandments being couched negatively because they presuppose sin. Ellicott agrees that before my face means side by side with me, and adds that the singular verb shows the plural form of the divine name to be a mere plural of dignity. He states the sin actually in view: God does not suppose that the Israelites, after all he had done for them, would discard him and substitute other gods, but fears the syncretism which would unite his worship with that of other deities — all polytheisms being syncretic and readily enlarging their pantheons, since once the principle of unity is departed from, whether the plurality be greater or less cannot much signify."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "identifies the sin in view as syncretism rather than apostasy: Israel would not discard Jehovah but would add other worships alongside him, as it afterwards did with Baal and Ashtoreth"
+   }
+  ],
   "themes": [
-   "Thou shalt have no other gods",
-   "before me",
-   "the first commandment, that God alone is to be owned and worshipped",
-   "forbidding not only gross idolatry but every idol of the heart, done before God's very face"
+   "no other gods before me",
+   "syncretism rather than apostasy",
+   "the inward worship of God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "4": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "4-5",
+  "pericope_label": "Thou shalt not make unto thee any graven image, nor bow down to them",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows that images might be made for other uses, as the impressions on coin the Jews did not scruple to handle in Christ's time. Calvin first clears away the opposite error, that all sculptures and pictures are condemned, as a foolish fancy; but he then denies the reading which would allow a visible image of God provided it be not adored — quoting the Douay note which claims images even in the sanctuary are expressly authorised — and holds that to devise any image of God is impious in itself. He grants only that the two parts hang together in practice, since as soon as a man devises an image of God he falls into false worship. On the variety of idolatries he observes that superstition is never uniform but is drawn aside in various directions, some thinking God represented under the form of fishes and others of birds; so men everywhere lay hold of the materials of error, though God's glory shines on every side."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke works through the Egyptian pantheon the commandment was aimed at: Osiris and Isis supreme; the ox adored as the habitation of Osiris and called Apis, a living beast always kept and the deity supposed to pass at death into another; the ibis and hawk and crocodile besides. He turns the quarrel over images into a charge: to countenance its image worship the Roman Church has left this commandment out of the decalogue and divided the tenth in two to keep the number, though the verse stands in every manuscript of the Hebrew Pentateuch ever discovered. On the jealousy of God he says it shows his love to this people most expressively, who felt for them as the most affectionate husband could for his spouse; and on the visiting of the fathers' iniquity he reads it as necessarily implying that the children walk in their fathers' steps, since no man can be condemned by divine justice for a crime of which he was never guilty, referring it to national judgments — God withdrawing his protection so that the idolatrous Israelites fell into their enemies' hands, which after the Babylonish captivity cured them of idolatry for good."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: thou shalt not make any image of anything graven by art or man's device, cut out of wood or stone, or anything molten, or cast into a mould; the witnesses note the second commandment forbidding any graven image or likeness of things in heaven, earth, or sea — the prohibition of all images in the worship of God (the second command guarding the manner of God's worship: 'Thou shalt not make unto thee any graven image, or any likeness of any thing that is in heaven above, or that is in the earth beneath, or that is in the water under the earth'; the breadth of the prohibition, 'any graven image, or any likeness of any thing,' that no image at all, whether graven, carved of wood or stone, or molten, cast of metal, of any creature in heaven, in the earth, in the water, might be made to represent or worship God; the reason the commentators give, that God, being a Spirit, infinite and invisible, cannot be likened to any creature, and to make an image of him is to dishonour and debase him; that the command forbids both the making of idols of false gods and, especially, the worshipping of the true God by images, the corrupting of his worship; that God will be worshipped as he has appointed, not after the inventions of men)."
+    "summary": "Ellicott reads the two clauses together as one sentence, thou shalt not make any graven image so as to worship it, citing Josephus for the construction; it was not until the days of Hebrew decline, he says, that a narrow literalism pressed the words into an absolute prohibition of painting and sculpture, since Moses himself sanctioned the cherubim above the mercy-seat and the brazen serpent, and Solomon had lions on the steps of his throne. What was forbidden was the worship of God under a material form: the commandment asserts the spirituality of Jehovah. He defines the jealousy by contrast — not jealous as some of the Greeks supposed, who thought success or eminence of any kind provoked the deity, but jealous of his own honour, as one who will not see his glory given to another — and takes the visiting of iniquity as a plain fact of God's natural government: diseases caused by vicious courses are transmitted, a parent's extravagance leaves his children beggars, and to be the son of a felon is to be heavily handicapped in the race of life. Knowing this checks men more than almost anything else; but he bounds the penalty carefully, for it is neither final nor irreversible here, and as respects another world it does not apply at all, since each man will bear his own burden. Keil notes that the threat and the promise belong to both commandments, not to the second alone."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the commandment forbid images, or only the worship of them?",
+    "positions": [
+     {
+      "position": "only their worship; the two clauses read as one sentence, and the arts of painting and sculpture are not condemned",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "to devise any image of God is impious in itself, prior to any adoration of it",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense is the iniquity of the fathers visited on the children?",
+    "positions": [
+     {
+      "position": "only where the children walk in their fathers’ steps, and chiefly by way of national judgments",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "as a standing fact of God’s natural government of the world, though neither final nor irreversible, and not applying to the world to come",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "charges the Roman Church with dropping this commandment from the decalogue and splitting the tenth in two to preserve the number, though the verse stands in every Hebrew manuscript ever discovered"
+   }
+  ],
   "themes": [
-   "Thou shalt not make unto thee any graven image, or any likeness of any thing that is in heaven above",
-   "or that is in the earth beneath, or that is in the water under the earth",
-   "the second commandment forbidding images in the worship of God",
-   "God, being a Spirit, cannot be likened to any creature, his worship not to be corrupted by images"
+   "thou shalt not make any graven image",
+   "whether images or only their worship are forbidden",
+   "visiting the iniquity of the fathers upon the children"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: thou shalt not perform any worship to them, show any reverence by any gesture of the body, bowing being put for all other acts of worship; the witnesses note God forbidding to bow down to or serve images, for he is a jealous God, visiting the fathers' iniquity on the children to the third and fourth generation of them that hate him — the prohibition of idolatrous worship and the awful reason of God's jealousy (God guarding his worship with a solemn threat: 'Thou shalt not bow down thyself to them, nor serve them: for I the LORD thy God am a jealous God'; the act forbidden, 'bow down thyself to them, nor serve them,' that no worship at all, neither outward gesture nor inward service, might be given to images; the reason, 'for I the LORD thy God am a jealous God,' that God, like a husband jealous for his wife's love, will not endure a rival in the worship and devotion of his people but is jealous for his own honour; the threat, 'visiting the iniquity of the fathers upon the children... of them that hate me,' that God would punish idolatry, that great sin and hatred of him, even visiting its effects on the children of the guilty who followed their fathers' sin, to the third and fourth generation; that idolatry is hatred of God, the breaking of the marriage-bond between him and his people)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not bow down thyself to them, nor serve them: for I the LORD thy God am a jealous God",
-   "visiting the iniquity of the fathers upon the children... of them that hate me",
-   "God forbidding all worship of images, jealous for his honour",
-   "idolatry being hatred of God, the breaking of the marriage-bond between him and his people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "6-7",
+  "pericope_label": "Shewing mercy unto thousands; thou shalt not take the name of the LORD thy God in vain",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the thousands for persons rather than generations, and reads the love required as love shown, by worshipping God only and obeying cheerfully; on the third commandment he reports that the Targums restrict the words to swearing by the name of the Lord, to which he thinks the sense may be extended though not limited. Calvin argues the wider sense from the shape of the Decalogue: the word might be rendered for falsehood, and he grants it is so used elsewhere, but since it as often means in vain he prefers that, and observes that perjury is condemned again in the second table, where it injures our neighbours — so the aim of this commandment must be different, that the honour due to God be unsullied. On what the name is he is broad: it is silly and childish to restrict the word to the name Jehovah, as if God's majesty were confined to letters or syllables; his essence being invisible, his name is set before us as an image, in so far as he manifests himself and is made known by his own marks, so that the name is profaned whenever any detraction is made from his wisdom, power, justice, truth and clemency."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke seizes on the arithmetic: what a disproportion between justice and mercy, when justice works to the third or fourth generation and mercy to thousands. Even those who love God merit nothing, so the blessedness they enjoy comes of mercy still; and he makes love the hinge of the law, since it would be easier even in Egyptian bondage to make brick without straw than to do the will of God unless his love be shed abroad in the heart. On the third commandment he takes the widest ground: the precept forbids not only false oaths but all common swearing where God's name is used, and even every prayer not accompanied with deep reverence — asking in how many instances it is broken in the prayers of presumptuous worshippers, and reckoning such interjections as O God and good Heavens formal breaches of the law. Wesley names five ways of offending — hypocrisy, covenant-breaking, rash swearing, false swearing, and using the name lightly — and observes that magistrates who punish other offences may not think themselves concerned with this one, but that God, jealous for his honour, will not connive at it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: God shows mercy to thousands of them that love him, and show their love by worshipping God, and him only, serving him acceptably with reverence and godly fear, by a cheerful obedience; the witnesses note God promising to show mercy to thousands of them that love him and keep his commandments — the gracious counterpart to the threat, the abundant mercy promised to the obedient (against the threat to idolaters God setting a far greater promise to his lovers: 'And shewing mercy unto thousands of them that love me, and keep my commandments'; the contrast the commentators mark, that the threat reached but to the third and fourth generation of haters, but the mercy to thousands of generations of lovers, God's mercy far outrunning his judgment; the persons, 'them that love me, and keep my commandments,' that true love to God is proved by keeping his commandments, as Christ said, 'If ye love me, keep my commandments,' love and obedience joined; the abundance, 'shewing mercy unto thousands,' that God delights to show mercy, and that to a vast multitude and through long generations, to all who love and obey him; the comfort, that the obedient and their seed are heirs of God's covenant mercy)."
+    "summary": "Ellicott renders the word more precisely as to the thousandth generation, which Deuteronomy expresses: God's mercy infinitely transcends his righteous anger, since sin is visited on three or four generations while righteousness advantages descendants for ever. On the third commandment he stands almost alone: the Hebrew is ambiguous, and while some think it forbids profane swearing as well, most modern critics regard it as forbidding false swearing only — a view favoured by our Lord's comment in the Sermon on the Mount, since Christ condemns profane swearing on his own authority, saying, But I say unto you. Having confined the commandment to perjury he is correspondingly firm about it: punishment will overtake the perjured man, if not in this life then in another, for Jehovah will vindicate his own honour. Keil approaches the phrase through the verb, which he insists never means to utter but keeps its sense of taking up or lifting, as one takes up a proverb or lifts a song."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does the third commandment forbid false swearing only, or profane swearing as well?",
+    "positions": [
+     {
+      "position": "false swearing only; our Lord condemns profane swearing on his own authority, which suggests the Law had not",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the wider sense: perjury is condemned again in the second table, so this commandment must aim at the honour due to God",
+      "holders": [
+       "John Calvin",
+       "Adam Clarke",
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And shewing mercy unto thousands",
-   "of them that love me, and keep my commandments",
-   "God's mercy to thousands of generations, far outrunning the threat to the few",
-   "true love proved by keeping his commandments, love and obedience joined"
+   "shewing mercy unto thousands",
+   "whether the third commandment forbids false swearing only",
+   "what is meant by the name of God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: thou shalt not make use of the name Lord or God, or any other name of the divine Being, in a light and trifling way, without any show of reverence; the name of God ought never to be mentioned but with reverence; the witnesses note the third commandment forbidding to take God's name in vain, with the threat that he will not hold the offender guiltless — the guarding of the holiness and reverence due to God's name (the third command requiring that God's name be hallowed: 'Thou shalt not take the name of the LORD thy God in vain; for the LORD will not hold him guiltless that taketh his name in vain'; the breadth of the sin forbidden, 'take the name of the LORD... in vain,' that it is to use the name, titles, or word of God in a light and trifling way without any show of reverence, whether in idle speech, false or rash oaths, perjury, cursing, profane jesting, or hypocritical worship; the reason it is so grave, that the name of God ought never to be mentioned but with reverence, it being holy and to be hallowed; the solemn threat, 'the LORD will not hold him guiltless,' that, though men make light of this sin and think it small, God will surely punish it, accounting the profaner guilty; that the reverence of God's name is the reverence of God himself)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not take the name of the LORD thy God in vain",
-   "for the LORD will not hold him guiltless that taketh his name in vain",
-   "the third commandment forbidding the misuse of God's holy name",
-   "though men make light of this sin, God will not hold the profaner guiltless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "8",
+  "pericope_label": "Remember the sabbath day, to keep it holy",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill gives a reason for the opening word: the command was of positive institution and no part of the law of nature, and therefore the more liable to be forgotten — all the other laws answering the dictates of nature, which is why no other has remember prefixed. Calvin reads the rest spiritually. God has no delight in idleness, so that there was no importance in the mere cessation of the labours of hands and feet, and it would have been a childish superstition to rest with no other view than to occupy the repose in God's service; the Jews were called away not from every work, since they still circumcised their children that day, but from their own works, that they might wholly devote themselves to God. The sum of the sanctification is the death of the flesh; and this, he insists, was a ceremonial precept, since Paul calls it a shadow whose body is Christ, the substance being exhibited when our old man was crucified with him and we were buried with him. He will not let the precept be thought small, observing that God inculcates no other more frequently, and that when he complains of being despised he says simply that his Sabbaths are polluted."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the opening word as pointing back to the creation: this was the most ancient institution, and God calls them to remember it, as if he had said, do not forget that when I finished my creation I instituted the Sabbath. He draws the contrary conclusion to Calvin's from the same typology: because the commandment is not mentioned in the New Testament as a moral precept, some have presumptuously inferred that there is no Sabbath under the Christian dispensation; but all types are of full force till the thing signified takes place, and the thing signified is that rest in glory which remains for the people of God — therefore its moral obligation must continue till time be swallowed up in eternity. Wesley says the same as Clarke on the antiquity of the institution, that this was not the enacting of a new law but the reviving of an old one, and notes who was bound: the son and daughter are named and the wife is not, because she is supposed one with her husband, so that if he sanctifies the day she will join him."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: to keep the sabbath holy by abstaining from all servile work and business, and from all pleasures and recreations lawful on other days, and by spending it in religious exercises, both internal and external; the witnesses note the fourth commandment, to remember the sabbath day and keep it holy — the setting apart of a day of holy rest and worship (God claiming a day as holy to himself: 'Remember the sabbath day, to keep it holy'; the word 'Remember,' that the sabbath was not a wholly new thing, it was known from the creation and the giving of the manna, and that they should bear it in mind beforehand, preparing for it, and not forget it; the duty, 'to keep it holy,' that the day should be hallowed, set apart from common use, by abstaining from all servile work and business, and from lawful recreations, and by spending it in religious exercises, both internal and external; the sanctifying of the day, that it is to be kept holy to the LORD, a day of rest and worship; the abiding obligation the commentators draw, that a sabbath of rest and worship is a perpetual ordinance, the Lord's day under the gospel kept in its room; that God is to be served in his own appointed times)."
+    "summary": "Keil grants that remember presupposes an acquaintance with the Sabbath, and that from the history of creation Israel must have known God rested and sanctified the day, but denies it had been kept before: hitherto no commandment had been given to man to sanctify it, and this was given for the first time at Sinai. Ellicott is more cautious, holding that we cannot conclude the Sabbath was a primitive institution, since the reference may be to the injunction lately given about the manna. On what keeping the day holy required his answer is negative: for the most part the Law insists on abstinence from labour as the main element, and can scarcely be said to prescribe anything positive about the religious employment of the day — the Israelite's attendance at the morning and evening sacrifice was neither required nor expected, and no provision was made for his receiving religious teaching. Probably, he adds, there were always some whom natural piety taught that in the absence of their ordinary employments they should devote themselves to prayer and communion with God — thus only could the day be really kept holy, with a positive and not a merely negative holiness."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Was the sabbath a primitive institution, or first commanded at Sinai?",
+    "positions": [
+     {
+      "position": "the most ancient of institutions, dating from the creation; this was the reviving of an old law, not the enacting of a new",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "no commandment to sanctify the day had been given to man before; this was the first",
+      "holders": [
+       "Keil and Delitzsch",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the fourth commandment still bind Christians?",
+    "positions": [
+     {
+      "position": "yes; all types are of full force till the thing signified takes place, and the rest in glory has not yet come",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "it was a ceremonial precept, a shadow whose body is Christ, fulfilled when our old man was crucified with him",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Remember the sabbath day",
-   "to keep it holy",
-   "the fourth commandment, to set apart a day of holy rest and worship",
-   "a perpetual ordinance, the Lord's day kept in its room under the gospel"
+   "remember the sabbath day",
+   "whether the sabbath was instituted before Sinai",
+   "whether the fourth commandment still binds"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
    "Keil and Delitzsch"
   ],
+  "range": "9-11",
+  "pericope_label": "Six days shalt thou labour; for in six days the LORD made heaven and earth",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is not to be taken for a precept but a permission, a grant and allowance to work and provide for oneself and family the six days, that the seventh might be kept holy; the witnesses note the granting of six days for labour and all the week's work — the appointing of the working week, that the seventh might be reserved for God (the command marking off the six days from the holy seventh: 'Six days shalt thou labour, and do all thy work'; that this is not a precept but a permission, not a command that men must always be at work, but a grant and allowance that the six days are given them to labour and provide for themselves and their families things useful and necessary, and honest in the sight of God; the limit implied, 'do all thy work' in the six days, that the ordinary business of life should be done within the working week, so that nothing be left to encroach on the sabbath; the wisdom and goodness of God in this division, giving men ample time for their needful labour, yet reserving a seventh part for himself; that diligent and honest labour in its season is itself acceptable to God)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Six days shalt thou labour",
-   "and do all thy work",
-   "the six days granted for honest labour, a permission not a command",
-   "the week's work done within the six days, nothing to encroach on the sabbath"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
+    "summary": "Gill takes the clause about labour for a permission and not a precept: it does not enjoin men to work, but grants them six days for their own profit, the Lord reserving one out of seven for his service — a singular favour, that he required no more of their time. On which day was meant he dissents from the common view, denying it can be proved the day appointed to the Jews was the seventh from the creation, and taking it for the seventh from the exodus or from the raining of the manna; he adds that no one day can be kept to exactness of time by all the earth, since it is night with one part while it is day with another. Calvin draws a historical inference from the closing clause, that the hallowing of the Sabbath was probably prior to the Law: the forbidding to gather manna on the seventh day seems to have arisen from a custom already received, and it is not credible the observance was omitted when God revealed sacrifice to the fathers; what had become extinct among the heathen, God renewed in his Law. He also gives the working rule for the rest: what was forbidden was whatever could have been finished yesterday or postponed till to-morrow, so judges might not hear litigants, though a man violently assaulted might be relieved; food might not be cooked for guests, but an ox fallen into a pit was to be taken out. Hence Christ declares that the Sabbath was made for man and not man for the Sabbath."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes the strictest line of the three on the six days, holding that he who idles away time on any of them is as guilty before God as he who works on the Sabbath: no work should be done that can be deferred, works of necessity and mercy alone excepted, and he who works by his servants or cattle is as guilty as if he worked himself."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the seventh day is the sabbath of the Lord thy God, a day set apart for his service, on which no work was to be done; the witnesses note the seventh day being the sabbath of the LORD, on which neither the man, nor his children, servants, cattle, nor stranger should do any work — the rest claimed for all within the gates, the day belonging to God (the seventh day wholly God's: 'the seventh day is the sabbath of the LORD thy God: in it thou shalt not do any work, thou, nor thy son, nor thy daughter... nor thy stranger that is within thy gates'; whose day it is, 'the sabbath of the LORD thy God,' that the seventh day is set apart for the LORD, his own day, to be kept holy to him; the rest commanded, 'in it thou shalt not do any work,' that all servile labour was to cease; the breadth of the rest, reaching to thy son, daughter, manservant, maidservant, cattle, stranger, that not the master only but all the household, even the servants, the beasts, and the foreigner within the gates, should rest, a mercy to all; the equity and kindness of the law, that even servants and beasts should have their rest; that the day is to be wholly given to God)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the seventh day is the sabbath of the LORD thy God: in it thou shalt not do any work",
-   "nor thy stranger that is within thy gates",
-   "the seventh day the LORD's, a rest for all the household",
-   "the equity and kindness of the law, that even servants and beasts should have their rest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Charles Ellicott: it is not improbable that the work of creation was made to occupy six days because one day in seven is the appropriate proportion of rest to labour for man; the witnesses note the reason of the sabbath given, that in six days the LORD made all things and rested the seventh, blessing and hallowing the day — the grounding of the sabbath in God's own pattern of creation and rest (the sabbath resting on God's example: 'in six days the LORD made heaven and earth... and rested the seventh day: wherefore the LORD blessed the sabbath day, and hallowed it'; the reason, 'in six days the LORD made heaven and earth, the sea, and all that in them is,' that God made the whole creation in six days and rested the seventh, not from weariness but ceasing from the work of creation; the consequence, 'wherefore the LORD blessed the sabbath day, and hallowed it,' that, in memory of this, God set apart and sanctified the seventh day from the beginning, making it a blessed and holy day; that the sabbath is thus founded not on Israel's law only but on the creation, a memorial of God's making and resting, binding from the first; Ellicott's thought that one day in seven is the fitting proportion of rest to labour for man; that the rest of God is the pattern and pledge of the rest of his people)."
+    "prevalence": "single",
+    "summary": "Ellicott grants the form is imperative, and reports the view that the commandment prescribes the distribution of a week and enforces the six days' work as much as the seventh day's rest; but he thinks the labour is rather assumed as what will be than required as what must be, so that the clause is prohibitory — thou shalt not work more than six days out of the seven. On the extent of the rest he observes that the whole family was to partake, labour being made to cease rather than devolved by the stronger upon weaker members, and that it reached the domestics and the cattle too, for God cares for cattle even for their own sakes. He traces what came of pressing the negative side too far: by the Maccabees' time it was held unlawful to defend oneself against attack on the Sabbath, and in our Lord's day a rigour was in vogue which his practice was pointedly directed against — and there are parts of Christendom, he adds, where a similar spirit prevails still. On the reason given he turns the order of explanation around: it is not improbable that creation was made to occupy six days because one day in seven is the right proportion of rest to labour for man, since God might have created all things in one day had he pleased, but, having the Sabbath in view, prefigured it by spreading his work over six."
    }
   ],
   "debates": [
    {
-    "question": "On what is the sabbath founded?",
-    "sides": [
+    "question": "Are the six days of labour commanded, permitted, or merely assumed?",
+    "positions": [
      {
-      "position": "On the creation itself — God made all things in six days and rested the seventh, then blessed and hallowed the day from the beginning (Genesis 2:3); the sabbath is founded not on Israel's law only but on God's own pattern of work and rest, binding from the first, the rest of God the pattern and pledge of the rest of his people",
+      "position": "a permission and not a precept, the Lord reserving only one day in seven for himself",
       "holders": [
-       "Gill",
-       "Charles Ellicott",
-       "the witnesses"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "assumed rather than required; the clause is prohibitory — thou shalt not work more than six days out of the seven",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "binding both ways: he who idles away any of the six days is as guilty as he who works on the seventh",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "reverses the usual order of explanation, suggesting that creation was made to occupy six days because one in seven is the right proportion of rest to labour for man"
+   }
+  ],
   "themes": [
-   "in six days the LORD made heaven and earth, the sea, and all that in them is, and rested the seventh day",
-   "wherefore the LORD blessed the sabbath day, and hallowed it",
-   "the sabbath grounded in God's own pattern of creation and rest",
-   "founded not on Israel's law only but on the creation, the rest of God the pattern of his people's rest"
+   "six days shalt thou labour",
+   "the extent of the sabbath rest",
+   "the creation as the ground of the commandment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "12": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Matthew Henry"
   ],
+  "range": "12",
+  "pericope_label": "Honour thy father and thy mother, that thy days may be long",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is the fifth commandment of the decalogue, but the first commandment with promise, as the apostle says, and the first of the second table; the witnesses note the fifth commandment, to honour father and mother, with the promise of long days in the land — the first commandment of the second table, with its promise of blessing (God beginning the duties to men with honour to parents: 'Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee'; the place of this command, the first of the second table, the duties to our neighbour, and the first commandment with promise, as Paul notes; the duty, 'Honour thy father and thy mother,' that children should reverence, love, obey, and in their need maintain their parents, and that this honour extends to all set over us, in family, church, and state; the promise annexed, 'that thy days may be long upon the land,' that long life and prosperity in the land were promised to the obedient and dutiful, a special blessing on this duty; that God so values the honour of parents that he sets his promise of blessing upon it; that the keeping of this command is the well-being of families and of society)."
+    "summary": "Gill would extend the parents named to all who stand in their room, and to superiors in office — kings, magistrates, masters and ministers — while holding that it chiefly respects immediate parents. Calvin conducts the old quarrel about which table this commandment belongs to at length. The usual division he traces to an error of Augustine, who split the precepts of the first table into three on the supposition that their number alluded to the Trinity — a frivolous reason, by trifling with which men have exposed God's law to the mockeries of the ungodly; and those who make only one of the first two must then mangle the last, dividing the prohibition of coveting a neighbour's wife and house into two, though Paul quotes them as one. Because the reverence children pay their parents is accounted a sort of piety, some have placed this precept in the first table; but Christ, Calvin says, ends the controversy by numbering it among the precepts of the second. He observes the mother is expressly named lest her sex render her contemptible to her male children."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out what honour requires under heads: a decent respect to their persons, of which the contrary is mocking at them; obedience to their lawful commands — come when they call you, go where they send you, do what they bid you — and that cheerfully, so that though you have said we will not, you may afterwards repent and obey; submission to their rebukes, not only to the good and gentle but also to the froward; and endeavouring to make their old age easy. With Wesley he softens the terms of the promise without weakening them: those who keep this commandment shall live as long on earth as infinite wisdom sees good, and whatever they seem cut short of here shall be made up in eternal life, the heavenly Canaan."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke presses the last head hardest. We can scarcely suppose a man honours his parents who, when they fall weak or blind or sick, does not exert himself to the uttermost in their support; God as truly requires the children to provide for the parents as he required the parents to feed and defend the children in helpless infancy. He adds the rabbinic saying that a man is to honour the Lord with his substance and to honour his father and mother — the Lord so if he have it, his parents whether he have it or not, for if he have nothing he is bound to beg for them. From the Deuteronomy form of the promise he draws a darker inference: if it is that it may go well with thee, it will go ill with the disobedient, and the untimely deaths of many young persons are the judicial consequence of disobedience to parents — most who come to an untimely end being obliged to confess that this, with the breach of the Sabbath, was the principal cause of their ruin. Wesley joins Henry in the gentler reading of the promise."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reaches Calvin's conclusion about the tables with less heat: it is not of much importance how we divide them, nor is it certain how they were first distributed, but the view that the fifth commandment begins the second table is preferable for its convenience. The promise admits two senses, and he weighs them: it may guarantee national permanence to a people among whom filial obedience is practised, or mean more simply that obedient children shall as a rule receive long life. For the first he cites Roman and Chinese permanence, and the probability that Israel forfeited Canaan for persisting in the breach of this commandment; for the second, that Paul's application is purely personal and not national, and that the Son of Sirach expounds it the same way. He adds that an Egyptian sage writing long before Moses declared from experience that the son who attends to his father's words will grow old in consequence."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the promise of long life national or personal?",
+    "positions": [
+     {
+      "position": "national permanence to a people among whom filial obedience is generally practised",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "personal: obedient children shall as a rule receive long life, as Paul applies it",
+      "holders": [
+       "Matthew Henry",
+       "John Wesley",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "traces the common division of the tables to an error of Augustine, who split the first table into three on the supposition that the number alluded to the Trinity — a frivolous reason which has exposed God's law to the mockeries of the ungodly"
+   }
+  ],
   "themes": [
-   "Honour thy father and thy mother",
-   "that thy days may be long upon the land which the LORD thy God giveth thee",
-   "the fifth commandment, the first of the second table and the first with promise",
-   "the duty extending to all set over us, with long life promised to the dutiful"
+   "honour thy father and thy mother",
+   "which table the fifth commandment belongs to",
+   "whether the promise is national or personal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "13": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "13-14",
+  "pericope_label": "Thou shalt not kill; thou shalt not commit adultery",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill keeps the ordinary exceptions to the sixth commandment — lawful war, self-defence, the magistrate's execution of malefactors — but adds to the crimes forbidden the stabbing of a man's character; on the seventh he reports the question from the Jewish side, that strictly the word means only the sin with another man's wife, as Jarchi observes, though Aben Ezra takes it for the wider term, and he extends the prohibition to unchaste thoughts no less than acts. Calvin lays down the rule governing all such precepts: in negative commandments the opposite affirmation is also to be understood, since otherwise a man would satisfy God's law by merely abstaining. There are two parts to it: that we should not vex or oppress any, and that we should aid the miserable who are unjustly oppressed, and resist the wicked lest they injure men as they list. With God anger is accounted murder, and concealed hatred too, since whosoever hateth his brother is a murderer; and when Christ says as much he is not framing a new law, as some have ignorantly supposed, but showing the folly of interpreters who insist only on the husk of things. On the seventh commandment he answers with heat: if the Law is a perfect rule of holy living it would be absurd to suppose it gave a licence for fornication with adultery alone excepted, and those who have sought a reputation for acuteness by granting that fornication is condemned in the New Testament but not in the Law have done nothing but betray their disgraceful ignorance."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works the breadth of the sixth commandment into particulars, reckoning under it not only all actions by which life may be abridged, but all wars for extending empire or commerce, all sanguinary laws by which men die for trifling offences, and all dispositions that lead men to meditate mischief. Wesley reduces the seventh to a sentence, that it forbids all uncleanness with the desires which produce it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this means not any sort of creatures, for some are to be killed for food and for safety, but rational creatures, men, women, and children, any of the human species; the unjust taking away of human life is forbidden; the witnesses note the sixth commandment forbidding the killing of man — the guarding of human life, made in God's image (the command protecting the life of man: 'Thou shalt not kill'; the meaning, that it forbids not any sort of creatures, for beasts may be killed for food and men defended, but the unjust taking away of rational creatures, men, women, and children, any human life; the ground, that man is made in the image of God, so that to shed man's blood is to assault God's image; the breadth Christ gave the command, that it forbids not only the act of murder but also unjust anger, hatred, and malice in the heart, which are the seeds of murder, whosoever hateth his brother is a murderer; that it also requires the preserving of life, our own and our neighbour's; that the law reaches the heart, condemning the inward as well as the outward sin)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How far does the sixth commandment reach?",
-    "sides": [
-     {
-      "position": "Beyond the outward act of murder to unjust anger, hatred, and malice in the heart — which Christ taught are the seeds of murder ('whosoever hateth his brother is a murderer,' 1 John 3:15) — and it also requires the preserving of life; the law reaches the heart",
-      "holders": [
-       "Gill",
-       "Christ (Matthew 5:21-22)",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not",
-   "kill",
-   "the sixth commandment forbidding the unjust taking of human life, made in God's image",
-   "Christ extending it to anger and hatred in the heart, the seeds of murder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: adultery, strictly, is the sin committed with another man's wife, but the word is taken to signify whoredom and fornication also; all unlawful lusts and uncleanness are forbidden; the witnesses note the seventh commandment forbidding adultery, and under it all uncleanness — the guarding of the marriage-bond and of chastity (the command protecting purity and the marriage-tie: 'Thou shalt not commit adultery'; the strict sense, that adultery is the violation of the marriage-bond, the sin with another man's wife; the wider reach, that, though the word strictly means adultery, it is taken to forbid whoredom and fornication and all unlawful lusts and uncleanness, every breach of chastity; the breadth Christ gave it, that it forbids not the outward act only but the lustful look and desire, whosoever looketh on a woman to lust after her hath committed adultery with her already in his heart; that the command guards the holiness of marriage and the purity of body and soul, requiring chastity in heart, speech, and behaviour; that the law reaches the inward desire as well as the outward deed)."
+    "summary": "Ellicott explains why the sixth commandment is stated so bluntly. The security of life is the primary object of government, men having coalesced into states for self-preservation; all written codes forbid murder, and where there are none an unwritten law does. What distinguishes the Mosaic legislation is the care it afterwards takes to separate murder from manslaughter, from death by misadventure, and from justifiable homicide — but before those distinctions could be drawn the sanctity of human life had to be broadly laid down, so the law was given in the widest terms and the exceptions reserved till later. On the seventh he gives the social reason first: next to respecting a man's life comes respecting his domestic peace, adultery being an invasion of the household and a dissolution of the contract which is the main basis of social order. What is peculiar in the Mosaic enactments is the absolute equality on which they place the man and the woman: adulterers are as hateful as adulteresses and as surely to be put to death, for with God there is no respect of persons and no respect of sexes. Keil sets the commandment in the order of the table, following Luther: the five words that follow secure life, marriage and property against active attack, and then, passing from deed to word and thought, forbid false witness and coveting — Luther's note running from the greatest injury to the least, the killing of a man, the violation of his wife, the taking of his goods, and, for those who cannot hurt so, the tongue, or failing that the heart. That the table advances to desire proves, Keil adds, that the deed is not to be separated from the disposition, and that the law is fulfilled only when the heart itself is sanctified."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "reads the bare form of the sixth commandment as deliberate: the sanctity of life had to be laid down in the widest possible terms before the law could distinguish murder from manslaughter or justifiable homicide"
+   }
+  ],
   "themes": [
-   "Thou shalt not",
-   "commit adultery",
-   "the seventh commandment forbidding adultery and all uncleanness",
-   "Christ extending it to the lustful look and desire, guarding the purity of body and soul"
+   "thou shalt not kill",
+   "the affirmative hidden in a negative precept",
+   "whether the seventh commandment reaches beyond adultery"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "15": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "15-16",
+  "pericope_label": "Thou shalt not steal; thou shalt not bear false witness against thy neighbour",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: to steal is to take away another man's property by force or fraud, without the knowledge and against the will of the owner; thefts are of various kinds, private and public; the witnesses note the eighth commandment forbidding theft, the taking of what is another's — the guarding of every man's property and right (the command protecting what is justly our neighbour's: 'Thou shalt not steal'; the meaning, that to steal is to take away another man's property by force or fraud, without the knowledge and against the will of the owner; the many kinds of theft the commentators name, private stealing, robbery, fraud, false weights and measures, oppression, withholding wages or debts, and every unjust gaining of another's goods; that the command forbids all unrighteous getting and keeping of what is not ours, and requires honesty, justice, and the rendering to every man his own; that it also requires industry and lawful labour, and the relieving of the poor, that we may have to give rather than take; that the law guards the eighth commandment against the inward covetousness that breeds theft)."
+    "summary": "Gill catalogues the kinds of theft — highway robbery, domestic theft, sacrilege, and the stealing of men to make slaves of them. Calvin defines the crime from charity, the end of the Law: every man's rights should be preserved, so that not only those are thieves who secretly steal but those who seek gain from the loss of others. God uses the word theft, he says, because all naturally abhor it as disgraceful, and men bury their misdeeds under so many coverings, craft and low cunning being called prudence; since the world boasts of vices as though they were virtues, God wipes away the gloss when he pronounces every unjust means of gain to be so many thefts. On the ninth commandment he presses further than truth alone will carry it. It is not enough to restrain the tongue unless we are also candid interpreters of our neighbours' acts and words; and God forbids not only inventing accusations against the innocent but giving currency to reproaches out of malevolence. A man may deserve his ill name, and the charge may be true; but if the reproach is the ebullition of our anger, it is vain to plead that we have advanced nothing but what is true — for Solomon says that love covereth many sins whereas hatred brings reproaches to light. Nor may we be too curious in observing the defects of others; and we must close our ears as well as our mouths, for he who listens eagerly to sinister reports about his brother is as injurious as the man who maligns him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke widens the charge on theft, holding that all kidnapping and slave-dealing fall under this law whether practised by individuals or by the state, since a state that enacts bad laws is as criminal before God as the individual who breaks good ones; he quotes Shakespeare's lines about the good name at the eighth commandment, on the supposition that depriving a man of his good name is a kind of theft. On the ninth he pushes the rule to its limit: he who bears false testimony against even the devil himself comes under the curse of this law, because his testimony is false; and by neighbour, he adds, any human being is intended, enemy or friend. Wesley adds that a man may rob himself by sinful spending or sparing, and names the motive running through the ninth commandment's offences: the endeavour to raise our own reputation upon our neighbour's ruin."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott grounds the eighth commandment in something older than law. The framers of Utopias have imagined communities without private property, but such a thing has never been realised, and the laws of all known States recognise it; here law has but embodied natural instinct — the savage who hammers out a flint knife by repeated blows with a pebble, labouring long and undergoing pain, feels the implement he has made is his own and his right to it indisputable. He quotes the same lines of Shakespeare at the ninth commandment instead, as indicating that calumny may injure a man more than robbery. What he finds peculiar to the Hebrew legislation is its reach: false witness is worst in a court of justice, and that offence has generally been punishable by law, but this code denounced also the commoner practice of spreading untrue reports, and afterwards added a distinct prohibition of raising a false report."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "extends the ninth commandment past truth: a reproach may be perfectly true and still break the law, if it is the ebullition of anger or proceeds from ill-will"
+   }
+  ],
   "themes": [
-   "Thou shalt not",
-   "steal",
-   "the eighth commandment forbidding theft in all its kinds",
-   "requiring honesty, justice, industry, and the rendering to every man his own"
+   "thou shalt not steal",
+   "reputation as a kind of property",
+   "true reproach spoken from ill-will"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: neither publicly in a court, by laying false things to his charge and swearing to them, to his hurt; nor privately, by whispering, tale-bearing, backbiting, and slandering; the witnesses note the ninth commandment forbidding false witness against the neighbour — the guarding of truth and of the neighbour's good name (the command protecting truth and reputation: 'Thou shalt not bear false witness against thy neighbour'; the public sense, that it forbids bearing false witness in a court of judicature, laying false charges and swearing to them, to his hurt and damage, perjury that wrongs the innocent; the private sense, that it forbids also whispering, tale-bearing, backbiting, slandering, and all lying that injures a neighbour's good name; that the command forbids all falsehood and untruth in our dealings and speech, and requires truth-speaking, the maintaining of our neighbour's good name, and a charitable judgment of him; that God, who is the God of truth, hates lying lips, and that a good name is a precious thing not to be wronged; that the law guards both the tongue and the heart from all that is false)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not bear false witness",
-   "against thy neighbour",
-   "the ninth commandment forbidding false witness in court and in private",
-   "requiring truth-speaking and the maintaining of the neighbour's good name, for God hates lying lips"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "17",
+  "pericope_label": "Thou shalt not covet thy neighbour's house",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is the tenth and last commandment, an explanation of several of the past, showing that the law of God forbids not only external acts of sin but the inward and first motions of the mind to it; the witnesses note the tenth commandment forbidding to covet the neighbour's house, wife, servants, goods, or anything that is his — the reaching of the law to the very heart and its first desires (the command going inmost, forbidding the lust itself: 'Thou shalt not covet thy neighbour's house... nor any thing that is thy neighbour's'; the breadth of the things named, house, wife, manservant, maidservant, ox, ass, any thing that is thy neighbour's, that all that belongs to another is fenced from our desire; the great matter the commentators draw, that this command is an explanation of several of the past, showing that the law of God not only forbids external acts of sin but the inward and first motions of the mind to it, the secret lust and desire, before any deed; that this is the command by which Paul was convinced of sin, I had not known lust except the law had said, Thou shalt not covet, for it searches the heart; that the law is spiritual, reaching the inmost desires, and that no man can keep it perfectly, so that it shuts up all to the grace of Christ)."
-   }
-  ],
-  "debates": [
+    "summary": "Gill draws the conclusion that gives the commandment its force: the motions it forbids would not be known, or thought sinful, but for this law — nor are they known even by it until the Spirit of God uses it to convince men of them. Not only the schemes of sin in the mind are forbidden, but its first risings in the heart, motions not assented to which spring up unawares from the corruption of nature; which shows the spirituality of the law and the impossibility of its being perfectly kept by fallen men. Calvin raises the objection before answering it. If the inward purity of the heart is everywhere required — so that under adultery secret unchastity is forbidden and under theft every unlawful appetite for gain — why forbid the lust for theft and fornication separately? It looks a superfluous repetition, absurd in ten short precepts wherein God has embraced the whole rule of life. His answer is that men's hypocrisy is such that they had to be pressed more closely, lest they seek subterfuges under pretence that the doctrine was obscure: had they heard only thou shalt not kill, nor commit fornication, nor steal, they might have thought their duty fully performed by outward observance. So, after laying down rules for moral integrity broadly, God at length ascends to the fountain itself, and points out the root from which all the evil and corrupt fruits spring. He illustrates the effect from the one man who recorded it: Paul, blameless in the eyes of men, had been persuaded he was righteous before God, and was alive as if the Law were absent or dead; but when he perceived what the commandment against coveting meant, the dead Law was raised to life and he died — convinced he was a transgressor, and seeing the curse overhanging him."
+   },
    {
-    "question": "What does the tenth commandment ('Thou shalt not covet') reveal about the law?",
-    "sides": [
-     {
-      "position": "That the law is spiritual, forbidding not only external acts but the inward and first motions of the mind — the secret lust and desire, before any deed; it was the command by which Paul was convinced of sin (Romans 7:7), and since no man keeps it perfectly, it shuts up all to the grace of Christ",
-      "holders": [
-       "Gill",
-       "Paul (Romans 7:7)",
-       "the witnesses"
-      ]
-     }
-    ]
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the same thing from the outside, taking covet to mean longing after a person or thing in order to enjoy it as a property: the command is broken by the man who lusts after his neighbour's wife and works to ingratiate himself into her affections and to lessen her husband in her esteem. Wesley marks the difference between this commandment and those before: they forbid all desire of doing what would injure our neighbour, this all inordinate desire of having what would gratify ourselves — O that such a man's house were mine, such a man's estate mine — the language of discontent at our own lot and envy at our neighbour's."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott makes the point historically. The commandment was added, he says, to teach that the Law concerns not acts and words only but the thoughts of the heart — rightly understood, the seventh and eighth commandments already contain the tenth. But ancient moralists did not usually recognise this: thought, unless carried into acts, was regarded as free, and no responsibility was held to attach to it. It was therefore of importance that the divine Law should assert a control over men's thoughts, since these are the source of all evil in word and deed."
    }
   ],
-  "outliers": [],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "observes that ancient moralists commonly treated thought as free and attaching no responsibility, which is why it mattered that the divine Law should assert control over it"
+   }
+  ],
   "themes": [
-   "Thou shalt not covet thy neighbour's house, thou shalt not covet thy neighbour's wife",
-   "nor any thing that is thy neighbour's",
-   "the tenth commandment forbidding the very coveting of the heart",
-   "the law spiritual, reaching the inmost desires, the command by which Paul was convinced of sin"
+   "thou shalt not covet",
+   "why the tenth commandment is not superfluous",
+   "the law reaching the thoughts of the heart"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
   }
  },
  "18": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch",
    "Matthew Henry"
   ],
+  "range": "18-21",
+  "pericope_label": "The people saw the thunderings and stood afar off; Moses drew near unto the thick darkness",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notices that the people are said to have seen the thunderings, and explains it as one sense put for another, Augustine having observed that to see is used in Scripture of all five senses."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry asks why the law was given so dreadfully and answers three ways: it was designed to give a sensible discovery of the majesty of God, that knowing the terror of the Lord we might live in his fear; it was a specimen of the terrors of the general judgment, in which sinners will be called to account for the breach of this very law; and it was an indication of those convictions which the law brings into the conscience, to prepare the soul for the gospel. The law was given, he concludes, in such a way as might startle and humble men, so that the grace and truth which came by Jesus Christ might be the more welcome. On the people's request he draws the lesson hard: once God tried speaking to men immediately, and it was found they could not bear it — it rather drove men from God than brought them to him, and though it terrified them it did not deter them from idolatry, since soon after this they worshipped the golden calf. Let us therefore rest satisfied with the instruction given us by the scriptures and the ministry, for if we believe not them, neither should we be persuaded though God spoke to us in thunder as he did from Sinai."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke suggests how the terror was administered: the people had witnessed these things before, but here they seem repeated, probably with a peal of thunder and a gleam of lightning at the end of each command, to impress their hearts with the holiness of the law. He turns the episode forward instead of back: it teaches the absolute necessity of that great Mediator between God and man, Christ Jesus, since no man comes to the Father but by him. On the paradox of Moses' answer he states a maxim, fear not that ye may fear: the fear forbidden brings consternation into the soul and produces nothing but terror, the fear enjoined is what reverence and filial affection inspire — and he who fears in the first sense can neither love nor obey, while he who fears not in the second falls under the first temptation that occurs. Wesley presses the verb in the last verse — he was made to draw near, so the word is — and adds that Moses of himself durst never have ventured into the thick darkness if God had not called him, some rabbins supposing that an angel was sent to take him by the hand and lead him up."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: they heard the dreadful volleys of thunder and saw the amazing flashes of lightning, which were like lamps and torches; the witnesses note all the people perceiving the thunderings, lightnings, trumpet, and smoking mountain, and removing to stand afar off — the terror of the people at the awful signs of God's presence on the mount (the giving of the law attended with dreadful majesty: 'all the people saw the thunderings, and the lightnings... and the mountain smoking: and when the people saw it, they removed, and stood afar off'; the awful signs, thunderings, lightnings, noise of the trumpet, the mountain smoking, the terrible tokens of God's presence on Sinai, the thunder, the flashing lightning, the trumpet ever louder, and the mountain wrapped in smoke and fire; the effect, that the people saw it, heard and beheld the dreadful display, and removed and stood afar off, shrinking back in terror from the holy mount; that the law was given with such majesty and terror to impress on the people the holiness and greatness of the Lawgiver, and the dreadfulness of his justice against sin; the contrast the commentators draw with the gospel, that we are come not to the mount that burned but to Mount Zion)."
+    "summary": "Keil traces the pastoral order of the words: Moses first took away the false fear of death by the answer, fear not, then gave the reason, for God is come to prove you — the proving being a testing of the heart, so that by this display of his glory God might inspire the true fear of himself. Ellicott catches what is remarkable in the closing tableau: the same manifestation which repelled the people attracted Moses."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "sums the closing scene in one sentence: the same manifestation which repelled the people attracted Moses"
+   }
+  ],
   "themes": [
-   "all the people saw the thunderings, and the lightnings, and the noise of the trumpet, and the mountain smoking",
-   "they removed, and stood afar off",
-   "the people terrified by the awful signs of God's presence on Sinai",
-   "the law given with majesty to impress the holiness of the Lawgiver, a contrast with the gospel's Mount Zion"
+   "the extraordinary terror with which the law was given",
+   "the people ask for a mediator",
+   "fear not, that his fear may be before your faces"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: the people asked Moses to speak with them, but that God might not speak with them, lest they die; the witnesses note the people asking Moses to speak with them and they would hear, but begging that God not speak directly, lest they die — the people's plea for a mediator, conscious they could not bear God's immediate voice (the terror driving them to seek a go-between: 'Speak thou with us, and we will hear: but let not God speak with us, lest we die'; the request, 'Speak thou with us, and we will hear,' that they would have Moses as a go-between, willing to hear God's word through him; the dread, 'let not God speak with us, lest we die,' that they felt they could not bear the immediate voice of the holy God and feared death if he spoke to them directly; the type the commentators draw, that here Moses is a figure of Christ the Mediator, between God and his people, through whom alone sinful men may safely draw near to God; that the people, terrified by the law, felt their need of a mediator, as all sinners do; that man, since the fall, cannot endure the unveiled presence of God but must come by a Mediator)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [
-   {
-    "question": "What does the people's plea for Moses to mediate prefigure?",
-    "sides": [
-     {
-      "position": "Christ the Mediator — Moses here a figure of the one Mediator between God and men, through whom alone sinful men may safely draw near to God; the people, unable to bear God's immediate voice, felt their need of a mediator, as all sinners do",
-      "holders": [
-       "the witnesses",
-       "many"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Speak thou with us, and we will hear",
-   "but let not God speak with us, lest we die",
-   "the people's plea for a mediator, unable to bear God's immediate voice",
-   "Moses a figure of Christ the Mediator, through whom alone sinful men may draw near to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam Clarke: the maxim, 'Fear not: for God is come to prove you, and that his fear may be before your faces,' that a right fear of God keeps from sin; the witnesses note Moses telling the people not to fear, for God had come to prove them, and that his fear might be before them, that they sin not — the distinguishing of the two fears, the terror to be put away and the reverence to be kept (Moses correcting their fear while pressing a better: 'Fear not: for God is come to prove you, and that his fear may be before your faces, that ye sin not'; the comfort, 'Fear not,' that they need not be in a slavish terror of death, for God meant them no harm; the purpose of the awful display, 'God is come to prove you,' to test and try them, whether they would obey, and to make a deep impression on them; the better fear pressed, 'that his fear may be before your faces, that ye sin not,' that, though they should put away the slavish dread, they should keep the reverent, filial fear of God ever before them, which keeps from sin; the great distinction the commentators draw, between the fear that hath torment, to be cast out, and the reverent fear of God, to be kept, the one driving from God, the other keeping from sin; that the right fear of God is the guard of obedience)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How does Moses distinguish two kinds of fear?",
-    "sides": [
-     {
-      "position": "The slavish terror of death is to be put away ('Fear not'), but the reverent, filial fear of God is to be kept ever before them, which keeps from sin — the one driving from God, the other guarding obedience",
-      "holders": [
-       "Adam Clarke",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Fear not: for God is come to prove you",
-   "and that his fear may be before your faces, that ye sin not",
-   "Moses distinguishing the slavish terror to be put away from the reverent fear to be kept",
-   "the reverent fear of God the guard of obedience, which keeps from sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the people kept their distance in their camp and tents, while Moses approached the thick darkness where God was; the witnesses note the people keeping afar off, while Moses alone drew near to the thick darkness where God was — the contrast of the trembling people and the mediator drawing near to God (Moses going in where the people dare not: 'the people stood afar off, and Moses drew near unto the thick darkness where God was'; the people's place, 'the people stood afar off,' that, in their terror, they kept their distance, not daring to approach the holy mount; the mediator's boldness, 'Moses drew near unto the thick darkness where God was,' that Moses, as the appointed mediator, went up alone into the thick darkness, the cloud of God's presence, where the people could not come; the type the commentators draw, of Christ the Mediator, who alone enters into the immediate presence of God for his people, into the holiest, where they cannot of themselves come; that the thick darkness was the veil of God's majesty, in which he dwelt unseen; that through the Mediator the people had access, though they stood afar)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the people stood afar off",
-   "and Moses drew near unto the thick darkness where God was",
-   "the trembling people afar while the mediator drew near to God",
-   "a type of Christ the Mediator, who alone enters God's presence for his people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
    "John Gill",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Matthew Henry"
   ],
+  "range": "22-23",
+  "pericope_label": "Ye have seen that I have talked with you from heaven; ye shall not make gods of silver",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill arrives at the same reading as Henry by the grammar. The Talmudists and Jarchi supply the elliptical clause as meaning that they should make no likeness of God's ministers on high, the angels or the stars; but Gill prefers to render it, ye shall not make any likeness of me, since they had seen only the cloud and the fire."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry answers two ways why the second commandment is repeated here. It may point to what God chiefly had in view, their peculiar addictedness to idolatry: ten commandments God had given them, but Moses is ordered to inculcate especially the first two — they must not forget any, but must be sure to remember those. Or it may point to what could be inferred from the manner of God's speaking, since he had given sufficient demonstration of his presence and they needed no images of him as though absent; besides which they had seen no manner of similitude, and his manifesting himself by a voice alone showed that they were to keep up communion with him by his word and not otherwise. On the phrase make with me he builds two arguments: that by such images they would affront God, since though they pretended to worship them only as representations of him they really made them rivals with him; and that they would abuse themselves, since while they thought to assist their devotion they would corrupt it and put a cheat upon themselves."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the words about speaking from heaven as evidence, not description. Though God manifested himself by the fire and the thick darkness, the ten words were probably uttered from the higher regions of the air, and that, he argues, proves there was no imposture: strange appearances might be counterfeited on earth, as the magicians of Egypt had often done, but it would be impossible to represent a voice carrying a long series of instruction as proceeding from heaven itself — which is why Moses could afterwards appeal to the people upon a fact incontrovertible. He marks the change of preposition, that where the first commandment said no other gods before me, this says none with me, as emblems kept up to preserve the memory of his magnificence; whereas God would have only an altar of plain turf, on which they should offer the sacrifices that commemorate their own guilt and the need of an atonement. Wesley gives the reason for the repetition in a line: they were more addicted to idolatry than to any other sin."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: the LORD said unto Moses, Thus thou shalt say unto the children of Israel, Ye have seen that I have talked with you from heaven; the witnesses note God bidding Moses tell Israel that they had seen God talk with them from heaven — the witness of God's own speaking, the ground of the worship-laws to follow (God appealing to what they had heard: 'Thus thou shalt say unto the children of Israel, Ye have seen that I have talked with you from heaven'; the appeal, 'Ye have seen that I have talked with you from heaven,' that the people had themselves been witnesses of God's speaking the law to them, his voice coming from heaven, from the cloud and fire on the mount; the force of this for what follows, that, since God himself had so plainly spoken to them, they were bound to receive and keep his commands and to worship him aright; that the certainty of the law's divine origin, attested by their own eyes and ears, left them without excuse; that this is laid as the ground of the laws of worship now to be given; that God's having spoken binds the conscience to obey)."
+    "summary": "Keil draws a different inference from the same clause: Jehovah came down on Sinai enveloped in the darkness of a cloud, and thereby made known that his nature was heavenly and could not be imitated in any earthly material; he supplies the reason such images are condemned even when meant well, since, intended as symbols of Jehovah, they became false gods from the very fact that they were meant as representations of a purely spiritual God. Ellicott notices what the sentence does structurally: it identifies the giver of the Book of the Covenant with the deliverer of the Ten Commandments. He alone finds nothing in the words make with me, holding the expression unusual but of no peculiar force; what he finds significant is the choice of metals. Gods of silver and gold are specially forbidden because it was to idolatry of just this kind that the Israelites were inclined, the golden calf being no isolated phenomenon: molten images were objects of worship throughout the ages before the Captivity. The animal worship of Egypt had no attractions for the Hebrews; they did not offer to images of stone or marble like the Greeks, still less bow down to stocks like the heathen around them — the molten image was the form of idol which had most charms for them, and the more precious the material the better satisfied they were to worship it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the phrase 'make with me' carry a particular force?",
+    "positions": [
+     {
+      "position": "yes: it shows that images, however meant, are set up as rivals with God",
+      "holders": [
+       "Matthew Henry",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the expression is unusual but does not seem to have any peculiar force",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "identifies the molten image as the specific idolatry the Hebrews were drawn to, unlike the animal worship of Egypt or the stone images of the Greeks"
+   }
+  ],
   "themes": [
-   "Thus thou shalt say unto the children of Israel",
-   "Ye have seen that I have talked with you from heaven",
-   "God appealing to what the people themselves witnessed, his speaking from heaven",
-   "the law's divine origin attested by their own eyes and ears, binding them to obey"
+   "I have talked with you from heaven",
+   "why the second commandment is repeated",
+   "the molten image as Israel’s besetting idolatry"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'Ye shall not make with me' is a proposition of itself, and 'gods of silver' belongs to the next clause; that they should not make any gods, especially of silver or gold, to be worshipped with or beside the true God; the witnesses note God forbidding them to make gods of silver or gold to set beside him — the pressing again of the first and second commandments, against all idols (God, having spoken from heaven, forbidding all rivals: 'Ye shall not make with me gods of silver, neither shall ye make unto you gods of gold'; the force of 'with me,' that they should make no god with or beside the true God, who had just spoken to them, to be worshipped along with him or in his stead; the things forbidden, 'gods of silver... gods of gold,' the costly idols of the heathen, of precious metal, which men prize and trust; that this presses again the substance of the first two commandments, that God alone is to be worshipped, and by no image, especially after he had so plainly revealed himself by his voice; the fitness, that, having heard God speak, they should the less be tempted to seek a visible image, the voice from heaven being witness enough of the unseen God; that God will have no rival, however costly)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ye shall not make with me gods of silver",
-   "neither shall ye make unto you gods of gold",
-   "God forbidding all gods of silver or gold beside himself",
-   "pressing again the first two commandments, for God will have no rival, however costly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "24-25",
+  "pericope_label": "An altar of earth thou shalt make unto me; if of stone, not of hewn stone",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supplies the practical description — turfs of earth, quickly thrown up as their travels required and as easily thrown down after — and adds from Tertullian that the Romans under Numa had neither images nor temples, but only altars of turf. He also passes on Ainsworth's figure, that the altar of earth represented Christ's human nature — the very reading Calvin complains of. Calvin explains the material by what would be left behind: God would have them built of earth so that they might fall down of themselves and no trace remain after the people departed; and if stones were used he forbade their being fitted into a permanent structure, lest the appearance entice posterity to superstition. We know, he says, how antiquity and the example of our forefathers attract the minds of the vulgar: had anything in the shape of an altar remained, religious notions would at once have attached to it, that God could nowhere be better worshipped than in a place dedicated of old by their fathers. He is impatient of readings that look for more, surprised that commentators should invent allegories here. On the closing promise he thinks the second half of the verse has been ignorantly perverted by commentators, who read it with the first as though God had forbidden such an altar on Mount Zion too; whereas he is answering a doubt — will God be favourable to us where he heard our fathers' prayers? The answer is that they will pray duly if only they obey his command and seek no other place than the one he shall choose."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke adds a reason of circumstance and one of principle: they were wanderers with no fixed residence, so no time should be wasted on costly altars soon to be left behind; and the altar itself, costly or mean, was nothing in the worship — only the place on which the victim should be laid. On the promise he takes the words to mean wherever God is worshipped, whether in the wilderness, at the tabernacle or in the temple, and finds them equivalent to our Lord's saying that where two or three are gathered in his name he is in the midst of them — adding that since it was Jesus who was the angel that spoke in the wilderness, the promise in the law and that in the gospel proceeded from the same mouth. Wesley puts it sharply: that they might not be tempted to think of a graven image, they were not so much as to hew the stones into shape, but to pile them as they were; and he reads the clause as where my name is recorded, that is, where I am worshipped in sincerity."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this was a temporary precept, in force until the tabernacle was built, respecting occasional altars made of turfs of earth, easily and quickly made; the witnesses note God commanding an altar of earth for their sacrifices, and promising to come and bless them in every place where he records his name — the simple altar and the gracious promise of God's presence in worship (God appointing a plain altar and binding his blessing to his appointed worship: 'An altar of earth thou shalt make unto me... in all places where I record my name I will come unto thee, and I will bless thee'; the simplicity required, 'an altar of earth,' a plain altar of turf or earth, not costly or carved, a temporary precept for the time before the tabernacle, marking that God seeks not outward show but true worship; the sacrifices, 'thy burnt offerings, and thy peace offerings,' the worship to be offered on it; the great promise, 'in all places where I record my name I will come unto thee, and I will bless thee,' that wherever God appoints his worship and puts his name, he will graciously meet his people and bless them; the comfort the commentators draw, that God meets and blesses his people in his own appointed worship, his presence and blessing the great reward of true worshippers; that God is found where he has promised to be found)."
+    "summary": "Keil supplies the positive idea behind the rule: the altar, as an elevation built of earth or rough stones, was a symbol of the elevation of man to God, who is enthroned on high — man raising himself to God in his sacrifices, yet by an altar only of earth, or if of stones then not of hewn ones, since if he swings his tool over it he defiles it. Ellicott gives the historical shape of the command: the earliest altars were of earth or unhewn stones, built with little labour and no tools, but as civilisation advanced it became usual to erect altars of hewn stone adorned with carvings, in which human and animal forms were often introduced. He observes that stone altars are not absolutely prohibited, since the Israelites use them afterwards; God forbids only the shaping of the stones. On the pollution the tool would cause he offers a reason of his own: nature is God's handiwork and therefore pure, man by contact imparts his own impurity, and the altar whereby sin was expiated had to be free from human taint."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "objects to the allegorising of this precept, holding that God had no object here but to remove stumbling-blocks — the altar of earth was to fall down of itself and leave no trace to attract posterity's superstition"
+   }
+  ],
   "themes": [
-   "An altar of earth thou shalt make unto me, and shalt sacrifice thereon thy burnt offerings, and thy peace offerings",
-   "in all places where I record my name I will come unto thee, and I will bless thee",
-   "God appointing a plain altar, seeking not outward show but true worship",
-   "God meeting and blessing his people in his own appointed worship, where he records his name"
+   "an altar of earth",
+   "why the stones must be unhewn",
+   "in all places where I record my name"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: if they chose instead of an earthen altar to make one of stone, as they might in rocky places, it was to be of unhewn stone; the witnesses note God allowing an altar of stone, but forbidding hewn stone, for lifting a tool upon it would pollute it — the requiring of plainness and the forbidding of man's art in God's altar (God having his altar simple, not shaped by the chisel: 'if thou wilt make me an altar of stone, thou shalt not build it of hewn stone: for if thou lift up thy tool upon it, thou hast polluted it'; the permission, 'if thou wilt make me an altar of stone,' that in rocky places they might use stone instead of earth; the restriction, 'thou shalt not build it of hewn stone,' that the stones must be whole and unhewn, as God found them, not shaped by man's tools; the reason, 'if thou lift up thy tool upon it, thou hast polluted it,' that to carve or dress the stone with a tool would pollute the altar, marring it with man's workmanship; the lessons the commentators draw, that God seeks no ornament of human art in his worship, lest men glory in their own work, and that his worship is to be kept pure and simple, after his own appointment, not adorned by the inventions of men; that man's additions to God's worship corrupt it)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if thou wilt make me an altar of stone, thou shalt not build it of hewn stone",
-   "for if thou lift up thy tool upon it, thou hast polluted it",
-   "God requiring plainness, the altar of unhewn stone not shaped by man's tool",
-   "God seeking no ornament of human art in his worship, lest men glory in their own work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "26",
+  "pericope_label": "Neither shalt thou go up by steps unto mine altar",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: neither shall the priests, the sons of Aaron, go up by steps to the altar, lest in so doing their nakedness be uncovered; the witnesses note God forbidding the priests to go up to his altar by steps, lest their nakedness be uncovered — the guarding of decency and modesty in the worship of God (God having all done decently in his service: 'Neither shalt thou go up by steps unto mine altar, that thy nakedness be not discovered thereon'; the prohibition, 'Neither shalt thou go up by steps unto mine altar,' that the altar should be low, or approached by a gentle slope, not by high steps; the reason, 'that thy nakedness be not discovered thereon,' that, in the loose garments then worn, going up by steps might immodestly expose the person, an unseemly thing in worship, afterward also guarded by the linen breeches of the priests; the great care of God for decency and reverence in his worship, that nothing unseemly or indecent should be done before him; the lesson the commentators draw, that God is to be worshipped with reverence, modesty, and order, all things done decently and in order; that even in such small matters God teaches the reverence due to his holiness)."
+    "summary": "Gill notes that the command is addressed to the priests, as the Targums paraphrase it, and explains the danger plainly: the part which is not to be named would be exposed if there were many steps set at a distance from each other. The altar built with the tabernacle, he observes, was only three cubits high and needed no steps; the difficulty arises only with the later altar. He reports the Jewish solution, that Solomon's altar being ten cubits high some ascent was necessary, and there was what they called a Kibbesh — a causeway of earth rising gradually to the top, some thirty-two cubits long and sixteen broad; and the Targum of Jonathan paraphrases the words as meaning they go up not by steps but by bridges. Calvin sets the reason in the context of the priests' conduct: God had already prescribed modesty to them in their private actions and required that they wear drawers when they went into the sanctuary; but not content with that symbol of purity, he forbids them to ascend by steps, lest the drawers themselves should be seen and the dignity of sacred things be impaired. By every means, he concludes, God would induce the Israelites to conduct themselves purely and chastely in the exercises of religion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke stands back to ask why the altars were low and plain at all. The English word comes from a root meaning high, though the Hebrew, from a verb meaning to slay, signifies merely a place for sacrifice; it was the heathen, imitating the rites of the true God in their idolatrous worship, who made their altars very high and so gave them the name of elevated places — building them so partly through pride, and partly that their gods might the better hear them. Hence come the high places so severely condemned in Scripture; some have even imagined that the pyramids were altars of this kind. God therefore ordered his own to be either of simple turf, so that there might be no expense the people could ill afford and no incentive to idolatry from a costly structure; or of unhewn stone, so that no images of animals or of the heavenly bodies might be sculptured on them, as among the Egyptians, whose ancient altars still testify it. In short, God formed every part of his worship so that everything belonging to it might be as dissimilar as possible from that of the surrounding nations, and especially the Egyptians, from whose land they had just departed; and this seems the whole design of statutes on which commentators have written learnedly, imagining difficulties where probably there are none. He ends by looking back over the chapter, at manifestations which have no parallel and can have none until he appears in glory to judge the quick and the dead — the glory terrible, and to the children of Israel insufferable, and yet how highly privileged they were to have God himself speaking from the midst of the fire. Wesley grants that God afterwards appointed an altar ten cubits high but thinks they went up not by steps but by a sloping ascent."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott takes the other course. Once the priests' dress had been so arranged that no exposure was possible, this precept became unnecessary — from which it would seem that Solomon's altar simply had steps, as comparing Chronicles with Ezekiel suggests."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How were the taller altars of later times ascended?",
+    "positions": [
+     {
+      "position": "by a causeway or sloping ascent rather than steps, as the Targum and Jewish tradition describe",
+      "holders": [
+       "John Gill",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "by steps: once the priests’ dress made exposure impossible the precept lapsed, and Solomon’s altar seems to have had them",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "makes the whole design of these statutes a deliberate dissimilarity from Egyptian worship, and dismisses the commentators who have imagined difficulties in them where probably there are none"
+   }
+  ],
   "themes": [
-   "Neither shalt thou go up by steps unto mine altar",
-   "that thy nakedness be not discovered thereon",
-   "God forbidding steps up to his altar, guarding decency and modesty in worship",
-   "God to be worshipped with reverence and order, teaching the reverence due to his holiness"
+   "that thy nakedness be not discovered",
+   "how the later and higher altars were ascended",
+   "why the altars were low and plain"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  }
 }
