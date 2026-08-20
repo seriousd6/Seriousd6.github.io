@@ -12476,6 +12476,58 @@
       "book": "philippians",
       "chapter": "1",
       "note": "FIDELITY SELF-GRADE, philippians 1, nine entries, all in window. 1-2 = 650w, 9 voices. 3-6 = 650w, 8. 7-8 = 649w, 9. 9-11 = 649w, 8. 12-14 = 643w, 8. 15-18 = 648w, 8. 19-21 = 649w, 8. 22-26 = 649w, 8. 27-30 = 643w, 8. Every claim traced to a named block in data/commentary/cow/philippians/1.json before writing. Exclusions: all four Jamieson blocks (keys 4, 10, 16, 22) declared as residue; the single Cyril of Jerusalem block (key 19) dropped silently for the VOICE_LABELS defect; about 984 words of StudyLight footer, CSS and JavaScript inside the Ellicott block at key 30 ignored as chrome. Gross usable 61,018; after voice exclusions and chrome about 58,944 by the build's own count, of which the chrome removal accounts for 984. No entry rests on a single school; the largest single source block in the chapter, Barnes's 4,485-word introduction, was used only for entry 1-2."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "24",
+      "verses": [
+        "5"
+      ],
+      "note": "JFB displacement, 46th confirmation, and a THIRD SUCCESSFUL ADVANCE PREDICTION. Leviticus 24 sits at canonical position 114, so the ratio law recorded at exodus 5 predicted a donor near position 95 — Leviticus 5, with a working window of Leviticus 2 to 8 — before I looked at the chapter. There is a single JFB block, at key 5, and it is Leviticus 6:24-30 entire: the law of the sin offering, the fat and inwards washed and salted and burnt on the altar, the rest of the carcass belonging to the officiating priest and eaten only within the tabernacle precincts by members of a priestly family, the earthen vessel broken because porous and the metallic pan scoured because the flesh had made it too sacred for common use. Donor position 96 against a predicted 95, a ratio of 0.842 where the ten-case mean was 0.834 and the observed band 0.806 to 0.864. The block is wholly foreign to its host, since Leviticus 24:5 is the baking of the twelve shewbread cakes and has no slain victim in it at all. That is now three advance predictions in two batches — exodus 39 (predicted Exodus 24, found Exodus 25-26), exodus 33 (predicted Exodus 20, found Exodus 20), and this — and thirteen cases supporting the law overall. A practical note on method: with only one displaced block in the chapter there was no stride to check, so the ratio was the only test available, and it was enough. That is the first time the law has done work no other signal could have done."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "20"
+      ],
+      "note": "A new unusable-block category to sit beside the bare-quotation one from note 1137: the BARE CROSS-REFERENCE. Leviticus 24 repeats material given in Exodus, and Clarke responds by pointing back rather than commenting again, so three of his eleven blocks here are nothing but pointers — key 1 is the chapter argument alone, key 2 is Pure oil olive, see every thing relative to this ordinance explained on Exodus 27:20-21, key 5 is See the whole account of the shew-bread in the notes on Exodus 25:30, and key 20 is This is a repetition of the lex talionis, which see explained Exodus 21:24. None of these says anything about the verse it sits under. I excluded Clarke from the first two entries on that ground, exactly as I have been excluding Keil where the 200-word cap leaves nothing but quoted verses, and the result is that entries 1 and 5-9 carry four voices instead of five while losing nothing real. This is the same defect that made exodus 39 unwritable (note 1134), but at a survivable scale: there the cross-references were the whole catena for several runs, whereas here they are one voice out of six. The generalisation worth recording is that a chapter which re-enacts earlier legislation will have a systematically thinner catena than its word count suggests, because the commentators decline to comment twice — and the thinning falls hardest on Clarke, who cross-references most freely."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "24",
+      "verses": [
+        "23"
+      ],
+      "note": "StudyLight boilerplate tail, 36th instance, non-discriminating: Ellicott's last block is at key 23, which is also the chapter's last key, so this instance cannot distinguish the two rules and the numbers 28 rule stands where the five discriminating cases left it. Gill's separate sacred-texts navigation tail also appears at key 23, and it is likewise his last block and the chapter's last key, so it too tells us nothing new. That open question — where Gill's tail attaches when he stops short of the final key — has now gone eight chapters without a test case, and it may be that Gill simply always runs to the end of a chapter, in which case the question is unanswerable rather than merely unanswered. Worth checking directly some time: if Gill's key list is coextensive with the chapter's in every chapter examined so far, the rule cannot be established and the search should stop."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "leviticus",
+      "chapter": "24",
+      "verses": [
+        "5",
+        "15",
+        "19"
+      ],
+      "note": "Three clean disagreements in one chapter, and the middle one is a rare case of a voice reading a law as being about somebody else's god. First, how the shewbread lay: Wesley says flatly that the two rows were not one loaf above another but one beside another, and argues it from the incense set upon each, while Ellicott renders the word piles and describes the twelve as stacked one upon another in two heaps laid across the board, overhanging it at either side. Second, and most interesting, whose god is meant by whosoever curseth his God. Ellicott takes it of the heathen's own deity, reasoning that since the criminal who occasioned the law was an Egyptian, provision is made first for Gentiles sojourning in Israel who still profess their own faith, so that such a man is left to his co-religionists to punish and Israel is not to interfere; Clarke, Wesley and Calvin all take it of the true God, Calvin making the verse the guard of the third commandment. Third, whether like for like is literal: Gill will not have breach for breach and eye for eye taken strictly at all, understanding the price or value of them in a pecuniary way, while Calvin defends the rule as it stands, arguing that without it an accomplished villain could maim his brother and then laugh at both the man and the Law, and answering the charge of injustice by noting that God does not command an eye for an eye until he has restricted it to injuries knowingly and wilfully inflicted. All three are carried in the tags with holders named. Worth noting how the third pairs with the second: Calvin, who is severest on the blasphemy law, is also the one who extends the equality clause furthest, holding that God takes the whole human race under his protection because he created all men after his own image."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "24",
+      "note": "Length control, six entries: 630, 648, 650, 643, 647, 647, all grade A. One entry drafted in range on the first attempt — the vv1-4 entry at 630 — and it is the only four-voice entry in the chapter, which is now the fourth consecutive confirmation of the voice-count relation from notes 1102, 1107, 1133 and 1140. The rest drafted at 828, 888, 734, 845 and 794 on five and six voices. A second grade-B-from-vocabulary case appeared and was fixed the same way as the two before it: the shewbread entry came off the first draft at ttr 0.587, because cakes, table, piles and frankincense carried nearly all the nouns in a passage about nothing else. Swapping in loaves, board and stacks, and cutting the geometry of the projecting handbreadths, moved it to 0.614 while also taking off the length. That is three instances now — leviticus 9 on sacrifice and fire, exodus 33 on tent and tabernacle, and this — and the rule can be stated firmly: where a chapter's subject supplies one dominant noun, choose two or three synonyms BEFORE drafting, because the meter will otherwise catch it after the work is done. Every effective length cut was again a whole idea (Ellicott's three golden moulds, the three possible placements of the incense bowls, the eight priestly perquisites, Clarke's Kennicott and De Rossi manuscript evidence, Calvin's second objection to the lex talionis, Jarchi's distinction about the wounded beast). Note 1018 holds across sixteen chapters."
     }
   ]
 }
