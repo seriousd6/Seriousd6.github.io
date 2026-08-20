@@ -4,199 +4,186 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Jamieson, Fausset and Brown",
    "John Calvin",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "1",
+  "pericope_label": "The third month: Israel comes to Sinai",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Israel's arrival at Sinai in the third month: 'in the third month, when the children of Israel were gone forth out of the land of Egypt, the same day came they into the wilderness of Sinai' — Israel arriving at the wilderness of Sinai in the third month after the Exodus (about the time of Pentecost, fifty days from the Passover, the journey to the mount of God, Exodus 3:12, where Moses was promised they would serve God, the providence, the people brought to the place of the covenant); the time (the third month, the new moon, or the same day) — the arrival at Sinai about fifty days from the Exodus (the witnesses noting the providential timing, the law given at Sinai about the season later kept as Pentecost, the feast of weeks, the Spirit given at Pentecost, Acts 2, the law written on the heart, a contrast and fulfillment); 'came they into the wilderness of Sinai' (the wilderness of Sinai, the mount of God, Horeb, Exodus 3:1, the place of the covenant and the law, vv.3-25; ch. 20, the providence, Israel brought to Sinai to receive the law, the covenant established) — Henry, Gill, Calvin, JFB, Wesley."
+    "summary": "Gill dates the arrival to Sivan, answering to part of May and June. Calvin asks what the apparatus of the chapter is for, and answers that it was to render the people attentive and teachable before the laws were promulgated. God had already delivered the rule of a just and pious life; by writing the Law on tables and adding its exposition he ratified it by a solemn rite, that the recognition of it might flourish in future times. The covenant with Abraham was eternal and inviolable, but it had grown into disregard from the lapse of time and the carelessness of mankind, and needed renewing — engraved on stone and written in a book, that the grace conferred on Abraham's race should never sink into oblivion. Yet the Law has a peculiar property: it covenants conditionally. Calvin therefore distinguishes the general doctrine Moses delivered, which everywhere holds forth the hope of pardon, from the special office imposed upon him, to demand perfect righteousness and promise a reward on no condition but that they fulfil whatever was enjoined; which is why Paul says the Law was added because of transgressions, sets it against the promise given to Abraham, and calls it the ministration of death. The preparation by terror follows: since men's minds are partly swollen with pride and partly stupefied by indifference, they must be either humbled or awakened before they will receive divine teaching, and none is prepared to obey God till he is bowed down and subdued by fear."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the charter from the other end and finds grace throughout. The maker and first mover of the covenant is God himself: nothing was said or done by this unthinking people towards it, no petition put up for God's favour, but the charter was granted purely out of his own good-will; free grace anticipates us with the blessings of goodness, and we love him and covenant with him because he first loved us and covenanted with us, God being the Alpha and therefore the Omega. He also notes the calculation that went wrong — in Egypt they had spoken of a three days' journey to the place of their sacrifice, and it proved almost a two months' journey, so often are we out in the reckoning of times. On the eagle he presses the figure hard: other birds carry their young in their talons, but the eagle upon her wings, so that archers who shoot flying cannot hurt the young unless they first shoot through the old one, which is what the pillar of cloud and fire did at the Red Sea; Egypt, that iron furnace, was the nest in which these young ones were hatched, and their way, so paved and so guarded, was glorious, but their end much more so — I brought you unto myself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that the same day has been read three ways, all with respectable arguments behind them: the same day of the month as that on which they left Egypt, a day of the same number as the month, or the first day of the month. He prefers the last and gives the arithmetic — forty-five days from the departure to the first of the third month, Moses going up on the second, three days granted the people to purify themselves, which brings us to the forty-ninth; and on the next, the fiftieth from the passover, the glory appeared. He notes that the hill has two peaks, Horeb being probably the older name, and Sinai coming from the seneh, the bush, or rather the thicket of bushes, in which the Angel appeared. Wesley, following Henry closely, makes the fifty days the point, in remembrance of which the feast of Pentecost was observed the fiftieth day after the passover, and in compliance with which the Spirit was poured out upon the apostles fifty days after the death of Christ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does 'the same day' of the third month mean?",
+    "positions": [
+     {
+      "position": "the first day of the month, which makes the giving of the Law the fiftieth day from the passover",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the same day of the month as the departure from Egypt, or a day of the same number as the month",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "reads the whole staging as preparation rather than event — the thunder and the fear exist to make a proud and indifferent people teachable before a word of law is spoken"
+   }
+  ],
   "themes": [
-   "In the third month, when the children of Israel were gone forth out of the land of Egypt, the same day came they into the wilderness of Sinai",
-   "Israel's arrival at Sinai in the third month",
-   "the mount of God, the place of the covenant and the law (Exodus 3:1, 12)",
-   "the providential timing - the law at Sinai, the Spirit at Pentecost (Acts 2)"
+   "the covenant renewed at Sinai",
+   "the fiftieth day and Pentecost",
+   "borne on eagles’ wings"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Israel encamping before Mount Sinai: 'for they were departed from Rephidim, and were come to the desert of Sinai, and had pitched in the wilderness; and there Israel camped before the mount' — Israel, having left Rephidim (the place of the water and the battle with Amalek, ch. 17), coming to the desert of Sinai and camping before the mount (Sinai/Horeb, the encampment at the holy mount, the place of the covenant, the people gathered before the mount of God); the desert of Sinai (the wilderness before the mount) — the encampment (the gathering of the people); 'there Israel camped before the mount' (Israel before Mount Sinai, the mount of God, Exodus 3:1; 19:1, the camp at the foot of the holy mount, the providence, the people gathered before the mount where God would descend, vv.16-20, the law given, ch. 20) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For they were departed from Rephidim, and were come to the desert of Sinai, and had pitched in the wilderness; and there Israel camped before the mount",
-   "Israel encamping before Mount Sinai",
-   "the camp at the foot of the holy mount (Exodus 3:1; 19:1)",
-   "the people gathered where God would descend and give the law (vv.16-20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
    "Charles Ellicott",
+   "Adam Clarke",
    "John Calvin",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses going up to God and the LORD's call from the mount: 'and Moses went up unto God, and the LORD called unto him out of the mountain, saying, Thus shalt thou say to the house of Jacob, and tell the children of Israel' — Moses going up the mount (toward God), and the LORD calling to him from the mountain (the mediator going up to God, Moses the go-between, ascending to receive God's word, the call, God speaking from the mount, the office of Moses, the mediator of the covenant, Galatians 3:19); Moses going up to God (the mediator, ascending the mount) — the office (Moses the channel between God and the people, the going-up to receive the word); 'Thus shalt thou say to the house of Jacob, and tell the children of Israel' (the message for Israel, the house of Jacob, the children of Israel, the covenant proposal, vv.4-6, the providence, the word that Moses would carry down to the people, the covenant offered) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses went up unto God, and the LORD called unto him out of the mountain, saying, Thus shalt thou say to the house of Jacob, and tell the children of Israel",
-   "Moses going up to God and the LORD's call from the mount",
-   "Moses the mediator of the covenant, ascending to receive God's word (Galatians 3:19)",
-   "the covenant proposal for Israel (vv.4-6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
+  "range": "2-5",
+  "pericope_label": "Eagles' wings, and a peculiar treasure",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "God bearing Israel on eagles' wings: 'ye have seen what I did unto the Egyptians, and how I bare you on eagles' wings, and brought you unto myself' — God appealing to what Israel had seen (the plagues, the Red Sea, the deliverance, the witnessed works, the ground of the covenant, God's prior grace, the appeal to experience, the redemption already wrought); the great image — 'how I bare you on eagles' wings, and brought you unto myself': God bearing Israel as on eagles' wings (the tender, mighty, protecting care of God in the deliverance, the witnesses noting the figure, the eagle stirring up her nest, bearing her young on her wings, Deuteronomy 32:11-12, 'as an eagle... beareth them on her wings: so the LORD alone did lead him' — the eagle's strong, swift, lofty flight, the speed and power of the deliverance, the eagle bearing her young on her wings, not in her talons, but on her back, the tender, protective care, sheltering them from below, the lesson — God's mighty and tender care of his people, carrying them out of Egypt, over every danger, swiftly and safely, the parental love of God, bearing his people as an eagle her young, Isaiah 63:9, 'in his love and in his pity he redeemed them... he bare them, and carried them'); 'and brought you unto myself' (the end of the deliverance, God bringing Israel to himself, to the mount, into covenant, into his service and fellowship, the redemption's purpose, not merely out of Egypt, but unto God, into communion with him, the providence, the people brought to God, to be his own, vv.5-6, a type of the redemption that brings us to God, 1 Peter 3:18, 'that he might bring us to God') — Keil and Delitzsch, Gill, Calvin, Wesley, Ellicott."
+    "summary": "Calvin reads the ascent as habit rather than event: Moses sought retirement, as he was wont, to take counsel of God, and going up to God means no more than that he went out of the camp, that far from the multitude he might inquire in secrecy what was God's pleasure — not choosing a lofty position to be nearer God, as the superstitious do, but withdrawing from disturbance to engage all his senses in learning. On the eagle he refuses the mechanism others build on: that eagles alone bear their young upon their wings he calls a foolish and truly Rabbinical gloss, the figure meaning rather that eagles lift their young to high places and accustom them to look at the sun, so that the people, carried as if above the clouds, had surmounted every obstacle. On the treasure he prefers a root meaning to mark with the owner's seal, a possession on which the owner has stamped his mark; and he takes the following clause adversatively, so that God exalts his grace by setting this one nation against the whole world."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports Bruce's contention that the word does not mean the eagle at all but the rachama, a bird the Arabs name for its kind disposition and its care in carrying its young upon its back. Wesley guards the metaphor of the treasure from the obvious misreading: not that God was enriched by them as a man is by his treasure, but that he valued them as a man does his treasure, keeping them under special care as a thing kept under lock and key."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott works the ground itself, placing Rephidim in the Wady Feiran and the march from it at eighteen or twenty-five miles according to the valley taken, and identifying the wilderness of Sinai with Er Rahah — a plain two miles long by half a mile wide, enclosed between precipitous ranges of granite with the prodigious block of Ras Sufsafeh at its end, nearly flat, and better supplied with water than any spot in the peninsula; and he notes what will matter later, that the Ras Sufsafeh is visible from every part of the plain. He observes that Moses was called while still on his way, and spares a sentence for it: God meets us half-way when we arise and go to him. On the eagle he takes the received account, that when its young are first fledged the eagle assists their flight by flying beneath them so that they may settle upon its wings. He derives the treasure from a root meaning to earn or acquire, a possession the owner got by his own exertions, God viewing Israel as made his own by the long series of mighty works done for their deliverance; the word stands here for the first time and afterwards becomes a standing epithet for the nation. On 'for all the earth is mine' he pulls against Calvin, taking it as a check on any exclusive reading, since in claiming a peculiar right in Israel God does not mean to separate himself from the other nations or give them up to their own devices — Israel is the favoured son, but the rest are all of them children of the Most High. Keil denies Ellicott's geography outright: the desert of Sinai is not er Rahah, which lies north of Horeb, but the desert in front of the mountain; and he argues from usage, since the mountain is called Sinai throughout Israel's stay and the encampment always the desert of Sinai, never of Horeb. On the treasure he says segullah means not property in general but valuable property, what is laid by or put aside, a treasure of silver and gold."
    }
   ],
   "debates": [
    {
-    "question": "What does 'I bare you on eagles' wings' signify?",
-    "sides": [
+    "question": "Is the wilderness of Sinai the plain of Er Rahah?",
+    "positions": [
      {
-      "position": "The mighty, tender, protecting care of God in the deliverance (Deuteronomy 32:11-12; Isaiah 63:9) - the eagle bearing her young on her wings, the swift and safe redemption; 'brought you unto myself' - the end of the redemption, to bring Israel to God, into covenant and fellowship (1 Peter 3:18)",
+      "position": "yes — a plain under Ras Sufsafeh, visible from every part, and better watered than anywhere in the peninsula",
       "holders": [
-       "Calvin",
-       "Wesley",
-       "Gill",
-       "Keil and Delitzsch",
-       "the reformed reading"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "no — er Rahah lies north of Horeb; the desert of Sinai is the ground in front of the mountain",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does 'for all the earth is mine' add?",
+    "positions": [
+     {
+      "position": "an adversative — God exalts his grace by setting this one nation against the whole world",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "a check on exclusiveness — God does not thereby give up the other nations, who are also children of the Most High",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Ye have seen what I did unto the Egyptians, and how I bare you on eagles' wings, and brought you unto myself",
-   "God bearing Israel on eagles' wings (the crux of the tender deliverance)",
-   "the mighty, tender, protecting care of God (Deuteronomy 32:11-12; Isaiah 63:9)",
-   "'brought you unto myself' - the redemption that brings his people to God (1 Peter 3:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The covenant condition and Israel as God's peculiar treasure: 'now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine' — God setting the covenant condition: if Israel would obey his voice and keep his covenant, they would be his peculiar treasure (the covenant terms, obedience the condition of the blessing, the engagement, the covenant of Sinai, the people called to obedience); 'a peculiar treasure unto me above all people' — Israel God's 'peculiar treasure' (Hebrew segullah, a special possession, a treasured property, a jewel) above all people (the election, Israel chosen, set apart, God's own special people, Deuteronomy 7:6; 14:2; 26:18; Psalm 135:4, the lesson — God's people his treasured possession, the church his jewels, Malachi 3:17, 'they shall be mine... in that day when I make up my jewels,' the peculiar people, Titus 2:14; 1 Peter 2:9, 'a peculiar people,' the value God sets on his own); 'for all the earth is mine' (the ground of the choice, God, who owns all the earth, chose Israel for his own, not from need, but of grace, the sovereign election, choosing one nation though all are his, the sovereignty, all the earth God's, yet Israel his special treasure, the providence, the free, sovereign choice of grace) — Ellicott, Gill, Calvin, Wesley."
+    "voice": "Calvin",
+    "note": "dismisses as a Rabbinical gloss the very detail — that the eagle alone carries its young on its wings — on which Henry builds the chapter's most famous image"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "Now therefore, if ye will obey my voice indeed, and keep my covenant, then ye shall be a peculiar treasure unto me above all people: for all the earth is mine",
-   "the covenant condition and Israel as God's peculiar treasure",
-   "Israel God's special possession, his jewels (Deuteronomy 7:6; Malachi 3:17; 1 Peter 2:9)",
-   "chosen of sovereign grace, though all the earth is God's"
+   "where Israel encamped",
+   "what the eagle figure carries",
+   "a peculiar treasure, and the rest of the earth"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "6": {
@@ -208,138 +195,88 @@
    "John Calvin",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "6-8",
+  "pericope_label": "A kingdom of priests, and the people's answer",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Israel called a kingdom of priests and a holy nation: 'and ye shall be unto me a kingdom of priests, and an holy nation. These are the words which thou shalt speak unto the children of Israel' — the title — 'ye shall be unto me a kingdom of priests, and an holy nation': God designing Israel to be a kingdom of priests and a holy nation (the witnesses expounding — a 'kingdom of priests,' a royal priesthood, all the people in a sense priests, near to God, offering spiritual service, mediating between God and the nations, the whole nation consecrated to God's service, though the Aaronic priesthood was a special order within, the lesson — the priestly calling of God's people, the church a royal priesthood, the fulfillment in the New Testament, 1 Peter 2:9, 'ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people'; Revelation 1:6, 'hath made us kings and priests unto God'; 5:10; 20:6, the access of all believers to God, the priesthood of all the faithful, offering the sacrifices of praise, Hebrews 13:15; Romans 12:1, the nation set apart for God's worship and service); 'an holy nation' (Israel a nation set apart, consecrated, holy, separated unto God from the nations, the holiness, the people called to be holy, as God is holy, Leviticus 11:44-45; 19:2; 1 Peter 1:15-16, the separation unto God, the holy nation, distinct from the world, dedicated to God's service); 'these are the words which thou shalt speak unto the children of Israel' (the covenant words for Israel, the high calling, the priestly and holy nation, the providence, the calling that Israel would receive, vv.7-8, the type of the church, the royal priesthood, the holy nation, 1 Peter 2:9) — Calvin, Wesley, Keil, Gill."
+    "summary": "Gill reads the phrase against their recent history: instead of servitude they are erected into a kingdom, a free state governed by its own laws, and those of God's making, with God himself more immediately their king. He passes on Jarchi's alternative, a kingdom of princes, illustrated from the Roman senate, of which the ambassador of Pyrrhus said he had seen at Rome as many kings as senators; and he notes that all the Targums render the phrase kings and priests. Calvin agrees that both honours are meant, and prefers this reading to the passive one that makes God their king, because it is the reading Peter takes up — and when the Jews who had refused Christ still gloried in the title, Peter claimed the honour for the members of Christ only, since Christ appeared invested with kingdom and priesthood in order to confer both upon his members. On the holiness he takes the middle course, that the nation is called holy not with reference to piety or personal holiness but as set apart by special privilege, yet upon this kind of sanctification the other depends, since those exalted by God's favour should cultivate holiness and so on their part sanctify God. On the people's answer he knows what follows and refuses either to excuse it or to call it a lie: soon after they relapsed and did not keep their promise in the smallest degree, yet we may believe they spoke without dissembling, and that without any intention of deceiving God they were carried away by a headlong zeal and deceived themselves. Moses does not reproach them with having lied; by recording how ready they were to obey, he deprives them hereafter of all pretence of ignorance — so let us sift ourselves, lest we rashly promise more than we are able to perform."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke will not distinguish official from personal holiness at all. They should be a holy nation, saved from their sins, righteous in their conduct, holy in their hearts, every external rite being not only a significant ceremony but a means of conveying light and life, grace and peace to everyone who conscientiously used it — an institution which could not receive its perfection except under the Gospel. Wesley finds more in the elders' hearing than a relay of information: Moses not only explained what God had given him in charge but put it to their choice whether they would accept these promises on these terms, and his laying it to their faces speaks his laying it to their consciences."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott divides the two words and gives each its content: kings as lords over themselves, equals one to another, owing allegiance to God only; priests as entitled to draw near to God in prayer without an intermediary, to bring him their offerings and pay him their vows — privileges which Peter and John declare to belong to all Christians. On the second phrase he is explicit that it is not the duty of personal but the privilege of official holiness that is intended: each Israelite was to be as near to God, as fully entitled to approach him, as the priests of other nations either were or thought themselves; personal holiness was the natural outcome of that official holiness, but is not what the words say. He explains the machinery of the answer, the elders being the usual channel between Moses and the people, reporting his words to them and theirs to him, and flags the translation, since before their faces is a curious literalism for what in Moses' time was a mere preposition meaning before. On the answer itself he catches its temper: no hesitation, no diversity of opinion, no self-distrust, and in the glow and warmth of their feelings the difficulty of perfect obedience did not occur to them. Keil observes that God, being holy, could not come into direct intercourse with a sinful nation, and was about to conclude the covenant through a mediator, who therefore required special credentials."
    }
   ],
   "debates": [
    {
-    "question": "What does 'a kingdom of priests, and an holy nation' signify?",
-    "sides": [
+    "question": "What kind of holiness does 'an holy nation' name?",
+    "positions": [
      {
-      "position": "The priestly and consecrated calling of God's people, fulfilled in the church (1 Peter 2:9, 'a royal priesthood, an holy nation'; Revelation 1:6; 5:10) - the priesthood of all believers, the access to God and the offering of spiritual sacrifices (Hebrews 13:15; Romans 12:1); the holy nation set apart unto God (Leviticus 11:44-45; 1 Peter 1:15-16)",
+      "position": "official, not personal — the privilege of access, of which personal holiness is the natural outcome but not the sense",
       "holders": [
-       "Calvin",
-       "Wesley",
-       "Keil and Delitzsch",
-       "Gill",
-       "the reformed reading"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "positional, but with personal holiness depending on it as its proper fruit",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "personal and moral — saved from their sins, righteous in conduct, holy in heart",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Wesley",
+    "note": "reads the laying of the words before the elders' faces as putting the covenant to their choice, and so to their consciences, rather than merely announcing it"
+   }
+  ],
   "themes": [
-   "And ye shall be unto me a kingdom of priests, and an holy nation. These are the words which thou shalt speak unto the children of Israel",
-   "Israel called a kingdom of priests and a holy nation (the crux of the priestly people)",
-   "the priestly calling fulfilled in the church, the royal priesthood (1 Peter 2:9; Revelation 1:6; 5:10)",
-   "the holy nation set apart unto God (Leviticus 11:44-45; 1 Peter 1:15-16)"
+   "kings and priests, and what the words grant",
+   "official holiness or personal",
+   "a promise made in the glow of the moment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses laying God's words before the elders: 'and Moses came and called for the elders of the people, and laid before their faces all these words which the LORD commanded him' — Moses coming down (from the mount, v.3) and calling the elders (the representatives of the people), laying before them all the words God had commanded (the covenant proposal, vv.4-6, the faithful delivery, Moses declaring all God's words, keeping nothing back, the mediator's office, carrying God's word to the people through their elders); the elders (the heads, the representatives of the people) — the assembly (the people addressed through their elders); 'laid before their faces all these words which the LORD commanded him' (Moses declaring all God's words, the whole covenant proposal, faithfully, the fidelity of the mediator, keeping back nothing, Acts 20:27, declaring all the counsel of God, the providence, the covenant offered to the people, their answer, v.8) — JFB, Gill, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses came and called for the elders of the people, and laid before their faces all these words which the LORD commanded him",
-   "Moses laying God's words before the elders",
-   "the faithful mediator declaring all God's word, keeping nothing back (Acts 20:27)",
-   "the covenant offered to the people through their elders"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The people's promise to obey the covenant: 'and all the people answered together, and said, All that the LORD hath spoken we will do. And Moses returned the words of the people unto the LORD' — the people, with one voice, promising to do all the LORD had spoken (the covenant accepted, the people engaging to obey, the unanimous consent, the whole people, together, the engagement, the vow of obedience, repeated, Exodus 24:3, 7); the people's vow (to do all God commanded) — the witnesses weighing it: the promise sincere in its way, yet made in self-confidence (the people not knowing their own weakness, soon to break the covenant, the golden calf, ch. 32; Deuteronomy 5:27-29, 'O that there were such an heart in them,' the lesson — the covenant of works, do this and live, that the people could not keep, driving to the need of grace, the law a schoolmaster to Christ, Galatians 3:24, the engagement that exposed the weakness of the flesh); 'Moses returned the words of the people unto the LORD' (Moses carrying the people's answer back to God, the mediator going between, up and down the mount, the office, Moses the go-between, the covenant ratified through him, the providence, the covenant engaged, the preparation for the giving of the law, vv.9-25) — Keil and Delitzsch, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How is the people's 'All that the LORD hath spoken we will do' to be regarded?",
-    "sides": [
-     {
-      "position": "Sincere in its way, yet made in self-confidence - the people not knowing their own weakness, soon to break the covenant (ch. 32; Deuteronomy 5:27-29); the covenant of works they could not keep, driving to the need of grace (the law a schoolmaster to Christ, Galatians 3:24)",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And all the people answered together, and said, All that the LORD hath spoken we will do. And Moses returned the words of the people unto the LORD",
-   "the people's promise to obey the covenant",
-   "the vow of obedience, sincere yet self-confident, soon broken (Exodus 24:3; Deuteronomy 5:27-29)",
-   "the covenant of works driving to the need of grace (Galatians 3:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
@@ -348,72 +285,87 @@
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God coming in the cloud to confirm Moses' mediation: 'and the LORD said unto Moses, Lo, I come unto thee in a thick cloud, that the people may hear when I speak with thee, and believe thee for ever. And Moses told the words of the people unto the LORD' — God announcing he would come in a thick cloud (the visible token of his presence, the cloud veiling his glory) and speak with Moses in the people's hearing (the theophany announced, God's descent in the cloud, vv.16-20, the purpose, that the people might hear God speaking with Moses); the people hearing God speak with Moses (the audible confirmation) — the witness to Moses' mission (the people made to hear God's voice); 'and believe thee for ever' (the purpose: that the people might believe Moses for ever, his mission confirmed by hearing God speak with him, the establishing of the mediator, Moses' authority confirmed, that the people might trust him and his word, the law, the providence, the theophany confirming Moses as God's prophet, a type of Christ, the Mediator confirmed by the voice from heaven, Matthew 17:5, 'hear ye him') — Henry, Gill, Calvin, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Moses, Lo, I come unto thee in a thick cloud, that the people may hear when I speak with thee, and believe thee for ever",
-   "God coming in the cloud to confirm Moses' mediation",
-   "the people to hear God speak with Moses, confirming his mission (vv.16-20)",
-   "the mediator established, a type of Christ confirmed from heaven (Matthew 17:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "9-10",
+  "pericope_label": "The thick cloud, and the sanctifying of the people",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The command to sanctify the people for God's coming: 'and the LORD said unto Moses, Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes' — God commanding Moses to sanctify (consecrate, set apart, prepare) the people two days, and to have them wash their clothes (the preparation for God's coming, the people made ready to meet God, vv.11, the consecration, the outward washing a sign of inward purity); the sanctifying (the consecration, the setting apart, the preparation for the holy meeting) — the readiness required to approach God (the lesson, the need of holiness to draw near to God, Hebrews 12:14, 'without which no man shall see the Lord'); 'let them wash their clothes' (the washing of the clothes, the outward cleansing, a sign of the inward purity required to meet God, the lesson, the cleansing needed to approach God, the type of the washing of regeneration, Titus 3:5, the garments washed in the blood of the Lamb, Revelation 7:14, the providence, the preparation for the theophany, vv.11, 16) — Ellicott, Gill, Calvin, Wesley."
+    "summary": "Calvin builds a rule of authority on the stated purpose of the cloud. By a manifest symbol of his glory God would make it evident that the Law proceeded not from Moses, who merely delivered faithfully what he had received from heaven; and there is no other mode of proving a doctrine than the assurance that it comes from God alone. That levels every teacher: if the mightiest of the prophets obtained credit on no other ground than that he bore God's commands, how foolish and impudent it is in teachers who sink far beneath him to aim at a higher point. Nor was the credit meant to last a short time, for the call of some is temporary, but God so appeared to Moses as to consecrate the truth of his doctrine in all ages. On the command to sanctify the people he adds the reason for insisting at all, that God would not cast pearls before swine, and turns it on the reader: it is the just reward of profanation that so many readers or hearers profit nothing by heavenly doctrine, because they rush in without fear or reverence, as to some ridiculous stage play. He then raises the objection himself — if faith purifies the heart, and understanding goes before faith since faith comes by hearing, is not the order inverted when the people are sanctified before they hear the Law? — and answers that faith alone truly purifies, but this does not prevent the fear of God going before to prepare a place for the word, a pious desire of learning being properly the commencement of faith."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives the veil a second office: the thick cloud was to prohibit curious enquiries into things secret and to command an awful adoration of what was revealed, so that though they saw no manner of similitude they should see enough to convince them that God was among them of a truth. On the washing he keeps the outward act tied to the inward: not that God regards our clothes, but while they were washing them he would have them think of washing their souls by repentance — it becomes us to appear in clean clothes when we wait upon great men, and clean hearts are required in our attendance on the great God, who sees them as plainly as men see our clothes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the cloud against the next paragraph, where the mount is altogether on a smoke, and marks the contrast with the pillar's usual appearance, generally clear and luminous. On the washings he holds that the heathens borrowed their purifications before sacrifice from these institutions, examples of which abound in the Greek and Latin writers."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott puts the necessity of the veil as a paradox: though God is light — nay, because he is light — clouds and darkness are round about him, and he must be closely veiled when he draws near to men, since otherwise they could not endure for a moment the brightness of his presence. He asks whether the stated purpose was achieved and answers that on the whole it was: God has remained to the Israelites, for more than three millennia, an awful power, real, personal, tremendous, and the Law has remained the guide of their life — though the living Moses was often resisted and contemned, the dead Moses has been reverenced and obeyed from his death to the present time. On sanctification he divides it in two: the real preparation for approach to God is inward, but no external command can secure that, so Moses was instructed to issue directions for outward purification, and it was left to the people's spiritual insight to perceive that such purity symbolised and required the internal kind as its counterpart. He records only that the same idea prevailed in Egypt, Greece and Rome."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How do the purifications here relate to those of the heathen nations?",
+    "positions": [
+     {
+      "position": "the heathens borrowed their washings before sacrifice from these institutions",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the same idea simply prevailed in Egypt, Greece and Rome, as a natural extension of the notion that ablution cleanses",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "tests the verse's stated aim against three thousand years of history and delivers a verdict on it — that the dead Moses has been obeyed as the living Moses was not"
+   }
+  ],
   "themes": [
-   "And the LORD said unto Moses, Go unto the people, and sanctify them to day and to morrow, and let them wash their clothes",
-   "the command to sanctify the people for God's coming",
-   "the consecration and cleansing required to meet God (Hebrews 12:14)",
-   "the washing a type of the washing of regeneration (Titus 3:5; Revelation 7:14)"
+   "why God comes veiled",
+   "credentials for the mediator",
+   "outward washing and inward cleansing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "11": {
@@ -421,193 +373,87 @@
    "John Gill",
    "Keil and Delitzsch",
    "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD's coming down on the third day: 'and be ready against the third day: for the third day the LORD will come down in the sight of all the people upon mount Sinai' — the people to be ready by the third day, when the LORD would come down on Mount Sinai in the sight of all (the appointed day, the theophany, vv.16-20, the descent of God, in the sight of all the people, the great meeting, God coming down to the mount); the people to be ready (prepared, sanctified) by the third day — the appointed time (the preparation completed); 'the LORD will come down in the sight of all the people upon mount Sinai' (the LORD coming down on Sinai, the theophany, the descent in fire and cloud, vv.16-18, the visible manifestation, in the sight of all the people, the providence, God descending to give the law, the awful majesty of the coming, Psalm 68:8; Habakkuk 3:3-6) — Keil and Delitzsch, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And be ready against the third day: for the third day the LORD will come down in the sight of all the people upon mount Sinai",
-   "the LORD's coming down on the third day",
-   "God descending in awful majesty to give the law (vv.16-20; Psalm 68:8)",
-   "the visible manifestation in the sight of all the people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "11-15",
+  "pericope_label": "The bounds set about the mount",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The bounds set about the mount: 'and thou shalt set bounds unto the people round about, saying, Take heed to yourselves, that ye go not up into the mount, or touch the border of it: whosoever toucheth the mount shall be surely put to death' — Moses to set bounds (a barrier, a limit) around the mount, warning the people not to go up or even touch the border (the separation, the people kept at a distance from the holy mount, the fencing of the holy, the mount made sacred by God's presence, not to be approached); the unapproachable holiness — the people forbidden even to touch the mount (the witnesses noting the lesson — the terror and unapproachableness of God's holiness under the law, the people kept at a distance, the mount that 'might be touched' yet must not be, the law a ministration of distance and dread, Hebrews 12:18-21, 'ye are not come unto the mount that might be touched... and so terrible was the sight, that Moses said, I exceedingly fear and quake,' the contrast with the gospel, the access under grace, Hebrews 12:22-24, 'ye are come unto mount Sion... and to Jesus the mediator,' the new and living way, Hebrews 10:19-22, the rent veil, Matthew 27:51, the law that kept sinners at a distance, the gospel that brings near, the holiness of God that the sinner cannot approach but through the Mediator); 'whosoever toucheth the mount shall be surely put to death' (the death penalty for touching the mount, the severity of the law, the holiness that destroys the presumptuous, vv.13; Hebrews 12:20, 'if so much as a beast touch the mountain, it shall be stoned,' the terror of the law, the providence, the bounds teaching the distance between the holy God and sinful man, until the Mediator) — Ellicott, Gill, Calvin, Wesley."
+    "summary": "Gill guesses at what the barrier was made of — a drawn line, a ditch, heaps of stones or sand, or the bushes and branches that grew thick on the mount — and reads the disputed clause as meaning that no man should follow the transgressor to lay hold on him, but dispatch him at once. He closes the preparation with Aben Ezra's guess that perhaps not a man slept that night, so as to hear the voice of the Lord in the morning, as the high priest used to keep awake before the day of atonement. Calvin turns the barrier into a rule for readers. By this symbol the people were admonished to restrain their inquisitiveness, since God by the teaching of his Law enlightens only those who are as little children; all would have wished to come like Moses to familiar converse with God, and are commanded instead to stand within the boundaries. What was enjoined then extends to us: in reading and hearing we should not overpass the limits God assigns, but content with the doctrine he delivers, let alone what he would have concealed, and not be offended that he speaks from afar. On the clause about touching he differs from the others — Moses' object was to make such men detestable, commanding them killed at a distance, as if whoever touched them even with a finger would contract pollution, so that they were avoided as accursed lest they infect others by their contagion. And he reads the permission to come up at the trumpet as an assurance to the whole nation, given lest the people should think themselves rejected and, offended by the ignominy of the repulse, abandon their desire for the Law."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke cannot tell whether the bounds were a marked line or an actual fence, nor whether they ran all round the mountain or only along one wing of the camp. He agrees that the offender was to be treated as an unclean and accursed thing, not to be touched for fear of conveying defilement. His boldest suggestion concerns the abstinence: since the verse forbids approaching a mountain burning with fire, the phrase rendered come not at your wives may rather mean come not near unto the fire, ishshah being esh transposed, for which he offers parallels of alternate forms. Wesley draws the comparison that follows from the barrier: noticing the distance at which worshippers were then kept should make us value the more our boldness to enter into the holiest."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott insists the barrier was artificial, dismissing Stanley's suggestion that a line of natural mounds near the base represents it, though allowing that Moses' fence may have followed the natural line; and he explains why one was needed, since travellers observe how abruptly the precipice of Ras Sufsafeh rises from the plain, so that in many places a man may stand on level ground and still touch the mountain. He names the impulse it was against: unless it had been forbidden there might have seemed no reason why pious Israelites should not climb the height to draw near to God in prayer — a praiseworthy feeling, the one that breathes in the words nearer, my God, to thee, but the nation was not fit for close approach. On the mistranslated clause he is decisive, that there shall not a hand touch it should be him, and explains the point of it: to stop the man and seize him another person would have to cross the bounds himself and repeat the very act forbidden, so he was to be stoned or transfixed with arrows from within the barrier. On the permission to come up he holds the word they emphatic, referring to privileged persons such as Moses and Aaron and not to the people at all. On the abstinence he records that it was the general sentiment of antiquity that a ceremonial uncleanness attached even to the chastest connection, a view held by the Greek and Roman writers, by the Levitical law, and by the Indian, Persian and Mahometan codes. Keil summarises the two-part preparation, sanctification by washing and abstinence, and the hedging of the people by a barrier erected round the mountain."
    }
   ],
   "debates": [
    {
-    "question": "What do the bounds about the mount teach?",
-    "sides": [
+    "question": "Who is permitted to come up when the trumpet sounds long?",
+    "positions": [
      {
-      "position": "The terror and unapproachableness of God's holiness under the law (Hebrews 12:18-21) - the people kept at a distance, the mount not to be touched on pain of death (Hebrews 12:20); the contrast with the gospel access (Hebrews 12:22-24; 10:19-22), the law keeping sinners at a distance, the gospel bringing near through the Mediator",
+      "position": "certain privileged persons only — Moses and Aaron, the pronoun being emphatic and excluding the people",
       "holders": [
-       "Calvin",
-       "Wesley",
-       "Gill",
-       "Ellicott",
-       "the reformed reading"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the people, conditionally — an assurance given lest they think themselves rejected",
+      "holders": [
+       "John Calvin",
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "And thou shalt set bounds unto the people round about... that ye go not up into the mount, or touch the border of it: whosoever toucheth the mount shall be surely put to death",
-   "the bounds set about the mount (the crux of the unapproachable holiness)",
-   "the terror and distance of God's holiness under the law (Hebrews 12:18-21; 12:20)",
-   "the contrast with the gospel access through the Mediator (Hebrews 12:22-24; 10:19-22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The severity of the bound and the trumpet's call: 'there shall not an hand touch it, but he shall surely be stoned, or shot through; whether it be beast or man, it shall not live: when the trumpet soundeth long, they shall come up to the mount' — whoever (or whatever) touched the mount to be stoned or shot through (not touched by hand, lest the executioners be defiled, the offender killed at a distance, the severity, man or beast, none to live, Hebrews 12:20, the terror of the holiness, the mount so sacred that even a beast touching it must die); the death of man or beast (the inviolable holiness of the mount) — the terror of the law (the unapproachable holiness, Hebrews 12:20); 'when the trumpet soundeth long, they shall come up to the mount' (the trumpet, the signal, by which the people might approach, only when summoned, and only to the bounds, not into the mount, the appointed approach, the people drawing near at God's call, by the trumpet, the herald of the theophany, vv.16, 19, the providence, the trumpet a type of the call of God, the last trump, 1 Corinthians 15:52; 1 Thessalonians 4:16) — JFB, Gill, Calvin, Wesley."
+    "voice": "Clarke",
+    "note": "proposes that 'come not at your wives' is a misreading of a warning not to approach the fire, ishshah standing for esh transposed"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "There shall not an hand touch it, but he shall surely be stoned, or shot through; whether it be beast or man, it shall not live: when the trumpet soundeth long, they shall come up to the mount",
-   "the severity of the bound and the trumpet's call",
-   "the inviolable holiness, man or beast touching it must die (Hebrews 12:20)",
-   "the people approaching only at God's call, by the trumpet (1 Corinthians 15:52)"
+   "why a fence was needed at all",
+   "not a hand shall touch him",
+   "who may come up at the trumpet"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses sanctifying the people as commanded: 'and Moses went down from the mount unto the people, and sanctified the people; and they washed their clothes' — Moses coming down and sanctifying (consecrating, preparing) the people as God had commanded (v.10), and they washing their clothes (the carrying-out of the command, the preparation completed, the people made ready for the theophany, vv.16, the consecration); Moses sanctifying the people (consecrating, preparing them, as commanded, v.10) — the obedience (the people prepared); 'they washed their clothes' (the outward washing, the sign of the inward purity, v.10, the preparation completed, the providence, the people made ready to meet God, vv.16, the cleansing required for the holy meeting) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses went down from the mount unto the people, and sanctified the people; and they washed their clothes",
-   "Moses sanctifying the people as commanded",
-   "the preparation completed, the people made ready for the theophany (v.10)",
-   "the cleansing required for the holy meeting with God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The charge of purity before meeting God: 'and he said unto the people, Be ready against the third day: come not at your wives' — Moses charging the people to be ready by the third day, and to abstain from their wives (conjugal relations) in the interval (the charge of purity, the abstinence a part of the consecration, the setting apart for the holy meeting, the preparation, the bodily purity a sign of the reverence and holiness required to meet God); the charge to be ready (by the third day, the appointed time, v.11) — the preparation (the people made ready); 'come not at your wives' (the temporary abstinence, a part of the consecration, the lawful use of marriage set aside for a season of special devotion, 1 Corinthians 7:5, 'that ye may give yourselves to... prayer,' the reverence, the bodily purity for the holy meeting, the setting apart unto God, the providence, the people prepared in body and spirit to meet God, vv.16) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto the people, Be ready against the third day: come not at your wives",
-   "the charge of purity before meeting God",
-   "the abstinence a part of the consecration (1 Corinthians 7:5)",
-   "the bodily purity and reverence required for the holy meeting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
@@ -616,298 +462,239 @@
    "Matthew Henry",
    "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Charles Ellicott"
   ],
+  "range": "16-17",
+  "pericope_label": "The third day: thunders, lightnings, and the trumpet",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The awful theophany at Sinai: 'and it came to pass on the third day in the morning, that there were thunders and lightnings, and a thick cloud upon the mount, and the voice of the trumpet exceeding loud; so that all the people that was in the camp trembled' — the awful manifestation — on the third day, the LORD coming down on Sinai with thunders and lightnings, a thick cloud, and the loud, ever-louder trumpet, so that the people trembled (the witnesses noting the terror of the theophany — the dreadful majesty of God descending to give the law, the thunders, lightnings, cloud, fire, smoke, trumpet, earthquake, vv.16-18, the lesson — the terror of the law, the law given amid dread and majesty, to show the holiness and justice of God, and the terror of sin, Hebrews 12:18-21, 'blackness, and darkness, and tempest, and the sound of a trumpet, and the voice of words,' the contrast with the gospel, Sinai's terror against Zion's grace, Hebrews 12:22-24, the law a ministration of death and condemnation, 2 Corinthians 3:7-9, given in terror, that the gospel might be received in grace, the awful holiness and majesty of the Lawgiver); the trumpet (the supernatural, ever-louder trumpet, v.19, not of human making, the herald of God's coming) — the awful summons (the sound that made the people tremble, a type of the trump of God, the last day, 1 Thessalonians 4:16; Hebrews 12:19); 'all the people that was in the camp trembled' (the people trembling, in terror at the manifestation, the dread of the holy God, the providence, the terror that prepared the people to receive the law, the fear of God, Exodus 20:18-20, the law that worketh wrath, Romans 4:15) — Calvin, Wesley, Henry, Gill."
-   }
-  ],
-  "debates": [
+    "summary": "Gill fixes the day as the sixth of Sivan, which the Jews generally hold to be when the law was given, and reports that they are sometimes particular enough to name the hour. He supposes that a people already panicking at the sound came out of the camp with difficulty, and that nothing short of Moses going at their head could have prevailed on them to leave it. Calvin sees a double purpose in the terror and will not let either half go. Partly it was to set the presence of God before their eyes, that his majesty might urge the beholders to obedience and vindicate his doctrine from contempt; partly it was to express the nature of the Law, which in itself produces nothing but mere terror, being given to cite slumbering consciences to the judgment-seat, that through fear of eternal death they might flee for refuge to God's mercy. He notes that the same fear belongs to the Gospel, since God who shook the earth at the promulgation of the Law promises through the prophet to shake heaven and earth once more at the coming of Christ. And yet the prodigies were not meant to drive the people away: they are commanded to go and meet God, presenting themselves with minds ready unto obedience, which could not be unless they heard in the Law something besides precepts and threatenings — God's covenant, Calvin says, was no less lovely than alarming."
+   },
    {
-    "question": "What does the theophany at Sinai teach?",
-    "sides": [
-     {
-      "position": "The terror of the law - the dreadful majesty of God descending to give the law (thunders, lightnings, cloud, trumpet, fire, smoke), the terror that made the people tremble (Hebrews 12:18-21); the law a ministration of death and terror (2 Corinthians 3:7-9), in awful contrast with the gospel of grace (Hebrews 12:22-24)",
-      "holders": [
-       "Calvin",
-       "Wesley",
-       "Henry",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "And it came to pass on the third day in the morning, that there were thunders and lightnings, and a thick cloud upon the mount, and the voice of the trumpet exceeding loud; so that all the people that was in the camp trembled",
-   "the awful theophany at Sinai (the crux of the terror of the law)",
-   "the dreadful majesty of God giving the law, the people trembling (Hebrews 12:18-21)",
-   "the law a ministration of death, in contrast with the gospel of grace (2 Corinthians 3:7-9; Hebrews 12:22-24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry stages the whole thing as a sermon. The preacher was God himself, who descended in fire; the pulpit, or throne rather, was the mountain, hung with a thick cloud, covered with smoke, and made to quake greatly, so that Sinai itself, rough and rocky as it was, melted from before the Lord God of Israel. The congregation was called together by a trumpet exceeding loud and waxing louder, and the introductions to the service were the thunders and lightnings, whose purpose he puts as two questions: were the people asleep? the thunders would waken them; were they looking another way? the lightnings would turn their faces towards him that spoke. Thunder is the voice of God and lightning the fire of God, engaging the two senses by which we take in most of what we know. On Moses leading the people out he stops for a sentence worth keeping: he that had led them out of the bondage of Egypt now led them to receive the law from God's mouth, and public persons are indeed public blessings when they lay out themselves to promote the public worship of God — Moses at the head of an assembly worshipping God was as truly great as Moses at the head of an army in the field."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke can imagine the storm but not the trumpet: of the thunders, and of the deep, dark, dismal cloud from which they proceeded, we can form a tolerable apprehension, but of that loud, long-sounding blast we can scarcely form a conjecture, unless it were something like the trumpet of the angel who swears that there shall be time no longer. He also reads the staging as evidence — some particular proof of God's being and power was necessary if a people so deplorably prone to idolatry were to be kept from it, and the proof was given in a form that left no room for suspecting Moses of a cheat. He makes much of the three days' notice: it gave them time to sanctify themselves, and gave any sceptic among them full opportunity to take every precaution against being imposed on, so that the previous warning strongly serves the cause of revelation. Wesley reproduces Henry's account of the day almost word for word."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Moses bringing the people to meet God at the mount: 'and Moses brought forth the people out of the camp to meet with God; and they stood at the nether part of the mount' — Moses leading the people out of the camp to meet God, and they standing at the foot (nether part) of the mount (the bringing to God, the people set before the holy mount, the meeting, the people gathered to receive God's word, the standing at the foot, within the bounds, not on the mount, vv.12); Moses bringing the people to meet God (the gathering before the mount) — the solemn meeting (the people brought to God); 'they stood at the nether part of the mount' (the people at the foot of the mount, within the bounds, v.12, the awful nearness, yet kept at a distance, the providence, the people gathered to hear God, the giving of the law, ch. 20) — Keil and Delitzsch, Gill, Calvin, Ellicott."
+    "summary": "Ellicott fixes the ground: an open space must have lain between the camp and the bounds, and into this Moses led the people, as near to God as was permitted, in the plain directly in front of Ras Sufsafeh and almost under it. Keil summarises the sequence of the theophany, the smoke and fire of the descent, the quaking of the whole mount, and the voice by which God answered Moses aloud."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "treats the three days' notice as an evidential argument — the delay gave any sceptic time to look for the trick, which is why the warning tells in favour of the revelation rather than against it"
+   }
+  ],
   "themes": [
-   "And Moses brought forth the people out of the camp to meet with God; and they stood at the nether part of the mount",
-   "Moses bringing the people to meet God at the mount",
-   "the people gathered before the holy mount to hear God's word",
-   "standing at the foot, within the bounds (v.12)"
+   "the theophany as a sermon",
+   "terror in the service of doctrine",
+   "evidence enough to exclude imposture"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "Adam Clarke"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mount Sinai in fire and smoke at God's descent: 'and mount Sinai was altogether on a smoke, because the LORD descended upon it in fire: and the smoke thereof ascended as the smoke of a furnace, and the whole mount quaked greatly' — the whole mount wrapped in smoke because the LORD descended on it in fire, the smoke rising like a furnace, the whole mount quaking (the awful manifestation, the fire the token of God's presence and holiness, Deuteronomy 4:11-12, 24, 'the LORD thy God is a consuming fire,' the descent in fire, the majesty and terror of God); the LORD descending in fire (the token of his presence, holiness, and consuming justice, Hebrews 12:29, 'our God is a consuming fire') — the awful manifestation (the holiness that consumes); 'the smoke thereof ascended as the smoke of a furnace, and the whole mount quaked greatly' (the smoke like a furnace, the mount quaking, the earthquake, Psalm 68:8; 114:7, 'tremble, thou earth, at the presence of the Lord'; Habakkuk 3:6, 10, the terror of the theophany, the very earth trembling at God's coming, the providence, the awful majesty of the Lawgiver, Hebrews 12:18-21, 26) — Calvin, Gill, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And mount Sinai was altogether on a smoke, because the LORD descended upon it in fire... and the whole mount quaked greatly",
-   "Mount Sinai in fire and smoke at God's descent",
-   "the consuming fire of God's holiness (Deuteronomy 4:24; Hebrews 12:29)",
-   "the earth trembling at God's coming (Psalm 68:8; Habakkuk 3:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
+  "excluded_voices": [
    "Jamieson, Fausset and Brown"
   ],
+  "range": "18-20",
+  "pericope_label": "The mount on a smoke, and the Lord come down",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The trumpet and the dialogue of Moses and God: 'and when the voice of the trumpet sounded long, and waxed louder and louder, Moses spake, and God answered him by a voice' — the trumpet sounding ever louder, and Moses speaking, and God answering him by a voice (the supernatural trumpet, waxing louder, the awful herald of God's presence, vv.16, the dialogue, Moses speaking, God answering audibly, the confirmation, God speaking with Moses in the people's hearing, v.9); the trumpet growing louder (the supernatural sound, the herald of the theophany) — the awful summons (the increasing terror); 'Moses spake, and God answered him by a voice' (Moses speaking and God answering audibly, the people hearing God speak with Moses, confirming his mission, v.9, the dialogue, the mediator addressed by God in the hearing of the people, the providence, the confirmation of Moses, the giving of the law, ch. 20) — JFB, Gill."
+    "summary": "Gill is careful to say what the smoke was not: not natural, as with volcanoes, but so dense that nothing else could be seen — and he reads it as an emblem of the darkness of the legal dispensation, full of obscure types and figures, dark shadows and smoky sacrifices, against which the clear day of the Gospel stands. He hears the trumpet change character here, not one continued even tone as before but going and strengthening itself exceedingly, rising to a pitch so vehement as scarce to be borne; and on the descent he enters the usual caution, that the coming down is in visible tokens of presence and power, since otherwise God is the incomprehensible Jehovah who fills heaven and earth and can be contained in neither. Calvin values the accompaniments as corroboration. Had Moses been the only spectator of God's glory the credit of his testimony would be lighter; but having reported the commandments which God spoke with his own lips in the hearing of the people, he adds that the lightnings shone openly, the mountain smoked, the trumpets sounded and the thunder rolled, so that by these conspicuous and illustrious signs the law was ratified before the whole people, from the greatest to the least. The people's own confession follows, when, overwhelmed with alarm, they beg that God speak no more; and after that they could no longer despise the voice of the man whom they had themselves asked for as mediator. They were terrified, Calvin insists, not that they might be stupefied with astonishment but that they might be humbled and submit — and it is a peculiar privilege that the majesty of God, before whom heaven and earth tremble, does not destroy his children but only proves and searches them."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke sets out the whole arrangement in tiers — the glory upon the top, with Moses permitted to approach near it; Aaron and the seventy elders allowed some way up; the people only at the base; and the traffic running down the same steps, Moses receiving the statutes from God's mouth, Aaron and the elders from Moses, and the people acting on what they received. Nothing, he says, could be imagined more glorious, terrible and majestic; but it was chiefly calculated to impress deep reverence and sacred awe, and he who attempts to worship God uninfluenced by these has a proper sense neither of the divine majesty nor of the sinfulness of sin."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott takes the Hebrew as smoked, all of it, and rejects the softening some prefer, that dense clouds merely had the appearance of smoke: if the mountain burned with fire, as Deuteronomy asserts, the smoke was real. He reads the quaking as literally as the smoke, since the expression suits an earthquake better than the vibration that very violent thunder sometimes produces. And he locates the descent exactly, on the summit of the Ras Sufsafeh and not the Jebel Musa, which is out of sight from the plain."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the smoke on the mountain literal?",
+    "positions": [
+     {
+      "position": "yes — if the mountain burned with fire, the smoke was real, and the quaking suits an earthquake rather than thunder",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "not natural as in a volcano, but a dense body of smoke standing as an emblem of the obscurity of the legal dispensation",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "values the thunder and smoke less as spectacle than as witnesses — a testimony resting on Moses alone would have carried less weight, so the signs were public and the whole nation could attest them"
+   }
+  ],
   "themes": [
-   "And when the voice of the trumpet sounded long, and waxed louder and louder, Moses spake, and God answered him by a voice",
-   "the trumpet and the dialogue of Moses and God",
-   "the supernatural trumpet waxing louder, the herald of God's presence (vv.16)",
-   "God answering Moses audibly, confirming the mediator (v.9)"
+   "real smoke or the appearance of it",
+   "the signs as corroboration of the Law",
+   "the tiers of approach"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD calling Moses up the mount: 'and the LORD came down upon mount Sinai, on the top of the mount: and the LORD called Moses up to the top of the mount; and Moses went up' — the LORD coming down on the top of Sinai and calling Moses up to him (the descent of God and the ascent of the mediator, God coming down, Moses going up to meet him, the meeting on the mount, Moses admitted to God's presence, while the people stood below, the office, Moses the mediator, going up to God); the LORD descending on the top of the mount (the theophany, vv.18) — the presence of God on the mount; 'the LORD called Moses up to the top of the mount; and Moses went up' (Moses called up to God, the mediator admitted to the presence, while the people kept below, the office, Moses going up, a type of the Mediator, Christ, who alone goes up to God for his people, Hebrews 9:24, the providence, Moses receiving the further charge, vv.21-24, and the law, ch. 20) — Ellicott, Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD came down upon mount Sinai, on the top of the mount: and the LORD called Moses up to the top of the mount; and Moses went up",
-   "the LORD calling Moses up the mount",
-   "God descending, the mediator going up to meet him",
-   "Moses a type of Christ, who alone goes up to God for his people (Hebrews 9:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "Adam Clarke"
   ],
+  "range": "21-23",
+  "pericope_label": "Charge the people, and the priests before Aaron",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The warning lest the people break through to gaze: 'and the LORD said unto Moses, Go down, charge the people, lest they break through unto the LORD to gaze, and many of them perish' — God sending Moses down to warn the people not to break through the bounds (v.12) to gaze on God (out of curiosity or presumption), lest many perish (the renewed warning, the bounds enforced, the danger of presumption, the people's curiosity a peril, the holiness that destroys the presumptuous); the danger of breaking through to gaze (the presumptuous curiosity, the rash approach to the holy) — the warning against presumption (the reverence required); 'and many of them perish' (the death that would follow the presumption, the holiness that consumes the rash, v.12; Leviticus 10:1-3, the strange fire; 1 Samuel 6:19, the men of Bethshemesh, the terror of the holiness, the providence, the warning preserving the people, the reverence enforced) — Ellicott, Gill, Calvin."
+    "summary": "Gill canvasses the three candidates for the priests named here — the firstborn, the sons of Aaron who were priests potentially though not yet actually, and the heads of families — and settles on the last, ruling out princes on the ground that the description will not fit them. Calvin asks why the prohibition is repeated, and answers that once was not enough, since God knew he had to do with the rebellious, for whose subjugation a sorer dread of punishment was necessary; and since we are no better than they, let us not be surprised if God often spurs us on by many exhortations and redoubles his threats, for otherwise forgetfulness of all he has once enjoined would creep over us. The passage confirms for him that curiosity is greatly displeasing to God — not because God would have anything concealed which it were profitable to know, but because inquiry ought to be sober, and this is the legitimate limit of knowledge: humbly to learn at God's mouth what he voluntarily teaches, not to advance with too anxious longings, but to follow him as he leads. On the priests he allows that they were chosen from the firstborn but doubts that out of so immense a multitude there was a special priest for every house, reasoning that since no heathen nation was then without priests, there was no less method among the chosen people. And he watches Moses argue back and lose: persuaded the people would be obedient, Moses replies that the decree already pronounced was sufficient, putting himself forward as their surety, honestly and in accordance with the rule of charity, yet deceived, because he judged others by his own feelings — what Calvin admires is that he executes the order without hesitation, preferring God's command to his own settled opinion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke argues the existence of priests before Aaron from the narrative itself: Moses had asked Pharaoh for liberty to go into the wilderness and sacrifice, a request that would have been absurd had there been neither sacrifices nor priests among the people, since sacrifices had constituted an essential part of the worship of God from the beginning. He adds a reason for their needing to sanctify themselves now, that no sacrifices had been offered for a considerable time, so that the priests themselves were reckoned in a state of impurity. On Moses' objection he allows both readings of the impossibility, that the people dared not transgress with instant death before their eyes, or that the barrier made it physically impossible; and on the last word he notes that sanctify is used in its proper literal sense, of separating a place from all profane and common uses and devoting it to sacred ones."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott glosses the danger literally, as forcing a way through the barrier, and thinks the perishing threatened may be less the execution of the earlier sentence than a heaven-sent stroke like the one that fell on the men of Beth-shemesh. On the priests he states the objection and dismisses it: this has been called an anachronism, but the Israelites, like every other ancient race, must have had priests long before this, appointed on one principle or another, and it is a reasonable conjecture that the heads of families had hitherto exercised sacerdotal functions. He reads breaking forth as punishing in some open and manifest way, comparing the breach upon Uzzah. And he finds the flaw in Moses' argument exactly: Moses means the people cannot come up unwittingly, and does not contemplate a deliberate trespass — which was the thing God knew to be contemplated."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who were the priests, before Aaron's consecration?",
+    "positions": [
+     {
+      "position": "the heads of families, exercising sacerdotal functions until the office was settled in Aaron's line",
+      "holders": [
+       "John Gill",
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "drawn from the firstborn, though not one for every household — no nation being then without priests",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "locates the precise error in Moses' reply — he vouches that the people cannot come up by accident, which was never the risk God was guarding against"
+   }
+  ],
   "themes": [
-   "And the LORD said unto Moses, Go down, charge the people, lest they break through unto the LORD to gaze, and many of them perish",
-   "the warning lest the people break through to gaze",
-   "the danger of presumption, the rash approach to the holy (v.12)",
-   "the holiness that consumes the presumptuous (Leviticus 10:1-3; 1 Samuel 6:19)"
+   "why the warning had to be repeated",
+   "priests before the priesthood",
+   "Moses answering for his people"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Even the priests to sanctify themselves: 'and let the priests also, which come near to the LORD, sanctify themselves, lest the LORD break forth upon them' — even the priests (those who came near to God, whether the firstborn, or the future Aaronic priests, or the elders) must sanctify themselves, lest the LORD break forth (in judgment) upon them (the holiness required of all, even those who draw near, the priests, must be consecrated, the danger, the holiness that destroys even the priests if they presume); the priests (those who draw near) charged to sanctify themselves — the holiness required even of the nearest (the lesson, those who minister before God must be holy, Leviticus 10:3, 'I will be sanctified in them that come nigh me'); 'lest the LORD break forth upon them' (the danger of the LORD breaking forth, in judgment, on the unsanctified, even the priests, 2 Samuel 6:7-8, Uzzah; Leviticus 10:1-2, Nadab and Abihu, the terror of the holiness, the providence, the warning, the reverence required even of those who draw near) — Ellicott, Gill, Calvin, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And let the priests also, which come near to the LORD, sanctify themselves, lest the LORD break forth upon them",
-   "even the priests to sanctify themselves",
-   "the holiness required of all who draw near to God (Leviticus 10:3)",
-   "the danger of the LORD breaking forth on the unsanctified (2 Samuel 6:7; Leviticus 10:1-2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses citing the bounds already set: 'and Moses said unto the LORD, The people cannot come up to mount Sinai: for thou chargedst us, saying, Set bounds about the mount, and sanctify it' — Moses replying that the people could not come up, for God had already commanded the bounds to be set (v.12, the citing of the command, Moses noting that the barrier was in place, the reverence, Moses appealing to God's own charge, the obedience already done); Moses noting the people kept back (by the bounds already set, v.12) — the barrier in place (the obedience); 'Set bounds about the mount, and sanctify it' (the command already given, v.12, the mount sanctified, set apart, fenced, the providence, God renewing the charge, vv.24, that Moses might impress the warning the more, the reverence doubly enforced) — Ellicott, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses said unto the LORD, The people cannot come up to mount Sinai: for thou chargedst us, saying, Set bounds about the mount, and sanctify it",
-   "Moses citing the bounds already set",
-   "the barrier in place, the command already obeyed (v.12)",
-   "the reverence enforced, the mount sanctified"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
@@ -916,66 +703,61 @@
    "Adam Clarke",
    "Charles Ellicott"
   ],
+  "range": "24-25",
+  "pericope_label": "Get thee down: the warning delivered",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the urgency in the wording, that the Lord knew better than Moses did, so that it was high time for him to be gone and the matter required haste, the people standing under a great temptation to indulge their curiosity at the peril of their lives. On the last verse he is quieter, with Moses charging the people to keep their distance behind the line he had drawn, and he passes on what the Targums add to the charge, that they were to come and receive the ten words."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supplies the reason God overruled a man who was, on the face of it, right about his own people: God knew that they were heedless, criminally curious and stupidly obstinate, and therefore his mercy saw it right to give them line upon line, that they might not transgress to their own destruction. From the whole solemn and awful manner in which the Law was introduced he draws the conclusion the chapter has been building toward — we may behold it as the ministration of terror and death, appearing rather to exclude men from God than to bring them nigh — and from that, that an approach to God would have been for ever impossible had not infinite mercy found out the Gospel scheme of salvation. He sets the two mountains side by side as the epistle does, not the mount that might be touched and that burned with fire, nor blackness and darkness and tempest and the sound of a trumpet, but Mount Sion and the city of the living God and Jesus the Mediator of the new covenant; and he then turns and addresses the reader directly, asking whether he is still afar off under the condemning power of that fiery law, and answering that though a man has deeply sinned and God is just, he is also the justifier of him that believeth — obey his voice indeed and keep his covenant, and thou shalt be a king and a priest unto God and the Lamb."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The renewed charge and the distinction of Moses and Aaron: 'and the LORD said unto him, Away, get thee down, and thou shalt come up, thou, and Aaron with thee: but let not the priests and the people break through to come up unto the LORD, lest he break forth upon them' — God sending Moses down again (to warn the people once more), but granting that Moses (and Aaron with him) might come up (the renewed charge, the warning repeated, the distinction, Moses and Aaron admitted, the people and priests kept back, the office, the mediators allowed near, the people held at a distance); Moses and Aaron alone admitted (the mediators, the rest kept back) — the distinction (the few drawn near, the many held off, the office of the mediators); 'let not the priests and the people break through to come up unto the LORD, lest he break forth upon them' (the renewed warning, the bounds enforced, even the priests kept back, vv.21-22, the danger, the holiness that breaks forth on the presumptuous, the providence, the reverence doubly enforced, the distance kept, until the Mediator should open the way, Hebrews 10:19-20) — Ellicott, Gill, Calvin, Clarke."
+    "prevalence": "single",
+    "summary": "Ellicott marks the moment with a phrase from the epistle: he with whom is no variableness, neither shadow of turning, overrules Moses and persists; the warning is required, and it is to be given; Moses, submissive as usual, yields and goes down and speaks to the people. And he records the outcome, which is easy to miss — no attempt to break through the barrier was made."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "closes the chapter by returning its own opening promise to the reader — obey and keep the covenant, and thou shalt be a king and a priest — so that the terror of Sinai is made to argue for the mediator rather than against approach"
+   }
+  ],
   "themes": [
-   "And the LORD said unto him, Away, get thee down, and thou shalt come up, thou, and Aaron with thee: but let not the priests and the people break through to come up unto the LORD, lest he break forth upon them",
-   "the renewed charge and the distinction of Moses and Aaron",
-   "the mediators admitted near, the people kept at a distance (vv.21-22)",
-   "the distance kept until the Mediator opens the way (Hebrews 10:19-20)"
+   "God overruling his mediator",
+   "the Law as a ministration of terror",
+   "the two mountains"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses going down to charge the people: 'so Moses went down unto the people, and spake unto them' — Moses obeying, going down to the people and speaking to them (the warning, the charge, vv.21-24, the carrying-out of the command, the mediator going down, to warn and prepare the people, the preparation completed before the giving of the law, ch. 20); Moses going down (obeying God's charge, v.24) — the obedience (the mediator descending to the people); 'and spake unto them' (Moses speaking to the people, delivering the warning, the charge, vv.21-24, the preparation, the people warned, the bounds enforced, the providence, the people made ready, the giving of the Ten Commandments, ch. 20) — Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So Moses went down unto the people, and spake unto them",
-   "Moses going down to charge the people",
-   "the mediator warning the people, the preparation completed (vv.21-24)",
-   "before the giving of the Ten Commandments (ch. 20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

@@ -11024,6 +11024,74 @@
         "1-25"
       ],
       "note": "Fidelity self-grade A for all six entries of exodus 2. Tiling covers 1-25 exactly with no gaps or overlaps: 1-4 (649w), 5-10 (647w), 11-12 (648w), 13-15 (647w), 16-22 (649w), 23-25 (650w) — all inside the 350-650 window. Voice coverage: entries 1, 11, 16 and 23 name all seven live OT voices (Gill, Henry, Clarke, Ellicott, Calvin, Wesley, Keil and Delitzsch); entry 5 names seven with Jamieson excluded as Genesis 43 residue; entry 13 names the five that actually appear at 13-15 (Gill, Clarke, Ellicott, Calvin, Wesley — no Henry and no Keil block falls in that range). Every proposition in the prose is traceable to a named block in data/commentary/cow/exodus/2.json; where a voice is reported as alone in a view (Ellicott on the killing, Calvin on the parents, Calvin on the graded Midianite religion) the claim was checked against every other block in the range before being written. Real usable source words after deducting the 992-word chrome at key 23: 27,990 across six entries. No entry names a voice not present in its own verse range, and no block present in a range goes unused except the excluded Jamieson residue."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "19",
+      "verses": [
+        "24"
+      ],
+      "note": "StudyLight boilerplate tail, instance 30, and the SECOND discriminating case in two chapters. The tail attaches to Ellicott's key-24 block. Ellicott has no block at key 25, so 24 is his final block, while the chapter's last key is 25. As at numbers 15, the tail followed Ellicott and not the chapter end. Two independent confirmations back to back, after seven chapters in which the two candidates always coincided. The numbers 28 rule can now be treated as established: the StudyLight tail attaches to the end of Ellicott's final block in the chapter, wherever that falls."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "19",
+      "verses": [
+        "25"
+      ],
+      "note": "Second confirmation of the Gill tail flagged at numbers 15. Gill's key-25 block ends with sacred-texts navigation furniture: 'Next: Exodus Chapter 20 Sacred Texts | Bible << Previous: John Gill's Exposition of the Entire Bible: Exodus: Exodu... Index Next: ...'. Same shape as the numbers 15 instance, same commentator, different book. This is now a confirmed second tail defect, independent of the StudyLight one and keyed to Gill rather than Ellicott. Here it sits at the end of Gill's final block, which is also the chapter's last key, so this instance does not discriminate between the two candidate rules for the Gill tail; that question is still open and needs a chapter where Gill stops before the last key — which will be rare, since Gill has a block at every key in most chapters."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19"
+      ],
+      "note": "JFB stride bug, 35th confirmation, and the first SAME-BOOK case. Four blocks at keys 1, 7, 13 and 19 — again a perfect stride of six — all displaced, and all from Exodus 7: the demonstration of supremacy over Egypt, the rods of Moses and the court officials, Pharaoh concluding the magicians had matched Aaron, and the river turned to blood with the fish destroyed. Donor position advances monotonically, and the donor precedes the target within the SAME book, which is new; every previous verified case had the donor in a different and earlier book. The lag model therefore holds in a stronger form than stated: what matters is canonical position, not book boundaries (11th confirmation). Key 1's block is also truncated at the head, beginning mid-thought, consistent with the reading-head model. On the stride question, this is a second perfect six after deuteronomy 29, against the irregular 18-then-12 of numbers 15; recent evidence now runs two to one for regularity, but numbers 15 is not explained away and the question stays open."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "19",
+      "verses": [
+        "1"
+      ],
+      "note": "Refinement of note 1010. At numbers 15 I found Clarke's key-1 chapter-argument header standing alone with no verse comment, and treated it as a new kind of empty block. Here the same header appears at key 1 but is FOLLOWED by substantive comment on the third month, on the phrase 'the same day', and on the name of the mountain. So the header is not itself an empty-block marker: it prefaces real comment as often as it stands alone, and the test has to be applied to what follows it, not to its presence. Clarke is kept as a voice here. The drafting hazard the header poses is unchanged either way."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "11",
+        "16"
+      ],
+      "note": "Wesley abridges Henry three times in this one chapter — at key 1 on the fifty days and the mountain, at keys 11 and 12 on the bounds and the two intimations, and at key 16 on the whole sermon-staging of the theophany, in places almost word for word. This is the densest concentration of the pattern I have seen in a single chapter, and it creates a specific hazard for the tiling: Henry's key-9 block and Wesley's key-10 block cover the same ground but fall in different entries under the span '9-10', while Henry's key-16 and Wesley's key-16 fall in the same one. Where a Henry-Wesley pair straddles an entry boundary, the material must be used once and the other entry left to its remaining voices, or the same sentences appear twice in the chapter under two different attributions."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "2",
+        "9",
+        "11"
+      ],
+      "note": "Length control regressed sharply here: four of nine entries needed three or more trim passes, and entry 1 took four passes to come down from 717. The diagnosis from note 998 fits exactly — this chapter's bulk is Calvin and Henry each developing long arguments alone, with Ellicott adding a third independent long note, and note 969 has nothing to compress where three voices are each saying something different at length. The passes that actually worked were structural, not lexical: dropping whole subordinate ideas (Clarke's Jupiter medals, the Sinai place-names, Ellicott's veil analogy) moved 20 to 45 words each, where sentence-level tightening moved two or three. Recording the working rule: when an entry overshoots by more than about forty words, stop shaving and cut a whole idea instead."
     }
   ]
 }
