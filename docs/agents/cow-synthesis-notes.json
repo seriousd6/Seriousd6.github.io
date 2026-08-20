@@ -11768,6 +11768,68 @@
       "book": "philemon",
       "chapter": "1",
       "note": "FIDELITY SELF-GRADE, philemon 1, seven entries, all in window. 1-3 = 644w, 8 voices. 4-7 = 650w, 7 voices. 8-9 = 649w, 6 voices. 10-14 = 648w, 6 voices. 15-16 = 641w, 7 voices. 17-19 = 645w, 7 voices. 20-25 = 650w, 7 voices. Every claim traced to a named block in data/commentary/cow/philemon/1.json before writing. Exclusions: all four Jamieson blocks (keys 3, 9, 15, 21) declared as residue; the single Cyril of Jerusalem block (key 25) dropped silently for the VOICE_LABELS defect; roughly 500 words of 1 Timothy text at key 24 ignored as spillover. Real usable source after exclusions 45,451 words against a gross 46,763. No Wesley, no Keil, no Barnes-free entries. Chrysostom used only where genuine."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "1",
+      "note": "Keil is truncated at exactly 200 words in SIXTEEN of his seventeen blocks in this chapter — keys 1, 2, 3, 5, 7, 8, 9, 10, 13, 16, 18, 19, 20, 22, 24, 25 all land on 200 exactly, and only key 27 (51 words) falls under the cap and is therefore complete. Gill's key-1 block is also exactly 200 while every other Gill block in the chapter runs between 17 and 160, so the cap caught him only where his material was long. Henry (2662, 2520, 2206), Clarke (up to 1680) and Ellicott (up to 1096) are untouched, so this is not a uniform per-block limit but something that bit two sources. Every capped block therefore ends mid-sentence, and in Keil's case the cut usually falls just after his own quotation of the verse text, so a substantial part of what survives is bare scripture rather than comment. The chapter is still writable — the material before each cut is usable and I quoted nothing across a truncation point — but the size command's 22,952 usable source words overstates what is actually there, and a chapter whose bulk is Keil would not be. Worth a check across other 1samuel chapters before one of them is picked."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JFB displacement, 41st confirmation, and the cleanest instance in the corpus. All FIVE JFB blocks in this chapter come from Joshua 8 — the feigned flight from Ai and the men of Bethel, the uplifted spear and the ambush, the twenty miles to Ebal, and the reading of the law on the plaster at Ebal and Gerizim. They sit at keys 4, 10, 16, 22 and 28: a perfect stride of six that runs clean to the chapter's last key, the third perfect-stride case after deuteronomy 29 and exodus 19. Keys 10 and 16 are BYTE-IDENTICAL, the same 107-word passage emitted twice, which is the second repeat case after deuteronomy 29's byte-identical triple. Key 28 is also truncated mid-word (memory would often revert to the s). JFB was excluded from all five keys; every one of them carries other voices, so the exclusions cost the chapter nothing. Note that the donor here is Joshua 8 while the host is 1 Samuel 1 — a lag of roughly one book plus Judges and Ruth, which is consistent with the reading-head model but not with any fixed canonical offset, since judges 4's donor was three chapters back in the same book."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "9",
+        "19"
+      ],
+      "note": "The Henry-has-only-three-keys hazard, met twice in one batch. Henry appears at keys 1, 9 and 19 only — and those are the chapter's three largest keys (5187, 3320, 2515), because each is a section header carrying a long run-ahead over the verses that follow. Key 1 runs over vv1-8, key 9 over vv9-18, key 19 over vv19-23. Under the filing rule none of that can move, since Henry has no key inside the 2-8, 10-14, 15-18 or 20-23 spans, so five of the eight entries have no puritan-evangelical school at all. Judges 4 showed the same shape one chapter earlier (Henry at 1, 4, 10, 17). The pattern is now clear enough to predict: when a voice's key count is far below the others and its keys coincide with the chapter's largest, that voice is a section-header source and will be absent from most entries no matter how the chapter is tiled. Two consequences worth acting on. First, check the key-count profile before tiling, not after — it tells you which schools will be thin where. Second, the entry that DOES hold the header must carry the run-ahead material only so far as it bears on its own verses; at key 19 I used Henry on the early worship, the remembering and the name, and deliberately left his material on the weaning unused, since those verses belong to an entry he cannot reach."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "28"
+      ],
+      "note": "Two structural features of a chapter-1 pick, both new to this corpus. First, the opening key carries the BOOK preface rather than comment on the verse: of key 1's 5,187 words, Clarke spends 1,680 on a synopsis of the whole book and its authorship and Keil's 200 surviving words are the Introduction to the Books of Samuel, so the material actually about Ramathaim-zophim is only Gill, Ellicott, Wesley and Henry's opening. This turned out to be an advantage rather than a loss, because Clarke's claim that these books are properly a continuation of Judges runs straight into Ellicott's insistence that the opening formula signifies no such thing — a genuine debate that only exists because both wrote prefaces. Second, the StudyLight tail (32nd instance) attached to Ellicott's key-28 block, which is also the chapter's last key, so this instance is non-discriminating like the seven before numbers 15; the numbers 28 rule still rests on the two discriminating cases."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "1",
+      "verses": [
+        "20",
+        "24"
+      ],
+      "note": "Two four-way disagreements in the closing verses, both staged rather than resolved. On what word Elkanah prays the Lord to establish, no antecedent is recorded anywhere in the narrative, so each voice supplies one: Keil takes it to be Eli's blessing, which the parents might regard after the birth as a promise from Jehovah himself, and expressly rejects the Rabbinic alternative; Ellicott records that alternative in Rashi's form (a voice from heaven foretelling a just one named Samuel, after which every mother named her son Samuel and, seeing his actions, said this was not he) and offers Bunsen's plainer sense to those who decline it; Wesley refers the word to Hannah's own vow; Clarke reads it as a father's prayer that the child be preserved and made a blessing to Israel. On whether the closing words should be rendered lent to the Lord, Clarke defends the received translation from the grammar, the root for asking signifying to lend in one conjugation, with the Vulgate, Septuagint and Syriac all following the double sense; Ellicott calls the rendering flatly false; Keil traces the error to a false rendering in the Greek and says Jehovah had not lent the son to Hannah at all; Wesley keeps the word and turns it devotional, that whatever we give to God is lent to him in the sense that he will certainly repay it. Both went into the tags as debates with holders named, and the prose states no side as settled."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "1",
+      "note": "Length control across two chapters this batch, sixteen entries. 1samuel 1 came in at 641, 637, 636, 647, 633, 619, 648, 649 and judges 4 at 645, 644, 639, 558, 641, 646, 647, 644. Thirteen of the sixteen needed a trim pass; every cut was structural (note 1018), none lexical. The overshoot on 1samuel was worse than on judges — first drafts at 800, 747, 740, 726, 725, 707, 706 — and the reason is identifiable: this chapter has six voices where judges 4 had four effectively, and six voices on a short verse means six positions to place rather than four, so the outline-stage cutting that note 1051 recommends has to be much more aggressive than it feels safe to be while drafting. The rule I would state now is that the pre-cut should scale with the VOICE COUNT, not the source-word count: at six voices, plan to drop roughly one idea per voice before writing, not one or two from the entry as a whole. The standing check added at judges 4 — that every name in tags.voices actually appears in the entry's prose — caught nothing this time, having been applied during drafting rather than after; it is worth keeping as a drafting habit rather than a post-hoc check."
     }
   ]
 }
