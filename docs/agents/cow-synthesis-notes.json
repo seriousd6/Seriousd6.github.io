@@ -13609,6 +13609,110 @@
       "book": "ephesians",
       "chapter": "1",
       "note": "LENGTH CONTROL regressed badly on this chapter: mean 3.9 trim passes across 18 entries, against 2.6 for 1john 3 and 1.4 for james 1. The merged entry 1-2 alone took nine passes plus a re-tile. The driver is bench depth combined with source size — eight usable voices in a 650-word entry leaves roughly 80 words per voice, and the three-voices-per-paragraph rule from note 1214 has no room to work. Two things that did help and are worth keeping: draft at 560 rather than 620 when the span carries seven or more voices, and give at least two voices a single clause rather than a sentence. Entry 3 also confirmed the note-1191 rule from the other direction — the two-way check caught Ellicott declared as excluded while being named in the prose, because his usable material for that entry came from the neighbouring key. Where displaced material is legitimately moved INTO an entry, the voice belongs in voices, not exclusions."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson stride-6 residue, THIRTEENTH confirmation. Keys 3/9/15/21/27, offset 3, five members. Content is 1 CORINTHIANS 1 throughout: the thanksgiving (k3, carrying JFB's own verse marker '4.'), the confirming unto the end (k9), Crispus and Gaius (k15, marker '14.'), the Isaiah 29:14 citation at 1Co 1:19 (k21), and the calling of the not-many-wise at 1Co 1:26-27 (k27). Source verses therefore 4, 8, 14, 19, 26 — gaps of 4, 6, 5, 7 against an EXACT target stride of 6. This is the cleanest single demonstration yet of the correction filed at acts 11: the target stride is invariant, the source stride is not. Note also that the residue source book bears no relation to the target book — philippians 2 draws 1 Corinthians 1, while 1corinthians 16 drew Acts 26-27. Excluded from all five entries and declared."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "30"
+      ],
+      "note": "Terminal scrape chrome inside the Ellicott block, EIGHTH consecutive chapter (1thessalonians 5 k28, philippians 1 k30, acts 11 k30, 1corinthians 16 k24, judges 2 k22, romans 14 k23, acts 17 k34, philippians 2 k30). Ellicott's block at key 30 is 1,158 words of which roughly 984 are StudyLight navigation, CSS and JS; real content about 174 words. Terminal key and Ellicott's last block coincide again, so this chapter does not discriminate between the two candidate rules. Tally now stands at eight consecutive chapters with the defect, seven of which cannot separate last-key from last-Ellicott-block; judges 2 alone separates them and favours last-Ellicott-block."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "5",
+        "12",
+        "14",
+        "19",
+        "30"
+      ],
+      "note": "Two chapter-level block patterns, both now familiar. (1) MATTHEW HENRY appears at five keys only — 1, 5, 12, 14, 19 — with 2,579 / 276 / 972 / 1,101 / 1,658 words, totalling 6,586 or about 11 percent of the chapter. These are SECTION expositions covering the run of verses down to the next Henry key, the same shape logged at acts 17 and, at whole-chapter granularity, at romans 14 key 1. (2) ALBERT BARNES key 30 is 2,341 words and carries his end-of-chapter practical remarks rather than comment on the verse, the same shape as Clarke's end-of-chapter excursus at acts 17 key 34. Both handled by drawing on the blocks only where they treat the verses of the entry in hand. This is now the third consecutive chapter where the sizer's usable_source_words figure is materially inflated by chapter- or section-level material filed under a single verse key; it may be worth teaching the sizer to discount blocks above some length threshold at a chapter's structural keys."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "7",
+        "10"
+      ],
+      "note": "Cyril of Jerusalem appears twice, at keys 7 and 10, 200 words each. Neither is the stuck 2 Corinthians 4:4 fragment logged four times across philemon 1, 1thessalonians 5 and 1corinthians 16. Key 7 is a Catechetical Lecture on the last judgment answering the poor man, the sick man and the woman at the mill, and it lands on the verse with unusual aptness — he who took the form of a servant despises not servants. Key 10 is on Colossians 1:20, making peace through the blood of the cross for things in heaven and things in earth, which is directly apposite to the things in heaven and in earth and under the earth of Philippians 2:10. THIRD consecutive chapter (romans 14, acts 17, philippians 2) in which Cyril's appearances are topically-placed lectures rather than the stuck fragment. That pattern is now firm enough to state: the stuck fragment is a discrete defect, not the normal mode of Cyril's presence in the tree."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "6"
+      ],
+      "note": "The form of God: a two-camp split that CROSSES SCHOOL LINES, which is rare enough to record. CLARKE argues from the structure of the sentence that whatever the form of God was, Christ divested himself of it, so it can be neither the divine nature (which he could not lay aside), nor the government of the world (which he did not part with), nor the power of miracles (which he kept all through his ministry); the word signifies external shape or appearance and NOT nature or essence, and he concludes for the visible glorious light in which the Deity dwells, following Whitby and Macknight. CALVIN lands in the same place by another route: the word means majesty, illustrated by the sceptre, crown and mantle by which a king is known, or the purple-bordered robe and ivory seat of a magistrate. Against them, ELLICOTT holds that in classical Greek the word describes the specific character that makes each being what it is, so the clause asserts essential and eternal being in the true nature of God; ROBERTSON calls it a clear statement of the deity of Christ; and WESLEY renders it the incommunicable nature. BARNES lays out both possibilities without deciding. So a reformed voice and a wesleyan voice stand together for glory-not-essence, against a grammatical-historical pair AND the other wesleyan voice. Wesley against Clarke inside one school is the notable part."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "7",
+        "12",
+        "13"
+      ],
+      "note": "Two further doctrinal splits in this chapter. (1) THE KENOSIS at v7: Gill, Barnes and Calvin all insist nothing was lost and the glory only covered — Barnes with the figure of the sun behind a cloud whose beams are not extinguished, Calvin calling the abasement of the flesh a veil. WESLEY goes measurably further than any of them: he not only veiled but IN SOME SENSE RENOUNCED the glory he had before the world began. Robertson, naming the kenosis controversy by name, allows real limitations of space, knowledge and power while urging restraint and denying limitation by error. (2) WORK OUT YOUR OWN SALVATION at vv12-13: Clarke states the Arminian formula exactly — God gives the power to will and man wills through it, God gives the power to act and man acts through it, God neither wills for man nor works in his stead, and the use of those powers belongs to man, who is accountable. Calvin ascribes both the inclination and the power to carry it into effect wholly to God and attacks the schoolmen who would give free will a separate co-operating power. Barnes holds a middle line by negatives. Ellicott calls it a paradox irreconcilable to our logic which Scripture leaves unreconciled. ROBERTSON supplies the memorable formulation: the apostle exhorts as if he were an Arminian in addressing men and prays as if he were a Calvinist in addressing God, and feels no inconsistency in the two attitudes."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "19",
+        "26",
+        "27",
+        "30"
+      ],
+      "note": "Two undesigned-coincidence arguments in one chapter, both traceable to Paley. (1) At v19 BARNES observes that Timothy's earlier presence at Philippi is nowhere stated in Acts 16 though the narrative makes it probable, and that the offhand way the fact is adverted to here would have occurred to no one composing a forgery, so the history and the epistle are independent books. (2) At vv26-27 CLARKE quotes Paley at length and BARNES cites him by name for the argument that no miracle is intimated in Epaphroditus's recovery, which is spoken of as a natural event; that this proves the power of working cures visited the apostles only occasionally and did not depend on their own will, since Paul would certainly have healed him if he could and did not heal Trophimus at Miletus; and that a forgery would not have spared a miracle at such a moment. ELLICOTT reaches the same conclusion independently without citing Paley, adding that an apostle could not, as our Lord would not, work miracles for his own needs, and conjecturing that some spiritual intimation warned them when the hour of miracle had come. Recorded because it is the densest concentration of eighteenth-century evidential apologetics met so far in the corpus."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "2",
+      "verses": [
+        "20",
+        "21",
+        "30"
+      ],
+      "note": "Smaller cruxes worth keeping. (1) At v20 ROBERTSON insists the adjective means likeminded WITH TIMOTHY and not with Paul, so that the claim is that no one else is Timothy's equal; CALVIN reads it the same way, that the comparison is with the others rather than with Paul himself; GILL and ELLICOTT take it the other way, as likeness to the apostle. (2) At v21 the saying that all seek their own is softened by every voice except one. Wesley alone takes it at full strength and exclaims that in that golden age only one of all the labourers could be thoroughly approved; Gill restricts it to the greatest part; Clarke to those who preached of envy and strife; Calvin denies they were intent EXCLUSIVELY on their own interests and says only that they were to some extent negligent; Ellicott calls the declaration startling and suggests either accidental separation or a temporary falling away, noting the contrast with the affectionate name-lists in Colossians and Philemon; ROBERTSON disposes of it in one line — surely Luke was away from Rome at this juncture. (3) At v30 a four-way handling of the textual variant, Barnes setting out both readings and preferring exposing-oneself-to-danger, Clarke naming the manuscripts and Griesbach, Ellicott rendering it having gambled with his life and reporting but doubting Wordsworth's suggestion of an allusion to caution money forfeited in a lawsuit, and Robertson citing a Black Sea inscription published by Deissmann."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "philippians",
+      "chapter": "2",
+      "note": "Fidelity self-grade, philippians 2, nine entries, all in window: 1-2 642w, 3-5 646w, 6-7 636w, 8-11 590w, 12-13 617w, 14-16 613w, 17-19 598w, 20-24 606w, 25-30 581w. Every claim traced to a named block in data/commentary/cow/philippians/2.json before writing. No voice is named in prose without a head in that entry's verses; no voice with a head goes unnamed — the build lint enforces both and passed clean on all nine, at 7 to 9 named voices per entry. One GHOST error was raised and fixed during drafting: Chrysostom was misspelt in the prose of the 3-5 entry, so the lint could not see him; corrected and rebuilt. Jamieson excluded at keys 3/9/15/21/27 as stride-6 residue and declared in each of the five affected entries. Chrome stripped from Ellicott at key 30 before drafting. Henry's five section blocks and Barnes's end-of-chapter remarks at key 30 used only where they treat the verses of the entry in hand. Eleven distinct voices across all five schools; four of the nine entries carry all five schools. Real usable after removing residue and chrome: 60,707 words against a gross of 62,140, of which about 6,586 is Henry's section-level material, leaving roughly 54,100 verse-level. Entry count 9 set by max(30/4.5, 60707/7000) = 8.7, tiled 1-2, 3-5, 6-7, 8-11, 12-13, 14-16, 17-19, 20-24, 25-30 on the natural sense units of the chapter, covering 1..30 exactly."
     }
   ]
 }
