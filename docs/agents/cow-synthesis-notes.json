@@ -12171,6 +12171,65 @@
       "book": "1thessalonians",
       "chapter": "5",
       "note": "FIDELITY SELF-GRADE, 1thessalonians 5, seven entries, all in window. 1-3 = 648w, 8 voices. 4-7 = 641w, 8 voices. 8-11 = 629w, 8 voices. 12-15 = 650w, 9 voices. 16-19 = 649w, 9 voices. 20-22 = 650w, 8 voices. 23-28 = 649w, 8 voices. Every claim traced to a named block in data/commentary/cow/1thessalonians/5.json before writing. Exclusions: all four Jamieson blocks (keys 6, 12, 18, 24) declared as residue; three Cyril of Jerusalem blocks (keys 5, 23, 28) dropped silently for the VOICE_LABELS defect, while the genuine Cyril block at key 21 was used; about 600 words of 2 Thessalonians front matter at key 27 ignored as Calvin spillover; about 984 words of StudyLight footer, CSS and JavaScript inside the Ellicott block at key 28 ignored as chrome. Gross usable 47,050; after voice exclusions 45,308; after chrome and spillover about 44,324. No entry rests on a single school."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "5",
+      "verses": [
+        "13",
+        "19"
+      ],
+      "note": "JFB displacement, 44th confirmation, and the case that turns the pattern into a QUANTITATIVE LAW. Both blocks here are displaced and sit at a stride of six: key 13 is Genesis 45:14-15 (Joseph embracing Benjamin and his brothers, forgiveness demonstrated more fully than by words), key 19 is Genesis 45:16-20 (Pharaoh inviting Jacob's family into Egypt and providing for their removal). The donor advances with the host, as at genesis 39 and 40. But exodus 5 also breaks the guess I made last batch, that the donor stream is a single continuous sweep across the corpus: genesis 40's donors ended at Genesis 34, and exodus 5's begin at Genesis 45, so the stream is not one unbroken read. Working the numbers instead: convert host and donor to canonical chapter positions (Genesis 1 = 1, Exodus 1 = 51, and so on) and take the ratio donor/host across every case recorded so far — genesis 22 (22 -> 19), genesis 39 (39 -> 33), genesis 40 (40 -> 34), exodus 5 (55 -> 45), exodus 19 (69 -> 57), leviticus 21 (111 -> 93), numbers 15 (132 -> 114), deuteronomy 29 (182 -> 149), joshua 4 (191 -> 154), nehemiah 7 (420 -> 341). The ratios are 0.864, 0.846, 0.850, 0.818, 0.826, 0.838, 0.864, 0.819, 0.806, 0.812 — mean 0.834, spread 0.806 to 0.864, across host positions ranging from 22 to 420. That is a twenty-fold range in host position holding a ratio steady to within plus or minus four per cent. The donor is not at a fixed lag from the host; it is at a fixed FRACTION of the host's canonical position, as though a second index advanced through the same corpus at about five-sixths of the rate. The lag therefore grows with position: three chapters back at Genesis 22, seventy-nine back at Nehemiah 7. This is testable in advance, and I am testing it on the next chapter of this batch."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "5",
+      "note": "Fourth chapter confirming the 200-word truncation cap, same signature again: Keil capped at exactly 200 in ten of eleven blocks, Gill in two of twenty-three (his two longest), and Henry (up to 1066), Clarke (493), Ellicott (1102), Calvin (711) and Wesley (186) untouched. Four chapters across three books now. A consequence showed up here for the first time in a way that affected the writing: Keil's block at key 22 is nothing but the two verses quoted, the cap having cut it off before any comment began, so the entry covering vv22-23 had a voice present in the source with nothing to say. I excluded him there rather than pad his badge with prose he does not support. Worth adding to the standing checks: after building the voices list, look for blocks that are pure verse quotation, since the cap can leave a Keil block with no comment at all, and a voice listed on a badge should have said something."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "5",
+      "verses": [
+        "22"
+      ],
+      "note": "StudyLight boilerplate tail, 34th instance, and the FOURTH DISCRIMINATING CASE. Ellicott's keys in this chapter run 1, 2, 3, 5, 6, 7, 9, 12, 13, 14, 15, 16, 17, 20, 21, 22, so his final block is at key 22 while the chapter runs to key 23; the tail attached to the end of that key-22 block, not to the chapter's last key. With numbers 15, exodus 19 and genesis 40 that makes four independent discriminating cases and no counterexamples, so the numbers 28 rule can now be treated as settled: the StudyLight tail attaches to the end of Ellicott's final block, wherever in the chapter that falls. Gill's separate sacred-texts navigation tail did not appear here at all, and its attachment rule is still untested."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "15",
+        "19",
+        "22"
+      ],
+      "note": "Third, fourth and fifth confirmations of the abridgement-rescue pattern, all inside one chapter, which settles it as a technique. Henry has only four keys here (1, 3, 10, 15), every one a section header with a long run-ahead, so most of the chapter falls in entries he cannot reach. Three times his stranded material was recoverable through Wesley, whose keys sit inside the target spans: Henry's key-3 block carries the observation that the cities they built were witnesses the people were not idle, which belongs to vv6-9, and Wesley repeats it at key 8, inside that span; Henry's key-15 block carries the rebuke that the officers should have humbled themselves before God rather than fly in the face of their best friends, which belongs to vv19-21, and Wesley repeats it at key 21; and the same block carries the whole expostulation passage on vv22-23 — is this God's coming down to deliver Israel? must I who hoped to be a blessing become a scourge? — which Wesley repeats almost verbatim at key 22. In every case the material reached its proper entry through the abridging voice while the original stayed where it was filed. Five confirmations now across three chapters. The check is cheap and should be standard: when a section-header voice's run-ahead is stranded, list the abridging voice's keys and see whether any fall inside the target span."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "19"
+      ],
+      "note": "Two clean disagreements in this chapter, one of which the text itself settles a few verses later. First, who the taskmasters and officers were. Clarke, Wesley and Ellicott all make the taskmasters Egyptians and the officers Hebrews, Ellicott adding a third grade above both, the lords of service, and describing the officers as scribes who kept the tale of the bricks. Calvin dissents and takes BOTH ranks to have been drawn from the children of Israel, reasoning that in so great a multitude some might have evaded Egyptian overseers, whereas Israelites set over their own people would know them too familiarly for any to escape. What makes this worth recording is that Gill settles it from the text at verse 14, where the officers are described as men whom Pharaoh's taskmasters had set over the people — which shows both that the ranks were distinct and that the upper was Egyptian and the lower Israelite. The disagreement and its resolution fall in different entries (vv6-9 and vv10-14), so the tags carry the dispute at the first and Gill's textual settlement at the second. Second, whether the officers' reproach of Moses and Aaron is excusable, which produced the widest spread of opinion I have met on a single clause: Clarke is lenient (the afflicted must be allowed the privilege of complaining, and the considerate will hear such words with indulgence), Calvin severe (it sprang from unbelief, measuring God's favour by immediate success, and is not free from the charge of ingratitude), Wesley intermediate (they should have humbled themselves before God), and Gill deliberately balanced (a prediction or an imprecation, and if not wicked at least imprudent). All four holders are named in the tags at key 19."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "5",
+      "note": "Length control, seven entries: 633, 650, 631, 649, 644, 645, 650, all grade A. First drafts were 769, 724, 730, 752, 687, 711, 755 — an average overshoot of about 95 words on entries carrying six or seven voices, which is exactly what note 1107 predicts and no better than last batch. The per-voice quota was known going in and I still drafted over it every time, which suggests the rule needs to bite at the outline stage rather than at the drafting stage: writing 600 divided by seven is not a target one hits by writing carefully, it is a target one hits by deciding in advance which single idea each voice contributes and refusing the second. The evidence that this works is in the entries themselves — vv15-18, with five voices, drafted at 687 and needed one pass, while the seven-voice entries needed two or three. Every effective cut was again a whole idea (Calvin on access to kings, Clarke on preserving the word Jehovah, Ellicott's three-grade hierarchy compressed, Henry's cruel-instruments observation, Calvin's counsel-of-tyrants passage, Clarke's literal rendering of the last clause); the lexical passes moved four to ten words each and were not worth the time. Note 1018 now holds across thirteen chapters."
     }
   ]
 }
