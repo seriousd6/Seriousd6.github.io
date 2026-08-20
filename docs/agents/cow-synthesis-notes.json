@@ -10772,6 +10772,64 @@
       "book": "acts",
       "chapter": "21",
       "note": "Fidelity self-grade A for all ten entries of acts 21. Every proposition in every prose block is traceable to a named commentator's block at a verse inside that entry's range; no voice is named who is not sourced in that entry; no scripture reference appears unlinked; the residue voices (Jamieson at keys 2/8/20/26/32/38, Cyril at keys 1/13/25/40) are excluded or silently dropped and contribute nothing, while Chrysostom at keys 18 and 39 is genuine and used. Word counts, all inside the 350-650 window: verses 1-6 = 642; 7-9 = 636; 10-14 = 621; 15-17 = 637; 18-19 = 649; 20-22 = 636; 23-26 = 649; 27-28 = 650; 29-34 = 648; 35-40 = 647. Total 6,415 words of synthesis over 58,970 words of real usable source (59,962 reported, less 992 of chrome), a compression of about 9 to 1. Ten entries tile verses 1-40 exactly. Entry 18-19 carries all five schools at once, the first time the eastern-antiochene school has been genuinely represented rather than dropped as residue. Every first draft ran over the ceiling; entries 23-26 and 27-28 each needed a full prose rewrite rather than incremental trimming, 23-26 coming down from 863 words."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "29",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JFB stride bug, 33rd confirmation, and a NEW VARIANT that cuts against my own deuteronomy 6 conclusion. Four blocks at keys 6/12/18/24 — a perfect stride of six — all from Numbers 32 (Reuben and Gad and the trans-Jordan grant; key 24 is the town list, Dibon and Aroer on the Arnon). What is new: the blocks at 6, 12 and 18 are BYTE-IDENTICAL, the same 244-word passage emitted three times, not three successive portions of the donor. Every prior confirmation had the donor position either advancing or stalling once; a triple identical emission has not been seen before. Key 6's copy also begins mid-sentence ('with sincerity and zeal'), so the head is parked mid-block in the donor, which is what the reading-head model predicts. But at deuteronomy 6 I argued from a lone displaced block that the apparent stride was merely the spacing of JFB's own sparse coverage and not a step the corruption takes. A perfectly regular stride of six emitting the same text three times is hard to explain that way, and I am recording it as evidence against that conclusion rather than folding it in. Donor precedes target canonically — ninth confirmation of the lag model. All four excluded."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "29",
+      "verses": [
+        "29"
+      ],
+      "note": "StudyLight boilerplate tail, instance 28, on Ellicott's key-29 block. Seventh consecutive chapter in which Ellicott's final block coincides with the chapter's last key, so it still fails to discriminate between the two candidate rules. Worth saying plainly: the refined rule from numbers 28 has now gone seven chapters without a test, and I would not treat it as confirmed."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "29",
+      "verses": [
+        "5"
+      ],
+      "note": "Two bare cross-references in the same key: Clarke's key-5 block is 'Your clothes are not waxen old - See on Deu 8:4' and Ellicott's is the four words 'See on Deuteronomy 8:4.' The pattern noted at deuteronomy 23 and 9 holds and is now seen in a second commentator — these cluster where Deuteronomy retells earlier material, because the substantive note was written once at the primary passage. Both voices have substantive blocks elsewhere in the 2-9 span, so under the established rule the blocks are passed over and the voices kept; nothing is recorded in excluded_voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "29",
+      "verses": [
+        "1",
+        "10",
+        "22"
+      ],
+      "note": "Three separate voices spill across entry boundaries here, and in every case the filing rule keeps the material where it was filed because the voice has no key inside the target span. Henry's key-1 block runs through vv1-9, and he has no key in 2-9. Henry's and Calvin's key-10 blocks both run through vv11-15, and neither has a key in 11-16. Keil's key-25 block treats v29, and he has no key at 29. Chapters where one commentator writes a running exposition rather than verse notes will do this systematically, and the effect is to load the entry at the START of the run — which is why entry 10 here carries the whole parties-to-the-covenant argument."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "29",
+      "verses": [
+        "2",
+        "17",
+        "22",
+        "29"
+      ],
+      "note": "Length control across eight entries: three landed in range on the first draft (637, 552, 633 after one pass) and the rest overshot by 20 to 85 words. The overshoots cluster exactly where the chapter offers a long single-voice argument that resists the note-969 treatment — Calvin on the heart not given, Calvin on the root and the drunkard, Calvin on the secret things — because there is no second voice saying the same thing at length to compress against. Note 969 works on redundancy; it does nothing for a chapter whose bulk is one commentator being thorough alone. Where that is the shape, the discipline has to be selection at the outline stage: choose the two or three moves of the argument to carry and drop the rest before drafting, not after."
     }
   ]
 }
