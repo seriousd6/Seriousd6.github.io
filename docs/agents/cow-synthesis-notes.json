@@ -12230,6 +12230,75 @@
       "book": "exodus",
       "chapter": "5",
       "note": "Length control, seven entries: 633, 650, 631, 649, 644, 645, 650, all grade A. First drafts were 769, 724, 730, 752, 687, 711, 755 — an average overshoot of about 95 words on entries carrying six or seven voices, which is exactly what note 1107 predicts and no better than last batch. The per-voice quota was known going in and I still drafted over it every time, which suggests the rule needs to bite at the outline stage rather than at the drafting stage: writing 600 divided by seven is not a target one hits by writing carefully, it is a target one hits by deciding in advance which single idea each voice contributes and refusing the second. The evidence that this works is in the entries themselves — vv15-18, with five voices, drafted at 687 and needed one pass, while the seven-voice entries needed two or three. Every effective cut was again a whole idea (Calvin on access to kings, Clarke on preserving the word Jehovah, Ellicott's three-grade hierarchy compressed, Henry's cruel-instruments observation, Calvin's counsel-of-tyrants passage, Clarke's literal rendering of the last clause); the lexical passes moved four to ten words each and were not worth the time. Note 1018 now holds across thirteen chapters."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "39",
+      "note": "INVESTIGATED AND REJECTED, not attempted; nothing written to the data tree. Exodus 39 sizes at 7091 usable source words across 23 keys, which looks comfortable, but the keys are non-contiguous (1,2,3, 6-10, 23-25, 27-30, 32-34, 37-39, 41, 43) and the size command counts material that cannot be used. Breaking it into the runs a span may legally cover: 1-3 has 2021 words and is writable; 32-34 has 1876 and is writable; 43 has 2120 and is writable. The rest fails. Run 6-10 nominally holds 140 words, but key 9 is JFB-only and displaced, so after exclusion it has ZERO usable source and no entry can cover it; the other four keys are bare cross-references in their entirety — Onyx stones, possibly the Egyptian pebble, see Exodus 25:7; Stones for a memorial, see Note on Exodus 28:12; Breastplate, see Exodus 28:15; And they set in it four rows of stones, see the notes on Exodus 28:17 — 56 words of pointer with no comment attached. Run 37-39 counts 372 words, which is above the 200-word thin threshold and so would have the thin exemption refused, yet its real content is 74 words (Clarke on the candlestick and Ellicott on the lamps of arrangement), because Keil's 200 words there are pure verse quotation, cut off by the truncation cap before any comment began, and key 39 is JFB-displaced. Key 41 is the same trap: 240 nominal words, above the thin threshold, of which 178 are Keil quoting verses 41 and 42 verbatim and 57 are a single real note from Ellicott about the absent conjunction. Runs 23-25 and 27-30 are thin-eligible and just barely writable on one substantive block each (Clarke on the habergeon, Clarke on the holy crown and the Persepolis tiaras), but three of the eight runs cannot be written at all without inventing content. The root cause is structural and worth stating: Exodus 39 executes the instructions given in Exodus 28, so the commentators mostly decline to comment twice and point back instead. A chapter whose catena is predominantly cross-references has no distillable commentary, and no word count will reveal that. Requesting an owner decision of the same class as numbers 31 and nehemiah 7."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "9",
+        "33",
+        "39"
+      ],
+      "note": "THE JFB DONOR LAW PREDICTED THIS CHAPTER CORRECTLY, OUT OF SAMPLE. Before profiling exodus 39 I computed from the ten previously recorded cases that the donor sits at a fixed fraction of the host's canonical chapter position, mean ratio 0.834 with a spread of 0.806 to 0.864, and predicted that exodus 39 (canonical position 89) would draw its displaced blocks from position about 74, that is Exodus 24, with a plausible window of Exodus 21 to 27. The chapter has three JFB blocks and all three fall inside that window. Key 9 is the golden candlestick, a lamp bearer with seven branches worked into knobs and flowers, and it cites its own source explicitly as Exodus 25:32-36. Key 33 is the coarse goats-hair curtains, one more in number than the others and extending a yard lower on each side, which is Exodus 26:7-13. Key 39 is the boards that formed the walls, the five cross bars and the middle bar reaching from end to end, which is Exodus 26:15-28. Canonical positions 75, 76 and 76 against a predicted 74, giving ratios of 0.843, 0.854 and 0.854 — all inside the previously observed band and close to its mean. The spacing is also consistent with the stride of six, keys 9, 33 and 39 differing by 24 and 6, with the intermediate keys simply absent from this chapter. This is the 45th confirmation of the displacement and the first successful advance prediction of the donor. The anomaly is no longer a catalogue of instances but a rule with a parameter: donor position is approximately five-sixths of host position, which also explains why the lag looked erratic when measured in chapters (three at Genesis 22, seventy-nine at Nehemiah 7) while being constant as a proportion."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "33",
+      "verses": [
+        "14",
+        "20"
+      ],
+      "note": "JFB displacement, 45th confirmation, and a SECOND SUCCESSFUL ADVANCE PREDICTION in the same batch. Exodus 33 sits at canonical position 83, so the ratio law recorded at exodus 5 (donor position is about 0.834 of host position) predicted a donor near position 69, that is Exodus 19-20, before I looked. Both JFB blocks fall there. Key 14 reads They were eye and ear witnesses of the awful emblems of the Deity's descent, but they perceived not the Deity Himself, which is Exodus 20:18-21 and has nothing to do with My presence shall go with thee. Key 20 reads that is, carved with figures and ornaments that might lead to superstition, which glosses the altar of hewn stone in Exodus 20:25 and has nothing to do with Thou canst not see my face. Both give a donor position of 70, a ratio of 0.843, inside the previously observed band of 0.806 to 0.864. The two keys are also six apart, the usual stride. Taken with exodus 39, predicted at Exodus 24 and found at Exodus 25-26, the law has now made two out-of-sample predictions and both held. Twelve cases now support it, spanning host positions 22 to 420. Practical use: the donor window can be computed before profiling, which makes displaced blocks quick to recognise even when they are short fragments like these two — twenty-one and twelve words, easy to mistake for terse comment rather than foreign matter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "33",
+      "verses": [
+        "2",
+        "8",
+        "13"
+      ],
+      "note": "Fifth chapter confirming the 200-word cap, and the first where its worst consequence appeared repeatedly in one chapter. Keil is capped at exactly 200 in six of seven blocks here, Gill in three of twenty-three; Henry (up to 3143), Clarke (855), Ellicott (1123), Calvin (1483) and Wesley (184) are untouched. The consequence is that a Keil block often consists of nothing but the verses quoted, the cap having cut it off before any comment began — and because his blocks quote several verses ahead before commenting, what survives is frequently quotation belonging to a LATER entry than the one his key sits in. That happened three times here. At key 2 his block quotes verses 2 to 5 and comments only on 4 and 5, so the entry covering verses 1 to 3 had him present with nothing to say. At key 8 it quotes 8 to 12 and comments only on 12. At key 13 it quotes 13 to 18 and comments only on 18. In each case I excluded him from the entry rather than let a badge stand for prose he does not support, and where the comment could legitimately travel — his verse-18 remark moving to the entry containing key 19 — I moved it under the filing rule instead. Adding to the standing checks from note 1129: a Keil block that is pure quotation is now common enough to look for by default, and the test is simply whether anything follows the last quoted verse."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "33",
+      "verses": [
+        "22"
+      ],
+      "note": "StudyLight boilerplate tail, 35th instance, and the FIFTH DISCRIMINATING CASE. Ellicott's keys here are 1-8, 11-14, 17, 19, 21 and 22, so his final block is at key 22 while the chapter runs to key 23; the tail attached there. That is now five independent discriminating cases (numbers 15, exodus 19, genesis 40, exodus 5 and this) with no counterexample, and the numbers 28 rule should be treated as established rather than provisional: the StudyLight tail attaches to the end of Ellicott's final block, wherever in the chapter it falls. Gill's separate sacred-texts navigation tail did not appear in either chapter of this batch; its attachment rule remains the one open question in this area, and still needs a chapter where Gill stops short of the last key."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "33",
+      "verses": [
+        "7"
+      ],
+      "note": "The four-way disagreement over whose tent was pitched outside the camp, which is unusually well documented because Calvin argues the minority case at length. Ellicott reads the phrase as his tent, the Hebrew article carrying the force of a possessive, and cites the Greek version with Jarchi, Aben-Ezra, Kurtz, Kalisch, Keil and Cook; Clarke agrees and adds from the Talmudists that the distance was two thousand cubits; Keil makes it a dwelling of Moses raised into a temporary shrine only because the pillar of cloud settled on it. Henry and Wesley take a different line, that it was not his family tent but the tent of audience where he heard causes and enquired of God, the guildhall of the camp. Gill leaves it open. Calvin refuses the private-tent reading outright and gives six arguments: the text says not his own tabernacle but the tabernacle simply and by way of eminence; Moses did not change his habitation but went out thither from time to time; it would have been unlawful to give a private tent the sacred name God had bestowed on his sanctuary; God testified it was his own dwelling by manifesting his glory there; it would have been absurd for the people to seek God in that direction unless the place were holy; and the point of the removal was that Moses stayed among the people while God withdrew from a profane place, making the act a kind of excommunication. All four positions and their holders are carried in the tags at key 7. Worth noting for its own sake: this is the first chapter in which Calvin stands alone against the whole remaining field and states his reasons as an enumerated brief, which made the debate unusually easy to render faithfully."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "33",
+      "note": "Length control, nine entries: 650, 649, 639, 648, 644, 622, 648, 650, 650, all grade A. One entry came off the first draft at grade B rather than over length — the vv7-11 entry on the tent outside the camp, at ttr 0.578 against the 0.580 floor — and the cause was obvious once measured: the entry is about a tent, and tent and tabernacle between them carried most of the nouns. A lexical-variety pass fixed it at a cost of four words, swapping in sacred tent, shrine, sanctuary and it, which moved ttr from 0.578 to 0.590. This is the second time a B has come from subject-matter vocabulary rather than from filler (leviticus 9 entry 5 was the first, on sacrifice and fire), and both times the repair was the same and cheap. Worth stating as a rule: when a chapter's subject supplies one dominant noun, budget two or three synonyms for it before drafting rather than discovering the problem at the meter. On length, the overshoot pattern held exactly as note 1133 describes — the five-voice entries drafted at 622 to 729 and the seven-voice entry at 723, and every effective cut was again a whole idea (Calvin on access to kings, Clarke's Jupiter and Semele, Ellicott's conjecture about the goodness flashed into the soul, Henry's object-lesson on the forfeited structure, Calvin's fishes-on-a-hook). Note 1018 now holds across fifteen chapters."
     }
   ]
 }
