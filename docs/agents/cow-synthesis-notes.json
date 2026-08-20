@@ -9459,6 +9459,49 @@
       "book": "joshua",
       "chapter": "7",
       "note": "Fidelity self-grade, joshua 7, six entries, all six verse-by-verse checked against the catena. Word counts 650/650/650/649/650/650, all inside the 350-650 window. Tiling 1-5 / 6-9 / 10-13 / 14-18 / 19-23 / 24-26 tiles vv1-26 exactly. Every claim in every entry traces to a block inside that entry's own span: no voice is named outside the span that sources it (checked specifically for Henry, whose sectional block at key 16 discusses vv19-26; his material there is used ONLY in the 14-18 entry and only for on-span content). Jamieson declared in excluded_voices on entries 1 and 6 (keys 2 and 26), both blocks being off-passage residue. No voice attributed a position it does not hold: Clarke's denial that the children died, Ellicott's contrary reading, and Calvin's refusal to justify are each kept distinct. The editorial layer inside the Calvin block at key 24 (Grotius, the Cyclopaedia of Biblical Literature) is attributed to no one. Ellicott's 992-word chrome tail at key 24 was excluded before drafting."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "7",
+      "verses": [
+        "2",
+        "26"
+      ],
+      "note": "JFB stride bug, 21st confirmed instance — and the first with TWO DIFFERENT DONORS in one chapter. JFB has only two blocks here and neither touches Joshua 7: key 2 carries the allotment of Sihon's territory to Reuben, Gad and half Manasseh (Numbers 32 / Joshua 13 material, Arnon to Gilead, Bashan), while key 26 carries a homily on not adding to or omitting from the appointed forms of worship (Deuteronomy 12:32 / Numbers 15:39). Every earlier case had all displaced blocks drawn from a single donor chapter; this one does not, so the bug is not simply a fixed-offset read into one neighbouring file. Both declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "7",
+      "verses": [
+        "24"
+      ],
+      "note": "StudyLight boilerplate tail, 17th instance, and it REFINES the rule. Previous cases all landed on the chapter's LAST commented key; here it lands on key 24, with keys 25 and 26 still carrying Gill, Clarke, Wesley and JFB blocks after it. What key 24 is, is Ellicott's LAST block in the chapter (his keys stop at 24). So the correct statement is: the tail attaches to the end of Ellicott's final block, which usually but not always coincides with the chapter's last commented key. The deuteronomy 7 negative case (no Ellicott block at the last key, no tail) fits this refined form exactly."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "16"
+      ],
+      "note": "Note 607 fallback fired twice, both times on Henry, who has only keys 1, 6, 10 and 16 in this chapter. His key-1 block runs on into the sending of the three thousand to Ai (vv2-3), but he has no key inside the 2-5 span, so the culpable-security material stayed in the v1 entry. His key-16 block is far larger: it covers the discovery by lot, the arraignment, the confession and the conviction, i.e. vv16-23, and he has no key in either 17-20 or 21-23, so all of it stayed in the v16 entry. That made v16 a two-voice entry (Gill and Henry only) carrying material the neighbouring entries also treat from other sources — the eye/heart/hiding progression appears under Henry at v16 and under Clarke and Wesley at v21, which is not duplication because the sources are independent, but the two were deliberately written to different emphases (Henry moral, Clarke numbered with the James parallel)."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "7",
+      "verses": [
+        "24",
+        "25"
+      ],
+      "note": "A genuine three-way disagreement worth preserving in the tags: were Achan's children executed? Clarke argues at length from the Hebrew (stoned HIM singular, burned THEM plural), from the versions (only the Arabic names the children; the Latin, Greek and Syriac refer the burning to his goods), from two De Rossi MSS reading the singular, and from Deuteronomy 24:16, that the man alone died and the children were brought out only to see and fear. Ellicott holds all were destroyed together on the herem logic and Joshua 22:20. Wesley defends the execution as just, arguing the children were probably grown and privy. Calvin assumes it and refuses to explain it away. Both entries carry the debate; the Clarke position is filed at v25 where his textual argument sits, and the Ellicott/Wesley positions at v24."
     }
   ]
 }
